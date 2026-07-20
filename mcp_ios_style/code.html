@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>MCP 設定</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-list-item:active {
+            background-color: #E5E5EA;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+        .status-active {
+            background-color: #34C759;
+            box-shadow: 0 0 8px rgba(52, 199, 89, 0.4);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#2f3131",
+                        "outline": "#7c775f",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-dim": "#dadada",
+                        "on-tertiary-fixed-variant": "#004f50",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#726600",
+                        "on-error": "#ffffff",
+                        "on-secondary-fixed": "#2f1313",
+                        "background": "#F2F2F7", // iOS Light Gray Background
+                        "tertiary-fixed-dim": "#00dcdd",
+                        "surface-container-low": "#f3f3f3",
+                        "on-secondary-fixed-variant": "#613d3d",
+                        "on-surface-variant": "#4b4731",
+                        "on-error-container": "#93000a",
+                        "text-primary": "#191919",
+                        "surface-bright": "#f9f9f9",
+                        "bubble-other": "#FFFFFF",
+                        "on-background": "#1a1c1c",
+                        "surface": "#f9f9f9",
+                        "outline-variant": "#cdc7aa",
+                        "on-tertiary-fixed": "#002020",
+                        "on-tertiary": "#ffffff",
+                        "chat-bg": "#ABC1D1",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#006a6a",
+                        "kakao-yellow": "#FFE600",
+                        "bubble-user": "#FFE600",
+                        "secondary": "#7b5454",
+                        "tertiary-fixed": "#00fbfc",
+                        "inverse-primary": "#dec800",
+                        "primary-container": "#ffe600",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1a1c1c",
+                        "inverse-on-surface": "#f1f1f1",
+                        "surface-tint": "#6a5f00",
+                        "secondary-fixed": "#ffdad9",
+                        "text-secondary": "#666666",
+                        "primary": "#007AFF", // iOS Blue for actions
+                        "kakao-brown": "#3C1E1E",
+                        "primary-fixed-dim": "#dec800",
+                        "on-tertiary-container": "#007272",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#201c00",
+                        "on-primary-fixed-variant": "#504700",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-container": "#fecbc9",
+                        "surface-variant": "#e2e2e2",
+                        "secondary-fixed-dim": "#ecbab9",
+                        "surface-container": "#eeeeee",
+                        "primary-fixed": "#fde400",
+                        "tertiary-container": "#00feff",
+                        "on-secondary-container": "#7a5353"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "10px", // iOS Standard Rounded
+                        "xl": "12px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "12px",
+                        "tab-bar-height": "64px",
+                        "margin-side": "16px",
+                        "unit": "4px",
+                        "chat-gap": "8px",
+                        "bubble-padding": "10px 14px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Be Vietnam Pro"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "body-md": ["Be Vietnam Pro"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "title-lg": ["Be Vietnam Pro"],
+                        "headline-md": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "chat-text": ["Be Vietnam Pro"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-surface/80 backdrop-blur-md sticky top-0 w-full z-40 border-b border-outline-variant/30 flex flex-col px-margin-side pt-12 pb-4">
+<div class="flex items-center justify-between w-full">
+<button class="flex items-center text-primary transition-opacity duration-200 active:opacity-60">
+<span class="material-symbols-outlined mr-1">arrow_back_ios</span>
+<span class="font-body-lg text-body-lg">返回</span>
+</button>
+<h1 class="absolute left-1/2 -translate-x-1/2 font-headline-lg-mobile text-headline-lg-mobile text-on-surface">MCP 設定</h1>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</div>
+</header>
+<main class="px-margin-side pt-6 space-y-8">
+<!-- Functional Description -->
+<section>
+<div class="bg-surface-container-lowest rounded-lg p-5 shadow-sm border border-outline-variant/10">
+<div class="flex items-start gap-4">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">extension</span>
+</div>
+<div class="space-y-1">
+<h2 class="font-title-lg text-title-lg text-on-surface">關於 MCP</h2>
+<p class="font-body-md text-body-md text-text-secondary leading-relaxed">
+                            Model Context Protocol (MCP) 允許 AI 存取外部工具與本地數據。您可以透過串接不同的 MCP 伺服器來擴充 AI 的功能。
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Server List -->
+<section class="space-y-2">
+<h3 class="font-label-md text-label-md text-text-secondary uppercase tracking-wider ml-2">已串接的伺服器</h3>
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden divide-y divide-outline-variant/20 shadow-sm border border-outline-variant/10">
+<!-- Google Search -->
+<div class="ios-list-item flex items-center justify-between p-4 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-[#4285F4]/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#4285F4]">search</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface">Google Search</p>
+<p class="font-label-md text-label-md text-text-secondary">v1.2.0</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-text-secondary">連線中</span>
+<div class="status-dot status-active"></div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</div>
+</div>
+<!-- Filesystem -->
+<div class="ios-list-item flex items-center justify-between p-4 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-orange-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-orange-600">folder_open</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface">Filesystem</p>
+<p class="font-label-md text-label-md text-text-secondary">Local Access</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-text-secondary">連線中</span>
+<div class="status-dot status-active"></div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</div>
+</div>
+<!-- SQLite -->
+<div class="ios-list-item flex items-center justify-between p-4 transition-colors">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center">
+<span class="material-symbols-outlined text-purple-600">database</span>
+</div>
+<div>
+<p class="font-body-lg text-body-lg text-on-surface">SQLite</p>
+<p class="font-label-md text-label-md text-text-secondary">DB Connector</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-text-secondary">連線中</span>
+<div class="status-dot status-active"></div>
+<span class="material-symbols-outlined text-outline-variant text-[20px]">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Add Server Button -->
+<section>
+<button class="w-full bg-surface-container-lowest py-4 rounded-lg flex items-center justify-center gap-2 text-primary font-body-lg text-body-lg active:opacity-60 transition-opacity shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined">add_circle</span>
+<span>新增 MCP 伺服器</span>
+</button>
+<p class="mt-3 px-2 font-label-md text-label-md text-text-secondary text-center">
+                新增後即可在對話中使用該伺服器提供的功能
+            </p>
+</section>
+<!-- Decorative Element: Image placeholder as a visual divider -->
+<div class="pt-4 opacity-80">
+<div class="w-full h-32 rounded-lg bg-cover bg-center" data-alt="A clean, minimalist 3D isometric representation of interconnected digital nodes and data blocks. The aesthetic is purely professional and tech-focused, using a soft color palette of light grays and cool blues that perfectly complements a white light-mode UI. The lighting is soft and ambient, creating a feeling of modern connectivity and cloud infrastructure." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDTqzjZW7lIMoQbumAiisEXMlKJhp1J5gWTKSFFR96HEe063jEqxjdHMv-loxpvJLelv_muMm7WnrjuVMJK7Av-MzdARA5KzlXeUnDfPMQAh9Ry1BKARm8a_xZ-WNNVC7hnN0rRY3BPhyAJiE5EvXkYOCjji0kwr6L7fjCiiw3UUQbE_-acRvNReL_Bz5nLTA5pMIiYsObmPNw8ybW8z1RKrbSYt6llr1Yi7X4H2Ut91ILs4gxOqGw0tIYuFHYDC_-XGsuZe5wGd-0')"></div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 h-tab-bar-height bg-surface/90 backdrop-blur-lg border-t border-outline-variant/30 flex justify-around items-center px-margin-side pb-safe">
+<!-- Tab: Chat -->
+<a class="flex flex-col items-center justify-center text-text-secondary active:scale-95 transition-transform duration-150 hover:opacity-80" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+<span class="font-label-md text-label-md">聊天</span>
+</a>
+<!-- Tab: Explore -->
+<a class="flex flex-col items-center justify-center text-text-secondary active:scale-95 transition-transform duration-150 hover:opacity-80" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-label-md text-label-md">探索</span>
+</a>
+<!-- Tab: Settings (Active) -->
+<a class="flex flex-col items-center justify-center text-primary active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="font-label-md text-label-md">設定</span>
+</a>
+</nav>
+<script>
+        // Simple micro-interaction for list items
+        document.querySelectorAll('.ios-list-item').forEach(item => {
+            item.addEventListener('touchstart', () => {
+                item.style.backgroundColor = '#F2F2F7';
+            });
+            item.addEventListener('touchend', () => {
+                item.style.backgroundColor = 'transparent';
+            });
+        });
+    </script>
+</body></html>

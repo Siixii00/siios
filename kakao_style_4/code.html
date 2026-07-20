@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>AI Companion - Chats</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .chat-list-item:active {
+            background-color: #f3f3f3;
+        }
+
+        /* Hide scrollbar for Chrome, Safari and Opera */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge and Firefox */
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error": "#ba1a1a",
+                    "surface": "#f9f9f9",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#6a5f00",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#007272",
+                    "kakao-brown": "#3C1E1E",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#726600",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-container": "#eeeeee",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed-dim": "#ecbab9",
+                    "tertiary-container": "#00feff",
+                    "inverse-surface": "#2f3131",
+                    "kakao-yellow": "#FFE600",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-low": "#f3f3f3",
+                    "tertiary": "#006a6a",
+                    "tertiary-fixed-dim": "#00dcdd",
+                    "on-tertiary-fixed-variant": "#004f50",
+                    "secondary-fixed": "#ffdad9",
+                    "on-surface-variant": "#4b4731",
+                    "on-secondary": "#ffffff",
+                    "text-primary": "#191919",
+                    "inverse-primary": "#dec800",
+                    "on-secondary-fixed": "#2f1313",
+                    "on-primary-fixed": "#201c00",
+                    "surface-dim": "#dadada",
+                    "on-primary-fixed-variant": "#504700",
+                    "bubble-user": "#FFE600",
+                    "text-secondary": "#666666",
+                    "on-background": "#1a1c1c",
+                    "primary": "#6a5f00",
+                    "secondary": "#7b5454",
+                    "surface-container-highest": "#e2e2e2",
+                    "primary-container": "#ffe600",
+                    "on-tertiary-fixed": "#002020",
+                    "background": "#f9f9f9",
+                    "primary-fixed-dim": "#dec800",
+                    "primary-fixed": "#fde400",
+                    "tertiary-fixed": "#00fbfc",
+                    "chat-bg": "#ABC1D1",
+                    "bubble-other": "#FFFFFF",
+                    "surface-container-high": "#e8e8e8",
+                    "on-secondary-fixed-variant": "#613d3d",
+                    "secondary-container": "#fecbc9",
+                    "on-primary": "#ffffff",
+                    "on-secondary-container": "#7a5353",
+                    "outline": "#7c775f",
+                    "on-surface": "#1a1c1c",
+                    "outline-variant": "#cdc7aa",
+                    "surface-variant": "#e2e2e2",
+                    "surface-bright": "#f9f9f9"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "chat-gap": "8px",
+                    "gutter": "12px",
+                    "margin-side": "16px",
+                    "bubble-padding": "10px 14px",
+                    "tab-bar-height": "64px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "body-md": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "label-md": ["Be Vietnam Pro"],
+                    "title-lg": ["Be Vietnam Pro"],
+                    "headline-lg": ["Be Vietnam Pro"],
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "headline-md": ["Be Vietnam Pro"],
+                    "chat-text": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "22px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "title-lg": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "chat-text": ["15px", {"lineHeight": "20px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface-container-lowest min-h-screen flex flex-col text-text-primary">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim fixed full-width top-0 sticky z-50 flex justify-between items-center h-14 px-margin-side w-full z-50">
+<h1 class="text-headline-md font-headline-md text-kakao-brown">聊天</h1>
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform duration-200 hover:bg-surface-container-high p-1 rounded-full">
+<span class="material-symbols-outlined text-kakao-brown text-[24px]">search</span>
+</button>
+<button class="active:scale-95 transition-transform duration-200 hover:bg-surface-container-high p-1 rounded-full">
+<span class="material-symbols-outlined text-kakao-brown text-[24px]">chat_add_on</span>
+</button>
+<button class="active:scale-95 transition-transform duration-200 hover:bg-surface-container-high p-1 rounded-full">
+<span class="material-symbols-outlined text-kakao-brown text-[24px]">settings</span>
+</button>
+</div>
+</header>
+<!-- Chat List Canvas -->
+<main class="flex-grow pb-20">
+<!-- Search/Banner placeholder (Subtle) -->
+<div class="px-4 py-3">
+<div class="w-full h-24 rounded-xl bg-kakao-yellow/10 border border-kakao-yellow/20 flex items-center justify-between px-6 overflow-hidden relative">
+<div class="z-10">
+<p class="text-kakao-brown font-title-lg text-title-lg">AI 助手已上線</p>
+<p class="text-kakao-brown/70 text-label-md font-label-md">隨時開啟你的智能對話</p>
+</div>
+<span class="material-symbols-outlined text-kakao-yellow text-[64px] absolute -right-2 -bottom-2 opacity-40" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+</div>
+<section class="flex flex-col">
+<!-- Chat Row: Alice (AI) -->
+<div class="chat-list-item flex items-center px-margin-side py-3 h-[72px] cursor-pointer transition-colors duration-150">
+<div class="relative w-14 h-14 shrink-0 mr-3">
+<img class="w-full h-full object-cover rounded-full" data-alt="A professional, clean studio portrait of a friendly young woman with a warm smile, wearing modern minimalist attire. The lighting is soft and even, against a solid pastel grey background, perfect for a high-quality AI assistant profile picture in a sleek mobile app interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJWhRNB06W1zAgkiuDluOZ7CpMX0pah6PlSSOJl2-UfZRkeM3lwMvToGtevRmUBe_ChtQ77a7N5iA-XKINg-AvQtnufkeFhTwXDZolDVdBvm-cPOGzAprksHmzhE2PruY7iWxZaSGUfiPNWjga2cS4I7UNANUf3fcQsRPj1KZInZSYECHpTrlkcy9qmDnJP3etiTw7vBLSUZSnwDTiDH7wjBiqa-zOFWxMTeip4VbQJeUg8BW5Pcg7D8K5fAActsddSD-f7XYvH1E"/>
+<div class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 border-2 border-white rounded-full"></div>
+</div>
+<div class="flex-grow flex flex-col justify-center min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<span class="font-title-lg text-title-lg text-text-primary truncate">Alice (AI)</span>
+<span class="text-text-secondary text-label-md font-label-md whitespace-nowrap ml-2">下午 2:30</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-text-secondary text-body-md font-body-md truncate">你好！最近有什麼我可以幫你的嗎？</p>
+<div class="ml-2 bg-kakao-yellow px-1.5 py-0.5 rounded-full flex items-center justify-center min-w-[18px]">
+<span class="text-[10px] font-bold text-kakao-brown">2</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Chat Row: Elara Vance -->
+<div class="chat-list-item flex items-center px-margin-side py-3 h-[72px] cursor-pointer transition-colors duration-150 border-t border-surface-container">
+<div class="w-14 h-14 shrink-0 mr-3">
+<img class="w-full h-full object-cover rounded-full" data-alt="A fashionable close-up portrait of a woman with auburn hair and stylish spectacles. She is in a chic urban cafe setting with blurred warm bokeh lights in the background. The aesthetic is modern and sophisticated, using a natural color palette that feels authentic and personalized." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPikOoHFBEK-Y6LtKifk7mCRjjDMdl9fRKqmplqXSZUDq8PIQlSULUoq3E7OVo5Pi9XtDvPZL3GUTFq3VBfyyd_4l60L9ccBWALbdYD9OfRtmDWqddOOxgJRhzKV-v2S5xl7tT56q0Q7iR09JCQZlUaSYLIakq_201AXqtwYHdjxrZGV3Zhq4mHvH8lfWgcEMKDG6jtMy5k13bj1_pzqMkt7mUnWCe_8p_k7W_ZQyT6RocEEJ3UY2wn6Rv47tCCN85g5900kIMWYQ"/>
+</div>
+<div class="flex-grow flex flex-col justify-center min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<span class="font-title-lg text-title-lg text-text-primary truncate">Elara Vance</span>
+<span class="text-text-secondary text-label-md font-label-md whitespace-nowrap ml-2">下午 1:45</span>
+</div>
+<p class="text-text-secondary text-body-md font-body-md truncate">好的，那我們晚點在辦公室見。</p>
+</div>
+</div>
+<!-- Chat Row: Design Team (Group) -->
+<div class="chat-list-item flex items-center px-margin-side py-3 h-[72px] cursor-pointer transition-colors duration-150 border-t border-surface-container">
+<div class="w-14 h-14 shrink-0 mr-3 grid grid-cols-2 gap-0.5 p-0.5 bg-surface-container rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close up face of a creative professional man with beard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9-aMSxmWIuRY8Ck4CQKRpntV1BL0fliOXmHhr4c7kG4GERVRYzW1GsDrcXGRT7frsZ44SGhtmEFJaL9NeTFNJsZ15CuW-dIWig9seZBZD2yY413a3Gi7AJ97XldqRMHZavDUVyOTNpTZuMOi1_gsdCc8O0wELXBVdEg1rYxrcnJlFnGUv4Wdxfm8165AqcUC3sFaGlllFgUNefL2SNoy3vTg-SFD7xCrBOuKxSUQw7mdEOve85VJx031V_MDZvzPwh9PNOjfyh-w"/>
+<img class="w-full h-full object-cover" data-alt="Close up face of a creative professional woman with blonde hair." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcnEVS4b6HeFomvvtfhg_q1gbn-A0141rAjrtfTBfxMPjlvNM_GK_HFp4Jj7f2qvSHIPUn_3ky1XQEEMYt3BDxcp5-RcYBi766woI94mlyEorVcXb6VxeG3N9JXrxvzXeAVJhH91zvuGpQn4OnnN3UP734IKYo8AoU8G7D9dK9yx6ES0N89Dm9GYBSHc_BVa3MgvKau0raevJcK2rPuh12qIpZAJimdE4AO8pNG2LjDQPRLHI8STGBDcd0YY4s14he0zUIBvGVkXo"/>
+<img class="w-full h-full object-cover" data-alt="Close up face of a diverse creative worker." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdAzSAIucfmYeWffypRya_WmZTV5JV0cfQv27-Gr898CTSQELL-tAnWpqqEFeQ1lJwSIB7JWGyrx3yuOG29VsC7P7p1YC1TAqER4AFNTx3oBT-NgPTgKDFrJZT-5rjN1wYzYBAzHpqjBQ64brxsGONN1Sm2-4pouc1G3DkGYZKdzQvRAQHri86_5P3doBXg5JIwJF9R940nLENesCeAgoc91DImJmKd2e6bcoY4p3aKL47Tn0YSuvA0gIFgW_o5jzESppbkHxim_I"/>
+<div class="bg-surface-container-high flex items-center justify-center text-[10px] text-text-secondary font-bold">+5</div>
+</div>
+<div class="flex-grow flex flex-col justify-center min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<div class="flex items-center truncate">
+<span class="font-title-lg text-title-lg text-text-primary truncate">設計團隊群組</span>
+<span class="text-text-secondary text-body-md font-body-md ml-1 shrink-0">12</span>
+</div>
+<span class="text-text-secondary text-label-md font-label-md whitespace-nowrap ml-2">上午 11:20</span>
+</div>
+<p class="text-text-secondary text-body-md font-body-md truncate">張小明：我已經上傳了最新的 UI 檔案。</p>
+</div>
+</div>
+<!-- Chat Row: David -->
+<div class="chat-list-item flex items-center px-margin-side py-3 h-[72px] cursor-pointer transition-colors duration-150 border-t border-surface-container">
+<div class="w-14 h-14 shrink-0 mr-3">
+<img class="w-full h-full object-cover rounded-full" data-alt="A portrait of a sporty man in his late 20s wearing a high-performance athletic jacket. The background is a crisp, bright morning in a city park with hints of green foliage. The lighting is natural and energetic, reflecting a healthy and active lifestyle." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxcjXgJtKTAB9Ey8gpUOCgh6krmnOqiOeDfJWI1yhDak-qextLDFrsluzLdM0WoUPIysa20DAAkNyAngMsYbAlXdZfpjPrI8HGV4yDSEDQpz4BsDmQoVSla6xDoYCCl3PyVLmG8sAMcEkvHnEdogBfJNEdYOM2VjhX_Zp4UYchrrR3tixX8mLq9SDmoXADo-gM8pEBwJWPbFJ_4XurKfjQ5Qys9YHUnXJhURLt_ivJ0Muv-eCu_HhzG4uHNbgHGWx4oXekJOtFXOc"/>
+</div>
+<div class="flex-grow flex flex-col justify-center min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<span class="font-title-lg text-title-lg text-text-primary truncate">David</span>
+<span class="text-text-secondary text-label-md font-label-md whitespace-nowrap ml-2">昨天</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-text-secondary">image</span>
+<p class="text-text-secondary text-body-md font-body-md truncate">圖片</p>
+</div>
+</div>
+</div>
+<!-- Chat Row: Project Alpha -->
+<div class="chat-list-item flex items-center px-margin-side py-3 h-[72px] cursor-pointer transition-colors duration-150 border-t border-surface-container">
+<div class="w-14 h-14 shrink-0 mr-3 flex items-center justify-center bg-kakao-brown rounded-full">
+<span class="material-symbols-outlined text-kakao-yellow text-[28px]" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+</div>
+<div class="flex-grow flex flex-col justify-center min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<span class="font-title-lg text-title-lg text-text-primary truncate">專案 Alpha 頻道</span>
+<span class="text-text-secondary text-label-md font-label-md whitespace-nowrap ml-2">星期二</span>
+</div>
+<p class="text-text-secondary text-body-md font-body-md truncate">系統通知：版本 2.0 已正式發布！</p>
+</div>
+</div>
+<!-- Chat Row: Mother -->
+<div class="chat-list-item flex items-center px-margin-side py-3 h-[72px] cursor-pointer transition-colors duration-150 border-t border-surface-container">
+<div class="w-14 h-14 shrink-0 mr-3">
+<img class="w-full h-full object-cover rounded-full" data-alt="A warm, kindly portrait of an elderly East Asian woman with gentle eyes and a friendly smile. She is in a cozy home environment with warm, domestic lighting. The style is soft-focus and inviting, suggesting a familial and affectionate connection." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjcUS2fBuXrmkn42m0Ri6yOYFsgxEq0KLMFfjpr_bOIXiGu8zdZQXAPkQyIA8QIy8kGzJn6ZGi2OP9Ywnx0bncOKig3uvzb1Zi-9lqv940hyHMlh9siQlQ2sOerj5AiWIUIfHHHgd7qCwywfphhCD1VtyD4N9GK2vRkB0DK_24Hw9JKZecAkG2z3Fve07zIQyAMChjxqsksQMrDLXaJBam_f6qne6fL3EhP2AqdqkTgWYwmTkNrM3ci_NAPZFnYuPChkqELBGxnoo"/>
+</div>
+<div class="flex-grow flex flex-col justify-center min-w-0">
+<div class="flex justify-between items-center mb-0.5">
+<span class="font-title-lg text-title-lg text-text-primary truncate">媽媽</span>
+<span class="text-text-secondary text-label-md font-label-md whitespace-nowrap ml-2">星期一</span>
+</div>
+<p class="text-text-secondary text-body-md font-body-md truncate">週末記得回家吃飯喔。</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center h-[64px] bg-surface dark:bg-surface-container-lowest border-t border-outline-variant dark:border-none">
+<!-- Friends Tab -->
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant opacity-60 hover:bg-surface-container-low transition-all duration-150 flex-1 h-full" href="#">
+<span class="material-symbols-outlined text-[26px]">person</span>
+</a>
+<!-- Chats Tab (Active) -->
+<a class="flex flex-col items-center justify-center text-kakao-brown dark:text-kakao-yellow scale-110 flex-1 h-full relative" href="#">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<!-- Badge -->
+<div class="absolute top-2 right-1/2 translate-x-6 bg-red-600 text-white text-[10px] font-bold px-1 rounded-full min-w-[16px] h-[16px] flex items-center justify-center border-2 border-white">2</div>
+</a>
+<!-- Explore Tab -->
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant opacity-60 hover:bg-surface-container-low transition-all duration-150 flex-1 h-full" href="#">
+<span class="material-symbols-outlined text-[26px]">explore</span>
+</a>
+<!-- More Tab -->
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant opacity-60 hover:bg-surface-container-low transition-all duration-150 flex-1 h-full" href="#">
+<span class="material-symbols-outlined text-[26px]">more_horiz</span>
+</a>
+</nav>
+<!-- Floating Action Button (FAB) - Contextual Context: Chat List -->
+<button class="fixed bottom-20 right-6 w-14 h-14 bg-kakao-yellow rounded-[20px] shadow-lg flex items-center justify-center active:scale-95 transition-transform duration-150 z-40">
+<span class="material-symbols-outlined text-kakao-brown text-[28px]">add_comment</span>
+</button>
+<script>
+        // Simple micro-interaction for list items
+        document.querySelectorAll('.chat-list-item').forEach(item => {
+            item.addEventListener('click', () => {
+                item.style.backgroundColor = '#eeeeee';
+                setTimeout(() => {
+                    item.style.backgroundColor = '';
+                }, 200);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>設定 - AI Companion</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "kakao-yellow": "#FFE600",
+                    "outline-variant": "#cdc7aa",
+                    "outline": "#7c775f",
+                    "on-secondary-container": "#7a5353",
+                    "secondary": "#7b5454",
+                    "primary-container": "#ffe600",
+                    "on-surface": "#1a1c1c",
+                    "surface-variant": "#e2e2e2",
+                    "secondary-container": "#fecbc9",
+                    "kakao-brown": "#3C1E1E",
+                    "background": "#f9f9f9",
+                    "chat-bg": "#ABC1D1",
+                    "on-error-container": "#93000a",
+                    "bubble-user": "#FFE600",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#002020",
+                    "tertiary-fixed": "#00fbfc",
+                    "on-secondary-fixed-variant": "#613d3d",
+                    "surface-dim": "#dadada",
+                    "on-secondary-fixed": "#2f1313",
+                    "tertiary": "#006a6a",
+                    "surface-container-highest": "#e2e2e2",
+                    "secondary-fixed-dim": "#ecbab9",
+                    "tertiary-fixed-dim": "#00dcdd",
+                    "surface-container-high": "#e8e8e8",
+                    "on-secondary": "#ffffff",
+                    "on-surface-variant": "#4b4731",
+                    "secondary-fixed": "#ffdad9",
+                    "bubble-other": "#FFFFFF",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2f3131",
+                    "text-primary": "#191919",
+                    "on-background": "#1a1c1c",
+                    "primary-fixed": "#fde400",
+                    "surface": "#f9f9f9",
+                    "on-error": "#ffffff",
+                    "surface-tint": "#6a5f00",
+                    "surface-bright": "#f9f9f9",
+                    "primary-fixed-dim": "#dec800",
+                    "text-secondary": "#666666",
+                    "primary": "#6a5f00",
+                    "on-primary-fixed": "#201c00",
+                    "on-primary": "#ffffff",
+                    "on-primary-container": "#726600",
+                    "on-tertiary-container": "#007272",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f3f3f3",
+                    "inverse-on-surface": "#f1f1f1",
+                    "tertiary-container": "#00feff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-side": "16px",
+                    "bubble-padding": "10px 14px",
+                    "unit": "4px",
+                    "gutter": "12px",
+                    "chat-gap": "8px",
+                    "tab-bar-height": "64px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "headline-md": ["Be Vietnam Pro"],
+                    "headline-lg": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "title-lg": ["Be Vietnam Pro"],
+                    "chat-text": ["Be Vietnam Pro"],
+                    "label-md": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "title-lg": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "chat-text": ["15px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "body-lg": ["16px", {"lineHeight": "22px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f9f9f9;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Custom scroll behavior for settings list */
+        .settings-content {
+            padding-bottom: 80px; /* Space for BottomNavBar */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="flex justify-between items-center h-14 px-margin-side w-full z-50 bg-surface dark:bg-surface-dim docked full-width top-0 sticky">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 transition-transform duration-200 text-kakao-brown dark:text-kakao-yellow">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="text-title-lg font-title-lg text-kakao-brown dark:text-kakao-yellow">設定</h1>
+</div>
+<div class="flex items-center">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high active:scale-95 transition-transform duration-200">
+<img class="w-full h-full object-cover" data-alt="A close-up high-resolution profile avatar of a stylish digital human character. The lighting is soft and cinematic, using a warm yellow and deep brown palette consistent with the Kakao brand aesthetic. The background is a clean, minimalist off-white studio setting, emphasizing a professional yet approachable corporate vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiwyMn-Qoasg-7Kupw3LAG2HS65Kq8jeaP8e8rKSuePX0iwjpXbLyYvyMtw2LPflZKYJ5OTpl7XXNkAzCL3SQQ9hKEE04E4TfuqR1OJbCuxbPWShjpyJaLjzgNk8ogUH-nyUzWcA6Vjl_EpAW-h6tBCb0U6Jk_reBMnZ4oo7zPanzkD9DAh1KO6_7OwHCAGqbq3VzENaHKrbz9vBDf0VOL_gThoyX__6OBnl889WL3l0qRLCsL50VzJMQirMdZLQqVLYW45yOL760"/>
+</div>
+</div>
+</header>
+<main class="settings-content">
+<!-- GitHub Login Card -->
+<section class="p-margin-side mt-4">
+<div class="bg-surface-container-low rounded-xl p-4 flex items-center justify-between border border-outline-variant/30 shadow-sm active:scale-[0.98] transition-all cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-[#24292e] rounded-full flex items-center justify-center text-white">
+<svg fill="currentColor" height="28" viewbox="0 0 16 16" width="28"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+</div>
+<div>
+<p class="text-body-lg font-bold text-text-primary">GitHub 帳號已連結</p>
+<p class="text-label-md text-text-secondary">同步備份設定與聊天記錄</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline" data-icon="chevron_right">chevron_right</span>
+</div>
+</section>
+<!-- General Settings Group -->
+<section class="mt-4">
+<h2 class="px-margin-side text-label-md font-label-md text-text-secondary mb-2">一般設定</h2>
+<div class="bg-surface-container-lowest border-y border-outline-variant/20">
+<!-- Row: Language -->
+<div class="flex items-center justify-between px-margin-side py-4 active:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-kakao-brown" data-icon="language">language</span>
+<span class="text-body-lg font-medium">語言</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-body-md text-text-secondary">繁體中文</span>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Row: Theme -->
+<div class="flex items-center justify-between px-margin-side py-4 active:bg-surface-container-low transition-colors cursor-pointer border-t border-outline-variant/10 group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-kakao-brown" data-icon="dark_mode">dark_mode</span>
+<span class="text-body-lg font-medium">深色模式</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-body-md text-text-secondary">跟隨系統</span>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Row: Notifications -->
+<div class="flex items-center justify-between px-margin-side py-4 active:bg-surface-container-low transition-colors cursor-pointer border-t border-outline-variant/10 group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-kakao-brown" data-icon="notifications">notifications</span>
+<span class="text-body-lg font-medium">通知設定</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- AI Assistant Group -->
+<section class="mt-6">
+<h2 class="px-margin-side text-label-md font-label-md text-text-secondary mb-2">AI 助手設定</h2>
+<div class="bg-surface-container-lowest border-y border-outline-variant/20">
+<!-- Row: Companion Personality -->
+<div class="flex items-center justify-between px-margin-side py-4 active:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-kakao-brown" data-icon="psychology">psychology</span>
+<span class="text-body-lg font-medium">伴侶人格設定</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Row: Memory Management -->
+<div class="flex items-center justify-between px-margin-side py-4 active:bg-surface-container-low transition-colors cursor-pointer border-t border-outline-variant/10 group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-kakao-brown" data-icon="memory">memory</span>
+<span class="text-body-lg font-medium">記憶庫管理</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Privacy & Security -->
+<section class="mt-6">
+<h2 class="px-margin-side text-label-md font-label-md text-text-secondary mb-2">隱私與安全</h2>
+<div class="bg-surface-container-lowest border-y border-outline-variant/20">
+<div class="flex items-center justify-between px-margin-side py-4 active:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-kakao-brown" data-icon="lock">lock</span>
+<span class="text-body-lg font-medium">隱私權保護</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+<div class="flex items-center justify-between px-margin-side py-4 active:bg-surface-container-low transition-colors cursor-pointer border-t border-outline-variant/10 group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-kakao-brown" data-icon="verified_user">verified_user</span>
+<span class="text-body-lg font-medium">帳號驗證</span>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- About Group -->
+<section class="mt-6 mb-10">
+<div class="bg-surface-container-lowest border-y border-outline-variant/20">
+<div class="flex items-center justify-between px-margin-side py-4 active:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-kakao-brown" data-icon="info">info</span>
+<span class="text-body-lg font-medium">關於 AI Companion</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-body-md text-text-secondary">v2.4.0</span>
+<span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="mt-8 px-margin-side">
+<button class="w-full py-4 rounded-xl border border-error/20 text-error font-bold active:bg-error-container/20 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    登出帳號
+                </button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 bg-surface dark:bg-surface-container-lowest h-[64px] border-t border-outline-variant dark:border-none shadow-[0_-1px_10px_rgba(0,0,0,0.02)]">
+<button class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant opacity-60 active:scale-90 transition-all duration-150">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="text-label-md font-label-md">聊天</span>
+</button>
+<button class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant opacity-60 active:scale-90 transition-all duration-150">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+<span class="text-label-md font-label-md">探索</span>
+</button>
+<button class="flex flex-col items-center justify-center text-kakao-brown dark:text-kakao-yellow scale-110 active:scale-90 transition-all duration-150">
+<span class="material-symbols-outlined" data-icon="settings" style="font-variation-settings: 'FILL' 1;">settings</span>
+<span class="text-label-md font-label-md">設定</span>
+</button>
+</nav>
+<script>
+        // Micro-interactions
+        document.querySelectorAll('.active\\:scale-\\[0\\.98\\]').forEach(card => {
+            card.addEventListener('touchstart', () => card.style.transform = 'scale(0.98)');
+            card.addEventListener('touchend', () => card.style.transform = 'scale(1)');
+        });
+    </script>
+</body></html>

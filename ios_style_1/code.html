@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html class="light" lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "text-secondary": "#666666",
+                    "on-tertiary-fixed": "#002020",
+                    "surface-container": "#eeeeee",
+                    "surface-container-low": "#f3f3f3",
+                    "tertiary-fixed": "#00fbfc",
+                    "secondary-fixed-dim": "#ecbab9",
+                    "outline": "#7c775f",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#006a6a",
+                    "tertiary-container": "#00feff",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#4b4731",
+                    "on-secondary-fixed": "#2f1313",
+                    "on-secondary-fixed-variant": "#613d3d",
+                    "primary-container": "#ffe600",
+                    "background": "#f9f9f9",
+                    "surface-bright": "#f9f9f9",
+                    "primary": "#6a5f00",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#dadada",
+                    "on-primary-container": "#726600",
+                    "on-background": "#1a1c1c",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-primary-fixed-variant": "#504700",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#dec800",
+                    "surface-container-lowest": "#ffffff",
+                    "kakao-yellow": "#FFE600",
+                    "surface-tint": "#6a5f00",
+                    "on-primary-fixed": "#201c00",
+                    "secondary-container": "#fecbc9",
+                    "bubble-user": "#FFE600",
+                    "text-primary": "#191919",
+                    "chat-bg": "#ABC1D1",
+                    "bubble-other": "#FFFFFF",
+                    "surface": "#f9f9f9",
+                    "outline-variant": "#cdc7aa",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed": "#fde400",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2f3131",
+                    "inverse-on-surface": "#f1f1f1",
+                    "secondary": "#7b5454",
+                    "secondary-fixed": "#ffdad9",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "on-tertiary-fixed-variant": "#004f50",
+                    "on-tertiary-container": "#007272",
+                    "on-secondary-container": "#7a5353",
+                    "inverse-primary": "#dec800",
+                    "on-surface": "#1a1c1c",
+                    "kakao-brown": "#3C1E1E",
+                    "tertiary-fixed-dim": "#00dcdd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "gutter": "12px",
+                    "tab-bar-height": "64px",
+                    "margin-side": "16px",
+                    "chat-gap": "8px",
+                    "bubble-padding": "10px 14px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Be Vietnam Pro"],
+                    "chat-text": ["Be Vietnam Pro"],
+                    "label-md": ["Be Vietnam Pro"],
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "title-lg": ["Be Vietnam Pro"],
+                    "headline-md": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "chat-text": ["15px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "22px", "fontWeight": "400"}],
+                    "title-lg": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-list-group {
+            margin-bottom: 24px;
+        }
+        .ios-list-item {
+            position: relative;
+            background: white;
+            padding: 12px 16px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ios-list-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 16px;
+            height: 1px;
+            background-color: #eeeeee;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            user-select: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#F2F2F7] text-text-primary min-h-screen pb-tab-bar-height">
+<!-- Top AppBar -->
+<header class="bg-surface sticky top-0 z-50 flex justify-between items-center h-14 px-margin-side w-full transition-transform duration-200">
+<button class="flex items-center active:scale-95 transition-transform text-kakao-brown">
+<span class="material-symbols-outlined mr-1">arrow_back</span>
+<span class="font-title-lg text-title-lg">返回</span>
+</button>
+<h1 class="text-title-lg font-title-lg text-kakao-brown absolute left-1/2 -translate-x-1/2">條目詳情</h1>
+<button class="text-title-lg font-title-lg text-kakao-brown active:scale-95 transition-transform">
+            編輯
+        </button>
+</header>
+<main class="max-w-md mx-auto mt-4 px-4">
+<!-- Section: Basic Info -->
+<div class="mb-2 ml-4">
+<p class="text-text-secondary text-label-md font-label-md uppercase tracking-wider">基礎資訊</p>
+</div>
+<div class="ios-list-group rounded-xl overflow-hidden shadow-sm">
+<div class="ios-list-item">
+<span class="text-body-lg font-body-lg text-text-primary">名稱</span>
+<span class="text-body-lg font-body-lg text-text-secondary">賽博龐克都市</span>
+</div>
+<div class="ios-list-item">
+<span class="text-body-lg font-body-lg text-text-primary">關鍵字</span>
+<div class="flex flex-wrap gap-1 justify-end">
+<span class="bg-primary-container px-2 py-0.5 rounded-full text-label-md font-label-md text-kakao-brown">Cyberpunk</span>
+<span class="bg-primary-container px-2 py-0.5 rounded-full text-label-md font-label-md text-kakao-brown">Neon</span>
+</div>
+</div>
+</div>
+<!-- Section: Content -->
+<div class="mb-2 ml-4">
+<p class="text-text-secondary text-label-md font-label-md uppercase tracking-wider">描述內容</p>
+</div>
+<div class="ios-list-group rounded-xl overflow-hidden shadow-sm bg-white p-4">
+<p class="text-body-md font-body-md text-text-primary leading-relaxed">
+                這是一個被永恆霓虹燈光覆蓋的都市，位於2077年的極東地區。社會結構高度兩極分化，底層民眾生活在陰暗潮濕的街巷中，而企業高管則居住在雲端之上的懸浮摩天大樓裡。
+            </p>
+<p class="mt-3 text-body-md font-body-md text-text-primary leading-relaxed">
+                城市特點：高科技、低生活。街道上充滿了義體診所、合成拉麵攤以及閃爍的人工智能全息廣告。
+            </p>
+</div>
+<!-- Section: Strategy -->
+<div class="mb-2 ml-4">
+<p class="text-text-secondary text-label-md font-label-md uppercase tracking-wider">插入與權重策略</p>
+</div>
+<div class="ios-list-group rounded-xl overflow-hidden shadow-sm">
+<div class="ios-list-item">
+<span class="text-body-lg font-body-lg text-text-primary">插入策略</span>
+<div class="flex items-center text-text-secondary">
+<span class="text-body-lg font-body-lg">Before (前置)</span>
+</div>
+</div>
+<div class="ios-list-item">
+<span class="text-body-lg font-body-lg text-text-primary">權重優先級</span>
+<div class="flex items-center text-kakao-brown font-bold">
+<span class="text-body-lg font-body-lg">100</span>
+<span class="material-symbols-outlined ml-1 text-sm">priority_high</span>
+</div>
+</div>
+<div class="ios-list-item">
+<span class="text-body-lg font-body-lg text-text-primary">狀態</span>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-green-500"></div>
+<span class="text-body-lg font-body-lg text-text-secondary">已激活</span>
+</div>
+</div>
+</div>
+<!-- Section: Meta Info -->
+<div class="mb-2 ml-4">
+<p class="text-text-secondary text-label-md font-label-md uppercase tracking-wider">其他資訊</p>
+</div>
+<div class="ios-list-group rounded-xl overflow-hidden shadow-sm">
+<div class="ios-list-item">
+<span class="text-body-lg font-body-lg text-text-primary">建立日期</span>
+<span class="text-body-lg font-body-lg text-text-secondary">2023/10/24</span>
+</div>
+<div class="ios-list-item">
+<span class="text-body-lg font-body-lg text-text-primary">最近更新</span>
+<span class="text-body-lg font-body-lg text-text-secondary">2 小時前</span>
+</div>
+</div>
+<!-- Illustration / Mood Decor -->
+<div class="mt-8 mb-12 rounded-2xl overflow-hidden shadow-lg border border-white/20 aspect-video relative">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cinematic digital illustration of a futuristic cyberpunk cityscape at night. Neon signs in vibrant pink, blue, and yellow reflect on wet asphalt streets. In the distance, massive corporate monoliths pierce through dense smog and clouds. The lighting is high-contrast with deep shadows and glowing highlights, reflecting a high-end light-mode aesthetic with playful corporate vibes." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-87kO7Pe_LHK7YkOfImMqwA4igTg08r8K24X_fmVKyPEtDpy3RLY27NQx85shhm12MdB5T5ysVGOmB7ESZPsHpt5cwD-8DKsl3VykBRL36RCVe8w2GJEG5qemqOvUFXNPZfI2WIzoY4yLFzrFmFrceOe14ImaZrdzf9dgVDxQWekQmwP7Z4CvTzzMQzC7cx5_DiXUgvlJfRDhkypz-2Ws0tp5ZNgP9VDYl2drm93iDIG2Rwk1JOXlYtsozdDXtwNwYqcALVnGxuA')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute bottom-4 left-4 text-white">
+<p class="font-headline-md text-headline-md">視覺參考</p>
+<p class="text-label-md font-label-md opacity-90">根據描述內容自動生成的氛圍圖</p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 bg-surface dark:bg-surface-container-lowest h-[64px] border-t border-outline-variant">
+<button class="flex flex-col items-center justify-center text-text-secondary opacity-60 active:scale-90 transition-all duration-150">
+<span class="material-symbols-outlined">chat_bubble</span>
+<span class="text-label-md font-label-md">聊天</span>
+</button>
+<button class="flex flex-col items-center justify-center text-kakao-brown scale-110 active:scale-90 transition-all duration-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">public</span>
+<span class="text-label-md font-label-md">世界觀</span>
+</button>
+<button class="flex flex-col items-center justify-center text-text-secondary opacity-60 active:scale-90 transition-all duration-150">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-label-md font-label-md">設定</span>
+</button>
+</nav>
+<script>
+        // Simple haptic-like feedback on buttons
+        document.querySelectorAll('button').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if (window.navigator.vibrate) {
+                    window.navigator.vibrate(10);
+                }
+            });
+        });
+
+        // Sticky header transition effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 10) {
+                header.classList.add('shadow-md');
+                header.classList.remove('bg-surface');
+                header.style.backgroundColor = 'rgba(249, 249, 249, 0.95)';
+                header.style.backdropFilter = 'blur(10px)';
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('bg-surface');
+                header.style.backgroundColor = '#f9f9f9';
+                header.style.backdropFilter = 'none';
+            }
+        });
+    </script>
+</body></html>
