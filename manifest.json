@@ -1,0 +1,26 @@
+{
+  "name": "iOS Classic AI",
+  "short_name": "AI Companion",
+  "description": "AI character interactions PWA with iOS native feel",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#F2F2F7",
+  "theme_color": "#007AFF",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["productivity", "utilities"],
+  "lang": "zh-Hant",
+  "scope": "/",
+  "prefer_related_applications": false
+}
