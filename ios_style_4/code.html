@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>生成參數設定</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "text-secondary": "#666666",
+                    "on-tertiary-fixed": "#002020",
+                    "surface-container": "#eeeeee",
+                    "surface-container-low": "#f3f3f3",
+                    "tertiary-fixed": "#00fbfc",
+                    "secondary-fixed-dim": "#ecbab9",
+                    "outline": "#7c775f",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#006a6a",
+                    "tertiary-container": "#00feff",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#4b4731",
+                    "on-secondary-fixed": "#2f1313",
+                    "on-secondary-fixed-variant": "#613d3d",
+                    "primary-container": "#ffe600",
+                    "background": "#f9f9f9",
+                    "surface-bright": "#f9f9f9",
+                    "primary": "#6a5f00",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#dadada",
+                    "on-primary-container": "#726600",
+                    "on-background": "#1a1c1c",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-primary-fixed-variant": "#504700",
+                    "error": "#ba1a1a",
+                    "primary-fixed-dim": "#dec800",
+                    "surface-container-lowest": "#ffffff",
+                    "kakao-yellow": "#FFE600",
+                    "surface-tint": "#6a5f00",
+                    "on-primary-fixed": "#201c00",
+                    "secondary-container": "#fecbc9",
+                    "bubble-user": "#FFE600",
+                    "text-primary": "#191919",
+                    "chat-bg": "#ABC1D1",
+                    "bubble-other": "#FFFFFF",
+                    "surface": "#f9f9f9",
+                    "outline-variant": "#cdc7aa",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#e8e8e8",
+                    "primary-fixed": "#fde400",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#2f3131",
+                    "inverse-on-surface": "#f1f1f1",
+                    "secondary": "#7b5454",
+                    "secondary-fixed": "#ffdad9",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "on-tertiary-fixed-variant": "#004f50",
+                    "on-tertiary-container": "#007272",
+                    "on-secondary-container": "#7a5353",
+                    "inverse-primary": "#dec800",
+                    "on-surface": "#1a1c1c",
+                    "kakao-brown": "#3C1E1E",
+                    "tertiary-fixed-dim": "#00dcdd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "gutter": "12px",
+                    "tab-bar-height": "64px",
+                    "margin-side": "16px",
+                    "chat-gap": "8px",
+                    "bubble-padding": "10px 14px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Be Vietnam Pro"],
+                    "chat-text": ["Be Vietnam Pro"],
+                    "label-md": ["Be Vietnam Pro"],
+                    "headline-lg-mobile": ["Be Vietnam Pro"],
+                    "body-md": ["Be Vietnam Pro"],
+                    "body-lg": ["Be Vietnam Pro"],
+                    "title-lg": ["Be Vietnam Pro"],
+                    "headline-md": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                    "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "chat-text": ["15px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["22px", {"lineHeight": "28px", "fontWeight": "700"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "22px", "fontWeight": "400"}],
+                    "title-lg": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                    "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #F2F2F7; /* iOS standard group inset background */
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        .ios-list-group {
+            background-color: white;
+            border-radius: 12px;
+            margin: 0 16px 24px 16px;
+            overflow: hidden;
+        }
+        
+        .ios-list-item {
+            padding: 12px 16px;
+            border-bottom: 1px solid #E5E5EA;
+        }
+        
+        .ios-list-item:last-child {
+            border-bottom: none;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 4px;
+            background: #E5E5EA;
+            border-radius: 2px;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 28px;
+            height: 28px;
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.12), 0 3px 1px rgba(0,0,0,0.04);
+            border: 0.5px solid rgba(0,0,0,0.04);
+        }
+
+        .active-press {
+            transition: transform 0.15s ease;
+        }
+        .active-press:active {
+            transform: scale(0.97);
+            opacity: 0.8;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-text-primary antialiased">
+<!-- Top Navigation Header -->
+<header class="sticky top-0 z-50 bg-surface/80 backdrop-blur-md h-14 flex justify-between items-center px-margin-side w-full">
+<button class="active-press text-kakao-brown flex items-center">
+<span class="material-symbols-outlined mr-1">arrow_back</span>
+<span class="text-body-lg font-body-lg">返回</span>
+</button>
+<h1 class="text-title-lg font-title-lg text-kakao-brown absolute left-1/2 -translate-x-1/2">生成參數</h1>
+<button class="active-press text-kakao-brown font-title-lg text-body-lg" id="resetBtn">
+            恢復預設值
+        </button>
+</header>
+<main class="pt-6 pb-20 max-w-lg mx-auto">
+<!-- Section Header -->
+<div class="px-8 mb-2">
+<p class="text-text-secondary text-label-md uppercase tracking-wider font-label-md">模型創造力設定</p>
+</div>
+<!-- Parameters Group -->
+<div class="ios-list-group shadow-sm">
+<!-- Temperature -->
+<div class="ios-list-item">
+<div class="flex justify-between items-center mb-3">
+<label class="font-title-lg text-body-lg text-text-primary">Temperature (溫度)</label>
+<span class="text-text-secondary font-mono font-medium" id="val-temp">0.7</span>
+</div>
+<input class="mb-2" id="temp" max="2" min="0" step="0.1" type="range" value="0.7"/>
+<p class="text-text-secondary text-label-md font-label-md mt-1 leading-relaxed">
+                    較高的數值會使輸出更具隨機性，較低的數值則使模型更趨於確定且保守。
+                </p>
+</div>
+<!-- Top P -->
+<div class="ios-list-item">
+<div class="flex justify-between items-center mb-3">
+<label class="font-title-lg text-body-lg text-text-primary">Top P (核採樣)</label>
+<span class="text-text-secondary font-mono font-medium" id="val-topp">1.0</span>
+</div>
+<input class="mb-2" id="topp" max="1" min="0" step="0.05" type="range" value="1.0"/>
+<p class="text-text-secondary text-label-md font-label-md mt-1 leading-relaxed">
+                    考慮機率累積達 P 的標記。0.1 表示模型只會考慮機率排名前 10% 的標記。
+                </p>
+</div>
+</div>
+<!-- Penalty Section Header -->
+<div class="px-8 mb-2">
+<p class="text-text-secondary text-label-md uppercase tracking-wider font-label-md">文本流暢度設定</p>
+</div>
+<div class="ios-list-group shadow-sm">
+<!-- Frequency Penalty -->
+<div class="ios-list-item">
+<div class="flex justify-between items-center mb-3">
+<label class="font-title-lg text-body-lg text-text-primary">Frequency Penalty (頻率懲罰)</label>
+<span class="text-text-secondary font-mono font-medium" id="val-freq">0.0</span>
+</div>
+<input class="mb-2" id="freq" max="2" min="-2" step="0.1" type="range" value="0.0"/>
+<p class="text-text-secondary text-label-md font-label-md mt-1 leading-relaxed">
+                    根據標記在目前文本中出現的頻率來懲罰新標記，減少字句重複。
+                </p>
+</div>
+<!-- Presence Penalty -->
+<div class="ios-list-item">
+<div class="flex justify-between items-center mb-3">
+<label class="font-title-lg text-body-lg text-text-primary">Presence Penalty (存在懲罰)</label>
+<span class="text-text-secondary font-mono font-medium" id="val-pres">0.0</span>
+</div>
+<input class="mb-2" id="pres" max="2" min="-2" step="0.1" type="range" value="0.0"/>
+<p class="text-text-secondary text-label-md font-label-md mt-1 leading-relaxed">
+                    根據標記是否已出現在文本中來懲罰新標記，增加模型談論新話題的可能性。
+                </p>
+</div>
+</div>
+<!-- Advanced Alert -->
+<div class="px-8 mt-4">
+<div class="flex gap-3 bg-surface-container-highest p-4 rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-kakao-brown shrink-0">info</span>
+<p class="text-text-secondary text-label-md font-label-md">
+                    建議不要同時大幅調整 Temperature 與 Top P。如果需要更具創意的回覆，請優先調整 Temperature。
+                </p>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Mirroring Shared Component JSON) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 bg-surface dark:bg-surface-container-lowest h-[64px] border-t border-outline-variant dark:border-none">
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant opacity-60 active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined">chat_bubble</span>
+</a>
+<a class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant opacity-60 active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="flex flex-col items-center justify-center text-kakao-brown dark:text-kakao-yellow scale-110 active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+</a>
+</nav>
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sliders = [
+                { id: 'temp', val: 'val-temp', default: 0.7 },
+                { id: 'topp', val: 'val-topp', default: 1.0 },
+                { id: 'freq', val: 'val-freq', default: 0.0 },
+                { id: 'pres', val: 'val-pres', default: 0.0 }
+            ];
+
+            // Update UI on slider change
+            sliders.forEach(slider => {
+                const el = document.getElementById(slider.id);
+                const display = document.getElementById(slider.val);
+                
+                el.addEventListener('input', (e) => {
+                    display.textContent = parseFloat(e.target.value).toFixed(1);
+                    // Haptic feedback feel (vibration if supported)
+                    if (window.navigator.vibrate) {
+                        window.navigator.vibrate(1);
+                    }
+                });
+            });
+
+            // Reset functionality
+            document.getElementById('resetBtn').addEventListener('click', () => {
+                sliders.forEach(slider => {
+                    const el = document.getElementById(slider.id);
+                    const display = document.getElementById(slider.val);
+                    
+                    // Simple animation for the visual feel
+                    el.style.transition = 'all 0.3s ease';
+                    el.value = slider.default;
+                    display.textContent = slider.default.toFixed(1);
+                    
+                    // Remove transition after it's done so manual sliding stays smooth
+                    setTimeout(() => {
+                        el.style.transition = '';
+                    }, 300);
+                });
+                
+                // Visual feedback for button click
+                const btn = document.getElementById('resetBtn');
+                btn.style.color = '#7c775f';
+                setTimeout(() => {
+                    btn.style.color = '';
+                }, 200);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<title>AI Companion Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+            background-color: #F2F2F7; /* Classic iOS Grouped Background */
+        }
+        .ios-list-group {
+            margin-bottom: 32px;
+        }
+        .ios-cell {
+            position: relative;
+            background-color: white;
+            transition: background-color 0.2s;
+        }
+        .ios-cell:active {
+            background-color: #E5E5EA;
+        }
+        .ios-cell:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 56px;
+            height: 0.5px;
+            background-color: #C6C6C8;
+        }
+        .ios-cell-no-indent:not(:last-child)::after {
+            left: 16px;
+        }
+        .safe-bottom {
+            padding-bottom: calc(64px + env(safe-area-inset-bottom));
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            font-size: 22px;
+        }
+        /* Sticky Header Transition Logic */
+        #sticky-header {
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+        .header-scrolled #sticky-header {
+            opacity: 1;
+        }
+        .header-scrolled #large-title {
+            opacity: 0;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-surface": "#1a1c1c",
+                "surface-bright": "#f9f9f9",
+                "error-container": "#ffdad6",
+                "surface-container-high": "#e8e8e8",
+                "inverse-on-surface": "#f1f1f1",
+                "inverse-surface": "#2f3131",
+                "kakao-yellow": "#FFE600",
+                "bubble-user": "#FFE600",
+                "secondary-fixed-dim": "#ecbab9",
+                "surface-variant": "#e2e2e2",
+                "on-primary-container": "#726600",
+                "inverse-primary": "#dec800",
+                "outline": "#7c775f",
+                "on-secondary": "#ffffff",
+                "primary-fixed": "#fde400",
+                "on-tertiary-container": "#007272",
+                "background": "#f9f9f9",
+                "on-primary": "#ffffff",
+                "tertiary-fixed": "#00fbfc",
+                "primary": "#6a5f00",
+                "on-error-container": "#93000a",
+                "tertiary-fixed-dim": "#00dcdd",
+                "text-secondary": "#666666",
+                "secondary-fixed": "#ffdad9",
+                "on-secondary-container": "#7a5353",
+                "text-primary": "#191919",
+                "primary-fixed-dim": "#dec800",
+                "surface-dim": "#dadada",
+                "chat-bg": "#ABC1D1",
+                "surface-container-low": "#f3f3f3",
+                "surface-container": "#eeeeee",
+                "primary-container": "#ffe600",
+                "secondary": "#7b5454",
+                "on-tertiary-fixed-variant": "#004f50",
+                "on-secondary-fixed-variant": "#613d3d",
+                "on-tertiary-fixed": "#002020",
+                "secondary-container": "#fecbc9",
+                "on-primary-fixed": "#201c00",
+                "on-background": "#1a1c1c",
+                "on-secondary-fixed": "#2f1313",
+                "on-primary-fixed-variant": "#504700",
+                "tertiary-container": "#00feff",
+                "on-error": "#ffffff",
+                "surface-container-highest": "#e2e2e2",
+                "bubble-other": "#FFFFFF",
+                "outline-variant": "#cdc7aa",
+                "on-surface-variant": "#4b4731",
+                "error": "#ba1a1a",
+                "tertiary": "#006a6a",
+                "on-tertiary": "#ffffff",
+                "kakao-brown": "#3C1E1E",
+                "surface": "#f9f9f9",
+                "surface-tint": "#6a5f00",
+                "surface-container-lowest": "#ffffff",
+                "ios-blue": "#007AFF",
+                "ios-gray": "#8E8E93"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "10px",
+                "full": "9999px"
+            },
+            "spacing": {
+                "unit": "4px",
+                "bubble-padding": "10px 14px",
+                "tab-bar-height": "64px",
+                "gutter": "12px",
+                "margin-side": "16px",
+                "chat-gap": "8px"
+            },
+            "fontFamily": {
+                "body-md": ["Be Vietnam Pro"],
+                "headline-lg": ["Be Vietnam Pro"],
+                "chat-text": ["Be Vietnam Pro"],
+                "title-lg": ["Be Vietnam Pro"],
+                "label-md": ["Be Vietnam Pro"],
+                "body-lg": ["Be Vietnam Pro"],
+                "headline-md": ["Be Vietnam Pro"],
+                "headline-lg-mobile": ["Be Vietnam Pro"]
+            },
+            "fontSize": {
+                "body-md": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                "headline-lg": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                "title-lg": ["18px", {"lineHeight": "24px", "fontWeight": "600"}],
+                "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                "body-lg": ["16px", {"lineHeight": "22px", "fontWeight": "400"}],
+                "headline-md": ["20px", {"lineHeight": "28px", "fontWeight": "700"}],
+                "headline-lg-mobile": ["34px", {"lineHeight": "41px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#F2F2F7]">
+<!-- Top Navigation Bar (Shared Component Strategy) -->
+<header class="fixed top-0 w-full bg-[#F2F2F7]/80 backdrop-blur-md z-50 transition-all duration-300" id="navbar">
+<div class="flex justify-between items-center h-11 px-4">
+<div class="flex items-center text-ios-blue active:opacity-30 transition-opacity">
+<span class="material-symbols-outlined mr-1">arrow_back_ios</span>
+<span class="text-body-lg font-body-lg">戻る</span>
+</div>
+<div class="absolute left-1/2 -translate-x-1/2" id="sticky-header">
+<h1 class="text-body-lg font-bold text-on-surface">設定</h1>
+</div>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</div>
+</header>
+<main class="pt-11 px-4 safe-bottom">
+<!-- Large Title Section -->
+<div class="pt-6 pb-4">
+<h1 class="text-headline-lg-mobile font-headline-lg-mobile text-on-surface transition-opacity duration-200" id="large-title">
+                設定
+            </h1>
+</div>
+<!-- GitHub Profile Card -->
+<section class="ios-list-group">
+<div class="bg-white rounded-xl p-4 flex items-center space-x-4 shadow-sm active:bg-gray-100 transition-colors cursor-pointer">
+<div class="w-14 h-14 bg-[#24292F] rounded-full flex items-center justify-center">
+<img class="w-8 h-8 invert" data-alt="The iconic GitHub logo, a minimalist white silhouette of an Octocat on a solid deep black circular background. The style is clean, modern, and corporate, fitting perfectly into a high-end mobile user interface. The lighting is flat and graphic, emphasizing the bold contrast of the brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb2oKzQOM1PQuCaySWwbKCjBqD3fUe7CXNEq2RU_V4zQNJi9Gf4Pu6gwsG0zEocrEwuDlc-5w6oMng7i4uvGpo2KHZkelt1RC6PDw35YJ_B96Ps9nNKcuwNzIauTkaaPx7gQWJz_jSBpr7k40cnwDw-07TxondsAbhdD7LZXQuFr4ChnSe2hoF-4gpbKrHeFvXWRjTzhu6XrroZUIqhWtiite14NsuOFSIVK2dvD_ZuYC9UG8koC1MJG-bz-kZ7Nr9DpEtpOhOwGo"/>
+</div>
+<div class="flex-1">
+<h2 class="text-title-lg font-title-lg text-on-surface">GitHubでサインイン</h2>
+<p class="text-label-md font-label-md text-text-secondary leading-tight">クラウド同期と設定のバックアップを管理</p>
+</div>
+<span class="material-symbols-outlined text-[#C4C4C6]">chevron_right</span>
+</div>
+</section>
+<!-- Section 1: Account / Sync -->
+<section class="ios-list-group">
+<h3 class="px-4 py-2 text-label-md font-label-md text-text-secondary uppercase">アカウントと同期</h3>
+<div class="rounded-xl overflow-hidden shadow-sm">
+<div class="ios-cell p-3 flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-7 h-7 rounded-lg bg-ios-blue flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-white text-[18px]">cloud_sync</span>
+</div>
+<span class="text-body-lg font-body-lg text-on-surface">Lore Cloud Sync</span>
+</div>
+<div class="flex items-center">
+<span class="text-body-lg text-text-secondary mr-2">オン</span>
+<span class="material-symbols-outlined text-[#C4C4C6]">chevron_right</span>
+</div>
+</div>
+<div class="ios-cell p-3 flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-7 h-7 rounded-lg bg-gray-500 flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-white text-[18px]">backup</span>
+</div>
+<span class="text-body-lg font-body-lg text-on-surface">バックアップを書き出す</span>
+</div>
+<span class="material-symbols-outlined text-[#C4C4C6]">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Section 2: Application -->
+<section class="ios-list-group">
+<h3 class="px-4 py-2 text-label-md font-label-md text-text-secondary uppercase">アプリ設定</h3>
+<div class="rounded-xl overflow-hidden shadow-sm">
+<div class="ios-cell p-3 flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-7 h-7 rounded-lg bg-indigo-500 flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-white text-[18px]">palette</span>
+</div>
+<span class="text-body-lg font-body-lg text-on-surface">外観</span>
+</div>
+<div class="flex items-center">
+<span class="text-body-lg text-text-secondary mr-2">ライト</span>
+<span class="material-symbols-outlined text-[#C4C4C6]">chevron_right</span>
+</div>
+</div>
+<div class="ios-cell p-3 flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-7 h-7 rounded-lg bg-red-500 flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-white text-[18px]">notifications</span>
+</div>
+<span class="text-body-lg font-body-lg text-on-surface">通知</span>
+</div>
+<span class="material-symbols-outlined text-[#C4C4C6]">chevron_right</span>
+</div>
+<div class="ios-cell p-3 flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-7 h-7 rounded-lg bg-green-500 flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-white text-[18px]">language</span>
+</div>
+<span class="text-body-lg font-body-lg text-on-surface">言語</span>
+</div>
+<div class="flex items-center">
+<span class="text-body-lg text-text-secondary mr-2">日本語</span>
+<span class="material-symbols-outlined text-[#C4C4C6]">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: AI Config -->
+<section class="ios-list-group">
+<h3 class="px-4 py-2 text-label-md font-label-md text-text-secondary uppercase">インテリジェンス</h3>
+<div class="rounded-xl overflow-hidden shadow-sm">
+<div class="ios-cell p-3 flex items-center justify-between">
+<div class="flex items-center">
+<div class="w-7 h-7 rounded-lg bg-kakao-brown flex items-center justify-center mr-3">
+<span class="material-symbols-outlined text-kakao-yellow text-[18px]" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<span class="text-body-lg font-body-lg text-on-surface">API 設定</span>
+</div>
+<span class="material-symbols-outlined text-[#C4C4C6]">chevron_right</span>
+</div>
+</div>
+</section>
+<!-- Section 4: About -->
+<section class="ios-list-group">
+<h3 class="px-4 py-2 text-label-md font-label-md text-text-secondary uppercase">このアプリについて</h3>
+<div class="rounded-xl overflow-hidden shadow-sm">
+<div class="ios-cell p-3 flex items-center justify-between">
+<span class="text-body-lg font-body-lg text-on-surface">バージョン</span>
+<span class="text-body-lg text-text-secondary">2.4.0 (Build 102)</span>
+</div>
+<div class="ios-cell p-3 flex items-center justify-between">
+<span class="text-body-lg font-body-lg text-on-surface">利用規約</span>
+<span class="material-symbols-outlined text-[#C4C4C6]">chevron_right</span>
+</div>
+<div class="ios-cell p-3 flex items-center justify-between">
+<div class="flex items-center">
+<span class="text-body-lg font-body-lg text-on-surface">GitHub リポジトリ</span>
+</div>
+<span class="material-symbols-outlined text-ios-blue">open_in_new</span>
+</div>
+</div>
+</section>
+<!-- Legal Footer -->
+<div class="text-center py-4 space-y-1">
+<p class="text-label-md text-text-secondary">© 2024 AI Companion Project</p>
+<p class="text-label-md text-text-secondary">Designed with care for the mobile experience.</p>
+</div>
+</main>
+<!-- Bottom Navigation Bar (Execution from JSON) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 bg-surface dark:bg-surface-container-lowest h-[64px] border-t border-outline-variant">
+<!-- Chat Tab -->
+<div class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant opacity-60 active:scale-90 transition-all duration-150 cursor-pointer">
+<span class="material-symbols-outlined">chat_bubble</span>
+</div>
+<!-- Public/Explore Tab -->
+<div class="flex flex-col items-center justify-center text-text-secondary dark:text-on-surface-variant opacity-60 active:scale-90 transition-all duration-150 cursor-pointer">
+<span class="material-symbols-outlined">public</span>
+</div>
+<!-- Settings Tab (ACTIVE) -->
+<div class="flex flex-col items-center justify-center text-kakao-brown dark:text-kakao-yellow scale-110 active:scale-90 transition-all duration-150 cursor-pointer">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+</div>
+</nav>
+<script>
+        // Scroll interaction for iOS style header
+        window.addEventListener('scroll', function() {
+            const body = document.body;
+            const threshold = 40;
+            const scrollPos = window.scrollY;
+            
+            if (scrollPos > threshold) {
+                body.classList.add('header-scrolled');
+                document.getElementById('navbar').classList.add('border-b', 'border-gray-200');
+            } else {
+                body.classList.remove('header-scrolled');
+                document.getElementById('navbar').classList.remove('border-b', 'border-gray-200');
+            }
+        });
+
+        // Micro-interactions for cells
+        document.querySelectorAll('.ios-cell').forEach(cell => {
+            cell.addEventListener('click', () => {
+                // Haptic feedback simulation or navigation logic
+                console.log('Cell tapped:', cell.innerText.trim());
+            });
+        });
+    </script>
+</body></html>

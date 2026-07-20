@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+<title>編輯條目 - 世界書</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .ios-toggle:checked + .toggle-bg {
+            background-color: #FFE600; /* Kakao Yellow matching the system green/yellow requirement */
+        }
+        .ios-toggle:checked + .toggle-bg .toggle-dot {
+            transform: translateX(20px);
+        }
+        .segment-active {
+            background-color: white;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.08);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-text-primary h-screen flex flex-col overflow-hidden">
+<!-- Top Navigation Bar -->
+<header class="bg-surface sticky top-0 z-50 flex justify-between items-center h-14 px-margin-side w-full border-b border-outline-variant/30">
+<button class="text-kakao-brown font-body-lg active:scale-95 transition-transform" onclick="window.history.back()">
+            取消
+        </button>
+<h1 class="text-title-lg font-title-lg text-kakao-brown">編輯條目</h1>
+<button class="text-kakao-brown font-title-lg font-bold active:scale-95 transition-transform">
+            儲存
+        </button>
+</header>
+<!-- Main Editor Content -->
+<main class="flex-1 overflow-y-auto pb-tab-bar-height bg-surface-container-low">
+<div class="max-w-2xl mx-auto space-y-gutter py-gutter">
+<!-- Visual Hero Card (Subtle Branding) -->
+<div class="px-margin-side">
+<div class="relative h-32 rounded-xl overflow-hidden shadow-sm">
+
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent flex items-end p-4">
+<div>
+<span class="text-white/80 text-label-md font-label-md uppercase tracking-wider">World Info</span>
+<h2 class="text-white text-headline-md font-headline-md">設定條目細節</h2>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 1: Keywords -->
+<section class="px-margin-side">
+<label class="block text-text-secondary text-label-md font-label-md mb-2 px-1">關鍵字</label>
+<div class="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.03)] border border-outline-variant/20 overflow-hidden">
+<input class="w-full border-none focus:ring-0 px-4 py-4 text-body-lg font-body-lg placeholder:text-text-secondary/50" placeholder="輸入觸發關鍵字..." type="text" value="新世界, 冒險者"/>
+</div>
+<p class="mt-2 px-1 text-text-secondary text-label-md opacity-70">多個關鍵字請用逗號隔開。</p>
+</section>
+<!-- Section 2: Content -->
+<section class="px-margin-side">
+<label class="block text-text-secondary text-label-md font-label-md mb-2 px-1">內容</label>
+<div class="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.03)] border border-outline-variant/20 overflow-hidden">
+<textarea class="w-full border-none focus:ring-0 px-4 py-4 text-chat-text font-chat-text leading-relaxed resize-none scroll-smooth" placeholder="請輸入詳細的背景設定、規則或角色資料..." rows="8">關於這個新世界的起源，據說是由遠古的巨龍之息所創造，充滿了漂浮的海島與神秘的魔法脈絡。所有的冒險者在此都必須遵循大自然的法則...</textarea>
+</div>
+</section>
+<!-- Section 3: Insertion Strategy -->
+<section class="px-margin-side">
+<label class="block text-text-secondary text-label-md font-label-md mb-2 px-1">插入策略</label>
+<div class="bg-surface-container-high p-1 rounded-xl flex items-center shadow-inner">
+<button class="flex-1 py-2 text-center text-label-md font-label-md rounded-lg transition-all duration-200 text-text-secondary hover:text-kakao-brown" id="strategy-before">Before</button>
+<button class="flex-1 py-2 text-center text-label-md font-label-md rounded-lg transition-all duration-200 segment-active text-kakao-brown" id="strategy-after">After</button>
+<button class="flex-1 py-2 text-center text-label-md font-label-md rounded-lg transition-all duration-200 text-text-secondary hover:text-kakao-brown" id="strategy-system">System</button>
+</div>
+<script>
+                    const buttons = ['strategy-before', 'strategy-after', 'strategy-system'];
+                    buttons.forEach(id => {
+                        document.getElementById(id).addEventListener('click', function() {
+                            buttons.forEach(bId => {
+                                document.getElementById(bId).classList.remove('segment-active', 'text-kakao-brown');
+                                document.getElementById(bId).classList.add('text-text-secondary');
+                            });
+                            this.classList.add('segment-active', 'text-kakao-brown');
+                            this.classList.remove('text-text-secondary');
+                        });
+                    });
+                </script>
+</section>
+<!-- Section 4: Enabled Toggle & Other Options -->
+<section class="px-margin-side space-y-2">
+<div class="bg-white rounded-xl shadow-[0_2px_8px_rgba(0,0,0,0.03)] border border-outline-variant/20 overflow-hidden divide-y divide-outline-variant/10">
+<!-- Enabled Toggle -->
+<div class="flex items-center justify-between px-4 py-4 active:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-kakao-brown opacity-80">check_circle</span>
+<span class="text-body-lg font-body-lg">啟用此條目</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only ios-toggle" type="checkbox"/>
+<div class="toggle-bg w-11 h-6 bg-surface-container-highest rounded-full transition-colors duration-200">
+<div class="toggle-dot absolute left-0.5 top-0.5 bg-white border border-gray-200 h-5 w-5 rounded-full transition-transform duration-200"></div>
+</div>
+</label>
+</div>
+<!-- Priority Control (Bonus) -->
+<div class="flex items-center justify-between px-4 py-4 active:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-kakao-brown opacity-80">leaderboard</span>
+<span class="text-body-lg font-body-lg">權重優先級</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-text-secondary text-label-md">100</span>
+<span class="material-symbols-outlined text-outline-variant">chevron_right</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Metadata Display -->
+<section class="px-margin-side pb-8">
+<div class="flex flex-col items-center justify-center p-6 border-2 border-dashed border-outline-variant/20 rounded-2xl gap-3">
+<img class="w-20 h-20 rounded-full object-cover shadow-md" data-alt="A clean and modern high-end architectural drawing of a futuristic fantasy library, with floating scrolls and soft golden lighting. The aesthetic matches a premium light-mode interface with subtle textures, soft shadows, and a palette of warm beiges and pristine whites. The mood is intellectual, expansive, and high-tech." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZUfYR-BOGQeORfT7_TWQFVajpXE_ODSndtpiO2rx7Gg1-J8Gz0SoHMLRMe6AaaiJgQpnxNevs4Q9rxmwa7Qzl4T-4eeR3FRDn07TwXWblC5oqusjeWITJE2wvBNzdNnMe0KrexfJD7TjarYRG4ozn7rCYYDt9_SGK1a4YzmwAvq0FzfyiX7ZHQlwig_-LB8AO0Sg3VfxHECSE70FZVVoVUAxWf6Oaf3bWqhkly4-FncAsRAlx1LNLM1Uk7CcYRRxh9-mtyqedss4"/>
+<div class="text-center">
+<p class="text-text-secondary text-label-md">建立於 2023年10月24日</p>
+<p class="text-text-secondary text-label-md">上次修改 5分鐘前</p>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Fixed Bottom Action Bar (Contextual) -->
+<nav class="fixed bottom-0 w-full z-50 flex justify-around items-center px-4 bg-surface h-[64px] border-t border-outline-variant/30">
+<button class="flex flex-col items-center justify-center text-text-secondary opacity-60 active:scale-90 transition-all duration-150">
+<span class="material-symbols-outlined">delete</span>
+<span class="text-label-md font-label-md mt-1">刪除</span>
+</button>
+<button class="flex flex-col items-center justify-center text-text-secondary opacity-60 active:scale-90 transition-all duration-150">
+<span class="material-symbols-outlined">content_copy</span>
+<span class="text-label-md font-label-md mt-1">複製</span>
+</button>
+<button class="flex flex-col items-center justify-center text-text-secondary opacity-60 active:scale-90 transition-all duration-150">
+<span class="material-symbols-outlined">share</span>
+<span class="text-label-md font-label-md mt-1">匯出</span>
+</button>
+</nav>
+<script>
+        // Micro-interaction: Update toggle UI behavior manually for touch responsiveness
+        document.querySelectorAll('.ios-toggle').forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                const parent = this.parentElement.parentElement;
+                if (this.checked) {
+                    parent.classList.add('bg-kakao-yellow/5');
+                } else {
+                    parent.classList.remove('bg-kakao-yellow/5');
+                }
+            });
+        });
+    </script>
+</body></html>
