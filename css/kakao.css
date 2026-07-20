@@ -1,0 +1,305 @@
+.kakao-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    padding: 0 16px;
+    background-color: rgba(171, 193, 209, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+
+.kakao-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 64px;
+    background-color: #F9F9F9;
+    border-top: 0.5px solid #CDC7AA;
+}
+
+.kakao-bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+    color: #666666;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.kakao-bottom-nav-item.active {
+    color: var(--kakao-brown);
+    transform: scale(1.1);
+}
+
+.kakao-fab {
+    position: fixed;
+    bottom: 80px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    background-color: var(--kakao-yellow);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.15s;
+    z-index: 40;
+}
+
+.kakao-fab:active {
+    transform: scale(0.95);
+}
+
+.kakao-chat-cell {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    height: 72px;
+    cursor: pointer;
+    transition: background-color 0.15s;
+}
+
+.kakao-chat-cell:active {
+    background-color: #EEEEEE;
+}
+
+.kakao-chat-cell:not(:last-child) {
+    border-bottom: 0.5px solid #EEEEEE;
+}
+
+.kakao-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-right: 12px;
+}
+
+.kakao-avatar-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    padding: 2px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background-color: #EEEEEE;
+    overflow: hidden;
+}
+
+.kakao-avatar-group img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.kakao-chat-bg {
+    background-color: var(--kakao-blue);
+    min-height: 100%;
+}
+
+.kakao-bubble-left {
+    position: relative;
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 8px 12px;
+    border-radius: 14px;
+    max-width: 280px;
+    word-wrap: break-word;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.kakao-bubble-left::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 10px solid #FFFFFF;
+}
+
+.kakao-bubble-right {
+    position: relative;
+    background-color: var(--kakao-yellow);
+    color: #000000;
+    padding: 8px 12px;
+    border-radius: 14px;
+    max-width: 280px;
+    word-wrap: break-word;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.kakao-bubble-right::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: 12px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 10px solid var(--kakao-yellow);
+}
+
+.kakao-bubble-text {
+    font-size: 15px;
+    line-height: 1.4;
+    font-family: var(--font-kakao);
+}
+
+.kakao-chat-input-area {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: #FFFFFF;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
+}
+
+.kakao-chat-input-wrapper {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.kakao-chat-textarea {
+    flex: 1;
+    background-color: #F5F5F5;
+    border: 1px solid #E5E5E5;
+    border-radius: 18px;
+    padding: 8px 12px;
+    font-size: 15px;
+    font-family: var(--font-kakao);
+    color: #000000;
+    resize: none;
+    max-height: 100px;
+    min-height: 36px;
+    line-height: 1.4;
+    outline: none;
+}
+
+.kakao-chat-textarea:focus {
+    border-color: var(--kakao-yellow);
+}
+
+.kakao-send-btn {
+    background-color: var(--kakao-yellow);
+    color: var(--kakao-brown);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.15s;
+    white-space: nowrap;
+}
+
+.kakao-send-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.kakao-send-btn:not(:disabled):active {
+    background-color: #E6CF00;
+}
+
+.kakao-unread-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    background-color: var(--kakao-yellow);
+    color: var(--kakao-brown);
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 9px;
+    padding: 0 4px;
+}
+
+.kakao-date-divider {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+}
+
+.kakao-date-divider span {
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    font-size: 11px;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+.kakao-online-dot {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 14px;
+    height: 14px;
+    background-color: #34C759;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.kakao-message-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.kakao-message-row.user {
+    justify-content: flex-end;
+}
+
+.kakao-message-row.ai {
+    justify-content: flex-start;
+}
+
+.kakao-message-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 18px;
+    object-fit: cover;
+    flex-shrink: 0;
+    margin-top: 20px;
+}
+
+.kakao-message-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 85%;
+}
+
+.kakao-message-name {
+    font-size: 12px;
+    color: var(--kakao-brown);
+    opacity: 0.8;
+    margin-left: 4px;
+    margin-bottom: 4px;
+}
