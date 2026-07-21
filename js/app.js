@@ -7,7 +7,6 @@ import HomeScreen from './homescreen.js';
 function isMobileDevice() {
     const ua = navigator.userAgent.toLowerCase();
     const isMobileUA = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(ua);
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     const isSmallScreen = window.innerWidth < 768;
     return isMobileUA && isSmallScreen;
 }
@@ -17,6 +16,7 @@ const App = {
     currentPageCleanup: null,
     isMobile: false,
     phoneFrame: null,
+    appContainer: null,
     isLocked: true,
     lockScreenEl: null,
     homeScreenEl: null,
@@ -39,8 +39,12 @@ const App = {
         this.setupInstallPrompt();
     },
     
+    getAppContainer() {
+        return this.appContainer || document.getElementById('app');
+    },
+    
     showLockScreen() {
-        const app = document.getElementById('app');
+        const app = this.getAppContainer();
         app.innerHTML = '';
         
         this.lockScreenEl = LockScreen.create({
@@ -55,7 +59,7 @@ const App = {
             LockScreen.destroy();
         }
         
-        const app = document.getElementById('app');
+        const app = this.getAppContainer();
         app.innerHTML = '';
         
         this.homeScreenEl = HomeScreen.create();
@@ -84,6 +88,11 @@ const App = {
         frame.appendChild(notch);
         
         const screen = createElement('div', 'phone-screen');
+        
+        const appContainer = createElement('div', '');
+        appContainer.id = 'app';
+        screen.appendChild(appContainer);
+        
         frame.appendChild(screen);
         
         const homeIndicator = createElement('div', 'phone-home-indicator');
@@ -91,16 +100,20 @@ const App = {
         
         document.body.appendChild(frame);
         
-        const app = document.getElementById('app');
-        screen.appendChild(app);
+        const existingApp = document.getElementById('app');
+        if (existingApp && existingApp !== appContainer) {
+            existingApp.removeAttribute('id');
+            existingApp.remove();
+        }
         
+        this.appContainer = appContainer;
         this.phoneFrame = frame;
     },
     
     registerRoutes() {
         Router.on('/home', async () => {
             if (!this.isLocked) {
-                const app = document.getElementById('app');
+                const app = this.getAppContainer();
                 app.innerHTML = '';
                 this.homeScreenEl = HomeScreen.create();
                 app.appendChild(this.homeScreenEl);
@@ -144,7 +157,7 @@ const App = {
     },
     
     async loadPage(pageName, params = {}) {
-        const app = document.getElementById('app');
+        const app = this.getAppContainer();
         
         if (this.currentPageCleanup) {
             this.currentPageCleanup();
