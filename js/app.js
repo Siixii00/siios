@@ -1,6 +1,8 @@
 import Router from './router.js';
 import { SettingsDB, initDB } from './db.js';
 import { createElement, createIcon, createToast } from './components.js';
+import LockScreen from './lockscreen.js';
+import HomeScreen from './homescreen.js';
 
 function isMobileDevice() {
     const ua = navigator.userAgent.toLowerCase();
@@ -15,6 +17,9 @@ const App = {
     currentPageCleanup: null,
     isMobile: false,
     phoneFrame: null,
+    isLocked: true,
+    lockScreenEl: null,
+    homeScreenEl: null,
     
     async init() {
         this.isMobile = isMobileDevice();
@@ -25,11 +30,47 @@ const App = {
         
         await initDB();
         
+        this.showLockScreen();
+        
         this.registerRoutes();
         Router.start();
         
         this.registerServiceWorker();
         this.setupInstallPrompt();
+    },
+    
+    showLockScreen() {
+        const app = document.getElementById('app');
+        app.innerHTML = '';
+        
+        this.lockScreenEl = LockScreen.create({
+            onUnlock: () => this.unlock()
+        });
+        app.appendChild(this.lockScreenEl);
+        this.isLocked = true;
+    },
+    
+    unlock() {
+        if (this.lockScreenEl) {
+            LockScreen.destroy();
+        }
+        
+        const app = document.getElementById('app');
+        app.innerHTML = '';
+        
+        this.homeScreenEl = HomeScreen.create();
+        app.appendChild(this.homeScreenEl);
+        this.isLocked = false;
+    },
+    
+    lock() {
+        if (this.currentPageCleanup) {
+            this.currentPageCleanup();
+            this.currentPageCleanup = null;
+        }
+        
+        Router.navigate('/home');
+        this.showLockScreen();
     },
     
     createPhoneFrame() {
@@ -58,34 +99,46 @@ const App = {
     
     registerRoutes() {
         Router.on('/home', async () => {
-            await this.loadPage('home');
+            if (!this.isLocked) {
+                const app = document.getElementById('app');
+                app.innerHTML = '';
+                this.homeScreenEl = HomeScreen.create();
+                app.appendChild(this.homeScreenEl);
+            }
         });
         
         Router.on('/chats', async () => {
+            if (this.isLocked) return;
             await this.loadPage('chats');
         });
         
         Router.on('/chat/:id', async (params) => {
+            if (this.isLocked) return;
             await this.loadPage('chat', params);
         });
         
         Router.on('/world-info', async () => {
+            if (this.isLocked) return;
             await this.loadPage('world-info');
         });
         
         Router.on('/entry-editor', async () => {
+            if (this.isLocked) return;
             await this.loadPage('entry-editor');
         });
         
         Router.on('/entry-editor/:id', async (params) => {
+            if (this.isLocked) return;
             await this.loadPage('entry-editor', params);
         });
         
         Router.on('/settings', async () => {
+            if (this.isLocked) return;
             await this.loadPage('settings');
         });
         
         Router.on('/api-config', async () => {
+            if (this.isLocked) return;
             await this.loadPage('api-config');
         });
     },
