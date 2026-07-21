@@ -2,7 +2,7 @@
   "name": "iOS Classic AI",
   "short_name": "AI Companion",
   "description": "AI character interactions PWA with iOS native feel",
-  "start_url": "/index.html",
+  "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#F2F2F7",
   "theme_color": "#007AFF",
@@ -21,6 +21,6 @@
   ],
   "categories": ["productivity", "utilities"],
   "lang": "zh-Hant",
-  "scope": "/",
+  "scope": "./",
   "prefer_related_applications": false
 }
