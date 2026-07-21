@@ -1,23 +1,28 @@
 const CACHE_NAME = 'ios-classic-ai-v1';
+
+function getBasePath() {
+  return self.registration.scope;
+}
+
 const STATIC_ASSETS = [
-  '/',
-  '/index.html',
-  '/css/shared.css',
-  '/css/ios.css',
-  '/css/kakao.css',
-  '/js/app.js',
-  '/js/router.js',
-  '/js/db.js',
-  '/js/api.js',
-  '/js/components.js',
-  '/js/pages/home.js',
-  '/js/pages/chats.js',
-  '/js/pages/chat.js',
-  '/js/pages/world-info.js',
-  '/js/pages/entry-editor.js',
-  '/js/pages/settings.js',
-  '/js/pages/api-config.js',
-  '/manifest.json'
+  './',
+  './index.html',
+  './css/shared.css',
+  './css/ios.css',
+  './css/kakao.css',
+  './js/app.js',
+  './js/router.js',
+  './js/db.js',
+  './js/api.js',
+  './js/components.js',
+  './js/pages/home.js',
+  './js/pages/chats.js',
+  './js/pages/chat.js',
+  './js/pages/world-info.js',
+  './js/pages/entry-editor.js',
+  './js/pages/settings.js',
+  './js/pages/api-config.js',
+  './manifest.json'
 ];
 
 self.addEventListener('install', (event) => {
@@ -82,7 +87,7 @@ self.addEventListener('fetch', (event) => {
       })
       .catch(() => {
         if (request.destination === 'document') {
-          return caches.match('/index.html');
+          return caches.match('./index.html');
         }
         return new Response('Offline', { status: 503 });
       })
