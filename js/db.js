@@ -1,3 +1,5 @@
+import { openDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
+
 const DB_NAME = 'ios-classic-ai';
 const DB_VERSION = 1;
 
@@ -6,7 +8,7 @@ let db = null;
 async function initDB() {
     if (db) return db;
     
-    db = await idb.openDB(DB_NAME, DB_VERSION, {
+    db = await openDB(DB_NAME, DB_VERSION, {
         upgrade(database) {
             if (!database.objectStoreNames.contains('chats')) {
                 const chatsStore = database.createObjectStore('chats', { keyPath: 'id' });
