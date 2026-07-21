@@ -2,11 +2,27 @@ import Router from './router.js';
 import { SettingsDB, initDB } from './db.js';
 import { createElement, createIcon, createToast } from './components.js';
 
+function isMobileDevice() {
+    const ua = navigator.userAgent.toLowerCase();
+    const isMobileUA = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(ua);
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    const isSmallScreen = window.innerWidth < 768;
+    return isMobileUA && isSmallScreen;
+}
+
 const App = {
     currentPage: null,
     currentPageCleanup: null,
+    isMobile: false,
+    phoneFrame: null,
     
     async init() {
+        this.isMobile = isMobileDevice();
+        
+        if (!this.isMobile) {
+            this.createPhoneFrame();
+        }
+        
         await initDB();
         
         this.registerRoutes();
@@ -14,6 +30,30 @@ const App = {
         
         this.registerServiceWorker();
         this.setupInstallPrompt();
+    },
+    
+    createPhoneFrame() {
+        document.body.classList.add('desktop-mode');
+        
+        const frame = createElement('div', 'phone-frame');
+        
+        const notch = createElement('div', 'phone-notch');
+        notch.appendChild(createElement('div', 'phone-notch-speaker'));
+        notch.appendChild(createElement('div', 'phone-notch-camera'));
+        frame.appendChild(notch);
+        
+        const screen = createElement('div', 'phone-screen');
+        frame.appendChild(screen);
+        
+        const homeIndicator = createElement('div', 'phone-home-indicator');
+        frame.appendChild(homeIndicator);
+        
+        document.body.appendChild(frame);
+        
+        const app = document.getElementById('app');
+        screen.appendChild(app);
+        
+        this.phoneFrame = frame;
     },
     
     registerRoutes() {

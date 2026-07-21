@@ -18,6 +18,10 @@
     --radius-bubble: 18px;
     --spacing-edge: 16px;
     --spacing-list: 20px;
+    --phone-width: 375px;
+    --phone-height: 812px;
+    --phone-border-radius: 50px;
+    --phone-notch-height: 30px;
 }
 
 *, *::before, *::after {
@@ -246,4 +250,108 @@ body {
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+body.desktop-mode {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 20px;
+}
+
+body.desktop-mode #app {
+    width: 100%;
+    height: 100%;
+}
+
+.phone-frame {
+    position: relative;
+    width: var(--phone-width);
+    height: var(--phone-height);
+    max-height: calc(100vh - 40px);
+    background: #1c1c1e;
+    border-radius: var(--phone-border-radius);
+    padding: 12px;
+    box-shadow: 
+        0 0 0 2px #2c2c2e,
+        0 0 0 4px #1c1c1e,
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        inset 0 0 0 2px #3a3a3c;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.phone-notch {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: var(--phone-notch-height);
+    background: #1c1c1e;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    z-index: 10;
+}
+
+.phone-notch-speaker {
+    width: 60px;
+    height: 6px;
+    background: #0a0a0a;
+    border-radius: 3px;
+}
+
+.phone-notch-camera {
+    width: 10px;
+    height: 10px;
+    background: #0a0a0a;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px #1a1a1a;
+}
+
+.phone-screen {
+    flex: 1;
+    background: var(--ios-bg);
+    border-radius: calc(var(--phone-border-radius) - 14px);
+    overflow: hidden;
+    position: relative;
+}
+
+.phone-home-indicator {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 134px;
+    height: 5px;
+    background: #1c1c1e;
+    border-radius: 3px;
+    z-index: 10;
+}
+
+@media (max-width: 420px) {
+    .phone-frame {
+        width: 100%;
+        height: 100vh;
+        max-height: none;
+        border-radius: 0;
+        padding: 0;
+        box-shadow: none;
+        background: var(--ios-bg);
+    }
+    
+    .phone-notch,
+    .phone-home-indicator {
+        display: none;
+    }
+    
+    .phone-screen {
+        border-radius: 0;
+    }
 }
