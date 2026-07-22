@@ -1,0 +1,14 @@
+.guzi-app { --guzi-bg: #fff3e0; --guzi-card: #fff; --guzi-text: #e65100; --guzi-muted: #bf360c; --guzi-accent: #ff6d00; }
+.guzi-app .page { background: var(--guzi-bg); min-height: calc(100vh - 96px); padding: 16px; }
+.stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 16px; }
+.stat-card { background: var(--guzi-card); padding: 12px 8px; border-radius: 8px; text-align: center; }
+.stat-label { display: block; font-size: 11px; color: var(--guzi-muted); margin-bottom: 4px; }
+.stat-value { font-size: 18px; font-weight: 700; color: var(--guzi-text); }
+.total-count { background: var(--guzi-card); padding: 16px; border-radius: 12px; display: flex; justify-content: space-between; margin-bottom: 16px; font-weight: 600; }
+.total { font-size: 20px; color: var(--guzi-accent); }
+.item-list { background: var(--guzi-card); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+.item-row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #ffe0b2; }
+.item-name { color: var(--guzi-text); }
+.item-cat { font-size: 12px; color: var(--guzi-muted); }
+.empty-items { text-align: center; color: var(--guzi-muted); padding: 20px; }
+.add-btn { width: 100%; padding: 14px; background: var(--guzi-accent); color: white; border: none; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer; }

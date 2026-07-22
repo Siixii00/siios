@@ -1,0 +1,135 @@
+.drift-app {
+  --drift-bg: #0d47a1;
+  --drift-card: #1565c0;
+  --drift-text: #e3f2fd;
+  --drift-muted: #90caf9;
+  --drift-accent: #64b5f6;
+}
+
+.drift-app .page {
+  background: linear-gradient(180deg, #0d47a1 0%, #1565c0 50%, #1976d2 100%);
+  min-height: calc(100vh - 96px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ocean-bg {
+  position: absolute;
+  inset: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path fill="rgba(255,255,255,0.03)" d="M0 50 Q25 45 50 50 T100 50 V100 H0Z"/></svg>');
+  animation: wave 10s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes wave {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.card-display {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 320px;
+}
+
+.card-placeholder {
+  text-align: center;
+  color: var(--drift-muted);
+}
+
+.card-placeholder i {
+  font-size: 48px;
+  margin-bottom: 16px;
+  opacity: 0.6;
+}
+
+.tarot-card {
+  background: linear-gradient(145deg, #fff8e1, #ffe0b2);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  color: #5d4037;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tarot-card.reversed {
+  transform: rotate(180deg);
+}
+
+.card-name {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card-position {
+  font-size: 14px;
+  color: #8d6e63;
+  margin-bottom: 16px;
+}
+
+.card-meaning {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.card-advice {
+  font-size: 12px;
+  color: #6d4c41;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+}
+
+.draw-btn {
+  padding: 16px 32px;
+  background: var(--drift-accent);
+  color: #0d47a1;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 20px rgba(100, 181, 246, 0.4);
+}
+
+.draw-btn:hover {
+  background: #42a5f5;
+}
+
+.history-section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+  max-width: 320px;
+}
+
+.history-section h3 {
+  font-size: 14px;
+  color: var(--drift-text);
+  margin-bottom: 8px;
+}
+
+.history-section p {
+  font-size: 12px;
+  color: var(--drift-muted);
+  line-height: 1.5;
+}

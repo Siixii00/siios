@@ -1,0 +1,128 @@
+.diary-app {
+  --diary-bg: #fff8e1;
+  --diary-card: #fff;
+  --diary-text: #5d4037;
+  --diary-muted: #8d6e63;
+  --diary-accent: #ff7043;
+}
+
+.diary-app .page {
+  background: var(--diary-bg);
+  min-height: calc(100vh - 96px);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mood-selector {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 8px 0;
+}
+
+.mood-btn {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  background: var(--diary-card);
+  border: 2px solid #ffccbc;
+  border-radius: 20px;
+  font-size: 12px;
+  color: var(--diary-muted);
+  cursor: pointer;
+}
+
+.mood-btn.active {
+  background: var(--diary-accent);
+  border-color: var(--diary-accent);
+  color: white;
+}
+
+.entry-input-area {
+  background: var(--diary-card);
+  padding: 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entry-input {
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  border: 2px solid #ffccbc;
+  border-radius: 8px;
+  font-size: 14px;
+  resize: none;
+  background: var(--diary-bg);
+  color: var(--diary-text);
+}
+
+.entry-input:focus {
+  outline: none;
+  border-color: var(--diary-accent);
+}
+
+.save-entry-btn {
+  padding: 12px;
+  background: var(--diary-accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.entry-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entry-item {
+  background: var(--diary-card);
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.entry-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.entry-mood {
+  font-size: 18px;
+}
+
+.entry-date {
+  font-size: 12px;
+  color: var(--diary-muted);
+}
+
+.entry-content {
+  font-size: 14px;
+  color: var(--diary-text);
+  line-height: 1.6;
+}
+
+.npc-reply {
+  margin-top: 12px;
+  padding: 12px;
+  background: #fff3e0;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #e65100;
+  border-left: 3px solid #ff7043;
+}
+
+.empty-entries {
+  text-align: center;
+  padding: 40px;
+  color: var(--diary-muted);
+}

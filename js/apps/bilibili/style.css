@@ -1,0 +1,627 @@
+:root {
+    --bili-pink: #fb7299;
+    --bili-pink-dark: #f25285;
+    --bili-bg: #0b0d11;
+    --bili-card: #151821;
+    --bili-text: #f3f4f6;
+    --bili-muted: #9ca3af;
+    --bili-border: #242835;
+}
+
+.bili-app {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: var(--bili-bg);
+    color: var(--bili-text);
+    overflow: hidden;
+}
+
+.bili-header {
+    background: var(--bili-card);
+    border-bottom: 1px solid var(--bili-border);
+}
+
+.bili-header .ios-nav-bar-inner {
+    background: transparent;
+}
+
+.bili-header .ios-inline-title {
+    color: var(--bili-pink);
+    font-weight: 800;
+}
+
+.bili-search-row {
+    padding: 6px 12px 10px;
+    background: var(--bili-card);
+    border-bottom: 1px solid var(--bili-border);
+}
+
+.bili-search {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    gap: 8px;
+    background: #0f1218;
+    border-radius: 999px;
+    padding: 10px 14px;
+    border: 1px solid var(--bili-border);
+}
+
+.bili-search input {
+    background: transparent;
+    border: none;
+    color: var(--bili-text);
+    font-size: 14px;
+    outline: none;
+}
+
+.bili-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background: var(--bili-card);
+    border-bottom: 1px solid var(--bili-border);
+    padding: 0 12px;
+}
+
+.bili-tab {
+    padding: 12px 8px;
+    background: transparent;
+    border: none;
+    color: var(--bili-muted);
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+}
+
+.bili-tab.active {
+    color: var(--bili-pink);
+    border-bottom-color: var(--bili-pink);
+}
+
+.bili-feed {
+    flex: 1;
+    overflow: hidden;
+    padding: 10px;
+    padding-bottom: 70px;
+}
+
+.bili-feed-inner {
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.bili-feed-inner::-webkit-scrollbar {
+    display: none;
+}
+
+.bili-video-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.bili-video-card {
+    background: var(--bili-card);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--bili-border);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.bili-video-card:active {
+    transform: scale(0.98);
+}
+
+.bili-thumb {
+    position: relative;
+    background: linear-gradient(135deg, #ffd5e5, #ff8fb1);
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+}
+
+.bili-thumb-tag {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    padding: 4px 8px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border-radius: 8px;
+    font-size: 11px;
+}
+
+.bili-video-body {
+    padding: 8px;
+}
+
+.bili-video-title {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 1.3;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.bili-video-meta {
+    color: var(--bili-muted);
+    font-size: 11px;
+    display: flex;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.bili-empty-feed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.bili-btn.primary {
+    background: var(--bili-pink);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.bili-btn.primary:active {
+    background: var(--bili-pink-dark);
+}
+
+.bili-bottombar {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-items: center;
+    padding: 8px 10px;
+    background: var(--bili-card);
+    border-top: 1px solid var(--bili-border);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.bili-nav-btn {
+    background: transparent;
+    border: none;
+    color: var(--bili-muted);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 4px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.bili-nav-btn:active {
+    color: var(--bili-pink);
+}
+
+.bili-nav-btn.post {
+    width: 44px;
+    height: 44px;
+    background: var(--bili-pink);
+    color: #fff;
+    border-radius: 14px;
+    justify-content: center;
+}
+
+.bili-player-app {
+    padding-bottom: 0;
+}
+
+.bili-player-stage {
+    padding: 12px;
+    background: var(--bili-card);
+    border-bottom: 1px solid var(--bili-border);
+}
+
+.bili-player-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000;
+    border: 1px solid var(--bili-border);
+    position: relative;
+}
+
+.bili-player-video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.bili-danmu-layer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.bili-npc-section {
+    padding: 12px;
+    background: var(--bili-card);
+    border-bottom: 1px solid var(--bili-border);
+}
+
+.bili-npc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.bili-npc-title {
+    font-weight: 700;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.bili-npc-count {
+    color: var(--bili-muted);
+    font-size: 12px;
+}
+
+.bili-npc-list {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.bili-npc-list::-webkit-scrollbar {
+    display: none;
+}
+
+.bili-npc-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    min-width: 50px;
+}
+
+.bili-npc-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: 2px solid var(--bili-border);
+}
+
+.bili-npc-name {
+    font-size: 10px;
+    color: var(--bili-muted);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 50px;
+}
+
+.bili-player-info {
+    padding: 12px;
+    background: var(--bili-card);
+    border-bottom: 1px solid var(--bili-border);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bili-player-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.bili-ghost-btn {
+    border: 1px solid var(--bili-border);
+    background: transparent;
+    color: var(--bili-text);
+    padding: 8px 10px;
+    border-radius: 10px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.bili-ghost-btn:active {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--bili-pink);
+}
+
+.bili-comments {
+    padding: 12px;
+    background: var(--bili-bg);
+    overflow-y: auto;
+    flex: 1;
+}
+
+.bili-comment {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.bili-comment-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.bili-messages-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    padding-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.bili-message-item {
+    display: grid;
+    grid-template-columns: 44px 1fr auto;
+    gap: 10px;
+    padding: 12px;
+    background: var(--bili-card);
+    border: 1px solid var(--bili-border);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.bili-message-item:active {
+    background: rgba(251, 114, 153, 0.1);
+}
+
+.bili-message-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.bili-message-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.bili-message-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: right;
+    align-items: flex-end;
+}
+
+.bili-badge {
+    background: var(--bili-pink);
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.bili-notification-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    background: var(--bili-card);
+    border: 1px solid var(--bili-border);
+    border-radius: 12px;
+}
+
+.bili-notification-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 16px;
+    background: linear-gradient(135deg, var(--bili-pink), var(--bili-pink-dark));
+}
+
+.bili-chat-app {
+    padding-bottom: 0;
+}
+
+.bili-chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-content: start;
+}
+
+.bili-chat-bubble {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.bili-chat-bubble.received {
+    background: var(--bili-card);
+    border: 1px solid var(--bili-border);
+    border-bottom-left-radius: 4px;
+    align-self: start;
+}
+
+.bili-chat-bubble.sent {
+    background: var(--bili-pink);
+    color: #fff;
+    border-bottom-right-radius: 4px;
+    align-self: end;
+}
+
+.bili-chat-bubble-time {
+    font-size: 10px;
+    color: var(--bili-muted);
+    margin-top: 4px;
+    text-align: right;
+}
+
+.bili-chat-bubble.sent .bili-chat-bubble-time {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.bili-chat-input-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    padding: 12px;
+    background: var(--bili-card);
+    border-top: 1px solid var(--bili-border);
+}
+
+.bili-chat-input {
+    padding: 10px 14px;
+    border-radius: 20px;
+    border: 1px solid var(--bili-border);
+    background: var(--bili-bg);
+    color: var(--bili-text);
+    font-size: 14px;
+    outline: none;
+}
+
+.bili-chat-input:focus {
+    border-color: var(--bili-pink);
+}
+
+.bili-chat-send-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: none;
+    background: var(--bili-pink);
+    color: #fff;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.bili-chat-send-btn:active {
+    background: var(--bili-pink-dark);
+}
+
+.bili-profile {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px 12px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.bili-profile-header {
+    display: grid;
+    grid-template-columns: 56px 1fr auto;
+    align-items: center;
+    gap: 12px;
+    background: var(--bili-card);
+    border: 1px solid var(--bili-border);
+    border-radius: 14px;
+    padding: 12px;
+}
+
+.bili-profile-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ffb4c7, #ff7aa4);
+}
+
+.bili-profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bili-profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    background: var(--bili-card);
+    border: 1px solid var(--bili-border);
+    border-radius: 14px;
+    padding: 14px 8px;
+}
+
+.bili-profile-stats small {
+    display: block;
+    font-size: 11px;
+    color: var(--bili-muted);
+    margin-top: 2px;
+}
+
+.bili-card {
+    background: var(--bili-card);
+    border: 1px solid var(--bili-border);
+    border-radius: 14px;
+    padding: 12px;
+}
+
+.bili-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.bili-grid-btn {
+    border: 1px solid var(--bili-border);
+    background: #0f1218;
+    color: var(--bili-text);
+    padding: 8px 6px;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.bili-grid-btn:active {
+    background: rgba(251, 114, 153, 0.1);
+    border-color: var(--bili-pink);
+}
+
+@media (max-width: 480px) {
+    .bili-video-list {
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+    }
+}

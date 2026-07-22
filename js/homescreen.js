@@ -1,14 +1,13 @@
-import Router from './router.js';
+﻿import Router from './router.js';
 import { createElement, createIcon } from './components.js';
+import { getNavItems } from './apps/registry.js';
 
 const HomeScreen = {
-    apps: [
-        { id: 'chats', name: '聊天', icon: 'chat_bubble', color: '#34C759', path: '/chats' },
-        { id: 'worldinfo', name: 'World Info', icon: 'menu_book', color: '#5856D6', path: '/world-info' },
-        { id: 'settings', name: '設定', icon: 'settings', color: '#8E8E93', path: '/settings' },
-    ],
+    apps: [],
     
-    create() {
+    async create() {
+        this.apps = await getNavItems();
+        
         const container = createElement('div', 'home-screen');
         
         const wallpaper = createElement('div', 'home-wallpaper');
@@ -19,7 +18,13 @@ const HomeScreen = {
         const grid = createElement('div', 'home-app-grid');
         
         this.apps.forEach(app => {
-            const appIcon = this.createAppIcon(app);
+            const appIcon = this.createAppIcon({
+                id: app.label.toLowerCase().replace(/\s+/g, '-'),
+                name: app.label,
+                icon: app.icon,
+                color: this.getColorForApp(app.label),
+                path: app.path
+            });
             grid.appendChild(appIcon);
         });
         
@@ -28,7 +33,13 @@ const HomeScreen = {
         const dock = createElement('div', 'home-dock');
         const dockApps = this.apps.slice(0, 3);
         dockApps.forEach(app => {
-            const appIcon = this.createDockIcon(app);
+            const appIcon = this.createDockIcon({
+                id: app.label.toLowerCase().replace(/\s+/g, '-'),
+                name: app.label,
+                icon: app.icon,
+                color: this.getColorForApp(app.label),
+                path: app.path
+            });
             dock.appendChild(appIcon);
         });
         content.appendChild(dock);
@@ -40,6 +51,15 @@ const HomeScreen = {
         container.appendChild(content);
         
         return container;
+    },
+    
+    getColorForApp(name) {
+        const colors = {
+            'Chats': '#34C759',
+            'World Info': '#5856D6',
+            'Settings': '#8E8E93'
+        };
+        return colors[name] || '#007AFF';
     },
     
     createAppIcon(app) {

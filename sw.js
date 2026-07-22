@@ -1,4 +1,4 @@
-const CACHE_NAME = 'ios-classic-ai-v1';
+const CACHE_NAME = 'sxios-v1';
 
 function getBasePath() {
   return self.registration.scope;
@@ -17,13 +17,16 @@ const STATIC_ASSETS = [
   './js/components.js',
   './js/lockscreen.js',
   './js/homescreen.js',
-  './js/pages/home.js',
-  './js/pages/chats.js',
-  './js/pages/chat.js',
-  './js/pages/world-info.js',
-  './js/pages/entry-editor.js',
-  './js/pages/settings.js',
-  './js/pages/api-config.js',
+  './js/apps/registry.js',
+  './js/apps/chats/index.js',
+  './js/apps/chats/chat.js',
+  './js/apps/world-info/index.js',
+  './js/apps/world-info/entry-editor.js',
+  './js/apps/settings/index.js',
+  './js/apps/settings/api-config.js',
+  './js/apps/memory/index.js',
+  './js/core/embedding/index.js',
+  './js/core/memory-system/index.js',
   './manifest.json'
 ];
 

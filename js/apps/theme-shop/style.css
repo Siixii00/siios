@@ -1,0 +1,9 @@
+.theme-shop-app { --shop-bg: #1a1a2e; --shop-card: #16213e; --shop-text: #e5e5e5; --shop-muted: #888; --shop-accent: #e94560; }
+.theme-shop-app .page { background: var(--shop-bg); min-height: calc(100vh - 96px); padding: 16px; }
+.theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.theme-item { background: var(--shop-card); border-radius: 12px; padding: 16px; text-align: center; cursor: pointer; }
+.theme-icon { font-size: 48px; margin-bottom: 8px; }
+.theme-name { font-size: 14px; font-weight: 600; color: var(--shop-text); margin-bottom: 8px; }
+.price { font-size: 12px; color: var(--shop-accent); }
+.owned-badge { font-size: 12px; color: #4caf50; }
+.theme-item.owned { opacity: 0.6; cursor: default; }

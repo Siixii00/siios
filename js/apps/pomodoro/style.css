@@ -1,0 +1,358 @@
+﻿.pomodoro-app {
+    --bg-color: #0b0f1a;
+    --card-bg: rgba(24, 28, 40, 0.9);
+    --text-main: #ffffff;
+    --text-sec: #9aa3b2;
+    --accent: #f25f5c;
+    --accent-2: #f48a7f;
+    --safe-top: env(safe-area-inset-top, 40px);
+}
+
+.pomodoro-app .page {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 44px - env(safe-area-inset-top, 40px));
+    width: 100%;
+    padding-top: 0;
+    gap: 16px;
+    overflow-y: auto;
+    padding-bottom: 24px;
+}
+
+.pomodoro-app .page::-webkit-scrollbar { display: none; }
+
+.pomodoro-app .pomodoro-panel {
+    margin: 0 16px;
+    padding: 16px;
+    background: var(--card-bg);
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pomodoro-app .mode-tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.pomodoro-app .tab {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: #fff;
+    border-radius: 12px;
+    padding: 10px 0;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.2s;
+}
+
+.pomodoro-app .tab:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+.pomodoro-app .tab.active {
+    background: linear-gradient(140deg, rgba(242,95,92,0.9), rgba(244,138,127,0.85));
+    border-color: rgba(255,255,255,0.4);
+}
+
+.pomodoro-app .time-display {
+    font-size: 54px;
+    font-weight: 700;
+    text-align: center;
+    margin: 6px 0;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.pomodoro-app .status {
+    text-align: center;
+    color: var(--text-sec);
+    margin-bottom: 4px;
+    font-size: 14px;
+}
+
+.pomodoro-app .actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.pomodoro-app .primary {
+    flex: 1;
+    border: none;
+    border-radius: 14px;
+    padding: 12px 14px;
+    font-weight: 800;
+    color: #fff;
+    background: linear-gradient(145deg, var(--accent), var(--accent-2));
+    box-shadow: 0 12px 24px rgba(242,95,92,0.35);
+    cursor: pointer;
+    font-size: 16px;
+    transition: filter 0.2s;
+}
+
+.pomodoro-app .primary:hover { filter: brightness(1.05); }
+
+.pomodoro-app .ghost {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.16);
+    color: #fff;
+    border-radius: 12px;
+    padding: 8px 10px;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    transition: border-color 0.2s;
+}
+
+.pomodoro-app .ghost:hover { border-color: rgba(255,255,255,0.28); }
+.pomodoro-app .ghost.secondary { flex: 0.8; }
+
+.pomodoro-app .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.pomodoro-app .stat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pomodoro-app .stat-label { font-size: 12px; color: var(--text-sec); }
+.pomodoro-app .stat-value { font-size: 20px; font-weight: 800; }
+
+.pomodoro-app .companion-card {
+    margin: 0 16px;
+    display: grid;
+    grid-template-columns: 52px 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 12px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 14px;
+    backdrop-filter: blur(10px);
+}
+
+.pomodoro-app .companion-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #f48a7f, #f7b6ad);
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgba(255,255,255,0.35);
+}
+
+.pomodoro-app .companion-body {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pomodoro-app .companion-name { font-weight: 700; font-size: 14px; }
+.pomodoro-app .companion-line { font-size: 12px; color: var(--text-sec); line-height: 1.4; }
+
+.pomodoro-app .companion-chat {
+    margin: 0 16px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    background: rgba(0,0,0,0.2);
+    border-radius: 12px;
+}
+
+.pomodoro-app .companion-chat:empty { display: none; }
+
+.pomodoro-app .chat-msg {
+    max-width: 85%;
+    padding: 8px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.pomodoro-app .chat-msg.companion {
+    align-self: flex-start;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.18);
+}
+
+.pomodoro-app .chat-msg.user {
+    align-self: flex-end;
+    background: linear-gradient(145deg, var(--accent), var(--accent-2));
+}
+
+.pomodoro-app .companion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.pomodoro-app .companion-select-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pomodoro-app .companion-select-item:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: rgba(255,255,255,0.2);
+}
+
+.pomodoro-app .companion-select-item.selected {
+    background: rgba(242,95,92,0.2);
+    border-color: var(--accent);
+}
+
+.pomodoro-app .companion-select-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+.pomodoro-app .companion-select-name { font-size: 14px; font-weight: 600; }
+
+.pomodoro-app .companion-dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.pomodoro-app .companion-dialog-overlay.show { opacity: 1; }
+.pomodoro-app .companion-dialog-overlay.hidden { display: none; }
+
+.pomodoro-app .companion-dialog {
+    background: var(--card-bg);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 320px;
+    width: 90%;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    transform: scale(0.9);
+    transition: transform 0.3s;
+}
+
+.pomodoro-app .companion-dialog-overlay.show .companion-dialog { transform: scale(1); }
+
+.pomodoro-app .companion-dialog-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.pomodoro-app .companion-dialog-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.pomodoro-app .companion-dialog-name { font-size: 16px; font-weight: 700; }
+
+.pomodoro-app .companion-dialog-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 14px;
+    min-height: 40px;
+}
+
+.pomodoro-app .companion-dialog-input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    font-size: 14px;
+}
+
+.pomodoro-app .companion-dialog-input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.pomodoro-app .panel {
+    margin: 0 16px 24px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 18px;
+    padding: 14px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+}
+
+.pomodoro-app .panel.hidden { display: none; }
+
+.pomodoro-app .panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.pomodoro-app .panel-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.pomodoro-app .panel label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.pomodoro-app .panel input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(0,0,0,0.25);
+    color: #fff;
+    font-size: 14px;
+}
+
+.pomodoro-app .panel input[type="number"]:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.pomodoro-app .panel-actions { margin-top: 12px; }
+.pomodoro-app .panel-actions .primary { width: 100%; }
+.pomodoro-app .icon-btn { margin-left: auto; margin-top: -2px; }

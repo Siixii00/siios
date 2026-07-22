@@ -1,0 +1,13 @@
+.gift-shop-app { --gift-bg: #fce4ec; --gift-card: #fff; --gift-text: #880e4f; --gift-muted: #ad1457; --gift-accent: #ec407a; }
+.gift-shop-app .page { background: var(--gift-bg); min-height: calc(100vh - 96px); padding: 16px; }
+.shop-section, .inventory-section { margin-bottom: 20px; }
+.shop-section h2, .inventory-section h2 { font-size: 16px; color: var(--gift-text); margin-bottom: 12px; }
+.gift-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.gift-item { background: var(--gift-card); border-radius: 12px; padding: 12px; text-align: center; }
+.gift-icon { font-size: 32px; display: block; margin-bottom: 4px; }
+.gift-name { font-size: 12px; color: var(--gift-text); display: block; margin-bottom: 2px; }
+.gift-price { font-size: 11px; color: var(--gift-muted); display: block; margin-bottom: 8px; }
+.buy-btn { padding: 6px 12px; background: var(--gift-accent); color: white; border: none; border-radius: 6px; font-size: 11px; cursor: pointer; }
+.inventory-list { background: var(--gift-card); border-radius: 12px; padding: 12px; }
+.inv-item { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #f8bbd9; color: var(--gift-text); }
+.empty-inv { text-align: center; color: var(--gift-muted); padding: 20px; }

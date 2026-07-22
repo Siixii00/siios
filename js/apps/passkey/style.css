@@ -1,0 +1,12 @@
+.passkey-app { --pass-bg: #e3f2fd; --pass-card: #fff; --pass-text: #0d47a1; --pass-muted: #1565c0; --pass-accent: #1976d2; }
+.passkey-app .page { background: var(--pass-bg); min-height: calc(100vh - 96px); padding: 16px; }
+.info-card { background: var(--pass-card); border-radius: 12px; padding: 24px; text-align: center; margin-bottom: 16px; }
+.info-card i { font-size: 48px; color: var(--pass-accent); margin-bottom: 16px; }
+.info-card p { color: var(--pass-muted); font-size: 14px; line-height: 1.5; }
+.create-btn { width: 100%; padding: 14px; background: var(--pass-accent); color: white; border: none; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer; margin-bottom: 16px; }
+.key-list { background: var(--pass-card); border-radius: 12px; padding: 16px; }
+.key-list h3 { font-size: 14px; color: var(--pass-muted); margin-bottom: 12px; }
+.key-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #bbdefb; }
+.key-name { color: var(--pass-text); font-weight: 500; }
+.key-date { font-size: 12px; color: var(--pass-muted); }
+.empty-keys { text-align: center; color: var(--pass-muted); padding: 20px; }

@@ -1,0 +1,11 @@
+.timetree-app { --tree-bg: #e8f5e9; --tree-card: #fff; --tree-text: #2e7d32; --tree-muted: #666; --tree-accent: #4caf50; }
+.timetree-app .page { background: var(--tree-bg); min-height: calc(100vh - 96px); padding: 16px; }
+.calendar-header { font-size: 18px; font-weight: 700; color: var(--tree-text); text-align: center; margin-bottom: 16px; }
+.calendar-grid { background: var(--tree-card); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+.calendar-weekdays { display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; font-size: 12px; color: var(--tree-muted); margin-bottom: 8px; }
+.calendar-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.day { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--tree-text); border-radius: 8px; }
+.day.empty { visibility: hidden; }
+.day.today { background: var(--tree-accent); color: white; font-weight: 700; }
+.day.has-event::after { content: ''; position: absolute; bottom: 2px; width: 6px; height: 6px; background: var(--tree-accent); border-radius: 50%; }
+.add-event-btn { width: 100%; padding: 14px; background: var(--tree-accent); color: white; border: none; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer; }

@@ -1,0 +1,13 @@
+.appearance-app { --app-bg: #f5f5f5; --app-card: #fff; --app-text: #333; --app-muted: #666; --app-accent: #6200ea; }
+.appearance-app .page { background: var(--app-bg); min-height: calc(100vh - 96px); padding: 16px; }
+.section-title { font-size: 14px; font-weight: 600; color: var(--app-muted); margin: 16px 0 12px; }
+.theme-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.theme-card { padding: 20px; border-radius: 12px; text-align: center; cursor: pointer; border: 2px solid transparent; position: relative; }
+.theme-card.active { border-color: var(--app-accent); }
+.theme-name { font-size: 14px; font-weight: 600; }
+.theme-card i { position: absolute; top: 8px; right: 8px; font-size: 12px; }
+.font-size-control { display: flex; gap: 12px; }
+.font-btn { flex: 1; padding: 12px; background: var(--app-card); border: 2px solid transparent; border-radius: 8px; color: var(--app-text); cursor: pointer; }
+.font-btn.active { border-color: var(--app-accent); color: var(--app-accent); }
+.preview-box { padding: 20px; border-radius: 12px; margin-top: 8px; }
+.preview-box p { margin-bottom: 8px; }

@@ -1,0 +1,14 @@
+.farm-app { --farm-bg: #f1f8e9; --farm-card: #fff; --farm-text: #33691e; --farm-muted: #689f38; --farm-accent: #8bc34a; }
+.farm-app .page { background: var(--farm-bg); min-height: calc(100vh - 96px); padding: 16px; }
+.coins { font-size: 14px; font-weight: 700; color: #ff8f00; }
+.farm-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+.plot { aspect-ratio: 1; background: var(--farm-card); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; cursor: pointer; position: relative; }
+.plot.empty { background: #dcedc8; border: 2px dashed var(--farm-muted); }
+.plus { font-size: 24px; color: var(--farm-muted); }
+.crop-icon { font-size: 36px; }
+.ready-badge { position: absolute; bottom: 4px; font-size: 10px; background: #ff8f00; color: white; padding: 2px 6px; border-radius: 8px; }
+.progress { font-size: 10px; color: var(--farm-muted); }
+.shop-section { background: var(--farm-card); border-radius: 12px; padding: 16px; }
+.shop-section h3 { font-size: 14px; color: var(--farm-text); margin-bottom: 12px; }
+.crop-list { display: flex; gap: 8px; flex-wrap: wrap; }
+.crop-btn { padding: 8px 12px; background: var(--farm-accent); color: white; border: none; border-radius: 8px; font-size: 12px; cursor: pointer; }
