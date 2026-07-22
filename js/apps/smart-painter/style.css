@@ -1,0 +1,16 @@
+.painter-app { --painter-bg: #1a1a2e; --painter-card: #16213e; --painter-text: #e5e5e5; --painter-muted: #888; --painter-accent: #e94560; }
+.painter-app .page { background: var(--painter-bg); min-height: calc(100vh - 96px); padding: 16px; display: flex; flex-direction: column; gap: 16px; }
+.preview-area { flex: 1; background: var(--painter-card); border-radius: 12px; display: flex; align-items: center; justify-content: center; min-height: 200px; }
+.preview-placeholder { text-align: center; color: var(--painter-muted); }
+.preview-placeholder i { font-size: 48px; margin-bottom: 12px; opacity: 0.5; }
+.filter-bar { display: flex; gap: 8px; overflow-x: auto; }
+.filter-btn { flex-shrink: 0; padding: 8px 16px; background: var(--painter-card); border: 2px solid transparent; border-radius: 20px; color: var(--painter-text); font-size: 12px; cursor: pointer; }
+.filter-btn.active { border-color: var(--painter-accent); color: var(--painter-accent); }
+.action-row { display: flex; gap: 12px; }
+.upload-btn, .save-btn { flex: 1; padding: 14px; background: var(--painter-card); border: none; border-radius: 12px; color: var(--painter-text); font-size: 14px; cursor: pointer; }
+.save-btn { background: var(--painter-accent); }
+.gallery { background: var(--painter-card); border-radius: 12px; padding: 16px; }
+.gallery h3 { font-size: 14px; color: var(--painter-muted); margin-bottom: 12px; }
+.photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.photo-thumb { aspect-ratio: 1; background-size: cover; background-position: center; border-radius: 8px; }
+.empty-gallery { text-align: center; color: var(--painter-muted); padding: 20px; grid-column: 1 / -1; }

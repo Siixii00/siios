@@ -1,0 +1,10 @@
+.taobao-app { --taobao-bg: #f5f5f5; --taobao-card: #fff; --taobao-text: #333; --taobao-accent: #ff4400; }
+.taobao-app .page { background: var(--taobao-bg); min-height: calc(100vh - 96px); padding: 16px; }
+.cart-icon { position: relative; font-size: 18px; color: var(--taobao-text); }
+.cart-badge { position: absolute; top: -8px; right: -10px; background: var(--taobao-accent); color: white; font-size: 10px; padding: 2px 6px; border-radius: 10px; }
+.product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.product-card { background: var(--taobao-card); border-radius: 12px; padding: 12px; text-align: center; }
+.product-image { font-size: 48px; margin-bottom: 8px; }
+.product-name { font-size: 13px; color: var(--taobao-text); margin-bottom: 4px; }
+.product-price { font-size: 16px; font-weight: 700; color: var(--taobao-accent); margin-bottom: 8px; }
+.add-cart-btn { width: 100%; padding: 8px; background: var(--taobao-accent); color: white; border: none; border-radius: 6px; font-size: 12px; cursor: pointer; }

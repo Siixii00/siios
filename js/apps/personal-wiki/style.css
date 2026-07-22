@@ -1,0 +1,16 @@
+.wiki-app { --wiki-bg: #fafafa; --wiki-card: #fff; --wiki-text: #333; --wiki-muted: #666; --wiki-accent: #1976d2; }
+.wiki-app .page { background: var(--wiki-bg); min-height: calc(100vh - 96px); padding: 16px; position: relative; }
+.add-wiki-btn { background: none; border: none; font-size: 18px; color: var(--wiki-accent); cursor: pointer; }
+.wiki-list { display: flex; flex-direction: column; gap: 12px; }
+.wiki-item { background: var(--wiki-card); padding: 16px; border-radius: 12px; cursor: pointer; }
+.wiki-title { font-size: 16px; font-weight: 600; color: var(--wiki-text); margin-bottom: 4px; }
+.wiki-excerpt { font-size: 12px; color: var(--wiki-muted); }
+.empty-wiki { text-align: center; color: var(--wiki-muted); padding: 40px; }
+.wiki-editor { display: none; position: fixed; inset: 0; background: var(--wiki-bg); z-index: 100; flex-direction: column; }
+.wiki-editor.active { display: flex; }
+.editor-header { display: flex; justify-content: space-between; padding: 16px; background: var(--wiki-card); }
+.back-btn, .save-btn { background: none; border: none; font-size: 14px; cursor: pointer; }
+.save-btn { color: var(--wiki-accent); font-weight: 600; }
+.title-input { width: 100%; padding: 12px; border: none; font-size: 18px; font-weight: 600; background: var(--wiki-card); }
+.content-input { flex: 1; width: 100%; padding: 12px; border: none; font-size: 14px; background: var(--wiki-card); resize: none; }
+.title-input:focus, .content-input:focus { outline: none; }

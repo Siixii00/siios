@@ -1,8 +1,9 @@
-import Router from './router.js';
+﻿import Router from './router.js';
 import { SettingsDB, initDB } from './db.js';
 import { createElement, createIcon, createToast } from './components.js';
 import LockScreen from './lockscreen.js';
 import HomeScreen from './homescreen.js';
+import { registerRoutes } from './apps/registry.js';
 
 function isMobileDevice() {
     const ua = navigator.userAgent.toLowerCase();
@@ -32,7 +33,16 @@ const App = {
         
         this.showLockScreen();
         
-        this.registerRoutes();
+        Router.on('/home', async () => {
+            if (!this.isLocked) {
+                const app = this.getAppContainer();
+                app.innerHTML = '';
+                this.homeScreenEl = HomeScreen.create();
+                app.appendChild(this.homeScreenEl);
+            }
+        });
+        
+        await registerRoutes();
         Router.start();
         
         this.registerServiceWorker();
@@ -108,83 +118,6 @@ const App = {
         
         this.appContainer = appContainer;
         this.phoneFrame = frame;
-    },
-    
-    registerRoutes() {
-        Router.on('/home', async () => {
-            if (!this.isLocked) {
-                const app = this.getAppContainer();
-                app.innerHTML = '';
-                this.homeScreenEl = HomeScreen.create();
-                app.appendChild(this.homeScreenEl);
-            }
-        });
-        
-        Router.on('/chats', async () => {
-            if (this.isLocked) return;
-            await this.loadPage('chats');
-        });
-        
-        Router.on('/chat/:id', async (params) => {
-            if (this.isLocked) return;
-            await this.loadPage('chat', params);
-        });
-        
-        Router.on('/world-info', async () => {
-            if (this.isLocked) return;
-            await this.loadPage('world-info');
-        });
-        
-        Router.on('/entry-editor', async () => {
-            if (this.isLocked) return;
-            await this.loadPage('entry-editor');
-        });
-        
-        Router.on('/entry-editor/:id', async (params) => {
-            if (this.isLocked) return;
-            await this.loadPage('entry-editor', params);
-        });
-        
-        Router.on('/settings', async () => {
-            if (this.isLocked) return;
-            await this.loadPage('settings');
-        });
-        
-        Router.on('/api-config', async () => {
-            if (this.isLocked) return;
-            await this.loadPage('api-config');
-        });
-    },
-    
-    async loadPage(pageName, params = {}) {
-        const app = this.getAppContainer();
-        
-        if (this.currentPageCleanup) {
-            this.currentPageCleanup();
-            this.currentPageCleanup = null;
-        }
-        
-        try {
-            const module = await import(`./pages/${pageName}.js`);
-            
-            app.innerHTML = '';
-            
-            const { element, cleanup } = await module.render(params);
-            app.appendChild(element);
-            
-            this.currentPage = pageName;
-            this.currentPageCleanup = cleanup;
-            
-        } catch (error) {
-            console.error(`Failed to load page: ${pageName}`, error);
-            app.innerHTML = `
-                <div class="empty-state">
-                    <span class="material-symbols-outlined empty-state-icon">error</span>
-                    <h3 class="empty-state-title">頁面載入失敗</h3>
-                    <p class="empty-state-text">${error.message}</p>
-                </div>
-            `;
-        }
     },
     
     async registerServiceWorker() {

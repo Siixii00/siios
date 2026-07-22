@@ -1,0 +1,41 @@
+.dating-app {
+  --dating-bg: #fce4ec;
+  --dating-card: #fff;
+  --dating-text: #880e4f;
+  --dating-muted: #ad1457;
+}
+
+.dating-app .page {
+  background: var(--dating-bg);
+  min-height: calc(100vh - 96px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dating-placeholder {
+  text-align: center;
+  padding: 40px;
+}
+
+.dating-placeholder i {
+  font-size: 64px;
+  color: var(--dating-text);
+  margin-bottom: 24px;
+}
+
+.dating-placeholder h2 {
+  font-size: 24px;
+  color: var(--dating-text);
+  margin-bottom: 12px;
+}
+
+.dating-placeholder p {
+  color: var(--dating-muted);
+  margin-bottom: 8px;
+}
+
+.coming-soon {
+  font-size: 14px;
+  opacity: 0.7;
+}

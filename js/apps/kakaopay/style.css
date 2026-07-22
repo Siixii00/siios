@@ -1,0 +1,16 @@
+.pay-app { --pay-bg: #ffd43b; --pay-card: #fff; --pay-text: #333; --pay-muted: #666; --pay-accent: #fab005; }
+.pay-app .page { background: var(--pay-bg); min-height: calc(100vh - 96px); padding: 16px; }
+.balance-card { background: var(--pay-card); border-radius: 16px; padding: 24px; text-align: center; margin-bottom: 16px; }
+.balance-label { display: block; font-size: 14px; color: var(--pay-muted); margin-bottom: 8px; }
+.balance-amount { font-size: 32px; font-weight: 700; color: var(--pay-text); }
+.action-buttons { display: flex; gap: 12px; margin-bottom: 16px; }
+.action-btn { flex: 1; padding: 16px; background: var(--pay-card); border: none; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.action-btn i { font-size: 24px; }
+.action-btn.send { color: #e03131; }
+.action-btn.receive { color: #2f9e44; }
+.transaction-list { background: var(--pay-card); border-radius: 12px; padding: 16px; }
+.transaction-list h3 { font-size: 14px; color: var(--pay-muted); margin-bottom: 12px; }
+.tx-item { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #eee; }
+.tx-item.send .tx-amount { color: #e03131; }
+.tx-item.receive .tx-amount { color: #2f9e44; }
+.empty-tx { text-align: center; color: var(--pay-muted); padding: 20px; }

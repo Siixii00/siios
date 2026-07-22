@@ -1,0 +1,12 @@
+.home-app { --home-bg: #fce4ec; --home-card: #fff; --home-text: #880e4f; --home-muted: #ad1457; --home-accent: #ec407a; }
+.home-app .page { background: var(--home-bg); min-height: calc(100vh - 96px); padding: 16px; }
+.energy-bar { background: var(--home-card); border-radius: 12px; padding: 16px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
+.energy-label { font-size: 14px; font-weight: 600; color: var(--home-text); }
+.energy-track { flex: 1; height: 12px; background: #f8bbd9; border-radius: 6px; overflow: hidden; }
+.energy-fill { height: 100%; background: var(--home-accent); transition: width 0.3s; }
+.energy-value { font-size: 14px; font-weight: 700; color: var(--home-text); }
+.activity-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
+.activity-btn { background: var(--home-card); border: none; border-radius: 12px; padding: 16px; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.activity-icon { font-size: 32px; }
+.activity-name { font-size: 12px; color: var(--home-text); }
+.status-msg { text-align: center; padding: 16px; font-size: 14px; color: var(--home-muted); }
