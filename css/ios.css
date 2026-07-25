@@ -248,6 +248,7 @@
 body.desktop-mode .ios-bottom-nav {
     position: absolute;
     left: 0;
+    bottom: 0;
 }
 
 .ios-bottom-nav-item {
