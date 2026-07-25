@@ -48,7 +48,8 @@ async function renderMemoryList() {
 
     const header = createIOSNavBar({
         title: '記憶管理',
-        largeTitle: true,
+        largeTitle: false,
+        backPath: '/home',
         rightActions: [
             {
                 icon: 'add',

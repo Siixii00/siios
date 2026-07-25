@@ -30,6 +30,15 @@
     justify-content: space-between;
     height: 44px;
     padding: 0 16px;
+    position: relative;
+}
+
+.ios-inline-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: 600;
 }
 
 .ios-nav-bar-large {
