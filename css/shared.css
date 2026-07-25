@@ -471,12 +471,33 @@ body.desktop-mode #app {
     padding: calc(env(safe-area-inset-top, 20px) + 40px) 20px calc(env(safe-area-inset-bottom, 20px) + 20px);
 }
 
+.home-pages-wrapper {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.home-pages {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+
+.home-page {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
 .home-app-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px 16px;
     padding: 20px 0;
-    flex: 1;
     align-content: start;
 }
 
