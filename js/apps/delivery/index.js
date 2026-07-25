@@ -96,7 +96,7 @@ async function renderDelivery(params) {
       <div class="menu-section"></div>
     </div>
   `;
-  container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+  container.querySelector('.ios-back-btn').onclick = () => Router.back();
   renderRestaurants(container);
   return { element: container, cleanup: null };
 }

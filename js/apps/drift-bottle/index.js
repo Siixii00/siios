@@ -105,7 +105,7 @@ async function renderDriftBottle(params) {
   `;
   
   const backBtn = container.querySelector('.ios-back-btn');
-  backBtn.onclick = () => Router.navigate('/');
+  backBtn.onclick = () => Router.back();
   
   const drawBtn = container.querySelector('.draw-btn');
   

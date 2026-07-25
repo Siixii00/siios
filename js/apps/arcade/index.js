@@ -223,7 +223,7 @@ async function renderArcade(params) {
   `;
   
   const backBtn = container.querySelector('.ios-back-btn');
-  backBtn.onclick = () => Router.navigate('/');
+  backBtn.onclick = () => Router.back();
   
   const content = container.querySelector('#arcade-content');
   renderGachaGame(content);

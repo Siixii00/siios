@@ -104,6 +104,7 @@ body.desktop-mode #app {
 }
 
 body.desktop-mode .ios-nav-bar,
+body.desktop-mode .ios-header,
 body.desktop-mode .ios-bottom-nav,
 body.desktop-mode .bili-bottombar,
 body.desktop-mode .bili-header,
@@ -114,6 +115,7 @@ body.desktop-mode nav[class*="fixed"] {
 }
 
 body.desktop-mode .ios-nav-bar,
+body.desktop-mode .ios-header,
 body.desktop-mode .bili-header,
 body.desktop-mode header[class*="fixed"] {
     top: 0;

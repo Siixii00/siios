@@ -1042,7 +1042,7 @@ async function renderAO3(params) {
         }
     }
 
-    container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+    container.querySelector('.ios-back-btn').onclick = () => Router.back();
     container.querySelector('#ao3-menu').onclick = toggleMenuDropdown;
     container.querySelector('#menu-export-txt').onclick = exportAsTxt;
     container.querySelector('#menu-export-md').onclick = exportAsMarkdown;
@@ -1067,13 +1067,14 @@ async function renderAO3(params) {
         handleToolbar(btn.dataset.format);
     };
 
-    document.addEventListener('click', (e) => {
+    const clickOutsideHandler = (e) => {
         const dropdown = container.querySelector('#ao3-menu-dropdown');
         const menuBtn = container.querySelector('#ao3-menu');
         if (dropdown && !dropdown.contains(e.target) && !menuBtn?.contains(e.target)) {
             dropdown.classList.add('hidden');
         }
-    });
+    };
+    document.addEventListener('click', clickOutsideHandler);
 
     bindTagInputs();
     bindInspirationTabs();
@@ -1086,7 +1087,7 @@ async function renderAO3(params) {
     updateStats();
     updatePreview();
 
-    return { element: container, cleanup: () => {} };
+    return { element: container, cleanup: () => { document.removeEventListener('click', clickOutsideHandler); } };
 }
 
 export default {
@@ -1094,6 +1095,6 @@ export default {
     name: 'AO3',
     icon: 'create',
     routes: [{ path: '/ao3', render: renderAO3 }],
-    navItem: { label: 'AO3', icon: 'create', path: '/ao3', showInNav: true, order: 30 },
+    navItem: { label: 'AO3', icon: 'create', path: '/ao3', showInNav: true, order: 23 },
     stylesPath: 'js/apps/ao3/style.css'
 };

@@ -58,7 +58,7 @@ async function renderFarm(params) {
     </div>
   `;
   
-  container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+  container.querySelector('.ios-back-btn').onclick = () => Router.back();
   
   container.querySelectorAll('.plot.empty').forEach(plot => {
     plot.onclick = () => {

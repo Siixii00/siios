@@ -721,7 +721,7 @@ function bindEvents(container) {
 
     const homeBack = container.querySelector('#home-back');
     homeBack?.addEventListener('click', () => {
-        Router.navigate('/');
+        Router.back();
     });
 
     const historyRefresh = container.querySelector('#history-refresh');

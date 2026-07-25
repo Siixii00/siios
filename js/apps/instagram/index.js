@@ -392,7 +392,7 @@ async function renderInstagram(params) {
             </button>
         </nav>
     `;
-    container.querySelector('#back-btn').onclick = () => Router.navigate('/');
+    container.querySelector('#back-btn').onclick = () => Router.back();
     container.querySelector('#ai-generate-posts-btn').onclick = () => generateAIPosts(container);
     container.querySelector('#ai-generate-story-btn').onclick = () => generateAIStories(container);
     const navButtons = container.querySelectorAll('.bottom-nav .nav-btn');
@@ -412,6 +412,6 @@ export default {
     name: 'Instagram',
     icon: 'photo_camera',
     routes: [{ path: '/instagram', render: renderInstagram }],
-    navItem: { label: 'Instagram', icon: 'photo_camera', path: '/instagram', showInNav: true, order: 30 },
+    navItem: { label: 'Instagram', icon: 'photo_camera', path: '/instagram', showInNav: true, order: 24 },
     stylesPath: 'js/apps/instagram/style.css'
 };

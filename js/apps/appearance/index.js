@@ -11,14 +11,21 @@ const THEMES = [
 ];
 
 let currentTheme = 'light';
+let currentFontSize = 'medium';
 
 async function loadTheme() {
   const saved = await SettingsDB.get('appearance_theme');
   if (saved) currentTheme = saved;
+  const savedFont = await SettingsDB.get('appearance_font_size');
+  if (savedFont) currentFontSize = savedFont;
 }
 
 async function saveTheme() {
   await SettingsDB.set('appearance_theme', currentTheme);
+}
+
+async function saveFontSize() {
+  await SettingsDB.set('appearance_font_size', currentFontSize);
 }
 
 async function renderAppearance(params) {
@@ -41,22 +48,29 @@ async function renderAppearance(params) {
       </div>
       <h2 class="section-title">字體大小</h2>
       <div class="font-size-control">
-        <button class="font-btn small">小</button>
-        <button class="font-btn medium active">中</button>
-        <button class="font-btn large">大</button>
+        <button class="font-btn small ${currentFontSize === 'small' ? 'active' : ''}">小</button>
+        <button class="font-btn medium ${currentFontSize === 'medium' ? 'active' : ''}">中</button>
+        <button class="font-btn large ${currentFontSize === 'large' ? 'active' : ''}">大</button>
       </div>
       <h2 class="section-title">預覽</h2>
-      <div class="preview-box" style="background: ${THEMES.find(t => t.id === currentTheme)?.bg}; color: ${THEMES.find(t => t.id === currentTheme)?.text};">
+      <div class="preview-box" style="background: ${THEMES.find(t => t.id === currentTheme)?.bg}; color: ${THEMES.find(t => t.id === currentTheme)?.text}; font-size: ${currentFontSize === 'small' ? '14px' : currentFontSize === 'large' ? '20px' : '16px'};">
         <p>這是預覽文字，用來展示主題效果。</p>
         <p>當前主題：${THEMES.find(t => t.id === currentTheme)?.name}</p>
       </div>
     </div>
   `;
-  container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+  container.querySelector('.ios-back-btn').onclick = () => Router.back();
   container.querySelectorAll('.theme-card').forEach(card => {
     card.onclick = async () => {
       currentTheme = card.dataset.id;
       await saveTheme();
+      renderAppearance(params);
+    };
+  });
+  container.querySelectorAll('.font-btn').forEach(btn => {
+    btn.onclick = async () => {
+      currentFontSize = btn.classList.contains('small') ? 'small' : btn.classList.contains('large') ? 'large' : 'medium';
+      await saveFontSize();
       renderAppearance(params);
     };
   });

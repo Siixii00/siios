@@ -71,7 +71,7 @@ async function renderPub(params) {
       </div>
     </div>
   `;
-  container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+  container.querySelector('.ios-back-btn').onclick = () => Router.back();
   const charSelect = container.querySelector('.char-select');
   if (charSelect) {
     charSelect.onchange = async () => {

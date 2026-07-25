@@ -1,5 +1,5 @@
 import Router from '../../router.js';
-import { createElement } from '../../components.js';
+import { createElement, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 let enabled = false;
@@ -43,13 +43,18 @@ async function renderTouch(params) {
       </div>
     </div>
   `;
-  container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+  container.querySelector('.ios-back-btn').onclick = () => Router.back();
   const checkbox = container.querySelector('input[type="checkbox"]');
   checkbox.onchange = async () => {
     enabled = checkbox.checked;
     await saveState();
     container.querySelector('.touch-ball').classList.toggle('hidden', !enabled);
   };
+  const actionBtns = container.querySelectorAll('.action-btn');
+  actionBtns[0].onclick = () => Router.navigate('/home');
+  actionBtns[1].onclick = () => { const v = window._touchVolume || 50; window._touchVolume = v >= 100 ? 0 : v + 25; createToast(`音量: ${window._touchVolume}%`); };
+  actionBtns[2].onclick = () => { window.App?.lock(); };
+  actionBtns[3].onclick = () => createToast('截圖功能尚未實作');
   return { element: container, cleanup: null };
 }
 

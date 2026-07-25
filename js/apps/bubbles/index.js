@@ -102,7 +102,7 @@ async function renderBubbles(params) {
   `;
   
   const backBtn = container.querySelector('.ios-back-btn');
-  backBtn.onclick = () => Router.navigate('/');
+  backBtn.onclick = () => Router.back();
   
   container.querySelectorAll('.mode-btn').forEach(btn => {
     btn.onclick = async () => {

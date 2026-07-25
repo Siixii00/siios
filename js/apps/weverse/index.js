@@ -299,7 +299,7 @@ async function renderWeverse(params) {
         renderUI();
     };
     setTimeout(() => { const postBtn = container.querySelector('#post-btn'); const postInput = container.querySelector('#post-input'); if (postBtn) postBtn.onclick = addPost; if (postInput) postInput.onkeydown = (e) => { if (e.key === 'Enter') { e.preventDefault(); addPost(); } }; }, 100);
-    return { element: container, cleanup: null };
+    return { element: container, cleanup: () => { if (saveTimer) clearTimeout(saveTimer); } };
 }
 
-export default { id: 'weverse', name: 'Weverse', icon: 'groups', routes: [{ path: '/weverse', render: renderWeverse }], navItem: { label: 'Weverse', icon: 'groups', path: '/weverse', showInNav: true, order: 30 }, stylesPath: 'js/apps/weverse/style.css' };
+export default { id: 'weverse', name: 'Weverse', icon: 'groups', routes: [{ path: '/weverse', render: renderWeverse }], navItem: { label: 'Weverse', icon: 'groups', path: '/weverse', showInNav: true, order: 27 }, stylesPath: 'js/apps/weverse/style.css' };
