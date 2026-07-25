@@ -99,6 +99,34 @@ body.desktop-mode #app {
     overflow: hidden;
 }
 
+body.desktop-mode .ios-nav-bar,
+body.desktop-mode .ios-bottom-nav,
+body.desktop-mode .bili-bottombar,
+body.desktop-mode .bili-header,
+body.desktop-mode [class*="bottom-nav"],
+body.desktop-mode [class*="bottombar"],
+body.desktop-mode nav[class*="fixed"] {
+    position: absolute !important;
+}
+
+body.desktop-mode .ios-nav-bar,
+body.desktop-mode .bili-header,
+body.desktop-mode header[class*="fixed"] {
+    top: 0;
+}
+
+body.desktop-mode .ios-bottom-nav,
+body.desktop-mode .bili-bottombar,
+body.desktop-mode [class*="bottom-nav"],
+body.desktop-mode [class*="bottombar"] {
+    bottom: 0;
+}
+
+body.desktop-mode .bili-app,
+body.desktop-mode [class*="-app"] {
+    position: relative;
+}
+
 .page-content {
     flex: 1;
     overflow-y: auto;
