@@ -33,12 +33,17 @@
     position: relative;
 }
 
+.ios-nav-bar-inner .ios-btn {
+    z-index: 1;
+}
+
 .ios-inline-title {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     font-size: 17px;
     font-weight: 600;
+    pointer-events: none;
 }
 
 .ios-nav-bar-large {
