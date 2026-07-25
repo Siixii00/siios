@@ -100,5 +100,5 @@ export default {
         showInNav: true,
         order: 1
     },
-    stylesPath: 'js/apps/chats/style.css'
+    stylesPath: './chats/style.css'
 };

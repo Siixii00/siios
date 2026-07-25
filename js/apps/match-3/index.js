@@ -235,5 +235,5 @@ export default {
   icon: 'extension',
   routes: [{ path: '/match-3', render: renderMatch3 }],
   navItem: { label: '消消樂', icon: 'extension', path: '/match-3', showInNav: true, order: 101 },
-  stylesPath: 'js/apps/match-3/style.css'
+  stylesPath: './match-3/style.css'
 };

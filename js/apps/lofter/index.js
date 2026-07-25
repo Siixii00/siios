@@ -727,5 +727,5 @@ export default {
         showInNav: true,
         order: 20
     },
-    stylesPath: 'js/apps/lofter/style.css'
+    stylesPath: './lofter/style.css'
 };

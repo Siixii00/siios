@@ -1080,5 +1080,5 @@ export default {
     icon: 'public',
     routes: [{ path: '/chrome', render: renderChrome }],
     navItem: { label: 'Chrome', icon: 'public', path: '/chrome', showInNav: true, order: 15 },
-    stylesPath: 'js/apps/chrome/style.css'
+    stylesPath: './chrome/style.css'
 };

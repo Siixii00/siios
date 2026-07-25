@@ -69,5 +69,5 @@ export default {
   icon: 'palette',
   routes: [{ path: '/appearance', render: renderAppearance }],
   navItem: { label: '外觀', icon: 'palette', path: '/appearance', showInNav: true, order: 140 },
-  stylesPath: 'js/apps/appearance/style.css'
+  stylesPath: './appearance/style.css'
 };

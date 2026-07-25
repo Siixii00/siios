@@ -76,5 +76,5 @@ export default {
   icon: 'wallet',
   routes: [{ path: '/kakaopay', render: renderKakaopay }],
   navItem: { label: '支付', icon: 'wallet', path: '/kakaopay', showInNav: true, order: 123 },
-  stylesPath: 'js/apps/kakaopay/style.css'
+  stylesPath: './kakaopay/style.css'
 };

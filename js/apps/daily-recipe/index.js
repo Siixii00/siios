@@ -45,5 +45,5 @@ export default {
   icon: 'soup_kitchen',
   routes: [{ path: '/daily-recipe', render: renderDailyRecipe }],
   navItem: { label: '每日食譜', icon: 'soup_kitchen', path: '/daily-recipe', showInNav: true, order: 121 },
-  stylesPath: 'js/apps/daily-recipe/style.css'
+  stylesPath: './daily-recipe/style.css'
 };

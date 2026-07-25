@@ -7,9 +7,10 @@ const loadedStyles = new Set();
 function loadStyle(cssPath) {
     if (loadedStyles.has(cssPath)) return Promise.resolve();
     return new Promise((resolve, reject) => {
+        const base = new URL('.', import.meta.url).href;
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        link.href = cssPath;
+        link.href = new URL(cssPath, base).href;
         link.onload = () => { loadedStyles.add(cssPath); resolve(); };
         link.onerror = () => { loadedStyles.add(cssPath); resolve(); };
         document.head.appendChild(link);

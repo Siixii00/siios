@@ -757,5 +757,5 @@ export default {
         showInNav: true,
         order: 3
     },
-    stylesPath: 'js/apps/twitter/style.css'
+    stylesPath: './twitter/style.css'
 };

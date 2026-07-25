@@ -458,5 +458,5 @@ export default {
     icon: 'music_note',
     routes: [{ path: '/music', render: renderMusic }],
     navItem: { label: '音樂', icon: 'music_note', path: '/music', showInNav: true, order: 20 },
-    stylesPath: 'js/apps/music/style.css'
+    stylesPath: './music/style.css'
 };
