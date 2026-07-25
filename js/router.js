@@ -1,17 +1,24 @@
 const Router = {
     routes: [],
     beforeLeaveHooks: [],
+    history: [],
     
     on(pattern, handler) {
         this.routes.push({ pattern, handler });
     },
     
     navigate(path) {
+        this.history.push(window.location.hash.slice(1) || '/home');
         window.location.hash = path;
     },
     
     back() {
-        window.history.back();
+        if (this.history.length > 0) {
+            const prev = this.history.pop();
+            window.location.hash = prev;
+        } else {
+            this.navigate('/home');
+        }
     },
     
     match(hash) {
@@ -43,7 +50,6 @@ const Router = {
         if (matched) {
             await matched.handler(matched.params);
         } else {
-            console.warn('Route not found:', hash);
             this.navigate('/home');
         }
     },
