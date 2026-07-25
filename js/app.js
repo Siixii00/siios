@@ -33,6 +33,10 @@ const App = {
         
         this.showLockScreen();
         
+        Router.on('/', async () => {
+            Router.navigate('/home');
+        });
+        
         Router.on('/home', async () => {
             if (!this.isLocked) {
                 const app = this.getAppContainer();
