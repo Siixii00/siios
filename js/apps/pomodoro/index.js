@@ -776,5 +776,5 @@ export default {
     icon: 'timer',
     routes: [{ path: '/pomodoro', render: renderPomodoro }],
     navItem: { label: '番茄鐘', icon: 'timer', path: '/pomodoro', showInNav: true, order: 30 },
-    stylesPath: './pomodoro/style.css'
+    stylesPath: 'js/apps/pomodoro/style.css'
 };

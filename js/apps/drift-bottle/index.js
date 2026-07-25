@@ -128,5 +128,5 @@ export default {
   icon: 'water_bottle',
   routes: [{ path: '/drift-bottle', render: renderDriftBottle }],
   navItem: { label: '漂流瓶', icon: 'water_bottle', path: '/drift-bottle', showInNav: true, order: 112 },
-  stylesPath: './drift-bottle/style.css'
+  stylesPath: 'js/apps/drift-bottle/style.css'
 };

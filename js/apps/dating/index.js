@@ -35,5 +35,5 @@ export default {
   icon: 'heart',
   routes: [{ path: '/dating', render: renderDating }],
   navItem: { label: '約會', icon: 'heart', path: '/dating', showInNav: true, order: 110 },
-  stylesPath: './dating/style.css'
+  stylesPath: 'js/apps/dating/style.css'
 };

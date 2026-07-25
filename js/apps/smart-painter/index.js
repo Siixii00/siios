@@ -92,5 +92,5 @@ export default {
   icon: 'camera',
   routes: [{ path: '/smart-painter', render: renderSmartPainter }],
   navItem: { label: '照相館', icon: 'camera', path: '/smart-painter', showInNav: true, order: 131 },
-  stylesPath: './smart-painter/style.css'
+  stylesPath: 'js/apps/smart-painter/style.css'
 };

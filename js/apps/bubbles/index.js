@@ -154,5 +154,5 @@ export default {
   icon: 'chat_bubble',
   routes: [{ path: '/bubbles', render: renderBubbles }],
   navItem: { label: 'Bubble', icon: 'chat_bubble', path: '/bubbles', showInNav: true, order: 102 },
-  stylesPath: './bubbles/style.css'
+  stylesPath: 'js/apps/bubbles/style.css'
 };
