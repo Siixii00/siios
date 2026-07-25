@@ -145,8 +145,8 @@ async function renderTheater(params) {
 export default {
   id: 'theater',
   name: '劇場',
-  icon: 'theater-masks',
+  icon: 'theater_comedy',
   routes: [{ path: '/theater', render: renderTheater }],
-  navItem: { label: '劇場', icon: 'theater-masks', path: '/theater', showInNav: true, order: 103 },
+  navItem: { label: '劇場', icon: 'theater_comedy', path: '/theater', showInNav: true, order: 103 },
   styles: () => import('./style.css')
 };

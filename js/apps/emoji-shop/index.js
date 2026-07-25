@@ -59,8 +59,8 @@ async function renderEmojiShop(params) {
 export default {
   id: 'emoji-shop',
   name: '表情商店',
-  icon: 'smile',
+  icon: 'mood',
   routes: [{ path: '/emoji-shop', render: renderEmojiShop }],
-  navItem: { label: '表情商店', icon: 'smile', path: '/emoji-shop', showInNav: true, order: 142 },
+  navItem: { label: '表情商店', icon: 'mood', path: '/emoji-shop', showInNav: true, order: 142 },
   styles: () => import('./style.css')
 };

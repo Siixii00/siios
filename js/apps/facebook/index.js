@@ -3,22 +3,22 @@ import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 
 const STORAGE_KEYS = {
-    profile: 'facebook_profile',
-    posts: 'facebook_posts',
-    userPosts: 'facebook_user_posts',
-    saved: 'facebook_saved',
-    memories: 'facebook_memories',
-    friends: 'facebook_friends',
-    npcFriends: 'facebook_npc_friends',
-    postSettings: 'facebook_post_settings',
-    communityTone: 'facebook_community_tone',
-    communityFlags: 'facebook_community_flags',
-    npcPersonality: 'facebook_npc_personality',
-    haterProfiles: 'facebook_hater_profiles',
-    enableHaters: 'facebook_enable_haters',
-    reactions: 'facebook_reactions',
-    comments: 'facebook_comments',
-    sponsored: 'facebook_sponsored'
+    profile: 'share_profile',
+    posts: 'share_posts',
+    userPosts: 'share_user_posts',
+    saved: 'share_saved',
+    memories: 'share_memories',
+    friends: 'share_friends',
+    npcFriends: 'share_npc_friends',
+    postSettings: 'share_post_settings',
+    communityTone: 'share_community_tone',
+    communityFlags: 'share_community_flags',
+    npcPersonality: 'share_npc_personality',
+    haterProfiles: 'share_hater_profiles',
+    enableHaters: 'share_enable_haters',
+    reactions: 'share_reactions',
+    comments: 'share_comments',
+    sponsored: 'share_sponsored'
 };
 
 const state = {
@@ -663,7 +663,7 @@ function updateAccountSelectors(container) {
 }
 
 async function renderFacebook(params) {
-    const container = createElement('div', 'app-container facebook-app');
+    const container = createElement('div', 'app-container share-app');
     
     await loadAllData();
     
@@ -674,7 +674,7 @@ async function renderFacebook(params) {
                     <i class="fas fa-chevron-left"></i> 返回
                 </button>
                 <div class="fb-logo">
-                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-share-f"></i>
                 </div>
             </div>
             <div class="topbar-search">
@@ -1062,10 +1062,10 @@ function showMemoriesPage(container) {
 }
 
 export default {
-    id: 'facebook',
+    id: 'share',
     name: '臉書',
-    icon: 'facebook',
-    routes: [{ path: '/facebook', render: renderFacebook }],
-    navItem: { label: '臉書', icon: 'facebook', path: '/facebook', showInNav: true, order: 20 },
+    icon: 'share',
+    routes: [{ path: '/share', render: renderFacebook }],
+    navItem: { label: '臉書', icon: 'share', path: '/share', showInNav: true, order: 20 },
     styles: () => import('./style.css')
 };

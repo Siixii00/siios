@@ -232,8 +232,8 @@ async function renderMatch3(params) {
 export default {
   id: 'match-3',
   name: '消消樂',
-  icon: 'puzzle-piece',
+  icon: 'extension',
   routes: [{ path: '/match-3', render: renderMatch3 }],
-  navItem: { label: '消消樂', icon: 'puzzle-piece', path: '/match-3', showInNav: true, order: 101 },
+  navItem: { label: '消消樂', icon: 'extension', path: '/match-3', showInNav: true, order: 101 },
   styles: () => import('./style.css')
 };

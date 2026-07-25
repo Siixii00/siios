@@ -93,7 +93,7 @@ async function renderDriftBottle(params) {
       <div class="card-display"></div>
       
       <button class="draw-btn">
-        <i class="fas fa-bottle-water"></i>
+        <i class="fas fa-water_bottle"></i>
         撿起漂流瓶
       </button>
       
@@ -125,8 +125,8 @@ async function renderDriftBottle(params) {
 export default {
   id: 'drift-bottle',
   name: '漂流瓶',
-  icon: 'bottle-water',
+  icon: 'water_bottle',
   routes: [{ path: '/drift-bottle', render: renderDriftBottle }],
-  navItem: { label: '漂流瓶', icon: 'bottle-water', path: '/drift-bottle', showInNav: true, order: 112 },
+  navItem: { label: '漂流瓶', icon: 'water_bottle', path: '/drift-bottle', showInNav: true, order: 112 },
   styles: () => import('./style.css')
 };

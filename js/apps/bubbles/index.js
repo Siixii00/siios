@@ -151,8 +151,8 @@ async function renderBubbles(params) {
 export default {
   id: 'bubbles',
   name: 'Bubble',
-  icon: 'comment-dots',
+  icon: 'chat_bubble',
   routes: [{ path: '/bubbles', render: renderBubbles }],
-  navItem: { label: 'Bubble', icon: 'comment-dots', path: '/bubbles', showInNav: true, order: 102 },
+  navItem: { label: 'Bubble', icon: 'chat_bubble', path: '/bubbles', showInNav: true, order: 102 },
   styles: () => import('./style.css')
 };

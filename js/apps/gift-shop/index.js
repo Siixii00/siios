@@ -14,17 +14,17 @@ const GIFTS = [
 let inventory = [];
 
 async function loadInventory() {
-  const saved = await SettingsDB.get('gift_inventory');
+  const saved = await SettingsDB.get('redeem_inventory');
   if (saved) inventory = saved;
 }
 
 async function saveInventory() {
-  await SettingsDB.set('gift_inventory', inventory);
+  await SettingsDB.set('redeem_inventory', inventory);
 }
 
 async function renderGiftShop(params) {
   await loadInventory();
-  const container = createElement('div', 'app-container gift-shop-app');
+  const container = createElement('div', 'app-container redeem-shop-app');
   const counts = {};
   inventory.forEach(g => { counts[g.id] = (counts[g.id] || 0) + 1; });
   container.innerHTML = `
@@ -35,12 +35,12 @@ async function renderGiftShop(params) {
     <div class="page">
       <div class="shop-section">
         <h2>禮物</h2>
-        <div class="gift-grid">
+        <div class="redeem-grid">
           ${GIFTS.map(g => `
-            <div class="gift-item" data-id="${g.id}">
-              <span class="gift-icon">${g.icon}</span>
-              <span class="gift-name">${g.name}</span>
-              <span class="gift-price">${g.price} 幣</span>
+            <div class="redeem-item" data-id="${g.id}">
+              <span class="redeem-icon">${g.icon}</span>
+              <span class="redeem-name">${g.name}</span>
+              <span class="redeem-price">${g.price} 幣</span>
               <button class="buy-btn" data-id="${g.id}" data-name="${g.name}" data-price="${g.price}">購買</button>
             </div>
           `).join('')}
@@ -51,8 +51,8 @@ async function renderGiftShop(params) {
         <div class="inventory-list">
           ${Object.keys(counts).length > 0 
             ? Object.entries(counts).map(([id, count]) => {
-                const gift = GIFTS.find(g => g.id === id);
-                return `<div class="inv-item"><span>${gift?.icon} ${gift?.name}</span><span>x${count}</span></div>`;
+                const redeem = GIFTS.find(g => g.id === id);
+                return `<div class="inv-item"><span>${redeem?.icon} ${redeem?.name}</span><span>x${count}</span></div>`;
               }).join('')
             : '<div class="empty-inv">尚無禮物</div>'
           }
@@ -74,10 +74,10 @@ async function renderGiftShop(params) {
 }
 
 export default {
-  id: 'gift-shop',
+  id: 'redeem-shop',
   name: '禮物商店',
-  icon: 'gift',
-  routes: [{ path: '/gift-shop', render: renderGiftShop }],
-  navItem: { label: '禮物商店', icon: 'gift', path: '/gift-shop', showInNav: true, order: 143 },
+  icon: 'redeem',
+  routes: [{ path: '/redeem-shop', render: renderGiftShop }],
+  navItem: { label: '禮物商店', icon: 'redeem', path: '/redeem-shop', showInNav: true, order: 143 },
   styles: () => import('./style.css')
 };

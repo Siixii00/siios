@@ -89,8 +89,8 @@ async function renderPub(params) {
 export default {
   id: 'pub',
   name: '酒館',
-  icon: 'wine-glass',
+  icon: 'wine_bar',
   routes: [{ path: '/pub', render: renderPub }],
-  navItem: { label: '酒館', icon: 'wine-glass', path: '/pub', showInNav: true, order: 113 },
+  navItem: { label: '酒館', icon: 'wine_bar', path: '/pub', showInNav: true, order: 113 },
   styles: () => import('./style.css')
 };
