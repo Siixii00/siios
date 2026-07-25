@@ -413,5 +413,5 @@ export default {
     icon: 'photo_camera',
     routes: [{ path: '/instagram', render: renderInstagram }],
     navItem: { label: 'Instagram', icon: 'photo_camera', path: '/instagram', showInNav: true, order: 30 },
-    stylesPath: './instagram/style.css'
+    stylesPath: 'js/apps/instagram/style.css'
 };

@@ -61,5 +61,5 @@ export default {
   icon: 'shopping_bag',
   routes: [{ path: '/taobao', render: renderTaobao }],
   navItem: { label: '購物', icon: 'shopping_bag', path: '/taobao', showInNav: true, order: 122 },
-  stylesPath: './taobao/style.css'
+  stylesPath: 'js/apps/taobao/style.css'
 };

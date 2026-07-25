@@ -70,5 +70,5 @@ export default {
   icon: 'couch',
   routes: [{ path: '/home', render: renderHome }],
   navItem: { label: '宅家', icon: 'couch', path: '/home', showInNav: true, order: 126 },
-  stylesPath: './home/style.css'
+  stylesPath: 'js/apps/home/style.css'
 };

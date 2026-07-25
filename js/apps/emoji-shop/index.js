@@ -62,5 +62,5 @@ export default {
   icon: 'mood',
   routes: [{ path: '/emoji-shop', render: renderEmojiShop }],
   navItem: { label: '表情商店', icon: 'mood', path: '/emoji-shop', showInNav: true, order: 142 },
-  stylesPath: './emoji-shop/style.css'
+  stylesPath: 'js/apps/emoji-shop/style.css'
 };

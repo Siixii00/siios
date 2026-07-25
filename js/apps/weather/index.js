@@ -514,5 +514,5 @@ export default {
     icon: 'cloud',
     routes: [{ path: '/weather', render: renderWeather }],
     navItem: { label: '天氣', icon: 'cloud', path: '/weather', showInNav: true, order: 30 },
-    stylesPath: './weather/style.css'
+    stylesPath: 'js/apps/weather/style.css'
 };
