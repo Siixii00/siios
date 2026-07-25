@@ -37,7 +37,7 @@ const App = {
             if (!this.isLocked) {
                 const app = this.getAppContainer();
                 app.innerHTML = '';
-                this.homeScreenEl = HomeScreen.create();
+                this.homeScreenEl = await HomeScreen.create();
                 app.appendChild(this.homeScreenEl);
             }
         });
@@ -64,7 +64,7 @@ const App = {
         this.isLocked = true;
     },
     
-    unlock() {
+    async unlock() {
         if (this.lockScreenEl) {
             LockScreen.destroy();
         }
@@ -72,7 +72,7 @@ const App = {
         const app = this.getAppContainer();
         app.innerHTML = '';
         
-        this.homeScreenEl = HomeScreen.create();
+        this.homeScreenEl = await HomeScreen.create();
         app.appendChild(this.homeScreenEl);
         this.isLocked = false;
     },
