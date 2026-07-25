@@ -633,5 +633,5 @@ export default {
     icon: 'live_tv',
     routes: [{ path: '/twitch', render: renderTwitch }],
     navItem: { label: 'Twitch', icon: 'live_tv', path: '/twitch', showInNav: true, order: 25 },
-    stylesPath: './style.css'
+    stylesPath: 'js/apps/twitch/style.css'
 };

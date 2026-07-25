@@ -91,5 +91,5 @@ export default {
   icon: 'import_contacts',
   routes: [{ path: '/personal-wiki', render: renderPersonalWiki }],
   navItem: { label: 'Wiki', icon: 'import_contacts', path: '/personal-wiki', showInNav: true, order: 130 },
-  stylesPath: './style.css'
+  stylesPath: 'js/apps/personal-wiki/style.css'
 };

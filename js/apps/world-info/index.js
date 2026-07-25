@@ -133,5 +133,5 @@ export default {
         showInNav: true,
         order: 2
     },
-    stylesPath: './style.css'
+    stylesPath: 'js/apps/world-info/style.css'
 };
