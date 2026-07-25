@@ -727,5 +727,5 @@ export default {
         showInNav: true,
         order: 20
     },
-    styles: () => import('./style.css')
+    stylesPath: './style.css'
 };

@@ -59,5 +59,5 @@ export default {
   icon: 'touch_app',
   routes: [{ path: '/touch', render: renderTouch }],
   navItem: { label: '輔助觸控', icon: 'touch_app', path: '/touch', showInNav: true, order: 145 },
-  styles: () => import('./style.css')
+  stylesPath: './style.css'
 };

@@ -72,5 +72,5 @@ export default {
   icon: 'grid_view',
   routes: [{ path: '/widget', render: renderWidget }],
   navItem: { label: '小工具', icon: 'grid_view', path: '/widget', showInNav: true, order: 146 },
-  styles: () => import('./style.css')
+  stylesPath: './style.css'
 };

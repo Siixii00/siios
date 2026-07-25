@@ -118,5 +118,5 @@ export default {
   icon: 'book',
   routes: [{ path: '/exchange-diary', render: renderExchangeDiary }],
   navItem: { label: '交換日記', icon: 'book', path: '/exchange-diary', showInNav: true, order: 111 },
-  styles: () => import('./style.css')
+  stylesPath: './style.css'
 };

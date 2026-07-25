@@ -1,4 +1,4 @@
-﻿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBottomNav, createKakaoFAB, createKakaoChatCell, createEmptyState, createToast } from '../../components.js';
 import { ChatsDB } from '../../db.js';
 
@@ -100,5 +100,5 @@ export default {
         showInNav: true,
         order: 1
     },
-    styles: () => import('./style.css')
+    stylesPath: './style.css'
 };

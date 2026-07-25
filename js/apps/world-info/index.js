@@ -1,4 +1,4 @@
-﻿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createIOSSearchBar, createEmptyState } from '../../components.js';
 import { WorldInfoDB } from '../../db.js';
 
@@ -133,5 +133,5 @@ export default {
         showInNav: true,
         order: 2
     },
-    styles: () => import('./style.css')
+    stylesPath: './style.css'
 };

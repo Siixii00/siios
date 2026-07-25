@@ -1467,5 +1467,5 @@ export default {
     icon: 'play_circle',
     routes: [{ path: '/youtube', render: renderYouTube }],
     navItem: { label: 'YouTube', icon: 'play_circle', path: '/youtube', showInNav: true, order: 25 },
-    styles: () => import('./style.css')
+    stylesPath: './style.css'
 };

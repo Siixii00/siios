@@ -94,5 +94,5 @@ export default {
   icon: 'seedling',
   routes: [{ path: '/farm', render: renderFarm }],
   navItem: { label: '農場', icon: 'seedling', path: '/farm', showInNav: true, order: 127 },
-  styles: () => import('./style.css')
+  stylesPath: './style.css'
 };

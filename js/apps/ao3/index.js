@@ -1095,5 +1095,5 @@ export default {
     icon: 'create',
     routes: [{ path: '/ao3', render: renderAO3 }],
     navItem: { label: 'AO3', icon: 'create', path: '/ao3', showInNav: true, order: 30 },
-    styles: () => import('./style.css')
+    stylesPath: './style.css'
 };

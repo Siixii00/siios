@@ -587,5 +587,5 @@ export default {
     icon: 'phone',
     routes: [{ path: '/phone', render: renderPhone }],
     navItem: { label: '電話', icon: 'phone', path: '/phone', showInNav: true, order: 20 },
-    styles: () => import('./style.css')
+    stylesPath: './style.css'
 };

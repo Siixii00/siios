@@ -67,5 +67,5 @@ export default {
   icon: 'bookmark',
   routes: [{ path: '/guzi-guide', render: renderGuziGuide }],
   navItem: { label: '谷子圖鑑', icon: 'bookmark', path: '/guzi-guide', showInNav: true, order: 132 },
-  styles: () => import('./style.css')
+  stylesPath: './style.css'
 };
