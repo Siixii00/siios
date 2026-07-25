@@ -79,5 +79,5 @@ export default {
   icon: 'redeem',
   routes: [{ path: '/redeem-shop', render: renderGiftShop }],
   navItem: { label: '禮物商店', icon: 'redeem', path: '/redeem-shop', showInNav: true, order: 143 },
-  styles: () => import('./style.css')
+  stylesPath: './style.css'
 };

@@ -148,5 +148,5 @@ export default {
   icon: 'theater_comedy',
   routes: [{ path: '/theater', render: renderTheater }],
   navItem: { label: '劇場', icon: 'theater_comedy', path: '/theater', showInNav: true, order: 103 },
-  styles: () => import('./style.css')
+  stylesPath: './style.css'
 };

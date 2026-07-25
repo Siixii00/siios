@@ -2,6 +2,19 @@ import Router from '../router.js';
 
 const apps = [];
 let initialized = false;
+const loadedStyles = new Set();
+
+function loadStyle(cssPath) {
+    if (loadedStyles.has(cssPath)) return Promise.resolve();
+    return new Promise((resolve, reject) => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = cssPath;
+        link.onload = () => { loadedStyles.add(cssPath); resolve(); };
+        link.onerror = () => { loadedStyles.add(cssPath); resolve(); };
+        document.head.appendChild(link);
+    });
+}
 
 async function loadApps() {
     const appModules = [
@@ -84,8 +97,8 @@ async function registerRoutes() {
                     }
 
                     try {
-                        if (app.styles) {
-                            await app.styles();
+                        if (app.stylesPath) {
+                            await loadStyle(app.stylesPath);
                         }
 
                         const result = await route.render(params);

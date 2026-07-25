@@ -1,4 +1,4 @@
-﻿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { SettingsDB, ChatsDB, WorldInfoDB, CharactersDB } from '../../db.js';
 
@@ -129,5 +129,5 @@ export default {
         showInNav: true,
         order: 3
     },
-    styles: () => import('./style.css')
+    stylesPath: './style.css'
 };

@@ -65,5 +65,5 @@ export default {
   icon: 'store',
   routes: [{ path: '/theme-shop', render: renderThemeShop }],
   navItem: { label: '主題商店', icon: 'store', path: '/theme-shop', showInNav: true, order: 141 },
-  styles: () => import('./style.css')
+  stylesPath: './style.css'
 };

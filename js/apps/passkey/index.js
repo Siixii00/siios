@@ -63,5 +63,5 @@ export default {
   icon: 'key',
   routes: [{ path: '/passkey', render: renderPasskey }],
   navItem: { label: 'Passkey', icon: 'key', path: '/passkey', showInNav: true, order: 144 },
-  styles: () => import('./style.css')
+  stylesPath: './style.css'
 };

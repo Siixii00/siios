@@ -92,5 +92,5 @@ export default {
   icon: 'wine_bar',
   routes: [{ path: '/pub', render: renderPub }],
   navItem: { label: '酒館', icon: 'wine_bar', path: '/pub', showInNav: true, order: 113 },
-  styles: () => import('./style.css')
+  stylesPath: './style.css'
 };

@@ -365,5 +365,5 @@ export default {
         showInNav: true,
         order: 4
     },
-    styles: () => import('./style.css')
+    stylesPath: './style.css'
 };
