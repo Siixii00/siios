@@ -418,7 +418,6 @@ function createBiliBottomNav() {
     const items = [
         { icon: 'home', label: '首頁', path: '/bilibili' },
         { icon: 'explore', label: '追番', path: '/bilibili/tab/anime' },
-        { icon: 'add_circle', label: '', path: '/bilibili/add', isPost: true },
         { icon: 'chat_bubble', label: '訊息', path: '/bilibili/messages' },
         { icon: 'person', label: '我的', path: '/bilibili/profile' }
     ];
