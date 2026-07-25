@@ -398,7 +398,7 @@ async function renderMusic(params) {
         if (playlist.length > 0) loadTrack(0, false);
     }
 
-    container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+    container.querySelector('.ios-back-btn').onclick = () => Router.back();
     container.querySelector('#refresh-btn').onclick = importPlaylist;
     container.querySelector('#import-btn').onclick = importPlaylist;
     container.querySelector('#play-btn').onclick = togglePlay;
@@ -457,6 +457,6 @@ export default {
     name: '音樂',
     icon: 'music_note',
     routes: [{ path: '/music', render: renderMusic }],
-    navItem: { label: '音樂', icon: 'music_note', path: '/music', showInNav: true, order: 20 },
+    navItem: { label: '音樂', icon: 'music_note', path: '/music', showInNav: true, order: 18 },
     stylesPath: 'js/apps/music/style.css'
 };

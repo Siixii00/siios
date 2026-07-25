@@ -113,7 +113,7 @@ async function renderTheater(params) {
   `;
   
   const backBtn = container.querySelector('.ios-back-btn');
-  backBtn.onclick = () => Router.navigate('/');
+  backBtn.onclick = () => Router.back();
   
   const closeDetailBtn = container.querySelector('.close-detail-btn');
   if (closeDetailBtn) {

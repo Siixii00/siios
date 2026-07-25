@@ -20,7 +20,7 @@ async function renderApiConfig() {
     const backBtn = createElement('button', 'ios-btn');
     backBtn.appendChild(createIcon('chevron_left'));
     backBtn.appendChild(createElement('span', '', { textContent: '返回' }));
-    backBtn.onclick = () => Router.navigate('/settings');
+    backBtn.onclick = () => Router.back();
     inner.appendChild(backBtn);
     
     inner.appendChild(createElement('h1', 'ios-inline-title', { textContent: 'API 設定' }));

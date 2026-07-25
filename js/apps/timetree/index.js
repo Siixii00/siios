@@ -45,7 +45,7 @@ async function renderTimetree(params) {
       <button class="add-event-btn"><i class="fas fa-plus"></i> 新增事件</button>
     </div>
   `;
-  container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+  container.querySelector('.ios-back-btn').onclick = () => Router.back();
   container.querySelector('.add-event-btn').onclick = async () => {
     const title = prompt('事件標題：');
     if (title) {

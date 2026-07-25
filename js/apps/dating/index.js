@@ -24,7 +24,7 @@ async function renderDating(params) {
   `;
   
   const backBtn = container.querySelector('.ios-back-btn');
-  backBtn.onclick = () => Router.navigate('/');
+  backBtn.onclick = () => Router.back();
   
   return { element: container, cleanup: null };
 }

@@ -601,13 +601,14 @@ async function renderTwitch() {
         };
     });
 
-    document.onkeydown = (e) => {
+    const keydownHandler = (e) => {
         if (e.key === 'Escape') {
             if (state.streamPageOpen) closeStreamPage();
             else if (state.searchOpen) closeSearch();
             else if (state.sidebarOpen) toggleSidebar();
         }
     };
+    document.addEventListener('keydown', keydownHandler);
 
     renderChannels(container.querySelector('#recommended-channels'), mockData.followedChannels.slice(0, 3));
     renderChannels(container.querySelector('#followed-channels'), mockData.followedChannels);
@@ -623,6 +624,7 @@ async function renderTwitch() {
         cleanup: () => {
             if (carouselTimer) clearInterval(carouselTimer);
             stopLiveChatGeneration();
+            document.removeEventListener('keydown', keydownHandler);
         }
     };
 }
@@ -632,6 +634,6 @@ export default {
     name: 'Twitch',
     icon: 'live_tv',
     routes: [{ path: '/twitch', render: renderTwitch }],
-    navItem: { label: 'Twitch', icon: 'live_tv', path: '/twitch', showInNav: true, order: 25 },
+    navItem: { label: 'Twitch', icon: 'live_tv', path: '/twitch', showInNav: true, order: 21 },
     stylesPath: 'js/apps/twitch/style.css'
 };

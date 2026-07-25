@@ -557,7 +557,7 @@ async function renderPhone() {
     `;
 
     const backBtn = container.querySelector('.ios-back-btn');
-    backBtn.onclick = () => Router.navigate('/');
+    backBtn.onclick = () => Router.back();
 
     renderFavorites(container);
     renderHistory(container);
@@ -586,6 +586,6 @@ export default {
     name: '電話',
     icon: 'phone',
     routes: [{ path: '/phone', render: renderPhone }],
-    navItem: { label: '電話', icon: 'phone', path: '/phone', showInNav: true, order: 20 },
+    navItem: { label: '電話', icon: 'phone', path: '/phone', showInNav: true, order: 19 },
     stylesPath: 'js/apps/phone/style.css'
 };

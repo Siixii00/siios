@@ -725,7 +725,7 @@ async function renderFacebook(params) {
     `;
 
     const backBtn = container.querySelector('.ios-back-btn');
-    backBtn.onclick = () => Router.navigate('/');
+    backBtn.onclick = () => Router.back();
 
     const aiGenerateBtn = container.querySelector('#ai-generate-btn');
     aiGenerateBtn.onclick = () => generateAIPosts(container);
@@ -1062,10 +1062,10 @@ function showMemoriesPage(container) {
 }
 
 export default {
-    id: 'share',
+    id: 'facebook',
     name: '臉書',
     icon: 'share',
-    routes: [{ path: '/share', render: renderFacebook }],
-    navItem: { label: '臉書', icon: 'share', path: '/share', showInNav: true, order: 20 },
+    routes: [{ path: '/facebook', render: renderFacebook }],
+    navItem: { label: '臉書', icon: 'share', path: '/facebook', showInNav: true, order: 16 },
     stylesPath: 'js/apps/facebook/style.css'
 };

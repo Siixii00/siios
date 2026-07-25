@@ -44,7 +44,7 @@ async function renderTaobao(params) {
       </div>
     </div>
   `;
-  container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+  container.querySelector('.ios-back-btn').onclick = () => Router.back();
   container.querySelectorAll('.add-cart-btn').forEach(btn => {
     btn.onclick = async () => {
       cart.push({ id: btn.dataset.id, name: btn.dataset.name, price: parseInt(btn.dataset.price) });

@@ -76,7 +76,7 @@ async function renderExchangeDiary(params) {
   `;
   
   const backBtn = container.querySelector('.ios-back-btn');
-  backBtn.onclick = () => Router.navigate('/');
+  backBtn.onclick = () => Router.back();
   
   container.querySelectorAll('.mood-btn').forEach(btn => {
     btn.onclick = () => {

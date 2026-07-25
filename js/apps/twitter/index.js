@@ -755,7 +755,7 @@ export default {
         icon: 'tag',
         path: '/twitter',
         showInNav: true,
-        order: 3
+        order: 6
     },
     stylesPath: 'js/apps/twitter/style.css'
 };

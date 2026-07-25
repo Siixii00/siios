@@ -79,7 +79,7 @@ async function renderPersonalWiki(params) {
       <div class="wiki-editor"></div>
     </div>
   `;
-  container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+  container.querySelector('.ios-back-btn').onclick = () => Router.back();
   container.querySelector('.add-wiki-btn').onclick = () => openEditor(container, null);
   renderWikiList(container);
   return { element: container, cleanup: null };

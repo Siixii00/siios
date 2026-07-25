@@ -476,7 +476,7 @@ async function renderWeather(params) {
     `;
 
     const backBtn = container.querySelector('.ios-back-btn');
-    backBtn.onclick = () => Router.navigate('/');
+    backBtn.onclick = () => Router.back();
 
     const searchBtn = container.querySelector('#search-btn');
     const locationInput = container.querySelector('#location-input');
@@ -513,6 +513,6 @@ export default {
     name: '天氣',
     icon: 'cloud',
     routes: [{ path: '/weather', render: renderWeather }],
-    navItem: { label: '天氣', icon: 'cloud', path: '/weather', showInNav: true, order: 30 },
+    navItem: { label: '天氣', icon: 'cloud', path: '/weather', showInNav: true, order: 26 },
     stylesPath: 'js/apps/weather/style.css'
 };

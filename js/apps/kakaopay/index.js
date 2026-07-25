@@ -48,7 +48,7 @@ async function renderKakaopay(params) {
       </div>
     </div>
   `;
-  container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+  container.querySelector('.ios-back-btn').onclick = () => Router.back();
   container.querySelector('.action-btn.send').onclick = async () => {
     const amount = prompt('轉帳金額：');
     if (amount && !isNaN(amount) && parseInt(amount) > 0 && parseInt(amount) <= balance) {

@@ -219,7 +219,7 @@ async function renderAlbum(params) {
     `;
 
     const backBtn = container.querySelector('.ios-back-btn');
-    backBtn.onclick = () => Router.navigate('/');
+    backBtn.onclick = () => Router.back();
 
     const uploadBtn = container.querySelector('#upload-btn');
     uploadBtn.onclick = () => openImagePicker(container);

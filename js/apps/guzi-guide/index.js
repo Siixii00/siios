@@ -49,7 +49,7 @@ async function renderGuziGuide(params) {
       <button class="add-btn"><i class="fas fa-plus"></i> 新增收藏</button>
     </div>
   `;
-  container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+  container.querySelector('.ios-back-btn').onclick = () => Router.back();
   container.querySelector('.add-btn').onclick = async () => {
     const name = prompt('名稱：');
     if (!name) return;

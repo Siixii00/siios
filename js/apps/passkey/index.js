@@ -45,7 +45,7 @@ async function renderPasskey(params) {
       </div>
     </div>
   `;
-  container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+  container.querySelector('.ios-back-btn').onclick = () => Router.back();
   container.querySelector('.create-btn').onclick = async () => {
     const name = prompt('Passkey 名稱：');
     if (name) {

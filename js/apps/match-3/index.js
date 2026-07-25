@@ -213,7 +213,7 @@ async function renderMatch3(params) {
   `;
   
   const backBtn = container.querySelector('.ios-back-btn');
-  backBtn.onclick = () => Router.navigate('/');
+  backBtn.onclick = () => Router.back();
   
   const restartBtn = container.querySelector('.restart-btn');
   restartBtn.onclick = () => {

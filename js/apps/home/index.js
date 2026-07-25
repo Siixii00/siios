@@ -51,7 +51,7 @@ async function renderHome(params) {
       </div>
     </div>
   `;
-  container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+  container.querySelector('.ios-back-btn').onclick = () => Router.back();
   container.querySelectorAll('.activity-btn').forEach(btn => {
     btn.onclick = async () => {
       const e = parseInt(btn.dataset.energy);

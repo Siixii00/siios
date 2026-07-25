@@ -653,7 +653,7 @@ async function renderPomodoro() {
     }
 
     const backBtn = container.querySelector('.ios-back-btn');
-    backBtn.onclick = () => Router.navigate('/');
+    backBtn.onclick = () => Router.back();
 
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
@@ -775,6 +775,6 @@ export default {
     name: '番茄鐘',
     icon: 'timer',
     routes: [{ path: '/pomodoro', render: renderPomodoro }],
-    navItem: { label: '番茄鐘', icon: 'timer', path: '/pomodoro', showInNav: true, order: 30 },
+    navItem: { label: '番茄鐘', icon: 'timer', path: '/pomodoro', showInNav: true, order: 25 },
     stylesPath: 'js/apps/pomodoro/style.css'
 };

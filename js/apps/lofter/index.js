@@ -1,5 +1,5 @@
 import Router from '../../router.js';
-import { createElement, createIcon, createKakaoBottomNav, createToast, createEmptyState } from '../../components.js';
+import { createElement, createIcon, createToast, createEmptyState } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 
 const STORAGE_KEYS = {
@@ -111,7 +111,7 @@ function createHeader() {
     const header = createElement('header', 'lofter-topbar');
     
     const backBtn = createElement('button', 'icon-btn', {
-        onClick: () => Router.navigate('/home')
+        onClick: () => Router.back()
     });
     backBtn.appendChild(createIcon('chevron_left', 'text-white'));
     header.appendChild(backBtn);
@@ -725,7 +725,7 @@ export default {
         icon: 'article',
         path: '/lofter',
         showInNav: true,
-        order: 20
+        order: 17
     },
     stylesPath: 'js/apps/lofter/style.css'
 };

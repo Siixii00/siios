@@ -57,7 +57,7 @@ async function renderSmartPainter(params) {
       </div>
     </div>
   `;
-  container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+  container.querySelector('.ios-back-btn').onclick = () => Router.back();
   container.querySelectorAll('.filter-btn').forEach(btn => {
     btn.onclick = () => {
       activeFilter = btn.dataset.id;

@@ -35,7 +35,7 @@ async function renderDailyRecipe(params) {
       </div>
     </div>
   `;
-  container.querySelector('.ios-back-btn').onclick = () => Router.navigate('/');
+  container.querySelector('.ios-back-btn').onclick = () => Router.back();
   return { element: container, cleanup: null };
 }
 
