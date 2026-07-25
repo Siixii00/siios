@@ -146,7 +146,7 @@ function renderStories(group) {
     }
     storyItems.forEach(story => {
         const item = createElement('article', 'story-item');
-        item.innerHTML = '<span class="avatar ' + (story.avatarImage ? 'has-image' : '') + '" ' + (story.avatarImage ? 'style="background-image:url(\\'' + story.avatarImage + '\\')"' : 'style="background:' + story.color + '"') + '>' + (story.avatarImage ? '' : story.avatar) + '</span><span class="name">' + story.name + '</span>';
+        item.innerHTML = `<span class="avatar ${story.avatarImage ? 'has-image' : ''}" ${story.avatarImage ? `style="background-image:url('${story.avatarImage}')"` : `style="background:${story.color}"`}>${story.avatarImage ? '' : story.avatar}</span><span class="name">${story.name}</span>`;
         storyStripEl.appendChild(item);
     });
     return storyStripEl;
