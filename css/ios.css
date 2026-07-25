@@ -249,11 +249,6 @@ body.desktop-mode .ios-bottom-nav {
     position: absolute;
     left: 0;
     bottom: 0;
-    border-radius: 0 0 10px 10px;
-}
-
-body.desktop-mode .app-container {
-    padding-bottom: 83px;
 }
 
 .ios-bottom-nav-item {
