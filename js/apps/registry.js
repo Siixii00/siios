@@ -9,9 +9,9 @@ function loadStyle(cssPath) {
     return new Promise((resolve, reject) => {
         const link = document.createElement('link');
         link.rel = 'stylesheet';
-        const scriptTag = document.querySelector('script[src*="app.js"]');
-        const baseUrl = scriptTag ? scriptTag.src.replace(/js\/app\.js$/, '') : '';
-        link.href = baseUrl + cssPath;
+        const base = location.pathname.replace(/\/$/, '');
+        const basePath = base.includes('/siios') ? '/siios/' : '/';
+        link.href = basePath + cssPath;
         link.onload = () => { loadedStyles.add(cssPath); resolve(); };
         link.onerror = () => { loadedStyles.add(cssPath); resolve(); };
         document.head.appendChild(link);
