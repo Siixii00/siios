@@ -63,5 +63,5 @@ export default {
   icon: 'calendar_month',
   routes: [{ path: '/timetree', render: renderTimetree }],
   navItem: { label: '時間樹', icon: 'calendar_month', path: '/timetree', showInNav: true, order: 125 },
-  stylesPath: './style.css'
+  stylesPath: 'js/apps/timetree/style.css'
 };

@@ -129,5 +129,5 @@ export default {
         showInNav: true,
         order: 3
     },
-    stylesPath: './style.css'
+    stylesPath: 'js/apps/settings/style.css'
 };

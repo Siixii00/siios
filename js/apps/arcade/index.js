@@ -237,5 +237,5 @@ export default {
   icon: 'gamepad',
   routes: [{ path: '/arcade', render: renderArcade }],
   navItem: { label: '街機廳', icon: 'gamepad', path: '/arcade', showInNav: true, order: 100 },
-  stylesPath: './style.css'
+  stylesPath: 'js/apps/arcade/style.css'
 };

@@ -264,5 +264,5 @@ export default {
     icon: 'photo_library',
     routes: [{ path: '/album', render: renderAlbum }],
     navItem: { label: '相簿', icon: 'photo_library', path: '/album', showInNav: true, order: 10 },
-    stylesPath: './style.css'
+    stylesPath: 'js/apps/album/style.css'
 };
