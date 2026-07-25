@@ -245,6 +245,11 @@
     border-top: 0.5px solid var(--ios-border);
 }
 
+body.desktop-mode .ios-bottom-nav {
+    position: absolute;
+    left: 0;
+}
+
 .ios-bottom-nav-item {
     display: flex;
     flex-direction: column;
