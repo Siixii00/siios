@@ -88,8 +88,8 @@ async function renderPersonalWiki(params) {
 export default {
   id: 'personal-wiki',
   name: '個人 Wiki',
-  icon: 'book-open',
+  icon: 'import_contacts',
   routes: [{ path: '/personal-wiki', render: renderPersonalWiki }],
-  navItem: { label: 'Wiki', icon: 'book-open', path: '/personal-wiki', showInNav: true, order: 130 },
+  navItem: { label: 'Wiki', icon: 'import_contacts', path: '/personal-wiki', showInNav: true, order: 130 },
   styles: () => import('./style.css')
 };

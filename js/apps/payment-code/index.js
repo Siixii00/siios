@@ -12,7 +12,7 @@ async function renderPaymentCode(params) {
     <div class="page">
       <div class="code-container">
         <div class="qr-placeholder">
-          <i class="fas fa-qrcode"></i>
+          <i class="fas fa-qr_code_2"></i>
           <div class="code-text">${code}</div>
         </div>
         <p class="code-hint">請出示此碼給商家掃描</p>
@@ -28,8 +28,8 @@ async function renderPaymentCode(params) {
 export default {
   id: 'payment-code',
   name: '付款碼',
-  icon: 'qrcode',
+  icon: 'qr_code_2',
   routes: [{ path: '/payment-code', render: renderPaymentCode }],
-  navItem: { label: '付款碼', icon: 'qrcode', path: '/payment-code', showInNav: true, order: 124 },
+  navItem: { label: '付款碼', icon: 'qr_code_2', path: '/payment-code', showInNav: true, order: 124 },
   styles: () => import('./style.css')
 };

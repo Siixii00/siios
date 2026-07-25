@@ -31,7 +31,7 @@ async function renderTouch(params) {
       </div>
       <div class="preview-area">
         <div class="touch-ball ${enabled ? '' : 'hidden'}">
-          <i class="fas fa-hand-pointer"></i>
+          <i class="fas fa-touch_app"></i>
         </div>
         <p class="hint">浮動按鈕將顯示在畫面上，方便快速操作。</p>
       </div>
@@ -56,8 +56,8 @@ async function renderTouch(params) {
 export default {
   id: 'touch',
   name: '輔助觸控',
-  icon: 'hand-pointer',
+  icon: 'touch_app',
   routes: [{ path: '/touch', render: renderTouch }],
-  navItem: { label: '輔助觸控', icon: 'hand-pointer', path: '/touch', showInNav: true, order: 145 },
+  navItem: { label: '輔助觸控', icon: 'touch_app', path: '/touch', showInNav: true, order: 145 },
   styles: () => import('./style.css')
 };

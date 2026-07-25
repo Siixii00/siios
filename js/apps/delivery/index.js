@@ -104,8 +104,8 @@ async function renderDelivery(params) {
 export default {
   id: 'delivery',
   name: '外送',
-  icon: 'utensils',
+  icon: 'restaurant',
   routes: [{ path: '/delivery', render: renderDelivery }],
-  navItem: { label: '外送', icon: 'utensils', path: '/delivery', showInNav: true, order: 120 },
+  navItem: { label: '外送', icon: 'restaurant', path: '/delivery', showInNav: true, order: 120 },
   styles: () => import('./style.css')
 };

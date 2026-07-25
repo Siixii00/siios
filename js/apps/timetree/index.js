@@ -60,8 +60,8 @@ async function renderTimetree(params) {
 export default {
   id: 'timetree',
   name: '時間樹',
-  icon: 'calendar-alt',
+  icon: 'calendar_month',
   routes: [{ path: '/timetree', render: renderTimetree }],
-  navItem: { label: '時間樹', icon: 'calendar-alt', path: '/timetree', showInNav: true, order: 125 },
+  navItem: { label: '時間樹', icon: 'calendar_month', path: '/timetree', showInNav: true, order: 125 },
   styles: () => import('./style.css')
 };

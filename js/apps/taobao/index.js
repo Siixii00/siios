@@ -58,8 +58,8 @@ async function renderTaobao(params) {
 export default {
   id: 'taobao',
   name: '購物',
-  icon: 'shopping-bag',
+  icon: 'shopping_bag',
   routes: [{ path: '/taobao', render: renderTaobao }],
-  navItem: { label: '購物', icon: 'shopping-bag', path: '/taobao', showInNav: true, order: 122 },
+  navItem: { label: '購物', icon: 'shopping_bag', path: '/taobao', showInNav: true, order: 122 },
   styles: () => import('./style.css')
 };

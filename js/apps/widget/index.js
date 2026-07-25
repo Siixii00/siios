@@ -69,8 +69,8 @@ async function renderWidget(params) {
 export default {
   id: 'widget',
   name: '小工具',
-  icon: 'th-large',
+  icon: 'grid_view',
   routes: [{ path: '/widget', render: renderWidget }],
-  navItem: { label: '小工具', icon: 'th-large', path: '/widget', showInNav: true, order: 146 },
+  navItem: { label: '小工具', icon: 'grid_view', path: '/widget', showInNav: true, order: 146 },
   styles: () => import('./style.css')
 };
