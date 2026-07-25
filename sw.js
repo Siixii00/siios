@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sxios-v8';
+const CACHE_NAME = 'sxios-v9';
 
 function getBasePath() {
   return self.registration.scope;
