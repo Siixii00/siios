@@ -365,5 +365,5 @@ export default {
         showInNav: true,
         order: 4
     },
-    stylesPath: 'js/apps/memory/style.css'
+    stylesPath: './memory/style.css'
 };

@@ -107,5 +107,5 @@ export default {
   icon: 'restaurant',
   routes: [{ path: '/delivery', render: renderDelivery }],
   navItem: { label: '外送', icon: 'restaurant', path: '/delivery', showInNav: true, order: 120 },
-  stylesPath: 'js/apps/delivery/style.css'
+  stylesPath: './delivery/style.css'
 };

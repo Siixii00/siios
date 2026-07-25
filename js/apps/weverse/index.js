@@ -302,4 +302,4 @@ async function renderWeverse(params) {
     return { element: container, cleanup: null };
 }
 
-export default { id: 'weverse', name: 'Weverse', icon: 'groups', routes: [{ path: '/weverse', render: renderWeverse }], navItem: { label: 'Weverse', icon: 'groups', path: '/weverse', showInNav: true, order: 30 }, stylesPath: 'js/apps/weverse/style.css' };
+export default { id: 'weverse', name: 'Weverse', icon: 'groups', routes: [{ path: '/weverse', render: renderWeverse }], navItem: { label: 'Weverse', icon: 'groups', path: '/weverse', showInNav: true, order: 30 }, stylesPath: './weverse/style.css' };

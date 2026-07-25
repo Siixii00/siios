@@ -771,5 +771,5 @@ export default {
         showInNav: true,
         order: 5
     },
-    stylesPath: 'js/apps/bilibili/style.css'
+    stylesPath: './bilibili/style.css'
 };

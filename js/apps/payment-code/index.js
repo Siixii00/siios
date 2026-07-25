@@ -31,5 +31,5 @@ export default {
   icon: 'qr_code_2',
   routes: [{ path: '/payment-code', render: renderPaymentCode }],
   navItem: { label: '付款碼', icon: 'qr_code_2', path: '/payment-code', showInNav: true, order: 124 },
-  stylesPath: 'js/apps/payment-code/style.css'
+  stylesPath: './payment-code/style.css'
 };

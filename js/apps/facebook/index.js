@@ -1067,5 +1067,5 @@ export default {
     icon: 'share',
     routes: [{ path: '/share', render: renderFacebook }],
     navItem: { label: '臉書', icon: 'share', path: '/share', showInNav: true, order: 20 },
-    stylesPath: 'js/apps/facebook/style.css'
+    stylesPath: './facebook/style.css'
 };
