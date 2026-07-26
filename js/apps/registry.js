@@ -33,7 +33,6 @@ async function loadApps() {
         import('./pomodoro/index.js'),
         import('./phone/index.js'),
         import('./chrome/index.js'),
-        import('./facebook/index.js'),
         import('./instagram/index.js'),
         import('./twitter/index.js'),
         import('./youtube/index.js'),
