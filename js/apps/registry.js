@@ -48,7 +48,6 @@ async function loadApps() {
         import('./dating/index.js'),
         import('./exchange-diary/index.js'),
         import('./drift-bottle/index.js'),
-        import('./pub/index.js'),
         import('./delivery/index.js'),
         import('./daily-recipe/index.js'),
         import('./taobao/index.js'),
