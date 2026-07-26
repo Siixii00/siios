@@ -1,0 +1,560 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SXIOS — Figma Import Part 2</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+:root {
+    --ios-blue: #141413;
+    --ios-bg: #FAF9F6;
+    --ios-surface: #FFFFFF;
+    --ios-text: #111827;
+    --ios-muted: #6B6B6B;
+    --ios-border: rgba(20, 20, 19, 0.12);
+    --ios-nav-bg: rgba(250, 249, 246, 0.92);
+    --zapier-canvas: #fffefb;
+    --zapier-ink: #201515;
+    --zapier-primary: #ff4f00;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Inter", sans-serif; background: #eee; }
+.screen-index { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+.screen-index h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+.screen-index p { color: #6B6B6B; margin-bottom: 32px; }
+.screen-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(390px, 1fr)); gap: 32px; }
+.screen-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.screen-card-label { padding: 12px 16px; font-size: 14px; font-weight: 600; border-bottom: 1px solid #e5e5e5; }
+.phone-frame { width: 375px; height: 812px; background: #1c1c1e; border-radius: 50px; padding: 12px; margin: 0 auto; display: flex; flex-direction: column; overflow: hidden; position: relative; }
+.phone-notch { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 150px; height: 30px; background: #1c1c1e; border-radius: 0 0 20px 20px; display: flex; align-items: center; justify-content: center; gap: 12px; z-index: 10; }
+.phone-notch-speaker { width: 60px; height: 6px; background: #0a0a0a; border-radius: 3px; }
+.phone-notch-camera { width: 10px; height: 10px; background: #0a0a0a; border-radius: 50%; }
+.phone-screen { flex: 1; background: var(--ios-bg); border-radius: 38px; overflow: hidden; position: relative; }
+.phone-home-indicator { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); width: 134px; height: 5px; background: #1c1c1e; border-radius: 3px; z-index: 10; }
+.app-container { display: flex; flex-direction: column; min-height: 100%; background: var(--ios-bg); }
+.ios-header { padding: 46px 16px 16px; display: flex; align-items: center; justify-content: space-between; background: var(--ios-nav-bg); border-bottom: 1px solid var(--ios-border); position: relative; }
+.ios-back-btn { background: transparent; color: var(--ios-blue); border: none; font-size: 17px; display: flex; align-items: center; gap: 4px; cursor: pointer; z-index: 2; }
+.menu-title { position: absolute; left: 50%; transform: translateX(-50%); font-size: 17px; font-weight: 600; color: var(--ios-text); z-index: 1; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; font-size: 24px; }
+.material-symbols-filled { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; font-size: 24px; }
+.overflow-y-auto { overflow-y: auto; }
+.flex-1 { flex: 1; }
+</style>
+</head>
+<body>
+<div class="screen-index">
+    <h1>SXIOS — UI Screens Part 2</h1>
+    <p>Album, Weather, Music, Pomodoro, Phone, Chrome, Instagram, Twitter, YouTube, Bilibili, Twitch, Weverse</p>
+    <div class="screen-grid">
+<!-- 9. Album -->
+<div class="screen-card">
+    <div class="screen-card-label">9. Album</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:var(--zapier-canvas);color:var(--zapier-ink);">
+                <header class="ios-header" style="background:var(--zapier-canvas);border-color:#e5e5e5;">
+                    <button class="ios-back-btn" style="color:var(--zapier-ink)!important;"><i class="fas fa-chevron-left"></i> 返回</button>
+                    <h1 class="menu-title" style="color:var(--zapier-ink)!important;">相簿</h1>
+                    <button style="background:var(--zapier-primary);border:none;color:white;font-size:16px;padding:6px 10px;border-radius:12px;"><i class="fas fa-plus"></i></button>
+                </header>
+                <div style="display:flex;padding:0 16px;border-bottom:1px solid #e5e5e5;">
+                    <button style="flex:1;padding:12px;border:none;background:var(--zapier-ink);color:white;font-size:16px;font-weight:600;">全部</button>
+                    <button style="flex:1;padding:12px;border:none;background:transparent;font-size:16px;">上傳</button>
+                    <button style="flex:1;padding:12px;border:none;background:transparent;font-size:16px;">聊天</button>
+                    <button style="flex:1;padding:12px;border:none;background:transparent;font-size:16px;">照相館</button>
+                </div>
+                <main class="flex-1 overflow-y-auto" style="padding:12px;">
+                    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px;">
+                        <div style="aspect-ratio:1;background:linear-gradient(135deg,#f6d5c5,#f0b8a0);border-radius:12px;position:relative;"></div>
+                        <div style="aspect-ratio:1;background:linear-gradient(135deg,#c5d5f6,#a0c0f0);border-radius:12px;"></div>
+                        <div style="aspect-ratio:1;background:linear-gradient(135deg,#d5f6c5,#b8f0a0);border-radius:12px;"></div>
+                        <div style="aspect-ratio:1;background:linear-gradient(135deg,#f6e5c5,#f0d8a0);border-radius:12px;"></div>
+                        <div style="aspect-ratio:1;background:linear-gradient(135deg,#e5c5f6,#d8a0f0);border-radius:12px;"></div>
+                        <div style="aspect-ratio:1;background:linear-gradient(135deg,#c5f6f0,#a0f0e0);border-radius:12px;"></div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 11. Music -->
+<div class="screen-card">
+    <div class="screen-card-label">11. Music</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:linear-gradient(180deg,#1a1a2e 0%,#16213e 100%);color:white;">
+                <header class="ios-header" style="background:transparent;border:none;">
+                    <button class="ios-back-btn" style="color:white!important;"><i class="fas fa-chevron-left"></i> 返回</button>
+                    <h1 class="menu-title" style="color:white!important;">音樂</h1>
+                    <button style="color:white;border:none;background:transparent;font-size:20px;"><i class="fas fa-ellipsis-h"></i></button>
+                </header>
+                <main class="flex-1" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;">
+                    <div style="width:280px;height:280px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:32px;box-shadow:0 8px 32px rgba(0,0,0,0.3);">
+                        <i class="fas fa-music" style="font-size:80px;color:rgba(255,255,255,0.3);"></i>
+                    </div>
+                    <div style="text-align:center;margin-bottom:24px;">
+                        <div style="font-size:24px;font-weight:600;">Song Title</div>
+                        <div style="font-size:16px;opacity:0.7;">Artist Name</div>
+                    </div>
+                    <div style="width:100%;margin-bottom:24px;">
+                        <div style="width:100%;height:4px;background:rgba(255,255,255,0.2);border-radius:2px;">
+                            <div style="width:40%;height:4px;background:white;border-radius:2px;"></div>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;font-size:12px;margin-top:8px;opacity:0.7;">
+                            <span>1:24</span><span>3:45</span>
+                        </div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:32px;">
+                        <button style="color:white;border:none;background:transparent;font-size:24px;"><i class="fas fa-backward"></i></button>
+                        <button style="width:64px;height:64px;background:white;border-radius:50%;border:none;color:#1a1a2e;font-size:24px;"><i class="fas fa-play"></i></button>
+                        <button style="color:white;border:none;background:transparent;font-size:24px;"><i class="fas fa-forward"></i></button>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 12. Pomodoro -->
+<div class="screen-card">
+    <div class="screen-card-label">12. Pomodoro</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:#FAF9F6;">
+                <header class="ios-header">
+                    <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
+                    <h1 class="menu-title">番茄鐘</h1>
+                    <button style="color:var(--ios-blue);border:none;background:transparent;font-size:20px;"><i class="fas fa-cog"></i></button>
+                </header>
+                <main class="flex-1" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:16px;">
+                    <div style="width:280px;height:280px;border-radius:50%;background:linear-gradient(135deg,#FF6B6B,#EE5A24);display:flex;align-items:center;justify-content:center;margin-bottom:32px;box-shadow:0 8px 32px rgba(238,90,36,0.3);">
+                        <div style="text-align:center;color:white;">
+                            <div style="font-size:64px;font-weight:300;">25:00</div>
+                            <div style="font-size:16px;opacity:0.8;">專注時間</div>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:16px;margin-bottom:32px;">
+                        <button style="padding:12px 32px;background:var(--ios-blue);color:white;border:none;border-radius:24px;font-size:16px;font-weight:600;">開始</button>
+                        <button style="padding:12px 32px;background:#E5E5EA;color:#111827;border:none;border-radius:24px;font-size:16px;font-weight:600;">重置</button>
+                    </div>
+                    <div style="text-align:center;">
+                        <div style="font-size:14px;color:var(--ios-muted);">今日完成</div>
+                        <div style="font-size:32px;font-weight:700;color:var(--ios-blue);">3 番茄</div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 13. Phone -->
+<div class="screen-card">
+    <div class="screen-card-label">13. Phone</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:#FAF9F6;">
+                <header class="ios-header">
+                    <div></div>
+                    <h1 class="menu-title">電話</h1>
+                    <button style="color:var(--ios-blue);border:none;background:transparent;font-size:20px;"><i class="fas fa-ellipsis-h"></i></button>
+                </header>
+                <main class="flex-1 overflow-y-auto" style="padding:16px;">
+                    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;text-align:center;">
+                        <button style="padding:20px;background:white;border-radius:50%;border:1px solid var(--ios-border);font-size:28px;">1</button>
+                        <button style="padding:20px;background:white;border-radius:50%;border:1px solid var(--ios-border);font-size:28px;">2</button>
+                        <button style="padding:20px;background:white;border-radius:50%;border:1px solid var(--ios-border);font-size:28px;">3</button>
+                        <button style="padding:20px;background:white;border-radius:50%;border:1px solid var(--ios-border);font-size:28px;">4</button>
+                        <button style="padding:20px;background:white;border-radius:50%;border:1px solid var(--ios-border);font-size:28px;">5</button>
+                        <button style="padding:20px;background:white;border-radius:50%;border:1px solid var(--ios-border);font-size:28px;">6</button>
+                        <button style="padding:20px;background:white;border-radius:50%;border:1px solid var(--ios-border);font-size:28px;">7</button>
+                        <button style="padding:20px;background:white;border-radius:50%;border:1px solid var(--ios-border);font-size:28px;">8</button>
+                        <button style="padding:20px;background:white;border-radius:50%;border:1px solid var(--ios-border);font-size:28px;">9</button>
+                        <button style="padding:20px;background:white;border-radius:50%;border:1px solid var(--ios-border);font-size:28px;">*</button>
+                        <button style="padding:20px;background:white;border-radius:50%;border:1px solid var(--ios-border);font-size:28px;">0</button>
+                        <button style="padding:20px;background:white;border-radius:50%;border:1px solid var(--ios-border);font-size:28px;">#</button>
+                    </div>
+                    <div style="display:flex;justify-content:center;margin-top:24px;">
+                        <button style="width:64px;height:64px;background:#16A34A;border-radius:50%;border:none;color:white;font-size:24px;"><i class="fas fa-phone"></i></button>
+                    </div>
+                </main>
+                <nav style="display:flex;justify-content:space-around;padding:8px;background:var(--ios-nav-bg);border-top:1px solid var(--ios-border);">
+                    <a style="display:flex;flex-direction:column;align-items:center;color:var(--ios-muted);text-decoration:none;font-size:10px;"><i class="fas fa-clock" style="font-size:20px;"></i>通話紀錄</a>
+                    <a style="display:flex;flex-direction:column;align-items:center;color:var(--ios-blue);text-decoration:none;font-size:10px;"><i class="fas fa-th" style="font-size:20px;"></i>數字鍵</a>
+                    <a style="display:flex;flex-direction:column;align-items:center;color:var(--ios-muted);text-decoration:none;font-size:10px;"><i class="fas fa-user" style="font-size:20px;"></i>聯絡人</a>
+                </nav>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 15. Instagram -->
+<div class="screen-card">
+    <div class="screen-card-label">15. Instagram</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:white;">
+                <header style="padding:46px 16px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;">
+                    <i class="fab fa-instagram" style="font-size:28px;"></i>
+                    <div style="display:flex;gap:16px;">
+                        <button style="border:none;background:transparent;"><i class="fas fa-heart" style="font-size:24px;"></i></button>
+                        <button style="border:none;background:transparent;"><i class="fas fa-paper-plane" style="font-size:24px;"></i></button>
+                    </div>
+                </header>
+                <main class="flex-1 overflow-y-auto">
+                    <div style="padding:12px 0;border-bottom:1px solid #eee;">
+                        <div style="display:flex;gap:12px;padding:0 12px;overflow-x:auto;">
+                            <div style="flex-shrink:0;text-align:center;"><div style="width:64px;height:64px;border-radius:50%;background:linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);padding:2px;"><div style="width:100%;height:100%;border-radius:50%;background:white;padding:2px;"><div style="width:100%;height:100%;border-radius:50%;background:#ddd;"></div></div></div><div style="font-size:12px;margin-top:4px;">你的限時</div></div>
+                            <div style="flex-shrink:0;text-align:center;"><div style="width:64px;height:64px;border-radius:50%;background:#ddd;"></div><div style="font-size:12px;margin-top:4px;">user_1</div></div>
+                            <div style="flex-shrink:0;text-align:center;"><div style="width:64px;height:64px;border-radius:50%;background:#ddd;"></div><div style="font-size:12px;margin-top:4px;">user_2</div></div>
+                        </div>
+                    </div>
+                    <article style="padding-bottom:12px;border-bottom:8px solid #eee;">
+                        <div style="display:flex;align-items:center;gap:8px;padding:8px 12px;"><div style="width:32px;height:32px;border-radius:50%;background:#ddd;"></div><span style="font-weight:600;font-size:14px;">username</span></div>
+                        <div style="width:100%;height:350px;background:#f0f0f0;"></div>
+                        <div style="display:flex;gap:12px;padding:8px 12px;">
+                            <button style="border:none;background:transparent;"><i class="far fa-heart" style="font-size:24px;"></i></button>
+                            <button style="border:none;background:transparent;"><i class="far fa-comment" style="font-size:24px;"></i></button>
+                            <button style="border:none;background:transparent;"><i class="far fa-paper-plane" style="font-size:24px;"></i></button>
+                        </div>
+                    </article>
+                </main>
+                <nav style="display:flex;justify-content:space-around;padding:8px;border-top:1px solid #eee;background:white;">
+                    <button style="border:none;background:transparent;"><i class="fas fa-home" style="font-size:24px;"></i></button>
+                    <button style="border:none;background:transparent;"><i class="fas fa-search" style="font-size:24px;"></i></button>
+                    <button style="border:none;background:transparent;"><i class="far fa-plus-square" style="font-size:24px;"></i></button>
+                    <button style="border:none;background:transparent;"><i class="far fa-heart" style="font-size:24px;"></i></button>
+                    <button style="border:none;background:transparent;"><i class="far fa-user" style="font-size:24px;"></i></button>
+                </nav>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 17. YouTube -->
+<div class="screen-card">
+    <div class="screen-card-label">17. YouTube</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:white;">
+                <header style="padding:46px 12px 12px;display:flex;justify-content:space-between;align-items:center;">
+                    <i class="fab fa-youtube" style="font-size:28px;color:#FF0000;"></i>
+                    <div style="display:flex;gap:16px;">
+                        <button style="border:none;background:transparent;"><i class="fas fa-bell" style="font-size:20px;"></i></button>
+                        <button style="border:none;background:transparent;"><i class="fas fa-search" style="font-size:20px;"></i></button>
+                        <div style="width:24px;height:24px;border-radius:50%;background:#ddd;"></div>
+                    </div>
+                </header>
+                <main class="flex-1 overflow-y-auto" style="padding:12px;">
+                    <div style="margin-bottom:16px;">
+                        <div style="width:100%;height:200px;background:#f0f0f0;border-radius:12px;margin-bottom:8px;"></div>
+                        <div style="display:flex;gap:8px;">
+                            <div style="width:36px;height:36px;border-radius:50%;background:#ddd;flex-shrink:0;"></div>
+                            <div style="flex:1;">
+                                <div style="font-weight:500;font-size:14px;line-height:1.3;margin-bottom:4px;">影片標題範例</div>
+                                <div style="font-size:12px;color:#606060;">頻道名稱 · 100萬次觀看 · 2天前</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom:16px;">
+                        <div style="width:100%;height:200px;background:#f0f0f0;border-radius:12px;margin-bottom:8px;"></div>
+                        <div style="display:flex;gap:8px;">
+                            <div style="width:36px;height:36px;border-radius:50%;background:#ddd;flex-shrink:0;"></div>
+                            <div style="flex:1;">
+                                <div style="font-weight:500;font-size:14px;line-height:1.3;margin-bottom:4px;">另一個影片</div>
+                                <div style="font-size:12px;color:#606060;">另一頻道 · 50萬次觀看</div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <nav style="display:flex;justify-content:space-around;padding:8px;border-top:1px solid #eee;background:white;">
+                    <button style="border:none;background:transparent;display:flex;flex-direction:column;align-items:center;color:#FF0000;"><i class="fas fa-home" style="font-size:20px;"></i><span style="font-size:10px;">首頁</span></button>
+                    <button style="border:none;background:transparent;display:flex;flex-direction:column;align-items:center;color:#606060;"><i class="fas fa-fire" style="font-size:20px;"></i><span style="font-size:10px;">發燒</span></button>
+                    <button style="border:none;background:transparent;display:flex;flex-direction:column;align-items:center;color:#606060;"><i class="fas fa-play-circle" style="font-size:20px;"></i><span style="font-size:10px;">訂閱</span></button>
+                    <button style="border:none;background:transparent;display:flex;flex-direction:column;align-items:center;color:#606060;"><i class="fas fa-user" style="font-size:20px;"></i><span style="font-size:10px;">媒體庫</span></button>
+                </nav>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 18. Bilibili -->
+<div class="screen-card">
+    <div class="screen-card-label">18. Bilibili</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:#FAFAFA;">
+                <header style="padding:46px 12px 12px;display:flex;gap:8px;background:white;border-bottom:1px solid #eee;">
+                    <div style="flex:1;display:flex;align-items:center;gap:8px;background:#f5f5f5;border-radius:20px;padding:6px 12px;">
+                        <i class="fas fa-search" style="color:#999;font-size:16px;"></i>
+                        <span style="color:#999;font-size:14px;">搜尋</span>
+                    </div>
+                    <button style="border:none;background:transparent;"><i class="fas fa-download" style="font-size:20px;color:#FB7299;"></i></button>
+                </header>
+                <div style="display:flex;background:white;border-bottom:1px solid #eee;">
+                    <button style="flex:1;padding:12px;border:none;background:transparent;font-size:14px;color:#FB7299;border-bottom:2px solid #FB7299;">推薦</button>
+                    <button style="flex:1;padding:12px;border:none;background:transparent;font-size:14px;color:#666;">熱門</button>
+                    <button style="flex:1;padding:12px;border:none;background:transparent;font-size:14px;color:#666;">追番</button>
+                    <button style="flex:1;padding:12px;border:none;background:transparent;font-size:14px;color:#666;">影視</button>
+                </div>
+                <main class="flex-1 overflow-y-auto" style="padding:8px;">
+                    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;">
+                        <div style="background:white;border-radius:8px;overflow:hidden;">
+                            <div style="width:100%;height:100px;background:linear-gradient(135deg,#667eea,#764ba2);"></div>
+                            <div style="padding:8px;"><div style="font-size:14px;line-height:1.3;margin-bottom:4px;">影片標題</div><div style="font-size:12px;color:#999;">播放 10萬</div></div>
+                        </div>
+                        <div style="background:white;border-radius:8px;overflow:hidden;">
+                            <div style="width:100%;height:100px;background:linear-gradient(135deg,#f093fb,#f5576c);"></div>
+                            <div style="padding:8px;"><div style="font-size:14px;line-height:1.3;margin-bottom:4px;">另一個影片</div><div style="font-size:12px;color:#999;">播放 5萬</div></div>
+                        </div>
+                        <div style="background:white;border-radius:8px;overflow:hidden;">
+                            <div style="width:100%;height:100px;background:linear-gradient(135deg,#4facfe,#00f2fe);"></div>
+                            <div style="padding:8px;"><div style="font-size:14px;line-height:1.3;margin-bottom:4px;">精彩內容</div><div style="font-size:12px;color:#999;">播放 20萬</div></div>
+                        </div>
+                        <div style="background:white;border-radius:8px;overflow:hidden;">
+                            <div style="width:100%;height:100px;background:linear-gradient(135deg,#43e97b,#38f9d7);"></div>
+                            <div style="padding:8px;"><div style="font-size:14px;line-height:1.3;margin-bottom:4px;">遊戲實況</div><div style="font-size:12px;color:#999;">播放 8萬</div></div>
+                        </div>
+                    </div>
+                </main>
+                <nav style="display:flex;justify-content:space-around;padding:8px;border-top:1px solid #eee;background:white;">
+                    <button style="border:none;background:transparent;display:flex;flex-direction:column;align-items:center;color:#FB7299;"><i class="fas fa-home" style="font-size:20px;"></i><span style="font-size:10px;">首頁</span></button>
+                    <button style="border:none;background:transparent;display:flex;flex-direction:column;align-items:center;color:#999;"><i class="fas fa-gamepad" style="font-size:20px;"></i><span style="font-size:10px;">遊戲</span></button>
+                    <button style="border:none;background:transparent;"><i class="fas fa-plus-circle" style="font-size:28px;color:#FB7299;"></i></button>
+                    <button style="border:none;background:transparent;display:flex;flex-direction:column;align-items:center;color:#999;"><i class="fas fa-bell" style="font-size:20px;"></i><span style="font-size:10px;">消息</span></button>
+                    <button style="border:none;background:transparent;display:flex;flex-direction:column;align-items:center;color:#999;"><i class="fas fa-user" style="font-size:20px;"></i><span style="font-size:10px;">我的</span></button>
+                </nav>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 10. Weather -->
+<div class="screen-card">
+    <div class="screen-card-label">10. Weather</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:linear-gradient(180deg,#5AC8FA 0%,#007AFF 100%);color:white;">
+                <header class="ios-header" style="background:transparent;border:none;">
+                    <button class="ios-back-btn" style="color:white!important;"><i class="fas fa-chevron-left"></i> 返回</button>
+                    <h1 class="menu-title" style="color:white!important;">天氣</h1>
+                    <div></div>
+                </header>
+                <main class="flex-1 overflow-y-auto" style="padding:16px;text-align:center;">
+                    <div style="font-size:24px;font-weight:500;margin-bottom:8px;">台北市</div>
+                    <div style="font-size:80px;font-weight:200;line-height:1;">32°</div>
+                    <div style="font-size:20px;margin-bottom:24px;">晴朗</div>
+                    <div style="display:flex;justify-content:center;gap:32px;margin-bottom:32px;">
+                        <div><div style="font-size:14px;opacity:0.8;">最高</div><div style="font-size:24px;font-weight:600;">35°</div></div>
+                        <div><div style="font-size:14px;opacity:0.8;">最低</div><div style="font-size:24px;font-weight:600;">26°</div></div>
+                    </div>
+                    <div style="background:rgba(255,255,255,0.2);border-radius:16px;padding:16px;">
+                        <div style="display:flex;justify-content:space-between;margin-bottom:16px;font-size:14px;"><span>今天</span><span>晴朗</span><span>26°/35°</span></div>
+                        <div style="display:flex;justify-content:space-between;margin-bottom:16px;font-size:14px;"><span>明天</span><span>多雲</span><span>24°/32°</span></div>
+                        <div style="display:flex;justify-content:space-between;font-size:14px;"><span>週二</span><span>陣雨</span><span>22°/28°</span></div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 14. Chrome -->
+<div class="screen-card">
+    <div class="screen-card-label">14. Chrome</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:white;">
+                <header style="padding:46px 12px 12px;background:#f8f8f8;">
+                    <div style="display:flex;align-items:center;gap:8px;">
+                        <div style="flex:1;display:flex;align-items:center;gap:8px;background:white;border-radius:24px;padding:8px 12px;border:1px solid #ddd;">
+                            <i class="fas fa-search" style="color:#999;font-size:16px;"></i>
+                            <span style="color:#999;font-size:16px;">搜尋或輸入網址</span>
+                        </div>
+                        <button style="padding:8px;border:none;background:transparent;"><i class="fas fa-ellipsis-v" style="color:#333;"></i></button>
+                    </div>
+                </header>
+                <main class="flex-1 overflow-y-auto" style="padding:16px;">
+                    <div style="margin-bottom:24px;">
+                        <div style="font-size:14px;color:#999;margin-bottom:8px;">經常造訪</div>
+                        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center;">
+                            <div><div style="width:48px;height:48px;background:#4285F4;border-radius:12px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;"><i class="fab fa-google" style="color:white;font-size:24px;"></i></div><span style="font-size:12px;">Google</span></div>
+                            <div><div style="width:48px;height:48px;background:#FF0000;border-radius:12px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;"><i class="fab fa-youtube" style="color:white;font-size:24px;"></i></div><span style="font-size:12px;">YouTube</span></div>
+                            <div><div style="width:48px;height:48px;background:#1DA1F2;border-radius:12px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;"><i class="fab fa-twitter" style="color:white;font-size:24px;"></i></div><span style="font-size:12px;">Twitter</span></div>
+                            <div><div style="width:48px;height:48px;background:#1877F2;border-radius:12px;margin:0 auto 4px;display:flex;align-items:center;justify-content:center;"><i class="fab fa-facebook-f" style="color:white;font-size:24px;"></i></div><span style="font-size:12px;">Facebook</span></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div style="font-size:14px;color:#999;margin-bottom:8px;">推薦閱讀</div>
+                        <div style="background:white;border-radius:12px;padding:12px;border:1px solid #eee;">
+                            <div style="font-size:16px;font-weight:500;margin-bottom:4px;">今日頭條</div>
+                            <div style="font-size:14px;color:#666;">最新新聞與熱門話題...</div>
+                        </div>
+                    </div>
+                </main>
+                <nav style="display:flex;justify-content:space-around;padding:8px;background:#f8f8f8;border-top:1px solid #ddd;">
+                    <button style="border:none;background:transparent;color:#4285F4;"><i class="fas fa-home" style="font-size:20px;"></i></button>
+                    <button style="border:none;background:transparent;color:#999;"><i class="fas fa-th-large" style="font-size:20px;"></i></button>
+                    <button style="border:none;background:transparent;color:#999;"><i class="fas fa-share-alt" style="font-size:20px;"></i></button>
+                    <button style="border:none;background:transparent;color:#999;"><i class="fas fa-clone" style="font-size:20px;"></i></button>
+                </nav>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 16. Twitter -->
+<div class="screen-card">
+    <div class="screen-card-label">16. Twitter</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:white;">
+                <header style="padding:46px 16px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;">
+                    <button style="border:none;background:transparent;"><i class="fas fa-chevron-left"></i></button>
+                    <i class="fab fa-twitter" style="font-size:24px;color:#1DA1F2;"></i>
+                    <button style="border:none;background:transparent;"><i class="fas fa-ellipsis-h"></i></button>
+                </header>
+                <main class="flex-1 overflow-y-auto">
+                    <div style="padding:16px;border-bottom:1px solid #eee;">
+                        <div style="display:flex;gap:12px;">
+                            <div style="width:48px;height:48px;border-radius:50%;background:#ddd;flex-shrink:0;"></div>
+                            <div style="flex:1;">
+                                <div style="display:flex;gap:4px;margin-bottom:4px;"><span style="font-weight:700;">Display Name</span><span style="color:#657786;">@handle</span></div>
+                                <p style="font-size:15px;line-height:1.4;margin-bottom:8px;">這是一則推文的內容範例。今天天氣真好！</p>
+                                <div style="display:flex;gap:32px;">
+                                    <button style="border:none;background:transparent;display:flex;align-items:center;gap:4px;color:#657786;font-size:14px;"><i class="far fa-comment"></i> 12</button>
+                                    <button style="border:none;background:transparent;display:flex;align-items:center;gap:4px;color:#657786;font-size:14px;"><i class="fas fa-retweet"></i> 45</button>
+                                    <button style="border:none;background:transparent;display:flex;align-items:center;gap:4px;color:#657786;font-size:14px;"><i class="far fa-heart"></i> 128</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="padding:16px;border-bottom:1px solid #eee;">
+                        <div style="display:flex;gap:12px;">
+                            <div style="width:48px;height:48px;border-radius:50%;background:#ddd;flex-shrink:0;"></div>
+                            <div style="flex:1;">
+                                <div style="display:flex;gap:4px;margin-bottom:4px;"><span style="font-weight:700;">Another User</span><span style="color:#657786;">@user2</span></div>
+                                <p style="font-size:15px;line-height:1.4;">早安！新的一天開始了</p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <button style="position:absolute;bottom:80px;right:16px;width:56px;height:56px;background:#1DA1F2;border-radius:50%;border:none;color:white;font-size:24px;box-shadow:0 4px 12px rgba(29,161,242,0.4);"><i class="fas fa-plus"></i></button>
+                <nav style="display:flex;justify-content:space-around;padding:8px;border-top:1px solid #eee;background:white;">
+                    <button style="border:none;background:transparent;"><i class="fas fa-home" style="font-size:24px;color:#1DA1F2;"></i></button>
+                    <button style="border:none;background:transparent;"><i class="fas fa-search" style="font-size:24px;color:#657786;"></i></button>
+                    <button style="border:none;background:transparent;"><i class="far fa-bell" style="font-size:24px;color:#657786;"></i></button>
+                    <button style="border:none;background:transparent;"><i class="far fa-envelope" style="font-size:24px;color:#657786;"></i></button>
+                </nav>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 19. Twitch -->
+<div class="screen-card">
+    <div class="screen-card-label">19. Twitch</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:#0E0E10;">
+                <header style="padding:46px 16px 12px;display:flex;justify-content:space-between;align-items:center;background:#18181B;">
+                    <i class="fab fa-twitch" style="font-size:28px;color:#9146FF;"></i>
+                    <div style="display:flex;gap:16px;">
+                        <button style="border:none;background:transparent;"><i class="fas fa-bell" style="font-size:20px;color:white;"></i></button>
+                        <button style="border:none;background:transparent;"><i class="fas fa-search" style="font-size:20px;color:white;"></i></button>
+                    </div>
+                </header>
+                <main class="flex-1 overflow-y-auto" style="padding:12px;">
+                    <div style="color:white;margin-bottom:16px;font-size:16px;font-weight:600;">推薦直播</div>
+                    <div style="margin-bottom:16px;">
+                        <div style="width:100%;height:180px;background:#2D2D35;border-radius:8px;position:relative;">
+                            <div style="position:absolute;top:8px;left:8px;background:#FF0000;color:white;padding:2px 6px;border-radius:4px;font-size:12px;display:flex;align-items:center;gap:4px;"><i class="fas fa-circle" style="font-size:6px;"></i> 直播中</div>
+                            <div style="position:absolute;bottom:8px;left:8px;background:rgba(0,0,0,0.7);color:white;padding:2px 6px;border-radius:4px;font-size:12px;">1.2K 觀看</div>
+                        </div>
+                        <div style="display:flex;gap:8px;margin-top:8px;">
+                            <div style="width:40px;height:40px;border-radius:50%;background:#9146FF;"></div>
+                            <div style="flex:1;">
+                                <div style="color:white;font-weight:600;font-size:14px;">Streamer Name</div>
+                                <div style="color:#ADADB8;font-size:12px;">遊戲名稱</div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <nav style="display:flex;justify-content:space-around;padding:8px;background:#18181B;border-top:1px solid #2D2D35;">
+                    <button style="border:none;background:transparent;display:flex;flex-direction:column;align-items:center;color:#9146FF;"><i class="fas fa-compass" style="font-size:20px;"></i><span style="font-size:10px;margin-top:2px;">發現</span></button>
+                    <button style="border:none;background:transparent;display:flex;flex-direction:column;align-items:center;color:#ADADB8;"><i class="fas fa-heart" style="font-size:20px;"></i><span style="font-size:10px;margin-top:2px;">追隨</span></button>
+                    <button style="border:none;background:transparent;display:flex;flex-direction:column;align-items:center;color:#ADADB8;"><i class="fas fa-user" style="font-size:20px;"></i><span style="font-size:10px;margin-top:2px;">我的</span></button>
+                </nav>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 20. Weverse -->
+<div class="screen-card">
+    <div class="screen-card-label">20. Weverse</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:white;">
+                <header style="padding:46px 16px 12px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;">
+                    <span style="font-size:20px;font-weight:700;color:#00C853;">Weverse</span>
+                    <div style="display:flex;gap:16px;">
+                        <button style="border:none;background:transparent;"><i class="fas fa-search" style="font-size:20px;"></i></button>
+                        <button style="border:none;background:transparent;"><i class="fas fa-bell" style="font-size:20px;"></i></button>
+                    </div>
+                </header>
+                <div style="display:flex;gap:0;background:#f5f5f5;padding:4px;">
+                    <button style="flex:1;padding:8px;border:none;background:white;border-radius:20px;font-size:14px;font-weight:600;">動態</button>
+                    <button style="flex:1;padding:8px;border:none;background:transparent;font-size:14px;color:#666;">藝人</button>
+                    <button style="flex:1;padding:8px;border:none;background:transparent;font-size:14px;color:#666;">媒體</button>
+                </div>
+                <main class="flex-1 overflow-y-auto">
+                    <div style="padding:16px;border-bottom:1px solid #eee;">
+                        <div style="display:flex;gap:12px;">
+                            <div style="width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#FF6B6B,#FFE66D);flex-shrink:0;"></div>
+                            <div style="flex:1;">
+                                <div style="display:flex;gap:4px;align-items:center;margin-bottom:4px;">
+                                    <span style="font-weight:700;">藝人名稱</span>
+                                    <i class="fas fa-check-circle" style="color:#00C853;font-size:14px;"></i>
+                                    <span style="color:#999;font-size:12px;">1小時前</span>
+                                </div>
+                                <p style="font-size:15px;line-height:1.4;margin-bottom:8px;">今天表演很順利！謝謝大家的支持</p>
+                                <div style="display:flex;gap:16px;">
+                                    <button style="border:none;background:transparent;display:flex;align-items:center;gap:4px;color:#666;font-size:14px;"><i class="far fa-heart"></i> 12.5K</button>
+                                    <button style="border:none;background:transparent;display:flex;align-items:center;gap:4px;color:#666;font-size:14px;"><i class="far fa-comment"></i> 892</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <nav style="display:flex;justify-content:space-around;padding:8px;border-top:1px solid #eee;background:white;">
+                    <button style="border:none;background:transparent;display:flex;flex-direction:column;align-items:center;color:#00C853;"><i class="fas fa-home" style="font-size:20px;"></i><span style="font-size:10px;margin-top:2px;">首頁</span></button>
+                    <button style="border:none;background:transparent;display:flex;flex-direction:column;align-items:center;color:#666;"><i class="fas fa-play-circle" style="font-size:20px;"></i><span style="font-size:10px;margin-top:2px;">Live</span></button>
+                    <button style="border:none;background:transparent;display:flex;flex-direction:column;align-items:center;color:#666;"><i class="fas fa-comment-dots" style="font-size:20px;"></i><span style="font-size:10px;margin-top:2px;">聊天</span></button>
+                    <button style="border:none;background:transparent;display:flex;flex-direction:column;align-items:center;color:#666;"><i class="fas fa-user" style="font-size:20px;"></i><span style="font-size:10px;margin-top:2px;">我的</span></button>
+                </nav>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+</html>

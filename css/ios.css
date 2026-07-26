@@ -6,9 +6,7 @@
     min-height: auto;
     flex-shrink: 0;
     background: var(--ios-nav-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 0.5px solid rgba(200, 200, 200, 0.5);
+    border-bottom: 1px solid var(--ios-border);
     position: relative;
 }
 
@@ -64,9 +62,7 @@
     right: 0;
     z-index: 50;
     background: var(--ios-nav-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-bottom: 0.5px solid rgba(200, 200, 200, 0.5);
+    border-bottom: 1px solid var(--ios-border);
     padding-top: env(safe-area-inset-top);
 }
 
@@ -99,7 +95,7 @@
 
 .ios-grouped-list {
     background-color: var(--ios-surface);
-    border-radius: var(--radius-group);
+    border-radius: 0px;
     overflow: hidden;
     margin: 0 var(--spacing-edge) 24px var(--spacing-edge);
 }
@@ -116,7 +112,7 @@
 }
 
 .ios-list-cell:active {
-    background-color: #E5E5EA;
+    background-color: #E8E6E1;
 }
 
 .ios-list-cell:not(:last-child)::after {
@@ -138,7 +134,7 @@
     align-items: center;
     height: 36px;
     background-color: var(--ios-search-bg);
-    border-radius: var(--radius-group);
+    border-radius: 0px;
     padding: 0 8px;
     margin: 0 16px 8px 16px;
 }
@@ -159,8 +155,8 @@
 
 .ios-segmented-control {
     display: flex;
-    background-color: rgba(118, 118, 128, 0.12);
-    border-radius: 8px;
+    background-color: rgba(20, 20, 19, 0.06);
+    border-radius: 0px;
     padding: 2px;
     margin: 0 16px;
 }
@@ -172,28 +168,27 @@
     font-size: 13px;
     font-weight: 500;
     color: var(--ios-text);
-    border-radius: 6px;
+    border-radius: 0px;
     transition: all 0.2s;
     cursor: pointer;
 }
 
 .ios-segment.active {
     background-color: var(--ios-surface);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .ios-toggle {
     position: relative;
     width: 51px;
     height: 31px;
-    background-color: #E5E5EA;
-    border-radius: 16px;
+    background-color: #E8E6E1;
+    border-radius: 0px;
     cursor: pointer;
     transition: background-color 0.2s;
 }
 
 .ios-toggle.active {
-    background-color: var(--ios-accent);
+    background-color: var(--ios-blue);
 }
 
 .ios-toggle::after {
@@ -204,8 +199,7 @@
     width: 27px;
     height: 27px;
     background-color: white;
-    border-radius: 50%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
     transition: transform 0.2s;
 }
 
@@ -217,8 +211,8 @@
     -webkit-appearance: none;
     width: 100%;
     height: 4px;
-    background: #E5E5EA;
-    border-radius: 2px;
+    background: #E8E6E1;
+    border-radius: 0px;
     outline: none;
 }
 
@@ -227,21 +221,19 @@
     appearance: none;
     width: 28px;
     height: 28px;
-    background: white;
-    border-radius: 50%;
+    background: var(--ios-blue);
+    border-radius: 0px;
     cursor: pointer;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12), 0 3px 1px rgba(0, 0, 0, 0.04);
-    border: 0.5px solid rgba(0, 0, 0, 0.04);
+    border: none;
 }
 
 .ios-slider::-moz-range-thumb {
     width: 28px;
     height: 28px;
-    background: white;
-    border-radius: 50%;
+    background: var(--ios-blue);
+    border-radius: 0px;
     cursor: pointer;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12), 0 3px 1px rgba(0, 0, 0, 0.04);
-    border: 0.5px solid rgba(0, 0, 0, 0.04);
+    border: none;
 }
 
 .ios-input {
@@ -251,13 +243,14 @@
     font-family: var(--font-ios-text);
     color: var(--ios-text);
     background-color: var(--ios-surface);
-    border: none;
-    border-radius: var(--radius-group);
+    border: 1px solid var(--ios-border);
+    border-radius: 0px;
     outline: none;
 }
 
 .ios-input:focus {
-    box-shadow: 0 0 0 2px var(--ios-blue);
+    border-color: var(--ios-blue);
+    box-shadow: none;
 }
 
 .ios-textarea {
@@ -268,15 +261,16 @@
     font-family: var(--font-ios-text);
     color: var(--ios-text);
     background-color: var(--ios-surface);
-    border: none;
-    border-radius: var(--radius-group);
+    border: 1px solid var(--ios-border);
+    border-radius: 0px;
     outline: none;
     resize: none;
     line-height: 1.5;
 }
 
 .ios-textarea:focus {
-    box-shadow: 0 0 0 2px var(--ios-blue);
+    border-color: var(--ios-blue);
+    box-shadow: none;
 }
 
 .ios-section-header {
@@ -301,9 +295,7 @@
     padding-top: 4px;
     padding-bottom: env(safe-area-inset-bottom);
     background: var(--ios-nav-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border-top: 0.5px solid var(--ios-border);
+    border-top: 1px solid var(--ios-border);
 }
 
 body.desktop-mode .ios-bottom-nav {
@@ -344,7 +336,7 @@ body.desktop-mode .ios-bottom-nav {
 }
 
 .ios-icon-cell:active {
-    background-color: #E5E5EA;
+    background-color: #E8E6E1;
 }
 
 .ios-icon-cell:not(:last-child)::after {
@@ -360,7 +352,7 @@ body.desktop-mode .ios-bottom-nav {
 .ios-icon-badge {
     width: 28px;
     height: 28px;
-    border-radius: 6px;
+    border-radius: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -371,9 +363,9 @@ body.desktop-mode .ios-bottom-nav {
     display: inline-flex;
     align-items: center;
     padding: 4px 10px;
-    background-color: var(--kakao-yellow);
-    color: var(--kakao-brown);
-    border-radius: 16px;
+    background-color: var(--ios-blue);
+    color: var(--ios-bg);
+    border-radius: 0px;
     font-size: 13px;
     font-weight: 500;
     margin: 2px;
@@ -386,8 +378,8 @@ body.desktop-mode .ios-bottom-nav {
     width: 16px;
     height: 16px;
     margin-left: 4px;
-    background-color: rgba(60, 30, 30, 0.2);
-    border-radius: 50%;
+    background-color: rgba(250, 249, 246, 0.3);
+    border-radius: 0px;
     font-size: 12px;
     cursor: pointer;
 }
