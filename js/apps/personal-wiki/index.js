@@ -1236,8 +1236,6 @@ async function pullFromNotion(container) {
         navigateToPage(container, records[0].id);
     }
 }
-    }
-}
 
 async function findNotionPage(wikiId) {
     const result = await notionRequest(`/databases/${notionConfig.databaseId}/query`, {
