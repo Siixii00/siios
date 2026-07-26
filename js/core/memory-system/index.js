@@ -3,7 +3,8 @@ import { EmotionTagger } from './emotion-tagger.js';
 import { SpatiotemporalTagger } from './spatiotemporal-tagger.js';
 import { DecayEngine } from './decay-engine.js';
 import { SleepEngine } from './sleep-engine.js';
-import { MemoryDB, hashContent } from '../../db.js';
+import { MemoryClassifier } from './memory-classifier.js';
+import { MemoryDB, hashContent, cosineSimilarity, initDB } from '../../db.js';
 import { createEmbeddingClient } from '../embedding/index.js';
 
 export class MemorySystem {
@@ -15,6 +16,12 @@ export class MemorySystem {
         this.decayEngine = new DecayEngine(settings.decayRate);
         this.sleepEngine = new SleepEngine(settings);
         this.embeddingClient = settings.embedding ? createEmbeddingClient(settings.embedding) : null;
+        this.classifier = new MemoryClassifier(
+            settings.classifier?.api_url || settings.api_url || '',
+            settings.classifier?.api_key || settings.api_key || '',
+            settings.classifier?.model || settings.model || ''
+        );
+        this._batchProcessing = false;
 
         this.sleepEngine.onSleep(() => this.runSleepCycle());
     }
@@ -26,16 +33,38 @@ export class MemorySystem {
 
         const emotionalIntensity = Math.abs(emotionalData.valence) * emotionalData.arousal;
         const sensoryRichness = this.sensoryExtractor.getSensoryScore(sensoryData);
-        const importance = Math.min(1.0, (emotionalIntensity * 0.6 + sensoryRichness * 0.4));
 
+        let classification;
         let embedding = null;
         let embeddingHash = '';
+
         if (this.embeddingClient) {
+            const [classResult, embedResult] = await Promise.all([
+                this.classifier.classify(message),
+                this.embeddingClient.getEmbedding(message).then(e => {
+                    if (e) return { embedding: e, hash: hashContent(JSON.stringify(e)) };
+                    return null;
+                }).catch(() => null)
+            ]);
+            classification = classResult;
+            if (embedResult) {
+                embedding = embedResult.embedding;
+                embeddingHash = embedResult.hash;
+            }
+        } else {
+            classification = await this.classifier.classify(message);
+        }
+
+        const importance = Math.min(1.0, classification.importance * 0.6 + emotionalIntensity * 0.25 + sensoryRichness * 0.15);
+
+        let embeddingMeaning = null;
+        let embeddingMeaningHash = '';
+        if (this.embeddingClient && classification.meaning) {
             try {
-                embedding = await this.embeddingClient.getEmbedding(message);
-                embeddingHash = hashContent(JSON.stringify(embedding));
+                embeddingMeaning = await this.embeddingClient.getEmbedding(classification.meaning);
+                embeddingMeaningHash = hashContent(JSON.stringify(embeddingMeaning));
             } catch {
-                embedding = null;
+                embeddingMeaning = null;
             }
         }
 
@@ -47,28 +76,78 @@ export class MemorySystem {
             spatiotemporal: spatiotemporalData,
             importance,
             decayFactor: 1.0,
-            memory_type: 'episodic',
+            memory_type: classification.memory_type,
+            domain: classification.domain,
+            meaning: classification.meaning,
             embedding,
             embeddingHash,
+            embeddingMeaning,
+            embeddingMeaningHash,
             characterId
         });
 
         return memory;
     }
 
-    async retrieveMemories(query, chatId, limit = 10) {
+    async processBatch(messages, chatId, characterId) {
+        if (this._batchProcessing) return [];
+        this._batchProcessing = true;
+        try {
+            const results = [];
+            for (const msg of messages) {
+                const content = msg.content || msg;
+                if (typeof content !== 'string' || content.trim().length === 0) continue;
+                try {
+                    const memory = await this.processMessage(content, chatId, characterId);
+                    results.push(memory);
+                } catch (e) {
+                    console.error('[MemorySystem] processBatch error:', e);
+                }
+            }
+            return results;
+        } finally {
+            this._batchProcessing = false;
+        }
+    }
+
+    async retrieveMemories(query, chatId, limit = 10, filters = {}) {
         let memories;
 
         if (this.embeddingClient) {
             try {
-                const queryEmbedding = await this.embeddingClient.embed(query);
-                const vectorResults = await MemoryDB.searchByVector(queryEmbedding, 0.5);
-                memories = vectorResults.filter(m => !chatId || m.chat_id === chatId);
+                const queryEmbedding = await this.embeddingClient.getEmbedding(query);
+                const allMemories = chatId
+                    ? await MemoryDB.getByChatId(chatId)
+                    : await MemoryDB.getAll();
+
+                const seen = new Map();
+                for (const m of allMemories) {
+                    let bestSim = 0;
+                    if (m.embedding && queryEmbedding) {
+                        const sim = cosineSimilarity(queryEmbedding, m.embedding);
+                        if (sim >= 0.5) bestSim = sim;
+                    }
+                    if (m.embeddingMeaning && queryEmbedding) {
+                        const sim = cosineSimilarity(queryEmbedding, m.embeddingMeaning);
+                        if (sim >= 0.5 && sim > bestSim) bestSim = sim;
+                    }
+                    if (bestSim > 0) {
+                        seen.set(m.id, { ...m, similarity: bestSim });
+                    }
+                }
+                memories = Array.from(seen.values());
             } catch {
                 memories = await this._keywordSearch(query, chatId);
             }
         } else {
             memories = await this._keywordSearch(query, chatId);
+        }
+
+        if (filters.memory_type) {
+            memories = memories.filter(m => m.memory_type === filters.memory_type);
+        }
+        if (filters.domain) {
+            memories = memories.filter(m => m.domain === filters.domain);
         }
 
         const scored = memories.map(memory => {
@@ -82,8 +161,19 @@ export class MemorySystem {
         scored.sort((a, b) => b.relevance - a.relevance);
 
         const results = scored.slice(0, limit);
-        for (const memory of results) {
-            await MemoryDB.access(memory.id);
+        if (results.length > 0) {
+            const database = await initDB();
+            const tx = database.transaction('memories', 'readwrite');
+            for (const memory of results) {
+                const existing = await tx.store.get(memory.id);
+                if (existing) {
+                    await tx.store.put({
+                        ...existing,
+                        accessCount: (existing.accessCount || 0) + 1,
+                        lastAccessed: Date.now()
+                    });
+                }
+            }
         }
 
         return results;
@@ -140,11 +230,18 @@ export class MemorySystem {
         const decayStats = this.decayEngine.getDecayStats(allMemories);
         const sleepStatus = this.sleepEngine.getStatus();
 
+        const typeCounts = {};
+        for (const m of allMemories) {
+            const t = m.memory_type || 'dynamic';
+            typeCounts[t] = (typeCounts[t] || 0) + 1;
+        }
+
         return {
             totalMemories: allMemories.length,
             decay: decayStats,
             sleep: sleepStatus,
-            embeddingEnabled: !!this.embeddingClient
+            embeddingEnabled: !!this.embeddingClient,
+            typeCounts
         };
     }
 
@@ -156,9 +253,3 @@ export class MemorySystem {
         this.sleepEngine.stop();
     }
 }
-
-export function createMemorySystem(settings = {}) {
-    return new MemorySystem(settings);
-}
-
-export { SensoryExtractor, EmotionTagger, SpatiotemporalTagger, DecayEngine, SleepEngine };

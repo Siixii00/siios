@@ -11,7 +11,7 @@ function loadStyle(cssPath) {
         link.rel = 'stylesheet';
         const base = location.pathname.replace(/\/$/, '');
         const basePath = base.includes('/siios') ? '/siios/' : '/';
-        link.href = basePath + cssPath;
+        link.href = basePath + cssPath + '?v=3';
         link.onload = () => { loadedStyles.add(cssPath); resolve(); };
         link.onerror = () => { loadedStyles.add(cssPath); resolve(); };
         document.head.appendChild(link);

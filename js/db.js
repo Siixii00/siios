@@ -1,7 +1,7 @@
 ﻿import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
 
 const DB_NAME = 'sxios';
-const DB_VERSION = 2;
+const DB_VERSION = 4;
 const LEGACY_DB_NAMES = ['ios-classic-ai'];
 
 let db = null;
@@ -54,6 +54,22 @@ async function initDB() {
                 memoriesStore.createIndex('chat_id', 'chat_id');
                 memoriesStore.createIndex('timestamp', 'timestamp');
                 memoriesStore.createIndex('memory_type', 'memory_type');
+                memoriesStore.createIndex('domain', 'domain');
+            }
+
+            if (oldVersion < 4 && database.objectStoreNames.contains('memories')) {
+                const memoriesStore = database.transaction.objectStore('memories');
+                if (!memoriesStore.indexNames.contains('domain')) {
+                    memoriesStore.createIndex('domain', 'domain');
+                }
+            }
+
+            if (!database.objectStoreNames.contains('wikiRecords')) {
+                const wikiStore = database.createObjectStore('wikiRecords', { keyPath: 'id' });
+                wikiStore.createIndex('character_id', 'character_id');
+                wikiStore.createIndex('page_type', 'page_type');
+                wikiStore.createIndex('title', 'title');
+                wikiStore.createIndex('updated_at', 'updated_at');
             }
         }
     });
@@ -289,9 +305,15 @@ const MemoryDB = {
             importance: data.importance || 0.5,
             decayFactor: data.decayFactor || 1.0,
             accessCount: data.accessCount || 0,
-            memory_type: data.memory_type || 'episodic',
+            memory_type: data.memory_type || 'dynamic',
+            domain: data.domain || '',
+            status: data.status || '',
+            resolved: data.resolved || false,
+            meaning: data.meaning || '',
             embedding: data.embedding || null,
             embeddingHash: data.embeddingHash || '',
+            embeddingMeaning: data.embeddingMeaning || null,
+            embeddingMeaningHash: data.embeddingMeaningHash || '',
             reinforcementCount: data.reinforcementCount || 0,
             lastReinforced: data.lastReinforced || null,
             lastAccessed: data.lastAccessed || now,
@@ -335,6 +357,19 @@ const MemoryDB = {
             lastReinforced: now,
             decayFactor: Math.min(memory.decayFactor * 1.2, 10)
         };
+        await database.put('memories', updated);
+        return updated;
+    },
+
+    async updateEmbedding(id, embedding, hash, meaningEmbedding, meaningHash) {
+        const database = await initDB();
+        const memory = await database.get('memories', id);
+        if (!memory) throw new Error('Memory not found');
+        const updated = { ...memory, embedding, embeddingHash: hash };
+        if (meaningEmbedding !== undefined) {
+            updated.embeddingMeaning = meaningEmbedding;
+            updated.embeddingMeaningHash = meaningHash || '';
+        }
         await database.put('memories', updated);
         return updated;
     },
@@ -463,4 +498,90 @@ const SettingsDB = {
     }
 };
 
-export { initDB, ChatsDB, MessagesDB, WorldInfoDB, MemoryDB, CharactersDB, SettingsDB, hashContent };
+const WikiRecordsDB = {
+    async getAll() {
+        const database = await initDB();
+        return database.getAll('wikiRecords');
+    },
+
+    async getById(id) {
+        const database = await initDB();
+        return database.get('wikiRecords', id);
+    },
+
+    async getByCharacterId(characterId) {
+        const database = await initDB();
+        return database.getAllFromIndex('wikiRecords', 'character_id', characterId);
+    },
+
+    async getByPageType(pageType) {
+        const database = await initDB();
+        return database.getAllFromIndex('wikiRecords', 'page_type', pageType);
+    },
+
+    async getByTitle(title) {
+        const database = await initDB();
+        return database.getAllFromIndex('wikiRecords', 'title', title);
+    },
+
+    async create(data = {}) {
+        const database = await initDB();
+        const id = data.id || generateId();
+        const now = Date.now();
+        const record = {
+            id,
+            page_type: data.page_type || 'note',
+            title: data.title || 'Untitled',
+            character_id: data.character_id || null,
+            source_type: data.source_type || 'manual',
+            source_ids: data.source_ids || [],
+            confidence: data.confidence || 'UNVERIFIED',
+            blocks: data.blocks || [],
+            links: data.links || [],
+            tags: data.tags || [],
+            cover_image: data.cover_image || null,
+            icon: data.icon || '📄',
+            parent_id: data.parent_id || null,
+            chat_log_index: data.chat_log_index || 0,
+            message_range: data.message_range || { start: 0, end: 0 },
+            synced_at: data.synced_at || null,
+            created_at: data.created_at || now,
+            updated_at: data.updated_at || now
+        };
+        await database.put('wikiRecords', record);
+        return record;
+    },
+
+    async update(id, data) {
+        const database = await initDB();
+        const record = await database.get('wikiRecords', id);
+        if (!record) throw new Error('WikiRecord not found');
+        const updated = { ...record, ...data, updated_at: Date.now() };
+        await database.put('wikiRecords', updated);
+        return updated;
+    },
+
+    async delete(id) {
+        const database = await initDB();
+        await database.delete('wikiRecords', id);
+    },
+
+    async deleteByCharacterId(characterId) {
+        const database = await initDB();
+        const records = await database.getAllFromIndex('wikiRecords', 'character_id', characterId);
+        const tx = database.transaction('wikiRecords', 'readwrite');
+        for (const record of records) {
+            await tx.store.delete(record.id);
+        }
+    },
+
+    async bulkCreate(records) {
+        const database = await initDB();
+        const tx = database.transaction('wikiRecords', 'readwrite');
+        for (const record of records) {
+            await tx.store.put(record);
+        }
+    }
+};
+
+export { initDB, ChatsDB, MessagesDB, WorldInfoDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, hashContent, cosineSimilarity };

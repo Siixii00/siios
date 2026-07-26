@@ -22,6 +22,25 @@
     --phone-height: 812px;
     --phone-border-radius: 50px;
     --phone-notch-height: 30px;
+    --riso-primary: #F237A1;
+    --riso-secondary: #2C40A7;
+    --riso-success: #16A34A;
+    --riso-warning: #D97706;
+    --riso-danger: #DC2626;
+    --riso-surface: #FFFFFF;
+    --riso-text: #111827;
+    --riso-neutral: #FFFFFF;
+    --riso-bg: #FFF9F5;
+    --font-riso: "Space Grotesk", sans-serif;
+    --font-riso-mono: "Overpass Mono", monospace;
+    --riso-radius-sm: 4px;
+    --riso-radius-md: 8px;
+    --riso-spacing-xs: 4px;
+    --riso-spacing-sm: 8px;
+    --riso-spacing-md: 12px;
+    --riso-spacing-lg: 16px;
+    --riso-spacing-xl: 24px;
+    --riso-spacing-2xl: 32px;
 }
 
 *, *::before, *::after {
@@ -85,15 +104,13 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
     position: relative;
-    padding-top: env(safe-area-inset-top);
-    padding-bottom: env(safe-area-inset-bottom);
 }
 
 body.desktop-mode .app-container {
     min-height: 100%;
     max-height: 100%;
     overflow: hidden;
-    padding-top: 0;
+    padding-top: 20px;
     padding-bottom: 0;
 }
 
@@ -104,7 +121,6 @@ body.desktop-mode #app {
 }
 
 body.desktop-mode .ios-nav-bar,
-body.desktop-mode .ios-header,
 body.desktop-mode .ios-bottom-nav,
 body.desktop-mode .bili-bottombar,
 body.desktop-mode .bili-header,
@@ -119,7 +135,7 @@ body.desktop-mode .ios-header,
 body.desktop-mode .bili-header,
 body.desktop-mode header[class*="fixed"] {
     top: 0;
-    padding-top: 0 !important;
+    padding-top: 46px !important;
 }
 
 body.desktop-mode .ios-bottom-nav,

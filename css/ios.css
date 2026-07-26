@@ -1,15 +1,15 @@
 .ios-header {
-    padding: 0 16px;
-    padding-top: calc(env(safe-area-inset-top, 44px) + 8px);
+    padding: 46px 16px 16px;
     display: flex;
     align-items: center;
-    position: relative;
-    min-height: 88px;
+    justify-content: space-between;
+    min-height: auto;
     flex-shrink: 0;
     background: var(--ios-nav-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 0.5px solid rgba(200, 200, 200, 0.5);
+    position: relative;
 }
 
 .ios-back-btn {
@@ -22,8 +22,9 @@
     align-items: center !important;
     gap: 4px;
     cursor: pointer;
-    z-index: 20;
     padding: 8px 0;
+    flex-shrink: 0;
+    z-index: 2;
 }
 
 .ios-back-btn:active {
@@ -38,6 +39,8 @@
     font-weight: 600;
     font-family: var(--font-ios-text);
     color: var(--ios-text);
+    white-space: nowrap;
+    z-index: 1;
 }
 
 .ios-large-title {

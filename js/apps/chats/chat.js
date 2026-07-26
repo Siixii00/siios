@@ -1,11 +1,13 @@
 ﻿import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBubble, createToast } from '../../components.js';
-import { ChatsDB, MessagesDB } from '../../db.js';
+import { ChatsDB, MessagesDB, SettingsDB } from '../../db.js';
 import APIClient from '../../api.js';
 
 let currentChat = null;
 let messages = [];
 let isStreaming = false;
+let messageCount = 0;
+let batchProcessing = false;
 
 async function renderChat(params) {
     const chatId = params.id;
@@ -136,6 +138,19 @@ async function renderChat(params) {
                 
                 await ChatsDB.update(chatId, { last_message: fullContent.substring(0, 50) });
                 
+                messageCount++;
+                if (messageCount % 10 === 0 && window.App?.memorySystem && !batchProcessing) {
+                    const settings = await SettingsDB.getAll();
+                    if (settings.memory_enabled) {
+                        batchProcessing = true;
+                        const recentMessages = await MessagesDB.getByChatId(chatId);
+                        const last10 = recentMessages.slice(-10);
+                        window.App.memorySystem.processBatch(last10, chatId, currentChat.character_id)
+                            .catch(() => {})
+                            .finally(() => { batchProcessing = false; });
+                    }
+                }
+                
                 isStreaming = false;
                 sendBtn.disabled = textarea.value.trim() === '';
             },
@@ -147,7 +162,8 @@ async function renderChat(params) {
             }
         );
         
-        messages = await MessagesDB.getByChatId(chatId);
+    messages = await MessagesDB.getByChatId(chatId);
+    messageCount = messages.length;
     };
     
     sendBtn.onclick = sendMessage;

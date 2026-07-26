@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sxios-v17';
+const CACHE_NAME = 'sxios-v21';
 
 function getBasePath() {
   return self.registration.scope;
@@ -7,9 +7,9 @@ function getBasePath() {
 const STATIC_ASSETS = [
   './',
   './index.html',
-  './css/shared.css',
-  './css/ios.css',
-  './css/kakao.css',
+  './css/shared.css?v=3',
+  './css/ios.css?v=3',
+  './css/kakao.css?v=3',
   './js/app.js',
   './js/router.js',
   './js/db.js',
@@ -69,32 +69,28 @@ self.addEventListener('fetch', (event) => {
   }
   
   event.respondWith(
-    caches.match(request)
-      .then((cachedResponse) => {
-        if (cachedResponse) {
-          return cachedResponse;
+    fetch(request)
+      .then((response) => {
+        if (!response || response.status !== 200) {
+          return caches.match(request)
+            .then((cached) => cached || response);
         }
-        
-        return fetch(request)
-          .then((response) => {
-            if (!response || response.status !== 200) {
-              return response;
-            }
-            
-            const responseToCache = response.clone();
-            caches.open(CACHE_NAME)
-              .then((cache) => {
-                cache.put(request, responseToCache);
-              });
-            
-            return response;
+        const responseToCache = response.clone();
+        caches.open(CACHE_NAME)
+          .then((cache) => {
+            cache.put(request, responseToCache);
           });
+        return response;
       })
       .catch(() => {
-        if (request.destination === 'document') {
-          return caches.match('./index.html');
-        }
-        return new Response('Offline', { status: 503 });
+        return caches.match(request)
+          .then((cached) => {
+            if (cached) return cached;
+            if (request.destination === 'document') {
+              return caches.match('./index.html');
+            }
+            return new Response('Offline', { status: 503 });
+          });
       })
   );
 });

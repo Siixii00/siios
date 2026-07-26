@@ -15,14 +15,14 @@
 }
 
 .weather-app .ios-header {
-    padding: 0 16px;
-    padding-top: calc(var(--safe-top) + 16px);
+    padding: 46px 16px 16px;
     display: flex;
     align-items: center;
-    position: relative;
-    min-height: 100px;
+    justify-content: space-between;
+    min-height: auto;
     flex-shrink: 0;
     background: #0b0f1a;
+    gap: 12px;
 }
 
 .weather-app .ios-back-btn {
@@ -35,22 +35,22 @@
     align-items: center !important;
     gap: 4px;
     cursor: pointer;
-    z-index: 20;
     padding: 0;
+    flex-shrink: 0;
 }
 
 .weather-app .ios-back-btn:active { opacity: 0.3; }
 
 .weather-app .menu-title {
     position: absolute;
-    left: 0;
-    right: 0;
-    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 20px;
     font-weight: 600;
     color: #FFFFFF !important;
-    pointer-events: none;
     letter-spacing: -0.4px;
+    white-space: nowrap;
+    z-index: 1;
 }
 
 .weather-app .page {
