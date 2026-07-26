@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-    <meta name="theme-color" content="#007AFF">
+    <meta name="theme-color" content="#FAF9F6">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
@@ -25,6 +26,7 @@
     <link rel="stylesheet" href="css/ios.css?v=3">
     <link rel="stylesheet" href="css/kakao.css?v=3">
     <link rel="stylesheet" href="css/notion-tokens.css?v=1">
+    <link rel="stylesheet" href="css/claude-tokens.css?v=1">
     
     <script>
         tailwind.config = {
@@ -32,37 +34,49 @@
             theme: {
                 extend: {
                     colors: {
-                        "ios-blue": "#007AFF",
-                        "ios-bg": "#F2F2F7",
+                        "ios-blue": "#141413",
+                        "ios-bg": "#FAF9F6",
                         "ios-surface": "#FFFFFF",
-                        "ios-text": "#000000",
-                        "ios-muted": "#8E8E93",
-                        "ios-accent": "#34C759",
-                        "ios-border": "#C6C6C8",
-                        "kakao-yellow": "#FFE600",
-                        "kakao-brown": "#3C1E1E",
-                        "kakao-blue": "#ABC1D1",
-                        "riso-primary": "#F237A1",
-                        "riso-secondary": "#2C40A7",
+                        "ios-text": "#111827",
+                        "ios-muted": "#6B6B6B",
+                        "ios-accent": "#16A34A",
+                        "ios-border": "rgba(20,20,19,0.12)",
+                        "kakao-yellow": "#141413",
+                        "kakao-brown": "#FAF9F6",
+                        "kakao-blue": "#FAF9F6",
+                        "riso-primary": "#141413",
+                        "riso-secondary": "#FAF9F6",
                         "riso-success": "#16A34A",
                         "riso-warning": "#D97706",
                         "riso-danger": "#DC2626",
                         "riso-surface": "#FFFFFF",
                         "riso-text": "#111827",
-                        "riso-bg": "#FFF9F5",
+                        "riso-bg": "#FAF9F6",
+                        "claude-primary": "#141413",
+                        "claude-secondary": "#FAF9F6",
+                        "claude-surface": "#FFFFFF",
+                        "claude-text": "#111827",
+                        "claude-muted": "#6B6B6B",
+                        "claude-border": "rgba(20,20,19,0.12)",
                     },
                     fontFamily: {
-                        "ios-display": ["-apple-system", "BlinkMacSystemFont", "SF Pro Display", "sans-serif"],
-                        "ios-text": ["-apple-system", "BlinkMacSystemFont", "SF Pro Text", "sans-serif"],
-                        "kakao": ["Be Vietnam Pro", "sans-serif"],
-                        "riso": ["Space Grotesk", "sans-serif"],
-                        "riso-mono": ["Overpass Mono", "monospace"],
+                        "ios-display": ["Inter", "sans-serif"],
+                        "ios-text": ["Inter", "sans-serif"],
+                        "kakao": ["Inter", "sans-serif"],
+                        "riso": ["Inter", "sans-serif"],
+                        "riso-mono": ["JetBrains Mono", "monospace"],
+                        "claude": ["Inter", "sans-serif"],
+                        "claude-mono": ["JetBrains Mono", "monospace"],
                     },
                     borderRadius: {
-                        "ios-group": "10px",
-                        "ios-bubble": "18px",
+                        "ios-group": "0px",
+                        "ios-bubble": "0px",
                         "riso-sm": "4px",
                         "riso-md": "8px",
+                        "claude-sm": "4px",
+                        "claude-md": "8px",
+                        "claude-none": "0px",
+                        "claude-cta-bottom": "0 0 8px 8px",
                     },
                     spacing: {
                         "safe-top": "env(safe-area-inset-top)",
@@ -73,7 +87,7 @@
         }
     </script>
 </head>
-<body class="bg-ios-bg text-ios-text overflow-hidden">
+<body class="bg-ios-bg text-ios-text overflow-hidden" style="background:#FAF9F6;color:#111827;">
     <div id="app"></div>
     <div id="toast-container" class="fixed top-20 left-1/2 -translate-x-1/2 z-[100] flex flex-col gap-2"></div>
     

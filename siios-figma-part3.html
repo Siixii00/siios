@@ -1,0 +1,486 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SXIOS — Figma Import Part 3</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+:root { --ios-blue: #141413; --ios-bg: #FAF9F6; --ios-surface: #FFFFFF; --ios-text: #111827; --ios-muted: #6B6B6B; --ios-border: rgba(20,20,19,0.12); --ios-nav-bg: rgba(250,249,246,0.92); }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: "Inter", sans-serif; background: #eee; }
+.screen-index { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+.screen-index h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; }
+.screen-index p { color: #6B6B6B; margin-bottom: 32px; }
+.screen-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(390px, 1fr)); gap: 32px; }
+.screen-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.screen-card-label { padding: 12px 16px; font-size: 14px; font-weight: 600; border-bottom: 1px solid #e5e5e5; }
+.phone-frame { width: 375px; height: 812px; background: #1c1c1e; border-radius: 50px; padding: 12px; margin: 0 auto; display: flex; flex-direction: column; overflow: hidden; position: relative; }
+.phone-notch { position: absolute; top: 12px; left: 50%; transform: translateX(-50%); width: 150px; height: 30px; background: #1c1c1e; border-radius: 0 0 20px 20px; display: flex; align-items: center; justify-content: center; gap: 12px; z-index: 10; }
+.phone-notch-speaker { width: 60px; height: 6px; background: #0a0a0a; border-radius: 3px; }
+.phone-notch-camera { width: 10px; height: 10px; background: #0a0a0a; border-radius: 50%; }
+.phone-screen { flex: 1; background: var(--ios-bg); border-radius: 38px; overflow: hidden; position: relative; }
+.phone-home-indicator { position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); width: 134px; height: 5px; background: #1c1c1e; border-radius: 3px; z-index: 10; }
+.app-container { display: flex; flex-direction: column; min-height: 100%; background: var(--ios-bg); }
+.ios-header { padding: 46px 16px 16px; display: flex; align-items: center; justify-content: space-between; background: var(--ios-nav-bg); border-bottom: 1px solid var(--ios-border); position: relative; }
+.ios-back-btn { background: transparent; color: var(--ios-blue); border: none; font-size: 17px; display: flex; align-items: center; gap: 4px; cursor: pointer; z-index: 2; }
+.menu-title { position: absolute; left: 50%; transform: translateX(-50%); font-size: 17px; font-weight: 600; z-index: 1; }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.overflow-y-auto { overflow-y: auto; }
+.flex-1 { flex: 1; }
+</style>
+</head>
+<body>
+<div class="screen-index">
+    <h1>SXIOS — UI Screens Part 3</h1>
+    <p>Delivery, Taobao, Kakaopay, Farm, Theme Shop, Gift Shop, Arcade, Theater, Dating, Timetree, Drift Bottle, Smart Painter</p>
+    <div class="screen-grid">
+<!-- 21. Delivery -->
+<div class="screen-card">
+    <div class="screen-card-label">21. Delivery 外送</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container">
+                <header class="ios-header">
+                    <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
+                    <h1 class="menu-title">外送</h1>
+                    <div></div>
+                </header>
+                <main class="flex-1 overflow-y-auto" style="padding:12px;">
+                    <div style="display:flex;flex-direction:column;gap:12px;">
+                        <div style="background:white;border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                            <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px;">
+                                <div><div style="font-size:18px;font-weight:600;">美味軒</div><div style="font-size:14px;color:var(--ios-muted);">中式</div></div>
+                                <div style="text-align:right;"><div style="display:flex;align-items:center;gap:4px;color:#FF9500;"><i class="fas fa-star"></i><span style="font-weight:600;">4.8</span></div><div style="font-size:12px;color:var(--ios-muted);">25-35 分</div></div>
+                            </div>
+                        </div>
+                        <div style="background:white;border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                            <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px;">
+                                <div><div style="font-size:18px;font-weight:600;">壽司郎</div><div style="font-size:14px;color:var(--ios-muted);">日式</div></div>
+                                <div style="text-align:right;"><div style="display:flex;align-items:center;gap:4px;color:#FF9500;"><i class="fas fa-star"></i><span style="font-weight:600;">4.6</span></div><div style="font-size:12px;color:var(--ios-muted);">30-40 分</div></div>
+                            </div>
+                        </div>
+                        <div style="background:white;border-radius:12px;padding:16px;box-shadow:0 2px 8px rgba(0,0,0,0.08);">
+                            <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:8px;">
+                                <div><div style="font-size:18px;font-weight:600;">Pasta House</div><div style="font-size:14px;color:var(--ios-muted);">義式</div></div>
+                                <div style="text-align:right;"><div style="display:flex;align-items:center;gap:4px;color:#FF9500;"><i class="fas fa-star"></i><span style="font-weight:600;">4.5</span></div><div style="font-size:12px;color:var(--ios-muted);">20-30 分</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 23. Kakaopay -->
+<div class="screen-card">
+    <div class="screen-card-label">23. Kakaopay 支付</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:linear-gradient(180deg,#FFEB3B 0%,#FFC107 100%);">
+                <header class="ios-header" style="background:transparent;border:none;">
+                    <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
+                    <h1 class="menu-title">支付</h1>
+                    <div></div>
+                </header>
+                <main class="flex-1 overflow-y-auto" style="padding:16px;">
+                    <div style="background:white;border-radius:16px;padding:24px;margin-bottom:24px;text-align:center;">
+                        <div style="font-size:14px;color:var(--ios-muted);margin-bottom:8px;">餘額</div>
+                        <div style="font-size:36px;font-weight:700;">$10,000</div>
+                    </div>
+                    <div style="display:flex;gap:12px;margin-bottom:24px;">
+                        <button style="flex:1;padding:16px;background:white;border-radius:12px;border:none;display:flex;align-items:center;justify-content:center;gap:8px;font-size:16px;font-weight:600;"><i class="fas fa-paper-plane"></i> 轉帳</button>
+                        <button style="flex:1;padding:16px;background:white;border-radius:12px;border:none;display:flex;align-items:center;justify-content:center;gap:8px;font-size:16px;font-weight:600;"><i class="fas fa-qrcode"></i> 收款</button>
+                    </div>
+                    <div style="background:white;border-radius:16px;padding:16px;">
+                        <div style="font-size:16px;font-weight:600;margin-bottom:12px;">交易紀錄</div>
+                        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #eee;">
+                            <div><div style="font-weight:500">轉帳支出</div><div style="font-size:12px;color:var(--ios-muted);">今天 14:30</div></div>
+                            <div style="color:#FF4136;font-weight:600;">-$500</div>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #eee;">
+                            <div><div style="font-weight:500">收款入帳</div><div style="font-size:12px;color:var(--ios-muted);">昨天</div></div>
+                            <div style="color:#16A34A;font-weight:600;">+$1,200</div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 24. Farm -->
+<div class="screen-card">
+    <div class="screen-card-label">24. Farm 農場</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:linear-gradient(180deg,#81C784 0%,#4CAF50 100%);">
+                <header class="ios-header" style="background:transparent;border:none;">
+                    <button class="ios-back-btn" style="color:white!important;"><i class="fas fa-chevron-left"></i> 返回</button>
+                    <h1 class="menu-title" style="color:white!important;">農場</h1>
+                    <div style="display:flex;align-items:center;gap:4px;color:white;"><i class="fas fa-coins"></i><span style="font-weight:600;">100</span></div>
+                </header>
+                <main class="flex-1 overflow-y-auto" style="padding:16px;">
+                    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:24px;">
+                        <div style="background:rgba(255,255,255,0.3);border-radius:12px;padding:16px;text-align:center;position:relative;">
+                            <div style="font-size:32px;margin-bottom:4px;">Tomato</div>
+                            <div style="font-size:12px;color:white;">可收穫</div>
+                            <div style="position:absolute;top:4px;right:4px;background:#16A34A;color:white;border-radius:50%;width:8px;height:8px;"></div>
+                        </div>
+                        <div style="background:rgba(255,255,255,0.3);border-radius:12px;padding:16px;text-align:center;">
+                            <div style="font-size:32px;margin-bottom:4px;">Corn</div>
+                            <div style="font-size:12px;color:white;">生長中 30s</div>
+                        </div>
+                        <div style="background:rgba(255,255,255,0.3);border-radius:12px;padding:16px;text-align:center;display:flex;align-items:center;justify-content:center;">
+                            <i class="fas fa-plus" style="font-size:24px;color:white;"></i>
+                        </div>
+                        <div style="background:rgba(255,255,255,0.3);border-radius:12px;padding:16px;text-align:center;">
+                            <div style="font-size:32px;margin-bottom:4px;">Strawberry</div>
+                            <div style="font-size:12px;color:white;">生長中 45s</div>
+                        </div>
+                        <div style="background:rgba(255,255,255,0.3);border-radius:12px;padding:16px;text-align:center;display:flex;align-items:center;justify-content:center;">
+                            <i class="fas fa-plus" style="font-size:24px;color:white;"></i>
+                        </div>
+                        <div style="background:rgba(255,255,255,0.3);border-radius:12px;padding:16px;text-align:center;display:flex;align-items:center;justify-content:center;">
+                            <i class="fas fa-plus" style="font-size:24px;color:white;"></i>
+                        </div>
+                    </div>
+                    <div style="background:white;border-radius:16px;padding:16px;">
+                        <div style="font-size:16px;font-weight:600;margin-bottom:12px;">商店</div>
+                        <div style="display:flex;gap:8px;">
+                            <button style="flex:1;padding:12px;background:#FFE0B2;border-radius:8px;border:none;font-size:14px;">Tomato $20</button>
+                            <button style="flex:1;padding:12px;background:#FFE0B2;border-radius:8px;border:none;font-size:14px;">Corn $20</button>
+                            <button style="flex:1;padding:12px;background:#FFE0B2;border-radius:8px;border:none;font-size:14px;">Strawberry $20</button>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 25. Theme Shop -->
+<div class="screen-card">
+    <div class="screen-card-label">25. Theme Shop</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container">
+                <header class="ios-header">
+                    <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
+                    <h1 class="menu-title">主題商店</h1>
+                    <div></div>
+                </header>
+                <main class="flex-1 overflow-y-auto" style="padding:12px;">
+                    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;">
+                        <div style="background:linear-gradient(135deg,#667eea,#764ba2);border-radius:12px;padding:16px;text-align:center;color:white;">
+                            <div style="font-size:32px;margin-bottom:8px;">Night</div>
+                            <div style="font-size:14px;margin-bottom:8px;">星空</div>
+                            <div style="background:rgba(255,255,255,0.2);padding:4px 12px;border-radius:12px;font-size:12px;">免費</div>
+                        </div>
+                        <div style="background:linear-gradient(135deg,#43e97b,#38f9d7);border-radius:12px;padding:16px;text-align:center;color:white;">
+                            <div style="font-size:32px;margin-bottom:8px;">Forest</div>
+                            <div style="font-size:14px;margin-bottom:8px;">森林</div>
+                            <div style="background:rgba(255,255,255,0.2);padding:4px 12px;border-radius:12px;font-size:12px;">50 幣</div>
+                        </div>
+                        <div style="background:linear-gradient(135deg,#4facfe,#00f2fe);border-radius:12px;padding:16px;text-align:center;color:white;">
+                            <div style="font-size:32px;margin-bottom:8px;">Ocean</div>
+                            <div style="font-size:14px;margin-bottom:8px;">海洋</div>
+                            <div style="background:rgba(255,255,255,0.2);padding:4px 12px;border-radius:12px;font-size:12px;">50 幣</div>
+                        </div>
+                        <div style="background:linear-gradient(135deg,#f093fb,#f5576c);border-radius:12px;padding:16px;text-align:center;color:white;">
+                            <div style="font-size:32px;margin-bottom:8px;">Sakura</div>
+                            <div style="font-size:14px;margin-bottom:8px;">櫻花</div>
+                            <div style="background:rgba(255,255,255,0.2);padding:4px 12px;border-radius:12px;font-size:12px;">80 幣</div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 26. Gift Shop -->
+<div class="screen-card">
+    <div class="screen-card-label">26. Gift Shop</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:#FFF5F5;">
+                <header class="ios-header">
+                    <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
+                    <h1 class="menu-title">禮物商店</h1>
+                    <div></div>
+                </header>
+                <main class="flex-1 overflow-y-auto" style="padding:12px;">
+                    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:12px;">
+                        <div style="background:white;border-radius:12px;padding:16px;text-align:center;">
+                            <div style="font-size:40px;margin-bottom:8px;">Rose</div>
+                            <div style="font-size:14px;margin-bottom:4px;">玫瑰花</div>
+                            <div style="color:#E91E63;font-weight:600;margin-bottom:8px;">50 幣</div>
+                            <button style="padding:8px 16px;background:#E91E63;color:white;border:none;border-radius:8px;font-size:14px;">購買</button>
+                        </div>
+                        <div style="background:white;border-radius:12px;padding:16px;text-align:center;">
+                            <div style="font-size:40px;margin-bottom:8px;">Chocolate</div>
+                            <div style="font-size:14px;margin-bottom:4px;">巧克力</div>
+                            <div style="color:#7B1FA2;font-weight:600;margin-bottom:8px;">30 幣</div>
+                            <button style="padding:8px 16px;background:#7B1FA2;color:white;border:none;border-radius:8px;font-size:14px;">購買</button>
+                        </div>
+                        <div style="background:white;border-radius:12px;padding:16px;text-align:center;">
+                            <div style="font-size:40px;margin-bottom:8px;">Cake</div>
+                            <div style="font-size:14px;margin-bottom:4px;">蛋糕</div>
+                            <div style="color:#FF5722;font-weight:600;margin-bottom:8px;">80 幣</div>
+                            <button style="padding:8px 16px;background:#FF5722;color:white;border:none;border-radius:8px;font-size:14px;">購買</button>
+                        </div>
+                        <div style="background:white;border-radius:12px;padding:16px;text-align:center;">
+                            <div style="font-size:40px;margin-bottom:8px;">Ring</div>
+                            <div style="font-size:14px;margin-bottom:4px;">戒指</div>
+                            <div style="color:#FFC107;font-weight:600;margin-bottom:8px;">200 幣</div>
+                            <button style="padding:8px 16px;background:#FFC107;color:white;border:none;border-radius:8px;font-size:14px;">購買</button>
+                        </div>
+                    </div>
+                    <div style="margin-top:24px;">
+                        <div style="font-size:16px;font-weight:600;margin-bottom:12px;">我的禮物</div>
+                        <div style="background:white;border-radius:12px;padding:16px;">
+                            <div style="display:flex;justify-content:space-between;padding:8px 0;">
+                                <span>Rose x 2</span><span>Chocolate x 1</span>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 27. Arcade -->
+<div class="screen-card">
+    <div class="screen-card-label">27. Arcade 遊戲</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:linear-gradient(180deg,#1a1a2e 0%,#16213e 100%);color:white;">
+                <header class="ios-header" style="background:transparent;border:none;">
+                    <button class="ios-back-btn" style="color:white!important;"><i class="fas fa-chevron-left"></i> 返回</button>
+                    <h1 class="menu-title" style="color:white!important;">遊戲</h1>
+                    <div></div>
+                </header>
+                <main class="flex-1 overflow-y-auto" style="padding:16px;">
+                    <div style="display:flex;gap:12px;margin-bottom:24px;">
+                        <div style="flex:1;background:rgba(255,255,255,0.1);border-radius:12px;padding:16px;text-align:center;">
+                            <div style="font-size:32px;margin-bottom:8px;">Match-3</div>
+                            <div style="font-size:14px;opacity:0.8;">消消樂</div>
+                        </div>
+                        <div style="flex:1;background:rgba(255,255,255,0.1);border-radius:12px;padding:16px;text-align:center;">
+                            <div style="font-size:32px;margin-bottom:8px;">Bubbles</div>
+                            <div style="font-size:14px;opacity:0.8;">泡泡龍</div>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:12px;">
+                        <div style="flex:1;background:rgba(255,255,255,0.1);border-radius:12px;padding:16px;text-align:center;">
+                            <div style="font-size:32px;margin-bottom:8px;">2048</div>
+                            <div style="font-size:14px;opacity:0.8;">數字方塊</div>
+                        </div>
+                        <div style="flex:1;background:rgba(255,255,255,0.1);border-radius:12px;padding:16px;text-align:center;">
+                            <div style="font-size:32px;margin-bottom:8px;">Flappy</div>
+                            <div style="font-size:14px;opacity:0.8;">飛鳥</div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 28. Theater -->
+<div class="screen-card">
+    <div class="screen-card-label">28. Theater 劇院</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container">
+                <header class="ios-header">
+                    <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
+                    <h1 class="menu-title">劇院</h1>
+                    <div></div>
+                </header>
+                <main class="flex-1 overflow-y-auto" style="padding:12px;">
+                    <div style="margin-bottom:16px;">
+                        <div style="width:100%;height:200px;background:linear-gradient(135deg,#667eea,#764ba2);border-radius:12px;display:flex;align-items:center;justify-content:center;">
+                            <i class="fas fa-play-circle" style="font-size:64px;color:white;"></i>
+                        </div>
+                        <div style="padding:12px 0;"><div style="font-size:18px;font-weight:600;">精選影片</div><div style="font-size:14px;color:var(--ios-muted);">時長 25:30</div></div>
+                    </div>
+                    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;">
+                        <div style="aspect-ratio:1;background:#f0f0f0;border-radius:8px;"></div>
+                        <div style="aspect-ratio:1;background:#f0f0f0;border-radius:8px;"></div>
+                        <div style="aspect-ratio:1;background:#f0f0f0;border-radius:8px;"></div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 29. Dating -->
+<div class="screen-card">
+    <div class="screen-card-label">29. Dating 約會</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:linear-gradient(180deg,#FF6B6B 0%,#FFE66D 100%);">
+                <header class="ios-header" style="background:transparent;border:none;">
+                    <button class="ios-back-btn" style="color:white!important;"><i class="fas fa-chevron-left"></i> 返回</button>
+                    <h1 class="menu-title" style="color:white!important;">約會</h1>
+                    <div></div>
+                </header>
+                <main class="flex-1" style="display:flex;align-items:center;justify-content:center;padding:24px;">
+                    <div style="width:280px;height:350px;background:white;border-radius:20px;box-shadow:0 8px 32px rgba(0,0,0,0.15);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;">
+                        <div style="width:120px;height:120px;border-radius:50%;background:#eee;margin-bottom:16px;"></div>
+                        <div style="font-size:24px;font-weight:600;margin-bottom:4px;">Character Name</div>
+                        <div style="font-size:14px;color:var(--ios-muted);margin-bottom:24px;">Age, Location</div>
+                        <div style="display:flex;gap:24px;">
+                            <button style="width:56px;height:56px;border-radius:50%;background:#f0f0f0;border:none;font-size:24px;color:#666;"><i class="fas fa-times"></i></button>
+                            <button style="width:56px;height:56px;border-radius:50%;background:#FF6B6B;border:none;font-size:24px;color:white;"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 30. Timetree -->
+<div class="screen-card">
+    <div class="screen-card-label">30. Timetree</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container">
+                <header class="ios-header">
+                    <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
+                    <h1 class="menu-title">時間樹</h1>
+                    <div></div>
+                </header>
+                <main class="flex-1 overflow-y-auto" style="padding:12px;">
+                    <div style="text-align:center;margin-bottom:16px;"><div style="font-size:20px;font-weight:600;">2026年7月</div></div>
+                    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center;margin-bottom:16px;">
+                        <div style="font-size:12px;color:var(--ios-muted);">日</div>
+                        <div style="font-size:12px;color:var(--ios-muted);">一</div>
+                        <div style="font-size:12px;color:var(--ios-muted);">二</div>
+                        <div style="font-size:12px;color:var(--ios-muted);">三</div>
+                        <div style="font-size:12px;color:var(--ios-muted);">四</div>
+                        <div style="font-size:12px;color:var(--ios-muted);">五</div>
+                        <div style="font-size:12px;color:var(--ios-muted);">六</div>
+                    </div>
+                    <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center;">
+                        <div style="padding:8px;color:#ccc;"></div>
+                        <div style="padding:8px;color:#ccc;"></div>
+                        <div style="padding:8px;color:#ccc;"></div>
+                        <div style="padding:8px;color:#ccc;"></div>
+                        <div style="padding:8px;color:#ccc;"></div>
+                        <div style="padding:8px;color:#ccc;"></div>
+                        <div style="padding:8px;">1</div>
+                        <div style="padding:8px;">2</div>
+                        <div style="padding:8px;">3</div>
+                        <div style="padding:8px;">4</div>
+                        <div style="padding:8px;">5</div>
+                        <div style="padding:8px;">6</div>
+                        <div style="padding:8px;">7</div>
+                        <div style="padding:8px;">8</div>
+                        <div style="padding:8px;">9</div>
+                        <div style="padding:8px;">10</div>
+                        <div style="padding:8px;">11</div>
+                        <div style="padding:8px;">12</div>
+                        <div style="padding:8px;">13</div>
+                        <div style="padding:8px;">14</div>
+                        <div style="padding:8px;">15</div>
+                        <div style="padding:8px;">16</div>
+                        <div style="padding:8px;">17</div>
+                        <div style="padding:8px;">18</div>
+                        <div style="padding:8px;">19</div>
+                        <div style="padding:8px;">20</div>
+                        <div style="padding:8px;">21</div>
+                        <div style="padding:8px;">22</div>
+                        <div style="padding:8px;">23</div>
+                        <div style="padding:8px;">24</div>
+                        <div style="padding:8px;">25</div>
+                        <div style="padding:8px;background:var(--ios-blue);color:white;border-radius:50%;">26</div>
+                        <div style="padding:8px;">27</div>
+                        <div style="padding:8px;">28</div>
+                        <div style="padding:8px;">29</div>
+                        <div style="padding:8px;">30</div>
+                        <div style="padding:8px;">31</div>
+                    </div>
+                    <button style="width:100%;padding:12px;background:var(--ios-blue);color:white;border:none;border-radius:8px;font-size:16px;margin-top:16px;">新增事件</button>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 31. Drift Bottle -->
+<div class="screen-card">
+    <div class="screen-card-label">31. Drift Bottle</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:linear-gradient(180deg,#64B5F6 0%,#1976D2 100%);">
+                <header class="ios-header" style="background:transparent;border:none;">
+                    <button class="ios-back-btn" style="color:white!important;"><i class="fas fa-chevron-left"></i> 返回</button>
+                    <h1 class="menu-title" style="color:white!important;">漂流瓶</h1>
+                    <div></div>
+                </header>
+                <main class="flex-1" style="display:flex;align-items:center;justify-content:center;padding:24px;">
+                    <div style="background:rgba(255,255,255,0.9);border-radius:16px;padding:32px;text-align:center;max-width:280px;">
+                        <div style="font-size:32px;font-weight:700;margin-bottom:8px;">命運之輪</div>
+                        <div style="font-size:16px;color:var(--ios-muted);margin-bottom:24px;">撿起漂流瓶，獲得指引</div>
+                        <button style="padding:16px 32px;background:#1976D2;color:white;border:none;border-radius:24px;font-size:18px;font-weight:600;"><i class="fas fa-water"></i> 撿起漂流瓶</button>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+<!-- 32. Smart Painter -->
+<div class="screen-card">
+    <div class="screen-card-label">32. Smart Painter</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:#212121;">
+                <header class="ios-header" style="background:#2d2d2d;border:none;">
+                    <button class="ios-back-btn" style="color:white!important;"><i class="fas fa-chevron-left"></i> 返回</button>
+                    <h1 class="menu-title" style="color:white!important;">照相館</h1>
+                    <div></div>
+                </header>
+                <main class="flex-1" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px;">
+                    <div style="width:280px;height:280px;background:#424242;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:24px;">
+                        <i class="fas fa-camera" style="font-size:64px;color:#757575;"></i>
+                    </div>
+                    <div style="display:flex;gap:8px;overflow-x:auto;padding:8px 0;margin-bottom:24px;">
+                        <button style="padding:8px 16px;background:#1976D2;color:white;border-radius:8px;border:none;font-size:14px;">原圖</button>
+                        <button style="padding:8px 16px;background:#424242;color:white;border-radius:8px;border:none;font-size:14px;">復古</button>
+                        <button style="padding:8px 16px;background:#424242;color:white;border-radius:8px;border:none;font-size:14px;">黑白</button>
+                        <button style="padding:8px 16px;background:#424242;color:white;border-radius:8px;border:none;font-size:14px;">暖色</button>
+                    </div>
+                    <div style="display:flex;gap:12px;">
+                        <button style="padding:12px 24px;background:#757575;color:white;border-radius:8px;border:none;"><i class="fas fa-upload"></i> 上傳</button>
+                        <button style="padding:12px 24px;background:#4CAF50;color:white;border-radius:8px;border:none;"><i class="fas fa-download"></i> 儲存</button>
+                    </div>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+    </div>
+</div>
+</body>
+</html>

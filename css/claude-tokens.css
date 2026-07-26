@@ -1,0 +1,26 @@
+:root {
+    --claude-primary: #141413;
+    --claude-secondary: #FAF9F6;
+    --claude-success: #16A34A;
+    --claude-warning: #D97706;
+    --claude-danger: #DC2626;
+    --claude-surface: #FFFFFF;
+    --claude-text: #111827;
+    --claude-neutral: #FFFFFF;
+    --claude-nav-bg: rgba(250, 249, 246, 0.92);
+    --claude-search-bg: rgba(20, 20, 19, 0.06);
+    --claude-border: rgba(20, 20, 19, 0.12);
+    --claude-muted: #6B6B6B;
+    --font-claude: "Inter", sans-serif;
+    --font-claude-mono: "JetBrains Mono", monospace;
+    --claude-radius-sm: 4px;
+    --claude-radius-md: 8px;
+    --claude-radius-none: 0px;
+    --claude-radius-cta-bottom: 8px;
+    --claude-spacing-xs: 4px;
+    --claude-spacing-sm: 8px;
+    --claude-spacing-md: 12px;
+    --claude-spacing-lg: 16px;
+    --claude-spacing-xl: 24px;
+    --claude-spacing-2xl: 32px;
+}

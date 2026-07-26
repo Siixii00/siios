@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SXIOS — Figma Import Part 1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+:root {
+    --ios-blue: #141413;
+    --ios-bg: #FAF9F6;
+    --ios-surface: #FFFFFF;
+    --ios-text: #111827;
+    --ios-muted: #6B6B6B;
+    --ios-accent: #16A34A;
+    --ios-border: rgba(20, 20, 19, 0.12);
+    --ios-nav-bg: rgba(250, 249, 246, 0.92);
+    --ios-search-bg: rgba(20, 20, 19, 0.06);
+    --kakao-yellow: #141413;
+    --kakao-brown: #FAF9F6;
+    --kakao-blue: #FAF9F6;
+    --font-ios-display: "Inter", sans-serif;
+    --font-ios-text: "Inter", sans-serif;
+    --font-kakao: "Inter", sans-serif;
+    --radius-group: 0px;
+    --radius-bubble: 0px;
+    --spacing-edge: 16px;
+    --phone-width: 375px;
+    --phone-height: 812px;
+    --phone-border-radius: 50px;
+    --phone-notch-height: 30px;
+    --riso-primary: #141413;
+    --riso-secondary: #FAF9F6;
+    --riso-success: #16A34A;
+    --riso-warning: #D97706;
+    --riso-danger: #DC2626;
+    --riso-surface: #FFFFFF;
+    --riso-text: #111827;
+    --riso-neutral: #FFFFFF;
+    --riso-bg: #FAF9F6;
+    --font-riso: "Inter", sans-serif;
+    --font-riso-mono: "JetBrains Mono", monospace;
+    --riso-radius-sm: 4px;
+    --riso-radius-md: 8px;
+    --zapier-canvas: #fffefb;
+    --zapier-canvas-soft: #f8f4f0;
+    --zapier-ink: #201515;
+    --zapier-primary: #ff4f00;
+    --zapier-on-primary: #fffefb;
+    --zapier-mute: #c5c0b1;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body { font-family: "Inter", sans-serif; background-color: #eee; color: #111827; line-height: 1.5; }
+.screen-index { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+.screen-index h1 { font-size: 32px; font-weight: 700; margin-bottom: 8px; letter-spacing: -0.5px; }
+.screen-index p { color: #6B6B6B; margin-bottom: 32px; }
+.screen-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(390px, 1fr)); gap: 32px; }
+.screen-card { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+.screen-card-label { padding: 12px 16px; font-size: 14px; font-weight: 600; color: #111827; border-bottom: 1px solid #e5e5e5; }
+.phone-frame {
+    position: relative;
+    width: 375px;
+    height: 812px;
+    background: #1c1c1e;
+    border-radius: 50px;
+    padding: 12px;
+    box-shadow: 0 0 0 1px rgba(20, 20, 19, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.phone-notch {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 30px;
+    background: #1c1c1e;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    z-index: 10;
+}
+.phone-notch-speaker { width: 60px; height: 6px; background: #0a0a0a; border-radius: 3px; }
+.phone-notch-camera { width: 10px; height: 10px; background: #0a0a0a; border-radius: 50%; box-shadow: inset 0 0 0 2px #1a1a1a; }
+.phone-screen {
+    flex: 1;
+    background: var(--ios-bg);
+    border-radius: calc(50px - 14px);
+    overflow: hidden;
+    position: relative;
+}
+.phone-home-indicator {
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 134px;
+    height: 5px;
+    background: #1c1c1e;
+    border-radius: 3px;
+    z-index: 10;
+}
+.app-container { display: flex; flex-direction: column; min-height: 100%; position: relative; background: var(--ios-bg); }
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+.ios-header {
+    padding: 46px 16px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: auto;
+    flex-shrink: 0;
+    background: var(--ios-nav-bg);
+    border-bottom: 1px solid var(--ios-border);
+    position: relative;
+}
+.ios-back-btn {
+    background: transparent !important;
+    color: var(--ios-blue) !important;
+    border: none !important;
+    font-size: 17px !important;
+    font-weight: 400 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 4px;
+    cursor: pointer;
+    padding: 8px 0;
+    z-index: 2;
+}
+.ios-header .menu-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--ios-text);
+    z-index: 1;
+}
+.ios-large-title { font-size: 34px; font-weight: 700; line-height: 1.2; letter-spacing: -0.5px; }
+.ios-nav-bar { position: relative; background: var(--ios-nav-bg); border-bottom: 1px solid var(--ios-border); padding-top: 46px; }
+.ios-nav-bar-inner { display: flex; align-items: center; justify-content: space-between; height: 44px; padding: 0 16px; }
+.ios-grouped-list { background-color: var(--ios-surface); border-radius: 0px; overflow: hidden; margin: 0 16px 24px 16px; }
+.ios-list-cell {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px;
+    min-height: 44px;
+    background-color: var(--ios-surface);
+    position: relative;
+}
+.ios-list-cell:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 56px;
+    right: 0;
+    height: 0.5px;
+    background-color: var(--ios-border);
+}
+.ios-list-cell-full:not(:last-child)::after { left: 16px; }
+.ios-search-bar {
+    display: flex;
+    align-items: center;
+    height: 36px;
+    background-color: var(--ios-search-bg);
+    border-radius: 0px;
+    padding: 0 8px;
+    margin: 0 16px 8px 16px;
+}
+.ios-search-bar input { flex: 1; background: transparent; border: none; outline: none; font-size: 17px; color: var(--ios-text); }
+.ios-section-header { padding: 8px 16px 4px 32px; font-size: 13px; font-weight: 500; color: var(--ios-muted); text-transform: uppercase; }
+.ios-bottom-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 83px;
+    padding-top: 4px;
+    padding-bottom: 20px;
+    background: var(--ios-nav-bg);
+    border-top: 1px solid var(--ios-border);
+}
+.ios-bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    padding: 4px 16px;
+    color: var(--ios-muted);
+    text-decoration: none;
+}
+.ios-bottom-nav-item.active { color: var(--ios-blue); }
+.ios-bottom-nav-item .label { font-size: 10px; font-weight: 500; }
+.ios-icon-badge { width: 28px; height: 28px; border-radius: 0px; display: flex; align-items: center; justify-content: center; margin-right: 12px; }
+.ios-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--ios-blue);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.ios-btn-primary { background-color: #141413; color: #FAF9F6; border-radius: 0 0 8px 8px; }
+.ios-btn-full { width: 100%; padding: 14px 16px; }
+.ios-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 17px;
+    color: var(--ios-text);
+    background-color: var(--ios-surface);
+    border: 1px solid var(--ios-border);
+    border-radius: 0px;
+    outline: none;
+}
+.ios-toggle {
+    position: relative;
+    width: 51px;
+    height: 31px;
+    background-color: #E8E6E1;
+    border-radius: 0px;
+    cursor: pointer;
+}
+.ios-toggle.active { background-color: var(--ios-blue); }
+.ios-toggle::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 27px;
+    height: 27px;
+    background-color: white;
+    border-radius: 0px;
+}
+.ios-toggle.active::after { transform: translateX(20px); }
+.ios-segmented-control { display: flex; background-color: rgba(20, 20, 19, 0.06); border-radius: 0px; padding: 2px; margin: 0 16px; }
+.ios-segment { flex: 1; padding: 6px 12px; text-align: center; font-size: 13px; font-weight: 500; color: var(--ios-text); cursor: pointer; }
+.ios-segment.active { background-color: var(--ios-surface); }
+.kakao-header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    padding: 0 16px;
+    padding-top: 46px;
+    background-color: rgba(171, 193, 209, 0.9);
+    border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+}
+.kakao-bottom-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 64px;
+    background-color: #F9F9F9;
+    border-top: 0.5px solid #CDC7AA;
+}
+.kakao-bottom-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    color: #666666;
+    text-decoration: none;
+}
+.kakao-bottom-nav-item.active { color: var(--kakao-brown); }
+.kakao-fab {
+    position: absolute;
+    bottom: 80px;
+    right: 24px;
+    width: 56px;
+    height: 56px;
+    background-color: var(--kakao-yellow);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 40;
+}
+.kakao-chat-cell {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    height: 72px;
+}
+.kakao-chat-cell:not(:last-child) { border-bottom: 0.5px solid #EEEEEE; }
+.kakao-avatar { width: 56px; height: 56px; border-radius: 50%; background: #E5E5EA; display: flex; align-items: center; justify-content: center; font-size: 20px; color: #8E8E93; margin-right: 12px; }
+.kakao-chat-bg { background-color: var(--kakao-blue); min-height: 100%; }
+.kakao-bubble-left {
+    position: relative;
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 8px 12px;
+    border-radius: 14px;
+    max-width: 280px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+.kakao-bubble-right {
+    position: relative;
+    background-color: var(--kakao-yellow);
+    color: #000000;
+    padding: 8px 12px;
+    border-radius: 14px;
+    max-width: 280px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+.kakao-bubble-text { font-size: 15px; line-height: 1.4; }
+.kakao-chat-input-area {
+    position: relative;
+    background-color: #FFFFFF;
+    border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+    padding: 8px;
+}
+.kakao-chat-input-wrapper { display: flex; align-items: flex-end; gap: 8px; }
+.kakao-chat-textarea {
+    flex: 1;
+    background-color: #F5F5F5;
+    border: 1px solid #E5E5E5;
+    border-radius: 18px;
+    padding: 8px 12px;
+    font-size: 15px;
+    color: #000000;
+    resize: none;
+    min-height: 36px;
+    outline: none;
+}
+.kakao-send-btn {
+    background-color: var(--kakao-yellow);
+    color: var(--kakao-brown);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
+.kakao-unread-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 18px;
+    height: 18px;
+    background-color: var(--kakao-yellow);
+    color: var(--kakao-brown);
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 9px;
+    padding: 0 4px;
+}
+.kakao-date-divider { display: flex; justify-content: center; padding: 12px 0; }
+.kakao-date-divider span { background-color: rgba(0, 0, 0, 0.1); color: white; font-size: 11px; padding: 4px 12px; border-radius: 12px; }
+.kakao-message-row { display: flex; gap: 8px; margin-bottom: 12px; }
+.kakao-message-row.user { justify-content: flex-end; }
+.kakao-message-row.ai { justify-content: flex-start; }
+.kakao-message-avatar { width: 44px; height: 44px; border-radius: 18px; background: #E5E5EA; display: flex; align-items: center; justify-content: center; margin-top: 20px; }
+.kakao-message-content { display: flex; flex-direction: column; max-width: 85%; }
+.kakao-message-name { font-size: 12px; color: var(--kakao-brown); opacity: 0.8; margin-left: 4px; margin-bottom: 4px; }
+.lock-screen { position: absolute; top: 0; left: 0; right: 0; bottom: 0; z-index: 100; overflow: hidden; }
+.lock-wallpaper { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, #FAF9F6 0%, #E8E6E1 50%, #D4D0C8 100%); }
+.lock-content { position: relative; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 100px 20px 60px; }
+.lock-time { font-size: 80px; font-weight: 700; color: white; letter-spacing: -2px; }
+.lock-date { font-size: 20px; font-weight: 500; color: white; margin-top: 8px; }
+.lock-unlock-hint { display: flex; flex-direction: column; align-items: center; gap: 4px; color: rgba(255,255,255,0.8); font-size: 14px; }
+.home-screen { position: absolute; top: 0; left: 0; right: 0; bottom: 0; overflow: hidden; }
+.home-wallpaper { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+.home-content { position: relative; height: 100%; display: flex; flex-direction: column; padding: 60px 20px 20px; }
+.home-app-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px 16px; padding: 20px 0; }
+.home-app-icon { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+.home-app-icon-bg { width: 60px; height: 60px; border-radius: 14px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); }
+.home-app-label { font-size: 11px; font-weight: 500; color: white; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3); text-align: center; }
+.home-dock { display: flex; justify-content: center; gap: 16px; padding: 12px 16px; background: rgba(255, 255, 255, 0.2); border-radius: 28px; margin-top: auto; }
+.home-dock-icon-bg { width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); }
+.home-page-dots { display: flex; justify-content: center; gap: 6px; margin-top: 12px; }
+.home-page-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255, 255, 255, 0.4); }
+.home-page-dot.active { background: white; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; font-size: 24px; }
+.material-symbols-filled { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+.flex { display: flex; }
+.flex-1 { flex: 1; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-2 { gap: 8px; }
+.gap-4 { gap: 16px; }
+.px-4 { padding-left: 16px; padding-right: 16px; }
+.py-3 { padding-top: 12px; padding-bottom: 12px; }
+.pb-24 { padding-bottom: 96px; }
+.mb-1 { margin-bottom: 4px; }
+.mb-4 { margin-bottom: 16px; }
+.mt-6 { margin-top: 24px; }
+.mt-8 { margin-top: 32px; }
+.mx-4 { margin-left: 16px; margin-right: 16px; }
+.ml-4 { margin-left: 16px; }
+.ml-8 { margin-left: 32px; }
+.text-center { text-align: center; }
+.text-sm { font-size: 14px; }
+.text-xs { font-size: 12px; }
+.text-base { font-size: 16px; }
+.text-lg { font-size: 18px; }
+.text-2xl { font-size: 24px; }
+.text-3xl { font-size: 30px; }
+.text-white { color: white; }
+.text-ios-muted { color: var(--ios-muted); }
+.text-kakao-brown { color: var(--kakao-brown); }
+.font-semibold { font-weight: 600; }
+.font-bold { font-weight: 700; }
+.w-full { width: 100%; }
+.w-14 { width: 56px; }
+.h-14 { height: 56px; }
+.rounded-full { border-radius: 9999px; }
+.bg-white { background: white; }
+.bg-gray-800 { background: #1f2937; }
+.bg-ios-bg { background: var(--ios-bg); }
+.bg-ios-blue { background: var(--ios-blue); }
+.shadow-sm { box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+.overflow-y-auto { overflow-y: auto; }
+.min-w-0 { min-width: 0; }
+.line-clamp-1 { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.hidden { display: none; }
+.sticky { position: sticky; }
+.top-0 { top: 0; }
+.z-50 { z-index: 50; }
+    </style>
+</head>
+<body>
+<div class="screen-index">
+    <h1>SXIOS — UI Screens Part 1</h1>
+    <p>核心畫面：鎖定、主畫面、聊天列表、聊天對話、世界資訊、設定、API設定、記憶管理</p>
+    <div class="screen-grid">
+
+<!-- 1. Lock Screen -->
+<div class="screen-card">
+    <div class="screen-card-label">1. Lock Screen</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="lock-screen">
+                <div class="lock-wallpaper"></div>
+                <div class="lock-content">
+                    <div>
+                        <div class="lock-time">09:41</div>
+                        <div class="lock-date">7月26日 星期日</div>
+                    </div>
+                    <div class="lock-unlock-hint">
+                        <span class="material-symbols-outlined" style="font-size:28px;">keyboard_arrow_up</span>
+                        <span>向上滑動以解鎖</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+
+<!-- 2. Home Screen -->
+<div class="screen-card">
+    <div class="screen-card-label">2. Home Screen</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="home-screen">
+                <div class="home-wallpaper"></div>
+                <div class="home-content">
+                    <div class="home-app-grid">
+                        <div class="home-app-icon"><div class="home-app-icon-bg" style="background:#34C759;"><span class="material-symbols-outlined text-white text-3xl material-symbols-filled">chat_bubble</span></div><span class="home-app-label">Chats</span></div>
+                        <div class="home-app-icon"><div class="home-app-icon-bg" style="background:#5856D6;"><span class="material-symbols-outlined text-white text-3xl material-symbols-filled">menu_book</span></div><span class="home-app-label">World Info</span></div>
+                        <div class="home-app-icon"><div class="home-app-icon-bg" style="background:#8E8E93;"><span class="material-symbols-outlined text-white text-3xl material-symbols-filled">settings</span></div><span class="home-app-label">Settings</span></div>
+                        <div class="home-app-icon"><div class="home-app-icon-bg" style="background:#007AFF;"><span class="material-symbols-outlined text-white text-3xl material-symbols-filled">psychology</span></div><span class="home-app-label">Memory</span></div>
+                        <div class="home-app-icon"><div class="home-app-icon-bg" style="background:#FF9500;"><span class="material-symbols-outlined text-white text-3xl material-symbols-filled">photo_library</span></div><span class="home-app-label">Album</span></div>
+                        <div class="home-app-icon"><div class="home-app-icon-bg" style="background:#5AC8FA;"><span class="material-symbols-outlined text-white text-3xl material-symbols-filled">cloud</span></div><span class="home-app-label">Weather</span></div>
+                        <div class="home-app-icon"><div class="home-app-icon-bg" style="background:#FF2D55;"><span class="material-symbols-outlined text-white text-3xl material-symbols-filled">music_note</span></div><span class="home-app-label">Music</span></div>
+                        <div class="home-app-icon"><div class="home-app-icon-bg" style="background:#AF52DE;"><span class="material-symbols-outlined text-white text-3xl material-symbols-filled">timer</span></div><span class="home-app-label">Pomodoro</span></div>
+                    </div>
+                    <div class="home-page-dots">
+                        <span class="home-page-dot active"></span>
+                        <span class="home-page-dot"></span>
+                    </div>
+                    <div class="home-dock">
+                        <div class="home-app-icon"><div class="home-dock-icon-bg" style="background:#34C759;"><span class="material-symbols-outlined text-white text-2xl material-symbols-filled">chat_bubble</span></div></div>
+                        <div class="home-app-icon"><div class="home-dock-icon-bg" style="background:#5856D6;"><span class="material-symbols-outlined text-white text-2xl material-symbols-filled">menu_book</span></div></div>
+                        <div class="home-app-icon"><div class="home-dock-icon-bg" style="background:#8E8E93;"><span class="material-symbols-outlined text-white text-2xl material-symbols-filled">settings</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+
+<!-- 3. Chats List -->
+<div class="screen-card">
+    <div class="screen-card-label">3. Chats</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:#FAF9F6;">
+                <header class="sticky top-0 z-50 flex justify-between items-center h-14 px-4 bg-white" style="padding-top:46px;">
+                    <h1 style="font-size:20px;font-weight:700;color:var(--kakao-brown);">聊天</h1>
+                    <div class="flex items-center gap-4">
+                        <button style="padding:8px;border:none;background:transparent;cursor:pointer;"><span class="material-symbols-outlined" style="color:var(--kakao-brown);">search</span></button>
+                        <button style="padding:8px;border:none;background:transparent;cursor:pointer;"><span class="material-symbols-outlined" style="color:var(--kakao-brown);">chat_add_on</span></button>
+                    </div>
+                </header>
+                <main class="flex-1 overflow-y-auto hide-scrollbar pb-24">
+                    <div class="kakao-chat-cell">
+                        <div class="kakao-avatar">AI</div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex justify-between items-center mb-1"><span class="font-semibold text-lg">AI</span><span class="text-xs text-ios-muted">12:30</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm text-ios-muted line-clamp-1">你好！有什麼可以幫你的嗎？</span></div>
+                        </div>
+                    </div>
+                    <div class="kakao-chat-cell">
+                        <div class="kakao-avatar">A</div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex justify-between items-center mb-1"><span class="font-semibold text-lg">角色 A</span><span class="text-xs text-ios-muted">昨天</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm text-ios-muted line-clamp-1">今天天氣真好</span><span class="kakao-unread-badge">3</span></div>
+                        </div>
+                    </div>
+                    <div class="kakao-chat-cell">
+                        <div class="kakao-avatar">B</div>
+                        <div class="flex-1 min-w-0">
+                            <div class="flex justify-between items-center mb-1"><span class="font-semibold text-lg">角色 B</span><span class="text-xs text-ios-muted">週五</span></div>
+                            <div class="flex justify-between items-center"><span class="text-sm text-ios-muted line-clamp-1">晚安</span></div>
+                        </div>
+                    </div>
+                </main>
+                <div class="kakao-fab"><span class="material-symbols-outlined text-kakao-brown text-2xl material-symbols-filled">add_comment</span></div>
+                <nav class="kakao-bottom-nav">
+                    <a class="kakao-bottom-nav-item"><span class="material-symbols-outlined">person</span></a>
+                    <a class="kakao-bottom-nav-item active"><span class="material-symbols-outlined material-symbols-filled">chat_bubble</span></a>
+                    <a class="kakao-bottom-nav-item"><span class="material-symbols-outlined">explore</span></a>
+                    <a class="kakao-bottom-nav-item"><span class="material-symbols-outlined">more_horiz</span></a>
+                </nav>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+
+<!-- 4. Chat Detail -->
+<div class="screen-card">
+    <div class="screen-card-label">4. Chat Detail</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container kakao-chat-bg">
+                <header class="kakao-header">
+                    <button class="ios-back-btn"><span class="material-symbols-outlined">chevron_left</span> 聊天</button>
+                    <h1 style="position:absolute;left:50%;transform:translateX(-50%);font-weight:700;color:var(--kakao-brown);">AI</h1>
+                    <button style="color:var(--kakao-brown);border:none;background:transparent;cursor:pointer;"><span class="material-symbols-outlined">menu</span></button>
+                </header>
+                <main class="flex-1 overflow-y-auto hide-scrollbar px-3 pt-20 pb-28 flex flex-col gap-3">
+                    <div class="kakao-date-divider"><span>2026年7月26日</span></div>
+                    <div class="kakao-message-row ai">
+                        <div class="kakao-message-avatar">AI</div>
+                        <div class="kakao-message-content">
+                            <span class="kakao-message-name">AI</span>
+                            <div class="kakao-bubble-left"><span class="kakao-bubble-text">你好！有什麼可以幫你的嗎？</span></div>
+                        </div>
+                    </div>
+                    <div class="kakao-message-row user">
+                        <div class="kakao-bubble-right"><span class="kakao-bubble-text">今天天氣如何？</span></div>
+                    </div>
+                    <div class="kakao-message-row ai">
+                        <div class="kakao-message-avatar">AI</div>
+                        <div class="kakao-message-content">
+                            <span class="kakao-message-name">AI</span>
+                            <div class="kakao-bubble-left"><span class="kakao-bubble-text">今天天氣晴朗，氣溫約 32 度。</span></div>
+                        </div>
+                    </div>
+                </main>
+                <div class="kakao-chat-input-area">
+                    <div class="kakao-chat-input-wrapper">
+                        <button style="color:var(--ios-muted);border:none;background:transparent;cursor:pointer;"><span class="material-symbols-outlined">add</span></button>
+                        <textarea class="kakao-chat-textarea" placeholder="輸入訊息"></textarea>
+                        <button class="kakao-send-btn">傳送</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+
+<!-- 5. World Info -->
+<div class="screen-card">
+    <div class="screen-card-label">5. World Info</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container bg-ios-bg">
+                <div class="ios-nav-bar">
+                    <div class="ios-nav-bar-inner">
+                        <div></div>
+                        <h1 class="ios-large-title">World Info</h1>
+                        <button class="ios-btn"><span class="material-symbols-outlined">add</span></button>
+                    </div>
+                </div>
+                <main class="flex-1 overflow-y-auto hide-scrollbar pt-2 pb-24">
+                    <div class="ios-search-bar"><span class="material-symbols-outlined text-ios-muted">search</span><input type="text" placeholder="搜尋"></div>
+                    <div class="px-4">
+                        <div class="ios-grouped-list">
+                            <div class="ios-list-cell ios-list-cell-full">
+                                <div class="flex-1" style="min-height:64px;display:flex;flex-direction:column;justify-content:center;">
+                                    <span class="text-base font-semibold">角色設定</span>
+                                    <span class="text-sm text-ios-muted line-clamp-2">主要角色的背景故事與性格描述</span>
+                                </div>
+                                <span class="material-symbols-outlined text-ios-muted">chevron_right</span>
+                            </div>
+                            <div class="ios-list-cell ios-list-cell-full">
+                                <div class="flex-1" style="min-height:64px;display:flex;flex-direction:column;justify-content:center;">
+                                    <span class="text-base font-semibold">世界觀</span>
+                                    <span class="text-sm text-ios-muted line-clamp-2">故事發生的世界背景</span>
+                                </div>
+                                <span class="material-symbols-outlined text-ios-muted">chevron_right</span>
+                            </div>
+                            <div class="ios-list-cell ios-list-cell-full">
+                                <div class="flex-1" style="min-height:64px;display:flex;flex-direction:column;justify-content:center;">
+                                    <span class="text-base font-semibold">場景描述</span>
+                                    <span class="text-sm text-ios-muted line-clamp-2">重要場景的詳細描述</span>
+                                </div>
+                                <span class="material-symbols-outlined text-ios-muted">chevron_right</span>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <div class="ios-bottom-nav">
+                    <a class="ios-bottom-nav-item"><span class="material-symbols-outlined">chat_bubble</span><span class="label">Chats</span></a>
+                    <a class="ios-bottom-nav-item active"><span class="material-symbols-outlined material-symbols-filled">menu_book</span><span class="label">World Info</span></a>
+                    <a class="ios-bottom-nav-item"><span class="material-symbols-outlined">settings</span><span class="label">Settings</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+
+<!-- 6. Settings -->
+<div class="screen-card">
+    <div class="screen-card-label">6. Settings</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container bg-ios-bg">
+                <div class="ios-nav-bar">
+                    <div class="ios-nav-bar-inner">
+                        <div></div>
+                        <h1 class="ios-large-title">設定</h1>
+                        <div></div>
+                    </div>
+                </div>
+                <main class="flex-1 overflow-y-auto hide-scrollbar pt-2 pb-24">
+                    <div class="ios-grouped-list mx-4">
+                        <div class="flex items-center p-4 bg-white shadow-sm" style="border-radius:12px;">
+                            <div class="w-14 h-14 rounded-full bg-gray-800 flex items-center justify-center"><span class="material-symbols-outlined text-white text-3xl material-symbols-filled">account_circle</span></div>
+                            <div class="flex-1 ml-4">
+                                <h2 class="font-semibold">使用者</h2>
+                                <p class="text-sm text-ios-muted">管理您的設定與同步</p>
+                            </div>
+                            <span class="material-symbols-outlined text-ios-muted">chevron_right</span>
+                        </div>
+                    </div>
+                    <div class="mt-8 ml-8"><p class="ios-section-header">智慧功能</p></div>
+                    <div class="ios-grouped-list mx-4">
+                        <div class="ios-list-cell">
+                            <div class="ios-icon-badge" style="background:var(--kakao-brown);"><span class="material-symbols-outlined text-white text-sm">smart_toy</span></div>
+                            <span class="flex-1">API 設定</span>
+                            <span class="material-symbols-outlined text-ios-muted">chevron_right</span>
+                        </div>
+                    </div>
+                    <div class="mt-8 ml-8"><p class="ios-section-header">關於</p></div>
+                    <div class="ios-grouped-list mx-4">
+                        <div class="ios-list-cell"><span class="flex-1">版本</span><span class="text-ios-muted">1.0.0</span></div>
+                    </div>
+                    <div class="text-center py-6 text-sm text-ios-muted"><p>2024 SXIOS</p></div>
+                </main>
+                <div class="ios-bottom-nav">
+                    <a class="ios-bottom-nav-item"><span class="material-symbols-outlined">chat_bubble</span><span class="label">Chats</span></a>
+                    <a class="ios-bottom-nav-item"><span class="material-symbols-outlined">menu_book</span><span class="label">World Info</span></a>
+                    <a class="ios-bottom-nav-item active"><span class="material-symbols-outlined material-symbols-filled">settings</span><span class="label">Settings</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+
+<!-- 7. API Config -->
+<div class="screen-card">
+    <div class="screen-card-label">7. API Config</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container bg-ios-bg">
+                <div class="ios-nav-bar">
+                    <div class="ios-nav-bar-inner">
+                        <button class="ios-btn"><span class="material-symbols-outlined">chevron_left</span> 返回</button>
+                        <h1 style="font-size:17px;font-weight:600;">API 設定</h1>
+                        <div></div>
+                    </div>
+                </div>
+                <main class="flex-1 overflow-y-auto hide-scrollbar pt-6 pb-24">
+                    <div class="mb-2 ml-8"><p class="ios-section-header">連線設定</p></div>
+                    <div class="ios-grouped-list mx-4">
+                        <div class="p-4"><label class="text-sm text-ios-muted mb-2 block">API URL</label><input class="ios-input" type="url" placeholder="https://api.openai.com"></div>
+                        <div class="p-4 mt-2"><label class="text-sm text-ios-muted mb-2 block">API Key</label><input class="ios-input" type="password" placeholder="sk-..."></div>
+                    </div>
+                    <div class="mb-2 ml-8 mt-6"><p class="ios-section-header">嵌入模型設定</p></div>
+                    <div class="ios-grouped-list mx-4">
+                        <div class="p-4"><label class="text-sm text-ios-muted mb-2 block">Embedding URL</label><input class="ios-input" type="url" placeholder="https://api.openai.com"></div>
+                        <div class="p-4 mt-2"><label class="text-sm text-ios-muted mb-2 block">Embedding Model</label><input class="ios-input" type="text" placeholder="text-embedding-3-small"></div>
+                    </div>
+                    <div class="mb-2 ml-8 mt-6"><p class="ios-section-header">記憶系統</p></div>
+                    <div class="ios-grouped-list mx-4">
+                        <div class="ios-list-cell ios-list-cell-full"><span class="flex-1">啟用記憶系統</span><input type="checkbox" style="width:48px;height:28px;accent-color:var(--ios-blue);"></div>
+                    </div>
+                    <div class="mx-4 mt-6 mb-8"><button class="ios-btn ios-btn-primary w-full py-3">儲存設定</button></div>
+                </main>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+
+<!-- 8. Memory -->
+<div class="screen-card">
+    <div class="screen-card-label">8. Memory</div>
+    <div class="phone-frame">
+        <div class="phone-notch"><div class="phone-notch-speaker"></div><div class="phone-notch-camera"></div></div>
+        <div class="phone-screen">
+            <div class="app-container" style="background:var(--riso-bg);">
+                <div class="ios-nav-bar">
+                    <div class="ios-nav-bar-inner">
+                        <button class="ios-btn"><span class="material-symbols-outlined">chevron_left</span></button>
+                        <h1 style="font-size:17px;font-weight:600;">記憶管理</h1>
+                        <button class="ios-btn"><span class="material-symbols-outlined">add</span></button>
+                    </div>
+                </div>
+                <main class="flex-1 overflow-y-auto hide-scrollbar pt-2 pb-24">
+                    <div class="ios-search-bar"><span class="material-symbols-outlined text-ios-muted">search</span><input type="text" placeholder="搜尋"></div>
+                    <div class="ios-segmented-control mx-4 mb-4">
+                        <div class="ios-segment active">全部</div>
+                        <div class="ios-segment">動態</div>
+                        <div class="ios-segment">永久</div>
+                        <div class="ios-segment">情感</div>
+                    </div>
+                    <div class="px-4">
+                        <div class="ios-grouped-list">
+                            <div class="ios-list-cell ios-list-cell-full">
+                                <div class="flex-1" style="min-height:64px;display:flex;flex-direction:column;justify-content:center;">
+                                    <div class="flex items-center gap-2 mb-1"><span class="text-base font-semibold line-clamp-1">今天和 AI 聊了關於天氣的話題</span><span style="width:8px;height:8px;border-radius:50%;background:#16A34A;"></span></div>
+                                    <div class="flex items-center gap-2"><span class="text-sm text-ios-muted">2 分鐘前</span><span class="text-xs px-1.5 py-0.5" style="background:#16A34A20;color:#16A34A;border-radius:4px;">鮮明</span></div>
+                                </div>
+                                <span class="material-symbols-outlined text-ios-muted">chevron_right</span>
+                            </div>
+                            <div class="ios-list-cell ios-list-cell-full">
+                                <div class="flex-1" style="min-height:64px;display:flex;flex-direction:column;justify-content:center;">
+                                    <div class="flex items-center gap-2 mb-1"><span class="text-base font-semibold line-clamp-1">我喜歡在雨天聽音樂</span><span style="width:8px;height:8px;border-radius:50%;background:#D97706;"></span></div>
+                                    <div class="flex items-center gap-2"><span class="text-sm text-ios-muted">1 小時前</span><span class="text-xs px-1.5 py-0.5" style="background:#D9770620;color:#D97706;border-radius:4px;">模糊</span></div>
+                                </div>
+                                <span class="material-symbols-outlined text-ios-muted">chevron_right</span>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                <div class="ios-bottom-nav">
+                    <a class="ios-bottom-nav-item"><span class="material-symbols-outlined">chat_bubble</span><span class="label">Chats</span></a>
+                    <a class="ios-bottom-nav-item"><span class="material-symbols-outlined">menu_book</span><span class="label">World Info</span></a>
+                    <a class="ios-bottom-nav-item active"><span class="material-symbols-outlined material-symbols-filled">psychology</span><span class="label">Memory</span></a>
+                    <a class="ios-bottom-nav-item"><span class="material-symbols-outlined">settings</span><span class="label">Settings</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="phone-home-indicator"></div>
+    </div>
+</div>
+
+    </div>
+</div>
+</body>
+</html>

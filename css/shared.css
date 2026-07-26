@@ -1,38 +1,38 @@
 :root {
-    --ios-blue: #007AFF;
-    --ios-bg: #F2F2F7;
+    --ios-blue: #141413;
+    --ios-bg: #FAF9F6;
     --ios-surface: #FFFFFF;
-    --ios-text: #000000;
-    --ios-muted: #8E8E93;
-    --ios-accent: #34C759;
-    --ios-border: #C6C6C8;
-    --ios-nav-bg: rgba(255, 255, 255, 0.75);
-    --ios-search-bg: rgba(118, 118, 128, 0.12);
-    --kakao-yellow: #FFE600;
-    --kakao-brown: #3C1E1E;
-    --kakao-blue: #ABC1D1;
-    --font-ios-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", sans-serif;
-    --font-ios-text: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
-    --font-kakao: "Be Vietnam Pro", sans-serif;
-    --radius-group: 10px;
-    --radius-bubble: 18px;
+    --ios-text: #111827;
+    --ios-muted: #6B6B6B;
+    --ios-accent: #16A34A;
+    --ios-border: rgba(20, 20, 19, 0.12);
+    --ios-nav-bg: rgba(250, 249, 246, 0.92);
+    --ios-search-bg: rgba(20, 20, 19, 0.06);
+    --kakao-yellow: #141413;
+    --kakao-brown: #FAF9F6;
+    --kakao-blue: #FAF9F6;
+    --font-ios-display: "Inter", sans-serif;
+    --font-ios-text: "Inter", sans-serif;
+    --font-kakao: "Inter", sans-serif;
+    --radius-group: 0px;
+    --radius-bubble: 0px;
     --spacing-edge: 16px;
     --spacing-list: 20px;
     --phone-width: 375px;
     --phone-height: 812px;
     --phone-border-radius: 50px;
     --phone-notch-height: 30px;
-    --riso-primary: #F237A1;
-    --riso-secondary: #2C40A7;
+    --riso-primary: #141413;
+    --riso-secondary: #FAF9F6;
     --riso-success: #16A34A;
     --riso-warning: #D97706;
     --riso-danger: #DC2626;
     --riso-surface: #FFFFFF;
     --riso-text: #111827;
     --riso-neutral: #FFFFFF;
-    --riso-bg: #FFF9F5;
-    --font-riso: "Space Grotesk", sans-serif;
-    --font-riso-mono: "Overpass Mono", monospace;
+    --riso-bg: #FAF9F6;
+    --font-riso: "Inter", sans-serif;
+    --font-riso-mono: "JetBrains Mono", monospace;
     --riso-radius-sm: 4px;
     --riso-radius-md: 8px;
     --riso-spacing-xs: 4px;
@@ -56,9 +56,9 @@ html {
 }
 
 body {
-    font-family: var(--font-ios-text);
-    background-color: var(--ios-bg);
-    color: var(--ios-text);
+    font-family: "Inter", sans-serif;
+    background-color: #FAF9F6;
+    color: #111827;
     line-height: 1.5;
     overflow-x: hidden;
     min-height: 100vh;
@@ -158,22 +158,20 @@ body.desktop-mode [class*="-app"] {
 }
 
 .toast {
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    background-color: #141413;
+    color: #FAF9F6;
     padding: 12px 20px;
-    border-radius: 10px;
+    border-radius: 0px;
     font-size: 14px;
     animation: toast-in 0.3s ease, toast-out 0.3s ease 2.7s forwards;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
 }
 
 .toast.success {
-    background-color: rgba(52, 199, 89, 0.9);
+    background-color: #16A34A;
 }
 
 .toast.error {
-    background-color: rgba(255, 59, 48, 0.9);
+    background-color: #DC2626;
 }
 
 @keyframes toast-in {
@@ -233,11 +231,11 @@ body.desktop-mode [class*="-app"] {
     padding: 8px 16px;
     font-size: 17px;
     font-weight: 500;
-    font-family: var(--font-ios-text);
+    font-family: "Inter", sans-serif;
     color: var(--ios-blue);
     background: transparent;
     border: none;
-    border-radius: 10px;
+    border-radius: 0px;
     cursor: pointer;
     transition: opacity 0.15s;
 }
@@ -247,12 +245,13 @@ body.desktop-mode [class*="-app"] {
 }
 
 .ios-btn-primary {
-    background-color: var(--ios-blue);
-    color: white;
+    background-color: #141413;
+    color: #FAF9F6;
+    border-radius: 0 0 8px 8px;
 }
 
 .ios-btn-primary:active {
-    background-color: #0056CC;
+    background-color: #2a2a28;
 }
 
 .ios-btn-full {
@@ -322,7 +321,7 @@ body.desktop-mode {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #FAF9F6;
     padding: 20px;
 }
 
@@ -339,11 +338,7 @@ body.desktop-mode #app {
     background: #1c1c1e;
     border-radius: var(--phone-border-radius);
     padding: 12px;
-    box-shadow: 
-        0 0 0 2px #2c2c2e,
-        0 0 0 4px #1c1c1e,
-        0 25px 50px -12px rgba(0, 0, 0, 0.5),
-        inset 0 0 0 2px #3a3a3c;
+    box-shadow: 0 0 0 1px rgba(20, 20, 19, 0.2);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -437,9 +432,7 @@ body.desktop-mode #app {
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-        linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%),
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%23667eea"/><stop offset="100%" style="stop-color:%23764ba2"/></linearGradient></defs><rect fill="url(%23g)" width="100" height="100"/></svg>');
+    background: linear-gradient(135deg, #FAF9F6 0%, #E8E6E1 50%, #D4D0C8 100%);
     background-size: cover;
     background-position: center;
 }
