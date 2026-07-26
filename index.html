@@ -13,14 +13,18 @@
     <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
     
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     
-    <link rel="stylesheet" href="css/shared.css">
-    <link rel="stylesheet" href="css/ios.css">
-    <link rel="stylesheet" href="css/kakao.css">
+    <link rel="stylesheet" href="css/shared.css?v=3">
+    <link rel="stylesheet" href="css/ios.css?v=3">
+    <link rel="stylesheet" href="css/kakao.css?v=3">
+    <link rel="stylesheet" href="css/notion-tokens.css?v=1">
     
     <script>
         tailwind.config = {
@@ -38,15 +42,27 @@
                         "kakao-yellow": "#FFE600",
                         "kakao-brown": "#3C1E1E",
                         "kakao-blue": "#ABC1D1",
+                        "riso-primary": "#F237A1",
+                        "riso-secondary": "#2C40A7",
+                        "riso-success": "#16A34A",
+                        "riso-warning": "#D97706",
+                        "riso-danger": "#DC2626",
+                        "riso-surface": "#FFFFFF",
+                        "riso-text": "#111827",
+                        "riso-bg": "#FFF9F5",
                     },
                     fontFamily: {
                         "ios-display": ["-apple-system", "BlinkMacSystemFont", "SF Pro Display", "sans-serif"],
                         "ios-text": ["-apple-system", "BlinkMacSystemFont", "SF Pro Text", "sans-serif"],
                         "kakao": ["Be Vietnam Pro", "sans-serif"],
+                        "riso": ["Space Grotesk", "sans-serif"],
+                        "riso-mono": ["Overpass Mono", "monospace"],
                     },
                     borderRadius: {
                         "ios-group": "10px",
                         "ios-bubble": "18px",
+                        "riso-sm": "4px",
+                        "riso-md": "8px",
                     },
                     spacing: {
                         "safe-top": "env(safe-area-inset-top)",

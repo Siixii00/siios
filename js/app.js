@@ -4,6 +4,7 @@ import { createElement, createIcon, createToast } from './components.js';
 import LockScreen from './lockscreen.js';
 import HomeScreen from './homescreen.js';
 import { registerRoutes } from './apps/registry.js';
+import { MemorySystem } from './core/memory-system/index.js';
 
 function isMobileDevice() {
     const ua = navigator.userAgent.toLowerCase();
@@ -30,6 +31,31 @@ const App = {
         }
         
         await initDB();
+        
+        const allSettings = await SettingsDB.getAll();
+        const defaults = SettingsDB.getDefaults();
+        const mergedSettings = { ...defaults, ...allSettings };
+        
+        const memorySystem = new MemorySystem({
+            decayRate: mergedSettings.memory_decay_rate,
+            embedding: {
+                embedding_url: mergedSettings.embedding_url,
+                api_url: mergedSettings.api_url,
+                embedding_model: mergedSettings.embedding_model,
+                embedding_dimensions: mergedSettings.embedding_dimensions,
+                embedding_api_key: mergedSettings.embedding_api_key,
+                api_key: mergedSettings.api_key
+            },
+            classifier: {
+                api_url: mergedSettings.api_url,
+                api_key: mergedSettings.api_key,
+                model: mergedSettings.model
+            }
+        });
+        this.memorySystem = memorySystem;
+        if (mergedSettings.memory_enabled) {
+            memorySystem.start();
+        }
         
         this.showLockScreen();
         

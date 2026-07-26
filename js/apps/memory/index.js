@@ -6,6 +6,10 @@ let memories = [];
 let currentFilter = 0;
 let searchTerm = '';
 
+const TYPE_TABS = ['全部', '動態', '永久', '情感', '計畫', '書信', '自我', '歸檔'];
+const TYPE_MAP = { 1: 'dynamic', 2: 'permanent', 3: 'feel', 4: 'plan', 5: 'letter', 6: 'i', 7: 'archive' };
+const TYPE_LABELS = { dynamic: '動態', permanent: '永久', feel: '情感', plan: '計畫', letter: '書信', i: '自我', archive: '歸檔' };
+
 function formatRelativeTime(timestamp) {
     const diff = Date.now() - timestamp;
     if (diff < 60000) return '剛剛';
@@ -20,31 +24,32 @@ function getDecayStage(memory) {
     const importance = memory.importance || 0.5;
     const decayFactor = memory.decayFactor || 1.0;
     const effective = importance * decayFactor;
-    if (effective >= 0.7) return { label: '鮮明', color: 'bg-green-500' };
-    if (effective >= 0.4) return { label: '模糊', color: 'bg-yellow-500' };
-    if (effective >= 0.1) return { label: '衰退', color: 'bg-orange-500' };
-    return { label: '微弱', color: 'bg-red-500' };
+    if (effective >= 0.7) return { label: '鮮明', dotClass: 'decay-dot-fresh', badgeClass: 'decay-badge-fresh' };
+    if (effective >= 0.4) return { label: '模糊', dotClass: 'decay-dot-fading', badgeClass: 'decay-badge-fading' };
+    if (effective >= 0.1) return { label: '衰退', dotClass: 'decay-dot-decaying', badgeClass: 'decay-badge-decaying' };
+    return { label: '微弱', dotClass: 'decay-dot-weak', badgeClass: 'decay-badge-weak' };
 }
 
 function getFilteredMemories() {
     let filtered = [...memories];
-    if (currentFilter === 1) {
-        filtered = filtered.filter(m => (m.decayFactor || 1.0) < 2.0);
-    } else if (currentFilter === 2) {
-        filtered = filtered.filter(m => (m.decayFactor || 1.0) >= 2.0);
+    const typeFilter = TYPE_MAP[currentFilter];
+    if (typeFilter) {
+        filtered = filtered.filter(m => m.memory_type === typeFilter);
     }
     if (searchTerm) {
         const lower = searchTerm.toLowerCase();
         filtered = filtered.filter(m =>
             m.content.toLowerCase().includes(lower) ||
-            (m.aiTags || []).some(t => t.toLowerCase().includes(lower))
+            (m.aiTags || []).some(t => t.toLowerCase().includes(lower)) ||
+            (m.domain || '').includes(lower) ||
+            (m.meaning || '').toLowerCase().includes(lower)
         );
     }
     return filtered.sort((a, b) => (b.timestamp || b.created_at) - (a.timestamp || a.created_at));
 }
 
 async function renderMemoryList() {
-    const container = createElement('div', 'app-container bg-ios-bg');
+    const container = createElement('div', 'app-container memory-app');
 
     const header = createIOSNavBar({
         title: '記憶管理',
@@ -69,7 +74,7 @@ async function renderMemoryList() {
     main.appendChild(searchBar);
 
     const segmented = createIOSSegmentedControl(
-        ['全部', '短期', '長期'],
+        TYPE_TABS,
         (index) => {
             currentFilter = index;
             renderList();
@@ -132,10 +137,10 @@ async function renderMemoryList() {
         const filtered = getFilteredMemories();
 
         if (filtered.length === 0) {
-            const emptyState = createElement('div', 'flex flex-col items-center justify-center py-16 text-ios-muted');
-            emptyState.appendChild(createIcon('psychology', 'text-5xl mb-4 opacity-30'));
-            emptyState.appendChild(createElement('h3', 'text-lg font-semibold mb-1', { textContent: '沒有記憶' }));
-            emptyState.appendChild(createElement('p', 'text-sm', { textContent: '記憶將在對話中自動產生' }));
+            const emptyState = createElement('div', 'flex flex-col items-center justify-center py-16');
+            emptyState.appendChild(createIcon('psychology', 'riso-empty-icon text-5xl mb-4'));
+            emptyState.appendChild(createElement('h3', 'riso-empty-title text-lg font-semibold mb-1', { textContent: '沒有記憶' }));
+            emptyState.appendChild(createElement('p', 'riso-empty-text text-sm', { textContent: '記憶將在對話中自動產生' }));
             listContainer.appendChild(emptyState);
             return;
         }
@@ -153,15 +158,17 @@ async function renderMemoryList() {
             const topRow = createElement('div', 'flex items-center gap-2 mb-1');
             topRow.appendChild(createElement('span', 'text-base font-semibold line-clamp-1', { textContent: memory.content.slice(0, 50) }));
 
-            const badge = createElement('span', `inline-block w-2 h-2 rounded-full ${stage.color}`);
+            const badge = createElement('span', `inline-block w-2 h-2 rounded-full ${stage.dotClass}`);
             topRow.appendChild(badge);
             leftContent.appendChild(topRow);
 
             const bottomRow = createElement('div', 'flex items-center gap-2');
             bottomRow.appendChild(createElement('span', 'text-sm text-ios-muted', { textContent: formatRelativeTime(memory.timestamp || memory.created_at) }));
-            bottomRow.appendChild(createElement('span', `text-xs px-1.5 py-0.5 rounded ${stage.color} text-white`, { textContent: stage.label }));
-            if (memory.memory_type) {
-                bottomRow.appendChild(createElement('span', 'text-xs text-ios-muted', { textContent: memory.memory_type }));
+            bottomRow.appendChild(createElement('span', `text-xs px-1.5 py-0.5 rounded ${stage.badgeClass}`, { textContent: stage.label }));
+            const typeLabel = TYPE_LABELS[memory.memory_type] || memory.memory_type || '動態';
+            bottomRow.appendChild(createElement('span', 'text-xs px-1.5 py-0.5 rounded bg-ios-bg2', { textContent: typeLabel }));
+            if (memory.domain) {
+                bottomRow.appendChild(createElement('span', 'text-xs text-ios-muted', { textContent: memory.domain }));
             }
             leftContent.appendChild(bottomRow);
 
@@ -188,7 +195,7 @@ async function renderMemoryDetail(params) {
         return { element: createElement('div'), cleanup: null };
     }
 
-    const container = createElement('div', 'app-container bg-ios-bg');
+    const container = createElement('div', 'app-container memory-app');
 
     const header = createIOSNavBar({
         title: '記憶詳情',
@@ -203,6 +210,28 @@ async function renderMemoryDetail(params) {
     contentCell.appendChild(createElement('p', 'text-base leading-relaxed', { textContent: memory.content }));
     contentCard.appendChild(contentCell);
     main.appendChild(contentCard);
+
+    const classSection = createElement('div', 'ml-8 mb-2');
+    classSection.appendChild(createElement('p', 'ios-section-header', { textContent: '分類' }));
+    main.appendChild(classSection);
+
+    const classCard = createElement('div', 'ios-grouped-list mx-4 mb-4');
+    const typeLabel = TYPE_LABELS[memory.memory_type] || memory.memory_type || '動態';
+    const classData = [
+        { label: '類型', value: typeLabel },
+        { label: '領域', value: memory.domain || '—' },
+        { label: '意義', value: memory.meaning || '—' }
+    ];
+    if (memory.memory_type === 'plan') {
+        classData.push({ label: '狀態', value: memory.status || 'active' });
+    }
+    classData.forEach((d, i) => {
+        const cell = createElement('div', `ios-list-cell ${i === classData.length - 1 ? 'ios-list-cell-full' : ''}`);
+        cell.appendChild(createElement('span', 'flex-1 text-ios-muted', { textContent: d.label }));
+        cell.appendChild(createElement('span', 'text-right', { textContent: d.value }));
+        classCard.appendChild(cell);
+    });
+    main.appendChild(classCard);
 
     const sensorySection = createElement('div', 'ml-8 mb-2');
     sensorySection.appendChild(createElement('p', 'ios-section-header', { textContent: '感官' }));
@@ -224,7 +253,7 @@ async function renderMemoryDetail(params) {
             tags.appendChild(createElement('span', 'text-xs text-ios-muted', { textContent: '—' }));
         } else {
             s.items.forEach(item => {
-                tags.appendChild(createElement('span', 'text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-700', { textContent: item }));
+                tags.appendChild(createElement('span', 'riso-sensory-tag', { textContent: item }));
             });
         }
         cell.appendChild(tags);
@@ -279,7 +308,7 @@ async function renderMemoryDetail(params) {
         emotionTags.appendChild(createElement('span', 'text-xs text-ios-muted', { textContent: '—' }));
     } else {
         emotions.forEach(em => {
-            emotionTags.appendChild(createElement('span', 'text-xs px-2 py-0.5 rounded-full bg-purple-100 text-purple-700', { textContent: em }));
+            emotionTags.appendChild(createElement('span', 'riso-emotion-tag', { textContent: em }));
         });
     }
     emotionsCell.appendChild(emotionTags);
@@ -308,7 +337,7 @@ async function renderMemoryDetail(params) {
 
     const actionsCard = createElement('div', 'ios-grouped-list mx-4 mb-4');
     const reinforceCell = createElement('div', 'ios-list-cell justify-center');
-    const reinforceBtn = createElement('button', 'text-ios-blue font-semibold w-full text-center py-2', {
+    const reinforceBtn = createElement('button', 'riso-action-btn w-full text-center py-2', {
         textContent: '強化記憶',
         onClick: async () => {
             await MemoryDB.reinforce(id);
@@ -319,20 +348,32 @@ async function renderMemoryDetail(params) {
     reinforceCell.appendChild(reinforceBtn);
     actionsCard.appendChild(reinforceCell);
 
-    const convertCell = createElement('div', 'ios-list-cell justify-center');
-    const convertBtn = createElement('button', 'text-ios-blue font-semibold w-full text-center py-2', {
-        textContent: '轉為長期記憶',
+    const permanentCell = createElement('div', 'ios-list-cell justify-center');
+    const permanentBtn = createElement('button', 'riso-action-btn w-full text-center py-2', {
+        textContent: '標為永久',
         onClick: async () => {
-            await MemoryDB.update(id, { decayFactor: 5.0 });
-            createToast('已轉為長期記憶');
+            await MemoryDB.update(id, { memory_type: 'permanent', decayFactor: 5.0 });
+            createToast('已標為永久記憶');
             Router.navigate('/memory/' + id);
         }
     });
-    convertCell.appendChild(convertBtn);
-    actionsCard.appendChild(convertCell);
+    permanentCell.appendChild(permanentBtn);
+    actionsCard.appendChild(permanentCell);
+
+    const archiveCell = createElement('div', 'ios-list-cell justify-center');
+    const archiveBtn = createElement('button', 'riso-action-btn w-full text-center py-2', {
+        textContent: '歸檔',
+        onClick: async () => {
+            await MemoryDB.update(id, { memory_type: 'archive' });
+            createToast('記憶已歸檔');
+            Router.navigate('/memory');
+        }
+    });
+    archiveCell.appendChild(archiveBtn);
+    actionsCard.appendChild(archiveCell);
 
     const deleteCell = createElement('div', 'ios-list-cell ios-list-cell-full justify-center');
-    const deleteBtn = createElement('button', 'text-red-500 font-semibold w-full text-center py-2', {
+    const deleteBtn = createElement('button', 'riso-danger-btn w-full text-center py-2', {
         textContent: '刪除記憶',
         onClick: () => {
             if (confirm('確定要刪除此記憶？此操作無法復原。')) {
