@@ -28,7 +28,7 @@ async function renderHome(params) {
   container.innerHTML = `
     <header class="ios-header">
       <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-      <h1 class="menu-title">宅家</h1>
+      <h1 class="menu-title">Stay</h1>
     </header>
     <div class="page">
       <div class="energy-bar">
@@ -65,10 +65,10 @@ async function renderHome(params) {
 }
 
 export default {
-  id: 'home',
+  id: 'stay',
   name: '宅家',
   icon: 'couch',
-  routes: [{ path: '/home', render: renderHome }],
-  navItem: { label: '宅家', icon: 'couch', path: '/home', showInNav: true, order: 126 },
+  routes: [{ path: '/stay', render: renderHome }],
+  navItem: { label: '宅家', icon: 'couch', path: '/stay', showInNav: true, order: 126 },
   stylesPath: 'js/apps/home/style.css'
 };

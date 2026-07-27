@@ -57,6 +57,8 @@ const App = {
             memorySystem.start();
         }
         
+        await registerRoutes();
+        
         this.showLockScreen();
         
         Router.on('/', async () => {
@@ -67,13 +69,18 @@ const App = {
             if (!this.isLocked) {
                 const app = this.getAppContainer();
                 app.innerHTML = '';
-                this.homeScreenEl = await HomeScreen.create();
-                app.appendChild(this.homeScreenEl);
+                try {
+                    this.homeScreenEl = await HomeScreen.create();
+                    if (this.homeScreenEl) {
+                        app.appendChild(this.homeScreenEl);
+                    }
+                } catch (err) {
+                    console.error('Failed to create home screen:', err);
+                }
             }
         });
         
-        await registerRoutes();
-        Router.start();
+        Router.start(true);
         
         this.registerServiceWorker();
         this.setupInstallPrompt();
@@ -99,12 +106,21 @@ const App = {
             LockScreen.destroy();
         }
         
+        this.isLocked = false;
+        
         const app = this.getAppContainer();
         app.innerHTML = '';
         
-        this.homeScreenEl = await HomeScreen.create();
-        app.appendChild(this.homeScreenEl);
-        this.isLocked = false;
+        try {
+            this.homeScreenEl = await HomeScreen.create();
+            if (this.homeScreenEl) {
+                app.appendChild(this.homeScreenEl);
+            }
+        } catch (err) {
+            console.error('Failed to create home screen:', err);
+        }
+        
+        window.location.hash = '/home';
     },
     
     lock() {
@@ -180,6 +196,10 @@ const App = {
             };
             document.body.appendChild(installBtn);
         });
+    },
+    
+    async handleRoute() {
+        await Router.handleRoute();
     },
     
     navigate(path) {

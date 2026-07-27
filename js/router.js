@@ -44,6 +44,8 @@ const Router = {
     },
     
     async handleRoute() {
+        if (window.App && window.App.isLocked) return;
+        
         const hash = window.location.hash.slice(1) || '/home';
         const matched = this.match(hash);
         
@@ -68,7 +70,7 @@ const Router = {
         return true;
     },
     
-    start() {
+    start(silent) {
         window.addEventListener('hashchange', async () => {
             if (await this.runBeforeLeave()) {
                 this.beforeLeaveHooks = [];
@@ -78,7 +80,9 @@ const Router = {
             }
         });
         
-        this.handleRoute();
+        if (!silent) {
+            this.handleRoute();
+        }
     }
 };
 

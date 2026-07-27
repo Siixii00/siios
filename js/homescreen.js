@@ -58,13 +58,14 @@ const HomeScreen = {
         content.appendChild(this.dotsContainer);
 
         const dock = createElement('div', 'home-dock');
+        const dockColors = ['#34C759', '#5856D6', '#8E8E93'];
         const dockApps = this.apps.slice(0, 3);
-        dockApps.forEach(app => {
+        dockApps.forEach((app, i) => {
             const appIcon = this.createDockIcon({
                 id: app.label.toLowerCase().replace(/\s+/g, '-'),
                 name: app.label,
                 icon: app.icon,
-                color: this.getColorForApp(app.label),
+                color: dockColors[i] || this.getColorForApp(app.label),
                 path: app.path
             });
             dock.appendChild(appIcon);
@@ -152,8 +153,15 @@ const HomeScreen = {
     getColorForApp(name) {
         const colors = {
             'Chats': '#34C759',
+            'KakaoTalk': '#34C759',
             'World Info': '#5856D6',
-            'Settings': '#8E8E93'
+            'Settings': '#8E8E93',
+            'Album': '#8E8E93',
+            'Weather': '#5856D6',
+            'Music': '#1D1B20',
+            'Pomodoro': '#8E8E93',
+            'Memory': '#8E8E93',
+            'Stay': '#8E8E93'
         };
         return colors[name] || '#007AFF';
     },
@@ -162,7 +170,6 @@ const HomeScreen = {
         const iconContainer = createElement('div', 'home-app-icon');
 
         const iconBg = createElement('div', 'home-app-icon-bg');
-        iconBg.style.background = app.color;
         iconBg.appendChild(createIcon(app.icon, 'text-white text-3xl', true));
         iconContainer.appendChild(iconBg);
 
@@ -180,7 +187,6 @@ const HomeScreen = {
         const iconContainer = createElement('div', 'home-dock-icon');
 
         const iconBg = createElement('div', 'home-dock-icon-bg');
-        iconBg.style.background = app.color;
         iconBg.appendChild(createIcon(app.icon, 'text-white text-2xl', true));
         iconContainer.appendChild(iconBg);
 
