@@ -376,33 +376,37 @@ function createKakaoBottomSheet(items, options = {}) {
         sheet.appendChild(title);
     }
     
-    const grid = createElement('div', 'kakao-bottom-sheet-grid');
-    
-    items.forEach(item => {
-        const gridItem = createElement('div', 'kakao-bottom-sheet-item');
+    if (options.customContent) {
+        sheet.appendChild(options.customContent);
+    } else {
+        const grid = createElement('div', 'kakao-bottom-sheet-grid');
         
-        if (!item.icon && !item.label) {
-            gridItem.style.visibility = 'hidden';
+        items.forEach(item => {
+            const gridItem = createElement('div', 'kakao-bottom-sheet-item');
+            
+            if (!item.icon && !item.label) {
+                gridItem.style.visibility = 'hidden';
+                grid.appendChild(gridItem);
+                return;
+            }
+            
+            gridItem.addEventListener('click', () => {
+                close();
+                if (item.onSelect) item.onSelect();
+            });
+            
+            const iconWrap = createElement('div', 'kakao-bottom-sheet-item-icon');
+            iconWrap.appendChild(createIcon(item.icon));
+            gridItem.appendChild(iconWrap);
+            
+            const label = createElement('span', 'kakao-bottom-sheet-item-label', { textContent: item.label });
+            gridItem.appendChild(label);
+            
             grid.appendChild(gridItem);
-            return;
-        }
-        
-        gridItem.addEventListener('click', () => {
-            close();
-            if (item.onSelect) item.onSelect();
         });
         
-        const iconWrap = createElement('div', 'kakao-bottom-sheet-item-icon');
-        iconWrap.appendChild(createIcon(item.icon));
-        gridItem.appendChild(iconWrap);
-        
-        const label = createElement('span', 'kakao-bottom-sheet-item-label', { textContent: item.label });
-        gridItem.appendChild(label);
-        
-        grid.appendChild(gridItem);
-    });
-    
-    sheet.appendChild(grid);
+        sheet.appendChild(grid);
+    }
     
     let isOpen = false;
     
