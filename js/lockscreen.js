@@ -24,12 +24,9 @@ const LockScreen = {
         timeContainer.appendChild(dateEl);
         content.appendChild(timeContainer);
         
-        const notchSpacer = createElement('div', 'lock-notch-spacer');
-        content.appendChild(notchSpacer);
-        
         const unlockHint = createElement('div', 'lock-unlock-hint');
         unlockHint.appendChild(createIcon('keyboard_arrow_up', 'text-white/80 text-2xl'));
-        const unlockText = createElement('span', 'text-white/80 text-sm', { textContent: '向上滑動以解鎖' });
+        const unlockText = createElement('span', 'text-white/80 text-sm whitespace-nowrap', { textContent: '向上滑動以解鎖' });
         unlockHint.appendChild(unlockText);
         content.appendChild(unlockHint);
         

@@ -8,14 +8,25 @@
     --ios-border: rgba(20, 20, 19, 0.12);
     --ios-nav-bg: rgba(250, 249, 246, 0.92);
     --ios-search-bg: rgba(20, 20, 19, 0.06);
-    --kakao-yellow: #141413;
-    --kakao-brown: #FAF9F6;
-    --kakao-blue: #FAF9F6;
+    --kakao-yellow: #FEE500;
+    --kakao-brown: #AC7F5E;
+    --kakao-blue: #B3C7D5;
+    --kakao-bg: #FAF9F6;
+    --kakao-header-bg: rgba(179, 199, 213, 0.9);
+    --kakao-nav-bg: #F9F9F9;
+    --kakao-nav-border: #CDC7AA;
+    --kakao-unread: #B3261E;
+    --kakao-avatar-bg: #E5E5EA;
+    --kakao-avatar-text: #8E8E93;
+    --kakao-input-bg: #F5F5F5;
+    --kakao-input-border: #E5E5E5;
+    --kakao-placeholder: #757575;
+    --kakao-bubble-right-text: #625B71;
     --font-ios-display: "Inter", sans-serif;
     --font-ios-text: "Inter", sans-serif;
     --font-kakao: "Inter", sans-serif;
     --radius-group: 0px;
-    --radius-bubble: 0px;
+    --radius-bubble: 14px;
     --spacing-edge: 16px;
     --spacing-list: 20px;
     --phone-width: 375px;
@@ -63,6 +74,15 @@ body {
     overflow-x: hidden;
     min-height: 100vh;
     min-height: 100dvh;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
@@ -124,8 +144,12 @@ body.desktop-mode .ios-nav-bar,
 body.desktop-mode .ios-bottom-nav,
 body.desktop-mode .bili-bottombar,
 body.desktop-mode .bili-header,
-body.desktop-mode [class*="bottom-nav"],
-body.desktop-mode [class*="bottombar"],
+body.desktop-mode .kakao-bottom-nav,
+body.desktop-mode .kakao-header,
+body.desktop-mode .kakao-chat-input-area,
+body.desktop-mode .kakao-bottom-sheet-overlay,
+body.desktop-mode .kakao-bottom-sheet,
+body.desktop-mode [class*="bottombar"]:not([class*="bottom-nav-item"]),
 body.desktop-mode nav[class*="fixed"] {
     position: absolute !important;
 }
@@ -133,6 +157,7 @@ body.desktop-mode nav[class*="fixed"] {
 body.desktop-mode .ios-nav-bar,
 body.desktop-mode .ios-header,
 body.desktop-mode .bili-header,
+body.desktop-mode .kakao-header,
 body.desktop-mode header[class*="fixed"] {
     top: 0;
     padding-top: 46px !important;
@@ -140,8 +165,9 @@ body.desktop-mode header[class*="fixed"] {
 
 body.desktop-mode .ios-bottom-nav,
 body.desktop-mode .bili-bottombar,
-body.desktop-mode [class*="bottom-nav"],
-body.desktop-mode [class*="bottombar"] {
+body.desktop-mode .kakao-bottom-nav,
+body.desktop-mode .kakao-chat-input-area,
+body.desktop-mode [class*="bottombar"]:not([class*="bottom-nav-item"]) {
     bottom: 0;
     padding-bottom: 0 !important;
 }
@@ -432,7 +458,7 @@ body.desktop-mode #app {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #FAF9F6 0%, #E8E6E1 50%, #D4D0C8 100%);
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
     background-size: cover;
     background-position: center;
 }
@@ -444,14 +470,14 @@ body.desktop-mode #app {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: calc(env(safe-area-inset-top, 20px) + 60px) 20px calc(env(safe-area-inset-bottom, 20px) + 40px);
+    padding: 100px 20px 60px;
 }
 
 .lock-time-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 40px;
+    gap: 8px;
 }
 
 .lock-time {
@@ -460,7 +486,8 @@ body.desktop-mode #app {
     font-weight: 700;
     color: white;
     letter-spacing: -2px;
-    line-height: 1;
+    line-height: 120px;
+    text-align: center;
 }
 
 .lock-date {
@@ -468,7 +495,7 @@ body.desktop-mode #app {
     font-size: 20px;
     font-weight: 500;
     color: white;
-    margin-top: 8px;
+    text-align: center;
 }
 
 .lock-notch-spacer {
@@ -518,7 +545,7 @@ body.desktop-mode #app {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(180deg, #1a1a2e 0%, #16213e 40%, #0f3460 100%);
 }
 
 .home-content {
@@ -526,7 +553,7 @@ body.desktop-mode #app {
     height: 100%;
     display: flex;
     flex-direction: column;
-    padding: calc(env(safe-area-inset-top, 20px) + 40px) 20px calc(env(safe-area-inset-bottom, 20px) + 20px);
+    padding: 60px 20px 20px;
 }
 
 .home-pages-wrapper {
@@ -572,15 +599,17 @@ body.desktop-mode #app {
     height: 60px;
     border-radius: 14px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    align-items: center;
+    background: linear-gradient(136deg, rgba(245, 245, 245, 0.06) 9.26%, rgba(255, 255, 255, 0.32) 61%, rgba(151, 151, 151, 0.19) 99.69%);
+    border: 0.5px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 4.88px 29.28px 0 rgba(255, 255, 255, 0.24), inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .home-app-icon:active .home-app-icon-bg {
     transform: scale(0.9);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 12px 0 rgba(255, 255, 255, 0.18);
 }
 
 .home-app-label {
@@ -605,6 +634,7 @@ body.desktop-mode #app {
     -webkit-backdrop-filter: blur(30px);
     border-radius: 28px;
     margin-top: auto;
+    margin-bottom: env(safe-area-inset-bottom, 0px);
 }
 
 .home-dock-icon {
@@ -616,9 +646,11 @@ body.desktop-mode #app {
     height: 50px;
     border-radius: 12px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    background: linear-gradient(136deg, rgba(245, 245, 245, 0.06) 9.26%, rgba(255, 255, 255, 0.32) 61%, rgba(151, 151, 151, 0.19) 99.69%);
+    border: 0.5px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 0 4.88px 29.28px 0 rgba(255, 255, 255, 0.24), inset 0 1px 0 0 rgba(255, 255, 255, 0.25);
     transition: transform 0.15s ease;
 }
 

@@ -23,7 +23,7 @@ async function initDB() {
     await cleanLegacyDatabases();
 
     db = await openDB(DB_NAME, DB_VERSION, {
-        upgrade(database, oldVersion, newVersion) {
+        upgrade(database, oldVersion, newVersion, transaction) {
             if (!database.objectStoreNames.contains('chats')) {
                 const chatsStore = database.createObjectStore('chats', { keyPath: 'id' });
                 chatsStore.createIndex('last_updated', 'last_updated');
@@ -58,7 +58,7 @@ async function initDB() {
             }
 
             if (oldVersion < 4 && database.objectStoreNames.contains('memories')) {
-                const memoriesStore = database.transaction.objectStore('memories');
+                const memoriesStore = transaction.objectStore('memories');
                 if (!memoriesStore.indexNames.contains('domain')) {
                     memoriesStore.createIndex('domain', 'domain');
                 }

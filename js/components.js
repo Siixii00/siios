@@ -257,6 +257,7 @@ function createKakaoFAB(onClick) {
 function createKakaoChatCell(chat, onClick) {
     const cell = createElement('div', 'kakao-chat-cell', { onClick });
     
+    const avatarMargin = createElement('div', 'kakao-avatar-margin');
     const avatarContainer = createElement('div', 'relative');
     const avatar = createElement('img', 'kakao-avatar', {
         src: chat.character_avatar || 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23E5E5EA"/><text x="50" y="60" text-anchor="middle" font-size="40" fill="%238E8E93">AI</text></svg>',
@@ -269,17 +270,18 @@ function createKakaoChatCell(chat, onClick) {
         avatarContainer.appendChild(dot);
     }
     
-    cell.appendChild(avatarContainer);
+    avatarMargin.appendChild(avatarContainer);
+    cell.appendChild(avatarMargin);
     
-    const content = createElement('div', 'flex-1 min-w-0');
+    const content = createElement('div', 'kakao-chat-cell-content');
     
-    const topRow = createElement('div', 'flex justify-between items-center mb-0.5');
-    topRow.appendChild(createElement('span', 'font-semibold text-lg', { textContent: chat.character_name }));
-    topRow.appendChild(createElement('span', 'text-xs text-ios-muted', { textContent: formatTime(chat.last_updated) }));
+    const topRow = createElement('div', 'kakao-chat-cell-top');
+    topRow.appendChild(createElement('span', 'kakao-chat-cell-name', { textContent: chat.character_name }));
+    topRow.appendChild(createElement('span', 'kakao-chat-cell-time', { textContent: formatTime(chat.last_updated) }));
     content.appendChild(topRow);
     
-    const bottomRow = createElement('div', 'flex justify-between items-center');
-    bottomRow.appendChild(createElement('span', 'text-sm text-ios-muted line-clamp-1', { textContent: chat.last_message || '開始新對話' }));
+    const bottomRow = createElement('div', 'kakao-chat-cell-bottom');
+    bottomRow.appendChild(createElement('span', 'kakao-chat-cell-msg', { textContent: chat.last_message || '開始新對話' }));
     
     if (chat.unread > 0) {
         const badge = createElement('span', 'kakao-unread-badge', { textContent: chat.unread.toString() });
@@ -319,7 +321,7 @@ function createKakaoBubble(role, content, avatar, name) {
         
         const messageContent = createElement('div', 'kakao-message-content');
         if (name) {
-            messageContent.appendChild(createElement('span', 'kakao-message-name', { textContent: name }));
+            messageContent.appendChild(createElement('span', 'kakao-message-name has-name', { textContent: name }));
         }
         
         const bubble = createElement('div', 'kakao-bubble-left');
@@ -362,6 +364,74 @@ function createEmptyState(icon, title, text, action) {
     return container;
 }
 
+function createKakaoBottomSheet(items, options = {}) {
+    const overlay = createElement('div', 'kakao-bottom-sheet-overlay');
+    const sheet = createElement('div', 'kakao-bottom-sheet');
+    
+    const handle = createElement('div', 'kakao-bottom-sheet-handle');
+    sheet.appendChild(handle);
+    
+    if (options.title) {
+        const title = createElement('div', 'kakao-bottom-sheet-title', { textContent: options.title });
+        sheet.appendChild(title);
+    }
+    
+    const grid = createElement('div', 'kakao-bottom-sheet-grid');
+    
+    items.forEach(item => {
+        const gridItem = createElement('div', 'kakao-bottom-sheet-item');
+        
+        if (!item.icon && !item.label) {
+            gridItem.style.visibility = 'hidden';
+            grid.appendChild(gridItem);
+            return;
+        }
+        
+        gridItem.addEventListener('click', () => {
+            close();
+            if (item.onSelect) item.onSelect();
+        });
+        
+        const iconWrap = createElement('div', 'kakao-bottom-sheet-item-icon');
+        iconWrap.appendChild(createIcon(item.icon));
+        gridItem.appendChild(iconWrap);
+        
+        const label = createElement('span', 'kakao-bottom-sheet-item-label', { textContent: item.label });
+        gridItem.appendChild(label);
+        
+        grid.appendChild(gridItem);
+    });
+    
+    sheet.appendChild(grid);
+    
+    let isOpen = false;
+    
+    function open() {
+        isOpen = true;
+        const container = window.App?.getAppContainer() || document.getElementById('app');
+        container.appendChild(overlay);
+        container.appendChild(sheet);
+        requestAnimationFrame(() => {
+            overlay.classList.add('active');
+            sheet.classList.add('active');
+        });
+    }
+    
+    function close() {
+        isOpen = false;
+        overlay.classList.remove('active');
+        sheet.classList.remove('active');
+        setTimeout(() => {
+            overlay.remove();
+            sheet.remove();
+        }, 300);
+    }
+    
+    overlay.addEventListener('click', close);
+    
+    return { open, close, overlay, sheet };
+}
+
 export {
     createElement,
     createIcon,
@@ -377,5 +447,6 @@ export {
     createKakaoBubble,
     createToast,
     createEmptyState,
-    formatTime
+    formatTime,
+    createKakaoBottomSheet
 };
