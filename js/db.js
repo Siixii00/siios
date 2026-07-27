@@ -1,7 +1,7 @@
 ﻿import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
 
 const DB_NAME = 'sxios';
-const DB_VERSION = 4;
+const DB_VERSION = 5;
 const LEGACY_DB_NAMES = ['ios-classic-ai'];
 
 let db = null;
@@ -18,6 +18,17 @@ async function cleanLegacyDatabases() {
 }
 
 async function initDB() {
+    if (db) {
+        try {
+            const stores = db.objectStoreNames;
+            if (!stores.contains('users')) {
+                db.close();
+                db = null;
+            }
+        } catch (e) {
+            db = null;
+        }
+    }
     if (db) return db;
 
     await cleanLegacyDatabases();
@@ -71,8 +82,37 @@ async function initDB() {
                 wikiStore.createIndex('title', 'title');
                 wikiStore.createIndex('updated_at', 'updated_at');
             }
+
+            if (!database.objectStoreNames.contains('users')) {
+                database.createObjectStore('users', { keyPath: 'id' });
+            }
+        },
+        blocked() {
+            if (db) { db.close(); db = null; }
+        },
+        blocking() {
+            if (db) { db.close(); db = null; }
         }
     });
+
+    if (!db.objectStoreNames.contains('users')) {
+        db.close();
+        db = null;
+        const newVersion = DB_VERSION + 1;
+        db = await openDB(DB_NAME, newVersion, {
+            upgrade(database) {
+                if (!database.objectStoreNames.contains('users')) {
+                    database.createObjectStore('users', { keyPath: 'id' });
+                }
+            },
+            blocked() {
+                if (db) { db.close(); db = null; }
+            },
+            blocking() {
+                if (db) { db.close(); db = null; }
+            }
+        });
+    }
 
     return db;
 }
@@ -584,4 +624,52 @@ const WikiRecordsDB = {
     }
 };
 
-export { initDB, ChatsDB, MessagesDB, WorldInfoDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, hashContent, cosineSimilarity };
+const UsersDB = {
+    async getAll() {
+        const database = await initDB();
+        return database.getAll('users');
+    },
+
+    async getById(id) {
+        const database = await initDB();
+        return database.get('users', id);
+    },
+
+    async create(data = {}) {
+        const database = await initDB();
+        const id = generateId();
+        const user = {
+            id,
+            name: data.name || '',
+            avatar: data.avatar || '',
+            nicknames: data.nicknames || [],
+            personality: data.personality || '',
+            mbti: data.mbti || '',
+            speech_style: data.speech_style || '',
+            sleep_start: data.sleep_start || '23:00',
+            sleep_end: data.sleep_end || '07:00',
+            assigned_chars: data.assigned_chars || [],
+            taboos: data.taboos || [],
+            created_at: Date.now(),
+            ...data
+        };
+        await database.put('users', user);
+        return user;
+    },
+
+    async update(id, data) {
+        const database = await initDB();
+        const user = await database.get('users', id);
+        if (!user) throw new Error('User not found');
+        const updated = { ...user, ...data };
+        await database.put('users', updated);
+        return updated;
+    },
+
+    async delete(id) {
+        const database = await initDB();
+        await database.delete('users', id);
+    }
+};
+
+export { initDB, ChatsDB, MessagesDB, WorldInfoDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, hashContent, cosineSimilarity };

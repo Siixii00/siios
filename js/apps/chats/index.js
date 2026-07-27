@@ -1,6 +1,7 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBottomNav, createKakaoChatCell, createEmptyState, createToast } from '../../components.js';
 import { ChatsDB } from '../../db.js';
+import { CHATS_TABS } from './chats-nav.js';
 
 let chats = [];
 
@@ -65,16 +66,7 @@ async function renderChatsList() {
     
     container.appendChild(main);
     
-    const nav = createKakaoBottomNav(
-        [
-            { icon: 'person', path: '/chats' },
-            { icon: 'chat_bubble', path: '/chats' },
-            { icon: 'settings', path: '/settings' },
-            { icon: 'more_horiz', path: '/settings' }
-        ],
-        1,
-        (index, tab) => Router.navigate(tab.path)
-    );
+    const nav = createKakaoBottomNav(CHATS_TABS, 1, (index, tab) => Router.navigate(tab.path));
     container.appendChild(nav);
     
     return { element: container, cleanup: null };
