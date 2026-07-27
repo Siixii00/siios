@@ -1,7 +1,7 @@
 ﻿import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
 
 const DB_NAME = 'sxios';
-const DB_VERSION = 5;
+const DB_VERSION = 6;
 const LEGACY_DB_NAMES = ['ios-classic-ai'];
 
 let db = null;
@@ -94,25 +94,6 @@ async function initDB() {
             if (db) { db.close(); db = null; }
         }
     });
-
-    if (!db.objectStoreNames.contains('users')) {
-        db.close();
-        db = null;
-        const newVersion = DB_VERSION + 1;
-        db = await openDB(DB_NAME, newVersion, {
-            upgrade(database) {
-                if (!database.objectStoreNames.contains('users')) {
-                    database.createObjectStore('users', { keyPath: 'id' });
-                }
-            },
-            blocked() {
-                if (db) { db.close(); db = null; }
-            },
-            blocking() {
-                if (db) { db.close(); db = null; }
-            }
-        });
-    }
 
     return db;
 }
