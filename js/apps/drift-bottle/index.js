@@ -1,33 +1,11 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
-import { SettingsDB } from '../../db.js';
-
-const TAROT_CARDS = [
-  { name: '愚者', meaning: '新的開始、自由、冒險' },
-  { name: '魔術師', meaning: '創造力、意志力、自信' },
-  { name: '女祭司', meaning: '直覺、潛意識、神秘' },
-  { name: '皇后', meaning: '豐盛、母性、創造' },
-  { name: '皇帝', meaning: '權威、結構、控制' },
-  { name: '教皇', meaning: '傳統、信仰、教導' },
-  { name: '戀人', meaning: '愛情、和諧、選擇' },
-  { name: '戰車', meaning: '意志、決心、勝利' },
-  { name: '力量', meaning: '勇氣、耐心、內在力量' },
-  { name: '隱者', meaning: '內省、孤獨、尋求' },
-  { name: '命運之輪', meaning: '命運、轉折、機會' },
-  { name: '正義', meaning: '公平、真相、因果' },
-  { name: '倒吊人', meaning: '犧牲、等待、新視角' },
-  { name: '死神', meaning: '結束、轉變、重生' },
-  { name: '節制', meaning: '平衡、調和、耐心' },
-  { name: '惡魔', meaning: '束縛、誘惑、執著' },
-  { name: '高塔', meaning: '突變、崩塌、覺醒' },
-  { name: '星星', meaning: '希望、靈感、平靜' },
-  { name: '月亮', meaning: '幻覺、恐懼、潛意識' },
-  { name: '太陽', meaning: '成功、喜悅、活力' },
-  { name: '審判', meaning: '重生、覺醒、決定' },
-  { name: '世界', meaning: '完成、整合、圓滿' }
-];
+import { CharactersDB, SettingsDB } from '../../db.js';
+import APIClient from '../../api.js';
+import { buildAppContext } from '../../core/app-context-builder.js';
 
 let lastCard = null;
+let selectedCharacterId = null;
 
 async function loadLastCard() {
   const saved = await SettingsDB.get('drift_last_card');
@@ -40,12 +18,101 @@ async function saveLastCard() {
   await SettingsDB.set('drift_last_card', lastCard);
 }
 
-function drawCard() {
-  const idx = Math.floor(Math.random() * TAROT_CARDS.length);
+async function generateDivinationReading(cardName, isUpright, characterId) {
+  const settings = await APIClient.getSettings();
+  
+  if (!settings.api_url || !settings.api_key) {
+    return {
+      meaning: isUpright ? '能量順暢，建議順勢而為' : '能量受阻，建議反思內在障礙',
+      advice: isUpright 
+        ? '此牌正位，能量順暢，建議順勢而為。'
+        : '此牌逆位，能量受阻，建議反思內在障礙。'
+    };
+  }
+  
+  const position = isUpright ? '正位' : '逆位';
+  
+  const context = await buildAppContext({
+    characterId: characterId,
+    userMessage: ''
+  });
+  
+  const tarotSystemPrompt = `
+你是一位專業的塔羅牌占卜師。請根據抽到的牌、牌位，以及角色的性格特質，提供個人化的占卜解讀。
+請用溫和、神秘且富有啟發性的語氣回應。
+回覆格式必須是JSON：
+{"meaning": "牌義解讀（一句話）", "advice": "具體建議（1-2句話）"}`;
+  
+  const fullSystemPrompt = context.systemPrompt + tarotSystemPrompt;
+  
+  const characterName = context.character?.name || '神秘人物';
+  
+  const userPrompt = `抽到了「${cardName}」牌，${position}。
+角色名稱：${characterName}
+請為此角色提供個人化的占卜解讀。`;
+  
+  try {
+    const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${settings.api_key}`
+      },
+      body: JSON.stringify({
+        model: settings.model || 'gpt-3.5-turbo',
+        messages: [
+          { role: 'system', content: fullSystemPrompt },
+          { role: 'user', content: userPrompt }
+        ],
+        temperature: 0.8,
+        max_tokens: 200
+      })
+    });
+    
+    if (!response.ok) {
+      throw new Error('API請求失敗');
+    }
+    
+    const data = await response.json();
+    const content = data.choices?.[0]?.message?.content;
+    
+    if (content) {
+      const parsed = JSON.parse(content);
+      return {
+        meaning: parsed.meaning || (isUpright ? '能量順暢' : '能量受阻'),
+        advice: parsed.advice || (isUpright ? '順勢而為。' : '反思內在障礙。')
+      };
+    }
+  } catch (error) {
+    console.error('生成占卜解讀失敗:', error);
+  }
+  
+  return {
+    meaning: isUpright ? '能量順暢，建議順勢而為' : '能量受阻，建議反思內在障礙',
+    advice: isUpright 
+      ? '此牌正位，能量順暢，建議順勢而為。'
+      : '此牌逆位，能量受阻，建議反思內在障礙。'
+  };
+}
+
+const TAROT_CARD_NAMES = [
+  '愚者', '魔術師', '女祭司', '皇后', '皇帝', '教皇', '戀人', '戰車',
+  '力量', '隱者', '命運之輪', '正義', '倒吊人', '死神', '節制', '惡魔',
+  '高塔', '星星', '月亮', '太陽', '審判', '世界'
+];
+
+async function drawCard(characterId) {
+  const idx = Math.floor(Math.random() * TAROT_CARD_NAMES.length);
+  const cardName = TAROT_CARD_NAMES[idx];
   const upright = Math.random() > 0.5;
+  
+  const reading = await generateDivinationReading(cardName, upright, characterId);
+  
   lastCard = {
-    ...TAROT_CARDS[idx],
+    name: cardName,
     upright,
+    meaning: reading.meaning,
+    advice: reading.advice,
     date: Date.now()
   };
   return lastCard;
@@ -60,11 +127,7 @@ function renderCard(container, card) {
       <div class="card-name">${card.name}</div>
       <div class="card-position">${card.upright ? '正位' : '逆位'}</div>
       <div class="card-meaning">${card.meaning}</div>
-      <div class="card-advice">
-        ${card.upright 
-          ? '此牌正位，能量順暢，建議順勢而為。'
-          : '此牌逆位，能量受阻，建議反思內在障礙。'}
-      </div>
+      <div class="card-advice">${card.advice}</div>
     </div>
   ` : `
     <div class="card-placeholder">
@@ -74,8 +137,29 @@ function renderCard(container, card) {
   `;
 }
 
+function renderCharacterSelector(characters) {
+  return `
+    <div class="character-selector">
+      <label class="selector-label">選擇角色</label>
+      <select id="character-select" class="character-select">
+        <option value="">-- 不指定角色 --</option>
+        ${characters.map(char => `
+          <option value="${char.id}" ${selectedCharacterId === char.id ? 'selected' : ''}>${char.name}</option>
+        `).join('')}
+      </select>
+    </div>
+  `;
+}
+
 async function renderDriftBottle(params) {
   await loadLastCard();
+  
+  const characters = await CharactersDB.getAll();
+  
+  const savedCharId = await SettingsDB.get('drift_selected_character');
+  if (savedCharId) {
+    selectedCharacterId = savedCharId;
+  }
   
   const container = createElement('div', 'app-container drift-app');
   
@@ -89,6 +173,8 @@ async function renderDriftBottle(params) {
     
     <div class="page">
       <div class="ocean-bg"></div>
+      
+      ${renderCharacterSelector(characters)}
       
       <div class="card-display"></div>
       
@@ -107,13 +193,27 @@ async function renderDriftBottle(params) {
   const backBtn = container.querySelector('.ios-back-btn');
   backBtn.onclick = () => Router.back();
   
+  const charSelect = container.querySelector('#character-select');
+  if (charSelect) {
+    charSelect.onchange = async (e) => {
+      selectedCharacterId = e.target.value || null;
+      await SettingsDB.set('drift_selected_character', selectedCharacterId);
+    };
+  }
+  
   const drawBtn = container.querySelector('.draw-btn');
   
   if (drawBtn) {
     drawBtn.onclick = async () => {
-      const card = drawCard();
+      drawBtn.disabled = true;
+      drawBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 占卜中...';
+      
+      const card = await drawCard(selectedCharacterId);
       renderCard(container, card);
       await saveLastCard();
+      
+      drawBtn.disabled = false;
+      drawBtn.innerHTML = '<i class="fas fa-water_bottle"></i> 撿起漂流瓶';
     };
   }
   

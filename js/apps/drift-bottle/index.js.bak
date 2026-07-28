@@ -1,0 +1,195 @@
+import Router from '../../router.js';
+import { createElement } from '../../components.js';
+import { CharactersDB, SettingsDB } from '../../db.js';
+import APIClient from '../../api.js';
+
+let lastCard = null;
+
+async function loadLastCard() {
+  const saved = await SettingsDB.get('drift_last_card');
+  if (saved) {
+    lastCard = saved;
+  }
+}
+
+async function saveLastCard() {
+  await SettingsDB.set('drift_last_card', lastCard);
+}
+
+async function generateDivinationReading(cardName, isUpright, character) {
+  const settings = await APIClient.getSettings();
+  
+  if (!settings.api_url || !settings.api_key) {
+    return {
+      meaning: isUpright ? '?½é??†æš¢ï¼Œå»ºè­°é??¢è€Œç‚º' : '?½é??—é˜»ï¼Œå»ºè­°å??å…§?¨é?ç¤?,
+      advice: isUpright 
+        ? 'æ­¤ç?æ­??ï¼Œèƒ½?é??¢ï?å»ºè­°?†å‹¢?Œç‚º??
+        : 'æ­¤ç??†ä?ï¼Œèƒ½?å??»ï?å»ºè­°?æ€å…§?¨é?ç¤™ã€?
+    };
+  }
+  
+  const position = isUpright ? 'æ­??' : '?†ä?';
+  const characterPersonality = character?.personality || 'ä¸€ä½ç?ç§˜ç?è§’è‰²';
+  const characterName = character?.name || 'ç¥žç?äººç‰©';
+  
+  const systemPrompt = `ä½ æ˜¯ä¸€ä½å?æ¥­ç?å¡”ç??Œå??œå¸«?‚è??¹æ??½åˆ°?„ç??ç?ä½ï?ä»¥å?è§’è‰²?„æ€§æ ¼?¹è³ªï¼Œæ?ä¾›å€‹äºº?–ç?? å?è§????
+è«‹ç”¨æº«å??ç?ç§˜ä?å¯Œæ??Ÿç™¼?§ç?èªžæ°£?žæ???
+?žè??¼å?å¿…é??¯JSONï¼?
+{"meaning": "?Œç¾©è§??ï¼ˆä??¥è©±ï¼?, "advice": "?·é?å»ºè­°ï¼?-2?¥è©±ï¼?}`;
+  
+  const userPrompt = `?½åˆ°äº†ã€?{cardName}?ç?ï¼?{position}??
+è§’è‰²?ç¨±ï¼?{characterName}
+è§’è‰²?§æ ¼ï¼?{characterPersonality}
+è«‹ç‚ºæ­¤è??²æ?ä¾›å€‹äºº?–ç?? å?è§???‚`;
+  
+  try {
+    const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${settings.api_key}`
+      },
+      body: JSON.stringify({
+        model: settings.model || 'gpt-3.5-turbo',
+        messages: [
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: userPrompt }
+        ],
+        temperature: 0.8,
+        max_tokens: 200
+      })
+    });
+    
+    if (!response.ok) {
+      throw new Error('APIè«‹æ?å¤±æ?');
+    }
+    
+    const data = await response.json();
+    const content = data.choices?.[0]?.message?.content;
+    
+    if (content) {
+      const parsed = JSON.parse(content);
+      return {
+        meaning: parsed.meaning || (isUpright ? '?½é??†æš¢' : '?½é??—é˜»'),
+        advice: parsed.advice || (isUpright ? '?†å‹¢?Œç‚º?? : '?æ€å…§?¨é?ç¤™ã€?)
+      };
+    }
+  } catch (error) {
+    console.error('?Ÿæ?? å?è§??å¤±æ?:', error);
+  }
+  
+  return {
+    meaning: isUpright ? '?½é??†æš¢ï¼Œå»ºè­°é??¢è€Œç‚º' : '?½é??—é˜»ï¼Œå»ºè­°å??å…§?¨é?ç¤?,
+    advice: isUpright 
+      ? 'æ­¤ç?æ­??ï¼Œèƒ½?é??¢ï?å»ºè­°?†å‹¢?Œç‚º??
+      : 'æ­¤ç??†ä?ï¼Œèƒ½?å??»ï?å»ºè­°?æ€å…§?¨é?ç¤™ã€?
+  };
+}
+
+const TAROT_CARD_NAMES = [
+  '?šè€?, 'é­”è?å¸?, 'å¥³ç¥­??, '?‡å?', '?‡å?', '?™ç?', '?€äº?, '?°è?',
+  '?›é?', '?±è€?, '?½é?ä¹‹è¼ª', 'æ­?¾©', '?’å?äº?, 'æ­»ç?', 'ç¯€??, '?¡é?',
+  'é«˜å?', '?Ÿæ?', '?ˆäº®', 'å¤ªé™½', 'å¯©åˆ¤', 'ä¸–ç?'
+];
+
+async function drawCard(character) {
+  const idx = Math.floor(Math.random() * TAROT_CARD_NAMES.length);
+  const cardName = TAROT_CARD_NAMES[idx];
+  const upright = Math.random() > 0.5;
+  
+  const reading = await generateDivinationReading(cardName, upright, character);
+  
+  lastCard = {
+    name: cardName,
+    upright,
+    meaning: reading.meaning,
+    advice: reading.advice,
+    date: Date.now()
+  };
+  return lastCard;
+}
+
+function renderCard(container, card) {
+  const display = container.querySelector('.card-display');
+  if (!display) return;
+  
+  display.innerHTML = card ? `
+    <div class="tarot-card ${card.upright ? 'upright' : 'reversed'}">
+      <div class="card-name">${card.name}</div>
+      <div class="card-position">${card.upright ? 'æ­??' : '?†ä?'}</div>
+      <div class="card-meaning">${card.meaning}</div>
+      <div class="card-advice">${card.advice}</div>
+    </div>
+  ` : `
+    <div class="card-placeholder">
+      <i class="fas fa-water"></i>
+      <p>é»žæ?ä¸‹æ–¹?‰é??¿èµ·æ¼‚æ???/p>
+    </div>
+  `;
+}
+
+async function renderDriftBottle(params) {
+  await loadLastCard();
+  
+  const characters = await CharactersDB.getAll();
+  const character = characters.length > 0 ? characters[0] : null;
+  
+  const container = createElement('div', 'app-container drift-app');
+  
+  container.innerHTML = `
+    <header class="ios-header">
+      <button class="ios-back-btn">
+        <i class="fas fa-chevron-left"></i> è¿”å?
+      </button>
+      <h1 class="menu-title">æ¼‚æ???/h1>
+    </header>
+    
+    <div class="page">
+      <div class="ocean-bg"></div>
+      
+      <div class="card-display"></div>
+      
+      <button class="draw-btn">
+        <i class="fas fa-water_bottle"></i>
+        ?¿èµ·æ¼‚æ???
+      </button>
+      
+      <div class="history-section">
+        <h3>? å?èªªæ?</h3>
+        <p>æ¼‚æ??¶æ˜¯ä¸€ç¨®å‘½?‹å??œæ–¹å¼ã€‚æ’¿èµ·æ?æµç“¶ï¼Œç²å¾—ç•¶ä¸‹ç??‡å???/p>
+      </div>
+    </div>
+  `;
+  
+  const backBtn = container.querySelector('.ios-back-btn');
+  backBtn.onclick = () => Router.back();
+  
+  const drawBtn = container.querySelector('.draw-btn');
+  
+  if (drawBtn) {
+    drawBtn.onclick = async () => {
+      drawBtn.disabled = true;
+      drawBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ? å?ä¸?..';
+      
+      const card = await drawCard(character);
+      renderCard(container, card);
+      await saveLastCard();
+      
+      drawBtn.disabled = false;
+      drawBtn.innerHTML = '<i class="fas fa-water_bottle"></i> ?¿èµ·æ¼‚æ???;
+    };
+  }
+  
+  renderCard(container, lastCard);
+  
+  return { element: container, cleanup: null };
+}
+
+export default {
+  id: 'drift-bottle',
+  name: 'æ¼‚æ???,
+  icon: 'water_bottle',
+  routes: [{ path: '/drift-bottle', render: renderDriftBottle }],
+  navItem: { label: 'æ¼‚æ???, icon: 'water_bottle', path: '/drift-bottle', showInNav: true, order: 112 },
+  stylesPath: 'js/apps/drift-bottle/style.css'
+};

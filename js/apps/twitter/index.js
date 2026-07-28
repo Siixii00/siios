@@ -1,6 +1,8 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast, createEmptyState } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
+import APIClient from '../../api.js';
+import { buildAppContext } from '../../core/app-context-builder.js';
 
 let userTweets = [];
 let npcTweets = [];
@@ -10,6 +12,8 @@ let pendingReactions = [];
 let activeTab = 'forYou';
 let fabMenuOpen = false;
 let notificationInterval = null;
+let selectedCharacterId = null;
+let characters = [];
 
 const DEFAULT_AVATAR = 'linear-gradient(135deg, #2d89ef, #8ec5ff)';
 
@@ -362,6 +366,93 @@ async function processPendingReactions() {
     await savePendingReactions();
 }
 
+async function generateTweetWithAI(characterId = null) {
+    try {
+        const settings = await SettingsDB.getAll();
+        
+        if (!settings.api_url || !settings.api_key) {
+            createToast('請先設定 API URL 和 API Key');
+            return null;
+        }
+        
+        const context = await buildAppContext({ characterId });
+        
+        const systemPrompt = context.systemPrompt 
+            ? `${context.systemPrompt}\n\n請用一條簡短的推文（140字以內）表達你現在的想法或心情。直接輸出推文內容，不要加任何解釋。`
+            : '請生成一條簡短有趣的推文（140字以內）。直接輸出推文內容，不要加任何解釋。';
+        
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${settings.api_key}`
+            },
+            body: JSON.stringify({
+                model: settings.model || 'gpt-3.5-turbo',
+                messages: [
+                    { role: 'system', content: systemPrompt }
+                ],
+                temperature: 0.9,
+                max_tokens: 150
+            })
+        });
+        
+        if (!response.ok) {
+            throw new Error(`API 錯誤: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        return data.choices?.[0]?.message?.content?.trim() || null;
+    } catch (error) {
+        console.error('[Twitter] AI 生成推文失敗:', error);
+        createToast('生成推文失敗，請稍後再試');
+        return null;
+    }
+}
+
+async function generateReplyWithAI(tweet, characterId = null) {
+    try {
+        const settings = await SettingsDB.getAll();
+        
+        if (!settings.api_url || !settings.api_key) {
+            return null;
+        }
+        
+        const context = await buildAppContext({ characterId });
+        
+        const systemPrompt = context.systemPrompt
+            ? `${context.systemPrompt}\n\n請對以下推文寫一條簡短回覆（50字以內）。保持你的性格特點。直接輸出回覆內容。`
+            : '請對以下推文寫一條簡短友善的回覆（50字以內）。直接輸出回覆內容。';
+        
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${settings.api_key}`
+            },
+            body: JSON.stringify({
+                model: settings.model || 'gpt-3.5-turbo',
+                messages: [
+                    { role: 'system', content: systemPrompt },
+                    { role: 'user', content: `推文內容: "${tweet.content}"\n作者: ${tweet.author}` }
+                ],
+                temperature: 0.8,
+                max_tokens: 100
+            })
+        });
+        
+        if (!response.ok) {
+            return null;
+        }
+        
+        const data = await response.json();
+        return data.choices?.[0]?.message?.content?.trim() || null;
+    } catch (error) {
+        console.error('[Twitter] AI 生成回覆失敗:', error);
+        return null;
+    }
+}
+
 async function executeReaction(reaction) {
     const { type, fromName, tweetContent, tweetAuthor } = reaction;
     
@@ -386,15 +477,21 @@ async function executeReaction(reaction) {
             break;
             
         case 'reply':
-            const replies = ['這個觀點很有趣！', '同意！', '說得好', '推一個', '真的假的？', '哈哈沒錯', '我也這麼覺得', '太扯了吧', '感謝分享！', '學到了新東西'];
-            const replyContent = replies[Math.floor(Math.random() * replies.length)];
-            await addNotification({
-                type: 'reply',
-                fromName,
-                tweetContent,
-                replyContent
-            });
-            await addNpcTweet(fromName, replyContent);
+            const tweet = {
+                content: tweetContent,
+                author: tweetAuthor
+            };
+            const replyContent = await generateReplyWithAI(tweet);
+            
+            if (replyContent) {
+                await addNotification({
+                    type: 'reply',
+                    fromName,
+                    tweetContent,
+                    replyContent
+                });
+                await addNpcTweet(fromName, replyContent);
+            }
             break;
     }
 }
@@ -585,6 +682,7 @@ async function renderTwitterHome() {
     bookmarks = await getBookmarks();
     notifications = await getNotifications();
     pendingReactions = await getPendingReactions();
+    characters = await CharactersDB.getAll();
     
     const container = createElement('div', 'twitter-app');
     
@@ -620,6 +718,23 @@ async function renderTwitterHome() {
     
     main.appendChild(tabs);
     
+    const characterSelector = createElement('section', 'card character-selector');
+    const characterOptions = characters.map(c => 
+        `<option value="${c.id}" ${c.id === selectedCharacterId ? 'selected' : ''}>${c.name}</option>`
+    ).join('');
+    characterSelector.innerHTML = `
+        <label for="character-select">角色：</label>
+        <select id="character-select" class="character-select">
+            <option value="">預設</option>
+            ${characterOptions}
+        </select>
+    `;
+    const select = characterSelector.querySelector('#character-select');
+    select.onchange = (e) => {
+        selectedCharacterId = e.target.value || null;
+    };
+    main.appendChild(characterSelector);
+    
     const feedContainer = createElement('div', 'feed-container');
     await renderFeed(feedContainer);
     main.appendChild(feedContainer);
@@ -646,9 +761,13 @@ async function renderTwitterHome() {
         showComposeModal();
     };
     
-    fabMenu.querySelector('.fab-ai-generate').onclick = () => {
+    fabMenu.querySelector('.fab-ai-generate').onclick = async () => {
         closeFabMenu(fabBtn, fabMenu);
-        createToast('AI 生成功能開發中');
+        createToast('正在生成推文...');
+        const content = await generateTweetWithAI(selectedCharacterId);
+        if (content) {
+            await addTweet(content);
+        }
     };
     
     fabBtn.onclick = () => showFabMenu(fabBtn, fabMenu);

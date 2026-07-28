@@ -1,4 +1,4 @@
-.drift-app {
+﻿.drift-app {
   --drift-bg: #0d47a1;
   --drift-card: #1565c0;
   --drift-text: #e3f2fd;
@@ -133,3 +133,8 @@
   color: var(--drift-muted);
   line-height: 1.5;
 }
+
+.character-selector { width: 100%; max-width: 320px; margin-bottom: 16px; }
+.selector-label { display: block; font-size: 14px; color: var(--drift-text); margin-bottom: 8px; }
+.character-select { width: 100%; padding: 12px 16px; background: rgba(255, 255, 255, 0.15); color: var(--drift-text); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 8px; font-size: 14px; cursor: pointer; }
+.character-select option { background: #1565c0; color: white; }

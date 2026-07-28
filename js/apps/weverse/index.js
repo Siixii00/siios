@@ -1,6 +1,8 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
+import APIClient from '../../api.js';
+import { buildAppContext } from '../../core/app-context-builder.js';
 
 const aiPostStarters = ['今天練習結束了', '剛剛彩排回來', '想來打個招呼', '晚安前留個訊息'];
 const aiPostClosers = ['你們今天也辛苦了', '等等見', '記得吃飯', '我會再來'];
@@ -9,7 +11,7 @@ let groups = [];
 let activeGroupId = '';
 let isArtistMode = false;
 let joinedGroupIds = [];
-let viewerSettings = { selectedGroupId: '', aiSourceType: 'all' };
+let viewerSettings = { selectedGroupId: '', aiSourceType: 'all', selectedCharacterId: '' };
 let saveTimer = null;
 let pendingAvatarImageData = '';
 
@@ -60,6 +62,111 @@ function randomFrom(list) {
     return list[Math.floor(Math.random() * list.length)];
 }
 
+async function generateContentWithAI(context, characterId = null) {
+    try {
+        const settings = await APIClient.getSettings();
+        if (!settings.api_url || !settings.api_key) {
+            return null;
+        }
+
+        const appContext = await buildAppContext({
+            characterId: characterId,
+            userMessage: context
+        });
+
+        const messages = [
+            { role: 'system', content: appContext.systemPrompt },
+            { role: 'user', content: context }
+        ];
+
+        const response = await fetch(settings.api_url + '/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer ' + settings.api_key
+            },
+            body: JSON.stringify({
+                model: settings.model || 'gpt-3.5-turbo',
+                messages,
+                temperature: 0.9,
+                max_tokens: 150
+            })
+        });
+
+        if (!response.ok) return null;
+
+        const data = await response.json();
+        return data.choices?.[0]?.message?.content?.trim() || null;
+    } catch (error) {
+        console.error('AI generation error:', error);
+        return null;
+    }
+}
+async function generateArtistPost(group) {
+    const starter = randomFrom(aiPostStarters);
+    const closer = randomFrom(aiPostClosers);
+    
+    ensureArtistProfile(group);
+    const members = group.artistProfile?.members || [];
+    const memberNames = members.length > 0 ? members.map(m => m.name).join('、') : group.name;
+
+    const context = '請為' + memberNames + '生成一則與粉絲分享的貼文，以"' + starter + '"開頭，以"' + closer + '"結尾。內容要親切自然，像是藝人跟粉絲打招呼。';
+
+    const characterId = viewerSettings.selectedCharacterId || null;
+    const aiContent = await generateContentWithAI(context, characterId);
+    
+    if (aiContent) {
+        return aiContent;
+    }
+
+    return starter + '！' + randomFrom(['今天天氣不錯', '有個小驚喜想跟你們分享', '想跟你們說說話']) + '。' + closer + ' 💕';
+}
+
+async function generateFanReply(group) {
+    const fanTemplates = [
+        '永遠支持你們！加油 💪',
+        '太棒了！期待下一次見面 ✨',
+        '辛苦了！要好好休息喔 🥰',
+        '最喜歡你們了！永遠愛你們 💖',
+        '超級期待的！一定會支持到底 🎉'
+    ];
+
+    const context = '作為' + group.name + '的粉絲，請生成一句熱情友善的留言，表達對藝人的支持與喜愛。';
+
+    const characterId = viewerSettings.selectedCharacterId || null;
+    const aiContent = await generateContentWithAI(context, characterId);
+    
+    if (aiContent) {
+        return aiContent;
+    }
+
+    return randomFrom(fanTemplates);
+}
+
+async function generateStoryContent(group) {
+    ensureArtistProfile(group);
+    const members = group.artistProfile?.members || [];
+    const memberName = members.length > 0 ? randomFrom(members).name : group.name;
+
+    const context = '請為' + memberName + '生成一則限時動態的簡短文字（20字以內），像是日常生活的分享。';
+
+    const characterId = viewerSettings.selectedCharacterId || null;
+    const aiContent = await generateContentWithAI(context, characterId);
+    
+    if (aiContent) {
+        return aiContent.substring(0, 50);
+    }
+
+    const storyTemplates = [
+        '今天的天氣 ☀️',
+        '練習中 💪',
+        '早上好！',
+        '晚安 🌙',
+        '小吃貨模式 🍰'
+    ];
+
+    return randomFrom(storyTemplates);
+}
 function getActiveGroup() {
     return groups.find(g => g.id === activeGroupId) || null;
 }
@@ -107,6 +214,7 @@ function deleteArtistGroup(groupId) {
     if (activeGroupId === groupId) activeGroupId = '';
     scheduleSettingsSave();
 }
+
 function renderGroupList() {
     const groupListEl = createElement('div', 'group-list card');
     if (isArtistMode) {
@@ -126,7 +234,6 @@ function renderGroupList() {
     }
     return groupListEl;
 }
-
 function renderStories(group) {
     const storyStripEl = createElement('div', 'story-strip');
     ensureArtistProfile(group);
@@ -146,7 +253,7 @@ function renderStories(group) {
     }
     storyItems.forEach(story => {
         const item = createElement('article', 'story-item');
-        item.innerHTML = `<span class="avatar ${story.avatarImage ? 'has-image' : ''}" ${story.avatarImage ? `style="background-image:url('${story.avatarImage}')"` : `style="background:${story.color}"`}>${story.avatarImage ? '' : story.avatar}</span><span class="name">${story.name}</span>`;
+        item.innerHTML = '<span class="avatar ' + (story.avatarImage ? 'has-image' : '') + '" ' + (story.avatarImage ? 'style="background-image:url(\'' + story.avatarImage + '\')"' : 'style="background:' + story.color + '"') + '>' + (story.avatarImage ? '' : story.avatar) + '</span><span class="name">' + story.name + '</span>';
         storyStripEl.appendChild(item);
     });
     return storyStripEl;
@@ -237,6 +344,22 @@ function createCreateGroupModal(onConfirm) {
     modal.onclick = (e) => { if (e.target === modal) modal.remove(); };
     return modal;
 }
+
+async function renderCharacterSelector() {
+    const container = createElement('div', 'character-selector card');
+    const characters = await CharactersDB.getAll();
+    
+    let html = '<label class="character-select-label"><span>AI 角色：</span><select id="character-select">';
+    html += '<option value="">預設</option>';
+    characters.forEach(char => {
+        const selected = viewerSettings.selectedCharacterId === char.id ? ' selected' : '';
+        html += '<option value="' + char.id + '"' + selected + '>' + char.name + '</option>';
+    });
+    html += '</select></label>';
+    
+    container.innerHTML = html;
+    return container;
+}
 async function renderWeverse(params) {
     await loadSettings();
     const container = createElement('div', 'weverse-app');
@@ -251,17 +374,39 @@ async function renderWeverse(params) {
     main.appendChild(renderGroupList());
     main.appendChild(renderHeroCover(currentGroup));
     if (isArtistMode && !activeGroupId) main.appendChild(renderArtistGroupCards());
-    else if (currentGroup) { main.appendChild(renderStories(currentGroup)); main.appendChild(renderFeed(currentGroup)); main.appendChild(renderComposer()); }
+    else if (currentGroup) { 
+        main.appendChild(renderStories(currentGroup)); 
+        main.appendChild(renderFeed(currentGroup)); 
+        main.appendChild(renderComposer());
+        const charSelector = await renderCharacterSelector();
+        main.appendChild(charSelector);
+    }
     container.appendChild(main);
-    const renderUI = () => {
+    const renderUI = async () => {
         const newMain = createElement('main', 'wv-main');
         newMain.appendChild(renderGroupList());
         const newCurrentGroup = getActiveGroup();
         newMain.appendChild(renderHeroCover(newCurrentGroup));
         if (isArtistMode && !activeGroupId) newMain.appendChild(renderArtistGroupCards());
-        else if (newCurrentGroup) { newMain.appendChild(renderStories(newCurrentGroup)); newMain.appendChild(renderFeed(newCurrentGroup)); newMain.appendChild(renderComposer()); }
+        else if (newCurrentGroup) { 
+            newMain.appendChild(renderStories(newCurrentGroup)); 
+            newMain.appendChild(renderFeed(newCurrentGroup)); 
+            newMain.appendChild(renderComposer());
+            const charSelector = await renderCharacterSelector();
+            newMain.appendChild(charSelector);
+        }
         const oldMain = container.querySelector('.wv-main');
         if (oldMain) oldMain.replaceWith(newMain);
+        bindCharacterSelectEvent(container);
+    };
+    const bindCharacterSelectEvent = (container) => {
+        const select = container.querySelector('#character-select');
+        if (select) {
+            select.onchange = (e) => {
+                viewerSettings.selectedCharacterId = e.target.value;
+                scheduleSettingsSave();
+            };
+        }
     };
     header.querySelector('#role-toggle').onclick = () => {
         isArtistMode = !isArtistMode;
@@ -287,18 +432,40 @@ async function renderWeverse(params) {
         const deleteGroupBtn = e.target.closest('.delete-group-btn');
         if (deleteGroupBtn && confirm('確定要刪除此團體嗎？')) { deleteArtistGroup(deleteGroupBtn.dataset.groupId); renderUI(); }
     };
-    const addPost = () => {
+    const addPost = async () => {
         const input = container.querySelector('#post-input');
         const text = input?.value.trim();
         if (!text || !currentGroup) return;
         ensureArtistProfile(currentGroup);
         currentGroup.posts = currentGroup.posts || [];
-        currentGroup.posts.unshift({ author: isArtistMode ? (currentGroup.artistProfile.name || currentGroup.name + ' Official') : '你', text, time: '剛剛', likes: 0, comments: 0 });
+
+        let finalText = text;
+        let finalAuthor = isArtistMode ? (currentGroup.artistProfile.name || currentGroup.name + ' Official') : '你';
+
+        if (isArtistMode && viewerSettings.aiSourceType !== 'manual') {
+            const aiGenerated = await generateArtistPost(currentGroup);
+            if (aiGenerated) {
+                finalText = aiGenerated;
+            }
+        } else if (!isArtistMode && viewerSettings.aiSourceType !== 'manual') {
+            const aiReply = await generateFanReply(currentGroup);
+            if (aiReply) {
+                finalText = aiReply;
+            }
+        }
+
+        currentGroup.posts.unshift({
+            author: finalAuthor,
+            text: finalText,
+            time: '剛剛',
+            likes: 0,
+            comments: 0
+        });
         input.value = '';
         scheduleSettingsSave();
         renderUI();
     };
-    setTimeout(() => { const postBtn = container.querySelector('#post-btn'); const postInput = container.querySelector('#post-input'); if (postBtn) postBtn.onclick = addPost; if (postInput) postInput.onkeydown = (e) => { if (e.key === 'Enter') { e.preventDefault(); addPost(); } }; }, 100);
+    setTimeout(() => { const postBtn = container.querySelector('#post-btn'); const postInput = container.querySelector('#post-input'); if (postBtn) postBtn.onclick = addPost; if (postInput) postInput.onkeydown = (e) => { if (e.key === 'Enter') { e.preventDefault(); addPost(); } }; bindCharacterSelectEvent(container); }, 100);
     return { element: container, cleanup: () => { if (saveTimer) clearTimeout(saveTimer); } };
 }
 

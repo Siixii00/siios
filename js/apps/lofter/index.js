@@ -1,6 +1,8 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast, createEmptyState } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
+import APIClient from '../../api.js';
+import { buildAppContext } from '../../core/app-context-builder.js';
 
 const STORAGE_KEYS = {
     cp_follow: 'lofter_cp_follow',
@@ -300,6 +302,15 @@ function createCpSelectSection() {
 
 function createContentSettings() {
     const container = createElement('div', '');
+    
+    const characterSelect = createElement('select', '');
+    characterSelect.id = 'lofter-character-select';
+    characterSelect.appendChild(createElement('option', '', { value: '', textContent: '選擇角色（可選）' }));
+    characters.forEach(c => {
+        characterSelect.appendChild(createElement('option', '', { value: c.id, textContent: c.name }));
+    });
+    const characterLabel = createLabel('生成角色', characterSelect);
+    container.appendChild(characterLabel);
     
     const ratingLabel = createElement('label', 'cp-field');
     ratingLabel.appendChild(createElement('span', '', { textContent: '內容分級' }));
@@ -655,6 +666,7 @@ async function handleGenerate() {
     
     const worldGrid = document.getElementById('worldsetting-grid');
     const interactionGrid = document.getElementById('interaction-grid');
+    const characterSelect = document.getElementById('lofter-character-select');
     
     const selectedWorldSettings = [];
     worldGrid?.querySelectorAll('.idea-card.selected').forEach(card => {
@@ -671,30 +683,154 @@ async function handleGenerate() {
     const rating = await getStorageItem(STORAGE_KEYS.content_rating) || 'general';
     const length = await getStorageItem(STORAGE_KEYS.content_length) || 'medium';
     
-    const post = {
-        id: Date.now().toString(),
-        title: `${selectedCp[0]} - ${selectedInteractions[0]?.title || '互動'}`,
-        author: getRandomAuthorName(),
-        category: '同人文',
-        text: '這是一篇由 AI 生成的同人文，請設定 API 以實際生成內容。',
-        fullContent: '這是一篇由 AI 生成的同人文。\n\n請在設定頁面配置 API 以啟用實際的內容生成功能。\n\n目前支援 OpenAI 相容 API 和 Gemini API。',
-        tags: [...selectedCp, '#同人文', ...(selectedWorldSettings[0]?.tags || []), ...(selectedInteractions[0]?.tags || [])],
-        time: '剛剛',
-        likes: 0,
-        comments: 0,
-        isR18: rating === 'r18',
-        contentLength: length
-    };
+    createToast('正在生成同人文...');
     
-    await saveGeneratedPost(post);
-    postData.recommend.unshift(post);
-    postData.follow.unshift(post);
+    const cpList = await getStorageItem(STORAGE_KEYS.cp_follow) || [];
+    const selectedCpData = selectedCp.map(cpName => {
+        return cpList.find(item => `${item.top} × ${item.bottom}` === cpName);
+    }).filter(Boolean);
     
-    const feed = document.getElementById('lofter-feed');
-    if (feed) renderFeed(feed);
+    const characterNames = new Set();
+    selectedCpData.forEach(cp => {
+        if (cp.top) characterNames.add(cp.top);
+        if (cp.bottom) characterNames.add(cp.bottom);
+    });
     
-    createToast('已生成同人文');
-    switchPage('home');
+    const characterData = [];
+    for (const name of characterNames) {
+        const char = characters.find(c => c.name === name);
+        if (char && char.personality) {
+            characterData.push({ name: char.name, personality: char.personality });
+        }
+    }
+    
+    const settings = await APIClient.getSettings();
+    
+    if (!settings.api_url || !settings.api_key) {
+        createToast('請先設定 API URL 和 API Key');
+        return;
+    }
+    
+    const selectedCharacterId = characterSelect?.value || null;
+    const context = await buildAppContext({ characterId: selectedCharacterId });
+    
+    let prompt = '請根據以下設定生成一篇同人文：\n\n';
+    
+    prompt += 'CP 配對：\n';
+    selectedCp.forEach(cp => {
+        prompt += `- ${cp}\n`;
+    });
+    prompt += '\n';
+    
+    if (characterData.length > 0) {
+        prompt += '角色性格設定：\n';
+        characterData.forEach(char => {
+            prompt += `${char.name}：${char.personality}\n\n`;
+        });
+    }
+    
+    if (selectedWorldSettings.length > 0) {
+        prompt += '世界觀設定：\n';
+        selectedWorldSettings.forEach(ws => {
+            prompt += `- ${ws.title}：${ws.desc}\n`;
+        });
+        prompt += '\n';
+    }
+    
+    if (selectedInteractions.length > 0) {
+        prompt += '互動梗：\n';
+        selectedInteractions.forEach(inter => {
+            prompt += `- ${inter.title}：${inter.desc}\n`;
+        });
+        prompt += '\n';
+    }
+    
+    const lengthMap = { short: '短篇（約500-1000字）', medium: '長篇（約2000-3000字）', series: '連載風格（開放式結局）' };
+    prompt += `文章長度：${lengthMap[length] || '長篇（約2000-3000字）'}\n\n`;
+    
+    if (rating === 'r18') {
+        prompt += '內容分級：R18 成人向（可包含成人內容）\n\n';
+    } else {
+        prompt += '內容分級：一般向（適合所有年齡層）\n\n';
+    }
+    
+    prompt += '請以流暢的中文撰寫，包含完整的劇情發展、角色互動和情感描寫。注意保持角色性格的一致性。';
+    
+    const messages = [];
+    
+    if (context.systemPrompt) {
+        messages.push({ role: 'system', content: context.systemPrompt });
+    }
+    
+    messages.push({ role: 'user', content: prompt });
+    
+    try {
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${settings.api_key}`
+            },
+            body: JSON.stringify({
+                model: settings.model || 'gpt-3.5-turbo',
+                messages: messages,
+                temperature: settings.temperature || 0.8,
+                top_p: settings.top_p || 1.0,
+                stream: false
+            })
+        });
+        
+        if (!response.ok) {
+            const errorData = await response.json().catch(() => ({}));
+            throw new Error(errorData.error?.message || `API 錯誤: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        const generatedContent = data.choices?.[0]?.message?.content || '';
+        
+        if (!generatedContent) {
+            throw new Error('無法生成內容');
+        }
+        
+        const summary = generatedContent.slice(0, 150) + '...';
+        const title = selectedInteractions.length > 0 
+            ? `${selectedCp[0]} - ${selectedInteractions[0].title}`
+            : `${selectedCp[0]} - 同人文`;
+        
+        const allTags = [...selectedCp, '#同人文', '#AI生成'];
+        selectedWorldSettings.forEach(ws => allTags.push(...ws.tags));
+        selectedInteractions.forEach(inter => allTags.push(...inter.tags));
+        
+        const post = {
+            id: Date.now().toString(),
+            title: title,
+            author: getRandomAuthorName(),
+            category: '同人文',
+            text: summary,
+            fullContent: generatedContent,
+            summary: summary,
+            tags: allTags,
+            time: '剛剛',
+            likes: 0,
+            comments: 0,
+            isR18: rating === 'r18',
+            contentLength: length,
+            generatedAt: Date.now()
+        };
+        
+        await saveGeneratedPost(post);
+        postData.recommend.unshift(post);
+        postData.follow.unshift(post);
+        
+        const feed = document.getElementById('lofter-feed');
+        if (feed) renderFeed(feed);
+        
+        createToast('同人文生成完成');
+        switchPage('home');
+        
+    } catch (error) {
+        createToast('生成失敗: ' + (error.message || '未知錯誤'));
+    }
 }
 
 async function saveBookmark(post) {

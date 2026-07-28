@@ -1,42 +1,129 @@
 import Router from '../../router.js';
 import { createElement } from '../../components.js';
-import { SettingsDB } from '../../db.js';
-
-const defaultContent = [
-  {
-    id: 'demo1',
-    title: '星際迷航',
-    desc: '一段跨越星系的冒險故事',
-    category: 'movie',
-    cover: 'https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?w=400',
-    html: `<div style="padding: 20px; background: linear-gradient(135deg, #0a0a1a, #1a1a3a); border-radius: 12px;">
-      <h2 style="color: #e50914; margin-bottom: 16px;">序幕：啟航</h2>
-      <p style="color: #b3b3b3; line-height: 1.8;">在無垠的宇宙深處，一艘星艦緩緩駛離了太空站...</p>
-    </div>`
-  },
-  {
-    id: 'demo2',
-    title: '校園戀曲',
-    desc: '青春校園裡的浪漫故事',
-    category: 'series',
-    cover: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400',
-    html: `<div style="padding: 20px; background: linear-gradient(135deg, #fce4ec, #f8bbd9); border-radius: 12px;">
-      <h2 style="color: #c2185b; margin-bottom: 16px;">第一章：相遇</h2>
-      <p style="color: #880e4f; line-height: 1.8;">櫻花盛開的季節，新的故事即將開始...</p>
-    </div>`
-  }
-];
+import APIClient from '../../api.js';
+import { CharactersDB, SettingsDB } from '../../db.js';
+import { buildAppContext } from '../../core/app-context-builder.js';
+import { TheaterSettingsDB } from '../../db.js';
 
 let contentData = [];
 let currentContent = null;
+let selectedCharacterId = null;
+
+async function buildTheaterContext(characterId) {
+    const baseContext = await buildAppContext({ characterId });
+    
+    const mountedIds = await SettingsDB.get('theater_mounted_settings') || [];
+    const theaterSettings = [];
+    
+    for (const id of mountedIds) {
+        const theater = await TheaterSettingsDB.getById(id);
+        if (theater && theater.enabled) {
+            theaterSettings.push(theater);
+        }
+    }
+    
+    let htmlGuide = '';
+    if (theaterSettings.length > 0 && theaterSettings[0].htmlGuide) {
+        htmlGuide = theaterSettings[0].htmlGuide;
+    }
+    
+    return {
+        ...baseContext,
+        theaterSettings,
+        htmlGuide
+    };
+}
 
 async function loadContent() {
   const saved = await SettingsDB.get('theater_content');
-  contentData = saved || [...defaultContent];
+  contentData = saved || [];
 }
 
 async function saveContent() {
   await SettingsDB.set('theater_content', contentData);
+}
+
+async function generateScript(character) {
+  const settings = await APIClient.getSettings();
+  
+  if (!settings.api_url || !settings.api_key) {
+    throw new Error('請先設定 API URL 和 API Key');
+  }
+  
+  const context = await buildTheaterContext(character.id);
+  
+  let theaterSettingsPrompt = '';
+  if (context.theaterSettings && context.theaterSettings.length > 0) {
+    theaterSettingsPrompt = '\n\n劇場設定：\n' + context.theaterSettings.map(t => 
+      `- ${t.name || '未命名'}: ${t.description || ''}`
+    ).join('\n');
+  }
+  
+  let htmlGuidePrompt = '';
+  if (context.htmlGuide) {
+    htmlGuidePrompt = `\n\nHTML 指南：\n${context.htmlGuide}`;
+  }
+  
+  const prompt = `你是一位專業編劇。請根據以下角色設定，創作一個短劇本：
+
+角色名稱：${character.name || '未命名'}
+角色描述：${character.description || ''}
+角色性格：${character.personality || ''}
+場景設定：${character.scenario || ''}${theaterSettingsPrompt}${htmlGuidePrompt}
+
+請生成：
+1. 一個吸引人的標題（5字以內）
+2. 簡短描述（20字以內）
+3. 一段劇本內容（HTML格式，包含標題和正文，約100-200字）
+
+請嚴格按照以下JSON格式回覆，不要包含其他文字：
+{"title":"標題","desc":"描述","category":"movie或series","html":"<div style=\"padding: 20px; border-radius: 12px;\"><h2>章節標題</h2><p>劇本內容...</p></div>"}`;
+
+  try {
+    const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${settings.api_key}`
+      },
+      body: JSON.stringify({
+        model: settings.model || 'gpt-3.5-turbo',
+        messages: [{ role: 'user', content: prompt }],
+        temperature: 0.9,
+        max_tokens: 500
+      })
+    });
+    
+    if (!response.ok) {
+      throw new Error(`API 錯誤: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    const content = data.choices?.[0]?.message?.content;
+    
+    if (!content) {
+      throw new Error('API 未返回內容');
+    }
+    
+    const jsonMatch = content.match(/\{[\s\S]*\}/);
+    if (!jsonMatch) {
+      throw new Error('無法解析生成內容');
+    }
+    
+    const result = JSON.parse(jsonMatch[0]);
+    return {
+      title: result.title || '未命名劇目',
+      desc: result.desc || '暫無描述',
+      category: result.category || 'movie',
+      cover: result.cover || '',
+      html: result.html || '<div style="padding: 20px;">生成內容解析失敗</div>'
+    };
+  } catch (error) {
+    if (error.message.includes('JSON')) {
+      throw error;
+    }
+    throw new Error('生成失敗: ' + error.message);
+  }
 }
 
 function renderContent(container) {
@@ -95,6 +182,12 @@ async function renderTheater(params) {
     <div class="page">
       <div class="theater-grid"></div>
       
+      <div class="character-selector-container">
+        <select class="character-selector">
+          <option value="">選擇角色...</option>
+        </select>
+      </div>
+      
       <button class="add-btn">
         <i class="fas fa-plus"></i> 新增劇目
       </button>
@@ -120,20 +213,66 @@ async function renderTheater(params) {
     closeDetailBtn.onclick = () => closeDetail(container);
   }
   
+  const characterSelector = container.querySelector('.character-selector');
+  const loadCharacters = async () => {
+    const characters = await CharactersDB.getAll();
+    if (characterSelector && characters && characters.length > 0) {
+      characterSelector.innerHTML = '<option value="">選擇角色...</option>' +
+        characters.map(c => `<option value="${c.id}">${c.name || '未命名'}</option>`).join('');
+    }
+  };
+  loadCharacters();
+  
+  if (characterSelector) {
+    characterSelector.onchange = (e) => {
+      selectedCharacterId = e.target.value || null;
+    };
+  }
+  
   const addBtn = container.querySelector('.add-btn');
   if (addBtn) {
-    addBtn.onclick = () => {
-      const id = 'content_' + Date.now();
-      contentData.unshift({
-        id,
-        title: '新劇目',
-        desc: '請編輯描述',
-        category: 'movie',
-        cover: '',
-        html: '<div style="padding: 20px;">內容編輯中...</div>'
-      });
-      saveContent();
-      renderContent(container);
+    addBtn.onclick = async () => {
+      const characters = await CharactersDB.getAll();
+      if (!characters || characters.length === 0) {
+        alert('請先在聊天室創建角色');
+        return;
+      }
+      
+      let selectedChar;
+      if (selectedCharacterId) {
+        selectedChar = characters.find(c => c.id === selectedCharacterId);
+      }
+      if (!selectedChar) {
+        selectedChar = characters[Math.floor(Math.random() * characters.length)];
+      }
+      
+      addBtn.disabled = true;
+      addBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 生成中...';
+      
+      try {
+        const scriptContent = await generateScript(selectedChar);
+        
+        const id = 'content_' + Date.now();
+        const newContent = {
+          id,
+          title: scriptContent.title,
+          desc: scriptContent.desc,
+          category: scriptContent.category || 'movie',
+          cover: scriptContent.cover || '',
+          html: scriptContent.html,
+          character_id: selectedChar.id,
+          created_at: Date.now()
+        };
+        
+        contentData.unshift(newContent);
+        await saveContent();
+        renderContent(container);
+      } catch (error) {
+        alert('生成失敗: ' + error.message);
+      } finally {
+        addBtn.disabled = false;
+        addBtn.innerHTML = '<i class="fas fa-plus"></i> 新增劇目';
+      }
     };
   }
   

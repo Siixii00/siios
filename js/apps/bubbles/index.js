@@ -1,13 +1,17 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
-import { SettingsDB } from '../../db.js';
+import APIClient from '../../api.js';
+import { buildAppContext } from '../../core/app-context-builder.js';
+import { CharactersDB, SettingsDB } from '../../db.js';
 
 let state = {
+  characterId: null,
   artistName: '',
   artistAvatar: '',
   messages: [],
   fanName: '팬',
-  mode: 'artist'
+  mode: 'artist',
+  isGenerating: false
 };
 
 async function loadState() {
@@ -29,15 +33,117 @@ function renderFeed(container) {
     <div class="bubble-msg ${msg.role}">
       ${msg.fanName ? `<span class="fan-name">${msg.fanName}</span>` : ''}
       ${msg.text}
+      ${msg.isStreaming ? '<span class="streaming-indicator">...</span>' : ''}
     </div>
   `).join('') || '<div class="empty-msg">尚無訊息</div>';
   
   feed.scrollTop = feed.scrollHeight;
 }
 
-function sendMessage(container) {
+async function generateArtistReply(container, fanMessage) {
+  if (!state.characterId) return;
+  
+  state.isGenerating = true;
+  const msgIndex = state.messages.length;
+  state.messages.push({
+    role: 'artist',
+    text: '',
+    isStreaming: true
+  });
+  renderFeed(container);
+  
+  try {
+    const context = await buildAppContext({
+      characterId: state.characterId,
+      userMessage: fanMessage
+    });
+    
+    const settings = await APIClient.getSettings();
+    
+    if (!settings.api_url || !settings.api_key) {
+      state.messages[msgIndex].text = '[API 未設定]';
+      state.messages[msgIndex].isStreaming = false;
+      renderFeed(container);
+      return;
+    }
+    
+    const conversationHistory = state.messages
+      .filter(m => !m.isStreaming)
+      .slice(-10)
+      .map(m => ({
+        role: m.role === 'artist' ? 'assistant' : 'user',
+        content: m.text
+      }));
+    
+    const apiMessages = [
+      { role: 'system', content: context.systemPrompt },
+      ...conversationHistory.slice(0, -1),
+      { role: 'user', content: fanMessage }
+    ];
+    
+    const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${settings.api_key}`
+      },
+      body: JSON.stringify({
+        model: settings.model || 'gpt-3.5-turbo',
+        messages: apiMessages,
+        temperature: settings.temperature || 0.7,
+        stream: true
+      })
+    });
+    
+    if (!response.ok) {
+      throw new Error(`API 錯誤: ${response.status}`);
+    }
+    
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    let fullContent = '';
+    
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      
+      const chunk = decoder.decode(value, { stream: true });
+      const lines = chunk.split('\n');
+      
+      for (const line of lines) {
+        if (line.startsWith('data: ')) {
+          const data = line.slice(6);
+          if (data === '[DONE]') continue;
+          
+          try {
+            const parsed = JSON.parse(data);
+            const content = parsed.choices?.[0]?.delta?.content;
+            if (content) {
+              fullContent += content;
+              state.messages[msgIndex].text = fullContent;
+              renderFeed(container);
+            }
+          } catch {}
+        }
+      }
+    }
+    
+    state.messages[msgIndex].text = fullContent;
+    state.messages[msgIndex].isStreaming = false;
+    await saveState();
+    
+  } catch (error) {
+    state.messages[msgIndex].text = `[錯誤: ${error.message}]`;
+    state.messages[msgIndex].isStreaming = false;
+  } finally {
+    state.isGenerating = false;
+    renderFeed(container);
+  }
+}
+
+async function sendMessage(container) {
   const input = container.querySelector('.bubble-input');
-  if (!input) return;
+  if (!input || state.isGenerating) return;
   
   const text = input.value.trim();
   if (!text) return;
@@ -50,11 +156,17 @@ function sendMessage(container) {
   
   input.value = '';
   renderFeed(container);
-  saveState();
+  await saveState();
+  
+  if (state.mode === 'fan' && state.characterId) {
+    await generateArtistReply(container, text);
+  }
 }
 
 async function renderBubbles(params) {
   await loadState();
+  
+  const characters = await CharactersDB.getAll();
   
   const container = createElement('div', 'app-container bubbles-app');
   
@@ -68,6 +180,18 @@ async function renderBubbles(params) {
     
     <div class="page">
       <div class="bubbles-settings">
+        <div class="settings-row">
+          <label>選擇角色</label>
+          <select class="character-select">
+            <option value="">-- 請選擇 --</option>
+            ${characters.map(c => `
+              <option value="${c.id}" ${state.characterId === c.id ? 'selected' : ''}>
+                ${c.name}
+              </option>
+            `).join('')}
+          </select>
+        </div>
+        
         <div class="mode-switch">
           <button class="mode-btn ${state.mode === 'artist' ? 'active' : ''}" data-mode="artist">
             <i class="fas fa-star"></i> 藝人模式
@@ -75,11 +199,6 @@ async function renderBubbles(params) {
           <button class="mode-btn ${state.mode === 'fan' ? 'active' : ''}" data-mode="fan">
             <i class="fas fa-heart"></i> 粉絲模式
           </button>
-        </div>
-        
-        <div class="settings-row">
-          <label>藝人名稱</label>
-          <input type="text" class="artist-name-input" value="${state.artistName}" placeholder="輸入藝人名稱">
         </div>
         
         ${state.mode === 'fan' ? `
@@ -93,8 +212,8 @@ async function renderBubbles(params) {
       <div class="bubbles-feed"></div>
       
       <div class="bubbles-input-area">
-        <input type="text" class="bubble-input" placeholder="輸入訊息...">
-        <button class="send-btn">
+        <input type="text" class="bubble-input" placeholder="輸入訊息..." ${state.isGenerating ? 'disabled' : ''}>
+        <button class="send-btn" ${state.isGenerating ? 'disabled' : ''}>
           <i class="fas fa-paper-plane"></i>
         </button>
       </div>
@@ -104,6 +223,20 @@ async function renderBubbles(params) {
   const backBtn = container.querySelector('.ios-back-btn');
   backBtn.onclick = () => Router.back();
   
+  const characterSelect = container.querySelector('.character-select');
+  if (characterSelect) {
+    characterSelect.onchange = async () => {
+      state.characterId = characterSelect.value || null;
+      const selectedChar = characters.find(c => c.id === state.characterId);
+      if (selectedChar) {
+        state.artistName = selectedChar.name;
+        state.artistAvatar = selectedChar.avatar || '';
+      }
+      await saveState();
+      renderBubbles(params);
+    };
+  }
+  
   container.querySelectorAll('.mode-btn').forEach(btn => {
     btn.onclick = async () => {
       state.mode = btn.dataset.mode;
@@ -111,14 +244,6 @@ async function renderBubbles(params) {
       renderBubbles(params);
     };
   });
-  
-  const artistNameInput = container.querySelector('.artist-name-input');
-  if (artistNameInput) {
-    artistNameInput.onchange = async () => {
-      state.artistName = artistNameInput.value;
-      await saveState();
-    };
-  }
   
   const fanNameInput = container.querySelector('.fan-name-input');
   if (fanNameInput) {
@@ -137,7 +262,7 @@ async function renderBubbles(params) {
   
   if (input) {
     input.onkeydown = (e) => {
-      if (e.key === 'Enter') {
+      if (e.key === 'Enter' && !state.isGenerating) {
         sendMessage(container);
       }
     };

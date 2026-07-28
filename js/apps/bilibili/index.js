@@ -1,6 +1,8 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
-import { SettingsDB } from '../../db.js';
+import { SettingsDB, CharactersDB } from '../../db.js';
+import APIClient from '../../api.js';
+import { buildAppContext } from '../../core/app-context-builder.js';
 
 const thumbnailColors = [
     ['#ffd5e5', '#ff8fb1'],
@@ -20,43 +22,12 @@ const danmuPool = [
     '這才是真正的技術', '學廢了', '我好了', '名場面', '經典'
 ];
 
-const npcNames = [
-    '小櫻', '阿明', '美琪', '大偉', '小雪', '阿傑', '小芳', '阿豪',
-    '琪琪', '小龍', '阿寶', '小美', '阿強', '小玲', '阿輝', '小君',
-    '星空', '月光', '流星', '彩虹', '白雲', '微風', '晨曦', '晚霞'
-];
-
-const chatUserNames = [
-    '小櫻', '阿明', '美琪', '大偉', '小雪', '阿傑', '小芳', '阿豪',
-    '琪琪', '小龍', '阿寶', '小美', '阿強', '小玲', '阿輝', '小君',
-    '星空', '月光', '流星', '彩虹', '白雲', '微風', '晨曦', '晚霞'
-];
-
-const chatMessageTemplates = {
-    received: [
-        '你好呀～最近在追什麼番？',
-        '那個影片超好看的！',
-        '明天要一起看直播嗎？',
-        '推薦你一部新番！',
-        '你的影片做得好棒！',
-        '最近有什麼好看的嗎？',
-        '哈哈那個梗太笑了',
-        '這週末有空嗎？',
-        '我找到一個超讚的MAD',
-        '你追的那部番更新了！'
-    ],
-    sent: [
-        '好喔！',
-        '真的假的',
-        '我看看',
-        '不錯耶',
-        '推推',
-        '好笑死',
-        '謝啦',
-        '晚點回你',
-        '收到',
-        'OK'
-    ]
+const videoCategories = {
+    recommend: ['熱門', '動漫', '遊戲', '音樂', '科技', '生活'],
+    anime: ['新番', '完結', '經典', '國漫', '劇場版'],
+    live: ['遊戲直播', '虛擬主播', '唱歌', '聊天', '戶外'],
+    hot: ['本週熱門', '本月熱門', '挑戰類', '搞笑', '知識'],
+    games: ['手機遊戲', '主機遊戲', 'PC遊戲', '電競', '實況']
 };
 
 const notificationTemplates = [
@@ -84,7 +55,8 @@ let appState = {
     charCommentTimer: null,
     currentMsgTab: 'notifications',
     currentChatUser: null,
-    chatData: {}
+    chatData: {},
+    selectedCharacterId: null
 };
 
 function randomPick(list) {
@@ -185,7 +157,7 @@ function generateNotifications(count = 8) {
             type: template.type,
             icon: template.icon,
             title: template.title,
-            desc: `${randomPick(chatUserNames)} ${randomPick(template.templates)}`,
+            desc: `${randomPick(['用戶', '粉絲', '觀眾', '網友'])} ${randomPick(template.templates)}`,
             time: generateRandomTime(),
             read: Math.random() > 0.3
         });
@@ -215,42 +187,48 @@ function generateSystemNotifications(count = 5) {
     }));
 }
 
-function generateChatUsers(count = 6) {
-    const users = [];
-    const shuffledNames = [...chatUserNames].sort(() => Math.random() - 0.5);
+async function loadWatchingNPCs() {
+    const characters = await CharactersDB.getAll();
     
-    for (let i = 0; i < count; i++) {
-        const name = shuffledNames[i];
-        users.push({
-            id: `user_${Date.now()}_${i}`,
-            name,
-            avatar: '',
-            lastMessage: randomPick(chatMessageTemplates.received),
-            time: generateRandomTime(),
-            unread: Math.floor(Math.random() * 5)
-        });
+    if (characters.length === 0) {
+        return [];
     }
-    return users;
+    
+    const shuffled = characters.sort(() => Math.random() - 0.5);
+    const count = Math.min(shuffled.length, 3 + Math.floor(Math.random() * 6));
+    
+    return shuffled.slice(0, count).map(char => ({
+        id: char.id,
+        name: char.name || '匿名',
+        avatar: char.avatar || '',
+        personality: char.personality || '',
+        watching: true
+    }));
 }
 
-function generateChatHistory(userId, count = 10) {
-    const messages = [];
-    for (let i = 0; i < count; i++) {
-        const isReceived = Math.random() > 0.4;
-        messages.push({
-            id: `msg_${Date.now()}_${i}`,
-            type: isReceived ? 'received' : 'sent',
-            text: randomPick(isReceived ? chatMessageTemplates.received : chatMessageTemplates.sent),
-            time: new Date(Date.now() - (count - i) * 60000 * Math.random() * 30).toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' })
-        });
+async function loadChatCharacters() {
+    const characters = await CharactersDB.getAll();
+    
+    if (characters.length === 0) {
+        return [];
     }
-    return messages.sort((a, b) => new Date(a.time) - new Date(b.time));
+    
+    return characters.map(char => ({
+        id: char.id,
+        name: char.name || '匿名',
+        avatar: char.avatar || '',
+        personality: char.personality || '',
+        lastMessage: '點擊開始聊天',
+        time: '剛剛',
+        unread: 0
+    }));
 }
 
 async function refreshMessages() {
+    const chatUsers = await loadChatCharacters();
     const data = {
         notifications: generateNotifications(8),
-        chats: generateChatUsers(6),
+        chats: chatUsers.length > 0 ? chatUsers : [],
         system: generateSystemNotifications(5)
     };
     await saveMessagesData(data);
@@ -334,17 +312,238 @@ function createNPCSection(npcs) {
     return section;
 }
 
-function generateNPCs(count = 8) {
-    const npcs = [];
+async function generateVideoContentWithAI(tab, characterId) {
+    const settings = await SettingsDB.getAll();
+    
+    if (!settings.api_url || !settings.api_key) {
+        return null;
+    }
+    
+    const context = await buildAppContext({ characterId });
+    const systemPrompt = context.systemPrompt + `\n\n你是一個影片推薦系統。根據角色性格生成適合的影片推薦。
+返回格式（JSON陣列，每個影片包含title, tag, views, danmu）：
+[{"title":"影片標題","tag":"分類標籤","views":"播放量","danmu":"彈幕數"}]
+只返回JSON，不要其他文字。`;
+
+    const category = randomPick(videoCategories[tab] || videoCategories.recommend);
+
+    const userPrompt = `角色性格：${context.character?.personality || '一般用戶'}
+請為這個角色生成 6-10 部${tab === 'anime' ? '動漫' : tab === 'live' ? '直播' : tab === 'hot' ? '熱門' : tab === 'games' ? '遊戲' : '推薦'}影片。`;
+
+    try {
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${settings.api_key}`
+            },
+            body: JSON.stringify({
+                model: settings.model || 'gpt-3.5-turbo',
+                messages: [
+                    { role: 'system', content: systemPrompt },
+                    { role: 'user', content: userPrompt }
+                ],
+                temperature: 0.8,
+                max_tokens: 1000
+            })
+        });
+
+        if (!response.ok) return null;
+
+        const data = await response.json();
+        const content = data.choices?.[0]?.message?.content;
+        
+        if (!content) return null;
+        
+        const jsonMatch = content.match(/\[[\s\S]*\]/);
+        if (!jsonMatch) return null;
+        
+        const videos = JSON.parse(jsonMatch[0]);
+        return videos.map(v => ({
+            id: `video_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+            title: v.title || '未命名影片',
+            tag: v.tag || category,
+            views: v.views || randomViews(),
+            danmu: v.danmu || randomDanmu(),
+            thumbGradient: generateThumbnail(),
+            url: ''
+        }));
+    } catch (e) {
+        return null;
+    }
+}
+
+function generateFallbackVideos(tab) {
+    const category = randomPick(videoCategories[tab] || videoCategories.recommend);
+    const count = 6 + Math.floor(Math.random() * 4);
+    const videos = [];
+    
     for (let i = 0; i < count; i++) {
-        npcs.push({
-            id: `npc_${Date.now()}_${i}`,
-            name: randomPick(npcNames),
-            avatar: '',
-            watching: true
+        videos.push({
+            id: `video_${Date.now()}_${i}`,
+            title: `${category}精彩影片 ${i + 1}`,
+            tag: category,
+            views: randomViews(),
+            danmu: randomDanmu(),
+            thumbGradient: generateThumbnail(),
+            url: ''
         });
     }
-    return npcs;
+    
+    return videos;
+}
+
+async function generateVideoRecommendations(tab, characterId = null) {
+    if (characterId) {
+        const aiVideos = await generateVideoContentWithAI(tab, characterId);
+        if (aiVideos && aiVideos.length > 0) {
+            return aiVideos;
+        }
+    }
+    return generateFallbackVideos(tab);
+}
+
+async function generateNPCComments(videoTitle, characterId) {
+    const settings = await SettingsDB.getAll();
+    
+    if (!settings.api_url || !settings.api_key) {
+        return [
+            { name: '匿名用戶', comment: '這影片不錯！' },
+            { name: '路人甲', comment: '推推！' }
+        ];
+    }
+
+    const context = await buildAppContext({ characterId });
+    const systemPrompt = context.systemPrompt + `\n\n你是一個Bilibili評論生成系統。根據角色性格生成真實的評論。
+返回格式（JSON陣列）：
+[{"name":"評論者暱稱","comment":"評論內容"}]
+只返回JSON，3-5條評論。`;
+
+    const userPrompt = `影片標題：${videoTitle}
+角色性格：${context.character?.personality || '一般用戶'}
+請生成幾條符合角色風格的熱門評論。`;
+
+    try {
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${settings.api_key}`
+            },
+            body: JSON.stringify({
+                model: settings.model || 'gpt-3.5-turbo',
+                messages: [
+                    { role: 'system', content: systemPrompt },
+                    { role: 'user', content: userPrompt }
+                ],
+                temperature: 0.9,
+                max_tokens: 500
+            })
+        });
+
+        if (!response.ok) return null;
+
+        const data = await response.json();
+        const content = data.choices?.[0]?.message?.content;
+        
+        if (!content) return null;
+        
+        const jsonMatch = content.match(/\[[\s\S]*\]/);
+        if (!jsonMatch) return null;
+        
+        return JSON.parse(jsonMatch[0]);
+    } catch (e) {
+        return null;
+    }
+}
+
+async function generateChatResponse(chatName, characterId, messageHistory, userMessage) {
+    const settings = await SettingsDB.getAll();
+    
+    if (!settings.api_url || !settings.api_key) {
+        return randomPick(['好喔！', '了解', '收到', '哈哈', '真的嗎']);
+    }
+
+    const context = await buildAppContext({ characterId });
+    const systemPrompt = context.systemPrompt + `\n\n你是一個Bilibili聊天系統中的角色。根據角色設定與用戶自然對話。
+保持對話簡短、口語化，像Bilibili用戶的聊天風格。可以使用網路用語。`;
+
+    const messages = [
+        { role: 'system', content: systemPrompt },
+        { role: 'system', content: `你的名字是：${chatName}\n角色性格：${context.character?.personality || '一般Bilibili用戶'}` }
+    ];
+
+    messageHistory.slice(-6).forEach(msg => {
+        messages.push({
+            role: msg.type === 'received' ? 'assistant' : 'user',
+            content: msg.text
+        });
+    });
+
+    messages.push({ role: 'user', content: userMessage });
+
+    try {
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${settings.api_key}`
+            },
+            body: JSON.stringify({
+                model: settings.model || 'gpt-3.5-turbo',
+                messages,
+                temperature: 0.85,
+                max_tokens: 100
+            })
+        });
+
+        if (!response.ok) return null;
+
+        const data = await response.json();
+        return data.choices?.[0]?.message?.content || null;
+    } catch (e) {
+        return null;
+    }
+}
+
+async function generateVideosForTab(tab, characterId = null) {
+    const finalCharId = characterId || appState.selectedCharacterId;
+    const videos = await generateVideoRecommendations(tab, finalCharId);
+    
+    appState.sample[tab] = videos;
+    await SettingsDB.set(`bilibili_${tab}_videos`, videos);
+    
+    return videos;
+}
+
+async function createCharacterSelector(selectedId, onChange) {
+    const characters = await CharactersDB.getAll();
+    
+    if (characters.length === 0) return null;
+    
+    const container = createElement('div', 'bili-char-selector');
+    const label = createElement('span', 'text-sm text-ios-muted', { textContent: '選擇角色：' });
+    container.appendChild(label);
+    
+    const select = createElement('select', 'bili-char-select');
+    
+    const defaultOption = createElement('option', '', { value: '', textContent: '隨機角色' });
+    if (!selectedId) defaultOption.selected = true;
+    select.appendChild(defaultOption);
+    
+    characters.forEach(char => {
+        const option = createElement('option', '', { value: char.id, textContent: char.name || '匿名' });
+        if (selectedId === char.id) option.selected = true;
+        select.appendChild(option);
+    });
+    
+    select.onchange = () => {
+        appState.selectedCharacterId = select.value || null;
+        if (onChange) onChange(appState.selectedCharacterId);
+    };
+    
+    container.appendChild(select);
+    return container;
 }
 
 async function renderHome() {
@@ -369,6 +568,18 @@ async function renderHome() {
     searchRow.appendChild(searchBox);
     container.appendChild(searchRow);
     
+    const charSelector = await createCharacterSelector(appState.selectedCharacterId, async (charId) => {
+        if (appState.sample[appState.currentTab] && appState.sample[appState.currentTab].length > 0) {
+            createToast('正在重新生成影片...');
+            await generateVideosForTab(appState.currentTab, charId);
+            createToast('影片已更新！');
+            Router.navigate(`/bilibili/tab/${appState.currentTab}`);
+        }
+    });
+    if (charSelector) {
+        container.appendChild(charSelector);
+    }
+    
     const tabsBar = createElement('nav', 'bili-tabs');
     const tabs = ['recommend', 'anime', 'live', 'hot', 'games'];
     const tabNames = { recommend: '推薦', anime: '番劇', live: '直播', hot: '熱門', games: '遊戲' };
@@ -390,7 +601,10 @@ async function renderHome() {
     
     if (videos.length === 0) {
         feedInner.appendChild(createEmptyFeed(async () => {
-            createToast('影片生成功能尚未實裝');
+            createToast('正在生成影片...');
+            await generateVideosForTab(appState.currentTab, appState.selectedCharacterId);
+            createToast('影片已生成！');
+            Router.navigate(`/bilibili/tab/${appState.currentTab}`);
         }));
     } else {
         const videoList = createElement('section', 'bili-video-list');
@@ -446,6 +660,9 @@ async function renderPlayer(params) {
     const url = decodeURIComponent(params.url || '');
     const convertedUrl = convertBilibiliUrl(url);
     
+    const characters = await CharactersDB.getAll();
+    const character = characters.length > 0 ? characters[Math.floor(Math.random() * characters.length)] : null;
+    
     const container = createElement('div', 'bili-app bili-player-app');
     
     const header = createIOSNavBar({
@@ -475,8 +692,10 @@ async function renderPlayer(params) {
     playerStage.appendChild(playerVideo);
     container.appendChild(playerStage);
     
-    appState.activeNPCs = generateNPCs(5 + Math.floor(Math.random() * 8));
-    container.appendChild(createNPCSection(appState.activeNPCs));
+    appState.activeNPCs = await loadWatchingNPCs();
+    if (appState.activeNPCs.length > 0) {
+        container.appendChild(createNPCSection(appState.activeNPCs));
+    }
     
     const playerInfo = createElement('div', 'bili-player-info');
     
@@ -494,21 +713,33 @@ async function renderPlayer(params) {
     const comments = createElement('div', 'bili-comments');
     comments.appendChild(createElement('div', 'font-bold mb-3', { textContent: '熱門留言' }));
     
-    const comment1 = createElement('div', 'bili-comment');
-    comment1.appendChild(createElement('div', 'bili-comment-avatar'));
-    const comment1Body = createElement('div', '');
-    comment1Body.appendChild(createElement('div', 'font-semibold text-sm', { textContent: 'Momo' }));
-    comment1Body.appendChild(createElement('div', 'text-ios-muted text-sm', { textContent: '這集超好看，已經重刷三次！' }));
-    comment1.appendChild(comment1Body);
-    comments.appendChild(comment1);
+    const aiComments = await generateNPCComments(title, character);
     
-    const comment2 = createElement('div', 'bili-comment');
-    comment2.appendChild(createElement('div', 'bili-comment-avatar'));
-    const comment2Body = createElement('div', '');
-    comment2Body.appendChild(createElement('div', 'font-semibold text-sm', { textContent: 'Kirin' }));
-    comment2Body.appendChild(createElement('div', 'text-ios-muted text-sm', { textContent: '畫面好精緻，推薦朋友一起看。' }));
-    comment2.appendChild(comment2Body);
-    comments.appendChild(comment2);
+    if (aiComments && aiComments.length > 0) {
+        aiComments.forEach(c => {
+            const comment = createElement('div', 'bili-comment');
+            comment.appendChild(createElement('div', 'bili-comment-avatar'));
+            const commentBody = createElement('div', '');
+            commentBody.appendChild(createElement('div', 'font-semibold text-sm', { textContent: c.name }));
+            commentBody.appendChild(createElement('div', 'text-ios-muted text-sm', { textContent: c.comment }));
+            comment.appendChild(commentBody);
+            comments.appendChild(comment);
+        });
+    } else {
+        const fallbackComments = [
+            { name: '熱心網友', comment: '這影片不錯，推推！' },
+            { name: '路人甲', comment: '第一次看到這麼棒的內容！' }
+        ];
+        fallbackComments.forEach(c => {
+            const comment = createElement('div', 'bili-comment');
+            comment.appendChild(createElement('div', 'bili-comment-avatar'));
+            const commentBody = createElement('div', '');
+            commentBody.appendChild(createElement('div', 'font-semibold text-sm', { textContent: c.name }));
+            commentBody.appendChild(createElement('div', 'text-ios-muted text-sm', { textContent: c.comment }));
+            comment.appendChild(commentBody);
+            comments.appendChild(comment);
+        });
+    }
     
     container.appendChild(comments);
     
@@ -623,6 +854,9 @@ async function renderChat(params) {
     const chatId = params.id;
     const chatName = decodeURIComponent(params.name || '聊天');
     
+    const character = await CharactersDB.getById(chatId);
+    const characterId = chatId;
+    
     const container = createElement('div', 'bili-app bili-chat-app');
     
     const header = createIOSNavBar({
@@ -635,7 +869,7 @@ async function renderChat(params) {
     
     appState.chatData = await loadChatData();
     if (!appState.chatData[chatId]) {
-        appState.chatData[chatId] = generateChatHistory(chatId, 8);
+        appState.chatData[chatId] = [];
         await saveChatData(appState.chatData);
     }
     
@@ -658,17 +892,35 @@ async function renderChat(params) {
         const text = input.value.trim();
         if (!text) return;
         
-        const newMsg = {
+        const userMsg = {
             id: `msg_${Date.now()}`,
             type: 'sent',
             text,
             time: new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' })
         };
         
-        appState.chatData[chatId].push(newMsg);
+        appState.chatData[chatId].push(userMsg);
         await saveChatData(appState.chatData);
         
         input.value = '';
+        input.disabled = true;
+        sendBtn.disabled = true;
+        
+        const aiResponse = await generateChatResponse(chatName, characterId, appState.chatData[chatId], text);
+        
+        const aiMsg = {
+            id: `msg_${Date.now()}_ai`,
+            type: 'received',
+            text: aiResponse || '好的，收到！',
+            time: new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' })
+        };
+        
+        appState.chatData[chatId].push(aiMsg);
+        await saveChatData(appState.chatData);
+        
+        input.disabled = false;
+        sendBtn.disabled = false;
+        
         Router.navigate(`/bilibili/chat/${chatId}/${encodeURIComponent(chatName)}`);
     };
     

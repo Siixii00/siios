@@ -1,6 +1,7 @@
 import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
+import { buildAppContext } from '../../core/app-context-builder.js';
 
 const CACHE_TTL = 10 * 60 * 1000;
 
@@ -166,7 +167,34 @@ function getWeatherType(data) {
     return 'nice';
 }
 
-function generateWeatherReminder(charName, data) {
+async function generateWeatherReminder(charName, data) {
+    try {
+        const context = await buildAppContext();
+        const messages = [
+            { role: 'system', content: context.systemPrompt },
+            { role: 'user', content: `請根據以下天氣資料，用角色「${charName}」的口吻生成一段簡短的天氣提醒（1-2句話）：
+
+天氣代碼：${data?.daily?.weathercode?.[0] ?? 0}
+溫度：${data?.current?.temperature_2m ?? '--'}°C
+濕度：${data?.current?.relative_humidity_2m ?? '--'}%
+風速：${data?.current?.wind_speed_10m ?? '--'} km/h
+
+請用輕鬆友善的語氣，像朋友聊天一樣提醒天氣狀況。` }
+        ];
+        const response = await fetch('/api/chat', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ messages })
+        });
+        if (!response.ok) throw new Error('API error');
+        const result = await response.json();
+        return result.choices?.[0]?.message?.content || getStaticReminder(data);
+    } catch {
+        return getStaticReminder(data);
+    }
+}
+
+function getStaticReminder(data) {
     const weatherType = getWeatherType(data);
     const reminders = WEATHER_REMINDERS[weatherType] || WEATHER_REMINDERS.nice;
     const randomIndex = Math.floor(Math.random() * reminders.length);
@@ -341,13 +369,13 @@ function renderWeeklyForecast(data, container) {
     }).join('');
 }
 
-function updateCharReminder(container) {
+async function updateCharReminder(container) {
     const charNote = container.querySelector('#char-note');
     if (!charNote) return;
     
     if (currentWeatherData) {
         const charName = currentChar?.name || '';
-        const reminder = generateWeatherReminder(charName, currentWeatherData);
+        const reminder = await generateWeatherReminder(charName, currentWeatherData);
         charNote.textContent = reminder;
     } else {
         charNote.textContent = '查詢天氣後，這裡會顯示天氣提醒';

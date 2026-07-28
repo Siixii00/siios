@@ -1,6 +1,8 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
+import APIClient from '../../api.js';
+import { buildAppContext } from '../../core/app-context-builder.js';
 
 const thumbnailColors = [
     ['#ff6b6b', '#feca57'],
@@ -20,24 +22,9 @@ const thumbnailColors = [
     ['#74b9ff', '#0984e3']
 ];
 
-const adTexts = [
-    '🔥 限時優惠！立即點擊查看！',
-    '🎁 獨家折扣碼：YOUTUBE2026',
-    '⚡️ 熱銷商品，錯過不再！',
-    '💎 VIP 會員專屬福利等你領',
-    '🚀 立即下載 APP 享受更多優惠',
-    '💰 賺錢秘訣大公開，點擊了解！',
-    '📱 全新遊戲上線，首儲送大獎！',
-    '🏥 健康保健，專家推薦！'
-];
+const adTexts = [];
 
-const adPopupMessages = [
-    { icon: '🎉', title: '恭喜你中獎了！', text: '你是今日第 1000 位訪客，獲得特別獎勵！' },
-    { icon: '⚠️', title: '警告！', text: '你的裝置可能存在風險，請立即掃描！' },
-    { icon: '📱', title: '更新可用', text: '有新版本可供下載，立即更新享受新功能！' },
-    { icon: '🔔', title: '提醒', text: '你有 3 則未讀通知，點擊查看詳情。' },
-    { icon: '💰', title: '賺錢機會', text: '在家工作月入 10 萬！立即了解更多！' }
-];
+const adPopupMessages = [];
 
 let currentFeed = [];
 let currentCollections = [];
@@ -56,6 +43,7 @@ let uploadedThumbData = null;
 let isGeneratingCharFeed = false;
 let isGeneratingVideos = false;
 let aiVideoGenState = { isGenerating: false, generatedVideoUrl: null, generatedPrompt: null };
+let selectedCharId = null;
 
 function randomPick(list) {
     return list[Math.floor(Math.random() * list.length)];
@@ -228,37 +216,93 @@ function renderSaveList(container, videoId) {
     }).join('');
 }
 
+async function generateLLMContent(prompt, maxRetries = 2, characterId = null) {
+    const settings = await APIClient.getSettings();
+    
+    if (!settings.api_url || !settings.api_key) {
+        return null;
+    }
+    
+    const context = await buildAppContext({ characterId });
+    
+    for (let attempt = 0; attempt <= maxRetries; attempt++) {
+        try {
+            const messages = [];
+            if (context.systemPrompt) {
+                messages.push({ role: 'system', content: context.systemPrompt });
+            }
+            messages.push({ role: 'user', content: prompt });
+            
+            const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${settings.api_key}`
+                },
+                body: JSON.stringify({
+                    model: settings.model || 'gpt-3.5-turbo',
+                    messages,
+                    temperature: 0.8,
+                    max_tokens: 200
+                })
+            });
+            
+            if (!response.ok) continue;
+            
+            const data = await response.json();
+            return data.choices?.[0]?.message?.content?.trim() || null;
+        } catch {
+            if (attempt < maxRetries) continue;
+        }
+    }
+    return null;
+}
+
 function getCharReaction(char, video) {
-    const personality = (char?.personality || '').trim();
-    const background = (char?.background || '').trim();
-    const title = video?.title || '這部影片';
-    
-    if (!personality && !background) {
-        return `${title}看起來不錯呢。`;
-    }
-    
-    const sentences = [];
-    const personalityParts = personality.split(/[，,、。；;\s]+/).filter(p => p.trim());
-    const bgParts = background.split(/[，,、。；;\s]+/).filter(p => p.trim());
-    
-    if (personalityParts.length > 0) {
-        const randomTrait = personalityParts[Math.floor(Math.random() * personalityParts.length)];
-        sentences.push(`以我${randomTrait}的個性來看，${title}挺有意思的。`);
-    }
-    
-    if (bgParts.length > 0 && Math.random() > 0.5) {
-        const randomBg = bgParts[Math.floor(Math.random() * bgParts.length)];
-        sentences.push(`${randomBg}的我，覺得這影片很有感覺。`);
-    }
-    
-    if (sentences.length === 0) {
-        sentences.push(`${title}看起來挺有趣的。`);
-    }
-    
-    return sentences.join(' ');
+    return null;
 }
 
 function getCharLiveComment(char, video) {
+    return null;
+}
+
+async function generateCharReaction(container, char, video) {
+    if (!char || !video) {
+        return `${video?.title || '這部影片'}看起來不錯呢。`;
+    }
+    
+    const personality = (char?.personality || '').trim();
+    const background = (char?.background || '').trim();
+    
+    if (!personality && !background) {
+        return `${video?.title || '這部影片'}看起來不錯呢。`;
+    }
+    
+    const prompt = `你是角色「${char.name}」，你的個性是：${personality}
+背景設定：${background}
+
+你正在觀看一部影片：「${video.title}」
+請用一句話（15-30字）表達你對這部影片的反應或評論，要符合你的個性。
+只需輸出反應文字，不要其他內容。`;
+
+    const reaction = await generateLLMContent(prompt, 2, char.id);
+    
+    if (reaction) {
+        return reaction;
+    }
+    
+    const fallbacks = [
+        `以我${personality.split(/[，,、。；;\s]+/)[0] || '這樣'}的個性來看，${video.title}挺有意思的。`,
+        `這部影片讓我${personality.includes('活潑') ? '很興奮' : '很有感覺'}呢！`
+    ];
+    return fallbacks[Math.floor(Math.random() * fallbacks.length)];
+}
+
+async function generateCharLiveComment(container, char, video) {
+    if (!char || !video) {
+        return '這個影片不錯呢。';
+    }
+    
     const personality = (char?.personality || '').trim();
     const background = (char?.background || '').trim();
     
@@ -266,51 +310,159 @@ function getCharLiveComment(char, video) {
         return '這個影片不錯呢。';
     }
     
-    const sentences = [];
-    const personalityParts = personality.split(/[，,、。；;\s]+/).filter(p => p.trim());
-    const bgParts = background.split(/[，,、。；;\s]+/).filter(p => p.trim());
-    
     const videoKeywords = ['畫面', '內容', '音樂', '劇情', '節奏', '風格', '氛圍', '主題', '解說', '呈現'];
-    const reactions = ['不錯', '有趣', '特別', '精彩', '吸引人', '有意思', '很棒', '有深度'];
+    const randomKeyword = videoKeywords[Math.floor(Math.random() * videoKeywords.length)];
     
-    if (personalityParts.length > 0) {
-        const randomTrait = personalityParts[Math.floor(Math.random() * personalityParts.length)];
-        const randomKeyword = videoKeywords[Math.floor(Math.random() * videoKeywords.length)];
-        const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
-        sentences.push(`以我${randomTrait}的個性來看，這${randomKeyword}挺${randomReaction}的。`);
+    const prompt = `你是角色「${char.name}」，個性：${personality}
+背景：${background}
+
+你正在觀看影片「${video.title}」。
+針對影片的「${randomKeyword}」，用一句話（10-20字）發表即時評論，要符合你的個性。
+只輸出評論文字。`;
+
+    const comment = await generateLLMContent(prompt, 2, char.id);
+    
+    if (comment) {
+        return comment;
     }
     
-    if (bgParts.length > 0 && Math.random() > 0.5) {
-        const randomBg = bgParts[Math.floor(Math.random() * bgParts.length)];
-        sentences.push(`${randomBg}的我，覺得這部分很有感覺。`);
+    const reactions = ['不錯', '有趣', '特別', '精彩', '吸引人', '有意思', '很棒'];
+    const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
+    return `這${randomKeyword}${randomReaction}呢。`;
+}
+
+async function generateVideoTitle(char, tag) {
+    if (!char) {
+        return `AI 生成影片 #${Date.now() % 10000}`;
     }
     
-    if (sentences.length === 0) {
-        const randomKeyword = videoKeywords[Math.floor(Math.random() * videoKeywords.length)];
-        const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
-        sentences.push(`這${randomKeyword}${randomReaction}呢。`);
+    const personality = (char?.personality || '').trim();
+    const interests = (char?.interests || char?.background || '').trim();
+    
+    const tagNames = {
+        'live': '直播',
+        'music': '音樂',
+        'game': '遊戲',
+        'tech': '科技',
+        'diy': 'DIY'
+    };
+    const categoryName = tagNames[tag] || '綜合';
+    
+    const prompt = `創建一個吸引人的 YouTube 影片標題（15-25字）。
+
+影片類別：${categoryName}
+目標觀眾個性：${personality || '一般觀眾'}
+興趣方向：${interests || '多元內容'}
+
+只輸出標題文字，不要引號或其他符號。`;
+
+    const title = await generateLLMContent(prompt, 2, char.id);
+    
+    if (title && title.length > 5 && title.length < 50) {
+        return title;
     }
     
-    return sentences.join(' ');
+    return `【${categoryName}】${personality ? '為你推薦的精彩內容' : '熱門影片'} #${Math.floor(Math.random() * 10000)}`;
+}
+
+async function generateVideoDescription(char, title) {
+    if (!char) {
+        return title;
+    }
+    
+    const personality = (char?.personality || '').trim();
+    
+    const prompt = `為 YouTube 影片「${title}」寫一段簡短描述（30-60字）。
+
+上傳者個性：${personality || '創作者'}
+風格：輕鬆、吸引人
+
+只輸出描述文字。`;
+
+    const desc = await generateLLMContent(prompt, 2, char.id);
+    
+    if (desc && desc.length > 10) {
+        return desc;
+    }
+    
+    return title;
+}
+
+async function generateAdContent(char) {
+    const settings = await APIClient.getSettings();
+    
+    if (!settings.api_url || !settings.api_key) {
+        return {
+            banner: '🔥 精彩內容推薦！',
+            popup: { icon: '🎁', title: '特別推薦', text: '探索更多精彩內容！' }
+        };
+    }
+    
+    const personality = (char?.personality || '').trim() || '一般用戶';
+    
+    const prompt = `為一個 YouTube 影片前的廣告生成內容。
+
+目標用戶個性：${personality}
+
+請生成兩個部分：
+1. 一句簡短的橫幅廣告文案（10-15字，吸引注意）
+2. 一個彈窗廣告內容（JSON格式）：
+{
+  "icon": "一個emoji",
+  "title": "彈窗標題（4-6字）",
+  "text": "彈窗內容（15-25字）"
+}
+
+用以下格式輸出：
+BANNER: 橫幅文案
+POPUP: JSON內容`;
+
+    const content = await generateLLMContent(prompt, 2, char?.id);
+    
+    if (content) {
+        const bannerMatch = content.match(/BANNER:\s*(.+)/);
+        const popupMatch = content.match(/POPUP:\s*(\{[\s\S]+\})/);
+        
+        let banner = '🔥 精彩內容推薦！';
+        let popup = { icon: '🎁', title: '特別推薦', text: '探索更多精彩內容！' };
+        
+        if (bannerMatch && bannerMatch[1]) {
+            banner = bannerMatch[1].trim();
+        }
+        
+        if (popupMatch && popupMatch[1]) {
+            try {
+                popup = JSON.parse(popupMatch[1]);
+            } catch {
+            }
+        }
+        
+        return { banner, popup };
+    }
+    
+    return {
+        banner: '🔥 精彩內容推薦！',
+        popup: { icon: '🎁', title: '特別推薦', text: '探索更多精彩內容！' }
+    };
 }
 
 function calculateCommentInterval(char) {
     const personality = (char?.personality || '').toLowerCase();
-    let baseInterval = 10000;
+    let baseInterval = 12000;
     
     if (personality.includes('活潑') || personality.includes('調皮') || personality.includes('開朗') || personality.includes('熱情')) {
-        baseInterval = 6000;
+        baseInterval = 8000;
     } else if (personality.includes('高冷') || personality.includes('冷淡') || personality.includes('酷') || personality.includes('冷靜')) {
-        baseInterval = 15000;
+        baseInterval = 20000;
     } else if (personality.includes('病嬌') || personality.includes('佔有') || personality.includes('嫉妒') || personality.includes('腹黑')) {
-        baseInterval = 7000;
+        baseInterval = 10000;
     } else if (personality.includes('溫柔') || personality.includes('體貼') || personality.includes('善良')) {
-        baseInterval = 9000;
+        baseInterval = 12000;
     } else if (personality.includes('激動') || personality.includes('熱血')) {
-        baseInterval = 5000;
+        baseInterval = 7000;
     }
     
-    const variance = baseInterval * 0.3;
+    const variance = baseInterval * 0.25;
     return baseInterval + (Math.random() * variance * 2 - variance);
 }
 
@@ -351,14 +503,14 @@ function startCharCompanion(container, char, video) {
     
     charCommentInterval = calculateCommentInterval(char);
     
-    setTimeout(() => {
-        const initialComment = getCharLiveComment(char, video);
+    setTimeout(async () => {
+        const initialComment = await generateCharLiveComment(container, char, video);
         showCharCommentBubble(container, initialComment);
-    }, 2000);
+    }, 2500);
     
-    charCommentTimer = setInterval(() => {
+    charCommentTimer = setInterval(async () => {
         if (!pendingVideoData) return;
-        const comment = getCharLiveComment(char, pendingVideoData);
+        const comment = await generateCharLiveComment(container, char, pendingVideoData);
         showCharCommentBubble(container, comment);
         charCommentInterval = calculateCommentInterval(char);
     }, charCommentInterval);
@@ -377,7 +529,7 @@ function stopCharCompanion(container) {
     }
 }
 
-function showAd(container) {
+async function showAd(container, char = null) {
     const overlay = container.querySelector('.yt-ad-overlay');
     const skipBtn = container.querySelector('.yt-ad-skip-btn');
     const skipText = container.querySelector('.yt-ad-skip');
@@ -391,7 +543,9 @@ function showAd(container) {
     overlay.removeAttribute('hidden');
     adShowing = true;
     
-    if (bannerText) bannerText.textContent = randomPick(adTexts);
+    const adContent = await generateAdContent(char);
+    
+    if (bannerText) bannerText.textContent = adContent.banner;
     if (banner) banner.removeAttribute('hidden');
     if (skipBtn) skipBtn.setAttribute('hidden', '');
     if (skipText) skipText.removeAttribute('hidden');
@@ -408,12 +562,14 @@ function showAd(container) {
         if (progressBar) progressBar.style.width = `${Math.min(progress, 100)}%`;
     }, progressInterval);
     
+    const currentAdContent = adContent;
+    
     adTimer = setInterval(() => {
         adCountdown--;
         if (countdownEl) countdownEl.textContent = adCountdown;
         
-        if (Math.random() < 0.3) {
-            showAdPopup(container);
+        if (Math.random() < 0.25) {
+            showAdPopup(container, currentAdContent.popup);
         }
         
         if (adCountdown <= 0) {
@@ -422,20 +578,20 @@ function showAd(container) {
             adTimer = null;
             if (skipBtn) {
                 skipBtn.removeAttribute('hidden');
-                skipBtn.onclick = () => skipAd(container);
+                skipBtn.onclick = () => skipAd(container, currentAdContent.popup);
             }
             if (skipText) skipText.setAttribute('hidden', '');
         }
     }, 1000);
 }
 
-function skipAd(container) {
+function skipAd(container, popupContent = null) {
     const overlay = container.querySelector('.yt-ad-overlay');
     if (overlay) overlay.setAttribute('hidden', '');
     adShowing = false;
     
-    if (Math.random() < 0.5) {
-        showAdPopup(container);
+    if (Math.random() < 0.4 && popupContent) {
+        showAdPopup(container, popupContent);
     }
 }
 
@@ -444,11 +600,11 @@ function closeAdBanner(container) {
     if (banner) banner.setAttribute('hidden', '');
 }
 
-function showAdPopup(container) {
+function showAdPopup(container, popupContent = null) {
     const existingPopup = container.querySelector('.yt-ad-popup');
     if (existingPopup) return;
     
-    const msg = randomPick(adPopupMessages);
+    const msg = popupContent || { icon: '🎁', title: '特別推薦', text: '探索更多精彩內容！' };
     const popup = createElement('div', 'yt-ad-popup');
     popup.innerHTML = `
         <div class="yt-ad-popup-card">
@@ -490,7 +646,7 @@ function updateCharWatchUI(container, char, video) {
     }
 }
 
-function showCharReaction(container, char, video) {
+async function showCharReaction(container, char, video) {
     const reactionEl = container.querySelector('.yt-char-watch-reaction');
     const textEl = container.querySelector('.yt-char-reaction-text');
     const timeEl = container.querySelector('.yt-char-reaction-time');
@@ -500,7 +656,7 @@ function showCharReaction(container, char, video) {
         return;
     }
     
-    const reaction = getCharReaction(char, video);
+    const reaction = await generateCharReaction(container, char, video);
     if (textEl) textEl.textContent = reaction;
     if (timeEl) timeEl.textContent = new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' });
     reactionEl?.removeAttribute('hidden');
@@ -542,7 +698,7 @@ function renderCharWatchHistory(container) {
     `).join('');
 }
 
-function openPlayerPage(container, video) {
+async function openPlayerPage(container, video) {
     pendingVideoData = video;
     container.querySelector('.yt-main')?.setAttribute('hidden', '');
     container.querySelector('.yt-player-page')?.removeAttribute('hidden');
@@ -577,7 +733,9 @@ function openPlayerPage(container, video) {
     currentWatchingChar = null;
     
     if (Math.random() < 0.8) {
-        showAd(container);
+        const chars = await loadCharacters();
+        const char = chars.length > 0 ? chars[0] : null;
+        showAd(container, char);
     }
 }
 
@@ -788,15 +946,25 @@ async function generateAIVideos(container) {
     isGeneratingVideos = true;
     
     try {
+        const chars = await loadCharacters();
+        const selectedChar = chars.length > 0 ? chars[0] : null;
+        
         const videos = [];
+        const tagList = ['live', 'music', 'game', 'tech', 'diy'];
+        
         for (let i = 0; i < 3; i++) {
+            const tag = currentChip === 'all' ? randomPick(tagList) : currentChip;
+            const title = await generateVideoTitle(selectedChar, tag);
+            const desc = await generateVideoDescription(selectedChar, title);
+            
             videos.push({
-                title: `AI 生成影片 #${currentFeed.length + i + 1}`,
-                channel: 'AI Studio',
+                title,
+                description: desc,
+                channel: selectedChar ? `${selectedChar.name} 的推薦` : 'AI Studio',
                 views: randomViews(),
                 time: randomTime(),
                 duration: randomDuration(),
-                tag: currentChip === 'all' ? randomPick(['live', 'music', 'game', 'tech', 'diy']) : currentChip,
+                tag,
                 url: '',
                 thumb: '',
                 thumbGradient: generateThumbnail(),
@@ -875,11 +1043,35 @@ async function startYTAIVideoGeneration(container) {
     container.querySelector('.yt-ai-video-gen-status')?.removeAttribute('hidden');
     container.querySelector('.yt-ai-video-gen-form')?.setAttribute('hidden', '');
     
-    createToast('AI 影片生成功能需要外部 API 支援', 'info');
+    const chars = await loadCharacters();
+    const selectedChar = chars.length > 0 ? chars[0] : null;
     
-    setTimeout(() => {
-        resetAIVideoGenModal(container);
-    }, 2000);
+    const title = await generateVideoTitle(selectedChar, currentChip || 'all');
+    const desc = await generateVideoDescription(selectedChar, title);
+    
+    aiVideoGenState.generatedPrompt = title;
+    
+    const newVideo = {
+        id: `ai-vid-${Date.now()}`,
+        title,
+        description: desc,
+        channel: selectedChar ? `${selectedChar.name} 的創作` : 'AI Studio',
+        views: randomViews(),
+        time: '剛剛',
+        duration: '0:02',
+        tag: currentChip || 'all',
+        url: '',
+        thumb: '',
+        thumbGradient: generateThumbnail(),
+        isAIGenerated: true,
+        createdAt: new Date().toISOString()
+    };
+    
+    currentFeed.unshift(newVideo);
+    renderFeed(container);
+    saveAllData();
+    closeAIVideoGenModal(container);
+    createToast('影片已生成並加入影片庫', 'success');
 }
 
 function addYTGeneratedVideoToFeed(container) {
@@ -890,7 +1082,7 @@ function addYTGeneratedVideoToFeed(container) {
     
     const newVideo = {
         id: `ai-vid-${Date.now()}`,
-        title: aiVideoGenState.generatedPrompt || 'AI 生成影片',
+        title: aiVideoGenState.generatedPrompt,
         channel: 'AI Studio',
         views: randomViews(),
         time: '剛剛',
@@ -907,6 +1099,7 @@ function addYTGeneratedVideoToFeed(container) {
     renderFeed(container);
     saveAllData();
     closeAIVideoGenModal(container);
+    createToast('影片已加入影片庫', 'success');
 }
 
 async function renderYouTube(params) {
@@ -1274,7 +1467,7 @@ async function renderYouTube(params) {
             const video = currentFeed.find(v => v.id === videoId);
             if (video) {
                 if (video.url || video.videoUrl) {
-                    openPlayerPage(container, video);
+                    await openPlayerPage(container, video);
                 } else {
                     createToast('此影片尚未設定連結', 'info');
                 }
@@ -1385,7 +1578,7 @@ async function renderYouTube(params) {
             case 'char-react':
                 if (currentWatchingChar && pendingVideoData) {
                     const char = characters.find(c => c.id === currentWatchingChar);
-                    if (char) showCharReaction(container, char, pendingVideoData);
+                    if (char) await showCharReaction(container, char, pendingVideoData);
                 }
                 break;
             case 'char-watch-history':
@@ -1433,7 +1626,7 @@ async function renderYouTube(params) {
                 await startYTAIVideoGeneration(container);
                 break;
             case 'download-video':
-                createToast('下載功能需要外部 API 支援', 'info');
+                createToast('影片下載功能即將推出', 'info');
                 break;
             case 'add-to-feed':
                 addYTGeneratedVideoToFeed(container);
