@@ -1,6 +1,6 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBottomNav, createKakaoBottomSheet, createEmptyState, createToast } from '../../components.js';
-import { CharactersDB, ChatsDB, UsersDB } from '../../db.js';
+import { CharactersDB, ChatsDB } from '../../db.js';
 import { CHATS_TABS } from './chats-nav.js';
 
 async function renderContacts() {
@@ -49,14 +49,20 @@ async function renderContacts() {
         characters.forEach(char => {
             const cell = createElement('div', 'kakao-chat-cell');
             cell.onclick = async () => {
-                const existing = allChats.find(c => c.character_name === char.name);
+                const existing = allChats.find(c => c.character_id === char.id);
                 if (existing) {
                     Router.navigate('/chat/' + existing.id);
                     return;
                 }
                 const newChat = await ChatsDB.create({
+                    character_id: char.id,
                     character_name: char.name,
-                    character_avatar: char.avatar || ''
+                    character_avatar: char.avatar || '',
+                    character_personality: char.personality || '',
+                    character_scenario: char.scenario || '',
+                    character_first_message: char.first_message || '',
+                    character_description: char.description || '',
+                    bound_user_id: char.bound_user_id || null
                 });
                 createToast('已開始與 ' + char.name + ' 的對話');
                 Router.navigate('/chat/' + newChat.id);
@@ -97,7 +103,6 @@ async function renderContacts() {
 }
 
 async function openCreateSheet() {
-    const users = await UsersDB.getAll();
     const existingChars = await CharactersDB.getAll();
     const existingNames = existingChars.map(c => c.name);
 
@@ -144,39 +149,6 @@ async function openCreateSheet() {
     form.appendChild(personalityInput);
     form.appendChild(scenarioInput);
     form.appendChild(firstMsgInput);
-
-    if (users.length > 0) {
-        const userSelectSection = createElement('div', 'mt-2');
-        userSelectSection.appendChild(createElement('p', 'text-sm text-gray-500 mb-2', { textContent: '從 User 設定自動帶入' }));
-
-        const userSelect = createElement('select', 'kakao-chat-textarea w-full');
-        userSelect.style.borderRadius = '12px';
-        userSelect.style.height = '44px';
-        userSelect.style.padding = '0 12px';
-
-        const defaultOption = createElement('option', { textContent: '-- 選擇 User --' });
-        defaultOption.value = '';
-        userSelect.appendChild(defaultOption);
-
-        users.forEach(user => {
-            const opt = createElement('option', { textContent: user.name || '未命名 User' });
-            opt.value = user.id;
-            userSelect.appendChild(opt);
-        });
-
-        userSelect.onchange = () => {
-            const selectedId = userSelect.value;
-            if (!selectedId) return;
-            const user = users.find(u => u.id === selectedId);
-            if (user) {
-                if (!nameInput.value && user.name) nameInput.value = user.name;
-                if (!avatarInput.value && user.avatar) avatarInput.value = user.avatar;
-                if (!personalityInput.value && user.personality) personalityInput.value = user.personality;
-            }
-        };
-        userSelectSection.appendChild(userSelect);
-        form.appendChild(userSelectSection);
-    }
 
     const sheet = createKakaoBottomSheet([], {
         title: '建立新聯絡',

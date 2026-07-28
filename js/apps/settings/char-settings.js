@@ -1,6 +1,6 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
-import { CharactersDB, SettingsDB } from '../../db.js';
+import { CharactersDB, SettingsDB, UsersDB } from '../../db.js';
 
 async function renderCharList() {
     const characters = await CharactersDB.getAll();
@@ -214,40 +214,38 @@ async function renderCharEdit(params) {
     main.appendChild(sleepSection);
     main.appendChild(sleepGroup);
 
+    const users = await UsersDB.getAll();
+    
     const userSection = createElement('div', 'mb-2 ml-8 mt-4');
-    userSection.appendChild(createElement('p', 'ios-section-header', { textContent: '對應的 User' }));
+    userSection.appendChild(createElement('p', 'ios-section-header', { textContent: '綁定 User 面具' }));
     const userGroup = createElement('div', 'ios-grouped-list mx-4');
     const userCell = createElement('div', 'p-4');
-    const userInput = createElement('input', 'ios-input w-full', {
-        type: 'text',
-        placeholder: '用逗號分隔多個 User 名稱',
-        value: (char.assigned_users || []).join(', ')
+    const userSelect = createElement('select', 'ios-input w-full');
+    const defaultOption = createElement('option', '', {
+        value: '',
+        textContent: '不綁定（使用預設身份）'
     });
-    userCell.appendChild(userInput);
+    if (!char.bound_user_id) defaultOption.selected = true;
+    userSelect.appendChild(defaultOption);
+    users.forEach(user => {
+        const option = createElement('option', '', {
+            value: user.id,
+            textContent: user.name || '未命名'
+        });
+        if (char.bound_user_id === user.id) option.selected = true;
+        userSelect.appendChild(option);
+    });
+    userCell.appendChild(userSelect);
     userGroup.appendChild(userCell);
     main.appendChild(userSection);
     main.appendChild(userGroup);
 
-    const tabooSection = createElement('div', 'mb-2 ml-8 mt-4');
-    tabooSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'User 禁忌 / 避免用詞' }));
-    const tabooGroup = createElement('div', 'ios-grouped-list mx-4');
-    const tabooCell = createElement('div', 'p-4');
-    const tabooInput = createElement('textarea', 'ios-input w-full', {
-        placeholder: '用逗號或換行列出需要避免的用詞或話題...',
-        rows: '3'
-    });
-    tabooInput.value = (char.taboos || []).join(', ');
-    tabooCell.appendChild(tabooInput);
-    tabooGroup.appendChild(tabooCell);
-    main.appendChild(tabooSection);
-    main.appendChild(tabooGroup);
 
     const saveSection = createElement('div', 'mx-4 mt-6');
     const saveBtn = createElement('button', 'ios-btn ios-btn-primary w-full py-3', { textContent: '儲存角色設定' });
     saveBtn.onclick = async () => {
         const nicknames = nickInput.value.split(',').map(s => s.trim()).filter(Boolean);
-        const assignedUsers = userInput.value.split(',').map(s => s.trim()).filter(Boolean);
-        const taboos = tabooInput.value.split(',').map(s => s.trim()).filter(Boolean);
+        const boundUserId = userSelect.value || null;
 
         await CharactersDB.update(params.id, {
             avatar: avatarInput.value.trim(),
@@ -258,8 +256,7 @@ async function renderCharEdit(params) {
             speech_style: styleInput.value.trim(),
             sleep_start: sleepStartInput.value,
             sleep_end: sleepEndInput.value,
-            assigned_users: assignedUsers,
-            taboos
+            bound_user_id: boundUserId
         });
         createToast('角色設定已儲存');
         Router.navigate('/settings/char/' + params.id);
