@@ -1,39 +1,17 @@
-import Router from '../../router.js';
-import { createElement, createIcon } from '../../components.js';
-import { SettingsDB } from '../../db.js';
+﻿import Router from '../../router.js';
+import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
+import { CharactersDB, SettingsDB } from '../../db.js';
+import APIClient from '../../api.js';
+import { buildAppContext } from '../../core/app-context-builder.js';
 
-const mockData = {
-    streams: [
-        { id: 'stream-1', title: '【傳說對決】挑戰傳說段位！一起衝分！', streamer: '電競小王子', streamerAvatar: 'https://placehold.co/80x80/9146ff/ffffff?text=王', game: '傳說對決', viewers: 12580, thumbnail: 'https://placehold.co/640x360/1a1a2e/9146ff?text=傳說對決', isLive: true, category: 'gaming' },
-        { id: 'stream-2', title: '【英雄聯盟】台服菁英之路 Day 3', streamer: 'LOL大師兄', streamerAvatar: 'https://placehold.co/80x80/ff6b6b/ffffff?text=L', game: '英雄聯盟', viewers: 8920, thumbnail: 'https://placehold.co/640x360/1a1a2e/ff6b6b?text=英雄聯盟', isLive: true, category: 'gaming' },
-        { id: 'stream-3', title: '晚安聊天室～今天過得怎麼樣？', streamer: '甜心主播', streamerAvatar: 'https://placehold.co/80x80/ff9ff3/ffffff?text=甜', game: 'Just Chatting', viewers: 5630, thumbnail: 'https://placehold.co/640x360/1a1a2e/ff9ff3?text=聊天', isLive: true, category: 'irl' },
-        { id: 'stream-4', title: '【原神】4.5版本新角色抽抽樂！', streamer: '原神攻略組', streamerAvatar: 'https://placehold.co/80x80/4ecdc4/ffffff?text=原', game: '原神', viewers: 7840, thumbnail: 'https://placehold.co/640x360/1a1a2e/4ecdc4?text=原神', isLive: true, category: 'gaming' },
-        { id: 'stream-5', title: '深夜音樂電台～放鬆一下', streamer: 'DJ小夜', streamerAvatar: 'https://placehold.co/80x80/45b7d1/ffffff?text=D', game: 'Music', viewers: 3210, thumbnail: 'https://placehold.co/640x360/1a1a2e/45b7d1?text=音樂', isLive: true, category: 'music' },
-        { id: 'stream-6', title: '【VALORANT】特戰英豪排位賽', streamer: 'FPS戰神', streamerAvatar: 'https://placehold.co/80x80/ff6348/ffffff?text=F', game: 'VALORANT', viewers: 6540, thumbnail: 'https://placehold.co/640x360/1a1a2e/ff6348?text=VALORANT', isLive: true, category: 'esports' },
-        { id: 'stream-7', title: '繪圖直播～今天來畫風景畫', streamer: '繪師小櫻', streamerAvatar: 'https://placehold.co/80x80/ffa502/ffffff?text=繪', game: 'Art', viewers: 1890, thumbnail: 'https://placehold.co/640x360/1a1a2e/ffa502?text=繪圖', isLive: true, category: 'creative' },
-        { id: 'stream-8', title: '【Minecraft】生存建築挑戰！', streamer: '麥塊達人', streamerAvatar: 'https://placehold.co/80x80/2ed573/ffffff?text=麥', game: 'Minecraft', viewers: 4320, thumbnail: 'https://placehold.co/640x360/1a1a2e/2ed573?text=Minecraft', isLive: true, category: 'gaming' }
-    ],
-    categories: [
-        { id: 'cat-1', name: '傳說對決', viewers: 45680, cover: 'https://placehold.co/300x400/9146ff/ffffff?text=傳說對決' },
-        { id: 'cat-2', name: '英雄聯盟', viewers: 38420, cover: 'https://placehold.co/300x400/ff6b6b/ffffff?text=英雄聯盟' },
-        { id: 'cat-3', name: 'Just Chatting', viewers: 28930, cover: 'https://placehold.co/300x400/ff9ff3/ffffff?text=聊天' },
-        { id: 'cat-4', name: '原神', viewers: 24560, cover: 'https://placehold.co/300x400/4ecdc4/ffffff?text=原神' },
-        { id: 'cat-5', name: 'VALORANT', viewers: 19870, cover: 'https://placehold.co/300x400/ff6348/ffffff?text=VALORANT' },
-        { id: 'cat-6', name: 'Minecraft', viewers: 16430, cover: 'https://placehold.co/300x400/2ed573/ffffff?text=Minecraft' }
-    ],
-    followedChannels: [
-        { id: 'follow-1', name: '電競小王子', game: '傳說對決', viewers: 12580, avatar: 'https://placehold.co/60x60/9146ff/ffffff?text=王', isLive: true },
-        { id: 'follow-2', name: '甜心主播', game: 'Just Chatting', viewers: 5630, avatar: 'https://placehold.co/60x60/ff9ff3/ffffff?text=甜', isLive: true },
-        { id: 'follow-3', name: '遊戲實況主', game: '', viewers: 0, avatar: 'https://placehold.co/60x60/71717a/ffffff?text=遊', isLive: false }
-    ],
-    featuredStreams: [
-        { id: 'featured-1', title: '【電競錦標賽】總決賽直播', streamer: '官方直播', game: '電競賽事', viewers: 156780, thumbnail: 'https://placehold.co/1280x720/1a1a2e/9146ff?text=電競錦標賽' },
-        { id: 'featured-2', title: '【新遊戲發表會】2024春季發表會', streamer: '遊戲官方', game: 'Special Events', viewers: 89340, thumbnail: 'https://placehold.co/1280x720/1a1a2e/ff6b6b?text=發表會' },
-        { id: 'featured-3', title: '【音樂祭】線上演唱會直播', streamer: '音樂頻道', game: 'Music', viewers: 45620, thumbnail: 'https://placehold.co/1280x720/1a1a2e/45b7d1?text=音樂祭' }
-    ],
-    searchHistory: ['傳說對決', 'LOL', '原神', 'Just Chatting'],
-    trendingSearches: ['電競錦標賽', '新遊戲發表會', '音樂祭', '抽卡實況', '生存挑戰']
-};
+const streamThumbnailColors = [
+    ['#9146FF', '#772CE8'],
+    ['#FF6B9D', '#C850C0'],
+    ['#00D4FF', '#7B2FF7'],
+    ['#FF4757', '#FF6B81'],
+    ['#00C9FF', '#92FE9D'],
+    ['#FC466B', '#3F5EFB']
+];
 
 let state = {
     currentCategory: 'all',
@@ -46,7 +24,13 @@ let state = {
     streamPageOpen: false,
     isPlaying: false,
     chatGenerationInterval: null,
-    customCategories: []
+    customCategories: [],
+    characters: [],
+    currentCharacterId: null,
+    chatMessages: [],
+    liveStreams: [],
+    followers: [],
+    suggestedStreams: []
 };
 
 function formatViewers(num) {
@@ -55,585 +39,688 @@ function formatViewers(num) {
     return num.toString();
 }
 
-async function loadCustomCategories() {
-    const cats = await SettingsDB.get('twitch_categories');
-    if (Array.isArray(cats)) state.customCategories = cats;
+function generateThumbnail() {
+    const colors = streamThumbnailColors[Math.floor(Math.random() * streamThumbnailColors.length)];
+    const patterns = [
+        `linear-gradient(135deg, ${colors[0]}, ${colors[1]})`,
+        `linear-gradient(45deg, ${colors[0]}, ${colors[1]})`,
+        `linear-gradient(90deg, ${colors[0]}, ${colors[1]})`,
+        `radial-gradient(circle at 30% 30%, ${colors[0]}, ${colors[1]})`,
+        `radial-gradient(circle at 70% 70%, ${colors[0]}, ${colors[1]})`
+    ];
+    return patterns[Math.floor(Math.random() * patterns.length)];
 }
 
-async function saveCustomCategories() {
-    await SettingsDB.set('twitch_categories', state.customCategories);
+function randomViewers() {
+    const values = [128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768];
+    return values[Math.floor(Math.random() * values.length)];
 }
 
-async function renderTwitch() {
-    await loadCustomCategories();
-    
-    const container = createElement('div', 'app-container twitch-app');
-    
-    container.innerHTML = `
-        <header class="twitch-top-nav">
-            <div class="nav-left">
-                <button class="nav-btn" id="menu-btn">
-                    <span class="material-symbols-outlined">menu</span>
-                </button>
-                <div class="nav-logo">
-                    <svg class="twitch-logo" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M3.406 1.406L0 4.813v15.375h5.5V24l3.5-3.5h3.5L21 12V1.406H3.406zM19.25 11.25l-4 4h-3.5l-2.625 2.625v-2.625H5.5V3.156h13.75v8.094z"/>
-                        <path d="M16.25 5.906h-1.75v5.25h1.75v-5.25zM12 5.906h-1.75v5.25H12v-5.25z"/>
-                    </svg>
-                    <span class="twitch-logo-wordmark">Twitch</span>
-                </div>
-            </div>
-            <div class="nav-actions">
-                <button class="nav-btn" id="search-btn">
-                    <span class="material-symbols-outlined">search</span>
-                </button>
-            </div>
-        </header>
-
-        <aside class="twitch-sidebar" id="sidebar">
-            <div class="sidebar-section">
-                <div class="sidebar-title">推薦頻道</div>
-                <div class="channel-list" id="recommended-channels"></div>
-            </div>
-            <div class="sidebar-section">
-                <div class="sidebar-title">已追蹤</div>
-                <div class="channel-list" id="followed-channels"></div>
-            </div>
-        </aside>
-
-        <main class="twitch-main" id="main-content">
-            <div class="category-nav">
-                <select class="category-select" id="category-select">
-                    <option value="all">所有分類</option>
-                    <option value="gaming">遊戲</option>
-                    <option value="irl">生活</option>
-                    <option value="music">音樂</option>
-                    <option value="esports">電競</option>
-                    <option value="creative">創作</option>
-                </select>
-                <button class="category-add-btn" id="add-category-btn">
-                    <span class="material-symbols-outlined">add</span>
-                </button>
-            </div>
-
-            <section class="featured-section">
-                <div class="featured-carousel" id="featured-carousel"></div>
-                <div class="carousel-dots" id="carousel-dots"></div>
-            </section>
-
-            <section class="streams-section">
-                <div class="section-header">
-                    <h2 class="section-title">推薦直播</h2>
-                </div>
-                <div class="streams-grid" id="streams-grid"></div>
-            </section>
-
-            <section class="categories-section">
-                <div class="section-header">
-                    <h2 class="section-title">熱門分類</h2>
-                </div>
-                <div class="categories-grid" id="categories-grid"></div>
-            </section>
-        </main>
-
-        <div class="twitch-search-panel" id="search-panel">
-            <div class="search-header">
-                <button class="nav-btn" id="close-search-btn">
-                    <span class="material-symbols-outlined">arrow_back</span>
-                </button>
-                <div class="search-input-wrapper">
-                    <input type="text" id="search-input" placeholder="搜尋直播、遊戲、實況主...">
-                </div>
-            </div>
-            <div class="search-results">
-                <div class="search-history">
-                    <h3>搜尋紀錄</h3>
-                    <div class="history-list" id="history-list"></div>
-                </div>
-                <div class="trending-searches">
-                    <h3>熱門搜尋</h3>
-                    <div class="trending-list" id="trending-list"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="stream-page" id="stream-page">
-            <header class="stream-header">
-                <button class="nav-btn" id="close-stream-btn">
-                    <span class="material-symbols-outlined">arrow_back</span>
-                </button>
-                <div class="stream-info-header">
-                    <span class="streamer-name" id="streamer-name"></span>
-                    <span class="stream-category" id="stream-category"></span>
-                </div>
-                <button class="follow-btn" id="follow-btn">追蹤</button>
-            </header>
-            <div class="stream-player">
-                <div class="video-placeholder" id="video-placeholder">
-                    <span class="material-symbols-outlined" style="font-size: 64px;">play_circle</span>
-                </div>
-                <div class="stream-controls">
-                    <button class="control-btn" id="play-btn">
-                        <span class="material-symbols-outlined">play_arrow</span>
-                    </button>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progress-fill"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="stream-tabs">
-                <button class="stream-tab active" data-tab="chat">聊天室</button>
-                <button class="stream-tab" data-tab="info">資訊</button>
-            </div>
-            <div class="stream-content">
-                <div class="chat-panel" id="chat-panel">
-                    <div class="chat-messages" id="chat-messages"></div>
-                    <div class="chat-input-area">
-                        <input type="text" id="chat-input" placeholder="發送訊息...">
-                        <button class="send-btn" id="send-chat-btn">
-                            <span class="material-symbols-outlined">send</span>
-                        </button>
-                    </div>
-                </div>
-                <div class="info-panel" id="info-panel" style="display:none">
-                    <div class="streamer-card">
-                        <img class="streamer-avatar-lg" id="streamer-avatar" src="" alt="">
-                        <div class="streamer-details">
-                            <h3 id="streamer-title"></h3>
-                            <p id="streamer-bio"></p>
-                            <div class="streamer-stats">
-                                <span id="viewer-count"></span>
-                                <span id="follower-count"></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <nav class="twitch-bottom-nav">
-            <button class="nav-item active" data-tab="home">
-                <span class="material-symbols-outlined">home</span>
-                <span>首頁</span>
-            </button>
-            <button class="nav-item" data-tab="following">
-                <span class="material-symbols-outlined">favorite</span>
-                <span>追蹤</span>
-            </button>
-            <button class="nav-item" data-tab="browse">
-                <span class="material-symbols-outlined">explore</span>
-                <span>探索</span>
-            </button>
-        </nav>
-    `;
-
-    let carouselTimer = null;
-
-    function renderChannels(container, channels) {
-        container.innerHTML = '';
-        channels.forEach(channel => {
-            const item = createElement('div', 'channel-item');
-            item.innerHTML = `
-                <div class="channel-avatar">
-                    <img src="${channel.avatar}" alt="${channel.name}">
-                </div>
-                <div class="channel-info">
-                    <div class="channel-name">${channel.name}</div>
-                    <div class="channel-game">${channel.game || '離線'}</div>
-                </div>
-                ${channel.isLive ? `
-                    <div class="channel-viewers">
-                        <span class="live-indicator"></span>
-                        <span>${formatViewers(channel.viewers)}</span>
-                    </div>
-                ` : ''}
-            `;
-            item.onclick = () => {
-                if (channel.isLive) {
-                    const stream = mockData.streams.find(s => s.streamer === channel.name);
-                    if (stream) openStreamPage(stream);
-                }
-            };
-            container.appendChild(item);
-        });
-    }
-
-    function renderFeaturedCarousel() {
-        const carousel = container.querySelector('#featured-carousel');
-        const dots = container.querySelector('#carousel-dots');
-        carousel.innerHTML = '';
-        dots.innerHTML = '';
-        
-        mockData.featuredStreams.forEach((stream, index) => {
-            const item = createElement('div', `featured-item ${index === 0 ? 'active' : ''}`);
-            item.innerHTML = `
-                <img class="featured-thumbnail" src="${stream.thumbnail}" alt="${stream.title}">
-                <div class="featured-overlay">
-                    <div class="featured-live-badge">
-                        <span class="material-symbols-outlined" style="font-size: 12px;">circle</span>
-                        直播中
-                    </div>
-                    <div class="featured-title">${stream.title}</div>
-                    <div class="featured-streamer">${stream.streamer}</div>
-                    <div class="featured-game">${stream.game} · ${formatViewers(stream.viewers)} 位觀眾</div>
-                </div>
-            `;
-            item.onclick = () => {
-                openStreamPage({ ...stream, streamerAvatar: 'https://placehold.co/80x80/9146ff/ffffff?text=官' });
-            };
-            carousel.appendChild(item);
-            
-            const dot = createElement('button', `carousel-dot ${index === 0 ? 'active' : ''}`);
-            dot.onclick = () => goToSlide(index);
-            dots.appendChild(dot);
-        });
-    }
-
-    function goToSlide(index) {
-        state.carouselIndex = index;
-        const items = container.querySelectorAll('.featured-item');
-        const dots = container.querySelectorAll('.carousel-dot');
-        items.forEach((item, i) => item.classList.toggle('active', i === index));
-        dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
-    }
-
-    function startCarouselRotation() {
-        carouselTimer = setInterval(() => {
-            const nextIndex = (state.carouselIndex + 1) % mockData.featuredStreams.length;
-            goToSlide(nextIndex);
-        }, 5000);
-    }
-
-    function renderStreams(category = 'all') {
-        const grid = container.querySelector('#streams-grid');
-        grid.innerHTML = '';
-        
-        let streams = mockData.streams;
-        if (category !== 'all') {
-            streams = streams.filter(s => s.category === category);
+async function loadCharacters() {
+    try {
+        const chars = await CharactersDB.getAll();
+        state.characters = chars || [];
+        if (!state.currentCharacterId && state.characters.length > 0) {
+            state.currentCharacterId = state.characters[0].id;
         }
-        
-        streams.forEach(stream => {
-            const card = createElement('div', 'stream-card');
-            card.innerHTML = `
-                <div class="stream-thumbnail">
-                    <img src="${stream.thumbnail}" alt="${stream.title}">
-                    <span class="stream-live-badge">直播中</span>
-                    <span class="stream-viewers">
-                        <span class="material-symbols-outlined" style="font-size: 12px;">visibility</span>
-                        ${formatViewers(stream.viewers)}
-                    </span>
-                </div>
-                <div class="stream-info">
-                    <div class="streamer-avatar">
-                        <img src="${stream.streamerAvatar}" alt="${stream.streamer}">
-                    </div>
-                    <div class="stream-details">
-                        <div class="stream-title">${stream.title}</div>
-                        <div class="stream-channel">${stream.streamer}</div>
-                        <div class="stream-game">${stream.game}</div>
-                    </div>
-                </div>
-            `;
-            card.onclick = () => openStreamPage(stream);
-            grid.appendChild(card);
-        });
+    } catch (e) {
+        state.characters = [];
+    }
+}
+
+async function generateStreamTitle(character) {
+    const settings = await SettingsDB.getAll();
+    
+    if (!settings.api_url || !settings.api_key) {
+        return `${character?.name || '主播'}的直播時間！`;
     }
 
-    function renderCategories() {
-        const grid = container.querySelector('#categories-grid');
-        grid.innerHTML = '';
-        
-        mockData.categories.forEach(category => {
-            const card = createElement('div', 'category-card');
-            card.innerHTML = `
-                <div class="category-cover">
-                    <img src="${category.cover}" alt="${category.name}">
-                </div>
-                <div class="category-name">${category.name}</div>
-                <div class="category-viewers">${formatViewers(category.viewers)} 位觀眾</div>
-            `;
-            card.onclick = () => {
-                const categoryMap = {
-                    '傳說對決': 'gaming',
-                    '英雄聯盟': 'gaming',
-                    'Just Chatting': 'irl',
-                    '原神': 'gaming',
-                    'VALORANT': 'esports',
-                    'Minecraft': 'gaming'
-                };
-                renderStreams(categoryMap[category.name] || 'all');
-            };
-            grid.appendChild(card);
-        });
-    }
+    const context = await buildAppContext({ characterId: character?.id });
+    const systemPrompt = context.systemPrompt + `\n\n你是一個Twitch直播標題生成系統。根據角色設定生成吸引人的直播標題。
+返回格式（純文字，只要一個標題，不要引號）：
+一個簡短有力的直播標題（20字以內）`;
 
-    function renderSearchHistory() {
-        const list = container.querySelector('#history-list');
-        list.innerHTML = '';
-        mockData.searchHistory.forEach(term => {
-            const item = createElement('div', 'history-item');
-            item.innerHTML = `
-                <span class="material-symbols-outlined">history</span>
-                <span>${term}</span>
-            `;
-            item.onclick = () => performSearch(term);
-            list.appendChild(item);
-        });
-    }
+    const userPrompt = `角色名稱：${character?.name || '主播'}
+角色性格：${character?.personality || '一般主播'}
+請生成一個符合角色風格的直播標題。`;
 
-    function renderTrendingSearches() {
-        const list = container.querySelector('#trending-list');
-        list.innerHTML = '';
-        mockData.trendingSearches.forEach(term => {
-            const item = createElement('div', 'trending-item');
-            item.innerHTML = `
-                <span class="material-symbols-outlined">trending_up</span>
-                <span>${term}</span>
-            `;
-            item.onclick = () => performSearch(term);
-            list.appendChild(item);
+    try {
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${settings.api_key}`
+            },
+            body: JSON.stringify({
+                model: settings.model || 'gpt-3.5-turbo',
+                messages: [
+                    { role: 'system', content: systemPrompt },
+                    { role: 'user', content: userPrompt }
+                ],
+                temperature: 0.9,
+                max_tokens: 50
+            })
         });
-    }
 
-    function renderChatMessages() {
-        const messages = container.querySelector('#chat-messages');
-        const initialMessages = [
-            { username: '小明', message: '主播好強！', type: 'normal' },
-            { username: '管理員', message: '歡迎大家來到直播間～', type: 'moderator' },
-            { username: '訂閱者A', message: '已訂閱三個月了！', type: 'subscriber' },
-            { username: '路人甲', message: '第一次來看直播', type: 'normal' },
-            { username: '粉絲B', message: '主播加油！', type: 'normal' }
+        if (!response.ok) return null;
+
+        const data = await response.json();
+        return data.choices?.[0]?.message?.content?.trim() || null;
+    } catch (e) {
+        return null;
+    }
+}
+
+async function generateChatMessage(character, context) {
+    const settings = await SettingsDB.getAll();
+    
+    if (!settings.api_url || !settings.api_key) {
+        const fallbackMessages = [
+            '好看！', '加油！', '太強了', '哈囉！', '初次見面',
+            '推推', '太神了', '學到了', '哈哈哈', '牛逼'
         ];
-        
-        messages.innerHTML = '';
-        initialMessages.forEach(msg => addChatMessage(msg.username, msg.message, msg.type));
+        return fallbackMessages[Math.floor(Math.random() * fallbackMessages.length)];
     }
 
-    function addChatMessage(username, message, type = 'normal') {
-        const messages = container.querySelector('#chat-messages');
-        const msgEl = createElement('div', 'chat-message');
-        msgEl.innerHTML = `
-            <span class="chat-username ${type}">${username}:</span>
-            <span class="chat-text">${message}</span>
-        `;
-        messages.appendChild(msgEl);
-        messages.scrollTop = messages.scrollHeight;
+    const appContext = await buildAppContext({ characterId: character?.id });
+    const systemPrompt = appContext.systemPrompt + `\n\n你是一個Twitch聊天室觀眾。根據角色設定生成真實的聊天訊息。
+返回格式（純文字，只要一則留言）：
+一則簡短的聊天室留言（30字以內）`;
+
+    const userPrompt = `角色名稱：${character?.name || '觀眾'}
+角色性格：${character?.personality || '一般觀眾'}
+直播情境：${context || '正在觀看直播'}
+請生成一則符合角色風格的聊天留言。`;
+
+    try {
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${settings.api_key}`
+            },
+            body: JSON.stringify({
+                model: settings.model || 'gpt-3.5-turbo',
+                messages: [
+                    { role: 'system', content: systemPrompt },
+                    { role: 'user', content: userPrompt }
+                ],
+                temperature: 0.95,
+                max_tokens: 60
+            })
+        });
+
+        if (!response.ok) return null;
+
+        const data = await response.json();
+        return data.choices?.[0]?.message?.content?.trim() || null;
+    } catch (e) {
+        return null;
+    }
+}
+
+async function generateStreamerResponse(character, viewerMessage) {
+    const settings = await SettingsDB.getAll();
+    
+    if (!settings.api_url || !settings.api_key) {
+        const fallbackResponses = [
+            '謝謝支持！', '太感謝了！', '你們最棒了', '愛你們！', '哈哈謝啦'
+        ];
+        return fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
     }
 
-    function openStreamPage(stream) {
-        state.currentStream = stream;
-        state.isFollowing = false;
-        
-        container.querySelector('#streamer-name').textContent = stream.streamer;
-        container.querySelector('#stream-category').textContent = stream.game;
-        container.querySelector('#streamer-title').textContent = stream.streamer;
-        container.querySelector('#streamer-bio').textContent = `歡迎來到 ${stream.streamer} 的直播間！`;
-        container.querySelector('#streamer-avatar').src = stream.streamerAvatar;
-        container.querySelector('#viewer-count').textContent = `${formatViewers(stream.viewers)} 位觀眾`;
-        container.querySelector('#follower-count').textContent = `${Math.floor(Math.random() * 100 + 10)}K 位追蹤者`;
-        
-        updateFollowButton();
-        renderChatMessages();
-        
-        container.querySelector('#stream-page').classList.add('open');
-        state.streamPageOpen = true;
-    }
+    const context = await buildAppContext({ characterId: character?.id });
+    const systemPrompt = context.systemPrompt + `\n\n你是正在直播的主播。根據角色設定回應觀眾的留言。
+返回格式（純文字，只要一則回應）：
+一則簡短自然的直播回應（50字以內）`;
 
-    function closeStreamPage() {
-        container.querySelector('#stream-page').classList.remove('open');
-        state.streamPageOpen = false;
-        state.currentStream = null;
-        stopLiveChatGeneration();
-    }
+    const userPrompt = `主播名稱：${character?.name || '主播'}
+主播性格：${character?.personality || '一般主播'}
+觀眾留言：${viewerMessage}
+請以主播身份回應這則留言。`;
 
-    function togglePlay() {
-        state.isPlaying = !state.isPlaying;
-        const placeholder = container.querySelector('#video-placeholder');
-        const playBtn = container.querySelector('#play-btn');
-        
-        if (state.isPlaying) {
-            placeholder.innerHTML = `
-                <div class="live-playing-indicator">
-                    <span class="material-symbols-outlined" style="font-size: 48px; animation: pulse 1s infinite;">circle</span>
-                    <span>直播進行中</span>
-                </div>
-            `;
-            playBtn.innerHTML = '<span class="material-symbols-outlined">pause</span>';
-            startLiveChatGeneration();
-        } else {
-            placeholder.innerHTML = '<span class="material-symbols-outlined" style="font-size: 64px;">play_circle</span>';
-            playBtn.innerHTML = '<span class="material-symbols-outlined">play_arrow</span>';
-            stopLiveChatGeneration();
+    try {
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${settings.api_key}`
+            },
+            body: JSON.stringify({
+                model: settings.model || 'gpt-3.5-turbo',
+                messages: [
+                    { role: 'system', content: systemPrompt },
+                    { role: 'user', content: userPrompt }
+                ],
+                temperature: 0.9,
+                max_tokens: 100
+            })
+        });
+
+        if (!response.ok) return null;
+
+        const data = await response.json();
+        return data.choices?.[0]?.message?.content?.trim() || null;
+    } catch (e) {
+        return null;
+    }
+}
+
+function createCharacterSelector() {
+    const container = createElement('div', 'twitch-char-selector');
+    
+    const label = createElement('span', 'twitch-char-label', { textContent: '選擇角色：' });
+    container.appendChild(label);
+    
+    const select = createElement('select', 'twitch-char-select');
+    select.innerHTML = '<option value="">-- 選擇角色 --</option>';
+    
+    state.characters.forEach(char => {
+        const option = createElement('option', '', { 
+            value: char.id, 
+            textContent: char.name || '未命名' 
+        });
+        if (char.id === state.currentCharacterId) {
+            option.selected = true;
         }
-    }
-
-    function toggleFollow() {
-        state.isFollowing = !state.isFollowing;
-        updateFollowButton();
-    }
-
-    function updateFollowButton() {
-        const btn = container.querySelector('#follow-btn');
-        btn.textContent = state.isFollowing ? '已追蹤' : '追蹤';
-        btn.classList.toggle('following', state.isFollowing);
-    }
-
-    function openSearch() {
-        container.querySelector('#search-panel').classList.add('open');
-        state.searchOpen = true;
-        container.querySelector('#search-input').focus();
-    }
-
-    function closeSearch() {
-        container.querySelector('#search-panel').classList.remove('open');
-        state.searchOpen = false;
-        container.querySelector('#search-input').value = '';
-    }
-
-    function performSearch(query) {
-        if (!query.trim()) return;
-        const results = mockData.streams.filter(s => 
-            s.title.toLowerCase().includes(query.toLowerCase()) ||
-            s.streamer.toLowerCase().includes(query.toLowerCase()) ||
-            s.game.toLowerCase().includes(query.toLowerCase())
-        );
-        closeSearch();
-        if (results.length > 0) {
-            renderStreams();
-        }
-    }
-
-    function toggleSidebar() {
-        state.sidebarOpen = !state.sidebarOpen;
-        container.querySelector('#sidebar').classList.toggle('open', state.sidebarOpen);
-    }
-
-    function switchCategory(category) {
-        state.currentCategory = category;
-        container.querySelector('#category-select').value = category;
-        renderStreams(category);
-    }
-
-    async function addCategory() {
-        const categoryName = prompt('請輸入新主題名稱：');
-        if (!categoryName || !categoryName.trim()) return;
-        
-        const categoryId = categoryName.trim().toLowerCase().replace(/\s+/g, '-');
-        state.customCategories.push({ id: categoryId, name: categoryName.trim() });
-        await saveCustomCategories();
-        
-        const select = container.querySelector('#category-select');
-        const option = createElement('option', '');
-        option.value = categoryId;
-        option.textContent = categoryName.trim();
         select.appendChild(option);
-        select.value = categoryId;
-        switchCategory(categoryId);
-    }
+    });
+    
+    select.onchange = (e) => {
+        state.currentCharacterId = e.target.value || null;
+    };
+    
+    container.appendChild(select);
+    return container;
+}
 
-    function startLiveChatGeneration() {
-        if (state.chatGenerationInterval) return;
-        state.chatGenerationInterval = setInterval(() => {
-            const usernames = ['小明', '觀眾A', '粉絲B', '路人', '鐵粉'];
-            const messages = ['主播加油！', '好強！', '這操作太帥了', '第一次來', '追了！'];
-            addChatMessage(
-                usernames[Math.floor(Math.random() * usernames.length)],
-                messages[Math.floor(Math.random() * messages.length)],
-                Math.random() > 0.7 ? 'subscriber' : 'normal'
-            );
-        }, 3000 + Math.random() * 2000);
+function createStreamCard(stream, onClick) {
+    const card = createElement('article', 'twitch-stream-card');
+    
+    const thumb = createElement('div', 'twitch-stream-thumb');
+    thumb.style.background = stream.thumbGradient || generateThumbnail();
+    
+    const liveBadge = createElement('span', 'twitch-live-badge', { textContent: 'LIVE' });
+    thumb.appendChild(liveBadge);
+    
+    const viewerBadge = createElement('span', 'twitch-viewer-badge', { 
+        textContent: `${formatViewers(stream.viewers)} 觀眾` 
+    });
+    thumb.appendChild(viewerBadge);
+    
+    const body = createElement('div', 'twitch-stream-body');
+    
+    const avatar = createElement('div', 'twitch-stream-avatar');
+    if (stream.avatar) {
+        avatar.style.backgroundImage = `url(${stream.avatar})`;
     }
+    body.appendChild(avatar);
+    
+    const info = createElement('div', 'twitch-stream-info');
+    const title = createElement('div', 'twitch-stream-title', { textContent: stream.title });
+    const streamer = createElement('div', 'twitch-stream-name', { textContent: stream.streamer });
+    const game = createElement('div', 'twitch-stream-game', { textContent: stream.game || 'Just Chatting' });
+    
+    info.appendChild(title);
+    info.appendChild(streamer);
+    info.appendChild(game);
+    body.appendChild(info);
+    
+    card.appendChild(thumb);
+    card.appendChild(body);
+    
+    card.onclick = () => onClick(stream);
+    
+    return card;
+}
 
-    function stopLiveChatGeneration() {
-        if (state.chatGenerationInterval) {
-            clearInterval(state.chatGenerationInterval);
-            state.chatGenerationInterval = null;
+function createChatMessage(msg, isStreamer = false) {
+    const container = createElement('div', `twitch-chat-msg ${isStreamer ? 'streamer' : ''}`);
+    
+    const author = createElement('span', 'twitch-chat-author', { 
+        textContent: msg.author,
+        style: `color: ${msg.color || getRandomChatColor()}`
+    });
+    
+    const text = createElement('span', 'twitch-chat-text', { textContent: `: ${msg.text}` });
+    
+    container.appendChild(author);
+    container.appendChild(text);
+    
+    return container;
+}
+
+function getRandomChatColor() {
+    const colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#98D8C8', '#F7DC6F'];
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+function createTwitchBottomNav() {
+    const nav = createElement('footer', 'twitch-bottombar');
+    
+    const items = [
+        { icon: 'home', label: '首頁', path: '/twitch' },
+        { icon: 'explore', label: '探索', path: '/twitch/explore' },
+        { icon: 'follow', label: '追隨', path: '/twitch/following' },
+        { icon: 'person', label: '我的', path: '/twitch/profile' }
+    ];
+    
+    items.forEach(item => {
+        const btn = createElement('button', 'twitch-nav-btn');
+        btn.appendChild(createIcon(item.icon, 'text-xl'));
+        btn.appendChild(createElement('span', 'text-xs', { textContent: item.label }));
+        btn.onclick = () => Router.navigate(item.path);
+        nav.appendChild(btn);
+    });
+    
+    return nav;
+}
+
+async function generateLivestreams(count = 8) {
+    const streams = [];
+    const games = ['Just Chatting', 'League of Legends', 'Valorant', 'Minecraft', 'Apex Legends', 'Genshin Impact', 'Fortnite', 'GTA V'];
+    
+    for (let i = 0; i < count; i++) {
+        const char = state.characters[i % state.characters.length] || null;
+        
+        let title = char?.name ? `${char.name}的直播時間！` : `精彩直播 ${i + 1}`;
+        
+        if (char && state.currentCharacterId === char.id) {
+            const aiTitle = await generateStreamTitle(char);
+            if (aiTitle) title = aiTitle;
         }
-        state.isPlaying = false;
+        
+        streams.push({
+            id: `stream_${Date.now()}_${i}`,
+            title,
+            streamer: char?.name || `主播${i + 1}`,
+            game: games[Math.floor(Math.random() * games.length)],
+            viewers: randomViewers(),
+            thumbGradient: generateThumbnail(),
+            avatar: char?.avatar || '',
+            characterId: char?.id || null
+        });
     }
+    
+    return streams;
+}
 
-    function sendChatMessage() {
-        const input = container.querySelector('#chat-input');
-        const message = input.value.trim();
-        if (!message) return;
-        addChatMessage('我', message, 'normal');
+async function renderHome() {
+    const container = createElement('div', 'twitch-app');
+    
+    const header = createIOSNavBar({
+        title: 'twitch',
+        largeTitle: false,
+        backPath: '/home',
+        rightActions: [
+            { icon: 'search', onClick: () => {} },
+            { icon: 'notifications', onClick: () => Router.navigate('/twitch/notifications') }
+        ]
+    });
+    header.classList.add('twitch-header');
+    container.appendChild(header);
+    
+    const charSelector = createCharacterSelector();
+    container.appendChild(charSelector);
+    
+    const categories = createElement('div', 'twitch-categories');
+    const categoryList = ['全部', '遊戲', '聊天', '音樂', '創作', '戶外'];
+    categoryList.forEach((cat, i) => {
+        const btn = createElement('button', `twitch-cat-btn ${i === 0 ? 'active' : ''}`, { textContent: cat });
+        btn.onclick = () => {
+            container.querySelectorAll('.twitch-cat-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        };
+        categories.appendChild(btn);
+    });
+    container.appendChild(categories);
+    
+    const main = createElement('main', 'twitch-main');
+    
+    const section = createElement('section', 'twitch-section');
+    section.appendChild(createElement('div', 'twitch-section-title', { textContent: '為你推薦' }));
+    
+    const feed = createElement('div', 'twitch-feed');
+    
+    if (state.liveStreams.length === 0) {
+        state.liveStreams = await generateLivestreams(8);
+    }
+    
+    state.liveStreams.forEach(stream => {
+        feed.appendChild(createStreamCard(stream, (s) => {
+            Router.navigate(`/twitch/stream/${s.id}/${encodeURIComponent(s.title)}/${encodeURIComponent(s.streamer)}`);
+        }));
+    });
+    
+    section.appendChild(feed);
+    main.appendChild(section);
+    container.appendChild(main);
+    
+    const nav = createTwitchBottomNav();
+    container.appendChild(nav);
+    
+    return { element: container, cleanup: () => {} };
+}
+
+async function renderStream(params) {
+    const streamId = params.id;
+    const streamTitle = decodeURIComponent(params.title || '直播');
+    const streamerName = decodeURIComponent(params.streamer || '主播');
+    
+    const character = state.characters.find(c => c.id === state.currentCharacterId);
+    
+    const container = createElement('div', 'twitch-app twitch-stream-page');
+    
+    const header = createIOSNavBar({
+        title: streamerName,
+        backPath: '/twitch',
+        rightActions: [
+            { icon: 'more_horiz', onClick: () => {} }
+        ]
+    });
+    container.appendChild(header);
+    
+    const player = createElement('div', 'twitch-player');
+    const video = createElement('div', 'twitch-video');
+    video.style.background = generateThumbnail();
+    
+    const playBtn = createElement('button', 'twitch-play-btn');
+    playBtn.appendChild(createIcon('play_arrow', 'text-5xl'));
+    playBtn.onclick = () => {
+        state.isPlaying = !state.isPlaying;
+        playBtn.innerHTML = '';
+        if (state.isPlaying) {
+            playBtn.appendChild(createIcon('pause', 'text-5xl'));
+        } else {
+            playBtn.appendChild(createIcon('play_arrow', 'text-5xl'));
+        }
+    };
+    video.appendChild(playBtn);
+    
+    player.appendChild(video);
+    container.appendChild(player);
+    
+    const streamInfo = createElement('div', 'twitch-stream-info-panel');
+    
+    const titleEl = createElement('div', 'twitch-stream-page-title', { textContent: streamTitle });
+    streamInfo.appendChild(titleEl);
+    
+    const streamerInfo = createElement('div', 'twitch-streamer-info');
+    const avatar = createElement('div', 'twitch-streamer-avatar');
+    const nameAndGame = createElement('div', 'twitch-streamer-meta');
+    nameAndGame.appendChild(createElement('div', 'font-semibold', { textContent: streamerName }));
+    nameAndGame.appendChild(createElement('div', 'text-sm opacity-70', { textContent: 'Just Chatting' }));
+    streamerInfo.appendChild(avatar);
+    streamerInfo.appendChild(nameAndGame);
+    
+    const followBtn = createElement('button', 'twitch-follow-btn', { textContent: '追隨' });
+    followBtn.onclick = () => {
+        state.isFollowing = !state.isFollowing;
+        followBtn.textContent = state.isFollowing ? '已追隨' : '追隨';
+        followBtn.classList.toggle('following', state.isFollowing);
+        createToast(state.isFollowing ? '已追隨！' : '已取消追隨');
+    };
+    streamerInfo.appendChild(followBtn);
+    
+    streamInfo.appendChild(streamerInfo);
+    container.appendChild(streamInfo);
+    
+    const chatSection = createElement('div', 'twitch-chat-section');
+    chatSection.appendChild(createElement('div', 'twitch-chat-header', { textContent: '直播聊天室' }));
+    
+    const chatMessages = createElement('div', 'twitch-chat-messages');
+    chatSection.appendChild(chatMessages);
+    
+    const chatInput = createElement('div', 'twitch-chat-input-row');
+    const input = createElement('input', 'twitch-chat-input', { type: 'text', placeholder: '傳送訊息...' });
+    const sendBtn = createElement('button', 'twitch-chat-send');
+    sendBtn.appendChild(createIcon('send', 'text-white'));
+    
+    sendBtn.onclick = async () => {
+        const text = input.value.trim();
+        if (!text) return;
+        
+        const msg = createChatMessage({ author: '你', text, color: '#00D4FF' });
+        chatMessages.appendChild(msg);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
         input.value = '';
-    }
-
-    container.querySelector('#menu-btn').onclick = toggleSidebar;
-    container.querySelector('#search-btn').onclick = openSearch;
-    container.querySelector('#close-search-btn').onclick = closeSearch;
-    container.querySelector('#close-stream-btn').onclick = closeStreamPage;
-    container.querySelector('#follow-btn').onclick = toggleFollow;
-    container.querySelector('#play-btn').onclick = togglePlay;
-    container.querySelector('#send-chat-btn').onclick = sendChatMessage;
-    container.querySelector('#add-category-btn').onclick = addCategory;
-
-    container.querySelector('#category-select').onchange = (e) => switchCategory(e.target.value);
-    container.querySelector('#search-input').onkeypress = (e) => {
-        if (e.key === 'Enter') performSearch(e.target.value);
-    };
-    container.querySelector('#chat-input').onkeypress = (e) => {
-        if (e.key === 'Enter') sendChatMessage();
-    };
-
-    container.querySelectorAll('.stream-tab').forEach(tab => {
-        tab.onclick = () => {
-            container.querySelectorAll('.stream-tab').forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            const tabName = tab.dataset.tab;
-            container.querySelector('#chat-panel').style.display = tabName === 'chat' ? 'flex' : 'none';
-            container.querySelector('#info-panel').style.display = tabName === 'info' ? 'block' : 'none';
-        };
-    });
-
-    container.querySelectorAll('.nav-item').forEach(item => {
-        item.onclick = () => {
-            container.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
-            item.classList.add('active');
-            state.currentTab = item.dataset.tab;
-            if (state.currentTab === 'following') {
-                renderStreams('all');
-            } else {
-                renderStreams(state.currentCategory);
+        
+        if (character) {
+            const response = await generateStreamerResponse(character, text);
+            if (response) {
+                const streamerMsg = createChatMessage({ author: streamerName, text: response, color: '#9146FF' }, true);
+                chatMessages.appendChild(streamerMsg);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
             }
-        };
+        }
+    };
+    
+    input.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') sendBtn.click();
     });
-
-    const keydownHandler = (e) => {
-        if (e.key === 'Escape') {
-            if (state.streamPageOpen) closeStreamPage();
-            else if (state.searchOpen) closeSearch();
-            else if (state.sidebarOpen) toggleSidebar();
+    
+    chatInput.appendChild(input);
+    chatInput.appendChild(sendBtn);
+    chatSection.appendChild(chatInput);
+    container.appendChild(chatSection);
+    
+    if (state.chatGenerationInterval) {
+        clearInterval(state.chatGenerationInterval);
+    }
+    
+    state.chatGenerationInterval = setInterval(async () => {
+        if (state.characters.length > 0) {
+            const randomChar = state.characters[Math.floor(Math.random() * state.characters.length)];
+            const message = await generateChatMessage(randomChar, streamTitle);
+            if (message) {
+                const msg = createChatMessage({ 
+                    author: randomChar.name || '觀眾', 
+                    text: message 
+                });
+                chatMessages.appendChild(msg);
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+                
+                if (chatMessages.children.length > 50) {
+                    chatMessages.removeChild(chatMessages.firstChild);
+                }
+            }
         }
-    };
-    document.addEventListener('keydown', keydownHandler);
-
-    renderChannels(container.querySelector('#recommended-channels'), mockData.followedChannels.slice(0, 3));
-    renderChannels(container.querySelector('#followed-channels'), mockData.followedChannels);
-    renderFeaturedCarousel();
-    renderStreams();
-    renderCategories();
-    renderSearchHistory();
-    renderTrendingSearches();
-    startCarouselRotation();
-
-    return {
-        element: container,
+    }, 3000 + Math.random() * 5000);
+    
+    return { 
+        element: container, 
         cleanup: () => {
-            if (carouselTimer) clearInterval(carouselTimer);
-            stopLiveChatGeneration();
-            document.removeEventListener('keydown', keydownHandler);
+            if (state.chatGenerationInterval) {
+                clearInterval(state.chatGenerationInterval);
+                state.chatGenerationInterval = null;
+            }
         }
     };
+}
+
+async function renderExplore() {
+    const container = createElement('div', 'twitch-app');
+    
+    const header = createIOSNavBar({
+        title: '探索',
+        backPath: '/twitch'
+    });
+    container.appendChild(header);
+    
+    const search = createElement('div', 'twitch-search-row');
+    const searchBox = createElement('div', 'twitch-search');
+    searchBox.appendChild(createIcon('search', 'text-ios-muted'));
+    searchBox.appendChild(createElement('input', '', { type: 'text', placeholder: '搜尋直播或頻道' }));
+    search.appendChild(searchBox);
+    container.appendChild(search);
+    
+    const main = createElement('main', 'twitch-main');
+    
+    const gamesSection = createElement('section', 'twitch-section');
+    gamesSection.appendChild(createElement('div', 'twitch-section-title', { textContent: '熱門分類' }));
+    
+    const games = ['Just Chatting', 'League of Legends', 'Valorant', 'Minecraft', 'Genshin Impact'];
+    const gamesGrid = createElement('div', 'twitch-games-grid');
+    
+    games.forEach(game => {
+        const card = createElement('div', 'twitch-game-card');
+        card.style.background = generateThumbnail();
+        card.appendChild(createElement('div', 'twitch-game-name', { textContent: game }));
+        gamesGrid.appendChild(card);
+    });
+    
+    gamesSection.appendChild(gamesGrid);
+    main.appendChild(gamesSection);
+    container.appendChild(main);
+    
+    const nav = createTwitchBottomNav();
+    container.appendChild(nav);
+    
+    return { element: container, cleanup: () => {} };
+}
+
+async function renderFollowing() {
+    const container = createElement('div', 'twitch-app');
+    
+    const header = createIOSNavBar({
+        title: '追隨',
+        backPath: '/twitch'
+    });
+    container.appendChild(header);
+    
+    const main = createElement('main', 'twitch-main');
+    
+    if (state.characters.length === 0) {
+        const empty = createElement('div', 'twitch-empty');
+        empty.appendChild(createIcon('person_add', 'text-5xl opacity-30'));
+        empty.appendChild(createElement('div', 'mt-2', { textContent: '尚未追隨任何頻道' }));
+        main.appendChild(empty);
+    } else {
+        const section = createElement('section', 'twitch-section');
+        section.appendChild(createElement('div', 'twitch-section-title', { textContent: '已追隨頻道' }));
+        
+        const list = createElement('div', 'twitch-following-list');
+        
+        state.characters.forEach(char => {
+            const item = createElement('div', 'twitch-following-item');
+            const avatar = createElement('div', 'twitch-following-avatar');
+            if (char.avatar) {
+                avatar.style.backgroundImage = `url(${char.avatar})`;
+            }
+            const info = createElement('div', 'twitch-following-info');
+            info.appendChild(createElement('div', 'font-semibold', { textContent: char.name || '未命名' }));
+            info.appendChild(createElement('div', 'text-sm text-ios-muted', { textContent: Math.random() > 0.5 ? '正在直播' : '離線' }));
+            
+            item.appendChild(avatar);
+            item.appendChild(info);
+            
+            item.onclick = () => {
+                state.currentCharacterId = char.id;
+                Router.navigate(`/twitch/stream/${char.id}/${encodeURIComponent(char.name)}/${encodeURIComponent(char.name)}`);
+            };
+            
+            list.appendChild(item);
+        });
+        
+        section.appendChild(list);
+        main.appendChild(section);
+    }
+    
+    container.appendChild(main);
+    
+    const nav = createTwitchBottomNav();
+    container.appendChild(nav);
+    
+    return { element: container, cleanup: () => {} };
+}
+
+async function renderProfile() {
+    const container = createElement('div', 'twitch-app');
+    
+    const header = createIOSNavBar({
+        title: '我的',
+        backPath: '/twitch',
+        rightActions: [
+            { icon: 'settings', onClick: () => Router.navigate('/settings') }
+        ]
+    });
+    container.appendChild(header);
+    
+    const profile = createElement('div', 'twitch-profile');
+    
+    const headerCard = createElement('div', 'twitch-profile-header');
+    const avatar = createElement('div', 'twitch-profile-avatar');
+    const info = createElement('div', 'twitch-profile-info');
+    info.appendChild(createElement('div', 'font-bold text-lg', { textContent: 'Twitch用戶' }));
+    info.appendChild(createElement('div', 'text-ios-muted text-sm', { textContent: '@twitch_user' }));
+    headerCard.appendChild(avatar);
+    headerCard.appendChild(info);
+    headerCard.appendChild(createElement('button', 'twitch-ghost-btn', { textContent: '編輯' }));
+    profile.appendChild(headerCard);
+    
+    const stats = createElement('div', 'twitch-profile-stats');
+    stats.innerHTML = `
+        <div><span class="font-bold">32</span><small>追隨</small></div>
+        <div><span class="font-bold">1.2K</span><small>觀看時數</small></div>
+        <div><span class="font-bold">8</span><small>收藏</small></div>
+    `;
+    profile.appendChild(stats);
+    
+    container.appendChild(profile);
+    
+    const nav = createTwitchBottomNav();
+    container.appendChild(nav);
+    
+    return { element: container, cleanup: () => {} };
+}
+
+async function renderNotifications() {
+    const container = createElement('div', 'twitch-app');
+    
+    const header = createIOSNavBar({
+        title: '通知',
+        backPath: '/twitch'
+    });
+    container.appendChild(header);
+    
+    const main = createElement('main', 'twitch-main');
+    
+    const empty = createElement('div', 'twitch-empty');
+    empty.appendChild(createIcon('notifications', 'text-5xl opacity-30'));
+    empty.appendChild(createElement('div', 'mt-2', { textContent: '暫無新通知' }));
+    main.appendChild(empty);
+    
+    container.appendChild(main);
+    
+    return { element: container, cleanup: () => {} };
 }
 
 export default {
     id: 'twitch',
     name: 'Twitch',
-    icon: 'live_tv',
-    routes: [{ path: '/twitch', render: renderTwitch }],
-    navItem: { label: 'Twitch', icon: 'live_tv', path: '/twitch', showInNav: true, order: 21 },
+    icon: 'videocam',
+    
+    async init() {
+        await loadCharacters();
+        state.liveStreams = await generateLivestreams(8);
+    },
+    
+    routes: [
+        { path: '/twitch', render: renderHome },
+        { path: '/twitch/explore', render: renderExplore },
+        { path: '/twitch/following', render: renderFollowing },
+        { path: '/twitch/profile', render: renderProfile },
+        { path: '/twitch/notifications', render: renderNotifications },
+        { path: '/twitch/stream/:id/:title/:streamer', render: renderStream }
+    ],
+    
+    navItem: {
+        label: 'Twitch',
+        icon: 'videocam',
+        path: '/twitch',
+        showInNav: true,
+        order: 6
+    },
+    
     stylesPath: 'js/apps/twitch/style.css'
 };

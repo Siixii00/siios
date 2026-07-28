@@ -2,7 +2,6 @@ import Router from '../../router.js';
 import { createElement, createIcon, createToast, createEmptyState } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
-import { buildAppContext } from '../../core/app-context-builder.js';
 
 let userTweets = [];
 let npcTweets = [];
@@ -12,8 +11,6 @@ let pendingReactions = [];
 let activeTab = 'forYou';
 let fabMenuOpen = false;
 let notificationInterval = null;
-let selectedCharacterId = null;
-let characters = [];
 
 const DEFAULT_AVATAR = 'linear-gradient(135deg, #2d89ef, #8ec5ff)';
 
@@ -375,10 +372,19 @@ async function generateTweetWithAI(characterId = null) {
             return null;
         }
         
-        const context = await buildAppContext({ characterId });
+        let personality = '';
+        let charName = '你';
         
-        const systemPrompt = context.systemPrompt 
-            ? `${context.systemPrompt}\n\n請用一條簡短的推文（140字以內）表達你現在的想法或心情。直接輸出推文內容，不要加任何解釋。`
+        if (characterId) {
+            const character = await CharactersDB.getById(characterId);
+            if (character) {
+                personality = character.personality || '';
+                charName = character.name || 'NPC';
+            }
+        }
+        
+        const systemPrompt = personality 
+            ? `你是${charName}。${personality}\n\n請用一條簡短的推文（140字以內）表達你現在的想法或心情。直接輸出推文內容，不要加任何解釋。`
             : '請生成一條簡短有趣的推文（140字以內）。直接輸出推文內容，不要加任何解釋。';
         
         const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
@@ -410,7 +416,7 @@ async function generateTweetWithAI(characterId = null) {
     }
 }
 
-async function generateReplyWithAI(tweet, characterId = null) {
+async function generateReplyWithAI(tweet, fromCharacterId = null) {
     try {
         const settings = await SettingsDB.getAll();
         
@@ -418,10 +424,19 @@ async function generateReplyWithAI(tweet, characterId = null) {
             return null;
         }
         
-        const context = await buildAppContext({ characterId });
+        let personality = '';
+        let charName = 'NPC';
         
-        const systemPrompt = context.systemPrompt
-            ? `${context.systemPrompt}\n\n請對以下推文寫一條簡短回覆（50字以內）。保持你的性格特點。直接輸出回覆內容。`
+        if (fromCharacterId) {
+            const character = await CharactersDB.getById(fromCharacterId);
+            if (character) {
+                personality = character.personality || '';
+                charName = character.name || 'NPC';
+            }
+        }
+        
+        const systemPrompt = personality
+            ? `你是${charName}。${personality}\n\n請對以下推文寫一條簡短回覆（50字以內）。保持你的性格特點。直接輸出回覆內容。`
             : '請對以下推文寫一條簡短友善的回覆（50字以內）。直接輸出回覆內容。';
         
         const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
@@ -682,7 +697,6 @@ async function renderTwitterHome() {
     bookmarks = await getBookmarks();
     notifications = await getNotifications();
     pendingReactions = await getPendingReactions();
-    characters = await CharactersDB.getAll();
     
     const container = createElement('div', 'twitter-app');
     
@@ -718,23 +732,6 @@ async function renderTwitterHome() {
     
     main.appendChild(tabs);
     
-    const characterSelector = createElement('section', 'card character-selector');
-    const characterOptions = characters.map(c => 
-        `<option value="${c.id}" ${c.id === selectedCharacterId ? 'selected' : ''}>${c.name}</option>`
-    ).join('');
-    characterSelector.innerHTML = `
-        <label for="character-select">角色：</label>
-        <select id="character-select" class="character-select">
-            <option value="">預設</option>
-            ${characterOptions}
-        </select>
-    `;
-    const select = characterSelector.querySelector('#character-select');
-    select.onchange = (e) => {
-        selectedCharacterId = e.target.value || null;
-    };
-    main.appendChild(characterSelector);
-    
     const feedContainer = createElement('div', 'feed-container');
     await renderFeed(feedContainer);
     main.appendChild(feedContainer);
@@ -764,7 +761,7 @@ async function renderTwitterHome() {
     fabMenu.querySelector('.fab-ai-generate').onclick = async () => {
         closeFabMenu(fabBtn, fabMenu);
         createToast('正在生成推文...');
-        const content = await generateTweetWithAI(selectedCharacterId);
+        const content = await generateTweetWithAI();
         if (content) {
             await addTweet(content);
         }

@@ -1,4 +1,4 @@
-import Router from '../router.js';
+﻿import Router from '../router.js';
 
 const apps = [];
 let initialized = false;
@@ -27,9 +27,13 @@ async function loadApps() {
         import('./chats/shop.js'),
         import('./world-info/index.js'),
         import('./world-info/entry-editor.js'),
+        import('./world-info/global-settings-list.js'),
+        import('./world-info/global-forbidden-list.js'),
+        import('./world-info/theater-settings-list.js'),
+        import('./world-info/keyword-settings-list.js'),
         import('./settings/index.js'),
         import('./settings/api-config.js'),
-        import('./settings/user-settings.js'),
+        import('./settings/github-settings.js'),
         import('./settings/char-settings.js'),
         import('./settings/user-mask-settings.js'),
         import('./memory/index.js'),
@@ -118,7 +122,7 @@ async function registerRoutes() {
                         appContainer.innerHTML = `
                             <div class="empty-state">
                                 <span class="material-symbols-outlined empty-state-icon">error</span>
-                                <h3 class="empty-state-title">頁面載入失敗</h3>
+                                <h3 class="empty-state-title">?頛憭望?</h3>
                                 <p class="empty-state-text">${error.message}</p>
                             </div>
                         `;

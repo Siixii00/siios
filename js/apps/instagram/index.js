@@ -1,6 +1,8 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
+import APIClient from '../../api.js';
+import { buildAppContext } from '../../core/app-context-builder.js';
 
 const STORAGE_KEYS = {
     stories: 'instagram_stories',
@@ -133,26 +135,7 @@ async function addIgStory(authorName, content) {
     await saveIgStory(story);
 }
 
-async function getApiConfig() {
-    const apiUrl = await getFromSettings('api_url');
-    const apiKey = await getFromSettings('api_key');
-    const model = await getFromSettings('model', 'gpt-3.5-turbo');
-    if (!apiUrl) return null;
-    return { url: apiUrl, key: apiKey, model: model };
-}
 
-async function callAIAPI(messages, temperature) {
-    const temp = temperature || 0.85;
-    const config = await getApiConfig();
-    if (!config || !config.url) throw new Error('尚未設定 API');
-    const endpoint = config.url.endsWith('/chat/completions') ? config.url : `${config.url.replace(/\/$/, '')}/chat/completions`;
-    const headers = { 'Content-Type': 'application/json' };
-    if (config.key) headers.Authorization = `Bearer ${config.key}`;
-    const response = await fetch(endpoint, { method: 'POST', headers: headers, body: JSON.stringify({ model: config.model, messages: messages, temperature: temp }) });
-    if (!response.ok) throw new Error(`API 錯誤 (${response.status})`);
-    const data = await response.json();
-    return data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content || '';
-}
 
 async function buildInstagramContext() {
     const characters = await CharactersDB.getAll();
@@ -163,7 +146,55 @@ async function buildInstagramContext() {
         if (char.personality) context += `性格: ${char.personality}\n`;
         if (char.description) context += `背景: ${char.description}\n`;
     }
-    return context;
+    return { context, character: char };
+}
+
+async function callAPIWithMessages(systemPrompt, userPrompt, temperature = 0.85) {
+    const settings = await APIClient.getSettings();
+    if (!settings.api_url || !settings.api_key) {
+        throw new Error('尚未設定 API');
+    }
+    const messages = [
+        { role: 'system', content: systemPrompt },
+        { role: 'user', content: userPrompt }
+    ];
+    const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${settings.api_key}`
+        },
+        body: JSON.stringify({
+            model: settings.model || 'gpt-3.5-turbo',
+            messages: messages,
+            temperature: temperature,
+            top_p: settings.top_p || 1.0,
+            frequency_penalty: settings.frequency_penalty || 0,
+            presence_penalty: settings.presence_penalty || 0
+        })
+    });
+    if (!response.ok) {
+        const errorData = await response.json().catch(() => ({}));
+        throw new Error(errorData.error?.message || `API 錯誤 (${response.status})`);
+    }
+    const data = await response.json();
+    return data.choices?.[0]?.message?.content || '';
+}
+
+function getSelectedCharacterId(container) {
+    const selector = container.querySelector('#character-selector');
+    return selector ? selector.value : null;
+}
+
+async function generateCommentReply(container, post, commentText) {
+    const characterId = getSelectedCharacterId(container);
+    const context = await buildAppContext({ characterId });
+    const systemPrompt = context.systemPrompt || '你是一位專業的社群媒體使用者，擅長撰寫評論回覆。請使用繁體中文撰寫。輸出格式為 JSON: {"reply": "回覆內容"}';
+    const prompt = `${context.systemPrompt}\n\n針對以下貼文和評論生成一則回覆：\n\n貼文: ${post.caption}\n評論: ${commentText}\n\n要求：\n1. 符合角色性格\n2. 簡短自然、口語化\n3. 10-30 字\n\n輸出 JSON 格式。`;
+    const result = await callAPIWithMessages(systemPrompt, prompt, 0.9);
+    let parsed = null;
+    try { parsed = JSON.parse(result); } catch (e) { const match = result.match(/\{[\s\S]*\}/); if (match) parsed = JSON.parse(match[0]); }
+    return parsed?.reply || '';
 }
 
 async function generateAIPosts(container) {
@@ -172,10 +203,11 @@ async function generateAIPosts(container) {
     const generateBtn = container.querySelector('#ai-generate-posts-btn');
     if (generateBtn) { generateBtn.disabled = true; generateBtn.textContent = '生成中...'; }
     try {
-        const context = await buildInstagramContext();
-        const systemPrompt = '你是一位專業的社群媒體內容創作者，擅長根據角色設定和使用者背景創作符合人物性格的 Instagram 貼文。請使用繁體中文撰寫。輸出格式為 JSON: {"posts": [{"user": "用戶名", "location": "地點", "caption": "貼文說明", "likes": 隨機讚數}]}';
-        const prompt = `${context}\n\n請生成 3 則 Instagram 貼文，要求：\n1. 符合角色性格和使用者設定\n2. 每則貼文說明 30-100 字\n3. 可以包含適當的表情符號和標標籤\n\n輸出 JSON 格式。`;
-        const result = await callAIAPI([{ role: 'system', content: systemPrompt }, { role: 'user', content: prompt }]);
+        const characterId = getSelectedCharacterId(container);
+        const context = await buildAppContext({ characterId });
+        const systemPrompt = context.systemPrompt || '你是一位專業的社群媒體內容創作者，擅長根據角色設定和使用者背景創作符合人物性格的 Instagram 貼文。請使用繁體中文撰寫。輸出格式為 JSON: {"posts": [{"user": "用戶名", "location": "地點", "caption": "貼文說明", "likes": 隨機讚數}]}';
+        const prompt = `${context.systemPrompt}\n\n請生成 3 則 Instagram 貼文，要求：\n1. 符合角色性格和使用者設定\n2. 每則貼文說明 30-100 字\n3. 可以包含適當的表情符號和標標籤\n\n輸出 JSON 格式。`;
+        const result = await callAPIWithMessages(systemPrompt, prompt, 0.85);
         let parsed = null;
         try { parsed = JSON.parse(result); } catch (e) { const match = result.match(/\{[\s\S]*\}/); if (match) parsed = JSON.parse(match[0]); }
         const posts = Array.isArray(parsed && parsed.posts) ? parsed.posts : [];
@@ -212,12 +244,13 @@ async function generateAIStories(container) {
     const generateBtn = container.querySelector('#ai-generate-story-btn');
     if (generateBtn) { generateBtn.disabled = true; generateBtn.textContent = '生成中...'; }
     try {
-        const context = await buildInstagramContext();
+        const characterId = getSelectedCharacterId(container);
+        const context = await buildAppContext({ characterId });
         const characters = await CharactersDB.getAll();
         const authors = ['User'].concat(characters.slice(0, 1).map(c => c.name));
-        const systemPrompt = '你是一位專業的社群媒體內容創作者，擅長創作 Instagram 限時動態。請使用繁體中文撰寫。輸出格式為 JSON: {"stories": [{"author": "作者名", "content": "限動內容"}]}';
-        const prompt = `${context}\n\n請為以下作者各生成 1 則限時動態：${authors.join('、')}\n\n要求：\n1. 符合各角色性格和設定\n2. 簡短有趣、生活化\n3. 20-50 字\n\n輸出 JSON 格式。`;
-        const result = await callAIAPI([{ role: 'system', content: systemPrompt }, { role: 'user', content: prompt }]);
+        const systemPrompt = context.systemPrompt || '你是一位專業的社群媒體內容創作者，擅長創作 Instagram 限時動態。請使用繁體中文撰寫。輸出格式為 JSON: {"stories": [{"author": "作者名", "content": "限動內容"}]}';
+        const prompt = `${context.systemPrompt}\n\n請為以下作者各生成 1 則限時動態：${authors.join('、')}\n\n要求：\n1. 符合各角色性格和設定\n2. 簡短有趣、生活化\n3. 20-50 字\n\n輸出 JSON 格式。`;
+        const result = await callAPIWithMessages(systemPrompt, prompt, 0.85);
         let parsed = null;
         try { parsed = JSON.parse(result); } catch (e) { const match = result.match(/\{[\s\S]*\}/); if (match) parsed = JSON.parse(match[0]); }
         const stories = Array.isArray(parsed && parsed.stories) ? parsed.stories : [];
@@ -356,6 +389,7 @@ async function renderFeed(container) {
 }
 
 async function renderInstagram(params) {
+    const characters = await CharactersDB.getAll();
     const container = createElement('div', 'ig-app');
     container.innerHTML = `
         <header class="ig-header">
@@ -364,6 +398,10 @@ async function renderInstagram(params) {
             </button>
             <h1 class="logo">Instagram</h1>
             <div class="header-actions">
+                <select id="character-selector" class="character-select" aria-label="選擇角色">
+                    <option value="">選擇角色</option>
+                    ${characters.map(c => `<option value="${c.id}">${c.name}</option>`).join('')}
+                </select>
                 <button class="icon-btn" id="ai-generate-story-btn" aria-label="生成限動">
                     <i class="fa-solid fa-wand-magic-sparkles"></i>
                 </button>

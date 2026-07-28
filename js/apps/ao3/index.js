@@ -1,6 +1,8 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
+import { buildAppContext } from '../../core/app-context-builder.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
+import APIClient from '../../api.js';
 
 const ratingMap = {
     G: 'General Audiences',
@@ -82,24 +84,7 @@ const tagLimits = {
     additional: 60
 };
 
-const snippetLibrary = {
-    fluff: [
-        '{PAIRING} find themselves lingering under {SETTING}, trading soft jokes until the language barrier dissolves into laughter.',
-        'In {FANDOM}, {PAIRING} write on napkins, swapping translations of their favorite lyrics before the morning rush returns.'
-    ],
-    angst: [
-        '{PAIRING} hear the last train depart {SETTING}, each syllable of goodbye falling in a different language.',
-        'The confession arrives as a voicemail where {CHAR} cycles through English, Mandarin, and shaky Japanese just to say they are sorry.'
-    ],
-    action: [
-        '{CHAR} switches comm-channels mid-fight, barking orders in English, Korean, then Spanish as the mission in {FANDOM} spirals.',
-        'Sirens paint the harbor red while {PAIRING} trade cover-fire and code words, translating strategy on the fly.'
-    ],
-    hurt: [
-        '{PAIRING} patch wounds beside the galley sink, writing 「你還好嗎？」 next to "Are you okay?" on gauze tape.',
-        '{CHAR} reads every language tag scrawled across the hospital flowers, wondering which one will finally make them stay.'
-    ]
-};
+
 
 let state = {
     tags: { fandom: [], relationship: [], characters: [], additional: [] },
@@ -490,35 +475,110 @@ async function renderAO3(params) {
         }
     }
 
-    function composeSnippet() {
+    async function generateSnippet() {
+        const bodyEl = container.querySelector('#work-body');
+        const langEl = container.querySelector('#language-select');
         const moodEl = container.querySelector('#mood-select');
+        
+        const selectedLang = langEl?.value || 'zh-Hant';
         const mood = moodEl?.value || 'fluff';
-        const templates = snippetLibrary[mood] || snippetLibrary.fluff;
-        const template = templates[Math.floor(Math.random() * templates.length)];
-        const fandom = state.tags.fandom[0] || 'Original Verse';
-        const relationship = state.tags.relationship[0] || 'two travelers';
-        const character = state.tags.characters[0] || 'the protagonist';
-        const setting = state.tags.additional[0] || 'the empty station';
-        return template
-            .replace('{FANDOM}', fandom)
-            .replace('{PAIRING}', relationship)
-            .replace('{CHAR}', character)
-            .replace('{SETTING}', setting);
-    }
+        const langNames = {
+            'en': 'English', 'zh-Hant': '繁體中文', 'zh-Hans': '简体中文',
+            'ja': '日本語', 'ko': '한국어', 'es': 'Español',
+            'fr': 'Français', 'de': 'Deutsch', 'th': 'ไทย', 'ru': 'Русский'
+        };
+        const langName = langNames[selectedLang] || '繁體中文';
+        
+        const fandom = state.tags.fandom[0] || '原創';
+        const relationship = state.tags.relationship[0] || '角色A/角色B';
+        const characters = state.tags.characters.slice(0, 3).join('、') || '主角';
+        
+        const tropeInfo = state.selectedTropes.slice(0, 3).map(idx => {
+            const trope = interactionTropes[idx];
+            return trope ? `- ${trope.title}: ${trope.desc}` : '';
+        }).filter(Boolean).join('\n');
 
-    function generateSnippet() {
-        setStatus(container, '產生段落中...');
-        setTimeout(() => {
-            const snippet = composeSnippet();
-            const bodyEl = container.querySelector('#work-body');
-            const prefix = bodyEl.value && !bodyEl.value.endsWith('\n') ? '\n\n' : '';
-            bodyEl.value += `${prefix}${snippet}`;
-            updateStats();
-            updatePreview();
-            setStatus(container, '已插入段落');
-        }, 500);
-    }
+        const worldSettingInfo = state.selectedWorldSettings.slice(0, 2).map(idx => {
+            const setting = worldSettings[idx];
+            return setting ? `- ${setting.title}: ${setting.desc}` : '';
+        }).filter(Boolean).join('\n');
 
+        const charInfo = state.selectedCharacters.map(c => 
+            `- ${c.name}: ${c.personality || '個性待補充'}`
+        ).join('\n');
+
+        const firstCharId = state.selectedCharacters[0]?.id || null;
+        const context = await buildAppContext({ characterId: firstCharId });
+        
+        const appSystemPrompt = context.systemPrompt 
+            ? `${context.systemPrompt}\n\n` 
+            : '';
+        
+        const systemPrompt = appSystemPrompt + `你是一位專業的同人文作家，擅長根據角色設定和世界觀創作 ${mood} 類型的段落。
+請使用 ${langName} 撰寫。
+輸出格式為純文字，不要包含任何 JSON 或標記。`;
+
+        let prompt = `請寫一段 ${mood} 類型的同人文段落（約 200-400 字）：
+        
+Fandom: ${fandom}
+CP/關係: ${relationship}
+主要角色: ${characters}
+${tropeInfo ? `\n互動梗:\n${tropeInfo}` : ''}
+${worldSettingInfo ? `\n世界觀:\n${worldSettingInfo}` : ''}
+${charInfo ? `\n角色設定:\n${charInfo}` : ''}
+
+要求：
+1. 自然融入角色個性
+2. 畫面感強、有對話
+3. 符合 ${mood} 氛圍`;
+
+        setStatus(container, 'AI 生成段落中...');
+        
+        try {
+            const settings = await SettingsDB.getAll();
+            
+            if (!settings.api_url || !settings.api_key) {
+                setStatus(container, '請先在設定頁面配置 API');
+                return;
+            }
+
+            const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${settings.api_key}`
+                },
+                body: JSON.stringify({
+                    model: settings.model || 'gpt-3.5-turbo',
+                    messages: [
+                        { role: 'system', content: systemPrompt },
+                        { role: 'user', content: prompt }
+                    ],
+                    temperature: 0.85,
+                    max_tokens: 800
+                })
+            });
+
+            if (!response.ok) {
+                throw new Error(`API 錯誤 (${response.status})`);
+            }
+
+            const data = await response.json();
+            const snippet = data.choices?.[0]?.message?.content || '';
+            
+            if (snippet) {
+                const prefix = bodyEl.value && !bodyEl.value.endsWith('\n') ? '\n\n' : '';
+                bodyEl.value += `${prefix}${snippet}`;
+                updateStats();
+                updatePreview();
+                setStatus(container, '已插入 AI 生成的段落');
+            } else {
+                setStatus(container, '生成失敗，請稍後重試');
+            }
+        } catch (err) {
+            setStatus(container, `生成失敗: ${err.message}`);
+        }
+    }
     function buildDraftPayload() {
         const titleEl = container.querySelector('#work-title');
         const ratingEl = container.querySelector('#work-rating');
@@ -928,6 +988,7 @@ async function renderAO3(params) {
         const bodyEl = container.querySelector('#work-body');
         const titleEl = container.querySelector('#work-title');
         const langEl = container.querySelector('#language-select');
+        const summaryEl = container.querySelector('#work-summary');
 
         const selectedLang = langEl?.value || 'zh-Hant';
         const langNames = {
@@ -937,64 +998,78 @@ async function renderAO3(params) {
         };
         const langName = langNames[selectedLang] || '繁體中文';
         
-        const fandom = state.tags.fandom.join(', ') || '未指定';
+        const fandom = state.tags.fandom.join(', ') || '原創';
         const relationship = state.tags.relationship.join(', ') || '未指定';
         const characters = state.tags.characters.join(', ') || '未指定';
+        const additionalTags = state.tags.additional.join(', ') || '';
 
         const tropeInfo = state.selectedTropes.map(idx => {
             const trope = interactionTropes[idx];
-            return trope ? `${trope.title}: ${trope.desc}` : '';
+            return trope ? `- ${trope.title}: ${trope.desc}` : '';
         }).filter(Boolean).join('\n');
 
         const worldSettingInfo = state.selectedWorldSettings.map(idx => {
             const setting = worldSettings[idx];
-            return setting ? `${setting.title}: ${setting.desc}` : '';
+            return setting ? `- ${setting.title}: ${setting.desc}` : '';
         }).filter(Boolean).join('\n');
 
-        const selectedCharsInfo = state.selectedCharacters.map(c => 
-            `${c.name}: ${c.personality || ''}`
-        ).join('\n');
+        const charPersonalities = [];
+        for (const c of state.selectedCharacters) {
+            if (c.personality) {
+                charPersonalities.push(`【${c.name}】\n${c.personality}`);
+            }
+        }
+        const charInfo = charPersonalities.join('\n\n');
 
-        const systemPrompt = `你是一位專業的同人文作家，擅長根據角色設定和使用者背景創作符合人物性格的同人文。
+        const firstCharId = state.selectedCharacters[0]?.id || null;
+        const context = await buildAppContext({ characterId: firstCharId });
+        
+        const appSystemPrompt = context.systemPrompt 
+            ? `${context.systemPrompt}\n\n` 
+            : '';
+        
+        const systemPrompt = `${appSystemPrompt}你是一位專業的同人文作家，擅長根據角色設定、世界觀和互動梗創作符合人物性格的同人文。
 請使用 ${langName} 撰寫。
-輸出格式為 JSON: {"title": "標題", "content": "正文內容", "tags": ["標籤1", "標籤2"]}`;
+輸出格式為 JSON: {"title": "標題", "summary": "摘要（一句話）", "content": "正文內容（分段落）", "tags": ["標籤1", "標籤2"]}
 
-        let prompt = `Fandom: ${fandom}\nCP: ${relationship}\n角色: ${characters}\n`;
-        if (tropeInfo) prompt += `\n選擇的梗:\n${tropeInfo}\n`;
-        if (worldSettingInfo) prompt += `\n世界設定:\n${worldSettingInfo}\n`;
-        if (selectedCharsInfo) prompt += `\n參與角色:\n${selectedCharsInfo}\n`;
-        prompt += `\n請生成一篇同人文，要求：
-1. 符合角色性格
-2. 自然融入設定
-3. 字數約 500-1000 字
-4. 包含標題和正文
-輸出 JSON 格式。`;
+重要規則：
+1. 必須深入研究角色個性，對話和行為要符合人設
+2. 依據選擇的世界觀和互動梗展開故事
+3. 正文需有完整的起承轉合
+4. 字數約 800-1500 字`;
+
+        let prompt = `請生成一篇完整的同人文：
+
+【基本資訊】
+Fandom: ${fandom}
+CP/關係: ${relationship}
+主要角色: ${characters}
+${additionalTags ? `附加標籤: ${additionalTags}` : ''}
+
+${tropeInfo ? `【互動梗】\n${tropeInfo}\n` : ''}
+${worldSettingInfo ? `【世界觀設定】\n${worldSettingInfo}\n` : ''}
+${charInfo ? `【角色詳細設定】\n${charInfo}\n` : ''}
+
+請生成完整的同人文，確保角色行為符合其個性設定。`;
 
         setStatus(container, 'AI 生成中...');
         
         try {
             const settings = await SettingsDB.getAll();
-            const apiUrl = settings.api_url;
-            const apiKey = settings.api_key;
-            const model = settings.model || 'gpt-3.5-turbo';
-
-            if (!apiUrl) {
-                setStatus(container, '請先設定 API');
+            
+            if (!settings.api_url || !settings.api_key) {
+                setStatus(container, '請先在設定頁面配置 API');
                 return;
             }
 
-            const endpoint = apiUrl.endsWith('/chat/completions') 
-                ? apiUrl 
-                : `${apiUrl.replace(/\/$/, '')}/chat/completions`;
-
-            const headers = { 'Content-Type': 'application/json' };
-            if (apiKey) headers.Authorization = `Bearer ${apiKey}`;
-
-            const response = await fetch(endpoint, {
+            const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
                 method: 'POST',
-                headers,
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${settings.api_key}`
+                },
                 body: JSON.stringify({
-                    model,
+                    model: settings.model || 'gpt-3.5-turbo',
                     messages: [
                         { role: 'system', content: systemPrompt },
                         { role: 'user', content: prompt }
@@ -1021,6 +1096,7 @@ async function renderAO3(params) {
 
             if (parsed && parsed.content) {
                 if (titleEl) titleEl.value = parsed.title || 'AI 生成的同人文';
+                if (summaryEl && parsed.summary) summaryEl.value = parsed.summary;
                 if (bodyEl) bodyEl.value = parsed.content;
                 
                 if (parsed.tags && Array.isArray(parsed.tags)) {
@@ -1032,8 +1108,9 @@ async function renderAO3(params) {
                     renderAllTags();
                 }
                 
+                updateStats();
                 updatePreview();
-                setStatus(container, '已生成同人文內容');
+                setStatus(container, '已生成完整的同人文內容');
             } else {
                 setStatus(container, '生成失敗，請稍後重試');
             }

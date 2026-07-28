@@ -2,7 +2,6 @@ import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
-import { buildAppContext } from '../../core/app-context-builder.js';
 
 const thumbnailColors = [
     ['#ffd5e5', '#ff8fb1'],
@@ -55,8 +54,7 @@ let appState = {
     charCommentTimer: null,
     currentMsgTab: 'notifications',
     currentChatUser: null,
-    chatData: {},
-    selectedCharacterId: null
+    chatData: {}
 };
 
 function randomPick(list) {
@@ -312,22 +310,21 @@ function createNPCSection(npcs) {
     return section;
 }
 
-async function generateVideoContentWithAI(tab, characterId) {
+async function generateVideoContentWithAI(tab, character) {
     const settings = await SettingsDB.getAll();
     
     if (!settings.api_url || !settings.api_key) {
         return null;
     }
     
-    const context = await buildAppContext({ characterId });
-    const systemPrompt = context.systemPrompt + `\n\n你是一個影片推薦系統。根據角色性格生成適合的影片推薦。
+    const category = randomPick(videoCategories[tab] || videoCategories.recommend);
+    
+    const systemPrompt = `你是一個影片推薦系統。根據角色性格生成適合的影片推薦。
 返回格式（JSON陣列，每個影片包含title, tag, views, danmu）：
 [{"title":"影片標題","tag":"分類標籤","views":"播放量","danmu":"彈幕數"}]
 只返回JSON，不要其他文字。`;
 
-    const category = randomPick(videoCategories[tab] || videoCategories.recommend);
-
-    const userPrompt = `角色性格：${context.character?.personality || '一般用戶'}
+    const userPrompt = `角色性格：${character?.personality || '一般用戶'}
 請為這個角色生成 6-10 部${tab === 'anime' ? '動漫' : tab === 'live' ? '直播' : tab === 'hot' ? '熱門' : tab === 'games' ? '遊戲' : '推薦'}影片。`;
 
     try {
@@ -393,9 +390,9 @@ function generateFallbackVideos(tab) {
     return videos;
 }
 
-async function generateVideoRecommendations(tab, characterId = null) {
-    if (characterId) {
-        const aiVideos = await generateVideoContentWithAI(tab, characterId);
+async function generateVideoRecommendations(tab, character = null) {
+    if (character) {
+        const aiVideos = await generateVideoContentWithAI(tab, character);
         if (aiVideos && aiVideos.length > 0) {
             return aiVideos;
         }
@@ -403,7 +400,7 @@ async function generateVideoRecommendations(tab, characterId = null) {
     return generateFallbackVideos(tab);
 }
 
-async function generateNPCComments(videoTitle, characterId) {
+async function generateNPCComments(videoTitle, character) {
     const settings = await SettingsDB.getAll();
     
     if (!settings.api_url || !settings.api_key) {
@@ -413,14 +410,13 @@ async function generateNPCComments(videoTitle, characterId) {
         ];
     }
 
-    const context = await buildAppContext({ characterId });
-    const systemPrompt = context.systemPrompt + `\n\n你是一個Bilibili評論生成系統。根據角色性格生成真實的評論。
+    const systemPrompt = `你是一個Bilibili評論生成系統。根據角色性格生成真實的評論。
 返回格式（JSON陣列）：
 [{"name":"評論者暱稱","comment":"評論內容"}]
 只返回JSON，3-5條評論。`;
 
     const userPrompt = `影片標題：${videoTitle}
-角色性格：${context.character?.personality || '一般用戶'}
+角色性格：${character?.personality || '一般用戶'}
 請生成幾條符合角色風格的熱門評論。`;
 
     try {
@@ -457,20 +453,19 @@ async function generateNPCComments(videoTitle, characterId) {
     }
 }
 
-async function generateChatResponse(chatName, characterId, messageHistory, userMessage) {
+async function generateChatResponse(chatName, character, messageHistory, userMessage) {
     const settings = await SettingsDB.getAll();
     
     if (!settings.api_url || !settings.api_key) {
         return randomPick(['好喔！', '了解', '收到', '哈哈', '真的嗎']);
     }
 
-    const context = await buildAppContext({ characterId });
-    const systemPrompt = context.systemPrompt + `\n\n你是一個Bilibili聊天系統中的角色。根據角色設定與用戶自然對話。
+    const systemPrompt = `你是一個Bilibili聊天系統中的角色。根據角色設定與用戶自然對話。
 保持對話簡短、口語化，像Bilibili用戶的聊天風格。可以使用網路用語。`;
 
     const messages = [
         { role: 'system', content: systemPrompt },
-        { role: 'system', content: `你的名字是：${chatName}\n角色性格：${context.character?.personality || '一般Bilibili用戶'}` }
+        { role: 'system', content: `你的名字是：${chatName}\n角色性格：${character?.personality || '一般Bilibili用戶'}` }
     ];
 
     messageHistory.slice(-6).forEach(msg => {
@@ -506,44 +501,16 @@ async function generateChatResponse(chatName, characterId, messageHistory, userM
     }
 }
 
-async function generateVideosForTab(tab, characterId = null) {
-    const finalCharId = characterId || appState.selectedCharacterId;
-    const videos = await generateVideoRecommendations(tab, finalCharId);
+async function generateVideosForTab(tab) {
+    const characters = await CharactersDB.getAll();
+    const character = characters.length > 0 ? characters[Math.floor(Math.random() * characters.length)] : null;
+    
+    const videos = await generateVideoRecommendations(tab, character);
     
     appState.sample[tab] = videos;
     await SettingsDB.set(`bilibili_${tab}_videos`, videos);
     
     return videos;
-}
-
-async function createCharacterSelector(selectedId, onChange) {
-    const characters = await CharactersDB.getAll();
-    
-    if (characters.length === 0) return null;
-    
-    const container = createElement('div', 'bili-char-selector');
-    const label = createElement('span', 'text-sm text-ios-muted', { textContent: '選擇角色：' });
-    container.appendChild(label);
-    
-    const select = createElement('select', 'bili-char-select');
-    
-    const defaultOption = createElement('option', '', { value: '', textContent: '隨機角色' });
-    if (!selectedId) defaultOption.selected = true;
-    select.appendChild(defaultOption);
-    
-    characters.forEach(char => {
-        const option = createElement('option', '', { value: char.id, textContent: char.name || '匿名' });
-        if (selectedId === char.id) option.selected = true;
-        select.appendChild(option);
-    });
-    
-    select.onchange = () => {
-        appState.selectedCharacterId = select.value || null;
-        if (onChange) onChange(appState.selectedCharacterId);
-    };
-    
-    container.appendChild(select);
-    return container;
 }
 
 async function renderHome() {
@@ -568,18 +535,6 @@ async function renderHome() {
     searchRow.appendChild(searchBox);
     container.appendChild(searchRow);
     
-    const charSelector = await createCharacterSelector(appState.selectedCharacterId, async (charId) => {
-        if (appState.sample[appState.currentTab] && appState.sample[appState.currentTab].length > 0) {
-            createToast('正在重新生成影片...');
-            await generateVideosForTab(appState.currentTab, charId);
-            createToast('影片已更新！');
-            Router.navigate(`/bilibili/tab/${appState.currentTab}`);
-        }
-    });
-    if (charSelector) {
-        container.appendChild(charSelector);
-    }
-    
     const tabsBar = createElement('nav', 'bili-tabs');
     const tabs = ['recommend', 'anime', 'live', 'hot', 'games'];
     const tabNames = { recommend: '推薦', anime: '番劇', live: '直播', hot: '熱門', games: '遊戲' };
@@ -602,7 +557,7 @@ async function renderHome() {
     if (videos.length === 0) {
         feedInner.appendChild(createEmptyFeed(async () => {
             createToast('正在生成影片...');
-            await generateVideosForTab(appState.currentTab, appState.selectedCharacterId);
+            await generateVideosForTab(appState.currentTab);
             createToast('影片已生成！');
             Router.navigate(`/bilibili/tab/${appState.currentTab}`);
         }));
@@ -855,7 +810,6 @@ async function renderChat(params) {
     const chatName = decodeURIComponent(params.name || '聊天');
     
     const character = await CharactersDB.getById(chatId);
-    const characterId = chatId;
     
     const container = createElement('div', 'bili-app bili-chat-app');
     
@@ -906,7 +860,7 @@ async function renderChat(params) {
         input.disabled = true;
         sendBtn.disabled = true;
         
-        const aiResponse = await generateChatResponse(chatName, characterId, appState.chatData[chatId], text);
+        const aiResponse = await generateChatResponse(chatName, character, appState.chatData[chatId], text);
         
         const aiMsg = {
             id: `msg_${Date.now()}_ai`,

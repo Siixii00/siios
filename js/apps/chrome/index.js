@@ -1,6 +1,8 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
-import { SettingsDB } from '../../db.js';
+import { SettingsDB, CharactersDB } from '../../db.js';
+import APIClient from '../../api.js';
+import { buildAppContext } from '../../core/app-context-builder.js';
 
 const BOOKMARKS_KEY = 'chrome_bookmarks';
 const HISTORY_KEY = 'chrome_history';
@@ -17,19 +19,19 @@ let currentView = 'home';
 let currentCharIndex = 0;
 
 const INCOGNITO_SITES = [
-    { id: 'nhentai', label: 'nhentai', icon: 'NH', query: 'nhentai 同人誌 漫畫', title: 'nhentai 同人誌' },
-    { id: 'av.com', label: 'av.com', icon: 'AV', query: 'av.com 成人影片', title: 'av.com 影片' },
-    { id: 'dreams', label: 'dreams', icon: 'DR', query: 'dreams 夢境 幻想', title: 'dreams 幻想世界' }
+    { id: 'nhentai', label: 'nhentai', icon: 'NH', query: 'nhentai ?犖隤?瞍怎', title: 'nhentai ?犖隤? },
+    { id: 'av.com', label: 'av.com', icon: 'AV', query: 'av.com ?犖敶梁?', title: 'av.com 敶梁?' },
+    { id: 'dreams', label: 'dreams', icon: 'DR', query: 'dreams 憭Ｗ? 撟餅', title: 'dreams 撟餅銝?' }
 ];
 
 const USER_INTEREST_SITES = [
-    { id: 'user-interest-0', label: '為你推薦', icon: '推', type: 'recommend' },
-    { id: 'user-interest-1', label: '熱門內容', icon: '熱', type: 'trending' },
-    { id: 'user-interest-2', label: '新鮮事', icon: '新', type: 'fresh' },
-    { id: 'user-interest-3', label: '趣味發現', icon: '趣', type: 'fun' }
+    { id: 'user-interest-0', label: '?箔??刻', icon: '??, type: 'recommend' },
+    { id: 'user-interest-1', label: '?梢??批捆', icon: '??, type: 'trending' },
+    { id: 'user-interest-2', label: '?圈悅鈭?, icon: '??, type: 'fresh' },
+    { id: 'user-interest-3', label: '頞??潛', icon: '頞?, type: 'fun' }
 ];
 
-const ADULT_EXPLICIT_KEYWORDS = ['成年', '中年', '大叔', '姐姐', '人妻', '成熟', '情慾', '成人', '18+', 'AV', '情色', '尺度', '慾望', '放縱', '激情'];
+const ADULT_EXPLICIT_KEYWORDS = ['?僑', '銝剖僑', '憭批?', '憪?', '鈭箏氖', '??', '?', '?犖', '18+', 'AV', '?', '撠箏漲', '?暹?', '?曄萵', '瞈??];
 
 function escapeHTML(str = '') {
     return String(str)
@@ -67,7 +69,7 @@ async function saveChromeData() {
             SettingsDB.set(WORLDBOOKS_KEY, chromeWorldbookMounts)
         ]);
     } catch (e) {
-        console.error('保存Chrome數據失敗:', e);
+        console.error('靽?Chrome?豢?憭望?:', e);
     }
 }
 
@@ -90,34 +92,24 @@ async function loadWorldbookMounts() {
 }
 
 async function getApiConfig() {
-    try {
-        const [apis, activeIndex] = await Promise.all([
-            SettingsDB.get('api_configs'),
-            SettingsDB.get('sx_active_api')
-        ]);
-        const configList = Array.isArray(apis) ? apis : [];
-        const idx = Number(activeIndex) || 0;
-        return configList[idx] || configList[0];
-    } catch {
+    const settings = await APIClient.getSettings();
+    if (!settings.api_url || !settings.api_key) {
         return null;
     }
+    return {
+        url: settings.api_url,
+        key: settings.api_key,
+        model: settings.model || 'gpt-3.5-turbo'
+    };
 }
 
 async function getUserConfig() {
-    try {
-        const [name, personality, background] = await Promise.all([
-            SettingsDB.get('sx_user_name'),
-            SettingsDB.get('sx_user_personality'),
-            SettingsDB.get('sx_user_background')
-        ]);
-        return {
-            name: name || 'User',
-            personality: personality || '',
-            background: background || ''
-        };
-    } catch {
-        return { name: 'User', personality: '', background: '' };
-    }
+    const settings = await APIClient.getSettings();
+    return {
+        name: settings.sx_user_name || 'User',
+        personality: settings.sx_user_personality || '',
+        background: settings.sx_user_background || ''
+    };
 }
 
 function isIncognito() {
@@ -143,7 +135,7 @@ function renderBookmarks(container) {
     );
 
     if (filtered.length === 0) {
-        list.innerHTML = '<div class="chrome-wb-empty">尚未新增書籤</div>';
+        list.innerHTML = '<div class="chrome-wb-empty">撠?啣??貊惜</div>';
         return;
     }
 
@@ -154,10 +146,10 @@ function renderBookmarks(container) {
                 <span>${escapeHTML(b.name)}</span>
             </div>
             <div class="bookmark-actions">
-                <button class="icon-btn sm bookmark-open" data-url="${escapeHTML(b.url)}" title="開啟">
+                <button class="icon-btn sm bookmark-open" data-url="${escapeHTML(b.url)}" title="??">
                     <i class="fas fa-external-link-alt"></i>
                 </button>
-                <button class="icon-btn sm bookmark-delete" data-index="${i}" title="刪除">
+                <button class="icon-btn sm bookmark-delete" data-index="${i}" title="?芷">
                     <i class="fas fa-trash"></i>
                 </button>
             </div>
@@ -206,7 +198,7 @@ function saveBookmark(container) {
     const url = urlInput?.value?.trim();
 
     if (!name || !url) {
-        createToast('請輸入網站名稱和網址', 'error');
+        createToast('隢撓?亦雯蝡?蝔勗?蝬脣?', 'error');
         return;
     }
 
@@ -226,7 +218,7 @@ function renderHistoryList(container) {
     if (!list) return;
 
     if (historyEntries.length === 0) {
-        list.innerHTML = '<div class="status">尚無搜尋紀錄</div>';
+        list.innerHTML = '<div class="status">撠??蝝??/div>';
         return;
     }
 
@@ -266,7 +258,7 @@ function openHistoryDetail(entry, container) {
         contentEl.innerHTML = `
             <div class="page-loading">
                 <div class="loading-spinner"></div>
-                <span>正在載入頁面...</span>
+                <span>甇?頛?...</span>
             </div>
         `;
     }
@@ -279,42 +271,46 @@ async function fetchDetailContent(entry, container) {
     const contentEl = container.querySelector('#detail-page-content');
     if (!contentEl) return;
 
-    const config = await getApiConfig();
-    if (!config || !config.url) {
+    const settings = await APIClient.getSettings();
+    if (!settings.api_url || !settings.api_key) {
         contentEl.innerHTML = '<div class="page-error">未偵測到 API 配置，請先在控制中心設定。</div>';
         return;
     }
 
-    const url = config.url.endsWith('/chat/completions') ? config.url : config.url.replace(/\/$/, '') + '/chat/completions';
     const isAdult = entry?.incognito;
     const adultLevel = entry?.adultLevel || 'suggestive';
     const charName = entry?.charName || '角色';
 
-    const systemPrompt = isAdult
-        ? `你正在扮演${charName}，請以${charName}的視角和口吻來描述。你是一個模擬成人內容頁面生成器，請用繁體中文輸出條理分明的內容，模擬真實網頁的樣式。`
-        : `你正在扮演${charName}，請以${charName}的視角和口吻來描述。你是一個模擬網頁內容生成器，請用繁體中文輸出條理分明的內容，模擬真實網頁的樣式。`;
+    const char = charProfiles.find(c => c.name === charName);
+    const charId = char?.id || null;
 
-    const userPrompt = isAdult
-        ? `以「${entry.query}」為主題，生成一段模擬網頁內容。請模擬真實搜尋結果頁面，包含：
-1. 頁面標題
-2. 簡短描述
-3. 3-5 個相關連結或段落
+    const context = await buildAppContext({ characterId: charId });
+    const baseSystemPrompt = context.systemPrompt;
 
-${adultLevel === 'explicit' ? '可使用露骨描述。' : '可以帶情慾氛圍但避免過度露骨。'}`
-        : `以「${entry.query}」為主題，生成一段模擬網頁內容。請模擬真實搜尋結果頁面，包含：
+    const adultPrompt = isAdult
+        ? `
+
+你是一個模擬成人內容頁面生成器，請用繁體中文輸出條理分明的內容，模擬真實網頁的樣式。${adultLevel === 'explicit' ? '可使用露骨描述。' : '可以帶情慾氛圍但避免過度露骨。'}`
+        : `
+
+你是一個模擬網頁內容生成器，請用繁體中文輸出條理分明的內容，模擬真實網頁的樣式。`;
+
+    const systemPrompt = baseSystemPrompt + adultPrompt;
+
+    const userPrompt = `以「${entry.query}」為主題，生成一段模擬網頁內容。請模擬真實搜尋結果頁面，包含：
 1. 頁面標題
 2. 簡短描述
 3. 3-5 個相關連結或段落`;
 
     try {
-        const response = await fetch(url, {
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': config.key ? `Bearer ${config.key}` : undefined
+                'Authorization': `Bearer ${settings.api_key}`
             },
             body: JSON.stringify({
-                model: config.model || 'gpt-3.5-turbo',
+                model: settings.model || 'gpt-3.5-turbo',
                 messages: [
                     { role: 'system', content: systemPrompt },
                     { role: 'user', content: userPrompt }
@@ -346,8 +342,7 @@ async function generateHistoryForChar(index, container) {
     }
 
     const charName = char.name || '角色';
-    const charPersonality = char.personality || '';
-    const charBackground = char.background || '';
+    const charId = char.id || null;
 
     if (panelTitle) {
         panelTitle.textContent = `${charName} 的瀏覽紀錄`;
@@ -355,21 +350,22 @@ async function generateHistoryForChar(index, container) {
 
     if (historyList) historyList.innerHTML = '<div class="status">正在生成瀏覽紀錄...</div>';
 
-    const config = await getApiConfig();
-    if (!config || !config.url) {
-        generateFallbackHistory(char, charName, charPersonality, charBackground, container);
+    const settings = await APIClient.getSettings();
+    if (!settings.api_url || !settings.api_key) {
+        generateFallbackHistory(char, charName, '', '', container);
         return;
     }
 
-    const url = config.url.endsWith('/chat/completions') ? config.url : config.url.replace(/\/$/, '') + '/chat/completions';
     const adultLevel = getAdultLevel(char);
 
-    const systemPrompt = `你是一個模擬瀏覽器搜尋紀錄生成器。請根據角色的個性、背景，生成符合該角色在無痕模式下會感興趣的成人向內容。
+    const context = await buildAppContext({ characterId: charId });
+    const baseSystemPrompt = context.systemPrompt;
 
-角色名稱：${charName}
-角色個性：${charPersonality}
-角色背景：${charBackground}
+    const systemPrompt = baseSystemPrompt + `
+
 模式：無痕模式（成人向，等級：${adultLevel}）
+
+你是一個模擬瀏覽器搜尋紀錄生成器。請根據角色的設定，生成符合該角色在無痕模式下會感興趣的成人向內容。
 
 重要規則：
 1. 搜尋內容必須符合角色的興趣和個性
@@ -387,14 +383,14 @@ async function generateHistoryForChar(index, container) {
 請生成 5-8 個搜尋紀錄，直接輸出 JSON 陣列。`;
 
     try {
-        const response = await fetch(url, {
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': config.key ? `Bearer ${config.key}` : undefined
+                'Authorization': `Bearer ${settings.api_key}`
             },
             body: JSON.stringify({
-                model: config.model || 'gpt-3.5-turbo',
+                model: settings.model || 'gpt-3.5-turbo',
                 messages: [
                     { role: 'system', content: systemPrompt },
                     { role: 'user', content: `請為${charName}生成無痕模式下的瀏覽紀錄。` }
@@ -423,27 +419,27 @@ async function generateHistoryForChar(index, container) {
             saveChromeData();
             renderHistoryList(container);
         } else {
-            generateFallbackHistory(char, charName, charPersonality, charBackground, container);
+            generateFallbackHistory(char, charName, '', '', container);
         }
     } catch (err) {
         console.error('生成搜尋紀錄失敗:', err);
-        generateFallbackHistory(char, charName, charPersonality, charBackground, container);
+        generateFallbackHistory(char, charName, '', '', container);
     }
 }
 
 function generateFallbackHistory(char, charName, charPersonality, charBackground, container) {
     const adultLevel = getAdultLevel(char);
     const sites = ['nhentai', 'av.com', 'dreams'];
-    const topics = ['浪漫', '幻想', '故事', '藝術', '角色', '創作'];
+    const topics = ['瘚芣憤', '撟餅', '??', '??', '閫', '?萎?'];
 
     historyEntries = topics.slice(0, 6).map((topic, i) => {
         const site = sites[i % 3];
         return {
             id: `history_${Date.now()}_${i}`,
-            title: `${topic} 相關內容`,
+            title: `${topic} ?賊??批捆`,
             query: `${topic} ${site}`,
-            time: `${i + 1} 小時前`,
-            summary: `${charName}在${site}瀏覽了${topic}相關內容`,
+            time: `${i + 1} 撠??,
+            summary: `${charName}??{site}?汗鈭?{topic}?賊??批捆`,
             site,
             incognito: true,
             adultLevel,
@@ -458,22 +454,18 @@ function generateFallbackHistory(char, charName, charPersonality, charBackground
 async function openUserInterestSite(site, container) {
     if (!site) return;
 
-    const config = await getApiConfig();
-    if (!config || !config.url) {
+    const settings = await APIClient.getSettings();
+    if (!settings.api_url || !settings.api_key) {
         createToast('請先設定 API 才能生成內容', 'error');
         return;
     }
-
-    const userConfig = await getUserConfig();
-    const userName = userConfig.name || 'User';
-    const userPersonality = userConfig.personality || '';
-    const userBackground = userConfig.background || '';
 
     switchView('history', container);
     const historyList = container.querySelector('#history-list');
     if (historyList) historyList.innerHTML = '<div class="status">正在載入內容...</div>';
 
-    const url = config.url.endsWith('/chat/completions') ? config.url : config.url.replace(/\/$/, '') + '/chat/completions';
+    const context = await buildAppContext({});
+    const baseSystemPrompt = context.systemPrompt;
 
     const typePrompts = {
         recommend: `根據用戶的興趣和個性，推薦他們可能感興趣的內容`,
@@ -482,13 +474,11 @@ async function openUserInterestSite(site, container) {
         fun: `生成趣味、娛樂性的發現和內容`
     };
 
-    const systemPrompt = `你是一個模擬瀏覽器內容生成器。請根據用戶的個性、興趣和背景，生成符合該用戶會感興趣的內容。
-
-用戶名稱：${userName}
-用戶個性：${userPersonality}
-用戶背景：${userBackground}
+    const systemPrompt = baseSystemPrompt + `
 
 內容類型：${typePrompts[site.type] || typePrompts.recommend}
+
+你是一個模擬瀏覽器內容生成器。請根據用戶的設定，生成符合該用戶會感興趣的內容。
 
 重要規則：
 1. 內容必須符合用戶的興趣和個性
@@ -503,17 +493,17 @@ async function openUserInterestSite(site, container) {
 
 請生成 4-6 個內容項目，直接輸出 JSON 陣列，不要其他說明。`;
 
-    const userPrompt = `請為用戶「${userName}」生成${site.label}內容。`;
+    const userPrompt = `請為用戶生成${site.label}內容。`;
 
     try {
-        const response = await fetch(url, {
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': config.key ? `Bearer ${config.key}` : undefined
+                'Authorization': `Bearer ${settings.api_key}`
             },
             body: JSON.stringify({
-                model: config.model || 'gpt-3.5-turbo',
+                model: settings.model || 'gpt-3.5-turbo',
                 messages: [
                     { role: 'system', content: systemPrompt },
                     { role: 'user', content: userPrompt }
@@ -575,48 +565,47 @@ async function openUserInterestSite(site, container) {
 async function openIncognitoSite(site, container) {
     if (!site) return;
 
-    const config = await getApiConfig();
-    if (!config || !config.url) {
-        createToast('請先設定 API 才能生成內容', 'error');
+    const settings = await APIClient.getSettings();
+    if (!settings.api_url || !settings.api_key) {
+        createToast('隢?閮剖? API ????批捆', 'error');
         return;
     }
 
     const char = charProfiles[currentCharIndex] || {};
-    const charName = char.name || '角色';
+    const charName = char.name || '閫';
     const charPersonality = char.personality || '';
 
     switchView('history', container);
     const historyList = container.querySelector('#history-list');
-    if (historyList) historyList.innerHTML = '<div class="status">正在載入內容...</div>';
+    if (historyList) historyList.innerHTML = '<div class="status">甇?頛?批捆...</div>';
 
-    const url = config.url.endsWith('/chat/completions') ? config.url : config.url.replace(/\/$/, '') + '/chat/completions';
     const adultLevel = getAdultLevel(char);
 
-    const systemPrompt = `你正在扮演${charName}，請以${charName}的視角和口吻來描述。
-你是一個模擬成人內容頁面生成器。角色個性：${charPersonality}
+    const systemPrompt = `雿迤?冽瞍?{charName}嚗?隞?{charName}??閫???靘?餈啜?
+雿銝?芋?祆?鈭箏摰寥??Ｙ?????脣改?${charPersonality}
 
-請用繁體中文輸出網頁內容，模擬真實網站的樣式，包含：
-1. 網站標題
-2. 分類或標籤
-3. 3-5 個內容項目（標題和簡短描述）
-4. 每個項目都要有以${charName}視角的評論或感受
+隢蝜?銝剜?頛詨蝬脤??批捆嚗芋?祉?撖衣雯蝡?璅??嚗??恬?
+1. 蝬脩?璅?
+2. ????蝐?
+3. 3-5 ?摰寥??殷?璅??陛?剜?餈堆?
+4. 瘥??桅閬?隞?{charName}閬???隢???
 
-可以帶有情慾氛圍，根據角色性格決定程度。${adultLevel === 'explicit' ? '可以使用較露骨的描述。' : '保持情趣但不過度露骨。'}`;
+?臭誑撣嗆??瘞?嚗???脫扳瘙箏?蝔漲??{adultLevel === 'explicit' ? '?臭誑雿輻頛撉函??膩?? : '靽??閎雿??漲?脤爸??}`;
 
-    const userPrompt = `請生成「${site.label}」網站的模擬內容。
-搜尋關鍵字：${site.query}
+    const userPrompt = `隢???{site.label}?雯蝡?璅⊥?批捆??
+???摮?${site.query}
 
-請模擬一個成人向網站的首頁內容，以${charName}的視角呈現。${charName}正在瀏覽這個網站，請展現${charName}的反應和感受。`;
+隢芋?砌???鈭箏?蝬脩????摰對?隞?{charName}??閫??整?{charName}甇??汗?雯蝡?隢???{charName}???????;
 
     try {
-        const response = await fetch(url, {
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': config.key ? `Bearer ${config.key}` : undefined
+                'Authorization': `Bearer ${settings.api_key}`
             },
             body: JSON.stringify({
-                model: config.model || 'gpt-3.5-turbo',
+                model: settings.model || 'gpt-3.5-turbo',
                 messages: [
                     { role: 'system', content: systemPrompt },
                     { role: 'user', content: userPrompt }
@@ -626,7 +615,7 @@ async function openIncognitoSite(site, container) {
         });
 
         const data = await response.json();
-        const content = data?.choices?.[0]?.message?.content || '生成內容失敗';
+        const content = data?.choices?.[0]?.message?.content || '???批捆憭望?';
 
         if (historyList) {
             historyList.innerHTML = `
@@ -642,7 +631,7 @@ async function openIncognitoSite(site, container) {
             `;
         }
     } catch (err) {
-        if (historyList) historyList.innerHTML = `<div class="status error">載入失敗：${err.message}</div>`;
+        if (historyList) historyList.innerHTML = `<div class="status error">頛憭望?嚗?{err.message}</div>`;
     }
 }
 
@@ -675,9 +664,9 @@ function toggleMode(container) {
     const incognitoGrid = container.querySelector('#incognito-quick-grid');
 
     if (appEl) appEl.dataset.mode = next;
-    if (modeBtn) modeBtn.textContent = next === 'incognito' ? '一般' : '無痕';
+    if (modeBtn) modeBtn.textContent = next === 'incognito' ? '銝?? : '?∠?';
     if (statusText) {
-        statusText.textContent = next === 'incognito' ? '' : '一般模式 • 已連線';
+        statusText.textContent = next === 'incognito' ? '' : '銝?祆芋撘???撌脤??';
         statusText.hidden = next === 'incognito';
     }
     if (hero) hero.hidden = next !== 'incognito';
@@ -782,12 +771,12 @@ function bindEvents(container) {
     historyManualSave?.addEventListener('click', async () => {
         const query = historyManualQuery?.value.trim();
         if (!query) return;
-        const summary = historyManualSummary?.value.trim() || `搜尋了「${query}」相關資訊。`;
+        const summary = historyManualSummary?.value.trim() || `??鈭?{query}???閮;
         const entry = {
             id: `history_${Date.now()}_${historyEntries.length}`,
-            title: `${query} 是什麼？`,
+            title: `${query} ?臭?暻潘?`,
             query,
-            time: '剛剛',
+            time: '??',
             summary,
             incognito: false,
             adultLevel: 'none'
@@ -868,17 +857,17 @@ async function renderChrome(params) {
     container.innerHTML = `
         <header class="topbar">
             <div class="top-left">
-                <button class="ghost-btn" id="home-back" title="返回">
+                <button class="ghost-btn" id="home-back" title="餈?">
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 <div class="view-toggle" id="view-toggle">
-                    <button class="active" data-view="home">首頁</button>
-                    <button data-view="bookmarks">書籤</button>
-                    <button data-view="history">紀錄</button>
+                    <button class="active" data-view="home">擐?</button>
+                    <button data-view="bookmarks">?貊惜</button>
+                    <button data-view="history">蝝??/button>
                 </div>
             </div>
             <div class="top-actions">
-                <button class="ghost-btn" id="mode-btn">無痕</button>
+                <button class="ghost-btn" id="mode-btn">?∠?</button>
                 <button class="avatar" id="profile-trigger"></button>
             </div>
         </header>
@@ -892,12 +881,12 @@ async function renderChrome(params) {
                 <div class="incognito-badge">
                     <i class="fas fa-user-secret"></i>
                 </div>
-                <div class="incognito-title">無痕模式</div>
+                <div class="incognito-title">?∠?璅∪?</div>
             </div>
 
             <div class="search-card">
                 <i class="fas fa-search"></i>
-                <input type="text" placeholder="搜尋或輸入網址" id="search-input">
+                <input type="text" placeholder="???撓?亦雯?" id="search-input">
                 <button class="icon-btn"><i class="fas fa-microphone"></i></button>
             </div>
 
@@ -919,33 +908,33 @@ async function renderChrome(params) {
                 `).join('')}
             </div>
 
-            <div class="status" id="status-text">一般模式 • 已連線</div>
+            <div class="status" id="status-text">銝?祆芋撘???撌脤??</div>
         </div>
 
         <div class="panel bookmarks-panel" data-panel="bookmarks" hidden>
             <div class="panel-header">
-                <h2 class="panel-title">書籤</h2>
+                <h2 class="panel-title">?貊惜</h2>
                 <button class="ghost-btn" id="add-bookmark-btn">
-                    <i class="fas fa-plus"></i> 新增
+                    <i class="fas fa-plus"></i> ?啣?
                 </button>
             </div>
             <div class="search-row">
                 <i class="fas fa-search"></i>
-                <input type="text" placeholder="搜尋書籤" id="bookmark-search">
+                <input type="text" placeholder="???貊惜" id="bookmark-search">
             </div>
             <div class="bookmark-list" id="bookmark-list"></div>
         </div>
 
         <div class="panel history-panel" data-panel="history" hidden>
             <div class="panel-header">
-                <h2 class="panel-title">瀏覽紀錄</h2>
+                <h2 class="panel-title">?汗蝝??/h2>
             </div>
             <div class="history-controls">
-                <label>角色：</label>
+                <label>閫嚗?/label>
                 <select id="char-select">
                     ${charProfiles.map((char, i) => `
-                        <option value="${i}">${char.name || `角色 ${i + 1}`}</option>
-                    `).join('') || '<option value="">尚未建立角色</option>'}
+                        <option value="${i}">${char.name || `閫 ${i + 1}`}</option>
+                    `).join('') || '<option value="">撠撱箇?閫</option>'}
                 </select>
                 <button class="ghost-btn" id="history-refresh">
                     <i class="fas fa-sync-alt"></i>
@@ -957,7 +946,7 @@ async function renderChrome(params) {
         <div class="panel history-detail-panel" data-panel="history-detail" hidden>
             <div class="detail-nav">
                 <button class="back-btn" id="history-detail-back">
-                    <i class="fas fa-chevron-left"></i> 返回
+                    <i class="fas fa-chevron-left"></i> 餈?
                 </button>
             </div>
             <div class="detail-search-card">
@@ -985,21 +974,21 @@ async function renderChrome(params) {
             <div class="history-modal-backdrop"></div>
             <div class="history-modal-card">
                 <div class="history-modal-header">
-                    <div class="history-modal-title">新增分頁</div>
+                    <div class="history-modal-title">?啣???</div>
                     <button class="icon-btn" id="history-modal-close">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
                 <div class="history-modal-actions">
-                    <button class="ghost-btn" id="history-generate-btn">AI 生成</button>
-                    <button class="ghost-btn" id="history-manual-btn">手動輸入</button>
+                    <button class="ghost-btn" id="history-generate-btn">AI ??</button>
+                    <button class="ghost-btn" id="history-manual-btn">??頛詨</button>
                 </div>
                 <div class="history-manual" id="history-manual" hidden>
-                    <label>搜尋關鍵字</label>
-                    <input type="text" id="history-manual-query" placeholder="輸入搜尋關鍵字">
-                    <label>摘要說明</label>
-                    <textarea id="history-manual-summary" rows="2" placeholder="簡短描述"></textarea>
-                    <button class="ghost-btn primary" id="history-manual-save">儲存</button>
+                    <label>???摮?/label>
+                    <input type="text" id="history-manual-query" placeholder="頛詨???摮?>
+                    <label>??隤芣?</label>
+                    <textarea id="history-manual-summary" rows="2" placeholder="蝪∠?膩"></textarea>
+                    <button class="ghost-btn primary" id="history-manual-save">?脣?</button>
                 </div>
             </div>
         </div>
@@ -1008,17 +997,17 @@ async function renderChrome(params) {
             <div class="history-modal-backdrop"></div>
             <div class="history-modal-card">
                 <div class="history-modal-header">
-                    <div class="history-modal-title">新增書籤</div>
+                    <div class="history-modal-title">?啣??貊惜</div>
                     <button class="icon-btn" id="bookmark-modal-close">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
                 <div class="history-manual">
-                    <label>網站名稱</label>
-                    <input type="text" id="bookmark-name" placeholder="網站名稱">
-                    <label>網址</label>
+                    <label>蝬脩??迂</label>
+                    <input type="text" id="bookmark-name" placeholder="蝬脩??迂">
+                    <label>蝬脣?</label>
                     <input type="text" id="bookmark-url" placeholder="https://example.com">
-                    <button class="ghost-btn primary" id="bookmark-save">儲存</button>
+                    <button class="ghost-btn primary" id="bookmark-save">?脣?</button>
                 </div>
             </div>
         </div>
@@ -1026,38 +1015,38 @@ async function renderChrome(params) {
         <div class="profile-backdrop" id="profile-backdrop" hidden></div>
         <div class="profile-drawer" id="profile-drawer">
             <div class="profile-drawer-header">
-                <div class="profile-drawer-title">個人設定</div>
+                <div class="profile-drawer-title">?犖閮剖?</div>
                 <button class="icon-btn" id="profile-close">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             <div class="profile-drawer-body">
                 <div class="drawer-section">
-                    <div class="drawer-label">選擇用戶</div>
+                    <div class="drawer-label">?豢??冽</div>
                     <select class="drawer-select" id="chrome-user-select">
                         ${chromeUserProfiles.map((user, i) => `
                             <option value="${user?.name || `User ${i + 1}`}">${user?.name || `User ${i + 1}`}</option>
-                        `).join('') || '<option value="">尚未建立用戶</option>'}
+                        `).join('') || '<option value="">撠撱箇??冽</option>'}
                     </select>
                 </div>
                 <div class="drawer-section">
-                    <div class="drawer-label">世界書掛載</div>
+                    <div class="drawer-label">銝??豢?頛?/div>
                     <div class="chrome-wb-dropdown">
                         <button class="chrome-wb-toggle">
-                            <span>選擇世界書</span>
+                            <span>?豢?銝???/span>
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="chrome-wb-menu" id="chrome-worldbook-list">
                             ${chromeWorldbookMounts.map((wb, i) => `
                                 <div class="chrome-wb-item">
-                                    <input type="checkbox" value="${wb?.name || `世界書 ${i + 1}`}">
-                                    <span>${wb?.name || `世界書 ${i + 1}`}</span>
+                                    <input type="checkbox" value="${wb?.name || `銝???${i + 1}`}">
+                                    <span>${wb?.name || `銝???${i + 1}`}</span>
                                 </div>
-                            `).join('') || '<div class="chrome-wb-empty">尚無可掛載的世界書</div>'}
+                            `).join('') || '<div class="chrome-wb-empty">撠?舀?頛?銝???/div>'}
                         </div>
                     </div>
                 </div>
-                <button class="ghost-btn primary" id="profile-apply">套用設定</button>
+                <button class="ghost-btn primary" id="profile-apply">憟閮剖?</button>
             </div>
         </div>
     `;

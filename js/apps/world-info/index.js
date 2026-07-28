@@ -1,8 +1,8 @@
-import Router from '../../router.js';
-import { createElement, createIcon, createIOSNavBar, createEmptyState } from '../../components.js';
-import { WorldInfoDB } from '../../db.js';
+﻿import Router from '../../router.js';
+import { createElement, createIcon } from '../../components.js';
 
-let entries = [];
+
+
 
 async function renderWorldInfo() {
     const container = createElement('div', 'app-container bg-ios-bg');
@@ -40,7 +40,7 @@ async function renderWorldInfo() {
     
     const backIcon = createIcon('chevron_left');
     backBtn.appendChild(backIcon);
-    backBtn.appendChild(createElement('span', '', { textContent: '返回' }));
+    backBtn.appendChild(createElement('span', '', { textContent: '餈?' }));
     inner.appendChild(backBtn);
     
     const titleContainer = createElement('div', '');
@@ -55,7 +55,7 @@ async function renderWorldInfo() {
     titleContainer.style.lineHeight = '38.4px';
     titleContainer.style.letterSpacing = '-0.5px';
     titleContainer.style.whiteSpace = 'nowrap';
-    titleContainer.textContent = '世界書';
+    titleContainer.textContent = '銝???;
     inner.appendChild(titleContainer);
     
     header.appendChild(inner);
@@ -107,7 +107,7 @@ async function renderWorldInfo() {
     placeholderText.style.fontStyle = 'normal';
     placeholderText.style.fontWeight = '400';
     placeholderText.style.lineHeight = 'normal';
-    placeholderText.textContent = '搜尋';
+    placeholderText.textContent = '??';
     placeholder.appendChild(placeholderText);
     
     searchBar.appendChild(placeholder);
@@ -123,24 +123,24 @@ async function renderWorldInfo() {
     
     const settingsCells = [
         {
-            title: '全局設定',
-            description: '常開設定，不須手動開關，自動套用',
-            onClick: () => console.log('全局設定 clicked')
+            title: '?典?閮剖?',
+            description: '撣賊?閮剖?嚗????????芸?憟',
+            onClick: () => console.log('?典?閮剖? clicked')
         },
         {
-            title: '全局禁令',
-            description: '常開禁令，不須手動開關，自動套用',
-            onClick: () => console.log('全局禁令 clicked')
+            title: '?典?蝳誘',
+            description: '撣賊?蝳誘嚗????????芸?憟',
+            onClick: () => console.log('?典?蝳誘 clicked')
         },
         {
-            title: '劇場設定',
-            description: '專用於劇場內部的世界觀，選擇套用',
-            onClick: () => console.log('劇場設定 clicked')
+            title: '?閮剖?',
+            description: '撠?澆??游?函?銝?閫嚗????,
+            onClick: () => console.log('?閮剖? clicked')
         },
         {
-            title: '關鍵字設定',
-            description: '由關鍵字觸發的世界書內容',
-            onClick: () => console.log('關鍵字設定 clicked')
+            title: '?摮身摰?,
+            description: '?梢??萄?閫貊????批捆',
+            onClick: () => console.log('?摮身摰?clicked')
         }
     ];
     

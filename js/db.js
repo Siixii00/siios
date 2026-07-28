@@ -1,7 +1,7 @@
 ﻿import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
 
 const DB_NAME = 'sxios';
-const DB_VERSION = 6;
+const DB_VERSION = 7;
 const LEGACY_DB_NAMES = ['ios-classic-ai'];
 
 let db = null;
@@ -46,11 +46,30 @@ async function initDB() {
                 messagesStore.createIndex('timestamp', 'timestamp');
             }
 
-            if (!database.objectStoreNames.contains('worldInfo')) {
-                const worldInfoStore = database.createObjectStore('worldInfo', { keyPath: 'id' });
-                worldInfoStore.createIndex('name', 'name');
-                worldInfoStore.createIndex('strategy', 'strategy');
+            if (database.objectStoreNames.contains('worldInfo')) {
+                database.deleteObjectStore('worldInfo');
             }
+
+            if (!database.objectStoreNames.contains('globalSettings')) {
+                const globalSettingsStore = database.createObjectStore('globalSettings', { keyPath: 'id' });
+                globalSettingsStore.createIndex('priority', 'priority');
+            }
+
+            if (!database.objectStoreNames.contains('globalForbidden')) {
+                const globalForbiddenStore = database.createObjectStore('globalForbidden', { keyPath: 'id' });
+                globalForbiddenStore.createIndex('priority', 'priority');
+            }
+
+            if (!database.objectStoreNames.contains('theaterSettings')) {
+                const theaterSettingsStore = database.createObjectStore('theaterSettings', { keyPath: 'id' });
+                theaterSettingsStore.createIndex('priority', 'priority');
+            }
+
+            if (!database.objectStoreNames.contains('keywordSettings')) {
+                const keywordSettingsStore = database.createObjectStore('keywordSettings', { keyPath: 'id' });
+                keywordSettingsStore.createIndex('priority', 'priority');
+            }
+
 
             if (!database.objectStoreNames.contains('characters')) {
                 database.createObjectStore('characters', { keyPath: 'id' });
@@ -653,4 +672,215 @@ const UsersDB = {
     }
 };
 
-export { initDB, ChatsDB, MessagesDB, WorldInfoDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, hashContent, cosineSimilarity };
+
+const GlobalSettingsDB = {
+    async getAll() {
+        const database = await initDB();
+        return database.getAll('globalSettings');
+    },
+
+    async getById(id) {
+        const database = await initDB();
+        return database.get('globalSettings', id);
+    },
+
+    async create(data = {}) {
+        const database = await initDB();
+        const id = generateId();
+        const entry = {
+            id,
+            name: data.name || '',
+            content: data.content || '',
+            priority: data.priority || 'front',
+            enabled: data.enabled !== undefined ? data.enabled : true,
+            created_at: Date.now(),
+            updated_at: Date.now()
+        };
+        await database.put('globalSettings', entry);
+        return entry;
+    },
+
+    async update(id, data) {
+        const database = await initDB();
+        const entry = await database.get('globalSettings', id);
+        if (!entry) throw new Error('GlobalSettings entry not found');
+        const updated = { ...entry, ...data, updated_at: Date.now() };
+        await database.put('globalSettings', updated);
+        return updated;
+    },
+
+    async delete(id) {
+        const database = await initDB();
+        await database.delete('globalSettings', id);
+    },
+
+    async getByPriority(priority) {
+        const database = await initDB();
+        return database.getAllFromIndex('globalSettings', 'priority', priority);
+    }
+};
+
+const GlobalForbiddenDB = {
+    async getAll() {
+        const database = await initDB();
+        return database.getAll('globalForbidden');
+    },
+
+    async getById(id) {
+        const database = await initDB();
+        return database.get('globalForbidden', id);
+    },
+
+    async create(data = {}) {
+        const database = await initDB();
+        const id = generateId();
+        const entry = {
+            id,
+            name: data.name || '',
+            content: data.content || '',
+            priority: data.priority || 'front',
+            enabled: data.enabled !== undefined ? data.enabled : true,
+            created_at: Date.now(),
+            updated_at: Date.now()
+        };
+        await database.put('globalForbidden', entry);
+        return entry;
+    },
+
+    async update(id, data) {
+        const database = await initDB();
+        const entry = await database.get('globalForbidden', id);
+        if (!entry) throw new Error('GlobalForbidden entry not found');
+        const updated = { ...entry, ...data, updated_at: Date.now() };
+        await database.put('globalForbidden', updated);
+        return updated;
+    },
+
+    async delete(id) {
+        const database = await initDB();
+        await database.delete('globalForbidden', id);
+    },
+
+    async getByPriority(priority) {
+        const database = await initDB();
+        return database.getAllFromIndex('globalForbidden', 'priority', priority);
+    }
+};
+
+const TheaterSettingsDB = {
+    async getAll() {
+        const database = await initDB();
+        return database.getAll('theaterSettings');
+    },
+
+    async getById(id) {
+        const database = await initDB();
+        return database.get('theaterSettings', id);
+    },
+
+    async create(data = {}) {
+        const database = await initDB();
+        const id = generateId();
+        const entry = {
+            id,
+            name: data.name || '',
+            content: data.content || '',
+            priority: data.priority || 'middle',
+            enabled: data.enabled !== undefined ? data.enabled : true,
+            created_at: Date.now(),
+            updated_at: Date.now()
+        };
+        await database.put('theaterSettings', entry);
+        return entry;
+    },
+
+    async update(id, data) {
+        const database = await initDB();
+        const entry = await database.get('theaterSettings', id);
+        if (!entry) throw new Error('TheaterSettings entry not found');
+        const updated = { ...entry, ...data, updated_at: Date.now() };
+        await database.put('theaterSettings', updated);
+        return updated;
+    },
+
+    async delete(id) {
+        const database = await initDB();
+        await database.delete('theaterSettings', id);
+    },
+
+    async getByPriority(priority) {
+        const database = await initDB();
+        return database.getAllFromIndex('theaterSettings', 'priority', priority);
+    }
+};
+
+const KeywordSettingsDB = {
+    async getAll() {
+        const database = await initDB();
+        return database.getAll('keywordSettings');
+    },
+
+    async getById(id) {
+        const database = await initDB();
+        return database.get('keywordSettings', id);
+    },
+
+    async create(data = {}) {
+        const database = await initDB();
+        const id = generateId();
+        const entry = {
+            id,
+            name: data.name || '',
+            content: data.content || '',
+            keywords: data.keywords || [],
+            priority: data.priority || 'middle',
+            enabled: data.enabled !== undefined ? data.enabled : true,
+            created_at: Date.now(),
+            updated_at: Date.now()
+        };
+        await database.put('keywordSettings', entry);
+        return entry;
+    },
+
+    async update(id, data) {
+        const database = await initDB();
+        const entry = await database.get('keywordSettings', id);
+        if (!entry) throw new Error('KeywordSettings entry not found');
+        const updated = { ...entry, ...data, updated_at: Date.now() };
+        await database.put('keywordSettings', updated);
+        return updated;
+    },
+
+    async delete(id) {
+        const database = await initDB();
+        await database.delete('keywordSettings', id);
+    },
+
+    async getByPriority(priority) {
+        const database = await initDB();
+        return database.getAllFromIndex('keywordSettings', 'priority', priority);
+    },
+
+    async matchKeywords(message) {
+        const all = await this.getAll();
+        const matches = [];
+        const lowerMessage = message.toLowerCase();
+        for (const entry of all) {
+            if (!entry.enabled) continue;
+            if (entry.keywords && entry.keywords.length > 0) {
+                for (const keyword of entry.keywords) {
+                    if (keyword && lowerMessage.includes(keyword.toLowerCase())) {
+                        matches.push(entry);
+                        break;
+                    }
+                }
+            }
+        }
+        return matches;
+    }
+};
+
+export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, hashContent, cosineSimilarity };
+
+
+

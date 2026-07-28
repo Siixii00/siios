@@ -2,7 +2,6 @@ import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
-import { buildAppContext } from '../../core/app-context-builder.js';
 
 const thumbnailColors = [
     ['#ff6b6b', '#feca57'],
@@ -43,7 +42,6 @@ let uploadedThumbData = null;
 let isGeneratingCharFeed = false;
 let isGeneratingVideos = false;
 let aiVideoGenState = { isGenerating: false, generatedVideoUrl: null, generatedPrompt: null };
-let selectedCharId = null;
 
 function randomPick(list) {
     return list[Math.floor(Math.random() * list.length)];
@@ -216,23 +214,15 @@ function renderSaveList(container, videoId) {
     }).join('');
 }
 
-async function generateLLMContent(prompt, maxRetries = 2, characterId = null) {
+async function generateLLMContent(prompt, maxRetries = 2) {
     const settings = await APIClient.getSettings();
     
     if (!settings.api_url || !settings.api_key) {
         return null;
     }
     
-    const context = await buildAppContext({ characterId });
-    
     for (let attempt = 0; attempt <= maxRetries; attempt++) {
         try {
-            const messages = [];
-            if (context.systemPrompt) {
-                messages.push({ role: 'system', content: context.systemPrompt });
-            }
-            messages.push({ role: 'user', content: prompt });
-            
             const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
                 method: 'POST',
                 headers: {
@@ -241,7 +231,7 @@ async function generateLLMContent(prompt, maxRetries = 2, characterId = null) {
                 },
                 body: JSON.stringify({
                     model: settings.model || 'gpt-3.5-turbo',
-                    messages,
+                    messages: [{ role: 'user', content: prompt }],
                     temperature: 0.8,
                     max_tokens: 200
                 })
@@ -285,7 +275,7 @@ async function generateCharReaction(container, char, video) {
 請用一句話（15-30字）表達你對這部影片的反應或評論，要符合你的個性。
 只需輸出反應文字，不要其他內容。`;
 
-    const reaction = await generateLLMContent(prompt, 2, char.id);
+    const reaction = await generateLLMContent(prompt);
     
     if (reaction) {
         return reaction;
@@ -320,7 +310,7 @@ async function generateCharLiveComment(container, char, video) {
 針對影片的「${randomKeyword}」，用一句話（10-20字）發表即時評論，要符合你的個性。
 只輸出評論文字。`;
 
-    const comment = await generateLLMContent(prompt, 2, char.id);
+    const comment = await generateLLMContent(prompt);
     
     if (comment) {
         return comment;
@@ -356,7 +346,7 @@ async function generateVideoTitle(char, tag) {
 
 只輸出標題文字，不要引號或其他符號。`;
 
-    const title = await generateLLMContent(prompt, 2, char.id);
+    const title = await generateLLMContent(prompt);
     
     if (title && title.length > 5 && title.length < 50) {
         return title;
@@ -379,7 +369,7 @@ async function generateVideoDescription(char, title) {
 
 只輸出描述文字。`;
 
-    const desc = await generateLLMContent(prompt, 2, char.id);
+    const desc = await generateLLMContent(prompt);
     
     if (desc && desc.length > 10) {
         return desc;
@@ -417,7 +407,7 @@ async function generateAdContent(char) {
 BANNER: 橫幅文案
 POPUP: JSON內容`;
 
-    const content = await generateLLMContent(prompt, 2, char?.id);
+    const content = await generateLLMContent(prompt);
     
     if (content) {
         const bannerMatch = content.match(/BANNER:\s*(.+)/);
