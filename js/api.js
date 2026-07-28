@@ -1,16 +1,52 @@
 import Router from './router.js';
-import { SettingsDB, WorldInfoDB } from './db.js';
+import { SettingsDB, WorldInfoDB, ChatsDB, CharactersDB, UsersDB } from './db.js';
 
 const APIClient = {
     async getSettings() {
         return SettingsDB.getAll();
     },
     
-    buildMessages(chatId, userMessage, settings, messages, memoryContext = null) {
+    async getCharacterData(chatId) {
+        const chat = await ChatsDB.getById(chatId);
+        if (!chat || !chat.character_id) return null;
+        
+        const character = await CharactersDB.getById(chat.character_id);
+        return character;
+    },
+    
+    async getUserData(chatId) {
+        const chat = await ChatsDB.getById(chatId);
+        if (!chat || !chat.bound_user_id) return null;
+        
+        const user = await UsersDB.getById(chat.bound_user_id);
+        return user;
+    },
+    
+    buildMessages(chatId, userMessage, settings, messages, memoryContext = null, characterData = null, userData = null) {
         const systemMessages = [];
         
-        const systemPrompt = settings.system_prompt || 'You are a helpful AI assistant.';
-        let promptContent = systemPrompt;
+        let promptContent = settings.system_prompt || 'You are a helpful AI assistant.';
+        
+        // 如果有角色資料，使用角色的個性設定
+        if (characterData) {
+            if (characterData.personality) {
+                promptContent = characterData.personality;
+            }
+            if (characterData.scenario) {
+                promptContent += '\n\n場景設定:\n' + characterData.scenario;
+            }
+        }
+        
+        // 如果有綁定的用戶資料，加入用戶身份資訊
+        if (userData) {
+            promptContent += '\n\n用戶身份: ' + (userData.name || 'User');
+            if (userData.personality) {
+                promptContent += '\n用戶個性: ' + userData.personality;
+            }
+            if (userData.speech_style) {
+                promptContent += '\n用戶說話風格: ' + userData.speech_style;
+            }
+        }
         
         if (memoryContext && memoryContext.length > 0) {
             const maxChars = Math.min(2000, (settings.context_size || 4096) * 0.3);
@@ -53,6 +89,12 @@ const APIClient = {
         const { MessagesDB } = await import('./db.js');
         const messages = await MessagesDB.getByChatId(chatId);
         
+        // 載入角色資料
+        const characterData = await this.getCharacterData(chatId);
+        
+        // 載入綁定的用戶資料
+        const userData = await this.getUserData(chatId);
+        
         let memoryContext = null;
         if (settings.memory_enabled && window.App?.memorySystem) {
             try {
@@ -64,7 +106,7 @@ const APIClient = {
             }
         }
         
-        const apiMessages = this.buildMessages(chatId, userMessage, settings, messages, memoryContext);
+        const apiMessages = this.buildMessages(chatId, userMessage, settings, messages, memoryContext, characterData, userData);
         
         try {
             const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
