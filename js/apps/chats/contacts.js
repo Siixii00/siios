@@ -1,6 +1,6 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBottomNav, createKakaoBottomSheet, createEmptyState, createToast } from '../../components.js';
-import { CharactersDB, ChatsDB } from '../../db.js';
+import { CharactersDB, ChatsDB, UsersDB } from '../../db.js';
 import { CHATS_TABS } from './chats-nav.js';
 
 async function renderContacts() {
@@ -96,7 +96,11 @@ async function renderContacts() {
     return { element: container, cleanup: null };
 }
 
-function openCreateSheet() {
+async function openCreateSheet() {
+    const users = await UsersDB.getAll();
+    const existingChars = await CharactersDB.getAll();
+    const existingNames = existingChars.map(c => c.name);
+
     const nameInput = createElement('input', 'kakao-chat-textarea w-full', {
         type: 'text',
         placeholder: '角色名稱'
@@ -105,16 +109,74 @@ function openCreateSheet() {
     nameInput.style.height = '44px';
     nameInput.style.padding = '0 12px';
 
-    const descInput = createElement('textarea', 'kakao-chat-textarea w-full', {
-        placeholder: '角色描述（選填）',
+    const avatarInput = createElement('input', 'kakao-chat-textarea w-full', {
+        type: 'url',
+        placeholder: '頭像 URL（選填）'
+    });
+    avatarInput.style.borderRadius = '12px';
+    avatarInput.style.height = '44px';
+    avatarInput.style.padding = '0 12px';
+
+    const personalityInput = createElement('textarea', 'kakao-chat-textarea w-full', {
+        placeholder: '個性描述（選填）',
         rows: '3'
     });
-    descInput.style.borderRadius = '12px';
-    descInput.style.height = '80px';
+    personalityInput.style.borderRadius = '12px';
+    personalityInput.style.height = '80px';
+
+    const scenarioInput = createElement('textarea', 'kakao-chat-textarea w-full', {
+        placeholder: '場景設定（選填）',
+        rows: '2'
+    });
+    scenarioInput.style.borderRadius = '12px';
+    scenarioInput.style.height = '60px';
+
+    const firstMsgInput = createElement('textarea', 'kakao-chat-textarea w-full', {
+        placeholder: '第一句話（選填）',
+        rows: '2'
+    });
+    firstMsgInput.style.borderRadius = '12px';
+    firstMsgInput.style.height = '60px';
 
     const form = createElement('div', 'p-4 flex flex-col gap-4');
     form.appendChild(nameInput);
-    form.appendChild(descInput);
+    form.appendChild(avatarInput);
+    form.appendChild(personalityInput);
+    form.appendChild(scenarioInput);
+    form.appendChild(firstMsgInput);
+
+    if (users.length > 0) {
+        const userSelectSection = createElement('div', 'mt-2');
+        userSelectSection.appendChild(createElement('p', 'text-sm text-gray-500 mb-2', { textContent: '從 User 設定自動帶入' }));
+
+        const userSelect = createElement('select', 'kakao-chat-textarea w-full');
+        userSelect.style.borderRadius = '12px';
+        userSelect.style.height = '44px';
+        userSelect.style.padding = '0 12px';
+
+        const defaultOption = createElement('option', { textContent: '-- 選擇 User --' });
+        defaultOption.value = '';
+        userSelect.appendChild(defaultOption);
+
+        users.forEach(user => {
+            const opt = createElement('option', { textContent: user.name || '未命名 User' });
+            opt.value = user.id;
+            userSelect.appendChild(opt);
+        });
+
+        userSelect.onchange = () => {
+            const selectedId = userSelect.value;
+            if (!selectedId) return;
+            const user = users.find(u => u.id === selectedId);
+            if (user) {
+                if (!nameInput.value && user.name) nameInput.value = user.name;
+                if (!avatarInput.value && user.avatar) avatarInput.value = user.avatar;
+                if (!personalityInput.value && user.personality) personalityInput.value = user.personality;
+            }
+        };
+        userSelectSection.appendChild(userSelect);
+        form.appendChild(userSelectSection);
+    }
 
     const sheet = createKakaoBottomSheet([], {
         title: '建立新聯絡',
@@ -129,9 +191,17 @@ function openCreateSheet() {
                 createToast('請輸入角色名稱');
                 return;
             }
+            if (existingNames.includes(name)) {
+                createToast('此角色名稱已存在');
+                return;
+            }
             await CharactersDB.create({
                 name,
-                description: descInput.value.trim()
+                avatar: avatarInput.value.trim(),
+                personality: personalityInput.value.trim(),
+                scenario: scenarioInput.value.trim(),
+                first_message: firstMsgInput.value.trim(),
+                description: personalityInput.value.trim()
             });
             createToast('已建立聯絡：' + name);
             sheet.close();
