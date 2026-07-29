@@ -1,4 +1,4 @@
-import { SensoryExtractor } from './sensory-extractor.js';
+﻿import { SensoryExtractor } from './sensory-extractor.js';
 import { EmotionTagger } from './emotion-tagger.js';
 import { SpatiotemporalTagger } from './spatiotemporal-tagger.js';
 import { DecayEngine } from './decay-engine.js';
@@ -70,7 +70,20 @@ export class MemorySystem {
 
         const memory = await MemoryDB.create({
             chat_id: chatId,
+            character_id: characterId,
             content: message,
+            // Source info
+            source_app: 'chat',
+            source_type: 'interaction',
+            source_subtype: 'chat',
+            // Memory levels
+            memory_level: 'full',
+            meta_content: `在對話中交換了訊息`,
+            full_content: message,
+            // Theater binding (will be updated by chat settings)
+            theater_ids: [],
+            is_fiction: false,
+            // Original fields
             sensory: sensoryData,
             emotional: emotionalData,
             spatiotemporal: spatiotemporalData,
@@ -113,15 +126,53 @@ export class MemorySystem {
     async retrieveMemories(query, chatId, limit = 10, filters = {}) {
         let memories;
 
+        // Get all memories first
+        const allMemories = await MemoryDB.getAll();
+
+        // Apply filters
+        let filteredMemories = allMemories;
+
+        // Filter by character_id if provided
+        if (filters.character_id) {
+            filteredMemories = filteredMemories.filter(m => 
+                m.character_id === filters.character_id
+            );
+        }
+
+        // Filter by theater_ids
+        if (filters.theater_id !== undefined) {
+            const theaterId = filters.theater_id;
+            filteredMemories = filteredMemories.filter(m => {
+                // If theater_ids is empty (main storyline), include if include_main_memories is true
+                if (!m.theater_ids || m.theater_ids.length === 0) {
+                    return filters.include_main_memories !== false;
+                }
+                // If memory has theater_ids, check if it matches the requested theater
+                return m.theater_ids.includes(theaterId);
+            });
+        }
+
+        // Filter by source_app
+        if (filters.selected_sources && filters.selected_sources.length > 0) {
+            filteredMemories = filteredMemories.filter(m => 
+                filters.selected_sources.includes(m.source_app) || m.source_app === 'chat'
+            );
+        }
+
+        // Filter by is_fiction
+        if (filters.include_fiction === false) {
+            filteredMemories = filteredMemories.filter(m => 
+                m.is_fiction !== true
+            );
+        }
+
+        // Now apply semantic or keyword search
         if (this.embeddingClient) {
             try {
                 const queryEmbedding = await this.embeddingClient.getEmbedding(query);
-                const allMemories = chatId
-                    ? await MemoryDB.getByChatId(chatId)
-                    : await MemoryDB.getAll();
 
                 const seen = new Map();
-                for (const m of allMemories) {
+                for (const m of filteredMemories) {
                     let bestSim = 0;
                     if (m.embedding && queryEmbedding) {
                         const sim = cosineSimilarity(queryEmbedding, m.embedding);
@@ -137,12 +188,13 @@ export class MemorySystem {
                 }
                 memories = Array.from(seen.values());
             } catch {
-                memories = await this._keywordSearch(query, chatId);
+                memories = this._keywordSearchFiltered(query, filteredMemories);
             }
         } else {
-            memories = await this._keywordSearch(query, chatId);
+            memories = this._keywordSearchFiltered(query, filteredMemories);
         }
 
+        // Apply additional filters
         if (filters.memory_type) {
             memories = memories.filter(m => m.memory_type === filters.memory_type);
         }
@@ -155,7 +207,14 @@ export class MemorySystem {
             const decayedFactor = this.decayEngine.decay(memory.decayFactor, ageInDays, memory.importance);
             const similarity = memory.similarity || 0.5;
             const relevance = similarity * decayedFactor * (memory.importance || 0.5);
-            return { ...memory, relevance, decayedFactor };
+            
+            // Determine which content to return based on memory_level filter
+            let displayContent = memory.content;
+            if (filters.memory_level === 'meta' && memory.meta_content) {
+                displayContent = memory.meta_content;
+            }
+            
+            return { ...memory, relevance, decayedFactor, displayContent };
         });
 
         scored.sort((a, b) => b.relevance - a.relevance);
@@ -177,6 +236,14 @@ export class MemorySystem {
         }
 
         return results;
+    }
+
+    _keywordSearchFiltered(query, memories) {
+        const lowerQuery = query.toLowerCase();
+        return memories.filter(m =>
+            (m.content && m.content.toLowerCase().includes(lowerQuery)) ||
+            (m.meta_content && m.meta_content.toLowerCase().includes(lowerQuery))
+        );
     }
 
     async _keywordSearch(query, chatId) {

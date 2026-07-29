@@ -40,7 +40,7 @@ async function renderWorldInfo() {
     
     const backIcon = createIcon('chevron_left');
     backBtn.appendChild(backIcon);
-    backBtn.appendChild(createElement('span', '', { textContent: '餈?' }));
+    backBtn.appendChild(createElement('span', '', { textContent: '返回' }));
     inner.appendChild(backBtn);
     
     const titleContainer = createElement('div', '');
@@ -55,7 +55,7 @@ async function renderWorldInfo() {
     titleContainer.style.lineHeight = '38.4px';
     titleContainer.style.letterSpacing = '-0.5px';
     titleContainer.style.whiteSpace = 'nowrap';
-    titleContainer.textContent = '銝???;
+    titleContainer.textContent = 'World Info';
     inner.appendChild(titleContainer);
     
     header.appendChild(inner);
@@ -107,7 +107,7 @@ async function renderWorldInfo() {
     placeholderText.style.fontStyle = 'normal';
     placeholderText.style.fontWeight = '400';
     placeholderText.style.lineHeight = 'normal';
-    placeholderText.textContent = '??';
+    placeholderText.textContent = '搜尋';
     placeholder.appendChild(placeholderText);
     
     searchBar.appendChild(placeholder);
@@ -123,24 +123,24 @@ async function renderWorldInfo() {
     
     const settingsCells = [
         {
-            title: '?典?閮剖?',
-            description: '撣賊?閮剖?嚗????????芸?憟',
-            onClick: () => console.log('?典?閮剖? clicked')
+            title: '全局設定',
+            description: '管理全局設定項目',
+            onClick: () => Router.navigate('/global-settings')
         },
         {
-            title: '?典?蝳誘',
-            description: '撣賊?蝳誘嚗????????芸?憟',
-            onClick: () => console.log('?典?蝳誘 clicked')
+            title: '全局禁詞',
+            description: '管理全局禁詞列表',
+            onClick: () => Router.navigate('/global-forbidden')
         },
         {
-            title: '?閮剖?',
-            description: '撠?澆??游?函?銝?閫嚗????,
-            onClick: () => console.log('?閮剖? clicked')
+            title: '劇場設定',
+            description: '管理不同劇場的設定',
+            onClick: () => Router.navigate('/theater-settings')
         },
         {
-            title: '?摮身摰?,
-            description: '?梢??萄?閫貊????批捆',
-            onClick: () => console.log('?摮身摰?clicked')
+            title: '關鍵字設定',
+            description: '管理關鍵字觸發設定',
+            onClick: () => Router.navigate('/keyword-settings')
         }
     ];
     

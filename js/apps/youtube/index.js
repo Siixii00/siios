@@ -1,8 +1,9 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
+import { saveInteractionMemory } from '../../core/memory-saver.js';
 
 const thumbnailColors = [
     ['#ff6b6b', '#feca57'],
@@ -1451,7 +1452,7 @@ async function renderYouTube(params) {
         });
     });
     
-    container.querySelector('.yt-feed')?.addEventListener('click', event => {
+    container.querySelector('.yt-feed')?.addEventListener('click', async event => {
         const card = event.target.closest('.yt-card');
         const moreBtn = event.target.closest('[data-action="video-more"]');
         

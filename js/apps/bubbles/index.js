@@ -2,6 +2,7 @@
 import { createElement } from '../../components.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
+import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { CharactersDB, SettingsDB } from '../../db.js';
 
 let state = {

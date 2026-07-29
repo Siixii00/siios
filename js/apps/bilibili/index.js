@@ -1,8 +1,9 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
+import { saveInteractionMemory } from '../../core/memory-saver.js';
 
 const thumbnailColors = [
     ['#ffd5e5', '#ff8fb1'],

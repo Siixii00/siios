@@ -1,8 +1,9 @@
-import Router from '../../router.js';
+﻿﻿import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
+import { saveInteractionMemory } from '../../core/memory-saver.js';
 
 const BOOKMARKS_KEY = 'chrome_bookmarks';
 const HISTORY_KEY = 'chrome_history';
@@ -19,19 +20,19 @@ let currentView = 'home';
 let currentCharIndex = 0;
 
 const INCOGNITO_SITES = [
-    { id: 'nhentai', label: 'nhentai', icon: 'NH', query: 'nhentai ?犖隤?瞍怎', title: 'nhentai ?犖隤? },
-    { id: 'av.com', label: 'av.com', icon: 'AV', query: 'av.com ?犖敶梁?', title: 'av.com 敶梁?' },
-    { id: 'dreams', label: 'dreams', icon: 'DR', query: 'dreams 憭Ｗ? 撟餅', title: 'dreams 撟餅銝?' }
+    { id: 'nhentai', label: 'nhentai', icon: 'NH', query: 'nhentai 同人誌 漫畫', title: 'nhentai 同人誌' },
+    { id: 'av.com', label: 'av.com', icon: 'AV', query: 'av.com 成人影片', title: 'av.com 影片' },
+    { id: 'dreams', label: 'dreams', icon: 'DR', query: 'dreams 夢境 幻想', title: 'dreams 幻想世界' }
 ];
 
 const USER_INTEREST_SITES = [
-    { id: 'user-interest-0', label: '?箔??刻', icon: '??, type: 'recommend' },
-    { id: 'user-interest-1', label: '?梢??批捆', icon: '??, type: 'trending' },
-    { id: 'user-interest-2', label: '?圈悅鈭?, icon: '??, type: 'fresh' },
-    { id: 'user-interest-3', label: '頞??潛', icon: '頞?, type: 'fun' }
+    { id: 'user-interest-0', label: '為你推薦', icon: '推', type: 'recommend' },
+    { id: 'user-interest-1', label: '熱門內容', icon: '熱', type: 'trending' },
+    { id: 'user-interest-2', label: '新鮮事', icon: '新', type: 'fresh' },
+    { id: 'user-interest-3', label: '趣味發現', icon: '趣', type: 'fun' }
 ];
 
-const ADULT_EXPLICIT_KEYWORDS = ['?僑', '銝剖僑', '憭批?', '憪?', '鈭箏氖', '??', '?', '?犖', '18+', 'AV', '?', '撠箏漲', '?暹?', '?曄萵', '瞈??];
+const ADULT_EXPLICIT_KEYWORDS = ['成年', '中年', '大叔', '姐姐', '人妻', '成熟', '情慾', '成人', '18+', 'AV', '情色', '尺度', '慾望', '放縱', '激情'];
 
 function escapeHTML(str = '') {
     return String(str)
@@ -218,7 +219,7 @@ function renderHistoryList(container) {
     if (!list) return;
 
     if (historyEntries.length === 0) {
-        list.innerHTML = '<div class="status">撠??蝝??/div>';
+        list.innerHTML = '<div class="status">尚無瀏覽記錄</div>';
         return;
     }
 
@@ -430,16 +431,16 @@ async function generateHistoryForChar(index, container) {
 function generateFallbackHistory(char, charName, charPersonality, charBackground, container) {
     const adultLevel = getAdultLevel(char);
     const sites = ['nhentai', 'av.com', 'dreams'];
-    const topics = ['瘚芣憤', '撟餅', '??', '??', '閫', '?萎?'];
+    const topics = ['浪漫', '幻想', '故事', '藝術', '角色', '創作'];
 
     historyEntries = topics.slice(0, 6).map((topic, i) => {
         const site = sites[i % 3];
         return {
             id: `history_${Date.now()}_${i}`,
-            title: `${topic} ?賊??批捆`,
+            title: `${topic} 相關內容`,
             query: `${topic} ${site}`,
-            time: `${i + 1} 撠??,
-            summary: `${charName}??{site}?汗鈭?{topic}?賊??批捆`,
+            time: `${i + 1} 小時前`,
+            summary: `${charName}在${site}瀏覽了${topic}相關內容`,
             site,
             incognito: true,
             adultLevel,
@@ -567,36 +568,40 @@ async function openIncognitoSite(site, container) {
 
     const settings = await APIClient.getSettings();
     if (!settings.api_url || !settings.api_key) {
-        createToast('隢?閮剖? API ????批捆', 'error');
+        createToast('請先設定 API 才能生成內容', 'error');
         return;
     }
 
     const char = charProfiles[currentCharIndex] || {};
-    const charName = char.name || '閫';
-    const charPersonality = char.personality || '';
+    const charName = char.name || '角色';
+    const charId = char?.id || null;
 
     switchView('history', container);
     const historyList = container.querySelector('#history-list');
-    if (historyList) historyList.innerHTML = '<div class="status">甇?頛?批捆...</div>';
+    if (historyList) historyList.innerHTML = '<div class="status">正在載入內容...</div>';
 
     const adultLevel = getAdultLevel(char);
 
-    const systemPrompt = `雿迤?冽瞍?{charName}嚗?隞?{charName}??閫???靘?餈啜?
-雿銝?芋?祆?鈭箏摰寥??Ｙ?????脣改?${charPersonality}
+    const context = await buildAppContext({ characterId: charId });
+    const baseSystemPrompt = context.systemPrompt;
 
-隢蝜?銝剜?頛詨蝬脤??批捆嚗芋?祉?撖衣雯蝡?璅??嚗??恬?
-1. 蝬脩?璅?
-2. ????蝐?
-3. 3-5 ?摰寥??殷?璅??陛?剜?餈堆?
-4. 瘥??桅閬?隞?{charName}閬???隢???
+    const systemPrompt = baseSystemPrompt + `
 
-?臭誑撣嗆??瘞?嚗???脫扳瘙箏?蝔漲??{adultLevel === 'explicit' ? '?臭誑雿輻頛撉函??膩?? : '靽??閎雿??漲?脤爸??}`;
+你是一個模擬成人內容頁面生成器。
+模式：無痕模式（成人向，等級：${adultLevel}）
 
-    const userPrompt = `隢???{site.label}?雯蝡?璅⊥?批捆??
-???摮?${site.query}
+請用繁體中文輸出網頁內容，模擬真實網站的樣式，包含：
+1. 網站標題
+2. 分類或標籤
+3. 3-5 個內容項目（標題和簡短描述）
+4. 每個項目都要有以${charName}視角的評論或感受
 
-隢芋?砌???鈭箏?蝬脩????摰對?隞?{charName}??閫??整?{charName}甇??汗?雯蝡?隢???{charName}???????;
+可以帶有情慾氛圍，根據角色性格決定程度。${adultLevel === 'explicit' ? '可以使用較露骨的描述。' : '保持情趣但不過度露骨。'}`;
 
+    const userPrompt = `請生成「${site.label}」網站的模擬內容。
+搜尋關鍵字：${site.query}
+
+請模擬一個成人向網站的首頁內容，以${charName}的視角呈現。${charName}正在瀏覽這個網站，請展現${charName}的反應和感受。`;
     try {
         const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
             method: 'POST',
@@ -615,7 +620,7 @@ async function openIncognitoSite(site, container) {
         });
 
         const data = await response.json();
-        const content = data?.choices?.[0]?.message?.content || '???批捆憭望?';
+        const content = data?.choices?.[0]?.message?.content || '無法載入內容';
 
         if (historyList) {
             historyList.innerHTML = `
@@ -630,10 +635,27 @@ async function openIncognitoSite(site, container) {
                 </div>
             `;
         }
+
+        // Save interaction memory
+        if (charId) {
+            await saveInteractionMemory({
+                characterId: charId,
+                sourceApp: 'chrome',
+                sourceType: 'interaction',
+                sourceSubtype: 'browsing',
+                content: `在無痕模式瀏覽 ${site?.label || '網站'}`,
+                metaContent: `在 Chrome 無痕模式與用戶一起瀏覽了 ${site?.label || '網站'}`,
+                fullContent: content,
+                theaterIds: [],
+                isFiction: false,
+                importance: 0.5
+            });
+        }
     } catch (err) {
-        if (historyList) historyList.innerHTML = `<div class="status error">頛憭望?嚗?{err.message}</div>`;
+        if (historyList) historyList.innerHTML = `<div class="status error">載入失敗：${err.message}</div>`;
     }
 }
+
 
 function switchView(view, container) {
     currentView = view;
@@ -664,9 +686,9 @@ function toggleMode(container) {
     const incognitoGrid = container.querySelector('#incognito-quick-grid');
 
     if (appEl) appEl.dataset.mode = next;
-    if (modeBtn) modeBtn.textContent = next === 'incognito' ? '銝?? : '?∠?';
+    if (modeBtn) modeBtn.textContent = next === 'incognito' ? '無痕' : '普通';
     if (statusText) {
-        statusText.textContent = next === 'incognito' ? '' : '銝?祆芋撘???撌脤??';
+        statusText.textContent = next === 'incognito' ? '' : '一般模式，已關閉無痕模式';
         statusText.hidden = next === 'incognito';
     }
     if (hero) hero.hidden = next !== 'incognito';
@@ -771,7 +793,7 @@ function bindEvents(container) {
     historyManualSave?.addEventListener('click', async () => {
         const query = historyManualQuery?.value.trim();
         if (!query) return;
-        const summary = historyManualSummary?.value.trim() || `??鈭?{query}???閮;
+        const summary = historyManualSummary?.value.trim() || `搜尋關於 ${query} 的內容`;
         const entry = {
             id: `history_${Date.now()}_${historyEntries.length}`,
             title: `${query} ?臭?暻潘?`,
@@ -863,7 +885,7 @@ async function renderChrome(params) {
                 <div class="view-toggle" id="view-toggle">
                     <button class="active" data-view="home">擐?</button>
                     <button data-view="bookmarks">?貊惜</button>
-                    <button data-view="history">蝝??/button>
+                    <button data-view="history">歷史</button>
                 </div>
             </div>
             <div class="top-actions">
@@ -886,7 +908,7 @@ async function renderChrome(params) {
 
             <div class="search-card">
                 <i class="fas fa-search"></i>
-                <input type="text" placeholder="???撓?亦雯?" id="search-input">
+                <input type="text" placeholder="搜尋網址或關鍵字" id="search-input">
                 <button class="icon-btn"><i class="fas fa-microphone"></i></button>
             </div>
 
@@ -908,7 +930,7 @@ async function renderChrome(params) {
                 `).join('')}
             </div>
 
-            <div class="status" id="status-text">銝?祆芋撘???撌脤??</div>
+            <div class="status" id="status-text">一般模式，已關閉無痕模式</div>
         </div>
 
         <div class="panel bookmarks-panel" data-panel="bookmarks" hidden>
@@ -927,7 +949,7 @@ async function renderChrome(params) {
 
         <div class="panel history-panel" data-panel="history" hidden>
             <div class="panel-header">
-                <h2 class="panel-title">?汗蝝??/h2>
+                <h2 class="panel-title">瀏覽歷史</h2>
             </div>
             <div class="history-controls">
                 <label>閫嚗?/label>

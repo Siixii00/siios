@@ -3,6 +3,7 @@ import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
+import { saveInteractionMemory } from '../../core/memory-saver.js';
 
 const aiPostStarters = ['今天練習結束了', '剛剛彩排回來', '想來打個招呼', '晚安前留個訊息'];
 const aiPostClosers = ['你們今天也辛苦了', '等等見', '記得吃飯', '我會再來'];
