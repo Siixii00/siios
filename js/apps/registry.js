@@ -36,6 +36,7 @@ async function loadApps() {
         import('./settings/github-settings.js'),
         import('./settings/char-settings.js'),
         import('./settings/user-mask-settings.js'),
+        import('./settings/memory-settings.js'),
         import('./memory/index.js'),
         import('./album/index.js'),
         import('./weather/index.js'),
@@ -122,7 +123,7 @@ async function registerRoutes() {
                         appContainer.innerHTML = `
                             <div class="empty-state">
                                 <span class="material-symbols-outlined empty-state-icon">error</span>
-                                <h3 class="empty-state-title">?頛憭望?</h3>
+                                <h3 class="empty-state-title">載入失敗</h3>
                                 <p class="empty-state-text">${error.message}</p>
                             </div>
                         `;

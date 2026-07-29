@@ -1,6 +1,6 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBottomNav, createIOSGroupedList } from '../../components.js';
-import { SettingsDB } from '../../db.js';
+import { SettingsDB, ChatsDB, TheaterSettingsDB } from '../../db.js';
 import { CHATS_TABS } from './chats-nav.js';
 
 const THEMES = [
@@ -130,6 +130,28 @@ async function renderChatSettings() {
     ]);
     otherSection.appendChild(otherList);
     main.appendChild(otherSection);
+
+        // Memory Settings Section
+    const memorySection = createElement('div', 'mt-6 mb-4');
+    memorySection.appendChild(createElement('p', 'ios-section-header', { textContent: '記憶設定' }));
+
+    const memoryList = createIOSGroupedList([
+        {
+            header: '',
+            items: [
+                {
+                    icon: 'psychology',
+                    iconBg: 'bg-purple-500',
+                    label: '記憶設定',
+                    value: '管理劇場、來源與層級',
+                    chevron: true,
+                    onClick: () => Router.navigate('/memory-settings')
+                }
+            ]
+        }
+    ]);
+    memorySection.appendChild(memoryList);
+    main.appendChild(memorySection);
 
     container.appendChild(main);
 

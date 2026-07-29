@@ -1,7 +1,7 @@
 ﻿import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
 
 const DB_NAME = 'sxios';
-const DB_VERSION = 7;
+const DB_VERSION = 8;
 const LEGACY_DB_NAMES = ['ios-classic-ai'];
 
 let db = null;

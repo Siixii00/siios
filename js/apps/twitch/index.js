@@ -3,6 +3,7 @@ import { createElement, createIcon, createIOSNavBar, createToast } from '../../c
 import { CharactersDB, SettingsDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
+import { saveInteractionMemory } from '../../core/memory-saver.js';
 
 const streamThumbnailColors = [
     ['#9146FF', '#772CE8'],

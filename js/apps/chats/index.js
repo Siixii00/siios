@@ -8,19 +8,24 @@ let chats = [];
 async function renderChatsList() {
     const container = createElement('div', 'app-container');
     
-    const header = createElement('header', 'sticky top-0 z-50 bg-white');
-    header.style.paddingTop = 'env(safe-area-inset-top, 0px)';
+    const header = createElement('header', 'ios-header');
     
-    const headerInner = createElement('div', 'flex justify-between items-center h-[86px] px-4');
+    const backBtn = createElement('button', 'ios-back-btn', {
+        onClick: () => Router.navigate('/home')
+    });
+    backBtn.innerHTML = '<i class="fas fa-chevron-left"></i> 返回';
+    header.appendChild(backBtn);
     
-    const title = createElement('h1', 'text-[32px] font-bold text-black leading-[31px]');
+    const title = createElement('h1', 'menu-title');
     title.textContent = 'Chat';
-    headerInner.appendChild(title);
+    header.appendChild(title);
     
-    const actions = createElement('div', 'flex items-center gap-4');
+    const actions = createElement('div', 'header-actions');
     
-    const addBtn = createElement('button', 'p-2 rounded-full active:bg-gray-100 transition-colors');
-    addBtn.appendChild(createIcon('add_circle', 'text-black text-[25px]'));
+    const addBtn = createElement('button', 'header-action', {
+        title: '新增對話'
+    });
+    addBtn.innerHTML = '<i class="fas fa-plus"></i>';
     addBtn.onclick = async () => {
         const newChat = await ChatsDB.create({ character_name: 'AI' });
         createToast('已建立新對話');
@@ -28,8 +33,7 @@ async function renderChatsList() {
     };
     actions.appendChild(addBtn);
     
-    headerInner.appendChild(actions);
-    header.appendChild(headerInner);
+    header.appendChild(actions);
     container.appendChild(header);
     
     const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-[83px]');

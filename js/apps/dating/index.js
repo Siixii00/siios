@@ -1,8 +1,9 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { CharactersDB, SettingsDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
+import { saveInteractionMemory } from '../../core/memory-saver.js';
 
 const DATING_SCENES = [
   { id: 'cafe', name: '咖啡廳', icon: 'fa-coffee', desc: '在溫馨的咖啡廳約會' },

@@ -4,11 +4,32 @@ import { MemoryDB } from '../../db.js';
 
 let memories = [];
 let currentFilter = 0;
+let currentSourceFilter = 'all';
 let searchTerm = '';
 
 const TYPE_TABS = ['全部', '動態', '永久', '情感', '計畫', '書信', '自我', '歸檔'];
 const TYPE_MAP = { 1: 'dynamic', 2: 'permanent', 3: 'feel', 4: 'plan', 5: 'letter', 6: 'i', 7: 'archive' };
 const TYPE_LABELS = { dynamic: '動態', permanent: '永久', feel: '情感', plan: '計畫', letter: '書信', i: '自我', archive: '歸檔' };
+
+const SOURCE_LABELS = {
+    'chat': '對話',
+    'youtube': 'YouTube',
+    'instagram': 'Instagram',
+    'chrome': 'Chrome',
+    'dating': '約會',
+    'bubbles': 'Bubbles',
+    'weverse': 'Weverse',
+    'bilibili': 'Bilibili',
+    'twitch': 'Twitch',
+    'twitter': 'Twitter',
+    'ao3': 'AO3',
+    'lofter': 'Lofter',
+    'theater': '劇場'
+};
+
+function getSourceLabel(sourceApp) {
+    return SOURCE_LABELS[sourceApp] || sourceApp || '未知';
+}
 
 function formatRelativeTime(timestamp) {
     const diff = Date.now() - timestamp;
@@ -167,6 +188,18 @@ async function renderMemoryList() {
             bottomRow.appendChild(createElement('span', `text-xs px-1.5 py-0.5 rounded ${stage.badgeClass}`, { textContent: stage.label }));
             const typeLabel = TYPE_LABELS[memory.memory_type] || memory.memory_type || '動態';
             bottomRow.appendChild(createElement('span', 'text-xs px-1.5 py-0.5 rounded bg-ios-bg2', { textContent: typeLabel }));
+            
+            // Source label
+            if (memory.source_app && memory.source_app !== 'chat') {
+                const sourceLabel = getSourceLabel(memory.source_app);
+                bottomRow.appendChild(createElement('span', 'text-xs px-1.5 py-0.5 rounded bg-blue-100 text-blue-700', { textContent: sourceLabel }));
+            }
+            
+            // Fiction indicator
+            if (memory.is_fiction) {
+                bottomRow.appendChild(createElement('span', 'text-xs px-1.5 py-0.5 rounded bg-orange-100 text-orange-700', { textContent: '虛擬' }));
+            }
+            
             if (memory.domain) {
                 bottomRow.appendChild(createElement('span', 'text-xs text-ios-muted', { textContent: memory.domain }));
             }

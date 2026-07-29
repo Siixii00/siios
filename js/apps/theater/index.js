@@ -1,8 +1,9 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import APIClient from '../../api.js';
 import { CharactersDB, SettingsDB } from '../../db.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
+import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { TheaterSettingsDB } from '../../db.js';
 
 let contentData = [];
