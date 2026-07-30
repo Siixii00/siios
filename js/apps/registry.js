@@ -76,7 +76,8 @@ async function loadApps() {
         import('./gift-shop/index.js'),
         import('./passkey/index.js'),
         import('./touch/index.js'),
-        import('./widget/index.js')
+        import('./widget/index.js'),
+        import('./health/index.js')
     ];
 
     const results = await Promise.all(appModules);

@@ -1,7 +1,7 @@
 ﻿import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
 
 const DB_NAME = 'sxios';
-const DB_VERSION = 8;
+const DB_VERSION = 9;
 const LEGACY_DB_NAMES = ['ios-classic-ai'];
 
 let db = null;
@@ -105,6 +105,13 @@ async function initDB() {
             if (!database.objectStoreNames.contains('users')) {
                 database.createObjectStore('users', { keyPath: 'id' });
             }
+
+            if (!database.objectStoreNames.contains('health')) {
+                const healthStore = database.createObjectStore('health', { keyPath: 'id' });
+                healthStore.createIndex('user_id', 'user_id');
+                healthStore.createIndex('type', 'type');
+                healthStore.createIndex('start_date', 'start_date');
+            }
         },
         blocked() {
             if (db) { db.close(); db = null; }
@@ -199,6 +206,15 @@ const MessagesDB = {
     },
 
     async deleteByChatId(chatId) {
+        const database = await initDB();
+        const messages = await database.getAllFromIndex('messages', 'chat_id', chatId);
+        const tx = database.transaction('messages', 'readwrite');
+        for (const msg of messages) {
+            await tx.store.delete(msg.id);
+        }
+    },
+
+    async clearByChatId(chatId) {
         const database = await initDB();
         const messages = await database.getAllFromIndex('messages', 'chat_id', chatId);
         const tx = database.transaction('messages', 'readwrite');
@@ -880,7 +896,154 @@ const KeywordSettingsDB = {
     }
 };
 
-export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, hashContent, cosineSimilarity };
+const HealthDB = {
+    async getByUserId(userId) {
+        const database = await initDB();
+        return database.getAllFromIndex('health', 'user_id', userId);
+    },
+
+    async getByType(userId, type) {
+        const database = await initDB();
+        const all = await database.getAllFromIndex('health', 'user_id', userId);
+        return all.filter(item => item.type === type);
+    },
+
+    async getById(id) {
+        const database = await initDB();
+        return database.get('health', id);
+    },
+
+    async createMedication(data) {
+        const database = await initDB();
+        const id = generateId();
+        const now = Date.now();
+        const entry = {
+            id,
+            user_id: data.user_id,
+            type: 'medication',
+            medication_name: data.medication_name || '',
+            dosage: data.dosage || '',
+            frequency: data.frequency || 'daily',
+            start_date: data.start_date || now,
+            end_date: data.end_date || null,
+            notes: data.notes || '',
+            reminders_enabled: data.reminders_enabled || false,
+            reminder_times: data.reminder_times || [],
+            created_at: now,
+            updated_at: now
+        };
+        await database.put('health', entry);
+        return entry;
+    },
+
+    async createPeriod(data) {
+        const database = await initDB();
+        const id = generateId();
+        const now = Date.now();
+        const entry = {
+            id,
+            user_id: data.user_id,
+            type: 'period',
+            start_date: data.start_date || now,
+            end_date: data.end_date || null,
+            cycle_length: data.cycle_length || 28,
+            period_length: data.period_length || 5,
+            symptoms: data.symptoms || [],
+            notes: data.notes || '',
+            created_at: now
+        };
+        await database.put('health', entry);
+        return entry;
+    },
+
+    async getPeriodSettings(userId) {
+        const database = await initDB();
+        const id = 'period_settings_' + userId;
+        return database.get('health', id);
+    },
+
+    async savePeriodSettings(data) {
+        const database = await initDB();
+        const id = 'period_settings_' + data.user_id;
+        const now = Date.now();
+        const existing = await database.get('health', id);
+        const entry = {
+            id,
+            user_id: data.user_id,
+            type: 'period_settings',
+            default_cycle_length: data.default_cycle_length || 28,
+            default_period_length: data.default_period_length || 5,
+            reminder_days_before: data.reminder_days_before || 3,
+            reminder_in_chat: data.reminder_in_chat || true,
+            reminder_notification: data.reminder_notification || false,
+            last_period_date: data.last_period_date || existing?.last_period_date || null,
+            predicted_next_date: data.predicted_next_date || null,
+            created_at: existing?.created_at || now,
+            updated_at: now
+        };
+        await database.put('health', entry);
+        return entry;
+    },
+
+    async getMemoryTemplate(userId) {
+        const database = await initDB();
+        const id = 'health_memory_' + userId;
+        return database.get('health', id);
+    },
+
+    async saveMemoryTemplate(data) {
+        const database = await initDB();
+        const id = 'health_memory_' + data.user_id;
+        const now = Date.now();
+        const entry = {
+            id,
+            user_id: data.user_id,
+            type: 'health_memory_template',
+            category: data.category || 'general',
+            period_symptoms: data.period_symptoms || [],
+            period_mood_changes: data.period_mood_changes || [],
+            current_medications: data.current_medications || [],
+            behavior_rules: {
+                no_surveillance: true,
+                no_interference: true,
+                no_nagging: true,
+                no_over_caring: true,
+                must_think_before_respond: true,
+                respect_user_stance: true
+            },
+            created_at: now,
+            updated_at: now
+        };
+        await database.put('health', entry);
+        return entry;
+    },
+
+    async update(id, data) {
+        const database = await initDB();
+        const entry = await database.get('health', id);
+        if (!entry) throw new Error('Health entry not found');
+        const updated = { ...entry, ...data, updated_at: Date.now() };
+        await database.put('health', updated);
+        return updated;
+    },
+
+    async delete(id) {
+        const database = await initDB();
+        await database.delete('health', id);
+    },
+
+    async getRecentPeriods(userId, limit = 12) {
+        const database = await initDB();
+        const all = await database.getAllFromIndex('health', 'user_id', userId);
+        const periods = all
+            .filter(item => item.type === 'period')
+            .sort((a, b) => b.start_date - a.start_date)
+            .slice(0, limit);
+        return periods;
+    }
+};
+
+export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, HealthDB, hashContent, cosineSimilarity };
 
 
 

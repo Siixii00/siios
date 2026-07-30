@@ -436,6 +436,86 @@ function createKakaoBottomSheet(items, options = {}) {
     return { open, close, overlay, sheet };
 }
 
+function createKakaoSideMenu(options) {
+    const { title, sections = [], onClose } = options;
+    const overlay = createElement('div', 'kakao-side-menu-overlay');
+    const menu = createElement('div', 'kakao-side-menu');
+    const header = createElement('div', 'kakao-side-menu-header');
+    const titleEl = createElement('h2', 'kakao-side-menu-title', { textContent: title || 'Menu' });
+    header.appendChild(titleEl);
+    menu.appendChild(header);
+    const content = createElement('div', 'kakao-side-menu-content');
+    sections.forEach((section) => {
+        if (section.title) {
+            const sectionTitle = createElement('div', 'kakao-side-menu-section-title', { textContent: section.title });
+            content.appendChild(sectionTitle);
+        }
+        const group = createElement('div', 'kakao-side-menu-group');
+        section.items.forEach((item) => {
+            if (item.divider) {
+                const divider = createElement('div', 'kakao-side-menu-divider');
+                content.appendChild(divider);
+                return;
+            }
+            const itemClass = 'kakao-side-menu-item' + (item.danger ? ' kakao-side-menu-danger' : '');
+            const menuItem = createElement('div', itemClass);
+            if (item.icon) {
+                const iconWrap = createElement('div', 'kakao-side-menu-item-icon');
+                iconWrap.appendChild(createIcon(item.icon));
+                menuItem.appendChild(iconWrap);
+            }
+            const labelWrap = createElement('div', 'kakao-side-menu-item-label');
+            labelWrap.appendChild(createElement('span', '', { textContent: item.label }));
+            if (item.value) {
+                const valueEl = createElement('span', 'kakao-side-menu-item-value', { textContent: item.value });
+                labelWrap.appendChild(valueEl);
+            }
+            menuItem.appendChild(labelWrap);
+            if (item.toggle !== undefined) {
+                const toggleClass = 'kakao-side-menu-toggle' + (item.toggle ? ' active' : '');
+                const toggle = createElement('div', toggleClass);
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggle.classList.toggle('active');
+                    if (item.onToggle) item.onToggle(toggle.classList.contains('active'));
+                });
+                menuItem.appendChild(toggle);
+            } else {
+                menuItem.appendChild(createIcon('chevron_right', 'kakao-side-menu-chevron'));
+            }
+            if (item.onClick) {
+                menuItem.addEventListener('click', () => {
+                    close();
+                    item.onClick();
+                });
+            }
+            group.appendChild(menuItem);
+        });
+        content.appendChild(group);
+    });
+    menu.appendChild(content);
+    function open() {
+        const container = window.App?.getAppContainer() || document.getElementById('app');
+        container.appendChild(overlay);
+        container.appendChild(menu);
+        requestAnimationFrame(() => {
+            overlay.classList.add('active');
+            menu.classList.add('active');
+        });
+    }
+    function close() {
+        overlay.classList.remove('active');
+        menu.classList.remove('active');
+        setTimeout(() => {
+            overlay.remove();
+            menu.remove();
+            if (onClose) onClose();
+        }, 300);
+    }
+    overlay.addEventListener('click', close);
+    return { open, close, overlay, menu };
+}
+
 export {
     createElement,
     createIcon,
@@ -452,5 +532,6 @@ export {
     createToast,
     createEmptyState,
     formatTime,
-    createKakaoBottomSheet
+    createKakaoBottomSheet,
+    createKakaoSideMenu
 };
