@@ -144,6 +144,52 @@ async function renderChat(params) {
         
         main.scrollTop = main.scrollHeight;
         
+        messages = await MessagesDB.getByChatId(chatId);
+        messageCount = messages.length;
+        isStreaming = false;
+        generateBtn.disabled = textarea.value.trim() === '';
+    };
+    
+    sendBtn.onclick = sendMessage;
+    
+    const generateBtn = createElement('button', 'kakao-generate-btn');
+    generateBtn.style.cssText = 'background:transparent;border:none;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center;width:28px;height:28px;margin-left:4px;';
+    generateBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.85.83 6.72 2.24"></path><path d="M21 3v6h-6"></path></svg>';
+    generateBtn.style.color = '#6B6B6B';
+    generateBtn.title = '生成回應';
+    generateBtn.disabled = true;
+    
+    textarea.addEventListener('input', () => {
+        generateBtn.disabled = textarea.value.trim() === '' || isStreaming;
+    });
+    
+    let styleSheet = null;
+    
+    const generateResponse = async () => {
+        const content = textarea.value.trim();
+        if (!content || isStreaming) return;
+        
+        isStreaming = true;
+        generateBtn.disabled = true;
+        generateBtn.style.color = '#141413';
+        generateBtn.querySelector('svg').style.animation = 'spin 1s linear infinite';
+        
+        if (!styleSheet) {
+            styleSheet = document.createElement('style');
+            styleSheet.textContent = '@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }';
+            document.head.appendChild(styleSheet);
+        }
+        
+        await MessagesDB.create(chatId, 'user', content);
+        
+        const userBubble = createKakaoBubble('user', content);
+        main.appendChild(userBubble);
+        
+        textarea.value = '';
+        textarea.style.height = '';
+        
+        main.scrollTop = main.scrollHeight;
+        
         streamingBubble.classList.remove('hidden');
         const bubbleText = streamingBubble.querySelector('.kakao-bubble-text');
         bubbleText.textContent = '';
@@ -151,8 +197,6 @@ async function renderChat(params) {
         await APIClient.stream(
             chatId,
             content,
-            {},
-            messages,
             (chunk, fullContent) => {
                 bubbleText.textContent = fullContent;
                 main.scrollTop = main.scrollHeight;
@@ -178,23 +222,28 @@ async function renderChat(params) {
                     }
                 }
                 
+                messages = await MessagesDB.getByChatId(chatId);
+                messageCount = messages.length;
+                
                 isStreaming = false;
-                sendBtn.disabled = textarea.value.trim() === '';
+                generateBtn.style.color = '#6B6B6B';
+                generateBtn.querySelector('svg').style.animation = '';
+                generateBtn.disabled = textarea.value.trim() === '';
             },
             (error) => {
                 streamingBubble.classList.add('hidden');
                 createToast(error, 'error');
                 isStreaming = false;
-                sendBtn.disabled = textarea.value.trim() === '';
+                generateBtn.style.color = '#6B6B6B';
+                generateBtn.querySelector('svg').style.animation = '';
+                generateBtn.disabled = textarea.value.trim() === '';
             }
         );
-        
-    messages = await MessagesDB.getByChatId(chatId);
-    messageCount = messages.length;
     };
     
-    sendBtn.onclick = sendMessage;
+    generateBtn.onclick = generateResponse;
     
+    inputWrapper.appendChild(generateBtn);
     inputWrapper.appendChild(sendBtn);
     inputArea.appendChild(inputWrapper);
     container.appendChild(inputArea);

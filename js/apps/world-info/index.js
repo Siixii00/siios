@@ -1,7 +1,6 @@
 ﻿import Router from '../../router.js';
 import { createElement, createIcon } from '../../components.js';
-
-
+import builtinWorldbooks from './builtin-worldbooks.js';
 
 
 async function renderWorldInfo() {
@@ -123,6 +122,11 @@ async function renderWorldInfo() {
     
     const settingsCells = [
         {
+            title: '內建世界書',
+            description: '安裝並管理內建的世界書',
+            onClick: () => Router.navigate('/builtin-worldbooks')
+        },
+        {
             title: '全局設定',
             description: '管理全局設定項目',
             onClick: () => Router.navigate('/global-settings')
@@ -209,7 +213,8 @@ export default {
     name: 'World Info',
     icon: 'menu_book',
     routes: [
-        { path: '/world-info', render: renderWorldInfo }
+        { path: '/world-info', render: renderWorldInfo },
+        ...builtinWorldbooks.routes
     ],
     navItem: {
         label: 'World Info',
