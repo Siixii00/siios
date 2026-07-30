@@ -1,7 +1,9 @@
 ﻿import Router from './router.js';
-import { SettingsDB, ChatsDB, CharactersDB, UsersDB } from './db.js';
+import { SettingsDB, ChatsDB, CharactersDB, UsersDB, HealthDB } from './db.js';
 import { loadWorldInfoContext } from './core/world-info-loader.js';
 import { generateRPPrompt } from './constants/rp-system-prompt.js';
+import { buildRealWorldContext } from './core/real-world-context.js';
+import { PeriodCalculator } from './core/period-calculator.js';
 
 const APIClient = {
     async getSettings() {
@@ -26,6 +28,37 @@ const APIClient = {
     
     async buildMessages(chatId, userMessage, settings, messages, memoryContext = null, characterData = null, userData = null) {
         const systemMessages = [];
+        
+        const chat = await ChatsDB.getById(chatId);
+        
+        if (chat && chat.enable_real_world_info) {
+            const realWorldInfo = await buildRealWorldContext(chat);
+            if (realWorldInfo) {
+                systemMessages.push({
+                    role: 'system',
+                    content: realWorldInfo
+                });
+            }
+        }
+        
+        if (chat && chat.bound_user_id) {
+            try {
+                const memoryTemplate = await HealthDB.getMemoryTemplate(chat.bound_user_id);
+                const prediction = await PeriodCalculator.shouldRemind(chat.bound_user_id);
+                
+                if (memoryTemplate || prediction) {
+                    const healthContext = PeriodCalculator.buildHealthContext(prediction, memoryTemplate);
+                    if (healthContext) {
+                        systemMessages.push({
+                            role: 'system',
+                            content: healthContext
+                        });
+                    }
+                }
+            } catch (e) {
+                // Health info not available, continue
+            }
+        }
         
         const charName = characterData?.name || 'AI';
         const rpPrompt = generateRPPrompt(charName);

@@ -1,6 +1,6 @@
 ﻿import Router from '../../router.js';
-import { createElement, createIcon, createKakaoBubble, createToast, createKakaoBottomSheet } from '../../components.js';
-import { ChatsDB, MessagesDB, SettingsDB } from '../../db.js';
+import { createElement, createIcon, createKakaoBubble, createToast, createKakaoBottomSheet, createKakaoSideMenu } from '../../components.js';
+import { ChatsDB, MessagesDB, SettingsDB, MemoryDB } from '../../db.js';
 import APIClient from '../../api.js';
 
 let currentChat = null;
@@ -39,6 +39,197 @@ async function renderChat(params) {
     const menuBtn = createElement('button', '');
     menuBtn.appendChild(createIcon('menu'));
     menuBtn.style.cssText = 'color:#141413;background:transparent;border:none;cursor:pointer;padding:6px 8px;';
+    
+    async function showWeatherLocationDialog() {
+        const inputSheet = createKakaoBottomSheet([], {
+            title: 'Set Weather Location',
+            customContent: (() => {
+                const wrapper = createElement('div', 'p-4');
+                const input = createElement('input', 'w-full p-3 border rounded-lg text-base');
+                input.type = 'text';
+                input.placeholder = 'Enter city name (e.g., Taipei, Tokyo)';
+                input.value = currentChat.weather_location || '';
+                const hint = createElement('div', 'text-sm text-gray-500 mt-2');
+                hint.textContent = 'Supports Chinese or English city names';
+                const saveBtn = createElement('button', 'w-full mt-4 p-3 bg-kakao-yellow text-kakao-brown font-bold rounded-lg');
+                saveBtn.textContent = 'Save';
+                saveBtn.onclick = async () => {
+                    const value = input.value.trim();
+                    if (value) {
+                        await ChatsDB.update(chatId, { weather_location: value });
+                        currentChat = await ChatsDB.getById(chatId);
+                        createToast('Weather location saved: ' + value);
+                        inputSheet.close();
+                    }
+                };
+                wrapper.appendChild(input);
+                wrapper.appendChild(hint);
+                wrapper.appendChild(saveBtn);
+                return wrapper;
+            })()
+        });
+        inputSheet.open();
+    }
+    
+    async function exportChatToHTML() {
+        const msgs = await MessagesDB.getByChatId(chatId);
+        const char = currentChat;
+        const html = `<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chat with ${char.character_name}</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
+        .msg { padding: 12px; margin: 8px 0; border-radius: 16px; max-width: 80%; }
+        .user { background: #FEE500; margin-left: auto; text-align: right; }
+        .ai { background: white; }
+        .avatar { width: 40px; height: 40px; border-radius: 20px; object-fit: cover; }
+        .header { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+        .time { font-size: 12px; color: #999; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="avatar" src="${char.character_avatar || ''}" alt="${char.character_name}">
+        <h1>${char.character_name}</h1>
+    </div>
+    ${msgs.map(m => `<div class="msg ${m.role}">${m.content}<div class="time">${new Date(m.timestamp).toLocaleString()}</div></div>`).join('')}
+</body>
+</html>`;
+        const blob = new Blob([html], { type: 'text/html' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `chat-${char.character_name}-${Date.now()}.html`;
+        a.click();
+        URL.revokeObjectURL(url);
+        createToast('Chat exported successfully');
+    }
+    
+    async function generateMemorySummary() {
+        if (!window.App?.memorySystem) {
+            createToast('Memory system not available');
+            return;
+        }
+        createToast('Generating memory summary...');
+        try {
+            const msgs = await MessagesDB.getByChatId(chatId);
+            if (msgs.length === 0) {
+                createToast('No messages to summarize');
+                return;
+            }
+            const last10 = msgs.slice(-10);
+            await window.App.memorySystem.processBatch(last10, chatId, currentChat.character_id);
+            createToast('Memory summary generated');
+        } catch (e) {
+            createToast('Failed to generate summary: ' + e.message, 'error');
+        }
+    }
+    
+    async function forceSleepCycle() {
+        if (!window.App?.memorySystem?.runSleepCycle) {
+            createToast('Memory system sleep cycle not available');
+            return;
+        }
+        createToast('Running memory sleep cycle...');
+        try {
+            await window.App.memorySystem.runSleepCycle();
+            createToast('Sleep cycle completed');
+        } catch (e) {
+            createToast('Failed: ' + e.message, 'error');
+        }
+    }
+    
+    async function createDailyBackup() {
+        const msgs = await MessagesDB.getByChatId(chatId);
+        const backup = {
+            chat_id: chatId,
+            character_id: currentChat.character_id,
+            character_name: currentChat.character_name,
+            messages: msgs,
+            timestamp: Date.now(),
+            type: 'daily_backup'
+        };
+        const backupKey = `backup_${chatId}_${Date.now()}`;
+        await SettingsDB.set(backupKey, backup);
+        createToast('Daily backup created');
+    }
+    
+    async function blockCharacter() {
+        const hours = 1;
+        const blockedUntil = Date.now() + hours * 60 * 60 * 1000;
+        await ChatsDB.update(chatId, { blocked_until: blockedUntil });
+        createToast(`Character blocked for ${hours} hour(s)`);
+    }
+    
+    async function clearMemory() {
+        const memories = await MemoryDB.getByChatId(chatId);
+        if (memories.length === 0) {
+            createToast('No memories to clear');
+            return;
+        }
+        for (const m of memories) {
+            await MemoryDB.delete(m.id);
+        }
+        createToast('Memory cleared');
+    }
+    
+    const sideMenu = createKakaoSideMenu({
+        title: currentChat.character_name,
+        sections: [
+            {
+                title: 'Info',
+                items: [
+                    { icon: 'person', label: 'Character Info', onClick: () => Router.navigate('/characters/' + currentChat.character_id) },
+                    { icon: 'account_circle', label: 'User Mask', onClick: () => createToast('User mask feature in development') },
+                    { icon: 'public', label: 'World Setting', onClick: () => createToast('World setting feature in development') }
+                ]
+            },
+            {
+                title: 'Settings',
+                items: [
+                    { icon: 'settings', label: 'Chat Settings', onClick: () => Router.navigate('/chats/settings/' + chatId) },
+                    { icon: 'location_on', label: 'Weather Location', value: currentChat.weather_location || 'Not set', onClick: showWeatherLocationDialog },
+                    { icon: 'wb_sunny', label: 'Real World Info', toggle: currentChat.enable_real_world_info || false, onToggle: async (val) => {
+                        await ChatsDB.update(chatId, { enable_real_world_info: val });
+                        currentChat = await ChatsDB.getById(chatId);
+                        createToast(val ? 'Real world info enabled' : 'Real world info disabled');
+                    }}
+                ]
+            },
+            {
+                title: 'Export & Memory',
+                items: [
+                    { icon: 'download', label: 'Export Chat', onClick: exportChatToHTML },
+                    { icon: 'psychology', label: 'Generate Memory Summary', onClick: generateMemorySummary },
+                    { icon: 'bedtime', label: 'Force Sleep', onClick: forceSleepCycle }
+                ]
+            },
+            {
+                title: 'Daily',
+                items: [
+                    { icon: 'backup', label: 'Daily Backup', onClick: createDailyBackup },
+                    { icon: 'history_edu', label: 'Daily Record', onClick: () => createToast('Daily record feature in development') }
+                ]
+            },
+            {
+                title: 'Danger Zone',
+                items: [
+                    { divider: true },
+                    { icon: 'block', label: 'Block Character', danger: true, onClick: blockCharacter },
+                    { icon: 'delete', label: 'Clear Chat', danger: true, onClick: async () => {
+                        await MessagesDB.clearByChatId(chatId);
+                        createToast('Chat cleared');
+                        Router.navigate('/chats');
+                    }},
+                    { icon: 'delete_forever', label: 'Clear Memory', danger: true, onClick: clearMemory }
+                ]
+            }
+        ]
+    });
+    
+    menuBtn.onclick = () => sideMenu.open();
     header.appendChild(menuBtn);
     
     container.appendChild(header);

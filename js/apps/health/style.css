@@ -1,0 +1,288 @@
+.health-content {
+    padding: 80px 16px 24px;
+}
+
+.health-section {
+    margin-bottom: 24px;
+}
+
+.health-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1D1B20;
+    margin-bottom: 8px;
+}
+
+.section-desc {
+    font-size: 14px;
+    color: #8E8E93;
+    margin-bottom: 16px;
+}
+
+.memory-card {
+    background: #FFF;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.memory-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1D1B20;
+    margin-bottom: 12px;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #F5F5F5;
+    border-radius: 16px;
+    font-size: 14px;
+    color: #1D1B20;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.tag.active {
+    background: #FFD700;
+    color: #1D1B20;
+}
+
+.save-btn, .add-btn {
+    width: 100%;
+    padding: 14px;
+    background: #FEE500;
+    color: #1D1B20;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+.add-btn {
+    background: #F5F5F5;
+    color: #1D1B20;
+}
+
+.period-calendar {
+    background: #FFF;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.calendar-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.calendar-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    text-align: center;
+}
+
+.calendar-row.header span {
+    font-size: 12px;
+    color: #8E8E93;
+    font-weight: 600;
+}
+
+.calendar-row span {
+    padding: 8px 4px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.calendar-row span.period {
+    background: #FF6B6B;
+    color: #FFF;
+}
+
+.calendar-row span.predicted {
+    background: #FFD700;
+    color: #1D1B20;
+    border: 2px dashed #FFA500;
+}
+
+.calendar-legend {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 12px;
+    font-size: 12px;
+    color: #8E8E93;
+}
+
+.legend-dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.legend-dot.period {
+    background: #FF6B6B;
+}
+
+.legend-dot.predicted {
+    background: #FFD700;
+}
+
+.prediction-info {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 14px;
+    color: #1D1B20;
+}
+
+.medication-list {
+    background: #FFF;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.medication-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #F5F5F5;
+}
+
+.medication-item:last-child {
+    border-bottom: none;
+}
+
+.med-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.med-name {
+    font-size: 16px;
+    color: #1D1B20;
+}
+
+.med-dosage {
+    font-size: 12px;
+    color: #8E8E93;
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: #FF3B30;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.empty-msg {
+    text-align: center;
+    color: #8E8E93;
+    padding: 24px;
+}
+
+.dialog-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.dialog {
+    background: #FFF;
+    border-radius: 16px;
+    padding: 24px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.dialog h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #8E8E93;
+    margin-bottom: 4px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #E5E5E5;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.form-group textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+
+.dialog-btns {
+    display: flex;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.cancel-btn,
+.confirm-btn {
+    flex: 1;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+}
+
+.cancel-btn {
+    background: #F5F5F5;
+    color: #1D1B20;
+}
+
+.confirm-btn {
+    background: #FEE500;
+    color: #1D1B20;
+}
