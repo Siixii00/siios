@@ -79,7 +79,8 @@ async function loadApps() {
         import('./widget/index.js'),
         import('./health/index.js'),
         import('./mcp-market/index.js'),
-        import('./settings/mcp-settings.js')
+        import('./settings/mcp-settings.js'),
+        import('./activity/index.js')
     ];
 
     const results = await Promise.all(appModules);

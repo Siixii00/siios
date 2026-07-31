@@ -1,7 +1,7 @@
 ﻿import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
 
 const DB_NAME = 'sxios';
-const DB_VERSION = 10;
+const DB_VERSION = 11;
 const LEGACY_DB_NAMES = ['ios-classic-ai'];
 
 let db = null;
@@ -116,6 +116,14 @@ async function initDB() {
             if (!database.objectStoreNames.contains('mcpConfigs')) {
                 const mcpStore = database.createObjectStore('mcpConfigs', { keyPath: 'id' });
                 mcpStore.createIndex('enabled', 'enabled');
+            }
+
+            if (!database.objectStoreNames.contains('activities')) {
+                const activitiesStore = database.createObjectStore('activities', { keyPath: 'id' });
+                activitiesStore.createIndex('user_id', 'user_id');
+                activitiesStore.createIndex('timestamp', 'timestamp');
+                activitiesStore.createIndex('platform', 'platform');
+                activitiesStore.createIndex('activity_type', 'activity_type');
             }
         },
         blocked() {
@@ -1077,6 +1085,7 @@ const MCPConfigDB = {
             endpoint: data.endpoint || '',
             apiKey: data.apiKey || '',
             enabled: false,
+            bound_character_id: data.bound_character_id || null,
             tools: [],
             lastChecked: null,
             status: 'unchecked',
@@ -1111,7 +1120,105 @@ const MCPConfigDB = {
     }
 };
 
-export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, HealthDB, MCPConfigDB, hashContent, cosineSimilarity };
+const ActivityDB = {
+    async getAll(limit = 100) {
+        const database = await initDB();
+        const all = await database.getAll('activities');
+        return all.sort((a, b) => b.timestamp - a.timestamp).slice(0, limit);
+    },
+
+    async getById(id) {
+        const database = await initDB();
+        return database.get('activities', id);
+    },
+
+    async getByUserId(userId, limit = 50) {
+        const database = await initDB();
+        const all = await database.getAllFromIndex('activities', 'user_id', userId);
+        return all.sort((a, b) => b.timestamp - a.timestamp).slice(0, limit);
+    },
+
+    async getByPlatform(platform, limit = 50) {
+        const database = await initDB();
+        const all = await database.getAllFromIndex('activities', 'platform', platform);
+        return all.sort((a, b) => b.timestamp - a.timestamp).slice(0, limit);
+    },
+
+    async getByDateRange(startDate, endDate) {
+        const database = await initDB();
+        const all = await database.getAll('activities');
+        return all.filter(a => a.timestamp >= startDate && a.timestamp <= endDate)
+                  .sort((a, b) => b.timestamp - a.timestamp);
+    },
+
+    async create(data = {}) {
+        const database = await initDB();
+        const id = 'act_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        const activity = {
+            id,
+            user_id: data.user_id || null,
+            platform: data.platform || 'unknown',
+            activity_type: data.activity_type || 'general',
+            title: data.title || '',
+            content: data.content || '',
+            metadata: data.metadata || {},
+            timestamp: data.timestamp || Date.now(),
+            synced_at: Date.now(),
+            source: data.source || 'manual'
+        };
+        await database.put('activities', activity);
+        return activity;
+    },
+
+    async update(id, data) {
+        const database = await initDB();
+        const activity = await database.get('activities', id);
+        if (!activity) throw new Error('Activity not found');
+        const updated = { ...activity, ...data, synced_at: Date.now() };
+        await database.put('activities', updated);
+        return updated;
+    },
+
+    async delete(id) {
+        const database = await initDB();
+        await database.delete('activities', id);
+    },
+
+    async clear() {
+        const database = await initDB();
+        const all = await database.getAll('activities');
+        const tx = database.transaction('activities', 'readwrite');
+        for (const activity of all) {
+            await tx.store.delete(activity.id);
+        }
+    },
+
+    async getSummary(hours = 24) {
+        const database = await initDB();
+        const all = await database.getAll('activities');
+        const cutoff = Date.now() - (hours * 60 * 60 * 1000);
+        const recent = all.filter(a => a.timestamp >= cutoff);
+        
+        const summary = {
+            total: recent.length,
+            platforms: {},
+            types: {},
+            timeRange: {
+                start: recent.length > 0 ? Math.min(...recent.map(a => a.timestamp)) : null,
+                end: recent.length > 0 ? Math.max(...recent.map(a => a.timestamp)) : null
+            }
+        };
+        
+        for (const activity of recent) {
+            summary.platforms[activity.platform] = (summary.platforms[activity.platform] || 0) + 1;
+            summary.types[activity.activity_type] = (summary.types[activity.activity_type] || 0) + 1;
+        }
+        
+        return summary;
+    }
+};
+
+export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, HealthDB, MCPConfigDB, ActivityDB, hashContent, cosineSimilarity };
 
 
 
