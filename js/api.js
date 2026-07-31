@@ -145,7 +145,7 @@ const APIClient = {
         ];
     },
     
-    async stream(chatId, userMessage, onChunk, onComplete, onError) {
+    async stream(chatId, userMessage, onChunk, onComplete, onError, options = {}) {
         const settings = await this.getSettings();
         
         if (!settings.api_url || !settings.api_key) {
@@ -153,11 +153,22 @@ const APIClient = {
             return;
         }
         
-        const { MessagesDB } = await import('./db.js');
+        const { MessagesDB, CharactersDB, UsersDB } = await import('./db.js');
         const messages = await MessagesDB.getByChatId(chatId);
         
-        const characterData = await this.getCharacterData(chatId);
-        const userData = await this.getUserData(chatId);
+        let characterData = null;
+        if (options.characterId) {
+            characterData = await CharactersDB.getById(options.characterId);
+        } else {
+            characterData = await this.getCharacterData(chatId);
+        }
+        
+        let userData = null;
+        if (characterData?.bound_user_id) {
+            userData = await UsersDB.getById(characterData.bound_user_id);
+        } else {
+            userData = await this.getUserData(chatId);
+        }
         
         let memoryContext = null;
         if (settings.memory_enabled && window.App?.memorySystem) {
@@ -229,6 +240,28 @@ const APIClient = {
         } catch (error) {
             onError(error.message || '連線失敗，請檢查網路設定。');
         }
+    },
+    
+    async groupStream(chatId, userMessage, memberCharacterIds, callbacks) {
+        const promises = memberCharacterIds.map((memberId, index) => {
+            return this.stream(chatId, userMessage,
+                callbacks[index].onChunk,
+                callbacks[index].onComplete,
+                callbacks[index].onError,
+                { characterId: memberId }
+            );
+        });
+        return Promise.allSettled(promises);
+    },
+    
+    async groupBuildMessages(chatId, userMessage, characterId, settings, messages, memoryContext = null) {
+        const { CharactersDB, UsersDB } = await import('./db.js');
+        const characterData = characterId ? await CharactersDB.getById(characterId) : null;
+        let userData = null;
+        if (characterData?.bound_user_id) {
+            userData = await UsersDB.getById(characterData.bound_user_id);
+        }
+        return this.buildMessages(chatId, userMessage, settings, messages, memoryContext, characterData, userData);
     },
     
     async testConnection() {
