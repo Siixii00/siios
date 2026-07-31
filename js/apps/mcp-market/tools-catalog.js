@@ -455,42 +455,363 @@ export const TOOLS_CATALOG = [
         }
     },
     {
-        id: 'memory_save',
-        category: '角色專用',
-        categoryIcon: 'psychology',
-        name: 'save_important_memory',
-        displayName: '儲存重要記憶',
-        description: '讓角色主動儲存重要對話內容到記憶系統',
-        useCase: '「你的生日是 5/20 對吧？我記下來了」',
-        difficulty: 'easy',
-        requires: ['無（使用專案內建 MemoryDB）'],
+        id: 'delivery_order',
+        category: '購物消費',
+        categoryIcon: 'shopping_cart',
+        name: 'order_food_delivery',
+        displayName: '叫外送',
+        description: '從附近餐廳叫外送，可指定餐點、地址與備註',
+        useCase: '「幫你叫了炸雞，預計 30 分鐘到」',
+        difficulty: 'medium',
+        requires: ['外送平台 API 或第三方訂餐服務'],
         parameters: {
             type: 'object',
             properties: {
-                content: { type: 'string', description: '記憶內容' },
-                category: { type: 'string', enum: ['約會', '喜好', '重要事件', '健康', '祕密', '一般'] },
-                importance: { type: 'number', minimum: 0, maximum: 1, default: 0.8 }
+                restaurant: { type: 'string', description: '餐廳名稱' },
+                items: { type: 'array', items: { type: 'string' }, description: '餐點清單' },
+                address: { type: 'string', description: '送達地址' },
+                note: { type: 'string', description: '備註（如：少辣、不要蔥）' },
+                tip: { type: 'number', description: '小費金額' }
             },
-            required: ['content']
+            required: ['restaurant', 'items', 'address']
         }
     },
     {
-        id: 'memory_retrieve',
-        category: '角色專用',
-        categoryIcon: 'psychology',
-        name: 'retrieve_memory',
-        displayName: '檢索記憶',
-        description: '根據關鍵字搜尋相關記憶',
-        useCase: '「你之前說過喜歡吃咖哩對吧？」',
+        id: 'delivery_track',
+        category: '購物消費',
+        categoryIcon: 'shopping_cart',
+        name: 'track_delivery',
+        displayName: '追蹤外送',
+        description: '查詢外送訂單的配送狀態與剩餘時間',
+        useCase: '「外送員還有 8 分鐘到喔」',
         difficulty: 'easy',
-        requires: ['無（使用專案內建 MemoryDB）'],
+        requires: ['外送平台訂單查詢 API'],
         parameters: {
             type: 'object',
             properties: {
-                query: { type: 'string', description: '搜尋關鍵字' },
-                limit: { type: 'number', default: 5 }
+                orderId: { type: 'string', description: '訂單編號' }
             },
-            required: ['query']
+            required: ['orderId']
+        }
+    },
+    {
+        id: 'delivery_search',
+        category: '購物消費',
+        categoryIcon: 'shopping_cart',
+        name: 'search_nearby_restaurants',
+        displayName: '找附近餐廳',
+        description: '根據位置或口味推薦附近可外送的餐廳',
+        useCase: '「這附近有三家評分不錯的拉麵」',
+        difficulty: 'easy',
+        requires: ['地圖/餐廳搜尋 API（如 Google Maps、Foodpanda）'],
+        parameters: {
+            type: 'object',
+            properties: {
+                location: { type: 'string', description: '地點或地址' },
+                cuisine: { type: 'string', description: '料理類型（如：拉麵、壽司）' },
+                radius: { type: 'number', description: '搜尋半徑（公尺）' }
+            },
+            required: ['location']
+        }
+    },
+    {
+        id: 'vrm_expression',
+        category: '虛擬形象',
+        categoryIcon: 'android',
+        name: 'set_vrm_expression',
+        displayName: '切換表情',
+        description: '切換 VRM 模型表情（開心、生氣、驚訝、害羞、眨眼等）',
+        useCase: '「你聽到了嗎？我很驚訝！」',
+        difficulty: 'easy',
+        requires: ['VRM 模型載入器（如 @pixiv/three-vrm）'],
+        parameters: {
+            type: 'object',
+            properties: {
+                expression: {
+                    type: 'string',
+                    enum: ['happy', 'angry', 'surprised', 'shy', 'blink', 'neutral', 'sad'],
+                    description: '表情名稱'
+                },
+                intensity: {
+                    type: 'number',
+                    minimum: 0,
+                    maximum: 1,
+                    default: 1,
+                    description: '表情強度 0-1'
+                }
+            },
+            required: ['expression']
+        }
+    },
+    {
+        id: 'vrm_animation',
+        category: '虛擬形象',
+        categoryIcon: 'android',
+        name: 'set_vrm_animation',
+        displayName: '播放動畫',
+        description: '播放 VRM 模型動畫（待機、揮手、跳舞、坐下）',
+        useCase: '「我揮手跟你打招呼～」',
+        difficulty: 'medium',
+        requires: ['VRM 動畫混合器（AnimationMixer）'],
+        parameters: {
+            type: 'object',
+            properties: {
+                animation: {
+                    type: 'string',
+                    enum: ['idle', 'wave', 'dance', 'sit', 'walk', 'jump'],
+                    description: '動畫名稱'
+                },
+                loop: { type: 'boolean', default: true },
+                speed: { type: 'number', minimum: 0.1, maximum: 3, default: 1 }
+            },
+            required: ['animation']
+        }
+    },
+    {
+        id: 'vrm_pose',
+        category: '虛擬形象',
+        categoryIcon: 'android',
+        name: 'set_vrm_pose',
+        displayName: '控制姿勢',
+        description: '控制 VRM 模型姿勢（頭部轉向、手勢、整體姿勢）',
+        useCase: '「我歪頭看著你」',
+        difficulty: 'medium',
+        requires: ['VRM Humanoid Bone 控制'],
+        parameters: {
+            type: 'object',
+            properties: {
+                head: { type: 'string', enum: ['front', 'left', 'right', 'up', 'down', 'tilt'] },
+                hand: { type: 'string', enum: ['none', 'wave', 'point', 'peace', 'thumbsup'] },
+                body: { type: 'string', enum: ['stand', 'sit', 'lean'] }
+            },
+            required: []
+        }
+    },
+    {
+        id: 'vrm_blendshape',
+        category: '虛擬形象',
+        categoryIcon: 'android',
+        name: 'set_vrm_blend_shape',
+        displayName: '精調臉部',
+        description: '精調 VRM 臉部參數（眨眼、嘴型、眉毛）',
+        useCase: '「我瞇起眼睛微笑」',
+        difficulty: 'easy',
+        requires: ['VRM BlendShapeProxy 或 Expression API'],
+        parameters: {
+            type: 'object',
+            properties: {
+                eyeLeft: { type: 'number', minimum: 0, maximum: 1, description: '左眼閉合度' },
+                eyeRight: { type: 'number', minimum: 0, maximum: 1, description: '右眼閉合度' },
+                mouth: { type: 'number', minimum: 0, maximum: 1, description: '嘴巴張開度' },
+                brow: { type: 'number', minimum: 0, maximum: 1, description: '眉毛高度' }
+            },
+            required: []
+        }
+    },
+    {
+        id: 'pet_spawn',
+        category: '桌寵',
+        categoryIcon: 'pets',
+        name: 'spawn_desktop_pet',
+        displayName: '喚出桌寵',
+        description: '在畫面角落喚出一個桌寵角色，可選擇造型與大小',
+        useCase: '「桌寵出現啦，陪著你工作～」',
+        difficulty: 'easy',
+        requires: ['WebGL / Canvas 渲染支援'],
+        parameters: {
+            type: 'object',
+            properties: {
+                character: {
+                    type: 'string',
+                    enum: ['cat', 'dog', 'fox', 'slime', 'custom'],
+                    description: '桌寵造型'
+                },
+                size: {
+                    type: 'string',
+                    enum: ['small', 'medium', 'large'],
+                    description: '桌寵大小'
+                },
+                position: {
+                    type: 'string',
+                    enum: ['top-left', 'top-right', 'bottom-left', 'bottom-right'],
+                    description: '桌寵位置'
+                }
+            },
+            required: ['character']
+        }
+    },
+    {
+        id: 'pet_interact',
+        category: '桌寵',
+        categoryIcon: 'pets',
+        name: 'pet_interact',
+        displayName: '互動桌寵',
+        description: '與桌寵互動（摸摸、餵食、玩耍）',
+        useCase: '「我摸了摸牠的頭，牠開心得搖尾巴」',
+        difficulty: 'easy',
+        requires: ['桌寵實例'],
+        parameters: {
+            type: 'object',
+            properties: {
+                action: {
+                    type: 'string',
+                    enum: ['pet', 'feed', 'play', 'scold', 'call'],
+                    description: '互動動作'
+                },
+                item: {
+                    type: 'string',
+                    description: '使用的物品（如：零食、玩具）'
+                }
+            },
+            required: ['action']
+        }
+    },
+    {
+        id: 'pet_status',
+        category: '桌寵',
+        categoryIcon: 'pets',
+        name: 'pet_status',
+        displayName: '查看桌寵狀態',
+        description: '查看桌寵目前的心情、飢餓度、體力等狀態',
+        useCase: '「牠看起來好像餓了...」',
+        difficulty: 'easy',
+        requires: ['桌寵實例'],
+        parameters: {
+            type: 'object',
+            properties: {
+                detail: { type: 'boolean', default: false }
+            },
+            required: []
+        }
+    },
+    {
+        id: 'pet_customize',
+        category: '桌寵',
+        categoryIcon: 'pets',
+        name: 'pet_customize',
+        displayName: '客製化桌寵',
+        description: '修改桌寵的外觀、顏色、配件',
+        useCase: '「幫牠換上新的蝴蝶結」',
+        difficulty: 'medium',
+        requires: ['桌寵實例'],
+        parameters: {
+            type: 'object',
+            properties: {
+                color: { type: 'string', description: '主要顏色（HEX）' },
+                accessory: {
+                    type: 'string',
+                    enum: ['none', 'bow', 'hat', 'glasses', 'collar'],
+                    description: '配件'
+                },
+                expression: {
+                    type: 'string',
+                    enum: ['normal', 'happy', 'sleepy', 'excited'],
+                    description: '表情'
+                }
+            },
+            required: []
+        }
+    },
+    {
+        id: 'pet_dismiss',
+        category: '桌寵',
+        categoryIcon: 'pets',
+        name: 'pet_dismiss',
+        displayName: '送走桌寵',
+        description: '將桌寵從畫面中移除',
+        useCase: '「好了，你先去休息吧」',
+        difficulty: 'easy',
+        requires: ['桌寵實例'],
+        parameters: {
+            type: 'object',
+            properties: {
+                farewell: { type: 'boolean', default: true }
+            },
+            required: []
+        }
+    },
+    {
+        id: 'activity_log',
+        category: '活動同步',
+        categoryIcon: 'sync',
+        name: 'log_user_activity',
+        displayName: '記錄活動',
+        description: '將用戶的手機活動記錄到系統中，讓 AI 可以查詢',
+        useCase: '「你剛剛在 Instagram 按了這則貼文對吧？我記下來了」',
+        difficulty: 'easy',
+        requires: ['無（使用專案內建 ActivityDB）'],
+        parameters: {
+            type: 'object',
+            properties: {
+                platform: {
+                    type: 'string',
+                    enum: ['line', 'instagram', 'twitter', 'facebook', 'youtube', 'tiktok', 'message', 'call', 'email', 'other'],
+                    description: '活動平台'
+                },
+                activity_type: {
+                    type: 'string',
+                    enum: ['message', 'post', 'like', 'comment', 'share', 'view', 'call', 'email', 'notification', 'other'],
+                    description: '活動類型'
+                },
+                title: { type: 'string', description: '活動標題' },
+                content: { type: 'string', description: '活動內容描述' },
+                metadata: { type: 'object', description: '額外資訊（如連結、圖片等）' }
+            },
+            required: ['platform', 'activity_type']
+        }
+    },
+    {
+        id: 'activity_get',
+        category: '活動同步',
+        categoryIcon: 'sync',
+        name: 'get_user_activities',
+        displayName: '查詢活動',
+        description: '查詢用戶最近的活動記錄',
+        useCase: '「你今天做了什麼？我看看活動記錄」',
+        difficulty: 'easy',
+        requires: ['無（使用專案內建 ActivityDB）'],
+        parameters: {
+            type: 'object',
+            properties: {
+                platform: { type: 'string', description: '篩選平台（選填）' },
+                limit: { type: 'number', default: 10, description: '返回數量限制' },
+                hours: { type: 'number', default: 24, description: '查詢時間範圍（小時）' }
+            },
+            required: []
+        }
+    },
+    {
+        id: 'activity_summary',
+        category: '活動同步',
+        categoryIcon: 'sync',
+        name: 'get_activity_summary',
+        displayName: '活動摘要',
+        description: '獲取用戶活動統計摘要',
+        useCase: '「今天你在 Instagram 上花了比較多時間呢」',
+        difficulty: 'easy',
+        requires: ['無（使用專案內建 ActivityDB）'],
+        parameters: {
+            type: 'object',
+            properties: {
+                hours: { type: 'number', default: 24, description: '統計時間範圍（小時）' }
+            },
+            required: []
+        }
+    },
+    {
+        id: 'activity_clear',
+        category: '活動同步',
+        categoryIcon: 'sync',
+        name: 'clear_activities',
+        displayName: '清除活動',
+        description: '清除用戶的活動記錄',
+        useCase: '「我把你的活動記錄清掉了，放心」',
+        difficulty: 'easy',
+        requires: ['無（使用專案內建 ActivityDB）'],
+        parameters: {
+            type: 'object',
+            properties: {},
+            required: []
         }
     }
 ];
@@ -504,5 +825,7 @@ export const CATEGORIES = [
     { id: '娛樂興趣', icon: 'music_note', color: '#AF52DE' },
     { id: '學習工作', icon: 'school', color: '#34C759' },
     { id: '金融理財', icon: 'trending_up', color: '#00C7BE' },
-    { id: '角色專用', icon: 'psychology', color: '#FF9500' }
+    { id: '虛擬形象', icon: 'android', color: '#AF52DE' },
+    { id: '桌寵', icon: 'pets', color: '#FF9500' },
+    { id: '活動同步', icon: 'sync', color: '#5856D6' }
 ];

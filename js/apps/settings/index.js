@@ -74,11 +74,11 @@ async function renderSettings() {
             path: '/settings/mcp'
         },
         {
-            icon: 'door_front',
-            iconBg: 'bg-purple-500',
-            title: '神秘門',
-            desc: 'MCP 工具市集：選擇工具，生成程式碼',
-            path: '/mcp-market'
+            icon: 'sync',
+            iconBg: 'bg-indigo-500',
+            title: '活動同步',
+            desc: '記錄手機活動，讓 AI 了解你的日常',
+            path: '/activity'
         }
     ];
 

@@ -1,6 +1,6 @@
 ﻿import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBottomNav, createIOSGroupedList, createToast, createKakaoBottomSheet } from '../../components.js';
-import { SettingsDB, ChatsDB, TheaterSettingsDB, CharactersDB } from '../../db.js';
+import { SettingsDB, ChatsDB, TheaterSettingsDB, CharactersDB, MCPConfigDB } from '../../db.js';
 import { CHATS_TABS } from './chats-nav.js';
 
 const THEMES = [
@@ -421,6 +421,76 @@ async function renderPerChatSettings(params) {
         ]);
         chatSection.appendChild(infoList);
         main.appendChild(chatSection);
+        
+        const mcpSection = createElement('div', 'mt-6');
+        mcpSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'MCP 工具' }));
+        
+        const mcpEnabled = chat.enabled_mcp_ids && chat.enabled_mcp_ids.length > 0;
+        
+        const mcpToggleBox = createElement('div', 'bg-white rounded-xl shadow-sm mt-2');
+        const mcpToggleRow = createElement('div', 'flex items-center justify-between p-4');
+        mcpToggleRow.appendChild(createElement('span', 'text-base', { textContent: '啟用 MCP 工具' }));
+        
+        const toggle = createElement('button', 'relative w-12 h-7 rounded-full transition-colors');
+        toggle.className = mcpEnabled ? 'bg-green-500' : 'bg-gray-300';
+        const toggleKnob = createElement('div', 'absolute top-1 w-5 h-5 bg-white rounded-full shadow transition-transform');
+        toggleKnob.style.transform = mcpEnabled ? 'translateX(24px)' : 'translateX(4px)';
+        toggle.appendChild(toggleKnob);
+        mcpToggleRow.appendChild(toggle);
+        mcpToggleBox.appendChild(mcpToggleRow);
+        
+        const mcpConfigs = await MCPConfigDB.getAll();
+        
+        if (mcpEnabled) {
+            const divider = createElement('div', 'h-px bg-gray-200 mx-4');
+            mcpToggleBox.appendChild(divider);
+            
+            const mcpListTitle = createElement('div', 'px-4 pt-3 pb-1');
+            mcpListTitle.appendChild(createElement('span', 'text-sm text-gray-500', { textContent: '選擇要啟用的 MCP 伺服器' }));
+            mcpToggleBox.appendChild(mcpListTitle);
+            
+            const enabledIds = chat.enabled_mcp_ids || [];
+            
+            for (const config of mcpConfigs) {
+                const mcpRow = createElement('div', 'flex items-center justify-between px-4 py-3');
+                mcpRow.appendChild(createElement('span', 'text-base', { textContent: config.name || '未命名' }));
+                
+                const checkbox = createElement('div', `w-6 h-6 rounded-md border-2 flex items-center justify-center transition-colors ${enabledIds.includes(config.id) ? 'bg-green-500 border-green-500' : 'border-gray-300 bg-white'}`);
+                if (enabledIds.includes(config.id)) {
+                    checkbox.innerHTML = '<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+                }
+                
+                checkbox.onclick = async () => {
+                    let newEnabledIds;
+                    if (enabledIds.includes(config.id)) {
+                        newEnabledIds = enabledIds.filter(id => id !== config.id);
+                    } else {
+                        newEnabledIds = [...enabledIds, config.id];
+                    }
+                    
+                    await ChatsDB.update(chatId, { enabled_mcp_ids: newEnabledIds });
+                    createToast('已更新', 'success');
+                    Router.navigate('/chats/settings/' + chatId);
+                };
+                
+                mcpRow.appendChild(checkbox);
+                mcpToggleBox.appendChild(mcpRow);
+            }
+        }
+        
+        toggle.onclick = async () => {
+            if (mcpEnabled) {
+                await ChatsDB.update(chatId, { enabled_mcp_ids: [] });
+                createToast('已停用 MCP 工具', 'success');
+            } else {
+                await ChatsDB.update(chatId, { enabled_mcp_ids: mcpConfigs.map(c => c.id) });
+                createToast('已啟用 MCP 工具', 'success');
+            }
+            Router.navigate('/chats/settings/' + chatId);
+        };
+        
+        mcpSection.appendChild(mcpToggleBox);
+        main.appendChild(mcpSection);
     }
 
     container.appendChild(main);

@@ -5,6 +5,7 @@ import { generateRPPrompt } from './constants/rp-system-prompt.js';
 import { buildRealWorldContext } from './core/real-world-context.js';
 import { PeriodCalculator } from './core/period-calculator.js';
 import { createErrorModal } from './components.js';
+import { mcpManager } from './core/mcp-client.js';
 
 const APIClient = {
     showError(errorInfo) {
@@ -174,8 +175,11 @@ const APIClient = {
             return;
         }
         
-        const { MessagesDB, CharactersDB, UsersDB } = await import('./db.js');
+        const { MessagesDB, CharactersDB, UsersDB, ChatsDB } = await import('./db.js');
         const messages = await MessagesDB.getByChatId(chatId);
+        
+        const chat = await ChatsDB.getById(chatId);
+        const enabledMcpIds = chat?.enabled_mcp_ids || null;
         
         let characterData = null;
         if (options.characterId) {
@@ -201,11 +205,185 @@ const APIClient = {
                 memoryContext = null;
             }
         }
+
+        await mcpManager.loadConfigs();
+        const characterId = characterData?.id || null;
+        const mcpTools = mcpManager.getToolsForLLM(characterId, enabledMcpIds);
         
         const apiMessages = await this.buildMessages(chatId, userMessage, settings, messages, memoryContext, characterData, userData);
         
         try {
+            const requestBody = {
+                model: settings.model || 'gpt-3.5-turbo',
+                messages: apiMessages,
+                temperature: settings.temperature || 0.7,
+                top_p: settings.top_p || 1.0,
+                frequency_penalty: settings.frequency_penalty || 0,
+                presence_penalty: settings.presence_penalty || 0,
+                stream: true
+            };
+            
+            if (mcpTools.length > 0) {
+                requestBody.tools = mcpTools;
+                requestBody.tool_choice = 'auto';
+            }
+            
             const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${settings.api_key}`
+                },
+                body: JSON.stringify(requestBody)
+            });
+            
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.error?.message || `API 錯誤: ${response.status}`);
+            }
+            
+            await this.processStreamWithTools(response, apiMessages, settings, characterData, onChunk, onComplete, onError);
+            
+        } catch (error) {
+            const errorMsg = error.message || '連線失敗，請檢查網路設定。';
+            onError(errorMsg);
+            this.showError({
+                message: errorMsg,
+                title: 'API 請求失敗',
+                details: error.stack || ''
+            });
+        }
+    },
+    
+    async processStreamWithTools(response, apiMessages, settings, characterData, onChunk, onComplete, onError) {
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+        let fullContent = '';
+        let toolCalls = [];
+        let currentToolCall = null;
+        
+        while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+            
+            const chunk = decoder.decode(value, { stream: true });
+            const lines = chunk.split('\n');
+            
+            for (const line of lines) {
+                if (line.startsWith('data: ')) {
+                    const data = line.slice(6);
+                    if (data === '[DONE]') continue;
+                    
+                    try {
+                        const parsed = JSON.parse(data);
+                        const delta = parsed.choices?.[0]?.delta;
+                        
+                        if (delta?.content) {
+                            fullContent += delta.content;
+                            onChunk(delta.content, fullContent);
+                        }
+                        
+                        if (delta?.tool_calls) {
+                            for (const toolCallDelta of delta.tool_calls) {
+                                const index = toolCallDelta.index;
+                                
+                                if (!toolCalls[index]) {
+                                    toolCalls[index] = {
+                                        id: toolCallDelta.id,
+                                        type: 'function',
+                                        function: {
+                                            name: '',
+                                            arguments: ''
+                                        }
+                                    };
+                                }
+                                
+                                if (toolCallDelta.id) {
+                                    toolCalls[index].id = toolCallDelta.id;
+                                }
+                                if (toolCallDelta.function?.name) {
+                                    toolCalls[index].function.name = toolCallDelta.function.name;
+                                }
+                                if (toolCallDelta.function?.arguments) {
+                                    toolCalls[index].function.arguments += toolCallDelta.function.arguments;
+                                }
+                            }
+                        }
+                    } catch (e) {
+                    }
+                }
+            }
+        }
+        
+        if (toolCalls.length > 0) {
+            await this.handleToolCalls(toolCalls, apiMessages, settings, characterData, onChunk, onComplete, onError);
+        } else if (fullContent) {
+            onComplete(fullContent);
+        } else {
+            onComplete('');
+        }
+    },
+    
+    async handleToolCalls(toolCalls, apiMessages, settings, characterData, onChunk, onComplete, onError) {
+        const toolMessages = [];
+        
+        const context = {
+            characterId: characterData?.id || null,
+            characterName: characterData?.name || null,
+            characterPersonality: characterData?.personality || null
+        };
+        
+        for (const toolCall of toolCalls) {
+            const toolName = toolCall.function.name;
+            let toolArgs = {};
+            
+            try {
+                toolArgs = JSON.parse(toolCall.function.arguments);
+            } catch (e) {
+                toolArgs = {};
+            }
+            
+            const tool = mcpManager.findToolByName(toolName);
+            
+            if (tool) {
+                try {
+                    const result = await mcpManager.callTool(tool.mcpId, toolName, toolArgs, context);
+                    
+                    toolMessages.push({
+                        role: 'tool',
+                        tool_call_id: toolCall.id,
+                        name: toolName,
+                        content: JSON.stringify(result.success ? result.result : { error: result.error })
+                    });
+                } catch (error) {
+                    toolMessages.push({
+                        role: 'tool',
+                        tool_call_id: toolCall.id,
+                        name: toolName,
+                        content: JSON.stringify({ error: error.message })
+                    });
+                }
+            } else {
+                toolMessages.push({
+                    role: 'tool',
+                    tool_call_id: toolCall.id,
+                    name: toolName,
+                    content: JSON.stringify({ error: `Tool ${toolName} not found` })
+                });
+            }
+        }
+        
+        apiMessages.push({
+            role: 'assistant',
+            tool_calls: toolCalls
+        });
+        
+        for (const toolMsg of toolMessages) {
+            apiMessages.push(toolMsg);
+        }
+        
+        try {
+            const followUpResponse = await fetch(`${settings.api_url}/v1/chat/completions`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -222,44 +400,15 @@ const APIClient = {
                 })
             });
             
-            if (!response.ok) {
-                const errorData = await response.json().catch(() => ({}));
-                throw new Error(errorData.error?.message || `API 錯誤: ${response.status}`);
+            if (!followUpResponse.ok) {
+                const errorData = await followUpResponse.json().catch(() => ({}));
+                throw new Error(errorData.error?.message || `API 錯誤: ${followUpResponse.status}`);
             }
             
-            const reader = response.body.getReader();
-            const decoder = new TextDecoder();
-            let fullContent = '';
-            
-            while (true) {
-                const { done, value } = await reader.read();
-                if (done) break;
-                
-                const chunk = decoder.decode(value, { stream: true });
-                const lines = chunk.split('\n');
-                
-                for (const line of lines) {
-                    if (line.startsWith('data: ')) {
-                        const data = line.slice(6);
-                        if (data === '[DONE]') continue;
-                        
-                        try {
-                            const parsed = JSON.parse(data);
-                            const content = parsed.choices?.[0]?.delta?.content;
-                            if (content) {
-                                fullContent += content;
-                                onChunk(content, fullContent);
-                            }
-                        } catch (e) {
-                        }
-                    }
-                }
-            }
-            
-            onComplete(fullContent);
+            await this.processStreamWithTools(followUpResponse, apiMessages, settings, characterData, onChunk, onComplete, onError);
             
         } catch (error) {
-            const errorMsg = error.message || '連線失敗，請檢查網路設定。';
+            const errorMsg = error.message || '工具調用後續處理失敗。';
             onError(errorMsg);
             this.showError({
                 message: errorMsg,

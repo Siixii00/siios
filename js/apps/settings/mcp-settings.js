@@ -1,6 +1,6 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast, createKakaoBottomSheet } from '../../components.js';
-import { MCPConfigDB } from '../../db.js';
+import { MCPConfigDB, CharactersDB } from '../../db.js';
 import { MCPClient } from '../../core/mcp-client.js';
 
 async function renderMCPSettings() {
@@ -137,6 +137,20 @@ function showAddDialog(container) {
     nameGroup.appendChild(nameInput);
     form.appendChild(nameGroup);
 
+    const charGroup = createElement('div');
+    charGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: '綁定角色（選填）' }));
+    const charSelect = createElement('select', 'w-full mt-1 p-3 border rounded-lg text-base');
+    const defaultOption = createElement('option', '', { value: '', textContent: '不綁定（所有角色可用）' });
+    charSelect.appendChild(defaultOption);
+    CharactersDB.getAll().then(characters => {
+        characters.forEach(char => {
+            const option = createElement('option', '', { value: char.id, textContent: char.name || '未命名' });
+            charSelect.appendChild(option);
+        });
+    });
+    charGroup.appendChild(charSelect);
+    form.appendChild(charGroup);
+
     const urlGroup = createElement('div');
     urlGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: 'Worker URL' }));
     const urlInput = createElement('input', 'w-full mt-1 p-3 border rounded-lg text-base');
@@ -182,7 +196,8 @@ function showAddDialog(container) {
         const config = await MCPConfigDB.create({
             name: nameInput.value || 'MCP Server',
             endpoint: urlInput.value,
-            apiKey: keyInput.value
+            apiKey: keyInput.value,
+            bound_character_id: charSelect.value || null
         });
 
         const client = new MCPClient(config);
@@ -234,6 +249,22 @@ async function showEditDialog(config) {
     nameGroup.appendChild(nameInput);
     form.appendChild(nameGroup);
 
+    const charGroup = createElement('div');
+    charGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: '綁定角色（選填）' }));
+    const charSelect = createElement('select', 'w-full mt-1 p-3 border rounded-lg text-base');
+    const defaultOption = createElement('option', '', { value: '', textContent: '不綁定（所有角色可用）' });
+    if (!config.bound_character_id) defaultOption.selected = true;
+    charSelect.appendChild(defaultOption);
+    
+    const characters = await CharactersDB.getAll();
+    characters.forEach(char => {
+        const option = createElement('option', '', { value: char.id, textContent: char.name || '未命名' });
+        if (config.bound_character_id === char.id) option.selected = true;
+        charSelect.appendChild(option);
+    });
+    charGroup.appendChild(charSelect);
+    form.appendChild(charGroup);
+
     const urlGroup = createElement('div');
     urlGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: 'Worker URL' }));
     const urlInput = createElement('input', 'w-full mt-1 p-3 border rounded-lg text-base');
@@ -282,7 +313,8 @@ async function showEditDialog(config) {
         await MCPConfigDB.update(config.id, {
             name: nameInput.value,
             endpoint: urlInput.value,
-            apiKey: keyInput.value
+            apiKey: keyInput.value,
+            bound_character_id: charSelect.value || null
         });
         createToast('已儲存', 'success');
         overlay.remove();

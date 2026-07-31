@@ -37,12 +37,24 @@ class MCPClient {
         }
     }
 
-    async callTool(toolName, args) {
+    async callTool(toolName, args, context = {}) {
         try {
+            const body = { 
+                name: toolName, 
+                arguments: args,
+                context: {
+                    characterId: context.characterId,
+                    characterName: context.characterName,
+                    characterPersonality: context.characterPersonality,
+                    userId: context.userId,
+                    userName: context.userName
+                }
+            };
+            
             const response = await fetch(`${this.endpoint}/tools/call`, {
                 method: 'POST',
                 headers: this.getHeaders(),
-                body: JSON.stringify({ name: toolName, arguments: args })
+                body: JSON.stringify(body)
             });
 
             if (!response.ok) {
@@ -74,12 +86,14 @@ class MCPManager {
     constructor() {
         this.clients = new Map();
         this.allTools = [];
+        this.configs = [];
     }
 
     async loadConfigs() {
         const configs = await MCPConfigDB.getEnabled();
         this.clients.clear();
         this.allTools = [];
+        this.configs = configs;
 
         for (const config of configs) {
             const client = new MCPClient(config);
@@ -90,7 +104,8 @@ class MCPManager {
                     this.allTools.push({
                         ...tool,
                         mcpId: config.id,
-                        mcpName: config.name
+                        mcpName: config.name,
+                        boundCharacterId: config.bound_character_id
                     });
                 }
             }
@@ -143,16 +158,26 @@ class MCPManager {
         return results;
     }
 
-    async callTool(mcpId, toolName, args) {
+    async callTool(mcpId, toolName, args, context = {}) {
         const client = this.clients.get(mcpId);
         if (!client) {
             return { success: false, error: 'MCP client not found' };
         }
-        return client.callTool(toolName, args);
+        return client.callTool(toolName, args, context);
     }
 
-    getToolsForLLM() {
-        return this.allTools.map(tool => ({
+    getToolsForLLM(characterId = null, enabledMcpIds = null) {
+        let filteredTools = this.allTools;
+        
+        if (enabledMcpIds && enabledMcpIds.length > 0) {
+            filteredTools = filteredTools.filter(t => enabledMcpIds.includes(t.mcpId));
+        }
+        
+        if (characterId) {
+            filteredTools = filteredTools.filter(t => !t.boundCharacterId || t.boundCharacterId === characterId);
+        }
+        
+        return filteredTools.map(tool => ({
             type: 'function',
             function: {
                 name: tool.name,
