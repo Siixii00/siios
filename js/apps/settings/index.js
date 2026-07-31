@@ -65,6 +65,20 @@ async function renderSettings() {
             title: '聊天 API 串接設定',
             desc: '設定 API 端點、金鑰與模型參數',
             path: '/api-config'
+        },
+        {
+            icon: 'extension',
+            iconBg: 'bg-green-500',
+            title: 'MCP 工具整合',
+            desc: '連接外部工具，讓角色執行實際動作',
+            path: '/settings/mcp'
+        },
+        {
+            icon: 'door_front',
+            iconBg: 'bg-purple-500',
+            title: '神秘門',
+            desc: 'MCP 工具市集：選擇工具，生成程式碼',
+            path: '/mcp-market'
         }
     ];
 

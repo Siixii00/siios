@@ -269,7 +269,15 @@ async function renderTheater(params) {
         await saveContent();
         renderContent(container);
       } catch (error) {
-        alert('生成失敗: ' + error.message);
+        if (window.showError) {
+          window.showError({
+            title: '劇場生成失敗',
+            message: error.message,
+            details: error.stack || ''
+          });
+        } else {
+          alert('生成失敗: ' + error.message);
+        }
       } finally {
         addBtn.disabled = false;
         addBtn.innerHTML = '<i class="fas fa-plus"></i> 新增劇目';

@@ -136,6 +136,13 @@ async function generateArtistReply(container, fanMessage) {
   } catch (error) {
     state.messages[msgIndex].text = `[錯誤: ${error.message}]`;
     state.messages[msgIndex].isStreaming = false;
+    if (window.showError) {
+      window.showError({
+        title: 'Bubbles 生成錯誤',
+        message: error.message,
+        details: error.stack || ''
+      });
+    }
   } finally {
     state.isGenerating = false;
     renderFeed(container);

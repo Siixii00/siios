@@ -212,14 +212,14 @@
 }
 
 .kakao-chat-bg {
-    background-color: var(--kakao-blue);
+    background-color: var(--kakao-chat-bg);
     min-height: 100%;
 }
 
 .kakao-bubble-left {
     position: relative;
-    background-color: #FFFFFF;
-    color: #000000;
+    background-color: var(--kakao-bubble-left-bg);
+    color: var(--kakao-bubble-left-text);
     padding: 10px 12px 9px;
     border-radius: 14px;
     max-width: 280px;
@@ -236,12 +236,12 @@
     height: 0;
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
-    border-right: 10px solid #FFFFFF;
+    border-right: 10px solid var(--kakao-bubble-left-bg);
 }
 
 .kakao-bubble-right {
     position: relative;
-    background-color: var(--kakao-yellow);
+    background-color: var(--kakao-bubble-right-bg);
     color: var(--kakao-bubble-right-text);
     padding: 10px 12px 9px;
     border-radius: 14px;
@@ -259,7 +259,7 @@
     height: 0;
     border-top: 6px solid transparent;
     border-bottom: 6px solid transparent;
-    border-left: 10px solid var(--kakao-yellow);
+    border-left: 10px solid var(--kakao-bubble-right-bg);
 }
 
 .kakao-bubble-text {

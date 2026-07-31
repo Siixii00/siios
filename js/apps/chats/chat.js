@@ -10,8 +10,25 @@ let messageCount = 0;
 let batchProcessing = false;
 let streamingPlaceholders = new Map();
 
+async function applyCustomTheme() {
+    const theme = await SettingsDB.get('chat_custom_theme');
+    const savedTheme = await SettingsDB.get('appearance_theme');
+    
+    if (savedTheme === 'custom' && theme) {
+        const root = document.documentElement;
+        root.style.setProperty('--kakao-chat-bg', theme.chatBg);
+        root.style.setProperty('--kakao-bubble-left-bg', theme.bubbleLeftBg);
+        root.style.setProperty('--kakao-bubble-left-text', theme.bubbleLeftText);
+        root.style.setProperty('--kakao-bubble-right-bg', theme.bubbleRightBg);
+        root.style.setProperty('--kakao-bubble-right-text', theme.bubbleRightText);
+        root.style.setProperty('--kakao-input-bg', theme.inputBg);
+    }
+}
+
 async function renderChat(params) {
     const chatId = params.id;
+    
+    await applyCustomTheme();
     
     currentChat = await ChatsDB.getById(chatId);
     if (!currentChat) {
@@ -148,7 +165,7 @@ async function renderChat(params) {
                 return;
             }
             const last10 = msgs.slice(-10);
-            const primaryCharId = currentChat.is_group ? (currentChat.member_ids && currentChat.member_ids[0]) : currentChat.character_id;
+            const primaryCharId = currentChat.is_group ? ((currentChat.member_ids && currentChat.member_ids[0]) || null) : currentChat.character_id;
             await window.App.memorySystem.processBatch(last10, chatId, primaryCharId);
             createToast('Memory summary generated');
         } catch (e) {
@@ -262,27 +279,6 @@ async function renderChat(params) {
         sheet.open();
     }
     
-    async function removeGroupMember(memberId) {
-        const memberIds = currentChat.member_ids || [];
-        if (memberIds.length <= 1) {
-            createToast('群組至少需要 1 個成員');
-            return;
-        }
-        const newMemberIds = memberIds.filter(id => id !== memberId);
-        const primaryCharId = newMemberIds[0];
-        const primaryChar = await CharactersDB.getById(primaryCharId);
-        await ChatsDB.update(chatId, {
-            member_ids: newMemberIds,
-            character_id: primaryCharId,
-            character_name: primaryChar?.name || '群組聊天',
-            character_avatar: primaryChar?.avatar || '',
-            bound_user_id: primaryChar?.bound_user_id || null
-        });
-        currentChat = await ChatsDB.getById(chatId);
-        createToast('已移除成員');
-        Router.navigate('/chat/' + chatId);
-    }
-    
     const sideMenuItems = [
         {
             icon: 'person',
@@ -295,14 +291,6 @@ async function renderChat(params) {
     
     if (currentChat.is_group) {
         const memberIds = currentChat.member_ids || [];
-        const memberItems = memberIds.map(mid => {
-            return {
-                icon: 'person',
-                label: '成員',
-                value: '',
-                onClick: () => {}
-            };
-        });
         sideMenuItems.push({
             icon: 'group',
             label: 'Participants',
@@ -539,7 +527,7 @@ async function renderChat(params) {
                             batchProcessing = true;
                             const recentMessages = await MessagesDB.getByChatId(chatId);
                             const last10 = recentMessages.slice(-10);
-                            const primaryCharId = currentChat.member_ids && currentChat.member_ids[0];
+                            const primaryCharId = (currentChat.member_ids && currentChat.member_ids[0]) || currentChat.character_id;
                             window.App.memorySystem.processBatch(last10, chatId, primaryCharId)
                                 .catch(() => {})
                                 .finally(() => { batchProcessing = false; });

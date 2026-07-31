@@ -85,6 +85,13 @@ async function generateDivinationReading(cardName, isUpright, characterId) {
     }
   } catch (error) {
     console.error('生成占卜解讀失敗:', error);
+    if (window.showError) {
+      window.showError({
+        title: '占卜解讀失敗',
+        message: error.message,
+        details: '生成塔羅牌解讀時發生錯誤'
+      });
+    }
   }
   
   return {

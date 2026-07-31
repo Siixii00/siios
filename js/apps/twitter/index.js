@@ -406,7 +406,15 @@ async function generateTweetWithAI(characterId = null) {
         return data.choices?.[0]?.message?.content?.trim() || null;
     } catch (error) {
         console.error('[Twitter] AI 生成推文失敗:', error);
-        createToast('生成推文失敗，請稍後再試');
+        if (window.showError) {
+            window.showError({
+                title: 'Twitter 推文生成失敗',
+                message: error.message,
+                details: error.stack || ''
+            });
+        } else {
+            createToast('生成推文失敗，請稍後再試');
+        }
         return null;
     }
 }
@@ -450,6 +458,13 @@ async function generateReplyWithAI(tweet, characterId = null) {
         return data.choices?.[0]?.message?.content?.trim() || null;
     } catch (error) {
         console.error('[Twitter] AI 生成回覆失敗:', error);
+        if (window.showError) {
+            window.showError({
+                title: 'Twitter 回覆生成失敗',
+                message: error.message,
+                details: error.stack || ''
+            });
+        }
         return null;
     }
 }
