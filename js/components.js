@@ -374,6 +374,94 @@ function createToast(message, type = 'info') {
     }, 3000);
 }
 
+function createErrorModal(errorInfo) {
+    const { title = '發生錯誤', message, details = '', timestamp = new Date().toISOString() } = errorInfo;
+    
+    const existingModal = document.getElementById('error-modal-overlay');
+    if (existingModal) existingModal.remove();
+    
+    const overlay = createElement('div', 'error-modal-overlay', { id: 'error-modal-overlay' });
+    const modal = createElement('div', 'error-modal');
+    
+    const header = createElement('div', 'error-modal-header');
+    header.appendChild(createIcon('error', 'error-modal-icon'));
+    header.appendChild(createElement('h3', 'error-modal-title', { textContent: title }));
+    modal.appendChild(header);
+    
+    const content = createElement('div', 'error-modal-content');
+    content.appendChild(createElement('p', 'error-modal-message', { textContent: message }));
+    modal.appendChild(content);
+    
+    const errorText = '=== 錯誤報告 ===\n時間: ' + timestamp + '\n標題: ' + title + '\n訊息: ' + message + (details ? '\n詳情: ' + details : '');
+    
+    const detailSection = createElement('div', 'error-modal-details');
+    const detailHeader = createElement('div', 'error-modal-details-header', {
+        onClick: () => {
+            const pre = detailSection.querySelector('pre');
+            const icon = detailHeader.querySelector('.material-symbols-outlined');
+            const isHidden = pre.style.display === 'none';
+            pre.style.display = isHidden ? 'block' : 'none';
+            icon.textContent = isHidden ? 'expand_less' : 'expand_more';
+        }
+    });
+    detailHeader.appendChild(createElement('span', '', { textContent: '詳細資訊' }));
+    detailHeader.appendChild(createIcon('expand_more', ''));
+    detailSection.appendChild(detailHeader);
+    
+    const detailPre = createElement('pre', 'error-modal-details-content', { textContent: errorText });
+    detailPre.style.display = 'none';
+    detailSection.appendChild(detailPre);
+    modal.appendChild(detailSection);
+    
+    const actions = createElement('div', 'error-modal-actions');
+    
+    const copyBtn = createElement('button', 'error-modal-btn copy', {
+        onClick: async () => {
+            try {
+                await navigator.clipboard.writeText(errorText);
+                copyBtn.textContent = '已複製!';
+                setTimeout(() => copyBtn.textContent = '複製錯誤訊息', 2000);
+            } catch (e) {
+                const textarea = document.createElement('textarea');
+                textarea.value = errorText;
+                textarea.style.position = 'fixed';
+                textarea.style.opacity = '0';
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                copyBtn.textContent = '已複製!';
+                setTimeout(() => copyBtn.textContent = '複製錯誤訊息', 2000);
+            }
+        }
+    });
+    copyBtn.textContent = '複製錯誤訊息';
+    actions.appendChild(copyBtn);
+    
+    const closeBtn = createElement('button', 'error-modal-btn close', {
+        onClick: () => {
+            overlay.classList.add('closing');
+            setTimeout(() => overlay.remove(), 300);
+        }
+    });
+    closeBtn.textContent = '關閉';
+    actions.appendChild(closeBtn);
+    
+    modal.appendChild(actions);
+    overlay.appendChild(modal);
+    
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) {
+            overlay.classList.add('closing');
+            setTimeout(() => overlay.remove(), 300);
+        }
+    });
+    
+    document.body.appendChild(overlay);
+    
+    return { overlay, modal };
+}
+
 function createEmptyState(icon, title, text, action) {
     const container = createElement('div', 'empty-state');
     container.appendChild(createIcon(icon, 'empty-state-icon'));
@@ -557,6 +645,7 @@ export {
     createKakaoChatCell,
     createKakaoBubble,
     createToast,
+    createErrorModal,
     createEmptyState,
     formatTime,
     createKakaoBottomSheet,

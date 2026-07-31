@@ -129,6 +129,134 @@ function convertBilibiliUrl(url) {
     return url;
 }
 
+function extractBvid(url) {
+    if (!url) return null;
+    const bvMatch = url.match(/(BV[a-zA-Z0-9]+)/i);
+    return bvMatch ? bvMatch[1] : null;
+}
+
+function openInBilibili(url) {
+    const bvid = extractBvid(url);
+    const appUrl = bvid ? `bilibili://video/${bvid}` : url;
+    const webUrl = bvid ? `https://www.bilibili.com/video/${bvid}` : url;
+    
+    const iframe = document.createElement('iframe');
+    iframe.style.display = 'none';
+    iframe.src = appUrl;
+    document.body.appendChild(iframe);
+    
+    setTimeout(() => {
+        iframe.remove();
+        window.open(webUrl, '_blank');
+    }, 500);
+}
+
+const BILI_API = 'https://siios-bilibili-worker.你的帳號.workers.dev';
+
+async function checkBilibiliLogin() {
+    const token = await SettingsDB.get('github_token');
+    if (!token) return false;
+    
+    try {
+        const response = await fetch(`${BILI_API}/api/bilibili/auth/status`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        const data = await response.json();
+        return data.isLoggedIn;
+    } catch {
+        return false;
+    }
+}
+
+async function startQRLogin() {
+    const token = await SettingsDB.get('github_token');
+    if (!token) {
+        createToast('請先登入 GitHub');
+        return;
+    }
+    
+    try {
+        const response = await fetch(`${BILI_API}/api/bilibili/auth/login`, { method: 'POST' });
+        const data = await response.json();
+        
+        if (data.url) {
+            showQRCodeModal(data.url, data.qrcode_key, token);
+        }
+    } catch {
+        createToast('無法生成登入二維碼');
+    }
+}
+
+function showQRCodeModal(qrUrl, qrcodeKey, token) {
+    const modal = createElement('div', 'bili-login-modal');
+    const content = createElement('div', 'bili-login-content');
+    
+    content.innerHTML = `
+        <h3>掃碼登入 B 站</h3>
+        <p>請使用 B 站 App 掃描以下二維碼</p>
+        <div class="bili-qrcode-container">
+            <img src="${qrUrl}" alt="QR Code" />
+        </div>
+        <p class="bili-login-status">等待掃碼...</p>
+        <button class="bili-close-btn">關閉</button>
+    `;
+    
+    modal.appendChild(content);
+    document.body.appendChild(modal);
+    
+    const pollInterval = setInterval(async () => {
+        try {
+            const response = await fetch(`${BILI_API}/api/bilibili/auth/poll?qrcode_key=${qrcodeKey}`, {
+                headers: { 'Authorization': `Bearer ${token}` }
+            });
+            const data = await response.json();
+            
+            if (data.success) {
+                clearInterval(pollInterval);
+                modal.remove();
+                createToast('登入成功！');
+                Router.refresh();
+            } else if (data.code === 86038) {
+                clearInterval(pollInterval);
+                modal.querySelector('.bili-login-status').textContent = '二維碼已過期，請重新登入';
+            }
+        } catch {
+            clearInterval(pollInterval);
+        }
+    }, 2000);
+    
+    modal.querySelector('.bili-close-btn').onclick = () => {
+        clearInterval(pollInterval);
+        modal.remove();
+    };
+}
+
+function showLoginPrompt() {
+    const modal = createElement('div', 'bili-login-modal');
+    const content = createElement('div', 'bili-login-content');
+    
+    content.innerHTML = `
+        <h3>需要登入 B 站</h3>
+        <p>內嵌播放需要您的 B 站帳號登入</p>
+        <div class="bili-login-buttons">
+            <button class="bili-login-btn">登入 B 站</button>
+            <button class="bili-cancel-btn">取消</button>
+        </div>
+    `;
+    
+    modal.appendChild(content);
+    document.body.appendChild(modal);
+    
+    modal.querySelector('.bili-login-btn').onclick = async () => {
+        modal.remove();
+        await startQRLogin();
+    };
+    
+    modal.querySelector('.bili-cancel-btn').onclick = () => {
+        modal.remove();
+    };
+}
+
 async function loadMessagesData() {
     const data = await SettingsDB.get('bilibili_messages');
     if (data) return data;
@@ -659,7 +787,6 @@ function createBiliBottomNav() {
 async function renderPlayer(params) {
     const title = decodeURIComponent(params.title || '影片標題');
     const url = decodeURIComponent(params.url || '');
-    const convertedUrl = convertBilibiliUrl(url);
     
     const characters = await CharactersDB.getAll();
     const character = characters.length > 0 ? characters[Math.floor(Math.random() * characters.length)] : null;
@@ -675,12 +802,106 @@ async function renderPlayer(params) {
     });
     container.appendChild(header);
     
+    const previewCard = createElement('div', 'bili-video-preview');
+    previewCard.style.background = generateThumbnail();
+    previewCard.innerHTML = `
+        <div class="bili-preview-content">
+            <div class="bili-play-icon">▶</div>
+            <div class="bili-preview-title">${title}</div>
+        </div>
+    `;
+    container.appendChild(previewCard);
+    
+    const optionsCard = createElement('div', 'bili-playback-options');
+    
+    const externalBtn = createElement('button', 'bili-option-btn primary');
+    externalBtn.innerHTML = '<span class="material-icons">open_in_new</span> 在 B 站觀看';
+    externalBtn.onclick = () => openInBilibili(url);
+    optionsCard.appendChild(externalBtn);
+    
+    const embedBtn = createElement('button', 'bili-option-btn');
+    embedBtn.innerHTML = '<span class="material-icons">play_circle</span> 在 PWA 內播放';
+    embedBtn.onclick = async () => {
+        const isLoggedIn = await checkBilibiliLogin();
+        if (isLoggedIn) {
+            await playEmbed(title, url, container, character);
+        } else {
+            showLoginPrompt();
+        }
+    };
+    optionsCard.appendChild(embedBtn);
+    
+    container.appendChild(optionsCard);
+    
+    return { element: container, cleanup: () => {} };
+}
+
+async function playEmbed(title, url, container, character) {
+    const bvid = extractBvid(url);
+    if (!bvid) {
+        createToast('無效的影片連結');
+        return;
+    }
+    
+    const token = await SettingsDB.get('github_token');
+    
+    createToast('正在載入影片...');
+    
+    try {
+        const infoRes = await fetch(`${BILI_API}/api/bilibili/video/info?bvid=${bvid}`);
+        const info = await infoRes.json();
+        
+        if (info.error) {
+            throw new Error(info.error);
+        }
+        
+        const playRes = await fetch(`${BILI_API}/api/bilibili/video/playurl?bvid=${bvid}&cid=${info.cid}`, {
+            headers: { 'Authorization': `Bearer ${token}` }
+        });
+        const playData = await playRes.json();
+        
+        if (playData.error) {
+            if (playData.error === 'Not logged in') {
+                throw new Error('登入已過期');
+            }
+            throw new Error(playData.error);
+        }
+        
+        showNativePlayer(container, info, playData, character);
+    } catch (error) {
+        createToast(error.message || '無法載入影片');
+        if (error.message === '登入已過期') {
+            startQRLogin();
+        }
+    }
+}
+
+function showNativePlayer(container, info, playData, character) {
+    const optionsCard = container.querySelector('.bili-playback-options');
+    if (optionsCard) optionsCard.remove();
+    
+    const previewCard = container.querySelector('.bili-video-preview');
+    if (previewCard) previewCard.remove();
+    
     const playerStage = createElement('div', 'bili-player-stage');
     const playerVideo = createElement('div', 'bili-player-video');
     
-    if (convertedUrl) {
+    if (playData.dash && playData.dash.video && playData.dash.video.length > 0) {
+        const videoUrl = playData.dash.video[0].base_url;
+        
+        const video = createElement('video', '', {
+            src: videoUrl,
+            controls: true,
+            autoplay: true
+        });
+        video.style.width = '100%';
+        video.style.height = '100%';
+        video.style.backgroundColor = '#000';
+        playerVideo.appendChild(video);
+    } else {
+        const iframeUrl = convertBilibiliUrl(`https://www.bilibili.com/video/${info.bvid || ''}`);
         const iframe = createElement('iframe', '', {
-            src: convertedUrl,
+            src: iframeUrl,
             allow: 'autoplay; fullscreen',
             loading: 'lazy'
         });
@@ -691,16 +912,11 @@ async function renderPlayer(params) {
     playerVideo.appendChild(danmuLayer);
     
     playerStage.appendChild(playerVideo);
-    container.appendChild(playerStage);
-    
-    appState.activeNPCs = await loadWatchingNPCs();
-    if (appState.activeNPCs.length > 0) {
-        container.appendChild(createNPCSection(appState.activeNPCs));
-    }
+    container.insertBefore(playerStage, container.firstChild.nextSibling);
     
     const playerInfo = createElement('div', 'bili-player-info');
     
-    const titleEl = createElement('div', 'font-bold', { textContent: title });
+    const titleEl = createElement('div', 'font-bold', { textContent: info.title });
     playerInfo.appendChild(titleEl);
     
     const actions = createElement('div', 'bili-player-actions');
@@ -714,38 +930,23 @@ async function renderPlayer(params) {
     const comments = createElement('div', 'bili-comments');
     comments.appendChild(createElement('div', 'font-bold mb-3', { textContent: '熱門留言' }));
     
-    const aiComments = await generateNPCComments(title, character);
-    
-    if (aiComments && aiComments.length > 0) {
-        aiComments.forEach(c => {
-            const comment = createElement('div', 'bili-comment');
-            comment.appendChild(createElement('div', 'bili-comment-avatar'));
-            const commentBody = createElement('div', '');
-            commentBody.appendChild(createElement('div', 'font-semibold text-sm', { textContent: c.name }));
-            commentBody.appendChild(createElement('div', 'text-ios-muted text-sm', { textContent: c.comment }));
-            comment.appendChild(commentBody);
-            comments.appendChild(comment);
-        });
-    } else {
-        const fallbackComments = [
-            { name: '熱心網友', comment: '這影片不錯，推推！' },
-            { name: '路人甲', comment: '第一次看到這麼棒的內容！' }
-        ];
-        fallbackComments.forEach(c => {
-            const comment = createElement('div', 'bili-comment');
-            comment.appendChild(createElement('div', 'bili-comment-avatar'));
-            const commentBody = createElement('div', '');
-            commentBody.appendChild(createElement('div', 'font-semibold text-sm', { textContent: c.name }));
-            commentBody.appendChild(createElement('div', 'text-ios-muted text-sm', { textContent: c.comment }));
-            comment.appendChild(commentBody);
-            comments.appendChild(comment);
-        });
-    }
+    generateNPCComments(info.title, character).then(aiComments => {
+        if (aiComments && aiComments.length > 0) {
+            aiComments.forEach(c => {
+                const comment = createElement('div', 'bili-comment');
+                comment.appendChild(createElement('div', 'bili-comment-avatar'));
+                const commentBody = createElement('div', '');
+                commentBody.appendChild(createElement('div', 'font-semibold text-sm', { textContent: c.name }));
+                commentBody.appendChild(createElement('div', 'text-ios-muted text-sm', { textContent: c.comment }));
+                comment.appendChild(commentBody);
+                comments.appendChild(comment);
+            });
+        }
+    });
     
     container.appendChild(comments);
-    
-    return { element: container, cleanup: () => {} };
 }
+
 
 async function renderMessages() {
     const container = createElement('div', 'bili-app');

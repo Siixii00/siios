@@ -100,6 +100,13 @@ async function generateContentWithAI(context, characterId = null) {
         return data.choices?.[0]?.message?.content?.trim() || null;
     } catch (error) {
         console.error('AI generation error:', error);
+        if (window.showError) {
+            window.showError({
+                title: 'Weverse AI 生成錯誤',
+                message: error.message,
+                details: error.stack || ''
+            });
+        }
         return null;
     }
 }

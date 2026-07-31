@@ -4,8 +4,21 @@ import { loadWorldInfoContext } from './core/world-info-loader.js';
 import { generateRPPrompt } from './constants/rp-system-prompt.js';
 import { buildRealWorldContext } from './core/real-world-context.js';
 import { PeriodCalculator } from './core/period-calculator.js';
+import { createErrorModal } from './components.js';
 
 const APIClient = {
+    showError(errorInfo) {
+        const info = typeof errorInfo === 'string' 
+            ? { message: errorInfo } 
+            : errorInfo;
+        createErrorModal({
+            title: info.title || 'API 錯誤',
+            message: info.message,
+            details: info.details || '',
+            timestamp: new Date().toISOString()
+        });
+    },
+    
     async getSettings() {
         return SettingsDB.getAll();
     },
@@ -56,7 +69,6 @@ const APIClient = {
                     }
                 }
             } catch (e) {
-                // Health info not available, continue
             }
         }
         
@@ -67,7 +79,14 @@ const APIClient = {
             content: rpPrompt
         });
         
-        const worldInfoContext = await loadWorldInfoContext(chatId, userMessage);
+        const worldInfoOptions = {};
+        if (characterData?.id) {
+            worldInfoOptions.characterId = characterData.id;
+        }
+        if (userData?.id) {
+            worldInfoOptions.userId = userData.id;
+        }
+        const worldInfoContext = await loadWorldInfoContext(chatId, userMessage, worldInfoOptions);
         
         const frontEntries = worldInfoContext.filter(e => e.priority === 'front');
         const middleEntries = worldInfoContext.filter(e => e.priority === 'middle');
@@ -149,7 +168,9 @@ const APIClient = {
         const settings = await this.getSettings();
         
         if (!settings.api_url || !settings.api_key) {
-            onError('API URL 或 API Key 未設定。請前往設定頁面進行配置。');
+            const errorMsg = 'API URL 或 API Key 未設定。請前往設定頁面進行配置。';
+            onError(errorMsg);
+            this.showError({ message: errorMsg, title: '設定錯誤' });
             return;
         }
         
@@ -238,7 +259,13 @@ const APIClient = {
             onComplete(fullContent);
             
         } catch (error) {
-            onError(error.message || '連線失敗，請檢查網路設定。');
+            const errorMsg = error.message || '連線失敗，請檢查網路設定。';
+            onError(errorMsg);
+            this.showError({
+                message: errorMsg,
+                title: 'API 請求失敗',
+                details: error.stack || ''
+            });
         }
     },
     

@@ -1,7 +1,7 @@
 ﻿import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
 
 const DB_NAME = 'sxios';
-const DB_VERSION = 9;
+const DB_VERSION = 10;
 const LEGACY_DB_NAMES = ['ios-classic-ai'];
 
 let db = null;
@@ -111,6 +111,11 @@ async function initDB() {
                 healthStore.createIndex('user_id', 'user_id');
                 healthStore.createIndex('type', 'type');
                 healthStore.createIndex('start_date', 'start_date');
+            }
+
+            if (!database.objectStoreNames.contains('mcpConfigs')) {
+                const mcpStore = database.createObjectStore('mcpConfigs', { keyPath: 'id' });
+                mcpStore.createIndex('enabled', 'enabled');
             }
         },
         blocked() {
@@ -1046,7 +1051,67 @@ const HealthDB = {
     }
 };
 
-export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, HealthDB, hashContent, cosineSimilarity };
+const MCPConfigDB = {
+    async getAll() {
+        const database = await initDB();
+        return database.getAll('mcpConfigs');
+    },
+
+    async getById(id) {
+        const database = await initDB();
+        return database.get('mcpConfigs', id);
+    },
+
+    async getEnabled() {
+        const database = await initDB();
+        const all = await database.getAll('mcpConfigs');
+        return all.filter(config => config.enabled);
+    },
+
+    async create(data = {}) {
+        const database = await initDB();
+        const id = 'mcp_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        const config = {
+            id,
+            name: data.name || '',
+            endpoint: data.endpoint || '',
+            apiKey: data.apiKey || '',
+            enabled: false,
+            tools: [],
+            lastChecked: null,
+            status: 'unchecked',
+            created_at: Date.now(),
+            updated_at: Date.now()
+        };
+        await database.put('mcpConfigs', config);
+        return config;
+    },
+
+    async update(id, data) {
+        const database = await initDB();
+        const config = await database.get('mcpConfigs', id);
+        if (!config) throw new Error('MCP Config not found');
+        const updated = { ...config, ...data, updated_at: Date.now() };
+        await database.put('mcpConfigs', updated);
+        return updated;
+    },
+
+    async delete(id) {
+        const database = await initDB();
+        await database.delete('mcpConfigs', id);
+    },
+
+    async toggle(id) {
+        const database = await initDB();
+        const config = await database.get('mcpConfigs', id);
+        if (!config) throw new Error('MCP Config not found');
+        const updated = { ...config, enabled: !config.enabled, updated_at: Date.now() };
+        await database.put('mcpConfigs', updated);
+        return updated;
+    }
+};
+
+export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, HealthDB, MCPConfigDB, hashContent, cosineSimilarity };
 
 
 

@@ -379,6 +379,13 @@ async function generateResponse(container, userMessage, isAction = false) {
         const fallbackResponse = generateFallbackResponse(userMessage, isAction);
         addMessage(container, 'assistant', fallbackResponse);
         datingState.isTyping = false;
+        if (window.showError) {
+          window.showError({
+            title: 'Dating 聊天錯誤',
+            message: error || '未知錯誤',
+            details: 'API 回調錯誤'
+          });
+        }
       }
     );
   } catch (error) {
@@ -386,6 +393,13 @@ async function generateResponse(container, userMessage, isAction = false) {
     const fallbackResponse = generateFallbackResponse(userMessage, isAction);
     addMessage(container, 'assistant', fallbackResponse);
     datingState.isTyping = false;
+    if (window.showError) {
+      window.showError({
+        title: 'Dating 聊天錯誤',
+        message: error.message || '未知錯誤',
+        details: error.stack || ''
+      });
+    }
   }
 }
 

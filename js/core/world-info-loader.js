@@ -76,7 +76,12 @@ async function loadWorldInfoContext(chatId, userMessage, options = {}) {
     }
     
     if (chatId) {
-        const characterData = await getCharacterData(chatId);
+        let characterData = null;
+        if (options.characterId) {
+            characterData = await CharactersDB.getById(options.characterId);
+        } else {
+            characterData = await getCharacterData(chatId);
+        }
         if (characterData) {
             if (characterData.personality) {
                 results.push({
@@ -100,7 +105,14 @@ async function loadWorldInfoContext(chatId, userMessage, options = {}) {
             }
         }
         
-        const userData = await getUserData(chatId);
+        let userData = null;
+        if (characterData?.bound_user_id) {
+            userData = await UsersDB.getById(characterData.bound_user_id);
+        } else if (options.userId) {
+            userData = await UsersDB.getById(options.userId);
+        } else {
+            userData = await getUserData(chatId);
+        }
         if (userData) {
             let userContent = '';
             if (userData.name) userContent += `用戶名稱: ${userData.name}\n`;

@@ -4,21 +4,64 @@ import { SettingsDB, ChatsDB, TheaterSettingsDB, CharactersDB } from '../../db.j
 import { CHATS_TABS } from './chats-nav.js';
 
 const THEMES = [
-    { id: 'light', name: '淺色', bg: '#ffffff', text: '#333333' },
-    { id: 'dark', name: '深色', bg: '#1a1a1a2e', text: '#e5e5e5' },
-    { id: 'pink', name: '粉色', bg: '#fce4ec', text: '#880e4f' },
-    { id: 'blue', name: '藍色', bg: '#e3f2fd', text: '#0d47a1' },
-    { id: 'green', name: '綠色', bg: '#e8f5e9', text: '#2e7d32' }
+    { id: 'light', name: '淺色', vars: { chatBg: '#FAF9F6', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#FEE500', bubbleRightText: '#625B71', inputBg: '#F5F5F5' } },
+    { id: 'dark', name: '深色', vars: { chatBg: '#1C1C1E', bubbleLeftBg: '#2C2C2E', bubbleLeftText: '#FFFFFF', bubbleRightBg: '#3A3A3C', bubbleRightText: '#FFFFFF', inputBg: '#2C2C2E' } },
+    { id: 'pink', name: '粉色', vars: { chatBg: '#FFF0F5', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#333333', bubbleRightBg: '#FFB6C1', bubbleRightText: '#8B0A50', inputBg: '#FFE4E9' } },
+    { id: 'blue', name: '藍色', vars: { chatBg: '#E8F4FD', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#B3C7D5', bubbleRightText: '#1D1B20', inputBg: '#D6E6F4' } },
+    { id: 'green', name: '綠色', vars: { chatBg: '#E8F5E9', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#A5D6A7', bubbleRightText: '#1B5E20', inputBg: '#C8E6C9' } }
 ];
 
 let currentTheme = 'light';
 let currentFontSize = 'medium';
+let customTheme = null;
 
 async function loadSettings() {
     const saved = await SettingsDB.get('appearance_theme');
     if (saved) currentTheme = saved;
     const savedFont = await SettingsDB.get('appearance_font_size');
     if (savedFont) currentFontSize = savedFont;
+    customTheme = await SettingsDB.get('chat_custom_theme');
+}
+
+function applyThemeToRoot(vars) {
+    const root = document.documentElement;
+    root.style.setProperty('--kakao-chat-bg', vars.chatBg);
+    root.style.setProperty('--kakao-bubble-left-bg', vars.bubbleLeftBg);
+    root.style.setProperty('--kakao-bubble-left-text', vars.bubbleLeftText);
+    root.style.setProperty('--kakao-bubble-right-bg', vars.bubbleRightBg);
+    root.style.setProperty('--kakao-bubble-right-text', vars.bubbleRightText);
+    root.style.setProperty('--kakao-input-bg', vars.inputBg);
+}
+
+function createColorPicker(label, value, onChange) {
+    const row = createElement('div', 'flex items-center justify-between py-3');
+    const labelEl = createElement('span', 'text-base', { textContent: label });
+    row.appendChild(labelEl);
+    
+    const colorWrapper = createElement('div', 'flex items-center gap-2');
+    const preview = createElement('div', 'w-8 h-8 rounded-lg border border-gray-200');
+    preview.style.backgroundColor = value;
+    
+    const input = createElement('input', 'opacity-0 absolute w-8 h-8 cursor-pointer', {
+        type: 'color',
+        value: value
+    });
+    input.style.width = '32px';
+    input.style.height = '32px';
+    
+    const pickerWrapper = createElement('div', 'relative');
+    pickerWrapper.appendChild(preview);
+    pickerWrapper.appendChild(input);
+    
+    input.oninput = (e) => {
+        preview.style.backgroundColor = e.target.value;
+        onChange(e.target.value);
+    };
+    
+    colorWrapper.appendChild(pickerWrapper);
+    row.appendChild(colorWrapper);
+    
+    return row;
 }
 
 async function renderChatSettings() {
@@ -43,11 +86,14 @@ async function renderChatSettings() {
     themeSection.appendChild(createElement('p', 'ios-section-header', { textContent: '主題' }));
 
     const themeGrid = createElement('div', 'theme-grid');
+    themeGrid.style.display = 'grid';
+    themeGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
+    themeGrid.style.gap = '8px';
+
     THEMES.forEach(t => {
         const card = createElement('div', `theme-card ${t.id === currentTheme ? 'active' : ''}`);
         card.dataset.id = t.id;
-        card.style.background = t.bg;
-        card.style.color = t.text;
+        card.style.background = t.vars.chatBg;
         card.style.borderRadius = '12px';
         card.style.padding = '16px';
         card.style.cursor = 'pointer';
@@ -61,17 +107,106 @@ async function renderChatSettings() {
 
         card.onclick = async () => {
             currentTheme = t.id;
+            customTheme = null;
             await SettingsDB.set('appearance_theme', currentTheme);
+            await SettingsDB.set('chat_custom_theme', null);
+            applyThemeToRoot(t.vars);
             Router.navigate('/chats/settings');
         };
 
         themeGrid.appendChild(card);
     });
-    themeGrid.style.display = 'grid';
-    themeGrid.style.gridTemplateColumns = 'repeat(3, 1fr)';
-    themeGrid.style.gap = '8px';
+
+    const customCard = createElement('div', `theme-card ${currentTheme === 'custom' ? 'active' : ''}`);
+    customCard.dataset.id = 'custom';
+    customCard.style.background = '#FFFFFF';
+    customCard.style.borderRadius = '12px';
+    customCard.style.padding = '16px';
+    customCard.style.cursor = 'pointer';
+    customCard.style.border = currentTheme === 'custom' ? '2px solid var(--kakao-brown)' : '2px solid transparent';
+    customCard.style.transition = 'border 0.15s';
+    customCard.appendChild(createElement('span', 'theme-name', { textContent: '自定義' }));
+    if (currentTheme === 'custom') {
+        customCard.appendChild(createIcon('check', 'text-sm'));
+    }
+
+    customCard.onclick = () => {
+        currentTheme = 'custom';
+        Router.navigate('/chats/settings');
+    };
+
+    themeGrid.appendChild(customCard);
     themeSection.appendChild(themeGrid);
     main.appendChild(themeSection);
+
+    if (currentTheme === 'custom') {
+        const customSection = createElement('div', 'mt-6');
+        customSection.appendChild(createElement('p', 'ios-section-header', { textContent: '自定義顏色' }));
+
+        const customBox = createElement('div', 'bg-white rounded-xl shadow-sm mt-2 px-4');
+
+        const defaults = customTheme || {
+            chatBg: '#FAF9F6',
+            bubbleLeftBg: '#FFFFFF',
+            bubbleLeftText: '#000000',
+            bubbleRightBg: '#FEE500',
+            bubbleRightText: '#625B71',
+            inputBg: '#F5F5F5'
+        };
+
+        const colorInputs = {};
+
+        colorInputs.chatBg = createColorPicker('聊天室底色', defaults.chatBg, async (val) => {
+            defaults.chatBg = val;
+            customTheme = { ...defaults };
+            await SettingsDB.set('chat_custom_theme', customTheme);
+            applyThemeToRoot(customTheme);
+        });
+        customBox.appendChild(colorInputs.chatBg);
+
+        colorInputs.bubbleLeftBg = createColorPicker('對方氣泡背景', defaults.bubbleLeftBg, async (val) => {
+            defaults.bubbleLeftBg = val;
+            customTheme = { ...defaults };
+            await SettingsDB.set('chat_custom_theme', customTheme);
+            applyThemeToRoot(customTheme);
+        });
+        customBox.appendChild(colorInputs.bubbleLeftBg);
+
+        colorInputs.bubbleLeftText = createColorPicker('對方氣泡文字', defaults.bubbleLeftText, async (val) => {
+            defaults.bubbleLeftText = val;
+            customTheme = { ...defaults };
+            await SettingsDB.set('chat_custom_theme', customTheme);
+            applyThemeToRoot(customTheme);
+        });
+        customBox.appendChild(colorInputs.bubbleLeftText);
+
+        colorInputs.bubbleRightBg = createColorPicker('我的氣泡背景', defaults.bubbleRightBg, async (val) => {
+            defaults.bubbleRightBg = val;
+            customTheme = { ...defaults };
+            await SettingsDB.set('chat_custom_theme', customTheme);
+            applyThemeToRoot(customTheme);
+        });
+        customBox.appendChild(colorInputs.bubbleRightBg);
+
+        colorInputs.bubbleRightText = createColorPicker('我的氣泡文字', defaults.bubbleRightText, async (val) => {
+            defaults.bubbleRightText = val;
+            customTheme = { ...defaults };
+            await SettingsDB.set('chat_custom_theme', customTheme);
+            applyThemeToRoot(customTheme);
+        });
+        customBox.appendChild(colorInputs.bubbleRightText);
+
+        colorInputs.inputBg = createColorPicker('輸入區域背景', defaults.inputBg, async (val) => {
+            defaults.inputBg = val;
+            customTheme = { ...defaults };
+            await SettingsDB.set('chat_custom_theme', customTheme);
+            applyThemeToRoot(customTheme);
+        });
+        customBox.appendChild(colorInputs.inputBg);
+
+        customSection.appendChild(customBox);
+        main.appendChild(customSection);
+    }
 
     const fontSection = createElement('div', 'mt-6');
     fontSection.appendChild(createElement('p', 'ios-section-header', { textContent: '字體大小' }));
@@ -94,64 +229,34 @@ async function renderChatSettings() {
 
     const previewSection = createElement('div', 'mt-6');
     previewSection.appendChild(createElement('p', 'ios-section-header', { textContent: '預覽' }));
-    const previewBox = createElement('div', 'rounded-xl p-4 mt-2');
-    const theme = THEMES.find(t => t.id === currentTheme);
-    previewBox.style.background = theme?.bg || '#fff';
-    previewBox.style.color = theme?.text || '#333';
+    
+    const previewBox = createElement('div', 'rounded-xl p-4 mt-2 flex flex-col gap-3');
+    
+    let previewVars;
+    if (currentTheme === 'custom' && customTheme) {
+        previewVars = customTheme;
+    } else {
+        const theme = THEMES.find(t => t.id === currentTheme);
+        previewVars = theme?.vars || THEMES[0].vars;
+    }
+    
+    previewBox.style.background = previewVars.chatBg;
     previewBox.style.fontSize = currentFontSize === 'small' ? '14px' : currentFontSize === 'large' ? '20px' : '16px';
-    previewBox.appendChild(createElement('p', '', { textContent: '這是預覽文字，用來展示主題效果。' }));
-    previewBox.appendChild(createElement('p', '', { textContent: '當前主題：' + (theme?.name || '淺色') }));
+    
+    const leftBubble = createElement('div', 'inline-block px-3 py-2 rounded-xl max-w-[70%]');
+    leftBubble.style.background = previewVars.bubbleLeftBg;
+    leftBubble.style.color = previewVars.bubbleLeftText;
+    leftBubble.textContent = '對方的訊息';
+    previewBox.appendChild(leftBubble);
+    
+    const rightBubble = createElement('div', 'inline-block px-3 py-2 rounded-xl max-w-[70%] self-end');
+    rightBubble.style.background = previewVars.bubbleRightBg;
+    rightBubble.style.color = previewVars.bubbleRightText;
+    rightBubble.textContent = '我的訊息';
+    previewBox.appendChild(rightBubble);
+    
     previewSection.appendChild(previewBox);
     main.appendChild(previewSection);
-
-    const otherSection = createElement('div', 'mt-6 mb-4');
-    otherSection.appendChild(createElement('p', 'ios-section-header', { textContent: '其他' }));
-
-    const otherList = createIOSGroupedList([
-        {
-            header: '',
-            items: [
-                {
-                    icon: 'api',
-                    iconBg: 'bg-kakao-brown',
-                    label: 'API 設定',
-                    chevron: true,
-                    onClick: () => Router.navigate('/api-config')
-                },
-                {
-                    icon: 'smart_toy',
-                    iconBg: 'bg-kakao-brown',
-                    label: '系統提示詞',
-                    chevron: true,
-                    onClick: () => Router.navigate('/api-config?tab=prompt')
-                }
-            ]
-        }
-    ]);
-    otherSection.appendChild(otherList);
-    main.appendChild(otherSection);
-
-        // Memory Settings Section
-    const memorySection = createElement('div', 'mt-6 mb-4');
-    memorySection.appendChild(createElement('p', 'ios-section-header', { textContent: '記憶設定' }));
-
-    const memoryList = createIOSGroupedList([
-        {
-            header: '',
-            items: [
-                {
-                    icon: 'psychology',
-                    iconBg: 'bg-purple-500',
-                    label: '記憶設定',
-                    value: '管理劇場、來源與層級',
-                    chevron: true,
-                    onClick: () => Router.navigate('/memory-settings')
-                }
-            ]
-        }
-    ]);
-    memorySection.appendChild(memoryList);
-    main.appendChild(memorySection);
 
     container.appendChild(main);
 
@@ -267,9 +372,9 @@ async function renderPerChatSettings(params) {
                     name.textContent = char.name;
                     row.appendChild(name);
                     
-                    const addBtn = createElement('button', 'px-3 py-1 rounded-lg bg-kakao-yellow text-kakao-brown text-sm font-medium');
-                    addBtn.textContent = '加入';
-                    addBtn.onclick = async () => {
+                    const addBtnInner = createElement('button', 'px-3 py-1 rounded-lg bg-kakao-yellow text-kakao-brown text-sm font-medium');
+                    addBtnInner.textContent = '加入';
+                    addBtnInner.onclick = async () => {
                         const newMemberIds = [...memberIds, char.id];
                         if (newMemberIds.length > 4) {
                             createToast('群組最多 4 個成員');
@@ -280,7 +385,7 @@ async function renderPerChatSettings(params) {
                         sheet.close();
                         Router.navigate('/chats/settings/' + chatId);
                     };
-                    row.appendChild(addBtn);
+                    row.appendChild(addBtnInner);
                     list.appendChild(row);
                 });
                 

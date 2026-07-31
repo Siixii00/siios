@@ -1,10 +1,22 @@
 ﻿import Router from './router.js';
 import { SettingsDB, initDB } from './db.js';
-import { createElement, createIcon, createToast } from './components.js';
+import { createElement, createIcon, createToast, createErrorModal } from './components.js';
 import LockScreen from './lockscreen.js';
 import HomeScreen from './homescreen.js';
 import { registerRoutes } from './apps/registry.js';
 import { MemorySystem } from './core/memory-system/index.js';
+
+window.showError = function(errorInfo) {
+    const info = typeof errorInfo === 'string' 
+        ? { message: errorInfo } 
+        : errorInfo;
+    createErrorModal({
+        title: info.title || '發生錯誤',
+        message: info.message || '未知錯誤',
+        details: info.details || '',
+        timestamp: info.timestamp || new Date().toISOString()
+    });
+};
 
 function isMobileDevice() {
     const ua = navigator.userAgent.toLowerCase();

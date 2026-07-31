@@ -830,7 +830,15 @@ async function handleGenerate() {
         switchPage('home');
         
     } catch (error) {
-        createToast('生成失敗: ' + (error.message || '未知錯誤'));
+        if (window.showError) {
+            window.showError({
+                title: 'Lofter 同人文生成失敗',
+                message: error.message || '未知錯誤',
+                details: error.stack || ''
+            });
+        } else {
+            createToast('生成失敗: ' + (error.message || '未知錯誤'));
+        }
     }
 }
 
