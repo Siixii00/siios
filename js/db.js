@@ -18,123 +18,148 @@ async function cleanLegacyDatabases() {
 }
 
 async function initDB() {
-    if (db) {
-        try {
-            const stores = db.objectStoreNames;
-            if (!stores.contains('users')) {
-                db.close();
+    try {
+        console.log('[DB] 開始初始化數據庫...');
+        
+        if (db) {
+            try {
+                const stores = db.objectStoreNames;
+                if (!stores.contains('users')) {
+                    console.log('[DB] 存儲結構不完整，重新初始化');
+                    db.close();
+                    db = null;
+                }
+            } catch (e) {
+                console.error('[DB] 檢查存儲失敗:', e);
                 db = null;
             }
-        } catch (e) {
-            db = null;
         }
-    }
-    if (db) return db;
+        if (db) {
+            console.log('[DB] 使用現有數據庫連接');
+            return db;
+        }
 
-    await cleanLegacyDatabases();
+        await cleanLegacyDatabases();
 
-    db = await openDB(DB_NAME, DB_VERSION, {
-        upgrade(database, oldVersion, newVersion, transaction) {
-            if (!database.objectStoreNames.contains('chats')) {
-                const chatsStore = database.createObjectStore('chats', { keyPath: 'id' });
-                chatsStore.createIndex('last_updated', 'last_updated');
-            }
+        console.log('[DB] 創建/打開數據庫:', DB_NAME, '版本:', DB_VERSION);
+        db = await openDB(DB_NAME, DB_VERSION, {
+            upgrade(database, oldVersion, newVersion, transaction) {
+                console.log('[DB] 升級數據庫從版本', oldVersion, '到', newVersion);
+                
+                if (!database.objectStoreNames.contains('chats')) {
+                    const chatsStore = database.createObjectStore('chats', { keyPath: 'id' });
+                    chatsStore.createIndex('last_updated', 'last_updated');
+                }
 
-            if (!database.objectStoreNames.contains('messages')) {
-                const messagesStore = database.createObjectStore('messages', { keyPath: 'id' });
-                messagesStore.createIndex('chat_id', 'chat_id');
-                messagesStore.createIndex('timestamp', 'timestamp');
-            }
+                if (!database.objectStoreNames.contains('messages')) {
+                    const messagesStore = database.createObjectStore('messages', { keyPath: 'id' });
+                    messagesStore.createIndex('chat_id', 'chat_id');
+                    messagesStore.createIndex('timestamp', 'timestamp');
+                }
 
-            if (database.objectStoreNames.contains('worldInfo')) {
-                database.deleteObjectStore('worldInfo');
-            }
+                if (database.objectStoreNames.contains('worldInfo')) {
+                    database.deleteObjectStore('worldInfo');
+                }
 
-            if (!database.objectStoreNames.contains('globalSettings')) {
-                const globalSettingsStore = database.createObjectStore('globalSettings', { keyPath: 'id' });
-                globalSettingsStore.createIndex('priority', 'priority');
-            }
+                if (!database.objectStoreNames.contains('globalSettings')) {
+                    const globalSettingsStore = database.createObjectStore('globalSettings', { keyPath: 'id' });
+                    globalSettingsStore.createIndex('priority', 'priority');
+                }
 
-            if (!database.objectStoreNames.contains('globalForbidden')) {
-                const globalForbiddenStore = database.createObjectStore('globalForbidden', { keyPath: 'id' });
-                globalForbiddenStore.createIndex('priority', 'priority');
-            }
+                if (!database.objectStoreNames.contains('globalForbidden')) {
+                    const globalForbiddenStore = database.createObjectStore('globalForbidden', { keyPath: 'id' });
+                    globalForbiddenStore.createIndex('priority', 'priority');
+                }
 
-            if (!database.objectStoreNames.contains('theaterSettings')) {
-                const theaterSettingsStore = database.createObjectStore('theaterSettings', { keyPath: 'id' });
-                theaterSettingsStore.createIndex('priority', 'priority');
-            }
+                if (!database.objectStoreNames.contains('theaterSettings')) {
+                    const theaterSettingsStore = database.createObjectStore('theaterSettings', { keyPath: 'id' });
+                    theaterSettingsStore.createIndex('priority', 'priority');
+                }
 
-            if (!database.objectStoreNames.contains('keywordSettings')) {
-                const keywordSettingsStore = database.createObjectStore('keywordSettings', { keyPath: 'id' });
-                keywordSettingsStore.createIndex('priority', 'priority');
-            }
+                if (!database.objectStoreNames.contains('keywordSettings')) {
+                    const keywordSettingsStore = database.createObjectStore('keywordSettings', { keyPath: 'id' });
+                    keywordSettingsStore.createIndex('priority', 'priority');
+                }
 
 
-            if (!database.objectStoreNames.contains('characters')) {
-                database.createObjectStore('characters', { keyPath: 'id' });
-            }
+                if (!database.objectStoreNames.contains('characters')) {
+                    database.createObjectStore('characters', { keyPath: 'id' });
+                }
 
-            if (!database.objectStoreNames.contains('settings')) {
-                database.createObjectStore('settings', { keyPath: 'key' });
-            }
+                if (!database.objectStoreNames.contains('settings')) {
+                    database.createObjectStore('settings', { keyPath: 'key' });
+                }
 
-            if (!database.objectStoreNames.contains('memories')) {
-                const memoriesStore = database.createObjectStore('memories', { keyPath: 'id' });
-                memoriesStore.createIndex('chat_id', 'chat_id');
-                memoriesStore.createIndex('timestamp', 'timestamp');
-                memoriesStore.createIndex('memory_type', 'memory_type');
-                memoriesStore.createIndex('domain', 'domain');
-            }
-
-            if (oldVersion < 4 && database.objectStoreNames.contains('memories')) {
-                const memoriesStore = transaction.objectStore('memories');
-                if (!memoriesStore.indexNames.contains('domain')) {
+                if (!database.objectStoreNames.contains('memories')) {
+                    const memoriesStore = database.createObjectStore('memories', { keyPath: 'id' });
+                    memoriesStore.createIndex('chat_id', 'chat_id');
+                    memoriesStore.createIndex('timestamp', 'timestamp');
+                    memoriesStore.createIndex('memory_type', 'memory_type');
                     memoriesStore.createIndex('domain', 'domain');
                 }
-            }
 
-            if (!database.objectStoreNames.contains('wikiRecords')) {
-                const wikiStore = database.createObjectStore('wikiRecords', { keyPath: 'id' });
-                wikiStore.createIndex('character_id', 'character_id');
-                wikiStore.createIndex('page_type', 'page_type');
-                wikiStore.createIndex('title', 'title');
-                wikiStore.createIndex('updated_at', 'updated_at');
-            }
+                if (oldVersion < 4 && database.objectStoreNames.contains('memories')) {
+                    const memoriesStore = transaction.objectStore('memories');
+                    if (!memoriesStore.indexNames.contains('domain')) {
+                        memoriesStore.createIndex('domain', 'domain');
+                    }
+                }
 
-            if (!database.objectStoreNames.contains('users')) {
-                database.createObjectStore('users', { keyPath: 'id' });
-            }
+                if (!database.objectStoreNames.contains('wikiRecords')) {
+                    const wikiStore = database.createObjectStore('wikiRecords', { keyPath: 'id' });
+                    wikiStore.createIndex('character_id', 'character_id');
+                    wikiStore.createIndex('page_type', 'page_type');
+                    wikiStore.createIndex('title', 'title');
+                    wikiStore.createIndex('updated_at', 'updated_at');
+                }
 
-            if (!database.objectStoreNames.contains('health')) {
-                const healthStore = database.createObjectStore('health', { keyPath: 'id' });
-                healthStore.createIndex('user_id', 'user_id');
-                healthStore.createIndex('type', 'type');
-                healthStore.createIndex('start_date', 'start_date');
-            }
+                if (!database.objectStoreNames.contains('users')) {
+                    database.createObjectStore('users', { keyPath: 'id' });
+                }
 
-            if (!database.objectStoreNames.contains('mcpConfigs')) {
-                const mcpStore = database.createObjectStore('mcpConfigs', { keyPath: 'id' });
-                mcpStore.createIndex('enabled', 'enabled');
-            }
+                if (!database.objectStoreNames.contains('health')) {
+                    const healthStore = database.createObjectStore('health', { keyPath: 'id' });
+                    healthStore.createIndex('user_id', 'user_id');
+                    healthStore.createIndex('type', 'type');
+                    healthStore.createIndex('start_date', 'start_date');
+                }
 
-            if (!database.objectStoreNames.contains('activities')) {
-                const activitiesStore = database.createObjectStore('activities', { keyPath: 'id' });
-                activitiesStore.createIndex('user_id', 'user_id');
-                activitiesStore.createIndex('timestamp', 'timestamp');
-                activitiesStore.createIndex('platform', 'platform');
-                activitiesStore.createIndex('activity_type', 'activity_type');
-            }
-        },
-        blocked() {
-            if (db) { db.close(); db = null; }
-        },
-        blocking() {
-            if (db) { db.close(); db = null; }
-        }
-    });
+                if (!database.objectStoreNames.contains('mcpConfigs')) {
+                    const mcpStore = database.createObjectStore('mcpConfigs', { keyPath: 'id' });
+                    mcpStore.createIndex('enabled', 'enabled');
+                }
 
-    return db;
+                if (!database.objectStoreNames.contains('activities')) {
+                    const activitiesStore = database.createObjectStore('activities', { keyPath: 'id' });
+                    activitiesStore.createIndex('user_id', 'user_id');
+                    activitiesStore.createIndex('timestamp', 'timestamp');
+                    activitiesStore.createIndex('platform', 'platform');
+                    activitiesStore.createIndex('activity_type', 'activity_type');
+                }
+                
+                console.log('[DB] 數據庫升級完成');
+            },
+            blocked() {
+                console.warn('[DB] 數據庫被阻塞');
+                if (db) { db.close(); db = null; }
+            },
+            blocking() {
+                console.warn('[DB] 數據庫正在阻塞其他連接');
+                if (db) { db.close(); db = null; }
+            }
+        });
+
+        console.log('[DB] 數據庫初始化成功');
+        return db;
+    } catch (error) {
+        console.error('[DB] 數據庫初始化失敗:', error);
+        window.showError?.({
+            message: '數據庫初始化失敗: ' + error.message,
+            title: '數據庫錯誤',
+            details: error.stack || ''
+        });
+        throw error;
+    }
 }
 
 function generateId() {

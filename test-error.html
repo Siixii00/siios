@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>錯誤處理測試</title>
+    <script src="js/debug-logger.js"></script>
+</head>
+<body>
+    <h1>錯誤處理測試頁面</h1>
+    <div style="padding: 20px;">
+        <button onclick="testError()">測試全局錯誤</button>
+        <button onclick="testPromise()">測試 Promise 錯誤</button>
+        <button onclick="testShowError()">測試 showError 彈窗</button>
+        <button onclick="testConsoleLog()">測試 Console 日誌</button>
+    </div>
+    
+    <script>
+        function testError() {
+            throw new Error('這是一個測試錯誤');
+        }
+        
+        function testPromise() {
+            Promise.reject('這是一個 Promise 拒絕');
+        }
+        
+        function testShowError() {
+            window.showError({
+                message: '這是一個手動觸發的錯誤彈窗',
+                title: '測試錯誤',
+                details: '錯誤詳情\n多行文本\n測試完成'
+            });
+        }
+        
+        function testConsoleLog() {
+            console.log('[測試] 這是一條普通日誌');
+            console.warn('[測試] 這是一條警告日誌');
+            console.error('[測試] 這是一條錯誤日誌');
+            console.info('[測試] 這是一條信息日誌');
+            console.log('[測試] 對象:', { key: 'value', nested: { a: 1, b: 2 } });
+        }
+    </script>
+</body>
+</html>

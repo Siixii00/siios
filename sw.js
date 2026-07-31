@@ -17,6 +17,7 @@ const STATIC_ASSETS = [
   './js/components.js',
   './js/lockscreen.js',
   './js/homescreen.js',
+  './js/debug-logger.js',
   './js/apps/registry.js',
   './js/apps/chats/index.js',
   './js/apps/chats/chat.js',
