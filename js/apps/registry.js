@@ -80,7 +80,8 @@ async function loadApps() {
         import('./health/index.js'),
         import('./mcp-market/index.js'),
         import('./settings/mcp-settings.js'),
-        import('./activity/index.js')
+        import('./activity/index.js'),
+        import('./settings/backup-settings.js')
     ];
 
     const results = await Promise.all(appModules);

@@ -79,6 +79,13 @@ async function renderSettings() {
             title: '活動同步',
             desc: '記錄手機活動，讓 AI 了解你的日常',
             path: '/activity'
+        },
+        {
+            icon: 'backup',
+            iconBg: 'bg-gradient-to-r from-blue-500 to-purple-600',
+            title: '資料備份與還原',
+            desc: '本地 + GitHub + Google Drive 三重備份',
+            path: '/settings/backup'
         }
     ];
 
