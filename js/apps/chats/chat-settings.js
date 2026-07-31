@@ -1,6 +1,6 @@
 ﻿import Router from '../../router.js';
-import { createElement, createIcon, createKakaoBottomNav, createIOSGroupedList } from '../../components.js';
-import { SettingsDB, ChatsDB, TheaterSettingsDB } from '../../db.js';
+import { createElement, createIcon, createKakaoBottomNav, createIOSGroupedList, createToast, createKakaoBottomSheet } from '../../components.js';
+import { SettingsDB, ChatsDB, TheaterSettingsDB, CharactersDB } from '../../db.js';
 import { CHATS_TABS } from './chats-nav.js';
 
 const THEMES = [
@@ -161,9 +161,172 @@ async function renderChatSettings() {
     return { element: container, cleanup: null };
 }
 
+async function renderPerChatSettings(params) {
+    const chatId = params.id;
+    const chat = await ChatsDB.getById(chatId);
+    if (!chat) {
+        Router.navigate('/chats');
+        return { element: createElement('div'), cleanup: null };
+    }
+
+    const container = createElement('div', 'app-container');
+
+    const header = createElement('header', 'sticky top-0 z-50 bg-white');
+    header.style.paddingTop = 'env(safe-area-inset-top, 0px)';
+
+    const headerInner = createElement('div', 'flex justify-between items-center h-[86px] px-4');
+
+    const backBtn = createElement('button', 'ios-back-btn', {
+        onClick: () => Router.back()
+    });
+    backBtn.innerHTML = '<i class="fas fa-chevron-left"></i> 返回';
+    headerInner.appendChild(backBtn);
+
+    const title = createElement('h1', 'text-[32px] font-bold text-black leading-[31px]');
+    title.textContent = chat.is_group ? '群組設定' : '聊天設定';
+    headerInner.appendChild(title);
+
+    header.appendChild(headerInner);
+    container.appendChild(header);
+
+    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-[83px] px-4');
+
+    if (chat.is_group) {
+        const groupSection = createElement('div', 'mt-4');
+        groupSection.appendChild(createElement('p', 'ios-section-header', { textContent: '群組成員' }));
+        
+        const memberIds = chat.member_ids || [];
+        const memberList = createElement('div', 'ios-grouped-list shadow-sm mt-2');
+        
+        for (const mid of memberIds) {
+            const char = await CharactersDB.getById(mid);
+            const memberRow = createElement('div', 'ios-list-cell');
+            
+            const avatar = createElement('img', 'w-10 h-10 rounded-full object-cover mr-3', {
+                src: char?.avatar || 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23E5E5EA"/><text x="50" y="60" text-anchor="middle" font-size="40" fill="%238E8E93">?</text></svg>',
+                alt: char?.name || 'Unknown'
+            });
+            memberRow.appendChild(avatar);
+            
+            const nameSpan = createElement('span', 'flex-1 text-body-lg');
+            nameSpan.textContent = char?.name || '未知角色';
+            memberRow.appendChild(nameSpan);
+            
+            if (memberIds.length > 1) {
+                const removeBtn = createElement('button', 'px-3 py-1 rounded-lg bg-red-100 text-red-600 text-sm');
+                removeBtn.textContent = '移除';
+                removeBtn.onclick = async () => {
+                    const newMemberIds = memberIds.filter(id => id !== mid);
+                    const primaryCharId = newMemberIds[0];
+                    const primaryChar = await CharactersDB.getById(primaryCharId);
+                    await ChatsDB.update(chatId, {
+                        member_ids: newMemberIds,
+                        character_id: primaryCharId,
+                        character_name: primaryChar?.name || '群組聊天',
+                        character_avatar: primaryChar?.avatar || '',
+                        bound_user_id: primaryChar?.bound_user_id || null
+                    });
+                    createToast('已移除成員');
+                    Router.navigate('/chats/settings/' + chatId);
+                };
+                memberRow.appendChild(removeBtn);
+            }
+            
+            memberList.appendChild(memberRow);
+        }
+        
+        groupSection.appendChild(memberList);
+        main.appendChild(groupSection);
+        
+        const addSection = createElement('div', 'mt-4');
+        addSection.appendChild(createElement('p', 'ios-section-header', { textContent: '加入成員' }));
+        
+        const addBtn = createElement('button', 'w-full py-3 rounded-lg bg-kakao-yellow text-kakao-brown font-medium mt-2', {
+            textContent: '選擇角色加入群組',
+            onClick: async () => {
+                const characters = await CharactersDB.getAll();
+                const available = characters.filter(c => !memberIds.includes(c.id));
+                
+                if (available.length === 0) {
+                    createToast('沒有可加入的角色');
+                    return;
+                }
+                
+                const form = createElement('div', 'p-4 flex flex-col gap-3');
+                const list = createElement('div', 'flex flex-col gap-2');
+                
+                available.forEach(char => {
+                    const row = createElement('div', 'flex items-center gap-3 p-3 rounded-lg bg-gray-50');
+                    const avatar = createElement('img', 'w-10 h-10 rounded-full object-cover', {
+                        src: char.avatar || 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23E5E5EA"/><text x="50" y="60" text-anchor="middle" font-size="40" fill="%238E8E93">?</text></svg>',
+                        alt: char.name
+                    });
+                    row.appendChild(avatar);
+                    
+                    const name = createElement('span', 'flex-1 text-body-lg');
+                    name.textContent = char.name;
+                    row.appendChild(name);
+                    
+                    const addBtn = createElement('button', 'px-3 py-1 rounded-lg bg-kakao-yellow text-kakao-brown text-sm font-medium');
+                    addBtn.textContent = '加入';
+                    addBtn.onclick = async () => {
+                        const newMemberIds = [...memberIds, char.id];
+                        if (newMemberIds.length > 4) {
+                            createToast('群組最多 4 個成員');
+                            return;
+                        }
+                        await ChatsDB.update(chatId, { member_ids: newMemberIds });
+                        createToast('已加入 ' + char.name);
+                        sheet.close();
+                        Router.navigate('/chats/settings/' + chatId);
+                    };
+                    row.appendChild(addBtn);
+                    list.appendChild(row);
+                });
+                
+                form.appendChild(list);
+                
+                const sheet = createKakaoBottomSheet([], {
+                    title: '加入成員',
+                    customContent: form
+                });
+                sheet.open();
+            }
+        });
+        addSection.appendChild(addBtn);
+        main.appendChild(addSection);
+    } else {
+        const chatSection = createElement('div', 'mt-4');
+        chatSection.appendChild(createElement('p', 'ios-section-header', { textContent: '聊天資訊' }));
+        
+        const infoList = createIOSGroupedList([
+            {
+                header: '',
+                items: [
+                    {
+                        icon: 'smart_toy',
+                        iconBg: 'bg-kakao-brown',
+                        label: '角色',
+                        value: chat.character_name,
+                        chevron: true,
+                        onClick: () => Router.navigate('/characters/' + chat.character_id)
+                    }
+                ]
+            }
+        ]);
+        chatSection.appendChild(infoList);
+        main.appendChild(chatSection);
+    }
+
+    container.appendChild(main);
+
+    return { element: container, cleanup: null };
+}
+
 export default {
     id: 'chats-settings',
     routes: [
-        { path: '/chats/settings', render: renderChatSettings }
+        { path: '/chats/settings', render: renderChatSettings },
+        { path: '/chats/settings/:id', render: renderPerChatSettings }
     ]
 };

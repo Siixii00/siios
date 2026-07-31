@@ -159,6 +159,8 @@ const ChatsDB = {
             last_message: data.last_message || '',
             last_updated: Date.now(),
             created_at: Date.now(),
+            is_group: data.is_group || false,
+            member_ids: data.member_ids || [],
             ...data
         };
         await database.put('chats', chat);
@@ -186,7 +188,7 @@ const MessagesDB = {
         return database.getAllFromIndex('messages', 'chat_id', chatId);
     },
 
-    async create(chatId, role, content) {
+    async create(chatId, role, content, speakerCharacterId = null) {
         const database = await initDB();
         const id = generateId();
         const message = {
@@ -194,6 +196,7 @@ const MessagesDB = {
             chat_id: chatId,
             role,
             content,
+            speaker_character_id: speakerCharacterId,
             timestamp: Date.now()
         };
         await database.put('messages', message);

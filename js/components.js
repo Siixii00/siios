@@ -307,8 +307,11 @@ function formatTime(timestamp) {
     return `${date.getMonth() + 1}/${date.getDate()}`;
 }
 
-function createKakaoBubble(role, content, avatar, name) {
+function createKakaoBubble(role, content, avatar, name, characterId = null) {
     const row = createElement('div', `kakao-message-row ${role}`);
+    if (characterId) {
+        row.dataset.characterId = characterId;
+    }
     
     if (role === 'ai' || role === 'assistant') {
         if (avatar) {
@@ -333,6 +336,30 @@ function createKakaoBubble(role, content, avatar, name) {
         bubble.appendChild(createElement('span', 'kakao-bubble-text', { textContent: content }));
         row.appendChild(bubble);
     }
+    
+    return row;
+}
+
+function createGroupTypingIndicator(avatar, name) {
+    const row = createElement('div', 'kakao-message-row ai group-typing-indicator');
+    
+    if (avatar) {
+        const avatarEl = createElement('img', 'kakao-message-avatar', {
+            src: avatar,
+            alt: name || 'AI'
+        });
+        row.appendChild(avatarEl);
+    }
+    
+    const messageContent = createElement('div', 'kakao-message-content');
+    if (name) {
+        messageContent.appendChild(createElement('span', 'kakao-message-name has-name', { textContent: name }));
+    }
+    
+    const bubble = createElement('div', 'kakao-bubble-left');
+    bubble.appendChild(createElement('span', 'kakao-bubble-text', { textContent: '輸入中...' }));
+    messageContent.appendChild(bubble);
+    row.appendChild(messageContent);
     
     return row;
 }
@@ -533,5 +560,6 @@ export {
     createEmptyState,
     formatTime,
     createKakaoBottomSheet,
-    createKakaoSideMenu
+    createKakaoSideMenu,
+    createGroupTypingIndicator
 };

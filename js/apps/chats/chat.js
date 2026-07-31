@@ -1,13 +1,14 @@
 ﻿import Router from '../../router.js';
-import { createElement, createIcon, createKakaoBubble, createToast, createKakaoBottomSheet, createKakaoSideMenu } from '../../components.js';
-import { ChatsDB, MessagesDB, SettingsDB, MemoryDB } from '../../db.js';
+import { createElement, createIcon, createKakaoBubble, createToast, createKakaoBottomSheet, createKakaoSideMenu, createGroupTypingIndicator } from '../../components.js';
+import { ChatsDB, MessagesDB, SettingsDB, MemoryDB, CharactersDB, UsersDB } from '../../db.js';
 import APIClient from '../../api.js';
 
 let currentChat = null;
 let messages = [];
-let isStreaming = false;
+let activeResponseCount = 0;
 let messageCount = 0;
 let batchProcessing = false;
+let streamingPlaceholders = new Map();
 
 async function renderChat(params) {
     const chatId = params.id;
@@ -33,8 +34,35 @@ async function renderChat(params) {
     header.appendChild(backBtn);
     
     const title = createElement('h1', '');
-    title.textContent = currentChat.character_name;
-    header.appendChild(title);
+    
+    if (currentChat.is_group) {
+        title.textContent = '群組聊天';
+        const memberIds = currentChat.member_ids || [];
+        const avatarStack = createElement('div', 'flex -space-x-2 ml-2');
+        const displayMembers = memberIds.slice(0, 3);
+        for (const mid of displayMembers) {
+            const char = await CharactersDB.getById(mid);
+            if (char) {
+                const avatar = createElement('img', 'w-7 h-7 rounded-full border-2 border-white object-cover', {
+                    src: char.avatar || 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23E5E5EA"/><text x="50" y="60" text-anchor="middle" font-size="40" fill="%238E8E93">?</text></svg>',
+                    alt: char.name
+                });
+                avatarStack.appendChild(avatar);
+            }
+        }
+        if (memberIds.length > 3) {
+            const overflow = createElement('div', 'w-7 h-7 rounded-full border-2 border-white bg-gray-200 flex items-center justify-center text-xs text-gray-600');
+            overflow.textContent = '+' + (memberIds.length - 3);
+            avatarStack.appendChild(overflow);
+        }
+        const titleRow = createElement('div', 'flex items-center');
+        titleRow.appendChild(title);
+        titleRow.appendChild(avatarStack);
+        header.appendChild(titleRow);
+    } else {
+        title.textContent = currentChat.character_name;
+        header.appendChild(title);
+    }
     
     const menuBtn = createElement('button', '');
     menuBtn.appendChild(createIcon('menu'));
@@ -120,7 +148,8 @@ async function renderChat(params) {
                 return;
             }
             const last10 = msgs.slice(-10);
-            await window.App.memorySystem.processBatch(last10, chatId, currentChat.character_id);
+            const primaryCharId = currentChat.is_group ? (currentChat.member_ids && currentChat.member_ids[0]) : currentChat.character_id;
+            await window.App.memorySystem.processBatch(last10, chatId, primaryCharId);
             createToast('Memory summary generated');
         } catch (e) {
             createToast('Failed to generate summary: ' + e.message, 'error');
@@ -143,10 +172,11 @@ async function renderChat(params) {
     
     async function createDailyBackup() {
         const msgs = await MessagesDB.getByChatId(chatId);
+        const char = currentChat;
         const backup = {
             chat_id: chatId,
-            character_id: currentChat.character_id,
-            character_name: currentChat.character_name,
+            character_id: char.character_id,
+            character_name: char.character_name,
             messages: msgs,
             timestamp: Date.now(),
             type: 'daily_backup'
@@ -175,16 +205,118 @@ async function renderChat(params) {
         createToast('Memory cleared');
     }
     
+    async function openGroupMemberSheet() {
+        const characters = await CharactersDB.getAll();
+        const memberIds = currentChat.member_ids || [];
+        
+        const form = createElement('div', 'p-4 flex flex-col gap-3');
+        
+        const hint = createElement('div', 'text-sm text-gray-500 mb-2');
+        hint.textContent = '選擇要加入群組的角色（最多 4 個）';
+        form.appendChild(hint);
+        
+        const list = createElement('div', 'flex flex-col gap-2');
+        
+        characters.forEach(char => {
+            const isMember = memberIds.includes(char.id);
+            const row = createElement('div', 'flex items-center gap-3 p-3 rounded-lg bg-gray-50');
+            
+            const avatar = createElement('img', 'w-10 h-10 rounded-full object-cover', {
+                src: char.avatar || 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23E5E5EA"/><text x="50" y="60" text-anchor="middle" font-size="40" fill="%238E8E93">?</text></svg>',
+                alt: char.name
+            });
+            row.appendChild(avatar);
+            
+            const name = createElement('span', 'flex-1 text-body-lg');
+            name.textContent = char.name + (isMember ? ' (已加入)' : '');
+            row.appendChild(name);
+            
+            if (!isMember) {
+                const addBtn = createElement('button', 'px-3 py-1 rounded-lg bg-kakao-yellow text-kakao-brown text-sm font-medium');
+                addBtn.textContent = '加入';
+                addBtn.onclick = async () => {
+                    const newMemberIds = [...memberIds, char.id];
+                    if (newMemberIds.length > 4) {
+                        createToast('群組最多 4 個成員');
+                        return;
+                    }
+                    await ChatsDB.update(chatId, { member_ids: newMemberIds });
+                    currentChat = await ChatsDB.getById(chatId);
+                    createToast('已加入 ' + char.name);
+                    sheet.close();
+                    Router.navigate('/chat/' + chatId);
+                };
+                row.appendChild(addBtn);
+            }
+            
+            list.appendChild(row);
+        });
+        
+        form.appendChild(list);
+        
+        const sheet = createKakaoBottomSheet([], {
+            title: '群組成員',
+            customContent: form
+        });
+        
+        sheet.open();
+    }
+    
+    async function removeGroupMember(memberId) {
+        const memberIds = currentChat.member_ids || [];
+        if (memberIds.length <= 1) {
+            createToast('群組至少需要 1 個成員');
+            return;
+        }
+        const newMemberIds = memberIds.filter(id => id !== memberId);
+        const primaryCharId = newMemberIds[0];
+        const primaryChar = await CharactersDB.getById(primaryCharId);
+        await ChatsDB.update(chatId, {
+            member_ids: newMemberIds,
+            character_id: primaryCharId,
+            character_name: primaryChar?.name || '群組聊天',
+            character_avatar: primaryChar?.avatar || '',
+            bound_user_id: primaryChar?.bound_user_id || null
+        });
+        currentChat = await ChatsDB.getById(chatId);
+        createToast('已移除成員');
+        Router.navigate('/chat/' + chatId);
+    }
+    
+    const sideMenuItems = [
+        {
+            icon: 'person',
+            label: 'Character Info',
+            onClick: () => currentChat.is_group ? createToast('群組聊天') : Router.navigate('/characters/' + currentChat.character_id)
+        },
+        { icon: 'account_circle', label: 'User Mask', onClick: () => createToast('User mask feature in development') },
+        { icon: 'public', label: 'World Setting', onClick: () => createToast('World setting feature in development') }
+    ];
+    
+    if (currentChat.is_group) {
+        const memberIds = currentChat.member_ids || [];
+        const memberItems = memberIds.map(mid => {
+            return {
+                icon: 'person',
+                label: '成員',
+                value: '',
+                onClick: () => {}
+            };
+        });
+        sideMenuItems.push({
+            icon: 'group',
+            label: 'Participants',
+            value: memberIds.length + ' members',
+            onClick: openGroupMemberSheet
+        });
+    }
+    
     const sideMenu = createKakaoSideMenu({
-        title: currentChat.character_name,
+        title: currentChat.is_group ? '群組聊天' : currentChat.character_name,
         sections: [
             {
                 title: 'Info',
-                items: [
-                    { icon: 'person', label: 'Character Info', onClick: () => Router.navigate('/characters/' + currentChat.character_id) },
-                    { icon: 'account_circle', label: 'User Mask', onClick: () => createToast('User mask feature in development') },
-                    { icon: 'public', label: 'World Setting', onClick: () => createToast('World setting feature in development') }
-                ]
+                items: sideMenuItems
             },
             {
                 title: 'Settings',
@@ -246,27 +378,27 @@ async function renderChat(params) {
         main.appendChild(dateDivider);
     }
     
-    messages.forEach(msg => {
+    for (const msg of messages) {
+        let avatar = currentChat.character_avatar;
+        let name = currentChat.character_name;
+        
+        if (msg.role === 'assistant' && msg.speaker_character_id) {
+            const speakerChar = await CharactersDB.getById(msg.speaker_character_id);
+            if (speakerChar) {
+                avatar = speakerChar.avatar || avatar;
+                name = speakerChar.name || name;
+            }
+        }
+        
         const bubble = createKakaoBubble(
             msg.role === 'user' ? 'user' : 'ai',
             msg.content,
-            currentChat.character_avatar,
-            currentChat.character_name
+            avatar,
+            name,
+            msg.speaker_character_id || undefined
         );
         main.appendChild(bubble);
-    });
-    
-    const streamingBubble = createElement('div', 'kakao-message-row ai hidden');
-    const streamingContent = createElement('div', 'kakao-message-content');
-    streamingContent.appendChild(createElement('span', 'kakao-message-name has-name', { textContent: currentChat.character_name }));
-    const streamingBubbleInner = createElement('div', 'kakao-bubble-left');
-    streamingBubbleInner.appendChild(createElement('span', 'kakao-bubble-text'));
-    streamingContent.appendChild(streamingBubbleInner);
-    streamingBubble.appendChild(createElement('img', 'kakao-message-avatar', { src: currentChat.character_avatar }));
-    streamingBubble.appendChild(streamingContent);
-    main.appendChild(streamingBubble);
-    
-    container.appendChild(main);
+    }
     
     const inputArea = createElement('div', 'kakao-chat-input-area');
     
@@ -316,15 +448,13 @@ async function renderChat(params) {
     sendBtn.disabled = true;
     
     textarea.addEventListener('input', () => {
-        sendBtn.disabled = textarea.value.trim() === '' || isStreaming;
+        sendBtn.disabled = textarea.value.trim() === '' || activeResponseCount > 0;
     });
     
     const sendMessage = async () => {
         const content = textarea.value.trim();
-        if (!content || isStreaming) return;
+        if (!content || activeResponseCount > 0) return;
         
-        isStreaming = true;
-        sendBtn.disabled = true;
         textarea.value = '';
         textarea.style.height = '';
         
@@ -337,8 +467,6 @@ async function renderChat(params) {
         
         messages = await MessagesDB.getByChatId(chatId);
         messageCount = messages.length;
-        isStreaming = false;
-        generateBtn.disabled = textarea.value.trim() === '';
     };
     
     sendBtn.onclick = sendMessage;
@@ -351,85 +479,204 @@ async function renderChat(params) {
     generateBtn.disabled = true;
     
     textarea.addEventListener('input', () => {
-        generateBtn.disabled = textarea.value.trim() === '' || isStreaming;
+        generateBtn.disabled = textarea.value.trim() === '' || activeResponseCount > 0;
     });
+    
+    async function startGroupResponses(userMessage) {
+        const memberIds = currentChat.member_ids || [];
+        if (memberIds.length === 0) return;
+        
+        activeResponseCount = memberIds.length;
+        updateInputDisabled();
+        
+        const memberChars = new Map();
+        for (const mid of memberIds) {
+            memberChars.set(mid, await CharactersDB.getById(mid));
+        }
+        
+        for (const mid of memberIds) {
+            const char = memberChars.get(mid);
+            const avatar = char?.avatar || '';
+            const name = char?.name || 'AI';
+            const placeholder = createGroupTypingIndicator(avatar, name);
+            streamingPlaceholders.set(mid, placeholder);
+            main.appendChild(placeholder);
+        }
+        main.scrollTop = main.scrollHeight;
+        
+        const callbacks = memberIds.map((memberId) => {
+            const char = memberChars.get(memberId);
+            const avatar = char?.avatar || '';
+            const name = char?.name || 'AI';
+            
+            return {
+                onChunk: (chunk, fullContent) => {
+                    const placeholder = streamingPlaceholders.get(memberId);
+                    if (placeholder) {
+                        const bubbleText = placeholder.querySelector('.kakao-bubble-text');
+                        if (bubbleText) {
+                            bubbleText.textContent = fullContent;
+                        }
+                    }
+                    main.scrollTop = main.scrollHeight;
+                },
+                onComplete: async (fullContent) => {
+                    await MessagesDB.create(chatId, 'assistant', fullContent, memberId);
+                    
+                    const placeholder = streamingPlaceholders.get(memberId);
+                    if (placeholder) {
+                        const finalBubble = createKakaoBubble('ai', fullContent, avatar, name, memberId);
+                        placeholder.replaceWith(finalBubble);
+                        streamingPlaceholders.delete(memberId);
+                    }
+                    
+                    await ChatsDB.update(chatId, { last_message: fullContent.substring(0, 50) });
+                    
+                    messageCount++;
+                    if (messageCount % 10 === 0 && window.App?.memorySystem && !batchProcessing) {
+                        const settings = await SettingsDB.getAll();
+                        if (settings.memory_enabled) {
+                            batchProcessing = true;
+                            const recentMessages = await MessagesDB.getByChatId(chatId);
+                            const last10 = recentMessages.slice(-10);
+                            const primaryCharId = currentChat.member_ids && currentChat.member_ids[0];
+                            window.App.memorySystem.processBatch(last10, chatId, primaryCharId)
+                                .catch(() => {})
+                                .finally(() => { batchProcessing = false; });
+                        }
+                    }
+                    
+                    messages = await MessagesDB.getByChatId(chatId);
+                    messageCount = messages.length;
+                    
+                    activeResponseCount--;
+                    updateInputDisabled();
+                },
+                onError: (error) => {
+                    const placeholder = streamingPlaceholders.get(memberId);
+                    if (placeholder) {
+                        placeholder.remove();
+                        streamingPlaceholders.delete(memberId);
+                    }
+                    createToast(name + ': ' + error, 'error');
+                    activeResponseCount--;
+                    updateInputDisabled();
+                }
+            };
+        });
+        
+        await APIClient.groupStream(chatId, userMessage, memberIds, callbacks);
+    }
+    
+    function updateInputDisabled() {
+        const isEmpty = textarea.value.trim() === '';
+        sendBtn.disabled = isEmpty || activeResponseCount > 0;
+        generateBtn.disabled = isEmpty || activeResponseCount > 0;
+        
+        if (activeResponseCount > 0) {
+            generateBtn.style.color = '#141413';
+        } else {
+            generateBtn.style.color = '#6B6B6B';
+            generateBtn.querySelector('svg').style.animation = '';
+        }
+    }
     
     let styleSheet = null;
     
     const generateResponse = async () => {
         const content = textarea.value.trim();
-        if (!content || isStreaming) return;
+        if (!content || activeResponseCount > 0) return;
         
-        isStreaming = true;
-        generateBtn.disabled = true;
-        generateBtn.style.color = '#141413';
-        generateBtn.querySelector('svg').style.animation = 'spin 1s linear infinite';
-        
-        if (!styleSheet) {
-            styleSheet = document.createElement('style');
-            styleSheet.textContent = '@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }';
-            document.head.appendChild(styleSheet);
-        }
+        textarea.value = '';
+        textarea.style.height = '';
         
         await MessagesDB.create(chatId, 'user', content);
         
         const userBubble = createKakaoBubble('user', content);
         main.appendChild(userBubble);
         
-        textarea.value = '';
-        textarea.style.height = '';
-        
         main.scrollTop = main.scrollHeight;
         
-        streamingBubble.classList.remove('hidden');
-        const bubbleText = streamingBubble.querySelector('.kakao-bubble-text');
-        bubbleText.textContent = '';
-        
-        await APIClient.stream(
-            chatId,
-            content,
-            (chunk, fullContent) => {
-                bubbleText.textContent = fullContent;
-                main.scrollTop = main.scrollHeight;
-            },
-            async (fullContent) => {
-                await MessagesDB.create(chatId, 'assistant', fullContent);
-                
-                const aiBubble = createKakaoBubble('ai', fullContent, currentChat.character_avatar, currentChat.character_name);
-                streamingBubble.replaceWith(aiBubble);
-                
-                await ChatsDB.update(chatId, { last_message: fullContent.substring(0, 50) });
-                
-                messageCount++;
-                if (messageCount % 10 === 0 && window.App?.memorySystem && !batchProcessing) {
-                    const settings = await SettingsDB.getAll();
-                    if (settings.memory_enabled) {
-                        batchProcessing = true;
-                        const recentMessages = await MessagesDB.getByChatId(chatId);
-                        const last10 = recentMessages.slice(-10);
-                        window.App.memorySystem.processBatch(last10, chatId, currentChat.character_id)
-                            .catch(() => {})
-                            .finally(() => { batchProcessing = false; });
-                    }
-                }
-                
-                messages = await MessagesDB.getByChatId(chatId);
-                messageCount = messages.length;
-                
-                isStreaming = false;
-                generateBtn.style.color = '#6B6B6B';
-                generateBtn.querySelector('svg').style.animation = '';
-                generateBtn.disabled = textarea.value.trim() === '';
-            },
-            (error) => {
-                streamingBubble.classList.add('hidden');
-                createToast(error, 'error');
-                isStreaming = false;
-                generateBtn.style.color = '#6B6B6B';
-                generateBtn.querySelector('svg').style.animation = '';
-                generateBtn.disabled = textarea.value.trim() === '';
+        if (currentChat.is_group) {
+            generateBtn.style.color = '#141413';
+            generateBtn.querySelector('svg').style.animation = 'spin 1s linear infinite';
+            
+            if (!styleSheet) {
+                styleSheet = document.createElement('style');
+                styleSheet.textContent = '@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }';
+                document.head.appendChild(styleSheet);
             }
-        );
+            
+            await startGroupResponses(content);
+        } else {
+            activeResponseCount = 1;
+            updateInputDisabled();
+            
+            generateBtn.style.color = '#141413';
+            generateBtn.querySelector('svg').style.animation = 'spin 1s linear infinite';
+            
+            if (!styleSheet) {
+                styleSheet = document.createElement('style');
+                styleSheet.textContent = '@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }';
+                document.head.appendChild(styleSheet);
+            }
+            
+            const streamingBubble = createElement('div', 'kakao-message-row ai hidden');
+            const streamingContent = createElement('div', 'kakao-message-content');
+            streamingContent.appendChild(createElement('span', 'kakao-message-name has-name', { textContent: currentChat.character_name }));
+            const streamingBubbleInner = createElement('div', 'kakao-bubble-left');
+            streamingBubbleInner.appendChild(createElement('span', 'kakao-bubble-text'));
+            streamingContent.appendChild(streamingBubbleInner);
+            streamingBubble.appendChild(createElement('img', 'kakao-message-avatar', { src: currentChat.character_avatar }));
+            streamingBubble.appendChild(streamingContent);
+            main.appendChild(streamingBubble);
+            
+            streamingBubble.classList.remove('hidden');
+            const bubbleText = streamingBubble.querySelector('.kakao-bubble-text');
+            bubbleText.textContent = '';
+            
+            await APIClient.stream(
+                chatId,
+                content,
+                (chunk, fullContent) => {
+                    bubbleText.textContent = fullContent;
+                    main.scrollTop = main.scrollHeight;
+                },
+                async (fullContent) => {
+                    await MessagesDB.create(chatId, 'assistant', fullContent);
+                    
+                    const aiBubble = createKakaoBubble('ai', fullContent, currentChat.character_avatar, currentChat.character_name);
+                    streamingBubble.replaceWith(aiBubble);
+                    
+                    await ChatsDB.update(chatId, { last_message: fullContent.substring(0, 50) });
+                    
+                    messageCount++;
+                    if (messageCount % 10 === 0 && window.App?.memorySystem && !batchProcessing) {
+                        const settings = await SettingsDB.getAll();
+                        if (settings.memory_enabled) {
+                            batchProcessing = true;
+                            const recentMessages = await MessagesDB.getByChatId(chatId);
+                            const last10 = recentMessages.slice(-10);
+                            window.App.memorySystem.processBatch(last10, chatId, currentChat.character_id)
+                                .catch(() => {})
+                                .finally(() => { batchProcessing = false; });
+                        }
+                    }
+                    
+                    messages = await MessagesDB.getByChatId(chatId);
+                    messageCount = messages.length;
+                    
+                    activeResponseCount = 0;
+                    updateInputDisabled();
+                },
+                (error) => {
+                    streamingBubble.classList.add('hidden');
+                    createToast(error, 'error');
+                    activeResponseCount = 0;
+                    updateInputDisabled();
+                }
+            );
+        }
     };
     
     generateBtn.onclick = generateResponse;
