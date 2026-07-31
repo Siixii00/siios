@@ -26,28 +26,40 @@ async function applyCustomTheme() {
 }
 
 async function renderChat(params) {
-    const chatId = params.id;
-    
-    await applyCustomTheme();
-    
-    currentChat = await ChatsDB.getById(chatId);
-    if (!currentChat) {
-        Router.navigate('/chats');
-        return { element: createElement('div'), cleanup: null };
-    }
-    
-    messages = await MessagesDB.getByChatId(chatId);
-    
-    const container = createElement('div', 'app-container kakao-chat-bg');
-    
-    const header = createElement('header', 'kakao-header');
-    header.style.paddingTop = 'env(safe-area-inset-top, 0px)';
-    
-    const backBtn = createElement('button', 'flex items-center gap-1');
-    backBtn.appendChild(createIcon('chevron_left'));
-    backBtn.appendChild(createElement('span', '', { textContent: '返回' }));
-    backBtn.style.cssText = 'color:#141413;font-size:17px;font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;background:transparent;border:none;cursor:pointer;padding:6px 0;';
-    backBtn.onclick = () => Router.navigate('/chats');
+    try {
+        const chatId = params.id;
+        console.log('[Chat] 開始渲染聊天:', chatId);
+        
+        console.log('[Chat] 應用自定義主題...');
+        await applyCustomTheme();
+        
+        console.log('[Chat] 載入聊天數據...');
+        currentChat = await ChatsDB.getById(chatId);
+        if (!currentChat) {
+            console.error('[Chat] 找不到聊天:', chatId);
+            window.showError({
+                message: '找不到聊天 ID: ' + chatId,
+                title: '聊天不存在'
+            });
+            Router.navigate('/chats');
+            return { element: createElement('div'), cleanup: null };
+        }
+        console.log('[Chat] 聊天數據載入成功:', currentChat.character_name);
+        
+        console.log('[Chat] 載入訊息...');
+        messages = await MessagesDB.getByChatId(chatId);
+        console.log('[Chat] 訊息載入成功，共', messages.length, '條');
+        
+        const container = createElement('div', 'app-container kakao-chat-bg');
+        
+        const header = createElement('header', 'kakao-header');
+        header.style.paddingTop = 'env(safe-area-inset-top, 0px)';
+        
+        const backBtn = createElement('button', 'flex items-center gap-1');
+        backBtn.appendChild(createIcon('chevron_left'));
+        backBtn.appendChild(createElement('span', '', { textContent: '返回' }));
+        backBtn.style.cssText = 'color:#141413;font-size:17px;font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;background:transparent;border:none;cursor:pointer;padding:6px 0;';
+        backBtn.onclick = () => Router.navigate('/chats');
     header.appendChild(backBtn);
     
     const title = createElement('h1', '');
@@ -678,7 +690,18 @@ async function renderChat(params) {
         main.scrollTop = main.scrollHeight;
     }, 100);
     
+    console.log('[Chat] 聊天界面渲染完成');
     return { element: container, cleanup: null };
+    } catch (error) {
+        console.error('[Chat] 渲染失敗:', error);
+        window.showError({
+            message: '無法載入聊天界面: ' + error.message,
+            title: '聊天錯誤',
+            details: error.stack || ''
+        });
+        Router.navigate('/chats');
+        return { element: createElement('div'), cleanup: null };
+    }
 }
 
 export default {
