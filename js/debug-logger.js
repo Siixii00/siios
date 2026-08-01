@@ -22,7 +22,7 @@ class DebugLogger {
         // 創建調試按鈕
         const btn = document.createElement('button');
         btn.id = 'debug-logger-btn';
-        btn.textContent = '🐛';
+        btn.textContent = '●';
         btn.style.cssText = `
             position: fixed;
             bottom: 20px;
