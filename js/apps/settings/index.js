@@ -88,6 +88,13 @@ async function renderSettings() {
             path: '/activity'
         },
         {
+            icon: 'cloud_sync',
+            iconBg: 'bg-gradient-to-r from-green-500 to-teal-500',
+            title: '跨裝置同步',
+            desc: '讓活動記錄在電腦和手機間自動同步',
+            path: '/settings/cross-device'
+        },
+        {
             icon: 'backup',
             iconBg: 'bg-gradient-to-r from-blue-500 to-purple-600',
             title: '資料備份與還原',

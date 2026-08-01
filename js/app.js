@@ -5,6 +5,7 @@ import LockScreen from './lockscreen.js';
 import HomeScreen from './homescreen.js';
 import { registerRoutes } from './apps/registry.js';
 import { MemorySystem } from './core/memory-system/index.js';
+import { initActivityAPI } from './activity-interceptor.js';
 
 window.showError = function(errorInfo) {
     const info = typeof errorInfo === 'string' 
@@ -145,6 +146,9 @@ const App = {
             });
             
             Router.start(true);
+            
+            console.log('[App] 初始化活動 API...');
+            initActivityAPI();
             
             this.registerServiceWorker();
             this.setupInstallPrompt();

@@ -1,6 +1,6 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
-import { ActivityDB } from '../../db.js';
+import { ActivityDB, ActivitySourcesDB, SettingsDB } from '../../db.js';
 
 const PLATFORMS = [
     { id: 'line', name: 'LINE', icon: 'chat', color: '#00B900' },
@@ -30,11 +30,22 @@ const ACTIVITY_TYPES = [
 
 async function renderActivitySync() {
     const container = createElement('div', 'app-container bg-ios-bg');
+    
+    const privacySettings = await SettingsDB.get('activity_privacy_settings') || {
+        global_enabled: false,
+        global_level: 'basic',
+        retention_days: 30,
+        ai_access_enabled: false
+    };
 
     const header = createIOSNavBar({
         title: '活動同步',
         backPath: '/settings',
         rightActions: [
+            {
+                icon: 'settings',
+                onClick: () => Router.navigate('/activity/privacy')
+            },
             {
                 icon: 'delete',
                 onClick: async () => {
@@ -50,6 +61,41 @@ async function renderActivitySync() {
     container.appendChild(header);
 
     const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pt-2 pb-8');
+    
+    const statusCard = createElement('div', 'mx-4 mb-4');
+    if (!privacySettings.global_enabled) {
+        const disabledNotice = createElement('div', 'p-4 bg-yellow-50 border border-yellow-200 rounded-xl');
+        disabledNotice.innerHTML = `
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-yellow-600 text-2xl">warning</span>
+                <div>
+                    <h3 class="font-semibold text-sm text-yellow-800">活動同步已停用</h3>
+                    <p class="text-xs text-yellow-700 mt-1">前往隱私設定啟用以開始記錄</p>
+                </div>
+            </div>
+        `;
+        const enableBtn = createElement('button', 'mt-3 w-full ios-btn ios-btn-primary');
+        enableBtn.textContent = '前往隱私設定';
+        enableBtn.onclick = () => Router.navigate('/activity/privacy');
+        disabledNotice.appendChild(enableBtn);
+        statusCard.appendChild(disabledNotice);
+    } else {
+        const enabledNotice = createElement('div', 'p-4 bg-green-50 border border-green-200 rounded-xl');
+        const privacyLevelName = privacySettings.global_level === 'basic' ? '基本統計' : 
+                                   privacySettings.global_level === 'summary' ? '包含摘要' : '詳細資訊';
+        enabledNotice.innerHTML = `
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-green-600 text-2xl">check_circle</span>
+                <div class="flex-1">
+                    <h3 class="font-semibold text-sm text-green-800">活動同步已啟用</h3>
+                    <p class="text-xs text-green-700 mt-1">隱私等級：${privacyLevelName} · 保留 ${privacySettings.retention_days} 天</p>
+                </div>
+                <button class="text-green-600 text-sm underline" id="privacy-settings-link">設定</button>
+            </div>
+        `;
+        statusCard.appendChild(enabledNotice);
+    }
+    main.appendChild(statusCard);
 
     const summary = await ActivityDB.getSummary(24);
 
@@ -179,6 +225,13 @@ async function renderActivitySync() {
     main.appendChild(listSection);
 
     container.appendChild(main);
+    
+    setTimeout(() => {
+        const privacyLink = document.getElementById('privacy-settings-link');
+        if (privacyLink) {
+            privacyLink.onclick = () => Router.navigate('/activity/privacy');
+        }
+    }, 0);
 
     return { element: container, cleanup: null };
 }
