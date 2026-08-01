@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siios Activity Sync</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 320px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #FAF9F6;
+      color: #111827;
+    }
+
+    .container {
+      padding: 16px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #E5E7EB;
+    }
+
+    .header-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #10B981 0%, #3B82F6 100%);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+    }
+
+    .header-text h1 {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .header-text p {
+      font-size: 12px;
+      color: #6B7280;
+      margin-top: 2px;
+    }
+
+    .status-card {
+      padding: 12px;
+      border-radius: 12px;
+      margin-bottom: 12px;
+    }
+
+    .status-card.enabled {
+      background: #D1FAE5;
+      border: 1px solid #10B981;
+    }
+
+    .status-card.disabled {
+      background: #FEF3C7;
+      border: 1px solid #F59E0B;
+    }
+
+    .status-card h2 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .status-card p {
+      font-size: 12px;
+      color: #6B7280;
+    }
+
+    .toggle-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+      background: white;
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+
+    .toggle-label {
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .toggle {
+      width: 44px;
+      height: 24px;
+      background: #D1D5DB;
+      border-radius: 12px;
+      position: relative;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .toggle.active {
+      background: #10B981;
+    }
+
+    .toggle::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: white;
+      border-radius: 50%;
+      top: 2px;
+      left: 2px;
+      transition: transform 0.3s;
+    }
+
+    .toggle.active::after {
+      transform: translateX(20px);
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .stat-card {
+      background: white;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 24px;
+      font-weight: 700;
+      color: #10B981;
+    }
+
+    .stat-label {
+      font-size: 11px;
+      color: #6B7280;
+      margin-top: 4px;
+    }
+
+    .button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .button-primary {
+      background: #10B981;
+      color: white;
+    }
+
+    .button-secondary {
+      background: #F3F4F6;
+      color: #111827;
+    }
+
+    .button:hover:not(:disabled) {
+      opacity: 0.9;
+    }
+
+    .settings-link {
+      display: block;
+      text-align: center;
+      padding: 8px;
+      font-size: 13px;
+      color: #3B82F6;
+      text-decoration: none;
+      margin-top: 8px;
+    }
+
+    .settings-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="header-icon">⚡</div>
+      <div class="header-text">
+        <h1>Siios 活動同步</h1>
+        <p id="status-text">檢查狀態中...</p>
+      </div>
+    </div>
+
+    <div id="status-card" class="status-card disabled">
+      <h2 id="status-title">未啟用</h2>
+      <p id="status-desc">前往設定啟用活動同步</p>
+    </div>
+
+    <div class="toggle-container">
+      <span class="toggle-label">快速開關</span>
+      <div id="toggle" class="toggle"></div>
+    </div>
+
+    <div class="stats">
+      <div class="stat-card">
+        <div id="pending-count" class="stat-value">0</div>
+        <div class="stat-label">待同步活動</div>
+      </div>
+      <div class="stat-card">
+        <div id="today-count" class="stat-value">0</div>
+        <div class="stat-label">今日活動</div>
+      </div>
+    </div>
+
+    <button id="sync-btn" class="button button-primary" disabled>
+      立即同步
+    </button>
+
+    <button id="clear-btn" class="button button-secondary" style="margin-top: 8px;">
+      清除本地記錄
+    </button>
+
+    <a id="settings-link" class="settings-link" href="src/options/options.html" target="_blank">
+      進階設定
+    </a>
+  </div>
+
+  <script src="src/popup/popup.js"></script>
+</body>
+</html>

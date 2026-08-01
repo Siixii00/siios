@@ -26,7 +26,7 @@ async function renderDiscordSettings() {
     const introCard = createElement('div', 'mx-4 mb-4 p-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl text-white');
     introCard.innerHTML = `
         <div class="flex items-center gap-2 mb-2">
-            <span class="material-symbols-outlined">discord</span>
+            <i class="fab fa-discord text-2xl"></i>
             <h2 class="text-lg font-bold">Discord 即時通訊整合</h2>
         </div>
         <p class="text-sm opacity-90 mb-3">讓 AI 角色在 Discord 上與你和朋友即時對話，所有對話自動同步到 PWA</p>

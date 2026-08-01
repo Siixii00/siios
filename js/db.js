@@ -1,7 +1,7 @@
 ﻿import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
 
 const DB_NAME = 'sxios';
-const DB_VERSION = 11;
+const DB_VERSION = 12;
 const LEGACY_DB_NAMES = ['ios-classic-ai'];
 
 let db = null;
@@ -135,6 +135,16 @@ async function initDB() {
                     activitiesStore.createIndex('timestamp', 'timestamp');
                     activitiesStore.createIndex('platform', 'platform');
                     activitiesStore.createIndex('activity_type', 'activity_type');
+                }
+
+                if (!database.objectStoreNames.contains('activitySettings')) {
+                    database.createObjectStore('activitySettings', { keyPath: 'id' });
+                }
+
+                if (!database.objectStoreNames.contains('activitySources')) {
+                    const activitySourcesStore = database.createObjectStore('activitySources', { keyPath: 'id' });
+                    activitySourcesStore.createIndex('device_type', 'device_type');
+                    activitySourcesStore.createIndex('last_sync', 'last_sync');
                 }
 
                 if (!database.objectStoreNames.contains('discordUserBindings')) {
@@ -1301,7 +1311,66 @@ const DiscordUserBindingDB = {
     }
 };
 
-export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, HealthDB, MCPConfigDB, ActivityDB, DiscordUserBindingDB, hashContent, cosineSimilarity };
+const ActivitySettingsDB = {
+    async get() {
+        const database = await initDB();
+        return database.get('activitySettings', 'global');
+    },
+    
+    async set(settings) {
+        const database = await initDB();
+        const data = {
+            id: 'global',
+            ...settings,
+            updated_at: Date.now()
+        };
+        await database.put('activitySettings', data);
+        return data;
+    }
+};
+
+const ActivitySourcesDB = {
+    async getAll() {
+        const database = await initDB();
+        return database.getAll('activitySources');
+    },
+    
+    async getById(id) {
+        const database = await initDB();
+        return database.get('activitySources', id);
+    },
+    
+    async register(data) {
+        const database = await initDB();
+        const source = {
+            id: data.id || `src_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+            device_type: data.device_type,
+            device_name: data.device_name || 'Unknown Device',
+            platform: data.platform,
+            last_sync: Date.now(),
+            enabled: data.enabled !== false,
+            created_at: Date.now()
+        };
+        await database.put('activitySources', source);
+        return source;
+    },
+    
+    async update(id, data) {
+        const database = await initDB();
+        const source = await database.get('activitySources', id);
+        if (!source) throw new Error('Activity source not found');
+        const updated = { ...source, ...data, updated_at: Date.now() };
+        await database.put('activitySources', updated);
+        return updated;
+    },
+    
+    async delete(id) {
+        const database = await initDB();
+        await database.delete('activitySources', id);
+    }
+};
+
+export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, HealthDB, MCPConfigDB, ActivityDB, DiscordUserBindingDB, ActivitySettingsDB, ActivitySourcesDB, hashContent, cosineSimilarity };
 
 
 
