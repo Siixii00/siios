@@ -15,7 +15,9 @@ async function renderMCPMarket() {
     });
     container.appendChild(header);
 
-    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pt-2 pb-24');
+    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar');
+    main.style.paddingTop = 'calc(env(safe-area-inset-top, 44px) + 44px + 8px)';
+    main.style.paddingBottom = '24px';
 
     const introSection = createElement('div', 'mx-4 mb-4 p-4 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-xl text-white');
     introSection.innerHTML = `

@@ -813,6 +813,90 @@ export const TOOLS_CATALOG = [
             properties: {},
             required: []
         }
+    },
+    {
+        id: 'discord_send_message',
+        category: 'Discord 整合',
+        categoryIcon: 'discord',
+        name: 'send_discord_message',
+        displayName: '發送 Discord 訊息',
+        description: '向指定的 Discord 頻道發送訊息，實現跨平台通訊',
+        useCase: '「我幫你在 Discord 上跟他說好了」',
+        difficulty: 'medium',
+        requires: ['Discord Bot Token', '頻道 ID'],
+        parameters: {
+            type: 'object',
+            properties: {
+                channel_id: { type: 'string', description: 'Discord 頻道 ID' },
+                content: { type: 'string', description: '訊息內容' },
+                embed: { 
+                    type: 'object', 
+                    description: 'Embed 訊息格式（選填）',
+                    properties: {
+                        title: { type: 'string' },
+                        description: { type: 'string' },
+                        color: { type: 'number' }
+                    }
+                }
+            },
+            required: ['channel_id', 'content']
+        }
+    },
+    {
+        id: 'discord_get_history',
+        category: 'Discord 整合',
+        categoryIcon: 'discord',
+        name: 'get_discord_history',
+        displayName: '獲取 Discord 對話歷史',
+        description: '獲取指定 Discord 頻道的對話歷史記錄',
+        useCase: '「讓我看看你們剛剛在 Discord 上聊了什麼」',
+        difficulty: 'easy',
+        requires: ['Discord Bot Token', '頻道 ID'],
+        parameters: {
+            type: 'object',
+            properties: {
+                channel_id: { type: 'string', description: 'Discord 頻道 ID' },
+                limit: { type: 'number', default: 50, description: '獲取訊息數量' },
+                before: { type: 'string', description: '獲取此訊息 ID 之前的訊息（選填）' }
+            },
+            required: ['channel_id']
+        }
+    },
+    {
+        id: 'discord_get_user_info',
+        category: 'Discord 整合',
+        categoryIcon: 'discord',
+        name: 'get_discord_user',
+        displayName: '獲取 Discord 用戶資訊',
+        description: '獲取 Discord 用戶的基本資訊',
+        useCase: '「你們剛認識嗎？讓我看看他的資料」',
+        difficulty: 'easy',
+        requires: ['Discord Bot Token'],
+        parameters: {
+            type: 'object',
+            properties: {
+                user_id: { type: 'string', description: 'Discord 用戶 ID' }
+            },
+            required: ['user_id']
+        }
+    },
+    {
+        id: 'discord_list_channels',
+        category: 'Discord 整合',
+        categoryIcon: 'discord',
+        name: 'list_discord_channels',
+        displayName: '列出 Discord 頻道',
+        description: '列出 Bot 所在伺服器的所有頻道',
+        useCase: '「我可以發訊息到哪些頻道呢？」',
+        difficulty: 'easy',
+        requires: ['Discord Bot Token', '伺服器 ID'],
+        parameters: {
+            type: 'object',
+            properties: {
+                guild_id: { type: 'string', description: 'Discord 伺服器 ID' }
+            },
+            required: ['guild_id']
+        }
     }
 ];
 
@@ -827,5 +911,6 @@ export const CATEGORIES = [
     { id: '金融理財', icon: 'trending_up', color: '#00C7BE' },
     { id: '虛擬形象', icon: 'android', color: '#AF52DE' },
     { id: '桌寵', icon: 'pets', color: '#FF9500' },
-    { id: '活動同步', icon: 'sync', color: '#5856D6' }
+    { id: '活動同步', icon: 'sync', color: '#5856D6' },
+    { id: 'Discord 整合', icon: 'discord', color: '#5865F2' }
 ];

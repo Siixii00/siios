@@ -74,6 +74,13 @@ async function renderSettings() {
             path: '/settings/mcp'
         },
         {
+            icon: 'discord',
+            iconBg: 'bg-indigo-600',
+            title: 'Discord 整合',
+            desc: '讓 AI 角色在 Discord 上即時對話',
+            path: '/settings/discord'
+        },
+        {
             icon: 'sync',
             iconBg: 'bg-indigo-500',
             title: '活動同步',

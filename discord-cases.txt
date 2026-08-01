@@ -1,0 +1,86 @@
+﻿        case 'discord_send_message':
+            return \// 需要 DISCORD_BOT_TOKEN
+            const discordRes = await fetch(
+                \https://discord.com/api/v10/channels/\/messages\,
+                {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': \Bot \\,
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        content: args.content,
+                        embeds: args.embed ? [args.embed] : undefined
+                    })
+                }
+            );
+            const discordData = await discordRes.json();
+            return {
+                success: discordRes.ok,
+                messageId: discordData.id,
+                channelId: discordData.channel_id
+            };\;
+
+        case 'discord_get_history':
+            return \// 需要 DISCORD_BOT_TOKEN
+            let historyUrl = \https://discord.com/api/v10/channels/\/messages?limit=\\;
+            if (args.before) {
+                historyUrl += \&before=\\;
+            }
+            const historyRes = await fetch(historyUrl, {
+                headers: {
+                    'Authorization': \Bot \\
+                }
+            });
+            const messages = await historyRes.json();
+            return {
+                success: historyRes.ok,
+                messages: messages.map(m => ({
+                    id: m.id,
+                    author: m.author.username,
+                    content: m.content,
+                    timestamp: m.timestamp
+                }))
+            };\;
+
+        case 'discord_get_user_info':
+            return \// 需要 DISCORD_BOT_TOKEN
+            const userRes = await fetch(
+                \https://discord.com/api/v10/users/\\,
+                {
+                    headers: {
+                        'Authorization': \Bot \\
+                    }
+                }
+            );
+            const userData = await userRes.json();
+            return {
+                success: userRes.ok,
+                user: {
+                    id: userData.id,
+                    username: userData.username,
+                    discriminator: userData.discriminator,
+                    avatar: userData.avatar
+                }
+            };\;
+
+        case 'discord_list_channels':
+            return \// 需要 DISCORD_BOT_TOKEN
+            const guildRes = await fetch(
+                \https://discord.com/api/v10/guilds/\/channels\,
+                {
+                    headers: {
+                        'Authorization': \Bot \\
+                    }
+                }
+            );
+            const channels = await guildRes.json();
+            return {
+                success: guildRes.ok,
+                channels: channels.map(c => ({
+                    id: c.id,
+                    name: c.name,
+                    type: c.type
+                }))
+            };\;
+
