@@ -128,6 +128,31 @@ body {
     min-height: 100vh;
     min-height: 100dvh;
     position: relative;
+    overflow: hidden;
+}
+
+/* 手機端滑動優化 */
+@media (max-width: 767px) {
+    .app-container {
+        height: 100vh;
+        height: 100dvh;
+    }
+    
+    .app-container main {
+        flex: 1;
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+        overscroll-behavior-y: contain;
+    }
+    
+    /* 確保頁面內容可以滑動 */
+    .app-container > main,
+    .app-container > .flex-1 {
+        overflow-y: auto;
+        overflow-x: hidden;
+        -webkit-overflow-scrolling: touch;
+    }
 }
 
 body.desktop-mode .app-container {

@@ -11,7 +11,7 @@ async function renderMCPMarket() {
     const header = createIOSNavBar({
         title: '神秘門',
         subtitle: 'MCP 工具市集',
-        backPath: '/settings'
+        backPath: '/home'
     });
     container.appendChild(header);
 

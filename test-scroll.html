@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>滑動測試</title>
+    <link rel="stylesheet" href="css/shared.css">
+    <style>
+        .test-item { padding: 20px; border-bottom: 1px solid #E5E5E5; background: white; }
+        .test-item:nth-child(odd) { background: #F9F9F9; }
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <header style="padding: 60px 20px 20px; background: var(--ios-bg); border-bottom: 1px solid var(--ios-border);">
+            <h1 style="font-size: 20px; font-weight: 600;">滑動測試頁面</h1>
+            <p style="font-size: 14px; color: #6B6B6B; margin-top: 8px;">請嘗試上下滑動此頁面</p>
+        </header>
+        <main style="flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch;">
+            <div class="test-item">項目 1 - 測試滑動功能</div>
+            <div class="test-item">項目 2 - 這是一個測試項目</div>
+            <div class="test-item">項目 3 - 請上下滑動</div>
+            <div class="test-item">項目 4 - 檢查滑動是否流暢</div>
+            <div class="test-item">項目 5 - Safari PWA 滑動優化</div>
+            <div class="test-item">項目 6 - 觸摸滑動支持</div>
+            <div class="test-item">項目 7 - 彈性滾動</div>
+            <div class="test-item">項目 8 - 平滑滾動</div>
+            <div class="test-item">項目 9 - 滾動邊界處理</div>
+            <div class="test-item">項目 10 - 滾動性能優化</div>
+            <div class="test-item">項目 11 - 長列表支持</div>
+            <div class="test-item">項目 12 - 滾動到頂部</div>
+            <div class="test-item">項目 13 - 滾動到底部</div>
+            <div class="test-item">項目 14 - 中間位置滾動</div>
+            <div class="test-item">項目 15 - 快速滾動測試</div>
+            <div class="test-item">項目 16 - 慢速滾動測試</div>
+            <div class="test-item">項目 17 - 慣性滾動</div>
+            <div class="test-item">項目 18 - 滾動停止</div>
+            <div class="test-item">項目 19 - 多點觸摸</div>
+            <div class="test-item">項目 20 - 滾動結束</div>
+        </main>
+    </div>
+    <script src="js/scroll-handler.js"></script>
+    <script>
+        console.log('[滑動測試] 頁面已載入');
+        document.querySelector('main').addEventListener('scroll', (e) => {
+            console.log('[滑動測試] 滾動位置:', e.target.scrollTop);
+        });
+    </script>
+</body>
+</html>

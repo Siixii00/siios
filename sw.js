@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sxios-v21';
+const CACHE_NAME = 'sxios-v22';
 
 function getBasePath() {
   return self.registration.scope;
@@ -18,6 +18,7 @@ const STATIC_ASSETS = [
   './js/lockscreen.js',
   './js/homescreen.js',
   './js/debug-logger.js',
+  './js/scroll-handler.js',
   './js/apps/registry.js',
   './js/apps/chats/index.js',
   './js/apps/chats/chat.js',
