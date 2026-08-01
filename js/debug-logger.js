@@ -23,6 +23,16 @@ class DebugLogger {
     }
     
     createUI() {
+        const existingBtn = document.getElementById('debug-logger-btn');
+        if (existingBtn) {
+            existingBtn.remove();
+        }
+        
+        const existingContainer = document.getElementById('debug-logger-container');
+        if (existingContainer) {
+            existingContainer.remove();
+        }
+        
         const btn = document.createElement('button');
         btn.id = 'debug-logger-btn';
         btn.textContent = '●';
