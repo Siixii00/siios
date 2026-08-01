@@ -183,6 +183,31 @@ async function renderDiscordSettings() {
     };
     main.appendChild(testBtn);
     
+    // 用戶綁定管理
+    const bindingSection = createElement('div', 'mx-4 mt-6 mb-4');
+    const bindingCard = createElement('div', 'bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-4 border border-blue-200 cursor-pointer', {
+        onClick: () => Router.navigate('/settings/discord/bindings')
+    });
+    
+    const bindingHeader = createElement('div', 'flex items-center justify-between');
+    const bindingInfo = createElement('div', 'flex items-center gap-3');
+    
+    const bindingIcon = createElement('div', 'w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center');
+    bindingIcon.innerHTML = '<span class="material-symbols-outlined text-blue-600 text-xl">link</span>';
+    bindingInfo.appendChild(bindingIcon);
+    
+    const bindingText = createElement('div');
+    bindingText.appendChild(createElement('div', 'font-semibold text-sm', { textContent: '用戶身份綁定' }));
+    bindingText.appendChild(createElement('div', 'text-xs text-gray-500', { textContent: '管理 Discord 與 PWA 的用戶映射' }));
+    bindingInfo.appendChild(bindingText);
+    
+    bindingHeader.appendChild(bindingInfo);
+    bindingHeader.appendChild(createIcon('chevron_right', 'text-gray-400'));
+    bindingCard.appendChild(bindingHeader);
+    
+    bindingSection.appendChild(bindingCard);
+    main.appendChild(bindingSection);
+    
     // 使用說明
     const guideSection = createElement('div', 'mx-4 mt-6 mb-8');
     const guideCard = createElement('div', 'bg-gray-50 rounded-xl p-4');
@@ -194,8 +219,9 @@ async function renderDiscordSettings() {
             <li>3. 在神秘門生成 Discord Bot Worker 代碼</li>
             <li>4. 部署 Worker 到 Cloudflare</li>
             <li>5. 將 Worker URL 填入上方</li>
-            <li>6. 在 Discord 伺服器中邀請 Bot</li>
-            <li>7. 開始在頻道中與 AI 角色對話！</li>
+            <li>6. 配置用戶身份綁定（可選）</li>
+            <li>7. 在 Discord 伺服器中邀請 Bot</li>
+            <li>8. 開始在頻道中與 AI 角色對話！</li>
         </ol>
     `;
     guideSection.appendChild(guideCard);

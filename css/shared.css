@@ -181,6 +181,7 @@ body.desktop-mode .kakao-bottom-sheet,
 body.desktop-mode [class*="bottombar"]:not([class*="bottom-nav-item"]),
 body.desktop-mode nav[class*="fixed"] {
     position: absolute !important;
+    z-index: 10 !important;
 }
 
 body.desktop-mode .ios-nav-bar,
@@ -530,6 +531,7 @@ body.desktop-mode #app {
     display: flex;
     flex-direction: column;
     overflow: hidden;
+    z-index: 1;
 }
 
 .phone-notch {
@@ -545,7 +547,7 @@ body.desktop-mode #app {
     align-items: center;
     justify-content: center;
     gap: 12px;
-    z-index: 10;
+    z-index: 100;
 }
 
 .phone-notch-speaker {
@@ -569,6 +571,7 @@ body.desktop-mode #app {
     border-radius: calc(var(--phone-border-radius) - 14px);
     overflow: hidden;
     position: relative;
+    z-index: 1;
 }
 
 .phone-home-indicator {
@@ -580,7 +583,7 @@ body.desktop-mode #app {
     height: 5px;
     background: #1c1c1e;
     border-radius: 3px;
-    z-index: 10;
+    z-index: 100;
 }
 
 @media (max-width: 420px) {

@@ -21,7 +21,7 @@ async function renderWorldInfo() {
     inner.style.alignItems = 'center';
     
     const backBtn = createElement('button', 'ios-btn', {
-        onClick: () => Router.navigate('/chats')
+        onClick: () => Router.navigate('/home')
     });
     backBtn.style.background = 'transparent';
     backBtn.style.border = 'none';

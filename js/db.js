@@ -136,6 +136,12 @@ async function initDB() {
                     activitiesStore.createIndex('platform', 'platform');
                     activitiesStore.createIndex('activity_type', 'activity_type');
                 }
+
+                if (!database.objectStoreNames.contains('discordUserBindings')) {
+                    const discordBindingStore = database.createObjectStore('discordUserBindings', { keyPath: 'discord_user_id' });
+                    discordBindingStore.createIndex('user_id', 'user_id');
+                    discordBindingStore.createIndex('character_id', 'character_id');
+                }
                 
                 console.log('[DB] 數據庫升級完成');
             },
@@ -1243,7 +1249,59 @@ const ActivityDB = {
     }
 };
 
-export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, HealthDB, MCPConfigDB, ActivityDB, hashContent, cosineSimilarity };
+const DiscordUserBindingDB = {
+    async getByDiscordUserId(discordUserId) {
+        const database = await initDB();
+        return database.get('discordUserBindings', discordUserId);
+    },
+
+    async getByUserId(userId) {
+        const database = await initDB();
+        return database.getAllFromIndex('discordUserBindings', 'user_id', userId);
+    },
+
+    async getByCharacterId(characterId) {
+        const database = await initDB();
+        return database.getAllFromIndex('discordUserBindings', 'character_id', characterId);
+    },
+
+    async create(data) {
+        const database = await initDB();
+        const now = Date.now();
+        const binding = {
+            discord_user_id: data.discord_user_id,
+            user_id: data.user_id,
+            character_id: data.character_id || null,
+            discord_username: data.discord_username || '',
+            user_display_name: data.user_display_name || '',
+            created_at: now,
+            updated_at: now
+        };
+        await database.put('discordUserBindings', binding);
+        return binding;
+    },
+
+    async update(discordUserId, data) {
+        const database = await initDB();
+        const binding = await database.get('discordUserBindings', discordUserId);
+        if (!binding) throw new Error('Discord user binding not found');
+        const updated = { ...binding, ...data, updated_at: Date.now() };
+        await database.put('discordUserBindings', updated);
+        return updated;
+    },
+
+    async delete(discordUserId) {
+        const database = await initDB();
+        await database.delete('discordUserBindings', discordUserId);
+    },
+
+    async getAll() {
+        const database = await initDB();
+        return database.getAll('discordUserBindings');
+    }
+};
+
+export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, HealthDB, MCPConfigDB, ActivityDB, DiscordUserBindingDB, hashContent, cosineSimilarity };
 
 
 

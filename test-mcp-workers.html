@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MCP Worker 語法測試</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #FAF9F6;
+            color: #111827;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #141413;
+        }
+        .subtitle {
+            color: #6B6B6B;
+            margin-bottom: 24px;
+        }
+        .test-controls {
+            margin-bottom: 24px;
+            display: flex;
+            gap: 12px;
+        }
+        button {
+            padding: 12px 24px;
+            background: #141413;
+            color: #FAF9F6;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        button:hover {
+            background: #2d2d2d;
+        }
+        button:disabled {
+            background: #d1d5db;
+            cursor: not-allowed;
+        }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        .stat-card {
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+            border: 1px solid rgba(20, 20, 19, 0.12);
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #6B6B6B;
+            margin-bottom: 4px;
+        }
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+        }
+        .stat-value.success {
+            color: #16A34A;
+        }
+        .stat-value.error {
+            color: #DC2626;
+        }
+        .results {
+            background: white;
+            border-radius: 8px;
+            border: 1px solid rgba(20, 20, 19, 0.12);
+            overflow: hidden;
+        }
+        .results-header {
+            padding: 16px;
+            border-bottom: 1px solid rgba(20, 20, 19, 0.12);
+            font-weight: 600;
+        }
+        .result-item {
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(20, 20, 19, 0.06);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .result-item:last-child {
+            border-bottom: none;
+        }
+        .result-item.pass {
+            background: rgba(22, 163, 74, 0.05);
+        }
+        .result-item.fail {
+            background: rgba(220, 38, 38, 0.05);
+        }
+        .result-name {
+            font-size: 14px;
+            font-weight: 500;
+        }
+        .result-status {
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 12px;
+        }
+        .result-status.pass {
+            background: #dcfce7;
+            color: #16a34a;
+        }
+        .result-status.fail {
+            background: #fee2e2;
+            color: #dc2626;
+        }
+        .error-message {
+            font-size: 12px;
+            color: #DC2626;
+            margin-top: 4px;
+            padding: 8px;
+            background: rgba(220, 38, 38, 0.1);
+            border-radius: 4px;
+        }
+        .loading {
+            display: none;
+            text-align: center;
+            padding: 40px;
+        }
+        .loading.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MCP Worker 語法測試</h1>
+        <p class="subtitle">自動檢查所有 MCP Worker 程式碼的語法正確性</p>
+        
+        <div class="test-controls">
+            <button id="runTest" onclick="runAllTests()">執行測試</button>
+        </div>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-label">總測試數</div>
+                <div class="stat-value" id="totalCount">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">通過</div>
+                <div class="stat-value success" id="passCount">0</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">失敗</div>
+                <div class="stat-value error" id="failCount">0</div>
+            </div>
+        </div>
+        
+        <div class="loading" id="loading">
+            測試執行中...
+        </div>
+        
+        <div class="results" id="results" style="display: none;">
+            <div class="results-header">測試結果</div>
+            <div id="resultsList"></div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { TOOLS_CATALOG } from './js/apps/mcp-market/tools-catalog.js';
+        import { generateZipContent } from './js/apps/mcp-market/code-templates.js';
+
+        const testResults = {
+            total: 0,
+            passed: 0,
+            failed: 0,
+            errors: []
+        };
+
+        function validateJavaScriptSyntax(code) {
+            try {
+                new Function(code);
+                return { valid: true };
+            } catch (error) {
+                return { 
+                    valid: false, 
+                    error: error.message
+                };
+            }
+        }
+
+        function checkRequiredImports(code) {
+            const issues = [];
+            
+            if (!code.includes('export default')) {
+                issues.push('缺少 export default');
+            }
+            
+            if (!code.includes('fetch(request, env, ctx)')) {
+                issues.push('缺少 fetch 處理函數');
+            }
+            
+            if (!code.includes('/tools') || !code.includes('/tools/call')) {
+                issues.push('缺少必要的端點定義');
+            }
+            
+            return issues;
+        }
+
+        function validateToolDefinitions(code, toolIds) {
+            const issues = [];
+            
+            toolIds.forEach(id => {
+                const tool = TOOLS_CATALOG.find(t => t.id === id);
+                if (!tool) {
+                    issues.push(`工具 ${id} 不在 TOOLS_CATALOG 中`);
+                    return;
+                }
+                
+                if (!code.includes(`name: '${tool.name}'`)) {
+                    issues.push(`缺少工具定義: ${tool.name} (${id})`);
+                }
+                
+                if (!code.includes(`case '${tool.name}':`)) {
+                    issues.push(`缺少工具執行邏輯: ${tool.name} (${id})`);
+                }
+            });
+            
+            return issues;
+        }
+
+        async function testSingleTool(toolId) {
+            try {
+                const files = generateZipContent([toolId]);
+                const workerCode = files['worker.js'];
+                
+                if (!workerCode) {
+                    throw new Error('無法生成 worker.js');
+                }
+                
+                const syntaxResult = validateJavaScriptSyntax(workerCode);
+                if (!syntaxResult.valid) {
+                    throw new Error(`語法錯誤: ${syntaxResult.error}`);
+                }
+                
+                const importIssues = checkRequiredImports(workerCode);
+                if (importIssues.length > 0) {
+                    console.warn(`  ⚠ ${toolId} 匯入問題:`, importIssues);
+                }
+                
+                const toolIssues = validateToolDefinitions(workerCode, [toolId]);
+                if (toolIssues.length > 0) {
+                    throw new Error(`工具定義問題: ${toolIssues.join(', ')}`);
+                }
+                
+                return { success: true, tool: toolId };
+                
+            } catch (error) {
+                return { 
+                    success: false, 
+                    tool: toolId, 
+                    error: error.message 
+                };
+            }
+        }
+
+        window.runAllTests = async function() {
+            const runButton = document.getElementById('runTest');
+            const loading = document.getElementById('loading');
+            const results = document.getElementById('results');
+            const resultsList = document.getElementById('resultsList');
+            
+            runButton.disabled = true;
+            loading.classList.add('active');
+            results.style.display = 'none';
+            
+            testResults.total = 0;
+            testResults.passed = 0;
+            testResults.failed = 0;
+            testResults.errors = [];
+            
+            const allToolIds = TOOLS_CATALOG.map(t => t.id);
+            
+            for (const toolId of allToolIds) {
+                const result = await testSingleTool(toolId);
+                testResults.total++;
+                
+                if (result.success) {
+                    testResults.passed++;
+                } else {
+                    testResults.failed++;
+                    testResults.errors.push(result);
+                }
+                
+                await new Promise(resolve => setTimeout(resolve, 10));
+            }
+            
+            document.getElementById('totalCount').textContent = testResults.total;
+            document.getElementById('passCount').textContent = testResults.passed;
+            document.getElementById('failCount').textContent = testResults.failed;
+            
+            resultsList.innerHTML = '';
+            
+            allToolIds.forEach((toolId, index) => {
+                const result = testResults.errors.find(e => e.tool === toolId);
+                const passed = !result;
+                const tool = TOOLS_CATALOG.find(t => t.id === toolId);
+                
+                const item = document.createElement('div');
+                item.className = `result-item ${passed ? 'pass' : 'fail'}`;
+                item.innerHTML = `
+                    <div>
+                        <div class="result-name">${tool?.displayName || toolId}</div>
+                        ${!passed ? `<div class="error-message">${result.error}</div>` : ''}
+                    </div>
+                    <span class="result-status ${passed ? 'pass' : 'fail'}">
+                        ${passed ? '✓ 通過' : '✗ 失敗'}
+                    </span>
+                `;
+                resultsList.appendChild(item);
+            });
+            
+            runButton.disabled = false;
+            loading.classList.remove('active');
+            results.style.display = 'block';
+            
+            if (testResults.failed === 0) {
+                alert('✓ 所有測試通過！');
+            } else {
+                alert(`✗ ${testResults.failed} 個測試失敗`);
+            }
+        };
+    </script>
+</body>
+</html>

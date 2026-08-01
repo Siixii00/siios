@@ -15,6 +15,13 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+/* 桌面模式：header 和 nav 應該在手機框架內 */
+body.desktop-mode .kakao-header,
+body.desktop-mode .kakao-bottom-nav {
+    position: absolute !important;
+    z-index: 10 !important;
+}
+
 .kakao-header h1 {
     position: absolute;
     left: 50%;
