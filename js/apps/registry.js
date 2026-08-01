@@ -81,7 +81,8 @@ async function loadApps() {
         import('./mcp-market/index.js'),
         import('./settings/mcp-settings.js'),
         import('./activity/index.js'),
-        import('./settings/backup-settings.js')
+        import('./settings/backup-settings.js'),
+        import('./settings/discord-settings.js')
     ];
 
     const results = await Promise.all(appModules);
