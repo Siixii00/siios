@@ -1,11 +1,38 @@
+.mcp-category-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    border-radius: var(--claude-radius-md);
+    font-size: 13px;
+    background: var(--claude-surface);
+    color: var(--claude-text);
+    border: 1px solid var(--claude-border);
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.mcp-category-option:hover {
+    background: var(--claude-secondary);
+    border-color: #8b5cf6;
+    color: #8b5cf6;
+}
+
+.mcp-category-option.active {
+    background: var(--claude-primary);
+    color: var(--claude-secondary);
+    border-color: var(--claude-primary);
+}
+
 .mcp-filter-btn {
     flex-shrink: 0;
     padding: 6px 12px;
-    border-radius: 20px;
+    border-radius: var(--claude-radius-md);
     font-size: 14px;
-    background: #f3f4f6;
-    color: #6b7280;
-    border: none;
+    background: var(--claude-surface);
+    color: var(--claude-muted);
+    border: 1px solid var(--claude-border);
     cursor: pointer;
     transition: all 0.2s;
     display: flex;
@@ -14,12 +41,15 @@
 }
 
 .mcp-filter-btn.active {
-    background: linear-gradient(135deg, #8b5cf6, #6366f1);
-    color: white;
+    background: var(--claude-primary);
+    color: var(--claude-secondary);
+    border-color: var(--claude-primary);
 }
 
 .mcp-filter-btn:hover:not(.active) {
-    background: #e5e7eb;
+    background: var(--claude-secondary);
+    border-color: #8b5cf6;
+    color: #8b5cf6;
 }
 
 .mcp-tool-card {
@@ -27,27 +57,31 @@
     align-items: flex-start;
     gap: 12px;
     padding: 12px;
-    background: white;
-    border-radius: 12px;
+    background: var(--claude-surface);
+    border-radius: var(--claude-radius-md);
     border: 2px solid transparent;
     transition: all 0.2s;
     cursor: pointer;
 }
 
 .mcp-tool-card:hover {
-    background: #f9fafb;
+    background: var(--claude-secondary);
 }
 
 .mcp-tool-card.selected {
+    border-color: var(--claude-primary);
+    background: var(--claude-surface);
+}
+
+.mcp-tool-card:hover:not(.selected) {
     border-color: #8b5cf6;
-    background: #faf5ff;
 }
 
 .mcp-checkbox {
     width: 22px;
     height: 22px;
-    border-radius: 6px;
-    border: 2px solid #d1d5db;
+    border-radius: var(--claude-radius-sm);
+    border: 2px solid var(--claude-border);
     flex-shrink: 0;
     display: flex;
     align-items: center;
@@ -57,20 +91,24 @@
 }
 
 .mcp-checkbox.checked {
-    background: #8b5cf6;
-    border-color: #8b5cf6;
+    background: var(--claude-primary);
+    border-color: var(--claude-primary);
 }
 
 .mcp-checkbox.checked::after {
     content: '✓';
-    color: white;
+    color: var(--claude-secondary);
     font-size: 14px;
     font-weight: bold;
 }
 
+.mcp-checkbox:hover:not(.checked) {
+    border-color: #8b5cf6;
+}
+
 .mcp-badge {
     padding: 2px 8px;
-    border-radius: 10px;
+    border-radius: var(--claude-radius-md);
     font-size: 11px;
     font-weight: 500;
 }
@@ -90,10 +128,6 @@
     color: #dc2626;
 }
 
-.mcp-checkbox:hover {
-    border-color: #8b5cf6;
-}
-
 .line-clamp-2 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -103,4 +137,7 @@
 
 #mcp-bottom-bar {
     z-index: 40;
+    background: var(--claude-nav-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }

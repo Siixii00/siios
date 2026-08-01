@@ -1,7 +1,29 @@
 import { TOOLS_CATALOG } from './tools-catalog.js';
+import { initDB } from '../../db.js';
 
-export function generateWorkerCode(selectedTools) {
-    const tools = selectedTools.map(id => TOOLS_CATALOG.find(t => t.id === id)).filter(Boolean);
+const CUSTOM_TOOLS_STORE = 'customMCPTools';
+
+async function getCustomTools() {
+    try {
+        const database = await initDB();
+        if (!database.objectStoreNames.contains(CUSTOM_TOOLS_STORE)) {
+            return [];
+        }
+        return await database.getAll(CUSTOM_TOOLS_STORE);
+    } catch (e) {
+        console.warn('[MCP] 無法讀取自定義工具:', e);
+        return [];
+    }
+}
+
+export async function generateWorkerCode(selectedTools) {
+    const customTools = await getCustomTools();
+    const tools = selectedTools.map(id => {
+        if (id.startsWith('custom-')) {
+            return customTools.find(t => t.id === id);
+        }
+        return TOOLS_CATALOG.find(t => t.id === id);
+    }).filter(Boolean);
 
     const toolDefinitions = tools.map(t => generateToolDefinition(t)).join(',\n');
     const executeCases = tools.map(t => generateExecuteCase(t)).join('\n');
@@ -77,6 +99,11 @@ function generateExecuteCase(tool) {
 }
 
 function generateCaseBody(tool) {
+    if (tool.id.startsWith('custom-')) {
+        return tool.code || `// 自定義工具
+            return { success: true, args };`;
+    }
+    
     switch (tool.id) {
         case 'daily_weather':
             return `// 需要設定 OPENWEATHER_API_KEY
@@ -420,9 +447,9 @@ npm run tail
 `;
 }
 
-export function generateZipContent(selectedTools) {
+export async function generateZipContent(selectedTools) {
     return {
-        'src/index.js': generateWorkerCode(selectedTools),
+        'src/index.js': await generateWorkerCode(selectedTools),
         'wrangler.toml': generateWranglerConfig(selectedTools),
         'package.json': generatePackageJson(),
         'README.md': generateReadme(selectedTools)

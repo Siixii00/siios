@@ -33,29 +33,57 @@ function applyThemeToRoot(vars) {
     root.style.setProperty('--kakao-input-bg', vars.inputBg);
 }
 
+function updatePreview(previewBox, vars) {
+    if (!previewBox) return;
+    
+    previewBox.style.background = vars.chatBg;
+    
+    const leftBubble = previewBox.querySelector('.preview-bubble-left');
+    const rightBubble = previewBox.querySelector('.preview-bubble-right');
+    
+    if (leftBubble) {
+        leftBubble.style.background = vars.bubbleLeftBg;
+        leftBubble.style.color = vars.bubbleLeftText;
+    }
+    
+    if (rightBubble) {
+        rightBubble.style.background = vars.bubbleRightBg;
+        rightBubble.style.color = vars.bubbleRightText;
+    }
+}
+
 function createColorPicker(label, value, onChange) {
     const row = createElement('div', 'flex items-center justify-between py-3');
     const labelEl = createElement('span', 'text-base', { textContent: label });
     row.appendChild(labelEl);
     
     const colorWrapper = createElement('div', 'flex items-center gap-2');
-    const preview = createElement('div', 'w-8 h-8 rounded-lg border border-gray-200');
+    const preview = createElement('div', 'w-10 h-10 rounded-lg border-2 border-gray-300 cursor-pointer');
     preview.style.backgroundColor = value;
+    preview.style.transition = 'all 0.15s';
     
-    const input = createElement('input', 'opacity-0 absolute w-8 h-8 cursor-pointer', {
+    const input = createElement('input', 'absolute cursor-pointer', {
         type: 'color',
         value: value
     });
-    input.style.width = '32px';
-    input.style.height = '32px';
+    input.style.width = '40px';
+    input.style.height = '40px';
+    input.style.opacity = '0';
+    input.style.position = 'absolute';
     
-    const pickerWrapper = createElement('div', 'relative');
+    const pickerWrapper = createElement('div', 'relative inline-flex items-center justify-center');
+    pickerWrapper.style.width = '40px';
+    pickerWrapper.style.height = '40px';
     pickerWrapper.appendChild(preview);
     pickerWrapper.appendChild(input);
     
     input.oninput = (e) => {
         preview.style.backgroundColor = e.target.value;
         onChange(e.target.value);
+    };
+    
+    preview.onclick = () => {
+        input.click();
     };
     
     colorWrapper.appendChild(pickerWrapper);
@@ -106,12 +134,31 @@ async function renderChatSettings() {
         }
 
         card.onclick = async () => {
+            // 更新主題
             currentTheme = t.id;
             customTheme = null;
             await SettingsDB.set('appearance_theme', currentTheme);
             await SettingsDB.set('chat_custom_theme', null);
             applyThemeToRoot(t.vars);
-            Router.navigate('/chats/settings');
+            
+            // 更新視覺狀態而不重新載入頁面
+            themeGrid.querySelectorAll('.theme-card').forEach(c => {
+                c.classList.remove('active');
+                c.style.border = '2px solid transparent';
+                // 移除勾選圖標
+                const checkIcon = c.querySelector('.material-symbols-outlined');
+                if (checkIcon) checkIcon.remove();
+            });
+            
+            // 標記當前選中
+            card.classList.add('active');
+            card.style.border = '2px solid var(--kakao-brown)';
+            card.appendChild(createIcon('check', 'text-sm'));
+            
+            // 更新預覽
+            updatePreview(previewBox, t.vars);
+            
+            createToast('已切換到 ' + t.name + ' 主題', 'success');
         };
 
         themeGrid.appendChild(card);
@@ -130,8 +177,31 @@ async function renderChatSettings() {
         customCard.appendChild(createIcon('check', 'text-sm'));
     }
 
-    customCard.onclick = () => {
+    customCard.onclick = async () => {
         currentTheme = 'custom';
+        await SettingsDB.set('appearance_theme', 'custom');
+        
+        // 更新視覺狀態
+        themeGrid.querySelectorAll('.theme-card').forEach(c => {
+            c.classList.remove('active');
+            c.style.border = '2px solid transparent';
+            const checkIcon = c.querySelector('.material-symbols-outlined');
+            if (checkIcon) checkIcon.remove();
+        });
+        
+        customCard.classList.add('active');
+        customCard.style.border = '2px solid var(--kakao-brown)';
+        customCard.appendChild(createIcon('check', 'text-sm'));
+        
+        // 應用自定義主題（如果有）
+        if (customTheme) {
+            applyThemeToRoot(customTheme);
+            updatePreview(previewBox, customTheme);
+        }
+        
+        createToast('已切換到自定義主題', 'success');
+        
+        // 重新載入以顯示顏色選擇器
         Router.navigate('/chats/settings');
     };
 
@@ -243,13 +313,13 @@ async function renderChatSettings() {
     previewBox.style.background = previewVars.chatBg;
     previewBox.style.fontSize = currentFontSize === 'small' ? '14px' : currentFontSize === 'large' ? '20px' : '16px';
     
-    const leftBubble = createElement('div', 'inline-block px-3 py-2 rounded-xl max-w-[70%]');
+    const leftBubble = createElement('div', 'inline-block px-3 py-2 rounded-xl max-w-[70%] preview-bubble-left');
     leftBubble.style.background = previewVars.bubbleLeftBg;
     leftBubble.style.color = previewVars.bubbleLeftText;
     leftBubble.textContent = '對方的訊息';
     previewBox.appendChild(leftBubble);
     
-    const rightBubble = createElement('div', 'inline-block px-3 py-2 rounded-xl max-w-[70%] self-end');
+    const rightBubble = createElement('div', 'inline-block px-3 py-2 rounded-xl max-w-[70%] self-end preview-bubble-right');
     rightBubble.style.background = previewVars.bubbleRightBg;
     rightBubble.style.color = previewVars.bubbleRightText;
     rightBubble.textContent = '我的訊息';
