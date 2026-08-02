@@ -1,8 +1,4 @@
-const CACHE_NAME = 'sxios-v23';
-
-function getBasePath() {
-  return self.registration.scope;
-}
+const CACHE_NAME = 'sxios-v24';
 
 const STATIC_ASSETS = [
   '/siios/',
@@ -10,6 +6,8 @@ const STATIC_ASSETS = [
   '/siios/css/shared.css',
   '/siios/css/ios.css',
   '/siios/css/kakao.css',
+  '/siios/css/notion-tokens.css',
+  '/siios/css/claude-tokens.css',
   '/siios/js/app.js',
   '/siios/js/router.js',
   '/siios/js/db.js',
@@ -19,6 +17,8 @@ const STATIC_ASSETS = [
   '/siios/js/homescreen.js',
   '/siios/js/debug-logger.js',
   '/siios/js/scroll-handler.js',
+  '/siios/js/activity-interceptor.js',
+  '/siios/js/activity-router.js',
   '/siios/js/apps/registry.js',
   '/siios/js/apps/chats/index.js',
   '/siios/js/apps/chats/chat.js',
@@ -36,10 +36,12 @@ self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
+        console.log('[SW] Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
-        self.skipWaiting();
+        console.log('[SW] Skip waiting');
+        return self.skipWaiting();
       })
   );
 });
@@ -50,10 +52,14 @@ self.addEventListener('activate', (event) => {
       return Promise.all(
         cacheNames
           .filter((name) => name !== CACHE_NAME)
-          .map((name) => caches.delete(name))
+          .map((name) => {
+            console.log('[SW] Deleting old cache:', name);
+            return caches.delete(name);
+          })
       );
     }).then(() => {
-      self.clients.claim();
+      console.log('[SW] Claiming clients');
+      return self.clients.claim();
     })
   );
 });
@@ -71,23 +77,30 @@ self.addEventListener('fetch', (event) => {
   }
   
   event.respondWith(
-    fetch(request)
-      .then((response) => {
-        if (!response || response.status !== 200) {
-          return caches.match(request)
-            .then((cached) => cached || response);
+    caches.match(request)
+      .then((cachedResponse) => {
+        if (cachedResponse) {
+          console.log('[SW] Serving from cache:', request.url);
+          return cachedResponse;
         }
-        const responseToCache = response.clone();
-        caches.open(CACHE_NAME)
-          .then((cache) => {
-            cache.put(request, responseToCache);
-          });
-        return response;
-      })
-      .catch(() => {
-        return caches.match(request)
-          .then((cached) => {
-            if (cached) return cached;
+        
+        console.log('[SW] Fetching from network:', request.url);
+        return fetch(request)
+          .then((response) => {
+            if (!response || response.status !== 200) {
+              return response;
+            }
+            
+            const responseToCache = response.clone();
+            caches.open(CACHE_NAME)
+              .then((cache) => {
+                cache.put(request, responseToCache);
+              });
+            
+            return response;
+          })
+          .catch((error) => {
+            console.error('[SW] Fetch failed:', error);
             if (request.destination === 'document') {
               return caches.match('/siios/index.html');
             }
