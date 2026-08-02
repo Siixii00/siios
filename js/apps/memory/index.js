@@ -91,24 +91,26 @@ async function renderMemoryList() {
     searchContainer.appendChild(searchBox);
     main.appendChild(searchContainer);
 
-    const categoryGrid = createElement('div', 'grid grid-cols-4 gap-2 mx-4 mb-6');
-    TYPE_TABS.forEach((tab, index) => {
-        const card = createElement('div', 'flex flex-col items-center justify-center p-3 rounded-lg cursor-pointer transition-all ' + 
-            (currentFilter === index ? 'bg-claude-primary text-white shadow-md' : 'bg-white hover:shadow-md'));
-        
-        card.addEventListener('click', async () => {
-            if (currentFilter !== index) {
-                await SettingsDB.set('memory_filter', index);
+    const filterContainer = createElement('div', 'mx-4 mb-6');
+    const filterSelect = createElement('select', 'w-full bg-white rounded-lg px-4 py-3 text-sm font-medium shadow-sm cursor-pointer outline-none', {
+        value: currentFilter,
+        onChange: async (e) => {
+            const newIndex = parseInt(e.target.value);
+            if (currentFilter !== newIndex) {
+                await SettingsDB.set('memory_filter', newIndex);
                 await SettingsDB.set('memory_search', '');
                 window.location.hash = '/memory';
             }
-        });
-        const iconMap = ['inventory_2', 'auto_awesome', 'bookmark', 'favorite', 'event_note', 'mail', 'person', 'backup'];
-        card.appendChild(createIcon(iconMap[index] || 'folder', 'text-2xl mb-1'));
-        card.appendChild(createElement('span', 'text-xs font-medium', { textContent: tab }));
-        categoryGrid.appendChild(card);
+        }
     });
-    main.appendChild(categoryGrid);
+    const iconMap = ['inventory_2', 'auto_awesome', 'bookmark', 'favorite', 'event_note', 'mail', 'person', 'backup'];
+    TYPE_TABS.forEach((tab, index) => {
+        const option = createElement('option', '', { value: index, textContent: tab });
+        if (currentFilter === index) option.selected = true;
+        filterSelect.appendChild(option);
+    });
+    filterContainer.appendChild(filterSelect);
+    main.appendChild(filterContainer);
 
     const listContainer = createElement('div', 'px-4');
     main.appendChild(listContainer);
