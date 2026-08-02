@@ -91,24 +91,58 @@ async function renderMemoryList() {
     searchContainer.appendChild(searchBox);
     main.appendChild(searchContainer);
 
-    const categoryGrid = createElement('div', 'grid grid-cols-4 gap-2 mx-4 mb-6');
+    const filterContainer = createElement('div', 'mx-4 mb-4');
+    const filterWrapper = createElement('div', 'relative');
+    
+    const iconMap = ['inventory_2', 'auto_awesome', 'bookmark', 'favorite', 'event_note', 'mail', 'person', 'backup'];
+    
+    const filterBtn = createElement('button', 
+        'w-full flex items-center justify-between bg-white rounded-lg px-4 py-3 shadow-sm');
+    const filterLabel = createElement('span', 'flex items-center gap-2');
+    filterLabel.appendChild(createIcon(iconMap[currentFilter] || 'folder', 'text-lg'));
+    filterLabel.appendChild(createElement('span', 'font-medium', { textContent: TYPE_TABS[currentFilter] }));
+    filterBtn.appendChild(filterLabel);
+    filterBtn.appendChild(createIcon('expand_more', 'text-ios-muted'));
+    
+    const dropdown = createElement('div', 
+        'absolute top-full left-0 right-0 bg-white rounded-lg shadow-lg mt-1 z-50 hidden');
+    
     TYPE_TABS.forEach((tab, index) => {
-        const card = createElement('div', 'flex flex-col items-center justify-center p-3 rounded-lg cursor-pointer transition-all ' + 
-            (currentFilter === index ? 'bg-claude-primary text-white shadow-md' : 'bg-white hover:shadow-md'));
+        const option = createElement('div', 
+            'flex items-center gap-3 px-4 py-3 cursor-pointer hover:bg-gray-50 ' + 
+            (currentFilter === index ? 'bg-blue-50' : ''));
+        option.appendChild(createIcon(iconMap[index] || 'folder', 'text-lg'));
+        option.appendChild(createElement('span', 'flex-1', { textContent: tab }));
+        if (currentFilter === index) {
+            option.appendChild(createIcon('check', 'text-claude-primary'));
+        }
         
-        card.addEventListener('click', async () => {
+        option.addEventListener('click', async () => {
             if (currentFilter !== index) {
                 await SettingsDB.set('memory_filter', index);
                 await SettingsDB.set('memory_search', '');
-                window.location.hash = '/memory';
+                dropdown.classList.add('hidden');
+                Router.navigate('/memory');
             }
         });
-        const iconMap = ['inventory_2', 'auto_awesome', 'bookmark', 'favorite', 'event_note', 'mail', 'person', 'backup'];
-        card.appendChild(createIcon(iconMap[index] || 'folder', 'text-2xl mb-1'));
-        card.appendChild(createElement('span', 'text-xs font-medium', { textContent: tab }));
-        categoryGrid.appendChild(card);
+        
+        dropdown.appendChild(option);
     });
-    main.appendChild(categoryGrid);
+    
+    filterBtn.addEventListener('click', () => {
+        dropdown.classList.toggle('hidden');
+    });
+    
+    document.addEventListener('click', (e) => {
+        if (!filterWrapper.contains(e.target)) {
+            dropdown.classList.add('hidden');
+        }
+    });
+    
+    filterWrapper.appendChild(filterBtn);
+    filterWrapper.appendChild(dropdown);
+    filterContainer.appendChild(filterWrapper);
+    main.appendChild(filterContainer);
 
     const listContainer = createElement('div', 'px-4');
     main.appendChild(listContainer);
