@@ -91,45 +91,25 @@ async function renderMemoryList() {
     searchContainer.appendChild(searchBox);
     main.appendChild(searchContainer);
 
-    const filterContainer = createElement('div', 'mx-4 mb-6');
-    const filterDropdown = createElement('div', 'relative');
-    const filterBtn = createElement('button', 'w-full bg-white rounded-lg px-4 py-3 text-sm font-medium shadow-sm cursor-pointer flex items-center justify-between outline-none');
-    const iconMap = ['inventory_2', 'auto_awesome', 'bookmark', 'favorite', 'event_note', 'mail', 'person', 'backup'];
-    const currentIcon = createIcon(iconMap[currentFilter] || 'folder', 'text-lg mr-2');
-    const currentLabel = createElement('span', 'flex-1 text-left', { textContent: TYPE_TABS[currentFilter] || '全部' });
-    const chevron = createIcon('expand_more', 'text-ios-muted');
-    filterBtn.appendChild(currentIcon);
-    filterBtn.appendChild(currentLabel);
-    filterBtn.appendChild(chevron);
-    const dropdownList = createElement('div', 'hidden absolute top-full left-0 right-0 mt-1 bg-white rounded-lg shadow-lg z-50 overflow-hidden');
+    const categoryGrid = createElement('div', 'grid grid-cols-4 gap-2 mx-4 mb-6');
     TYPE_TABS.forEach((tab, index) => {
-        const option = createElement('div', 'flex items-center px-4 py-3 cursor-pointer hover:bg-gray-50 ' + (currentFilter === index ? 'bg-claude-primary text-white' : ''));
-        option.appendChild(createIcon(iconMap[index] || 'folder', 'text-lg mr-2'));
-        option.appendChild(createElement('span', 'text-sm font-medium flex-1', { textContent: tab }));
-        if (currentFilter === index) {
-            option.appendChild(createIcon('check', 'text-sm'));
-        }
-        option.addEventListener('click', async () => {
+        const card = createElement('div', 'flex flex-col items-center justify-center p-3 rounded-lg cursor-pointer transition-all ' + 
+            (currentFilter === index ? 'bg-claude-primary text-white shadow-md' : 'bg-white hover:shadow-md'));
+        
+        card.addEventListener('click', async () => {
             if (currentFilter !== index) {
                 await SettingsDB.set('memory_filter', index);
                 await SettingsDB.set('memory_search', '');
                 window.location.hash = '/memory';
+                window.location.reload();
             }
         });
-        dropdownList.appendChild(option);
+        const iconMap = ['inventory_2', 'auto_awesome', 'bookmark', 'favorite', 'event_note', 'mail', 'person', 'backup'];
+        card.appendChild(createIcon(iconMap[index] || 'folder', 'text-2xl mb-1'));
+        card.appendChild(createElement('span', 'text-xs font-medium', { textContent: tab }));
+        categoryGrid.appendChild(card);
     });
-    filterBtn.addEventListener('click', () => {
-        dropdownList.classList.toggle('hidden');
-    });
-    document.addEventListener('click', (e) => {
-        if (!filterDropdown.contains(e.target)) {
-            dropdownList.classList.add('hidden');
-        }
-    });
-    filterDropdown.appendChild(filterBtn);
-    filterDropdown.appendChild(dropdownList);
-    filterContainer.appendChild(filterDropdown);
-    main.appendChild(filterContainer);
+    main.appendChild(categoryGrid);
 
     const listContainer = createElement('div', 'px-4');
     main.appendChild(listContainer);
