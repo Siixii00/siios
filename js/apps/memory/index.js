@@ -119,12 +119,10 @@ async function renderMemoryList() {
         }
         
         option.addEventListener('click', async () => {
-            if (currentFilter !== index) {
-                await SettingsDB.set('memory_filter', index);
-                await SettingsDB.set('memory_search', '');
-                dropdown.classList.add('hidden');
-                Router.navigate('/memory');
-            }
+            await SettingsDB.set('memory_filter', index);
+            await SettingsDB.set('memory_search', '');
+            dropdown.classList.add('hidden');
+            Router.navigate('/memory');
         });
         
         dropdown.appendChild(option);
