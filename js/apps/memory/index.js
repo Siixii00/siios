@@ -60,7 +60,9 @@ async function renderMemoryList() {
     });
     container.appendChild(header);
 
-    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pt-16 pb-8');
+    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-8');
+    main.style.marginTop = 'calc(44px + env(safe-area-inset-top, 0px))';
+    main.style.paddingTop = '16px';
 
     if (currentFilter === 7) {
         return await renderBackupPage(container, main);
@@ -555,7 +557,9 @@ async function renderMemoryDetail(params) {
     const header = createIOSNavBar({ title: '記憶詳情', backPath: '/memory' });
     container.appendChild(header);
 
-    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pt-16 pb-8');
+    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-8');
+    main.style.marginTop = 'calc(44px + env(safe-area-inset-top, 0px))';
+    main.style.paddingTop = '16px';
 
     const contentCard = createElement('div', 'bg-white rounded-lg mx-4 mb-4 p-4 shadow-sm');
     contentCard.appendChild(createElement('p', 'text-base leading-relaxed', { textContent: memory.content }));

@@ -29,7 +29,9 @@ async function renderApiConfig() {
     header.appendChild(inner);
     container.appendChild(header);
     
-    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pt-6 pb-24');
+    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-24');
+    main.style.marginTop = 'calc(44px + env(safe-area-inset-top, 0px))';
+    main.style.paddingTop = '16px';
     
     const connectionSection = createElement('div', 'mb-2 ml-8');
     connectionSection.appendChild(createElement('p', 'ios-section-header', { textContent: '連線設定' }));

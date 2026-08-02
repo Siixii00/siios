@@ -23,7 +23,9 @@ async function renderUserList() {
     });
     container.appendChild(header);
 
-    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pt-2 pb-8');
+    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-8');
+    main.style.marginTop = 'calc(44px + env(safe-area-inset-top, 0px))';
+    main.style.paddingTop = '16px';
 
     if (users.length === 0) {
         const empty = createElement('div', 'flex flex-col items-center justify-center pt-24');
@@ -98,7 +100,9 @@ async function renderUserEdit(params) {
     });
     container.appendChild(header);
 
-    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pt-4 pb-8');
+    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-8');
+    main.style.marginTop = 'calc(44px + env(safe-area-inset-top, 0px))';
+    main.style.paddingTop = '16px';
 
     const avatarSection = createElement('div', 'mb-2 ml-8');
     avatarSection.appendChild(createElement('p', 'ios-section-header', { textContent: '大頭貼' }));
