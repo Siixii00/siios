@@ -94,63 +94,26 @@ async function renderMemoryList() {
     searchBar.classList.add('mb-2');
     main.appendChild(searchBar);
 
-    const segmented = createIOSSegmentedControl(
-        TYPE_TABS,
-        (index) => {
-            currentFilter = index;
-            renderList();
-        },
-        currentFilter
-    );
-    segmented.classList.add('mx-4', 'mb-4');
-    main.appendChild(segmented);
+    const categoryCards = createElement('div', 'grid grid-cols-4 gap-2 mx-4 mb-4');
+    
+    TYPE_TABS.forEach((tab, index) => {
+        const card = createElement('div', 'ios-grouped-list p-3 text-center cursor-pointer transition-all' + (currentFilter === index ? ' ring-2 ring-ios-accent' : ''), {
+            onClick: () => {
+                currentFilter = index;
+                renderList();
+            }
+        });
+        const iconMap = ['inventory_2', 'auto_awesome', 'bookmark', 'favorite', 'event_note', 'mail', 'person', 'archive'];
+        card.appendChild(createIcon(iconMap[index] || 'folder', 'text-2xl mb-1 block'));
+        card.appendChild(createElement('span', 'text-xs font-medium', { textContent: tab }));
+        categoryCards.appendChild(card);
+    });
+    main.appendChild(categoryCards);
 
     const listContainer = createElement('div', 'px-4');
     main.appendChild(listContainer);
 
     container.appendChild(main);
-
-    const nav = createElement('div', 'ios-bottom-nav safe-area-bottom');
-
-    const chatsTab = createElement('a', 'ios-bottom-nav-item', {
-        href: '/#/chats',
-        onClick: (e) => {
-            e.preventDefault();
-            Router.navigate('/chats');
-        }
-    });
-    chatsTab.appendChild(createIcon('chat_bubble'));
-    chatsTab.appendChild(createElement('span', 'label', { textContent: 'Chats' }));
-    nav.appendChild(chatsTab);
-
-    const worldInfoTab = createElement('a', 'ios-bottom-nav-item', {
-        href: '/#/world-info',
-        onClick: (e) => {
-            e.preventDefault();
-            Router.navigate('/world-info');
-        }
-    });
-    worldInfoTab.appendChild(createIcon('menu_book'));
-    worldInfoTab.appendChild(createElement('span', 'label', { textContent: 'World Info' }));
-    nav.appendChild(worldInfoTab);
-
-    const memoryTab = createElement('a', 'ios-bottom-nav-item active');
-    memoryTab.appendChild(createIcon('psychology', '', true));
-    memoryTab.appendChild(createElement('span', 'label', { textContent: 'Memory' }));
-    nav.appendChild(memoryTab);
-
-    const settingsTab = createElement('a', 'ios-bottom-nav-item', {
-        href: '/#/settings',
-        onClick: (e) => {
-            e.preventDefault();
-            Router.navigate('/settings');
-        }
-    });
-    settingsTab.appendChild(createIcon('settings'));
-    settingsTab.appendChild(createElement('span', 'label', { textContent: 'Settings' }));
-    nav.appendChild(settingsTab);
-
-    container.appendChild(nav);
 
     async function renderList() {
         listContainer.innerHTML = '';
@@ -166,52 +129,52 @@ async function renderMemoryList() {
             return;
         }
 
-        const group = createElement('div', 'ios-grouped-list');
+        const cardsGrid = createElement('div', 'grid grid-cols-1 gap-3');
 
         filtered.forEach(memory => {
             const stage = getDecayStage(memory);
-            const cell = createElement('div', 'ios-list-cell ios-list-cell-full', {
+            const card = createElement('div', 'ios-grouped-list p-4 cursor-pointer hover:shadow-lg transition-shadow', {
                 onClick: () => Router.navigate('/memory/' + memory.id)
             });
 
-            const leftContent = createElement('div', 'flex-1 min-h-[64px] flex flex-col justify-center');
-
-            const topRow = createElement('div', 'flex items-center gap-2 mb-1');
-            topRow.appendChild(createElement('span', 'text-base font-semibold line-clamp-1', { textContent: memory.content.slice(0, 50) }));
-
-            const badge = createElement('span', `inline-block w-2 h-2 rounded-full ${stage.dotClass}`);
+            const topRow = createElement('div', 'flex items-start justify-between mb-2');
+            const content = createElement('p', 'text-base leading-snug line-clamp-2 flex-1', { 
+                textContent: memory.content.slice(0, 100)
+            });
+            const badge = createElement('span', `inline-block w-2 h-2 rounded-full ${stage.dotClass} mt-2`);
+            topRow.appendChild(content);
             topRow.appendChild(badge);
-            leftContent.appendChild(topRow);
+            card.appendChild(topRow);
 
-            const bottomRow = createElement('div', 'flex items-center gap-2');
-            bottomRow.appendChild(createElement('span', 'text-sm text-ios-muted', { textContent: formatRelativeTime(memory.timestamp || memory.created_at) }));
-            bottomRow.appendChild(createElement('span', `text-xs px-1.5 py-0.5 rounded ${stage.badgeClass}`, { textContent: stage.label }));
+            const metaRow = createElement('div', 'flex flex-wrap items-center gap-2 text-xs');
+            metaRow.appendChild(createElement('span', 'text-ios-muted', { textContent: formatRelativeTime(memory.timestamp || memory.created_at) }));
+            metaRow.appendChild(createElement('span', `px-2 py-1 rounded-full ${stage.badgeClass}`, { textContent: stage.label }));
             const typeLabel = TYPE_LABELS[memory.memory_type] || memory.memory_type || '動態';
-            bottomRow.appendChild(createElement('span', 'text-xs px-1.5 py-0.5 rounded bg-ios-bg2', { textContent: typeLabel }));
+            metaRow.appendChild(createElement('span', 'px-2 py-1 rounded-full bg-ios-bg2', { textContent: typeLabel }));
             
-            // Source label
             if (memory.source_app && memory.source_app !== 'chat') {
                 const sourceLabel = getSourceLabel(memory.source_app);
-                bottomRow.appendChild(createElement('span', 'text-xs px-1.5 py-0.5 rounded bg-blue-100 text-blue-700', { textContent: sourceLabel }));
+                metaRow.appendChild(createElement('span', 'px-2 py-1 rounded-full bg-blue-100 text-blue-700', { textContent: sourceLabel }));
             }
             
-            // Fiction indicator
             if (memory.is_fiction) {
-                bottomRow.appendChild(createElement('span', 'text-xs px-1.5 py-0.5 rounded bg-orange-100 text-orange-700', { textContent: '虛擬' }));
+                metaRow.appendChild(createElement('span', 'px-2 py-1 rounded-full bg-orange-100 text-orange-700', { textContent: '虛擬' }));
             }
             
-            if (memory.domain) {
-                bottomRow.appendChild(createElement('span', 'text-xs text-ios-muted', { textContent: memory.domain }));
+            card.appendChild(metaRow);
+
+            if (memory.aiTags && memory.aiTags.length > 0) {
+                const tagsRow = createElement('div', 'flex flex-wrap gap-1 mt-2');
+                memory.aiTags.slice(0, 3).forEach(tag => {
+                    tagsRow.appendChild(createElement('span', 'text-xs px-2 py-0.5 rounded bg-gray-100 text-gray-600', { textContent: tag }));
+                });
+                card.appendChild(tagsRow);
             }
-            leftContent.appendChild(bottomRow);
 
-            cell.appendChild(leftContent);
-            cell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
-
-            group.appendChild(cell);
+            cardsGrid.appendChild(card);
         });
 
-        listContainer.appendChild(group);
+        listContainer.appendChild(cardsGrid);
     }
 
     await renderList();
