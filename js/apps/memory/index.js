@@ -217,6 +217,7 @@ async function renderMemoryList() {
 }
 
 async function renderBackupPage() {
+    const currentFilter = await SettingsDB.get('memory_filter') || 0;
     const container = createElement('div', 'app-container memory-app bg-ios-bg');
     
     const header = createIOSNavBar({
@@ -230,6 +231,57 @@ async function renderBackupPage() {
     const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-8');
     main.style.marginTop = 'calc(44px + env(safe-area-inset-top, 0px))';
     main.style.paddingTop = '16px';
+    
+    const filterContainer = createElement('div', 'mx-4 mb-4');
+    const filterWrapper = createElement('div', 'relative');
+    
+    const iconMap = ['inventory_2', 'auto_awesome', 'bookmark', 'favorite', 'event_note', 'mail', 'person', 'backup'];
+    
+    const filterBtn = createElement('button', 
+        'w-full flex items-center justify-between bg-white rounded-lg px-4 py-3 shadow-sm');
+    const filterLabel = createElement('span', 'flex items-center gap-2');
+    filterLabel.appendChild(createIcon(iconMap[currentFilter] || 'folder', 'text-lg'));
+    filterLabel.appendChild(createElement('span', 'font-medium', { textContent: TYPE_TABS[currentFilter] }));
+    filterBtn.appendChild(filterLabel);
+    filterBtn.appendChild(createIcon('expand_more', 'text-ios-muted'));
+    
+    const dropdown = createElement('div', 
+        'absolute top-full left-0 right-0 bg-white rounded-lg shadow-lg mt-1 z-50 hidden');
+    
+    TYPE_TABS.forEach((tab, index) => {
+        const option = createElement('div', 
+            'flex items-center gap-3 px-4 py-3 cursor-pointer hover:bg-gray-50 ' + 
+            (currentFilter === index ? 'bg-blue-50' : ''));
+        option.appendChild(createIcon(iconMap[index] || 'folder', 'text-lg'));
+        option.appendChild(createElement('span', 'flex-1', { textContent: tab }));
+        if (currentFilter === index) {
+            option.appendChild(createIcon('check', 'text-claude-primary'));
+        }
+        
+        option.addEventListener('click', async () => {
+            await SettingsDB.set('memory_filter', index);
+            await SettingsDB.set('memory_search', '');
+            dropdown.classList.add('hidden');
+            Router.navigate('/memory');
+        });
+        
+        dropdown.appendChild(option);
+    });
+    
+    filterBtn.addEventListener('click', () => {
+        dropdown.classList.toggle('hidden');
+    });
+    
+    document.addEventListener('click', (e) => {
+        if (!filterWrapper.contains(e.target)) {
+            dropdown.classList.add('hidden');
+        }
+    });
+    
+    filterWrapper.appendChild(filterBtn);
+    filterWrapper.appendChild(dropdown);
+    filterContainer.appendChild(filterWrapper);
+    main.appendChild(filterContainer);
     
     const memories = await MemoryDB.getAll();
     const wikiPages = await WikiRecordsDB.getAll();
