@@ -16,7 +16,7 @@ async function renderSettings() {
     });
     container.appendChild(header);
 
-    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pt-2 pb-8');
+    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pt-16 pb-8');
 
     const profileSection = createElement('div', 'ios-grouped-list mx-4');
     const profileCard = createElement('div', 'flex items-center p-4 bg-white rounded-xl shadow-sm cursor-pointer', {
