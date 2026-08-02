@@ -2,9 +2,9 @@
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { MemoryDB, WikiRecordsDB, SettingsDB } from '../../db.js';
 
-const TYPE_TABS = ['全部', '動態', '永久', '情感', '計畫', '書信', '自我'];
-const TYPE_MAP = { 1: 'dynamic', 2: 'permanent', 3: 'feel', 4: 'plan', 5: 'letter', 6: 'i' };
-const TYPE_LABELS = { dynamic: '動態', permanent: '永久', feel: '情感', plan: '計畫', letter: '書信', i: '自我' };
+const TYPE_TABS = ['全部', '動態', '永久', '情感', '計畫', '書信', '自我', '備份'];
+const TYPE_MAP = { 1: 'dynamic', 2: 'permanent', 3: 'feel', 4: 'plan', 5: 'letter', 6: 'i', 7: 'archive' };
+const TYPE_LABELS = { dynamic: '動態', permanent: '永久', feel: '情感', plan: '計畫', letter: '書信', i: '自我', archive: '歸檔' };
 
 const SOURCE_LABELS = {
     'chat': '對話',
@@ -47,11 +47,10 @@ function getDecayStage(memory) {
 }
 
 async function renderMemoryList() {
-    let currentFilter = await SettingsDB.get('memory_filter');
+    const currentFilter = await SettingsDB.get('memory_filter') || 0;
     
-    if (currentFilter === null || currentFilter === undefined || currentFilter === 7) {
-        currentFilter = 0;
-        await SettingsDB.set('memory_filter', 0);
+    if (currentFilter === 7) {
+        return await renderBackupPage();
     }
     
     const searchTerm = await SettingsDB.get('memory_search') || '';
@@ -62,10 +61,7 @@ async function renderMemoryList() {
         title: '記憶管理',
         largeTitle: false,
         backPath: '/home',
-        rightActions: [
-            { icon: 'add', onClick: () => Router.navigate('/memory/new') },
-            { icon: 'backup', onClick: () => Router.navigate('/memory/backup') }
-        ]
+        rightActions: [{ icon: 'add', onClick: () => Router.navigate('/memory/new') }]
     });
     container.appendChild(header);
 
@@ -222,23 +218,21 @@ async function renderMemoryList() {
     return { element: container, cleanup: null };
 }
 
-async function renderBackupPageRoute() {
+async function renderBackupPage() {
     const container = createElement('div', 'app-container memory-app bg-ios-bg');
+    
     const header = createIOSNavBar({
         title: '記憶備份',
         largeTitle: false,
-        backPath: '/memory'
+        backPath: '/home',
+        rightActions: [{ icon: 'add', onClick: () => Router.navigate('/memory/new') }]
     });
     container.appendChild(header);
 
     const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-8');
     main.style.marginTop = 'calc(44px + env(safe-area-inset-top, 0px))';
     main.style.paddingTop = '16px';
-
-    return await renderBackupPage(container, main);
-}
-
-async function renderBackupPage(container, main) {
+    
     const memories = await MemoryDB.getAll();
     const wikiPages = await WikiRecordsDB.getAll();
     const githubUser = await SettingsDB.get('github_user');
@@ -702,7 +696,6 @@ export default {
     icon: 'psychology',
     routes: [
         { path: '/memory', render: renderMemoryList },
-        { path: '/memory/backup', render: renderBackupPageRoute },
         { path: '/memory/:id', render: renderMemoryDetail }
     ],
     navItem: {
