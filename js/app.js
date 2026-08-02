@@ -247,7 +247,7 @@ const App = {
     async registerServiceWorker() {
         if ('serviceWorker' in navigator) {
             try {
-                const registration = await navigator.serviceWorker.register('./sw.js');
+                const registration = await navigator.serviceWorker.register('/siios/sw.js');
                 console.log('ServiceWorker registered:', registration.scope);
             } catch (error) {
                 console.warn('ServiceWorker registration failed:', error);
