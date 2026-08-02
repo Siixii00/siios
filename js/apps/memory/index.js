@@ -101,7 +101,6 @@ async function renderMemoryList() {
                 await SettingsDB.set('memory_filter', index);
                 await SettingsDB.set('memory_search', '');
                 window.location.hash = '/memory';
-                window.location.reload();
             }
         });
         const iconMap = ['inventory_2', 'auto_awesome', 'bookmark', 'favorite', 'event_note', 'mail', 'person', 'backup'];
