@@ -95,5 +95,16 @@
     <script type="module" src="/siios/js/app.js"></script>
     <script src="/siios/js/debug-logger.js?v=4"></script>
     <script src="/siios/js/scroll-handler.js"></script>
+    <script>
+        // Force update Service Worker before app loads
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistration().then(registration => {
+                if (registration && registration.waiting) {
+                    console.log('[Index] New Service Worker detected, forcing update');
+                    registration.waiting.postMessage({ type: 'FORCE_UPDATE' });
+                }
+            }).catch(err => console.warn('[Index] SW check failed:', err));
+        }
+    </script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sxios-v25';
+const CACHE_NAME = 'sxios-v26';
 
 const STATIC_ASSETS = [
   '/siios/',
@@ -31,6 +31,13 @@ const STATIC_ASSETS = [
   '/siios/js/core/memory-system/index.js',
   '/siios/manifest.json'
 ];
+
+self.addEventListener('message', (event) => {
+  if (event.data && event.data.type === 'FORCE_UPDATE') {
+    console.log('[SW] Force update requested');
+    self.skipWaiting();
+  }
+});
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
