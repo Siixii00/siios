@@ -92,18 +92,15 @@ async function renderMemoryList() {
     main.appendChild(searchContainer);
 
     const filterContainer = createElement('div', 'mx-4 mb-6');
-    const filterSelect = createElement('select', 'w-full bg-white rounded-lg px-4 py-3 text-sm font-medium shadow-sm cursor-pointer outline-none', {
-        value: currentFilter,
-        onChange: async (e) => {
-            const newIndex = parseInt(e.target.value);
-            if (currentFilter !== newIndex) {
-                await SettingsDB.set('memory_filter', newIndex);
-                await SettingsDB.set('memory_search', '');
-                window.location.hash = '/memory';
-            }
+    const filterSelect = createElement('select', 'w-full bg-white rounded-lg px-4 py-3 text-sm font-medium shadow-sm cursor-pointer outline-none');
+    filterSelect.addEventListener('change', async (e) => {
+        const newIndex = parseInt(e.target.value);
+        if (currentFilter !== newIndex) {
+            await SettingsDB.set('memory_filter', newIndex);
+            await SettingsDB.set('memory_search', '');
+            window.location.hash = '/memory';
         }
     });
-    const iconMap = ['inventory_2', 'auto_awesome', 'bookmark', 'favorite', 'event_note', 'mail', 'person', 'backup'];
     TYPE_TABS.forEach((tab, index) => {
         const option = createElement('option', '', { value: index, textContent: tab });
         if (currentFilter === index) option.selected = true;
