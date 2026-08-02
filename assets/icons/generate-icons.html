@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Generate PWA Icons</title>
+</head>
+<body>
+    <h2>PWA Icon Generator</h2>
+    <p>Right-click on each canvas and select "Save image as..."</p>
+    
+    <h3>192x192</h3>
+    <canvas id="canvas192" width="192" height="192" style="border: 1px solid #ccc;"></canvas>
+    
+    <h3>512x512</h3>
+    <canvas id="canvas512" width="512" height="512" style="border: 1px solid #ccc;"></canvas>
+    
+    <script>
+        function drawIcon(canvas, size) {
+            const ctx = canvas.getContext('2d');
+            
+            // Background with rounded corners
+            ctx.fillStyle = '#519D9E';
+            const radius = size * 0.21;
+            ctx.beginPath();
+            ctx.moveTo(radius, 0);
+            ctx.lineTo(size - radius, 0);
+            ctx.quadraticCurveTo(size, 0, size, radius);
+            ctx.lineTo(size, size - radius);
+            ctx.quadraticCurveTo(size, size, size - radius, size);
+            ctx.lineTo(radius, size);
+            ctx.quadraticCurveTo(0, size, 0, size - radius);
+            ctx.lineTo(0, radius);
+            ctx.quadraticCurveTo(0, 0, radius, 0);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Icon - simplified wand shine symbol
+            ctx.fillStyle = '#D1B6E1';
+            ctx.strokeStyle = '#D1B6E1';
+            ctx.lineWidth = size * 0.04;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            
+            // Draw a simple magic wand with sparkle
+            const centerX = size / 2;
+            const centerY = size / 2;
+            const scale = size / 512;
+            
+            // Wand
+            ctx.beginPath();
+            ctx.moveTo(centerX - 60 * scale, centerY + 80 * scale);
+            ctx.lineTo(centerX + 80 * scale, centerY - 60 * scale);
+            ctx.stroke();
+            
+            // Star burst
+            const starX = centerX + 80 * scale;
+            const starY = centerY - 60 * scale;
+            const starSize = 40 * scale;
+            
+            // Draw 4-pointed star
+            ctx.beginPath();
+            ctx.moveTo(starX, starY - starSize);
+            ctx.lineTo(starX + starSize * 0.3, starY - starSize * 0.3);
+            ctx.lineTo(starX + starSize, starY);
+            ctx.lineTo(starX + starSize * 0.3, starY + starSize * 0.3);
+            ctx.lineTo(starX, starY + starSize);
+            ctx.lineTo(starX - starSize * 0.3, starY + starSize * 0.3);
+            ctx.lineTo(starX - starSize, starY);
+            ctx.lineTo(starX - starSize * 0.3, starY - starSize * 0.3);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Small sparkles
+            const sparkles = [
+                {x: starX - 60 * scale, y: starY - 40 * scale},
+                {x: starX + 40 * scale, y: starY - 80 * scale},
+                {x: starX + 60 * scale, y: starY - 20 * scale}
+            ];
+            
+            sparkles.forEach(pos => {
+                const sparkSize = 15 * scale;
+                ctx.beginPath();
+                ctx.moveTo(pos.x, pos.y - sparkSize);
+                ctx.lineTo(pos.x + sparkSize * 0.2, pos.y);
+                ctx.lineTo(pos.x, pos.y + sparkSize);
+                ctx.lineTo(pos.x - sparkSize * 0.2, pos.y);
+                ctx.closePath();
+                ctx.fill();
+            });
+        }
+        
+        drawIcon(document.getElementById('canvas192'), 192);
+        drawIcon(document.getElementById('canvas512'), 512);
+    </script>
+</body>
+</html>

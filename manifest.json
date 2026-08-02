@@ -1,22 +1,30 @@
 {
   "name": "SXIOS",
-  "short_name": "AI Companion",
+  "short_name": "SXIOS",
   "description": "AI character interactions PWA with iOS native feel",
   "start_url": "/siios/index.html",
   "display": "standalone",
-  "background_color": "#F2F2F7",
-  "theme_color": "#007AFF",
+  "background_color": "#519D9E",
+  "theme_color": "#519D9E",
   "orientation": "portrait",
   "icons": [
     {
       "src": "/siios/assets/icons/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/siios/assets/icons/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/siios/assets/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     }
   ],
   "categories": ["productivity", "utilities"],

@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Generate PWA Icons</title>
+    <style>
+        body { font-family: system-ui, sans-serif; padding: 20px; background: #f5f5f5; }
+        .icon-card { background: white; padding: 20px; margin: 20px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        canvas { display: block; margin: 10px 0; }
+        button { background: #519D9E; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; font-size: 14px; }
+        button:hover { background: #4a8f90; }
+    </style>
+</head>
+<body>
+    <h1>SXIOS PWA Icon Generator</h1>
+    <p>Click the buttons below to download the icons</p>
+    
+    <div class="icon-card">
+        <h3>192x192 Icon</h3>
+        <canvas id="canvas192" width="192" height="192"></canvas>
+        <button onclick="downloadIcon('canvas192', 'icon-192.png')">Download 192x192</button>
+    </div>
+    
+    <div class="icon-card">
+        <h3>512x512 Icon</h3>
+        <canvas id="canvas512" width="512" height="512"></canvas>
+        <button onclick="downloadIcon('canvas512', 'icon-512.png')">Download 512x512</button>
+    </div>
+    
+    <script>
+        function drawIcon(canvas) {
+            const ctx = canvas.getContext('2d');
+            const size = canvas.width;
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, size, size);
+            
+            // Background with rounded corners (iOS style)
+            ctx.fillStyle = '#519D9E';
+            const radius = size * 0.22;
+            ctx.beginPath();
+            ctx.moveTo(radius, 0);
+            ctx.lineTo(size - radius, 0);
+            ctx.quadraticCurveTo(size, 0, size, radius);
+            ctx.lineTo(size, size - radius);
+            ctx.quadraticCurveTo(size, size, size - radius, size);
+            ctx.lineTo(radius, size);
+            ctx.quadraticCurveTo(0, size, 0, size - radius);
+            ctx.lineTo(0, radius);
+            ctx.quadraticCurveTo(0, 0, radius, 0);
+            ctx.closePath();
+            ctx.fill();
+            
+            // Draw magic wand with sparkles
+            ctx.strokeStyle = '#D1B6E1';
+            ctx.fillStyle = '#D1B6E1';
+            ctx.lineWidth = Math.max(2, size * 0.04);
+            ctx.lineCap = 'round';
+            
+            const scale = size / 512;
+            
+            // Wand line
+            ctx.beginPath();
+            ctx.moveTo(160 * scale, 352 * scale);
+            ctx.lineTo(352 * scale, 160 * scale);
+            ctx.stroke();
+            
+            // Main star
+            const starX = 352 * scale;
+            const starY = 160 * scale;
+            const starSize = 50 * scale;
+            
+            drawStar(ctx, starX, starY, starSize, 4);
+            
+            // Sparkles
+            drawSparkle(ctx, 260 * scale, 120 * scale, 20 * scale);
+            drawSparkle(ctx, 400 * scale, 230 * scale, 18 * scale);
+            drawSparkle(ctx, 420 * scale, 120 * scale, 15 * scale);
+        }
+        
+        function drawStar(ctx, x, y, size, points) {
+            ctx.beginPath();
+            for (let i = 0; i < points * 2; i++) {
+                const radius = i % 2 === 0 ? size : size / 2;
+                const angle = (i * Math.PI) / points - Math.PI / 2;
+                const px = x + Math.cos(angle) * radius;
+                const py = y + Math.sin(angle) * radius;
+                if (i === 0) ctx.moveTo(px, py);
+                else ctx.lineTo(px, py);
+            }
+            ctx.closePath();
+            ctx.fill();
+        }
+        
+        function drawSparkle(ctx, x, y, size) {
+            ctx.beginPath();
+            // Vertical
+            ctx.moveTo(x, y - size);
+            ctx.lineTo(x, y + size);
+            ctx.moveTo(x - size * 0.6, y);
+            ctx.lineTo(x + size * 0.6, y);
+            ctx.stroke();
+        }
+        
+        function downloadIcon(canvasId, filename) {
+            const canvas = document.getElementById(canvasId);
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+        
+        // Draw icons on load
+        drawIcon(document.getElementById('canvas192'));
+        drawIcon(document.getElementById('canvas512'));
+    </script>
+</body>
+</html>
