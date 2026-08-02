@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sxios-v26';
+const CACHE_NAME = 'sxios-v27';
 
 const STATIC_ASSETS = [
   '/siios/',
@@ -87,6 +87,18 @@ self.addEventListener('fetch', (event) => {
     caches.match(request)
       .then((cachedResponse) => {
         if (cachedResponse) {
+          if (cachedResponse.status !== 200) {
+            console.log('[SW] Ignoring cached error response:', request.url, 'status:', cachedResponse.status);
+            return fetch(request).then((networkResponse) => {
+              if (networkResponse && networkResponse.status === 200) {
+                const responseToCache = networkResponse.clone();
+                caches.open(CACHE_NAME).then((cache) => {
+                  cache.put(request, responseToCache);
+                });
+              }
+              return networkResponse;
+            });
+          }
           console.log('[SW] Serving from cache:', request.url);
           return cachedResponse;
         }
