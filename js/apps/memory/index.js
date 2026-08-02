@@ -1,12 +1,12 @@
 ﻿import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
-import { MemoryDB } from '../../db.js';
+import { MemoryDB, WikiRecordsDB, SettingsDB } from '../../db.js';
 
 let memories = [];
 let currentFilter = 0;
 let searchTerm = '';
 
-const TYPE_TABS = ['全部', '動態', '永久', '情感', '計畫', '書信', '自我', '歸檔'];
+const TYPE_TABS = ['全部', '動態', '永久', '情感', '計畫', '書信', '自我', '備份'];
 const TYPE_MAP = { 1: 'dynamic', 2: 'permanent', 3: 'feel', 4: 'plan', 5: 'letter', 6: 'i', 7: 'archive' };
 const TYPE_LABELS = { dynamic: '動態', permanent: '永久', feel: '情感', plan: '計畫', letter: '書信', i: '自我', archive: '歸檔' };
 
@@ -81,6 +81,10 @@ async function renderMemoryList() {
 
     const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pt-16 pb-8');
 
+    if (currentFilter === 7) {
+        return await renderBackupPage(container, main);
+    }
+
     const searchContainer = createElement('div', 'mx-4 mb-4');
     const searchBox = createElement('div', 'flex items-center bg-white rounded-lg px-4 py-3 shadow-sm');
     searchBox.appendChild(createIcon('search', 'text-ios-muted mr-3'));
@@ -102,10 +106,14 @@ async function renderMemoryList() {
             (currentFilter === index ? 'bg-claude-primary text-white shadow-md' : 'bg-white hover:shadow-md'), {
             onClick: () => {
                 currentFilter = index;
-                renderList();
+                if (index === 7) {
+                    Router.navigate('/memory');
+                } else {
+                    renderList();
+                }
             }
         });
-        const iconMap = ['inventory_2', 'auto_awesome', 'bookmark', 'favorite', 'event_note', 'mail', 'person', 'archive'];
+        const iconMap = ['inventory_2', 'auto_awesome', 'bookmark', 'favorite', 'event_note', 'mail', 'person', 'backup'];
         card.appendChild(createIcon(iconMap[index] || 'folder', 'text-2xl mb-1'));
         card.appendChild(createElement('span', 'text-xs font-medium', { textContent: tab }));
         categoryGrid.appendChild(card);
@@ -173,6 +181,449 @@ async function renderMemoryList() {
     return { element: container, cleanup: null };
 }
 
+async function renderBackupPage(container, main) {
+    const memories = await MemoryDB.getAll();
+    const wikiPages = await WikiRecordsDB.getAll();
+    const githubUser = await SettingsDB.get('github_user');
+    const googleUser = await SettingsDB.get('google_drive_user');
+    const notionConfig = await SettingsDB.get('wiki_notion_config');
+    
+    const statsCard = createElement('div', 'bg-gradient-to-r from-claude-primary to-gray-700 rounded-lg mx-4 mb-4 p-4 text-white');
+    statsCard.innerHTML = '<h2 class="font-bold mb-3">記憶統計</h2>' +
+        '<div class="grid grid-cols-3 gap-2 text-center">' +
+        '<div><div class="text-2xl font-bold">' + memories.length + '</div><div class="text-xs opacity-80">總記憶</div></div>' +
+        '<div><div class="text-2xl font-bold">' + memories.filter(m => m.memory_type === 'permanent').length + '</div><div class="text-xs opacity-80">永久記憶</div></div>' +
+        '<div><div class="text-2xl font-bold">' + wikiPages.length + '</div><div class="text-xs opacity-80">Wiki 頁面</div></div>' +
+        '</div>';
+    main.appendChild(statsCard);
+
+    const connectionsSection = createElement('div', 'mx-4 mb-4');
+    connectionsSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: '連接狀態' }));
+    
+    const connectionsGrid = createElement('div', 'bg-white rounded-lg shadow-sm p-4');
+    const connections = [
+        { name: 'GitHub', connected: !!githubUser, user: githubUser?.login, icon: 'code', color: 'bg-gray-800' },
+        { name: 'Google Drive', connected: !!googleUser, user: googleUser?.displayName, icon: 'cloud', color: 'bg-blue-500' },
+        { name: 'Notion', connected: !!notionConfig?.token, user: notionConfig?.token ? '已連接' : '未連接', icon: 'article', color: 'bg-purple-500' }
+    ];
+    
+    connections.forEach(conn => {
+        const row = createElement('div', 'flex items-center justify-between py-2');
+        const left = createElement('div', 'flex items-center gap-2');
+        const icon = createElement('div', 'w-8 h-8 ' + conn.color + ' rounded-lg flex items-center justify-center');
+        icon.appendChild(createIcon(conn.icon, 'text-white text-sm'));
+        left.appendChild(icon);
+        left.appendChild(createElement('span', 'text-sm font-medium', { textContent: conn.name }));
+        row.appendChild(left);
+        
+        const status = createElement('span', 'text-xs ' + (conn.connected ? 'text-green-600' : 'text-gray-400'));
+        status.textContent = conn.connected ? (conn.user || '已連接') : '未連接';
+        row.appendChild(status);
+        connectionsGrid.appendChild(row);
+    });
+    
+    connectionsSection.appendChild(connectionsGrid);
+    main.appendChild(connectionsSection);
+
+    const exportSection = createElement('div', 'mx-4 mb-4');
+    exportSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: '匯出記憶' }));
+    
+    const exportCards = [
+        { icon: 'download', iconBg: 'bg-blue-500', title: '下載 JSON 備份', desc: '將所有記憶匯出為 JSON 檔案', action: exportToJSON },
+        { icon: 'description', iconBg: 'bg-green-500', title: '匯出到 Wiki', desc: '將永久記憶轉換為 Wiki 頁面', action: exportToWiki },
+        { icon: 'article', iconBg: 'bg-purple-500', title: '匯出到 Notion', desc: notionConfig?.token ? '同步記憶到 Notion 資料庫' : '請先連接 Notion', action: notionConfig?.token ? exportToNotion : null },
+        { icon: 'cloud_upload', iconBg: 'bg-orange-500', title: '上傳到 GitHub', desc: githubUser ? '備份記憶到 GitHub 私人倉庫' : '請先連接 GitHub', action: githubUser ? exportToGitHub : null },
+        { icon: 'folder', iconBg: 'bg-red-500', title: '上傳到 Google Drive', desc: googleUser ? '備份記憶到 Google Drive' : '請先連接 Google Drive', action: googleUser ? exportToGoogleDrive : null }
+    ];
+
+    const exportGrid = createElement('div', 'bg-white rounded-lg shadow-sm');
+    exportCards.forEach((card, index) => {
+        const cell = createElement('div', 'ios-list-cell cursor-pointer' + (!card.action ? ' opacity-50' : ''), {
+            onClick: card.action || (() => {
+                createToast('請先在設定中連接此服務', 'error');
+            })
+        });
+        const iconWrapper = createElement('div', 'w-10 h-10 ' + card.iconBg + ' rounded-lg flex items-center justify-center');
+        iconWrapper.appendChild(createIcon(card.icon, 'text-white text-sm'));
+        cell.appendChild(iconWrapper);
+        const content = createElement('div', 'flex-1 min-w-0');
+        content.appendChild(createElement('span', 'text-sm font-medium', { textContent: card.title }));
+        content.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: card.desc }));
+        cell.appendChild(content);
+        cell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
+        exportGrid.appendChild(cell);
+    });
+    exportSection.appendChild(exportGrid);
+    main.appendChild(exportSection);
+
+    const importSection = createElement('div', 'mx-4 mb-4');
+    importSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: '匯入記憶' }));
+    
+    const importGrid = createElement('div', 'bg-white rounded-lg shadow-sm');
+    
+    const importJSONCell = createElement('div', 'ios-list-cell cursor-pointer', { onClick: importFromJSON });
+    const importIcon = createElement('div', 'w-10 h-10 bg-teal-500 rounded-lg flex items-center justify-center');
+    importIcon.appendChild(createIcon('upload', 'text-white text-sm'));
+    importJSONCell.appendChild(importIcon);
+    const importContent = createElement('div', 'flex-1 min-w-0');
+    importContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '從 JSON 匯入' }));
+    importContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '從備份檔案還原記憶' }));
+    importJSONCell.appendChild(importContent);
+    importJSONCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
+    importGrid.appendChild(importJSONCell);
+    
+    if (githubUser) {
+        const importGitHubCell = createElement('div', 'ios-list-cell cursor-pointer', { onClick: importFromGitHub });
+        const ghIcon = createElement('div', 'w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center');
+        ghIcon.appendChild(createIcon('cloud_download', 'text-white text-sm'));
+        importGitHubCell.appendChild(ghIcon);
+        const ghContent = createElement('div', 'flex-1 min-w-0');
+        ghContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '從 GitHub 還原' }));
+        ghContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '從 GitHub 倉庫下載備份' }));
+        importGitHubCell.appendChild(ghContent);
+        importGitHubCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
+        importGrid.appendChild(importGitHubCell);
+    }
+    
+    if (googleUser) {
+        const importGoogleCell = createElement('div', 'ios-list-cell cursor-pointer', { onClick: importFromGoogleDrive });
+        const gIcon = createElement('div', 'w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center');
+        gIcon.appendChild(createIcon('cloud_download', 'text-white text-sm'));
+        importGoogleCell.appendChild(gIcon);
+        const gContent = createElement('div', 'flex-1 min-w-0');
+        gContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '從 Google Drive 還原' }));
+        gContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '從 Google Drive 下載備份' }));
+        importGoogleCell.appendChild(gContent);
+        importGoogleCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
+        importGrid.appendChild(importGoogleCell);
+    }
+    
+    importSection.appendChild(importGrid);
+    main.appendChild(importSection);
+
+    const settingsBtn = createElement('button', 'mx-4 w-full bg-gray-100 text-gray-700 rounded-lg py-3 text-sm font-medium', {
+        textContent: '管理連接設定',
+        onClick: () => Router.navigate('/settings/backup')
+    });
+    main.appendChild(settingsBtn);
+
+    container.appendChild(main);
+    return { element: container, cleanup: null };
+}
+
+async function exportToJSON() {
+    try {
+        createToast('正在匯出記憶...', 'info');
+        const memories = await MemoryDB.getAll();
+        const exportData = {
+            version: '1.0',
+            exportedAt: new Date().toISOString(),
+            source: 'siios-memory-export',
+            memories: memories
+        };
+        const blob = new Blob([JSON.stringify(exportData, null, 2)], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const a = createElement('a', '', { href: url, download: 'siios-memories-' + Date.now() + '.json' });
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        createToast('已匯出 ' + memories.length + ' 則記憶', 'success');
+    } catch (e) {
+        createToast('匯出失敗：' + e.message, 'error');
+    }
+}
+
+async function exportToWiki() {
+    try {
+        createToast('正在轉換記憶為 Wiki 頁面...', 'info');
+        const memories = await MemoryDB.getAll();
+        const permanentMemories = memories.filter(m => m.memory_type === 'permanent' || m.importance >= 0.7);
+        
+        let created = 0;
+        for (const memory of permanentMemories) {
+            const existingPages = await WikiRecordsDB.getByTitle(memory.content.slice(0, 50));
+            if (existingPages.length > 0) continue;
+            
+            await WikiRecordsDB.create({
+                title: memory.content.slice(0, 50),
+                content: memory.content,
+                page_type: memory.memory_type || 'memory',
+                character_id: memory.character_id,
+                keywords: memory.aiTags || [],
+                importance: memory.importance || 0.5,
+                metadata: {
+                    source: 'memory_export',
+                    memory_id: memory.id,
+                    created_from_memory: true
+                }
+            });
+            created++;
+        }
+        createToast('已建立 ' + created + ' 個 Wiki 頁面', 'success');
+        Router.navigate('/wiki');
+    } catch (e) {
+        createToast('匯出失敗：' + e.message, 'error');
+    }
+}
+
+async function exportToNotion() {
+    const notionConfig = await SettingsDB.get('wiki_notion_config');
+    if (!notionConfig || !notionConfig.token) {
+        createToast('請先在 Wiki 設定中連接 Notion', 'error');
+        return;
+    }
+    
+    try {
+        createToast('正在匯出到 Notion...', 'info');
+        const memories = await MemoryDB.getAll();
+        const importantMemories = memories.filter(m => m.memory_type === 'permanent' || m.importance >= 0.6);
+        
+        let exported = 0;
+        for (const memory of importantMemories.slice(0, 10)) {
+            try {
+                const response = await fetch('https://api.notion.com/v1/pages', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': 'Bearer ' + notionConfig.token,
+                        'Content-Type': 'application/json',
+                        'Notion-Version': '2022-06-28'
+                    },
+                    body: JSON.stringify({
+                        parent: { database_id: notionConfig.databaseId },
+                        properties: {
+                            'Name': {
+                                title: [{ text: { content: memory.content.slice(0, 100) } }]
+                            },
+                            'Type': { select: { name: memory.memory_type || 'memory' } },
+                            'Importance': { number: memory.importance || 0.5 }
+                        }
+                    })
+                });
+                if (response.ok) exported++;
+            } catch (e) {}
+        }
+        createToast('已匯出 ' + exported + ' 則記憶到 Notion', 'success');
+    } catch (e) {
+        createToast('匯出失敗：' + e.message, 'error');
+    }
+}
+
+async function exportToGitHub() {
+    const githubToken = await SettingsDB.get('github_token');
+    const githubUser = await SettingsDB.get('github_user');
+    
+    if (!githubToken || !githubUser) {
+        createToast('請先在設定中連接 GitHub', 'error');
+        Router.navigate('/settings/github');
+        return;
+    }
+    
+    try {
+        createToast('正在上傳到 GitHub...', 'info');
+        const memories = await MemoryDB.getAll();
+        const content = JSON.stringify({ 
+            version: '1.0',
+            exportedAt: new Date().toISOString(),
+            source: 'siios-memory-backup',
+            memories 
+        }, null, 2);
+        const encoded = btoa(unescape(encodeURIComponent(content)));
+        
+        const repo = 'siios-backup';
+        const path = 'memories/memories-' + Date.now() + '.json';
+        
+        const response = await fetch('https://api.github.com/repos/' + githubUser.login + '/' + repo + '/contents/' + path, {
+            method: 'PUT',
+            headers: {
+                'Authorization': 'token ' + githubToken,
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                message: 'Backup memories at ' + new Date().toISOString(),
+                content: encoded
+            })
+        });
+        
+        if (response.ok) {
+            createToast('已上傳 ' + memories.length + ' 則記憶到 GitHub', 'success');
+        } else {
+            const error = await response.json();
+            throw new Error(error.message || 'GitHub API 錯誤');
+        }
+    } catch (e) {
+        createToast('上傳失敗：' + e.message, 'error');
+    }
+}
+
+async function exportToGoogleDrive() {
+    const googleToken = await SettingsDB.get('google_drive_token');
+    
+    if (!googleToken) {
+        createToast('請先在設定中連接 Google Drive', 'error');
+        Router.navigate('/settings/backup');
+        return;
+    }
+    
+    try {
+        createToast('正在上傳到 Google Drive...', 'info');
+        const memories = await MemoryDB.getAll();
+        const content = JSON.stringify({ 
+            version: '1.0',
+            exportedAt: new Date().toISOString(),
+            source: 'siios-memory-backup',
+            memories 
+        }, null, 2);
+        const blob = new Blob([content], { type: 'application/json' });
+        
+        const formData = new FormData();
+        formData.append('metadata', new Blob([JSON.stringify({
+            name: 'siios-memories-' + Date.now() + '.json',
+            mimeType: 'application/json',
+            parents: ['appDataFolder']
+        })], { type: 'application/json' }));
+        formData.append('file', blob);
+        
+        const response = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart', {
+            method: 'POST',
+            headers: { 'Authorization': 'Bearer ' + googleToken },
+            body: formData
+        });
+        
+        if (response.ok) {
+            createToast('已上傳 ' + memories.length + ' 則記憶到 Google Drive', 'success');
+        } else {
+            throw new Error('Google Drive API 錯誤');
+        }
+    } catch (e) {
+        createToast('上傳失敗：' + e.message, 'error');
+    }
+}
+
+async function importFromJSON() {
+    const input = createElement('input', '', { type: 'file', accept: '.json' });
+    input.onchange = async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        
+        try {
+            const text = await file.text();
+            const data = JSON.parse(text);
+            
+            if (!data.memories || !Array.isArray(data.memories)) {
+                throw new Error('無效的記憶備份格式');
+            }
+            
+            createToast('正在匯入記憶...', 'info');
+            let imported = 0;
+            
+            for (const memory of data.memories) {
+                try {
+                    await MemoryDB.create(memory);
+                    imported++;
+                } catch (e) {}
+            }
+            
+            createToast('已匯入 ' + imported + ' 則記憶', 'success');
+            Router.navigate('/memory');
+        } catch (e) {
+            createToast('匯入失敗：' + e.message, 'error');
+        }
+    };
+    input.click();
+}
+
+async function importFromGitHub() {
+    const githubToken = await SettingsDB.get('github_token');
+    const githubUser = await SettingsDB.get('github_user');
+    
+    if (!githubToken || !githubUser) {
+        createToast('請先連接 GitHub', 'error');
+        return;
+    }
+    
+    try {
+        createToast('正在從 GitHub 下載...', 'info');
+        
+        const response = await fetch(
+            'https://api.github.com/repos/' + githubUser.login + '/siios-backup/contents/memories',
+            { headers: { 'Authorization': 'token ' + githubToken } }
+        );
+        
+        if (!response.ok) throw new Error('無法取得檔案列表');
+        
+        const files = await response.json();
+        if (!files || files.length === 0) throw new Error('沒有找到備份檔案');
+        
+        const latestFile = files.sort((a, b) => b.name.localeCompare(a.name))[0];
+        const fileRes = await fetch(latestFile.url, { headers: { 'Authorization': 'token ' + githubToken } });
+        const fileData = await fileRes.json();
+        
+        const content = JSON.parse(decodeURIComponent(escape(atob(fileData.content))));
+        
+        if (!content.memories) throw new Error('無效的備份格式');
+        
+        let imported = 0;
+        for (const memory of content.memories) {
+            try {
+                await MemoryDB.create(memory);
+                imported++;
+            } catch (e) {}
+        }
+        
+        createToast('已從 GitHub 匯入 ' + imported + ' 則記憶', 'success');
+        Router.navigate('/memory');
+    } catch (e) {
+        createToast('匯入失敗：' + e.message, 'error');
+    }
+}
+
+async function importFromGoogleDrive() {
+    const googleToken = await SettingsDB.get('google_drive_token');
+    
+    if (!googleToken) {
+        createToast('請先連接 Google Drive', 'error');
+        return;
+    }
+    
+    try {
+        createToast('正在從 Google Drive 下載...', 'info');
+        
+        const listRes = await fetch(
+            "https://www.googleapis.com/drive/v3/files?q=name contains 'siios-memories' and trashed=false&orderBy=createdTime desc&pageSize=1",
+            { headers: { 'Authorization': 'Bearer ' + googleToken } }
+        );
+        
+        if (!listRes.ok) throw new Error('無法取得檔案列表');
+        
+        const listData = await listRes.json();
+        if (!listData.files || listData.files.length === 0) throw new Error('沒有找到備份檔案');
+        
+        const fileId = listData.files[0].id;
+        const fileRes = await fetch(
+            'https://www.googleapis.com/drive/v3/files/' + fileId + '?alt=media',
+            { headers: { 'Authorization': 'Bearer ' + googleToken } }
+        );
+        
+        const content = await fileRes.json();
+        
+        if (!content.memories) throw new Error('無效的備份格式');
+        
+        let imported = 0;
+        for (const memory of content.memories) {
+            try {
+                await MemoryDB.create(memory);
+                imported++;
+            } catch (e) {}
+        }
+        
+        createToast('已從 Google Drive 匯入 ' + imported + ' 則記憶', 'success');
+        Router.navigate('/memory');
+    } catch (e) {
+        createToast('匯入失敗：' + e.message, 'error');
+    }
+}
+
 async function renderMemoryDetail(params) {
     const { id } = params;
     const memory = await MemoryDB.access(id);
@@ -214,73 +665,9 @@ async function renderMemoryDetail(params) {
     });
     main.appendChild(categoryGrid);
 
-    if (memory.sensory && Object.keys(memory.sensory).length > 0) {
-        const sensoryCard = createElement('div', 'bg-white rounded-lg mx-4 mb-4 p-4 shadow-sm');
-        sensoryCard.appendChild(createElement('h3', 'text-sm font-semibold mb-3', { textContent: '感官記憶' }));
-        const sensoryData = [
-            { label: '視覺', items: memory.sensory.visual || [] },
-            { label: '聽覺', items: memory.sensory.auditory || [] },
-            { label: '嗅覺', items: memory.sensory.olfactory || [] },
-            { label: '觸覺', items: memory.sensory.tactile || [] },
-            { label: '味覺', items: memory.sensory.gustatory || [] }
-        ];
-        sensoryData.forEach(s => {
-            if (s.items.length > 0) {
-                const row = createElement('div', 'mb-2');
-                row.appendChild(createElement('span', 'text-xs text-ios-muted mr-2', { textContent: s.label + ':' }));
-                const tags = createElement('span', 'text-xs');
-                tags.textContent = s.items.join(', ');
-                row.appendChild(tags);
-                sensoryCard.appendChild(row);
-            }
-        });
-        main.appendChild(sensoryCard);
-    }
-
-    if (memory.emotional) {
-        const emotionalCard = createElement('div', 'bg-white rounded-lg mx-4 mb-4 p-4 shadow-sm');
-        emotionalCard.appendChild(createElement('h3', 'text-sm font-semibold mb-3', { textContent: '情感分析' }));
-        const valence = memory.emotional.valence || 0;
-        const arousal = memory.emotional.arousal || 0;
-        const valenceLabel = valence > 0.3 ? '正面' : valence < -0.3 ? '負面' : '中性';
-        const arousalLabel = arousal > 0.3 ? '高' : arousal < -0.3 ? '低' : '中';
-        const emotionalGrid = createElement('div', 'grid grid-cols-2 gap-4');
-        const valenceDiv = createElement('div');
-        valenceDiv.innerHTML = '<p class="text-xs text-ios-muted">效價</p><p class="text-sm font-medium">' + valenceLabel + '</p>';
-        emotionalGrid.appendChild(valenceDiv);
-        const arousalDiv = createElement('div');
-        arousalDiv.innerHTML = '<p class="text-xs text-ios-muted">喚醒度</p><p class="text-sm font-medium">' + arousalLabel + '</p>';
-        emotionalGrid.appendChild(arousalDiv);
-        emotionalCard.appendChild(emotionalGrid);
-        if (memory.emotional.emotions && memory.emotional.emotions.length > 0) {
-            const emotionsRow = createElement('div', 'flex flex-wrap gap-1 mt-3');
-            memory.emotional.emotions.forEach(em => {
-                emotionsRow.appendChild(createElement('span', 'text-xs px-2 py-1 rounded-full bg-pink-50 text-pink-600', { textContent: em }));
-            });
-            emotionalCard.appendChild(emotionsRow);
-        }
-        main.appendChild(emotionalCard);
-    }
-
-    const decayCard = createElement('div', 'bg-white rounded-lg mx-4 mb-4 p-4 shadow-sm');
-    decayCard.appendChild(createElement('h3', 'text-sm font-semibold mb-3', { textContent: '衰變資訊' }));
-    const decayData = [
-        { label: '衰變因子', value: (memory.decayFactor || 1.0).toFixed(2) },
-        { label: '重要性', value: (memory.importance || 0.5).toFixed(2) },
-        { label: '存取次數', value: String(memory.accessCount || 0) },
-        { label: '強化次數', value: String(memory.reinforcementCount || 0) }
-    ];
-    const decayGrid = createElement('div', 'grid grid-cols-2 gap-4');
-    decayData.forEach(d => {
-        const div = createElement('div');
-        div.innerHTML = '<p class="text-xs text-ios-muted">' + d.label + '</p><p class="text-sm font-medium">' + d.value + '</p>';
-        decayGrid.appendChild(div);
-    });
-    decayCard.appendChild(decayGrid);
-    main.appendChild(decayCard);
-
     const actionsCard = createElement('div', 'bg-white rounded-lg mx-4 mb-4 p-4 shadow-sm');
     const actionsGrid = createElement('div', 'grid grid-cols-2 gap-2');
+    
     const reinforceBtn = createElement('button', 'bg-claude-primary text-white rounded-lg py-2.5 text-sm font-medium', {
         textContent: '強化記憶',
         onClick: async () => {
@@ -290,6 +677,7 @@ async function renderMemoryDetail(params) {
         }
     });
     actionsGrid.appendChild(reinforceBtn);
+    
     const permanentBtn = createElement('button', 'bg-claude-success text-white rounded-lg py-2.5 text-sm font-medium', {
         textContent: '標為永久',
         onClick: async () => {
@@ -302,6 +690,7 @@ async function renderMemoryDetail(params) {
     actionsCard.appendChild(actionsGrid);
 
     const actionsGrid2 = createElement('div', 'grid grid-cols-2 gap-2 mt-2');
+    
     const archiveBtn = createElement('button', 'bg-gray-100 text-gray-700 rounded-lg py-2.5 text-sm font-medium', {
         textContent: '歸檔',
         onClick: async () => {
@@ -311,6 +700,7 @@ async function renderMemoryDetail(params) {
         }
     });
     actionsGrid2.appendChild(archiveBtn);
+    
     const deleteBtn = createElement('button', 'bg-claude-danger text-white rounded-lg py-2.5 text-sm font-medium', {
         textContent: '刪除',
         onClick: () => {
