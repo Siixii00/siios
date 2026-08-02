@@ -11,7 +11,8 @@ async function renderSettings() {
 
     const header = createIOSNavBar({
         title: '設定',
-        largeTitle: true
+        largeTitle: false,
+        backPath: '/home'
     });
     container.appendChild(header);
 
