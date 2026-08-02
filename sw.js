@@ -1,35 +1,35 @@
-const CACHE_NAME = 'sxios-v22';
+const CACHE_NAME = 'sxios-v23';
 
 function getBasePath() {
   return self.registration.scope;
 }
 
 const STATIC_ASSETS = [
-  './',
-  './index.html',
-  './css/shared.css',
-  './css/ios.css',
-  './css/kakao.css',
-  './js/app.js',
-  './js/router.js',
-  './js/db.js',
-  './js/api.js',
-  './js/components.js',
-  './js/lockscreen.js',
-  './js/homescreen.js',
-  './js/debug-logger.js',
-  './js/scroll-handler.js',
-  './js/apps/registry.js',
-  './js/apps/chats/index.js',
-  './js/apps/chats/chat.js',
-  './js/apps/world-info/index.js',
-  './js/apps/world-info/entry-editor.js',
-  './js/apps/settings/index.js',
-  './js/apps/settings/api-config.js',
-  './js/apps/memory/index.js',
-  './js/core/embedding/index.js',
-  './js/core/memory-system/index.js',
-  './manifest.json'
+  '/siios/',
+  '/siios/index.html',
+  '/siios/css/shared.css',
+  '/siios/css/ios.css',
+  '/siios/css/kakao.css',
+  '/siios/js/app.js',
+  '/siios/js/router.js',
+  '/siios/js/db.js',
+  '/siios/js/api.js',
+  '/siios/js/components.js',
+  '/siios/js/lockscreen.js',
+  '/siios/js/homescreen.js',
+  '/siios/js/debug-logger.js',
+  '/siios/js/scroll-handler.js',
+  '/siios/js/apps/registry.js',
+  '/siios/js/apps/chats/index.js',
+  '/siios/js/apps/chats/chat.js',
+  '/siios/js/apps/world-info/index.js',
+  '/siios/js/apps/world-info/entry-editor.js',
+  '/siios/js/apps/settings/index.js',
+  '/siios/js/apps/settings/api-config.js',
+  '/siios/js/apps/memory/index.js',
+  '/siios/js/core/embedding/index.js',
+  '/siios/js/core/memory-system/index.js',
+  '/siios/manifest.json'
 ];
 
 self.addEventListener('install', (event) => {
@@ -89,7 +89,7 @@ self.addEventListener('fetch', (event) => {
           .then((cached) => {
             if (cached) return cached;
             if (request.destination === 'document') {
-              return caches.match('./index.html');
+              return caches.match('/siios/index.html');
             }
             return new Response('Offline', { status: 503 });
           });
