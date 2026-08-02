@@ -2,10 +2,6 @@
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { MemoryDB, WikiRecordsDB, SettingsDB } from '../../db.js';
 
-let memories = [];
-let currentFilter = 0;
-let searchTerm = '';
-
 const TYPE_TABS = ['全部', '動態', '永久', '情感', '計畫', '書信', '自我', '備份'];
 const TYPE_MAP = { 1: 'dynamic', 2: 'permanent', 3: 'feel', 4: 'plan', 5: 'letter', 6: 'i', 7: 'archive' };
 const TYPE_LABELS = { dynamic: '動態', permanent: '永久', feel: '情感', plan: '計畫', letter: '書信', i: '自我', archive: '歸檔' };
@@ -50,25 +46,10 @@ function getDecayStage(memory) {
     return { label: '微弱', dotClass: 'decay-dot-weak', badgeClass: 'decay-badge-weak' };
 }
 
-function getFilteredMemories() {
-    let filtered = [...memories];
-    const typeFilter = TYPE_MAP[currentFilter];
-    if (typeFilter) {
-        filtered = filtered.filter(m => m.memory_type === typeFilter);
-    }
-    if (searchTerm) {
-        const lower = searchTerm.toLowerCase();
-        filtered = filtered.filter(m =>
-            m.content.toLowerCase().includes(lower) ||
-            (m.aiTags || []).some(t => t.toLowerCase().includes(lower)) ||
-            (m.domain || '').includes(lower) ||
-            (m.meaning || '').toLowerCase().includes(lower)
-        );
-    }
-    return filtered.sort((a, b) => (b.timestamp || b.created_at) - (a.timestamp || a.created_at));
-}
-
 async function renderMemoryList() {
+    const currentFilter = await SettingsDB.get('memory_filter') || 0;
+    const searchTerm = await SettingsDB.get('memory_search') || '';
+    
     const container = createElement('div', 'app-container memory-app bg-ios-bg');
 
     const header = createIOSNavBar({
@@ -91,26 +72,33 @@ async function renderMemoryList() {
     const searchInput = createElement('input', 'flex-1 bg-transparent outline-none text-sm', {
         type: 'text',
         placeholder: '搜尋記憶...',
+        value: searchTerm,
         onInput: (e) => {
-            searchTerm = e.target.value;
-            renderList();
+            SettingsDB.set('memory_search', e.target.value);
         }
     });
     searchBox.appendChild(searchInput);
+    const searchBtn = createElement('button', 'px-3 py-1 bg-claude-primary text-white rounded text-sm', {
+        textContent: '搜尋',
+        onClick: async () => {
+            await SettingsDB.set('memory_filter', currentFilter);
+            Router.navigate('/memory');
+        }
+    });
+    searchBox.appendChild(searchBtn);
     searchContainer.appendChild(searchBox);
     main.appendChild(searchContainer);
 
     const categoryGrid = createElement('div', 'grid grid-cols-4 gap-2 mx-4 mb-6');
     TYPE_TABS.forEach((tab, index) => {
         const card = createElement('div', 'flex flex-col items-center justify-center p-3 rounded-lg cursor-pointer transition-all ' + 
-            (currentFilter === index ? 'bg-claude-primary text-white shadow-md' : 'bg-white hover:shadow-md'), {
-            onClick: () => {
-                currentFilter = index;
-                if (index === 7) {
-                    Router.navigate('/memory');
-                } else {
-                    renderList();
-                }
+            (currentFilter === index ? 'bg-claude-primary text-white shadow-md' : 'bg-white hover:shadow-md'));
+        
+        card.addEventListener('click', async () => {
+            if (currentFilter !== index) {
+                await SettingsDB.set('memory_filter', index);
+                await SettingsDB.set('memory_search', '');
+                window.location.hash = '/memory';
             }
         });
         const iconMap = ['inventory_2', 'auto_awesome', 'bookmark', 'favorite', 'event_note', 'mail', 'person', 'backup'];
@@ -124,20 +112,33 @@ async function renderMemoryList() {
     main.appendChild(listContainer);
     container.appendChild(main);
 
-    async function renderList() {
-        listContainer.innerHTML = '';
-        memories = await MemoryDB.getAll();
-        const filtered = getFilteredMemories();
+    const memories = await MemoryDB.getAll();
+    let filtered = [...memories];
+    
+    const typeFilter = TYPE_MAP[currentFilter];
+    if (typeFilter) {
+        filtered = filtered.filter(m => m.memory_type === typeFilter);
+    }
+    
+    if (searchTerm) {
+        const lower = searchTerm.toLowerCase();
+        filtered = filtered.filter(m =>
+            m.content.toLowerCase().includes(lower) ||
+            (m.aiTags || []).some(t => t.toLowerCase().includes(lower)) ||
+            (m.domain || '').includes(lower) ||
+            (m.meaning || '').toLowerCase().includes(lower)
+        );
+    }
+    
+    filtered.sort((a, b) => (b.timestamp || b.created_at) - (a.timestamp || a.created_at));
 
-        if (filtered.length === 0) {
-            const emptyState = createElement('div', 'flex flex-col items-center justify-center py-16');
-            emptyState.appendChild(createIcon('psychology', 'text-5xl mb-4 opacity-30'));
-            emptyState.appendChild(createElement('h3', 'text-lg font-semibold mb-1', { textContent: '沒有記憶' }));
-            emptyState.appendChild(createElement('p', 'text-sm text-ios-muted', { textContent: '記憶將在對話中自動產生' }));
-            listContainer.appendChild(emptyState);
-            return;
-        }
-
+    if (filtered.length === 0) {
+        const emptyState = createElement('div', 'flex flex-col items-center justify-center py-16');
+        emptyState.appendChild(createIcon('psychology', 'text-5xl mb-4 opacity-30'));
+        emptyState.appendChild(createElement('h3', 'text-lg font-semibold mb-1', { textContent: '沒有記憶' }));
+        emptyState.appendChild(createElement('p', 'text-sm text-ios-muted', { textContent: '記憶將在對話中自動產生' }));
+        listContainer.appendChild(emptyState);
+    } else {
         filtered.forEach(memory => {
             const stage = getDecayStage(memory);
             const card = createElement('div', 'bg-white rounded-lg p-4 mb-3 shadow-sm cursor-pointer hover:shadow-md transition-shadow', {
@@ -177,7 +178,6 @@ async function renderMemoryList() {
         });
     }
 
-    await renderList();
     return { element: container, cleanup: null };
 }
 
@@ -228,31 +228,69 @@ async function renderBackupPage(container, main) {
     const exportSection = createElement('div', 'mx-4 mb-4');
     exportSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: '匯出記憶' }));
     
-    const exportCards = [
-        { icon: 'download', iconBg: 'bg-blue-500', title: '下載 JSON 備份', desc: '將所有記憶匯出為 JSON 檔案', action: exportToJSON },
-        { icon: 'description', iconBg: 'bg-green-500', title: '匯出到 Wiki', desc: '將永久記憶轉換為 Wiki 頁面', action: exportToWiki },
-        { icon: 'article', iconBg: 'bg-purple-500', title: '匯出到 Notion', desc: notionConfig?.token ? '同步記憶到 Notion 資料庫' : '請先連接 Notion', action: notionConfig?.token ? exportToNotion : null },
-        { icon: 'cloud_upload', iconBg: 'bg-orange-500', title: '上傳到 GitHub', desc: githubUser ? '備份記憶到 GitHub 私人倉庫' : '請先連接 GitHub', action: githubUser ? exportToGitHub : null },
-        { icon: 'folder', iconBg: 'bg-red-500', title: '上傳到 Google Drive', desc: googleUser ? '備份記憶到 Google Drive' : '請先連接 Google Drive', action: googleUser ? exportToGoogleDrive : null }
-    ];
-
     const exportGrid = createElement('div', 'bg-white rounded-lg shadow-sm');
-    exportCards.forEach((card, index) => {
-        const cell = createElement('div', 'ios-list-cell cursor-pointer' + (!card.action ? ' opacity-50' : ''), {
-            onClick: card.action || (() => {
-                createToast('請先在設定中連接此服務', 'error');
-            })
-        });
-        const iconWrapper = createElement('div', 'w-10 h-10 ' + card.iconBg + ' rounded-lg flex items-center justify-center');
-        iconWrapper.appendChild(createIcon(card.icon, 'text-white text-sm'));
-        cell.appendChild(iconWrapper);
-        const content = createElement('div', 'flex-1 min-w-0');
-        content.appendChild(createElement('span', 'text-sm font-medium', { textContent: card.title }));
-        content.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: card.desc }));
-        cell.appendChild(content);
-        cell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
-        exportGrid.appendChild(cell);
+    
+    const exportJSONCell = createElement('div', 'ios-list-cell cursor-pointer', { onClick: exportToJSON });
+    const jsonIcon = createElement('div', 'w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center');
+    jsonIcon.appendChild(createIcon('download', 'text-white text-sm'));
+    exportJSONCell.appendChild(jsonIcon);
+    const jsonContent = createElement('div', 'flex-1 min-w-0');
+    jsonContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '下載 JSON 備份' }));
+    jsonContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '將所有記憶匯出為 JSON 檔案' }));
+    exportJSONCell.appendChild(jsonContent);
+    exportJSONCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
+    exportGrid.appendChild(exportJSONCell);
+    
+    const exportWikiCell = createElement('div', 'ios-list-cell cursor-pointer', { onClick: exportToWiki });
+    const wikiIcon = createElement('div', 'w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center');
+    wikiIcon.appendChild(createIcon('description', 'text-white text-sm'));
+    exportWikiCell.appendChild(wikiIcon);
+    const wikiContent = createElement('div', 'flex-1 min-w-0');
+    wikiContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '匯出到 Wiki' }));
+    wikiContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '將永久記憶轉換為 Wiki 頁面' }));
+    exportWikiCell.appendChild(wikiContent);
+    exportWikiCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
+    exportGrid.appendChild(exportWikiCell);
+    
+    const exportNotionCell = createElement('div', 'ios-list-cell cursor-pointer' + (!notionConfig?.token ? ' opacity-50' : ''), {
+        onClick: notionConfig?.token ? exportToNotion : () => createToast('請先連接 Notion', 'error')
     });
+    const notionIcon = createElement('div', 'w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center');
+    notionIcon.appendChild(createIcon('article', 'text-white text-sm'));
+    exportNotionCell.appendChild(notionIcon);
+    const notionContent = createElement('div', 'flex-1 min-w-0');
+    notionContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '匯出到 Notion' }));
+    notionContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: notionConfig?.token ? '同步記憶到 Notion 資料庫' : '請先連接 Notion' }));
+    exportNotionCell.appendChild(notionContent);
+    exportNotionCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
+    exportGrid.appendChild(exportNotionCell);
+    
+    const exportGitHubCell = createElement('div', 'ios-list-cell cursor-pointer' + (!githubUser ? ' opacity-50' : ''), {
+        onClick: githubUser ? exportToGitHub : () => createToast('請先連接 GitHub', 'error')
+    });
+    const ghIcon = createElement('div', 'w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center');
+    ghIcon.appendChild(createIcon('cloud_upload', 'text-white text-sm'));
+    exportGitHubCell.appendChild(ghIcon);
+    const ghContent = createElement('div', 'flex-1 min-w-0');
+    ghContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '上傳到 GitHub' }));
+    ghContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: githubUser ? '備份記憶到 GitHub 私人倉庫' : '請先連接 GitHub' }));
+    exportGitHubCell.appendChild(ghContent);
+    exportGitHubCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
+    exportGrid.appendChild(exportGitHubCell);
+    
+    const exportGoogleCell = createElement('div', 'ios-list-cell cursor-pointer' + (!googleUser ? ' opacity-50' : ''), {
+        onClick: googleUser ? exportToGoogleDrive : () => createToast('請先連接 Google Drive', 'error')
+    });
+    const gIcon = createElement('div', 'w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center');
+    gIcon.appendChild(createIcon('folder', 'text-white text-sm'));
+    exportGoogleCell.appendChild(gIcon);
+    const gContent = createElement('div', 'flex-1 min-w-0');
+    gContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '上傳到 Google Drive' }));
+    gContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: googleUser ? '備份記憶到 Google Drive' : '請先連接 Google Drive' }));
+    exportGoogleCell.appendChild(gContent);
+    exportGoogleCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
+    exportGrid.appendChild(exportGoogleCell);
+    
     exportSection.appendChild(exportGrid);
     main.appendChild(exportSection);
 
@@ -271,32 +309,6 @@ async function renderBackupPage(container, main) {
     importJSONCell.appendChild(importContent);
     importJSONCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
     importGrid.appendChild(importJSONCell);
-    
-    if (githubUser) {
-        const importGitHubCell = createElement('div', 'ios-list-cell cursor-pointer', { onClick: importFromGitHub });
-        const ghIcon = createElement('div', 'w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center');
-        ghIcon.appendChild(createIcon('cloud_download', 'text-white text-sm'));
-        importGitHubCell.appendChild(ghIcon);
-        const ghContent = createElement('div', 'flex-1 min-w-0');
-        ghContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '從 GitHub 還原' }));
-        ghContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '從 GitHub 倉庫下載備份' }));
-        importGitHubCell.appendChild(ghContent);
-        importGitHubCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
-        importGrid.appendChild(importGitHubCell);
-    }
-    
-    if (googleUser) {
-        const importGoogleCell = createElement('div', 'ios-list-cell cursor-pointer', { onClick: importFromGoogleDrive });
-        const gIcon = createElement('div', 'w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center');
-        gIcon.appendChild(createIcon('cloud_download', 'text-white text-sm'));
-        importGoogleCell.appendChild(gIcon);
-        const gContent = createElement('div', 'flex-1 min-w-0');
-        gContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '從 Google Drive 還原' }));
-        gContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '從 Google Drive 下載備份' }));
-        importGoogleCell.appendChild(gContent);
-        importGoogleCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
-        importGrid.appendChild(importGoogleCell);
-    }
     
     importSection.appendChild(importGrid);
     main.appendChild(importSection);
@@ -361,7 +373,6 @@ async function exportToWiki() {
             created++;
         }
         createToast('已建立 ' + created + ' 個 Wiki 頁面', 'success');
-        Router.navigate('/wiki');
     } catch (e) {
         createToast('匯出失敗：' + e.message, 'error');
     }
@@ -415,7 +426,6 @@ async function exportToGitHub() {
     
     if (!githubToken || !githubUser) {
         createToast('請先在設定中連接 GitHub', 'error');
-        Router.navigate('/settings/github');
         return;
     }
     
@@ -461,7 +471,6 @@ async function exportToGoogleDrive() {
     
     if (!googleToken) {
         createToast('請先在設定中連接 Google Drive', 'error');
-        Router.navigate('/settings/backup');
         return;
     }
     
@@ -500,7 +509,7 @@ async function exportToGoogleDrive() {
     }
 }
 
-async function importFromJSON() {
+function importFromJSON() {
     const input = createElement('input', '', { type: 'file', accept: '.json' });
     input.onchange = async (e) => {
         const file = e.target.files[0];
@@ -531,97 +540,6 @@ async function importFromJSON() {
         }
     };
     input.click();
-}
-
-async function importFromGitHub() {
-    const githubToken = await SettingsDB.get('github_token');
-    const githubUser = await SettingsDB.get('github_user');
-    
-    if (!githubToken || !githubUser) {
-        createToast('請先連接 GitHub', 'error');
-        return;
-    }
-    
-    try {
-        createToast('正在從 GitHub 下載...', 'info');
-        
-        const response = await fetch(
-            'https://api.github.com/repos/' + githubUser.login + '/siios-backup/contents/memories',
-            { headers: { 'Authorization': 'token ' + githubToken } }
-        );
-        
-        if (!response.ok) throw new Error('無法取得檔案列表');
-        
-        const files = await response.json();
-        if (!files || files.length === 0) throw new Error('沒有找到備份檔案');
-        
-        const latestFile = files.sort((a, b) => b.name.localeCompare(a.name))[0];
-        const fileRes = await fetch(latestFile.url, { headers: { 'Authorization': 'token ' + githubToken } });
-        const fileData = await fileRes.json();
-        
-        const content = JSON.parse(decodeURIComponent(escape(atob(fileData.content))));
-        
-        if (!content.memories) throw new Error('無效的備份格式');
-        
-        let imported = 0;
-        for (const memory of content.memories) {
-            try {
-                await MemoryDB.create(memory);
-                imported++;
-            } catch (e) {}
-        }
-        
-        createToast('已從 GitHub 匯入 ' + imported + ' 則記憶', 'success');
-        Router.navigate('/memory');
-    } catch (e) {
-        createToast('匯入失敗：' + e.message, 'error');
-    }
-}
-
-async function importFromGoogleDrive() {
-    const googleToken = await SettingsDB.get('google_drive_token');
-    
-    if (!googleToken) {
-        createToast('請先連接 Google Drive', 'error');
-        return;
-    }
-    
-    try {
-        createToast('正在從 Google Drive 下載...', 'info');
-        
-        const listRes = await fetch(
-            "https://www.googleapis.com/drive/v3/files?q=name contains 'siios-memories' and trashed=false&orderBy=createdTime desc&pageSize=1",
-            { headers: { 'Authorization': 'Bearer ' + googleToken } }
-        );
-        
-        if (!listRes.ok) throw new Error('無法取得檔案列表');
-        
-        const listData = await listRes.json();
-        if (!listData.files || listData.files.length === 0) throw new Error('沒有找到備份檔案');
-        
-        const fileId = listData.files[0].id;
-        const fileRes = await fetch(
-            'https://www.googleapis.com/drive/v3/files/' + fileId + '?alt=media',
-            { headers: { 'Authorization': 'Bearer ' + googleToken } }
-        );
-        
-        const content = await fileRes.json();
-        
-        if (!content.memories) throw new Error('無效的備份格式');
-        
-        let imported = 0;
-        for (const memory of content.memories) {
-            try {
-                await MemoryDB.create(memory);
-                imported++;
-            } catch (e) {}
-        }
-        
-        createToast('已從 Google Drive 匯入 ' + imported + ' 則記憶', 'success');
-        Router.navigate('/memory');
-    } catch (e) {
-        createToast('匯入失敗：' + e.message, 'error');
-    }
 }
 
 async function renderMemoryDetail(params) {
