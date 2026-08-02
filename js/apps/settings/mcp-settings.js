@@ -12,7 +12,9 @@ async function renderMCPSettings() {
     });
     container.appendChild(header);
 
-    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pt-2 pb-8');
+    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-8');
+    main.style.marginTop = 'calc(44px + env(safe-area-inset-top, 0px))';
+    main.style.paddingTop = '16px';
 
     const infoSection = createElement('div', 'ios-grouped-list mx-4');
     const infoCard = createElement('div', 'p-4 bg-white rounded-xl');

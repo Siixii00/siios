@@ -30,6 +30,7 @@ const ACTIVITY_TYPES = [
 
 async function renderActivitySync() {
     const container = createElement('div', 'app-container bg-ios-bg');
+    container.style.cssText = 'display: flex; flex-direction: column; height: 100vh; height: 100dvh; overflow: hidden;';
     
     const privacySettings = await SettingsDB.get('activity_privacy_settings') || {
         global_enabled: false,
@@ -42,10 +43,6 @@ async function renderActivitySync() {
         title: '活動同步',
         backPath: '/settings',
         rightActions: [
-            {
-                icon: 'settings',
-                onClick: () => Router.navigate('/activity/privacy')
-            },
             {
                 icon: 'delete',
                 onClick: async () => {
@@ -60,7 +57,10 @@ async function renderActivitySync() {
     });
     container.appendChild(header);
 
-    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pt-2 pb-8');
+    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-8');
+    main.style.marginTop = 'calc(44px + env(safe-area-inset-top, 0px))';
+    main.style.paddingTop = '16px';
+    main.style.cssText = 'flex: 1; overflow-y: auto; overflow-x: hidden; -webkit-overflow-scrolling: touch; overscroll-behavior-y: contain;';
     
     const statusCard = createElement('div', 'mx-4 mb-4');
     if (!privacySettings.global_enabled) {

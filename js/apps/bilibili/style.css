@@ -87,6 +87,8 @@
     overflow: hidden;
     padding: 10px;
     padding-bottom: 70px;
+    margin-top: calc(44px + env(safe-area-inset-top, 0px));
+    padding-top: 16px;
 }
 
 .bili-feed-inner {
@@ -384,6 +386,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-top: calc(44px + env(safe-area-inset-top, 0px));
+    padding-top: 16px;
 }
 
 .bili-message-item {
@@ -548,6 +552,8 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
+    margin-top: calc(44px + env(safe-area-inset-top, 0px));
+    padding-top: 16px;
 }
 
 .bili-profile-header {
