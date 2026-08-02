@@ -126,3 +126,27 @@
   opacity: 0.5;
   font-family: var(--font-riso);
 }
+
+.memory-app .cursor-pointer {
+  cursor: pointer;
+}
+
+.memory-app .cursor-pointer:hover {
+  transform: translateY(-1px);
+}
+
+.memory-app .transition-shadow {
+  transition: box-shadow 0.2s ease;
+}
+
+.memory-app .transition-all {
+  transition: all 0.2s ease;
+}
+
+.memory-app .ring-2 {
+  box-shadow: 0 0 0 2px var(--riso-primary);
+}
+
+.memory-app .hover\:shadow-lg:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
