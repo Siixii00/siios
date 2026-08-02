@@ -7,9 +7,9 @@ function getBasePath() {
 const STATIC_ASSETS = [
   './',
   './index.html',
-  './css/shared.css?v=3',
-  './css/ios.css?v=3',
-  './css/kakao.css?v=3',
+  './css/shared.css',
+  './css/ios.css',
+  './css/kakao.css',
   './js/app.js',
   './js/router.js',
   './js/db.js',
