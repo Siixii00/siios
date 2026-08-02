@@ -1,4 +1,4 @@
-import { ActivityDB, ActivitySourcesDB, ActivitySettingsDB } from '../db.js';
+import { ActivityDB, ActivitySourcesDB, ActivitySettingsDB } from './db.js';
 
 const API_PREFIX = '/api/activities';
 

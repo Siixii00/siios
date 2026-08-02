@@ -1,4 +1,4 @@
-import { ActivityDB, ActivitySourcesDB, ActivitySettingsDB, SettingsDB } from '../db.js';
+import { ActivityDB, ActivitySourcesDB, ActivitySettingsDB, SettingsDB } from './db.js';
 import { handleActivitySync, handleActivitySources, handleActivitySettings } from '../api/activity-sync.js';
 
 const router = {
