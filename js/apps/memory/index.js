@@ -6,6 +6,8 @@ const TYPE_TABS = ['全部', '動態', '永久', '情感', '計畫', '書信', '
 const TYPE_MAP = { 1: 'dynamic', 2: 'permanent', 3: 'feel', 4: 'plan', 5: 'letter', 6: 'i', 7: 'archive' };
 const TYPE_LABELS = { dynamic: '動態', permanent: '永久', feel: '情感', plan: '計畫', letter: '書信', i: '自我', archive: '歸檔' };
 
+let currentFilterCache = null;
+
 const SOURCE_LABELS = {
     'chat': '對話',
     'youtube': 'YouTube',
@@ -47,10 +49,15 @@ function getDecayStage(memory) {
 }
 
 async function renderMemoryList() {
-    const currentFilter = await SettingsDB.get('memory_filter') || 0;
-    
-    if (currentFilter === 7) {
-        return await renderBackupPage();
+    let currentFilter;
+    if (currentFilterCache !== null) {
+        currentFilter = currentFilterCache;
+    } else {
+        currentFilter = await SettingsDB.get('memory_filter');
+        if (currentFilter === null || currentFilter === undefined) {
+            currentFilter = 0;
+        }
+        currentFilterCache = currentFilter;
     }
     
     const searchTerm = await SettingsDB.get('memory_search') || '';
@@ -119,9 +126,10 @@ async function renderMemoryList() {
         }
         
         option.addEventListener('click', async () => {
+            dropdown.classList.add('hidden');
+            currentFilterCache = index;
             await SettingsDB.set('memory_filter', index);
             await SettingsDB.set('memory_search', '');
-            dropdown.classList.add('hidden');
             Router.navigate('/memory');
         });
         
@@ -146,6 +154,150 @@ async function renderMemoryList() {
     const listContainer = createElement('div', 'px-4');
     main.appendChild(listContainer);
     container.appendChild(main);
+
+    if (currentFilter === 7) {
+        listContainer.innerHTML = '';
+        main.removeChild(listContainer);
+        
+        const memories = await MemoryDB.getAll();
+        const wikiPages = await WikiRecordsDB.getAll();
+        const githubUser = await SettingsDB.get('github_user');
+        const googleUser = await SettingsDB.get('google_drive_user');
+        const notionConfig = await SettingsDB.get('wiki_notion_config');
+        
+        const statsCard = createElement('div', 'bg-gradient-to-r from-claude-primary to-gray-700 rounded-lg mx-4 mb-4 p-4 text-white');
+        statsCard.innerHTML = '<h2 class="font-bold mb-3">記憶統計</h2>' +
+            '<div class="grid grid-cols-3 gap-2 text-center">' +
+            '<div><div class="text-2xl font-bold">' + memories.length + '</div><div class="text-xs opacity-80">總記憶</div></div>' +
+            '<div><div class="text-2xl font-bold">' + memories.filter(m => m.memory_type === 'permanent').length + '</div><div class="text-xs opacity-80">永久記憶</div></div>' +
+            '<div><div class="text-2xl font-bold">' + wikiPages.length + '</div><div class="text-xs opacity-80">Wiki 頁面</div></div>' +
+            '</div>';
+        main.appendChild(statsCard);
+
+        const connectionsSection = createElement('div', 'mx-4 mb-4');
+        connectionsSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: '連接狀態' }));
+        
+        const connectionsGrid = createElement('div', 'bg-white rounded-lg shadow-sm p-4');
+        const connections = [
+            { name: 'GitHub', connected: !!githubUser, user: githubUser?.login, icon: 'code', color: 'bg-gray-800' },
+            { name: 'Google Drive', connected: !!googleUser, user: googleUser?.displayName, icon: 'cloud', color: 'bg-blue-500' },
+            { name: 'Notion', connected: !!notionConfig?.token, user: notionConfig?.token ? '已連接' : '未連接', icon: 'article', color: 'bg-purple-500' }
+        ];
+        
+        connections.forEach(conn => {
+            const row = createElement('div', 'flex items-center justify-between py-2');
+            const left = createElement('div', 'flex items-center gap-2');
+            const icon = createElement('div', 'w-8 h-8 ' + conn.color + ' rounded-lg flex items-center justify-center');
+            icon.appendChild(createIcon(conn.icon, 'text-white text-sm'));
+            left.appendChild(icon);
+            left.appendChild(createElement('span', 'text-sm font-medium', { textContent: conn.name }));
+            row.appendChild(left);
+            
+            const status = createElement('span', 'text-xs ' + (conn.connected ? 'text-green-600' : 'text-gray-400'));
+            status.textContent = conn.connected ? (conn.user || '已連接') : '未連接';
+            row.appendChild(status);
+            connectionsGrid.appendChild(row);
+        });
+        
+        connectionsSection.appendChild(connectionsGrid);
+        main.appendChild(connectionsSection);
+
+        const exportSection = createElement('div', 'mx-4 mb-4');
+        exportSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: '匯出記憶' }));
+        
+        const exportGrid = createElement('div', 'bg-white rounded-lg shadow-sm');
+        
+        const exportJSONCell = createElement('div', 'ios-list-cell cursor-pointer', { onClick: exportToJSON });
+        const jsonIcon = createElement('div', 'w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center');
+        jsonIcon.appendChild(createIcon('download', 'text-white text-sm'));
+        exportJSONCell.appendChild(jsonIcon);
+        const jsonContent = createElement('div', 'flex-1 min-w-0');
+        jsonContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '下載 JSON 備份' }));
+        jsonContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '將所有記憶匯出為 JSON 檔案' }));
+        exportJSONCell.appendChild(jsonContent);
+        exportJSONCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
+        exportGrid.appendChild(exportJSONCell);
+        
+        const exportWikiCell = createElement('div', 'ios-list-cell cursor-pointer', { onClick: exportToWiki });
+        const wikiIcon = createElement('div', 'w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center');
+        wikiIcon.appendChild(createIcon('description', 'text-white text-sm'));
+        exportWikiCell.appendChild(wikiIcon);
+        const wikiContent = createElement('div', 'flex-1 min-w-0');
+        wikiContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '匯出到 Wiki' }));
+        wikiContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '將永久記憶轉換為 Wiki 頁面' }));
+        exportWikiCell.appendChild(wikiContent);
+        exportWikiCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
+        exportGrid.appendChild(exportWikiCell);
+        
+        const exportNotionCell = createElement('div', 'ios-list-cell cursor-pointer' + (!notionConfig?.token ? ' opacity-50' : ''), {
+            onClick: notionConfig?.token ? exportToNotion : () => createToast('請先連接 Notion', 'error')
+        });
+        const notionIcon = createElement('div', 'w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center');
+        notionIcon.appendChild(createIcon('article', 'text-white text-sm'));
+        exportNotionCell.appendChild(notionIcon);
+        const notionContent = createElement('div', 'flex-1 min-w-0');
+        notionContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '匯出到 Notion' }));
+        notionContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: notionConfig?.token ? '同步記憶到 Notion 資料庫' : '請先連接 Notion' }));
+        exportNotionCell.appendChild(notionContent);
+        exportNotionCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
+        exportGrid.appendChild(exportNotionCell);
+        
+        const exportGitHubCell = createElement('div', 'ios-list-cell cursor-pointer' + (!githubUser ? ' opacity-50' : ''), {
+            onClick: githubUser ? exportToGitHub : () => createToast('請先連接 GitHub', 'error')
+        });
+        const ghIcon = createElement('div', 'w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center');
+        ghIcon.appendChild(createIcon('cloud_upload', 'text-white text-sm'));
+        exportGitHubCell.appendChild(ghIcon);
+        const ghContent = createElement('div', 'flex-1 min-w-0');
+        ghContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '上傳到 GitHub' }));
+        ghContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: githubUser ? '備份記憶到 GitHub 私人倉庫' : '請先連接 GitHub' }));
+        exportGitHubCell.appendChild(ghContent);
+        exportGitHubCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
+        exportGrid.appendChild(exportGitHubCell);
+        
+        const exportGoogleCell = createElement('div', 'ios-list-cell cursor-pointer' + (!googleUser ? ' opacity-50' : ''), {
+            onClick: googleUser ? exportToGoogleDrive : () => createToast('請先連接 Google Drive', 'error')
+        });
+        const gIcon = createElement('div', 'w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center');
+        gIcon.appendChild(createIcon('folder', 'text-white text-sm'));
+        exportGoogleCell.appendChild(gIcon);
+        const gContent = createElement('div', 'flex-1 min-w-0');
+        gContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '上傳到 Google Drive' }));
+        gContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: googleUser ? '備份記憶到 Google Drive' : '請先連接 Google Drive' }));
+        exportGoogleCell.appendChild(gContent);
+        exportGoogleCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
+        exportGrid.appendChild(exportGoogleCell);
+        
+        exportSection.appendChild(exportGrid);
+        main.appendChild(exportSection);
+
+        const importSection = createElement('div', 'mx-4 mb-4');
+        importSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: '匯入記憶' }));
+        
+        const importGrid = createElement('div', 'bg-white rounded-lg shadow-sm');
+        
+        const importJSONCell = createElement('div', 'ios-list-cell cursor-pointer', { onClick: importFromJSON });
+        const importIcon = createElement('div', 'w-10 h-10 bg-teal-500 rounded-lg flex items-center justify-center');
+        importIcon.appendChild(createIcon('upload', 'text-white text-sm'));
+        importJSONCell.appendChild(importIcon);
+        const importContent = createElement('div', 'flex-1 min-w-0');
+        importContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '從 JSON 匯入' }));
+        importContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '從備份檔案還原記憶' }));
+        importJSONCell.appendChild(importContent);
+        importJSONCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
+        importGrid.appendChild(importJSONCell);
+        
+        importSection.appendChild(importGrid);
+        main.appendChild(importSection);
+
+        const settingsBtn = createElement('button', 'mx-4 w-full bg-gray-100 text-gray-700 rounded-lg py-3 text-sm font-medium', {
+            textContent: '管理連接設定',
+            onClick: () => Router.navigate('/settings/backup')
+        });
+        main.appendChild(settingsBtn);
+        
+        return { element: container, cleanup: null };
+    }
 
     const memories = await MemoryDB.getAll();
     let filtered = [...memories];
@@ -216,215 +368,7 @@ async function renderMemoryList() {
     return { element: container, cleanup: null };
 }
 
-async function renderBackupPage() {
-    const currentFilter = await SettingsDB.get('memory_filter') || 0;
-    const container = createElement('div', 'app-container memory-app bg-ios-bg');
-    
-    const header = createIOSNavBar({
-        title: '記憶備份',
-        largeTitle: false,
-        backPath: '/home',
-        rightActions: [{ icon: 'add', onClick: () => Router.navigate('/memory/new') }]
-    });
-    container.appendChild(header);
-
-    const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-8');
-    main.style.marginTop = 'calc(44px + env(safe-area-inset-top, 0px))';
-    main.style.paddingTop = '16px';
-    
-    const filterContainer = createElement('div', 'mx-4 mb-4');
-    const filterWrapper = createElement('div', 'relative');
-    
-    const iconMap = ['inventory_2', 'auto_awesome', 'bookmark', 'favorite', 'event_note', 'mail', 'person', 'backup'];
-    
-    const filterBtn = createElement('button', 
-        'w-full flex items-center justify-between bg-white rounded-lg px-4 py-3 shadow-sm');
-    const filterLabel = createElement('span', 'flex items-center gap-2');
-    filterLabel.appendChild(createIcon(iconMap[currentFilter] || 'folder', 'text-lg'));
-    filterLabel.appendChild(createElement('span', 'font-medium', { textContent: TYPE_TABS[currentFilter] }));
-    filterBtn.appendChild(filterLabel);
-    filterBtn.appendChild(createIcon('expand_more', 'text-ios-muted'));
-    
-    const dropdown = createElement('div', 
-        'absolute top-full left-0 right-0 bg-white rounded-lg shadow-lg mt-1 z-50 hidden');
-    
-    TYPE_TABS.forEach((tab, index) => {
-        const option = createElement('div', 
-            'flex items-center gap-3 px-4 py-3 cursor-pointer hover:bg-gray-50 ' + 
-            (currentFilter === index ? 'bg-blue-50' : ''));
-        option.appendChild(createIcon(iconMap[index] || 'folder', 'text-lg'));
-        option.appendChild(createElement('span', 'flex-1', { textContent: tab }));
-        if (currentFilter === index) {
-            option.appendChild(createIcon('check', 'text-claude-primary'));
-        }
-        
-        option.addEventListener('click', async () => {
-            await SettingsDB.set('memory_filter', index);
-            await SettingsDB.set('memory_search', '');
-            dropdown.classList.add('hidden');
-            Router.navigate('/memory');
-        });
-        
-        dropdown.appendChild(option);
-    });
-    
-    filterBtn.addEventListener('click', () => {
-        dropdown.classList.toggle('hidden');
-    });
-    
-    document.addEventListener('click', (e) => {
-        if (!filterWrapper.contains(e.target)) {
-            dropdown.classList.add('hidden');
-        }
-    });
-    
-    filterWrapper.appendChild(filterBtn);
-    filterWrapper.appendChild(dropdown);
-    filterContainer.appendChild(filterWrapper);
-    main.appendChild(filterContainer);
-    
-    const memories = await MemoryDB.getAll();
-    const wikiPages = await WikiRecordsDB.getAll();
-    const githubUser = await SettingsDB.get('github_user');
-    const googleUser = await SettingsDB.get('google_drive_user');
-    const notionConfig = await SettingsDB.get('wiki_notion_config');
-    
-    const statsCard = createElement('div', 'bg-gradient-to-r from-claude-primary to-gray-700 rounded-lg mx-4 mb-4 p-4 text-white');
-    statsCard.innerHTML = '<h2 class="font-bold mb-3">記憶統計</h2>' +
-        '<div class="grid grid-cols-3 gap-2 text-center">' +
-        '<div><div class="text-2xl font-bold">' + memories.length + '</div><div class="text-xs opacity-80">總記憶</div></div>' +
-        '<div><div class="text-2xl font-bold">' + memories.filter(m => m.memory_type === 'permanent').length + '</div><div class="text-xs opacity-80">永久記憶</div></div>' +
-        '<div><div class="text-2xl font-bold">' + wikiPages.length + '</div><div class="text-xs opacity-80">Wiki 頁面</div></div>' +
-        '</div>';
-    main.appendChild(statsCard);
-
-    const connectionsSection = createElement('div', 'mx-4 mb-4');
-    connectionsSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: '連接狀態' }));
-    
-    const connectionsGrid = createElement('div', 'bg-white rounded-lg shadow-sm p-4');
-    const connections = [
-        { name: 'GitHub', connected: !!githubUser, user: githubUser?.login, icon: 'code', color: 'bg-gray-800' },
-        { name: 'Google Drive', connected: !!googleUser, user: googleUser?.displayName, icon: 'cloud', color: 'bg-blue-500' },
-        { name: 'Notion', connected: !!notionConfig?.token, user: notionConfig?.token ? '已連接' : '未連接', icon: 'article', color: 'bg-purple-500' }
-    ];
-    
-    connections.forEach(conn => {
-        const row = createElement('div', 'flex items-center justify-between py-2');
-        const left = createElement('div', 'flex items-center gap-2');
-        const icon = createElement('div', 'w-8 h-8 ' + conn.color + ' rounded-lg flex items-center justify-center');
-        icon.appendChild(createIcon(conn.icon, 'text-white text-sm'));
-        left.appendChild(icon);
-        left.appendChild(createElement('span', 'text-sm font-medium', { textContent: conn.name }));
-        row.appendChild(left);
-        
-        const status = createElement('span', 'text-xs ' + (conn.connected ? 'text-green-600' : 'text-gray-400'));
-        status.textContent = conn.connected ? (conn.user || '已連接') : '未連接';
-        row.appendChild(status);
-        connectionsGrid.appendChild(row);
-    });
-    
-    connectionsSection.appendChild(connectionsGrid);
-    main.appendChild(connectionsSection);
-
-    const exportSection = createElement('div', 'mx-4 mb-4');
-    exportSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: '匯出記憶' }));
-    
-    const exportGrid = createElement('div', 'bg-white rounded-lg shadow-sm');
-    
-    const exportJSONCell = createElement('div', 'ios-list-cell cursor-pointer', { onClick: exportToJSON });
-    const jsonIcon = createElement('div', 'w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center');
-    jsonIcon.appendChild(createIcon('download', 'text-white text-sm'));
-    exportJSONCell.appendChild(jsonIcon);
-    const jsonContent = createElement('div', 'flex-1 min-w-0');
-    jsonContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '下載 JSON 備份' }));
-    jsonContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '將所有記憶匯出為 JSON 檔案' }));
-    exportJSONCell.appendChild(jsonContent);
-    exportJSONCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
-    exportGrid.appendChild(exportJSONCell);
-    
-    const exportWikiCell = createElement('div', 'ios-list-cell cursor-pointer', { onClick: exportToWiki });
-    const wikiIcon = createElement('div', 'w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center');
-    wikiIcon.appendChild(createIcon('description', 'text-white text-sm'));
-    exportWikiCell.appendChild(wikiIcon);
-    const wikiContent = createElement('div', 'flex-1 min-w-0');
-    wikiContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '匯出到 Wiki' }));
-    wikiContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '將永久記憶轉換為 Wiki 頁面' }));
-    exportWikiCell.appendChild(wikiContent);
-    exportWikiCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
-    exportGrid.appendChild(exportWikiCell);
-    
-    const exportNotionCell = createElement('div', 'ios-list-cell cursor-pointer' + (!notionConfig?.token ? ' opacity-50' : ''), {
-        onClick: notionConfig?.token ? exportToNotion : () => createToast('請先連接 Notion', 'error')
-    });
-    const notionIcon = createElement('div', 'w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center');
-    notionIcon.appendChild(createIcon('article', 'text-white text-sm'));
-    exportNotionCell.appendChild(notionIcon);
-    const notionContent = createElement('div', 'flex-1 min-w-0');
-    notionContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '匯出到 Notion' }));
-    notionContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: notionConfig?.token ? '同步記憶到 Notion 資料庫' : '請先連接 Notion' }));
-    exportNotionCell.appendChild(notionContent);
-    exportNotionCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
-    exportGrid.appendChild(exportNotionCell);
-    
-    const exportGitHubCell = createElement('div', 'ios-list-cell cursor-pointer' + (!githubUser ? ' opacity-50' : ''), {
-        onClick: githubUser ? exportToGitHub : () => createToast('請先連接 GitHub', 'error')
-    });
-    const ghIcon = createElement('div', 'w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center');
-    ghIcon.appendChild(createIcon('cloud_upload', 'text-white text-sm'));
-    exportGitHubCell.appendChild(ghIcon);
-    const ghContent = createElement('div', 'flex-1 min-w-0');
-    ghContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '上傳到 GitHub' }));
-    ghContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: githubUser ? '備份記憶到 GitHub 私人倉庫' : '請先連接 GitHub' }));
-    exportGitHubCell.appendChild(ghContent);
-    exportGitHubCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
-    exportGrid.appendChild(exportGitHubCell);
-    
-    const exportGoogleCell = createElement('div', 'ios-list-cell cursor-pointer' + (!googleUser ? ' opacity-50' : ''), {
-        onClick: googleUser ? exportToGoogleDrive : () => createToast('請先連接 Google Drive', 'error')
-    });
-    const gIcon = createElement('div', 'w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center');
-    gIcon.appendChild(createIcon('folder', 'text-white text-sm'));
-    exportGoogleCell.appendChild(gIcon);
-    const gContent = createElement('div', 'flex-1 min-w-0');
-    gContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '上傳到 Google Drive' }));
-    gContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: googleUser ? '備份記憶到 Google Drive' : '請先連接 Google Drive' }));
-    exportGoogleCell.appendChild(gContent);
-    exportGoogleCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
-    exportGrid.appendChild(exportGoogleCell);
-    
-    exportSection.appendChild(exportGrid);
-    main.appendChild(exportSection);
-
-    const importSection = createElement('div', 'mx-4 mb-4');
-    importSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: '匯入記憶' }));
-    
-    const importGrid = createElement('div', 'bg-white rounded-lg shadow-sm');
-    
-    const importJSONCell = createElement('div', 'ios-list-cell cursor-pointer', { onClick: importFromJSON });
-    const importIcon = createElement('div', 'w-10 h-10 bg-teal-500 rounded-lg flex items-center justify-center');
-    importIcon.appendChild(createIcon('upload', 'text-white text-sm'));
-    importJSONCell.appendChild(importIcon);
-    const importContent = createElement('div', 'flex-1 min-w-0');
-    importContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '從 JSON 匯入' }));
-    importContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '從備份檔案還原記憶' }));
-    importJSONCell.appendChild(importContent);
-    importJSONCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
-    importGrid.appendChild(importJSONCell);
-    
-    importSection.appendChild(importGrid);
-    main.appendChild(importSection);
-
-    const settingsBtn = createElement('button', 'mx-4 w-full bg-gray-100 text-gray-700 rounded-lg py-3 text-sm font-medium', {
-        textContent: '管理連接設定',
-        onClick: () => Router.navigate('/settings/backup')
-    });
-    main.appendChild(settingsBtn);
-
-    container.appendChild(main);
-    return { element: container, cleanup: null };
-}
-
-async function exportToJSON() {
+async function renderMemoryDetail(params) {
     try {
         createToast('正在匯出記憶...', 'info');
         const memories = await MemoryDB.getAll();
