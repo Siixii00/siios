@@ -207,7 +207,7 @@ function showQRCodeModal(qrUrl, qrcodeKey, token) {
                 modal.remove();
                 createToast('登入成功！正在獲取推薦內容...');
                 setTimeout(() => {
-                    Router.refresh();
+                    Router.navigate('/bilibili');
                 }, 500);
             } else if (data.code === 86038) {
                 clearInterval(pollInterval);
@@ -1452,7 +1452,7 @@ async function renderProfile() {
         if (isLoggedIn) {
             await setBilibiliLoginStatus(false);
             createToast('已登出 Bilibili');
-            Router.refresh();
+            Router.navigate('/bilibili/profile');
         } else {
             await startQRLogin();
         }
@@ -1492,7 +1492,7 @@ async function renderProfile() {
         await SettingsDB.set('bilibili_logged_in', false);
         await SettingsDB.set('bilibili_login_prompted', false);
         createToast('已重置，重新載入後將顯示登入彈窗');
-        setTimeout(() => Router.refresh(), 1000);
+        setTimeout(() => Router.navigate('/bilibili'), 1000);
     };
     loginStatusCard.appendChild(resetBtn);
     
