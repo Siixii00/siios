@@ -359,7 +359,7 @@ async function renderMemoryList() {
     return { element: container, cleanup: null };
 }
 
-async function exportMemories() {
+async function exportToJSON() {
     try {
         createToast('正在匯出記憶...', 'info');
         const memories = await MemoryDB.getAll();
