@@ -368,10 +368,7 @@ async function renderMemoryList() {
     return { element: container, cleanup: null };
 }
 
-async function renderMemoryDetail(params) {
-    try {
-        createToast('正在匯出記憶...', 'info');
-        const memories = await MemoryDB.getAll();
+async function exportMemories() {
         const exportData = {
             version: '1.0',
             exportedAt: new Date().toISOString(),
