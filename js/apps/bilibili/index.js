@@ -559,9 +559,9 @@ function createVideoCard(video, onPlay) {
         const img = createElement('img', '', {
             src: video.cover,
             alt: video.title,
-            loading: 'lazy',
-            onerror: 'this.style.display="none"'
+            loading: 'lazy'
         });
+        img.onerror = () => img.style.display = 'none';
         img.setAttribute('referrerpolicy', 'no-referrer');
         thumb.appendChild(img);
     } else {
