@@ -826,7 +826,16 @@ function formatBilibiliVideos(list) {
 }
 
 function getPresetVideos() {
-    return popularVideos.map(v => ({
+    const presetData = [
+        { bvid: 'BV1xx411c7mD', title: '【周深】大魚', tag: '音樂' },
+        { bvid: 'BV1GJ411x7h4', title: '【何同學】5G測速', tag: '科技' },
+        { bvid: 'BV1uT4y1P7CX', title: '貓咪日常', tag: '生活' },
+        { bvid: 'BV1vA411b7Rq', title: '遊戲實況', tag: '遊戲' },
+        { bvid: 'BV1yT4y1P7CX', title: '動漫推薦', tag: '動漫' },
+        { bvid: 'BV1zA411b7Rq', title: '美食製作', tag: '美食' }
+    ];
+    
+    return presetData.map(v => ({
         id: v.bvid,
         title: v.title,
         tag: v.tag,
