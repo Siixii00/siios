@@ -755,8 +755,46 @@ const popularVideos = [
 ];
 
 async function generateVideoRecommendations(tab, characterId = null) {
-    console.log('使用預設熱門影片列表');
-    return getPresetVideos();
+    console.log('從 Bilibili Android API 獲取真實數據...');
+    
+    try {
+        const response = await fetch(`${BILI_API}/api/bilibili/hot`, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            
+            if (data.success && data.videos && data.videos.length > 0) {
+                console.log(`✅ 成功獲取 ${data.videos.length} 部真實影片！來源: ${data.source}`);
+                
+                return data.videos.map(v => ({
+                    id: v.bvid || `video_${Date.now()}`,
+                    title: v.title || '未命名影片',
+                    tag: v.tag || '熱門',
+                    views: formatViewCount(v.views),
+                    danmu: formatDanmuCount(v.danmu),
+                    thumbGradient: v.cover ? `url(${v.cover})` : generateThumbnail(),
+                    url: v.bvid ? `https://www.bilibili.com/video/${v.bvid}` : '',
+                    owner: v.owner,
+                    duration: v.duration,
+                    cover: v.cover
+                }));
+            } else {
+                console.log('API 返回空數據或失敗:', data.error || 'unknown');
+            }
+        } else {
+            console.log('Worker 響應失敗:', response.status);
+        }
+    } catch (e) {
+        console.error('從網絡獲取失敗:', e.message);
+    }
+    
+    console.log('返回空列表');
+    return [];
 }
 
 async function searchBilibiliVideos(keyword) {
@@ -1124,12 +1162,30 @@ async function renderHome() {
     const videos = appState.sample[appState.currentTab] || [];
     
     if (videos.length === 0) {
-        feedInner.appendChild(createEmptyFeed(async () => {
-            createToast('正在生成影片...');
-            await generateVideosForTab(appState.currentTab, appState.selectedCharacterId);
-            createToast('影片已生成！');
+        const loadingMsg = createElement('div', 'text-center py-8');
+        loadingMsg.innerHTML = `
+            <div class="text-center py-8">
+                <span class="material-symbols-outlined" style="font-size: 48px; color: #fb7299; animation: spin 1s linear infinite;">sync</span>
+                <p style="color: #999; margin-top: 12px;">正在從 Bilibili 獲取最新熱門影片...</p>
+            </div>
+        `;
+        feedInner.appendChild(loadingMsg);
+        
+        createToast('正在獲取最新熱門影片...');
+        const newVideos = await generateVideosForTab(appState.currentTab, appState.selectedCharacterId);
+        
+        if (newVideos && newVideos.length > 0) {
+            createToast(`✓ 成功獲取 ${newVideos.length} 部影片！`);
             Router.navigate(`/bilibili/tab/${appState.currentTab}`);
-        }));
+        } else {
+            loadingMsg.innerHTML = `
+                <div class="text-center py-8">
+                    <span class="material-symbols-outlined" style="font-size: 48px; color: #999;">cloud_off</span>
+                    <p style="color: #999; margin-top: 12px;">無法連接到 Bilibili</p>
+                    <p style="color: #666; font-size: 12px; margin-top: 8px;">請稍後再試或使用搜索功能</p>
+                </div>
+            `;
+        }
     } else {
         const videoList = createElement('section', 'bili-video-list');
         videos.forEach(video => {
