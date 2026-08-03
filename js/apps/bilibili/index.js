@@ -375,58 +375,72 @@ function showLoginPrompt() {
         
         <div style="margin-bottom: 16px;">
             <label style="display: block; font-size: 12px; color: #666; margin-bottom: 8px;">
-                方法 1：輸入 Bilibili Cookie（推薦）
+                輸入 Bilibili Cookie
             </label>
             <textarea 
                 id="bilibili-cookie-input" 
-                style="width: 100%; height: 80px; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; font-family: monospace; resize: vertical;"
-                placeholder="請從瀏覽器開發者工具複製完整的 Cookie 字串&#10;&#10;步驟：&#10;1. 打開 bilibili.com 並登入&#10;2. 按 F12 → Network 標籤&#10;3. 刷新頁面 → 點擊任意請求&#10;4. Headers → Cookie → 複製完整內容"
-            ></textarea>
-            <button id="save-cookie-btn" style="width: 100%; margin-top: 8px; padding: 10px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer;">
-                保存 Cookie 並登入
-            </button>
+                style="width: calc(100% - 16px); height: 80px; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; font-family: monospace; resize: vertical;"
+                placeholder="請輸入 Cookie"></textarea>
         </div>
         
-        <div style="border-top: 1px solid #eee; padding-top: 16px; margin-top: 16px;">
-            <label style="display: block; font-size: 12px; color: #666; margin-bottom: 8px;">
-                方法 2：稍後再說
-            </label>
-            <button id="skip-login-btn" style="width: 100%; padding: 10px; background: #f5f5f5; color: #666; border: none; border-radius: 8px; cursor: pointer;">
-                使用預設內容
-            </button>
+        <button id="save-cookie-button" style="width: 100%; margin-bottom: 8px; padding: 12px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px;">
+            保存 Cookie 並登入
+        </button>
+        
+        <button id="skip-login-button" style="width: 100%; padding: 12px; background: #f5f5f5; color: #666; border: none; border-radius: 8px; cursor: pointer; font-size: 14px;">
+            使用預設內容
+        </button>
+        
+        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">
+            <details>
+                <summary style="cursor: pointer; font-size: 12px; color: #999;">如何獲取 Cookie？</summary>
+                <ol style="color: #666; font-size: 11px; padding-left: 20px; margin-top: 8px; line-height: 1.8;">
+                    <li>在瀏覽器打開 bilibili.com 並登入</li>
+                    <li>按 F12 → Network 標籤</li>
+                    <li>刷新頁面</li>
+                    <li>點擊任意請求</li>
+                    <li>Headers → Cookie → 複製</li>
+                </ol>
+            </details>
         </div>
     `;
     
     modal.appendChild(content);
     document.body.appendChild(modal);
     
-    modal.querySelector('#save-cookie-btn').onclick = async () => {
-        const cookieInput = modal.querySelector('#bilibili-cookie-input').value.trim();
-        
-        if (!cookieInput) {
-            createToast('請輸入 Cookie');
-            return;
-        }
-        
-        if (!cookieInput.includes('SESSDATA')) {
-            createToast('Cookie 格式錯誤，必須包含 SESSDATA');
-            return;
-        }
-        
-        await SettingsDB.set('bilibili_cookie', cookieInput);
-        await setBilibiliLoginStatus(true);
-        
-        modal.remove();
-        createToast('✓ 已保存 Cookie，正在獲取推薦內容...');
-        
-        setTimeout(() => {
-            Router.navigate('/bilibili');
-        }, 500);
-    };
+    const saveBtn = modal.querySelector('#save-cookie-button');
+    const skipBtn = modal.querySelector('#skip-login-button');
+    const cookieInput = modal.querySelector('#bilibili-cookie-input');
     
-    modal.querySelector('#skip-login-btn').onclick = () => {
+    saveBtn.addEventListener('click', async () => {
+        try {
+            const cookie = cookieInput.value.trim();
+            
+            if (!cookie) {
+                createToast('請輸入 Cookie');
+                return;
+            }
+            
+            createToast('正在保存...');
+            
+            await SettingsDB.set('bilibili_cookie', cookie);
+            await setBilibiliLoginStatus(true);
+            
+            modal.remove();
+            createToast('✓ 已保存 Cookie');
+            
+            setTimeout(() => {
+                Router.navigate('/bilibili');
+            }, 500);
+        } catch (e) {
+            console.error('Save cookie error:', e);
+            createToast('保存失敗：' + e.message);
+        }
+    });
+    
+    skipBtn.addEventListener('click', () => {
         modal.remove();
-    };
+    });
 }
 
 async function loadMessagesData() {
@@ -806,29 +820,29 @@ async function fetchWithLogin() {
         const savedCookie = await SettingsDB.get('bilibili_cookie');
         
         if (!savedCookie) {
-            console.log('沒有保存的 Bilibili Cookie，請先登入');
+            console.log('沒有保存的 Bilibili Cookie');
             return null;
         }
         
         console.log('使用保存的 Cookie 獲取數據...');
         
-        const response = await fetch('https://api.bilibili.com/x/web-interface/index/top/rcmd?ps=20', {
+        // 直接調用 Bilibili API
+        const response = await fetch('https://api.bilibili.com/x/web-interface/popular?ps=20', {
             method: 'GET',
             headers: {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
                 'Referer': 'https://www.bilibili.com/',
                 'Cookie': savedCookie
-            },
-            credentials: 'include'
+            }
         });
         
         if (!response.ok) return null;
         
         const data = await response.json();
         
-        if (data.code === 0 && data.data && data.data.item) {
-            console.log('✅ 成功獲取真實推薦數據！');
-            return formatBilibiliVideos(data.data.item);
+        if (data.code === 0 && data.data && data.data.list) {
+            console.log('✅ 成功獲取熱門數據！');
+            return formatBilibiliVideos(data.data.list);
         } else {
             console.log('API 返回錯誤:', data.message);
             return null;
