@@ -94,16 +94,19 @@
 
 .bili-feed {
     flex: 1;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
     padding: 10px;
     padding-bottom: 70px;
     margin-top: calc(44px + env(safe-area-inset-top, 0px));
     padding-top: 16px;
+    -webkit-overflow-scrolling: touch;
 }
 
 .bili-feed-inner {
-    height: 100%;
-    overflow-y: auto;
+    height: auto;
+    min-height: 100%;
+    overflow-y: visible;
     overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
@@ -138,6 +141,14 @@
     height: 90px;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bili-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .bili-thumb-tag {

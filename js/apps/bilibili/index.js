@@ -370,9 +370,14 @@ function createVideoCard(video, onPlay) {
     const thumb = createElement('div', 'bili-thumb');
     
     if (video.cover) {
-        thumb.style.backgroundImage = `url(${video.cover})`;
-        thumb.style.backgroundSize = 'cover';
-        thumb.style.backgroundPosition = 'center';
+        const img = createElement('img', '', {
+            src: video.cover,
+            alt: video.title,
+            loading: 'lazy',
+            onerror: 'this.style.display="none"'
+        });
+        img.setAttribute('referrerpolicy', 'no-referrer');
+        thumb.appendChild(img);
     } else {
         thumb.style.background = video.thumb || video.thumbGradient || generateThumbnail();
     }
@@ -564,38 +569,48 @@ const popularVideos = [
 ];
 
 async function generateVideoRecommendations(tab, characterId = null) {
-    try {
-        const response = await fetch('https://api.bilibili.com/x/web-interface/popular?ps=20', {
-            method: 'GET',
-            mode: 'cors',
-            credentials: 'omit',
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        
-        if (response.ok) {
-            const data = await response.json();
+    const corsProxies = [
+        'https://api.allorigins.win/raw?url=',
+        'https://cors-anywhere.herokuapp.com/',
+        'https://thingproxy.freeboard.io/fetch/'
+    ];
+    
+    const apiUrl = 'https://api.bilibili.com/x/web-interface/popular?ps=20';
+    
+    for (const proxy of corsProxies) {
+        try {
+            const response = await fetch(proxy + encodeURIComponent(apiUrl), {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
             
-            if (data.code === 0 && data.data && data.data.list) {
-                return data.data.list.map(item => ({
-                    id: item.bvid || `video_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-                    title: item.title || '未命名影片',
-                    tag: item.tname || '熱門',
-                    views: formatViewCount(item.stat?.view),
-                    danmu: formatDanmuCount(item.stat?.danmaku),
-                    thumbGradient: item.pic ? `url(${item.pic})` : generateThumbnail(),
-                    url: item.bvid ? `https://www.bilibili.com/video/${item.bvid}` : '',
-                    owner: item.owner?.name,
-                    duration: item.duration,
-                    cover: item.pic
-                }));
+            if (response.ok) {
+                const data = await response.json();
+                
+                if (data.code === 0 && data.data && data.data.list) {
+                    console.log('Successfully fetched real Bilibili data via', proxy);
+                    return data.data.list.map(item => ({
+                        id: item.bvid || `video_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+                        title: item.title || '未命名影片',
+                        tag: item.tname || '熱門',
+                        views: formatViewCount(item.stat?.view),
+                        danmu: formatDanmuCount(item.stat?.danmaku),
+                        thumbGradient: item.pic ? `url(${item.pic})` : generateThumbnail(),
+                        url: item.bvid ? `https://www.bilibili.com/video/${item.bvid}` : '',
+                        owner: item.owner?.name,
+                        duration: item.duration,
+                        cover: item.pic
+                    }));
+                }
             }
+        } catch (e) {
+            console.log('Proxy failed:', proxy, e.message);
         }
-    } catch (e) {
-        console.log('CORS blocked, using preset videos');
     }
     
+    console.log('All CORS proxies failed, using preset videos');
     const videos = popularVideos.map(v => ({
         id: v.bvid,
         title: v.title,
