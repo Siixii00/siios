@@ -870,7 +870,9 @@ async function renderHome() {
     const hasPrompted = await SettingsDB.get('bilibili_login_prompted');
     
     if (!isLoggedIn && !hasPrompted) {
-        showLoginPrompt();
+        setTimeout(() => {
+            showLoginPrompt();
+        }, 500);
         await SettingsDB.set('bilibili_login_prompted', true);
     }
     
@@ -1507,6 +1509,27 @@ async function renderProfile() {
     });
     card1.appendChild(grid1);
     profile.appendChild(card1);
+    
+    const loginStatusCard = createElement('div', 'bili-card');
+    loginStatusCard.appendChild(createElement('div', 'font-semibold mb-2', { textContent: '帳號狀態' }));
+    
+    const loginStatusInfo = createElement('div', 'text-sm mb-2');
+    loginStatusInfo.style.color = isLoggedIn ? '#4caf50' : '#999';
+    loginStatusInfo.textContent = isLoggedIn ? '✓ 已登入 - 可獲取真實推薦內容' : '✗ 未登入 - 使用預設內容';
+    loginStatusCard.appendChild(loginStatusInfo);
+    
+    const resetBtn = createElement('button', 'bili-grid-btn');
+    resetBtn.textContent = '重置登入狀態（測試用）';
+    resetBtn.style.marginTop = '8px';
+    resetBtn.onclick = async () => {
+        await SettingsDB.set('bilibili_logged_in', false);
+        await SettingsDB.set('bilibili_login_prompted', false);
+        createToast('已重置，重新載入後將顯示登入彈窗');
+        setTimeout(() => Router.refresh(), 1000);
+    };
+    loginStatusCard.appendChild(resetBtn);
+    
+    profile.appendChild(loginStatusCard);
     
     const card2 = createElement('div', 'bili-card');
     card2.appendChild(createElement('div', 'font-semibold mb-2', { textContent: '創作中心' }));
