@@ -164,20 +164,81 @@ async function setBilibiliLoginStatus(status) {
 
 async function startQRLogin() {
     try {
+        createToast('正在生成登入二維碼...');
+        
         const response = await fetch(`${BILI_API}/api/bilibili/auth/login`, { method: 'POST' });
         const data = await response.json();
         
+        if (data.error === 'qrcode_banned') {
+            // QR Code 被 ban，顯示手動輸入提示
+            showManualCookieInput(data.instructions);
+            return;
+        }
+        
         if (data.url) {
-            const tempToken = 'user_' + Date.now();
-            showQRCodeModal(data.url, data.qrcode_key, tempToken);
+            showQRCodeModal(data.url, data.qrcode_key);
         }
     } catch (e) {
         console.error('QR Login error:', e);
-        createToast('無法生成登入二維碼');
+        createToast('無法生成登入二維碼，請使用手動輸入');
+        showManualCookieInput();
     }
 }
 
-function showQRCodeModal(qrUrl, qrcodeKey, token) {
+function showManualCookieInput(instructions) {
+    const modal = createElement('div', 'bili-login-modal');
+    const content = createElement('div', 'bili-login-content');
+    
+    content.innerHTML = `
+        <h3 style="margin: 0 0 16px;">手動輸入 Cookie</h3>
+        <p style="color: #666; font-size: 13px; margin-bottom: 16px;">
+            由於 Bilibili 限制，需要手動獲取 Cookie：
+        </p>
+        <ol style="color: #666; font-size: 12px; padding-left: 20px; margin-bottom: 16px; line-height: 1.8;">
+            ${instructions ? instructions.map(i => `<li>${i}</li>`).join('') : `
+                <li>在瀏覽器打開 bilibili.com 並登入</li>
+                <li>按 F12 → Console 標籤</li>
+                <li>輸入：<code style="background: #f5f5f5; padding: 2px 6px; border-radius: 4px;">document.cookie</code></li>
+                <li>複製完整的 Cookie 字串</li>
+            `}
+        </ol>
+        <textarea 
+            id="manual-cookie-input" 
+            style="width: 100%; height: 80px; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; font-family: monospace;"
+            placeholder="貼上完整的 Cookie 字串..."
+        ></textarea>
+        <button id="save-manual-cookie" style="width: 100%; margin-top: 12px; padding: 12px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer;">
+            保存 Cookie
+        </button>
+        <button id="close-manual" style="width: 100%; margin-top: 8px; padding: 12px; background: #f5f5f5; color: #666; border: none; border-radius: 8px; cursor: pointer;">
+            取消
+        </button>
+    `;
+    
+    modal.appendChild(content);
+    document.body.appendChild(modal);
+    
+    modal.querySelector('#save-manual-cookie').onclick = async () => {
+        const cookie = modal.querySelector('#manual-cookie-input').value.trim();
+        
+        if (!cookie || !cookie.includes('SESSDATA')) {
+            createToast('Cookie 格式錯誤');
+            return;
+        }
+        
+        await SettingsDB.set('bilibili_cookie', cookie);
+        await setBilibiliLoginStatus(true);
+        
+        modal.remove();
+        createToast('✓ 已保存 Cookie');
+        
+        setTimeout(() => Router.navigate('/bilibili'), 500);
+    };
+    
+    modal.querySelector('#close-manual').onclick = () => modal.remove();
+}
+
+function showQRCodeModal(qrUrl, qrcodeKey) {
     const modal = createElement('div', 'bili-login-modal');
     const content = createElement('div', 'bili-login-content');
     
@@ -185,7 +246,7 @@ function showQRCodeModal(qrUrl, qrcodeKey, token) {
         <h3>掃碼登入 B 站</h3>
         <p>請使用 B 站 App 掃描以下二維碼</p>
         <div class="bili-qrcode-container">
-            <img src="${qrUrl}" alt="QR Code" />
+            <img src="${qrUrl}" alt="QR Code" style="max-width: 200px; width: 100%;" />
         </div>
         <p class="bili-login-status">等待掃碼...</p>
         <button class="bili-close-btn">關閉</button>
@@ -196,30 +257,105 @@ function showQRCodeModal(qrUrl, qrcodeKey, token) {
     
     const pollInterval = setInterval(async () => {
         try {
-            const response = await fetch(`${BILI_API}/api/bilibili/auth/poll?qrcode_key=${qrcodeKey}`, {
-                headers: { 'Authorization': `Bearer ${token}` }
-            });
+            const response = await fetch(`${BILI_API}/api/bilibili/auth/poll?qrcode_key=${qrcodeKey}`);
             const data = await response.json();
             
-            if (data.success) {
+            if (data.success && data.cookie) {
                 clearInterval(pollInterval);
+                
+                // 保存 Cookie
+                await SettingsDB.set('bilibili_cookie', data.cookie);
                 await setBilibiliLoginStatus(true);
+                
                 modal.remove();
-                createToast('登入成功！正在獲取推薦內容...');
-                setTimeout(() => {
-                    Router.navigate('/bilibili');
-                }, 500);
+                createToast('✓ 登入成功！正在獲取推薦內容...');
+                
+                setTimeout(() => Router.navigate('/bilibili'), 500);
             } else if (data.code === 86038) {
                 clearInterval(pollInterval);
                 modal.querySelector('.bili-login-status').textContent = '二維碼已過期，請重新登入';
             }
-        } catch {
-            clearInterval(pollInterval);
+        } catch (e) {
+            console.error('Poll error:', e);
         }
     }, 2000);
     
     modal.querySelector('.bili-close-btn').onclick = () => {
         clearInterval(pollInterval);
+        modal.remove();
+    };
+}
+
+function showCookieManager() {
+    const modal = createElement('div', 'bili-login-modal');
+    const content = createElement('div', 'bili-login-content');
+    
+    content.innerHTML = `
+        <h3 style="margin: 0 0 16px; font-size: 18px;">管理 Bilibili Cookie</h3>
+        
+        <div style="margin-bottom: 16px;">
+            <label style="display: block; font-size: 12px; color: #666; margin-bottom: 8px;">
+                更新 Cookie（可選）
+            </label>
+            <textarea 
+                id="bilibili-cookie-input" 
+                style="width: 100%; height: 60px; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; font-family: monospace;"
+                placeholder="輸入新的 Cookie 以更新..."
+            ></textarea>
+            <button id="update-cookie-btn" style="width: 100%; margin-top: 8px; padding: 10px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer;">
+                更新 Cookie
+            </button>
+        </div>
+        
+        <div style="border-top: 1px solid #eee; padding-top: 16px;">
+            <button id="test-cookie-btn" style="width: 100%; margin-bottom: 8px; padding: 10px; background: #4caf50; color: white; border: none; border-radius: 8px; cursor: pointer;">
+                測試 Cookie 是否有效
+            </button>
+            <button id="logout-btn" style="width: 100%; padding: 10px; background: #f44336; color: white; border: none; border-radius: 8px; cursor: pointer;">
+                登出（清除 Cookie）
+            </button>
+        </div>
+        
+        <button id="close-modal-btn" style="width: 100%; margin-top: 16px; padding: 10px; background: #f5f5f5; color: #666; border: none; border-radius: 8px; cursor: pointer;">
+            關閉
+        </button>
+    `;
+    
+    modal.appendChild(content);
+    document.body.appendChild(modal);
+    
+    modal.querySelector('#update-cookie-btn').onclick = async () => {
+        const cookieInput = modal.querySelector('#bilibili-cookie-input').value.trim();
+        
+        if (!cookieInput) {
+            createToast('請輸入 Cookie');
+            return;
+        }
+        
+        await SettingsDB.set('bilibili_cookie', cookieInput);
+        modal.remove();
+        createToast('✓ Cookie 已更新');
+    };
+    
+    modal.querySelector('#test-cookie-btn').onclick = async () => {
+        createToast('正在測試 Cookie...');
+        const videos = await fetchWithLogin();
+        if (videos && videos.length > 0) {
+            createToast(`✓ Cookie 有效！獲取到 ${videos.length} 部影片`);
+        } else {
+            createToast('✗ Cookie 無效或已過期，請重新獲取');
+        }
+    };
+    
+    modal.querySelector('#logout-btn').onclick = async () => {
+        await SettingsDB.set('bilibili_cookie', '');
+        await setBilibiliLoginStatus(false);
+        modal.remove();
+        createToast('已登出並清除 Cookie');
+        Router.navigate('/bilibili');
+    };
+    
+    modal.querySelector('#close-modal-btn').onclick = () => {
         modal.remove();
     };
 }
@@ -233,27 +369,62 @@ function showLoginPrompt() {
             <span class="material-symbols-outlined" style="font-size: 48px; color: #fb7299;">account_circle</span>
         </div>
         <h3 style="margin: 0 0 12px; font-size: 20px;">登入 Bilibili</h3>
-        <p style="color: #999; margin: 0 0 24px; font-size: 14px; line-height: 1.6;">
-            登入後可以：<br>
-            • 獲取個人化推薦內容<br>
-            • 查看真實的熱門影片<br>
-            • 享受完整的 B站體驗
+        <p style="color: #999; margin: 0 0 16px; font-size: 13px; line-height: 1.6;">
+            登入後可以獲取真實推薦內容
         </p>
-        <div class="bili-login-buttons">
-            <button class="bili-login-btn" style="width: 100%;">掃碼登入</button>
-            <button class="bili-cancel-btn" style="width: 100%; margin-top: 8px;">稍後再說</button>
+        
+        <div style="margin-bottom: 16px;">
+            <label style="display: block; font-size: 12px; color: #666; margin-bottom: 8px;">
+                方法 1：輸入 Bilibili Cookie（推薦）
+            </label>
+            <textarea 
+                id="bilibili-cookie-input" 
+                style="width: 100%; height: 80px; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; font-family: monospace; resize: vertical;"
+                placeholder="請從瀏覽器開發者工具複製完整的 Cookie 字串&#10;&#10;步驟：&#10;1. 打開 bilibili.com 並登入&#10;2. 按 F12 → Network 標籤&#10;3. 刷新頁面 → 點擊任意請求&#10;4. Headers → Cookie → 複製完整內容"
+            ></textarea>
+            <button id="save-cookie-btn" style="width: 100%; margin-top: 8px; padding: 10px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer;">
+                保存 Cookie 並登入
+            </button>
+        </div>
+        
+        <div style="border-top: 1px solid #eee; padding-top: 16px; margin-top: 16px;">
+            <label style="display: block; font-size: 12px; color: #666; margin-bottom: 8px;">
+                方法 2：稍後再說
+            </label>
+            <button id="skip-login-btn" style="width: 100%; padding: 10px; background: #f5f5f5; color: #666; border: none; border-radius: 8px; cursor: pointer;">
+                使用預設內容
+            </button>
         </div>
     `;
     
     modal.appendChild(content);
     document.body.appendChild(modal);
     
-    modal.querySelector('.bili-login-btn').onclick = async () => {
+    modal.querySelector('#save-cookie-btn').onclick = async () => {
+        const cookieInput = modal.querySelector('#bilibili-cookie-input').value.trim();
+        
+        if (!cookieInput) {
+            createToast('請輸入 Cookie');
+            return;
+        }
+        
+        if (!cookieInput.includes('SESSDATA')) {
+            createToast('Cookie 格式錯誤，必須包含 SESSDATA');
+            return;
+        }
+        
+        await SettingsDB.set('bilibili_cookie', cookieInput);
+        await setBilibiliLoginStatus(true);
+        
         modal.remove();
-        await startQRLogin();
+        createToast('✓ 已保存 Cookie，正在獲取推薦內容...');
+        
+        setTimeout(() => {
+            Router.navigate('/bilibili');
+        }, 500);
     };
     
-    modal.querySelector('.bili-cancel-btn').onclick = () => {
+    modal.querySelector('#skip-login-btn').onclick = () => {
         modal.remove();
     };
 }
@@ -632,28 +803,38 @@ async function generateVideoRecommendations(tab, characterId = null) {
 
 async function fetchWithLogin() {
     try {
-        const response = await fetch(`${BILI_API}/api/bilibili/recommend?ps=20`);
+        const savedCookie = await SettingsDB.get('bilibili_cookie');
+        
+        if (!savedCookie) {
+            console.log('沒有保存的 Bilibili Cookie，請先登入');
+            return null;
+        }
+        
+        console.log('使用保存的 Cookie 獲取數據...');
+        
+        const response = await fetch('https://api.bilibili.com/x/web-interface/index/top/rcmd?ps=20', {
+            method: 'GET',
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                'Referer': 'https://www.bilibili.com/',
+                'Cookie': savedCookie
+            },
+            credentials: 'include'
+        });
         
         if (!response.ok) return null;
         
         const data = await response.json();
         
-        if (data.videos && data.videos.length > 0) {
-            return data.videos.map(v => ({
-                id: v.bvid || `video_${Date.now()}`,
-                title: v.title || '未命名影片',
-                tag: v.tag || '推薦',
-                views: formatViewCount(v.views),
-                danmu: formatDanmuCount(v.danmu),
-                thumbGradient: v.cover ? `url(${v.cover})` : generateThumbnail(),
-                url: v.bvid ? `https://www.bilibili.com/video/${v.bvid}` : '',
-                owner: v.owner,
-                duration: v.duration,
-                cover: v.cover
-            }));
+        if (data.code === 0 && data.data && data.data.item) {
+            console.log('✅ 成功獲取真實推薦數據！');
+            return formatBilibiliVideos(data.data.item);
+        } else {
+            console.log('API 返回錯誤:', data.message);
+            return null;
         }
     } catch (e) {
-        console.error('使用登入 Cookie 獲取失敗:', e);
+        console.error('使用 Cookie 獲取失敗:', e);
     }
     
     return null;
@@ -1447,14 +1628,12 @@ async function renderProfile() {
     headerCard.appendChild(avatar);
     headerCard.appendChild(info);
     
-    const loginBtn = createElement('button', 'bili-ghost-btn', { textContent: isLoggedIn ? '登出' : '登入' });
+    const loginBtn = createElement('button', 'bili-ghost-btn', { textContent: isLoggedIn ? '管理 Cookie' : '登入' });
     loginBtn.onclick = async () => {
         if (isLoggedIn) {
-            await setBilibiliLoginStatus(false);
-            createToast('已登出 Bilibili');
-            Router.navigate('/bilibili/profile');
+            showCookieManager();
         } else {
-            await startQRLogin();
+            showLoginPrompt();
         }
     };
     headerCard.appendChild(loginBtn);
