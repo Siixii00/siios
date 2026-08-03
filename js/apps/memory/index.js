@@ -369,6 +369,9 @@ async function renderMemoryList() {
 }
 
 async function exportMemories() {
+    try {
+        createToast('正在匯出記憶...', 'info');
+        const memories = await MemoryDB.getAll();
         const exportData = {
             version: '1.0',
             exportedAt: new Date().toISOString(),
