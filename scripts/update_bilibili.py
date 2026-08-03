@@ -45,7 +45,14 @@ def fetch_popular():
     
     try:
         response = requests.get(API_URLS['popular'], headers=get_headers(), timeout=10)
+        print(f'HTTP Status: {response.status_code}')
+        
+        if response.status_code != 200:
+            print(f'✗ HTTP 錯誤: {response.status_code}')
+            return []
+        
         data = response.json()
+        print(f'API Response Code: {data.get("code", "unknown")}')
         
         if data['code'] == 0:
             videos = []
@@ -65,9 +72,12 @@ def fetch_popular():
             return videos
         else:
             print(f'✗ API 錯誤: {data.get("message", "unknown")}')
+            print(f'Full response: {json.dumps(data, ensure_ascii=False)[:500]}')
             return []
     except Exception as e:
         print(f'✗ 獲取失敗: {e}')
+        import traceback
+        traceback.print_exc()
         return []
 
 def fetch_ranking():
@@ -76,7 +86,14 @@ def fetch_ranking():
     
     try:
         response = requests.get(API_URLS['ranking'], headers=get_headers(), timeout=10)
+        print(f'HTTP Status: {response.status_code}')
+        
+        if response.status_code != 200:
+            print(f'✗ HTTP 錯誤: {response.status_code}')
+            return []
+        
         data = response.json()
+        print(f'API Response Code: {data.get("code", "unknown")}')
         
         if data['code'] == 0:
             videos = []
@@ -96,9 +113,12 @@ def fetch_ranking():
             return videos
         else:
             print(f'✗ API 錯誤: {data.get("message", "unknown")}')
+            print(f'Full response: {json.dumps(data, ensure_ascii=False)[:500]}')
             return []
     except Exception as e:
         print(f'✗ 獲取失敗: {e}')
+        import traceback
+        traceback.print_exc()
         return []
 
 def fetch_search(keyword):
