@@ -1478,27 +1478,16 @@ async function showNativePlayer(container, info, playData, characterId, bvid, ti
     const playerStage = createElement('div', 'bili-player-stage');
     const playerVideo = createElement('div', 'bili-player-video');
     
-    if (playData.dash && playData.dash.video && playData.dash.video.length > 0) {
-        const videoUrl = playData.dash.video[0].base_url;
-        
-        const video = createElement('video', '', {
-            src: videoUrl,
-            controls: true,
-            autoplay: true
-        });
-        video.style.width = '100%';
-        video.style.height = '100%';
-        video.style.backgroundColor = '#000';
-        playerVideo.appendChild(video);
-    } else {
-        const iframeUrl = convertBilibiliUrl(`https://www.bilibili.com/video/${info.bvid || ''}`);
-        const iframe = createElement('iframe', '', {
-            src: iframeUrl,
-            allow: 'autoplay; fullscreen',
-            loading: 'lazy'
-        });
-        playerVideo.appendChild(iframe);
-    }
+    const iframeUrl = convertBilibiliUrl(`https://www.bilibili.com/video/${bvid}`);
+    const iframe = createElement('iframe', '', {
+        src: iframeUrl,
+        allow: 'autoplay; fullscreen',
+        loading: 'lazy'
+    });
+    iframe.style.width = '100%';
+    iframe.style.height = '100%';
+    iframe.style.border = 'none';
+    playerVideo.appendChild(iframe);
     
     const danmuLayer = createElement('div', 'bili-danmu-layer');
     playerVideo.appendChild(danmuLayer);
