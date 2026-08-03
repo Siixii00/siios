@@ -755,64 +755,64 @@ const popularVideos = [
 ];
 
 async function generateVideoRecommendations(tab, characterId = null) {
-    const isLoggedIn = await checkBilibiliLogin();
-    
-    if (isLoggedIn) {
-        console.log('使用登入後的 Cookie 獲取數據...');
-        const videos = await fetchWithLogin();
-        if (videos && videos.length > 0) {
-            return videos;
-        }
-    }
-    
-    console.log('未登入或登入獲取失敗，嘗試 CORS 代理...');
-    const apiUrl = 'https://api.bilibili.com/x/web-interface/popular?ps=20';
-    
-    const corsProxies = [
-        {
-            name: 'allorigins',
-            getUrl: (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`
-        },
-        {
-            name: 'corsproxy.io',
-            getUrl: (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`
-        },
-        {
-            name: 'cors.sh',
-            getUrl: (url) => `https://proxy.cors.sh/${url}`
-        }
-    ];
-    
-    for (const proxy of corsProxies) {
-        try {
-            console.log(`嘗試使用 ${proxy.name} 代理...`);
-            
-            const response = await fetch(proxy.getUrl(apiUrl), {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/json'
-                },
-                signal: AbortSignal.timeout(5000)
-            });
-            
-            if (!response.ok) {
-                console.log(`${proxy.name} 返回錯誤: ${response.status}`);
-                continue;
-            }
-            
-            const data = await response.json();
-            
-            if (data.code === 0 && data.data && data.data.list) {
-                console.log(`✅ ${proxy.name} 成功獲取數據！`);
-                return formatBilibiliVideos(data.data.list);
-            }
-        } catch (e) {
-            console.log(`❌ ${proxy.name} 失敗:`, e.message);
-        }
-    }
-    
-    console.log('所有方法都失敗，使用預設影片列表');
+    console.log('使用預設熱門影片列表');
     return getPresetVideos();
+}
+
+async function searchBilibiliVideos(keyword) {
+    if (!keyword || keyword.trim() === '') {
+        return [];
+    }
+    
+    console.log('搜尋 Bilibili 影片:', keyword);
+    
+    try {
+        const savedCookie = await SettingsDB.get('bilibili_cookie');
+        
+        const headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+            'Referer': 'https://www.bilibili.com/',
+            'Accept': 'application/json, text/plain, */*'
+        };
+        
+        if (savedCookie) {
+            headers['Cookie'] = savedCookie;
+        }
+        
+        const response = await fetch(
+            `https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword=${encodeURIComponent(keyword)}&page=1&page_size=20`,
+            { headers }
+        );
+        
+        if (!response.ok) {
+            console.log('搜尋 API 請求失敗:', response.status);
+            return [];
+        }
+        
+        const data = await response.json();
+        
+        if (data.code === 0 && data.data && data.data.result) {
+            console.log(`✅ 搜尋成功！找到 ${data.data.result.length} 部影片`);
+            
+            return data.data.result.map(item => ({
+                id: item.bvid || `video_${Date.now()}`,
+                title: item.title?.replace(/<em class="keyword">/g, '').replace(/<\/em>/g, '') || '未命名影片',
+                tag: item.typename || '搜尋結果',
+                views: formatViewCount(item.play),
+                danmu: formatDanmuCount(item.video_review),
+                thumbGradient: item.pic ? `url(${item.pic})` : generateThumbnail(),
+                url: item.bvid ? `https://www.bilibili.com/video/${item.bvid}` : '',
+                owner: item.author,
+                duration: item.duration,
+                cover: item.pic
+            }));
+        }
+        
+        return [];
+    } catch (e) {
+        console.error('搜尋失敗:', e);
+        return [];
+    }
 }
 
 async function fetchWithLogin() {
@@ -1059,7 +1059,27 @@ async function renderHome() {
     const searchRow = createElement('div', 'bili-search-row');
     const searchBox = createElement('div', 'bili-search');
     searchBox.appendChild(createIcon('search', 'text-ios-muted'));
-    const searchInput = createElement('input', '', { type: 'text', placeholder: '動漫、番劇、直播' });
+    const searchInput = createElement('input', '', { type: 'text', placeholder: '搜尋影片後按 Enter' });
+    
+    searchInput.addEventListener('keypress', async (e) => {
+        if (e.key === 'Enter') {
+            const keyword = searchInput.value.trim();
+            if (keyword) {
+                createToast(`正在搜尋「${keyword}」...`);
+                const videos = await searchBilibiliVideos(keyword);
+                
+                if (videos && videos.length > 0) {
+                    appState.sample[appState.currentTab] = videos;
+                    await SettingsDB.set(`bilibili_${appState.currentTab}_videos`, videos);
+                    createToast(`找到 ${videos.length} 部相關影片！`);
+                    Router.navigate(`/bilibili/tab/${appState.currentTab}`);
+                } else {
+                    createToast('沒有找到相關影片，請稍後再試');
+                }
+            }
+        }
+    });
+    
     searchBox.appendChild(searchInput);
     searchRow.appendChild(searchBox);
     container.appendChild(searchRow);
