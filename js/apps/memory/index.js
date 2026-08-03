@@ -117,12 +117,16 @@ async function renderMemoryList() {
             option.appendChild(createIcon('check', 'text-claude-primary'));
         }
         
-        option.addEventListener('click', async () => {
+        option.addEventListener('click', async (e) => {
+            e.stopPropagation();
             dropdown.classList.add('hidden');
+            console.log('[Memory] 選擇分類:', index, TYPE_TABS[index]);
             await SettingsDB.set('memory_filter', index);
             await SettingsDB.set('memory_search', '');
+            const savedValue = await SettingsDB.get('memory_filter');
+            console.log('[Memory] 確認 DB 值:', savedValue);
             if (window.location.hash === '#/memory') {
-                Router.handleRoute();
+                await Router.handleRoute();
             } else {
                 Router.navigate('/memory');
             }
