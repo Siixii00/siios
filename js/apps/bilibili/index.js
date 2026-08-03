@@ -736,48 +736,23 @@ function generateFallbackVideos(tab) {
     return videos;
 }
 
-const popularVideos = [
-    { bvid: 'BV126GG62E9G', title: '老大，你的意思是我們抽煙抽的慢也得死嗎？', tag: '遊戲' },
-    { bvid: 'BV1HzGP6jEJS', title: '開庭', tag: '搞笑' },
-    { bvid: 'BV1xS396ZEUz', title: '閃暖七周年CG首曝', tag: '遊戲' },
-    { bvid: 'BV1M6GA6dEQc', title: '【原神】新版本攻略', tag: '遊戲' },
-    { bvid: 'BV1Pt3D6jEob', title: '【知識】冷知識大全', tag: '知識' },
-    { bvid: 'BV1EE346NEcp', title: '【美食】家常菜做法', tag: '美食' },
-    { bvid: 'BV1r23m6iEej', title: '【科技】數碼評測', tag: '科技' },
-    { bvid: 'BV1v8396rEJH', title: '【動漫】經典番劇', tag: '動漫' },
-    { bvid: 'BV1BF3D6vEWS', title: '【音樂】華語金曲', tag: '音樂' },
-    { bvid: 'BV17YGu6REPJ', title: '【生活】日常分享', tag: '生活' },
-    { bvid: 'BV1Nr3s6rE79', title: '【鬼畜】經典作品', tag: '鬼畜' },
-    { bvid: 'BV1eH3m6XEhN', title: '【時尚】穿搭技巧', tag: '時尚' },
-    { bvid: 'BV1wz3R6sEV2', title: '【影視】電影解說', tag: '影視' },
-    { bvid: 'BV14HGV6UESe', title: '【娛樂】明星八卦', tag: '娛樂' },
-    { bvid: 'BV1bz3Q6oEMP', title: '【汽車】新車評測', tag: '汽車' }
-];
-
 async function generateVideoRecommendations(tab, characterId = null) {
-    console.log('開始從網絡獲取最新影片...');
-    console.log('預計需要 3-4 分鐘，請耐心等待');
+    console.log('從本地數據文件讀取 Bilibili 影片...');
     
     try {
-        const response = await fetch(`${BILI_API}/api/bilibili/update`, {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
+        const response = await fetch('/data/bilibili_videos.json');
         
         if (response.ok) {
             const data = await response.json();
             
-            if (data.success && data.videos && data.videos.length > 0) {
-                console.log(`✅ 成功獲取 ${data.videos.length} 部最新影片！`);
-                console.log(`搜索關鍵詞: ${data.keywords.join(', ')}`);
-                console.log(`更新時間: ${data.timestamp}`);
+            if (data.videos && data.videos.length > 0) {
+                console.log(`✅ 成功讀取 ${data.videos.length} 部影片`);
+                console.log(`最後更新: ${data.updated_at}`);
                 
                 return data.videos.map(v => ({
                     id: v.bvid || `video_${Date.now()}`,
                     title: v.title || '未命名影片',
-                    tag: v.tag || '最新',
+                    tag: v.tag || '影片',
                     views: formatViewCount(v.views),
                     danmu: formatDanmuCount(v.danmu),
                     thumbGradient: v.cover ? `url(${v.cover})` : generateThumbnail(),
@@ -786,74 +761,14 @@ async function generateVideoRecommendations(tab, characterId = null) {
                     duration: v.duration,
                     cover: v.cover
                 }));
-            } else {
-                console.log('API 返回空數據:', data.error || 'unknown');
             }
-        } else {
-            console.log('Worker 響應失敗:', response.status);
         }
     } catch (e) {
-        console.error('從網絡獲取失敗:', e.message);
+        console.log('讀取數據文件失敗:', e.message);
     }
     
-    console.log('獲取失敗，返回空列表');
-    return [];
-}
-
-async function searchBilibiliVideos(keyword) {
-    if (!keyword || keyword.trim() === '') {
-        return [];
-    }
-    
-    console.log('搜尋 Bilibili 影片:', keyword);
-    
-    try {
-        const savedCookie = await SettingsDB.get('bilibili_cookie');
-        
-        const headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
-            'Referer': 'https://www.bilibili.com/',
-            'Accept': 'application/json, text/plain, */*'
-        };
-        
-        if (savedCookie) {
-            headers['Cookie'] = savedCookie;
-        }
-        
-        const response = await fetch(
-            `https://api.bilibili.com/x/web-interface/search/type?search_type=video&keyword=${encodeURIComponent(keyword)}&page=1&page_size=20`,
-            { headers }
-        );
-        
-        if (!response.ok) {
-            console.log('搜尋 API 請求失敗:', response.status);
-            return [];
-        }
-        
-        const data = await response.json();
-        
-        if (data.code === 0 && data.data && data.data.result) {
-            console.log(`✅ 搜尋成功！找到 ${data.data.result.length} 部影片`);
-            
-            return data.data.result.map(item => ({
-                id: item.bvid || `video_${Date.now()}`,
-                title: item.title?.replace(/<em class="keyword">/g, '').replace(/<\/em>/g, '') || '未命名影片',
-                tag: item.typename || '搜尋結果',
-                views: formatViewCount(item.play),
-                danmu: formatDanmuCount(item.video_review),
-                thumbGradient: item.pic ? `url(${item.pic})` : generateThumbnail(),
-                url: item.bvid ? `https://www.bilibili.com/video/${item.bvid}` : '',
-                owner: item.author,
-                duration: item.duration,
-                cover: item.pic
-            }));
-        }
-        
-        return [];
-    } catch (e) {
-        console.error('搜尋失敗:', e);
-        return [];
-    }
+    console.log('使用預設影片列表');
+    return getPresetVideos();
 }
 
 async function fetchWithLogin() {
@@ -1165,56 +1080,12 @@ async function renderHome() {
     const videos = appState.sample[appState.currentTab] || [];
     
     if (videos.length === 0) {
-        const loadingContainer = createElement('div', 'text-center py-12 px-4');
-        loadingContainer.innerHTML = `
-            <div style="animation: spin 2s linear infinite; display: inline-block;">
-                <span class="material-symbols-outlined" style="font-size: 56px; color: #fb7299;">sync</span>
-            </div>
-            <h3 style="color: #fb7299; margin: 16px 0 8px; font-size: 18px;">正在獲取最新影片</h3>
-            <p style="color: #999; font-size: 14px; line-height: 1.6;">
-                正在從 Bilibili 搜索熱門內容...<br>
-                <small style="color: #666;">預計需要 3-4 分鐘，請耐心等待</small>
-            </p>
-            <div style="margin-top: 20px; padding: 12px; background: rgba(251, 114, 153, 0.1); border-radius: 12px; display: inline-block;">
-                <p style="color: #fb7299; font-size: 12px; margin: 0;">
-                    💡 提示：每次進入頁面都會自動更新內容
-                </p>
-            </div>
-        `;
-        feedInner.appendChild(loadingContainer);
-        
-        createToast('正在從 Bilibili 獲取最新熱門影片...');
-        
-        try {
-            const newVideos = await generateVideosForTab(appState.currentTab, appState.selectedCharacterId);
-            
-            if (newVideos && newVideos.length > 0) {
-                createToast(`✓ 成功獲取 ${newVideos.length} 部最新影片！`);
-                setTimeout(() => {
-                    Router.navigate(`/bilibili/tab/${appState.currentTab}`);
-                }, 500);
-            } else {
-                loadingContainer.innerHTML = `
-                    <span class="material-symbols-outlined" style="font-size: 56px; color: #999;">cloud_off</span>
-                    <h3 style="color: #999; margin: 16px 0 8px;">無法連接到 Bilibili</h3>
-                    <p style="color: #666; font-size: 14px;">請稍後再試或檢查網絡連接</p>
-                    <button id="retry-btn" style="margin-top: 20px; padding: 12px 24px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px;">
-                        重試
-                    </button>
-                `;
-                
-                loadingContainer.querySelector('#retry-btn').onclick = async () => {
-                    Router.navigate('/bilibili');
-                };
-            }
-        } catch (error) {
-            console.error('Update error:', error);
-            loadingContainer.innerHTML = `
-                <span class="material-symbols-outlined" style="font-size: 56px; color: #f44336;">error</span>
-                <h3 style="color: #f44336; margin: 16px 0 8px;">更新失敗</h3>
-                <p style="color: #666; font-size: 14px;">${error.message}</p>
-            `;
-        }
+        feedInner.appendChild(createEmptyFeed(async () => {
+            createToast('正在生成影片...');
+            await generateVideosForTab(appState.currentTab, appState.selectedCharacterId);
+            createToast('影片已生成！');
+            Router.navigate(`/bilibili/tab/${appState.currentTab}`);
+        }));
     } else {
         const videoList = createElement('section', 'bili-video-list');
         videos.forEach(video => {
