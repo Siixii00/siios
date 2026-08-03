@@ -1445,9 +1445,11 @@ async function playEmbed(title, url, container, characterId) {
             throw new Error(info.error);
         }
         
-        const playRes = await fetch(`${BILI_API}/api/bilibili/video/playurl?bvid=${bvid}&cid=${info.cid}`, {
-            headers: { 'Authorization': `Bearer ${token}` }
-        });
+        if (!info.cid) {
+            throw new Error('無法獲取影片 CID');
+        }
+        
+        const playRes = await fetch(`${BILI_API}/api/bilibili/video/playurl?bvid=${bvid}&cid=${info.cid}`);
         const playData = await playRes.json();
         
         if (playData.error) {
