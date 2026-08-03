@@ -163,42 +163,16 @@ async function setBilibiliLoginStatus(status) {
 }
 
 async function startQRLogin() {
-    const token = await SettingsDB.get('github_token');
-    
-    if (!token) {
-        const modal = createElement('div', 'bili-login-modal');
-        const content = createElement('div', 'bili-login-content');
-        
-        content.innerHTML = `
-            <div style="text-align: center; margin-bottom: 20px;">
-                <span class="material-symbols-outlined" style="font-size: 48px; color: #fb7299;">info</span>
-            </div>
-            <h3 style="margin: 0 0 12px; font-size: 20px;">需要 GitHub 帳號</h3>
-            <p style="color: #999; margin: 0 0 24px; font-size: 14px; line-height: 1.6;">
-                登入 Bilibili 需要先登入 GitHub 帳號<br>
-                請到設定頁面登入 GitHub
-            </p>
-            <div class="bili-login-buttons">
-                <button class="bili-login-btn" style="width: 100%;" onclick="window.location.hash='#/settings'">前往設定</button>
-                <button class="bili-cancel-btn" style="width: 100%; margin-top: 8px;">關閉</button>
-            </div>
-        `;
-        
-        modal.appendChild(content);
-        document.body.appendChild(modal);
-        
-        modal.querySelector('.bili-cancel-btn').onclick = () => modal.remove();
-        return;
-    }
-    
     try {
         const response = await fetch(`${BILI_API}/api/bilibili/auth/login`, { method: 'POST' });
         const data = await response.json();
         
         if (data.url) {
-            showQRCodeModal(data.url, data.qrcode_key, token);
+            const tempToken = 'user_' + Date.now();
+            showQRCodeModal(data.url, data.qrcode_key, tempToken);
         }
-    } catch {
+    } catch (e) {
+        console.error('QR Login error:', e);
         createToast('無法生成登入二維碼');
     }
 }
@@ -658,14 +632,7 @@ async function generateVideoRecommendations(tab, characterId = null) {
 
 async function fetchWithLogin() {
     try {
-        const token = await SettingsDB.get('github_token');
-        if (!token) return null;
-        
-        const response = await fetch(`${BILI_API}/api/bilibili/recommend?ps=20`, {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        });
+        const response = await fetch(`${BILI_API}/api/bilibili/recommend?ps=20`);
         
         if (!response.ok) return null;
         
