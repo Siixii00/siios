@@ -2,9 +2,11 @@ name: Update Bilibili Videos
 
 on:
   schedule:
-    # 每天 UTC 0:00 運行（台灣時間 8:00）
     - cron: '0 0 * * *'
-  workflow_dispatch:  # 手動觸發
+  workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   update:
