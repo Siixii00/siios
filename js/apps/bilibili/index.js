@@ -824,6 +824,14 @@ async function renderHome() {
     container.appendChild(tabsBar);
     
     const feed = createElement('main', 'bili-feed');
+    
+    const pullRefresh = createElement('div', 'bili-pull-refresh');
+    const refreshIcon = createIcon('sync', 'bili-pull-refresh-icon');
+    const refreshText = createElement('span', '', { textContent: '下拉刷新' });
+    pullRefresh.appendChild(refreshIcon);
+    pullRefresh.appendChild(refreshText);
+    feed.appendChild(pullRefresh);
+    
     const feedInner = createElement('div', 'bili-feed-inner');
     
     const videos = appState.sample[appState.currentTab] || [];
@@ -846,6 +854,112 @@ async function renderHome() {
     }
     
     feed.appendChild(feedInner);
+    
+    let startY = 0;
+    let isPulling = false;
+    let isLoading = false;
+    
+    function startPull(clientY) {
+        if (feed.scrollTop === 0 && !isLoading) {
+            startY = clientY;
+            isPulling = true;
+        }
+    }
+    
+    function movePull(clientY) {
+        if (!isPulling || isLoading) return;
+        
+        const diff = clientY - startY;
+        
+        if (diff > 0 && feed.scrollTop === 0) {
+            const pullDistance = Math.min(diff, 100);
+            pullRefresh.style.transform = `translateY(${pullDistance}px)`;
+            
+            if (pullDistance > 60) {
+                refreshText.textContent = '釋放刷新';
+                pullRefresh.style.color = 'var(--bili-pink)';
+            } else {
+                refreshText.textContent = '下拉刷新';
+                pullRefresh.style.color = 'var(--bili-muted)';
+            }
+        }
+    }
+    
+    async function endPull() {
+        if (!isPulling || isLoading) return;
+        
+        const transform = pullRefresh.style.transform;
+        const match = transform.match(/translateY\((\d+)px\)/);
+        const pullDistance = match ? parseInt(match[1]) : 0;
+        
+        if (pullDistance > 60) {
+            isLoading = true;
+            refreshIcon.classList.add('loading');
+            refreshText.textContent = '正在刷新...';
+            
+            createToast('正在刷新...');
+            await generateVideosForTab(appState.currentTab, appState.selectedCharacterId);
+            createToast('已更新！');
+            
+            setTimeout(() => {
+                Router.navigate(`/bilibili/tab/${appState.currentTab}`);
+            }, 300);
+        }
+        
+        pullRefresh.style.transform = 'translateY(0)';
+        refreshIcon.classList.remove('loading');
+        refreshText.textContent = '下拉刷新';
+        pullRefresh.style.color = 'var(--bili-muted)';
+        isPulling = false;
+        setTimeout(() => {
+            isLoading = false;
+        }, 500);
+    }
+    
+    // 手機觸摸事件
+    feed.addEventListener('touchstart', (e) => {
+        startPull(e.touches[0].clientY);
+    }, { passive: true });
+    
+    feed.addEventListener('touchmove', (e) => {
+        if (isPulling && feed.scrollTop === 0) {
+            e.preventDefault();
+        }
+        movePull(e.touches[0].clientY);
+    }, { passive: false });
+    
+    feed.addEventListener('touchend', endPull);
+    
+    // 電腦滑鼠事件
+    feed.addEventListener('mousedown', (e) => {
+        if (feed.scrollTop === 0 && !isLoading) {
+            startY = e.clientY;
+            isPulling = true;
+            feed.style.cursor = 'grab';
+        }
+    });
+    
+    feed.addEventListener('mousemove', (e) => {
+        if (!isPulling || isLoading) return;
+        
+        if (e.clientY - startY > 0) {
+            e.preventDefault();
+        }
+        movePull(e.clientY);
+    });
+    
+    feed.addEventListener('mouseup', endPull);
+    
+    feed.addEventListener('mouseleave', () => {
+        if (isPulling && !isLoading) {
+            pullRefresh.style.transform = 'translateY(0)';
+            refreshIcon.classList.remove('loading');
+            refreshText.textContent = '下拉刷新';
+            isPulling = false;
+            feed.style.cursor = '';
+        }
+    });
+    
     container.appendChild(feed);
     
     const nav = createBiliBottomNav();

@@ -101,6 +101,37 @@
     margin-top: calc(44px + env(safe-area-inset-top, 0px));
     padding-top: 16px;
     -webkit-overflow-scrolling: touch;
+    position: relative;
+}
+
+.bili-pull-refresh {
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bili-pink);
+    font-size: 14px;
+    transition: transform 0.3s;
+    z-index: 10;
+}
+
+.bili-pull-refresh.loading {
+    animation: bili-spin 1s linear infinite;
+}
+
+@keyframes bili-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.bili-pull-refresh-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
 }
 
 .bili-feed-inner {
