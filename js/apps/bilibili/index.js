@@ -236,11 +236,19 @@ function showLoginPrompt() {
     const content = createElement('div', 'bili-login-content');
     
     content.innerHTML = `
-        <h3>需要登入 B 站</h3>
-        <p>內嵌播放需要您的 B 站帳號登入</p>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <span class="material-symbols-outlined" style="font-size: 48px; color: #fb7299;">account_circle</span>
+        </div>
+        <h3 style="margin: 0 0 12px; font-size: 20px;">登入 Bilibili</h3>
+        <p style="color: #999; margin: 0 0 24px; font-size: 14px; line-height: 1.6;">
+            登入後可以：<br>
+            • 獲取個人化推薦內容<br>
+            • 查看真實的熱門影片<br>
+            • 享受完整的 B站體驗
+        </p>
         <div class="bili-login-buttons">
-            <button class="bili-login-btn">登入 B 站</button>
-            <button class="bili-cancel-btn">取消</button>
+            <button class="bili-login-btn" style="width: 100%;">掃碼登入</button>
+            <button class="bili-cancel-btn" style="width: 100%; margin-top: 8px;">稍後再說</button>
         </div>
     `;
     
@@ -569,49 +577,119 @@ const popularVideos = [
 ];
 
 async function generateVideoRecommendations(tab, characterId = null) {
-    const corsProxies = [
-        'https://api.allorigins.win/raw?url=',
-        'https://cors-anywhere.herokuapp.com/',
-        'https://thingproxy.freeboard.io/fetch/'
-    ];
+    const isLoggedIn = await checkBilibiliLogin();
     
-    const apiUrl = 'https://api.bilibili.com/x/web-interface/popular?ps=20';
-    
-    for (const proxy of corsProxies) {
-        try {
-            const response = await fetch(proxy + encodeURIComponent(apiUrl), {
-                method: 'GET',
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-            
-            if (response.ok) {
-                const data = await response.json();
-                
-                if (data.code === 0 && data.data && data.data.list) {
-                    console.log('Successfully fetched real Bilibili data via', proxy);
-                    return data.data.list.map(item => ({
-                        id: item.bvid || `video_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-                        title: item.title || '未命名影片',
-                        tag: item.tname || '熱門',
-                        views: formatViewCount(item.stat?.view),
-                        danmu: formatDanmuCount(item.stat?.danmaku),
-                        thumbGradient: item.pic ? `url(${item.pic})` : generateThumbnail(),
-                        url: item.bvid ? `https://www.bilibili.com/video/${item.bvid}` : '',
-                        owner: item.owner?.name,
-                        duration: item.duration,
-                        cover: item.pic
-                    }));
-                }
-            }
-        } catch (e) {
-            console.log('Proxy failed:', proxy, e.message);
+    if (isLoggedIn) {
+        console.log('使用登入後的 Cookie 獲取數據...');
+        const videos = await fetchWithLogin();
+        if (videos && videos.length > 0) {
+            return videos;
         }
     }
     
-    console.log('All CORS proxies failed, using preset videos');
-    const videos = popularVideos.map(v => ({
+    console.log('未登入或登入獲取失敗，嘗試 CORS 代理...');
+    const apiUrl = 'https://api.bilibili.com/x/web-interface/popular?ps=20';
+    
+    const corsProxies = [
+        {
+            name: 'allorigins',
+            getUrl: (url) => `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`
+        },
+        {
+            name: 'corsproxy.io',
+            getUrl: (url) => `https://corsproxy.io/?${encodeURIComponent(url)}`
+        },
+        {
+            name: 'cors.sh',
+            getUrl: (url) => `https://proxy.cors.sh/${url}`
+        }
+    ];
+    
+    for (const proxy of corsProxies) {
+        try {
+            console.log(`嘗試使用 ${proxy.name} 代理...`);
+            
+            const response = await fetch(proxy.getUrl(apiUrl), {
+                method: 'GET',
+                headers: {
+                    'Accept': 'application/json'
+                },
+                signal: AbortSignal.timeout(5000)
+            });
+            
+            if (!response.ok) {
+                console.log(`${proxy.name} 返回錯誤: ${response.status}`);
+                continue;
+            }
+            
+            const data = await response.json();
+            
+            if (data.code === 0 && data.data && data.data.list) {
+                console.log(`✅ ${proxy.name} 成功獲取數據！`);
+                return formatBilibiliVideos(data.data.list);
+            }
+        } catch (e) {
+            console.log(`❌ ${proxy.name} 失敗:`, e.message);
+        }
+    }
+    
+    console.log('所有方法都失敗，使用預設影片列表');
+    return getPresetVideos();
+}
+
+async function fetchWithLogin() {
+    try {
+        const token = await SettingsDB.get('github_token');
+        if (!token) return null;
+        
+        const response = await fetch(`${BILI_API}/api/bilibili/recommend?ps=20`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        });
+        
+        if (!response.ok) return null;
+        
+        const data = await response.json();
+        
+        if (data.videos && data.videos.length > 0) {
+            return data.videos.map(v => ({
+                id: v.bvid || `video_${Date.now()}`,
+                title: v.title || '未命名影片',
+                tag: v.tag || '推薦',
+                views: formatViewCount(v.views),
+                danmu: formatDanmuCount(v.danmu),
+                thumbGradient: v.cover ? `url(${v.cover})` : generateThumbnail(),
+                url: v.bvid ? `https://www.bilibili.com/video/${v.bvid}` : '',
+                owner: v.owner,
+                duration: v.duration,
+                cover: v.cover
+            }));
+        }
+    } catch (e) {
+        console.error('使用登入 Cookie 獲取失敗:', e);
+    }
+    
+    return null;
+}
+
+function formatBilibiliVideos(list) {
+    return list.map(item => ({
+        id: item.bvid || `video_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        title: item.title || '未命名影片',
+        tag: item.tname || '熱門',
+        views: formatViewCount(item.stat?.view),
+        danmu: formatDanmuCount(item.stat?.danmaku),
+        thumbGradient: item.pic ? `url(${item.pic})` : generateThumbnail(),
+        url: item.bvid ? `https://www.bilibili.com/video/${item.bvid}` : '',
+        owner: item.owner?.name,
+        duration: item.duration,
+        cover: item.pic
+    }));
+}
+
+function getPresetVideos() {
+    return popularVideos.map(v => ({
         id: v.bvid,
         title: v.title,
         tag: v.tag,
@@ -621,8 +699,6 @@ async function generateVideoRecommendations(tab, characterId = null) {
         url: `https://www.bilibili.com/video/${v.bvid}`,
         cover: null
     }));
-    
-    return videos;
 }
 
 async function generateNPCComments(videoTitle, characterId) {
@@ -770,6 +846,14 @@ async function createCharacterSelector(selectedId, onChange) {
 
 async function renderHome() {
     const container = createElement('div', 'bili-app');
+    
+    const isLoggedIn = await checkBilibiliLogin();
+    const hasPrompted = await SettingsDB.get('bilibili_login_prompted');
+    
+    if (!isLoggedIn && !hasPrompted) {
+        showLoginPrompt();
+        await SettingsDB.set('bilibili_login_prompted', true);
+    }
     
     if (!appState.sample[appState.currentTab] || appState.sample[appState.currentTab].length === 0) {
         const savedVideos = await SettingsDB.get(`bilibili_${appState.currentTab}_videos`);

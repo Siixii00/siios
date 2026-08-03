@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilibili API 診斷工具</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .test-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .test-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .status {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+        }
+        .status.success { background: #4caf50; }
+        .status.error { background: #f44336; }
+        .status.loading { background: #ff9800; animation: pulse 1s infinite; }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .test-result {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 12px;
+            font-family: monospace;
+            font-size: 12px;
+            max-height: 200px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        button {
+            background: #fb7299;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            margin: 8px 8px 8px 0;
+        }
+        button:hover {
+            background: #f25285;
+        }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 24px 0 16px;
+            color: #fb7299;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: #fb7299; margin-bottom: 8px;">Bilibili API 診斷工具</h1>
+    <p style="color: #666; margin-bottom: 24px;">測試不同的 CORS 代理是否能成功獲取 Bilibili 熱門影片數據</p>
+    
+    <button onclick="runAllTests()" id="runAllBtn">執行所有測試</button>
+    <button onclick="testDirectFetch()">測試直接訪問（需要允許）</button>
+    
+    <div class="section-title">CORS 代理測試結果</div>
+    
+    <div class="test-card">
+        <div class="test-title">
+            <span class="status" id="status-allorigins"></span>
+            <span>1. allorigins.win</span>
+        </div>
+        <div class="test-result" id="result-allorigins">等待測試...</div>
+        <button onclick="testProxy('allorigins')">單獨測試</button>
+    </div>
+    
+    <div class="test-card">
+        <div class="test-title">
+            <span class="status" id="status-corsproxyio"></span>
+            <span>2. corsproxy.io</span>
+        </div>
+        <div class="test-result" id="result-corsproxyio">等待測試...</div>
+        <button onclick="testProxy('corsproxyio')">單獨測試</button>
+    </div>
+    
+    <div class="test-card">
+        <div class="test-title">
+            <span class="status" id="status-corsanywhere"></span>
+            <span>3. cors-anywhere.herokuapp.com</span>
+        </div>
+        <div class="test-result" id="result-corsanywhere">等待測試...</div>
+        <button onclick="testProxy('corsanywhere')">單獨測試</button>
+    </div>
+    
+    <div class="test-card">
+        <div class="test-title">
+            <span class="status" id="status-thingproxy"></span>
+            <span>4. thingproxy.freeboard.io</span>
+        </div>
+        <div class="test-result" id="result-thingproxy">等待測試...</div>
+        <button onclick="testProxy('thingproxy')">單獨測試</button>
+    </div>
+    
+    <div class="test-card">
+        <div class="test-title">
+            <span class="status" id="status-proxycc"></span>
+            <span>5. proxy.cors.sh</span>
+        </div>
+        <div class="test-result" id="result-proxycc">等待測試...</div>
+        <button onclick="testProxy('proxycc')">單獨測試</button>
+    </div>
+    
+    <div class="section-title">直接訪問測試（需要設置）</div>
+    
+    <div class="test-card">
+        <div class="test-title">
+            <span class="status" id="status-direct"></span>
+            <span>直接訪問 api.bilibili.com</span>
+        </div>
+        <div class="test-result" id="result-direct">等待測試...</div>
+        <button onclick="testDirectFetch()">測試直接訪問</button>
+        <p style="color: #666; font-size: 12px; margin-top: 8px;">
+            注意：這需要在瀏覽器中臨時禁用 CORS 或使用瀏覽器擴展
+        </p>
+    </div>
+    
+    <div class="section-title">推薦解決方案</div>
+    
+    <div class="test-card">
+        <h3 style="margin-top: 0;">方案 1：使用 Cloudflare Workers（推薦）</h3>
+        <p style="color: #666; margin-bottom: 12px;">
+            你已經有 Worker，但需要解決 412 錯誤。建議使用瀏覽器模擬完整的請求。
+        </p>
+        <div class="test-result">需要在 Worker 中添加更完整的 headers 和 cookies</div>
+    </div>
+    
+    <div class="test-card">
+        <h3 style="margin-top: 0;">方案 2：使用 JSONP（如果可用）</h3>
+        <p style="color: #666;">
+            某些 Bilibili API 支持 JSONP，可以繞過 CORS。
+        </p>
+    </div>
+    
+    <div class="test-card">
+        <h3 style="margin-top: 0;">方案 3：使用預設數據 + 定期更新</h3>
+        <p style="color: #666;">
+            如果所有代理都失敗，使用預設的真實影片列表，並定期手動更新 BV 號。
+        </p>
+    </div>
+    
+    <script>
+        const BILIBILI_API = 'https://api.bilibili.com/x/web-interface/popular?ps=20';
+        
+        const proxies = {
+            allorigins: {
+                url: () => `https://api.allorigins.win/raw?url=${encodeURIComponent(BILIBILI_API)}`,
+                name: 'allorigins'
+            },
+            corsproxyio: {
+                url: () => `https://corsproxy.io/?${encodeURIComponent(BILIBILI_API)}`,
+                name: 'corsproxyio'
+            },
+            corsanywhere: {
+                url: () => `https://cors-anywhere.herokuapp.com/${BILIBILI_API}`,
+                name: 'corsanywhere'
+            },
+            thingproxy: {
+                url: () => `https://thingproxy.freeboard.io/fetch/${BILIBILI_API}`,
+                name: 'thingproxy'
+            },
+            proxycc: {
+                url: () => `https://proxy.cors.sh/${BILIBILI_API}`,
+                name: 'proxycc'
+            }
+        };
+        
+        function setStatus(name, status) {
+            const statusEl = document.getElementById(`status-${name}`);
+            statusEl.className = 'status ' + status;
+        }
+        
+        function setResult(name, text) {
+            const resultEl = document.getElementById(`result-${name}`);
+            resultEl.textContent = text;
+        }
+        
+        async function testProxy(proxyKey) {
+            const proxy = proxies[proxyKey];
+            const name = proxy.name;
+            
+            setStatus(name, 'loading');
+            setResult(name, '測試中...');
+            
+            try {
+                const startTime = Date.now();
+                const response = await fetch(proxy.url(), {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                const endTime = Date.now();
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const data = await response.json();
+                
+                if (data.code === 0 && data.data && data.data.list) {
+                    setStatus(name, 'success');
+                    setResult(name, `✅ 成功！\n耗時: ${endTime - startTime}ms\n獲取到 ${data.data.list.length} 部影片\n第一個影片: ${data.data.list[0].title}`);
+                    return true;
+                } else {
+                    throw new Error(`API 錯誤: code=${data.code}, message=${data.message}`);
+                }
+            } catch (error) {
+                setStatus(name, 'error');
+                setResult(name, `❌ 失敗: ${error.message}`);
+                return false;
+            }
+        }
+        
+        async function testDirectFetch() {
+            setStatus('direct', 'loading');
+            setResult('direct', '測試中...');
+            
+            try {
+                const response = await fetch(BILIBILI_API, {
+                    method: 'GET',
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                const data = await response.json();
+                
+                if (data.code === 0) {
+                    setStatus('direct', 'success');
+                    setResult('direct', `✅ 成功！獲取到 ${data.data.list.length} 部影片`);
+                    return true;
+                }
+            } catch (error) {
+                setStatus('direct', 'error');
+                setResult('direct', `❌ 失敗: ${error.message}\n\n這是預期的，因為瀏覽器的 CORS 策略。\n要測試直接訪問，請使用瀏覽器擴展禁用 CORS。`);
+                return false;
+            }
+        }
+        
+        async function runAllTests() {
+            const btn = document.getElementById('runAllBtn');
+            btn.disabled = true;
+            btn.textContent = '測試中...';
+            
+            let successCount = 0;
+            
+            for (const key of Object.keys(proxies)) {
+                const success = await testProxy(key);
+                if (success) successCount++;
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+            
+            btn.disabled = false;
+            btn.textContent = '執行所有測試';
+            
+            alert(`測試完成！\n成功: ${successCount}/${Object.keys(proxies).length}`);
+        }
+        
+        // 頁面載入時自動運行一次
+        setTimeout(() => runAllTests(), 1000);
+    </script>
+</body>
+</html>
