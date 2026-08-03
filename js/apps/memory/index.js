@@ -135,8 +135,11 @@ async function renderMemoryList() {
         dropdown.appendChild(option);
     });
     
-    filterBtn.addEventListener('click', () => {
+    filterBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log('[Memory] 點擊下拉按鈕');
         dropdown.classList.toggle('hidden');
+        console.log('[Memory] 下拉選單狀態:', dropdown.classList.contains('hidden') ? '隱藏' : '顯示');
     });
     
     document.addEventListener('click', (e) => {
