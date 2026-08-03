@@ -47,7 +47,7 @@ async function loadApps() {
         import('./instagram/index.js'),
         import('./twitter/index.js'),
         import('./youtube/index.js'),
-        import('./bilibili/index.js'),
+        import('./bilibili/index.js?v=20260803b'),
         import('./twitch/index.js'),
         import('./weverse/index.js'),
         import('./lofter/index.js'),
