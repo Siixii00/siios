@@ -755,10 +755,11 @@ const popularVideos = [
 ];
 
 async function generateVideoRecommendations(tab, characterId = null) {
-    console.log('從 Bilibili Android API 獲取真實數據...');
+    console.log('開始從網絡獲取最新影片...');
+    console.log('預計需要 3-4 分鐘，請耐心等待');
     
     try {
-        const response = await fetch(`${BILI_API}/api/bilibili/hot`, {
+        const response = await fetch(`${BILI_API}/api/bilibili/update`, {
             method: 'GET',
             headers: {
                 'Accept': 'application/json'
@@ -769,12 +770,14 @@ async function generateVideoRecommendations(tab, characterId = null) {
             const data = await response.json();
             
             if (data.success && data.videos && data.videos.length > 0) {
-                console.log(`✅ 成功獲取 ${data.videos.length} 部真實影片！來源: ${data.source}`);
+                console.log(`✅ 成功獲取 ${data.videos.length} 部最新影片！`);
+                console.log(`搜索關鍵詞: ${data.keywords.join(', ')}`);
+                console.log(`更新時間: ${data.timestamp}`);
                 
                 return data.videos.map(v => ({
                     id: v.bvid || `video_${Date.now()}`,
                     title: v.title || '未命名影片',
-                    tag: v.tag || '熱門',
+                    tag: v.tag || '最新',
                     views: formatViewCount(v.views),
                     danmu: formatDanmuCount(v.danmu),
                     thumbGradient: v.cover ? `url(${v.cover})` : generateThumbnail(),
@@ -784,7 +787,7 @@ async function generateVideoRecommendations(tab, characterId = null) {
                     cover: v.cover
                 }));
             } else {
-                console.log('API 返回空數據或失敗:', data.error || 'unknown');
+                console.log('API 返回空數據:', data.error || 'unknown');
             }
         } else {
             console.log('Worker 響應失敗:', response.status);
@@ -793,7 +796,7 @@ async function generateVideoRecommendations(tab, characterId = null) {
         console.error('從網絡獲取失敗:', e.message);
     }
     
-    console.log('返回空列表');
+    console.log('獲取失敗，返回空列表');
     return [];
 }
 
@@ -1162,28 +1165,54 @@ async function renderHome() {
     const videos = appState.sample[appState.currentTab] || [];
     
     if (videos.length === 0) {
-        const loadingMsg = createElement('div', 'text-center py-8');
-        loadingMsg.innerHTML = `
-            <div class="text-center py-8">
-                <span class="material-symbols-outlined" style="font-size: 48px; color: #fb7299; animation: spin 1s linear infinite;">sync</span>
-                <p style="color: #999; margin-top: 12px;">正在從 Bilibili 獲取最新熱門影片...</p>
+        const loadingContainer = createElement('div', 'text-center py-12 px-4');
+        loadingContainer.innerHTML = `
+            <div style="animation: spin 2s linear infinite; display: inline-block;">
+                <span class="material-symbols-outlined" style="font-size: 56px; color: #fb7299;">sync</span>
+            </div>
+            <h3 style="color: #fb7299; margin: 16px 0 8px; font-size: 18px;">正在獲取最新影片</h3>
+            <p style="color: #999; font-size: 14px; line-height: 1.6;">
+                正在從 Bilibili 搜索熱門內容...<br>
+                <small style="color: #666;">預計需要 3-4 分鐘，請耐心等待</small>
+            </p>
+            <div style="margin-top: 20px; padding: 12px; background: rgba(251, 114, 153, 0.1); border-radius: 12px; display: inline-block;">
+                <p style="color: #fb7299; font-size: 12px; margin: 0;">
+                    💡 提示：每次進入頁面都會自動更新內容
+                </p>
             </div>
         `;
-        feedInner.appendChild(loadingMsg);
+        feedInner.appendChild(loadingContainer);
         
-        createToast('正在獲取最新熱門影片...');
-        const newVideos = await generateVideosForTab(appState.currentTab, appState.selectedCharacterId);
+        createToast('正在從 Bilibili 獲取最新熱門影片...');
         
-        if (newVideos && newVideos.length > 0) {
-            createToast(`✓ 成功獲取 ${newVideos.length} 部影片！`);
-            Router.navigate(`/bilibili/tab/${appState.currentTab}`);
-        } else {
-            loadingMsg.innerHTML = `
-                <div class="text-center py-8">
-                    <span class="material-symbols-outlined" style="font-size: 48px; color: #999;">cloud_off</span>
-                    <p style="color: #999; margin-top: 12px;">無法連接到 Bilibili</p>
-                    <p style="color: #666; font-size: 12px; margin-top: 8px;">請稍後再試或使用搜索功能</p>
-                </div>
+        try {
+            const newVideos = await generateVideosForTab(appState.currentTab, appState.selectedCharacterId);
+            
+            if (newVideos && newVideos.length > 0) {
+                createToast(`✓ 成功獲取 ${newVideos.length} 部最新影片！`);
+                setTimeout(() => {
+                    Router.navigate(`/bilibili/tab/${appState.currentTab}`);
+                }, 500);
+            } else {
+                loadingContainer.innerHTML = `
+                    <span class="material-symbols-outlined" style="font-size: 56px; color: #999;">cloud_off</span>
+                    <h3 style="color: #999; margin: 16px 0 8px;">無法連接到 Bilibili</h3>
+                    <p style="color: #666; font-size: 14px;">請稍後再試或檢查網絡連接</p>
+                    <button id="retry-btn" style="margin-top: 20px; padding: 12px 24px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px;">
+                        重試
+                    </button>
+                `;
+                
+                loadingContainer.querySelector('#retry-btn').onclick = async () => {
+                    Router.navigate('/bilibili');
+                };
+            }
+        } catch (error) {
+            console.error('Update error:', error);
+            loadingContainer.innerHTML = `
+                <span class="material-symbols-outlined" style="font-size: 56px; color: #f44336;">error</span>
+                <h3 style="color: #f44336; margin: 16px 0 8px;">更新失敗</h3>
+                <p style="color: #666; font-size: 14px;">${error.message}</p>
             `;
         }
     } else {
