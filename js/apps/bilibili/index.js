@@ -740,7 +740,7 @@ async function generateVideoRecommendations(tab, characterId = null) {
     console.log('從本地數據文件讀取 Bilibili 影片...');
     
     try {
-        const response = await fetch('/data/bilibili_videos.json');
+        const response = await fetch('/siios/data/bilibili_videos.json');
         
         if (response.ok) {
             const data = await response.json();
