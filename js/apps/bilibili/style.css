@@ -31,6 +31,14 @@
     font-weight: 800;
 }
 
+.bili-header .ios-btn {
+    color: #fff;
+}
+
+.bili-header .ios-btn .material-symbols-outlined {
+    color: #fff;
+}
+
 .bili-search-row {
     padding: 6px 12px 10px;
     background: var(--bili-card);
