@@ -119,6 +119,16 @@
     z-index: 10;
 }
 
+@keyframes bili-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
 .bili-pull-refresh.loading {
     animation: bili-spin 1s linear infinite;
 }
