@@ -151,7 +151,7 @@ function openInBilibili(url) {
     }, 500);
 }
 
-const BILI_API = 'https://siios-bilibili-worker.你的帳號.workers.dev';
+const BILI_API = 'https://siios-bilibili-worker.yaninlin.workers.dev';
 
 async function checkBilibiliLogin() {
     const token = await SettingsDB.get('github_token');
@@ -368,7 +368,14 @@ function createVideoCard(video, onPlay) {
     const card = createElement('article', 'bili-video-card');
     
     const thumb = createElement('div', 'bili-thumb');
-    thumb.style.background = video.thumb || video.thumbGradient || generateThumbnail();
+    
+    if (video.cover) {
+        thumb.style.backgroundImage = `url(${video.cover})`;
+        thumb.style.backgroundSize = 'cover';
+        thumb.style.backgroundPosition = 'center';
+    } else {
+        thumb.style.background = video.thumb || video.thumbGradient || generateThumbnail();
+    }
     
     const tag = createElement('span', 'bili-thumb-tag', { textContent: video.tag });
     thumb.appendChild(tag);
@@ -502,6 +509,22 @@ async function generateVideoContentWithAI(tab, characterId) {
     }
 }
 
+function formatViewCount(count) {
+    if (!count) return randomViews();
+    if (count >= 10000) {
+        return `${(count / 10000).toFixed(1)}萬`;
+    }
+    return `${count}`;
+}
+
+function formatDanmuCount(count) {
+    if (!count) return randomDanmu();
+    if (count >= 10000) {
+        return `${(count / 10000).toFixed(1)}萬`;
+    }
+    return `${count}`;
+}
+
 function generateFallbackVideos(tab) {
     const category = randomPick(videoCategories[tab] || videoCategories.recommend);
     const count = 6 + Math.floor(Math.random() * 4);
@@ -522,14 +545,69 @@ function generateFallbackVideos(tab) {
     return videos;
 }
 
+const popularVideos = [
+    { bvid: 'BV126GG62E9G', title: '老大，你的意思是我們抽煙抽的慢也得死嗎？', tag: '遊戲' },
+    { bvid: 'BV1HzGP6jEJS', title: '開庭', tag: '搞笑' },
+    { bvid: 'BV1xS396ZEUz', title: '閃暖七周年CG首曝', tag: '遊戲' },
+    { bvid: 'BV1M6GA6dEQc', title: '【原神】新版本攻略', tag: '遊戲' },
+    { bvid: 'BV1Pt3D6jEob', title: '【知識】冷知識大全', tag: '知識' },
+    { bvid: 'BV1EE346NEcp', title: '【美食】家常菜做法', tag: '美食' },
+    { bvid: 'BV1r23m6iEej', title: '【科技】數碼評測', tag: '科技' },
+    { bvid: 'BV1v8396rEJH', title: '【動漫】經典番劇', tag: '動漫' },
+    { bvid: 'BV1BF3D6vEWS', title: '【音樂】華語金曲', tag: '音樂' },
+    { bvid: 'BV17YGu6REPJ', title: '【生活】日常分享', tag: '生活' },
+    { bvid: 'BV1Nr3s6rE79', title: '【鬼畜】經典作品', tag: '鬼畜' },
+    { bvid: 'BV1eH3m6XEhN', title: '【時尚】穿搭技巧', tag: '時尚' },
+    { bvid: 'BV1wz3R6sEV2', title: '【影視】電影解說', tag: '影視' },
+    { bvid: 'BV14HGV6UESe', title: '【娛樂】明星八卦', tag: '娛樂' },
+    { bvid: 'BV1bz3Q6oEMP', title: '【汽車】新車評測', tag: '汽車' }
+];
+
 async function generateVideoRecommendations(tab, characterId = null) {
-    if (characterId) {
-        const aiVideos = await generateVideoContentWithAI(tab, characterId);
-        if (aiVideos && aiVideos.length > 0) {
-            return aiVideos;
+    try {
+        const response = await fetch('https://api.bilibili.com/x/web-interface/popular?ps=20', {
+            method: 'GET',
+            mode: 'cors',
+            credentials: 'omit',
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            const data = await response.json();
+            
+            if (data.code === 0 && data.data && data.data.list) {
+                return data.data.list.map(item => ({
+                    id: item.bvid || `video_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+                    title: item.title || '未命名影片',
+                    tag: item.tname || '熱門',
+                    views: formatViewCount(item.stat?.view),
+                    danmu: formatDanmuCount(item.stat?.danmaku),
+                    thumbGradient: item.pic ? `url(${item.pic})` : generateThumbnail(),
+                    url: item.bvid ? `https://www.bilibili.com/video/${item.bvid}` : '',
+                    owner: item.owner?.name,
+                    duration: item.duration,
+                    cover: item.pic
+                }));
+            }
         }
+    } catch (e) {
+        console.log('CORS blocked, using preset videos');
     }
-    return generateFallbackVideos(tab);
+    
+    const videos = popularVideos.map(v => ({
+        id: v.bvid,
+        title: v.title,
+        tag: v.tag,
+        views: randomViews(),
+        danmu: randomDanmu(),
+        thumbGradient: generateThumbnail(),
+        url: `https://www.bilibili.com/video/${v.bvid}`,
+        cover: null
+    }));
+    
+    return videos;
 }
 
 async function generateNPCComments(videoTitle, characterId) {
@@ -677,6 +755,13 @@ async function createCharacterSelector(selectedId, onChange) {
 
 async function renderHome() {
     const container = createElement('div', 'bili-app');
+    
+    if (!appState.sample[appState.currentTab] || appState.sample[appState.currentTab].length === 0) {
+        const savedVideos = await SettingsDB.get(`bilibili_${appState.currentTab}_videos`);
+        if (savedVideos && savedVideos.length > 0) {
+            appState.sample[appState.currentTab] = savedVideos;
+        }
+    }
     
     const header = createIOSNavBar({
         title: 'bilibili',

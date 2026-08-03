@@ -36,6 +36,18 @@ export default {
         return handlePlayUrl(request, env, corsHeaders);
       }
       
+      if (path === '/api/bilibili/recommend') {
+        return handleRecommend(request, corsHeaders);
+      }
+      
+      if (path === '/api/bilibili/hot') {
+        return handleHot(request, corsHeaders);
+      }
+      
+      if (path === '/api/bilibili/popular') {
+        return handlePopular(request, corsHeaders);
+      }
+      
       return new Response(JSON.stringify({ error: 'Not found' }), {
         status: 404,
         headers: corsHeaders
@@ -234,6 +246,108 @@ async function handlePlayUrl(request, env, corsHeaders) {
     quality: data.data.quality,
     dash: data.data.dash
   }), { headers: corsHeaders });
+}
+
+async function handleRecommend(request, corsHeaders) {
+  const url = new URL(request.url);
+  const ps = url.searchParams.get('ps') || '20';
+  
+  const response = await fetch(`${BILIBILI_API}/x/web-interface/index/top/rcmd?ps=${ps}`, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'Referer': 'https://www.bilibili.com'
+    }
+  });
+  
+  const data = await response.json();
+  
+  if (data.code !== 0) {
+    return new Response(JSON.stringify({ error: data.message }), {
+      status: 400,
+      headers: corsHeaders
+    });
+  }
+  
+  const videos = data.data.item.map(item => ({
+    bvid: item.bvid,
+    title: item.title,
+    cover: item.pic,
+    views: item.stat?.view,
+    danmu: item.stat?.danmaku,
+    duration: item.duration,
+    owner: item.owner?.name,
+    tag: item.tname || '推荐'
+  }));
+  
+  return new Response(JSON.stringify({ videos }), { headers: corsHeaders });
+}
+
+async function handleHot(request, corsHeaders) {
+  const url = new URL(request.url);
+  const ps = url.searchParams.get('ps') || '20';
+  
+  const response = await fetch(`${BILIBILI_API}/x/web-interface/popular?ps=${ps}`, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'Referer': 'https://www.bilibili.com'
+    }
+  });
+  
+  const data = await response.json();
+  
+  if (data.code !== 0) {
+    return new Response(JSON.stringify({ error: data.message }), {
+      status: 400,
+      headers: corsHeaders
+    });
+  }
+  
+  const videos = data.data.list.map(item => ({
+    bvid: item.bvid,
+    title: item.title,
+    cover: item.pic,
+    views: item.stat?.view,
+    danmu: item.stat?.danmaku,
+    duration: item.duration,
+    owner: item.owner?.name,
+    tag: item.tname || '热门'
+  }));
+  
+  return new Response(JSON.stringify({ videos }), { headers: corsHeaders });
+}
+
+async function handlePopular(request, corsHeaders) {
+  const url = new URL(request.url);
+  const ps = url.searchParams.get('ps') || '20';
+  
+  const response = await fetch(`${BILIBILI_API}/x/web-interface/ranking/v2?type=all`, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+      'Referer': 'https://www.bilibili.com'
+    }
+  });
+  
+  const data = await response.json();
+  
+  if (data.code !== 0) {
+    return new Response(JSON.stringify({ error: data.message }), {
+      status: 400,
+      headers: corsHeaders
+    });
+  }
+  
+  const videos = data.data.list.map(item => ({
+    bvid: item.bvid,
+    title: item.title,
+    cover: item.pic,
+    views: item.stat?.view,
+    danmu: item.stat?.danmaku,
+    duration: item.duration,
+    owner: item.owner?.name,
+    tag: item.tname || '排行榜'
+  }));
+  
+  return new Response(JSON.stringify({ videos }), { headers: corsHeaders });
 }
 
 async function verifyGitHubToken(request, env) {
