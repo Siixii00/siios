@@ -8,15 +8,95 @@
 2. 保存到 JSON 文件
 3. 前端讀取 JSON 文件顯示
 
-## 🚀 快速開始
+## 🎯 GitHub Actions 自動更新（推薦）
 
-### 1. 安裝 Python 依賴
+### ✨ 特色
+
+- 完全免費，無需本地伺服器
+- 自動定時運行（每天台灣時間 8:00）
+- 自動提交更新到 GitHub
+- GitHub Pages 自動部署
+- 穩定可靠的基礎設施
+
+### 📋 工作流程
+
+```
+每天台灣時間 8:00
+    ↓
+GitHub Actions 自動運行
+    ↓
+執行 Python 腳本
+    ↓
+從 Bilibili API 獲取數據
+    ↓
+生成 data/bilibili_videos.json
+    ↓
+自動提交到倉庫
+    ↓
+GitHub Pages 自動部署
+    ↓
+用戶打開 PWA 看到最新內容
+```
+
+### 🚀 啟用步驟
+
+1. **進入 GitHub 倉庫**
+   - 前往：https://github.com/Siixii00/siios
+
+2. **啟用 GitHub Actions**
+   - 點擊「Actions」標籤
+   - 會看到「Update Bilibili Videos」工作流
+   - 點擊「I understand my workflows, go ahead and enable them」
+
+3. **手動測試**
+   - 在 Actions 頁面，點擊「Update Bilibili Videos」
+   - 點擊「Run workflow」
+   - 選擇 `main` 分支
+   - 點擊綠色的「Run workflow」按鈕
+
+4. **查看結果**
+   - 等待幾分鐘
+   - Actions 會顯示運行結果（綠色 ✓ 表示成功）
+   - `data/bilibili_videos.json` 會自動更新
+   - GitHub Pages 會自動部署
+
+### ⏰ 自定義更新頻率
+
+編輯 `.github/workflows/update-bilibili.yml`:
+
+```yaml
+on:
+  schedule:
+    # 每小時運行
+    - cron: '0 * * * *'
+    
+    # 每 6 小時運行
+    - cron: '0 */6 * * *'
+    
+    # 每天台灣時間 8:00（UTC 0:00）
+    - cron: '0 0 * * *'
+    
+    # 每天台灣時間 20:00（UTC 12:00）
+    - cron: '0 12 * * *'
+```
+
+### ✅ 優點
+
+- 無需本地 Python 環境
+- 無需手動運行腳本
+- 自動化程度高
+- GitHub 基礎設施穩定
+- 可查看歷史運行記錄
+
+## 🎯 手動運行（本地環境）
+
+### 安裝 Python 依賴
 
 ```bash
 pip install requests
 ```
 
-### 2. 運行更新腳本
+### 運行更新腳本
 
 **Windows:**
 ```cmd
