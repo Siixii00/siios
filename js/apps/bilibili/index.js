@@ -817,10 +817,16 @@ async function generateVideoRecommendations(tab, characterId = null) {
         'games': 'bilibili_games.json'
     };
     
-    const filename = categoryFiles[tab] || categoryFiles['recommend'];
+    let filename = categoryFiles[tab] || categoryFiles['recommend'];
     
     try {
-        const response = await fetch(`/siios/data/${filename}`);
+        let response = await fetch(`/siios/data/${filename}`);
+        
+        if (!response.ok && filename !== 'bilibili_videos.json') {
+            console.log(`${filename} 不存在，改用熱門內容`);
+            filename = 'bilibili_videos.json';
+            response = await fetch(`/siios/data/${filename}`);
+        }
         
         if (response.ok) {
             const data = await response.json();
@@ -1355,6 +1361,7 @@ async function renderPlayer(params) {
     
     const previewCard = createElement('div', 'bili-video-preview');
     previewCard.style.background = generateThumbnail();
+    previewCard.style.marginTop = '60px';
     previewCard.innerHTML = `
         <div class="bili-preview-content">
             <div class="bili-play-icon">▶</div>
