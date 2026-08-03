@@ -6,8 +6,6 @@ const TYPE_TABS = ['全部', '動態', '永久', '情感', '計畫', '書信', '
 const TYPE_MAP = { 1: 'dynamic', 2: 'permanent', 3: 'feel', 4: 'plan', 5: 'letter', 6: 'i', 7: 'archive' };
 const TYPE_LABELS = { dynamic: '動態', permanent: '永久', feel: '情感', plan: '計畫', letter: '書信', i: '自我', archive: '歸檔' };
 
-let currentFilterCache = null;
-
 const SOURCE_LABELS = {
     'chat': '對話',
     'youtube': 'YouTube',
@@ -49,15 +47,9 @@ function getDecayStage(memory) {
 }
 
 async function renderMemoryList() {
-    let currentFilter;
-    if (currentFilterCache !== null) {
-        currentFilter = currentFilterCache;
-    } else {
-        currentFilter = await SettingsDB.get('memory_filter');
-        if (currentFilter === null || currentFilter === undefined) {
-            currentFilter = 0;
-        }
-        currentFilterCache = currentFilter;
+    let currentFilter = await SettingsDB.get('memory_filter');
+    if (currentFilter === null || currentFilter === undefined) {
+        currentFilter = 0;
     }
     
     const searchTerm = await SettingsDB.get('memory_search') || '';
@@ -127,7 +119,6 @@ async function renderMemoryList() {
         
         option.addEventListener('click', async () => {
             dropdown.classList.add('hidden');
-            currentFilterCache = index;
             await SettingsDB.set('memory_filter', index);
             await SettingsDB.set('memory_search', '');
             Router.navigate('/memory');
