@@ -31,12 +31,14 @@
     font-weight: 800;
 }
 
-.bili-header .ios-btn {
-    color: #fff;
+.bili-header .ios-btn,
+.bili-header .ios-btn * {
+    color: #fff !important;
 }
 
-.bili-header .ios-btn .material-symbols-outlined {
-    color: #fff;
+.bili-header button.ios-btn,
+.bili-header button.ios-btn * {
+    color: #fff !important;
 }
 
 .bili-search-row {
