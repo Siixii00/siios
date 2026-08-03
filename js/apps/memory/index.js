@@ -121,7 +121,11 @@ async function renderMemoryList() {
             dropdown.classList.add('hidden');
             await SettingsDB.set('memory_filter', index);
             await SettingsDB.set('memory_search', '');
-            Router.navigate('/memory');
+            if (window.location.hash === '#/memory') {
+                Router.handleRoute();
+            } else {
+                Router.navigate('/memory');
+            }
         });
         
         dropdown.appendChild(option);
