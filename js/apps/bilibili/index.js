@@ -154,24 +154,40 @@ function openInBilibili(url) {
 const BILI_API = 'https://siios-bilibili-worker.yaninlin.workers.dev';
 
 async function checkBilibiliLogin() {
-    const token = await SettingsDB.get('github_token');
-    if (!token) return false;
-    
-    try {
-        const response = await fetch(`${BILI_API}/api/bilibili/auth/status`, {
-            headers: { 'Authorization': `Bearer ${token}` }
-        });
-        const data = await response.json();
-        return data.isLoggedIn;
-    } catch {
-        return false;
-    }
+    const isLoggedIn = await SettingsDB.get('bilibili_logged_in');
+    return isLoggedIn === true;
+}
+
+async function setBilibiliLoginStatus(status) {
+    await SettingsDB.set('bilibili_logged_in', status);
 }
 
 async function startQRLogin() {
     const token = await SettingsDB.get('github_token');
+    
     if (!token) {
-        createToast('請先登入 GitHub');
+        const modal = createElement('div', 'bili-login-modal');
+        const content = createElement('div', 'bili-login-content');
+        
+        content.innerHTML = `
+            <div style="text-align: center; margin-bottom: 20px;">
+                <span class="material-symbols-outlined" style="font-size: 48px; color: #fb7299;">info</span>
+            </div>
+            <h3 style="margin: 0 0 12px; font-size: 20px;">需要 GitHub 帳號</h3>
+            <p style="color: #999; margin: 0 0 24px; font-size: 14px; line-height: 1.6;">
+                登入 Bilibili 需要先登入 GitHub 帳號<br>
+                請到設定頁面登入 GitHub
+            </p>
+            <div class="bili-login-buttons">
+                <button class="bili-login-btn" style="width: 100%;" onclick="window.location.hash='#/settings'">前往設定</button>
+                <button class="bili-cancel-btn" style="width: 100%; margin-top: 8px;">關閉</button>
+            </div>
+        `;
+        
+        modal.appendChild(content);
+        document.body.appendChild(modal);
+        
+        modal.querySelector('.bili-cancel-btn').onclick = () => modal.remove();
         return;
     }
     
@@ -213,9 +229,12 @@ function showQRCodeModal(qrUrl, qrcodeKey, token) {
             
             if (data.success) {
                 clearInterval(pollInterval);
+                await setBilibiliLoginStatus(true);
                 modal.remove();
-                createToast('登入成功！');
-                Router.refresh();
+                createToast('登入成功！正在獲取推薦內容...');
+                setTimeout(() => {
+                    Router.refresh();
+                }, 500);
             } else if (data.code === 86038) {
                 clearInterval(pollInterval);
                 modal.querySelector('.bili-login-status').textContent = '二維碼已過期，請重新登入';
@@ -1438,6 +1457,8 @@ async function renderChat(params) {
 async function renderProfile() {
     const container = createElement('div', 'bili-app');
     
+    const isLoggedIn = await checkBilibiliLogin();
+    
     const header = createIOSNavBar({
         title: '我的',
         backPath: '/bilibili',
@@ -1452,11 +1473,22 @@ async function renderProfile() {
     const headerCard = createElement('div', 'bili-profile-header');
     const avatar = createElement('div', 'bili-profile-avatar');
     const info = createElement('div', 'bili-profile-info');
-    info.appendChild(createElement('div', 'font-bold text-lg', { textContent: 'SXi User' }));
-    info.appendChild(createElement('div', 'text-ios-muted text-sm', { textContent: 'Lv.5 · 追番中' }));
+    info.appendChild(createElement('div', 'font-bold text-lg', { textContent: isLoggedIn ? 'Bilibili 用戶' : '訪客用戶' }));
+    info.appendChild(createElement('div', 'text-ios-muted text-sm', { textContent: isLoggedIn ? '已登入 · 獲取真實推薦' : '未登入 · 使用預設內容' }));
     headerCard.appendChild(avatar);
     headerCard.appendChild(info);
-    headerCard.appendChild(createElement('button', 'bili-ghost-btn', { textContent: '編輯' }));
+    
+    const loginBtn = createElement('button', 'bili-ghost-btn', { textContent: isLoggedIn ? '登出' : '登入' });
+    loginBtn.onclick = async () => {
+        if (isLoggedIn) {
+            await setBilibiliLoginStatus(false);
+            createToast('已登出 Bilibili');
+            Router.refresh();
+        } else {
+            await startQRLogin();
+        }
+    };
+    headerCard.appendChild(loginBtn);
     profile.appendChild(headerCard);
     
     const stats = createElement('div', 'bili-profile-stats');
