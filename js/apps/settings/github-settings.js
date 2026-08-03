@@ -69,6 +69,20 @@ async function renderGithubSettings() {
     githubGroup.appendChild(statusCell);
 
     const tokenCell = createElement('div', 'p-4');
+    
+    const helpText = createElement('div', 'mb-4');
+    helpText.innerHTML = `
+        <p class="text-sm text-ios-muted mb-2">如何獲取 Personal Access Token：</p>
+        <ol class="text-xs text-ios-muted space-y-1" style="padding-left: 16px;">
+            <li>1. 前往 <a href="https://github.com/settings/tokens" target="_blank" class="text-ios-blue">GitHub Token 設定</a></li>
+            <li>2. 點擊「Generate new token (classic)」</li>
+            <li>3. 勾選 <code>repo</code> 權限</li>
+            <li>4. 點擊「Generate token」</li>
+            <li>5. 複製 token（只會顯示一次）</li>
+        </ol>
+    `;
+    tokenCell.appendChild(helpText);
+    
     tokenCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-2 block', { textContent: 'Personal Access Token' }));
     const tokenInput = createElement('input', 'ios-input', {
         type: 'password',
@@ -87,15 +101,34 @@ async function renderGithubSettings() {
             createToast('請輸入 Token');
             return;
         }
+        
+        if (!token.startsWith('ghp_')) {
+            createToast('Token 格式錯誤，應以 ghp_ 開頭');
+            return;
+        }
+        
         connectBtn.textContent = '連接中...';
         connectBtn.disabled = true;
 
         try {
+            createToast('正在驗證 Token...');
+            
             const userRes = await fetch('https://api.github.com/user', {
                 headers: { 'Authorization': 'token ' + token }
             });
-            if (!userRes.ok) throw new Error('Token 無效');
+            
+            if (!userRes.ok) {
+                if (userRes.status === 401) {
+                    throw new Error('Token 無效或已過期');
+                } else if (userRes.status === 403) {
+                    throw new Error('API 請求次數已達上限，請稍後再試');
+                } else {
+                    throw new Error('無法連接到 GitHub (' + userRes.status + ')');
+                }
+            }
+            
             const userData = await userRes.json();
+            createToast('Token 驗證成功！正在設置...');
 
             await SettingsDB.set('github_token', token);
             await SettingsDB.set('github_user', {
@@ -104,6 +137,8 @@ async function renderGithubSettings() {
                 avatar_url: userData.avatar_url
             });
 
+            createToast('正在創建備份倉庫...');
+            
             const repoName = 'siios-backup';
             const repoRes = await fetch('https://api.github.com/user/repos', {
                 method: 'POST',
@@ -114,30 +149,59 @@ async function renderGithubSettings() {
                 body: JSON.stringify({
                     name: repoName,
                     private: true,
-                    description: 'SXIOS 備份倉庫',
+                    description: 'Siios 備份倉庫',
                     auto_init: true
                 })
             });
 
             if (repoRes.ok) {
-                createToast('已建立隱私備份倉庫：' + repoName);
+                createToast('✓ 已建立隱私備份倉庫：' + repoName);
             } else if (repoRes.status === 422) {
-                createToast('備份倉庫已存在，跳過建立');
+                createToast('✓ 備份倉庫已存在');
             } else {
-                createToast('倉庫建立失敗，但連接成功');
+                createToast('⚠ 倉庫建立失敗，但連接成功');
             }
 
-            createToast('已連接 Github：' + (userData.name || userData.login));
-            Router.navigate('/settings/github');
+            createToast('✓ 已成功連接 GitHub：' + (userData.name || userData.login));
+            setTimeout(() => {
+                Router.navigate('/settings/github');
+            }, 1000);
         } catch (e) {
-            createToast('連接失敗：' + e.message);
-            connectBtn.textContent = '連接 Github';
+            createToast('✗ 連接失敗：' + e.message, 'error');
+            connectBtn.textContent = githubToken ? '重新連接' : '連接 Github';
             connectBtn.disabled = false;
         }
     };
     tokenCell.appendChild(connectBtn);
 
     if (githubToken) {
+        const testBtn = createElement('button', 'ios-btn w-full py-3 mt-2', {
+            textContent: '測試連接',
+            onClick: async () => {
+                testBtn.textContent = '測試中...';
+                testBtn.disabled = true;
+                
+                try {
+                    const userRes = await fetch('https://api.github.com/user', {
+                        headers: { 'Authorization': 'token ' + githubToken }
+                    });
+                    
+                    if (userRes.ok) {
+                        const userData = await userRes.json();
+                        createToast('✓ 連接正常，用戶：' + userData.login);
+                    } else {
+                        createToast('✗ Token 已失效，請重新連接', 'error');
+                    }
+                } catch (e) {
+                    createToast('✗ 連接失敗：' + e.message, 'error');
+                }
+                
+                testBtn.textContent = '測試連接';
+                testBtn.disabled = false;
+            }
+        });
+        tokenCell.appendChild(testBtn);
+        
         const disconnectBtn = createElement('button', 'ios-btn w-full py-3 mt-2 text-red-500', {
             textContent: '中斷連接',
             onClick: async () => {
