@@ -1,39 +1,81 @@
 {
   "metadata": {
-    "last_updated": "2026-08-04T12:02:41.803141",
+    "last_updated": "2026-08-04T15:25:07.826585",
     "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "FFmpeg 9.0",
-        "url": "https://github.com/FFmpeg/FFmpeg/blob/n9.0/RELEASE_NOTES",
+        "title": "Ray Bradbury's \"There Will Come Soft Rains\" is set today (2026-08-04)",
+        "url": "https://short-stories.co/@raybradbury/there-will-come-soft-rains-6k8vr4xxlnmj",
         "source": "Hacker News",
-        "score": 243
+        "score": 319
+      },
+      {
+        "title": "FFmpeg 9.0",
+        "url": "https://jbkempf.com/blog/2026/ffmpeg-9.0/",
+        "source": "Hacker News",
+        "score": 19
       },
       {
         "title": "DeepSeek V4 Flash on a Single AMD MI300X",
         "url": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
         "source": "Hacker News",
-        "score": 73
+        "score": 230
       },
       {
-        "title": "Buckminster Fuller: everything I know",
-        "url": "https://www.bfi.org/about-fuller/everything-i-know/",
+        "title": "Agent skills that bring team coding standards to Claude Code and Codex",
+        "url": "https://github.com/tikalk/adlc-team-skills",
         "source": "Hacker News",
-        "score": 9
+        "score": 28
       },
       {
-        "title": "Mini retirements: like a sabbatical, but much smaller",
-        "url": "https://www.ssp.sh/brain/mini-retirements/",
+        "title": "Dates That Don't Exist (2015)",
+        "url": "https://blog.yossarian.net/2015/06/09/Dates-That-Dont-Exist",
         "source": "Hacker News",
-        "score": 16
+        "score": 31
+      },
+      {
+        "title": "Xbox goes down. You can't play games you own on disc",
+        "url": "https://birchtree.me/blog/xbox-goes-down-you-cant-play-games-you-own-on-disc/",
+        "source": "Hacker News",
+        "score": 297
       },
       {
         "title": "LLMs reward expertise",
         "url": "https://www.seangoedecke.com/llms-reward-expertise/",
         "source": "Hacker News",
-        "score": 1035
+        "score": 1186
+      },
+      {
+        "title": "Keyv and friends compromised in active Shai-Hulud supply chain attack",
+        "url": "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack",
+        "source": "Hacker News",
+        "score": 92
+      },
+      {
+        "title": "Buckminster Fuller: everything I know",
+        "url": "https://www.bfi.org/about-fuller/everything-i-know/",
+        "source": "Hacker News",
+        "score": 65
+      },
+      {
+        "title": "Show HN: Fine-tune an 8B model on a 4 GB laptop GPU",
+        "url": "https://github.com/MakazhanAlpamys/Soup",
+        "source": "Hacker News",
+        "score": 65
+      },
+      {
+        "title": "Harness Engineering for Self-Improvement",
+        "url": "https://lilianweng.github.io/posts/2026-07-04-harness/",
+        "source": "Hacker News",
+        "score": 183
+      },
+      {
+        "title": "Why Large Language Models Fail at Tabular Prediction",
+        "url": "https://arxiv.org/abs/2608.02412",
+        "source": "Hacker News",
+        "score": 53
       },
       {
         "title": "Roame (YC S23) Is Hiring Lead Engineer",
@@ -42,137 +84,105 @@
         "score": 1
       },
       {
-        "title": "Ray Bradbury's \"There Will Come Soft Rains\" is set today (2026-08-04)",
-        "url": "https://short-stories.co/@raybradbury/there-will-come-soft-rains-6k8vr4xxlnmj",
+        "title": "Why etymologies matter: How tracing words can illuminate history (2024)",
+        "url": "https://resobscura.substack.com/p/why-i-love-etymologies",
         "source": "Hacker News",
-        "score": 18
+        "score": 48
       },
       {
-        "title": "Harness Engineering for Self-Improvement",
-        "url": "https://lilianweng.github.io/posts/2026-07-04-harness/",
+        "title": "Rebuilding and analysing 4 years of Wordle stats from WhatsApp chat logs",
+        "url": "https://blog.omgmog.net/post/rebuilding-wordle-stats-from-whatsapp/",
         "source": "Hacker News",
-        "score": 89
-      },
-      {
-        "title": "You don't need React: creating a minimal UI library in Vanilla JavaScript",
-        "url": "https://pedroth.github.io/?p=post/NoNeedReact",
-        "source": "Hacker News",
-        "score": 81
-      },
-      {
-        "title": "Show HN: Run an 80B Qwen in 4.3 GB of RAM on a Mac, and a 35B on an iPhone",
-        "url": "https://github.com/leonickson1/Swiftlet",
-        "source": "Hacker News",
-        "score": 214
-      },
-      {
-        "title": "Cyberpunk Video Games",
-        "url": "https://shellzine.net/cyberpunk-video-games/",
-        "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "Ten advances in mathematics and theoretical computer science",
-        "url": "https://openai.com/index/ten-advances-in-mathematics/",
-        "source": "Hacker News",
-        "score": 558
-      },
-      {
-        "title": "Devtools must be open source",
-        "url": "https://blog.exe.dev/devtools-must-be-open-source",
-        "source": "Hacker News",
-        "score": 630
-      },
-      {
-        "title": "Amazonian civilization had estimated 3M people in 3% of forest area",
-        "url": "https://www.science.org/content/article/odd-shapes-hidden-dense-amazon-rainforest-reveal-sprawling-ancient-civilization",
-        "source": "Hacker News",
-        "score": 176
-      },
-      {
-        "title": "Why Large Language Models Fail at Tabular Prediction",
-        "url": "https://arxiv.org/abs/2608.02412",
-        "source": "Hacker News",
-        "score": 6
+        "score": 7
       }
     ],
     "ai": [
       {
-        "title": "LLMs reward expertise",
-        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
-        "source": "Hacker News AI",
-        "score": 1035
-      },
-      {
         "title": "Ray Bradbury's \"There Will Come Soft Rains\" is set today (2026-08-04)",
         "url": "https://short-stories.co/@raybradbury/there-will-come-soft-rains-6k8vr4xxlnmj",
         "source": "Hacker News AI",
-        "score": 18
+        "score": 319
+      },
+      {
+        "title": "Agent skills that bring team coding standards to Claude Code and Codex",
+        "url": "https://github.com/tikalk/adlc-team-skills",
+        "source": "Hacker News AI",
+        "score": 28
+      },
+      {
+        "title": "LLMs reward expertise",
+        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
+        "source": "Hacker News AI",
+        "score": 1188
+      },
+      {
+        "title": "Keyv and friends compromised in active Shai-Hulud supply chain attack",
+        "url": "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack",
+        "source": "Hacker News AI",
+        "score": 93
       },
       {
         "title": "Why Large Language Models Fail at Tabular Prediction",
         "url": "https://arxiv.org/abs/2608.02412",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 53
       },
       {
-        "title": "That time when I failed the Microsoft interview",
-        "url": "https://ochagavia.nl/blog/that-time-when-i-failed-the-microsoft-interview/",
+        "title": "AI-Generated Images Discourage Me from Reading Your Blog",
+        "url": "https://nelson.cloud/ai-generated-images-discourage-me-from-reading-your-blog/",
         "source": "Hacker News AI",
-        "score": 79
-      },
-      {
-        "title": "Prevent cognitive debt by manually retyping LLM-generated code",
-        "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
-        "source": "Hacker News AI",
-        "score": 502
-      },
-      {
-        "title": "There Will Come Soft Rains (1950) [pdf]",
-        "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
-        "source": "Hacker News AI",
-        "score": 177
-      },
-      {
-        "title": "An Honest Review of AI Programming",
-        "url": "https://mropert.github.io/2026/08/04/an_honest_review_of_ai_programming/",
-        "source": "Hacker News AI",
-        "score": 4
+        "score": 543
       },
       {
         "title": "Homebench – Benchmark local LLMs for speed, memory, and quality",
         "url": "https://github.com/david-g-3654/homebench",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 27
       },
       {
-        "title": "Windows XP 2002 for the Itanium: Unbridled rage",
-        "url": "https://virtuallyfun.com/2026/08/03/windows-xp-2002-for-the-itanium-unbridled-rage/",
+        "title": "There Will Come Soft Rains (1950) [pdf]",
+        "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
         "source": "Hacker News AI",
-        "score": 114
+        "score": 267
+      },
+      {
+        "title": "That time when I failed the Microsoft interview",
+        "url": "https://ochagavia.nl/blog/that-time-when-i-failed-the-microsoft-interview/",
+        "source": "Hacker News AI",
+        "score": 109
+      },
+      {
+        "title": "Online ad giant Adform was hacked, proving once again why ad blockers are needed",
+        "url": "https://this.weekinsecurity.com/online-advertising-giant-adform-was-hacked-proving-once-again-why-ad-blockers-are-necessary/",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "Bonsai: Janestreet's UI Library",
         "url": "https://github.com/janestreet/bonsai",
         "source": "Hacker News AI",
-        "score": 366
-      },
-      {
-        "title": "AirLLM 70B inference with single 4GB GPU",
-        "url": "https://github.com/lyogavin/airllm",
-        "source": "Hacker News AI",
-        "score": 222
+        "score": 371
       }
     ],
     "news": [
       {
-        "title": "More than 150 migrants rescued after boat catches fire in Channel",
-        "url": "https://www.bbc.co.uk/news/articles/c4gkpeppjyqo?at_medium=RSS&at_campaign=rss",
+        "title": "Oil prices fall on hopes Strait of Hormuz could reopen",
+        "url": "https://www.bbc.co.uk/news/articles/cpw9v0gnzxwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ukraine strikes more Wildberries sites as five killed in Moscow region",
+        "title": "Qatar says US-Iran mediation efforts continuing but no direct talks planned",
+        "url": "https://www.bbc.co.uk/news/articles/c1l1q9n3v15o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ukraine hits more Wildberries sites as strike kills five in Moscow region",
         "url": "https://www.bbc.co.uk/news/articles/c151pkww79zo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "More than 150 migrants rescued after boat catches fire in Channel",
+        "url": "https://www.bbc.co.uk/news/articles/c4gkpeppjyqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -186,22 +196,17 @@
         "source": "BBC World"
       },
       {
-        "title": "Why Trump Media's sale of fast access to market-moving social posts is controversial",
-        "url": "https://www.bbc.co.uk/news/articles/c4gdkl9zn8wo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Guatemala volcano eruption sends lava spewing into the air",
-        "url": "https://www.bbc.co.uk/news/articles/c2lqpvv1wlxo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Soldier kills four in gun rampage in Russian-occupied Crimea",
-        "url": "https://www.bbc.co.uk/news/articles/c80n33lrnm5o?at_medium=RSS&at_campaign=rss",
+        "title": "Mass funeral in Gaza for 112 Palestinians killed in 2023 Israeli strike",
+        "url": "https://www.bbc.co.uk/news/articles/cn0n99npjejo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Autodesk tackles AI filmmaking's biggest problem by offering 3D control ",
+        "url": "https://www.creativebloq.com/3d/autodesk-tackles-ai-filmmakings-biggest-problem-with-3d-control",
+        "source": "Creative Bloq"
+      },
       {
         "title": " This MacBook charger has a tiny pixel display and is 15% off – Apple fans are going to love it ",
         "url": "https://www.creativebloq.com/tech/accessories/this-macbook-charger-has-a-tiny-pixel-display-and-is-15-percent-off-apple-fans-are-going-to-love-it",
@@ -231,84 +236,79 @@
         "title": " MSI Claw 8 EX AI+ review: the handheld PC that finally makes sense to a console gamer ",
         "url": "https://www.creativebloq.com/entertainment/gaming/msi-claw-8-ex-ai-review-the-handheld-pc-that-finally-makes-sense-to-a-console-gamer",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " No, Vermont's new logo design isn't Comic Sans ",
-        "url": "https://www.creativebloq.com/design/logos-icons/no-vermonts-new-logo-design-isnt-comic-sans",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "This hydrogen turbine turns controlled explosions into electricity",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260803080919.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Cancer-fighting chewing gum cuts HPV levels by up to 93%",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260803080917.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "518-million-year-old creature reveals the origins of spider fangs",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260803080906.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Strange quantum experiment shows “negative time” is more than an illusion",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260803080904.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Your brain may be wired to regain lost weight",
         "url": "https://www.sciencedaily.com/releases/2026/08/260803080902.htm",
         "source": "Science Daily"
       },
       {
+        "title": "DNA on the Shroud of Turin reveals centuries of hidden history",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260803080859.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Two new compounds could reveal hidden drivers of Alzheimer’s disease",
         "url": "https://www.sciencedaily.com/releases/2026/08/260802223437.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists may have found aging’s hidden trigger for brain disease",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260802223433.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists went looking for giant trees in Taiwan and found a lost world",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260802223431.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "These bizarre new beetles look so stretchy scientists named them Luffy",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260802223430.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Ancient Arctic carbon is pouring into the sea, but the seabed captures most of it",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260802223424.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists reveal the hidden force driving the universe’s hottest fluid",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260802223422.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "14 years later, Spider-Man fails to fix the Hulk's most frustrating character flaw in the MCU",
-        "url": "https://www.polygon.com/will-the-hulk-ever-win-a-fight-again-in-the-mcu/",
+        "title": "Fortnite confirms Bleach wave 2 skins",
+        "url": "https://www.polygon.com/fortnite-bleach-skins-2026-yoruichi-shihoin-kisuke-urahara/",
         "source": "Polygon"
       },
       {
-        "title": "Magic’s The Hobbit introduces a clever new mechanic and a color-pie problem",
-        "url": "https://www.polygon.com/mtg-the-hobbit-magic-the-gathering-mechanics-recruit-hone-counters/",
+        "title": "Violent Night 2 director reveals a disturbing scene inspired by horror master Sam Raimi",
+        "url": "https://www.polygon.com/director-producer-violent-night-2-trailer-interview/",
         "source": "Polygon"
       },
       {
-        "title": "Rust's next force wipe update caters to clans, alarming solos",
-        "url": "https://www.polygon.com/rust-august-update-concerning-for-solo-players/",
+        "title": "FFXIV Yo-kai Watch event guide",
+        "url": "https://www.polygon.com/ffxiv-guides-ff14-final-fantasy-14-online/24139170/yo-kai-watch-fate-locations-minions-weapons-mount-rewards-coins/",
         "source": "Polygon"
       },
       {
-        "title": " George R.R. Martin gives a sad update to fans while praising A Knight of the Seven Kingdoms ",
-        "url": "https://www.polygon.com/george-martin-blog-update-winds-of-winter-emmys-a-knight-of-the-seven-kingdoms/",
+        "title": "Fire Emblem: Fortune's Weave adds surprise new weapon: guns!",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-guns-nintendo-switch-2/",
         "source": "Polygon"
       },
       {
-        "title": "The iconic 170-minute crime thriller that inspired The Dark Knight is finally free on streaming",
-        "url": "https://www.polygon.com/this-action-thriller-which-helped-inspire-one-of-christopher-nolans-best-films-is-currently-free-to-stream/",
+        "title": "Final Fantasy 14 launches on Switch 2 and it's surprising fans",
+        "url": "https://www.polygon.com/final-fantasy-14-switch-2-launch-performance-price-subscription/",
         "source": "Polygon"
       },
       {
-        "title": "Netflix's FIFA World Cup game studio has laid off 85% of its staff",
-        "url": "https://www.polygon.com/fifa-world-cup-netflix-game-refactor-games-delphi-interactive-layoffs/",
+        "title": "The official X-Files Lego set has been 12 years in the making: 'It was deemed too mature'",
+        "url": "https://www.polygon.com/this-official-x-files-lego-set-took-more-than-a-decade-to-get-made/",
         "source": "Polygon"
       },
       {
-        "title": "All radio station locations in Big Walk",
-        "url": "https://www.polygon.com/big-walk-radio-transmitter-station-locations-where-to-find/",
+        "title": "Xbox Game Pass new games for August 2026",
+        "url": "https://www.polygon.com/xbox-game-pass-august-2026-wave-1-game-freak-beast-of-reincarnation/",
         "source": "Polygon"
       }
     ],
