@@ -1,191 +1,191 @@
 {
   "metadata": {
-    "last_updated": "2026-08-04T21:13:31.461863",
-    "total_items": 57
+    "last_updated": "2026-08-04T23:04:34.506380",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
+        "title": "AI fuels more than half of cybercrime in Africa as scams surge – Interpol",
+        "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
+        "source": "Hacker News",
+        "score": 56
+      },
+      {
+        "title": "Gwern reties from fulltime writing to launch Guardian Angel Inc",
+        "url": "https://twitter.com/i/status/2084739205071343837",
+        "source": "Hacker News",
+        "score": 34
+      },
+      {
         "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
         "url": "https://mistral.ai/news/shieldstral/",
         "source": "Hacker News",
-        "score": 159
+        "score": 262
       },
       {
         "title": "Show HN: Simple algorithm and color space to generate diverse skin tones",
         "url": "https://toneyalexander.github.io/inclusive-color-space/",
         "source": "Hacker News",
-        "score": 384
-      },
-      {
-        "title": "Waymo – Dallas Open to All",
-        "url": "https://waymo.com/blog/shorts/dallas-open-to-all/",
-        "source": "Hacker News",
-        "score": 140
+        "score": 435
       },
       {
         "title": "In Memory of My Wife, Elise Cawley, with Thanks for 36 Wonderful Years",
         "url": "https://writings.stephenwolfram.com/2026/08/in-memory-of-my-wife-elise-cawley-1961-2026-with-thanks-for-36-wonderful-years/",
         "source": "Hacker News",
-        "score": 350
+        "score": 685
       },
       {
-        "title": "Why some people mow a lawn better than others",
-        "url": "https://pudding.cool/2026/06/mow/",
+        "title": "DuckDB – Data power tools for your laptop, now in Clojure (2023)",
+        "url": "https://techascent.com/blog/just-ducking-around.html",
         "source": "Hacker News",
-        "score": 123
+        "score": 9
+      },
+      {
+        "title": "Waymo in Dallas",
+        "url": "https://waymo.com/blog/shorts/dallas-open-to-all/",
+        "source": "Hacker News",
+        "score": 209
+      },
+      {
+        "title": "Third-party cyber evaluations involving OpenAI models",
+        "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/",
+        "source": "Hacker News",
+        "score": 25
+      },
+      {
+        "title": "Thanks FedEx, This Is Why We Keep Getting Phished (2024)",
+        "url": "https://www.troyhunt.com/thanks-fedex-this-is-why-we-keep-getting-phished/",
+        "source": "Hacker News",
+        "score": 167
+      },
+      {
+        "title": "Oxide Computer raises $445M (SEC Form D)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1795071/000179507126000002/xslFormDX01/primary_doc.xml",
+        "source": "Hacker News",
+        "score": 137
+      },
+      {
+        "title": "Video2NAND – Abusing video codecs for great computational power",
+        "url": "https://sharedobject.blog/posts/vp8-combinatorial-logic/",
+        "source": "Hacker News",
+        "score": 13
       },
       {
         "title": "DeepSeek V4 Flash on a Single AMD MI300X",
         "url": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
         "source": "Hacker News",
-        "score": 339
+        "score": 358
       },
       {
-        "title": "Don't stop early: Case-folding source code at memory speed",
-        "url": "https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/",
+        "title": "Show HN: Maple-Preview – ternary 20B MoE running at 120 tok/s on a iPhone",
+        "url": "https://deepgrove.ai/maple-preview",
         "source": "Hacker News",
-        "score": 15
-      },
-      {
-        "title": "Launch HN: EdotEnv (YC S26) – Quant Trading RL Envs to Teach LLMs Research",
-        "url": "https://edotenv.com/",
-        "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation",
-        "url": "https://arxiv.org/abs/2602.16763",
-        "source": "Hacker News",
-        "score": 55
+        "score": 12
       },
       {
         "title": "Hop.earth – OpenStreetMap based car racing game",
         "url": "https://hop.earth/?server=lkhr7&route=fQ5nuu9R",
         "source": "Hacker News",
-        "score": 55
+        "score": 73
       },
       {
-        "title": "Keyv and friends compromised in active Shai-Hulud supply chain attack",
-        "url": "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack",
+        "title": "Most tech revolutions made work worse for employees",
+        "url": "https://www.thisandthat.chat/blog/most-tech-revolutions-made-work-worse-for-employees/",
         "source": "Hacker News",
-        "score": 212
-      },
-      {
-        "title": "Oxide Computer raises $445M (SEC Form D)",
-        "url": "https://www.sec.gov/Archives/edgar/data/1795071/000179507126000002/xslFormDX01/primary_doc.xml",
-        "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Apple says more ex-employees may have taken confidential data to OpenAI",
-        "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
-        "source": "Hacker News",
-        "score": 267
-      },
-      {
-        "title": "Truemetrics (YC S23) Is Hiring in Berlin – GTM Lead",
-        "url": "https://www.ycombinator.com/companies/truemetrics/jobs/bIQQ7tP-founding-gtm-lead",
-        "source": "Hacker News",
-        "score": 1
-      },
-      {
-        "title": "The Warp Agent CLI",
-        "url": "https://www.warp.dev/blog/introducing-the-warp-agent-cli-coding-agent",
-        "source": "Hacker News",
-        "score": 78
+        "score": 74
       }
     ],
     "ai": [
       {
+        "title": "AI fuels more than half of cybercrime in Africa as scams surge – Interpol",
+        "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
+        "source": "Hacker News AI",
+        "score": 56
+      },
+      {
         "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
         "url": "https://mistral.ai/news/shieldstral/",
         "source": "Hacker News AI",
-        "score": 159
+        "score": 262
       },
       {
-        "title": "Launch HN: EdotEnv (YC S26) – Quant Trading RL Envs to Teach LLMs Research",
-        "url": "https://edotenv.com/",
+        "title": "Third-party cyber evaluations involving OpenAI models",
+        "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/",
         "source": "Hacker News AI",
-        "score": 20
+        "score": 25
+      },
+      {
+        "title": "Oxide Computer raises $445M (SEC Form D)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1795071/000179507126000002/xslFormDX01/primary_doc.xml",
+        "source": "Hacker News AI",
+        "score": 137
       },
       {
         "title": "When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation",
         "url": "https://arxiv.org/abs/2602.16763",
         "source": "Hacker News AI",
-        "score": 55
+        "score": 70
       },
       {
         "title": "Keyv and friends compromised in active Shai-Hulud supply chain attack",
         "url": "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack",
         "source": "Hacker News AI",
-        "score": 212
+        "score": 223
       },
       {
-        "title": "Oxide Computer raises $445M (SEC Form D)",
-        "url": "https://www.sec.gov/Archives/edgar/data/1795071/000179507126000002/xslFormDX01/primary_doc.xml",
+        "title": "Launch HN: EdotEnv (YC S26) – Quant Trading RL Envs to Teach LLMs Research",
+        "url": "https://edotenv.com/",
         "source": "Hacker News AI",
-        "score": 33
+        "score": 26
       },
       {
         "title": "Apple says more ex-employees may have taken confidential data to OpenAI",
         "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
         "source": "Hacker News AI",
-        "score": 267
-      },
-      {
-        "title": "Blackmail Fail (2013)",
-        "url": "https://gwern.net/blackmail",
-        "source": "Hacker News AI",
-        "score": 20
+        "score": 316
       },
       {
         "title": "There Will Come Soft Rains (1950) [pdf]",
         "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
         "source": "Hacker News AI",
-        "score": 322
+        "score": 339
       },
       {
-        "title": "Waymo CEO explains why Tesla's camera-only self-driving falls short",
-        "url": "https://electrek.co/2026/08/04/waymo-co-ceo-camera-only-self-driving-tesla/",
+        "title": "Blackmail Fail (2013)",
+        "url": "https://gwern.net/blackmail",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 33
+      },
+      {
+        "title": "Security Incident INC-2026-07-28-01 – UK AI Security Institute [pdf]",
+        "url": "https://cdn.prod.website-files.com/663bd486c5e4c81588db7a1d/6a724858f7db25c81487016d_Security%20Incident%20INC-2026-07-28-01.pdf",
+        "source": "Hacker News AI",
+        "score": 51
       },
       {
         "title": "Online ad giant Adform was hacked, proving once again why ad blockers are needed",
         "url": "https://this.weekinsecurity.com/online-advertising-giant-adform-was-hacked-proving-once-again-why-ad-blockers-are-necessary/",
         "source": "Hacker News AI",
-        "score": 195
+        "score": 209
       },
       {
-        "title": "LLMs reward expertise",
-        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
+        "title": "An AI voice agent running locally on a $50 Arduino uno Q",
+        "url": "https://projecthub.arduino.cc/neelbuilds/build-a-voice-based-kiosk-for-retail-store-using-moorcheh-edge-and-arduino-uno-q-7f3c7b",
         "source": "Hacker News AI",
-        "score": 1300
-      },
-      {
-        "title": "Why Large Language Models Fail at Tabular Prediction",
-        "url": "https://arxiv.org/abs/2608.02412",
-        "source": "Hacker News AI",
-        "score": 96
+        "score": 5
       },
       {
         "title": "Cloudflare enforces engineering standards using AI",
         "url": "https://blog.cloudflare.com/engineering-standards-enforcement/",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 28
       },
       {
-        "title": "AI Data Centers Are Driving Up Power Bills – This Map Shows Where",
-        "url": "https://www.gadgetreview.com/ai-data-centers-are-driving-up-power-bills-this-map-shows-where",
+        "title": "LLMs reward expertise",
+        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
         "source": "Hacker News AI",
-        "score": 52
-      },
-      {
-        "title": "Bending Spoons makes first post-IPO acquisition with $1.3B Airtable deal",
-        "url": "https://live.euronext.com/en/financial-news/bending-spoons-makes-first-post-ipo-acquisition-13-billion-airtable-deal",
-        "source": "Hacker News AI",
-        "score": 84
+        "score": 1313
       }
     ],
     "news": [
@@ -220,7 +220,43 @@
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " Did Coca-Cola need to rebrand? Design experts weigh in on the new look ",
+        "url": "https://www.creativebloq.com/design/branding/did-coca-cola-need-to-rebrand-design-experts-weigh-in-on-the-new-look",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Why Sennheiser's brand chief is bringing London's underground club scene to the top of the Shard ",
+        "url": "https://www.creativebloq.com/design/branding/why-sennheisers-brand-chief-is-bringing-londons-underground-club-scene-to-the-top-of-the-shard",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Autodesk tackles AI filmmaking's biggest problem by offering 3D control ",
+        "url": "https://www.creativebloq.com/3d/autodesk-tackles-ai-filmmakings-biggest-problem-with-3d-control",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This MacBook charger has a tiny pixel display and is 15% off – Apple fans are going to love it ",
+        "url": "https://www.creativebloq.com/tech/accessories/this-macbook-charger-has-a-tiny-pixel-display-and-is-15-percent-off-apple-fans-are-going-to-love-it",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " I’m obsessed with Boox e-ink tablets right now – here's how to get one on sale ",
+        "url": "https://www.creativebloq.com/tech/phones-tablets/im-obsessed-with-boox-e-ink-tablets-right-now-heres-how-to-get-one-on-sale",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This AI smartphone can pull off Hitchcock's hardest camera trick in Vertigo without a film crew ",
+        "url": "https://www.creativebloq.com/entertainment/videography/the-honor-600-smartphone-can-pull-off-hitchcocks-hardest-camera-trick-without-a-film-crew-and-thats-not-all",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This new 3D and UV printer hybrid from HeyGears just passed $10 million on Kickstarter and looks sensational ",
+        "url": "https://www.creativebloq.com/3d/3d-printing/this-new-3d-and-uv-printer-hybrid-from-heygears-just-passed-usd10-million-on-kickstarter-and-looks-sensational",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "This hydrogen turbine turns controlled explosions into electricity",
@@ -260,6 +296,11 @@
     ],
     "gaming": [
       {
+        "title": "Marvel Tōkon Fighting Souls release time in your time zone",
+        "url": "https://www.polygon.com/marvel-tokon-fighting-souls-release-time-when-edt-pdt/",
+        "source": "Polygon"
+      },
+      {
         "title": "Baldur's Gate 3 devs share more wild statistics, like what NPCs died the most",
         "url": "https://www.polygon.com/baldurs-gate-3-third-anniversary-statistics-npc-murder/",
         "source": "Polygon"
@@ -287,11 +328,6 @@
       {
         "title": "What time does the Gears of War E-Day early access multiplayer beta start in your time zone?",
         "url": "https://www.polygon.com/gears-of-war-e-day-early-access-beta-release-time-edt-pdt/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Koei Tecmo is putting out an “AI chat RPG” based on the Atelier Ryza series, and it sounds bleak",
-        "url": "https://www.polygon.com/koei-tecmo-atelier-ryza-chat-ai-rpg/",
         "source": "Polygon"
       }
     ],
