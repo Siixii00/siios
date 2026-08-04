@@ -1,5 +1,5 @@
 ﻿import Router from './router.js';
-import { SettingsDB, ChatsDB, CharactersDB, UsersDB, HealthDB } from './db.js';
+import { SettingsDB, ChatsDB, CharactersDB, UsersDB, HealthDB, ZiweiCacheDB } from './db.js';
 import { loadWorldInfoContext } from './core/world-info-loader.js';
 import { generateRPPrompt } from './constants/rp-system-prompt.js';
 import { buildRealWorldContext } from './core/real-world-context.js';
@@ -70,6 +70,24 @@ const APIClient = {
                     }
                 }
             } catch (e) {
+            }
+        }
+        
+        if (characterData?.ziwei_cache_id) {
+            try {
+                const ziweiCache = await ZiweiCacheDB.getById(characterData.ziwei_cache_id);
+                
+                if (ziweiCache && !ziweiCache.is_stale) {
+                    const ziweiContext = this.buildZiweiContext(ziweiCache);
+                    if (ziweiContext) {
+                        systemMessages.push({
+                            role: 'system',
+                            content: ziweiContext
+                        });
+                    }
+                }
+            } catch (e) {
+                console.error('[API] Ziwei context injection failed:', e);
             }
         }
         
@@ -463,6 +481,39 @@ const APIClient = {
         } catch (error) {
             return { success: false, message: error.message || '連線失敗' };
         }
+    },
+    
+    buildZiweiContext(cache) {
+        const { fortune_summary, liu_ri_temple, events, sihua } = cache;
+        
+        if (!fortune_summary || !liu_ri_temple) return null;
+        
+        let context = '[今日命理提示]\n';
+        context += `流日命宮：${liu_ri_temple}\n`;
+        context += `整體運勢：${fortune_summary.daily || '暫無資料'}\n`;
+        
+        if (sihua) {
+            const sihuaParts = [];
+            if (sihua.祿) sihuaParts.push(`祿(${sihua.祿})`);
+            if (sihua.權) sihuaParts.push(`權(${sihua.權})`);
+            if (sihua.科) sihuaParts.push(`科(${sihua.科})`);
+            if (sihua.忌) sihuaParts.push(`忌(${sihua.忌})`);
+            if (sihuaParts.length > 0) {
+                context += `四化：${sihuaParts.join(' ')}\n`;
+            }
+        }
+        
+        if (events && events.length > 0) {
+            const topEvents = events.filter(e => e.confidence > 0.7).slice(0, 3);
+            if (topEvents.length > 0) {
+                context += `可能事件：${topEvents.map(e => e.description).join('、')}\n`;
+            }
+        }
+        
+        context += '\n請根據這些命理資訊，自然地融入角色的日常對話中。';
+        context += '例如：如果運勢提到「精力充沛」，角色可能會主動提議外出或運動。';
+        
+        return context;
     }
 };
 

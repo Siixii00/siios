@@ -1,6 +1,6 @@
 import Router from '../../router.js';
 import { createElement } from '../../components.js';
-import { SettingsDB, WikiRecordsDB } from '../../db.js';
+import { SettingsDB, WikiRecordsDB, ZiweiCacheDB, CharactersDB } from '../../db.js';
 import { compressImage } from '../../utils/image.js';
 import { escapeHtml, stripHtml, debounce } from '../../utils/html.js';
 import { migrateFromSettingsDB } from './migration.js';
@@ -310,6 +310,7 @@ function renderEditor(container) {
         <div class="wiki-blocks" data-page-id="${record.id}">
             ${renderBlocks(record.blocks, record.id)}
         </div>
+        <div class="wiki-ziwei-area" data-page-id="${record.id}"></div>
         <div class="wiki-backlinks-area" data-page-id="${record.id}"></div>
     `;
 
@@ -346,6 +347,7 @@ function renderEditor(container) {
 
     bindBlockEvents(container, record);
     loadBacklinks(container, record.id);
+    loadZiweiFortune(container, record.id);
 }
 
 function renderBlocks(blocks, recordId) {
@@ -607,6 +609,96 @@ async function loadBacklinks(container, recordId) {
     area.querySelectorAll('[data-nav-page]').forEach(el => {
         el.onclick = () => navigateToPage(container, el.dataset.navPage);
     });
+}
+
+async function loadZiweiFortune(container, recordId) {
+    const area = container.querySelector('.wiki-ziwei-area');
+    if (!area) return;
+
+    const record = getRecord(recordId);
+    if (!record || record.page_type !== 'character' || !record.character_id) {
+        area.innerHTML = '';
+        return;
+    }
+
+    try {
+        const character = await CharactersDB.getById(record.character_id);
+        if (!character || !character.birth_date || !character.birth_time || !character.gender) {
+            area.innerHTML = `
+                <div class="wiki-ziwei-section">
+                    <div class="wiki-ziwei-header">🔮 命理分析</div>
+                    <div class="wiki-ziwei-empty">
+                        <p>尚未設定完整的出生資訊</p>
+                        <p class="wiki-ziwei-hint">請在角色設定中補充出生日期、時間與性別</p>
+                    </div>
+                </div>
+            `;
+            return;
+        }
+
+        const today = new Date().toISOString().split('T')[0];
+        const cache = await ZiweiCacheDB.getByDate(record.character_id, today);
+
+        if (!cache) {
+            area.innerHTML = `
+                <div class="wiki-ziwei-section">
+                    <div class="wiki-ziwei-header">🔮 命理分析</div>
+                    <div class="wiki-ziwei-loading">載入中...</div>
+                </div>
+            `;
+            return;
+        }
+
+        if (cache.is_stale) {
+            area.innerHTML = `
+                <div class="wiki-ziwei-section">
+                    <div class="wiki-ziwei-header">🔮 命理分析</div>
+                    <div class="wiki-ziwei-warning">⚠️ 資料可能過期（無法連線至分析服務）</div>
+                    ${renderZiweiCards(cache)}
+                </div>
+            `;
+            return;
+        }
+
+        area.innerHTML = `
+            <div class="wiki-ziwei-section">
+                <div class="wiki-ziwei-header">🔮 命理分析 (${cache.analysis_date})</div>
+                ${renderZiweiCards(cache)}
+            </div>
+        `;
+    } catch (error) {
+        console.error('[Wiki] Ziwei load error:', error);
+        area.innerHTML = '';
+    }
+}
+
+function renderZiweiCards(cache) {
+    return `
+        <div class="wiki-ziwei-cards">
+            <div class="wiki-ziwei-card">
+                <div class="wiki-ziwei-card-title">流年運勢</div>
+                ${cache.liu_nian_temple ? `<div class="wiki-ziwei-card-temple">命宮：${escapeHtml(cache.liu_nian_temple)}</div>` : ''}
+                ${cache.fortune_summary?.yearly ? `<div class="wiki-ziwei-card-summary">${escapeHtml(cache.fortune_summary.yearly)}</div>` : ''}
+            </div>
+            <div class="wiki-ziwei-card">
+                <div class="wiki-ziwei-card-title">流月運勢</div>
+                ${cache.liu_yue_temple ? `<div class="wiki-ziwei-card-temple">命宮：${escapeHtml(cache.liu_yue_temple)}</div>` : ''}
+                ${cache.fortune_summary?.monthly ? `<div class="wiki-ziwei-card-summary">${escapeHtml(cache.fortune_summary.monthly)}</div>` : ''}
+            </div>
+            <div class="wiki-ziwei-card">
+                <div class="wiki-ziwei-card-title">流日運勢</div>
+                ${cache.liu_ri_temple ? `<div class="wiki-ziwei-card-temple">命宮：${escapeHtml(cache.liu_ri_temple)}</div>` : ''}
+                ${cache.fortune_summary?.daily ? `<div class="wiki-ziwei-card-summary">${escapeHtml(cache.fortune_summary.daily)}</div>` : ''}
+                ${cache.events && cache.events.length > 0 ? `
+                    <div class="wiki-ziwei-events">
+                        ${cache.events.filter(e => e.confidence > 0.7).slice(0, 3).map(event => `
+                            <div class="wiki-ziwei-event">${escapeHtml(event.description)} (${Math.round(event.confidence * 100)}%)</div>
+                        `).join('')}
+                    </div>
+                ` : ''}
+            </div>
+        </div>
+    `;
 }
 
 function updateNumberedListNumbers(record, blocksEl) {

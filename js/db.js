@@ -1,7 +1,7 @@
 ﻿import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
 
 const DB_NAME = 'sxios';
-const DB_VERSION = 12;
+const DB_VERSION = 13;
 const LEGACY_DB_NAMES = ['ios-classic-ai'];
 
 let db = null;
@@ -151,6 +151,14 @@ async function initDB() {
                     const discordBindingStore = database.createObjectStore('discordUserBindings', { keyPath: 'discord_user_id' });
                     discordBindingStore.createIndex('user_id', 'user_id');
                     discordBindingStore.createIndex('character_id', 'character_id');
+                }
+
+                if (!database.objectStoreNames.contains('ziweiCache')) {
+                    const ziweiStore = database.createObjectStore('ziweiCache', { keyPath: 'id' });
+                    ziweiStore.createIndex('character_id', 'character_id');
+                    ziweiStore.createIndex('analysis_date', 'analysis_date');
+                    ziweiStore.createIndex('analysis_type', 'analysis_type');
+                    ziweiStore.createIndex('expires_at', 'expires_at');
                 }
                 
                 console.log('[DB] 數據庫升級完成');
@@ -541,6 +549,12 @@ const CharactersDB = {
             id,
             name: data.name || '',
             avatar: data.avatar || '',
+            birth_date: data.birth_date || null,
+            birth_time: data.birth_time || null,
+            birth_location: data.birth_location || null,
+            birth_calendar_type: data.birth_calendar_type || 'solar',
+            gender: data.gender || null,
+            ziwei_cache_id: data.ziwei_cache_id || null,
             description: data.description || '',
             personality: data.personality || '',
             scenario: data.scenario || '',
@@ -1370,7 +1384,70 @@ const ActivitySourcesDB = {
     }
 };
 
-export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, HealthDB, MCPConfigDB, ActivityDB, DiscordUserBindingDB, ActivitySettingsDB, ActivitySourcesDB, hashContent, cosineSimilarity };
+const ZiweiCacheDB = {
+    async getByCharacterId(characterId) {
+        const database = await initDB();
+        return database.getAllFromIndex('ziweiCache', 'character_id', characterId);
+    },
+
+    async getById(id) {
+        const database = await initDB();
+        return database.get('ziweiCache', id);
+    },
+
+    async getByDate(characterId, date) {
+        const database = await initDB();
+        const all = await database.getAllFromIndex('ziweiCache', 'character_id', characterId);
+        return all.find(cache => cache.analysis_date === date) || null;
+    },
+
+    async create(data) {
+        const database = await initDB();
+        const cache = {
+            id: generateId(),
+            character_id: data.character_id,
+            analysis_date: data.analysis_date,
+            analysis_type: data.analysis_type || 'daily',
+            chart_data: data.chart_data || null,
+            fortune_summary: data.fortune_summary || null,
+            sihua: data.sihua || null,
+            liu_nian_temple: data.liu_nian_temple || null,
+            liu_yue_temple: data.liu_yue_temple || null,
+            liu_ri_temple: data.liu_ri_temple || null,
+            events: data.events || [],
+            is_stale: data.is_stale || false,
+            created_at: Date.now(),
+            expires_at: data.expires_at || null
+        };
+        await database.put('ziweiCache', cache);
+        return cache;
+    },
+
+    async update(id, data) {
+        const database = await initDB();
+        const cache = await database.get('ziweiCache', id);
+        if (!cache) throw new Error('ZiweiCache not found');
+        const updated = { ...cache, ...data, updated_at: Date.now() };
+        await database.put('ziweiCache', updated);
+        return updated;
+    },
+
+    async delete(id) {
+        const database = await initDB();
+        await database.delete('ziweiCache', id);
+    },
+
+    async deleteByCharacterId(characterId) {
+        const database = await initDB();
+        const caches = await database.getAllFromIndex('ziweiCache', 'character_id', characterId);
+        const tx = database.transaction('ziweiCache', 'readwrite');
+        for (const cache of caches) {
+            await tx.store.delete(cache.id);
+        }
+    }
+};
+
+export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, HealthDB, MCPConfigDB, ActivityDB, DiscordUserBindingDB, ActivitySettingsDB, ActivitySourcesDB, ZiweiCacheDB, hashContent, cosineSimilarity };
 
 
 
