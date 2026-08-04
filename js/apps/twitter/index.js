@@ -1241,6 +1241,16 @@ async function refreshFeed(main, pullIndicator) {
             return;
         }
         
+        const character = await getCharacterContext(selectedCharacterId);
+        if (character && character.name) {
+            const npcFollows = await getNpcFollows();
+            if (!npcFollows.includes(character.name)) {
+                npcFollows.push(character.name);
+                await saveNpcFollows(npcFollows);
+                console.log('[Twitter] 自動追蹤角色:', character.name);
+            }
+        }
+        
         tweets.forEach(tweet => {
             console.log('[Twitter] 添加推文:', tweet.author, '-', tweet.content.substring(0, 30));
             npcTweets.unshift({
