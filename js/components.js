@@ -574,7 +574,11 @@ function createKakaoSideMenu(options) {
             }
             const itemClass = 'kakao-side-menu-item' + (item.danger ? ' kakao-side-menu-danger' : '');
             const menuItem = createElement('div', itemClass);
-            if (item.icon) {
+            if (item.avatar) {
+                const avatarWrap = createElement('div', 'kakao-side-menu-item-avatar');
+                avatarWrap.style.background = item.avatar;
+                menuItem.appendChild(avatarWrap);
+            } else if (item.icon) {
                 const iconWrap = createElement('div', 'kakao-side-menu-item-icon');
                 iconWrap.appendChild(createIcon(item.icon));
                 menuItem.appendChild(iconWrap);
