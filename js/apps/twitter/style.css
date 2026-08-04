@@ -1,9 +1,11 @@
 .twitter-app {
+    position: relative;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background: var(--twitter-bg, #0f1419);
     color: var(--twitter-text, #e7e9ea);
+    overflow: hidden;
 }
 
 :root {
