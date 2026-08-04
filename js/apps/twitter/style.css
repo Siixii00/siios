@@ -480,7 +480,7 @@
     transform: translateX(-50%) translateY(-60px);
     opacity: 0;
     transition: opacity 0.2s, transform 0.2s;
-    z-index: 100;
+    z-index: 9999;
     background: var(--twitter-bg);
     padding: 8px 16px;
     border-radius: 20px;
@@ -490,6 +490,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    pointer-events: none;
 }
 
 .pull-indicator.active {

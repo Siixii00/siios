@@ -1,0 +1,354 @@
+{
+  "metadata": {
+    "last_updated": "2026-08-04T13:58:38.513250",
+    "total_items": 61
+  },
+  "content": {
+    "tech": [
+      {
+        "title": "LLMs reward expertise",
+        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
+        "source": "Hacker News",
+        "score": 698
+      },
+      {
+        "title": "Show HN: Run an 80B Qwen in 4.3 GB of RAM on a Mac, and a 35B on an iPhone",
+        "url": "https://github.com/leonickson1/Swiftlet",
+        "source": "Hacker News",
+        "score": 82
+      },
+      {
+        "title": "Amazonian civilization had estimated 3M people in 3% of forest area",
+        "url": "https://www.science.org/content/article/odd-shapes-hidden-dense-amazon-rainforest-reveal-sprawling-ancient-civilization",
+        "source": "Hacker News",
+        "score": 101
+      },
+      {
+        "title": "Ten advances in mathematics and theoretical computer science",
+        "url": "https://openai.com/index/ten-advances-in-mathematics/",
+        "source": "Hacker News",
+        "score": 507
+      },
+      {
+        "title": "Devtools must be open source",
+        "url": "https://blog.exe.dev/devtools-must-be-open-source",
+        "source": "Hacker News",
+        "score": 555
+      },
+      {
+        "title": "Ask HN: Who is hiring? (August 2026)",
+        "url": "https://news.ycombinator.com/item?id=49156683",
+        "source": "Hacker News",
+        "score": 145
+      },
+      {
+        "title": "There Will Come Soft Rains (1950) [pdf]",
+        "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
+        "source": "Hacker News",
+        "score": 95
+      },
+      {
+        "title": "Smaller, faster, safer: running Kimi and GLM at scale",
+        "url": "https://blog.cloudflare.com/smaller-faster-safer-models/",
+        "source": "Hacker News",
+        "score": 188
+      },
+      {
+        "title": "Ask HN: Who wants to be hired? (August 2026)",
+        "url": "https://news.ycombinator.com/item?id=49156682",
+        "source": "Hacker News",
+        "score": 96
+      },
+      {
+        "title": "IPC-7351B Electronic Component Zero Orientation [pdf]",
+        "url": "https://scancad.net/wp-content/uploads/2019/02/zero-orientation-cad-libaray.pdf",
+        "source": "Hacker News",
+        "score": 8
+      },
+      {
+        "title": "Prevent cognitive debt by manually retyping LLM-generated code",
+        "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
+        "source": "Hacker News",
+        "score": 440
+      },
+      {
+        "title": "MiniMax H3 Day-0 Support in ComfyUI: Open Weights, Native Audio, and 2K Video",
+        "url": "https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui",
+        "source": "Hacker News",
+        "score": 280
+      },
+      {
+        "title": "Celebrating 45 Years of Kermit with the First New C-Kermit Release in 15 Years",
+        "url": "https://changelog.complete.org/archives/44456-celebrating-45-years-of-kermit-with-the-first-new-c-kermit-release-in-15-years-and-working-with-a-decades-old-c-codebase",
+        "source": "Hacker News",
+        "score": 150
+      },
+      {
+        "title": "Windows XP 2002 for the Itanium: Unbridled rage",
+        "url": "https://virtuallyfun.com/2026/08/03/windows-xp-2002-for-the-itanium-unbridled-rage/",
+        "source": "Hacker News",
+        "score": 84
+      },
+      {
+        "title": "Andy Pavlo joins ClickHouse to establish ClickHouse Labs",
+        "url": "https://clickhouse.com/blog/andy-pavlo-joins-clickhouse",
+        "source": "Hacker News",
+        "score": 295
+      }
+    ],
+    "ai": [
+      {
+        "title": "LLMs reward expertise",
+        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
+        "source": "Hacker News AI",
+        "score": 698
+      },
+      {
+        "title": "There Will Come Soft Rains (1950) [pdf]",
+        "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
+        "source": "Hacker News AI",
+        "score": 95
+      },
+      {
+        "title": "Prevent cognitive debt by manually retyping LLM-generated code",
+        "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
+        "source": "Hacker News AI",
+        "score": 441
+      },
+      {
+        "title": "Windows XP 2002 for the Itanium: Unbridled rage",
+        "url": "https://virtuallyfun.com/2026/08/03/windows-xp-2002-for-the-itanium-unbridled-rage/",
+        "source": "Hacker News AI",
+        "score": 84
+      },
+      {
+        "title": "Why did we wait so long for the bicycle? (2019)",
+        "url": "https://blog.rootsofprogress.org/why-did-we-wait-so-long-for-the-bicycle",
+        "source": "Hacker News AI",
+        "score": 23
+      },
+      {
+        "title": "Bonsai: Janestreet's UI Library",
+        "url": "https://github.com/janestreet/bonsai",
+        "source": "Hacker News AI",
+        "score": 325
+      },
+      {
+        "title": "AirLLM 70B inference with single 4GB GPU",
+        "url": "https://github.com/lyogavin/airllm",
+        "source": "Hacker News AI",
+        "score": 206
+      },
+      {
+        "title": "What's the largest software project AI can complete on its own?",
+        "url": "https://epoch.ai/MirrorCode",
+        "source": "Hacker News AI",
+        "score": 78
+      },
+      {
+        "title": "SQLite Critical CVEs or LLM Slop?",
+        "url": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/",
+        "source": "Hacker News AI",
+        "score": 706
+      },
+      {
+        "title": "The Potomac River Midair Collision",
+        "url": "https://admiralcloudberg.medium.com/reaping-the-whirlwind-inside-the-potomac-river-midair-collision-0475416f2b0f",
+        "source": "Hacker News AI",
+        "score": 76
+      },
+      {
+        "title": "The AI Productivity Gap",
+        "url": "https://bjorg.bjornroche.com/management/ai-productivity-gap/",
+        "source": "Hacker News AI",
+        "score": 115
+      }
+    ],
+    "news": [
+      {
+        "title": "EU calls for stronger borders after Ceuta migrant crossings",
+        "url": "https://www.bbc.co.uk/news/articles/cyvl84zmgyro?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Russia says seven killed and 40 injured by Ukrainian drone hitting busy beach",
+        "url": "https://www.bbc.co.uk/news/articles/cr7kmnyrdn7o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Iran says it is in talks with Oman but not the US after Trump says negotiations to resume",
+        "url": "https://www.bbc.co.uk/news/articles/c23579jzv08o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ariana Grande has had enough of body comments, but 'scrutiny' will linger",
+        "url": "https://www.bbc.co.uk/news/articles/c3ek7g857q4o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "France wildfires reveal hundreds of WW2 shells in village",
+        "url": "https://www.bbc.co.uk/news/articles/cgmkxjrrwdvo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "I left my wife and twins behind - why this Nigerian man fled South Africa",
+        "url": "https://www.bbc.co.uk/news/articles/c4gx2y454w5o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Watch: Wild police chase in Queensland, Australia ends in two arrests",
+        "url": "https://www.bbc.co.uk/news/videos/c5y0d96qgg3o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      }
+    ],
+    "art": [
+      {
+        "title": " Pepsi shades Coca-Cola in parody rebrand ",
+        "url": "https://www.creativebloq.com/design/branding/pepsi-shades-coca-cola-in-parody-rebrand",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Those biceps on The Odyssey poster aren't Matt Damon's – and they aren't even a man's ",
+        "url": "https://www.creativebloq.com/design/poster-design/those-biceps-on-the-odyssey-poster-arent-matt-damons-and-they-arent-even-a-mans",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Want the same phone as Spider-Man? Just 3 days remain to preorder the Samsung Galaxy Z Flip8 ",
+        "url": "https://www.creativebloq.com/tech/phones-tablets/want-the-same-phone-as-spider-man-just-3-days-remain-to-preorder-the-samsung-galaxy-z-flip8",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Boox Go 6 Gen 2 is a super cute, ultra-portable Kindle alternative – and you can write on it! ",
+        "url": "https://www.creativebloq.com/tech/phones-tablets/boox-go-6-gen-2-review",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Why Spider-Man: Brand New Day's subway scene feels so real ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/why-spider-man-brand-new-days-subway-scene-feels-so-real",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How Stupid Never Dies built one of gaming's freshest art styles by redefining punk from scratch ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/how-stupid-never-dies-built-one-of-gamings-freshest-art-styles-by-redefining-punk-from-scratch",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The MSI Prestige 14 Flip AI+ reaffirms both my likes and dislikes for 2-in-1s ",
+        "url": "https://www.creativebloq.com/tech/laptops/the-msi-prestige-14-flip-ai-reaffirms-both-my-likes-and-dislikes-for-2-in-1s",
+        "source": "Creative Bloq"
+      }
+    ],
+    "science": [
+      {
+        "title": "Your brain may be wired to regain lost weight",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260803080902.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Two new compounds could reveal hidden drivers of Alzheimer’s disease",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260802223437.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists may have found aging’s hidden trigger for brain disease",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260802223433.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists went looking for giant trees in Taiwan and found a lost world",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260802223431.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "These bizarre new beetles look so stretchy scientists named them Luffy",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260802223430.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Ancient Arctic carbon is pouring into the sea, but the seabed captures most of it",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260802223424.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists reveal the hidden force driving the universe’s hottest fluid",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260802223422.htm",
+        "source": "Science Daily"
+      }
+    ],
+    "gaming": [
+      {
+        "title": "Beast of Reincarnation review roundup: Pokémon team's Soulslike can't escape its inspirations",
+        "url": "https://www.polygon.com/beast-reincarnation-review-roundup/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The next Spider-Man movie officially arrives in 10 months, and it doesn't star Tom Holland",
+        "url": "https://www.polygon.com/next-spider-man-movie-2027/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Shrine locations in Beast of Reincarnation",
+        "url": "https://www.polygon.com/beast-of-reincarnation-shrine-locations-dragon-vein-stimpacks/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Armor locations in Beast of Reincarnation",
+        "url": "https://www.polygon.com/beast-of-reincarnation-armor-locations-map-where-to-find/",
+        "source": "Polygon"
+      },
+      {
+        "title": "How to solve the 'Origin of the Ringing' fire puzzle in Beast of Reincarnation",
+        "url": "https://www.polygon.com/beast-of-reincarnation-how-to-light-the-fire-puzzle-origin-ringing-bell/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Generator device locations in Beast of Reincarnation",
+        "url": "https://www.polygon.com/beast-of-reincarnation-generator-device-location-where-to-find/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Electronic brain locations in Beast of Reincarnation",
+        "url": "https://www.polygon.com/beast-of-reincarnation-electronic-brain-location-where-to-find-calculations/",
+        "source": "Polygon"
+      }
+    ],
+    "steam": [],
+    "github": [
+      {
+        "title": "Don’t stop early: Case-folding source code at memory speed",
+        "url": "https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "Stacked sessions and pull requests in the GitHub Copilot app",
+        "url": "https://github.blog/ai-and-ml/github-copilot/stacked-sessions-and-pull-requests-in-the-github-copilot-app/",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "Tame Dependabot: Group your updates, slow the cadence, keep security fast",
+        "url": "https://github.blog/security/supply-chain-security/tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast/",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "Disrupting supply chain attacks on npm and GitHub Actions",
+        "url": "https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "The harness is all you need (mostly)",
+        "url": "https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly/",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "GitHub Copilot app for Beginners: Getting started",
+        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started/",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "The case for a cooldown: Why Dependabot now waits before issuing version updates",
+        "url": "https://github.blog/security/supply-chain-security/the-case-for-a-cooldown-why-dependabot-now-waits-before-issuing-version-updates/",
+        "source": "GitHub Blog"
+      }
+    ]
+  }
+}
