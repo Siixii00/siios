@@ -545,7 +545,7 @@ body.desktop-mode .kakao-bottom-nav {
 }
 
 .kakao-side-menu-overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -561,7 +561,7 @@ body.desktop-mode .kakao-bottom-nav {
 }
 
 .kakao-side-menu {
-    position: fixed;
+    position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
@@ -575,7 +575,7 @@ body.desktop-mode .kakao-bottom-nav {
     flex-direction: column;
     overflow: hidden;
     box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
-    max-height: 100vh;
+    max-height: 100%;
 }
 
 .kakao-side-menu.active {
