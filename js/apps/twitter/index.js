@@ -1262,6 +1262,10 @@ async function refreshFeed(main, pullIndicator) {
         
         const character = await getCharacterContext(selectedCharacterId);
         
+        npcTweets = [];
+        await saveNpcTweets();
+        console.log('[Twitter] 已清空舊推文');
+        
         const sourceAuthors = [...new Set(tweets.map(t => t.author))];
         console.log('[Twitter] 推文作者列表:', sourceAuthors);
         
@@ -1526,17 +1530,20 @@ async function renderTwitterHome() {
 }
 
 async function openCharacterMenu() {
-    const [userMasks, charMasks] = await Promise.all([
+    const [userMasks, charMasks, settings] = await Promise.all([
         UsersDB.getAll(),
-        CharactersDB.getAll()
+        CharactersDB.getAll(),
+        SettingsDB.getAll()
     ]);
+    
+    const avatarGradient = settings.avatarGradient || 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)';
     
     const allOptions = [];
     
     if (userMasks.length > 0) {
         userMasks.forEach(user => {
             allOptions.push({
-                icon: 'person',
+                avatar: avatarGradient,
                 label: user.name || '未命名面具',
                 value: selectedCharacterId === `user_${user.id}` ? '目前' : undefined,
                 onClick: () => {
@@ -1550,7 +1557,7 @@ async function openCharacterMenu() {
     if (charMasks.length > 0) {
         charMasks.forEach(char => {
             allOptions.push({
-                icon: 'user-circle',
+                avatar: avatarGradient,
                 label: char.name || '未命名角色',
                 value: selectedCharacterId === `char_${char.id}` ? '目前' : undefined,
                 onClick: () => {
