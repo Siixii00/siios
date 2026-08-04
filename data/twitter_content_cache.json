@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-04T13:58:38.513250",
-    "total_items": 61
+    "last_updated": "2026-08-04T06:16:47.608685",
+    "total_items": 62
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "LLMs reward expertise",
         "url": "https://www.seangoedecke.com/llms-reward-expertise/",
         "source": "Hacker News",
-        "score": 698
+        "score": 712
       },
       {
         "title": "Show HN: Run an 80B Qwen in 4.3 GB of RAM on a Mac, and a 35B on an iPhone",
         "url": "https://github.com/leonickson1/Swiftlet",
         "source": "Hacker News",
-        "score": 82
+        "score": 93
       },
       {
         "title": "Amazonian civilization had estimated 3M people in 3% of forest area",
         "url": "https://www.science.org/content/article/odd-shapes-hidden-dense-amazon-rainforest-reveal-sprawling-ancient-civilization",
         "source": "Hacker News",
-        "score": 101
+        "score": 105
       },
       {
         "title": "Ten advances in mathematics and theoretical computer science",
         "url": "https://openai.com/index/ten-advances-in-mathematics/",
         "source": "Hacker News",
-        "score": 507
+        "score": 510
       },
       {
         "title": "Devtools must be open source",
         "url": "https://blog.exe.dev/devtools-must-be-open-source",
         "source": "Hacker News",
-        "score": 555
+        "score": 561
       },
       {
         "title": "Ask HN: Who is hiring? (August 2026)",
         "url": "https://news.ycombinator.com/item?id=49156683",
         "source": "Hacker News",
-        "score": 145
+        "score": 149
       },
       {
         "title": "There Will Come Soft Rains (1950) [pdf]",
         "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
         "source": "Hacker News",
-        "score": 95
+        "score": 102
       },
       {
         "title": "Smaller, faster, safer: running Kimi and GLM at scale",
         "url": "https://blog.cloudflare.com/smaller-faster-safer-models/",
         "source": "Hacker News",
-        "score": 188
-      },
-      {
-        "title": "Ask HN: Who wants to be hired? (August 2026)",
-        "url": "https://news.ycombinator.com/item?id=49156682",
-        "source": "Hacker News",
-        "score": 96
+        "score": 191
       },
       {
         "title": "IPC-7351B Electronic Component Zero Orientation [pdf]",
         "url": "https://scancad.net/wp-content/uploads/2019/02/zero-orientation-cad-libaray.pdf",
         "source": "Hacker News",
-        "score": 8
+        "score": 11
+      },
+      {
+        "title": "Apple is getting this wrong",
+        "url": "https://openai.com/index/apple-is-getting-this-wrong/",
+        "source": "Hacker News",
+        "score": 37
+      },
+      {
+        "title": "Ask HN: Who wants to be hired? (August 2026)",
+        "url": "https://news.ycombinator.com/item?id=49156682",
+        "source": "Hacker News",
+        "score": 98
       },
       {
         "title": "Prevent cognitive debt by manually retyping LLM-generated code",
         "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
         "source": "Hacker News",
-        "score": 440
+        "score": 444
+      },
+      {
+        "title": "Nobody checked which state IBM's flagship quantum chemistry results compute",
+        "url": "https://zenodo.org/records/21359923",
+        "source": "Hacker News",
+        "score": 8
       },
       {
         "title": "MiniMax H3 Day-0 Support in ComfyUI: Open Weights, Native Audio, and 2K Video",
         "url": "https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui",
         "source": "Hacker News",
-        "score": 280
+        "score": 284
       },
       {
         "title": "Celebrating 45 Years of Kermit with the First New C-Kermit Release in 15 Years",
         "url": "https://changelog.complete.org/archives/44456-celebrating-45-years-of-kermit-with-the-first-new-c-kermit-release-in-15-years-and-working-with-a-decades-old-c-codebase",
         "source": "Hacker News",
-        "score": 150
-      },
-      {
-        "title": "Windows XP 2002 for the Itanium: Unbridled rage",
-        "url": "https://virtuallyfun.com/2026/08/03/windows-xp-2002-for-the-itanium-unbridled-rage/",
-        "source": "Hacker News",
-        "score": 84
-      },
-      {
-        "title": "Andy Pavlo joins ClickHouse to establish ClickHouse Labs",
-        "url": "https://clickhouse.com/blog/andy-pavlo-joins-clickhouse",
-        "source": "Hacker News",
-        "score": 295
+        "score": 151
       }
     ],
     "ai": [
@@ -101,19 +101,19 @@
         "title": "LLMs reward expertise",
         "url": "https://www.seangoedecke.com/llms-reward-expertise/",
         "source": "Hacker News AI",
-        "score": 698
+        "score": 712
       },
       {
         "title": "There Will Come Soft Rains (1950) [pdf]",
         "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
         "source": "Hacker News AI",
-        "score": 95
+        "score": 102
       },
       {
         "title": "Prevent cognitive debt by manually retyping LLM-generated code",
         "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
         "source": "Hacker News AI",
-        "score": 441
+        "score": 444
       },
       {
         "title": "Windows XP 2002 for the Itanium: Unbridled rage",
@@ -125,25 +125,25 @@
         "title": "Why did we wait so long for the bicycle? (2019)",
         "url": "https://blog.rootsofprogress.org/why-did-we-wait-so-long-for-the-bicycle",
         "source": "Hacker News AI",
-        "score": 23
+        "score": 25
       },
       {
         "title": "Bonsai: Janestreet's UI Library",
         "url": "https://github.com/janestreet/bonsai",
         "source": "Hacker News AI",
-        "score": 325
+        "score": 328
       },
       {
         "title": "AirLLM 70B inference with single 4GB GPU",
         "url": "https://github.com/lyogavin/airllm",
         "source": "Hacker News AI",
-        "score": 206
+        "score": 207
       },
       {
         "title": "What's the largest software project AI can complete on its own?",
         "url": "https://epoch.ai/MirrorCode",
         "source": "Hacker News AI",
-        "score": 78
+        "score": 80
       },
       {
         "title": "SQLite Critical CVEs or LLM Slop?",
@@ -161,7 +161,13 @@
         "title": "The AI Productivity Gap",
         "url": "https://bjorg.bjornroche.com/management/ai-productivity-gap/",
         "source": "Hacker News AI",
-        "score": 115
+        "score": 116
+      },
+      {
+        "title": "Train Simulator Controller",
+        "url": "https://z80.me/blog/tsc-2026-july/",
+        "source": "Hacker News AI",
+        "score": 101
       }
     ],
     "news": [
@@ -203,6 +209,11 @@
     ],
     "art": [
       {
+        "title": " This old-school game design optical illusion is still blowing people's minds ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/this-old-school-optical-illusion-game-design-hack-still-amazes-people-today",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Pepsi shades Coca-Cola in parody rebrand ",
         "url": "https://www.creativebloq.com/design/branding/pepsi-shades-coca-cola-in-parody-rebrand",
         "source": "Creative Bloq"
@@ -230,11 +241,6 @@
       {
         "title": " How Stupid Never Dies built one of gaming's freshest art styles by redefining punk from scratch ",
         "url": "https://www.creativebloq.com/3d/video-game-design/how-stupid-never-dies-built-one-of-gamings-freshest-art-styles-by-redefining-punk-from-scratch",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The MSI Prestige 14 Flip AI+ reaffirms both my likes and dislikes for 2-in-1s ",
-        "url": "https://www.creativebloq.com/tech/laptops/the-msi-prestige-14-flip-ai-reaffirms-both-my-likes-and-dislikes-for-2-in-1s",
         "source": "Creative Bloq"
       }
     ],
