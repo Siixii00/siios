@@ -19,6 +19,53 @@ const followingCache = new Map();
 
 const DEFAULT_AVATAR = 'linear-gradient(135deg, #2d89ef, #8ec5ff)';
 
+const BLOCKED_KEYWORDS = [
+    'racist', 'racism', 'sexist', 'sexism', 
+    'nazi', 'hitler', 'holocaust',
+    'terrorist', 'terrorism', 'isis',
+    'pedophile', 'pedophilia',
+    'suicide', 'kill yourself',
+    'hate speech', 'discrimination',
+    'kkk', 'white supremacy',
+    'genocide', 'ethnic cleansing',
+    '人身攻擊', '仇恨言論', '種族歧視',
+    '性別歧視', '暴力', '恐怖主義',
+    '納粹', '種族滅絕'
+];
+
+const SENSITIVE_POLITICS = [
+    'election fraud', 'rigged election',
+    'conspiracy theory', 'deep state',
+    'qanon', 'pizzagate',
+    'antifa', 'blm riots',
+    'capitol riot', 'insurrection',
+    'impeach', 'impeachment',
+    'trump 2024', 'biden crime family',
+    'fake news', 'mainstream media lies',
+    '選舉舞弊', '陰謀論', '政治鬥爭',
+    '政變', '煽動', '暴動'
+];
+
+function isContentBlocked(title) {
+    const titleLower = title.toLowerCase();
+    
+    for (const keyword of BLOCKED_KEYWORDS) {
+        if (titleLower.includes(keyword.toLowerCase())) {
+            console.warn(`[Twitter] 阻擋敏感內容: "${title}" (關鍵字: ${keyword})`);
+            return true;
+        }
+    }
+    
+    for (const keyword of SENSITIVE_POLITICS) {
+        if (titleLower.includes(keyword.toLowerCase())) {
+            console.warn(`[Twitter] 阻擋政治敏感內容: "${title}" (關鍵字: ${keyword})`);
+            return true;
+        }
+    }
+    
+    return false;
+}
+
 async function fetchRealContentForCategory(category) {
     const sources = {
         '科技': 'https://hacker-news.firebaseio.com/v0/topstories.json',
@@ -37,7 +84,7 @@ async function fetchRealContentForCategory(category) {
         if (endpoint.includes('hacker-news')) {
             const response = await fetch(endpoint);
             const ids = await response.json();
-            const topIds = ids.slice(0, 10);
+            const topIds = ids.slice(0, 15);
             
             const stories = await Promise.all(
                 topIds.map(async id => {
@@ -52,15 +99,33 @@ async function fetchRealContentForCategory(category) {
                 })
             );
             
+            const validStories = stories.filter(s => !isContentBlocked(s.title));
+            
             if (category === 'AI') {
-                const aiKeywords = ['ai', 'llm', 'gpt', 'machine learning', 'neural', 'chatbot', 'openai', 'claude', 'deep learning'];
-                const aiStories = stories.filter(s => 
+                const aiKeywords = [
+                    'ai', 'llm', 'gpt', 'machine learning', 'neural', 
+                    'chatbot', 'openai', 'claude', 'deep learning',
+                    'text to speech', 'tts', 'speech synthesis', 'voice cloning',
+                    'stable diffusion', 'midjourney', 'dall-e', 'image generation',
+                    'embedding', 'transformer', 'bert', 'diffusion model',
+                    'artificial intelligence', 'nlp', 'computer vision',
+                    'reinforcement learning', 'gan', 'autoencoder',
+                    'langchain', 'hugging face', 'anthropic', 'mistral',
+                    'gemini', 'copilot', 'codex', 'whisper',
+                    'retro', 'rag', 'fine-tuning', 'prompt engineering',
+                    'multimodal', 'vision language model', 'vlm',
+                    'voice recognition', 'speech to text', 'stt',
+                    'sora', 'runway', 'pika', 'video generation',
+                    'musicgen', 'audio generation', 'audiocraft'
+                ];
+                
+                const aiStories = validStories.filter(s => 
                     aiKeywords.some(k => s.title.toLowerCase().includes(k))
                 );
-                return aiStories.length > 0 ? aiStories : stories.slice(0, 5);
+                return aiStories.length > 0 ? aiStories : validStories.slice(0, 5);
             }
             
-            return stories.slice(0, 5);
+            return validStories.slice(0, 5);
         } else if (endpoint.includes('steampowered.com')) {
             const response = await fetch(endpoint);
             const text = await response.text();
@@ -70,19 +135,23 @@ async function fetchRealContentForCategory(category) {
             let count = 0;
             
             for (const match of matches) {
-                if (count >= 5) break;
+                if (count >= 7) break;
                 
-                const item = match[1];
+                const itemText = match[1];
                 const titleMatch = itemText.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/);
                 const linkMatch = itemText.match(/<link>(.*?)<\/link>/);
                 
                 if (titleMatch && linkMatch) {
-                    items.push({
-                        title: titleMatch[1].trim(),
-                        url: linkMatch[1].trim(),
-                        source: 'Steam News'
-                    });
-                    count++;
+                    const title = titleMatch[1].trim();
+                    
+                    if (!isContentBlocked(title)) {
+                        items.push({
+                            title: title,
+                            url: linkMatch[1].trim(),
+                            source: 'Steam News'
+                        });
+                        count++;
+                    }
                 }
             }
             
@@ -96,19 +165,23 @@ async function fetchRealContentForCategory(category) {
             let count = 0;
             
             for (const match of matches) {
-                if (count >= 5) break;
+                if (count >= 7) break;
                 
                 const item = match[1];
                 const titleMatch = item.match(/<title>(.*?)<\/title>/);
                 const linkMatch = item.match(/<link>(.*?)<\/link>/);
                 
                 if (titleMatch && linkMatch) {
-                    items.push({
-                        title: titleMatch[1].trim(),
-                        url: linkMatch[1].trim(),
-                        source: category
-                    });
-                    count++;
+                    const title = titleMatch[1].trim();
+                    
+                    if (!isContentBlocked(title)) {
+                        items.push({
+                            title: title,
+                            url: linkMatch[1].trim(),
+                            source: category
+                        });
+                        count++;
+                    }
                 }
             }
             
@@ -129,7 +202,7 @@ function analyzeCharacterInterests(personality) {
         '藝術': ['藝術', '設計', '畫家', '音樂', '創作', '繪畫'],
         '科學': ['科學', '研究', '學者', '實驗', '物理', '化學', '生物'],
         '遊戲': ['遊戲', '玩家', '動漫', 'gamer', 'anime'],
-        'AI': ['ai', '機器學習', 'artificial', '智能', 'gpt', 'llm'],
+        'AI': ['ai', '機器學習', 'artificial', '智能', 'gpt', 'llm', '語音合成', '影像生成', '模型'],
         'Steam': ['steam', 'steam遊戲', '遊戲'],
         'GitHub': ['github', '開源', 'open source', '程式']
     };
