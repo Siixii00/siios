@@ -304,11 +304,11 @@ body.desktop-mode .kakao-bottom-nav {
     min-height: 36px;
     padding: 13px 12px 0 12px;
     border-radius: 18px;
-    border: 1px solid #E5E5E5;
-    background: #F5F5F5;
+    border: 1px solid var(--kakao-input-border, #E5E5E5);
+    background: var(--kakao-input-bg, #F5F5F5);
     font-size: 15px;
     font-family: var(--font-kakao);
-    color: #000000;
+    color: var(--kakao-input-text, #000000);
     resize: none;
     max-height: 100px;
     line-height: 1.4;

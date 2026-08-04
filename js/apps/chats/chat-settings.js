@@ -4,11 +4,11 @@ import { SettingsDB, ChatsDB, TheaterSettingsDB, CharactersDB, MCPConfigDB } fro
 import { CHATS_TABS } from './chats-nav.js';
 
 const THEMES = [
-    { id: 'light', name: '淺色', vars: { chatBg: '#FAF9F6', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#FEE500', bubbleRightText: '#625B71', inputBg: '#F5F5F5' } },
-    { id: 'dark', name: '深色', vars: { chatBg: '#1C1C1E', bubbleLeftBg: '#2C2C2E', bubbleLeftText: '#FFFFFF', bubbleRightBg: '#3A3A3C', bubbleRightText: '#FFFFFF', inputBg: '#2C2C2E' } },
-    { id: 'pink', name: '粉色', vars: { chatBg: '#FFF0F5', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#333333', bubbleRightBg: '#FFB6C1', bubbleRightText: '#8B0A50', inputBg: '#FFE4E9' } },
-    { id: 'blue', name: '藍色', vars: { chatBg: '#E8F4FD', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#B3C7D5', bubbleRightText: '#1D1B20', inputBg: '#D6E6F4' } },
-    { id: 'green', name: '綠色', vars: { chatBg: '#E8F5E9', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#A5D6A7', bubbleRightText: '#1B5E20', inputBg: '#C8E6C9' } }
+    { id: 'light', name: '淺色', vars: { chatBg: '#FAF9F6', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#FEE500', bubbleRightText: '#625B71', inputBg: '#F5F5F5', inputText: '#000000' } },
+    { id: 'dark', name: '深色', vars: { chatBg: '#1C1C1E', bubbleLeftBg: '#2C2C2E', bubbleLeftText: '#FFFFFF', bubbleRightBg: '#3A3A3C', bubbleRightText: '#FFFFFF', inputBg: '#2C2C2E', inputText: '#FFFFFF' } },
+    { id: 'pink', name: '粉色', vars: { chatBg: '#FFF0F5', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#333333', bubbleRightBg: '#FFB6C1', bubbleRightText: '#8B0A50', inputBg: '#FFE4E9', inputText: '#333333' } },
+    { id: 'blue', name: '藍色', vars: { chatBg: '#E8F4FD', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#B3C7D5', bubbleRightText: '#1D1B20', inputBg: '#D6E6F4', inputText: '#000000' } },
+    { id: 'green', name: '綠色', vars: { chatBg: '#E8F5E9', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#A5D6A7', bubbleRightText: '#1B5E20', inputBg: '#C8E6C9', inputText: '#000000' } }
 ];
 
 let currentTheme = 'light';
@@ -31,6 +31,7 @@ function applyThemeToRoot(vars) {
     root.style.setProperty('--kakao-bubble-right-bg', vars.bubbleRightBg);
     root.style.setProperty('--kakao-bubble-right-text', vars.bubbleRightText);
     root.style.setProperty('--kakao-input-bg', vars.inputBg);
+    root.style.setProperty('--kakao-input-text', vars.inputText || '#000000');
 }
 
 function updatePreview(previewBox, vars) {
@@ -221,7 +222,8 @@ async function renderChatSettings() {
             bubbleLeftText: '#000000',
             bubbleRightBg: '#FEE500',
             bubbleRightText: '#625B71',
-            inputBg: '#F5F5F5'
+            inputBg: '#F5F5F5',
+            inputText: '#000000'
         };
 
         const colorInputs = {};
@@ -273,6 +275,14 @@ async function renderChatSettings() {
             applyThemeToRoot(customTheme);
         });
         customBox.appendChild(colorInputs.inputBg);
+
+        colorInputs.inputText = createColorPicker('輸入區域文字', defaults.inputText, async (val) => {
+            defaults.inputText = val;
+            customTheme = { ...defaults };
+            await SettingsDB.set('chat_custom_theme', customTheme);
+            applyThemeToRoot(customTheme);
+        });
+        customBox.appendChild(colorInputs.inputText);
 
         customSection.appendChild(customBox);
         main.appendChild(customSection);

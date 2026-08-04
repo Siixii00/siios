@@ -67,6 +67,39 @@ function isContentBlocked(title) {
 }
 
 async function fetchRealContentForCategory(category) {
+    console.log('[Twitter] 嘗試從快取載入內容，類別:', category);
+    
+    try {
+        const cacheResponse = await fetch('data/twitter_content_cache.json');
+        if (cacheResponse.ok) {
+            const cacheData = await cacheResponse.json();
+            console.log('[Twitter] 快取載入成功，最後更新:', cacheData.metadata?.last_updated);
+            
+            const categoryMap = {
+                '科技': 'tech',
+                '新聞': 'news',
+                '藝術': 'art',
+                '科學': 'science',
+                '遊戲': 'gaming',
+                'AI': 'ai',
+                'Steam': 'steam',
+                'GitHub': 'github'
+            };
+            
+            const cacheKey = categoryMap[category] || 'tech';
+            const cachedContent = cacheData.content?.[cacheKey] || [];
+            
+            if (cachedContent.length > 0) {
+                console.log(`[Twitter] 從快取返回 ${cachedContent.length} 則 ${category} 內容`);
+                return cachedContent;
+            }
+        }
+    } catch (error) {
+        console.warn('[Twitter] 快取載入失敗，改用即時抓取:', error);
+    }
+    
+    console.log('[Twitter] 執行即時抓取...');
+    
     const sources = {
         '科技': 'https://hacker-news.firebaseio.com/v0/topstories.json',
         '新聞': 'https://feeds.bbci.co.uk/news/world/rss.xml',
@@ -334,9 +367,13 @@ ${memoryText}
 }
 
 async function generateRecommendedTweets(selectedCharacterId) {
+    console.log('[Twitter] generateRecommendedTweets 被調用，角色ID:', selectedCharacterId);
+    
     const character = await getCharacterContext(selectedCharacterId);
+    console.log('[Twitter] 獲取到的角色:', character);
     
     if (!character) {
+        console.warn('[Twitter] 未找到角色，請先選擇角色');
         createToast('請先選擇角色');
         return [];
     }
@@ -345,6 +382,7 @@ async function generateRecommendedTweets(selectedCharacterId) {
     console.log(`[Twitter] 角色 ${character.name} 興趣類別: ${interestCategory}`);
     
     let realContent = await fetchRealContentForCategory(interestCategory);
+    console.log('[Twitter] 抓取到的真實內容數量:', realContent.length);
     
     const shouldAddAIContent = Math.random() < 0.3;
     if (shouldAddAIContent && interestCategory !== 'AI') {
@@ -359,6 +397,11 @@ async function generateRecommendedTweets(selectedCharacterId) {
     }
     
     const settings = await SettingsDB.getAll();
+    console.log('[Twitter] API 設定:', { 
+        hasApiUrl: !!settings.api_url, 
+        hasApiKey: !!settings.api_key,
+        model: settings.model 
+    });
     
     if (!settings.api_url || !settings.api_key) {
         console.warn('[Twitter] 未設定 API，直接使用真實內容');
@@ -988,15 +1031,26 @@ function stopNotificationSystem() {
 }
 
 async function renderFeed(container) {
+    console.log('[Twitter] renderFeed 被調用');
+    
     const profile = await getProfile();
     const npcFollows = await getNpcFollows();
+    
+    console.log('[Twitter] 用戶推文數量:', userTweets.length);
+    console.log('[Twitter] NPC 推文數量:', npcTweets.length);
+    console.log('[Twitter] 追蹤的 NPC:', npcFollows);
     
     let all = [...userTweets];
     
     if (npcFollows.length > 0) {
         const followedNpcTweets = npcTweets.filter(t => npcFollows.includes(t.author));
+        console.log('[Twitter] 已追蹤 NPC 的推文數量:', followedNpcTweets.length);
         all = [...all, ...followedNpcTweets];
+    } else {
+        console.log('[Twitter] 未追蹤任何 NPC，只顯示用戶推文');
     }
+    
+    console.log('[Twitter] 總推文數量:', all.length);
     
     const bookmarkIds = new Set(bookmarks.map(b => b.id || b.timestamp));
     const userIds = new Set(userTweets.map(t => t.id || t.timestamp));
@@ -1158,9 +1212,21 @@ async function refreshFeed(main, pullIndicator) {
     pullIndicator.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 載入中...';
     pullIndicator.classList.add('active');
     
+    console.log('[Twitter] 開始刷新推文');
+    console.log('[Twitter] 當前選中角色:', selectedCharacterId);
+    
     try {
         const tweets = await generateRecommendedTweets(selectedCharacterId);
+        console.log('[Twitter] 生成的推文數量:', tweets.length);
+        console.log('[Twitter] 推文內容:', tweets);
+        
+        if (tweets.length === 0) {
+            createToast('未生成任何推文，請檢查角色設定或網路連線');
+            return;
+        }
+        
         tweets.forEach(tweet => {
+            console.log('[Twitter] 添加推文:', tweet.author, '-', tweet.content.substring(0, 30));
             npcTweets.unshift({
                 id: Date.now().toString() + Math.random(),
                 author: tweet.author,
@@ -1171,6 +1237,7 @@ async function refreshFeed(main, pullIndicator) {
             });
         });
         await saveNpcTweets();
+        console.log('[Twitter] 保存後的 npcTweets 數量:', npcTweets.length);
         
         const feed = main.querySelector('.feed');
         if (feed) {

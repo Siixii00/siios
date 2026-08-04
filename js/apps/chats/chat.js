@@ -22,6 +22,7 @@ async function applyCustomTheme() {
         root.style.setProperty('--kakao-bubble-right-bg', theme.bubbleRightBg);
         root.style.setProperty('--kakao-bubble-right-text', theme.bubbleRightText);
         root.style.setProperty('--kakao-input-bg', theme.inputBg);
+        root.style.setProperty('--kakao-input-text', theme.inputText || '#000000');
     }
 }
 
