@@ -71,9 +71,12 @@ async function fetchRealContentForCategory(category) {
     
     try {
         const cacheResponse = await fetch('data/twitter_content_cache.json');
+        console.log('[Twitter] 快取檔案回應狀態:', cacheResponse.status, cacheResponse.ok);
+        
         if (cacheResponse.ok) {
             const cacheData = await cacheResponse.json();
             console.log('[Twitter] 快取載入成功，最後更新:', cacheData.metadata?.last_updated);
+            console.log('[Twitter] 快取中的類別:', Object.keys(cacheData.content || {}));
             
             const categoryMap = {
                 '科技': 'tech',
@@ -87,15 +90,23 @@ async function fetchRealContentForCategory(category) {
             };
             
             const cacheKey = categoryMap[category] || 'tech';
+            console.log('[Twitter] 查詢類別:', category, '-> 快取鍵:', cacheKey);
+            
             const cachedContent = cacheData.content?.[cacheKey] || [];
+            console.log('[Twitter] 找到的內容數量:', cachedContent.length);
             
             if (cachedContent.length > 0) {
-                console.log(`[Twitter] 從快取返回 ${cachedContent.length} 則 ${category} 內容`);
+                console.log(`[Twitter] ✅ 從快取返回 ${cachedContent.length} 則 ${category} 內容`);
+                console.log('[Twitter] 前 3 則內容:', cachedContent.slice(0, 3).map(c => c.title));
                 return cachedContent;
+            } else {
+                console.warn('[Twitter] 快取中該類別無內容');
             }
+        } else {
+            console.warn('[Twitter] 快取檔案無法載入，狀態:', cacheResponse.status);
         }
     } catch (error) {
-        console.warn('[Twitter] 快取載入失敗，改用即時抓取:', error);
+        console.error('[Twitter] 快取載入錯誤:', error);
     }
     
     console.log('[Twitter] 執行即時抓取...');
@@ -404,12 +415,17 @@ async function generateRecommendedTweets(selectedCharacterId) {
     });
     
     if (!settings.api_url || !settings.api_key) {
-        console.warn('[Twitter] 未設定 API，直接使用真實內容');
-        return realContent.map(content => ({
+        console.log('[Twitter] ✅ 未設定 API，直接使用真實內容（共', realContent.length, '則）');
+        console.log('[Twitter] 內容來源:', realContent.map(c => c.source));
+        const tweets = realContent.map(content => ({
             author: character.name,
             content: `【分享】${content.title}`,
-            stats: { reply: Math.floor(Math.random() * 10), retweet: Math.floor(Math.random() * 20), like: Math.floor(Math.random() * 50) }
+            stats: { reply: Math.floor(Math.random() * 10), retweet: Math.floor(Math.random() * 20), like: Math.floor(Math.random() * 50) },
+            source: content.source,
+            url: content.url
         }));
+        console.log('[Twitter] 生成的推文:', tweets);
+        return tweets;
     }
     
     const contentDesc = realContent.map((c, i) => `${i + 1}. ${c.title}`).join('\n');
