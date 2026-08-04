@@ -1269,10 +1269,14 @@ async function refreshFeed(main, pullIndicator) {
         await saveNpcTweets();
         console.log('[Twitter] 保存後的 npcTweets 數量:', npcTweets.length);
         
-        const feed = main.querySelector('.feed');
+        const feed = main.querySelector('.feed-container');
         if (feed) {
+            console.log('[Twitter] 找到 feed-container，開始重新渲染');
             feed.innerHTML = '';
             await renderFeed(feed);
+            console.log('[Twitter] 重新渲染完成');
+        } else {
+            console.error('[Twitter] 找不到 feed-container');
         }
         
         main.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1324,7 +1328,7 @@ async function renderTwitterHome() {
         tab.onclick = () => {
             activeTab = tab.dataset.tab;
             tabs.querySelectorAll('.tab').forEach(t => t.classList.toggle('active', t.dataset.tab === activeTab));
-            const feed = main.querySelector('.feed');
+            const feed = main.querySelector('.feed-container');
             if (feed) {
                 feed.innerHTML = '';
                 renderFeed(feed);
