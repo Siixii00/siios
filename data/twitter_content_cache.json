@@ -1,178 +1,184 @@
 {
   "metadata": {
-    "last_updated": "2026-08-04T15:25:07.826585",
-    "total_items": 61
+    "last_updated": "2026-08-04T17:50:04.704709",
+    "total_items": 54
   },
   "content": {
     "tech": [
       {
-        "title": "Ray Bradbury's \"There Will Come Soft Rains\" is set today (2026-08-04)",
-        "url": "https://short-stories.co/@raybradbury/there-will-come-soft-rains-6k8vr4xxlnmj",
+        "title": "Show HN: Simple algorithm and color space to generate diverse skin tones",
+        "url": "https://toneyalexander.github.io/inclusive-color-space/",
         "source": "Hacker News",
-        "score": 319
-      },
-      {
-        "title": "FFmpeg 9.0",
-        "url": "https://jbkempf.com/blog/2026/ffmpeg-9.0/",
-        "source": "Hacker News",
-        "score": 19
+        "score": 212
       },
       {
         "title": "DeepSeek V4 Flash on a Single AMD MI300X",
         "url": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
         "source": "Hacker News",
-        "score": 230
-      },
-      {
-        "title": "Agent skills that bring team coding standards to Claude Code and Codex",
-        "url": "https://github.com/tikalk/adlc-team-skills",
-        "source": "Hacker News",
-        "score": 28
-      },
-      {
-        "title": "Dates That Don't Exist (2015)",
-        "url": "https://blog.yossarian.net/2015/06/09/Dates-That-Dont-Exist",
-        "source": "Hacker News",
-        "score": 31
-      },
-      {
-        "title": "Xbox goes down. You can't play games you own on disc",
-        "url": "https://birchtree.me/blog/xbox-goes-down-you-cant-play-games-you-own-on-disc/",
-        "source": "Hacker News",
-        "score": 297
-      },
-      {
-        "title": "LLMs reward expertise",
-        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
-        "source": "Hacker News",
-        "score": 1186
+        "score": 286
       },
       {
         "title": "Keyv and friends compromised in active Shai-Hulud supply chain attack",
         "url": "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack",
         "source": "Hacker News",
-        "score": 92
+        "score": 159
+      },
+      {
+        "title": "Apple says more ex-employees may have taken confidential data to OpenAI",
+        "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
+        "source": "Hacker News",
+        "score": 123
+      },
+      {
+        "title": "Online ad giant Adform was hacked, proving once again why ad blockers are needed",
+        "url": "https://this.weekinsecurity.com/online-advertising-giant-adform-was-hacked-proving-once-again-why-ad-blockers-are-necessary/",
+        "source": "Hacker News",
+        "score": 116
       },
       {
         "title": "Buckminster Fuller: everything I know",
         "url": "https://www.bfi.org/about-fuller/everything-i-know/",
         "source": "Hacker News",
-        "score": 65
+        "score": 95
       },
       {
-        "title": "Show HN: Fine-tune an 8B model on a 4 GB laptop GPU",
-        "url": "https://github.com/MakazhanAlpamys/Soup",
+        "title": "Dates That Don't Exist (2015)",
+        "url": "https://blog.yossarian.net/2015/06/09/Dates-That-Dont-Exist",
         "source": "Hacker News",
-        "score": 65
+        "score": 74
+      },
+      {
+        "title": "Truemetrics (YC S23) Is Hiring in Berlin – GTM Lead",
+        "url": "https://www.ycombinator.com/companies/truemetrics/jobs/bIQQ7tP-founding-gtm-lead",
+        "source": "Hacker News",
+        "score": 1
       },
       {
         "title": "Harness Engineering for Self-Improvement",
         "url": "https://lilianweng.github.io/posts/2026-07-04-harness/",
         "source": "Hacker News",
-        "score": 183
+        "score": 233
+      },
+      {
+        "title": "Germany Records Historic 12B KWh Solar Feed-In in July 2026",
+        "url": "https://solarquarter.com/2026/08/03/germany-records-historic-12-billion-kwh-solar-feed-in-in-july-2026/",
+        "source": "Hacker News",
+        "score": 106
+      },
+      {
+        "title": "Xbox goes down. You can't play games you own on disc",
+        "url": "https://birchtree.me/blog/xbox-goes-down-you-cant-play-games-you-own-on-disc/",
+        "source": "Hacker News",
+        "score": 414
+      },
+      {
+        "title": "Looking inside a 1970s PROM chip that stores data in microscopic fuses (2019)",
+        "url": "https://www.righto.com/2019/07/looking-inside-1970s-prom-chip-that.html",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Show HN: Fine-tune an 8B model on a 4 GB laptop GPU",
+        "url": "https://github.com/MakazhanAlpamys/Soup",
+        "source": "Hacker News",
+        "score": 94
       },
       {
         "title": "Why Large Language Models Fail at Tabular Prediction",
         "url": "https://arxiv.org/abs/2608.02412",
         "source": "Hacker News",
-        "score": 53
-      },
-      {
-        "title": "Roame (YC S23) Is Hiring Lead Engineer",
-        "url": "https://www.ycombinator.com/companies/roame/jobs/mqqfa38-lead-full-stack-engineer",
-        "source": "Hacker News",
-        "score": 1
+        "score": 78
       },
       {
         "title": "Why etymologies matter: How tracing words can illuminate history (2024)",
         "url": "https://resobscura.substack.com/p/why-i-love-etymologies",
         "source": "Hacker News",
-        "score": 48
-      },
-      {
-        "title": "Rebuilding and analysing 4 years of Wordle stats from WhatsApp chat logs",
-        "url": "https://blog.omgmog.net/post/rebuilding-wordle-stats-from-whatsapp/",
-        "source": "Hacker News",
-        "score": 7
+        "score": 77
       }
     ],
     "ai": [
       {
-        "title": "Ray Bradbury's \"There Will Come Soft Rains\" is set today (2026-08-04)",
-        "url": "https://short-stories.co/@raybradbury/there-will-come-soft-rains-6k8vr4xxlnmj",
-        "source": "Hacker News AI",
-        "score": 319
-      },
-      {
-        "title": "Agent skills that bring team coding standards to Claude Code and Codex",
-        "url": "https://github.com/tikalk/adlc-team-skills",
-        "source": "Hacker News AI",
-        "score": 28
-      },
-      {
-        "title": "LLMs reward expertise",
-        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
-        "source": "Hacker News AI",
-        "score": 1188
-      },
-      {
         "title": "Keyv and friends compromised in active Shai-Hulud supply chain attack",
         "url": "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack",
         "source": "Hacker News AI",
-        "score": 93
+        "score": 159
       },
       {
-        "title": "Why Large Language Models Fail at Tabular Prediction",
-        "url": "https://arxiv.org/abs/2608.02412",
+        "title": "Apple says more ex-employees may have taken confidential data to OpenAI",
+        "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
         "source": "Hacker News AI",
-        "score": 53
-      },
-      {
-        "title": "AI-Generated Images Discourage Me from Reading Your Blog",
-        "url": "https://nelson.cloud/ai-generated-images-discourage-me-from-reading-your-blog/",
-        "source": "Hacker News AI",
-        "score": 543
-      },
-      {
-        "title": "Homebench – Benchmark local LLMs for speed, memory, and quality",
-        "url": "https://github.com/david-g-3654/homebench",
-        "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "There Will Come Soft Rains (1950) [pdf]",
-        "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
-        "source": "Hacker News AI",
-        "score": 267
-      },
-      {
-        "title": "That time when I failed the Microsoft interview",
-        "url": "https://ochagavia.nl/blog/that-time-when-i-failed-the-microsoft-interview/",
-        "source": "Hacker News AI",
-        "score": 109
+        "score": 123
       },
       {
         "title": "Online ad giant Adform was hacked, proving once again why ad blockers are needed",
         "url": "https://this.weekinsecurity.com/online-advertising-giant-adform-was-hacked-proving-once-again-why-ad-blockers-are-necessary/",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 116
       },
       {
-        "title": "Bonsai: Janestreet's UI Library",
-        "url": "https://github.com/janestreet/bonsai",
+        "title": "Why Large Language Models Fail at Tabular Prediction",
+        "url": "https://arxiv.org/abs/2608.02412",
         "source": "Hacker News AI",
-        "score": 371
+        "score": 78
+      },
+      {
+        "title": "LLMs reward expertise",
+        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
+        "source": "Hacker News AI",
+        "score": 1266
+      },
+      {
+        "title": "The AI Demand Bubble",
+        "url": "https://www.wheresyoured.at/the-ai-demand-bubble/",
+        "source": "Hacker News AI",
+        "score": 69
+      },
+      {
+        "title": "Homebench – Benchmark local LLMs for speed, memory, and quality",
+        "url": "https://github.com/david-g-3654/homebench",
+        "source": "Hacker News AI",
+        "score": 49
+      },
+      {
+        "title": "There Will Come Soft Rains (1950) [pdf]",
+        "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
+        "source": "Hacker News AI",
+        "score": 293
+      },
+      {
+        "title": "It's not a fear of \"AI communism\"; it's a fear of competitive market capitalism",
+        "url": "http://observationalepidemiology.blogspot.com/2026/07/its-not-fear-of-ai-communism-its-fear.html",
+        "source": "Hacker News AI",
+        "score": 10
+      },
+      {
+        "title": "AI-Generated Images Discourage Me from Reading Your Blog",
+        "url": "https://nelson.cloud/ai-generated-images-discourage-me-from-reading-your-blog/",
+        "source": "Hacker News AI",
+        "score": 645
+      },
+      {
+        "title": "That time when I failed the Microsoft interview",
+        "url": "https://ochagavia.nl/blog/that-time-when-i-failed-the-microsoft-interview/",
+        "source": "Hacker News AI",
+        "score": 120
+      },
+      {
+        "title": "When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation",
+        "url": "https://arxiv.org/abs/2602.16763",
+        "source": "Hacker News AI",
+        "score": 32
       }
     ],
     "news": [
       {
-        "title": "Oil prices fall on hopes Strait of Hormuz could reopen",
-        "url": "https://www.bbc.co.uk/news/articles/cpw9v0gnzxwo?at_medium=RSS&at_campaign=rss",
+        "title": "Video shows Russian drone chasing Ukrainian street vendor in 'human safari' attack",
+        "url": "https://www.bbc.co.uk/news/articles/cn4n03xg981o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Qatar says US-Iran mediation efforts continuing but no direct talks planned",
-        "url": "https://www.bbc.co.uk/news/articles/c1l1q9n3v15o?at_medium=RSS&at_campaign=rss",
+        "title": "Oil prices fall on hopes Strait of Hormuz could reopen",
+        "url": "https://www.bbc.co.uk/news/articles/cpw9v0gnzxwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -181,13 +187,8 @@
         "source": "BBC World"
       },
       {
-        "title": "More than 150 migrants rescued after boat catches fire in Channel",
+        "title": "More than 170 migrants rescued after boat catches fire in Channel",
         "url": "https://www.bbc.co.uk/news/articles/c4gkpeppjyqo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Analysis: Trump challenged by cold reality from top allies",
-        "url": "https://www.bbc.co.uk/news/articles/cgjed2q2l0xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -201,43 +202,7 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " Autodesk tackles AI filmmaking's biggest problem by offering 3D control ",
-        "url": "https://www.creativebloq.com/3d/autodesk-tackles-ai-filmmakings-biggest-problem-with-3d-control",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This MacBook charger has a tiny pixel display and is 15% off – Apple fans are going to love it ",
-        "url": "https://www.creativebloq.com/tech/accessories/this-macbook-charger-has-a-tiny-pixel-display-and-is-15-percent-off-apple-fans-are-going-to-love-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " I’m obsessed with Boox e-ink tablets right now – here's how to get one on sale ",
-        "url": "https://www.creativebloq.com/tech/phones-tablets/im-obsessed-with-boox-e-ink-tablets-right-now-heres-how-to-get-one-on-sale",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This AI smartphone can pull off Hitchcock's hardest camera trick in Vertigo without a film crew ",
-        "url": "https://www.creativebloq.com/entertainment/videography/the-honor-600-smartphone-can-pull-off-hitchcocks-hardest-camera-trick-without-a-film-crew-and-thats-not-all",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This new 3D and UV printer hybrid from HeyGears just passed $10 million on Kickstarter and looks sensational ",
-        "url": "https://www.creativebloq.com/3d/3d-printing/this-new-3d-and-uv-printer-hybrid-from-heygears-just-passed-usd10-million-on-kickstarter-and-looks-sensational",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apple seems to be rebranding itself as a subscription service. I wish it wouldn't ",
-        "url": "https://www.creativebloq.com/design/apple-seems-to-be-rebranding-itself-as-a-subscription-service-i-wish-it-wouldnt",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " MSI Claw 8 EX AI+ review: the handheld PC that finally makes sense to a console gamer ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/msi-claw-8-ex-ai-review-the-handheld-pc-that-finally-makes-sense-to-a-console-gamer",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "This hydrogen turbine turns controlled explosions into electricity",
@@ -277,43 +242,48 @@
     ],
     "gaming": [
       {
-        "title": "Fortnite confirms Bleach wave 2 skins",
-        "url": "https://www.polygon.com/fortnite-bleach-skins-2026-yoruichi-shihoin-kisuke-urahara/",
+        "title": "Marvel Rivals adds MCU villain The Hood in season 9.5 update",
+        "url": "https://www.polygon.com/marvel-rivals-the-hood-reveal-season-9-5-mystery-of-thebes/",
         "source": "Polygon"
       },
       {
-        "title": "Violent Night 2 director reveals a disturbing scene inspired by horror master Sam Raimi",
-        "url": "https://www.polygon.com/director-producer-violent-night-2-trailer-interview/",
+        "title": "Dropout Officially Snags an Adult Animation Cult Classic for Streaming",
+        "url": "https://www.polygon.com/dropout-don-hertzfeldt-animation-collection-streaming/",
         "source": "Polygon"
       },
       {
-        "title": "FFXIV Yo-kai Watch event guide",
-        "url": "https://www.polygon.com/ffxiv-guides-ff14-final-fantasy-14-online/24139170/yo-kai-watch-fate-locations-minions-weapons-mount-rewards-coins/",
+        "title": "Mafia: The Old Country - Man of Honor will change its open world",
+        "url": "https://www.polygon.com/mafia-the-old-country-man-of-honor-free-ride/",
         "source": "Polygon"
       },
       {
-        "title": "Fire Emblem: Fortune's Weave adds surprise new weapon: guns!",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-guns-nintendo-switch-2/",
+        "title": "\"This Is Absurd': Game-Changing Skyrim Graphics Mod Is Already Causing a Commotion ",
+        "url": "https://www.polygon.com/best-skyrim-graphics-mods-community-shaders-cs-enb-nexus-download/",
         "source": "Polygon"
       },
       {
-        "title": "Final Fantasy 14 launches on Switch 2 and it's surprising fans",
-        "url": "https://www.polygon.com/final-fantasy-14-switch-2-launch-performance-price-subscription/",
+        "title": "Crimson Moon gets September release date",
+        "url": "https://www.polygon.com/crimson-moon-release-date-ps5-pc-xbox/",
         "source": "Polygon"
       },
       {
-        "title": "The official X-Files Lego set has been 12 years in the making: 'It was deemed too mature'",
-        "url": "https://www.polygon.com/this-official-x-files-lego-set-took-more-than-a-decade-to-get-made/",
+        "title": "34 Years Later, the Wildest Crime Thriller of All Time Is Officially Back to Complete the Trilogy",
+        "url": "https://www.polygon.com/bad-lieutenant-tokyo-trilogy-explained/",
         "source": "Polygon"
       },
       {
-        "title": "Xbox Game Pass new games for August 2026",
-        "url": "https://www.polygon.com/xbox-game-pass-august-2026-wave-1-game-freak-beast-of-reincarnation/",
+        "title": "9 Very Specific Questions With the Director of ‘One Night Only,’ aka the Purge but for Sex Movie",
+        "url": "https://www.polygon.com/one-night-only-director-interview/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "Turn one giant AI-generated pull request to a reviewable stack",
+        "url": "https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "Don’t stop early: Case-folding source code at memory speed",
         "url": "https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/",
@@ -342,11 +312,6 @@
       {
         "title": "GitHub Copilot app for Beginners: Getting started",
         "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "The case for a cooldown: Why Dependabot now waits before issuing version updates",
-        "url": "https://github.blog/security/supply-chain-security/the-case-for-a-cooldown-why-dependabot-now-waits-before-issuing-version-updates/",
         "source": "GitHub Blog"
       }
     ]
