@@ -584,7 +584,7 @@ body.desktop-mode .kakao-bottom-nav {
 
 .kakao-side-menu-header {
     padding: 16px;
-    padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
+    padding-top: calc(env(safe-area-inset-top, 0px) + 26px);
     border-bottom: 1px solid #E5E5E5;
     background: #F9F9F9;
     flex-shrink: 0;
