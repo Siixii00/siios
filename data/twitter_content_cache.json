@@ -1,51 +1,69 @@
 {
   "metadata": {
-    "last_updated": "2026-08-04T17:50:04.704709",
-    "total_items": 54
+    "last_updated": "2026-08-04T19:39:15.476673",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
+        "title": "Why some people mow a lawn better than others",
+        "url": "https://pudding.cool/2026/06/mow/",
+        "source": "Hacker News",
+        "score": 70
+      },
+      {
         "title": "Show HN: Simple algorithm and color space to generate diverse skin tones",
         "url": "https://toneyalexander.github.io/inclusive-color-space/",
         "source": "Hacker News",
-        "score": 212
+        "score": 305
+      },
+      {
+        "title": "Waymo – Dallas Open to All",
+        "url": "https://waymo.com/blog/shorts/dallas-open-to-all/",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
+        "title": "Investors in Situational Awareness deserved to lose their shirts",
+        "url": "https://www.economist.com/finance-and-economics/2026/08/04/investors-in-situational-awareness-deserved-to-lose-their-shirts",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
+        "url": "https://mistral.ai/news/shieldstral/",
+        "source": "Hacker News",
+        "score": 59
+      },
+      {
+        "title": "Hop.earth – OpenStreetMap based car racing game",
+        "url": "https://hop.earth/?server=lkhr7&route=fQ5nuu9R",
+        "source": "Hacker News",
+        "score": 34
+      },
+      {
+        "title": "The Warp Agent CLI",
+        "url": "https://www.warp.dev/blog/introducing-the-warp-agent-cli-coding-agent",
+        "source": "Hacker News",
+        "score": 53
       },
       {
         "title": "DeepSeek V4 Flash on a Single AMD MI300X",
         "url": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
         "source": "Hacker News",
-        "score": 286
+        "score": 320
       },
       {
-        "title": "Keyv and friends compromised in active Shai-Hulud supply chain attack",
-        "url": "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack",
+        "title": "Launch HN: EdotEnv (YC S26) – Quant Trading RL Envs to Teach LLMs Research",
+        "url": "https://edotenv.com/",
         "source": "Hacker News",
-        "score": 159
+        "score": 11
       },
       {
-        "title": "Apple says more ex-employees may have taken confidential data to OpenAI",
-        "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
+        "title": "When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation",
+        "url": "https://arxiv.org/abs/2602.16763",
         "source": "Hacker News",
-        "score": 123
-      },
-      {
-        "title": "Online ad giant Adform was hacked, proving once again why ad blockers are needed",
-        "url": "https://this.weekinsecurity.com/online-advertising-giant-adform-was-hacked-proving-once-again-why-ad-blockers-are-necessary/",
-        "source": "Hacker News",
-        "score": 116
-      },
-      {
-        "title": "Buckminster Fuller: everything I know",
-        "url": "https://www.bfi.org/about-fuller/everything-i-know/",
-        "source": "Hacker News",
-        "score": 95
-      },
-      {
-        "title": "Dates That Don't Exist (2015)",
-        "url": "https://blog.yossarian.net/2015/06/09/Dates-That-Dont-Exist",
-        "source": "Hacker News",
-        "score": 74
+        "score": 41
       },
       {
         "title": "Truemetrics (YC S23) Is Hiring in Berlin – GTM Lead",
@@ -54,120 +72,120 @@
         "score": 1
       },
       {
-        "title": "Harness Engineering for Self-Improvement",
-        "url": "https://lilianweng.github.io/posts/2026-07-04-harness/",
+        "title": "U.S. used 'virtually all' of its long-range precision missiles during Iran war",
+        "url": "https://www.cnbc.com/2026/08/04/us-has-used-virtually-all-of-its-long-range-precision-missiles-report.html",
         "source": "Hacker News",
-        "score": 233
+        "score": 197
       },
       {
-        "title": "Germany Records Historic 12B KWh Solar Feed-In in July 2026",
-        "url": "https://solarquarter.com/2026/08/03/germany-records-historic-12-billion-kwh-solar-feed-in-in-july-2026/",
+        "title": "Vlt 1.0 and Hosted Package Registries",
+        "url": "https://www.vlt.io/blog/1-0",
         "source": "Hacker News",
-        "score": 106
+        "score": 36
       },
       {
-        "title": "Xbox goes down. You can't play games you own on disc",
-        "url": "https://birchtree.me/blog/xbox-goes-down-you-cant-play-games-you-own-on-disc/",
+        "title": "Web security is too hard",
+        "url": "https://textslashplain.com/2026/08/04/security-is-hard-yall/",
         "source": "Hacker News",
-        "score": 414
+        "score": 96
       },
       {
-        "title": "Looking inside a 1970s PROM chip that stores data in microscopic fuses (2019)",
-        "url": "https://www.righto.com/2019/07/looking-inside-1970s-prom-chip-that.html",
+        "title": "Stephen Wolfram's Wife Has Died",
+        "url": "https://writings.stephenwolfram.com/2026/08/in-memory-of-my-wife-elise-cawley-1961-2026-with-thanks-for-36-wonderful-years/",
         "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Show HN: Fine-tune an 8B model on a 4 GB laptop GPU",
-        "url": "https://github.com/MakazhanAlpamys/Soup",
-        "source": "Hacker News",
-        "score": 94
-      },
-      {
-        "title": "Why Large Language Models Fail at Tabular Prediction",
-        "url": "https://arxiv.org/abs/2608.02412",
-        "source": "Hacker News",
-        "score": 78
-      },
-      {
-        "title": "Why etymologies matter: How tracing words can illuminate history (2024)",
-        "url": "https://resobscura.substack.com/p/why-i-love-etymologies",
-        "source": "Hacker News",
-        "score": 77
+        "score": 52
       }
     ],
     "ai": [
       {
-        "title": "Keyv and friends compromised in active Shai-Hulud supply chain attack",
-        "url": "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack",
+        "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
+        "url": "https://mistral.ai/news/shieldstral/",
         "source": "Hacker News AI",
-        "score": 159
+        "score": 59
       },
       {
-        "title": "Apple says more ex-employees may have taken confidential data to OpenAI",
-        "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
+        "title": "Launch HN: EdotEnv (YC S26) – Quant Trading RL Envs to Teach LLMs Research",
+        "url": "https://edotenv.com/",
         "source": "Hacker News AI",
-        "score": 123
-      },
-      {
-        "title": "Online ad giant Adform was hacked, proving once again why ad blockers are needed",
-        "url": "https://this.weekinsecurity.com/online-advertising-giant-adform-was-hacked-proving-once-again-why-ad-blockers-are-necessary/",
-        "source": "Hacker News AI",
-        "score": 116
-      },
-      {
-        "title": "Why Large Language Models Fail at Tabular Prediction",
-        "url": "https://arxiv.org/abs/2608.02412",
-        "source": "Hacker News AI",
-        "score": 78
-      },
-      {
-        "title": "LLMs reward expertise",
-        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
-        "source": "Hacker News AI",
-        "score": 1266
-      },
-      {
-        "title": "The AI Demand Bubble",
-        "url": "https://www.wheresyoured.at/the-ai-demand-bubble/",
-        "source": "Hacker News AI",
-        "score": 69
-      },
-      {
-        "title": "Homebench – Benchmark local LLMs for speed, memory, and quality",
-        "url": "https://github.com/david-g-3654/homebench",
-        "source": "Hacker News AI",
-        "score": 49
-      },
-      {
-        "title": "There Will Come Soft Rains (1950) [pdf]",
-        "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
-        "source": "Hacker News AI",
-        "score": 293
-      },
-      {
-        "title": "It's not a fear of \"AI communism\"; it's a fear of competitive market capitalism",
-        "url": "http://observationalepidemiology.blogspot.com/2026/07/its-not-fear-of-ai-communism-its-fear.html",
-        "source": "Hacker News AI",
-        "score": 10
-      },
-      {
-        "title": "AI-Generated Images Discourage Me from Reading Your Blog",
-        "url": "https://nelson.cloud/ai-generated-images-discourage-me-from-reading-your-blog/",
-        "source": "Hacker News AI",
-        "score": 645
-      },
-      {
-        "title": "That time when I failed the Microsoft interview",
-        "url": "https://ochagavia.nl/blog/that-time-when-i-failed-the-microsoft-interview/",
-        "source": "Hacker News AI",
-        "score": 120
+        "score": 11
       },
       {
         "title": "When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation",
         "url": "https://arxiv.org/abs/2602.16763",
         "source": "Hacker News AI",
-        "score": 32
+        "score": 41
+      },
+      {
+        "title": "Apple says more ex-employees may have taken confidential data to OpenAI",
+        "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
+        "source": "Hacker News AI",
+        "score": 221
+      },
+      {
+        "title": "Keyv and friends compromised in active Shai-Hulud supply chain attack",
+        "url": "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack",
+        "source": "Hacker News AI",
+        "score": 194
+      },
+      {
+        "title": "Blackmail Fail (2013)",
+        "url": "https://gwern.net/blackmail",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
+        "title": "Online ad giant Adform was hacked, proving once again why ad blockers are needed",
+        "url": "https://this.weekinsecurity.com/online-advertising-giant-adform-was-hacked-proving-once-again-why-ad-blockers-are-necessary/",
+        "source": "Hacker News AI",
+        "score": 166
+      },
+      {
+        "title": "There Will Come Soft Rains (1950) [pdf]",
+        "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
+        "source": "Hacker News AI",
+        "score": 300
+      },
+      {
+        "title": "Cloudflare enforces engineering standards using AI",
+        "url": "https://blog.cloudflare.com/engineering-standards-enforcement/",
+        "source": "Hacker News AI",
+        "score": 14
+      },
+      {
+        "title": "Most countries provide between 20 and 40 paid days off",
+        "url": "https://www.not-ship.com/not-ship-summer-vacation/",
+        "source": "Hacker News AI",
+        "score": 52
+      },
+      {
+        "title": "AI Data Centers Are Driving Up Power Bills – This Map Shows Where",
+        "url": "https://www.gadgetreview.com/ai-data-centers-are-driving-up-power-bills-this-map-shows-where",
+        "source": "Hacker News AI",
+        "score": 46
+      },
+      {
+        "title": "Why Large Language Models Fail at Tabular Prediction",
+        "url": "https://arxiv.org/abs/2608.02412",
+        "source": "Hacker News AI",
+        "score": 91
+      },
+      {
+        "title": "LLMs reward expertise",
+        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
+        "source": "Hacker News AI",
+        "score": 1286
+      },
+      {
+        "title": "Show HN: SIEMatic, a fair-sourced observability and security platform",
+        "url": "https://github.com/mcindi/siematic",
+        "source": "Hacker News AI",
+        "score": 6
+      },
+      {
+        "title": "Homebench – Benchmark local LLMs for speed, memory, and quality",
+        "url": "https://github.com/david-g-3654/homebench",
+        "source": "Hacker News AI",
+        "score": 56
       }
     ],
     "news": [
@@ -187,13 +205,13 @@
         "source": "BBC World"
       },
       {
-        "title": "More than 170 migrants rescued after boat catches fire in Channel",
-        "url": "https://www.bbc.co.uk/news/articles/c4gkpeppjyqo?at_medium=RSS&at_campaign=rss",
+        "title": "Arrests in Egypt after people allegedly impersonate judges",
+        "url": "https://www.bbc.co.uk/news/articles/cn0n9wpvlwpo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "What will happen when a SpaceX rocket collides with the Moon?",
-        "url": "https://www.bbc.co.uk/news/articles/cx25yn22l97o?at_medium=RSS&at_campaign=rss",
+        "title": "More than 170 migrants rescued after boat catches fire in Channel",
+        "url": "https://www.bbc.co.uk/news/articles/c4gkpeppjyqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -242,43 +260,48 @@
     ],
     "gaming": [
       {
-        "title": "Marvel Rivals adds MCU villain The Hood in season 9.5 update",
-        "url": "https://www.polygon.com/marvel-rivals-the-hood-reveal-season-9-5-mystery-of-thebes/",
+        "title": "'Grand Theft Auto 6' Is to Blame for 'Danganronpa 2x2's Delay, but Not for the Reason You Think",
+        "url": "https://www.polygon.com/danganronpa-2x2-writer-delayed-game-to-play-grand-theft-auto-6/",
         "source": "Polygon"
       },
       {
-        "title": "Dropout Officially Snags an Adult Animation Cult Classic for Streaming",
-        "url": "https://www.polygon.com/dropout-don-hertzfeldt-animation-collection-streaming/",
+        "title": "Ice Cream Man uses generative AI, director Eli Roth confirms",
+        "url": "https://www.polygon.com/eli-roth-ice-cream-man-generative-ai-confirmed/",
         "source": "Polygon"
       },
       {
-        "title": "Mafia: The Old Country - Man of Honor will change its open world",
-        "url": "https://www.polygon.com/mafia-the-old-country-man-of-honor-free-ride/",
+        "title": "What time does the Gears of War E-Day early access multiplayer beta start in your time zone?",
+        "url": "https://www.polygon.com/gears-of-war-e-day-early-access-beta-release-time-edt-pdt/",
         "source": "Polygon"
       },
       {
-        "title": "\"This Is Absurd': Game-Changing Skyrim Graphics Mod Is Already Causing a Commotion ",
-        "url": "https://www.polygon.com/best-skyrim-graphics-mods-community-shaders-cs-enb-nexus-download/",
+        "title": "Koei Tecmo is putting out an “AI chat RPG” based on the Atelier Ryza series, and it sounds bleak",
+        "url": "https://www.polygon.com/koei-tecmo-atelier-ryza-chat-ai-rpg/",
         "source": "Polygon"
       },
       {
-        "title": "Crimson Moon gets September release date",
-        "url": "https://www.polygon.com/crimson-moon-release-date-ps5-pc-xbox/",
+        "title": "Sega's '90s-era Fire Emblem Competitor Was Years Ahead of Its Time",
+        "url": "https://www.polygon.com/games-like-fire-emblem-sega-shining-force/",
         "source": "Polygon"
       },
       {
-        "title": "34 Years Later, the Wildest Crime Thriller of All Time Is Officially Back to Complete the Trilogy",
-        "url": "https://www.polygon.com/bad-lieutenant-tokyo-trilogy-explained/",
+        "title": "Mobile Suit Gundam Hathaway 2 gets new trailer, streaming release date",
+        "url": "https://www.polygon.com/mobile-suit-gundam-hathaway-new-trailer-netflix-release/",
         "source": "Polygon"
       },
       {
-        "title": "9 Very Specific Questions With the Director of ‘One Night Only,’ aka the Purge but for Sex Movie",
-        "url": "https://www.polygon.com/one-night-only-director-interview/",
+        "title": "Spider-Man Brand New Day cameo could be the MCU's next spider hero",
+        "url": "https://www.polygon.com/tom-holland-spider-man-replacement-brand-new-day-homecoming/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "How the GitHub legal team used Copilot CLI to streamline their workflows",
+        "url": "https://github.blog/ai-and-ml/github-copilot/how-the-github-legal-team-used-copilot-cli-to-streamline-their-workflows/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "Turn one giant AI-generated pull request to a reviewable stack",
         "url": "https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack/",
@@ -307,11 +330,6 @@
       {
         "title": "The harness is all you need (mostly)",
         "url": "https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "GitHub Copilot app for Beginners: Getting started",
-        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-getting-started/",
         "source": "GitHub Blog"
       }
     ]
