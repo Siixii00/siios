@@ -1,6 +1,6 @@
 ﻿import Router from '../../router.js';
-import { createElement, createIcon, createToast, createEmptyState } from '../../components.js';
-import { SettingsDB, CharactersDB } from '../../db.js';
+import { createElement, createIcon, createToast, createEmptyState, createKakaoSideMenu } from '../../components.js';
+import { SettingsDB, CharactersDB, UsersDB, ChatsDB, MemoryDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
@@ -15,8 +15,196 @@ let fabMenuOpen = false;
 let notificationInterval = null;
 let selectedCharacterId = null;
 let characters = [];
+const followingCache = new Map();
 
 const DEFAULT_AVATAR = 'linear-gradient(135deg, #2d89ef, #8ec5ff)';
+
+async function getCharacterContext(characterId) {
+    if (!characterId) return null;
+    
+    if (characterId.startsWith('user_')) {
+        const userId = characterId.replace('user_', '');
+        return await UsersDB.getById(userId);
+    }
+    
+    if (characterId.startsWith('char_')) {
+        const charId = characterId.replace('char_', '');
+        return await CharactersDB.getById(charId);
+    }
+    
+    return null;
+}
+
+async function inferFollowingFromMemory(selectedCharacterId) {
+    const cached = followingCache.get(selectedCharacterId);
+    if (cached && Date.now() - cached.timestamp < 5 * 60 * 1000) {
+        return cached.following;
+    }
+    
+    const character = await getCharacterContext(selectedCharacterId);
+    if (!character) return [];
+    
+    const allChats = await ChatsDB.getAll();
+    const relevantChats = allChats.filter(chat => 
+        chat.character_name === character.name
+    );
+    
+    const allMemories = await MemoryDB.getAll();
+    const relevantMemories = allMemories.filter(m => 
+        relevantChats.some(chat => chat.id === m.chat_id)
+    ).slice(0, 20);
+    
+    if (relevantMemories.length === 0) {
+        const fallback = character?.assigned_chars || [];
+        followingCache.set(selectedCharacterId, { 
+            following: fallback, 
+            timestamp: Date.now() 
+        });
+        return fallback;
+    }
+    
+    const memoryText = relevantMemories.map(m => 
+        `${m.content?.slice(0, 200)}`
+    ).join('\n');
+    
+    const prompt = `分析以下記憶片段，推断這個使用者會追蹤哪些人：
+
+使用者：${character.name || '匿名'}
+性格：${character.personality || ''}
+
+記憶片段：
+${memoryText}
+
+請输出 3-5 個最適合的追蹤對象名稱，以 JSON 陣列格式：
+["角色名稱1", "角色名稱2", ...]`;
+
+    const settings = await SettingsDB.getAll();
+    
+    if (!settings.api_url || !settings.api_key) {
+        const fallback = character?.assigned_chars || [];
+        followingCache.set(selectedCharacterId, { 
+            following: fallback, 
+            timestamp: Date.now() 
+        });
+        return fallback;
+    }
+    
+    const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${settings.api_key}`
+        },
+        body: JSON.stringify({
+            model: settings.model,
+            messages: [{ role: 'system', content: prompt }],
+            temperature: 0.7
+        })
+    });
+    
+    if (!response.ok) {
+        console.warn('[Twitter] API error:', response.status);
+        return character?.assigned_chars || [];
+    }
+    
+    const data = await response.json();
+    let following;
+    
+    try {
+        following = JSON.parse(data.choices?.[0]?.message?.content || '[]');
+        if (!Array.isArray(following)) {
+            following = [];
+        }
+    } catch (e) {
+        console.warn('[Twitter] Failed to parse following:', e);
+        following = character?.assigned_chars || [];
+    }
+    
+    followingCache.set(selectedCharacterId, { 
+        following, 
+        timestamp: Date.now() 
+    });
+    
+    return following;
+}
+
+async function generateRecommendedTweets(selectedCharacterId) {
+    const character = await getCharacterContext(selectedCharacterId);
+    const following = await inferFollowingFromMemory(selectedCharacterId);
+    
+    if (following.length === 0) {
+        createToast('無追蹤對象，請先設定 assigned_chars');
+        return [];
+    }
+    
+    const allChars = await CharactersDB.getAll();
+    const allUsers = await UsersDB.getAll();
+    
+    const npcProfiles = following.map(name => {
+        const match = allChars.find(c => c.name === name) || 
+                      allUsers.find(u => u.name === name);
+        return {
+            name: name,
+            personality: match?.personality || '神秘的角色'
+        };
+    });
+    
+    const npcDesc = npcProfiles.map(n => 
+        `${n.name}（性格：${n.personality}）`
+    ).join('\n');
+    
+    const prompt = `你是推薦演算法，根據以下資訊生成推文：
+
+使用者角色：${character?.name || '匿名'}
+性格：${character?.personality || ''}
+
+追蹤對象：
+${npcDesc}
+
+請為每個追蹤對象生成 1-2 條推文，内容需符合發文者的性格。
+
+輸出 JSON 陣列格式：
+[
+  {
+    "author": "發文者名稱",
+    "content": "推文内容（140字以內）",
+    "stats": { "reply": 數字, "retweet": 數字, "like": 數字 }
+  }
+]`;
+
+    const settings = await SettingsDB.getAll();
+    
+    if (!settings.api_url || !settings.api_key) {
+        return [];
+    }
+    
+    const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${settings.api_key}`
+        },
+        body: JSON.stringify({
+            model: settings.model,
+            messages: [{ role: 'system', content: prompt }],
+            temperature: 0.9
+        })
+    });
+    
+    if (!response.ok) {
+        throw new Error(`API error: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    
+    try {
+        const tweets = JSON.parse(data.choices?.[0]?.message?.content || '[]');
+        return Array.isArray(tweets) ? tweets : [];
+    } catch (e) {
+        console.warn('[Twitter] Failed to parse tweets:', e);
+        return [];
+    }
+}
 
 async function getSetting(key, defaultValue) {
     const value = await SettingsDB.get(key);
@@ -692,6 +880,41 @@ function closeFabMenu(fabBtn, fabMenu) {
     fabBtn.classList.remove('open');
 }
 
+async function refreshFeed(main, pullIndicator) {
+    pullIndicator.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 載入中...';
+    pullIndicator.classList.add('active');
+    
+    try {
+        const tweets = await generateRecommendedTweets(selectedCharacterId);
+        tweets.forEach(tweet => {
+            npcTweets.unshift({
+                id: Date.now().toString() + Math.random(),
+                author: tweet.author,
+                handle: `@${tweet.author.toLowerCase().replace(/\s+/g, '_')}`,
+                content: tweet.content,
+                stats: tweet.stats,
+                timestamp: Date.now()
+            });
+        });
+        await saveNpcTweets();
+        
+        const feed = main.querySelector('.feed');
+        if (feed) {
+            feed.innerHTML = '';
+            await renderFeed(feed);
+        }
+        
+        main.scrollTo({ top: 0, behavior: 'smooth' });
+        createToast('推薦内容已更新');
+    } catch (error) {
+        console.error('[Twitter] 刷新失敗:', error);
+        createToast('更新失敗，請稍後再試');
+    } finally {
+        pullIndicator.innerHTML = '<i class="fas fa-arrow-down"></i> 下拉刷新';
+        pullIndicator.classList.remove('active');
+    }
+}
+
 async function renderTwitterHome() {
     userTweets = await getUserTweets();
     npcTweets = await getNpcTweets();
@@ -702,6 +925,10 @@ async function renderTwitterHome() {
     
     const container = createElement('div', 'twitter-app');
     
+    const pullIndicator = createElement('div', 'pull-indicator');
+    pullIndicator.innerHTML = '<i class="fas fa-arrow-down"></i> 下拉刷新';
+    container.appendChild(pullIndicator);
+    
     const header = createElement('header', 'top-bar');
     header.innerHTML = `
         <button class="icon-btn" aria-label="返回"><i class="fas fa-chevron-left"></i></button>
@@ -710,6 +937,8 @@ async function renderTwitterHome() {
     `;
     
     header.querySelector('.icon-btn').onclick = () => Router.back();
+    const menuToggle = header.querySelector('.menu-toggle');
+    menuToggle.onclick = () => openCharacterMenu();
     container.appendChild(header);
     
     const main = createElement('main', 'content');
@@ -734,28 +963,105 @@ async function renderTwitterHome() {
     
     main.appendChild(tabs);
     
-    const characterSelector = createElement('section', 'card character-selector');
-    const characterOptions = characters.map(c => 
-        `<option value="${c.id}" ${c.id === selectedCharacterId ? 'selected' : ''}>${c.name}</option>`
-    ).join('');
-    characterSelector.innerHTML = `
-        <label for="character-select">角色：</label>
-        <select id="character-select" class="character-select">
-            <option value="">預設</option>
-            ${characterOptions}
-        </select>
-    `;
-    const select = characterSelector.querySelector('#character-select');
-    select.onchange = (e) => {
-        selectedCharacterId = e.target.value || null;
-    };
-    main.appendChild(characterSelector);
-    
     const feedContainer = createElement('div', 'feed-container');
     await renderFeed(feedContainer);
     main.appendChild(feedContainer);
     
+    if (!selectedCharacterId && userTweets.length === 0 && npcTweets.length === 0) {
+        const hint = createElement('section', 'card character-hint');
+        hint.innerHTML = `
+            <div style="text-align: center; padding: 20px;">
+                <i class="fas fa-user-circle" style="font-size: 32px; color: var(--twitter-accent); margin-bottom: 12px;"></i>
+                <p style="color: var(--twitter-text); font-weight: 600; margin-bottom: 8px;">下拉刷新以選擇角色</p>
+                <p style="color: var(--twitter-muted); font-size: 13px;">選擇角色後，將根據聊天記憶推薦個人化推文</p>
+            </div>
+        `;
+        main.appendChild(hint);
+    }
+    
     container.appendChild(main);
+    
+    let startY = 0;
+    let pulling = false;
+    const THRESHOLD = 80;
+    
+    function handleTouchStart(e) {
+        const scrollTop = main.scrollTop || document.documentElement.scrollTop;
+        if (scrollTop <= 5) {
+            startY = e.touches[0].pageY;
+            pulling = true;
+        }
+    }
+    
+    function handleTouchMove(e) {
+        if (!pulling) return;
+        const deltaY = e.touches[0].pageY - startY;
+        if (deltaY > 0) {
+            e.preventDefault();
+            pullIndicator.classList.toggle('active', deltaY > 20);
+        }
+    }
+    
+    async function handleTouchEnd(e) {
+        if (!pulling) return;
+        const deltaY = e.changedTouches[0].pageY - startY;
+        pulling = false;
+        pullIndicator.classList.remove('active');
+        
+        if (deltaY > THRESHOLD) {
+            if (!selectedCharacterId) {
+                await openCharacterMenu();
+                return;
+            }
+            await refreshFeed(main, pullIndicator);
+        }
+    }
+    
+    function handleMouseDown(e) {
+        const scrollTop = main.scrollTop || document.documentElement.scrollTop;
+        if (scrollTop <= 5) {
+            startY = e.pageY;
+            pulling = true;
+        }
+    }
+    
+    function handleMouseMove(e) {
+        if (!pulling) return;
+        const deltaY = e.pageY - startY;
+        if (deltaY > 0) {
+            e.preventDefault();
+            pullIndicator.classList.toggle('active', deltaY > 20);
+        }
+    }
+    
+    async function handleMouseUp(e) {
+        if (!pulling) return;
+        const deltaY = e.pageY - startY;
+        pulling = false;
+        pullIndicator.classList.remove('active');
+        
+        if (deltaY > THRESHOLD) {
+            if (!selectedCharacterId) {
+                await openCharacterMenu();
+                return;
+            }
+            await refreshFeed(main, pullIndicator);
+        }
+    }
+    
+    main.addEventListener('touchstart', handleTouchStart, { passive: true });
+    main.addEventListener('touchmove', handleTouchMove, { passive: false });
+    main.addEventListener('touchend', handleTouchEnd);
+    
+    main.addEventListener('mousedown', handleMouseDown);
+    main.addEventListener('mousemove', handleMouseMove);
+    main.addEventListener('mouseup', handleMouseUp);
+    main.addEventListener('mouseleave', () => {
+        if (pulling) {
+            pulling = false;
+            pullIndicator.classList.remove('active');
+        }
+    });
     
     const fabBtn = createElement('button', 'fab-btn', { ariaLabel: '發推' });
     fabBtn.innerHTML = '<i class="fas fa-plus"></i>';
@@ -799,7 +1105,67 @@ async function renderTwitterHome() {
     
     startNotificationSystem();
     
-    return { element: container, cleanup: stopNotificationSystem };
+    const cleanupPullToRefresh = () => {
+        main.removeEventListener('touchstart', handleTouchStart);
+        main.removeEventListener('touchmove', handleTouchMove);
+        main.removeEventListener('touchend', handleTouchEnd);
+        main.removeEventListener('mousedown', handleMouseDown);
+        main.removeEventListener('mousemove', handleMouseMove);
+        main.removeEventListener('mouseup', handleMouseUp);
+    };
+    
+    return { 
+        element: container, 
+        cleanup: () => {
+            stopNotificationSystem();
+            cleanupPullToRefresh();
+        }
+    };
+}
+
+async function openCharacterMenu() {
+    const [userMasks, charMasks] = await Promise.all([
+        UsersDB.getAll(),
+        CharactersDB.getAll()
+    ]);
+    
+    const allOptions = [];
+    
+    if (userMasks.length > 0) {
+        userMasks.forEach(user => {
+            allOptions.push({
+                icon: 'person',
+                label: user.name || '未命名面具',
+                value: selectedCharacterId === `user_${user.id}` ? '目前' : undefined,
+                onClick: () => {
+                    selectedCharacterId = `user_${user.id}`;
+                    createToast(`已切換為 ${user.name || '未命名面具'}`);
+                }
+            });
+        });
+    }
+    
+    if (charMasks.length > 0) {
+        charMasks.forEach(char => {
+            allOptions.push({
+                icon: 'user-circle',
+                label: char.name || '未命名角色',
+                value: selectedCharacterId === `char_${char.id}` ? '目前' : undefined,
+                onClick: () => {
+                    selectedCharacterId = `char_${char.id}`;
+                    createToast(`已切換為 ${char.name || '未命名角色'}`);
+                }
+            });
+        });
+    }
+    
+    const menu = createKakaoSideMenu('選擇角色', [
+        {
+            title: '以不同角色瀏覽',
+            items: allOptions
+        }
+    ]);
+    menu.open();
 }
 
 async function renderTwitterBookmarks() {
