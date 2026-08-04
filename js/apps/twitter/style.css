@@ -471,6 +471,30 @@
     flex: 1;
 }
 
+.pull-indicator {
+    position: fixed;
+    top: calc(44px + env(safe-area-inset-top, 0px) + 10px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-60px);
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    z-index: 100;
+    background: var(--twitter-bg);
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    font-size: 14px;
+    color: var(--twitter-text);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pull-indicator.active {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
 .notifications-list {
     display: flex;
     flex-direction: column;
