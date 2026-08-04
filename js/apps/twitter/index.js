@@ -431,6 +431,7 @@ async function generateRecommendedTweets(selectedCharacterId) {
         
         const tweets = realContent.map(content => {
             const authorName = sourceAuthors[content.source] || 'NewsBot';
+            console.log('[Twitter] 內容來源:', content.source, '-> 作者:', authorName);
             return {
                 author: authorName,
                 content: `${content.title}`,
@@ -444,6 +445,7 @@ async function generateRecommendedTweets(selectedCharacterId) {
             };
         });
         console.log('[Twitter] 生成的推文:', tweets);
+        console.log('[Twitter] 推文作者列表:', [...new Set(tweets.map(t => t.author))]);
         return tweets;
     }
     
