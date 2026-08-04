@@ -1,0 +1,133 @@
+{
+  "timestamp": "2026-08-04T03:01:29.701Z",
+  "testResults": [
+    {
+      "character": {
+        "name": "工程師小明",
+        "personality": "熱愛科技的工程師，喜歡研究新技術和程式開發",
+        "interestCategory": "科技"
+      },
+      "sources": [
+        "Hacker News",
+        "TechCrunch"
+      ],
+      "contentCount": 10,
+      "tweets": [
+        {
+          "originalContent": {
+            "title": "LLMs reward expertise",
+            "url": "https://www.seangoedecke.com/llms-reward-expertise/",
+            "author": "MaxMussio",
+            "score": 510,
+            "source": "Hacker News"
+          },
+          "generatedTweet": "【測試推文】工程師小明 看了「LLMs reward expertise」後的想法..."
+        },
+        {
+          "originalContent": {
+            "title": "Amazonian civilization had estimated 3M people in 3% of forest area",
+            "url": "https://www.science.org/content/article/odd-shapes-hidden-dense-amazon-rainforest-reveal-sprawling-ancient-civilization",
+            "author": "marojejian",
+            "score": 51,
+            "source": "Hacker News"
+          },
+          "generatedTweet": "【測試推文】工程師小明 看了「Amazonian civilization had estimated 3M people in 3% of forest area」後的想法..."
+        },
+        {
+          "originalContent": {
+            "title": "Ten advances in mathematics and theoretical computer science",
+            "url": "https://openai.com/index/ten-advances-in-mathematics/",
+            "author": "milkshakes",
+            "score": 459,
+            "source": "Hacker News"
+          },
+          "generatedTweet": "【測試推文】工程師小明 看了「Ten advances in mathematics and theoretical computer science」後的想法..."
+        }
+      ]
+    },
+    {
+      "character": {
+        "name": "藝術家小美",
+        "personality": "藝術家，喜歡繪畫、音樂和所有美的事物",
+        "interestCategory": "藝術"
+      },
+      "sources": [
+        "Creative Bloq"
+      ],
+      "contentCount": 5,
+      "tweets": [
+        {
+          "originalContent": {
+            "title": "Pepsi shades Coca-Cola in parody rebrand",
+            "url": "https://www.creativebloq.com/design/branding/pepsi-shades-coca-cola-in-parody-rebrand",
+            "description": "",
+            "source": "Creative Bloq"
+          },
+          "generatedTweet": "【測試推文】藝術家小美 看了「Pepsi shades Coca-Cola in parody rebrand」後的想法..."
+        },
+        {
+          "originalContent": {
+            "title": "Those biceps on The Odyssey poster aren't Matt Damon's – and they aren't even a man's",
+            "url": "https://www.creativebloq.com/design/poster-design/those-biceps-on-the-odyssey-poster-arent-matt-damons-and-they-arent-even-a-mans",
+            "description": "",
+            "source": "Creative Bloq"
+          },
+          "generatedTweet": "【測試推文】藝術家小美 看了「Those biceps on The Odyssey poster aren't Matt Damon's – and they aren't even a man's」後的想法..."
+        },
+        {
+          "originalContent": {
+            "title": "Want the same phone as Spider-Man? Just 3 days remain to preorder the Samsung Galaxy Z Flip8",
+            "url": "https://www.creativebloq.com/tech/phones-tablets/want-the-same-phone-as-spider-man-just-3-days-remain-to-preorder-the-samsung-galaxy-z-flip8",
+            "description": "",
+            "source": "Creative Bloq"
+          },
+          "generatedTweet": "【測試推文】藝術家小美 看了「Want the same phone as Spider-Man? Just 3 days remain to preorder the Samsung Galaxy Z Flip8」後的想法..."
+        }
+      ]
+    },
+    {
+      "character": {
+        "name": "一般用戶",
+        "personality": "好奇的一般用戶，對各種事物都有興趣",
+        "interestCategory": "綜合"
+      },
+      "sources": [
+        "Hacker News",
+        "BBC World"
+      ],
+      "contentCount": 10,
+      "tweets": [
+        {
+          "originalContent": {
+            "title": "LLMs reward expertise",
+            "url": "https://www.seangoedecke.com/llms-reward-expertise/",
+            "author": "MaxMussio",
+            "score": 510,
+            "source": "Hacker News"
+          },
+          "generatedTweet": "【測試推文】一般用戶 看了「LLMs reward expertise」後的想法..."
+        },
+        {
+          "originalContent": {
+            "title": "Amazonian civilization had estimated 3M people in 3% of forest area",
+            "url": "https://www.science.org/content/article/odd-shapes-hidden-dense-amazon-rainforest-reveal-sprawling-ancient-civilization",
+            "author": "marojejian",
+            "score": 51,
+            "source": "Hacker News"
+          },
+          "generatedTweet": "【測試推文】一般用戶 看了「Amazonian civilization had estimated 3M people in 3% of forest area」後的想法..."
+        },
+        {
+          "originalContent": {
+            "title": "Ten advances in mathematics and theoretical computer science",
+            "url": "https://openai.com/index/ten-advances-in-mathematics/",
+            "author": "milkshakes",
+            "score": 459,
+            "source": "Hacker News"
+          },
+          "generatedTweet": "【測試推文】一般用戶 看了「Ten advances in mathematics and theoretical computer science」後的想法..."
+        }
+      ]
+    }
+  ]
+}

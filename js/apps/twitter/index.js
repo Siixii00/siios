@@ -19,6 +19,138 @@ const followingCache = new Map();
 
 const DEFAULT_AVATAR = 'linear-gradient(135deg, #2d89ef, #8ec5ff)';
 
+async function fetchRealContentForCategory(category) {
+    const sources = {
+        '科技': 'https://hacker-news.firebaseio.com/v0/topstories.json',
+        '新聞': 'https://feeds.bbci.co.uk/news/world/rss.xml',
+        '藝術': 'https://www.creativebloq.com/feed',
+        '科學': 'https://www.sciencedaily.com/rss/all.xml',
+        '遊戲': 'https://www.polygon.com/rss/index.xml',
+        'AI': 'https://hacker-news.firebaseio.com/v0/topstories.json',
+        'Steam': 'https://store.steampowered.com/feeds/news.xml',
+        'GitHub': 'https://github.blog/feed/'
+    };
+    
+    const endpoint = sources[category] || sources['科技'];
+    
+    try {
+        if (endpoint.includes('hacker-news')) {
+            const response = await fetch(endpoint);
+            const ids = await response.json();
+            const topIds = ids.slice(0, 10);
+            
+            const stories = await Promise.all(
+                topIds.map(async id => {
+                    const res = await fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`);
+                    const story = await res.json();
+                    return {
+                        title: story.title,
+                        url: story.url || `https://news.ycombinator.com/item?id=${story.id}`,
+                        source: 'Hacker News',
+                        score: story.score
+                    };
+                })
+            );
+            
+            if (category === 'AI') {
+                const aiKeywords = ['ai', 'llm', 'gpt', 'machine learning', 'neural', 'chatbot', 'openai', 'claude', 'deep learning'];
+                const aiStories = stories.filter(s => 
+                    aiKeywords.some(k => s.title.toLowerCase().includes(k))
+                );
+                return aiStories.length > 0 ? aiStories : stories.slice(0, 5);
+            }
+            
+            return stories.slice(0, 5);
+        } else if (endpoint.includes('steampowered.com')) {
+            const response = await fetch(endpoint);
+            const text = await response.text();
+            const items = [];
+            
+            const matches = text.matchAll(/<item>([\s\S]*?)<\/item>/g);
+            let count = 0;
+            
+            for (const match of matches) {
+                if (count >= 5) break;
+                
+                const item = match[1];
+                const titleMatch = itemText.match(/<title><!\[CDATA\[(.*?)\]\]><\/title>/);
+                const linkMatch = itemText.match(/<link>(.*?)<\/link>/);
+                
+                if (titleMatch && linkMatch) {
+                    items.push({
+                        title: titleMatch[1].trim(),
+                        url: linkMatch[1].trim(),
+                        source: 'Steam News'
+                    });
+                    count++;
+                }
+            }
+            
+            return items;
+        } else {
+            const response = await fetch(endpoint);
+            const text = await response.text();
+            const items = [];
+            
+            const matches = text.matchAll(/<item>([\s\S]*?)<\/item>/g);
+            let count = 0;
+            
+            for (const match of matches) {
+                if (count >= 5) break;
+                
+                const item = match[1];
+                const titleMatch = item.match(/<title>(.*?)<\/title>/);
+                const linkMatch = item.match(/<link>(.*?)<\/link>/);
+                
+                if (titleMatch && linkMatch) {
+                    items.push({
+                        title: titleMatch[1].trim(),
+                        url: linkMatch[1].trim(),
+                        source: category
+                    });
+                    count++;
+                }
+            }
+            
+            return items;
+        }
+    } catch (error) {
+        console.warn('[Twitter] Content fetch failed:', error);
+        return [];
+    }
+}
+
+function analyzeCharacterInterests(personality) {
+    if (!personality) return '科技';
+    
+    const categories = {
+        '科技': ['工程師', '科技', '程式', '電腦', '技術', '開發', 'hacker', 'programmer'],
+        '新聞': ['記者', '新聞', '時事', '政治', '社會', '國際'],
+        '藝術': ['藝術', '設計', '畫家', '音樂', '創作', '繪畫'],
+        '科學': ['科學', '研究', '學者', '實驗', '物理', '化學', '生物'],
+        '遊戲': ['遊戲', '玩家', '動漫', 'gamer', 'anime'],
+        'AI': ['ai', '機器學習', 'artificial', '智能', 'gpt', 'llm'],
+        'Steam': ['steam', 'steam遊戲', '遊戲'],
+        'GitHub': ['github', '開源', 'open source', '程式']
+    };
+    
+    const lower = personality.toLowerCase();
+    
+    for (const [cat, keywords] of Object.entries(categories)) {
+        if (keywords.some(k => lower.includes(k.toLowerCase()))) {
+            if (cat === 'Steam' || cat === '遊戲') {
+                return '遊戲';
+            }
+            if (cat === 'AI' || cat === 'GitHub') {
+                return 'AI';
+            }
+            return cat;
+        }
+    }
+    
+    return '科技';
+}
+
 async function getCharacterContext(characterId) {
     if (!characterId) return null;
     
@@ -130,78 +262,147 @@ ${memoryText}
 
 async function generateRecommendedTweets(selectedCharacterId) {
     const character = await getCharacterContext(selectedCharacterId);
-    const following = await inferFollowingFromMemory(selectedCharacterId);
     
-    if (following.length === 0) {
-        createToast('無追蹤對象，請先設定 assigned_chars');
+    if (!character) {
+        createToast('請先選擇角色');
         return [];
     }
     
-    const allChars = await CharactersDB.getAll();
-    const allUsers = await UsersDB.getAll();
+    const interestCategory = analyzeCharacterInterests(character.personality);
+    console.log(`[Twitter] 角色 ${character.name} 興趣類別: ${interestCategory}`);
     
-    const npcProfiles = following.map(name => {
-        const match = allChars.find(c => c.name === name) || 
-                      allUsers.find(u => u.name === name);
-        return {
-            name: name,
-            personality: match?.personality || '神秘的角色'
-        };
-    });
+    let realContent = await fetchRealContentForCategory(interestCategory);
     
-    const npcDesc = npcProfiles.map(n => 
-        `${n.name}（性格：${n.personality}）`
-    ).join('\n');
+    const shouldAddAIContent = Math.random() < 0.3;
+    if (shouldAddAIContent && interestCategory !== 'AI') {
+        console.log('[Twitter] 加入 AI 相關推薦內容');
+        const aiContent = await fetchRealContentForCategory('AI');
+        realContent = [...realContent, ...aiContent.slice(0, 2)];
+    }
     
-    const prompt = `你是推薦演算法，根據以下資訊生成推文：
+    if (realContent.length === 0) {
+        console.warn('[Twitter] 無法抓取真實內容，使用 AI 生成');
+        return await generateAIOnlyTweets(character);
+    }
+    
+    const settings = await SettingsDB.getAll();
+    
+    if (!settings.api_url || !settings.api_key) {
+        console.warn('[Twitter] 未設定 API，直接使用真實內容');
+        return realContent.map(content => ({
+            author: character.name,
+            content: `【分享】${content.title}`,
+            stats: { reply: Math.floor(Math.random() * 10), retweet: Math.floor(Math.random() * 20), like: Math.floor(Math.random() * 50) }
+        }));
+    }
+    
+    const contentDesc = realContent.map((c, i) => `${i + 1}. ${c.title}`).join('\n');
+    
+    const prompt = `你是角色「${character.name}」，性格：${character.personality}
 
-使用者角色：${character?.name || '匿名'}
-性格：${character?.personality || ''}
+以下是一些真實的新聞/文章標題，請選擇其中 3-5 個並轉換為符合你性格的推特推文：
 
-追蹤對象：
-${npcDesc}
+${contentDesc}
 
-請為每個追蹤對象生成 1-2 條推文，内容需符合發文者的性格。
+要求：
+1. 每條推文 140 字以內
+2. 用你的口吻和語氣
+3. 可以加入你的看法或情感
+4. 符合你的性格特點
+5. 台灣繁體中文
+6. 如果有 AI 相關內容，可以特別關注
 
 輸出 JSON 陣列格式：
 [
   {
-    "author": "發文者名稱",
-    "content": "推文内容（140字以內）",
+    "author": "${character.name}",
+    "content": "推文内容",
     "stats": { "reply": 數字, "retweet": 數字, "like": 數字 }
   }
 ]`;
 
+    try {
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${settings.api_key}`
+            },
+            body: JSON.stringify({
+                model: settings.model,
+                messages: [{ role: 'system', content: prompt }],
+                temperature: 0.8
+            })
+        });
+        
+        if (!response.ok) {
+            throw new Error(`API error: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        
+        try {
+            const tweets = JSON.parse(data.choices?.[0]?.message?.content || '[]');
+            return Array.isArray(tweets) ? tweets : [];
+        } catch (e) {
+            console.warn('[Twitter] Failed to parse tweets:', e);
+            return [];
+        }
+    } catch (error) {
+        console.error('[Twitter] Real content conversion failed:', error);
+        return [];
+    }
+}
+
+async function generateAIOnlyTweets(character) {
     const settings = await SettingsDB.getAll();
     
     if (!settings.api_url || !settings.api_key) {
         return [];
     }
     
-    const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `Bearer ${settings.api_key}`
-        },
-        body: JSON.stringify({
-            model: settings.model,
-            messages: [{ role: 'system', content: prompt }],
-            temperature: 0.9
-        })
-    });
-    
-    if (!response.ok) {
-        throw new Error(`API error: ${response.status}`);
-    }
-    
-    const data = await response.json();
-    
+    const prompt = `你是角色「${character.name}」，性格：${character.personality}
+
+請生成 3 條符合你性格的推特推文。
+
+輸出 JSON 陣列格式：
+[
+  {
+    "author": "${character.name}",
+    "content": "推文内容（140字以內）",
+    "stats": { "reply": 數字, "retweet": 數字, "like": 數字 }
+  }
+]`;
+
     try {
-        const tweets = JSON.parse(data.choices?.[0]?.message?.content || '[]');
-        return Array.isArray(tweets) ? tweets : [];
-    } catch (e) {
-        console.warn('[Twitter] Failed to parse tweets:', e);
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${settings.api_key}`
+            },
+            body: JSON.stringify({
+                model: settings.model,
+                messages: [{ role: 'system', content: prompt }],
+                temperature: 0.9
+            })
+        });
+        
+        if (!response.ok) {
+            throw new Error(`API error: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        
+        try {
+            const tweets = JSON.parse(data.choices?.[0]?.message?.content || '[]');
+            return Array.isArray(tweets) ? tweets : [];
+        } catch (e) {
+            console.warn('[Twitter] Failed to parse tweets:', e);
+            return [];
+        }
+    } catch (error) {
+        console.error('[Twitter] AI generation failed:', error);
         return [];
     }
 }
