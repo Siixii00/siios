@@ -1433,12 +1433,15 @@ async function openCharacterMenu() {
         });
     }
     
-    const menu = createKakaoSideMenu('選擇角色', [
-        {
-            title: '以不同角色瀏覽',
-            items: allOptions
-        }
-    ]);
+    const menu = createKakaoSideMenu({
+        title: '選擇角色',
+        sections: [
+            {
+                title: '以不同角色瀏覽',
+                items: allOptions
+            }
+        ]
+    });
     menu.open();
 }
 

@@ -566,7 +566,7 @@ body.desktop-mode .kakao-bottom-nav {
     right: 0;
     bottom: 0;
     width: 280px;
-    max-width: 80vw;
+    max-width: 85vw;
     z-index: 101;
     background: #FFF;
     transform: translateX(100%);
@@ -575,6 +575,7 @@ body.desktop-mode .kakao-bottom-nav {
     flex-direction: column;
     overflow: hidden;
     box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+    max-height: 100vh;
 }
 
 .kakao-side-menu.active {
@@ -586,6 +587,7 @@ body.desktop-mode .kakao-bottom-nav {
     padding-top: calc(env(safe-area-inset-top, 0px) + 16px);
     border-bottom: 1px solid #E5E5E5;
     background: #F9F9F9;
+    flex-shrink: 0;
 }
 
 .kakao-side-menu-title {
@@ -598,7 +600,9 @@ body.desktop-mode .kakao-bottom-nav {
 .kakao-side-menu-content {
     flex: 1;
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 8px 0;
+    -webkit-overflow-scrolling: touch;
 }
 
 .kakao-side-menu-section-title {
