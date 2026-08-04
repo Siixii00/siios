@@ -1938,6 +1938,29 @@ async function renderProfile() {
     card2.appendChild(grid2);
     profile.appendChild(card2);
     
+    const characterCard = createElement('div', 'bili-card');
+    characterCard.appendChild(createElement('div', 'font-semibold mb-2', { textContent: '陪伴角色' }));
+    
+    const characters = await CharactersDB.getAll();
+    if (characters.length > 0) {
+        const charSelection = createElement('div', 'bili-char-watch-selector');
+        charSelection.innerHTML = `
+            <select id="default-char-select" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
+                <option value="">不使用陪伴角色</option>
+                ${characters.map(char => `<option value="${char.id}">${char.name || '匿名'}</option>`).join('')}
+            </select>
+            <p style="font-size: 12px; color: #666; margin-top: 8px;">
+                選擇的角色將會在影片播放時「閱讀」字幕並發表評論
+            </p>
+        `;
+        characterCard.appendChild(charSelection);
+    } else {
+        characterCard.appendChild(createElement('div', 'text-sm text-ios-muted', { 
+            textContent: '尚未創建任何角色，請先在角色管理中創建角色' 
+        }));
+    }
+    profile.appendChild(characterCard);
+    
     container.appendChild(profile);
     
     const nav = createBiliBottomNav();

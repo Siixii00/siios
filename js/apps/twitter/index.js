@@ -417,13 +417,32 @@ async function generateRecommendedTweets(selectedCharacterId) {
     if (!settings.api_url || !settings.api_key) {
         console.log('[Twitter] ✅ 未設定 API，直接使用真實內容（共', realContent.length, '則）');
         console.log('[Twitter] 內容來源:', realContent.map(c => c.source));
-        const tweets = realContent.map(content => ({
-            author: character.name,
-            content: `【分享】${content.title}`,
-            stats: { reply: Math.floor(Math.random() * 10), retweet: Math.floor(Math.random() * 20), like: Math.floor(Math.random() * 50) },
-            source: content.source,
-            url: content.url
-        }));
+        
+        const sourceAuthors = {
+            'Hacker News': 'TechNews_Bot',
+            'Hacker News AI': 'AI_Weekly',
+            'BBC World': 'World_News',
+            'Creative Bloq': 'Design_Daily',
+            'Science Daily': 'ScienceNow',
+            'Polygon': 'GamingHub',
+            'Steam News': 'Steam_Updates',
+            'GitHub Blog': 'GitHub_Developers'
+        };
+        
+        const tweets = realContent.map(content => {
+            const authorName = sourceAuthors[content.source] || 'NewsBot';
+            return {
+                author: authorName,
+                content: `${content.title}`,
+                stats: { 
+                    reply: Math.floor(Math.random() * 50), 
+                    retweet: Math.floor(Math.random() * 200), 
+                    like: Math.floor(Math.random() * 500) 
+                },
+                source: content.source,
+                url: content.url
+            };
+        });
         console.log('[Twitter] 生成的推文:', tweets);
         return tweets;
     }
@@ -1240,19 +1259,25 @@ async function refreshFeed(main, pullIndicator) {
         }
         
         const character = await getCharacterContext(selectedCharacterId);
-        if (character && character.name) {
-            const npcFollows = await getNpcFollows();
-            console.log('[Twitter] 當前追蹤列表:', npcFollows);
-            if (!npcFollows.includes(character.name)) {
-                npcFollows.push(character.name);
-                await saveNpcFollows(npcFollows);
-                console.log('[Twitter] ✅ 自動追蹤角色:', character.name);
-                console.log('[Twitter] 更新後的追蹤列表:', npcFollows);
-            } else {
-                console.log('[Twitter] 已在追蹤列表中:', character.name);
+        
+        const sourceAuthors = [...new Set(tweets.map(t => t.author))];
+        console.log('[Twitter] 推文作者列表:', sourceAuthors);
+        
+        const npcFollows = await getNpcFollows();
+        console.log('[Twitter] 當前追蹤列表:', npcFollows);
+        
+        let updated = false;
+        for (const author of sourceAuthors) {
+            if (!npcFollows.includes(author)) {
+                npcFollows.push(author);
+                console.log('[Twitter] ✅ 自動追蹤:', author);
+                updated = true;
             }
-        } else {
-            console.warn('[Twitter] 無法獲取角色資訊');
+        }
+        
+        if (updated) {
+            await saveNpcFollows(npcFollows);
+            console.log('[Twitter] 更新後的追蹤列表:', npcFollows);
         }
         
         tweets.forEach(tweet => {
@@ -1371,7 +1396,7 @@ async function renderTwitterHome() {
     function handleTouchMove(e) {
         if (!pulling) return;
         const deltaY = e.touches[0].pageY - startY;
-        if (deltaY > 0) {
+        if (deltaY > 0 && deltaY < 150) {
             e.preventDefault();
             pullIndicator.classList.toggle('active', deltaY > 20);
         }
