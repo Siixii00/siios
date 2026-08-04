@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-04T06:16:47.608685",
-    "total_items": 62
+    "last_updated": "2026-08-04T09:39:25.062094",
+    "total_items": 63
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "LLMs reward expertise",
         "url": "https://www.seangoedecke.com/llms-reward-expertise/",
         "source": "Hacker News",
-        "score": 712
+        "score": 936
+      },
+      {
+        "title": "Harness Engineering for Self-Improvement",
+        "url": "https://lilianweng.github.io/posts/2026-07-04-harness/",
+        "source": "Hacker News",
+        "score": 37
       },
       {
         "title": "Show HN: Run an 80B Qwen in 4.3 GB of RAM on a Mac, and a 35B on an iPhone",
         "url": "https://github.com/leonickson1/Swiftlet",
         "source": "Hacker News",
-        "score": 93
+        "score": 179
       },
       {
         "title": "Amazonian civilization had estimated 3M people in 3% of forest area",
         "url": "https://www.science.org/content/article/odd-shapes-hidden-dense-amazon-rainforest-reveal-sprawling-ancient-civilization",
         "source": "Hacker News",
-        "score": 105
+        "score": 152
       },
       {
         "title": "Ten advances in mathematics and theoretical computer science",
         "url": "https://openai.com/index/ten-advances-in-mathematics/",
         "source": "Hacker News",
-        "score": 510
+        "score": 537
       },
       {
         "title": "Devtools must be open source",
         "url": "https://blog.exe.dev/devtools-must-be-open-source",
         "source": "Hacker News",
-        "score": 561
+        "score": 606
       },
       {
-        "title": "Ask HN: Who is hiring? (August 2026)",
-        "url": "https://news.ycombinator.com/item?id=49156683",
+        "title": "CollectWise (YC F24) Is Hiring",
+        "url": "https://www.ycombinator.com/companies/collectwise/jobs/oEAfzBS-ai-agent-engineer",
         "source": "Hacker News",
-        "score": 149
+        "score": 1
+      },
+      {
+        "title": "That time when I failed the Microsoft interview",
+        "url": "https://ochagavia.nl/blog/that-time-when-i-failed-the-microsoft-interview/",
+        "source": "Hacker News",
+        "score": 59
       },
       {
         "title": "There Will Come Soft Rains (1950) [pdf]",
         "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
         "source": "Hacker News",
-        "score": 102
+        "score": 157
       },
       {
-        "title": "Smaller, faster, safer: running Kimi and GLM at scale",
-        "url": "https://blog.cloudflare.com/smaller-faster-safer-models/",
+        "title": "Ask HN: Who is hiring? (August 2026)",
+        "url": "https://news.ycombinator.com/item?id=49156683",
         "source": "Hacker News",
-        "score": 191
-      },
-      {
-        "title": "IPC-7351B Electronic Component Zero Orientation [pdf]",
-        "url": "https://scancad.net/wp-content/uploads/2019/02/zero-orientation-cad-libaray.pdf",
-        "source": "Hacker News",
-        "score": 11
-      },
-      {
-        "title": "Apple is getting this wrong",
-        "url": "https://openai.com/index/apple-is-getting-this-wrong/",
-        "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "Ask HN: Who wants to be hired? (August 2026)",
-        "url": "https://news.ycombinator.com/item?id=49156682",
-        "source": "Hacker News",
-        "score": 98
+        "score": 173
       },
       {
         "title": "Prevent cognitive debt by manually retyping LLM-generated code",
         "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
         "source": "Hacker News",
-        "score": 444
+        "score": 483
       },
       {
-        "title": "Nobody checked which state IBM's flagship quantum chemistry results compute",
-        "url": "https://zenodo.org/records/21359923",
+        "title": "Smaller, faster, safer: running Kimi and GLM at scale",
+        "url": "https://blog.cloudflare.com/smaller-faster-safer-models/",
         "source": "Hacker News",
-        "score": 8
+        "score": 216
       },
       {
-        "title": "MiniMax H3 Day-0 Support in ComfyUI: Open Weights, Native Audio, and 2K Video",
-        "url": "https://blog.comfy.org/p/minimax-h3-day-0-support-in-comfyui",
+        "title": "You don't need React: creating a minimal UI library in Vanilla JavaScript",
+        "url": "https://pedroth.github.io/?p=post/NoNeedReact",
         "source": "Hacker News",
-        "score": 284
+        "score": 3
       },
       {
-        "title": "Celebrating 45 Years of Kermit with the First New C-Kermit Release in 15 Years",
-        "url": "https://changelog.complete.org/archives/44456-celebrating-45-years-of-kermit-with-the-first-new-c-kermit-release-in-15-years-and-working-with-a-decades-old-c-codebase",
+        "title": "Beauty in my backyard",
+        "url": "https://worksinprogress.co/issue/beauty-in-my-backyard/",
         "source": "Hacker News",
-        "score": 151
+        "score": 21
+      },
+      {
+        "title": "Ask HN: Who wants to be hired? (August 2026)",
+        "url": "https://news.ycombinator.com/item?id=49156682",
+        "source": "Hacker News",
+        "score": 114
       }
     ],
     "ai": [
@@ -101,73 +101,79 @@
         "title": "LLMs reward expertise",
         "url": "https://www.seangoedecke.com/llms-reward-expertise/",
         "source": "Hacker News AI",
-        "score": 712
+        "score": 936
+      },
+      {
+        "title": "That time when I failed the Microsoft interview",
+        "url": "https://ochagavia.nl/blog/that-time-when-i-failed-the-microsoft-interview/",
+        "source": "Hacker News AI",
+        "score": 59
       },
       {
         "title": "There Will Come Soft Rains (1950) [pdf]",
         "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
         "source": "Hacker News AI",
-        "score": 102
+        "score": 157
       },
       {
         "title": "Prevent cognitive debt by manually retyping LLM-generated code",
         "url": "https://ankursethi.com/blog/prevent-cognitive-debt-by-manually-retyping-llm-generated-code/",
         "source": "Hacker News AI",
-        "score": 444
+        "score": 483
       },
       {
         "title": "Windows XP 2002 for the Itanium: Unbridled rage",
         "url": "https://virtuallyfun.com/2026/08/03/windows-xp-2002-for-the-itanium-unbridled-rage/",
         "source": "Hacker News AI",
-        "score": 84
-      },
-      {
-        "title": "Why did we wait so long for the bicycle? (2019)",
-        "url": "https://blog.rootsofprogress.org/why-did-we-wait-so-long-for-the-bicycle",
-        "source": "Hacker News AI",
-        "score": 25
+        "score": 104
       },
       {
         "title": "Bonsai: Janestreet's UI Library",
         "url": "https://github.com/janestreet/bonsai",
         "source": "Hacker News AI",
-        "score": 328
+        "score": 352
+      },
+      {
+        "title": "RosaicLabs, Atom RTL, and 32-Tile AMX: Trying to Piece Together a x86 Puzzle",
+        "url": "https://chipsandcheese.com/p/rosaiclabs-atom-rtl-and-32-tile-amx",
+        "source": "Hacker News AI",
+        "score": 8
       },
       {
         "title": "AirLLM 70B inference with single 4GB GPU",
         "url": "https://github.com/lyogavin/airllm",
         "source": "Hacker News AI",
-        "score": 207
+        "score": 220
+      },
+      {
+        "title": "Bending Spoons entered definitive agreement to acquire Airtable for $1.28B",
+        "url": "https://www.businesswire.com/news/home/20260730994716/en/Bending-Spoons-has-entered-into-a-definitive-agreement-to-acquire-Airtable-for-%241.285-billion",
+        "source": "Hacker News AI",
+        "score": 17
       },
       {
         "title": "What's the largest software project AI can complete on its own?",
         "url": "https://epoch.ai/MirrorCode",
         "source": "Hacker News AI",
-        "score": 80
+        "score": 89
+      },
+      {
+        "title": "Why did we wait so long for the bicycle? (2019)",
+        "url": "https://blog.rootsofprogress.org/why-did-we-wait-so-long-for-the-bicycle",
+        "source": "Hacker News AI",
+        "score": 45
       },
       {
         "title": "SQLite Critical CVEs or LLM Slop?",
         "url": "https://research.jfrog.com/post/sqlite-critical-cves-or-llm-slops/",
         "source": "Hacker News AI",
-        "score": 706
-      },
-      {
-        "title": "The Potomac River Midair Collision",
-        "url": "https://admiralcloudberg.medium.com/reaping-the-whirlwind-inside-the-potomac-river-midair-collision-0475416f2b0f",
-        "source": "Hacker News AI",
-        "score": 76
+        "score": 711
       },
       {
         "title": "The AI Productivity Gap",
         "url": "https://bjorg.bjornroche.com/management/ai-productivity-gap/",
         "source": "Hacker News AI",
-        "score": 116
-      },
-      {
-        "title": "Train Simulator Controller",
-        "url": "https://z80.me/blog/tsc-2026-july/",
-        "source": "Hacker News AI",
-        "score": 101
+        "score": 122
       }
     ],
     "news": [
@@ -177,37 +183,57 @@
         "source": "BBC World"
       },
       {
-        "title": "Russia says seven killed and 40 injured by Ukrainian drone hitting busy beach",
-        "url": "https://www.bbc.co.uk/news/articles/cr7kmnyrdn7o?at_medium=RSS&at_campaign=rss",
+        "title": "Analysis: Trump challenged by cold reality from top allies",
+        "url": "https://www.bbc.co.uk/news/articles/cgjed2q2l0xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Iran says it is in talks with Oman but not the US after Trump says negotiations to resume",
-        "url": "https://www.bbc.co.uk/news/articles/c23579jzv08o?at_medium=RSS&at_campaign=rss",
+        "title": "Five dead in Moscow region as Ukraine continues warehouse strikes",
+        "url": "https://www.bbc.co.uk/news/articles/c151pkww79zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ariana Grande has had enough of body comments, but 'scrutiny' will linger",
-        "url": "https://www.bbc.co.uk/news/articles/c3ek7g857q4o?at_medium=RSS&at_campaign=rss",
+        "title": "What will happen when a SpaceX rocket collides with the Moon?",
+        "url": "https://www.bbc.co.uk/news/articles/cx25yn22l97o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Arson arrest made over largest of Washington state's wildfires",
+        "url": "https://www.bbc.co.uk/news/articles/c5y3ppmmev1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Soldier kills four in gun rampage in Russian-occupied Crimea",
+        "url": "https://www.bbc.co.uk/news/articles/c80n33lrnm5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "France wildfires reveal hundreds of WW2 shells in village",
         "url": "https://www.bbc.co.uk/news/articles/cgmkxjrrwdvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "I left my wife and twins behind - why this Nigerian man fled South Africa",
-        "url": "https://www.bbc.co.uk/news/articles/c4gx2y454w5o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Watch: Wild police chase in Queensland, Australia ends in two arrests",
-        "url": "https://www.bbc.co.uk/news/videos/c5y0d96qgg3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Apple seems to be rebranding itself as a subscription service. I wish it wouldn't ",
+        "url": "https://www.creativebloq.com/design/apple-seems-to-be-rebranding-itself-as-a-subscription-service-i-wish-it-wouldnt",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " MSI Claw 8 EX AI+ review: the handheld PC that finally makes sense to a console gamer ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/msi-claw-8-ex-ai-review-the-handheld-pc-that-finally-makes-sense-to-a-console-gamer",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " No, Vermont's new logo design isn't Comic Sans ",
+        "url": "https://www.creativebloq.com/design/logos-icons/no-vermonts-new-logo-design-isnt-comic-sans",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " If you remember Nintendo's Game & Watch, this bizarre retro game will bring a tear to your eye ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/if-you-remember-nintendos-game-and-watch-this-bizarre-retro-game-will-bring-a-tear-to-your-eye",
+        "source": "Creative Bloq"
+      },
       {
         "title": " This old-school game design optical illusion is still blowing people's minds ",
         "url": "https://www.creativebloq.com/3d/video-game-design/this-old-school-optical-illusion-game-design-hack-still-amazes-people-today",
@@ -221,26 +247,6 @@
       {
         "title": " Those biceps on The Odyssey poster aren't Matt Damon's – and they aren't even a man's ",
         "url": "https://www.creativebloq.com/design/poster-design/those-biceps-on-the-odyssey-poster-arent-matt-damons-and-they-arent-even-a-mans",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Want the same phone as Spider-Man? Just 3 days remain to preorder the Samsung Galaxy Z Flip8 ",
-        "url": "https://www.creativebloq.com/tech/phones-tablets/want-the-same-phone-as-spider-man-just-3-days-remain-to-preorder-the-samsung-galaxy-z-flip8",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Boox Go 6 Gen 2 is a super cute, ultra-portable Kindle alternative – and you can write on it! ",
-        "url": "https://www.creativebloq.com/tech/phones-tablets/boox-go-6-gen-2-review",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Why Spider-Man: Brand New Day's subway scene feels so real ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/why-spider-man-brand-new-days-subway-scene-feels-so-real",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How Stupid Never Dies built one of gaming's freshest art styles by redefining punk from scratch ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/how-stupid-never-dies-built-one-of-gamings-freshest-art-styles-by-redefining-punk-from-scratch",
         "source": "Creative Bloq"
       }
     ],
@@ -283,38 +289,38 @@
     ],
     "gaming": [
       {
-        "title": "Beast of Reincarnation review roundup: Pokémon team's Soulslike can't escape its inspirations",
-        "url": "https://www.polygon.com/beast-reincarnation-review-roundup/",
+        "title": "Netflix's FIFA World Cup game studio has laid off 85% of its staff",
+        "url": "https://www.polygon.com/fifa-world-cup-netflix-game-refactor-games-delphi-interactive-layoffs/",
         "source": "Polygon"
       },
       {
-        "title": "The next Spider-Man movie officially arrives in 10 months, and it doesn't star Tom Holland",
-        "url": "https://www.polygon.com/next-spider-man-movie-2027/",
+        "title": "All radio station locations in Big Walk",
+        "url": "https://www.polygon.com/big-walk-radio-transmitter-station-locations-where-to-find/",
         "source": "Polygon"
       },
       {
-        "title": "Shrine locations in Beast of Reincarnation",
-        "url": "https://www.polygon.com/beast-of-reincarnation-shrine-locations-dragon-vein-stimpacks/",
+        "title": "How to get a megaphone in Big Walk",
+        "url": "https://www.polygon.com/big-walk-megaphone-location-how-to-get/",
         "source": "Polygon"
       },
       {
-        "title": "Armor locations in Beast of Reincarnation",
-        "url": "https://www.polygon.com/beast-of-reincarnation-armor-locations-map-where-to-find/",
+        "title": "How to 'get shiny' in Big Walk",
+        "url": "https://www.polygon.com/big-walk-get-shiny-paint-location-makeover-achievement/",
         "source": "Polygon"
       },
       {
-        "title": "How to solve the 'Origin of the Ringing' fire puzzle in Beast of Reincarnation",
-        "url": "https://www.polygon.com/beast-of-reincarnation-how-to-light-the-fire-puzzle-origin-ringing-bell/",
+        "title": "How to unlock the tunnels in Big Walk",
+        "url": "https://www.polygon.com/big-walk-tunnels-unlock-open-tower/",
         "source": "Polygon"
       },
       {
-        "title": "Generator device locations in Beast of Reincarnation",
-        "url": "https://www.polygon.com/beast-of-reincarnation-generator-device-location-where-to-find/",
+        "title": "All backpack locations in Big Walk",
+        "url": "https://www.polygon.com/big-walk-backpack-waist-bag-locations-where-to-find/",
         "source": "Polygon"
       },
       {
-        "title": "Electronic brain locations in Beast of Reincarnation",
-        "url": "https://www.polygon.com/beast-of-reincarnation-electronic-brain-location-where-to-find-calculations/",
+        "title": "11 beginner's tips to help you trek along in Big Walk",
+        "url": "https://www.polygon.com/big-walk-beginners-guide-tips-tricks/",
         "source": "Polygon"
       }
     ],
