@@ -6,6 +6,7 @@ import HomeScreen from './homescreen.js';
 import { registerRoutes } from './apps/registry.js';
 import { MemorySystem } from './core/memory-system/index.js';
 import { initActivityAPI } from './activity-interceptor.js';
+import { ziweiLazyLoader } from './core/ziwei-lazy-loader.js';
 
 window.showError = function(errorInfo) {
     const info = typeof errorInfo === 'string' 
@@ -149,6 +150,9 @@ const App = {
             
             console.log('[App] 初始化活動 API...');
             initActivityAPI();
+            
+            console.log('[App] 啟動紫微斗數懶加載器...');
+            ziweiLazyLoader.startDayChangeDetection();
             
             this.registerServiceWorker();
             this.setupInstallPrompt();

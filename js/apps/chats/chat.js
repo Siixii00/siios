@@ -401,6 +401,8 @@ async function renderChat(params) {
         main.appendChild(bubble);
     }
     
+    container.appendChild(main);
+    
     const inputArea = createElement('div', 'kakao-chat-input-area');
     
     const inputWrapper = createElement('div', 'kakao-chat-input-wrapper');
@@ -464,7 +466,9 @@ async function renderChat(params) {
         const userBubble = createKakaoBubble('user', content);
         main.appendChild(userBubble);
         
-        main.scrollTop = main.scrollHeight;
+        requestAnimationFrame(() => {
+            main.scrollTop = main.scrollHeight;
+        });
         
         messages = await MessagesDB.getByChatId(chatId);
         messageCount = messages.length;

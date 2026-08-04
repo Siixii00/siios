@@ -1154,3 +1154,106 @@
 .desktop-mode .wiki-backlinks-area {
     padding: var(--nt-s-md) var(--nt-s-lg);
 }
+
+.wiki-ziwei-area {
+    padding: var(--nt-s-md);
+}
+
+.wiki-ziwei-section {
+    margin-top: var(--nt-s-lg);
+}
+
+.wiki-ziwei-header {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--nt-ink);
+    margin-bottom: var(--nt-s-sm);
+}
+
+.wiki-ziwei-empty {
+    background: var(--nt-canvas-soft);
+    border: 1px dashed var(--nt-hairline);
+    border-radius: 6px;
+    padding: var(--nt-s-md);
+    color: var(--nt-ink-faint);
+    font-size: 13px;
+    text-align: center;
+}
+
+.wiki-ziwei-hint {
+    margin-top: var(--nt-s-xs);
+    font-size: 12px;
+}
+
+.wiki-ziwei-loading {
+    background: var(--nt-canvas-soft);
+    border: 1px solid var(--nt-hairline);
+    border-radius: 6px;
+    padding: var(--nt-s-md);
+    color: var(--nt-ink-faint);
+    font-size: 13px;
+    text-align: center;
+}
+
+.wiki-ziwei-warning {
+    background: #fff3cd;
+    border: 1px solid #ffc107;
+    border-radius: 6px;
+    padding: var(--nt-s-sm) var(--nt-s-md);
+    margin-bottom: var(--nt-s-sm);
+    font-size: 12px;
+    color: #856404;
+}
+
+.wiki-ziwei-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--nt-s-sm);
+}
+
+.wiki-ziwei-card {
+    background: var(--nt-canvas-soft);
+    border: 1px solid var(--nt-hairline);
+    border-radius: 6px;
+    padding: var(--nt-s-md);
+}
+
+.wiki-ziwei-card-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--nt-ink);
+    margin-bottom: var(--nt-s-xs);
+}
+
+.wiki-ziwei-card-temple {
+    font-size: 12px;
+    color: var(--nt-ink-faint);
+    margin-bottom: var(--nt-s-xs);
+}
+
+.wiki-ziwei-card-summary {
+    font-size: 12px;
+    color: var(--nt-ink);
+    margin-top: var(--nt-s-xs);
+}
+
+.wiki-ziwei-events {
+    margin-top: var(--nt-s-sm);
+}
+
+.wiki-ziwei-event {
+    display: inline-block;
+    background: #e3f2fd;
+    color: #1565c0;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 6px;
+    margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+    .wiki-ziwei-cards {
+        grid-template-columns: 1fr;
+    }
+}

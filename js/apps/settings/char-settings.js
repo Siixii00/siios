@@ -218,6 +218,68 @@ async function renderCharEdit(params) {
     main.appendChild(sleepSection);
     main.appendChild(sleepGroup);
 
+    const birthSection = createElement('div', 'mb-2 ml-8 mt-4');
+    birthSection.appendChild(createElement('p', 'ios-section-header', { textContent: '出生資訊（紫微斗數分析）' }));
+    const birthGroup = createElement('div', 'ios-grouped-list mx-4');
+
+    const birthDateCell = createElement('div', 'p-4 flex gap-4');
+    const birthDateField = createElement('div', 'flex-1');
+    birthDateField.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '出生日期' }));
+    const birthDateInput = createElement('input', 'ios-input w-full', {
+        type: 'date',
+        value: char.birth_date || ''
+    });
+    birthDateField.appendChild(birthDateInput);
+    birthDateCell.appendChild(birthDateField);
+
+    const birthTimeField = createElement('div', 'flex-1');
+    birthTimeField.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '出生時間' }));
+    const birthTimeInput = createElement('input', 'ios-input w-full', {
+        type: 'time',
+        value: char.birth_time || ''
+    });
+    birthTimeField.appendChild(birthTimeInput);
+    birthDateCell.appendChild(birthTimeField);
+    birthGroup.appendChild(birthDateCell);
+
+    const birthLocationCell = createElement('div', 'p-4');
+    birthLocationCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '出生地點' }));
+    const birthLocationInput = createElement('input', 'ios-input w-full', {
+        type: 'text',
+        placeholder: '例如：台北市',
+        value: char.birth_location || ''
+    });
+    birthLocationCell.appendChild(birthLocationInput);
+    birthGroup.appendChild(birthLocationCell);
+
+    const genderCell = createElement('div', 'p-4 flex gap-4');
+    const genderField = createElement('div', 'flex-1');
+    genderField.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '性別' }));
+    const genderSelect = createElement('select', 'ios-input w-full');
+    genderSelect.innerHTML = `
+        <option value="">未設定</option>
+        <option value="male">男</option>
+        <option value="female">女</option>
+    `;
+    genderSelect.value = char.gender || '';
+    genderField.appendChild(genderSelect);
+    genderCell.appendChild(genderField);
+
+    const calendarField = createElement('div', 'flex-1');
+    calendarField.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '曆法' }));
+    const calendarSelect = createElement('select', 'ios-input w-full');
+    calendarSelect.innerHTML = `
+        <option value="solar">國曆</option>
+        <option value="lunar">農曆</option>
+    `;
+    calendarSelect.value = char.birth_calendar_type || 'solar';
+    calendarField.appendChild(calendarSelect);
+    genderCell.appendChild(calendarField);
+    birthGroup.appendChild(genderCell);
+
+    main.appendChild(birthSection);
+    main.appendChild(birthGroup);
+
     const users = await UsersDB.getAll();
     
     const userSection = createElement('div', 'mb-2 ml-8 mt-4');
@@ -260,7 +322,12 @@ async function renderCharEdit(params) {
             speech_style: styleInput.value.trim(),
             sleep_start: sleepStartInput.value,
             sleep_end: sleepEndInput.value,
-            bound_user_id: boundUserId
+            bound_user_id: boundUserId,
+            birth_date: birthDateInput.value || null,
+            birth_time: birthTimeInput.value || null,
+            birth_location: birthLocationInput.value.trim() || null,
+            birth_calendar_type: calendarSelect.value,
+            gender: genderSelect.value || null
         });
         createToast('角色設定已儲存');
         Router.navigate('/settings/char/' + params.id);
