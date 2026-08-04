@@ -1094,8 +1094,6 @@ async function renderFeed(container) {
         return;
     }
     
-    const feed = createElement('section', 'feed');
-    
     for (const tweet of displayTweets) {
         const tweetId = tweet.id || tweet.timestamp;
         const isBookmarked = isTweetBookmarked(tweetId);
@@ -1109,10 +1107,8 @@ async function renderFeed(container) {
             icon.className = nowBookmarked ? 'fas fa-bookmark' : 'far fa-bookmark';
         };
         
-        feed.appendChild(tweetEl);
+        container.appendChild(tweetEl);
     }
-    
-    container.appendChild(feed);
 }
 
 async function renderBookmarksList(container) {
