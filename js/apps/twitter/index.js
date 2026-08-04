@@ -1055,12 +1055,14 @@ async function renderFeed(container) {
     console.log('[Twitter] 用戶推文數量:', userTweets.length);
     console.log('[Twitter] NPC 推文數量:', npcTweets.length);
     console.log('[Twitter] 追蹤的 NPC:', npcFollows);
+    console.log('[Twitter] npcTweets 的作者:', npcTweets.map(t => t.author));
     
     let all = [...userTweets];
     
     if (npcFollows.length > 0) {
         const followedNpcTweets = npcTweets.filter(t => npcFollows.includes(t.author));
         console.log('[Twitter] 已追蹤 NPC 的推文數量:', followedNpcTweets.length);
+        console.log('[Twitter] 已追蹤 NPC 的推文作者:', followedNpcTweets.map(t => t.author));
         all = [...all, ...followedNpcTweets];
     } else {
         console.log('[Twitter] 未追蹤任何 NPC，只顯示用戶推文');
@@ -1244,11 +1246,17 @@ async function refreshFeed(main, pullIndicator) {
         const character = await getCharacterContext(selectedCharacterId);
         if (character && character.name) {
             const npcFollows = await getNpcFollows();
+            console.log('[Twitter] 當前追蹤列表:', npcFollows);
             if (!npcFollows.includes(character.name)) {
                 npcFollows.push(character.name);
                 await saveNpcFollows(npcFollows);
-                console.log('[Twitter] 自動追蹤角色:', character.name);
+                console.log('[Twitter] ✅ 自動追蹤角色:', character.name);
+                console.log('[Twitter] 更新後的追蹤列表:', npcFollows);
+            } else {
+                console.log('[Twitter] 已在追蹤列表中:', character.name);
             }
+        } else {
+            console.warn('[Twitter] 無法獲取角色資訊');
         }
         
         tweets.forEach(tweet => {
