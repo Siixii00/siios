@@ -652,20 +652,32 @@ async function loadZiweiFortune(container, recordId) {
         if (cache.is_stale) {
             area.innerHTML = `
                 <div class="wiki-ziwei-section">
-                    <div class="wiki-ziwei-header">🔮 命理分析</div>
-                    <div class="wiki-ziwei-warning">⚠️ 資料可能過期（無法連線至分析服務）</div>
-                    ${renderZiweiCards(cache)}
+                    <div class="wiki-ziwei-header" data-ziwei-toggle>
+                        <div class="wiki-ziwei-header-title">🔮 命理分析</div>
+                        <div class="wiki-ziwei-toggle">▼</div>
+                    </div>
+                    <div class="wiki-ziwei-content">
+                        <div class="wiki-ziwei-warning">⚠️ 資料可能過期（無法連線至分析服務）</div>
+                        ${renderZiweiCards(cache)}
+                    </div>
                 </div>
             `;
+            bindZiweiToggle(area);
             return;
         }
 
         area.innerHTML = `
             <div class="wiki-ziwei-section">
-                <div class="wiki-ziwei-header">🔮 命理分析 (${cache.analysis_date})</div>
-                ${renderZiweiCards(cache)}
+                <div class="wiki-ziwei-header" data-ziwei-toggle>
+                    <div class="wiki-ziwei-header-title">🔮 命理分析 (${cache.analysis_date})</div>
+                    <div class="wiki-ziwei-toggle">▼</div>
+                </div>
+                <div class="wiki-ziwei-content">
+                    ${renderZiweiCards(cache)}
+                </div>
             </div>
         `;
+        bindZiweiToggle(area);
     } catch (error) {
         console.error('[Wiki] Ziwei load error:', error);
         area.innerHTML = '';
@@ -703,6 +715,17 @@ function renderZiweiCards(cache) {
             </div>
         </div>
     `;
+}
+
+function bindZiweiToggle(area) {
+    const header = area.querySelector('.wiki-ziwei-header');
+    const content = area.querySelector('.wiki-ziwei-content');
+    if (!header || !content) return;
+    
+    header.onclick = () => {
+        header.classList.toggle('collapsed');
+        content.classList.toggle('collapsed');
+    };
 }
 
 function updateNumberedListNumbers(record, blocksEl) {
