@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-05T20:27:34.021038",
+    "last_updated": "2026-08-05T22:13:24.777374",
     "total_items": 65
   },
   "content": {
@@ -9,186 +9,191 @@
         "title": "Zed DeltaDB",
         "url": "https://zed.dev/deltadb",
         "source": "Hacker News",
-        "score": 123
+        "score": 218
       },
       {
         "title": "Discovery Loop",
         "url": "https://www.discoveryloop.com/",
         "source": "Hacker News",
-        "score": 389
+        "score": 471
       },
       {
-        "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
-        "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
+        "title": "I'm switching my phone from Android to Linux",
+        "url": "https://runarcn.no/android-to-linux/",
         "source": "Hacker News",
-        "score": 94
+        "score": 90
       },
       {
         "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
         "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
         "source": "Hacker News",
-        "score": 247
+        "score": 343
       },
       {
-        "title": "Muse Code and Muse Spark 1.2",
-        "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+        "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
+        "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
         "source": "Hacker News",
-        "score": 60
+        "score": 149
+      },
+      {
+        "title": "Nvidia's Vera Whitepaper Has a Thread Loose",
+        "url": "https://chipsandcheese.com/p/nvidias-vera-whitepaper-has-a-thread",
+        "source": "Hacker News",
+        "score": 20
       },
       {
         "title": "Atlassian Rovo Exfiltrates Data, Bypassing Controls",
         "url": "https://www.promptarmor.com/resources/atlassian-rovo-exfiltrates-data",
         "source": "Hacker News",
-        "score": 79
+        "score": 126
+      },
+      {
+        "title": "Muse Code and Muse Spark 1.2",
+        "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+        "source": "Hacker News",
+        "score": 112
       },
       {
         "title": "GNU Hurd News 2026-Q2",
         "url": "https://www.gnu.org/software/hurd/news/2026-q2.html",
         "source": "Hacker News",
-        "score": 61
+        "score": 97
       },
       {
-        "title": "Sula: A Gemini protocol server written in Scryer Prolog",
-        "url": "https://sagredo.dev/projects/sula/",
+        "title": "The Title Cards in Blade Runner Are Fucking Amazing",
+        "url": "https://randsinrepose.com/archives/blade-runner-title-cards/",
         "source": "Hacker News",
-        "score": 16
+        "score": 19
+      },
+      {
+        "title": "Prime Agent: A self-improving RLM agent",
+        "url": "https://www.primeintellect.ai/blog/prime-agent",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
+        "title": "OpenAI says my prepaid credits were consumed, refuses to show any record",
+        "url": "https://community.openai.com/t/how-openai-lost-a-paying-customer-over-160-it-refuses-to-explain/1389233",
+        "source": "Hacker News",
+        "score": 39
       },
       {
         "title": "Celld: Self-hosted, distributed Durable Objects",
         "url": "https://github.com/denoland/celld",
         "source": "Hacker News",
-        "score": 64
-      },
-      {
-        "title": "Sycophantic AI Decreases Prosocial Intentions and Promotes Dependence (2025)",
-        "url": "https://arxiv.org/abs/2510.01395",
-        "source": "Hacker News",
-        "score": 35
+        "score": 101
       },
       {
         "title": "Meta Ran Ads That Contained AI-Generated Child Sexual Abuse Imagery",
         "url": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery/",
         "source": "Hacker News",
-        "score": 47
+        "score": 165
       },
       {
         "title": "The Valley of Webhooks",
         "url": "https://weli.dev/blog/the-valley-of-webhooks/",
         "source": "Hacker News",
-        "score": 87
-      },
-      {
-        "title": "Launch HN: HyperProbe (YC S26) – Agents that do read-only debugging in prod",
-        "url": "https://www.hyperprobe.co",
-        "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "The Entropy of a Markov Chain",
-        "url": "https://chillphysicsenjoyer.substack.com/p/the-entropy-of-a-markov-chain",
-        "source": "Hacker News",
-        "score": 81
-      },
-      {
-        "title": "Phishers are hijacking legitimate cloud infrastructure",
-        "url": "https://securelist.com/cloud-platforms-in-phishing/120832/",
-        "source": "Hacker News",
-        "score": 29
+        "score": 127
       }
     ],
     "ai": [
       {
-        "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
-        "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
-        "source": "Hacker News AI",
-        "score": 94
-      },
-      {
         "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
         "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
         "source": "Hacker News AI",
-        "score": 247
+        "score": 343
       },
       {
-        "title": "Sula: A Gemini protocol server written in Scryer Prolog",
-        "url": "https://sagredo.dev/projects/sula/",
+        "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
+        "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 149
       },
       {
-        "title": "Sycophantic AI Decreases Prosocial Intentions and Promotes Dependence (2025)",
-        "url": "https://arxiv.org/abs/2510.01395",
+        "title": "OpenAI says my prepaid credits were consumed, refuses to show any record",
+        "url": "https://community.openai.com/t/how-openai-lost-a-paying-customer-over-160-it-refuses-to-explain/1389233",
         "source": "Hacker News AI",
-        "score": 35
+        "score": 39
       },
       {
         "title": "Meta Ran Ads That Contained AI-Generated Child Sexual Abuse Imagery",
         "url": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery/",
         "source": "Hacker News AI",
-        "score": 47
+        "score": 165
+      },
+      {
+        "title": "Sula: A Gemini protocol server written in Scryer Prolog",
+        "url": "https://sagredo.dev/projects/sula/",
+        "source": "Hacker News AI",
+        "score": 27
       },
       {
         "title": "The Entropy of a Markov Chain",
         "url": "https://chillphysicsenjoyer.substack.com/p/the-entropy-of-a-markov-chain",
         "source": "Hacker News AI",
-        "score": 81
-      },
-      {
-        "title": "Born Against, or why hobby programming communities are against LLM usage",
-        "url": "https://blog.fogus.me/llm/born-against.html",
-        "source": "Hacker News AI",
-        "score": 78
-      },
-      {
-        "title": "Painting with Gaussians",
-        "url": "https://yogthos.net/posts/2026-08-03-splat-painter.html",
-        "source": "Hacker News AI",
-        "score": 76
-      },
-      {
-        "title": "Position: LLMs Can't Jump",
-        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DklU4737opt",
-        "source": "Hacker News AI",
-        "score": 215
-      },
-      {
-        "title": "Proxmox VE now available for ARM64",
-        "url": "https://forum.proxmox.com/threads/proxmox-virtual-environment-now-available-for-64-bit-arm-arm64.185527/",
-        "source": "Hacker News AI",
-        "score": 23
-      },
-      {
-        "title": "TIME Is Serving AI Bots a Different Website, with Ads Built In",
-        "url": "https://www.vincentschmalbach.com/time-serves-ai-bots-a-different-website/",
-        "source": "Hacker News AI",
-        "score": 216
-      },
-      {
-        "title": "See the Sun like never before with most detailed images yet",
-        "url": "https://www.bbc.com/news/articles/c36d4376nd2o",
-        "source": "Hacker News AI",
-        "score": 16
+        "score": 92
       },
       {
         "title": "I’m leaving OpenAI to build telepathy",
         "url": "https://naomibashkansky.com/blog/telepathy/",
         "source": "Hacker News AI",
-        "score": 55
+        "score": 98
       },
       {
-        "title": "\"AI\" will never become conscious",
-        "url": "https://mattbee.mataroa.blog/p/no-ai-will-never-become-conscious/",
+        "title": "Painting with Gaussians",
+        "url": "https://yogthos.net/posts/2026-08-03-splat-painter.html",
         "source": "Hacker News AI",
-        "score": 13
+        "score": 84
       },
       {
-        "title": "Microsoft's AI Sales Mostly Come from OpenAI, Disclosures Show",
-        "url": "https://www.bloomberg.com/news/articles/2026-08-05/microsoft-s-ai-sales-mostly-come-from-openai-disclosures-show",
+        "title": "Born Against, or why hobby programming communities are against LLM usage",
+        "url": "https://blog.fogus.me/llm/born-against.html",
         "source": "Hacker News AI",
-        "score": 49
+        "score": 108
+      },
+      {
+        "title": "Position: LLMs Can't Jump",
+        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DklU4737opt",
+        "source": "Hacker News AI",
+        "score": 225
+      },
+      {
+        "title": "Proxmox VE now available for ARM64",
+        "url": "https://forum.proxmox.com/threads/proxmox-virtual-environment-now-available-for-64-bit-arm-arm64.185527/",
+        "source": "Hacker News AI",
+        "score": 36
+      },
+      {
+        "title": "Sycophantic AI Decreases Prosocial Intentions and Promotes Dependence (2025)",
+        "url": "https://arxiv.org/abs/2510.01395",
+        "source": "Hacker News AI",
+        "score": 62
+      },
+      {
+        "title": "See the Sun like never before with most detailed images yet",
+        "url": "https://www.bbc.com/news/articles/c36d4376nd2o",
+        "source": "Hacker News AI",
+        "score": 22
+      },
+      {
+        "title": "A Fed official is asking whether AI is becoming 'too big to fail'",
+        "url": "https://thenextweb.com/news/a-fed-official-is-asking-whether-ai-is-becoming-too-big-to-fail",
+        "source": "Hacker News AI",
+        "score": 7
+      },
+      {
+        "title": "TIME Is Serving AI Bots a Different Website, with Ads Built In",
+        "url": "https://www.vincentschmalbach.com/time-serves-ai-bots-a-different-website/",
+        "source": "Hacker News AI",
+        "score": 223
       }
     ],
     "news": [
+      {
+        "title": "Iran says it has agreed Strait of Hormuz shipping route with Oman",
+        "url": "https://www.bbc.co.uk/news/articles/ckg9d3eyeggo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "After deadly Kyiv strike, Ukraine warns interceptor shortage is costing lives",
         "url": "https://www.bbc.co.uk/news/articles/cyvlgq2gp2eo?at_medium=RSS&at_campaign=rss",
@@ -205,23 +210,18 @@
         "source": "BBC World"
       },
       {
+        "title": "Fifa admits mistakes but Infantino remains president",
+        "url": "https://www.bbc.co.uk/sport/football/articles/clyq3el5gkqo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Why some scientists are thrilled that a SpaceX rocket has crashed into the Moon",
         "url": "https://www.bbc.co.uk/news/articles/c62q0xerzrno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "UN rights chief alarmed by rise in Iran executions since March",
-        "url": "https://www.bbc.co.uk/news/articles/c75gvzxrz49o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Waste workers help winner find binned €1m lottery ticket in Italy",
         "url": "https://www.bbc.co.uk/news/articles/c62qvll0z94o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Left-wing political outsider wins Democratic Senate primary in Michigan",
-        "url": "https://www.bbc.co.uk/news/articles/ckgdkpz07kvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -301,7 +301,27 @@
     ],
     "gaming": [
       {
-        "title": "Manual locations in Beast of Reincarnation",
+        "title": "How to get a portal pod in Pokémon Pokopia",
+        "url": "https://www.polygon.com/pokemon-pokopia-how-to-get-universal-storage-crafting-recipe/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Minecraft announced for Switch 2 with enhanced graphics",
+        "url": "https://www.polygon.com/minecraft-nintendo-switch-2-release-date/",
+        "source": "Polygon"
+      },
+      {
+        "title": "All weapon locations in Beast of Reincarnation",
+        "url": "https://www.polygon.com/beast-of-reincarnation-weapon-location-where-to-find/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Bubbly Basin Habitat Dex list for Pokémon Pokopia DLC",
+        "url": "https://www.polygon.com/pokemon-pokopia-bubbly-basin-dlc-habitat-dex-list-requirements/",
+        "source": "Polygon"
+      },
+      {
+        "title": "All manual locations in Beast of Reincarnation",
         "url": "https://www.polygon.com/beast-of-reincarnation-manual-location-where-to-find-buy-price/",
         "source": "Polygon"
       },
@@ -313,26 +333,6 @@
       {
         "title": "Larian Studios' Baldur's Gate 3 livestream shut down for being too sexy",
         "url": "https://www.polygon.com/baldurs-gate-3-developer-livestream-banned-youtube-tiktok-too-horny/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How Pokémon TCG fans avoid getting cooked on Walmart Wednesday",
-        "url": "https://www.polygon.com/pokemon-tcg-walmart-release-deal-is-going-fast-almost-gone-errors/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fortnite Chapter 7 Season 4 is titled Override, Epic Games confirms",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-override-announced-gaming-legends-leaks/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Pokémon Pokopia Bubbly Basin DLC Finally Gives the Best Type of Pokémon Their Due",
-        "url": "https://www.polygon.com/pokemon-pokopia-bubbly-basin-fish/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Magic Designer Says This Underrated Avatar MTG Commander Deserves More Play",
-        "url": "https://www.polygon.com/mtg-avatar-the-last-airbender-best-commanders-katara-water-tribes-hope-underrated/",
         "source": "Polygon"
       }
     ],
