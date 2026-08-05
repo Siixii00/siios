@@ -1,207 +1,236 @@
 {
   "metadata": {
-    "last_updated": "2026-08-05T11:21:58.730500",
-    "total_items": 61
+    "last_updated": "2026-08-05T14:11:24.339100",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
-        "title": "Helsinki Hacker News Meetup",
-        "url": "https://calpaterson.com/helsinki-hn.html",
+        "title": "Position: LLMs Can't Jump",
+        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DklU4737opt",
         "source": "Hacker News",
-        "score": 91
+        "score": 124
       },
       {
-        "title": "No Data Centers in My Backyard",
-        "url": "https://jasmi.news/p/no-data-centers-in-my-backyard",
+        "title": "Why the Legendary Erdős Problems Are Falling to AI",
+        "url": "https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/",
         "source": "Hacker News",
-        "score": 11
+        "score": 48
       },
       {
-        "title": "Stateless MCP has recaptured my interest",
-        "url": "https://simonwillison.net/2026/Jul/31/stateless-mcp/",
+        "title": "Cloudflare OS: an open platform for agents, apps, and work",
+        "url": "https://blog.cloudflare.com/cloudflare-os/",
         "source": "Hacker News",
-        "score": 253
-      },
-      {
-        "title": "“Gravity is worth asking about”",
-        "url": "https://unsung.aresluna.org/gravity-is-worth-asking-about/",
-        "source": "Hacker News",
-        "score": 116
+        "score": 5
       },
       {
         "title": "Civilian plane crash in New Mexico tied to military GPS blocking",
         "url": "https://www.wired.com/story/a-civilian-plane-crashed-in-new-mexico-was-the-militarys-tech-to-blame/",
         "source": "Hacker News",
-        "score": 11
+        "score": 214
+      },
+      {
+        "title": "TIME Is Serving AI Bots a Different Website, with Ads Built In",
+        "url": "https://www.vincentschmalbach.com/time-serves-ai-bots-a-different-website/",
+        "source": "Hacker News",
+        "score": 75
+      },
+      {
+        "title": "Stateless MCP has recaptured my interest",
+        "url": "https://simonwillison.net/2026/Jul/31/stateless-mcp/",
+        "source": "Hacker News",
+        "score": 314
+      },
+      {
+        "title": "A Sick People",
+        "url": "https://householderkarl.com/a-sick-people/",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
+        "title": "Scaling NumPy on Free-Threaded Python",
+        "url": "https://labs.quansight.org/blog/scaling-numpy-on-free-threaded-python",
+        "source": "Hacker News",
+        "score": 53
+      },
+      {
+        "title": "Bubble Memory",
+        "url": "https://en.wikipedia.org/wiki/Bubble_memory",
+        "source": "Hacker News",
+        "score": 45
       },
       {
         "title": "Pi's Minimalism Is Its Advantage",
         "url": "https://earendil.com/posts/pi-autoresearch-and-databricks/",
         "source": "Hacker News",
-        "score": 401
-      },
-      {
-        "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
-        "url": "https://mistral.ai/news/shieldstral/",
-        "source": "Hacker News",
-        "score": 438
-      },
-      {
-        "title": "Show HN: Simple algorithm and color space to generate diverse skin tones",
-        "url": "https://toneyalexander.github.io/inclusive-color-space/",
-        "source": "Hacker News",
-        "score": 546
-      },
-      {
-        "title": "Zero-Mem: Zero-Token Memory Operations for LLM Agents",
-        "url": "https://arxiv.org/abs/2607.29377",
-        "source": "Hacker News",
-        "score": 52
-      },
-      {
-        "title": "The Pneumatics of Hero of Alexandria (1851)",
-        "url": "https://www.thehopkinthomasproject.com/TheHopkinThomasProject/TimeLine/Wales/Steam/URochesterCollection/Hero/index-2.html",
-        "source": "Hacker News",
-        "score": 34
-      },
-      {
-        "title": "IP and DNS Leaks in WebKit Affecting Proxy Browsers and iCloud Private Relay",
-        "url": "https://mysk.blog/2026/08/04/webkit-proxy-icloud-private-relay-ip-leak/",
-        "source": "Hacker News",
-        "score": 123
-      },
-      {
-        "title": "Show HN: Maple-Preview – Ternary 20B MoE running at 120 tok/s on a iPhone",
-        "url": "https://deepgrove.ai/maple-preview",
-        "source": "Hacker News",
-        "score": 133
-      },
-      {
-        "title": "In Memory of My Wife, Elise Cawley, with Thanks for 36 Wonderful Years",
-        "url": "https://writings.stephenwolfram.com/2026/08/in-memory-of-my-wife-elise-cawley-1961-2026-with-thanks-for-36-wonderful-years/",
-        "source": "Hacker News",
-        "score": 1414
+        "score": 459
       },
       {
         "title": "Birduino: A card-triggered audio player for [learning] the birds",
         "url": "https://hannahilea.com/blog/birduino/",
         "source": "Hacker News",
-        "score": 7
+        "score": 29
       },
       {
-        "title": "DuckDB – Data power tools for your laptop, now in Clojure (2023)",
-        "url": "https://techascent.com/blog/just-ducking-around.html",
+        "title": "“Gravity is worth asking about”",
+        "url": "https://unsung.aresluna.org/gravity-is-worth-asking-about/",
         "source": "Hacker News",
-        "score": 115
+        "score": 159
+      },
+      {
+        "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
+        "url": "https://mistral.ai/news/shieldstral/",
+        "source": "Hacker News",
+        "score": 457
+      },
+      {
+        "title": "Show HN: Simple algorithm and color space to generate diverse skin tones",
+        "url": "https://toneyalexander.github.io/inclusive-color-space/",
+        "source": "Hacker News",
+        "score": 575
+      },
+      {
+        "title": "Universities would prefer no AI",
+        "url": "https://hollisrobbinsanecdotal.substack.com/p/universities-would-prefer-not-to",
+        "source": "Hacker News",
+        "score": 9
       }
     ],
     "ai": [
       {
+        "title": "Position: LLMs Can't Jump",
+        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DklU4737opt",
+        "source": "Hacker News AI",
+        "score": 124
+      },
+      {
+        "title": "Why the Legendary Erdős Problems Are Falling to AI",
+        "url": "https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/",
+        "source": "Hacker News AI",
+        "score": 48
+      },
+      {
+        "title": "TIME Is Serving AI Bots a Different Website, with Ads Built In",
+        "url": "https://www.vincentschmalbach.com/time-serves-ai-bots-a-different-website/",
+        "source": "Hacker News AI",
+        "score": 75
+      },
+      {
         "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
         "url": "https://mistral.ai/news/shieldstral/",
         "source": "Hacker News AI",
-        "score": 438
+        "score": 457
+      },
+      {
+        "title": "Universities would prefer no AI",
+        "url": "https://hollisrobbinsanecdotal.substack.com/p/universities-would-prefer-not-to",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
+        "title": "BSD Make extravaganza: Mandelbrot Set In bmake",
+        "url": "https://github.com/b-aaz/bmake-extravaganza/tree/master",
+        "source": "Hacker News AI",
+        "score": 7
+      },
+      {
+        "title": "Anthropic AI created fake profiles and impersonated people in attempted hack",
+        "url": "https://www.bbc.co.uk/news/articles/c1w1lvn7d9go",
+        "source": "Hacker News AI",
+        "score": 21
       },
       {
         "title": "Zero-Mem: Zero-Token Memory Operations for LLM Agents",
         "url": "https://arxiv.org/abs/2607.29377",
         "source": "Hacker News AI",
-        "score": 52
+        "score": 76
       },
       {
-        "title": "Eight Myths on Software Engineering and GenAI",
-        "url": "https://queue.acm.org/detail.cfm?id=3807963",
+        "title": "Drone carrying explosive device causes disruption at major German airport",
+        "url": "https://www.cnn.com/2026/08/05/europe/cargo-plane-leipzig-disruption-intl",
         "source": "Hacker News AI",
-        "score": 226
+        "score": 10
       },
       {
         "title": "An SLM trained on $8 ESP32-S3",
         "url": "https://github.com/Carloscodix/qapla",
         "source": "Hacker News AI",
-        "score": 36
-      },
-      {
-        "title": "AI fuels more than half of cybercrime in Africa as scams surge – Interpol",
-        "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
-        "source": "Hacker News AI",
-        "score": 255
+        "score": 55
       },
       {
         "title": "There Will Come Soft Rains (1950) [pdf]",
         "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
         "source": "Hacker News AI",
-        "score": 391
+        "score": 408
+      },
+      {
+        "title": "Eight Myths on Software Engineering and GenAI",
+        "url": "https://queue.acm.org/detail.cfm?id=3807963",
+        "source": "Hacker News AI",
+        "score": 260
+      },
+      {
+        "title": "AI fuels more than half of cybercrime in Africa as scams surge – Interpol",
+        "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
+        "source": "Hacker News AI",
+        "score": 278
+      },
+      {
+        "title": "Iowa-led states ask OpenAI to keep their bots on a leash",
+        "url": "https://www.iowaattorneygeneral.gov/newsroom/attorney-general-brenna-bird-leads-coalition-demanding-transparency-from-openai-after-ai-breach-and",
+        "source": "Hacker News AI",
+        "score": 50
       },
       {
         "title": "When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation",
         "url": "https://arxiv.org/abs/2602.16763",
         "source": "Hacker News AI",
-        "score": 101
-      },
-      {
-        "title": "LLMs reward expertise",
-        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
-        "source": "Hacker News AI",
-        "score": 1356
-      },
-      {
-        "title": "Oxide Computer raises $445M (SEC Form D)",
-        "url": "https://www.sec.gov/Archives/edgar/data/1795071/000179507126000002/xslFormDX01/primary_doc.xml",
-        "source": "Hacker News AI",
-        "score": 246
-      },
-      {
-        "title": "Apple says more ex-employees may have taken confidential data to OpenAI",
-        "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
-        "source": "Hacker News AI",
-        "score": 368
-      },
-      {
-        "title": "Launch HN: EdotEnv (YC S26) – Quant Trading RL Envs to Teach LLMs Research",
-        "url": "https://edotenv.com/",
-        "source": "Hacker News AI",
-        "score": 36
+        "score": 102
       }
     ],
     "news": [
       {
-        "title": "Russian strike kills at least 17 as Zelensky says interceptors could have saved lives",
+        "title": "Russia strike kills 21 as Ukraine says it needs more missile interceptors",
         "url": "https://www.bbc.co.uk/news/articles/c330pxyvzzyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump says Iran will be 'hit very hard' if Hormuz Strait not open soon as oil prices fall",
-        "url": "https://www.bbc.co.uk/news/articles/cpw9v0gnzxwo?at_medium=RSS&at_campaign=rss",
+        "title": "Drone carrying explosives found at German airport, police say",
+        "url": "https://www.bbc.co.uk/news/articles/cyvlg4q48l3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Perez Hilton recovering in hospital after reports he self-harmed during livestream",
-        "url": "https://www.bbc.co.uk/news/articles/cly5kvdkyjro?at_medium=RSS&at_campaign=rss",
+        "title": "Left-wing political outsider wins Democratic Senate primary in Michigan",
+        "url": "https://www.bbc.co.uk/news/articles/ckgdkpz07kvo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "What can scientists learn from a stray SpaceX rocket hitting the Moon?",
+        "url": "https://www.bbc.co.uk/news/articles/c62q0xerzrno?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "UN rights chief alarmed by rise in Iran executions since March",
+        "url": "https://www.bbc.co.uk/news/articles/c75gvzxrz49o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Waste workers help winner find binned €1m lottery ticket in Italy",
+        "url": "https://www.bbc.co.uk/news/articles/c62qvll0z94o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Mexican influencer shot dead during livestream",
         "url": "https://www.bbc.co.uk/news/articles/cx2kg709qd9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Police raid Starbucks Korea headquarters over 'Tank Day' fiasco",
-        "url": "https://www.bbc.co.uk/news/articles/c0kmd4xpr46o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Afghan boxer appears in court in connection with death of Scottish woman",
-        "url": "https://www.bbc.co.uk/news/articles/cq56qejll6vo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Armed man arrested near Trump's golf course ahead of president's visit",
-        "url": "https://www.bbc.co.uk/news/articles/c20jp3mp7lyo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " This Blender Deep Paint artist makes 3D look like a children's book brought to life ",
+        "url": "https://www.creativebloq.com/art/animation/this-blender-deep-paint-artist-makes-3d-look-like-a-childrens-book-brought-to-life",
+        "source": "Creative Bloq"
+      },
       {
         "title": " 9 beautiful air purifiers that won’t ruin your home aesthetic ",
         "url": "https://www.creativebloq.com/tech/9-beautiful-air-purifiers-that-wont-ruin-your-home-aesthetic",
@@ -231,84 +260,79 @@
         "title": " A viral $200 joke game highlights a serious problem for indie creators on Steam ",
         "url": "https://www.creativebloq.com/3d/video-game-design/a-viral-usd200-joke-game-highlights-a-serious-problem-for-indie-creators-on-steam",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Berlin Museum breaks the rules of branding with EIGHTY-ONE different logos ",
-        "url": "https://www.creativebloq.com/design/logos-icons/berlin-museum-breaks-the-rules-of-branding-with-eighty-one-different-logos",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
+        "title": "A colossal magma system has been hiding beneath Tuscany",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260804034645.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Europe’s wildfires became so intense they created their own storm",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260804034631.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A solar eclipse and the Perseid meteor shower arrive on the same day",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260804034628.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Sitting up straight may improve your mood and decision-making",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260804034624.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists discover the brain cells that keep you motivated",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260804034622.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "80-million-year-old snake brain reveals a surprising evolutionary secret",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260804034619.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "This hydrogen turbine turns controlled explosions into electricity",
         "url": "https://www.sciencedaily.com/releases/2026/08/260803080919.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Cancer-fighting chewing gum cuts HPV levels by up to 93%",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260803080917.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "518-million-year-old creature reveals the origins of spider fangs",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260803080906.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Strange quantum experiment shows “negative time” is more than an illusion",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260803080904.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Your brain may be wired to regain lost weight",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260803080902.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "DNA on the Shroud of Turin reveals centuries of hidden history",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260803080859.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Two new compounds could reveal hidden drivers of Alzheimer’s disease",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260802223437.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "In Less Than One Minute, Star Wars' New Show Finally Does What Lucasfilm Never Could",
-        "url": "https://www.polygon.com/star-wars-ninth-jedi-no-skywalkers/",
+        "title": "All shrine locations in Beast of Reincarnation",
+        "url": "https://www.polygon.com/beast-of-reincarnation-shrine-locations-dragon-vein-stimpacks/",
         "source": "Polygon"
       },
       {
-        "title": "Mass layoffs may be in EA's near future after leveraged buyout raises company debt by $18 billion",
-        "url": "https://www.polygon.com/ea-layoffs-leveraged-buyout-debt-18-billion/",
+        "title": "All armor locations in Beast of Reincarnation",
+        "url": "https://www.polygon.com/beast-of-reincarnation-armor-locations-map-where-to-find/",
         "source": "Polygon"
       },
       {
-        "title": "Two anime giants sign multi-billion deal that will shake up the industry",
-        "url": "https://www.polygon.com/twin-engine-bandai-partnership-4-billion-anime/",
+        "title": "Big Walk’s Best Feature Is One for the Italians",
+        "url": "https://www.polygon.com/big-walk-hand-gestures/",
         "source": "Polygon"
       },
       {
-        "title": "New Fortnite leak teases one of the most requested collaborations is coming to the game",
-        "url": "https://www.polygon.com/fortnite-kingdom-hearts-collab-leak-gaming-legends/",
+        "title": "How to learn Dive from Manaphy in Pokémon Pokopia",
+        "url": "https://www.polygon.com/pokemon-pokopia-how-to-dive-manaphy/",
         "source": "Polygon"
       },
       {
-        "title": "The Best Grindhouse Thriller Trilogy of the Decade Is Finally Streaming All in One Place",
-        "url": "https://www.polygon.com/ti-west-x-trilogy-pearl-maxxine-streaming-hulu/",
+        "title": "What time does the Gears of War E-Day early access multiplayer beta start in your time zone?",
+        "url": "https://www.polygon.com/gears-of-war-e-day-early-access-beta-release-time-edt-pdt/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon Pokopia update 2.0.0 adds loads of fantastic quality-of-life improvements",
-        "url": "https://www.polygon.com/pokemon-pokopia-update-2-0-0-patch-notes/",
+        "title": "Moonlighter 2 The Endless Vault gets a 1.0 release date as it leaves Steam Early Access in September ",
+        "url": "https://www.polygon.com/moonlighter-2-the-endless-vault-release-date-new-trailer/",
         "source": "Polygon"
       },
       {
-        "title": "X-Men Finally Solves a 33-Year-Old Mystery — and Changes the Meaning of an Iconic TV Episode",
-        "url": "https://www.polygon.com/x-men-97-x-ternal-external-gambit-explained/",
+        "title": "Moonlighter is free on Steam for a limited time ",
+        "url": "https://www.polygon.com/free-games-on-steam-moonlighter-pc/",
         "source": "Polygon"
       }
     ],
