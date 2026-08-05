@@ -7,6 +7,7 @@ import { migrateFromSettingsDB } from './migration.js';
 import { runFullSync, incrementalSync } from './sync-engine.js';
 import { parseLinks, getBacklinks, renderLinksInContent, showLinkPicker, updateLinks, setRecordsCache } from './link-system.js';
 import { createBlock, createNotePage, createTopicPage } from './templates.js';
+import { HistoryManager } from './history-manager.js';
 
 const BLOCK_TYPES = [
   { type: 'text', label: 'Text', icon: 'T', desc: 'Plain text' },
@@ -38,6 +39,7 @@ let slashMenuState = { open: false, blockId: null, filter: '', index: 0 };
 let docListeners = [];
 let notionConfig = { token: '', databaseId: '', mcpUrl: '' };
 let isSyncing = false;
+let historyManager = new HistoryManager(50);
 
 let pendingSaveId = null;
 let pendingSaveTimer = null;
@@ -314,6 +316,8 @@ function renderEditor(container) {
         <div class="wiki-backlinks-area" data-page-id="${record.id}"></div>
     `;
 
+    setupUndoRedoShortcuts(container);
+
     const titleInput = editorArea.querySelector('.wiki-page-title-input');
     titleInput.oninput = debounce(async () => {
         record.title = titleInput.value;
@@ -348,6 +352,10 @@ function renderEditor(container) {
     bindBlockEvents(container, record);
     loadBacklinks(container, record.id);
     loadZiweiFortune(container, record.id);
+    
+    requestAnimationFrame(() => {
+        updateAllNumberedLists();
+    });
 }
 
 function renderBlocks(blocks, recordId) {
@@ -751,18 +759,32 @@ function bindSectionToggle(area) {
 
 function updateNumberedListNumbers(record, blocksEl) {
     let counter = 1;
-    record.blocks.forEach(block => {
+    record.blocks.forEach((block, index) => {
         if (block.type === 'numbered-list') {
             const el = blocksEl.querySelector(`[data-block-id="${block.id}"]`);
             if (el) {
                 el.style.counterReset = 'none';
                 el.dataset.number = counter;
+                
+                const contentEl = el.querySelector('.wiki-block-content');
+                if (contentEl) {
+                    contentEl.setAttribute('data-number', counter);
+                }
             }
             counter++;
         } else {
             counter = 1;
         }
     });
+}
+
+function updateAllNumberedLists() {
+    const blocksEl = document.querySelector('.wiki-blocks');
+    const record = getRecord(activePageId);
+    
+    if (blocksEl && record) {
+        updateNumberedListNumbers(record, blocksEl);
+    }
 }
 
 function showSlashMenu(container, blockId, triggerEl) {
@@ -1281,21 +1303,79 @@ function extractDatabaseId(input) {
     return input;
 }
 
-async function notionRequest(endpoint, body) {
-    const response = await fetch(`https://api.notion.com/v1${endpoint}`, {
-        method: body ? 'POST' : 'GET',
-        headers: {
-            'Authorization': `Bearer ${notionConfig.token}`,
-            'Content-Type': 'application/json',
-            'Notion-Version': '2022-06-28'
-        },
-        body: body ? JSON.stringify(body) : undefined
-    });
-    if (!response.ok) {
-        const error = await response.json().catch(() => ({}));
-        throw new Error(error.message || `HTTP ${response.status}`);
+const notionRateLimiter = {
+    requests: [],
+    maxRequestsPerSecond: 3,
+    minRequestInterval: 350,
+    lastRequestTime: 0,
+
+    async waitForRateLimit() {
+        const now = Date.now();
+        const timeSinceLastRequest = now - this.lastRequestTime;
+        
+        if (timeSinceLastRequest < this.minRequestInterval) {
+            await this.sleep(this.minRequestInterval - timeSinceLastRequest);
+        }
+        
+        this.requests = this.requests.filter(t => now - t < 1000);
+        
+        if (this.requests.length >= this.maxRequestsPerSecond) {
+            const oldestRequest = Math.min(...this.requests);
+            const waitTime = 1000 - (now - oldestRequest);
+            if (waitTime > 0) {
+                await this.sleep(waitTime);
+            }
+        }
+        
+        this.requests.push(Date.now());
+        this.lastRequestTime = Date.now();
+    },
+
+    sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
     }
-    return response.json();
+};
+
+async function notionRequest(endpoint, body, retryCount = 0) {
+    await notionRateLimiter.waitForRateLimit();
+    
+    try {
+        const response = await fetch(`https://api.notion.com/v1${endpoint}`, {
+            method: body ? 'POST' : 'GET',
+            headers: {
+                'Authorization': `Bearer ${notionConfig.token}`,
+                'Content-Type': 'application/json',
+                'Notion-Version': '2022-06-28'
+            },
+            body: body ? JSON.stringify(body) : undefined
+        });
+
+        if (response.status === 429) {
+            const retryAfter = parseInt(response.headers.get('Retry-After') || '60');
+            console.warn(`[Notion] Rate limit exceeded, retrying after ${retryAfter}s`);
+            
+            if (retryCount < 3) {
+                await notionRateLimiter.sleep(retryAfter * 1000);
+                return notionRequest(endpoint, body, retryCount + 1);
+            } else {
+                throw new Error('Notion API rate limit exceeded, max retries reached');
+            }
+        }
+
+        if (!response.ok) {
+            const error = await response.json().catch(() => ({}));
+            throw new Error(error.message || `HTTP ${response.status}`);
+        }
+
+        return response.json();
+    } catch (error) {
+        if (retryCount < 3 && error.message.includes('fetch')) {
+            console.warn(`[Notion] Network error, retrying (${retryCount + 1}/3)`);
+            await notionRateLimiter.sleep(1000 * Math.pow(2, retryCount));
+            return notionRequest(endpoint, body, retryCount + 1);
+        }
+        throw error;
+    }
 }
 
 async function syncToNotion(container) {
@@ -1590,3 +1670,94 @@ export default {
     navItem: { label: '角色 Wiki', icon: 'import_contacts', path: '/personal-wiki', showInNav: true, order: 130 },
     stylesPath: 'js/apps/personal-wiki/style.css'
 };
+
+
+function setupUndoRedoShortcuts(container) {
+    const handleKeyDown = (e) => {
+        const isUndo = (e.metaKey || e.ctrlKey) && e.key === 'z' && !e.shiftKey;
+        const isRedo = (e.metaKey || e.ctrlKey) && (e.key === 'y' || (e.key === 'z' && e.shiftKey));
+        
+        if (isUndo) {
+            e.preventDefault();
+            performUndo(container);
+        } else if (isRedo) {
+            e.preventDefault();
+            performRedo(container);
+        }
+    };
+    
+    container.addEventListener('keydown', handleKeyDown);
+}
+
+function saveStateForUndo(record, description = 'Edit') {
+    const state = {
+        blocks: JSON.parse(JSON.stringify(record.blocks)),
+        title: record.title,
+        icon: record.icon,
+        cover_image: record.cover_image
+    };
+    historyManager.pushState(state, description);
+}
+
+function performUndo(container) {
+    const record = getRecord(activePageId);
+    if (!record || !historyManager.canUndo()) return;
+    
+    const currentState = {
+        blocks: record.blocks,
+        title: record.title,
+        icon: record.icon,
+        cover_image: record.cover_image
+    };
+    
+    const previousState = historyManager.undo(currentState);
+    if (!previousState) return;
+    
+    record.blocks = previousState.blocks;
+    record.title = previousState.title;
+    record.icon = previousState.icon;
+    record.cover_image = previousState.cover_image;
+    record.updated_at = Date.now();
+    
+    WikiRecordsDB.update(record.id, record);
+    renderEditor(container);
+    renderSidebar(container);
+    
+    showUndoRedoToast('Undo', historyManager.getHistoryInfo());
+}
+
+function performRedo(container) {
+    const record = getRecord(activePageId);
+    if (!record || !historyManager.canRedo()) return;
+    
+    const currentState = {
+        blocks: record.blocks,
+        title: record.title,
+        icon: record.icon,
+        cover_image: record.cover_image
+    };
+    
+    const nextState = historyManager.redo(currentState);
+    if (!nextState) return;
+    
+    record.blocks = nextState.blocks;
+    record.title = nextState.title;
+    record.icon = nextState.icon;
+    record.cover_image = nextState.cover_image;
+    record.updated_at = Date.now();
+    
+    WikiRecordsDB.update(record.id, record);
+    renderEditor(container);
+    renderSidebar(container);
+    
+    showUndoRedoToast('Redo', historyManager.getHistoryInfo());
+}
+
+function showUndoRedoToast(action, info) {
+    const undoCount = info.undoCount;
+    const redoCount = info.redoCount;
+    
+    import('../../components.js').then(({ createToast }) => {
+        createToast(\\ (\ undo, \ redo available)\, 'info');
+    });
+}
