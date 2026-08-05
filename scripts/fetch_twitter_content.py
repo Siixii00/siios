@@ -203,7 +203,7 @@ def main():
     output_file = 'data/twitter_content_cache.json'
     
     with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
+        json.dump(output, f, ensure_ascii=False, indent=2, separators=(',', ': '))
     
     print("=" * 50)
     print(f"[OK] 完成！總共抓取 {metadata['total_items']} 則內容")
