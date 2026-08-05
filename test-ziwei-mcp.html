@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紫微斗數 MCP 測試</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        h2 { color: #333; }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+        button:hover { background: #45a049; }
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 4px solid #4CAF50;
+            white-space: pre-wrap;
+        }
+        .error {
+            border-left-color: #f44336;
+            background: #ffebee;
+        }
+        .loading {
+            color: #666;
+            font-style: italic;
+        }
+        #testConnection {
+            background: #2196F3;
+        }
+        #testConnection:hover {
+            background: #1976D2;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔮 紫微斗數 MCP 整合測試</h1>
+    
+    <div class="card">
+        <h2>1. 測試伺服器連線</h2>
+        <button id="testConnection">測試連線</button>
+        <div id="connectionResult" class="result" style="display:none;"></div>
+    </div>
+
+    <div class="card">
+        <h2>2. 建立測試角色</h2>
+        <div class="form-group">
+            <label>姓名：</label>
+            <input type="text" id="charName" value="測試角色">
+        </div>
+        <div class="form-group">
+            <label>出生日期（國曆）：</label>
+            <input type="date" id="birthDate" value="1990-05-15">
+        </div>
+        <div class="form-group">
+            <label>出生時間：</label>
+            <input type="time" id="birthTime" value="14:30">
+        </div>
+        <div class="form-group">
+            <label>出生地點：</label>
+            <input type="text" id="birthLocation" value="台北市">
+        </div>
+        <div class="form-group">
+            <label>性別：</label>
+            <select id="gender">
+                <option value="male">男</option>
+                <option value="female">女</option>
+            </select>
+        </div>
+        <button id="createChar">建立角色</button>
+        <div id="createResult" class="result" style="display:none;"></div>
+    </div>
+
+    <div class="card">
+        <h2>3. 執行命理分析</h2>
+        <button id="analyze" disabled>開始分析</button>
+        <div id="analyzeResult" class="result" style="display:none;"></div>
+    </div>
+
+    <div class="card">
+        <h2>4. 查看快取</h2>
+        <button id="checkCache" disabled>查看快取</button>
+        <div id="cacheResult" class="result" style="display:none;"></div>
+    </div>
+
+    <script type="module">
+        import { CharactersDB, ZiweiCacheDB } from './js/db.js';
+        import { ziweiClient } from './js/core/ziwei-mcp-client.js';
+        import { ziweiLazyLoader } from './js/core/ziwei-lazy-loader.js';
+
+        let currentCharId = null;
+
+        // 測試連線
+        document.getElementById('testConnection').addEventListener('click', async () => {
+            const resultDiv = document.getElementById('connectionResult');
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result loading';
+            resultDiv.textContent = '測試連線中...';
+
+            try {
+                const isConnected = await ziweiClient.testConnection();
+                if (isConnected) {
+                    resultDiv.className = 'result';
+                    resultDiv.textContent = '✅ 連線成功！\n' +
+                        `Endpoint: ${ziweiClient.endpoint}\n` +
+                        '伺服器正常運作。';
+                } else {
+                    resultDiv.className = 'result error';
+                    resultDiv.textContent = '❌ 連線失敗！\n無法連接到 MCP 伺服器。';
+                }
+            } catch (error) {
+                resultDiv.className = 'result error';
+                resultDiv.textContent = '❌ 連線錯誤：\n' + error.message;
+            }
+        });
+
+        // 建立角色
+        document.getElementById('createChar').addEventListener('click', async () => {
+            const resultDiv = document.getElementById('createResult');
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result loading';
+            resultDiv.textContent = '建立角色中...';
+
+            try {
+                const charData = {
+                    name: document.getElementById('charName').value,
+                    birth_date: document.getElementById('birthDate').value,
+                    birth_time: document.getElementById('birthTime').value,
+                    birth_location: document.getElementById('birthLocation').value,
+                    birth_calendar_type: 'solar',
+                    gender: document.getElementById('gender').value
+                };
+
+                const char = await CharactersDB.create(charData);
+                currentCharId = char.id;
+
+                resultDiv.className = 'result';
+                resultDiv.textContent = '✅ 角色建立成功！\n' +
+                    `ID: ${char.id}\n` +
+                    `姓名: ${char.name}\n` +
+                    `出生: ${char.birth_date} ${char.birth_time}\n` +
+                    `地點: ${char.birth_location}\n` +
+                    `性別: ${char.gender}`;
+
+                // 啟用分析按鈕
+                document.getElementById('analyze').disabled = false;
+                document.getElementById('checkCache').disabled = false;
+
+            } catch (error) {
+                resultDiv.className = 'result error';
+                resultDiv.textContent = '❌ 建立失敗：\n' + error.message;
+            }
+        });
+
+        // 執行分析
+        document.getElementById('analyze').addEventListener('click', async () => {
+            const resultDiv = document.getElementById('analyzeResult');
+            resultDiv.style.display = 'block';
+            resultDiv.className = 'result loading';
+            resultDiv.textContent = '執行命理分析中...';
+
+            try {
+                const result = await ziweiClient.analyzeBirth(currentCharId);
+                
+                const cache = await ziweiClient.saveCache(currentCharId, result);
+
+                resultDiv.className = 'result';
+                resultDiv.textContent = '✅ 分析完成！\n\n' +
+                    `運勢摘要：\n${result.fortune_summary}\n\n` +
+                    `四化：\n` +
+                    `  祿：${result.chart?.sihua?.lu || '無'}\n` +
+                    `  權：${result.chart?.sihua?.quan || '無'}\n` +
+                    `  科：${result.chart?.sihua?.ke || '無'}\n` +
+                    `  忌：${result.chart?.sihua?.ji || '無'}\n\n` +
+                    `流年宮位：${result.runtime?.liu_nian_temple || '無'}\n` +
+                    `流月宮位：${result.runtime?.liu_yue_temple || '無'}\n` +
+                    `流日宮位：${result.runtime?.liu_ri_temple || '無'}\n\n` +
+                    `快取 ID: ${cache.id}`;
+
+            } catch (error) {
+                resultDiv.className = 'result error';
+                resultDiv.textContent = '❌ 分析失敗：\n' + error.message;
+            }
+        });
+
+        // 查看快取
+        document.getElementById('checkCache').addEventListener('click', async () => {
+            const resultDiv = document.getElementById('cacheResult');
+            resultDiv.style.display = 'block';
+            
+            try {
+                const char = await CharactersDB.getById(currentCharId);
+                
+                if (char.ziwei_cache_id) {
+                    const cache = await ZiweiCacheDB.getById(char.ziwei_cache_id);
+                    
+                    resultDiv.className = 'result';
+                    resultDiv.textContent = '✅ 快取資料：\n\n' +
+                        `分析日期: ${cache.analysis_date}\n` +
+                        `建立時間: ${new Date(cache.created_at).toLocaleString('zh-TW')}\n` +
+                        `過期時間: ${new Date(cache.expires_at).toLocaleString('zh-TW')}\n\n` +
+                        `運勢摘要:\n${cache.fortune_summary}`;
+                } else {
+                    resultDiv.className = 'result error';
+                    resultDiv.textContent = '❌ 尚無快取資料';
+                }
+            } catch (error) {
+                resultDiv.className = 'result error';
+                resultDiv.textContent = '❌ 查詢失敗：\n' + error.message;
+            }
+        });
+
+        // 初始化資料庫
+        console.log('資料庫初始化完成');
+    </script>
+</body>
+</html>
