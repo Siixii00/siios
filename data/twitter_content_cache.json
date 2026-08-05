@@ -1,197 +1,179 @@
 {
   "metadata": {
-    "last_updated": "2026-08-05T14:11:24.339100",
-    "total_items": 65
+    "last_updated": "2026-08-05T16:43:18.278230",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "Position: LLMs Can't Jump",
-        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DklU4737opt",
+        "title": "Qwen 3.0 Image Pro",
+        "url": "https://www.qwencloud.com/models/qwen-image-3.0-pro",
         "source": "Hacker News",
-        "score": 124
-      },
-      {
-        "title": "Why the Legendary Erdős Problems Are Falling to AI",
-        "url": "https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/",
-        "source": "Hacker News",
-        "score": 48
+        "score": 78
       },
       {
         "title": "Cloudflare OS: an open platform for agents, apps, and work",
         "url": "https://blog.cloudflare.com/cloudflare-os/",
         "source": "Hacker News",
-        "score": 5
+        "score": 267
       },
       {
-        "title": "Civilian plane crash in New Mexico tied to military GPS blocking",
-        "url": "https://www.wired.com/story/a-civilian-plane-crashed-in-new-mexico-was-the-militarys-tech-to-blame/",
+        "title": "Google DeepMind CEO Demis Hassabis is stepping down",
+        "url": "https://www.axios.com/2026/08/05/google-deepmind-demis-hassabis-ai",
         "source": "Hacker News",
-        "score": 214
+        "score": 138
       },
       {
-        "title": "TIME Is Serving AI Bots a Different Website, with Ads Built In",
-        "url": "https://www.vincentschmalbach.com/time-serves-ai-bots-a-different-website/",
+        "title": "Aristotle quotes on virtue, knowledge, and happiness",
+        "url": "https://www.campion.edu.au/blog/top-25-aristotle-quotes-on-virtue-knowledge-and-happiness/",
         "source": "Hacker News",
-        "score": 75
+        "score": 81
       },
       {
-        "title": "Stateless MCP has recaptured my interest",
-        "url": "https://simonwillison.net/2026/Jul/31/stateless-mcp/",
+        "title": "Cops Used Flock to Track a Man Across State Lines for a Pretextual Weed Search",
+        "url": "https://www.404media.co/cops-used-flock-to-track-a-man-across-state-lines-to-create-pretext-to-search-his-car-for-weed/",
         "source": "Hacker News",
-        "score": 314
+        "score": 156
       },
       {
-        "title": "A Sick People",
-        "url": "https://householderkarl.com/a-sick-people/",
+        "title": "Oracle Just Halved Its Always Free ARM Limits",
+        "url": "https://www.cnelecar.com/blog/oracle-always-free-arm-limits-cut-2026/",
         "source": "Hacker News",
-        "score": 9
+        "score": 41
       },
       {
-        "title": "Scaling NumPy on Free-Threaded Python",
-        "url": "https://labs.quansight.org/blog/scaling-numpy-on-free-threaded-python",
+        "title": "Discovery Loop",
+        "url": "https://www.discoveryloop.com/",
         "source": "Hacker News",
-        "score": 53
+        "score": 13
       },
       {
-        "title": "Bubble Memory",
-        "url": "https://en.wikipedia.org/wiki/Bubble_memory",
+        "title": "Jeff Dean leaving Alphabet",
+        "url": "https://www.nytimes.com/2026/08/05/technology/google-researchers-ai-startup.html",
+        "source": "Hacker News",
+        "score": 82
+      },
+      {
+        "title": "The Entropy of a Markov Chain",
+        "url": "https://chillphysicsenjoyer.substack.com/p/the-entropy-of-a-markov-chain",
         "source": "Hacker News",
         "score": 45
       },
       {
-        "title": "Pi's Minimalism Is Its Advantage",
-        "url": "https://earendil.com/posts/pi-autoresearch-and-databricks/",
+        "title": "Western Sahara",
+        "url": "https://en.wikipedia.org/wiki/Western_Sahara",
         "source": "Hacker News",
-        "score": 459
+        "score": 19
       },
       {
-        "title": "Birduino: A card-triggered audio player for [learning] the birds",
-        "url": "https://hannahilea.com/blog/birduino/",
+        "title": "Discovery of a multicomponent alloy forged by the Hiroshima atomic blast",
+        "url": "https://www.science.org/doi/10.1126/sciadv.aeg8299",
         "source": "Hacker News",
-        "score": 29
+        "score": 33
       },
       {
-        "title": "“Gravity is worth asking about”",
-        "url": "https://unsung.aresluna.org/gravity-is-worth-asking-about/",
+        "title": "Building an Advanced Agentic Harness",
+        "url": "https://data4sci.com/blog/building-an-advanced-agentic-harness",
         "source": "Hacker News",
-        "score": 159
+        "score": 49
       },
       {
-        "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
-        "url": "https://mistral.ai/news/shieldstral/",
+        "title": "Painting with Gaussians",
+        "url": "https://yogthos.net/posts/2026-08-03-splat-painter.html",
         "source": "Hacker News",
-        "score": 457
+        "score": 38
       },
       {
-        "title": "Show HN: Simple algorithm and color space to generate diverse skin tones",
-        "url": "https://toneyalexander.github.io/inclusive-color-space/",
+        "title": "Rubin Observatory's first LSST Camera release: 500k galaxies in the COSMOS field",
+        "url": "https://rubinobservatory.org/news/rubin-new-window-cosmos-field",
         "source": "Hacker News",
-        "score": 575
+        "score": 32
       },
       {
-        "title": "Universities would prefer no AI",
-        "url": "https://hollisrobbinsanecdotal.substack.com/p/universities-would-prefer-not-to",
+        "title": "The Valley of Webhooks",
+        "url": "https://weli.dev/blog/the-valley-of-webhooks/",
         "source": "Hacker News",
-        "score": 9
+        "score": 12
       }
     ],
     "ai": [
       {
-        "title": "Position: LLMs Can't Jump",
-        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DklU4737opt",
+        "title": "The Entropy of a Markov Chain",
+        "url": "https://chillphysicsenjoyer.substack.com/p/the-entropy-of-a-markov-chain",
         "source": "Hacker News AI",
-        "score": 124
+        "score": 45
       },
       {
-        "title": "Why the Legendary Erdős Problems Are Falling to AI",
-        "url": "https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/",
+        "title": "Painting with Gaussians",
+        "url": "https://yogthos.net/posts/2026-08-03-splat-painter.html",
         "source": "Hacker News AI",
-        "score": 48
+        "score": 38
+      },
+      {
+        "title": "The next chapter of our AI momentum",
+        "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+        "source": "Hacker News AI",
+        "score": 10
+      },
+      {
+        "title": "Intelligence Is Not the Main Bottleneck",
+        "url": "https://www.writingruxandrabio.com/p/intelligence-is-not-the-main-bottleneck",
+        "source": "Hacker News AI",
+        "score": 79
       },
       {
         "title": "TIME Is Serving AI Bots a Different Website, with Ads Built In",
         "url": "https://www.vincentschmalbach.com/time-serves-ai-bots-a-different-website/",
         "source": "Hacker News AI",
-        "score": 75
+        "score": 164
       },
       {
-        "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
-        "url": "https://mistral.ai/news/shieldstral/",
+        "title": "Position: LLMs Can't Jump",
+        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DklU4737opt",
         "source": "Hacker News AI",
-        "score": 457
+        "score": 169
       },
       {
-        "title": "Universities would prefer no AI",
-        "url": "https://hollisrobbinsanecdotal.substack.com/p/universities-would-prefer-not-to",
+        "title": "Why Erdős Problems Are Falling to AI",
+        "url": "https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 105
       },
       {
         "title": "BSD Make extravaganza: Mandelbrot Set In bmake",
         "url": "https://github.com/b-aaz/bmake-extravaganza/tree/master",
         "source": "Hacker News AI",
-        "score": 7
-      },
-      {
-        "title": "Anthropic AI created fake profiles and impersonated people in attempted hack",
-        "url": "https://www.bbc.co.uk/news/articles/c1w1lvn7d9go",
-        "source": "Hacker News AI",
-        "score": 21
+        "score": 22
       },
       {
         "title": "Zero-Mem: Zero-Token Memory Operations for LLM Agents",
         "url": "https://arxiv.org/abs/2607.29377",
         "source": "Hacker News AI",
-        "score": 76
+        "score": 80
       },
       {
         "title": "Drone carrying explosive device causes disruption at major German airport",
         "url": "https://www.cnn.com/2026/08/05/europe/cargo-plane-leipzig-disruption-intl",
         "source": "Hacker News AI",
-        "score": 10
+        "score": 35
       },
       {
-        "title": "An SLM trained on $8 ESP32-S3",
-        "url": "https://github.com/Carloscodix/qapla",
+        "title": "Show HN: An AI agent that trades inside limits you set, starting on paper",
+        "url": "https://quantsignals.xyz/fst",
         "source": "Hacker News AI",
-        "score": 55
+        "score": 5
       },
       {
         "title": "There Will Come Soft Rains (1950) [pdf]",
         "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
         "source": "Hacker News AI",
-        "score": 408
-      },
-      {
-        "title": "Eight Myths on Software Engineering and GenAI",
-        "url": "https://queue.acm.org/detail.cfm?id=3807963",
-        "source": "Hacker News AI",
-        "score": 260
-      },
-      {
-        "title": "AI fuels more than half of cybercrime in Africa as scams surge – Interpol",
-        "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
-        "source": "Hacker News AI",
-        "score": 278
-      },
-      {
-        "title": "Iowa-led states ask OpenAI to keep their bots on a leash",
-        "url": "https://www.iowaattorneygeneral.gov/newsroom/attorney-general-brenna-bird-leads-coalition-demanding-transparency-from-openai-after-ai-breach-and",
-        "source": "Hacker News AI",
-        "score": 50
-      },
-      {
-        "title": "When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation",
-        "url": "https://arxiv.org/abs/2602.16763",
-        "source": "Hacker News AI",
-        "score": 102
+        "score": 414
       }
     ],
     "news": [
       {
-        "title": "Russia strike kills 21 as Ukraine says it needs more missile interceptors",
-        "url": "https://www.bbc.co.uk/news/articles/c330pxyvzzyo?at_medium=RSS&at_campaign=rss",
+        "title": "Left-wing political outsider wins Democratic Senate primary in Michigan",
+        "url": "https://www.bbc.co.uk/news/articles/ckgdkpz07kvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -200,12 +182,12 @@
         "source": "BBC World"
       },
       {
-        "title": "Left-wing political outsider wins Democratic Senate primary in Michigan",
-        "url": "https://www.bbc.co.uk/news/articles/ckgdkpz07kvo?at_medium=RSS&at_campaign=rss",
+        "title": "Russia strike kills 21 as Ukraine says it needs more missile interceptors",
+        "url": "https://www.bbc.co.uk/news/articles/c330pxyvzzyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "What can scientists learn from a stray SpaceX rocket hitting the Moon?",
+        "title": "Why some scientists are thrilled that a SpaceX rocket has crashed into the Moon",
         "url": "https://www.bbc.co.uk/news/articles/c62q0xerzrno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -301,38 +283,38 @@
     ],
     "gaming": [
       {
-        "title": "All shrine locations in Beast of Reincarnation",
-        "url": "https://www.polygon.com/beast-of-reincarnation-shrine-locations-dragon-vein-stimpacks/",
+        "title": "Where to find charms in Beast of Reincarnation",
+        "url": "https://www.polygon.com/beast-of-reincarnation-charms-locations-how-to-get-stats-restore/",
         "source": "Polygon"
       },
       {
-        "title": "All armor locations in Beast of Reincarnation",
-        "url": "https://www.polygon.com/beast-of-reincarnation-armor-locations-map-where-to-find/",
+        "title": "James Cameron Says He May Finally Move on from Avatar and Tell “Other Stories”",
+        "url": "https://www.polygon.com/james-cameron-moving-on-from-avatar-next-project/",
         "source": "Polygon"
       },
       {
-        "title": "Big Walk’s Best Feature Is One for the Italians",
-        "url": "https://www.polygon.com/big-walk-hand-gestures/",
+        "title": "Monster Hunter Wilds finally has a demo, with big limitations",
+        "url": "https://www.polygon.com/monster-hunter-wilds-demo-release-capcom/",
         "source": "Polygon"
       },
       {
-        "title": "How to learn Dive from Manaphy in Pokémon Pokopia",
-        "url": "https://www.polygon.com/pokemon-pokopia-how-to-dive-manaphy/",
+        "title": "Re:Zero Season 4 Part 2 gets new trailer ahead of acclaimed show's return",
+        "url": "https://www.polygon.com/rezero-season-4-new-trailer-highest-rated-anime/",
         "source": "Polygon"
       },
       {
-        "title": "What time does the Gears of War E-Day early access multiplayer beta start in your time zone?",
-        "url": "https://www.polygon.com/gears-of-war-e-day-early-access-beta-release-time-edt-pdt/",
+        "title": "Banned Steam horror game gets physical release in defiance of Valve",
+        "url": "https://www.polygon.com/steam-banned-horror-game-vile-exhumed-physical-release-cara-cadaver-fmv/",
         "source": "Polygon"
       },
       {
-        "title": "Moonlighter 2 The Endless Vault gets a 1.0 release date as it leaves Steam Early Access in September ",
-        "url": "https://www.polygon.com/moonlighter-2-the-endless-vault-release-date-new-trailer/",
+        "title": "Beast of Reincarnation dev promises ‘continuous updates’ to improve the game",
+        "url": "https://www.polygon.com/beast-of-reincarnation-game-freak-fix-updates-rough-launch/",
         "source": "Polygon"
       },
       {
-        "title": "Moonlighter is free on Steam for a limited time ",
-        "url": "https://www.polygon.com/free-games-on-steam-moonlighter-pc/",
+        "title": "Marvel Rivals season 9.5 will finally address a growing issue with NetEase's hero shooter",
+        "url": "https://www.polygon.com/marvel-rivals-season-9-5-file-size-reduction-texture-overhaul/",
         "source": "Polygon"
       }
     ],
