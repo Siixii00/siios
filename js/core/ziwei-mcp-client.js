@@ -2,7 +2,7 @@ import { CharactersDB, ZiweiCacheDB } from '../db.js';
 
 class ZiweiMCPClient {
     constructor() {
-        this.endpoint = 'https://ziwei-mcp.vercel.app';
+        this.endpoint = 'https://ziwei-mcp-server.yaninlin.workers.dev';
         this.timeout = 10000;
     }
     
@@ -49,7 +49,11 @@ class ZiweiMCPClient {
             
             const result = await response.json();
             
-            return result;
+            if (!result.success) {
+                throw new Error(result.error || '分析失敗');
+            }
+            
+            return result.result;
         } catch (error) {
             clearTimeout(timeoutId);
             
@@ -71,10 +75,10 @@ class ZiweiMCPClient {
             analysis_type: 'daily',
             chart_data: analysisResult.chart,
             fortune_summary: analysisResult.fortune_summary,
-            sihua: analysisResult.runtime?.sihua,
-            liu_nian_temple: analysisResult.runtime?.liu_nian?.temple,
-            liu_yue_temple: analysisResult.runtime?.liu_yue?.temple,
-            liu_ri_temple: analysisResult.runtime?.liu_ri?.temple,
+            sihua: analysisResult.chart?.sihua,
+            liu_nian_temple: analysisResult.runtime?.liu_nian_temple,
+            liu_yue_temple: analysisResult.runtime?.liu_yue_temple,
+            liu_ri_temple: analysisResult.runtime?.liu_ri_temple,
             events: analysisResult.events || [],
             expires_at: new Date(tomorrow + 'T00:00:00').getTime()
         });
