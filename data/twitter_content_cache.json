@@ -1,194 +1,189 @@
 {
   "metadata": {
-    "last_updated": "2026-08-05T05:47:13.300754",
-    "total_items": 62
+    "last_updated": "2026-08-05T08:37:21.440936",
+    "total_items": 55
   },
   "content": {
     "tech": [
       {
-        "title": "Eight Myths on Software Engineering and GenAI",
-        "url": "https://queue.acm.org/detail.cfm?id=3807963",
-        "source": "Hacker News",
-        "score": 150
-      },
-      {
         "title": "Stateless MCP has recaptured my interest",
         "url": "https://simonwillison.net/2026/Jul/31/stateless-mcp/",
         "source": "Hacker News",
-        "score": 52
+        "score": 162
+      },
+      {
+        "title": "\"Gravity is worth asking about.\"",
+        "url": "https://unsung.aresluna.org/gravity-is-worth-asking-about/",
+        "source": "Hacker News",
+        "score": 39
+      },
+      {
+        "title": "The Pneumatics of Hero of Alexandria",
+        "url": "https://www.thehopkinthomasproject.com/TheHopkinThomasProject/TimeLine/Wales/Steam/URochesterCollection/Hero/index-2.html",
+        "source": "Hacker News",
+        "score": 19
       },
       {
         "title": "Pi's Minimalism Is Its Advantage",
         "url": "https://earendil.com/posts/pi-autoresearch-and-databricks/",
         "source": "Hacker News",
-        "score": 226
+        "score": 328
+      },
+      {
+        "title": "Zero-Mem: Zero-Token Memory Operations for LLM Agents",
+        "url": "https://arxiv.org/abs/2607.29377",
+        "source": "Hacker News",
+        "score": 28
       },
       {
         "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
         "url": "https://mistral.ai/news/shieldstral/",
         "source": "Hacker News",
-        "score": 360
-      },
-      {
-        "title": "The Golden Age of British Ice Cream",
-        "url": "https://www.vittlesmagazine.com/p/the-golden-age-of-british-ice-cream",
-        "source": "Hacker News",
-        "score": 9
-      },
-      {
-        "title": "IP and DNS Leaks in WebKit Affecting Proxy Browsers and iCloud Private Relay",
-        "url": "https://mysk.blog/2026/08/04/webkit-proxy-icloud-private-relay-ip-leak/",
-        "source": "Hacker News",
-        "score": 73
-      },
-      {
-        "title": "Why is it all in the kernel?",
-        "url": "https://lawrencecpaulson.github.io//2026/07/30/Collatz.html",
-        "source": "Hacker News",
-        "score": 9
-      },
-      {
-        "title": "The sale of Electronic Arts has been finalized",
-        "url": "https://www.bbc.com/news/articles/cjejyl34345o",
-        "source": "Hacker News",
-        "score": 30
-      },
-      {
-        "title": "Zigbee vs. Matter over Thread:Understanding IoT Protocol Performance in Practice",
-        "url": "https://arxiv.org/abs/2603.04221",
-        "source": "Hacker News",
-        "score": 53
-      },
-      {
-        "title": "Rio-vt and librio: Rio's terminal engine, now embeddable",
-        "url": "https://rioterm.com/blog/2026/07/27/rio-vt-and-librio",
-        "source": "Hacker News",
-        "score": 11
-      },
-      {
-        "title": "DuckDB – Data power tools for your laptop, now in Clojure (2023)",
-        "url": "https://techascent.com/blog/just-ducking-around.html",
-        "source": "Hacker News",
-        "score": 73
+        "score": 396
       },
       {
         "title": "Show HN: Simple algorithm and color space to generate diverse skin tones",
         "url": "https://toneyalexander.github.io/inclusive-color-space/",
         "source": "Hacker News",
-        "score": 490
+        "score": 517
+      },
+      {
+        "title": "IP and DNS Leaks in WebKit Affecting Proxy Browsers and iCloud Private Relay",
+        "url": "https://mysk.blog/2026/08/04/webkit-proxy-icloud-private-relay-ip-leak/",
+        "source": "Hacker News",
+        "score": 98
       },
       {
         "title": "In Memory of My Wife, Elise Cawley, with Thanks for 36 Wonderful Years",
         "url": "https://writings.stephenwolfram.com/2026/08/in-memory-of-my-wife-elise-cawley-1961-2026-with-thanks-for-36-wonderful-years/",
         "source": "Hacker News",
-        "score": 1181
+        "score": 1308
       },
       {
-        "title": "Show HN: Maple-Preview – ternary 20B MoE running at 120 tok/s on a iPhone",
+        "title": "DuckDB – Data power tools for your laptop, now in Clojure (2023)",
+        "url": "https://techascent.com/blog/just-ducking-around.html",
+        "source": "Hacker News",
+        "score": 95
+      },
+      {
+        "title": "Show HN: Maple-Preview – Ternary 20B MoE running at 120 tok/s on a iPhone",
         "url": "https://deepgrove.ai/maple-preview",
         "source": "Hacker News",
-        "score": 85
+        "score": 106
       },
       {
-        "title": "An SLM trained on $8 ESP32-S3",
-        "url": "https://github.com/Carloscodix/qapla",
+        "title": "Rio-vt and librio: Rio's terminal engine, now embeddable",
+        "url": "https://rioterm.com/blog/2026/07/27/rio-vt-and-librio",
         "source": "Hacker News",
-        "score": 8
+        "score": 31
+      },
+      {
+        "title": "Eight Myths on Software Engineering and GenAI",
+        "url": "https://queue.acm.org/detail.cfm?id=3807963",
+        "source": "Hacker News",
+        "score": 197
+      },
+      {
+        "title": "AI fuels more than half of cybercrime in Africa as scams surge – Interpol",
+        "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
+        "source": "Hacker News",
+        "score": 221
+      },
+      {
+        "title": "The Golden Age of British Ice Cream",
+        "url": "https://www.vittlesmagazine.com/p/the-golden-age-of-british-ice-cream",
+        "source": "Hacker News",
+        "score": 55
       }
     ],
     "ai": [
       {
-        "title": "Eight Myths on Software Engineering and GenAI",
-        "url": "https://queue.acm.org/detail.cfm?id=3807963",
-        "source": "Hacker News AI",
-        "score": 150
-      },
-      {
         "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
         "url": "https://mistral.ai/news/shieldstral/",
         "source": "Hacker News AI",
-        "score": 360
-      },
-      {
-        "title": "An SLM trained on $8 ESP32-S3",
-        "url": "https://github.com/Carloscodix/qapla",
-        "source": "Hacker News AI",
-        "score": 8
+        "score": 396
       },
       {
         "title": "Zero-Mem: Zero-Token Memory Operations for LLM Agents",
         "url": "https://arxiv.org/abs/2607.29377",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 28
+      },
+      {
+        "title": "Eight Myths on Software Engineering and GenAI",
+        "url": "https://queue.acm.org/detail.cfm?id=3807963",
+        "source": "Hacker News AI",
+        "score": 197
       },
       {
         "title": "AI fuels more than half of cybercrime in Africa as scams surge – Interpol",
         "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
         "source": "Hacker News AI",
-        "score": 182
+        "score": 221
       },
       {
-        "title": "After Losses, Retail Investors Flock to 3x Leverage as 2x Product Are Restricted",
-        "url": "https://www.asiae.co.kr/en/article/2026080416131786841",
+        "title": "Rust-lang/rust is adopting an LLM policy",
+        "url": "https://blog.rust-lang.org/inside-rust/2026/08/05/rust-langrust-is-adopting-an-llm-policy/",
         "source": "Hacker News AI",
-        "score": 68
+        "score": 54
       },
       {
         "title": "There Will Come Soft Rains (1950) [pdf]",
         "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
         "source": "Hacker News AI",
-        "score": 369
+        "score": 377
       },
       {
-        "title": "Oxide Computer raises $445M (SEC Form D)",
-        "url": "https://www.sec.gov/Archives/edgar/data/1795071/000179507126000002/xslFormDX01/primary_doc.xml",
+        "title": "An SLM trained on $8 ESP32-S3",
+        "url": "https://github.com/Carloscodix/qapla",
         "source": "Hacker News AI",
-        "score": 234
+        "score": 20
       },
       {
         "title": "When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation",
         "url": "https://arxiv.org/abs/2602.16763",
         "source": "Hacker News AI",
-        "score": 87
+        "score": 95
+      },
+      {
+        "title": "Oxide Computer raises $445M (SEC Form D)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1795071/000179507126000002/xslFormDX01/primary_doc.xml",
+        "source": "Hacker News AI",
+        "score": 241
+      },
+      {
+        "title": "Compass, a local-first code graph built in Rust for humans and AI agents",
+        "url": "https://github.com/crabbuild/compass",
+        "source": "Hacker News AI",
+        "score": 4
+      },
+      {
+        "title": "LLMs reward expertise",
+        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
+        "source": "Hacker News AI",
+        "score": 1351
       },
       {
         "title": "Apple says more ex-employees may have taken confidential data to OpenAI",
         "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
         "source": "Hacker News AI",
-        "score": 351
+        "score": 363
       },
       {
         "title": "Launch HN: EdotEnv (YC S26) – Quant Trading RL Envs to Teach LLMs Research",
         "url": "https://edotenv.com/",
         "source": "Hacker News AI",
         "score": 33
-      },
-      {
-        "title": "Third-party cyber evaluations involving OpenAI models",
-        "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/",
-        "source": "Hacker News AI",
-        "score": 45
-      },
-      {
-        "title": "LLMs reward expertise",
-        "url": "https://www.seangoedecke.com/llms-reward-expertise/",
-        "source": "Hacker News AI",
-        "score": 1341
       }
     ],
     "news": [
-      {
-        "title": "Video shows Russian drone chasing Ukrainian street vendor in 'human safari' attack",
-        "url": "https://www.bbc.co.uk/news/articles/cn4n03xg981o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
       {
         "title": "Trump says Iran will be 'hit very hard' if Hormuz Strait not open soon as oil prices fall",
         "url": "https://www.bbc.co.uk/news/articles/cpw9v0gnzxwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Russian ballistic missile strike on Kyiv kills at least 14, officials say",
+        "title": "Russian strike kills at least 17 as Zelensky says interceptors could have saved lives",
         "url": "https://www.bbc.co.uk/news/articles/c330pxyvzzyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -198,8 +193,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Ukraine hits more Wildberries sites as strike kills five in Moscow region",
-        "url": "https://www.bbc.co.uk/news/articles/c151pkww79zo?at_medium=RSS&at_campaign=rss",
+        "title": "Police raid Starbucks Korea headquarters over 'Tank Day' fiasco",
+        "url": "https://www.bbc.co.uk/news/articles/c0kmd4xpr46o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Afghan boxer appears in court in connection with death of Scottish woman",
+        "url": "https://www.bbc.co.uk/news/articles/cq56qejll6vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -208,43 +208,7 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " These are the 3 laptops you should shortlist for your studies ",
-        "url": "https://www.creativebloq.com/tech/laptops/these-are-the-3-laptops-you-should-shortlist-for-your-studies",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Did Coca-Cola need to rebrand? Design experts weigh in on the new look ",
-        "url": "https://www.creativebloq.com/design/branding/did-coca-cola-need-to-rebrand-design-experts-weigh-in-on-the-new-look",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Why Sennheiser's brand chief is bringing London's underground club scene to the top of the Shard ",
-        "url": "https://www.creativebloq.com/design/branding/why-sennheisers-brand-chief-is-bringing-londons-underground-club-scene-to-the-top-of-the-shard",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Autodesk tackles AI filmmaking's biggest problem by offering 3D control ",
-        "url": "https://www.creativebloq.com/3d/autodesk-tackles-ai-filmmakings-biggest-problem-with-3d-control",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This MacBook charger has a tiny pixel display and is 15% off – Apple fans are going to love it ",
-        "url": "https://www.creativebloq.com/tech/accessories/this-macbook-charger-has-a-tiny-pixel-display-and-is-15-percent-off-apple-fans-are-going-to-love-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " I’m obsessed with Boox e-ink tablets right now – here's how to get one on sale ",
-        "url": "https://www.creativebloq.com/tech/phones-tablets/im-obsessed-with-boox-e-ink-tablets-right-now-heres-how-to-get-one-on-sale",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This AI smartphone can pull off Hitchcock's hardest camera trick in Vertigo without a film crew ",
-        "url": "https://www.creativebloq.com/entertainment/videography/the-honor-600-smartphone-can-pull-off-hitchcocks-hardest-camera-trick-without-a-film-crew-and-thats-not-all",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "This hydrogen turbine turns controlled explosions into electricity",
@@ -284,6 +248,11 @@
     ],
     "gaming": [
       {
+        "title": "Star Wars the Ninth Jedi Review: a New Hope for the Franchise, from an Unexpected Source",
+        "url": "https://www.polygon.com/the-ninth-jedi-review/",
+        "source": "Polygon"
+      },
+      {
         "title": "Chris Pratt's 157-Minute Action Thriller Changed Hollywood Forever, and It's Streaming Now on Netflix",
         "url": "https://www.polygon.com/chris-pratt-zero-dark-thirty-netflix-august-2026/",
         "source": "Polygon"
@@ -311,11 +280,6 @@
       {
         "title": "'Grand Theft Auto 6' Is to Blame for 'Danganronpa 2x2's Delay, but Not for the Reason You Think",
         "url": "https://www.polygon.com/danganronpa-2x2-writer-delayed-game-to-play-grand-theft-auto-6/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Ice Cream Man uses generative AI, director Eli Roth confirms",
-        "url": "https://www.polygon.com/eli-roth-ice-cream-man-generative-ai-confirmed/",
         "source": "Polygon"
       }
     ],
