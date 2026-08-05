@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-05T08:37:21.440936",
-    "total_items": 55
+    "last_updated": "2026-08-05T11:21:58.730500",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
+        "title": "Helsinki Hacker News Meetup",
+        "url": "https://calpaterson.com/helsinki-hn.html",
+        "source": "Hacker News",
+        "score": 91
+      },
+      {
+        "title": "No Data Centers in My Backyard",
+        "url": "https://jasmi.news/p/no-data-centers-in-my-backyard",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
         "title": "Stateless MCP has recaptured my interest",
         "url": "https://simonwillison.net/2026/Jul/31/stateless-mcp/",
         "source": "Hacker News",
-        "score": 162
+        "score": 253
       },
       {
-        "title": "\"Gravity is worth asking about.\"",
+        "title": "“Gravity is worth asking about”",
         "url": "https://unsung.aresluna.org/gravity-is-worth-asking-about/",
         "source": "Hacker News",
-        "score": 39
+        "score": 116
       },
       {
-        "title": "The Pneumatics of Hero of Alexandria",
-        "url": "https://www.thehopkinthomasproject.com/TheHopkinThomasProject/TimeLine/Wales/Steam/URochesterCollection/Hero/index-2.html",
+        "title": "Civilian plane crash in New Mexico tied to military GPS blocking",
+        "url": "https://www.wired.com/story/a-civilian-plane-crashed-in-new-mexico-was-the-militarys-tech-to-blame/",
         "source": "Hacker News",
-        "score": 19
+        "score": 11
       },
       {
         "title": "Pi's Minimalism Is Its Advantage",
         "url": "https://earendil.com/posts/pi-autoresearch-and-databricks/",
         "source": "Hacker News",
-        "score": 328
-      },
-      {
-        "title": "Zero-Mem: Zero-Token Memory Operations for LLM Agents",
-        "url": "https://arxiv.org/abs/2607.29377",
-        "source": "Hacker News",
-        "score": 28
+        "score": 401
       },
       {
         "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
         "url": "https://mistral.ai/news/shieldstral/",
         "source": "Hacker News",
-        "score": 396
+        "score": 438
       },
       {
         "title": "Show HN: Simple algorithm and color space to generate diverse skin tones",
         "url": "https://toneyalexander.github.io/inclusive-color-space/",
         "source": "Hacker News",
-        "score": 517
+        "score": 546
+      },
+      {
+        "title": "Zero-Mem: Zero-Token Memory Operations for LLM Agents",
+        "url": "https://arxiv.org/abs/2607.29377",
+        "source": "Hacker News",
+        "score": 52
+      },
+      {
+        "title": "The Pneumatics of Hero of Alexandria (1851)",
+        "url": "https://www.thehopkinthomasproject.com/TheHopkinThomasProject/TimeLine/Wales/Steam/URochesterCollection/Hero/index-2.html",
+        "source": "Hacker News",
+        "score": 34
       },
       {
         "title": "IP and DNS Leaks in WebKit Affecting Proxy Browsers and iCloud Private Relay",
         "url": "https://mysk.blog/2026/08/04/webkit-proxy-icloud-private-relay-ip-leak/",
         "source": "Hacker News",
-        "score": 98
-      },
-      {
-        "title": "In Memory of My Wife, Elise Cawley, with Thanks for 36 Wonderful Years",
-        "url": "https://writings.stephenwolfram.com/2026/08/in-memory-of-my-wife-elise-cawley-1961-2026-with-thanks-for-36-wonderful-years/",
-        "source": "Hacker News",
-        "score": 1308
-      },
-      {
-        "title": "DuckDB – Data power tools for your laptop, now in Clojure (2023)",
-        "url": "https://techascent.com/blog/just-ducking-around.html",
-        "source": "Hacker News",
-        "score": 95
+        "score": 123
       },
       {
         "title": "Show HN: Maple-Preview – Ternary 20B MoE running at 120 tok/s on a iPhone",
         "url": "https://deepgrove.ai/maple-preview",
         "source": "Hacker News",
-        "score": 106
+        "score": 133
       },
       {
-        "title": "Rio-vt and librio: Rio's terminal engine, now embeddable",
-        "url": "https://rioterm.com/blog/2026/07/27/rio-vt-and-librio",
+        "title": "In Memory of My Wife, Elise Cawley, with Thanks for 36 Wonderful Years",
+        "url": "https://writings.stephenwolfram.com/2026/08/in-memory-of-my-wife-elise-cawley-1961-2026-with-thanks-for-36-wonderful-years/",
         "source": "Hacker News",
-        "score": 31
+        "score": 1414
       },
       {
-        "title": "Eight Myths on Software Engineering and GenAI",
-        "url": "https://queue.acm.org/detail.cfm?id=3807963",
+        "title": "Birduino: A card-triggered audio player for [learning] the birds",
+        "url": "https://hannahilea.com/blog/birduino/",
         "source": "Hacker News",
-        "score": 197
+        "score": 7
       },
       {
-        "title": "AI fuels more than half of cybercrime in Africa as scams surge – Interpol",
-        "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
+        "title": "DuckDB – Data power tools for your laptop, now in Clojure (2023)",
+        "url": "https://techascent.com/blog/just-ducking-around.html",
         "source": "Hacker News",
-        "score": 221
-      },
-      {
-        "title": "The Golden Age of British Ice Cream",
-        "url": "https://www.vittlesmagazine.com/p/the-golden-age-of-british-ice-cream",
-        "source": "Hacker News",
-        "score": 55
+        "score": 115
       }
     ],
     "ai": [
@@ -101,95 +101,88 @@
         "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
         "url": "https://mistral.ai/news/shieldstral/",
         "source": "Hacker News AI",
-        "score": 396
+        "score": 438
       },
       {
         "title": "Zero-Mem: Zero-Token Memory Operations for LLM Agents",
         "url": "https://arxiv.org/abs/2607.29377",
         "source": "Hacker News AI",
-        "score": 28
+        "score": 52
       },
       {
         "title": "Eight Myths on Software Engineering and GenAI",
         "url": "https://queue.acm.org/detail.cfm?id=3807963",
         "source": "Hacker News AI",
-        "score": 197
-      },
-      {
-        "title": "AI fuels more than half of cybercrime in Africa as scams surge – Interpol",
-        "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
-        "source": "Hacker News AI",
-        "score": 221
-      },
-      {
-        "title": "Rust-lang/rust is adopting an LLM policy",
-        "url": "https://blog.rust-lang.org/inside-rust/2026/08/05/rust-langrust-is-adopting-an-llm-policy/",
-        "source": "Hacker News AI",
-        "score": 54
-      },
-      {
-        "title": "There Will Come Soft Rains (1950) [pdf]",
-        "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
-        "source": "Hacker News AI",
-        "score": 377
+        "score": 226
       },
       {
         "title": "An SLM trained on $8 ESP32-S3",
         "url": "https://github.com/Carloscodix/qapla",
         "source": "Hacker News AI",
-        "score": 20
+        "score": 36
+      },
+      {
+        "title": "AI fuels more than half of cybercrime in Africa as scams surge – Interpol",
+        "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
+        "source": "Hacker News AI",
+        "score": 255
+      },
+      {
+        "title": "There Will Come Soft Rains (1950) [pdf]",
+        "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
+        "source": "Hacker News AI",
+        "score": 391
       },
       {
         "title": "When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation",
         "url": "https://arxiv.org/abs/2602.16763",
         "source": "Hacker News AI",
-        "score": 95
-      },
-      {
-        "title": "Oxide Computer raises $445M (SEC Form D)",
-        "url": "https://www.sec.gov/Archives/edgar/data/1795071/000179507126000002/xslFormDX01/primary_doc.xml",
-        "source": "Hacker News AI",
-        "score": 241
-      },
-      {
-        "title": "Compass, a local-first code graph built in Rust for humans and AI agents",
-        "url": "https://github.com/crabbuild/compass",
-        "source": "Hacker News AI",
-        "score": 4
+        "score": 101
       },
       {
         "title": "LLMs reward expertise",
         "url": "https://www.seangoedecke.com/llms-reward-expertise/",
         "source": "Hacker News AI",
-        "score": 1351
+        "score": 1356
+      },
+      {
+        "title": "Oxide Computer raises $445M (SEC Form D)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1795071/000179507126000002/xslFormDX01/primary_doc.xml",
+        "source": "Hacker News AI",
+        "score": 246
       },
       {
         "title": "Apple says more ex-employees may have taken confidential data to OpenAI",
         "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
         "source": "Hacker News AI",
-        "score": 363
+        "score": 368
       },
       {
         "title": "Launch HN: EdotEnv (YC S26) – Quant Trading RL Envs to Teach LLMs Research",
         "url": "https://edotenv.com/",
         "source": "Hacker News AI",
-        "score": 33
+        "score": 36
       }
     ],
     "news": [
-      {
-        "title": "Trump says Iran will be 'hit very hard' if Hormuz Strait not open soon as oil prices fall",
-        "url": "https://www.bbc.co.uk/news/articles/cpw9v0gnzxwo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
       {
         "title": "Russian strike kills at least 17 as Zelensky says interceptors could have saved lives",
         "url": "https://www.bbc.co.uk/news/articles/c330pxyvzzyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Armed man arrested near Trump's golf course ahead of president's visit",
-        "url": "https://www.bbc.co.uk/news/articles/c20jp3mp7lyo?at_medium=RSS&at_campaign=rss",
+        "title": "Trump says Iran will be 'hit very hard' if Hormuz Strait not open soon as oil prices fall",
+        "url": "https://www.bbc.co.uk/news/articles/cpw9v0gnzxwo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Perez Hilton recovering in hospital after reports he self-harmed during livestream",
+        "url": "https://www.bbc.co.uk/news/articles/cly5kvdkyjro?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Mexican influencer shot dead during livestream",
+        "url": "https://www.bbc.co.uk/news/articles/cx2kg709qd9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -203,12 +196,48 @@
         "source": "BBC World"
       },
       {
-        "title": "Arrests in Egypt after people allegedly impersonate judges",
-        "url": "https://www.bbc.co.uk/news/articles/cn0n9wpvlwpo?at_medium=RSS&at_campaign=rss",
+        "title": "Armed man arrested near Trump's golf course ahead of president's visit",
+        "url": "https://www.bbc.co.uk/news/articles/c20jp3mp7lyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " 9 beautiful air purifiers that won’t ruin your home aesthetic ",
+        "url": "https://www.creativebloq.com/tech/9-beautiful-air-purifiers-that-wont-ruin-your-home-aesthetic",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " No Trump, your Newsweek magazine cover isn’t a compliment ",
+        "url": "https://www.creativebloq.com/design/magazines/no-trump-your-newsweek-magazine-cover-isnt-a-compliment",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Hifiman Edition XV vs Thieaudio Cypher: Which $400 audiophile headphone should you buy? ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/hifiman-edition-xv-vs-thieaudio-cypher-which-usd400-audiophile-headphone-should-you-buy",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Why your 3D renders look wrong, and how the camera object fixes it ",
+        "url": "https://www.creativebloq.com/3d/why-your-3d-renders-look-wrong-and-how-the-camera-object-fixes-it",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " No beaver logo is safe from Buc-ee’s legal wrath ",
+        "url": "https://www.creativebloq.com/design/logos-icons/no-beaver-logo-is-safe-from-buc-ees-legal-wrath",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " A viral $200 joke game highlights a serious problem for indie creators on Steam ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/a-viral-usd200-joke-game-highlights-a-serious-problem-for-indie-creators-on-steam",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Berlin Museum breaks the rules of branding with EIGHTY-ONE different logos ",
+        "url": "https://www.creativebloq.com/design/logos-icons/berlin-museum-breaks-the-rules-of-branding-with-eighty-one-different-logos",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "This hydrogen turbine turns controlled explosions into electricity",
@@ -248,38 +277,38 @@
     ],
     "gaming": [
       {
-        "title": "Star Wars the Ninth Jedi Review: a New Hope for the Franchise, from an Unexpected Source",
-        "url": "https://www.polygon.com/the-ninth-jedi-review/",
+        "title": "In Less Than One Minute, Star Wars' New Show Finally Does What Lucasfilm Never Could",
+        "url": "https://www.polygon.com/star-wars-ninth-jedi-no-skywalkers/",
         "source": "Polygon"
       },
       {
-        "title": "Chris Pratt's 157-Minute Action Thriller Changed Hollywood Forever, and It's Streaming Now on Netflix",
-        "url": "https://www.polygon.com/chris-pratt-zero-dark-thirty-netflix-august-2026/",
+        "title": "Mass layoffs may be in EA's near future after leveraged buyout raises company debt by $18 billion",
+        "url": "https://www.polygon.com/ea-layoffs-leveraged-buyout-debt-18-billion/",
         "source": "Polygon"
       },
       {
-        "title": "Marvel Tōkon Fighting Souls release time in your time zone",
-        "url": "https://www.polygon.com/marvel-tokon-fighting-souls-release-time-when-edt-pdt/",
+        "title": "Two anime giants sign multi-billion deal that will shake up the industry",
+        "url": "https://www.polygon.com/twin-engine-bandai-partnership-4-billion-anime/",
         "source": "Polygon"
       },
       {
-        "title": "Baldur's Gate 3 devs share more wild statistics, like what NPCs died the most",
-        "url": "https://www.polygon.com/baldurs-gate-3-third-anniversary-statistics-npc-murder/",
+        "title": "New Fortnite leak teases one of the most requested collaborations is coming to the game",
+        "url": "https://www.polygon.com/fortnite-kingdom-hearts-collab-leak-gaming-legends/",
         "source": "Polygon"
       },
       {
-        "title": "EA's deal to go private under Saudi Arabia is officially complete",
-        "url": "https://www.polygon.com/ea-owned-saudi-arabia-public-investment-fund-private-equity/",
+        "title": "The Best Grindhouse Thriller Trilogy of the Decade Is Finally Streaming All in One Place",
+        "url": "https://www.polygon.com/ti-west-x-trilogy-pearl-maxxine-streaming-hulu/",
         "source": "Polygon"
       },
       {
-        "title": "Steam meme game made in days almost turns teen into a millionaire",
-        "url": "https://www.polygon.com/steam-teen-meme-game-200-price-max-money-michael-major-dev/",
+        "title": "Pokémon Pokopia update 2.0.0 adds loads of fantastic quality-of-life improvements",
+        "url": "https://www.polygon.com/pokemon-pokopia-update-2-0-0-patch-notes/",
         "source": "Polygon"
       },
       {
-        "title": "'Grand Theft Auto 6' Is to Blame for 'Danganronpa 2x2's Delay, but Not for the Reason You Think",
-        "url": "https://www.polygon.com/danganronpa-2x2-writer-delayed-game-to-play-grand-theft-auto-6/",
+        "title": "X-Men Finally Solves a 33-Year-Old Mystery — and Changes the Meaning of an Iconic TV Episode",
+        "url": "https://www.polygon.com/x-men-97-x-ternal-external-gambit-explained/",
         "source": "Polygon"
       }
     ],
