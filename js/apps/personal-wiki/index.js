@@ -673,22 +673,26 @@ async function loadZiweiFortune(container, recordId) {
 }
 
 function renderZiweiCards(cache) {
+    const summary = typeof cache.fortune_summary === 'string' 
+        ? { daily: cache.fortune_summary }
+        : cache.fortune_summary || {};
+    
     return `
         <div class="wiki-ziwei-cards">
             <div class="wiki-ziwei-card">
                 <div class="wiki-ziwei-card-title">流年運勢</div>
                 ${cache.liu_nian_temple ? `<div class="wiki-ziwei-card-temple">命宮：${escapeHtml(cache.liu_nian_temple)}</div>` : ''}
-                ${cache.fortune_summary?.yearly ? `<div class="wiki-ziwei-card-summary">${escapeHtml(cache.fortune_summary.yearly)}</div>` : ''}
+                ${summary.yearly ? `<div class="wiki-ziwei-card-summary">${escapeHtml(summary.yearly)}</div>` : ''}
             </div>
             <div class="wiki-ziwei-card">
                 <div class="wiki-ziwei-card-title">流月運勢</div>
                 ${cache.liu_yue_temple ? `<div class="wiki-ziwei-card-temple">命宮：${escapeHtml(cache.liu_yue_temple)}</div>` : ''}
-                ${cache.fortune_summary?.monthly ? `<div class="wiki-ziwei-card-summary">${escapeHtml(cache.fortune_summary.monthly)}</div>` : ''}
+                ${summary.monthly ? `<div class="wiki-ziwei-card-summary">${escapeHtml(summary.monthly)}</div>` : ''}
             </div>
             <div class="wiki-ziwei-card">
                 <div class="wiki-ziwei-card-title">流日運勢</div>
                 ${cache.liu_ri_temple ? `<div class="wiki-ziwei-card-temple">命宮：${escapeHtml(cache.liu_ri_temple)}</div>` : ''}
-                ${cache.fortune_summary?.daily ? `<div class="wiki-ziwei-card-summary">${escapeHtml(cache.fortune_summary.daily)}</div>` : ''}
+                ${summary.daily ? `<div class="wiki-ziwei-card-summary">${escapeHtml(summary.daily)}</div>` : ''}
                 ${cache.events && cache.events.length > 0 ? `
                     <div class="wiki-ziwei-events">
                         ${cache.events.filter(e => e.confidence > 0.7).slice(0, 3).map(event => `
