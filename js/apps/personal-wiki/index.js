@@ -595,20 +595,29 @@ async function loadBacklinks(container, recordId) {
     }
 
     area.innerHTML = `
-        <div class="wiki-backlinks-header">反向連結 (${backlinks.length})</div>
-        <div class="wiki-backlinks-list">
-            ${backlinks.map(r => `
-                <div class="wiki-backlink-item" data-nav-page="${r.id}">
-                    <span>${r.icon || '📄'}</span>
-                    <span>${escapeHtml(r.title || 'Untitled')}</span>
+        <div class="wiki-section-card">
+            <div class="wiki-section-header collapsed" data-toggle>
+                <div class="wiki-section-title">↩️ 反向連結 (${backlinks.length})</div>
+                <div class="wiki-section-toggle">▼</div>
+            </div>
+            <div class="wiki-section-content collapsed">
+                <div class="wiki-backlinks-list">
+                    ${backlinks.map(r => `
+                        <div class="wiki-backlink-item" data-nav-page="${r.id}">
+                            <span class="wiki-backlink-icon">${r.icon || '📄'}</span>
+                            <span class="wiki-backlink-text">${escapeHtml(r.title || 'Untitled')}</span>
+                        </div>
+                    `).join('')}
                 </div>
-            `).join('')}
+            </div>
         </div>
     `;
 
     area.querySelectorAll('[data-nav-page]').forEach(el => {
         el.onclick = () => navigateToPage(container, el.dataset.navPage);
     });
+    
+    bindSectionToggle(area);
 }
 
 async function loadZiweiFortune(container, recordId) {
@@ -651,33 +660,33 @@ async function loadZiweiFortune(container, recordId) {
 
         if (cache.is_stale) {
             area.innerHTML = `
-                <div class="wiki-ziwei-section">
-                    <div class="wiki-ziwei-header collapsed" data-ziwei-toggle>
-                        <div class="wiki-ziwei-header-title">🔮 命理分析</div>
-                        <div class="wiki-ziwei-toggle">▼</div>
+                <div class="wiki-section-card">
+                    <div class="wiki-section-header collapsed" data-toggle>
+                        <div class="wiki-section-title">🔮 命理分析</div>
+                        <div class="wiki-section-toggle">▼</div>
                     </div>
-                    <div class="wiki-ziwei-content collapsed">
-                        <div class="wiki-ziwei-warning">⚠️ 資料可能過期（無法連線至分析服務）</div>
+                    <div class="wiki-section-content collapsed">
+                        <div class="wiki-warning-banner">⚠️ 資料可能過期（無法連線至分析服務）</div>
                         ${renderZiweiCards(cache)}
                     </div>
                 </div>
             `;
-            bindZiweiToggle(area);
+            bindSectionToggle(area);
             return;
         }
 
         area.innerHTML = `
-            <div class="wiki-ziwei-section">
-                <div class="wiki-ziwei-header collapsed" data-ziwei-toggle>
-                    <div class="wiki-ziwei-header-title">🔮 命理分析 (${cache.analysis_date})</div>
-                    <div class="wiki-ziwei-toggle">▼</div>
+            <div class="wiki-section-card">
+                <div class="wiki-section-header collapsed" data-toggle>
+                    <div class="wiki-section-title">🔮 命理分析</div>
+                    <div class="wiki-section-toggle">▼</div>
                 </div>
-                <div class="wiki-ziwei-content collapsed">
+                <div class="wiki-section-content collapsed">
                     ${renderZiweiCards(cache)}
                 </div>
             </div>
         `;
-        bindZiweiToggle(area);
+        bindSectionToggle(area);
     } catch (error) {
         console.error('[Wiki] Ziwei load error:', error);
         area.innerHTML = '';
@@ -717,9 +726,9 @@ function renderZiweiCards(cache) {
     `;
 }
 
-function bindZiweiToggle(area) {
-    const header = area.querySelector('.wiki-ziwei-header');
-    const content = area.querySelector('.wiki-ziwei-content');
+function bindSectionToggle(area) {
+    const header = area.querySelector('.wiki-section-header');
+    const content = area.querySelector('.wiki-section-content');
     if (!header || !content) return;
     
     header.onclick = () => {
