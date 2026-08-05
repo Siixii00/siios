@@ -1,191 +1,179 @@
 {
   "metadata": {
-    "last_updated": "2026-08-04T23:04:34.506380",
-    "total_items": 64
+    "last_updated": "2026-08-05T02:36:19.308409",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "AI fuels more than half of cybercrime in Africa as scams surge – Interpol",
-        "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
+        "title": "libexpat now funded by the City of Munich for up to 6 months",
+        "url": "https://blog.hartwork.org/posts/libexpat-city-of-munich-open-source-sabbatical/",
         "source": "Hacker News",
-        "score": 56
+        "score": 144
       },
       {
-        "title": "Gwern reties from fulltime writing to launch Guardian Angel Inc",
-        "url": "https://twitter.com/i/status/2084739205071343837",
+        "title": "Eight Myths on Software Engineering and GenAI",
+        "url": "https://queue.acm.org/detail.cfm?id=3807963",
         "source": "Hacker News",
-        "score": 34
+        "score": 80
+      },
+      {
+        "title": "Pi's Minimalism Is Its Advantage",
+        "url": "https://earendil.com/posts/pi-autoresearch-and-databricks/",
+        "source": "Hacker News",
+        "score": 125
       },
       {
         "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
         "url": "https://mistral.ai/news/shieldstral/",
         "source": "Hacker News",
-        "score": 262
+        "score": 321
       },
       {
-        "title": "Show HN: Simple algorithm and color space to generate diverse skin tones",
-        "url": "https://toneyalexander.github.io/inclusive-color-space/",
+        "title": "I am retiring from fulltime writing (& pseudonymity) to launch Guardian Angel",
+        "url": "https://twitter.com/gwern/status/2084739205071343837",
         "source": "Hacker News",
-        "score": 435
+        "score": 188
       },
       {
-        "title": "In Memory of My Wife, Elise Cawley, with Thanks for 36 Wonderful Years",
-        "url": "https://writings.stephenwolfram.com/2026/08/in-memory-of-my-wife-elise-cawley-1961-2026-with-thanks-for-36-wonderful-years/",
+        "title": "IP and DNS Leaks in WebKit Affecting Proxy Browsers and iCloud Private Relay",
+        "url": "https://mysk.blog/2026/08/04/webkit-proxy-icloud-private-relay-ip-leak/",
         "source": "Hacker News",
-        "score": 685
+        "score": 45
       },
       {
         "title": "DuckDB – Data power tools for your laptop, now in Clojure (2023)",
         "url": "https://techascent.com/blog/just-ducking-around.html",
         "source": "Hacker News",
-        "score": 9
+        "score": 55
       },
       {
-        "title": "Waymo in Dallas",
-        "url": "https://waymo.com/blog/shorts/dallas-open-to-all/",
+        "title": "Bugtraq Is Back",
+        "url": "https://lists.securityfocus.com/hyperkitty/list/bugtraq@securityfocus.com/thread/CHKLXLA7SJEWLDFHWXB3QU57ADOXGL2E/",
         "source": "Hacker News",
-        "score": 209
+        "score": 20
       },
       {
-        "title": "Third-party cyber evaluations involving OpenAI models",
-        "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/",
+        "title": "Show HN: Simple algorithm and color space to generate diverse skin tones",
+        "url": "https://toneyalexander.github.io/inclusive-color-space/",
         "source": "Hacker News",
-        "score": 25
+        "score": 471
       },
       {
-        "title": "Thanks FedEx, This Is Why We Keep Getting Phished (2024)",
-        "url": "https://www.troyhunt.com/thanks-fedex-this-is-why-we-keep-getting-phished/",
+        "title": "In Memory of My Wife, Elise Cawley, with Thanks for 36 Wonderful Years",
+        "url": "https://writings.stephenwolfram.com/2026/08/in-memory-of-my-wife-elise-cawley-1961-2026-with-thanks-for-36-wonderful-years/",
         "source": "Hacker News",
-        "score": 167
+        "score": 979
       },
       {
-        "title": "Oxide Computer raises $445M (SEC Form D)",
-        "url": "https://www.sec.gov/Archives/edgar/data/1795071/000179507126000002/xslFormDX01/primary_doc.xml",
+        "title": "Zigbee vs. Matter over Thread:Understanding IoT Protocol Performance in Practice",
+        "url": "https://arxiv.org/abs/2603.04221",
         "source": "Hacker News",
-        "score": 137
-      },
-      {
-        "title": "Video2NAND – Abusing video codecs for great computational power",
-        "url": "https://sharedobject.blog/posts/vp8-combinatorial-logic/",
-        "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "DeepSeek V4 Flash on a Single AMD MI300X",
-        "url": "https://github.com/ryanzhou/deepseek-v4-flash-mi300x",
-        "source": "Hacker News",
-        "score": 358
+        "score": 23
       },
       {
         "title": "Show HN: Maple-Preview – ternary 20B MoE running at 120 tok/s on a iPhone",
         "url": "https://deepgrove.ai/maple-preview",
         "source": "Hacker News",
-        "score": 12
+        "score": 53
       },
       {
-        "title": "Hop.earth – OpenStreetMap based car racing game",
-        "url": "https://hop.earth/?server=lkhr7&route=fQ5nuu9R",
+        "title": "AI fuels more than half of cybercrime in Africa as scams surge – Interpol",
+        "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
         "source": "Hacker News",
-        "score": 73
+        "score": 147
       },
       {
-        "title": "Most tech revolutions made work worse for employees",
-        "url": "https://www.thisandthat.chat/blog/most-tech-revolutions-made-work-worse-for-employees/",
+        "title": "We finally learned to center a div, then browsers added sidebars",
+        "url": "https://seg6.space/posts/center-div/",
         "source": "Hacker News",
-        "score": 74
+        "score": 66
+      },
+      {
+        "title": "FIPS 140-3 is not a security guarantee, and auditors know it",
+        "url": "https://808bits.com/articles/fips-140-3-not-a-security-guarantee/",
+        "source": "Hacker News",
+        "score": 25
       }
     ],
     "ai": [
       {
-        "title": "AI fuels more than half of cybercrime in Africa as scams surge – Interpol",
-        "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
+        "title": "Eight Myths on Software Engineering and GenAI",
+        "url": "https://queue.acm.org/detail.cfm?id=3807963",
         "source": "Hacker News AI",
-        "score": 56
+        "score": 80
       },
       {
         "title": "Mistral's Shieldstral: 3B open-weights model for multimodal moderation",
         "url": "https://mistral.ai/news/shieldstral/",
         "source": "Hacker News AI",
-        "score": 262
+        "score": 321
       },
       {
-        "title": "Third-party cyber evaluations involving OpenAI models",
-        "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/",
+        "title": "AI fuels more than half of cybercrime in Africa as scams surge – Interpol",
+        "url": "https://www.africanews.com/2026/08/04/ai-fuels-more-than-half-of-cybercrime-in-africa-as-digital-scams-surge-interpol/",
         "source": "Hacker News AI",
-        "score": 25
+        "score": 147
       },
       {
-        "title": "Oxide Computer raises $445M (SEC Form D)",
-        "url": "https://www.sec.gov/Archives/edgar/data/1795071/000179507126000002/xslFormDX01/primary_doc.xml",
+        "title": "After Losses, Retail Investors Flock to 3x Leverage as 2x Product Are Restricted",
+        "url": "https://www.asiae.co.kr/en/article/2026080416131786841",
         "source": "Hacker News AI",
-        "score": 137
-      },
-      {
-        "title": "When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation",
-        "url": "https://arxiv.org/abs/2602.16763",
-        "source": "Hacker News AI",
-        "score": 70
+        "score": 5
       },
       {
         "title": "Keyv and friends compromised in active Shai-Hulud supply chain attack",
         "url": "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack",
         "source": "Hacker News AI",
-        "score": 223
+        "score": 232
       },
       {
-        "title": "Launch HN: EdotEnv (YC S26) – Quant Trading RL Envs to Teach LLMs Research",
-        "url": "https://edotenv.com/",
+        "title": "Oxide Computer raises $445M (SEC Form D)",
+        "url": "https://www.sec.gov/Archives/edgar/data/1795071/000179507126000002/xslFormDX01/primary_doc.xml",
         "source": "Hacker News AI",
-        "score": 26
+        "score": 193
       },
       {
-        "title": "Apple says more ex-employees may have taken confidential data to OpenAI",
-        "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
+        "title": "When AI Benchmarks Plateau: A Systematic Study of Benchmark Saturation",
+        "url": "https://arxiv.org/abs/2602.16763",
         "source": "Hacker News AI",
-        "score": 316
+        "score": 82
       },
       {
         "title": "There Will Come Soft Rains (1950) [pdf]",
         "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
         "source": "Hacker News AI",
-        "score": 339
+        "score": 356
       },
       {
-        "title": "Blackmail Fail (2013)",
-        "url": "https://gwern.net/blackmail",
+        "title": "Third-party cyber evaluations involving OpenAI models",
+        "url": "https://openai.com/index/third-party-cyber-evaluations-involving-openai-models/",
         "source": "Hacker News AI",
-        "score": 33
+        "score": 43
       },
       {
-        "title": "Security Incident INC-2026-07-28-01 – UK AI Security Institute [pdf]",
-        "url": "https://cdn.prod.website-files.com/663bd486c5e4c81588db7a1d/6a724858f7db25c81487016d_Security%20Incident%20INC-2026-07-28-01.pdf",
+        "title": "Launch HN: EdotEnv (YC S26) – Quant Trading RL Envs to Teach LLMs Research",
+        "url": "https://edotenv.com/",
         "source": "Hacker News AI",
-        "score": 51
+        "score": 31
       },
       {
-        "title": "Online ad giant Adform was hacked, proving once again why ad blockers are needed",
-        "url": "https://this.weekinsecurity.com/online-advertising-giant-adform-was-hacked-proving-once-again-why-ad-blockers-are-necessary/",
+        "title": "Apple says more ex-employees may have taken confidential data to OpenAI",
+        "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/",
         "source": "Hacker News AI",
-        "score": 209
-      },
-      {
-        "title": "An AI voice agent running locally on a $50 Arduino uno Q",
-        "url": "https://projecthub.arduino.cc/neelbuilds/build-a-voice-based-kiosk-for-retail-store-using-moorcheh-edge-and-arduino-uno-q-7f3c7b",
-        "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "Cloudflare enforces engineering standards using AI",
-        "url": "https://blog.cloudflare.com/engineering-standards-enforcement/",
-        "source": "Hacker News AI",
-        "score": 28
+        "score": 337
       },
       {
         "title": "LLMs reward expertise",
         "url": "https://www.seangoedecke.com/llms-reward-expertise/",
         "source": "Hacker News AI",
-        "score": 1313
+        "score": 1329
+      },
+      {
+        "title": "Blackmail Fail (2013)",
+        "url": "https://gwern.net/blackmail",
+        "source": "Hacker News AI",
+        "score": 39
       }
     ],
     "news": [
@@ -200,6 +188,16 @@
         "source": "BBC World"
       },
       {
+        "title": "Russian ballistic missile strike on Kyiv kills one and injures others",
+        "url": "https://www.bbc.co.uk/news/articles/c330pxyvzzyo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Armed man arrested near Trump's golf course ahead of president's visit",
+        "url": "https://www.bbc.co.uk/news/articles/c20jp3mp7lyo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Ukraine hits more Wildberries sites as strike kills five in Moscow region",
         "url": "https://www.bbc.co.uk/news/articles/c151pkww79zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -207,16 +205,6 @@
       {
         "title": "Arrests in Egypt after people allegedly impersonate judges",
         "url": "https://www.bbc.co.uk/news/articles/cn0n9wpvlwpo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "More than 170 migrants rescued after boat catches fire in Channel",
-        "url": "https://www.bbc.co.uk/news/articles/c4gkpeppjyqo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Mass funeral in Gaza for 112 Palestinians killed in 2023 Israeli strike",
-        "url": "https://www.bbc.co.uk/news/articles/cn0n99npjejo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -296,6 +284,11 @@
     ],
     "gaming": [
       {
+        "title": "Chris Pratt's 157-Minute Action Thriller Changed Hollywood Forever, and It's Streaming Now on Netflix",
+        "url": "https://www.polygon.com/chris-pratt-zero-dark-thirty-netflix-august-2026/",
+        "source": "Polygon"
+      },
+      {
         "title": "Marvel Tōkon Fighting Souls release time in your time zone",
         "url": "https://www.polygon.com/marvel-tokon-fighting-souls-release-time-when-edt-pdt/",
         "source": "Polygon"
@@ -323,11 +316,6 @@
       {
         "title": "Ice Cream Man uses generative AI, director Eli Roth confirms",
         "url": "https://www.polygon.com/eli-roth-ice-cream-man-generative-ai-confirmed/",
-        "source": "Polygon"
-      },
-      {
-        "title": "What time does the Gears of War E-Day early access multiplayer beta start in your time zone?",
-        "url": "https://www.polygon.com/gears-of-war-e-day-early-access-beta-release-time-edt-pdt/",
         "source": "Polygon"
       }
     ],
