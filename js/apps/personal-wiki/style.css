@@ -1300,3 +1300,35 @@
         grid-template-columns: 1fr;
     }
 }
+/* 命理分析浮動面板樣式覆蓋 */
+.wiki-ziwei-area {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: var(--nt-canvas) !important;
+    border-top: 1px solid var(--nt-hairline) !important;
+    z-index: 30 !important;
+    max-height: 60vh !important;
+    overflow-y: auto !important;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1) !important;
+    padding: var(--nt-s-sm) var(--nt-s-md) !important;
+}
+
+.wiki-ziwei-section {
+    margin-top: 0 !important;
+}
+
+.wiki-ziwei-content {
+    max-height: 300px !important;
+    overflow-y: auto !important;
+    transition: max-height 0.3s ease !important;
+}
+
+.wiki-ziwei-content.collapsed {
+    max-height: 0 !important;
+}
+
+.wiki-blocks {
+    padding-bottom: 80px !important;
+}
