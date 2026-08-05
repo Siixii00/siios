@@ -1416,25 +1416,27 @@ left: 0 !important;
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 12px;
+    padding: var(--nt-s-md);
     background: var(--nt-canvas-soft);
     border: 1px solid var(--nt-hairline);
     border-radius: 5px;
     cursor: pointer;
-    transition: background 0.15s ease;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
 }
 
 .wiki-backlink-item:hover {
-    background: #eae9e8;
+    border-color: #d0d0d0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .wiki-backlink-icon {
-    font-size: 16px;
+    font-size: 13px;
 }
 
 .wiki-backlink-text {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--nt-ink);
+    line-height: 1.5;
 }
 
 .wiki-warning-banner {

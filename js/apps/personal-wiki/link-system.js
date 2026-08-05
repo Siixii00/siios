@@ -76,9 +76,9 @@ export function getBacklinks(pageId) {
     if (!targetRecord || !targetRecord.title) return [];
 
     const normalized = targetRecord.title.toLowerCase();
-    const backlinkIds = backlinkIndex?.get(normalized) || new Set();
+    const backlinkIds = backlinkIndex?.get(normalized);
     
-    return cachedRecords.filter(r => backlinkIds.has(r.id) && r.id !== pageId);
+    return backlinkIds ? cachedRecords.filter(r => backlinkIds.has(r.id) && r.id !== pageId) : [];
 }
 
 export function renderLinksInContent(html) {
