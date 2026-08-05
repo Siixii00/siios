@@ -76,7 +76,7 @@ export function getBacklinks(pageId) {
     if (!targetRecord || !targetRecord.title) return [];
 
     const normalized = targetRecord.title.toLowerCase();
-    const backlinkIds = backlinkIndex ? backlinkIndex.get(normalized) : new Set();
+    const backlinkIds = backlinkIndex?.get(normalized) || new Set();
     
     return cachedRecords.filter(r => backlinkIds.has(r.id) && r.id !== pageId);
 }
