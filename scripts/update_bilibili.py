@@ -10,6 +10,11 @@ import time
 import requests
 from datetime import datetime
 import os
+import sys
+
+if sys.platform == 'win32':
+    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stderr.reconfigure(encoding='utf-8')
 
 DATA_DIR = 'data'
 
@@ -62,11 +67,11 @@ def fetch_api(url):
             if data.get('code') == 0:
                 return data
             else:
-                print(f'  ✗ API 錯誤: {data.get("message", "unknown")}')
+                print(f'  [X] API 錯誤: {data.get("message", "unknown")}')
         else:
-            print(f'  ✗ HTTP 錯誤: {response.status_code}')
+            print(f'  [X] HTTP 錯誤: {response.status_code}')
     except Exception as e:
-        print(f'  ✗ 獲取失敗: {e}')
+        print(f'  [X] 獲取失敗: {e}')
     return None
 
 def parse_videos(data):
@@ -119,8 +124,8 @@ def save_category(name, videos, filename):
         'updated_at': datetime.now().isoformat(),
     }
     with open(filepath, 'w', encoding='utf-8') as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
-    print(f'✓ 已保存 {len(videos)} 部影片到 {filepath}')
+        json.dump(output, f, ensure_ascii=False, indent=2, separators=(',', ': '))
+    print(f'[OK] 已保存 {len(videos)} 部影片到 {filepath}')
 
 def update_category(name, config):
     print(f'\n正在更新 {name}...')
