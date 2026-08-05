@@ -634,14 +634,20 @@ async function loadZiweiFortune(container, recordId) {
         const character = await CharactersDB.getById(record.character_id);
         if (!character || !character.birth_date || !character.birth_time || !character.gender) {
             area.innerHTML = `
-                <div class="wiki-ziwei-section">
-                    <div class="wiki-ziwei-header">🔮 命理分析</div>
-                    <div class="wiki-ziwei-empty">
-                        <p>尚未設定完整的出生資訊</p>
-                        <p class="wiki-ziwei-hint">請在角色設定中補充出生日期、時間與性別</p>
+                <div class="wiki-section-card">
+                    <div class="wiki-section-header collapsed" data-toggle>
+                        <div class="wiki-section-title">🔮 命理分析</div>
+                        <div class="wiki-section-toggle">▼</div>
+                    </div>
+                    <div class="wiki-section-content collapsed">
+                        <div class="wiki-ziwei-empty">
+                            <p>尚未設定完整的出生資訊</p>
+                            <p class="wiki-ziwei-hint">請在角色設定中補充出生日期、時間與性別</p>
+                        </div>
                     </div>
                 </div>
             `;
+            bindSectionToggle(area);
             return;
         }
 
@@ -650,11 +656,17 @@ async function loadZiweiFortune(container, recordId) {
 
         if (!cache) {
             area.innerHTML = `
-                <div class="wiki-ziwei-section">
-                    <div class="wiki-ziwei-header">🔮 命理分析</div>
-                    <div class="wiki-ziwei-loading">載入中...</div>
+                <div class="wiki-section-card">
+                    <div class="wiki-section-header collapsed" data-toggle>
+                        <div class="wiki-section-title">🔮 命理分析</div>
+                        <div class="wiki-section-toggle">▼</div>
+                    </div>
+                    <div class="wiki-section-content collapsed">
+                        <div class="wiki-ziwei-loading">載入中...</div>
+                    </div>
                 </div>
             `;
+            bindSectionToggle(area);
             return;
         }
 
