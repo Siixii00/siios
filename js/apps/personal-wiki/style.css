@@ -1252,6 +1252,49 @@
     margin-top: 4px;
 }
 
+.wiki-ziwei-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+    padding: var(--nt-s-sm) var(--nt-s-md);
+    background: var(--nt-canvas-soft);
+    border: 1px solid var(--nt-hairline);
+    border-radius: 6px;
+    margin-bottom: var(--nt-s-sm);
+}
+
+.wiki-ziwei-header:hover {
+    background: var(--nt-canvas);
+}
+
+.wiki-ziwei-header-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--nt-ink);
+}
+
+.wiki-ziwei-toggle {
+    font-size: 12px;
+    color: var(--nt-ink-faint);
+    transition: transform 0.2s ease;
+}
+
+.wiki-ziwei-header.collapsed .wiki-ziwei-toggle {
+    transform: rotate(-90deg);
+}
+
+.wiki-ziwei-content {
+    max-height: 1000px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.wiki-ziwei-content.collapsed {
+    max-height: 0;
+}
+
 @media (max-width: 768px) {
     .wiki-ziwei-cards {
         grid-template-columns: 1fr;
