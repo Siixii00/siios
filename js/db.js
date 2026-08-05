@@ -245,6 +245,11 @@ const ChatsDB = {
 };
 
 const MessagesDB = {
+    async getAll() {
+        const database = await initDB();
+        return database.getAll('messages');
+    },
+    
     async getByChatId(chatId) {
         const database = await initDB();
         return database.getAllFromIndex('messages', 'chat_id', chatId);
