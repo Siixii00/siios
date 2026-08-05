@@ -652,11 +652,11 @@ async function loadZiweiFortune(container, recordId) {
         if (cache.is_stale) {
             area.innerHTML = `
                 <div class="wiki-ziwei-section">
-                    <div class="wiki-ziwei-header" data-ziwei-toggle>
+                    <div class="wiki-ziwei-header collapsed" data-ziwei-toggle>
                         <div class="wiki-ziwei-header-title">🔮 命理分析</div>
                         <div class="wiki-ziwei-toggle">▼</div>
                     </div>
-                    <div class="wiki-ziwei-content">
+                    <div class="wiki-ziwei-content collapsed">
                         <div class="wiki-ziwei-warning">⚠️ 資料可能過期（無法連線至分析服務）</div>
                         ${renderZiweiCards(cache)}
                     </div>
@@ -668,11 +668,11 @@ async function loadZiweiFortune(container, recordId) {
 
         area.innerHTML = `
             <div class="wiki-ziwei-section">
-                <div class="wiki-ziwei-header" data-ziwei-toggle>
+                <div class="wiki-ziwei-header collapsed" data-ziwei-toggle>
                     <div class="wiki-ziwei-header-title">🔮 命理分析 (${cache.analysis_date})</div>
                     <div class="wiki-ziwei-toggle">▼</div>
                 </div>
-                <div class="wiki-ziwei-content">
+                <div class="wiki-ziwei-content collapsed">
                     ${renderZiweiCards(cache)}
                 </div>
             </div>
