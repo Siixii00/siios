@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-06T07:41:06.377571",
-    "total_items": 65
+    "last_updated": "2026-08-06T10:40:29.837952",
+    "total_items": 58
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Crime Pays but Botany Doesn't",
         "url": "https://www.crimepaysbutbotanydoesnt.com/reading-list",
         "source": "Hacker News",
+        "score": 230
+      },
+      {
+        "title": "How to Make a Nintendo 64 Game in 2026",
+        "url": "https://phoboslab.org/log/2026/08/xibalba64-making-of",
+        "source": "Hacker News",
         "score": 100
       },
       {
         "title": "Discovery Loop",
         "url": "https://www.discoveryloop.com/",
         "source": "Hacker News",
-        "score": 712
+        "score": 763
+      },
+      {
+        "title": "Let's all meet up in the Y2K",
+        "url": "https://blog.gingerbeardman.com/2026/08/06/lets-all-meet-up-in-the-y2k/",
+        "source": "Hacker News",
+        "score": 49
       },
       {
         "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
         "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
         "source": "Hacker News",
-        "score": 617
+        "score": 669
       },
       {
         "title": "Zed DeltaDB",
         "url": "https://zed.dev/deltadb",
         "source": "Hacker News",
-        "score": 389
-      },
-      {
-        "title": "Branchless Rust: Making a Filter 4x Faster by Removing an If",
-        "url": "https://www.greyblake.com/blog/branchless-rust/",
-        "source": "Hacker News",
-        "score": 141
-      },
-      {
-        "title": "Nashville uses eminent domain to block data center near zoo",
-        "url": "https://www.costar.com/article/970809918/nashville-council-approves-eminent-domain-action-to-halt-data-center-project",
-        "source": "Hacker News",
-        "score": 219
+        "score": 438
       },
       {
         "title": "The title cards in Blade Runner are amazing",
         "url": "https://randsinrepose.com/archives/blade-runner-title-cards/",
         "source": "Hacker News",
-        "score": 241
+        "score": 283
       },
       {
         "title": "Muse Code and Muse Spark 1.2",
         "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
         "source": "Hacker News",
-        "score": 243
+        "score": 263
       },
       {
         "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
         "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
         "source": "Hacker News",
-        "score": 296
+        "score": 322
       },
       {
-        "title": "Quantego: A Family of Lego Models of IBM Quantum Computers",
-        "url": "https://quantego.org/",
+        "title": "Branchless Rust: Making a Filter 4x Faster by Removing an If",
+        "url": "https://www.greyblake.com/blog/branchless-rust/",
         "source": "Hacker News",
-        "score": 17
-      },
-      {
-        "title": "Prime Agent: A self-improving RLM agent",
-        "url": "https://www.primeintellect.ai/blog/prime-agent",
-        "source": "Hacker News",
-        "score": 169
+        "score": 189
       },
       {
         "title": "Born Against, or why hobby programming communities are against LLM usage",
         "url": "https://blog.fogus.me/llm/born-against.html",
         "source": "Hacker News",
-        "score": 238
+        "score": 279
       },
       {
         "title": "Cloudflare OS: an open platform for agents, apps, and work",
         "url": "https://blog.cloudflare.com/cloudflare-os/",
         "source": "Hacker News",
-        "score": 543
+        "score": 564
       },
       {
-        "title": "Decimen Optical Transfer: fountain-coded QR file transfer",
-        "url": "https://github.com/bashalarmistalt/decimen-optical-transfer",
+        "title": "What I love about Django",
+        "url": "https://buttondown.com/blog/what-i-love-about-django",
         "source": "Hacker News",
-        "score": 14
+        "score": 64
       },
       {
-        "title": "Launch HN: HyperProbe (YC S26) – Agents that do read-only debugging in prod",
-        "url": "https://www.hyperprobe.co",
+        "title": "Prime Agent: A self-improving RLM agent",
+        "url": "https://www.primeintellect.ai/blog/prime-agent",
         "source": "Hacker News",
-        "score": 54
+        "score": 185
+      },
+      {
+        "title": "Morioka Shoten",
+        "url": "https://www.takram.com/projects/a-single-room-with-a-single-book-morioka-shoten",
+        "source": "Hacker News",
+        "score": 15
       }
     ],
     "ai": [
@@ -101,23 +101,23 @@
         "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
         "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
         "source": "Hacker News AI",
-        "score": 617
-      },
-      {
-        "title": "Nashville uses eminent domain to block data center near zoo",
-        "url": "https://www.costar.com/article/970809918/nashville-council-approves-eminent-domain-action-to-halt-data-center-project",
-        "source": "Hacker News AI",
-        "score": 219
+        "score": 669
       },
       {
         "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
         "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
         "source": "Hacker News AI",
-        "score": 296
+        "score": 322
       },
       {
         "title": "Born Against, or why hobby programming communities are against LLM usage",
         "url": "https://blog.fogus.me/llm/born-against.html",
+        "source": "Hacker News AI",
+        "score": 279
+      },
+      {
+        "title": "Nashville uses eminent domain to block data center near zoo",
+        "url": "https://www.costar.com/article/970809918/nashville-council-approves-eminent-domain-action-to-halt-data-center-project",
         "source": "Hacker News AI",
         "score": 238
       },
@@ -125,67 +125,67 @@
         "title": "Decimen Optical Transfer: fountain-coded QR file transfer",
         "url": "https://github.com/bashalarmistalt/decimen-optical-transfer",
         "source": "Hacker News AI",
-        "score": 14
-      },
-      {
-        "title": "Show HN: Wallfacer – A terminal session manager for Claude Code, and more",
-        "url": "https://github.com/pradipta/wallfacer",
-        "source": "Hacker News AI",
-        "score": 17
-      },
-      {
-        "title": "Position: LLMs Can't Jump",
-        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DklU4737opt",
-        "source": "Hacker News AI",
-        "score": 267
+        "score": 25
       },
       {
         "title": "Sycophantic AI Decreases Prosocial Intentions and Promotes Dependence (2025)",
         "url": "https://arxiv.org/abs/2510.01395",
         "source": "Hacker News AI",
-        "score": 107
+        "score": 128
+      },
+      {
+        "title": "Position: LLMs Can't Jump",
+        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DklU4737opt",
+        "source": "Hacker News AI",
+        "score": 278
       },
       {
         "title": "The Entropy of a Markov Chain",
         "url": "https://chillphysicsenjoyer.substack.com/p/the-entropy-of-a-markov-chain",
         "source": "Hacker News AI",
-        "score": 126
+        "score": 131
       },
       {
         "title": "When online commenters detect my art as AI",
         "url": "https://www.davidrevoy.com/article1164/when-online-commenters-detect-my-art-as-ai",
         "source": "Hacker News AI",
-        "score": 32
+        "score": 45
+      },
+      {
+        "title": "Show HN: Wallfacer – A terminal session manager for Claude Code, and more",
+        "url": "https://github.com/pradipta/wallfacer",
+        "source": "Hacker News AI",
+        "score": 22
       },
       {
         "title": "Why Erdős Problems Are Falling to AI",
         "url": "https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/",
         "source": "Hacker News AI",
-        "score": 135
-      },
-      {
-        "title": "Sula: A Gemini protocol server written in Scryer Prolog",
-        "url": "https://sagredo.dev/projects/sula/",
-        "source": "Hacker News AI",
-        "score": 53
+        "score": 138
       },
       {
         "title": "Painting with Gaussians",
         "url": "https://yogthos.net/posts/2026-08-03-splat-painter.html",
         "source": "Hacker News AI",
-        "score": 97
+        "score": 101
+      },
+      {
+        "title": "Sula: A Gemini protocol server written in Scryer Prolog",
+        "url": "https://sagredo.dev/projects/sula/",
+        "source": "Hacker News AI",
+        "score": 57
+      },
+      {
+        "title": "On non-rooted Android 17, ADB uninstall of system apps fails",
+        "url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/1426",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Proxmox VE now available for ARM64",
         "url": "https://forum.proxmox.com/threads/proxmox-virtual-environment-now-available-for-64-bit-arm-arm64.185527/",
         "source": "Hacker News AI",
-        "score": 63
-      },
-      {
-        "title": "See the Sun like never before with most detailed images yet",
-        "url": "https://www.bbc.com/news/articles/c36d4376nd2o",
-        "source": "Hacker News AI",
-        "score": 45
+        "score": 67
       }
     ],
     "news": [
@@ -195,23 +195,18 @@
         "source": "BBC World"
       },
       {
-        "title": "Infantino sorry for errors but stays Fifa president",
-        "url": "https://www.bbc.co.uk/sport/football/articles/clyq3el5gkqo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Iran says deal with Oman on Strait of Hormuz is in final stages",
         "url": "https://www.bbc.co.uk/news/articles/ckg9d3eyeggo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Indian journalist Tarun Tejpal convicted in 2013 rape case ",
+        "title": "Indian journalist Tarun Tejpal sentenced to 10 years in jail for rape",
         "url": "https://www.bbc.co.uk/news/articles/cx2v551w9v8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Outrage as Ugandan football captain murdered in street gang attack",
-        "url": "https://www.bbc.co.uk/news/articles/cm2g0038yr8o?at_medium=RSS&at_campaign=rss",
+        "title": "Iranian footballers who defied Tehran become Australian citizens",
+        "url": "https://www.bbc.co.uk/news/articles/cn5nlgxv6vdo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -220,48 +215,17 @@
         "source": "BBC World"
       },
       {
-        "title": "Nigerian security forces rescue more than 300 abductees",
-        "url": "https://www.bbc.co.uk/news/articles/cn4ndd8nr8lo?at_medium=RSS&at_campaign=rss",
+        "title": "Outrage as Ugandan football captain beaten to death in street gang attack",
+        "url": "https://www.bbc.co.uk/news/articles/cm2g0038yr8o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Air India's new CEO faces financial and safety turbulence",
+        "url": "https://www.bbc.co.uk/news/articles/c9987kkrnl5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " The TikTokification of Disney+ makes me worry about the future of animation ",
-        "url": "https://www.creativebloq.com/art/animation/controversial-disney-tiktok-deal-blurs-the-line-between-tv-and-social-media",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How I create sprawling cyberpunk vistas using Cinema4D and Photoshop ",
-        "url": "https://www.creativebloq.com/3d/3d-art/how-i-create-a-sprawling-cyberpunk-vista-using-cinema4d-and-photoshop",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The creator of Halloween and The Thing is releasing a 132-page dystopian horror comic paired with a 14-track synth metal album that rocks like it's 1986 ",
-        "url": "https://www.creativebloq.com/art/the-creator-of-halloween-and-the-thing-is-releasing-a-132-page-dystopian-horror-comic-paired-with-a-14-track-synth-metal-album-that-rocks-like-its-1986",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This Blender Deep Paint artist makes 3D look like a children's book brought to life ",
-        "url": "https://www.creativebloq.com/art/animation/this-blender-deep-paint-artist-makes-3d-look-like-a-childrens-book-brought-to-life",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " 9 beautiful air purifiers that won’t ruin your home aesthetic ",
-        "url": "https://www.creativebloq.com/tech/9-beautiful-air-purifiers-that-wont-ruin-your-home-aesthetic",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " No Trump, your Newsweek magazine cover isn’t a compliment ",
-        "url": "https://www.creativebloq.com/design/magazines/no-trump-your-newsweek-magazine-cover-isnt-a-compliment",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Hifiman Edition XV vs Thieaudio Cypher: Which $400 audiophile headphone should you buy? ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/hifiman-edition-xv-vs-thieaudio-cypher-which-usd400-audiophile-headphone-should-you-buy",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "Dirty air may trigger painful rheumatoid arthritis flares",
@@ -301,38 +265,38 @@
     ],
     "gaming": [
       {
+        "title": "One of the most controversial anime flops is coming back with a new manga",
+        "url": "https://www.polygon.com/promised-neverland-new-manga-one-shot-anime/",
+        "source": "Polygon"
+      },
+      {
+        "title": "40 years ago, Nintendo's Metroid established a video game genre that's still going strong today",
+        "url": "https://www.polygon.com/metroid-40th-anniversary-nintendo/",
+        "source": "Polygon"
+      },
+      {
+        "title": "PlayStation 5 consoles now warn players of physical disc termination, rumor says",
+        "url": "https://www.polygon.com/ps5-will-feature-disc-discontinuation-warning-label-rumor-says/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Pokémon Pokopia's new DLC finally reveals which universe the game is set in",
+        "url": "https://www.polygon.com/pokemon-pokopia-lets-go-pikachu-eevee-kanto-hoenn-champions/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Movie That Warner Bros. Tried to Kill Officially Releases in Theaters in 3 Weeks",
+        "url": "https://www.polygon.com/coyote-vs-acme-release-date-looney-tunes/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Xbox's layoffs hit Halo Studios despite Campaign Evolved's success",
+        "url": "https://www.polygon.com/halo-studios-layoffs-campaign-evolved/",
+        "source": "Polygon"
+      },
+      {
         "title": "Halo 4 Still Holds Up As The Best Halo Game Ever, 14 Years Later",
         "url": "https://www.polygon.com/halo-4-best-halo-game/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Christopher Nolan Reveals Genius Reason He Cast Tom Holland in New 'Odyssey' Interview [Exclusive]",
-        "url": "https://www.polygon.com/the-odyssey-christopher-nolan-book-casting-interviews/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How to get a portal pod in Pokémon Pokopia",
-        "url": "https://www.polygon.com/pokemon-pokopia-how-to-get-universal-storage-crafting-recipe/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Minecraft announced for Switch 2 with enhanced graphics",
-        "url": "https://www.polygon.com/minecraft-nintendo-switch-2-release-date/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All weapon locations in Beast of Reincarnation",
-        "url": "https://www.polygon.com/beast-of-reincarnation-weapon-location-where-to-find/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Bubbly Basin Habitat Dex list for Pokémon Pokopia DLC",
-        "url": "https://www.polygon.com/pokemon-pokopia-bubbly-basin-dlc-habitat-dex-list-requirements/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All manual locations in Beast of Reincarnation",
-        "url": "https://www.polygon.com/beast-of-reincarnation-manual-location-where-to-find-buy-price/",
         "source": "Polygon"
       }
     ],
