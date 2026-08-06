@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-05T22:13:24.777374",
-    "total_items": 65
+    "last_updated": "2026-08-06T00:00:36.037939",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
-        "title": "Zed DeltaDB",
-        "url": "https://zed.dev/deltadb",
-        "source": "Hacker News",
-        "score": 218
-      },
-      {
         "title": "Discovery Loop",
         "url": "https://www.discoveryloop.com/",
         "source": "Hacker News",
-        "score": 471
+        "score": 529
       },
       {
-        "title": "I'm switching my phone from Android to Linux",
-        "url": "https://runarcn.no/android-to-linux/",
+        "title": "Zed DeltaDB",
+        "url": "https://zed.dev/deltadb",
         "source": "Hacker News",
-        "score": 90
+        "score": 267
+      },
+      {
+        "title": "The title cards in Blade Runner are amazing",
+        "url": "https://randsinrepose.com/archives/blade-runner-title-cards/",
+        "source": "Hacker News",
+        "score": 102
       },
       {
         "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
         "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
         "source": "Hacker News",
-        "score": 343
+        "score": 419
+      },
+      {
+        "title": "NVIDIA’s Vera Whitepaper Has a Thread Loose",
+        "url": "https://chipsandcheese.com/p/nvidias-vera-whitepaper-has-a-thread",
+        "source": "Hacker News",
+        "score": 62
       },
       {
         "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
         "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
         "source": "Hacker News",
-        "score": 149
-      },
-      {
-        "title": "Nvidia's Vera Whitepaper Has a Thread Loose",
-        "url": "https://chipsandcheese.com/p/nvidias-vera-whitepaper-has-a-thread",
-        "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "Atlassian Rovo Exfiltrates Data, Bypassing Controls",
-        "url": "https://www.promptarmor.com/resources/atlassian-rovo-exfiltrates-data",
-        "source": "Hacker News",
-        "score": 126
-      },
-      {
-        "title": "Muse Code and Muse Spark 1.2",
-        "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
-        "source": "Hacker News",
-        "score": 112
-      },
-      {
-        "title": "GNU Hurd News 2026-Q2",
-        "url": "https://www.gnu.org/software/hurd/news/2026-q2.html",
-        "source": "Hacker News",
-        "score": 97
-      },
-      {
-        "title": "The Title Cards in Blade Runner Are Fucking Amazing",
-        "url": "https://randsinrepose.com/archives/blade-runner-title-cards/",
-        "source": "Hacker News",
-        "score": 19
+        "score": 189
       },
       {
         "title": "Prime Agent: A self-improving RLM agent",
         "url": "https://www.primeintellect.ai/blog/prime-agent",
         "source": "Hacker News",
-        "score": 23
+        "score": 71
       },
       {
-        "title": "OpenAI says my prepaid credits were consumed, refuses to show any record",
-        "url": "https://community.openai.com/t/how-openai-lost-a-paying-customer-over-160-it-refuses-to-explain/1389233",
+        "title": "Atlassian Rovo Exfiltrates Data, Bypassing Controls",
+        "url": "https://www.promptarmor.com/resources/atlassian-rovo-exfiltrates-data",
         "source": "Hacker News",
-        "score": 39
+        "score": 154
+      },
+      {
+        "title": "Muse Code and Muse Spark 1.2",
+        "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
+        "source": "Hacker News",
+        "score": 143
+      },
+      {
+        "title": "I'm switching my phone from Android to Linux",
+        "url": "https://runarcn.no/android-to-linux/",
+        "source": "Hacker News",
+        "score": 167
       },
       {
         "title": "Celld: Self-hosted, distributed Durable Objects",
         "url": "https://github.com/denoland/celld",
         "source": "Hacker News",
-        "score": 101
+        "score": 128
       },
       {
-        "title": "Meta Ran Ads That Contained AI-Generated Child Sexual Abuse Imagery",
-        "url": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery/",
+        "title": "Exact, parallel 2D Delaunay triangulation for int32 coordinates",
+        "url": "https://github.com/morishuz/delaunay32",
         "source": "Hacker News",
-        "score": 165
+        "score": 21
       },
       {
-        "title": "The Valley of Webhooks",
-        "url": "https://weli.dev/blog/the-valley-of-webhooks/",
+        "title": "GNU Hurd News 2026-Q2",
+        "url": "https://www.gnu.org/software/hurd/news/2026-q2.html",
         "source": "Hacker News",
-        "score": 127
+        "score": 112
+      },
+      {
+        "title": "Goodhart's Law Comes for Every Benchmark You Trust",
+        "url": "https://cacm.acm.org/blogcacm/goodharts-law-comes-for-every-benchmark-you-trust/",
+        "source": "Hacker News",
+        "score": 53
+      },
+      {
+        "title": "Launch HN: HyperProbe (YC S26) – Agents that do read-only debugging in prod",
+        "url": "https://www.hyperprobe.co",
+        "source": "Hacker News",
+        "score": 38
       }
     ],
     "ai": [
@@ -101,91 +101,85 @@
         "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
         "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
         "source": "Hacker News AI",
-        "score": 343
+        "score": 419
       },
       {
         "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
         "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
         "source": "Hacker News AI",
-        "score": 149
-      },
-      {
-        "title": "OpenAI says my prepaid credits were consumed, refuses to show any record",
-        "url": "https://community.openai.com/t/how-openai-lost-a-paying-customer-over-160-it-refuses-to-explain/1389233",
-        "source": "Hacker News AI",
-        "score": 39
-      },
-      {
-        "title": "Meta Ran Ads That Contained AI-Generated Child Sexual Abuse Imagery",
-        "url": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery/",
-        "source": "Hacker News AI",
-        "score": 165
-      },
-      {
-        "title": "Sula: A Gemini protocol server written in Scryer Prolog",
-        "url": "https://sagredo.dev/projects/sula/",
-        "source": "Hacker News AI",
-        "score": 27
+        "score": 189
       },
       {
         "title": "The Entropy of a Markov Chain",
         "url": "https://chillphysicsenjoyer.substack.com/p/the-entropy-of-a-markov-chain",
         "source": "Hacker News AI",
-        "score": 92
+        "score": 99
       },
       {
-        "title": "I’m leaving OpenAI to build telepathy",
-        "url": "https://naomibashkansky.com/blog/telepathy/",
+        "title": "Sula: A Gemini protocol server written in Scryer Prolog",
+        "url": "https://sagredo.dev/projects/sula/",
         "source": "Hacker News AI",
-        "score": 98
+        "score": 40
       },
       {
         "title": "Painting with Gaussians",
         "url": "https://yogthos.net/posts/2026-08-03-splat-painter.html",
         "source": "Hacker News AI",
-        "score": 84
+        "score": 88
       },
       {
-        "title": "Born Against, or why hobby programming communities are against LLM usage",
-        "url": "https://blog.fogus.me/llm/born-against.html",
+        "title": "Meta Ran Ads That Contained AI-Generated Child Sexual Abuse Imagery",
+        "url": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery/",
         "source": "Hacker News AI",
-        "score": 108
+        "score": 222
       },
       {
         "title": "Position: LLMs Can't Jump",
         "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DklU4737opt",
         "source": "Hacker News AI",
-        "score": 225
-      },
-      {
-        "title": "Proxmox VE now available for ARM64",
-        "url": "https://forum.proxmox.com/threads/proxmox-virtual-environment-now-available-for-64-bit-arm-arm64.185527/",
-        "source": "Hacker News AI",
-        "score": 36
-      },
-      {
-        "title": "Sycophantic AI Decreases Prosocial Intentions and Promotes Dependence (2025)",
-        "url": "https://arxiv.org/abs/2510.01395",
-        "source": "Hacker News AI",
-        "score": 62
+        "score": 233
       },
       {
         "title": "See the Sun like never before with most detailed images yet",
         "url": "https://www.bbc.com/news/articles/c36d4376nd2o",
         "source": "Hacker News AI",
-        "score": 22
+        "score": 32
       },
       {
-        "title": "A Fed official is asking whether AI is becoming 'too big to fail'",
-        "url": "https://thenextweb.com/news/a-fed-official-is-asking-whether-ai-is-becoming-too-big-to-fail",
+        "title": "Proxmox VE now available for ARM64",
+        "url": "https://forum.proxmox.com/threads/proxmox-virtual-environment-now-available-for-64-bit-arm-arm64.185527/",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 40
+      },
+      {
+        "title": "Born Against, or why hobby programming communities are against LLM usage",
+        "url": "https://blog.fogus.me/llm/born-against.html",
+        "source": "Hacker News AI",
+        "score": 115
+      },
+      {
+        "title": "Sycophantic AI Decreases Prosocial Intentions and Promotes Dependence (2025)",
+        "url": "https://arxiv.org/abs/2510.01395",
+        "source": "Hacker News AI",
+        "score": 67
       },
       {
         "title": "TIME Is Serving AI Bots a Different Website, with Ads Built In",
         "url": "https://www.vincentschmalbach.com/time-serves-ai-bots-a-different-website/",
         "source": "Hacker News AI",
-        "score": 223
+        "score": 227
+      },
+      {
+        "title": "A Fed official is asking whether AI is becoming 'too big to fail'",
+        "url": "https://thenextweb.com/news/a-fed-official-is-asking-whether-ai-is-becoming-too-big-to-fail",
+        "source": "Hacker News AI",
+        "score": 16
+      },
+      {
+        "title": "There Will Come Soft Rains (1950) [pdf]",
+        "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
+        "source": "Hacker News AI",
+        "score": 427
       }
     ],
     "news": [
@@ -210,7 +204,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Fifa admits mistakes but Infantino remains president",
+        "title": "Infantino sorry for errors but stays Fifa president",
         "url": "https://www.bbc.co.uk/sport/football/articles/clyq3el5gkqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -301,6 +295,16 @@
     ],
     "gaming": [
       {
+        "title": "Halo 4 Still Holds Up As The Best Halo Game Ever, 14 Years Later",
+        "url": "https://www.polygon.com/halo-4-best-halo-game/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Christopher Nolan Reveals Genius Reason He Cast Tom Holland in New 'Odyssey' Interview [Exclusive]",
+        "url": "https://www.polygon.com/the-odyssey-christopher-nolan-book-casting-interviews/",
+        "source": "Polygon"
+      },
+      {
         "title": "How to get a portal pod in Pokémon Pokopia",
         "url": "https://www.polygon.com/pokemon-pokopia-how-to-get-universal-storage-crafting-recipe/",
         "source": "Polygon"
@@ -323,16 +327,6 @@
       {
         "title": "All manual locations in Beast of Reincarnation",
         "url": "https://www.polygon.com/beast-of-reincarnation-manual-location-where-to-find-buy-price/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All facility module locations in Beast of Reincarnation",
-        "url": "https://www.polygon.com/beast-of-reincarnation-facility-module-location-where-to-find/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Larian Studios' Baldur's Gate 3 livestream shut down for being too sexy",
-        "url": "https://www.polygon.com/baldurs-gate-3-developer-livestream-banned-youtube-tiktok-too-horny/",
         "source": "Polygon"
       }
     ],
