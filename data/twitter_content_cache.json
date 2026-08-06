@@ -1,206 +1,197 @@
 {
   "metadata": {
-    "last_updated": "2026-08-06T00:00:36.037939",
-    "total_items": 64
+    "last_updated": "2026-08-06T04:14:03.680985",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Nashville uses eminent domain to block data center near zoo",
+        "url": "https://www.costar.com/article/970809918/nashville-council-approves-eminent-domain-action-to-halt-data-center-project",
+        "source": "Hacker News",
+        "score": 103
+      },
+      {
+        "title": "Governments are making a dangerous bet on the AI boom",
+        "url": "https://www.economist.com/leaders/2026/08/05/governments-are-making-a-dangerous-bet-on-the-ai-boom",
+        "source": "Hacker News",
+        "score": 19
+      },
+      {
         "title": "Discovery Loop",
         "url": "https://www.discoveryloop.com/",
         "source": "Hacker News",
-        "score": 529
+        "score": 648
       },
       {
         "title": "Zed DeltaDB",
         "url": "https://zed.dev/deltadb",
         "source": "Hacker News",
-        "score": 267
+        "score": 336
+      },
+      {
+        "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
+        "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+        "source": "Hacker News",
+        "score": 539
+      },
+      {
+        "title": "Do birds enjoy flying? Analysis of affect after flight in galah (E roseicapilla)",
+        "url": "https://brill.com/view/journals/beh/aop/article-10.1163-1568539X-bja10370/article-10.1163-1568539X-bja10370.xml",
+        "source": "Hacker News",
+        "score": 12
       },
       {
         "title": "The title cards in Blade Runner are amazing",
         "url": "https://randsinrepose.com/archives/blade-runner-title-cards/",
         "source": "Hacker News",
-        "score": 102
+        "score": 187
       },
       {
-        "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
-        "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+        "title": "LLMs won't break symmetric crypto",
+        "url": "https://www.bfswa.blog/p/llms-wont-break-symmetric-crypto",
         "source": "Hacker News",
-        "score": 419
-      },
-      {
-        "title": "NVIDIA’s Vera Whitepaper Has a Thread Loose",
-        "url": "https://chipsandcheese.com/p/nvidias-vera-whitepaper-has-a-thread",
-        "source": "Hacker News",
-        "score": 62
-      },
-      {
-        "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
-        "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
-        "source": "Hacker News",
-        "score": 189
-      },
-      {
-        "title": "Prime Agent: A self-improving RLM agent",
-        "url": "https://www.primeintellect.ai/blog/prime-agent",
-        "source": "Hacker News",
-        "score": 71
-      },
-      {
-        "title": "Atlassian Rovo Exfiltrates Data, Bypassing Controls",
-        "url": "https://www.promptarmor.com/resources/atlassian-rovo-exfiltrates-data",
-        "source": "Hacker News",
-        "score": 154
+        "score": 56
       },
       {
         "title": "Muse Code and Muse Spark 1.2",
         "url": "https://research.meta.ai/blog/introducing-muse-code-and-muse-spark-1-2",
         "source": "Hacker News",
-        "score": 143
+        "score": 208
       },
       {
-        "title": "I'm switching my phone from Android to Linux",
-        "url": "https://runarcn.no/android-to-linux/",
+        "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
+        "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
         "source": "Hacker News",
-        "score": 167
+        "score": 250
       },
       {
-        "title": "Celld: Self-hosted, distributed Durable Objects",
-        "url": "https://github.com/denoland/celld",
+        "title": "Branchless Rust: Making a Filter 4x Faster by Removing an If",
+        "url": "https://www.greyblake.com/blog/branchless-rust/",
         "source": "Hacker News",
-        "score": 128
+        "score": 54
       },
       {
-        "title": "Exact, parallel 2D Delaunay triangulation for int32 coordinates",
-        "url": "https://github.com/morishuz/delaunay32",
+        "title": "Born Against, or why hobby programming communities are against LLM usage",
+        "url": "https://blog.fogus.me/llm/born-against.html",
         "source": "Hacker News",
-        "score": 21
+        "score": 169
       },
       {
-        "title": "GNU Hurd News 2026-Q2",
-        "url": "https://www.gnu.org/software/hurd/news/2026-q2.html",
+        "title": "Prime Agent: A self-improving RLM agent",
+        "url": "https://www.primeintellect.ai/blog/prime-agent",
         "source": "Hacker News",
-        "score": 112
+        "score": 131
       },
       {
-        "title": "Goodhart's Law Comes for Every Benchmark You Trust",
-        "url": "https://cacm.acm.org/blogcacm/goodharts-law-comes-for-every-benchmark-you-trust/",
+        "title": "Cloudflare OS: an open platform for agents, apps, and work",
+        "url": "https://blog.cloudflare.com/cloudflare-os/",
         "source": "Hacker News",
-        "score": 53
+        "score": 495
       },
       {
-        "title": "Launch HN: HyperProbe (YC S26) – Agents that do read-only debugging in prod",
-        "url": "https://www.hyperprobe.co",
+        "title": "Atlassian Rovo Exfiltrates Data, Bypassing Controls",
+        "url": "https://www.promptarmor.com/resources/atlassian-rovo-exfiltrates-data",
         "source": "Hacker News",
-        "score": 38
+        "score": 193
       }
     ],
     "ai": [
       {
+        "title": "Nashville uses eminent domain to block data center near zoo",
+        "url": "https://www.costar.com/article/970809918/nashville-council-approves-eminent-domain-action-to-halt-data-center-project",
+        "source": "Hacker News AI",
+        "score": 103
+      },
+      {
+        "title": "Governments are making a dangerous bet on the AI boom",
+        "url": "https://www.economist.com/leaders/2026/08/05/governments-are-making-a-dangerous-bet-on-the-ai-boom",
+        "source": "Hacker News AI",
+        "score": 19
+      },
+      {
         "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
         "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
         "source": "Hacker News AI",
-        "score": 419
+        "score": 539
+      },
+      {
+        "title": "LLMs won't break symmetric crypto",
+        "url": "https://www.bfswa.blog/p/llms-wont-break-symmetric-crypto",
+        "source": "Hacker News AI",
+        "score": 56
       },
       {
         "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
         "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
         "source": "Hacker News AI",
-        "score": 189
-      },
-      {
-        "title": "The Entropy of a Markov Chain",
-        "url": "https://chillphysicsenjoyer.substack.com/p/the-entropy-of-a-markov-chain",
-        "source": "Hacker News AI",
-        "score": 99
-      },
-      {
-        "title": "Sula: A Gemini protocol server written in Scryer Prolog",
-        "url": "https://sagredo.dev/projects/sula/",
-        "source": "Hacker News AI",
-        "score": 40
-      },
-      {
-        "title": "Painting with Gaussians",
-        "url": "https://yogthos.net/posts/2026-08-03-splat-painter.html",
-        "source": "Hacker News AI",
-        "score": 88
-      },
-      {
-        "title": "Meta Ran Ads That Contained AI-Generated Child Sexual Abuse Imagery",
-        "url": "https://www.wired.com/story/meta-ran-ads-that-contained-ai-generated-child-sexual-abuse-imagery/",
-        "source": "Hacker News AI",
-        "score": 222
-      },
-      {
-        "title": "Position: LLMs Can't Jump",
-        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DklU4737opt",
-        "source": "Hacker News AI",
-        "score": 233
-      },
-      {
-        "title": "See the Sun like never before with most detailed images yet",
-        "url": "https://www.bbc.com/news/articles/c36d4376nd2o",
-        "source": "Hacker News AI",
-        "score": 32
-      },
-      {
-        "title": "Proxmox VE now available for ARM64",
-        "url": "https://forum.proxmox.com/threads/proxmox-virtual-environment-now-available-for-64-bit-arm-arm64.185527/",
-        "source": "Hacker News AI",
-        "score": 40
+        "score": 250
       },
       {
         "title": "Born Against, or why hobby programming communities are against LLM usage",
         "url": "https://blog.fogus.me/llm/born-against.html",
         "source": "Hacker News AI",
-        "score": 115
+        "score": 169
+      },
+      {
+        "title": "Position: LLMs Can't Jump",
+        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DklU4737opt",
+        "source": "Hacker News AI",
+        "score": 253
       },
       {
         "title": "Sycophantic AI Decreases Prosocial Intentions and Promotes Dependence (2025)",
         "url": "https://arxiv.org/abs/2510.01395",
         "source": "Hacker News AI",
-        "score": 67
+        "score": 87
       },
       {
-        "title": "TIME Is Serving AI Bots a Different Website, with Ads Built In",
-        "url": "https://www.vincentschmalbach.com/time-serves-ai-bots-a-different-website/",
+        "title": "The Entropy of a Markov Chain",
+        "url": "https://chillphysicsenjoyer.substack.com/p/the-entropy-of-a-markov-chain",
         "source": "Hacker News AI",
-        "score": 227
+        "score": 113
       },
       {
-        "title": "A Fed official is asking whether AI is becoming 'too big to fail'",
-        "url": "https://thenextweb.com/news/a-fed-official-is-asking-whether-ai-is-becoming-too-big-to-fail",
+        "title": "Sula: A Gemini protocol server written in Scryer Prolog",
+        "url": "https://sagredo.dev/projects/sula/",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 46
       },
       {
-        "title": "There Will Come Soft Rains (1950) [pdf]",
-        "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
+        "title": "When online commenters detect my art as AI",
+        "url": "https://www.davidrevoy.com/article1164/when-online-commenters-detect-my-art-as-ai",
         "source": "Hacker News AI",
-        "score": 427
+        "score": 18
+      },
+      {
+        "title": "Why Erdős Problems Are Falling to AI",
+        "url": "https://www.quantamagazine.org/why-the-legendary-erdos-problems-are-falling-to-ai-20260803/",
+        "source": "Hacker News AI",
+        "score": 130
+      },
+      {
+        "title": "Painting with Gaussians",
+        "url": "https://yogthos.net/posts/2026-08-03-splat-painter.html",
+        "source": "Hacker News AI",
+        "score": 94
+      },
+      {
+        "title": "Proxmox VE now available for ARM64",
+        "url": "https://forum.proxmox.com/threads/proxmox-virtual-environment-now-available-for-64-bit-arm-arm64.185527/",
+        "source": "Hacker News AI",
+        "score": 56
+      },
+      {
+        "title": "See the Sun like never before with most detailed images yet",
+        "url": "https://www.bbc.com/news/articles/c36d4376nd2o",
+        "source": "Hacker News AI",
+        "score": 41
       }
     ],
     "news": [
       {
-        "title": "Iran says it has agreed Strait of Hormuz shipping route with Oman",
+        "title": "Iran says deal with Oman on Strait of Hormuz is in final stages",
         "url": "https://www.bbc.co.uk/news/articles/ckg9d3eyeggo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "After deadly Kyiv strike, Ukraine warns interceptor shortage is costing lives",
-        "url": "https://www.bbc.co.uk/news/articles/cyvlgq2gp2eo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Drone carrying explosives found at German airport, police say",
-        "url": "https://www.bbc.co.uk/news/articles/cyvlg4q48l3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Israel strikes south Lebanon after first evacuation warning in weeks",
-        "url": "https://www.bbc.co.uk/news/articles/c998711dyjvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -209,13 +200,28 @@
         "source": "BBC World"
       },
       {
-        "title": "Why some scientists are thrilled that a SpaceX rocket has crashed into the Moon",
-        "url": "https://www.bbc.co.uk/news/articles/c62q0xerzrno?at_medium=RSS&at_campaign=rss",
+        "title": "After deadly Kyiv strike, Ukraine warns interceptor shortage is costing lives",
+        "url": "https://www.bbc.co.uk/news/articles/cyvlgq2gp2eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Waste workers help winner find binned €1m lottery ticket in Italy",
-        "url": "https://www.bbc.co.uk/news/articles/c62qvll0z94o?at_medium=RSS&at_campaign=rss",
+        "title": "Banned from football at home, Afghan women's team reunite 8,000 miles away",
+        "url": "https://www.bbc.co.uk/news/articles/c8dnrpmgv4yo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Drone carrying explosives found at German airport, police say",
+        "url": "https://www.bbc.co.uk/news/articles/cyvlg4q48l3o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Meta says AI model accessed the internet and hacked another firm",
+        "url": "https://www.bbc.co.uk/news/articles/cx2kgdnyk2po?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Israel strikes south Lebanon after first evacuation warning in weeks",
+        "url": "https://www.bbc.co.uk/news/articles/c998711dyjvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -258,8 +264,28 @@
     ],
     "science": [
       {
+        "title": "Dirty air may trigger painful rheumatoid arthritis flares",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260805082452.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "THC medication made PTSD nightmares disappear for more than a third of patients",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260805082450.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "A colossal magma system has been hiding beneath Tuscany",
         "url": "https://www.sciencedaily.com/releases/2026/08/260804034645.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "567-million-year-old fossils rewrite the dawn of animal life",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260804034644.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Claude Fable 5 AI finds a tiny formula that topples an 87-year-old math conjecture",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260804034634.htm",
         "source": "Science Daily"
       },
       {
@@ -270,26 +296,6 @@
       {
         "title": "A solar eclipse and the Perseid meteor shower arrive on the same day",
         "url": "https://www.sciencedaily.com/releases/2026/08/260804034628.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Sitting up straight may improve your mood and decision-making",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260804034624.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover the brain cells that keep you motivated",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260804034622.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "80-million-year-old snake brain reveals a surprising evolutionary secret",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260804034619.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "This hydrogen turbine turns controlled explosions into electricity",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260803080919.htm",
         "source": "Science Daily"
       }
     ],
