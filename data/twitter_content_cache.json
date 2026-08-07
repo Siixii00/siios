@@ -1,7 +1,7 @@
 ﻿{
   "metadata": {
-    "last_updated": "2026-08-06T00:00:36.037939",
-    "total_items": 64
+    "last_updated": "2026-08-07T07:17:30.122699",
+    "total_items": 60
   },
   "content": {
     "tech": [
@@ -9,13 +9,19 @@
         "title": "Discovery Loop",
         "url": "https://www.discoveryloop.com/",
         "source": "Hacker News",
-        "score": 529
+        "score": 580
       },
       {
         "title": "Zed DeltaDB",
         "url": "https://zed.dev/deltadb",
         "source": "Hacker News",
         "score": 267
+      },
+      {
+        "title": "What Is a Product?",
+        "url": "https://roge.onwrite.app/what-is-a-product",
+        "source": "Hacker News",
+        "score": 14
       },
       {
         "title": "The title cards in Blade Runner are amazing",
@@ -110,6 +116,12 @@
         "score": 189
       },
       {
+        "title": "There Will Come Soft Rains (1950) [pdf]",
+        "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
+        "source": "Hacker News AI",
+        "score": 427
+      },
+      {
         "title": "The Entropy of a Markov Chain",
         "url": "https://chillphysicsenjoyer.substack.com/p/the-entropy-of-a-markov-chain",
         "source": "Hacker News AI",
@@ -174,12 +186,6 @@
         "url": "https://thenextweb.com/news/a-fed-official-is-asking-whether-ai-is-becoming-too-big-to-fail",
         "source": "Hacker News AI",
         "score": 16
-      },
-      {
-        "title": "There Will Come Soft Rains (1950) [pdf]",
-        "url": "https://users.wpi.edu/~zrbutzke/Docs/BradburyStories(1).pdf",
-        "source": "Hacker News AI",
-        "score": 427
       }
     ],
     "news": [
@@ -210,12 +216,12 @@
       },
       {
         "title": "Why some scientists are thrilled that a SpaceX rocket has crashed into the Moon",
-        "url": "https://www.bbc.co.uk/news/articles/c62q0xerzrno?at_medium=RSS&at_campaign=rss",
+        "url": "https://www.bbc.com/news/articles/c62q0xerzrno",
         "source": "BBC World"
       },
       {
         "title": "Waste workers help winner find binned €1m lottery ticket in Italy",
-        "url": "https://www.bbc.co.uk/news/articles/c62qvll0z94o?at_medium=RSS&at_campaign=rss",
+        "url": "https://www.bbc.com/news/articles/c62qvll0z94o",
         "source": "BBC World"
       }
     ],
@@ -223,6 +229,16 @@
       {
         "title": " The creator of Halloween and The Thing is releasing a 132-page dystopian horror comic paired with a 14-track synth metal album that rocks like it's 1986 ",
         "url": "https://www.creativebloq.com/art/the-creator-of-halloween-and-the-thing-is-releasing-a-132-page-dystopian-horror-comic-paired-with-a-14-track-synth-metal-album-that-rocks-like-its-1986",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Pixar co-founder's new AI role is reigniting animation's biggest debate ",
+        "url": "https://www.creativebloq.com/art/animation/pixar-co-founders-new-ai-role-is-reigniting-animations-biggest-debate",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Want to know which laptop you actually need for your major? We got you ",
+        "url": "https://www.creativebloq.com/tech/laptops/want-to-know-which-laptop-you-actually-need-for-your-major-we-got-you",
         "source": "Creative Bloq"
       },
       {
@@ -297,6 +313,16 @@
       {
         "title": "Halo 4 Still Holds Up As The Best Halo Game Ever, 14 Years Later",
         "url": "https://www.polygon.com/halo-4-best-halo-game/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Netflix Just Quietly Released the Best Steven Spielberg Sci-Fi Thriller That Spielberg Never Made",
+        "url": "https://www.polygon.com/the-last-house-review-steven-spielberg-movie/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Jon Bernthal's 121 Minute 10/10 Neo-Western Thriller Is Officially a Streaming Hit",
+        "url": "https://www.polygon.com/jon-bernthal-sicario-hbo-max-movies-streaming-hit-august-2026/",
         "source": "Polygon"
       },
       {
