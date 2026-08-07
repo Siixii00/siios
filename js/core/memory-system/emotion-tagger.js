@@ -96,7 +96,7 @@ export class EmotionTagger {
             ],
             negators: [
                 '不', '沒', '無', '非', '不是',
-                'not', 'no', 'never', 'none', 'don't', 'doesn't', 'didn't'
+                'not', 'no', 'never', 'none', "don't", "doesn't", "didn't"
             ]
         };
         
