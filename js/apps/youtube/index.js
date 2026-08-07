@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+ï»¿import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
@@ -51,12 +51,12 @@ function randomPick(list) {
 }
 
 function randomViews() {
-    const values = ['1.2¸U', '3.8¸U', '7.6¸U', '10.2¸U', '18.8¸U', '25.6¸U', '32¸U', '56¸U', '102¸U'];
+    const values = ['1.2è¬', '3.8è¬', '7.6è¬', '10.2è¬', '18.8è¬', '25.6è¬', '32è¬', '56è¬', '102è¬'];
     return randomPick(values);
 }
 
 function randomTime() {
-    const values = ['­è­è', '1 ¤p®É«e', '3 ¤p®É«e', '6 ¤p®É«e', '1 ¤Ñ«e', '2 ¤Ñ«e', '3 ¤Ñ«e', '1 ¶g«e'];
+    const values = ['å‰›å‰›', '1 å°æ™‚å‰', '3 å°æ™‚å‰', '6 å°æ™‚å‰', '1 å¤©å‰', '2 å¤©å‰', '3 å¤©å‰', '1 é€±å‰'];
     return randomPick(values);
 }
 
@@ -117,10 +117,10 @@ function renderFeed(container) {
         feedEl.innerHTML = `
             <div class='yt-empty-state'>
                 <span class='material-symbols-outlined'>play_disabled</span>
-                <div class='yt-empty-state-title'>©|µL¼v¤ù¤º®e</div>
-                <div class='yt-empty-state-desc'>ÂIÀ»¤U¤è«ö¶sÅı AI ¥Í¦¨²Å¦X¨¤¦â¿³½ìªº¼v¤ù</div>
+                <div class='yt-empty-state-title'>å°šç„¡å½±ç‰‡å…§å®¹</div>
+                <div class='yt-empty-state-desc'>é»æ“Šä¸‹æ–¹æŒ‰éˆ•è®“ AI ç”Ÿæˆç¬¦åˆè§’è‰²èˆˆè¶£çš„å½±ç‰‡</div>
                 <button class='yt-primary-btn' data-action='ai-generate'>
-                    <span class='material-symbols-outlined'>auto_awesome</span> AI ¥Í¦¨¼v¤ù
+                    <span class='material-symbols-outlined'>auto_awesome</span> AI ç”Ÿæˆå½±ç‰‡
                 </button>
             </div>
         `;
@@ -140,9 +140,9 @@ function renderFeed(container) {
                 <div class='yt-channel'></div>
                 <div>
                     <div class='yt-title'>${video.title}</div>
-                    <div class='yt-info'>${video.channel} ¡P ${video.views} ¡P ${video.time}</div>
+                    <div class='yt-info'>${video.channel} Â· ${video.views} Â· ${video.time}</div>
                 </div>
-                <button class='yt-more' type='button' aria-label='§ó¦h' data-action='video-more'>
+                <button class='yt-more' type='button' aria-label='æ›´å¤š' data-action='video-more'>
                     <span class='material-symbols-outlined'>more_vert</span>
                 </button>
             </div>
@@ -158,8 +158,8 @@ function renderCollections(container) {
         list.innerHTML = `
             <div class='yt-collection-empty'>
                 <span class='material-symbols-outlined'>folder_open</span>
-                <div>©|¥¼«Ø¥ß¦¬ÂÃ§¨</div>
-                <div style='font-size:12px;margin-top:8px;'>ÂIÀ»¥k¤W¨¤ + ·s¼W¦¬ÂÃ§¨</div>
+                <div>å°šæœªå»ºç«‹æ”¶è—å¤¾</div>
+                <div style='font-size:12px;margin-top:8px;'>é»æ“Šå³ä¸Šè§’ + æ–°å¢æ”¶è—å¤¾</div>
             </div>
         `;
         return;
@@ -168,9 +168,9 @@ function renderCollections(container) {
         <div class='yt-collection-item' data-collection-index='${index}'>
             <div>
                 <div class='yt-collection-name'>${col.name}</div>
-                <div class='yt-collection-count'>${col.videos.length} ³¡¼v¤ù</div>
+                <div class='yt-collection-count'>${col.videos.length} éƒ¨å½±ç‰‡</div>
             </div>
-            <button class='yt-collection-delete' data-action='delete-collection' data-index='${index}' aria-label='§R°£'>
+            <button class='yt-collection-delete' data-action='delete-collection' data-index='${index}' aria-label='åˆªé™¤'>
                 <span class='material-symbols-outlined'>delete</span>
             </button>
         </div>
@@ -190,7 +190,7 @@ function renderMeView(container) {
     
     if (meVideosEl) {
         if (myVideos.length === 0) {
-            meVideosEl.innerHTML = `<div style='color:var(--muted);font-size:12px;padding:20px;text-align:center;'>©|¥¼³Ğ«Ø¼v¤ù</div>`;
+            meVideosEl.innerHTML = `<div style='color:var(--muted);font-size:12px;padding:20px;text-align:center;'>å°šæœªå‰µå»ºå½±ç‰‡</div>`;
         } else {
             meVideosEl.innerHTML = myVideos.slice(0, 4).map(v => `
                 <div class='yt-me-video'>
@@ -269,22 +269,22 @@ function getCharLiveComment(char, video) {
 
 async function generateCharReaction(container, char, video) {
     if (!char || !video) {
-        return `${video?.title || '³o³¡¼v¤ù'}¬İ°_¨Ó¤£¿ù©O¡C`;
+        return `${video?.title || 'é€™éƒ¨å½±ç‰‡'}çœ‹èµ·ä¾†ä¸éŒ¯å‘¢ã€‚`;
     }
     
     const personality = (char?.personality || '').trim();
     const background = (char?.background || '').trim();
     
     if (!personality && !background) {
-        return `${video?.title || '³o³¡¼v¤ù'}¬İ°_¨Ó¤£¿ù©O¡C`;
+        return `${video?.title || 'é€™éƒ¨å½±ç‰‡'}çœ‹èµ·ä¾†ä¸éŒ¯å‘¢ã€‚`;
     }
     
-    const prompt = `§A¬O¨¤¦â¡u${char.name}¡v¡A§Aªº­Ó©Ê¬O¡G${personality}
-­I´º³]©w¡G${background}
+    const prompt = `ä½ æ˜¯è§’è‰²ã€Œ${char.name}ã€ï¼Œä½ çš„å€‹æ€§æ˜¯ï¼š${personality}
+èƒŒæ™¯è¨­å®šï¼š${background}
 
-§A¥¿¦bÆ[¬İ¤@³¡¼v¤ù¡G¡u${video.title}¡v
-½Ğ¥Î¤@¥y¸Ü¡]15-30¦r¡^ªí¹F§A¹ï³o³¡¼v¤ùªº¤ÏÀ³©Îµû½×¡A­n²Å¦X§Aªº­Ó©Ê¡C
-¥u»İ¿é¥X¤ÏÀ³¤å¦r¡A¤£­n¨ä¥L¤º®e¡C`;
+ä½ æ­£åœ¨è§€çœ‹ä¸€éƒ¨å½±ç‰‡ï¼šã€Œ${video.title}ã€
+è«‹ç”¨ä¸€å¥è©±ï¼ˆ15-30å­—ï¼‰è¡¨é”ä½ å°é€™éƒ¨å½±ç‰‡çš„åæ‡‰æˆ–è©•è«–ï¼Œè¦ç¬¦åˆä½ çš„å€‹æ€§ã€‚
+åªéœ€è¼¸å‡ºåæ‡‰æ–‡å­—ï¼Œä¸è¦å…¶ä»–å…§å®¹ã€‚`;
 
     const reaction = await generateLLMContent(prompt, 2, char.id);
     
@@ -293,33 +293,33 @@ async function generateCharReaction(container, char, video) {
     }
     
     const fallbacks = [
-        `¥H§Ú${personality.split(/[¡A,¡B¡C¡F;\s]+/)[0] || '³o¼Ë'}ªº­Ó©Ê¨Ó¬İ¡A${video.title}®¼¦³·N«äªº¡C`,
-        `³o³¡¼v¤ùÅı§Ú${personality.includes('¬¡¼â') ? '«Ü¿³¾Ä' : '«Ü¦³·PÄ±'}©O¡I`
+        `ä»¥æˆ‘${personality.split(/[ï¼Œ,ã€ã€‚ï¼›;\s]+/)[0] || 'é€™æ¨£'}çš„å€‹æ€§ä¾†çœ‹ï¼Œ${video.title}æŒºæœ‰æ„æ€çš„ã€‚`,
+        `é€™éƒ¨å½±ç‰‡è®“æˆ‘${personality.includes('æ´»æ½‘') ? 'å¾ˆèˆˆå¥®' : 'å¾ˆæœ‰æ„Ÿè¦º'}å‘¢ï¼`
     ];
     return fallbacks[Math.floor(Math.random() * fallbacks.length)];
 }
 
 async function generateCharLiveComment(container, char, video) {
     if (!char || !video) {
-        return '³o­Ó¼v¤ù¤£¿ù©O¡C';
+        return 'é€™å€‹å½±ç‰‡ä¸éŒ¯å‘¢ã€‚';
     }
     
     const personality = (char?.personality || '').trim();
     const background = (char?.background || '').trim();
     
     if (!personality && !background) {
-        return '³o­Ó¼v¤ù¤£¿ù©O¡C';
+        return 'é€™å€‹å½±ç‰‡ä¸éŒ¯å‘¢ã€‚';
     }
     
-    const videoKeywords = ['µe­±', '¤º®e', '­µ¼Ö', '¼@±¡', '¸`«µ', '­·®æ', 'ª^³ò', '¥DÃD', '¸Ñ»¡', '§e²{'];
+    const videoKeywords = ['ç•«é¢', 'å…§å®¹', 'éŸ³æ¨‚', 'åŠ‡æƒ…', 'ç¯€å¥', 'é¢¨æ ¼', 'æ°›åœ', 'ä¸»é¡Œ', 'è§£èªª', 'å‘ˆç¾'];
     const randomKeyword = videoKeywords[Math.floor(Math.random() * videoKeywords.length)];
     
-    const prompt = `§A¬O¨¤¦â¡u${char.name}¡v¡A­Ó©Ê¡G${personality}
-­I´º¡G${background}
+    const prompt = `ä½ æ˜¯è§’è‰²ã€Œ${char.name}ã€ï¼Œå€‹æ€§ï¼š${personality}
+èƒŒæ™¯ï¼š${background}
 
-§A¥¿¦bÆ[¬İ¼v¤ù¡u${video.title}¡v¡C
-°w¹ï¼v¤ùªº¡u${randomKeyword}¡v¡A¥Î¤@¥y¸Ü¡]10-20¦r¡^µoªí§Y®Éµû½×¡A­n²Å¦X§Aªº­Ó©Ê¡C
-¥u¿é¥Xµû½×¤å¦r¡C`;
+ä½ æ­£åœ¨è§€çœ‹å½±ç‰‡ã€Œ${video.title}ã€ã€‚
+é‡å°å½±ç‰‡çš„ã€Œ${randomKeyword}ã€ï¼Œç”¨ä¸€å¥è©±ï¼ˆ10-20å­—ï¼‰ç™¼è¡¨å³æ™‚è©•è«–ï¼Œè¦ç¬¦åˆä½ çš„å€‹æ€§ã€‚
+åªè¼¸å‡ºè©•è«–æ–‡å­—ã€‚`;
 
     const comment = await generateLLMContent(prompt, 2, char.id);
     
@@ -327,35 +327,35 @@ async function generateCharLiveComment(container, char, video) {
         return comment;
     }
     
-    const reactions = ['¤£¿ù', '¦³½ì', '¯S§O', 'ºë±m', '§l¤Ş¤H', '¦³·N«ä', '«Ü´Î'];
+    const reactions = ['ä¸éŒ¯', 'æœ‰è¶£', 'ç‰¹åˆ¥', 'ç²¾å½©', 'å¸å¼•äºº', 'æœ‰æ„æ€', 'å¾ˆæ£’'];
     const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
-    return `³o${randomKeyword}${randomReaction}©O¡C`;
+    return `é€™${randomKeyword}${randomReaction}å‘¢ã€‚`;
 }
 
 async function generateVideoTitle(char, tag) {
     if (!char) {
-        return `AI ¥Í¦¨¼v¤ù #${Date.now() % 10000}`;
+        return `AI ç”Ÿæˆå½±ç‰‡ #${Date.now() % 10000}`;
     }
     
     const personality = (char?.personality || '').trim();
     const interests = (char?.interests || char?.background || '').trim();
     
     const tagNames = {
-        'live': 'ª½¼½',
-        'music': '­µ¼Ö',
-        'game': '¹CÀ¸',
-        'tech': '¬ì§Ş',
+        'live': 'ç›´æ’­',
+        'music': 'éŸ³æ¨‚',
+        'game': 'éŠæˆ²',
+        'tech': 'ç§‘æŠ€',
         'diy': 'DIY'
     };
-    const categoryName = tagNames[tag] || 'ºî¦X';
+    const categoryName = tagNames[tag] || 'ç¶œåˆ';
     
-    const prompt = `³Ğ«Ø¤@­Ó§l¤Ş¤Hªº YouTube ¼v¤ù¼ĞÃD¡]15-25¦r¡^¡C
+    const prompt = `å‰µå»ºä¸€å€‹å¸å¼•äººçš„ YouTube å½±ç‰‡æ¨™é¡Œï¼ˆ15-25å­—ï¼‰ã€‚
 
-¼v¤ùÃş§O¡G${categoryName}
-¥Ø¼ĞÆ[²³­Ó©Ê¡G${personality || '¤@¯ëÆ[²³'}
-¿³½ì¤è¦V¡G${interests || '¦h¤¸¤º®e'}
+å½±ç‰‡é¡åˆ¥ï¼š${categoryName}
+ç›®æ¨™è§€çœ¾å€‹æ€§ï¼š${personality || 'ä¸€èˆ¬è§€çœ¾'}
+èˆˆè¶£æ–¹å‘ï¼š${interests || 'å¤šå…ƒå…§å®¹'}
 
-¥u¿é¥X¼ĞÃD¤å¦r¡A¤£­n¤Ş¸¹©Î¨ä¥L²Å¸¹¡C`;
+åªè¼¸å‡ºæ¨™é¡Œæ–‡å­—ï¼Œä¸è¦å¼•è™Ÿæˆ–å…¶ä»–ç¬¦è™Ÿã€‚`;
 
     const title = await generateLLMContent(prompt, 2, char.id);
     
@@ -363,7 +363,7 @@ async function generateVideoTitle(char, tag) {
         return title;
     }
     
-    return `¡i${categoryName}¡j${personality ? '¬°§A±ÀÂËªººë±m¤º®e' : '¼öªù¼v¤ù'} #${Math.floor(Math.random() * 10000)}`;
+    return `ã€${categoryName}ã€‘${personality ? 'ç‚ºä½ æ¨è–¦çš„ç²¾å½©å…§å®¹' : 'ç†±é–€å½±ç‰‡'} #${Math.floor(Math.random() * 10000)}`;
 }
 
 async function generateVideoDescription(char, title) {
@@ -373,12 +373,12 @@ async function generateVideoDescription(char, title) {
     
     const personality = (char?.personality || '').trim();
     
-    const prompt = `¬° YouTube ¼v¤ù¡u${title}¡v¼g¤@¬qÂ²µu´y­z¡]30-60¦r¡^¡C
+    const prompt = `ç‚º YouTube å½±ç‰‡ã€Œ${title}ã€å¯«ä¸€æ®µç°¡çŸ­æè¿°ï¼ˆ30-60å­—ï¼‰ã€‚
 
-¤W¶ÇªÌ­Ó©Ê¡G${personality || '³Ğ§@ªÌ'}
-­·®æ¡G»´ÃP¡B§l¤Ş¤H
+ä¸Šå‚³è€…å€‹æ€§ï¼š${personality || 'å‰µä½œè€…'}
+é¢¨æ ¼ï¼šè¼•é¬†ã€å¸å¼•äºº
 
-¥u¿é¥X´y­z¤å¦r¡C`;
+åªè¼¸å‡ºæè¿°æ–‡å­—ã€‚`;
 
     const desc = await generateLLMContent(prompt, 2, char.id);
     
@@ -394,29 +394,29 @@ async function generateAdContent(char) {
     
     if (!settings.api_url || !settings.api_key) {
         return {
-            banner: '?? ºë±m¤º®e±ÀÂË¡I',
-            popup: { icon: '??', title: '¯S§O±ÀÂË', text: '±´¯Á§ó¦hºë±m¤º®e¡I' }
+            banner: 'ğŸ”¥ ç²¾å½©å…§å®¹æ¨è–¦ï¼',
+            popup: { icon: 'ğŸ', title: 'ç‰¹åˆ¥æ¨è–¦', text: 'æ¢ç´¢æ›´å¤šç²¾å½©å…§å®¹ï¼' }
         };
     }
     
-    const personality = (char?.personality || '').trim() || '¤@¯ë¥Î¤á';
+    const personality = (char?.personality || '').trim() || 'ä¸€èˆ¬ç”¨æˆ¶';
     
-    const prompt = `¬°¤@­Ó YouTube ¼v¤ù«eªº¼s§i¥Í¦¨¤º®e¡C
+    const prompt = `ç‚ºä¸€å€‹ YouTube å½±ç‰‡å‰çš„å»£å‘Šç”Ÿæˆå…§å®¹ã€‚
 
-¥Ø¼Ğ¥Î¤á­Ó©Ê¡G${personality}
+ç›®æ¨™ç”¨æˆ¶å€‹æ€§ï¼š${personality}
 
-½Ğ¥Í¦¨¨â­Ó³¡¤À¡G
-1. ¤@¥yÂ²µuªº¾î´T¼s§i¤å®×¡]10-15¦r¡A§l¤Şª`·N¡^
-2. ¤@­Ó¼uµ¡¼s§i¤º®e¡]JSON®æ¦¡¡^¡G
+è«‹ç”Ÿæˆå…©å€‹éƒ¨åˆ†ï¼š
+1. ä¸€å¥ç°¡çŸ­çš„æ©«å¹…å»£å‘Šæ–‡æ¡ˆï¼ˆ10-15å­—ï¼Œå¸å¼•æ³¨æ„ï¼‰
+2. ä¸€å€‹å½ˆçª—å»£å‘Šå…§å®¹ï¼ˆJSONæ ¼å¼ï¼‰ï¼š
 {
-  'icon': '¤@­Óemoji',
-  'title': '¼uµ¡¼ĞÃD¡]4-6¦r¡^',
-  'text': '¼uµ¡¤º®e¡]15-25¦r¡^'
+  'icon': 'ä¸€å€‹emoji',
+  'title': 'å½ˆçª—æ¨™é¡Œï¼ˆ4-6å­—ï¼‰',
+  'text': 'å½ˆçª—å…§å®¹ï¼ˆ15-25å­—ï¼‰'
 }
 
-¥Î¥H¤U®æ¦¡¿é¥X¡G
-BANNER: ¾î´T¤å®×
-POPUP: JSON¤º®e`;
+ç”¨ä»¥ä¸‹æ ¼å¼è¼¸å‡ºï¼š
+BANNER: æ©«å¹…æ–‡æ¡ˆ
+POPUP: JSONå…§å®¹`;
 
     const content = await generateLLMContent(prompt, 2, char?.id);
     
@@ -424,8 +424,8 @@ POPUP: JSON¤º®e`;
         const bannerMatch = content.match(/BANNER:\s*(.+)/);
         const popupMatch = content.match(/POPUP:\s*(\{[\s\S]+\})/);
         
-        let banner = '?? ºë±m¤º®e±ÀÂË¡I';
-        let popup = { icon: '??', title: '¯S§O±ÀÂË', text: '±´¯Á§ó¦hºë±m¤º®e¡I' };
+        let banner = 'ğŸ”¥ ç²¾å½©å…§å®¹æ¨è–¦ï¼';
+        let popup = { icon: 'ğŸ', title: 'ç‰¹åˆ¥æ¨è–¦', text: 'æ¢ç´¢æ›´å¤šç²¾å½©å…§å®¹ï¼' };
         
         if (bannerMatch && bannerMatch[1]) {
             banner = bannerMatch[1].trim();
@@ -442,8 +442,8 @@ POPUP: JSON¤º®e`;
     }
     
     return {
-        banner: '?? ºë±m¤º®e±ÀÂË¡I',
-        popup: { icon: '??', title: '¯S§O±ÀÂË', text: '±´¯Á§ó¦hºë±m¤º®e¡I' }
+        banner: 'ğŸ”¥ ç²¾å½©å…§å®¹æ¨è–¦ï¼',
+        popup: { icon: 'ğŸ', title: 'ç‰¹åˆ¥æ¨è–¦', text: 'æ¢ç´¢æ›´å¤šç²¾å½©å…§å®¹ï¼' }
     };
 }
 
@@ -451,15 +451,15 @@ function calculateCommentInterval(char) {
     const personality = (char?.personality || '').toLowerCase();
     let baseInterval = 12000;
     
-    if (personality.includes('¬¡¼â') || personality.includes('½Õ¥Ö') || personality.includes('¶}®Ô') || personality.includes('¼ö±¡')) {
+    if (personality.includes('æ´»æ½‘') || personality.includes('èª¿çš®') || personality.includes('é–‹æœ—') || personality.includes('ç†±æƒ…')) {
         baseInterval = 8000;
-    } else if (personality.includes('°ª§N') || personality.includes('§N²H') || personality.includes('»Å') || personality.includes('§NÀR')) {
+    } else if (personality.includes('é«˜å†·') || personality.includes('å†·æ·¡') || personality.includes('é…·') || personality.includes('å†·éœ')) {
         baseInterval = 20000;
-    } else if (personality.includes('¯f¼b') || personality.includes('¦û¦³') || personality.includes('¶ú§ª') || personality.includes('¸¡¶Â')) {
+    } else if (personality.includes('ç—…å¬Œ') || personality.includes('ä½”æœ‰') || personality.includes('å«‰å¦’') || personality.includes('è…¹é»‘')) {
         baseInterval = 10000;
-    } else if (personality.includes('·Å¬X') || personality.includes('Åé¶K') || personality.includes('µ½¨}')) {
+    } else if (personality.includes('æº«æŸ”') || personality.includes('é«”è²¼') || personality.includes('å–„è‰¯')) {
         baseInterval = 12000;
-    } else if (personality.includes('¿E°Ê') || personality.includes('¼ö¦å')) {
+    } else if (personality.includes('æ¿€å‹•') || personality.includes('ç†±è¡€')) {
         baseInterval = 7000;
     }
     
@@ -496,7 +496,7 @@ function startCharCompanion(container, char, video) {
             avatar.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
         }
     }
-    if (nameEl) nameEl.textContent = char.name || '¨¤¦â';
+    if (nameEl) nameEl.textContent = char.name || 'è§’è‰²';
     
     companion.removeAttribute('hidden');
     
@@ -605,7 +605,7 @@ function showAdPopup(container, popupContent = null) {
     const existingPopup = container.querySelector('.yt-ad-popup');
     if (existingPopup) return;
     
-    const msg = popupContent || { icon: '??', title: '¯S§O±ÀÂË', text: '±´¯Á§ó¦hºë±m¤º®e¡I' };
+    const msg = popupContent || { icon: 'ğŸ', title: 'ç‰¹åˆ¥æ¨è–¦', text: 'æ¢ç´¢æ›´å¤šç²¾å½©å…§å®¹ï¼' };
     const popup = createElement('div', 'yt-ad-popup');
     popup.innerHTML = `
         <div class='yt-ad-popup-card'>
@@ -613,8 +613,8 @@ function showAdPopup(container, popupContent = null) {
             <div class='yt-ad-popup-title'>${msg.title}</div>
             <div class='yt-ad-popup-text'>${msg.text}</div>
             <div class='yt-ad-popup-actions'>
-                <button class='yt-ad-popup-btn primary' data-action='ad-continue'>Ä~ÄòÆ[¬İ</button>
-                <button class='yt-ad-popup-btn secondary' data-action='ad-learn-more'>¤F¸Ñ§ó¦h</button>
+                <button class='yt-ad-popup-btn primary' data-action='ad-continue'>ç¹¼çºŒè§€çœ‹</button>
+                <button class='yt-ad-popup-btn secondary' data-action='ad-learn-more'>äº†è§£æ›´å¤š</button>
             </div>
         </div>
     `;
@@ -633,16 +633,16 @@ function updateCharWatchUI(container, char, video) {
     const avatarEl = container.querySelector('.yt-char-watch-avatar');
     
     if (char) {
-        if (nameEl) nameEl.textContent = char.name || '¨¤¦â';
-        if (statusEl) statusEl.textContent = `¥¿¦bÆ[¬İ¡u${video?.title || '¼v¤ù'}¡v`;
+        if (nameEl) nameEl.textContent = char.name || 'è§’è‰²';
+        if (statusEl) statusEl.textContent = `æ­£åœ¨è§€çœ‹ã€Œ${video?.title || 'å½±ç‰‡'}ã€`;
         if (avatarEl && char.avatar) {
             avatarEl.style.backgroundImage = `url('${char.avatar}')`;
             avatarEl.style.backgroundSize = 'cover';
             avatarEl.style.backgroundPosition = 'center';
         }
     } else {
-        if (nameEl) nameEl.textContent = '¿ï¾Ü¨¤¦â';
-        if (statusEl) statusEl.textContent = 'ÂIÀ»¤W¤è¿ï¾Ü¨¤¦â¤@°_Æ[¬İ';
+        if (nameEl) nameEl.textContent = 'é¸æ“‡è§’è‰²';
+        if (statusEl) statusEl.textContent = 'é»æ“Šä¸Šæ–¹é¸æ“‡è§’è‰²ä¸€èµ·è§€çœ‹';
         if (avatarEl) avatarEl.style.backgroundImage = '';
     }
 }
@@ -683,7 +683,7 @@ function renderCharWatchHistory(container) {
     if (!list) return;
     
     if (charWatchHistory.length === 0) {
-        list.innerHTML = '`<div class=`'`yt-char-empty`'`>©|µLÆ[¬İ¬ö¿ı</div>`';
+        list.innerHTML = '<div class='yt-char-empty'>å°šç„¡è§€çœ‹ç´€éŒ„</div>';
         return;
     }
     
@@ -711,7 +711,7 @@ async function openPlayerPage(container, video) {
     const playerFrame = container.querySelector('#yt-player-video iframe');
     
     if (playerTitleMain) playerTitleMain.textContent = video.title;
-    if (playerSub) playerSub.textContent = `${video.views} ¡P ${video.time}`;
+    if (playerSub) playerSub.textContent = `${video.views} Â· ${video.time}`;
     if (playerChannelName) playerChannelName.textContent = video.channel;
     if (playerDesc) playerDesc.textContent = video.title;
     
@@ -774,7 +774,7 @@ function openAddModal(container) {
     if (addThumbPreview) {
         addThumbPreview.style.backgroundImage = '';
         addThumbPreview.classList.remove('has-image');
-        addThumbPreview.innerHTML = '`<span class=`'`material-symbols-outlined`'`>image</span><span>ÂIÀ»¤W¶Ç«Ê­±</span>`';
+        addThumbPreview.innerHTML = '<span class='material-symbols-outlined'>image</span><span>é»æ“Šä¸Šå‚³å°é¢</span>';
     }
     if (addTitleInput) addTitleInput.focus();
 }
@@ -789,7 +789,7 @@ function handleThumbUpload(container, event) {
     if (!file) return;
     
     if (!file.type.startsWith('image/')) {
-        createToast('½Ğ¿ï¾Ü¹Ï¤ùÀÉ®×', 'error');
+        createToast('è«‹é¸æ“‡åœ–ç‰‡æª”æ¡ˆ', 'error');
         return;
     }
     
@@ -811,16 +811,16 @@ function addVideo(container) {
     const addUrlInput = container.querySelector('#add-video-url');
     const addTagSelect = container.querySelector('#add-video-tag');
     
-    const title = addTitleInput?.value?.trim() || '§Úªº¼v¤ù';
+    const title = addTitleInput?.value?.trim() || 'æˆ‘çš„å½±ç‰‡';
     const url = addUrlInput?.value?.trim() || '';
     const tag = addTagSelect?.value || 'all';
     
     const newVideo = {
         id: `vid_${Date.now()}_${Math.random().toString(36).slice(2, 6)}`,
         title,
-        channel: '§ÚªºÀW¹D',
-        views: '·s¤W¬[',
-        time: '­è­è',
+        channel: 'æˆ‘çš„é »é“',
+        views: 'æ–°ä¸Šæ¶',
+        time: 'å‰›å‰›',
         duration: randomDuration(),
         tag: tag === 'all' ? randomPick(['live', 'music', 'game', 'tech', 'diy']) : tag,
         url,
@@ -853,7 +853,7 @@ function closeCollectionModal(container) {
 
 function createCollection(container) {
     const collectionNameInput = container.querySelector('#collection-name');
-    const name = collectionNameInput?.value?.trim() || '§Úªº¦¬ÂÃ';
+    const name = collectionNameInput?.value?.trim() || 'æˆ‘çš„æ”¶è—';
     
     const newCollection = {
         id: `col_${Date.now()}`,
@@ -940,7 +940,7 @@ function showView(container, viewName) {
 
 async function generateAIVideos(container) {
     if (isGeneratingVideos) {
-        createToast('¥¿¦b¥Í¦¨¤¤¡A½Ğµy­Ô...', 'info');
+        createToast('æ­£åœ¨ç”Ÿæˆä¸­ï¼Œè«‹ç¨å€™...', 'info');
         return;
     }
     
@@ -961,7 +961,7 @@ async function generateAIVideos(container) {
             videos.push({
                 title,
                 description: desc,
-                channel: selectedChar ? `${selectedChar.name} ªº±ÀÂË` : 'AI Studio',
+                channel: selectedChar ? `${selectedChar.name} çš„æ¨è–¦` : 'AI Studio',
                 views: randomViews(),
                 time: randomTime(),
                 duration: randomDuration(),
@@ -983,10 +983,10 @@ async function generateAIVideos(container) {
         if (videos.length > 0) {
             renderFeed(container);
             saveAllData();
-            createToast(`¤w¥Í¦¨ ${videos.length} ³¡¼v¤ù`, 'success');
+            createToast(`å·²ç”Ÿæˆ ${videos.length} éƒ¨å½±ç‰‡`, 'success');
         }
     } catch (err) {
-        createToast(`¥Í¦¨¥¢±Ñ: ${err.message}`, 'error');
+        createToast(`ç”Ÿæˆå¤±æ•—: ${err.message}`, 'error');
     } finally {
         isGeneratingVideos = false;
     }
@@ -1003,7 +1003,7 @@ function resetAIVideoGenModal(container) {
     const startBtn = container.querySelector('#yt-start-video-gen-btn');
     if (startBtn) {
         startBtn.disabled = false;
-        startBtn.innerHTML = '`<span class=`'`material-symbols-outlined`'`>auto_awesome</span> ¶}©l¥Í¦¨`';
+        startBtn.innerHTML = '<span class='material-symbols-outlined'>auto_awesome</span> é–‹å§‹ç”Ÿæˆ';
     }
     
     aiVideoGenState.isGenerating = false;
@@ -1026,7 +1026,7 @@ async function startYTAIVideoGeneration(container) {
     const prompt = promptInput?.value?.trim();
     
     if (!prompt) {
-        createToast('½Ğ¿é¤J¼v¤ù´y­z', 'error');
+        createToast('è«‹è¼¸å…¥å½±ç‰‡æè¿°', 'error');
         return;
     }
     
@@ -1038,7 +1038,7 @@ async function startYTAIVideoGeneration(container) {
     const startBtn = container.querySelector('#yt-start-video-gen-btn');
     if (startBtn) {
         startBtn.disabled = true;
-        startBtn.innerHTML = '`<span class=`'`material-symbols-outlined`'`>progress_activity</span> ¥Í¦¨¤¤...`';
+        startBtn.innerHTML = '<span class='material-symbols-outlined'>progress_activity</span> ç”Ÿæˆä¸­...';
     }
     
     container.querySelector('.yt-ai-video-gen-status')?.removeAttribute('hidden');
@@ -1056,9 +1056,9 @@ async function startYTAIVideoGeneration(container) {
         id: `ai-vid-${Date.now()}`,
         title,
         description: desc,
-        channel: selectedChar ? `${selectedChar.name} ªº³Ğ§@` : 'AI Studio',
+        channel: selectedChar ? `${selectedChar.name} çš„å‰µä½œ` : 'AI Studio',
         views: randomViews(),
-        time: '­è­è',
+        time: 'å‰›å‰›',
         duration: '0:02',
         tag: currentChip || 'all',
         url: '',
@@ -1072,12 +1072,12 @@ async function startYTAIVideoGeneration(container) {
     renderFeed(container);
     saveAllData();
     closeAIVideoGenModal(container);
-    createToast('¼v¤ù¤w¥Í¦¨¨Ã¥[¤J¼v¤ù®w', 'success');
+    createToast('å½±ç‰‡å·²ç”Ÿæˆä¸¦åŠ å…¥å½±ç‰‡åº«', 'success');
 }
 
 function addYTGeneratedVideoToFeed(container) {
     if (!aiVideoGenState.generatedPrompt) {
-        createToast('¨S¦³¥i¥[¤Jªº¼v¤ù', 'error');
+        createToast('æ²’æœ‰å¯åŠ å…¥çš„å½±ç‰‡', 'error');
         return;
     }
     
@@ -1086,7 +1086,7 @@ function addYTGeneratedVideoToFeed(container) {
         title: aiVideoGenState.generatedPrompt,
         channel: 'AI Studio',
         views: randomViews(),
-        time: '­è­è',
+        time: 'å‰›å‰›',
         duration: '0:02',
         tag: currentChip || 'all',
         url: '',
@@ -1100,7 +1100,7 @@ function addYTGeneratedVideoToFeed(container) {
     renderFeed(container);
     saveAllData();
     closeAIVideoGenModal(container);
-    createToast('¼v¤ù¤w¥[¤J¼v¤ù®w', 'success');
+    createToast('å½±ç‰‡å·²åŠ å…¥å½±ç‰‡åº«', 'success');
 }
 
 async function renderYouTube(params) {
@@ -1117,10 +1117,10 @@ async function renderYouTube(params) {
                 <span class='yt-text'>YouTube</span>
             </div>
             <div class='yt-actions'>
-                <button class='yt-icon' data-action='ai-video-gen' title='AI ¼v¤ù¥Í¦¨'>
+                <button class='yt-icon' data-action='ai-video-gen' title='AI å½±ç‰‡ç”Ÿæˆ'>
                     <span class='material-symbols-outlined'>auto_awesome</span>
                 </button>
-                <button class='yt-icon' data-action='open-char-view' title='¨¤¦âµø¨¤'>
+                <button class='yt-icon' data-action='open-char-view' title='è§’è‰²è¦–è§’'>
                     <span class='material-symbols-outlined'>person</span>
                 </button>
             </div>
@@ -1129,11 +1129,11 @@ async function renderYouTube(params) {
         <section class='yt-main'>
             <div class='yt-chips'>
                 <select class='yt-filter-select' id='yt-filter-select'>
-                    <option value='all'>¥ş³¡</option>
-                    <option value='live'>ª½¼½</option>
-                    <option value='music'>­µ¼Ö</option>
-                    <option value='game'>¹CÀ¸</option>
-                    <option value='tech'>¬ì§Ş</option>
+                    <option value='all'>å…¨éƒ¨</option>
+                    <option value='live'>ç›´æ’­</option>
+                    <option value='music'>éŸ³æ¨‚</option>
+                    <option value='game'>éŠæˆ²</option>
+                    <option value='tech'>ç§‘æŠ€</option>
                     <option value='diy'>DIY</option>
                 </select>
             </div>
@@ -1145,7 +1145,7 @@ async function renderYouTube(params) {
                 <button class='yt-icon' data-action='close-collections'>
                     <span class='material-symbols-outlined'>chevron_left</span>
                 </button>
-                <div class='yt-collections-title'>¦¬ÂÃ§¨</div>
+                <div class='yt-collections-title'>æ”¶è—å¤¾</div>
                 <button class='yt-icon' data-action='add-collection'>
                     <span class='material-symbols-outlined'>add</span>
                 </button>
@@ -1158,7 +1158,7 @@ async function renderYouTube(params) {
                 <button class='yt-icon' data-action='close-me'>
                     <span class='material-symbols-outlined'>chevron_left</span>
                 </button>
-                <div class='yt-me-title'>§ÚªºÀW¹D</div>
+                <div class='yt-me-title'>æˆ‘çš„é »é“</div>
                 <button class='yt-icon'><span class='material-symbols-outlined'>settings</span></button>
             </header>
             <div class='yt-me-header'>
@@ -1169,12 +1169,12 @@ async function renderYouTube(params) {
                 </div>
             </div>
             <div class='yt-me-stats'>
-                <div><span>${myVideos.length}</span><small>¼v¤ù</small></div>
-                <div><span>${likedVideos.length}</span><small>³ßÅw</small></div>
-                <div><span>${currentCollections.length}</span><small>¦¬ÂÃ</small></div>
+                <div><span>${myVideos.length}</span><small>å½±ç‰‡</small></div>
+                <div><span>${likedVideos.length}</span><small>å–œæ­¡</small></div>
+                <div><span>${currentCollections.length}</span><small>æ”¶è—</small></div>
             </div>
             <div class='yt-me-card'>
-                <div class='yt-me-card-title'>§Úªº¼v¤ù</div>
+                <div class='yt-me-card-title'>æˆ‘çš„å½±ç‰‡</div>
                 <div class='yt-me-videos'></div>
             </div>
         </section>
@@ -1184,7 +1184,7 @@ async function renderYouTube(params) {
                 <button class='yt-icon' data-action='close-player'>
                     <span class='material-symbols-outlined'>chevron_left</span>
                 </button>
-                <div class='yt-player-title'>¼½©ñ¼v¤ù</div>
+                <div class='yt-player-title'>æ’­æ”¾å½±ç‰‡</div>
                 <button class='yt-icon'><span class='material-symbols-outlined'>more_vert</span></button>
             </header>
             <div class='yt-player-stage'>
@@ -1193,7 +1193,7 @@ async function renderYouTube(params) {
                 </div>
                 <div class='yt-char-companion' hidden>
                     <div class='yt-char-companion-avatar'></div>
-                    <span class='yt-char-companion-name'>¨¤¦â</span>
+                    <span class='yt-char-companion-name'>è§’è‰²</span>
                     <button class='yt-char-companion-close' data-action='remove-companion'>
                         <span class='material-symbols-outlined'>close</span>
                     </button>
@@ -1207,13 +1207,13 @@ async function renderYouTube(params) {
                     <div class='yt-ad-video'>
                         <div class='yt-ad-placeholder'>
                             <span class='material-symbols-outlined' style='font-size:64px;'>play_circle</span>
-                            <span>¼s§i¼½©ñ¤¤</span>
+                            <span>å»£å‘Šæ’­æ”¾ä¸­</span>
                         </div>
                     </div>
                     <div class='yt-ad-info'>
-                        <span class='yt-ad-skip'>¥i¸õ¹L¼s§i <span class='yt-ad-countdown'>5</span></span>
+                        <span class='yt-ad-skip'>å¯è·³éå»£å‘Š <span class='yt-ad-countdown'>5</span></span>
                         <button class='yt-ad-skip-btn' hidden data-action='skip-ad'>
-                            <span class='material-symbols-outlined'>skip_next</span> ²¤¹L
+                            <span class='material-symbols-outlined'>skip_next</span> ç•¥é
                         </button>
                     </div>
                     <div class='yt-ad-progress'>
@@ -1222,8 +1222,8 @@ async function renderYouTube(params) {
                 </div>
                 <div class='yt-ad-banner' hidden>
                     <div class='yt-ad-banner-content'>
-                        <span class='yt-ad-banner-text'>­­®ÉÀu´f¡I</span>
-                        <button class='yt-ad-banner-btn' data-action='click-ad'>¤F¸Ñ¸Ô±¡</button>
+                        <span class='yt-ad-banner-text'>é™æ™‚å„ªæƒ ï¼</span>
+                        <button class='yt-ad-banner-btn' data-action='click-ad'>äº†è§£è©³æƒ…</button>
                     </div>
                     <button class='yt-ad-banner-close' data-action='close-ad-banner'>
                         <span class='material-symbols-outlined'>close</span>
@@ -1238,19 +1238,19 @@ async function renderYouTube(params) {
                 <div class='yt-player-actions'>
                     <button class='yt-action-btn' data-action='like-video'>
                         <span class='material-symbols-outlined'>thumb_up</span>
-                        <span>³ßÅw</span>
+                        <span>å–œæ­¡</span>
                     </button>
                     <button class='yt-action-btn' data-action='save-video'>
                         <span class='material-symbols-outlined'>bookmark</span>
-                        <span>Àx¦s</span>
+                        <span>å„²å­˜</span>
                     </button>
                     <button class='yt-action-btn' data-action='share-video'>
                         <span class='material-symbols-outlined'>share</span>
-                        <span>¤À¨É</span>
+                        <span>åˆ†äº«</span>
                     </button>
                     <button class='yt-action-btn'>
                         <span class='material-symbols-outlined'>download</span>
-                        <span>¤U¸ü</span>
+                        <span>ä¸‹è¼‰</span>
                     </button>
                 </div>
             </div>
@@ -1258,11 +1258,11 @@ async function renderYouTube(params) {
                 <div class='yt-char-watch-header'>
                     <div class='yt-char-watch-avatar'></div>
                     <div class='yt-char-watch-info'>
-                        <div class='yt-char-watch-name'>¿ï¾Ü¨¤¦â</div>
-                        <div class='yt-char-watch-status'>ÂIÀ»¤W¤è¿ï¾Ü¨¤¦â¤@°_Æ[¬İ</div>
+                        <div class='yt-char-watch-name'>é¸æ“‡è§’è‰²</div>
+                        <div class='yt-char-watch-status'>é»æ“Šä¸Šæ–¹é¸æ“‡è§’è‰²ä¸€èµ·è§€çœ‹</div>
                     </div>
                     <select id='yt-char-watch-select'>
-                        <option value=''>¿ï¾Ü¨¤¦â</option>
+                        <option value=''>é¸æ“‡è§’è‰²</option>
                         ${characters.map(c => `<option value='${c.id}'>${c.name}</option>`).join('')}
                     </select>
                 </div>
@@ -1272,10 +1272,10 @@ async function renderYouTube(params) {
                 </div>
                 <div class='yt-char-watch-actions'>
                     <button class='yt-ghost-btn' data-action='char-react'>
-                        <span class='material-symbols-outlined'>chat</span> ¨¤¦â¦^À³
+                        <span class='material-symbols-outlined'>chat</span> è§’è‰²å›æ‡‰
                     </button>
                     <button class='yt-ghost-btn' data-action='char-watch-history'>
-                        <span class='material-symbols-outlined'>history</span> ¬ö¿ı
+                        <span class='material-symbols-outlined'>history</span> ç´€éŒ„
                     </button>
                 </div>
             </div>
@@ -1283,9 +1283,9 @@ async function renderYouTube(params) {
                 <div class='yt-player-channel-avatar'></div>
                 <div>
                     <div class='yt-player-channel-name'></div>
-                    <div class='yt-player-channel-sub'>­q¾\</div>
+                    <div class='yt-player-channel-sub'>è¨‚é–±</div>
                 </div>
-                <button class='yt-subscribe-btn'>­q¾\</button>
+                <button class='yt-subscribe-btn'>è¨‚é–±</button>
             </div>
             <div class='yt-player-desc'></div>
         </section>
@@ -1294,7 +1294,7 @@ async function renderYouTube(params) {
             <div class='yt-modal-backdrop' data-action='close-add-modal'></div>
             <div class='yt-modal-card'>
                 <div class='yt-modal-header'>
-                    <span class='yt-modal-title'>·s¼W¼v¤ù</span>
+                    <span class='yt-modal-title'>æ–°å¢å½±ç‰‡</span>
                     <button class='yt-icon small' data-action='close-add-modal'>
                         <span class='material-symbols-outlined'>close</span>
                     </button>
@@ -1303,23 +1303,23 @@ async function renderYouTube(params) {
                     <div class='yt-thumb-upload'>
                         <div class='yt-thumb-preview' data-action='upload-thumb'>
                             <span class='material-symbols-outlined'>image</span>
-                            <span>ÂIÀ»¤W¶Ç«Ê­±</span>
+                            <span>é»æ“Šä¸Šå‚³å°é¢</span>
                         </div>
                         <input type='file' id='add-video-thumb-file' accept='image/*' hidden>
                     </div>
-                    <input type='text' class='yt-text-input' id='add-video-title' placeholder='¼v¤ù¼ĞÃD'>
-                    <input type='text' class='yt-text-input' id='add-video-url' placeholder='¼v¤ù³sµ² (¿ï¶ñ)'>
+                    <input type='text' class='yt-text-input' id='add-video-title' placeholder='å½±ç‰‡æ¨™é¡Œ'>
+                    <input type='text' class='yt-text-input' id='add-video-url' placeholder='å½±ç‰‡é€£çµ (é¸å¡«)'>
                     <select id='add-video-tag'>
-                        <option value='all'>¥ş³¡</option>
-                        <option value='live'>ª½¼½</option>
-                        <option value='music'>­µ¼Ö</option>
-                        <option value='game'>¹CÀ¸</option>
-                        <option value='tech'>¬ì§Ş</option>
+                        <option value='all'>å…¨éƒ¨</option>
+                        <option value='live'>ç›´æ’­</option>
+                        <option value='music'>éŸ³æ¨‚</option>
+                        <option value='game'>éŠæˆ²</option>
+                        <option value='tech'>ç§‘æŠ€</option>
                         <option value='diy'>DIY</option>
                     </select>
                     <div class='yt-modal-actions'>
-                        <button class='yt-ghost-btn' data-action='close-add-modal'>¨ú®ø</button>
-                        <button class='yt-primary-btn' data-action='add-video'>·s¼W</button>
+                        <button class='yt-ghost-btn' data-action='close-add-modal'>å–æ¶ˆ</button>
+                        <button class='yt-primary-btn' data-action='add-video'>æ–°å¢</button>
                     </div>
                 </div>
             </div>
@@ -1329,16 +1329,16 @@ async function renderYouTube(params) {
             <div class='yt-modal-backdrop' data-action='close-collection-modal'></div>
             <div class='yt-modal-card'>
                 <div class='yt-modal-header'>
-                    <span class='yt-modal-title'>·s¼W¦¬ÂÃ§¨</span>
+                    <span class='yt-modal-title'>æ–°å¢æ”¶è—å¤¾</span>
                     <button class='yt-icon small' data-action='close-collection-modal'>
                         <span class='material-symbols-outlined'>close</span>
                     </button>
                 </div>
                 <div class='yt-modal-body'>
-                    <input type='text' class='yt-text-input' id='collection-name' placeholder='¦¬ÂÃ§¨¦WºÙ'>
+                    <input type='text' class='yt-text-input' id='collection-name' placeholder='æ”¶è—å¤¾åç¨±'>
                     <div class='yt-modal-actions'>
-                        <button class='yt-ghost-btn' data-action='close-collection-modal'>¨ú®ø</button>
-                        <button class='yt-primary-btn' data-action='create-collection'>«Ø¥ß</button>
+                        <button class='yt-ghost-btn' data-action='close-collection-modal'>å–æ¶ˆ</button>
+                        <button class='yt-primary-btn' data-action='create-collection'>å»ºç«‹</button>
                     </div>
                 </div>
             </div>
@@ -1348,7 +1348,7 @@ async function renderYouTube(params) {
             <div class='yt-modal-backdrop' data-action='close-save-modal'></div>
             <div class='yt-modal-card'>
                 <div class='yt-modal-header'>
-                    <span class='yt-modal-title'>Àx¦s¨ì¦¬ÂÃ§¨</span>
+                    <span class='yt-modal-title'>å„²å­˜åˆ°æ”¶è—å¤¾</span>
                     <button class='yt-icon small' data-action='close-save-modal'>
                         <span class='material-symbols-outlined'>close</span>
                     </button>
@@ -1363,34 +1363,34 @@ async function renderYouTube(params) {
             <div class='yt-modal-backdrop' data-action='close-ai-video-gen'></div>
             <div class='yt-modal-card yt-ai-video-gen-modal-card'>
                 <div class='yt-modal-header'>
-                    <span class='yt-modal-title'>AI ¼v¤ù¥Í¦¨</span>
+                    <span class='yt-modal-title'>AI å½±ç‰‡ç”Ÿæˆ</span>
                     <button class='yt-icon small' data-action='close-ai-video-gen'>
                         <span class='material-symbols-outlined'>close</span>
                     </button>
                 </div>
                 <div class='yt-modal-body'>
                     <div class='yt-ai-video-gen-form'>
-                        <textarea class='yt-text-input yt-ai-video-textarea' id='yt-ai-video-prompt' placeholder='´y­z§A·Q¥Í¦¨ªº¼v¤ù¤º®e...'></textarea>
+                        <textarea class='yt-text-input yt-ai-video-textarea' id='yt-ai-video-prompt' placeholder='æè¿°ä½ æƒ³ç”Ÿæˆçš„å½±ç‰‡å…§å®¹...'></textarea>
                         <div class='yt-ai-video-advanced-toggle'>
                             <button class='yt-ghost-btn' data-action='toggle-advanced'>
-                                ¶i¶¥¿ï¶µ <span class='material-symbols-outlined'>expand_more</span>
+                                é€²éšé¸é … <span class='material-symbols-outlined'>expand_more</span>
                             </button>
                         </div>
                         <div class='yt-ai-video-advanced-options' hidden id='yt-ai-video-advanced-options'>
                             <div class='yt-modal-row'>
-                                <span class='yt-modal-label'>ªø«×</span>
+                                <span class='yt-modal-label'>é•·åº¦</span>
                                 <input type='range' id='yt-ai-video-duration' min='1' max='10' step='0.5' value='2'>
                                 <span class='yt-ai-video-range-value' id='yt-ai-video-duration-value'>2s</span>
                             </div>
                             <div class='yt-modal-row'>
-                                <span class='yt-modal-label'>¼e«×</span>
+                                <span class='yt-modal-label'>å¯¬åº¦</span>
                                 <input type='range' id='yt-ai-video-width' min='256' max='1024' step='64' value='704'>
                                 <span class='yt-ai-video-range-value' id='yt-ai-video-width-value'>704</span>
                             </div>
                         </div>
                         <div class='yt-modal-actions'>
                             <button class='yt-primary-btn' id='yt-start-video-gen-btn' data-action='start-video-gen'>
-                                <span class='material-symbols-outlined'>auto_awesome</span> ¶}©l¥Í¦¨
+                                <span class='material-symbols-outlined'>auto_awesome</span> é–‹å§‹ç”Ÿæˆ
                             </button>
                         </div>
                     </div>
@@ -1398,16 +1398,16 @@ async function renderYouTube(params) {
                         <div class='yt-ai-video-gen-progress'>
                             <div class='yt-ai-video-gen-progress-bar'></div>
                         </div>
-                        <div class='yt-ai-video-gen-message'>·Ç³Æ¤¤...</div>
+                        <div class='yt-ai-video-gen-message'>æº–å‚™ä¸­...</div>
                     </div>
                     <div class='yt-ai-video-gen-preview' hidden>
                         <video id='yt-ai-video-preview-player' controls></video>
                         <div class='yt-ai-video-gen-preview-actions'>
                             <button class='yt-ghost-btn' data-action='download-video'>
-                                <span class='material-symbols-outlined'>download</span> ¤U¸ü
+                                <span class='material-symbols-outlined'>download</span> ä¸‹è¼‰
                             </button>
                             <button class='yt-primary-btn' data-action='add-to-feed'>
-                                <span class='material-symbols-outlined'>add</span> ¥[¤J¼v¤ù®w
+                                <span class='material-symbols-outlined'>add</span> åŠ å…¥å½±ç‰‡åº«
                             </button>
                         </div>
                     </div>
@@ -1418,18 +1418,18 @@ async function renderYouTube(params) {
         <nav class='yt-tabbar'>
             <button class='tab active' data-view='home'>
                 <span class='material-symbols-outlined'>home</span>
-                <span>­º­¶</span>
+                <span>é¦–é </span>
             </button>
             <button class='tab' data-action='open-add-modal'>
                 <div class='tab-plus'>+</div>
             </button>
             <button class='tab' data-view='collections'>
                 <span class='material-symbols-outlined'>folder</span>
-                <span>¦¬ÂÃ</span>
+                <span>æ”¶è—</span>
             </button>
             <button class='tab' data-view='me'>
                 <span class='material-symbols-outlined'>person</span>
-                <span>§Úªº</span>
+                <span>æˆ‘çš„</span>
             </button>
         </nav>
     `;
@@ -1470,7 +1470,7 @@ async function renderYouTube(params) {
                 if (video.url || video.videoUrl) {
                     await openPlayerPage(container, video);
                 } else {
-                    createToast('¦¹¼v¤ù©|¥¼³]©w³sµ²', 'info');
+                    createToast('æ­¤å½±ç‰‡å°šæœªè¨­å®šé€£çµ', 'info');
                 }
             }
         }
@@ -1611,7 +1611,7 @@ async function renderYouTube(params) {
                 await generateAIVideos(container);
                 break;
             case 'open-char-view':
-                createToast('¨¤¦âµø¨¤¥\¯à¤w¾ã¦X¦Ü¼½©ñ¾¹', 'info');
+                createToast('è§’è‰²è¦–è§’åŠŸèƒ½å·²æ•´åˆè‡³æ’­æ”¾å™¨', 'info');
                 break;
             case 'ai-video-gen':
                 openAIVideoGenModal(container);
@@ -1627,7 +1627,7 @@ async function renderYouTube(params) {
                 await startYTAIVideoGeneration(container);
                 break;
             case 'download-video':
-                createToast('¼v¤ù¤U¸ü¥\¯à§Y±N±À¥X', 'info');
+                createToast('å½±ç‰‡ä¸‹è¼‰åŠŸèƒ½å³å°‡æ¨å‡º', 'info');
                 break;
             case 'add-to-feed':
                 addYTGeneratedVideoToFeed(container);

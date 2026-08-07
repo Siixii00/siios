@@ -1,4 +1,4 @@
-import { MemoryDB } from '../db.js';
+ï»¿import { MemoryDB } from '../db.js';
 
 /**
  * Save interaction memory from various apps
@@ -83,33 +83,33 @@ function generateMetaContent(sourceApp, sourceSubtype, content) {
         'youtube': 'YouTube',
         'chrome': 'Chrome',
         'instagram': 'Instagram',
-        'dating': '¬ù·|',
+        'dating': 'ç´„æœƒ',
         'bubbles': 'Bubbles',
         'weverse': 'Weverse',
         'ao3': 'AO3',
         'lofter': 'Lofter',
-        'theater': '¼@³õ',
-        'chat': '¹ï¸Ü'
+        'theater': 'åŠ‡å ´',
+        'chat': 'å°è©±'
     };
 
     const actionLabels = {
-        'chat': '¶i¦æ¤F¹ï¸Ü',
-        'viewing': '¤@°_Æ[¬Ý¤F¤º®e',
-        'browsing': '¤@°_ÂsÄý¤Fºô¯¸',
-        'dating': '¶i¦æ¤F¬ù·|¤¬°Ê',
-        'social': '¶i¦æ¤FªÀ¥æ¤¬°Ê',
-        'ao3': '¾\Åª¤F¦P¤H³Ð§@',
-        'lofter': '¾\Åª¤F¦P¤H¤º®e',
-        'theater': '¶i¦æ¤F¼@³õºt¥X'
+        'chat': 'é€²è¡Œäº†å°è©±',
+        'viewing': 'ä¸€èµ·è§€çœ‹äº†å…§å®¹',
+        'browsing': 'ä¸€èµ·ç€è¦½äº†ç¶²ç«™',
+        'dating': 'é€²è¡Œäº†ç´„æœƒäº’å‹•',
+        'social': 'é€²è¡Œäº†ç¤¾äº¤äº’å‹•',
+        'ao3': 'é–±è®€äº†åŒäººå‰µä½œ',
+        'lofter': 'é–±è®€äº†åŒäººå…§å®¹',
+        'theater': 'é€²è¡Œäº†åŠ‡å ´æ¼”å‡º'
     };
 
     const sourceLabel = sourceLabels[sourceApp] || sourceApp;
-    const actionLabel = actionLabels[sourceSubtype] || '¶i¦æ¤F¤¬°Ê';
+    const actionLabel = actionLabels[sourceSubtype] || 'é€²è¡Œäº†äº’å‹•';
 
     // Truncate content for preview
     const preview = content.length > 50 ? content.substring(0, 50) + '...' : content;
 
-    return `¦b${sourceLabel}»P¥Î¤á${actionLabel}`;
+    return `åœ¨${sourceLabel}èˆ‡ç”¨æˆ¶${actionLabel}`;
 }
 
 /**

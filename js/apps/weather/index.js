@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+ï»¿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
@@ -6,105 +6,105 @@ import { buildAppContext } from '../../core/app-context-builder.js';
 const CACHE_TTL = 10 * 60 * 1000;
 
 const PINYIN_MAP = {
-    '¥x': 'tai', '»O': 'tai', '¥_': 'bei', '·s': 'xin', '®ç': 'tao', '¶é': 'yuan',
-    '¤¤': 'zhong', '«n': 'nan', '°ª': 'gao', '¶¯': 'xiong', '°ò': 'ji', '¶©': 'long',
-    '¦Ë': 'zhu', '¹Å': 'jia', '¸q': 'yi', '©y': 'yi', 'Äõ': 'lan', 'ªá': 'hua',
-    '½¬': 'lian', 'ªF': 'dong', '«Ì': 'ping', '§ë': 'tou', '¹ü': 'zhang', '¤Æ': 'hua',
-    '¶³': 'yun', 'ªL': 'lin', '­]': 'miao', '®ß': 'li', '¼ê': 'peng', '´ò': 'hu',
-    'ª÷': 'jin', 'ªù': 'men', '°¨': 'ma', '¯ª': 'zu', '­»': 'xiang', '´ä': 'gang',
-    '¿D': 'ao', '¤W': 'shang', '®ü': 'hai', '¨Ê': 'jing', '¼s': 'guang',
-    '¦{': 'zhou', '²`': 'shen', '¦`': 'zhen', 'ªC': 'hang', '¦¨': 'cheng', '³£': 'du',
-    '­«': 'chong', '¼y': 'qing', 'ªZ': 'wu', 'º~': 'han', '¦è': 'xi', '¦w': 'an',
-    'Ä¬': 'su', '¬z': 'jin', '«C': 'qing', '®q': 'dao', '¤j': 'da', '³s': 'lian',
-    '·H': 'xia', 'ºÖ': 'fu', '«Ø': 'jian', 'ªø': 'chang', '¨F': 'sha',
-    '¾G': 'zheng', '¨Á': 'ban', '¦W': 'ming', '¥j': 'gu', '«Î': 'wu', '¥¾': 'zha',
-    '·E': 'huang', '©£': 'gang', '¨R': 'chong', 'Ã·': 'sheng', '­º': 'shou', 'º¸': 'er',
-    '°y': 'fu', '¤s': 'shan', 'ÀÙ': 'ji', '¥[': 'jia', '©Y': 'po', '°Ò': 'man',
-    '¨¦': 'gu', '¦N': 'ji', '¶©': 'long', '¶®': 'ya', '¹F': 'da', '¥§': 'ni',
-    '©Ô': 'la', 'ªe': 'he', '¤º': 'nei', '­J': 'hu', '§Ó': 'zhi', '©ú': 'ming',
-    '¥«': 'shi', '¯Ã': 'niu', '¬ù': 'yue', '¬¥': 'luo', '§ü': 'shan', 'ÁF': 'ji',
-    'ÂÂ': 'jiu', 'ªÛ': 'zhi', '­ô': 'ge', '¥ğ': 'xiu', '¤h': 'shi', '¹y': 'dun',
-    'ÁÚ': 'mai', 'ªü': 'a', '±K': 'mi', 'ªi': 'bo', '´µ': 'si', 'ºû': 'wei',
-    '­Û': 'lun', '´°': 'dun', '¤Ú': 'ba', '¾¤': 'li', '¬f': 'bai', 'Ã¹': 'luo',
-    '°¨': 'ma', '¼w': 'de', '¨½': 'li', '©i': 'mu', '¯S': 'te', '¤¦': 'dan',
-    '³·': 'xue', '±ù': 'li', '¾¥': 'mo', 'º¸': 'er', '¥»': 'ben', '¥¬': 'bu',
-    '¶ø': 'ao', '§J': 'ke', 'Äõ': 'lan', '·Å': 'wen', 'µØ': 'hua', '¦h': 'duo',
-    '»X': 'meng', '°ú': 'lou', '¿¤': 'xian', '¬Ù': 'sheng'
+    'å°': 'tai', 'è‡º': 'tai', 'åŒ—': 'bei', 'æ–°': 'xin', 'æ¡ƒ': 'tao', 'åœ’': 'yuan',
+    'ä¸­': 'zhong', 'å—': 'nan', 'é«˜': 'gao', 'é›„': 'xiong', 'åŸº': 'ji', 'éš†': 'long',
+    'ç«¹': 'zhu', 'å˜‰': 'jia', 'ç¾©': 'yi', 'å®œ': 'yi', 'è˜­': 'lan', 'èŠ±': 'hua',
+    'è“®': 'lian', 'æ±': 'dong', 'å±': 'ping', 'æŠ•': 'tou', 'å½°': 'zhang', 'åŒ–': 'hua',
+    'é›²': 'yun', 'æ—': 'lin', 'è‹—': 'miao', 'æ —': 'li', 'æ¾': 'peng', 'æ¹–': 'hu',
+    'é‡‘': 'jin', 'é–€': 'men', 'é¦¬': 'ma', 'ç¥–': 'zu', 'é¦™': 'xiang', 'æ¸¯': 'gang',
+    'æ¾³': 'ao', 'ä¸Š': 'shang', 'æµ·': 'hai', 'äº¬': 'jing', 'å»£': 'guang',
+    'å·': 'zhou', 'æ·±': 'shen', 'åœ³': 'zhen', 'æ­': 'hang', 'æˆ': 'cheng', 'éƒ½': 'du',
+    'é‡': 'chong', 'æ…¶': 'qing', 'æ­¦': 'wu', 'æ¼¢': 'han', 'è¥¿': 'xi', 'å®‰': 'an',
+    'è˜‡': 'su', 'æ´¥': 'jin', 'é’': 'qing', 'å³¶': 'dao', 'å¤§': 'da', 'é€£': 'lian',
+    'å»ˆ': 'xia', 'ç¦': 'fu', 'å»º': 'jian', 'é•·': 'chang', 'æ²™': 'sha',
+    'é„­': 'zheng', 'é˜ª': 'ban', 'å': 'ming', 'å¤': 'gu', 'å±‹': 'wu', 'æœ­': 'zha',
+    'å¹Œ': 'huang', 'å²¡': 'gang', 'æ²–': 'chong', 'ç¹©': 'sheng', 'é¦–': 'shou', 'çˆ¾': 'er',
+    'é‡œ': 'fu', 'å±±': 'shan', 'æ¿Ÿ': 'ji', 'åŠ ': 'jia', 'å¡': 'po', 'æ›¼': 'man',
+    'è°·': 'gu', 'å‰': 'ji', 'éš†': 'long', 'é›…': 'ya', 'é”': 'da', 'å°¼': 'ni',
+    'æ‹‰': 'la', 'æ²³': 'he', 'å…§': 'nei', 'èƒ¡': 'hu', 'å¿—': 'zhi', 'æ˜': 'ming',
+    'å¸‚': 'shi', 'ç´': 'niu', 'ç´„': 'yue', 'æ´›': 'luo', 'æ‰': 'shan', 'ç£¯': 'ji',
+    'èˆŠ': 'jiu', 'èŠ': 'zhi', 'å“¥': 'ge', 'ä¼‘': 'xiu', 'å£«': 'shi', 'é “': 'dun',
+    'é‚': 'mai', 'é˜¿': 'a', 'å¯†': 'mi', 'æ³¢': 'bo', 'æ–¯': 'si', 'ç¶­': 'wei',
+    'å€«': 'lun', 'æ•¦': 'dun', 'å·´': 'ba', 'é»': 'li', 'æŸ': 'bai', 'ç¾…': 'luo',
+    'é¦¬': 'ma', 'å¾·': 'de', 'é‡Œ': 'li', 'å§†': 'mu', 'ç‰¹': 'te', 'ä¸¹': 'dan',
+    'é›ª': 'xue', 'æ¢¨': 'li', 'å¢¨': 'mo', 'çˆ¾': 'er', 'æœ¬': 'ben', 'å¸ƒ': 'bu',
+    'å¥§': 'ao', 'å…‹': 'ke', 'è˜­': 'lan', 'æº«': 'wen', 'è¯': 'hua', 'å¤š': 'duo',
+    'è’™': 'meng', 'å©': 'lou', 'ç¸£': 'xian', 'çœ': 'sheng'
 };
 
 const CITY_NAME_MAP = {
-    '¥x¥_': 'Taipei', '»O¥_': 'Taipei', '·s¥_': 'New Taipei', '®ç¶é': 'Taoyuan',
-    '¥x¤¤': 'Taichung', '»O¤¤': 'Taichung', '¥x«n': 'Tainan', '»O«n': 'Tainan',
-    '°ª¶¯': 'Kaohsiung', '°ò¶©': 'Keelung', '·s¦Ë': 'Hsinchu', '¹Å¸q': 'Chiayi',
-    '©yÄõ': 'Yilan', 'ªá½¬': 'Hualien', '¥xªF': 'Taitung', '»OªF': 'Taitung',
-    '«ÌªF': 'Pingtung', '«n§ë': 'Nantou', '¹ü¤Æ': 'Changhua', '¶³ªL': 'Yunlin',
-    '­]®ß': 'Miaoli', '¼ê´ò': 'Penghu', 'ª÷ªù': 'Kinmen', '°¨¯ª': 'Matsu',
-    '­»´ä': 'Hong Kong', '¿Dªù': 'Macau', '¤W®ü': 'Shanghai', '¥_¨Ê': 'Beijing',
-    '¼s¦{': 'Guangzhou', '²`¦`': 'Shenzhen', 'ªC¦{': 'Hangzhou', '«n¨Ê': 'Nanjing',
-    '¦¨³£': 'Chengdu', '­«¼y': 'Chongqing', 'ªZº~': 'Wuhan', '¦è¦w': 'Xi'an',
-    'Ä¬¦{': 'Suzhou', '¤Ñ¬z': 'Tianjin', '«C®q': 'Qingdao', '¤j³s': 'Dalian',
-    '·Hªù': 'Xiamen', 'ºÖ¦{': 'Fuzhou', 'ªø¨F': 'Changsha', '¾G¦{': 'Zhengzhou',
-    'ªF¨Ê': 'Tokyo', '¤j¨Á': 'Osaka', '¨Ê³£': 'Kyoto', '¦W¥j«Î': 'Nagoya',
-    '¥¾·E': 'Sapporo', 'ºÖ©£': 'Fukuoka', '¨RÃ·': 'Okinawa', '­ºº¸': 'Seoul',
-    '°y¤s': 'Busan', 'ÀÙ¦{': 'Jeju', '·s¥[©Y': 'Singapore', '°Ò¨¦': 'Bangkok',
-    '¦N¶©©Y': 'Kuala Lumpur', '¶®¥[¹F': 'Jakarta', '°¨¥§©Ô': 'Manila',
-    'ªe¤º': 'Hanoi', '­J§Ó©ú¥«': 'Ho Chi Minh City', '¯Ã¬ù': 'New York',
-    '¬¥§üÁF': 'Los Angeles', 'ÂÂª÷¤s': 'San Francisco', '¦è¶®¹Ï': 'Seattle',
-    'ªÛ¥[­ô': 'Chicago', '¥ğ¤h¹y': 'Houston', 'ÁÚªü±K': 'Miami', 'ªi¤h¹y': 'Boston',
-    '©Ô´µºû¥[´µ': 'Las Vegas', '­Û´°': 'London', '¤Ú¾¤': 'Paris', '¬fªL': 'Berlin',
-    'Ã¹°¨': 'Rome', '°¨¼w¨½': 'Madrid', 'ªü©i´µ¯S¤¦': 'Amsterdam', '³·±ù': 'Sydney',
-    '¾¥º¸¥»': 'Melbourne', '¥¬¨½´µ¥»': 'Brisbane', '¶ø§JÄõ': 'Auckland',
-    '·Å­ôµØ': 'Vancouver', '¦h­Û¦h': 'Toronto', '»X¯S°ú': 'Montreal'
+    'å°åŒ—': 'Taipei', 'è‡ºåŒ—': 'Taipei', 'æ–°åŒ—': 'New Taipei', 'æ¡ƒåœ’': 'Taoyuan',
+    'å°ä¸­': 'Taichung', 'è‡ºä¸­': 'Taichung', 'å°å—': 'Tainan', 'è‡ºå—': 'Tainan',
+    'é«˜é›„': 'Kaohsiung', 'åŸºéš†': 'Keelung', 'æ–°ç«¹': 'Hsinchu', 'å˜‰ç¾©': 'Chiayi',
+    'å®œè˜­': 'Yilan', 'èŠ±è“®': 'Hualien', 'å°æ±': 'Taitung', 'è‡ºæ±': 'Taitung',
+    'å±æ±': 'Pingtung', 'å—æŠ•': 'Nantou', 'å½°åŒ–': 'Changhua', 'é›²æ—': 'Yunlin',
+    'è‹—æ —': 'Miaoli', 'æ¾æ¹–': 'Penghu', 'é‡‘é–€': 'Kinmen', 'é¦¬ç¥–': 'Matsu',
+    'é¦™æ¸¯': 'Hong Kong', 'æ¾³é–€': 'Macau', 'ä¸Šæµ·': 'Shanghai', 'åŒ—äº¬': 'Beijing',
+    'å»£å·': 'Guangzhou', 'æ·±åœ³': 'Shenzhen', 'æ­å·': 'Hangzhou', 'å—äº¬': 'Nanjing',
+    'æˆéƒ½': 'Chengdu', 'é‡æ…¶': 'Chongqing', 'æ­¦æ¼¢': 'Wuhan', 'è¥¿å®‰': 'Xi'an',
+    'è˜‡å·': 'Suzhou', 'å¤©æ´¥': 'Tianjin', 'é’å³¶': 'Qingdao', 'å¤§é€£': 'Dalian',
+    'å»ˆé–€': 'Xiamen', 'ç¦å·': 'Fuzhou', 'é•·æ²™': 'Changsha', 'é„­å·': 'Zhengzhou',
+    'æ±äº¬': 'Tokyo', 'å¤§é˜ª': 'Osaka', 'äº¬éƒ½': 'Kyoto', 'åå¤å±‹': 'Nagoya',
+    'æœ­å¹Œ': 'Sapporo', 'ç¦å²¡': 'Fukuoka', 'æ²–ç¹©': 'Okinawa', 'é¦–çˆ¾': 'Seoul',
+    'é‡œå±±': 'Busan', 'æ¿Ÿå·': 'Jeju', 'æ–°åŠ å¡': 'Singapore', 'æ›¼è°·': 'Bangkok',
+    'å‰éš†å¡': 'Kuala Lumpur', 'é›…åŠ é”': 'Jakarta', 'é¦¬å°¼æ‹‰': 'Manila',
+    'æ²³å…§': 'Hanoi', 'èƒ¡å¿—æ˜å¸‚': 'Ho Chi Minh City', 'ç´ç´„': 'New York',
+    'æ´›æ‰ç£¯': 'Los Angeles', 'èˆŠé‡‘å±±': 'San Francisco', 'è¥¿é›…åœ–': 'Seattle',
+    'èŠåŠ å“¥': 'Chicago', 'ä¼‘å£«é “': 'Houston', 'é‚é˜¿å¯†': 'Miami', 'æ³¢å£«é “': 'Boston',
+    'æ‹‰æ–¯ç¶­åŠ æ–¯': 'Las Vegas', 'å€«æ•¦': 'London', 'å·´é»': 'Paris', 'æŸæ—': 'Berlin',
+    'ç¾…é¦¬': 'Rome', 'é¦¬å¾·é‡Œ': 'Madrid', 'é˜¿å§†æ–¯ç‰¹ä¸¹': 'Amsterdam', 'é›ªæ¢¨': 'Sydney',
+    'å¢¨çˆ¾æœ¬': 'Melbourne', 'å¸ƒé‡Œæ–¯æœ¬': 'Brisbane', 'å¥§å…‹è˜­': 'Auckland',
+    'æº«å“¥è¯': 'Vancouver', 'å¤šå€«å¤š': 'Toronto', 'è’™ç‰¹å©': 'Montreal'
 };
 
 const WEATHER_REMINDERS = {
     hot: [
-        '¤µ¤Ñ¦n¼ö¡A¥Xªù°O±o¨¾ÅÎ³á¡I',
-        '¤Ñ®ğª¢¼ö¡A¦h³Ü¤ô§O¤¤´»¤F¡ã',
-        '°ª·ÅÄµ³ø¡I«İ¦b²D²nªº¦a¤è¤ñ¸û¦n',
-        '¤Ó¶§«Ü¤j¡A¥Xªù­n±a³Ê©Î´U¤l³á'
+        'ä»Šå¤©å¥½ç†±ï¼Œå‡ºé–€è¨˜å¾—é˜²æ›¬å–”ï¼',
+        'å¤©æ°£ç‚ç†±ï¼Œå¤šå–æ°´åˆ¥ä¸­æš‘äº†ï½',
+        'é«˜æº«è­¦å ±ï¼å¾…åœ¨æ¶¼çˆ½çš„åœ°æ–¹æ¯”è¼ƒå¥½',
+        'å¤ªé™½å¾ˆå¤§ï¼Œå‡ºé–€è¦å¸¶å‚˜æˆ–å¸½å­å–”'
     ],
     cold: [
-        '¤µ¤Ñ¦n§N¡A¥Xªù°O±o¦h¬ïÂI¡I',
-        '¤Ñ®ğ§N§Nªº¡A§O·P«_¤F³á¡ã',
-        '§C·Å¨ÓÅ§¡I³ò¤y¤â®M·Ç³Æ¦n',
-        '¦n§N§r¡ã¨ÓªM¼ö¶¼·x·x¨­¤l§a'
+        'ä»Šå¤©å¥½å†·ï¼Œå‡ºé–€è¨˜å¾—å¤šç©¿é»ï¼',
+        'å¤©æ°£å†·å†·çš„ï¼Œåˆ¥æ„Ÿå†’äº†å–”ï½',
+        'ä½æº«ä¾†è¥²ï¼åœå·¾æ‰‹å¥—æº–å‚™å¥½',
+        'å¥½å†·å‘€ï½ä¾†æ¯ç†±é£²æš–æš–èº«å­å§'
     ],
     rain: [
-        '¤µ¤Ñ·|¤U«B¡A¥Xªù°O±o±a³Ê¡I',
-        '«B¤Ñ¥Xªù­n¤p¤ß¸ô·Æ³á¡ã',
-        '¤U«B¤F¡A§O²OÀã¤F¡I',
-        '¤Ñ®ğÀãÀãªº¡Aª`·N§OµÛ²D'
+        'ä»Šå¤©æœƒä¸‹é›¨ï¼Œå‡ºé–€è¨˜å¾—å¸¶å‚˜ï¼',
+        'é›¨å¤©å‡ºé–€è¦å°å¿ƒè·¯æ»‘å–”ï½',
+        'ä¸‹é›¨äº†ï¼Œåˆ¥æ·‹æ¿•äº†ï¼',
+        'å¤©æ°£æ¿•æ¿•çš„ï¼Œæ³¨æ„åˆ¥è‘—æ¶¼'
     ],
     sunny: [
-        '¤Ñ®ğ¤£¿ù©O¡I¾A¦X¥Xªù¨«¨«¡ã',
-        '¶§¥ú´¶·Ó¡A¤ß±¡¤]¸òµÛ¦n°_¨Ó¤F',
-        '¤µ¤Ñ¤Ñ®ğ«Ü´Î¡A¦³¤°»ò­pµe¶Ü¡H',
-        '¦n¤Ñ®ğ¡I¾A¦X¥X¥hÅÎÅÎ¤Ó¶§'
+        'å¤©æ°£ä¸éŒ¯å‘¢ï¼é©åˆå‡ºé–€èµ°èµ°ï½',
+        'é™½å…‰æ™®ç…§ï¼Œå¿ƒæƒ…ä¹Ÿè·Ÿè‘—å¥½èµ·ä¾†äº†',
+        'ä»Šå¤©å¤©æ°£å¾ˆæ£’ï¼Œæœ‰ä»€éº¼è¨ˆç•«å—ï¼Ÿ',
+        'å¥½å¤©æ°£ï¼é©åˆå‡ºå»æ›¬æ›¬å¤ªé™½'
     ],
     cloudy: [
-        '¦h¶³ªº¤Ñ®ğ¡A»¡ÅÜ´NÅÜ©O',
-        '³±³±ªº¤Ñ¡A¥i¯à­n¤U«B³á',
-        '¶³¦³ÂI¦h¡A¦ıÁÙ¬O®¼µÎ¾Aªº',
-        '¦h¶³®É³±¡A¥Xªù±a¥ó¥~®M§a'
+        'å¤šé›²çš„å¤©æ°£ï¼Œèªªè®Šå°±è®Šå‘¢',
+        'é™°é™°çš„å¤©ï¼Œå¯èƒ½è¦ä¸‹é›¨å–”',
+        'é›²æœ‰é»å¤šï¼Œä½†é‚„æ˜¯æŒºèˆ’é©çš„',
+        'å¤šé›²æ™‚é™°ï¼Œå‡ºé–€å¸¶ä»¶å¤–å¥—å§'
     ],
     storm: [
-        '¹p«B¤Ñ¨Ó¤F¡IºÉ¶q§O¥Xªù³á',
-        '¥~­±¦b¥´¹p¡A«İ¦b«Ç¤º¤ñ¸û¦w¥ş',
-        '¤Ñ®ğ´c¦H¡Aª`·N¦w¥ş¡I',
-        '¹pÁn¶©¶©¡A§O®`©È¡A§Ú³­µÛ§A'
+        'é›·é›¨å¤©ä¾†äº†ï¼ç›¡é‡åˆ¥å‡ºé–€å–”',
+        'å¤–é¢åœ¨æ‰“é›·ï¼Œå¾…åœ¨å®¤å…§æ¯”è¼ƒå®‰å…¨',
+        'å¤©æ°£æƒ¡åŠ£ï¼Œæ³¨æ„å®‰å…¨ï¼',
+        'é›·è²éš†éš†ï¼Œåˆ¥å®³æ€•ï¼Œæˆ‘é™ªè‘—ä½ '
     ],
     snow: [
-        '¤U³·¤F¡I¦n®öº©¡ã',
-        '³·¤Ñ¸ô·Æ¡A¨«¸ô­n¤p¤ß³á',
-        '¥Õ¯í¯í¤@¤ù¡A¦nº}«G¡I',
-        '¤U³·¤Ñ®ğ¡A«O·x³Ì­«­n'
+        'ä¸‹é›ªäº†ï¼å¥½æµªæ¼«ï½',
+        'é›ªå¤©è·¯æ»‘ï¼Œèµ°è·¯è¦å°å¿ƒå–”',
+        'ç™½èŒ«èŒ«ä¸€ç‰‡ï¼Œå¥½æ¼‚äº®ï¼',
+        'ä¸‹é›ªå¤©æ°£ï¼Œä¿æš–æœ€é‡è¦'
     ],
     nice: [
-        '¤µ¤Ñ¤Ñ®ğ­è­è¦n¡A«ÜµÎ¾A©O',
-        '®ğ·Å¾A¤¤¡A«Ü¾A¦X¥Xªù³á',
-        '¤Ñ®ğ©y¤H¡A¤ß±¡¤]ÅÜ¦n¤F¡ã',
-        '³oºØ¤Ñ®ğ³ÌµÎªA¤F'
+        'ä»Šå¤©å¤©æ°£å‰›å‰›å¥½ï¼Œå¾ˆèˆ’é©å‘¢',
+        'æ°£æº«é©ä¸­ï¼Œå¾ˆé©åˆå‡ºé–€å–”',
+        'å¤©æ°£å®œäººï¼Œå¿ƒæƒ…ä¹Ÿè®Šå¥½äº†ï½',
+        'é€™ç¨®å¤©æ°£æœ€èˆ’æœäº†'
     ]
 };
 
@@ -143,13 +143,13 @@ function getWeatherIcon(code) {
 
 function getWeatherDescription(code) {
     const map = {
-        0: '´¸®Ô', 1: '¦h¶³', 2: '³±´¸', 3: '³±¤Ñ',
-        45: '¦³Ãú', 48: '¿@Ãú', 51: '¤ò¤ò«B', 53: '²Ó«B', 55: '¤p«B',
-        61: '¤p«B', 63: '¤¤«B', 65: '¤j«B', 71: '¤p³·', 73: '¤¤³·',
-        75: '¤j³·', 77: 'ÄÅ', 80: '°}«B', 81: '±j°}«B', 82: '¤j°}«B',
-        85: '°}³·', 86: '±j°}³·', 95: '¹p«B', 96: '¹p«B¦B¹r', 99: '±j¹p«B'
+        0: 'æ™´æœ—', 1: 'å¤šé›²', 2: 'é™°æ™´', 3: 'é™°å¤©',
+        45: 'æœ‰éœ§', 48: 'æ¿ƒéœ§', 51: 'æ¯›æ¯›é›¨', 53: 'ç´°é›¨', 55: 'å°é›¨',
+        61: 'å°é›¨', 63: 'ä¸­é›¨', 65: 'å¤§é›¨', 71: 'å°é›ª', 73: 'ä¸­é›ª',
+        75: 'å¤§é›ª', 77: 'éœ°', 80: 'é™£é›¨', 81: 'å¼·é™£é›¨', 82: 'å¤§é™£é›¨',
+        85: 'é™£é›ª', 86: 'å¼·é™£é›ª', 95: 'é›·é›¨', 96: 'é›·é›¨å†°é›¹', 99: 'å¼·é›·é›¨'
     };
-    return map[code] || '¤Ñ®ğ¤£©ú';
+    return map[code] || 'å¤©æ°£ä¸æ˜';
 }
 
 function getWeatherType(data) {
@@ -172,14 +172,14 @@ async function generateWeatherReminder(charName, data) {
         const context = await buildAppContext();
         const messages = [
             { role: 'system', content: context.systemPrompt },
-            { role: 'user', content: `½Ğ®Ú¾Ú¥H¤U¤Ñ®ğ¸ê®Æ¡A¥Î¨¤¦â¡u${charName}¡vªº¤f§k¥Í¦¨¤@¬qÂ²µuªº¤Ñ®ğ´£¿ô¡]1-2¥y¸Ü¡^¡G
+            { role: 'user', content: `è«‹æ ¹æ“šä»¥ä¸‹å¤©æ°£è³‡æ–™ï¼Œç”¨è§’è‰²ã€Œ${charName}ã€çš„å£å»ç”Ÿæˆä¸€æ®µç°¡çŸ­çš„å¤©æ°£æé†’ï¼ˆ1-2å¥è©±ï¼‰ï¼š
 
-¤Ñ®ğ¥N½X¡G${data?.daily?.weathercode?.[0] ?? 0}
-·Å«×¡G${data?.current?.temperature_2m ?? '--'}¢XC
-Àã«×¡G${data?.current?.relative_humidity_2m ?? '--'}%
-­·³t¡G${data?.current?.wind_speed_10m ?? '--'} km/h
+å¤©æ°£ä»£ç¢¼ï¼š${data?.daily?.weathercode?.[0] ?? 0}
+æº«åº¦ï¼š${data?.current?.temperature_2m ?? '--'}Â°C
+æ¿•åº¦ï¼š${data?.current?.relative_humidity_2m ?? '--'}%
+é¢¨é€Ÿï¼š${data?.current?.wind_speed_10m ?? '--'} km/h
 
-½Ğ¥Î»´ÃP¤Íµ½ªº»y®ğ¡A¹³ªB¤Í²á¤Ñ¤@¼Ë´£¿ô¤Ñ®ğª¬ªp¡C` }
+è«‹ç”¨è¼•é¬†å‹å–„çš„èªæ°£ï¼Œåƒæœ‹å‹èŠå¤©ä¸€æ¨£æé†’å¤©æ°£ç‹€æ³ã€‚` }
         ];
         const response = await fetch('/api/chat', {
             method: 'POST',
@@ -235,7 +235,7 @@ async function geocodeLocation(query) {
             };
         }
     }
-    throw new Error('§ä¤£¨ì¦¹¦a°Ï¡A½Ğ¹Á¸Õ¿é¤J­^¤å«°¥«¦W¡]¦p Taipei¡BTokyo¡^');
+    throw new Error('æ‰¾ä¸åˆ°æ­¤åœ°å€ï¼Œè«‹å˜—è©¦è¼¸å…¥è‹±æ–‡åŸå¸‚åï¼ˆå¦‚ Taipeiã€Tokyoï¼‰');
 }
 
 async function fetchWeatherData(lat, lon, timezone) {
@@ -244,10 +244,10 @@ async function fetchWeatherData(lat, lon, timezone) {
     try {
         response = await fetch(url, { method: 'GET', mode: 'cors', cache: 'no-cache' });
     } catch (fetchError) {
-        throw new Error('ºô¸ô³s½u¥¢±Ñ¡A½ĞÀË¬dºô¸ôª¬ºA');
+        throw new Error('ç¶²è·¯é€£ç·šå¤±æ•—ï¼Œè«‹æª¢æŸ¥ç¶²è·¯ç‹€æ…‹');
     }
     if (!response.ok) {
-        throw new Error(`¤Ñ®ğ¸ê®Æ¨ú±o¥¢±Ñ (HTTP ${response.status})`);
+        throw new Error(`å¤©æ°£è³‡æ–™å–å¾—å¤±æ•— (HTTP ${response.status})`);
     }
     return response.json();
 }
@@ -282,7 +282,7 @@ async function loadCharacter() {
     try {
         const chars = await CharactersDB.getAll();
         if (Array.isArray(chars) && chars.length > 0) {
-            const firstChar = chars.find(c => c.name && c.name !== '¹w³]¥Î¤á') || chars[0];
+            const firstChar = chars.find(c => c.name && c.name !== 'é è¨­ç”¨æˆ¶') || chars[0];
             return firstChar;
         }
     } catch {}
@@ -314,8 +314,8 @@ function renderCurrent(placeName, data, container) {
     const currentPrecip = container.querySelector('#current-precip');
     
     if (locationDisplay) locationDisplay.textContent = placeName;
-    if (updateTime) updateTime.textContent = `§ó·s ${formatUpdateTime(Date.now())}`;
-    if (currentTemp) currentTemp.textContent = `${Math.round(current.temperature_2m)}¢X`;
+    if (updateTime) updateTime.textContent = `æ›´æ–° ${formatUpdateTime(Date.now())}`;
+    if (currentTemp) currentTemp.textContent = `${Math.round(current.temperature_2m)}Â°`;
     if (currentDesc) {
         const dailyCode = data.daily?.weathercode?.[0] ?? 0;
         currentDesc.textContent = getWeatherDescription(dailyCode);
@@ -336,7 +336,7 @@ function renderDailyForecast(data, container) {
         const date = new Date(time);
         const dayLabel = date.toLocaleDateString('zh-TW', { weekday: 'short' });
         const icon = getWeatherIcon(daily.weathercode[index]);
-        const range = `${Math.round(daily.temperature_2m_min[index])}¢X / ${Math.round(daily.temperature_2m_max[index])}¢X`;
+        const range = `${Math.round(daily.temperature_2m_min[index])}Â° / ${Math.round(daily.temperature_2m_max[index])}Â°`;
         return `
             <div class='forecast-card'>
                 <div class='day'>${dayLabel}</div>
@@ -355,9 +355,9 @@ function renderWeeklyForecast(data, container) {
     weeklyForecast.innerHTML = daily.time.map((time, index) => {
         const date = new Date(time);
         const dayLabel = date.toLocaleDateString('zh-TW', { weekday: 'short', month: 'numeric', day: 'numeric' });
-        const range = `${Math.round(daily.temperature_2m_min[index])}¢X / ${Math.round(daily.temperature_2m_max[index])}¢X`;
+        const range = `${Math.round(daily.temperature_2m_min[index])}Â° / ${Math.round(daily.temperature_2m_max[index])}Â°`;
         const precip = daily.precipitation_probability_max?.[index];
-        const precipText = precip !== undefined ? `­°«B ${precip}%` : '­°«B --';
+        const precipText = precip !== undefined ? `é™é›¨ ${precip}%` : 'é™é›¨ --';
         const icon = getWeatherIcon(daily.weathercode[index]);
         return `
             <div class='week-item'>
@@ -378,7 +378,7 @@ async function updateCharReminder(container) {
         const reminder = await generateWeatherReminder(charName, currentWeatherData);
         charNote.textContent = reminder;
     } else {
-        charNote.textContent = '¬d¸ß¤Ñ®ğ«á¡A³o¸Ì·|Åã¥Ü¤Ñ®ğ´£¿ô';
+        charNote.textContent = 'æŸ¥è©¢å¤©æ°£å¾Œï¼Œé€™è£¡æœƒé¡¯ç¤ºå¤©æ°£æé†’';
     }
 }
 
@@ -388,13 +388,13 @@ function renderCharacterSection(container) {
     const charPlaceholder = container.querySelector('#char-placeholder');
     
     if (!currentChar) {
-        if (charName) charName.textContent = '©|¥¼³]©w¨¤¦â';
+        if (charName) charName.textContent = 'å°šæœªè¨­å®šè§’è‰²';
         if (charAvatar) charAvatar.textContent = '?';
         if (charPlaceholder) charPlaceholder.style.display = 'block';
         return;
     }
     
-    if (charName) charName.textContent = currentChar.name || '¥¼©R¦W¨¤¦â';
+    if (charName) charName.textContent = currentChar.name || 'æœªå‘½åè§’è‰²';
     if (charAvatar) {
         if (currentChar.avatar) {
             charAvatar.innerHTML = `<img src='${currentChar.avatar}' alt='${currentChar.name}' />`;
@@ -408,7 +408,7 @@ function renderCharacterSection(container) {
 
 async function refreshWeather(locationName, container) {
     if (!locationName) return;
-    setLoadingState(container, 'Åª¨ú¤Ñ®ğ¤¤...');
+    setLoadingState(container, 'è®€å–å¤©æ°£ä¸­...');
 
     try {
         const cached = await getCachedWeather(locationName);
@@ -427,8 +427,8 @@ async function refreshWeather(locationName, container) {
         renderDailyForecast(payload.data, container);
         renderWeeklyForecast(payload.data, container);
     } catch (e) {
-        console.error('[Weather] ¿ù»~:', e);
-        const errorMsg = e.message || '§ä¤£¨ì¤Ñ®ğ¸ê®Æ';
+        console.error('[Weather] éŒ¯èª¤:', e);
+        const errorMsg = e.message || 'æ‰¾ä¸åˆ°å¤©æ°£è³‡æ–™';
         setLoadingState(container, errorMsg);
         const currentDesc = container.querySelector('#current-desc');
         if (currentDesc) currentDesc.textContent = errorMsg;
@@ -444,27 +444,27 @@ async function renderWeather(params) {
     container.innerHTML = `
         <header class='ios-header'>
             <button class='ios-back-btn'>
-                <i class='fas fa-chevron-left'></i> ªğ¦^
+                <i class='fas fa-chevron-left'></i> è¿”å›
             </button>
-            <h1 class='menu-title'>¤Ñ®ğ</h1>
+            <h1 class='menu-title'>å¤©æ°£</h1>
         </header>
 
         <div class='page'>
             <div class='weather-panel'>
                 <div class='location-row'>
-                    <input type='text' id='location-input' placeholder='¿é¤J«°¥«¦WºÙ...' value='${storedLocation || ''}'>
+                    <input type='text' id='location-input' placeholder='è¼¸å…¥åŸå¸‚åç¨±...' value='${storedLocation || ''}'>
                     <button class='primary-btn' id='search-btn'>
                         <i class='fas fa-search'></i>
                     </button>
                 </div>
                 <div class='status-row'>
-                    <span id='location-display'>©|¥¼³]©w¦aÂI</span>
+                    <span id='location-display'>å°šæœªè¨­å®šåœ°é»</span>
                     <span id='update-time'></span>
                 </div>
                 <div class='current-card'>
                     <div class='current-main'>
-                        <span class='temp' id='current-temp'>--¢X</span>
-                        <span class='desc' id='current-desc'>½Ğ¿é¤J¦a°Ï¨ú±o¹w³ø</span>
+                        <span class='temp' id='current-temp'>--Â°</span>
+                        <span class='desc' id='current-desc'>è«‹è¼¸å…¥åœ°å€å–å¾—é å ±</span>
                     </div>
                     <div class='current-meta'>
                         <span><i class='fas fa-wind'></i><span id='current-wind'>-- km/h</span></span>
@@ -475,16 +475,16 @@ async function renderWeather(params) {
             </div>
 
             <div class='forecast-section'>
-                <h2>ªñ´Á¹w³ø</h2>
+                <h2>è¿‘æœŸé å ±</h2>
                 <div class='forecast-grid' id='daily-forecast'>
-                    <div class='empty-state'>½Ğ¿é¤J¦a°Ï¨ú±o¹w³ø</div>
+                    <div class='empty-state'>è«‹è¼¸å…¥åœ°å€å–å¾—é å ±</div>
                 </div>
             </div>
 
             <div class='forecast-section'>
-                <h2>¤@¶g¤Ñ®ğ</h2>
+                <h2>ä¸€é€±å¤©æ°£</h2>
                 <div class='forecast-list' id='weekly-forecast'>
-                    <div class='empty-state'>½Ğ¿é¤J¦a°Ï¨ú±o¹w³ø</div>
+                    <div class='empty-state'>è«‹è¼¸å…¥åœ°å€å–å¾—é å ±</div>
                 </div>
             </div>
 
@@ -492,12 +492,12 @@ async function renderWeather(params) {
                 <div class='char-card'>
                     <div class='char-avatar' id='char-avatar'>?</div>
                     <div class='char-info'>
-                        <div class='char-name' id='char-name'>©|¥¼³]©w¨¤¦â</div>
-                        <div id='char-note'>¬d¸ß¤Ñ®ğ«á¡A³o¸Ì·|Åã¥Ü¤Ñ®ğ´£¿ô</div>
+                        <div class='char-name' id='char-name'>å°šæœªè¨­å®šè§’è‰²</div>
+                        <div id='char-note'>æŸ¥è©¢å¤©æ°£å¾Œï¼Œé€™è£¡æœƒé¡¯ç¤ºå¤©æ°£æé†’</div>
                     </div>
                 </div>
                 <div class='char-placeholder' id='char-placeholder' style='display: none;'>
-                    «e©¹³]©w·s¼W¨¤¦â¡A§Y¥iÀò±o­Ó¤H¤Æ¤Ñ®ğ´£¿ô
+                    å‰å¾€è¨­å®šæ–°å¢è§’è‰²ï¼Œå³å¯ç²å¾—å€‹äººåŒ–å¤©æ°£æé†’
                 </div>
             </div>
         </div>
@@ -512,7 +512,7 @@ async function renderWeather(params) {
     const doSearch = async () => {
         const value = locationInput.value.trim();
         if (!value) {
-            setLoadingState(container, '½Ğ¿é¤J¦a°Ï¦WºÙ');
+            setLoadingState(container, 'è«‹è¼¸å…¥åœ°å€åç¨±');
             return;
         }
         await SettingsDB.set('weather_location', value);
@@ -538,9 +538,9 @@ async function renderWeather(params) {
 
 export default {
     id: 'weather',
-    name: '¤Ñ®ğ',
+    name: 'å¤©æ°£',
     icon: 'cloud',
     routes: [{ path: '/weather', render: renderWeather }],
-    navItem: { label: '¤Ñ®ğ', icon: 'cloud', path: '/weather', showInNav: true, order: 26 },
+    navItem: { label: 'å¤©æ°£', icon: 'cloud', path: '/weather', showInNav: true, order: 26 },
     stylesPath: 'js/apps/weather/style.css'
 };

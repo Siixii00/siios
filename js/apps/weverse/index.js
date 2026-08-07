@@ -1,12 +1,12 @@
-import Router from '../../router.js';
+ï»¿import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 
-const aiPostStarters = ['¤µ¤Ñ½m²ßµ²§ô¤F', '­è­è±m±Æ¦^¨Ó', '·Q¨Ó¥´­Ó©Û©I', '±ß¦w«e¯d­Ó°T®§'];
-const aiPostClosers = ['§A­Ì¤µ¤Ñ¤]¨¯­W¤F', 'µ¥µ¥¨£', '°O±o¦Y¶º', '§Ú·|¦A¨Ó'];
+const aiPostStarters = ['ä»Šå¤©ç·´ç¿’çµæŸäº†', 'å‰›å‰›å½©æ’å›ä¾†', 'æƒ³ä¾†æ‰“å€‹æ‹›å‘¼', 'æ™šå®‰å‰ç•™å€‹è¨Šæ¯'];
+const aiPostClosers = ['ä½ å€‘ä»Šå¤©ä¹Ÿè¾›è‹¦äº†', 'ç­‰ç­‰è¦‹', 'è¨˜å¾—åƒé£¯', 'æˆ‘æœƒå†ä¾†'];
 
 let groups = [];
 let activeGroupId = '';
@@ -102,7 +102,7 @@ async function generateContentWithAI(context, characterId = null) {
         console.error('AI generation error:', error);
         if (window.showError) {
             window.showError({
-                title: 'Weverse AI ¥Í¦¨¿ù»~',
+                title: 'Weverse AI ç”ŸæˆéŒ¯èª¤',
                 message: error.message,
                 details: error.stack || ''
             });
@@ -116,9 +116,9 @@ async function generateArtistPost(group) {
     
     ensureArtistProfile(group);
     const members = group.artistProfile?.members || [];
-    const memberNames = members.length > 0 ? members.map(m => m.name).join('¡B') : group.name;
+    const memberNames = members.length > 0 ? members.map(m => m.name).join('ã€') : group.name;
 
-    const context = '½Ğ¬°' + memberNames + '¥Í¦¨¤@«h»P¯»µ·¤À¨Éªº¶K¤å¡A¥H'' + starter + ''¶}ÀY¡A¥H'' + closer + ''µ²§À¡C¤º®e­n¿Ë¤Á¦ÛµM¡A¹³¬OÃÀ¤H¸ò¯»µ·¥´©Û©I¡C';
+    const context = 'è«‹ç‚º' + memberNames + 'ç”Ÿæˆä¸€å‰‡èˆ‡ç²‰çµ²åˆ†äº«çš„è²¼æ–‡ï¼Œä»¥'' + starter + ''é–‹é ­ï¼Œä»¥'' + closer + ''çµå°¾ã€‚å…§å®¹è¦è¦ªåˆ‡è‡ªç„¶ï¼Œåƒæ˜¯è—äººè·Ÿç²‰çµ²æ‰“æ‹›å‘¼ã€‚';
 
     const characterId = viewerSettings.selectedCharacterId || null;
     const aiContent = await generateContentWithAI(context, characterId);
@@ -127,19 +127,19 @@ async function generateArtistPost(group) {
         return aiContent;
     }
 
-    return starter + '¡I' + randomFrom(['¤µ¤Ñ¤Ñ®ğ¤£¿ù', '¦³­Ó¤pÅå³ß·Q¸ò§A­Ì¤À¨É', '·Q¸ò§A­Ì»¡»¡¸Ü']) + '¡C' + closer + ' ??';
+    return starter + 'ï¼' + randomFrom(['ä»Šå¤©å¤©æ°£ä¸éŒ¯', 'æœ‰å€‹å°é©šå–œæƒ³è·Ÿä½ å€‘åˆ†äº«', 'æƒ³è·Ÿä½ å€‘èªªèªªè©±']) + 'ã€‚' + closer + ' ğŸ’•';
 }
 
 async function generateFanReply(group) {
     const fanTemplates = [
-        '¥Ã»·¤ä«ù§A­Ì¡I¥[ªo ??',
-        '¤Ó´Î¤F¡I´Á«İ¤U¤@¦¸¨£­± ?',
-        '¨¯­W¤F¡I­n¦n¦n¥ğ®§³á ??',
-        '³Ì³ßÅw§A­Ì¤F¡I¥Ã»··R§A­Ì ??',
-        '¶W¯Å´Á«İªº¡I¤@©w·|¤ä«ù¨ì©³ ??'
+        'æ°¸é æ”¯æŒä½ å€‘ï¼åŠ æ²¹ ğŸ’ª',
+        'å¤ªæ£’äº†ï¼æœŸå¾…ä¸‹ä¸€æ¬¡è¦‹é¢ âœ¨',
+        'è¾›è‹¦äº†ï¼è¦å¥½å¥½ä¼‘æ¯å–” ğŸ¥°',
+        'æœ€å–œæ­¡ä½ å€‘äº†ï¼æ°¸é æ„›ä½ å€‘ ğŸ’–',
+        'è¶…ç´šæœŸå¾…çš„ï¼ä¸€å®šæœƒæ”¯æŒåˆ°åº• ğŸ‰'
     ];
 
-    const context = '§@¬°' + group.name + 'ªº¯»µ·¡A½Ğ¥Í¦¨¤@¥y¼ö±¡¤Íµ½ªº¯d¨¥¡Aªí¹F¹ïÃÀ¤Hªº¤ä«ù»P³ß·R¡C';
+    const context = 'ä½œç‚º' + group.name + 'çš„ç²‰çµ²ï¼Œè«‹ç”Ÿæˆä¸€å¥ç†±æƒ…å‹å–„çš„ç•™è¨€ï¼Œè¡¨é”å°è—äººçš„æ”¯æŒèˆ‡å–œæ„›ã€‚';
 
     const characterId = viewerSettings.selectedCharacterId || null;
     const aiContent = await generateContentWithAI(context, characterId);
@@ -156,7 +156,7 @@ async function generateStoryContent(group) {
     const members = group.artistProfile?.members || [];
     const memberName = members.length > 0 ? randomFrom(members).name : group.name;
 
-    const context = '½Ğ¬°' + memberName + '¥Í¦¨¤@«h­­®É°ÊºAªºÂ²µu¤å¦r¡]20¦r¥H¤º¡^¡A¹³¬O¤é±`¥Í¬¡ªº¤À¨É¡C';
+    const context = 'è«‹ç‚º' + memberName + 'ç”Ÿæˆä¸€å‰‡é™æ™‚å‹•æ…‹çš„ç°¡çŸ­æ–‡å­—ï¼ˆ20å­—ä»¥å…§ï¼‰ï¼Œåƒæ˜¯æ—¥å¸¸ç”Ÿæ´»çš„åˆ†äº«ã€‚';
 
     const characterId = viewerSettings.selectedCharacterId || null;
     const aiContent = await generateContentWithAI(context, characterId);
@@ -166,11 +166,11 @@ async function generateStoryContent(group) {
     }
 
     const storyTemplates = [
-        '¤µ¤Ñªº¤Ñ®ğ ??',
-        '½m²ß¤¤ ??',
-        '¦­¤W¦n¡I',
-        '±ß¦w ??',
-        '¤p¦Y³f¼Ò¦¡ ??'
+        'ä»Šå¤©çš„å¤©æ°£ â˜€ï¸',
+        'ç·´ç¿’ä¸­ ğŸ’ª',
+        'æ—©ä¸Šå¥½ï¼',
+        'æ™šå®‰ ğŸŒ™',
+        'å°åƒè²¨æ¨¡å¼ ğŸ°'
     ];
 
     return randomFrom(storyTemplates);
@@ -205,7 +205,7 @@ function createArtistGroup(name, type, bio) {
         id: 'artist-' + Date.now(),
         name: name.trim(),
         type: type || 'K-POP',
-        bio: bio.trim() || name + ' ªº©x¤èªÀ¸s',
+        bio: bio.trim() || name + ' çš„å®˜æ–¹ç¤¾ç¾¤',
         members: 0,
         online: 0,
         artistProfile: { name: name + ' Official', bio: '', members: [] },
@@ -228,16 +228,16 @@ function renderGroupList() {
     if (isArtistMode) {
         if (activeGroupId) {
             const group = getActiveGroup();
-            groupListEl.innerHTML = '`<button class=`'`group-chip back-btn`'` data-action=`'back-to-cards'><i class='fas fa-chevron-left'></i> ªğ¦^¦Cªí</button><button class='group-chip active'>' + (group?.name || '') + '</button>';
+            groupListEl.innerHTML = '<button class='group-chip back-btn' data-action='back-to-cards'><i class='fas fa-chevron-left'></i> è¿”å›åˆ—è¡¨</button><button class='group-chip active'>' + (group?.name || '') + '</button>';
         } else {
             groupListEl.innerHTML = '';
         }
     } else {
         const joinedGroups = groups.filter(g => joinedGroupIds.includes(g.id));
         if (joinedGroups.length === 0) {
-            groupListEl.innerHTML = '`<button class=`'`group-chip explore-btn`'` data-action=`'explore'>±´¯ÁªÀ¸s</button>';
+            groupListEl.innerHTML = '<button class='group-chip explore-btn' data-action='explore'>æ¢ç´¢ç¤¾ç¾¤</button>';
         } else {
-            groupListEl.innerHTML = joinedGroups.map(g => '<button class='group-chip ' + (g.id === activeGroupId ? 'active' : '') + '' data-group-id='' + g.id + ''>' + g.name + '</button>').join('') + '<button class='group-chip explore-btn' data-action='explore'>+ ±´¯Á</button>';
+            groupListEl.innerHTML = joinedGroups.map(g => '<button class='group-chip ' + (g.id === activeGroupId ? 'active' : '') + '' data-group-id='' + g.id + ''>' + g.name + '</button>').join('') + '<button class='group-chip explore-btn' data-action='explore'>+ æ¢ç´¢</button>';
         }
     }
     return groupListEl;
@@ -252,16 +252,16 @@ function renderStories(group) {
         return { id: member.id, name: member.name, avatar: member.avatar || member.name.slice(0, 2).toUpperCase(), avatarImage: member.avatarImage || '', color: member.color || 'var(--wv-accent)', hasContent: memberPosts.length > 0 };
     }).filter(s => s.hasContent);
     if (storyItems.length === 0) {
-        [{ id: 'default-1', name: '©x¤è', avatar: '©x', color: 'var(--wv-accent)' }, { id: 'default-2', name: '¦¨­û', avatar: '¦¨', color: '#f09433' }].forEach(story => {
+        [{ id: 'default-1', name: 'å®˜æ–¹', avatar: 'å®˜', color: 'var(--wv-accent)' }, { id: 'default-2', name: 'æˆå“¡', avatar: 'æˆ', color: '#f09433' }].forEach(story => {
             const item = createElement('article', 'story-item');
-            item.innerHTML = '`<span class=`'`avatar`'` style=`'background:' + story.color + ''>' + story.avatar + '</span><span class='name'>' + story.name + '</span>';
+            item.innerHTML = '<span class='avatar' style='background:' + story.color + ''>' + story.avatar + '</span><span class='name'>' + story.name + '</span>';
             storyStripEl.appendChild(item);
         });
         return storyStripEl;
     }
     storyItems.forEach(story => {
         const item = createElement('article', 'story-item');
-        item.innerHTML = '`<span class=`'`avatar `'` + (story.avatarImage ? `'has-image' : '') + '' ' + (story.avatarImage ? 'style='background-image:url(\'' + story.avatarImage + '\')'' : 'style='background:' + story.color + ''') + '>' + (story.avatarImage ? '' : story.avatar) + '</span><span class='name'>' + story.name + '</span>';
+        item.innerHTML = '<span class='avatar ' + (story.avatarImage ? 'has-image' : '') + '' ' + (story.avatarImage ? 'style='background-image:url(\'' + story.avatarImage + '\')'' : 'style='background:' + story.color + ''') + '>' + (story.avatarImage ? '' : story.avatar) + '</span><span class='name'>' + story.name + '</span>';
         storyStripEl.appendChild(item);
     });
     return storyStripEl;
@@ -270,16 +270,16 @@ function renderStories(group) {
 function renderFeed(group) {
     const feedEl = createElement('div', 'feed');
     if (!isArtistMode && !isGroupJoined(group.id)) {
-        feedEl.innerHTML = '`<div class=`'`join-prompt`'`><p>¥[¤J¦¹ªÀ¸s«á¤~¯à¬d¬İµo¤å¤º®e</p><button class=`'join-group-btn' data-group-id='' + group.id + ''>¥[¤JªÀ¸s</button></div>';
+        feedEl.innerHTML = '<div class='join-prompt'><p>åŠ å…¥æ­¤ç¤¾ç¾¤å¾Œæ‰èƒ½æŸ¥çœ‹ç™¼æ–‡å…§å®¹</p><button class='join-group-btn' data-group-id='' + group.id + ''>åŠ å…¥ç¤¾ç¾¤</button></div>';
         return feedEl;
     }
     if (!group.posts || group.posts.length === 0) {
-        feedEl.innerHTML = '`<div class=`'`empty-feed`'`><p>¥Ø«eÁÙ¨S¦³µo¤å</p></div>`';
+        feedEl.innerHTML = '<div class='empty-feed'><p>ç›®å‰é‚„æ²’æœ‰ç™¼æ–‡</p></div>';
         return feedEl;
     }
     group.posts.forEach(post => {
         const article = createElement('article', 'post');
-        article.innerHTML = '`<div class=`'`post-head`'`><span>`' + post.author + '</span><span>' + post.time + '</span></div><div class='post-text'>' + post.text + '</div><div class='post-actions'><span>Æg ' + formatCompact(post.likes || 0) + '</span><span>¯d¨¥ ' + formatCompact(post.comments || 0) + '</span></div>';
+        article.innerHTML = '<div class='post-head'><span>' + post.author + '</span><span>' + post.time + '</span></div><div class='post-text'>' + post.text + '</div><div class='post-actions'><span>è®š ' + formatCompact(post.likes || 0) + '</span><span>ç•™è¨€ ' + formatCompact(post.comments || 0) + '</span></div>';
         feedEl.appendChild(article);
     });
     return feedEl;
@@ -289,46 +289,46 @@ function renderHeroCover(group) {
     const heroCover = createElement('div', 'hero-cover card');
     const rolePill = isArtistMode ? '<span class='role-pill'>Artist Mode</span>' : '<span class='role-pill'>Fan Mode</span>';
     if (!group) {
-        if (isArtistMode) heroCover.innerHTML = '`<h2>ÃÀ¤H¤u§@¥x</h2><p>«Ø¥ß¨ÃºŞ²z§Aªº¹ÎÅéªÀ¸s</p><div class=`'`hero-meta`'`></div>`';
-        else if (joinedGroupIds.length === 0) heroCover.innerHTML = '`<h2>©|¥¼¥[¤JªÀ¸s</h2><p>±´¯Á¨Ã¥[¤J§A³ßÅwªºÃÀ¤HªÀ¸s¡A¶}©l°lÂÜ¥L­Ìªº°ÊºA¡I</p><div class=`'`hero-meta`'`></div>`';
+        if (isArtistMode) heroCover.innerHTML = '<h2>è—äººå·¥ä½œå°</h2><p>å»ºç«‹ä¸¦ç®¡ç†ä½ çš„åœ˜é«”ç¤¾ç¾¤</p><div class='hero-meta'></div>';
+        else if (joinedGroupIds.length === 0) heroCover.innerHTML = '<h2>å°šæœªåŠ å…¥ç¤¾ç¾¤</h2><p>æ¢ç´¢ä¸¦åŠ å…¥ä½ å–œæ­¡çš„è—äººç¤¾ç¾¤ï¼Œé–‹å§‹è¿½è¹¤ä»–å€‘çš„å‹•æ…‹ï¼</p><div class='hero-meta'></div>';
         return heroCover;
     }
-    heroCover.innerHTML = '<h2>' + group.name + ' ' + rolePill + '</h2><p>' + group.bio + '</p><span class='type-badge'>' + group.type + '</span><div class='hero-meta'><span>' + formatCompact(group.members || 0) + ' ¦¨­û</span><span>' + formatCompact(group.online || 0) + ' ¦b½u</span></div>';
+    heroCover.innerHTML = '<h2>' + group.name + ' ' + rolePill + '</h2><p>' + group.bio + '</p><span class='type-badge'>' + group.type + '</span><div class='hero-meta'><span>' + formatCompact(group.members || 0) + ' æˆå“¡</span><span>' + formatCompact(group.online || 0) + ' åœ¨ç·š</span></div>';
     return heroCover;
 }
 
 function renderComposer() {
     const composer = createElement('div', 'composer card');
-    composer.innerHTML = '<input type='text' id='post-input' placeholder='' + (isArtistMode ? '¥HÃÀ¤H¨­¤À¦V¯»µ·µo¤å...' : '¦bªÀ¸s¸Ìµo¥¬¶K¤å...') + ''><button id='post-btn'>' + (isArtistMode ? '©x¤èµo¥¬' : 'µo¥¬') + '</button>';
+    composer.innerHTML = '<input type='text' id='post-input' placeholder='' + (isArtistMode ? 'ä»¥è—äººèº«åˆ†å‘ç²‰çµ²ç™¼æ–‡...' : 'åœ¨ç¤¾ç¾¤è£¡ç™¼å¸ƒè²¼æ–‡...') + ''><button id='post-btn'>' + (isArtistMode ? 'å®˜æ–¹ç™¼å¸ƒ' : 'ç™¼å¸ƒ') + '</button>';
     return composer;
 }
 function renderArtistGroupCards() {
     const container = createElement('div', 'artist-group-cards');
     if (groups.length === 0) {
-        container.innerHTML = '`<div class=`'`artist-empty-state`'`><p>©|¥¼«Ø¥ß¥ô¦ó¹ÎÅé</p><button class=`'primary-btn' id='create-artist-group-btn'>«Ø¥ß·s¹ÎÅé</button></div>';
+        container.innerHTML = '<div class='artist-empty-state'><p>å°šæœªå»ºç«‹ä»»ä½•åœ˜é«”</p><button class='primary-btn' id='create-artist-group-btn'>å»ºç«‹æ–°åœ˜é«”</button></div>';
         return container;
     }
     groups.forEach(group => {
         const card = createElement('article', 'artist-group-card');
         card.dataset.groupId = group.id;
-        card.innerHTML = '`<button class=`'`delete-group-btn`'` data-group-id=`'' + group.id + ''><i class='fas fa-trash'></i></button><div class='artist-card-header'><span class='artist-card-type'>' + group.type + '</span><h4>' + group.name + '</h4></div><p class='artist-card-bio'>' + group.bio + '</p><div class='artist-card-meta'><span>' + formatCompact(group.members || 0) + ' ¦¨­û</span><span>' + formatCompact(group.online || 0) + ' ¦b½u</span></div><div class='artist-card-members'>' + (group.artistProfile?.members?.length > 0 ? '¤w³]©w ' + group.artistProfile.members.length + ' ¦ì¦¨­û' : '©|¥¼³]©w¦¨­û') + '</div>';
+        card.innerHTML = '<button class='delete-group-btn' data-group-id='' + group.id + ''><i class='fas fa-trash'></i></button><div class='artist-card-header'><span class='artist-card-type'>' + group.type + '</span><h4>' + group.name + '</h4></div><p class='artist-card-bio'>' + group.bio + '</p><div class='artist-card-meta'><span>' + formatCompact(group.members || 0) + ' æˆå“¡</span><span>' + formatCompact(group.online || 0) + ' åœ¨ç·š</span></div><div class='artist-card-members'>' + (group.artistProfile?.members?.length > 0 ? 'å·²è¨­å®š ' + group.artistProfile.members.length + ' ä½æˆå“¡' : 'å°šæœªè¨­å®šæˆå“¡') + '</div>';
         container.appendChild(card);
     });
     const createBtn = createElement('button', 'secondary-btn create-group-btn');
     createBtn.id = 'create-artist-group-btn';
-    createBtn.innerHTML = '`<i class=`'`fas fa-plus`'`></i> «Ø¥ß·s¹ÎÅé`';
+    createBtn.innerHTML = '<i class='fas fa-plus'></i> å»ºç«‹æ–°åœ˜é«”';
     container.appendChild(createBtn);
     return container;
 }
 
 function renderExploreGroupsPage(onClose) {
     const page = createElement('div', 'explore-groups-page');
-    page.innerHTML = '`<header class=`'`explore-header settings-header`'`><button class=`'icon-btn' id='explore-back-btn'><i class='fas fa-chevron-left'></i></button><h3>±´¯ÁªÀ¸s</h3></header><main class='settings-body'><div class='explore-groups-list'></div></main>';
+    page.innerHTML = '<header class='explore-header settings-header'><button class='icon-btn' id='explore-back-btn'><i class='fas fa-chevron-left'></i></button><h3>æ¢ç´¢ç¤¾ç¾¤</h3></header><main class='settings-body'><div class='explore-groups-list'></div></main>';
     const list = page.querySelector('.explore-groups-list');
     groups.forEach(group => {
         const isJoined = joinedGroupIds.includes(group.id);
         const item = createElement('article', 'explore-group-item');
-        item.innerHTML = '`<div class=`'`explore-group-info`'`><h4>`' + group.name + '</h4><span class='explore-group-type'>' + group.type + '</span><p>' + group.bio + '</p><div class='explore-group-meta'><span>' + formatCompact(group.members || 0) + ' ¦¨­û</span></div></div><button class='' + (isJoined ? 'leave-btn' : 'join-btn') + '' data-group-id='' + group.id + ''>' + (isJoined ? '¤w¥[¤J' : '¥[¤J') + '</button>';
+        item.innerHTML = '<div class='explore-group-info'><h4>' + group.name + '</h4><span class='explore-group-type'>' + group.type + '</span><p>' + group.bio + '</p><div class='explore-group-meta'><span>' + formatCompact(group.members || 0) + ' æˆå“¡</span></div></div><button class='' + (isJoined ? 'leave-btn' : 'join-btn') + '' data-group-id='' + group.id + ''>' + (isJoined ? 'å·²åŠ å…¥' : 'åŠ å…¥') + '</button>';
         list.appendChild(item);
     });
     page.querySelector('#explore-back-btn').onclick = onClose;
@@ -338,13 +338,13 @@ function renderExploreGroupsPage(onClose) {
 function createCreateGroupModal(onConfirm) {
     const modal = createElement('div', 'create-group-modal');
     modal.id = 'create-group-modal';
-    modal.innerHTML = '`<div class=`'`modal-content`'`><h3>«Ø¥ß·s¹ÎÅé</h3><label><span>¹ÎÅé¦WºÙ</span><input type=`'text' id='new-group-name' placeholder='¨Ò¦p¡GLUMEN'></label><label><span>Ãş«¬</span><select id='new-group-type'><option value='K-POP'>K-POP</option><option value='J-POP'>J-POP</option><option value='Band'>Band</option><option value='Solo'>Solo</option><option value='Creator'>Creator</option></select></label><label><span>Â²¤¶</span><textarea id='new-group-bio' rows='2' placeholder='¿é¤J¹ÎÅé¤¶²Ğ'></textarea></label><div class='modal-actions'><button class='secondary-btn' id='cancel-create-group'>¨ú®ø</button><button class='primary-btn' id='confirm-create-group'>«Ø¥ß</button></div></div>';
+    modal.innerHTML = '<div class='modal-content'><h3>å»ºç«‹æ–°åœ˜é«”</h3><label><span>åœ˜é«”åç¨±</span><input type='text' id='new-group-name' placeholder='ä¾‹å¦‚ï¼šLUMEN'></label><label><span>é¡å‹</span><select id='new-group-type'><option value='K-POP'>K-POP</option><option value='J-POP'>J-POP</option><option value='Band'>Band</option><option value='Solo'>Solo</option><option value='Creator'>Creator</option></select></label><label><span>ç°¡ä»‹</span><textarea id='new-group-bio' rows='2' placeholder='è¼¸å…¥åœ˜é«”ä»‹ç´¹'></textarea></label><div class='modal-actions'><button class='secondary-btn' id='cancel-create-group'>å–æ¶ˆ</button><button class='primary-btn' id='confirm-create-group'>å»ºç«‹</button></div></div>';
     modal.querySelector('#cancel-create-group').onclick = () => modal.remove();
     modal.querySelector('#confirm-create-group').onclick = () => {
         const name = modal.querySelector('#new-group-name').value.trim();
         const type = modal.querySelector('#new-group-type').value;
         const bio = modal.querySelector('#new-group-bio').value.trim();
-        if (!name) { createToast('½Ğ¿é¤J¹ÎÅé¦WºÙ'); return; }
+        if (!name) { createToast('è«‹è¼¸å…¥åœ˜é«”åç¨±'); return; }
         const newGroup = createArtistGroup(name, type, bio);
         modal.remove();
         onConfirm(newGroup);
@@ -357,8 +357,8 @@ async function renderCharacterSelector() {
     const container = createElement('div', 'character-selector card');
     const characters = await CharactersDB.getAll();
     
-    let html = '<label class='character-select-label'><span>AI ¨¤¦â¡G</span><select id='character-select'>';
-    html += '<option value=''>¹w³]</option>';
+    let html = '<label class='character-select-label'><span>AI è§’è‰²ï¼š</span><select id='character-select'>';
+    html += '<option value=''>é è¨­</option>';
     characters.forEach(char => {
         const selected = viewerSettings.selectedCharacterId === char.id ? ' selected' : '';
         html += '<option value='' + char.id + ''' + selected + '>' + char.name + '</option>';
@@ -373,7 +373,7 @@ async function renderWeverse(params) {
     const container = createElement('div', 'weverse-app');
     if (isArtistMode) container.classList.add('artist-mode');
     const header = createElement('header', 'wv-header');
-    header.innerHTML = '`<div class=`'`brand`'`><span class=`'brand-dot'></span></div><h1>Weverse</h1><div class='header-actions'><button class='icon-btn' id='user-settings-btn' title='¯»µ·³]©w'><i class='fas fa-user-cog'></i></button><button class='icon-btn hidden' id='artist-settings-btn' title='ÃÀ¤H³]©w'><i class='fas fa-cog'></i></button><button class='icon-btn' id='role-toggle' title='¤Á´«¨¤¦â'><i class='fas fa-exchange-alt'></i></button></div>';
+    header.innerHTML = '<div class='brand'><span class='brand-dot'></span></div><h1>Weverse</h1><div class='header-actions'><button class='icon-btn' id='user-settings-btn' title='ç²‰çµ²è¨­å®š'><i class='fas fa-user-cog'></i></button><button class='icon-btn hidden' id='artist-settings-btn' title='è—äººè¨­å®š'><i class='fas fa-cog'></i></button><button class='icon-btn' id='role-toggle' title='åˆ‡æ›è§’è‰²'><i class='fas fa-exchange-alt'></i></button></div>';
     if (isArtistMode) { header.querySelector('#user-settings-btn').classList.add('hidden'); header.querySelector('#artist-settings-btn').classList.remove('hidden'); }
     container.appendChild(header);
     const main = createElement('main', 'wv-main');
@@ -438,7 +438,7 @@ async function renderWeverse(params) {
         const createGroupBtn = e.target.closest('#create-artist-group-btn');
         if (createGroupBtn) { container.appendChild(createCreateGroupModal((newGroup) => { activeGroupId = newGroup.id; renderUI(); })); return; }
         const deleteGroupBtn = e.target.closest('.delete-group-btn');
-        if (deleteGroupBtn && confirm('½T©w­n§R°£¦¹¹ÎÅé¶Ü¡H')) { deleteArtistGroup(deleteGroupBtn.dataset.groupId); renderUI(); }
+        if (deleteGroupBtn && confirm('ç¢ºå®šè¦åˆªé™¤æ­¤åœ˜é«”å—ï¼Ÿ')) { deleteArtistGroup(deleteGroupBtn.dataset.groupId); renderUI(); }
     };
     const addPost = async () => {
         const input = container.querySelector('#post-input');
@@ -448,7 +448,7 @@ async function renderWeverse(params) {
         currentGroup.posts = currentGroup.posts || [];
 
         let finalText = text;
-        let finalAuthor = isArtistMode ? (currentGroup.artistProfile.name || currentGroup.name + ' Official') : '§A';
+        let finalAuthor = isArtistMode ? (currentGroup.artistProfile.name || currentGroup.name + ' Official') : 'ä½ ';
 
         if (isArtistMode && viewerSettings.aiSourceType !== 'manual') {
             const aiGenerated = await generateArtistPost(currentGroup);
@@ -465,7 +465,7 @@ async function renderWeverse(params) {
         currentGroup.posts.unshift({
             author: finalAuthor,
             text: finalText,
-            time: '­è­è',
+            time: 'å‰›å‰›',
             likes: 0,
             comments: 0
         });

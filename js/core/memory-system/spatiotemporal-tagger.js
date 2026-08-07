@@ -1,21 +1,21 @@
-/**
- * SpatiotemporalTagger - ®ÉªÅ¼Ğµù¾¹
+ï»¿/**
+ * SpatiotemporalTagger - æ™‚ç©ºæ¨™è¨»å™¨
  * 
- * ¬°°O¾Ğ²K¥[®ÉªÅ¸ê°T¡G
- * - ®É¶¡¼Ğ°O¡]µ´¹ï®É¶¡¡B¬Û¹ï®É¶¡¡^
- * - ªÅ¶¡¼Ğ°O¡]¦aÂI¡BÀô¹Ò¡^
- * - ±¡¹Ò¼Ğ°O¡]¬¡°ÊÃş«¬¡^
+ * ç‚ºè¨˜æ†¶æ·»åŠ æ™‚ç©ºè³‡è¨Šï¼š
+ * - æ™‚é–“æ¨™è¨˜ï¼ˆçµ•å°æ™‚é–“ã€ç›¸å°æ™‚é–“ï¼‰
+ * - ç©ºé–“æ¨™è¨˜ï¼ˆåœ°é»ã€ç’°å¢ƒï¼‰
+ * - æƒ…å¢ƒæ¨™è¨˜ï¼ˆæ´»å‹•é¡å‹ï¼‰
  */
 
 export class SpatiotemporalTagger {
     constructor() {
         this.locationPatterns = {
             indoor: [
-                '®a', '©Ğ¶¡', 'ª×«Ç', '«ÈÆU', '¼p©Ğ', '¯D«Ç',
-                '¾Ç®Õ', '±Ğ«Ç', '¿ì¤½«Ç', '¤½¥q',
-                'À\ÆU', '©@°ØÆU', '°s§a', '°Ó©±', '¶W¥«',
-                'Âå°|', '¹Ï®ÑÀ]', '³Õª«À]', '¹q¼v°|', '¼@°|',
-                '®ÈÀ]', '¶º©±', '±JªÙ',
+                'å®¶', 'æˆ¿é–“', 'è‡¥å®¤', 'å®¢å»³', 'å»šæˆ¿', 'æµ´å®¤',
+                'å­¸æ ¡', 'æ•™å®¤', 'è¾¦å…¬å®¤', 'å…¬å¸',
+                'é¤å»³', 'å’–å•¡å»³', 'é…’å§', 'å•†åº—', 'è¶…å¸‚',
+                'é†«é™¢', 'åœ–æ›¸é¤¨', 'åšç‰©é¤¨', 'é›»å½±é™¢', 'åŠ‡é™¢',
+                'æ—…é¤¨', 'é£¯åº—', 'å®¿èˆ',
                 'home', 'room', 'bedroom', 'living room', 'kitchen', 'bathroom',
                 'school', 'classroom', 'office', 'company',
                 'restaurant', 'cafe', 'bar', 'shop', 'store',
@@ -23,48 +23,48 @@ export class SpatiotemporalTagger {
                 'hotel', 'dorm'
             ],
             outdoor: [
-                '¤½¶é', 'ªá¶é', 'µó¹D', '¸ô', '¼s³õ',
-                '®üÃä', '®üÅy', '¤s¤W', '´ËªL', '¥Ğ³¥',
-                '¾Ş³õ', '¹B°Ê³õ', '²y³õ',
+                'å…¬åœ’', 'èŠ±åœ’', 'è¡—é“', 'è·¯', 'å»£å ´',
+                'æµ·é‚Š', 'æµ·ç˜', 'å±±ä¸Š', 'æ£®æ—', 'ç”°é‡',
+                'æ“å ´', 'é‹å‹•å ´', 'çƒå ´',
                 'park', 'garden', 'street', 'road', 'square',
                 'beach', 'mountain', 'forest', 'field',
                 'playground', 'stadium'
             ],
             transport: [
-                '¨®', '¨T¨®', '¤½¨®', '±¶¹B', '¦aÅK', '¤õ¨®', '­¸¾÷',
-                '­pµ{¨®', 'Uber',
+                'è»Š', 'æ±½è»Š', 'å…¬è»Š', 'æ·é‹', 'åœ°éµ', 'ç«è»Š', 'é£›æ©Ÿ',
+                'è¨ˆç¨‹è»Š', 'Uber',
                 'car', 'bus', 'subway', 'metro', 'train', 'plane', 'taxi'
             ]
         };
         
         this.timePatterns = {
-            morning: ['¦­¤W', '¦­±á', '¤W¤È', 'morning'],
-            noon: ['¤¤¤È', '¥¿¤È', 'noon'],
-            afternoon: ['¤U¤È', 'afternoon'],
-            evening: ['³Ä±ß', '¶À©ü', 'evening'],
-            night: ['±ß¤W', '©]±ß', '²`©]', 'night', 'midnight'],
-            dawn: ['­â±á', '¾¤©ú', 'dawn']
+            morning: ['æ—©ä¸Š', 'æ—©æ™¨', 'ä¸Šåˆ', 'morning'],
+            noon: ['ä¸­åˆ', 'æ­£åˆ', 'noon'],
+            afternoon: ['ä¸‹åˆ', 'afternoon'],
+            evening: ['å‚æ™š', 'é»ƒæ˜', 'evening'],
+            night: ['æ™šä¸Š', 'å¤œæ™š', 'æ·±å¤œ', 'night', 'midnight'],
+            dawn: ['å‡Œæ™¨', 'é»æ˜', 'dawn']
         };
         
         this.activityPatterns = {
-            dining: ['¦Y', '³Ü', '¥ÎÀ\', '¤ÈÀ\', '±ßÀ\', '¦­À\', 'eat', 'drink', 'dinner', 'lunch', 'breakfast'],
-            working: ['¤u§@', '¤W¯Z', '¶}·|', '³ø§i', 'work', 'meeting', 'report'],
-            studying: ['Åª®Ñ', '¾Ç²ß', '¦Ò¸Õ', '¼g§@·~', 'study', 'learn', 'exam', 'homework'],
-            exercising: ['¹B°Ê', '°·¨­', '¶]¨B', '´åªa', 'exercise', 'gym', 'run', 'swim'],
-            shopping: ['ÁÊª«', '³}µó', '¶R', 'shopping', 'buy'],
-            traveling: ['®È¦æ', '®È¹C', '¥X¹C', 'travel', 'trip', 'tour'],
-            resting: ['¥ğ®§', 'ºÎÄ±', '©ñÃP', 'rest', 'sleep', 'relax'],
-            socializing: ['²á¤Ñ', '»E·|', '¬ù·|', 'chat', 'party', 'date', 'hangout'],
-            entertainment: ['¬İ¹q¼v', 'Å¥­µ¼Ö', 'ª±¹CÀ¸', 'movie', 'music', 'game']
+            dining: ['åƒ', 'å–', 'ç”¨é¤', 'åˆé¤', 'æ™šé¤', 'æ—©é¤', 'eat', 'drink', 'dinner', 'lunch', 'breakfast'],
+            working: ['å·¥ä½œ', 'ä¸Šç­', 'é–‹æœƒ', 'å ±å‘Š', 'work', 'meeting', 'report'],
+            studying: ['è®€æ›¸', 'å­¸ç¿’', 'è€ƒè©¦', 'å¯«ä½œæ¥­', 'study', 'learn', 'exam', 'homework'],
+            exercising: ['é‹å‹•', 'å¥èº«', 'è·‘æ­¥', 'æ¸¸æ³³', 'exercise', 'gym', 'run', 'swim'],
+            shopping: ['è³¼ç‰©', 'é€›è¡—', 'è²·', 'shopping', 'buy'],
+            traveling: ['æ—…è¡Œ', 'æ—…éŠ', 'å‡ºéŠ', 'travel', 'trip', 'tour'],
+            resting: ['ä¼‘æ¯', 'ç¡è¦º', 'æ”¾é¬†', 'rest', 'sleep', 'relax'],
+            socializing: ['èŠå¤©', 'èšæœƒ', 'ç´„æœƒ', 'chat', 'party', 'date', 'hangout'],
+            entertainment: ['çœ‹é›»å½±', 'è½éŸ³æ¨‚', 'ç©éŠæˆ²', 'movie', 'music', 'game']
         };
         
         this.contextKeywords = {
-            romantic: ['¬ù·|', '®öº©', '¿Ë§k', '¾Ö©ê', 'date', 'romantic', 'kiss', 'hug'],
-            friendly: ['ªB¤Í', '²á¤Ñ', '»E·|', 'friend', 'chat', 'party'],
-            professional: ['¤u§@', '·|Ä³', '³ø§i', 'work', 'meeting', 'report'],
-            casual: ['ÀH·N', '©ñÃP', '¥ğ¶¢', 'casual', 'relax', 'leisure'],
-            intimate: ['¿Ë±K', '¨p±K', '¿Ëªñ', 'intimate', 'private'],
-            conflict: ['ª§§n', '½Ä¬ğ', '§n¬[', 'fight', 'conflict', 'argue']
+            romantic: ['ç´„æœƒ', 'æµªæ¼«', 'è¦ªå»', 'æ“æŠ±', 'date', 'romantic', 'kiss', 'hug'],
+            friendly: ['æœ‹å‹', 'èŠå¤©', 'èšæœƒ', 'friend', 'chat', 'party'],
+            professional: ['å·¥ä½œ', 'æœƒè­°', 'å ±å‘Š', 'work', 'meeting', 'report'],
+            casual: ['éš¨æ„', 'æ”¾é¬†', 'ä¼‘é–’', 'casual', 'relax', 'leisure'],
+            intimate: ['è¦ªå¯†', 'ç§å¯†', 'è¦ªè¿‘', 'intimate', 'private'],
+            conflict: ['çˆ­åµ', 'è¡çª', 'åµæ¶', 'fight', 'conflict', 'argue']
         };
     }
     
@@ -103,15 +103,15 @@ export class SpatiotemporalTagger {
         }
         
         const relativePatterns = [
-            { pattern: /­è¤~|­è­è|just now/i, value: 'just_now' },
-            { pattern: /¤µ¤Ñ|today/i, value: 'today' },
-            { pattern: /¬Q¤Ñ|yesterday/i, value: 'yesterday' },
-            { pattern: /«e¤Ñ/i, value: 'day_before_yesterday' },
-            { pattern: /©ú¤Ñ|tomorrow/i, value: 'tomorrow' },
-            { pattern: /¤W¶g|¤W­Ó¬P´Á|last week/i, value: 'last_week' },
-            { pattern: /¤U¶g|¤U­Ó¬P´Á|next week/i, value: 'next_week' },
-            { pattern: /¤W­Ó¤ë|last month/i, value: 'last_month' },
-            { pattern: /¤U­Ó¤ë|next month/i, value: 'next_month' }
+            { pattern: /å‰›æ‰|å‰›å‰›|just now/i, value: 'just_now' },
+            { pattern: /ä»Šå¤©|today/i, value: 'today' },
+            { pattern: /æ˜¨å¤©|yesterday/i, value: 'yesterday' },
+            { pattern: /å‰å¤©/i, value: 'day_before_yesterday' },
+            { pattern: /æ˜å¤©|tomorrow/i, value: 'tomorrow' },
+            { pattern: /ä¸Šé€±|ä¸Šå€‹æ˜ŸæœŸ|last week/i, value: 'last_week' },
+            { pattern: /ä¸‹é€±|ä¸‹å€‹æ˜ŸæœŸ|next week/i, value: 'next_week' },
+            { pattern: /ä¸Šå€‹æœˆ|last month/i, value: 'last_month' },
+            { pattern: /ä¸‹å€‹æœˆ|next month/i, value: 'next_month' }
         ];
         
         for (const { pattern, value } of relativePatterns) {
@@ -150,12 +150,12 @@ export class SpatiotemporalTagger {
         const lowerText = text.toLowerCase();
         
         const environmentKeywords = {
-            indoor: ['«Ç¤º', '¸Ì­±', '¸Ì', 'inside', 'indoor'],
-            outdoor: ['«Ç¥~', '¥~­±', '¥~', 'outside', 'outdoor'],
-            crowded: ['¾ÖÀ½', '¤H¦h', '¼ö¾x', 'crowded', 'busy'],
-            quiet: ['¦wÀR', '²MÀR', '¦w¹ç', 'quiet', 'peaceful'],
-            dark: ['¶Â·t', '©ü·t', '·t', 'dark'],
-            bright: ['©ú«G', '¥ú«G', '«G', 'bright', 'light']
+            indoor: ['å®¤å…§', 'è£¡é¢', 'è£¡', 'inside', 'indoor'],
+            outdoor: ['å®¤å¤–', 'å¤–é¢', 'å¤–', 'outside', 'outdoor'],
+            crowded: ['æ“æ“ ', 'äººå¤š', 'ç†±é¬§', 'crowded', 'busy'],
+            quiet: ['å®‰éœ', 'æ¸…éœ', 'å®‰å¯§', 'quiet', 'peaceful'],
+            dark: ['é»‘æš—', 'æ˜æš—', 'æš—', 'dark'],
+            bright: ['æ˜äº®', 'å…‰äº®', 'äº®', 'bright', 'light']
         };
         
         const found = [];
@@ -204,23 +204,23 @@ export class SpatiotemporalTagger {
         const parts = [];
         
         if (data.relativeTime) {
-            parts.push(`®É¶¡: ${this.translateTime(data.relativeTime)}`);
+            parts.push(`æ™‚é–“: ${this.translateTime(data.relativeTime)}`);
         }
         
         if (data.location) {
-            parts.push(`¦aÂI: ${data.location}`);
+            parts.push(`åœ°é»: ${data.location}`);
         }
         
         if (data.environment) {
-            parts.push(`Àô¹Ò: ${data.environment.join(', ')}`);
+            parts.push(`ç’°å¢ƒ: ${data.environment.join(', ')}`);
         }
         
         if (data.activity) {
-            parts.push(`¬¡°Ê: ${this.translateActivity(data.activity)}`);
+            parts.push(`æ´»å‹•: ${this.translateActivity(data.activity)}`);
         }
         
         if (data.context) {
-            parts.push(`±¡¹Ò: ${this.translateContext(data.context)}`);
+            parts.push(`æƒ…å¢ƒ: ${this.translateContext(data.context)}`);
         }
         
         return parts.join('\n');
@@ -228,21 +228,21 @@ export class SpatiotemporalTagger {
     
     translateTime(time) {
         const translations = {
-            morning: '¦­¤W',
-            noon: '¤¤¤È',
-            afternoon: '¤U¤È',
-            evening: '³Ä±ß',
-            night: '±ß¤W',
-            dawn: '­â±á',
-            just_now: '­è¤~',
-            today: '¤µ¤Ñ',
-            yesterday: '¬Q¤Ñ',
-            day_before_yesterday: '«e¤Ñ',
-            tomorrow: '©ú¤Ñ',
-            last_week: '¤W¶g',
-            next_week: '¤U¶g',
-            last_month: '¤W­Ó¤ë',
-            next_month: '¤U­Ó¤ë'
+            morning: 'æ—©ä¸Š',
+            noon: 'ä¸­åˆ',
+            afternoon: 'ä¸‹åˆ',
+            evening: 'å‚æ™š',
+            night: 'æ™šä¸Š',
+            dawn: 'å‡Œæ™¨',
+            just_now: 'å‰›æ‰',
+            today: 'ä»Šå¤©',
+            yesterday: 'æ˜¨å¤©',
+            day_before_yesterday: 'å‰å¤©',
+            tomorrow: 'æ˜å¤©',
+            last_week: 'ä¸Šé€±',
+            next_week: 'ä¸‹é€±',
+            last_month: 'ä¸Šå€‹æœˆ',
+            next_month: 'ä¸‹å€‹æœˆ'
         };
         
         return translations[time] || time;
@@ -250,15 +250,15 @@ export class SpatiotemporalTagger {
     
     translateActivity(activity) {
         const translations = {
-            dining: '¥ÎÀ\',
-            working: '¤u§@',
-            studying: '¾Ç²ß',
-            exercising: '¹B°Ê',
-            shopping: 'ÁÊª«',
-            traveling: '®È¦æ',
-            resting: '¥ğ®§',
-            socializing: 'ªÀ¥æ',
-            entertainment: '®T¼Ö'
+            dining: 'ç”¨é¤',
+            working: 'å·¥ä½œ',
+            studying: 'å­¸ç¿’',
+            exercising: 'é‹å‹•',
+            shopping: 'è³¼ç‰©',
+            traveling: 'æ—…è¡Œ',
+            resting: 'ä¼‘æ¯',
+            socializing: 'ç¤¾äº¤',
+            entertainment: 'å¨›æ¨‚'
         };
         
         return translations[activity] || activity;
@@ -266,12 +266,12 @@ export class SpatiotemporalTagger {
     
     translateContext(context) {
         const translations = {
-            romantic: '®öº©',
-            friendly: '¤Í¦n',
-            professional: '±M·~',
-            casual: '¥ğ¶¢',
-            intimate: '¿Ë±K',
-            conflict: '½Ä¬ğ'
+            romantic: 'æµªæ¼«',
+            friendly: 'å‹å¥½',
+            professional: 'å°ˆæ¥­',
+            casual: 'ä¼‘é–’',
+            intimate: 'è¦ªå¯†',
+            conflict: 'è¡çª'
         };
         
         return translations[context] || context;
