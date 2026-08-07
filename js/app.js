@@ -14,28 +14,28 @@ window.showError = function(errorInfo) {
         : errorInfo;
     console.error('[App Error]', info);
     createErrorModal({
-        title: info.title || '�o�Ϳ��~',
-        message: info.message || '�������~',
+        title: info.title || '發生錯誤',
+        message: info.message || '未知錯誤',
         details: info.details || '',
         timestamp: info.timestamp || new Date().toISOString()
     });
 };
 
-// �������~�B�z
+// 全局錯誤處理
 window.addEventListener('error', (event) => {
-    console.error('[�������~]', event.error);
+    console.error('[全局錯誤]', event.error);
     window.showError({
-        message: event.error?.message || '�������~',
-        title: '���ε{�����~',
+        message: event.error?.message || '未知錯誤',
+        title: '應用程式錯誤',
         details: event.error?.stack || JSON.stringify(event.error)
     });
 });
 
 window.addEventListener('unhandledrejection', (event) => {
-    console.error('[���B�z�� Promise �ڵ�]', event.reason);
+    console.error('[未處理的 Promise 拒絕]', event.reason);
     window.showError({
         message: event.reason?.message || String(event.reason),
-        title: '���B�ާ@���~',
+        title: '異步操作錯誤',
         details: event.reason?.stack || ''
     });
 });
@@ -59,40 +59,40 @@ const App = {
     
     async init() {
         try {
-            // �˴� Safari PWA
+            // 檢測 Safari PWA
             const isSafariPWA = window.navigator.standalone === true;
             const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
             
-            console.log('[App] ����˴�:', {
+            console.log('[App] 環境檢測:', {
                 isSafariPWA,
                 isSafari,
                 userAgent: navigator.userAgent,
                 timestamp: new Date().toISOString()
             });
             
-            // �p�G�O Safari PWA�A�K�[�S��B�z
+            // 如果是 Safari PWA，添加特殊處理
             if (isSafariPWA) {
-                console.log('[App] Safari PWA �Ҧ��A�ҥέݮe�ʳB�z');
+                console.log('[App] Safari PWA 模式，啟用兼容性處理');
             }
             
             this.isMobile = isMobileDevice();
-            console.log('[App] �]������:', this.isMobile ? '���ʳ]��' : '�ୱ�]��');
+            console.log('[App] 設備類型:', this.isMobile ? '移動設備' : '桌面設備');
             
             if (!this.isMobile) {
                 this.createPhoneFrame();
             }
             
-            console.log('[App] �}�l��l�Ƽƾڮw...');
+            console.log('[App] 開始初始化數據庫...');
             await initDB();
-            console.log('[App] �ƾڮw��l�Ʀ��\');
+            console.log('[App] 數據庫初始化成功');
             
-            console.log('[App] ���J�]�w...');
+            console.log('[App] 載入設定...');
             const allSettings = await SettingsDB.getAll();
             const defaults = SettingsDB.getDefaults();
             const mergedSettings = { ...defaults, ...allSettings };
-            console.log('[App] �]�w���J����');
+            console.log('[App] 設定載入完成');
             
-            console.log('[App] ��l�ưO�Шt��...');
+            console.log('[App] 初始化記憶系統...');
             const memorySystem = new MemorySystem({
                 decayRate: mergedSettings.memory_decay_rate,
                 embedding: {
@@ -111,14 +111,14 @@ const App = {
             });
             this.memorySystem = memorySystem;
             if (mergedSettings.memory_enabled) {
-                console.log('[App] �ҰʰO�Шt��...');
+                console.log('[App] 啟動記憶系統...');
                 memorySystem.start();
             }
-            console.log('[App] �O�Шt�Ϊ�l�Ƨ���');
+            console.log('[App] 記憶系統初始化完成');
             
-            console.log('[App] ���U���...');
+            console.log('[App] 註冊路由...');
             await registerRoutes();
-            console.log('[App] ��ѵ��U����');
+            console.log('[App] 路由註冊完成');
             
             this.showLockScreen();
             
@@ -138,8 +138,8 @@ const App = {
                     } catch (err) {
                         console.error('Failed to create home screen:', err);
                         window.showError({
-                            message: '�L�k�ЫإD�e��: ' + err.message,
-                            title: '�D�e�����~',
+                            message: '無法創建主畫面: ' + err.message,
+                            title: '主畫面錯誤',
                             details: err.stack
                         });
                     }
@@ -148,21 +148,21 @@ const App = {
             
             Router.start(true);
             
-            console.log('[App] ��l�Ƭ��� API...');
+            console.log('[App] 初始化活動 API...');
             initActivityAPI();
             
-            console.log('[App] �Ұʵ��L����i�[����...');
+            console.log('[App] 啟動紫微斗數懶加載器...');
             ziweiLazyLoader.startDayChangeDetection();
             
             this.registerServiceWorker();
             this.setupInstallPrompt();
             
-            console.log('[App] ���Ϊ�l�Ƨ���');
+            console.log('[App] 應用初始化完成');
         } catch (error) {
-            console.error('[App] ��l�ƥ���:', error);
+            console.error('[App] 初始化失敗:', error);
             window.showError({
-                message: '���Ϊ�l�ƥ���: ' + error.message,
-                title: '��l�ƿ��~',
+                message: '應用初始化失敗: ' + error.message,
+                title: '初始化錯誤',
                 details: error.stack
             });
         }

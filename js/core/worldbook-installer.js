@@ -1,4 +1,4 @@
-import { GlobalSettingsDB, KeywordSettingsDB, SettingsDB } from '../db.js';
+ï»¿import { GlobalSettingsDB, KeywordSettingsDB, SettingsDB } from '../db.js';
 
 const CATEGORY_PRIORITY_MAP = {
     'sx_worldbook_cot': 'front',
@@ -28,9 +28,9 @@ class WorldbookInstaller {
             'deepseek', 'deepseek2', 'glm', 'kimi', 'kimi25', 'minimax',
             'sonnet', 'grok42', '5.2', 'literary_style', 'intimate',
             'eating', 'mino', 'universal_reset',
-            '¶H¤ú¶ğ_±ø¥ó¹w³]', '¶H¤ú¶ğ_®Ö¤ß¹w³]', '¶H¤ú¶ğ_¼@³õ¹w³]',
-            '¸¿¼¯©Ô_lofter', '¸¿¼¯©Ô_chat',
-            '¤ëÅª_theater', '¤ëÅª_lofter', '¤ëÅª_chat',
+            'è±¡ç‰™å¡”_æ¢ä»¶é è¨­', 'è±¡ç‰™å¡”_æ ¸å¿ƒé è¨­', 'è±¡ç‰™å¡”_åŠ‡å ´é è¨­',
+            'è›¾æ‘©æ‹‰_lofter', 'è›¾æ‘©æ‹‰_chat',
+            'æœˆè®€_theater', 'æœˆè®€_lofter', 'æœˆè®€_chat',
             'xeno_male', 'xeno_female', 'xeno_common',
             'toy_male', 'toy_female',
             'outfit_male', 'outfit_female',
@@ -46,7 +46,7 @@ class WorldbookInstaller {
     async loadWorldbook(worldbookId) {
         const response = await fetch(`worldbook/${worldbookId}_worldbook.json`);
         if (!response.ok) {
-            throw new Error(`µLªk¸ü¤J¥@¬É®Ñ: ${worldbookId}`);
+            throw new Error(`ç„¡æ³•è¼‰å…¥ä¸–ç•Œæ›¸: ${worldbookId}`);
         }
         return await response.json();
     }

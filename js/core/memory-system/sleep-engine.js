@@ -1,9 +1,9 @@
-/**
- * SleepEngine - ºÎ¯v¶g´Á¤ÞÀº
+ï»¿/**
+ * SleepEngine - ç¡çœ é€±æœŸå¼•æ“Ž
  * 
- * ¼ÒÀÀºÎ¯v¶g´Á³B²z°O¾Ð¡G
- * - ºCªiºÎ¯v¡G³B²z³¯­z©Ê°O¾Ð
- * - REM ºÎ¯v¡G³B²z±¡ºü»Pµ{§Ç©Ê°O¾Ð
+ * æ¨¡æ“¬ç¡çœ é€±æœŸè™•ç†è¨˜æ†¶ï¼š
+ * - æ…¢æ³¢ç¡çœ ï¼šè™•ç†é™³è¿°æ€§è¨˜æ†¶
+ * - REM ç¡çœ ï¼šè™•ç†æƒ…ç·’èˆ‡ç¨‹åºæ€§è¨˜æ†¶
  */
 
 export class SleepEngine {
@@ -24,11 +24,11 @@ export class SleepEngine {
     
     start() {
         if (!this.settings.enabled) {
-            console.log('[SleepEngine] ºÎ¯v¶g´Á¤w°±¥Î');
+            console.log('[SleepEngine] ç¡çœ é€±æœŸå·²åœç”¨');
             return;
         }
         
-        console.log(`[SleepEngine] ±Ò°ÊºÎ¯v¶g´ÁºÊ±±: ${this.settings.startTime} - ${this.settings.endTime}`);
+        console.log(`[SleepEngine] å•Ÿå‹•ç¡çœ é€±æœŸç›£æŽ§: ${this.settings.startTime} - ${this.settings.endTime}`);
         
         this.intervalId = setInterval(() => {
             this.checkSleepCycle();
@@ -43,7 +43,7 @@ export class SleepEngine {
             this.intervalId = null;
         }
         
-        console.log('[SleepEngine] ºÎ¯v¶g´ÁºÊ±±¤w°±¤î');
+        console.log('[SleepEngine] ç¡çœ é€±æœŸç›£æŽ§å·²åœæ­¢');
     }
     
     checkSleepCycle() {
@@ -80,26 +80,26 @@ export class SleepEngine {
     
     async enterSleep() {
         this.isSleeping = true;
-        console.log('[SleepEngine] ¶i¤JºÎ¯v¶g´Á');
+        console.log('[SleepEngine] é€²å…¥ç¡çœ é€±æœŸ');
         
         for (const callback of this.sleepCallbacks) {
             try {
                 await callback();
             } catch (error) {
-                console.error('[SleepEngine] ºÎ¯v¦^½Õ°õ¦æ¥¢±Ñ:', error);
+                console.error('[SleepEngine] ç¡çœ å›žèª¿åŸ·è¡Œå¤±æ•—:', error);
             }
         }
     }
     
     async exitSleep() {
         this.isSleeping = false;
-        console.log('[SleepEngine] °h¥XºÎ¯v¶g´Á');
+        console.log('[SleepEngine] é€€å‡ºç¡çœ é€±æœŸ');
         
         for (const callback of this.wakeCallbacks) {
             try {
                 await callback();
             } catch (error) {
-                console.error('[SleepEngine] ³ê¿ô¦^½Õ°õ¦æ¥¢±Ñ:', error);
+                console.error('[SleepEngine] å–šé†’å›žèª¿åŸ·è¡Œå¤±æ•—:', error);
             }
         }
     }
@@ -117,7 +117,7 @@ export class SleepEngine {
     }
     
     async triggerManualSleep() {
-        console.log('[SleepEngine] ¤â°ÊÄ²µoºÎ¯v¶g´Á');
+        console.log('[SleepEngine] æ‰‹å‹•è§¸ç™¼ç¡çœ é€±æœŸ');
         await this.enterSleep();
         
         setTimeout(async () => {
@@ -131,7 +131,7 @@ export class SleepEngine {
             ...newSettings
         };
         
-        console.log(`[SleepEngine] ³]©w¤w§ó·s: ${this.settings.startTime} - ${this.settings.endTime}`);
+        console.log(`[SleepEngine] è¨­å®šå·²æ›´æ–°: ${this.settings.startTime} - ${this.settings.endTime}`);
     }
     
     getStatus() {
@@ -182,7 +182,7 @@ export class SleepEngine {
     
     getSleepPhase() {
         if (!this.isSleeping) {
-            return { phase: 'awake', description: '²M¿ôª¬ºA' };
+            return { phase: 'awake', description: 'æ¸…é†’ç‹€æ…‹' };
         }
         
         const now = new Date();
@@ -204,15 +204,15 @@ export class SleepEngine {
         const progress = elapsedMs / totalSleepMs;
         
         if (progress < 0.2) {
-            return { phase: 'nrem1', description: '²LºÎ¯v¡]NREM 1¡^' };
+            return { phase: 'nrem1', description: 'æ·ºç¡çœ ï¼ˆNREM 1ï¼‰' };
         } else if (progress < 0.4) {
-            return { phase: 'nrem2', description: '²LºÎ¯v¡]NREM 2¡^' };
+            return { phase: 'nrem2', description: 'æ·ºç¡çœ ï¼ˆNREM 2ï¼‰' };
         } else if (progress < 0.6) {
-            return { phase: 'nrem3', description: '²`ºÎ¯v¡]NREM 3 / ºCªiºÎ¯v¡^' };
+            return { phase: 'nrem3', description: 'æ·±ç¡çœ ï¼ˆNREM 3 / æ…¢æ³¢ç¡çœ ï¼‰' };
         } else if (progress < 0.8) {
-            return { phase: 'rem', description: '§Ö³t°Ê²´ºÎ¯v¡]REM¡^' };
+            return { phase: 'rem', description: 'å¿«é€Ÿå‹•çœ¼ç¡çœ ï¼ˆREMï¼‰' };
         } else {
-            return { phase: 'nrem2', description: '²LºÎ¯v¡]NREM 2¡^' };
+            return { phase: 'nrem2', description: 'æ·ºç¡çœ ï¼ˆNREM 2ï¼‰' };
         }
     }
 }

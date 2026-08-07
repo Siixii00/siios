@@ -1,4 +1,4 @@
-import { SensoryExtractor } from './sensory-extractor.js';
+Ôªøimport { SensoryExtractor } from './sensory-extractor.js';
 import { EmotionTagger } from './emotion-tagger.js';
 import { SpatiotemporalTagger } from './spatiotemporal-tagger.js';
 import { DecayEngine } from './decay-engine.js';
@@ -78,7 +78,7 @@ export class MemorySystem {
             source_subtype: 'chat',
             // Memory levels
             memory_level: 'full',
-            meta_content: `¶bπÔ∏‹§§•Ê¥´§F∞TÆß`,
+            meta_content: `Âú®Â∞çË©±‰∏≠‰∫§Êèõ‰∫ÜË®äÊÅØ`,
             full_content: message,
             // Theater binding (will be updated by chat settings)
             theater_ids: [],

@@ -1,4 +1,4 @@
-import { createIntelligentMCP } from './mcp-intelligence/index.js';
+ï»¿import { createIntelligentMCP } from './mcp-intelligence/index.js';
 import { WikiRecordsDB } from '../db.js';
 
 export class ChatMCPHandler {
@@ -73,10 +73,10 @@ export class ChatMCPHandler {
 
     shouldSaveToWiki(userMessage, recentMessages) {
         const importantKeywords = [
-            '·Q­n', '§Æ±æ', '¥Ø¼Ğ', '­p¹º', '¦s¿ú', '¶R', '¹Ú·Q',
-            '³ßÅw', '°Q¹½', '·R¦Y', '¤£¦Y', '¹L±Ó',
-            '¥Í¤é', '¬ö©À¤é', '­«­n', '¤é´Á',
-            '¹q¸Ü', '¦a§}', '±K½X', '±b¸¹'
+            'æƒ³è¦', 'å¸Œæœ›', 'ç›®æ¨™', 'è¨ˆåŠƒ', 'å­˜éŒ¢', 'è²·', 'å¤¢æƒ³',
+            'å–œæ­¡', 'è¨å­', 'æ„›åƒ', 'ä¸åƒ', 'éæ•',
+            'ç”Ÿæ—¥', 'ç´€å¿µæ—¥', 'é‡è¦', 'æ—¥æœŸ',
+            'é›»è©±', 'åœ°å€', 'å¯†ç¢¼', 'å¸³è™Ÿ'
         ];
 
         const hasImportantInfo = importantKeywords.some(kw => 
@@ -99,28 +99,28 @@ export class ChatMCPHandler {
     extractWikiContent(userMessage, recentMessages) {
         const categories = {
             financial: {
-                keywords: ['¦s¿ú', '²z°]', '§ë¸ê', '¥Ø¼Ğ', '¦s´Ú'],
-                title: '²z°]¥Ø¼Ğ',
+                keywords: ['å­˜éŒ¢', 'ç†è²¡', 'æŠ•è³‡', 'ç›®æ¨™', 'å­˜æ¬¾'],
+                title: 'ç†è²¡ç›®æ¨™',
                 type: 'financial_goal'
             },
             preference: {
-                keywords: ['³ßÅw', '·R¦Y', '°Q¹½', '¤£¦Y', '¹L±Ó'],
-                title: '°¾¦n»P¸T§Ò',
+                keywords: ['å–œæ­¡', 'æ„›åƒ', 'è¨å­', 'ä¸åƒ', 'éæ•'],
+                title: 'åå¥½èˆ‡ç¦å¿Œ',
                 type: 'preference'
             },
             important_date: {
-                keywords: ['¥Í¤é', '¬ö©À¤é', '­«­n', '¤é´Á'],
-                title: '­«­n¤é´Á',
+                keywords: ['ç”Ÿæ—¥', 'ç´€å¿µæ—¥', 'é‡è¦', 'æ—¥æœŸ'],
+                title: 'é‡è¦æ—¥æœŸ',
                 type: 'important_date'
             },
             plan: {
-                keywords: ['­p¹º', '·Q­n', '§Æ±æ', '¥Ø¼Ğ', '¹Ú·Q'],
-                title: '­p¹º»P¥Ø¼Ğ',
+                keywords: ['è¨ˆåŠƒ', 'æƒ³è¦', 'å¸Œæœ›', 'ç›®æ¨™', 'å¤¢æƒ³'],
+                title: 'è¨ˆåŠƒèˆ‡ç›®æ¨™',
                 type: 'plan'
             },
             contact: {
-                keywords: ['¹q¸Ü', '¦a§}', '±b¸¹'],
-                title: 'Ápµ¸¸ê°T',
+                keywords: ['é›»è©±', 'åœ°å€', 'å¸³è™Ÿ'],
+                title: 'è¯çµ¡è³‡è¨Š',
                 type: 'contact_info'
             }
         };
@@ -143,7 +143,7 @@ export class ChatMCPHandler {
         }
 
         return {
-            title: '­«­n¸ê°T',
+            title: 'é‡è¦è³‡è¨Š',
             content: userMessage,
             type: 'general',
             keywords: [],
@@ -167,11 +167,11 @@ export class ChatMCPHandler {
                 updated_at: new Date().toISOString()
             });
 
-            console.log('[Chat MCP] ¤w¦Û°ÊÀx¦s¨ì Wiki:', entry.title);
+            console.log('[Chat MCP] å·²è‡ªå‹•å„²å­˜åˆ° Wiki:', entry.title);
             
             return entry;
         } catch (error) {
-            console.error('[Chat MCP] ¦Û°ÊÀx¦s Wiki ¥¢±Ñ:', error);
+            console.error('[Chat MCP] è‡ªå‹•å„²å­˜ Wiki å¤±æ•—:', error);
             return null;
         }
     }
@@ -185,7 +185,7 @@ export class ChatMCPHandler {
             const result = await this.invoker.invokeTool(toolName, args);
             return result;
         } catch (error) {
-            console.error('[Chat MCP] ¤u¨ã°õ¦æ¥¢±Ñ:', error);
+            console.error('[Chat MCP] å·¥å…·åŸ·è¡Œå¤±æ•—:', error);
             throw error;
         }
     }
@@ -237,12 +237,12 @@ export class ChatMCPHandler {
         if (!this.autoMCPEnabled) return false;
 
         const mcpKeywords = [
-            '¶R', '­q', 'ÁÊ¶R', '¤U³æ', '­qÁÊ',
-            '¤£µÎªA', 'µh', '¥Í¯f', '¦YÃÄ',
-            '¸g´Á', '¥Í²z´Á',
-            '§Ñ°O', '´£¿ô', '°O±o',
-            '¤Ñ®ğ', '·Å«×',
-            '°O±b', '¤ä¥X', 'ªá¶O'
+            'è²·', 'è¨‚', 'è³¼è²·', 'ä¸‹å–®', 'è¨‚è³¼',
+            'ä¸èˆ’æœ', 'ç—›', 'ç”Ÿç—…', 'åƒè—¥',
+            'ç¶“æœŸ', 'ç”Ÿç†æœŸ',
+            'å¿˜è¨˜', 'æé†’', 'è¨˜å¾—',
+            'å¤©æ°£', 'æº«åº¦',
+            'è¨˜å¸³', 'æ”¯å‡º', 'èŠ±è²»'
         ];
 
         return mcpKeywords.some(kw => userMessage.includes(kw));

@@ -1,4 +1,4 @@
-import { MemoryDB, HealthDB, MCPConfigDB, CharactersDB, WikiRecordsDB } from '../db.js';
+ï»¿import { MemoryDB, HealthDB, MCPConfigDB, CharactersDB, WikiRecordsDB } from '../db.js';
 
 export class IntelligentMCPInvoker {
     constructor(characterId, userId) {
@@ -123,16 +123,16 @@ export class IntelligentMCPInvoker {
 
     extractKeywords(message) {
         const healthKeywords = [
-            '¤£µÎªA', 'µh', 'ÀYµh', '¨{¤lµh', '·P«_', 'µo¿N', '«y¹Â', '¯h³Ò', '²Ö',
-            '¸g´Á', '¥Í²z´Á', '¤ë¸g', 'Ãh¥¥', 'ÃÄ', '¦YÃÄ', '¥Í¯f', '¹L±Ó'
+            'ä¸èˆ’æœ', 'ç—›', 'é ­ç—›', 'è‚šå­ç—›', 'æ„Ÿå†’', 'ç™¼ç‡’', 'å’³å—½', 'ç–²å‹', 'ç´¯',
+            'ç¶“æœŸ', 'ç”Ÿç†æœŸ', 'æœˆç¶“', 'æ‡·å­•', 'è—¥', 'åƒè—¥', 'ç”Ÿç—…', 'éæ•'
         ];
 
         const shoppingKeywords = [
-            '¶R', 'ÁÊ¶R', '­qÁÊ', '»İ­n', '¯Ê', '¤£°÷', '§Ñ¤F¶R', '­q', '¤U³æ'
+            'è²·', 'è³¼è²·', 'è¨‚è³¼', 'éœ€è¦', 'ç¼º', 'ä¸å¤ ', 'å¿˜äº†è²·', 'è¨‚', 'ä¸‹å–®'
         ];
 
         const dailyKeywords = [
-            '¤Ñ®ğ', '´£¿ô', '¦æµ{', '·|Ä³', '¬ù·|', 'À\', '¦Y', '­¹ÃĞ', 'µN'
+            'å¤©æ°£', 'æé†’', 'è¡Œç¨‹', 'æœƒè­°', 'ç´„æœƒ', 'é¤', 'åƒ', 'é£Ÿè­œ', 'ç…®'
         ];
 
         const foundKeywords = {
@@ -145,8 +145,8 @@ export class IntelligentMCPInvoker {
     }
 
     async analyzeSentiment(message) {
-        const negativeWords = ['¤£µÎªA', 'µh', 'Ãø¹L', '²Ö', '·Ğ', '¤£µÎªA', '¥Í¯f'];
-        const positiveWords = ['¶}¤ß', '§Ö¼Ö', '¦n', '´Î', '³ßÅw'];
+        const negativeWords = ['ä¸èˆ’æœ', 'ç—›', 'é›£é', 'ç´¯', 'ç…©', 'ä¸èˆ’æœ', 'ç”Ÿç—…'];
+        const positiveWords = ['é–‹å¿ƒ', 'å¿«æ¨‚', 'å¥½', 'æ£’', 'å–œæ­¡'];
 
         let sentiment = 'neutral';
         let intensity = 0;
@@ -222,30 +222,30 @@ export class IntelligentMCPInvoker {
         const { keywords, healthContext, memoryContext } = context;
 
         if (keywords.health.length > 0) {
-            if (keywords.health.includes('¸g´Á') || keywords.health.includes('¥Í²z´Á') || keywords.health.includes('¤ë¸g')) {
+            if (keywords.health.includes('ç¶“æœŸ') || keywords.health.includes('ç”Ÿç†æœŸ') || keywords.health.includes('æœˆç¶“')) {
                 needs.push({
                     type: 'health_period',
                     confidence: 0.8,
-                    description: '¨Ï¥ÎªÌ¥i¯à»İ­n¥Í²z´Á¬ÛÃö¨ó§U',
-                    suggestedActions: ['°O¿ı¸g´Á', 'ÁÊ¶R½Ã¥Í¥Î«~', '¥ğ®§«ØÄ³']
+                    description: 'ä½¿ç”¨è€…å¯èƒ½éœ€è¦ç”Ÿç†æœŸç›¸é—œå”åŠ©',
+                    suggestedActions: ['è¨˜éŒ„ç¶“æœŸ', 'è³¼è²·è¡›ç”Ÿç”¨å“', 'ä¼‘æ¯å»ºè­°']
                 });
             }
 
-            if (keywords.health.includes('¤£µÎªA') || keywords.health.includes('¥Í¯f') || keywords.health.includes('·P«_')) {
+            if (keywords.health.includes('ä¸èˆ’æœ') || keywords.health.includes('ç”Ÿç—…') || keywords.health.includes('æ„Ÿå†’')) {
                 needs.push({
                     type: 'health_issue',
                     confidence: 0.7,
-                    description: '¨Ï¥ÎªÌ¨­Åé¤£¾A',
-                    suggestedActions: ['¯gª¬¬d¸ß', '´NÂå«ØÄ³', 'ÁÊ¶RÃÄ«~']
+                    description: 'ä½¿ç”¨è€…èº«é«”ä¸é©',
+                    suggestedActions: ['ç—‡ç‹€æŸ¥è©¢', 'å°±é†«å»ºè­°', 'è³¼è²·è—¥å“']
                 });
             }
 
-            if (keywords.health.includes('ÃÄ') || keywords.health.includes('¦YÃÄ')) {
+            if (keywords.health.includes('è—¥') || keywords.health.includes('åƒè—¥')) {
                 needs.push({
                     type: 'medication',
                     confidence: 0.85,
-                    description: '¨Ï¥ÎªÌ»İ­nÃÄª«¬ÛÃö¨ó§U',
-                    suggestedActions: ['¥ÎÃÄ´£¿ô', 'ÁÊ¶RÃÄ«~', '°O¿ı¥ÎÃÄ']
+                    description: 'ä½¿ç”¨è€…éœ€è¦è—¥ç‰©ç›¸é—œå”åŠ©',
+                    suggestedActions: ['ç”¨è—¥æé†’', 'è³¼è²·è—¥å“', 'è¨˜éŒ„ç”¨è—¥']
                 });
             }
         }
@@ -254,17 +254,17 @@ export class IntelligentMCPInvoker {
             needs.push({
                 type: 'shopping',
                 confidence: 0.75,
-                description: '¨Ï¥ÎªÌ»İ­nÁÊª«¨ó§U',
-                suggestedActions: ['·j´M°Ó«~', '¤U³æÁÊ¶R', '»ù®æ¤ñ¸û']
+                description: 'ä½¿ç”¨è€…éœ€è¦è³¼ç‰©å”åŠ©',
+                suggestedActions: ['æœå°‹å•†å“', 'ä¸‹å–®è³¼è²·', 'åƒ¹æ ¼æ¯”è¼ƒ']
             });
         }
 
-        if (keywords.daily.includes('¤Ñ®ğ')) {
+        if (keywords.daily.includes('å¤©æ°£')) {
             needs.push({
                 type: 'weather',
                 confidence: 0.9,
-                description: '¨Ï¥ÎªÌ·Qª¾¹D¤Ñ®ğ¸ê°T',
-                suggestedActions: ['¬d¸ß¤Ñ®ğ', '¬ï·f«ØÄ³']
+                description: 'ä½¿ç”¨è€…æƒ³çŸ¥é“å¤©æ°£è³‡è¨Š',
+                suggestedActions: ['æŸ¥è©¢å¤©æ°£', 'ç©¿æ­å»ºè­°']
             });
         }
 
@@ -276,8 +276,8 @@ export class IntelligentMCPInvoker {
                 needs.push({
                     type: 'medication_reminder',
                     confidence: 0.6,
-                    description: '¥i¯à»İ­n¥ÎÃÄ´£¿ô',
-                    suggestedActions: ['³]©w´£¿ô']
+                    description: 'å¯èƒ½éœ€è¦ç”¨è—¥æé†’',
+                    suggestedActions: ['è¨­å®šæé†’']
                 });
             }
         }
@@ -294,7 +294,7 @@ export class IntelligentMCPInvoker {
                 tool,
                 need,
                 confidence: need.confidence * 0.9,
-                reason: `¦]¬° ${need.description}¡A±ÀÂË¨Ï¥Î ${tool.displayName}`
+                reason: `å› ç‚º ${need.description}ï¼Œæ¨è–¦ä½¿ç”¨ ${tool.displayName}`
             })));
         });
 
@@ -322,47 +322,47 @@ export class IntelligentMCPInvoker {
     }
 
     generateReasoning(context) {
-        let reasoning = '®Ú¾Ú¤ÀªR¡G\n';
+        let reasoning = 'æ ¹æ“šåˆ†æï¼š\n';
 
         if (context.worldBookContext) {
-            reasoning += `- ¥@¬É®Ñ¤Ç°t¡G§ä¨ì ${context.worldBookContext.entries.length} ­Ó¬ÛÃö±ø¥Ø\n`;
-            reasoning += `  ¤º®eºK­n¡G${context.worldBookContext.context.substring(0, 100)}...\n`;
+            reasoning += `- ä¸–ç•Œæ›¸åŒ¹é…ï¼šæ‰¾åˆ° ${context.worldBookContext.entries.length} å€‹ç›¸é—œæ¢ç›®\n`;
+            reasoning += `  å…§å®¹æ‘˜è¦ï¼š${context.worldBookContext.context.substring(0, 100)}...\n`;
         }
 
         if (context.characterPersonality) {
-            reasoning += `- ¨¤¦â©Ê®æ¡G${context.characterPersonality.traits.join('¡B')}\n`;
+            reasoning += `- è§’è‰²æ€§æ ¼ï¼š${context.characterPersonality.traits.join('ã€')}\n`;
         }
 
         if (context.keywords.health.length > 0) {
-            reasoning += `- °»´ú¨ì°·±d¬ÛÃöÃöÁä¦r¡G${context.keywords.health.join('¡B')}\n`;
+            reasoning += `- åµæ¸¬åˆ°å¥åº·ç›¸é—œé—œéµå­—ï¼š${context.keywords.health.join('ã€')}\n`;
         }
 
         if (context.healthContext) {
             if (context.healthContext.lastMedication) {
-                reasoning += `- ³Ìªñ¦³¥ÎÃÄ°O¿ı¡G${context.healthContext.lastMedication.medication_name || '¥¼ª¾¦WºÙ'}\n`;
+                reasoning += `- æœ€è¿‘æœ‰ç”¨è—¥è¨˜éŒ„ï¼š${context.healthContext.lastMedication.medication_name || 'æœªçŸ¥åç¨±'}\n`;
             }
             if (context.healthContext.lastPeriod) {
                 const lastPeriodDate = new Date(context.healthContext.lastPeriod.date);
-                reasoning += `- ¤W¦¸¸g´Á¡G${lastPeriodDate.toLocaleDateString()}\n`;
+                reasoning += `- ä¸Šæ¬¡ç¶“æœŸï¼š${lastPeriodDate.toLocaleDateString()}\n`;
             }
         }
 
         if (context.memoryContext?.recentTopics.length > 0) {
             const topTopics = context.memoryContext.recentTopics.slice(0, 3).map(([topic]) => topic);
-            reasoning += `- ³Ìªñ°Q½×¸ÜÃD¡G${topTopics.join('¡B')}\n`;
+            reasoning += `- æœ€è¿‘è¨è«–è©±é¡Œï¼š${topTopics.join('ã€')}\n`;
         }
 
         if (context.possibleNeeds.length > 0) {
-            reasoning += `\n±À´ú»İ¨D¡G\n`;
+            reasoning += `\næ¨æ¸¬éœ€æ±‚ï¼š\n`;
             context.possibleNeeds.forEach(need => {
-                reasoning += `- ${need.description}¡]«H¤ß«×¡G${(need.confidence * 100).toFixed(0)}%¡^\n`;
+                reasoning += `- ${need.description}ï¼ˆä¿¡å¿ƒåº¦ï¼š${(need.confidence * 100).toFixed(0)}%ï¼‰\n`;
             });
         }
 
         if (context.recommendedTools.length > 0) {
-            reasoning += `\n±ÀÂË¤u¨ã¡G\n`;
+            reasoning += `\næ¨è–¦å·¥å…·ï¼š\n`;
             context.recommendedTools.slice(0, 3).forEach(rec => {
-                reasoning += `- ${rec.tool.displayName}¡G${rec.reason}\n`;
+                reasoning += `- ${rec.tool.displayName}ï¼š${rec.reason}\n`;
             });
         }
 
@@ -391,9 +391,9 @@ export class IntelligentMCPInvoker {
         if (!topTool) return null;
 
         const action = topNeed.suggestedActions[0];
-        const charName = this.personalityStyle?.name || '§Ú';
+        const charName = this.personalityStyle?.name || 'æˆ‘';
 
-        const questionTemplate = `§Ú¬İ§A${topNeed.description}¡A¬O¤£¬O»İ­n§ÚÀ°§A${action}¡H`;
+        const questionTemplate = `æˆ‘çœ‹ä½ ${topNeed.description}ï¼Œæ˜¯ä¸æ˜¯éœ€è¦æˆ‘å¹«ä½ ${action}ï¼Ÿ`;
 
         const finalQuestion = this.generateCharacterResponse(questionTemplate, this.contextAnalysis);
 
@@ -415,7 +415,7 @@ export class IntelligentMCPInvoker {
         );
 
         if (!config) {
-            throw new Error(`§ä¤£¨ì¤u¨ã ${toolName} ªº°t¸m`);
+            throw new Error(`æ‰¾ä¸åˆ°å·¥å…· ${toolName} çš„é…ç½®`);
         }
 
         try {
@@ -432,7 +432,7 @@ export class IntelligentMCPInvoker {
             });
 
             if (!response.ok) {
-                throw new Error(`¤u¨ã½Õ¥Î¥¢±Ñ¡G${response.statusText}`);
+                throw new Error(`å·¥å…·èª¿ç”¨å¤±æ•—ï¼š${response.statusText}`);
             }
 
             const result = await response.json();
@@ -446,32 +446,32 @@ export class IntelligentMCPInvoker {
                 characterResponse
             };
         } catch (error) {
-            console.error('[MCP] ¤u¨ã½Õ¥Î¿ù»~:', error);
+            console.error('[MCP] å·¥å…·èª¿ç”¨éŒ¯èª¤:', error);
             throw error;
         }
     }
 
     generateToolResultResponse(toolName, result) {
         if (!this.personalityStyle) {
-            return `¤w°õ¦æ ${toolName}`;
+            return `å·²åŸ·è¡Œ ${toolName}`;
         }
 
         const charName = this.personalityStyle.name;
         const success = result.success !== false;
 
         if (!success) {
-            return `${charName}¸Õ¹L¤F¡A¦ı¦n¹³¥X¤FÂI°İÃD...`;
+            return `${charName}è©¦éäº†ï¼Œä½†å¥½åƒå‡ºäº†é»å•é¡Œ...`;
         }
 
         if (toolName.includes('shop') || toolName.includes('order')) {
-            return `${charName}¤w¸gÀ°§A¤U³æÅo¡I¹w­p ${result.result?.estimatedDelivery || '3-5¤Ñ'} °e¨ì¡C`;
+            return `${charName}å·²ç¶“å¹«ä½ ä¸‹å–®å›‰ï¼é è¨ˆ ${result.result?.estimatedDelivery || '3-5å¤©'} é€åˆ°ã€‚`;
         }
 
         if (toolName.includes('health') || toolName.includes('medication')) {
-            return `${charName}¤w¸gÀ°§A°O¿ı¤U¨Ó¤F¡I`;
+            return `${charName}å·²ç¶“å¹«ä½ è¨˜éŒ„ä¸‹ä¾†äº†ï¼`;
         }
 
-        return `${charName}¤w¸gÀ°§A³B²z¦n¤F¡I`;
+        return `${charName}å·²ç¶“å¹«ä½ è™•ç†å¥½äº†ï¼`;
     }
 
     async learnFromInvocation(toolName, args, result) {
@@ -488,7 +488,7 @@ export class IntelligentMCPInvoker {
         await MemoryDB.create({
             chat_id: this.recentMemories[0]?.chat_id || 'unknown',
             character_id: this.characterId,
-            content: `MCP ¤u¨ã½Õ¥Î¾Ç²ß¡G${toolName}`,
+            content: `MCP å·¥å…·èª¿ç”¨å­¸ç¿’ï¼š${toolName}`,
             source_app: 'mcp',
             source_type: 'tool_invocation',
             metadata: learning,
@@ -496,7 +496,7 @@ export class IntelligentMCPInvoker {
             importance: 0.7
         });
 
-        console.log('[MCP] ¤w¾Ç²ß¦¹¦¸½Õ¥Î¸gÅç');
+        console.log('[MCP] å·²å­¸ç¿’æ­¤æ¬¡èª¿ç”¨ç¶“é©—');
     }
 
     async executeWithLearning(userMessage) {

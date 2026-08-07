@@ -1,4 +1,4 @@
-import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
+ï»¿import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
 
 const DB_NAME = 'sxios';
 const DB_VERSION = 13;
@@ -10,41 +10,41 @@ async function cleanLegacyDatabases() {
     for (const legacyName of LEGACY_DB_NAMES) {
         try {
             await deleteDB(legacyName);
-            console.log(`[DB] ¤w§R°£ÂÂ¸ê®Æ®w: ${legacyName}`);
+            console.log(`[DB] å·²åˆªé™¤èˆŠè³‡æ–™åº«: ${legacyName}`);
         } catch (e) {
-            // ¸ê®Æ®w¤£¦s¦b¡A©¿²¤¿ù»~
+            // è³‡æ–™åº«ä¸å­˜åœ¨ï¼Œå¿½ç•¥éŒ¯èª¤
         }
     }
 }
 
 async function initDB() {
     try {
-        console.log('[DB] ¶}©lªì©l¤Æ¼Æ¾Ú®w...');
+        console.log('[DB] é–‹å§‹åˆå§‹åŒ–æ•¸æ“šåº«...');
         
         if (db) {
             try {
                 const stores = db.objectStoreNames;
                 if (!stores.contains('users')) {
-                    console.log('[DB] ¦sÀxµ²ºc¤£§¹¾ã¡A­«·sªì©l¤Æ');
+                    console.log('[DB] å­˜å„²çµæ§‹ä¸å®Œæ•´ï¼Œé‡æ–°åˆå§‹åŒ–');
                     db.close();
                     db = null;
                 }
             } catch (e) {
-                console.error('[DB] ÀË¬d¦sÀx¥¢±Ñ:', e);
+                console.error('[DB] æª¢æŸ¥å­˜å„²å¤±æ•—:', e);
                 db = null;
             }
         }
         if (db) {
-            console.log('[DB] ¨Ï¥Î²{¦³¼Æ¾Ú®w³s±µ');
+            console.log('[DB] ä½¿ç”¨ç¾æœ‰æ•¸æ“šåº«é€£æ¥');
             return db;
         }
 
         await cleanLegacyDatabases();
 
-        console.log('[DB] ³Ğ«Ø/¥´¶}¼Æ¾Ú®w:', DB_NAME, 'ª©¥»:', DB_VERSION);
+        console.log('[DB] å‰µå»º/æ‰“é–‹æ•¸æ“šåº«:', DB_NAME, 'ç‰ˆæœ¬:', DB_VERSION);
         db = await openDB(DB_NAME, DB_VERSION, {
             upgrade(database, oldVersion, newVersion, transaction) {
-                console.log('[DB] ¤É¯Å¼Æ¾Ú®w±qª©¥»', oldVersion, '¨ì', newVersion);
+                console.log('[DB] å‡ç´šæ•¸æ“šåº«å¾ç‰ˆæœ¬', oldVersion, 'åˆ°', newVersion);
                 
                 if (!database.objectStoreNames.contains('chats')) {
                     const chatsStore = database.createObjectStore('chats', { keyPath: 'id' });
@@ -161,25 +161,25 @@ async function initDB() {
                     ziweiStore.createIndex('expires_at', 'expires_at');
                 }
                 
-                console.log('[DB] ¼Æ¾Ú®w¤É¯Å§¹¦¨');
+                console.log('[DB] æ•¸æ“šåº«å‡ç´šå®Œæˆ');
             },
             blocked() {
-                console.warn('[DB] ¼Æ¾Ú®w³Qªı¶ë');
+                console.warn('[DB] æ•¸æ“šåº«è¢«é˜»å¡');
                 if (db) { db.close(); db = null; }
             },
             blocking() {
-                console.warn('[DB] ¼Æ¾Ú®w¥¿¦bªı¶ë¨ä¥L³s±µ');
+                console.warn('[DB] æ•¸æ“šåº«æ­£åœ¨é˜»å¡å…¶ä»–é€£æ¥');
                 if (db) { db.close(); db = null; }
             }
         });
 
-        console.log('[DB] ¼Æ¾Ú®wªì©l¤Æ¦¨¥\');
+        console.log('[DB] æ•¸æ“šåº«åˆå§‹åŒ–æˆåŠŸ');
         return db;
     } catch (error) {
-        console.error('[DB] ¼Æ¾Ú®wªì©l¤Æ¥¢±Ñ:', error);
+        console.error('[DB] æ•¸æ“šåº«åˆå§‹åŒ–å¤±æ•—:', error);
         window.showError?.({
-            message: '¼Æ¾Ú®wªì©l¤Æ¥¢±Ñ: ' + error.message,
-            title: '¼Æ¾Ú®w¿ù»~',
+            message: 'æ•¸æ“šåº«åˆå§‹åŒ–å¤±æ•—: ' + error.message,
+            title: 'æ•¸æ“šåº«éŒ¯èª¤',
             details: error.stack || ''
         });
         throw error;
@@ -672,7 +672,7 @@ const WikiRecordsDB = {
             links: data.links || [],
             tags: data.tags || [],
             cover_image: data.cover_image || null,
-            icon: data.icon || '??',
+            icon: data.icon || 'ğŸ“„',
             parent_id: data.parent_id || null,
             chat_log_index: data.chat_log_index || 0,
             message_range: data.message_range || { start: 0, end: 0 },

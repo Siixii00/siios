@@ -1,14 +1,14 @@
-import Router from '../../router.js';
+ï»¿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 const WIDGETS = [
-  { id: 'w1', name: '¤Ñ®ğ', icon: '??', size: 'small' },
-  { id: 'w2', name: '®ÉÄÁ', icon: '??', size: 'small' },
-  { id: 'w3', name: '¦æ¨Æ¾ä', icon: '??', size: 'medium' },
-  { id: 'w4', name: '­µ¼Ö', icon: '??', size: 'medium' },
-  { id: 'w5', name: '³Æ§Ñ¿ı', icon: '??', size: 'small' },
-  { id: 'w6', name: '°·±d', icon: '??', size: 'large' }
+  { id: 'w1', name: 'å¤©æ°£', icon: 'â˜ï¸', size: 'small' },
+  { id: 'w2', name: 'æ™‚é˜', icon: 'ğŸ•', size: 'small' },
+  { id: 'w3', name: 'è¡Œäº‹æ›†', icon: 'ğŸ“…', size: 'medium' },
+  { id: 'w4', name: 'éŸ³æ¨‚', icon: 'ğŸµ', size: 'medium' },
+  { id: 'w5', name: 'å‚™å¿˜éŒ„', icon: 'ğŸ“', size: 'small' },
+  { id: 'w6', name: 'å¥åº·', icon: 'â¤ï¸', size: 'large' }
 ];
 
 let activeWidgets = [];
@@ -27,8 +27,8 @@ async function renderWidget(params) {
   const container = createElement('div', 'app-container widget-app');
   container.innerHTML = `
     <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
-      <h1 class='menu-title'>¤p¤u¨ã</h1>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> è¿”å›</button>
+      <h1 class='menu-title'>å°å·¥å…·</h1>
     </header>
     <div class='page'>
       <div class='widget-preview'>
@@ -36,9 +36,9 @@ async function renderWidget(params) {
           const w = WIDGETS.find(x => x.id === wid);
           if (!w) return '';
           return `<div class='widget-card ${w.size}'><span class='w-icon'>${w.icon}</span><span class='w-name'>${w.name}</span></div>`;
-        }).join('') || '<div class='empty-preview'>ÂIÀ»¤U¤è¤p¤u¨ã¥[¤J</div>'}
+        }).join('') || '<div class='empty-preview'>é»æ“Šä¸‹æ–¹å°å·¥å…·åŠ å…¥</div>'}
       </div>
-      <h3 class='section-title'>¥i¥Î¤p¤u¨ã</h3>
+      <h3 class='section-title'>å¯ç”¨å°å·¥å…·</h3>
       <div class='widget-list'>
         ${WIDGETS.map(w => `
           <div class='widget-item ${activeWidgets.includes(w.id) ? 'active' : ''}' data-id='${w.id}'>
@@ -68,9 +68,9 @@ async function renderWidget(params) {
 
 export default {
   id: 'widget',
-  name: '¤p¤u¨ã',
+  name: 'å°å·¥å…·',
   icon: 'grid_view',
   routes: [{ path: '/widget', render: renderWidget }],
-  navItem: { label: '¤p¤u¨ã', icon: 'grid_view', path: '/widget', showInNav: true, order: 146 },
+  navItem: { label: 'å°å·¥å…·', icon: 'grid_view', path: '/widget', showInNav: true, order: 146 },
   stylesPath: 'js/apps/widget/style.css'
 };

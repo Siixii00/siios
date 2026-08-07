@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+ï»¿import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar } from '../../components.js';
 import { GlobalSettingsDB } from '../../db.js';
 
@@ -6,7 +6,7 @@ async function renderGlobalSettings() {
     const container = createElement('div', 'app-container bg-ios-bg');
     
     const header = createIOSNavBar({
-        title: '¥þ§½³]©w',
+        title: 'å…¨å±€è¨­å®š',
         backPath: '/world-info'
     });
     container.appendChild(header);
@@ -21,7 +21,7 @@ async function renderGlobalSettings() {
     
     if (entries.length === 0) {
         const emptyState = createElement('div', 'text-center py-12 text-ios-muted');
-        emptyState.textContent = '©|¥¼«Ø¥ß¥ô¦ó¥þ§½³]©w';
+        emptyState.textContent = 'å°šæœªå»ºç«‹ä»»ä½•å…¨å±€è¨­å®š';
         listContainer.appendChild(emptyState);
     } else {
         const group = createElement('div', 'ios-grouped-list');

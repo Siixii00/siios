@@ -1,9 +1,9 @@
-/**
- * EmotionTagger - ±¡ºü¼Ğ°O¾¹
+ï»¿/**
+ * EmotionTagger - æƒ…ç·’æ¨™è¨˜å™¨
  * 
- * ¨Ï¥Î®Ä»ù¡]Valence¡^»P³ê¿ô«×¡]Arousal¡^¼Ğ°O±¡·P¡G
- * - ®Ä»ù¡G¥¿¦V¨ì­t¦V¡]-1 ¨ì +1¡^
- * - ³ê¿ô«×¡G¥­ÀR¨ì¿E°Ê¡]0 ¨ì 1¡^
+ * ä½¿ç”¨æ•ˆåƒ¹ï¼ˆValenceï¼‰èˆ‡å–šé†’åº¦ï¼ˆArousalï¼‰æ¨™è¨˜æƒ…æ„Ÿï¼š
+ * - æ•ˆåƒ¹ï¼šæ­£å‘åˆ°è² å‘ï¼ˆ-1 åˆ° +1ï¼‰
+ * - å–šé†’åº¦ï¼šå¹³éœåˆ°æ¿€å‹•ï¼ˆ0 åˆ° 1ï¼‰
  */
 
 export class EmotionTagger {
@@ -12,8 +12,8 @@ export class EmotionTagger {
             positive: {
                 highArousal: {
                     keywords: [
-                        '¿³¾Ä', '¿E°Ê', '¨g³ß', '¼ö¦å', '®¶¾Ä',
-                        'Åå³ß', '¿³¾Ä¤£¤w', '³¶ÅD', 'Åw©I', '¨gÅw',
+                        'èˆˆå¥®', 'æ¿€å‹•', 'ç‹‚å–œ', 'ç†±è¡€', 'æŒ¯å¥®',
+                        'é©šå–œ', 'èˆˆå¥®ä¸å·²', 'é›€èº', 'æ­¡å‘¼', 'ç‹‚æ­¡',
                         'excited', 'thrilled', 'ecstatic', 'elated', 'euphoric',
                         'passionate', 'enthusiastic', 'exhilarated'
                     ],
@@ -22,8 +22,8 @@ export class EmotionTagger {
                 },
                 mediumArousal: {
                     keywords: [
-                        '¶}¤ß', '§Ö¼Ö', '°ª¿³', '©¯ºÖ', 'º¡¨¬',
-                        '³ßÅw', '·R', '²¢»e', '·ÅÄÉ', '·P°Ê',
+                        'é–‹å¿ƒ', 'å¿«æ¨‚', 'é«˜èˆˆ', 'å¹¸ç¦', 'æ»¿è¶³',
+                        'å–œæ­¡', 'æ„›', 'ç”œèœœ', 'æº«é¦¨', 'æ„Ÿå‹•',
                         'happy', 'joy', 'glad', 'pleased', 'content',
                         'love', 'sweet', 'warm', 'touched'
                     ],
@@ -32,8 +32,8 @@ export class EmotionTagger {
                 },
                 lowArousal: {
                     keywords: [
-                        '¥­ÀR', '¦w¸Ô', '©ñÃP', 'µÎ¾A', '¦w¤ß',
-                        '¹çÀR', '²»©M', '«ïÀR', '±y¶¢', '¦Û¦b',
+                        'å¹³éœ', 'å®‰è©³', 'æ”¾é¬†', 'èˆ’é©', 'å®‰å¿ƒ',
+                        'å¯§éœ', 'ç¥¥å’Œ', 'æ¬éœ', 'æ‚ é–’', 'è‡ªåœ¨',
                         'calm', 'peaceful', 'relaxed', 'comfortable', 'serene',
                         'tranquil', 'at ease'
                     ],
@@ -44,8 +44,8 @@ export class EmotionTagger {
             negative: {
                 highArousal: {
                     keywords: [
-                        '¼««ã', '¼É«ã', '¨g«ã', '®£Äß', 'Åå®£',
-                        '®£·W', 'µJ¼{', '±Y¼ì', 'µ´±æ', 'µh­W',
+                        'æ†¤æ€’', 'æš´æ€’', 'ç‹‚æ€’', 'ææ‡¼', 'é©šæ',
+                        'ææ…Œ', 'ç„¦æ…®', 'å´©æ½°', 'çµ•æœ›', 'ç—›è‹¦',
                         'angry', 'furious', 'rage', 'terror', 'panic',
                         'anxious', 'devastated', 'despair', 'agony'
                     ],
@@ -54,8 +54,8 @@ export class EmotionTagger {
                 },
                 mediumArousal: {
                     keywords: [
-                        'Ãø¹L', '´d¶Ë', '¼~Æ{', '¥¢¸¨', 'ªq³à',
-                        '¥¢±æ', '±I¹æ', '©t¿W', '©e©}', '¤ß¯k',
+                        'é›£é', 'æ‚²å‚·', 'æ†‚é¬±', 'å¤±è½', 'æ²®å–ª',
+                        'å¤±æœ›', 'å¯‚å¯', 'å­¤ç¨', 'å§”å±ˆ', 'å¿ƒç–¼',
                         'sad', 'sorrow', 'depressed', 'down', 'disappointed',
                         'lonely', 'hurt', 'grief'
                     ],
@@ -64,8 +64,8 @@ export class EmotionTagger {
                 },
                 lowArousal: {
                     keywords: [
-                        '¯h¾Î', '¯h­Â', 'µL¤O', 'µL²á', '­Â«å',
-                        '¹½·Ğ', '³Â¤ì', 'ªÅµê', '®ø¨I', '§C°g',
+                        'ç–²æ†Š', 'ç–²å€¦', 'ç„¡åŠ›', 'ç„¡èŠ', 'å€¦æ€ ',
+                        'å­ç…©', 'éº»æœ¨', 'ç©ºè™›', 'æ¶ˆæ²‰', 'ä½è¿·',
                         'tired', 'exhausted', 'weary', 'bored', 'lethargic',
                         'numb', 'empty', 'downcast'
                     ],
@@ -75,7 +75,7 @@ export class EmotionTagger {
             },
             neutral: {
                 keywords: [
-                    '´¶³q', '¤@¯ë', '¥¿±`', '¥­±`', '¤é±`',
+                    'æ™®é€š', 'ä¸€èˆ¬', 'æ­£å¸¸', 'å¹³å¸¸', 'æ—¥å¸¸',
                     'neutral', 'normal', 'ordinary', 'regular', 'usual'
                 ],
                 valence: 0,
@@ -85,49 +85,49 @@ export class EmotionTagger {
         
         this.modifiers = {
             intensifiers: [
-                '«D±`', '«Ü', '¶W¯Å', '·¥«×', '¯S§O', '²§±`',
+                'éå¸¸', 'å¾ˆ', 'è¶…ç´š', 'æ¥µåº¦', 'ç‰¹åˆ¥', 'ç•°å¸¸',
                 'very', 'extremely', 'super', 'incredibly', 'especially',
                 'really', 'absolutely', 'totally'
             ],
             diminishers: [
-                '¦³ÂI', 'µy·L', '¨Ç³\', '¤@ÂI', '²¤·L',
+                'æœ‰é»', 'ç¨å¾®', 'äº›è¨±', 'ä¸€é»', 'ç•¥å¾®',
                 'a bit', 'slightly', 'somewhat', 'a little', 'kind of',
                 'sort of', 'rather'
             ],
             negators: [
-                '¤£', '¨S', 'µL', '«D', '¤£¬O',
+                'ä¸', 'æ²’', 'ç„¡', 'é', 'ä¸æ˜¯',
                 'not', 'no', 'never', 'none', 'don't', 'doesn't', 'didn't'
             ]
         };
         
         this.emotionPhrases = {
             love: {
-                keywords: ['§Ú·R§A', '·R§A', '³ßÅw§A', 'I love you', 'love you'],
+                keywords: ['æˆ‘æ„›ä½ ', 'æ„›ä½ ', 'å–œæ­¡ä½ ', 'I love you', 'love you'],
                 valence: 0.9,
                 arousal: 0.7
             },
             hate: {
-                keywords: ['§Ú«ë§A', '«ë§A', '°Q¹½§A', 'I hate you', 'hate you'],
+                keywords: ['æˆ‘æ¨ä½ ', 'æ¨ä½ ', 'è¨å­ä½ ', 'I hate you', 'hate you'],
                 valence: -0.9,
                 arousal: 0.8
             },
             miss: {
-                keywords: ['·Q§A', '«ä©À', '¦n·Q§A', 'miss you', 'missing you'],
+                keywords: ['æƒ³ä½ ', 'æ€å¿µ', 'å¥½æƒ³ä½ ', 'miss you', 'missing you'],
                 valence: 0.3,
                 arousal: 0.5
             },
             worry: {
-                keywords: ['¾á¤ß', '¾á¼~', '·Ğ´o', 'worry', 'worried', 'concern'],
+                keywords: ['æ“”å¿ƒ', 'æ“”æ†‚', 'ç…©æƒ±', 'worry', 'worried', 'concern'],
                 valence: -0.5,
                 arousal: 0.6
             },
             gratitude: {
-                keywords: ['ÁÂÁÂ', '·PÁÂ', '·P®¦', 'thank you', 'thanks', 'grateful'],
+                keywords: ['è¬è¬', 'æ„Ÿè¬', 'æ„Ÿæ©', 'thank you', 'thanks', 'grateful'],
                 valence: 0.8,
                 arousal: 0.4
             },
             apology: {
-                keywords: ['¹ï¤£°_', '©êºp', '¤£¦n·N«ä', 'sorry', 'apologize'],
+                keywords: ['å°ä¸èµ·', 'æŠ±æ­‰', 'ä¸å¥½æ„æ€', 'sorry', 'apologize'],
                 valence: -0.3,
                 arousal: 0.5
             }
@@ -255,21 +255,21 @@ export class EmotionTagger {
     }
     
     getEmotionLabel(valence, arousal) {
-        if (valence > 0.5 && arousal > 0.6) return '¿³¾Ä';
-        if (valence > 0.5 && arousal <= 0.6) return '´r§Ö';
-        if (valence > 0 && arousal <= 0.4) return '¥­ÀR';
-        if (valence < -0.5 && arousal > 0.6) return '¼««ã';
-        if (valence < -0.5 && arousal <= 0.6) return '´d¶Ë';
-        if (valence < 0 && arousal <= 0.4) return '¯h¾Î';
-        if (valence >= -0.3 && valence <= 0.3) return '¤¤©Ê';
+        if (valence > 0.5 && arousal > 0.6) return 'èˆˆå¥®';
+        if (valence > 0.5 && arousal <= 0.6) return 'æ„‰å¿«';
+        if (valence > 0 && arousal <= 0.4) return 'å¹³éœ';
+        if (valence < -0.5 && arousal > 0.6) return 'æ†¤æ€’';
+        if (valence < -0.5 && arousal <= 0.6) return 'æ‚²å‚·';
+        if (valence < 0 && arousal <= 0.4) return 'ç–²æ†Š';
+        if (valence >= -0.3 && valence <= 0.3) return 'ä¸­æ€§';
         
-        return '¥¼ª¾';
+        return 'æœªçŸ¥';
     }
     
     formatEmotionalData(data) {
         const label = this.getEmotionLabel(data.valence, data.arousal);
-        const valenceDesc = data.valence > 0 ? '¥¿¦V' : (data.valence < 0 ? '­t¦V' : '¤¤©Ê');
-        const arousalDesc = data.arousal > 0.6 ? '°ª³ê¿ô' : (data.arousal < 0.4 ? '§C³ê¿ô' : '¤¤³ê¿ô');
+        const valenceDesc = data.valence > 0 ? 'æ­£å‘' : (data.valence < 0 ? 'è² å‘' : 'ä¸­æ€§');
+        const arousalDesc = data.arousal > 0.6 ? 'é«˜å–šé†’' : (data.arousal < 0.4 ? 'ä½å–šé†’' : 'ä¸­å–šé†’');
         
         return {
             label,

@@ -1,4 +1,4 @@
-import Router from './router.js';
+﻿import Router from './router.js';
 import { createElement, createIcon } from './components.js';
 import { getNavItems } from './apps/registry.js';
 

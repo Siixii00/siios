@@ -1,25 +1,25 @@
-import { SettingsDB } from '../db.js';
+ï»¿import { SettingsDB } from '../db.js';
 
 const CITY_NAME_MAP = {
-    '¥x¥_': 'Taipei', '»O¥_': 'Taipei', '·s¥_': 'New Taipei', '®ç¶é': 'Taoyuan',
-    '¥x¤¤': 'Taichung', '»O¤¤': 'Taichung', '¥x«n': 'Tainan', '»O«n': 'Tainan',
-    '°ª¶¯': 'Kaohsiung', '°ò¶©': 'Keelung', '·s¦Ë': 'Hsinchu', '¹Å¸q': 'Chiayi',
-    '©yÄõ': 'Yilan', 'ªá½¬': 'Hualien', '¥xªF': 'Taitung', '»OªF': 'Taitung',
-    '«ÌªF': 'Pingtung', '«n§ë': 'Nantou', '¹ü¤Æ': 'Changhua', '¶³ªL': 'Yunlin',
-    '­]®ß': 'Miaoli', '¼ê´ò': 'Penghu', 'ª÷ªù': 'Kinmen', '°¨¯ª': 'Matsu',
-    '­»´ä': 'Hong Kong', '¿Dªù': 'Macau', '¤W®ü': 'Shanghai', '¥_¨Ê': 'Beijing',
-    '¼s¦{': 'Guangzhou', '²`¦`': 'Shenzhen', 'ªF¨Ê': 'Tokyo', '¤j¨Á': 'Osaka',
-    '­ºº¸': 'Seoul', '·s¥[©Y': 'Singapore', '¯Ã¬ù': 'New York', '¬¥§üÁF': 'Los Angeles',
-    '­Û´°': 'London', '¤Ú¾¤': 'Paris', '³·±ù': 'Sydney'
+    'å°åŒ—': 'Taipei', 'è‡ºåŒ—': 'Taipei', 'æ–°åŒ—': 'New Taipei', 'æ¡ƒåœ’': 'Taoyuan',
+    'å°ä¸­': 'Taichung', 'è‡ºä¸­': 'Taichung', 'å°å—': 'Tainan', 'è‡ºå—': 'Tainan',
+    'é«˜é›„': 'Kaohsiung', 'åŸºéš†': 'Keelung', 'æ–°ç«¹': 'Hsinchu', 'å˜‰ç¾©': 'Chiayi',
+    'å®œè˜­': 'Yilan', 'èŠ±è“®': 'Hualien', 'å°æ±': 'Taitung', 'è‡ºæ±': 'Taitung',
+    'å±æ±': 'Pingtung', 'å—æŠ•': 'Nantou', 'å½°åŒ–': 'Changhua', 'é›²æ—': 'Yunlin',
+    'è‹—æ —': 'Miaoli', 'æ¾æ¹–': 'Penghu', 'é‡‘é–€': 'Kinmen', 'é¦¬ç¥–': 'Matsu',
+    'é¦™æ¸¯': 'Hong Kong', 'æ¾³é–€': 'Macau', 'ä¸Šæµ·': 'Shanghai', 'åŒ—äº¬': 'Beijing',
+    'å»£å·': 'Guangzhou', 'æ·±åœ³': 'Shenzhen', 'æ±äº¬': 'Tokyo', 'å¤§é˜ª': 'Osaka',
+    'é¦–çˆ¾': 'Seoul', 'æ–°åŠ å¡': 'Singapore', 'ç´ç´„': 'New York', 'æ´›æ‰ç£¯': 'Los Angeles',
+    'å€«æ•¦': 'London', 'å·´é»': 'Paris', 'é›ªæ¢¨': 'Sydney'
 };
 
 const PINYIN_MAP = {
-    '¥x': 'tai', '»O': 'tai', '¥_': 'bei', '·s': 'xin', '®ç': 'tao', '¶é': 'yuan',
-    '¤¤': 'zhong', '«n': 'nan', '°ª': 'gao', '¶¯': 'xiong', '°ò': 'ji', '¶©': 'long',
-    '¦Ë': 'zhu', '¹Å': 'jia', '¸q': 'yi', '©y': 'yi', 'Äõ': 'lan', 'ªá': 'hua',
-    '½¬': 'lian', 'ªF': 'dong', '«Ì': 'ping', '§ë': 'tou', '¹ü': 'zhang', '¤Æ': 'hua',
-    '¶³': 'yun', 'ªL': 'lin', '­]': 'miao', '®ß': 'li', '¼ê': 'peng', '´ò': 'hu',
-    'ª÷': 'jin', 'ªù': 'men', '°¨': 'ma', '¯ª': 'zu'
+    'å°': 'tai', 'è‡º': 'tai', 'åŒ—': 'bei', 'æ–°': 'xin', 'æ¡ƒ': 'tao', 'åœ’': 'yuan',
+    'ä¸­': 'zhong', 'å—': 'nan', 'é«˜': 'gao', 'é›„': 'xiong', 'åŸº': 'ji', 'éš†': 'long',
+    'ç«¹': 'zhu', 'å˜‰': 'jia', 'ç¾©': 'yi', 'å®œ': 'yi', 'è˜­': 'lan', 'èŠ±': 'hua',
+    'è“®': 'lian', 'æ±': 'dong', 'å±': 'ping', 'æŠ•': 'tou', 'å½°': 'zhang', 'åŒ–': 'hua',
+    'é›²': 'yun', 'æ—': 'lin', 'è‹—': 'miao', 'æ —': 'li', 'æ¾': 'peng', 'æ¹–': 'hu',
+    'é‡‘': 'jin', 'é–€': 'men', 'é¦¬': 'ma', 'ç¥–': 'zu'
 };
 
 function chineseToPinyin(text) {

@@ -1,4 +1,4 @@
-import { CharactersDB, ZiweiCacheDB } from '../db.js';
+ï»¿import { CharactersDB, ZiweiCacheDB } from '../db.js';
 import { ziweiClient } from './ziwei-mcp-client.js';
 import { createToast } from '../components.js';
 
@@ -12,15 +12,15 @@ class ZiweiService {
         try {
             const char = await CharactersDB.getById(characterId);
             if (!char) {
-                throw new Error('§ä¤£¨ì¨¤¦â¸ê®Æ');
+                throw new Error('æ‰¾ä¸åˆ°è§’è‰²è³‡æ–™');
             }
 
             if (!char.birth_date || !char.birth_time) {
-                throw new Error('¯Ê¤Ö¥X¥Í¤é´Á©Î®É¶¡');
+                throw new Error('ç¼ºå°‘å‡ºç”Ÿæ—¥æœŸæˆ–æ™‚é–“');
             }
 
             if (!char.gender) {
-                throw new Error('¯Ê¤Ö©Ê§O¸ê°T');
+                throw new Error('ç¼ºå°‘æ€§åˆ¥è³‡è¨Š');
             }
 
             const today = new Date().toISOString().split('T')[0];
@@ -28,7 +28,7 @@ class ZiweiService {
             if (!forceRefresh) {
                 const existingCache = await ZiweiCacheDB.getByDate(characterId, today);
                 if (existingCache && !this.isCacheStale(existingCache)) {
-                    console.log('[ZiweiService] ¨Ï¥Î²{¦³§Ö¨ú:', existingCache.id);
+                    console.log('[ZiweiService] ä½¿ç”¨ç¾æœ‰å¿«å–:', existingCache.id);
                     return {
                         fromCache: true,
                         data: existingCache
@@ -36,23 +36,23 @@ class ZiweiService {
                 }
             }
 
-            console.log('[ZiweiService] ¶}©l¤ÀªR¨¤¦â:', characterId);
-            createToast('¥¿¦b¤ÀªR©R²z¸ê®Æ...', 'info');
+            console.log('[ZiweiService] é–‹å§‹åˆ†æè§’è‰²:', characterId);
+            createToast('æ­£åœ¨åˆ†æå‘½ç†è³‡æ–™...', 'info');
 
             const analysisResult = await ziweiClient.analyzeBirth(characterId);
             
             const cache = await ziweiClient.saveCache(characterId, analysisResult);
             
-            console.log('[ZiweiService] ¤ÀªR§¹¦¨¨Ã¤w§Ö¨ú:', cache.id);
-            createToast('©R²z¤ÀªR§¹¦¨', 'success');
+            console.log('[ZiweiService] åˆ†æå®Œæˆä¸¦å·²å¿«å–:', cache.id);
+            createToast('å‘½ç†åˆ†æå®Œæˆ', 'success');
 
             return {
                 fromCache: false,
                 data: cache
             };
         } catch (error) {
-            console.error('[ZiweiService] ¤ÀªR¥¢±Ñ:', error);
-            createToast(`¤ÀªR¥¢±Ñ: ${error.message}`, 'error');
+            console.error('[ZiweiService] åˆ†æå¤±æ•—:', error);
+            createToast(`åˆ†æå¤±æ•—: ${error.message}`, 'error');
             throw error;
         }
     }
@@ -66,7 +66,7 @@ class ZiweiService {
         }
 
         if (this.isCacheStale(cache)) {
-            console.log('[ZiweiService] §Ö¨ú¤w¹L´Á');
+            console.log('[ZiweiService] å¿«å–å·²éæœŸ');
             return { ...cache, is_stale: true };
         }
 
@@ -132,7 +132,7 @@ class ZiweiService {
             await ZiweiCacheDB.delete(id);
         }
 
-        console.log(`[ZiweiService] ²M°£¤F ${expiredIds.length} ­Ó¹L´Á§Ö¨ú`);
+        console.log(`[ZiweiService] æ¸…é™¤äº† ${expiredIds.length} å€‹éæœŸå¿«å–`);
         return expiredIds.length;
     }
 

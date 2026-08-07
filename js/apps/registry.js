@@ -1,4 +1,4 @@
-import Router from '../router.js';
+ï»¿import Router from '../router.js';
 
 const apps = [];
 let initialized = false;
@@ -132,7 +132,7 @@ async function registerRoutes() {
                         appContainer.innerHTML = `
                             <div class='empty-state'>
                                 <span class='material-symbols-outlined empty-state-icon'>error</span>
-                                <h3 class='empty-state-title'>¸ü¤J¥¢±Ñ</h3>
+                                <h3 class='empty-state-title'>è¼‰å…¥å¤±æ•—</h3>
                                 <p class='empty-state-text'>${error.message}</p>
                             </div>
                         `;

@@ -1,4 +1,4 @@
-// ¥iµø¤Æ½Õ¸Õ¤é»x¾¹ - ¦b¤â¾÷¤WÅã¥Ü console ¤é»x
+ï»¿// å¯è¦–åŒ–èª¿è©¦æ—¥èªŒå™¨ - åœ¨æ‰‹æ©Ÿä¸Šé¡¯ç¤º console æ—¥èªŒ
 class DebugLogger {
     constructor() {
         this.logs = [];
@@ -35,7 +35,7 @@ class DebugLogger {
         
         const btn = document.createElement('button');
         btn.id = 'debug-logger-btn';
-        btn.textContent = '¡´';
+        btn.textContent = 'â—';
         btn.style.cssText = `
             position: fixed;
             bottom: 20px;
@@ -98,8 +98,8 @@ class DebugLogger {
         header.innerHTML = `
             <span style='font-weight: bold;'>Debug Logs <span id='error-badge' style='display: none; background: #DC2626; color: white; padding: 2px 6px; border-radius: 10px; font-size: 10px; margin-left: 8px;'>0</span></span>
             <div style='display: flex; gap: 8px;'>
-                <button id='debug-logger-copy' style='background: transparent; border: 1px solid white; color: white; cursor: pointer; padding: 4px 8px; border-radius: 4px; font-size: 12px;'>½Æ»s</button>
-                <button id='debug-logger-clear' style='background: transparent; border: none; color: white; cursor: pointer; padding: 4px 8px;'>²M°£</button>
+                <button id='debug-logger-copy' style='background: transparent; border: 1px solid white; color: white; cursor: pointer; padding: 4px 8px; border-radius: 4px; font-size: 12px;'>è¤‡è£½</button>
+                <button id='debug-logger-clear' style='background: transparent; border: none; color: white; cursor: pointer; padding: 4px 8px;'>æ¸…é™¤</button>
             </div>
         `;
         this.container.appendChild(header);
@@ -122,15 +122,15 @@ class DebugLogger {
     
     checkConnection() {
         window.addEventListener('offline', () => {
-            this.showError('ºô¸ô³s±µ¤wÂ_¶}');
+            this.showError('ç¶²è·¯é€£æ¥å·²æ–·é–‹');
         });
         
         window.addEventListener('online', () => {
-            this.addLog('info', ['ºô¸ô¤w«ì´_³s±µ']);
+            this.addLog('info', ['ç¶²è·¯å·²æ¢å¾©é€£æ¥']);
         });
         
         if (!navigator.onLine) {
-            this.showError('¥Ø«eÂ÷½u¤¤');
+            this.showError('ç›®å‰é›¢ç·šä¸­');
         }
     }
     
@@ -146,11 +146,11 @@ class DebugLogger {
         });
         
         window.addEventListener('error', (event) => {
-            this.showError(`¥ş§½¿ù»~: ${event.message}`);
+            this.showError(`å…¨å±€éŒ¯èª¤: ${event.message}`);
         });
         
         window.addEventListener('unhandledrejection', (event) => {
-            this.showError(`Promise ¿ù»~: ${event.reason}`);
+            this.showError(`Promise éŒ¯èª¤: ${event.reason}`);
         });
     }
     
@@ -234,7 +234,7 @@ class DebugLogger {
             this.logsContainer.appendChild(logEl);
         });
         
-        // ºu°Ê¨ì©³³¡
+        // æ»¾å‹•åˆ°åº•éƒ¨
         this.logsContainer.scrollTop = this.logsContainer.scrollHeight;
     }
     
@@ -278,7 +278,7 @@ class DebugLogger {
     
     copyLogs() {
         if (this.logs.length === 0) {
-            alert('¨S¦³¤é»x¥i½Æ»s');
+            alert('æ²’æœ‰æ—¥èªŒå¯è¤‡è£½');
             return;
         }
         
@@ -286,13 +286,13 @@ class DebugLogger {
             return `[${log.timestamp}] [${log.type.toUpperCase()}] ${log.message}`;
         }).join('\n');
         
-        const header = `=== Siios Debug Logs ===\n®É¶¡: ${new Date().toLocaleString()}\n¿ù»~¼Æ: ${this.errorCount}\nÄµ§i¼Æ: ${this.warningCount}\n\n`;
+        const header = `=== Siios Debug Logs ===\næ™‚é–“: ${new Date().toLocaleString()}\néŒ¯èª¤æ•¸: ${this.errorCount}\nè­¦å‘Šæ•¸: ${this.warningCount}\n\n`;
         const fullText = header + logText;
         
         if (navigator.clipboard && navigator.clipboard.writeText) {
             navigator.clipboard.writeText(fullText)
                 .then(() => {
-                    alert('¤w½Æ»s¨ì°Å¶KÃ¯¡I¥i¥H¶K¤W¶Ç°eµ¹¶}µoªÌ');
+                    alert('å·²è¤‡è£½åˆ°å‰ªè²¼ç°¿ï¼å¯ä»¥è²¼ä¸Šå‚³é€çµ¦é–‹ç™¼è€…');
                 })
                 .catch(err => {
                     this.fallbackCopy(fullText);
@@ -314,17 +314,17 @@ class DebugLogger {
         
         try {
             document.execCommand('copy');
-            alert('¤w½Æ»s¨ì°Å¶KÃ¯¡I¥i¥H¶K¤W¶Ç°eµ¹¶}µoªÌ');
+            alert('å·²è¤‡è£½åˆ°å‰ªè²¼ç°¿ï¼å¯ä»¥è²¼ä¸Šå‚³é€çµ¦é–‹ç™¼è€…');
         } catch (err) {
-            alert('½Æ»s¥¢±Ñ¡A½Ğ¤â°Ê¿ï¨ú½Æ»s');
-            console.log('½Ğ¤â°Ê½Æ»s¥H¤U¤º®e¡G\n', text);
+            alert('è¤‡è£½å¤±æ•—ï¼Œè«‹æ‰‹å‹•é¸å–è¤‡è£½');
+            console.log('è«‹æ‰‹å‹•è¤‡è£½ä»¥ä¸‹å…§å®¹ï¼š\n', text);
         }
         
         document.body.removeChild(textarea);
     }
 }
 
-// ¦Û°Êªì©l¤Æ
+// è‡ªå‹•åˆå§‹åŒ–
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => new DebugLogger());
 } else {

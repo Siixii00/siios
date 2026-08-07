@@ -1,4 +1,4 @@
-import { CharactersDB, ZiweiCacheDB } from '../db.js';
+ï»¿import { CharactersDB, ZiweiCacheDB } from '../db.js';
 
 class ZiweiMCPClient {
     constructor() {
@@ -14,11 +14,11 @@ class ZiweiMCPClient {
         const char = await CharactersDB.getById(characterId);
         
         if (!char.birth_date || !char.birth_time) {
-            throw new Error('¯Ê¤Ö¥X¥Í¸ê°T');
+            throw new Error('ç¼ºå°‘å‡ºç”Ÿè³‡è¨Š');
         }
         
         if (!char.gender) {
-            throw new Error('¯Ê¤Ö©Ê§O¸ê°T');
+            throw new Error('ç¼ºå°‘æ€§åˆ¥è³‡è¨Š');
         }
         
         const controller = new AbortController();
@@ -44,13 +44,13 @@ class ZiweiMCPClient {
             clearTimeout(timeoutId);
             
             if (!response.ok) {
-                throw new Error(`MCP ½Õ¥Î¥¢±Ñ: ${response.status}`);
+                throw new Error(`MCP èª¿ç”¨å¤±æ•—: ${response.status}`);
             }
             
             const result = await response.json();
             
             if (!result.success) {
-                throw new Error(result.error || '¤ÀªR¥¢±Ñ');
+                throw new Error(result.error || 'åˆ†æå¤±æ•—');
             }
             
             return result.result;
@@ -58,7 +58,7 @@ class ZiweiMCPClient {
             clearTimeout(timeoutId);
             
             if (error.name === 'AbortError') {
-                throw new Error('½Ğ¨D¹O®É');
+                throw new Error('è«‹æ±‚é€¾æ™‚');
             }
             
             throw error;
@@ -109,7 +109,7 @@ class ZiweiMCPClient {
             
             return response.ok;
         } catch (error) {
-            console.error('[ZiweiMCPClient] ³s½u´ú¸Õ¥¢±Ñ:', error);
+            console.error('[ZiweiMCPClient] é€£ç·šæ¸¬è©¦å¤±æ•—:', error);
             return false;
         }
     }
