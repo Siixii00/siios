@@ -1,4 +1,4 @@
-import { MCPConfigDB } from '../db.js';
+﻿import { MCPConfigDB } from '../db.js';
 
 class MCPClient {
     constructor(config) {

@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { CharactersDB, SettingsDB, UsersDB } from '../../db.js';
 
@@ -257,9 +257,9 @@ async function renderCharEdit(params) {
     genderField.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '性別' }));
     const genderSelect = createElement('select', 'ios-input w-full');
     genderSelect.innerHTML = `
-        <option value="">未設定</option>
-        <option value="male">男</option>
-        <option value="female">女</option>
+        <option value=''>未設定</option>
+        <option value='male'>男</option>
+        <option value='female'>女</option>
     `;
     genderSelect.value = char.gender || '';
     genderField.appendChild(genderSelect);
@@ -269,8 +269,8 @@ async function renderCharEdit(params) {
     calendarField.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '曆法' }));
     const calendarSelect = createElement('select', 'ios-input w-full');
     calendarSelect.innerHTML = `
-        <option value="solar">國曆</option>
-        <option value="lunar">農曆</option>
+        <option value='solar'>國曆</option>
+        <option value='lunar'>農曆</option>
     `;
     calendarSelect.value = char.birth_calendar_type || 'solar';
     calendarField.appendChild(calendarSelect);

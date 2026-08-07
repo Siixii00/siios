@@ -364,7 +364,7 @@ async function renderPerChatSettings(params) {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.back()
     });
-    backBtn.innerHTML = '<i class="fas fa-chevron-left"></i> 返回';
+    backBtn.innerHTML = '<i class='fas fa-chevron-left'></i> 返回';
     headerInner.appendChild(backBtn);
 
     const title = createElement('h1', 'text-[32px] font-bold text-black leading-[31px]');
@@ -388,7 +388,7 @@ async function renderPerChatSettings(params) {
             const memberRow = createElement('div', 'ios-list-cell');
             
             const avatar = createElement('img', 'w-10 h-10 rounded-full object-cover mr-3', {
-                src: char?.avatar || 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23E5E5EA"/><text x="50" y="60" text-anchor="middle" font-size="40" fill="%238E8E93">?</text></svg>',
+                src: char?.avatar || 'data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23E5E5EA'/><text x='50' y='60' text-anchor='middle' font-size='40' fill='%238E8E93'>?</text></svg>',
                 alt: char?.name || 'Unknown'
             });
             memberRow.appendChild(avatar);
@@ -443,7 +443,7 @@ async function renderPerChatSettings(params) {
                 available.forEach(char => {
                     const row = createElement('div', 'flex items-center gap-3 p-3 rounded-lg bg-gray-50');
                     const avatar = createElement('img', 'w-10 h-10 rounded-full object-cover', {
-                        src: char.avatar || 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23E5E5EA"/><text x="50" y="60" text-anchor="middle" font-size="40" fill="%238E8E93">?</text></svg>',
+                        src: char.avatar || 'data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23E5E5EA'/><text x='50' y='60' text-anchor='middle' font-size='40' fill='%238E8E93'>?</text></svg>',
                         alt: char.name
                     });
                     row.appendChild(avatar);
@@ -537,7 +537,7 @@ async function renderPerChatSettings(params) {
                 
                 const checkbox = createElement('div', `w-6 h-6 rounded-md border-2 flex items-center justify-center transition-colors ${enabledIds.includes(config.id) ? 'bg-green-500 border-green-500' : 'border-gray-300 bg-white'}`);
                 if (enabledIds.includes(config.id)) {
-                    checkbox.innerHTML = '<svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+                    checkbox.innerHTML = '<svg class='w-4 h-4 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg>';
                 }
                 
                 checkbox.onclick = async () => {

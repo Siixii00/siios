@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -33,12 +33,12 @@ function renderRestaurants(container) {
   const list = container.querySelector('.restaurant-list');
   if (!list) return;
   list.innerHTML = RESTAURANTS.map(r => `
-    <div class="restaurant-card" data-id="${r.id}">
-      <h3 class="restaurant-name">${r.name}</h3>
-      <span class="restaurant-cuisine">${r.cuisine}</span>
-      <div class="restaurant-meta">
-        <span class="rating"><i class="fas fa-star"></i> ${r.rating}</span>
-        <span class="time"><i class="fas fa-clock"></i> ${r.time} 分</span>
+    <div class='restaurant-card' data-id='${r.id}'>
+      <h3 class='restaurant-name'>${r.name}</h3>
+      <span class='restaurant-cuisine'>${r.cuisine}</span>
+      <div class='restaurant-meta'>
+        <span class='rating'><i class='fas fa-star'></i> ${r.rating}</span>
+        <span class='time'><i class='fas fa-clock'></i> ${r.time} 分</span>
       </div>
     </div>
   `).join('');
@@ -53,22 +53,22 @@ function openMenu(container, rid) {
   const sec = container.querySelector('.menu-section');
   if (!sec) return;
   sec.innerHTML = `
-    <div class="menu-header">
-      <button class="back-btn"><i class="fas fa-arrow-left"></i></button>
+    <div class='menu-header'>
+      <button class='back-btn'><i class='fas fa-arrow-left'></i></button>
       <h2>${r.name}</h2>
     </div>
-    <div class="menu-list">
+    <div class='menu-list'>
       ${r.menu.map(m => `
-        <div class="menu-item">
-          <span class="item-name">${m.name}</span>
-          <span class="item-price">$${m.price}</span>
-          <button class="add-btn" data-name="${m.name}" data-price="${m.price}">+</button>
+        <div class='menu-item'>
+          <span class='item-name'>${m.name}</span>
+          <span class='item-price'>$${m.price}</span>
+          <button class='add-btn' data-name='${m.name}' data-price='${m.price}'>+</button>
         </div>
       `).join('')}
     </div>
-    <div class="cart-summary">
-      <span class="cart-count">${cart.length} 項</span>
-      <span class="cart-total">$${cart.reduce((s, i) => s + i.price, 0)}</span>
+    <div class='cart-summary'>
+      <span class='cart-count'>${cart.length} 項</span>
+      <span class='cart-total'>$${cart.reduce((s, i) => s + i.price, 0)}</span>
     </div>
   `;
   sec.classList.add('active');
@@ -87,13 +87,13 @@ async function renderDelivery(params) {
   await loadCart();
   const container = createElement('div', 'app-container delivery-app');
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-      <h1 class="menu-title">外送</h1>
+    <header class='ios-header'>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+      <h1 class='menu-title'>外送</h1>
     </header>
-    <div class="page">
-      <div class="restaurant-list"></div>
-      <div class="menu-section"></div>
+    <div class='page'>
+      <div class='restaurant-list'></div>
+      <div class='menu-section'></div>
     </div>
   `;
   container.querySelector('.ios-back-btn').onclick = () => Router.back();

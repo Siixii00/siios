@@ -190,7 +190,7 @@ function getSelectedCharacterId(container) {
 async function generateCommentReply(container, post, commentText) {
     const characterId = getSelectedCharacterId(container);
     const context = await buildAppContext({ characterId });
-    const systemPrompt = context.systemPrompt || '你是一位專業的社群媒體使用者，擅長撰寫評論回覆。請使用繁體中文撰寫。輸出格式為 JSON: {"reply": "回覆內容"}';
+    const systemPrompt = context.systemPrompt || '你是一位專業的社群媒體使用者，擅長撰寫評論回覆。請使用繁體中文撰寫。輸出格式為 JSON: {'reply': '回覆內容'}';
     const prompt = `${context.systemPrompt}\n\n針對以下貼文和評論生成一則回覆：\n\n貼文: ${post.caption}\n評論: ${commentText}\n\n要求：\n1. 符合角色性格\n2. 簡短自然、口語化\n3. 10-30 字\n\n輸出 JSON 格式。`;
     const result = await callAPIWithMessages(systemPrompt, prompt, 0.9);
     let parsed = null;
@@ -206,7 +206,7 @@ async function generateAIPosts(container) {
     try {
         const characterId = getSelectedCharacterId(container);
         const context = await buildAppContext({ characterId });
-        const systemPrompt = context.systemPrompt || '你是一位專業的社群媒體內容創作者，擅長根據角色設定和使用者背景創作符合人物性格的 Instagram 貼文。請使用繁體中文撰寫。輸出格式為 JSON: {"posts": [{"user": "用戶名", "location": "地點", "caption": "貼文說明", "likes": 隨機讚數}]}';
+        const systemPrompt = context.systemPrompt || '你是一位專業的社群媒體內容創作者，擅長根據角色設定和使用者背景創作符合人物性格的 Instagram 貼文。請使用繁體中文撰寫。輸出格式為 JSON: {'posts': [{'user': '用戶名', 'location': '地點', 'caption': '貼文說明', 'likes': 隨機讚數}]}';
         const prompt = `${context.systemPrompt}\n\n請生成 3 則 Instagram 貼文，要求：\n1. 符合角色性格和使用者設定\n2. 每則貼文說明 30-100 字\n3. 可以包含適當的表情符號和標標籤\n\n輸出 JSON 格式。`;
         const result = await callAPIWithMessages(systemPrompt, prompt, 0.85);
         let parsed = null;
@@ -249,7 +249,7 @@ async function generateAIStories(container) {
         const context = await buildAppContext({ characterId });
         const characters = await CharactersDB.getAll();
         const authors = ['User'].concat(characters.slice(0, 1).map(c => c.name));
-        const systemPrompt = context.systemPrompt || '你是一位專業的社群媒體內容創作者，擅長創作 Instagram 限時動態。請使用繁體中文撰寫。輸出格式為 JSON: {"stories": [{"author": "作者名", "content": "限動內容"}]}';
+        const systemPrompt = context.systemPrompt || '你是一位專業的社群媒體內容創作者，擅長創作 Instagram 限時動態。請使用繁體中文撰寫。輸出格式為 JSON: {'stories': [{'author': '作者名', 'content': '限動內容'}]}';
         const prompt = `${context.systemPrompt}\n\n請為以下作者各生成 1 則限時動態：${authors.join('、')}\n\n要求：\n1. 符合各角色性格和設定\n2. 簡短有趣、生活化\n3. 20-50 字\n\n輸出 JSON 格式。`;
         const result = await callAPIWithMessages(systemPrompt, prompt, 0.85);
         let parsed = null;
@@ -276,16 +276,16 @@ async function renderStories(container) {
     igStories.forEach((story) => {
         const button = createElement('button', 'story');
         if (story.avatar) {
-            button.innerHTML = `<div class="avatar"><img src="${story.avatar}" alt="${story.name} story"></div><span>${story.name}</span>`;
+            button.innerHTML = `<div class='avatar'><img src='${story.avatar}' alt='${story.name} story'></div><span>${story.name}</span>`;
         } else {
-            button.innerHTML = `<div class="avatar" style="background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);"></div><span>${story.name}</span>`;
+            button.innerHTML = `<div class='avatar' style='background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);'></div><span>${story.name}</span>`;
         }
         button.addEventListener('click', () => button.classList.add('seen'));
         storiesTrack.appendChild(button);
     });
     storiesData.forEach((story) => {
         const button = createElement('button', 'story');
-        button.innerHTML = `<div class="avatar"><img src="${story.avatar}" alt="${story.name} story"></div><span>${story.name}</span>`;
+        button.innerHTML = `<div class='avatar'><img src='${story.avatar}' alt='${story.name} story'></div><span>${story.name}</span>`;
         button.addEventListener('click', () => button.classList.add('seen'));
         storiesTrack.appendChild(button);
     });
@@ -295,32 +295,32 @@ function createPostElement(post) {
     const article = createElement('article', 'post');
     article.dataset.postId = post.id;
     article.innerHTML = `
-        <div class="post-header">
-            <div class="post-user">
-                <div class="avatar-ring"><img src="${post.avatar}" alt="${post.user}"></div>
+        <div class='post-header'>
+            <div class='post-user'>
+                <div class='avatar-ring'><img src='${post.avatar}' alt='${post.user}'></div>
                 <div>
                     <strong>${post.user}</strong>
-                    <div class="post-meta">${post.location}</div>
+                    <div class='post-meta'>${post.location}</div>
                 </div>
             </div>
-            <button class="icon-btn"><i class="fa-solid fa-ellipsis"></i></button>
+            <button class='icon-btn'><i class='fa-solid fa-ellipsis'></i></button>
         </div>
-        <div class="post-image">
-            <img src="${post.image}" alt="${post.user} post">
-            <i class="fa-solid fa-heart like-heart"></i>
+        <div class='post-image'>
+            <img src='${post.image}' alt='${post.user} post'>
+            <i class='fa-solid fa-heart like-heart'></i>
         </div>
-        <div class="post-actions">
+        <div class='post-actions'>
             <div>
-                <button class="like-btn"><i class="fa${post.liked ? '-solid' : '-regular'} fa-heart"></i></button>
-                <button><i class="fa-regular fa-comment"></i></button>
-                <button><i class="fa-regular fa-paper-plane"></i></button>
+                <button class='like-btn'><i class='fa${post.liked ? '-solid' : '-regular'} fa-heart'></i></button>
+                <button><i class='fa-regular fa-comment'></i></button>
+                <button><i class='fa-regular fa-paper-plane'></i></button>
             </div>
-            <button class="bookmark-btn" data-post-id="${post.id}"><i class="fa-regular fa-bookmark"></i></button>
+            <button class='bookmark-btn' data-post-id='${post.id}'><i class='fa-regular fa-bookmark'></i></button>
         </div>
-        <div class="post-stats"><strong class="likes-count">${formatLikes(post.likes)} 個讚</strong></div>
-        <div class="caption"><strong>${post.user}</strong>${post.caption}</div>
-        <div class="view-comments">查看全部 37 則留言</div>
-        <div class="view-comments">${post.time}</div>
+        <div class='post-stats'><strong class='likes-count'>${formatLikes(post.likes)} 個讚</strong></div>
+        <div class='caption'><strong>${post.user}</strong>${post.caption}</div>
+        <div class='view-comments'>查看全部 37 則留言</div>
+        <div class='view-comments'>${post.time}</div>
     `;
     bindPostInteractions(article, post);
     return article;
@@ -333,7 +333,7 @@ async function bindPostInteractions(article, post) {
     const image = article.querySelector('.post-image');
     const bookmarkBtn = article.querySelector('.bookmark-btn');
     const updateIcon = () => {
-        likeBtn.innerHTML = `<i class="fa${post.liked ? '-solid' : '-regular'} fa-heart"></i>`;
+        likeBtn.innerHTML = `<i class='fa${post.liked ? '-solid' : '-regular'} fa-heart'></i>`;
         likeBtn.classList.toggle('active', post.liked);
         likesCount.textContent = `${formatLikes(post.likes)} 個讚`;
     };
@@ -362,11 +362,11 @@ async function bindPostInteractions(article, post) {
         if (isSaved) {
             const newSavedIds = savedIds.filter(id => id !== post.id);
             await saveSavedPosts(newSavedIds);
-            bookmarkBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i>';
+            bookmarkBtn.innerHTML = '<i class='fa-regular fa-bookmark'></i>';
         } else {
             savedIds.push(post.id);
             await saveSavedPosts(savedIds);
-            bookmarkBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i>';
+            bookmarkBtn.innerHTML = '<i class='fa-solid fa-bookmark'></i>';
         }
     });
 }
@@ -393,41 +393,41 @@ async function renderInstagram(params) {
     const characters = await CharactersDB.getAll();
     const container = createElement('div', 'ig-app');
     container.innerHTML = `
-        <header class="ig-header">
-            <button class="icon-btn" id="back-btn" aria-label="返回">
-                <i class="fa-solid fa-chevron-left"></i>
+        <header class='ig-header'>
+            <button class='icon-btn' id='back-btn' aria-label='返回'>
+                <i class='fa-solid fa-chevron-left'></i>
             </button>
-            <h1 class="logo">Instagram</h1>
-            <div class="header-actions">
-                <select id="character-selector" class="character-select" aria-label="選擇角色">
-                    <option value="">選擇角色</option>
-                    ${characters.map(c => `<option value="${c.id}">${c.name}</option>`).join('')}
+            <h1 class='logo'>Instagram</h1>
+            <div class='header-actions'>
+                <select id='character-selector' class='character-select' aria-label='選擇角色'>
+                    <option value=''>選擇角色</option>
+                    ${characters.map(c => `<option value='${c.id}'>${c.name}</option>`).join('')}
                 </select>
-                <button class="icon-btn" id="ai-generate-story-btn" aria-label="生成限動">
-                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <button class='icon-btn' id='ai-generate-story-btn' aria-label='生成限動'>
+                    <i class='fa-solid fa-wand-magic-sparkles'></i>
                 </button>
-                <button class="icon-btn" id="ai-generate-posts-btn" aria-label="生成貼文">
-                    <i class="fa-solid fa-robot"></i>
+                <button class='icon-btn' id='ai-generate-posts-btn' aria-label='生成貼文'>
+                    <i class='fa-solid fa-robot'></i>
                 </button>
             </div>
         </header>
-        <section class="stories" aria-label="Stories">
-            <button class="story camera" aria-label="Add Story">
-                <div class="avatar">
-                    <i class="fa-solid fa-plus"></i>
+        <section class='stories' aria-label='Stories'>
+            <button class='story camera' aria-label='Add Story'>
+                <div class='avatar'>
+                    <i class='fa-solid fa-plus'></i>
                 </div>
                 <span>你的限動</span>
             </button>
-            <div class="stories-track" id="stories-track"></div>
+            <div class='stories-track' id='stories-track'></div>
         </section>
-        <main class="feed" id="feed" aria-live="polite"></main>
-        <nav class="bottom-nav" aria-label="主要導覽">
-            <button class="nav-btn active" data-tab="home"><i class="fa-solid fa-house"></i></button>
-            <button class="nav-btn" data-tab="search"><i class="fa-regular fa-compass"></i></button>
-            <button class="nav-btn" data-tab="reels"><i class="fa-solid fa-clapperboard"></i></button>
-            <button class="nav-btn" data-tab="shop"><i class="fa-regular fa-bag-shopping"></i></button>
-            <button class="nav-btn" data-tab="profile" id="profile-btn">
-                <span class="nav-avatar"></span>
+        <main class='feed' id='feed' aria-live='polite'></main>
+        <nav class='bottom-nav' aria-label='主要導覽'>
+            <button class='nav-btn active' data-tab='home'><i class='fa-solid fa-house'></i></button>
+            <button class='nav-btn' data-tab='search'><i class='fa-regular fa-compass'></i></button>
+            <button class='nav-btn' data-tab='reels'><i class='fa-solid fa-clapperboard'></i></button>
+            <button class='nav-btn' data-tab='shop'><i class='fa-regular fa-bag-shopping'></i></button>
+            <button class='nav-btn' data-tab='profile' id='profile-btn'>
+                <span class='nav-avatar'></span>
             </button>
         </nav>
     `;

@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -22,27 +22,27 @@ async function renderTimetree(params) {
   
   const container = createElement('div', 'app-container timetree-app');
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-      <h1 class="menu-title">時間樹</h1>
+    <header class='ios-header'>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+      <h1 class='menu-title'>時間樹</h1>
     </header>
-    <div class="page">
-      <div class="calendar-header">${month}</div>
-      <div class="calendar-grid">
-        <div class="calendar-weekdays">
+    <div class='page'>
+      <div class='calendar-header'>${month}</div>
+      <div class='calendar-grid'>
+        <div class='calendar-weekdays'>
           <span>日</span><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span>
         </div>
-        <div class="calendar-days">
-          ${Array(firstDay).fill('<div class="day empty"></div>').join('')}
+        <div class='calendar-days'>
+          ${Array(firstDay).fill('<div class='day empty'></div>').join('')}
           ${Array(daysInMonth).fill(0).map((_, i) => {
             const day = i + 1;
             const isToday = day === today.getDate();
             const hasEvent = events.some(e => new Date(e.date).getDate() === day);
-            return `<div class="day ${isToday ? 'today' : ''} ${hasEvent ? 'has-event' : ''}" data-day="${day}">${day}</div>`;
+            return `<div class='day ${isToday ? 'today' : ''} ${hasEvent ? 'has-event' : ''}' data-day='${day}'>${day}</div>`;
           }).join('')}
         </div>
       </div>
-      <button class="add-event-btn"><i class="fas fa-plus"></i> 新增事件</button>
+      <button class='add-event-btn'><i class='fas fa-plus'></i> 新增事件</button>
     </div>
   `;
   container.querySelector('.ios-back-btn').onclick = () => Router.back();

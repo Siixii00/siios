@@ -115,12 +115,12 @@ function renderFeed(container) {
     
     if (filtered.length === 0) {
         feedEl.innerHTML = `
-            <div class="yt-empty-state">
-                <span class="material-symbols-outlined">play_disabled</span>
-                <div class="yt-empty-state-title">尚無影片內容</div>
-                <div class="yt-empty-state-desc">點擊下方按鈕讓 AI 生成符合角色興趣的影片</div>
-                <button class="yt-primary-btn" data-action="ai-generate">
-                    <span class="material-symbols-outlined">auto_awesome</span> AI 生成影片
+            <div class='yt-empty-state'>
+                <span class='material-symbols-outlined'>play_disabled</span>
+                <div class='yt-empty-state-title'>尚無影片內容</div>
+                <div class='yt-empty-state-desc'>點擊下方按鈕讓 AI 生成符合角色興趣的影片</div>
+                <button class='yt-primary-btn' data-action='ai-generate'>
+                    <span class='material-symbols-outlined'>auto_awesome</span> AI 生成影片
                 </button>
             </div>
         `;
@@ -132,18 +132,18 @@ function renderFeed(container) {
             ? `background-image: url('${video.thumb}'); background-size: cover; background-position: center;`
             : `background: ${video.thumbGradient || 'linear-gradient(135deg, #2c2c2e, #1f1f21)'}`;
         return `
-        <article class="yt-card" data-video-id="${video.id}">
-            <div class="yt-thumb" style="${bgStyle}">
-                <span class="yt-duration">${video.duration}</span>
+        <article class='yt-card' data-video-id='${video.id}'>
+            <div class='yt-thumb' style='${bgStyle}'>
+                <span class='yt-duration'>${video.duration}</span>
             </div>
-            <div class="yt-meta">
-                <div class="yt-channel"></div>
+            <div class='yt-meta'>
+                <div class='yt-channel'></div>
                 <div>
-                    <div class="yt-title">${video.title}</div>
-                    <div class="yt-info">${video.channel} · ${video.views} · ${video.time}</div>
+                    <div class='yt-title'>${video.title}</div>
+                    <div class='yt-info'>${video.channel} · ${video.views} · ${video.time}</div>
                 </div>
-                <button class="yt-more" type="button" aria-label="更多" data-action="video-more">
-                    <span class="material-symbols-outlined">more_vert</span>
+                <button class='yt-more' type='button' aria-label='更多' data-action='video-more'>
+                    <span class='material-symbols-outlined'>more_vert</span>
                 </button>
             </div>
         </article>
@@ -156,22 +156,22 @@ function renderCollections(container) {
     
     if (currentCollections.length === 0) {
         list.innerHTML = `
-            <div class="yt-collection-empty">
-                <span class="material-symbols-outlined">folder_open</span>
+            <div class='yt-collection-empty'>
+                <span class='material-symbols-outlined'>folder_open</span>
                 <div>尚未建立收藏夾</div>
-                <div style="font-size:12px;margin-top:8px;">點擊右上角 + 新增收藏夾</div>
+                <div style='font-size:12px;margin-top:8px;'>點擊右上角 + 新增收藏夾</div>
             </div>
         `;
         return;
     }
     list.innerHTML = currentCollections.map((col, index) => `
-        <div class="yt-collection-item" data-collection-index="${index}">
+        <div class='yt-collection-item' data-collection-index='${index}'>
             <div>
-                <div class="yt-collection-name">${col.name}</div>
-                <div class="yt-collection-count">${col.videos.length} 部影片</div>
+                <div class='yt-collection-name'>${col.name}</div>
+                <div class='yt-collection-count'>${col.videos.length} 部影片</div>
             </div>
-            <button class="yt-collection-delete" data-action="delete-collection" data-index="${index}" aria-label="刪除">
-                <span class="material-symbols-outlined">delete</span>
+            <button class='yt-collection-delete' data-action='delete-collection' data-index='${index}' aria-label='刪除'>
+                <span class='material-symbols-outlined'>delete</span>
             </button>
         </div>
     `).join('');
@@ -190,12 +190,12 @@ function renderMeView(container) {
     
     if (meVideosEl) {
         if (myVideos.length === 0) {
-            meVideosEl.innerHTML = `<div style="color:var(--muted);font-size:12px;padding:20px;text-align:center;">尚未創建影片</div>`;
+            meVideosEl.innerHTML = `<div style='color:var(--muted);font-size:12px;padding:20px;text-align:center;'>尚未創建影片</div>`;
         } else {
             meVideosEl.innerHTML = myVideos.slice(0, 4).map(v => `
-                <div class="yt-me-video">
-                    ${v.thumb ? `<img class="yt-me-video-thumb" src="${v.thumb}" alt="">` : ''}
-                    <span class="yt-me-video-duration">${v.duration}</span>
+                <div class='yt-me-video'>
+                    ${v.thumb ? `<img class='yt-me-video-thumb' src='${v.thumb}' alt=''>` : ''}
+                    <span class='yt-me-video-duration'>${v.duration}</span>
                 </div>
             `).join('');
         }
@@ -209,9 +209,9 @@ function renderSaveList(container, videoId) {
     saveList.innerHTML = currentCollections.map(col => {
         const isSaved = col.videos.some(v => v.id === videoId);
         return `
-            <div class="yt-save-item ${isSaved ? 'saved' : ''}" data-collection-id="${col.id}">
-                <span class="yt-save-item-name">${col.name}</span>
-                ${isSaved ? '<span class="material-symbols-outlined yt-save-item-check">check</span>' : ''}
+            <div class='yt-save-item ${isSaved ? 'saved' : ''}' data-collection-id='${col.id}'>
+                <span class='yt-save-item-name'>${col.name}</span>
+                ${isSaved ? '<span class='material-symbols-outlined yt-save-item-check'>check</span>' : ''}
             </div>
         `;
     }).join('');
@@ -409,9 +409,9 @@ async function generateAdContent(char) {
 1. 一句簡短的橫幅廣告文案（10-15字，吸引注意）
 2. 一個彈窗廣告內容（JSON格式）：
 {
-  "icon": "一個emoji",
-  "title": "彈窗標題（4-6字）",
-  "text": "彈窗內容（15-25字）"
+  'icon': '一個emoji',
+  'title': '彈窗標題（4-6字）',
+  'text': '彈窗內容（15-25字）'
 }
 
 用以下格式輸出：
@@ -608,13 +608,13 @@ function showAdPopup(container, popupContent = null) {
     const msg = popupContent || { icon: '🎁', title: '特別推薦', text: '探索更多精彩內容！' };
     const popup = createElement('div', 'yt-ad-popup');
     popup.innerHTML = `
-        <div class="yt-ad-popup-card">
-            <div class="yt-ad-popup-icon">${msg.icon}</div>
-            <div class="yt-ad-popup-title">${msg.title}</div>
-            <div class="yt-ad-popup-text">${msg.text}</div>
-            <div class="yt-ad-popup-actions">
-                <button class="yt-ad-popup-btn primary" data-action="ad-continue">繼續觀看</button>
-                <button class="yt-ad-popup-btn secondary" data-action="ad-learn-more">了解更多</button>
+        <div class='yt-ad-popup-card'>
+            <div class='yt-ad-popup-icon'>${msg.icon}</div>
+            <div class='yt-ad-popup-title'>${msg.title}</div>
+            <div class='yt-ad-popup-text'>${msg.text}</div>
+            <div class='yt-ad-popup-actions'>
+                <button class='yt-ad-popup-btn primary' data-action='ad-continue'>繼續觀看</button>
+                <button class='yt-ad-popup-btn secondary' data-action='ad-learn-more'>了解更多</button>
             </div>
         </div>
     `;
@@ -683,18 +683,18 @@ function renderCharWatchHistory(container) {
     if (!list) return;
     
     if (charWatchHistory.length === 0) {
-        list.innerHTML = '<div class="yt-char-empty">尚無觀看紀錄</div>';
+        list.innerHTML = '<div class='yt-char-empty'>尚無觀看紀錄</div>';
         return;
     }
     
     list.innerHTML = charWatchHistory.slice(0, 20).map(entry => `
-        <div class="yt-char-history-item">
-            <div class="yt-char-history-item-video">${entry.videoTitle}</div>
-            <div class="yt-char-history-item-meta">
-                <span><span class="material-symbols-outlined" style="font-size:14px;">person</span> ${entry.charName}</span>
-                <span><span class="material-symbols-outlined" style="font-size:14px;">schedule</span> ${new Date(entry.watchedAt).toLocaleString('zh-TW', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</span>
+        <div class='yt-char-history-item'>
+            <div class='yt-char-history-item-video'>${entry.videoTitle}</div>
+            <div class='yt-char-history-item-meta'>
+                <span><span class='material-symbols-outlined' style='font-size:14px;'>person</span> ${entry.charName}</span>
+                <span><span class='material-symbols-outlined' style='font-size:14px;'>schedule</span> ${new Date(entry.watchedAt).toLocaleString('zh-TW', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' })}</span>
             </div>
-            <div class="yt-char-history-item-reaction">${entry.reaction}</div>
+            <div class='yt-char-history-item-reaction'>${entry.reaction}</div>
         </div>
     `).join('');
 }
@@ -719,7 +719,7 @@ async function openPlayerPage(container, video) {
         playerFrame.src = video.url;
     }
     
-    const likeBtn = container.querySelector('[data-action="like-video"]');
+    const likeBtn = container.querySelector('[data-action='like-video']');
     if (likeBtn) {
         likeBtn.classList.toggle('liked', likedVideos.some(v => v.id === video.id));
     }
@@ -774,7 +774,7 @@ function openAddModal(container) {
     if (addThumbPreview) {
         addThumbPreview.style.backgroundImage = '';
         addThumbPreview.classList.remove('has-image');
-        addThumbPreview.innerHTML = '<span class="material-symbols-outlined">image</span><span>點擊上傳封面</span>';
+        addThumbPreview.innerHTML = '<span class='material-symbols-outlined'>image</span><span>點擊上傳封面</span>';
     }
     if (addTitleInput) addTitleInput.focus();
 }
@@ -914,7 +914,7 @@ function toggleLike(container) {
         likedVideos.push(pendingVideoData);
     }
     
-    const likeBtn = container.querySelector('[data-action="like-video"]');
+    const likeBtn = container.querySelector('[data-action='like-video']');
     if (likeBtn) {
         likeBtn.classList.toggle('liked', likedVideos.some(v => v.id === pendingVideoData.id));
     }
@@ -1003,7 +1003,7 @@ function resetAIVideoGenModal(container) {
     const startBtn = container.querySelector('#yt-start-video-gen-btn');
     if (startBtn) {
         startBtn.disabled = false;
-        startBtn.innerHTML = '<span class="material-symbols-outlined">auto_awesome</span> 開始生成';
+        startBtn.innerHTML = '<span class='material-symbols-outlined'>auto_awesome</span> 開始生成';
     }
     
     aiVideoGenState.isGenerating = false;
@@ -1038,7 +1038,7 @@ async function startYTAIVideoGeneration(container) {
     const startBtn = container.querySelector('#yt-start-video-gen-btn');
     if (startBtn) {
         startBtn.disabled = true;
-        startBtn.innerHTML = '<span class="material-symbols-outlined">progress_activity</span> 生成中...';
+        startBtn.innerHTML = '<span class='material-symbols-outlined'>progress_activity</span> 生成中...';
     }
     
     container.querySelector('.yt-ai-video-gen-status')?.removeAttribute('hidden');
@@ -1109,305 +1109,305 @@ async function renderYouTube(params) {
     const characters = await loadCharacters();
     
     container.innerHTML = `
-        <header class="yt-topbar">
-            <div class="yt-logo">
-                <div class="yt-play">
-                    <span class="material-symbols-outlined" style="font-size:12px;color:#fff;">play_arrow</span>
+        <header class='yt-topbar'>
+            <div class='yt-logo'>
+                <div class='yt-play'>
+                    <span class='material-symbols-outlined' style='font-size:12px;color:#fff;'>play_arrow</span>
                 </div>
-                <span class="yt-text">YouTube</span>
+                <span class='yt-text'>YouTube</span>
             </div>
-            <div class="yt-actions">
-                <button class="yt-icon" data-action="ai-video-gen" title="AI 影片生成">
-                    <span class="material-symbols-outlined">auto_awesome</span>
+            <div class='yt-actions'>
+                <button class='yt-icon' data-action='ai-video-gen' title='AI 影片生成'>
+                    <span class='material-symbols-outlined'>auto_awesome</span>
                 </button>
-                <button class="yt-icon" data-action="open-char-view" title="角色視角">
-                    <span class="material-symbols-outlined">person</span>
+                <button class='yt-icon' data-action='open-char-view' title='角色視角'>
+                    <span class='material-symbols-outlined'>person</span>
                 </button>
             </div>
         </header>
 
-        <section class="yt-main">
-            <div class="yt-chips">
-                <select class="yt-filter-select" id="yt-filter-select">
-                    <option value="all">全部</option>
-                    <option value="live">直播</option>
-                    <option value="music">音樂</option>
-                    <option value="game">遊戲</option>
-                    <option value="tech">科技</option>
-                    <option value="diy">DIY</option>
+        <section class='yt-main'>
+            <div class='yt-chips'>
+                <select class='yt-filter-select' id='yt-filter-select'>
+                    <option value='all'>全部</option>
+                    <option value='live'>直播</option>
+                    <option value='music'>音樂</option>
+                    <option value='game'>遊戲</option>
+                    <option value='tech'>科技</option>
+                    <option value='diy'>DIY</option>
                 </select>
             </div>
-            <div class="yt-feed"></div>
+            <div class='yt-feed'></div>
         </section>
 
-        <section class="yt-collections" hidden>
-            <header class="yt-collections-topbar">
-                <button class="yt-icon" data-action="close-collections">
-                    <span class="material-symbols-outlined">chevron_left</span>
+        <section class='yt-collections' hidden>
+            <header class='yt-collections-topbar'>
+                <button class='yt-icon' data-action='close-collections'>
+                    <span class='material-symbols-outlined'>chevron_left</span>
                 </button>
-                <div class="yt-collections-title">收藏夾</div>
-                <button class="yt-icon" data-action="add-collection">
-                    <span class="material-symbols-outlined">add</span>
+                <div class='yt-collections-title'>收藏夾</div>
+                <button class='yt-icon' data-action='add-collection'>
+                    <span class='material-symbols-outlined'>add</span>
                 </button>
             </header>
-            <div class="yt-collections-list"></div>
+            <div class='yt-collections-list'></div>
         </section>
 
-        <section class="yt-me-view" hidden>
-            <header class="yt-me-topbar">
-                <button class="yt-icon" data-action="close-me">
-                    <span class="material-symbols-outlined">chevron_left</span>
+        <section class='yt-me-view' hidden>
+            <header class='yt-me-topbar'>
+                <button class='yt-icon' data-action='close-me'>
+                    <span class='material-symbols-outlined'>chevron_left</span>
                 </button>
-                <div class="yt-me-title">我的頻道</div>
-                <button class="yt-icon"><span class="material-symbols-outlined">settings</span></button>
+                <div class='yt-me-title'>我的頻道</div>
+                <button class='yt-icon'><span class='material-symbols-outlined'>settings</span></button>
             </header>
-            <div class="yt-me-header">
-                <div class="yt-me-avatar"></div>
+            <div class='yt-me-header'>
+                <div class='yt-me-avatar'></div>
                 <div>
-                    <div class="yt-me-name">User</div>
-                    <div class="yt-me-sub">@user</div>
+                    <div class='yt-me-name'>User</div>
+                    <div class='yt-me-sub'>@user</div>
                 </div>
             </div>
-            <div class="yt-me-stats">
+            <div class='yt-me-stats'>
                 <div><span>${myVideos.length}</span><small>影片</small></div>
                 <div><span>${likedVideos.length}</span><small>喜歡</small></div>
                 <div><span>${currentCollections.length}</span><small>收藏</small></div>
             </div>
-            <div class="yt-me-card">
-                <div class="yt-me-card-title">我的影片</div>
-                <div class="yt-me-videos"></div>
+            <div class='yt-me-card'>
+                <div class='yt-me-card-title'>我的影片</div>
+                <div class='yt-me-videos'></div>
             </div>
         </section>
 
-        <section class="yt-player-page" hidden>
-            <header class="yt-player-topbar">
-                <button class="yt-icon" data-action="close-player">
-                    <span class="material-symbols-outlined">chevron_left</span>
+        <section class='yt-player-page' hidden>
+            <header class='yt-player-topbar'>
+                <button class='yt-icon' data-action='close-player'>
+                    <span class='material-symbols-outlined'>chevron_left</span>
                 </button>
-                <div class="yt-player-title">播放影片</div>
-                <button class="yt-icon"><span class="material-symbols-outlined">more_vert</span></button>
+                <div class='yt-player-title'>播放影片</div>
+                <button class='yt-icon'><span class='material-symbols-outlined'>more_vert</span></button>
             </header>
-            <div class="yt-player-stage">
-                <div class="yt-player-video" id="yt-player-video">
+            <div class='yt-player-stage'>
+                <div class='yt-player-video' id='yt-player-video'>
                     <iframe allowfullscreen></iframe>
                 </div>
-                <div class="yt-char-companion" hidden>
-                    <div class="yt-char-companion-avatar"></div>
-                    <span class="yt-char-companion-name">角色</span>
-                    <button class="yt-char-companion-close" data-action="remove-companion">
-                        <span class="material-symbols-outlined">close</span>
+                <div class='yt-char-companion' hidden>
+                    <div class='yt-char-companion-avatar'></div>
+                    <span class='yt-char-companion-name'>角色</span>
+                    <button class='yt-char-companion-close' data-action='remove-companion'>
+                        <span class='material-symbols-outlined'>close</span>
                     </button>
                 </div>
-                <div class="yt-char-comment-bubble" hidden>
-                    <div class="yt-char-comment-text"></div>
+                <div class='yt-char-comment-bubble' hidden>
+                    <div class='yt-char-comment-text'></div>
                 </div>
             </div>
-            <div class="yt-ad-overlay" hidden>
-                <div class="yt-ad-container">
-                    <div class="yt-ad-video">
-                        <div class="yt-ad-placeholder">
-                            <span class="material-symbols-outlined" style="font-size:64px;">play_circle</span>
+            <div class='yt-ad-overlay' hidden>
+                <div class='yt-ad-container'>
+                    <div class='yt-ad-video'>
+                        <div class='yt-ad-placeholder'>
+                            <span class='material-symbols-outlined' style='font-size:64px;'>play_circle</span>
                             <span>廣告播放中</span>
                         </div>
                     </div>
-                    <div class="yt-ad-info">
-                        <span class="yt-ad-skip">可跳過廣告 <span class="yt-ad-countdown">5</span></span>
-                        <button class="yt-ad-skip-btn" hidden data-action="skip-ad">
-                            <span class="material-symbols-outlined">skip_next</span> 略過
+                    <div class='yt-ad-info'>
+                        <span class='yt-ad-skip'>可跳過廣告 <span class='yt-ad-countdown'>5</span></span>
+                        <button class='yt-ad-skip-btn' hidden data-action='skip-ad'>
+                            <span class='material-symbols-outlined'>skip_next</span> 略過
                         </button>
                     </div>
-                    <div class="yt-ad-progress">
-                        <div class="yt-ad-progress-bar"></div>
+                    <div class='yt-ad-progress'>
+                        <div class='yt-ad-progress-bar'></div>
                     </div>
                 </div>
-                <div class="yt-ad-banner" hidden>
-                    <div class="yt-ad-banner-content">
-                        <span class="yt-ad-banner-text">限時優惠！</span>
-                        <button class="yt-ad-banner-btn" data-action="click-ad">了解詳情</button>
+                <div class='yt-ad-banner' hidden>
+                    <div class='yt-ad-banner-content'>
+                        <span class='yt-ad-banner-text'>限時優惠！</span>
+                        <button class='yt-ad-banner-btn' data-action='click-ad'>了解詳情</button>
                     </div>
-                    <button class="yt-ad-banner-close" data-action="close-ad-banner">
-                        <span class="material-symbols-outlined">close</span>
+                    <button class='yt-ad-banner-close' data-action='close-ad-banner'>
+                        <span class='material-symbols-outlined'>close</span>
                     </button>
                 </div>
             </div>
-            <div class="yt-player-info">
-                <div class="yt-player-meta">
-                    <div class="yt-player-title-main"></div>
-                    <div class="yt-player-sub"></div>
+            <div class='yt-player-info'>
+                <div class='yt-player-meta'>
+                    <div class='yt-player-title-main'></div>
+                    <div class='yt-player-sub'></div>
                 </div>
-                <div class="yt-player-actions">
-                    <button class="yt-action-btn" data-action="like-video">
-                        <span class="material-symbols-outlined">thumb_up</span>
+                <div class='yt-player-actions'>
+                    <button class='yt-action-btn' data-action='like-video'>
+                        <span class='material-symbols-outlined'>thumb_up</span>
                         <span>喜歡</span>
                     </button>
-                    <button class="yt-action-btn" data-action="save-video">
-                        <span class="material-symbols-outlined">bookmark</span>
+                    <button class='yt-action-btn' data-action='save-video'>
+                        <span class='material-symbols-outlined'>bookmark</span>
                         <span>儲存</span>
                     </button>
-                    <button class="yt-action-btn" data-action="share-video">
-                        <span class="material-symbols-outlined">share</span>
+                    <button class='yt-action-btn' data-action='share-video'>
+                        <span class='material-symbols-outlined'>share</span>
                         <span>分享</span>
                     </button>
-                    <button class="yt-action-btn">
-                        <span class="material-symbols-outlined">download</span>
+                    <button class='yt-action-btn'>
+                        <span class='material-symbols-outlined'>download</span>
                         <span>下載</span>
                     </button>
                 </div>
             </div>
-            <div class="yt-char-watch-section">
-                <div class="yt-char-watch-header">
-                    <div class="yt-char-watch-avatar"></div>
-                    <div class="yt-char-watch-info">
-                        <div class="yt-char-watch-name">選擇角色</div>
-                        <div class="yt-char-watch-status">點擊上方選擇角色一起觀看</div>
+            <div class='yt-char-watch-section'>
+                <div class='yt-char-watch-header'>
+                    <div class='yt-char-watch-avatar'></div>
+                    <div class='yt-char-watch-info'>
+                        <div class='yt-char-watch-name'>選擇角色</div>
+                        <div class='yt-char-watch-status'>點擊上方選擇角色一起觀看</div>
                     </div>
-                    <select id="yt-char-watch-select">
-                        <option value="">選擇角色</option>
-                        ${characters.map(c => `<option value="${c.id}">${c.name}</option>`).join('')}
+                    <select id='yt-char-watch-select'>
+                        <option value=''>選擇角色</option>
+                        ${characters.map(c => `<option value='${c.id}'>${c.name}</option>`).join('')}
                     </select>
                 </div>
-                <div class="yt-char-watch-reaction" hidden>
-                    <div class="yt-char-reaction-text"></div>
-                    <div class="yt-char-reaction-time"></div>
+                <div class='yt-char-watch-reaction' hidden>
+                    <div class='yt-char-reaction-text'></div>
+                    <div class='yt-char-reaction-time'></div>
                 </div>
-                <div class="yt-char-watch-actions">
-                    <button class="yt-ghost-btn" data-action="char-react">
-                        <span class="material-symbols-outlined">chat</span> 角色回應
+                <div class='yt-char-watch-actions'>
+                    <button class='yt-ghost-btn' data-action='char-react'>
+                        <span class='material-symbols-outlined'>chat</span> 角色回應
                     </button>
-                    <button class="yt-ghost-btn" data-action="char-watch-history">
-                        <span class="material-symbols-outlined">history</span> 紀錄
+                    <button class='yt-ghost-btn' data-action='char-watch-history'>
+                        <span class='material-symbols-outlined'>history</span> 紀錄
                     </button>
                 </div>
             </div>
-            <div class="yt-player-channel">
-                <div class="yt-player-channel-avatar"></div>
+            <div class='yt-player-channel'>
+                <div class='yt-player-channel-avatar'></div>
                 <div>
-                    <div class="yt-player-channel-name"></div>
-                    <div class="yt-player-channel-sub">訂閱</div>
+                    <div class='yt-player-channel-name'></div>
+                    <div class='yt-player-channel-sub'>訂閱</div>
                 </div>
-                <button class="yt-subscribe-btn">訂閱</button>
+                <button class='yt-subscribe-btn'>訂閱</button>
             </div>
-            <div class="yt-player-desc"></div>
+            <div class='yt-player-desc'></div>
         </section>
 
-        <div class="yt-modal yt-add-modal" hidden>
-            <div class="yt-modal-backdrop" data-action="close-add-modal"></div>
-            <div class="yt-modal-card">
-                <div class="yt-modal-header">
-                    <span class="yt-modal-title">新增影片</span>
-                    <button class="yt-icon small" data-action="close-add-modal">
-                        <span class="material-symbols-outlined">close</span>
+        <div class='yt-modal yt-add-modal' hidden>
+            <div class='yt-modal-backdrop' data-action='close-add-modal'></div>
+            <div class='yt-modal-card'>
+                <div class='yt-modal-header'>
+                    <span class='yt-modal-title'>新增影片</span>
+                    <button class='yt-icon small' data-action='close-add-modal'>
+                        <span class='material-symbols-outlined'>close</span>
                     </button>
                 </div>
-                <div class="yt-modal-body">
-                    <div class="yt-thumb-upload">
-                        <div class="yt-thumb-preview" data-action="upload-thumb">
-                            <span class="material-symbols-outlined">image</span>
+                <div class='yt-modal-body'>
+                    <div class='yt-thumb-upload'>
+                        <div class='yt-thumb-preview' data-action='upload-thumb'>
+                            <span class='material-symbols-outlined'>image</span>
                             <span>點擊上傳封面</span>
                         </div>
-                        <input type="file" id="add-video-thumb-file" accept="image/*" hidden>
+                        <input type='file' id='add-video-thumb-file' accept='image/*' hidden>
                     </div>
-                    <input type="text" class="yt-text-input" id="add-video-title" placeholder="影片標題">
-                    <input type="text" class="yt-text-input" id="add-video-url" placeholder="影片連結 (選填)">
-                    <select id="add-video-tag">
-                        <option value="all">全部</option>
-                        <option value="live">直播</option>
-                        <option value="music">音樂</option>
-                        <option value="game">遊戲</option>
-                        <option value="tech">科技</option>
-                        <option value="diy">DIY</option>
+                    <input type='text' class='yt-text-input' id='add-video-title' placeholder='影片標題'>
+                    <input type='text' class='yt-text-input' id='add-video-url' placeholder='影片連結 (選填)'>
+                    <select id='add-video-tag'>
+                        <option value='all'>全部</option>
+                        <option value='live'>直播</option>
+                        <option value='music'>音樂</option>
+                        <option value='game'>遊戲</option>
+                        <option value='tech'>科技</option>
+                        <option value='diy'>DIY</option>
                     </select>
-                    <div class="yt-modal-actions">
-                        <button class="yt-ghost-btn" data-action="close-add-modal">取消</button>
-                        <button class="yt-primary-btn" data-action="add-video">新增</button>
+                    <div class='yt-modal-actions'>
+                        <button class='yt-ghost-btn' data-action='close-add-modal'>取消</button>
+                        <button class='yt-primary-btn' data-action='add-video'>新增</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="yt-modal yt-collection-modal" hidden>
-            <div class="yt-modal-backdrop" data-action="close-collection-modal"></div>
-            <div class="yt-modal-card">
-                <div class="yt-modal-header">
-                    <span class="yt-modal-title">新增收藏夾</span>
-                    <button class="yt-icon small" data-action="close-collection-modal">
-                        <span class="material-symbols-outlined">close</span>
+        <div class='yt-modal yt-collection-modal' hidden>
+            <div class='yt-modal-backdrop' data-action='close-collection-modal'></div>
+            <div class='yt-modal-card'>
+                <div class='yt-modal-header'>
+                    <span class='yt-modal-title'>新增收藏夾</span>
+                    <button class='yt-icon small' data-action='close-collection-modal'>
+                        <span class='material-symbols-outlined'>close</span>
                     </button>
                 </div>
-                <div class="yt-modal-body">
-                    <input type="text" class="yt-text-input" id="collection-name" placeholder="收藏夾名稱">
-                    <div class="yt-modal-actions">
-                        <button class="yt-ghost-btn" data-action="close-collection-modal">取消</button>
-                        <button class="yt-primary-btn" data-action="create-collection">建立</button>
+                <div class='yt-modal-body'>
+                    <input type='text' class='yt-text-input' id='collection-name' placeholder='收藏夾名稱'>
+                    <div class='yt-modal-actions'>
+                        <button class='yt-ghost-btn' data-action='close-collection-modal'>取消</button>
+                        <button class='yt-primary-btn' data-action='create-collection'>建立</button>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="yt-modal yt-save-modal" hidden>
-            <div class="yt-modal-backdrop" data-action="close-save-modal"></div>
-            <div class="yt-modal-card">
-                <div class="yt-modal-header">
-                    <span class="yt-modal-title">儲存到收藏夾</span>
-                    <button class="yt-icon small" data-action="close-save-modal">
-                        <span class="material-symbols-outlined">close</span>
+        <div class='yt-modal yt-save-modal' hidden>
+            <div class='yt-modal-backdrop' data-action='close-save-modal'></div>
+            <div class='yt-modal-card'>
+                <div class='yt-modal-header'>
+                    <span class='yt-modal-title'>儲存到收藏夾</span>
+                    <button class='yt-icon small' data-action='close-save-modal'>
+                        <span class='material-symbols-outlined'>close</span>
                     </button>
                 </div>
-                <div class="yt-modal-body">
-                    <div class="yt-save-list"></div>
+                <div class='yt-modal-body'>
+                    <div class='yt-save-list'></div>
                 </div>
             </div>
         </div>
 
-        <div class="yt-modal yt-ai-video-gen-modal" hidden>
-            <div class="yt-modal-backdrop" data-action="close-ai-video-gen"></div>
-            <div class="yt-modal-card yt-ai-video-gen-modal-card">
-                <div class="yt-modal-header">
-                    <span class="yt-modal-title">AI 影片生成</span>
-                    <button class="yt-icon small" data-action="close-ai-video-gen">
-                        <span class="material-symbols-outlined">close</span>
+        <div class='yt-modal yt-ai-video-gen-modal' hidden>
+            <div class='yt-modal-backdrop' data-action='close-ai-video-gen'></div>
+            <div class='yt-modal-card yt-ai-video-gen-modal-card'>
+                <div class='yt-modal-header'>
+                    <span class='yt-modal-title'>AI 影片生成</span>
+                    <button class='yt-icon small' data-action='close-ai-video-gen'>
+                        <span class='material-symbols-outlined'>close</span>
                     </button>
                 </div>
-                <div class="yt-modal-body">
-                    <div class="yt-ai-video-gen-form">
-                        <textarea class="yt-text-input yt-ai-video-textarea" id="yt-ai-video-prompt" placeholder="描述你想生成的影片內容..."></textarea>
-                        <div class="yt-ai-video-advanced-toggle">
-                            <button class="yt-ghost-btn" data-action="toggle-advanced">
-                                進階選項 <span class="material-symbols-outlined">expand_more</span>
+                <div class='yt-modal-body'>
+                    <div class='yt-ai-video-gen-form'>
+                        <textarea class='yt-text-input yt-ai-video-textarea' id='yt-ai-video-prompt' placeholder='描述你想生成的影片內容...'></textarea>
+                        <div class='yt-ai-video-advanced-toggle'>
+                            <button class='yt-ghost-btn' data-action='toggle-advanced'>
+                                進階選項 <span class='material-symbols-outlined'>expand_more</span>
                             </button>
                         </div>
-                        <div class="yt-ai-video-advanced-options" hidden id="yt-ai-video-advanced-options">
-                            <div class="yt-modal-row">
-                                <span class="yt-modal-label">長度</span>
-                                <input type="range" id="yt-ai-video-duration" min="1" max="10" step="0.5" value="2">
-                                <span class="yt-ai-video-range-value" id="yt-ai-video-duration-value">2s</span>
+                        <div class='yt-ai-video-advanced-options' hidden id='yt-ai-video-advanced-options'>
+                            <div class='yt-modal-row'>
+                                <span class='yt-modal-label'>長度</span>
+                                <input type='range' id='yt-ai-video-duration' min='1' max='10' step='0.5' value='2'>
+                                <span class='yt-ai-video-range-value' id='yt-ai-video-duration-value'>2s</span>
                             </div>
-                            <div class="yt-modal-row">
-                                <span class="yt-modal-label">寬度</span>
-                                <input type="range" id="yt-ai-video-width" min="256" max="1024" step="64" value="704">
-                                <span class="yt-ai-video-range-value" id="yt-ai-video-width-value">704</span>
+                            <div class='yt-modal-row'>
+                                <span class='yt-modal-label'>寬度</span>
+                                <input type='range' id='yt-ai-video-width' min='256' max='1024' step='64' value='704'>
+                                <span class='yt-ai-video-range-value' id='yt-ai-video-width-value'>704</span>
                             </div>
                         </div>
-                        <div class="yt-modal-actions">
-                            <button class="yt-primary-btn" id="yt-start-video-gen-btn" data-action="start-video-gen">
-                                <span class="material-symbols-outlined">auto_awesome</span> 開始生成
+                        <div class='yt-modal-actions'>
+                            <button class='yt-primary-btn' id='yt-start-video-gen-btn' data-action='start-video-gen'>
+                                <span class='material-symbols-outlined'>auto_awesome</span> 開始生成
                             </button>
                         </div>
                     </div>
-                    <div class="yt-ai-video-gen-status" hidden>
-                        <div class="yt-ai-video-gen-progress">
-                            <div class="yt-ai-video-gen-progress-bar"></div>
+                    <div class='yt-ai-video-gen-status' hidden>
+                        <div class='yt-ai-video-gen-progress'>
+                            <div class='yt-ai-video-gen-progress-bar'></div>
                         </div>
-                        <div class="yt-ai-video-gen-message">準備中...</div>
+                        <div class='yt-ai-video-gen-message'>準備中...</div>
                     </div>
-                    <div class="yt-ai-video-gen-preview" hidden>
-                        <video id="yt-ai-video-preview-player" controls></video>
-                        <div class="yt-ai-video-gen-preview-actions">
-                            <button class="yt-ghost-btn" data-action="download-video">
-                                <span class="material-symbols-outlined">download</span> 下載
+                    <div class='yt-ai-video-gen-preview' hidden>
+                        <video id='yt-ai-video-preview-player' controls></video>
+                        <div class='yt-ai-video-gen-preview-actions'>
+                            <button class='yt-ghost-btn' data-action='download-video'>
+                                <span class='material-symbols-outlined'>download</span> 下載
                             </button>
-                            <button class="yt-primary-btn" data-action="add-to-feed">
-                                <span class="material-symbols-outlined">add</span> 加入影片庫
+                            <button class='yt-primary-btn' data-action='add-to-feed'>
+                                <span class='material-symbols-outlined'>add</span> 加入影片庫
                             </button>
                         </div>
                     </div>
@@ -1415,20 +1415,20 @@ async function renderYouTube(params) {
             </div>
         </div>
 
-        <nav class="yt-tabbar">
-            <button class="tab active" data-view="home">
-                <span class="material-symbols-outlined">home</span>
+        <nav class='yt-tabbar'>
+            <button class='tab active' data-view='home'>
+                <span class='material-symbols-outlined'>home</span>
                 <span>首頁</span>
             </button>
-            <button class="tab" data-action="open-add-modal">
-                <div class="tab-plus">+</div>
+            <button class='tab' data-action='open-add-modal'>
+                <div class='tab-plus'>+</div>
             </button>
-            <button class="tab" data-view="collections">
-                <span class="material-symbols-outlined">folder</span>
+            <button class='tab' data-view='collections'>
+                <span class='material-symbols-outlined'>folder</span>
                 <span>收藏</span>
             </button>
-            <button class="tab" data-view="me">
-                <span class="material-symbols-outlined">person</span>
+            <button class='tab' data-view='me'>
+                <span class='material-symbols-outlined'>person</span>
                 <span>我的</span>
             </button>
         </nav>
@@ -1454,7 +1454,7 @@ async function renderYouTube(params) {
     
     container.querySelector('.yt-feed')?.addEventListener('click', async event => {
         const card = event.target.closest('.yt-card');
-        const moreBtn = event.target.closest('[data-action="video-more"]');
+        const moreBtn = event.target.closest('[data-action='video-more']');
         
         if (moreBtn && card) {
             const videoId = card.dataset.videoId;
@@ -1477,7 +1477,7 @@ async function renderYouTube(params) {
     });
     
     container.querySelector('.yt-collections-list')?.addEventListener('click', event => {
-        const deleteBtn = event.target.closest('[data-action="delete-collection"]');
+        const deleteBtn = event.target.closest('[data-action='delete-collection']');
         if (deleteBtn) {
             event.stopPropagation();
             const index = parseInt(deleteBtn.dataset.index, 10);
@@ -1635,7 +1635,7 @@ async function renderYouTube(params) {
         }
     });
     
-    container.querySelectorAll('input[type="range"]').forEach(input => {
+    container.querySelectorAll('input[type='range']').forEach(input => {
         input.addEventListener('input', (e) => {
             const id = e.target.id;
             const value = e.target.value;

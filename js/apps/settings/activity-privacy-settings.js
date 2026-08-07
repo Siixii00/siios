@@ -116,7 +116,7 @@ async function renderActivityPrivacySettings() {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.navigate('/activity')
     });
-    backBtn.innerHTML = '<i class="fas fa-chevron-left"></i> 返回';
+    backBtn.innerHTML = '<i class='fas fa-chevron-left'></i> 返回';
     header.appendChild(backBtn);
     
     const title = createElement('h1', 'menu-title');
@@ -136,14 +136,14 @@ async function renderActivityPrivacySettings() {
     
     const globalEnabledSwitch = createElement('div', 'mx-4 mb-4 p-4 bg-gradient-to-r from-green-500 to-teal-500 rounded-xl text-white');
     const globalEnabledContent = `
-        <div class="flex items-center justify-between">
+        <div class='flex items-center justify-between'>
             <div>
-                <h2 class="text-lg font-bold mb-1">活動同步</h2>
-                <p class="text-sm opacity-90">開啟後，系統將記錄您的數位活動</p>
+                <h2 class='text-lg font-bold mb-1'>活動同步</h2>
+                <p class='text-sm opacity-90'>開啟後，系統將記錄您的數位活動</p>
             </div>
-            <label class="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" id="global-enabled-switch" class="sr-only peer" ${savedSettings.global_enabled ? 'checked' : ''}>
-                <div class="w-11 h-6 bg-white bg-opacity-30 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-white peer-checked:bg-opacity-100"></div>
+            <label class='relative inline-flex items-center cursor-pointer'>
+                <input type='checkbox' id='global-enabled-switch' class='sr-only peer' ${savedSettings.global_enabled ? 'checked' : ''}>
+                <div class='w-11 h-6 bg-white bg-opacity-30 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-white peer-checked:bg-opacity-100'></div>
             </label>
         </div>
     `;
@@ -249,7 +249,7 @@ async function renderActivityPrivacySettings() {
         iconDiv.style.backgroundColor = platform.color;
         
         if (platform.icon === 'discord') {
-            iconDiv.innerHTML = '<i class="fab fa-discord text-lg"></i>';
+            iconDiv.innerHTML = '<i class='fab fa-discord text-lg'></i>';
         } else {
             iconDiv.appendChild(createIcon(platform.icon, 'text-lg'));
         }
@@ -267,8 +267,8 @@ async function renderActivityPrivacySettings() {
         const toggle = createElement('label', 'relative inline-flex items-center cursor-pointer');
         const platformEnabled = savedSettings.platforms[platform.id]?.enabled ?? true;
         toggle.innerHTML = `
-            <input type="checkbox" class="sr-only peer platform-toggle" data-platform="${platform.id}" ${platformEnabled ? 'checked' : ''}>
-            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-500"></div>
+            <input type='checkbox' class='sr-only peer platform-toggle' data-platform='${platform.id}' ${platformEnabled ? 'checked' : ''}>
+            <div class='w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-500'></div>
         `;
         platformHeader.appendChild(toggle);
         
@@ -283,19 +283,19 @@ async function renderActivityPrivacySettings() {
     
     const aiAccessCard = createElement('div', 'bg-white rounded-xl p-4 shadow-sm');
     const aiAccessContent = `
-        <div class="flex items-center justify-between mb-3">
+        <div class='flex items-center justify-between mb-3'>
             <div>
-                <h3 class="font-semibold text-sm">允許 AI 角色存取</h3>
-                <p class="text-xs text-ios-muted">AI 可查看您的活動記錄以提供個人化回應</p>
+                <h3 class='font-semibold text-sm'>允許 AI 角色存取</h3>
+                <p class='text-xs text-ios-muted'>AI 可查看您的活動記錄以提供個人化回應</p>
             </div>
-            <label class="relative inline-flex items-center cursor-pointer">
-                <input type="checkbox" id="ai-access-switch" class="sr-only peer" ${savedSettings.ai_access_enabled ? 'checked' : ''}>
-                <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-500"></div>
+            <label class='relative inline-flex items-center cursor-pointer'>
+                <input type='checkbox' id='ai-access-switch' class='sr-only peer' ${savedSettings.ai_access_enabled ? 'checked' : ''}>
+                <div class='w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-500'></div>
             </label>
         </div>
-        <div class="text-xs text-ios-muted p-3 bg-gray-50 rounded-lg">
-            <p class="font-medium mb-1">AI 僅可存取：</p>
-            <ul class="space-y-1">
+        <div class='text-xs text-ios-muted p-3 bg-gray-50 rounded-lg'>
+            <p class='font-medium mb-1'>AI 僅可存取：</p>
+            <ul class='space-y-1'>
                 <li>• 您授權的平台活動</li>
                 <li>• 符合隱私等級的資訊</li>
                 <li>• 保留期限內的記錄</li>
@@ -332,7 +332,7 @@ async function renderActivityPrivacySettings() {
     saveBtn.textContent = '保存設定';
     saveBtn.onclick = async () => {
         const globalEnabled = document.getElementById('global-enabled-switch').checked;
-        const selectedLevel = document.querySelector('input[name="privacy-level"]:checked')?.value || 'basic';
+        const selectedLevel = document.querySelector('input[name='privacy-level']:checked')?.value || 'basic';
         const aiAccessEnabled = document.getElementById('ai-access-switch').checked;
         
         const platforms = {};

@@ -41,7 +41,7 @@ async function generateDivinationReading(cardName, isUpright, characterId) {
 你是一位專業的塔羅牌占卜師。請根據抽到的牌、牌位，以及角色的性格特質，提供個人化的占卜解讀。
 請用溫和、神秘且富有啟發性的語氣回應。
 回覆格式必須是JSON：
-{"meaning": "牌義解讀（一句話）", "advice": "具體建議（1-2句話）"}`;
+{'meaning': '牌義解讀（一句話）', 'advice': '具體建議（1-2句話）'}`;
   
   const fullSystemPrompt = context.systemPrompt + tarotSystemPrompt;
   
@@ -130,15 +130,15 @@ function renderCard(container, card) {
   if (!display) return;
   
   display.innerHTML = card ? `
-    <div class="tarot-card ${card.upright ? 'upright' : 'reversed'}">
-      <div class="card-name">${card.name}</div>
-      <div class="card-position">${card.upright ? '正位' : '逆位'}</div>
-      <div class="card-meaning">${card.meaning}</div>
-      <div class="card-advice">${card.advice}</div>
+    <div class='tarot-card ${card.upright ? 'upright' : 'reversed'}'>
+      <div class='card-name'>${card.name}</div>
+      <div class='card-position'>${card.upright ? '正位' : '逆位'}</div>
+      <div class='card-meaning'>${card.meaning}</div>
+      <div class='card-advice'>${card.advice}</div>
     </div>
   ` : `
-    <div class="card-placeholder">
-      <i class="fas fa-water"></i>
+    <div class='card-placeholder'>
+      <i class='fas fa-water'></i>
       <p>點擊下方按鈕撿起漂流瓶</p>
     </div>
   `;
@@ -146,12 +146,12 @@ function renderCard(container, card) {
 
 function renderCharacterSelector(characters) {
   return `
-    <div class="character-selector">
-      <label class="selector-label">選擇角色</label>
-      <select id="character-select" class="character-select">
-        <option value="">-- 不指定角色 --</option>
+    <div class='character-selector'>
+      <label class='selector-label'>選擇角色</label>
+      <select id='character-select' class='character-select'>
+        <option value=''>-- 不指定角色 --</option>
         ${characters.map(char => `
-          <option value="${char.id}" ${selectedCharacterId === char.id ? 'selected' : ''}>${char.name}</option>
+          <option value='${char.id}' ${selectedCharacterId === char.id ? 'selected' : ''}>${char.name}</option>
         `).join('')}
       </select>
     </div>
@@ -171,26 +171,26 @@ async function renderDriftBottle(params) {
   const container = createElement('div', 'app-container drift-app');
   
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn">
-        <i class="fas fa-chevron-left"></i> 返回
+    <header class='ios-header'>
+      <button class='ios-back-btn'>
+        <i class='fas fa-chevron-left'></i> 返回
       </button>
-      <h1 class="menu-title">漂流瓶</h1>
+      <h1 class='menu-title'>漂流瓶</h1>
     </header>
     
-    <div class="page">
-      <div class="ocean-bg"></div>
+    <div class='page'>
+      <div class='ocean-bg'></div>
       
       ${renderCharacterSelector(characters)}
       
-      <div class="card-display"></div>
+      <div class='card-display'></div>
       
-      <button class="draw-btn">
-        <i class="fas fa-water_bottle"></i>
+      <button class='draw-btn'>
+        <i class='fas fa-water_bottle'></i>
         撿起漂流瓶
       </button>
       
-      <div class="history-section">
+      <div class='history-section'>
         <h3>占卜說明</h3>
         <p>漂流瓶是一種命運占卜方式。撿起漂流瓶，獲得當下的指引。</p>
       </div>
@@ -213,14 +213,14 @@ async function renderDriftBottle(params) {
   if (drawBtn) {
     drawBtn.onclick = async () => {
       drawBtn.disabled = true;
-      drawBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 占卜中...';
+      drawBtn.innerHTML = '<i class='fas fa-spinner fa-spin'></i> 占卜中...';
       
       const card = await drawCard(selectedCharacterId);
       renderCard(container, card);
       await saveLastCard();
       
       drawBtn.disabled = false;
-      drawBtn.innerHTML = '<i class="fas fa-water_bottle"></i> 撿起漂流瓶';
+      drawBtn.innerHTML = '<i class='fas fa-water_bottle'></i> 撿起漂流瓶';
     };
   }
   

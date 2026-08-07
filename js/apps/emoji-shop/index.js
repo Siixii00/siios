@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -26,17 +26,17 @@ async function renderEmojiShop(params) {
   await loadOwned();
   const container = createElement('div', 'app-container emoji-shop-app');
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-      <h1 class="menu-title">表情商店</h1>
+    <header class='ios-header'>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+      <h1 class='menu-title'>表情商店</h1>
     </header>
-    <div class="page">
-      <div class="emoji-grid">
+    <div class='page'>
+      <div class='emoji-grid'>
         ${EMOJIS.map(e => `
-          <div class="emoji-item ${owned.includes(e.id) ? 'owned' : ''}" data-id="${e.id}">
-            <span class="emoji-icon">${e.emoji}</span>
-            <span class="emoji-name">${e.name}</span>
-            <span class="${owned.includes(e.id) ? 'owned' : 'price'}">${owned.includes(e.id) ? '已擁有' : (e.price === 0 ? '免費' : e.price + ' 幣')}</span>
+          <div class='emoji-item ${owned.includes(e.id) ? 'owned' : ''}' data-id='${e.id}'>
+            <span class='emoji-icon'>${e.emoji}</span>
+            <span class='emoji-name'>${e.name}</span>
+            <span class='${owned.includes(e.id) ? 'owned' : 'price'}'>${owned.includes(e.id) ? '已擁有' : (e.price === 0 ? '免費' : e.price + ' 幣')}</span>
           </div>
         `).join('')}
       </div>

@@ -1,4 +1,4 @@
-import { TOOLS_CATALOG } from './tools-catalog.js';
+﻿import { TOOLS_CATALOG } from './tools-catalog.js';
 import { initDB } from '../../db.js';
 
 const CUSTOM_TOOLS_STORE = 'customMCPTools';
@@ -339,9 +339,9 @@ export function generateWranglerConfig(selectedTools, hasSecrets = false) {
         return tool?.requires?.some(r => r.includes('API Key') || r.includes('Token'));
     });
 
-    let config = `name = "siios-mcp-worker"
-main = "src/index.js"
-compatibility_date = "2024-01-01"
+    let config = `name = 'siios-mcp-worker'
+main = 'src/index.js'
+compatibility_date = '2024-01-01'
 
 # 啟用日誌
 [observability.logs]
@@ -362,16 +362,16 @@ enabled = true
 
 export function generatePackageJson() {
     return `{
-  "name": "siios-mcp-worker",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "tail": "wrangler tail"
+  'name': 'siios-mcp-worker',
+  'version': '1.0.0',
+  'private': true,
+  'scripts': {
+    'deploy': 'wrangler deploy',
+    'dev': 'wrangler dev',
+    'tail': 'wrangler tail'
   },
-  "devDependencies": {
-    "wrangler": "^3.0.0"
+  'devDependencies': {
+    'wrangler': '^3.0.0'
   }
 }`;
 }

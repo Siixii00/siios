@@ -1,4 +1,4 @@
-import { CharactersDB, ChatsDB, MessagesDB, MemoryDB, SettingsDB, WikiRecordsDB } from '../../db.js';
+﻿import { CharactersDB, ChatsDB, MessagesDB, MemoryDB, SettingsDB, WikiRecordsDB } from '../../db.js';
 import { createBlock } from './templates.js';
 
 const MESSAGES_PER_CHAT_LOG = 10;

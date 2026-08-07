@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -83,9 +83,9 @@ function renderGallery(container) {
     grid.innerHTML = filtered.map((img) => {
         const icon = SOURCE_ICONS[img.source] || 'image';
         const label = SOURCE_LABELS[img.source] || img.source;
-        return `<div class="gallery-item" data-id="${img.id}">
-            <img src="${img.url}" loading="lazy" alt="">
-            <span class="source-badge"><i class="fas fa-${icon}"></i> ${label}</span>
+        return `<div class='gallery-item' data-id='${img.id}'>
+            <img src='${img.url}' loading='lazy' alt=''>
+            <span class='source-badge'><i class='fas fa-${icon}'></i> ${label}</span>
         </div>`;
     }).join('');
 
@@ -171,48 +171,48 @@ async function renderAlbum(params) {
     allImages = await loadImages();
     
     container.innerHTML = `
-        <header class="ios-header">
-            <button class="ios-back-btn">
-                <i class="fas fa-chevron-left"></i> 返回
+        <header class='ios-header'>
+            <button class='ios-back-btn'>
+                <i class='fas fa-chevron-left'></i> 返回
             </button>
-            <h1 class="menu-title">相簿</h1>
-            <div class="header-actions">
-                <button class="header-action" id="upload-btn" title="新增照片">
-                    <i class="fas fa-plus"></i>
+            <h1 class='menu-title'>相簿</h1>
+            <div class='header-actions'>
+                <button class='header-action' id='upload-btn' title='新增照片'>
+                    <i class='fas fa-plus'></i>
                 </button>
             </div>
         </header>
 
-        <div class="tab-bar">
-            <button class="tab-btn active" data-tab="all">全部</button>
-            <button class="tab-btn" data-tab="uploaded">上傳</button>
-            <button class="tab-btn" data-tab="chat">聊天</button>
-            <button class="tab-btn" data-tab="painter">照相館</button>
+        <div class='tab-bar'>
+            <button class='tab-btn active' data-tab='all'>全部</button>
+            <button class='tab-btn' data-tab='uploaded'>上傳</button>
+            <button class='tab-btn' data-tab='chat'>聊天</button>
+            <button class='tab-btn' data-tab='painter'>照相館</button>
         </div>
 
-        <div class="gallery-wrapper">
-            <div class="gallery-grid" id="gallery-grid"></div>
-            <div class="empty-state hidden" id="empty-state">
-                <i class="fas fa-images"></i>
+        <div class='gallery-wrapper'>
+            <div class='gallery-grid' id='gallery-grid'></div>
+            <div class='empty-state hidden' id='empty-state'>
+                <i class='fas fa-images'></i>
                 <p>尚無照片</p>
-                <p class="empty-hint">點擊右上角 + 從裝置上傳</p>
+                <p class='empty-hint'>點擊右上角 + 從裝置上傳</p>
             </div>
         </div>
 
-        <input type="file" id="device-upload" hidden accept="image/*" multiple>
+        <input type='file' id='device-upload' hidden accept='image/*' multiple>
 
-        <div class="image-viewer hidden" id="image-viewer">
-            <div class="viewer-backdrop"></div>
-            <img id="viewer-img" src="" alt="">
-            <div class="viewer-actions">
-                <button class="viewer-btn" id="set-wallpaper-btn">
-                    <i class="fas fa-image"></i><span>桌布</span>
+        <div class='image-viewer hidden' id='image-viewer'>
+            <div class='viewer-backdrop'></div>
+            <img id='viewer-img' src='' alt=''>
+            <div class='viewer-actions'>
+                <button class='viewer-btn' id='set-wallpaper-btn'>
+                    <i class='fas fa-image'></i><span>桌布</span>
                 </button>
-                <button class="viewer-btn" id="set-lockscreen-btn">
-                    <i class="fas fa-lock"></i><span>鎖屏</span>
+                <button class='viewer-btn' id='set-lockscreen-btn'>
+                    <i class='fas fa-lock'></i><span>鎖屏</span>
                 </button>
-                <button class="viewer-btn viewer-btn-danger" id="delete-btn">
-                    <i class="fas fa-trash"></i><span>刪除</span>
+                <button class='viewer-btn viewer-btn-danger' id='delete-btn'>
+                    <i class='fas fa-trash'></i><span>刪除</span>
                 </button>
             </div>
         </div>

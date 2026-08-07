@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 import { CrossDeviceSync } from '../../core/cross-device/sync-manager.js';
@@ -20,7 +20,7 @@ async function renderCrossDeviceSettings() {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.navigate('/settings')
     });
-    backBtn.innerHTML = '<i class="fas fa-chevron-left"></i> 返回';
+    backBtn.innerHTML = '<i class='fas fa-chevron-left'></i> 返回';
     header.appendChild(backBtn);
     
     const title = createElement('h1', 'menu-title');
@@ -39,12 +39,12 @@ async function renderCrossDeviceSettings() {
         
         const introCard = createElement('div', 'p-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl text-white mb-4');
         introCard.innerHTML = `
-            <div class="flex items-center gap-2 mb-2">
-                <i class="fas fa-sync text-xl"></i>
-                <h2 class="text-lg font-bold">跨裝置同步</h2>
+            <div class='flex items-center gap-2 mb-2'>
+                <i class='fas fa-sync text-xl'></i>
+                <h2 class='text-lg font-bold'>跨裝置同步</h2>
             </div>
-            <p class="text-sm opacity-90 mb-3">讓您的活動記錄在電腦和手機間自動同步</p>
-            <div class="text-xs opacity-80 space-y-1">
+            <p class='text-sm opacity-90 mb-3'>讓您的活動記錄在電腦和手機間自動同步</p>
+            <div class='text-xs opacity-80 space-y-1'>
                 <div>✓ 端對端加密保護</div>
                 <div>✓ GitHub Gist 雲端儲存</div>
                 <div>✓ 自動衝突解決</div>
@@ -66,9 +66,9 @@ async function renderCrossDeviceSettings() {
         
         const tokenHint = createElement('div', 'text-xs text-gray-500 mb-3');
         tokenHint.innerHTML = `
-            <p class="mb-2">需要建立具有 <strong>gist</strong> 權限的 Token：</p>
-            <ol class="list-decimal list-inside space-y-1">
-                <li>前往 <a href="https://github.com/settings/tokens/new" target="_blank" class="text-blue-500 underline">GitHub Token 設定</a></li>
+            <p class='mb-2'>需要建立具有 <strong>gist</strong> 權限的 Token：</p>
+            <ol class='list-decimal list-inside space-y-1'>
+                <li>前往 <a href='https://github.com/settings/tokens/new' target='_blank' class='text-blue-500 underline'>GitHub Token 設定</a></li>
                 <li>選擇 Generate new token (classic)</li>
                 <li>勾選 <strong>gist</strong> 權限</li>
                 <li>複製產生的 Token</li>
@@ -120,10 +120,10 @@ async function renderCrossDeviceSettings() {
                 
                 const keyDisplay = createElement('div', 'mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg');
                 keyDisplay.innerHTML = `
-                    <p class="font-semibold text-sm mb-2">🔐 重要：請備份加密金鑰</p>
-                    <p class="text-xs text-gray-600 mb-2">此金鑰用於解密您的活動記錄，遺失將無法復原！</p>
-                    <div class="bg-white p-2 rounded border text-xs font-mono break-all">${result.encryptionKey}</div>
-                    <button class="mt-2 text-xs text-blue-500 underline" onclick="navigator.clipboard.writeText('${result.encryptionKey}').then(() => alert('已複製'))">複製金鑰</button>
+                    <p class='font-semibold text-sm mb-2'>🔐 重要：請備份加密金鑰</p>
+                    <p class='text-xs text-gray-600 mb-2'>此金鑰用於解密您的活動記錄，遺失將無法復原！</p>
+                    <div class='bg-white p-2 rounded border text-xs font-mono break-all'>${result.encryptionKey}</div>
+                    <button class='mt-2 text-xs text-blue-500 underline' onclick='navigator.clipboard.writeText('${result.encryptionKey}').then(() => alert('已複製'))'>複製金鑰</button>
                 `;
                 tokenCard.appendChild(keyDisplay);
                 
@@ -144,11 +144,11 @@ async function renderCrossDeviceSettings() {
         
         const statusCard = createElement('div', `p-4 rounded-xl ${status.connected ? 'bg-green-50 border border-green-200' : 'bg-red-50 border border-red-200'}`);
         statusCard.innerHTML = `
-            <div class="flex items-center gap-3">
-                <i class="fas ${status.connected ? 'fa-check-circle text-green-600' : 'fa-exclamation-circle text-red-600'} text-2xl"></i>
-                <div class="flex-1">
-                    <h3 class="font-semibold text-sm">${status.connected ? '已連線' : '連線失敗'}</h3>
-                    <p class="text-xs text-gray-600">${status.connected ? `GitHub 用戶：${status.user?.login}` : '請檢查 Token 是否有效'}</p>
+            <div class='flex items-center gap-3'>
+                <i class='fas ${status.connected ? 'fa-check-circle text-green-600' : 'fa-exclamation-circle text-red-600'} text-2xl'></i>
+                <div class='flex-1'>
+                    <h3 class='font-semibold text-sm'>${status.connected ? '已連線' : '連線失敗'}</h3>
+                    <p class='text-xs text-gray-600'>${status.connected ? `GitHub 用戶：${status.user?.login}` : '請檢查 Token 是否有效'}</p>
                 </div>
             </div>
         `;
@@ -159,16 +159,16 @@ async function renderCrossDeviceSettings() {
         
         const deviceInfo = createElement('div', 'text-sm space-y-2');
         deviceInfo.innerHTML = `
-            <div class="flex justify-between">
-                <span class="text-gray-600">裝置 ID</span>
-                <span class="font-mono text-xs">${syncManager.deviceId}</span>
+            <div class='flex justify-between'>
+                <span class='text-gray-600'>裝置 ID</span>
+                <span class='font-mono text-xs'>${syncManager.deviceId}</span>
             </div>
-            <div class="flex justify-between">
-                <span class="text-gray-600">裝置名稱</span>
+            <div class='flex justify-between'>
+                <span class='text-gray-600'>裝置名稱</span>
                 <span>${syncManager.getDeviceName()}</span>
             </div>
-            <div class="flex justify-between">
-                <span class="text-gray-600">裝置類型</span>
+            <div class='flex justify-between'>
+                <span class='text-gray-600'>裝置類型</span>
                 <span>${syncManager.getDeviceType() === 'mobile' ? '手機' : '電腦'}</span>
             </div>
         `;

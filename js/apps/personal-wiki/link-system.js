@@ -1,4 +1,4 @@
-import { escapeHtml } from '../../utils/html.js';
+﻿import { escapeHtml } from '../../utils/html.js';
 
 const LINK_REGEX = /\[\[([^\]]+)\]\]/g;
 
@@ -84,7 +84,7 @@ export function getBacklinks(pageId) {
 export function renderLinksInContent(html) {
     if (!html || typeof html !== 'string') return html;
     return html.replace(LINK_REGEX, (match, title) => {
-        return `<span class="wiki-bilink" data-link-title="${escapeHtml(title)}">${escapeHtml(title)}</span>`;
+        return `<span class='wiki-bilink' data-link-title='${escapeHtml(title)}'>${escapeHtml(title)}</span>`;
     });
 }
 
@@ -120,10 +120,10 @@ export function showLinkPicker(container, triggerEl, onSelect) {
     picker.style.left = Math.min(rect.left, window.innerWidth - 280) + 'px';
 
     picker.innerHTML = `
-        <div class="wiki-link-picker-search">
-            <input type="text" placeholder="搜尋頁面..." autofocus>
+        <div class='wiki-link-picker-search'>
+            <input type='text' placeholder='搜尋頁面...' autofocus>
         </div>
-        <div class="wiki-link-picker-list"></div>
+        <div class='wiki-link-picker-list'></div>
     `;
 
     container.appendChild(picker);
@@ -137,12 +137,12 @@ export function showLinkPicker(container, triggerEl, onSelect) {
             : cachedRecords;
 
         listEl.innerHTML = filtered.length === 0
-            ? '<div class="wiki-link-picker-empty">無符合頁面</div>'
+            ? '<div class='wiki-link-picker-empty'>無符合頁面</div>'
             : filtered.slice(0, 10).map(r => `
-                <div class="wiki-link-picker-item" data-pick-title="${escapeHtml(r.title)}">
-                    <span class="wiki-link-picker-icon">${r.icon || '📄'}</span>
-                    <span class="wiki-link-picker-label">${escapeHtml(r.title)}</span>
-                    <span class="wiki-link-picker-type">${r.page_type}</span>
+                <div class='wiki-link-picker-item' data-pick-title='${escapeHtml(r.title)}'>
+                    <span class='wiki-link-picker-icon'>${r.icon || '📄'}</span>
+                    <span class='wiki-link-picker-label'>${escapeHtml(r.title)}</span>
+                    <span class='wiki-link-picker-type'>${r.page_type}</span>
                 </div>
             `).join('');
 

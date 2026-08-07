@@ -35,14 +35,14 @@ async function renderDating(params) {
   const characters = await CharactersDB.getAll();
   
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn">
-        <i class="fas fa-chevron-left"></i> 返回
+    <header class='ios-header'>
+      <button class='ios-back-btn'>
+        <i class='fas fa-chevron-left'></i> 返回
       </button>
-      <h1 class="menu-title">約會</h1>
+      <h1 class='menu-title'>約會</h1>
     </header>
     
-    <div class="page" id="dating-page">
+    <div class='page' id='dating-page'>
       ${characters.length === 0 ? renderNoCharacters() : renderCharacterSelect(characters)}
     </div>
   `;
@@ -72,8 +72,8 @@ async function renderDating(params) {
 
 function renderNoCharacters() {
   return `
-    <div class="dating-placeholder">
-      <i class="fas fa-user-slash"></i>
+    <div class='dating-placeholder'>
+      <i class='fas fa-user-slash'></i>
       <h2>尚無角色</h2>
       <p>請先建立角色以開始約會</p>
     </div>
@@ -82,17 +82,17 @@ function renderNoCharacters() {
 
 function renderCharacterSelect(characters) {
   return `
-    <div class="dating-select">
-      <h2 class="dating-title">選擇約會對象</h2>
-      <div class="character-grid">
+    <div class='dating-select'>
+      <h2 class='dating-title'>選擇約會對象</h2>
+      <div class='character-grid'>
         ${characters.map(char => `
-          <div class="character-card" data-id="${char.id}">
-            <div class="character-avatar">
-              ${char.avatar ? `<img src="${char.avatar}" alt="${char.name}">` : `<i class="fas fa-user"></i>`}
+          <div class='character-card' data-id='${char.id}'>
+            <div class='character-avatar'>
+              ${char.avatar ? `<img src='${char.avatar}' alt='${char.name}'>` : `<i class='fas fa-user'></i>`}
             </div>
-            <div class="character-info">
+            <div class='character-info'>
               <h3>${char.name}</h3>
-              <p class="character-personality">${char.personality?.substring(0, 50) || '神秘的角色'}${char.personality?.length > 50 ? '...' : ''}</p>
+              <p class='character-personality'>${char.personality?.substring(0, 50) || '神秘的角色'}${char.personality?.length > 50 ? '...' : ''}</p>
             </div>
           </div>
         `).join('')}
@@ -103,13 +103,13 @@ function renderCharacterSelect(characters) {
 
 function renderSceneSelect() {
   return `
-    <div class="dating-select">
-      <h2 class="dating-title">選擇約會場景</h2>
-      <div class="scene-grid">
+    <div class='dating-select'>
+      <h2 class='dating-title'>選擇約會場景</h2>
+      <div class='scene-grid'>
         ${DATING_SCENES.map(scene => `
-          <div class="scene-card" data-id="${scene.id}">
-            <div class="scene-icon"><i class="fas ${scene.icon}"></i></div>
-            <div class="scene-info">
+          <div class='scene-card' data-id='${scene.id}'>
+            <div class='scene-icon'><i class='fas ${scene.icon}'></i></div>
+            <div class='scene-info'>
               <h3>${scene.name}</h3>
               <p>${scene.desc}</p>
             </div>
@@ -122,49 +122,49 @@ function renderSceneSelect() {
 
 function renderDatingScene(scene) {
   return `
-    <div class="dating-scene-container">
-      <div class="dating-header">
-        <div class="dating-partner">
-          <div class="partner-avatar">
-            ${datingState.character.avatar ? `<img src="${datingState.character.avatar}" alt="${datingState.character.name}">` : `<i class="fas fa-user"></i>`}
+    <div class='dating-scene-container'>
+      <div class='dating-header'>
+        <div class='dating-partner'>
+          <div class='partner-avatar'>
+            ${datingState.character.avatar ? `<img src='${datingState.character.avatar}' alt='${datingState.character.name}'>` : `<i class='fas fa-user'></i>`}
           </div>
-          <div class="partner-info">
+          <div class='partner-info'>
             <h3>${datingState.character.name}</h3>
-            <div class="affection-bar">
-              <div class="affection-fill" style="width: ${datingState.affection}%"></div>
+            <div class='affection-bar'>
+              <div class='affection-fill' style='width: ${datingState.affection}%'></div>
             </div>
-            <span class="affection-label">好感度: ${datingState.affection}%</span>
+            <span class='affection-label'>好感度: ${datingState.affection}%</span>
           </div>
         </div>
-        <div class="scene-badge">
-          <i class="fas ${scene.icon}"></i> ${scene.name}
+        <div class='scene-badge'>
+          <i class='fas ${scene.icon}'></i> ${scene.name}
         </div>
       </div>
       
-      <div class="dating-messages" id="dating-messages">
+      <div class='dating-messages' id='dating-messages'>
         ${datingState.messages.map(msg => `
-          <div class="dating-message ${msg.role}">
+          <div class='dating-message ${msg.role}'>
             ${msg.role === 'assistant' ? `
-              <div class="message-avatar">
-                ${datingState.character.avatar ? `<img src="${datingState.character.avatar}">` : `<i class="fas fa-user"></i>`}
+              <div class='message-avatar'>
+                ${datingState.character.avatar ? `<img src='${datingState.character.avatar}'>` : `<i class='fas fa-user'></i>`}
               </div>
             ` : ''}
-            <div class="message-content">${msg.content}</div>
+            <div class='message-content'>${msg.content}</div>
           </div>
         `).join('')}
       </div>
       
-      <div class="dating-actions">
-        <div class="action-buttons">
+      <div class='dating-actions'>
+        <div class='action-buttons'>
           ${DATING_ACTIONS.map(action => `
-            <button class="action-btn" data-id="${action.id}" title="${action.name}">
-              <i class="fas ${action.icon}"></i>
+            <button class='action-btn' data-id='${action.id}' title='${action.name}'>
+              <i class='fas ${action.icon}'></i>
             </button>
           `).join('')}
         </div>
-        <div class="dating-input-area">
-          <input type="text" id="dating-input" placeholder="輸入訊息..." />
-          <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
+        <div class='dating-input-area'>
+          <input type='text' id='dating-input' placeholder='輸入訊息...' />
+          <button id='send-btn'><i class='fas fa-paper-plane'></i></button>
         </div>
       </div>
     </div>
@@ -265,11 +265,11 @@ function addMessage(container, role, content) {
   messageEl.className = `dating-message ${role}`;
   messageEl.innerHTML = `
     ${role === 'assistant' ? `
-      <div class="message-avatar">
-        ${datingState.character.avatar ? `<img src="${datingState.character.avatar}">` : `<i class="fas fa-user"></i>`}
+      <div class='message-avatar'>
+        ${datingState.character.avatar ? `<img src='${datingState.character.avatar}'>` : `<i class='fas fa-user'></i>`}
       </div>
     ` : ''}
-    <div class="message-content">${content}</div>
+    <div class='message-content'>${content}</div>
   `;
   messagesDiv.appendChild(messageEl);
   messagesDiv.scrollTop = messagesDiv.scrollHeight;
@@ -432,13 +432,13 @@ function showTypingIndicator(container) {
   const typingEl = document.createElement('div');
   typingEl.className = 'dating-message assistant typing-indicator';
   typingEl.innerHTML = `
-    <div class="message-avatar">
-      ${datingState.character.avatar ? `<img src="${datingState.character.avatar}">` : `<i class="fas fa-user"></i>`}
+    <div class='message-avatar'>
+      ${datingState.character.avatar ? `<img src='${datingState.character.avatar}'>` : `<i class='fas fa-user'></i>`}
     </div>
-    <div class="message-content">
-      <span class="typing-dot"></span>
-      <span class="typing-dot"></span>
-      <span class="typing-dot"></span>
+    <div class='message-content'>
+      <span class='typing-dot'></span>
+      <span class='typing-dot'></span>
+      <span class='typing-dot'></span>
     </div>
   `;
   messagesDiv.appendChild(typingEl);

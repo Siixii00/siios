@@ -1,4 +1,4 @@
-/**
+﻿/**
  * SpatiotemporalTagger - 時空標註器
  * 
  * 為記憶添加時空資訊：

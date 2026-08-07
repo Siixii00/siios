@@ -1,4 +1,4 @@
-// 可視化調試日誌器 - 在手機上顯示 console 日誌
+﻿// 可視化調試日誌器 - 在手機上顯示 console 日誌
 class DebugLogger {
     constructor() {
         this.logs = [];
@@ -96,10 +96,10 @@ class DebugLogger {
             border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         `;
         header.innerHTML = `
-            <span style="font-weight: bold;">Debug Logs <span id="error-badge" style="display: none; background: #DC2626; color: white; padding: 2px 6px; border-radius: 10px; font-size: 10px; margin-left: 8px;">0</span></span>
-            <div style="display: flex; gap: 8px;">
-                <button id="debug-logger-copy" style="background: transparent; border: 1px solid white; color: white; cursor: pointer; padding: 4px 8px; border-radius: 4px; font-size: 12px;">複製</button>
-                <button id="debug-logger-clear" style="background: transparent; border: none; color: white; cursor: pointer; padding: 4px 8px;">清除</button>
+            <span style='font-weight: bold;'>Debug Logs <span id='error-badge' style='display: none; background: #DC2626; color: white; padding: 2px 6px; border-radius: 10px; font-size: 10px; margin-left: 8px;'>0</span></span>
+            <div style='display: flex; gap: 8px;'>
+                <button id='debug-logger-copy' style='background: transparent; border: 1px solid white; color: white; cursor: pointer; padding: 4px 8px; border-radius: 4px; font-size: 12px;'>複製</button>
+                <button id='debug-logger-clear' style='background: transparent; border: none; color: white; cursor: pointer; padding: 4px 8px;'>清除</button>
             </div>
         `;
         this.container.appendChild(header);
@@ -230,7 +230,7 @@ class DebugLogger {
                 word-wrap: break-word;
                 white-space: pre-wrap;
             `;
-            logEl.innerHTML = `<span style="opacity: 0.7;">[${log.timestamp}]</span> ${this.escapeHtml(log.message)}`;
+            logEl.innerHTML = `<span style='opacity: 0.7;'>[${log.timestamp}]</span> ${this.escapeHtml(log.message)}`;
             this.logsContainer.appendChild(logEl);
         });
         

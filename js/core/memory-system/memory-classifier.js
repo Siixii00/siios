@@ -1,4 +1,4 @@
-const VALID_TYPES = ['dynamic', 'permanent', 'feel', 'plan', 'letter', 'i', 'archive'];
+﻿const VALID_TYPES = ['dynamic', 'permanent', 'feel', 'plan', 'letter', 'i', 'archive'];
 const VALID_DOMAINS = ['日常', '人際', '成長', '身心', '興趣', '數字', '事務', '內心'];
 
 const KEYWORD_RULES = [
@@ -48,10 +48,10 @@ ${context ? `上下文：${context.replace(/[\r\n]/g, ' ')}` : ''}
 
 請返回以下格式的 JSON（不要其他文字）：
 {
-  "memory_type": "dynamic|permanent|feel|plan|letter|i",
-  "domain": "日常|人際|成長|身心|興趣|數字|事務|內心",
-  "meaning": "第一人稱描述為什麼這件事對我重要",
-  "importance": 1-10的整數
+  'memory_type': 'dynamic|permanent|feel|plan|letter|i',
+  'domain': '日常|人際|成長|身心|興趣|數字|事務|內心',
+  'meaning': '第一人稱描述為什麼這件事對我重要',
+  'importance': 1-10的整數
 }
 
 分類規則：

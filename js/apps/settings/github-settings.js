@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -72,9 +72,9 @@ async function renderGithubSettings() {
     
     const helpText = createElement('div', 'mb-4');
     helpText.innerHTML = `
-        <p class="text-sm text-ios-muted mb-2">如何獲取 Personal Access Token：</p>
-        <ol class="text-xs text-ios-muted space-y-1" style="padding-left: 16px;">
-            <li>1. 前往 <a href="https://github.com/settings/tokens" target="_blank" class="text-ios-blue">GitHub Token 設定</a></li>
+        <p class='text-sm text-ios-muted mb-2'>如何獲取 Personal Access Token：</p>
+        <ol class='text-xs text-ios-muted space-y-1' style='padding-left: 16px;'>
+            <li>1. 前往 <a href='https://github.com/settings/tokens' target='_blank' class='text-ios-blue'>GitHub Token 設定</a></li>
             <li>2. 點擊「Generate new token (classic)」</li>
             <li>3. 勾選 <code>repo</code> 權限</li>
             <li>4. 點擊「Generate token」</li>

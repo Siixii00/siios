@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -229,8 +229,8 @@ function renderFavorites(container) {
         card.type = 'button';
         card.className = 'favorite-card';
         card.innerHTML = `
-            <div class="favorite-avatar">${contact.name.slice(0, 2)}</div>
-            <div class="favorite-meta">
+            <div class='favorite-avatar'>${contact.name.slice(0, 2)}</div>
+            <div class='favorite-meta'>
                 <h3>${contact.name}</h3>
                 <p>${contact.label}</p>
             </div>
@@ -305,7 +305,7 @@ async function renderRecordings(container) {
     if (!recordings.length) {
         const empty = document.createElement('li');
         empty.className = 'recordings-empty';
-        empty.innerHTML = '<i class="fas fa-microphone-slash"></i><p>尚無錄音紀錄</p><span>通話錄音將自動保存在這裡</span>';
+        empty.innerHTML = '<i class='fas fa-microphone-slash'></i><p>尚無錄音紀錄</p><span>通話錄音將自動保存在這裡</span>';
         list.appendChild(empty);
         return;
     }
@@ -314,18 +314,18 @@ async function renderRecordings(container) {
         item.className = 'recording-item';
         const playBtn = document.createElement('button');
         playBtn.className = 'recording-play';
-        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+        playBtn.innerHTML = '<i class='fas fa-play'></i>';
         playBtn.addEventListener('click', () => playRecording(rec));
         const info = document.createElement('div');
         info.className = 'recording-info';
         info.innerHTML = `
-            <h3><i class="fas fa-user"></i> ${rec.charName}</h3>
+            <h3><i class='fas fa-user'></i> ${rec.charName}</h3>
             <p>${formatTimestamp(rec.timestamp)} · ${formatDuration(rec.duration)}</p>
         `;
         if (rec.transcript && rec.transcript.length > 0) {
             const transcriptToggle = document.createElement('button');
             transcriptToggle.className = 'transcript-toggle';
-            transcriptToggle.innerHTML = '<i class="fas fa-comment-dots"></i> 通話內容';
+            transcriptToggle.innerHTML = '<i class='fas fa-comment-dots'></i> 通話內容';
             transcriptToggle.addEventListener('click', () => {
                 const details = item.querySelector('.recording-transcript');
                 if (details) {
@@ -340,7 +340,7 @@ async function renderRecordings(container) {
                 const line = document.createElement('div');
                 line.className = `transcript-line ${entry.role === 'user' ? 'transcript-user' : 'transcript-char'}`;
                 const label = entry.role === 'user' ? '我' : rec.charName;
-                line.innerHTML = `<span class="transcript-label">${label}:</span> ${entry.text}`;
+                line.innerHTML = `<span class='transcript-label'>${label}:</span> ${entry.text}`;
                 transcriptDiv.appendChild(line);
             });
             item.append(playBtn, info, transcriptDiv);
@@ -351,11 +351,11 @@ async function renderRecordings(container) {
         actionsDiv.className = 'recording-actions';
         const downloadBtn = document.createElement('button');
         downloadBtn.className = 'recording-download';
-        downloadBtn.innerHTML = '<i class="fas fa-download"></i>';
+        downloadBtn.innerHTML = '<i class='fas fa-download'></i>';
         downloadBtn.addEventListener('click', () => downloadRecording(rec));
         const deleteBtn = document.createElement('button');
         deleteBtn.className = 'recording-delete';
-        deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
+        deleteBtn.innerHTML = '<i class='fas fa-trash'></i>';
         deleteBtn.addEventListener('click', async () => {
             if (confirm('確定刪除此錄音？')) {
                 await deleteRecording(rec.id);
@@ -476,83 +476,83 @@ async function renderPhone() {
     historyEntries = await loadHistory();
 
     container.innerHTML = `
-        <header class="ios-header">
-            <button class="ios-back-btn">
-                <i class="fas fa-chevron-left"></i> 返回
+        <header class='ios-header'>
+            <button class='ios-back-btn'>
+                <i class='fas fa-chevron-left'></i> 返回
             </button>
-            <h1 class="menu-title">電話</h1>
-            <div class="header-actions">
-                <button class="icon-btn" id="toggle-silent" aria-pressed="false">🔔</button>
+            <h1 class='menu-title'>電話</h1>
+            <div class='header-actions'>
+                <button class='icon-btn' id='toggle-silent' aria-pressed='false'>🔔</button>
             </div>
         </header>
 
-        <div class="phone-tabs">
-            <button class="phone-tab active" data-tab="keypad">鍵盤</button>
-            <button class="phone-tab" data-tab="history">紀錄</button>
-            <button class="phone-tab" data-tab="favorites">常用</button>
-            <button class="phone-tab" data-tab="recordings">錄音</button>
+        <div class='phone-tabs'>
+            <button class='phone-tab active' data-tab='keypad'>鍵盤</button>
+            <button class='phone-tab' data-tab='history'>紀錄</button>
+            <button class='phone-tab' data-tab='favorites'>常用</button>
+            <button class='phone-tab' data-tab='recordings'>錄音</button>
         </div>
 
-        <div class="tab-panel active" id="keypad-tab">
-            <div class="call-display">
-                <div class="dialed-number muted" id="dialed-number">輸入號碼</div>
-                <p class="status-banner" id="status-banner"></p>
-                <div class="call-actions">
-                    <button class="ghost-btn" id="hold-button">暫停 ,</button>
-                    <button class="ghost-btn" id="save-contact">加入常用</button>
-                    <button class="ghost-btn ghost-danger" id="clear-number">清除</button>
+        <div class='tab-panel active' id='keypad-tab'>
+            <div class='call-display'>
+                <div class='dialed-number muted' id='dialed-number'>輸入號碼</div>
+                <p class='status-banner' id='status-banner'></p>
+                <div class='call-actions'>
+                    <button class='ghost-btn' id='hold-button'>暫停 ,</button>
+                    <button class='ghost-btn' id='save-contact'>加入常用</button>
+                    <button class='ghost-btn ghost-danger' id='clear-number'>清除</button>
                 </div>
             </div>
 
-            <div class="keypad" id="keypad">
-                <button class="key" data-value="1" data-alt=""><span>1</span><small>&nbsp;</small></button>
-                <button class="key" data-value="2" data-alt="A"><span>2</span><small>ABC</small></button>
-                <button class="key" data-value="3" data-alt="D"><span>3</span><small>DEF</small></button>
-                <button class="key" data-value="4" data-alt="G"><span>4</span><small>GHI</small></button>
-                <button class="key" data-value="5" data-alt="J"><span>5</span><small>JKL</small></button>
-                <button class="key" data-value="6" data-alt="M"><span>6</span><small>MNO</small></button>
-                <button class="key" data-value="7" data-alt="P"><span>7</span><small>PQRS</small></button>
-                <button class="key" data-value="8" data-alt="T"><span>8</span><small>TUV</small></button>
-                <button class="key" data-value="9" data-alt="W"><span>9</span><small>WXYZ</small></button>
-                <button class="key action" data-value="*" data-alt=""><span>*</span></button>
-                <button class="key" data-value="0" data-alt="+"><span>0</span><small>+</small></button>
-                <button class="key action" data-value="#" data-alt=""><span>#</span></button>
+            <div class='keypad' id='keypad'>
+                <button class='key' data-value='1' data-alt=''><span>1</span><small>&nbsp;</small></button>
+                <button class='key' data-value='2' data-alt='A'><span>2</span><small>ABC</small></button>
+                <button class='key' data-value='3' data-alt='D'><span>3</span><small>DEF</small></button>
+                <button class='key' data-value='4' data-alt='G'><span>4</span><small>GHI</small></button>
+                <button class='key' data-value='5' data-alt='J'><span>5</span><small>JKL</small></button>
+                <button class='key' data-value='6' data-alt='M'><span>6</span><small>MNO</small></button>
+                <button class='key' data-value='7' data-alt='P'><span>7</span><small>PQRS</small></button>
+                <button class='key' data-value='8' data-alt='T'><span>8</span><small>TUV</small></button>
+                <button class='key' data-value='9' data-alt='W'><span>9</span><small>WXYZ</small></button>
+                <button class='key action' data-value='*' data-alt=''><span>*</span></button>
+                <button class='key' data-value='0' data-alt='+'><span>0</span><small>+</small></button>
+                <button class='key action' data-value='#' data-alt=''><span>#</span></button>
             </div>
 
-            <div class="keypad-actions">
-                <button class="key call" id="call-button"><i class="fas fa-phone"></i></button>
-                <button class="key action" id="backspace"><i class="fas fa-backspace"></i></button>
+            <div class='keypad-actions'>
+                <button class='key call' id='call-button'><i class='fas fa-phone'></i></button>
+                <button class='key action' id='backspace'><i class='fas fa-backspace'></i></button>
             </div>
 
-            <p class="status-line" id="connection-status">4G · 85%</p>
+            <p class='status-line' id='connection-status'>4G · 85%</p>
         </div>
 
-        <div class="tab-panel" id="history-tab">
-            <div class="call-history">
-                <div class="history-header">
+        <div class='tab-panel' id='history-tab'>
+            <div class='call-history'>
+                <div class='history-header'>
                     <h2>通話紀錄</h2>
-                    <button class="ghost-btn ghost-sm ghost-danger" id="history-clear">清除</button>
+                    <button class='ghost-btn ghost-sm ghost-danger' id='history-clear'>清除</button>
                 </div>
-                <ul class="history-list" id="history-list"></ul>
+                <ul class='history-list' id='history-list'></ul>
             </div>
         </div>
 
-        <div class="tab-panel" id="favorites-tab">
-            <div class="favorite-strip">
-                <div class="favorite-header">
+        <div class='tab-panel' id='favorites-tab'>
+            <div class='favorite-strip'>
+                <div class='favorite-header'>
                     <h2>常用聯絡人</h2>
-                    <button class="ghost-btn ghost-sm" id="favorite-shuffle">隨機排序</button>
+                    <button class='ghost-btn ghost-sm' id='favorite-shuffle'>隨機排序</button>
                 </div>
-                <div class="favorite-grid" id="favorite-grid"></div>
+                <div class='favorite-grid' id='favorite-grid'></div>
             </div>
         </div>
 
-        <div class="tab-panel" id="recordings-tab">
-            <div class="recordings-header">
+        <div class='tab-panel' id='recordings-tab'>
+            <div class='recordings-header'>
                 <h2>通話錄音</h2>
-                <button class="clear-recordings-btn" id="clear-recordings">清除全部</button>
+                <button class='clear-recordings-btn' id='clear-recordings'>清除全部</button>
             </div>
-            <ul class="recordings-list" id="recordings-list"></ul>
+            <ul class='recordings-list' id='recordings-list'></ul>
         </div>
     `;
 

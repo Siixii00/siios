@@ -136,22 +136,22 @@ function renderBookmarks(container) {
     );
 
     if (filtered.length === 0) {
-        list.innerHTML = '<div class="chrome-wb-empty">撠?啣??貊惜</div>';
+        list.innerHTML = '<div class='chrome-wb-empty'>撠?啣??貊惜</div>';
         return;
     }
 
     list.innerHTML = filtered.map((b, i) => `
-        <div class="bookmark-item" data-index="${i}">
-            <div class="left">
-                <i class="fas fa-globe"></i>
+        <div class='bookmark-item' data-index='${i}'>
+            <div class='left'>
+                <i class='fas fa-globe'></i>
                 <span>${escapeHTML(b.name)}</span>
             </div>
-            <div class="bookmark-actions">
-                <button class="icon-btn sm bookmark-open" data-url="${escapeHTML(b.url)}" title="??">
-                    <i class="fas fa-external-link-alt"></i>
+            <div class='bookmark-actions'>
+                <button class='icon-btn sm bookmark-open' data-url='${escapeHTML(b.url)}' title='??'>
+                    <i class='fas fa-external-link-alt'></i>
                 </button>
-                <button class="icon-btn sm bookmark-delete" data-index="${i}" title="?芷">
-                    <i class="fas fa-trash"></i>
+                <button class='icon-btn sm bookmark-delete' data-index='${i}' title='?芷'>
+                    <i class='fas fa-trash'></i>
                 </button>
             </div>
         </div>
@@ -219,21 +219,21 @@ function renderHistoryList(container) {
     if (!list) return;
 
     if (historyEntries.length === 0) {
-        list.innerHTML = '<div class="status">尚無瀏覽記錄</div>';
+        list.innerHTML = '<div class='status'>尚無瀏覽記錄</div>';
         return;
     }
 
     list.innerHTML = historyEntries.map(entry => `
-        <div class="history-item" data-id="${entry.id}">
-            <div class="history-item-icon">
-                <i class="fas fa-search"></i>
+        <div class='history-item' data-id='${entry.id}'>
+            <div class='history-item-icon'>
+                <i class='fas fa-search'></i>
             </div>
-            <div class="history-item-content">
-                <div class="title">${escapeHTML(entry.title)}</div>
-                <div class="meta">${entry.site ? `[${entry.site}] ` : ''}${entry.time}</div>
+            <div class='history-item-content'>
+                <div class='title'>${escapeHTML(entry.title)}</div>
+                <div class='meta'>${entry.site ? `[${entry.site}] ` : ''}${entry.time}</div>
             </div>
-            <div class="history-item-arrow">
-                <i class="fas fa-chevron-right"></i>
+            <div class='history-item-arrow'>
+                <i class='fas fa-chevron-right'></i>
             </div>
         </div>
     `).join('');
@@ -257,8 +257,8 @@ function openHistoryDetail(entry, container) {
     if (summaryEl) summaryEl.textContent = entry.summary;
     if (contentEl) {
         contentEl.innerHTML = `
-            <div class="page-loading">
-                <div class="loading-spinner"></div>
+            <div class='page-loading'>
+                <div class='loading-spinner'></div>
                 <span>甇?頛?...</span>
             </div>
         `;
@@ -274,7 +274,7 @@ async function fetchDetailContent(entry, container) {
 
     const settings = await APIClient.getSettings();
     if (!settings.api_url || !settings.api_key) {
-        contentEl.innerHTML = '<div class="page-error">未偵測到 API 配置，請先在控制中心設定。</div>';
+        contentEl.innerHTML = '<div class='page-error'>未偵測到 API 配置，請先在控制中心設定。</div>';
         return;
     }
 
@@ -323,12 +323,12 @@ async function fetchDetailContent(entry, container) {
         const content = data?.choices?.[0]?.message?.content || '生成內容失敗。';
 
         contentEl.innerHTML = `
-            <div class="page-result">
-                <div class="page-result-content">${content.replace(/\n/g, '<br>')}</div>
+            <div class='page-result'>
+                <div class='page-result-content'>${content.replace(/\n/g, '<br>')}</div>
             </div>
         `;
     } catch (err) {
-        contentEl.innerHTML = `<div class="page-error">連線失敗：${err.message}</div>`;
+        contentEl.innerHTML = `<div class='page-error'>連線失敗：${err.message}</div>`;
     }
 }
 
@@ -338,7 +338,7 @@ async function generateHistoryForChar(index, container) {
     const panelTitle = container.querySelector('.history-panel .panel-title');
 
     if (!char) {
-        if (historyList) historyList.innerHTML = '<div class="status">尚無角色資料</div>';
+        if (historyList) historyList.innerHTML = '<div class='status'>尚無角色資料</div>';
         return;
     }
 
@@ -349,7 +349,7 @@ async function generateHistoryForChar(index, container) {
         panelTitle.textContent = `${charName} 的瀏覽紀錄`;
     }
 
-    if (historyList) historyList.innerHTML = '<div class="status">正在生成瀏覽紀錄...</div>';
+    if (historyList) historyList.innerHTML = '<div class='status'>正在生成瀏覽紀錄...</div>';
 
     const settings = await APIClient.getSettings();
     if (!settings.api_url || !settings.api_key) {
@@ -463,7 +463,7 @@ async function openUserInterestSite(site, container) {
 
     switchView('history', container);
     const historyList = container.querySelector('#history-list');
-    if (historyList) historyList.innerHTML = '<div class="status">正在載入內容...</div>';
+    if (historyList) historyList.innerHTML = '<div class='status'>正在載入內容...</div>';
 
     const context = await buildAppContext({});
     const baseSystemPrompt = context.systemPrompt;
@@ -529,17 +529,17 @@ async function openUserInterestSite(site, container) {
 
         if (items.length > 0 && historyList) {
             historyList.innerHTML = `
-                <div class="incognito-content-page">
-                    <div class="incognito-site-header">
-                        <div class="site-icon">${site.icon}</div>
-                        <div class="site-title">${site.label}</div>
+                <div class='incognito-content-page'>
+                    <div class='incognito-site-header'>
+                        <div class='site-icon'>${site.icon}</div>
+                        <div class='site-title'>${site.label}</div>
                     </div>
-                    <div class="interest-items">
+                    <div class='interest-items'>
                         ${items.map(item => `
-                            <div class="interest-item">
-                                <div class="interest-category">${item.category || '推薦'}</div>
-                                <div class="interest-title">${escapeHTML(item.title)}</div>
-                                <div class="interest-desc">${escapeHTML(item.description)}</div>
+                            <div class='interest-item'>
+                                <div class='interest-category'>${item.category || '推薦'}</div>
+                                <div class='interest-title'>${escapeHTML(item.title)}</div>
+                                <div class='interest-desc'>${escapeHTML(item.description)}</div>
                             </div>
                         `).join('')}
                     </div>
@@ -547,19 +547,19 @@ async function openUserInterestSite(site, container) {
             `;
         } else if (historyList) {
             historyList.innerHTML = `
-                <div class="incognito-content-page">
-                    <div class="incognito-site-header">
-                        <div class="site-icon">${site.icon}</div>
-                        <div class="site-title">${site.label}</div>
+                <div class='incognito-content-page'>
+                    <div class='incognito-site-header'>
+                        <div class='site-icon'>${site.icon}</div>
+                        <div class='site-title'>${site.label}</div>
                     </div>
-                    <div class="incognito-site-content">
+                    <div class='incognito-site-content'>
                         ${content.replace(/\n/g, '<br>')}
                     </div>
                 </div>
             `;
         }
     } catch (err) {
-        if (historyList) historyList.innerHTML = `<div class="status error">載入失敗：${err.message}</div>`;
+        if (historyList) historyList.innerHTML = `<div class='status error'>載入失敗：${err.message}</div>`;
     }
 }
 
@@ -578,7 +578,7 @@ async function openIncognitoSite(site, container) {
 
     switchView('history', container);
     const historyList = container.querySelector('#history-list');
-    if (historyList) historyList.innerHTML = '<div class="status">正在載入內容...</div>';
+    if (historyList) historyList.innerHTML = '<div class='status'>正在載入內容...</div>';
 
     const adultLevel = getAdultLevel(char);
 
@@ -624,12 +624,12 @@ async function openIncognitoSite(site, container) {
 
         if (historyList) {
             historyList.innerHTML = `
-                <div class="incognito-content-page">
-                    <div class="incognito-site-header">
-                        <div class="site-icon">${site.icon}</div>
-                        <div class="site-title">${site.label}</div>
+                <div class='incognito-content-page'>
+                    <div class='incognito-site-header'>
+                        <div class='site-icon'>${site.icon}</div>
+                        <div class='site-title'>${site.label}</div>
                     </div>
-                    <div class="incognito-site-content">
+                    <div class='incognito-site-content'>
                         ${content.replace(/\n/g, '<br>')}
                     </div>
                 </div>
@@ -652,7 +652,7 @@ async function openIncognitoSite(site, container) {
             });
         }
     } catch (err) {
-        if (historyList) historyList.innerHTML = `<div class="status error">載入失敗：${err.message}</div>`;
+        if (historyList) historyList.innerHTML = `<div class='status error'>載入失敗：${err.message}</div>`;
     }
 }
 
@@ -839,7 +839,7 @@ function bindEvents(container) {
         if (chromeUserSelect) {
             await SettingsDB.set('chrome_user_profile', chromeUserSelect.value || '');
         }
-        const selectedWorldbooks = Array.from(chromeWorldbookList?.querySelectorAll('input[type="checkbox"]:checked') || [])
+        const selectedWorldbooks = Array.from(chromeWorldbookList?.querySelectorAll('input[type='checkbox']:checked') || [])
             .map(input => input.value);
         await SettingsDB.set('chrome_worldbooks', JSON.stringify(selectedWorldbooks));
         if (profileDrawer) profileDrawer.classList.remove('open');
@@ -877,198 +877,198 @@ async function renderChrome(params) {
     ]);
 
     container.innerHTML = `
-        <header class="topbar">
-            <div class="top-left">
-                <button class="ghost-btn" id="home-back" title="餈?">
-                    <i class="fas fa-chevron-left"></i>
+        <header class='topbar'>
+            <div class='top-left'>
+                <button class='ghost-btn' id='home-back' title='餈?'>
+                    <i class='fas fa-chevron-left'></i>
                 </button>
-                <div class="view-toggle" id="view-toggle">
-                    <button class="active" data-view="home">擐?</button>
-                    <button data-view="bookmarks">?貊惜</button>
-                    <button data-view="history">歷史</button>
+                <div class='view-toggle' id='view-toggle'>
+                    <button class='active' data-view='home'>擐?</button>
+                    <button data-view='bookmarks'>?貊惜</button>
+                    <button data-view='history'>歷史</button>
                 </div>
             </div>
-            <div class="top-actions">
-                <button class="ghost-btn" id="mode-btn">?∠?</button>
-                <button class="avatar" id="profile-trigger"></button>
+            <div class='top-actions'>
+                <button class='ghost-btn' id='mode-btn'>?∠?</button>
+                <button class='avatar' id='profile-trigger'></button>
             </div>
         </header>
 
-        <div class="panel" data-panel="home">
-            <div class="home-header">
-                <div class="google-mark">Chrome</div>
+        <div class='panel' data-panel='home'>
+            <div class='home-header'>
+                <div class='google-mark'>Chrome</div>
             </div>
 
-            <div class="incognito-hero" id="incognito-hero" hidden>
-                <div class="incognito-badge">
-                    <i class="fas fa-user-secret"></i>
+            <div class='incognito-hero' id='incognito-hero' hidden>
+                <div class='incognito-badge'>
+                    <i class='fas fa-user-secret'></i>
                 </div>
-                <div class="incognito-title">?∠?璅∪?</div>
+                <div class='incognito-title'>?∠?璅∪?</div>
             </div>
 
-            <div class="search-card">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="搜尋網址或關鍵字" id="search-input">
-                <button class="icon-btn"><i class="fas fa-microphone"></i></button>
+            <div class='search-card'>
+                <i class='fas fa-search'></i>
+                <input type='text' placeholder='搜尋網址或關鍵字' id='search-input'>
+                <button class='icon-btn'><i class='fas fa-microphone'></i></button>
             </div>
 
-            <div class="quick-grid" id="normal-quick-grid">
+            <div class='quick-grid' id='normal-quick-grid'>
                 ${USER_INTEREST_SITES.map(site => `
-                    <div class="quick-tile">
-                        <div class="tile-icon">${site.icon}</div>
-                        <div class="tile-title">${site.label}</div>
+                    <div class='quick-tile'>
+                        <div class='tile-icon'>${site.icon}</div>
+                        <div class='tile-title'>${site.label}</div>
                     </div>
                 `).join('')}
             </div>
 
-            <div class="quick-grid" id="incognito-quick-grid" hidden>
+            <div class='quick-grid' id='incognito-quick-grid' hidden>
                 ${INCOGNITO_SITES.map(site => `
-                    <div class="quick-tile">
-                        <div class="tile-icon">${site.icon}</div>
-                        <div class="tile-title">${site.label}</div>
+                    <div class='quick-tile'>
+                        <div class='tile-icon'>${site.icon}</div>
+                        <div class='tile-title'>${site.label}</div>
                     </div>
                 `).join('')}
             </div>
 
-            <div class="status" id="status-text">一般模式，已關閉無痕模式</div>
+            <div class='status' id='status-text'>一般模式，已關閉無痕模式</div>
         </div>
 
-        <div class="panel bookmarks-panel" data-panel="bookmarks" hidden>
-            <div class="panel-header">
-                <h2 class="panel-title">?貊惜</h2>
-                <button class="ghost-btn" id="add-bookmark-btn">
-                    <i class="fas fa-plus"></i> ?啣?
+        <div class='panel bookmarks-panel' data-panel='bookmarks' hidden>
+            <div class='panel-header'>
+                <h2 class='panel-title'>?貊惜</h2>
+                <button class='ghost-btn' id='add-bookmark-btn'>
+                    <i class='fas fa-plus'></i> ?啣?
                 </button>
             </div>
-            <div class="search-row">
-                <i class="fas fa-search"></i>
-                <input type="text" placeholder="???貊惜" id="bookmark-search">
+            <div class='search-row'>
+                <i class='fas fa-search'></i>
+                <input type='text' placeholder='???貊惜' id='bookmark-search'>
             </div>
-            <div class="bookmark-list" id="bookmark-list"></div>
+            <div class='bookmark-list' id='bookmark-list'></div>
         </div>
 
-        <div class="panel history-panel" data-panel="history" hidden>
-            <div class="panel-header">
-                <h2 class="panel-title">瀏覽歷史</h2>
+        <div class='panel history-panel' data-panel='history' hidden>
+            <div class='panel-header'>
+                <h2 class='panel-title'>瀏覽歷史</h2>
             </div>
-            <div class="history-controls">
+            <div class='history-controls'>
                 <label>閫嚗?/label>
-                <select id="char-select">
+                <select id='char-select'>
                     ${charProfiles.map((char, i) => `
-                        <option value="${i}">${char.name || `閫 ${i + 1}`}</option>
-                    `).join('') || '<option value="">撠撱箇?閫</option>'}
+                        <option value='${i}'>${char.name || `閫 ${i + 1}`}</option>
+                    `).join('') || '<option value=''>撠撱箇?閫</option>'}
                 </select>
-                <button class="ghost-btn" id="history-refresh">
-                    <i class="fas fa-sync-alt"></i>
+                <button class='ghost-btn' id='history-refresh'>
+                    <i class='fas fa-sync-alt'></i>
                 </button>
             </div>
-            <div class="history-list" id="history-list"></div>
+            <div class='history-list' id='history-list'></div>
         </div>
 
-        <div class="panel history-detail-panel" data-panel="history-detail" hidden>
-            <div class="detail-nav">
-                <button class="back-btn" id="history-detail-back">
-                    <i class="fas fa-chevron-left"></i> 餈?
+        <div class='panel history-detail-panel' data-panel='history-detail' hidden>
+            <div class='detail-nav'>
+                <button class='back-btn' id='history-detail-back'>
+                    <i class='fas fa-chevron-left'></i> 餈?
                 </button>
             </div>
-            <div class="detail-search-card">
-                <i class="fas fa-search"></i>
-                <span class="detail-search-input" id="detail-search-query"></span>
+            <div class='detail-search-card'>
+                <i class='fas fa-search'></i>
+                <span class='detail-search-input' id='detail-search-query'></span>
             </div>
-            <div class="detail-info">
-                <div class="detail-time" id="detail-time"></div>
-                <div class="detail-summary" id="detail-summary"></div>
+            <div class='detail-info'>
+                <div class='detail-time' id='detail-time'></div>
+                <div class='detail-summary' id='detail-summary'></div>
             </div>
-            <div class="detail-page-content" id="detail-page-content"></div>
+            <div class='detail-page-content' id='detail-page-content'></div>
         </div>
 
-        <nav class="bottombar">
-            <button class="icon-btn"><i class="fas fa-arrow-left"></i></button>
-            <button class="icon-btn"><i class="fas fa-arrow-right"></i></button>
-            <button class="icon-btn primary" id="new-tab-btn">
-                <i class="fas fa-plus"></i>
+        <nav class='bottombar'>
+            <button class='icon-btn'><i class='fas fa-arrow-left'></i></button>
+            <button class='icon-btn'><i class='fas fa-arrow-right'></i></button>
+            <button class='icon-btn primary' id='new-tab-btn'>
+                <i class='fas fa-plus'></i>
             </button>
-            <button class="icon-btn"><i class="fas fa-layer-group"></i></button>
-            <button class="icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            <button class='icon-btn'><i class='fas fa-layer-group'></i></button>
+            <button class='icon-btn'><i class='fas fa-ellipsis-h'></i></button>
         </nav>
 
-        <div class="history-modal" id="history-modal" hidden>
-            <div class="history-modal-backdrop"></div>
-            <div class="history-modal-card">
-                <div class="history-modal-header">
-                    <div class="history-modal-title">?啣???</div>
-                    <button class="icon-btn" id="history-modal-close">
-                        <i class="fas fa-times"></i>
+        <div class='history-modal' id='history-modal' hidden>
+            <div class='history-modal-backdrop'></div>
+            <div class='history-modal-card'>
+                <div class='history-modal-header'>
+                    <div class='history-modal-title'>?啣???</div>
+                    <button class='icon-btn' id='history-modal-close'>
+                        <i class='fas fa-times'></i>
                     </button>
                 </div>
-                <div class="history-modal-actions">
-                    <button class="ghost-btn" id="history-generate-btn">AI ??</button>
-                    <button class="ghost-btn" id="history-manual-btn">??頛詨</button>
+                <div class='history-modal-actions'>
+                    <button class='ghost-btn' id='history-generate-btn'>AI ??</button>
+                    <button class='ghost-btn' id='history-manual-btn'>??頛詨</button>
                 </div>
-                <div class="history-manual" id="history-manual" hidden>
+                <div class='history-manual' id='history-manual' hidden>
                     <label>???摮?/label>
-                    <input type="text" id="history-manual-query" placeholder="頛詨???摮?>
+                    <input type='text' id='history-manual-query' placeholder='頛詨???摮?>
                     <label>??隤芣?</label>
-                    <textarea id="history-manual-summary" rows="2" placeholder="蝪∠?膩"></textarea>
-                    <button class="ghost-btn primary" id="history-manual-save">?脣?</button>
+                    <textarea id='history-manual-summary' rows='2' placeholder='蝪∠?膩'></textarea>
+                    <button class='ghost-btn primary' id='history-manual-save'>?脣?</button>
                 </div>
             </div>
         </div>
 
-        <div class="history-modal" id="bookmark-modal" hidden>
-            <div class="history-modal-backdrop"></div>
-            <div class="history-modal-card">
-                <div class="history-modal-header">
-                    <div class="history-modal-title">?啣??貊惜</div>
-                    <button class="icon-btn" id="bookmark-modal-close">
-                        <i class="fas fa-times"></i>
+        <div class='history-modal' id='bookmark-modal' hidden>
+            <div class='history-modal-backdrop'></div>
+            <div class='history-modal-card'>
+                <div class='history-modal-header'>
+                    <div class='history-modal-title'>?啣??貊惜</div>
+                    <button class='icon-btn' id='bookmark-modal-close'>
+                        <i class='fas fa-times'></i>
                     </button>
                 </div>
-                <div class="history-manual">
+                <div class='history-manual'>
                     <label>蝬脩??迂</label>
-                    <input type="text" id="bookmark-name" placeholder="蝬脩??迂">
+                    <input type='text' id='bookmark-name' placeholder='蝬脩??迂'>
                     <label>蝬脣?</label>
-                    <input type="text" id="bookmark-url" placeholder="https://example.com">
-                    <button class="ghost-btn primary" id="bookmark-save">?脣?</button>
+                    <input type='text' id='bookmark-url' placeholder='https://example.com'>
+                    <button class='ghost-btn primary' id='bookmark-save'>?脣?</button>
                 </div>
             </div>
         </div>
 
-        <div class="profile-backdrop" id="profile-backdrop" hidden></div>
-        <div class="profile-drawer" id="profile-drawer">
-            <div class="profile-drawer-header">
-                <div class="profile-drawer-title">?犖閮剖?</div>
-                <button class="icon-btn" id="profile-close">
-                    <i class="fas fa-times"></i>
+        <div class='profile-backdrop' id='profile-backdrop' hidden></div>
+        <div class='profile-drawer' id='profile-drawer'>
+            <div class='profile-drawer-header'>
+                <div class='profile-drawer-title'>?犖閮剖?</div>
+                <button class='icon-btn' id='profile-close'>
+                    <i class='fas fa-times'></i>
                 </button>
             </div>
-            <div class="profile-drawer-body">
-                <div class="drawer-section">
-                    <div class="drawer-label">?豢??冽</div>
-                    <select class="drawer-select" id="chrome-user-select">
+            <div class='profile-drawer-body'>
+                <div class='drawer-section'>
+                    <div class='drawer-label'>?豢??冽</div>
+                    <select class='drawer-select' id='chrome-user-select'>
                         ${chromeUserProfiles.map((user, i) => `
-                            <option value="${user?.name || `User ${i + 1}`}">${user?.name || `User ${i + 1}`}</option>
-                        `).join('') || '<option value="">撠撱箇??冽</option>'}
+                            <option value='${user?.name || `User ${i + 1}`}'>${user?.name || `User ${i + 1}`}</option>
+                        `).join('') || '<option value=''>撠撱箇??冽</option>'}
                     </select>
                 </div>
-                <div class="drawer-section">
-                    <div class="drawer-label">銝??豢?頛?/div>
-                    <div class="chrome-wb-dropdown">
-                        <button class="chrome-wb-toggle">
+                <div class='drawer-section'>
+                    <div class='drawer-label'>銝??豢?頛?/div>
+                    <div class='chrome-wb-dropdown'>
+                        <button class='chrome-wb-toggle'>
                             <span>?豢?銝???/span>
-                            <i class="fas fa-chevron-down"></i>
+                            <i class='fas fa-chevron-down'></i>
                         </button>
-                        <div class="chrome-wb-menu" id="chrome-worldbook-list">
+                        <div class='chrome-wb-menu' id='chrome-worldbook-list'>
                             ${chromeWorldbookMounts.map((wb, i) => `
-                                <div class="chrome-wb-item">
-                                    <input type="checkbox" value="${wb?.name || `銝???${i + 1}`}">
+                                <div class='chrome-wb-item'>
+                                    <input type='checkbox' value='${wb?.name || `銝???${i + 1}`}'>
                                     <span>${wb?.name || `銝???${i + 1}`}</span>
                                 </div>
-                            `).join('') || '<div class="chrome-wb-empty">撠?舀?頛?銝???/div>'}
+                            `).join('') || '<div class='chrome-wb-empty'>撠?舀?頛?銝???/div>'}
                         </div>
                     </div>
                 </div>
-                <button class="ghost-btn primary" id="profile-apply">憟閮剖?</button>
+                <button class='ghost-btn primary' id='profile-apply'>憟閮剖?</button>
             </div>
         </div>
     `;

@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -25,31 +25,31 @@ async function renderFarm(params) {
   
   const container = createElement('div', 'app-container farm-app');
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-      <h1 class="menu-title">農場</h1>
-      <div class="coins"><i class="fas fa-coins"></i> ${farm.coins}</div>
+    <header class='ios-header'>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+      <h1 class='menu-title'>農場</h1>
+      <div class='coins'><i class='fas fa-coins'></i> ${farm.coins}</div>
     </header>
-    <div class="page">
-      <div class="farm-grid">
+    <div class='page'>
+      <div class='farm-grid'>
         ${farm.plots.map((plot, i) => {
           if (!plot) {
-            return `<div class="plot empty" data-idx="${i}"><span class="plus">+</span></div>`;
+            return `<div class='plot empty' data-idx='${i}'><span class='plus'>+</span></div>`;
           }
           const crop = CROPS.find(c => c.id === plot.cropId);
           const elapsed = (now - plot.plantedAt) / 1000;
           const ready = elapsed >= crop.growTime;
-          return `<div class="plot ${ready ? 'ready' : ''}" data-idx="${i}">
-            <span class="crop-icon">${crop.icon}</span>
-            ${ready ? '<span class="ready-badge">可收穫</span>' : `<span class="progress">${Math.floor(elapsed)}/${crop.growTime}s</span>`}
+          return `<div class='plot ${ready ? 'ready' : ''}' data-idx='${i}'>
+            <span class='crop-icon'>${crop.icon}</span>
+            ${ready ? '<span class='ready-badge'>可收穫</span>' : `<span class='progress'>${Math.floor(elapsed)}/${crop.growTime}s</span>`}
           </div>`;
         }).join('')}
       </div>
-      <div class="shop-section">
+      <div class='shop-section'>
         <h3>商店</h3>
-        <div class="crop-list">
+        <div class='crop-list'>
           ${CROPS.map(c => `
-            <button class="crop-btn" data-id="${c.id}" data-price="20">
+            <button class='crop-btn' data-id='${c.id}' data-price='20'>
               ${c.icon} ${c.name} ($20)
             </button>
           `).join('')}

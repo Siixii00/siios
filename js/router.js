@@ -1,4 +1,4 @@
-const Router = {
+﻿const Router = {
     routes: [],
     beforeLeaveHooks: [],
     history: [],

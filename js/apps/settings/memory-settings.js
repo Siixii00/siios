@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, TheaterSettingsDB } from '../../db.js';
 
@@ -42,11 +42,11 @@ async function renderMemorySettings() {
     
     const header = createElement('header', 'ios-header');
     header.innerHTML = `
-        <button class="ios-back-btn">
-            <i class="fas fa-chevron-left"></i> 返回
+        <button class='ios-back-btn'>
+            <i class='fas fa-chevron-left'></i> 返回
         </button>
-        <h1 class="menu-title">記憶設定</h1>
-        <div class="header-actions"></div>
+        <h1 class='menu-title'>記憶設定</h1>
+        <div class='header-actions'></div>
     `;
     header.querySelector('.ios-back-btn').onclick = () => Router.navigate('/chats/settings');
     container.appendChild(header);
@@ -62,7 +62,7 @@ async function renderMemorySettings() {
     theaterSection.appendChild(theaterDesc);
     
     const theaterSelect = createElement('select', 'w-full p-3 rounded-lg border border-ios-border bg-ios-surface text-ios-text');
-    theaterSelect.innerHTML = `<option value="">主線（無特定劇場）</option>`;
+    theaterSelect.innerHTML = `<option value=''>主線（無特定劇場）</option>`;
     theaters.forEach(t => {
         const option = createElement('option', '');
         option.value = t.id;
@@ -158,12 +158,12 @@ async function renderMemorySettings() {
     
     const fictionToggle = createElement('div', 'flex items-center justify-between p-3 bg-ios-surface rounded-lg border border-ios-border');
     fictionToggle.innerHTML = `
-        <div class="flex items-center gap-2">
-            <span class="material-symbols-outlined text-ios-text">menu_book</span>
-            <span class="text-ios-text">包含虛擬內容記憶</span>
+        <div class='flex items-center gap-2'>
+            <span class='material-symbols-outlined text-ios-text'>menu_book</span>
+            <span class='text-ios-text'>包含虛擬內容記憶</span>
         </div>
-        <div class="w-12 h-7 rounded-full ${memorySettings.include_fiction ? 'bg-ios-accent' : 'bg-gray-300'} relative transition-colors">
-            <div class="w-5 h-5 rounded-full bg-white absolute top-1 ${memorySettings.include_fiction ? 'right-1' : 'left-1'} transition-all"></div>
+        <div class='w-12 h-7 rounded-full ${memorySettings.include_fiction ? 'bg-ios-accent' : 'bg-gray-300'} relative transition-colors'>
+            <div class='w-5 h-5 rounded-full bg-white absolute top-1 ${memorySettings.include_fiction ? 'right-1' : 'left-1'} transition-all'></div>
         </div>
     `;
     
@@ -182,11 +182,11 @@ async function renderMemorySettings() {
     
     const infoBox = createElement('div', 'p-4 bg-ios-surface rounded-lg border border-ios-border text-sm text-ios-muted');
     infoBox.innerHTML = `
-        <p class="mb-2"><strong>記憶層級說明：</strong></p>
-        <p class="mb-2">• <strong>簡要</strong>：僅記錄「和用戶在 YouTube 看了影片」等事實，不含具體內容</p>
-        <p class="mb-2">• <strong>完整</strong>：包含完整的互動內容，如影片標題、評論等</p>
-        <p class="mt-3"><strong>劇場/世界觀：</strong></p>
-        <p class="mb-2">不同劇場的記憶會分開儲存，避免不同世界觀的 IF 線混淆</p>
+        <p class='mb-2'><strong>記憶層級說明：</strong></p>
+        <p class='mb-2'>• <strong>簡要</strong>：僅記錄「和用戶在 YouTube 看了影片」等事實，不含具體內容</p>
+        <p class='mb-2'>• <strong>完整</strong>：包含完整的互動內容，如影片標題、評論等</p>
+        <p class='mt-3'><strong>劇場/世界觀：</strong></p>
+        <p class='mb-2'>不同劇場的記憶會分開儲存，避免不同世界觀的 IF 線混淆</p>
     `;
     infoSection.appendChild(infoBox);
     main.appendChild(infoSection);

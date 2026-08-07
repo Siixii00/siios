@@ -1,4 +1,4 @@
-import { GlobalSettingsDB, KeywordSettingsDB, SettingsDB } from '../db.js';
+﻿import { GlobalSettingsDB, KeywordSettingsDB, SettingsDB } from '../db.js';
 
 const CATEGORY_PRIORITY_MAP = {
     'sx_worldbook_cot': 'front',

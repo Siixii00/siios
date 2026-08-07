@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { TOOLS_CATALOG, CATEGORIES } from './tools-catalog.js';
 import { generateZipContent } from './code-templates.js';
@@ -78,7 +78,7 @@ async function renderMCPMarket() {
     
     const introHeader = createElement('div', 'px-4 py-3 border-b border-gray-100');
     introHeader.innerHTML = `
-        <h2 class="text-lg font-semibold text-gray-900">MCP 工具簡介說明</h2>
+        <h2 class='text-lg font-semibold text-gray-900'>MCP 工具簡介說明</h2>
     `;
     introSection.appendChild(introHeader);
     
@@ -87,8 +87,8 @@ async function renderMCPMarket() {
     // MCP 簡介
     const mcpIntro = createElement('div', '');
     mcpIntro.innerHTML = `
-        <h3 class="text-sm font-medium text-gray-900 mb-2">什麼是 MCP？</h3>
-        <p class="text-xs text-gray-600 leading-relaxed">
+        <h3 class='text-sm font-medium text-gray-900 mb-2'>什麼是 MCP？</h3>
+        <p class='text-xs text-gray-600 leading-relaxed'>
             MCP (Model Context Protocol) 是一個開放協議，讓 AI 模型能夠安全地調用外部工具和服務。
             通過 MCP，你的 AI 角色可以執行實際動作，如查詢天氣、設置提醒、控制智慧家居等。
         </p>
@@ -98,31 +98,31 @@ async function renderMCPMarket() {
     // 架設說明
     const setupGuide = createElement('div', '');
     setupGuide.innerHTML = `
-        <h3 class="text-sm font-medium text-gray-900 mb-2">如何架設 MCP 伺服器？</h3>
-        <div class="space-y-2">
-            <div class="flex items-start gap-2">
-                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center">
-                    <span class="text-xs font-medium text-gray-600">1</span>
+        <h3 class='text-sm font-medium text-gray-900 mb-2'>如何架設 MCP 伺服器？</h3>
+        <div class='space-y-2'>
+            <div class='flex items-start gap-2'>
+                <div class='flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center'>
+                    <span class='text-xs font-medium text-gray-600'>1</span>
                 </div>
-                <p class="text-xs text-gray-600 flex-1">選擇需要的工具，點擊「生成程式碼」</p>
+                <p class='text-xs text-gray-600 flex-1'>選擇需要的工具，點擊「生成程式碼」</p>
             </div>
-            <div class="flex items-start gap-2">
-                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center">
-                    <span class="text-xs font-medium text-gray-600">2</span>
+            <div class='flex items-start gap-2'>
+                <div class='flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center'>
+                    <span class='text-xs font-medium text-gray-600'>2</span>
                 </div>
-                <p class="text-xs text-gray-600 flex-1">下載生成的 Worker 程式碼</p>
+                <p class='text-xs text-gray-600 flex-1'>下載生成的 Worker 程式碼</p>
             </div>
-            <div class="flex items-start gap-2">
-                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center">
-                    <span class="text-xs font-medium text-gray-600">3</span>
+            <div class='flex items-start gap-2'>
+                <div class='flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center'>
+                    <span class='text-xs font-medium text-gray-600'>3</span>
                 </div>
-                <p class="text-xs text-gray-600 flex-1">部署到 Cloudflare Workers（免費方案）</p>
+                <p class='text-xs text-gray-600 flex-1'>部署到 Cloudflare Workers（免費方案）</p>
             </div>
-            <div class="flex items-start gap-2">
-                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center">
-                    <span class="text-xs font-medium text-gray-600">4</span>
+            <div class='flex items-start gap-2'>
+                <div class='flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center'>
+                    <span class='text-xs font-medium text-gray-600'>4</span>
                 </div>
-                <p class="text-xs text-gray-600 flex-1">在設定中配置 Worker URL</p>
+                <p class='text-xs text-gray-600 flex-1'>在設定中配置 Worker URL</p>
             </div>
         </div>
     `;
@@ -131,8 +131,8 @@ async function renderMCPMarket() {
     // 提示
     const tip = createElement('div', 'flex items-start gap-2 p-3 bg-blue-50 rounded-lg');
     tip.innerHTML = `
-        <span class="material-symbols-outlined text-blue-600 text-sm">info</span>
-        <p class="text-xs text-blue-800 flex-1">
+        <span class='material-symbols-outlined text-blue-600 text-sm'>info</span>
+        <p class='text-xs text-blue-800 flex-1'>
             所有工具都在 Cloudflare Workers 上運行，你的 API Key 安全地存儲在 Cloudflare Secrets 中。
         </p>
     `;
@@ -174,7 +174,7 @@ async function renderMCPMarket() {
     const dropdownGrid = createElement('div', 'grid grid-cols-2 gap-2 p-3');
     
     const allOption = createElement('button', 'mcp-category-option active');
-    allOption.innerHTML = '<span class="material-symbols-outlined text-sm mr-1">apps</span>全部';
+    allOption.innerHTML = '<span class='material-symbols-outlined text-sm mr-1'>apps</span>全部';
     allOption.dataset.category = 'all';
     allOption.onclick = (e) => {
         e.stopPropagation();
@@ -184,7 +184,7 @@ async function renderMCPMarket() {
     
     for (const cat of CATEGORIES) {
         const option = createElement('button', 'mcp-category-option');
-        option.innerHTML = `<span class="material-symbols-outlined text-sm mr-1">${cat.icon}</span>${cat.id}`;
+        option.innerHTML = `<span class='material-symbols-outlined text-sm mr-1'>${cat.icon}</span>${cat.id}`;
         option.dataset.category = cat.id;
         option.onclick = (e) => {
             e.stopPropagation();
@@ -219,7 +219,7 @@ async function renderMCPMarket() {
     customHeader.appendChild(customTitle);
     
     const addCustomBtn = createElement('button', 'text-xs text-purple-600 font-medium hover:text-purple-800 transition-colors');
-    addCustomBtn.innerHTML = '<span class="material-symbols-outlined text-sm align-middle">add_circle</span> 新增工具';
+    addCustomBtn.innerHTML = '<span class='material-symbols-outlined text-sm align-middle'>add_circle</span> 新增工具';
     addCustomBtn.onclick = () => showCustomToolDialog(container);
     customHeader.appendChild(addCustomBtn);
     customSection.appendChild(customHeader);
@@ -448,12 +448,12 @@ function showToolDetail(tool) {
 
     const info = createElement('div', 'grid grid-cols-2 gap-2 text-sm');
     info.innerHTML = `
-        <div class="bg-gray-100 p-2 rounded">
-            <span class="text-gray-500">工具名稱</span>
-            <div class="font-mono text-gray-900">${tool.name}</div>
+        <div class='bg-gray-100 p-2 rounded'>
+            <span class='text-gray-500'>工具名稱</span>
+            <div class='font-mono text-gray-900'>${tool.name}</div>
         </div>
-        <div class="bg-gray-100 p-2 rounded">
-            <span class="text-gray-500">難度</span>
+        <div class='bg-gray-100 p-2 rounded'>
+            <span class='text-gray-500'>難度</span>
             <div>${tool.difficulty === 'easy' ? '簡單' : tool.difficulty === 'medium' ? '中等' : '進階'}</div>
         </div>
     `;
@@ -524,8 +524,8 @@ async function showGenerateDialog(container) {
         
         const summary = createElement('div', 'bg-purple-50 p-3 rounded-lg');
         summary.innerHTML = `
-            <p class="text-sm text-purple-800 font-medium">已選擇 ${selectedTools.size} 個工具</p>
-            <p class="text-xs text-purple-600 mt-1">${Array.from(selectedTools).map(id => {
+            <p class='text-sm text-purple-800 font-medium'>已選擇 ${selectedTools.size} 個工具</p>
+            <p class='text-xs text-purple-600 mt-1'>${Array.from(selectedTools).map(id => {
                 const tool = TOOLS_CATALOG.find(t => t.id === id);
                 return tool?.displayName;
             }).join('、')}</p>
@@ -563,8 +563,8 @@ async function showGenerateDialog(container) {
         
         const summary = createElement('div', 'bg-purple-50 p-3 rounded-lg');
         summary.innerHTML = `
-            <p class="text-sm text-purple-800 font-medium">已選擇 ${selectedTools.size} 個工具</p>
-            <p class="text-xs text-purple-600 mt-1">${Array.from(selectedTools).map(id => {
+            <p class='text-sm text-purple-800 font-medium'>已選擇 ${selectedTools.size} 個工具</p>
+            <p class='text-xs text-purple-600 mt-1'>${Array.from(selectedTools).map(id => {
                 const tool = TOOLS_CATALOG.find(t => t.id === id);
                 return tool?.displayName;
             }).join('、')}</p>
@@ -597,13 +597,13 @@ async function showGenerateDialog(container) {
         
         const guideSection = createElement('div', 'bg-blue-50 p-3 rounded-lg mt-4');
         guideSection.innerHTML = `
-            <h3 class="font-semibold text-blue-800 mb-2">部署步驟</h3>
-            <ol class="text-sm text-blue-700 space-y-1 list-decimal list-inside">
+            <h3 class='font-semibold text-blue-800 mb-2'>部署步驟</h3>
+            <ol class='text-sm text-blue-700 space-y-1 list-decimal list-inside'>
                 <li>解壓縮下載的 ZIP 檔</li>
-                <li>在終端機切換到該目錄：<code class="bg-blue-100 px-1">cd siios-mcp-worker</code></li>
-                <li>安裝依賴：<code class="bg-blue-100 px-1">npm install</code></li>
-                <li>登入 Cloudflare：<code class="bg-blue-100 px-1">wrangler login</code></li>
-                <li>部署：<code class="bg-blue-100 px-1">wrangler deploy</code></li>
+                <li>在終端機切換到該目錄：<code class='bg-blue-100 px-1'>cd siios-mcp-worker</code></li>
+                <li>安裝依賴：<code class='bg-blue-100 px-1'>npm install</code></li>
+                <li>登入 Cloudflare：<code class='bg-blue-100 px-1'>wrangler login</code></li>
+                <li>部署：<code class='bg-blue-100 px-1'>wrangler deploy</code></li>
             </ol>
         `;
         content.appendChild(guideSection);
@@ -664,7 +664,7 @@ function createCustomToolItem(tool, index, container) {
     actions.appendChild(selectCheckbox);
     
     const deleteBtn = createElement('button', 'text-red-500 hover:text-red-700 transition-colors');
-    deleteBtn.innerHTML = '<span class="material-symbols-outlined text-sm">delete</span>';
+    deleteBtn.innerHTML = '<span class='material-symbols-outlined text-sm'>delete</span>';
     deleteBtn.onclick = () => deleteCustomTool(tool.id);
     actions.appendChild(deleteBtn);
     
@@ -708,7 +708,7 @@ function showCustomToolDialog(container) {
     
     content.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-1 mt-4', { textContent: '參數（JSON 格式）' }));
     const paramsInput = createElement('textarea', 'w-full p-3 bg-gray-900 text-green-400 rounded-lg font-mono text-xs h-32');
-    paramsInput.placeholder = '{"type": "object", "properties": {"param1": {"type": "string", "description": "參數1"}}, "required": ["param1"]}';
+    paramsInput.placeholder = '{'type': 'object', 'properties': {'param1': {'type': 'string', 'description': '參數1'}}, 'required': ['param1']}';
     paramsInput.id = 'custom-tool-params';
     content.appendChild(paramsInput);
     
@@ -720,12 +720,12 @@ function showCustomToolDialog(container) {
     
     const helpText = createElement('div', 'text-xs text-gray-500 mt-2 p-3 bg-blue-50 rounded-lg');
     helpText.innerHTML = `
-        <p class="font-semibold mb-1">💡 提示：</p>
-        <ul class="space-y-1 list-disc list-inside">
-            <li><code class="bg-blue-100 px-1">args</code> - 調用時傳入的參數</li>
-            <li><code class="bg-blue-100 px-1">env</code> - 環境變數（如 API Keys）</li>
-            <li><code class="bg-blue-100 px-1">fetch()</code> - 發送 HTTP 請求</li>
-            <li>最後必須 <code class="bg-blue-100 px-1">return</code> 結果</li>
+        <p class='font-semibold mb-1'>💡 提示：</p>
+        <ul class='space-y-1 list-disc list-inside'>
+            <li><code class='bg-blue-100 px-1'>args</code> - 調用時傳入的參數</li>
+            <li><code class='bg-blue-100 px-1'>env</code> - 環境變數（如 API Keys）</li>
+            <li><code class='bg-blue-100 px-1'>fetch()</code> - 發送 HTTP 請求</li>
+            <li>最後必須 <code class='bg-blue-100 px-1'>return</code> 結果</li>
         </ul>
     `;
     content.appendChild(helpText);

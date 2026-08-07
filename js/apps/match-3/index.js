@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -108,7 +108,7 @@ function renderBoard(container) {
   if (!boardEl) return;
   
   boardEl.innerHTML = board.map((cell, idx) => `
-    <button class="tile ${selectedIndex === idx ? 'selected' : ''}" data-idx="${idx}">
+    <button class='tile ${selectedIndex === idx ? 'selected' : ''}' data-idx='${idx}'>
       ${cell.fruit || ''}
     </button>
   `).join('');
@@ -183,32 +183,32 @@ async function renderMatch3(params) {
   const container = createElement('div', 'app-container match3-app');
   
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn">
-        <i class="fas fa-chevron-left"></i> 返回
+    <header class='ios-header'>
+      <button class='ios-back-btn'>
+        <i class='fas fa-chevron-left'></i> 返回
       </button>
-      <h1 class="menu-title">消消樂</h1>
+      <h1 class='menu-title'>消消樂</h1>
     </header>
     
-    <div class="page">
-      <div class="game-info">
-        <div class="info-item">
-          <span class="info-label">分數</span>
-          <span class="info-value score-value">${score}</span>
+    <div class='page'>
+      <div class='game-info'>
+        <div class='info-item'>
+          <span class='info-label'>分數</span>
+          <span class='info-value score-value'>${score}</span>
         </div>
-        <div class="info-item">
-          <span class="info-label">目標</span>
-          <span class="info-value target-value">${target}</span>
+        <div class='info-item'>
+          <span class='info-label'>目標</span>
+          <span class='info-value target-value'>${target}</span>
         </div>
-        <div class="info-item">
-          <span class="info-label">步數</span>
-          <span class="info-value moves-value">${moves}</span>
+        <div class='info-item'>
+          <span class='info-label'>步數</span>
+          <span class='info-value moves-value'>${moves}</span>
         </div>
       </div>
       
-      <div class="match-board" style="grid-template-columns: repeat(${BOARD_SIZE}, 1fr);"></div>
+      <div class='match-board' style='grid-template-columns: repeat(${BOARD_SIZE}, 1fr);'></div>
       
-      <button class="restart-btn">重新開始</button>
+      <button class='restart-btn'>重新開始</button>
     </div>
   `;
   

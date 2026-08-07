@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -23,18 +23,18 @@ async function renderPaymentCode(params) {
   await loadCode();
   const container = createElement('div', 'app-container payment-app');
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-      <h1 class="menu-title">付款碼</h1>
+    <header class='ios-header'>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+      <h1 class='menu-title'>付款碼</h1>
     </header>
-    <div class="page">
-      <div class="code-container">
-        <div class="qr-placeholder">
-          <i class="fas fa-qr_code_2"></i>
-          <div class="code-text">${currentCode}</div>
+    <div class='page'>
+      <div class='code-container'>
+        <div class='qr-placeholder'>
+          <i class='fas fa-qr_code_2'></i>
+          <div class='code-text'>${currentCode}</div>
         </div>
-        <p class="code-hint">請出示此碼給商家掃描</p>
-        <button class="refresh-btn"><i class="fas fa-sync-alt"></i> 刷新付款碼</button>
+        <p class='code-hint'>請出示此碼給商家掃描</p>
+        <button class='refresh-btn'><i class='fas fa-sync-alt'></i> 刷新付款碼</button>
       </div>
     </div>
   `;

@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 

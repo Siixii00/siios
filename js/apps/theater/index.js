@@ -78,7 +78,7 @@ async function generateScript(character) {
 3. 一段劇本內容（HTML格式，包含標題和正文，約100-200字）
 
 請嚴格按照以下JSON格式回覆，不要包含其他文字：
-{"title":"標題","desc":"描述","category":"movie或series","html":"<div style=\"padding: 20px; border-radius: 12px;\"><h2>章節標題</h2><p>劇本內容...</p></div>"}`;
+{'title':'標題','desc':'描述','category':'movie或series','html':'<div style=\'padding: 20px; border-radius: 12px;\'><h2>章節標題</h2><p>劇本內容...</p></div>'}`;
 
   try {
     const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
@@ -117,7 +117,7 @@ async function generateScript(character) {
       desc: result.desc || '暫無描述',
       category: result.category || 'movie',
       cover: result.cover || '',
-      html: result.html || '<div style="padding: 20px;">生成內容解析失敗</div>'
+      html: result.html || '<div style='padding: 20px;'>生成內容解析失敗</div>'
     };
   } catch (error) {
     if (error.message.includes('JSON')) {
@@ -132,14 +132,14 @@ function renderContent(container) {
   if (!grid) return;
   
   grid.innerHTML = contentData.map(item => `
-    <div class="theater-card" data-id="${item.id}">
+    <div class='theater-card' data-id='${item.id}'>
       ${item.cover 
-        ? `<img src="${item.cover}" alt="${item.title}" class="theater-poster">`
-        : `<div class="theater-placeholder"><i class="fas fa-film"></i></div>`
+        ? `<img src='${item.cover}' alt='${item.title}' class='theater-poster'>`
+        : `<div class='theater-placeholder'><i class='fas fa-film'></i></div>`
       }
-      <div class="theater-title">${item.title}</div>
+      <div class='theater-title'>${item.title}</div>
     </div>
-  `).join('') || '<div class="empty-state">尚無劇目</div>';
+  `).join('') || '<div class='empty-state'>尚無劇目</div>';
   
   grid.querySelectorAll('.theater-card').forEach(card => {
     card.onclick = () => openDetail(container, card.dataset.id);
@@ -157,7 +157,7 @@ function openDetail(container, id) {
   
   if (title) title.textContent = currentContent.title;
   if (desc) desc.textContent = currentContent.desc;
-  if (preview) preview.innerHTML = currentContent.html || '<p style="color: #888;">無預覽內容</p>';
+  if (preview) preview.innerHTML = currentContent.html || '<p style='color: #888;'>無預覽內容</p>';
   if (modal) modal.classList.add('active');
 }
 
@@ -173,34 +173,34 @@ async function renderTheater(params) {
   const container = createElement('div', 'app-container theater-app');
   
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn">
-        <i class="fas fa-chevron-left"></i> 返回
+    <header class='ios-header'>
+      <button class='ios-back-btn'>
+        <i class='fas fa-chevron-left'></i> 返回
       </button>
-      <h1 class="menu-title">劇場</h1>
+      <h1 class='menu-title'>劇場</h1>
     </header>
     
-    <div class="page">
-      <div class="theater-grid"></div>
+    <div class='page'>
+      <div class='theater-grid'></div>
       
-      <div class="character-selector-container">
-        <select class="character-selector">
-          <option value="">選擇角色...</option>
+      <div class='character-selector-container'>
+        <select class='character-selector'>
+          <option value=''>選擇角色...</option>
         </select>
       </div>
       
-      <button class="add-btn">
-        <i class="fas fa-plus"></i> 新增劇目
+      <button class='add-btn'>
+        <i class='fas fa-plus'></i> 新增劇目
       </button>
       
-      <div class="detail-modal">
-        <div class="detail-content">
-          <button class="close-detail-btn">
-            <i class="fas fa-times"></i>
+      <div class='detail-modal'>
+        <div class='detail-content'>
+          <button class='close-detail-btn'>
+            <i class='fas fa-times'></i>
           </button>
-          <h2 class="detail-title"></h2>
-          <p class="detail-desc"></p>
-          <div class="detail-preview"></div>
+          <h2 class='detail-title'></h2>
+          <p class='detail-desc'></p>
+          <div class='detail-preview'></div>
         </div>
       </div>
     </div>
@@ -218,8 +218,8 @@ async function renderTheater(params) {
   const loadCharacters = async () => {
     const characters = await CharactersDB.getAll();
     if (characterSelector && characters && characters.length > 0) {
-      characterSelector.innerHTML = '<option value="">選擇角色...</option>' +
-        characters.map(c => `<option value="${c.id}">${c.name || '未命名'}</option>`).join('');
+      characterSelector.innerHTML = '<option value=''>選擇角色...</option>' +
+        characters.map(c => `<option value='${c.id}'>${c.name || '未命名'}</option>`).join('');
     }
   };
   loadCharacters();
@@ -248,7 +248,7 @@ async function renderTheater(params) {
       }
       
       addBtn.disabled = true;
-      addBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 生成中...';
+      addBtn.innerHTML = '<i class='fas fa-spinner fa-spin'></i> 生成中...';
       
       try {
         const scriptContent = await generateScript(selectedChar);
@@ -280,7 +280,7 @@ async function renderTheater(params) {
         }
       } finally {
         addBtn.disabled = false;
-        addBtn.innerHTML = '<i class="fas fa-plus"></i> 新增劇目';
+        addBtn.innerHTML = '<i class='fas fa-plus'></i> 新增劇目';
       }
     };
   }

@@ -1,4 +1,4 @@
-import { ActivityDB, ActivitySourcesDB, ActivitySettingsDB } from '../db.js';
+﻿import { ActivityDB, ActivitySourcesDB, ActivitySettingsDB } from '../db.js';
 
 export async function handleActivitySync(request) {
     const corsHeaders = {

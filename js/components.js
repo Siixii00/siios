@@ -1,4 +1,4 @@
-import Router from './router.js';
+﻿import Router from './router.js';
 
 function createElement(tag, className, attrs = {}) {
     const el = document.createElement(tag);
@@ -23,7 +23,7 @@ function createIcon(name, className = '', filled = false) {
     const span = createElement('span', `material-symbols-outlined ${className}`.trim());
     span.textContent = name;
     if (filled) {
-        span.style.fontVariationSettings = "'FILL' 1";
+        span.style.fontVariationSettings = ''FILL' 1';
     }
     return span;
 }
@@ -260,7 +260,7 @@ function createKakaoChatCell(chat, onClick) {
     const avatarMargin = createElement('div', 'kakao-avatar-margin');
     const avatarContainer = createElement('div', 'relative');
     const avatar = createElement('img', 'kakao-avatar', {
-        src: chat.character_avatar || 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23E5E5EA"/><text x="50" y="60" text-anchor="middle" font-size="40" fill="%238E8E93">AI</text></svg>',
+        src: chat.character_avatar || 'data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23E5E5EA'/><text x='50' y='60' text-anchor='middle' font-size='40' fill='%238E8E93'>AI</text></svg>',
         alt: chat.character_name
     });
     avatarContainer.appendChild(avatar);
