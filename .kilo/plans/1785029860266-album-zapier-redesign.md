@@ -2,7 +2,7 @@
 
 ## Context
 The album app (`js/apps/album/`) currently uses a dark iOS-style theme with overlapping header elements (back button, title, tab bar). The user wants to:
-1. Rebuild the album app using the Zapier design system from `DESIGN-zapier.md`
+1. Rebuild the album app using the Zapier design system from `docs/design/DESIGN-zapier.md`
 2. Fix the header layout so the back button and title don't overlap
 3. Reserve proper space for the title bar (back button + title + actions)
 
