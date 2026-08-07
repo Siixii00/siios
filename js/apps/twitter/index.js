@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createToast, createEmptyState, createKakaoSideMenu } from '../../components.js';
 import { SettingsDB, CharactersDB, UsersDB, ChatsDB, MemoryDB } from '../../db.js';
 import APIClient from '../../api.js';
@@ -28,9 +28,9 @@ const BLOCKED_KEYWORDS = [
     'hate speech', 'discrimination',
     'kkk', 'white supremacy',
     'genocide', 'ethnic cleansing',
-    'äººèº«æ”»æ“Š', 'ä»‡æ¨è¨€è«–', 'ç¨®æ—æ­§è¦–',
-    'æ€§åˆ¥æ­§è¦–', 'æš´åŠ›', 'ææ€–ä¸»ç¾©',
-    'ç´ç²¹', 'ç¨®æ—æ»…çµ•'
+    '¤H¨­§ğÀ»', '¤³«ë¨¥½×', 'ºØ±Úª[µø',
+    '©Ê§Oª[µø', '¼É¤O', '®£©Æ¥D¸q',
+    '¯Çºé', 'ºØ±Ú·Àµ´'
 ];
 
 const SENSITIVE_POLITICS = [
@@ -42,8 +42,8 @@ const SENSITIVE_POLITICS = [
     'impeach', 'impeachment',
     'trump 2024', 'biden crime family',
     'fake news', 'mainstream media lies',
-    'é¸èˆ‰èˆå¼Š', 'é™°è¬€è«–', 'æ”¿æ²»é¬¥çˆ­',
-    'æ”¿è®Š', 'ç…½å‹•', 'æš´å‹•'
+    '¿ïÁ|»R¹ú', '³±¿Ñ½×', '¬Fªv°«ª§',
+    '¬FÅÜ', 'º´°Ê', '¼É°Ê'
 ];
 
 function isContentBlocked(title) {
@@ -51,14 +51,14 @@ function isContentBlocked(title) {
     
     for (const keyword of BLOCKED_KEYWORDS) {
         if (titleLower.includes(keyword.toLowerCase())) {
-            console.warn(`[Twitter] é˜»æ“‹æ•æ„Ÿå…§å®¹: '${title}' (é—œéµå­—: ${keyword})`);
+            console.warn(`[Twitter] ªı¾×±Ó·P¤º®e: '${title}' (ÃöÁä¦r: ${keyword})`);
             return true;
         }
     }
     
     for (const keyword of SENSITIVE_POLITICS) {
         if (titleLower.includes(keyword.toLowerCase())) {
-            console.warn(`[Twitter] é˜»æ“‹æ”¿æ²»æ•æ„Ÿå…§å®¹: '${title}' (é—œéµå­—: ${keyword})`);
+            console.warn(`[Twitter] ªı¾×¬Fªv±Ó·P¤º®e: '${title}' (ÃöÁä¦r: ${keyword})`);
             return true;
         }
     }
@@ -67,62 +67,62 @@ function isContentBlocked(title) {
 }
 
 async function fetchRealContentForCategory(category) {
-    console.log('[Twitter] å˜—è©¦å¾å¿«å–è¼‰å…¥å…§å®¹ï¼Œé¡åˆ¥:', category);
+    console.log('[Twitter] ¹Á¸Õ±q§Ö¨ú¸ü¤J¤º®e¡AÃş§O:', category);
     
     try {
         const cacheResponse = await fetch('data/twitter_content_cache.json');
-        console.log('[Twitter] å¿«å–æª”æ¡ˆå›æ‡‰ç‹€æ…‹:', cacheResponse.status, cacheResponse.ok);
+        console.log('[Twitter] §Ö¨úÀÉ®×¦^À³ª¬ºA:', cacheResponse.status, cacheResponse.ok);
         
         if (cacheResponse.ok) {
             const cacheData = await cacheResponse.json();
-            console.log('[Twitter] å¿«å–è¼‰å…¥æˆåŠŸï¼Œæœ€å¾Œæ›´æ–°:', cacheData.metadata?.last_updated);
-            console.log('[Twitter] å¿«å–ä¸­çš„é¡åˆ¥:', Object.keys(cacheData.content || {}));
+            console.log('[Twitter] §Ö¨ú¸ü¤J¦¨¥\¡A³Ì«á§ó·s:', cacheData.metadata?.last_updated);
+            console.log('[Twitter] §Ö¨ú¤¤ªºÃş§O:', Object.keys(cacheData.content || {}));
             
             const categoryMap = {
-                'ç§‘æŠ€': 'tech',
-                'æ–°è': 'news',
-                'è—è¡“': 'art',
-                'ç§‘å­¸': 'science',
-                'éŠæˆ²': 'gaming',
+                '¬ì§Ş': 'tech',
+                '·s»D': 'news',
+                'ÃÀ³N': 'art',
+                '¬ì¾Ç': 'science',
+                '¹CÀ¸': 'gaming',
                 'AI': 'ai',
                 'Steam': 'steam',
                 'GitHub': 'github'
             };
             
             const cacheKey = categoryMap[category] || 'tech';
-            console.log('[Twitter] æŸ¥è©¢é¡åˆ¥:', category, '-> å¿«å–éµ:', cacheKey);
+            console.log('[Twitter] ¬d¸ßÃş§O:', category, '-> §Ö¨úÁä:', cacheKey);
             
             const cachedContent = cacheData.content?.[cacheKey] || [];
-            console.log('[Twitter] æ‰¾åˆ°çš„å…§å®¹æ•¸é‡:', cachedContent.length);
+            console.log('[Twitter] §ä¨ìªº¤º®e¼Æ¶q:', cachedContent.length);
             
             if (cachedContent.length > 0) {
-                console.log(`[Twitter] âœ… å¾å¿«å–è¿”å› ${cachedContent.length} å‰‡ ${category} å…§å®¹`);
-                console.log('[Twitter] å‰ 3 å‰‡å…§å®¹:', cachedContent.slice(0, 3).map(c => c.title));
+                console.log(`[Twitter] ? ±q§Ö¨úªğ¦^ ${cachedContent.length} «h ${category} ¤º®e`);
+                console.log('[Twitter] «e 3 «h¤º®e:', cachedContent.slice(0, 3).map(c => c.title));
                 return cachedContent;
             } else {
-                console.warn('[Twitter] å¿«å–ä¸­è©²é¡åˆ¥ç„¡å…§å®¹');
+                console.warn('[Twitter] §Ö¨ú¤¤¸ÓÃş§OµL¤º®e');
             }
         } else {
-            console.warn('[Twitter] å¿«å–æª”æ¡ˆç„¡æ³•è¼‰å…¥ï¼Œç‹€æ…‹:', cacheResponse.status);
+            console.warn('[Twitter] §Ö¨úÀÉ®×µLªk¸ü¤J¡Aª¬ºA:', cacheResponse.status);
         }
     } catch (error) {
-        console.error('[Twitter] å¿«å–è¼‰å…¥éŒ¯èª¤:', error);
+        console.error('[Twitter] §Ö¨ú¸ü¤J¿ù»~:', error);
     }
     
-    console.log('[Twitter] åŸ·è¡Œå³æ™‚æŠ“å–...');
+    console.log('[Twitter] °õ¦æ§Y®É§ì¨ú...');
     
     const sources = {
-        'ç§‘æŠ€': 'https://hacker-news.firebaseio.com/v0/topstories.json',
-        'æ–°è': 'https://feeds.bbci.co.uk/news/world/rss.xml',
-        'è—è¡“': 'https://www.creativebloq.com/feed',
-        'ç§‘å­¸': 'https://www.sciencedaily.com/rss/all.xml',
-        'éŠæˆ²': 'https://www.polygon.com/rss/index.xml',
+        '¬ì§Ş': 'https://hacker-news.firebaseio.com/v0/topstories.json',
+        '·s»D': 'https://feeds.bbci.co.uk/news/world/rss.xml',
+        'ÃÀ³N': 'https://www.creativebloq.com/feed',
+        '¬ì¾Ç': 'https://www.sciencedaily.com/rss/all.xml',
+        '¹CÀ¸': 'https://www.polygon.com/rss/index.xml',
         'AI': 'https://hacker-news.firebaseio.com/v0/topstories.json',
         'Steam': 'https://store.steampowered.com/feeds/news.xml',
         'GitHub': 'https://github.blog/feed/'
     };
     
-    const endpoint = sources[category] || sources['ç§‘æŠ€'];
+    const endpoint = sources[category] || sources['¬ì§Ş'];
     
     try {
         if (endpoint.includes('hacker-news')) {
@@ -238,25 +238,25 @@ async function fetchRealContentForCategory(category) {
 }
 
 function analyzeCharacterInterests(personality) {
-    if (!personality) return 'ç§‘æŠ€';
+    if (!personality) return '¬ì§Ş';
     
     const categories = {
-        'ç§‘æŠ€': ['å·¥ç¨‹å¸«', 'ç§‘æŠ€', 'ç¨‹å¼', 'é›»è…¦', 'æŠ€è¡“', 'é–‹ç™¼', 'hacker', 'programmer'],
-        'æ–°è': ['è¨˜è€…', 'æ–°è', 'æ™‚äº‹', 'æ”¿æ²»', 'ç¤¾æœƒ', 'åœ‹éš›'],
-        'è—è¡“': ['è—è¡“', 'è¨­è¨ˆ', 'ç•«å®¶', 'éŸ³æ¨‚', 'å‰µä½œ', 'ç¹ªç•«'],
-        'ç§‘å­¸': ['ç§‘å­¸', 'ç ”ç©¶', 'å­¸è€…', 'å¯¦é©—', 'ç‰©ç†', 'åŒ–å­¸', 'ç”Ÿç‰©'],
-        'éŠæˆ²': ['éŠæˆ²', 'ç©å®¶', 'å‹•æ¼«', 'gamer', 'anime'],
-        'AI': ['ai', 'æ©Ÿå™¨å­¸ç¿’', 'artificial', 'æ™ºèƒ½', 'gpt', 'llm', 'èªéŸ³åˆæˆ', 'å½±åƒç”Ÿæˆ', 'æ¨¡å‹'],
-        'Steam': ['steam', 'steaméŠæˆ²', 'éŠæˆ²'],
-        'GitHub': ['github', 'é–‹æº', 'open source', 'ç¨‹å¼']
+        '¬ì§Ş': ['¤uµ{®v', '¬ì§Ş', 'µ{¦¡', '¹q¸£', '§Ş³N', '¶}µo', 'hacker', 'programmer'],
+        '·s»D': ['°OªÌ', '·s»D', '®É¨Æ', '¬Fªv', 'ªÀ·|', '°ê»Ú'],
+        'ÃÀ³N': ['ÃÀ³N', '³]­p', 'µe®a', '­µ¼Ö', '³Ğ§@', 'Ã¸µe'],
+        '¬ì¾Ç': ['¬ì¾Ç', '¬ã¨s', '¾ÇªÌ', '¹êÅç', 'ª«²z', '¤Æ¾Ç', '¥Íª«'],
+        '¹CÀ¸': ['¹CÀ¸', 'ª±®a', '°Êº©', 'gamer', 'anime'],
+        'AI': ['ai', '¾÷¾¹¾Ç²ß', 'artificial', '´¼¯à', 'gpt', 'llm', '»y­µ¦X¦¨', '¼v¹³¥Í¦¨', '¼Ò«¬'],
+        'Steam': ['steam', 'steam¹CÀ¸', '¹CÀ¸'],
+        'GitHub': ['github', '¶}·½', 'open source', 'µ{¦¡']
     };
     
     const lower = personality.toLowerCase();
     
     for (const [cat, keywords] of Object.entries(categories)) {
         if (keywords.some(k => lower.includes(k.toLowerCase()))) {
-            if (cat === 'Steam' || cat === 'éŠæˆ²') {
-                return 'éŠæˆ²';
+            if (cat === 'Steam' || cat === '¹CÀ¸') {
+                return '¹CÀ¸';
             }
             if (cat === 'AI' || cat === 'GitHub') {
                 return 'AI';
@@ -265,7 +265,7 @@ function analyzeCharacterInterests(personality) {
         }
     }
     
-    return 'ç§‘æŠ€';
+    return '¬ì§Ş';
 }
 
 async function getCharacterContext(characterId) {
@@ -316,16 +316,16 @@ async function inferFollowingFromMemory(selectedCharacterId) {
         `${m.content?.slice(0, 200)}`
     ).join('\n');
     
-    const prompt = `åˆ†æä»¥ä¸‹è¨˜æ†¶ç‰‡æ®µï¼Œæ¨æ–­é€™å€‹ä½¿ç”¨è€…æœƒè¿½è¹¤å“ªäº›äººï¼š
+    const prompt = `¤ÀªR¥H¤U°O¾Ğ¤ù¬q¡A±À?³o­Ó¨Ï¥ÎªÌ·|°lÂÜ­ş¨Ç¤H¡G
 
-ä½¿ç”¨è€…ï¼š${character.name || 'åŒ¿å'}
-æ€§æ ¼ï¼š${character.personality || ''}
+¨Ï¥ÎªÌ¡G${character.name || '°Î¦W'}
+©Ê®æ¡G${character.personality || ''}
 
-è¨˜æ†¶ç‰‡æ®µï¼š
+°O¾Ğ¤ù¬q¡G
 ${memoryText}
 
-è«‹è¾“å‡º 3-5 å€‹æœ€é©åˆçš„è¿½è¹¤å°è±¡åç¨±ï¼Œä»¥ JSON é™£åˆ—æ ¼å¼ï¼š
-['è§’è‰²åç¨±1', 'è§’è‰²åç¨±2', ...]`;
+½Ğ?¥X 3-5 ­Ó³Ì¾A¦Xªº°lÂÜ¹ï¶H¦WºÙ¡A¥H JSON °}¦C®æ¦¡¡G
+['¨¤¦â¦WºÙ1', '¨¤¦â¦WºÙ2', ...]`;
 
     const settings = await SettingsDB.getAll();
     
@@ -378,45 +378,45 @@ ${memoryText}
 }
 
 async function generateRecommendedTweets(selectedCharacterId) {
-    console.log('[Twitter] generateRecommendedTweets è¢«èª¿ç”¨ï¼Œè§’è‰²ID:', selectedCharacterId);
+    console.log('[Twitter] generateRecommendedTweets ³Q½Õ¥Î¡A¨¤¦âID:', selectedCharacterId);
     
     const character = await getCharacterContext(selectedCharacterId);
-    console.log('[Twitter] ç²å–åˆ°çš„è§’è‰²:', character);
+    console.log('[Twitter] Àò¨ú¨ìªº¨¤¦â:', character);
     
     if (!character) {
-        console.warn('[Twitter] æœªæ‰¾åˆ°è§’è‰²ï¼Œè«‹å…ˆé¸æ“‡è§’è‰²');
-        createToast('è«‹å…ˆé¸æ“‡è§’è‰²');
+        console.warn('[Twitter] ¥¼§ä¨ì¨¤¦â¡A½Ğ¥ı¿ï¾Ü¨¤¦â');
+        createToast('½Ğ¥ı¿ï¾Ü¨¤¦â');
         return [];
     }
     
     const interestCategory = analyzeCharacterInterests(character.personality);
-    console.log(`[Twitter] è§’è‰² ${character.name} èˆˆè¶£é¡åˆ¥: ${interestCategory}`);
+    console.log(`[Twitter] ¨¤¦â ${character.name} ¿³½ìÃş§O: ${interestCategory}`);
     
     let realContent = await fetchRealContentForCategory(interestCategory);
-    console.log('[Twitter] æŠ“å–åˆ°çš„çœŸå¯¦å…§å®¹æ•¸é‡:', realContent.length);
+    console.log('[Twitter] §ì¨ú¨ìªº¯u¹ê¤º®e¼Æ¶q:', realContent.length);
     
     const shouldAddAIContent = Math.random() < 0.3;
     if (shouldAddAIContent && interestCategory !== 'AI') {
-        console.log('[Twitter] åŠ å…¥ AI ç›¸é—œæ¨è–¦å…§å®¹');
+        console.log('[Twitter] ¥[¤J AI ¬ÛÃö±ÀÂË¤º®e');
         const aiContent = await fetchRealContentForCategory('AI');
         realContent = [...realContent, ...aiContent.slice(0, 2)];
     }
     
     if (realContent.length === 0) {
-        console.warn('[Twitter] ç„¡æ³•æŠ“å–çœŸå¯¦å…§å®¹ï¼Œä½¿ç”¨ AI ç”Ÿæˆ');
+        console.warn('[Twitter] µLªk§ì¨ú¯u¹ê¤º®e¡A¨Ï¥Î AI ¥Í¦¨');
         return await generateAIOnlyTweets(character);
     }
     
     const settings = await SettingsDB.getAll();
-    console.log('[Twitter] API è¨­å®š:', { 
+    console.log('[Twitter] API ³]©w:', { 
         hasApiUrl: !!settings.api_url, 
         hasApiKey: !!settings.api_key,
         model: settings.model 
     });
     
     if (!settings.api_url || !settings.api_key) {
-        console.log('[Twitter] âœ… æœªè¨­å®š APIï¼Œç›´æ¥ä½¿ç”¨çœŸå¯¦å…§å®¹ï¼ˆå…±', realContent.length, 'å‰‡ï¼‰');
-        console.log('[Twitter] å…§å®¹ä¾†æº:', realContent.map(c => c.source));
+        console.log('[Twitter] ? ¥¼³]©w API¡Aª½±µ¨Ï¥Î¯u¹ê¤º®e¡]¦@', realContent.length, '«h¡^');
+        console.log('[Twitter] ¤º®e¨Ó·½:', realContent.map(c => c.source));
         
         const sourceAuthors = {
             'Hacker News': 'TechNews_Bot',
@@ -431,7 +431,7 @@ async function generateRecommendedTweets(selectedCharacterId) {
         
         const tweets = realContent.map(content => {
             const authorName = sourceAuthors[content.source] || 'NewsBot';
-            console.log('[Twitter] å…§å®¹ä¾†æº:', content.source, '-> ä½œè€…:', authorName);
+            console.log('[Twitter] ¤º®e¨Ó·½:', content.source, '-> §@ªÌ:', authorName);
             return {
                 author: authorName,
                 content: `${content.title}`,
@@ -444,33 +444,33 @@ async function generateRecommendedTweets(selectedCharacterId) {
                 url: content.url
             };
         });
-        console.log('[Twitter] ç”Ÿæˆçš„æ¨æ–‡:', tweets);
-        console.log('[Twitter] æ¨æ–‡ä½œè€…åˆ—è¡¨:', [...new Set(tweets.map(t => t.author))]);
+        console.log('[Twitter] ¥Í¦¨ªº±À¤å:', tweets);
+        console.log('[Twitter] ±À¤å§@ªÌ¦Cªí:', [...new Set(tweets.map(t => t.author))]);
         return tweets;
     }
     
     const contentDesc = realContent.map((c, i) => `${i + 1}. ${c.title}`).join('\n');
     
-    const prompt = `ä½ æ˜¯è§’è‰²ã€Œ${character.name}ã€ï¼Œæ€§æ ¼ï¼š${character.personality}
+    const prompt = `§A¬O¨¤¦â¡u${character.name}¡v¡A©Ê®æ¡G${character.personality}
 
-ä»¥ä¸‹æ˜¯ä¸€äº›çœŸå¯¦çš„æ–°è/æ–‡ç« æ¨™é¡Œï¼Œè«‹é¸æ“‡å…¶ä¸­ 3-5 å€‹ä¸¦è½‰æ›ç‚ºç¬¦åˆä½ æ€§æ ¼çš„æ¨ç‰¹æ¨æ–‡ï¼š
+¥H¤U¬O¤@¨Ç¯u¹êªº·s»D/¤å³¹¼ĞÃD¡A½Ğ¿ï¾Ü¨ä¤¤ 3-5 ­Ó¨ÃÂà´«¬°²Å¦X§A©Ê®æªº±À¯S±À¤å¡G
 
 ${contentDesc}
 
-è¦æ±‚ï¼š
-1. æ¯æ¢æ¨æ–‡ 140 å­—ä»¥å…§
-2. ç”¨ä½ çš„å£å»å’Œèªæ°£
-3. å¯ä»¥åŠ å…¥ä½ çš„çœ‹æ³•æˆ–æƒ…æ„Ÿ
-4. ç¬¦åˆä½ çš„æ€§æ ¼ç‰¹é»
-5. å°ç£ç¹é«”ä¸­æ–‡
-6. å¦‚æœæœ‰ AI ç›¸é—œå…§å®¹ï¼Œå¯ä»¥ç‰¹åˆ¥é—œæ³¨
+­n¨D¡G
+1. ¨C±ø±À¤å 140 ¦r¥H¤º
+2. ¥Î§Aªº¤f§k©M»y®ğ
+3. ¥i¥H¥[¤J§Aªº¬İªk©Î±¡·P
+4. ²Å¦X§Aªº©Ê®æ¯SÂI
+5. ¥xÆWÁcÅé¤¤¤å
+6. ¦pªG¦³ AI ¬ÛÃö¤º®e¡A¥i¥H¯S§OÃöª`
 
-è¼¸å‡º JSON é™£åˆ—æ ¼å¼ï¼š
+¿é¥X JSON °}¦C®æ¦¡¡G
 [
   {
     'author': '${character.name}',
-    'content': 'æ¨æ–‡å†…å®¹',
-    'stats': { 'reply': æ•¸å­—, 'retweet': æ•¸å­—, 'like': æ•¸å­— }
+    'content': '±À¤å?®e',
+    'stats': { 'reply': ¼Æ¦r, 'retweet': ¼Æ¦r, 'like': ¼Æ¦r }
   }
 ]`;
 
@@ -514,16 +514,16 @@ async function generateAIOnlyTweets(character) {
         return [];
     }
     
-    const prompt = `ä½ æ˜¯è§’è‰²ã€Œ${character.name}ã€ï¼Œæ€§æ ¼ï¼š${character.personality}
+    const prompt = `§A¬O¨¤¦â¡u${character.name}¡v¡A©Ê®æ¡G${character.personality}
 
-è«‹ç”Ÿæˆ 3 æ¢ç¬¦åˆä½ æ€§æ ¼çš„æ¨ç‰¹æ¨æ–‡ã€‚
+½Ğ¥Í¦¨ 3 ±ø²Å¦X§A©Ê®æªº±À¯S±À¤å¡C
 
-è¼¸å‡º JSON é™£åˆ—æ ¼å¼ï¼š
+¿é¥X JSON °}¦C®æ¦¡¡G
 [
   {
     'author': '${character.name}',
-    'content': 'æ¨æ–‡å†…å®¹ï¼ˆ140å­—ä»¥å…§ï¼‰',
-    'stats': { 'reply': æ•¸å­—, 'retweet': æ•¸å­—, 'like': æ•¸å­— }
+    'content': '±À¤å?®e¡]140¦r¥H¤º¡^',
+    'stats': { 'reply': ¼Æ¦r, 'retweet': ¼Æ¦r, 'like': ¼Æ¦r }
   }
 ]`;
 
@@ -574,10 +574,10 @@ function formatTime(timestamp) {
     const now = new Date();
     const diff = now - date;
     
-    if (diff < 60000) return 'å‰›å‰›';
-    if (diff < 3600000) return `${Math.floor(diff / 60000)} åˆ†é˜å‰`;
+    if (diff < 60000) return '­è­è';
+    if (diff < 3600000) return `${Math.floor(diff / 60000)} ¤ÀÄÁ«e`;
     if (diff < 86400000) return `${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
-    if (diff < 604800000) return ['æ—¥', 'ä¸€', 'äºŒ', 'ä¸‰', 'å››', 'äº”', 'å…­'][date.getDay()];
+    if (diff < 604800000) return ['¤é', '¤@', '¤G', '¤T', '¥|', '¤­', '¤»'][date.getDay()];
     
     return `${date.getMonth() + 1}/${date.getDate()}`;
 }
@@ -588,10 +588,10 @@ function formatTimeAgo(timestamp) {
     const hours = Math.floor(diff / 3600000);
     const days = Math.floor(diff / 86400000);
     
-    if (minutes < 1) return 'å‰›å‰›';
-    if (minutes < 60) return `${minutes}åˆ†é˜å‰`;
-    if (hours < 24) return `${hours}å°æ™‚å‰`;
-    if (days < 7) return `${days}å¤©å‰`;
+    if (minutes < 1) return '­è­è';
+    if (minutes < 60) return `${minutes}¤ÀÄÁ«e`;
+    if (hours < 24) return `${hours}¤p®É«e`;
+    if (days < 7) return `${days}¤Ñ«e`;
     
     return new Date(timestamp).toLocaleDateString('zh-TW');
 }
@@ -687,7 +687,7 @@ function escapeHtml(text) {
 
 function createTweetEl(tweet, profile, isBookmarked = false) {
     const tweetId = tweet.id || tweet.timestamp;
-    const isUserTweet = tweet.author === 'ä½ ';
+    const isUserTweet = tweet.author === '§A';
     const avatarStyle = isUserTweet ? `background: ${profile.avatarGradient || DEFAULT_AVATAR}` : '';
     const displayName = isUserTweet ? profile.name : tweet.author;
     const displayHandle = isUserTweet ? profile.handle : tweet.handle;
@@ -700,9 +700,9 @@ function createTweetEl(tweet, profile, isBookmarked = false) {
             <div class='tweet-header'>
                 <div>
                     <span class='tweet-author'>${escapeHtml(displayName)}</span>
-                    <span class='tweet-meta'>${escapeHtml(displayHandle)} Â· ${tweet.time || formatTime(tweet.timestamp)}</span>
+                    <span class='tweet-meta'>${escapeHtml(displayHandle)} ¡P ${tweet.time || formatTime(tweet.timestamp)}</span>
                 </div>
-                <button class='icon-btn tweet-menu-btn' aria-label='æ›´å¤š'><i class='fas fa-ellipsis'></i></button>
+                <button class='icon-btn tweet-menu-btn' aria-label='§ó¦h'><i class='fas fa-ellipsis'></i></button>
             </div>
             <div class='tweet-body'>${escapeHtml(tweet.content)}</div>
             <div class='tweet-actions'>
@@ -729,17 +729,17 @@ function createNotificationEl(notif) {
         case 'like':
             icon = 'fa-heart';
             iconColor = '#f91880';
-            actionText = 'å–œæ­¡äº†ä½ çš„æ¨æ–‡';
+            actionText = '³ßÅw¤F§Aªº±À¤å';
             break;
         case 'retweet':
             icon = 'fa-retweet';
             iconColor = '#00ba7c';
-            actionText = 'è½‰ç™¼äº†ä½ çš„æ¨æ–‡';
+            actionText = 'Âàµo¤F§Aªº±À¤å';
             break;
         case 'reply':
             icon = 'fa-comment';
             iconColor = 'var(--twitter-accent)';
-            actionText = 'å›è¦†äº†ä½ çš„æ¨æ–‡';
+            actionText = '¦^ÂĞ¤F§Aªº±À¤å';
             break;
     }
     
@@ -778,12 +778,12 @@ async function addTweet(content) {
     const profile = await getProfile();
     const tweet = {
         id: Date.now().toString(),
-        author: 'ä½ ',
+        author: '§A',
         handle: profile.handle,
         content: trimmed,
         stats: { reply: 0, retweet: 0, like: 0 },
         timestamp: Date.now(),
-        time: 'ç¾åœ¨'
+        time: '²{¦b'
     };
     
     userTweets.unshift(tweet);
@@ -791,7 +791,7 @@ async function addTweet(content) {
     
     scheduleReactionsForTweet(tweet);
     
-    createToast('æ¨æ–‡å·²ç™¼å¸ƒ');
+    createToast('±À¤å¤wµo¥¬');
 }
 
 async function addNpcTweet(npcName, content) {
@@ -805,7 +805,7 @@ async function addNpcTweet(npcName, content) {
         content: trimmed,
         stats: { reply: 0, retweet: 0, like: 0 },
         timestamp: Date.now(),
-        time: 'ç¾åœ¨'
+        time: '²{¦b'
     };
     
     npcTweets.unshift(tweet);
@@ -914,15 +914,15 @@ async function generateTweetWithAI(characterId = null) {
         const settings = await SettingsDB.getAll();
         
         if (!settings.api_url || !settings.api_key) {
-            createToast('è«‹å…ˆè¨­å®š API URL å’Œ API Key');
+            createToast('½Ğ¥ı³]©w API URL ©M API Key');
             return null;
         }
         
         const context = await buildAppContext({ characterId });
         
         const systemPrompt = context.systemPrompt 
-            ? `${context.systemPrompt}\n\nè«‹ç”¨ä¸€æ¢ç°¡çŸ­çš„æ¨æ–‡ï¼ˆ140å­—ä»¥å…§ï¼‰è¡¨é”ä½ ç¾åœ¨çš„æƒ³æ³•æˆ–å¿ƒæƒ…ã€‚ç›´æ¥è¼¸å‡ºæ¨æ–‡å…§å®¹ï¼Œä¸è¦åŠ ä»»ä½•è§£é‡‹ã€‚`
-            : 'è«‹ç”Ÿæˆä¸€æ¢ç°¡çŸ­æœ‰è¶£çš„æ¨æ–‡ï¼ˆ140å­—ä»¥å…§ï¼‰ã€‚ç›´æ¥è¼¸å‡ºæ¨æ–‡å…§å®¹ï¼Œä¸è¦åŠ ä»»ä½•è§£é‡‹ã€‚';
+            ? `${context.systemPrompt}\n\n½Ğ¥Î¤@±øÂ²µuªº±À¤å¡]140¦r¥H¤º¡^ªí¹F§A²{¦bªº·Qªk©Î¤ß±¡¡Cª½±µ¿é¥X±À¤å¤º®e¡A¤£­n¥[¥ô¦ó¸ÑÄÀ¡C`
+            : '½Ğ¥Í¦¨¤@±øÂ²µu¦³½ìªº±À¤å¡]140¦r¥H¤º¡^¡Cª½±µ¿é¥X±À¤å¤º®e¡A¤£­n¥[¥ô¦ó¸ÑÄÀ¡C';
         
         const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
             method: 'POST',
@@ -941,21 +941,21 @@ async function generateTweetWithAI(characterId = null) {
         });
         
         if (!response.ok) {
-            throw new Error(`API éŒ¯èª¤: ${response.status}`);
+            throw new Error(`API ¿ù»~: ${response.status}`);
         }
         
         const data = await response.json();
         return data.choices?.[0]?.message?.content?.trim() || null;
     } catch (error) {
-        console.error('[Twitter] AI ç”Ÿæˆæ¨æ–‡å¤±æ•—:', error);
+        console.error('[Twitter] AI ¥Í¦¨±À¤å¥¢±Ñ:', error);
         if (window.showError) {
             window.showError({
-                title: 'Twitter æ¨æ–‡ç”Ÿæˆå¤±æ•—',
+                title: 'Twitter ±À¤å¥Í¦¨¥¢±Ñ',
                 message: error.message,
                 details: error.stack || ''
             });
         } else {
-            createToast('ç”Ÿæˆæ¨æ–‡å¤±æ•—ï¼Œè«‹ç¨å¾Œå†è©¦');
+            createToast('¥Í¦¨±À¤å¥¢±Ñ¡A½Ğµy«á¦A¸Õ');
         }
         return null;
     }
@@ -972,8 +972,8 @@ async function generateReplyWithAI(tweet, characterId = null) {
         const context = await buildAppContext({ characterId });
         
         const systemPrompt = context.systemPrompt
-            ? `${context.systemPrompt}\n\nè«‹å°ä»¥ä¸‹æ¨æ–‡å¯«ä¸€æ¢ç°¡çŸ­å›è¦†ï¼ˆ50å­—ä»¥å…§ï¼‰ã€‚ä¿æŒä½ çš„æ€§æ ¼ç‰¹é»ã€‚ç›´æ¥è¼¸å‡ºå›è¦†å…§å®¹ã€‚`
-            : 'è«‹å°ä»¥ä¸‹æ¨æ–‡å¯«ä¸€æ¢ç°¡çŸ­å‹å–„çš„å›è¦†ï¼ˆ50å­—ä»¥å…§ï¼‰ã€‚ç›´æ¥è¼¸å‡ºå›è¦†å…§å®¹ã€‚';
+            ? `${context.systemPrompt}\n\n½Ğ¹ï¥H¤U±À¤å¼g¤@±øÂ²µu¦^ÂĞ¡]50¦r¥H¤º¡^¡C«O«ù§Aªº©Ê®æ¯SÂI¡Cª½±µ¿é¥X¦^ÂĞ¤º®e¡C`
+            : '½Ğ¹ï¥H¤U±À¤å¼g¤@±øÂ²µu¤Íµ½ªº¦^ÂĞ¡]50¦r¥H¤º¡^¡Cª½±µ¿é¥X¦^ÂĞ¤º®e¡C';
         
         const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
             method: 'POST',
@@ -985,7 +985,7 @@ async function generateReplyWithAI(tweet, characterId = null) {
                 model: settings.model || 'gpt-3.5-turbo',
                 messages: [
                     { role: 'system', content: systemPrompt },
-                    { role: 'user', content: `æ¨æ–‡å…§å®¹: '${tweet.content}'\nä½œè€…: ${tweet.author}` }
+                    { role: 'user', content: `±À¤å¤º®e: '${tweet.content}'\n§@ªÌ: ${tweet.author}` }
                 ],
                 temperature: 0.8,
                 max_tokens: 100
@@ -999,10 +999,10 @@ async function generateReplyWithAI(tweet, characterId = null) {
         const data = await response.json();
         return data.choices?.[0]?.message?.content?.trim() || null;
     } catch (error) {
-        console.error('[Twitter] AI ç”Ÿæˆå›è¦†å¤±æ•—:', error);
+        console.error('[Twitter] AI ¥Í¦¨¦^ÂĞ¥¢±Ñ:', error);
         if (window.showError) {
             window.showError({
-                title: 'Twitter å›è¦†ç”Ÿæˆå¤±æ•—',
+                title: 'Twitter ¦^ÂĞ¥Í¦¨¥¢±Ñ',
                 message: error.message,
                 details: error.stack || ''
             });
@@ -1031,7 +1031,7 @@ async function executeReaction(reaction) {
                 tweetContent,
                 tweetAuthor
             });
-            await addNpcTweet(fromName, `è½‰ç™¼äº† @${tweetAuthor} çš„æ¨æ–‡\n${tweetContent}`);
+            await addNpcTweet(fromName, `Âàµo¤F @${tweetAuthor} ªº±À¤å\n${tweetContent}`);
             break;
             
         case 'reply':
@@ -1068,28 +1068,28 @@ function stopNotificationSystem() {
 }
 
 async function renderFeed(container) {
-    console.log('[Twitter] renderFeed è¢«èª¿ç”¨');
+    console.log('[Twitter] renderFeed ³Q½Õ¥Î');
     
     const profile = await getProfile();
     const npcFollows = await getNpcFollows();
     
-    console.log('[Twitter] ç”¨æˆ¶æ¨æ–‡æ•¸é‡:', userTweets.length);
-    console.log('[Twitter] NPC æ¨æ–‡æ•¸é‡:', npcTweets.length);
-    console.log('[Twitter] è¿½è¹¤çš„ NPC:', npcFollows);
-    console.log('[Twitter] npcTweets çš„ä½œè€…:', npcTweets.map(t => t.author));
+    console.log('[Twitter] ¥Î¤á±À¤å¼Æ¶q:', userTweets.length);
+    console.log('[Twitter] NPC ±À¤å¼Æ¶q:', npcTweets.length);
+    console.log('[Twitter] °lÂÜªº NPC:', npcFollows);
+    console.log('[Twitter] npcTweets ªº§@ªÌ:', npcTweets.map(t => t.author));
     
     let all = [...userTweets];
     
     if (npcFollows.length > 0) {
         const followedNpcTweets = npcTweets.filter(t => npcFollows.includes(t.author));
-        console.log('[Twitter] å·²è¿½è¹¤ NPC çš„æ¨æ–‡æ•¸é‡:', followedNpcTweets.length);
-        console.log('[Twitter] å·²è¿½è¹¤ NPC çš„æ¨æ–‡ä½œè€…:', followedNpcTweets.map(t => t.author));
+        console.log('[Twitter] ¤w°lÂÜ NPC ªº±À¤å¼Æ¶q:', followedNpcTweets.length);
+        console.log('[Twitter] ¤w°lÂÜ NPC ªº±À¤å§@ªÌ:', followedNpcTweets.map(t => t.author));
         all = [...all, ...followedNpcTweets];
     } else {
-        console.log('[Twitter] æœªè¿½è¹¤ä»»ä½• NPCï¼Œåªé¡¯ç¤ºç”¨æˆ¶æ¨æ–‡');
+        console.log('[Twitter] ¥¼°lÂÜ¥ô¦ó NPC¡A¥uÅã¥Ü¥Î¤á±À¤å');
     }
     
-    console.log('[Twitter] ç¸½æ¨æ–‡æ•¸é‡:', all.length);
+    console.log('[Twitter] Á`±À¤å¼Æ¶q:', all.length);
     
     const bookmarkIds = new Set(bookmarks.map(b => b.id || b.timestamp));
     const userIds = new Set(userTweets.map(t => t.id || t.timestamp));
@@ -1104,10 +1104,10 @@ async function renderFeed(container) {
     if (displayTweets.length === 0) {
         const emptyState = createEmptyState(
             'chat_bubble',
-            'æ­¡è¿ä½¿ç”¨æ¨ç‰¹',
-            'é»æ“Šå³ä¸‹è§’æŒ‰éˆ•ç™¼å¸ƒæ¨æ–‡',
+            'Åwªï¨Ï¥Î±À¯S',
+            'ÂIÀ»¥k¤U¨¤«ö¶sµo¥¬±À¤å',
             {
-                label: 'ç™¼å¸ƒæ¨æ–‡',
+                label: 'µo¥¬±À¤å',
                 onClick: () => showComposeModal()
             }
         );
@@ -1136,8 +1136,8 @@ async function renderBookmarksList(container) {
     if (bookmarks.length === 0) {
         const emptyState = createEmptyState(
             'bookmark',
-            'å°šç„¡æ›¸ç±¤',
-            'åœ¨é¦–é é»æ“Šæ¨æ–‡çš„æ›¸ç±¤åœ–ç¤ºå³å¯æ”¶è—'
+            '©|µL®ÑÅÒ',
+            '¦b­º­¶ÂIÀ»±À¤åªº®ÑÅÒ¹Ï¥Ü§Y¥i¦¬ÂÃ'
         );
         container.appendChild(emptyState);
         return;
@@ -1157,7 +1157,7 @@ async function renderBookmarksList(container) {
                 bookmarks.splice(index, 1);
                 await saveBookmarks();
                 tweetEl.remove();
-                createToast('å·²ç§»é™¤æ›¸ç±¤');
+                createToast('¤w²¾°£®ÑÅÒ');
             }
         };
         
@@ -1171,8 +1171,8 @@ async function renderNotificationsList(container) {
     if (notifications.length === 0) {
         const emptyState = createEmptyState(
             'notifications',
-            'æ²’æœ‰é€šçŸ¥',
-            'ç•¶æœ‰äººäº’å‹•æ™‚æœƒé¡¯ç¤ºåœ¨é€™è£¡'
+            '¨S¦³³qª¾',
+            '·í¦³¤H¤¬°Ê®É·|Åã¥Ü¦b³o¸Ì'
         );
         container.appendChild(emptyState);
         return;
@@ -1194,13 +1194,13 @@ function showComposeModal() {
     
     modal.innerHTML = `
         <div class='compose-header'>
-            <button class='icon-btn compose-close' aria-label='é—œé–‰'><i class='fas fa-times'></i></button>
-            <h3>ç™¼å¸ƒæ¨æ–‡</h3>
-            <button class='primary-btn compose-submit' disabled>ç™¼å¸ƒ</button>
+            <button class='icon-btn compose-close' aria-label='Ãö³¬'><i class='fas fa-times'></i></button>
+            <h3>µo¥¬±À¤å</h3>
+            <button class='primary-btn compose-submit' disabled>µo¥¬</button>
         </div>
         <div class='compose-body'>
             <div class='avatar' style='background: ${DEFAULT_AVATAR}'></div>
-            <textarea class='compose-textarea' placeholder='æœ‰ä»€éº¼æ–°é®®äº‹ï¼Ÿ' rows='4'></textarea>
+            <textarea class='compose-textarea' placeholder='¦³¤°»ò·sÂA¨Æ¡H' rows='4'></textarea>
         </div>
     `;
     
@@ -1244,19 +1244,19 @@ function closeFabMenu(fabBtn, fabMenu) {
 }
 
 async function refreshFeed(main, pullIndicator) {
-    pullIndicator.innerHTML = '<i class='fas fa-spinner fa-spin'></i> è¼‰å…¥ä¸­...';
+    pullIndicator.innerHTML = "`<i class=`"`fas fa-spinner fa-spin`"`></i> ¸ü¤J¤¤...`";
     pullIndicator.classList.add('active');
     
-    console.log('[Twitter] é–‹å§‹åˆ·æ–°æ¨æ–‡');
-    console.log('[Twitter] ç•¶å‰é¸ä¸­è§’è‰²:', selectedCharacterId);
+    console.log('[Twitter] ¶}©l¨ê·s±À¤å');
+    console.log('[Twitter] ·í«e¿ï¤¤¨¤¦â:', selectedCharacterId);
     
     try {
         const tweets = await generateRecommendedTweets(selectedCharacterId);
-        console.log('[Twitter] ç”Ÿæˆçš„æ¨æ–‡æ•¸é‡:', tweets.length);
-        console.log('[Twitter] æ¨æ–‡å…§å®¹:', tweets);
+        console.log('[Twitter] ¥Í¦¨ªº±À¤å¼Æ¶q:', tweets.length);
+        console.log('[Twitter] ±À¤å¤º®e:', tweets);
         
         if (tweets.length === 0) {
-            createToast('æœªç”Ÿæˆä»»ä½•æ¨æ–‡ï¼Œè«‹æª¢æŸ¥è§’è‰²è¨­å®šæˆ–ç¶²è·¯é€£ç·š');
+            createToast('¥¼¥Í¦¨¥ô¦ó±À¤å¡A½ĞÀË¬d¨¤¦â³]©w©Îºô¸ô³s½u');
             return;
         }
         
@@ -1264,30 +1264,30 @@ async function refreshFeed(main, pullIndicator) {
         
         npcTweets = [];
         await saveNpcTweets();
-        console.log('[Twitter] å·²æ¸…ç©ºèˆŠæ¨æ–‡');
+        console.log('[Twitter] ¤w²MªÅÂÂ±À¤å');
         
         const sourceAuthors = [...new Set(tweets.map(t => t.author))];
-        console.log('[Twitter] æ¨æ–‡ä½œè€…åˆ—è¡¨:', sourceAuthors);
+        console.log('[Twitter] ±À¤å§@ªÌ¦Cªí:', sourceAuthors);
         
         const npcFollows = await getNpcFollows();
-        console.log('[Twitter] ç•¶å‰è¿½è¹¤åˆ—è¡¨:', npcFollows);
+        console.log('[Twitter] ·í«e°lÂÜ¦Cªí:', npcFollows);
         
         let updated = false;
         for (const author of sourceAuthors) {
             if (!npcFollows.includes(author)) {
                 npcFollows.push(author);
-                console.log('[Twitter] âœ… è‡ªå‹•è¿½è¹¤:', author);
+                console.log('[Twitter] ? ¦Û°Ê°lÂÜ:', author);
                 updated = true;
             }
         }
         
         if (updated) {
             await saveNpcFollows(npcFollows);
-            console.log('[Twitter] æ›´æ–°å¾Œçš„è¿½è¹¤åˆ—è¡¨:', npcFollows);
+            console.log('[Twitter] §ó·s«áªº°lÂÜ¦Cªí:', npcFollows);
         }
         
         tweets.forEach(tweet => {
-            console.log('[Twitter] æ·»åŠ æ¨æ–‡:', tweet.author, '-', tweet.content.substring(0, 30));
+            console.log('[Twitter] ²K¥[±À¤å:', tweet.author, '-', tweet.content.substring(0, 30));
             npcTweets.unshift({
                 id: Date.now().toString() + Math.random(),
                 author: tweet.author,
@@ -1298,25 +1298,25 @@ async function refreshFeed(main, pullIndicator) {
             });
         });
         await saveNpcTweets();
-        console.log('[Twitter] ä¿å­˜å¾Œçš„ npcTweets æ•¸é‡:', npcTweets.length);
+        console.log('[Twitter] «O¦s«áªº npcTweets ¼Æ¶q:', npcTweets.length);
         
         const feed = main.querySelector('.feed-container');
         if (feed) {
-            console.log('[Twitter] æ‰¾åˆ° feed-containerï¼Œé–‹å§‹é‡æ–°æ¸²æŸ“');
+            console.log('[Twitter] §ä¨ì feed-container¡A¶}©l­«·s´è¬V');
             feed.innerHTML = '';
             await renderFeed(feed);
-            console.log('[Twitter] é‡æ–°æ¸²æŸ“å®Œæˆ');
+            console.log('[Twitter] ­«·s´è¬V§¹¦¨');
         } else {
-            console.error('[Twitter] æ‰¾ä¸åˆ° feed-container');
+            console.error('[Twitter] §ä¤£¨ì feed-container');
         }
         
         main.scrollTo({ top: 0, behavior: 'smooth' });
-        createToast('æ¨è–¦å†…å®¹å·²æ›´æ–°');
+        createToast('±ÀÂË?®e¤w§ó·s');
     } catch (error) {
-        console.error('[Twitter] åˆ·æ–°å¤±æ•—:', error);
-        createToast('æ›´æ–°å¤±æ•—ï¼Œè«‹ç¨å¾Œå†è©¦');
+        console.error('[Twitter] ¨ê·s¥¢±Ñ:', error);
+        createToast('§ó·s¥¢±Ñ¡A½Ğµy«á¦A¸Õ');
     } finally {
-        pullIndicator.innerHTML = '<i class='fas fa-arrow-down'></i> ä¸‹æ‹‰åˆ·æ–°';
+        pullIndicator.innerHTML = "`<i class=`"`fas fa-arrow-down`"`></i> ¤U©Ô¨ê·s`";
         pullIndicator.classList.remove('active');
     }
 }
@@ -1332,14 +1332,14 @@ async function renderTwitterHome() {
     const container = createElement('div', 'twitter-app');
     
     const pullIndicator = createElement('div', 'pull-indicator');
-    pullIndicator.innerHTML = '<i class='fas fa-arrow-down'></i> ä¸‹æ‹‰åˆ·æ–°';
+    pullIndicator.innerHTML = "`<i class=`"`fas fa-arrow-down`"`></i> ¤U©Ô¨ê·s`";
     container.appendChild(pullIndicator);
     
     const header = createElement('header', 'top-bar');
     header.innerHTML = `
-        <button class='icon-btn' aria-label='è¿”å›'><i class='fas fa-chevron-left'></i></button>
+        <button class='icon-btn' aria-label='ªğ¦^'><i class='fas fa-chevron-left'></i></button>
         <div class='logo'><i class='fab fa-twitter'></i></div>
-        <button class='icon-btn menu-toggle' aria-label='é¸å–®'><i class='fas fa-bars'></i></button>
+        <button class='icon-btn menu-toggle' aria-label='¿ï³æ'><i class='fas fa-bars'></i></button>
     `;
     
     header.querySelector('.icon-btn').onclick = () => Router.back();
@@ -1351,8 +1351,8 @@ async function renderTwitterHome() {
     
     const tabs = createElement('section', 'tabs card');
     tabs.innerHTML = `
-        <button class='tab ${activeTab === 'forYou' ? 'active' : ''}' data-tab='forYou'>ç‚ºä½ æ¨è–¦</button>
-        <button class='tab ${activeTab === 'following' ? 'active' : ''}' data-tab='following'>æ­£åœ¨è¿½è¹¤</button>
+        <button class='tab ${activeTab === 'forYou' ? 'active' : ''}' data-tab='forYou'>¬°§A±ÀÂË</button>
+        <button class='tab ${activeTab === 'following' ? 'active' : ''}' data-tab='following'>¥¿¦b°lÂÜ</button>
     `;
     
     tabs.querySelectorAll('.tab').forEach(tab => {
@@ -1378,8 +1378,8 @@ async function renderTwitterHome() {
         hint.innerHTML = `
             <div style='text-align: center; padding: 20px;'>
                 <i class='fas fa-user-circle' style='font-size: 32px; color: var(--twitter-accent); margin-bottom: 12px;'></i>
-                <p style='color: var(--twitter-text); font-weight: 600; margin-bottom: 8px;'>ä¸‹æ‹‰åˆ·æ–°ä»¥é¸æ“‡è§’è‰²</p>
-                <p style='color: var(--twitter-muted); font-size: 13px;'>é¸æ“‡è§’è‰²å¾Œï¼Œå°‡æ ¹æ“šèŠå¤©è¨˜æ†¶æ¨è–¦å€‹äººåŒ–æ¨æ–‡</p>
+                <p style='color: var(--twitter-text); font-weight: 600; margin-bottom: 8px;'>¤U©Ô¨ê·s¥H¿ï¾Ü¨¤¦â</p>
+                <p style='color: var(--twitter-muted); font-size: 13px;'>¿ï¾Ü¨¤¦â«á¡A±N®Ú¾Ú²á¤Ñ°O¾Ğ±ÀÂË­Ó¤H¤Æ±À¤å</p>
             </div>
         `;
         main.appendChild(hint);
@@ -1469,18 +1469,18 @@ async function renderTwitterHome() {
         }
     });
     
-    const fabBtn = createElement('button', 'fab-btn', { ariaLabel: 'ç™¼æ¨' });
-    fabBtn.innerHTML = '<i class='fas fa-plus'></i>';
+    const fabBtn = createElement('button', 'fab-btn', { ariaLabel: 'µo±À' });
+    fabBtn.innerHTML = "`<i class=`"`fas fa-plus`"`></i>`";
     
     const fabMenu = createElement('div', 'fab-menu');
     fabMenu.innerHTML = `
         <button class='fab-menu-item fab-ai-generate'>
             <i class='fas fa-wand-magic-sparkles'></i>
-            <span>AI ç”Ÿæˆæ¨æ–‡</span>
+            <span>AI ¥Í¦¨±À¤å</span>
         </button>
         <button class='fab-menu-item fab-compose'>
             <i class='fas fa-pen'></i>
-            <span>æ’°å¯«æ¨æ–‡</span>
+            <span>¼¶¼g±À¤å</span>
         </button>
     `;
     
@@ -1491,7 +1491,7 @@ async function renderTwitterHome() {
     
     fabMenu.querySelector('.fab-ai-generate').onclick = async () => {
         closeFabMenu(fabBtn, fabMenu);
-        createToast('æ­£åœ¨ç”Ÿæˆæ¨æ–‡...');
+        createToast('¥¿¦b¥Í¦¨±À¤å...');
         const content = await generateTweetWithAI(selectedCharacterId);
         if (content) {
             await addTweet(content);
@@ -1544,11 +1544,11 @@ async function openCharacterMenu() {
         userMasks.forEach(user => {
             allOptions.push({
                 avatar: avatarGradient,
-                label: user.name || 'æœªå‘½åé¢å…·',
-                value: selectedCharacterId === `user_${user.id}` ? 'ç›®å‰' : undefined,
+                label: user.name || '¥¼©R¦W­±¨ã',
+                value: selectedCharacterId === `user_${user.id}` ? '¥Ø«e' : undefined,
                 onClick: () => {
                     selectedCharacterId = `user_${user.id}`;
-                    createToast(`å·²åˆ‡æ›ç‚º ${user.name || 'æœªå‘½åé¢å…·'}`);
+                    createToast(`¤w¤Á´«¬° ${user.name || '¥¼©R¦W­±¨ã'}`);
                 }
             });
         });
@@ -1558,21 +1558,21 @@ async function openCharacterMenu() {
         charMasks.forEach(char => {
             allOptions.push({
                 avatar: avatarGradient,
-                label: char.name || 'æœªå‘½åè§’è‰²',
-                value: selectedCharacterId === `char_${char.id}` ? 'ç›®å‰' : undefined,
+                label: char.name || '¥¼©R¦W¨¤¦â',
+                value: selectedCharacterId === `char_${char.id}` ? '¥Ø«e' : undefined,
                 onClick: () => {
                     selectedCharacterId = `char_${char.id}`;
-                    createToast(`å·²åˆ‡æ›ç‚º ${char.name || 'æœªå‘½åè§’è‰²'}`);
+                    createToast(`¤w¤Á´«¬° ${char.name || '¥¼©R¦W¨¤¦â'}`);
                 }
             });
         });
     }
     
     const menu = createKakaoSideMenu({
-        title: 'é¸æ“‡è§’è‰²',
+        title: '¿ï¾Ü¨¤¦â',
         sections: [
             {
-                title: 'ä»¥ä¸åŒè§’è‰²ç€è¦½',
+                title: '¥H¤£¦P¨¤¦âÂsÄı',
                 items: allOptions
             }
         ]
@@ -1587,9 +1587,9 @@ async function renderTwitterBookmarks() {
     
     const header = createElement('header', 'top-bar');
     header.innerHTML = `
-        <button class='icon-btn' aria-label='è¿”å›'><i class='fas fa-chevron-left'></i></button>
+        <button class='icon-btn' aria-label='ªğ¦^'><i class='fas fa-chevron-left'></i></button>
         <div class='logo'><i class='fab fa-twitter'></i></div>
-        <button class='icon-btn' aria-label='é¸å–®' style='visibility:hidden'><i class='fas fa-bars'></i></button>
+        <button class='icon-btn' aria-label='¿ï³æ' style='visibility:hidden'><i class='fas fa-bars'></i></button>
     `;
     
     header.querySelector('.icon-btn').onclick = () => Router.navigate('/twitter');
@@ -1601,7 +1601,7 @@ async function renderTwitterBookmarks() {
     titleCard.innerHTML = `
         <div class='tweet-header'>
             <div>
-                <span class='tweet-author'>æ›¸ç±¤</span>
+                <span class='tweet-author'>®ÑÅÒ</span>
             </div>
         </div>
     `;
@@ -1623,9 +1623,9 @@ async function renderTwitterNotifications() {
     
     const header = createElement('header', 'top-bar');
     header.innerHTML = `
-        <button class='icon-btn' aria-label='è¿”å›'><i class='fas fa-chevron-left'></i></button>
+        <button class='icon-btn' aria-label='ªğ¦^'><i class='fas fa-chevron-left'></i></button>
         <div class='logo'><i class='fab fa-twitter'></i></div>
-        <button class='icon-btn' aria-label='é¸å–®' style='visibility:hidden'><i class='fas fa-bars'></i></button>
+        <button class='icon-btn' aria-label='¿ï³æ' style='visibility:hidden'><i class='fas fa-bars'></i></button>
     `;
     
     header.querySelector('.icon-btn').onclick = () => Router.navigate('/twitter');
@@ -1637,7 +1637,7 @@ async function renderTwitterNotifications() {
     titleCard.innerHTML = `
         <div class='tweet-header'>
             <div>
-                <span class='tweet-author'>é€šçŸ¥</span>
+                <span class='tweet-author'>³qª¾</span>
             </div>
         </div>
     `;

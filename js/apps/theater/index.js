@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import APIClient from '../../api.js';
 import { CharactersDB, SettingsDB } from '../../db.js';
@@ -48,37 +48,37 @@ async function generateScript(character) {
   const settings = await APIClient.getSettings();
   
   if (!settings.api_url || !settings.api_key) {
-    throw new Error('è«‹å…ˆè¨­å®š API URL å’Œ API Key');
+    throw new Error('½Ğ¥ı³]©w API URL ©M API Key');
   }
   
   const context = await buildTheaterContext(character.id);
   
   let theaterSettingsPrompt = '';
   if (context.theaterSettings && context.theaterSettings.length > 0) {
-    theaterSettingsPrompt = '\n\nåŠ‡å ´è¨­å®šï¼š\n' + context.theaterSettings.map(t => 
-      `- ${t.name || 'æœªå‘½å'}: ${t.description || ''}`
+    theaterSettingsPrompt = '\n\n¼@³õ³]©w¡G\n' + context.theaterSettings.map(t => 
+      `- ${t.name || '¥¼©R¦W'}: ${t.description || ''}`
     ).join('\n');
   }
   
   let htmlGuidePrompt = '';
   if (context.htmlGuide) {
-    htmlGuidePrompt = `\n\nHTML æŒ‡å—ï¼š\n${context.htmlGuide}`;
+    htmlGuidePrompt = `\n\nHTML «ü«n¡G\n${context.htmlGuide}`;
   }
   
-  const prompt = `ä½ æ˜¯ä¸€ä½å°ˆæ¥­ç·¨åŠ‡ã€‚è«‹æ ¹æ“šä»¥ä¸‹è§’è‰²è¨­å®šï¼Œå‰µä½œä¸€å€‹çŸ­åŠ‡æœ¬ï¼š
+  const prompt = `§A¬O¤@¦ì±M·~½s¼@¡C½Ğ®Ú¾Ú¥H¤U¨¤¦â³]©w¡A³Ğ§@¤@­Óµu¼@¥»¡G
 
-è§’è‰²åç¨±ï¼š${character.name || 'æœªå‘½å'}
-è§’è‰²æè¿°ï¼š${character.description || ''}
-è§’è‰²æ€§æ ¼ï¼š${character.personality || ''}
-å ´æ™¯è¨­å®šï¼š${character.scenario || ''}${theaterSettingsPrompt}${htmlGuidePrompt}
+¨¤¦â¦WºÙ¡G${character.name || '¥¼©R¦W'}
+¨¤¦â´y­z¡G${character.description || ''}
+¨¤¦â©Ê®æ¡G${character.personality || ''}
+³õ´º³]©w¡G${character.scenario || ''}${theaterSettingsPrompt}${htmlGuidePrompt}
 
-è«‹ç”Ÿæˆï¼š
-1. ä¸€å€‹å¸å¼•äººçš„æ¨™é¡Œï¼ˆ5å­—ä»¥å…§ï¼‰
-2. ç°¡çŸ­æè¿°ï¼ˆ20å­—ä»¥å…§ï¼‰
-3. ä¸€æ®µåŠ‡æœ¬å…§å®¹ï¼ˆHTMLæ ¼å¼ï¼ŒåŒ…å«æ¨™é¡Œå’Œæ­£æ–‡ï¼Œç´„100-200å­—ï¼‰
+½Ğ¥Í¦¨¡G
+1. ¤@­Ó§l¤Ş¤Hªº¼ĞÃD¡]5¦r¥H¤º¡^
+2. Â²µu´y­z¡]20¦r¥H¤º¡^
+3. ¤@¬q¼@¥»¤º®e¡]HTML®æ¦¡¡A¥]§t¼ĞÃD©M¥¿¤å¡A¬ù100-200¦r¡^
 
-è«‹åš´æ ¼æŒ‰ç…§ä»¥ä¸‹JSONæ ¼å¼å›è¦†ï¼Œä¸è¦åŒ…å«å…¶ä»–æ–‡å­—ï¼š
-{'title':'æ¨™é¡Œ','desc':'æè¿°','category':'movieæˆ–series','html':'<div style=\'padding: 20px; border-radius: 12px;\'><h2>ç« ç¯€æ¨™é¡Œ</h2><p>åŠ‡æœ¬å…§å®¹...</p></div>'}`;
+½ĞÄY®æ«ö·Ó¥H¤UJSON®æ¦¡¦^ÂĞ¡A¤£­n¥]§t¨ä¥L¤å¦r¡G
+{'title':'¼ĞÃD','desc':'´y­z','category':'movie©Îseries','html':'<div style=\'padding: 20px; border-radius: 12px;\'><h2>³¹¸`¼ĞÃD</h2><p>¼@¥»¤º®e...</p></div>'}`;
 
   try {
     const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
@@ -96,34 +96,34 @@ async function generateScript(character) {
     });
     
     if (!response.ok) {
-      throw new Error(`API éŒ¯èª¤: ${response.status}`);
+      throw new Error(`API ¿ù»~: ${response.status}`);
     }
     
     const data = await response.json();
     const content = data.choices?.[0]?.message?.content;
     
     if (!content) {
-      throw new Error('API æœªè¿”å›å…§å®¹');
+      throw new Error('API ¥¼ªğ¦^¤º®e');
     }
     
     const jsonMatch = content.match(/\{[\s\S]*\}/);
     if (!jsonMatch) {
-      throw new Error('ç„¡æ³•è§£æç”Ÿæˆå…§å®¹');
+      throw new Error('µLªk¸ÑªR¥Í¦¨¤º®e');
     }
     
     const result = JSON.parse(jsonMatch[0]);
     return {
-      title: result.title || 'æœªå‘½ååŠ‡ç›®',
-      desc: result.desc || 'æš«ç„¡æè¿°',
+      title: result.title || '¥¼©R¦W¼@¥Ø',
+      desc: result.desc || '¼ÈµL´y­z',
       category: result.category || 'movie',
       cover: result.cover || '',
-      html: result.html || '<div style='padding: 20px;'>ç”Ÿæˆå…§å®¹è§£æå¤±æ•—</div>'
+      html: result.html || '<div style='padding: 20px;'>¥Í¦¨¤º®e¸ÑªR¥¢±Ñ</div>'
     };
   } catch (error) {
     if (error.message.includes('JSON')) {
       throw error;
     }
-    throw new Error('ç”Ÿæˆå¤±æ•—: ' + error.message);
+    throw new Error('¥Í¦¨¥¢±Ñ: ' + error.message);
   }
 }
 
@@ -139,7 +139,7 @@ function renderContent(container) {
       }
       <div class='theater-title'>${item.title}</div>
     </div>
-  `).join('') || '<div class='empty-state'>å°šç„¡åŠ‡ç›®</div>';
+  `).join('') || '<div class='empty-state'>©|µL¼@¥Ø</div>';
   
   grid.querySelectorAll('.theater-card').forEach(card => {
     card.onclick = () => openDetail(container, card.dataset.id);
@@ -157,7 +157,7 @@ function openDetail(container, id) {
   
   if (title) title.textContent = currentContent.title;
   if (desc) desc.textContent = currentContent.desc;
-  if (preview) preview.innerHTML = currentContent.html || '<p style='color: #888;'>ç„¡é è¦½å…§å®¹</p>';
+  if (preview) preview.innerHTML = currentContent.html || '<p style='color: #888;'>µL¹wÄı¤º®e</p>';
   if (modal) modal.classList.add('active');
 }
 
@@ -175,9 +175,9 @@ async function renderTheater(params) {
   container.innerHTML = `
     <header class='ios-header'>
       <button class='ios-back-btn'>
-        <i class='fas fa-chevron-left'></i> è¿”å›
+        <i class='fas fa-chevron-left'></i> ªğ¦^
       </button>
-      <h1 class='menu-title'>åŠ‡å ´</h1>
+      <h1 class='menu-title'>¼@³õ</h1>
     </header>
     
     <div class='page'>
@@ -185,12 +185,12 @@ async function renderTheater(params) {
       
       <div class='character-selector-container'>
         <select class='character-selector'>
-          <option value=''>é¸æ“‡è§’è‰²...</option>
+          <option value=''>¿ï¾Ü¨¤¦â...</option>
         </select>
       </div>
       
       <button class='add-btn'>
-        <i class='fas fa-plus'></i> æ–°å¢åŠ‡ç›®
+        <i class='fas fa-plus'></i> ·s¼W¼@¥Ø
       </button>
       
       <div class='detail-modal'>
@@ -218,8 +218,8 @@ async function renderTheater(params) {
   const loadCharacters = async () => {
     const characters = await CharactersDB.getAll();
     if (characterSelector && characters && characters.length > 0) {
-      characterSelector.innerHTML = '<option value=''>é¸æ“‡è§’è‰²...</option>' +
-        characters.map(c => `<option value='${c.id}'>${c.name || 'æœªå‘½å'}</option>`).join('');
+      characterSelector.innerHTML = '<option value=''>¿ï¾Ü¨¤¦â...</option>' +
+        characters.map(c => `<option value='${c.id}'>${c.name || '¥¼©R¦W'}</option>`).join('');
     }
   };
   loadCharacters();
@@ -235,7 +235,7 @@ async function renderTheater(params) {
     addBtn.onclick = async () => {
       const characters = await CharactersDB.getAll();
       if (!characters || characters.length === 0) {
-        alert('è«‹å…ˆåœ¨èŠå¤©å®¤å‰µå»ºè§’è‰²');
+        alert('½Ğ¥ı¦b²á¤Ñ«Ç³Ğ«Ø¨¤¦â');
         return;
       }
       
@@ -248,7 +248,7 @@ async function renderTheater(params) {
       }
       
       addBtn.disabled = true;
-      addBtn.innerHTML = '<i class='fas fa-spinner fa-spin'></i> ç”Ÿæˆä¸­...';
+      addBtn.innerHTML = "`<i class=`"`fas fa-spinner fa-spin`"`></i> ¥Í¦¨¤¤...`";
       
       try {
         const scriptContent = await generateScript(selectedChar);
@@ -271,16 +271,16 @@ async function renderTheater(params) {
       } catch (error) {
         if (window.showError) {
           window.showError({
-            title: 'åŠ‡å ´ç”Ÿæˆå¤±æ•—',
+            title: '¼@³õ¥Í¦¨¥¢±Ñ',
             message: error.message,
             details: error.stack || ''
           });
         } else {
-          alert('ç”Ÿæˆå¤±æ•—: ' + error.message);
+          alert('¥Í¦¨¥¢±Ñ: ' + error.message);
         }
       } finally {
         addBtn.disabled = false;
-        addBtn.innerHTML = '<i class='fas fa-plus'></i> æ–°å¢åŠ‡ç›®';
+        addBtn.innerHTML = "`<i class=`"`fas fa-plus`"`></i> ·s¼W¼@¥Ø`";
       }
     };
   }
@@ -292,9 +292,9 @@ async function renderTheater(params) {
 
 export default {
   id: 'theater',
-  name: 'åŠ‡å ´',
+  name: '¼@³õ',
   icon: 'theater_comedy',
   routes: [{ path: '/theater', render: renderTheater }],
-  navItem: { label: 'åŠ‡å ´', icon: 'theater_comedy', path: '/theater', showInNav: true, order: 103 },
+  navItem: { label: '¼@³õ', icon: 'theater_comedy', path: '/theater', showInNav: true, order: 103 },
   stylesPath: 'js/apps/theater/style.css'
 };

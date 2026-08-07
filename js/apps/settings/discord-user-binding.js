@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createToast, createKakaoBottomSheet } from '../../components.js';
 import { DiscordUserBindingDB, UsersDB } from '../../db.js';
 
@@ -11,49 +11,49 @@ async function renderDiscordUserBinding() {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.navigate('/settings/discord')
     });
-    backBtn.innerHTML = '<i class='fas fa-chevron-left'></i> è¿”å›';
+    backBtn.innerHTML = "`<i class=`"`fas fa-chevron-left`"`></i> ªğ¦^`";
     header.appendChild(backBtn);
     
     const title = createElement('h1', 'menu-title');
-    title.textContent = 'Discord ç”¨æˆ¶ç¶å®š';
+    title.textContent = 'Discord ¥Î¤á¸j©w';
     header.appendChild(title);
     container.appendChild(header);
     
     const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar');
     main.style.paddingTop = 'calc(env(safe-area-inset-top, 44px) + 44px + 16px)';
     
-    // èªªæ˜å¡ç‰‡
+    // »¡©ú¥d¤ù
     const introCard = createElement('div', 'mx-4 mb-4 p-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl text-white');
     introCard.innerHTML = `
         <div class='flex items-center gap-2 mb-2'>
             <span class='material-symbols-outlined'>link</span>
-            <h2 class='text-lg font-bold'>ç”¨æˆ¶èº«ä»½ç¶å®š</h2>
+            <h2 class='text-lg font-bold'>¥Î¤á¨­¥÷¸j©w</h2>
         </div>
-        <p class='text-sm opacity-90 mb-3'>ç¶å®š Discord å¸³è™Ÿå¾Œï¼ŒAI è§’è‰²å¯ä»¥è­˜åˆ¥ä½ çš„èº«ä»½ï¼Œæä¾›å€‹æ€§åŒ–çš„å°è©±é«”é©—</p>
+        <p class='text-sm opacity-90 mb-3'>¸j©w Discord ±b¸¹«á¡AAI ¨¤¦â¥i¥HÃÑ§O§Aªº¨­¥÷¡A´£¨Ñ­Ó©Ê¤Æªº¹ï¸ÜÅéÅç</p>
         <div class='text-xs opacity-80'>
-            <div class='mb-1'>âœ“ è·¨å¹³å°èº«ä»½ä¸€è‡´</div>
-            <div class='mb-1'>âœ“ å€‹æ€§åŒ–å°è©±é«”é©—</div>
-            <div>âœ“ å¤šæ©Ÿå™¨äººç’°å¢ƒæ­£ç¢ºè­˜åˆ¥</div>
+            <div class='mb-1'>? ¸ó¥­¥x¨­¥÷¤@­P</div>
+            <div class='mb-1'>? ­Ó©Ê¤Æ¹ï¸ÜÅéÅç</div>
+            <div>? ¦h¾÷¾¹¤HÀô¹Ò¥¿½TÃÑ§O</div>
         </div>
     `;
     main.appendChild(introCard);
     
-    // æ·»åŠ ç¶å®šæŒ‰éˆ•
+    // ²K¥[¸j©w«ö¶s
     const addBtn = createElement('button', 'ios-btn ios-btn-primary w-full mb-4 mx-4');
     addBtn.style.maxWidth = 'calc(100% - 32px)';
-    addBtn.innerHTML = '<span class='material-symbols-outlined mr-2'>person_add</span> æ–°å¢ç¶å®š';
+    addBtn.innerHTML = "`<span class=`"`material-symbols-outlined mr-2`"`>person_add</span> ·s¼W¸j©w`";
     addBtn.onclick = () => showAddBindingDialog();
     main.appendChild(addBtn);
     
-    // ç¶å®šåˆ—è¡¨
+    // ¸j©w¦Cªí
     const bindings = await DiscordUserBindingDB.getAll();
     
     if (bindings.length === 0) {
         const emptyState = createElement('div', 'text-center py-12 px-4');
         emptyState.innerHTML = `
             <span class='material-symbols-outlined text-6xl text-gray-300 mb-4 block'>link_off</span>
-            <p class='text-gray-500 text-sm'>å°šæœªç¶å®šä»»ä½• Discord ç”¨æˆ¶</p>
-            <p class='text-gray-400 text-xs mt-2'>é»æ“Šä¸Šæ–¹æŒ‰éˆ•é–‹å§‹ç¶å®š</p>
+            <p class='text-gray-500 text-sm'>©|¥¼¸j©w¥ô¦ó Discord ¥Î¤á</p>
+            <p class='text-gray-400 text-xs mt-2'>ÂIÀ»¤W¤è«ö¶s¶}©l¸j©w</p>
         `;
         main.appendChild(emptyState);
     } else {
@@ -66,22 +66,22 @@ async function renderDiscordUserBinding() {
             const userInfo = createElement('div', 'flex items-center gap-3');
             
             const avatar = createElement('div', 'w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center');
-            avatar.innerHTML = '<span class='material-symbols-outlined text-blue-600'>discord</span>';
+            avatar.innerHTML = "`<span class=`"`material-symbols-outlined text-blue-600`"`>discord</span>`";
             userInfo.appendChild(avatar);
             
             const names = createElement('div');
             names.appendChild(createElement('div', 'font-semibold', { textContent: binding.discord_username }));
-            names.appendChild(createElement('div', 'text-sm text-gray-500', { textContent: `PWA: ${binding.user_display_name || 'æœªè¨­å®š'}` }));
+            names.appendChild(createElement('div', 'text-sm text-gray-500', { textContent: `PWA: ${binding.user_display_name || '¥¼³]©w'}` }));
             userInfo.appendChild(names);
             
             header.appendChild(userInfo);
             
             const deleteBtn = createElement('button', 'text-red-500 text-sm');
-            deleteBtn.textContent = 'è§£é™¤';
+            deleteBtn.textContent = '¸Ñ°£';
             deleteBtn.onclick = async () => {
-                if (confirm('ç¢ºå®šè¦è§£é™¤ç¶å®šå—ï¼Ÿ')) {
+                if (confirm('½T©w­n¸Ñ°£¸j©w¶Ü¡H')) {
                     await DiscordUserBindingDB.delete(binding.discord_user_id);
-                    createToast('å·²è§£é™¤ç¶å®š');
+                    createToast('¤w¸Ñ°£¸j©w');
                     Router.navigate('/settings/discord/bindings');
                 }
             };
@@ -93,7 +93,7 @@ async function renderDiscordUserBinding() {
             details.innerHTML = `
                 <div>Discord ID: ${binding.discord_user_id}</div>
                 <div>PWA User ID: ${binding.user_id}</div>
-                ${binding.character_id ? `<div>ç¶å®šè§’è‰²: ${binding.character_id}</div>` : ''}
+                ${binding.character_id ? `<div>¸j©w¨¤¦â: ${binding.character_id}</div>` : ''}
             `;
             card.appendChild(details);
             
@@ -115,14 +115,14 @@ async function showAddBindingDialog() {
     
     const discordIdInput = createElement('input', 'w-full p-3 border rounded-lg text-sm');
     discordIdInput.type = 'text';
-    discordIdInput.placeholder = 'Discord User ID (æ•¸å­—)';
+    discordIdInput.placeholder = 'Discord User ID (¼Æ¦r)';
     form.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-2', { textContent: 'Discord User ID' }));
     form.appendChild(discordIdInput);
     
     const discordNameInput = createElement('input', 'w-full p-3 border rounded-lg text-sm');
     discordNameInput.type = 'text';
-    discordNameInput.placeholder = 'Discord ç”¨æˆ¶å';
-    form.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-2 mt-4', { textContent: 'Discord ç”¨æˆ¶å' }));
+    discordNameInput.placeholder = 'Discord ¥Î¤á¦W';
+    form.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-2 mt-4', { textContent: 'Discord ¥Î¤á¦W' }));
     form.appendChild(discordNameInput);
     
     const userSelect = createElement('select', 'w-full p-3 border rounded-lg text-sm');
@@ -132,17 +132,17 @@ async function showAddBindingDialog() {
         option.textContent = user.display_name || user.id;
         userSelect.appendChild(option);
     });
-    form.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-2 mt-4', { textContent: 'å°æ‡‰çš„ PWA ç”¨æˆ¶' }));
+    form.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-2 mt-4', { textContent: '¹ïÀ³ªº PWA ¥Î¤á' }));
     form.appendChild(userSelect);
     
     const displayNameInput = createElement('input', 'w-full p-3 border rounded-lg text-sm');
     displayNameInput.type = 'text';
-    displayNameInput.placeholder = 'é¡¯ç¤ºåç¨±ï¼ˆé¸å¡«ï¼‰';
-    form.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-2 mt-4', { textContent: 'é¡¯ç¤ºåç¨±' }));
+    displayNameInput.placeholder = 'Åã¥Ü¦WºÙ¡]¿ï¶ñ¡^';
+    form.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-2 mt-4', { textContent: 'Åã¥Ü¦WºÙ' }));
     form.appendChild(displayNameInput);
     
     const submitBtn = createElement('button', 'ios-btn ios-btn-primary w-full mt-4');
-    submitBtn.textContent = 'ç¢ºèªç¶å®š';
+    submitBtn.textContent = '½T»{¸j©w';
     submitBtn.onclick = async () => {
         try {
             await DiscordUserBindingDB.create({
@@ -151,17 +151,17 @@ async function showAddBindingDialog() {
                 user_id: userSelect.value,
                 user_display_name: displayNameInput.value || discordNameInput.value
             });
-            createToast('ç¶å®šæˆåŠŸ');
+            createToast('¸j©w¦¨¥\');
             sheet.close();
             Router.navigate('/settings/discord/bindings');
         } catch (error) {
-            createToast('ç¶å®šå¤±æ•—ï¼š' + error.message, 'error');
+            createToast('¸j©w¥¢±Ñ¡G' + error.message, 'error');
         }
     };
     form.appendChild(submitBtn);
     
     const sheet = createKakaoBottomSheet([], {
-        title: 'æ–°å¢ Discord ç”¨æˆ¶ç¶å®š',
+        title: '·s¼W Discord ¥Î¤á¸j©w',
         customContent: form
     });
     
@@ -170,7 +170,7 @@ async function showAddBindingDialog() {
 
 export default {
     id: 'discord-user-binding',
-    name: 'Discord ç”¨æˆ¶ç¶å®š',
+    name: 'Discord ¥Î¤á¸j©w',
     icon: 'link',
     routes: [
         { path: '/settings/discord/bindings', render: renderDiscordUserBinding }

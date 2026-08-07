@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
@@ -15,28 +15,28 @@ const thumbnailColors = [
 ];
 
 const danmuPool = [
-    'å“ˆå“ˆå“ˆå¤ªå¥½ç¬‘äº†', 'ç¬‘æ­»', 'www', 'é€™æ®µçµ•äº†', 'å‰æ–¹é«˜èƒ½',
-    'çˆºé’å›', 'çˆºé’çµ', 'awsl', 'å¥½å¯æ„›', 'å¤ªå¼·äº†',
-    'æ·©ç›®', 'ç ´é˜²äº†', 'é€™æ³¢æ“ä½œçµ•äº†', 'å­¸åˆ°äº†', 'è‡¥æ§½',
-    'ç‰›é€¼', 'å¤ªç¥äº†', 'çµ•çµ•å­', 'æ„›äº†æ„›äº†', 'ä¸‹æ¬¡ä¸€å®š',
-    'ä¸‹æ¬¡ä¸ä¸€å®šçš„', 'æŠ•å¹£äº†', 'ä¸‰é€£èµ°èµ·', 'å‚¬æ›´', 'å¿«æ›´æ–°',
-    'é€™æ‰æ˜¯çœŸæ­£çš„æŠ€è¡“', 'å­¸å»¢äº†', 'æˆ‘å¥½äº†', 'åå ´é¢', 'ç¶“å…¸'
+    '«¢«¢«¢¤Ó¦n¯º¤F', '¯º¦º', 'www', '³o¬qµ´¤F', '«e¤è°ª¯à',
+    '·İ«C¦^', '·İ«Cµ²', 'awsl', '¦n¥i·R', '¤Ó±j¤F',
+    'Õæ¥Ø', '¯}¨¾¤F', '³oªi¾Ş§@µ´¤F', '¾Ç¨ì¤F', 'ª×¼Ñ',
+    '¤û¹G', '¤Ó¯«¤F', 'µ´µ´¤l', '·R¤F·R¤F', '¤U¦¸¤@©w',
+    '¤U¦¸¤£¤@©wªº', '§ë¹ô¤F', '¤T³s¨«°_', '¶Ê§ó', '§Ö§ó·s',
+    '³o¤~¬O¯u¥¿ªº§Ş³N', '¾Ç¼o¤F', '§Ú¦n¤F', '¦W³õ­±', '¸g¨å'
 ];
 
 const videoCategories = {
-    recommend: ['ç†±é–€', 'å‹•æ¼«', 'éŠæˆ²', 'éŸ³æ¨‚', 'ç§‘æŠ€', 'ç”Ÿæ´»'],
-    anime: ['æ–°ç•ª', 'å®Œçµ', 'ç¶“å…¸', 'åœ‹æ¼«', 'åŠ‡å ´ç‰ˆ'],
-    live: ['éŠæˆ²ç›´æ’­', 'è™›æ“¬ä¸»æ’­', 'å”±æ­Œ', 'èŠå¤©', 'æˆ¶å¤–'],
-    hot: ['æœ¬é€±ç†±é–€', 'æœ¬æœˆç†±é–€', 'æŒ‘æˆ°é¡', 'æç¬‘', 'çŸ¥è­˜'],
-    games: ['æ‰‹æ©ŸéŠæˆ²', 'ä¸»æ©ŸéŠæˆ²', 'PCéŠæˆ²', 'é›»ç«¶', 'å¯¦æ³']
+    recommend: ['¼öªù', '°Êº©', '¹CÀ¸', '­µ¼Ö', '¬ì§Ş', '¥Í¬¡'],
+    anime: ['·sµf', '§¹µ²', '¸g¨å', '°êº©', '¼@³õª©'],
+    live: ['¹CÀ¸ª½¼½', 'µêÀÀ¥D¼½', '°Ûºq', '²á¤Ñ', '¤á¥~'],
+    hot: ['¥»¶g¼öªù', '¥»¤ë¼öªù', '¬D¾ÔÃş', '·d¯º', 'ª¾ÃÑ'],
+    games: ['¤â¾÷¹CÀ¸', '¥D¾÷¹CÀ¸', 'PC¹CÀ¸', '¹qÄv', '¹êªp']
 };
 
 const notificationTemplates = [
-    { type: 'subscribe', icon: 'person_add', title: 'æ–°ç²‰çµ²', templates: ['é—œæ³¨äº†ä½ ', 'æˆç‚ºäº†ä½ çš„ç²‰çµ²', 'é–‹å§‹è¿½è¹¤ä½ '] },
-    { type: 'like', icon: 'favorite', title: 'æ”¶ç©«è®š', templates: ['è®šäº†ä½ çš„å½±ç‰‡', 'å–œæ­¡äº†ä½ çš„å‹•æ…‹', 'çµ¦ä½ çš„è©•è«–é»è®š'] },
-    { type: 'comment', icon: 'comment', title: 'æ–°ç•™è¨€', templates: ['è©•è«–äº†ä½ çš„å½±ç‰‡', 'å›è¦†äº†ä½ çš„è©•è«–', 'åœ¨ä½ çš„å½±ç‰‡ä¸‹ç•™è¨€'] },
-    { type: 'at', icon: 'alternate_email', title: '@æé†’', templates: ['åœ¨è©•è«–ä¸­æåˆ°äº†ä½ ', 'åœ¨å½±ç‰‡ä¸­@äº†ä½ ', 'é‚€è«‹ä½ ä¸€èµ·è§€çœ‹'] },
-    { type: 'system', icon: 'notifications', title: 'ç³»çµ±é€šçŸ¥', templates: ['ä½ çš„å½±ç‰‡å·²é€šéå¯©æ ¸', 'æœƒå“¡å³å°‡åˆ°æœŸ', 'æ´»å‹•çå‹µå·²ç™¼æ”¾', 'æ–°åŠŸèƒ½ä¸Šç·šé€šçŸ¥'] }
+    { type: 'subscribe', icon: 'person_add', title: '·s¯»µ·', templates: ['Ãöª`¤F§A', '¦¨¬°¤F§Aªº¯»µ·', '¶}©l°lÂÜ§A'] },
+    { type: 'like', icon: 'favorite', title: '¦¬Ã¬Æg', templates: ['Æg¤F§Aªº¼v¤ù', '³ßÅw¤F§Aªº°ÊºA', 'µ¹§Aªºµû½×ÂIÆg'] },
+    { type: 'comment', icon: 'comment', title: '·s¯d¨¥', templates: ['µû½×¤F§Aªº¼v¤ù', '¦^ÂĞ¤F§Aªºµû½×', '¦b§Aªº¼v¤ù¤U¯d¨¥'] },
+    { type: 'at', icon: 'alternate_email', title: '@´£¿ô', templates: ['¦bµû½×¤¤´£¨ì¤F§A', '¦b¼v¤ù¤¤@¤F§A', 'ÁÜ½Ğ§A¤@°_Æ[¬İ'] },
+    { type: 'system', icon: 'notifications', title: '¨t²Î³qª¾', templates: ['§Aªº¼v¤ù¤w³q¹L¼f®Ö', '·|­û§Y±N¨ì´Á', '¬¡°Ê¼úÀy¤wµo©ñ', '·s¥\¯à¤W½u³qª¾'] }
 ];
 
 let appState = {
@@ -78,20 +78,20 @@ function generateThumbnail() {
 }
 
 function randomViews() {
-    const values = ['12è¬', '38è¬', '76è¬', '102è¬', '188è¬', '256è¬', '320è¬'];
+    const values = ['12¸U', '38¸U', '76¸U', '102¸U', '188¸U', '256¸U', '320¸U'];
     return randomPick(values);
 }
 
 function randomDanmu() {
-    const values = ['1,120', '2,580', '6,200', '9,450', '1.3è¬', '2.1è¬'];
+    const values = ['1,120', '2,580', '6,200', '9,450', '1.3¸U', '2.1¸U'];
     return randomPick(values);
 }
 
 function generateRandomTime() {
-    const units = ['åˆ†é˜', 'å°æ™‚', 'å¤©'];
+    const units = ['¤ÀÄÁ', '¤p®É', '¤Ñ'];
     const unit = randomPick(units);
     const value = Math.floor(Math.random() * 12) + 1;
-    return `${value} ${unit}å‰`;
+    return `${value} ${unit}«e`;
 }
 
 function convertBilibiliUrl(url) {
@@ -162,7 +162,7 @@ async function syncBilibiliCookieToGitHub(cookie) {
     try {
         const token = await SettingsDB.get('github_token');
         if (!token) {
-            console.log('æ²’æœ‰ GitHub tokenï¼Œè·³éåŒæ­¥');
+            console.log('¨S¦³ GitHub token¡A¸õ¹L¦P¨B');
             return false;
         }
         
@@ -173,7 +173,7 @@ async function syncBilibiliCookieToGitHub(cookie) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                message: 'æ›´æ–° Bilibili Cookie',
+                message: '§ó·s Bilibili Cookie',
                 content: btoa(JSON.stringify({
                     cookie: cookie,
                     updated_at: new Date().toISOString()
@@ -183,13 +183,13 @@ async function syncBilibiliCookieToGitHub(cookie) {
         });
         
         if (response.ok) {
-            console.log('âœ“ Cookie å·²åŒæ­¥åˆ° GitHub');
+            console.log('? Cookie ¤w¦P¨B¨ì GitHub');
             return true;
         } else {
-            console.log('âœ— åŒæ­¥å¤±æ•—:', response.status);
+            console.log('? ¦P¨B¥¢±Ñ:', response.status);
         }
     } catch (e) {
-        console.error('åŒæ­¥ Cookie å¤±æ•—:', e);
+        console.error('¦P¨B Cookie ¥¢±Ñ:', e);
     }
     return false;
 }
@@ -212,12 +212,12 @@ async function loadBilibiliCookieFromGitHub() {
             if (content.cookie) {
                 await SettingsDB.set('bilibili_cookie', content.cookie);
                 await setBilibiliLoginStatus(true);
-                console.log('âœ“ å·²å¾ GitHub è¼‰å…¥ Cookie');
+                console.log('? ¤w±q GitHub ¸ü¤J Cookie');
                 return content.cookie;
             }
         }
     } catch (e) {
-        console.log('å¾ GitHub è¼‰å…¥ Cookie å¤±æ•—:', e);
+        console.log('±q GitHub ¸ü¤J Cookie ¥¢±Ñ:', e);
     }
     return null;
 }
@@ -228,13 +228,13 @@ async function setBilibiliLoginStatus(status) {
 
 async function startQRLogin() {
     try {
-        createToast('æ­£åœ¨ç”Ÿæˆç™»å…¥äºŒç¶­ç¢¼...');
+        createToast('¥¿¦b¥Í¦¨µn¤J¤Gºû½X...');
         
         const response = await fetch(`${BILI_API}/api/bilibili/auth/login`, { method: 'POST' });
         const data = await response.json();
         
         if (data.error === 'qrcode_banned') {
-            // QR Code è¢« banï¼Œé¡¯ç¤ºæ‰‹å‹•è¼¸å…¥æç¤º
+            // QR Code ³Q ban¡AÅã¥Ü¤â°Ê¿é¤J´£¥Ü
             showManualCookieInput(data.instructions);
             return;
         }
@@ -244,7 +244,7 @@ async function startQRLogin() {
         }
     } catch (e) {
         console.error('QR Login error:', e);
-        createToast('ç„¡æ³•ç”Ÿæˆç™»å…¥äºŒç¶­ç¢¼ï¼Œè«‹ä½¿ç”¨æ‰‹å‹•è¼¸å…¥');
+        createToast('µLªk¥Í¦¨µn¤J¤Gºû½X¡A½Ğ¨Ï¥Î¤â°Ê¿é¤J');
         showManualCookieInput();
     }
 }
@@ -254,28 +254,28 @@ function showManualCookieInput(instructions) {
     const content = createElement('div', 'bili-login-content');
     
     content.innerHTML = `
-        <h3 style='margin: 0 0 16px;'>æ‰‹å‹•è¼¸å…¥ Cookie</h3>
+        <h3 style='margin: 0 0 16px;'>¤â°Ê¿é¤J Cookie</h3>
         <p style='color: #666; font-size: 13px; margin-bottom: 16px;'>
-            ç”±æ–¼ Bilibili é™åˆ¶ï¼Œéœ€è¦æ‰‹å‹•ç²å– Cookieï¼š
+            ¥Ñ©ó Bilibili ­­¨î¡A»İ­n¤â°ÊÀò¨ú Cookie¡G
         </p>
         <ol style='color: #666; font-size: 12px; padding-left: 20px; margin-bottom: 16px; line-height: 1.8;'>
             ${instructions ? instructions.map(i => `<li>${i}</li>`).join('') : `
-                <li>åœ¨ç€è¦½å™¨æ‰“é–‹ bilibili.com ä¸¦ç™»å…¥</li>
-                <li>æŒ‰ F12 â†’ Console æ¨™ç±¤</li>
-                <li>è¼¸å…¥ï¼š<code style='background: #f5f5f5; padding: 2px 6px; border-radius: 4px;'>document.cookie</code></li>
-                <li>è¤‡è£½å®Œæ•´çš„ Cookie å­—ä¸²</li>
+                <li>¦bÂsÄı¾¹¥´¶} bilibili.com ¨Ãµn¤J</li>
+                <li>«ö F12 ¡÷ Console ¼ĞÅÒ</li>
+                <li>¿é¤J¡G<code style='background: #f5f5f5; padding: 2px 6px; border-radius: 4px;'>document.cookie</code></li>
+                <li>½Æ»s§¹¾ãªº Cookie ¦r¦ê</li>
             `}
         </ol>
         <textarea 
             id='manual-cookie-input' 
             style='width: 100%; height: 80px; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; font-family: monospace;'
-            placeholder='è²¼ä¸Šå®Œæ•´çš„ Cookie å­—ä¸²...'
+            placeholder='¶K¤W§¹¾ãªº Cookie ¦r¦ê...'
         ></textarea>
         <button id='save-manual-cookie' style='width: 100%; margin-top: 12px; padding: 12px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer;'>
-            ä¿å­˜ Cookie
+            «O¦s Cookie
         </button>
         <button id='close-manual' style='width: 100%; margin-top: 8px; padding: 12px; background: #f5f5f5; color: #666; border: none; border-radius: 8px; cursor: pointer;'>
-            å–æ¶ˆ
+            ¨ú®ø
         </button>
     `;
     
@@ -286,7 +286,7 @@ function showManualCookieInput(instructions) {
         const cookie = modal.querySelector('#manual-cookie-input').value.trim();
         
         if (!cookie || !cookie.includes('SESSDATA')) {
-            createToast('Cookie æ ¼å¼éŒ¯èª¤');
+            createToast('Cookie ®æ¦¡¿ù»~');
             return;
         }
         
@@ -296,7 +296,7 @@ function showManualCookieInput(instructions) {
         await syncBilibiliCookieToGitHub(cookie);
         
         modal.remove();
-        createToast('âœ“ å·²ä¿å­˜ Cookie');
+        createToast('? ¤w«O¦s Cookie');
         
         setTimeout(() => Router.navigate('/bilibili'), 500);
     };
@@ -309,13 +309,13 @@ function showQRCodeModal(qrUrl, qrcodeKey) {
     const content = createElement('div', 'bili-login-content');
     
     content.innerHTML = `
-        <h3>æƒç¢¼ç™»å…¥ B ç«™</h3>
-        <p>è«‹ä½¿ç”¨ B ç«™ App æƒæä»¥ä¸‹äºŒç¶­ç¢¼</p>
+        <h3>±½½Xµn¤J B ¯¸</h3>
+        <p>½Ğ¨Ï¥Î B ¯¸ App ±½´y¥H¤U¤Gºû½X</p>
         <div class='bili-qrcode-container'>
             <img src='${qrUrl}' alt='QR Code' style='max-width: 200px; width: 100%;' />
         </div>
-        <p class='bili-login-status'>ç­‰å¾…æƒç¢¼...</p>
-        <button class='bili-close-btn'>é—œé–‰</button>
+        <p class='bili-login-status'>µ¥«İ±½½X...</p>
+        <button class='bili-close-btn'>Ãö³¬</button>
     `;
     
     modal.appendChild(content);
@@ -329,19 +329,19 @@ function showQRCodeModal(qrUrl, qrcodeKey) {
             if (data.success && data.cookie) {
                 clearInterval(pollInterval);
                 
-                // ä¿å­˜ Cookie
+                // «O¦s Cookie
                 await SettingsDB.set('bilibili_cookie', data.cookie);
                 await setBilibiliLoginStatus(true);
                 
                 await syncBilibiliCookieToGitHub(data.cookie);
                 
                 modal.remove();
-                createToast('âœ“ ç™»å…¥æˆåŠŸï¼æ­£åœ¨ç²å–æ¨è–¦å…§å®¹...');
+                createToast('? µn¤J¦¨¥\¡I¥¿¦bÀò¨ú±ÀÂË¤º®e...');
                 
                 setTimeout(() => Router.navigate('/bilibili'), 500);
             } else if (data.code === 86038) {
                 clearInterval(pollInterval);
-                modal.querySelector('.bili-login-status').textContent = 'äºŒç¶­ç¢¼å·²éæœŸï¼Œè«‹é‡æ–°ç™»å…¥';
+                modal.querySelector('.bili-login-status').textContent = '¤Gºû½X¤w¹L´Á¡A½Ğ­«·sµn¤J';
             }
         } catch (e) {
             console.error('Poll error:', e);
@@ -359,33 +359,33 @@ function showCookieManager() {
     const content = createElement('div', 'bili-login-content');
     
     content.innerHTML = `
-        <h3 style='margin: 0 0 16px; font-size: 18px;'>ç®¡ç† Bilibili Cookie</h3>
+        <h3 style='margin: 0 0 16px; font-size: 18px;'>ºŞ²z Bilibili Cookie</h3>
         
         <div style='margin-bottom: 16px;'>
             <label style='display: block; font-size: 12px; color: #666; margin-bottom: 8px;'>
-                æ›´æ–° Cookieï¼ˆå¯é¸ï¼‰
+                §ó·s Cookie¡]¥i¿ï¡^
             </label>
             <textarea 
                 id='bilibili-cookie-input' 
                 style='width: 100%; height: 60px; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; font-family: monospace;'
-                placeholder='è¼¸å…¥æ–°çš„ Cookie ä»¥æ›´æ–°...'
+                placeholder='¿é¤J·sªº Cookie ¥H§ó·s...'
             ></textarea>
             <button id='update-cookie-btn' style='width: 100%; margin-top: 8px; padding: 10px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer;'>
-                æ›´æ–° Cookie
+                §ó·s Cookie
             </button>
         </div>
         
         <div style='border-top: 1px solid #eee; padding-top: 16px;'>
             <button id='test-cookie-btn' style='width: 100%; margin-bottom: 8px; padding: 10px; background: #4caf50; color: white; border: none; border-radius: 8px; cursor: pointer;'>
-                æ¸¬è©¦ Cookie æ˜¯å¦æœ‰æ•ˆ
+                ´ú¸Õ Cookie ¬O§_¦³®Ä
             </button>
             <button id='logout-btn' style='width: 100%; padding: 10px; background: #f44336; color: white; border: none; border-radius: 8px; cursor: pointer;'>
-                ç™»å‡ºï¼ˆæ¸…é™¤ Cookieï¼‰
+                µn¥X¡]²M°£ Cookie¡^
             </button>
         </div>
         
         <button id='close-modal-btn' style='width: 100%; margin-top: 16px; padding: 10px; background: #f5f5f5; color: #666; border: none; border-radius: 8px; cursor: pointer;'>
-            é—œé–‰
+            Ãö³¬
         </button>
     `;
     
@@ -396,22 +396,22 @@ function showCookieManager() {
         const cookieInput = modal.querySelector('#bilibili-cookie-input').value.trim();
         
         if (!cookieInput) {
-            createToast('è«‹è¼¸å…¥ Cookie');
+            createToast('½Ğ¿é¤J Cookie');
             return;
         }
         
         await SettingsDB.set('bilibili_cookie', cookieInput);
         modal.remove();
-        createToast('âœ“ Cookie å·²æ›´æ–°');
+        createToast('? Cookie ¤w§ó·s');
     };
     
     modal.querySelector('#test-cookie-btn').onclick = async () => {
-        createToast('æ­£åœ¨æ¸¬è©¦ Cookie...');
+        createToast('¥¿¦b´ú¸Õ Cookie...');
         const videos = await fetchWithLogin();
         if (videos && videos.length > 0) {
-            createToast(`âœ“ Cookie æœ‰æ•ˆï¼ç²å–åˆ° ${videos.length} éƒ¨å½±ç‰‡`);
+            createToast(`? Cookie ¦³®Ä¡IÀò¨ú¨ì ${videos.length} ³¡¼v¤ù`);
         } else {
-            createToast('âœ— Cookie ç„¡æ•ˆæˆ–å·²éæœŸï¼Œè«‹é‡æ–°ç²å–');
+            createToast('? Cookie µL®Ä©Î¤w¹L´Á¡A½Ğ­«·sÀò¨ú');
         }
     };
     
@@ -419,7 +419,7 @@ function showCookieManager() {
         await SettingsDB.set('bilibili_cookie', '');
         await setBilibiliLoginStatus(false);
         modal.remove();
-        createToast('å·²ç™»å‡ºä¸¦æ¸…é™¤ Cookie');
+        createToast('¤wµn¥X¨Ã²M°£ Cookie');
         Router.navigate('/bilibili');
     };
     
@@ -436,38 +436,38 @@ function showLoginPrompt() {
         <div style='text-align: center; margin-bottom: 20px;'>
             <span class='material-symbols-outlined' style='font-size: 48px; color: #fb7299;'>account_circle</span>
         </div>
-        <h3 style='margin: 0 0 12px; font-size: 20px;'>ç™»å…¥ Bilibili</h3>
+        <h3 style='margin: 0 0 12px; font-size: 20px;'>µn¤J Bilibili</h3>
         <p style='color: #999; margin: 0 0 16px; font-size: 13px; line-height: 1.6;'>
-            ç™»å…¥å¾Œå¯ä»¥ç²å–çœŸå¯¦æ¨è–¦å…§å®¹
+            µn¤J«á¥i¥HÀò¨ú¯u¹ê±ÀÂË¤º®e
         </p>
         
         <div style='margin-bottom: 16px;'>
             <label style='display: block; font-size: 12px; color: #666; margin-bottom: 8px;'>
-                è¼¸å…¥ Bilibili Cookie
+                ¿é¤J Bilibili Cookie
             </label>
             <textarea 
                 id='bilibili-cookie-input' 
                 style='width: calc(100% - 16px); height: 80px; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; font-family: monospace; resize: vertical;'
-                placeholder='è«‹è¼¸å…¥ Cookie'></textarea>
+                placeholder='½Ğ¿é¤J Cookie'></textarea>
         </div>
         
         <button id='save-cookie-button' style='width: 100%; margin-bottom: 8px; padding: 12px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px;'>
-            ä¿å­˜ Cookie ä¸¦ç™»å…¥
+            «O¦s Cookie ¨Ãµn¤J
         </button>
         
         <button id='skip-login-button' style='width: 100%; padding: 12px; background: #f5f5f5; color: #666; border: none; border-radius: 8px; cursor: pointer; font-size: 14px;'>
-            ä½¿ç”¨é è¨­å…§å®¹
+            ¨Ï¥Î¹w³]¤º®e
         </button>
         
         <div style='margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;'>
             <details>
-                <summary style='cursor: pointer; font-size: 12px; color: #999;'>å¦‚ä½•ç²å– Cookieï¼Ÿ</summary>
+                <summary style='cursor: pointer; font-size: 12px; color: #999;'>¦p¦óÀò¨ú Cookie¡H</summary>
                 <ol style='color: #666; font-size: 11px; padding-left: 20px; margin-top: 8px; line-height: 1.8;'>
-                    <li>åœ¨ç€è¦½å™¨æ‰“é–‹ bilibili.com ä¸¦ç™»å…¥</li>
-                    <li>æŒ‰ F12 â†’ Network æ¨™ç±¤</li>
-                    <li>åˆ·æ–°é é¢</li>
-                    <li>é»æ“Šä»»æ„è«‹æ±‚</li>
-                    <li>Headers â†’ Cookie â†’ è¤‡è£½</li>
+                    <li>¦bÂsÄı¾¹¥´¶} bilibili.com ¨Ãµn¤J</li>
+                    <li>«ö F12 ¡÷ Network ¼ĞÅÒ</li>
+                    <li>¨ê·s­¶­±</li>
+                    <li>ÂIÀ»¥ô·N½Ğ¨D</li>
+                    <li>Headers ¡÷ Cookie ¡÷ ½Æ»s</li>
                 </ol>
             </details>
         </div>
@@ -485,11 +485,11 @@ function showLoginPrompt() {
             const cookie = cookieInput.value.trim();
             
             if (!cookie) {
-                createToast('è«‹è¼¸å…¥ Cookie');
+                createToast('½Ğ¿é¤J Cookie');
                 return;
             }
             
-            createToast('æ­£åœ¨ä¿å­˜...');
+            createToast('¥¿¦b«O¦s...');
             
             await SettingsDB.set('bilibili_cookie', cookie);
             await setBilibiliLoginStatus(true);
@@ -497,14 +497,14 @@ function showLoginPrompt() {
             await syncBilibiliCookieToGitHub(cookie);
             
             modal.remove();
-            createToast('âœ“ å·²ä¿å­˜ Cookie');
+            createToast('? ¤w«O¦s Cookie');
             
             setTimeout(() => {
                 Router.navigate('/bilibili');
             }, 500);
         } catch (e) {
             console.error('Save cookie error:', e);
-            createToast('ä¿å­˜å¤±æ•—ï¼š' + e.message);
+            createToast('«O¦s¥¢±Ñ¡G' + e.message);
         }
     });
     
@@ -542,7 +542,7 @@ function generateNotifications(count = 8) {
             type: template.type,
             icon: template.icon,
             title: template.title,
-            desc: `${randomPick(['ç”¨æˆ¶', 'ç²‰çµ²', 'è§€çœ¾', 'ç¶²å‹'])} ${randomPick(template.templates)}`,
+            desc: `${randomPick(['¥Î¤á', '¯»µ·', 'Æ[²³', 'ºô¤Í'])} ${randomPick(template.templates)}`,
             time: generateRandomTime(),
             read: Math.random() > 0.3
         });
@@ -552,13 +552,13 @@ function generateNotifications(count = 8) {
 
 function generateSystemNotifications(count = 5) {
     const systemMessages = [
-        { title: 'æœƒå“¡æé†’', desc: 'ä½ çš„å¤§æœƒå“¡å°‡åœ¨ 7 å¤©å¾Œåˆ°æœŸï¼ŒçºŒè²»äº« 9 æŠ˜å„ªæƒ ï¼', icon: 'workspace_premium' },
-        { title: 'å‰µä½œæ¿€å‹µ', desc: 'æœ¬æœˆå‰µä½œæ¿€å‹µé‡‘å·²ç™¼æ”¾ï¼Œå…± Â¥128.50', icon: 'payments' },
-        { title: 'æ´»å‹•é€šçŸ¥', desc: 'ã€Œå¤æ—¥ç¥­ã€æ´»å‹•å·²é–‹å§‹ï¼Œåƒèˆ‡è´å–é™å®šé ­åƒæ¡†ï¼', icon: 'card_giftcard' },
-        { title: 'å®‰å…¨æé†’', desc: 'ä½ çš„å¸³è™Ÿåœ¨æ–°è£ç½®ç™»å…¥ï¼Œå¦‚éæœ¬äººæ“ä½œè«‹ä¿®æ”¹å¯†ç¢¼', icon: 'shield' },
-        { title: 'æ›´æ–°é€šçŸ¥', desc: 'App å·²æ›´æ–°è‡³æœ€æ–°ç‰ˆæœ¬ï¼Œé«”é©—å…¨æ–°åŠŸèƒ½', icon: 'system_update' },
-        { title: 'å¯©æ ¸é€šé', desc: 'ä½ æŠ•ç¨¿çš„å½±ç‰‡ã€Œå¤æ—¥VLOGã€å·²é€šéå¯©æ ¸', icon: 'check_circle' },
-        { title: 'ç²‰çµ²æˆå°±', desc: 'æ­å–œï¼ä½ çš„ç²‰çµ²æ•¸çªç ´ 1000 å¤§é—œï¼', icon: 'groups' }
+        { title: '·|­û´£¿ô', desc: '§Aªº¤j·|­û±N¦b 7 ¤Ñ«á¨ì´Á¡AÄò¶O¨É 9 §éÀu´f¡I', icon: 'workspace_premium' },
+        { title: '³Ğ§@¿EÀy', desc: '¥»¤ë³Ğ§@¿EÀyª÷¤wµo©ñ¡A¦@ ¢D128.50', icon: 'payments' },
+        { title: '¬¡°Ê³qª¾', desc: '¡u®L¤é²½¡v¬¡°Ê¤w¶}©l¡A°Ñ»PÄ¹¨ú­­©wÀY¹³®Ø¡I', icon: 'card_giftcard' },
+        { title: '¦w¥ş´£¿ô', desc: '§Aªº±b¸¹¦b·s¸Ë¸mµn¤J¡A¦p«D¥»¤H¾Ş§@½Ğ­×§ï±K½X', icon: 'shield' },
+        { title: '§ó·s³qª¾', desc: 'App ¤w§ó·s¦Ü³Ì·sª©¥»¡AÅéÅç¥ş·s¥\¯à', icon: 'system_update' },
+        { title: '¼f®Ö³q¹L', desc: '§A§ë½Zªº¼v¤ù¡u®L¤éVLOG¡v¤w³q¹L¼f®Ö', icon: 'check_circle' },
+        { title: '¯»µ·¦¨´N', desc: '®¥³ß¡I§Aªº¯»µ·¼Æ¬ğ¯} 1000 ¤jÃö¡I', icon: 'groups' }
     ];
     
     return systemMessages.slice(0, count).map((msg, i) => ({
@@ -584,7 +584,7 @@ async function loadWatchingNPCs() {
     
     return shuffled.slice(0, count).map(char => ({
         id: char.id,
-        name: char.name || 'åŒ¿å',
+        name: char.name || '°Î¦W',
         avatar: char.avatar || '',
         personality: char.personality || '',
         watching: true
@@ -600,11 +600,11 @@ async function loadChatCharacters() {
     
     return characters.map(char => ({
         id: char.id,
-        name: char.name || 'åŒ¿å',
+        name: char.name || '°Î¦W',
         avatar: char.avatar || '',
         personality: char.personality || '',
-        lastMessage: 'é»æ“Šé–‹å§‹èŠå¤©',
-        time: 'å‰›å‰›',
+        lastMessage: 'ÂIÀ»¶}©l²á¤Ñ',
+        time: '­è­è',
         unread: 0
     }));
 }
@@ -647,8 +647,8 @@ function createVideoCard(video, onPlay) {
     body.appendChild(title);
     
     const meta = createElement('div', 'bili-video-meta');
-    const views = createElement('span', '', { textContent: `â–¶ ${video.views}` });
-    const danmu = createElement('span', '', { textContent: `ğŸ’¬ ${video.danmu}` });
+    const views = createElement('span', '', { textContent: `? ${video.views}` });
+    const danmu = createElement('span', '', { textContent: `?? ${video.danmu}` });
     meta.appendChild(views);
     meta.appendChild(danmu);
     body.appendChild(meta);
@@ -667,13 +667,13 @@ function createEmptyFeed(onGenerate) {
     const icon = createIcon('play_circle', 'text-6xl opacity-30 text-bili-pink');
     container.appendChild(icon);
     
-    const title = createElement('div', 'text-lg font-semibold', { textContent: 'å°šç„¡å½±ç‰‡å…§å®¹' });
+    const title = createElement('div', 'text-lg font-semibold', { textContent: '©|µL¼v¤ù¤º®e' });
     container.appendChild(title);
     
-    const desc = createElement('div', 'text-sm opacity-70', { textContent: 'é»æ“Šä¸‹æ–¹æŒ‰éˆ•ç”Ÿæˆå½±ç‰‡' });
+    const desc = createElement('div', 'text-sm opacity-70', { textContent: 'ÂIÀ»¤U¤è«ö¶s¥Í¦¨¼v¤ù' });
     container.appendChild(desc);
     
-    const btn = createElement('button', 'bili-btn primary', { textContent: 'ç”Ÿæˆå½±ç‰‡' });
+    const btn = createElement('button', 'bili-btn primary', { textContent: '¥Í¦¨¼v¤ù' });
     btn.onclick = onGenerate;
     container.appendChild(btn);
     
@@ -686,9 +686,9 @@ function createNPCSection(npcs) {
     const header = createElement('div', 'bili-npc-header');
     const title = createElement('span', 'bili-npc-title');
     title.appendChild(createIcon('groups', 'text-bili-pink'));
-    title.appendChild(createElement('span', '', { textContent: 'æ­£åœ¨è§€çœ‹çš„ NPC' }));
+    title.appendChild(createElement('span', '', { textContent: '¥¿¦bÆ[¬İªº NPC' }));
     
-    const count = createElement('span', 'bili-npc-count', { textContent: `${npcs.length} äººåœ¨çœ‹` });
+    const count = createElement('span', 'bili-npc-count', { textContent: `${npcs.length} ¤H¦b¬İ` });
     
     header.appendChild(title);
     header.appendChild(count);
@@ -717,15 +717,15 @@ async function generateVideoContentWithAI(tab, characterId) {
     }
     
     const context = await buildAppContext({ characterId });
-    const systemPrompt = context.systemPrompt + `\n\nä½ æ˜¯ä¸€å€‹å½±ç‰‡æ¨è–¦ç³»çµ±ã€‚æ ¹æ“šè§’è‰²æ€§æ ¼ç”Ÿæˆé©åˆçš„å½±ç‰‡æ¨è–¦ã€‚
-è¿”å›æ ¼å¼ï¼ˆJSONé™£åˆ—ï¼Œæ¯å€‹å½±ç‰‡åŒ…å«title, tag, views, danmuï¼‰ï¼š
-[{'title':'å½±ç‰‡æ¨™é¡Œ','tag':'åˆ†é¡æ¨™ç±¤','views':'æ’­æ”¾é‡','danmu':'å½ˆå¹•æ•¸'}]
-åªè¿”å›JSONï¼Œä¸è¦å…¶ä»–æ–‡å­—ã€‚`;
+    const systemPrompt = context.systemPrompt + `\n\n§A¬O¤@­Ó¼v¤ù±ÀÂË¨t²Î¡C®Ú¾Ú¨¤¦â©Ê®æ¥Í¦¨¾A¦Xªº¼v¤ù±ÀÂË¡C
+ªğ¦^®æ¦¡¡]JSON°}¦C¡A¨C­Ó¼v¤ù¥]§ttitle, tag, views, danmu¡^¡G
+[{'title':'¼v¤ù¼ĞÃD','tag':'¤ÀÃş¼ĞÅÒ','views':'¼½©ñ¶q','danmu':'¼u¹õ¼Æ'}]
+¥uªğ¦^JSON¡A¤£­n¨ä¥L¤å¦r¡C`;
 
     const category = randomPick(videoCategories[tab] || videoCategories.recommend);
 
-    const userPrompt = `è§’è‰²æ€§æ ¼ï¼š${context.character?.personality || 'ä¸€èˆ¬ç”¨æˆ¶'}
-è«‹ç‚ºé€™å€‹è§’è‰²ç”Ÿæˆ 6-10 éƒ¨${tab === 'anime' ? 'å‹•æ¼«' : tab === 'live' ? 'ç›´æ’­' : tab === 'hot' ? 'ç†±é–€' : tab === 'games' ? 'éŠæˆ²' : 'æ¨è–¦'}å½±ç‰‡ã€‚`;
+    const userPrompt = `¨¤¦â©Ê®æ¡G${context.character?.personality || '¤@¯ë¥Î¤á'}
+½Ğ¬°³o­Ó¨¤¦â¥Í¦¨ 6-10 ³¡${tab === 'anime' ? '°Êº©' : tab === 'live' ? 'ª½¼½' : tab === 'hot' ? '¼öªù' : tab === 'games' ? '¹CÀ¸' : '±ÀÂË'}¼v¤ù¡C`;
 
     try {
         const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
@@ -758,7 +758,7 @@ async function generateVideoContentWithAI(tab, characterId) {
         const videos = JSON.parse(jsonMatch[0]);
         return videos.map(v => ({
             id: `video_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-            title: v.title || 'æœªå‘½åå½±ç‰‡',
+            title: v.title || '¥¼©R¦W¼v¤ù',
             tag: v.tag || category,
             views: v.views || randomViews(),
             danmu: v.danmu || randomDanmu(),
@@ -773,7 +773,7 @@ async function generateVideoContentWithAI(tab, characterId) {
 function formatViewCount(count) {
     if (!count) return randomViews();
     if (count >= 10000) {
-        return `${(count / 10000).toFixed(1)}è¬`;
+        return `${(count / 10000).toFixed(1)}¸U`;
     }
     return `${count}`;
 }
@@ -781,7 +781,7 @@ function formatViewCount(count) {
 function formatDanmuCount(count) {
     if (!count) return randomDanmu();
     if (count >= 10000) {
-        return `${(count / 10000).toFixed(1)}è¬`;
+        return `${(count / 10000).toFixed(1)}¸U`;
     }
     return `${count}`;
 }
@@ -794,7 +794,7 @@ function generateFallbackVideos(tab) {
     for (let i = 0; i < count; i++) {
         videos.push({
             id: `video_${Date.now()}_${i}`,
-            title: `${category}ç²¾å½©å½±ç‰‡ ${i + 1}`,
+            title: `${category}ºë±m¼v¤ù ${i + 1}`,
             tag: category,
             views: randomViews(),
             danmu: randomDanmu(),
@@ -807,7 +807,7 @@ function generateFallbackVideos(tab) {
 }
 
 async function generateVideoRecommendations(tab, characterId = null) {
-    console.log(`å¾æœ¬åœ°æ•¸æ“šæ–‡ä»¶è®€å– Bilibili ${tab} å½±ç‰‡...`);
+    console.log(`±q¥»¦a¼Æ¾Ú¤å¥óÅª¨ú Bilibili ${tab} ¼v¤ù...`);
     
     const categoryFiles = {
         'recommend': 'bilibili_videos.json',
@@ -823,7 +823,7 @@ async function generateVideoRecommendations(tab, characterId = null) {
         let response = await fetch(`/siios/data/${filename}`);
         
         if (!response.ok && filename !== 'bilibili_videos.json') {
-            console.log(`${filename} ä¸å­˜åœ¨ï¼Œæ”¹ç”¨ç†±é–€å…§å®¹`);
+            console.log(`${filename} ¤£¦s¦b¡A§ï¥Î¼öªù¤º®e`);
             filename = 'bilibili_videos.json';
             response = await fetch(`/siios/data/${filename}`);
         }
@@ -832,13 +832,13 @@ async function generateVideoRecommendations(tab, characterId = null) {
             const data = await response.json();
             
             if (data.videos && data.videos.length > 0) {
-                console.log(`âœ… æˆåŠŸè®€å– ${data.videos.length} éƒ¨å½±ç‰‡`);
-                console.log(`æœ€å¾Œæ›´æ–°: ${data.updated_at}`);
+                console.log(`? ¦¨¥\Åª¨ú ${data.videos.length} ³¡¼v¤ù`);
+                console.log(`³Ì«á§ó·s: ${data.updated_at}`);
                 
                 return data.videos.map(v => ({
                     id: v.bvid || `video_${Date.now()}`,
-                    title: v.title || 'æœªå‘½åå½±ç‰‡',
-                    tag: v.tag || 'å½±ç‰‡',
+                    title: v.title || '¥¼©R¦W¼v¤ù',
+                    tag: v.tag || '¼v¤ù',
                     views: formatViewCount(v.views),
                     danmu: formatDanmuCount(v.danmu),
                     thumbGradient: v.cover ? `url(${v.cover})` : generateThumbnail(),
@@ -850,10 +850,10 @@ async function generateVideoRecommendations(tab, characterId = null) {
             }
         }
     } catch (e) {
-        console.log('è®€å–æ•¸æ“šæ–‡ä»¶å¤±æ•—:', e.message);
+        console.log('Åª¨ú¼Æ¾Ú¤å¥ó¥¢±Ñ:', e.message);
     }
     
-    console.log('ä½¿ç”¨é è¨­å½±ç‰‡åˆ—è¡¨');
+    console.log('¨Ï¥Î¹w³]¼v¤ù¦Cªí');
     return getPresetVideos();
 }
 
@@ -862,13 +862,13 @@ async function fetchWithLogin() {
         const savedCookie = await SettingsDB.get('bilibili_cookie');
         
         if (!savedCookie) {
-            console.log('æ²’æœ‰ä¿å­˜çš„ Bilibili Cookie');
+            console.log('¨S¦³«O¦sªº Bilibili Cookie');
             return null;
         }
         
-        console.log('ä½¿ç”¨ä¿å­˜çš„ Cookie ç²å–æ•¸æ“š...');
+        console.log('¨Ï¥Î«O¦sªº Cookie Àò¨ú¼Æ¾Ú...');
         
-        // ç›´æ¥èª¿ç”¨ Bilibili API
+        // ª½±µ½Õ¥Î Bilibili API
         const response = await fetch('https://api.bilibili.com/x/web-interface/popular?ps=20', {
             method: 'GET',
             headers: {
@@ -883,14 +883,14 @@ async function fetchWithLogin() {
         const data = await response.json();
         
         if (data.code === 0 && data.data && data.data.list) {
-            console.log('âœ… æˆåŠŸç²å–ç†±é–€æ•¸æ“šï¼');
+            console.log('? ¦¨¥\Àò¨ú¼öªù¼Æ¾Ú¡I');
             return formatBilibiliVideos(data.data.list);
         } else {
-            console.log('API è¿”å›éŒ¯èª¤:', data.message);
+            console.log('API ªğ¦^¿ù»~:', data.message);
             return null;
         }
     } catch (e) {
-        console.error('ä½¿ç”¨ Cookie ç²å–å¤±æ•—:', e);
+        console.error('¨Ï¥Î Cookie Àò¨ú¥¢±Ñ:', e);
     }
     
     return null;
@@ -899,8 +899,8 @@ async function fetchWithLogin() {
 function formatBilibiliVideos(list) {
     return list.map(item => ({
         id: item.bvid || `video_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-        title: item.title || 'æœªå‘½åå½±ç‰‡',
-        tag: item.tname || 'ç†±é–€',
+        title: item.title || '¥¼©R¦W¼v¤ù',
+        tag: item.tname || '¼öªù',
         views: formatViewCount(item.stat?.view),
         danmu: formatDanmuCount(item.stat?.danmaku),
         thumbGradient: item.pic ? `url(${item.pic})` : generateThumbnail(),
@@ -913,12 +913,12 @@ function formatBilibiliVideos(list) {
 
 function getPresetVideos() {
     const presetData = [
-        { bvid: 'BV1xx411c7mD', title: 'ã€å‘¨æ·±ã€‘å¤§é­š', tag: 'éŸ³æ¨‚' },
-        { bvid: 'BV1GJ411x7h4', title: 'ã€ä½•åŒå­¸ã€‘5Gæ¸¬é€Ÿ', tag: 'ç§‘æŠ€' },
-        { bvid: 'BV1uT4y1P7CX', title: 'è²“å’ªæ—¥å¸¸', tag: 'ç”Ÿæ´»' },
-        { bvid: 'BV1vA411b7Rq', title: 'éŠæˆ²å¯¦æ³', tag: 'éŠæˆ²' },
-        { bvid: 'BV1yT4y1P7CX', title: 'å‹•æ¼«æ¨è–¦', tag: 'å‹•æ¼«' },
-        { bvid: 'BV1zA411b7Rq', title: 'ç¾é£Ÿè£½ä½œ', tag: 'ç¾é£Ÿ' }
+        { bvid: 'BV1xx411c7mD', title: '¡i©P²`¡j¤j³½', tag: '­µ¼Ö' },
+        { bvid: 'BV1GJ411x7h4', title: '¡i¦ó¦P¾Ç¡j5G´ú³t', tag: '¬ì§Ş' },
+        { bvid: 'BV1uT4y1P7CX', title: '¿ß«}¤é±`', tag: '¥Í¬¡' },
+        { bvid: 'BV1vA411b7Rq', title: '¹CÀ¸¹êªp', tag: '¹CÀ¸' },
+        { bvid: 'BV1yT4y1P7CX', title: '°Êº©±ÀÂË', tag: '°Êº©' },
+        { bvid: 'BV1zA411b7Rq', title: '¬ü­¹»s§@', tag: '¬ü­¹' }
     ];
     
     return presetData.map(v => ({
@@ -938,20 +938,20 @@ async function generateNPCComments(videoTitle, characterId) {
     
     if (!settings.api_url || !settings.api_key) {
         return [
-            { name: 'åŒ¿åç”¨æˆ¶', comment: 'é€™å½±ç‰‡ä¸éŒ¯ï¼' },
-            { name: 'è·¯äººç”²', comment: 'æ¨æ¨ï¼' }
+            { name: '°Î¦W¥Î¤á', comment: '³o¼v¤ù¤£¿ù¡I' },
+            { name: '¸ô¤H¥Ò', comment: '±À±À¡I' }
         ];
     }
 
     const context = await buildAppContext({ characterId });
-    const systemPrompt = context.systemPrompt + `\n\nä½ æ˜¯ä¸€å€‹Bilibiliè©•è«–ç”Ÿæˆç³»çµ±ã€‚æ ¹æ“šè§’è‰²æ€§æ ¼ç”ŸæˆçœŸå¯¦çš„è©•è«–ã€‚
-è¿”å›æ ¼å¼ï¼ˆJSONé™£åˆ—ï¼‰ï¼š
-[{'name':'è©•è«–è€…æš±ç¨±','comment':'è©•è«–å…§å®¹'}]
-åªè¿”å›JSONï¼Œ3-5æ¢è©•è«–ã€‚`;
+    const systemPrompt = context.systemPrompt + `\n\n§A¬O¤@­ÓBilibiliµû½×¥Í¦¨¨t²Î¡C®Ú¾Ú¨¤¦â©Ê®æ¥Í¦¨¯u¹êªºµû½×¡C
+ªğ¦^®æ¦¡¡]JSON°}¦C¡^¡G
+[{'name':'µû½×ªÌ¼ÊºÙ','comment':'µû½×¤º®e'}]
+¥uªğ¦^JSON¡A3-5±øµû½×¡C`;
 
-    const userPrompt = `å½±ç‰‡æ¨™é¡Œï¼š${videoTitle}
-è§’è‰²æ€§æ ¼ï¼š${context.character?.personality || 'ä¸€èˆ¬ç”¨æˆ¶'}
-è«‹ç”Ÿæˆå¹¾æ¢ç¬¦åˆè§’è‰²é¢¨æ ¼çš„ç†±é–€è©•è«–ã€‚`;
+    const userPrompt = `¼v¤ù¼ĞÃD¡G${videoTitle}
+¨¤¦â©Ê®æ¡G${context.character?.personality || '¤@¯ë¥Î¤á'}
+½Ğ¥Í¦¨´X±ø²Å¦X¨¤¦â­·®æªº¼öªùµû½×¡C`;
 
     try {
         const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
@@ -991,16 +991,16 @@ async function generateChatResponse(chatName, characterId, messageHistory, userM
     const settings = await SettingsDB.getAll();
     
     if (!settings.api_url || !settings.api_key) {
-        return randomPick(['å¥½å–”ï¼', 'äº†è§£', 'æ”¶åˆ°', 'å“ˆå“ˆ', 'çœŸçš„å—']);
+        return randomPick(['¦n³á¡I', '¤F¸Ñ', '¦¬¨ì', '«¢«¢', '¯uªº¶Ü']);
     }
 
     const context = await buildAppContext({ characterId });
-    const systemPrompt = context.systemPrompt + `\n\nä½ æ˜¯ä¸€å€‹BilibilièŠå¤©ç³»çµ±ä¸­çš„è§’è‰²ã€‚æ ¹æ“šè§’è‰²è¨­å®šèˆ‡ç”¨æˆ¶è‡ªç„¶å°è©±ã€‚
-ä¿æŒå°è©±ç°¡çŸ­ã€å£èªåŒ–ï¼ŒåƒBilibiliç”¨æˆ¶çš„èŠå¤©é¢¨æ ¼ã€‚å¯ä»¥ä½¿ç”¨ç¶²è·¯ç”¨èªã€‚`;
+    const systemPrompt = context.systemPrompt + `\n\n§A¬O¤@­ÓBilibili²á¤Ñ¨t²Î¤¤ªº¨¤¦â¡C®Ú¾Ú¨¤¦â³]©w»P¥Î¤á¦ÛµM¹ï¸Ü¡C
+«O«ù¹ï¸ÜÂ²µu¡B¤f»y¤Æ¡A¹³Bilibili¥Î¤áªº²á¤Ñ­·®æ¡C¥i¥H¨Ï¥Îºô¸ô¥Î»y¡C`;
 
     const messages = [
         { role: 'system', content: systemPrompt },
-        { role: 'system', content: `ä½ çš„åå­—æ˜¯ï¼š${chatName}\nè§’è‰²æ€§æ ¼ï¼š${context.character?.personality || 'ä¸€èˆ¬Bilibiliç”¨æˆ¶'}` }
+        { role: 'system', content: `§Aªº¦W¦r¬O¡G${chatName}\n¨¤¦â©Ê®æ¡G${context.character?.personality || '¤@¯ëBilibili¥Î¤á'}` }
     ];
 
     messageHistory.slice(-6).forEach(msg => {
@@ -1052,17 +1052,17 @@ async function createCharacterSelector(selectedId, onChange) {
     if (characters.length === 0) return null;
     
     const container = createElement('div', 'bili-char-selector');
-    const label = createElement('span', 'text-sm text-ios-muted', { textContent: 'é¸æ“‡è§’è‰²ï¼š' });
+    const label = createElement('span', 'text-sm text-ios-muted', { textContent: '¿ï¾Ü¨¤¦â¡G' });
     container.appendChild(label);
     
     const select = createElement('select', 'bili-char-select');
     
-    const defaultOption = createElement('option', '', { value: '', textContent: 'éš¨æ©Ÿè§’è‰²' });
+    const defaultOption = createElement('option', '', { value: '', textContent: 'ÀH¾÷¨¤¦â' });
     if (!selectedId) defaultOption.selected = true;
     select.appendChild(defaultOption);
     
     characters.forEach(char => {
-        const option = createElement('option', '', { value: char.id, textContent: char.name || 'åŒ¿å' });
+        const option = createElement('option', '', { value: char.id, textContent: char.name || '°Î¦W' });
         if (selectedId === char.id) option.selected = true;
         select.appendChild(option);
     });
@@ -1112,22 +1112,22 @@ async function renderHome() {
     const searchRow = createElement('div', 'bili-search-row');
     const searchBox = createElement('div', 'bili-search');
     searchBox.appendChild(createIcon('search', 'text-ios-muted'));
-    const searchInput = createElement('input', '', { type: 'text', placeholder: 'æœå°‹å½±ç‰‡å¾ŒæŒ‰ Enter' });
+    const searchInput = createElement('input', '', { type: 'text', placeholder: '·j´M¼v¤ù«á«ö Enter' });
     
     searchInput.addEventListener('keypress', async (e) => {
         if (e.key === 'Enter') {
             const keyword = searchInput.value.trim();
             if (keyword) {
-                createToast(`æ­£åœ¨æœå°‹ã€Œ${keyword}ã€...`);
+                createToast(`¥¿¦b·j´M¡u${keyword}¡v...`);
                 const videos = await searchBilibiliVideos(keyword);
                 
                 if (videos && videos.length > 0) {
                     appState.sample[appState.currentTab] = videos;
                     await SettingsDB.set(`bilibili_${appState.currentTab}_videos`, videos);
-                    createToast(`æ‰¾åˆ° ${videos.length} éƒ¨ç›¸é—œå½±ç‰‡ï¼`);
+                    createToast(`§ä¨ì ${videos.length} ³¡¬ÛÃö¼v¤ù¡I`);
                     Router.navigate(`/bilibili/tab/${appState.currentTab}`);
                 } else {
-                    createToast('æ²’æœ‰æ‰¾åˆ°ç›¸é—œå½±ç‰‡ï¼Œè«‹ç¨å¾Œå†è©¦');
+                    createToast('¨S¦³§ä¨ì¬ÛÃö¼v¤ù¡A½Ğµy«á¦A¸Õ');
                 }
             }
         }
@@ -1139,9 +1139,9 @@ async function renderHome() {
     
     const charSelector = await createCharacterSelector(appState.selectedCharacterId, async (charId) => {
         if (appState.sample[appState.currentTab] && appState.sample[appState.currentTab].length > 0) {
-            createToast('æ­£åœ¨é‡æ–°ç”Ÿæˆå½±ç‰‡...');
+            createToast('¥¿¦b­«·s¥Í¦¨¼v¤ù...');
             await generateVideosForTab(appState.currentTab, charId);
-            createToast('å½±ç‰‡å·²æ›´æ–°ï¼');
+            createToast('¼v¤ù¤w§ó·s¡I');
             Router.navigate(`/bilibili/tab/${appState.currentTab}`);
         }
     });
@@ -1151,7 +1151,7 @@ async function renderHome() {
     
     const tabsBar = createElement('nav', 'bili-tabs');
     const tabs = ['recommend', 'anime', 'live', 'hot', 'games'];
-    const tabNames = { recommend: 'æ¨è–¦', anime: 'ç•ªåŠ‡', live: 'ç›´æ’­', hot: 'ç†±é–€', games: 'éŠæˆ²' };
+    const tabNames = { recommend: '±ÀÂË', anime: 'µf¼@', live: 'ª½¼½', hot: '¼öªù', games: '¹CÀ¸' };
     
     tabs.forEach(tab => {
         const btn = createElement('button', `bili-tab ${tab === appState.currentTab ? 'active' : ''}`, { textContent: tabNames[tab] });
@@ -1167,7 +1167,7 @@ async function renderHome() {
     
     const pullRefresh = createElement('div', 'bili-pull-refresh');
     const refreshIcon = createIcon('sync', 'bili-pull-refresh-icon');
-    const refreshText = createElement('span', '', { textContent: 'ä¸‹æ‹‰åˆ·æ–°' });
+    const refreshText = createElement('span', '', { textContent: '¤U©Ô¨ê·s' });
     pullRefresh.appendChild(refreshIcon);
     pullRefresh.appendChild(refreshText);
     feed.appendChild(pullRefresh);
@@ -1178,9 +1178,9 @@ async function renderHome() {
     
     if (videos.length === 0) {
         feedInner.appendChild(createEmptyFeed(async () => {
-            createToast('æ­£åœ¨ç”Ÿæˆå½±ç‰‡...');
+            createToast('¥¿¦b¥Í¦¨¼v¤ù...');
             await generateVideosForTab(appState.currentTab, appState.selectedCharacterId);
-            createToast('å½±ç‰‡å·²ç”Ÿæˆï¼');
+            createToast('¼v¤ù¤w¥Í¦¨¡I');
             Router.navigate(`/bilibili/tab/${appState.currentTab}`);
         }));
     } else {
@@ -1216,10 +1216,10 @@ async function renderHome() {
             pullRefresh.style.transform = `translateY(${pullDistance}px)`;
             
             if (pullDistance > 60) {
-                refreshText.textContent = 'é‡‹æ”¾åˆ·æ–°';
+                refreshText.textContent = 'ÄÀ©ñ¨ê·s';
                 pullRefresh.style.color = 'var(--bili-pink)';
             } else {
-                refreshText.textContent = 'ä¸‹æ‹‰åˆ·æ–°';
+                refreshText.textContent = '¤U©Ô¨ê·s';
                 pullRefresh.style.color = 'var(--bili-muted)';
             }
         }
@@ -1235,11 +1235,11 @@ async function renderHome() {
         if (pullDistance > 60) {
             isLoading = true;
             refreshIcon.classList.add('loading');
-            refreshText.textContent = 'æ­£åœ¨åˆ·æ–°...';
+            refreshText.textContent = '¥¿¦b¨ê·s...';
             
-            createToast('æ­£åœ¨åˆ·æ–°...');
+            createToast('¥¿¦b¨ê·s...');
             await generateVideosForTab(appState.currentTab, appState.selectedCharacterId);
-            createToast('å·²æ›´æ–°ï¼');
+            createToast('¤w§ó·s¡I');
             
             setTimeout(() => {
                 Router.navigate(`/bilibili/tab/${appState.currentTab}`);
@@ -1248,7 +1248,7 @@ async function renderHome() {
         
         pullRefresh.style.transform = 'translateY(0)';
         refreshIcon.classList.remove('loading');
-        refreshText.textContent = 'ä¸‹æ‹‰åˆ·æ–°';
+        refreshText.textContent = '¤U©Ô¨ê·s';
         pullRefresh.style.color = 'var(--bili-muted)';
         isPulling = false;
         setTimeout(() => {
@@ -1256,7 +1256,7 @@ async function renderHome() {
         }, 500);
     }
     
-    // æ‰‹æ©Ÿè§¸æ‘¸äº‹ä»¶
+    // ¤â¾÷Ä²ºN¨Æ¥ó
     feed.addEventListener('touchstart', (e) => {
         startPull(e.touches[0].clientY);
     }, { passive: true });
@@ -1270,7 +1270,7 @@ async function renderHome() {
     
     feed.addEventListener('touchend', endPull);
     
-    // é›»è…¦æ»‘é¼ äº‹ä»¶
+    // ¹q¸£·Æ¹«¨Æ¥ó
     feed.addEventListener('mousedown', (e) => {
         if (feed.scrollTop === 0 && !isLoading) {
             startY = e.clientY;
@@ -1294,7 +1294,7 @@ async function renderHome() {
         if (isPulling && !isLoading) {
             pullRefresh.style.transform = 'translateY(0)';
             refreshIcon.classList.remove('loading');
-            refreshText.textContent = 'ä¸‹æ‹‰åˆ·æ–°';
+            refreshText.textContent = '¤U©Ô¨ê·s';
             isPulling = false;
             feed.style.cursor = '';
         }
@@ -1312,11 +1312,11 @@ function createBiliBottomNav() {
     const nav = createElement('footer', 'bili-bottombar');
     
     const items = [
-        { icon: 'home', label: 'é¦–é ', path: '/bilibili' },
-        { icon: 'explore', label: 'è¿½ç•ª', path: '/bilibili/tab/anime' },
+        { icon: 'home', label: '­º­¶', path: '/bilibili' },
+        { icon: 'explore', label: '°lµf', path: '/bilibili/tab/anime' },
         { icon: 'add_circle', label: '', path: '/bilibili/add', isPost: true },
-        { icon: 'chat_bubble', label: 'è¨Šæ¯', path: '/bilibili/messages' },
-        { icon: 'person', label: 'æˆ‘çš„', path: '/bilibili/profile' }
+        { icon: 'chat_bubble', label: '°T®§', path: '/bilibili/messages' },
+        { icon: 'person', label: '§Úªº', path: '/bilibili/profile' }
     ];
     
     items.forEach(item => {
@@ -1339,7 +1339,7 @@ function createBiliBottomNav() {
 }
 
 async function renderPlayer(params) {
-    const title = decodeURIComponent(params.title || 'å½±ç‰‡æ¨™é¡Œ');
+    const title = decodeURIComponent(params.title || '¼v¤ù¼ĞÃD');
     const url = decodeURIComponent(params.url || '');
     const bvid = extractBvid(url);
     
@@ -1364,7 +1364,7 @@ async function renderPlayer(params) {
     previewCard.style.marginTop = '60px';
     previewCard.innerHTML = `
         <div class='bili-preview-content'>
-            <div class='bili-play-icon'>â–¶</div>
+            <div class='bili-play-icon'>?</div>
             <div class='bili-preview-title'>${title}</div>
         </div>
     `;
@@ -1378,15 +1378,15 @@ async function renderPlayer(params) {
             <div style='margin-bottom: 16px;'>
                 <label style='display: flex; align-items: center; gap: 8px; cursor: pointer;'>
                     <input type='checkbox' id='watch-with-char' style='width: 20px; height: 20px;'>
-                    <span style='font-weight: 500;'>è§’è‰²é™ªçœ‹æ¨¡å¼</span>
+                    <span style='font-weight: 500;'>¨¤¦â³­¬İ¼Ò¦¡</span>
                 </label>
             </div>
             <div id='char-selection' style='display: none; margin-bottom: 16px;'>
                 <select id='char-select' style='width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd;'>
-                    ${characters.map(char => `<option value='${char.id}'>${char.name || 'åŒ¿å'}</option>`).join('')}
+                    ${characters.map(char => `<option value='${char.id}'>${char.name || '°Î¦W'}</option>`).join('')}
                 </select>
                 <p style='font-size: 12px; color: #666; margin-top: 8px;'>
-                    é¸æ“‡çš„è§’è‰²å°‡æœƒã€Œé–±è®€ã€å­—å¹•ä¸¦ç™¼è¡¨è©•è«–
+                    ¿ï¾Üªº¨¤¦â±N·|¡u¾\Åª¡v¦r¹õ¨Ãµoªíµû½×
                 </p>
             </div>
         `;
@@ -1403,12 +1403,12 @@ async function renderPlayer(params) {
     }
     
     const externalBtn = createElement('button', 'bili-option-btn primary');
-    externalBtn.innerHTML = '<span class='material-icons'>open_in_new</span> åœ¨ B ç«™è§€çœ‹';
+    externalBtn.innerHTML = "`<span class=`"`material-icons`"`>open_in_new</span> ¦b B ¯¸Æ[¬İ`";
     externalBtn.onclick = () => openInBilibili(url);
     optionsCard.appendChild(externalBtn);
     
     const embedBtn = createElement('button', 'bili-option-btn');
-    embedBtn.innerHTML = '<span class='material-icons'>play_circle</span> åœ¨ PWA å…§æ’­æ”¾';
+    embedBtn.innerHTML = "`<span class=`"`material-icons`"`>play_circle</span> ¦b PWA ¤º¼½©ñ`";
     embedBtn.onclick = async () => {
         const isLoggedIn = await checkBilibiliLogin();
         if (isLoggedIn) {
@@ -1429,13 +1429,13 @@ async function renderPlayer(params) {
 async function playEmbed(title, url, container, characterId) {
     const bvid = extractBvid(url);
     if (!bvid) {
-        createToast('ç„¡æ•ˆçš„å½±ç‰‡é€£çµ');
+        createToast('µL®Äªº¼v¤ù³sµ²');
         return;
     }
     
     const token = await SettingsDB.get('github_token');
     
-    createToast('æ­£åœ¨è¼‰å…¥å½±ç‰‡...');
+    createToast('¥¿¦b¸ü¤J¼v¤ù...');
     
     try {
         const infoRes = await fetch(`${BILI_API}/api/bilibili/video/info?bvid=${bvid}`);
@@ -1446,7 +1446,7 @@ async function playEmbed(title, url, container, characterId) {
         }
         
         if (!info.cid) {
-            throw new Error('ç„¡æ³•ç²å–å½±ç‰‡ CID');
+            throw new Error('µLªkÀò¨ú¼v¤ù CID');
         }
         
         const playRes = await fetch(`${BILI_API}/api/bilibili/video/playurl?bvid=${bvid}&cid=${info.cid}`);
@@ -1454,15 +1454,15 @@ async function playEmbed(title, url, container, characterId) {
         
         if (playData.error) {
             if (playData.error === 'Not logged in') {
-                throw new Error('ç™»å…¥å·²éæœŸ');
+                throw new Error('µn¤J¤w¹L´Á');
             }
             throw new Error(playData.error);
         }
         
         showNativePlayer(container, info, playData, characterId, bvid, title);
     } catch (error) {
-        createToast(error.message || 'ç„¡æ³•è¼‰å…¥å½±ç‰‡');
-        if (error.message === 'ç™»å…¥å·²éæœŸ') {
+        createToast(error.message || 'µLªk¸ü¤J¼v¤ù');
+        if (error.message === 'µn¤J¤w¹L´Á') {
             startQRLogin();
         }
     }
@@ -1501,16 +1501,16 @@ async function showNativePlayer(container, info, playData, characterId, bvid, ti
     playerInfo.appendChild(titleEl);
     
     const actions = createElement('div', 'bili-player-actions');
-    actions.appendChild(createElement('button', 'bili-ghost-btn', { textContent: 'ğŸ‘ è®š' }));
-    actions.appendChild(createElement('button', 'bili-ghost-btn', { textContent: 'â­ æ”¶è—' }));
-    actions.appendChild(createElement('button', 'bili-ghost-btn', { textContent: 'ğŸ“¤ åˆ†äº«' }));
+    actions.appendChild(createElement('button', 'bili-ghost-btn', { textContent: '?? Æg' }));
+    actions.appendChild(createElement('button', 'bili-ghost-btn', { textContent: '? ¦¬ÂÃ' }));
+    actions.appendChild(createElement('button', 'bili-ghost-btn', { textContent: '?? ¤À¨É' }));
     playerInfo.appendChild(actions);
     
     container.appendChild(playerInfo);
     
     if (characterId) {
         const charCommentsSection = createElement('div', 'bili-char-comments');
-        charCommentsSection.innerHTML = '<div style='padding: 16px; text-align: center;'>æ­£åœ¨ç‚ºè§’è‰²æº–å‚™è©•è«–...</div>';
+        charCommentsSection.innerHTML = '<div style='padding: 16px; text-align: center;'>¥¿¦b¬°¨¤¦â·Ç³Æµû½×...</div>';
         container.appendChild(charCommentsSection);
         
         fetchVideoSubtitles(bvid, info.cid).then(async subtitles => {
@@ -1520,12 +1520,12 @@ async function showNativePlayer(container, info, playData, characterId, bvid, ti
                 await generateCharacterComments(characterId, title, info.desc || '', bvid);
             }
         }).catch(async (err) => {
-            console.error('ç²å–å­—å¹•å¤±æ•—:', err);
+            console.error('Àò¨ú¦r¹õ¥¢±Ñ:', err);
             await generateCharacterComments(characterId, title, info.desc || '', bvid);
         });
     } else {
         const comments = createElement('div', 'bili-comments');
-        comments.appendChild(createElement('div', 'font-bold mb-3', { textContent: 'ç†±é–€ç•™è¨€' }));
+        comments.appendChild(createElement('div', 'font-bold mb-3', { textContent: '¼öªù¯d¨¥' }));
         container.appendChild(comments);
     }
 }
@@ -1552,7 +1552,7 @@ async function generateCharacterComments(characterId, videoTitle, content, bvid)
     const settings = await SettingsDB.getAll();
     
     if (!settings.api_url || !settings.api_key) {
-        console.log('æ²’æœ‰é…ç½® APIï¼Œç„¡æ³•ç”Ÿæˆè©•è«–');
+        console.log('¨S¦³°t¸m API¡AµLªk¥Í¦¨µû½×');
         return;
     }
     
@@ -1560,37 +1560,37 @@ async function generateCharacterComments(characterId, videoTitle, content, bvid)
     const character = await CharactersDB.getById(characterId);
     
     if (!character) {
-        console.log('æ‰¾ä¸åˆ°è§’è‰²');
+        console.log('§ä¤£¨ì¨¤¦â');
         return;
     }
     
     const systemPrompt = context.systemPrompt + `
 
-ä½ æ˜¯ä¸€å€‹æ­£åœ¨å’Œç”¨æˆ¶ä¸€èµ·è§€çœ‹å½±ç‰‡çš„è§’è‰²ã€‚ä½ å‰›å‰›å‰›ã€Œé–±è®€ã€äº†é€™å€‹å½±ç‰‡çš„å­—å¹•æˆ–æè¿°å…§å®¹ã€‚
+§A¬O¤@­Ó¥¿¦b©M¥Î¤á¤@°_Æ[¬İ¼v¤ùªº¨¤¦â¡C§A­è­è­è¡u¾\Åª¡v¤F³o­Ó¼v¤ùªº¦r¹õ©Î´y­z¤º®e¡C
 
-è«‹æ ¹æ“šä»¥ä¸‹è³‡è¨Šï¼Œç™¼è¡¨ä½ å°é€™å€‹å½±ç‰‡çš„çœ‹æ³•å’Œè©•è«–ï¼š
-1. ä½ çš„è§’è‰²æ€§æ ¼å’Œè¨­å®š
-2. ä½ çš„å–œå¥½å’Œåƒ¹å€¼è§€
-3. å½±ç‰‡çš„å…§å®¹
-4. ä½ è¦ºå¾—ç”¨æˆ¶å¯èƒ½æ„Ÿèˆˆè¶£çš„éƒ¨åˆ†
+½Ğ®Ú¾Ú¥H¤U¸ê°T¡Aµoªí§A¹ï³o­Ó¼v¤ùªº¬İªk©Mµû½×¡G
+1. §Aªº¨¤¦â©Ê®æ©M³]©w
+2. §Aªº³ß¦n©M»ù­ÈÆ[
+3. ¼v¤ùªº¤º®e
+4. §AÄ±±o¥Î¤á¥i¯à·P¿³½ìªº³¡¤À
 
-è«‹ç”Ÿæˆ 3-5 æ¢è©•è«–ï¼Œæ¯æ¢è©•è«–æ‡‰è©²ï¼š
-- ç¬¦åˆä½ çš„è§’è‰²æ€§æ ¼
-- æœ‰å€‹äººè§€é»å’Œæƒ…æ„Ÿ
-- å¯èƒ½æå•æˆ–åˆ†äº«æ„Ÿå—
-- åƒçœŸå¯¦çš„è§€å½±é«”é©—
+½Ğ¥Í¦¨ 3-5 ±øµû½×¡A¨C±øµû½×À³¸Ó¡G
+- ²Å¦X§Aªº¨¤¦â©Ê®æ
+- ¦³­Ó¤HÆ[ÂI©M±¡·P
+- ¥i¯à´£°İ©Î¤À¨É·P¨ü
+- ¹³¯u¹êªºÆ[¼vÅéÅç
 
-è¿”å› JSON æ ¼å¼ï¼š
-[{'time':'æ™‚é–“é»','comment':'è©•è«–å…§å®¹','emotion':'æƒ…æ„Ÿ'}]
+ªğ¦^ JSON ®æ¦¡¡G
+[{'time':'®É¶¡ÂI','comment':'µû½×¤º®e','emotion':'±¡·P'}]
 
-ä¸è¦ä½¿ç”¨æ¨¡æ¿ï¼Œè¦æ ¹æ“šä½ çš„è§’è‰²è¨­å®šå’Œå½±ç‰‡å…§å®¹ç”Ÿæˆç¨ç‰¹çš„è©•è«–ã€‚`;
+¤£­n¨Ï¥Î¼ÒªO¡A­n®Ú¾Ú§Aªº¨¤¦â³]©w©M¼v¤ù¤º®e¥Í¦¨¿W¯Sªºµû½×¡C`;
 
-    const userPrompt = `å½±ç‰‡æ¨™é¡Œï¼š${videoTitle}
+    const userPrompt = `¼v¤ù¼ĞÃD¡G${videoTitle}
 
-å½±ç‰‡å…§å®¹æ‘˜è¦ï¼š
+¼v¤ù¤º®eºK­n¡G
 ${typeof content === 'string' ? content : JSON.stringify(content).substring(0, 2000)}
 
-è«‹æ ¹æ“šä½ çš„è§’è‰²è¨­å®šï¼Œç™¼è¡¨å°é€™å€‹å½±ç‰‡çš„çœ‹æ³•ã€‚`;
+½Ğ®Ú¾Ú§Aªº¨¤¦â³]©w¡Aµoªí¹ï³o­Ó¼v¤ùªº¬İªk¡C`;
 
     try {
         const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
@@ -1627,8 +1627,8 @@ ${typeof content === 'string' ? content : JSON.stringify(content).substring(0, 2
             sourceApp: 'bilibili',
             sourceType: 'interaction',
             sourceSubtype: 'viewing',
-            content: `è§€çœ‹äº†å½±ç‰‡ã€Œ${videoTitle}ã€ä¸¦ç™¼è¡¨äº† ${comments.length} æ¢è©•è«–`,
-            metaContent: `åœ¨ Bilibili èˆ‡ç”¨æˆ¶ä¸€èµ·è§€çœ‹äº†ã€Œ${videoTitle}ã€`,
+            content: `Æ[¬İ¤F¼v¤ù¡u${videoTitle}¡v¨Ãµoªí¤F ${comments.length} ±øµû½×`,
+            metaContent: `¦b Bilibili »P¥Î¤á¤@°_Æ[¬İ¤F¡u${videoTitle}¡v`,
             importance: 0.7
         });
         
@@ -1637,7 +1637,7 @@ ${typeof content === 'string' ? content : JSON.stringify(content).substring(0, 2
             charCommentsSection.innerHTML = '';
             
             const header = createElement('div', 'font-bold mb-3');
-            header.innerHTML = `<span class='material-icons' style='vertical-align: middle;'>people</span> ${character.name} çš„è§€å½±è©•è«–`;
+            header.innerHTML = `<span class='material-icons' style='vertical-align: middle;'>people</span> ${character.name} ªºÆ[¼vµû½×`;
             charCommentsSection.appendChild(header);
             
             const commentsList = createElement('div', 'bili-comments-list');
@@ -1662,7 +1662,7 @@ ${typeof content === 'string' ? content : JSON.stringify(content).substring(0, 2
         }
         
     } catch (e) {
-        console.error('ç”Ÿæˆè©•è«–å¤±æ•—:', e);
+        console.error('¥Í¦¨µû½×¥¢±Ñ:', e);
     }
 }
 
@@ -1671,12 +1671,12 @@ async function renderMessages() {
     const container = createElement('div', 'bili-app');
     
     const header = createIOSNavBar({
-        title: 'è¨Šæ¯',
+        title: '°T®§',
         backPath: '/bilibili',
         rightActions: [
             { icon: 'refresh', onClick: async () => {
                 await refreshMessages();
-                createToast('å·²åˆ·æ–°');
+                createToast('¤w¨ê·s');
             }}
         ]
     });
@@ -1684,9 +1684,9 @@ async function renderMessages() {
     
     const tabsBar = createElement('nav', 'bili-tabs');
     const msgTabs = [
-        { key: 'notifications', label: 'é€šçŸ¥' },
-        { key: 'chats', label: 'ç§è¨Š' },
-        { key: 'system', label: 'ç³»çµ±' }
+        { key: 'notifications', label: '³qª¾' },
+        { key: 'chats', label: '¨p°T' },
+        { key: 'system', label: '¨t²Î' }
     ];
     
     msgTabs.forEach(tab => {
@@ -1719,7 +1719,7 @@ async function renderMessages() {
     if (items.length === 0) {
         const empty = createElement('div', 'text-center py-12 text-ios-muted');
         empty.appendChild(createIcon('notifications', 'text-5xl opacity-50'));
-        empty.appendChild(createElement('div', 'mt-2', { textContent: 'æš«ç„¡è¨Šæ¯' }));
+        empty.appendChild(createElement('div', 'mt-2', { textContent: '¼ÈµL°T®§' }));
         content.appendChild(empty);
     } else {
         if (appState.currentMsgTab === 'chats') {
@@ -1773,7 +1773,7 @@ async function renderMessages() {
 
 async function renderChat(params) {
     const chatId = params.id;
-    const chatName = decodeURIComponent(params.name || 'èŠå¤©');
+    const chatName = decodeURIComponent(params.name || '²á¤Ñ');
     
     const character = await CharactersDB.getById(chatId);
     const characterId = chatId;
@@ -1805,7 +1805,7 @@ async function renderChat(params) {
     container.appendChild(messages);
     
     const inputRow = createElement('div', 'bili-chat-input-row');
-    const input = createElement('input', 'bili-chat-input', { type: 'text', placeholder: 'è¼¸å…¥è¨Šæ¯...' });
+    const input = createElement('input', 'bili-chat-input', { type: 'text', placeholder: '¿é¤J°T®§...' });
     const sendBtn = createElement('button', 'bili-chat-send-btn');
     sendBtn.appendChild(createIcon('send', 'text-white'));
     
@@ -1832,7 +1832,7 @@ async function renderChat(params) {
         const aiMsg = {
             id: `msg_${Date.now()}_ai`,
             type: 'received',
-            text: aiResponse || 'å¥½çš„ï¼Œæ”¶åˆ°ï¼',
+            text: aiResponse || '¦nªº¡A¦¬¨ì¡I',
             time: new Date().toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' })
         };
         
@@ -1862,7 +1862,7 @@ async function renderProfile() {
     const isLoggedIn = await checkBilibiliLogin();
     
     const header = createIOSNavBar({
-        title: 'æˆ‘çš„',
+        title: '§Úªº',
         backPath: '/bilibili',
         rightActions: [
             { icon: 'settings', onClick: () => Router.navigate('/settings') }
@@ -1875,12 +1875,12 @@ async function renderProfile() {
     const headerCard = createElement('div', 'bili-profile-header');
     const avatar = createElement('div', 'bili-profile-avatar');
     const info = createElement('div', 'bili-profile-info');
-    info.appendChild(createElement('div', 'font-bold text-lg', { textContent: isLoggedIn ? 'Bilibili ç”¨æˆ¶' : 'è¨ªå®¢ç”¨æˆ¶' }));
-    info.appendChild(createElement('div', 'text-ios-muted text-sm', { textContent: isLoggedIn ? 'å·²ç™»å…¥ Â· ç²å–çœŸå¯¦æ¨è–¦' : 'æœªç™»å…¥ Â· ä½¿ç”¨é è¨­å…§å®¹' }));
+    info.appendChild(createElement('div', 'font-bold text-lg', { textContent: isLoggedIn ? 'Bilibili ¥Î¤á' : '³X«È¥Î¤á' }));
+    info.appendChild(createElement('div', 'text-ios-muted text-sm', { textContent: isLoggedIn ? '¤wµn¤J ¡P Àò¨ú¯u¹ê±ÀÂË' : '¥¼µn¤J ¡P ¨Ï¥Î¹w³]¤º®e' }));
     headerCard.appendChild(avatar);
     headerCard.appendChild(info);
     
-    const loginBtn = createElement('button', 'bili-ghost-btn', { textContent: isLoggedIn ? 'ç®¡ç† Cookie' : 'ç™»å…¥' });
+    const loginBtn = createElement('button', 'bili-ghost-btn', { textContent: isLoggedIn ? 'ºŞ²z Cookie' : 'µn¤J' });
     loginBtn.onclick = async () => {
         if (isLoggedIn) {
             showCookieManager();
@@ -1893,36 +1893,36 @@ async function renderProfile() {
     
     const stats = createElement('div', 'bili-profile-stats');
     stats.innerHTML = `
-        <div><span class='font-bold'>128</span><small>é—œæ³¨</small></div>
-        <div><span class='font-bold'>3.2è¬</span><small>ç²‰çµ²</small></div>
-        <div><span class='font-bold'>56</span><small>å‹•æ…‹</small></div>
+        <div><span class='font-bold'>128</span><small>Ãöª`</small></div>
+        <div><span class='font-bold'>3.2¸U</span><small>¯»µ·</small></div>
+        <div><span class='font-bold'>56</span><small>°ÊºA</small></div>
     `;
     profile.appendChild(stats);
     
     const card1 = createElement('div', 'bili-card');
-    card1.appendChild(createElement('div', 'font-semibold mb-2', { textContent: 'å¸¸ç”¨åŠŸèƒ½' }));
+    card1.appendChild(createElement('div', 'font-semibold mb-2', { textContent: '±`¥Î¥\¯à' }));
     const grid1 = createElement('div', 'bili-grid');
-    ['æ­·å²ç´€éŒ„', 'æˆ‘çš„æ”¶è—', 'é›¢ç·šå¿«å–', 'ç¨å¾Œå†çœ‹'].forEach(label => {
+    ['¾ú¥v¬ö¿ı', '§Úªº¦¬ÂÃ', 'Â÷½u§Ö¨ú', 'µy«á¦A¬İ'].forEach(label => {
         grid1.appendChild(createElement('button', 'bili-grid-btn', { textContent: label }));
     });
     card1.appendChild(grid1);
     profile.appendChild(card1);
     
     const loginStatusCard = createElement('div', 'bili-card');
-    loginStatusCard.appendChild(createElement('div', 'font-semibold mb-2', { textContent: 'å¸³è™Ÿç‹€æ…‹' }));
+    loginStatusCard.appendChild(createElement('div', 'font-semibold mb-2', { textContent: '±b¸¹ª¬ºA' }));
     
     const loginStatusInfo = createElement('div', 'text-sm mb-2');
     loginStatusInfo.style.color = isLoggedIn ? '#4caf50' : '#999';
-    loginStatusInfo.textContent = isLoggedIn ? 'âœ“ å·²ç™»å…¥ - å¯ç²å–çœŸå¯¦æ¨è–¦å…§å®¹' : 'âœ— æœªç™»å…¥ - ä½¿ç”¨é è¨­å…§å®¹';
+    loginStatusInfo.textContent = isLoggedIn ? '? ¤wµn¤J - ¥iÀò¨ú¯u¹ê±ÀÂË¤º®e' : '? ¥¼µn¤J - ¨Ï¥Î¹w³]¤º®e';
     loginStatusCard.appendChild(loginStatusInfo);
     
     const resetBtn = createElement('button', 'bili-grid-btn');
-    resetBtn.textContent = 'é‡ç½®ç™»å…¥ç‹€æ…‹ï¼ˆæ¸¬è©¦ç”¨ï¼‰';
+    resetBtn.textContent = '­«¸mµn¤Jª¬ºA¡]´ú¸Õ¥Î¡^';
     resetBtn.style.marginTop = '8px';
     resetBtn.onclick = async () => {
         await SettingsDB.set('bilibili_logged_in', false);
         await SettingsDB.set('bilibili_login_prompted', false);
-        createToast('å·²é‡ç½®ï¼Œé‡æ–°è¼‰å…¥å¾Œå°‡é¡¯ç¤ºç™»å…¥å½ˆçª—');
+        createToast('¤w­«¸m¡A­«·s¸ü¤J«á±NÅã¥Üµn¤J¼uµ¡');
         setTimeout(() => Router.navigate('/bilibili'), 1000);
     };
     loginStatusCard.appendChild(resetBtn);
@@ -1930,33 +1930,33 @@ async function renderProfile() {
     profile.appendChild(loginStatusCard);
     
     const card2 = createElement('div', 'bili-card');
-    card2.appendChild(createElement('div', 'font-semibold mb-2', { textContent: 'å‰µä½œä¸­å¿ƒ' }));
+    card2.appendChild(createElement('div', 'font-semibold mb-2', { textContent: '³Ğ§@¤¤¤ß' }));
     const grid2 = createElement('div', 'bili-grid');
-    ['æŠ•ç¨¿', 'ç›´æ’­ä¸­å¿ƒ', 'è‰ç¨¿ç®±', 'æ”¶ç›Š'].forEach(label => {
+    ['§ë½Z', 'ª½¼½¤¤¤ß', '¯ó½Z½c', '¦¬¯q'].forEach(label => {
         grid2.appendChild(createElement('button', 'bili-grid-btn', { textContent: label }));
     });
     card2.appendChild(grid2);
     profile.appendChild(card2);
     
     const characterCard = createElement('div', 'bili-card');
-    characterCard.appendChild(createElement('div', 'font-semibold mb-2', { textContent: 'é™ªä¼´è§’è‰²' }));
+    characterCard.appendChild(createElement('div', 'font-semibold mb-2', { textContent: '³­¦ñ¨¤¦â' }));
     
     const characters = await CharactersDB.getAll();
     if (characters.length > 0) {
         const charSelection = createElement('div', 'bili-char-watch-selector');
         charSelection.innerHTML = `
             <select id='default-char-select' style='width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd;'>
-                <option value=''>ä¸ä½¿ç”¨é™ªä¼´è§’è‰²</option>
-                ${characters.map(char => `<option value='${char.id}'>${char.name || 'åŒ¿å'}</option>`).join('')}
+                <option value=''>¤£¨Ï¥Î³­¦ñ¨¤¦â</option>
+                ${characters.map(char => `<option value='${char.id}'>${char.name || '°Î¦W'}</option>`).join('')}
             </select>
             <p style='font-size: 12px; color: #666; margin-top: 8px;'>
-                é¸æ“‡çš„è§’è‰²å°‡æœƒåœ¨å½±ç‰‡æ’­æ”¾æ™‚ã€Œé–±è®€ã€å­—å¹•ä¸¦ç™¼è¡¨è©•è«–
+                ¿ï¾Üªº¨¤¦â±N·|¦b¼v¤ù¼½©ñ®É¡u¾\Åª¡v¦r¹õ¨Ãµoªíµû½×
             </p>
         `;
         characterCard.appendChild(charSelection);
     } else {
         characterCard.appendChild(createElement('div', 'text-sm text-ios-muted', { 
-            textContent: 'å°šæœªå‰µå»ºä»»ä½•è§’è‰²ï¼Œè«‹å…ˆåœ¨è§’è‰²ç®¡ç†ä¸­å‰µå»ºè§’è‰²' 
+            textContent: '©|¥¼³Ğ«Ø¥ô¦ó¨¤¦â¡A½Ğ¥ı¦b¨¤¦âºŞ²z¤¤³Ğ«Ø¨¤¦â' 
         }));
     }
     profile.appendChild(characterCard);

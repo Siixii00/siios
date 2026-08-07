@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 import { backupManager } from '../../core/backup-manager.js';
@@ -9,7 +9,7 @@ async function renderBackupSettings() {
     const container = createElement('div', 'app-container bg-ios-bg');
 
     const header = createIOSNavBar({
-        title: 'è³‡æ–™å‚™ä»½èˆ‡é‚„åŸ',
+        title: '¸ê®Æ³Æ¥÷»PÁÙ­ì',
         backPath: '/settings'
     });
     container.appendChild(header);
@@ -18,41 +18,41 @@ async function renderBackupSettings() {
     main.style.marginTop = 'calc(44px + env(safe-area-inset-top, 0px))';
     main.style.paddingTop = '16px';
 
-    // å–å¾—å‚™ä»½ç‹€æ…‹
+    // ¨ú±o³Æ¥÷ª¬ºA
     const status = await backupManager.getBackupStatus();
     const githubUser = await SettingsDB.get('github_user');
     const googleUser = await SettingsDB.get('google_drive_user');
 
-    // ç‹€æ…‹ç¸½è¦½
+    // ª¬ºAÁ`Äı
     const summarySection = createElement('div', 'mx-4 mb-4');
     const summaryCard = createElement('div', 'bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl p-4 text-white');
     
     summaryCard.innerHTML = `
-        <h2 class='font-bold mb-2'>å‚™ä»½ç‹€æ…‹ç¸½è¦½</h2>
+        <h2 class='font-bold mb-2'>³Æ¥÷ª¬ºAÁ`Äı</h2>
         <div class='grid grid-cols-3 gap-2 text-center'>
             <div>
-                <div class='text-2xl'>ğŸ“±</div>
-                <div class='text-xs mt-1'>æœ¬åœ°</div>
-                <div class='text-xs opacity-80'>${status.local.lastBackup ? new Date(status.local.lastBackup).toLocaleDateString() : 'æœªå‚™ä»½'}</div>
+                <div class='text-2xl'>??</div>
+                <div class='text-xs mt-1'>¥»¦a</div>
+                <div class='text-xs opacity-80'>${status.local.lastBackup ? new Date(status.local.lastBackup).toLocaleDateString() : '¥¼³Æ¥÷'}</div>
             </div>
             <div>
-                <div class='text-2xl'>${status.github.connected ? 'âœ“' : 'â—‹'}</div>
+                <div class='text-2xl'>${status.github.connected ? '?' : '¡³'}</div>
                 <div class='text-xs mt-1'>GitHub</div>
-                <div class='text-xs opacity-80'>${status.github.hasBackup ? 'å·²å‚™ä»½' : (status.github.connected ? 'æœªå‚™ä»½' : 'æœªé€£æ¥')}</div>
+                <div class='text-xs opacity-80'>${status.github.hasBackup ? '¤w³Æ¥÷' : (status.github.connected ? '¥¼³Æ¥÷' : '¥¼³s±µ')}</div>
             </div>
             <div>
-                <div class='text-2xl'>${status.googleDrive.connected ? 'âœ“' : 'â—‹'}</div>
+                <div class='text-2xl'>${status.googleDrive.connected ? '?' : '¡³'}</div>
                 <div class='text-xs mt-1'>GDrive</div>
-                <div class='text-xs opacity-80'>${status.googleDrive.hasBackup ? 'å·²å‚™ä»½' : (status.googleDrive.connected ? 'æœªå‚™ä»½' : 'æœªé€£æ¥')}</div>
+                <div class='text-xs opacity-80'>${status.googleDrive.hasBackup ? '¤w³Æ¥÷' : (status.googleDrive.connected ? '¥¼³Æ¥÷' : '¥¼³s±µ')}</div>
             </div>
         </div>
     `;
     summarySection.appendChild(summaryCard);
     main.appendChild(summarySection);
 
-    // æœ¬åœ°å‚™ä»½å€
+    // ¥»¦a³Æ¥÷°Ï
     const localSection = createElement('div', 'ios-grouped-list mx-4 mt-4');
-    localSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'æœ¬åœ°å‚™ä»½' }));
+    localSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: '¥»¦a³Æ¥÷' }));
 
     const localCard = createElement('div', 'bg-white rounded-xl shadow-sm');
 
@@ -63,18 +63,18 @@ async function renderBackupSettings() {
                 <span class='material-symbols-outlined text-blue-600'>download</span>
             </div>
             <div class='flex-1'>
-                <div class='font-medium'>ä¸‹è¼‰å‚™ä»½æª”æ¡ˆ (JSON)</div>
-                <div class='text-sm text-ios-muted'>å°‡æ‰€æœ‰è³‡æ–™åŒ¯å‡ºç‚º JSON æª”æ¡ˆï¼Œæ‰‹å‹•ä¿å­˜</div>
+                <div class='font-medium'>¤U¸ü³Æ¥÷ÀÉ®× (JSON)</div>
+                <div class='text-sm text-ios-muted'>±N©Ò¦³¸ê®Æ¶×¥X¬° JSON ÀÉ®×¡A¤â°Ê«O¦s</div>
             </div>
         </div>
     `;
     localExportBtn.onclick = async () => {
-        createToast('æ­£åœ¨åŒ¯å‡ºè³‡æ–™...', 'info');
+        createToast('¥¿¦b¶×¥X¸ê®Æ...', 'info');
         try {
             const result = await backupManager.downloadLocalBackup();
-            createToast(`å·²ä¸‹è¼‰ï¼š${result.filename}`, 'success');
+            createToast(`¤w¤U¸ü¡G${result.filename}`, 'success');
         } catch (e) {
-            createToast('åŒ¯å‡ºå¤±æ•—ï¼š' + e.message, 'error');
+            createToast('¶×¥X¥¢±Ñ¡G' + e.message, 'error');
         }
     };
     localCard.appendChild(localExportBtn);
@@ -86,8 +86,8 @@ async function renderBackupSettings() {
                 <span class='material-symbols-outlined text-green-600'>upload</span>
             </div>
             <div class='flex-1'>
-                <div class='font-medium'>å¾æª”æ¡ˆé‚„åŸ</div>
-                <div class='text-sm text-ios-muted'>é¸æ“‡ JSON å‚™ä»½æª”æ¡ˆåŒ¯å…¥é‚„åŸ</div>
+                <div class='font-medium'>±qÀÉ®×ÁÙ­ì</div>
+                <div class='text-sm text-ios-muted'>¿ï¾Ü JSON ³Æ¥÷ÀÉ®×¶×¤JÁÙ­ì</div>
             </div>
         </div>
     `;
@@ -97,9 +97,9 @@ async function renderBackupSettings() {
     localSection.appendChild(localCard);
     main.appendChild(localSection);
 
-    // GitHub å‚™ä»½å€
+    // GitHub ³Æ¥÷°Ï
     const githubSection = createElement('div', 'ios-grouped-list mx-4 mt-6');
-    githubSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'GitHub é›²ç«¯å‚™ä»½' }));
+    githubSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'GitHub ¶³ºİ³Æ¥÷' }));
 
     const githubCard = createElement('div', 'bg-white rounded-xl shadow-sm');
 
@@ -110,19 +110,19 @@ async function renderBackupSettings() {
 
     const githubStatusText = createElement('div', 'flex-1');
     githubStatusText.appendChild(createElement('span', 'font-medium', { 
-        textContent: githubUser ? `å·²é€£æ¥ï¼š@${githubUser.login}` : 'æœªé€£æ¥ GitHub' 
+        textContent: githubUser ? `¤w³s±µ¡G@${githubUser.login}` : '¥¼³s±µ GitHub' 
     }));
     if (githubUser) {
         githubStatusText.appendChild(createElement('span', 'block text-sm text-ios-muted', { 
             textContent: status.github.hasBackup ? 
-                `ä¸Šæ¬¡å‚™ä»½ï¼š${status.github.lastModified ? new Date(status.github.lastModified).toLocaleString() : 'æœªçŸ¥'}` : 
-                'å°šæœªå‚™ä»½' 
+                `¤W¦¸³Æ¥÷¡G${status.github.lastModified ? new Date(status.github.lastModified).toLocaleString() : '¥¼ª¾'}` : 
+                '©|¥¼³Æ¥÷' 
         }));
     }
     githubStatusCell.appendChild(githubStatusText);
     githubCard.appendChild(githubStatusCell);
 
-    // GitHub é€£æ¥æŒ‰éˆ•
+    // GitHub ³s±µ«ö¶s
     const githubConnectBtn = createElement('button', 'ios-list-cell w-full text-left border-t');
     githubConnectBtn.innerHTML = `
         <div class='flex items-center gap-3'>
@@ -130,14 +130,14 @@ async function renderBackupSettings() {
                 <span class='material-symbols-outlined'>link</span>
             </div>
             <div class='flex-1'>
-                <div class='font-medium'>${githubUser ? 'é‡æ–°é€£æ¥ / è¨­å®š' : 'é€£æ¥ GitHub'}</div>
+                <div class='font-medium'>${githubUser ? '­«·s³s±µ / ³]©w' : '³s±µ GitHub'}</div>
             </div>
         </div>
     `;
     githubConnectBtn.onclick = () => showGitHubDialog(container);
     githubCard.appendChild(githubConnectBtn);
 
-    // GitHub å‚™ä»½/é‚„åŸæŒ‰éˆ•
+    // GitHub ³Æ¥÷/ÁÙ­ì«ö¶s
     if (githubUser) {
         const githubBackupBtn = createElement('button', 'ios-list-cell w-full text-left border-t');
         githubBackupBtn.innerHTML = `
@@ -146,19 +146,19 @@ async function renderBackupSettings() {
                     <span class='material-symbols-outlined text-purple-600'>cloud_upload</span>
                 </div>
                 <div class='flex-1'>
-                    <div class='font-medium'>ç«‹å³å‚™ä»½åˆ° GitHub</div>
-                    <div class='text-sm text-ios-muted'>ä¸Šå‚³å‚™ä»½åˆ°ç§äººå€‰åº«</div>
+                    <div class='font-medium'>¥ß§Y³Æ¥÷¨ì GitHub</div>
+                    <div class='text-sm text-ios-muted'>¤W¶Ç³Æ¥÷¨ì¨p¤H­Ü®w</div>
                 </div>
             </div>
         `;
         githubBackupBtn.onclick = async () => {
-            createToast('æ­£åœ¨ä¸Šå‚³åˆ° GitHub...', 'info');
+            createToast('¥¿¦b¤W¶Ç¨ì GitHub...', 'info');
             try {
                 await backupManager.pushToGitHub();
-                createToast('å·²å‚™ä»½åˆ° GitHub', 'success');
+                createToast('¤w³Æ¥÷¨ì GitHub', 'success');
                 Router.navigate('/settings/backup');
             } catch (e) {
-                createToast('å‚™ä»½å¤±æ•—ï¼š' + e.message, 'error');
+                createToast('³Æ¥÷¥¢±Ñ¡G' + e.message, 'error');
             }
         };
         githubCard.appendChild(githubBackupBtn);
@@ -170,20 +170,20 @@ async function renderBackupSettings() {
                     <span class='material-symbols-outlined text-indigo-600'>cloud_download</span>
                 </div>
                 <div class='flex-1'>
-                    <div class='font-medium'>å¾ GitHub é‚„åŸ</div>
-                    <div class='text-sm text-ios-muted'>ä¸‹è¼‰ä¸¦åŒ¯å…¥é›²ç«¯å‚™ä»½</div>
+                    <div class='font-medium'>±q GitHub ÁÙ­ì</div>
+                    <div class='text-sm text-ios-muted'>¤U¸ü¨Ã¶×¤J¶³ºİ³Æ¥÷</div>
                 </div>
             </div>
         `;
         githubRestoreBtn.onclick = async () => {
-            if (!confirm('ç¢ºå®šè¦å¾ GitHub é‚„åŸå—ï¼Ÿç¾æœ‰è³‡æ–™å°‡æœƒåˆä½µã€‚')) return;
-            createToast('æ­£åœ¨å¾ GitHub ä¸‹è¼‰...', 'info');
+            if (!confirm('½T©w­n±q GitHub ÁÙ­ì¶Ü¡H²{¦³¸ê®Æ±N·|¦X¨Ö¡C')) return;
+            createToast('¥¿¦b±q GitHub ¤U¸ü...', 'info');
             try {
                 const result = await backupManager.pullFromGitHub();
-                createToast(`é‚„åŸå®Œæˆï¼ŒåŒ¯å…¥äº† ${result.report.imported.chats || 0} å€‹èŠå¤©å®¤`, 'success');
+                createToast(`ÁÙ­ì§¹¦¨¡A¶×¤J¤F ${result.report.imported.chats || 0} ­Ó²á¤Ñ«Ç`, 'success');
                 Router.navigate('/chats');
             } catch (e) {
-                createToast('é‚„åŸå¤±æ•—ï¼š' + e.message, 'error');
+                createToast('ÁÙ­ì¥¢±Ñ¡G' + e.message, 'error');
             }
         };
         githubCard.appendChild(githubRestoreBtn);
@@ -192,9 +192,9 @@ async function renderBackupSettings() {
     githubSection.appendChild(githubCard);
     main.appendChild(githubSection);
 
-    // Google Drive å‚™ä»½å€
+    // Google Drive ³Æ¥÷°Ï
     const googleSection = createElement('div', 'ios-grouped-list mx-4 mt-6');
-    googleSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'Google Drive å‚™ä»½' }));
+    googleSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'Google Drive ³Æ¥÷' }));
 
     const googleCard = createElement('div', 'bg-white rounded-xl shadow-sm');
 
@@ -205,12 +205,12 @@ async function renderBackupSettings() {
 
     const googleStatusText = createElement('div', 'flex-1');
     googleStatusText.appendChild(createElement('span', 'font-medium', { 
-        textContent: googleUser ? `å·²é€£æ¥ï¼š${googleUser.displayName || 'Google å¸³æˆ¶'}` : 'æœªé€£æ¥ Google Drive' 
+        textContent: googleUser ? `¤w³s±µ¡G${googleUser.displayName || 'Google ±b¤á'}` : '¥¼³s±µ Google Drive' 
     }));
     googleStatusCell.appendChild(googleStatusText);
     googleCard.appendChild(googleStatusCell);
 
-    // Google Drive é€£æ¥æŒ‰éˆ•
+    // Google Drive ³s±µ«ö¶s
     const googleConnectBtn = createElement('button', 'ios-list-cell w-full text-left border-t');
     googleConnectBtn.innerHTML = `
         <div class='flex items-center gap-3'>
@@ -218,7 +218,7 @@ async function renderBackupSettings() {
                 <span class='material-symbols-outlined text-red-500'>link</span>
             </div>
             <div class='flex-1'>
-                <div class='font-medium'>${googleUser ? 'é‡æ–°é€£æ¥ Google Drive' : 'é€£æ¥ Google Drive'}</div>
+                <div class='font-medium'>${googleUser ? '­«·s³s±µ Google Drive' : '³s±µ Google Drive'}</div>
             </div>
         </div>
     `;
@@ -233,19 +233,19 @@ async function renderBackupSettings() {
                     <span class='material-symbols-outlined text-green-600'>cloud_upload</span>
                 </div>
                 <div class='flex-1'>
-                    <div class='font-medium'>ç«‹å³å‚™ä»½åˆ° Google Drive</div>
-                    <div class='text-sm text-ios-muted'>ä¿å­˜åˆ°æ‡‰ç”¨ç¨‹å¼å°ˆç”¨è³‡æ–™å¤¾</div>
+                    <div class='font-medium'>¥ß§Y³Æ¥÷¨ì Google Drive</div>
+                    <div class='text-sm text-ios-muted'>«O¦s¨ìÀ³¥Îµ{¦¡±M¥Î¸ê®Æ§¨</div>
                 </div>
             </div>
         `;
         googleBackupBtn.onclick = async () => {
-            createToast('æ­£åœ¨ä¸Šå‚³åˆ° Google Drive...', 'info');
+            createToast('¥¿¦b¤W¶Ç¨ì Google Drive...', 'info');
             try {
                 await backupManager.uploadToGoogleDrive();
-                createToast('å·²å‚™ä»½åˆ° Google Drive', 'success');
+                createToast('¤w³Æ¥÷¨ì Google Drive', 'success');
                 Router.navigate('/settings/backup');
             } catch (e) {
-                createToast('å‚™ä»½å¤±æ•—ï¼š' + e.message, 'error');
+                createToast('³Æ¥÷¥¢±Ñ¡G' + e.message, 'error');
             }
         };
         googleCard.appendChild(googleBackupBtn);
@@ -257,20 +257,20 @@ async function renderBackupSettings() {
                     <span class='material-symbols-outlined text-teal-600'>cloud_download</span>
                 </div>
                 <div class='flex-1'>
-                    <div class='font-medium'>å¾ Google Drive é‚„åŸ</div>
-                    <div class='text-sm text-ios-muted'>ä¸‹è¼‰ä¸¦åŒ¯å…¥é›²ç«¯å‚™ä»½</div>
+                    <div class='font-medium'>±q Google Drive ÁÙ­ì</div>
+                    <div class='text-sm text-ios-muted'>¤U¸ü¨Ã¶×¤J¶³ºİ³Æ¥÷</div>
                 </div>
             </div>
         `;
         googleRestoreBtn.onclick = async () => {
-            if (!confirm('ç¢ºå®šè¦å¾ Google Drive é‚„åŸå—ï¼Ÿç¾æœ‰è³‡æ–™å°‡æœƒåˆä½µã€‚')) return;
-            createToast('æ­£åœ¨å¾ Google Drive ä¸‹è¼‰...', 'info');
+            if (!confirm('½T©w­n±q Google Drive ÁÙ­ì¶Ü¡H²{¦³¸ê®Æ±N·|¦X¨Ö¡C')) return;
+            createToast('¥¿¦b±q Google Drive ¤U¸ü...', 'info');
             try {
                 const result = await backupManager.downloadFromGoogleDrive();
-                createToast(`é‚„åŸå®Œæˆï¼ŒåŒ¯å…¥äº† ${result.report.imported.chats || 0} å€‹èŠå¤©å®¤`, 'success');
+                createToast(`ÁÙ­ì§¹¦¨¡A¶×¤J¤F ${result.report.imported.chats || 0} ­Ó²á¤Ñ«Ç`, 'success');
                 Router.navigate('/chats');
             } catch (e) {
-                createToast('é‚„åŸå¤±æ•—ï¼š' + e.message, 'error');
+                createToast('ÁÙ­ì¥¢±Ñ¡G' + e.message, 'error');
             }
         };
         googleCard.appendChild(googleRestoreBtn);
@@ -279,14 +279,14 @@ async function renderBackupSettings() {
     googleSection.appendChild(googleCard);
     main.appendChild(googleSection);
 
-    // è‡ªå‹•å‚™ä»½è¨­å®š
+    // ¦Û°Ê³Æ¥÷³]©w
     const autoSection = createElement('div', 'ios-grouped-list mx-4 mt-6');
-    autoSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'è‡ªå‹•å‚™ä»½è¨­å®š' }));
+    autoSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: '¦Û°Ê³Æ¥÷³]©w' }));
 
     const autoCard = createElement('div', 'bg-white rounded-xl shadow-sm');
 
     const autoToggle = createElement('div', 'ios-list-cell flex items-center justify-between');
-    autoToggle.appendChild(createElement('span', 'font-medium', { textContent: 'å•Ÿç”¨è‡ªå‹•å‚™ä»½' }));
+    autoToggle.appendChild(createElement('span', 'font-medium', { textContent: '±Ò¥Î¦Û°Ê³Æ¥÷' }));
     
     const toggle = createElement('button', `relative w-12 h-7 rounded-full transition-colors ${status.autoBackup.enabled ? 'bg-green-500' : 'bg-gray-300'}`);
     const toggleKnob = createElement('div', 'absolute top-1 w-5 h-5 bg-white rounded-full shadow transition-transform');
@@ -298,10 +298,10 @@ async function renderBackupSettings() {
     toggle.onclick = async () => {
         if (status.autoBackup.enabled) {
             await backupManager.disableAutoBackup();
-            createToast('å·²åœç”¨è‡ªå‹•å‚™ä»½');
+            createToast('¤w°±¥Î¦Û°Ê³Æ¥÷');
         } else {
             await backupManager.enableAutoBackup(24);
-            createToast('å·²å•Ÿç”¨è‡ªå‹•å‚™ä»½ï¼ˆæ¯ 24 å°æ™‚ï¼‰');
+            createToast('¤w±Ò¥Î¦Û°Ê³Æ¥÷¡]¨C 24 ¤p®É¡^');
         }
         Router.navigate('/settings/backup');
     };
@@ -309,12 +309,12 @@ async function renderBackupSettings() {
     autoSection.appendChild(autoCard);
     main.appendChild(autoSection);
 
-    // ä¸€éµå®Œæ•´å‚™ä»½æŒ‰éˆ•
+    // ¤@Áä§¹¾ã³Æ¥÷«ö¶s
     const backupAllSection = createElement('div', 'mx-4 mt-6');
     const backupAllBtn = createElement('button', 'ios-btn ios-btn-primary w-full py-4');
-    backupAllBtn.innerHTML = '<span class='material-symbols-outlined mr-2'>backup</span> ä¸€éµå®Œæ•´å‚™ä»½ï¼ˆæœ¬åœ° + GitHub + Google Driveï¼‰';
+    backupAllBtn.innerHTML = "`<span class=`"`material-symbols-outlined mr-2`"`>backup</span> ¤@Áä§¹¾ã³Æ¥÷¡]¥»¦a + GitHub + Google Drive¡^`";
     backupAllBtn.onclick = async () => {
-        createToast('æ­£åœ¨åŸ·è¡Œå®Œæ•´å‚™ä»½...', 'info');
+        createToast('¥¿¦b°õ¦æ§¹¾ã³Æ¥÷...', 'info');
         
         const results = { local: false, github: false, google: false };
         
@@ -338,7 +338,7 @@ async function renderBackupSettings() {
         }
 
         const successCount = Object.values(results).filter(v => v).length;
-        createToast(`å‚™ä»½å®Œæˆï¼š${successCount}/3 å€‹ä½ç½®æˆåŠŸ`, successCount > 0 ? 'success' : 'error');
+        createToast(`³Æ¥÷§¹¦¨¡G${successCount}/3 ­Ó¦ì¸m¦¨¥\`, successCount > 0 ? 'success' : 'error');
     };
     backupAllSection.appendChild(backupAllBtn);
     main.appendChild(backupAllSection);
@@ -348,18 +348,18 @@ async function renderBackupSettings() {
     return { element: container, cleanup: null };
 }
 
-// é¡¯ç¤ºåŒ¯å…¥å°è©±æ¡†
+// Åã¥Ü¶×¤J¹ï¸Ü®Ø
 function showImportDialog(container) {
     const overlay = createElement('div', 'fixed inset-0 bg-black/50 z-50 flex items-center justify-center');
     const dialog = createElement('div', 'bg-white rounded-xl p-6 mx-4 max-w-md w-full');
 
     dialog.innerHTML = `
-        <h3 class='font-bold text-lg mb-4'>å¾ JSON æª”æ¡ˆé‚„åŸ</h3>
-        <p class='text-sm text-ios-muted mb-4'>é¸æ“‡ä¹‹å‰ä¸‹è¼‰çš„å‚™ä»½æª”æ¡ˆï¼Œè³‡æ–™å°‡æœƒèˆ‡ç¾æœ‰è³‡æ–™åˆä½µã€‚</p>
+        <h3 class='font-bold text-lg mb-4'>±q JSON ÀÉ®×ÁÙ­ì</h3>
+        <p class='text-sm text-ios-muted mb-4'>¿ï¾Ü¤§«e¤U¸üªº³Æ¥÷ÀÉ®×¡A¸ê®Æ±N·|»P²{¦³¸ê®Æ¦X¨Ö¡C</p>
         <input type='file' accept='.json' class='w-full p-3 border rounded-lg mb-4' id='import-file-input'>
         <div class='flex gap-2'>
-            <button class='ios-btn ios-btn-secondary flex-1' id='import-cancel'>å–æ¶ˆ</button>
-            <button class='ios-btn ios-btn-primary flex-1' id='import-confirm'>é‚„åŸ</button>
+            <button class='ios-btn ios-btn-secondary flex-1' id='import-cancel'>¨ú®ø</button>
+            <button class='ios-btn ios-btn-primary flex-1' id='import-confirm'>ÁÙ­ì</button>
         </div>
     `;
 
@@ -371,38 +371,38 @@ function showImportDialog(container) {
         const input = dialog.querySelector('#import-file-input');
         const file = input.files[0];
         if (!file) {
-            createToast('è«‹é¸æ“‡æª”æ¡ˆ', 'error');
+            createToast('½Ğ¿ï¾ÜÀÉ®×', 'error');
             return;
         }
 
         try {
             const text = await file.text();
             const data = JSON.parse(text);
-            createToast('æ­£åœ¨åŒ¯å…¥è³‡æ–™...', 'info');
+            createToast('¥¿¦b¶×¤J¸ê®Æ...', 'info');
             
             const report = await backupManager.importAllData(data);
             
-            createToast(`é‚„åŸå®Œæˆï¼Œå…±åŒ¯å…¥ ${Object.values(report.imported).reduce((a, b) => a + b, 0)} ç­†è³‡æ–™`, 'success');
+            createToast(`ÁÙ­ì§¹¦¨¡A¦@¶×¤J ${Object.values(report.imported).reduce((a, b) => a + b, 0)} µ§¸ê®Æ`, 'success');
             overlay.remove();
             Router.navigate('/chats');
         } catch (e) {
-            createToast('åŒ¯å…¥å¤±æ•—ï¼š' + e.message, 'error');
+            createToast('¶×¤J¥¢±Ñ¡G' + e.message, 'error');
         }
     };
 }
 
-// é¡¯ç¤º GitHub é€£æ¥å°è©±æ¡†
+// Åã¥Ü GitHub ³s±µ¹ï¸Ü®Ø
 function showGitHubDialog(container) {
     const overlay = createElement('div', 'fixed inset-0 bg-black/50 z-50 flex items-center justify-center');
     const dialog = createElement('div', 'bg-white rounded-xl p-6 mx-4 max-w-md w-full');
 
     dialog.innerHTML = `
-        <h3 class='font-bold text-lg mb-4'>é€£æ¥ GitHub</h3>
-        <p class='text-sm text-ios-muted mb-4'>éœ€è¦ GitHub Personal Access Tokenï¼Œéœ€æœ‰ repo æ¬Šé™ã€‚</p>
+        <h3 class='font-bold text-lg mb-4'>³s±µ GitHub</h3>
+        <p class='text-sm text-ios-muted mb-4'>»İ­n GitHub Personal Access Token¡A»İ¦³ repo Åv­­¡C</p>
         <input type='password' placeholder='ghp_xxxxxxxxxxxx' class='w-full p-3 border rounded-lg mb-4' id='github-token-input'>
         <div class='flex gap-2'>
-            <button class='ios-btn ios-btn-secondary flex-1' id='github-cancel'>å–æ¶ˆ</button>
-            <button class='ios-btn ios-btn-primary flex-1' id='github-connect'>é€£æ¥</button>
+            <button class='ios-btn ios-btn-secondary flex-1' id='github-cancel'>¨ú®ø</button>
+            <button class='ios-btn ios-btn-primary flex-1' id='github-connect'>³s±µ</button>
         </div>
     `;
 
@@ -413,45 +413,45 @@ function showGitHubDialog(container) {
     dialog.querySelector('#github-connect').onclick = async () => {
         const token = dialog.querySelector('#github-token-input').value.trim();
         if (!token) {
-            createToast('è«‹è¼¸å…¥ Token', 'error');
+            createToast('½Ğ¿é¤J Token', 'error');
             return;
         }
 
-        createToast('æ­£åœ¨é€£æ¥...', 'info');
+        createToast('¥¿¦b³s±µ...', 'info');
         const result = await backupManager.connectGitHub(token);
         
         if (result.success) {
-            createToast(`å·²é€£æ¥ï¼š@${result.user.login}`, 'success');
+            createToast(`¤w³s±µ¡G@${result.user.login}`, 'success');
             overlay.remove();
             Router.navigate('/settings/backup');
         } else {
-            createToast('é€£æ¥å¤±æ•—ï¼š' + result.error, 'error');
+            createToast('³s±µ¥¢±Ñ¡G' + result.error, 'error');
         }
     };
 }
 
-// é¡¯ç¤º Google Drive é€£æ¥å°è©±æ¡†
+// Åã¥Ü Google Drive ³s±µ¹ï¸Ü®Ø
 function showGoogleDriveDialog(container) {
     const overlay = createElement('div', 'fixed inset-0 bg-black/50 z-50 flex items-center justify-center');
     const dialog = createElement('div', 'bg-white rounded-xl p-6 mx-4 max-w-md w-full');
 
     dialog.innerHTML = `
-        <h3 class='font-bold text-lg mb-4'>é€£æ¥ Google Drive</h3>
+        <h3 class='font-bold text-lg mb-4'>³s±µ Google Drive</h3>
         <p class='text-sm text-ios-muted mb-4'>
-            è«‹å…ˆåœ¨ 
+            ½Ğ¥ı¦b 
             <a href='https://console.cloud.google.com/apis/credentials' target='_blank' class='text-blue-500 underline'>Google Cloud Console</a> 
-            å»ºç«‹ OAuth 2.0 ç”¨æˆ¶ç«¯ IDï¼Œä¸¦è¼¸å…¥å­˜å–æ¬Šæ–ã€‚
+            «Ø¥ß OAuth 2.0 ¥Î¤áºİ ID¡A¨Ã¿é¤J¦s¨úÅv§ú¡C
         </p>
-        <input type='password' placeholder='è¼¸å…¥ Google Access Token' class='w-full p-3 border rounded-lg mb-4' id='google-token-input'>
+        <input type='password' placeholder='¿é¤J Google Access Token' class='w-full p-3 border rounded-lg mb-4' id='google-token-input'>
         <div class='text-xs text-ios-muted mb-4'>
-            æˆ–é»æ“Šä¸‹æ–¹æŒ‰éˆ•ç›´æ¥å–å¾— Token
+            ©ÎÂIÀ»¤U¤è«ö¶sª½±µ¨ú±o Token
         </div>
         <button class='ios-btn ios-btn-secondary w-full mb-4' id='google-oauth-btn'>
-            ä½¿ç”¨ Google å¸³æˆ¶ç™»å…¥
+            ¨Ï¥Î Google ±b¤áµn¤J
         </button>
         <div class='flex gap-2'>
-            <button class='ios-btn ios-btn-secondary flex-1' id='google-cancel'>å–æ¶ˆ</button>
-            <button class='ios-btn ios-btn-primary flex-1' id='google-connect'>é€£æ¥</button>
+            <button class='ios-btn ios-btn-secondary flex-1' id='google-cancel'>¨ú®ø</button>
+            <button class='ios-btn ios-btn-primary flex-1' id='google-connect'>³s±µ</button>
         </div>
     `;
 
@@ -470,24 +470,24 @@ function showGoogleDriveDialog(container) {
     dialog.querySelector('#google-connect').onclick = async () => {
         const token = dialog.querySelector('#google-token-input').value.trim();
         if (!token) {
-            createToast('è«‹è¼¸å…¥ Access Token', 'error');
+            createToast('½Ğ¿é¤J Access Token', 'error');
             return;
         }
 
-        createToast('æ­£åœ¨é€£æ¥...', 'info');
+        createToast('¥¿¦b³s±µ...', 'info');
         const result = await backupManager.connectGoogleDrive(token);
         
         if (result.success) {
-            createToast('å·²é€£æ¥ Google Drive', 'success');
+            createToast('¤w³s±µ Google Drive', 'success');
             overlay.remove();
             Router.navigate('/settings/backup');
         } else {
-            createToast('é€£æ¥å¤±æ•—ï¼š' + result.error, 'error');
+            createToast('³s±µ¥¢±Ñ¡G' + result.error, 'error');
         }
     };
 }
 
-// è™•ç† Google OAuth å›èª¿
+// ³B²z Google OAuth ¦^½Õ
 async function handleGoogleOAuthCallback() {
     const hash = window.location.hash;
     if (hash && hash.includes('access_token')) {
@@ -497,9 +497,9 @@ async function handleGoogleOAuthCallback() {
         if (accessToken) {
             const result = await backupManager.connectGoogleDrive(accessToken);
             if (result.success) {
-                createToast('å·²é€£æ¥ Google Drive', 'success');
+                createToast('¤w³s±µ Google Drive', 'success');
             } else {
-                createToast('é€£æ¥å¤±æ•—ï¼š' + result.error, 'error');
+                createToast('³s±µ¥¢±Ñ¡G' + result.error, 'error');
             }
         }
         
@@ -507,14 +507,14 @@ async function handleGoogleOAuthCallback() {
     }
 }
 
-// åœ¨é é¢è¼‰å…¥æ™‚æª¢æŸ¥ OAuth å›èª¿
+// ¦b­¶­±¸ü¤J®ÉÀË¬d OAuth ¦^½Õ
 if (typeof window !== 'undefined') {
     handleGoogleOAuthCallback();
 }
 
 export default {
     id: 'backup-settings',
-    name: 'è³‡æ–™å‚™ä»½èˆ‡é‚„åŸ',
+    name: '¸ê®Æ³Æ¥÷»PÁÙ­ì',
     routes: [
         { path: '/settings/backup', render: renderBackupSettings }
     ],
