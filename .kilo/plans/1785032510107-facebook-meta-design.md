@@ -1,7 +1,7 @@
 # Facebook App — Meta Design System Implementation
 
 ## Goal
-Rewrite `js/apps/facebook/style.css` using Meta's design tokens from `DESIGN-meta.md`. Convert from dark theme to light theme (white canvas).
+Rewrite `js/apps/facebook/style.css` using Meta's design tokens from `docs/design/DESIGN-meta.md`. Convert from dark theme to light theme (white canvas).
 
 ## Design Token Mapping
 

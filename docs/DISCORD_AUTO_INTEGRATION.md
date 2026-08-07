@@ -237,8 +237,8 @@ wrangler deploy
 ## 📚 相關代碼位置
 
 - **PWA 上下文構建**: `js/api.js` → `buildMessages()`
-- **Discord 上下文構建**: `discord-bot-worker.js` → `generateAIResponseWithContext()`
-- **世界書載入**: `discord-bot-worker.js` → `loadWorldInfoContext()`
+- **Discord 上下文構建**: `scripts/discord-bot-worker.js` → `generateAIResponseWithContext()`
+- **世界書載入**: `scripts/discord-bot-worker.js` → `loadWorldInfoContext()`
 - **數據庫結構**: `js/db.js` → `initDB()`
 
 ## 🎊 結論

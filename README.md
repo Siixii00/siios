@@ -275,11 +275,11 @@ wrangler deploy
 
 專案使用手動測試，測試檔案：
 
-- `test-scroll.html`
-- `test-bilibili-api.html`
-- `test-cors.html`
-- `test-error.html`
-- `test-mcp-workers.html`
+- `tests/test-scroll.html`
+- `tests/test-bilibili-api.html`
+- `tests/test-cors.html`
+- `tests/test-error.html`
+- `tests/test-mcp-workers.html`
 
 ---
 

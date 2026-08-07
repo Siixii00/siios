@@ -4,7 +4,7 @@
 
 The SXIOS project is a PWA simulating a phone OS in the browser. It uses vanilla JS with hash-based routing, IndexedDB (via `idb`), and Tailwind CSS loaded from CDN. Apps are registered as ES modules in `js/apps/` with a standard pattern: `index.js` (logic + render) + `style.css` (scoped styles).
 
-Both `exchange-diary` and `personal-wiki` already exist as minimal prototypes. The task is to **redesign them using the Notion design language** from `DESIGN-notion.md` and **add substantial functionality**.
+Both `exchange-diary` and `personal-wiki` already exist as minimal prototypes. The task is to **redesign them using the Notion design language** from `docs/design/DESIGN-notion.md` and **add substantial functionality**.
 
 **Key constraint**: These are NOT separate Next.js projects — they are apps within the existing SXIOS PWA framework. The user's earlier answer about "Next.js + Tailwind" and "two independent projects" needs to be reconciled with the actual codebase, which is a vanilla JS PWA. The redesign must work within the existing architecture.
 

@@ -6,7 +6,7 @@ The SXIOS app is a PWA with an iOS-phone-simulator interface. It currently uses 
 - **iOS-style** for utility/settings screens (including Memory screens)
 - **KakaoTalk-style** for chat screens
 
-The user wants to apply the **Riso design system** (from `DESIGN_riko.md` and `SKILL_riko.md`) to improve the memory system's visual appearance.
+The user wants to apply the **Riso design system** (from `docs/design/DESIGN_riko.md` and `docs/SKILL_riko.md`) to improve the memory system's visual appearance.
 
 ### Riso Design System Tokens
 | Token | Value | Role |

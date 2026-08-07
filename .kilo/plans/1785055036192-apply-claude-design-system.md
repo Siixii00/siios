@@ -2,7 +2,7 @@
 
 ## Context
 
-The user wants to apply the Claude design system (defined in `SKILL_claude.md` and `DESIGN_claude.md`) to the SXIOS mobile web app. The app currently uses an iOS-style design with Kakao-style chat components. The Claude design system is a research-journal aesthetic: warm ivory parchment backgrounds, near-black slate ink, zero shadows, hard-edged contrast, flat buttons with 0px corners, and an asymmetric flat-top/rounded-bottom primary CTA.
+The user wants to apply the Claude design system (defined in `docs/SKILL_claude.md` and `docs/design/DESIGN_claude.md`) to the SXIOS mobile web app. The app currently uses an iOS-style design with Kakao-style chat components. The Claude design system is a research-journal aesthetic: warm ivory parchment backgrounds, near-black slate ink, zero shadows, hard-edged contrast, flat buttons with 0px corners, and an asymmetric flat-top/rounded-bottom primary CTA.
 
 ## Design Tokens (from DESIGN_claude.md)
 

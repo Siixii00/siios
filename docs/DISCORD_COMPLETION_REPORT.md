@@ -148,8 +148,8 @@ E:\new\siios\
 │   │   └── index.js              ✅ 神秘門主頁
 │   └── settings\
 │       ├── index.js              ✅ 添加 Discord 選項
-│       └── discord-settings.js   ✅ Discord 配置頁面
-├── discord-bot-worker.js         ✅ Worker 模板
+│   └── discord-settings.js   ✅ Discord 配置頁面
+├── scripts/discord-bot-worker.js         ✅ Worker 模板
 ├── docs\
 │   └── DISCORD_INTEGRATION.md    ✅ 使用說明文檔
 └── js\apps\registry.js           ✅ 註冊路由
