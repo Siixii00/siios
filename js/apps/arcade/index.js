@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -109,61 +109,61 @@ function renderGachaGame(container) {
   const config = GACHA_CONFIGS[gachaState.currentGame];
   
   container.innerHTML = `
-    <div class="gacha-container">
-      <div class="gacha-header">
-        <div class="game-tabs">
+    <div class='gacha-container'>
+      <div class='gacha-header'>
+        <div class='game-tabs'>
           ${Object.entries(GACHA_CONFIGS).map(([key, cfg]) => `
-            <button class="game-tab ${key === gachaState.currentGame ? 'active' : ''}" data-game="${key}">${cfg.name}</button>
+            <button class='game-tab ${key === gachaState.currentGame ? 'active' : ''}' data-game='${key}'>${cfg.name}</button>
           `).join('')}
         </div>
       </div>
       
-      <div class="gacha-info">
-        <div class="currency-display">
-          <i class="fas fa-gem"></i>
-          <span class="currency-amount">${gachaState.currency}</span>
-          <span class="currency-name">${config.currency}</span>
+      <div class='gacha-info'>
+        <div class='currency-display'>
+          <i class='fas fa-gem'></i>
+          <span class='currency-amount'>${gachaState.currency}</span>
+          <span class='currency-name'>${config.currency}</span>
         </div>
-        <div class="pity-info">
+        <div class='pity-info'>
           <span>保底進度: ${gachaState.pity5}/${config.pity}</span>
         </div>
       </div>
       
-      <div class="gacha-buttons">
-        <button class="gacha-btn single" data-count="1">
-          <span class="btn-label">抽 1 次</span>
-          <span class="btn-cost">${config.pullCost} ${config.currency}</span>
+      <div class='gacha-buttons'>
+        <button class='gacha-btn single' data-count='1'>
+          <span class='btn-label'>抽 1 次</span>
+          <span class='btn-cost'>${config.pullCost} ${config.currency}</span>
         </button>
-        <button class="gacha-btn ten" data-count="10">
-          <span class="btn-label">抽 10 次</span>
-          <span class="btn-cost">${config.pullCost * 10} ${config.currency}</span>
+        <button class='gacha-btn ten' data-count='10'>
+          <span class='btn-label'>抽 10 次</span>
+          <span class='btn-cost'>${config.pullCost * 10} ${config.currency}</span>
         </button>
       </div>
       
-      <div class="gacha-stats">
-        <div class="stat-item">
-          <span class="stat-label">總抽數</span>
-          <span class="stat-value">${gachaState.stats.total}</span>
+      <div class='gacha-stats'>
+        <div class='stat-item'>
+          <span class='stat-label'>總抽數</span>
+          <span class='stat-value'>${gachaState.stats.total}</span>
         </div>
-        <div class="stat-item rarity-5">
-          <span class="stat-label">5★</span>
-          <span class="stat-value">${gachaState.stats.rarity5}</span>
+        <div class='stat-item rarity-5'>
+          <span class='stat-label'>5★</span>
+          <span class='stat-value'>${gachaState.stats.rarity5}</span>
         </div>
-        <div class="stat-item rarity-4">
-          <span class="stat-label">4★</span>
-          <span class="stat-value">${gachaState.stats.rarity4}</span>
+        <div class='stat-item rarity-4'>
+          <span class='stat-label'>4★</span>
+          <span class='stat-value'>${gachaState.stats.rarity4}</span>
         </div>
       </div>
       
-      <div class="gacha-history">
+      <div class='gacha-history'>
         <h3>最近抽卡紀錄</h3>
-        <div class="history-list">
+        <div class='history-list'>
           ${gachaState.history.slice(-10).reverse().map(h => `
-            <div class="history-item rarity-${h.rarity}">
-              <span class="history-rarity">${h.rarity}★</span>
-              <span class="history-name">${h.name}</span>
+            <div class='history-item rarity-${h.rarity}'>
+              <span class='history-rarity'>${h.rarity}★</span>
+              <span class='history-name'>${h.name}</span>
             </div>
-          `).join('') || '<div class="empty-history">尚無紀錄</div>'}
+          `).join('') || '<div class='empty-history'>尚無紀錄</div>'}
         </div>
       </div>
     </div>
@@ -210,15 +210,15 @@ async function renderArcade(params) {
   const container = createElement('div', 'app-container arcade-app');
   
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn">
-        <i class="fas fa-chevron-left"></i> 返回
+    <header class='ios-header'>
+      <button class='ios-back-btn'>
+        <i class='fas fa-chevron-left'></i> 返回
       </button>
-      <h1 class="menu-title">街機廳</h1>
+      <h1 class='menu-title'>街機廳</h1>
     </header>
     
-    <div class="page">
-      <div id="arcade-content"></div>
+    <div class='page'>
+      <div id='arcade-content'></div>
     </div>
   `;
   

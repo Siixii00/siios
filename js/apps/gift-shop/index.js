@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -28,33 +28,33 @@ async function renderGiftShop(params) {
   const counts = {};
   inventory.forEach(g => { counts[g.id] = (counts[g.id] || 0) + 1; });
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-      <h1 class="menu-title">禮物商店</h1>
+    <header class='ios-header'>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+      <h1 class='menu-title'>禮物商店</h1>
     </header>
-    <div class="page">
-      <div class="shop-section">
+    <div class='page'>
+      <div class='shop-section'>
         <h2>禮物</h2>
-        <div class="gift-grid">
+        <div class='gift-grid'>
           ${GIFTS.map(g => `
-            <div class="gift-item" data-id="${g.id}">
-              <span class="gift-icon">${g.icon}</span>
-              <span class="gift-name">${g.name}</span>
-              <span class="gift-price">${g.price} 幣</span>
-              <button class="buy-btn" data-id="${g.id}" data-name="${g.name}" data-price="${g.price}">購買</button>
+            <div class='gift-item' data-id='${g.id}'>
+              <span class='gift-icon'>${g.icon}</span>
+              <span class='gift-name'>${g.name}</span>
+              <span class='gift-price'>${g.price} 幣</span>
+              <button class='buy-btn' data-id='${g.id}' data-name='${g.name}' data-price='${g.price}'>購買</button>
             </div>
           `).join('')}
         </div>
       </div>
-      <div class="inventory-section">
+      <div class='inventory-section'>
         <h2>我的禮物</h2>
-        <div class="inventory-list">
+        <div class='inventory-list'>
           ${Object.keys(counts).length > 0 
             ? Object.entries(counts).map(([id, count]) => {
                 const gift = GIFTS.find(g => g.id === id);
-                return `<div class="inv-item"><span>${gift?.icon} ${gift?.name}</span><span>x${count}</span></div>`;
+                return `<div class='inv-item'><span>${gift?.icon} ${gift?.name}</span><span>x${count}</span></div>`;
               }).join('')
-            : '<div class="empty-inv">尚無禮物</div>'
+            : '<div class='empty-inv'>尚無禮物</div>'
           }
         </div>
       </div>

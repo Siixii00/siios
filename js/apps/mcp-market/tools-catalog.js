@@ -1,4 +1,4 @@
-export const TOOLS_CATALOG = [
+﻿export const TOOLS_CATALOG = [
     {
         id: 'daily_weather',
         category: '日常生活',

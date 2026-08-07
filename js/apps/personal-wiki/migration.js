@@ -1,4 +1,4 @@
-import { SettingsDB, WikiRecordsDB } from '../../db.js';
+﻿import { SettingsDB, WikiRecordsDB } from '../../db.js';
 
 export async function migrateFromSettingsDB() {
     const migrated = await SettingsDB.get('wiki_migrated_to_records');

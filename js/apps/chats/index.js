@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBottomNav, createKakaoChatCell, createEmptyState, createToast, createKakaoBottomSheet } from '../../components.js';
 import { ChatsDB, CharactersDB } from '../../db.js';
 import { CHATS_TABS } from './chats-nav.js';
@@ -14,7 +14,7 @@ async function renderChatsList() {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.navigate('/home')
     });
-    backBtn.innerHTML = '<i class="fas fa-chevron-left"></i> 返回';
+    backBtn.innerHTML = '<i class='fas fa-chevron-left'></i> 返回';
     header.appendChild(backBtn);
     
     const title = createElement('h1', 'menu-title');
@@ -26,7 +26,7 @@ async function renderChatsList() {
     const addBtn = createElement('button', 'header-action', {
         title: '新增對話'
     });
-    addBtn.innerHTML = '<i class="fas fa-plus"></i>';
+    addBtn.innerHTML = '<i class='fas fa-plus'></i>';
     addBtn.onclick = async () => {
         const newChat = await ChatsDB.create({ character_name: 'AI' });
         createToast('已建立新對話');
@@ -37,7 +37,7 @@ async function renderChatsList() {
     const groupBtn = createElement('button', 'header-action', {
         title: '新增群組'
     });
-    groupBtn.innerHTML = '<i class="fas fa-users"></i>';
+    groupBtn.innerHTML = '<i class='fas fa-users'></i>';
     groupBtn.onclick = () => openGroupSheet();
     actions.appendChild(groupBtn);
     
@@ -101,7 +101,7 @@ async function openGroupSheet() {
         row.dataset.charId = char.id;
         
         const avatar = createElement('img', 'w-10 h-10 rounded-full object-cover', {
-            src: char.avatar || 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23E5E5EA"/><text x="50" y="60" text-anchor="middle" font-size="40" fill="%238E8E93">?</text></svg>',
+            src: char.avatar || 'data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23E5E5EA'/><text x='50' y='60' text-anchor='middle' font-size='40' fill='%238E8E93'>?</text></svg>',
             alt: char.name
         });
         row.appendChild(avatar);
@@ -128,7 +128,7 @@ async function openGroupSheet() {
                 selectedGroupMemberIds.push(char.id);
                 checkbox.classList.remove('border-gray-300');
                 checkbox.classList.add('bg-kakao-brown', 'border-kakao-brown');
-                checkbox.innerHTML = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="4"><path d="M20 6L9 17l-5-5"/></svg>';
+                checkbox.innerHTML = '<svg width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='4'><path d='M20 6L9 17l-5-5'/></svg>';
             }
         };
         

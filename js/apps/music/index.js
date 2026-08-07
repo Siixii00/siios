@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
@@ -185,104 +185,104 @@ async function renderMusic(params) {
     const characters = await loadCharacters();
 
     container.innerHTML = `
-        <header class="ios-header music-header">
-            <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-            <h1 class="menu-title">音樂</h1>
-            <div class="header-actions">
-                <button class="header-action" id="refresh-btn" title="重新整理"><i class="fas fa-sync-alt"></i></button>
+        <header class='ios-header music-header'>
+            <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+            <h1 class='menu-title'>音樂</h1>
+            <div class='header-actions'>
+                <button class='header-action' id='refresh-btn' title='重新整理'><i class='fas fa-sync-alt'></i></button>
             </div>
         </header>
 
-        <div class="music-main">
-            <div class="card import-card">
+        <div class='music-main'>
+            <div class='card import-card'>
                 <h2>匯入歌單</h2>
-                <div class="import-row">
-                    <select id="platform-select">
-                        <option value="spotify" ${activePlatform === 'spotify' ? 'selected' : ''}>Spotify</option>
-                        <option value="apple" ${activePlatform === 'apple' ? 'selected' : ''}>Apple Music</option>
+                <div class='import-row'>
+                    <select id='platform-select'>
+                        <option value='spotify' ${activePlatform === 'spotify' ? 'selected' : ''}>Spotify</option>
+                        <option value='apple' ${activePlatform === 'apple' ? 'selected' : ''}>Apple Music</option>
                     </select>
-                    <input type="text" id="playlist-url" placeholder="貼上歌單連結（選填）">
-                    <button id="import-btn">匯入</button>
+                    <input type='text' id='playlist-url' placeholder='貼上歌單連結（選填）'>
+                    <button id='import-btn'>匯入</button>
                 </div>
             </div>
 
-            <div class="card player-card">
+            <div class='card player-card'>
                 <h2>正在播放</h2>
-                <div class="now-playing">
-                    <div class="cover" id="cover-art"></div>
+                <div class='now-playing'>
+                    <div class='cover' id='cover-art'></div>
                     <div>
-                        <h3 id="track-title">尚未播放</h3>
-                        <p id="track-meta">請先匯入歌單</p>
+                        <h3 id='track-title'>尚未播放</h3>
+                        <p id='track-meta'>請先匯入歌單</p>
                     </div>
                 </div>
-                <div class="danmaku-layer" id="danmaku-layer"></div>
-                <div class="progress-wrap">
-                    <span id="current-time">0:00</span>
-                    <input type="range" id="progress" value="0" min="0" max="100">
-                    <span id="total-time">0:00</span>
+                <div class='danmaku-layer' id='danmaku-layer'></div>
+                <div class='progress-wrap'>
+                    <span id='current-time'>0:00</span>
+                    <input type='range' id='progress' value='0' min='0' max='100'>
+                    <span id='total-time'>0:00</span>
                 </div>
-                <div class="controls">
-                    <button class="ctrl" id="prev-btn"><i class="fas fa-backward-step"></i></button>
-                    <button class="ctrl play" id="play-btn"><i class="fas fa-play"></i></button>
-                    <button class="ctrl" id="next-btn"><i class="fas fa-forward-step"></i></button>
+                <div class='controls'>
+                    <button class='ctrl' id='prev-btn'><i class='fas fa-backward-step'></i></button>
+                    <button class='ctrl play' id='play-btn'><i class='fas fa-play'></i></button>
+                    <button class='ctrl' id='next-btn'><i class='fas fa-forward-step'></i></button>
                 </div>
             </div>
 
-            <div class="card queue-card">
-                <div class="queue-head">
+            <div class='card queue-card'>
+                <div class='queue-head'>
                     <h2>播放佇列</h2>
-                    <span id="queue-count">${playlist.length} 首</span>
+                    <span id='queue-count'>${playlist.length} 首</span>
                 </div>
-                <ul class="playlist" id="playlist-list"></ul>
+                <ul class='playlist' id='playlist-list'></ul>
             </div>
 
-            <div class="card companion-card">
+            <div class='card companion-card'>
                 <h2>角色陪伴</h2>
-                <div class="companion-grid">
+                <div class='companion-grid'>
                     <label>選擇角色
-                        <select id="char-select">
-                            <option value="">-- 選擇角色 --</option>
-                            ${characters.map(c => `<option value="${c.id}">${c.name}</option>`).join('')}
+                        <select id='char-select'>
+                            <option value=''>-- 選擇角色 --</option>
+                            ${characters.map(c => `<option value='${c.id}'>${c.name}</option>`).join('')}
                         </select>
                     </label>
                     <label>使用者名稱
-                        <input type="text" id="user-name" placeholder="你的名字">
+                        <input type='text' id='user-name' placeholder='你的名字'>
                     </label>
                 </div>
-                <p class="char-desc" id="char-desc">選擇角色開始一起聽歌</p>
-                <p class="listen-status" id="listen-status"></p>
+                <p class='char-desc' id='char-desc'>選擇角色開始一起聽歌</p>
+                <p class='listen-status' id='listen-status'></p>
             </div>
 
-            <div class="card ai-lab-card">
-                <div class="ai-lab-header">
+            <div class='card ai-lab-card'>
+                <div class='ai-lab-header'>
                     <h2>AI 旋律生成</h2>
-                    <span class="ai-badge">Magenta</span>
+                    <span class='ai-badge'>Magenta</span>
                 </div>
-                <div class="ai-tools-grid">
-                    <div class="ai-tool">
-                        <div class="ai-tool-icon"><i class="fas fa-music"></i></div>
+                <div class='ai-tools-grid'>
+                    <div class='ai-tool'>
+                        <div class='ai-tool-icon'><i class='fas fa-music'></i></div>
                         <h3>生成旋律</h3>
-                        <div class="ai-tool-controls">
-                            <label>音階 <select id="gen-scale"><option value="major">大調</option><option value="minor">小調</option><option value="pentatonic">五聲</option></select></label>
-                            <label>隨機性 <input type="range" id="gen-temp" min="0.1" max="2" step="0.1" value="1"></label>
+                        <div class='ai-tool-controls'>
+                            <label>音階 <select id='gen-scale'><option value='major'>大調</option><option value='minor'>小調</option><option value='pentatonic'>五聲</option></select></label>
+                            <label>隨機性 <input type='range' id='gen-temp' min='0.1' max='2' step='0.1' value='1'></label>
                         </div>
-                        <button class="ai-btn" id="generate-btn"><i class="fas fa-wand-magic-sparkles"></i> 生成</button>
+                        <button class='ai-btn' id='generate-btn'><i class='fas fa-wand-magic-sparkles'></i> 生成</button>
                     </div>
                 </div>
-                <div class="ai-piano-roll">
-                    <div class="piano-roll-header">
+                <div class='ai-piano-roll'>
+                    <div class='piano-roll-header'>
                         <span>鋼琴卷軸</span>
-                        <div class="piano-roll-actions">
-                            <button class="ai-btn-small" id="play-ai-btn"><i class="fas fa-play"></i></button>
-                            <button class="ai-btn-small" id="add-to-playlist-btn"><i class="fas fa-plus"></i> 加入清單</button>
+                        <div class='piano-roll-actions'>
+                            <button class='ai-btn-small' id='play-ai-btn'><i class='fas fa-play'></i></button>
+                            <button class='ai-btn-small' id='add-to-playlist-btn'><i class='fas fa-plus'></i> 加入清單</button>
                         </div>
                     </div>
-                    <canvas id="piano-roll-canvas"></canvas>
+                    <canvas id='piano-roll-canvas'></canvas>
                 </div>
             </div>
         </div>
 
-        <audio id="audio-player" style="display:none"></audio>
+        <audio id='audio-player' style='display:none'></audio>
     `;
 
     const audio = container.querySelector('#audio-player');
@@ -313,13 +313,13 @@ async function renderMusic(params) {
     function renderPlaylistUI() {
         queueCount.textContent = `${playlist.length} 首`;
         if (playlist.length === 0) {
-            playlistList.innerHTML = '<li class="playlist-item"><div><div class="title">尚未匯入歌單</div></div></li>';
+            playlistList.innerHTML = '<li class='playlist-item'><div><div class='title'>尚未匯入歌單</div></div></li>';
             return;
         }
         playlistList.innerHTML = playlist.map((track, index) => `
-            <li><button class="playlist-item ${index === currentIndex ? 'active' : ''}" data-index="${index}" type="button">
-                <div><div class="title">${track.title}</div><div class="meta">${track.artist} · ${track.duration}</div></div>
-                <i class="fas ${index === currentIndex ? 'fa-volume-high' : 'fa-play'}"></i>
+            <li><button class='playlist-item ${index === currentIndex ? 'active' : ''}' data-index='${index}' type='button'>
+                <div><div class='title'>${track.title}</div><div class='meta'>${track.artist} · ${track.duration}</div></div>
+                <i class='fas ${index === currentIndex ? 'fa-volume-high' : 'fa-play'}'></i>
             </button></li>
         `).join('');
     }
@@ -352,7 +352,7 @@ async function renderMusic(params) {
             try {
                 await audio.play();
                 isPlaying = true;
-                playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+                playBtn.innerHTML = '<i class='fas fa-pause'></i>';
                 startDanmaku();
             } catch { pushDanmaku(danmakuLayer, '系統：請手動點擊播放'); }
         }
@@ -361,11 +361,11 @@ async function renderMusic(params) {
     function togglePlay() {
         if (currentIndex < 0 && playlist.length > 0) { loadTrack(0, true); return; }
         if (audio.paused) {
-            audio.play().then(() => { isPlaying = true; playBtn.innerHTML = '<i class="fas fa-pause"></i>'; startDanmaku(); }).catch(() => {});
+            audio.play().then(() => { isPlaying = true; playBtn.innerHTML = '<i class='fas fa-pause'></i>'; startDanmaku(); }).catch(() => {});
         } else {
             audio.pause();
             isPlaying = false;
-            playBtn.innerHTML = '<i class="fas fa-play"></i>';
+            playBtn.innerHTML = '<i class='fas fa-play'></i>';
             stopDanmaku();
         }
     }
@@ -392,7 +392,7 @@ async function renderMusic(params) {
         progressEl.value = 0;
         currentTimeEl.textContent = '0:00';
         totalTimeEl.textContent = '0:00';
-        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+        playBtn.innerHTML = '<i class='fas fa-play'></i>';
         renderPlaylistUI();
         updateTrackUI(null);
         stopDanmaku();

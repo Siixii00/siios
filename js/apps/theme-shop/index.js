@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -26,19 +26,19 @@ async function renderThemeShop(params) {
   await loadOwned();
   const container = createElement('div', 'app-container theme-shop-app');
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-      <h1 class="menu-title">主題商店</h1>
+    <header class='ios-header'>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+      <h1 class='menu-title'>主題商店</h1>
     </header>
-    <div class="page">
-      <div class="theme-grid">
+    <div class='page'>
+      <div class='theme-grid'>
         ${THEMES.map(t => `
-          <div class="theme-item ${owned.includes(t.id) ? 'owned' : ''}" data-id="${t.id}">
-            <div class="theme-icon">${t.icon}</div>
-            <div class="theme-name">${t.name}</div>
+          <div class='theme-item ${owned.includes(t.id) ? 'owned' : ''}' data-id='${t.id}'>
+            <div class='theme-icon'>${t.icon}</div>
+            <div class='theme-name'>${t.name}</div>
             ${owned.includes(t.id) 
-              ? '<span class="owned-badge">已擁有</span>'
-              : `<span class="price">${t.price === 0 ? '免費' : t.price + ' 幣'}</span>`
+              ? '<span class='owned-badge'>已擁有</span>'
+              : `<span class='price'>${t.price === 0 ? '免費' : t.price + ' 幣'}</span>`
             }
           </div>
         `).join('')}

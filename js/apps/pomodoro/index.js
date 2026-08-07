@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 
@@ -164,7 +164,7 @@ async function generateAIEncouragement(charConfig, userConfig, phase, elapsedMin
 4. **語氣**: 根據角色性格決定語氣（溫柔/冷淡/活潑/嚴厲等）。
 5. **長度**: 簡短自然，15-50字。
 
-輸出格式為 JSON: {"message": "你的鼓勵訊息"}`;
+輸出格式為 JSON: {'message': '你的鼓勵訊息'}`;
 
     let contextPrompt = `# 番茄鐘狀態
 - 目前階段: ${phaseDesc}
@@ -222,12 +222,12 @@ async function generateAIEncouragement(charConfig, userConfig, phase, elapsedMin
                 try {
                     parsed = JSON.parse(match[0]);
                 } catch {
-                    return content.trim().replace(/^["']|["']$/g, '');
+                    return content.trim().replace(/^['']|['']$/g, '');
                 }
             }
         }
 
-        return parsed?.message || content.trim().replace(/^["']|["']$/g, '');
+        return parsed?.message || content.trim().replace(/^['']|['']$/g, '');
     } catch {
         return null;
     }
@@ -281,96 +281,96 @@ async function renderPomodoro() {
     currentCompanion = activeCompanion;
     
     container.innerHTML = `
-        <header class="ios-header">
-            <button class="ios-back-btn">
-                <i class="fas fa-chevron-left"></i> 返回
+        <header class='ios-header'>
+            <button class='ios-back-btn'>
+                <i class='fas fa-chevron-left'></i> 返回
             </button>
-            <h1 class="menu-title">番茄鐘</h1>
-            <button class="icon-btn ghost" id="settings-btn">
-                <i class="fas fa-cog"></i>
+            <h1 class='menu-title'>番茄鐘</h1>
+            <button class='icon-btn ghost' id='settings-btn'>
+                <i class='fas fa-cog'></i>
             </button>
         </header>
 
-        <div class="page">
-            <div class="pomodoro-panel">
-                <div class="mode-tabs">
-                    <button class="tab active" data-mode="focus">專注</button>
-                    <button class="tab" data-mode="short">短休</button>
-                    <button class="tab" data-mode="long">長休</button>
+        <div class='page'>
+            <div class='pomodoro-panel'>
+                <div class='mode-tabs'>
+                    <button class='tab active' data-mode='focus'>專注</button>
+                    <button class='tab' data-mode='short'>短休</button>
+                    <button class='tab' data-mode='long'>長休</button>
                 </div>
-                <div class="time-display" id="time-display">${format(remaining)}</div>
-                <div class="status" id="status">Ready</div>
-                <div class="actions">
-                    <button class="primary" id="start-btn">開始</button>
-                    <button class="ghost secondary" id="reset-btn">重置</button>
+                <div class='time-display' id='time-display'>${format(remaining)}</div>
+                <div class='status' id='status'>Ready</div>
+                <div class='actions'>
+                    <button class='primary' id='start-btn'>開始</button>
+                    <button class='ghost secondary' id='reset-btn'>重置</button>
                 </div>
-                <div class="stats">
-                    <div class="stat-item">
-                        <div class="stat-label">已完成</div>
-                        <div class="stat-value" id="completed-count">${completed}</div>
+                <div class='stats'>
+                    <div class='stat-item'>
+                        <div class='stat-label'>已完成</div>
+                        <div class='stat-value' id='completed-count'>${completed}</div>
                     </div>
-                    <div class="stat-item">
-                        <div class="stat-label">循環</div>
-                        <div class="stat-value" id="cycle-info">${cycle} / ${config.longGap}</div>
+                    <div class='stat-item'>
+                        <div class='stat-label'>循環</div>
+                        <div class='stat-value' id='cycle-info'>${cycle} / ${config.longGap}</div>
                     </div>
                 </div>
             </div>
 
-            <div class="companion-card" id="companion-card">
-                <div class="companion-avatar" id="companion-avatar" style="${currentCompanion.avatar ? `background-image: url('${currentCompanion.avatar}')` : 'background: linear-gradient(135deg, #4f8bff, #8ec5ff)'}"></div>
-                <div class="companion-body">
-                    <div class="companion-name" id="companion-name">${currentCompanion.name}</div>
-                    <div class="companion-line" id="companion-line">開始後將定時送上鼓勵</div>
+            <div class='companion-card' id='companion-card'>
+                <div class='companion-avatar' id='companion-avatar' style='${currentCompanion.avatar ? `background-image: url('${currentCompanion.avatar}')` : 'background: linear-gradient(135deg, #4f8bff, #8ec5ff)'}'></div>
+                <div class='companion-body'>
+                    <div class='companion-name' id='companion-name'>${currentCompanion.name}</div>
+                    <div class='companion-line' id='companion-line'>開始後將定時送上鼓勵</div>
                 </div>
-                <button class="ghost" id="select-companion-btn" style="font-size: 12px; padding: 6px 10px;">選擇</button>
+                <button class='ghost' id='select-companion-btn' style='font-size: 12px; padding: 6px 10px;'>選擇</button>
             </div>
 
-            <div class="companion-chat" id="companion-chat"></div>
+            <div class='companion-chat' id='companion-chat'></div>
         </div>
 
-        <div class="panel hidden" id="settings-panel">
-            <div class="panel-header">
+        <div class='panel hidden' id='settings-panel'>
+            <div class='panel-header'>
                 <span>設定</span>
-                <button class="ghost" id="close-settings" style="font-size: 12px; padding: 4px 8px;">關閉</button>
+                <button class='ghost' id='close-settings' style='font-size: 12px; padding: 4px 8px;'>關閉</button>
             </div>
-            <div class="panel-grid">
+            <div class='panel-grid'>
                 <label>專注時間 (分)
-                    <input type="number" id="focus-min" value="${config.focus}" min="1" max="90">
+                    <input type='number' id='focus-min' value='${config.focus}' min='1' max='90'>
                 </label>
                 <label>短休息 (分)
-                    <input type="number" id="short-min" value="${config.short}" min="1" max="30">
+                    <input type='number' id='short-min' value='${config.short}' min='1' max='30'>
                 </label>
                 <label>長休息 (分)
-                    <input type="number" id="long-min" value="${config.long}" min="1" max="60">
+                    <input type='number' id='long-min' value='${config.long}' min='1' max='60'>
                 </label>
                 <label>長休間隔
-                    <input type="number" id="long-gap" value="${config.longGap}" min="1" max="12">
+                    <input type='number' id='long-gap' value='${config.longGap}' min='1' max='12'>
                 </label>
                 <label>夥伴提醒間隔 (分)
-                    <input type="number" id="companion-interval" value="${config.companionInterval}" min="1" max="30">
+                    <input type='number' id='companion-interval' value='${config.companionInterval}' min='1' max='30'>
                 </label>
             </div>
-            <div class="panel-actions">
-                <button class="primary" id="save-settings">儲存</button>
+            <div class='panel-actions'>
+                <button class='primary' id='save-settings'>儲存</button>
             </div>
         </div>
 
-        <div class="panel hidden" id="companion-select-panel">
-            <div class="panel-header">
+        <div class='panel hidden' id='companion-select-panel'>
+            <div class='panel-header'>
                 <span>選擇夥伴</span>
-                <button class="ghost" id="close-companion-select" style="font-size: 12px; padding: 4px 8px;">關閉</button>
+                <button class='ghost' id='close-companion-select' style='font-size: 12px; padding: 4px 8px;'>關閉</button>
             </div>
-            <div class="companion-list" id="companion-list"></div>
+            <div class='companion-list' id='companion-list'></div>
         </div>
 
-        <div class="companion-dialog-overlay hidden" id="companion-dialog-overlay">
-            <div class="companion-dialog">
-                <div class="companion-dialog-header">
-                    <div class="companion-dialog-avatar" id="companion-dialog-avatar"></div>
-                    <div class="companion-dialog-name" id="companion-dialog-name"></div>
+        <div class='companion-dialog-overlay hidden' id='companion-dialog-overlay'>
+            <div class='companion-dialog'>
+                <div class='companion-dialog-header'>
+                    <div class='companion-dialog-avatar' id='companion-dialog-avatar'></div>
+                    <div class='companion-dialog-name' id='companion-dialog-name'></div>
                 </div>
-                <div class="companion-dialog-text" id="companion-dialog-text"></div>
-                <input type="text" class="companion-dialog-input" id="companion-dialog-input" placeholder="回覆...">
+                <div class='companion-dialog-text' id='companion-dialog-text'></div>
+                <input type='text' class='companion-dialog-input' id='companion-dialog-input' placeholder='回覆...'>
             </div>
         </div>
     `;
@@ -579,7 +579,7 @@ async function renderPomodoro() {
 
 你是 ${charName}，正在陪伴 ${userName} 使用番茄鐘專注。
 用角色特有的語氣和方式回應用戶，保持角色一致性。
-輸出 JSON: {"message": "回應內容"}`;
+輸出 JSON: {'message': '回應內容'}`;
 
         try {
             const endpoint = apiConfig.url.endsWith('/chat/completions')
@@ -614,7 +614,7 @@ async function renderPomodoro() {
                 if (match) {
                     try { return JSON.parse(match[0]).message; } catch {}
                 }
-                return content.trim().replace(/^["']|["']$/g, '').slice(0, 60);
+                return content.trim().replace(/^['']|['']$/g, '').slice(0, 60);
             }
         } catch {
             return null;
@@ -632,8 +632,8 @@ async function renderPomodoro() {
                 item.classList.add('selected');
             }
             item.innerHTML = `
-                <div class="companion-select-avatar" style="${char.avatar ? `background-image:url('${char.avatar}')` : 'background:linear-gradient(135deg,#4f8bff,#8ec5ff)'}"></div>
-                <div class="companion-select-name">${char.name}</div>
+                <div class='companion-select-avatar' style='${char.avatar ? `background-image:url('${char.avatar}')` : 'background:linear-gradient(135deg,#4f8bff,#8ec5ff)'}'></div>
+                <div class='companion-select-name'>${char.name}</div>
             `;
             item.addEventListener('click', async () => {
                 currentCompanion = {

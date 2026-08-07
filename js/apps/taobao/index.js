@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -26,19 +26,19 @@ async function renderTaobao(params) {
   await loadCart();
   const container = createElement('div', 'app-container taobao-app');
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-      <h1 class="menu-title">購物</h1>
-      <div class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-badge">${cart.length}</span></div>
+    <header class='ios-header'>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+      <h1 class='menu-title'>購物</h1>
+      <div class='cart-icon'><i class='fas fa-shopping-cart'></i> <span class='cart-badge'>${cart.length}</span></div>
     </header>
-    <div class="page">
-      <div class="product-grid">
+    <div class='page'>
+      <div class='product-grid'>
         ${PRODUCTS.map(p => `
-          <div class="product-card" data-id="${p.id}">
-            <div class="product-image">${p.image}</div>
-            <div class="product-name">${p.name}</div>
-            <div class="product-price">$${p.price}</div>
-            <button class="add-cart-btn" data-id="${p.id}" data-name="${p.name}" data-price="${p.price}">加入購物車</button>
+          <div class='product-card' data-id='${p.id}'>
+            <div class='product-image'>${p.image}</div>
+            <div class='product-name'>${p.name}</div>
+            <div class='product-price'>$${p.price}</div>
+            <button class='add-cart-btn' data-id='${p.id}' data-name='${p.name}' data-price='${p.price}'>加入購物車</button>
           </div>
         `).join('')}
       </div>

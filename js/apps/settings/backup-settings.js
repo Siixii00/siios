@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 import { backupManager } from '../../core/backup-manager.js';
@@ -28,22 +28,22 @@ async function renderBackupSettings() {
     const summaryCard = createElement('div', 'bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl p-4 text-white');
     
     summaryCard.innerHTML = `
-        <h2 class="font-bold mb-2">備份狀態總覽</h2>
-        <div class="grid grid-cols-3 gap-2 text-center">
+        <h2 class='font-bold mb-2'>備份狀態總覽</h2>
+        <div class='grid grid-cols-3 gap-2 text-center'>
             <div>
-                <div class="text-2xl">📱</div>
-                <div class="text-xs mt-1">本地</div>
-                <div class="text-xs opacity-80">${status.local.lastBackup ? new Date(status.local.lastBackup).toLocaleDateString() : '未備份'}</div>
+                <div class='text-2xl'>📱</div>
+                <div class='text-xs mt-1'>本地</div>
+                <div class='text-xs opacity-80'>${status.local.lastBackup ? new Date(status.local.lastBackup).toLocaleDateString() : '未備份'}</div>
             </div>
             <div>
-                <div class="text-2xl">${status.github.connected ? '✓' : '○'}</div>
-                <div class="text-xs mt-1">GitHub</div>
-                <div class="text-xs opacity-80">${status.github.hasBackup ? '已備份' : (status.github.connected ? '未備份' : '未連接')}</div>
+                <div class='text-2xl'>${status.github.connected ? '✓' : '○'}</div>
+                <div class='text-xs mt-1'>GitHub</div>
+                <div class='text-xs opacity-80'>${status.github.hasBackup ? '已備份' : (status.github.connected ? '未備份' : '未連接')}</div>
             </div>
             <div>
-                <div class="text-2xl">${status.googleDrive.connected ? '✓' : '○'}</div>
-                <div class="text-xs mt-1">GDrive</div>
-                <div class="text-xs opacity-80">${status.googleDrive.hasBackup ? '已備份' : (status.googleDrive.connected ? '未備份' : '未連接')}</div>
+                <div class='text-2xl'>${status.googleDrive.connected ? '✓' : '○'}</div>
+                <div class='text-xs mt-1'>GDrive</div>
+                <div class='text-xs opacity-80'>${status.googleDrive.hasBackup ? '已備份' : (status.googleDrive.connected ? '未備份' : '未連接')}</div>
             </div>
         </div>
     `;
@@ -58,13 +58,13 @@ async function renderBackupSettings() {
 
     const localExportBtn = createElement('button', 'ios-list-cell w-full text-left');
     localExportBtn.innerHTML = `
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                <span class="material-symbols-outlined text-blue-600">download</span>
+        <div class='flex items-center gap-3'>
+            <div class='w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center'>
+                <span class='material-symbols-outlined text-blue-600'>download</span>
             </div>
-            <div class="flex-1">
-                <div class="font-medium">下載備份檔案 (JSON)</div>
-                <div class="text-sm text-ios-muted">將所有資料匯出為 JSON 檔案，手動保存</div>
+            <div class='flex-1'>
+                <div class='font-medium'>下載備份檔案 (JSON)</div>
+                <div class='text-sm text-ios-muted'>將所有資料匯出為 JSON 檔案，手動保存</div>
             </div>
         </div>
     `;
@@ -81,13 +81,13 @@ async function renderBackupSettings() {
 
     const localImportBtn = createElement('button', 'ios-list-cell w-full text-left border-t');
     localImportBtn.innerHTML = `
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-                <span class="material-symbols-outlined text-green-600">upload</span>
+        <div class='flex items-center gap-3'>
+            <div class='w-10 h-10 rounded-full bg-green-100 flex items-center justify-center'>
+                <span class='material-symbols-outlined text-green-600'>upload</span>
             </div>
-            <div class="flex-1">
-                <div class="font-medium">從檔案還原</div>
-                <div class="text-sm text-ios-muted">選擇 JSON 備份檔案匯入還原</div>
+            <div class='flex-1'>
+                <div class='font-medium'>從檔案還原</div>
+                <div class='text-sm text-ios-muted'>選擇 JSON 備份檔案匯入還原</div>
             </div>
         </div>
     `;
@@ -125,12 +125,12 @@ async function renderBackupSettings() {
     // GitHub 連接按鈕
     const githubConnectBtn = createElement('button', 'ios-list-cell w-full text-left border-t');
     githubConnectBtn.innerHTML = `
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center">
-                <span class="material-symbols-outlined">link</span>
+        <div class='flex items-center gap-3'>
+            <div class='w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center'>
+                <span class='material-symbols-outlined'>link</span>
             </div>
-            <div class="flex-1">
-                <div class="font-medium">${githubUser ? '重新連接 / 設定' : '連接 GitHub'}</div>
+            <div class='flex-1'>
+                <div class='font-medium'>${githubUser ? '重新連接 / 設定' : '連接 GitHub'}</div>
             </div>
         </div>
     `;
@@ -141,13 +141,13 @@ async function renderBackupSettings() {
     if (githubUser) {
         const githubBackupBtn = createElement('button', 'ios-list-cell w-full text-left border-t');
         githubBackupBtn.innerHTML = `
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-purple-600">cloud_upload</span>
+            <div class='flex items-center gap-3'>
+                <div class='w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center'>
+                    <span class='material-symbols-outlined text-purple-600'>cloud_upload</span>
                 </div>
-                <div class="flex-1">
-                    <div class="font-medium">立即備份到 GitHub</div>
-                    <div class="text-sm text-ios-muted">上傳備份到私人倉庫</div>
+                <div class='flex-1'>
+                    <div class='font-medium'>立即備份到 GitHub</div>
+                    <div class='text-sm text-ios-muted'>上傳備份到私人倉庫</div>
                 </div>
             </div>
         `;
@@ -165,13 +165,13 @@ async function renderBackupSettings() {
 
         const githubRestoreBtn = createElement('button', 'ios-list-cell w-full text-left border-t');
         githubRestoreBtn.innerHTML = `
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-indigo-600">cloud_download</span>
+            <div class='flex items-center gap-3'>
+                <div class='w-10 h-10 rounded-full bg-indigo-100 flex items-center justify-center'>
+                    <span class='material-symbols-outlined text-indigo-600'>cloud_download</span>
                 </div>
-                <div class="flex-1">
-                    <div class="font-medium">從 GitHub 還原</div>
-                    <div class="text-sm text-ios-muted">下載並匯入雲端備份</div>
+                <div class='flex-1'>
+                    <div class='font-medium'>從 GitHub 還原</div>
+                    <div class='text-sm text-ios-muted'>下載並匯入雲端備份</div>
                 </div>
             </div>
         `;
@@ -213,12 +213,12 @@ async function renderBackupSettings() {
     // Google Drive 連接按鈕
     const googleConnectBtn = createElement('button', 'ios-list-cell w-full text-left border-t');
     googleConnectBtn.innerHTML = `
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-red-100 flex items-center justify-center">
-                <span class="material-symbols-outlined text-red-500">link</span>
+        <div class='flex items-center gap-3'>
+            <div class='w-10 h-10 rounded-full bg-red-100 flex items-center justify-center'>
+                <span class='material-symbols-outlined text-red-500'>link</span>
             </div>
-            <div class="flex-1">
-                <div class="font-medium">${googleUser ? '重新連接 Google Drive' : '連接 Google Drive'}</div>
+            <div class='flex-1'>
+                <div class='font-medium'>${googleUser ? '重新連接 Google Drive' : '連接 Google Drive'}</div>
             </div>
         </div>
     `;
@@ -228,13 +228,13 @@ async function renderBackupSettings() {
     if (googleUser) {
         const googleBackupBtn = createElement('button', 'ios-list-cell w-full text-left border-t');
         googleBackupBtn.innerHTML = `
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-green-600">cloud_upload</span>
+            <div class='flex items-center gap-3'>
+                <div class='w-10 h-10 rounded-full bg-green-100 flex items-center justify-center'>
+                    <span class='material-symbols-outlined text-green-600'>cloud_upload</span>
                 </div>
-                <div class="flex-1">
-                    <div class="font-medium">立即備份到 Google Drive</div>
-                    <div class="text-sm text-ios-muted">保存到應用程式專用資料夾</div>
+                <div class='flex-1'>
+                    <div class='font-medium'>立即備份到 Google Drive</div>
+                    <div class='text-sm text-ios-muted'>保存到應用程式專用資料夾</div>
                 </div>
             </div>
         `;
@@ -252,13 +252,13 @@ async function renderBackupSettings() {
 
         const googleRestoreBtn = createElement('button', 'ios-list-cell w-full text-left border-t');
         googleRestoreBtn.innerHTML = `
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center">
-                    <span class="material-symbols-outlined text-teal-600">cloud_download</span>
+            <div class='flex items-center gap-3'>
+                <div class='w-10 h-10 rounded-full bg-teal-100 flex items-center justify-center'>
+                    <span class='material-symbols-outlined text-teal-600'>cloud_download</span>
                 </div>
-                <div class="flex-1">
-                    <div class="font-medium">從 Google Drive 還原</div>
-                    <div class="text-sm text-ios-muted">下載並匯入雲端備份</div>
+                <div class='flex-1'>
+                    <div class='font-medium'>從 Google Drive 還原</div>
+                    <div class='text-sm text-ios-muted'>下載並匯入雲端備份</div>
                 </div>
             </div>
         `;
@@ -312,7 +312,7 @@ async function renderBackupSettings() {
     // 一鍵完整備份按鈕
     const backupAllSection = createElement('div', 'mx-4 mt-6');
     const backupAllBtn = createElement('button', 'ios-btn ios-btn-primary w-full py-4');
-    backupAllBtn.innerHTML = '<span class="material-symbols-outlined mr-2">backup</span> 一鍵完整備份（本地 + GitHub + Google Drive）';
+    backupAllBtn.innerHTML = '<span class='material-symbols-outlined mr-2'>backup</span> 一鍵完整備份（本地 + GitHub + Google Drive）';
     backupAllBtn.onclick = async () => {
         createToast('正在執行完整備份...', 'info');
         
@@ -354,12 +354,12 @@ function showImportDialog(container) {
     const dialog = createElement('div', 'bg-white rounded-xl p-6 mx-4 max-w-md w-full');
 
     dialog.innerHTML = `
-        <h3 class="font-bold text-lg mb-4">從 JSON 檔案還原</h3>
-        <p class="text-sm text-ios-muted mb-4">選擇之前下載的備份檔案，資料將會與現有資料合併。</p>
-        <input type="file" accept=".json" class="w-full p-3 border rounded-lg mb-4" id="import-file-input">
-        <div class="flex gap-2">
-            <button class="ios-btn ios-btn-secondary flex-1" id="import-cancel">取消</button>
-            <button class="ios-btn ios-btn-primary flex-1" id="import-confirm">還原</button>
+        <h3 class='font-bold text-lg mb-4'>從 JSON 檔案還原</h3>
+        <p class='text-sm text-ios-muted mb-4'>選擇之前下載的備份檔案，資料將會與現有資料合併。</p>
+        <input type='file' accept='.json' class='w-full p-3 border rounded-lg mb-4' id='import-file-input'>
+        <div class='flex gap-2'>
+            <button class='ios-btn ios-btn-secondary flex-1' id='import-cancel'>取消</button>
+            <button class='ios-btn ios-btn-primary flex-1' id='import-confirm'>還原</button>
         </div>
     `;
 
@@ -397,12 +397,12 @@ function showGitHubDialog(container) {
     const dialog = createElement('div', 'bg-white rounded-xl p-6 mx-4 max-w-md w-full');
 
     dialog.innerHTML = `
-        <h3 class="font-bold text-lg mb-4">連接 GitHub</h3>
-        <p class="text-sm text-ios-muted mb-4">需要 GitHub Personal Access Token，需有 repo 權限。</p>
-        <input type="password" placeholder="ghp_xxxxxxxxxxxx" class="w-full p-3 border rounded-lg mb-4" id="github-token-input">
-        <div class="flex gap-2">
-            <button class="ios-btn ios-btn-secondary flex-1" id="github-cancel">取消</button>
-            <button class="ios-btn ios-btn-primary flex-1" id="github-connect">連接</button>
+        <h3 class='font-bold text-lg mb-4'>連接 GitHub</h3>
+        <p class='text-sm text-ios-muted mb-4'>需要 GitHub Personal Access Token，需有 repo 權限。</p>
+        <input type='password' placeholder='ghp_xxxxxxxxxxxx' class='w-full p-3 border rounded-lg mb-4' id='github-token-input'>
+        <div class='flex gap-2'>
+            <button class='ios-btn ios-btn-secondary flex-1' id='github-cancel'>取消</button>
+            <button class='ios-btn ios-btn-primary flex-1' id='github-connect'>連接</button>
         </div>
     `;
 
@@ -436,22 +436,22 @@ function showGoogleDriveDialog(container) {
     const dialog = createElement('div', 'bg-white rounded-xl p-6 mx-4 max-w-md w-full');
 
     dialog.innerHTML = `
-        <h3 class="font-bold text-lg mb-4">連接 Google Drive</h3>
-        <p class="text-sm text-ios-muted mb-4">
+        <h3 class='font-bold text-lg mb-4'>連接 Google Drive</h3>
+        <p class='text-sm text-ios-muted mb-4'>
             請先在 
-            <a href="https://console.cloud.google.com/apis/credentials" target="_blank" class="text-blue-500 underline">Google Cloud Console</a> 
+            <a href='https://console.cloud.google.com/apis/credentials' target='_blank' class='text-blue-500 underline'>Google Cloud Console</a> 
             建立 OAuth 2.0 用戶端 ID，並輸入存取權杖。
         </p>
-        <input type="password" placeholder="輸入 Google Access Token" class="w-full p-3 border rounded-lg mb-4" id="google-token-input">
-        <div class="text-xs text-ios-muted mb-4">
+        <input type='password' placeholder='輸入 Google Access Token' class='w-full p-3 border rounded-lg mb-4' id='google-token-input'>
+        <div class='text-xs text-ios-muted mb-4'>
             或點擊下方按鈕直接取得 Token
         </div>
-        <button class="ios-btn ios-btn-secondary w-full mb-4" id="google-oauth-btn">
+        <button class='ios-btn ios-btn-secondary w-full mb-4' id='google-oauth-btn'>
             使用 Google 帳戶登入
         </button>
-        <div class="flex gap-2">
-            <button class="ios-btn ios-btn-secondary flex-1" id="google-cancel">取消</button>
-            <button class="ios-btn ios-btn-primary flex-1" id="google-connect">連接</button>
+        <div class='flex gap-2'>
+            <button class='ios-btn ios-btn-secondary flex-1' id='google-cancel'>取消</button>
+            <button class='ios-btn ios-btn-primary flex-1' id='google-connect'>連接</button>
         </div>
     `;
 

@@ -1,4 +1,4 @@
-import { createIntelligentMCP } from './mcp-intelligence/index.js';
+﻿import { createIntelligentMCP } from './mcp-intelligence/index.js';
 import { WikiRecordsDB } from '../db.js';
 
 export class ChatMCPHandler {

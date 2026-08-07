@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -21,26 +21,26 @@ async function renderPasskey(params) {
   await loadKeys();
   const container = createElement('div', 'app-container passkey-app');
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-      <h1 class="menu-title">Passkey</h1>
+    <header class='ios-header'>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+      <h1 class='menu-title'>Passkey</h1>
     </header>
-    <div class="page">
-      <div class="info-card">
-        <i class="fas fa-key"></i>
+    <div class='page'>
+      <div class='info-card'>
+        <i class='fas fa-key'></i>
         <p>Passkey 是一種安全的身份驗證方式，用於取代傳統密碼。</p>
       </div>
-      <button class="create-btn"><i class="fas fa-plus"></i> 建立新 Passkey</button>
-      <div class="key-list">
+      <button class='create-btn'><i class='fas fa-plus'></i> 建立新 Passkey</button>
+      <div class='key-list'>
         <h3>已建立的 Passkey</h3>
         ${keys.length > 0 
           ? keys.map(k => `
-              <div class="key-item">
-                <span class="key-name">${k.name}</span>
-                <span class="key-date">${new Date(k.created).toLocaleDateString('zh-TW')}</span>
+              <div class='key-item'>
+                <span class='key-name'>${k.name}</span>
+                <span class='key-date'>${new Date(k.created).toLocaleDateString('zh-TW')}</span>
               </div>
             `).join('')
-          : '<div class="empty-keys">尚無 Passkey</div>'
+          : '<div class='empty-keys'>尚無 Passkey</div>'
         }
       </div>
     </div>

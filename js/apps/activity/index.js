@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { ActivityDB, ActivitySourcesDB, SettingsDB } from '../../db.js';
 
@@ -66,11 +66,11 @@ async function renderActivitySync() {
     if (!privacySettings.global_enabled) {
         const disabledNotice = createElement('div', 'p-4 bg-yellow-50 border border-yellow-200 rounded-xl');
         disabledNotice.innerHTML = `
-            <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-yellow-600 text-2xl">warning</span>
+            <div class='flex items-center gap-3'>
+                <span class='material-symbols-outlined text-yellow-600 text-2xl'>warning</span>
                 <div>
-                    <h3 class="font-semibold text-sm text-yellow-800">活動同步已停用</h3>
-                    <p class="text-xs text-yellow-700 mt-1">前往隱私設定啟用以開始記錄</p>
+                    <h3 class='font-semibold text-sm text-yellow-800'>活動同步已停用</h3>
+                    <p class='text-xs text-yellow-700 mt-1'>前往隱私設定啟用以開始記錄</p>
                 </div>
             </div>
         `;
@@ -84,13 +84,13 @@ async function renderActivitySync() {
         const privacyLevelName = privacySettings.global_level === 'basic' ? '基本統計' : 
                                    privacySettings.global_level === 'summary' ? '包含摘要' : '詳細資訊';
         enabledNotice.innerHTML = `
-            <div class="flex items-center gap-3">
-                <span class="material-symbols-outlined text-green-600 text-2xl">check_circle</span>
-                <div class="flex-1">
-                    <h3 class="font-semibold text-sm text-green-800">活動同步已啟用</h3>
-                    <p class="text-xs text-green-700 mt-1">隱私等級：${privacyLevelName} · 保留 ${privacySettings.retention_days} 天</p>
+            <div class='flex items-center gap-3'>
+                <span class='material-symbols-outlined text-green-600 text-2xl'>check_circle</span>
+                <div class='flex-1'>
+                    <h3 class='font-semibold text-sm text-green-800'>活動同步已啟用</h3>
+                    <p class='text-xs text-green-700 mt-1'>隱私等級：${privacyLevelName} · 保留 ${privacySettings.retention_days} 天</p>
                 </div>
-                <button class="text-green-600 text-sm underline" id="privacy-settings-link">設定</button>
+                <button class='text-green-600 text-sm underline' id='privacy-settings-link'>設定</button>
             </div>
         `;
         statusCard.appendChild(enabledNotice);

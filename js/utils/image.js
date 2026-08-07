@@ -1,4 +1,4 @@
-function compressImage(file, maxWidth = 800) {
+﻿function compressImage(file, maxWidth = 800) {
   return new Promise((resolve) => {
     const reader = new FileReader();
     reader.onload = (e) => {

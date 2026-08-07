@@ -74,7 +74,7 @@ async function renderChat(params) {
             const char = await CharactersDB.getById(mid);
             if (char) {
                 const avatar = createElement('img', 'w-7 h-7 rounded-full border-2 border-white object-cover', {
-                    src: char.avatar || 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23E5E5EA"/><text x="50" y="60" text-anchor="middle" font-size="40" fill="%238E8E93">?</text></svg>',
+                    src: char.avatar || 'data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23E5E5EA'/><text x='50' y='60' text-anchor='middle' font-size='40' fill='%238E8E93'>?</text></svg>',
                     alt: char.name
                 });
                 avatarStack.appendChild(avatar);
@@ -135,7 +135,7 @@ async function renderChat(params) {
         const html = `<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset='UTF-8'>
     <title>Chat with ${char.character_name}</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
@@ -148,11 +148,11 @@ async function renderChat(params) {
     </style>
 </head>
 <body>
-    <div class="header">
-        <img class="avatar" src="${char.character_avatar || ''}" alt="${char.character_name}">
+    <div class='header'>
+        <img class='avatar' src='${char.character_avatar || ''}' alt='${char.character_name}'>
         <h1>${char.character_name}</h1>
     </div>
-    ${msgs.map(m => `<div class="msg ${m.role}">${m.content}<div class="time">${new Date(m.timestamp).toLocaleString()}</div></div>`).join('')}
+    ${msgs.map(m => `<div class='msg ${m.role}'>${m.content}<div class='time'>${new Date(m.timestamp).toLocaleString()}</div></div>`).join('')}
 </body>
 </html>`;
         const blob = new Blob([html], { type: 'text/html' });
@@ -252,7 +252,7 @@ async function renderChat(params) {
             const row = createElement('div', 'flex items-center gap-3 p-3 rounded-lg bg-gray-50');
             
             const avatar = createElement('img', 'w-10 h-10 rounded-full object-cover', {
-                src: char.avatar || 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23E5E5EA"/><text x="50" y="60" text-anchor="middle" font-size="40" fill="%238E8E93">?</text></svg>',
+                src: char.avatar || 'data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23E5E5EA'/><text x='50' y='60' text-anchor='middle' font-size='40' fill='%238E8E93'>?</text></svg>',
                 alt: char.name
             });
             row.appendChild(avatar);
@@ -409,7 +409,7 @@ async function renderChat(params) {
     
     const addBtn = createElement('button', 'text-ios-muted');
     addBtn.style.cssText = 'background:transparent;border:none;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center;width:24px;height:28px;';
-    addBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" viewBox="0 0 25 28" fill="none"><path d="M11.0378 14.9722H5.20447V13.0278H11.0378V7.19443H12.9822V13.0278H18.8156V14.9722H12.9822V20.8055H11.0378V14.9722Z" fill="#6B6B6B"/></svg>';
+    addBtn.innerHTML = '<svg xmlns='http://www.w3.org/2000/svg' width='25' height='28' viewBox='0 0 25 28' fill='none'><path d='M11.0378 14.9722H5.20447V13.0278H11.0378V7.19443H12.9822V13.0278H18.8156V14.9722H12.9822V20.8055H11.0378V14.9722Z' fill='#6B6B6B'/></svg>';
     
     const plusMenu = createKakaoBottomSheet([
         { icon: 'psychology', label: '思維鏈', onSelect: () => createToast('思維鏈功能開發中') },
@@ -478,7 +478,7 @@ async function renderChat(params) {
     
     const generateBtn = createElement('button', 'kakao-generate-btn');
     generateBtn.style.cssText = 'background:transparent;border:none;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center;width:28px;height:28px;margin-left:4px;';
-    generateBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.85.83 6.72 2.24"></path><path d="M21 3v6h-6"></path></svg>';
+    generateBtn.innerHTML = '<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 12a9 9 0 1 1-9-9c2.52 0 4.85.83 6.72 2.24'></path><path d='M21 3v6h-6'></path></svg>';
     generateBtn.style.color = '#6B6B6B';
     generateBtn.title = '生成回應';
     generateBtn.disabled = true;

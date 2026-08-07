@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { HealthDB, UsersDB } from '../../db.js';
 import { PeriodCalculator } from '../../core/period-calculator.js';
@@ -20,44 +20,44 @@ async function renderHealth(params) {
     const container = createElement('div', 'app-container');
     
     container.innerHTML = `
-        <header class="ios-header">
-            <button class="ios-back-btn">
-                <span class="material-symbols-outlined">chevron_left</span> Back
+        <header class='ios-header'>
+            <button class='ios-back-btn'>
+                <span class='material-symbols-outlined'>chevron_left</span> Back
             </button>
             <h1>Health Management</h1>
         </header>
         
-        <div class="health-content">
-            <section class="health-section">
+        <div class='health-content'>
+            <section class='health-section'>
                 <h2>Health Memory</h2>
-                <p class="section-desc">Record your symptoms. Characters will care naturally based on their personality.</p>
+                <p class='section-desc'>Record your symptoms. Characters will care naturally based on their personality.</p>
                 
-                <div class="memory-card">
+                <div class='memory-card'>
                     <h3>Period Symptoms</h3>
-                    <div class="tag-container" id="symptom-tags"></div>
+                    <div class='tag-container' id='symptom-tags'></div>
                 </div>
                 
-                <div class="memory-card">
+                <div class='memory-card'>
                     <h3>Mood Changes</h3>
-                    <div class="tag-container" id="mood-tags"></div>
+                    <div class='tag-container' id='mood-tags'></div>
                 </div>
                 
-                <button class="save-btn" id="save-memory">Save Memory Template</button>
+                <button class='save-btn' id='save-memory'>Save Memory Template</button>
             </section>
             
-            <section class="health-section">
+            <section class='health-section'>
                 <h2>Period Records</h2>
-                <div class="period-calendar" id="period-calendar"></div>
+                <div class='period-calendar' id='period-calendar'></div>
                 
-                <button class="add-btn" id="add-period">Add Period Record</button>
+                <button class='add-btn' id='add-period'>Add Period Record</button>
             </section>
             
-            <section class="health-section">
+            <section class='health-section'>
                 <h2>Medication Records</h2>
-                <div class="medication-list" id="medication-list">
-                    <p class="empty-msg">No medication records</p>
+                <div class='medication-list' id='medication-list'>
+                    <p class='empty-msg'>No medication records</p>
                 </div>
-                <button class="add-btn" id="add-medication">Add Medication</button>
+                <button class='add-btn' id='add-medication'>Add Medication</button>
             </section>
         </div>
     `;
@@ -129,7 +129,7 @@ function renderMoodTags(container) {
 async function renderPeriodCalendar(container) {
     const calendarEl = container.querySelector('#period-calendar');
     if (!currentUser) {
-        calendarEl.innerHTML = '<p class="empty-msg">Please create a user mask first</p>';
+        calendarEl.innerHTML = '<p class='empty-msg'>Please create a user mask first</p>';
         return;
     }
     
@@ -140,18 +140,18 @@ async function renderPeriodCalendar(container) {
     const year = now.getFullYear();
     const month = now.getMonth();
     
-    let html = '<div class="calendar-header">';
+    let html = '<div class='calendar-header'>';
     html += '<span>' + year + ' / ' + (month + 1) + '</span>';
     html += '</div>';
-    html += '<div class="calendar-grid">';
-    html += '<div class="calendar-row header"><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>';
+    html += '<div class='calendar-grid'>';
+    html += '<div class='calendar-row header'><span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span></div>';
     
     const firstDay = new Date(year, month, 1).getDay();
     const daysInMonth = new Date(year, month + 1, 0).getDate();
     
-    html += '<div class="calendar-row">';
+    html += '<div class='calendar-row'>';
     for (let i = 0; i < firstDay; i++) {
-        html += '<span class="empty"></span>';
+        html += '<span class='empty'></span>';
     }
     
     for (let day = 1; day <= daysInMonth; day++) {
@@ -174,22 +174,22 @@ async function renderPeriodCalendar(container) {
             }
         }
         
-        html += '<span class="' + classes + '">' + day + '</span>';
+        html += '<span class='' + classes + ''>' + day + '</span>';
         
         if ((day + firstDay) % 7 === 0 && day < daysInMonth) {
-            html += '</div><div class="calendar-row">';
+            html += '</div><div class='calendar-row'>';
         }
     }
     
     html += '</div></div>';
     
-    html += '<div class="calendar-legend">';
-    html += '<span><span class="legend-dot period"></span> Period</span>';
-    html += '<span><span class="legend-dot predicted"></span> Predicted</span>';
+    html += '<div class='calendar-legend'>';
+    html += '<span><span class='legend-dot period'></span> Period</span>';
+    html += '<span><span class='legend-dot predicted'></span> Predicted</span>';
     html += '</div>';
     
     if (prediction) {
-        html += '<div class="prediction-info">Next period: ' + prediction.days_until + ' day(s)</div>';
+        html += '<div class='prediction-info'>Next period: ' + prediction.days_until + ' day(s)</div>';
     }
     
     calendarEl.innerHTML = html;
@@ -198,24 +198,24 @@ async function renderPeriodCalendar(container) {
 async function renderMedicationList(container) {
     const listEl = container.querySelector('#medication-list');
     if (!currentUser) {
-        listEl.innerHTML = '<p class="empty-msg">Please create a user mask first</p>';
+        listEl.innerHTML = '<p class='empty-msg'>Please create a user mask first</p>';
         return;
     }
     
     const medications = await HealthDB.getByType(currentUser.id, 'medication');
     
     if (medications.length === 0) {
-        listEl.innerHTML = '<p class="empty-msg">No medication records</p>';
+        listEl.innerHTML = '<p class='empty-msg'>No medication records</p>';
         return;
     }
     
     listEl.innerHTML = medications.map(med => `
-        <div class="medication-item">
-            <div class="med-info">
-                <span class="med-name">${med.medication_name}</span>
-                <span class="med-dosage">${med.dosage}</span>
+        <div class='medication-item'>
+            <div class='med-info'>
+                <span class='med-name'>${med.medication_name}</span>
+                <span class='med-dosage'>${med.dosage}</span>
             </div>
-            <button class="delete-btn" data-id="${med.id}">Delete</button>
+            <button class='delete-btn' data-id='${med.id}'>Delete</button>
         </div>
     `).join('');
     
@@ -231,23 +231,23 @@ async function renderMedicationList(container) {
 function showAddPeriodDialog(container) {
     const dialog = createElement('div', 'dialog-overlay');
     dialog.innerHTML = `
-        <div class="dialog">
+        <div class='dialog'>
             <h3>Add Period Record</h3>
-            <div class="form-group">
+            <div class='form-group'>
                 <label>Start Date</label>
-                <input type="date" id="period-start">
+                <input type='date' id='period-start'>
             </div>
-            <div class="form-group">
+            <div class='form-group'>
                 <label>End Date (optional)</label>
-                <input type="date" id="period-end">
+                <input type='date' id='period-end'>
             </div>
-            <div class="form-group">
+            <div class='form-group'>
                 <label>Notes</label>
-                <textarea id="period-notes"></textarea>
+                <textarea id='period-notes'></textarea>
             </div>
-            <div class="dialog-btns">
-                <button class="cancel-btn">Cancel</button>
-                <button class="confirm-btn">Save</button>
+            <div class='dialog-btns'>
+                <button class='cancel-btn'>Cancel</button>
+                <button class='confirm-btn'>Save</button>
             </div>
         </div>
     `;
@@ -281,23 +281,23 @@ function showAddPeriodDialog(container) {
 function showAddMedicationDialog(container) {
     const dialog = createElement('div', 'dialog-overlay');
     dialog.innerHTML = `
-        <div class="dialog">
+        <div class='dialog'>
             <h3>Add Medication</h3>
-            <div class="form-group">
+            <div class='form-group'>
                 <label>Medication Name</label>
-                <input type="text" id="med-name" placeholder="e.g., Vitamin D">
+                <input type='text' id='med-name' placeholder='e.g., Vitamin D'>
             </div>
-            <div class="form-group">
+            <div class='form-group'>
                 <label>Dosage</label>
-                <input type="text" id="med-dosage" placeholder="e.g., 1000 IU daily">
+                <input type='text' id='med-dosage' placeholder='e.g., 1000 IU daily'>
             </div>
-            <div class="form-group">
+            <div class='form-group'>
                 <label>Notes</label>
-                <textarea id="med-notes"></textarea>
+                <textarea id='med-notes'></textarea>
             </div>
-            <div class="dialog-btns">
-                <button class="cancel-btn">Cancel</button>
-                <button class="confirm-btn">Save</button>
+            <div class='dialog-btns'>
+                <button class='cancel-btn'>Cancel</button>
+                <button class='confirm-btn'>Save</button>
             </div>
         </div>
     `;

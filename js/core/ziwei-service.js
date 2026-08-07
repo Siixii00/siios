@@ -1,4 +1,4 @@
-import { CharactersDB, ZiweiCacheDB } from '../db.js';
+﻿import { CharactersDB, ZiweiCacheDB } from '../db.js';
 import { ziweiClient } from './ziwei-mcp-client.js';
 import { createToast } from '../components.js';
 

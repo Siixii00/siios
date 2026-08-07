@@ -254,27 +254,27 @@ function showManualCookieInput(instructions) {
     const content = createElement('div', 'bili-login-content');
     
     content.innerHTML = `
-        <h3 style="margin: 0 0 16px;">手動輸入 Cookie</h3>
-        <p style="color: #666; font-size: 13px; margin-bottom: 16px;">
+        <h3 style='margin: 0 0 16px;'>手動輸入 Cookie</h3>
+        <p style='color: #666; font-size: 13px; margin-bottom: 16px;'>
             由於 Bilibili 限制，需要手動獲取 Cookie：
         </p>
-        <ol style="color: #666; font-size: 12px; padding-left: 20px; margin-bottom: 16px; line-height: 1.8;">
+        <ol style='color: #666; font-size: 12px; padding-left: 20px; margin-bottom: 16px; line-height: 1.8;'>
             ${instructions ? instructions.map(i => `<li>${i}</li>`).join('') : `
                 <li>在瀏覽器打開 bilibili.com 並登入</li>
                 <li>按 F12 → Console 標籤</li>
-                <li>輸入：<code style="background: #f5f5f5; padding: 2px 6px; border-radius: 4px;">document.cookie</code></li>
+                <li>輸入：<code style='background: #f5f5f5; padding: 2px 6px; border-radius: 4px;'>document.cookie</code></li>
                 <li>複製完整的 Cookie 字串</li>
             `}
         </ol>
         <textarea 
-            id="manual-cookie-input" 
-            style="width: 100%; height: 80px; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; font-family: monospace;"
-            placeholder="貼上完整的 Cookie 字串..."
+            id='manual-cookie-input' 
+            style='width: 100%; height: 80px; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; font-family: monospace;'
+            placeholder='貼上完整的 Cookie 字串...'
         ></textarea>
-        <button id="save-manual-cookie" style="width: 100%; margin-top: 12px; padding: 12px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer;">
+        <button id='save-manual-cookie' style='width: 100%; margin-top: 12px; padding: 12px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer;'>
             保存 Cookie
         </button>
-        <button id="close-manual" style="width: 100%; margin-top: 8px; padding: 12px; background: #f5f5f5; color: #666; border: none; border-radius: 8px; cursor: pointer;">
+        <button id='close-manual' style='width: 100%; margin-top: 8px; padding: 12px; background: #f5f5f5; color: #666; border: none; border-radius: 8px; cursor: pointer;'>
             取消
         </button>
     `;
@@ -311,11 +311,11 @@ function showQRCodeModal(qrUrl, qrcodeKey) {
     content.innerHTML = `
         <h3>掃碼登入 B 站</h3>
         <p>請使用 B 站 App 掃描以下二維碼</p>
-        <div class="bili-qrcode-container">
-            <img src="${qrUrl}" alt="QR Code" style="max-width: 200px; width: 100%;" />
+        <div class='bili-qrcode-container'>
+            <img src='${qrUrl}' alt='QR Code' style='max-width: 200px; width: 100%;' />
         </div>
-        <p class="bili-login-status">等待掃碼...</p>
-        <button class="bili-close-btn">關閉</button>
+        <p class='bili-login-status'>等待掃碼...</p>
+        <button class='bili-close-btn'>關閉</button>
     `;
     
     modal.appendChild(content);
@@ -359,32 +359,32 @@ function showCookieManager() {
     const content = createElement('div', 'bili-login-content');
     
     content.innerHTML = `
-        <h3 style="margin: 0 0 16px; font-size: 18px;">管理 Bilibili Cookie</h3>
+        <h3 style='margin: 0 0 16px; font-size: 18px;'>管理 Bilibili Cookie</h3>
         
-        <div style="margin-bottom: 16px;">
-            <label style="display: block; font-size: 12px; color: #666; margin-bottom: 8px;">
+        <div style='margin-bottom: 16px;'>
+            <label style='display: block; font-size: 12px; color: #666; margin-bottom: 8px;'>
                 更新 Cookie（可選）
             </label>
             <textarea 
-                id="bilibili-cookie-input" 
-                style="width: 100%; height: 60px; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; font-family: monospace;"
-                placeholder="輸入新的 Cookie 以更新..."
+                id='bilibili-cookie-input' 
+                style='width: 100%; height: 60px; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; font-family: monospace;'
+                placeholder='輸入新的 Cookie 以更新...'
             ></textarea>
-            <button id="update-cookie-btn" style="width: 100%; margin-top: 8px; padding: 10px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer;">
+            <button id='update-cookie-btn' style='width: 100%; margin-top: 8px; padding: 10px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer;'>
                 更新 Cookie
             </button>
         </div>
         
-        <div style="border-top: 1px solid #eee; padding-top: 16px;">
-            <button id="test-cookie-btn" style="width: 100%; margin-bottom: 8px; padding: 10px; background: #4caf50; color: white; border: none; border-radius: 8px; cursor: pointer;">
+        <div style='border-top: 1px solid #eee; padding-top: 16px;'>
+            <button id='test-cookie-btn' style='width: 100%; margin-bottom: 8px; padding: 10px; background: #4caf50; color: white; border: none; border-radius: 8px; cursor: pointer;'>
                 測試 Cookie 是否有效
             </button>
-            <button id="logout-btn" style="width: 100%; padding: 10px; background: #f44336; color: white; border: none; border-radius: 8px; cursor: pointer;">
+            <button id='logout-btn' style='width: 100%; padding: 10px; background: #f44336; color: white; border: none; border-radius: 8px; cursor: pointer;'>
                 登出（清除 Cookie）
             </button>
         </div>
         
-        <button id="close-modal-btn" style="width: 100%; margin-top: 16px; padding: 10px; background: #f5f5f5; color: #666; border: none; border-radius: 8px; cursor: pointer;">
+        <button id='close-modal-btn' style='width: 100%; margin-top: 16px; padding: 10px; background: #f5f5f5; color: #666; border: none; border-radius: 8px; cursor: pointer;'>
             關閉
         </button>
     `;
@@ -433,36 +433,36 @@ function showLoginPrompt() {
     const content = createElement('div', 'bili-login-content');
     
     content.innerHTML = `
-        <div style="text-align: center; margin-bottom: 20px;">
-            <span class="material-symbols-outlined" style="font-size: 48px; color: #fb7299;">account_circle</span>
+        <div style='text-align: center; margin-bottom: 20px;'>
+            <span class='material-symbols-outlined' style='font-size: 48px; color: #fb7299;'>account_circle</span>
         </div>
-        <h3 style="margin: 0 0 12px; font-size: 20px;">登入 Bilibili</h3>
-        <p style="color: #999; margin: 0 0 16px; font-size: 13px; line-height: 1.6;">
+        <h3 style='margin: 0 0 12px; font-size: 20px;'>登入 Bilibili</h3>
+        <p style='color: #999; margin: 0 0 16px; font-size: 13px; line-height: 1.6;'>
             登入後可以獲取真實推薦內容
         </p>
         
-        <div style="margin-bottom: 16px;">
-            <label style="display: block; font-size: 12px; color: #666; margin-bottom: 8px;">
+        <div style='margin-bottom: 16px;'>
+            <label style='display: block; font-size: 12px; color: #666; margin-bottom: 8px;'>
                 輸入 Bilibili Cookie
             </label>
             <textarea 
-                id="bilibili-cookie-input" 
-                style="width: calc(100% - 16px); height: 80px; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; font-family: monospace; resize: vertical;"
-                placeholder="請輸入 Cookie"></textarea>
+                id='bilibili-cookie-input' 
+                style='width: calc(100% - 16px); height: 80px; padding: 8px; border: 1px solid #ddd; border-radius: 8px; font-size: 12px; font-family: monospace; resize: vertical;'
+                placeholder='請輸入 Cookie'></textarea>
         </div>
         
-        <button id="save-cookie-button" style="width: 100%; margin-bottom: 8px; padding: 12px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px;">
+        <button id='save-cookie-button' style='width: 100%; margin-bottom: 8px; padding: 12px; background: #fb7299; color: white; border: none; border-radius: 8px; cursor: pointer; font-size: 14px;'>
             保存 Cookie 並登入
         </button>
         
-        <button id="skip-login-button" style="width: 100%; padding: 12px; background: #f5f5f5; color: #666; border: none; border-radius: 8px; cursor: pointer; font-size: 14px;">
+        <button id='skip-login-button' style='width: 100%; padding: 12px; background: #f5f5f5; color: #666; border: none; border-radius: 8px; cursor: pointer; font-size: 14px;'>
             使用預設內容
         </button>
         
-        <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;">
+        <div style='margin-top: 16px; padding-top: 16px; border-top: 1px solid #eee;'>
             <details>
-                <summary style="cursor: pointer; font-size: 12px; color: #999;">如何獲取 Cookie？</summary>
-                <ol style="color: #666; font-size: 11px; padding-left: 20px; margin-top: 8px; line-height: 1.8;">
+                <summary style='cursor: pointer; font-size: 12px; color: #999;'>如何獲取 Cookie？</summary>
+                <ol style='color: #666; font-size: 11px; padding-left: 20px; margin-top: 8px; line-height: 1.8;'>
                     <li>在瀏覽器打開 bilibili.com 並登入</li>
                     <li>按 F12 → Network 標籤</li>
                     <li>刷新頁面</li>
@@ -719,7 +719,7 @@ async function generateVideoContentWithAI(tab, characterId) {
     const context = await buildAppContext({ characterId });
     const systemPrompt = context.systemPrompt + `\n\n你是一個影片推薦系統。根據角色性格生成適合的影片推薦。
 返回格式（JSON陣列，每個影片包含title, tag, views, danmu）：
-[{"title":"影片標題","tag":"分類標籤","views":"播放量","danmu":"彈幕數"}]
+[{'title':'影片標題','tag':'分類標籤','views':'播放量','danmu':'彈幕數'}]
 只返回JSON，不要其他文字。`;
 
     const category = randomPick(videoCategories[tab] || videoCategories.recommend);
@@ -946,7 +946,7 @@ async function generateNPCComments(videoTitle, characterId) {
     const context = await buildAppContext({ characterId });
     const systemPrompt = context.systemPrompt + `\n\n你是一個Bilibili評論生成系統。根據角色性格生成真實的評論。
 返回格式（JSON陣列）：
-[{"name":"評論者暱稱","comment":"評論內容"}]
+[{'name':'評論者暱稱','comment':'評論內容'}]
 只返回JSON，3-5條評論。`;
 
     const userPrompt = `影片標題：${videoTitle}
@@ -1363,9 +1363,9 @@ async function renderPlayer(params) {
     previewCard.style.background = generateThumbnail();
     previewCard.style.marginTop = '60px';
     previewCard.innerHTML = `
-        <div class="bili-preview-content">
-            <div class="bili-play-icon">▶</div>
-            <div class="bili-preview-title">${title}</div>
+        <div class='bili-preview-content'>
+            <div class='bili-play-icon'>▶</div>
+            <div class='bili-preview-title'>${title}</div>
         </div>
     `;
     container.appendChild(previewCard);
@@ -1375,17 +1375,17 @@ async function renderPlayer(params) {
     if (characters.length > 0) {
         const charSelector = createElement('div', 'bili-char-watch-selector');
         charSelector.innerHTML = `
-            <div style="margin-bottom: 16px;">
-                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-                    <input type="checkbox" id="watch-with-char" style="width: 20px; height: 20px;">
-                    <span style="font-weight: 500;">角色陪看模式</span>
+            <div style='margin-bottom: 16px;'>
+                <label style='display: flex; align-items: center; gap: 8px; cursor: pointer;'>
+                    <input type='checkbox' id='watch-with-char' style='width: 20px; height: 20px;'>
+                    <span style='font-weight: 500;'>角色陪看模式</span>
                 </label>
             </div>
-            <div id="char-selection" style="display: none; margin-bottom: 16px;">
-                <select id="char-select" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
-                    ${characters.map(char => `<option value="${char.id}">${char.name || '匿名'}</option>`).join('')}
+            <div id='char-selection' style='display: none; margin-bottom: 16px;'>
+                <select id='char-select' style='width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd;'>
+                    ${characters.map(char => `<option value='${char.id}'>${char.name || '匿名'}</option>`).join('')}
                 </select>
-                <p style="font-size: 12px; color: #666; margin-top: 8px;">
+                <p style='font-size: 12px; color: #666; margin-top: 8px;'>
                     選擇的角色將會「閱讀」字幕並發表評論
                 </p>
             </div>
@@ -1403,12 +1403,12 @@ async function renderPlayer(params) {
     }
     
     const externalBtn = createElement('button', 'bili-option-btn primary');
-    externalBtn.innerHTML = '<span class="material-icons">open_in_new</span> 在 B 站觀看';
+    externalBtn.innerHTML = '<span class='material-icons'>open_in_new</span> 在 B 站觀看';
     externalBtn.onclick = () => openInBilibili(url);
     optionsCard.appendChild(externalBtn);
     
     const embedBtn = createElement('button', 'bili-option-btn');
-    embedBtn.innerHTML = '<span class="material-icons">play_circle</span> 在 PWA 內播放';
+    embedBtn.innerHTML = '<span class='material-icons'>play_circle</span> 在 PWA 內播放';
     embedBtn.onclick = async () => {
         const isLoggedIn = await checkBilibiliLogin();
         if (isLoggedIn) {
@@ -1510,7 +1510,7 @@ async function showNativePlayer(container, info, playData, characterId, bvid, ti
     
     if (characterId) {
         const charCommentsSection = createElement('div', 'bili-char-comments');
-        charCommentsSection.innerHTML = '<div style="padding: 16px; text-align: center;">正在為角色準備評論...</div>';
+        charCommentsSection.innerHTML = '<div style='padding: 16px; text-align: center;'>正在為角色準備評論...</div>';
         container.appendChild(charCommentsSection);
         
         fetchVideoSubtitles(bvid, info.cid).then(async subtitles => {
@@ -1581,7 +1581,7 @@ async function generateCharacterComments(characterId, videoTitle, content, bvid)
 - 像真實的觀影體驗
 
 返回 JSON 格式：
-[{"time":"時間點","comment":"評論內容","emotion":"情感"}]
+[{'time':'時間點','comment':'評論內容','emotion':'情感'}]
 
 不要使用模板，要根據你的角色設定和影片內容生成獨特的評論。`;
 
@@ -1637,7 +1637,7 @@ ${typeof content === 'string' ? content : JSON.stringify(content).substring(0, 2
             charCommentsSection.innerHTML = '';
             
             const header = createElement('div', 'font-bold mb-3');
-            header.innerHTML = `<span class="material-icons" style="vertical-align: middle;">people</span> ${character.name} 的觀影評論`;
+            header.innerHTML = `<span class='material-icons' style='vertical-align: middle;'>people</span> ${character.name} 的觀影評論`;
             charCommentsSection.appendChild(header);
             
             const commentsList = createElement('div', 'bili-comments-list');
@@ -1893,9 +1893,9 @@ async function renderProfile() {
     
     const stats = createElement('div', 'bili-profile-stats');
     stats.innerHTML = `
-        <div><span class="font-bold">128</span><small>關注</small></div>
-        <div><span class="font-bold">3.2萬</span><small>粉絲</small></div>
-        <div><span class="font-bold">56</span><small>動態</small></div>
+        <div><span class='font-bold'>128</span><small>關注</small></div>
+        <div><span class='font-bold'>3.2萬</span><small>粉絲</small></div>
+        <div><span class='font-bold'>56</span><small>動態</small></div>
     `;
     profile.appendChild(stats);
     
@@ -1945,11 +1945,11 @@ async function renderProfile() {
     if (characters.length > 0) {
         const charSelection = createElement('div', 'bili-char-watch-selector');
         charSelection.innerHTML = `
-            <select id="default-char-select" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd;">
-                <option value="">不使用陪伴角色</option>
-                ${characters.map(char => `<option value="${char.id}">${char.name || '匿名'}</option>`).join('')}
+            <select id='default-char-select' style='width: 100%; padding: 12px; border-radius: 8px; border: 1px solid #ddd;'>
+                <option value=''>不使用陪伴角色</option>
+                ${characters.map(char => `<option value='${char.id}'>${char.name || '匿名'}</option>`).join('')}
             </select>
-            <p style="font-size: 12px; color: #666; margin-top: 8px;">
+            <p style='font-size: 12px; color: #666; margin-top: 8px;'>
                 選擇的角色將會在影片播放時「閱讀」字幕並發表評論
             </p>
         `;

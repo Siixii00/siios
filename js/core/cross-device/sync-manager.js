@@ -1,4 +1,4 @@
-import { Encryption } from './encryption.js';
+﻿import { Encryption } from './encryption.js';
 import { GitHubSync } from './github-sync.js';
 import { ActivityDB, ActivitySettingsDB, SettingsDB } from '../../db.js';
 

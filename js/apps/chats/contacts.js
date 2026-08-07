@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBottomNav, createKakaoBottomSheet, createEmptyState, createToast } from '../../components.js';
 import { CharactersDB, ChatsDB } from '../../db.js';
 import { CHATS_TABS } from './chats-nav.js';
@@ -71,7 +71,7 @@ async function renderContacts() {
             const avatarMargin = createElement('div', 'kakao-avatar-margin');
             const avatarContainer = createElement('div', 'relative');
             const avatar = createElement('img', 'kakao-avatar', {
-                src: char.avatar || 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="50" fill="%23E5E5EA"/><text x="50" y="60" text-anchor="middle" font-size="40" fill="%238E8E93">?</text></svg>',
+                src: char.avatar || 'data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%23E5E5EA'/><text x='50' y='60' text-anchor='middle' font-size='40' fill='%238E8E93'>?</text></svg>',
                 alt: char.name
             });
             avatarContainer.appendChild(avatar);

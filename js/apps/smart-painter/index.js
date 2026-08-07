@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -27,32 +27,32 @@ async function renderSmartPainter(params) {
   await loadPhotos();
   const container = createElement('div', 'app-container painter-app');
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-      <h1 class="menu-title">照相館</h1>
+    <header class='ios-header'>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+      <h1 class='menu-title'>照相館</h1>
     </header>
-    <div class="page">
-      <div class="preview-area">
-        <div class="preview-placeholder" id="preview">
-          <i class="fas fa-camera"></i>
+    <div class='page'>
+      <div class='preview-area'>
+        <div class='preview-placeholder' id='preview'>
+          <i class='fas fa-camera'></i>
           <p>選擇照片開始編輯</p>
         </div>
       </div>
-      <div class="filter-bar">
+      <div class='filter-bar'>
         ${FILTERS.map(f => `
-          <button class="filter-btn ${f.id === activeFilter ? 'active' : ''}" data-filter="${f.filter}" data-id="${f.id}">
+          <button class='filter-btn ${f.id === activeFilter ? 'active' : ''}' data-filter='${f.filter}' data-id='${f.id}'>
             ${f.name}
           </button>
         `).join('')}
       </div>
-      <div class="action-row">
-        <button class="upload-btn"><i class="fas fa-upload"></i> 上傳照片</button>
-        <button class="save-btn"><i class="fas fa-download"></i> 儲存</button>
+      <div class='action-row'>
+        <button class='upload-btn'><i class='fas fa-upload'></i> 上傳照片</button>
+        <button class='save-btn'><i class='fas fa-download'></i> 儲存</button>
       </div>
-      <div class="gallery">
+      <div class='gallery'>
         <h3>相簿 (${photos.length})</h3>
-        <div class="photo-grid">
-          ${photos.slice(-6).map(p => `<div class="photo-thumb" style="background-image: url('${p.url}')"></div>`).join('') || '<div class="empty-gallery">尚無照片</div>'}
+        <div class='photo-grid'>
+          ${photos.slice(-6).map(p => `<div class='photo-thumb' style='background-image: url('${p.url}')'></div>`).join('') || '<div class='empty-gallery'>尚無照片</div>'}
         </div>
       </div>
     </div>
@@ -72,7 +72,7 @@ async function renderSmartPainter(params) {
     const url = prompt('輸入圖片 URL：');
     if (url) {
       const preview = container.querySelector('#preview');
-      preview.innerHTML = `<img src="${url}" style="width: 100%; height: 100%; object-fit: contain; filter: ${FILTERS.find(f => f.id === activeFilter).filter};">`;
+      preview.innerHTML = `<img src='${url}' style='width: 100%; height: 100%; object-fit: contain; filter: ${FILTERS.find(f => f.id === activeFilter).filter};'>`;
     }
   };
   container.querySelector('.save-btn').onclick = async () => {

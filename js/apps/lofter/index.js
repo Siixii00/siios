@@ -50,7 +50,7 @@ function escapeHTML(str = '') {
         .replace(/&/g, '&amp;')
         .replace(/</g, '&lt;')
         .replace(/>/g, '&gt;')
-        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&quot;')
         .replace(/'/g, '&#39;');
 }
 
@@ -571,7 +571,7 @@ async function renderCpCheckboxList(container) {
 
 async function saveCpSelection(container) {
     const selected = [];
-    container.querySelectorAll('input[type="checkbox"]:checked').forEach(cb => {
+    container.querySelectorAll('input[type='checkbox']:checked').forEach(cb => {
         const item = cb.closest('.cp-checkbox-item');
         if (item?.dataset?.cp) selected.push(item.dataset.cp);
     });

@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast, createKakaoBottomSheet } from '../../components.js';
 import { MCPConfigDB, CharactersDB } from '../../db.js';
 import { MCPClient } from '../../core/mcp-client.js';
@@ -19,12 +19,12 @@ async function renderMCPSettings() {
     const infoSection = createElement('div', 'ios-grouped-list mx-4');
     const infoCard = createElement('div', 'p-4 bg-white rounded-xl');
     infoCard.innerHTML = `
-        <h3 class="font-semibold mb-2">什麼是 MCP 工具整合？</h3>
-        <p class="text-sm text-ios-muted mb-3">
+        <h3 class='font-semibold mb-2'>什麼是 MCP 工具整合？</h3>
+        <p class='text-sm text-ios-muted mb-3'>
             MCP 讓 AI 角色可以調用外部工具，例如購物、查天氣、控制智慧家居等。
             你需要自己架設 Cloudflare Worker 來提供這些工具。
         </p>
-        <a class="text-blue-500 text-sm" href="#" id="mcp-guide-link">
+        <a class='text-blue-500 text-sm' href='#' id='mcp-guide-link'>
             查看架設教學 →
         </a>
     `;
@@ -390,34 +390,34 @@ function showGuideSheet() {
 
     const content = createElement('div', 'text-sm space-y-4');
     content.innerHTML = `
-        <div class="p-3 bg-blue-50 rounded-lg">
-            <p class="font-medium text-blue-800">快速開始</p>
-            <p class="text-ios-muted mt-1">複製 Worker 範本到你的 Cloudflare 帳戶</p>
+        <div class='p-3 bg-blue-50 rounded-lg'>
+            <p class='font-medium text-blue-800'>快速開始</p>
+            <p class='text-ios-muted mt-1'>複製 Worker 範本到你的 Cloudflare 帳戶</p>
         </div>
 
-        <div class="space-y-2">
-            <p class="font-medium">第一步：準備環境</p>
-            <code class="block p-2 bg-gray-100 rounded text-xs">npm install -g wrangler</code>
+        <div class='space-y-2'>
+            <p class='font-medium'>第一步：準備環境</p>
+            <code class='block p-2 bg-gray-100 rounded text-xs'>npm install -g wrangler</code>
         </div>
 
-        <div class="space-y-2">
-            <p class="font-medium">第二步：建立 Worker</p>
-            <p class="text-ios-muted">在專案根目錄建立 <code>mcp-worker/</code> 資料夾</p>
+        <div class='space-y-2'>
+            <p class='font-medium'>第二步：建立 Worker</p>
+            <p class='text-ios-muted'>在專案根目錄建立 <code>mcp-worker/</code> 資料夾</p>
         </div>
 
-        <div class="space-y-2">
-            <p class="font-medium">第三步：部署</p>
-            <code class="block p-2 bg-gray-100 rounded text-xs">wrangler deploy</code>
+        <div class='space-y-2'>
+            <p class='font-medium'>第三步：部署</p>
+            <code class='block p-2 bg-gray-100 rounded text-xs'>wrangler deploy</code>
         </div>
 
-        <div class="space-y-2">
-            <p class="font-medium">第四步：設定</p>
-            <p class="text-ios-muted">將 Worker URL 填入上方的新增表單</p>
+        <div class='space-y-2'>
+            <p class='font-medium'>第四步：設定</p>
+            <p class='text-ios-muted'>將 Worker URL 填入上方的新增表單</p>
         </div>
 
-        <div class="mt-4 p-3 bg-yellow-50 rounded-lg">
-            <p class="text-yellow-800">詳細範本程式碼請參考：</p>
-            <code class="text-xs">docs/MCP_WORKER_TEMPLATE.md</code>
+        <div class='mt-4 p-3 bg-yellow-50 rounded-lg'>
+            <p class='text-yellow-800'>詳細範本程式碼請參考：</p>
+            <code class='text-xs'>docs/MCP_WORKER_TEMPLATE.md</code>
         </div>
     `;
     sheet.appendChild(content);

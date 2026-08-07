@@ -31,12 +31,12 @@ function renderFeed(container) {
   if (!feed) return;
   
   feed.innerHTML = state.messages.map(msg => `
-    <div class="bubble-msg ${msg.role}">
-      ${msg.fanName ? `<span class="fan-name">${msg.fanName}</span>` : ''}
+    <div class='bubble-msg ${msg.role}'>
+      ${msg.fanName ? `<span class='fan-name'>${msg.fanName}</span>` : ''}
       ${msg.text}
-      ${msg.isStreaming ? '<span class="streaming-indicator">...</span>' : ''}
+      ${msg.isStreaming ? '<span class='streaming-indicator'>...</span>' : ''}
     </div>
-  `).join('') || '<div class="empty-msg">尚無訊息</div>';
+  `).join('') || '<div class='empty-msg'>尚無訊息</div>';
   
   feed.scrollTop = feed.scrollHeight;
 }
@@ -179,50 +179,50 @@ async function renderBubbles(params) {
   const container = createElement('div', 'app-container bubbles-app');
   
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn">
-        <i class="fas fa-chevron-left"></i> 返回
+    <header class='ios-header'>
+      <button class='ios-back-btn'>
+        <i class='fas fa-chevron-left'></i> 返回
       </button>
-      <h1 class="menu-title">Bubble</h1>
+      <h1 class='menu-title'>Bubble</h1>
     </header>
     
-    <div class="page">
-      <div class="bubbles-settings">
-        <div class="settings-row">
+    <div class='page'>
+      <div class='bubbles-settings'>
+        <div class='settings-row'>
           <label>選擇角色</label>
-          <select class="character-select">
-            <option value="">-- 請選擇 --</option>
+          <select class='character-select'>
+            <option value=''>-- 請選擇 --</option>
             ${characters.map(c => `
-              <option value="${c.id}" ${state.characterId === c.id ? 'selected' : ''}>
+              <option value='${c.id}' ${state.characterId === c.id ? 'selected' : ''}>
                 ${c.name}
               </option>
             `).join('')}
           </select>
         </div>
         
-        <div class="mode-switch">
-          <button class="mode-btn ${state.mode === 'artist' ? 'active' : ''}" data-mode="artist">
-            <i class="fas fa-star"></i> 藝人模式
+        <div class='mode-switch'>
+          <button class='mode-btn ${state.mode === 'artist' ? 'active' : ''}' data-mode='artist'>
+            <i class='fas fa-star'></i> 藝人模式
           </button>
-          <button class="mode-btn ${state.mode === 'fan' ? 'active' : ''}" data-mode="fan">
-            <i class="fas fa-heart"></i> 粉絲模式
+          <button class='mode-btn ${state.mode === 'fan' ? 'active' : ''}' data-mode='fan'>
+            <i class='fas fa-heart'></i> 粉絲模式
           </button>
         </div>
         
         ${state.mode === 'fan' ? `
-          <div class="settings-row">
+          <div class='settings-row'>
             <label>粉絲名稱</label>
-            <input type="text" class="fan-name-input" value="${state.fanName}" placeholder="輸入粉絲名稱">
+            <input type='text' class='fan-name-input' value='${state.fanName}' placeholder='輸入粉絲名稱'>
           </div>
         ` : ''}
       </div>
       
-      <div class="bubbles-feed"></div>
+      <div class='bubbles-feed'></div>
       
-      <div class="bubbles-input-area">
-        <input type="text" class="bubble-input" placeholder="輸入訊息..." ${state.isGenerating ? 'disabled' : ''}>
-        <button class="send-btn" ${state.isGenerating ? 'disabled' : ''}>
-          <i class="fas fa-paper-plane"></i>
+      <div class='bubbles-input-area'>
+        <input type='text' class='bubble-input' placeholder='輸入訊息...' ${state.isGenerating ? 'disabled' : ''}>
+        <button class='send-btn' ${state.isGenerating ? 'disabled' : ''}>
+          <i class='fas fa-paper-plane'></i>
         </button>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -32,28 +32,28 @@ async function renderAppearance(params) {
   await loadTheme();
   const container = createElement('div', 'app-container appearance-app');
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-      <h1 class="menu-title">外觀設定</h1>
+    <header class='ios-header'>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+      <h1 class='menu-title'>外觀設定</h1>
     </header>
-    <div class="page">
-      <h2 class="section-title">主題</h2>
-      <div class="theme-grid">
+    <div class='page'>
+      <h2 class='section-title'>主題</h2>
+      <div class='theme-grid'>
         ${THEMES.map(t => `
-          <div class="theme-card ${t.id === currentTheme ? 'active' : ''}" data-id="${t.id}" style="background: ${t.bg}; color: ${t.text};">
-            <span class="theme-name">${t.name}</span>
-            ${t.id === currentTheme ? '<i class="fas fa-check"></i>' : ''}
+          <div class='theme-card ${t.id === currentTheme ? 'active' : ''}' data-id='${t.id}' style='background: ${t.bg}; color: ${t.text};'>
+            <span class='theme-name'>${t.name}</span>
+            ${t.id === currentTheme ? '<i class='fas fa-check'></i>' : ''}
           </div>
         `).join('')}
       </div>
-      <h2 class="section-title">字體大小</h2>
-      <div class="font-size-control">
-        <button class="font-btn small ${currentFontSize === 'small' ? 'active' : ''}">小</button>
-        <button class="font-btn medium ${currentFontSize === 'medium' ? 'active' : ''}">中</button>
-        <button class="font-btn large ${currentFontSize === 'large' ? 'active' : ''}">大</button>
+      <h2 class='section-title'>字體大小</h2>
+      <div class='font-size-control'>
+        <button class='font-btn small ${currentFontSize === 'small' ? 'active' : ''}'>小</button>
+        <button class='font-btn medium ${currentFontSize === 'medium' ? 'active' : ''}'>中</button>
+        <button class='font-btn large ${currentFontSize === 'large' ? 'active' : ''}'>大</button>
       </div>
-      <h2 class="section-title">預覽</h2>
-      <div class="preview-box" style="background: ${THEMES.find(t => t.id === currentTheme)?.bg}; color: ${THEMES.find(t => t.id === currentTheme)?.text}; font-size: ${currentFontSize === 'small' ? '14px' : currentFontSize === 'large' ? '20px' : '16px'};">
+      <h2 class='section-title'>預覽</h2>
+      <div class='preview-box' style='background: ${THEMES.find(t => t.id === currentTheme)?.bg}; color: ${THEMES.find(t => t.id === currentTheme)?.text}; font-size: ${currentFontSize === 'small' ? '14px' : currentFontSize === 'large' ? '20px' : '16px'};'>
         <p>這是預覽文字，用來展示主題效果。</p>
         <p>當前主題：${THEMES.find(t => t.id === currentTheme)?.name}</p>
       </div>

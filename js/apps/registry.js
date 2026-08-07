@@ -130,10 +130,10 @@ async function registerRoutes() {
                     } catch (error) {
                         console.error(`Failed to render app ${app.id}:`, error);
                         appContainer.innerHTML = `
-                            <div class="empty-state">
-                                <span class="material-symbols-outlined empty-state-icon">error</span>
-                                <h3 class="empty-state-title">載入失敗</h3>
-                                <p class="empty-state-text">${error.message}</p>
+                            <div class='empty-state'>
+                                <span class='material-symbols-outlined empty-state-icon'>error</span>
+                                <h3 class='empty-state-title'>載入失敗</h3>
+                                <p class='empty-state-text'>${error.message}</p>
                             </div>
                         `;
                     }

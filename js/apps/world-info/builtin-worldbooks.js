@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar } from '../../components.js';
 import worldbookInstaller from '../../core/worldbook-installer.js';
 

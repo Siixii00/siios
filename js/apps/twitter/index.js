@@ -51,14 +51,14 @@ function isContentBlocked(title) {
     
     for (const keyword of BLOCKED_KEYWORDS) {
         if (titleLower.includes(keyword.toLowerCase())) {
-            console.warn(`[Twitter] 阻擋敏感內容: "${title}" (關鍵字: ${keyword})`);
+            console.warn(`[Twitter] 阻擋敏感內容: '${title}' (關鍵字: ${keyword})`);
             return true;
         }
     }
     
     for (const keyword of SENSITIVE_POLITICS) {
         if (titleLower.includes(keyword.toLowerCase())) {
-            console.warn(`[Twitter] 阻擋政治敏感內容: "${title}" (關鍵字: ${keyword})`);
+            console.warn(`[Twitter] 阻擋政治敏感內容: '${title}' (關鍵字: ${keyword})`);
             return true;
         }
     }
@@ -325,7 +325,7 @@ async function inferFollowingFromMemory(selectedCharacterId) {
 ${memoryText}
 
 請输出 3-5 個最適合的追蹤對象名稱，以 JSON 陣列格式：
-["角色名稱1", "角色名稱2", ...]`;
+['角色名稱1', '角色名稱2', ...]`;
 
     const settings = await SettingsDB.getAll();
     
@@ -468,9 +468,9 @@ ${contentDesc}
 輸出 JSON 陣列格式：
 [
   {
-    "author": "${character.name}",
-    "content": "推文内容",
-    "stats": { "reply": 數字, "retweet": 數字, "like": 數字 }
+    'author': '${character.name}',
+    'content': '推文内容',
+    'stats': { 'reply': 數字, 'retweet': 數字, 'like': 數字 }
   }
 ]`;
 
@@ -521,9 +521,9 @@ async function generateAIOnlyTweets(character) {
 輸出 JSON 陣列格式：
 [
   {
-    "author": "${character.name}",
-    "content": "推文内容（140字以內）",
-    "stats": { "reply": 數字, "retweet": 數字, "like": 數字 }
+    'author': '${character.name}',
+    'content': '推文内容（140字以內）',
+    'stats': { 'reply': 數字, 'retweet': 數字, 'like': 數字 }
   }
 ]`;
 
@@ -695,21 +695,21 @@ function createTweetEl(tweet, profile, isBookmarked = false) {
     const article = createElement('article', 'tweet', { dataTweetId: tweetId });
     
     article.innerHTML = `
-        <div class="avatar" style="${avatarStyle}"></div>
-        <div class="tweet-content-wrapper">
-            <div class="tweet-header">
+        <div class='avatar' style='${avatarStyle}'></div>
+        <div class='tweet-content-wrapper'>
+            <div class='tweet-header'>
                 <div>
-                    <span class="tweet-author">${escapeHtml(displayName)}</span>
-                    <span class="tweet-meta">${escapeHtml(displayHandle)} · ${tweet.time || formatTime(tweet.timestamp)}</span>
+                    <span class='tweet-author'>${escapeHtml(displayName)}</span>
+                    <span class='tweet-meta'>${escapeHtml(displayHandle)} · ${tweet.time || formatTime(tweet.timestamp)}</span>
                 </div>
-                <button class="icon-btn tweet-menu-btn" aria-label="更多"><i class="fas fa-ellipsis"></i></button>
+                <button class='icon-btn tweet-menu-btn' aria-label='更多'><i class='fas fa-ellipsis'></i></button>
             </div>
-            <div class="tweet-body">${escapeHtml(tweet.content)}</div>
-            <div class="tweet-actions">
-                <button type="button" data-action="reply"><i class="far fa-comment"></i><span>${tweet.stats?.reply || 0}</span></button>
-                <button type="button" data-action="retweet"><i class="fas fa-retweet"></i><span>${tweet.stats?.retweet || 0}</span></button>
-                <button type="button" data-action="like"><i class="far fa-heart"></i><span>${tweet.stats?.like || 0}</span></button>
-                <button type="button" data-action="bookmark" class="${isBookmarked ? 'bookmarked' : ''}"><i class="${isBookmarked ? 'fas' : 'far'} fa-bookmark"></i></button>
+            <div class='tweet-body'>${escapeHtml(tweet.content)}</div>
+            <div class='tweet-actions'>
+                <button type='button' data-action='reply'><i class='far fa-comment'></i><span>${tweet.stats?.reply || 0}</span></button>
+                <button type='button' data-action='retweet'><i class='fas fa-retweet'></i><span>${tweet.stats?.retweet || 0}</span></button>
+                <button type='button' data-action='like'><i class='far fa-heart'></i><span>${tweet.stats?.like || 0}</span></button>
+                <button type='button' data-action='bookmark' class='${isBookmarked ? 'bookmarked' : ''}'><i class='${isBookmarked ? 'fas' : 'far'} fa-bookmark'></i></button>
             </div>
         </div>
     `;
@@ -745,17 +745,17 @@ function createNotificationEl(notif) {
     
     const section = createElement('section', `card notification-card ${unreadClass}`, { dataId: notif.id });
     section.innerHTML = `
-        <div class="notification-icon" style="color: ${iconColor}">
-            <i class="fas ${icon}"></i>
+        <div class='notification-icon' style='color: ${iconColor}'>
+            <i class='fas ${icon}'></i>
         </div>
-        <div class="notification-content">
-            <div class="notification-header">
-                <span class="notification-author">${escapeHtml(notif.fromName)}</span>
-                <span class="notification-action">${actionText}</span>
+        <div class='notification-content'>
+            <div class='notification-header'>
+                <span class='notification-author'>${escapeHtml(notif.fromName)}</span>
+                <span class='notification-action'>${actionText}</span>
             </div>
-            ${notif.tweetContent ? `<div class="notification-tweet">${escapeHtml(notif.tweetContent.slice(0, 80))}${notif.tweetContent.length > 80 ? '...' : ''}</div>` : ''}
-            ${notif.replyContent ? `<div class="notification-reply">${escapeHtml(notif.replyContent)}</div>` : ''}
-            <div class="notification-time">${timeStr}</div>
+            ${notif.tweetContent ? `<div class='notification-tweet'>${escapeHtml(notif.tweetContent.slice(0, 80))}${notif.tweetContent.length > 80 ? '...' : ''}</div>` : ''}
+            ${notif.replyContent ? `<div class='notification-reply'>${escapeHtml(notif.replyContent)}</div>` : ''}
+            <div class='notification-time'>${timeStr}</div>
         </div>
     `;
     
@@ -985,7 +985,7 @@ async function generateReplyWithAI(tweet, characterId = null) {
                 model: settings.model || 'gpt-3.5-turbo',
                 messages: [
                     { role: 'system', content: systemPrompt },
-                    { role: 'user', content: `推文內容: "${tweet.content}"\n作者: ${tweet.author}` }
+                    { role: 'user', content: `推文內容: '${tweet.content}'\n作者: ${tweet.author}` }
                 ],
                 temperature: 0.8,
                 max_tokens: 100
@@ -1120,7 +1120,7 @@ async function renderFeed(container) {
         const isBookmarked = isTweetBookmarked(tweetId);
         const tweetEl = createTweetEl(tweet, profile, isBookmarked);
         
-        const bookmarkBtn = tweetEl.querySelector('[data-action="bookmark"]');
+        const bookmarkBtn = tweetEl.querySelector('[data-action='bookmark']');
         bookmarkBtn.onclick = async () => {
             const nowBookmarked = await toggleTweetBookmark(tweet);
             bookmarkBtn.classList.toggle('bookmarked', nowBookmarked);
@@ -1148,7 +1148,7 @@ async function renderBookmarksList(container) {
     
     for (const tweet of bookmarks) {
         const tweetEl = createTweetEl(tweet, profile, true);
-        const bookmarkBtn = tweetEl.querySelector('[data-action="bookmark"]');
+        const bookmarkBtn = tweetEl.querySelector('[data-action='bookmark']');
         
         bookmarkBtn.onclick = async () => {
             const tweetId = tweet.id || tweet.timestamp;
@@ -1193,14 +1193,14 @@ function showComposeModal() {
     const modal = createElement('div', 'compose-modal card');
     
     modal.innerHTML = `
-        <div class="compose-header">
-            <button class="icon-btn compose-close" aria-label="關閉"><i class="fas fa-times"></i></button>
+        <div class='compose-header'>
+            <button class='icon-btn compose-close' aria-label='關閉'><i class='fas fa-times'></i></button>
             <h3>發布推文</h3>
-            <button class="primary-btn compose-submit" disabled>發布</button>
+            <button class='primary-btn compose-submit' disabled>發布</button>
         </div>
-        <div class="compose-body">
-            <div class="avatar" style="background: ${DEFAULT_AVATAR}"></div>
-            <textarea class="compose-textarea" placeholder="有什麼新鮮事？" rows="4"></textarea>
+        <div class='compose-body'>
+            <div class='avatar' style='background: ${DEFAULT_AVATAR}'></div>
+            <textarea class='compose-textarea' placeholder='有什麼新鮮事？' rows='4'></textarea>
         </div>
     `;
     
@@ -1244,7 +1244,7 @@ function closeFabMenu(fabBtn, fabMenu) {
 }
 
 async function refreshFeed(main, pullIndicator) {
-    pullIndicator.innerHTML = '<i class="fas fa-spinner fa-spin"></i> 載入中...';
+    pullIndicator.innerHTML = '<i class='fas fa-spinner fa-spin'></i> 載入中...';
     pullIndicator.classList.add('active');
     
     console.log('[Twitter] 開始刷新推文');
@@ -1316,7 +1316,7 @@ async function refreshFeed(main, pullIndicator) {
         console.error('[Twitter] 刷新失敗:', error);
         createToast('更新失敗，請稍後再試');
     } finally {
-        pullIndicator.innerHTML = '<i class="fas fa-arrow-down"></i> 下拉刷新';
+        pullIndicator.innerHTML = '<i class='fas fa-arrow-down'></i> 下拉刷新';
         pullIndicator.classList.remove('active');
     }
 }
@@ -1332,14 +1332,14 @@ async function renderTwitterHome() {
     const container = createElement('div', 'twitter-app');
     
     const pullIndicator = createElement('div', 'pull-indicator');
-    pullIndicator.innerHTML = '<i class="fas fa-arrow-down"></i> 下拉刷新';
+    pullIndicator.innerHTML = '<i class='fas fa-arrow-down'></i> 下拉刷新';
     container.appendChild(pullIndicator);
     
     const header = createElement('header', 'top-bar');
     header.innerHTML = `
-        <button class="icon-btn" aria-label="返回"><i class="fas fa-chevron-left"></i></button>
-        <div class="logo"><i class="fab fa-twitter"></i></div>
-        <button class="icon-btn menu-toggle" aria-label="選單"><i class="fas fa-bars"></i></button>
+        <button class='icon-btn' aria-label='返回'><i class='fas fa-chevron-left'></i></button>
+        <div class='logo'><i class='fab fa-twitter'></i></div>
+        <button class='icon-btn menu-toggle' aria-label='選單'><i class='fas fa-bars'></i></button>
     `;
     
     header.querySelector('.icon-btn').onclick = () => Router.back();
@@ -1351,8 +1351,8 @@ async function renderTwitterHome() {
     
     const tabs = createElement('section', 'tabs card');
     tabs.innerHTML = `
-        <button class="tab ${activeTab === 'forYou' ? 'active' : ''}" data-tab="forYou">為你推薦</button>
-        <button class="tab ${activeTab === 'following' ? 'active' : ''}" data-tab="following">正在追蹤</button>
+        <button class='tab ${activeTab === 'forYou' ? 'active' : ''}' data-tab='forYou'>為你推薦</button>
+        <button class='tab ${activeTab === 'following' ? 'active' : ''}' data-tab='following'>正在追蹤</button>
     `;
     
     tabs.querySelectorAll('.tab').forEach(tab => {
@@ -1376,10 +1376,10 @@ async function renderTwitterHome() {
     if (!selectedCharacterId && userTweets.length === 0 && npcTweets.length === 0) {
         const hint = createElement('section', 'card character-hint');
         hint.innerHTML = `
-            <div style="text-align: center; padding: 20px;">
-                <i class="fas fa-user-circle" style="font-size: 32px; color: var(--twitter-accent); margin-bottom: 12px;"></i>
-                <p style="color: var(--twitter-text); font-weight: 600; margin-bottom: 8px;">下拉刷新以選擇角色</p>
-                <p style="color: var(--twitter-muted); font-size: 13px;">選擇角色後，將根據聊天記憶推薦個人化推文</p>
+            <div style='text-align: center; padding: 20px;'>
+                <i class='fas fa-user-circle' style='font-size: 32px; color: var(--twitter-accent); margin-bottom: 12px;'></i>
+                <p style='color: var(--twitter-text); font-weight: 600; margin-bottom: 8px;'>下拉刷新以選擇角色</p>
+                <p style='color: var(--twitter-muted); font-size: 13px;'>選擇角色後，將根據聊天記憶推薦個人化推文</p>
             </div>
         `;
         main.appendChild(hint);
@@ -1470,16 +1470,16 @@ async function renderTwitterHome() {
     });
     
     const fabBtn = createElement('button', 'fab-btn', { ariaLabel: '發推' });
-    fabBtn.innerHTML = '<i class="fas fa-plus"></i>';
+    fabBtn.innerHTML = '<i class='fas fa-plus'></i>';
     
     const fabMenu = createElement('div', 'fab-menu');
     fabMenu.innerHTML = `
-        <button class="fab-menu-item fab-ai-generate">
-            <i class="fas fa-wand-magic-sparkles"></i>
+        <button class='fab-menu-item fab-ai-generate'>
+            <i class='fas fa-wand-magic-sparkles'></i>
             <span>AI 生成推文</span>
         </button>
-        <button class="fab-menu-item fab-compose">
-            <i class="fas fa-pen"></i>
+        <button class='fab-menu-item fab-compose'>
+            <i class='fas fa-pen'></i>
             <span>撰寫推文</span>
         </button>
     `;
@@ -1587,9 +1587,9 @@ async function renderTwitterBookmarks() {
     
     const header = createElement('header', 'top-bar');
     header.innerHTML = `
-        <button class="icon-btn" aria-label="返回"><i class="fas fa-chevron-left"></i></button>
-        <div class="logo"><i class="fab fa-twitter"></i></div>
-        <button class="icon-btn" aria-label="選單" style="visibility:hidden"><i class="fas fa-bars"></i></button>
+        <button class='icon-btn' aria-label='返回'><i class='fas fa-chevron-left'></i></button>
+        <div class='logo'><i class='fab fa-twitter'></i></div>
+        <button class='icon-btn' aria-label='選單' style='visibility:hidden'><i class='fas fa-bars'></i></button>
     `;
     
     header.querySelector('.icon-btn').onclick = () => Router.navigate('/twitter');
@@ -1599,9 +1599,9 @@ async function renderTwitterBookmarks() {
     
     const titleCard = createElement('section', 'card');
     titleCard.innerHTML = `
-        <div class="tweet-header">
+        <div class='tweet-header'>
             <div>
-                <span class="tweet-author">書籤</span>
+                <span class='tweet-author'>書籤</span>
             </div>
         </div>
     `;
@@ -1623,9 +1623,9 @@ async function renderTwitterNotifications() {
     
     const header = createElement('header', 'top-bar');
     header.innerHTML = `
-        <button class="icon-btn" aria-label="返回"><i class="fas fa-chevron-left"></i></button>
-        <div class="logo"><i class="fab fa-twitter"></i></div>
-        <button class="icon-btn" aria-label="選單" style="visibility:hidden"><i class="fas fa-bars"></i></button>
+        <button class='icon-btn' aria-label='返回'><i class='fas fa-chevron-left'></i></button>
+        <div class='logo'><i class='fab fa-twitter'></i></div>
+        <button class='icon-btn' aria-label='選單' style='visibility:hidden'><i class='fas fa-bars'></i></button>
     `;
     
     header.querySelector('.icon-btn').onclick = () => Router.navigate('/twitter');
@@ -1635,9 +1635,9 @@ async function renderTwitterNotifications() {
     
     const titleCard = createElement('section', 'card');
     titleCard.innerHTML = `
-        <div class="tweet-header">
+        <div class='tweet-header'>
             <div>
-                <span class="tweet-author">通知</span>
+                <span class='tweet-author'>通知</span>
             </div>
         </div>
     `;

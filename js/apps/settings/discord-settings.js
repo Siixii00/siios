@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createToast, createKakaoBottomSheet } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -11,7 +11,7 @@ async function renderDiscordSettings() {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.navigate('/settings')
     });
-    backBtn.innerHTML = '<i class="fas fa-chevron-left"></i> 返回';
+    backBtn.innerHTML = '<i class='fas fa-chevron-left'></i> 返回';
     header.appendChild(backBtn);
     
     const title = createElement('h1', 'menu-title');
@@ -25,14 +25,14 @@ async function renderDiscordSettings() {
     // 說明卡片
     const introCard = createElement('div', 'mx-4 mb-4 p-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl text-white');
     introCard.innerHTML = `
-        <div class="flex items-center gap-2 mb-2">
-            <i class="fab fa-discord text-2xl"></i>
-            <h2 class="text-lg font-bold">Discord 即時通訊整合</h2>
+        <div class='flex items-center gap-2 mb-2'>
+            <i class='fab fa-discord text-2xl'></i>
+            <h2 class='text-lg font-bold'>Discord 即時通訊整合</h2>
         </div>
-        <p class="text-sm opacity-90 mb-3">讓 AI 角色在 Discord 上與你和朋友即時對話，所有對話自動同步到 PWA</p>
-        <div class="text-xs opacity-80">
-            <div class="mb-1">✓ 公開頻道對話</div>
-            <div class="mb-1">✓ 對話歷史記錄</div>
+        <p class='text-sm opacity-90 mb-3'>讓 AI 角色在 Discord 上與你和朋友即時對話，所有對話自動同步到 PWA</p>
+        <div class='text-xs opacity-80'>
+            <div class='mb-1'>✓ 公開頻道對話</div>
+            <div class='mb-1'>✓ 對話歷史記錄</div>
             <div>✓ Slash Commands</div>
         </div>
     `;
@@ -60,7 +60,7 @@ async function renderDiscordSettings() {
     tokenCard.appendChild(tokenInput);
     
     const tokenHint = createElement('p', 'text-xs text-gray-500 mt-2');
-    tokenHint.innerHTML = '在 <a href="https://discord.com/developers/applications" target="_blank" class="text-blue-500 underline">Discord Developer Portal</a> 創建 Bot 並獲取 Token';
+    tokenHint.innerHTML = '在 <a href='https://discord.com/developers/applications' target='_blank' class='text-blue-500 underline'>Discord Developer Portal</a> 創建 Bot 並獲取 Token';
     tokenCard.appendChild(tokenHint);
     
     tokenSection.appendChild(tokenCard);
@@ -193,7 +193,7 @@ async function renderDiscordSettings() {
     const bindingInfo = createElement('div', 'flex items-center gap-3');
     
     const bindingIcon = createElement('div', 'w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center');
-    bindingIcon.innerHTML = '<span class="material-symbols-outlined text-blue-600 text-xl">link</span>';
+    bindingIcon.innerHTML = '<span class='material-symbols-outlined text-blue-600 text-xl'>link</span>';
     bindingInfo.appendChild(bindingIcon);
     
     const bindingText = createElement('div');
@@ -212,8 +212,8 @@ async function renderDiscordSettings() {
     const guideSection = createElement('div', 'mx-4 mt-6 mb-8');
     const guideCard = createElement('div', 'bg-gray-50 rounded-xl p-4');
     guideCard.innerHTML = `
-        <h3 class="text-sm font-medium text-gray-700 mb-3">📖 使用指南</h3>
-        <ol class="text-xs text-gray-600 space-y-2">
+        <h3 class='text-sm font-medium text-gray-700 mb-3'>📖 使用指南</h3>
+        <ol class='text-xs text-gray-600 space-y-2'>
             <li>1. 在 Discord Developer Portal 創建 Bot 應用</li>
             <li>2. 獲取 Bot Token 並粘貼到上方</li>
             <li>3. 在神秘門生成 Discord Bot Worker 代碼</li>

@@ -177,174 +177,174 @@ async function renderAO3(params) {
     const container = createElement('div', 'app-container ao3-app');
     
     container.innerHTML = `
-        <header class="ios-header ao3-header">
-            <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-            <h1 class="menu-title">AO3 寫作工作室</h1>
-            <div class="header-actions">
-                <button class="header-action" id="ao3-menu" title="選單"><i class="fas fa-ellipsis-v"></i></button>
+        <header class='ios-header ao3-header'>
+            <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+            <h1 class='menu-title'>AO3 寫作工作室</h1>
+            <div class='header-actions'>
+                <button class='header-action' id='ao3-menu' title='選單'><i class='fas fa-ellipsis-v'></i></button>
             </div>
-            <div class="menu-dropdown hidden" id="ao3-menu-dropdown">
-                <button class="menu-item" id="menu-export-txt"><i class="fas fa-file-alt"></i> 匯出為 TXT</button>
-                <button class="menu-item" id="menu-export-md"><i class="fas fa-file-code"></i> 匯出為 Markdown</button>
-                <button class="menu-item" id="menu-import"><i class="fas fa-file-import"></i> 匯入草稿</button>
-                <button class="menu-item" id="menu-clear-form"><i class="fas fa-eraser"></i> 清空表單</button>
-                <hr class="menu-divider">
-                <button class="menu-item" id="menu-help"><i class="fas fa-question-circle"></i> 使用說明</button>
+            <div class='menu-dropdown hidden' id='ao3-menu-dropdown'>
+                <button class='menu-item' id='menu-export-txt'><i class='fas fa-file-alt'></i> 匯出為 TXT</button>
+                <button class='menu-item' id='menu-export-md'><i class='fas fa-file-code'></i> 匯出為 Markdown</button>
+                <button class='menu-item' id='menu-import'><i class='fas fa-file-import'></i> 匯入草稿</button>
+                <button class='menu-item' id='menu-clear-form'><i class='fas fa-eraser'></i> 清空表單</button>
+                <hr class='menu-divider'>
+                <button class='menu-item' id='menu-help'><i class='fas fa-question-circle'></i> 使用說明</button>
             </div>
         </header>
 
-        <div class="ao3-main">
-            <section class="card form-card">
+        <div class='ao3-main'>
+            <section class='card form-card'>
                 <h2>作品基本資訊</h2>
-                <div class="field">
-                    <label for="work-title">作品標題</label>
-                    <input id="work-title" type="text" placeholder="請輸入標題 (必填)">
+                <div class='field'>
+                    <label for='work-title'>作品標題</label>
+                    <input id='work-title' type='text' placeholder='請輸入標題 (必填)'>
                 </div>
-                <div class="field-grid">
+                <div class='field-grid'>
                     <label>
                         <span>作品分級</span>
-                        <select id="work-rating">
-                            <option value="G">General Audiences</option>
-                            <option value="T">Teen & Up</option>
-                            <option value="M">Mature</option>
-                            <option value="E">Explicit</option>
-                            <option value="NR">Not Rated</option>
+                        <select id='work-rating'>
+                            <option value='G'>General Audiences</option>
+                            <option value='T'>Teen & Up</option>
+                            <option value='M'>Mature</option>
+                            <option value='E'>Explicit</option>
+                            <option value='NR'>Not Rated</option>
                         </select>
                     </label>
                     <label>
                         <span>主要語言</span>
-                        <select id="language-select">
-                            ${languageOptions.map(l => `<option value="${l.code}">${l.label}</option>`).join('')}
+                        <select id='language-select'>
+                            ${languageOptions.map(l => `<option value='${l.code}'>${l.label}</option>`).join('')}
                         </select>
                     </label>
                 </div>
-                <div class="field">
+                <div class='field'>
                     <label>附加語言 (可多選)</label>
-                    <div class="language-grid" id="language-grid"></div>
+                    <div class='language-grid' id='language-grid'></div>
                 </div>
-                <div class="field">
-                    <label for="work-summary">摘要</label>
-                    <textarea id="work-summary" rows="3" placeholder="用數句話描述作品內容"></textarea>
+                <div class='field'>
+                    <label for='work-summary'>摘要</label>
+                    <textarea id='work-summary' rows='3' placeholder='用數句話描述作品內容'></textarea>
                 </div>
-                <div class="field">
-                    <label for="work-notes">作者前言 / 備註</label>
-                    <textarea id="work-notes" rows="2" placeholder="Optional: notes, warnings"></textarea>
+                <div class='field'>
+                    <label for='work-notes'>作者前言 / 備註</label>
+                    <textarea id='work-notes' rows='2' placeholder='Optional: notes, warnings'></textarea>
                 </div>
             </section>
 
-            <section class="card tag-card">
+            <section class='card tag-card'>
                 <h2>Tags</h2>
-                <div class="tag-field" data-type="fandom">
-                    <div class="tag-field-header">
+                <div class='tag-field' data-type='fandom'>
+                    <div class='tag-field-header'>
                         <label>Fandoms</label>
                         <span>最多 20 個</span>
                     </div>
-                    <div class="tag-input">
-                        <div class="tag-chip-list" id="tags-fandom"></div>
-                        <input type="text" placeholder="輸入後按 Enter 加入" data-tag-input="fandom">
+                    <div class='tag-input'>
+                        <div class='tag-chip-list' id='tags-fandom'></div>
+                        <input type='text' placeholder='輸入後按 Enter 加入' data-tag-input='fandom'>
                     </div>
                 </div>
-                <div class="tag-field" data-type="relationship">
-                    <div class="tag-field-header">
+                <div class='tag-field' data-type='relationship'>
+                    <div class='tag-field-header'>
                         <label>Relationships</label>
                         <span>Ex: Steve/Tony</span>
                     </div>
-                    <div class="tag-input">
-                        <div class="tag-chip-list" id="tags-relationship"></div>
-                        <input type="text" placeholder="Ship、友情或羈絆" data-tag-input="relationship">
+                    <div class='tag-input'>
+                        <div class='tag-chip-list' id='tags-relationship'></div>
+                        <input type='text' placeholder='Ship、友情或羈絆' data-tag-input='relationship'>
                     </div>
                 </div>
-                <div class="tag-field" data-type="characters">
-                    <div class="tag-field-header">
+                <div class='tag-field' data-type='characters'>
+                    <div class='tag-field-header'>
                         <label>Characters</label>
                     </div>
-                    <div class="tag-input">
-                        <div class="tag-chip-list" id="tags-characters"></div>
-                        <input type="text" placeholder="主要角色名單" data-tag-input="characters">
+                    <div class='tag-input'>
+                        <div class='tag-chip-list' id='tags-characters'></div>
+                        <input type='text' placeholder='主要角色名單' data-tag-input='characters'>
                     </div>
                 </div>
-                <div class="tag-field" data-type="additional">
-                    <div class="tag-field-header">
+                <div class='tag-field' data-type='additional'>
+                    <div class='tag-field-header'>
                         <label>Additional Tags</label>
                         <span>心情、體裁、警示</span>
                     </div>
-                    <div class="tag-input">
-                        <div class="tag-chip-list" id="tags-additional"></div>
-                        <input type="text" placeholder="如 Hurt/Comfort、Slow Burn" data-tag-input="additional">
+                    <div class='tag-input'>
+                        <div class='tag-chip-list' id='tags-additional'></div>
+                        <input type='text' placeholder='如 Hurt/Comfort、Slow Burn' data-tag-input='additional'>
                     </div>
                 </div>
             </section>
 
-            <section class="card inspiration-card">
-                <div class="inspiration-tabs">
-                    <button class="inspiration-tab active" data-tab="tropes">梗庫</button>
-                    <button class="inspiration-tab" data-tab="characters">角色</button>
-                    <button class="inspiration-tab" data-tab="worldsettings">世界設定</button>
+            <section class='card inspiration-card'>
+                <div class='inspiration-tabs'>
+                    <button class='inspiration-tab active' data-tab='tropes'>梗庫</button>
+                    <button class='inspiration-tab' data-tab='characters'>角色</button>
+                    <button class='inspiration-tab' data-tab='worldsettings'>世界設定</button>
                 </div>
-                <div class="inspiration-content">
-                    <div class="inspiration-panel active" id="tropes-panel">
-                        <div class="panel-header"><span>選擇互動梗來啟發創作靈感</span></div>
-                        <div class="tropes-list" id="ao3-tropes-list"></div>
+                <div class='inspiration-content'>
+                    <div class='inspiration-panel active' id='tropes-panel'>
+                        <div class='panel-header'><span>選擇互動梗來啟發創作靈感</span></div>
+                        <div class='tropes-list' id='ao3-tropes-list'></div>
                     </div>
-                    <div class="inspiration-panel" id="characters-panel">
-                        <div class="panel-header"><span>從角色庫導入角色</span></div>
-                        <div class="characters-list" id="ao3-characters-list"></div>
+                    <div class='inspiration-panel' id='characters-panel'>
+                        <div class='panel-header'><span>從角色庫導入角色</span></div>
+                        <div class='characters-list' id='ao3-characters-list'></div>
                     </div>
-                    <div class="inspiration-panel" id="worldsettings-panel">
-                        <div class="panel-header"><span>選擇世界觀設定</span></div>
-                        <div class="worldsettings-list" id="ao3-worldsettings-list"></div>
+                    <div class='inspiration-panel' id='worldsettings-panel'>
+                        <div class='panel-header'><span>選擇世界觀設定</span></div>
+                        <div class='worldsettings-list' id='ao3-worldsettings-list'></div>
                     </div>
                 </div>
             </section>
 
-            <section class="card editor-card">
+            <section class='card editor-card'>
                 <h2>內文編輯器</h2>
-                <div class="toolbar" id="format-toolbar">
-                    <button type="button" data-format="bold" title="粗體">B</button>
-                    <button type="button" data-format="italic" title="斜體">I</button>
-                    <button type="button" data-format="highlight" title="螢光">HL</button>
-                    <button type="button" data-format="blockquote" title="引言">❝</button>
-                    <button type="button" data-format="heading" title="章節小標">H3</button>
+                <div class='toolbar' id='format-toolbar'>
+                    <button type='button' data-format='bold' title='粗體'>B</button>
+                    <button type='button' data-format='italic' title='斜體'>I</button>
+                    <button type='button' data-format='highlight' title='螢光'>HL</button>
+                    <button type='button' data-format='blockquote' title='引言'>❝</button>
+                    <button type='button' data-format='heading' title='章節小標'>H3</button>
                 </div>
-                <textarea id="work-body" rows="12" placeholder="使用 Markdown 語法：**粗體**、*斜體*、> 引言、==標記==..."></textarea>
-                <div class="editor-footer">
-                    <div id="body-stats">0 words · 0 chars</div>
-                    <div class="generator-controls">
+                <textarea id='work-body' rows='12' placeholder='使用 Markdown 語法：**粗體**、*斜體*、> 引言、==標記==...'></textarea>
+                <div class='editor-footer'>
+                    <div id='body-stats'>0 words · 0 chars</div>
+                    <div class='generator-controls'>
                         <label>氛圍
-                            <select id="mood-select">
-                                <option value="fluff">Fluff</option>
-                                <option value="angst">Angst</option>
-                                <option value="action">Action</option>
-                                <option value="hurt">Hurt/Comfort</option>
+                            <select id='mood-select'>
+                                <option value='fluff'>Fluff</option>
+                                <option value='angst'>Angst</option>
+                                <option value='action'>Action</option>
+                                <option value='hurt'>Hurt/Comfort</option>
                             </select>
                         </label>
-                        <button type="button" id="generate-snippet">產生段落</button>
-                        <button type="button" id="save-draft">儲存草稿</button>
-                        <span id="composer-status" class="composer-status"></span>
+                        <button type='button' id='generate-snippet'>產生段落</button>
+                        <button type='button' id='save-draft'>儲存草稿</button>
+                        <span id='composer-status' class='composer-status'></span>
                     </div>
-                    <div class="ai-controls">
-                        <button id="ai-generate-btn" class="ai-btn"><i class="fas fa-magic"></i> AI 生成同人文</button>
+                    <div class='ai-controls'>
+                        <button id='ai-generate-btn' class='ai-btn'><i class='fas fa-magic'></i> AI 生成同人文</button>
                     </div>
                 </div>
             </section>
 
-            <section class="card preview-card">
+            <section class='card preview-card'>
                 <h2>即時預覽</h2>
-                <div class="preview-header">
-                    <h3 id="preview-title">未命名作品</h3>
-                    <p id="preview-meta">General Audiences · English</p>
+                <div class='preview-header'>
+                    <h3 id='preview-title'>未命名作品</h3>
+                    <p id='preview-meta'>General Audiences · English</p>
                 </div>
-                <p class="preview-summary" id="preview-summary">輸入摘要後會顯示於此。</p>
-                <div class="preview-notes" id="preview-notes"></div>
-                <div class="preview-body" id="work-preview">開始書寫或使用內容產生器，即可看到排版效果。</div>
+                <p class='preview-summary' id='preview-summary'>輸入摘要後會顯示於此。</p>
+                <div class='preview-notes' id='preview-notes'></div>
+                <div class='preview-body' id='work-preview'>開始書寫或使用內容產生器，即可看到排版效果。</div>
             </section>
 
-            <section class="card draft-card">
-                <div class="draft-header">
+            <section class='card draft-card'>
+                <div class='draft-header'>
                     <h2>我的草稿</h2>
-                    <button type="button" class="ghost-btn" id="clear-drafts">清除全部</button>
+                    <button type='button' class='ghost-btn' id='clear-drafts'>清除全部</button>
                 </div>
-                <ul class="draft-list" id="draft-list"></ul>
+                <ul class='draft-list' id='draft-list'></ul>
             </section>
         </div>
     `;
@@ -403,7 +403,7 @@ async function renderAO3(params) {
         state.tags[type].forEach((tag, index) => {
             const chip = document.createElement('span');
             chip.className = 'tag-chip';
-            chip.innerHTML = `${tag}<button type="button" aria-label="移除">×</button>`;
+            chip.innerHTML = `${tag}<button type='button' aria-label='移除'>×</button>`;
             chip.querySelector('button')?.addEventListener('click', () => removeTag(type, index));
             tagContainer.appendChild(chip);
         });
@@ -700,11 +700,11 @@ ${charInfo ? `\n角色設定:\n${charInfo}` : ''}
             const item = document.createElement('div');
             item.className = 'trope-item' + (state.selectedTropes.includes(index) ? ' selected' : '');
             item.innerHTML = `
-                <div class="trope-header">
-                    <span class="trope-title">${trope.title}</span>
-                    <span class="trope-tags">${trope.tags.map(t => `#${t}`).join(' ')}</span>
+                <div class='trope-header'>
+                    <span class='trope-title'>${trope.title}</span>
+                    <span class='trope-tags'>${trope.tags.map(t => `#${t}`).join(' ')}</span>
                 </div>
-                <div class="trope-desc">${trope.desc}</div>
+                <div class='trope-desc'>${trope.desc}</div>
             `;
             item.addEventListener('click', () => toggleTrope(index));
             listContainer.appendChild(item);
@@ -727,7 +727,7 @@ ${charInfo ? `\n角色設定:\n${charInfo}` : ''}
         listContainer.innerHTML = '';
 
         if (characters.length === 0) {
-            listContainer.innerHTML = '<div class="empty-hint">請先在設定中添加角色</div>';
+            listContainer.innerHTML = '<div class='empty-hint'>請先在設定中添加角色</div>';
             return;
         }
 
@@ -736,10 +736,10 @@ ${charInfo ? `\n角色設定:\n${charInfo}` : ''}
             const isSelected = state.selectedCharacters.some(c => c.id === char.id);
             item.className = 'char-item' + (isSelected ? ' selected' : '');
             item.innerHTML = `
-                <div class="char-avatar">${char.avatar ? `<img src="${char.avatar}" alt="${char.name}">` : `<span>${char.name[0]}</span>`}</div>
-                <div class="char-info">
-                    <div class="char-name">${char.name}</div>
-                    ${char.personality ? `<div class="char-desc">${char.personality.slice(0, 50)}...</div>` : ''}
+                <div class='char-avatar'>${char.avatar ? `<img src='${char.avatar}' alt='${char.name}'>` : `<span>${char.name[0]}</span>`}</div>
+                <div class='char-info'>
+                    <div class='char-name'>${char.name}</div>
+                    ${char.personality ? `<div class='char-desc'>${char.personality.slice(0, 50)}...</div>` : ''}
                 </div>
             `;
             item.addEventListener('click', () => toggleCharacter(char));
@@ -780,11 +780,11 @@ ${charInfo ? `\n角色設定:\n${charInfo}` : ''}
             const item = document.createElement('div');
             item.className = 'worldsetting-item' + (state.selectedWorldSettings.includes(index) ? ' selected' : '');
             item.innerHTML = `
-                <div class="worldsetting-header">
-                    <span class="worldsetting-title">${setting.title}</span>
-                    <span class="worldsetting-tags">${setting.tags.map(t => `#${t}`).join(' ')}</span>
+                <div class='worldsetting-header'>
+                    <span class='worldsetting-title'>${setting.title}</span>
+                    <span class='worldsetting-tags'>${setting.tags.map(t => `#${t}`).join(' ')}</span>
                 </div>
-                <div class="worldsetting-desc">${setting.desc}</div>
+                <div class='worldsetting-desc'>${setting.desc}</div>
             `;
             item.addEventListener('click', () => toggleWorldSetting(index));
             listContainer.appendChild(item);
@@ -1031,7 +1031,7 @@ ${charInfo ? `\n角色設定:\n${charInfo}` : ''}
         
         const systemPrompt = `${appSystemPrompt}你是一位專業的同人文作家，擅長根據角色設定、世界觀和互動梗創作符合人物性格的同人文。
 請使用 ${langName} 撰寫。
-輸出格式為 JSON: {"title": "標題", "summary": "摘要（一句話）", "content": "正文內容（分段落）", "tags": ["標籤1", "標籤2"]}
+輸出格式為 JSON: {'title': '標題', 'summary': '摘要（一句話）', 'content': '正文內容（分段落）', 'tags': ['標籤1', '標籤2']}
 
 重要規則：
 1. 必須深入研究角色個性，對話和行為要符合人設

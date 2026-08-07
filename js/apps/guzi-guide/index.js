@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -21,32 +21,32 @@ async function renderGuziGuide(params) {
   const stats = {};
   CATEGORIES.forEach(c => stats[c] = items.filter(i => i.category === c).length);
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-      <h1 class="menu-title">谷子圖鑑</h1>
+    <header class='ios-header'>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+      <h1 class='menu-title'>谷子圖鑑</h1>
     </header>
-    <div class="page">
-      <div class="stats-grid">
+    <div class='page'>
+      <div class='stats-grid'>
         ${CATEGORIES.map(c => `
-          <div class="stat-card">
-            <span class="stat-label">${c}</span>
-            <span class="stat-value">${stats[c]}</span>
+          <div class='stat-card'>
+            <span class='stat-label'>${c}</span>
+            <span class='stat-value'>${stats[c]}</span>
           </div>
         `).join('')}
       </div>
-      <div class="total-count">
+      <div class='total-count'>
         <span>總計</span>
-        <span class="total">${items.length} 件</span>
+        <span class='total'>${items.length} 件</span>
       </div>
-      <div class="item-list">
+      <div class='item-list'>
         ${items.slice(-10).reverse().map(i => `
-          <div class="item-row">
-            <span class="item-name">${i.name}</span>
-            <span class="item-cat">${i.category}</span>
+          <div class='item-row'>
+            <span class='item-name'>${i.name}</span>
+            <span class='item-cat'>${i.category}</span>
           </div>
-        `).join('') || '<div class="empty-items">尚無收藏</div>'}
+        `).join('') || '<div class='empty-items'>尚無收藏</div>'}
       </div>
-      <button class="add-btn"><i class="fas fa-plus"></i> 新增收藏</button>
+      <button class='add-btn'><i class='fas fa-plus'></i> 新增收藏</button>
     </div>
   `;
   container.querySelector('.ios-back-btn').onclick = () => Router.back();

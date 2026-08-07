@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createToast, createKakaoBottomSheet } from '../../components.js';
 import { DiscordUserBindingDB, UsersDB } from '../../db.js';
 
@@ -11,7 +11,7 @@ async function renderDiscordUserBinding() {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.navigate('/settings/discord')
     });
-    backBtn.innerHTML = '<i class="fas fa-chevron-left"></i> 返回';
+    backBtn.innerHTML = '<i class='fas fa-chevron-left'></i> 返回';
     header.appendChild(backBtn);
     
     const title = createElement('h1', 'menu-title');
@@ -25,14 +25,14 @@ async function renderDiscordUserBinding() {
     // 說明卡片
     const introCard = createElement('div', 'mx-4 mb-4 p-4 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-xl text-white');
     introCard.innerHTML = `
-        <div class="flex items-center gap-2 mb-2">
-            <span class="material-symbols-outlined">link</span>
-            <h2 class="text-lg font-bold">用戶身份綁定</h2>
+        <div class='flex items-center gap-2 mb-2'>
+            <span class='material-symbols-outlined'>link</span>
+            <h2 class='text-lg font-bold'>用戶身份綁定</h2>
         </div>
-        <p class="text-sm opacity-90 mb-3">綁定 Discord 帳號後，AI 角色可以識別你的身份，提供個性化的對話體驗</p>
-        <div class="text-xs opacity-80">
-            <div class="mb-1">✓ 跨平台身份一致</div>
-            <div class="mb-1">✓ 個性化對話體驗</div>
+        <p class='text-sm opacity-90 mb-3'>綁定 Discord 帳號後，AI 角色可以識別你的身份，提供個性化的對話體驗</p>
+        <div class='text-xs opacity-80'>
+            <div class='mb-1'>✓ 跨平台身份一致</div>
+            <div class='mb-1'>✓ 個性化對話體驗</div>
             <div>✓ 多機器人環境正確識別</div>
         </div>
     `;
@@ -41,7 +41,7 @@ async function renderDiscordUserBinding() {
     // 添加綁定按鈕
     const addBtn = createElement('button', 'ios-btn ios-btn-primary w-full mb-4 mx-4');
     addBtn.style.maxWidth = 'calc(100% - 32px)';
-    addBtn.innerHTML = '<span class="material-symbols-outlined mr-2">person_add</span> 新增綁定';
+    addBtn.innerHTML = '<span class='material-symbols-outlined mr-2'>person_add</span> 新增綁定';
     addBtn.onclick = () => showAddBindingDialog();
     main.appendChild(addBtn);
     
@@ -51,9 +51,9 @@ async function renderDiscordUserBinding() {
     if (bindings.length === 0) {
         const emptyState = createElement('div', 'text-center py-12 px-4');
         emptyState.innerHTML = `
-            <span class="material-symbols-outlined text-6xl text-gray-300 mb-4 block">link_off</span>
-            <p class="text-gray-500 text-sm">尚未綁定任何 Discord 用戶</p>
-            <p class="text-gray-400 text-xs mt-2">點擊上方按鈕開始綁定</p>
+            <span class='material-symbols-outlined text-6xl text-gray-300 mb-4 block'>link_off</span>
+            <p class='text-gray-500 text-sm'>尚未綁定任何 Discord 用戶</p>
+            <p class='text-gray-400 text-xs mt-2'>點擊上方按鈕開始綁定</p>
         `;
         main.appendChild(emptyState);
     } else {
@@ -66,7 +66,7 @@ async function renderDiscordUserBinding() {
             const userInfo = createElement('div', 'flex items-center gap-3');
             
             const avatar = createElement('div', 'w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center');
-            avatar.innerHTML = '<span class="material-symbols-outlined text-blue-600">discord</span>';
+            avatar.innerHTML = '<span class='material-symbols-outlined text-blue-600'>discord</span>';
             userInfo.appendChild(avatar);
             
             const names = createElement('div');

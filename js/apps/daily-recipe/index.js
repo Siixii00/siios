@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -12,25 +12,25 @@ async function renderDailyRecipe(params) {
   const today = RECIPES[new Date().getDay() % RECIPES.length];
   const container = createElement('div', 'app-container recipe-app');
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-      <h1 class="menu-title">每日食譜</h1>
+    <header class='ios-header'>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+      <h1 class='menu-title'>每日食譜</h1>
     </header>
-    <div class="page">
-      <div class="recipe-card">
-        <div class="recipe-badge">今日推薦</div>
-        <h2 class="recipe-name">${today.name}</h2>
-        <div class="recipe-meta">
-          <span><i class="fas fa-clock"></i> ${today.time}</span>
-          <span><i class="fas fa-signal"></i> ${today.difficulty}</span>
+    <div class='page'>
+      <div class='recipe-card'>
+        <div class='recipe-badge'>今日推薦</div>
+        <h2 class='recipe-name'>${today.name}</h2>
+        <div class='recipe-meta'>
+          <span><i class='fas fa-clock'></i> ${today.time}</span>
+          <span><i class='fas fa-signal'></i> ${today.difficulty}</span>
         </div>
-        <div class="recipe-section">
+        <div class='recipe-section'>
           <h3>食材</h3>
-          <ul class="ingredient-list">${today.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
+          <ul class='ingredient-list'>${today.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
         </div>
-        <div class="recipe-section">
+        <div class='recipe-section'>
           <h3>步驟</h3>
-          <ol class="step-list">${today.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+          <ol class='step-list'>${today.steps.map(s => `<li>${s}</li>`).join('')}</ol>
         </div>
       </div>
     </div>

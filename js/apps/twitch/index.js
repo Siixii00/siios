@@ -214,7 +214,7 @@ function createCharacterSelector() {
     container.appendChild(label);
     
     const select = createElement('select', 'twitch-char-select');
-    select.innerHTML = '<option value="">-- 選擇角色 --</option>';
+    select.innerHTML = '<option value=''>-- 選擇角色 --</option>';
     
     state.characters.forEach(char => {
         const option = createElement('option', '', { 
@@ -661,9 +661,9 @@ async function renderProfile() {
     
     const stats = createElement('div', 'twitch-profile-stats');
     stats.innerHTML = `
-        <div><span class="font-bold">32</span><small>追隨</small></div>
-        <div><span class="font-bold">1.2K</span><small>觀看時數</small></div>
-        <div><span class="font-bold">8</span><small>收藏</small></div>
+        <div><span class='font-bold'>32</span><small>追隨</small></div>
+        <div><span class='font-bold'>1.2K</span><small>觀看時數</small></div>
+        <div><span class='font-bold'>8</span><small>收藏</small></div>
     `;
     profile.appendChild(stats);
     

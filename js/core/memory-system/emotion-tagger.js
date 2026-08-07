@@ -1,4 +1,4 @@
-/**
+﻿/**
  * EmotionTagger - 情緒標記器
  * 
  * 使用效價（Valence）與喚醒度（Arousal）標記情感：
@@ -96,7 +96,7 @@ export class EmotionTagger {
             ],
             negators: [
                 '不', '沒', '無', '非', '不是',
-                'not', 'no', 'never', 'none', "don't", "doesn't", "didn't"
+                'not', 'no', 'never', 'none', 'don't', 'doesn't', 'didn't'
             ]
         };
         

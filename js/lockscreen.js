@@ -1,4 +1,4 @@
-import { createElement, createIcon } from './components.js';
+﻿import { createElement, createIcon } from './components.js';
 
 const LockScreen = {
     element: null,

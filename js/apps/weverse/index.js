@@ -118,7 +118,7 @@ async function generateArtistPost(group) {
     const members = group.artistProfile?.members || [];
     const memberNames = members.length > 0 ? members.map(m => m.name).join('、') : group.name;
 
-    const context = '請為' + memberNames + '生成一則與粉絲分享的貼文，以"' + starter + '"開頭，以"' + closer + '"結尾。內容要親切自然，像是藝人跟粉絲打招呼。';
+    const context = '請為' + memberNames + '生成一則與粉絲分享的貼文，以'' + starter + ''開頭，以'' + closer + ''結尾。內容要親切自然，像是藝人跟粉絲打招呼。';
 
     const characterId = viewerSettings.selectedCharacterId || null;
     const aiContent = await generateContentWithAI(context, characterId);
@@ -228,16 +228,16 @@ function renderGroupList() {
     if (isArtistMode) {
         if (activeGroupId) {
             const group = getActiveGroup();
-            groupListEl.innerHTML = '<button class="group-chip back-btn" data-action="back-to-cards"><i class="fas fa-chevron-left"></i> 返回列表</button><button class="group-chip active">' + (group?.name || '') + '</button>';
+            groupListEl.innerHTML = '<button class='group-chip back-btn' data-action='back-to-cards'><i class='fas fa-chevron-left'></i> 返回列表</button><button class='group-chip active'>' + (group?.name || '') + '</button>';
         } else {
             groupListEl.innerHTML = '';
         }
     } else {
         const joinedGroups = groups.filter(g => joinedGroupIds.includes(g.id));
         if (joinedGroups.length === 0) {
-            groupListEl.innerHTML = '<button class="group-chip explore-btn" data-action="explore">探索社群</button>';
+            groupListEl.innerHTML = '<button class='group-chip explore-btn' data-action='explore'>探索社群</button>';
         } else {
-            groupListEl.innerHTML = joinedGroups.map(g => '<button class="group-chip ' + (g.id === activeGroupId ? 'active' : '') + '" data-group-id="' + g.id + '">' + g.name + '</button>').join('') + '<button class="group-chip explore-btn" data-action="explore">+ 探索</button>';
+            groupListEl.innerHTML = joinedGroups.map(g => '<button class='group-chip ' + (g.id === activeGroupId ? 'active' : '') + '' data-group-id='' + g.id + ''>' + g.name + '</button>').join('') + '<button class='group-chip explore-btn' data-action='explore'>+ 探索</button>';
         }
     }
     return groupListEl;
@@ -254,14 +254,14 @@ function renderStories(group) {
     if (storyItems.length === 0) {
         [{ id: 'default-1', name: '官方', avatar: '官', color: 'var(--wv-accent)' }, { id: 'default-2', name: '成員', avatar: '成', color: '#f09433' }].forEach(story => {
             const item = createElement('article', 'story-item');
-            item.innerHTML = '<span class="avatar" style="background:' + story.color + '">' + story.avatar + '</span><span class="name">' + story.name + '</span>';
+            item.innerHTML = '<span class='avatar' style='background:' + story.color + ''>' + story.avatar + '</span><span class='name'>' + story.name + '</span>';
             storyStripEl.appendChild(item);
         });
         return storyStripEl;
     }
     storyItems.forEach(story => {
         const item = createElement('article', 'story-item');
-        item.innerHTML = '<span class="avatar ' + (story.avatarImage ? 'has-image' : '') + '" ' + (story.avatarImage ? 'style="background-image:url(\'' + story.avatarImage + '\')"' : 'style="background:' + story.color + '"') + '>' + (story.avatarImage ? '' : story.avatar) + '</span><span class="name">' + story.name + '</span>';
+        item.innerHTML = '<span class='avatar ' + (story.avatarImage ? 'has-image' : '') + '' ' + (story.avatarImage ? 'style='background-image:url(\'' + story.avatarImage + '\')'' : 'style='background:' + story.color + ''') + '>' + (story.avatarImage ? '' : story.avatar) + '</span><span class='name'>' + story.name + '</span>';
         storyStripEl.appendChild(item);
     });
     return storyStripEl;
@@ -270,16 +270,16 @@ function renderStories(group) {
 function renderFeed(group) {
     const feedEl = createElement('div', 'feed');
     if (!isArtistMode && !isGroupJoined(group.id)) {
-        feedEl.innerHTML = '<div class="join-prompt"><p>加入此社群後才能查看發文內容</p><button class="join-group-btn" data-group-id="' + group.id + '">加入社群</button></div>';
+        feedEl.innerHTML = '<div class='join-prompt'><p>加入此社群後才能查看發文內容</p><button class='join-group-btn' data-group-id='' + group.id + ''>加入社群</button></div>';
         return feedEl;
     }
     if (!group.posts || group.posts.length === 0) {
-        feedEl.innerHTML = '<div class="empty-feed"><p>目前還沒有發文</p></div>';
+        feedEl.innerHTML = '<div class='empty-feed'><p>目前還沒有發文</p></div>';
         return feedEl;
     }
     group.posts.forEach(post => {
         const article = createElement('article', 'post');
-        article.innerHTML = '<div class="post-head"><span>' + post.author + '</span><span>' + post.time + '</span></div><div class="post-text">' + post.text + '</div><div class="post-actions"><span>讚 ' + formatCompact(post.likes || 0) + '</span><span>留言 ' + formatCompact(post.comments || 0) + '</span></div>';
+        article.innerHTML = '<div class='post-head'><span>' + post.author + '</span><span>' + post.time + '</span></div><div class='post-text'>' + post.text + '</div><div class='post-actions'><span>讚 ' + formatCompact(post.likes || 0) + '</span><span>留言 ' + formatCompact(post.comments || 0) + '</span></div>';
         feedEl.appendChild(article);
     });
     return feedEl;
@@ -287,48 +287,48 @@ function renderFeed(group) {
 
 function renderHeroCover(group) {
     const heroCover = createElement('div', 'hero-cover card');
-    const rolePill = isArtistMode ? '<span class="role-pill">Artist Mode</span>' : '<span class="role-pill">Fan Mode</span>';
+    const rolePill = isArtistMode ? '<span class='role-pill'>Artist Mode</span>' : '<span class='role-pill'>Fan Mode</span>';
     if (!group) {
-        if (isArtistMode) heroCover.innerHTML = '<h2>藝人工作台</h2><p>建立並管理你的團體社群</p><div class="hero-meta"></div>';
-        else if (joinedGroupIds.length === 0) heroCover.innerHTML = '<h2>尚未加入社群</h2><p>探索並加入你喜歡的藝人社群，開始追蹤他們的動態！</p><div class="hero-meta"></div>';
+        if (isArtistMode) heroCover.innerHTML = '<h2>藝人工作台</h2><p>建立並管理你的團體社群</p><div class='hero-meta'></div>';
+        else if (joinedGroupIds.length === 0) heroCover.innerHTML = '<h2>尚未加入社群</h2><p>探索並加入你喜歡的藝人社群，開始追蹤他們的動態！</p><div class='hero-meta'></div>';
         return heroCover;
     }
-    heroCover.innerHTML = '<h2>' + group.name + ' ' + rolePill + '</h2><p>' + group.bio + '</p><span class="type-badge">' + group.type + '</span><div class="hero-meta"><span>' + formatCompact(group.members || 0) + ' 成員</span><span>' + formatCompact(group.online || 0) + ' 在線</span></div>';
+    heroCover.innerHTML = '<h2>' + group.name + ' ' + rolePill + '</h2><p>' + group.bio + '</p><span class='type-badge'>' + group.type + '</span><div class='hero-meta'><span>' + formatCompact(group.members || 0) + ' 成員</span><span>' + formatCompact(group.online || 0) + ' 在線</span></div>';
     return heroCover;
 }
 
 function renderComposer() {
     const composer = createElement('div', 'composer card');
-    composer.innerHTML = '<input type="text" id="post-input" placeholder="' + (isArtistMode ? '以藝人身分向粉絲發文...' : '在社群裡發布貼文...') + '"><button id="post-btn">' + (isArtistMode ? '官方發布' : '發布') + '</button>';
+    composer.innerHTML = '<input type='text' id='post-input' placeholder='' + (isArtistMode ? '以藝人身分向粉絲發文...' : '在社群裡發布貼文...') + ''><button id='post-btn'>' + (isArtistMode ? '官方發布' : '發布') + '</button>';
     return composer;
 }
 function renderArtistGroupCards() {
     const container = createElement('div', 'artist-group-cards');
     if (groups.length === 0) {
-        container.innerHTML = '<div class="artist-empty-state"><p>尚未建立任何團體</p><button class="primary-btn" id="create-artist-group-btn">建立新團體</button></div>';
+        container.innerHTML = '<div class='artist-empty-state'><p>尚未建立任何團體</p><button class='primary-btn' id='create-artist-group-btn'>建立新團體</button></div>';
         return container;
     }
     groups.forEach(group => {
         const card = createElement('article', 'artist-group-card');
         card.dataset.groupId = group.id;
-        card.innerHTML = '<button class="delete-group-btn" data-group-id="' + group.id + '"><i class="fas fa-trash"></i></button><div class="artist-card-header"><span class="artist-card-type">' + group.type + '</span><h4>' + group.name + '</h4></div><p class="artist-card-bio">' + group.bio + '</p><div class="artist-card-meta"><span>' + formatCompact(group.members || 0) + ' 成員</span><span>' + formatCompact(group.online || 0) + ' 在線</span></div><div class="artist-card-members">' + (group.artistProfile?.members?.length > 0 ? '已設定 ' + group.artistProfile.members.length + ' 位成員' : '尚未設定成員') + '</div>';
+        card.innerHTML = '<button class='delete-group-btn' data-group-id='' + group.id + ''><i class='fas fa-trash'></i></button><div class='artist-card-header'><span class='artist-card-type'>' + group.type + '</span><h4>' + group.name + '</h4></div><p class='artist-card-bio'>' + group.bio + '</p><div class='artist-card-meta'><span>' + formatCompact(group.members || 0) + ' 成員</span><span>' + formatCompact(group.online || 0) + ' 在線</span></div><div class='artist-card-members'>' + (group.artistProfile?.members?.length > 0 ? '已設定 ' + group.artistProfile.members.length + ' 位成員' : '尚未設定成員') + '</div>';
         container.appendChild(card);
     });
     const createBtn = createElement('button', 'secondary-btn create-group-btn');
     createBtn.id = 'create-artist-group-btn';
-    createBtn.innerHTML = '<i class="fas fa-plus"></i> 建立新團體';
+    createBtn.innerHTML = '<i class='fas fa-plus'></i> 建立新團體';
     container.appendChild(createBtn);
     return container;
 }
 
 function renderExploreGroupsPage(onClose) {
     const page = createElement('div', 'explore-groups-page');
-    page.innerHTML = '<header class="explore-header settings-header"><button class="icon-btn" id="explore-back-btn"><i class="fas fa-chevron-left"></i></button><h3>探索社群</h3></header><main class="settings-body"><div class="explore-groups-list"></div></main>';
+    page.innerHTML = '<header class='explore-header settings-header'><button class='icon-btn' id='explore-back-btn'><i class='fas fa-chevron-left'></i></button><h3>探索社群</h3></header><main class='settings-body'><div class='explore-groups-list'></div></main>';
     const list = page.querySelector('.explore-groups-list');
     groups.forEach(group => {
         const isJoined = joinedGroupIds.includes(group.id);
         const item = createElement('article', 'explore-group-item');
-        item.innerHTML = '<div class="explore-group-info"><h4>' + group.name + '</h4><span class="explore-group-type">' + group.type + '</span><p>' + group.bio + '</p><div class="explore-group-meta"><span>' + formatCompact(group.members || 0) + ' 成員</span></div></div><button class="' + (isJoined ? 'leave-btn' : 'join-btn') + '" data-group-id="' + group.id + '">' + (isJoined ? '已加入' : '加入') + '</button>';
+        item.innerHTML = '<div class='explore-group-info'><h4>' + group.name + '</h4><span class='explore-group-type'>' + group.type + '</span><p>' + group.bio + '</p><div class='explore-group-meta'><span>' + formatCompact(group.members || 0) + ' 成員</span></div></div><button class='' + (isJoined ? 'leave-btn' : 'join-btn') + '' data-group-id='' + group.id + ''>' + (isJoined ? '已加入' : '加入') + '</button>';
         list.appendChild(item);
     });
     page.querySelector('#explore-back-btn').onclick = onClose;
@@ -338,7 +338,7 @@ function renderExploreGroupsPage(onClose) {
 function createCreateGroupModal(onConfirm) {
     const modal = createElement('div', 'create-group-modal');
     modal.id = 'create-group-modal';
-    modal.innerHTML = '<div class="modal-content"><h3>建立新團體</h3><label><span>團體名稱</span><input type="text" id="new-group-name" placeholder="例如：LUMEN"></label><label><span>類型</span><select id="new-group-type"><option value="K-POP">K-POP</option><option value="J-POP">J-POP</option><option value="Band">Band</option><option value="Solo">Solo</option><option value="Creator">Creator</option></select></label><label><span>簡介</span><textarea id="new-group-bio" rows="2" placeholder="輸入團體介紹"></textarea></label><div class="modal-actions"><button class="secondary-btn" id="cancel-create-group">取消</button><button class="primary-btn" id="confirm-create-group">建立</button></div></div>';
+    modal.innerHTML = '<div class='modal-content'><h3>建立新團體</h3><label><span>團體名稱</span><input type='text' id='new-group-name' placeholder='例如：LUMEN'></label><label><span>類型</span><select id='new-group-type'><option value='K-POP'>K-POP</option><option value='J-POP'>J-POP</option><option value='Band'>Band</option><option value='Solo'>Solo</option><option value='Creator'>Creator</option></select></label><label><span>簡介</span><textarea id='new-group-bio' rows='2' placeholder='輸入團體介紹'></textarea></label><div class='modal-actions'><button class='secondary-btn' id='cancel-create-group'>取消</button><button class='primary-btn' id='confirm-create-group'>建立</button></div></div>';
     modal.querySelector('#cancel-create-group').onclick = () => modal.remove();
     modal.querySelector('#confirm-create-group').onclick = () => {
         const name = modal.querySelector('#new-group-name').value.trim();
@@ -357,11 +357,11 @@ async function renderCharacterSelector() {
     const container = createElement('div', 'character-selector card');
     const characters = await CharactersDB.getAll();
     
-    let html = '<label class="character-select-label"><span>AI 角色：</span><select id="character-select">';
-    html += '<option value="">預設</option>';
+    let html = '<label class='character-select-label'><span>AI 角色：</span><select id='character-select'>';
+    html += '<option value=''>預設</option>';
     characters.forEach(char => {
         const selected = viewerSettings.selectedCharacterId === char.id ? ' selected' : '';
-        html += '<option value="' + char.id + '"' + selected + '>' + char.name + '</option>';
+        html += '<option value='' + char.id + ''' + selected + '>' + char.name + '</option>';
     });
     html += '</select></label>';
     
@@ -373,7 +373,7 @@ async function renderWeverse(params) {
     const container = createElement('div', 'weverse-app');
     if (isArtistMode) container.classList.add('artist-mode');
     const header = createElement('header', 'wv-header');
-    header.innerHTML = '<div class="brand"><span class="brand-dot"></span></div><h1>Weverse</h1><div class="header-actions"><button class="icon-btn" id="user-settings-btn" title="粉絲設定"><i class="fas fa-user-cog"></i></button><button class="icon-btn hidden" id="artist-settings-btn" title="藝人設定"><i class="fas fa-cog"></i></button><button class="icon-btn" id="role-toggle" title="切換角色"><i class="fas fa-exchange-alt"></i></button></div>';
+    header.innerHTML = '<div class='brand'><span class='brand-dot'></span></div><h1>Weverse</h1><div class='header-actions'><button class='icon-btn' id='user-settings-btn' title='粉絲設定'><i class='fas fa-user-cog'></i></button><button class='icon-btn hidden' id='artist-settings-btn' title='藝人設定'><i class='fas fa-cog'></i></button><button class='icon-btn' id='role-toggle' title='切換角色'><i class='fas fa-exchange-alt'></i></button></div>';
     if (isArtistMode) { header.querySelector('#user-settings-btn').classList.add('hidden'); header.querySelector('#artist-settings-btn').classList.remove('hidden'); }
     container.appendChild(header);
     const main = createElement('main', 'wv-main');
@@ -423,9 +423,9 @@ async function renderWeverse(params) {
         renderUI();
     };
     container.onclick = (e) => {
-        const exploreBtn = e.target.closest('[data-action="explore"]');
+        const exploreBtn = e.target.closest('[data-action='explore']');
         if (exploreBtn) { const explorePage = renderExploreGroupsPage(() => { container.classList.remove('show-explore'); explorePage.remove(); }); container.appendChild(explorePage); container.classList.add('show-explore'); return; }
-        const backBtn = e.target.closest('[data-action="back-to-cards"]');
+        const backBtn = e.target.closest('[data-action='back-to-cards']');
         if (backBtn) { activeGroupId = ''; renderUI(); return; }
         const chip = e.target.closest('.group-chip[data-group-id]');
         if (chip) { activeGroupId = chip.dataset.groupId; renderUI(); return; }

@@ -1,4 +1,4 @@
-export function createBlock(type = 'text', content = '') {
+﻿export function createBlock(type = 'text', content = '') {
     return {
         id: 'blk_' + Date.now().toString(36) + '_' + Math.random().toString(36).substr(2, 5),
         type,

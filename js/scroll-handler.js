@@ -1,4 +1,4 @@
-// 手機端滑動邏輯優化
+﻿// 手機端滑動邏輯優化
 class ScrollHandler {
     constructor() {
         this.init();

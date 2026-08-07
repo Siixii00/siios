@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB, WikiRecordsDB, ZiweiCacheDB, CharactersDB } from '../../db.js';
 import { compressImage } from '../../utils/image.js';
@@ -198,18 +198,18 @@ function renderSidebar(container) {
         const collapsed = charRecord._collapsed;
 
         return `
-            <div class="wiki-page-item${isActive ? ' active' : ''}" data-page-id="${charRecord.id}" style="padding-left:20px">
-                ${children.length > 0 ? `<span class="wiki-page-toggle" data-toggle="${charRecord.id}">${collapsed ? '▶' : '▼'}</span>` : '<span style="width:18px"></span>'}
-                <span class="wiki-page-icon">${charRecord.icon || '🧑'}</span>
-                <span class="wiki-page-name">${escapeHtml(charRecord.title || 'Untitled')}</span>
+            <div class='wiki-page-item${isActive ? ' active' : ''}' data-page-id='${charRecord.id}' style='padding-left:20px'>
+                ${children.length > 0 ? `<span class='wiki-page-toggle' data-toggle='${charRecord.id}'>${collapsed ? '▶' : '▼'}</span>` : '<span style='width:18px'></span>'}
+                <span class='wiki-page-icon'>${charRecord.icon || '🧑'}</span>
+                <span class='wiki-page-name'>${escapeHtml(charRecord.title || 'Untitled')}</span>
             </div>
             ${!collapsed ? children.map(child => {
                 const childActive = child.id === activePageId;
                 return `
-                    <div class="wiki-page-item${childActive ? ' active' : ''} child" data-page-id="${child.id}" style="padding-left:40px">
-                        <span style="width:18px"></span>
-                        <span class="wiki-page-icon">${child.icon || '📄'}</span>
-                        <span class="wiki-page-name">${escapeHtml(child.title || 'Untitled')}</span>
+                    <div class='wiki-page-item${childActive ? ' active' : ''} child' data-page-id='${child.id}' style='padding-left:40px'>
+                        <span style='width:18px'></span>
+                        <span class='wiki-page-icon'>${child.icon || '📄'}</span>
+                        <span class='wiki-page-name'>${escapeHtml(child.title || 'Untitled')}</span>
                     </div>
                 `;
             }).join('') : ''}
@@ -220,36 +220,36 @@ function renderSidebar(container) {
     if (listEl) {
         listEl.innerHTML = `
             ${charRecords.length > 0 ? `
-                <div class="wiki-sidebar-section">
-                    <div class="wiki-sidebar-section-header">📋 角色檔案</div>
+                <div class='wiki-sidebar-section'>
+                    <div class='wiki-sidebar-section-header'>📋 角色檔案</div>
                     ${charRecords.map(renderCharGroup).join('')}
                 </div>
             ` : ''}
             ${topicRecords.length > 0 ? `
-                <div class="wiki-sidebar-section">
-                    <div class="wiki-sidebar-section-header">📌 主題</div>
+                <div class='wiki-sidebar-section'>
+                    <div class='wiki-sidebar-section-header'>📌 主題</div>
                     ${topicRecords.map(r => `
-                        <div class="wiki-page-item${r.id === activePageId ? ' active' : ''}" data-page-id="${r.id}" style="padding-left:20px">
-                            <span style="width:18px"></span>
-                            <span class="wiki-page-icon">${r.icon || '📌'}</span>
-                            <span class="wiki-page-name">${escapeHtml(r.title || 'Untitled')}</span>
+                        <div class='wiki-page-item${r.id === activePageId ? ' active' : ''}' data-page-id='${r.id}' style='padding-left:20px'>
+                            <span style='width:18px'></span>
+                            <span class='wiki-page-icon'>${r.icon || '📌'}</span>
+                            <span class='wiki-page-name'>${escapeHtml(r.title || 'Untitled')}</span>
                         </div>
                     `).join('')}
                 </div>
             ` : ''}
             ${noteRecords.length > 0 ? `
-                <div class="wiki-sidebar-section">
-                    <div class="wiki-sidebar-section-header">📝 筆記</div>
+                <div class='wiki-sidebar-section'>
+                    <div class='wiki-sidebar-section-header'>📝 筆記</div>
                     ${noteRecords.map(r => `
-                        <div class="wiki-page-item${r.id === activePageId ? ' active' : ''}" data-page-id="${r.id}" style="padding-left:20px">
-                            <span style="width:18px"></span>
-                            <span class="wiki-page-icon">${r.icon || '📝'}</span>
-                            <span class="wiki-page-name">${escapeHtml(r.title || 'Untitled')}</span>
+                        <div class='wiki-page-item${r.id === activePageId ? ' active' : ''}' data-page-id='${r.id}' style='padding-left:20px'>
+                            <span style='width:18px'></span>
+                            <span class='wiki-page-icon'>${r.icon || '📝'}</span>
+                            <span class='wiki-page-name'>${escapeHtml(r.title || 'Untitled')}</span>
                         </div>
                     `).join('')}
                 </div>
             ` : ''}
-            ${records.length === 0 ? '<div style="padding:24px;text-align:center;color:var(--nt-ink-faint);font-size:13px">尚無頁面<br>點擊同步或新增</div>' : ''}
+            ${records.length === 0 ? '<div style='padding:24px;text-align:center;color:var(--nt-ink-faint);font-size:13px'>尚無頁面<br>點擊同步或新增</div>' : ''}
         `;
 
         listEl.querySelectorAll('.wiki-page-item').forEach(item => {
@@ -285,35 +285,35 @@ function renderEditor(container) {
 
     const record = getRecord(activePageId);
     if (!record) {
-        editorArea.innerHTML = '<div class="wiki-editor-empty">選擇或建立一個頁面</div>';
+        editorArea.innerHTML = '<div class='wiki-editor-empty'>選擇或建立一個頁面</div>';
         return;
     }
 
     const breadcrumbs = getBreadcrumbs(activePageId);
 
     editorArea.innerHTML = `
-        <div class="wiki-breadcrumb">
+        <div class='wiki-breadcrumb'>
             ${breadcrumbs.map((b, i) => `
-                <span class="wiki-breadcrumb-item${i === breadcrumbs.length - 1 ? ' wiki-breadcrumb-current' : ''}" data-nav-page="${b.id}">${b.icon || '📄'} ${escapeHtml(b.title || 'Untitled')}</span>
-                ${i < breadcrumbs.length - 1 ? '<span class="wiki-breadcrumb-sep">/</span>' : ''}
+                <span class='wiki-breadcrumb-item${i === breadcrumbs.length - 1 ? ' wiki-breadcrumb-current' : ''}' data-nav-page='${b.id}'>${b.icon || '📄'} ${escapeHtml(b.title || 'Untitled')}</span>
+                ${i < breadcrumbs.length - 1 ? '<span class='wiki-breadcrumb-sep'>/</span>' : ''}
             `).join('')}
         </div>
         ${record.cover_image
-            ? `<img class="wiki-cover" src="${escapeHtml(record.cover_image)}" alt="">`
-            : `<div class="wiki-cover-placeholder" data-action="add-cover">+ Add cover</div>`
+            ? `<img class='wiki-cover' src='${escapeHtml(record.cover_image)}' alt=''>`
+            : `<div class='wiki-cover-placeholder' data-action='add-cover'>+ Add cover</div>`
         }
-        <div class="wiki-page-header">
-            <div class="wiki-page-icon-title">
-                <span class="wiki-page-emoji" data-action="change-icon">${record.icon || '📄'}</span>
-                <input class="wiki-page-title-input" value="${escapeHtml(record.title)}" placeholder="Untitled" data-field="title">
+        <div class='wiki-page-header'>
+            <div class='wiki-page-icon-title'>
+                <span class='wiki-page-emoji' data-action='change-icon'>${record.icon || '📄'}</span>
+                <input class='wiki-page-title-input' value='${escapeHtml(record.title)}' placeholder='Untitled' data-field='title'>
             </div>
-            ${record.source_type === 'auto' ? `<div class="wiki-page-meta">自動生成 · ${record.page_type}</div>` : ''}
+            ${record.source_type === 'auto' ? `<div class='wiki-page-meta'>自動生成 · ${record.page_type}</div>` : ''}
         </div>
-        <div class="wiki-blocks" data-page-id="${record.id}">
+        <div class='wiki-blocks' data-page-id='${record.id}'>
             ${renderBlocks(record.blocks, record.id)}
         </div>
-        <div class="wiki-ziwei-area" data-page-id="${record.id}"></div>
-        <div class="wiki-backlinks-area" data-page-id="${record.id}"></div>
+        <div class='wiki-ziwei-area' data-page-id='${record.id}'></div>
+        <div class='wiki-backlinks-area' data-page-id='${record.id}'></div>
     `;
 
     setupUndoRedoShortcuts(container);
@@ -330,13 +330,13 @@ function renderEditor(container) {
         el.onclick = () => navigateToPage(container, el.dataset.navPage);
     });
 
-    const coverAction = editorArea.querySelector('[data-action="add-cover"]');
+    const coverAction = editorArea.querySelector('[data-action='add-cover']');
     if (coverAction) coverAction.onclick = () => uploadCoverImage(record, container);
 
     const coverImg = editorArea.querySelector('.wiki-cover');
     if (coverImg) coverImg.onclick = () => uploadCoverImage(record, container);
 
-    const emojiBtn = editorArea.querySelector('[data-action="change-icon"]');
+    const emojiBtn = editorArea.querySelector('[data-action='change-icon']');
     if (emojiBtn) {
         emojiBtn.onclick = async () => {
             const current = record.icon || '📄';
@@ -360,20 +360,20 @@ function renderEditor(container) {
 
 function renderBlocks(blocks, recordId) {
     return blocks.map((block, idx) => {
-        const handle = `<span class="wiki-block-handle" data-drag="${block.id}">⋮⋮</span>`;
+        const handle = `<span class='wiki-block-handle' data-drag='${block.id}'>⋮⋮</span>`;
         const confidenceTag = block.confidence && CONFIDENCE_LABELS[block.confidence]
-            ? `<span class="wiki-confidence-tag" data-confidence="${block.confidence}" style="background:${CONFIDENCE_LABELS[block.confidence].color}20;color:${CONFIDENCE_LABELS[block.confidence].color}">${CONFIDENCE_LABELS[block.confidence].label}</span>`
+            ? `<span class='wiki-confidence-tag' data-confidence='${block.confidence}' style='background:${CONFIDENCE_LABELS[block.confidence].color}20;color:${CONFIDENCE_LABELS[block.confidence].color}'>${CONFIDENCE_LABELS[block.confidence].label}</span>`
             : '';
 
         if (block.type === 'divider') {
-            return `<div class="wiki-block" data-block-id="${block.id}" data-block-type="divider">${handle}<div class="wiki-block-content" data-type="divider"></div>${confidenceTag}</div>`;
+            return `<div class='wiki-block' data-block-id='${block.id}' data-block-type='divider'>${handle}<div class='wiki-block-content' data-type='divider'></div>${confidenceTag}</div>`;
         }
 
         if (block.type === 'todo') {
-            return `<div class="wiki-block" data-block-id="${block.id}" data-block-type="todo">${handle}
-                <div class="wiki-block-content" data-type="todo">
-                    <div class="wiki-todo-checkbox${block.checked ? ' checked' : ''}" data-check="${block.id}"></div>
-                    <div class="wiki-todo-text${block.checked ? ' checked' : ''}" contenteditable="true" data-block-id="${block.id}" data-placeholder="To-do">${block.content || ''}</div>
+            return `<div class='wiki-block' data-block-id='${block.id}' data-block-type='todo'>${handle}
+                <div class='wiki-block-content' data-type='todo'>
+                    <div class='wiki-todo-checkbox${block.checked ? ' checked' : ''}' data-check='${block.id}'></div>
+                    <div class='wiki-todo-text${block.checked ? ' checked' : ''}' contenteditable='true' data-block-id='${block.id}' data-placeholder='To-do'>${block.content || ''}</div>
                 </div>
                 ${confidenceTag}
             </div>`;
@@ -381,9 +381,9 @@ function renderBlocks(blocks, recordId) {
 
         if (block.type === 'image') {
             const imgSrc = block.metadata.src || '';
-            return `<div class="wiki-block" data-block-id="${block.id}" data-block-type="image">${handle}
-                <div class="wiki-block-content" data-type="image">
-                    ${imgSrc ? `<img src="${escapeHtml(imgSrc)}" alt="">` : '<div style="padding:12px;color:var(--nt-ink-faint);cursor:pointer" data-action="upload-image">Click to upload image</div>'}
+            return `<div class='wiki-block' data-block-id='${block.id}' data-block-type='image'>${handle}
+                <div class='wiki-block-content' data-type='image'>
+                    ${imgSrc ? `<img src='${escapeHtml(imgSrc)}' alt=''>` : '<div style='padding:12px;color:var(--nt-ink-faint);cursor:pointer' data-action='upload-image'>Click to upload image</div>'}
                 </div>
                 ${confidenceTag}
             </div>`;
@@ -392,8 +392,8 @@ function renderBlocks(blocks, recordId) {
         if (block.type === 'page-link') {
             const linkedRecord = getRecord(block.metadata.pageId);
             const linkText = linkedRecord ? `${linkedRecord.icon || '📄'} ${escapeHtml(linkedRecord.title || 'Untitled')}` : 'Select page';
-            return `<div class="wiki-block" data-block-id="${block.id}" data-block-type="page-link">${handle}
-                <div class="wiki-block-content" data-type="page-link" data-link-page="${escapeHtml(block.metadata.pageId || '')}">${linkText}</div>
+            return `<div class='wiki-block' data-block-id='${block.id}' data-block-type='page-link'>${handle}
+                <div class='wiki-block-content' data-type='page-link' data-link-page='${escapeHtml(block.metadata.pageId || '')}'>${linkText}</div>
                 ${confidenceTag}
             </div>`;
         }
@@ -408,8 +408,8 @@ function renderBlocks(blocks, recordId) {
 
         const renderedContent = renderLinksInContent(block.content || '');
 
-        return `<div class="wiki-block" data-block-id="${block.id}" data-block-type="${block.type}">${handle}
-            <div class="wiki-block-content" contenteditable="true" data-type="${block.type}" data-block-id="${block.id}" data-placeholder="${placeholder}">${renderedContent}</div>
+        return `<div class='wiki-block' data-block-id='${block.id}' data-block-type='${block.type}'>${handle}
+            <div class='wiki-block-content' contenteditable='true' data-type='${block.type}' data-block-id='${block.id}' data-placeholder='${placeholder}'>${renderedContent}</div>
             ${confidenceTag}
         </div>`;
     }).join('');
@@ -451,7 +451,7 @@ function bindBlockEvents(container, record) {
                 WikiRecordsDB.update(record.id, { blocks: record.blocks });
                 renderEditor(container);
                 requestAnimationFrame(() => {
-                    const newEl = blocksEl.querySelector(`[data-block-id="${newBlock.id}"]`);
+                    const newEl = blocksEl.querySelector(`[data-block-id='${newBlock.id}']`);
                     if (newEl) newEl.focus();
                 });
             }
@@ -467,7 +467,7 @@ function bindBlockEvents(container, record) {
                     const prevIdx = Math.max(0, idx - 1);
                     const prevBlock = record.blocks[prevIdx];
                     if (prevBlock) {
-                        const prevEl = blocksEl.querySelector(`[data-block-id="${prevBlock.id}"]`);
+                        const prevEl = blocksEl.querySelector(`[data-block-id='${prevBlock.id}']`);
                         if (prevEl) prevEl.focus();
                     }
                 });
@@ -519,7 +519,7 @@ function bindBlockEvents(container, record) {
         };
     });
 
-    blocksEl.querySelectorAll('[data-action="upload-image"]').forEach(el => {
+    blocksEl.querySelectorAll('[data-action='upload-image']').forEach(el => {
         el.onclick = async () => {
             const blockId = el.closest('.wiki-block').dataset.blockId;
             const block = record.blocks.find(b => b.id === blockId);
@@ -542,7 +542,7 @@ function bindBlockEvents(container, record) {
         };
     });
 
-    blocksEl.querySelectorAll('[data-type="page-link"]').forEach(el => {
+    blocksEl.querySelectorAll('[data-type='page-link']').forEach(el => {
         el.onclick = () => {
             const linkedPageId = el.dataset.linkPage;
             if (linkedPageId) navigateToPage(container, linkedPageId);
@@ -575,8 +575,8 @@ function bindBlockEvents(container, record) {
         if (e.target === blocksEl || e.target.classList.contains('wiki-bilink')) return;
         if (e.target !== blocksEl) return;
         const lastBlock = record.blocks[record.blocks.length - 1];
-        if (lastBlock && isBlockEmpty(blocksEl.querySelector(`[data-block-id="${lastBlock.id}"]`))) {
-            const el = blocksEl.querySelector(`[data-block-id="${lastBlock.id}"]`);
+        if (lastBlock && isBlockEmpty(blocksEl.querySelector(`[data-block-id='${lastBlock.id}']`))) {
+            const el = blocksEl.querySelector(`[data-block-id='${lastBlock.id}']`);
             if (el) el.focus();
         } else {
             const newBlock = createBlock('text', '');
@@ -585,7 +585,7 @@ function bindBlockEvents(container, record) {
             WikiRecordsDB.update(record.id, { blocks: record.blocks });
             renderEditor(container);
             requestAnimationFrame(() => {
-                const el = blocksEl.querySelector(`[data-block-id="${newBlock.id}"]`);
+                const el = blocksEl.querySelector(`[data-block-id='${newBlock.id}']`);
                 if (el) el.focus();
             });
         }
@@ -603,17 +603,17 @@ async function loadBacklinks(container, recordId) {
     }
 
     area.innerHTML = `
-        <div class="wiki-section-card">
-            <div class="wiki-section-header collapsed" data-toggle>
-                <div class="wiki-section-title">↩️ 反向連結 (${backlinks.length})</div>
-                <div class="wiki-section-toggle">▼</div>
+        <div class='wiki-section-card'>
+            <div class='wiki-section-header collapsed' data-toggle>
+                <div class='wiki-section-title'>↩️ 反向連結 (${backlinks.length})</div>
+                <div class='wiki-section-toggle'>▼</div>
             </div>
-            <div class="wiki-section-content collapsed">
-                <div class="wiki-backlinks-list">
+            <div class='wiki-section-content collapsed'>
+                <div class='wiki-backlinks-list'>
                     ${backlinks.map(r => `
-                        <div class="wiki-backlink-item" data-nav-page="${r.id}">
-                            <span class="wiki-backlink-icon">${r.icon || '📄'}</span>
-                            <span class="wiki-backlink-text">${escapeHtml(r.title || 'Untitled')}</span>
+                        <div class='wiki-backlink-item' data-nav-page='${r.id}'>
+                            <span class='wiki-backlink-icon'>${r.icon || '📄'}</span>
+                            <span class='wiki-backlink-text'>${escapeHtml(r.title || 'Untitled')}</span>
                         </div>
                     `).join('')}
                 </div>
@@ -642,15 +642,15 @@ async function loadZiweiFortune(container, recordId) {
         const character = await CharactersDB.getById(record.character_id);
         if (!character || !character.birth_date || !character.birth_time || !character.gender) {
             area.innerHTML = `
-                <div class="wiki-section-card">
-                    <div class="wiki-section-header collapsed" data-toggle>
-                        <div class="wiki-section-title">🔮 命理分析</div>
-                        <div class="wiki-section-toggle">▼</div>
+                <div class='wiki-section-card'>
+                    <div class='wiki-section-header collapsed' data-toggle>
+                        <div class='wiki-section-title'>🔮 命理分析</div>
+                        <div class='wiki-section-toggle'>▼</div>
                     </div>
-                    <div class="wiki-section-content collapsed">
-                        <div class="wiki-ziwei-empty">
+                    <div class='wiki-section-content collapsed'>
+                        <div class='wiki-ziwei-empty'>
                             <p>尚未設定完整的出生資訊</p>
-                            <p class="wiki-ziwei-hint">請在角色設定中補充出生日期、時間與性別</p>
+                            <p class='wiki-ziwei-hint'>請在角色設定中補充出生日期、時間與性別</p>
                         </div>
                     </div>
                 </div>
@@ -664,13 +664,13 @@ async function loadZiweiFortune(container, recordId) {
 
         if (!cache) {
             area.innerHTML = `
-                <div class="wiki-section-card">
-                    <div class="wiki-section-header collapsed" data-toggle>
-                        <div class="wiki-section-title">🔮 命理分析</div>
-                        <div class="wiki-section-toggle">▼</div>
+                <div class='wiki-section-card'>
+                    <div class='wiki-section-header collapsed' data-toggle>
+                        <div class='wiki-section-title'>🔮 命理分析</div>
+                        <div class='wiki-section-toggle'>▼</div>
                     </div>
-                    <div class="wiki-section-content collapsed">
-                        <div class="wiki-ziwei-loading">載入中...</div>
+                    <div class='wiki-section-content collapsed'>
+                        <div class='wiki-ziwei-loading'>載入中...</div>
                     </div>
                 </div>
             `;
@@ -680,13 +680,13 @@ async function loadZiweiFortune(container, recordId) {
 
         if (cache.is_stale) {
             area.innerHTML = `
-                <div class="wiki-section-card">
-                    <div class="wiki-section-header collapsed" data-toggle>
-                        <div class="wiki-section-title">🔮 命理分析</div>
-                        <div class="wiki-section-toggle">▼</div>
+                <div class='wiki-section-card'>
+                    <div class='wiki-section-header collapsed' data-toggle>
+                        <div class='wiki-section-title'>🔮 命理分析</div>
+                        <div class='wiki-section-toggle'>▼</div>
                     </div>
-                    <div class="wiki-section-content collapsed">
-                        <div class="wiki-warning-banner">⚠️ 資料可能過期（無法連線至分析服務）</div>
+                    <div class='wiki-section-content collapsed'>
+                        <div class='wiki-warning-banner'>⚠️ 資料可能過期（無法連線至分析服務）</div>
                         ${renderZiweiCards(cache)}
                     </div>
                 </div>
@@ -696,12 +696,12 @@ async function loadZiweiFortune(container, recordId) {
         }
 
         area.innerHTML = `
-            <div class="wiki-section-card">
-                <div class="wiki-section-header collapsed" data-toggle>
-                    <div class="wiki-section-title">🔮 命理分析</div>
-                    <div class="wiki-section-toggle">▼</div>
+            <div class='wiki-section-card'>
+                <div class='wiki-section-header collapsed' data-toggle>
+                    <div class='wiki-section-title'>🔮 命理分析</div>
+                    <div class='wiki-section-toggle'>▼</div>
                 </div>
-                <div class="wiki-section-content collapsed">
+                <div class='wiki-section-content collapsed'>
                     ${renderZiweiCards(cache)}
                 </div>
             </div>
@@ -719,25 +719,25 @@ function renderZiweiCards(cache) {
         : cache.fortune_summary || {};
     
     return `
-        <div class="wiki-ziwei-cards">
-            <div class="wiki-ziwei-card">
-                <div class="wiki-ziwei-card-title">流年運勢</div>
-                ${cache.liu_nian_temple ? `<div class="wiki-ziwei-card-temple">命宮：${escapeHtml(cache.liu_nian_temple)}</div>` : ''}
-                ${summary.yearly ? `<div class="wiki-ziwei-card-summary">${escapeHtml(summary.yearly)}</div>` : ''}
+        <div class='wiki-ziwei-cards'>
+            <div class='wiki-ziwei-card'>
+                <div class='wiki-ziwei-card-title'>流年運勢</div>
+                ${cache.liu_nian_temple ? `<div class='wiki-ziwei-card-temple'>命宮：${escapeHtml(cache.liu_nian_temple)}</div>` : ''}
+                ${summary.yearly ? `<div class='wiki-ziwei-card-summary'>${escapeHtml(summary.yearly)}</div>` : ''}
             </div>
-            <div class="wiki-ziwei-card">
-                <div class="wiki-ziwei-card-title">流月運勢</div>
-                ${cache.liu_yue_temple ? `<div class="wiki-ziwei-card-temple">命宮：${escapeHtml(cache.liu_yue_temple)}</div>` : ''}
-                ${summary.monthly ? `<div class="wiki-ziwei-card-summary">${escapeHtml(summary.monthly)}</div>` : ''}
+            <div class='wiki-ziwei-card'>
+                <div class='wiki-ziwei-card-title'>流月運勢</div>
+                ${cache.liu_yue_temple ? `<div class='wiki-ziwei-card-temple'>命宮：${escapeHtml(cache.liu_yue_temple)}</div>` : ''}
+                ${summary.monthly ? `<div class='wiki-ziwei-card-summary'>${escapeHtml(summary.monthly)}</div>` : ''}
             </div>
-            <div class="wiki-ziwei-card">
-                <div class="wiki-ziwei-card-title">流日運勢</div>
-                ${cache.liu_ri_temple ? `<div class="wiki-ziwei-card-temple">命宮：${escapeHtml(cache.liu_ri_temple)}</div>` : ''}
-                ${summary.daily ? `<div class="wiki-ziwei-card-summary">${escapeHtml(summary.daily)}</div>` : ''}
+            <div class='wiki-ziwei-card'>
+                <div class='wiki-ziwei-card-title'>流日運勢</div>
+                ${cache.liu_ri_temple ? `<div class='wiki-ziwei-card-temple'>命宮：${escapeHtml(cache.liu_ri_temple)}</div>` : ''}
+                ${summary.daily ? `<div class='wiki-ziwei-card-summary'>${escapeHtml(summary.daily)}</div>` : ''}
                 ${cache.events && cache.events.length > 0 ? `
-                    <div class="wiki-ziwei-events">
+                    <div class='wiki-ziwei-events'>
                         ${cache.events.filter(e => e.confidence > 0.7).slice(0, 3).map(event => `
-                            <div class="wiki-ziwei-event">${escapeHtml(event.description)} (${Math.round(event.confidence * 100)}%)</div>
+                            <div class='wiki-ziwei-event'>${escapeHtml(event.description)} (${Math.round(event.confidence * 100)}%)</div>
                         `).join('')}
                     </div>
                 ` : ''}
@@ -761,7 +761,7 @@ function updateNumberedListNumbers(record, blocksEl) {
     let counter = 1;
     record.blocks.forEach((block, index) => {
         if (block.type === 'numbered-list') {
-            const el = blocksEl.querySelector(`[data-block-id="${block.id}"]`);
+            const el = blocksEl.querySelector(`[data-block-id='${block.id}']`);
             if (el) {
                 el.style.counterReset = 'none';
                 el.dataset.number = counter;
@@ -804,14 +804,14 @@ function showSlashMenu(container, blockId, triggerEl) {
         );
 
         menu.innerHTML = `
-            <div class="wiki-slash-search">
-                <input type="text" placeholder="Search blocks..." value="${escapeHtml(filter)}" autofocus>
+            <div class='wiki-slash-search'>
+                <input type='text' placeholder='Search blocks...' value='${escapeHtml(filter)}' autofocus>
             </div>
             ${filtered.map((bt, i) => `
-                <div class="wiki-slash-item${i === slashMenuState.index ? ' active' : ''}" data-block-type="${bt.type}">
-                    <span class="wiki-slash-item-icon">${bt.icon}</span>
-                    <span class="wiki-slash-item-label">${bt.label}</span>
-                    <span class="wiki-slash-item-desc">${bt.desc}</span>
+                <div class='wiki-slash-item${i === slashMenuState.index ? ' active' : ''}' data-block-type='${bt.type}'>
+                    <span class='wiki-slash-item-icon'>${bt.icon}</span>
+                    <span class='wiki-slash-item-label'>${bt.label}</span>
+                    <span class='wiki-slash-item-desc'>${bt.desc}</span>
                 </div>
             `).join('')}
         `;
@@ -898,7 +898,7 @@ function applyBlockType(container, blockId, type) {
     if (type !== 'divider' && type !== 'image' && type !== 'page-link') {
         requestAnimationFrame(() => {
             const blocksEl = container.querySelector('.wiki-blocks');
-            const el = blocksEl?.querySelector(`[data-block-id="${blockId}"]`);
+            const el = blocksEl?.querySelector(`[data-block-id='${blockId}']`);
             if (el) el.focus();
         });
     }
@@ -909,16 +909,16 @@ function showPagePicker(container, block) {
     if (otherRecords.length === 0) return;
 
     const picker = createElement('div', 'wiki-slash-menu');
-    const rect = container.querySelector(`[data-block-id="${block.id}"]`)?.getBoundingClientRect();
+    const rect = container.querySelector(`[data-block-id='${block.id}']`)?.getBoundingClientRect();
     if (rect) {
         picker.style.top = (rect.bottom + 4) + 'px';
         picker.style.left = rect.left + 'px';
     }
 
     picker.innerHTML = otherRecords.map(r => `
-        <div class="wiki-slash-item" data-pick-page="${r.id}">
-            <span class="wiki-slash-item-icon">${r.icon || '📄'}</span>
-            <span class="wiki-slash-item-label">${escapeHtml(r.title || 'Untitled')}</span>
+        <div class='wiki-slash-item' data-pick-page='${r.id}'>
+            <span class='wiki-slash-item-icon'>${r.icon || '📄'}</span>
+            <span class='wiki-slash-item-label'>${escapeHtml(r.title || 'Untitled')}</span>
         </div>
     `).join('');
 
@@ -1008,12 +1008,12 @@ function showContextMenu(container, recordId, x, y) {
     menu.style.left = x + 'px';
 
     menu.innerHTML = `
-        <div class="wiki-context-item" data-ctx="rename">重新命名</div>
+        <div class='wiki-context-item' data-ctx='rename'>重新命名</div>
         ${!isAuto ? `
-            <div class="wiki-context-item" data-ctx="duplicate">複製</div>
-            <div class="wiki-context-item" data-ctx="add-child">新增子頁面</div>
+            <div class='wiki-context-item' data-ctx='duplicate'>複製</div>
+            <div class='wiki-context-item' data-ctx='add-child'>新增子頁面</div>
         ` : ''}
-        <div class="wiki-context-item danger" data-ctx="delete">刪除</div>
+        <div class='wiki-context-item danger' data-ctx='delete'>刪除</div>
     `;
 
     container.appendChild(menu);
@@ -1096,15 +1096,15 @@ function handleSearch(container, query) {
     }
 
     if (results.length === 0) {
-        resultsEl.innerHTML = '<div class="wiki-search-result-item" style="color:var(--nt-ink-faint)">No results</div>';
+        resultsEl.innerHTML = '<div class='wiki-search-result-item' style='color:var(--nt-ink-faint)'>No results</div>';
     } else {
         resultsEl.innerHTML = results.slice(0, 8).map(r => {
             const matchBlock = r.blocks && r.blocks.find(b => typeof b.content === 'string' && b.content.toLowerCase().includes(query.toLowerCase()));
             const excerpt = matchBlock ? stripHtml(matchBlock.content).substring(0, 60) : '';
             return `
-                <div class="wiki-search-result-item" data-nav-page="${r.id}">
-                    <div class="wiki-search-result-title">${r.icon || '📄'} ${escapeHtml(r.title || 'Untitled')}</div>
-                    ${excerpt ? `<div class="wiki-search-result-excerpt">${escapeHtml(excerpt)}</div>` : ''}
+                <div class='wiki-search-result-item' data-nav-page='${r.id}'>
+                    <div class='wiki-search-result-title'>${r.icon || '📄'} ${escapeHtml(r.title || 'Untitled')}</div>
+                    ${excerpt ? `<div class='wiki-search-result-excerpt'>${escapeHtml(excerpt)}</div>` : ''}
                 </div>
             `;
         }).join('');
@@ -1173,50 +1173,50 @@ function openSettingsModal(container) {
 
     modal = createElement('div', 'wiki-settings-modal');
     modal.innerHTML = `
-        <div class="wiki-settings-card">
+        <div class='wiki-settings-card'>
             <h3>Wiki 設定</h3>
             
-            <div class="wiki-settings-section">
+            <div class='wiki-settings-section'>
                 <h4>Notion API 整合</h4>
-                <div class="wiki-settings-field">
+                <div class='wiki-settings-field'>
                     <label>API Token (Internal Integration Token)</label>
-                    <input type="password" class="wiki-settings-input" id="notion-token" 
-                        placeholder="secret_xxxx..." value="${escapeHtml(notionConfig.token || '')}">
-                    <p class="wiki-settings-hint">從 Notion Integrations 頁面建立並複製 Token</p>
+                    <input type='password' class='wiki-settings-input' id='notion-token' 
+                        placeholder='secret_xxxx...' value='${escapeHtml(notionConfig.token || '')}'>
+                    <p class='wiki-settings-hint'>從 Notion Integrations 頁面建立並複製 Token</p>
                 </div>
-                <div class="wiki-settings-field">
+                <div class='wiki-settings-field'>
                     <label>Database ID</label>
-                    <input type="text" class="wiki-settings-input" id="notion-database-id" 
-                        placeholder="xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" value="${escapeHtml(notionConfig.databaseId || '')}">
-                    <p class="wiki-settings-hint">從 Notion Database URL 中取得（複製整個 URL 或只要 ID）</p>
+                    <input type='text' class='wiki-settings-input' id='notion-database-id' 
+                        placeholder='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' value='${escapeHtml(notionConfig.databaseId || '')}'>
+                    <p class='wiki-settings-hint'>從 Notion Database URL 中取得（複製整個 URL 或只要 ID）</p>
                 </div>
-                <button class="wiki-settings-btn primary" id="notion-connect">
+                <button class='wiki-settings-btn primary' id='notion-connect'>
                     ${isConnected ? '儲存設定' : '連接 Notion'}
                 </button>
                 ${isConnected ? `
-                    <button class="wiki-settings-btn secondary" id="notion-sync">同步到 Notion</button>
-                    <button class="wiki-settings-btn secondary" id="notion-pull">從 Notion 拉取</button>
+                    <button class='wiki-settings-btn secondary' id='notion-sync'>同步到 Notion</button>
+                    <button class='wiki-settings-btn secondary' id='notion-pull'>從 Notion 拉取</button>
                 ` : ''}
             </div>
             
-            <div class="wiki-settings-section">
+            <div class='wiki-settings-section'>
                 <h4>MCP 整合（進階）</h4>
-                <div class="wiki-settings-field">
+                <div class='wiki-settings-field'>
                     <label>MCP Server URL</label>
-                    <input type="text" class="wiki-settings-input" id="mcp-url" 
-                        placeholder="http://localhost:3000/mcp" value="${escapeHtml(notionConfig.mcpUrl || '')}">
-                    <p class="wiki-settings-hint">連接到本地 MCP Server 以使用 Model Context Protocol</p>
+                    <input type='text' class='wiki-settings-input' id='mcp-url' 
+                        placeholder='http://localhost:3000/mcp' value='${escapeHtml(notionConfig.mcpUrl || '')}'>
+                    <p class='wiki-settings-hint'>連接到本地 MCP Server 以使用 Model Context Protocol</p>
                 </div>
-                <button class="wiki-settings-btn secondary" id="mcp-connect">連接 MCP</button>
+                <button class='wiki-settings-btn secondary' id='mcp-connect'>連接 MCP</button>
             </div>
             
-            <div class="wiki-settings-status">
-                <span class="wiki-status-indicator ${isConnected ? 'connected' : ''}"></span>
+            <div class='wiki-settings-status'>
+                <span class='wiki-status-indicator ${isConnected ? 'connected' : ''}'></span>
                 <span>${isConnected ? '已連接到 Notion' : '尚未連接'}</span>
             </div>
             
-            <div class="wiki-settings-actions">
-                <button class="wiki-settings-close">關閉</button>
+            <div class='wiki-settings-actions'>
+                <button class='wiki-settings-close'>關閉</button>
             </div>
         </div>
     `;
@@ -1528,21 +1528,21 @@ function openFabMenu(container) {
 
     menu = createElement('div', 'wiki-fab-menu');
     menu.innerHTML = `
-        <div class="wiki-fab-item" data-action="new-note">
-            <i class="fas fa-plus"></i>
+        <div class='wiki-fab-item' data-action='new-note'>
+            <i class='fas fa-plus'></i>
             <span>新增筆記</span>
         </div>
-        <div class="wiki-fab-item" data-action="new-topic">
-            <i class="fas fa-bookmark"></i>
+        <div class='wiki-fab-item' data-action='new-topic'>
+            <i class='fas fa-bookmark'></i>
             <span>新增主題</span>
         </div>
-        <div class="wiki-fab-item" data-action="sync">
-            <i class="fas fa-sync"></i>
+        <div class='wiki-fab-item' data-action='sync'>
+            <i class='fas fa-sync'></i>
             <span>同步角色數據</span>
         </div>
         ${activePageId ? `
-            <div class="wiki-fab-item danger" data-action="delete">
-                <i class="fas fa-trash"></i>
+            <div class='wiki-fab-item danger' data-action='delete'>
+                <i class='fas fa-trash'></i>
                 <span>刪除目前頁面</span>
             </div>
         ` : ''}
@@ -1590,32 +1590,32 @@ async function renderPersonalWiki(params) {
     const container = createElement('div', 'app-container wiki-app');
 
     container.innerHTML = `
-        <div class="wiki-sidebar-overlay"></div>
-        <div class="wiki-sidebar">
-            <div class="wiki-sidebar-header">
-                <button class="wiki-sidebar-toggle"><i class="fas fa-chevron-left"></i></button>
-                <span class="wiki-sidebar-title">角色 Wiki</span>
-                <button class="wiki-sidebar-back"><i class="fas fa-chevron-left"></i> 返回</button>
+        <div class='wiki-sidebar-overlay'></div>
+        <div class='wiki-sidebar'>
+            <div class='wiki-sidebar-header'>
+                <button class='wiki-sidebar-toggle'><i class='fas fa-chevron-left'></i></button>
+                <span class='wiki-sidebar-title'>角色 Wiki</span>
+                <button class='wiki-sidebar-back'><i class='fas fa-chevron-left'></i> 返回</button>
             </div>
-            <div class="wiki-search" style="position:relative">
-                <input class="wiki-search-input" type="text" placeholder="搜尋頁面...">
+            <div class='wiki-search' style='position:relative'>
+                <input class='wiki-search-input' type='text' placeholder='搜尋頁面...'>
             </div>
-            <div class="wiki-page-list"></div>
-            <div class="wiki-sidebar-footer">
-                <button class="wiki-sync-btn">🔄 同步角色數據</button>
-                <button class="wiki-settings-btn"><i class="fas fa-cog"></i> 設定</button>
+            <div class='wiki-page-list'></div>
+            <div class='wiki-sidebar-footer'>
+                <button class='wiki-sync-btn'>🔄 同步角色數據</button>
+                <button class='wiki-settings-btn'><i class='fas fa-cog'></i> 設定</button>
             </div>
         </div>
-        <button class="wiki-editor-toggle"><i class="fas fa-chevron-right"></i></button>
-        <div class="wiki-editor-area">
-            <div class="wiki-mobile-header">
-                <button class="wiki-mobile-menu-btn">☰</button>
-                <span class="wiki-mobile-title">角色 Wiki</span>
-                <button class="wiki-mobile-back"><i class="fas fa-chevron-left"></i> 返回</button>
+        <button class='wiki-editor-toggle'><i class='fas fa-chevron-right'></i></button>
+        <div class='wiki-editor-area'>
+            <div class='wiki-mobile-header'>
+                <button class='wiki-mobile-menu-btn'>☰</button>
+                <span class='wiki-mobile-title'>角色 Wiki</span>
+                <button class='wiki-mobile-back'><i class='fas fa-chevron-left'></i> 返回</button>
             </div>
-            <div class="wiki-editor-empty">選擇或建立一個頁面</div>
+            <div class='wiki-editor-empty'>選擇或建立一個頁面</div>
         </div>
-        <button class="wiki-fab"><i class="fas fa-plus"></i></button>
+        <button class='wiki-fab'><i class='fas fa-plus'></i></button>
     `;
 
     container.querySelector('.wiki-sidebar-back').onclick = () => Router.back();

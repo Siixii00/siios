@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -21,29 +21,29 @@ async function renderKakaopay(params) {
   await loadData();
   const container = createElement('div', 'app-container pay-app');
   container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
-      <h1 class="menu-title">支付</h1>
+    <header class='ios-header'>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
+      <h1 class='menu-title'>支付</h1>
     </header>
-    <div class="page">
-      <div class="balance-card">
-        <span class="balance-label">餘額</span>
-        <span class="balance-amount">$${balance.toLocaleString()}</span>
+    <div class='page'>
+      <div class='balance-card'>
+        <span class='balance-label'>餘額</span>
+        <span class='balance-amount'>$${balance.toLocaleString()}</span>
       </div>
-      <div class="action-buttons">
-        <button class="action-btn send"><i class="fas fa-paper-plane"></i> 轉帳</button>
-        <button class="action-btn receive"><i class="fas fa-qrcode"></i> 收款</button>
+      <div class='action-buttons'>
+        <button class='action-btn send'><i class='fas fa-paper-plane'></i> 轉帳</button>
+        <button class='action-btn receive'><i class='fas fa-qrcode'></i> 收款</button>
       </div>
-      <div class="transaction-list">
+      <div class='transaction-list'>
         <h3>交易紀錄</h3>
         ${transactions.length > 0 
           ? transactions.slice(-5).reverse().map(t => `
-              <div class="tx-item ${t.type}">
-                <span class="tx-desc">${t.desc}</span>
-                <span class="tx-amount">${t.type === 'send' ? '-' : '+'}$${t.amount}</span>
+              <div class='tx-item ${t.type}'>
+                <span class='tx-desc'>${t.desc}</span>
+                <span class='tx-amount'>${t.type === 'send' ? '-' : '+'}$${t.amount}</span>
               </div>
             `).join('')
-          : '<div class="empty-tx">尚無交易紀錄</div>'
+          : '<div class='empty-tx'>尚無交易紀錄</div>'
         }
       </div>
     </div>

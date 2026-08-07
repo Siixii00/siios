@@ -1,4 +1,4 @@
-import { SettingsDB } from '../db.js';
+﻿import { SettingsDB } from '../db.js';
 
 const CITY_NAME_MAP = {
     '台北': 'Taipei', '臺北': 'Taipei', '新北': 'New Taipei', '桃園': 'Taoyuan',

@@ -1,4 +1,4 @@
-import { TOOLS_CATALOG } from './tools-catalog.js';
+﻿import { TOOLS_CATALOG } from './tools-catalog.js';
 import { generateZipContent } from './code-templates.js';
 
 const testResults = {

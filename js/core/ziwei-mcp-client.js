@@ -1,4 +1,4 @@
-import { CharactersDB, ZiweiCacheDB } from '../db.js';
+﻿import { CharactersDB, ZiweiCacheDB } from '../db.js';
 
 class ZiweiMCPClient {
     constructor() {

@@ -1,4 +1,4 @@
-import { MemoryDB, HealthDB, MCPConfigDB, CharactersDB, WikiRecordsDB } from '../db.js';
+﻿import { MemoryDB, HealthDB, MCPConfigDB, CharactersDB, WikiRecordsDB } from '../db.js';
 
 export class IntelligentMCPInvoker {
     constructor(characterId, userId) {

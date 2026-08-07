@@ -1,4 +1,4 @@
-import { handleActivitySync, handleActivitySources, handleActivitySettings } from './api/activity-sync.js';
+﻿import { handleActivitySync, handleActivitySources, handleActivitySettings } from './api/activity-sync.js';
 
 window.addEventListener('fetch', (event) => {
     const url = new URL(event.request.url);
