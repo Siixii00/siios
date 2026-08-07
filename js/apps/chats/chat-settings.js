@@ -1,14 +1,14 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBottomNav, createIOSGroupedList, createToast, createKakaoBottomSheet } from '../../components.js';
 import { SettingsDB, ChatsDB, TheaterSettingsDB, CharactersDB, MCPConfigDB } from '../../db.js';
 import { CHATS_TABS } from './chats-nav.js';
 
 const THEMES = [
-    { id: 'light', name: 'æ·ºè‰²', vars: { chatBg: '#FAF9F6', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#FEE500', bubbleRightText: '#625B71', inputBg: '#F5F5F5', inputText: '#000000' } },
-    { id: 'dark', name: 'æ·±è‰²', vars: { chatBg: '#1C1C1E', bubbleLeftBg: '#2C2C2E', bubbleLeftText: '#FFFFFF', bubbleRightBg: '#3A3A3C', bubbleRightText: '#FFFFFF', inputBg: '#2C2C2E', inputText: '#FFFFFF' } },
-    { id: 'pink', name: 'ç²‰è‰²', vars: { chatBg: '#FFF0F5', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#333333', bubbleRightBg: '#FFB6C1', bubbleRightText: '#8B0A50', inputBg: '#FFE4E9', inputText: '#333333' } },
-    { id: 'blue', name: 'è—è‰²', vars: { chatBg: '#E8F4FD', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#B3C7D5', bubbleRightText: '#1D1B20', inputBg: '#D6E6F4', inputText: '#000000' } },
-    { id: 'green', name: 'ç¶ è‰²', vars: { chatBg: '#E8F5E9', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#A5D6A7', bubbleRightText: '#1B5E20', inputBg: '#C8E6C9', inputText: '#000000' } }
+    { id: 'light', name: '²L¦â', vars: { chatBg: '#FAF9F6', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#FEE500', bubbleRightText: '#625B71', inputBg: '#F5F5F5', inputText: '#000000' } },
+    { id: 'dark', name: '²`¦â', vars: { chatBg: '#1C1C1E', bubbleLeftBg: '#2C2C2E', bubbleLeftText: '#FFFFFF', bubbleRightBg: '#3A3A3C', bubbleRightText: '#FFFFFF', inputBg: '#2C2C2E', inputText: '#FFFFFF' } },
+    { id: 'pink', name: '¯»¦â', vars: { chatBg: '#FFF0F5', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#333333', bubbleRightBg: '#FFB6C1', bubbleRightText: '#8B0A50', inputBg: '#FFE4E9', inputText: '#333333' } },
+    { id: 'blue', name: 'ÂÅ¦â', vars: { chatBg: '#E8F4FD', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#B3C7D5', bubbleRightText: '#1D1B20', inputBg: '#D6E6F4', inputText: '#000000' } },
+    { id: 'green', name: 'ºñ¦â', vars: { chatBg: '#E8F5E9', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#A5D6A7', bubbleRightText: '#1B5E20', inputBg: '#C8E6C9', inputText: '#000000' } }
 ];
 
 let currentTheme = 'light';
@@ -103,7 +103,7 @@ async function renderChatSettings() {
     const headerInner = createElement('div', 'flex justify-between items-center h-[86px] px-4');
 
     const title = createElement('h1', 'text-[32px] font-bold text-black leading-[31px]');
-    title.textContent = 'èŠå¤©è¨­å®š';
+    title.textContent = '²á¤Ñ³]©w';
     headerInner.appendChild(title);
 
     header.appendChild(headerInner);
@@ -112,7 +112,7 @@ async function renderChatSettings() {
     const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-[83px] px-4');
 
     const themeSection = createElement('div', 'mt-4');
-    themeSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'ä¸»é¡Œ' }));
+    themeSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¥DÃD' }));
 
     const themeGrid = createElement('div', 'theme-grid');
     themeGrid.style.display = 'grid';
@@ -135,31 +135,31 @@ async function renderChatSettings() {
         }
 
         card.onclick = async () => {
-            // æ›´æ–°ä¸»é¡Œ
+            // §ó·s¥DÃD
             currentTheme = t.id;
             customTheme = null;
             await SettingsDB.set('appearance_theme', currentTheme);
             await SettingsDB.set('chat_custom_theme', null);
             applyThemeToRoot(t.vars);
             
-            // æ›´æ–°è¦–è¦ºç‹€æ…‹è€Œä¸é‡æ–°è¼‰å…¥é é¢
+            // §ó·sµøÄ±ª¬ºA¦Ó¤£­«·s¸ü¤J­¶­±
             themeGrid.querySelectorAll('.theme-card').forEach(c => {
                 c.classList.remove('active');
                 c.style.border = '2px solid transparent';
-                // ç§»é™¤å‹¾é¸åœ–æ¨™
+                // ²¾°£¤Ä¿ï¹Ï¼Ğ
                 const checkIcon = c.querySelector('.material-symbols-outlined');
                 if (checkIcon) checkIcon.remove();
             });
             
-            // æ¨™è¨˜ç•¶å‰é¸ä¸­
+            // ¼Ğ°O·í«e¿ï¤¤
             card.classList.add('active');
             card.style.border = '2px solid var(--kakao-brown)';
             card.appendChild(createIcon('check', 'text-sm'));
             
-            // æ›´æ–°é è¦½
+            // §ó·s¹wÄı
             updatePreview(previewBox, t.vars);
             
-            createToast('å·²åˆ‡æ›åˆ° ' + t.name + ' ä¸»é¡Œ', 'success');
+            createToast('¤w¤Á´«¨ì ' + t.name + ' ¥DÃD', 'success');
         };
 
         themeGrid.appendChild(card);
@@ -173,7 +173,7 @@ async function renderChatSettings() {
     customCard.style.cursor = 'pointer';
     customCard.style.border = currentTheme === 'custom' ? '2px solid var(--kakao-brown)' : '2px solid transparent';
     customCard.style.transition = 'border 0.15s';
-    customCard.appendChild(createElement('span', 'theme-name', { textContent: 'è‡ªå®šç¾©' }));
+    customCard.appendChild(createElement('span', 'theme-name', { textContent: '¦Û©w¸q' }));
     if (currentTheme === 'custom') {
         customCard.appendChild(createIcon('check', 'text-sm'));
     }
@@ -182,7 +182,7 @@ async function renderChatSettings() {
         currentTheme = 'custom';
         await SettingsDB.set('appearance_theme', 'custom');
         
-        // æ›´æ–°è¦–è¦ºç‹€æ…‹
+        // §ó·sµøÄ±ª¬ºA
         themeGrid.querySelectorAll('.theme-card').forEach(c => {
             c.classList.remove('active');
             c.style.border = '2px solid transparent';
@@ -194,15 +194,15 @@ async function renderChatSettings() {
         customCard.style.border = '2px solid var(--kakao-brown)';
         customCard.appendChild(createIcon('check', 'text-sm'));
         
-        // æ‡‰ç”¨è‡ªå®šç¾©ä¸»é¡Œï¼ˆå¦‚æœæœ‰ï¼‰
+        // À³¥Î¦Û©w¸q¥DÃD¡]¦pªG¦³¡^
         if (customTheme) {
             applyThemeToRoot(customTheme);
             updatePreview(previewBox, customTheme);
         }
         
-        createToast('å·²åˆ‡æ›åˆ°è‡ªå®šç¾©ä¸»é¡Œ', 'success');
+        createToast('¤w¤Á´«¨ì¦Û©w¸q¥DÃD', 'success');
         
-        // é‡æ–°è¼‰å…¥ä»¥é¡¯ç¤ºé¡è‰²é¸æ“‡å™¨
+        // ­«·s¸ü¤J¥HÅã¥ÜÃC¦â¿ï¾Ü¾¹
         Router.navigate('/chats/settings');
     };
 
@@ -212,7 +212,7 @@ async function renderChatSettings() {
 
     if (currentTheme === 'custom') {
         const customSection = createElement('div', 'mt-6');
-        customSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'è‡ªå®šç¾©é¡è‰²' }));
+        customSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¦Û©w¸qÃC¦â' }));
 
         const customBox = createElement('div', 'bg-white rounded-xl shadow-sm mt-2 px-4');
 
@@ -228,7 +228,7 @@ async function renderChatSettings() {
 
         const colorInputs = {};
 
-        colorInputs.chatBg = createColorPicker('èŠå¤©å®¤åº•è‰²', defaults.chatBg, async (val) => {
+        colorInputs.chatBg = createColorPicker('²á¤Ñ«Ç©³¦â', defaults.chatBg, async (val) => {
             defaults.chatBg = val;
             customTheme = { ...defaults };
             await SettingsDB.set('chat_custom_theme', customTheme);
@@ -236,7 +236,7 @@ async function renderChatSettings() {
         });
         customBox.appendChild(colorInputs.chatBg);
 
-        colorInputs.bubbleLeftBg = createColorPicker('å°æ–¹æ°£æ³¡èƒŒæ™¯', defaults.bubbleLeftBg, async (val) => {
+        colorInputs.bubbleLeftBg = createColorPicker('¹ï¤è®ğªw­I´º', defaults.bubbleLeftBg, async (val) => {
             defaults.bubbleLeftBg = val;
             customTheme = { ...defaults };
             await SettingsDB.set('chat_custom_theme', customTheme);
@@ -244,7 +244,7 @@ async function renderChatSettings() {
         });
         customBox.appendChild(colorInputs.bubbleLeftBg);
 
-        colorInputs.bubbleLeftText = createColorPicker('å°æ–¹æ°£æ³¡æ–‡å­—', defaults.bubbleLeftText, async (val) => {
+        colorInputs.bubbleLeftText = createColorPicker('¹ï¤è®ğªw¤å¦r', defaults.bubbleLeftText, async (val) => {
             defaults.bubbleLeftText = val;
             customTheme = { ...defaults };
             await SettingsDB.set('chat_custom_theme', customTheme);
@@ -252,7 +252,7 @@ async function renderChatSettings() {
         });
         customBox.appendChild(colorInputs.bubbleLeftText);
 
-        colorInputs.bubbleRightBg = createColorPicker('æˆ‘çš„æ°£æ³¡èƒŒæ™¯', defaults.bubbleRightBg, async (val) => {
+        colorInputs.bubbleRightBg = createColorPicker('§Úªº®ğªw­I´º', defaults.bubbleRightBg, async (val) => {
             defaults.bubbleRightBg = val;
             customTheme = { ...defaults };
             await SettingsDB.set('chat_custom_theme', customTheme);
@@ -260,7 +260,7 @@ async function renderChatSettings() {
         });
         customBox.appendChild(colorInputs.bubbleRightBg);
 
-        colorInputs.bubbleRightText = createColorPicker('æˆ‘çš„æ°£æ³¡æ–‡å­—', defaults.bubbleRightText, async (val) => {
+        colorInputs.bubbleRightText = createColorPicker('§Úªº®ğªw¤å¦r', defaults.bubbleRightText, async (val) => {
             defaults.bubbleRightText = val;
             customTheme = { ...defaults };
             await SettingsDB.set('chat_custom_theme', customTheme);
@@ -268,7 +268,7 @@ async function renderChatSettings() {
         });
         customBox.appendChild(colorInputs.bubbleRightText);
 
-        colorInputs.inputBg = createColorPicker('è¼¸å…¥å€åŸŸèƒŒæ™¯', defaults.inputBg, async (val) => {
+        colorInputs.inputBg = createColorPicker('¿é¤J°Ï°ì­I´º', defaults.inputBg, async (val) => {
             defaults.inputBg = val;
             customTheme = { ...defaults };
             await SettingsDB.set('chat_custom_theme', customTheme);
@@ -276,7 +276,7 @@ async function renderChatSettings() {
         });
         customBox.appendChild(colorInputs.inputBg);
 
-        colorInputs.inputText = createColorPicker('è¼¸å…¥å€åŸŸæ–‡å­—', defaults.inputText, async (val) => {
+        colorInputs.inputText = createColorPicker('¿é¤J°Ï°ì¤å¦r', defaults.inputText, async (val) => {
             defaults.inputText = val;
             customTheme = { ...defaults };
             await SettingsDB.set('chat_custom_theme', customTheme);
@@ -289,11 +289,11 @@ async function renderChatSettings() {
     }
 
     const fontSection = createElement('div', 'mt-6');
-    fontSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'å­—é«”å¤§å°' }));
+    fontSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¦rÅé¤j¤p' }));
 
     const fontControl = createElement('div', 'flex gap-2 mt-2');
     ['small', 'medium', 'large'].forEach(size => {
-        const labels = { small: 'å°', medium: 'ä¸­', large: 'å¤§' };
+        const labels = { small: '¤p', medium: '¤¤', large: '¤j' };
         const btn = createElement('button', `flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${currentFontSize === size ? 'bg-[var(--kakao-yellow)] text-[var(--kakao-brown)]' : 'bg-gray-100 text-gray-600'}`, {
             textContent: labels[size],
             onClick: async () => {
@@ -308,7 +308,7 @@ async function renderChatSettings() {
     main.appendChild(fontSection);
 
     const previewSection = createElement('div', 'mt-6');
-    previewSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'é è¦½' }));
+    previewSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¹wÄı' }));
     
     const previewBox = createElement('div', 'rounded-xl p-4 mt-2 flex flex-col gap-3');
     
@@ -326,13 +326,13 @@ async function renderChatSettings() {
     const leftBubble = createElement('div', 'inline-block px-3 py-2 rounded-xl max-w-[70%] preview-bubble-left');
     leftBubble.style.background = previewVars.bubbleLeftBg;
     leftBubble.style.color = previewVars.bubbleLeftText;
-    leftBubble.textContent = 'å°æ–¹çš„è¨Šæ¯';
+    leftBubble.textContent = '¹ï¤èªº°T®§';
     previewBox.appendChild(leftBubble);
     
     const rightBubble = createElement('div', 'inline-block px-3 py-2 rounded-xl max-w-[70%] self-end preview-bubble-right');
     rightBubble.style.background = previewVars.bubbleRightBg;
     rightBubble.style.color = previewVars.bubbleRightText;
-    rightBubble.textContent = 'æˆ‘çš„è¨Šæ¯';
+    rightBubble.textContent = '§Úªº°T®§';
     previewBox.appendChild(rightBubble);
     
     previewSection.appendChild(previewBox);
@@ -364,11 +364,11 @@ async function renderPerChatSettings(params) {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.back()
     });
-    backBtn.innerHTML = '<i class='fas fa-chevron-left'></i> è¿”å›';
+    backBtn.innerHTML = "`<i class=`"`fas fa-chevron-left`"`></i> ªğ¦^`";
     headerInner.appendChild(backBtn);
 
     const title = createElement('h1', 'text-[32px] font-bold text-black leading-[31px]');
-    title.textContent = chat.is_group ? 'ç¾¤çµ„è¨­å®š' : 'èŠå¤©è¨­å®š';
+    title.textContent = chat.is_group ? '¸s²Õ³]©w' : '²á¤Ñ³]©w';
     headerInner.appendChild(title);
 
     header.appendChild(headerInner);
@@ -378,7 +378,7 @@ async function renderPerChatSettings(params) {
 
     if (chat.is_group) {
         const groupSection = createElement('div', 'mt-4');
-        groupSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'ç¾¤çµ„æˆå“¡' }));
+        groupSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¸s²Õ¦¨­û' }));
         
         const memberIds = chat.member_ids || [];
         const memberList = createElement('div', 'ios-grouped-list shadow-sm mt-2');
@@ -394,12 +394,12 @@ async function renderPerChatSettings(params) {
             memberRow.appendChild(avatar);
             
             const nameSpan = createElement('span', 'flex-1 text-body-lg');
-            nameSpan.textContent = char?.name || 'æœªçŸ¥è§’è‰²';
+            nameSpan.textContent = char?.name || '¥¼ª¾¨¤¦â';
             memberRow.appendChild(nameSpan);
             
             if (memberIds.length > 1) {
                 const removeBtn = createElement('button', 'px-3 py-1 rounded-lg bg-red-100 text-red-600 text-sm');
-                removeBtn.textContent = 'ç§»é™¤';
+                removeBtn.textContent = '²¾°£';
                 removeBtn.onclick = async () => {
                     const newMemberIds = memberIds.filter(id => id !== mid);
                     const primaryCharId = newMemberIds[0];
@@ -407,11 +407,11 @@ async function renderPerChatSettings(params) {
                     await ChatsDB.update(chatId, {
                         member_ids: newMemberIds,
                         character_id: primaryCharId,
-                        character_name: primaryChar?.name || 'ç¾¤çµ„èŠå¤©',
+                        character_name: primaryChar?.name || '¸s²Õ²á¤Ñ',
                         character_avatar: primaryChar?.avatar || '',
                         bound_user_id: primaryChar?.bound_user_id || null
                     });
-                    createToast('å·²ç§»é™¤æˆå“¡');
+                    createToast('¤w²¾°£¦¨­û');
                     Router.navigate('/chats/settings/' + chatId);
                 };
                 memberRow.appendChild(removeBtn);
@@ -424,16 +424,16 @@ async function renderPerChatSettings(params) {
         main.appendChild(groupSection);
         
         const addSection = createElement('div', 'mt-4');
-        addSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'åŠ å…¥æˆå“¡' }));
+        addSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¥[¤J¦¨­û' }));
         
         const addBtn = createElement('button', 'w-full py-3 rounded-lg bg-kakao-yellow text-kakao-brown font-medium mt-2', {
-            textContent: 'é¸æ“‡è§’è‰²åŠ å…¥ç¾¤çµ„',
+            textContent: '¿ï¾Ü¨¤¦â¥[¤J¸s²Õ',
             onClick: async () => {
                 const characters = await CharactersDB.getAll();
                 const available = characters.filter(c => !memberIds.includes(c.id));
                 
                 if (available.length === 0) {
-                    createToast('æ²’æœ‰å¯åŠ å…¥çš„è§’è‰²');
+                    createToast('¨S¦³¥i¥[¤Jªº¨¤¦â');
                     return;
                 }
                 
@@ -453,15 +453,15 @@ async function renderPerChatSettings(params) {
                     row.appendChild(name);
                     
                     const addBtnInner = createElement('button', 'px-3 py-1 rounded-lg bg-kakao-yellow text-kakao-brown text-sm font-medium');
-                    addBtnInner.textContent = 'åŠ å…¥';
+                    addBtnInner.textContent = '¥[¤J';
                     addBtnInner.onclick = async () => {
                         const newMemberIds = [...memberIds, char.id];
                         if (newMemberIds.length > 4) {
-                            createToast('ç¾¤çµ„æœ€å¤š 4 å€‹æˆå“¡');
+                            createToast('¸s²Õ³Ì¦h 4 ­Ó¦¨­û');
                             return;
                         }
                         await ChatsDB.update(chatId, { member_ids: newMemberIds });
-                        createToast('å·²åŠ å…¥ ' + char.name);
+                        createToast('¤w¥[¤J ' + char.name);
                         sheet.close();
                         Router.navigate('/chats/settings/' + chatId);
                     };
@@ -472,7 +472,7 @@ async function renderPerChatSettings(params) {
                 form.appendChild(list);
                 
                 const sheet = createKakaoBottomSheet([], {
-                    title: 'åŠ å…¥æˆå“¡',
+                    title: '¥[¤J¦¨­û',
                     customContent: form
                 });
                 sheet.open();
@@ -482,7 +482,7 @@ async function renderPerChatSettings(params) {
         main.appendChild(addSection);
     } else {
         const chatSection = createElement('div', 'mt-4');
-        chatSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'èŠå¤©è³‡è¨Š' }));
+        chatSection.appendChild(createElement('p', 'ios-section-header', { textContent: '²á¤Ñ¸ê°T' }));
         
         const infoList = createIOSGroupedList([
             {
@@ -491,7 +491,7 @@ async function renderPerChatSettings(params) {
                     {
                         icon: 'smart_toy',
                         iconBg: 'bg-kakao-brown',
-                        label: 'è§’è‰²',
+                        label: '¨¤¦â',
                         value: chat.character_name,
                         chevron: true,
                         onClick: () => Router.navigate('/characters/' + chat.character_id)
@@ -503,13 +503,13 @@ async function renderPerChatSettings(params) {
         main.appendChild(chatSection);
         
         const mcpSection = createElement('div', 'mt-6');
-        mcpSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'MCP å·¥å…·' }));
+        mcpSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'MCP ¤u¨ã' }));
         
         const mcpEnabled = chat.enabled_mcp_ids && chat.enabled_mcp_ids.length > 0;
         
         const mcpToggleBox = createElement('div', 'bg-white rounded-xl shadow-sm mt-2');
         const mcpToggleRow = createElement('div', 'flex items-center justify-between p-4');
-        mcpToggleRow.appendChild(createElement('span', 'text-base', { textContent: 'å•Ÿç”¨ MCP å·¥å…·' }));
+        mcpToggleRow.appendChild(createElement('span', 'text-base', { textContent: '±Ò¥Î MCP ¤u¨ã' }));
         
         const toggle = createElement('button', 'relative w-12 h-7 rounded-full transition-colors');
         toggle.className = mcpEnabled ? 'bg-green-500' : 'bg-gray-300';
@@ -526,18 +526,18 @@ async function renderPerChatSettings(params) {
             mcpToggleBox.appendChild(divider);
             
             const mcpListTitle = createElement('div', 'px-4 pt-3 pb-1');
-            mcpListTitle.appendChild(createElement('span', 'text-sm text-gray-500', { textContent: 'é¸æ“‡è¦å•Ÿç”¨çš„ MCP ä¼ºæœå™¨' }));
+            mcpListTitle.appendChild(createElement('span', 'text-sm text-gray-500', { textContent: '¿ï¾Ü­n±Ò¥Îªº MCP ¦øªA¾¹' }));
             mcpToggleBox.appendChild(mcpListTitle);
             
             const enabledIds = chat.enabled_mcp_ids || [];
             
             for (const config of mcpConfigs) {
                 const mcpRow = createElement('div', 'flex items-center justify-between px-4 py-3');
-                mcpRow.appendChild(createElement('span', 'text-base', { textContent: config.name || 'æœªå‘½å' }));
+                mcpRow.appendChild(createElement('span', 'text-base', { textContent: config.name || '¥¼©R¦W' }));
                 
                 const checkbox = createElement('div', `w-6 h-6 rounded-md border-2 flex items-center justify-center transition-colors ${enabledIds.includes(config.id) ? 'bg-green-500 border-green-500' : 'border-gray-300 bg-white'}`);
                 if (enabledIds.includes(config.id)) {
-                    checkbox.innerHTML = '<svg class='w-4 h-4 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg>';
+                    checkbox.innerHTML = "`<svg class=`"`w-4 h-4 text-white`"` fill=`"none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg>';
                 }
                 
                 checkbox.onclick = async () => {
@@ -549,7 +549,7 @@ async function renderPerChatSettings(params) {
                     }
                     
                     await ChatsDB.update(chatId, { enabled_mcp_ids: newEnabledIds });
-                    createToast('å·²æ›´æ–°', 'success');
+                    createToast('¤w§ó·s', 'success');
                     Router.navigate('/chats/settings/' + chatId);
                 };
                 
@@ -561,10 +561,10 @@ async function renderPerChatSettings(params) {
         toggle.onclick = async () => {
             if (mcpEnabled) {
                 await ChatsDB.update(chatId, { enabled_mcp_ids: [] });
-                createToast('å·²åœç”¨ MCP å·¥å…·', 'success');
+                createToast('¤w°±¥Î MCP ¤u¨ã', 'success');
             } else {
                 await ChatsDB.update(chatId, { enabled_mcp_ids: mcpConfigs.map(c => c.id) });
-                createToast('å·²å•Ÿç”¨ MCP å·¥å…·', 'success');
+                createToast('¤w±Ò¥Î MCP ¤u¨ã', 'success');
             }
             Router.navigate('/chats/settings/' + chatId);
         };

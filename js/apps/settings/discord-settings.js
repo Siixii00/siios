@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createToast, createKakaoBottomSheet } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -11,34 +11,34 @@ async function renderDiscordSettings() {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.navigate('/settings')
     });
-    backBtn.innerHTML = '<i class='fas fa-chevron-left'></i> è¿”å›';
+    backBtn.innerHTML = "`<i class=`"`fas fa-chevron-left`"`></i> ªğ¦^`";
     header.appendChild(backBtn);
     
     const title = createElement('h1', 'menu-title');
-    title.textContent = 'Discord æ•´åˆè¨­å®š';
+    title.textContent = 'Discord ¾ã¦X³]©w';
     header.appendChild(title);
     container.appendChild(header);
     
     const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar');
     main.style.paddingTop = 'calc(env(safe-area-inset-top, 44px) + 44px + 16px)';
     
-    // èªªæ˜å¡ç‰‡
+    // »¡©ú¥d¤ù
     const introCard = createElement('div', 'mx-4 mb-4 p-4 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl text-white');
     introCard.innerHTML = `
         <div class='flex items-center gap-2 mb-2'>
             <i class='fab fa-discord text-2xl'></i>
-            <h2 class='text-lg font-bold'>Discord å³æ™‚é€šè¨Šæ•´åˆ</h2>
+            <h2 class='text-lg font-bold'>Discord §Y®É³q°T¾ã¦X</h2>
         </div>
-        <p class='text-sm opacity-90 mb-3'>è®“ AI è§’è‰²åœ¨ Discord ä¸Šèˆ‡ä½ å’Œæœ‹å‹å³æ™‚å°è©±ï¼Œæ‰€æœ‰å°è©±è‡ªå‹•åŒæ­¥åˆ° PWA</p>
+        <p class='text-sm opacity-90 mb-3'>Åı AI ¨¤¦â¦b Discord ¤W»P§A©MªB¤Í§Y®É¹ï¸Ü¡A©Ò¦³¹ï¸Ü¦Û°Ê¦P¨B¨ì PWA</p>
         <div class='text-xs opacity-80'>
-            <div class='mb-1'>âœ“ å…¬é–‹é »é“å°è©±</div>
-            <div class='mb-1'>âœ“ å°è©±æ­·å²è¨˜éŒ„</div>
-            <div>âœ“ Slash Commands</div>
+            <div class='mb-1'>? ¤½¶}ÀW¹D¹ï¸Ü</div>
+            <div class='mb-1'>? ¹ï¸Ü¾ú¥v°O¿ı</div>
+            <div>? Slash Commands</div>
         </div>
     `;
     main.appendChild(introCard);
     
-    // Bot Token è¨­å®š
+    // Bot Token ³]©w
     const tokenSection = createElement('div', 'mx-4 mb-4');
     const tokenCard = createElement('div', 'bg-white rounded-xl p-4');
     
@@ -48,10 +48,10 @@ async function renderDiscordSettings() {
     
     const tokenInput = createElement('input', 'w-full p-3 border rounded-lg text-sm');
     tokenInput.type = 'password';
-    tokenInput.placeholder = 'è¼¸å…¥ä½ çš„ Discord Bot Token';
+    tokenInput.placeholder = '¿é¤J§Aªº Discord Bot Token';
     tokenInput.id = 'discord-bot-token';
     
-    // è¼‰å…¥å·²ä¿å­˜çš„ Token
+    // ¸ü¤J¤w«O¦sªº Token
     const savedToken = await SettingsDB.get('discord_bot_token');
     if (savedToken) {
         tokenInput.value = savedToken;
@@ -60,13 +60,13 @@ async function renderDiscordSettings() {
     tokenCard.appendChild(tokenInput);
     
     const tokenHint = createElement('p', 'text-xs text-gray-500 mt-2');
-    tokenHint.innerHTML = 'åœ¨ <a href='https://discord.com/developers/applications' target='_blank' class='text-blue-500 underline'>Discord Developer Portal</a> å‰µå»º Bot ä¸¦ç²å– Token';
+    tokenHint.innerHTML = '¦b <a href='https://discord.com/developers/applications' target='_blank' class='text-blue-500 underline'>Discord Developer Portal</a> ³Ğ«Ø Bot ¨ÃÀò¨ú Token';
     tokenCard.appendChild(tokenHint);
     
     tokenSection.appendChild(tokenCard);
     main.appendChild(tokenSection);
     
-    // Worker URL è¨­å®š
+    // Worker URL ³]©w
     const workerSection = createElement('div', 'mx-4 mb-4');
     const workerCard = createElement('div', 'bg-white rounded-xl p-4');
     
@@ -87,28 +87,28 @@ async function renderDiscordSettings() {
     workerCard.appendChild(workerInput);
     
     const workerHint = createElement('p', 'text-xs text-gray-500 mt-2');
-    workerHint.textContent = 'éƒ¨ç½² Discord Bot Worker å¾Œç²å¾—çš„ URL';
+    workerHint.textContent = '³¡¸p Discord Bot Worker «áÀò±oªº URL';
     workerCard.appendChild(workerHint);
     
     workerSection.appendChild(workerCard);
     main.appendChild(workerSection);
     
-    // é »é“æ˜ å°„è¨­å®š
+    // ÀW¹D¬M®g³]©w
     const channelSection = createElement('div', 'mx-4 mb-4');
     const channelCard = createElement('div', 'bg-white rounded-xl p-4');
     
     const channelTitle = createElement('h3', 'text-sm font-medium text-gray-700 mb-3');
-    channelTitle.textContent = 'é »é“æ˜ å°„ï¼ˆé¸å¡«ï¼‰';
+    channelTitle.textContent = 'ÀW¹D¬M®g¡]¿ï¶ñ¡^';
     channelCard.appendChild(channelTitle);
     
     const channelHint = createElement('p', 'text-xs text-gray-500 mb-3');
-    channelHint.textContent = 'è¨­å®šç‰¹å®šé »é“å°æ‡‰çš„è§’è‰²';
+    channelHint.textContent = '³]©w¯S©wÀW¹D¹ïÀ³ªº¨¤¦â';
     channelCard.appendChild(channelHint);
     
     const channelList = createElement('div', 'space-y-2');
     channelList.id = 'channel-mappings';
     
-    // è¼‰å…¥å·²ä¿å­˜çš„æ˜ å°„
+    // ¸ü¤J¤w«O¦sªº¬M®g
     const savedMappings = await SettingsDB.get('discord_channel_mappings') || [];
     savedMappings.forEach(mapping => {
         const mappingRow = createChannelMappingRow(mapping);
@@ -118,7 +118,7 @@ async function renderDiscordSettings() {
     channelCard.appendChild(channelList);
     
     const addMappingBtn = createElement('button', 'mt-3 text-sm text-blue-500 underline');
-    addMappingBtn.textContent = '+ æ–°å¢é »é“æ˜ å°„';
+    addMappingBtn.textContent = '+ ·s¼WÀW¹D¬M®g';
     addMappingBtn.onclick = () => {
         const newRow = createChannelMappingRow();
         channelList.appendChild(newRow);
@@ -128,16 +128,16 @@ async function renderDiscordSettings() {
     channelSection.appendChild(channelCard);
     main.appendChild(channelSection);
     
-    // ä¿å­˜æŒ‰éˆ•
+    // «O¦s«ö¶s
     const saveBtn = createElement('button', 'ios-btn ios-btn-primary w-full mt-4 mx-4');
     saveBtn.style.maxWidth = 'calc(100% - 32px)';
-    saveBtn.textContent = 'ä¿å­˜è¨­å®š';
+    saveBtn.textContent = '«O¦s³]©w';
     saveBtn.onclick = async () => {
         try {
             await SettingsDB.set('discord_bot_token', tokenInput.value);
             await SettingsDB.set('discord_worker_url', workerInput.value);
             
-            // æ”¶é›†é »é“æ˜ å°„
+            // ¦¬¶°ÀW¹D¬M®g
             const mappings = [];
             channelList.querySelectorAll('.channel-mapping-row').forEach(row => {
                 const channelId = row.querySelector('.channel-id-input').value;
@@ -148,24 +148,24 @@ async function renderDiscordSettings() {
             });
             await SettingsDB.set('discord_channel_mappings', mappings);
             
-            createToast('è¨­å®šå·²ä¿å­˜');
+            createToast('³]©w¤w«O¦s');
         } catch (error) {
-            createToast('ä¿å­˜å¤±æ•—ï¼š' + error.message, 'error');
+            createToast('«O¦s¥¢±Ñ¡G' + error.message, 'error');
         }
     };
     main.appendChild(saveBtn);
     
-    // æ¸¬è©¦é€£æ¥æŒ‰éˆ•
+    // ´ú¸Õ³s±µ«ö¶s
     const testBtn = createElement('button', 'ios-btn w-full mt-2 mx-4');
     testBtn.style.maxWidth = 'calc(100% - 32px)';
     testBtn.style.background = '#E5E5EA';
     testBtn.style.color = '#111827';
-    testBtn.textContent = 'æ¸¬è©¦é€£æ¥';
+    testBtn.textContent = '´ú¸Õ³s±µ';
     testBtn.onclick = async () => {
         try {
             const workerUrl = workerInput.value;
             if (!workerUrl) {
-                createToast('è«‹å…ˆè¼¸å…¥ Worker URL', 'error');
+                createToast('½Ğ¥ı¿é¤J Worker URL', 'error');
                 return;
             }
             
@@ -173,17 +173,17 @@ async function renderDiscordSettings() {
             const data = await response.json();
             
             if (data.success) {
-                createToast('é€£æ¥æˆåŠŸï¼');
+                createToast('³s±µ¦¨¥\¡I');
             } else {
-                createToast('é€£æ¥å¤±æ•—ï¼š' + data.error, 'error');
+                createToast('³s±µ¥¢±Ñ¡G' + data.error, 'error');
             }
         } catch (error) {
-            createToast('é€£æ¥å¤±æ•—ï¼š' + error.message, 'error');
+            createToast('³s±µ¥¢±Ñ¡G' + error.message, 'error');
         }
     };
     main.appendChild(testBtn);
     
-    // ç”¨æˆ¶ç¶å®šç®¡ç†
+    // ¥Î¤á¸j©wºŞ²z
     const bindingSection = createElement('div', 'mx-4 mt-6 mb-4');
     const bindingCard = createElement('div', 'bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-4 border border-blue-200 cursor-pointer', {
         onClick: () => Router.navigate('/settings/discord/bindings')
@@ -193,12 +193,12 @@ async function renderDiscordSettings() {
     const bindingInfo = createElement('div', 'flex items-center gap-3');
     
     const bindingIcon = createElement('div', 'w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center');
-    bindingIcon.innerHTML = '<span class='material-symbols-outlined text-blue-600 text-xl'>link</span>';
+    bindingIcon.innerHTML = "`<span class=`"`material-symbols-outlined text-blue-600 text-xl`"`>link</span>`";
     bindingInfo.appendChild(bindingIcon);
     
     const bindingText = createElement('div');
-    bindingText.appendChild(createElement('div', 'font-semibold text-sm', { textContent: 'ç”¨æˆ¶èº«ä»½ç¶å®š' }));
-    bindingText.appendChild(createElement('div', 'text-xs text-gray-500', { textContent: 'ç®¡ç† Discord èˆ‡ PWA çš„ç”¨æˆ¶æ˜ å°„' }));
+    bindingText.appendChild(createElement('div', 'font-semibold text-sm', { textContent: '¥Î¤á¨­¥÷¸j©w' }));
+    bindingText.appendChild(createElement('div', 'text-xs text-gray-500', { textContent: 'ºŞ²z Discord »P PWA ªº¥Î¤á¬M®g' }));
     bindingInfo.appendChild(bindingText);
     
     bindingHeader.appendChild(bindingInfo);
@@ -208,20 +208,20 @@ async function renderDiscordSettings() {
     bindingSection.appendChild(bindingCard);
     main.appendChild(bindingSection);
     
-    // ä½¿ç”¨èªªæ˜
+    // ¨Ï¥Î»¡©ú
     const guideSection = createElement('div', 'mx-4 mt-6 mb-8');
     const guideCard = createElement('div', 'bg-gray-50 rounded-xl p-4');
     guideCard.innerHTML = `
-        <h3 class='text-sm font-medium text-gray-700 mb-3'>ğŸ“– ä½¿ç”¨æŒ‡å—</h3>
+        <h3 class='text-sm font-medium text-gray-700 mb-3'>?? ¨Ï¥Î«ü«n</h3>
         <ol class='text-xs text-gray-600 space-y-2'>
-            <li>1. åœ¨ Discord Developer Portal å‰µå»º Bot æ‡‰ç”¨</li>
-            <li>2. ç²å– Bot Token ä¸¦ç²˜è²¼åˆ°ä¸Šæ–¹</li>
-            <li>3. åœ¨ç¥ç§˜é–€ç”Ÿæˆ Discord Bot Worker ä»£ç¢¼</li>
-            <li>4. éƒ¨ç½² Worker åˆ° Cloudflare</li>
-            <li>5. å°‡ Worker URL å¡«å…¥ä¸Šæ–¹</li>
-            <li>6. é…ç½®ç”¨æˆ¶èº«ä»½ç¶å®šï¼ˆå¯é¸ï¼‰</li>
-            <li>7. åœ¨ Discord ä¼ºæœå™¨ä¸­é‚€è«‹ Bot</li>
-            <li>8. é–‹å§‹åœ¨é »é“ä¸­èˆ‡ AI è§’è‰²å°è©±ï¼</li>
+            <li>1. ¦b Discord Developer Portal ³Ğ«Ø Bot À³¥Î</li>
+            <li>2. Àò¨ú Bot Token ¨ÃÖß¶K¨ì¤W¤è</li>
+            <li>3. ¦b¯«¯µªù¥Í¦¨ Discord Bot Worker ¥N½X</li>
+            <li>4. ³¡¸p Worker ¨ì Cloudflare</li>
+            <li>5. ±N Worker URL ¶ñ¤J¤W¤è</li>
+            <li>6. °t¸m¥Î¤á¨­¥÷¸j©w¡]¥i¿ï¡^</li>
+            <li>7. ¦b Discord ¦øªA¾¹¤¤ÁÜ½Ğ Bot</li>
+            <li>8. ¶}©l¦bÀW¹D¤¤»P AI ¨¤¦â¹ï¸Ü¡I</li>
         </ol>
     `;
     guideSection.appendChild(guideCard);
@@ -237,18 +237,18 @@ function createChannelMappingRow(mapping = {}) {
     
     const channelInput = createElement('input', 'channel-id-input flex-1 p-2 border rounded text-xs');
     channelInput.type = 'text';
-    channelInput.placeholder = 'é »é“ ID';
+    channelInput.placeholder = 'ÀW¹D ID';
     if (mapping.channelId) channelInput.value = mapping.channelId;
     row.appendChild(channelInput);
     
     const characterInput = createElement('input', 'character-id-input flex-1 p-2 border rounded text-xs');
     characterInput.type = 'text';
-    characterInput.placeholder = 'è§’è‰² ID';
+    characterInput.placeholder = '¨¤¦â ID';
     if (mapping.characterId) characterInput.value = mapping.characterId;
     row.appendChild(characterInput);
     
     const deleteBtn = createElement('button', 'text-red-500 text-sm');
-    deleteBtn.textContent = 'âœ•';
+    deleteBtn.textContent = '?';
     deleteBtn.onclick = () => row.remove();
     row.appendChild(deleteBtn);
     
@@ -257,7 +257,7 @@ function createChannelMappingRow(mapping = {}) {
 
 export default {
     id: 'discord-settings',
-    name: 'Discord æ•´åˆ',
+    name: 'Discord ¾ã¦X',
     icon: 'discord',
     routes: [
         { path: '/settings/discord', render: renderDiscordSettings }

@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 import { CrossDeviceSync } from '../../core/cross-device/sync-manager.js';
@@ -20,11 +20,11 @@ async function renderCrossDeviceSettings() {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.navigate('/settings')
     });
-    backBtn.innerHTML = '<i class='fas fa-chevron-left'></i> è¿”å›';
+    backBtn.innerHTML = "`<i class=`"`fas fa-chevron-left`"`></i> ªğ¦^`";
     header.appendChild(backBtn);
     
     const title = createElement('h1', 'menu-title');
-    title.textContent = 'è·¨è£ç½®åŒæ­¥';
+    title.textContent = '¸ó¸Ë¸m¦P¨B';
     header.appendChild(title);
     container.appendChild(header);
     
@@ -35,19 +35,19 @@ async function renderCrossDeviceSettings() {
     
     if (!status.enabled) {
         const setupSection = createElement('div', 'mx-4 mb-4');
-        setupSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'è¨­å®šåŒæ­¥' }));
+        setupSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: '³]©w¦P¨B' }));
         
         const introCard = createElement('div', 'p-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl text-white mb-4');
         introCard.innerHTML = `
             <div class='flex items-center gap-2 mb-2'>
                 <i class='fas fa-sync text-xl'></i>
-                <h2 class='text-lg font-bold'>è·¨è£ç½®åŒæ­¥</h2>
+                <h2 class='text-lg font-bold'>¸ó¸Ë¸m¦P¨B</h2>
             </div>
-            <p class='text-sm opacity-90 mb-3'>è®“æ‚¨çš„æ´»å‹•è¨˜éŒ„åœ¨é›»è…¦å’Œæ‰‹æ©Ÿé–“è‡ªå‹•åŒæ­¥</p>
+            <p class='text-sm opacity-90 mb-3'>Åı±zªº¬¡°Ê°O¿ı¦b¹q¸£©M¤â¾÷¶¡¦Û°Ê¦P¨B</p>
             <div class='text-xs opacity-80 space-y-1'>
-                <div>âœ“ ç«¯å°ç«¯åŠ å¯†ä¿è­·</div>
-                <div>âœ“ GitHub Gist é›²ç«¯å„²å­˜</div>
-                <div>âœ“ è‡ªå‹•è¡çªè§£æ±º</div>
+                <div>? ºİ¹ïºİ¥[±K«OÅ@</div>
+                <div>? GitHub Gist ¶³ºİÀx¦s</div>
+                <div>? ¦Û°Ê½Ä¬ğ¸Ñ¨M</div>
             </div>
         `;
         setupSection.appendChild(introCard);
@@ -66,12 +66,12 @@ async function renderCrossDeviceSettings() {
         
         const tokenHint = createElement('div', 'text-xs text-gray-500 mb-3');
         tokenHint.innerHTML = `
-            <p class='mb-2'>éœ€è¦å»ºç«‹å…·æœ‰ <strong>gist</strong> æ¬Šé™çš„ Tokenï¼š</p>
+            <p class='mb-2'>»İ­n«Ø¥ß¨ã¦³ <strong>gist</strong> Åv­­ªº Token¡G</p>
             <ol class='list-decimal list-inside space-y-1'>
-                <li>å‰å¾€ <a href='https://github.com/settings/tokens/new' target='_blank' class='text-blue-500 underline'>GitHub Token è¨­å®š</a></li>
-                <li>é¸æ“‡ Generate new token (classic)</li>
-                <li>å‹¾é¸ <strong>gist</strong> æ¬Šé™</li>
-                <li>è¤‡è£½ç”¢ç”Ÿçš„ Token</li>
+                <li>«e©¹ <a href='https://github.com/settings/tokens/new' target='_blank' class='text-blue-500 underline'>GitHub Token ³]©w</a></li>
+                <li>¿ï¾Ü Generate new token (classic)</li>
+                <li>¤Ä¿ï <strong>gist</strong> Åv­­</li>
+                <li>½Æ»s²£¥Íªº Token</li>
             </ol>
         `;
         tokenCard.appendChild(tokenHint);
@@ -79,61 +79,61 @@ async function renderCrossDeviceSettings() {
         const testBtn = createElement('button', 'w-full ios-btn mb-2');
         testBtn.style.background = '#E5E5EA';
         testBtn.style.color = '#111827';
-        testBtn.textContent = 'æ¸¬è©¦é€£ç·š';
+        testBtn.textContent = '´ú¸Õ³s½u';
         testBtn.onclick = async () => {
             if (!tokenInput.value.trim()) {
-                createToast('è«‹è¼¸å…¥ Token', 'error');
+                createToast('½Ğ¿é¤J Token', 'error');
                 return;
             }
             
             testBtn.disabled = true;
-            testBtn.textContent = 'æ¸¬è©¦ä¸­...';
+            testBtn.textContent = '´ú¸Õ¤¤...';
             
             const result = await GitHubSync.validateToken(tokenInput.value.trim());
             
             if (result.success) {
-                createToast(`é€£ç·šæˆåŠŸï¼ç”¨æˆ¶ï¼š${result.user.login}`, 'success');
+                createToast(`³s½u¦¨¥\¡I¥Î¤á¡G${result.user.login}`, 'success');
             } else {
-                createToast(`é€£ç·šå¤±æ•—ï¼š${result.error}`, 'error');
+                createToast(`³s½u¥¢±Ñ¡G${result.error}`, 'error');
             }
             
             testBtn.disabled = false;
-            testBtn.textContent = 'æ¸¬è©¦é€£ç·š';
+            testBtn.textContent = '´ú¸Õ³s½u';
         };
         tokenCard.appendChild(testBtn);
         
         const setupBtn = createElement('button', 'w-full ios-btn ios-btn-primary');
-        setupBtn.textContent = 'å•Ÿç”¨è·¨è£ç½®åŒæ­¥';
+        setupBtn.textContent = '±Ò¥Î¸ó¸Ë¸m¦P¨B';
         setupBtn.onclick = async () => {
             if (!tokenInput.value.trim()) {
-                createToast('è«‹è¼¸å…¥ Token', 'error');
+                createToast('½Ğ¿é¤J Token', 'error');
                 return;
             }
             
             setupBtn.disabled = true;
-            setupBtn.textContent = 'è¨­å®šä¸­...';
+            setupBtn.textContent = '³]©w¤¤...';
             
             try {
                 const result = await syncManager.setupGitHubSync(tokenInput.value.trim());
                 
-                createToast('è·¨è£ç½®åŒæ­¥å·²å•Ÿç”¨', 'success');
+                createToast('¸ó¸Ë¸m¦P¨B¤w±Ò¥Î', 'success');
                 
                 const keyDisplay = createElement('div', 'mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg');
                 keyDisplay.innerHTML = `
-                    <p class='font-semibold text-sm mb-2'>ğŸ” é‡è¦ï¼šè«‹å‚™ä»½åŠ å¯†é‡‘é‘°</p>
-                    <p class='text-xs text-gray-600 mb-2'>æ­¤é‡‘é‘°ç”¨æ–¼è§£å¯†æ‚¨çš„æ´»å‹•è¨˜éŒ„ï¼Œéºå¤±å°‡ç„¡æ³•å¾©åŸï¼</p>
+                    <p class='font-semibold text-sm mb-2'>?? ­«­n¡G½Ğ³Æ¥÷¥[±Kª÷Æ_</p>
+                    <p class='text-xs text-gray-600 mb-2'>¦¹ª÷Æ_¥Î©ó¸Ñ±K±zªº¬¡°Ê°O¿ı¡A¿ò¥¢±NµLªk´_­ì¡I</p>
                     <div class='bg-white p-2 rounded border text-xs font-mono break-all'>${result.encryptionKey}</div>
-                    <button class='mt-2 text-xs text-blue-500 underline' onclick='navigator.clipboard.writeText('${result.encryptionKey}').then(() => alert('å·²è¤‡è£½'))'>è¤‡è£½é‡‘é‘°</button>
+                    <button class='mt-2 text-xs text-blue-500 underline' onclick='navigator.clipboard.writeText('${result.encryptionKey}').then(() => alert('¤w½Æ»s'))'>½Æ»sª÷Æ_</button>
                 `;
                 tokenCard.appendChild(keyDisplay);
                 
                 setTimeout(() => Router.navigate('/settings/cross-device'), 2000);
             } catch (error) {
-                createToast(`è¨­å®šå¤±æ•—ï¼š${error.message}`, 'error');
+                createToast(`³]©w¥¢±Ñ¡G${error.message}`, 'error');
             }
             
             setupBtn.disabled = false;
-            setupBtn.textContent = 'å•Ÿç”¨è·¨è£ç½®åŒæ­¥';
+            setupBtn.textContent = '±Ò¥Î¸ó¸Ë¸m¦P¨B';
         };
         tokenCard.appendChild(setupBtn);
         
@@ -147,29 +147,29 @@ async function renderCrossDeviceSettings() {
             <div class='flex items-center gap-3'>
                 <i class='fas ${status.connected ? 'fa-check-circle text-green-600' : 'fa-exclamation-circle text-red-600'} text-2xl'></i>
                 <div class='flex-1'>
-                    <h3 class='font-semibold text-sm'>${status.connected ? 'å·²é€£ç·š' : 'é€£ç·šå¤±æ•—'}</h3>
-                    <p class='text-xs text-gray-600'>${status.connected ? `GitHub ç”¨æˆ¶ï¼š${status.user?.login}` : 'è«‹æª¢æŸ¥ Token æ˜¯å¦æœ‰æ•ˆ'}</p>
+                    <h3 class='font-semibold text-sm'>${status.connected ? '¤w³s½u' : '³s½u¥¢±Ñ'}</h3>
+                    <p class='text-xs text-gray-600'>${status.connected ? `GitHub ¥Î¤á¡G${status.user?.login}` : '½ĞÀË¬d Token ¬O§_¦³®Ä'}</p>
                 </div>
             </div>
         `;
         statusSection.appendChild(statusCard);
         
         const deviceCard = createElement('div', 'bg-white rounded-xl p-4 shadow-sm mt-4');
-        deviceCard.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'è£ç½®è³‡è¨Š' }));
+        deviceCard.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: '¸Ë¸m¸ê°T' }));
         
         const deviceInfo = createElement('div', 'text-sm space-y-2');
         deviceInfo.innerHTML = `
             <div class='flex justify-between'>
-                <span class='text-gray-600'>è£ç½® ID</span>
+                <span class='text-gray-600'>¸Ë¸m ID</span>
                 <span class='font-mono text-xs'>${syncManager.deviceId}</span>
             </div>
             <div class='flex justify-between'>
-                <span class='text-gray-600'>è£ç½®åç¨±</span>
+                <span class='text-gray-600'>¸Ë¸m¦WºÙ</span>
                 <span>${syncManager.getDeviceName()}</span>
             </div>
             <div class='flex justify-between'>
-                <span class='text-gray-600'>è£ç½®é¡å‹</span>
-                <span>${syncManager.getDeviceType() === 'mobile' ? 'æ‰‹æ©Ÿ' : 'é›»è…¦'}</span>
+                <span class='text-gray-600'>¸Ë¸mÃş«¬</span>
+                <span>${syncManager.getDeviceType() === 'mobile' ? '¤â¾÷' : '¹q¸£'}</span>
             </div>
         `;
         deviceCard.appendChild(deviceInfo);
@@ -178,45 +178,45 @@ async function renderCrossDeviceSettings() {
         main.appendChild(statusSection);
         
         const syncSection = createElement('div', 'mx-4 mb-4');
-        syncSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'åŒæ­¥æ“ä½œ' }));
+        syncSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: '¦P¨B¾Ş§@' }));
         
         const syncCard = createElement('div', 'bg-white rounded-xl p-4 shadow-sm');
         
         const syncBtn = createElement('button', 'w-full ios-btn ios-btn-primary mb-2');
-        syncBtn.textContent = 'ç«‹å³åŒæ­¥';
+        syncBtn.textContent = '¥ß§Y¦P¨B';
         syncBtn.onclick = async () => {
             syncBtn.disabled = true;
-            syncBtn.textContent = 'åŒæ­¥ä¸­...';
+            syncBtn.textContent = '¦P¨B¤¤...';
             
             try {
                 const result = await syncManager.sync();
-                createToast(`åŒæ­¥å®Œæˆï¼šä¸Šå‚³ ${result.uploaded} ç­†ï¼Œä¸‹è¼‰ ${result.downloaded} ç­†`, 'success');
+                createToast(`¦P¨B§¹¦¨¡G¤W¶Ç ${result.uploaded} µ§¡A¤U¸ü ${result.downloaded} µ§`, 'success');
             } catch (error) {
-                createToast(`åŒæ­¥å¤±æ•—ï¼š${error.message}`, 'error');
+                createToast(`¦P¨B¥¢±Ñ¡G${error.message}`, 'error');
             }
             
             syncBtn.disabled = false;
-            syncBtn.textContent = 'ç«‹å³åŒæ­¥';
+            syncBtn.textContent = '¥ß§Y¦P¨B';
         };
         syncCard.appendChild(syncBtn);
         
         const downloadBtn = createElement('button', 'w-full ios-btn mb-2');
         downloadBtn.style.background = '#E5E5EA';
         downloadBtn.style.color = '#111827';
-        downloadBtn.textContent = 'åƒ…ä¸‹è¼‰é ç«¯è³‡æ–™';
+        downloadBtn.textContent = '¶È¤U¸ü»·ºİ¸ê®Æ';
         downloadBtn.onclick = async () => {
             downloadBtn.disabled = true;
-            downloadBtn.textContent = 'ä¸‹è¼‰ä¸­...';
+            downloadBtn.textContent = '¤U¸ü¤¤...';
             
             try {
                 const result = await syncManager.downloadActivities();
-                createToast(`ä¸‹è¼‰å®Œæˆï¼š${result.activities.length} ç­†æ´»å‹•`, 'success');
+                createToast(`¤U¸ü§¹¦¨¡G${result.activities.length} µ§¬¡°Ê`, 'success');
             } catch (error) {
-                createToast(`ä¸‹è¼‰å¤±æ•—ï¼š${error.message}`, 'error');
+                createToast(`¤U¸ü¥¢±Ñ¡G${error.message}`, 'error');
             }
             
             downloadBtn.disabled = false;
-            downloadBtn.textContent = 'åƒ…ä¸‹è¼‰é ç«¯è³‡æ–™';
+            downloadBtn.textContent = '¶È¤U¸ü»·ºİ¸ê®Æ';
         };
         syncCard.appendChild(downloadBtn);
         
@@ -224,23 +224,23 @@ async function renderCrossDeviceSettings() {
         main.appendChild(syncSection);
         
         const dangerSection = createElement('div', 'mx-4 mb-8');
-        dangerSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'å±éšªæ“ä½œ' }));
+        dangerSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: '¦MÀI¾Ş§@' }));
         
         const dangerCard = createElement('div', 'bg-red-50 rounded-xl p-4 border border-red-200');
         
         const disconnectBtn = createElement('button', 'w-full text-red-600 font-semibold text-sm mb-2');
-        disconnectBtn.textContent = 'åœç”¨è·¨è£ç½®åŒæ­¥';
+        disconnectBtn.textContent = '°±¥Î¸ó¸Ë¸m¦P¨B';
         disconnectBtn.onclick = async () => {
-            if (confirm('ç¢ºå®šè¦åœç”¨è·¨è£ç½®åŒæ­¥ï¼Ÿé€™å°‡åˆªé™¤æ‰€æœ‰é›²ç«¯è³‡æ–™ã€‚')) {
+            if (confirm('½T©w­n°±¥Î¸ó¸Ë¸m¦P¨B¡H³o±N§R°£©Ò¦³¶³ºİ¸ê®Æ¡C')) {
                 await syncManager.disconnect();
-                createToast('å·²åœç”¨è·¨è£ç½®åŒæ­¥', 'success');
+                createToast('¤w°±¥Î¸ó¸Ë¸m¦P¨B', 'success');
                 Router.navigate('/settings/cross-device');
             }
         };
         dangerCard.appendChild(disconnectBtn);
         
         const warning = createElement('p', 'text-xs text-red-600');
-        warning.textContent = 'åœç”¨å¾Œå°‡åˆªé™¤ GitHub Gist ä¸Šçš„æ‰€æœ‰åŒæ­¥è³‡æ–™';
+        warning.textContent = '°±¥Î«á±N§R°£ GitHub Gist ¤Wªº©Ò¦³¦P¨B¸ê®Æ';
         dangerCard.appendChild(warning);
         
         dangerSection.appendChild(dangerCard);
@@ -254,7 +254,7 @@ async function renderCrossDeviceSettings() {
 
 export default {
     id: 'cross-device-settings',
-    name: 'è·¨è£ç½®åŒæ­¥',
+    name: '¸ó¸Ë¸m¦P¨B',
     routes: [
         { path: '/settings/cross-device', render: renderCrossDeviceSettings }
     ]

@@ -1,4 +1,4 @@
-ï»¿ï»¿import Router from '../../router.js';
+?import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
@@ -20,19 +20,19 @@ let currentView = 'home';
 let currentCharIndex = 0;
 
 const INCOGNITO_SITES = [
-    { id: 'nhentai', label: 'nhentai', icon: 'NH', query: 'nhentai åŒäººèªŒ æ¼«ç•«', title: 'nhentai åŒäººèªŒ' },
-    { id: 'av.com', label: 'av.com', icon: 'AV', query: 'av.com æˆäººå½±ç‰‡', title: 'av.com å½±ç‰‡' },
-    { id: 'dreams', label: 'dreams', icon: 'DR', query: 'dreams å¤¢å¢ƒ å¹»æƒ³', title: 'dreams å¹»æƒ³ä¸–ç•Œ' }
+    { id: 'nhentai', label: 'nhentai', icon: 'NH', query: 'nhentai ¦P¤H»x º©µe', title: 'nhentai ¦P¤H»x' },
+    { id: 'av.com', label: 'av.com', icon: 'AV', query: 'av.com ¦¨¤H¼v¤ù', title: 'av.com ¼v¤ù' },
+    { id: 'dreams', label: 'dreams', icon: 'DR', query: 'dreams ¹Ú¹Ò ¤Û·Q', title: 'dreams ¤Û·Q¥@¬É' }
 ];
 
 const USER_INTEREST_SITES = [
-    { id: 'user-interest-0', label: 'ç‚ºä½ æ¨è–¦', icon: 'æ¨', type: 'recommend' },
-    { id: 'user-interest-1', label: 'ç†±é–€å…§å®¹', icon: 'ç†±', type: 'trending' },
-    { id: 'user-interest-2', label: 'æ–°é®®äº‹', icon: 'æ–°', type: 'fresh' },
-    { id: 'user-interest-3', label: 'è¶£å‘³ç™¼ç¾', icon: 'è¶£', type: 'fun' }
+    { id: 'user-interest-0', label: '¬°§A±ÀÂË', icon: '±À', type: 'recommend' },
+    { id: 'user-interest-1', label: '¼öªù¤º®e', icon: '¼ö', type: 'trending' },
+    { id: 'user-interest-2', label: '·sÂA¨Æ', icon: '·s', type: 'fresh' },
+    { id: 'user-interest-3', label: '½ì¨ıµo²{', icon: '½ì', type: 'fun' }
 ];
 
-const ADULT_EXPLICIT_KEYWORDS = ['æˆå¹´', 'ä¸­å¹´', 'å¤§å”', 'å§å§', 'äººå¦»', 'æˆç†Ÿ', 'æƒ…æ…¾', 'æˆäºº', '18+', 'AV', 'æƒ…è‰²', 'å°ºåº¦', 'æ…¾æœ›', 'æ”¾ç¸±', 'æ¿€æƒ…'];
+const ADULT_EXPLICIT_KEYWORDS = ['¦¨¦~', '¤¤¦~', '¤j¨û', '©j©j', '¤H©d', '¦¨¼ô', '±¡¼¤', '¦¨¤H', '18+', 'AV', '±¡¦â', '¤Ø«×', '¼¤±æ', '©ñÁa', '¿E±¡'];
 
 function escapeHTML(str = '') {
     return String(str)
@@ -70,7 +70,7 @@ async function saveChromeData() {
             SettingsDB.set(WORLDBOOKS_KEY, chromeWorldbookMounts)
         ]);
     } catch (e) {
-        console.error('é½î³‡?Chrome?è±¢?æ†­æœ›?:', e);
+        console.error('ä¿å?Chrome?¸æ?å¤±æ?:', e);
     }
 }
 
@@ -136,7 +136,7 @@ function renderBookmarks(container) {
     );
 
     if (filtered.length === 0) {
-        list.innerHTML = '<div class='chrome-wb-empty'>æ’ î«±î¯¯?å•£??è²Šæƒœ</div>';
+        list.innerHTML = "`<div class=`"`chrome-wb-empty`"`>å°šæœª?°å??¸ç±¤</div>`";
         return;
     }
 
@@ -147,10 +147,10 @@ function renderBookmarks(container) {
                 <span>${escapeHTML(b.name)}</span>
             </div>
             <div class='bookmark-actions'>
-                <button class='icon-btn sm bookmark-open' data-url='${escapeHTML(b.url)}' title='?ï•?'>
+                <button class='icon-btn sm bookmark-open' data-url='${escapeHTML(b.url)}' title='?‹å?'>
                     <i class='fas fa-external-link-alt'></i>
                 </button>
-                <button class='icon-btn sm bookmark-delete' data-index='${i}' title='?èŠ·î¨’'>
+                <button class='icon-btn sm bookmark-delete' data-index='${i}' title='?ªé™¤'>
                     <i class='fas fa-trash'></i>
                 </button>
             </div>
@@ -199,7 +199,7 @@ function saveBookmark(container) {
     const url = urlInput?.value?.trim();
 
     if (!name || !url) {
-        createToast('éš¢ï• æ’“?äº¦é›¯è¡î©“?è”å‹—?è¬è„£?', 'error');
+        createToast('è«‹è¼¸?¥ç¶²ç«™å?ç¨±å?ç¶²å?', 'error');
         return;
     }
 
@@ -219,7 +219,7 @@ function renderHistoryList(container) {
     if (!list) return;
 
     if (historyEntries.length === 0) {
-        list.innerHTML = '<div class='status'>å°šç„¡ç€è¦½è¨˜éŒ„</div>';
+        list.innerHTML = "`<div class=`"`status`"`>©|µLÂsÄı°O¿ı</div>`";
         return;
     }
 
@@ -259,7 +259,7 @@ function openHistoryDetail(entry, container) {
         contentEl.innerHTML = `
             <div class='page-loading'>
                 <div class='loading-spinner'></div>
-                <span>ç”‡?î¯­é ›ï£ï…¯?î¼¿î²„...</span>
+                <span>æ­?œ¨è¼‰å…¥?é¢...</span>
             </div>
         `;
     }
@@ -274,13 +274,13 @@ async function fetchDetailContent(entry, container) {
 
     const settings = await APIClient.getSettings();
     if (!settings.api_url || !settings.api_key) {
-        contentEl.innerHTML = '<div class='page-error'>æœªåµæ¸¬åˆ° API é…ç½®ï¼Œè«‹å…ˆåœ¨æ§åˆ¶ä¸­å¿ƒè¨­å®šã€‚</div>';
+        contentEl.innerHTML = "`<div class=`"`page-error`"`>¥¼°»´ú¨ì API °t¸m¡A½Ğ¥ı¦b±±¨î¤¤¤ß³]©w¡C</div>`";
         return;
     }
 
     const isAdult = entry?.incognito;
     const adultLevel = entry?.adultLevel || 'suggestive';
-    const charName = entry?.charName || 'è§’è‰²';
+    const charName = entry?.charName || '¨¤¦â';
 
     const char = charProfiles.find(c => c.name === charName);
     const charId = char?.id || null;
@@ -291,17 +291,17 @@ async function fetchDetailContent(entry, container) {
     const adultPrompt = isAdult
         ? `
 
-ä½ æ˜¯ä¸€å€‹æ¨¡æ“¬æˆäººå…§å®¹é é¢ç”Ÿæˆå™¨ï¼Œè«‹ç”¨ç¹é«”ä¸­æ–‡è¼¸å‡ºæ¢ç†åˆ†æ˜çš„å…§å®¹ï¼Œæ¨¡æ“¬çœŸå¯¦ç¶²é çš„æ¨£å¼ã€‚${adultLevel === 'explicit' ? 'å¯ä½¿ç”¨éœ²éª¨æè¿°ã€‚' : 'å¯ä»¥å¸¶æƒ…æ…¾æ°›åœä½†é¿å…éåº¦éœ²éª¨ã€‚'}`
+§A¬O¤@­Ó¼ÒÀÀ¦¨¤H¤º®e­¶­±¥Í¦¨¾¹¡A½Ğ¥ÎÁcÅé¤¤¤å¿é¥X±ø²z¤À©úªº¤º®e¡A¼ÒÀÀ¯u¹êºô­¶ªº¼Ë¦¡¡C${adultLevel === 'explicit' ? '¥i¨Ï¥ÎÅS°©´y­z¡C' : '¥i¥H±a±¡¼¤ª^³ò¦ıÁ×§K¹L«×ÅS°©¡C'}`
         : `
 
-ä½ æ˜¯ä¸€å€‹æ¨¡æ“¬ç¶²é å…§å®¹ç”Ÿæˆå™¨ï¼Œè«‹ç”¨ç¹é«”ä¸­æ–‡è¼¸å‡ºæ¢ç†åˆ†æ˜çš„å…§å®¹ï¼Œæ¨¡æ“¬çœŸå¯¦ç¶²é çš„æ¨£å¼ã€‚`;
+§A¬O¤@­Ó¼ÒÀÀºô­¶¤º®e¥Í¦¨¾¹¡A½Ğ¥ÎÁcÅé¤¤¤å¿é¥X±ø²z¤À©úªº¤º®e¡A¼ÒÀÀ¯u¹êºô­¶ªº¼Ë¦¡¡C`;
 
     const systemPrompt = baseSystemPrompt + adultPrompt;
 
-    const userPrompt = `ä»¥ã€Œ${entry.query}ã€ç‚ºä¸»é¡Œï¼Œç”Ÿæˆä¸€æ®µæ¨¡æ“¬ç¶²é å…§å®¹ã€‚è«‹æ¨¡æ“¬çœŸå¯¦æœå°‹çµæœé é¢ï¼ŒåŒ…å«ï¼š
-1. é é¢æ¨™é¡Œ
-2. ç°¡çŸ­æè¿°
-3. 3-5 å€‹ç›¸é—œé€£çµæˆ–æ®µè½`;
+    const userPrompt = `¥H¡u${entry.query}¡v¬°¥DÃD¡A¥Í¦¨¤@¬q¼ÒÀÀºô­¶¤º®e¡C½Ğ¼ÒÀÀ¯u¹ê·j´Mµ²ªG­¶­±¡A¥]§t¡G
+1. ­¶­±¼ĞÃD
+2. Â²µu´y­z
+3. 3-5 ­Ó¬ÛÃö³sµ²©Î¬q¸¨`;
 
     try {
         const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
@@ -320,7 +320,7 @@ async function fetchDetailContent(entry, container) {
             })
         });
         const data = await response.json();
-        const content = data?.choices?.[0]?.message?.content || 'ç”Ÿæˆå…§å®¹å¤±æ•—ã€‚';
+        const content = data?.choices?.[0]?.message?.content || '¥Í¦¨¤º®e¥¢±Ñ¡C';
 
         contentEl.innerHTML = `
             <div class='page-result'>
@@ -328,7 +328,7 @@ async function fetchDetailContent(entry, container) {
             </div>
         `;
     } catch (err) {
-        contentEl.innerHTML = `<div class='page-error'>é€£ç·šå¤±æ•—ï¼š${err.message}</div>`;
+        contentEl.innerHTML = `<div class='page-error'>³s½u¥¢±Ñ¡G${err.message}</div>`;
     }
 }
 
@@ -338,18 +338,18 @@ async function generateHistoryForChar(index, container) {
     const panelTitle = container.querySelector('.history-panel .panel-title');
 
     if (!char) {
-        if (historyList) historyList.innerHTML = '<div class='status'>å°šç„¡è§’è‰²è³‡æ–™</div>';
+        if (historyList) historyList.innerHTML = "`<div class=`"`status`"`>©|µL¨¤¦â¸ê®Æ</div>`";
         return;
     }
 
-    const charName = char.name || 'è§’è‰²';
+    const charName = char.name || '¨¤¦â';
     const charId = char.id || null;
 
     if (panelTitle) {
-        panelTitle.textContent = `${charName} çš„ç€è¦½ç´€éŒ„`;
+        panelTitle.textContent = `${charName} ªºÂsÄı¬ö¿ı`;
     }
 
-    if (historyList) historyList.innerHTML = '<div class='status'>æ­£åœ¨ç”Ÿæˆç€è¦½ç´€éŒ„...</div>';
+    if (historyList) historyList.innerHTML = "`<div class=`"`status`"`>¥¿¦b¥Í¦¨ÂsÄı¬ö¿ı...</div>`";
 
     const settings = await APIClient.getSettings();
     if (!settings.api_url || !settings.api_key) {
@@ -364,24 +364,24 @@ async function generateHistoryForChar(index, container) {
 
     const systemPrompt = baseSystemPrompt + `
 
-æ¨¡å¼ï¼šç„¡ç—•æ¨¡å¼ï¼ˆæˆäººå‘ï¼Œç­‰ç´šï¼š${adultLevel}ï¼‰
+¼Ò¦¡¡GµL²ª¼Ò¦¡¡]¦¨¤H¦V¡Aµ¥¯Å¡G${adultLevel}¡^
 
-ä½ æ˜¯ä¸€å€‹æ¨¡æ“¬ç€è¦½å™¨æœå°‹ç´€éŒ„ç”Ÿæˆå™¨ã€‚è«‹æ ¹æ“šè§’è‰²çš„è¨­å®šï¼Œç”Ÿæˆç¬¦åˆè©²è§’è‰²åœ¨ç„¡ç—•æ¨¡å¼ä¸‹æœƒæ„Ÿèˆˆè¶£çš„æˆäººå‘å…§å®¹ã€‚
+§A¬O¤@­Ó¼ÒÀÀÂsÄı¾¹·j´M¬ö¿ı¥Í¦¨¾¹¡C½Ğ®Ú¾Ú¨¤¦âªº³]©w¡A¥Í¦¨²Å¦X¸Ó¨¤¦â¦bµL²ª¼Ò¦¡¤U·|·P¿³½ìªº¦¨¤H¦V¤º®e¡C
 
-é‡è¦è¦å‰‡ï¼š
-1. æœå°‹å…§å®¹å¿…é ˆç¬¦åˆè§’è‰²çš„èˆˆè¶£å’Œå€‹æ€§
-2. å…§å®¹æ‡‰è©²æ˜¯è§’è‰²åœ¨ç§å¯†æ¨¡å¼ä¸‹æœƒç€è¦½çš„æˆäººå‘å…§å®¹
-3. å¯ä»¥å¾ä¸‰å€‹ç¶²ç«™é¡å‹ä¾†æºï¼šnhentaiï¼ˆåŒäººèªŒï¼‰ã€av.comï¼ˆå½±ç‰‡ï¼‰ã€dreamsï¼ˆå¹»æƒ³ï¼‰
-4. æ ¹æ“šè§’è‰²æ€§æ ¼æ±ºå®šå…§å®¹çš„éœ²éª¨ç¨‹åº¦
+­«­n³W«h¡G
+1. ·j´M¤º®e¥²¶·²Å¦X¨¤¦âªº¿³½ì©M­Ó©Ê
+2. ¤º®eÀ³¸Ó¬O¨¤¦â¦b¨p±K¼Ò¦¡¤U·|ÂsÄıªº¦¨¤H¦V¤º®e
+3. ¥i¥H±q¤T­Óºô¯¸Ãş«¬¨Ó·½¡Gnhentai¡]¦P¤H»x¡^¡Bav.com¡]¼v¤ù¡^¡Bdreams¡]¤Û·Q¡^
+4. ®Ú¾Ú¨¤¦â©Ê®æ¨M©w¤º®eªºÅS°©µ{«×
 
-è«‹ç”¨ç¹é«”ä¸­æ–‡è¼¸å‡º JSON é™£åˆ—æ ¼å¼ï¼Œæ¯å€‹é …ç›®åŒ…å«ï¼š
-- query: æœå°‹é—œéµå­—
-- title: æ¨™é¡Œ
-- summary: ç°¡çŸ­æè¿°ï¼ˆç‚ºä»€éº¼è§’è‰²æœƒæœå°‹é€™å€‹ï¼Œä»¥è§’è‰²è¦–è§’æè¿°ï¼‰
-- site: ç¶²ç«™ä¾†æºï¼ˆnhentai / av.com / dreamsï¼‰
-- time: æ™‚é–“
+½Ğ¥ÎÁcÅé¤¤¤å¿é¥X JSON °}¦C®æ¦¡¡A¨C­Ó¶µ¥Ø¥]§t¡G
+- query: ·j´MÃöÁä¦r
+- title: ¼ĞÃD
+- summary: Â²µu´y­z¡]¬°¤°»ò¨¤¦â·|·j´M³o­Ó¡A¥H¨¤¦âµø¨¤´y­z¡^
+- site: ºô¯¸¨Ó·½¡]nhentai / av.com / dreams¡^
+- time: ®É¶¡
 
-è«‹ç”Ÿæˆ 5-8 å€‹æœå°‹ç´€éŒ„ï¼Œç›´æ¥è¼¸å‡º JSON é™£åˆ—ã€‚`;
+½Ğ¥Í¦¨ 5-8 ­Ó·j´M¬ö¿ı¡Aª½±µ¿é¥X JSON °}¦C¡C`;
 
     try {
         const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
@@ -394,7 +394,7 @@ async function generateHistoryForChar(index, container) {
                 model: settings.model || 'gpt-3.5-turbo',
                 messages: [
                     { role: 'system', content: systemPrompt },
-                    { role: 'user', content: `è«‹ç‚º${charName}ç”Ÿæˆç„¡ç—•æ¨¡å¼ä¸‹çš„ç€è¦½ç´€éŒ„ã€‚` }
+                    { role: 'user', content: `½Ğ¬°${charName}¥Í¦¨µL²ª¼Ò¦¡¤UªºÂsÄı¬ö¿ı¡C` }
                 ],
                 temperature: 0.8
             })
@@ -408,10 +408,10 @@ async function generateHistoryForChar(index, container) {
             const parsed = JSON.parse(jsonMatch[0]);
             historyEntries = parsed.map((item, i) => ({
                 id: `history_${Date.now()}_${i}`,
-                title: item.title || `${item.query} ç›¸é—œ`,
+                title: item.title || `${item.query} ¬ÛÃö`,
                 query: item.query,
-                time: item.time || `${i + 1} å°æ™‚å‰`,
-                summary: item.summary || `ç€è¦½äº†ã€Œ${item.query}ã€`,
+                time: item.time || `${i + 1} ¤p®É«e`,
+                summary: item.summary || `ÂsÄı¤F¡u${item.query}¡v`,
                 site: item.site || 'nhentai',
                 incognito: true,
                 adultLevel,
@@ -423,7 +423,7 @@ async function generateHistoryForChar(index, container) {
             generateFallbackHistory(char, charName, '', '', container);
         }
     } catch (err) {
-        console.error('ç”Ÿæˆæœå°‹ç´€éŒ„å¤±æ•—:', err);
+        console.error('¥Í¦¨·j´M¬ö¿ı¥¢±Ñ:', err);
         generateFallbackHistory(char, charName, '', '', container);
     }
 }
@@ -431,16 +431,16 @@ async function generateHistoryForChar(index, container) {
 function generateFallbackHistory(char, charName, charPersonality, charBackground, container) {
     const adultLevel = getAdultLevel(char);
     const sites = ['nhentai', 'av.com', 'dreams'];
-    const topics = ['æµªæ¼«', 'å¹»æƒ³', 'æ•…äº‹', 'è—è¡“', 'è§’è‰²', 'å‰µä½œ'];
+    const topics = ['®öº©', '¤Û·Q', '¬G¨Æ', 'ÃÀ³N', '¨¤¦â', '³Ğ§@'];
 
     historyEntries = topics.slice(0, 6).map((topic, i) => {
         const site = sites[i % 3];
         return {
             id: `history_${Date.now()}_${i}`,
-            title: `${topic} ç›¸é—œå…§å®¹`,
+            title: `${topic} ¬ÛÃö¤º®e`,
             query: `${topic} ${site}`,
-            time: `${i + 1} å°æ™‚å‰`,
-            summary: `${charName}åœ¨${site}ç€è¦½äº†${topic}ç›¸é—œå…§å®¹`,
+            time: `${i + 1} ¤p®É«e`,
+            summary: `${charName}¦b${site}ÂsÄı¤F${topic}¬ÛÃö¤º®e`,
             site,
             incognito: true,
             adultLevel,
@@ -457,44 +457,44 @@ async function openUserInterestSite(site, container) {
 
     const settings = await APIClient.getSettings();
     if (!settings.api_url || !settings.api_key) {
-        createToast('è«‹å…ˆè¨­å®š API æ‰èƒ½ç”Ÿæˆå…§å®¹', 'error');
+        createToast('½Ğ¥ı³]©w API ¤~¯à¥Í¦¨¤º®e', 'error');
         return;
     }
 
     switchView('history', container);
     const historyList = container.querySelector('#history-list');
-    if (historyList) historyList.innerHTML = '<div class='status'>æ­£åœ¨è¼‰å…¥å…§å®¹...</div>';
+    if (historyList) historyList.innerHTML = "`<div class=`"`status`"`>¥¿¦b¸ü¤J¤º®e...</div>`";
 
     const context = await buildAppContext({});
     const baseSystemPrompt = context.systemPrompt;
 
     const typePrompts = {
-        recommend: `æ ¹æ“šç”¨æˆ¶çš„èˆˆè¶£å’Œå€‹æ€§ï¼Œæ¨è–¦ä»–å€‘å¯èƒ½æ„Ÿèˆˆè¶£çš„å…§å®¹`,
-        trending: `ç”Ÿæˆç›®å‰ç†±é–€çš„è©±é¡Œå’Œè¶¨å‹¢å…§å®¹`,
-        fresh: `ç”Ÿæˆæ–°ç©ã€æœ‰è¶£ã€å‰›å‡ºç¾çš„æ–°é®®äº‹`,
-        fun: `ç”Ÿæˆè¶£å‘³ã€å¨›æ¨‚æ€§çš„ç™¼ç¾å’Œå…§å®¹`
+        recommend: `®Ú¾Ú¥Î¤áªº¿³½ì©M­Ó©Ê¡A±ÀÂË¥L­Ì¥i¯à·P¿³½ìªº¤º®e`,
+        trending: `¥Í¦¨¥Ø«e¼öªùªº¸ÜÃD©MÁÍ¶Õ¤º®e`,
+        fresh: `¥Í¦¨·s¿o¡B¦³½ì¡B­è¥X²{ªº·sÂA¨Æ`,
+        fun: `¥Í¦¨½ì¨ı¡B®T¼Ö©Êªºµo²{©M¤º®e`
     };
 
     const systemPrompt = baseSystemPrompt + `
 
-å…§å®¹é¡å‹ï¼š${typePrompts[site.type] || typePrompts.recommend}
+¤º®eÃş«¬¡G${typePrompts[site.type] || typePrompts.recommend}
 
-ä½ æ˜¯ä¸€å€‹æ¨¡æ“¬ç€è¦½å™¨å…§å®¹ç”Ÿæˆå™¨ã€‚è«‹æ ¹æ“šç”¨æˆ¶çš„è¨­å®šï¼Œç”Ÿæˆç¬¦åˆè©²ç”¨æˆ¶æœƒæ„Ÿèˆˆè¶£çš„å…§å®¹ã€‚
+§A¬O¤@­Ó¼ÒÀÀÂsÄı¾¹¤º®e¥Í¦¨¾¹¡C½Ğ®Ú¾Ú¥Î¤áªº³]©w¡A¥Í¦¨²Å¦X¸Ó¥Î¤á·|·P¿³½ìªº¤º®e¡C
 
-é‡è¦è¦å‰‡ï¼š
-1. å…§å®¹å¿…é ˆç¬¦åˆç”¨æˆ¶çš„èˆˆè¶£å’Œå€‹æ€§
-2. å…§å®¹æ‡‰è©²å¤šæ¨£åŒ–ï¼ŒåŒ…å«ä¸åŒé ˜åŸŸ
-3. æ¯å€‹é …ç›®éƒ½è¦æœ‰æ¨™é¡Œå’Œç°¡çŸ­æè¿°
-4. å¯ä»¥åŒ…å«æ–°èã€å¨›æ¨‚ã€çŸ¥è­˜ã€ç”Ÿæ´»ç­‰ä¸åŒé¡å‹
+­«­n³W«h¡G
+1. ¤º®e¥²¶·²Å¦X¥Î¤áªº¿³½ì©M­Ó©Ê
+2. ¤º®eÀ³¸Ó¦h¼Ë¤Æ¡A¥]§t¤£¦P»â°ì
+3. ¨C­Ó¶µ¥Ø³£­n¦³¼ĞÃD©MÂ²µu´y­z
+4. ¥i¥H¥]§t·s»D¡B®T¼Ö¡Bª¾ÃÑ¡B¥Í¬¡µ¥¤£¦PÃş«¬
 
-è«‹ç”¨ç¹é«”ä¸­æ–‡è¼¸å‡º JSON é™£åˆ—æ ¼å¼ï¼Œæ¯å€‹é …ç›®åŒ…å«ï¼š
-- title: å…§å®¹æ¨™é¡Œ
-- description: ç°¡çŸ­æè¿°ï¼ˆç‚ºä»€éº¼ç”¨æˆ¶æœƒæ„Ÿèˆˆè¶£ï¼‰
-- category: åˆ†é¡ï¼ˆå¦‚ï¼šæ–°èã€å¨›æ¨‚ã€çŸ¥è­˜ã€ç”Ÿæ´»ç­‰ï¼‰
+½Ğ¥ÎÁcÅé¤¤¤å¿é¥X JSON °}¦C®æ¦¡¡A¨C­Ó¶µ¥Ø¥]§t¡G
+- title: ¤º®e¼ĞÃD
+- description: Â²µu´y­z¡]¬°¤°»ò¥Î¤á·|·P¿³½ì¡^
+- category: ¤ÀÃş¡]¦p¡G·s»D¡B®T¼Ö¡Bª¾ÃÑ¡B¥Í¬¡µ¥¡^
 
-è«‹ç”Ÿæˆ 4-6 å€‹å…§å®¹é …ç›®ï¼Œç›´æ¥è¼¸å‡º JSON é™£åˆ—ï¼Œä¸è¦å…¶ä»–èªªæ˜ã€‚`;
+½Ğ¥Í¦¨ 4-6 ­Ó¤º®e¶µ¥Ø¡Aª½±µ¿é¥X JSON °}¦C¡A¤£­n¨ä¥L»¡©ú¡C`;
 
-    const userPrompt = `è«‹ç‚ºç”¨æˆ¶ç”Ÿæˆ${site.label}å…§å®¹ã€‚`;
+    const userPrompt = `½Ğ¬°¥Î¤á¥Í¦¨${site.label}¤º®e¡C`;
 
     try {
         const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
@@ -514,7 +514,7 @@ async function openUserInterestSite(site, container) {
         });
 
         const data = await response.json();
-        const content = data?.choices?.[0]?.message?.content || 'ç”Ÿæˆå…§å®¹å¤±æ•—';
+        const content = data?.choices?.[0]?.message?.content || '¥Í¦¨¤º®e¥¢±Ñ';
 
         const jsonMatch = content.match(/\[[\s\S]*\]/);
         let items = [];
@@ -537,7 +537,7 @@ async function openUserInterestSite(site, container) {
                     <div class='interest-items'>
                         ${items.map(item => `
                             <div class='interest-item'>
-                                <div class='interest-category'>${item.category || 'æ¨è–¦'}</div>
+                                <div class='interest-category'>${item.category || '±ÀÂË'}</div>
                                 <div class='interest-title'>${escapeHTML(item.title)}</div>
                                 <div class='interest-desc'>${escapeHTML(item.description)}</div>
                             </div>
@@ -559,7 +559,7 @@ async function openUserInterestSite(site, container) {
             `;
         }
     } catch (err) {
-        if (historyList) historyList.innerHTML = `<div class='status error'>è¼‰å…¥å¤±æ•—ï¼š${err.message}</div>`;
+        if (historyList) historyList.innerHTML = `<div class='status error'>¸ü¤J¥¢±Ñ¡G${err.message}</div>`;
     }
 }
 
@@ -568,17 +568,17 @@ async function openIncognitoSite(site, container) {
 
     const settings = await APIClient.getSettings();
     if (!settings.api_url || !settings.api_key) {
-        createToast('è«‹å…ˆè¨­å®š API æ‰èƒ½ç”Ÿæˆå…§å®¹', 'error');
+        createToast('½Ğ¥ı³]©w API ¤~¯à¥Í¦¨¤º®e', 'error');
         return;
     }
 
     const char = charProfiles[currentCharIndex] || {};
-    const charName = char.name || 'è§’è‰²';
+    const charName = char.name || '¨¤¦â';
     const charId = char?.id || null;
 
     switchView('history', container);
     const historyList = container.querySelector('#history-list');
-    if (historyList) historyList.innerHTML = '<div class='status'>æ­£åœ¨è¼‰å…¥å…§å®¹...</div>';
+    if (historyList) historyList.innerHTML = "`<div class=`"`status`"`>¥¿¦b¸ü¤J¤º®e...</div>`";
 
     const adultLevel = getAdultLevel(char);
 
@@ -587,21 +587,21 @@ async function openIncognitoSite(site, container) {
 
     const systemPrompt = baseSystemPrompt + `
 
-ä½ æ˜¯ä¸€å€‹æ¨¡æ“¬æˆäººå…§å®¹é é¢ç”Ÿæˆå™¨ã€‚
-æ¨¡å¼ï¼šç„¡ç—•æ¨¡å¼ï¼ˆæˆäººå‘ï¼Œç­‰ç´šï¼š${adultLevel}ï¼‰
+§A¬O¤@­Ó¼ÒÀÀ¦¨¤H¤º®e­¶­±¥Í¦¨¾¹¡C
+¼Ò¦¡¡GµL²ª¼Ò¦¡¡]¦¨¤H¦V¡Aµ¥¯Å¡G${adultLevel}¡^
 
-è«‹ç”¨ç¹é«”ä¸­æ–‡è¼¸å‡ºç¶²é å…§å®¹ï¼Œæ¨¡æ“¬çœŸå¯¦ç¶²ç«™çš„æ¨£å¼ï¼ŒåŒ…å«ï¼š
-1. ç¶²ç«™æ¨™é¡Œ
-2. åˆ†é¡æˆ–æ¨™ç±¤
-3. 3-5 å€‹å…§å®¹é …ç›®ï¼ˆæ¨™é¡Œå’Œç°¡çŸ­æè¿°ï¼‰
-4. æ¯å€‹é …ç›®éƒ½è¦æœ‰ä»¥${charName}è¦–è§’çš„è©•è«–æˆ–æ„Ÿå—
+½Ğ¥ÎÁcÅé¤¤¤å¿é¥Xºô­¶¤º®e¡A¼ÒÀÀ¯u¹êºô¯¸ªº¼Ë¦¡¡A¥]§t¡G
+1. ºô¯¸¼ĞÃD
+2. ¤ÀÃş©Î¼ĞÅÒ
+3. 3-5 ­Ó¤º®e¶µ¥Ø¡]¼ĞÃD©MÂ²µu´y­z¡^
+4. ¨C­Ó¶µ¥Ø³£­n¦³¥H${charName}µø¨¤ªºµû½×©Î·P¨ü
 
-å¯ä»¥å¸¶æœ‰æƒ…æ…¾æ°›åœï¼Œæ ¹æ“šè§’è‰²æ€§æ ¼æ±ºå®šç¨‹åº¦ã€‚${adultLevel === 'explicit' ? 'å¯ä»¥ä½¿ç”¨è¼ƒéœ²éª¨çš„æè¿°ã€‚' : 'ä¿æŒæƒ…è¶£ä½†ä¸éåº¦éœ²éª¨ã€‚'}`;
+¥i¥H±a¦³±¡¼¤ª^³ò¡A®Ú¾Ú¨¤¦â©Ê®æ¨M©wµ{«×¡C${adultLevel === 'explicit' ? '¥i¥H¨Ï¥Î¸ûÅS°©ªº´y­z¡C' : '«O«ù±¡½ì¦ı¤£¹L«×ÅS°©¡C'}`;
 
-    const userPrompt = `è«‹ç”Ÿæˆã€Œ${site.label}ã€ç¶²ç«™çš„æ¨¡æ“¬å…§å®¹ã€‚
-æœå°‹é—œéµå­—ï¼š${site.query}
+    const userPrompt = `½Ğ¥Í¦¨¡u${site.label}¡vºô¯¸ªº¼ÒÀÀ¤º®e¡C
+·j´MÃöÁä¦r¡G${site.query}
 
-è«‹æ¨¡æ“¬ä¸€å€‹æˆäººå‘ç¶²ç«™çš„é¦–é å…§å®¹ï¼Œä»¥${charName}çš„è¦–è§’å‘ˆç¾ã€‚${charName}æ­£åœ¨ç€è¦½é€™å€‹ç¶²ç«™ï¼Œè«‹å±•ç¾${charName}çš„åæ‡‰å’Œæ„Ÿå—ã€‚`;
+½Ğ¼ÒÀÀ¤@­Ó¦¨¤H¦Vºô¯¸ªº­º­¶¤º®e¡A¥H${charName}ªºµø¨¤§e²{¡C${charName}¥¿¦bÂsÄı³o­Óºô¯¸¡A½Ğ®i²{${charName}ªº¤ÏÀ³©M·P¨ü¡C`;
     try {
         const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
             method: 'POST',
@@ -620,7 +620,7 @@ async function openIncognitoSite(site, container) {
         });
 
         const data = await response.json();
-        const content = data?.choices?.[0]?.message?.content || 'ç„¡æ³•è¼‰å…¥å…§å®¹';
+        const content = data?.choices?.[0]?.message?.content || 'µLªk¸ü¤J¤º®e';
 
         if (historyList) {
             historyList.innerHTML = `
@@ -643,8 +643,8 @@ async function openIncognitoSite(site, container) {
                 sourceApp: 'chrome',
                 sourceType: 'interaction',
                 sourceSubtype: 'browsing',
-                content: `åœ¨ç„¡ç—•æ¨¡å¼ç€è¦½ ${site?.label || 'ç¶²ç«™'}`,
-                metaContent: `åœ¨ Chrome ç„¡ç—•æ¨¡å¼èˆ‡ç”¨æˆ¶ä¸€èµ·ç€è¦½äº† ${site?.label || 'ç¶²ç«™'}`,
+                content: `¦bµL²ª¼Ò¦¡ÂsÄı ${site?.label || 'ºô¯¸'}`,
+                metaContent: `¦b Chrome µL²ª¼Ò¦¡»P¥Î¤á¤@°_ÂsÄı¤F ${site?.label || 'ºô¯¸'}`,
                 fullContent: content,
                 theaterIds: [],
                 isFiction: false,
@@ -652,7 +652,7 @@ async function openIncognitoSite(site, container) {
             });
         }
     } catch (err) {
-        if (historyList) historyList.innerHTML = `<div class='status error'>è¼‰å…¥å¤±æ•—ï¼š${err.message}</div>`;
+        if (historyList) historyList.innerHTML = `<div class='status error'>¸ü¤J¥¢±Ñ¡G${err.message}</div>`;
     }
 }
 
@@ -686,9 +686,9 @@ function toggleMode(container) {
     const incognitoGrid = container.querySelector('#incognito-quick-grid');
 
     if (appEl) appEl.dataset.mode = next;
-    if (modeBtn) modeBtn.textContent = next === 'incognito' ? 'ç„¡ç—•' : 'æ™®é€š';
+    if (modeBtn) modeBtn.textContent = next === 'incognito' ? 'µL²ª' : '´¶³q';
     if (statusText) {
-        statusText.textContent = next === 'incognito' ? '' : 'ä¸€èˆ¬æ¨¡å¼ï¼Œå·²é—œé–‰ç„¡ç—•æ¨¡å¼';
+        statusText.textContent = next === 'incognito' ? '' : '¤@¯ë¼Ò¦¡¡A¤wÃö³¬µL²ª¼Ò¦¡';
         statusText.hidden = next === 'incognito';
     }
     if (hero) hero.hidden = next !== 'incognito';
@@ -793,12 +793,12 @@ function bindEvents(container) {
     historyManualSave?.addEventListener('click', async () => {
         const query = historyManualQuery?.value.trim();
         if (!query) return;
-        const summary = historyManualSummary?.value.trim() || `æœå°‹é—œæ–¼ ${query} çš„å…§å®¹`;
+        const summary = historyManualSummary?.value.trim() || `·j´MÃö©ó ${query} ªº¤º®e`;
         const entry = {
             id: `history_${Date.now()}_${historyEntries.length}`,
-            title: `${query} ?è‡­?æš»æ½˜?`,
+            title: `${query} ?¯ä?éº¼ï?`,
             query,
-            time: '?î®?',
+            time: '?›å?',
             summary,
             incognito: false,
             adultLevel: 'none'
@@ -879,17 +879,17 @@ async function renderChrome(params) {
     container.innerHTML = `
         <header class='topbar'>
             <div class='top-left'>
-                <button class='ghost-btn' id='home-back' title='é¤ˆî‚?'>
+                <button class='ghost-btn' id='home-back' title='è¿”å?'>
                     <i class='fas fa-chevron-left'></i>
                 </button>
                 <div class='view-toggle' id='view-toggle'>
-                    <button class='active' data-view='home'>æ“î¢€?</button>
-                    <button data-view='bookmarks'>?è²Šæƒœ</button>
-                    <button data-view='history'>æ­·å²</button>
+                    <button class='active' data-view='home'>é¦–é?</button>
+                    <button data-view='bookmarks'>?¸ç±¤</button>
+                    <button data-view='history'>¾ú¥v</button>
                 </div>
             </div>
             <div class='top-actions'>
-                <button class='ghost-btn' id='mode-btn'>?âˆ ?</button>
+                <button class='ghost-btn' id='mode-btn'>?¡ç?</button>
                 <button class='avatar' id='profile-trigger'></button>
             </div>
         </header>
@@ -903,12 +903,12 @@ async function renderChrome(params) {
                 <div class='incognito-badge'>
                     <i class='fas fa-user-secret'></i>
                 </div>
-                <div class='incognito-title'>?âˆ ?ç’…âˆª?</div>
+                <div class='incognito-title'>?¡ç?æ¨¡å?</div>
             </div>
 
             <div class='search-card'>
                 <i class='fas fa-search'></i>
-                <input type='text' placeholder='æœå°‹ç¶²å€æˆ–é—œéµå­—' id='search-input'>
+                <input type='text' placeholder='·j´Mºô§}©ÎÃöÁä¦r' id='search-input'>
                 <button class='icon-btn'><i class='fas fa-microphone'></i></button>
             </div>
 
@@ -930,33 +930,33 @@ async function renderChrome(params) {
                 `).join('')}
             </div>
 
-            <div class='status' id='status-text'>ä¸€èˆ¬æ¨¡å¼ï¼Œå·²é—œé–‰ç„¡ç—•æ¨¡å¼</div>
+            <div class='status' id='status-text'>¤@¯ë¼Ò¦¡¡A¤wÃö³¬µL²ª¼Ò¦¡</div>
         </div>
 
         <div class='panel bookmarks-panel' data-panel='bookmarks' hidden>
             <div class='panel-header'>
-                <h2 class='panel-title'>?è²Šæƒœ</h2>
+                <h2 class='panel-title'>?¸ç±¤</h2>
                 <button class='ghost-btn' id='add-bookmark-btn'>
-                    <i class='fas fa-plus'></i> ?å•£?
+                    <i class='fas fa-plus'></i> ?°å?
                 </button>
             </div>
             <div class='search-row'>
                 <i class='fas fa-search'></i>
-                <input type='text' placeholder='?î°ª??è²Šæƒœ' id='bookmark-search'>
+                <input type='text' placeholder='?œå??¸ç±¤' id='bookmark-search'>
             </div>
             <div class='bookmark-list' id='bookmark-list'></div>
         </div>
 
         <div class='panel history-panel' data-panel='history' hidden>
             <div class='panel-header'>
-                <h2 class='panel-title'>ç€è¦½æ­·å²</h2>
+                <h2 class='panel-title'>ÂsÄı¾ú¥v</h2>
             </div>
             <div class='history-controls'>
-                <label>é–«î˜‹ï°åš—?/label>
+                <label>è§’è‰²ï¼?/label>
                 <select id='char-select'>
                     ${charProfiles.map((char, i) => `
-                        <option value='${i}'>${char.name || `é–«î˜‹ï° ${i + 1}`}</option>
-                    `).join('') || '<option value=''>æ’ î«±î¯¯æ’±ç®‡?é–«î˜‹ï°</option>'}
+                        <option value='${i}'>${char.name || `è§’è‰² ${i + 1}`}</option>
+                    `).join('') || '<option value=''>å°šæœªå»ºç?è§’è‰²</option>'}
                 </select>
                 <button class='ghost-btn' id='history-refresh'>
                     <i class='fas fa-sync-alt'></i>
@@ -968,7 +968,7 @@ async function renderChrome(params) {
         <div class='panel history-detail-panel' data-panel='history-detail' hidden>
             <div class='detail-nav'>
                 <button class='back-btn' id='history-detail-back'>
-                    <i class='fas fa-chevron-left'></i> é¤ˆî‚?
+                    <i class='fas fa-chevron-left'></i> è¿”å?
                 </button>
             </div>
             <div class='detail-search-card'>
@@ -996,21 +996,21 @@ async function renderChrome(params) {
             <div class='history-modal-backdrop'></div>
             <div class='history-modal-card'>
                 <div class='history-modal-header'>
-                    <div class='history-modal-title'>?å•£??ï‰?</div>
+                    <div class='history-modal-title'>?°å??†é?</div>
                     <button class='icon-btn' id='history-modal-close'>
                         <i class='fas fa-times'></i>
                     </button>
                 </div>
                 <div class='history-modal-actions'>
-                    <button class='ghost-btn' id='history-generate-btn'>AI ?î¸‚?</button>
-                    <button class='ghost-btn' id='history-manual-btn'>?ï•?é ›è©¨ï…¯</button>
+                    <button class='ghost-btn' id='history-generate-btn'>AI ?Ÿæ?</button>
+                    <button class='ghost-btn' id='history-manual-btn'>?‹å?è¼¸å…¥</button>
                 </div>
                 <div class='history-manual' id='history-manual' hidden>
-                    <label>?î°ª??î°®ï™§æ‘®?/label>
-                    <input type='text' id='history-manual-query' placeholder='é ›è©¨ï…¯?î°ª??î°®ï™§æ‘®?>
-                    <label>?î¦¹?éš¤èŠ£?</label>
-                    <textarea id='history-manual-summary' rows='2' placeholder='èªâˆ î·‰?î´è†©'></textarea>
-                    <button class='ghost-btn primary' id='history-manual-save'>?è„£?</button>
+                    <label>?œå??œéµå­?/label>
+                    <input type='text' id='history-manual-query' placeholder='è¼¸å…¥?œå??œéµå­?>
+                    <label>?˜è?èªªæ?</label>
+                    <textarea id='history-manual-summary' rows='2' placeholder='ç°¡çŸ­?è¿°'></textarea>
+                    <button class='ghost-btn primary' id='history-manual-save'>?²å?</button>
                 </div>
             </div>
         </div>
@@ -1019,17 +1019,17 @@ async function renderChrome(params) {
             <div class='history-modal-backdrop'></div>
             <div class='history-modal-card'>
                 <div class='history-modal-header'>
-                    <div class='history-modal-title'>?å•£??è²Šæƒœ</div>
+                    <div class='history-modal-title'>?°å??¸ç±¤</div>
                     <button class='icon-btn' id='bookmark-modal-close'>
                         <i class='fas fa-times'></i>
                     </button>
                 </div>
                 <div class='history-manual'>
-                    <label>è¬è„©??ïš™è¿‚</label>
-                    <input type='text' id='bookmark-name' placeholder='è¬è„©??ïš™è¿‚'>
-                    <label>è¬è„£?</label>
+                    <label>ç¶²ç??ç¨±</label>
+                    <input type='text' id='bookmark-name' placeholder='ç¶²ç??ç¨±'>
+                    <label>ç¶²å?</label>
                     <input type='text' id='bookmark-url' placeholder='https://example.com'>
-                    <button class='ghost-btn primary' id='bookmark-save'>?è„£?</button>
+                    <button class='ghost-btn primary' id='bookmark-save'>?²å?</button>
                 </div>
             </div>
         </div>
@@ -1037,38 +1037,38 @@ async function renderChrome(params) {
         <div class='profile-backdrop' id='profile-backdrop' hidden></div>
         <div class='profile-drawer' id='profile-drawer'>
             <div class='profile-drawer-header'>
-                <div class='profile-drawer-title'>?ï•œçŠ–é–®å‰–?</div>
+                <div class='profile-drawer-title'>?‹äººè¨­å?</div>
                 <button class='icon-btn' id='profile-close'>
                     <i class='fas fa-times'></i>
                 </button>
             </div>
             <div class='profile-drawer-body'>
                 <div class='drawer-section'>
-                    <div class='drawer-label'>?è±¢??å†½ï—</div>
+                    <div class='drawer-label'>?¸æ??¨æˆ¶</div>
                     <select class='drawer-select' id='chrome-user-select'>
                         ${chromeUserProfiles.map((user, i) => `
                             <option value='${user?.name || `User ${i + 1}`}'>${user?.name || `User ${i + 1}`}</option>
-                        `).join('') || '<option value=''>æ’ î«±î¯¯æ’±ç®‡??å†½ï—</option>'}
+                        `).join('') || '<option value=''>å°šæœªå»ºç??¨æˆ¶</option>'}
                     </select>
                 </div>
                 <div class='drawer-section'>
-                    <div class='drawer-label'>éŠî¡¾??è±¢?é ›?/div>
+                    <div class='drawer-label'>ä¸–ç??¸æ?è¼?/div>
                     <div class='chrome-wb-dropdown'>
                         <button class='chrome-wb-toggle'>
-                            <span>?è±¢?éŠî¡¾???/span>
+                            <span>?¸æ?ä¸–ç???/span>
                             <i class='fas fa-chevron-down'></i>
                         </button>
                         <div class='chrome-wb-menu' id='chrome-worldbook-list'>
                             ${chromeWorldbookMounts.map((wb, i) => `
                                 <div class='chrome-wb-item'>
-                                    <input type='checkbox' value='${wb?.name || `éŠî¡¾???${i + 1}`}'>
-                                    <span>${wb?.name || `éŠî¡¾???${i + 1}`}</span>
+                                    <input type='checkbox' value='${wb?.name || `ä¸–ç???${i + 1}`}'>
+                                    <span>${wb?.name || `ä¸–ç???${i + 1}`}</span>
                                 </div>
-                            `).join('') || '<div class='chrome-wb-empty'>æ’ î«²ïƒ?èˆ€?é ›ï¥?éŠî¡¾???/div>'}
+                            `).join('') || '<div class='chrome-wb-empty'>å°šç„¡?¯æ?è¼‰ç?ä¸–ç???/div>'}
                         </div>
                     </div>
                 </div>
-                <button class='ghost-btn primary' id='profile-apply'>æ†Ÿî¤›îœ…é–®å‰–?</button>
+                <button class='ghost-btn primary' id='profile-apply'>å¥—ç”¨è¨­å?</button>
             </div>
         </div>
     `;

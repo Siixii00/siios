@@ -1,4 +1,4 @@
-﻿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { HealthDB, UsersDB } from '../../db.js';
 import { PeriodCalculator } from '../../core/period-calculator.js';
@@ -129,7 +129,7 @@ function renderMoodTags(container) {
 async function renderPeriodCalendar(container) {
     const calendarEl = container.querySelector('#period-calendar');
     if (!currentUser) {
-        calendarEl.innerHTML = '<p class='empty-msg'>Please create a user mask first</p>';
+        calendarEl.innerHTML = "`<p class=`"`empty-msg`"`>Please create a user mask first</p>`";
         return;
     }
     
@@ -198,14 +198,14 @@ async function renderPeriodCalendar(container) {
 async function renderMedicationList(container) {
     const listEl = container.querySelector('#medication-list');
     if (!currentUser) {
-        listEl.innerHTML = '<p class='empty-msg'>Please create a user mask first</p>';
+        listEl.innerHTML = "`<p class=`"`empty-msg`"`>Please create a user mask first</p>`";
         return;
     }
     
     const medications = await HealthDB.getByType(currentUser.id, 'medication');
     
     if (medications.length === 0) {
-        listEl.innerHTML = '<p class='empty-msg'>No medication records</p>';
+        listEl.innerHTML = "`<p class=`"`empty-msg`"`>No medication records</p>`";
         return;
     }
     

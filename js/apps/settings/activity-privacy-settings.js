@@ -1,25 +1,25 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 const PRIVACY_LEVELS = [
     { 
         id: 'basic', 
-        name: 'åŸºæœ¬çµ±è¨ˆ', 
-        desc: 'åƒ…è¨˜éŒ„å¹³å°ã€æ´»å‹•é¡å‹ã€æ™‚é–“èˆ‡æ¬¡æ•¸',
-        examples: ['Instagram æŒ‰è®· 3 æ¬¡', 'LINE ä½¿ç”¨ 15 åˆ†é˜']
+        name: '°ò¥»²Î­p', 
+        desc: '¶È°O¿ı¥­¥x¡B¬¡°ÊÃş«¬¡B®É¶¡»P¦¸¼Æ',
+        examples: ['Instagram «ö? 3 ¦¸', 'LINE ¨Ï¥Î 15 ¤ÀÄÁ']
     },
     { 
         id: 'summary', 
-        name: 'åŒ…å«æ‘˜è¦', 
-        desc: 'è¨˜éŒ„äº’å‹•å°è±¡ã€æ¨™é¡Œç­‰æ‘˜è¦è³‡è¨Š',
-        examples: ['èˆ‡å°æ˜é€šè©± 10 åˆ†é˜', 'è§€çœ‹ã€ŒæŸå½±ç‰‡ã€']
+        name: '¥]§tºK­n', 
+        desc: '°O¿ı¤¬°Ê¹ï¶H¡B¼ĞÃDµ¥ºK­n¸ê°T',
+        examples: ['»P¤p©ú³q¸Ü 10 ¤ÀÄÁ', 'Æ[¬İ¡u¬Y¼v¤ù¡v']
     },
     { 
         id: 'detailed', 
-        name: 'è©³ç´°è³‡è¨Š', 
-        desc: 'è¨˜éŒ„é€šçŸ¥å…§å®¹æ‘˜è¦ã€æœå°‹é—œéµå­—',
-        examples: ['æ”¶åˆ°ã€Œæœƒè­°æé†’ã€é€šçŸ¥', 'æœå°‹ã€ŒæŸé—œéµå­—ã€'],
+        name: '¸Ô²Ó¸ê°T', 
+        desc: '°O¿ı³qª¾¤º®eºK­n¡B·j´MÃöÁä¦r',
+        examples: ['¦¬¨ì¡u·|Ä³´£¿ô¡v³qª¾', '·j´M¡u¬YÃöÁä¦r¡v'],
         requiresPassword: true
     }
 ];
@@ -31,7 +31,7 @@ const PLATFORM_SETTINGS = [
         icon: 'alternate_email', 
         color: '#1DA1F2',
         defaultLevel: 'basic',
-        activities: ['æ¨æ–‡', 'æŒ‰è®š', 'è½‰æ¨', 'å›è¦†', 'è§€çœ‹']
+        activities: ['±À¤å', '«öÆg', 'Âà±À', '¦^ÂĞ', 'Æ[¬İ']
     },
     { 
         id: 'instagram', 
@@ -39,7 +39,7 @@ const PLATFORM_SETTINGS = [
         icon: 'photo_camera', 
         color: '#E1306C',
         defaultLevel: 'basic',
-        activities: ['è²¼æ–‡', 'æŒ‰è®š', 'ç•™è¨€', 'è§€çœ‹', 'é™å‹•']
+        activities: ['¶K¤å', '«öÆg', '¯d¨¥', 'Æ[¬İ', '­­°Ê']
     },
     { 
         id: 'line', 
@@ -47,7 +47,7 @@ const PLATFORM_SETTINGS = [
         icon: 'chat', 
         color: '#00B900',
         defaultLevel: 'basic',
-        activities: ['è¨Šæ¯', 'é€šè©±', 'è²¼åœ–']
+        activities: ['°T®§', '³q¸Ü', '¶K¹Ï']
     },
     { 
         id: 'facebook', 
@@ -55,7 +55,7 @@ const PLATFORM_SETTINGS = [
         icon: 'thumb_up', 
         color: '#1877F2',
         defaultLevel: 'basic',
-        activities: ['è²¼æ–‡', 'æŒ‰è®š', 'ç•™è¨€', 'è§€çœ‹']
+        activities: ['¶K¤å', '«öÆg', '¯d¨¥', 'Æ[¬İ']
     },
     { 
         id: 'youtube', 
@@ -63,7 +63,7 @@ const PLATFORM_SETTINGS = [
         icon: 'play_circle', 
         color: '#FF0000',
         defaultLevel: 'basic',
-        activities: ['è§€çœ‹', 'è¨‚é–±', 'ç•™è¨€']
+        activities: ['Æ[¬İ', '­q¾\', '¯d¨¥']
     },
     { 
         id: 'discord', 
@@ -71,7 +71,7 @@ const PLATFORM_SETTINGS = [
         icon: 'discord', 
         color: '#5865F2',
         defaultLevel: 'basic',
-        activities: ['è¨Šæ¯', 'èªéŸ³', 'ä¼ºæœå™¨æ´»å‹•']
+        activities: ['°T®§', '»y­µ', '¦øªA¾¹¬¡°Ê']
     },
     { 
         id: 'tiktok', 
@@ -79,23 +79,23 @@ const PLATFORM_SETTINGS = [
         icon: 'music_note', 
         color: '#000000',
         defaultLevel: 'basic',
-        activities: ['è§€çœ‹', 'æŒ‰è®š', 'ç•™è¨€', 'åˆ†äº«']
+        activities: ['Æ[¬İ', '«öÆg', '¯d¨¥', '¤À¨É']
     },
     { 
         id: 'call', 
-        name: 'é€šè©±è¨˜éŒ„', 
+        name: '³q¸Ü°O¿ı', 
         icon: 'call', 
         color: '#00C7BE',
         defaultLevel: 'summary',
-        activities: ['æ’¥æ‰“', 'æ¥è½', 'æœªæ¥ä¾†é›»']
+        activities: ['¼·¥´', '±µÅ¥', '¥¼±µ¨Ó¹q']
     },
     { 
         id: 'message', 
-        name: 'ç°¡è¨Š', 
+        name: 'Â²°T', 
         icon: 'message', 
         color: '#34C759',
         defaultLevel: 'basic',
-        activities: ['ç™¼é€', 'æ¥æ”¶']
+        activities: ['µo°e', '±µ¦¬']
     },
     { 
         id: 'email', 
@@ -103,7 +103,7 @@ const PLATFORM_SETTINGS = [
         icon: 'mail', 
         color: '#FF9500',
         defaultLevel: 'basic',
-        activities: ['ç™¼é€', 'æ¥æ”¶', 'é–±è®€']
+        activities: ['µo°e', '±µ¦¬', '¾\Åª']
     }
 ];
 
@@ -116,11 +116,11 @@ async function renderActivityPrivacySettings() {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.navigate('/activity')
     });
-    backBtn.innerHTML = '<i class='fas fa-chevron-left'></i> è¿”å›';
+    backBtn.innerHTML = "`<i class=`"`fas fa-chevron-left`"`></i> ªğ¦^`";
     header.appendChild(backBtn);
     
     const title = createElement('h1', 'menu-title');
-    title.textContent = 'éš±ç§è¨­å®š';
+    title.textContent = 'Áô¨p³]©w';
     header.appendChild(title);
     container.appendChild(header);
     
@@ -138,8 +138,8 @@ async function renderActivityPrivacySettings() {
     const globalEnabledContent = `
         <div class='flex items-center justify-between'>
             <div>
-                <h2 class='text-lg font-bold mb-1'>æ´»å‹•åŒæ­¥</h2>
-                <p class='text-sm opacity-90'>é–‹å•Ÿå¾Œï¼Œç³»çµ±å°‡è¨˜éŒ„æ‚¨çš„æ•¸ä½æ´»å‹•</p>
+                <h2 class='text-lg font-bold mb-1'>¬¡°Ê¦P¨B</h2>
+                <p class='text-sm opacity-90'>¶}±Ò«á¡A¨t²Î±N°O¿ı±zªº¼Æ¦ì¬¡°Ê</p>
             </div>
             <label class='relative inline-flex items-center cursor-pointer'>
                 <input type='checkbox' id='global-enabled-switch' class='sr-only peer' ${savedSettings.global_enabled ? 'checked' : ''}>
@@ -151,7 +151,7 @@ async function renderActivityPrivacySettings() {
     main.appendChild(globalEnabledSwitch);
     
     const privacyLevelSection = createElement('div', 'mx-4 mb-4');
-    privacyLevelSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'éš±ç§ç­‰ç´š' }));
+    privacyLevelSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'Áô¨pµ¥¯Å' }));
     
     const privacyLevelCard = createElement('div', 'bg-white rounded-xl shadow-sm overflow-hidden');
     PRIVACY_LEVELS.forEach((level, index) => {
@@ -178,7 +178,7 @@ async function renderActivityPrivacySettings() {
         
         if (level.requiresPassword) {
             const badge = createElement('span', 'ml-2 px-2 py-0.5 bg-yellow-100 text-yellow-700 text-xs rounded');
-            badge.textContent = 'éœ€å¯†ç¢¼';
+            badge.textContent = '»İ±K½X';
             levelInfo.appendChild(badge);
         }
         
@@ -200,10 +200,10 @@ async function renderActivityPrivacySettings() {
         levelItem.appendChild(levelHeader);
         
         const examplesDiv = createElement('div', 'mt-2 ml-8 text-xs text-ios-muted');
-        examplesDiv.appendChild(createElement('p', 'font-medium mb-1', { textContent: 'ç¯„ä¾‹ï¼š' }));
+        examplesDiv.appendChild(createElement('p', 'font-medium mb-1', { textContent: '½d¨Ò¡G' }));
         const exampleList = createElement('div', 'space-y-1');
         level.examples.forEach(ex => {
-            exampleList.appendChild(createElement('div', '', { textContent: `â€¢ ${ex}` }));
+            exampleList.appendChild(createElement('div', '', { textContent: `¡E ${ex}` }));
         });
         examplesDiv.appendChild(exampleList);
         levelItem.appendChild(examplesDiv);
@@ -214,14 +214,14 @@ async function renderActivityPrivacySettings() {
     main.appendChild(privacyLevelSection);
     
     const retentionSection = createElement('div', 'mx-4 mb-4');
-    retentionSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'è³‡æ–™ä¿ç•™æœŸé™' }));
+    retentionSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: '¸ê®Æ«O¯d´Á­­' }));
     
     const retentionCard = createElement('div', 'bg-white rounded-xl p-4 shadow-sm');
     const retentionSelect = createElement('select', 'ios-input w-full');
     [7, 14, 30, 60, 90].forEach(days => {
         const option = createElement('option', '', { 
             value: days, 
-            textContent: `${days} å¤©`,
+            textContent: `${days} ¤Ñ`,
             selected: savedSettings.retention_days === days
         });
         retentionSelect.appendChild(option);
@@ -229,14 +229,14 @@ async function renderActivityPrivacySettings() {
     retentionCard.appendChild(retentionSelect);
     
     const retentionHint = createElement('p', 'text-xs text-ios-muted mt-2');
-    retentionHint.textContent = 'è¶…éæœŸé™çš„è¨˜éŒ„å°‡è‡ªå‹•åˆªé™¤';
+    retentionHint.textContent = '¶W¹L´Á­­ªº°O¿ı±N¦Û°Ê§R°£';
     retentionCard.appendChild(retentionHint);
     
     retentionSection.appendChild(retentionCard);
     main.appendChild(retentionSection);
     
     const platformsSection = createElement('div', 'mx-4 mb-4');
-    platformsSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'å¹³å°è¨­å®š' }));
+    platformsSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: '¥­¥x³]©w' }));
     
     const platformsCard = createElement('div', 'bg-white rounded-xl shadow-sm overflow-hidden');
     PLATFORM_SETTINGS.forEach((platform, index) => {
@@ -249,7 +249,7 @@ async function renderActivityPrivacySettings() {
         iconDiv.style.backgroundColor = platform.color;
         
         if (platform.icon === 'discord') {
-            iconDiv.innerHTML = '<i class='fab fa-discord text-lg'></i>';
+            iconDiv.innerHTML = "`<i class=`"`fab fa-discord text-lg`"`></i>`";
         } else {
             iconDiv.appendChild(createIcon(platform.icon, 'text-lg'));
         }
@@ -258,7 +258,7 @@ async function renderActivityPrivacySettings() {
         const platformText = createElement('div');
         platformText.appendChild(createElement('h3', 'font-semibold text-sm', { textContent: platform.name }));
         platformText.appendChild(createElement('p', 'text-xs text-ios-muted', { 
-            textContent: platform.activities.slice(0, 3).join('ã€') 
+            textContent: platform.activities.slice(0, 3).join('¡B') 
         }));
         leftInfo.appendChild(platformText);
         
@@ -279,14 +279,14 @@ async function renderActivityPrivacySettings() {
     main.appendChild(platformsSection);
     
     const aiAccessSection = createElement('div', 'mx-4 mb-4');
-    aiAccessSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'AI å­˜å–æ§åˆ¶' }));
+    aiAccessSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: 'AI ¦s¨ú±±¨î' }));
     
     const aiAccessCard = createElement('div', 'bg-white rounded-xl p-4 shadow-sm');
     const aiAccessContent = `
         <div class='flex items-center justify-between mb-3'>
             <div>
-                <h3 class='font-semibold text-sm'>å…è¨± AI è§’è‰²å­˜å–</h3>
-                <p class='text-xs text-ios-muted'>AI å¯æŸ¥çœ‹æ‚¨çš„æ´»å‹•è¨˜éŒ„ä»¥æä¾›å€‹äººåŒ–å›æ‡‰</p>
+                <h3 class='font-semibold text-sm'>¤¹³\ AI ¨¤¦â¦s¨ú</h3>
+                <p class='text-xs text-ios-muted'>AI ¥i¬d¬İ±zªº¬¡°Ê°O¿ı¥H´£¨Ñ­Ó¤H¤Æ¦^À³</p>
             </div>
             <label class='relative inline-flex items-center cursor-pointer'>
                 <input type='checkbox' id='ai-access-switch' class='sr-only peer' ${savedSettings.ai_access_enabled ? 'checked' : ''}>
@@ -294,11 +294,11 @@ async function renderActivityPrivacySettings() {
             </label>
         </div>
         <div class='text-xs text-ios-muted p-3 bg-gray-50 rounded-lg'>
-            <p class='font-medium mb-1'>AI åƒ…å¯å­˜å–ï¼š</p>
+            <p class='font-medium mb-1'>AI ¶È¥i¦s¨ú¡G</p>
             <ul class='space-y-1'>
-                <li>â€¢ æ‚¨æˆæ¬Šçš„å¹³å°æ´»å‹•</li>
-                <li>â€¢ ç¬¦åˆéš±ç§ç­‰ç´šçš„è³‡è¨Š</li>
-                <li>â€¢ ä¿ç•™æœŸé™å…§çš„è¨˜éŒ„</li>
+                <li>¡E ±z±ÂÅvªº¥­¥x¬¡°Ê</li>
+                <li>¡E ²Å¦XÁô¨pµ¥¯Åªº¸ê°T</li>
+                <li>¡E «O¯d´Á­­¤ºªº°O¿ı</li>
             </ul>
         </div>
     `;
@@ -310,18 +310,18 @@ async function renderActivityPrivacySettings() {
     const deleteCard = createElement('div', 'bg-red-50 rounded-xl p-4 border border-red-200');
     
     const deleteBtn = createElement('button', 'w-full text-red-600 font-semibold text-sm');
-    deleteBtn.textContent = 'æ¸…é™¤æ‰€æœ‰æ´»å‹•è¨˜éŒ„';
+    deleteBtn.textContent = '²M°£©Ò¦³¬¡°Ê°O¿ı';
     deleteBtn.onclick = async () => {
-        if (confirm('ç¢ºå®šè¦æ¸…é™¤æ‰€æœ‰æ´»å‹•è¨˜éŒ„ï¼Ÿæ­¤æ“ä½œç„¡æ³•å¾©åŸã€‚')) {
+        if (confirm('½T©w­n²M°£©Ò¦³¬¡°Ê°O¿ı¡H¦¹¾Ş§@µLªk´_­ì¡C')) {
             const { ActivityDB } = await import('../../db.js');
             await ActivityDB.clear();
-            createToast('å·²æ¸…é™¤æ‰€æœ‰æ´»å‹•è¨˜éŒ„', 'success');
+            createToast('¤w²M°£©Ò¦³¬¡°Ê°O¿ı', 'success');
         }
     };
     deleteCard.appendChild(deleteBtn);
     
     const deleteHint = createElement('p', 'text-xs text-red-500 mt-2 text-center');
-    deleteHint.textContent = 'æ­¤æ“ä½œå°‡ç«‹å³åˆªé™¤æœ¬åœ°æ‰€æœ‰è¨˜éŒ„';
+    deleteHint.textContent = '¦¹¾Ş§@±N¥ß§Y§R°£¥»¦a©Ò¦³°O¿ı';
     deleteCard.appendChild(deleteHint);
     
     deleteSection.appendChild(deleteCard);
@@ -329,7 +329,7 @@ async function renderActivityPrivacySettings() {
     
     const saveBtn = createElement('button', 'ios-btn ios-btn-primary w-full mx-4 mb-8');
     saveBtn.style.maxWidth = 'calc(100% - 32px)';
-    saveBtn.textContent = 'ä¿å­˜è¨­å®š';
+    saveBtn.textContent = '«O¦s³]©w';
     saveBtn.onclick = async () => {
         const globalEnabled = document.getElementById('global-enabled-switch').checked;
         const selectedLevel = document.querySelector('input[name='privacy-level']:checked')?.value || 'basic';
@@ -353,7 +353,7 @@ async function renderActivityPrivacySettings() {
         };
         
         await SettingsDB.set('activity_privacy_settings', settings);
-        createToast('è¨­å®šå·²ä¿å­˜', 'success');
+        createToast('³]©w¤w«O¦s', 'success');
         Router.navigate('/activity');
     };
     main.appendChild(saveBtn);
@@ -365,7 +365,7 @@ async function renderActivityPrivacySettings() {
 
 export default {
     id: 'activity-privacy-settings',
-    name: 'æ´»å‹•éš±ç§è¨­å®š',
+    name: '¬¡°ÊÁô¨p³]©w',
     routes: [
         { path: '/activity/privacy', render: renderActivityPrivacySettings }
     ]

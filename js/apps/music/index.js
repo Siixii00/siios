@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
@@ -123,7 +123,7 @@ function drawPianoRoll(canvas, melody) {
         ctx.fillStyle = '#4a5568';
         ctx.font = '12px sans-serif';
         ctx.textAlign = 'center';
-        ctx.fillText('å°šæœªç”Ÿæˆæ—‹å¾‹', width / 2, height / 2);
+        ctx.fillText('©|¥¼¥Í¦¨±Û«ß', width / 2, height / 2);
         return;
     }
     const pitches = melody.filter(n => n.pitch).map(n => n.pitch);
@@ -162,9 +162,9 @@ async function savePlaylist() {
 async function loadCharacters() {
     const chars = await CharactersDB.getAll();
     return chars.length > 0 ? chars : [
-        { id: 'default-sweet', name: 'æš–å¿ƒç™‚ç™’å‹', personality: 'æº«æŸ”ã€æœƒå®‰æ’«æƒ…ç·’' },
-        { id: 'default-sharp', name: 'æ¯’èˆŒæ¨‚è©•å‹', personality: 'ç›´æ¥ã€æŒ‘å‰”' },
-        { id: 'default-poetic', name: 'è©©æ„æ„Ÿæ€§å‹', personality: 'æ–‡è—ã€æ„è±¡åŒ–' }
+        { id: 'default-sweet', name: '·x¤ßÀøÂ¡«¬', personality: '·Å¬X¡B·|¦w¼¾±¡ºü' },
+        { id: 'default-sharp', name: '¬r¦Ş¼Öµû«¬', personality: 'ª½±µ¡B¬D­ç' },
+        { id: 'default-poetic', name: '¸Ö·N·P©Ê«¬', personality: '¤åÃÀ¡B·N¶H¤Æ' }
     ];
 }
 
@@ -186,33 +186,33 @@ async function renderMusic(params) {
 
     container.innerHTML = `
         <header class='ios-header music-header'>
-            <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> è¿”å›</button>
-            <h1 class='menu-title'>éŸ³æ¨‚</h1>
+            <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
+            <h1 class='menu-title'>­µ¼Ö</h1>
             <div class='header-actions'>
-                <button class='header-action' id='refresh-btn' title='é‡æ–°æ•´ç†'><i class='fas fa-sync-alt'></i></button>
+                <button class='header-action' id='refresh-btn' title='­«·s¾ã²z'><i class='fas fa-sync-alt'></i></button>
             </div>
         </header>
 
         <div class='music-main'>
             <div class='card import-card'>
-                <h2>åŒ¯å…¥æ­Œå–®</h2>
+                <h2>¶×¤Jºq³æ</h2>
                 <div class='import-row'>
                     <select id='platform-select'>
                         <option value='spotify' ${activePlatform === 'spotify' ? 'selected' : ''}>Spotify</option>
                         <option value='apple' ${activePlatform === 'apple' ? 'selected' : ''}>Apple Music</option>
                     </select>
-                    <input type='text' id='playlist-url' placeholder='è²¼ä¸Šæ­Œå–®é€£çµï¼ˆé¸å¡«ï¼‰'>
-                    <button id='import-btn'>åŒ¯å…¥</button>
+                    <input type='text' id='playlist-url' placeholder='¶K¤Wºq³æ³sµ²¡]¿ï¶ñ¡^'>
+                    <button id='import-btn'>¶×¤J</button>
                 </div>
             </div>
 
             <div class='card player-card'>
-                <h2>æ­£åœ¨æ’­æ”¾</h2>
+                <h2>¥¿¦b¼½©ñ</h2>
                 <div class='now-playing'>
                     <div class='cover' id='cover-art'></div>
                     <div>
-                        <h3 id='track-title'>å°šæœªæ’­æ”¾</h3>
-                        <p id='track-meta'>è«‹å…ˆåŒ¯å…¥æ­Œå–®</p>
+                        <h3 id='track-title'>©|¥¼¼½©ñ</h3>
+                        <p id='track-meta'>½Ğ¥ı¶×¤Jºq³æ</p>
                     </div>
                 </div>
                 <div class='danmaku-layer' id='danmaku-layer'></div>
@@ -230,51 +230,51 @@ async function renderMusic(params) {
 
             <div class='card queue-card'>
                 <div class='queue-head'>
-                    <h2>æ’­æ”¾ä½‡åˆ—</h2>
-                    <span id='queue-count'>${playlist.length} é¦–</span>
+                    <h2>¼½©ñ¦î¦C</h2>
+                    <span id='queue-count'>${playlist.length} ­º</span>
                 </div>
                 <ul class='playlist' id='playlist-list'></ul>
             </div>
 
             <div class='card companion-card'>
-                <h2>è§’è‰²é™ªä¼´</h2>
+                <h2>¨¤¦â³­¦ñ</h2>
                 <div class='companion-grid'>
-                    <label>é¸æ“‡è§’è‰²
+                    <label>¿ï¾Ü¨¤¦â
                         <select id='char-select'>
-                            <option value=''>-- é¸æ“‡è§’è‰² --</option>
+                            <option value=''>-- ¿ï¾Ü¨¤¦â --</option>
                             ${characters.map(c => `<option value='${c.id}'>${c.name}</option>`).join('')}
                         </select>
                     </label>
-                    <label>ä½¿ç”¨è€…åç¨±
-                        <input type='text' id='user-name' placeholder='ä½ çš„åå­—'>
+                    <label>¨Ï¥ÎªÌ¦WºÙ
+                        <input type='text' id='user-name' placeholder='§Aªº¦W¦r'>
                     </label>
                 </div>
-                <p class='char-desc' id='char-desc'>é¸æ“‡è§’è‰²é–‹å§‹ä¸€èµ·è½æ­Œ</p>
+                <p class='char-desc' id='char-desc'>¿ï¾Ü¨¤¦â¶}©l¤@°_Å¥ºq</p>
                 <p class='listen-status' id='listen-status'></p>
             </div>
 
             <div class='card ai-lab-card'>
                 <div class='ai-lab-header'>
-                    <h2>AI æ—‹å¾‹ç”Ÿæˆ</h2>
+                    <h2>AI ±Û«ß¥Í¦¨</h2>
                     <span class='ai-badge'>Magenta</span>
                 </div>
                 <div class='ai-tools-grid'>
                     <div class='ai-tool'>
                         <div class='ai-tool-icon'><i class='fas fa-music'></i></div>
-                        <h3>ç”Ÿæˆæ—‹å¾‹</h3>
+                        <h3>¥Í¦¨±Û«ß</h3>
                         <div class='ai-tool-controls'>
-                            <label>éŸ³éš <select id='gen-scale'><option value='major'>å¤§èª¿</option><option value='minor'>å°èª¿</option><option value='pentatonic'>äº”è²</option></select></label>
-                            <label>éš¨æ©Ÿæ€§ <input type='range' id='gen-temp' min='0.1' max='2' step='0.1' value='1'></label>
+                            <label>­µ¶¥ <select id='gen-scale'><option value='major'>¤j½Õ</option><option value='minor'>¤p½Õ</option><option value='pentatonic'>¤­Án</option></select></label>
+                            <label>ÀH¾÷©Ê <input type='range' id='gen-temp' min='0.1' max='2' step='0.1' value='1'></label>
                         </div>
-                        <button class='ai-btn' id='generate-btn'><i class='fas fa-wand-magic-sparkles'></i> ç”Ÿæˆ</button>
+                        <button class='ai-btn' id='generate-btn'><i class='fas fa-wand-magic-sparkles'></i> ¥Í¦¨</button>
                     </div>
                 </div>
                 <div class='ai-piano-roll'>
                     <div class='piano-roll-header'>
-                        <span>é‹¼ç´å·è»¸</span>
+                        <span>¿ûµ^¨÷¶b</span>
                         <div class='piano-roll-actions'>
                             <button class='ai-btn-small' id='play-ai-btn'><i class='fas fa-play'></i></button>
-                            <button class='ai-btn-small' id='add-to-playlist-btn'><i class='fas fa-plus'></i> åŠ å…¥æ¸…å–®</button>
+                            <button class='ai-btn-small' id='add-to-playlist-btn'><i class='fas fa-plus'></i> ¥[¤J²M³æ</button>
                         </div>
                     </div>
                     <canvas id='piano-roll-canvas'></canvas>
@@ -300,25 +300,25 @@ async function renderMusic(params) {
 
     function updateTrackUI(track) {
         if (!track) {
-            trackTitle.textContent = 'å°šæœªæ’­æ”¾';
-            trackMeta.textContent = 'è«‹å…ˆåŒ¯å…¥æ­Œå–®';
+            trackTitle.textContent = '©|¥¼¼½©ñ';
+            trackMeta.textContent = '½Ğ¥ı¶×¤Jºq³æ';
             coverArt.style.background = 'linear-gradient(135deg,#6f83ff,#52e0c8)';
             return;
         }
         trackTitle.textContent = track.title;
-        trackMeta.textContent = `${track.artist} Â· ${track.duration}`;
+        trackMeta.textContent = `${track.artist} ¡P ${track.duration}`;
         coverArt.style.background = track.cover;
     }
 
     function renderPlaylistUI() {
-        queueCount.textContent = `${playlist.length} é¦–`;
+        queueCount.textContent = `${playlist.length} ­º`;
         if (playlist.length === 0) {
-            playlistList.innerHTML = '<li class='playlist-item'><div><div class='title'>å°šæœªåŒ¯å…¥æ­Œå–®</div></div></li>';
+            playlistList.innerHTML = "`<li class=`"`playlist-item`"`><div><div class=`"title'>©|¥¼¶×¤Jºq³æ</div></div></li>';
             return;
         }
         playlistList.innerHTML = playlist.map((track, index) => `
             <li><button class='playlist-item ${index === currentIndex ? 'active' : ''}' data-index='${index}' type='button'>
-                <div><div class='title'>${track.title}</div><div class='meta'>${track.artist} Â· ${track.duration}</div></div>
+                <div><div class='title'>${track.title}</div><div class='meta'>${track.artist} ¡P ${track.duration}</div></div>
                 <i class='fas ${index === currentIndex ? 'fa-volume-high' : 'fa-play'}'></i>
             </button></li>
         `).join('');
@@ -332,11 +332,11 @@ async function renderMusic(params) {
         stopDanmaku();
         const charSelect = container.querySelector('#char-select');
         const charName = charSelect?.options[charSelect.selectedIndex]?.text || 'AI';
-        pushDanmaku(danmakuLayer, `${charName}ï¼šé€™é¦–æ­Œä¸éŒ¯å‘¢ï¼`);
+        pushDanmaku(danmakuLayer, `${charName}¡G³o­ººq¤£¿ù©O¡I`);
         danmakuTimer = setInterval(() => {
             if (!isPlaying) return;
-            const comments = ['æ—‹å¾‹å¾ˆæ£’', 'ç¯€å¥æ„Ÿå¾ˆå¥½', 'å–œæ­¡é€™ç¨®é¢¨æ ¼', 'è®“äººæ”¾é¬†'];
-            pushDanmaku(danmakuLayer, `${charName}ï¼š${comments[Math.floor(Math.random() * comments.length)]}`);
+            const comments = ['±Û«ß«Ü´Î', '¸`«µ·P«Ü¦n', '³ßÅw³oºØ­·®æ', 'Åı¤H©ñÃP'];
+            pushDanmaku(danmakuLayer, `${charName}¡G${comments[Math.floor(Math.random() * comments.length)]}`);
         }, 8000);
     }
 
@@ -352,20 +352,20 @@ async function renderMusic(params) {
             try {
                 await audio.play();
                 isPlaying = true;
-                playBtn.innerHTML = '<i class='fas fa-pause'></i>';
+                playBtn.innerHTML = "`<i class=`"`fas fa-pause`"`></i>`";
                 startDanmaku();
-            } catch { pushDanmaku(danmakuLayer, 'ç³»çµ±ï¼šè«‹æ‰‹å‹•é»æ“Šæ’­æ”¾'); }
+            } catch { pushDanmaku(danmakuLayer, '¨t²Î¡G½Ğ¤â°ÊÂIÀ»¼½©ñ'); }
         }
     }
 
     function togglePlay() {
         if (currentIndex < 0 && playlist.length > 0) { loadTrack(0, true); return; }
         if (audio.paused) {
-            audio.play().then(() => { isPlaying = true; playBtn.innerHTML = '<i class='fas fa-pause'></i>'; startDanmaku(); }).catch(() => {});
+            audio.play().then(() => { isPlaying = true; playBtn.innerHTML = "`<i class=`"`fas fa-pause`"`></i>`"; startDanmaku(); }).catch(() => {});
         } else {
             audio.pause();
             isPlaying = false;
-            playBtn.innerHTML = '<i class='fas fa-play'></i>';
+            playBtn.innerHTML = "`<i class=`"`fas fa-play`"`></i>`";
             stopDanmaku();
         }
     }
@@ -392,11 +392,11 @@ async function renderMusic(params) {
         progressEl.value = 0;
         currentTimeEl.textContent = '0:00';
         totalTimeEl.textContent = '0:00';
-        playBtn.innerHTML = '<i class='fas fa-play'></i>';
+        playBtn.innerHTML = "`<i class=`"`fas fa-play`"`></i>`";
         renderPlaylistUI();
         updateTrackUI(null);
         stopDanmaku();
-        pushDanmaku(danmakuLayer, `ç³»çµ±ï¼šå·²å¾ ${platform === 'spotify' ? 'Spotify' : 'Apple Music'} åŒ¯å…¥ ${playlist.length} é¦–`);
+        pushDanmaku(danmakuLayer, `¨t²Î¡G¤w±q ${platform === 'spotify' ? 'Spotify' : 'Apple Music'} ¶×¤J ${playlist.length} ­º`);
         if (playlist.length > 0) loadTrack(0, false);
     }
 
@@ -431,21 +431,21 @@ async function renderMusic(params) {
         const temp = parseFloat(container.querySelector('#gen-temp').value) || 1;
         aiMelody = generateMelody(4, scale, temp);
         drawPianoRoll(canvas, aiMelody);
-        currentPublishTrack = { title: `AI ç”Ÿæˆ #${playlist.length + 1}`, artist: 'Magenta éˆæ„Ÿ', duration: `${Math.ceil(aiMelody.length / 8)}:00`, cover: 'linear-gradient(135deg,#6366f1,#8b5cf6)', aiMelody };
-        pushDanmaku(danmakuLayer, `AIï¼šå·²ç”Ÿæˆ 4 å°ç¯€ ${scale} æ—‹å¾‹`);
+        currentPublishTrack = { title: `AI ¥Í¦¨ #${playlist.length + 1}`, artist: 'Magenta ÆF·P', duration: `${Math.ceil(aiMelody.length / 8)}:00`, cover: 'linear-gradient(135deg,#6366f1,#8b5cf6)', aiMelody };
+        pushDanmaku(danmakuLayer, `AI¡G¤w¥Í¦¨ 4 ¤p¸` ${scale} ±Û«ß`);
     };
 
     container.querySelector('#play-ai-btn').onclick = async () => {
-        if (aiMelody.length === 0) { pushDanmaku(danmakuLayer, 'AIï¼šå°šæœªç”Ÿæˆæ—‹å¾‹'); return; }
+        if (aiMelody.length === 0) { pushDanmaku(danmakuLayer, 'AI¡G©|¥¼¥Í¦¨±Û«ß'); return; }
         await playMelody(aiMelody);
     };
 
     container.querySelector('#add-to-playlist-btn').onclick = () => {
-        if (aiMelody.length === 0) { pushDanmaku(danmakuLayer, 'AIï¼šå°šæœªç”Ÿæˆæ—‹å¾‹'); return; }
-        const track = { title: `AI ç”Ÿæˆ #${playlist.length + 1}`, artist: 'Magenta éˆæ„Ÿ', duration: `${Math.ceil(aiMelody.length / 8)}:00`, mood: 'generated', cover: 'linear-gradient(135deg,#6366f1,#8b5cf6)', url: null, aiMelody };
+        if (aiMelody.length === 0) { pushDanmaku(danmakuLayer, 'AI¡G©|¥¼¥Í¦¨±Û«ß'); return; }
+        const track = { title: `AI ¥Í¦¨ #${playlist.length + 1}`, artist: 'Magenta ÆF·P', duration: `${Math.ceil(aiMelody.length / 8)}:00`, mood: 'generated', cover: 'linear-gradient(135deg,#6366f1,#8b5cf6)', url: null, aiMelody };
         playlist.push(track);
         renderPlaylistUI();
-        pushDanmaku(danmakuLayer, `ç³»çµ±ï¼šå·²å°‡ AI æ—‹å¾‹åŠ å…¥æ¸…å–®`);
+        pushDanmaku(danmakuLayer, `¨t²Î¡G¤w±N AI ±Û«ß¥[¤J²M³æ`);
     };
 
     renderPlaylistUI();
@@ -456,9 +456,9 @@ async function renderMusic(params) {
 
 export default {
     id: 'music',
-    name: 'éŸ³æ¨‚',
+    name: '­µ¼Ö',
     icon: 'music_note',
     routes: [{ path: '/music', render: renderMusic }],
-    navItem: { label: 'éŸ³æ¨‚', icon: 'music_note', path: '/music', showInNav: true, order: 18 },
+    navItem: { label: '­µ¼Ö', icon: 'music_note', path: '/music', showInNav: true, order: 18 },
     stylesPath: 'js/apps/music/style.css'
 };

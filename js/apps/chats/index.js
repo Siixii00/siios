@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBottomNav, createKakaoChatCell, createEmptyState, createToast, createKakaoBottomSheet } from '../../components.js';
 import { ChatsDB, CharactersDB } from '../../db.js';
 import { CHATS_TABS } from './chats-nav.js';
@@ -14,7 +14,7 @@ async function renderChatsList() {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.navigate('/home')
     });
-    backBtn.innerHTML = '<i class='fas fa-chevron-left'></i> è¿”å›';
+    backBtn.innerHTML = "`<i class=`"`fas fa-chevron-left`"`></i> ªğ¦^`";
     header.appendChild(backBtn);
     
     const title = createElement('h1', 'menu-title');
@@ -24,20 +24,20 @@ async function renderChatsList() {
     const actions = createElement('div', 'header-actions');
     
     const addBtn = createElement('button', 'header-action', {
-        title: 'æ–°å¢å°è©±'
+        title: '·s¼W¹ï¸Ü'
     });
-    addBtn.innerHTML = '<i class='fas fa-plus'></i>';
+    addBtn.innerHTML = "`<i class=`"`fas fa-plus`"`></i>`";
     addBtn.onclick = async () => {
         const newChat = await ChatsDB.create({ character_name: 'AI' });
-        createToast('å·²å»ºç«‹æ–°å°è©±');
+        createToast('¤w«Ø¥ß·s¹ï¸Ü');
         Router.navigate('/chat/' + newChat.id);
     };
     actions.appendChild(addBtn);
     
     const groupBtn = createElement('button', 'header-action', {
-        title: 'æ–°å¢ç¾¤çµ„'
+        title: '·s¼W¸s²Õ'
     });
-    groupBtn.innerHTML = '<i class='fas fa-users'></i>';
+    groupBtn.innerHTML = "`<i class=`"`fas fa-users`"`></i>`";
     groupBtn.onclick = () => openGroupSheet();
     actions.appendChild(groupBtn);
     
@@ -51,10 +51,10 @@ async function renderChatsList() {
     if (chats.length === 0) {
         const emptyState = createEmptyState(
             'chat_bubble',
-            'æ²’æœ‰å°è©±',
-            'é»æ“Šå³ä¸‹è§’æŒ‰éˆ•é–‹å§‹æ–°å°è©±',
+            '¨S¦³¹ï¸Ü',
+            'ÂIÀ»¥k¤U¨¤«ö¶s¶}©l·s¹ï¸Ü',
             {
-                label: 'é–‹å§‹å°è©±',
+                label: '¶}©l¹ï¸Ü',
                 onClick: async () => {
                     const newChat = await ChatsDB.create({ character_name: 'AI' });
                     Router.navigate('/chat/' + newChat.id);
@@ -91,7 +91,7 @@ async function openGroupSheet() {
     const form = createElement('div', 'p-4 flex flex-col gap-3');
     
     const hint = createElement('div', 'text-sm text-gray-500 mb-2');
-    hint.textContent = 'é¸æ“‡ 2-4 å€‹è§’è‰²åŠ å…¥ç¾¤çµ„';
+    hint.textContent = '¿ï¾Ü 2-4 ­Ó¨¤¦â¥[¤J¸s²Õ';
     form.appendChild(hint);
     
     const list = createElement('div', 'flex flex-col gap-2');
@@ -122,7 +122,7 @@ async function openGroupSheet() {
                 checkbox.innerHTML = '';
             } else {
                 if (selectedGroupMemberIds.length >= 4) {
-                    createToast('æœ€å¤šé¸æ“‡ 4 å€‹è§’è‰²');
+                    createToast('³Ì¦h¿ï¾Ü 4 ­Ó¨¤¦â');
                     return;
                 }
                 selectedGroupMemberIds.push(char.id);
@@ -138,10 +138,10 @@ async function openGroupSheet() {
     form.appendChild(list);
     
     const submitBtn = createElement('button', 'kakao-send-btn w-full', {
-        textContent: 'å»ºç«‹ç¾¤çµ„',
+        textContent: '«Ø¥ß¸s²Õ',
         onClick: async () => {
             if (selectedGroupMemberIds.length < 2) {
-                createToast('è«‹è‡³å°‘é¸æ“‡ 2 å€‹è§’è‰²');
+                createToast('½Ğ¦Ü¤Ö¿ï¾Ü 2 ­Ó¨¤¦â');
                 return;
             }
             const primaryCharId = selectedGroupMemberIds[0];
@@ -150,11 +150,11 @@ async function openGroupSheet() {
                 is_group: true,
                 member_ids: [...selectedGroupMemberIds],
                 character_id: primaryCharId,
-                character_name: 'ç¾¤çµ„èŠå¤©',
+                character_name: '¸s²Õ²á¤Ñ',
                 character_avatar: '',
                 bound_user_id: primaryChar?.bound_user_id || null
             });
-            createToast('å·²å»ºç«‹ç¾¤çµ„');
+            createToast('¤w«Ø¥ß¸s²Õ');
             sheet.close();
             Router.navigate('/chat/' + groupChat.id);
         }
@@ -164,7 +164,7 @@ async function openGroupSheet() {
     form.appendChild(submitBtn);
     
     const sheet = createKakaoBottomSheet([], {
-        title: 'å»ºç«‹ç¾¤çµ„èŠå¤©',
+        title: '«Ø¥ß¸s²Õ²á¤Ñ',
         customContent: form
     });
     
@@ -173,7 +173,7 @@ async function openGroupSheet() {
 
 export default {
     id: 'chats',
-    name: 'èŠå¤©',
+    name: '²á¤Ñ',
     icon: 'chat_bubble',
     routes: [
         { path: '/chats', render: renderChatsList }

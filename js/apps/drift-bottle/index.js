@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { CharactersDB, SettingsDB } from '../../db.js';
 import APIClient from '../../api.js';
@@ -23,14 +23,14 @@ async function generateDivinationReading(cardName, isUpright, characterId) {
   
   if (!settings.api_url || !settings.api_key) {
     return {
-      meaning: isUpright ? 'èƒ½é‡é †æš¢ï¼Œå»ºè­°é †å‹¢è€Œç‚º' : 'èƒ½é‡å—é˜»ï¼Œå»ºè­°åæ€å…§åœ¨éšœç¤™',
+      meaning: isUpright ? '¯à¶q¶¶ºZ¡A«ØÄ³¶¶¶Õ¦Ó¬°' : '¯à¶q¨üªı¡A«ØÄ³¤Ï«ä¤º¦b»ÙÃª',
       advice: isUpright 
-        ? 'æ­¤ç‰Œæ­£ä½ï¼Œèƒ½é‡é †æš¢ï¼Œå»ºè­°é †å‹¢è€Œç‚ºã€‚'
-        : 'æ­¤ç‰Œé€†ä½ï¼Œèƒ½é‡å—é˜»ï¼Œå»ºè­°åæ€å…§åœ¨éšœç¤™ã€‚'
+        ? '¦¹µP¥¿¦ì¡A¯à¶q¶¶ºZ¡A«ØÄ³¶¶¶Õ¦Ó¬°¡C'
+        : '¦¹µP°f¦ì¡A¯à¶q¨üªı¡A«ØÄ³¤Ï«ä¤º¦b»ÙÃª¡C'
     };
   }
   
-  const position = isUpright ? 'æ­£ä½' : 'é€†ä½';
+  const position = isUpright ? '¥¿¦ì' : '°f¦ì';
   
   const context = await buildAppContext({
     characterId: characterId,
@@ -38,18 +38,18 @@ async function generateDivinationReading(cardName, isUpright, characterId) {
   });
   
   const tarotSystemPrompt = `
-ä½ æ˜¯ä¸€ä½å°ˆæ¥­çš„å¡”ç¾…ç‰Œå åœå¸«ã€‚è«‹æ ¹æ“šæŠ½åˆ°çš„ç‰Œã€ç‰Œä½ï¼Œä»¥åŠè§’è‰²çš„æ€§æ ¼ç‰¹è³ªï¼Œæä¾›å€‹äººåŒ–çš„å åœè§£è®€ã€‚
-è«‹ç”¨æº«å’Œã€ç¥ç§˜ä¸”å¯Œæœ‰å•Ÿç™¼æ€§çš„èªæ°£å›æ‡‰ã€‚
-å›è¦†æ ¼å¼å¿…é ˆæ˜¯JSONï¼š
-{'meaning': 'ç‰Œç¾©è§£è®€ï¼ˆä¸€å¥è©±ï¼‰', 'advice': 'å…·é«”å»ºè­°ï¼ˆ1-2å¥è©±ï¼‰'}`;
+§A¬O¤@¦ì±M·~ªº¶ğÃ¹µP¥e¤R®v¡C½Ğ®Ú¾Ú©â¨ìªºµP¡BµP¦ì¡A¥H¤Î¨¤¦âªº©Ê®æ¯S½è¡A´£¨Ñ­Ó¤H¤Æªº¥e¤R¸ÑÅª¡C
+½Ğ¥Î·Å©M¡B¯«¯µ¥B´I¦³±Òµo©Êªº»y®ğ¦^À³¡C
+¦^ÂĞ®æ¦¡¥²¶·¬OJSON¡G
+{'meaning': 'µP¸q¸ÑÅª¡]¤@¥y¸Ü¡^', 'advice': '¨ãÅé«ØÄ³¡]1-2¥y¸Ü¡^'}`;
   
   const fullSystemPrompt = context.systemPrompt + tarotSystemPrompt;
   
-  const characterName = context.character?.name || 'ç¥ç§˜äººç‰©';
+  const characterName = context.character?.name || '¯«¯µ¤Hª«';
   
-  const userPrompt = `æŠ½åˆ°äº†ã€Œ${cardName}ã€ç‰Œï¼Œ${position}ã€‚
-è§’è‰²åç¨±ï¼š${characterName}
-è«‹ç‚ºæ­¤è§’è‰²æä¾›å€‹äººåŒ–çš„å åœè§£è®€ã€‚`;
+  const userPrompt = `©â¨ì¤F¡u${cardName}¡vµP¡A${position}¡C
+¨¤¦â¦WºÙ¡G${characterName}
+½Ğ¬°¦¹¨¤¦â´£¨Ñ­Ó¤H¤Æªº¥e¤R¸ÑÅª¡C`;
   
   try {
     const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
@@ -70,7 +70,7 @@ async function generateDivinationReading(cardName, isUpright, characterId) {
     });
     
     if (!response.ok) {
-      throw new Error('APIè«‹æ±‚å¤±æ•—');
+      throw new Error('API½Ğ¨D¥¢±Ñ');
     }
     
     const data = await response.json();
@@ -79,33 +79,33 @@ async function generateDivinationReading(cardName, isUpright, characterId) {
     if (content) {
       const parsed = JSON.parse(content);
       return {
-        meaning: parsed.meaning || (isUpright ? 'èƒ½é‡é †æš¢' : 'èƒ½é‡å—é˜»'),
-        advice: parsed.advice || (isUpright ? 'é †å‹¢è€Œç‚ºã€‚' : 'åæ€å…§åœ¨éšœç¤™ã€‚')
+        meaning: parsed.meaning || (isUpright ? '¯à¶q¶¶ºZ' : '¯à¶q¨üªı'),
+        advice: parsed.advice || (isUpright ? '¶¶¶Õ¦Ó¬°¡C' : '¤Ï«ä¤º¦b»ÙÃª¡C')
       };
     }
   } catch (error) {
-    console.error('ç”Ÿæˆå åœè§£è®€å¤±æ•—:', error);
+    console.error('¥Í¦¨¥e¤R¸ÑÅª¥¢±Ñ:', error);
     if (window.showError) {
       window.showError({
-        title: 'å åœè§£è®€å¤±æ•—',
+        title: '¥e¤R¸ÑÅª¥¢±Ñ',
         message: error.message,
-        details: 'ç”Ÿæˆå¡”ç¾…ç‰Œè§£è®€æ™‚ç™¼ç”ŸéŒ¯èª¤'
+        details: '¥Í¦¨¶ğÃ¹µP¸ÑÅª®Éµo¥Í¿ù»~'
       });
     }
   }
   
   return {
-    meaning: isUpright ? 'èƒ½é‡é †æš¢ï¼Œå»ºè­°é †å‹¢è€Œç‚º' : 'èƒ½é‡å—é˜»ï¼Œå»ºè­°åæ€å…§åœ¨éšœç¤™',
+    meaning: isUpright ? '¯à¶q¶¶ºZ¡A«ØÄ³¶¶¶Õ¦Ó¬°' : '¯à¶q¨üªı¡A«ØÄ³¤Ï«ä¤º¦b»ÙÃª',
     advice: isUpright 
-      ? 'æ­¤ç‰Œæ­£ä½ï¼Œèƒ½é‡é †æš¢ï¼Œå»ºè­°é †å‹¢è€Œç‚ºã€‚'
-      : 'æ­¤ç‰Œé€†ä½ï¼Œèƒ½é‡å—é˜»ï¼Œå»ºè­°åæ€å…§åœ¨éšœç¤™ã€‚'
+      ? '¦¹µP¥¿¦ì¡A¯à¶q¶¶ºZ¡A«ØÄ³¶¶¶Õ¦Ó¬°¡C'
+      : '¦¹µP°f¦ì¡A¯à¶q¨üªı¡A«ØÄ³¤Ï«ä¤º¦b»ÙÃª¡C'
   };
 }
 
 const TAROT_CARD_NAMES = [
-  'æ„šè€…', 'é­”è¡“å¸«', 'å¥³ç¥­å¸', 'çš‡å', 'çš‡å¸', 'æ•™çš‡', 'æˆ€äºº', 'æˆ°è»Š',
-  'åŠ›é‡', 'éš±è€…', 'å‘½é‹ä¹‹è¼ª', 'æ­£ç¾©', 'å€’åŠäºº', 'æ­»ç¥', 'ç¯€åˆ¶', 'æƒ¡é­”',
-  'é«˜å¡”', 'æ˜Ÿæ˜Ÿ', 'æœˆäº®', 'å¤ªé™½', 'å¯©åˆ¤', 'ä¸–ç•Œ'
+  '·MªÌ', 'Å]³N®v', '¤k²½¥q', '¬Ó¦Z', '¬Ó«Ò', '±Ğ¬Ó', 'ÅÊ¤H', '¾Ô¨®',
+  '¤O¶q', 'ÁôªÌ', '©R¹B¤§½ü', '¥¿¸q', '­Ë¦Q¤H', '¦º¯«', '¸`¨î', '´cÅ]',
+  '°ª¶ğ', '¬P¬P', '¤ë«G', '¤Ó¶§', '¼f§P', '¥@¬É'
 ];
 
 async function drawCard(characterId) {
@@ -132,14 +132,14 @@ function renderCard(container, card) {
   display.innerHTML = card ? `
     <div class='tarot-card ${card.upright ? 'upright' : 'reversed'}'>
       <div class='card-name'>${card.name}</div>
-      <div class='card-position'>${card.upright ? 'æ­£ä½' : 'é€†ä½'}</div>
+      <div class='card-position'>${card.upright ? '¥¿¦ì' : '°f¦ì'}</div>
       <div class='card-meaning'>${card.meaning}</div>
       <div class='card-advice'>${card.advice}</div>
     </div>
   ` : `
     <div class='card-placeholder'>
       <i class='fas fa-water'></i>
-      <p>é»æ“Šä¸‹æ–¹æŒ‰éˆ•æ’¿èµ·æ¼‚æµç“¶</p>
+      <p>ÂIÀ»¤U¤è«ö¶s¾ß°_º}¬y²~</p>
     </div>
   `;
 }
@@ -147,9 +147,9 @@ function renderCard(container, card) {
 function renderCharacterSelector(characters) {
   return `
     <div class='character-selector'>
-      <label class='selector-label'>é¸æ“‡è§’è‰²</label>
+      <label class='selector-label'>¿ï¾Ü¨¤¦â</label>
       <select id='character-select' class='character-select'>
-        <option value=''>-- ä¸æŒ‡å®šè§’è‰² --</option>
+        <option value=''>-- ¤£«ü©w¨¤¦â --</option>
         ${characters.map(char => `
           <option value='${char.id}' ${selectedCharacterId === char.id ? 'selected' : ''}>${char.name}</option>
         `).join('')}
@@ -173,9 +173,9 @@ async function renderDriftBottle(params) {
   container.innerHTML = `
     <header class='ios-header'>
       <button class='ios-back-btn'>
-        <i class='fas fa-chevron-left'></i> è¿”å›
+        <i class='fas fa-chevron-left'></i> ªğ¦^
       </button>
-      <h1 class='menu-title'>æ¼‚æµç“¶</h1>
+      <h1 class='menu-title'>º}¬y²~</h1>
     </header>
     
     <div class='page'>
@@ -187,12 +187,12 @@ async function renderDriftBottle(params) {
       
       <button class='draw-btn'>
         <i class='fas fa-water_bottle'></i>
-        æ’¿èµ·æ¼‚æµç“¶
+        ¾ß°_º}¬y²~
       </button>
       
       <div class='history-section'>
-        <h3>å åœèªªæ˜</h3>
-        <p>æ¼‚æµç“¶æ˜¯ä¸€ç¨®å‘½é‹å åœæ–¹å¼ã€‚æ’¿èµ·æ¼‚æµç“¶ï¼Œç²å¾—ç•¶ä¸‹çš„æŒ‡å¼•ã€‚</p>
+        <h3>¥e¤R»¡©ú</h3>
+        <p>º}¬y²~¬O¤@ºØ©R¹B¥e¤R¤è¦¡¡C¾ß°_º}¬y²~¡AÀò±o·í¤Uªº«ü¤Ş¡C</p>
       </div>
     </div>
   `;
@@ -213,14 +213,14 @@ async function renderDriftBottle(params) {
   if (drawBtn) {
     drawBtn.onclick = async () => {
       drawBtn.disabled = true;
-      drawBtn.innerHTML = '<i class='fas fa-spinner fa-spin'></i> å åœä¸­...';
+      drawBtn.innerHTML = "`<i class=`"`fas fa-spinner fa-spin`"`></i> ¥e¤R¤¤...`";
       
       const card = await drawCard(selectedCharacterId);
       renderCard(container, card);
       await saveLastCard();
       
       drawBtn.disabled = false;
-      drawBtn.innerHTML = '<i class='fas fa-water_bottle'></i> æ’¿èµ·æ¼‚æµç“¶';
+      drawBtn.innerHTML = "`<i class=`"`fas fa-water_bottle`"`></i> ¾ß°_º}¬y²~`";
     };
   }
   
@@ -231,9 +231,9 @@ async function renderDriftBottle(params) {
 
 export default {
   id: 'drift-bottle',
-  name: 'æ¼‚æµç“¶',
+  name: 'º}¬y²~',
   icon: 'water_bottle',
   routes: [{ path: '/drift-bottle', render: renderDriftBottle }],
-  navItem: { label: 'æ¼‚æµç“¶', icon: 'water_bottle', path: '/drift-bottle', showInNav: true, order: 112 },
+  navItem: { label: 'º}¬y²~', icon: 'water_bottle', path: '/drift-bottle', showInNav: true, order: 112 },
   stylesPath: 'js/apps/drift-bottle/style.css'
 };

@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB, WikiRecordsDB, ZiweiCacheDB, CharactersDB } from '../../db.js';
 import { compressImage } from '../../utils/image.js';
@@ -14,22 +14,22 @@ const BLOCK_TYPES = [
   { type: 'heading1', label: 'Heading 1', icon: 'H1', desc: 'Large heading' },
   { type: 'heading2', label: 'Heading 2', icon: 'H2', desc: 'Medium heading' },
   { type: 'heading3', label: 'Heading 3', icon: 'H3', desc: 'Small heading' },
-  { type: 'bulleted-list', label: 'Bulleted List', icon: 'â€¢', desc: 'Bullet point' },
+  { type: 'bulleted-list', label: 'Bulleted List', icon: '¡E', desc: 'Bullet point' },
   { type: 'numbered-list', label: 'Numbered List', icon: '1.', desc: 'Numbered item' },
-  { type: 'todo', label: 'To-do', icon: 'â˜‘', desc: 'Checkbox item' },
-  { type: 'divider', label: 'Divider', icon: 'â€”', desc: 'Horizontal rule' },
-  { type: 'quote', label: 'Quote', icon: 'â', desc: 'Quote block' },
-  { type: 'image', label: 'Image', icon: 'ğŸ–¼', desc: 'Image block' },
-  { type: 'page-link', label: 'Page Link', icon: 'ğŸ”—', desc: 'Linked page' }
+  { type: 'todo', label: 'To-do', icon: '?', desc: 'Checkbox item' },
+  { type: 'divider', label: 'Divider', icon: '¡X', desc: 'Horizontal rule' },
+  { type: 'quote', label: 'Quote', icon: '?', desc: 'Quote block' },
+  { type: 'image', label: 'Image', icon: '??', desc: 'Image block' },
+  { type: 'page-link', label: 'Page Link', icon: '??', desc: 'Linked page' }
 ];
 
-const PAGE_ICONS = ['ğŸ“„', 'ğŸ“', 'ğŸ“‹', 'ğŸ“Œ', 'ğŸ“', 'ğŸ—‚', 'ğŸ“', 'ğŸ’¡', 'ğŸ¯', 'ğŸš€', 'â­', 'â¤ï¸', 'ğŸ¨', 'ğŸµ', 'ğŸ“š', 'ğŸ '];
+const PAGE_ICONS = ['??', '??', '??', '??', '??', '??', '??', '??', '??', '??', '?', '??', '??', '??', '??', '??'];
 
 const CONFIDENCE_LABELS = {
-  EXTRACTED: { label: 'æå–', color: '#4caf50' },
-  INFERRED: { label: 'æ¨æ–·', color: '#2196f3' },
-  AMBIGUOUS: { label: 'æ¨¡ç³Š', color: '#ff9800' },
-  UNVERIFIED: { label: 'æœªé©—è­‰', color: '#9e9e9e' }
+  EXTRACTED: { label: '´£¨ú', color: '#4caf50' },
+  INFERRED: { label: '±ÀÂ_', color: '#2196f3' },
+  AMBIGUOUS: { label: '¼Ò½k', color: '#ff9800' },
+  UNVERIFIED: { label: '¥¼ÅçÃÒ', color: '#9e9e9e' }
 };
 
 let records = [];
@@ -199,8 +199,8 @@ function renderSidebar(container) {
 
         return `
             <div class='wiki-page-item${isActive ? ' active' : ''}' data-page-id='${charRecord.id}' style='padding-left:20px'>
-                ${children.length > 0 ? `<span class='wiki-page-toggle' data-toggle='${charRecord.id}'>${collapsed ? 'â–¶' : 'â–¼'}</span>` : '<span style='width:18px'></span>'}
-                <span class='wiki-page-icon'>${charRecord.icon || 'ğŸ§‘'}</span>
+                ${children.length > 0 ? `<span class='wiki-page-toggle' data-toggle='${charRecord.id}'>${collapsed ? '?' : '¡¿'}</span>` : '<span style='width:18px'></span>'}
+                <span class='wiki-page-icon'>${charRecord.icon || '??'}</span>
                 <span class='wiki-page-name'>${escapeHtml(charRecord.title || 'Untitled')}</span>
             </div>
             ${!collapsed ? children.map(child => {
@@ -208,7 +208,7 @@ function renderSidebar(container) {
                 return `
                     <div class='wiki-page-item${childActive ? ' active' : ''} child' data-page-id='${child.id}' style='padding-left:40px'>
                         <span style='width:18px'></span>
-                        <span class='wiki-page-icon'>${child.icon || 'ğŸ“„'}</span>
+                        <span class='wiki-page-icon'>${child.icon || '??'}</span>
                         <span class='wiki-page-name'>${escapeHtml(child.title || 'Untitled')}</span>
                     </div>
                 `;
@@ -221,17 +221,17 @@ function renderSidebar(container) {
         listEl.innerHTML = `
             ${charRecords.length > 0 ? `
                 <div class='wiki-sidebar-section'>
-                    <div class='wiki-sidebar-section-header'>ğŸ“‹ è§’è‰²æª”æ¡ˆ</div>
+                    <div class='wiki-sidebar-section-header'>?? ¨¤¦âÀÉ®×</div>
                     ${charRecords.map(renderCharGroup).join('')}
                 </div>
             ` : ''}
             ${topicRecords.length > 0 ? `
                 <div class='wiki-sidebar-section'>
-                    <div class='wiki-sidebar-section-header'>ğŸ“Œ ä¸»é¡Œ</div>
+                    <div class='wiki-sidebar-section-header'>?? ¥DÃD</div>
                     ${topicRecords.map(r => `
                         <div class='wiki-page-item${r.id === activePageId ? ' active' : ''}' data-page-id='${r.id}' style='padding-left:20px'>
                             <span style='width:18px'></span>
-                            <span class='wiki-page-icon'>${r.icon || 'ğŸ“Œ'}</span>
+                            <span class='wiki-page-icon'>${r.icon || '??'}</span>
                             <span class='wiki-page-name'>${escapeHtml(r.title || 'Untitled')}</span>
                         </div>
                     `).join('')}
@@ -239,17 +239,17 @@ function renderSidebar(container) {
             ` : ''}
             ${noteRecords.length > 0 ? `
                 <div class='wiki-sidebar-section'>
-                    <div class='wiki-sidebar-section-header'>ğŸ“ ç­†è¨˜</div>
+                    <div class='wiki-sidebar-section-header'>?? µ§°O</div>
                     ${noteRecords.map(r => `
                         <div class='wiki-page-item${r.id === activePageId ? ' active' : ''}' data-page-id='${r.id}' style='padding-left:20px'>
                             <span style='width:18px'></span>
-                            <span class='wiki-page-icon'>${r.icon || 'ğŸ“'}</span>
+                            <span class='wiki-page-icon'>${r.icon || '??'}</span>
                             <span class='wiki-page-name'>${escapeHtml(r.title || 'Untitled')}</span>
                         </div>
                     `).join('')}
                 </div>
             ` : ''}
-            ${records.length === 0 ? '<div style='padding:24px;text-align:center;color:var(--nt-ink-faint);font-size:13px'>å°šç„¡é é¢<br>é»æ“ŠåŒæ­¥æˆ–æ–°å¢</div>' : ''}
+            ${records.length === 0 ? '<div style='padding:24px;text-align:center;color:var(--nt-ink-faint);font-size:13px'>©|µL­¶­±<br>ÂIÀ»¦P¨B©Î·s¼W</div>' : ''}
         `;
 
         listEl.querySelectorAll('.wiki-page-item').forEach(item => {
@@ -270,7 +270,7 @@ function renderSidebar(container) {
                 const record = getRecord(recordId);
                 if (record) {
                     record._collapsed = !record._collapsed;
-                    toggle.textContent = record._collapsed ? 'â–¶' : 'â–¼';
+                    toggle.textContent = record._collapsed ? '?' : '¡¿';
                     renderSidebar(container);
                 }
             };
@@ -285,7 +285,7 @@ function renderEditor(container) {
 
     const record = getRecord(activePageId);
     if (!record) {
-        editorArea.innerHTML = '<div class='wiki-editor-empty'>é¸æ“‡æˆ–å»ºç«‹ä¸€å€‹é é¢</div>';
+        editorArea.innerHTML = "`<div class=`"`wiki-editor-empty`"`>¿ï¾Ü©Î«Ø¥ß¤@­Ó­¶­±</div>`";
         return;
     }
 
@@ -294,7 +294,7 @@ function renderEditor(container) {
     editorArea.innerHTML = `
         <div class='wiki-breadcrumb'>
             ${breadcrumbs.map((b, i) => `
-                <span class='wiki-breadcrumb-item${i === breadcrumbs.length - 1 ? ' wiki-breadcrumb-current' : ''}' data-nav-page='${b.id}'>${b.icon || 'ğŸ“„'} ${escapeHtml(b.title || 'Untitled')}</span>
+                <span class='wiki-breadcrumb-item${i === breadcrumbs.length - 1 ? ' wiki-breadcrumb-current' : ''}' data-nav-page='${b.id}'>${b.icon || '??'} ${escapeHtml(b.title || 'Untitled')}</span>
                 ${i < breadcrumbs.length - 1 ? '<span class='wiki-breadcrumb-sep'>/</span>' : ''}
             `).join('')}
         </div>
@@ -304,10 +304,10 @@ function renderEditor(container) {
         }
         <div class='wiki-page-header'>
             <div class='wiki-page-icon-title'>
-                <span class='wiki-page-emoji' data-action='change-icon'>${record.icon || 'ğŸ“„'}</span>
+                <span class='wiki-page-emoji' data-action='change-icon'>${record.icon || '??'}</span>
                 <input class='wiki-page-title-input' value='${escapeHtml(record.title)}' placeholder='Untitled' data-field='title'>
             </div>
-            ${record.source_type === 'auto' ? `<div class='wiki-page-meta'>è‡ªå‹•ç”Ÿæˆ Â· ${record.page_type}</div>` : ''}
+            ${record.source_type === 'auto' ? `<div class='wiki-page-meta'>¦Û°Ê¥Í¦¨ ¡P ${record.page_type}</div>` : ''}
         </div>
         <div class='wiki-blocks' data-page-id='${record.id}'>
             ${renderBlocks(record.blocks, record.id)}
@@ -339,7 +339,7 @@ function renderEditor(container) {
     const emojiBtn = editorArea.querySelector('[data-action='change-icon']');
     if (emojiBtn) {
         emojiBtn.onclick = async () => {
-            const current = record.icon || 'ğŸ“„';
+            const current = record.icon || '??';
             const idx = PAGE_ICONS.indexOf(current);
             record.icon = PAGE_ICONS[(idx + 1) % PAGE_ICONS.length];
             record.updated_at = Date.now();
@@ -360,7 +360,7 @@ function renderEditor(container) {
 
 function renderBlocks(blocks, recordId) {
     return blocks.map((block, idx) => {
-        const handle = `<span class='wiki-block-handle' data-drag='${block.id}'>â‹®â‹®</span>`;
+        const handle = `<span class='wiki-block-handle' data-drag='${block.id}'>??</span>`;
         const confidenceTag = block.confidence && CONFIDENCE_LABELS[block.confidence]
             ? `<span class='wiki-confidence-tag' data-confidence='${block.confidence}' style='background:${CONFIDENCE_LABELS[block.confidence].color}20;color:${CONFIDENCE_LABELS[block.confidence].color}'>${CONFIDENCE_LABELS[block.confidence].label}</span>`
             : '';
@@ -391,7 +391,7 @@ function renderBlocks(blocks, recordId) {
 
         if (block.type === 'page-link') {
             const linkedRecord = getRecord(block.metadata.pageId);
-            const linkText = linkedRecord ? `${linkedRecord.icon || 'ğŸ“„'} ${escapeHtml(linkedRecord.title || 'Untitled')}` : 'Select page';
+            const linkText = linkedRecord ? `${linkedRecord.icon || '??'} ${escapeHtml(linkedRecord.title || 'Untitled')}` : 'Select page';
             return `<div class='wiki-block' data-block-id='${block.id}' data-block-type='page-link'>${handle}
                 <div class='wiki-block-content' data-type='page-link' data-link-page='${escapeHtml(block.metadata.pageId || '')}'>${linkText}</div>
                 ${confidenceTag}
@@ -605,14 +605,14 @@ async function loadBacklinks(container, recordId) {
     area.innerHTML = `
         <div class='wiki-section-card'>
             <div class='wiki-section-header collapsed' data-toggle>
-                <div class='wiki-section-title'>â†©ï¸ åå‘é€£çµ (${backlinks.length})</div>
-                <div class='wiki-section-toggle'>â–¼</div>
+                <div class='wiki-section-title'>?? ¤Ï¦V³sµ² (${backlinks.length})</div>
+                <div class='wiki-section-toggle'>¡¿</div>
             </div>
             <div class='wiki-section-content collapsed'>
                 <div class='wiki-backlinks-list'>
                     ${backlinks.map(r => `
                         <div class='wiki-backlink-item' data-nav-page='${r.id}'>
-                            <span class='wiki-backlink-icon'>${r.icon || 'ğŸ“„'}</span>
+                            <span class='wiki-backlink-icon'>${r.icon || '??'}</span>
                             <span class='wiki-backlink-text'>${escapeHtml(r.title || 'Untitled')}</span>
                         </div>
                     `).join('')}
@@ -644,13 +644,13 @@ async function loadZiweiFortune(container, recordId) {
             area.innerHTML = `
                 <div class='wiki-section-card'>
                     <div class='wiki-section-header collapsed' data-toggle>
-                        <div class='wiki-section-title'>ğŸ”® å‘½ç†åˆ†æ</div>
-                        <div class='wiki-section-toggle'>â–¼</div>
+                        <div class='wiki-section-title'>?? ©R²z¤ÀªR</div>
+                        <div class='wiki-section-toggle'>¡¿</div>
                     </div>
                     <div class='wiki-section-content collapsed'>
                         <div class='wiki-ziwei-empty'>
-                            <p>å°šæœªè¨­å®šå®Œæ•´çš„å‡ºç”Ÿè³‡è¨Š</p>
-                            <p class='wiki-ziwei-hint'>è«‹åœ¨è§’è‰²è¨­å®šä¸­è£œå……å‡ºç”Ÿæ—¥æœŸã€æ™‚é–“èˆ‡æ€§åˆ¥</p>
+                            <p>©|¥¼³]©w§¹¾ãªº¥X¥Í¸ê°T</p>
+                            <p class='wiki-ziwei-hint'>½Ğ¦b¨¤¦â³]©w¤¤¸É¥R¥X¥Í¤é´Á¡B®É¶¡»P©Ê§O</p>
                         </div>
                     </div>
                 </div>
@@ -666,11 +666,11 @@ async function loadZiweiFortune(container, recordId) {
             area.innerHTML = `
                 <div class='wiki-section-card'>
                     <div class='wiki-section-header collapsed' data-toggle>
-                        <div class='wiki-section-title'>ğŸ”® å‘½ç†åˆ†æ</div>
-                        <div class='wiki-section-toggle'>â–¼</div>
+                        <div class='wiki-section-title'>?? ©R²z¤ÀªR</div>
+                        <div class='wiki-section-toggle'>¡¿</div>
                     </div>
                     <div class='wiki-section-content collapsed'>
-                        <div class='wiki-ziwei-loading'>è¼‰å…¥ä¸­...</div>
+                        <div class='wiki-ziwei-loading'>¸ü¤J¤¤...</div>
                     </div>
                 </div>
             `;
@@ -682,11 +682,11 @@ async function loadZiweiFortune(container, recordId) {
             area.innerHTML = `
                 <div class='wiki-section-card'>
                     <div class='wiki-section-header collapsed' data-toggle>
-                        <div class='wiki-section-title'>ğŸ”® å‘½ç†åˆ†æ</div>
-                        <div class='wiki-section-toggle'>â–¼</div>
+                        <div class='wiki-section-title'>?? ©R²z¤ÀªR</div>
+                        <div class='wiki-section-toggle'>¡¿</div>
                     </div>
                     <div class='wiki-section-content collapsed'>
-                        <div class='wiki-warning-banner'>âš ï¸ è³‡æ–™å¯èƒ½éæœŸï¼ˆç„¡æ³•é€£ç·šè‡³åˆ†ææœå‹™ï¼‰</div>
+                        <div class='wiki-warning-banner'>?? ¸ê®Æ¥i¯à¹L´Á¡]µLªk³s½u¦Ü¤ÀªRªA°È¡^</div>
                         ${renderZiweiCards(cache)}
                     </div>
                 </div>
@@ -698,8 +698,8 @@ async function loadZiweiFortune(container, recordId) {
         area.innerHTML = `
             <div class='wiki-section-card'>
                 <div class='wiki-section-header collapsed' data-toggle>
-                    <div class='wiki-section-title'>ğŸ”® å‘½ç†åˆ†æ</div>
-                    <div class='wiki-section-toggle'>â–¼</div>
+                    <div class='wiki-section-title'>?? ©R²z¤ÀªR</div>
+                    <div class='wiki-section-toggle'>¡¿</div>
                 </div>
                 <div class='wiki-section-content collapsed'>
                     ${renderZiweiCards(cache)}
@@ -721,18 +721,18 @@ function renderZiweiCards(cache) {
     return `
         <div class='wiki-ziwei-cards'>
             <div class='wiki-ziwei-card'>
-                <div class='wiki-ziwei-card-title'>æµå¹´é‹å‹¢</div>
-                ${cache.liu_nian_temple ? `<div class='wiki-ziwei-card-temple'>å‘½å®®ï¼š${escapeHtml(cache.liu_nian_temple)}</div>` : ''}
+                <div class='wiki-ziwei-card-title'>¬y¦~¹B¶Õ</div>
+                ${cache.liu_nian_temple ? `<div class='wiki-ziwei-card-temple'>©R®c¡G${escapeHtml(cache.liu_nian_temple)}</div>` : ''}
                 ${summary.yearly ? `<div class='wiki-ziwei-card-summary'>${escapeHtml(summary.yearly)}</div>` : ''}
             </div>
             <div class='wiki-ziwei-card'>
-                <div class='wiki-ziwei-card-title'>æµæœˆé‹å‹¢</div>
-                ${cache.liu_yue_temple ? `<div class='wiki-ziwei-card-temple'>å‘½å®®ï¼š${escapeHtml(cache.liu_yue_temple)}</div>` : ''}
+                <div class='wiki-ziwei-card-title'>¬y¤ë¹B¶Õ</div>
+                ${cache.liu_yue_temple ? `<div class='wiki-ziwei-card-temple'>©R®c¡G${escapeHtml(cache.liu_yue_temple)}</div>` : ''}
                 ${summary.monthly ? `<div class='wiki-ziwei-card-summary'>${escapeHtml(summary.monthly)}</div>` : ''}
             </div>
             <div class='wiki-ziwei-card'>
-                <div class='wiki-ziwei-card-title'>æµæ—¥é‹å‹¢</div>
-                ${cache.liu_ri_temple ? `<div class='wiki-ziwei-card-temple'>å‘½å®®ï¼š${escapeHtml(cache.liu_ri_temple)}</div>` : ''}
+                <div class='wiki-ziwei-card-title'>¬y¤é¹B¶Õ</div>
+                ${cache.liu_ri_temple ? `<div class='wiki-ziwei-card-temple'>©R®c¡G${escapeHtml(cache.liu_ri_temple)}</div>` : ''}
                 ${summary.daily ? `<div class='wiki-ziwei-card-summary'>${escapeHtml(summary.daily)}</div>` : ''}
                 ${cache.events && cache.events.length > 0 ? `
                     <div class='wiki-ziwei-events'>
@@ -917,7 +917,7 @@ function showPagePicker(container, block) {
 
     picker.innerHTML = otherRecords.map(r => `
         <div class='wiki-slash-item' data-pick-page='${r.id}'>
-            <span class='wiki-slash-item-icon'>${r.icon || 'ğŸ“„'}</span>
+            <span class='wiki-slash-item-icon'>${r.icon || '??'}</span>
             <span class='wiki-slash-item-label'>${escapeHtml(r.title || 'Untitled')}</span>
         </div>
     `).join('');
@@ -926,7 +926,7 @@ function showPagePicker(container, block) {
         item.onclick = async () => {
             block.metadata.pageId = item.dataset.pickPage;
             const linkedRecord = getRecord(block.metadata.pageId);
-            block.content = linkedRecord ? `${linkedRecord.icon || 'ğŸ“„'} ${escapeHtml(linkedRecord.title)}` : '';
+            block.content = linkedRecord ? `${linkedRecord.icon || '??'} ${escapeHtml(linkedRecord.title)}` : '';
             const record = getRecord(activePageId);
             if (record) {
                 record.updated_at = Date.now();
@@ -1008,12 +1008,12 @@ function showContextMenu(container, recordId, x, y) {
     menu.style.left = x + 'px';
 
     menu.innerHTML = `
-        <div class='wiki-context-item' data-ctx='rename'>é‡æ–°å‘½å</div>
+        <div class='wiki-context-item' data-ctx='rename'>­«·s©R¦W</div>
         ${!isAuto ? `
-            <div class='wiki-context-item' data-ctx='duplicate'>è¤‡è£½</div>
-            <div class='wiki-context-item' data-ctx='add-child'>æ–°å¢å­é é¢</div>
+            <div class='wiki-context-item' data-ctx='duplicate'>½Æ»s</div>
+            <div class='wiki-context-item' data-ctx='add-child'>·s¼W¤l­¶­±</div>
         ` : ''}
-        <div class='wiki-context-item danger' data-ctx='delete'>åˆªé™¤</div>
+        <div class='wiki-context-item danger' data-ctx='delete'>§R°£</div>
     `;
 
     container.appendChild(menu);
@@ -1023,7 +1023,7 @@ function showContextMenu(container, recordId, x, y) {
             const action = item.dataset.ctx;
 
             if (action === 'rename') {
-                const newName = prompt('é é¢åç¨±', record.title);
+                const newName = prompt('­¶­±¦WºÙ', record.title);
                 if (newName !== null) {
                     record.title = newName;
                     record.updated_at = Date.now();
@@ -1041,7 +1041,7 @@ function showContextMenu(container, recordId, x, y) {
                 renderSidebar(container);
                 navigateToPage(container, child.id);
             } else if (action === 'delete') {
-                if (confirm('ç¢ºå®šåˆªé™¤æ­¤é é¢ï¼Ÿ')) {
+                if (confirm('½T©w§R°£¦¹­¶­±¡H')) {
                     await deletePage(recordId);
                     renderSidebar(container);
                     renderEditor(container);
@@ -1096,14 +1096,14 @@ function handleSearch(container, query) {
     }
 
     if (results.length === 0) {
-        resultsEl.innerHTML = '<div class='wiki-search-result-item' style='color:var(--nt-ink-faint)'>No results</div>';
+        resultsEl.innerHTML = "`<div class=`"`wiki-search-result-item`"` style=`"color:var(--nt-ink-faint)'>No results</div>';
     } else {
         resultsEl.innerHTML = results.slice(0, 8).map(r => {
             const matchBlock = r.blocks && r.blocks.find(b => typeof b.content === 'string' && b.content.toLowerCase().includes(query.toLowerCase()));
             const excerpt = matchBlock ? stripHtml(matchBlock.content).substring(0, 60) : '';
             return `
                 <div class='wiki-search-result-item' data-nav-page='${r.id}'>
-                    <div class='wiki-search-result-title'>${r.icon || 'ğŸ“„'} ${escapeHtml(r.title || 'Untitled')}</div>
+                    <div class='wiki-search-result-title'>${r.icon || '??'} ${escapeHtml(r.title || 'Untitled')}</div>
                     ${excerpt ? `<div class='wiki-search-result-excerpt'>${escapeHtml(excerpt)}</div>` : ''}
                 </div>
             `;
@@ -1140,7 +1140,7 @@ async function handleSync(container) {
 
     const syncBtn = container.querySelector('.wiki-sync-btn');
     if (syncBtn) {
-        syncBtn.textContent = 'åŒæ­¥ä¸­...';
+        syncBtn.textContent = '¦P¨B¤¤...';
         syncBtn.disabled = true;
     }
 
@@ -1155,11 +1155,11 @@ async function handleSync(container) {
         if (activePageId) renderEditor(container);
     } catch (err) {
         console.error('[Wiki] Sync failed:', err);
-        alert('åŒæ­¥å¤±æ•—: ' + err.message);
+        alert('¦P¨B¥¢±Ñ: ' + err.message);
     } finally {
         isSyncing = false;
         if (syncBtn) {
-            syncBtn.textContent = 'ğŸ”„ åŒæ­¥è§’è‰²æ•¸æ“š';
+            syncBtn.textContent = '?? ¦P¨B¨¤¦â¼Æ¾Ú';
             syncBtn.disabled = false;
         }
     }
@@ -1174,49 +1174,49 @@ function openSettingsModal(container) {
     modal = createElement('div', 'wiki-settings-modal');
     modal.innerHTML = `
         <div class='wiki-settings-card'>
-            <h3>Wiki è¨­å®š</h3>
+            <h3>Wiki ³]©w</h3>
             
             <div class='wiki-settings-section'>
-                <h4>Notion API æ•´åˆ</h4>
+                <h4>Notion API ¾ã¦X</h4>
                 <div class='wiki-settings-field'>
                     <label>API Token (Internal Integration Token)</label>
                     <input type='password' class='wiki-settings-input' id='notion-token' 
                         placeholder='secret_xxxx...' value='${escapeHtml(notionConfig.token || '')}'>
-                    <p class='wiki-settings-hint'>å¾ Notion Integrations é é¢å»ºç«‹ä¸¦è¤‡è£½ Token</p>
+                    <p class='wiki-settings-hint'>±q Notion Integrations ­¶­±«Ø¥ß¨Ã½Æ»s Token</p>
                 </div>
                 <div class='wiki-settings-field'>
                     <label>Database ID</label>
                     <input type='text' class='wiki-settings-input' id='notion-database-id' 
                         placeholder='xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx' value='${escapeHtml(notionConfig.databaseId || '')}'>
-                    <p class='wiki-settings-hint'>å¾ Notion Database URL ä¸­å–å¾—ï¼ˆè¤‡è£½æ•´å€‹ URL æˆ–åªè¦ IDï¼‰</p>
+                    <p class='wiki-settings-hint'>±q Notion Database URL ¤¤¨ú±o¡]½Æ»s¾ã­Ó URL ©Î¥u­n ID¡^</p>
                 </div>
                 <button class='wiki-settings-btn primary' id='notion-connect'>
-                    ${isConnected ? 'å„²å­˜è¨­å®š' : 'é€£æ¥ Notion'}
+                    ${isConnected ? 'Àx¦s³]©w' : '³s±µ Notion'}
                 </button>
                 ${isConnected ? `
-                    <button class='wiki-settings-btn secondary' id='notion-sync'>åŒæ­¥åˆ° Notion</button>
-                    <button class='wiki-settings-btn secondary' id='notion-pull'>å¾ Notion æ‹‰å–</button>
+                    <button class='wiki-settings-btn secondary' id='notion-sync'>¦P¨B¨ì Notion</button>
+                    <button class='wiki-settings-btn secondary' id='notion-pull'>±q Notion ©Ô¨ú</button>
                 ` : ''}
             </div>
             
             <div class='wiki-settings-section'>
-                <h4>MCP æ•´åˆï¼ˆé€²éšï¼‰</h4>
+                <h4>MCP ¾ã¦X¡]¶i¶¥¡^</h4>
                 <div class='wiki-settings-field'>
                     <label>MCP Server URL</label>
                     <input type='text' class='wiki-settings-input' id='mcp-url' 
                         placeholder='http://localhost:3000/mcp' value='${escapeHtml(notionConfig.mcpUrl || '')}'>
-                    <p class='wiki-settings-hint'>é€£æ¥åˆ°æœ¬åœ° MCP Server ä»¥ä½¿ç”¨ Model Context Protocol</p>
+                    <p class='wiki-settings-hint'>³s±µ¨ì¥»¦a MCP Server ¥H¨Ï¥Î Model Context Protocol</p>
                 </div>
-                <button class='wiki-settings-btn secondary' id='mcp-connect'>é€£æ¥ MCP</button>
+                <button class='wiki-settings-btn secondary' id='mcp-connect'>³s±µ MCP</button>
             </div>
             
             <div class='wiki-settings-status'>
                 <span class='wiki-status-indicator ${isConnected ? 'connected' : ''}'></span>
-                <span>${isConnected ? 'å·²é€£æ¥åˆ° Notion' : 'å°šæœªé€£æ¥'}</span>
+                <span>${isConnected ? '¤w³s±µ¨ì Notion' : '©|¥¼³s±µ'}</span>
             </div>
             
             <div class='wiki-settings-actions'>
-                <button class='wiki-settings-close'>é—œé–‰</button>
+                <button class='wiki-settings-close'>Ãö³¬</button>
             </div>
         </div>
     `;
@@ -1232,7 +1232,7 @@ function openSettingsModal(container) {
         notionConfig.databaseId = extractDatabaseId(databaseInput.value.trim());
         notionConfig.mcpUrl = mcpInput.value.trim();
         await SettingsDB.set('wiki_notion_config', notionConfig);
-        alert('è¨­å®šå·²å„²å­˜');
+        alert('³]©w¤wÀx¦s');
         modal.remove();
         openSettingsModal(container);
     };
@@ -1241,18 +1241,18 @@ function openSettingsModal(container) {
     if (syncBtn) {
         syncBtn.onclick = async () => {
             if (!notionConfig.token || !notionConfig.databaseId) {
-                alert('è«‹å…ˆè¨­å®š Notion Token å’Œ Database ID');
+                alert('½Ğ¥ı³]©w Notion Token ©M Database ID');
                 return;
             }
-            syncBtn.textContent = 'åŒæ­¥ä¸­...';
+            syncBtn.textContent = '¦P¨B¤¤...';
             syncBtn.disabled = true;
             try {
                 await syncToNotion(container);
-                alert('åŒæ­¥å®Œæˆ');
+                alert('¦P¨B§¹¦¨');
             } catch (err) {
-                alert('åŒæ­¥å¤±æ•—: ' + err.message);
+                alert('¦P¨B¥¢±Ñ: ' + err.message);
             }
-            syncBtn.textContent = 'åŒæ­¥åˆ° Notion';
+            syncBtn.textContent = '¦P¨B¨ì Notion';
             syncBtn.disabled = false;
         };
     }
@@ -1261,18 +1261,18 @@ function openSettingsModal(container) {
     if (pullBtn) {
         pullBtn.onclick = async () => {
             if (!notionConfig.token || !notionConfig.databaseId) {
-                alert('è«‹å…ˆè¨­å®š Notion Token å’Œ Database ID');
+                alert('½Ğ¥ı³]©w Notion Token ©M Database ID');
                 return;
             }
-            pullBtn.textContent = 'æ‹‰å–ä¸­...';
+            pullBtn.textContent = '©Ô¨ú¤¤...';
             pullBtn.disabled = true;
             try {
                 await pullFromNotion(container);
-                alert('æ‹‰å–å®Œæˆ');
+                alert('©Ô¨ú§¹¦¨');
             } catch (err) {
-                alert('æ‹‰å–å¤±æ•—: ' + err.message);
+                alert('©Ô¨ú¥¢±Ñ: ' + err.message);
             }
-            pullBtn.textContent = 'å¾ Notion æ‹‰å–';
+            pullBtn.textContent = '±q Notion ©Ô¨ú';
             pullBtn.disabled = false;
         };
     }
@@ -1281,10 +1281,10 @@ function openSettingsModal(container) {
         notionConfig.mcpUrl = mcpInput.value.trim();
         await SettingsDB.set('wiki_notion_config', notionConfig);
         if (!notionConfig.mcpUrl) {
-            alert('MCP URL å·²æ¸…é™¤');
+            alert('MCP URL ¤w²M°£');
             return;
         }
-        alert('MCP è¨­å®šå·²å„²å­˜ã€‚æœªä¾†å°‡æ”¯æ´ç›´æ¥é€é MCP èˆ‡ Notion äº’å‹•ã€‚');
+        alert('MCP ³]©w¤wÀx¦s¡C¥¼¨Ó±N¤ä´©ª½±µ³z¹L MCP »P Notion ¤¬°Ê¡C');
     };
 
     modal.querySelector('.wiki-settings-close').onclick = () => modal.remove();
@@ -1430,7 +1430,7 @@ async function pullFromNotion(container) {
                 source_type: 'manual',
                 blocks: blocks.length > 0 ? blocks : [createBlock('text', '')],
                 cover_image: page.cover?.external?.url || page.cover?.file?.url || null,
-                icon: page.icon?.emoji || 'ğŸ“„',
+                icon: page.icon?.emoji || '??',
                 created_at: page.created_time ? new Date(page.created_time).getTime() : Date.now(),
                 updated_at: page.last_edited_time ? new Date(page.last_edited_time).getTime() : Date.now()
             });
@@ -1530,20 +1530,20 @@ function openFabMenu(container) {
     menu.innerHTML = `
         <div class='wiki-fab-item' data-action='new-note'>
             <i class='fas fa-plus'></i>
-            <span>æ–°å¢ç­†è¨˜</span>
+            <span>·s¼Wµ§°O</span>
         </div>
         <div class='wiki-fab-item' data-action='new-topic'>
             <i class='fas fa-bookmark'></i>
-            <span>æ–°å¢ä¸»é¡Œ</span>
+            <span>·s¼W¥DÃD</span>
         </div>
         <div class='wiki-fab-item' data-action='sync'>
             <i class='fas fa-sync'></i>
-            <span>åŒæ­¥è§’è‰²æ•¸æ“š</span>
+            <span>¦P¨B¨¤¦â¼Æ¾Ú</span>
         </div>
         ${activePageId ? `
             <div class='wiki-fab-item danger' data-action='delete'>
                 <i class='fas fa-trash'></i>
-                <span>åˆªé™¤ç›®å‰é é¢</span>
+                <span>§R°£¥Ø«e­¶­±</span>
             </div>
         ` : ''}
     `;
@@ -1564,7 +1564,7 @@ function openFabMenu(container) {
             } else if (action === 'sync') {
                 await handleSync(container);
             } else if (action === 'delete' && activePageId) {
-                if (confirm('ç¢ºå®šåˆªé™¤æ­¤é é¢ï¼Ÿ')) {
+                if (confirm('½T©w§R°£¦¹­¶­±¡H')) {
                     await deletePage(activePageId);
                     renderSidebar(container);
                     renderEditor(container);
@@ -1594,26 +1594,26 @@ async function renderPersonalWiki(params) {
         <div class='wiki-sidebar'>
             <div class='wiki-sidebar-header'>
                 <button class='wiki-sidebar-toggle'><i class='fas fa-chevron-left'></i></button>
-                <span class='wiki-sidebar-title'>è§’è‰² Wiki</span>
-                <button class='wiki-sidebar-back'><i class='fas fa-chevron-left'></i> è¿”å›</button>
+                <span class='wiki-sidebar-title'>¨¤¦â Wiki</span>
+                <button class='wiki-sidebar-back'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
             </div>
             <div class='wiki-search' style='position:relative'>
-                <input class='wiki-search-input' type='text' placeholder='æœå°‹é é¢...'>
+                <input class='wiki-search-input' type='text' placeholder='·j´M­¶­±...'>
             </div>
             <div class='wiki-page-list'></div>
             <div class='wiki-sidebar-footer'>
-                <button class='wiki-sync-btn'>ğŸ”„ åŒæ­¥è§’è‰²æ•¸æ“š</button>
-                <button class='wiki-settings-btn'><i class='fas fa-cog'></i> è¨­å®š</button>
+                <button class='wiki-sync-btn'>?? ¦P¨B¨¤¦â¼Æ¾Ú</button>
+                <button class='wiki-settings-btn'><i class='fas fa-cog'></i> ³]©w</button>
             </div>
         </div>
         <button class='wiki-editor-toggle'><i class='fas fa-chevron-right'></i></button>
         <div class='wiki-editor-area'>
             <div class='wiki-mobile-header'>
-                <button class='wiki-mobile-menu-btn'>â˜°</button>
-                <span class='wiki-mobile-title'>è§’è‰² Wiki</span>
-                <button class='wiki-mobile-back'><i class='fas fa-chevron-left'></i> è¿”å›</button>
+                <button class='wiki-mobile-menu-btn'>?</button>
+                <span class='wiki-mobile-title'>¨¤¦â Wiki</span>
+                <button class='wiki-mobile-back'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
             </div>
-            <div class='wiki-editor-empty'>é¸æ“‡æˆ–å»ºç«‹ä¸€å€‹é é¢</div>
+            <div class='wiki-editor-empty'>¿ï¾Ü©Î«Ø¥ß¤@­Ó­¶­±</div>
         </div>
         <button class='wiki-fab'><i class='fas fa-plus'></i></button>
     `;
@@ -1662,12 +1662,12 @@ async function renderPersonalWiki(params) {
 
 export default {
     id: 'personal-wiki',
-    name: 'è§’è‰² Wiki',
+    name: '¨¤¦â Wiki',
     icon: 'import_contacts',
     routes: [
         { path: '/personal-wiki', render: renderPersonalWiki }
     ],
-    navItem: { label: 'è§’è‰² Wiki', icon: 'import_contacts', path: '/personal-wiki', showInNav: true, order: 130 },
+    navItem: { label: '¨¤¦â Wiki', icon: 'import_contacts', path: '/personal-wiki', showInNav: true, order: 130 },
     stylesPath: 'js/apps/personal-wiki/style.css'
 };
 
