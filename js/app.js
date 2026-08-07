@@ -1,4 +1,4 @@
-import Router from './router.js';
+ï»¿import Router from './router.js';
 import { SettingsDB, initDB } from './db.js';
 import { createElement, createIcon, createToast, createErrorModal } from './components.js';
 import LockScreen from './lockscreen.js';
@@ -14,28 +14,28 @@ window.showError = function(errorInfo) {
         : errorInfo;
     console.error('[App Error]', info);
     createErrorModal({
-        title: info.title || 'µo¥Í¿ù»~',
-        message: info.message || '¥¼ª¾¿ù»~',
+        title: info.title || 'ï¿½oï¿½Í¿ï¿½ï¿½~',
+        message: info.message || 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½~',
         details: info.details || '',
         timestamp: info.timestamp || new Date().toISOString()
     });
 };
 
-// ¥þ§½¿ù»~³B²z
+// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½~ï¿½Bï¿½z
 window.addEventListener('error', (event) => {
-    console.error('[¥þ§½¿ù»~]', event.error);
+    console.error('[ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½~]', event.error);
     window.showError({
-        message: event.error?.message || '¥¼ª¾¿ù»~',
-        title: 'À³¥Îµ{¦¡¿ù»~',
+        message: event.error?.message || 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½~',
+        title: 'ï¿½ï¿½ï¿½Îµ{ï¿½ï¿½ï¿½ï¿½ï¿½~',
         details: event.error?.stack || JSON.stringify(event.error)
     });
 });
 
 window.addEventListener('unhandledrejection', (event) => {
-    console.error('[¥¼³B²zªº Promise ©Úµ´]', event.reason);
+    console.error('[ï¿½ï¿½ï¿½Bï¿½zï¿½ï¿½ Promise ï¿½Úµï¿½]', event.reason);
     window.showError({
         message: event.reason?.message || String(event.reason),
-        title: '²§¨B¾Þ§@¿ù»~',
+        title: 'ï¿½ï¿½ï¿½Bï¿½Þ§@ï¿½ï¿½ï¿½~',
         details: event.reason?.stack || ''
     });
 });
@@ -59,40 +59,40 @@ const App = {
     
     async init() {
         try {
-            // ÀË´ú Safari PWA
+            // ï¿½Ë´ï¿½ Safari PWA
             const isSafariPWA = window.navigator.standalone === true;
             const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
             
-            console.log('[App] Àô¹ÒÀË´ú:', {
+            console.log('[App] ï¿½ï¿½ï¿½ï¿½Ë´ï¿½:', {
                 isSafariPWA,
                 isSafari,
                 userAgent: navigator.userAgent,
                 timestamp: new Date().toISOString()
             });
             
-            // ¦pªG¬O Safari PWA¡A²K¥[¯S®í³B²z
+            // ï¿½pï¿½Gï¿½O Safari PWAï¿½Aï¿½Kï¿½[ï¿½Sï¿½ï¿½Bï¿½z
             if (isSafariPWA) {
-                console.log('[App] Safari PWA ¼Ò¦¡¡A±Ò¥Î­Ý®e©Ê³B²z');
+                console.log('[App] Safari PWA ï¿½Ò¦ï¿½ï¿½Aï¿½Ò¥Î­Ý®eï¿½Ê³Bï¿½z');
             }
             
             this.isMobile = isMobileDevice();
-            console.log('[App] ³]³ÆÃþ«¬:', this.isMobile ? '²¾°Ê³]³Æ' : '®à­±³]³Æ');
+            console.log('[App] ï¿½]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:', this.isMobile ? 'ï¿½ï¿½ï¿½Ê³]ï¿½ï¿½' : 'ï¿½à­±ï¿½]ï¿½ï¿½');
             
             if (!this.isMobile) {
                 this.createPhoneFrame();
             }
             
-            console.log('[App] ¶}©lªì©l¤Æ¼Æ¾Ú®w...');
+            console.log('[App] ï¿½}ï¿½lï¿½ï¿½lï¿½Æ¼Æ¾Ú®w...');
             await initDB();
-            console.log('[App] ¼Æ¾Ú®wªì©l¤Æ¦¨¥\');
+            console.log('[App] ï¿½Æ¾Ú®wï¿½ï¿½lï¿½Æ¦ï¿½ï¿½\');
             
-            console.log('[App] ¸ü¤J³]©w...');
+            console.log('[App] ï¿½ï¿½ï¿½Jï¿½]ï¿½w...');
             const allSettings = await SettingsDB.getAll();
             const defaults = SettingsDB.getDefaults();
             const mergedSettings = { ...defaults, ...allSettings };
-            console.log('[App] ³]©w¸ü¤J§¹¦¨');
+            console.log('[App] ï¿½]ï¿½wï¿½ï¿½ï¿½Jï¿½ï¿½ï¿½ï¿½');
             
-            console.log('[App] ªì©l¤Æ°O¾Ð¨t²Î...');
+            console.log('[App] ï¿½ï¿½lï¿½Æ°Oï¿½Ð¨tï¿½ï¿½...');
             const memorySystem = new MemorySystem({
                 decayRate: mergedSettings.memory_decay_rate,
                 embedding: {
@@ -111,14 +111,14 @@ const App = {
             });
             this.memorySystem = memorySystem;
             if (mergedSettings.memory_enabled) {
-                console.log('[App] ±Ò°Ê°O¾Ð¨t²Î...');
+                console.log('[App] ï¿½Ò°Ê°Oï¿½Ð¨tï¿½ï¿½...');
                 memorySystem.start();
             }
-            console.log('[App] °O¾Ð¨t²Îªì©l¤Æ§¹¦¨');
+            console.log('[App] ï¿½Oï¿½Ð¨tï¿½Îªï¿½lï¿½Æ§ï¿½ï¿½ï¿½');
             
-            console.log('[App] µù¥U¸ô¥Ñ...');
+            console.log('[App] ï¿½ï¿½ï¿½Uï¿½ï¿½ï¿½...');
             await registerRoutes();
-            console.log('[App] ¸ô¥Ñµù¥U§¹¦¨');
+            console.log('[App] ï¿½ï¿½Ñµï¿½ï¿½Uï¿½ï¿½ï¿½ï¿½');
             
             this.showLockScreen();
             
@@ -138,8 +138,8 @@ const App = {
                     } catch (err) {
                         console.error('Failed to create home screen:', err);
                         window.showError({
-                            message: 'µLªk³Ð«Ø¥Dµe­±: ' + err.message,
-                            title: '¥Dµe­±¿ù»~',
+                            message: 'ï¿½Lï¿½kï¿½Ð«Ø¥Dï¿½eï¿½ï¿½: ' + err.message,
+                            title: 'ï¿½Dï¿½eï¿½ï¿½ï¿½ï¿½ï¿½~',
                             details: err.stack
                         });
                     }
@@ -148,21 +148,21 @@ const App = {
             
             Router.start(true);
             
-            console.log('[App] ªì©l¤Æ¬¡°Ê API...');
+            console.log('[App] ï¿½ï¿½lï¿½Æ¬ï¿½ï¿½ï¿½ API...');
             initActivityAPI();
             
-            console.log('[App] ±Ò°Êµµ·L¤æ¼ÆÃi¥[¸ü¾¹...');
+            console.log('[App] ï¿½Ò°Êµï¿½ï¿½Lï¿½ï¿½ï¿½ï¿½iï¿½[ï¿½ï¿½ï¿½ï¿½...');
             ziweiLazyLoader.startDayChangeDetection();
             
             this.registerServiceWorker();
             this.setupInstallPrompt();
             
-            console.log('[App] À³¥Îªì©l¤Æ§¹¦¨');
+            console.log('[App] ï¿½ï¿½ï¿½Îªï¿½lï¿½Æ§ï¿½ï¿½ï¿½');
         } catch (error) {
-            console.error('[App] ªì©l¤Æ¥¢±Ñ:', error);
+            console.error('[App] ï¿½ï¿½lï¿½Æ¥ï¿½ï¿½ï¿½:', error);
             window.showError({
-                message: 'À³¥Îªì©l¤Æ¥¢±Ñ: ' + error.message,
-                title: 'ªì©l¤Æ¿ù»~',
+                message: 'ï¿½ï¿½ï¿½Îªï¿½lï¿½Æ¥ï¿½ï¿½ï¿½: ' + error.message,
+                title: 'ï¿½ï¿½lï¿½Æ¿ï¿½ï¿½~',
                 details: error.stack
             });
         }
@@ -268,7 +268,7 @@ const App = {
             
             const installBtn = document.createElement('button');
             installBtn.className = 'ios-btn ios-btn-primary fixed bottom-24 left-1/2 -translate-x-1/2 z-50 shadow-lg';
-            installBtn.innerHTML = "<span class='material-symbols-outlined mr-1'>install_mobile</span> ¦w¸Ë App";
+            installBtn.innerHTML = '<span class="material-symbols-outlined mr-1">install_mobile</span> å®‰è£ App';
             installBtn.onclick = async () => {
                 installBtn.remove();
                 deferredPrompt.prompt();
