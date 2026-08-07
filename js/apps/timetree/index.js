@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -23,14 +23,14 @@ async function renderTimetree(params) {
   const container = createElement('div', 'app-container timetree-app');
   container.innerHTML = `
     <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> è¿”å›ž</button>
-      <h1 class='menu-title'>æ™‚é–“æ¨¹</h1>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªð¦^</button>
+      <h1 class='menu-title'>®É¶¡¾ð</h1>
     </header>
     <div class='page'>
       <div class='calendar-header'>${month}</div>
       <div class='calendar-grid'>
         <div class='calendar-weekdays'>
-          <span>æ—¥</span><span>ä¸€</span><span>äºŒ</span><span>ä¸‰</span><span>å››</span><span>äº”</span><span>å…­</span>
+          <span>¤é</span><span>¤@</span><span>¤G</span><span>¤T</span><span>¥|</span><span>¤­</span><span>¤»</span>
         </div>
         <div class='calendar-days'>
           ${Array(firstDay).fill('<div class='day empty'></div>').join('')}
@@ -42,12 +42,12 @@ async function renderTimetree(params) {
           }).join('')}
         </div>
       </div>
-      <button class='add-event-btn'><i class='fas fa-plus'></i> æ–°å¢žäº‹ä»¶</button>
+      <button class='add-event-btn'><i class='fas fa-plus'></i> ·s¼W¨Æ¥ó</button>
     </div>
   `;
   container.querySelector('.ios-back-btn').onclick = () => Router.back();
   container.querySelector('.add-event-btn').onclick = async () => {
-    const title = prompt('äº‹ä»¶æ¨™é¡Œï¼š');
+    const title = prompt('¨Æ¥ó¼ÐÃD¡G');
     if (title) {
       events.push({ title, date: today.toISOString(), id: Date.now() });
       await saveEvents();
@@ -59,9 +59,9 @@ async function renderTimetree(params) {
 
 export default {
   id: 'timetree',
-  name: 'æ™‚é–“æ¨¹',
+  name: '®É¶¡¾ð',
   icon: 'calendar_month',
   routes: [{ path: '/timetree', render: renderTimetree }],
-  navItem: { label: 'æ™‚é–“æ¨¹', icon: 'calendar_month', path: '/timetree', showInNav: true, order: 125 },
+  navItem: { label: '®É¶¡¾ð', icon: 'calendar_month', path: '/timetree', showInNav: true, order: 125 },
   stylesPath: 'js/apps/timetree/style.css'
 };

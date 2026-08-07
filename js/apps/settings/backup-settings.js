@@ -312,7 +312,7 @@ async function renderBackupSettings() {
     // 一鍵完整備份按鈕
     const backupAllSection = createElement('div', 'mx-4 mt-6');
     const backupAllBtn = createElement('button', 'ios-btn ios-btn-primary w-full py-4');
-    backupAllBtn.innerHTML = "`<span class=`"`material-symbols-outlined mr-2`"`>backup</span> 一鍵完整備份（本地 + GitHub + Google Drive）`";
+    backupAllBtn.innerHTML = '`<span class=`'`material-symbols-outlined mr-2`'`>backup</span> 一鍵完整備份（本地 + GitHub + Google Drive）`';
     backupAllBtn.onclick = async () => {
         createToast('正在執行完整備份...', 'info');
         

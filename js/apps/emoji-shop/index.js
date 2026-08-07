@@ -1,14 +1,14 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 const EMOJIS = [
-  { id: 'e1', name: 'ç¬‘è‡‰', emoji: 'ğŸ˜Š', price: 0 },
-  { id: 'e2', name: 'æ„›å¿ƒ', emoji: 'â¤ï¸', price: 20 },
-  { id: 'e3', name: 'æ˜Ÿæ˜Ÿ', emoji: 'â­', price: 20 },
-  { id: 'e4', name: 'å½©è™¹', emoji: 'ğŸŒˆ', price: 50 },
-  { id: 'e5', name: 'é–ƒé›»', emoji: 'âš¡', price: 50 },
-  { id: 'e6', name: 'çš‡å† ', emoji: 'ğŸ‘‘', price: 100 }
+  { id: 'e1', name: '¯ºÁy', emoji: '??', price: 0 },
+  { id: 'e2', name: '·R¤ß', emoji: '??', price: 20 },
+  { id: 'e3', name: '¬P¬P', emoji: '?', price: 20 },
+  { id: 'e4', name: '±m­i', emoji: '??', price: 50 },
+  { id: 'e5', name: '°{¹q', emoji: '?', price: 50 },
+  { id: 'e6', name: '¬Ó«a', emoji: '??', price: 100 }
 ];
 
 let owned = [];
@@ -27,8 +27,8 @@ async function renderEmojiShop(params) {
   const container = createElement('div', 'app-container emoji-shop-app');
   container.innerHTML = `
     <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> è¿”å›</button>
-      <h1 class='menu-title'>è¡¨æƒ…å•†åº—</h1>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
+      <h1 class='menu-title'>ªí±¡°Ó©±</h1>
     </header>
     <div class='page'>
       <div class='emoji-grid'>
@@ -36,7 +36,7 @@ async function renderEmojiShop(params) {
           <div class='emoji-item ${owned.includes(e.id) ? 'owned' : ''}' data-id='${e.id}'>
             <span class='emoji-icon'>${e.emoji}</span>
             <span class='emoji-name'>${e.name}</span>
-            <span class='${owned.includes(e.id) ? 'owned' : 'price'}'>${owned.includes(e.id) ? 'å·²æ“æœ‰' : (e.price === 0 ? 'å…è²»' : e.price + ' å¹£')}</span>
+            <span class='${owned.includes(e.id) ? 'owned' : 'price'}'>${owned.includes(e.id) ? '¤w¾Ö¦³' : (e.price === 0 ? '§K¶O' : e.price + ' ¹ô')}</span>
           </div>
         `).join('')}
       </div>
@@ -46,7 +46,7 @@ async function renderEmojiShop(params) {
   container.querySelectorAll('.emoji-item:not(.owned)').forEach(item => {
     item.onclick = async () => {
       const emoji = EMOJIS.find(e => e.id === item.dataset.id);
-      if (emoji.price === 0 || confirm(`è³¼è²·ã€Œ${emoji.name}ã€è¡¨æƒ…ï¼Ÿ`)) {
+      if (emoji.price === 0 || confirm(`ÁÊ¶R¡u${emoji.name}¡vªí±¡¡H`)) {
         owned.push(emoji.id);
         await saveOwned();
         renderEmojiShop(params);
@@ -58,9 +58,9 @@ async function renderEmojiShop(params) {
 
 export default {
   id: 'emoji-shop',
-  name: 'è¡¨æƒ…å•†åº—',
+  name: 'ªí±¡°Ó©±',
   icon: 'mood',
   routes: [{ path: '/emoji-shop', render: renderEmojiShop }],
-  navItem: { label: 'è¡¨æƒ…å•†åº—', icon: 'mood', path: '/emoji-shop', showInNav: true, order: 142 },
+  navItem: { label: 'ªí±¡°Ó©±', icon: 'mood', path: '/emoji-shop', showInNav: true, order: 142 },
   stylesPath: 'js/apps/emoji-shop/style.css'
 };

@@ -1,4 +1,4 @@
-ï»¿import Router from './router.js';
+import Router from './router.js';
 
 function createElement(tag, className, attrs = {}) {
     const el = document.createElement(tag);
@@ -40,7 +40,7 @@ function createIOSNavBar(options) {
         });
         const backIcon = createIcon('chevron_left');
         backBtn.appendChild(backIcon);
-        backBtn.appendChild(createElement('span', '', { textContent: 'è¿”å›ž' }));
+        backBtn.appendChild(createElement('span', '', { textContent: 'ªð¦^' }));
         inner.appendChild(backBtn);
     } else {
         inner.appendChild(createElement('div', ''));
@@ -164,7 +164,7 @@ function createIOSSearchBar(onSearch) {
     
     const input = createElement('input', '', {
         type: 'text',
-        placeholder: 'æœå°‹'
+        placeholder: '·j´M'
     });
     input.addEventListener('input', (e) => {
         if (onSearch) onSearch(e.target.value);
@@ -281,7 +281,7 @@ function createKakaoChatCell(chat, onClick) {
     content.appendChild(topRow);
     
     const bottomRow = createElement('div', 'kakao-chat-cell-bottom');
-    bottomRow.appendChild(createElement('span', 'kakao-chat-cell-msg', { textContent: chat.last_message || 'é–‹å§‹æ–°å°è©±' }));
+    bottomRow.appendChild(createElement('span', 'kakao-chat-cell-msg', { textContent: chat.last_message || '¶}©l·s¹ï¸Ü' }));
     
     if (chat.unread > 0) {
         const badge = createElement('span', 'kakao-unread-badge', { textContent: chat.unread.toString() });
@@ -299,10 +299,10 @@ function formatTime(timestamp) {
     const now = new Date();
     const diff = now - date;
     
-    if (diff < 60000) return 'å‰›å‰›';
-    if (diff < 3600000) return `${Math.floor(diff / 60000)} åˆ†é˜å‰`;
+    if (diff < 60000) return '­è­è';
+    if (diff < 3600000) return `${Math.floor(diff / 60000)} ¤ÀÄÁ«e`;
     if (diff < 86400000) return `${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`;
-    if (diff < 604800000) return ['æ—¥', 'ä¸€', 'äºŒ', 'ä¸‰', 'å››', 'äº”', 'å…­'][date.getDay()];
+    if (diff < 604800000) return ['¤é', '¤@', '¤G', '¤T', '¥|', '¤­', '¤»'][date.getDay()];
     
     return `${date.getMonth() + 1}/${date.getDate()}`;
 }
@@ -357,7 +357,7 @@ function createGroupTypingIndicator(avatar, name) {
     }
     
     const bubble = createElement('div', 'kakao-bubble-left');
-    bubble.appendChild(createElement('span', 'kakao-bubble-text', { textContent: 'è¼¸å…¥ä¸­...' }));
+    bubble.appendChild(createElement('span', 'kakao-bubble-text', { textContent: '¿é¤J¤¤...' }));
     messageContent.appendChild(bubble);
     row.appendChild(messageContent);
     
@@ -375,7 +375,7 @@ function createToast(message, type = 'info') {
 }
 
 function createErrorModal(errorInfo) {
-    const { title = 'ç™¼ç”ŸéŒ¯èª¤', message, details = '', timestamp = new Date().toISOString() } = errorInfo;
+    const { title = 'µo¥Í¿ù»~', message, details = '', timestamp = new Date().toISOString() } = errorInfo;
     
     const existingModal = document.getElementById('error-modal-overlay');
     if (existingModal) existingModal.remove();
@@ -392,7 +392,7 @@ function createErrorModal(errorInfo) {
     content.appendChild(createElement('p', 'error-modal-message', { textContent: message }));
     modal.appendChild(content);
     
-    const errorText = '=== éŒ¯èª¤å ±å‘Š ===\næ™‚é–“: ' + timestamp + '\næ¨™é¡Œ: ' + title + '\nè¨Šæ¯: ' + message + (details ? '\nè©³æƒ…: ' + details : '');
+    const errorText = '=== ¿ù»~³ø§i ===\n®É¶¡: ' + timestamp + '\n¼ÐÃD: ' + title + '\n°T®§: ' + message + (details ? '\n¸Ô±¡: ' + details : '');
     
     const detailSection = createElement('div', 'error-modal-details');
     const detailHeader = createElement('div', 'error-modal-details-header', {
@@ -404,7 +404,7 @@ function createErrorModal(errorInfo) {
             icon.textContent = isHidden ? 'expand_less' : 'expand_more';
         }
     });
-    detailHeader.appendChild(createElement('span', '', { textContent: 'è©³ç´°è³‡è¨Š' }));
+    detailHeader.appendChild(createElement('span', '', { textContent: '¸Ô²Ó¸ê°T' }));
     detailHeader.appendChild(createIcon('expand_more', ''));
     detailSection.appendChild(detailHeader);
     
@@ -419,8 +419,8 @@ function createErrorModal(errorInfo) {
         onClick: async () => {
             try {
                 await navigator.clipboard.writeText(errorText);
-                copyBtn.textContent = 'å·²è¤‡è£½!';
-                setTimeout(() => copyBtn.textContent = 'è¤‡è£½éŒ¯èª¤è¨Šæ¯', 2000);
+                copyBtn.textContent = '¤w½Æ»s!';
+                setTimeout(() => copyBtn.textContent = '½Æ»s¿ù»~°T®§', 2000);
             } catch (e) {
                 const textarea = document.createElement('textarea');
                 textarea.value = errorText;
@@ -430,12 +430,12 @@ function createErrorModal(errorInfo) {
                 textarea.select();
                 document.execCommand('copy');
                 document.body.removeChild(textarea);
-                copyBtn.textContent = 'å·²è¤‡è£½!';
-                setTimeout(() => copyBtn.textContent = 'è¤‡è£½éŒ¯èª¤è¨Šæ¯', 2000);
+                copyBtn.textContent = '¤w½Æ»s!';
+                setTimeout(() => copyBtn.textContent = '½Æ»s¿ù»~°T®§', 2000);
             }
         }
     });
-    copyBtn.textContent = 'è¤‡è£½éŒ¯èª¤è¨Šæ¯';
+    copyBtn.textContent = '½Æ»s¿ù»~°T®§';
     actions.appendChild(copyBtn);
     
     const closeBtn = createElement('button', 'error-modal-btn close', {
@@ -444,7 +444,7 @@ function createErrorModal(errorInfo) {
             setTimeout(() => overlay.remove(), 300);
         }
     });
-    closeBtn.textContent = 'é—œé–‰';
+    closeBtn.textContent = 'Ãö³¬';
     actions.appendChild(closeBtn);
     
     modal.appendChild(actions);

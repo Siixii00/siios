@@ -1244,7 +1244,7 @@ function closeFabMenu(fabBtn, fabMenu) {
 }
 
 async function refreshFeed(main, pullIndicator) {
-    pullIndicator.innerHTML = "`<i class=`"`fas fa-spinner fa-spin`"`></i> 載入中...`";
+    pullIndicator.innerHTML = '`<i class=`'`fas fa-spinner fa-spin`'`></i> 載入中...`';
     pullIndicator.classList.add('active');
     
     console.log('[Twitter] 開始刷新推文');
@@ -1316,7 +1316,7 @@ async function refreshFeed(main, pullIndicator) {
         console.error('[Twitter] 刷新失敗:', error);
         createToast('更新失敗，請稍後再試');
     } finally {
-        pullIndicator.innerHTML = "`<i class=`"`fas fa-arrow-down`"`></i> 下拉刷新`";
+        pullIndicator.innerHTML = '`<i class=`'`fas fa-arrow-down`'`></i> 下拉刷新`';
         pullIndicator.classList.remove('active');
     }
 }
@@ -1332,7 +1332,7 @@ async function renderTwitterHome() {
     const container = createElement('div', 'twitter-app');
     
     const pullIndicator = createElement('div', 'pull-indicator');
-    pullIndicator.innerHTML = "`<i class=`"`fas fa-arrow-down`"`></i> 下拉刷新`";
+    pullIndicator.innerHTML = '`<i class=`'`fas fa-arrow-down`'`></i> 下拉刷新`';
     container.appendChild(pullIndicator);
     
     const header = createElement('header', 'top-bar');
@@ -1470,7 +1470,7 @@ async function renderTwitterHome() {
     });
     
     const fabBtn = createElement('button', 'fab-btn', { ariaLabel: '發推' });
-    fabBtn.innerHTML = "`<i class=`"`fas fa-plus`"`></i>`";
+    fabBtn.innerHTML = '`<i class=`'`fas fa-plus`'`></i>`';
     
     const fabMenu = createElement('div', 'fab-menu');
     fabMenu.innerHTML = `

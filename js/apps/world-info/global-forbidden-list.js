@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar } from '../../components.js';
 import { GlobalForbiddenDB } from '../../db.js';
 
@@ -6,7 +6,7 @@ async function renderGlobalForbidden() {
     const container = createElement('div', 'app-container bg-ios-bg');
     
     const header = createIOSNavBar({
-        title: 'å…¨å±€ç¦ä»¤',
+        title: '¥ş§½¸T¥O',
         backPath: '/world-info'
     });
     container.appendChild(header);
@@ -21,7 +21,7 @@ async function renderGlobalForbidden() {
     
     if (entries.length === 0) {
         const emptyState = createElement('div', 'text-center py-12 text-ios-muted');
-        emptyState.textContent = 'å°šæœªå»ºç«‹ä»»ä½•å…¨å±€ç¦ä»¤';
+        emptyState.textContent = '©|¥¼«Ø¥ß¥ô¦ó¥ş§½¸T¥O';
         listContainer.appendChild(emptyState);
     } else {
         const group = createElement('div', 'ios-grouped-list');

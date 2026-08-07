@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -24,8 +24,8 @@ async function renderPaymentCode(params) {
   const container = createElement('div', 'app-container payment-app');
   container.innerHTML = `
     <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> è¿”å›</button>
-      <h1 class='menu-title'>ä»˜æ¬¾ç¢¼</h1>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
+      <h1 class='menu-title'>¥I´Ú½X</h1>
     </header>
     <div class='page'>
       <div class='code-container'>
@@ -33,8 +33,8 @@ async function renderPaymentCode(params) {
           <i class='fas fa-qr_code_2'></i>
           <div class='code-text'>${currentCode}</div>
         </div>
-        <p class='code-hint'>è«‹å‡ºç¤ºæ­¤ç¢¼çµ¦å•†å®¶æƒæ</p>
-        <button class='refresh-btn'><i class='fas fa-sync-alt'></i> åˆ·æ–°ä»˜æ¬¾ç¢¼</button>
+        <p class='code-hint'>½Ğ¥X¥Ü¦¹½Xµ¹°Ó®a±½´y</p>
+        <button class='refresh-btn'><i class='fas fa-sync-alt'></i> ¨ê·s¥I´Ú½X</button>
       </div>
     </div>
   `;
@@ -51,9 +51,9 @@ async function renderPaymentCode(params) {
 
 export default {
   id: 'payment-code',
-  name: 'ä»˜æ¬¾ç¢¼',
+  name: '¥I´Ú½X',
   icon: 'qr_code_2',
   routes: [{ path: '/payment-code', render: renderPaymentCode }],
-  navItem: { label: 'ä»˜æ¬¾ç¢¼', icon: 'qr_code_2', path: '/payment-code', showInNav: true, order: 124 },
+  navItem: { label: '¥I´Ú½X', icon: 'qr_code_2', path: '/payment-code', showInNav: true, order: 124 },
   stylesPath: 'js/apps/payment-code/style.css'
 };

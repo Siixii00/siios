@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { UsersDB, CharactersDB } from '../../db.js';
 
@@ -8,14 +8,14 @@ async function renderUserList() {
     const container = createElement('div', 'app-container bg-ios-bg');
 
     const header = createIOSNavBar({
-        title: 'User é¢å…·è¨­å®š',
+        title: 'User ­±¨ã³]©w',
         backPath: '/settings',
         rightActions: [
             {
                 icon: 'add',
                 onClick: async () => {
-                    const newUser = await UsersDB.create({ name: 'æ–°é¢å…·' });
-                    createToast('å·²å»ºç«‹æ–°é¢å…·');
+                    const newUser = await UsersDB.create({ name: '·s­±¨ã' });
+                    createToast('¤w«Ø¥ß·s­±¨ã');
                     Router.navigate('/settings/user/' + newUser.id);
                 }
             }
@@ -30,12 +30,12 @@ async function renderUserList() {
     if (users.length === 0) {
         const empty = createElement('div', 'flex flex-col items-center justify-center pt-24');
         empty.appendChild(createIcon('person', 'text-ios-muted text-5xl mb-4'));
-        empty.appendChild(createElement('p', 'text-ios-muted', { textContent: 'å°šæœªå»ºç«‹ä»»ä½•é¢å…·' }));
+        empty.appendChild(createElement('p', 'text-ios-muted', { textContent: '©|¥¼«Ø¥ß¥ô¦ó­±¨ã' }));
         const addBtn = createElement('button', 'ios-btn ios-btn-primary mt-4', {
-            textContent: 'å»ºç«‹é¢å…·',
+            textContent: '«Ø¥ß­±¨ã',
             onClick: async () => {
-                const newUser = await UsersDB.create({ name: 'æ–°é¢å…·' });
-                createToast('å·²å»ºç«‹æ–°é¢å…·');
+                const newUser = await UsersDB.create({ name: '·s­±¨ã' });
+                createToast('¤w«Ø¥ß·s­±¨ã');
                 Router.navigate('/settings/user/' + newUser.id);
             }
         });
@@ -62,7 +62,7 @@ async function renderUserList() {
             }
 
             const info = createElement('div', 'flex-1 ml-3 min-w-0');
-            info.appendChild(createElement('span', 'text-body-lg font-medium', { textContent: user.name || 'æœªå‘½å' }));
+            info.appendChild(createElement('span', 'text-body-lg font-medium', { textContent: user.name || '¥¼©R¦W' }));
             if (user.nicknames && user.nicknames.length > 0) {
                 info.appendChild(createElement('span', 'block text-sm text-ios-muted truncate', { textContent: user.nicknames.join(', ') }));
             } else if (user.personality) {
@@ -85,7 +85,7 @@ async function renderUserList() {
 async function renderUserEdit(params) {
     const user = await UsersDB.getById(params.id);
     if (!user) {
-        createToast('é¢å…·ä¸å­˜åœ¨');
+        createToast('­±¨ã¤£¦s¦b');
         Router.navigate('/settings/user');
         return { element: createElement('div', ''), cleanup: null };
     }
@@ -95,7 +95,7 @@ async function renderUserEdit(params) {
     const container = createElement('div', 'app-container bg-ios-bg');
 
     const header = createIOSNavBar({
-        title: user.name || 'é¢å…·è¨­å®š',
+        title: user.name || '­±¨ã³]©w',
         backPath: '/settings/user'
     });
     container.appendChild(header);
@@ -105,7 +105,7 @@ async function renderUserEdit(params) {
     main.style.paddingTop = '16px';
 
     const avatarSection = createElement('div', 'mb-2 ml-8');
-    avatarSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'å¤§é ­è²¼' }));
+    avatarSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¤jÀY¶K' }));
     const avatarGroup = createElement('div', 'ios-grouped-list mx-4');
     const avatarCell = createElement('div', 'p-4 flex items-center gap-4');
 
@@ -126,12 +126,12 @@ async function renderUserEdit(params) {
     main.appendChild(avatarGroup);
 
     const nameSection = createElement('div', 'mb-2 ml-8 mt-4');
-    nameSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'åç¨±' }));
+    nameSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¦WºÙ' }));
     const nameGroup = createElement('div', 'ios-grouped-list mx-4');
     const nameCell = createElement('div', 'p-4');
     const nameInput = createElement('input', 'ios-input w-full', {
         type: 'text',
-        placeholder: 'é¢å…·åç¨±',
+        placeholder: '­±¨ã¦WºÙ',
         value: user.name || ''
     });
     nameCell.appendChild(nameInput);
@@ -140,12 +140,12 @@ async function renderUserEdit(params) {
     main.appendChild(nameGroup);
 
     const nickSection = createElement('div', 'mb-2 ml-8 mt-4');
-    nickSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'æš±ç¨±' }));
+    nickSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¼ÊºÙ' }));
     const nickGroup = createElement('div', 'ios-grouped-list mx-4');
     const nickCell = createElement('div', 'p-4');
     const nickInput = createElement('input', 'ios-input w-full', {
         type: 'text',
-        placeholder: 'ç”¨é€—è™Ÿåˆ†éš”å¤šå€‹æš±ç¨±ï¼Œä¾‹å¦‚ï¼šå°æ˜,æ˜å“¥',
+        placeholder: '¥Î³r¸¹¤À¹j¦h­Ó¼ÊºÙ¡A¨Ò¦p¡G¤p©ú,©ú­ô',
         value: (user.nicknames || []).join(', ')
     });
     nickCell.appendChild(nickInput);
@@ -154,11 +154,11 @@ async function renderUserEdit(params) {
     main.appendChild(nickGroup);
 
     const personalitySection = createElement('div', 'mb-2 ml-8 mt-4');
-    personalitySection.appendChild(createElement('p', 'ios-section-header', { textContent: 'å€‹æ€§æè¿°' }));
+    personalitySection.appendChild(createElement('p', 'ios-section-header', { textContent: '­Ó©Ê´y­z' }));
     const personalityGroup = createElement('div', 'ios-grouped-list mx-4');
     const personalityCell = createElement('div', 'p-4');
     const personalityInput = createElement('textarea', 'ios-input w-full', {
-        placeholder: 'æè¿°æ­¤é¢å…·çš„å€‹æ€§ç‰¹è³ª...',
+        placeholder: '´y­z¦¹­±¨ãªº­Ó©Ê¯S½è...',
         rows: '4'
     });
     personalityInput.value = user.personality || '';
@@ -173,7 +173,7 @@ async function renderUserEdit(params) {
     const mbtiCell = createElement('div', 'p-4');
     const mbtiInput = createElement('input', 'ios-input w-full', {
         type: 'text',
-        placeholder: 'ä¾‹å¦‚ï¼šENFP',
+        placeholder: '¨Ò¦p¡GENFP',
         value: user.mbti || ''
     });
     mbtiCell.appendChild(mbtiInput);
@@ -182,11 +182,11 @@ async function renderUserEdit(params) {
     main.appendChild(mbtiGroup);
 
     const styleSection = createElement('div', 'mb-2 ml-8 mt-4');
-    styleSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'èªªè©±é¢¨æ ¼ / å°è©±èˆ‰ä¾‹' }));
+    styleSection.appendChild(createElement('p', 'ios-section-header', { textContent: '»¡¸Ü­·®æ / ¹ï¸ÜÁ|¨Ò' }));
     const styleGroup = createElement('div', 'ios-grouped-list mx-4');
     const styleCell = createElement('div', 'p-4');
     const styleInput = createElement('textarea', 'ios-input w-full', {
-        placeholder: 'æè¿°æ­¤é¢å…·çš„èªªè©±æ–¹å¼ï¼Œæˆ–æä¾›å°è©±ç¯„ä¾‹...',
+        placeholder: '´y­z¦¹­±¨ãªº»¡¸Ü¤è¦¡¡A©Î´£¨Ñ¹ï¸Ü½d¨Ò...',
         rows: '4'
     });
     styleInput.value = user.speech_style || '';
@@ -196,11 +196,11 @@ async function renderUserEdit(params) {
     main.appendChild(styleGroup);
 
     const sleepSection = createElement('div', 'mb-2 ml-8 mt-4');
-    sleepSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'ç¡çœ æ™‚é–“ï¼ˆè¨˜æ†¶é‡æ•´ï¼‰' }));
+    sleepSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'ºÎ¯v®É¶¡¡]°O¾Ğ­«¾ã¡^' }));
     const sleepGroup = createElement('div', 'ios-grouped-list mx-4');
     const sleepCell = createElement('div', 'p-4 flex gap-4');
     const sleepStart = createElement('div', 'flex-1');
-    sleepStart.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: 'å…¥ç¡æ™‚é–“' }));
+    sleepStart.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '¤JºÎ®É¶¡' }));
     const sleepStartInput = createElement('input', 'ios-input w-full', {
         type: 'time',
         value: user.sleep_start || '23:00'
@@ -208,7 +208,7 @@ async function renderUserEdit(params) {
     sleepStart.appendChild(sleepStartInput);
     sleepCell.appendChild(sleepStart);
     const sleepEnd = createElement('div', 'flex-1');
-    sleepEnd.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: 'èµ·åºŠæ™‚é–“' }));
+    sleepEnd.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '°_§É®É¶¡' }));
     const sleepEndInput = createElement('input', 'ios-input w-full', {
         type: 'time',
         value: user.sleep_end || '07:00'
@@ -220,12 +220,12 @@ async function renderUserEdit(params) {
     main.appendChild(sleepGroup);
 
     const charSection = createElement('div', 'mb-2 ml-8 mt-4');
-    charSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'å°æ‡‰çš„ Char' }));
+    charSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¹ïÀ³ªº Char' }));
     const charGroup = createElement('div', 'ios-grouped-list mx-4');
     const charCell = createElement('div', 'p-4');
     const charInput = createElement('input', 'ios-input w-full', {
         type: 'text',
-        placeholder: 'ç”¨é€—è™Ÿåˆ†éš”å¤šå€‹ Char åç¨±',
+        placeholder: '¥Î³r¸¹¤À¹j¦h­Ó Char ¦WºÙ',
         value: (user.assigned_chars || []).join(', ')
     });
     charCell.appendChild(charInput);
@@ -234,11 +234,11 @@ async function renderUserEdit(params) {
     main.appendChild(charGroup);
 
     const tabooSection = createElement('div', 'mb-2 ml-8 mt-4');
-    tabooSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'Char ç¦å¿Œ / é¿å…ç”¨è©' }));
+    tabooSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'Char ¸T§Ò / Á×§K¥Îµü' }));
     const tabooGroup = createElement('div', 'ios-grouped-list mx-4');
     const tabooCell = createElement('div', 'p-4');
     const tabooInput = createElement('textarea', 'ios-input w-full', {
-        placeholder: 'ç”¨é€—è™Ÿæˆ–æ›è¡Œåˆ—å‡ºéœ€è¦é¿å…çš„ç”¨è©æˆ–è©±é¡Œ...',
+        placeholder: '¥Î³r¸¹©Î´«¦æ¦C¥X»İ­nÁ×§Kªº¥Îµü©Î¸ÜÃD...',
         rows: '3'
     });
     tabooInput.value = (user.taboos || []).join(', ');
@@ -248,7 +248,7 @@ async function renderUserEdit(params) {
     main.appendChild(tabooGroup);
 
     const saveSection = createElement('div', 'mx-4 mt-6');
-    const saveBtn = createElement('button', 'ios-btn ios-btn-primary w-full py-3', { textContent: 'å„²å­˜é¢å…·è¨­å®š' });
+    const saveBtn = createElement('button', 'ios-btn ios-btn-primary w-full py-3', { textContent: 'Àx¦s­±¨ã³]©w' });
     saveBtn.onclick = async () => {
         const nicknames = nickInput.value.split(',').map(s => s.trim()).filter(Boolean);
         const assignedChars = charInput.value.split(',').map(s => s.trim()).filter(Boolean);
@@ -256,7 +256,7 @@ async function renderUserEdit(params) {
 
         await UsersDB.update(params.id, {
             avatar: avatarInput.value.trim(),
-            name: nameInput.value.trim() || 'æœªå‘½å',
+            name: nameInput.value.trim() || '¥¼©R¦W',
             nicknames,
             personality: personalityInput.value.trim(),
             mbti: mbtiInput.value.trim().toUpperCase(),
@@ -266,18 +266,18 @@ async function renderUserEdit(params) {
             assigned_chars: assignedChars,
             taboos
         });
-        createToast('é¢å…·è¨­å®šå·²å„²å­˜');
+        createToast('­±¨ã³]©w¤wÀx¦s');
         Router.navigate('/settings/user/' + params.id);
     };
     saveSection.appendChild(saveBtn);
     main.appendChild(saveSection);
 
     const deleteSection = createElement('div', 'mx-4 mt-4 mb-4');
-    const deleteBtn = createElement('button', 'ios-btn w-full py-3 text-red-500', { textContent: 'åˆªé™¤æ­¤é¢å…·' });
+    const deleteBtn = createElement('button', 'ios-btn w-full py-3 text-red-500', { textContent: '§R°£¦¹­±¨ã' });
     deleteBtn.onclick = async () => {
-        if (confirm('ç¢ºå®šè¦åˆªé™¤ã€Œ' + (user.name || 'æ­¤é¢å…·') + 'ã€ï¼Ÿæ­¤æ“ä½œç„¡æ³•å¾©åŸã€‚')) {
+        if (confirm('½T©w­n§R°£¡u' + (user.name || '¦¹­±¨ã') + '¡v¡H¦¹¾Ş§@µLªk´_­ì¡C')) {
             await UsersDB.delete(params.id);
-            createToast('å·²åˆªé™¤é¢å…·');
+            createToast('¤w§R°£­±¨ã');
             Router.navigate('/settings/user');
         }
     };

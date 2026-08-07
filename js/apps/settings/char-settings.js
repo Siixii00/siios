@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { CharactersDB, SettingsDB, UsersDB } from '../../db.js';
 
@@ -8,14 +8,14 @@ async function renderCharList() {
     const container = createElement('div', 'app-container bg-ios-bg');
 
     const header = createIOSNavBar({
-        title: 'Char è¨­å®š',
+        title: 'Char ³]©w',
         backPath: '/settings',
         rightActions: [
             {
                 icon: 'add',
                 onClick: async () => {
-                    const newChar = await CharactersDB.create({ name: 'æ–°è§’è‰²' });
-                    createToast('å·²å»ºç«‹æ–°è§’è‰²');
+                    const newChar = await CharactersDB.create({ name: '·s¨¤¦â' });
+                    createToast('¤w«Ø¥ß·s¨¤¦â');
                     Router.navigate('/settings/char/' + newChar.id);
                 }
             }
@@ -30,12 +30,12 @@ async function renderCharList() {
     if (characters.length === 0) {
         const empty = createElement('div', 'flex flex-col items-center justify-center pt-24');
         empty.appendChild(createIcon('smart_toy', 'text-ios-muted text-5xl mb-4'));
-        empty.appendChild(createElement('p', 'text-ios-muted', { textContent: 'å°šæœªå»ºç«‹ä»»ä½•è§’è‰²' }));
+        empty.appendChild(createElement('p', 'text-ios-muted', { textContent: '©|¥¼«Ø¥ß¥ô¦ó¨¤¦â' }));
         const addBtn = createElement('button', 'ios-btn ios-btn-primary mt-4', {
-            textContent: 'å»ºç«‹è§’è‰²',
+            textContent: '«Ø¥ß¨¤¦â',
             onClick: async () => {
-                const newChar = await CharactersDB.create({ name: 'æ–°è§’è‰²' });
-                createToast('å·²å»ºç«‹æ–°è§’è‰²');
+                const newChar = await CharactersDB.create({ name: '·s¨¤¦â' });
+                createToast('¤w«Ø¥ß·s¨¤¦â');
                 Router.navigate('/settings/char/' + newChar.id);
             }
         });
@@ -62,7 +62,7 @@ async function renderCharList() {
             }
 
             const info = createElement('div', 'flex-1 ml-3 min-w-0');
-            info.appendChild(createElement('span', 'text-body-lg font-medium', { textContent: char.name || 'æœªå‘½å' }));
+            info.appendChild(createElement('span', 'text-body-lg font-medium', { textContent: char.name || '¥¼©R¦W' }));
             if (char.nicknames && char.nicknames.length > 0) {
                 info.appendChild(createElement('span', 'block text-sm text-ios-muted truncate', { textContent: char.nicknames.join(', ') }));
             } else if (char.description) {
@@ -85,7 +85,7 @@ async function renderCharList() {
 async function renderCharEdit(params) {
     const char = await CharactersDB.getById(params.id);
     if (!char) {
-        createToast('è§’è‰²ä¸å­˜åœ¨');
+        createToast('¨¤¦â¤£¦s¦b');
         Router.navigate('/settings/char');
         return { element: createElement('div', ''), cleanup: null };
     }
@@ -94,7 +94,7 @@ async function renderCharEdit(params) {
     const container = createElement('div', 'app-container bg-ios-bg');
 
     const header = createIOSNavBar({
-        title: char.name || 'è§’è‰²è¨­å®š',
+        title: char.name || '¨¤¦â³]©w',
         backPath: '/settings/char'
     });
     container.appendChild(header);
@@ -104,7 +104,7 @@ async function renderCharEdit(params) {
     main.style.paddingTop = '16px';
 
     const avatarSection = createElement('div', 'mb-2 ml-8');
-    avatarSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'å¤§é ­è²¼' }));
+    avatarSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¤jÀY¶K' }));
     const avatarGroup = createElement('div', 'ios-grouped-list mx-4');
     const avatarCell = createElement('div', 'p-4 flex items-center gap-4');
 
@@ -125,12 +125,12 @@ async function renderCharEdit(params) {
     main.appendChild(avatarGroup);
 
     const nameSection = createElement('div', 'mb-2 ml-8 mt-4');
-    nameSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'åç¨±' }));
+    nameSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¦WºÙ' }));
     const nameGroup = createElement('div', 'ios-grouped-list mx-4');
     const nameCell = createElement('div', 'p-4');
     const nameInput = createElement('input', 'ios-input w-full', {
         type: 'text',
-        placeholder: 'è§’è‰²åç¨±',
+        placeholder: '¨¤¦â¦WºÙ',
         value: char.name || ''
     });
     nameCell.appendChild(nameInput);
@@ -139,12 +139,12 @@ async function renderCharEdit(params) {
     main.appendChild(nameGroup);
 
     const nickSection = createElement('div', 'mb-2 ml-8 mt-4');
-    nickSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'æš±ç¨±' }));
+    nickSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¼ÊºÙ' }));
     const nickGroup = createElement('div', 'ios-grouped-list mx-4');
     const nickCell = createElement('div', 'p-4');
     const nickInput = createElement('input', 'ios-input w-full', {
         type: 'text',
-        placeholder: 'ç”¨é€—è™Ÿåˆ†éš”å¤šå€‹æš±ç¨±ï¼Œä¾‹å¦‚ï¼šå°ç´«,ç´«ç´«',
+        placeholder: '¥Î³r¸¹¤À¹j¦h­Ó¼ÊºÙ¡A¨Ò¦p¡G¤pµµ,µµµµ',
         value: (char.nicknames || []).join(', ')
     });
     nickCell.appendChild(nickInput);
@@ -153,11 +153,11 @@ async function renderCharEdit(params) {
     main.appendChild(nickGroup);
 
     const personalitySection = createElement('div', 'mb-2 ml-8 mt-4');
-    personalitySection.appendChild(createElement('p', 'ios-section-header', { textContent: 'å€‹æ€§æè¿°' }));
+    personalitySection.appendChild(createElement('p', 'ios-section-header', { textContent: '­Ó©Ê´y­z' }));
     const personalityGroup = createElement('div', 'ios-grouped-list mx-4');
     const personalityCell = createElement('div', 'p-4');
     const personalityInput = createElement('textarea', 'ios-input w-full', {
-        placeholder: 'æè¿°è§’è‰²çš„å€‹æ€§ç‰¹è³ª...',
+        placeholder: '´y­z¨¤¦âªº­Ó©Ê¯S½è...',
         rows: '4'
     });
     personalityInput.value = char.personality || '';
@@ -172,7 +172,7 @@ async function renderCharEdit(params) {
     const mbtiCell = createElement('div', 'p-4');
     const mbtiInput = createElement('input', 'ios-input w-full', {
         type: 'text',
-        placeholder: 'ä¾‹å¦‚ï¼šINFP',
+        placeholder: '¨Ò¦p¡GINFP',
         value: char.mbti || ''
     });
     mbtiCell.appendChild(mbtiInput);
@@ -181,11 +181,11 @@ async function renderCharEdit(params) {
     main.appendChild(mbtiGroup);
 
     const styleSection = createElement('div', 'mb-2 ml-8 mt-4');
-    styleSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'èªªè©±é¢¨æ ¼ / å°è©±èˆ‰ä¾‹' }));
+    styleSection.appendChild(createElement('p', 'ios-section-header', { textContent: '»¡¸Ü­·®æ / ¹ï¸ÜÁ|¨Ò' }));
     const styleGroup = createElement('div', 'ios-grouped-list mx-4');
     const styleCell = createElement('div', 'p-4');
     const styleInput = createElement('textarea', 'ios-input w-full', {
-        placeholder: 'æè¿°è§’è‰²çš„èªªè©±æ–¹å¼ï¼Œæˆ–æä¾›å°è©±ç¯„ä¾‹...',
+        placeholder: '´y­z¨¤¦âªº»¡¸Ü¤è¦¡¡A©Î´£¨Ñ¹ï¸Ü½d¨Ò...',
         rows: '4'
     });
     styleInput.value = char.speech_style || '';
@@ -195,11 +195,11 @@ async function renderCharEdit(params) {
     main.appendChild(styleGroup);
 
     const sleepSection = createElement('div', 'mb-2 ml-8 mt-4');
-    sleepSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'ç¡çœ æ™‚é–“ï¼ˆè¨˜æ†¶é‡æ•´ï¼‰' }));
+    sleepSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'ºÎ¯v®É¶¡¡]°O¾Ğ­«¾ã¡^' }));
     const sleepGroup = createElement('div', 'ios-grouped-list mx-4');
     const sleepCell = createElement('div', 'p-4 flex gap-4');
     const sleepStart = createElement('div', 'flex-1');
-    sleepStart.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: 'å…¥ç¡æ™‚é–“' }));
+    sleepStart.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '¤JºÎ®É¶¡' }));
     const sleepStartInput = createElement('input', 'ios-input w-full', {
         type: 'time',
         value: char.sleep_start || '23:00'
@@ -207,7 +207,7 @@ async function renderCharEdit(params) {
     sleepStart.appendChild(sleepStartInput);
     sleepCell.appendChild(sleepStart);
     const sleepEnd = createElement('div', 'flex-1');
-    sleepEnd.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: 'èµ·åºŠæ™‚é–“' }));
+    sleepEnd.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '°_§É®É¶¡' }));
     const sleepEndInput = createElement('input', 'ios-input w-full', {
         type: 'time',
         value: char.sleep_end || '07:00'
@@ -219,12 +219,12 @@ async function renderCharEdit(params) {
     main.appendChild(sleepGroup);
 
     const birthSection = createElement('div', 'mb-2 ml-8 mt-4');
-    birthSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'å‡ºç”Ÿè³‡è¨Šï¼ˆç´«å¾®æ–—æ•¸åˆ†æï¼‰' }));
+    birthSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¥X¥Í¸ê°T¡]µµ·L¤æ¼Æ¤ÀªR¡^' }));
     const birthGroup = createElement('div', 'ios-grouped-list mx-4');
 
     const birthDateCell = createElement('div', 'p-4 flex gap-4');
     const birthDateField = createElement('div', 'flex-1');
-    birthDateField.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: 'å‡ºç”Ÿæ—¥æœŸ' }));
+    birthDateField.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '¥X¥Í¤é´Á' }));
     const birthDateInput = createElement('input', 'ios-input w-full', {
         type: 'date',
         value: char.birth_date || ''
@@ -233,7 +233,7 @@ async function renderCharEdit(params) {
     birthDateCell.appendChild(birthDateField);
 
     const birthTimeField = createElement('div', 'flex-1');
-    birthTimeField.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: 'å‡ºç”Ÿæ™‚é–“' }));
+    birthTimeField.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '¥X¥Í®É¶¡' }));
     const birthTimeInput = createElement('input', 'ios-input w-full', {
         type: 'time',
         value: char.birth_time || ''
@@ -243,10 +243,10 @@ async function renderCharEdit(params) {
     birthGroup.appendChild(birthDateCell);
 
     const birthLocationCell = createElement('div', 'p-4');
-    birthLocationCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: 'å‡ºç”Ÿåœ°é»' }));
+    birthLocationCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '¥X¥Í¦aÂI' }));
     const birthLocationInput = createElement('input', 'ios-input w-full', {
         type: 'text',
-        placeholder: 'ä¾‹å¦‚ï¼šå°åŒ—å¸‚',
+        placeholder: '¨Ò¦p¡G¥x¥_¥«',
         value: char.birth_location || ''
     });
     birthLocationCell.appendChild(birthLocationInput);
@@ -254,23 +254,23 @@ async function renderCharEdit(params) {
 
     const genderCell = createElement('div', 'p-4 flex gap-4');
     const genderField = createElement('div', 'flex-1');
-    genderField.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: 'æ€§åˆ¥' }));
+    genderField.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '©Ê§O' }));
     const genderSelect = createElement('select', 'ios-input w-full');
     genderSelect.innerHTML = `
-        <option value=''>æœªè¨­å®š</option>
-        <option value='male'>ç”·</option>
-        <option value='female'>å¥³</option>
+        <option value=''>¥¼³]©w</option>
+        <option value='male'>¨k</option>
+        <option value='female'>¤k</option>
     `;
     genderSelect.value = char.gender || '';
     genderField.appendChild(genderSelect);
     genderCell.appendChild(genderField);
 
     const calendarField = createElement('div', 'flex-1');
-    calendarField.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: 'æ›†æ³•' }));
+    calendarField.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '¾äªk' }));
     const calendarSelect = createElement('select', 'ios-input w-full');
     calendarSelect.innerHTML = `
-        <option value='solar'>åœ‹æ›†</option>
-        <option value='lunar'>è¾²æ›†</option>
+        <option value='solar'>°ê¾ä</option>
+        <option value='lunar'>¹A¾ä</option>
     `;
     calendarSelect.value = char.birth_calendar_type || 'solar';
     calendarField.appendChild(calendarSelect);
@@ -283,20 +283,20 @@ async function renderCharEdit(params) {
     const users = await UsersDB.getAll();
     
     const userSection = createElement('div', 'mb-2 ml-8 mt-4');
-    userSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'ç¶å®š User é¢å…·' }));
+    userSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¸j©w User ­±¨ã' }));
     const userGroup = createElement('div', 'ios-grouped-list mx-4');
     const userCell = createElement('div', 'p-4');
     const userSelect = createElement('select', 'ios-input w-full');
     const defaultOption = createElement('option', '', {
         value: '',
-        textContent: 'ä¸ç¶å®šï¼ˆä½¿ç”¨é è¨­èº«ä»½ï¼‰'
+        textContent: '¤£¸j©w¡]¨Ï¥Î¹w³]¨­¥÷¡^'
     });
     if (!char.bound_user_id) defaultOption.selected = true;
     userSelect.appendChild(defaultOption);
     users.forEach(user => {
         const option = createElement('option', '', {
             value: user.id,
-            textContent: user.name || 'æœªå‘½å'
+            textContent: user.name || '¥¼©R¦W'
         });
         if (char.bound_user_id === user.id) option.selected = true;
         userSelect.appendChild(option);
@@ -308,14 +308,14 @@ async function renderCharEdit(params) {
 
 
     const saveSection = createElement('div', 'mx-4 mt-6');
-    const saveBtn = createElement('button', 'ios-btn ios-btn-primary w-full py-3', { textContent: 'å„²å­˜è§’è‰²è¨­å®š' });
+    const saveBtn = createElement('button', 'ios-btn ios-btn-primary w-full py-3', { textContent: 'Àx¦s¨¤¦â³]©w' });
     saveBtn.onclick = async () => {
         const nicknames = nickInput.value.split(',').map(s => s.trim()).filter(Boolean);
         const boundUserId = userSelect.value || null;
 
         await CharactersDB.update(params.id, {
             avatar: avatarInput.value.trim(),
-            name: nameInput.value.trim() || 'æœªå‘½å',
+            name: nameInput.value.trim() || '¥¼©R¦W',
             nicknames,
             personality: personalityInput.value.trim(),
             mbti: mbtiInput.value.trim().toUpperCase(),
@@ -329,18 +329,18 @@ async function renderCharEdit(params) {
             birth_calendar_type: calendarSelect.value,
             gender: genderSelect.value || null
         });
-        createToast('è§’è‰²è¨­å®šå·²å„²å­˜');
+        createToast('¨¤¦â³]©w¤wÀx¦s');
         Router.navigate('/settings/char/' + params.id);
     };
     saveSection.appendChild(saveBtn);
     main.appendChild(saveSection);
 
     const deleteSection = createElement('div', 'mx-4 mt-4 mb-4');
-    const deleteBtn = createElement('button', 'ios-btn w-full py-3 text-red-500', { textContent: 'åˆªé™¤æ­¤è§’è‰²' });
+    const deleteBtn = createElement('button', 'ios-btn w-full py-3 text-red-500', { textContent: '§R°£¦¹¨¤¦â' });
     deleteBtn.onclick = async () => {
-        if (confirm('ç¢ºå®šè¦åˆªé™¤ã€Œ' + (char.name || 'æ­¤è§’è‰²') + 'ã€ï¼Ÿæ­¤æ“ä½œç„¡æ³•å¾©åŸã€‚')) {
+        if (confirm('½T©w­n§R°£¡u' + (char.name || '¦¹¨¤¦â') + '¡v¡H¦¹¾Ş§@µLªk´_­ì¡C')) {
             await CharactersDB.delete(params.id);
-            createToast('å·²åˆªé™¤è§’è‰²');
+            createToast('¤w§R°£¨¤¦â');
             Router.navigate('/settings/char');
         }
     };

@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIOSToggle, createToast } from '../../components.js';
 import { GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB } from '../../db.js';
 
@@ -37,13 +37,13 @@ async function renderEntryEditor(params) {
     header.style.paddingTop = 'env(safe-area-inset-top)';
     const inner = createElement('div', 'ios-nav-bar-inner');
     
-    const cancelBtn = createElement('button', 'ios-btn', { textContent: 'å–æ¶ˆ' });
+    const cancelBtn = createElement('button', 'ios-btn', { textContent: '¨ú®ø' });
     cancelBtn.onclick = () => Router.back();
     inner.appendChild(cancelBtn);
     
-    inner.appendChild(createElement('h1', 'ios-inline-title', { textContent: entryId ? 'ç·¨è¼¯æ¢ç›®' : 'æ–°å¢æ¢ç›®' }));
+    inner.appendChild(createElement('h1', 'ios-inline-title', { textContent: entryId ? '½s¿è±ø¥Ø' : '·s¼W±ø¥Ø' }));
     
-    const doneBtn = createElement('button', 'ios-btn font-bold', { textContent: 'å®Œæˆ' });
+    const doneBtn = createElement('button', 'ios-btn font-bold', { textContent: '§¹¦¨' });
     inner.appendChild(doneBtn);
     
     header.appendChild(inner);
@@ -55,8 +55,8 @@ async function renderEntryEditor(params) {
     
     const basicGroup = createElement('div', 'ios-grouped-list mx-4');
     const nameCell = createElement('div', 'ios-list-cell ios-list-cell-full');
-    nameCell.appendChild(createElement('span', 'flex-1', { textContent: 'åç¨±' }));
-    const nameInput = createElement('input', 'text-right bg-transparent outline-none text-ios-muted', { type: 'text', value: formState.name, placeholder: 'è¼¸å…¥åç¨±' });
+    nameCell.appendChild(createElement('span', 'flex-1', { textContent: '¦WºÙ' }));
+    const nameInput = createElement('input', 'text-right bg-transparent outline-none text-ios-muted', { type: 'text', value: formState.name, placeholder: '¿é¤J¦WºÙ' });
     nameInput.oninput = (e) => formState.name = e.target.value;
     nameCell.appendChild(nameInput);
     basicGroup.appendChild(nameCell);
@@ -64,7 +64,7 @@ async function renderEntryEditor(params) {
     
     const contentGroup = createElement('div', 'ios-grouped-list mx-4 mt-4');
     const contentCell = createElement('div', 'ios-list-cell ios-list-cell-full', { style: 'flex-direction: column; align-items: flex-start;' });
-    const contentTextarea = createElement('textarea', 'w-full min-h-[120px] bg-transparent outline-none resize-none', { placeholder: 'è¼¸å…¥å…§å®¹', value: formState.content });
+    const contentTextarea = createElement('textarea', 'w-full min-h-[120px] bg-transparent outline-none resize-none', { placeholder: '¿é¤J¤º®e', value: formState.content });
     contentTextarea.oninput = (e) => formState.content = e.target.value;
     contentCell.appendChild(contentTextarea);
     contentGroup.appendChild(contentCell);
@@ -73,8 +73,8 @@ async function renderEntryEditor(params) {
     if (currentType === 'keyword') {
         const keywordsGroup = createElement('div', 'ios-grouped-list mx-4 mt-4');
         const keywordsCell = createElement('div', 'ios-list-cell ios-list-cell-full');
-        keywordsCell.appendChild(createElement('span', 'flex-1', { textContent: 'é—œéµå­—ï¼ˆé€—è™Ÿåˆ†éš”ï¼‰' }));
-        const keywordsInput = createElement('input', 'text-right bg-transparent outline-none text-ios-muted', { type: 'text', value: (formState.keywords || []).join(', '), placeholder: 'é—œéµå­—1, é—œéµå­—2' });
+        keywordsCell.appendChild(createElement('span', 'flex-1', { textContent: 'ÃöÁä¦r¡]³r¸¹¤À¹j¡^' }));
+        const keywordsInput = createElement('input', 'text-right bg-transparent outline-none text-ios-muted', { type: 'text', value: (formState.keywords || []).join(', '), placeholder: 'ÃöÁä¦r1, ÃöÁä¦r2' });
         keywordsInput.oninput = (e) => { formState.keywords = e.target.value.split(',').map(k => k.trim()).filter(k => k); };
         keywordsCell.appendChild(keywordsInput);
         keywordsGroup.appendChild(keywordsCell);
@@ -84,10 +84,10 @@ async function renderEntryEditor(params) {
     const settingsGroup = createElement('div', 'ios-grouped-list mx-4 mt-4');
     
     const priorityCell = createElement('div', 'ios-list-cell ios-list-cell-full');
-    priorityCell.appendChild(createElement('span', 'flex-1', { textContent: 'æ’å…¥ä½ç½®' }));
+    priorityCell.appendChild(createElement('span', 'flex-1', { textContent: '´¡¤J¦ì¸m' }));
     const prioritySelect = createElement('select', 'bg-transparent outline-none');
     ['front', 'middle', 'back'].forEach(p => {
-        const option = createElement('option', '', { value: p, textContent: p === 'front' ? 'å‰' : p === 'middle' ? 'ä¸­' : 'å¾Œ' });
+        const option = createElement('option', '', { value: p, textContent: p === 'front' ? '«e' : p === 'middle' ? '¤¤' : '«á' });
         if (formState.priority === p) option.selected = true;
         prioritySelect.appendChild(option);
     });
@@ -96,7 +96,7 @@ async function renderEntryEditor(params) {
     settingsGroup.appendChild(priorityCell);
     
     const enabledCell = createElement('div', 'ios-list-cell ios-list-cell-full');
-    enabledCell.appendChild(createElement('span', 'flex-1', { textContent: 'å•Ÿç”¨' }));
+    enabledCell.appendChild(createElement('span', 'flex-1', { textContent: '±Ò¥Î' }));
     const enabledToggle = createIOSToggle(formState.enabled);
     enabledToggle.onclick = () => { formState.enabled = !formState.enabled; enabledToggle.classList.toggle('active'); };
     enabledCell.appendChild(enabledToggle);
@@ -106,14 +106,14 @@ async function renderEntryEditor(params) {
     container.appendChild(main);
     
     doneBtn.onclick = async () => {
-        if (!formState.name.trim()) { createToast('è«‹è¼¸å…¥åç¨±', 'error'); return; }
-        if (!formState.content.trim()) { createToast('è«‹è¼¸å…¥å…§å®¹', 'error'); return; }
+        if (!formState.name.trim()) { createToast('½Ğ¿é¤J¦WºÙ', 'error'); return; }
+        if (!formState.content.trim()) { createToast('½Ğ¿é¤J¤º®e', 'error'); return; }
         try {
             const db = getDB(currentType);
-            if (entryId) { await db.update(entryId, formState); createToast('å·²æ›´æ–°æ¢ç›®', 'success'); }
-            else { await db.create(formState); createToast('å·²å»ºç«‹æ¢ç›®', 'success'); }
+            if (entryId) { await db.update(entryId, formState); createToast('¤w§ó·s±ø¥Ø', 'success'); }
+            else { await db.create(formState); createToast('¤w«Ø¥ß±ø¥Ø', 'success'); }
             Router.back();
-        } catch (error) { createToast('å„²å­˜å¤±æ•—: ' + error.message, 'error'); }
+        } catch (error) { createToast('Àx¦s¥¢±Ñ: ' + error.message, 'error'); }
     };
     
     return { element: container, cleanup: null };

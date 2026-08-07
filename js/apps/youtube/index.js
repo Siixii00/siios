@@ -683,7 +683,7 @@ function renderCharWatchHistory(container) {
     if (!list) return;
     
     if (charWatchHistory.length === 0) {
-        list.innerHTML = "`<div class=`"`yt-char-empty`"`>尚無觀看紀錄</div>`";
+        list.innerHTML = '`<div class=`'`yt-char-empty`'`>尚無觀看紀錄</div>`';
         return;
     }
     
@@ -774,7 +774,7 @@ function openAddModal(container) {
     if (addThumbPreview) {
         addThumbPreview.style.backgroundImage = '';
         addThumbPreview.classList.remove('has-image');
-        addThumbPreview.innerHTML = "`<span class=`"`material-symbols-outlined`"`>image</span><span>點擊上傳封面</span>`";
+        addThumbPreview.innerHTML = '`<span class=`'`material-symbols-outlined`'`>image</span><span>點擊上傳封面</span>`';
     }
     if (addTitleInput) addTitleInput.focus();
 }
@@ -1003,7 +1003,7 @@ function resetAIVideoGenModal(container) {
     const startBtn = container.querySelector('#yt-start-video-gen-btn');
     if (startBtn) {
         startBtn.disabled = false;
-        startBtn.innerHTML = "`<span class=`"`material-symbols-outlined`"`>auto_awesome</span> 開始生成`";
+        startBtn.innerHTML = '`<span class=`'`material-symbols-outlined`'`>auto_awesome</span> 開始生成`';
     }
     
     aiVideoGenState.isGenerating = false;
@@ -1038,7 +1038,7 @@ async function startYTAIVideoGeneration(container) {
     const startBtn = container.querySelector('#yt-start-video-gen-btn');
     if (startBtn) {
         startBtn.disabled = true;
-        startBtn.innerHTML = "`<span class=`"`material-symbols-outlined`"`>progress_activity</span> 生成中...`";
+        startBtn.innerHTML = '`<span class=`'`material-symbols-outlined`'`>progress_activity</span> 生成中...`';
     }
     
     container.querySelector('.yt-ai-video-gen-status')?.removeAttribute('hidden');

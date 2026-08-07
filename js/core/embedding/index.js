@@ -1,4 +1,4 @@
-﻿class EmbeddingClient {
+class EmbeddingClient {
   constructor(settings = {}) {
     this.embeddingUrl = settings.embedding_url || settings.api_url;
     this.model = settings.embedding_model || 'text-embedding-3-small';

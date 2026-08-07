@@ -1,16 +1,16 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 async function renderSettings() {
     const githubUser = await SettingsDB.get('github_user') || null;
-    const displayName = githubUser ? (githubUser.name || githubUser.login) : 'ä½¿ç”¨è€…';
+    const displayName = githubUser ? (githubUser.name || githubUser.login) : '¨Ï¥ÎªÌ';
     const avatarSrc = githubUser ? githubUser.avatar_url : null;
 
     const container = createElement('div', 'app-container bg-ios-bg');
 
     const header = createIOSNavBar({
-        title: 'è¨­å®š',
+        title: '³]©w',
         largeTitle: false,
         backPath: '/home'
     });
@@ -39,7 +39,7 @@ async function renderSettings() {
 
     const profileInfo = createElement('div', 'flex-1 ml-4');
     profileInfo.appendChild(createElement('h2', 'font-semibold', { textContent: displayName }));
-    profileInfo.appendChild(createElement('p', 'text-sm text-ios-muted', { textContent: 'ç®¡ç†æ‚¨çš„è¨­å®šèˆ‡åŒæ­¥' }));
+    profileInfo.appendChild(createElement('p', 'text-sm text-ios-muted', { textContent: 'ºŞ²z±zªº³]©w»P¦P¨B' }));
     profileCard.appendChild(profileInfo);
 
     profileCard.appendChild(createIcon('chevron_right', 'text-ios-muted'));
@@ -51,57 +51,57 @@ async function renderSettings() {
         {
             icon: 'smart_toy',
             iconBg: 'bg-purple-500',
-            title: 'Char è¨­å®š',
-            desc: 'ç®¡ç†è§’è‰²çš„äººæ ¼ã€å¤–è²Œèˆ‡è¡Œç‚ºè¨­å®š',
+            title: 'Char ³]©w',
+            desc: 'ºŞ²z¨¤¦âªº¤H®æ¡B¥~»ª»P¦æ¬°³]©w',
             path: '/settings/char'
         },
         {
             icon: 'person',
             iconBg: 'bg-blue-500',
-            title: 'User é¢å…·è¨­å®š',
-            desc: 'ç®¡ç†ä½¿ç”¨è€…é¢å…·èˆ‡èº«ä»½è¨­å®š',
+            title: 'User ­±¨ã³]©w',
+            desc: 'ºŞ²z¨Ï¥ÎªÌ­±¨ã»P¨­¥÷³]©w',
             path: '/settings/user'
         },
         {
             icon: 'api',
             iconBg: 'bg-orange-500',
-            title: 'èŠå¤© API ä¸²æ¥è¨­å®š',
-            desc: 'è¨­å®š API ç«¯é»ã€é‡‘é‘°èˆ‡æ¨¡å‹åƒæ•¸',
+            title: '²á¤Ñ API ¦ê±µ³]©w',
+            desc: '³]©w API ºİÂI¡Bª÷Æ_»P¼Ò«¬°Ñ¼Æ',
             path: '/api-config'
         },
         {
             icon: 'extension',
             iconBg: 'bg-green-500',
-            title: 'MCP å·¥å…·æ•´åˆ',
-            desc: 'é€£æ¥å¤–éƒ¨å·¥å…·ï¼Œè®“è§’è‰²åŸ·è¡Œå¯¦éš›å‹•ä½œ',
+            title: 'MCP ¤u¨ã¾ã¦X',
+            desc: '³s±µ¥~³¡¤u¨ã¡AÅı¨¤¦â°õ¦æ¹ê»Ú°Ê§@',
             path: '/settings/mcp'
         },
         {
             icon: 'discord',
             iconBg: 'bg-indigo-600',
-            title: 'Discord æ•´åˆ',
-            desc: 'è®“ AI è§’è‰²åœ¨ Discord ä¸Šå³æ™‚å°è©±',
+            title: 'Discord ¾ã¦X',
+            desc: 'Åı AI ¨¤¦â¦b Discord ¤W§Y®É¹ï¸Ü',
             path: '/settings/discord'
         },
         {
             icon: 'sync',
             iconBg: 'bg-indigo-500',
-            title: 'æ´»å‹•åŒæ­¥',
-            desc: 'è¨˜éŒ„æ‰‹æ©Ÿæ´»å‹•ï¼Œè®“ AI äº†è§£ä½ çš„æ—¥å¸¸',
+            title: '¬¡°Ê¦P¨B',
+            desc: '°O¿ı¤â¾÷¬¡°Ê¡AÅı AI ¤F¸Ñ§Aªº¤é±`',
             path: '/activity'
         },
         {
             icon: 'cloud_sync',
             iconBg: 'bg-gradient-to-r from-green-500 to-teal-500',
-            title: 'è·¨è£ç½®åŒæ­¥',
-            desc: 'è®“æ´»å‹•è¨˜éŒ„åœ¨é›»è…¦å’Œæ‰‹æ©Ÿé–“è‡ªå‹•åŒæ­¥',
+            title: '¸ó¸Ë¸m¦P¨B',
+            desc: 'Åı¬¡°Ê°O¿ı¦b¹q¸£©M¤â¾÷¶¡¦Û°Ê¦P¨B',
             path: '/settings/cross-device'
         },
         {
             icon: 'backup',
             iconBg: 'bg-gradient-to-r from-blue-500 to-purple-600',
-            title: 'è³‡æ–™å‚™ä»½èˆ‡é‚„åŸ',
-            desc: 'æœ¬åœ° + GitHub + Google Drive ä¸‰é‡å‚™ä»½',
+            title: '¸ê®Æ³Æ¥÷»PÁÙ­ì',
+            desc: '¥»¦a + GitHub + Google Drive ¤T­«³Æ¥÷',
             path: '/settings/backup'
         }
     ];
@@ -134,7 +134,7 @@ async function renderSettings() {
     const devBadge = createElement('div', 'ios-icon-badge bg-gray-700');
     devBadge.appendChild(createIcon('code', 'text-white text-sm'));
     devCell.appendChild(devBadge);
-    devCell.appendChild(createElement('span', 'flex-1', { textContent: 'é–‹ç™¼è€…è³‡è¨Š' }));
+    devCell.appendChild(createElement('span', 'flex-1', { textContent: '¶}µoªÌ¸ê°T' }));
     const devArrow = createIcon('expand_more', 'text-ios-muted text-xl transition-transform duration-200');
     devCell.appendChild(devArrow);
     devSection.appendChild(devCell);
@@ -143,8 +143,8 @@ async function renderSettings() {
     devPanel.style.maxHeight = '0';
     devPanel.style.opacity = '0';
     const devContent = createElement('div', 'p-4 text-sm text-ios-muted space-y-2');
-    devContent.appendChild(createElement('p', '', { textContent: 'ç‰ˆæœ¬ï¼šv1.0.0' }));
-    devContent.appendChild(createElement('p', '', { textContent: 'å¾…è£œå……è³‡è¨Š' }));
+    devContent.appendChild(createElement('p', '', { textContent: 'ª©¥»¡Gv1.0.0' }));
+    devContent.appendChild(createElement('p', '', { textContent: '«İ¸É¥R¸ê°T' }));
     devPanel.appendChild(devContent);
     devSection.appendChild(devPanel);
 
@@ -175,7 +175,7 @@ async function renderSettings() {
 
 export default {
     id: 'settings',
-    name: 'è¨­å®š',
+    name: '³]©w',
     icon: 'settings',
     routes: [
         { path: '/settings', render: renderSettings }

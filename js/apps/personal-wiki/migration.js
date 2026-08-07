@@ -1,4 +1,4 @@
-﻿import { SettingsDB, WikiRecordsDB } from '../../db.js';
+import { SettingsDB, WikiRecordsDB } from '../../db.js';
 
 export async function migrateFromSettingsDB() {
     const migrated = await SettingsDB.get('wiki_migrated_to_records');
@@ -37,7 +37,7 @@ export async function migrateFromSettingsDB() {
             links: [],
             tags: [],
             cover_image: page.coverImage || null,
-            icon: page.icon || '📄',
+            icon: page.icon || '??',
             parent_id: page.parentId || null,
             created_at: page.createdAt || Date.now(),
             updated_at: page.updatedAt || Date.now()

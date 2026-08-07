@@ -1,4 +1,4 @@
-ï»¿import { createElement, createIcon } from './components.js';
+import { createElement, createIcon } from './components.js';
 
 const LockScreen = {
     element: null,
@@ -26,7 +26,7 @@ const LockScreen = {
         
         const unlockHint = createElement('div', 'lock-unlock-hint');
         unlockHint.appendChild(createIcon('keyboard_arrow_up', 'text-white/80 text-2xl'));
-        const unlockText = createElement('span', 'text-white/80 text-sm whitespace-nowrap', { textContent: 'å‘ä¸Šæ»‘å‹•ä»¥è§£é–' });
+        const unlockText = createElement('span', 'text-white/80 text-sm whitespace-nowrap', { textContent: '¦V¤W·Æ°Ê¥H¸ÑÂê' });
         unlockHint.appendChild(unlockText);
         content.appendChild(unlockHint);
         
@@ -52,11 +52,11 @@ const LockScreen = {
             const minutes = now.getMinutes().toString().padStart(2, '0');
             this.timeEl.textContent = `${hours}:${minutes}`;
             
-            const weekdays = ['æ˜ŸæœŸæ—¥', 'æ˜ŸæœŸä¸€', 'æ˜ŸæœŸäºŒ', 'æ˜ŸæœŸä¸‰', 'æ˜ŸæœŸå››', 'æ˜ŸæœŸäº”', 'æ˜ŸæœŸå…­'];
+            const weekdays = ['¬P´Á¤é', '¬P´Á¤@', '¬P´Á¤G', '¬P´Á¤T', '¬P´Á¥|', '¬P´Á¤­', '¬P´Á¤»'];
             const month = now.getMonth() + 1;
             const date = now.getDate();
             const weekday = weekdays[now.getDay()];
-            this.dateEl.textContent = `${month}æœˆ${date}æ—¥ ${weekday}`;
+            this.dateEl.textContent = `${month}¤ë${date}¤é ${weekday}`;
         };
         
         updateTime();

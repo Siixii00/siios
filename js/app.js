@@ -1,4 +1,4 @@
-ï»¿import Router from './router.js';
+import Router from './router.js';
 import { SettingsDB, initDB } from './db.js';
 import { createElement, createIcon, createToast, createErrorModal } from './components.js';
 import LockScreen from './lockscreen.js';
@@ -14,28 +14,28 @@ window.showError = function(errorInfo) {
         : errorInfo;
     console.error('[App Error]', info);
     createErrorModal({
-        title: info.title || 'ç™¼ç”ŸéŒ¯èª¤',
-        message: info.message || 'æœªçŸ¥éŒ¯èª¤',
+        title: info.title || 'µo¥Í¿ù»~',
+        message: info.message || '¥¼ª¾¿ù»~',
         details: info.details || '',
         timestamp: info.timestamp || new Date().toISOString()
     });
 };
 
-// å…¨å±€éŒ¯èª¤è™•ç†
+// ¥ş§½¿ù»~³B²z
 window.addEventListener('error', (event) => {
-    console.error('[å…¨å±€éŒ¯èª¤]', event.error);
+    console.error('[¥ş§½¿ù»~]', event.error);
     window.showError({
-        message: event.error?.message || 'æœªçŸ¥éŒ¯èª¤',
-        title: 'æ‡‰ç”¨ç¨‹å¼éŒ¯èª¤',
+        message: event.error?.message || '¥¼ª¾¿ù»~',
+        title: 'À³¥Îµ{¦¡¿ù»~',
         details: event.error?.stack || JSON.stringify(event.error)
     });
 });
 
 window.addEventListener('unhandledrejection', (event) => {
-    console.error('[æœªè™•ç†çš„ Promise æ‹’çµ•]', event.reason);
+    console.error('[¥¼³B²zªº Promise ©Úµ´]', event.reason);
     window.showError({
         message: event.reason?.message || String(event.reason),
-        title: 'ç•°æ­¥æ“ä½œéŒ¯èª¤',
+        title: '²§¨B¾Ş§@¿ù»~',
         details: event.reason?.stack || ''
     });
 });
@@ -59,40 +59,40 @@ const App = {
     
     async init() {
         try {
-            // æª¢æ¸¬ Safari PWA
+            // ÀË´ú Safari PWA
             const isSafariPWA = window.navigator.standalone === true;
             const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
             
-            console.log('[App] ç’°å¢ƒæª¢æ¸¬:', {
+            console.log('[App] Àô¹ÒÀË´ú:', {
                 isSafariPWA,
                 isSafari,
                 userAgent: navigator.userAgent,
                 timestamp: new Date().toISOString()
             });
             
-            // å¦‚æœæ˜¯ Safari PWAï¼Œæ·»åŠ ç‰¹æ®Šè™•ç†
+            // ¦pªG¬O Safari PWA¡A²K¥[¯S®í³B²z
             if (isSafariPWA) {
-                console.log('[App] Safari PWA æ¨¡å¼ï¼Œå•Ÿç”¨å…¼å®¹æ€§è™•ç†');
+                console.log('[App] Safari PWA ¼Ò¦¡¡A±Ò¥Î­İ®e©Ê³B²z');
             }
             
             this.isMobile = isMobileDevice();
-            console.log('[App] è¨­å‚™é¡å‹:', this.isMobile ? 'ç§»å‹•è¨­å‚™' : 'æ¡Œé¢è¨­å‚™');
+            console.log('[App] ³]³ÆÃş«¬:', this.isMobile ? '²¾°Ê³]³Æ' : '®à­±³]³Æ');
             
             if (!this.isMobile) {
                 this.createPhoneFrame();
             }
             
-            console.log('[App] é–‹å§‹åˆå§‹åŒ–æ•¸æ“šåº«...');
+            console.log('[App] ¶}©lªì©l¤Æ¼Æ¾Ú®w...');
             await initDB();
-            console.log('[App] æ•¸æ“šåº«åˆå§‹åŒ–æˆåŠŸ');
+            console.log('[App] ¼Æ¾Ú®wªì©l¤Æ¦¨¥\');
             
-            console.log('[App] è¼‰å…¥è¨­å®š...');
+            console.log('[App] ¸ü¤J³]©w...');
             const allSettings = await SettingsDB.getAll();
             const defaults = SettingsDB.getDefaults();
             const mergedSettings = { ...defaults, ...allSettings };
-            console.log('[App] è¨­å®šè¼‰å…¥å®Œæˆ');
+            console.log('[App] ³]©w¸ü¤J§¹¦¨');
             
-            console.log('[App] åˆå§‹åŒ–è¨˜æ†¶ç³»çµ±...');
+            console.log('[App] ªì©l¤Æ°O¾Ğ¨t²Î...');
             const memorySystem = new MemorySystem({
                 decayRate: mergedSettings.memory_decay_rate,
                 embedding: {
@@ -111,14 +111,14 @@ const App = {
             });
             this.memorySystem = memorySystem;
             if (mergedSettings.memory_enabled) {
-                console.log('[App] å•Ÿå‹•è¨˜æ†¶ç³»çµ±...');
+                console.log('[App] ±Ò°Ê°O¾Ğ¨t²Î...');
                 memorySystem.start();
             }
-            console.log('[App] è¨˜æ†¶ç³»çµ±åˆå§‹åŒ–å®Œæˆ');
+            console.log('[App] °O¾Ğ¨t²Îªì©l¤Æ§¹¦¨');
             
-            console.log('[App] è¨»å†Šè·¯ç”±...');
+            console.log('[App] µù¥U¸ô¥Ñ...');
             await registerRoutes();
-            console.log('[App] è·¯ç”±è¨»å†Šå®Œæˆ');
+            console.log('[App] ¸ô¥Ñµù¥U§¹¦¨');
             
             this.showLockScreen();
             
@@ -138,8 +138,8 @@ const App = {
                     } catch (err) {
                         console.error('Failed to create home screen:', err);
                         window.showError({
-                            message: 'ç„¡æ³•å‰µå»ºä¸»ç•«é¢: ' + err.message,
-                            title: 'ä¸»ç•«é¢éŒ¯èª¤',
+                            message: 'µLªk³Ğ«Ø¥Dµe­±: ' + err.message,
+                            title: '¥Dµe­±¿ù»~',
                             details: err.stack
                         });
                     }
@@ -148,21 +148,21 @@ const App = {
             
             Router.start(true);
             
-            console.log('[App] åˆå§‹åŒ–æ´»å‹• API...');
+            console.log('[App] ªì©l¤Æ¬¡°Ê API...');
             initActivityAPI();
             
-            console.log('[App] å•Ÿå‹•ç´«å¾®æ–—æ•¸æ‡¶åŠ è¼‰å™¨...');
+            console.log('[App] ±Ò°Êµµ·L¤æ¼ÆÃi¥[¸ü¾¹...');
             ziweiLazyLoader.startDayChangeDetection();
             
             this.registerServiceWorker();
             this.setupInstallPrompt();
             
-            console.log('[App] æ‡‰ç”¨åˆå§‹åŒ–å®Œæˆ');
+            console.log('[App] À³¥Îªì©l¤Æ§¹¦¨');
         } catch (error) {
-            console.error('[App] åˆå§‹åŒ–å¤±æ•—:', error);
+            console.error('[App] ªì©l¤Æ¥¢±Ñ:', error);
             window.showError({
-                message: 'æ‡‰ç”¨åˆå§‹åŒ–å¤±æ•—: ' + error.message,
-                title: 'åˆå§‹åŒ–éŒ¯èª¤',
+                message: 'À³¥Îªì©l¤Æ¥¢±Ñ: ' + error.message,
+                title: 'ªì©l¤Æ¿ù»~',
                 details: error.stack
             });
         }
@@ -268,7 +268,7 @@ const App = {
             
             const installBtn = document.createElement('button');
             installBtn.className = 'ios-btn ios-btn-primary fixed bottom-24 left-1/2 -translate-x-1/2 z-50 shadow-lg';
-            installBtn.innerHTML = '<span class="material-symbols-outlined mr-1">install_mobile</span> å®‰è£ App';
+            installBtn.innerHTML = '<span class='material-symbols-outlined mr-1'>install_mobile</span> ¦w¸Ë App';
             installBtn.onclick = async () => {
                 installBtn.remove();
                 deferredPrompt.prompt();

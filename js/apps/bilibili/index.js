@@ -1403,12 +1403,12 @@ async function renderPlayer(params) {
     }
     
     const externalBtn = createElement('button', 'bili-option-btn primary');
-    externalBtn.innerHTML = "`<span class=`"`material-icons`"`>open_in_new</span> 在 B 站觀看`";
+    externalBtn.innerHTML = '`<span class=`'`material-icons`'`>open_in_new</span> 在 B 站觀看`';
     externalBtn.onclick = () => openInBilibili(url);
     optionsCard.appendChild(externalBtn);
     
     const embedBtn = createElement('button', 'bili-option-btn');
-    embedBtn.innerHTML = "`<span class=`"`material-icons`"`>play_circle</span> 在 PWA 內播放`";
+    embedBtn.innerHTML = '`<span class=`'`material-icons`'`>play_circle</span> 在 PWA 內播放`';
     embedBtn.onclick = async () => {
         const isLoggedIn = await checkBilibiliLogin();
         if (isLoggedIn) {

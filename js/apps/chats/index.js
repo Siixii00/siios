@@ -14,7 +14,7 @@ async function renderChatsList() {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.navigate('/home')
     });
-    backBtn.innerHTML = "`<i class=`"`fas fa-chevron-left`"`></i> 返回`";
+    backBtn.innerHTML = '`<i class=`'`fas fa-chevron-left`'`></i> 返回`';
     header.appendChild(backBtn);
     
     const title = createElement('h1', 'menu-title');
@@ -26,7 +26,7 @@ async function renderChatsList() {
     const addBtn = createElement('button', 'header-action', {
         title: '新增對話'
     });
-    addBtn.innerHTML = "`<i class=`"`fas fa-plus`"`></i>`";
+    addBtn.innerHTML = '`<i class=`'`fas fa-plus`'`></i>`';
     addBtn.onclick = async () => {
         const newChat = await ChatsDB.create({ character_name: 'AI' });
         createToast('已建立新對話');
@@ -37,7 +37,7 @@ async function renderChatsList() {
     const groupBtn = createElement('button', 'header-action', {
         title: '新增群組'
     });
-    groupBtn.innerHTML = "`<i class=`"`fas fa-users`"`></i>`";
+    groupBtn.innerHTML = '`<i class=`'`fas fa-users`'`></i>`';
     groupBtn.onclick = () => openGroupSheet();
     actions.appendChild(groupBtn);
     

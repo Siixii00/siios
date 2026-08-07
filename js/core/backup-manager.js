@@ -1,6 +1,6 @@
-ï»¿/**
- * SXIOS å‚™ä»½ç®¡ç†å™¨
- * æ”¯æ´ï¼šæœ¬åœ° JSONã€GitHubã€Google Drive ä¸‰é‡å‚™ä»½
+/**
+ * SXIOS ³Æ¥÷ºÞ²z¾¹
+ * ¤ä´©¡G¥»¦a JSON¡BGitHub¡BGoogle Drive ¤T­«³Æ¥÷
  */
 
 import {
@@ -22,7 +22,7 @@ class BackupManager {
         this.lastBackupTime = null;
     }
 
-    // ==================== å®Œæ•´è³‡æ–™åŒ¯å‡º ====================
+    // ==================== §¹¾ã¸ê®Æ¶×¥X ====================
 
     async exportAllData() {
         const data = {
@@ -33,7 +33,7 @@ class BackupManager {
             data: {}
         };
 
-        // åŒ¯å‡ºæ‰€æœ‰è³‡æ–™åº«
+        // ¶×¥X©Ò¦³¸ê®Æ®w
         data.data.chats = await ChatsDB.getAll();
         data.data.characters = await CharactersDB.getAll();
         data.data.users = await UsersDB.getAll();
@@ -49,7 +49,7 @@ class BackupManager {
         data.data.activities = await ActivityDB.getAll(1000);
         data.data.settings = await this.getAllSettings();
 
-        // åŒ¯å‡ºæ‰€æœ‰èŠå¤©è¨Šæ¯
+        // ¶×¥X©Ò¦³²á¤Ñ°T®§
         for (const chat of data.data.chats) {
             const messages = await MessagesDB.getByChatId(chat.id);
             data.data.messages.push(...messages);
@@ -72,11 +72,11 @@ class BackupManager {
         return database.getAll('health');
     }
 
-    // ==================== å®Œæ•´è³‡æ–™åŒ¯å…¥ ====================
+    // ==================== §¹¾ã¸ê®Æ¶×¤J ====================
 
     async importAllData(backupData) {
         if (!backupData || !backupData.data) {
-            throw new Error('ç„¡æ•ˆçš„å‚™ä»½è³‡æ–™æ ¼å¼');
+            throw new Error('µL®Äªº³Æ¥÷¸ê®Æ®æ¦¡');
         }
 
         const database = await initDB();
@@ -88,22 +88,22 @@ class BackupManager {
         };
 
         try {
-            // æ¸…ç©ºç¾æœ‰è³‡æ–™ï¼ˆå¯é¸ï¼Œæ ¹æ“šä½¿ç”¨è€…é¸æ“‡ï¼‰
-            // é è¨­ä¸æ¸…ç©ºï¼ŒæŽ¡ç”¨åˆä½µç­–ç•¥
+            // ²MªÅ²{¦³¸ê®Æ¡]¥i¿ï¡A®Ú¾Ú¨Ï¥ÎªÌ¿ï¾Ü¡^
+            // ¹w³]¤£²MªÅ¡A±Ä¥Î¦X¨Öµ¦²¤
 
-            // åŒ¯å…¥è¨­å®š
+            // ¶×¤J³]©w
             if (backupData.data.settings) {
                 for (const [key, value] of Object.entries(backupData.data.settings)) {
                     try {
                         await SettingsDB.set(key, value);
                         report.imported.settings = (report.imported.settings || 0) + 1;
                     } catch (e) {
-                        report.errors.push(`è¨­å®š ${key} åŒ¯å…¥å¤±æ•—: ${e.message}`);
+                        report.errors.push(`³]©w ${key} ¶×¤J¥¢±Ñ: ${e.message}`);
                     }
                 }
             }
 
-            // åŒ¯å…¥è§’è‰²
+            // ¶×¤J¨¤¦â
             if (backupData.data.characters) {
                 for (const char of backupData.data.characters) {
                     try {
@@ -111,18 +111,18 @@ class BackupManager {
                         if (!existing) {
                             await database.put('characters', char);
                         } else {
-                            // åˆä½µæ›´æ–°
+                            // ¦X¨Ö§ó·s
                             const merged = { ...existing, ...char, updated_at: Date.now() };
                             await database.put('characters', merged);
                         }
                         report.imported.characters = (report.imported.characters || 0) + 1;
                     } catch (e) {
-                        report.errors.push(`è§’è‰² ${char.name || char.id} åŒ¯å…¥å¤±æ•—: ${e.message}`);
+                        report.errors.push(`¨¤¦â ${char.name || char.id} ¶×¤J¥¢±Ñ: ${e.message}`);
                     }
                 }
             }
 
-            // åŒ¯å…¥ç”¨æˆ¶
+            // ¶×¤J¥Î¤á
             if (backupData.data.users) {
                 for (const user of backupData.data.users) {
                     try {
@@ -135,12 +135,12 @@ class BackupManager {
                         }
                         report.imported.users = (report.imported.users || 0) + 1;
                     } catch (e) {
-                        report.errors.push(`ç”¨æˆ¶ ${user.name || user.id} åŒ¯å…¥å¤±æ•—: ${e.message}`);
+                        report.errors.push(`¥Î¤á ${user.name || user.id} ¶×¤J¥¢±Ñ: ${e.message}`);
                     }
                 }
             }
 
-            // åŒ¯å…¥èŠå¤©å®¤
+            // ¶×¤J²á¤Ñ«Ç
             if (backupData.data.chats) {
                 for (const chat of backupData.data.chats) {
                     try {
@@ -153,12 +153,12 @@ class BackupManager {
                         }
                         report.imported.chats = (report.imported.chats || 0) + 1;
                     } catch (e) {
-                        report.errors.push(`èŠå¤©å®¤ ${chat.character_name || chat.id} åŒ¯å…¥å¤±æ•—: ${e.message}`);
+                        report.errors.push(`²á¤Ñ«Ç ${chat.character_name || chat.id} ¶×¤J¥¢±Ñ: ${e.message}`);
                     }
                 }
             }
 
-            // åŒ¯å…¥è¨Šæ¯
+            // ¶×¤J°T®§
             if (backupData.data.messages) {
                 const tx = database.transaction('messages', 'readwrite');
                 for (const msg of backupData.data.messages) {
@@ -166,133 +166,133 @@ class BackupManager {
                         await tx.store.put(msg);
                         report.imported.messages = (report.imported.messages || 0) + 1;
                     } catch (e) {
-                        report.errors.push(`è¨Šæ¯ ${msg.id} åŒ¯å…¥å¤±æ•—: ${e.message}`);
+                        report.errors.push(`°T®§ ${msg.id} ¶×¤J¥¢±Ñ: ${e.message}`);
                     }
                 }
                 await tx.done;
             }
 
-            // åŒ¯å…¥è¨˜æ†¶
+            // ¶×¤J°O¾Ð
             if (backupData.data.memories) {
                 for (const memory of backupData.data.memories) {
                     try {
                         await database.put('memories', memory);
                         report.imported.memories = (report.imported.memories || 0) + 1;
                     } catch (e) {
-                        report.errors.push(`è¨˜æ†¶ ${memory.id} åŒ¯å…¥å¤±æ•—: ${e.message}`);
+                        report.errors.push(`°O¾Ð ${memory.id} ¶×¤J¥¢±Ñ: ${e.message}`);
                     }
                 }
             }
 
-            // åŒ¯å…¥å…¨åŸŸè¨­å®š
+            // ¶×¤J¥þ°ì³]©w
             if (backupData.data.globalSettings) {
                 for (const setting of backupData.data.globalSettings) {
                     try {
                         await database.put('globalSettings', setting);
                         report.imported.globalSettings = (report.imported.globalSettings || 0) + 1;
                     } catch (e) {
-                        report.errors.push(`å…¨åŸŸè¨­å®š ${setting.name || setting.id} åŒ¯å…¥å¤±æ•—: ${e.message}`);
+                        report.errors.push(`¥þ°ì³]©w ${setting.name || setting.id} ¶×¤J¥¢±Ñ: ${e.message}`);
                     }
                 }
             }
 
-            // åŒ¯å…¥ç¦å¿Œè©ž
+            // ¶×¤J¸T§Òµü
             if (backupData.data.globalForbidden) {
                 for (const forbidden of backupData.data.globalForbidden) {
                     try {
                         await database.put('globalForbidden', forbidden);
                         report.imported.globalForbidden = (report.imported.globalForbidden || 0) + 1;
                     } catch (e) {
-                        report.errors.push(`ç¦å¿Œè©ž ${forbidden.name || forbidden.id} åŒ¯å…¥å¤±æ•—: ${e.message}`);
+                        report.errors.push(`¸T§Òµü ${forbidden.name || forbidden.id} ¶×¤J¥¢±Ñ: ${e.message}`);
                     }
                 }
             }
 
-            // åŒ¯å…¥åŠ‡å ´è¨­å®š
+            // ¶×¤J¼@³õ³]©w
             if (backupData.data.theaterSettings) {
                 for (const theater of backupData.data.theaterSettings) {
                     try {
                         await database.put('theaterSettings', theater);
                         report.imported.theaterSettings = (report.imported.theaterSettings || 0) + 1;
                     } catch (e) {
-                        report.errors.push(`åŠ‡å ´è¨­å®š ${theater.name || theater.id} åŒ¯å…¥å¤±æ•—: ${e.message}`);
+                        report.errors.push(`¼@³õ³]©w ${theater.name || theater.id} ¶×¤J¥¢±Ñ: ${e.message}`);
                     }
                 }
             }
 
-            // åŒ¯å…¥é—œéµå­—è¨­å®š
+            // ¶×¤JÃöÁä¦r³]©w
             if (backupData.data.keywordSettings) {
                 for (const keyword of backupData.data.keywordSettings) {
                     try {
                         await database.put('keywordSettings', keyword);
                         report.imported.keywordSettings = (report.imported.keywordSettings || 0) + 1;
                     } catch (e) {
-                        report.errors.push(`é—œéµå­—è¨­å®š ${keyword.name || keyword.id} åŒ¯å…¥å¤±æ•—: ${e.message}`);
+                        report.errors.push(`ÃöÁä¦r³]©w ${keyword.name || keyword.id} ¶×¤J¥¢±Ñ: ${e.message}`);
                     }
                 }
             }
 
-            // åŒ¯å…¥å¥åº·è¨˜éŒ„
+            // ¶×¤J°·±d°O¿ý
             if (backupData.data.health) {
                 for (const health of backupData.data.health) {
                     try {
                         await database.put('health', health);
                         report.imported.health = (report.imported.health || 0) + 1;
                     } catch (e) {
-                        report.errors.push(`å¥åº·è¨˜éŒ„ ${health.id} åŒ¯å…¥å¤±æ•—: ${e.message}`);
+                        report.errors.push(`°·±d°O¿ý ${health.id} ¶×¤J¥¢±Ñ: ${e.message}`);
                     }
                 }
             }
 
-            // åŒ¯å…¥ MCP è¨­å®š
+            // ¶×¤J MCP ³]©w
             if (backupData.data.mcpConfigs) {
                 for (const mcp of backupData.data.mcpConfigs) {
                     try {
                         await database.put('mcpConfigs', mcp);
                         report.imported.mcpConfigs = (report.imported.mcpConfigs || 0) + 1;
                     } catch (e) {
-                        report.errors.push(`MCP è¨­å®š ${mcp.name || mcp.id} åŒ¯å…¥å¤±æ•—: ${e.message}`);
+                        report.errors.push(`MCP ³]©w ${mcp.name || mcp.id} ¶×¤J¥¢±Ñ: ${e.message}`);
                     }
                 }
             }
 
-            // åŒ¯å…¥æ´»å‹•è¨˜éŒ„
+            // ¶×¤J¬¡°Ê°O¿ý
             if (backupData.data.activities) {
                 for (const activity of backupData.data.activities) {
                     try {
                         await database.put('activities', activity);
                         report.imported.activities = (report.imported.activities || 0) + 1;
                     } catch (e) {
-                        report.errors.push(`æ´»å‹•è¨˜éŒ„ ${activity.id} åŒ¯å…¥å¤±æ•—: ${e.message}`);
+                        report.errors.push(`¬¡°Ê°O¿ý ${activity.id} ¶×¤J¥¢±Ñ: ${e.message}`);
                     }
                 }
             }
 
-            // åŒ¯å…¥ Wiki è¨˜éŒ„
+            // ¶×¤J Wiki °O¿ý
             if (backupData.data.wikiRecords) {
                 for (const wiki of backupData.data.wikiRecords) {
                     try {
                         await database.put('wikiRecords', wiki);
                         report.imported.wikiRecords = (report.imported.wikiRecords || 0) + 1;
                     } catch (e) {
-                        report.errors.push(`Wiki è¨˜éŒ„ ${wiki.title || wiki.id} åŒ¯å…¥å¤±æ•—: ${e.message}`);
+                        report.errors.push(`Wiki °O¿ý ${wiki.title || wiki.id} ¶×¤J¥¢±Ñ: ${e.message}`);
                     }
                 }
             }
 
         } catch (e) {
             report.success = false;
-            report.errors.push(`åŒ¯å…¥éŽç¨‹ç™¼ç”ŸéŒ¯èª¤: ${e.message}`);
+            report.errors.push(`¶×¤J¹Lµ{µo¥Í¿ù»~: ${e.message}`);
         }
 
-        // è¨˜éŒ„æœ€å¾Œé‚„åŽŸæ™‚é–“
+        // °O¿ý³Ì«áÁÙ­ì®É¶¡
         await SettingsDB.set('last_restore_time', Date.now());
         await SettingsDB.set('last_restore_report', report);
 
         return report;
     }
 
-    // ==================== æœ¬åœ° JSON ä¸‹è¼‰ ====================
+    // ==================== ¥»¦a JSON ¤U¸ü ====================
 
     async downloadLocalBackup() {
         const data = await this.exportAllData();
@@ -312,22 +312,22 @@ class BackupManager {
         return { success: true, filename: a.download };
     }
 
-    // ==================== GitHub å‚™ä»½ ====================
+    // ==================== GitHub ³Æ¥÷ ====================
 
     async connectGitHub(token) {
         try {
-            // é©—è­‰ Token
+            // ÅçÃÒ Token
             const userRes = await fetch('https://api.github.com/user', {
                 headers: { 'Authorization': `token ${token}` }
             });
 
             if (!userRes.ok) {
-                throw new Error('Token ç„¡æ•ˆæˆ–å·²éŽæœŸ');
+                throw new Error('Token µL®Ä©Î¤w¹L´Á');
             }
 
             const userData = await userRes.json();
 
-            // å„²å­˜ Token
+            // Àx¦s Token
             this.githubToken = token;
             this.githubUser = {
                 login: userData.login,
@@ -338,7 +338,7 @@ class BackupManager {
             await SettingsDB.set('github_token', token);
             await SettingsDB.set('github_user', this.githubUser);
 
-            // ç¢ºä¿å‚™ä»½å€‰åº«å­˜åœ¨
+            // ½T«O³Æ¥÷­Ü®w¦s¦b
             await this.ensureGitHubRepo();
 
             return { success: true, user: this.githubUser };
@@ -349,10 +349,10 @@ class BackupManager {
 
     async ensureGitHubRepo() {
         if (!this.githubToken) {
-            throw new Error('è«‹å…ˆé€£æŽ¥ GitHub');
+            throw new Error('½Ð¥ý³s±µ GitHub');
         }
 
-        // æª¢æŸ¥å€‰åº«æ˜¯å¦å­˜åœ¨
+        // ÀË¬d­Ü®w¬O§_¦s¦b
         const checkRes = await fetch(`https://api.github.com/repos/${this.githubUser.login}/${GITHUB_REPO_NAME}`, {
             headers: { 'Authorization': `token ${this.githubToken}` }
         });
@@ -361,7 +361,7 @@ class BackupManager {
             return { exists: true };
         }
 
-        // å»ºç«‹å€‰åº«
+        // «Ø¥ß­Ü®w
         const createRes = await fetch('https://api.github.com/user/repos', {
             method: 'POST',
             headers: {
@@ -371,7 +371,7 @@ class BackupManager {
             body: JSON.stringify({
                 name: GITHUB_REPO_NAME,
                 private: true,
-                description: 'SXIOS è³‡æ–™å‚™ä»½å€‰åº« - è«‹å‹¿æ‰‹å‹•ä¿®æ”¹',
+                description: 'SXIOS ¸ê®Æ³Æ¥÷­Ü®w - ½Ð¤Å¤â°Ê­×§ï',
                 auto_init: true
             })
         });
@@ -382,25 +382,25 @@ class BackupManager {
             return { exists: true };
         } else {
             const error = await createRes.json();
-            throw new Error(error.message || 'å»ºç«‹å€‰åº«å¤±æ•—');
+            throw new Error(error.message || '«Ø¥ß­Ü®w¥¢±Ñ');
         }
     }
 
     async pushToGitHub() {
         if (!this.githubToken || !this.githubUser) {
-            // å˜—è©¦å¾žè¨­å®šè¼‰å…¥
+            // ¹Á¸Õ±q³]©w¸ü¤J
             this.githubToken = await SettingsDB.get('github_token');
             this.githubUser = await SettingsDB.get('github_user');
         }
 
         if (!this.githubToken) {
-            throw new Error('è«‹å…ˆé€£æŽ¥ GitHub');
+            throw new Error('½Ð¥ý³s±µ GitHub');
         }
 
         const data = await this.exportAllData();
         const content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
 
-        // å–å¾—ç¾æœ‰æª”æ¡ˆçš„ SHAï¼ˆå¦‚æžœå­˜åœ¨ï¼‰
+        // ¨ú±o²{¦³ÀÉ®×ªº SHA¡]¦pªG¦s¦b¡^
         let sha = null;
         const getFileRes = await fetch(
             `https://api.github.com/repos/${this.githubUser.login}/${GITHUB_REPO_NAME}/contents/${BACKUP_FILENAME}`,
@@ -412,7 +412,7 @@ class BackupManager {
             sha = fileData.sha;
         }
 
-        // ä¸Šå‚³æª”æ¡ˆ
+        // ¤W¶ÇÀÉ®×
         const uploadRes = await fetch(
             `https://api.github.com/repos/${this.githubUser.login}/${GITHUB_REPO_NAME}/contents/${BACKUP_FILENAME}`,
             {
@@ -422,7 +422,7 @@ class BackupManager {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    message: `å‚™ä»½æ›´æ–° - ${new Date().toLocaleString('zh-TW')}`,
+                    message: `³Æ¥÷§ó·s - ${new Date().toLocaleString('zh-TW')}`,
                     content: content,
                     sha: sha
                 })
@@ -431,7 +431,7 @@ class BackupManager {
 
         if (!uploadRes.ok) {
             const error = await uploadRes.json();
-            throw new Error(error.message || 'ä¸Šå‚³å¤±æ•—');
+            throw new Error(error.message || '¤W¶Ç¥¢±Ñ');
         }
 
         await SettingsDB.set('last_github_backup_time', Date.now());
@@ -451,7 +451,7 @@ class BackupManager {
         }
 
         if (!this.githubToken) {
-            throw new Error('è«‹å…ˆé€£æŽ¥ GitHub');
+            throw new Error('½Ð¥ý³s±µ GitHub');
         }
 
         const fileRes = await fetch(
@@ -460,14 +460,14 @@ class BackupManager {
         );
 
         if (!fileRes.ok) {
-            throw new Error('æ‰¾ä¸åˆ°å‚™ä»½æª”æ¡ˆ');
+            throw new Error('§ä¤£¨ì³Æ¥÷ÀÉ®×');
         }
 
         const fileData = await fileRes.json();
         const content = decodeURIComponent(escape(atob(fileData.content)));
         const backupData = JSON.parse(content);
 
-        // åŒ¯å…¥è³‡æ–™
+        // ¶×¤J¸ê®Æ
         const report = await this.importAllData(backupData);
 
         return {
@@ -512,17 +512,17 @@ class BackupManager {
         }
     }
 
-    // ==================== Google Drive å‚™ä»½ ====================
+    // ==================== Google Drive ³Æ¥÷ ====================
 
     async connectGoogleDrive(accessToken) {
         try {
-            // é©—è­‰ Token
+            // ÅçÃÒ Token
             const userRes = await fetch('https://www.googleapis.com/drive/v3/about?fields=user', {
                 headers: { 'Authorization': `Bearer ${accessToken}` }
             });
 
             if (!userRes.ok) {
-                throw new Error('Google Drive Token ç„¡æ•ˆ');
+                throw new Error('Google Drive Token µL®Ä');
             }
 
             const userData = await userRes.json();
@@ -545,14 +545,14 @@ class BackupManager {
         }
 
         if (!this.googleAccessToken) {
-            throw new Error('è«‹å…ˆé€£æŽ¥ Google Drive');
+            throw new Error('½Ð¥ý³s±µ Google Drive');
         }
 
         const data = await this.exportAllData();
         const content = JSON.stringify(data, null, 2);
         const blob = new Blob([content], { type: 'application/json' });
 
-        // æª¢æŸ¥æ˜¯å¦å·²å­˜åœ¨å‚™ä»½æª”æ¡ˆ
+        // ÀË¬d¬O§_¤w¦s¦b³Æ¥÷ÀÉ®×
         const listRes = await fetch(
             'https://www.googleapis.com/drive/v3/files?q=' + 
             encodeURIComponent('name='siios-backup.json' and trashed=false'),
@@ -569,16 +569,16 @@ class BackupManager {
             }
         }
 
-        // ä¸Šå‚³æª”æ¡ˆ
+        // ¤W¶ÇÀÉ®×
         const formData = new FormData();
         const metadata = {
             name: 'siios-backup.json',
             mimeType: 'application/json',
-            parents: ['appDataFolder'] // ä½¿ç”¨æ‡‰ç”¨ç¨‹å¼å°ˆç”¨è³‡æ–™å¤¾
+            parents: ['appDataFolder'] // ¨Ï¥ÎÀ³¥Îµ{¦¡±M¥Î¸ê®Æ§¨
         };
 
         if (fileId) {
-            // æ›´æ–°ç¾æœ‰æª”æ¡ˆ
+            // §ó·s²{¦³ÀÉ®×
             const updateRes = await fetch(
                 `https://www.googleapis.com/upload/drive/v3/files/${fileId}?uploadType=media`,
                 {
@@ -592,13 +592,13 @@ class BackupManager {
             );
 
             if (!updateRes.ok) {
-                throw new Error('æ›´æ–° Google Drive æª”æ¡ˆå¤±æ•—');
+                throw new Error('§ó·s Google Drive ÀÉ®×¥¢±Ñ');
             }
 
             await SettingsDB.set('last_google_drive_backup_time', Date.now());
             return { success: true, fileId, updated: true };
         } else {
-            // å»ºç«‹æ–°æª”æ¡ˆ
+            // «Ø¥ß·sÀÉ®×
             formData.append('metadata', new Blob([JSON.stringify(metadata)], { type: 'application/json' }));
             formData.append('file', blob);
 
@@ -612,7 +612,7 @@ class BackupManager {
             );
 
             if (!createRes.ok) {
-                throw new Error('ä¸Šå‚³åˆ° Google Drive å¤±æ•—');
+                throw new Error('¤W¶Ç¨ì Google Drive ¥¢±Ñ');
             }
 
             const result = await createRes.json();
@@ -627,10 +627,10 @@ class BackupManager {
         }
 
         if (!this.googleAccessToken) {
-            throw new Error('è«‹å…ˆé€£æŽ¥ Google Drive');
+            throw new Error('½Ð¥ý³s±µ Google Drive');
         }
 
-        // å–å¾—æª”æ¡ˆåˆ—è¡¨
+        // ¨ú±oÀÉ®×¦Cªí
         const listRes = await fetch(
             'https://www.googleapis.com/drive/v3/files?q=' + 
             encodeURIComponent('name='siios-backup.json' and trashed=false'),
@@ -640,17 +640,17 @@ class BackupManager {
         );
 
         if (!listRes.ok) {
-            throw new Error('ç„¡æ³•å–å¾— Google Drive æª”æ¡ˆåˆ—è¡¨');
+            throw new Error('µLªk¨ú±o Google Drive ÀÉ®×¦Cªí');
         }
 
         const listData = await listRes.json();
         if (!listData.files || listData.files.length === 0) {
-            throw new Error('æ‰¾ä¸åˆ°å‚™ä»½æª”æ¡ˆ');
+            throw new Error('§ä¤£¨ì³Æ¥÷ÀÉ®×');
         }
 
         const fileId = listData.files[0].id;
 
-        // ä¸‹è¼‰æª”æ¡ˆå…§å®¹
+        // ¤U¸üÀÉ®×¤º®e
         const fileRes = await fetch(
             `https://www.googleapis.com/drive/v3/files/${fileId}?alt=media`,
             {
@@ -659,13 +659,13 @@ class BackupManager {
         );
 
         if (!fileRes.ok) {
-            throw new Error('ä¸‹è¼‰å‚™ä»½æª”æ¡ˆå¤±æ•—');
+            throw new Error('¤U¸ü³Æ¥÷ÀÉ®×¥¢±Ñ');
         }
 
         const content = await fileRes.text();
         const backupData = JSON.parse(content);
 
-        // åŒ¯å…¥è³‡æ–™
+        // ¶×¤J¸ê®Æ
         const report = await this.importAllData(backupData);
 
         return {
@@ -716,13 +716,13 @@ class BackupManager {
         }
     }
 
-    // ==================== è‡ªå‹•å‚™ä»½ ====================
+    // ==================== ¦Û°Ê³Æ¥÷ ====================
 
     async enableAutoBackup(intervalHours = 24) {
         await SettingsDB.set('auto_backup_enabled', true);
         await SettingsDB.set('auto_backup_interval', intervalHours);
 
-        // ä½¿ç”¨ Service Worker æˆ–å®šæ™‚å™¨å¯¦ç¾è‡ªå‹•å‚™ä»½
+        // ¨Ï¥Î Service Worker ©Î©w®É¾¹¹ê²{¦Û°Ê³Æ¥÷
         if ('serviceWorker' in navigator && 'periodicSync' in navigator.serviceWorker) {
             try {
                 const registration = await navigator.serviceWorker.ready;
@@ -730,7 +730,7 @@ class BackupManager {
                     minInterval: intervalHours * 60 * 60 * 1000
                 });
             } catch (e) {
-                console.warn('Periodic Sync ä¸æ”¯æ´ï¼Œä½¿ç”¨ localStorage ä½œç‚ºå‚™ç”¨');
+                console.warn('Periodic Sync ¤£¤ä´©¡A¨Ï¥Î localStorage §@¬°³Æ¥Î');
             }
         }
 
@@ -759,9 +759,9 @@ class BackupManager {
         const now = Date.now();
 
         if (now - lastBackup > interval * 60 * 60 * 1000) {
-            // åŸ·è¡Œå‚™ä»½
+            // °õ¦æ³Æ¥÷
             try {
-                // å„ªå…ˆé †åºï¼šæœ¬åœ° > GitHub > Google Drive
+                // Àu¥ý¶¶§Ç¡G¥»¦a > GitHub > Google Drive
                 await this.downloadLocalBackup();
 
                 const githubConnected = await SettingsDB.get('github_token');
@@ -784,7 +784,7 @@ class BackupManager {
         return { skipped: true, reason: 'Not yet time' };
     }
 
-    // ==================== å·¥å…·æ–¹æ³• ====================
+    // ==================== ¤u¨ã¤èªk ====================
 
     async getBackupStatus() {
         const status = {

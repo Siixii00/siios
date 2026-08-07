@@ -11,7 +11,7 @@ async function renderDiscordUserBinding() {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.navigate('/settings/discord')
     });
-    backBtn.innerHTML = "`<i class=`"`fas fa-chevron-left`"`></i> 返回`";
+    backBtn.innerHTML = '`<i class=`'`fas fa-chevron-left`'`></i> 返回`';
     header.appendChild(backBtn);
     
     const title = createElement('h1', 'menu-title');
@@ -41,7 +41,7 @@ async function renderDiscordUserBinding() {
     // 添加綁定按鈕
     const addBtn = createElement('button', 'ios-btn ios-btn-primary w-full mb-4 mx-4');
     addBtn.style.maxWidth = 'calc(100% - 32px)';
-    addBtn.innerHTML = "`<span class=`"`material-symbols-outlined mr-2`"`>person_add</span> 新增綁定`";
+    addBtn.innerHTML = '`<span class=`'`material-symbols-outlined mr-2`'`>person_add</span> 新增綁定`';
     addBtn.onclick = () => showAddBindingDialog();
     main.appendChild(addBtn);
     
@@ -66,7 +66,7 @@ async function renderDiscordUserBinding() {
             const userInfo = createElement('div', 'flex items-center gap-3');
             
             const avatar = createElement('div', 'w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center');
-            avatar.innerHTML = "`<span class=`"`material-symbols-outlined text-blue-600`"`>discord</span>`";
+            avatar.innerHTML = '`<span class=`'`material-symbols-outlined text-blue-600`'`>discord</span>`';
             userInfo.appendChild(avatar);
             
             const names = createElement('div');

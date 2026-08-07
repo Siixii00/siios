@@ -136,7 +136,7 @@ function renderBookmarks(container) {
     );
 
     if (filtered.length === 0) {
-        list.innerHTML = "`<div class=`"`chrome-wb-empty`"`>å°šæœª?°å??¸ç±¤</div>`";
+        list.innerHTML = '`<div class=`'`chrome-wb-empty`'`>å°šæœª?°å??¸ç±¤</div>`';
         return;
     }
 
@@ -219,7 +219,7 @@ function renderHistoryList(container) {
     if (!list) return;
 
     if (historyEntries.length === 0) {
-        list.innerHTML = "`<div class=`"`status`"`>©|µLÂsÄý°O¿ý</div>`";
+        list.innerHTML = '`<div class=`'`status`'`>©|µLÂsÄý°O¿ý</div>`';
         return;
     }
 
@@ -274,7 +274,7 @@ async function fetchDetailContent(entry, container) {
 
     const settings = await APIClient.getSettings();
     if (!settings.api_url || !settings.api_key) {
-        contentEl.innerHTML = "`<div class=`"`page-error`"`>¥¼°»´ú¨ì API °t¸m¡A½Ð¥ý¦b±±¨î¤¤¤ß³]©w¡C</div>`";
+        contentEl.innerHTML = '`<div class=`'`page-error`'`>¥¼°»´ú¨ì API °t¸m¡A½Ð¥ý¦b±±¨î¤¤¤ß³]©w¡C</div>`';
         return;
     }
 
@@ -338,7 +338,7 @@ async function generateHistoryForChar(index, container) {
     const panelTitle = container.querySelector('.history-panel .panel-title');
 
     if (!char) {
-        if (historyList) historyList.innerHTML = "`<div class=`"`status`"`>©|µL¨¤¦â¸ê®Æ</div>`";
+        if (historyList) historyList.innerHTML = '`<div class=`'`status`'`>©|µL¨¤¦â¸ê®Æ</div>`';
         return;
     }
 
@@ -349,7 +349,7 @@ async function generateHistoryForChar(index, container) {
         panelTitle.textContent = `${charName} ªºÂsÄý¬ö¿ý`;
     }
 
-    if (historyList) historyList.innerHTML = "`<div class=`"`status`"`>¥¿¦b¥Í¦¨ÂsÄý¬ö¿ý...</div>`";
+    if (historyList) historyList.innerHTML = '`<div class=`'`status`'`>¥¿¦b¥Í¦¨ÂsÄý¬ö¿ý...</div>`';
 
     const settings = await APIClient.getSettings();
     if (!settings.api_url || !settings.api_key) {
@@ -463,7 +463,7 @@ async function openUserInterestSite(site, container) {
 
     switchView('history', container);
     const historyList = container.querySelector('#history-list');
-    if (historyList) historyList.innerHTML = "`<div class=`"`status`"`>¥¿¦b¸ü¤J¤º®e...</div>`";
+    if (historyList) historyList.innerHTML = '`<div class=`'`status`'`>¥¿¦b¸ü¤J¤º®e...</div>`';
 
     const context = await buildAppContext({});
     const baseSystemPrompt = context.systemPrompt;
@@ -578,7 +578,7 @@ async function openIncognitoSite(site, container) {
 
     switchView('history', container);
     const historyList = container.querySelector('#history-list');
-    if (historyList) historyList.innerHTML = "`<div class=`"`status`"`>¥¿¦b¸ü¤J¤º®e...</div>`";
+    if (historyList) historyList.innerHTML = '`<div class=`'`status`'`>¥¿¦b¸ü¤J¤º®e...</div>`';
 
     const adultLevel = getAdultLevel(char);
 

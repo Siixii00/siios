@@ -1,4 +1,4 @@
-﻿import Router from './router.js';
+import Router from './router.js';
 import { SettingsDB, ChatsDB, CharactersDB, UsersDB, HealthDB, ZiweiCacheDB } from './db.js';
 import { loadWorldInfoContext } from './core/world-info-loader.js';
 import { generateRPPrompt } from './constants/rp-system-prompt.js';
@@ -13,7 +13,7 @@ const APIClient = {
             ? { message: errorInfo } 
             : errorInfo;
         createErrorModal({
-            title: info.title || 'API 錯誤',
+            title: info.title || 'API ���~',
             message: info.message,
             details: info.details || '',
             timestamp: new Date().toISOString()
@@ -131,7 +131,7 @@ const APIClient = {
                 promptContent += characterData.personality;
             }
             if (characterData.scenario) {
-                promptContent += '\n\n場景設定:\n' + characterData.scenario;
+                promptContent += '\n\n�����]�w:\n' + characterData.scenario;
             }
         }
         
@@ -187,9 +187,9 @@ const APIClient = {
         const settings = await this.getSettings();
         
         if (!settings.api_url || !settings.api_key) {
-            const errorMsg = 'API URL 或 API Key 未設定。請前往設定頁面進行配置。';
+            const errorMsg = 'API URL �� API Key ���]�w�C�Ыe���]�w�����i��t�m�C';
             onError(errorMsg);
-            this.showError({ message: errorMsg, title: '設定錯誤' });
+            this.showError({ message: errorMsg, title: '�]�w���~' });
             return;
         }
         
@@ -257,17 +257,17 @@ const APIClient = {
             
             if (!response.ok) {
                 const errorData = await response.json().catch(() => ({}));
-                throw new Error(errorData.error?.message || `API 錯誤: ${response.status}`);
+                throw new Error(errorData.error?.message || `API ���~: ${response.status}`);
             }
             
             await this.processStreamWithTools(response, apiMessages, settings, characterData, onChunk, onComplete, onError);
             
         } catch (error) {
-            const errorMsg = error.message || '連線失敗，請檢查網路設定。';
+            const errorMsg = error.message || '�s�u���ѡA���ˬd�����]�w�C';
             onError(errorMsg);
             this.showError({
                 message: errorMsg,
-                title: 'API 請求失敗',
+                title: 'API �ШD����',
                 details: error.stack || ''
             });
         }
@@ -420,17 +420,17 @@ const APIClient = {
             
             if (!followUpResponse.ok) {
                 const errorData = await followUpResponse.json().catch(() => ({}));
-                throw new Error(errorData.error?.message || `API 錯誤: ${followUpResponse.status}`);
+                throw new Error(errorData.error?.message || `API ���~: ${followUpResponse.status}`);
             }
             
             await this.processStreamWithTools(followUpResponse, apiMessages, settings, characterData, onChunk, onComplete, onError);
             
         } catch (error) {
-            const errorMsg = error.message || '工具調用後續處理失敗。';
+            const errorMsg = error.message || '�u��եΫ���B�z���ѡC';
             onError(errorMsg);
             this.showError({
                 message: errorMsg,
-                title: 'API 請求失敗',
+                title: 'API �ШD����',
                 details: error.stack || ''
             });
         }
@@ -462,7 +462,7 @@ const APIClient = {
         const settings = await this.getSettings();
         
         if (!settings.api_url) {
-            return { success: false, message: 'API URL 未設定' };
+            return { success: false, message: 'API URL ���]�w' };
         }
         
         try {
@@ -474,12 +474,12 @@ const APIClient = {
             });
             
             if (response.ok) {
-                return { success: true, message: '連線成功' };
+                return { success: true, message: '�s�u���\' };
             } else {
-                return { success: false, message: `錯誤: ${response.status}` };
+                return { success: false, message: `���~: ${response.status}` };
             }
         } catch (error) {
-            return { success: false, message: error.message || '連線失敗' };
+            return { success: false, message: error.message || '�s�u����' };
         }
     },
     
@@ -488,30 +488,30 @@ const APIClient = {
         
         if (!fortune_summary || !liu_ri_temple) return null;
         
-        let context = '[今日命理提示]\n';
-        context += `流日命宮：${liu_ri_temple}\n`;
-        context += `整體運勢：${fortune_summary.daily || '暫無資料'}\n`;
+        let context = '[����R�z����]\n';
+        context += `�y��R�c�G${liu_ri_temple}\n`;
+        context += `����B�աG${fortune_summary.daily || '�ȵL���'}\n`;
         
         if (sihua) {
             const sihuaParts = [];
-            if (sihua.祿) sihuaParts.push(`祿(${sihua.祿})`);
-            if (sihua.權) sihuaParts.push(`權(${sihua.權})`);
-            if (sihua.科) sihuaParts.push(`科(${sihua.科})`);
-            if (sihua.忌) sihuaParts.push(`忌(${sihua.忌})`);
+            if (sihua.�S) sihuaParts.push(`�S(${sihua.�S})`);
+            if (sihua.�v) sihuaParts.push(`�v(${sihua.�v})`);
+            if (sihua.��) sihuaParts.push(`��(${sihua.��})`);
+            if (sihua.��) sihuaParts.push(`��(${sihua.��})`);
             if (sihuaParts.length > 0) {
-                context += `四化：${sihuaParts.join(' ')}\n`;
+                context += `�|�ơG${sihuaParts.join(' ')}\n`;
             }
         }
         
         if (events && events.length > 0) {
             const topEvents = events.filter(e => e.confidence > 0.7).slice(0, 3);
             if (topEvents.length > 0) {
-                context += `可能事件：${topEvents.map(e => e.description).join('、')}\n`;
+                context += `�i��ƥ�G${topEvents.map(e => e.description).join('�B')}\n`;
             }
         }
         
-        context += '\n請根據這些命理資訊，自然地融入角色的日常對話中。';
-        context += '例如：如果運勢提到「精力充沛」，角色可能會主動提議外出或運動。';
+        context += '\n�Юھڳo�ǩR�z��T�A�۵M�a�ĤJ���⪺��`��ܤ��C';
+        context += '�Ҧp�G�p�G�B�մ���u��O�R�K�v�A����i��|�D�ʴ�ĳ�~�X�ιB�ʡC';
         
         return context;
     }

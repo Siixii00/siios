@@ -174,7 +174,7 @@ async function renderMCPMarket() {
     const dropdownGrid = createElement('div', 'grid grid-cols-2 gap-2 p-3');
     
     const allOption = createElement('button', 'mcp-category-option active');
-    allOption.innerHTML = "`<span class=`"`material-symbols-outlined text-sm mr-1`"`>apps</span>全部`";
+    allOption.innerHTML = '`<span class=`'`material-symbols-outlined text-sm mr-1`'`>apps</span>全部`';
     allOption.dataset.category = 'all';
     allOption.onclick = (e) => {
         e.stopPropagation();
@@ -219,7 +219,7 @@ async function renderMCPMarket() {
     customHeader.appendChild(customTitle);
     
     const addCustomBtn = createElement('button', 'text-xs text-purple-600 font-medium hover:text-purple-800 transition-colors');
-    addCustomBtn.innerHTML = "`<span class=`"`material-symbols-outlined text-sm align-middle`"`>add_circle</span> 新增工具`";
+    addCustomBtn.innerHTML = '`<span class=`'`material-symbols-outlined text-sm align-middle`'`>add_circle</span> 新增工具`';
     addCustomBtn.onclick = () => showCustomToolDialog(container);
     customHeader.appendChild(addCustomBtn);
     customSection.appendChild(customHeader);
@@ -664,7 +664,7 @@ function createCustomToolItem(tool, index, container) {
     actions.appendChild(selectCheckbox);
     
     const deleteBtn = createElement('button', 'text-red-500 hover:text-red-700 transition-colors');
-    deleteBtn.innerHTML = "`<span class=`"`material-symbols-outlined text-sm`"`>delete</span>`";
+    deleteBtn.innerHTML = '`<span class=`'`material-symbols-outlined text-sm`'`>delete</span>`';
     deleteBtn.onclick = () => deleteCustomTool(tool.id);
     actions.appendChild(deleteBtn);
     

@@ -1,4 +1,4 @@
-﻿class OperationQueue {
+class OperationQueue {
     constructor() {
         this.queue = [];
         this.isProcessing = false;

@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
@@ -10,7 +10,7 @@ let state = {
   artistName: '',
   artistAvatar: '',
   messages: [],
-  fanName: 'íŒ¬',
+  fanName: '?',
   mode: 'artist',
   isGenerating: false
 };
@@ -36,7 +36,7 @@ function renderFeed(container) {
       ${msg.text}
       ${msg.isStreaming ? '<span class='streaming-indicator'>...</span>' : ''}
     </div>
-  `).join('') || '<div class='empty-msg'>å°šç„¡è¨Šæ¯</div>';
+  `).join('') || '<div class='empty-msg'>©|µL°T®§</div>';
   
   feed.scrollTop = feed.scrollHeight;
 }
@@ -62,7 +62,7 @@ async function generateArtistReply(container, fanMessage) {
     const settings = await APIClient.getSettings();
     
     if (!settings.api_url || !settings.api_key) {
-      state.messages[msgIndex].text = '[API æœªè¨­å®š]';
+      state.messages[msgIndex].text = '[API ¥¼³]©w]';
       state.messages[msgIndex].isStreaming = false;
       renderFeed(container);
       return;
@@ -97,7 +97,7 @@ async function generateArtistReply(container, fanMessage) {
     });
     
     if (!response.ok) {
-      throw new Error(`API éŒ¯èª¤: ${response.status}`);
+      throw new Error(`API ¿ù»~: ${response.status}`);
     }
     
     const reader = response.body.getReader();
@@ -134,11 +134,11 @@ async function generateArtistReply(container, fanMessage) {
     await saveState();
     
   } catch (error) {
-    state.messages[msgIndex].text = `[éŒ¯èª¤: ${error.message}]`;
+    state.messages[msgIndex].text = `[¿ù»~: ${error.message}]`;
     state.messages[msgIndex].isStreaming = false;
     if (window.showError) {
       window.showError({
-        title: 'Bubbles ç”ŸæˆéŒ¯èª¤',
+        title: 'Bubbles ¥Í¦¨¿ù»~',
         message: error.message,
         details: error.stack || ''
       });
@@ -181,7 +181,7 @@ async function renderBubbles(params) {
   container.innerHTML = `
     <header class='ios-header'>
       <button class='ios-back-btn'>
-        <i class='fas fa-chevron-left'></i> è¿”å›
+        <i class='fas fa-chevron-left'></i> ªğ¦^
       </button>
       <h1 class='menu-title'>Bubble</h1>
     </header>
@@ -189,9 +189,9 @@ async function renderBubbles(params) {
     <div class='page'>
       <div class='bubbles-settings'>
         <div class='settings-row'>
-          <label>é¸æ“‡è§’è‰²</label>
+          <label>¿ï¾Ü¨¤¦â</label>
           <select class='character-select'>
-            <option value=''>-- è«‹é¸æ“‡ --</option>
+            <option value=''>-- ½Ğ¿ï¾Ü --</option>
             ${characters.map(c => `
               <option value='${c.id}' ${state.characterId === c.id ? 'selected' : ''}>
                 ${c.name}
@@ -202,17 +202,17 @@ async function renderBubbles(params) {
         
         <div class='mode-switch'>
           <button class='mode-btn ${state.mode === 'artist' ? 'active' : ''}' data-mode='artist'>
-            <i class='fas fa-star'></i> è—äººæ¨¡å¼
+            <i class='fas fa-star'></i> ÃÀ¤H¼Ò¦¡
           </button>
           <button class='mode-btn ${state.mode === 'fan' ? 'active' : ''}' data-mode='fan'>
-            <i class='fas fa-heart'></i> ç²‰çµ²æ¨¡å¼
+            <i class='fas fa-heart'></i> ¯»µ·¼Ò¦¡
           </button>
         </div>
         
         ${state.mode === 'fan' ? `
           <div class='settings-row'>
-            <label>ç²‰çµ²åç¨±</label>
-            <input type='text' class='fan-name-input' value='${state.fanName}' placeholder='è¼¸å…¥ç²‰çµ²åç¨±'>
+            <label>¯»µ·¦WºÙ</label>
+            <input type='text' class='fan-name-input' value='${state.fanName}' placeholder='¿é¤J¯»µ·¦WºÙ'>
           </div>
         ` : ''}
       </div>
@@ -220,7 +220,7 @@ async function renderBubbles(params) {
       <div class='bubbles-feed'></div>
       
       <div class='bubbles-input-area'>
-        <input type='text' class='bubble-input' placeholder='è¼¸å…¥è¨Šæ¯...' ${state.isGenerating ? 'disabled' : ''}>
+        <input type='text' class='bubble-input' placeholder='¿é¤J°T®§...' ${state.isGenerating ? 'disabled' : ''}>
         <button class='send-btn' ${state.isGenerating ? 'disabled' : ''}>
           <i class='fas fa-paper-plane'></i>
         </button>

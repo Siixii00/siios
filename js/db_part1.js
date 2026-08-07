@@ -1,4 +1,4 @@
-ï»¿import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
+import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
 
 const DB_NAME = 'sxios';
 const DB_VERSION = 7;
@@ -10,7 +10,7 @@ async function cleanLegacyDatabases() {
     for (const legacyName of LEGACY_DB_NAMES) {
         try {
             await deleteDB(legacyName);
-            console.log([DB] å·²åˆªé™¤èˆŠè³‡æ–™åº«: );
+            console.log([DB] ¤w§R°£ÂÂ¸ê®Æ®w: );
         } catch (e) {
         }
     }

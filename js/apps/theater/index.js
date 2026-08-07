@@ -248,7 +248,7 @@ async function renderTheater(params) {
       }
       
       addBtn.disabled = true;
-      addBtn.innerHTML = "`<i class=`"`fas fa-spinner fa-spin`"`></i> 生成中...`";
+      addBtn.innerHTML = '`<i class=`'`fas fa-spinner fa-spin`'`></i> 生成中...`';
       
       try {
         const scriptContent = await generateScript(selectedChar);
@@ -280,7 +280,7 @@ async function renderTheater(params) {
         }
       } finally {
         addBtn.disabled = false;
-        addBtn.innerHTML = "`<i class=`"`fas fa-plus`"`></i> 新增劇目`";
+        addBtn.innerHTML = '`<i class=`'`fas fa-plus`'`></i> 新增劇目`';
       }
     };
   }

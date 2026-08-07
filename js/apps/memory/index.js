@@ -168,7 +168,7 @@ async function renderMemoryList() {
         const notionConfig = await SettingsDB.get('wiki_notion_config');
         
         const statsCard = createElement('div', 'bg-gradient-to-r from-claude-primary to-gray-700 rounded-lg mx-4 mb-4 p-4 text-white');
-        statsCard.innerHTML = "`<h2 class=`"`font-bold mb-3`"`>記憶統計</h2>`" +
+        statsCard.innerHTML = '`<h2 class=`'`font-bold mb-3`'`>記憶統計</h2>`' +
             '<div class='grid grid-cols-3 gap-2 text-center'>' +
             '<div><div class='text-2xl font-bold'>' + memories.length + '</div><div class='text-xs opacity-80'>總記憶</div></div>' +
             '<div><div class='text-2xl font-bold'>' + memories.filter(m => m.memory_type === 'permanent').length + '</div><div class='text-xs opacity-80'>永久記憶</div></div>' +

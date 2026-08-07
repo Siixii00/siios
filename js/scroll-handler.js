@@ -1,28 +1,28 @@
-ï»¿// æ‰‹æ©Ÿç«¯æ»‘å‹•é‚è¼¯å„ªåŒ–
+// ¤â¾÷ºÝ·Æ°ÊÅÞ¿èÀu¤Æ
 class ScrollHandler {
     constructor() {
         this.init();
     }
     
     init() {
-        // æª¢æ¸¬æ˜¯å¦ç‚ºç§»å‹•è¨­å‚™
+        // ÀË´ú¬O§_¬°²¾°Ê³]³Æ
         const isMobile = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(navigator.userAgent);
         const isPWA = window.navigator.standalone === true || window.matchMedia('(display-mode: standalone)').matches;
         
         if (isMobile || isPWA) {
-            console.log('[Scroll] å•Ÿç”¨ç§»å‹•ç«¯æ»‘å‹•å„ªåŒ–');
+            console.log('[Scroll] ±Ò¥Î²¾°ÊºÝ·Æ°ÊÀu¤Æ');
             this.setupScrollHandlers();
             this.fixSafariScrolling();
         }
     }
     
     setupScrollHandlers() {
-        // ç›£è½è·¯ç”±è®ŠåŒ–ï¼Œç‚ºæ¯å€‹æ–°é é¢æ·»åŠ æ»‘å‹•æ”¯æŒ
+        // ºÊÅ¥¸ô¥ÑÅÜ¤Æ¡A¬°¨C­Ó·s­¶­±²K¥[·Æ°Ê¤ä«ù
         window.addEventListener('hashchange', () => {
             setTimeout(() => this.fixCurrentPage(), 100);
         });
         
-        // åˆå§‹é é¢è¼‰å…¥å¾Œä¿®å¾©
+        // ªì©l­¶­±¸ü¤J«á­×´_
         setTimeout(() => this.fixCurrentPage(), 500);
     }
     
@@ -30,35 +30,35 @@ class ScrollHandler {
         const appContainer = document.querySelector('.app-container');
         if (!appContainer) return;
         
-        // ç¢ºä¿ app-container æœ‰æ­£ç¢ºçš„é«˜åº¦å’Œ overflow è¨­ç½®
+        // ½T«O app-container ¦³¥¿½Tªº°ª«×©M overflow ³]¸m
         appContainer.style.height = '100vh';
         appContainer.style.height = '100dvh';
         appContainer.style.overflow = 'hidden';
         appContainer.style.display = 'flex';
         appContainer.style.flexDirection = 'column';
         
-        // æ‰¾åˆ°ä¸»è¦çš„å…§å®¹å€åŸŸ
+        // §ä¨ì¥D­nªº¤º®e°Ï°ì
         const mainContent = appContainer.querySelector('main') || 
                            appContainer.querySelector('.flex-1') ||
                            appContainer.querySelector('.page-content');
         
         if (mainContent) {
-            // è¨­ç½®æ»‘å‹•å±¬æ€§
+            // ³]¸m·Æ°ÊÄÝ©Ê
             mainContent.style.flex = '1';
             mainContent.style.overflowY = 'auto';
             mainContent.style.overflowX = 'hidden';
             mainContent.style.webkitOverflowScrolling = 'touch';
             mainContent.style.overscrollBehaviorY = 'contain';
             
-            console.log('[Scroll] å·²ä¿®å¾©é é¢æ»‘å‹•:', mainContent);
+            console.log('[Scroll] ¤w­×´_­¶­±·Æ°Ê:', mainContent);
         }
         
-        // ä¿®å¾©ç‰¹å®šçš„æ‡‰ç”¨å®¹å™¨
+        // ­×´_¯S©wªºÀ³¥Î®e¾¹
         this.fixSpecificApps();
     }
     
     fixSpecificApps() {
-        // ä¿®å¾©èŠå¤©é é¢
+        // ­×´_²á¤Ñ­¶­±
         const chatContainer = document.querySelector('.kakao-chat-bg');
         if (chatContainer) {
             const main = chatContainer.querySelector('main');
@@ -69,7 +69,7 @@ class ScrollHandler {
             }
         }
         
-        // ä¿®å¾©åˆ—è¡¨é é¢
+        // ­×´_¦Cªí­¶­±
         const listContainers = document.querySelectorAll('.overflow-y-auto');
         listContainers.forEach(container => {
             container.style.webkitOverflowScrolling = 'touch';
@@ -78,23 +78,23 @@ class ScrollHandler {
     }
     
     fixSafariScrolling() {
-        // ä¿®å¾© Safari çš„æ»‘å‹•å•é¡Œ
+        // ­×´_ Safari ªº·Æ°Ê°ÝÃD
         document.body.addEventListener('touchmove', function(e) {
-            // å…è¨±æ»‘å‹•çš„å…ƒç´ 
+            // ¤¹³\·Æ°Êªº¤¸¯À
             const scrollable = e.target.closest('.overflow-y-auto, .overflow-auto, main, .page-content');
             
             if (!scrollable) {
-                // å¦‚æžœé»žæ“Šçš„ä¸æ˜¯å¯æ»‘å‹•å€åŸŸï¼Œé˜»æ­¢é»˜èªè¡Œç‚ºï¼ˆé˜²æ­¢æ•´é æ»¾å‹•ï¼‰
+                // ¦pªGÂIÀ»ªº¤£¬O¥i·Æ°Ê°Ï°ì¡Aªý¤îÀq»{¦æ¬°¡]¨¾¤î¾ã­¶ºu°Ê¡^
                 if (e.target.closest('.app-container')) {
                     e.preventDefault();
                 }
             }
         }, { passive: false });
         
-        // è™•ç†è¼¸å…¥æ¡†ç²å¾—ç„¦é»žæ™‚çš„æ»‘å‹•å•é¡Œ
+        // ³B²z¿é¤J®ØÀò±oµJÂI®Éªº·Æ°Ê°ÝÃD
         document.addEventListener('focus', (e) => {
             if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
-                // å»¶é²åŸ·è¡Œï¼Œç­‰å¾…éµç›¤å½ˆå‡º
+                // ©µ¿ð°õ¦æ¡Aµ¥«ÝÁä½L¼u¥X
                 setTimeout(() => {
                     e.target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                 }, 300);
@@ -103,7 +103,7 @@ class ScrollHandler {
     }
 }
 
-// è‡ªå‹•åˆå§‹åŒ–
+// ¦Û°Êªì©l¤Æ
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => new ScrollHandler());
 } else {

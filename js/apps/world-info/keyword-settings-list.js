@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar } from '../../components.js';
 import { KeywordSettingsDB } from '../../db.js';
 
@@ -6,7 +6,7 @@ async function renderKeywordSettings() {
     const container = createElement('div', 'app-container bg-ios-bg');
     
     const header = createIOSNavBar({
-        title: 'é—œéµå­—è¨­å®š',
+        title: 'ÃöÁä¦r³]©w',
         backPath: '/world-info',
         rightActions: [
             {
@@ -27,7 +27,7 @@ async function renderKeywordSettings() {
     
     if (entries.length === 0) {
         const emptyState = createElement('div', 'text-center py-12 text-ios-muted');
-        emptyState.textContent = 'å°šæœªå»ºç«‹ä»»ä½•é—œéµå­—è¨­å®š';
+        emptyState.textContent = '©|¥¼«Ø¥ß¥ô¦óÃöÁä¦r³]©w';
         listContainer.appendChild(emptyState);
     } else {
         const group = createElement('div', 'ios-grouped-list');

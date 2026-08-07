@@ -1,4 +1,4 @@
-ï»¿import { CharactersDB, ZiweiCacheDB } from '../db.js';
+import { CharactersDB, ZiweiCacheDB } from '../db.js';
 import { ziweiClient } from './ziwei-mcp-client.js';
 
 class ZiweiLazyLoader {
@@ -62,7 +62,7 @@ class ZiweiLazyLoader {
             
             return newCache;
         } catch (error) {
-            console.error('[ZiweiLazyLoader] æ›´æ–°å¤±æ•—:', error);
+            console.error('[ZiweiLazyLoader] §ó·s¥¢±Ñ:', error);
             
             const char = await CharactersDB.getById(characterId);
             if (char.ziwei_cache_id) {
@@ -95,7 +95,7 @@ class ZiweiLazyLoader {
         this.checkInterval = setInterval(async () => {
             const today = this.getTodayString();
             if (today !== this.lastCheckDate) {
-                console.log('[ZiweiLazyLoader] åµæ¸¬åˆ°è·¨æ—¥ï¼Œè§¸ç™¼æ›´æ–°');
+                console.log('[ZiweiLazyLoader] °»´ú¨ì¸ó¤é¡AÄ²µo§ó·s');
                 this.lastCheckDate = today;
                 await this.refreshAllCharacters();
             }
@@ -118,7 +118,7 @@ class ZiweiLazyLoader {
                 }
             }
         } catch (error) {
-            console.error('[ZiweiLazyLoader] æ‰¹æ¬¡æ›´æ–°å¤±æ•—:', error);
+            console.error('[ZiweiLazyLoader] §å¦¸§ó·s¥¢±Ñ:', error);
         }
     }
 }
