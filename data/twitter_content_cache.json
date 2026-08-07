@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-07T13:06:15.581136",
-    "total_items": 60
+    "last_updated": "2026-08-07T14:53:49.291857",
+    "total_items": 57
   },
   "content": {
     "tech": [
@@ -9,111 +9,117 @@
         "title": "US strikes $1.2B deal to pay German firm to halt offshore wind projects",
         "url": "https://www.bbc.com/news/articles/c1e1vg0gjl5o",
         "source": "Hacker News",
-        "score": 373
+        "score": 647
+      },
+      {
+        "title": "U.S. economy lost 23,000 jobs in July, a sudden reversal",
+        "url": "https://www.nbcnews.com/business/economy/july-2026-jobs-report-rcna591138",
+        "source": "Hacker News",
+        "score": 210
+      },
+      {
+        "title": "Show HN: Wyzer Programming Language",
+        "url": "https://github.com/Wyzer-Lang/wyzer",
+        "source": "Hacker News",
+        "score": 40
       },
       {
         "title": "New Mexico court orders Meta to pay $567m over harms to children’s mental health",
         "url": "https://www.theguardian.com/technology/2026/aug/06/new-mexico-court-meta",
         "source": "Hacker News",
-        "score": 399
+        "score": 476
       },
       {
         "title": "AMD acquires Taalas to boost inference performance by etching models in silicon",
         "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344",
         "source": "Hacker News",
-        "score": 737
+        "score": 765
+      },
+      {
+        "title": "U.S. Lost 23,000 Jobs in July, While Unemployment Ticked Lower",
+        "url": "https://www.wsj.com/economy/jobs/july-jobs-report-unemployment-0d7c08a7",
+        "source": "Hacker News",
+        "score": 40
+      },
+      {
+        "title": "Thoroughly Understanding C++ ABI",
+        "url": "https://ykiko.me/en/articles/692886292/",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Kitesurf: Agent-first browser that runs in V8 isolates",
+        "url": "https://blog.cloudflare.com/kitesurf/",
+        "source": "Hacker News",
+        "score": 34
+      },
+      {
+        "title": "The web server deployment model breaks at hobby scale",
+        "url": "https://w.on-t.work/web-deployment-model",
+        "source": "Hacker News",
+        "score": 45
+      },
+      {
+        "title": "US's largest newspaper chain partners with Palantir to analyze audience data",
+        "url": "https://www.niemanlab.org/2026/08/americas-largest-newspaper-chain-usa-today-co-partners-with-palantir-to-analyze-audience-data/",
+        "source": "Hacker News",
+        "score": 53
       },
       {
         "title": "Taste Is All That's Left",
         "url": "https://notashelf.dev/posts/taste-is-all-thats-left",
         "source": "Hacker News",
-        "score": 501
-      },
-      {
-        "title": "Scientists discover Kelvin-Helmholtz Instability on the surface of the Sun",
-        "url": "https://nso.edu/press-release/nsf-inouye-solar-telescope-enables-major-discovery-of-a-hidden-solar-process/",
-        "source": "Hacker News",
-        "score": 256
-      },
-      {
-        "title": "Bioengineered chewing gum may offer a way to fight HPV and other microbes",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260803080917.htm",
-        "source": "Hacker News",
-        "score": 156
-      },
-      {
-        "title": "São Paulo resident transforms degraded area into urban forest",
-        "url": "https://saopaulosecreto.com/en/tiquatira-linear-park-en/",
-        "source": "Hacker News",
-        "score": 191
+        "score": 552
       },
       {
         "title": "A quine in Piet – a GIF image that prints itself [video]",
         "url": "https://www.youtube.com/watch?v=GwMtzhjCzyc",
         "source": "Hacker News",
-        "score": 28
+        "score": 51
       },
       {
-        "title": "TypeStax: A type scale generator with vintage audio hardware interface",
-        "url": "https://www.typestax.com/",
+        "title": "São Paulo resident transforms degraded area into urban forest",
+        "url": "https://saopaulosecreto.com/en/tiquatira-linear-park-en/",
         "source": "Hacker News",
-        "score": 6
+        "score": 225
       },
       {
-        "title": "GitHub Actions and Pages are experiencing degraded availability",
-        "url": "https://www.githubstatus.com/incidents/qcvjkzcs7j74",
-        "source": "Hacker News",
-        "score": 430
-      },
-      {
-        "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
-        "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
-        "source": "Hacker News",
-        "score": 260
-      },
-      {
-        "title": "Launch HN: ProvenMetal (YC S26) delivers circuit boards in days instead of weeks",
-        "url": "https://provenmetal.com",
-        "source": "Hacker News",
-        "score": 210
-      },
-      {
-        "title": "Atomic Clocks",
-        "url": "https://www.nist.gov/atomic-clocks/how-do-atomic-clocks-work",
-        "source": "Hacker News",
-        "score": 104
-      },
-      {
-        "title": "Welcoming the Nepalese Government to Have I Been Pwned",
-        "url": "https://www.troyhunt.com/welcoming-the-nepalese-government-to-have-i-been-pwned/",
+        "title": "Bioengineered chewing gum may offer a way to fight HPV and other microbes",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260803080917.htm",
         "source": "Hacker News",
         "score": 173
       },
       {
-        "title": "Herdr is joining Y Combinator. The runtime stays open",
-        "url": "https://herdr.dev/blog/herdr-is-joining-y-combinator/",
+        "title": "Scientists discover Kelvin-Helmholtz Instability on the surface of the Sun",
+        "url": "https://nso.edu/press-release/nsf-inouye-solar-telescope-enables-major-discovery-of-a-hidden-solar-process/",
         "source": "Hacker News",
-        "score": 235
+        "score": 272
       }
     ],
     "ai": [
       {
+        "title": "US's largest newspaper chain partners with Palantir to analyze audience data",
+        "url": "https://www.niemanlab.org/2026/08/americas-largest-newspaper-chain-usa-today-co-partners-with-palantir-to-analyze-audience-data/",
+        "source": "Hacker News AI",
+        "score": 53
+      },
+      {
         "title": "GitHub Actions and Pages are experiencing degraded availability",
         "url": "https://www.githubstatus.com/incidents/qcvjkzcs7j74",
         "source": "Hacker News AI",
-        "score": 430
+        "score": 449
       },
       {
         "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
         "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
         "source": "Hacker News AI",
-        "score": 260
+        "score": 275
       },
       {
-        "title": "Humans missed 1 in 3 threats approving AI agent commands across 40k game runs",
-        "url": "https://scalex.dev/blog/ai-agent-permissions-stats/",
+        "title": "AI psychosis is the new leadership blind spot",
+        "url": "https://www.fastcompany.com/91576086/ai-psychosis-is-the-new-leadership-blind-spot-ai-leadership-blind-spots",
         "source": "Hacker News AI",
-        "score": 318
+        "score": 109
       },
       {
         "title": "New Orleans is testing Carbyne’s AI-powered Emergency Call Triage software",
@@ -125,40 +131,21 @@
         "title": "Inside vLLM: Anatomy of a High-Throughput LLM Inference System (2025)",
         "url": "https://www.aleksagordic.com/blog/vllm",
         "source": "Hacker News AI",
-        "score": 127
+        "score": 131
       },
       {
         "title": "The simple elegance of the integrated timing belt loopback fastener",
         "url": "https://danielmangum.com/posts/integrated-timing-belt-loopback-fastener/",
         "source": "Hacker News AI",
-        "score": 119
-      },
-      {
-        "title": "Generative \"AI\": The Guitar Hero of Creativity",
-        "url": "https://whatever.scalzi.com/2026/08/06/generative-ai-the-guitar-hero-of-creativity/",
-        "source": "Hacker News AI",
-        "score": 23
-      },
-      {
-        "title": "Software development with AI is starting to feel like cooking steak",
-        "url": "https://blog.sydorets.com/en/posts/almost-no-skill-required-to-cook-a-steak/",
-        "source": "Hacker News AI",
-        "score": 376
-      },
-      {
-        "title": "Artificial Intelligence used to design new viruses",
-        "url": "https://www.bbc.co.uk/news/articles/c5y3j3ngevmo",
-        "source": "Hacker News AI",
-        "score": 42
-      },
-      {
-        "title": "Learning to fly FPV drones with AI flight coach",
-        "url": "https://blog.divyendusingh.com/p/learning-to-fly-fpv-drones-with-ai",
-        "source": "Hacker News AI",
-        "score": 15
+        "score": 120
       }
     ],
     "news": [
+      {
+        "title": "Seven killed after teen shooter opens fire at home and school in Thailand",
+        "url": "https://www.bbc.co.uk/news/articles/c980j3j578do?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Meta fined $567m in largest child safety ruling against social media giant",
         "url": "https://www.bbc.co.uk/news/articles/cd7lz3wr2rlo?at_medium=RSS&at_campaign=rss",
@@ -180,18 +167,13 @@
         "source": "BBC World"
       },
       {
-        "title": "US strikes $1.2bn deal to pay German firm to halt offshore wind projects",
+        "title": "Trump administration to pay German firm $1.2bn to halt US wind projects",
         "url": "https://www.bbc.co.uk/news/articles/c1e1vg0gjl5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Trump denies US weapons shortage and says information 'leakers' being 'hunted down'",
         "url": "https://www.bbc.co.uk/news/articles/cy8mjd19xm7o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "A new youth agitation grips an Indian state after 'cockroach' protests",
-        "url": "https://www.bbc.co.uk/news/articles/c5ywv6egvx8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -271,6 +253,31 @@
     ],
     "gaming": [
       {
+        "title": "Where to find a Windup Inkay in Pokémon Pokopia",
+        "url": "https://www.polygon.com/pokemon-pokopia-windup-inkay-where-to-find/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Dragon Ball Super Beerus Could Get October Release Date, History Suggests",
+        "url": "https://www.polygon.com/dragon-ball-super-beerus-nycc-possible-release-date/",
+        "source": "Polygon"
+      },
+      {
+        "title": "All generator device locations in Beast of Reincarnation",
+        "url": "https://www.polygon.com/beast-of-reincarnation-generator-device-location-where-to-find/",
+        "source": "Polygon"
+      },
+      {
+        "title": "All Electronic Brain Locations in Beast of Reincarnation",
+        "url": "https://www.polygon.com/beast-of-reincarnation-electronic-brain-location-where-to-find-calculations/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Two Point Studios' Decade of Success Gave Sega a Huge Surprise Win",
+        "url": "https://www.polygon.com/two-point-studios-history-10-year-anniversary/",
+        "source": "Polygon"
+      },
+      {
         "title": "What's the Worst Camp Miasma Movie? Jane Schoenbrun Breaks Down Their Alt-Universe Slasher Franchise",
         "url": "https://www.polygon.com/jane-schoebrun-interview-teenage-sex-death-camp-miasma/",
         "source": "Polygon"
@@ -278,31 +285,6 @@
       {
         "title": "5 New Steam Games to Play the Weekend of August 7",
         "url": "https://www.polygon.com/new-steam-games-august-7-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "After 11 Years, The 5-part Cult Classic Thriller That's Hannibal Meets Buffy Is Officially Free on Streaming",
-        "url": "https://www.polygon.com/izombie-streaming-free-pluto-tv/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Splatoon Raiders' August Update Introduces the Change Most Requested by Players",
-        "url": "https://www.polygon.com/splatoon-raiders-august-update-patch-notes/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fourth Wing Fans Have a New Reason to Get Excited While Waiting for the Next Book",
-        "url": "https://www.polygon.com/fourth-wing-graphic-novel-preorder-amazon/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The genius director behind the most unhinged thriller of the century officially returns in 3 weeks",
-        "url": "https://www.polygon.com/too-many-cooks-buddy-casper-kelly/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Manga Million Explained, Why Everyone’s Talking About One Piece Publisher’s Bold New Manga Project",
-        "url": "https://www.polygon.com/manga-million-shueisha-online-reader/",
         "source": "Polygon"
       }
     ],
