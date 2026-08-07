@@ -1,0 +1,15 @@
+# .gitignore for Discord test environment
+
+# 環境變數
+.env
+
+# Wrangler
+.wrangler/
+dist/
+
+# 日誌
+*.log
+
+# 臨時檔案
+*.tmp
+*.temp
