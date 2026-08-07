@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-07T21:40:04.640286",
-    "total_items": 59
+    "last_updated": "2026-08-07T22:36:50.960794",
+    "total_items": 58
   },
   "content": {
     "tech": [
@@ -9,111 +9,117 @@
         "title": "DeepSeek V4 Flash 0731",
         "url": "https://arcprize.org/results/deepseek-v4-flash-0731",
         "source": "Hacker News",
-        "score": 299
+        "score": 348
       },
       {
         "title": "Assembly Hall of Shame",
         "url": "https://github.com/xoreaxeaxeax/asm-hall-of-shame",
         "source": "Hacker News",
-        "score": 153
+        "score": 190
       },
       {
         "title": "Ancient Library – 1,060 Greek/Latin texts, click any word to parse it",
         "url": "https://ancientlibrary.net/",
         "source": "Hacker News",
-        "score": 76
+        "score": 100
       },
       {
         "title": "Responding to the next frontier of critical cyber capabilities",
         "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
         "source": "Hacker News",
-        "score": 124
+        "score": 134
+      },
+      {
+        "title": "What happens if an entire class of workers loses faith in their careers",
+        "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
+        "source": "Hacker News",
+        "score": 285
       },
       {
         "title": "An all-sky map of half a million supermassive black holes",
         "url": "https://www.sdss.org/black-hole-mapper-release-20/",
         "source": "Hacker News",
-        "score": 113
+        "score": 122
       },
       {
         "title": "Oracle bans AI-generated code from OpenJDK",
         "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
         "source": "Hacker News",
-        "score": 297
+        "score": 329
       },
       {
-        "title": "What happens if an entire class of workers loses faith in their careers",
-        "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
+        "title": "Water system controllers don't belong on the internet, says ex-NSA chief",
+        "url": "https://www.theregister.com/security/2026/08/07/water-system-controllers-dont-belong-on-the-internet-says-ex-nsa-chief-after-suspected-iran-attacks/5285070",
         "source": "Hacker News",
-        "score": 231
+        "score": 45
       },
       {
         "title": "Guarded Methods in OCaml",
         "url": "https://xvw.lol/en/articles/oop-refl.html",
         "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "App Store Rejection of the Week: Dark Hours",
-        "url": "https://daringfireball.net/2026/08/app_store_rejection_of_the_week_dark_hours",
-        "source": "Hacker News",
-        "score": 174
-      },
-      {
-        "title": "Psychological Warfare in Reverse Engineering (2015)",
-        "url": "https://github.com/xoreaxeaxeax/repsych",
-        "source": "Hacker News",
-        "score": 26
+        "score": 34
       },
       {
         "title": "Carl's Required Reading",
         "url": "https://carlkolon.com/reading/",
         "source": "Hacker News",
-        "score": 54
+        "score": 69
       },
       {
-        "title": "Databricks drove down AI coding spend 70%",
-        "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
+        "title": "Psychological Warfare in Reverse Engineering (2015)",
+        "url": "https://github.com/xoreaxeaxeax/repsych",
         "source": "Hacker News",
-        "score": 129
+        "score": 33
+      },
+      {
+        "title": "App Store Rejection of the Week: Dark Hours",
+        "url": "https://daringfireball.net/2026/08/app_store_rejection_of_the_week_dark_hours",
+        "source": "Hacker News",
+        "score": 209
       },
       {
         "title": "Making Postgres 300x faster for analytics: batching, operator fusion, and SIMD",
         "url": "https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/",
         "source": "Hacker News",
-        "score": 211
+        "score": 218
+      },
+      {
+        "title": "2027 memory capacity is reportedly sold out",
+        "url": "https://www.ign.com/articles/ramageddon-continues-another-year-as-2027-memory-capacity-is-reportedly-sold-out",
+        "source": "Hacker News",
+        "score": 179
       },
       {
         "title": "Kitesurf: Agent-first browser that runs in V8 isolates",
         "url": "https://blog.cloudflare.com/kitesurf/",
         "source": "Hacker News",
-        "score": 127
-      },
-      {
-        "title": "A year of fighting scrapers on my 1.5 million-page website",
-        "url": "https://patronview.com/news/99-percent-of-my-website-traffic-is-bots/",
-        "source": "Hacker News",
-        "score": 335
+        "score": 140
       }
     ],
     "ai": [
       {
-        "title": "Oracle bans AI-generated code from OpenJDK",
-        "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
-        "source": "Hacker News AI",
-        "score": 297
-      },
-      {
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News AI",
-        "score": 231
+        "score": 285
+      },
+      {
+        "title": "Oracle bans AI-generated code from OpenJDK",
+        "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
+        "source": "Hacker News AI",
+        "score": 329
       },
       {
         "title": "Databricks drove down AI coding spend 70%",
         "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
         "source": "Hacker News AI",
-        "score": 129
+        "score": 137
+      },
+      {
+        "title": "Lost my phone at the office. Claude suggested tracking Bluetooth signal strength",
+        "url": "https://twitter.com/un1c0rnioz/status/2084686552299634805",
+        "source": "Hacker News AI",
+        "score": 12
       },
       {
         "title": "Britain's New World of Tobacco (2017)",
@@ -122,20 +128,8 @@
         "score": 15
       },
       {
-        "title": "Mykhailo Fedorov reveals struggle to secure Patriot missiles and Western support",
-        "url": "https://www.uawire.org/former-ukrainian-defense-minister-mykhailo-fedorov-reveals-struggles-to-secure-patriot-missiles-and-western-support",
-        "source": "Hacker News AI",
-        "score": 22
-      },
-      {
-        "title": "This Mine Predicts Major Wars. It's Opening Again",
-        "url": "https://www.bloomberg.com/graphics/2026-opinion-australia-tungsten-mine-us-war-defense-china/",
-        "source": "Hacker News AI",
-        "score": 65
-      },
-      {
-        "title": "Lost my phone at the office. Claude suggested tracking Bluetooth signal strength",
-        "url": "https://twitter.com/un1c0rnioz/status/2084686552299634805",
+        "title": "Mailüfterl (Early Transistorized Computer)",
+        "url": "https://en.wikipedia.org/wiki/Mail%C3%BCfterl",
         "source": "Hacker News AI",
         "score": 7
       },
@@ -143,18 +137,18 @@
         "title": "Claude Code: Starting August 14, auto mode will be the default permission mode",
         "url": "https://twitter.com/ClaudeDevs/status/2085794862608318627",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 12
       },
       {
-        "title": "Mailüfterl (Early Transistorized Computer)",
-        "url": "https://en.wikipedia.org/wiki/Mail%C3%BCfterl",
+        "title": "This Mine Predicts Major Wars. It's Opening Again",
+        "url": "https://www.bloomberg.com/graphics/2026-opinion-australia-tungsten-mine-us-war-defense-china/",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 65
       }
     ],
     "news": [
       {
-        "title": "Spain to impose border controls against Italy as row over Ceuta migrant influx intensifies",
+        "title": "Spain imposes border controls against Italy as row over Ceuta migrant influx intensifies",
         "url": "https://www.bbc.co.uk/news/articles/c5yv5l6yr5ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -184,8 +178,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Mexico and Peru restore diplomatic relations after asylum row",
-        "url": "https://www.bbc.co.uk/news/articles/cz7dy1l3e77o?at_medium=RSS&at_campaign=rss",
+        "title": "Hunter Biden tells BBC his pardon was 'not good' for America or his father's legacy",
+        "url": "https://www.bbc.co.uk/news/articles/cy8ey458pv5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -265,6 +259,21 @@
     ],
     "gaming": [
       {
+        "title": "Contrapoints devours forbidden, decadent games | Shelf Quest",
+        "url": "https://www.polygon.com/video/contrapoints-devours-forbidden-decadent-games-shelf-quest/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Sci-Fi Shows on Netflix Where Every Episode is a Masterpiece",
+        "url": "https://www.polygon.com/best-sci-fi-shows-on-netflix/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Tom Holland knows how to keep MCU secrets now",
+        "url": "https://www.polygon.com/video/tom-holland-knows-how-to-keep-mcu-secrets-now/",
+        "source": "Polygon"
+      },
+      {
         "title": "Sadie Sink can't say anything about Spider-Man: Brand New Day",
         "url": "https://www.polygon.com/video/sadie-sink-can-t-say-anything-about-spider-man-brand-new-day/",
         "source": "Polygon"
@@ -282,21 +291,6 @@
       {
         "title": "How Destin Daniel Cretton made Brand New Day a New York movie",
         "url": "https://www.polygon.com/video/how-destin-daniel-cretton-made-brand-new-day-a-new-york-movie/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Hands-on with Lego's Pokémon Smart Play Sets",
-        "url": "https://www.polygon.com/video/hands-on-with-lego-s-pokmon-smart-play-sets/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Obsession star Cooper Tomlinson makes ill-advised wishes",
-        "url": "https://www.polygon.com/video/obsession-star-cooper-tomlinson-makes-ill-advised-wishes/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 New Movies to Watch this Weekend on Netflix, Prime Video, and Paramount Plus",
-        "url": "https://www.polygon.com/new-movies-to-stream-this-weekend-netflix-august-7-9/",
         "source": "Polygon"
       }
     ],
