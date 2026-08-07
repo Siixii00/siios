@@ -364,7 +364,7 @@ async function renderPerChatSettings(params) {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.back()
     });
-    backBtn.innerHTML = "`<i class=`"`fas fa-chevron-left`"`></i> ªð¦^`";
+    backBtn.innerHTML = '`<i class=`'`fas fa-chevron-left`'`></i> ªð¦^`';
     headerInner.appendChild(backBtn);
 
     const title = createElement('h1', 'text-[32px] font-bold text-black leading-[31px]');
@@ -537,7 +537,7 @@ async function renderPerChatSettings(params) {
                 
                 const checkbox = createElement('div', `w-6 h-6 rounded-md border-2 flex items-center justify-center transition-colors ${enabledIds.includes(config.id) ? 'bg-green-500 border-green-500' : 'border-gray-300 bg-white'}`);
                 if (enabledIds.includes(config.id)) {
-                    checkbox.innerHTML = "`<svg class=`"`w-4 h-4 text-white`"` fill=`"none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg>';
+                    checkbox.innerHTML = '`<svg class=`'`w-4 h-4 text-white`'` fill=`'none' stroke='currentColor' viewBox='0 0 24 24'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 13l4 4L19 7'></path></svg>';
                 }
                 
                 checkbox.onclick = async () => {

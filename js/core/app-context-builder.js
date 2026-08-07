@@ -1,4 +1,4 @@
-ï»¿import { CharactersDB, UsersDB, SettingsDB, GlobalSettingsDB, GlobalForbiddenDB } from '../db.js';
+import { CharactersDB, UsersDB, SettingsDB, GlobalSettingsDB, GlobalForbiddenDB } from '../db.js';
 
 async function buildAppContext(options = {}) {
     const {
@@ -89,47 +89,47 @@ function buildSystemPrompt(context) {
     let prompt = '';
 
     if (context.character) {
-        prompt += `# è§’è‰²è¨­å®š
+        prompt += `# ¨¤¦â³]©w
 `;
-        prompt += `åç¨±: ${context.character.name || 'æœªçŸ¥'}
+        prompt += `¦WºÙ: ${context.character.name || '¥¼ª¾'}
 `;
         if (context.character.personality) {
-            prompt += `æ€§æ ¼: ${context.character.personality}
+            prompt += `©Ê®æ: ${context.character.personality}
 `;
         }
         if (context.character.scenario) {
-            prompt += `å ´æ™¯: ${context.character.scenario}
+            prompt += `³õ´º: ${context.character.scenario}
 `;
         }
         if (context.character.speech_style) {
-            prompt += `èªªè©±é¢¨æ ¼: ${context.character.speech_style}
+            prompt += `»¡¸Ü­·®æ: ${context.character.speech_style}
 `;
         }
     }
 
     if (context.user) {
         prompt += `
-# ä½¿ç”¨è€…è¨­å®š
+# ¨Ï¥ÎªÌ³]©w
 `;
-        prompt += `åç¨±: ${context.user.name || 'ä½¿ç”¨è€…'}
+        prompt += `¦WºÙ: ${context.user.name || '¨Ï¥ÎªÌ'}
 `;
         if (context.user.personality) {
-            prompt += `æ€§æ ¼: ${context.user.personality}
+            prompt += `©Ê®æ: ${context.user.personality}
 `;
         }
         if (context.user.speech_style) {
-            prompt += `èªªè©±é¢¨æ ¼: ${context.user.speech_style}
+            prompt += `»¡¸Ü­·®æ: ${context.user.speech_style}
 `;
         }
         if (context.user.taboos && context.user.taboos.length > 0) {
-            prompt += `ç¦å¿Œ: ${context.user.taboos.join(', ')}
+            prompt += `¸T§Ò: ${context.user.taboos.join(', ')}
 `;
         }
     }
 
     if (context.worldInfo.length > 0) {
         prompt += `
-# ä¸–ç•Œè¨­å®š
+# ¥@¬É³]©w
 `;
         const sorted = [...context.worldInfo].sort((a, b) => {
             const order = { front: 0, middle: 1, back: 2 };
@@ -145,9 +145,9 @@ ${entry.content}
 
     if (context.memories && context.memories.length > 0) {
         prompt += `
-# ç›¸é—œè¨˜æ†¶
+# ¬ÛÃö°O¾Ğ
 `;
-        prompt += `ä»¥ä¸‹æ˜¯èˆ‡ç•¶å‰å°è©±ç›¸é—œçš„éå¾€è¨˜æ†¶ï¼š
+        prompt += `¥H¤U¬O»P·í«e¹ï¸Ü¬ÛÃöªº¹L©¹°O¾Ğ¡G
 `;
         for (const memory of context.memories) {
             const sanitized = (memory.content || '').replace(/[\r\n]/g, ' ').replace(/\[.*?\]/g, '');
@@ -158,9 +158,9 @@ ${entry.content}
 
     if (context.forbidden.length > 0) {
         prompt += `
-# ç¦æ­¢äº‹é …
+# ¸T¤î¨Æ¶µ
 `;
-        prompt += `ä»¥ä¸‹å…§å®¹çµ•å°ä¸å¯å‡ºç¾åœ¨ç”Ÿæˆå…§å®¹ä¸­ï¼š
+        prompt += `¥H¤U¤º®eµ´¹ï¤£¥i¥X²{¦b¥Í¦¨¤º®e¤¤¡G
 `;
         for (const entry of context.forbidden) {
             prompt += `- ${entry.content}

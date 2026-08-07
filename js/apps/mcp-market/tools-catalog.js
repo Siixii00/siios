@@ -1,18 +1,18 @@
-ï»¿export const TOOLS_CATALOG = [
+export const TOOLS_CATALOG = [
     {
         id: 'daily_weather',
-        category: 'æ—¥å¸¸ç”Ÿæ´»',
+        category: '¤é±`¥Í¬¡',
         categoryIcon: 'wb_sunny',
         name: 'get_weather',
-        displayName: 'å¤©æ°£æŸ¥è©¢',
-        description: 'æŸ¥è©¢æŒ‡å®šåŸå¸‚çš„å¤©æ°£è³‡è¨Šï¼Œè®“è§’è‰²å¯ä»¥æ ¹æ“šå¤©æ°£çµ¦å‡ºè²¼å¿ƒå»ºè­°',
-        useCase: 'ã€Œæ˜å¤©å°åŒ—æœƒä¸‹é›¨å—ï¼Ÿè¨˜å¾—å¸¶å‚˜å–”ã€',
+        displayName: '¤Ñ®ğ¬d¸ß',
+        description: '¬d¸ß«ü©w«°¥«ªº¤Ñ®ğ¸ê°T¡AÅı¨¤¦â¥i¥H®Ú¾Ú¤Ñ®ğµ¹¥X¶K¤ß«ØÄ³',
+        useCase: '¡u©ú¤Ñ¥x¥_·|¤U«B¶Ü¡H°O±o±a³Ê³á¡v',
         difficulty: 'easy',
-        requires: ['å¤©æ°£ API Keyï¼ˆå¦‚ OpenWeatherMapï¼‰'],
+        requires: ['¤Ñ®ğ API Key¡]¦p OpenWeatherMap¡^'],
         parameters: {
             type: 'object',
             properties: {
-                city: { type: 'string', description: 'åŸå¸‚åç¨±ï¼ˆä¸­æ–‡æˆ–è‹±æ–‡ï¼‰' },
+                city: { type: 'string', description: '«°¥«¦WºÙ¡]¤¤¤å©Î­^¤å¡^' },
                 unit: { type: 'string', enum: ['celsius', 'fahrenheit'], default: 'celsius' }
             },
             required: ['city']
@@ -20,19 +20,19 @@
     },
     {
         id: 'daily_reminder',
-        category: 'æ—¥å¸¸ç”Ÿæ´»',
+        category: '¤é±`¥Í¬¡',
         categoryIcon: 'wb_sunny',
         name: 'set_reminder',
-        displayName: 'è¨­å®šæé†’',
-        description: 'è¨­å®šå®šæ™‚æé†’ï¼Œè§’è‰²å¯ä»¥å¹«ä½¿ç”¨è€…è¨˜ä½é‡è¦äº‹é …',
-        useCase: 'ã€Œå¥½ï¼Œæˆ‘æ™šä¸Š 8 é»æé†’ä½ åƒè—¥ã€',
+        displayName: '³]©w´£¿ô',
+        description: '³]©w©w®É´£¿ô¡A¨¤¦â¥i¥HÀ°¨Ï¥ÎªÌ°O¦í­«­n¨Æ¶µ',
+        useCase: '¡u¦n¡A§Ú±ß¤W 8 ÂI´£¿ô§A¦YÃÄ¡v',
         difficulty: 'medium',
-        requires: ['æ¨æ’­æœå‹™æˆ–æœ¬åœ°é€šçŸ¥ API'],
+        requires: ['±À¼½ªA°È©Î¥»¦a³qª¾ API'],
         parameters: {
             type: 'object',
             properties: {
-                message: { type: 'string', description: 'æé†’å…§å®¹' },
-                time: { type: 'string', description: 'æé†’æ™‚é–“ï¼ˆISO æ ¼å¼ï¼‰' },
+                message: { type: 'string', description: '´£¿ô¤º®e' },
+                time: { type: 'string', description: '´£¿ô®É¶¡¡]ISO ®æ¦¡¡^' },
                 repeat: { type: 'boolean', default: false }
             },
             required: ['message', 'time']
@@ -40,19 +40,19 @@
     },
     {
         id: 'daily_recipe',
-        category: 'æ—¥å¸¸ç”Ÿæ´»',
+        category: '¤é±`¥Í¬¡',
         categoryIcon: 'wb_sunny',
         name: 'search_recipe',
-        displayName: 'é£Ÿè­œæœå°‹',
-        description: 'æœå°‹æ–™ç†é£Ÿè­œï¼Œè§’è‰²å¯ä»¥æ ¹æ“šä½¿ç”¨è€…å–œå¥½æ¨è–¦',
-        useCase: 'ã€Œä½ æƒ³åƒå’–å“©ï¼Ÿæˆ‘å¹«ä½ æ‰¾å€‹ç°¡å–®çš„åšæ³•ã€',
+        displayName: '­¹ÃĞ·j´M',
+        description: '·j´M®Æ²z­¹ÃĞ¡A¨¤¦â¥i¥H®Ú¾Ú¨Ï¥ÎªÌ³ß¦n±ÀÂË',
+        useCase: '¡u§A·Q¦Y©@­ù¡H§ÚÀ°§A§ä­ÓÂ²³æªº°µªk¡v',
         difficulty: 'easy',
-        requires: ['é£Ÿè­œ APIï¼ˆå¦‚ Spoonacularï¼‰'],
+        requires: ['­¹ÃĞ API¡]¦p Spoonacular¡^'],
         parameters: {
             type: 'object',
             properties: {
-                query: { type: 'string', description: 'æœå°‹é—œéµå­—' },
-                cuisine: { type: 'string', description: 'æ–™ç†é¡å‹ï¼ˆå¦‚ï¼šchinese, japaneseï¼‰' },
+                query: { type: 'string', description: '·j´MÃöÁä¦r' },
+                cuisine: { type: 'string', description: '®Æ²zÃş«¬¡]¦p¡Gchinese, japanese¡^' },
                 limit: { type: 'number', default: 5 }
             },
             required: ['query']
@@ -60,19 +60,19 @@
     },
     {
         id: 'shop_sanitary_pads',
-        category: 'è³¼ç‰©æ¶ˆè²»',
+        category: 'ÁÊª«®ø¶O',
         categoryIcon: 'shopping_cart',
         name: 'purchase_sanitary_pads',
-        displayName: 'è³¼è²·è¡›ç”Ÿæ£‰',
-        description: 'è®“ AI è§’è‰²ä»¥è‡ªå·±çš„èº«åˆ†å¹«ä½¿ç”¨è€…è³¼è²·è¡›ç”Ÿæ£‰',
-        useCase: 'ã€Œå·²ç¶“å¹«ä½ ä¸‹å–®äº†ï¼Œ2 å¤©å¾Œé€åˆ°ã€',
+        displayName: 'ÁÊ¶R½Ã¥Í´Ö',
+        description: 'Åı AI ¨¤¦â¥H¦Û¤vªº¨­¤ÀÀ°¨Ï¥ÎªÌÁÊ¶R½Ã¥Í´Ö',
+        useCase: '¡u¤w¸gÀ°§A¤U³æ¤F¡A2 ¤Ñ«á°e¨ì¡v',
         difficulty: 'medium',
-        requires: ['è³¼ç‰©å¹³å° APIï¼ˆå¦‚ momoã€pchomeï¼‰æˆ–è‡ªå»ºè¨‚å–®ç³»çµ±'],
+        requires: ['ÁÊª«¥­¥x API¡]¦p momo¡Bpchome¡^©Î¦Û«Ø­q³æ¨t²Î'],
         parameters: {
             type: 'object',
             properties: {
-                brand: { type: 'string', enum: ['å¥½è‡ªåœ¨', 'é å¾—ä½', 'è˜‡è²', 'åº·ä¹ƒé¦¨', 'å…¶ä»–'] },
-                type: { type: 'string', enum: ['æ—¥ç”¨', 'å¤œç”¨', 'è­·å¢Š', 'é‡å¤šå‹'] },
+                brand: { type: 'string', enum: ['¦n¦Û¦b', '¾a±o¦í', 'Ä¬µá', '±d¤DÄÉ', '¨ä¥L'] },
+                type: { type: 'string', enum: ['¤é¥Î', '©]¥Î', 'Å@¹Ô', '¶q¦h«¬'] },
                 quantity: { type: 'number', default: 1 }
             },
             required: []
@@ -80,39 +80,39 @@
     },
     {
         id: 'shop_food',
-        category: 'è³¼ç‰©æ¶ˆè²»',
+        category: 'ÁÊª«®ø¶O',
         categoryIcon: 'shopping_cart',
         name: 'order_food',
-        displayName: 'è¨‚é¤',
-        description: 'å¹«ä½¿ç”¨è€…è¨‚è³¼é¤é»ï¼Œæ”¯æ´å¸¸è¦‹å¤–é€å¹³å°',
-        useCase: 'ã€Œæƒ³åƒéº¥ç•¶å‹ï¼Ÿæˆ‘å¹«ä½ é»å¥—é¤ã€',
+        displayName: '­qÀ\',
+        description: 'À°¨Ï¥ÎªÌ­qÁÊÀ\ÂI¡A¤ä´©±`¨£¥~°e¥­¥x',
+        useCase: '¡u·Q¦Y³Á·í³Ò¡H§ÚÀ°§AÂI®MÀ\¡v',
         difficulty: 'hard',
-        requires: ['å¤–é€å¹³å° APIï¼ˆå¦‚ UberEatsã€foodpandaï¼‰'],
+        requires: ['¥~°e¥­¥x API¡]¦p UberEats¡Bfoodpanda¡^'],
         parameters: {
             type: 'object',
             properties: {
-                restaurant: { type: 'string', description: 'é¤å»³åç¨±' },
-                items: { type: 'array', items: { type: 'string' }, description: 'é¤é»æ¸…å–®' },
-                address: { type: 'string', description: 'é€é”åœ°å€' }
+                restaurant: { type: 'string', description: 'À\ÆU¦WºÙ' },
+                items: { type: 'array', items: { type: 'string' }, description: 'À\ÂI²M³æ' },
+                address: { type: 'string', description: '°e¹F¦a§}' }
             },
             required: ['restaurant', 'items']
         }
     },
     {
         id: 'shop_product_search',
-        category: 'è³¼ç‰©æ¶ˆè²»',
+        category: 'ÁÊª«®ø¶O',
         categoryIcon: 'shopping_cart',
         name: 'search_product',
-        displayName: 'å•†å“æœå°‹',
-        description: 'æœå°‹ä¸¦æ¯”åƒ¹å•†å“è³‡è¨Š',
-        useCase: 'ã€Œé€™æ¬¾é¢è†œç¾åœ¨ç‰¹åƒ¹ä¸­...ã€',
+        displayName: '°Ó«~·j´M',
+        description: '·j´M¨Ã¤ñ»ù°Ó«~¸ê°T',
+        useCase: '¡u³o´Ú­±½¤²{¦b¯S»ù¤¤...¡v',
         difficulty: 'easy',
-        requires: ['è³¼ç‰©å¹³å° API æˆ–çˆ¬èŸ²'],
+        requires: ['ÁÊª«¥­¥x API ©Îª¦ÂÎ'],
         parameters: {
             type: 'object',
             properties: {
-                query: { type: 'string', description: 'å•†å“åç¨±æˆ–é—œéµå­—' },
-                maxPrice: { type: 'number', description: 'æœ€é«˜åƒ¹æ ¼' },
+                query: { type: 'string', description: '°Ó«~¦WºÙ©ÎÃöÁä¦r' },
+                maxPrice: { type: 'number', description: '³Ì°ª»ù®æ' },
                 sortBy: { type: 'string', enum: ['price', 'rating', 'relevance'] }
             },
             required: ['query']
@@ -120,39 +120,39 @@
     },
     {
         id: 'health_period_log',
-        category: 'å¥åº·ç®¡ç†',
+        category: '°·±dºŞ²z',
         categoryIcon: 'favorite',
         name: 'log_period_symptom',
-        displayName: 'è¨˜éŒ„ç”Ÿç†æœŸç—‡ç‹€',
-        description: 'è¨˜éŒ„ä½¿ç”¨è€…çš„ç”Ÿç†æœŸç—‡ç‹€ï¼Œæ•´åˆåˆ° HealthDB',
-        useCase: 'ã€Œä½ ä»Šå¤©è‚šå­ç—›å—ï¼Ÿæˆ‘å¹«ä½ è¨˜ä¸‹ä¾†ã€',
+        displayName: '°O¿ı¥Í²z´Á¯gª¬',
+        description: '°O¿ı¨Ï¥ÎªÌªº¥Í²z´Á¯gª¬¡A¾ã¦X¨ì HealthDB',
+        useCase: '¡u§A¤µ¤Ñ¨{¤lµh¶Ü¡H§ÚÀ°§A°O¤U¨Ó¡v',
         difficulty: 'easy',
-        requires: ['ç„¡ï¼ˆä½¿ç”¨å°ˆæ¡ˆå…§å»º HealthDBï¼‰'],
+        requires: ['µL¡]¨Ï¥Î±M®×¤º«Ø HealthDB¡^'],
         parameters: {
             type: 'object',
             properties: {
-                symptom: { type: 'string', enum: ['é ­ç—›', 'è…¹ç—›', 'è…°ç— ', 'æƒ…ç·’ä½è½', 'é£Ÿæ…¾æ”¹è®Š', 'ç–²å‹'] },
-                severity: { type: 'number', minimum: 1, maximum: 5, description: 'åš´é‡ç¨‹åº¦ 1-5' },
-                notes: { type: 'string', description: 'å‚™è¨»' }
+                symptom: { type: 'string', enum: ['ÀYµh', '¸¡µh', '¸yµm', '±¡ºü§C¸¨', '­¹¼¤§ïÅÜ', '¯h³Ò'] },
+                severity: { type: 'number', minimum: 1, maximum: 5, description: 'ÄY­«µ{«× 1-5' },
+                notes: { type: 'string', description: '³Æµù' }
             },
             required: ['symptom']
         }
     },
     {
         id: 'health_mood_track',
-        category: 'å¥åº·ç®¡ç†',
+        category: '°·±dºŞ²z',
         categoryIcon: 'favorite',
         name: 'track_mood',
-        displayName: 'å¿ƒæƒ…è¿½è¹¤',
-        description: 'è¿½è¹¤ä¸¦è¨˜éŒ„ä½¿ç”¨è€…çš„å¿ƒæƒ…ç‹€æ…‹',
-        useCase: 'ã€Œä½ ä»Šå¤©å¿ƒæƒ…å¥½åƒä¸å¤ªå¥½...ã€',
+        displayName: '¤ß±¡°lÂÜ',
+        description: '°lÂÜ¨Ã°O¿ı¨Ï¥ÎªÌªº¤ß±¡ª¬ºA',
+        useCase: '¡u§A¤µ¤Ñ¤ß±¡¦n¹³¤£¤Ó¦n...¡v',
         difficulty: 'easy',
-        requires: ['ç„¡ï¼ˆæœ¬åœ°å„²å­˜ï¼‰'],
+        requires: ['µL¡]¥»¦aÀx¦s¡^'],
         parameters: {
             type: 'object',
             properties: {
-                mood: { type: 'string', enum: ['é–‹å¿ƒ', 'å¹³éœ', 'ç„¦æ…®', 'é›£é', 'æ†¤æ€’', 'ç–²æ†Š'] },
-                reason: { type: 'string', description: 'åŸå› ï¼ˆé¸å¡«ï¼‰' },
+                mood: { type: 'string', enum: ['¶}¤ß', '¥­ÀR', 'µJ¼{', 'Ãø¹L', '¼««ã', '¯h¾Î'] },
+                reason: { type: 'string', description: '­ì¦]¡]¿ï¶ñ¡^' },
                 intensity: { type: 'number', minimum: 1, maximum: 5 }
             },
             required: ['mood']
@@ -160,19 +160,19 @@
     },
     {
         id: 'health_medication',
-        category: 'å¥åº·ç®¡ç†',
+        category: '°·±dºŞ²z',
         categoryIcon: 'favorite',
         name: 'log_medication',
-        displayName: 'ç”¨è—¥è¨˜éŒ„',
-        description: 'è¨˜éŒ„ä½¿ç”¨è€…çš„ç”¨è—¥æƒ…æ³',
-        useCase: 'ã€Œä½ ä»Šå¤©é‚„æ²’åƒè—¥å–”ã€',
+        displayName: '¥ÎÃÄ°O¿ı',
+        description: '°O¿ı¨Ï¥ÎªÌªº¥ÎÃÄ±¡ªp',
+        useCase: '¡u§A¤µ¤ÑÁÙ¨S¦YÃÄ³á¡v',
         difficulty: 'easy',
-        requires: ['ç„¡ï¼ˆä½¿ç”¨å°ˆæ¡ˆå…§å»º HealthDBï¼‰'],
+        requires: ['µL¡]¨Ï¥Î±M®×¤º«Ø HealthDB¡^'],
         parameters: {
             type: 'object',
             properties: {
-                medication: { type: 'string', description: 'è—¥ç‰©åç¨±' },
-                dosage: { type: 'string', description: 'åŠ‘é‡' },
+                medication: { type: 'string', description: 'ÃÄª«¦WºÙ' },
+                dosage: { type: 'string', description: '¾¯¶q' },
                 taken: { type: 'boolean', default: true }
             },
             required: ['medication']
@@ -180,59 +180,59 @@
     },
     {
         id: 'social_calendar',
-        category: 'ç¤¾äº¤é€šè¨Š',
+        category: 'ªÀ¥æ³q°T',
         categoryIcon: 'event',
         name: 'create_event',
-        displayName: 'å»ºç«‹è¡Œäº‹æ›†',
-        description: 'å¹«ä½¿ç”¨è€…åœ¨è¡Œäº‹æ›†å»ºç«‹äº‹ä»¶',
-        useCase: 'ã€Œé€±å…­çš„ç´„æœƒå·²ç¶“å¹«ä½ è¨˜ä¸‹ä¾†äº†ã€',
+        displayName: '«Ø¥ß¦æ¨Æ¾ä',
+        description: 'À°¨Ï¥ÎªÌ¦b¦æ¨Æ¾ä«Ø¥ß¨Æ¥ó',
+        useCase: '¡u¶g¤»ªº¬ù·|¤w¸gÀ°§A°O¤U¨Ó¤F¡v',
         difficulty: 'medium',
-        requires: ['Google Calendar API æˆ–å…¶ä»–è¡Œäº‹æ›†æœå‹™'],
+        requires: ['Google Calendar API ©Î¨ä¥L¦æ¨Æ¾äªA°È'],
         parameters: {
             type: 'object',
             properties: {
-                title: { type: 'string', description: 'äº‹ä»¶æ¨™é¡Œ' },
-                datetime: { type: 'string', description: 'æ—¥æœŸæ™‚é–“ï¼ˆISO æ ¼å¼ï¼‰' },
-                location: { type: 'string', description: 'åœ°é»' },
-                notes: { type: 'string', description: 'å‚™è¨»' }
+                title: { type: 'string', description: '¨Æ¥ó¼ĞÃD' },
+                datetime: { type: 'string', description: '¤é´Á®É¶¡¡]ISO ®æ¦¡¡^' },
+                location: { type: 'string', description: '¦aÂI' },
+                notes: { type: 'string', description: '³Æµù' }
             },
             required: ['title', 'datetime']
         }
     },
     {
         id: 'social_email',
-        category: 'ç¤¾äº¤é€šè¨Š',
+        category: 'ªÀ¥æ³q°T',
         categoryIcon: 'event',
         name: 'send_email',
-        displayName: 'ç™¼é€éƒµä»¶',
-        description: 'å¹«ä½¿ç”¨è€…ç™¼é€é›»å­éƒµä»¶',
-        useCase: 'ã€Œå¹«ä½ æŠŠé€™å°ä¿¡å¯„å‡ºå»äº†ã€',
+        displayName: 'µo°e¶l¥ó',
+        description: 'À°¨Ï¥ÎªÌµo°e¹q¤l¶l¥ó',
+        useCase: '¡uÀ°§A§â³o«Ê«H±H¥X¥h¤F¡v',
         difficulty: 'medium',
-        requires: ['Email æœå‹™ï¼ˆå¦‚ Resendã€SendGridï¼‰'],
+        requires: ['Email ªA°È¡]¦p Resend¡BSendGrid¡^'],
         parameters: {
             type: 'object',
             properties: {
-                to: { type: 'string', description: 'æ”¶ä»¶äºº Email' },
-                subject: { type: 'string', description: 'ä¸»æ—¨' },
-                body: { type: 'string', description: 'å…§å®¹' }
+                to: { type: 'string', description: '¦¬¥ó¤H Email' },
+                subject: { type: 'string', description: '¥D¦®' },
+                body: { type: 'string', description: '¤º®e' }
             },
             required: ['to', 'subject', 'body']
         }
     },
     {
         id: 'smart_light',
-        category: 'æ™ºæ…§å®¶å±…',
+        category: '´¼¼z®a©~',
         categoryIcon: 'home',
         name: 'control_light',
-        displayName: 'æ§åˆ¶ç‡ˆå…‰',
-        description: 'æ§åˆ¶æ™ºæ…§ç‡ˆå…·çš„é–‹é—œèˆ‡äº®åº¦',
-        useCase: 'ã€Œå¤©é»‘äº†ï¼Œå¹«ä½ é–‹ç‡ˆã€',
+        displayName: '±±¨î¿O¥ú',
+        description: '±±¨î´¼¼z¿O¨ãªº¶}Ãö»P«G«×',
+        useCase: '¡u¤Ñ¶Â¤F¡AÀ°§A¶}¿O¡v',
         difficulty: 'medium',
-        requires: ['æ™ºæ…§å®¶å±…å¹³å° APIï¼ˆå¦‚ Philips Hueã€Google Homeï¼‰'],
+        requires: ['´¼¼z®a©~¥­¥x API¡]¦p Philips Hue¡BGoogle Home¡^'],
         parameters: {
             type: 'object',
             properties: {
-                room: { type: 'string', enum: ['å®¢å»³', 'è‡¥å®¤', 'å»šæˆ¿', 'æµ´å®¤', 'é™½å°'] },
+                room: { type: 'string', enum: ['«ÈÆU', 'ª×«Ç', '¼p©Ğ', '¯D«Ç', '¶§¥x'] },
                 action: { type: 'string', enum: ['on', 'off', 'dim'] },
                 brightness: { type: 'number', minimum: 1, maximum: 100 }
             },
@@ -241,14 +241,14 @@
     },
     {
         id: 'smart_ac',
-        category: 'æ™ºæ…§å®¶å±…',
+        category: '´¼¼z®a©~',
         categoryIcon: 'home',
         name: 'adjust_ac',
-        displayName: 'èª¿æ•´å†·æ°£',
-        description: 'æ§åˆ¶æ™ºæ…§ç©ºèª¿çš„æº«åº¦èˆ‡æ¨¡å¼',
-        useCase: 'ã€Œæˆ¿é–“æœ‰é»å†·ï¼Œå¹«ä½ èª¿é«˜ 2 åº¦ã€',
+        displayName: '½Õ¾ã§N®ğ',
+        description: '±±¨î´¼¼zªÅ½Õªº·Å«×»P¼Ò¦¡',
+        useCase: '¡u©Ğ¶¡¦³ÂI§N¡AÀ°§A½Õ°ª 2 «×¡v',
         difficulty: 'medium',
-        requires: ['æ™ºæ…§å®¶å±…å¹³å° API'],
+        requires: ['´¼¼z®a©~¥­¥x API'],
         parameters: {
             type: 'object',
             properties: {
@@ -261,18 +261,18 @@
     },
     {
         id: 'smart_music',
-        category: 'æ™ºæ…§å®¶å±…',
+        category: '´¼¼z®a©~',
         categoryIcon: 'home',
         name: 'play_music',
-        displayName: 'æ’­æ”¾éŸ³æ¨‚',
-        description: 'æ§åˆ¶éŸ³æ¨‚æ’­æ”¾è¨­å‚™',
-        useCase: 'ã€Œæƒ³è½ä»€éº¼ï¼Ÿæˆ‘å¹«ä½ æ”¾ã€',
+        displayName: '¼½©ñ­µ¼Ö',
+        description: '±±¨î­µ¼Ö¼½©ñ³]³Æ',
+        useCase: '¡u·QÅ¥¤°»ò¡H§ÚÀ°§A©ñ¡v',
         difficulty: 'easy',
-        requires: ['Spotify API æˆ–å…¶ä»–éŸ³æ¨‚æœå‹™'],
+        requires: ['Spotify API ©Î¨ä¥L­µ¼ÖªA°È'],
         parameters: {
             type: 'object',
             properties: {
-                query: { type: 'string', description: 'æ­Œæ›²åç¨±æˆ–é—œéµå­—' },
+                query: { type: 'string', description: 'ºq¦±¦WºÙ©ÎÃöÁä¦r' },
                 action: { type: 'string', enum: ['play', 'pause', 'next', 'volume'] },
                 volume: { type: 'number', minimum: 0, maximum: 100 }
             },
@@ -281,18 +281,18 @@
     },
     {
         id: 'entertainment_music_search',
-        category: 'å¨›æ¨‚èˆˆè¶£',
+        category: '®T¼Ö¿³½ì',
         categoryIcon: 'music_note',
         name: 'search_music',
-        displayName: 'éŸ³æ¨‚æœå°‹',
-        description: 'æœå°‹æ­Œæ›²ã€å°ˆè¼¯æˆ–è—äººè³‡è¨Š',
-        useCase: 'ã€Œé€™é¦–æ­Œä¸éŒ¯ï¼Œå¹«ä½ åŠ å…¥æ’­æ”¾æ¸…å–®ã€',
+        displayName: '­µ¼Ö·j´M',
+        description: '·j´Mºq¦±¡B±M¿è©ÎÃÀ¤H¸ê°T',
+        useCase: '¡u³o­ººq¤£¿ù¡AÀ°§A¥[¤J¼½©ñ²M³æ¡v',
         difficulty: 'easy',
-        requires: ['Spotify APIã€Apple Music API æˆ– KKBOX API'],
+        requires: ['Spotify API¡BApple Music API ©Î KKBOX API'],
         parameters: {
             type: 'object',
             properties: {
-                query: { type: 'string', description: 'æœå°‹é—œéµå­—' },
+                query: { type: 'string', description: '·j´MÃöÁä¦r' },
                 type: { type: 'string', enum: ['track', 'album', 'artist'], default: 'track' },
                 limit: { type: 'number', default: 10 }
             },
@@ -301,19 +301,19 @@
     },
     {
         id: 'entertainment_anime',
-        category: 'å¨›æ¨‚èˆˆè¶£',
+        category: '®T¼Ö¿³½ì',
         categoryIcon: 'music_note',
         name: 'search_anime',
-        displayName: 'å‹•æ¼«æœå°‹',
-        description: 'æœå°‹å‹•æ¼«è³‡è¨Šèˆ‡æ–°ç•ªæ¨è–¦',
-        useCase: 'ã€Œé€™å­£æ–°ç•ªæœ‰é€™äº›...ã€',
+        displayName: '°Êº©·j´M',
+        description: '·j´M°Êº©¸ê°T»P·sµf±ÀÂË',
+        useCase: '¡u³o©u·sµf¦³³o¨Ç...¡v',
         difficulty: 'easy',
-        requires: ['AniList API æˆ– MyAnimeList API'],
+        requires: ['AniList API ©Î MyAnimeList API'],
         parameters: {
             type: 'object',
             properties: {
-                query: { type: 'string', description: 'å‹•æ¼«åç¨±' },
-                season: { type: 'string', description: 'å­£åº¦ï¼ˆå¦‚ï¼š2024-springï¼‰' },
+                query: { type: 'string', description: '°Êº©¦WºÙ' },
+                season: { type: 'string', description: '©u«×¡]¦p¡G2024-spring¡^' },
                 status: { type: 'string', enum: ['airing', 'finished', 'upcoming'] }
             },
             required: []
@@ -321,18 +321,18 @@
     },
     {
         id: 'entertainment_game_price',
-        category: 'å¨›æ¨‚èˆˆè¶£',
+        category: '®T¼Ö¿³½ì',
         categoryIcon: 'music_note',
         name: 'check_game_price',
-        displayName: 'éŠæˆ²åƒ¹æ ¼æŸ¥è©¢',
-        description: 'æŸ¥è©¢ Steamã€Switch ç­‰å¹³å°çš„éŠæˆ²åƒ¹æ ¼',
-        useCase: 'ã€ŒSteam ç‰¹åƒ¹ä¸­ï¼Œä½ è¦è²·å—ï¼Ÿã€',
+        displayName: '¹CÀ¸»ù®æ¬d¸ß',
+        description: '¬d¸ß Steam¡BSwitch µ¥¥­¥xªº¹CÀ¸»ù®æ',
+        useCase: '¡uSteam ¯S»ù¤¤¡A§A­n¶R¶Ü¡H¡v',
         difficulty: 'medium',
-        requires: ['CheapShark APIï¼ˆå…è²»ï¼‰'],
+        requires: ['CheapShark API¡]§K¶O¡^'],
         parameters: {
             type: 'object',
             properties: {
-                game: { type: 'string', description: 'éŠæˆ²åç¨±' },
+                game: { type: 'string', description: '¹CÀ¸¦WºÙ' },
                 platform: { type: 'string', enum: ['steam', 'switch', 'ps', 'xbox'] }
             },
             required: ['game']
@@ -340,57 +340,57 @@
     },
     {
         id: 'work_translate',
-        category: 'å­¸ç¿’å·¥ä½œ',
+        category: '¾Ç²ß¤u§@',
         categoryIcon: 'school',
         name: 'translate',
-        displayName: 'ç¿»è­¯',
-        description: 'ç¿»è­¯æ–‡å­—åˆ°æŒ‡å®šèªè¨€',
-        useCase: 'ã€Œé€™å¥æ—¥æ–‡çš„æ„æ€æ˜¯...ã€',
+        displayName: 'Â½Ä¶',
+        description: 'Â½Ä¶¤å¦r¨ì«ü©w»y¨¥',
+        useCase: '¡u³o¥y¤é¤åªº·N«ä¬O...¡v',
         difficulty: 'easy',
-        requires: ['Google Translate API æˆ– DeepL API'],
+        requires: ['Google Translate API ©Î DeepL API'],
         parameters: {
             type: 'object',
             properties: {
-                text: { type: 'string', description: 'è¦ç¿»è­¯çš„æ–‡å­—' },
-                targetLang: { type: 'string', description: 'ç›®æ¨™èªè¨€ï¼ˆå¦‚ï¼šja, en, zh-TWï¼‰' }
+                text: { type: 'string', description: '­nÂ½Ä¶ªº¤å¦r' },
+                targetLang: { type: 'string', description: '¥Ø¼Ğ»y¨¥¡]¦p¡Gja, en, zh-TW¡^' }
             },
             required: ['text', 'targetLang']
         }
     },
     {
         id: 'work_wiki',
-        category: 'å­¸ç¿’å·¥ä½œ',
+        category: '¾Ç²ß¤u§@',
         categoryIcon: 'school',
         name: 'search_wiki',
-        displayName: 'ç¶­åŸºæŸ¥è©¢',
-        description: 'æœå°‹ç¶­åŸºç™¾ç§‘è³‡è¨Š',
-        useCase: 'ã€Œé—œæ–¼é€™å€‹çš„è³‡æ–™æ˜¯...ã€',
+        displayName: 'ºû°ò¬d¸ß',
+        description: '·j´Mºû°ò¦Ê¬ì¸ê°T',
+        useCase: '¡uÃö©ó³o­Óªº¸ê®Æ¬O...¡v',
         difficulty: 'easy',
-        requires: ['ç„¡ï¼ˆMediaWiki API å…è²»ï¼‰'],
+        requires: ['µL¡]MediaWiki API §K¶O¡^'],
         parameters: {
             type: 'object',
             properties: {
-                query: { type: 'string', description: 'æœå°‹é—œéµå­—' },
-                lang: { type: 'string', default: 'zh', description: 'èªè¨€ä»£ç¢¼' }
+                query: { type: 'string', description: '·j´MÃöÁä¦r' },
+                lang: { type: 'string', default: 'zh', description: '»y¨¥¥N½X' }
             },
             required: ['query']
         }
     },
     {
         id: 'work_notion',
-        category: 'å­¸ç¿’å·¥ä½œ',
+        category: '¾Ç²ß¤u§@',
         categoryIcon: 'school',
         name: 'create_notion_page',
-        displayName: 'å»ºç«‹ Notion é é¢',
-        description: 'åœ¨ Notion ä¸­å»ºç«‹ç­†è¨˜é é¢',
-        useCase: 'ã€Œå¹«ä½ è¨˜åœ¨ Notion äº†ã€',
+        displayName: '«Ø¥ß Notion ­¶­±',
+        description: '¦b Notion ¤¤«Ø¥ßµ§°O­¶­±',
+        useCase: '¡uÀ°§A°O¦b Notion ¤F¡v',
         difficulty: 'medium',
-        requires: ['Notion API Token å’Œ Database ID'],
+        requires: ['Notion API Token ©M Database ID'],
         parameters: {
             type: 'object',
             properties: {
-                title: { type: 'string', description: 'é é¢æ¨™é¡Œ' },
-                content: { type: 'string', description: 'é é¢å…§å®¹' },
+                title: { type: 'string', description: '­¶­±¼ĞÃD' },
+                content: { type: 'string', description: '­¶­±¤º®e' },
                 tags: { type: 'array', items: { type: 'string' } }
             },
             required: ['title']
@@ -398,18 +398,18 @@
     },
     {
         id: 'finance_stock',
-        category: 'é‡‘èç†è²¡',
+        category: 'ª÷¿Ä²z°]',
         categoryIcon: 'trending_up',
         name: 'check_stock',
-        displayName: 'è‚¡åƒ¹æŸ¥è©¢',
-        description: 'æŸ¥è©¢å³æ™‚è‚¡åƒ¹è³‡è¨Š',
-        useCase: 'ã€Œå°ç©é›»ä»Šå¤©æ¼²äº† 2%ã€',
+        displayName: 'ªÑ»ù¬d¸ß',
+        description: '¬d¸ß§Y®ÉªÑ»ù¸ê°T',
+        useCase: '¡u¥x¿n¹q¤µ¤Ñº¦¤F 2%¡v',
         difficulty: 'easy',
-        requires: ['è‚¡å¸‚ APIï¼ˆå¦‚ Yahoo Financeã€Alpha Vantageï¼‰'],
+        requires: ['ªÑ¥« API¡]¦p Yahoo Finance¡BAlpha Vantage¡^'],
         parameters: {
             type: 'object',
             properties: {
-                symbol: { type: 'string', description: 'è‚¡ç¥¨ä»£ç¢¼ï¼ˆå¦‚ï¼š2330.TWï¼‰' },
+                symbol: { type: 'string', description: 'ªÑ²¼¥N½X¡]¦p¡G2330.TW¡^' },
                 market: { type: 'string', enum: ['tw', 'us', 'jp'], default: 'tw' }
             },
             required: ['symbol']
@@ -417,18 +417,18 @@
     },
     {
         id: 'finance_crypto',
-        category: 'é‡‘èç†è²¡',
+        category: 'ª÷¿Ä²z°]',
         categoryIcon: 'trending_up',
         name: 'check_crypto',
-        displayName: 'å¹£åƒ¹æŸ¥è©¢',
-        description: 'æŸ¥è©¢åŠ å¯†è²¨å¹£åƒ¹æ ¼',
-        useCase: 'ã€Œæ¯”ç‰¹å¹£ç¾åœ¨æ˜¯...ã€',
+        displayName: '¹ô»ù¬d¸ß',
+        description: '¬d¸ß¥[±K³f¹ô»ù®æ',
+        useCase: '¡u¤ñ¯S¹ô²{¦b¬O...¡v',
         difficulty: 'easy',
-        requires: ['CoinGecko APIï¼ˆå…è²»ï¼‰æˆ– Binance API'],
+        requires: ['CoinGecko API¡]§K¶O¡^©Î Binance API'],
         parameters: {
             type: 'object',
             properties: {
-                coin: { type: 'string', description: 'å¹£ç¨®ï¼ˆå¦‚ï¼šbitcoin, ethereumï¼‰' },
+                coin: { type: 'string', description: '¹ôºØ¡]¦p¡Gbitcoin, ethereum¡^' },
                 currency: { type: 'string', default: 'twd' }
             },
             required: ['coin']
@@ -436,108 +436,108 @@
     },
     {
         id: 'finance_expense',
-        category: 'é‡‘èç†è²¡',
+        category: 'ª÷¿Ä²z°]',
         categoryIcon: 'trending_up',
         name: 'track_expense',
-        displayName: 'è¨˜å¸³',
-        description: 'è¨˜éŒ„æ¶ˆè²»æ”¯å‡º',
-        useCase: 'ã€Œåˆé¤èŠ±äº† 120 å…ƒï¼Œå¹«ä½ è¨˜ä¸‹ä¾†ã€',
+        displayName: '°O±b',
+        description: '°O¿ı®ø¶O¤ä¥X',
+        useCase: '¡u¤ÈÀ\ªá¤F 120 ¤¸¡AÀ°§A°O¤U¨Ó¡v',
         difficulty: 'easy',
-        requires: ['ç„¡ï¼ˆæœ¬åœ°å„²å­˜ï¼‰æˆ–è¨˜å¸³æœå‹™ API'],
+        requires: ['µL¡]¥»¦aÀx¦s¡^©Î°O±bªA°È API'],
         parameters: {
             type: 'object',
             properties: {
-                amount: { type: 'number', description: 'é‡‘é¡' },
-                category: { type: 'string', enum: ['é¤é£Ÿ', 'äº¤é€š', 'è³¼ç‰©', 'å¨›æ¨‚', 'å…¶ä»–'] },
-                note: { type: 'string', description: 'å‚™è¨»' }
+                amount: { type: 'number', description: 'ª÷ÃB' },
+                category: { type: 'string', enum: ['À\­¹', '¥æ³q', 'ÁÊª«', '®T¼Ö', '¨ä¥L'] },
+                note: { type: 'string', description: '³Æµù' }
             },
             required: ['amount', 'category']
         }
     },
     {
         id: 'delivery_order',
-        category: 'è³¼ç‰©æ¶ˆè²»',
+        category: 'ÁÊª«®ø¶O',
         categoryIcon: 'shopping_cart',
         name: 'order_food_delivery',
-        displayName: 'å«å¤–é€',
-        description: 'å¾é™„è¿‘é¤å»³å«å¤–é€ï¼Œå¯æŒ‡å®šé¤é»ã€åœ°å€èˆ‡å‚™è¨»',
-        useCase: 'ã€Œå¹«ä½ å«äº†ç‚¸é›ï¼Œé è¨ˆ 30 åˆ†é˜åˆ°ã€',
+        displayName: '¥s¥~°e',
+        description: '±qªşªñÀ\ÆU¥s¥~°e¡A¥i«ü©wÀ\ÂI¡B¦a§}»P³Æµù',
+        useCase: '¡uÀ°§A¥s¤F¬µÂû¡A¹w­p 30 ¤ÀÄÁ¨ì¡v',
         difficulty: 'medium',
-        requires: ['å¤–é€å¹³å° API æˆ–ç¬¬ä¸‰æ–¹è¨‚é¤æœå‹™'],
+        requires: ['¥~°e¥­¥x API ©Î²Ä¤T¤è­qÀ\ªA°È'],
         parameters: {
             type: 'object',
             properties: {
-                restaurant: { type: 'string', description: 'é¤å»³åç¨±' },
-                items: { type: 'array', items: { type: 'string' }, description: 'é¤é»æ¸…å–®' },
-                address: { type: 'string', description: 'é€é”åœ°å€' },
-                note: { type: 'string', description: 'å‚™è¨»ï¼ˆå¦‚ï¼šå°‘è¾£ã€ä¸è¦è”¥ï¼‰' },
-                tip: { type: 'number', description: 'å°è²»é‡‘é¡' }
+                restaurant: { type: 'string', description: 'À\ÆU¦WºÙ' },
+                items: { type: 'array', items: { type: 'string' }, description: 'À\ÂI²M³æ' },
+                address: { type: 'string', description: '°e¹F¦a§}' },
+                note: { type: 'string', description: '³Æµù¡]¦p¡G¤Ö»¶¡B¤£­n½µ¡^' },
+                tip: { type: 'number', description: '¤p¶Oª÷ÃB' }
             },
             required: ['restaurant', 'items', 'address']
         }
     },
     {
         id: 'delivery_track',
-        category: 'è³¼ç‰©æ¶ˆè²»',
+        category: 'ÁÊª«®ø¶O',
         categoryIcon: 'shopping_cart',
         name: 'track_delivery',
-        displayName: 'è¿½è¹¤å¤–é€',
-        description: 'æŸ¥è©¢å¤–é€è¨‚å–®çš„é…é€ç‹€æ…‹èˆ‡å‰©é¤˜æ™‚é–“',
-        useCase: 'ã€Œå¤–é€å“¡é‚„æœ‰ 8 åˆ†é˜åˆ°å–”ã€',
+        displayName: '°lÂÜ¥~°e',
+        description: '¬d¸ß¥~°e­q³æªº°t°eª¬ºA»P³Ñ¾l®É¶¡',
+        useCase: '¡u¥~°e­ûÁÙ¦³ 8 ¤ÀÄÁ¨ì³á¡v',
         difficulty: 'easy',
-        requires: ['å¤–é€å¹³å°è¨‚å–®æŸ¥è©¢ API'],
+        requires: ['¥~°e¥­¥x­q³æ¬d¸ß API'],
         parameters: {
             type: 'object',
             properties: {
-                orderId: { type: 'string', description: 'è¨‚å–®ç·¨è™Ÿ' }
+                orderId: { type: 'string', description: '­q³æ½s¸¹' }
             },
             required: ['orderId']
         }
     },
     {
         id: 'delivery_search',
-        category: 'è³¼ç‰©æ¶ˆè²»',
+        category: 'ÁÊª«®ø¶O',
         categoryIcon: 'shopping_cart',
         name: 'search_nearby_restaurants',
-        displayName: 'æ‰¾é™„è¿‘é¤å»³',
-        description: 'æ ¹æ“šä½ç½®æˆ–å£å‘³æ¨è–¦é™„è¿‘å¯å¤–é€çš„é¤å»³',
-        useCase: 'ã€Œé€™é™„è¿‘æœ‰ä¸‰å®¶è©•åˆ†ä¸éŒ¯çš„æ‹‰éºµã€',
+        displayName: '§äªşªñÀ\ÆU',
+        description: '®Ú¾Ú¦ì¸m©Î¤f¨ı±ÀÂËªşªñ¥i¥~°eªºÀ\ÆU',
+        useCase: '¡u³oªşªñ¦³¤T®aµû¤À¤£¿ùªº©ÔÄÑ¡v',
         difficulty: 'easy',
-        requires: ['åœ°åœ–/é¤å»³æœå°‹ APIï¼ˆå¦‚ Google Mapsã€Foodpandaï¼‰'],
+        requires: ['¦a¹Ï/À\ÆU·j´M API¡]¦p Google Maps¡BFoodpanda¡^'],
         parameters: {
             type: 'object',
             properties: {
-                location: { type: 'string', description: 'åœ°é»æˆ–åœ°å€' },
-                cuisine: { type: 'string', description: 'æ–™ç†é¡å‹ï¼ˆå¦‚ï¼šæ‹‰éºµã€å£½å¸ï¼‰' },
-                radius: { type: 'number', description: 'æœå°‹åŠå¾‘ï¼ˆå…¬å°ºï¼‰' }
+                location: { type: 'string', description: '¦aÂI©Î¦a§}' },
+                cuisine: { type: 'string', description: '®Æ²zÃş«¬¡]¦p¡G©ÔÄÑ¡B¹Ø¥q¡^' },
+                radius: { type: 'number', description: '·j´M¥b®|¡]¤½¤Ø¡^' }
             },
             required: ['location']
         }
     },
     {
         id: 'vrm_expression',
-        category: 'è™›æ“¬å½¢è±¡',
+        category: 'µêÀÀ§Î¶H',
         categoryIcon: 'android',
         name: 'set_vrm_expression',
-        displayName: 'åˆ‡æ›è¡¨æƒ…',
-        description: 'åˆ‡æ› VRM æ¨¡å‹è¡¨æƒ…ï¼ˆé–‹å¿ƒã€ç”Ÿæ°£ã€é©šè¨ã€å®³ç¾ã€çœ¨çœ¼ç­‰ï¼‰',
-        useCase: 'ã€Œä½ è½åˆ°äº†å—ï¼Ÿæˆ‘å¾ˆé©šè¨ï¼ã€',
+        displayName: '¤Á´«ªí±¡',
+        description: '¤Á´« VRM ¼Ò«¬ªí±¡¡]¶}¤ß¡B¥Í®ğ¡BÅå³Y¡B®`²Û¡B¯w²´µ¥¡^',
+        useCase: '¡u§AÅ¥¨ì¤F¶Ü¡H§Ú«ÜÅå³Y¡I¡v',
         difficulty: 'easy',
-        requires: ['VRM æ¨¡å‹è¼‰å…¥å™¨ï¼ˆå¦‚ @pixiv/three-vrmï¼‰'],
+        requires: ['VRM ¼Ò«¬¸ü¤J¾¹¡]¦p @pixiv/three-vrm¡^'],
         parameters: {
             type: 'object',
             properties: {
                 expression: {
                     type: 'string',
                     enum: ['happy', 'angry', 'surprised', 'shy', 'blink', 'neutral', 'sad'],
-                    description: 'è¡¨æƒ…åç¨±'
+                    description: 'ªí±¡¦WºÙ'
                 },
                 intensity: {
                     type: 'number',
                     minimum: 0,
                     maximum: 1,
                     default: 1,
-                    description: 'è¡¨æƒ…å¼·åº¦ 0-1'
+                    description: 'ªí±¡±j«× 0-1'
                 }
             },
             required: ['expression']
@@ -545,21 +545,21 @@
     },
     {
         id: 'vrm_animation',
-        category: 'è™›æ“¬å½¢è±¡',
+        category: 'µêÀÀ§Î¶H',
         categoryIcon: 'android',
         name: 'set_vrm_animation',
-        displayName: 'æ’­æ”¾å‹•ç•«',
-        description: 'æ’­æ”¾ VRM æ¨¡å‹å‹•ç•«ï¼ˆå¾…æ©Ÿã€æ®æ‰‹ã€è·³èˆã€åä¸‹ï¼‰',
-        useCase: 'ã€Œæˆ‘æ®æ‰‹è·Ÿä½ æ‰“æ‹›å‘¼ï½ã€',
+        displayName: '¼½©ñ°Êµe',
+        description: '¼½©ñ VRM ¼Ò«¬°Êµe¡]«İ¾÷¡B´§¤â¡B¸õ»R¡B§¤¤U¡^',
+        useCase: '¡u§Ú´§¤â¸ò§A¥´©Û©I¡ã¡v',
         difficulty: 'medium',
-        requires: ['VRM å‹•ç•«æ··åˆå™¨ï¼ˆAnimationMixerï¼‰'],
+        requires: ['VRM °Êµe²V¦X¾¹¡]AnimationMixer¡^'],
         parameters: {
             type: 'object',
             properties: {
                 animation: {
                     type: 'string',
                     enum: ['idle', 'wave', 'dance', 'sit', 'walk', 'jump'],
-                    description: 'å‹•ç•«åç¨±'
+                    description: '°Êµe¦WºÙ'
                 },
                 loop: { type: 'boolean', default: true },
                 speed: { type: 'number', minimum: 0.1, maximum: 3, default: 1 }
@@ -569,14 +569,14 @@
     },
     {
         id: 'vrm_pose',
-        category: 'è™›æ“¬å½¢è±¡',
+        category: 'µêÀÀ§Î¶H',
         categoryIcon: 'android',
         name: 'set_vrm_pose',
-        displayName: 'æ§åˆ¶å§¿å‹¢',
-        description: 'æ§åˆ¶ VRM æ¨¡å‹å§¿å‹¢ï¼ˆé ­éƒ¨è½‰å‘ã€æ‰‹å‹¢ã€æ•´é«”å§¿å‹¢ï¼‰',
-        useCase: 'ã€Œæˆ‘æ­ªé ­çœ‹è‘—ä½ ã€',
+        displayName: '±±¨î«º¶Õ',
+        description: '±±¨î VRM ¼Ò«¬«º¶Õ¡]ÀY³¡Âà¦V¡B¤â¶Õ¡B¾ãÅé«º¶Õ¡^',
+        useCase: '¡u§Ú¬nÀY¬İµÛ§A¡v',
         difficulty: 'medium',
-        requires: ['VRM Humanoid Bone æ§åˆ¶'],
+        requires: ['VRM Humanoid Bone ±±¨î'],
         parameters: {
             type: 'object',
             properties: {
@@ -589,52 +589,52 @@
     },
     {
         id: 'vrm_blendshape',
-        category: 'è™›æ“¬å½¢è±¡',
+        category: 'µêÀÀ§Î¶H',
         categoryIcon: 'android',
         name: 'set_vrm_blend_shape',
-        displayName: 'ç²¾èª¿è‡‰éƒ¨',
-        description: 'ç²¾èª¿ VRM è‡‰éƒ¨åƒæ•¸ï¼ˆçœ¨çœ¼ã€å˜´å‹ã€çœ‰æ¯›ï¼‰',
-        useCase: 'ã€Œæˆ‘ç‡èµ·çœ¼ç›å¾®ç¬‘ã€',
+        displayName: 'ºë½ÕÁy³¡',
+        description: 'ºë½Õ VRM Áy³¡°Ñ¼Æ¡]¯w²´¡B¼L«¬¡B¬Ü¤ò¡^',
+        useCase: '¡u§Ú½N°_²´·ú·L¯º¡v',
         difficulty: 'easy',
-        requires: ['VRM BlendShapeProxy æˆ– Expression API'],
+        requires: ['VRM BlendShapeProxy ©Î Expression API'],
         parameters: {
             type: 'object',
             properties: {
-                eyeLeft: { type: 'number', minimum: 0, maximum: 1, description: 'å·¦çœ¼é–‰åˆåº¦' },
-                eyeRight: { type: 'number', minimum: 0, maximum: 1, description: 'å³çœ¼é–‰åˆåº¦' },
-                mouth: { type: 'number', minimum: 0, maximum: 1, description: 'å˜´å·´å¼µé–‹åº¦' },
-                brow: { type: 'number', minimum: 0, maximum: 1, description: 'çœ‰æ¯›é«˜åº¦' }
+                eyeLeft: { type: 'number', minimum: 0, maximum: 1, description: '¥ª²´³¬¦X«×' },
+                eyeRight: { type: 'number', minimum: 0, maximum: 1, description: '¥k²´³¬¦X«×' },
+                mouth: { type: 'number', minimum: 0, maximum: 1, description: '¼L¤Ú±i¶}«×' },
+                brow: { type: 'number', minimum: 0, maximum: 1, description: '¬Ü¤ò°ª«×' }
             },
             required: []
         }
     },
     {
         id: 'pet_spawn',
-        category: 'æ¡Œå¯µ',
+        category: '®àÃd',
         categoryIcon: 'pets',
         name: 'spawn_desktop_pet',
-        displayName: 'å–šå‡ºæ¡Œå¯µ',
-        description: 'åœ¨ç•«é¢è§’è½å–šå‡ºä¸€å€‹æ¡Œå¯µè§’è‰²ï¼Œå¯é¸æ“‡é€ å‹èˆ‡å¤§å°',
-        useCase: 'ã€Œæ¡Œå¯µå‡ºç¾å•¦ï¼Œé™ªè‘—ä½ å·¥ä½œï½ã€',
+        displayName: '³ê¥X®àÃd',
+        description: '¦bµe­±¨¤¸¨³ê¥X¤@­Ó®àÃd¨¤¦â¡A¥i¿ï¾Ü³y«¬»P¤j¤p',
+        useCase: '¡u®àÃd¥X²{°Õ¡A³­µÛ§A¤u§@¡ã¡v',
         difficulty: 'easy',
-        requires: ['WebGL / Canvas æ¸²æŸ“æ”¯æ´'],
+        requires: ['WebGL / Canvas ´è¬V¤ä´©'],
         parameters: {
             type: 'object',
             properties: {
                 character: {
                     type: 'string',
                     enum: ['cat', 'dog', 'fox', 'slime', 'custom'],
-                    description: 'æ¡Œå¯µé€ å‹'
+                    description: '®àÃd³y«¬'
                 },
                 size: {
                     type: 'string',
                     enum: ['small', 'medium', 'large'],
-                    description: 'æ¡Œå¯µå¤§å°'
+                    description: '®àÃd¤j¤p'
                 },
                 position: {
                     type: 'string',
                     enum: ['top-left', 'top-right', 'bottom-left', 'bottom-right'],
-                    description: 'æ¡Œå¯µä½ç½®'
+                    description: '®àÃd¦ì¸m'
                 }
             },
             required: ['character']
@@ -642,25 +642,25 @@
     },
     {
         id: 'pet_interact',
-        category: 'æ¡Œå¯µ',
+        category: '®àÃd',
         categoryIcon: 'pets',
         name: 'pet_interact',
-        displayName: 'äº’å‹•æ¡Œå¯µ',
-        description: 'èˆ‡æ¡Œå¯µäº’å‹•ï¼ˆæ‘¸æ‘¸ã€é¤µé£Ÿã€ç©è€ï¼‰',
-        useCase: 'ã€Œæˆ‘æ‘¸äº†æ‘¸ç‰ çš„é ­ï¼Œç‰ é–‹å¿ƒå¾—æ–å°¾å·´ã€',
+        displayName: '¤¬°Ê®àÃd',
+        description: '»P®àÃd¤¬°Ê¡]ºNºN¡BÁı­¹¡Bª±­A¡^',
+        useCase: '¡u§ÚºN¤FºN¨eªºÀY¡A¨e¶}¤ß±o·n§À¤Ú¡v',
         difficulty: 'easy',
-        requires: ['æ¡Œå¯µå¯¦ä¾‹'],
+        requires: ['®àÃd¹ê¨Ò'],
         parameters: {
             type: 'object',
             properties: {
                 action: {
                     type: 'string',
                     enum: ['pet', 'feed', 'play', 'scold', 'call'],
-                    description: 'äº’å‹•å‹•ä½œ'
+                    description: '¤¬°Ê°Ê§@'
                 },
                 item: {
                     type: 'string',
-                    description: 'ä½¿ç”¨çš„ç‰©å“ï¼ˆå¦‚ï¼šé›¶é£Ÿã€ç©å…·ï¼‰'
+                    description: '¨Ï¥Îªºª««~¡]¦p¡G¹s­¹¡Bª±¨ã¡^'
                 }
             },
             required: ['action']
@@ -668,14 +668,14 @@
     },
     {
         id: 'pet_status',
-        category: 'æ¡Œå¯µ',
+        category: '®àÃd',
         categoryIcon: 'pets',
         name: 'pet_status',
-        displayName: 'æŸ¥çœ‹æ¡Œå¯µç‹€æ…‹',
-        description: 'æŸ¥çœ‹æ¡Œå¯µç›®å‰çš„å¿ƒæƒ…ã€é£¢é¤“åº¦ã€é«”åŠ›ç­‰ç‹€æ…‹',
-        useCase: 'ã€Œç‰ çœ‹èµ·ä¾†å¥½åƒé¤“äº†...ã€',
+        displayName: '¬d¬İ®àÃdª¬ºA',
+        description: '¬d¬İ®àÃd¥Ø«eªº¤ß±¡¡B°§¾j«×¡BÅé¤Oµ¥ª¬ºA',
+        useCase: '¡u¨e¬İ°_¨Ó¦n¹³¾j¤F...¡v',
         difficulty: 'easy',
-        requires: ['æ¡Œå¯µå¯¦ä¾‹'],
+        requires: ['®àÃd¹ê¨Ò'],
         parameters: {
             type: 'object',
             properties: {
@@ -686,27 +686,27 @@
     },
     {
         id: 'pet_customize',
-        category: 'æ¡Œå¯µ',
+        category: '®àÃd',
         categoryIcon: 'pets',
         name: 'pet_customize',
-        displayName: 'å®¢è£½åŒ–æ¡Œå¯µ',
-        description: 'ä¿®æ”¹æ¡Œå¯µçš„å¤–è§€ã€é¡è‰²ã€é…ä»¶',
-        useCase: 'ã€Œå¹«ç‰ æ›ä¸Šæ–°çš„è´è¶çµã€',
+        displayName: '«È»s¤Æ®àÃd',
+        description: '­×§ï®àÃdªº¥~Æ[¡BÃC¦â¡B°t¥ó',
+        useCase: '¡uÀ°¨e´«¤W·sªº½¹½ºµ²¡v',
         difficulty: 'medium',
-        requires: ['æ¡Œå¯µå¯¦ä¾‹'],
+        requires: ['®àÃd¹ê¨Ò'],
         parameters: {
             type: 'object',
             properties: {
-                color: { type: 'string', description: 'ä¸»è¦é¡è‰²ï¼ˆHEXï¼‰' },
+                color: { type: 'string', description: '¥D­nÃC¦â¡]HEX¡^' },
                 accessory: {
                     type: 'string',
                     enum: ['none', 'bow', 'hat', 'glasses', 'collar'],
-                    description: 'é…ä»¶'
+                    description: '°t¥ó'
                 },
                 expression: {
                     type: 'string',
                     enum: ['normal', 'happy', 'sleepy', 'excited'],
-                    description: 'è¡¨æƒ…'
+                    description: 'ªí±¡'
                 }
             },
             required: []
@@ -714,14 +714,14 @@
     },
     {
         id: 'pet_dismiss',
-        category: 'æ¡Œå¯µ',
+        category: '®àÃd',
         categoryIcon: 'pets',
         name: 'pet_dismiss',
-        displayName: 'é€èµ°æ¡Œå¯µ',
-        description: 'å°‡æ¡Œå¯µå¾ç•«é¢ä¸­ç§»é™¤',
-        useCase: 'ã€Œå¥½äº†ï¼Œä½ å…ˆå»ä¼‘æ¯å§ã€',
+        displayName: '°e¨«®àÃd',
+        description: '±N®àÃd±qµe­±¤¤²¾°£',
+        useCase: '¡u¦n¤F¡A§A¥ı¥h¥ğ®§§a¡v',
         difficulty: 'easy',
-        requires: ['æ¡Œå¯µå¯¦ä¾‹'],
+        requires: ['®àÃd¹ê¨Ò'],
         parameters: {
             type: 'object',
             properties: {
@@ -732,82 +732,82 @@
     },
     {
         id: 'activity_log',
-        category: 'æ´»å‹•åŒæ­¥',
+        category: '¬¡°Ê¦P¨B',
         categoryIcon: 'sync',
         name: 'log_user_activity',
-        displayName: 'è¨˜éŒ„æ´»å‹•',
-        description: 'å°‡ç”¨æˆ¶çš„æ‰‹æ©Ÿæ´»å‹•è¨˜éŒ„åˆ°ç³»çµ±ä¸­ï¼Œè®“ AI å¯ä»¥æŸ¥è©¢',
-        useCase: 'ã€Œä½ å‰›å‰›åœ¨ Instagram æŒ‰äº†é€™å‰‡è²¼æ–‡å°å§ï¼Ÿæˆ‘è¨˜ä¸‹ä¾†äº†ã€',
+        displayName: '°O¿ı¬¡°Ê',
+        description: '±N¥Î¤áªº¤â¾÷¬¡°Ê°O¿ı¨ì¨t²Î¤¤¡AÅı AI ¥i¥H¬d¸ß',
+        useCase: '¡u§A­è­è¦b Instagram «ö¤F³o«h¶K¤å¹ï§a¡H§Ú°O¤U¨Ó¤F¡v',
         difficulty: 'easy',
-        requires: ['ç„¡ï¼ˆä½¿ç”¨å°ˆæ¡ˆå…§å»º ActivityDBï¼‰'],
+        requires: ['µL¡]¨Ï¥Î±M®×¤º«Ø ActivityDB¡^'],
         parameters: {
             type: 'object',
             properties: {
                 platform: {
                     type: 'string',
                     enum: ['line', 'instagram', 'twitter', 'facebook', 'youtube', 'tiktok', 'message', 'call', 'email', 'other'],
-                    description: 'æ´»å‹•å¹³å°'
+                    description: '¬¡°Ê¥­¥x'
                 },
                 activity_type: {
                     type: 'string',
                     enum: ['message', 'post', 'like', 'comment', 'share', 'view', 'call', 'email', 'notification', 'other'],
-                    description: 'æ´»å‹•é¡å‹'
+                    description: '¬¡°ÊÃş«¬'
                 },
-                title: { type: 'string', description: 'æ´»å‹•æ¨™é¡Œ' },
-                content: { type: 'string', description: 'æ´»å‹•å…§å®¹æè¿°' },
-                metadata: { type: 'object', description: 'é¡å¤–è³‡è¨Šï¼ˆå¦‚é€£çµã€åœ–ç‰‡ç­‰ï¼‰' }
+                title: { type: 'string', description: '¬¡°Ê¼ĞÃD' },
+                content: { type: 'string', description: '¬¡°Ê¤º®e´y­z' },
+                metadata: { type: 'object', description: 'ÃB¥~¸ê°T¡]¦p³sµ²¡B¹Ï¤ùµ¥¡^' }
             },
             required: ['platform', 'activity_type']
         }
     },
     {
         id: 'activity_get',
-        category: 'æ´»å‹•åŒæ­¥',
+        category: '¬¡°Ê¦P¨B',
         categoryIcon: 'sync',
         name: 'get_user_activities',
-        displayName: 'æŸ¥è©¢æ´»å‹•',
-        description: 'æŸ¥è©¢ç”¨æˆ¶æœ€è¿‘çš„æ´»å‹•è¨˜éŒ„',
-        useCase: 'ã€Œä½ ä»Šå¤©åšäº†ä»€éº¼ï¼Ÿæˆ‘çœ‹çœ‹æ´»å‹•è¨˜éŒ„ã€',
+        displayName: '¬d¸ß¬¡°Ê',
+        description: '¬d¸ß¥Î¤á³Ìªñªº¬¡°Ê°O¿ı',
+        useCase: '¡u§A¤µ¤Ñ°µ¤F¤°»ò¡H§Ú¬İ¬İ¬¡°Ê°O¿ı¡v',
         difficulty: 'easy',
-        requires: ['ç„¡ï¼ˆä½¿ç”¨å°ˆæ¡ˆå…§å»º ActivityDBï¼‰'],
+        requires: ['µL¡]¨Ï¥Î±M®×¤º«Ø ActivityDB¡^'],
         parameters: {
             type: 'object',
             properties: {
-                platform: { type: 'string', description: 'ç¯©é¸å¹³å°ï¼ˆé¸å¡«ï¼‰' },
-                limit: { type: 'number', default: 10, description: 'è¿”å›æ•¸é‡é™åˆ¶' },
-                hours: { type: 'number', default: 24, description: 'æŸ¥è©¢æ™‚é–“ç¯„åœï¼ˆå°æ™‚ï¼‰' }
+                platform: { type: 'string', description: '¿z¿ï¥­¥x¡]¿ï¶ñ¡^' },
+                limit: { type: 'number', default: 10, description: 'ªğ¦^¼Æ¶q­­¨î' },
+                hours: { type: 'number', default: 24, description: '¬d¸ß®É¶¡½d³ò¡]¤p®É¡^' }
             },
             required: []
         }
     },
     {
         id: 'activity_summary',
-        category: 'æ´»å‹•åŒæ­¥',
+        category: '¬¡°Ê¦P¨B',
         categoryIcon: 'sync',
         name: 'get_activity_summary',
-        displayName: 'æ´»å‹•æ‘˜è¦',
-        description: 'ç²å–ç”¨æˆ¶æ´»å‹•çµ±è¨ˆæ‘˜è¦',
-        useCase: 'ã€Œä»Šå¤©ä½ åœ¨ Instagram ä¸ŠèŠ±äº†æ¯”è¼ƒå¤šæ™‚é–“å‘¢ã€',
+        displayName: '¬¡°ÊºK­n',
+        description: 'Àò¨ú¥Î¤á¬¡°Ê²Î­pºK­n',
+        useCase: '¡u¤µ¤Ñ§A¦b Instagram ¤Wªá¤F¤ñ¸û¦h®É¶¡©O¡v',
         difficulty: 'easy',
-        requires: ['ç„¡ï¼ˆä½¿ç”¨å°ˆæ¡ˆå…§å»º ActivityDBï¼‰'],
+        requires: ['µL¡]¨Ï¥Î±M®×¤º«Ø ActivityDB¡^'],
         parameters: {
             type: 'object',
             properties: {
-                hours: { type: 'number', default: 24, description: 'çµ±è¨ˆæ™‚é–“ç¯„åœï¼ˆå°æ™‚ï¼‰' }
+                hours: { type: 'number', default: 24, description: '²Î­p®É¶¡½d³ò¡]¤p®É¡^' }
             },
             required: []
         }
     },
     {
         id: 'activity_clear',
-        category: 'æ´»å‹•åŒæ­¥',
+        category: '¬¡°Ê¦P¨B',
         categoryIcon: 'sync',
         name: 'clear_activities',
-        displayName: 'æ¸…é™¤æ´»å‹•',
-        description: 'æ¸…é™¤ç”¨æˆ¶çš„æ´»å‹•è¨˜éŒ„',
-        useCase: 'ã€Œæˆ‘æŠŠä½ çš„æ´»å‹•è¨˜éŒ„æ¸…æ‰äº†ï¼Œæ”¾å¿ƒã€',
+        displayName: '²M°£¬¡°Ê',
+        description: '²M°£¥Î¤áªº¬¡°Ê°O¿ı',
+        useCase: '¡u§Ú§â§Aªº¬¡°Ê°O¿ı²M±¼¤F¡A©ñ¤ß¡v',
         difficulty: 'easy',
-        requires: ['ç„¡ï¼ˆä½¿ç”¨å°ˆæ¡ˆå…§å»º ActivityDBï¼‰'],
+        requires: ['µL¡]¨Ï¥Î±M®×¤º«Ø ActivityDB¡^'],
         parameters: {
             type: 'object',
             properties: {},
@@ -816,22 +816,22 @@
     },
     {
         id: 'discord_send_message',
-        category: 'Discord æ•´åˆ',
+        category: 'Discord ¾ã¦X',
         categoryIcon: 'discord',
         name: 'send_discord_message',
-        displayName: 'ç™¼é€ Discord è¨Šæ¯',
-        description: 'å‘æŒ‡å®šçš„ Discord é »é“ç™¼é€è¨Šæ¯ï¼Œå¯¦ç¾è·¨å¹³å°é€šè¨Š',
-        useCase: 'ã€Œæˆ‘å¹«ä½ åœ¨ Discord ä¸Šè·Ÿä»–èªªå¥½äº†ã€',
+        displayName: 'µo°e Discord °T®§',
+        description: '¦V«ü©wªº Discord ÀW¹Dµo°e°T®§¡A¹ê²{¸ó¥­¥x³q°T',
+        useCase: '¡u§ÚÀ°§A¦b Discord ¤W¸ò¥L»¡¦n¤F¡v',
         difficulty: 'medium',
-        requires: ['Discord Bot Token', 'é »é“ ID'],
+        requires: ['Discord Bot Token', 'ÀW¹D ID'],
         parameters: {
             type: 'object',
             properties: {
-                channel_id: { type: 'string', description: 'Discord é »é“ ID' },
-                content: { type: 'string', description: 'è¨Šæ¯å…§å®¹' },
+                channel_id: { type: 'string', description: 'Discord ÀW¹D ID' },
+                content: { type: 'string', description: '°T®§¤º®e' },
                 embed: { 
                     type: 'object', 
-                    description: 'Embed è¨Šæ¯æ ¼å¼ï¼ˆé¸å¡«ï¼‰',
+                    description: 'Embed °T®§®æ¦¡¡]¿ï¶ñ¡^',
                     properties: {
                         title: { type: 'string' },
                         description: { type: 'string' },
@@ -844,56 +844,56 @@
     },
     {
         id: 'discord_get_history',
-        category: 'Discord æ•´åˆ',
+        category: 'Discord ¾ã¦X',
         categoryIcon: 'discord',
         name: 'get_discord_history',
-        displayName: 'ç²å– Discord å°è©±æ­·å²',
-        description: 'ç²å–æŒ‡å®š Discord é »é“çš„å°è©±æ­·å²è¨˜éŒ„',
-        useCase: 'ã€Œè®“æˆ‘çœ‹çœ‹ä½ å€‘å‰›å‰›åœ¨ Discord ä¸ŠèŠäº†ä»€éº¼ã€',
+        displayName: 'Àò¨ú Discord ¹ï¸Ü¾ú¥v',
+        description: 'Àò¨ú«ü©w Discord ÀW¹Dªº¹ï¸Ü¾ú¥v°O¿ı',
+        useCase: '¡uÅı§Ú¬İ¬İ§A­Ì­è­è¦b Discord ¤W²á¤F¤°»ò¡v',
         difficulty: 'easy',
-        requires: ['Discord Bot Token', 'é »é“ ID'],
+        requires: ['Discord Bot Token', 'ÀW¹D ID'],
         parameters: {
             type: 'object',
             properties: {
-                channel_id: { type: 'string', description: 'Discord é »é“ ID' },
-                limit: { type: 'number', default: 50, description: 'ç²å–è¨Šæ¯æ•¸é‡' },
-                before: { type: 'string', description: 'ç²å–æ­¤è¨Šæ¯ ID ä¹‹å‰çš„è¨Šæ¯ï¼ˆé¸å¡«ï¼‰' }
+                channel_id: { type: 'string', description: 'Discord ÀW¹D ID' },
+                limit: { type: 'number', default: 50, description: 'Àò¨ú°T®§¼Æ¶q' },
+                before: { type: 'string', description: 'Àò¨ú¦¹°T®§ ID ¤§«eªº°T®§¡]¿ï¶ñ¡^' }
             },
             required: ['channel_id']
         }
     },
     {
         id: 'discord_get_user_info',
-        category: 'Discord æ•´åˆ',
+        category: 'Discord ¾ã¦X',
         categoryIcon: 'discord',
         name: 'get_discord_user',
-        displayName: 'ç²å– Discord ç”¨æˆ¶è³‡è¨Š',
-        description: 'ç²å– Discord ç”¨æˆ¶çš„åŸºæœ¬è³‡è¨Š',
-        useCase: 'ã€Œä½ å€‘å‰›èªè­˜å—ï¼Ÿè®“æˆ‘çœ‹çœ‹ä»–çš„è³‡æ–™ã€',
+        displayName: 'Àò¨ú Discord ¥Î¤á¸ê°T',
+        description: 'Àò¨ú Discord ¥Î¤áªº°ò¥»¸ê°T',
+        useCase: '¡u§A­Ì­è»{ÃÑ¶Ü¡HÅı§Ú¬İ¬İ¥Lªº¸ê®Æ¡v',
         difficulty: 'easy',
         requires: ['Discord Bot Token'],
         parameters: {
             type: 'object',
             properties: {
-                user_id: { type: 'string', description: 'Discord ç”¨æˆ¶ ID' }
+                user_id: { type: 'string', description: 'Discord ¥Î¤á ID' }
             },
             required: ['user_id']
         }
     },
     {
         id: 'discord_list_channels',
-        category: 'Discord æ•´åˆ',
+        category: 'Discord ¾ã¦X',
         categoryIcon: 'discord',
         name: 'list_discord_channels',
-        displayName: 'åˆ—å‡º Discord é »é“',
-        description: 'åˆ—å‡º Bot æ‰€åœ¨ä¼ºæœå™¨çš„æ‰€æœ‰é »é“',
-        useCase: 'ã€Œæˆ‘å¯ä»¥ç™¼è¨Šæ¯åˆ°å“ªäº›é »é“å‘¢ï¼Ÿã€',
+        displayName: '¦C¥X Discord ÀW¹D',
+        description: '¦C¥X Bot ©Ò¦b¦øªA¾¹ªº©Ò¦³ÀW¹D',
+        useCase: '¡u§Ú¥i¥Hµo°T®§¨ì­ş¨ÇÀW¹D©O¡H¡v',
         difficulty: 'easy',
-        requires: ['Discord Bot Token', 'ä¼ºæœå™¨ ID'],
+        requires: ['Discord Bot Token', '¦øªA¾¹ ID'],
         parameters: {
             type: 'object',
             properties: {
-                guild_id: { type: 'string', description: 'Discord ä¼ºæœå™¨ ID' }
+                guild_id: { type: 'string', description: 'Discord ¦øªA¾¹ ID' }
             },
             required: ['guild_id']
         }
@@ -901,16 +901,16 @@
 ];
 
 export const CATEGORIES = [
-    { id: 'æ—¥å¸¸ç”Ÿæ´»', icon: 'wb_sunny', color: '#FF9500' },
-    { id: 'è³¼ç‰©æ¶ˆè²»', icon: 'shopping_cart', color: '#FF3B30' },
-    { id: 'å¥åº·ç®¡ç†', icon: 'favorite', color: '#FF2D55' },
-    { id: 'ç¤¾äº¤é€šè¨Š', icon: 'event', color: '#5856D6' },
-    { id: 'æ™ºæ…§å®¶å±…', icon: 'home', color: '#007AFF' },
-    { id: 'å¨›æ¨‚èˆˆè¶£', icon: 'music_note', color: '#AF52DE' },
-    { id: 'å­¸ç¿’å·¥ä½œ', icon: 'school', color: '#34C759' },
-    { id: 'é‡‘èç†è²¡', icon: 'trending_up', color: '#00C7BE' },
-    { id: 'è™›æ“¬å½¢è±¡', icon: 'android', color: '#AF52DE' },
-    { id: 'æ¡Œå¯µ', icon: 'pets', color: '#FF9500' },
-    { id: 'æ´»å‹•åŒæ­¥', icon: 'sync', color: '#5856D6' },
-    { id: 'Discord æ•´åˆ', icon: 'discord', color: '#5865F2' }
+    { id: '¤é±`¥Í¬¡', icon: 'wb_sunny', color: '#FF9500' },
+    { id: 'ÁÊª«®ø¶O', icon: 'shopping_cart', color: '#FF3B30' },
+    { id: '°·±dºŞ²z', icon: 'favorite', color: '#FF2D55' },
+    { id: 'ªÀ¥æ³q°T', icon: 'event', color: '#5856D6' },
+    { id: '´¼¼z®a©~', icon: 'home', color: '#007AFF' },
+    { id: '®T¼Ö¿³½ì', icon: 'music_note', color: '#AF52DE' },
+    { id: '¾Ç²ß¤u§@', icon: 'school', color: '#34C759' },
+    { id: 'ª÷¿Ä²z°]', icon: 'trending_up', color: '#00C7BE' },
+    { id: 'µêÀÀ§Î¶H', icon: 'android', color: '#AF52DE' },
+    { id: '®àÃd', icon: 'pets', color: '#FF9500' },
+    { id: '¬¡°Ê¦P¨B', icon: 'sync', color: '#5856D6' },
+    { id: 'Discord ¾ã¦X', icon: 'discord', color: '#5865F2' }
 ];

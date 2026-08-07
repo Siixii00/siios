@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSSlider, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 import APIClient from '../../api.js';
@@ -19,11 +19,11 @@ async function renderApiConfig() {
     
     const backBtn = createElement('button', 'ios-btn');
     backBtn.appendChild(createIcon('chevron_left'));
-    backBtn.appendChild(createElement('span', '', { textContent: 'è¿”å›ž' }));
+    backBtn.appendChild(createElement('span', '', { textContent: 'ªð¦^' }));
     backBtn.onclick = () => Router.back();
     inner.appendChild(backBtn);
     
-    inner.appendChild(createElement('h1', 'ios-inline-title', { textContent: 'API è¨­å®š' }));
+    inner.appendChild(createElement('h1', 'ios-inline-title', { textContent: 'API ³]©w' }));
     inner.appendChild(createElement('div', ''));
     
     header.appendChild(inner);
@@ -34,7 +34,7 @@ async function renderApiConfig() {
     main.style.paddingTop = '16px';
     
     const connectionSection = createElement('div', 'mb-2 ml-8');
-    connectionSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'é€£ç·šè¨­å®š' }));
+    connectionSection.appendChild(createElement('p', 'ios-section-header', { textContent: '³s½u³]©w' }));
     
     const connectionGroup = createElement('div', 'ios-grouped-list mx-4');
     
@@ -64,7 +64,7 @@ async function renderApiConfig() {
     main.appendChild(connectionGroup);
 
     const embeddingSection = createElement('div', 'mb-2 ml-8 mt-6');
-    embeddingSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'åµŒå…¥æ¨¡åž‹è¨­å®š' }));
+    embeddingSection.appendChild(createElement('p', 'ios-section-header', { textContent: '´O¤J¼Ò«¬³]©w' }));
     
     const embeddingGroup = createElement('div', 'ios-grouped-list mx-4');
 
@@ -91,7 +91,7 @@ async function renderApiConfig() {
     embeddingGroup.appendChild(embModelCell);
 
     const embDimCell = createElement('div', 'p-4 mt-2');
-    embDimCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-2 block', { textContent: 'ç¶­åº¦' }));
+    embDimCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-2 block', { textContent: 'ºû«×' }));
     const embDimInput = createElement('input', 'ios-input', {
         type: 'number',
         placeholder: '1536',
@@ -105,7 +105,7 @@ async function renderApiConfig() {
     embKeyCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-2 block', { textContent: 'Embedding API Key' }));
     const embKeyInput = createElement('input', 'ios-input', {
         type: 'password',
-        placeholder: 'ç•™ç©ºå‰‡ä½¿ç”¨ä¸» API Key',
+        placeholder: '¯dªÅ«h¨Ï¥Î¥D API Key',
         value: settings.embedding_api_key || ''
     });
     embKeyInput.oninput = (e) => settings.embedding_api_key = e.target.value;
@@ -116,12 +116,12 @@ async function renderApiConfig() {
     main.appendChild(embeddingGroup);
 
     const memorySection = createElement('div', 'mb-2 ml-8 mt-6');
-    memorySection.appendChild(createElement('p', 'ios-section-header', { textContent: 'è¨˜æ†¶ç³»çµ±' }));
+    memorySection.appendChild(createElement('p', 'ios-section-header', { textContent: '°O¾Ð¨t²Î' }));
     
     const memoryGroup = createElement('div', 'ios-grouped-list mx-4');
 
     const memToggleCell = createElement('div', 'ios-list-cell ios-list-cell-full');
-    memToggleCell.appendChild(createElement('span', 'flex-1', { textContent: 'å•Ÿç”¨è¨˜æ†¶ç³»çµ±' }));
+    memToggleCell.appendChild(createElement('span', 'flex-1', { textContent: '±Ò¥Î°O¾Ð¨t²Î' }));
     const memToggle = createElement('input', '', {
         type: 'checkbox',
         checked: settings.memory_enabled || false
@@ -132,7 +132,7 @@ async function renderApiConfig() {
     memoryGroup.appendChild(memToggleCell);
 
     const memDecayCell = createElement('div', 'p-4 mt-2');
-    memDecayCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-2 block', { textContent: 'è¡°è®ŠçŽ‡' }));
+    memDecayCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-2 block', { textContent: '°IÅÜ²v' }));
     const memDecayInput = createElement('input', 'ios-input', {
         type: 'number',
         step: '0.001',
@@ -144,7 +144,7 @@ async function renderApiConfig() {
     memoryGroup.appendChild(memDecayCell);
 
     const memThreshCell = createElement('div', 'p-4 mt-2');
-    memThreshCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-2 block', { textContent: 'éºå¿˜é–¾å€¼' }));
+    memThreshCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-2 block', { textContent: '¿ò§ÑìH­È' }));
     const memThreshInput = createElement('input', 'ios-input', {
         type: 'number',
         step: '0.01',
@@ -159,7 +159,7 @@ async function renderApiConfig() {
     main.appendChild(memoryGroup);
 
     const saveSection = createElement('div', 'mx-4 mt-6 mb-8');
-    const saveBtn = createElement('button', 'ios-btn ios-btn-primary w-full py-3', { textContent: 'å„²å­˜è¨­å®š' });
+    const saveBtn = createElement('button', 'ios-btn ios-btn-primary w-full py-3', { textContent: 'Àx¦s³]©w' });
     saveBtn.onclick = async () => {
         const keys = [
             'api_url', 'api_key',
@@ -169,7 +169,7 @@ async function renderApiConfig() {
         for (const key of keys) {
             await SettingsDB.set(key, settings[key]);
         }
-        createToast('è¨­å®šå·²å„²å­˜');
+        createToast('³]©w¤wÀx¦s');
     };
     saveSection.appendChild(saveBtn);
     main.appendChild(saveSection);

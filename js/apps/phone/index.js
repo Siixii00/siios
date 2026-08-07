@@ -305,7 +305,7 @@ async function renderRecordings(container) {
     if (!recordings.length) {
         const empty = document.createElement('li');
         empty.className = 'recordings-empty';
-        empty.innerHTML = "`<i class=`"`fas fa-microphone-slash`"`></i><p>尚無錄音紀錄</p><span>通話錄音將自動保存在這裡</span>`";
+        empty.innerHTML = '`<i class=`'`fas fa-microphone-slash`'`></i><p>尚無錄音紀錄</p><span>通話錄音將自動保存在這裡</span>`';
         list.appendChild(empty);
         return;
     }
@@ -314,7 +314,7 @@ async function renderRecordings(container) {
         item.className = 'recording-item';
         const playBtn = document.createElement('button');
         playBtn.className = 'recording-play';
-        playBtn.innerHTML = "`<i class=`"`fas fa-play`"`></i>`";
+        playBtn.innerHTML = '`<i class=`'`fas fa-play`'`></i>`';
         playBtn.addEventListener('click', () => playRecording(rec));
         const info = document.createElement('div');
         info.className = 'recording-info';
@@ -325,7 +325,7 @@ async function renderRecordings(container) {
         if (rec.transcript && rec.transcript.length > 0) {
             const transcriptToggle = document.createElement('button');
             transcriptToggle.className = 'transcript-toggle';
-            transcriptToggle.innerHTML = "`<i class=`"`fas fa-comment-dots`"`></i> 通話內容`";
+            transcriptToggle.innerHTML = '`<i class=`'`fas fa-comment-dots`'`></i> 通話內容`';
             transcriptToggle.addEventListener('click', () => {
                 const details = item.querySelector('.recording-transcript');
                 if (details) {
@@ -351,11 +351,11 @@ async function renderRecordings(container) {
         actionsDiv.className = 'recording-actions';
         const downloadBtn = document.createElement('button');
         downloadBtn.className = 'recording-download';
-        downloadBtn.innerHTML = "`<i class=`"`fas fa-download`"`></i>`";
+        downloadBtn.innerHTML = '`<i class=`'`fas fa-download`'`></i>`';
         downloadBtn.addEventListener('click', () => downloadRecording(rec));
         const deleteBtn = document.createElement('button');
         deleteBtn.className = 'recording-delete';
-        deleteBtn.innerHTML = "`<i class=`"`fas fa-trash`"`></i>`";
+        deleteBtn.innerHTML = '`<i class=`'`fas fa-trash`'`></i>`';
         deleteBtn.addEventListener('click', async () => {
             if (confirm('確定刪除此錄音？')) {
                 await deleteRecording(rec.id);

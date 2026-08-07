@@ -362,11 +362,11 @@ async function bindPostInteractions(article, post) {
         if (isSaved) {
             const newSavedIds = savedIds.filter(id => id !== post.id);
             await saveSavedPosts(newSavedIds);
-            bookmarkBtn.innerHTML = "`<i class=`"`fa-regular fa-bookmark`"`></i>`";
+            bookmarkBtn.innerHTML = '`<i class=`'`fa-regular fa-bookmark`'`></i>`';
         } else {
             savedIds.push(post.id);
             await saveSavedPosts(savedIds);
-            bookmarkBtn.innerHTML = "`<i class=`"`fa-solid fa-bookmark`"`></i>`";
+            bookmarkBtn.innerHTML = '`<i class=`'`fa-solid fa-bookmark`'`></i>`';
         }
     });
 }

@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -22,20 +22,20 @@ async function renderKakaopay(params) {
   const container = createElement('div', 'app-container pay-app');
   container.innerHTML = `
     <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> è¿”å›</button>
-      <h1 class='menu-title'>æ”¯ä»˜</h1>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
+      <h1 class='menu-title'>¤ä¥I</h1>
     </header>
     <div class='page'>
       <div class='balance-card'>
-        <span class='balance-label'>é¤˜é¡</span>
+        <span class='balance-label'>¾lÃB</span>
         <span class='balance-amount'>$${balance.toLocaleString()}</span>
       </div>
       <div class='action-buttons'>
-        <button class='action-btn send'><i class='fas fa-paper-plane'></i> è½‰å¸³</button>
-        <button class='action-btn receive'><i class='fas fa-qrcode'></i> æ”¶æ¬¾</button>
+        <button class='action-btn send'><i class='fas fa-paper-plane'></i> Âà±b</button>
+        <button class='action-btn receive'><i class='fas fa-qrcode'></i> ¦¬´Ú</button>
       </div>
       <div class='transaction-list'>
-        <h3>äº¤æ˜“ç´€éŒ„</h3>
+        <h3>¥æ©ö¬ö¿ı</h3>
         ${transactions.length > 0 
           ? transactions.slice(-5).reverse().map(t => `
               <div class='tx-item ${t.type}'>
@@ -43,26 +43,26 @@ async function renderKakaopay(params) {
                 <span class='tx-amount'>${t.type === 'send' ? '-' : '+'}$${t.amount}</span>
               </div>
             `).join('')
-          : '<div class='empty-tx'>å°šç„¡äº¤æ˜“ç´€éŒ„</div>'
+          : '<div class='empty-tx'>©|µL¥æ©ö¬ö¿ı</div>'
         }
       </div>
     </div>
   `;
   container.querySelector('.ios-back-btn').onclick = () => Router.back();
   container.querySelector('.action-btn.send').onclick = async () => {
-    const amount = prompt('è½‰å¸³é‡‘é¡ï¼š');
+    const amount = prompt('Âà±bª÷ÃB¡G');
     if (amount && !isNaN(amount) && parseInt(amount) > 0 && parseInt(amount) <= balance) {
       balance -= parseInt(amount);
-      transactions.push({ type: 'send', amount: parseInt(amount), desc: 'è½‰å¸³æ”¯å‡º', date: Date.now() });
+      transactions.push({ type: 'send', amount: parseInt(amount), desc: 'Âà±b¤ä¥X', date: Date.now() });
       await saveData();
       renderKakaopay(params);
     }
   };
   container.querySelector('.action-btn.receive').onclick = async () => {
-    const amount = prompt('æ”¶æ¬¾é‡‘é¡ï¼š');
+    const amount = prompt('¦¬´Úª÷ÃB¡G');
     if (amount && !isNaN(amount) && parseInt(amount) > 0) {
       balance += parseInt(amount);
-      transactions.push({ type: 'receive', amount: parseInt(amount), desc: 'æ”¶æ¬¾å…¥å¸³', date: Date.now() });
+      transactions.push({ type: 'receive', amount: parseInt(amount), desc: '¦¬´Ú¤J±b', date: Date.now() });
       await saveData();
       renderKakaopay(params);
     }
@@ -72,9 +72,9 @@ async function renderKakaopay(params) {
 
 export default {
   id: 'kakaopay',
-  name: 'æ”¯ä»˜',
+  name: '¤ä¥I',
   icon: 'wallet',
   routes: [{ path: '/kakaopay', render: renderKakaopay }],
-  navItem: { label: 'æ”¯ä»˜', icon: 'wallet', path: '/kakaopay', showInNav: true, order: 123 },
+  navItem: { label: '¤ä¥I', icon: 'wallet', path: '/kakaopay', showInNav: true, order: 123 },
   stylesPath: 'js/apps/kakaopay/style.css'
 };

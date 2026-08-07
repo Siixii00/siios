@@ -285,7 +285,7 @@ function renderEditor(container) {
 
     const record = getRecord(activePageId);
     if (!record) {
-        editorArea.innerHTML = "`<div class=`"`wiki-editor-empty`"`>選擇或建立一個頁面</div>`";
+        editorArea.innerHTML = '`<div class=`'`wiki-editor-empty`'`>選擇或建立一個頁面</div>`';
         return;
     }
 
@@ -1096,7 +1096,7 @@ function handleSearch(container, query) {
     }
 
     if (results.length === 0) {
-        resultsEl.innerHTML = "`<div class=`"`wiki-search-result-item`"` style=`"color:var(--nt-ink-faint)'>No results</div>';
+        resultsEl.innerHTML = '`<div class=`'`wiki-search-result-item`'` style=`'color:var(--nt-ink-faint)'>No results</div>';
     } else {
         resultsEl.innerHTML = results.slice(0, 8).map(r => {
             const matchBlock = r.blocks && r.blocks.find(b => typeof b.content === 'string' && b.content.toLowerCase().includes(query.toLowerCase()));

@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { TheaterSettingsDB, SettingsDB } from '../../db.js';
 
@@ -6,7 +6,7 @@ async function renderTheaterSettings() {
     const container = createElement('div', 'app-container bg-ios-bg');
     
     const header = createIOSNavBar({
-        title: 'åŠ‡å ´è¨­å®š',
+        title: '¼@³õ³]©w',
         backPath: '/world-info',
         rightActions: [
             {
@@ -28,7 +28,7 @@ async function renderTheaterSettings() {
     
     if (entries.length === 0) {
         const emptyState = createElement('div', 'text-center py-12 text-ios-muted');
-        emptyState.textContent = 'å°šæœªå»ºç«‹ä»»ä½•åŠ‡å ´è¨­å®š';
+        emptyState.textContent = '©|¥¼«Ø¥ß¥ô¦ó¼@³õ³]©w';
         listContainer.appendChild(emptyState);
     } else {
         const group = createElement('div', 'ios-grouped-list');
@@ -50,7 +50,7 @@ async function renderTheaterSettings() {
                     : [...mountedIds, entry.id];
                 await SettingsDB.set('theater_mounted_settings', newMountedIds);
                 toggle.classList.toggle('active');
-                createToast(mountedIds.includes(entry.id) ? 'å·²å–æ¶ˆæ›è¼‰' : 'å·²æ›è¼‰', 'success');
+                createToast(mountedIds.includes(entry.id) ? '¤w¨ú®ø±¾¸ü' : '¤w±¾¸ü', 'success');
             };
             
             cell.appendChild(content);

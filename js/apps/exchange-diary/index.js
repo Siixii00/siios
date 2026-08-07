@@ -1,15 +1,15 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 import { compressImage } from '../../utils/image.js';
 import { escapeHtml, debounce } from '../../utils/html.js';
 
 const MOOD_OPTIONS = [
-  { id: 'sunny', label: 'æ™´æœ—', icon: 'ğŸŒ¤ï¸' },
-  { id: 'rainy', label: 'é›¨éœ²', icon: 'ğŸŒ§ï¸' },
-  { id: 'starry', label: 'æ˜Ÿå¤œ', icon: 'ğŸŒ™' },
-  { id: 'cozy', label: 'æš–è¢«', icon: 'ğŸ«–' },
-  { id: 'wild', label: 'å†’éšª', icon: 'ğŸ§­' }
+  { id: 'sunny', label: '´¸®Ô', icon: '???' },
+  { id: 'rainy', label: '«BÅS', icon: '???' },
+  { id: 'starry', label: '¬P©]', icon: '??' },
+  { id: 'cozy', label: '·x³Q', icon: '??' },
+  { id: 'wild', label: '«_ÀI', icon: '??' }
 ];
 
 const PROFILE_COLORS = [
@@ -18,8 +18,8 @@ const PROFILE_COLORS = [
 ];
 
 const DEFAULT_PROFILES = [
-  { id: 'writer_1', name: 'å°å¤š', color: '#0075de' },
-  { id: 'writer_2', name: 'é˜¿å—¨', color: '#d6b6f6' }
+  { id: 'writer_1', name: '¤p¦h', color: '#0075de' },
+  { id: 'writer_2', name: 'ªü¶Ù', color: '#d6b6f6' }
 ];
 
 let profiles = [];
@@ -66,7 +66,7 @@ function formatDateStr(d) {
 
 function formatDateDisplay(dateStr) {
   const [y, m, d] = dateStr.split('-');
-  return `${parseInt(m)}æœˆ${parseInt(d)}æ—¥`;
+  return `${parseInt(m)}¤ë${parseInt(d)}¤é`;
 }
 
 function formatTime(ts) {
@@ -121,7 +121,7 @@ function renderCalendar(container) {
   const today = formatDateStr(new Date());
   const daysInMonth = getDaysInMonth(year, month);
   const firstDay = getFirstDayOfWeek(year, month);
-  const monthNames = ['1æœˆ', '2æœˆ', '3æœˆ', '4æœˆ', '5æœˆ', '6æœˆ', '7æœˆ', '8æœˆ', '9æœˆ', '10æœˆ', '11æœˆ', '12æœˆ'];
+  const monthNames = ['1¤ë', '2¤ë', '3¤ë', '4¤ë', '5¤ë', '6¤ë', '7¤ë', '8¤ë', '9¤ë', '10¤ë', '11¤ë', '12¤ë'];
 
   const entriesByDate = new Map();
   entries.forEach(e => {
@@ -160,20 +160,20 @@ function renderCalendar(container) {
   body.innerHTML = `
     <div class='diary-calendar'>
       <div class='diary-calendar-header'>
-        <div class='diary-calendar-title'>${year}å¹´ ${monthNames[month]}</div>
+        <div class='diary-calendar-title'>${year}¦~ ${monthNames[month]}</div>
         <div class='diary-calendar-nav'>
-          <button data-dir='-1'>â€¹</button>
-          <button data-dir='1'>â€º</button>
+          <button data-dir='-1'>?</button>
+          <button data-dir='1'>?</button>
         </div>
       </div>
       <div class='diary-calendar-weekdays'>
-        <div class='diary-calendar-weekday'>ä¸€</div>
-        <div class='diary-calendar-weekday'>äºŒ</div>
-        <div class='diary-calendar-weekday'>ä¸‰</div>
-        <div class='diary-calendar-weekday'>å››</div>
-        <div class='diary-calendar-weekday'>äº”</div>
-        <div class='diary-calendar-weekday'>å…­</div>
-        <div class='diary-calendar-weekday'>æ—¥</div>
+        <div class='diary-calendar-weekday'>¤@</div>
+        <div class='diary-calendar-weekday'>¤G</div>
+        <div class='diary-calendar-weekday'>¤T</div>
+        <div class='diary-calendar-weekday'>¥|</div>
+        <div class='diary-calendar-weekday'>¤­</div>
+        <div class='diary-calendar-weekday'>¤»</div>
+        <div class='diary-calendar-weekday'>¤é</div>
       </div>
       <div class='diary-calendar-grid'>${dayCells}</div>
     </div>
@@ -202,7 +202,7 @@ function renderTimeline(container) {
   if (!body) return;
 
   if (entries.length === 0) {
-    body.innerHTML = `<div class='diary-empty'><span class='diary-empty-icon'>ğŸ“–</span>å°šç„¡æ—¥è¨˜</div>`;
+    body.innerHTML = `<div class='diary-empty'><span class='diary-empty-icon'>??</span>©|µL¤é°O</div>`;
     return;
   }
 
@@ -232,7 +232,7 @@ function renderEntryCard(entry, isReply = false) {
   const writer = profiles.find(p => p.id === entry.writerId);
   const mood = MOOD_OPTIONS.find(m => m.id === entry.mood);
   const borderColor = isReply && writer ? writer.color : 'transparent';
-  const writerName = escapeHtml(writer?.name || 'æœªçŸ¥');
+  const writerName = escapeHtml(writer?.name || '¥¼ª¾');
   const writerInitial = escapeHtml(writer?.name.charAt(0) || '?');
 
   return `
@@ -249,12 +249,12 @@ function renderEntryCard(entry, isReply = false) {
       ${entry.images && entry.images.length > 0 ? entry.images.map(img => `<img src='${escapeHtml(img)}' alt=''>`).join('') : ''}
       ${!isReply ? `
         <div class='diary-entry-actions'>
-          <button class='diary-entry-action' data-reply='${entry.id}'>å›è¦†</button>
-          <button class='diary-entry-action' data-delete='${entry.id}'>åˆªé™¤</button>
+          <button class='diary-entry-action' data-reply='${entry.id}'>¦^ÂĞ</button>
+          <button class='diary-entry-action' data-delete='${entry.id}'>§R°£</button>
         </div>
       ` : `
         <div class='diary-entry-actions'>
-          <button class='diary-entry-action' data-delete='${entry.id}'>åˆªé™¤</button>
+          <button class='diary-entry-action' data-delete='${entry.id}'>§R°£</button>
         </div>
       `}
     </div>
@@ -299,12 +299,12 @@ function openDayPanel(container, dateStr) {
     <div class='diary-day-panel-handle'></div>
     <div class='diary-day-panel-header'>
       <span class='diary-day-panel-title'>${formatDateDisplay(dateStr)}</span>
-      <button class='diary-day-panel-close'>âœ•</button>
+      <button class='diary-day-panel-close'>?</button>
     </div>
     <div class='diary-day-panel-body'>
       ${allDayEntries.length > 0
         ? allDayEntries.map(e => renderEntryCard(e, !!e.replyTo)).join('')
-        : '<div class='diary-day-panel-empty'>é€™å¤©é‚„æ²’æœ‰æ—¥è¨˜</div>'
+        : '<div class='diary-day-panel-empty'>³o¤ÑÁÙ¨S¦³¤é°O</div>'
       }
     </div>
   `;
@@ -339,14 +339,14 @@ function openEditor(container, dateStr, replyTo = null) {
   overlay.innerHTML = `
     <div class='diary-editor'>
       <div class='diary-editor-header'>
-        <button class='diary-editor-cancel'>å–æ¶ˆ</button>
-        <button class='diary-editor-save'>å„²å­˜</button>
+        <button class='diary-editor-cancel'>¨ú®ø</button>
+        <button class='diary-editor-save'>Àx¦s</button>
       </div>
       <div class='diary-editor-body'>
         <div class='diary-editor-writer'>
           <span class='diary-writer-avatar' style='background:${writer.color}'>${escapeHtml(writer.name.charAt(0))}</span>
           <span class='diary-editor-writer-name'>${escapeHtml(writer.name)}</span>
-          ${replyEntry ? `<span style='color:var(--nt-ink-faint);font-size:12px;margin-left:8px'>å›è¦† ${replyWriterName}</span>` : ''}
+          ${replyEntry ? `<span style='color:var(--nt-ink-faint);font-size:12px;margin-left:8px'>¦^ÂĞ ${replyWriterName}</span>` : ''}
         </div>
         <div class='diary-mood-pills'>
           ${MOOD_OPTIONS.map(m => `
@@ -355,14 +355,14 @@ function openEditor(container, dateStr, replyTo = null) {
             </button>
           `).join('')}
         </div>
-        <textarea class='diary-editor-textarea' placeholder='å¯«ä¸‹ä»Šå¤©çš„å¿ƒæƒ…...'></textarea>
+        <textarea class='diary-editor-textarea' placeholder='¼g¤U¤µ¤Ñªº¤ß±¡...'></textarea>
         <div class='diary-image-preview-area'></div>
       </div>
       <div class='diary-editor-toolbar'>
-        <button class='diary-toolbar-btn' data-format='bold' title='ç²—é«”'><b>B</b></button>
-        <button class='diary-toolbar-btn' data-format='italic' title='æ–œé«”'><i>I</i></button>
-        <button class='diary-toolbar-btn' data-format='strike' title='åˆªé™¤ç·š'><s>S</s></button>
-        <button class='diary-toolbar-btn' data-format='image' title='åœ–ç‰‡'>ğŸ–¼</button>
+        <button class='diary-toolbar-btn' data-format='bold' title='²ÊÅé'><b>B</b></button>
+        <button class='diary-toolbar-btn' data-format='italic' title='±×Åé'><i>I</i></button>
+        <button class='diary-toolbar-btn' data-format='strike' title='§R°£½u'><s>S</s></button>
+        <button class='diary-toolbar-btn' data-format='image' title='¹Ï¤ù'>??</button>
       </div>
     </div>
   `;
@@ -453,7 +453,7 @@ function renderImagePreviews(overlay, images) {
   area.innerHTML = images.map((img, i) => `
     <div class='diary-image-preview'>
       <img src='${escapeHtml(img)}' alt=''>
-      <button class='diary-image-remove' data-idx='${i}'>âœ•</button>
+      <button class='diary-image-remove' data-idx='${i}'>?</button>
     </div>
   `).join('');
 
@@ -495,7 +495,7 @@ function openProfileModal(container) {
   modal = createElement('div', 'diary-profile-modal');
   modal.innerHTML = `
     <div class='diary-profile-card'>
-      <h3>ç®¡ç†å¯«æ‰‹</h3>
+      <h3>ºŞ²z¼g¤â</h3>
       <div class='diary-profile-list'>
         ${profiles.map((p, i) => `
           <div class='diary-profile-item' data-idx='${i}'>
@@ -508,8 +508,8 @@ function openProfileModal(container) {
         `).join('')}
       </div>
       <div class='diary-profile-actions'>
-        <button class='diary-profile-btn secondary' id='diary-add-profile'>+ æ–°å¢å¯«æ‰‹</button>
-        <button class='diary-profile-btn primary' id='diary-save-profiles'>å®Œæˆ</button>
+        <button class='diary-profile-btn secondary' id='diary-add-profile'>+ ·s¼W¼g¤â</button>
+        <button class='diary-profile-btn primary' id='diary-save-profiles'>§¹¦¨</button>
       </div>
     </div>
   `;
@@ -541,7 +541,7 @@ function openProfileModal(container) {
   modal.querySelector('#diary-add-profile').onclick = () => {
     if (profiles.length >= 5) return;
     const newId = 'writer_' + Date.now();
-    profiles.push({ id: newId, name: 'å¯«æ‰‹' + (profiles.length + 1), color: PROFILE_COLORS[profiles.length % PROFILE_COLORS.length] });
+    profiles.push({ id: newId, name: '¼g¤â' + (profiles.length + 1), color: PROFILE_COLORS[profiles.length % PROFILE_COLORS.length] });
     openProfileModal(container);
   };
 
@@ -586,9 +586,9 @@ async function renderExchangeDiary(params) {
 
   container.innerHTML = `
     <nav class='diary-nav'>
-      <button class='diary-nav-back'><i class='fas fa-chevron-left'></i> è¿”å›</button>
-      <span class='diary-nav-title'>äº¤æ›æ—¥è¨˜</span>
-      <button class='diary-nav-action' id='diary-settings'>âš™</button>
+      <button class='diary-nav-back'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
+      <span class='diary-nav-title'>¥æ´«¤é°O</span>
+      <button class='diary-nav-action' id='diary-settings'>?</button>
     </nav>
     <div class='diary-writer-bar'></div>
     <div class='diary-segmented'>
@@ -626,9 +626,9 @@ async function renderExchangeDiary(params) {
 
 export default {
   id: 'exchange-diary',
-  name: 'äº¤æ›æ—¥è¨˜',
+  name: '¥æ´«¤é°O',
   icon: 'book',
   routes: [{ path: '/exchange-diary', render: renderExchangeDiary }],
-  navItem: { label: 'äº¤æ›æ—¥è¨˜', icon: 'book', path: '/exchange-diary', showInNav: true, order: 111 },
+  navItem: { label: '¥æ´«¤é°O', icon: 'book', path: '/exchange-diary', showInNav: true, order: 111 },
   stylesPath: 'js/apps/exchange-diary/style.css'
 };

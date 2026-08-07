@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -15,9 +15,9 @@ const SOURCE_ICONS = {
 };
 
 const SOURCE_LABELS = {
-    uploaded: 'ä¸Šå‚³',
-    chat: 'èŠå¤©',
-    painter: 'ç…§ç›¸é¤¨'
+    uploaded: '¤W¶Ç',
+    chat: '²á¤Ñ',
+    painter: '·Ó¬ÛÀ]'
 };
 
 async function loadImages() {
@@ -123,20 +123,20 @@ async function setAsWallpaper() {
     const img = getCurrentViewerImage();
     if (!img) return;
     await SettingsDB.set('wallpaper_url', img.url);
-    createToast('å·²è¨­ç‚ºæ¡Œå¸ƒ', 'success');
+    createToast('¤w³]¬°®à¥¬', 'success');
 }
 
 async function setAsLockscreen() {
     const img = getCurrentViewerImage();
     if (!img) return;
     await SettingsDB.set('lockscreen_url', img.url);
-    createToast('å·²è¨­ç‚ºé–å±', 'success');
+    createToast('¤w³]¬°Âê«Ì', 'success');
 }
 
 async function deleteCurrentImage(container) {
     const img = getCurrentViewerImage();
     if (!img) return;
-    if (!confirm('ç¢ºå®šè¦åˆªé™¤é€™å¼µç…§ç‰‡å—ï¼Ÿ')) return;
+    if (!confirm('½T©w­n§R°£³o±i·Ó¤ù¶Ü¡H')) return;
     await deleteImage(img.id);
     closeViewer(container);
     renderGallery(container);
@@ -173,29 +173,29 @@ async function renderAlbum(params) {
     container.innerHTML = `
         <header class='ios-header'>
             <button class='ios-back-btn'>
-                <i class='fas fa-chevron-left'></i> è¿”å›
+                <i class='fas fa-chevron-left'></i> ªğ¦^
             </button>
-            <h1 class='menu-title'>ç›¸ç°¿</h1>
+            <h1 class='menu-title'>¬ÛÃ¯</h1>
             <div class='header-actions'>
-                <button class='header-action' id='upload-btn' title='æ–°å¢ç…§ç‰‡'>
+                <button class='header-action' id='upload-btn' title='·s¼W·Ó¤ù'>
                     <i class='fas fa-plus'></i>
                 </button>
             </div>
         </header>
 
         <div class='tab-bar'>
-            <button class='tab-btn active' data-tab='all'>å…¨éƒ¨</button>
-            <button class='tab-btn' data-tab='uploaded'>ä¸Šå‚³</button>
-            <button class='tab-btn' data-tab='chat'>èŠå¤©</button>
-            <button class='tab-btn' data-tab='painter'>ç…§ç›¸é¤¨</button>
+            <button class='tab-btn active' data-tab='all'>¥ş³¡</button>
+            <button class='tab-btn' data-tab='uploaded'>¤W¶Ç</button>
+            <button class='tab-btn' data-tab='chat'>²á¤Ñ</button>
+            <button class='tab-btn' data-tab='painter'>·Ó¬ÛÀ]</button>
         </div>
 
         <div class='gallery-wrapper'>
             <div class='gallery-grid' id='gallery-grid'></div>
             <div class='empty-state hidden' id='empty-state'>
                 <i class='fas fa-images'></i>
-                <p>å°šç„¡ç…§ç‰‡</p>
-                <p class='empty-hint'>é»æ“Šå³ä¸Šè§’ + å¾è£ç½®ä¸Šå‚³</p>
+                <p>©|µL·Ó¤ù</p>
+                <p class='empty-hint'>ÂIÀ»¥k¤W¨¤ + ±q¸Ë¸m¤W¶Ç</p>
             </div>
         </div>
 
@@ -206,13 +206,13 @@ async function renderAlbum(params) {
             <img id='viewer-img' src='' alt=''>
             <div class='viewer-actions'>
                 <button class='viewer-btn' id='set-wallpaper-btn'>
-                    <i class='fas fa-image'></i><span>æ¡Œå¸ƒ</span>
+                    <i class='fas fa-image'></i><span>®à¥¬</span>
                 </button>
                 <button class='viewer-btn' id='set-lockscreen-btn'>
-                    <i class='fas fa-lock'></i><span>é–å±</span>
+                    <i class='fas fa-lock'></i><span>Âê«Ì</span>
                 </button>
                 <button class='viewer-btn viewer-btn-danger' id='delete-btn'>
-                    <i class='fas fa-trash'></i><span>åˆªé™¤</span>
+                    <i class='fas fa-trash'></i><span>§R°£</span>
                 </button>
             </div>
         </div>
@@ -260,9 +260,9 @@ async function renderAlbum(params) {
 
 export default {
     id: 'album',
-    name: 'ç›¸ç°¿',
+    name: '¬ÛÃ¯',
     icon: 'photo_library',
     routes: [{ path: '/album', render: renderAlbum }],
-    navItem: { label: 'ç›¸ç°¿', icon: 'photo_library', path: '/album', showInNav: true, order: 10 },
+    navItem: { label: '¬ÛÃ¯', icon: 'photo_library', path: '/album', showInNav: true, order: 10 },
     stylesPath: 'js/apps/album/style.css'
 };

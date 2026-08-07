@@ -1,8 +1,8 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
-const CATEGORIES = ['å¾½ç« ', 'ç«‹ç‰Œ', 'æµ·å ±', 'åŠå¡', 'å…¶ä»–'];
+const CATEGORIES = ['À²³¹', '¥ßµP', '®ü³ø', '¦Q¥d', '¨ä¥L'];
 
 let items = [];
 
@@ -22,8 +22,8 @@ async function renderGuziGuide(params) {
   CATEGORIES.forEach(c => stats[c] = items.filter(i => i.category === c).length);
   container.innerHTML = `
     <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> è¿”å›</button>
-      <h1 class='menu-title'>è°·å­åœ–é‘‘</h1>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
+      <h1 class='menu-title'>¨¦¤l¹ÏÅ²</h1>
     </header>
     <div class='page'>
       <div class='stats-grid'>
@@ -35,8 +35,8 @@ async function renderGuziGuide(params) {
         `).join('')}
       </div>
       <div class='total-count'>
-        <span>ç¸½è¨ˆ</span>
-        <span class='total'>${items.length} ä»¶</span>
+        <span>Á`­p</span>
+        <span class='total'>${items.length} ¥ó</span>
       </div>
       <div class='item-list'>
         ${items.slice(-10).reverse().map(i => `
@@ -44,16 +44,16 @@ async function renderGuziGuide(params) {
             <span class='item-name'>${i.name}</span>
             <span class='item-cat'>${i.category}</span>
           </div>
-        `).join('') || '<div class='empty-items'>å°šç„¡æ”¶è—</div>'}
+        `).join('') || '<div class='empty-items'>©|µL¦¬ÂÃ</div>'}
       </div>
-      <button class='add-btn'><i class='fas fa-plus'></i> æ–°å¢æ”¶è—</button>
+      <button class='add-btn'><i class='fas fa-plus'></i> ·s¼W¦¬ÂÃ</button>
     </div>
   `;
   container.querySelector('.ios-back-btn').onclick = () => Router.back();
   container.querySelector('.add-btn').onclick = async () => {
-    const name = prompt('åç¨±ï¼š');
+    const name = prompt('¦WºÙ¡G');
     if (!name) return;
-    const category = prompt('åˆ†é¡ï¼ˆå¾½ç« /ç«‹ç‰Œ/æµ·å ±/åŠå¡/å…¶ä»–ï¼‰ï¼š') || 'å…¶ä»–';
+    const category = prompt('¤ÀÃş¡]À²³¹/¥ßµP/®ü³ø/¦Q¥d/¨ä¥L¡^¡G') || '¨ä¥L';
     items.push({ name, category, id: Date.now(), addedAt: new Date().toISOString() });
     await saveItems();
     renderGuziGuide(params);
@@ -63,9 +63,9 @@ async function renderGuziGuide(params) {
 
 export default {
   id: 'guzi-guide',
-  name: 'è°·å­åœ–é‘‘',
+  name: '¨¦¤l¹ÏÅ²',
   icon: 'bookmark',
   routes: [{ path: '/guzi-guide', render: renderGuziGuide }],
-  navItem: { label: 'è°·å­åœ–é‘‘', icon: 'bookmark', path: '/guzi-guide', showInNav: true, order: 132 },
+  navItem: { label: '¨¦¤l¹ÏÅ²', icon: 'bookmark', path: '/guzi-guide', showInNav: true, order: 132 },
   stylesPath: 'js/apps/guzi-guide/style.css'
 };

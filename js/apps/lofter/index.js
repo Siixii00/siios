@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createToast, createEmptyState } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
@@ -18,26 +18,26 @@ const STORAGE_KEYS = {
 };
 
 const AUTHOR_NAMES = [
-    'å¤œè²“å­', 'è·¯äººç”²', 'åŒ¿åç”¨æˆ¶', 'æ½›æ°´å“¡', 'è·¯äººä¹™',
-    'å°é€æ˜', 'åƒç“œç¾¤çœ¾', 'ä½›ç³»é’å¹´', 'é¹¹é­šä¸€æ¢', 'æ‘¸é­šé”äºº',
-    'ç¤¾ç•œæ—¥å¸¸', 'æ‰“å·¥äºº', 'æ¬ç£šäºº', 'ç¢¼è¾²ä¸€è™Ÿ', 'è¨­è¨ˆå¸«é˜¿'
+    '©]¿ß¤l', '¸ô¤H¥Ò', '°Î¦W¥Î¤á', '¼ç¤ô­û', '¸ô¤H¤A',
+    '¤p³z©ú', '¦Y¥Ê¸s²³', '¦ò¨t«C¦~', 'ÄĞ³½¤@±ø', 'ºN³½¹F¤H',
+    'ªÀ¯b¤é±`', '¥´¤u¤H', '·h¿j¤H', '½X¹A¤@¸¹', '³]­p®vªü'
 ];
 
 const worldSettings = [
-    { title: 'ABO è¨­å®š', desc: 'Alpha/Beta/Omega ä¸‰ç¨®ç¬¬äºŒæ€§åˆ¥ï¼ŒåŸºæ–¼ä¿¡æ¯ç´ èˆ‡ç”Ÿç†æœ¬èƒ½çš„éšç´šç¤¾æœƒã€‚', tags: ['#ABO', '#ä¸–ç•Œè§€'] },
-    { title: 'å“¨å…µåš®å°', desc: 'æ„Ÿå®˜æ¥µç«¯æ•éŠ³çš„å“¨å…µèˆ‡ç²¾ç¥åŠ›é‡å¼·å¤§çš„åš®å°ã€‚', tags: ['#å“¨å…µåš®å°', '#ä¸–ç•Œè§€'] },
-    { title: 'å“ˆåˆ©æ³¢ç‰¹', desc: 'éš±è—åœ¨ç¾ä»£å€«æ•¦ä¹‹ä¸‹çš„é­”æ³•ä¸–ç•Œã€‚', tags: ['#HP', '#é­”æ³•æ ¡åœ’'] },
-    { title: 'æ—¥å¼é«˜ä¸­æ ¡åœ’', desc: 'é’æ˜¥æ›–æ˜§çš„æ ¡åœ’ç”Ÿæ´»ã€‚', tags: ['#æ ¡åœ’', '#é’æ˜¥'] },
-    { title: 'è¾¦å…¬å®¤è·å ´', desc: 'æ¬ŠåŠ›ç­‰ç´šèˆ‡ç¦æ­¢æˆ€æ„›çš„è¾¦å…¬å®¤ã€‚', tags: ['#è·å ´', '#è¾¦å…¬å®¤'] }
+    { title: 'ABO ³]©w', desc: 'Alpha/Beta/Omega ¤TºØ²Ä¤G©Ê§O¡A°ò©ó«H®§¯À»P¥Í²z¥»¯àªº¶¥¯ÅªÀ·|¡C', tags: ['#ABO', '#¥@¬ÉÆ['] },
+    { title: '­ï§LÂQ¾É', desc: '·P©x·¥ºİ±Ó¾Uªº­ï§L»Pºë¯«¤O¶q±j¤jªºÂQ¾É¡C', tags: ['#­ï§LÂQ¾É', '#¥@¬ÉÆ['] },
+    { title: '«¢§Qªi¯S', desc: 'ÁôÂÃ¦b²{¥N­Û´°¤§¤UªºÅ]ªk¥@¬É¡C', tags: ['#HP', '#Å]ªk®Õ¶é'] },
+    { title: '¤é¦¡°ª¤¤®Õ¶é', desc: '«C¬KÀÇ¬Nªº®Õ¶é¥Í¬¡¡C', tags: ['#®Õ¶é', '#«C¬K'] },
+    { title: '¿ì¤½«ÇÂ¾³õ', desc: 'Åv¤Oµ¥¯Å»P¸T¤îÅÊ·Rªº¿ì¤½«Ç¡C', tags: ['#Â¾³õ', '#¿ì¤½«Ç'] }
 ];
 
 const interactionTropes = [
-    { title: 'é‡é€¢', desc: 'å¤šå¹´å¾Œå†æ¬¡ç›¸é‡ï¼Œå½¼æ­¤éƒ½è®Šäº†å»åˆæ²’è®Šã€‚', tags: ['#é‡é€¢', '#æƒ…æ„Ÿ'] },
-    { title: 'èª¤æœƒè§£é–‹', desc: 'ä¸€ç›´ä»¥ä¾†çš„èª¤æœƒçµ‚æ–¼è§£é–‹ï¼Œä½†ä¼¼ä¹å¤ªé²äº†ã€‚', tags: ['#èª¤æœƒ', '#è™å¿ƒ'] },
-    { title: 'å‘Šç™½', desc: 'çµ‚æ–¼é¼“èµ·å‹‡æ°£èªªå‡ºå¿ƒæ„ã€‚', tags: ['#å‘Šç™½', '#ç”œ'] },
-    { title: 'å¥‘ç´„é—œä¿‚', desc: 'å› åˆ©ç›Šè¢«è¿«å‡æ‰®æƒ…ä¾¶æˆ–å¤«å¦»ã€‚', tags: ['#å‡æˆ²çœŸåš', '#å¥‘ç´„'] },
-    { title: 'æ­»å°é ­', desc: 'é›™æ–¹è™•æ–¼å®Œå…¨å°ç«‹çš„ç«‹å ´ã€‚', tags: ['#å®¿æ•µ', '#å°ç«‹'] },
-    { title: 'èº«é«”äº’æ›', desc: 'å› æ„å¤–æˆ–è©›å’’äº¤æ›éˆé­‚/èº«é«”ã€‚', tags: ['#èº«é«”äº’æ›', '#éˆé­‚'] }
+    { title: '­«³{', desc: '¦h¦~«á¦A¦¸¬Û¹J¡A©¼¦¹³£ÅÜ¤F«o¤S¨SÅÜ¡C', tags: ['#­«³{', '#±¡·P'] },
+    { title: '»~·|¸Ñ¶}', desc: '¤@ª½¥H¨Óªº»~·|²×©ó¸Ñ¶}¡A¦ı¦ü¥G¤Ó¿ğ¤F¡C', tags: ['#»~·|', '#­h¤ß'] },
+    { title: '§i¥Õ', desc: '²×©ó¹ª°_«i®ğ»¡¥X¤ß·N¡C', tags: ['#§i¥Õ', '#²¢'] },
+    { title: '«´¬ùÃö«Y', desc: '¦]§Q¯q³Q­¢°²§ê±¡«Q©Î¤Ò©d¡C', tags: ['#°²À¸¯u°µ', '#«´¬ù'] },
+    { title: '¦º¹ïÀY', desc: 'Âù¤è³B©ó§¹¥ş¹ï¥ßªº¥ß³õ¡C', tags: ['#±J¼Ä', '#¹ï¥ß'] },
+    { title: '¨­Åé¤¬´«', desc: '¦]·N¥~©Î¶A©G¥æ´«ÆF»î/¨­Åé¡C', tags: ['#¨­Åé¤¬´«', '#ÆF»î'] }
 ];
 
 let currentPage = 'home';
@@ -127,7 +127,7 @@ function createHeader() {
     header.appendChild(brand);
     
     const publishBtn = createElement('button', 'publish-btn', {
-        textContent: 'ç™¼ä½ˆ',
+        textContent: 'µo§G',
         onClick: handlePublish
     });
     header.appendChild(publishBtn);
@@ -144,7 +144,7 @@ function createHomePage() {
     
     ['recommend', 'follow', 'latest'].forEach(tab => {
         const btn = createElement('button', `tab-btn ${tab === 'recommend' ? 'active' : ''}`, {
-            textContent: tab === 'recommend' ? 'æ¨è–¦' : tab === 'follow' ? 'é—œæ³¨' : 'æœ€æ–°',
+            textContent: tab === 'recommend' ? '±ÀÂË' : tab === 'follow' ? 'Ãöª`' : '³Ì·s',
             dataTab: tab,
             onClick: () => switchTab(tab, page)
         });
@@ -154,7 +154,7 @@ function createHomePage() {
     tabStrip.appendChild(tabList);
     
     const viewToggle = createElement('button', 'view-toggle', {
-        textContent: 'ç€‘å¸ƒæµ',
+        textContent: 'Âr¥¬¬y',
         onClick: () => toggleView(page)
     });
     tabStrip.appendChild(viewToggle);
@@ -185,15 +185,15 @@ function createDiscoverPage() {
 
 function createWorldBookCard() {
     const card = createElement('article', 'discover-card');
-    card.appendChild(createElement('h3', '', { textContent: 'ä¸–ç•Œæ›¸ç®¡ç†' }));
-    card.appendChild(createElement('p', '', { textContent: 'åˆ†é¡ä¸»é¡Œèˆ‡æ™‚é–“ç·šï¼Œé›†ä¸­ç®¡ç†è§’è‰²ã€åœ°é»èˆ‡äº‹ä»¶æ¢ç›®ã€‚' }));
+    card.appendChild(createElement('h3', '', { textContent: '¥@¬É®ÑºŞ²z' }));
+    card.appendChild(createElement('p', '', { textContent: '¤ÀÃş¥DÃD»P®É¶¡½u¡A¶°¤¤ºŞ²z¨¤¦â¡B¦aÂI»P¨Æ¥ó±ø¥Ø¡C' }));
     
     const list = createElement('div', 'worldbook-list');
     list.id = 'lofter-worldbook-list';
     card.appendChild(list);
     
     const btn = createElement('button', 'discover-action', {
-        textContent: 'é–‹å•Ÿä¸–ç•Œæ›¸',
+        textContent: '¶}±Ò¥@¬É®Ñ',
         onClick: () => Router.navigate('/world-info')
     });
     card.appendChild(btn);
@@ -203,29 +203,29 @@ function createWorldBookCard() {
 
 function createCpSetupCard() {
     const card = createElement('article', 'discover-card');
-    card.appendChild(createElement('h3', '', { textContent: 'æ­£åœ¨é—œæ³¨çš„CP' }));
-    card.appendChild(createElement('p', '', { textContent: 'è¨­å®šæƒ³çœ‹çš„ CP å‘å‰µä½œã€‚' }));
+    card.appendChild(createElement('h3', '', { textContent: '¥¿¦bÃöª`ªºCP' }));
+    card.appendChild(createElement('p', '', { textContent: '³]©w·Q¬İªº CP ¦V³Ğ§@¡C' }));
     
     const form = createElement('div', 'cp-form');
     
     const topSelect = createElement('select', '');
     topSelect.id = 'lofter-cp-top';
-    topSelect.appendChild(createElement('option', '', { value: '', textContent: 'é¸æ“‡æ”»æ–¹è§’è‰²' }));
+    topSelect.appendChild(createElement('option', '', { value: '', textContent: '¿ï¾Ü§ğ¤è¨¤¦â' }));
     characters.forEach(c => {
         topSelect.appendChild(createElement('option', '', { value: c.name, textContent: c.name }));
     });
-    form.appendChild(createLabel('æ”»æ–¹è§’è‰²', topSelect));
+    form.appendChild(createLabel('§ğ¤è¨¤¦â', topSelect));
     
     const bottomSelect = createElement('select', '');
     bottomSelect.id = 'lofter-cp-bottom';
-    bottomSelect.appendChild(createElement('option', '', { value: '', textContent: 'é¸æ“‡å—æ–¹è§’è‰²' }));
+    bottomSelect.appendChild(createElement('option', '', { value: '', textContent: '¿ï¾Ü¨ü¤è¨¤¦â' }));
     characters.forEach(c => {
         bottomSelect.appendChild(createElement('option', '', { value: c.name, textContent: c.name }));
     });
-    form.appendChild(createLabel('å—æ–¹è§’è‰²', bottomSelect));
+    form.appendChild(createLabel('¨ü¤è¨¤¦â', bottomSelect));
     
     const addBtn = createElement('button', 'discover-action', {
-        textContent: 'åŠ å…¥é—œæ³¨',
+        textContent: '¥[¤JÃöª`',
         onClick: handleAddCp
     });
     form.appendChild(addBtn);
@@ -240,11 +240,11 @@ function createCpSetupCard() {
 
 function createIdeaCard() {
     const card = createElement('article', 'discover-card');
-    card.appendChild(createElement('h3', '', { textContent: 'æ¢—é›†ä¾¿åˆ©è²¼' }));
-    card.appendChild(createElement('p', '', { textContent: 'å¿«é€Ÿæ”¶éŒ„ã€Œå¦‚æœâ€¦ã€çš„éˆæ„Ÿã€‚' }));
+    card.appendChild(createElement('h3', '', { textContent: '±ğ¶°«K§Q¶K' }));
+    card.appendChild(createElement('p', '', { textContent: '§Ö³t¦¬¿ı¡u¦pªG¡K¡vªºÆF·P¡C' }));
     
     const btn = createElement('button', 'discover-action', {
-        textContent: 'é€²å…¥æ¢—é›†',
+        textContent: '¶i¤J±ğ¶°',
         onClick: () => switchPage('idea')
     });
     card.appendChild(btn);
@@ -269,7 +269,7 @@ function createLikesPage() {
     panel.appendChild(createContentSettings());
     
     const worldSection = createElement('section', 'trope-section');
-    worldSection.appendChild(createElement('h3', 'trope-section-title', { textContent: 'ä¸–ç•Œè§€è¨­å®š' }));
+    worldSection.appendChild(createElement('h3', 'trope-section-title', { textContent: '¥@¬ÉÆ[³]©w' }));
     const worldGrid = createElement('section', 'idea-grid');
     worldGrid.id = 'worldsetting-grid';
     renderIdeaGrid(worldGrid, worldSettings);
@@ -277,7 +277,7 @@ function createLikesPage() {
     panel.appendChild(worldSection);
     
     const interactionSection = createElement('section', 'trope-section');
-    interactionSection.appendChild(createElement('h3', 'trope-section-title', { textContent: 'äº’å‹•æ¢—' }));
+    interactionSection.appendChild(createElement('h3', 'trope-section-title', { textContent: '¤¬°Ê±ğ' }));
     const interactionGrid = createElement('section', 'idea-grid');
     interactionGrid.id = 'interaction-grid';
     renderIdeaGrid(interactionGrid, interactionTropes);
@@ -295,7 +295,7 @@ function createCpSelectSection() {
     cpList.id = 'lofter-cp-checkbox-list';
     renderCpCheckboxList(cpList);
     
-    const label = createLabel('é¸æ“‡ CPï¼ˆå¯å¤šé¸ï¼‰', cpList);
+    const label = createLabel('¿ï¾Ü CP¡]¥i¦h¿ï¡^', cpList);
     section.appendChild(label);
     
     return section;
@@ -306,19 +306,19 @@ function createContentSettings() {
     
     const characterSelect = createElement('select', '');
     characterSelect.id = 'lofter-character-select';
-    characterSelect.appendChild(createElement('option', '', { value: '', textContent: 'é¸æ“‡è§’è‰²ï¼ˆå¯é¸ï¼‰' }));
+    characterSelect.appendChild(createElement('option', '', { value: '', textContent: '¿ï¾Ü¨¤¦â¡]¥i¿ï¡^' }));
     characters.forEach(c => {
         characterSelect.appendChild(createElement('option', '', { value: c.id, textContent: c.name }));
     });
-    const characterLabel = createLabel('ç”Ÿæˆè§’è‰²', characterSelect);
+    const characterLabel = createLabel('¥Í¦¨¨¤¦â', characterSelect);
     container.appendChild(characterLabel);
     
     const ratingLabel = createElement('label', 'cp-field');
-    ratingLabel.appendChild(createElement('span', '', { textContent: 'å…§å®¹åˆ†ç´š' }));
+    ratingLabel.appendChild(createElement('span', '', { textContent: '¤º®e¤À¯Å' }));
     const ratingBtns = createElement('div', 'rating-buttons');
     ['general', 'r18'].forEach(rating => {
         const btn = createElement('button', `rating-btn ${rating === 'general' ? 'active' : ''}`, {
-            textContent: rating === 'general' ? 'ä¸€èˆ¬å‘' : 'R18 æˆäººå‘',
+            textContent: rating === 'general' ? '¤@¯ë¦V' : 'R18 ¦¨¤H¦V',
             dataRating: rating,
             onClick: (e) => {
                 ratingBtns.querySelectorAll('.rating-btn').forEach(b => b.classList.remove('active'));
@@ -332,9 +332,9 @@ function createContentSettings() {
     container.appendChild(ratingLabel);
     
     const lengthLabel = createElement('label', 'cp-field');
-    lengthLabel.appendChild(createElement('span', '', { textContent: 'æ–‡ç« é•·åº¦' }));
+    lengthLabel.appendChild(createElement('span', '', { textContent: '¤å³¹ªø«×' }));
     const lengthBtns = createElement('div', 'length-buttons');
-    [{ key: 'short', text: 'çŸ­ç¯‡' }, { key: 'medium', text: 'é•·ç¯‡' }, { key: 'series', text: 'é€£è¼‰' }].forEach(item => {
+    [{ key: 'short', text: 'µu½g' }, { key: 'medium', text: 'ªø½g' }, { key: 'series', text: '³s¸ü' }].forEach(item => {
         const btn = createElement('button', `length-btn ${item.key === 'medium' ? 'active' : ''}`, {
             textContent: item.text,
             dataLength: item.key,
@@ -350,7 +350,7 @@ function createContentSettings() {
     container.appendChild(lengthLabel);
     
     const generateBtn = createElement('button', 'idea-primary', {
-        textContent: 'ç”ŸæˆåŒäººæ–‡',
+        textContent: '¥Í¦¨¦P¤H¤å',
         onClick: handleGenerate
     });
     container.appendChild(generateBtn);
@@ -363,7 +363,7 @@ function createFollowPage() {
     page.dataset.page = 'follow';
     
     const header = createElement('header', 'discover-header');
-    header.appendChild(createElement('h2', '', { textContent: 'è¿½è¹¤' }));
+    header.appendChild(createElement('h2', '', { textContent: '°lÂÜ' }));
     page.appendChild(header);
     
     const feed = createElement('section', 'feed');
@@ -384,12 +384,12 @@ function createProfilePage() {
     postHead.appendChild(createElement('div', 'avatar'));
     
     const info = createElement('div', '');
-    info.appendChild(createElement('div', 'author', { textContent: 'éœ§å¤œå¯«æ‰‹' }));
-    info.appendChild(createElement('div', 'meta', { textContent: 'IDï¼šsx-0413' }));
+    info.appendChild(createElement('div', 'author', { textContent: 'Ãú©]¼g¤â' }));
+    info.appendChild(createElement('div', 'meta', { textContent: 'ID¡Gsx-0413' }));
     postHead.appendChild(info);
     card.appendChild(postHead);
     
-    card.appendChild(createElement('p', 'post-text', { textContent: 'åå¥½ï¼šé•·ç¯‡é€£è¼‰ Â· è§’è‰²ç¨ç™½ Â· AU' }));
+    card.appendChild(createElement('p', 'post-text', { textContent: '°¾¦n¡Gªø½g³s¸ü ¡P ¨¤¦â¿W¥Õ ¡P AU' }));
     page.appendChild(card);
     
     return page;
@@ -399,11 +399,11 @@ function createBottomNav() {
     const nav = createElement('nav', 'bottom-nav');
     
     const items = [
-        { page: 'home', icon: 'home', label: 'é¦–é ' },
-        { page: 'discover', icon: 'explore', label: 'ç™¼ç¾' },
-        { page: 'likes', icon: 'favorite', label: 'å–œæ­¡' },
-        { page: 'follow', icon: 'star', label: 'è¿½è¹¤' },
-        { page: 'profile', icon: 'person', label: 'æˆ‘çš„' }
+        { page: 'home', icon: 'home', label: '­º­¶' },
+        { page: 'discover', icon: 'explore', label: 'µo²{' },
+        { page: 'likes', icon: 'favorite', label: '³ßÅw' },
+        { page: 'follow', icon: 'star', label: '°lÂÜ' },
+        { page: 'profile', icon: 'person', label: '§Úªº' }
     ];
     
     items.forEach(item => {
@@ -460,7 +460,7 @@ async function renderFeed(feed) {
     
     if (posts.length === 0) {
         feed.innerHTML = '';
-        const empty = createEmptyState('article', 'å°šç„¡æ–‡ç« ', 'é–‹å§‹æ¢ç´¢åŒäººæ–‡å‰µä½œ');
+        const empty = createEmptyState('article', '©|µL¤å³¹', '¶}©l±´¯Á¦P¤H¤å³Ğ§@');
         feed.appendChild(empty);
         return;
     }
@@ -499,13 +499,13 @@ function createPostCard(post, index) {
     content.appendChild(tags);
     
     const actions = createElement('footer', 'post-actions');
-    actions.appendChild(createElement('button', 'action', { textContent: 'â™¥ ' + (post.likes || 0) }));
-    actions.appendChild(createElement('button', 'action', { textContent: 'ğŸ’¬ ' + (post.comments || 0) }));
+    actions.appendChild(createElement('button', 'action', { textContent: '? ' + (post.likes || 0) }));
+    actions.appendChild(createElement('button', 'action', { textContent: '?? ' + (post.comments || 0) }));
     actions.appendChild(createElement('button', 'action', {
-        textContent: 'ğŸ”– æ›¸ç±¤',
+        textContent: '?? ®ÑÅÒ',
         onClick: async () => {
             await saveBookmark(post);
-            createToast('å·²åŠ å…¥æ›¸ç±¤');
+            createToast('¤w¥[¤J®ÑÅÒ');
         }
     }));
     content.appendChild(actions);
@@ -538,7 +538,7 @@ async function renderCpCheckboxList(container) {
     const cpList = await getStorageItem(STORAGE_KEYS.cp_follow) || [];
     
     if (cpList.length === 0) {
-        container.appendChild(createElement('div', 'cp-empty', { textContent: 'å°šæœªè¨­å®šé—œæ³¨ CP' }));
+        container.appendChild(createElement('div', 'cp-empty', { textContent: '©|¥¼³]©wÃöª` CP' }));
         return;
     }
     
@@ -547,7 +547,7 @@ async function renderCpCheckboxList(container) {
     
     container.innerHTML = '';
     cpList.forEach((item, index) => {
-        const cpName = `${item.top} Ã— ${item.bottom}`;
+        const cpName = `${item.top} ¡Ñ ${item.bottom}`;
         const isSelected = selectedSet.has(cpName);
         
         const itemDiv = createElement('div', `cp-checkbox-item ${isSelected ? 'selected' : ''}`);
@@ -585,7 +585,7 @@ async function renderFollowFeed(feed) {
     
     if (followPosts.length === 0) {
         feed.innerHTML = '';
-        const empty = createEmptyState('star', 'å°šæœªè¿½è¹¤ä»»ä½•æ–‡ç« ', 'åœ¨æ–‡ç« ä¸­é»æ“Šã€Œè¿½è¹¤ã€æŒ‰éˆ•å³å¯è¿½è¹¤');
+        const empty = createEmptyState('star', '©|¥¼°lÂÜ¥ô¦ó¤å³¹', '¦b¤å³¹¤¤ÂIÀ»¡u°lÂÜ¡v«ö¶s§Y¥i°lÂÜ');
         feed.appendChild(empty);
         return;
     }
@@ -602,7 +602,7 @@ async function handleAddCp() {
     const bottomSelect = document.getElementById('lofter-cp-bottom');
     
     if (!topSelect?.value || !bottomSelect?.value) {
-        createToast('è«‹é¸æ“‡æ”»æ–¹èˆ‡å—æ–¹è§’è‰²');
+        createToast('½Ğ¿ï¾Ü§ğ¤è»P¨ü¤è¨¤¦â');
         return;
     }
     
@@ -619,7 +619,7 @@ async function handleAddCp() {
     const cpCheckboxList = document.getElementById('lofter-cp-checkbox-list');
     if (cpCheckboxList) renderCpCheckboxList(cpCheckboxList);
     
-    createToast('å·²åŠ å…¥é—œæ³¨');
+    createToast('¤w¥[¤JÃöª`');
 }
 
 async function renderCpListElement(container) {
@@ -627,16 +627,16 @@ async function renderCpListElement(container) {
     
     container.innerHTML = '';
     if (cpList.length === 0) {
-        container.appendChild(createElement('div', 'cp-item', { textContent: 'å°šæœªè¨­å®šé—œæ³¨ CP' }));
+        container.appendChild(createElement('div', 'cp-item', { textContent: '©|¥¼³]©wÃöª` CP' }));
         return;
     }
     
     cpList.forEach((item, index) => {
         const itemDiv = createElement('div', 'cp-item');
-        itemDiv.appendChild(createElement('span', '', { textContent: `${item.top} Ã— ${item.bottom}` }));
+        itemDiv.appendChild(createElement('span', '', { textContent: `${item.top} ¡Ñ ${item.bottom}` }));
         
         const removeBtn = createElement('button', '', {
-            textContent: 'ç§»é™¤',
+            textContent: '²¾°£',
             onClick: async () => {
                 cpList.splice(index, 1);
                 await setStorageItem(STORAGE_KEYS.cp_follow, cpList);
@@ -651,7 +651,7 @@ async function renderCpListElement(container) {
 async function handlePublish() {
     const selectedCp = await getStorageItem(STORAGE_KEYS.selected_cp) || [];
     if (selectedCp.length === 0) {
-        createToast('è«‹å…ˆé¸æ“‡è¦ç”Ÿæˆçš„ CP');
+        createToast('½Ğ¥ı¿ï¾Ü­n¥Í¦¨ªº CP');
         switchPage('likes');
         return;
     }
@@ -661,7 +661,7 @@ async function handlePublish() {
 async function handleGenerate() {
     const selectedCp = await getStorageItem(STORAGE_KEYS.selected_cp) || [];
     if (selectedCp.length === 0) {
-        createToast('è«‹å…ˆé¸æ“‡ CP');
+        createToast('½Ğ¥ı¿ï¾Ü CP');
         return;
     }
     
@@ -684,11 +684,11 @@ async function handleGenerate() {
     const rating = await getStorageItem(STORAGE_KEYS.content_rating) || 'general';
     const length = await getStorageItem(STORAGE_KEYS.content_length) || 'medium';
     
-    createToast('æ­£åœ¨ç”ŸæˆåŒäººæ–‡...');
+    createToast('¥¿¦b¥Í¦¨¦P¤H¤å...');
     
     const cpList = await getStorageItem(STORAGE_KEYS.cp_follow) || [];
     const selectedCpData = selectedCp.map(cpName => {
-        return cpList.find(item => `${item.top} Ã— ${item.bottom}` === cpName);
+        return cpList.find(item => `${item.top} ¡Ñ ${item.bottom}` === cpName);
     }).filter(Boolean);
     
     const characterNames = new Set();
@@ -708,54 +708,54 @@ async function handleGenerate() {
     const settings = await APIClient.getSettings();
     
     if (!settings.api_url || !settings.api_key) {
-        createToast('è«‹å…ˆè¨­å®š API URL å’Œ API Key');
+        createToast('½Ğ¥ı³]©w API URL ©M API Key');
         return;
     }
     
     const selectedCharacterId = characterSelect?.value || null;
     const context = await buildAppContext({ characterId: selectedCharacterId });
     
-    let prompt = 'è«‹æ ¹æ“šä»¥ä¸‹è¨­å®šç”Ÿæˆä¸€ç¯‡åŒäººæ–‡ï¼š\n\n';
+    let prompt = '½Ğ®Ú¾Ú¥H¤U³]©w¥Í¦¨¤@½g¦P¤H¤å¡G\n\n';
     
-    prompt += 'CP é…å°ï¼š\n';
+    prompt += 'CP °t¹ï¡G\n';
     selectedCp.forEach(cp => {
         prompt += `- ${cp}\n`;
     });
     prompt += '\n';
     
     if (characterData.length > 0) {
-        prompt += 'è§’è‰²æ€§æ ¼è¨­å®šï¼š\n';
+        prompt += '¨¤¦â©Ê®æ³]©w¡G\n';
         characterData.forEach(char => {
-            prompt += `${char.name}ï¼š${char.personality}\n\n`;
+            prompt += `${char.name}¡G${char.personality}\n\n`;
         });
     }
     
     if (selectedWorldSettings.length > 0) {
-        prompt += 'ä¸–ç•Œè§€è¨­å®šï¼š\n';
+        prompt += '¥@¬ÉÆ[³]©w¡G\n';
         selectedWorldSettings.forEach(ws => {
-            prompt += `- ${ws.title}ï¼š${ws.desc}\n`;
+            prompt += `- ${ws.title}¡G${ws.desc}\n`;
         });
         prompt += '\n';
     }
     
     if (selectedInteractions.length > 0) {
-        prompt += 'äº’å‹•æ¢—ï¼š\n';
+        prompt += '¤¬°Ê±ğ¡G\n';
         selectedInteractions.forEach(inter => {
-            prompt += `- ${inter.title}ï¼š${inter.desc}\n`;
+            prompt += `- ${inter.title}¡G${inter.desc}\n`;
         });
         prompt += '\n';
     }
     
-    const lengthMap = { short: 'çŸ­ç¯‡ï¼ˆç´„500-1000å­—ï¼‰', medium: 'é•·ç¯‡ï¼ˆç´„2000-3000å­—ï¼‰', series: 'é€£è¼‰é¢¨æ ¼ï¼ˆé–‹æ”¾å¼çµå±€ï¼‰' };
-    prompt += `æ–‡ç« é•·åº¦ï¼š${lengthMap[length] || 'é•·ç¯‡ï¼ˆç´„2000-3000å­—ï¼‰'}\n\n`;
+    const lengthMap = { short: 'µu½g¡]¬ù500-1000¦r¡^', medium: 'ªø½g¡]¬ù2000-3000¦r¡^', series: '³s¸ü­·®æ¡]¶}©ñ¦¡µ²§½¡^' };
+    prompt += `¤å³¹ªø«×¡G${lengthMap[length] || 'ªø½g¡]¬ù2000-3000¦r¡^'}\n\n`;
     
     if (rating === 'r18') {
-        prompt += 'å…§å®¹åˆ†ç´šï¼šR18 æˆäººå‘ï¼ˆå¯åŒ…å«æˆäººå…§å®¹ï¼‰\n\n';
+        prompt += '¤º®e¤À¯Å¡GR18 ¦¨¤H¦V¡]¥i¥]§t¦¨¤H¤º®e¡^\n\n';
     } else {
-        prompt += 'å…§å®¹åˆ†ç´šï¼šä¸€èˆ¬å‘ï¼ˆé©åˆæ‰€æœ‰å¹´é½¡å±¤ï¼‰\n\n';
+        prompt += '¤º®e¤À¯Å¡G¤@¯ë¦V¡]¾A¦X©Ò¦³¦~ÄÖ¼h¡^\n\n';
     }
     
-    prompt += 'è«‹ä»¥æµæš¢çš„ä¸­æ–‡æ’°å¯«ï¼ŒåŒ…å«å®Œæ•´çš„åŠ‡æƒ…ç™¼å±•ã€è§’è‰²äº’å‹•å’Œæƒ…æ„Ÿæå¯«ã€‚æ³¨æ„ä¿æŒè§’è‰²æ€§æ ¼çš„ä¸€è‡´æ€§ã€‚';
+    prompt += '½Ğ¥H¬yºZªº¤¤¤å¼¶¼g¡A¥]§t§¹¾ãªº¼@±¡µo®i¡B¨¤¦â¤¬°Ê©M±¡·P´y¼g¡Cª`·N«O«ù¨¤¦â©Ê®æªº¤@­P©Ê¡C';
     
     const messages = [];
     
@@ -783,22 +783,22 @@ async function handleGenerate() {
         
         if (!response.ok) {
             const errorData = await response.json().catch(() => ({}));
-            throw new Error(errorData.error?.message || `API éŒ¯èª¤: ${response.status}`);
+            throw new Error(errorData.error?.message || `API ¿ù»~: ${response.status}`);
         }
         
         const data = await response.json();
         const generatedContent = data.choices?.[0]?.message?.content || '';
         
         if (!generatedContent) {
-            throw new Error('ç„¡æ³•ç”Ÿæˆå…§å®¹');
+            throw new Error('µLªk¥Í¦¨¤º®e');
         }
         
         const summary = generatedContent.slice(0, 150) + '...';
         const title = selectedInteractions.length > 0 
             ? `${selectedCp[0]} - ${selectedInteractions[0].title}`
-            : `${selectedCp[0]} - åŒäººæ–‡`;
+            : `${selectedCp[0]} - ¦P¤H¤å`;
         
-        const allTags = [...selectedCp, '#åŒäººæ–‡', '#AIç”Ÿæˆ'];
+        const allTags = [...selectedCp, '#¦P¤H¤å', '#AI¥Í¦¨'];
         selectedWorldSettings.forEach(ws => allTags.push(...ws.tags));
         selectedInteractions.forEach(inter => allTags.push(...inter.tags));
         
@@ -806,12 +806,12 @@ async function handleGenerate() {
             id: Date.now().toString(),
             title: title,
             author: getRandomAuthorName(),
-            category: 'åŒäººæ–‡',
+            category: '¦P¤H¤å',
             text: summary,
             fullContent: generatedContent,
             summary: summary,
             tags: allTags,
-            time: 'å‰›å‰›',
+            time: '­è­è',
             likes: 0,
             comments: 0,
             isR18: rating === 'r18',
@@ -826,18 +826,18 @@ async function handleGenerate() {
         const feed = document.getElementById('lofter-feed');
         if (feed) renderFeed(feed);
         
-        createToast('åŒäººæ–‡ç”Ÿæˆå®Œæˆ');
+        createToast('¦P¤H¤å¥Í¦¨§¹¦¨');
         switchPage('home');
         
     } catch (error) {
         if (window.showError) {
             window.showError({
-                title: 'Lofter åŒäººæ–‡ç”Ÿæˆå¤±æ•—',
-                message: error.message || 'æœªçŸ¥éŒ¯èª¤',
+                title: 'Lofter ¦P¤H¤å¥Í¦¨¥¢±Ñ',
+                message: error.message || '¥¼ª¾¿ù»~',
                 details: error.stack || ''
             });
         } else {
-            createToast('ç”Ÿæˆå¤±æ•—: ' + (error.message || 'æœªçŸ¥éŒ¯èª¤'));
+            createToast('¥Í¦¨¥¢±Ñ: ' + (error.message || '¥¼ª¾¿ù»~'));
         }
     }
 }

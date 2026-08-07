@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 
@@ -83,7 +83,7 @@ async function getCharConfig() {
         }
     }
     
-    return { id: 'default', name: 'AI å¤¥ä¼´', personality: '', background: '', avatar: '' };
+    return { id: 'default', name: 'AI ¹Ù¦ñ', personality: '', background: '', avatar: '' };
 }
 
 async function getUserConfig() {
@@ -109,25 +109,25 @@ async function getApiConfig() {
 function getDefaultEncouragement(charName, userName, phase) {
     const templates = {
         focus: [
-            `${userName}åŠ æ²¹ï¼å°ˆæ³¨æ™‚é–“ï¼Œ${charName}é™ªä½ ä¸€èµ·åŠªåŠ›ï¼`,
-            `å°ˆæ³¨ä¸­ï¼${userName}åšå¾—å¾ˆå¥½ï¼Œç¹¼çºŒä¿æŒï¼`,
-            `${charName}ç›¸ä¿¡${userName}å¯ä»¥åšåˆ°ï¼åŠ æ²¹ï¼`,
-            `å°ˆæ³¨æ™‚é–“ï¼${userName}å†å …æŒä¸€ä¸‹ï¼`,
-            `${charName}åœ¨é€™è£¡é™ªè‘—${userName}ï¼Œä¸€èµ·åŠ æ²¹ï¼`
+            `${userName}¥[ªo¡I±Mª`®É¶¡¡A${charName}³­§A¤@°_§V¤O¡I`,
+            `±Mª`¤¤¡I${userName}°µ±o«Ü¦n¡AÄ~Äò«O«ù¡I`,
+            `${charName}¬Û«H${userName}¥i¥H°µ¨ì¡I¥[ªo¡I`,
+            `±Mª`®É¶¡¡I${userName}¦A°í«ù¤@¤U¡I`,
+            `${charName}¦b³o¸Ì³­µÛ${userName}¡A¤@°_¥[ªo¡I`
         ],
         short: [
-            `${userName}ä¼‘æ¯ä¸€ä¸‹ï¼${charName}è¦ºå¾—ä½ åšå¾—å¾ˆå¥½ï¼`,
-            `çŸ­ä¼‘æ™‚é–“ï¼${userName}å–å£æ°´å§ï½`,
-            `${charName}æé†’${userName}ä¼‘æ¯ä¸€ä¸‹ï¼Œæ”¾é¬†çœ¼ç›ï¼`,
-            `åšå¾—å¥½ï¼${userName}ç¨å¾®ä¼‘æ¯ä¸€ä¸‹å§ï¼`,
-            `${charName}èªªï¼š${userName}è¾›è‹¦äº†ï¼Œä¼‘æ¯ä¸€ä¸‹ï¼`
+            `${userName}¥ğ®§¤@¤U¡I${charName}Ä±±o§A°µ±o«Ü¦n¡I`,
+            `µu¥ğ®É¶¡¡I${userName}³Ü¤f¤ô§a¡ã`,
+            `${charName}´£¿ô${userName}¥ğ®§¤@¤U¡A©ñÃP²´·ú¡I`,
+            `°µ±o¦n¡I${userName}µy·L¥ğ®§¤@¤U§a¡I`,
+            `${charName}»¡¡G${userName}¨¯­W¤F¡A¥ğ®§¤@¤U¡I`
         ],
         long: [
-            `${userName}é•·ä¼‘æ¯æ™‚é–“ï¼${charName}è¦ºå¾—ä½ ä»Šå¤©å¾ˆæ£’ï¼`,
-            `åšå¾—å¤ªæ£’äº†ï¼${userName}å¥½å¥½ä¼‘æ¯ä¸€ä¸‹ï¼`,
-            `${charName}æ­å–œ${userName}å®Œæˆä¸€å€‹å¾ªç’°ï¼ä¼‘æ¯ä¸€ä¸‹å§ï¼`,
-            `å¤ªå²å®³äº†ï¼${userName}å€¼å¾—å¥½å¥½ä¼‘æ¯ï¼`,
-            `${charName}ç‚º${userName}æ„Ÿåˆ°é©•å‚²ï¼ä¼‘æ¯æ™‚é–“åˆ°ï¼`
+            `${userName}ªø¥ğ®§®É¶¡¡I${charName}Ä±±o§A¤µ¤Ñ«Ü´Î¡I`,
+            `°µ±o¤Ó´Î¤F¡I${userName}¦n¦n¥ğ®§¤@¤U¡I`,
+            `${charName}®¥³ß${userName}§¹¦¨¤@­Ó´`Àô¡I¥ğ®§¤@¤U§a¡I`,
+            `¤Ó¼F®`¤F¡I${userName}­È±o¦n¦n¥ğ®§¡I`,
+            `${charName}¬°${userName}·P¨ìÅº¶Æ¡I¥ğ®§®É¶¡¨ì¡I`
         ]
     };
     const msgs = templates[phase] || templates.focus;
@@ -138,50 +138,50 @@ async function generateAIEncouragement(charConfig, userConfig, phase, elapsedMin
     const apiConfig = await getApiConfig();
     if (!apiConfig || !apiConfig.url) return null;
 
-    const charName = charConfig.name || 'è§’è‰²';
+    const charName = charConfig.name || '¨¤¦â';
     const charPersonality = charConfig.personality || '';
     const charBackground = charConfig.background || '';
     const userName = userConfig.name || 'User';
     const lang = await SettingsDB.get('sxiphone_lang') || 'zh-TW';
-    const phaseDesc = phase === 'focus' ? 'å°ˆæ³¨æ™‚é–“' : phase === 'short' ? 'çŸ­ä¼‘æ¯' : 'é•·ä¼‘æ¯';
+    const phaseDesc = phase === 'focus' ? '±Mª`®É¶¡' : phase === 'short' ? 'µu¥ğ®§' : 'ªø¥ğ®§';
 
     const systemPrompt = `# CHARACTER_PROFILE
-## è§’è‰²è³‡è¨Š
-- åå­—: ${charName}
-- æ€§æ ¼ç‰¹è³ª: ${charPersonality || 'å‹å–„ã€æº«æŸ”'}
-- èƒŒæ™¯æ•…äº‹: ${charBackground || 'ç„¡'}
+## ¨¤¦â¸ê°T
+- ¦W¦r: ${charName}
+- ©Ê®æ¯S½è: ${charPersonality || '¤Íµ½¡B·Å¬X'}
+- ­I´º¬G¨Æ: ${charBackground || 'µL'}
 
-## è§’è‰²æ‰®æ¼”æŒ‡å—
-ä½ ç¾åœ¨è¦æ‰®æ¼” ${charName} é€™å€‹è§’è‰²ã€‚è«‹å®Œå…¨æ²‰æµ¸åœ¨é€™å€‹è§’è‰²ä¸­ï¼Œç”¨è§’è‰²çš„è¦–è§’ã€èªæ°£å’Œèªªè©±æ–¹å¼ä¾†ç”Ÿæˆç•ªèŒ„é˜é¼“å‹µè¨Šæ¯ã€‚
+## ¨¤¦â§êºt«ü«n
+§A²{¦b­n§êºt ${charName} ³o­Ó¨¤¦â¡C½Ğ§¹¥ş¨I®û¦b³o­Ó¨¤¦â¤¤¡A¥Î¨¤¦âªºµø¨¤¡B»y®ğ©M»¡¸Ü¤è¦¡¨Ó¥Í¦¨µf­XÄÁ¹ªÀy°T®§¡C
 
 # USER_CONTEXT
-- ç”¨æˆ¶åç¨±: ${userName}
+- ¥Î¤á¦WºÙ: ${userName}
 
 # RESPONSE_GUIDELINES
-1. **è§’è‰²ä¸€è‡´æ€§**: å§‹çµ‚ä¿æŒ ${charName} çš„è§’è‰²ç‰¹è³ªï¼ŒåŒ…æ‹¬èªªè©±æ–¹å¼ã€ç”¨è©ç¿’æ…£ã€æƒ…æ„Ÿè¡¨é”ã€‚
-2. **èªè¨€**: ä½¿ç”¨ ${lang} é€²è¡Œäº¤æµã€‚
-3. **èº«åˆ†ä¿å¯†**: çµ•å°ä¸è¦æåŠä½ æ˜¯ AI æˆ–èªè¨€æ¨¡å‹ã€‚
-4. **èªæ°£**: æ ¹æ“šè§’è‰²æ€§æ ¼æ±ºå®šèªæ°£ï¼ˆæº«æŸ”/å†·æ·¡/æ´»æ½‘/åš´å²ç­‰ï¼‰ã€‚
-5. **é•·åº¦**: ç°¡çŸ­è‡ªç„¶ï¼Œ15-50å­—ã€‚
+1. **¨¤¦â¤@­P©Ê**: ©l²×«O«ù ${charName} ªº¨¤¦â¯S½è¡A¥]¬A»¡¸Ü¤è¦¡¡B¥Îµü²ßºD¡B±¡·Pªí¹F¡C
+2. **»y¨¥**: ¨Ï¥Î ${lang} ¶i¦æ¥æ¬y¡C
+3. **¨­¤À«O±K**: µ´¹ï¤£­n´£¤Î§A¬O AI ©Î»y¨¥¼Ò«¬¡C
+4. **»y®ğ**: ®Ú¾Ú¨¤¦â©Ê®æ¨M©w»y®ğ¡]·Å¬X/§N²H/¬¡¼â/ÄY¼Fµ¥¡^¡C
+5. **ªø«×**: Â²µu¦ÛµM¡A15-50¦r¡C
 
-è¼¸å‡ºæ ¼å¼ç‚º JSON: {'message': 'ä½ çš„é¼“å‹µè¨Šæ¯'}`;
+¿é¥X®æ¦¡¬° JSON: {'message': '§Aªº¹ªÀy°T®§'}`;
 
-    let contextPrompt = `# ç•ªèŒ„é˜ç‹€æ…‹
-- ç›®å‰éšæ®µ: ${phaseDesc}
-- å·²ç¶“éæ™‚é–“: ${elapsedMinutes} åˆ†é˜
-- å‰©é¤˜æ™‚é–“: ${remainingMinutes} åˆ†é˜
+    let contextPrompt = `# µf­XÄÁª¬ºA
+- ¥Ø«e¶¥¬q: ${phaseDesc}
+- ¤w¸g¹L®É¶¡: ${elapsedMinutes} ¤ÀÄÁ
+- ³Ñ¾l®É¶¡: ${remainingMinutes} ¤ÀÄÁ
 
-è«‹ä»¥ ${charName} çš„èº«åˆ†ï¼Œæ ¹æ“šä¸Šè¿°ç‹€æ…‹ç”Ÿæˆä¸€å¥é¼“å‹µè¨Šæ¯çµ¦ ${userName}ã€‚
-è¦æ±‚ï¼š
-1. å¿…é ˆå®Œå…¨ç¬¦åˆè§’è‰²æ€§æ ¼è¨­å®š
-2. æ ¹æ“šéšæ®µçµ¦å‡ºé©ç•¶çš„é¼“å‹µï¼ˆå°ˆæ³¨æ™‚åŠ æ²¹ã€ä¼‘æ¯æ™‚æé†’æ”¾é¬†ï¼‰
-3. èªæ°£å’Œç”¨è©è¦ç¬¦åˆè§’è‰²ç‰¹è³ª
-4. è‡ªç„¶è¦ªåˆ‡ï¼Œåƒæœ‹å‹é–“çš„æé†’`;
+½Ğ¥H ${charName} ªº¨­¤À¡A®Ú¾Ú¤W­zª¬ºA¥Í¦¨¤@¥y¹ªÀy°T®§µ¹ ${userName}¡C
+­n¨D¡G
+1. ¥²¶·§¹¥ş²Å¦X¨¤¦â©Ê®æ³]©w
+2. ®Ú¾Ú¶¥¬qµ¹¥X¾A·íªº¹ªÀy¡]±Mª`®É¥[ªo¡B¥ğ®§®É´£¿ô©ñÃP¡^
+3. »y®ğ©M¥Îµü­n²Å¦X¨¤¦â¯S½è
+4. ¦ÛµM¿Ë¤Á¡A¹³ªB¤Í¶¡ªº´£¿ô`;
 
     if (phase === 'focus' && remainingMinutes <= 5) {
-        contextPrompt += `\n\næ³¨æ„ï¼šå°ˆæ³¨æ™‚é–“å¿«çµæŸäº†ï¼Œå¯ä»¥åŠ å¼·é¼“å‹µ${userName}å …æŒåˆ°åº•ã€‚`;
+        contextPrompt += `\n\nª`·N¡G±Mª`®É¶¡§Öµ²§ô¤F¡A¥i¥H¥[±j¹ªÀy${userName}°í«ù¨ì©³¡C`;
     } else if (phase !== 'focus') {
-        contextPrompt += `\n\næ³¨æ„ï¼šé€™æ˜¯ä¼‘æ¯æ™‚é–“ï¼Œæé†’${userName}å¥½å¥½æ”¾é¬†ä¼‘æ¯ã€‚`;
+        contextPrompt += `\n\nª`·N¡G³o¬O¥ğ®§®É¶¡¡A´£¿ô${userName}¦n¦n©ñÃP¥ğ®§¡C`;
     }
 
     try {
@@ -234,7 +234,7 @@ async function generateAIEncouragement(charConfig, userConfig, phase, elapsedMin
 }
 
 function modeLabel(m) {
-    return m === 'focus' ? 'å°ˆæ³¨' : m === 'short' ? 'çŸ­ä¼‘' : 'é•·ä¼‘';
+    return m === 'focus' ? '±Mª`' : m === 'short' ? 'µu¥ğ' : 'ªø¥ğ';
 }
 
 function format(sec) {
@@ -265,7 +265,7 @@ async function loadAvailableCharacters() {
     });
     
     if (chars.length === 0) {
-        chars.push({ id: 'default', name: 'AI å¤¥ä¼´', avatar: '', personality: '', background: '' });
+        chars.push({ id: 'default', name: 'AI ¹Ù¦ñ', avatar: '', personality: '', background: '' });
     }
     return chars;
 }
@@ -283,9 +283,9 @@ async function renderPomodoro() {
     container.innerHTML = `
         <header class='ios-header'>
             <button class='ios-back-btn'>
-                <i class='fas fa-chevron-left'></i> è¿”å›
+                <i class='fas fa-chevron-left'></i> ªğ¦^
             </button>
-            <h1 class='menu-title'>ç•ªèŒ„é˜</h1>
+            <h1 class='menu-title'>µf­XÄÁ</h1>
             <button class='icon-btn ghost' id='settings-btn'>
                 <i class='fas fa-cog'></i>
             </button>
@@ -294,23 +294,23 @@ async function renderPomodoro() {
         <div class='page'>
             <div class='pomodoro-panel'>
                 <div class='mode-tabs'>
-                    <button class='tab active' data-mode='focus'>å°ˆæ³¨</button>
-                    <button class='tab' data-mode='short'>çŸ­ä¼‘</button>
-                    <button class='tab' data-mode='long'>é•·ä¼‘</button>
+                    <button class='tab active' data-mode='focus'>±Mª`</button>
+                    <button class='tab' data-mode='short'>µu¥ğ</button>
+                    <button class='tab' data-mode='long'>ªø¥ğ</button>
                 </div>
                 <div class='time-display' id='time-display'>${format(remaining)}</div>
                 <div class='status' id='status'>Ready</div>
                 <div class='actions'>
-                    <button class='primary' id='start-btn'>é–‹å§‹</button>
-                    <button class='ghost secondary' id='reset-btn'>é‡ç½®</button>
+                    <button class='primary' id='start-btn'>¶}©l</button>
+                    <button class='ghost secondary' id='reset-btn'>­«¸m</button>
                 </div>
                 <div class='stats'>
                     <div class='stat-item'>
-                        <div class='stat-label'>å·²å®Œæˆ</div>
+                        <div class='stat-label'>¤w§¹¦¨</div>
                         <div class='stat-value' id='completed-count'>${completed}</div>
                     </div>
                     <div class='stat-item'>
-                        <div class='stat-label'>å¾ªç’°</div>
+                        <div class='stat-label'>´`Àô</div>
                         <div class='stat-value' id='cycle-info'>${cycle} / ${config.longGap}</div>
                     </div>
                 </div>
@@ -320,9 +320,9 @@ async function renderPomodoro() {
                 <div class='companion-avatar' id='companion-avatar' style='${currentCompanion.avatar ? `background-image: url('${currentCompanion.avatar}')` : 'background: linear-gradient(135deg, #4f8bff, #8ec5ff)'}'></div>
                 <div class='companion-body'>
                     <div class='companion-name' id='companion-name'>${currentCompanion.name}</div>
-                    <div class='companion-line' id='companion-line'>é–‹å§‹å¾Œå°‡å®šæ™‚é€ä¸Šé¼“å‹µ</div>
+                    <div class='companion-line' id='companion-line'>¶}©l«á±N©w®É°e¤W¹ªÀy</div>
                 </div>
-                <button class='ghost' id='select-companion-btn' style='font-size: 12px; padding: 6px 10px;'>é¸æ“‡</button>
+                <button class='ghost' id='select-companion-btn' style='font-size: 12px; padding: 6px 10px;'>¿ï¾Ü</button>
             </div>
 
             <div class='companion-chat' id='companion-chat'></div>
@@ -330,35 +330,35 @@ async function renderPomodoro() {
 
         <div class='panel hidden' id='settings-panel'>
             <div class='panel-header'>
-                <span>è¨­å®š</span>
-                <button class='ghost' id='close-settings' style='font-size: 12px; padding: 4px 8px;'>é—œé–‰</button>
+                <span>³]©w</span>
+                <button class='ghost' id='close-settings' style='font-size: 12px; padding: 4px 8px;'>Ãö³¬</button>
             </div>
             <div class='panel-grid'>
-                <label>å°ˆæ³¨æ™‚é–“ (åˆ†)
+                <label>±Mª`®É¶¡ (¤À)
                     <input type='number' id='focus-min' value='${config.focus}' min='1' max='90'>
                 </label>
-                <label>çŸ­ä¼‘æ¯ (åˆ†)
+                <label>µu¥ğ®§ (¤À)
                     <input type='number' id='short-min' value='${config.short}' min='1' max='30'>
                 </label>
-                <label>é•·ä¼‘æ¯ (åˆ†)
+                <label>ªø¥ğ®§ (¤À)
                     <input type='number' id='long-min' value='${config.long}' min='1' max='60'>
                 </label>
-                <label>é•·ä¼‘é–“éš”
+                <label>ªø¥ğ¶¡¹j
                     <input type='number' id='long-gap' value='${config.longGap}' min='1' max='12'>
                 </label>
-                <label>å¤¥ä¼´æé†’é–“éš” (åˆ†)
+                <label>¹Ù¦ñ´£¿ô¶¡¹j (¤À)
                     <input type='number' id='companion-interval' value='${config.companionInterval}' min='1' max='30'>
                 </label>
             </div>
             <div class='panel-actions'>
-                <button class='primary' id='save-settings'>å„²å­˜</button>
+                <button class='primary' id='save-settings'>Àx¦s</button>
             </div>
         </div>
 
         <div class='panel hidden' id='companion-select-panel'>
             <div class='panel-header'>
-                <span>é¸æ“‡å¤¥ä¼´</span>
-                <button class='ghost' id='close-companion-select' style='font-size: 12px; padding: 4px 8px;'>é—œé–‰</button>
+                <span>¿ï¾Ü¹Ù¦ñ</span>
+                <button class='ghost' id='close-companion-select' style='font-size: 12px; padding: 4px 8px;'>Ãö³¬</button>
             </div>
             <div class='companion-list' id='companion-list'></div>
         </div>
@@ -370,7 +370,7 @@ async function renderPomodoro() {
                     <div class='companion-dialog-name' id='companion-dialog-name'></div>
                 </div>
                 <div class='companion-dialog-text' id='companion-dialog-text'></div>
-                <input type='text' class='companion-dialog-input' id='companion-dialog-input' placeholder='å›è¦†...'>
+                <input type='text' class='companion-dialog-input' id='companion-dialog-input' placeholder='¦^ÂĞ...'>
             </div>
         </div>
     `;
@@ -415,16 +415,16 @@ async function renderPomodoro() {
     function start() {
         if (running) return pause();
         running = true;
-        startBtn.textContent = 'æš«åœ';
-        statusEl.textContent = modeLabel(mode) + ' ä¸­';
+        startBtn.textContent = '¼È°±';
+        statusEl.textContent = modeLabel(mode) + ' ¤¤';
         timerId = setInterval(tick, 1000);
         startCompanion();
     }
 
     function pause() {
         running = false;
-        startBtn.textContent = 'é–‹å§‹';
-        statusEl.textContent = 'å·²æš«åœ';
+        startBtn.textContent = '¶}©l';
+        statusEl.textContent = '¤w¼È°±';
         clearInterval(timerId);
         stopCompanion();
     }
@@ -463,18 +463,18 @@ async function renderPomodoro() {
                 background: currentCompanion.background || ''
             };
         }
-        return { name: 'AI å¤¥ä¼´', avatar: '', personality: '', background: '' };
+        return { name: 'AI ¹Ù¦ñ', avatar: '', personality: '', background: '' };
     }
 
     function showCompanionCard() {
         const mask = getActiveMask();
-        companionName.textContent = mask.name || 'AI å¤¥ä¼´';
+        companionName.textContent = mask.name || 'AI ¹Ù¦ñ';
         if (mask.avatar) {
             companionAvatar.style.backgroundImage = `url('${mask.avatar}')`;
         } else {
             companionAvatar.style.backgroundImage = 'linear-gradient(135deg,#4f8bff,#8ec5ff)';
         }
-        companionLine.textContent = 'é–‹å§‹å¾Œå°‡å®šæ™‚é€ä¸Šé¼“å‹µ';
+        companionLine.textContent = '¶}©l«á±N©w®É°e¤W¹ªÀy';
     }
 
     function addChatMessage(text, isCompanion = true) {
@@ -504,7 +504,7 @@ async function renderPomodoro() {
         const dialogText = container.querySelector('#companion-dialog-text');
         const dialogInput = container.querySelector('#companion-dialog-input');
 
-        dialogName.textContent = mask.name || 'AI å¤¥ä¼´';
+        dialogName.textContent = mask.name || 'AI ¹Ù¦ñ';
         if (mask.avatar) {
             dialogAvatar.style.backgroundImage = `url('${mask.avatar}')`;
         } else {
@@ -568,18 +568,18 @@ async function renderPomodoro() {
         const apiConfig = await getApiConfig();
         if (!apiConfig || !apiConfig.url) return null;
 
-        const charName = charConfig.name || 'è§’è‰²';
+        const charName = charConfig.name || '¨¤¦â';
         const charPersonality = charConfig.personality || '';
         const userName = userConfig.name || 'User';
         const lang = await SettingsDB.get('sxiphone_lang') || 'zh-TW';
 
         const systemPrompt = `# CHARACTER_PROFILE
-- åå­—: ${charName}
-- æ€§æ ¼ç‰¹è³ª: ${charPersonality || 'å‹å–„ã€æº«æŸ”'}
+- ¦W¦r: ${charName}
+- ©Ê®æ¯S½è: ${charPersonality || '¤Íµ½¡B·Å¬X'}
 
-ä½ æ˜¯ ${charName}ï¼Œæ­£åœ¨é™ªä¼´ ${userName} ä½¿ç”¨ç•ªèŒ„é˜å°ˆæ³¨ã€‚
-ç”¨è§’è‰²ç‰¹æœ‰çš„èªæ°£å’Œæ–¹å¼å›æ‡‰ç”¨æˆ¶ï¼Œä¿æŒè§’è‰²ä¸€è‡´æ€§ã€‚
-è¼¸å‡º JSON: {'message': 'å›æ‡‰å…§å®¹'}`;
+§A¬O ${charName}¡A¥¿¦b³­¦ñ ${userName} ¨Ï¥Îµf­XÄÁ±Mª`¡C
+¥Î¨¤¦â¯S¦³ªº»y®ğ©M¤è¦¡¦^À³¥Î¤á¡A«O«ù¨¤¦â¤@­P©Ê¡C
+¿é¥X JSON: {'message': '¦^À³¤º®e'}`;
 
         try {
             const endpoint = apiConfig.url.endsWith('/chat/completions')
@@ -691,7 +691,7 @@ async function renderPomodoro() {
         pause();
         setMode('focus');
         settingsPanel.classList.add('hidden');
-        createToast('è¨­å®šå·²å„²å­˜', 'success');
+        createToast('³]©w¤wÀx¦s', 'success');
     });
 
     const selectCompanionBtn = container.querySelector('#select-companion-btn');
@@ -719,7 +719,7 @@ async function renderPomodoro() {
             let response = await generateAIResponse(charConfig, userConfig, userMsg);
 
             if (!response) {
-                const responses = ['åŠ æ²¹ï¼ç¹¼çºŒä¿æŒï¼', 'ä½ åšå¾—å¾ˆæ£’ï¼', 'å°ˆæ³¨å¾—å¾ˆå¥½ï¼', 'å†å …æŒä¸€ä¸‹ï¼', 'å¤ªæ£’äº†ï¼'];
+                const responses = ['¥[ªo¡IÄ~Äò«O«ù¡I', '§A°µ±o«Ü´Î¡I', '±Mª`±o«Ü¦n¡I', '¦A°í«ù¤@¤U¡I', '¤Ó´Î¤F¡I'];
                 response = responses[Math.floor(Math.random() * responses.length)];
             }
 
@@ -742,7 +742,7 @@ async function renderPomodoro() {
             await SettingsDB.set(CONFIG_KEY, config);
             await SettingsDB.set(COMPLETED_KEY, String(completed));
         } catch (e) {
-            console.warn('[pomodoro] ä¿å­˜æ•¸æ“šå¤±æ•—:', e);
+            console.warn('[pomodoro] «O¦s¼Æ¾Ú¥¢±Ñ:', e);
         }
     };
 
@@ -772,9 +772,9 @@ async function renderPomodoro() {
 
 export default {
     id: 'pomodoro',
-    name: 'ç•ªèŒ„é˜',
+    name: 'µf­XÄÁ',
     icon: 'timer',
     routes: [{ path: '/pomodoro', render: renderPomodoro }],
-    navItem: { label: 'ç•ªèŒ„é˜', icon: 'timer', path: '/pomodoro', showInNav: true, order: 25 },
+    navItem: { label: 'µf­XÄÁ', icon: 'timer', path: '/pomodoro', showInNav: true, order: 25 },
     stylesPath: 'js/apps/pomodoro/style.css'
 };

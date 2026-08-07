@@ -1,14 +1,14 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 const THEMES = [
-  { id: 't1', name: 'æ˜Ÿç©º', icon: 'ğŸŒŒ', price: 0 },
-  { id: 't2', name: 'æ£®æ—', icon: 'ğŸŒ²', price: 50 },
-  { id: 't3', name: 'æµ·æ´‹', icon: 'ğŸŒŠ', price: 50 },
-  { id: 't4', name: 'æ—¥è½', icon: 'ğŸŒ…', price: 80 },
-  { id: 't5', name: 'æ¥µå…‰', icon: 'ğŸŒŒ', price: 100 },
-  { id: 't6', name: 'æ«»èŠ±', icon: 'ğŸŒ¸', price: 80 }
+  { id: 't1', name: '¬PªÅ', icon: '??', price: 0 },
+  { id: 't2', name: '´ËªL', icon: '??', price: 50 },
+  { id: 't3', name: '®ü¬v', icon: '??', price: 50 },
+  { id: 't4', name: '¤é¸¨', icon: '??', price: 80 },
+  { id: 't5', name: '·¥¥ú', icon: '??', price: 100 },
+  { id: 't6', name: 'Äåªá', icon: '??', price: 80 }
 ];
 
 let owned = [];
@@ -27,8 +27,8 @@ async function renderThemeShop(params) {
   const container = createElement('div', 'app-container theme-shop-app');
   container.innerHTML = `
     <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> è¿”å›</button>
-      <h1 class='menu-title'>ä¸»é¡Œå•†åº—</h1>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
+      <h1 class='menu-title'>¥DÃD°Ó©±</h1>
     </header>
     <div class='page'>
       <div class='theme-grid'>
@@ -37,8 +37,8 @@ async function renderThemeShop(params) {
             <div class='theme-icon'>${t.icon}</div>
             <div class='theme-name'>${t.name}</div>
             ${owned.includes(t.id) 
-              ? '<span class='owned-badge'>å·²æ“æœ‰</span>'
-              : `<span class='price'>${t.price === 0 ? 'å…è²»' : t.price + ' å¹£'}</span>`
+              ? '<span class='owned-badge'>¤w¾Ö¦³</span>'
+              : `<span class='price'>${t.price === 0 ? '§K¶O' : t.price + ' ¹ô'}</span>`
             }
           </div>
         `).join('')}
@@ -49,7 +49,7 @@ async function renderThemeShop(params) {
   container.querySelectorAll('.theme-item:not(.owned)').forEach(item => {
     item.onclick = async () => {
       const theme = THEMES.find(t => t.id === item.dataset.id);
-      if (theme.price === 0 || confirm(`è³¼è²·ã€Œ${theme.name}ã€ä¸»é¡Œï¼Ÿ`)) {
+      if (theme.price === 0 || confirm(`ÁÊ¶R¡u${theme.name}¡v¥DÃD¡H`)) {
         owned.push(theme.id);
         await saveOwned();
         renderThemeShop(params);
@@ -61,9 +61,9 @@ async function renderThemeShop(params) {
 
 export default {
   id: 'theme-shop',
-  name: 'ä¸»é¡Œå•†åº—',
+  name: '¥DÃD°Ó©±',
   icon: 'store',
   routes: [{ path: '/theme-shop', render: renderThemeShop }],
-  navItem: { label: 'ä¸»é¡Œå•†åº—', icon: 'store', path: '/theme-shop', showInNav: true, order: 141 },
+  navItem: { label: '¥DÃD°Ó©±', icon: 'store', path: '/theme-shop', showInNav: true, order: 141 },
   stylesPath: 'js/apps/theme-shop/style.css'
 };

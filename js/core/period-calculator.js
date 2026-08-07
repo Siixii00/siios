@@ -1,4 +1,4 @@
-﻿import { HealthDB } from '../db.js';
+import { HealthDB } from '../db.js';
 
 class PeriodCalculator {
     static async calculateNextPeriod(userId) {

@@ -1,4 +1,4 @@
-﻿class HistoryManager {
+class HistoryManager {
     constructor(maxHistorySize = 50) {
         this.undoStack = [];
         this.redoStack = [];

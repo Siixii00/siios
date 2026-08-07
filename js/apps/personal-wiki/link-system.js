@@ -1,4 +1,4 @@
-Ôªøimport { escapeHtml } from '../../utils/html.js';
+import { escapeHtml } from '../../utils/html.js';
 
 const LINK_REGEX = /\[\[([^\]]+)\]\]/g;
 
@@ -121,7 +121,7 @@ export function showLinkPicker(container, triggerEl, onSelect) {
 
     picker.innerHTML = `
         <div class='wiki-link-picker-search'>
-            <input type='text' placeholder='ÊêúÂ∞ãÈ†ÅÈù¢...' autofocus>
+            <input type='text' placeholder='∑j¥M≠∂≠±...' autofocus>
         </div>
         <div class='wiki-link-picker-list'></div>
     `;
@@ -137,10 +137,10 @@ export function showLinkPicker(container, triggerEl, onSelect) {
             : cachedRecords;
 
         listEl.innerHTML = filtered.length === 0
-            ? '<div class='wiki-link-picker-empty'>ÁÑ°Á¨¶ÂêàÈ†ÅÈù¢</div>'
+            ? '<div class='wiki-link-picker-empty'>µL≤≈¶X≠∂≠±</div>'
             : filtered.slice(0, 10).map(r => `
                 <div class='wiki-link-picker-item' data-pick-title='${escapeHtml(r.title)}'>
-                    <span class='wiki-link-picker-icon'>${r.icon || 'üìÑ'}</span>
+                    <span class='wiki-link-picker-icon'>${r.icon || '??'}</span>
                     <span class='wiki-link-picker-label'>${escapeHtml(r.title)}</span>
                     <span class='wiki-link-picker-type'>${r.page_type}</span>
                 </div>

@@ -1,4 +1,4 @@
-﻿class GitHubSync {
+class GitHubSync {
   constructor(token) {
     this.token = token;
     this.baseUrl = 'https://api.github.com';

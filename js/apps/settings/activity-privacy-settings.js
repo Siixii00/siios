@@ -116,7 +116,7 @@ async function renderActivityPrivacySettings() {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.navigate('/activity')
     });
-    backBtn.innerHTML = "`<i class=`"`fas fa-chevron-left`"`></i> ªð¦^`";
+    backBtn.innerHTML = '`<i class=`'`fas fa-chevron-left`'`></i> ªð¦^`';
     header.appendChild(backBtn);
     
     const title = createElement('h1', 'menu-title');
@@ -249,7 +249,7 @@ async function renderActivityPrivacySettings() {
         iconDiv.style.backgroundColor = platform.color;
         
         if (platform.icon === 'discord') {
-            iconDiv.innerHTML = "`<i class=`"`fab fa-discord text-lg`"`></i>`";
+            iconDiv.innerHTML = '`<i class=`'`fab fa-discord text-lg`'`></i>`';
         } else {
             iconDiv.appendChild(createIcon(platform.icon, 'text-lg'));
         }

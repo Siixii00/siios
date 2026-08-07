@@ -1,4 +1,4 @@
-ï»¿import { TOOLS_CATALOG } from './tools-catalog.js';
+import { TOOLS_CATALOG } from './tools-catalog.js';
 import { initDB } from '../../db.js';
 
 const CUSTOM_TOOLS_STORE = 'customMCPTools';
@@ -11,7 +11,7 @@ async function getCustomTools() {
         }
         return await database.getAll(CUSTOM_TOOLS_STORE);
     } catch (e) {
-        console.warn('[MCP] ç„¡æ³•è®€å–è‡ªå®šç¾©å·¥å…·:', e);
+        console.warn('[MCP] µLªkÅª¨ú¦Û©w¸q¤u¨ã:', e);
         return [];
     }
 }
@@ -28,8 +28,8 @@ export async function generateWorkerCode(selectedTools) {
     const toolDefinitions = tools.map(t => generateToolDefinition(t)).join(',\n');
     const executeCases = tools.map(t => generateExecuteCase(t)).join('\n');
 
-    return `// MCP Worker - ç”±ç¥ç§˜é–€ç”Ÿæˆ
-// åŒ…å« ${tools.length} å€‹å·¥å…·ï¼š${tools.map(t => t.displayName).join('ã€')}
+    return `// MCP Worker - ¥Ñ¯«¯µªù¥Í¦¨
+// ¥]§t ${tools.length} ­Ó¤u¨ã¡G${tools.map(t => t.displayName).join('¡B')}
 
 export default {
     async fetch(request, env, ctx) {
@@ -45,12 +45,12 @@ export default {
             return new Response(null, { headers: corsHeaders });
         }
 
-        // å·¥å…·åˆ—è¡¨ç«¯é»
+        // ¤u¨ã¦CªíºİÂI
         if (url.pathname === '/tools' && request.method === 'GET') {
             return Response.json(getTools(), { headers: corsHeaders });
         }
 
-        // åŸ·è¡Œå·¥å…·ç«¯é»
+        // °õ¦æ¤u¨ãºİÂI
         if (url.pathname === '/tools/call' && request.method === 'POST') {
             try {
                 const { name, arguments: args } = await request.json();
@@ -100,13 +100,13 @@ function generateExecuteCase(tool) {
 
 function generateCaseBody(tool) {
     if (tool.id.startsWith('custom-')) {
-        return tool.code || `// è‡ªå®šç¾©å·¥å…·
+        return tool.code || `// ¦Û©w¸q¤u¨ã
             return { success: true, args };`;
     }
     
     switch (tool.id) {
         case 'daily_weather':
-            return `// éœ€è¦è¨­å®š OPENWEATHER_API_KEY
+            return `// »İ­n³]©w OPENWEATHER_API_KEY
             const weatherRes = await fetch(
                 \`https://api.openweathermap.org/data/2.5/weather?q=\${encodeURIComponent(args.city)}&appid=\${env.OPENWEATHER_API_KEY}&units=metric\`
             );
@@ -121,8 +121,8 @@ function generateCaseBody(tool) {
             };`;
 
         case 'daily_reminder':
-            return `// éœ€è¦å¯¦ä½œæ¨æ’­æœå‹™
-            // é€™è£¡å¯ä»¥ä¸²æ¥ FCMã€APNs æˆ–å…¶ä»–æ¨æ’­æœå‹™
+            return `// »İ­n¹ê§@±À¼½ªA°È
+            // ³o¸Ì¥i¥H¦ê±µ FCM¡BAPNs ©Î¨ä¥L±À¼½ªA°È
             return {
                 scheduled: true,
                 message: args.message,
@@ -131,7 +131,7 @@ function generateCaseBody(tool) {
             };`;
 
         case 'daily_recipe':
-            return `// éœ€è¦è¨­å®š SPOONACULAR_API_KEY
+            return `// »İ­n³]©w SPOONACULAR_API_KEY
             const recipeRes = await fetch(
                 \`https://api.spoonacular.com/recipes/complexSearch?query=\${encodeURIComponent(args.query)}&number=\${args.limit || 5}&apiKey=\${env.SPOONACULAR_API_KEY}\`
             );
@@ -143,21 +143,21 @@ function generateCaseBody(tool) {
             }));`;
 
         case 'shop_sanitary_pads':
-            return `// é€™è£¡ä¸²æ¥å¯¦éš›è³¼ç‰© API
-            // ä¾‹å¦‚ momoã€pchome æˆ–è‡ªå»ºè¨‚å–®ç³»çµ±
+            return `// ³o¸Ì¦ê±µ¹ê»ÚÁÊª« API
+            // ¨Ò¦p momo¡Bpchome ©Î¦Û«Ø­q³æ¨t²Î
             return {
                 orderId: 'ORD-' + Date.now(),
-                product: \`\${args.brand || 'å¥½è‡ªåœ¨'} \${args.type || 'æ—¥ç”¨'}\`,
+                product: \`\${args.brand || '¦n¦Û¦b'} \${args.type || '¤é¥Î'}\`,
                 quantity: args.quantity || 1,
-                status: 'å·²ä¸‹å–®',
-                estimatedDelivery: '3-5 å€‹å·¥ä½œå¤©'
+                status: '¤w¤U³æ',
+                estimatedDelivery: '3-5 ­Ó¤u§@¤Ñ'
             };`;
 
         case 'health_period_log':
         case 'health_mood_track':
         case 'health_medication':
-            return `// æ•´åˆ Siios HealthDB
-            // å„²å­˜åˆ° IndexedDB
+            return `// ¾ã¦X Siios HealthDB
+            // Àx¦s¨ì IndexedDB
             return {
                 logged: true,
                 timestamp: new Date().toISOString(),
@@ -165,7 +165,7 @@ function generateCaseBody(tool) {
             };`;
 
         case 'smart_light':
-            return `// éœ€è¦ä¸²æ¥ Philips Hueã€Google Home ç­‰
+            return `// »İ­n¦ê±µ Philips Hue¡BGoogle Home µ¥
             return {
                 room: args.room,
                 action: args.action,
@@ -174,7 +174,7 @@ function generateCaseBody(tool) {
             };`;
 
         case 'smart_ac':
-            return `// éœ€è¦ä¸²æ¥æ™ºæ…§å®¶å±…å¹³å°
+            return `// »İ­n¦ê±µ´¼¼z®a©~¥­¥x
             return {
                 room: args.room,
                 temperature: args.temperature || 24,
@@ -184,7 +184,7 @@ function generateCaseBody(tool) {
 
         case 'smart_music':
         case 'entertainment_music_search':
-            return `// éœ€è¦è¨­å®š SPOTIFY_API_KEY
+            return `// »İ­n³]©w SPOTIFY_API_KEY
             const musicRes = await fetch(
                 \`https://api.spotify.com/v1/search?q=\${encodeURIComponent(args.query)}&type=track&limit=\${args.limit || 10}\`,
                 { headers: { 'Authorization': \`Bearer \${env.SPOTIFY_ACCESS_TOKEN}\` } }
@@ -198,7 +198,7 @@ function generateCaseBody(tool) {
             }));`;
 
         case 'entertainment_anime':
-            return `// AniList GraphQL APIï¼ˆå…è²»ï¼‰
+            return `// AniList GraphQL API¡]§K¶O¡^
             const query = \`
                 query ($search: String, $season: String) {
                     Page {
@@ -221,7 +221,7 @@ function generateCaseBody(tool) {
             return animeData.data.Page.media;`;
 
         case 'entertainment_game_price':
-            return `// CheapShark APIï¼ˆå…è²»ï¼‰
+            return `// CheapShark API¡]§K¶O¡^
             const gameRes = await fetch(
                 \`https://www.cheapshark.com/api/1.0/games?title=\${encodeURIComponent(args.game)}\`
             );
@@ -233,7 +233,7 @@ function generateCaseBody(tool) {
             }));`;
 
         case 'work_translate':
-            return `// éœ€è¦è¨­å®š GOOGLE_TRANSLATE_API_KEY æˆ– DEEPL_API_KEY
+            return `// »İ­n³]©w GOOGLE_TRANSLATE_API_KEY ©Î DEEPL_API_KEY
             const transRes = await fetch(
                 \`https://translation.googleapis.com/language/translate/v2?key=\${env.GOOGLE_TRANSLATE_API_KEY}\`,
                 {
@@ -250,7 +250,7 @@ function generateCaseBody(tool) {
             };`;
 
         case 'work_wiki':
-            return `// MediaWiki APIï¼ˆå…è²»ï¼‰
+            return `// MediaWiki API¡]§K¶O¡^
             const wikiRes = await fetch(
                 \`https://\${args.lang || 'zh'}.wikipedia.org/w/api.php?action=query&list=search&srsearch=\${encodeURIComponent(args.query)}&format=json&origin=*\`
             );
@@ -262,7 +262,7 @@ function generateCaseBody(tool) {
             }));`;
 
         case 'work_notion':
-            return `// éœ€è¦è¨­å®š NOTION_API_KEY å’Œ NOTION_DATABASE_ID
+            return `// »İ­n³]©w NOTION_API_KEY ©M NOTION_DATABASE_ID
             const notionRes = await fetch('https://api.notion.com/v1/pages', {
                 method: 'POST',
                 headers: {
@@ -282,7 +282,7 @@ function generateCaseBody(tool) {
             return { pageId: notionData.id, url: notionData.url };`;
 
         case 'finance_stock':
-            return `// éœ€è¦ ALPHA_VANTAGE_API_KEY æˆ– Yahoo Finance
+            return `// »İ­n ALPHA_VANTAGE_API_KEY ©Î Yahoo Finance
             const stockRes = await fetch(
                 \`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=\${args.symbol}&apikey=\${env.ALPHA_VANTAGE_API_KEY}\`
             );
@@ -295,7 +295,7 @@ function generateCaseBody(tool) {
             };`;
 
         case 'finance_crypto':
-            return `// CoinGecko APIï¼ˆå…è²»ï¼‰
+            return `// CoinGecko API¡]§K¶O¡^
             const cryptoRes = await fetch(
                 \`https://api.coingecko.com/api/v3/simple/price?ids=\${args.coin}&vs_currencies=\${args.currency || 'twd'}\`
             );
@@ -307,7 +307,7 @@ function generateCaseBody(tool) {
             };`;
 
         case 'finance_expense':
-            return `// æœ¬åœ°è¨˜å¸³æˆ–ä¸²æ¥è¨˜å¸³æœå‹™
+            return `// ¥»¦a°O±b©Î¦ê±µ°O±bªA°È
             return {
                 logged: true,
                 amount: args.amount,
@@ -318,8 +318,8 @@ function generateCaseBody(tool) {
 
         case 'memory_save':
         case 'memory_retrieve':
-            return `// æ•´åˆ Siios MemoryDB
-            // é€é Worker API å„²å­˜/æª¢ç´¢è¨˜æ†¶
+            return `// ¾ã¦X Siios MemoryDB
+            // ³z¹L Worker API Àx¦s/ÀË¯Á°O¾Ğ
             return {
                 success: true,
                 content: args.content,
@@ -328,7 +328,7 @@ function generateCaseBody(tool) {
             };`;
 
         default:
-            return `// TODO: å¯¦ä½œ ${tool.name}
+            return `// TODO: ¹ê§@ ${tool.name}
             return { success: true, args };`;
     }
 }
@@ -343,17 +343,17 @@ export function generateWranglerConfig(selectedTools, hasSecrets = false) {
 main = 'src/index.js'
 compatibility_date = '2024-01-01'
 
-# å•Ÿç”¨æ—¥èªŒ
+# ±Ò¥Î¤é»x
 [observability.logs]
 enabled = true
 `;
 
     if (needsApiKey) {
         config += `
-# å¦‚æœéœ€è¦ API Keyï¼Œä½¿ç”¨ Secrets ç®¡ç†ï¼š
+# ¦pªG»İ­n API Key¡A¨Ï¥Î Secrets ºŞ²z¡G
 # wrangler secret put OPENWEATHER_API_KEY
 # wrangler secret put SPOTIFY_API_KEY
-# ...ç­‰
+# ...µ¥
 `;
     }
 
@@ -381,68 +381,68 @@ export function generateReadme(selectedTools) {
 
     return `# Siios MCP Worker
 
-é€™å€‹ Worker æä¾› ${tools.length} å€‹å·¥å…·çµ¦ Siios PWA ä½¿ç”¨ã€‚
+³o­Ó Worker ´£¨Ñ ${tools.length} ­Ó¤u¨ãµ¹ Siios PWA ¨Ï¥Î¡C
 
-## åŒ…å«çš„å·¥å…·
+## ¥]§tªº¤u¨ã
 
 ${tools.map(t => `- **${t.displayName}** (${t.name}): ${t.description}`).join('\n')}
 
-## éƒ¨ç½²æ­¥é©Ÿ
+## ³¡¸p¨BÆJ
 
-### 1. å®‰è£ä¾è³´
+### 1. ¦w¸Ë¨Ì¿à
 
 \`\`\`bash
 npm install
 \`\`\`
 
-### 2. ç™»å…¥ Cloudflare
+### 2. µn¤J Cloudflare
 
 \`\`\`bash
 wrangler login
 \`\`\`
 
-### 3. è¨­å®š Secretsï¼ˆå¦‚æœéœ€è¦ï¼‰
+### 3. ³]©w Secrets¡]¦pªG»İ­n¡^
 
-${tools.filter(t => t.requires?.length > 0).map(t => `# ${t.displayName} éœ€è¦ï¼š${t.requires.join(', ')}`).join('\n') || 'ç„¡éœ€è¨­å®š Secrets'}
+${tools.filter(t => t.requires?.length > 0).map(t => `# ${t.displayName} »İ­n¡G${t.requires.join(', ')}`).join('\n') || 'µL»İ³]©w Secrets'}
 
 \`\`\`bash
-# ä¾‹å¦‚ï¼š
+# ¨Ò¦p¡G
 wrangler secret put OPENWEATHER_API_KEY
 \`\`\`
 
-### 4. éƒ¨ç½²
+### 4. ³¡¸p
 
 \`\`\`bash
 npm run deploy
 \`\`\`
 
-### 5. åœ¨ Siios PWA è¨­å®š
+### 5. ¦b Siios PWA ³]©w
 
-1. é–‹å•Ÿã€Œè¨­å®šã€â†’ã€ŒMCP å·¥å…·æ•´åˆã€
-2. æ–°å¢ MCP ä¼ºæœå™¨
-3. è¼¸å…¥ Worker URL
+1. ¶}±Ò¡u³]©w¡v¡÷¡uMCP ¤u¨ã¾ã¦X¡v
+2. ·s¼W MCP ¦øªA¾¹
+3. ¿é¤J Worker URL
 
-## æœ¬åœ°æ¸¬è©¦
+## ¥»¦a´ú¸Õ
 
 \`\`\`bash
 npm run dev
 \`\`\`
 
-æœƒåœ¨ http://localhost:8787 å•Ÿå‹•ã€‚
+·|¦b http://localhost:8787 ±Ò°Ê¡C
 
-## æŸ¥çœ‹æ—¥èªŒ
+## ¬d¬İ¤é»x
 
 \`\`\`bash
 npm run tail
 \`\`\`
 
-## æª”æ¡ˆçµæ§‹
+## ÀÉ®×µ²ºc
 
 \`\`\`
-â”œâ”€â”€ src/
-â”‚   â””â”€â”€ index.js      # Worker ä¸»ç¨‹å¼
-â”œâ”€â”€ wrangler.toml     # Cloudflare è¨­å®š
-â””â”€â”€ package.json
+¢u¢w¢w src/
+¢x   ¢|¢w¢w index.js      # Worker ¥Dµ{¦¡
+¢u¢w¢w wrangler.toml     # Cloudflare ³]©w
+¢|¢w¢w package.json
 \`\`\`
 `;
 }

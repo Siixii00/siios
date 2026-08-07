@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast, createKakaoBottomSheet } from '../../components.js';
 import { MCPConfigDB, CharactersDB } from '../../db.js';
 import { MCPClient } from '../../core/mcp-client.js';
@@ -7,7 +7,7 @@ async function renderMCPSettings() {
     const container = createElement('div', 'app-container bg-ios-bg');
 
     const header = createIOSNavBar({
-        title: 'MCP å·¥å…·æ•´åˆ',
+        title: 'MCP ¤u¨ã¾ã¦X',
         backPath: '/settings'
     });
     container.appendChild(header);
@@ -19,13 +19,13 @@ async function renderMCPSettings() {
     const infoSection = createElement('div', 'ios-grouped-list mx-4');
     const infoCard = createElement('div', 'p-4 bg-white rounded-xl');
     infoCard.innerHTML = `
-        <h3 class='font-semibold mb-2'>ä»€éº¼æ˜¯ MCP å·¥å…·æ•´åˆï¼Ÿ</h3>
+        <h3 class='font-semibold mb-2'>¤°»ò¬O MCP ¤u¨ã¾ã¦X¡H</h3>
         <p class='text-sm text-ios-muted mb-3'>
-            MCP è®“ AI è§’è‰²å¯ä»¥èª¿ç”¨å¤–éƒ¨å·¥å…·ï¼Œä¾‹å¦‚è³¼ç‰©ã€æŸ¥å¤©æ°£ã€æ§åˆ¶æ™ºæ…§å®¶å±…ç­‰ã€‚
-            ä½ éœ€è¦è‡ªå·±æ¶è¨­ Cloudflare Worker ä¾†æä¾›é€™äº›å·¥å…·ã€‚
+            MCP Åı AI ¨¤¦â¥i¥H½Õ¥Î¥~³¡¤u¨ã¡A¨Ò¦pÁÊª«¡B¬d¤Ñ®ğ¡B±±¨î´¼¼z®a©~µ¥¡C
+            §A»İ­n¦Û¤v¬[³] Cloudflare Worker ¨Ó´£¨Ñ³o¨Ç¤u¨ã¡C
         </p>
         <a class='text-blue-500 text-sm' href='#' id='mcp-guide-link'>
-            æŸ¥çœ‹æ¶è¨­æ•™å­¸ â†’
+            ¬d¬İ¬[³]±Ğ¾Ç ¡÷
         </a>
     `;
     infoSection.appendChild(infoCard);
@@ -38,7 +38,7 @@ async function renderMCPSettings() {
 
     if (configs.length === 0) {
         const empty = createElement('div', 'p-4 text-center text-ios-muted');
-        empty.textContent = 'å°šæœªè¨­å®šä»»ä½• MCP ä¼ºæœå™¨';
+        empty.textContent = '©|¥¼³]©w¥ô¦ó MCP ¦øªA¾¹';
         listSection.appendChild(empty);
     } else {
         for (const config of configs) {
@@ -49,17 +49,17 @@ async function renderMCPSettings() {
     main.appendChild(listSection);
 
     const addBtn = createElement('button', 'ios-btn ios-btn-primary mx-4 mt-4');
-    addBtn.textContent = '+ æ–°å¢ MCP ä¼ºæœå™¨';
+    addBtn.textContent = '+ ·s¼W MCP ¦øªA¾¹';
     addBtn.onclick = () => showAddDialog(container);
     main.appendChild(addBtn);
 
     const refreshBtn = createElement('button', 'ios-btn ios-btn-secondary mx-4 mt-2');
-    refreshBtn.textContent = 'é‡æ–°æ•´ç†å·¥å…·æ¸…å–®';
+    refreshBtn.textContent = '­«·s¾ã²z¤u¨ã²M³æ';
     refreshBtn.onclick = async () => {
-        createToast('æ­£åœ¨æª¢æŸ¥æ‰€æœ‰ MCP ä¼ºæœå™¨...', 'info');
+        createToast('¥¿¦bÀË¬d©Ò¦³ MCP ¦øªA¾¹...', 'info');
         const results = await refreshAllTools(container);
         const successCount = results.filter(r => r.success).length;
-        createToast(`å·²å®Œæˆï¼š${successCount}/${results.length} å€‹ä¼ºæœå™¨é€£ç·šæˆåŠŸ`, 'success');
+        createToast(`¤w§¹¦¨¡G${successCount}/${results.length} ­Ó¦øªA¾¹³s½u¦¨¥\`, 'success');
     };
     main.appendChild(refreshBtn);
 
@@ -89,11 +89,11 @@ function createConfigCell(config) {
     cell.appendChild(badge);
 
     const content = createElement('div', 'flex-1 min-w-0');
-    content.appendChild(createElement('span', 'text-body-lg font-medium', { textContent: config.name || 'æœªå‘½å' }));
+    content.appendChild(createElement('span', 'text-body-lg font-medium', { textContent: config.name || '¥¼©R¦W' }));
 
     const toolCount = config.tools?.length || 0;
-    const statusText = config.status === 'connected' ? `${toolCount} å€‹å·¥å…·` :
-                       config.status === 'error' ? 'é€£ç·šå¤±æ•—' : 'å°šæœªæª¢æŸ¥';
+    const statusText = config.status === 'connected' ? `${toolCount} ­Ó¤u¨ã` :
+                       config.status === 'error' ? '³s½u¥¢±Ñ' : '©|¥¼ÀË¬d';
     content.appendChild(createElement('span', 'block text-sm text-ios-muted truncate', { textContent: statusText }));
     cell.appendChild(content);
 
@@ -108,7 +108,7 @@ function createConfigCell(config) {
         const updated = await MCPConfigDB.toggle(config.id);
         toggle.className = updated.enabled ? 'bg-green-500' : 'bg-gray-300';
         toggleKnob.style.transform = updated.enabled ? 'translateX(24px)' : 'translateX(4px)';
-        createToast(updated.enabled ? 'å·²å•Ÿç”¨' : 'å·²åœç”¨', 'success');
+        createToast(updated.enabled ? '¤w±Ò¥Î' : '¤w°±¥Î', 'success');
     };
     cell.appendChild(toggle);
 
@@ -122,7 +122,7 @@ function showAddDialog(container) {
     const sheet = createElement('div', 'bg-ios-bg w-full rounded-t-2xl p-4 max-h-[80vh] overflow-y-auto');
 
     const header = createElement('div', 'flex items-center justify-between mb-4');
-    header.appendChild(createElement('h2', 'text-lg font-semibold', { textContent: 'æ–°å¢ MCP ä¼ºæœå™¨' }));
+    header.appendChild(createElement('h2', 'text-lg font-semibold', { textContent: '·s¼W MCP ¦øªA¾¹' }));
     const closeBtn = createElement('button', 'text-ios-muted');
     closeBtn.appendChild(createIcon('close'));
     closeBtn.onclick = () => overlay.remove();
@@ -132,21 +132,21 @@ function showAddDialog(container) {
     const form = createElement('div', 'space-y-4');
 
     const nameGroup = createElement('div');
-    nameGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: 'åç¨±' }));
+    nameGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: '¦WºÙ' }));
     const nameInput = createElement('input', 'w-full mt-1 p-3 border rounded-lg text-base');
     nameInput.type = 'text';
-    nameInput.placeholder = 'ä¾‹å¦‚ï¼šè³¼ç‰©å·¥å…·';
+    nameInput.placeholder = '¨Ò¦p¡GÁÊª«¤u¨ã';
     nameGroup.appendChild(nameInput);
     form.appendChild(nameGroup);
 
     const charGroup = createElement('div');
-    charGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: 'ç¶å®šè§’è‰²ï¼ˆé¸å¡«ï¼‰' }));
+    charGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: '¸j©w¨¤¦â¡]¿ï¶ñ¡^' }));
     const charSelect = createElement('select', 'w-full mt-1 p-3 border rounded-lg text-base');
-    const defaultOption = createElement('option', '', { value: '', textContent: 'ä¸ç¶å®šï¼ˆæ‰€æœ‰è§’è‰²å¯ç”¨ï¼‰' });
+    const defaultOption = createElement('option', '', { value: '', textContent: '¤£¸j©w¡]©Ò¦³¨¤¦â¥i¥Î¡^' });
     charSelect.appendChild(defaultOption);
     CharactersDB.getAll().then(characters => {
         characters.forEach(char => {
-            const option = createElement('option', '', { value: char.id, textContent: char.name || 'æœªå‘½å' });
+            const option = createElement('option', '', { value: char.id, textContent: char.name || '¥¼©R¦W' });
             charSelect.appendChild(option);
         });
     });
@@ -162,17 +162,17 @@ function showAddDialog(container) {
     urlGroup.appendChild(urlInput);
 
     const keyGroup = createElement('div');
-    keyGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: 'API Keyï¼ˆé¸å¡«ï¼‰' }));
+    keyGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: 'API Key¡]¿ï¶ñ¡^' }));
     const keyInput = createElement('input', 'w-full mt-1 p-3 border rounded-lg text-base');
     keyInput.type = 'password';
-    keyInput.placeholder = 'å¦‚æœ Worker éœ€è¦èªè­‰';
+    keyInput.placeholder = '¦pªG Worker »İ­n»{ÃÒ';
     form.appendChild(keyGroup);
     keyGroup.appendChild(keyInput);
 
     sheet.appendChild(form);
 
     const testBtn = createElement('button', 'ios-btn ios-btn-secondary w-full mt-4');
-    testBtn.textContent = 'æ¸¬è©¦é€£ç·š';
+    testBtn.textContent = '´ú¸Õ³s½u';
     testBtn.onclick = async () => {
         const client = new MCPClient({
             endpoint: urlInput.value,
@@ -180,18 +180,18 @@ function showAddDialog(container) {
         });
         const result = await client.testConnection();
         if (result.success) {
-            createToast(`é€£ç·šæˆåŠŸï¼Œæ‰¾åˆ° ${result.toolCount} å€‹å·¥å…·`, 'success');
+            createToast(`³s½u¦¨¥\¡A§ä¨ì ${result.toolCount} ­Ó¤u¨ã`, 'success');
         } else {
-            createToast(`é€£ç·šå¤±æ•—ï¼š${result.error}`, 'error');
+            createToast(`³s½u¥¢±Ñ¡G${result.error}`, 'error');
         }
     };
     sheet.appendChild(testBtn);
 
     const saveBtn = createElement('button', 'ios-btn ios-btn-primary w-full mt-2');
-    saveBtn.textContent = 'å„²å­˜';
+    saveBtn.textContent = 'Àx¦s';
     saveBtn.onclick = async () => {
         if (!urlInput.value) {
-            createToast('è«‹è¼¸å…¥ Worker URL', 'error');
+            createToast('½Ğ¿é¤J Worker URL', 'error');
             return;
         }
 
@@ -211,13 +211,13 @@ function showAddDialog(container) {
                 status: 'connected',
                 lastChecked: Date.now()
             });
-            createToast('å·²å„²å­˜ä¸¦é€£ç·šæˆåŠŸ', 'success');
+            createToast('¤wÀx¦s¨Ã³s½u¦¨¥\', 'success');
         } else {
             await MCPConfigDB.update(config.id, {
                 status: 'error',
                 lastChecked: Date.now()
             });
-            createToast('å·²å„²å­˜ï¼Œä½†é€£ç·šå¤±æ•—', 'warning');
+            createToast('¤wÀx¦s¡A¦ı³s½u¥¢±Ñ', 'warning');
         }
 
         overlay.remove();
@@ -234,7 +234,7 @@ async function showEditDialog(config) {
     const sheet = createElement('div', 'bg-ios-bg w-full rounded-t-2xl p-4 max-h-[80vh] overflow-y-auto');
 
     const header = createElement('div', 'flex items-center justify-between mb-4');
-    header.appendChild(createElement('h2', 'text-lg font-semibold', { textContent: 'ç·¨è¼¯ MCP ä¼ºæœå™¨' }));
+    header.appendChild(createElement('h2', 'text-lg font-semibold', { textContent: '½s¿è MCP ¦øªA¾¹' }));
     const closeBtn = createElement('button', 'text-ios-muted');
     closeBtn.appendChild(createIcon('close'));
     closeBtn.onclick = () => overlay.remove();
@@ -244,7 +244,7 @@ async function showEditDialog(config) {
     const form = createElement('div', 'space-y-4');
 
     const nameGroup = createElement('div');
-    nameGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: 'åç¨±' }));
+    nameGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: '¦WºÙ' }));
     const nameInput = createElement('input', 'w-full mt-1 p-3 border rounded-lg text-base');
     nameInput.type = 'text';
     nameInput.value = config.name || '';
@@ -252,15 +252,15 @@ async function showEditDialog(config) {
     form.appendChild(nameGroup);
 
     const charGroup = createElement('div');
-    charGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: 'ç¶å®šè§’è‰²ï¼ˆé¸å¡«ï¼‰' }));
+    charGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: '¸j©w¨¤¦â¡]¿ï¶ñ¡^' }));
     const charSelect = createElement('select', 'w-full mt-1 p-3 border rounded-lg text-base');
-    const defaultOption = createElement('option', '', { value: '', textContent: 'ä¸ç¶å®šï¼ˆæ‰€æœ‰è§’è‰²å¯ç”¨ï¼‰' });
+    const defaultOption = createElement('option', '', { value: '', textContent: '¤£¸j©w¡]©Ò¦³¨¤¦â¥i¥Î¡^' });
     if (!config.bound_character_id) defaultOption.selected = true;
     charSelect.appendChild(defaultOption);
     
     const characters = await CharactersDB.getAll();
     characters.forEach(char => {
-        const option = createElement('option', '', { value: char.id, textContent: char.name || 'æœªå‘½å' });
+        const option = createElement('option', '', { value: char.id, textContent: char.name || '¥¼©R¦W' });
         if (config.bound_character_id === char.id) option.selected = true;
         charSelect.appendChild(option);
     });
@@ -276,7 +276,7 @@ async function showEditDialog(config) {
     urlGroup.appendChild(urlInput);
 
     const keyGroup = createElement('div');
-    keyGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: 'API Keyï¼ˆé¸å¡«ï¼‰' }));
+    keyGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: 'API Key¡]¿ï¶ñ¡^' }));
     const keyInput = createElement('input', 'w-full mt-1 p-3 border rounded-lg text-base');
     keyInput.type = 'password';
     keyInput.value = config.apiKey || '';
@@ -285,11 +285,11 @@ async function showEditDialog(config) {
 
     if (config.tools && config.tools.length > 0) {
         const toolsGroup = createElement('div', 'mt-4');
-        toolsGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: `å¯ç”¨å·¥å…·ï¼ˆ${config.tools.length}ï¼‰` }));
+        toolsGroup.appendChild(createElement('label', 'text-sm font-medium', { textContent: `¥i¥Î¤u¨ã¡]${config.tools.length}¡^` }));
         const toolsList = createElement('div', 'mt-2 space-y-1');
         for (const tool of config.tools) {
             const toolItem = createElement('div', 'text-sm p-2 bg-gray-100 rounded');
-            toolItem.textContent = `${tool.name}: ${tool.description || 'ç„¡æè¿°'}`;
+            toolItem.textContent = `${tool.name}: ${tool.description || 'µL´y­z'}`;
             toolsList.appendChild(toolItem);
         }
         toolsGroup.appendChild(toolsList);
@@ -300,17 +300,17 @@ async function showEditDialog(config) {
 
     const actions = createElement('div', 'flex gap-2 mt-4');
     const deleteBtn = createElement('button', 'ios-btn bg-red-500 text-white flex-1');
-    deleteBtn.textContent = 'åˆªé™¤';
+    deleteBtn.textContent = '§R°£';
     deleteBtn.onclick = async () => {
         await MCPConfigDB.delete(config.id);
-        createToast('å·²åˆªé™¤', 'success');
+        createToast('¤w§R°£', 'success');
         overlay.remove();
         refreshList(document.querySelector('.app-container'));
     };
     actions.appendChild(deleteBtn);
 
     const saveBtn = createElement('button', 'ios-btn ios-btn-primary flex-1');
-    saveBtn.textContent = 'å„²å­˜';
+    saveBtn.textContent = 'Àx¦s';
     saveBtn.onclick = async () => {
         await MCPConfigDB.update(config.id, {
             name: nameInput.value,
@@ -318,7 +318,7 @@ async function showEditDialog(config) {
             apiKey: keyInput.value,
             bound_character_id: charSelect.value || null
         });
-        createToast('å·²å„²å­˜', 'success');
+        createToast('¤wÀx¦s', 'success');
         overlay.remove();
         refreshList(document.querySelector('.app-container'));
     };
@@ -338,7 +338,7 @@ async function refreshList(container) {
 
     if (configs.length === 0) {
         const empty = createElement('div', 'p-4 text-center text-ios-muted');
-        empty.textContent = 'å°šæœªè¨­å®šä»»ä½• MCP ä¼ºæœå™¨';
+        empty.textContent = '©|¥¼³]©w¥ô¦ó MCP ¦øªA¾¹';
         listSection.appendChild(empty);
     } else {
         for (const config of configs) {
@@ -381,7 +381,7 @@ function showGuideSheet() {
     const sheet = createElement('div', 'bg-ios-bg w-full rounded-t-2xl p-4 max-h-[80vh] overflow-y-auto');
 
     const header = createElement('div', 'flex items-center justify-between mb-4');
-    header.appendChild(createElement('h2', 'text-lg font-semibold', { textContent: 'MCP Worker æ¶è¨­æ•™å­¸' }));
+    header.appendChild(createElement('h2', 'text-lg font-semibold', { textContent: 'MCP Worker ¬[³]±Ğ¾Ç' }));
     const closeBtn = createElement('button', 'text-ios-muted');
     closeBtn.appendChild(createIcon('close'));
     closeBtn.onclick = () => overlay.remove();
@@ -391,39 +391,39 @@ function showGuideSheet() {
     const content = createElement('div', 'text-sm space-y-4');
     content.innerHTML = `
         <div class='p-3 bg-blue-50 rounded-lg'>
-            <p class='font-medium text-blue-800'>å¿«é€Ÿé–‹å§‹</p>
-            <p class='text-ios-muted mt-1'>è¤‡è£½ Worker ç¯„æœ¬åˆ°ä½ çš„ Cloudflare å¸³æˆ¶</p>
+            <p class='font-medium text-blue-800'>§Ö³t¶}©l</p>
+            <p class='text-ios-muted mt-1'>½Æ»s Worker ½d¥»¨ì§Aªº Cloudflare ±b¤á</p>
         </div>
 
         <div class='space-y-2'>
-            <p class='font-medium'>ç¬¬ä¸€æ­¥ï¼šæº–å‚™ç’°å¢ƒ</p>
+            <p class='font-medium'>²Ä¤@¨B¡G·Ç³ÆÀô¹Ò</p>
             <code class='block p-2 bg-gray-100 rounded text-xs'>npm install -g wrangler</code>
         </div>
 
         <div class='space-y-2'>
-            <p class='font-medium'>ç¬¬äºŒæ­¥ï¼šå»ºç«‹ Worker</p>
-            <p class='text-ios-muted'>åœ¨å°ˆæ¡ˆæ ¹ç›®éŒ„å»ºç«‹ <code>mcp-worker/</code> è³‡æ–™å¤¾</p>
+            <p class='font-medium'>²Ä¤G¨B¡G«Ø¥ß Worker</p>
+            <p class='text-ios-muted'>¦b±M®×®Ú¥Ø¿ı«Ø¥ß <code>mcp-worker/</code> ¸ê®Æ§¨</p>
         </div>
 
         <div class='space-y-2'>
-            <p class='font-medium'>ç¬¬ä¸‰æ­¥ï¼šéƒ¨ç½²</p>
+            <p class='font-medium'>²Ä¤T¨B¡G³¡¸p</p>
             <code class='block p-2 bg-gray-100 rounded text-xs'>wrangler deploy</code>
         </div>
 
         <div class='space-y-2'>
-            <p class='font-medium'>ç¬¬å››æ­¥ï¼šè¨­å®š</p>
-            <p class='text-ios-muted'>å°‡ Worker URL å¡«å…¥ä¸Šæ–¹çš„æ–°å¢è¡¨å–®</p>
+            <p class='font-medium'>²Ä¥|¨B¡G³]©w</p>
+            <p class='text-ios-muted'>±N Worker URL ¶ñ¤J¤W¤èªº·s¼Wªí³æ</p>
         </div>
 
         <div class='mt-4 p-3 bg-yellow-50 rounded-lg'>
-            <p class='text-yellow-800'>è©³ç´°ç¯„æœ¬ç¨‹å¼ç¢¼è«‹åƒè€ƒï¼š</p>
+            <p class='text-yellow-800'>¸Ô²Ó½d¥»µ{¦¡½X½Ğ°Ñ¦Ò¡G</p>
             <code class='text-xs'>docs/MCP_WORKER_TEMPLATE.md</code>
         </div>
     `;
     sheet.appendChild(content);
 
     const closeBottomBtn = createElement('button', 'ios-btn ios-btn-primary w-full mt-4');
-    closeBottomBtn.textContent = 'é—œé–‰';
+    closeBottomBtn.textContent = 'Ãö³¬';
     closeBottomBtn.onclick = () => overlay.remove();
     sheet.appendChild(closeBottomBtn);
 
@@ -433,7 +433,7 @@ function showGuideSheet() {
 
 export default {
     id: 'mcp-settings',
-    name: 'MCP è¨­å®š',
+    name: 'MCP ³]©w',
     icon: 'extension',
     routes: [
         { path: '/settings/mcp', render: renderMCPSettings }

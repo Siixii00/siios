@@ -313,7 +313,7 @@ async function renderMusic(params) {
     function renderPlaylistUI() {
         queueCount.textContent = `${playlist.length} 首`;
         if (playlist.length === 0) {
-            playlistList.innerHTML = "`<li class=`"`playlist-item`"`><div><div class=`"title'>尚未匯入歌單</div></div></li>';
+            playlistList.innerHTML = '`<li class=`'`playlist-item`'`><div><div class=`'title'>尚未匯入歌單</div></div></li>';
             return;
         }
         playlistList.innerHTML = playlist.map((track, index) => `
@@ -352,7 +352,7 @@ async function renderMusic(params) {
             try {
                 await audio.play();
                 isPlaying = true;
-                playBtn.innerHTML = "`<i class=`"`fas fa-pause`"`></i>`";
+                playBtn.innerHTML = '`<i class=`'`fas fa-pause`'`></i>`';
                 startDanmaku();
             } catch { pushDanmaku(danmakuLayer, '系統：請手動點擊播放'); }
         }
@@ -361,11 +361,11 @@ async function renderMusic(params) {
     function togglePlay() {
         if (currentIndex < 0 && playlist.length > 0) { loadTrack(0, true); return; }
         if (audio.paused) {
-            audio.play().then(() => { isPlaying = true; playBtn.innerHTML = "`<i class=`"`fas fa-pause`"`></i>`"; startDanmaku(); }).catch(() => {});
+            audio.play().then(() => { isPlaying = true; playBtn.innerHTML = '`<i class=`'`fas fa-pause`'`></i>`'; startDanmaku(); }).catch(() => {});
         } else {
             audio.pause();
             isPlaying = false;
-            playBtn.innerHTML = "`<i class=`"`fas fa-play`"`></i>`";
+            playBtn.innerHTML = '`<i class=`'`fas fa-play`'`></i>`';
             stopDanmaku();
         }
     }
@@ -392,7 +392,7 @@ async function renderMusic(params) {
         progressEl.value = 0;
         currentTimeEl.textContent = '0:00';
         totalTimeEl.textContent = '0:00';
-        playBtn.innerHTML = "`<i class=`"`fas fa-play`"`></i>`";
+        playBtn.innerHTML = '`<i class=`'`fas fa-play`'`></i>`';
         renderPlaylistUI();
         updateTrackUI(null);
         stopDanmaku();

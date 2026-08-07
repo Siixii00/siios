@@ -11,7 +11,7 @@ async function renderDiscordSettings() {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.navigate('/settings')
     });
-    backBtn.innerHTML = "`<i class=`"`fas fa-chevron-left`"`></i> ªð¦^`";
+    backBtn.innerHTML = '`<i class=`'`fas fa-chevron-left`'`></i> ªð¦^`';
     header.appendChild(backBtn);
     
     const title = createElement('h1', 'menu-title');
@@ -193,7 +193,7 @@ async function renderDiscordSettings() {
     const bindingInfo = createElement('div', 'flex items-center gap-3');
     
     const bindingIcon = createElement('div', 'w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center');
-    bindingIcon.innerHTML = "`<span class=`"`material-symbols-outlined text-blue-600 text-xl`"`>link</span>`";
+    bindingIcon.innerHTML = '`<span class=`'`material-symbols-outlined text-blue-600 text-xl`'`>link</span>`';
     bindingInfo.appendChild(bindingIcon);
     
     const bindingText = createElement('div');

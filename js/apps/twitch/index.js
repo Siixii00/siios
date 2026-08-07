@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { CharactersDB, SettingsDB } from '../../db.js';
 import APIClient from '../../api.js';
@@ -35,7 +35,7 @@ let state = {
 };
 
 function formatViewers(num) {
-    if (num >= 10000) return (num / 10000).toFixed(1) + 'è¬';
+    if (num >= 10000) return (num / 10000).toFixed(1) + '¸U';
     if (num >= 1000) return (num / 1000).toFixed(1) + 'K';
     return num.toString();
 }
@@ -73,17 +73,17 @@ async function generateStreamTitle(character) {
     const settings = await SettingsDB.getAll();
     
     if (!settings.api_url || !settings.api_key) {
-        return `${character?.name || 'ä¸»æ’­'}çš„ç›´æ’­æ™‚é–“ï¼`;
+        return `${character?.name || '¥D¼½'}ªºª½¼½®É¶¡¡I`;
     }
 
     const context = await buildAppContext({ characterId: character?.id });
-    const systemPrompt = context.systemPrompt + `\n\nä½ æ˜¯ä¸€å€‹Twitchç›´æ’­æ¨™é¡Œç”Ÿæˆç³»çµ±ã€‚æ ¹æ“šè§’è‰²è¨­å®šç”Ÿæˆå¸å¼•äººçš„ç›´æ’­æ¨™é¡Œã€‚
-è¿”å›æ ¼å¼ï¼ˆç´”æ–‡å­—ï¼Œåªè¦ä¸€å€‹æ¨™é¡Œï¼Œä¸è¦å¼•è™Ÿï¼‰ï¼š
-ä¸€å€‹ç°¡çŸ­æœ‰åŠ›çš„ç›´æ’­æ¨™é¡Œï¼ˆ20å­—ä»¥å…§ï¼‰`;
+    const systemPrompt = context.systemPrompt + `\n\n§A¬O¤@­ÓTwitchª½¼½¼ĞÃD¥Í¦¨¨t²Î¡C®Ú¾Ú¨¤¦â³]©w¥Í¦¨§l¤Ş¤Hªºª½¼½¼ĞÃD¡C
+ªğ¦^®æ¦¡¡]¯Â¤å¦r¡A¥u­n¤@­Ó¼ĞÃD¡A¤£­n¤Ş¸¹¡^¡G
+¤@­ÓÂ²µu¦³¤Oªºª½¼½¼ĞÃD¡]20¦r¥H¤º¡^`;
 
-    const userPrompt = `è§’è‰²åç¨±ï¼š${character?.name || 'ä¸»æ’­'}
-è§’è‰²æ€§æ ¼ï¼š${character?.personality || 'ä¸€èˆ¬ä¸»æ’­'}
-è«‹ç”Ÿæˆä¸€å€‹ç¬¦åˆè§’è‰²é¢¨æ ¼çš„ç›´æ’­æ¨™é¡Œã€‚`;
+    const userPrompt = `¨¤¦â¦WºÙ¡G${character?.name || '¥D¼½'}
+¨¤¦â©Ê®æ¡G${character?.personality || '¤@¯ë¥D¼½'}
+½Ğ¥Í¦¨¤@­Ó²Å¦X¨¤¦â­·®æªºª½¼½¼ĞÃD¡C`;
 
     try {
         const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
@@ -117,21 +117,21 @@ async function generateChatMessage(character, context) {
     
     if (!settings.api_url || !settings.api_key) {
         const fallbackMessages = [
-            'å¥½çœ‹ï¼', 'åŠ æ²¹ï¼', 'å¤ªå¼·äº†', 'å“ˆå›‰ï¼', 'åˆæ¬¡è¦‹é¢',
-            'æ¨æ¨', 'å¤ªç¥äº†', 'å­¸åˆ°äº†', 'å“ˆå“ˆå“ˆ', 'ç‰›é€¼'
+            '¦n¬İ¡I', '¥[ªo¡I', '¤Ó±j¤F', '«¢Åo¡I', 'ªì¦¸¨£­±',
+            '±À±À', '¤Ó¯«¤F', '¾Ç¨ì¤F', '«¢«¢«¢', '¤û¹G'
         ];
         return fallbackMessages[Math.floor(Math.random() * fallbackMessages.length)];
     }
 
     const appContext = await buildAppContext({ characterId: character?.id });
-    const systemPrompt = appContext.systemPrompt + `\n\nä½ æ˜¯ä¸€å€‹TwitchèŠå¤©å®¤è§€çœ¾ã€‚æ ¹æ“šè§’è‰²è¨­å®šç”ŸæˆçœŸå¯¦çš„èŠå¤©è¨Šæ¯ã€‚
-è¿”å›æ ¼å¼ï¼ˆç´”æ–‡å­—ï¼Œåªè¦ä¸€å‰‡ç•™è¨€ï¼‰ï¼š
-ä¸€å‰‡ç°¡çŸ­çš„èŠå¤©å®¤ç•™è¨€ï¼ˆ30å­—ä»¥å…§ï¼‰`;
+    const systemPrompt = appContext.systemPrompt + `\n\n§A¬O¤@­ÓTwitch²á¤Ñ«ÇÆ[²³¡C®Ú¾Ú¨¤¦â³]©w¥Í¦¨¯u¹êªº²á¤Ñ°T®§¡C
+ªğ¦^®æ¦¡¡]¯Â¤å¦r¡A¥u­n¤@«h¯d¨¥¡^¡G
+¤@«hÂ²µuªº²á¤Ñ«Ç¯d¨¥¡]30¦r¥H¤º¡^`;
 
-    const userPrompt = `è§’è‰²åç¨±ï¼š${character?.name || 'è§€çœ¾'}
-è§’è‰²æ€§æ ¼ï¼š${character?.personality || 'ä¸€èˆ¬è§€çœ¾'}
-ç›´æ’­æƒ…å¢ƒï¼š${context || 'æ­£åœ¨è§€çœ‹ç›´æ’­'}
-è«‹ç”Ÿæˆä¸€å‰‡ç¬¦åˆè§’è‰²é¢¨æ ¼çš„èŠå¤©ç•™è¨€ã€‚`;
+    const userPrompt = `¨¤¦â¦WºÙ¡G${character?.name || 'Æ[²³'}
+¨¤¦â©Ê®æ¡G${character?.personality || '¤@¯ëÆ[²³'}
+ª½¼½±¡¹Ò¡G${context || '¥¿¦bÆ[¬İª½¼½'}
+½Ğ¥Í¦¨¤@«h²Å¦X¨¤¦â­·®æªº²á¤Ñ¯d¨¥¡C`;
 
     try {
         const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
@@ -165,20 +165,20 @@ async function generateStreamerResponse(character, viewerMessage) {
     
     if (!settings.api_url || !settings.api_key) {
         const fallbackResponses = [
-            'è¬è¬æ”¯æŒï¼', 'å¤ªæ„Ÿè¬äº†ï¼', 'ä½ å€‘æœ€æ£’äº†', 'æ„›ä½ å€‘ï¼', 'å“ˆå“ˆè¬å•¦'
+            'ÁÂÁÂ¤ä«ù¡I', '¤Ó·PÁÂ¤F¡I', '§A­Ì³Ì´Î¤F', '·R§A­Ì¡I', '«¢«¢ÁÂ°Õ'
         ];
         return fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
     }
 
     const context = await buildAppContext({ characterId: character?.id });
-    const systemPrompt = context.systemPrompt + `\n\nä½ æ˜¯æ­£åœ¨ç›´æ’­çš„ä¸»æ’­ã€‚æ ¹æ“šè§’è‰²è¨­å®šå›æ‡‰è§€çœ¾çš„ç•™è¨€ã€‚
-è¿”å›æ ¼å¼ï¼ˆç´”æ–‡å­—ï¼Œåªè¦ä¸€å‰‡å›æ‡‰ï¼‰ï¼š
-ä¸€å‰‡ç°¡çŸ­è‡ªç„¶çš„ç›´æ’­å›æ‡‰ï¼ˆ50å­—ä»¥å…§ï¼‰`;
+    const systemPrompt = context.systemPrompt + `\n\n§A¬O¥¿¦bª½¼½ªº¥D¼½¡C®Ú¾Ú¨¤¦â³]©w¦^À³Æ[²³ªº¯d¨¥¡C
+ªğ¦^®æ¦¡¡]¯Â¤å¦r¡A¥u­n¤@«h¦^À³¡^¡G
+¤@«hÂ²µu¦ÛµMªºª½¼½¦^À³¡]50¦r¥H¤º¡^`;
 
-    const userPrompt = `ä¸»æ’­åç¨±ï¼š${character?.name || 'ä¸»æ’­'}
-ä¸»æ’­æ€§æ ¼ï¼š${character?.personality || 'ä¸€èˆ¬ä¸»æ’­'}
-è§€çœ¾ç•™è¨€ï¼š${viewerMessage}
-è«‹ä»¥ä¸»æ’­èº«ä»½å›æ‡‰é€™å‰‡ç•™è¨€ã€‚`;
+    const userPrompt = `¥D¼½¦WºÙ¡G${character?.name || '¥D¼½'}
+¥D¼½©Ê®æ¡G${character?.personality || '¤@¯ë¥D¼½'}
+Æ[²³¯d¨¥¡G${viewerMessage}
+½Ğ¥H¥D¼½¨­¥÷¦^À³³o«h¯d¨¥¡C`;
 
     try {
         const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
@@ -210,16 +210,16 @@ async function generateStreamerResponse(character, viewerMessage) {
 function createCharacterSelector() {
     const container = createElement('div', 'twitch-char-selector');
     
-    const label = createElement('span', 'twitch-char-label', { textContent: 'é¸æ“‡è§’è‰²ï¼š' });
+    const label = createElement('span', 'twitch-char-label', { textContent: '¿ï¾Ü¨¤¦â¡G' });
     container.appendChild(label);
     
     const select = createElement('select', 'twitch-char-select');
-    select.innerHTML = '<option value=''>-- é¸æ“‡è§’è‰² --</option>';
+    select.innerHTML = '<option value=''>-- ¿ï¾Ü¨¤¦â --</option>';
     
     state.characters.forEach(char => {
         const option = createElement('option', '', { 
             value: char.id, 
-            textContent: char.name || 'æœªå‘½å' 
+            textContent: char.name || '¥¼©R¦W' 
         });
         if (char.id === state.currentCharacterId) {
             option.selected = true;
@@ -245,7 +245,7 @@ function createStreamCard(stream, onClick) {
     thumb.appendChild(liveBadge);
     
     const viewerBadge = createElement('span', 'twitch-viewer-badge', { 
-        textContent: `${formatViewers(stream.viewers)} è§€çœ¾` 
+        textContent: `${formatViewers(stream.viewers)} Æ[²³` 
     });
     thumb.appendChild(viewerBadge);
     
@@ -300,10 +300,10 @@ function createTwitchBottomNav() {
     const nav = createElement('footer', 'twitch-bottombar');
     
     const items = [
-        { icon: 'home', label: 'é¦–é ', path: '/twitch' },
-        { icon: 'explore', label: 'æ¢ç´¢', path: '/twitch/explore' },
-        { icon: 'follow', label: 'è¿½éš¨', path: '/twitch/following' },
-        { icon: 'person', label: 'æˆ‘çš„', path: '/twitch/profile' }
+        { icon: 'home', label: '­º­¶', path: '/twitch' },
+        { icon: 'explore', label: '±´¯Á', path: '/twitch/explore' },
+        { icon: 'follow', label: '°lÀH', path: '/twitch/following' },
+        { icon: 'person', label: '§Úªº', path: '/twitch/profile' }
     ];
     
     items.forEach(item => {
@@ -324,7 +324,7 @@ async function generateLivestreams(count = 8) {
     for (let i = 0; i < count; i++) {
         const char = state.characters[i % state.characters.length] || null;
         
-        let title = char?.name ? `${char.name}çš„ç›´æ’­æ™‚é–“ï¼` : `ç²¾å½©ç›´æ’­ ${i + 1}`;
+        let title = char?.name ? `${char.name}ªºª½¼½®É¶¡¡I` : `ºë±mª½¼½ ${i + 1}`;
         
         if (char && state.currentCharacterId === char.id) {
             const aiTitle = await generateStreamTitle(char);
@@ -334,7 +334,7 @@ async function generateLivestreams(count = 8) {
         streams.push({
             id: `stream_${Date.now()}_${i}`,
             title,
-            streamer: char?.name || `ä¸»æ’­${i + 1}`,
+            streamer: char?.name || `¥D¼½${i + 1}`,
             game: games[Math.floor(Math.random() * games.length)],
             viewers: randomViewers(),
             thumbGradient: generateThumbnail(),
@@ -365,7 +365,7 @@ async function renderHome() {
     container.appendChild(charSelector);
     
     const categories = createElement('div', 'twitch-categories');
-    const categoryList = ['å…¨éƒ¨', 'éŠæˆ²', 'èŠå¤©', 'éŸ³æ¨‚', 'å‰µä½œ', 'æˆ¶å¤–'];
+    const categoryList = ['¥ş³¡', '¹CÀ¸', '²á¤Ñ', '­µ¼Ö', '³Ğ§@', '¤á¥~'];
     categoryList.forEach((cat, i) => {
         const btn = createElement('button', `twitch-cat-btn ${i === 0 ? 'active' : ''}`, { textContent: cat });
         btn.onclick = () => {
@@ -379,7 +379,7 @@ async function renderHome() {
     const main = createElement('main', 'twitch-main');
     
     const section = createElement('section', 'twitch-section');
-    section.appendChild(createElement('div', 'twitch-section-title', { textContent: 'ç‚ºä½ æ¨è–¦' }));
+    section.appendChild(createElement('div', 'twitch-section-title', { textContent: '¬°§A±ÀÂË' }));
     
     const feed = createElement('div', 'twitch-feed');
     
@@ -405,8 +405,8 @@ async function renderHome() {
 
 async function renderStream(params) {
     const streamId = params.id;
-    const streamTitle = decodeURIComponent(params.title || 'ç›´æ’­');
-    const streamerName = decodeURIComponent(params.streamer || 'ä¸»æ’­');
+    const streamTitle = decodeURIComponent(params.title || 'ª½¼½');
+    const streamerName = decodeURIComponent(params.streamer || '¥D¼½');
     
     const character = state.characters.find(c => c.id === state.currentCharacterId);
     
@@ -454,12 +454,12 @@ async function renderStream(params) {
     streamerInfo.appendChild(avatar);
     streamerInfo.appendChild(nameAndGame);
     
-    const followBtn = createElement('button', 'twitch-follow-btn', { textContent: 'è¿½éš¨' });
+    const followBtn = createElement('button', 'twitch-follow-btn', { textContent: '°lÀH' });
     followBtn.onclick = () => {
         state.isFollowing = !state.isFollowing;
-        followBtn.textContent = state.isFollowing ? 'å·²è¿½éš¨' : 'è¿½éš¨';
+        followBtn.textContent = state.isFollowing ? '¤w°lÀH' : '°lÀH';
         followBtn.classList.toggle('following', state.isFollowing);
-        createToast(state.isFollowing ? 'å·²è¿½éš¨ï¼' : 'å·²å–æ¶ˆè¿½éš¨');
+        createToast(state.isFollowing ? '¤w°lÀH¡I' : '¤w¨ú®ø°lÀH');
     };
     streamerInfo.appendChild(followBtn);
     
@@ -467,13 +467,13 @@ async function renderStream(params) {
     container.appendChild(streamInfo);
     
     const chatSection = createElement('div', 'twitch-chat-section');
-    chatSection.appendChild(createElement('div', 'twitch-chat-header', { textContent: 'ç›´æ’­èŠå¤©å®¤' }));
+    chatSection.appendChild(createElement('div', 'twitch-chat-header', { textContent: 'ª½¼½²á¤Ñ«Ç' }));
     
     const chatMessages = createElement('div', 'twitch-chat-messages');
     chatSection.appendChild(chatMessages);
     
     const chatInput = createElement('div', 'twitch-chat-input-row');
-    const input = createElement('input', 'twitch-chat-input', { type: 'text', placeholder: 'å‚³é€è¨Šæ¯...' });
+    const input = createElement('input', 'twitch-chat-input', { type: 'text', placeholder: '¶Ç°e°T®§...' });
     const sendBtn = createElement('button', 'twitch-chat-send');
     sendBtn.appendChild(createIcon('send', 'text-white'));
     
@@ -481,7 +481,7 @@ async function renderStream(params) {
         const text = input.value.trim();
         if (!text) return;
         
-        const msg = createChatMessage({ author: 'ä½ ', text, color: '#00D4FF' });
+        const msg = createChatMessage({ author: '§A', text, color: '#00D4FF' });
         chatMessages.appendChild(msg);
         chatMessages.scrollTop = chatMessages.scrollHeight;
         input.value = '';
@@ -515,7 +515,7 @@ async function renderStream(params) {
             const message = await generateChatMessage(randomChar, streamTitle);
             if (message) {
                 const msg = createChatMessage({ 
-                    author: randomChar.name || 'è§€çœ¾', 
+                    author: randomChar.name || 'Æ[²³', 
                     text: message 
                 });
                 chatMessages.appendChild(msg);
@@ -543,7 +543,7 @@ async function renderExplore() {
     const container = createElement('div', 'twitch-app');
     
     const header = createIOSNavBar({
-        title: 'æ¢ç´¢',
+        title: '±´¯Á',
         backPath: '/twitch'
     });
     container.appendChild(header);
@@ -551,14 +551,14 @@ async function renderExplore() {
     const search = createElement('div', 'twitch-search-row');
     const searchBox = createElement('div', 'twitch-search');
     searchBox.appendChild(createIcon('search', 'text-ios-muted'));
-    searchBox.appendChild(createElement('input', '', { type: 'text', placeholder: 'æœå°‹ç›´æ’­æˆ–é »é“' }));
+    searchBox.appendChild(createElement('input', '', { type: 'text', placeholder: '·j´Mª½¼½©ÎÀW¹D' }));
     search.appendChild(searchBox);
     container.appendChild(search);
     
     const main = createElement('main', 'twitch-main');
     
     const gamesSection = createElement('section', 'twitch-section');
-    gamesSection.appendChild(createElement('div', 'twitch-section-title', { textContent: 'ç†±é–€åˆ†é¡' }));
+    gamesSection.appendChild(createElement('div', 'twitch-section-title', { textContent: '¼öªù¤ÀÃş' }));
     
     const games = ['Just Chatting', 'League of Legends', 'Valorant', 'Minecraft', 'Genshin Impact'];
     const gamesGrid = createElement('div', 'twitch-games-grid');
@@ -584,7 +584,7 @@ async function renderFollowing() {
     const container = createElement('div', 'twitch-app');
     
     const header = createIOSNavBar({
-        title: 'è¿½éš¨',
+        title: '°lÀH',
         backPath: '/twitch'
     });
     container.appendChild(header);
@@ -594,11 +594,11 @@ async function renderFollowing() {
     if (state.characters.length === 0) {
         const empty = createElement('div', 'twitch-empty');
         empty.appendChild(createIcon('person_add', 'text-5xl opacity-30'));
-        empty.appendChild(createElement('div', 'mt-2', { textContent: 'å°šæœªè¿½éš¨ä»»ä½•é »é“' }));
+        empty.appendChild(createElement('div', 'mt-2', { textContent: '©|¥¼°lÀH¥ô¦óÀW¹D' }));
         main.appendChild(empty);
     } else {
         const section = createElement('section', 'twitch-section');
-        section.appendChild(createElement('div', 'twitch-section-title', { textContent: 'å·²è¿½éš¨é »é“' }));
+        section.appendChild(createElement('div', 'twitch-section-title', { textContent: '¤w°lÀHÀW¹D' }));
         
         const list = createElement('div', 'twitch-following-list');
         
@@ -609,8 +609,8 @@ async function renderFollowing() {
                 avatar.style.backgroundImage = `url(${char.avatar})`;
             }
             const info = createElement('div', 'twitch-following-info');
-            info.appendChild(createElement('div', 'font-semibold', { textContent: char.name || 'æœªå‘½å' }));
-            info.appendChild(createElement('div', 'text-sm text-ios-muted', { textContent: Math.random() > 0.5 ? 'æ­£åœ¨ç›´æ’­' : 'é›¢ç·š' }));
+            info.appendChild(createElement('div', 'font-semibold', { textContent: char.name || '¥¼©R¦W' }));
+            info.appendChild(createElement('div', 'text-sm text-ios-muted', { textContent: Math.random() > 0.5 ? '¥¿¦bª½¼½' : 'Â÷½u' }));
             
             item.appendChild(avatar);
             item.appendChild(info);
@@ -639,7 +639,7 @@ async function renderProfile() {
     const container = createElement('div', 'twitch-app');
     
     const header = createIOSNavBar({
-        title: 'æˆ‘çš„',
+        title: '§Úªº',
         backPath: '/twitch',
         rightActions: [
             { icon: 'settings', onClick: () => Router.navigate('/settings') }
@@ -652,18 +652,18 @@ async function renderProfile() {
     const headerCard = createElement('div', 'twitch-profile-header');
     const avatar = createElement('div', 'twitch-profile-avatar');
     const info = createElement('div', 'twitch-profile-info');
-    info.appendChild(createElement('div', 'font-bold text-lg', { textContent: 'Twitchç”¨æˆ¶' }));
+    info.appendChild(createElement('div', 'font-bold text-lg', { textContent: 'Twitch¥Î¤á' }));
     info.appendChild(createElement('div', 'text-ios-muted text-sm', { textContent: '@twitch_user' }));
     headerCard.appendChild(avatar);
     headerCard.appendChild(info);
-    headerCard.appendChild(createElement('button', 'twitch-ghost-btn', { textContent: 'ç·¨è¼¯' }));
+    headerCard.appendChild(createElement('button', 'twitch-ghost-btn', { textContent: '½s¿è' }));
     profile.appendChild(headerCard);
     
     const stats = createElement('div', 'twitch-profile-stats');
     stats.innerHTML = `
-        <div><span class='font-bold'>32</span><small>è¿½éš¨</small></div>
-        <div><span class='font-bold'>1.2K</span><small>è§€çœ‹æ™‚æ•¸</small></div>
-        <div><span class='font-bold'>8</span><small>æ”¶è—</small></div>
+        <div><span class='font-bold'>32</span><small>°lÀH</small></div>
+        <div><span class='font-bold'>1.2K</span><small>Æ[¬İ®É¼Æ</small></div>
+        <div><span class='font-bold'>8</span><small>¦¬ÂÃ</small></div>
     `;
     profile.appendChild(stats);
     
@@ -679,7 +679,7 @@ async function renderNotifications() {
     const container = createElement('div', 'twitch-app');
     
     const header = createIOSNavBar({
-        title: 'é€šçŸ¥',
+        title: '³qª¾',
         backPath: '/twitch'
     });
     container.appendChild(header);
@@ -688,7 +688,7 @@ async function renderNotifications() {
     
     const empty = createElement('div', 'twitch-empty');
     empty.appendChild(createIcon('notifications', 'text-5xl opacity-30'));
-    empty.appendChild(createElement('div', 'mt-2', { textContent: 'æš«ç„¡æ–°é€šçŸ¥' }));
+    empty.appendChild(createElement('div', 'mt-2', { textContent: '¼ÈµL·s³qª¾' }));
     main.appendChild(empty);
     
     container.appendChild(main);

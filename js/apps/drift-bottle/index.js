@@ -213,14 +213,14 @@ async function renderDriftBottle(params) {
   if (drawBtn) {
     drawBtn.onclick = async () => {
       drawBtn.disabled = true;
-      drawBtn.innerHTML = "`<i class=`"`fas fa-spinner fa-spin`"`></i> 占卜中...`";
+      drawBtn.innerHTML = '`<i class=`'`fas fa-spinner fa-spin`'`></i> 占卜中...`';
       
       const card = await drawCard(selectedCharacterId);
       renderCard(container, card);
       await saveLastCard();
       
       drawBtn.disabled = false;
-      drawBtn.innerHTML = "`<i class=`"`fas fa-water_bottle`"`></i> 撿起漂流瓶`";
+      drawBtn.innerHTML = '`<i class=`'`fas fa-water_bottle`'`></i> 撿起漂流瓶`';
     };
   }
   

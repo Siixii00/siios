@@ -1,13 +1,13 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, TheaterSettingsDB } from '../../db.js';
 
 const MEMORY_SOURCES = [
-    { id: 'chat', name: 'å°è©±', icon: 'chat' },
+    { id: 'chat', name: '¹ï¸Ü', icon: 'chat' },
     { id: 'youtube', name: 'YouTube', icon: 'play_circle' },
     { id: 'instagram', name: 'Instagram', icon: 'camera_alt' },
     { id: 'chrome', name: 'Chrome', icon: 'language' },
-    { id: 'dating', name: 'ç´„æœƒ', icon: 'favorite' },
+    { id: 'dating', name: '¬ù·|', icon: 'favorite' },
     { id: 'bubbles', name: 'Bubbles', icon: 'bubble' },
     { id: 'weverse', name: 'Weverse', icon: 'groups' },
     { id: 'bilibili', name: 'Bilibili', icon: 'smart_display' },
@@ -43,9 +43,9 @@ async function renderMemorySettings() {
     const header = createElement('header', 'ios-header');
     header.innerHTML = `
         <button class='ios-back-btn'>
-            <i class='fas fa-chevron-left'></i> è¿”å›
+            <i class='fas fa-chevron-left'></i> ªğ¦^
         </button>
-        <h1 class='menu-title'>è¨˜æ†¶è¨­å®š</h1>
+        <h1 class='menu-title'>°O¾Ğ³]©w</h1>
         <div class='header-actions'></div>
     `;
     header.querySelector('.ios-back-btn').onclick = () => Router.navigate('/chats/settings');
@@ -55,14 +55,14 @@ async function renderMemorySettings() {
     
     // Theater Selection
     const theaterSection = createElement('div', 'px-4 mt-4');
-    theaterSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'åŠ‡å ´/ä¸–ç•Œè§€' }));
+    theaterSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¼@³õ/¥@¬ÉÆ[' }));
     
     const theaterDesc = createElement('p', 'text-sm text-ios-muted mb-2');
-    theaterDesc.textContent = 'é¸æ“‡æ­¤å°è©±ä½¿ç”¨çš„ä¸–ç•Œè§€ï¼Œè¨˜æ†¶å°‡æ ¹æ“šæ‰€é¸åŠ‡å ´ç¯©é¸';
+    theaterDesc.textContent = '¿ï¾Ü¦¹¹ï¸Ü¨Ï¥Îªº¥@¬ÉÆ[¡A°O¾Ğ±N®Ú¾Ú©Ò¿ï¼@³õ¿z¿ï';
     theaterSection.appendChild(theaterDesc);
     
     const theaterSelect = createElement('select', 'w-full p-3 rounded-lg border border-ios-border bg-ios-surface text-ios-text');
-    theaterSelect.innerHTML = `<option value=''>ä¸»ç·šï¼ˆç„¡ç‰¹å®šåŠ‡å ´ï¼‰</option>`;
+    theaterSelect.innerHTML = `<option value=''>¥D½u¡]µL¯S©w¼@³õ¡^</option>`;
     theaters.forEach(t => {
         const option = createElement('option', '');
         option.value = t.id;
@@ -73,17 +73,17 @@ async function renderMemorySettings() {
     theaterSelect.onchange = () => {
         memorySettings.bound_theater_id = theaterSelect.value || null;
         saveMemorySettings();
-        createToast('å·²å„²å­˜åŠ‡å ´è¨­å®š');
+        createToast('¤wÀx¦s¼@³õ³]©w');
     };
     theaterSection.appendChild(theaterSelect);
     main.appendChild(theaterSection);
     
     // Memory Sources
     const sourceSection = createElement('div', 'px-4 mt-6');
-    sourceSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'è¨˜æ†¶ä¾†æº' }));
+    sourceSection.appendChild(createElement('p', 'ios-section-header', { textContent: '°O¾Ğ¨Ó·½' }));
     
     const sourceDesc = createElement('p', 'text-sm text-ios-muted mb-2');
-    sourceDesc.textContent = 'é¸æ“‡è¦åŒ…å«åœ¨å°è©±ä¸­çš„è·¨æ‡‰ç”¨ç¨‹å¼è¨˜æ†¶';
+    sourceDesc.textContent = '¿ï¾Ü­n¥]§t¦b¹ï¸Ü¤¤ªº¸óÀ³¥Îµ{¦¡°O¾Ğ';
     sourceSection.appendChild(sourceDesc);
     
     const sourceGrid = createElement('div', 'grid grid-cols-2 gap-2');
@@ -96,7 +96,7 @@ async function renderMemorySettings() {
         
         chip.onclick = async () => {
             if (source.id === 'chat') {
-                createToast('å°è©±è¨˜æ†¶ç‚ºå¿…é¸é …ç›®');
+                createToast('¹ï¸Ü°O¾Ğ¬°¥²¿ï¶µ¥Ø');
                 return;
             }
             
@@ -117,30 +117,30 @@ async function renderMemorySettings() {
     
     // Memory Level
     const levelSection = createElement('div', 'px-4 mt-6');
-    levelSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'è¨˜æ†¶å±¤ç´š' }));
+    levelSection.appendChild(createElement('p', 'ios-section-header', { textContent: '°O¾Ğ¼h¯Å' }));
     
     const levelDesc = createElement('p', 'text-sm text-ios-muted mb-2');
-    levelDesc.textContent = 'é¸æ“‡è¨˜æ†¶çš„è©³ç´°ç¨‹åº¦';
+    levelDesc.textContent = '¿ï¾Ü°O¾Ğªº¸Ô²Óµ{«×';
     levelSection.appendChild(levelDesc);
     
     const levelControl = createElement('div', 'flex gap-2');
     
     const metaBtn = createElement('button', `flex-1 py-3 rounded-lg font-medium transition-colors ${memorySettings.memory_level === 'meta' ? 'bg-ios-accent text-white' : 'bg-ios-surface border border-ios-border text-ios-text'}`);
-    metaBtn.textContent = 'ç°¡è¦ï¼ˆåƒ…äº‹å¯¦ï¼‰';
+    metaBtn.textContent = 'Â²­n¡]¶È¨Æ¹ê¡^';
     metaBtn.onclick = async () => {
         memorySettings.memory_level = 'meta';
         await saveMemorySettings();
-        createToast('å·²è¨­å®šç‚ºç°¡è¦æ¨¡å¼');
+        createToast('¤w³]©w¬°Â²­n¼Ò¦¡');
         Router.navigate('/memory-settings');
     };
     levelControl.appendChild(metaBtn);
     
     const fullBtn = createElement('button', `flex-1 py-3 rounded-lg font-medium transition-colors ${memorySettings.memory_level === 'full' ? 'bg-ios-accent text-white' : 'bg-ios-surface border border-ios-border text-ios-text'}`);
-    fullBtn.textContent = 'å®Œæ•´ï¼ˆå«å…§å®¹ï¼‰';
+    fullBtn.textContent = '§¹¾ã¡]§t¤º®e¡^';
     fullBtn.onclick = async () => {
         memorySettings.memory_level = 'full';
         await saveMemorySettings();
-        createToast('å·²è¨­å®šç‚ºå®Œæ•´æ¨¡å¼');
+        createToast('¤w³]©w¬°§¹¾ã¼Ò¦¡');
         Router.navigate('/memory-settings');
     };
     levelControl.appendChild(fullBtn);
@@ -150,17 +150,17 @@ async function renderMemorySettings() {
     
     // Fiction Toggle
     const fictionSection = createElement('div', 'px-4 mt-6');
-    fictionSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'è™›æ“¬å…§å®¹' }));
+    fictionSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'µêÀÀ¤º®e' }));
     
     const fictionDesc = createElement('p', 'text-sm text-ios-muted mb-2');
-    fictionDesc.textContent = 'æ˜¯å¦åŒ…å«åŒäººå‰µä½œï¼ˆAO3ã€Lofterï¼‰ç­‰è™›æ“¬å…§å®¹è¨˜æ†¶';
+    fictionDesc.textContent = '¬O§_¥]§t¦P¤H³Ğ§@¡]AO3¡BLofter¡^µ¥µêÀÀ¤º®e°O¾Ğ';
     fictionSection.appendChild(fictionDesc);
     
     const fictionToggle = createElement('div', 'flex items-center justify-between p-3 bg-ios-surface rounded-lg border border-ios-border');
     fictionToggle.innerHTML = `
         <div class='flex items-center gap-2'>
             <span class='material-symbols-outlined text-ios-text'>menu_book</span>
-            <span class='text-ios-text'>åŒ…å«è™›æ“¬å…§å®¹è¨˜æ†¶</span>
+            <span class='text-ios-text'>¥]§tµêÀÀ¤º®e°O¾Ğ</span>
         </div>
         <div class='w-12 h-7 rounded-full ${memorySettings.include_fiction ? 'bg-ios-accent' : 'bg-gray-300'} relative transition-colors'>
             <div class='w-5 h-5 rounded-full bg-white absolute top-1 ${memorySettings.include_fiction ? 'right-1' : 'left-1'} transition-all'></div>
@@ -170,7 +170,7 @@ async function renderMemorySettings() {
     fictionToggle.onclick = async () => {
         memorySettings.include_fiction = !memorySettings.include_fiction;
         await saveMemorySettings();
-        createToast(memorySettings.include_fiction ? 'å·²å•Ÿç”¨è™›æ“¬å…§å®¹' : 'å·²åœç”¨è™›æ“¬å…§å®¹');
+        createToast(memorySettings.include_fiction ? '¤w±Ò¥ÎµêÀÀ¤º®e' : '¤w°±¥ÎµêÀÀ¤º®e');
         Router.navigate('/memory-settings');
     };
     fictionSection.appendChild(fictionToggle);
@@ -178,15 +178,15 @@ async function renderMemorySettings() {
     
     // Info Section
     const infoSection = createElement('div', 'px-4 mt-6 mb-4');
-    infoSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'èªªæ˜' }));
+    infoSection.appendChild(createElement('p', 'ios-section-header', { textContent: '»¡©ú' }));
     
     const infoBox = createElement('div', 'p-4 bg-ios-surface rounded-lg border border-ios-border text-sm text-ios-muted');
     infoBox.innerHTML = `
-        <p class='mb-2'><strong>è¨˜æ†¶å±¤ç´šèªªæ˜ï¼š</strong></p>
-        <p class='mb-2'>â€¢ <strong>ç°¡è¦</strong>ï¼šåƒ…è¨˜éŒ„ã€Œå’Œç”¨æˆ¶åœ¨ YouTube çœ‹äº†å½±ç‰‡ã€ç­‰äº‹å¯¦ï¼Œä¸å«å…·é«”å…§å®¹</p>
-        <p class='mb-2'>â€¢ <strong>å®Œæ•´</strong>ï¼šåŒ…å«å®Œæ•´çš„äº’å‹•å…§å®¹ï¼Œå¦‚å½±ç‰‡æ¨™é¡Œã€è©•è«–ç­‰</p>
-        <p class='mt-3'><strong>åŠ‡å ´/ä¸–ç•Œè§€ï¼š</strong></p>
-        <p class='mb-2'>ä¸åŒåŠ‡å ´çš„è¨˜æ†¶æœƒåˆ†é–‹å„²å­˜ï¼Œé¿å…ä¸åŒä¸–ç•Œè§€çš„ IF ç·šæ··æ·†</p>
+        <p class='mb-2'><strong>°O¾Ğ¼h¯Å»¡©ú¡G</strong></p>
+        <p class='mb-2'>¡E <strong>Â²­n</strong>¡G¶È°O¿ı¡u©M¥Î¤á¦b YouTube ¬İ¤F¼v¤ù¡vµ¥¨Æ¹ê¡A¤£§t¨ãÅé¤º®e</p>
+        <p class='mb-2'>¡E <strong>§¹¾ã</strong>¡G¥]§t§¹¾ãªº¤¬°Ê¤º®e¡A¦p¼v¤ù¼ĞÃD¡Bµû½×µ¥</p>
+        <p class='mt-3'><strong>¼@³õ/¥@¬ÉÆ[¡G</strong></p>
+        <p class='mb-2'>¤£¦P¼@³õªº°O¾Ğ·|¤À¶}Àx¦s¡AÁ×§K¤£¦P¥@¬ÉÆ[ªº IF ½u²V²c</p>
     `;
     infoSection.appendChild(infoBox);
     main.appendChild(infoSection);

@@ -1,4 +1,4 @@
-﻿class Encryption {
+class Encryption {
   static async generateKey() {
     const key = await crypto.subtle.generateKey(
       { name: 'AES-GCM', length: 256 },

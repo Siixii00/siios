@@ -727,7 +727,7 @@ ${charInfo ? `\n角色設定:\n${charInfo}` : ''}
         listContainer.innerHTML = '';
 
         if (characters.length === 0) {
-            listContainer.innerHTML = "`<div class=`"`empty-hint`"`>請先在設定中添加角色</div>`";
+            listContainer.innerHTML = '`<div class=`'`empty-hint`'`>請先在設定中添加角色</div>`';
             return;
         }
 

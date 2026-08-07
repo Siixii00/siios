@@ -1,4 +1,4 @@
-ï»¿import { TOOLS_CATALOG } from './tools-catalog.js';
+import { TOOLS_CATALOG } from './tools-catalog.js';
 import { generateZipContent } from './code-templates.js';
 
 const testResults = {
@@ -36,15 +36,15 @@ function checkRequiredImports(code) {
     const issues = [];
     
     if (!code.includes('export default')) {
-        issues.push('ç¼ºå°‘ export default');
+        issues.push('¯Ê¤Ö export default');
     }
     
     if (!code.includes('fetch(request, env, ctx)')) {
-        issues.push('ç¼ºå°‘ fetch è™•ç†å‡½æ•¸');
+        issues.push('¯Ê¤Ö fetch ³B²z¨ç¼Æ');
     }
     
     if (!code.includes('/tools') || !code.includes('/tools/call')) {
-        issues.push('ç¼ºå°‘å¿…è¦çš„ç«¯é»å®šç¾©');
+        issues.push('¯Ê¤Ö¥²­nªººİÂI©w¸q');
     }
     
     return issues;
@@ -83,16 +83,16 @@ function validateToolDefinitions(code, toolIds) {
     toolIds.forEach(id => {
         const tool = TOOLS_CATALOG.find(t => t.id === id);
         if (!tool) {
-            issues.push(`å·¥å…· ${id} ä¸åœ¨ TOOLS_CATALOG ä¸­`);
+            issues.push(`¤u¨ã ${id} ¤£¦b TOOLS_CATALOG ¤¤`);
             return;
         }
         
         if (!code.includes(`name: '${tool.name}'`)) {
-            issues.push(`ç¼ºå°‘å·¥å…·å®šç¾©: ${tool.name} (${id})`);
+            issues.push(`¯Ê¤Ö¤u¨ã©w¸q: ${tool.name} (${id})`);
         }
         
         if (!code.includes(`case '${tool.name}':`)) {
-            issues.push(`ç¼ºå°‘å·¥å…·åŸ·è¡Œé‚è¼¯: ${tool.name} (${id})`);
+            issues.push(`¯Ê¤Ö¤u¨ã°õ¦æÅŞ¿è: ${tool.name} (${id})`);
         }
     });
     
@@ -100,42 +100,42 @@ function validateToolDefinitions(code, toolIds) {
 }
 
 async function testSingleTool(toolId) {
-    log(`\næ¸¬è©¦å·¥å…·: ${toolId}`, 'info');
+    log(`\n´ú¸Õ¤u¨ã: ${toolId}`, 'info');
     
     try {
         const files = generateZipContent([toolId]);
         const workerCode = files['worker.js'];
         
         if (!workerCode) {
-            throw new Error('ç„¡æ³•ç”Ÿæˆ worker.js');
+            throw new Error('µLªk¥Í¦¨ worker.js');
         }
         
         const syntaxResult = validateJavaScriptSyntax(workerCode, 'worker.js');
         if (!syntaxResult.valid) {
-            throw new Error(`èªæ³•éŒ¯èª¤ (è¡Œ ${syntaxResult.line}): ${syntaxResult.error}`);
+            throw new Error(`»yªk¿ù»~ (¦æ ${syntaxResult.line}): ${syntaxResult.error}`);
         }
         
         const importIssues = checkRequiredImports(workerCode);
         if (importIssues.length > 0) {
-            log(`  âš  åŒ¯å…¥å•é¡Œ: ${importIssues.join(', ')}`, 'warning');
+            log(`  ? ¶×¤J°İÃD: ${importIssues.join(', ')}`, 'warning');
         }
         
         const envIssues = checkEnvironmentVariables(workerCode, [toolId]);
         if (envIssues.length > 0) {
-            log(`  âš  éœ€è¦è¨­å®šç’°å¢ƒè®Šæ•¸: ${envIssues.join(', ')}`, 'warning');
+            log(`  ? »İ­n³]©wÀô¹ÒÅÜ¼Æ: ${envIssues.join(', ')}`, 'warning');
         }
         
         const toolIssues = validateToolDefinitions(workerCode, [toolId]);
         if (toolIssues.length > 0) {
-            throw new Error(`å·¥å…·å®šç¾©å•é¡Œ: ${toolIssues.join(', ')}`);
+            throw new Error(`¤u¨ã©w¸q°İÃD: ${toolIssues.join(', ')}`);
         }
         
-        log(`  âœ“ é€šé`, 'success');
+        log(`  ? ³q¹L`, 'success');
         testResults.passed++;
         return true;
         
     } catch (error) {
-        log(`  âœ— å¤±æ•—: ${error.message}`, 'error');
+        log(`  ? ¥¢±Ñ: ${error.message}`, 'error');
         testResults.failed++;
         testResults.errors.push({
             tool: toolId,
@@ -147,37 +147,37 @@ async function testSingleTool(toolId) {
 
 async function testMultipleTools(toolIds) {
     const combinationName = toolIds.slice(0, 3).join('+') + (toolIds.length > 3 ? '...' : '');
-    log(`\næ¸¬è©¦çµ„åˆ: ${combinationName} (${toolIds.length} å€‹å·¥å…·)`, 'info');
+    log(`\n´ú¸Õ²Õ¦X: ${combinationName} (${toolIds.length} ­Ó¤u¨ã)`, 'info');
     
     try {
         const files = generateZipContent(toolIds);
         const workerCode = files['worker.js'];
         
         if (!workerCode) {
-            throw new Error('ç„¡æ³•ç”Ÿæˆ worker.js');
+            throw new Error('µLªk¥Í¦¨ worker.js');
         }
         
         const syntaxResult = validateJavaScriptSyntax(workerCode, 'worker.js');
         if (!syntaxResult.valid) {
-            throw new Error(`èªæ³•éŒ¯èª¤ (è¡Œ ${syntaxResult.line}): ${syntaxResult.error}`);
+            throw new Error(`»yªk¿ù»~ (¦æ ${syntaxResult.line}): ${syntaxResult.error}`);
         }
         
         const importIssues = checkRequiredImports(workerCode);
         if (importIssues.length > 0) {
-            log(`  âš  åŒ¯å…¥å•é¡Œ: ${importIssues.join(', ')}`, 'warning');
+            log(`  ? ¶×¤J°İÃD: ${importIssues.join(', ')}`, 'warning');
         }
         
         const toolIssues = validateToolDefinitions(workerCode, toolIds);
         if (toolIssues.length > 0) {
-            throw new Error(`å·¥å…·å®šç¾©å•é¡Œ: ${toolIssues.join(', ')}`);
+            throw new Error(`¤u¨ã©w¸q°İÃD: ${toolIssues.join(', ')}`);
         }
         
-        log(`  âœ“ é€šé`, 'success');
+        log(`  ? ³q¹L`, 'success');
         testResults.passed++;
         return true;
         
     } catch (error) {
-        log(`  âœ— å¤±æ•—: ${error.message}`, 'error');
+        log(`  ? ¥¢±Ñ: ${error.message}`, 'error');
         testResults.failed++;
         testResults.errors.push({
             tools: toolIds,
@@ -189,20 +189,20 @@ async function testMultipleTools(toolIds) {
 
 async function runAllTests() {
     log('\n========================================', 'info');
-    log('MCP Worker ç¨‹å¼ç¢¼èªæ³•æª¢æŸ¥æ¸¬è©¦', 'info');
+    log('MCP Worker µ{¦¡½X»yªkÀË¬d´ú¸Õ', 'info');
     log('========================================\n', 'info');
     
     const allToolIds = TOOLS_CATALOG.map(t => t.id);
     testResults.total = allToolIds.length + 3;
     
-    log(`ç¸½å…± ${allToolIds.length} å€‹å·¥å…·\n`, 'info');
+    log(`Á`¦@ ${allToolIds.length} ­Ó¤u¨ã\n`, 'info');
     
     for (const toolId of allToolIds) {
         await testSingleTool(toolId);
     }
     
     log('\n----------------------------------------', 'info');
-    log('æ¸¬è©¦å·¥å…·çµ„åˆ', 'info');
+    log('´ú¸Õ¤u¨ã²Õ¦X', 'info');
     log('----------------------------------------', 'info');
     
     await testMultipleTools(['daily_weather', 'daily_reminder', 'daily_recipe']);
@@ -212,20 +212,20 @@ async function runAllTests() {
     await testMultipleTools(allToolIds);
     
     log('\n========================================', 'info');
-    log('æ¸¬è©¦çµæœæ‘˜è¦', 'info');
+    log('´ú¸Õµ²ªGºK­n', 'info');
     log('========================================', 'info');
-    log(`ç¸½æ¸¬è©¦æ•¸: ${testResults.total}`, 'info');
-    log(`é€šé: ${testResults.passed}`, 'success');
-    log(`å¤±æ•—: ${testResults.failed}`, testResults.failed > 0 ? 'error' : 'info');
+    log(`Á`´ú¸Õ¼Æ: ${testResults.total}`, 'info');
+    log(`³q¹L: ${testResults.passed}`, 'success');
+    log(`¥¢±Ñ: ${testResults.failed}`, testResults.failed > 0 ? 'error' : 'info');
     
     if (testResults.errors.length > 0) {
-        log('\nå¤±æ•—è©³æƒ…:', 'error');
+        log('\n¥¢±Ñ¸Ô±¡:', 'error');
         testResults.errors.forEach((err, i) => {
             log(`${i + 1}. ${err.tool || err.tools?.join('+')}: ${err.error}`, 'error');
         });
     }
     
-    log('\næ¸¬è©¦å®Œæˆï¼', testResults.failed === 0 ? 'success' : 'warning');
+    log('\n´ú¸Õ§¹¦¨¡I', testResults.failed === 0 ? 'success' : 'warning');
     
     return testResults;
 }

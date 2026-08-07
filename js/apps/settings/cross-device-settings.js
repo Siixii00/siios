@@ -20,7 +20,7 @@ async function renderCrossDeviceSettings() {
     const backBtn = createElement('button', 'ios-back-btn', {
         onClick: () => Router.navigate('/settings')
     });
-    backBtn.innerHTML = "`<i class=`"`fas fa-chevron-left`"`></i> ªð¦^`";
+    backBtn.innerHTML = '`<i class=`'`fas fa-chevron-left`'`></i> ªð¦^`';
     header.appendChild(backBtn);
     
     const title = createElement('h1', 'menu-title');

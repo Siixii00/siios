@@ -1,4 +1,4 @@
-ï»¿import { GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, CharactersDB, UsersDB, ChatsDB, SettingsDB } from '../db.js';
+import { GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, CharactersDB, UsersDB, ChatsDB, SettingsDB } from '../db.js';
 
 const PRIORITY_ORDER = { 'front': 0, 'middle': 1, 'back': 2 };
 
@@ -86,7 +86,7 @@ async function loadWorldInfoContext(chatId, userMessage, options = {}) {
             if (characterData.personality) {
                 results.push({
                     id: 'char-personality',
-                    name: 'è§’è‰²æ€§æ ¼',
+                    name: '¨¤¦â©Ê®æ',
                     content: characterData.personality,
                     priority: 'front',
                     type: 'character',
@@ -96,7 +96,7 @@ async function loadWorldInfoContext(chatId, userMessage, options = {}) {
             if (characterData.scenario) {
                 results.push({
                     id: 'char-scenario',
-                    name: 'è§’è‰²å ´æ™¯',
+                    name: '¨¤¦â³õ´º',
                     content: characterData.scenario,
                     priority: 'front',
                     type: 'character',
@@ -115,16 +115,16 @@ async function loadWorldInfoContext(chatId, userMessage, options = {}) {
         }
         if (userData) {
             let userContent = '';
-            if (userData.name) userContent += `ç”¨æˆ¶åç¨±: ${userData.name}\n`;
-            if (userData.personality) userContent += `ç”¨æˆ¶å€‹æ€§: ${userData.personality}\n`;
-            if (userData.speech_style) userContent += `ç”¨æˆ¶èªªè©±é¢¨æ ¼: ${userData.speech_style}\n`;
+            if (userData.name) userContent += `¥Î¤á¦WºÙ: ${userData.name}\n`;
+            if (userData.personality) userContent += `¥Î¤á­Ó©Ê: ${userData.personality}\n`;
+            if (userData.speech_style) userContent += `¥Î¤á»¡¸Ü­·®æ: ${userData.speech_style}\n`;
             if (userData.taboos && userData.taboos.length > 0) {
-                userContent += `ç”¨æˆ¶ç¦å¿Œ: ${userData.taboos.join(', ')}\n`;
+                userContent += `¥Î¤á¸T§Ò: ${userData.taboos.join(', ')}\n`;
             }
             if (userContent) {
                 results.push({
                     id: 'user-settings',
-                    name: 'ç”¨æˆ¶è¨­å®š',
+                    name: '¥Î¤á³]©w',
                     content: userContent,
                     priority: 'front',
                     type: 'user',

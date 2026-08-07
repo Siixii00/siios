@@ -1,4 +1,4 @@
-ï»¿import { CharactersDB, ChatsDB, MessagesDB, MemoryDB, SettingsDB, WikiRecordsDB } from '../../db.js';
+import { CharactersDB, ChatsDB, MessagesDB, MemoryDB, SettingsDB, WikiRecordsDB } from '../../db.js';
 import { createBlock } from './templates.js';
 
 const MESSAGES_PER_CHAT_LOG = 10;
@@ -30,7 +30,7 @@ async function syncCharacters(existingRecords, charactersMap) {
 
         if (record) {
             record.title = char.name || 'Untitled';
-            record.icon = 'ğŸ§‘';
+            record.icon = '??';
             record.cover_image = char.avatar || null;
             record.updated_at = Date.now();
             if (record.source_type === 'auto') {
@@ -53,7 +53,7 @@ async function syncCharacters(existingRecords, charactersMap) {
                 links: [],
                 tags: [],
                 cover_image: char.avatar || null,
-                icon: 'ğŸ§‘'
+                icon: '??'
             });
         }
         results.push(record);
@@ -66,27 +66,27 @@ function buildCharacterAutoBlocks(char) {
     const blocks = [];
     blocks.push(createBlock('heading1', char.name || 'Untitled'));
 
-    blocks.push(createBlock('heading2', 'åŸºæœ¬è³‡æ–™'));
+    blocks.push(createBlock('heading2', '°ò¥»¸ê®Æ'));
     if (char.description) {
-        blocks.push({ ...createBlock('bulleted-list', `æè¿°: ${char.description}`), confidence: 'EXTRACTED' });
+        blocks.push({ ...createBlock('bulleted-list', `´y­z: ${char.description}`), confidence: 'EXTRACTED' });
     }
     if (char.personality) {
-        blocks.push({ ...createBlock('bulleted-list', `å€‹æ€§: ${char.personality}`), confidence: 'EXTRACTED' });
+        blocks.push({ ...createBlock('bulleted-list', `­Ó©Ê: ${char.personality}`), confidence: 'EXTRACTED' });
     }
     if (char.scenario) {
-        blocks.push({ ...createBlock('bulleted-list', `å ´æ™¯: ${char.scenario}`), confidence: 'EXTRACTED' });
+        blocks.push({ ...createBlock('bulleted-list', `³õ´º: ${char.scenario}`), confidence: 'EXTRACTED' });
     }
     if (char.first_message) {
         blocks.push({ ...createBlock('quote', char.first_message), confidence: 'EXTRACTED' });
     }
 
-    blocks.push(createBlock('heading2', 'èŠå¤©ç´€éŒ„'));
-    blocks.push({ ...createBlock('text', 'ï¼ˆåŒæ­¥å¾Œè‡ªå‹•ç”Ÿæˆï¼‰'), confidence: 'AMBIGUOUS' });
+    blocks.push(createBlock('heading2', '²á¤Ñ¬ö¿ı'));
+    blocks.push({ ...createBlock('text', '¡]¦P¨B«á¦Û°Ê¥Í¦¨¡^'), confidence: 'AMBIGUOUS' });
 
-    blocks.push(createBlock('heading2', 'ç¤¾äº¤äº’å‹•'));
-    blocks.push({ ...createBlock('text', 'ï¼ˆåŒæ­¥å¾Œè‡ªå‹•ç”Ÿæˆï¼‰'), confidence: 'AMBIGUOUS' });
+    blocks.push(createBlock('heading2', 'ªÀ¥æ¤¬°Ê'));
+    blocks.push({ ...createBlock('text', '¡]¦P¨B«á¦Û°Ê¥Í¦¨¡^'), confidence: 'AMBIGUOUS' });
 
-    blocks.push(createBlock('heading2', 'ç›¸é—œé é¢'));
+    blocks.push(createBlock('heading2', '¬ÛÃö­¶­±'));
 
     return blocks;
 }
@@ -159,7 +159,7 @@ async function syncChatLogs(existingRecords, characterRecords, charactersMap) {
                 record = await WikiRecordsDB.create({
                     id: generateId('chatlog'),
                     page_type: 'chat-log',
-                    title: `ğŸ’¬ ${charName} èŠå¤©ç´€éŒ„ #${i + 1}`,
+                    title: `?? ${charName} ²á¤Ñ¬ö¿ı #${i + 1}`,
                     character_id: charInfo.charId,
                     source_type: 'auto',
                     source_ids: slice.map(m => m.id),
@@ -167,7 +167,7 @@ async function syncChatLogs(existingRecords, characterRecords, charactersMap) {
                     blocks,
                     links: [],
                     tags: [],
-                    icon: 'ğŸ’¬',
+                    icon: '??',
                     parent_id: charInfo.recordId,
                     chat_log_index: i + 1,
                     message_range: { start, end: end - 1 }
@@ -183,28 +183,28 @@ async function syncChatLogs(existingRecords, characterRecords, charactersMap) {
         const charRecord = characterRecords.find(r => r.character_id === charInfo.charId);
         if (charRecord) {
             const chatLogLinks = results.map(r => `[[${r.title}]]`);
-            updateCharacterSectionLinks(charRecord, 'èŠå¤©ç´€éŒ„', chatLogLinks, results.map(r => r.id));
+            updateCharacterSectionLinks(charRecord, '²á¤Ñ¬ö¿ı', chatLogLinks, results.map(r => r.id));
         }
     }
 }
 
 function buildChatLogBlocks(charName, index, messages) {
     const blocks = [];
-    blocks.push(createBlock('heading1', `${charName} èŠå¤©ç´€éŒ„ #${index}`));
+    blocks.push(createBlock('heading1', `${charName} ²á¤Ñ¬ö¿ı #${index}`));
 
-    blocks.push({ ...createBlock('heading2', 'æ™‚é–“ç·š'), confidence: 'EXTRACTED' });
+    blocks.push({ ...createBlock('heading2', '®É¶¡½u'), confidence: 'EXTRACTED' });
     for (const msg of messages) {
-        const role = msg.role === 'user' ? 'ç”¨æˆ¶' : charName;
+        const role = msg.role === 'user' ? '¥Î¤á' : charName;
         const time = formatTimestamp(msg.timestamp);
         const text = msg.content || '';
         const preview = text.length > 100 ? text.substring(0, 100) + '...' : text;
         blocks.push({ ...createBlock('bulleted-list', `${time} ${role}: ${preview}`), confidence: 'EXTRACTED' });
     }
 
-    blocks.push({ ...createBlock('heading2', 'æ‘˜è¦'), confidence: 'INFERRED' });
-    blocks.push({ ...createBlock('text', 'ï¼ˆæ­¤æ®µå°è©±åŒ…å« ' + messages.length + ' å‰‡è¨Šæ¯ï¼‰'), confidence: 'INFERRED' });
+    blocks.push({ ...createBlock('heading2', 'ºK­n'), confidence: 'INFERRED' });
+    blocks.push({ ...createBlock('text', '¡]¦¹¬q¹ï¸Ü¥]§t ' + messages.length + ' «h°T®§¡^'), confidence: 'INFERRED' });
 
-    blocks.push(createBlock('heading2', 'ç›¸é—œé é¢'));
+    blocks.push(createBlock('heading2', '¬ÛÃö­¶­±'));
     blocks.push({ ...createBlock('text', `[[${charName}]]`), confidence: 'EXTRACTED' });
 
     return blocks;
@@ -240,7 +240,7 @@ async function syncSocialLogs(existingRecords, characterRecords, charactersMap) 
             record = await WikiRecordsDB.create({
                 id: generateId('social'),
                 page_type: 'social-log',
-                title: `ğŸŒ ${charName} ç¤¾äº¤äº’å‹•`,
+                title: `?? ${charName} ªÀ¥æ¤¬°Ê`,
                 character_id: charInfo.charId,
                 source_type: 'auto',
                 source_ids: interactions.map(i => i.id),
@@ -248,14 +248,14 @@ async function syncSocialLogs(existingRecords, characterRecords, charactersMap) 
                 blocks,
                 links: [],
                 tags: [],
-                icon: 'ğŸŒ',
+                icon: '??',
                 parent_id: charInfo.recordId
             });
         }
 
         const charRecord = characterRecords.find(r => r.character_id === charInfo.charId);
         if (charRecord) {
-            updateCharacterSectionLinks(charRecord, 'ç¤¾äº¤äº’å‹•', [`[[${record.title}]]`], [record.id]);
+            updateCharacterSectionLinks(charRecord, 'ªÀ¥æ¤¬°Ê', [`[[${record.title}]]`], [record.id]);
         }
     }
 }
@@ -297,7 +297,7 @@ async function collectSocialData() {
     const twUserTweets = await SettingsDB.get('twitter_user_tweets') || [];
     for (const tweet of [...twTweets, ...twUserTweets]) {
         const name = tweet.author;
-        if (!name || name === 'ä½ ') continue;
+        if (!name || name === '§A') continue;
         if (!data.has(name)) data.set(name, []);
         data.get(name).push({
             id: tweet.id,
@@ -328,7 +328,7 @@ async function collectSocialData() {
     const lofterPosts = await SettingsDB.get('lofter_generated_posts') || [];
     for (const post of lofterPosts) {
         const title = post.title || '';
-        const cpNames = title.split(/[-xÃ—]/);
+        const cpNames = title.split(/[-x¡Ñ]/);
         for (const name of cpNames) {
             const trimmed = name.trim();
             if (!trimmed) continue;
@@ -352,9 +352,9 @@ async function collectSocialData() {
 
 function buildSocialLogBlocks(charName, interactions) {
     const blocks = [];
-    blocks.push(createBlock('heading1', `${charName} ç¤¾äº¤äº’å‹•`));
+    blocks.push(createBlock('heading1', `${charName} ªÀ¥æ¤¬°Ê`));
 
-    blocks.push({ ...createBlock('heading2', 'äº’å‹•æ™‚é–“ç·š'), confidence: 'EXTRACTED' });
+    blocks.push({ ...createBlock('heading2', '¤¬°Ê®É¶¡½u'), confidence: 'EXTRACTED' });
     for (const item of interactions.slice(0, 50)) {
         const time = formatTimestamp(item.timestamp);
         const platform = item.platform;
@@ -362,18 +362,18 @@ function buildSocialLogBlocks(charName, interactions) {
         blocks.push({ ...createBlock('bulleted-list', `[${platform}] ${time} ${text}`), confidence: 'EXTRACTED' });
     }
     if (interactions.length > 50) {
-        blocks.push({ ...createBlock('text', `...é‚„æœ‰ ${interactions.length - 50} æ¢äº’å‹•è¨˜éŒ„`), confidence: 'EXTRACTED' });
+        blocks.push({ ...createBlock('text', `...ÁÙ¦³ ${interactions.length - 50} ±ø¤¬°Ê°O¿ı`), confidence: 'EXTRACTED' });
     }
 
-    blocks.push({ ...createBlock('heading2', 'äº’å‹•æ‘˜è¦'), confidence: 'INFERRED' });
+    blocks.push({ ...createBlock('heading2', '¤¬°ÊºK­n'), confidence: 'INFERRED' });
     const platformCounts = {};
     for (const item of interactions) {
         platformCounts[item.platform] = (platformCounts[item.platform] || 0) + 1;
     }
-    const summary = Object.entries(platformCounts).map(([p, c]) => `${p}: ${c} æ¢`).join('ã€');
-    blocks.push({ ...createBlock('text', `${charName}åœ¨ç¤¾äº¤å¹³å°ä¸Šå…±æœ‰ ${interactions.length} æ¢äº’å‹•ï¼ˆ${summary}ï¼‰`), confidence: 'INFERRED' });
+    const summary = Object.entries(platformCounts).map(([p, c]) => `${p}: ${c} ±ø`).join('¡B');
+    blocks.push({ ...createBlock('text', `${charName}¦bªÀ¥æ¥­¥x¤W¦@¦³ ${interactions.length} ±ø¤¬°Ê¡]${summary}¡^`), confidence: 'INFERRED' });
 
-    blocks.push(createBlock('heading2', 'ç›¸é—œé é¢'));
+    blocks.push(createBlock('heading2', '¬ÛÃö­¶­±'));
     blocks.push({ ...createBlock('text', `[[${charName}]]`), confidence: 'EXTRACTED' });
 
     return blocks;
@@ -409,7 +409,7 @@ async function syncMemories(existingRecords, characterRecords, charactersMap, ch
         if (charMemories.length === 0) continue;
 
         const memorySectionIdx = charRecord.blocks.findIndex(b =>
-            b.content && b.content.includes('è¨˜æ†¶æ‘˜è¦')
+            b.content && b.content.includes('°O¾ĞºK­n')
         );
         if (memorySectionIdx === -1) continue;
 

@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -10,7 +10,7 @@ async function renderGithubSettings() {
     const container = createElement('div', 'app-container bg-ios-bg');
 
     const header = createIOSNavBar({
-        title: 'Github è¨­å®š',
+        title: 'Github ³]©w',
         backPath: '/settings'
     });
     container.appendChild(header);
@@ -20,30 +20,30 @@ async function renderGithubSettings() {
     main.style.paddingTop = '16px';
 
     const appearanceSection = createElement('div', 'mb-2 ml-8');
-    appearanceSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'é è¨­å¤–è§€' }));
+    appearanceSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¹w³]¥~Æ[' }));
 
     const appearanceGroup = createElement('div', 'ios-grouped-list mx-4');
 
     const darkCell = createElement('div', 'ios-list-cell ios-list-cell-full cursor-pointer');
     darkCell.appendChild(createIcon('dark_mode', 'text-xl'));
-    darkCell.appendChild(createElement('span', 'flex-1 ml-3', { textContent: 'æ·±è‰²æ¨¡å¼' }));
+    darkCell.appendChild(createElement('span', 'flex-1 ml-3', { textContent: '²`¦â¼Ò¦¡' }));
     const darkCheck = appearance === 'dark' ? createIcon('check', 'text-ios-blue text-xl') : createElement('span', '');
     darkCell.appendChild(darkCheck);
     darkCell.onclick = async () => {
         await SettingsDB.set('appearance_theme', 'dark');
-        createToast('å·²åˆ‡æ›ç‚ºæ·±è‰²æ¨¡å¼');
+        createToast('¤w¤Á´«¬°²`¦â¼Ò¦¡');
         Router.navigate('/settings/github');
     };
     appearanceGroup.appendChild(darkCell);
 
     const lightCell = createElement('div', 'ios-list-cell ios-list-cell-full cursor-pointer');
     lightCell.appendChild(createIcon('light_mode', 'text-xl'));
-    lightCell.appendChild(createElement('span', 'flex-1 ml-3', { textContent: 'æ·ºè‰²æ¨¡å¼' }));
+    lightCell.appendChild(createElement('span', 'flex-1 ml-3', { textContent: '²L¦â¼Ò¦¡' }));
     const lightCheck = appearance === 'light' ? createIcon('check', 'text-ios-blue text-xl') : createElement('span', '');
     lightCell.appendChild(lightCheck);
     lightCell.onclick = async () => {
         await SettingsDB.set('appearance_theme', 'light');
-        createToast('å·²åˆ‡æ›ç‚ºæ·ºè‰²æ¨¡å¼');
+        createToast('¤w¤Á´«¬°²L¦â¼Ò¦¡');
         Router.navigate('/settings/github');
     };
     appearanceGroup.appendChild(lightCell);
@@ -52,7 +52,7 @@ async function renderGithubSettings() {
     main.appendChild(appearanceGroup);
 
     const githubSection = createElement('div', 'mb-2 ml-8 mt-6');
-    githubSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'Github å‚™ä»½ä¸²æ¥' }));
+    githubSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'Github ³Æ¥÷¦ê±µ' }));
 
     const githubGroup = createElement('div', 'ios-grouped-list mx-4');
 
@@ -61,7 +61,7 @@ async function renderGithubSettings() {
     statusIcon.appendChild(createIcon(githubToken ? 'cloud_done' : 'cloud_off', 'text-white text-sm'));
     statusCell.appendChild(statusIcon);
     const statusText = createElement('div', 'flex-1');
-    statusText.appendChild(createElement('span', 'text-body-lg', { textContent: githubToken ? 'å·²é€£æ¥' : 'æœªé€£æ¥' }));
+    statusText.appendChild(createElement('span', 'text-body-lg', { textContent: githubToken ? '¤w³s±µ' : '¥¼³s±µ' }));
     if (githubUser) {
         statusText.appendChild(createElement('span', 'block text-sm text-ios-muted', { textContent: '@' + githubUser.login }));
     }
@@ -72,13 +72,13 @@ async function renderGithubSettings() {
     
     const helpText = createElement('div', 'mb-4');
     helpText.innerHTML = `
-        <p class='text-sm text-ios-muted mb-2'>å¦‚ä½•ç²å– Personal Access Tokenï¼š</p>
+        <p class='text-sm text-ios-muted mb-2'>¦p¦óÀò¨ú Personal Access Token¡G</p>
         <ol class='text-xs text-ios-muted space-y-1' style='padding-left: 16px;'>
-            <li>1. å‰å¾€ <a href='https://github.com/settings/tokens' target='_blank' class='text-ios-blue'>GitHub Token è¨­å®š</a></li>
-            <li>2. é»æ“Šã€ŒGenerate new token (classic)ã€</li>
-            <li>3. å‹¾é¸ <code>repo</code> æ¬Šé™</li>
-            <li>4. é»æ“Šã€ŒGenerate tokenã€</li>
-            <li>5. è¤‡è£½ tokenï¼ˆåªæœƒé¡¯ç¤ºä¸€æ¬¡ï¼‰</li>
+            <li>1. «e©¹ <a href='https://github.com/settings/tokens' target='_blank' class='text-ios-blue'>GitHub Token ³]©w</a></li>
+            <li>2. ÂIÀ»¡uGenerate new token (classic)¡v</li>
+            <li>3. ¤Ä¿ï <code>repo</code> Åv­­</li>
+            <li>4. ÂIÀ»¡uGenerate token¡v</li>
+            <li>5. ½Æ»s token¡]¥u·|Åã¥Ü¤@¦¸¡^</li>
         </ol>
     `;
     tokenCell.appendChild(helpText);
@@ -93,25 +93,25 @@ async function renderGithubSettings() {
     githubGroup.appendChild(tokenCell);
 
     const connectBtn = createElement('button', 'ios-btn ios-btn-primary w-full py-3 mt-2', {
-        textContent: githubToken ? 'é‡æ–°é€£æ¥' : 'é€£æ¥ Github'
+        textContent: githubToken ? '­«·s³s±µ' : '³s±µ Github'
     });
     connectBtn.onclick = async () => {
         const token = tokenInput.value.trim();
         if (!token) {
-            createToast('è«‹è¼¸å…¥ Token');
+            createToast('½Ğ¿é¤J Token');
             return;
         }
         
         if (!token.startsWith('ghp_')) {
-            createToast('Token æ ¼å¼éŒ¯èª¤ï¼Œæ‡‰ä»¥ ghp_ é–‹é ­');
+            createToast('Token ®æ¦¡¿ù»~¡AÀ³¥H ghp_ ¶}ÀY');
             return;
         }
         
-        connectBtn.textContent = 'é€£æ¥ä¸­...';
+        connectBtn.textContent = '³s±µ¤¤...';
         connectBtn.disabled = true;
 
         try {
-            createToast('æ­£åœ¨é©—è­‰ Token...');
+            createToast('¥¿¦bÅçÃÒ Token...');
             
             const userRes = await fetch('https://api.github.com/user', {
                 headers: { 'Authorization': 'token ' + token }
@@ -119,16 +119,16 @@ async function renderGithubSettings() {
             
             if (!userRes.ok) {
                 if (userRes.status === 401) {
-                    throw new Error('Token ç„¡æ•ˆæˆ–å·²éæœŸ');
+                    throw new Error('Token µL®Ä©Î¤w¹L´Á');
                 } else if (userRes.status === 403) {
-                    throw new Error('API è«‹æ±‚æ¬¡æ•¸å·²é”ä¸Šé™ï¼Œè«‹ç¨å¾Œå†è©¦');
+                    throw new Error('API ½Ğ¨D¦¸¼Æ¤w¹F¤W­­¡A½Ğµy«á¦A¸Õ');
                 } else {
-                    throw new Error('ç„¡æ³•é€£æ¥åˆ° GitHub (' + userRes.status + ')');
+                    throw new Error('µLªk³s±µ¨ì GitHub (' + userRes.status + ')');
                 }
             }
             
             const userData = await userRes.json();
-            createToast('Token é©—è­‰æˆåŠŸï¼æ­£åœ¨è¨­ç½®...');
+            createToast('Token ÅçÃÒ¦¨¥\¡I¥¿¦b³]¸m...');
 
             await SettingsDB.set('github_token', token);
             await SettingsDB.set('github_user', {
@@ -137,7 +137,7 @@ async function renderGithubSettings() {
                 avatar_url: userData.avatar_url
             });
 
-            createToast('æ­£åœ¨å‰µå»ºå‚™ä»½å€‰åº«...');
+            createToast('¥¿¦b³Ğ«Ø³Æ¥÷­Ü®w...');
             
             const repoName = 'siios-backup';
             const repoRes = await fetch('https://api.github.com/user/repos', {
@@ -149,26 +149,26 @@ async function renderGithubSettings() {
                 body: JSON.stringify({
                     name: repoName,
                     private: true,
-                    description: 'Siios å‚™ä»½å€‰åº«',
+                    description: 'Siios ³Æ¥÷­Ü®w',
                     auto_init: true
                 })
             });
 
             if (repoRes.ok) {
-                createToast('âœ“ å·²å»ºç«‹éš±ç§å‚™ä»½å€‰åº«ï¼š' + repoName);
+                createToast('? ¤w«Ø¥ßÁô¨p³Æ¥÷­Ü®w¡G' + repoName);
             } else if (repoRes.status === 422) {
-                createToast('âœ“ å‚™ä»½å€‰åº«å·²å­˜åœ¨');
+                createToast('? ³Æ¥÷­Ü®w¤w¦s¦b');
             } else {
-                createToast('âš  å€‰åº«å»ºç«‹å¤±æ•—ï¼Œä½†é€£æ¥æˆåŠŸ');
+                createToast('? ­Ü®w«Ø¥ß¥¢±Ñ¡A¦ı³s±µ¦¨¥\');
             }
 
-            createToast('âœ“ å·²æˆåŠŸé€£æ¥ GitHubï¼š' + (userData.name || userData.login));
+            createToast('? ¤w¦¨¥\³s±µ GitHub¡G' + (userData.name || userData.login));
             setTimeout(() => {
                 Router.navigate('/settings/github');
             }, 1000);
         } catch (e) {
-            createToast('âœ— é€£æ¥å¤±æ•—ï¼š' + e.message, 'error');
-            connectBtn.textContent = githubToken ? 'é‡æ–°é€£æ¥' : 'é€£æ¥ Github';
+            createToast('? ³s±µ¥¢±Ñ¡G' + e.message, 'error');
+            connectBtn.textContent = githubToken ? '­«·s³s±µ' : '³s±µ Github';
             connectBtn.disabled = false;
         }
     };
@@ -176,9 +176,9 @@ async function renderGithubSettings() {
 
     if (githubToken) {
         const testBtn = createElement('button', 'ios-btn w-full py-3 mt-2', {
-            textContent: 'æ¸¬è©¦é€£æ¥',
+            textContent: '´ú¸Õ³s±µ',
             onClick: async () => {
-                testBtn.textContent = 'æ¸¬è©¦ä¸­...';
+                testBtn.textContent = '´ú¸Õ¤¤...';
                 testBtn.disabled = true;
                 
                 try {
@@ -188,26 +188,26 @@ async function renderGithubSettings() {
                     
                     if (userRes.ok) {
                         const userData = await userRes.json();
-                        createToast('âœ“ é€£æ¥æ­£å¸¸ï¼Œç”¨æˆ¶ï¼š' + userData.login);
+                        createToast('? ³s±µ¥¿±`¡A¥Î¤á¡G' + userData.login);
                     } else {
-                        createToast('âœ— Token å·²å¤±æ•ˆï¼Œè«‹é‡æ–°é€£æ¥', 'error');
+                        createToast('? Token ¤w¥¢®Ä¡A½Ğ­«·s³s±µ', 'error');
                     }
                 } catch (e) {
-                    createToast('âœ— é€£æ¥å¤±æ•—ï¼š' + e.message, 'error');
+                    createToast('? ³s±µ¥¢±Ñ¡G' + e.message, 'error');
                 }
                 
-                testBtn.textContent = 'æ¸¬è©¦é€£æ¥';
+                testBtn.textContent = '´ú¸Õ³s±µ';
                 testBtn.disabled = false;
             }
         });
         tokenCell.appendChild(testBtn);
         
         const disconnectBtn = createElement('button', 'ios-btn w-full py-3 mt-2 text-red-500', {
-            textContent: 'ä¸­æ–·é€£æ¥',
+            textContent: '¤¤Â_³s±µ',
             onClick: async () => {
                 await SettingsDB.set('github_token', '');
                 await SettingsDB.set('github_user', null);
-                createToast('å·²ä¸­æ–· Github é€£æ¥');
+                createToast('¤w¤¤Â_ Github ³s±µ');
                 Router.navigate('/settings/github');
             }
         });

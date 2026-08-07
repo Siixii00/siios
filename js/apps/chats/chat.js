@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBubble, createToast, createKakaoBottomSheet, createKakaoSideMenu, createGroupTypingIndicator } from '../../components.js';
 import { ChatsDB, MessagesDB, SettingsDB, MemoryDB, CharactersDB, UsersDB } from '../../db.js';
 import APIClient from '../../api.js';
@@ -29,27 +29,27 @@ async function applyCustomTheme() {
 async function renderChat(params) {
     try {
         const chatId = params.id;
-        console.log('[Chat] é–‹å§‹æ¸²æŸ“èŠå¤©:', chatId);
+        console.log('[Chat] ¶}©l´è¬V²á¤Ñ:', chatId);
         
-        console.log('[Chat] æ‡‰ç”¨è‡ªå®šç¾©ä¸»é¡Œ...');
+        console.log('[Chat] À³¥Î¦Û©w¸q¥DÃD...');
         await applyCustomTheme();
         
-        console.log('[Chat] è¼‰å…¥èŠå¤©æ•¸æ“š...');
+        console.log('[Chat] ¸ü¤J²á¤Ñ¼Æ¾Ú...');
         currentChat = await ChatsDB.getById(chatId);
         if (!currentChat) {
-            console.error('[Chat] æ‰¾ä¸åˆ°èŠå¤©:', chatId);
+            console.error('[Chat] §ä¤£¨ì²á¤Ñ:', chatId);
             window.showError({
-                message: 'æ‰¾ä¸åˆ°èŠå¤© ID: ' + chatId,
-                title: 'èŠå¤©ä¸å­˜åœ¨'
+                message: '§ä¤£¨ì²á¤Ñ ID: ' + chatId,
+                title: '²á¤Ñ¤£¦s¦b'
             });
             Router.navigate('/chats');
             return { element: createElement('div'), cleanup: null };
         }
-        console.log('[Chat] èŠå¤©æ•¸æ“šè¼‰å…¥æˆåŠŸ:', currentChat.character_name);
+        console.log('[Chat] ²á¤Ñ¼Æ¾Ú¸ü¤J¦¨¥\:', currentChat.character_name);
         
-        console.log('[Chat] è¼‰å…¥è¨Šæ¯...');
+        console.log('[Chat] ¸ü¤J°T®§...');
         messages = await MessagesDB.getByChatId(chatId);
-        console.log('[Chat] è¨Šæ¯è¼‰å…¥æˆåŠŸï¼Œå…±', messages.length, 'æ¢');
+        console.log('[Chat] °T®§¸ü¤J¦¨¥\¡A¦@', messages.length, '±ø');
         
         const container = createElement('div', 'app-container kakao-chat-bg');
         
@@ -58,7 +58,7 @@ async function renderChat(params) {
         
         const backBtn = createElement('button', 'flex items-center gap-1');
         backBtn.appendChild(createIcon('chevron_left'));
-        backBtn.appendChild(createElement('span', '', { textContent: 'è¿”å›' }));
+        backBtn.appendChild(createElement('span', '', { textContent: 'ªğ¦^' }));
         backBtn.style.cssText = 'color:#141413;font-size:17px;font-family:-apple-system,BlinkMacSystemFont,Arial,sans-serif;background:transparent;border:none;cursor:pointer;padding:6px 0;';
         backBtn.onclick = () => Router.navigate('/chats');
     header.appendChild(backBtn);
@@ -66,7 +66,7 @@ async function renderChat(params) {
     const title = createElement('h1', '');
     
     if (currentChat.is_group) {
-        title.textContent = 'ç¾¤çµ„èŠå¤©';
+        title.textContent = '¸s²Õ²á¤Ñ';
         const memberIds = currentChat.member_ids || [];
         const avatarStack = createElement('div', 'flex -space-x-2 ml-2');
         const displayMembers = memberIds.slice(0, 3);
@@ -242,7 +242,7 @@ async function renderChat(params) {
         const form = createElement('div', 'p-4 flex flex-col gap-3');
         
         const hint = createElement('div', 'text-sm text-gray-500 mb-2');
-        hint.textContent = 'é¸æ“‡è¦åŠ å…¥ç¾¤çµ„çš„è§’è‰²ï¼ˆæœ€å¤š 4 å€‹ï¼‰';
+        hint.textContent = '¿ï¾Ü­n¥[¤J¸s²Õªº¨¤¦â¡]³Ì¦h 4 ­Ó¡^';
         form.appendChild(hint);
         
         const list = createElement('div', 'flex flex-col gap-2');
@@ -258,21 +258,21 @@ async function renderChat(params) {
             row.appendChild(avatar);
             
             const name = createElement('span', 'flex-1 text-body-lg');
-            name.textContent = char.name + (isMember ? ' (å·²åŠ å…¥)' : '');
+            name.textContent = char.name + (isMember ? ' (¤w¥[¤J)' : '');
             row.appendChild(name);
             
             if (!isMember) {
                 const addBtn = createElement('button', 'px-3 py-1 rounded-lg bg-kakao-yellow text-kakao-brown text-sm font-medium');
-                addBtn.textContent = 'åŠ å…¥';
+                addBtn.textContent = '¥[¤J';
                 addBtn.onclick = async () => {
                     const newMemberIds = [...memberIds, char.id];
                     if (newMemberIds.length > 4) {
-                        createToast('ç¾¤çµ„æœ€å¤š 4 å€‹æˆå“¡');
+                        createToast('¸s²Õ³Ì¦h 4 ­Ó¦¨­û');
                         return;
                     }
                     await ChatsDB.update(chatId, { member_ids: newMemberIds });
                     currentChat = await ChatsDB.getById(chatId);
-                    createToast('å·²åŠ å…¥ ' + char.name);
+                    createToast('¤w¥[¤J ' + char.name);
                     sheet.close();
                     Router.navigate('/chat/' + chatId);
                 };
@@ -285,7 +285,7 @@ async function renderChat(params) {
         form.appendChild(list);
         
         const sheet = createKakaoBottomSheet([], {
-            title: 'ç¾¤çµ„æˆå“¡',
+            title: '¸s²Õ¦¨­û',
             customContent: form
         });
         
@@ -296,7 +296,7 @@ async function renderChat(params) {
         {
             icon: 'person',
             label: 'Character Info',
-            onClick: () => currentChat.is_group ? createToast('ç¾¤çµ„èŠå¤©') : Router.navigate('/characters/' + currentChat.character_id)
+            onClick: () => currentChat.is_group ? createToast('¸s²Õ²á¤Ñ') : Router.navigate('/characters/' + currentChat.character_id)
         },
         { icon: 'account_circle', label: 'User Mask', onClick: () => createToast('User mask feature in development') },
         { icon: 'public', label: 'World Setting', onClick: () => createToast('World setting feature in development') }
@@ -313,7 +313,7 @@ async function renderChat(params) {
     }
     
     const sideMenu = createKakaoSideMenu({
-        title: currentChat.is_group ? 'ç¾¤çµ„èŠå¤©' : currentChat.character_name,
+        title: currentChat.is_group ? '¸s²Õ²á¤Ñ' : currentChat.character_name,
         sections: [
             {
                 title: 'Info',
@@ -373,7 +373,7 @@ async function renderChat(params) {
         const firstMessageDate = new Date(messages[0].timestamp);
         const dateDivider = createElement('div', 'kakao-date-divider');
         const dateSpan = createElement('span', '', { 
-            textContent: firstMessageDate.getFullYear() + 'å¹´' + (firstMessageDate.getMonth() + 1) + 'æœˆ' + firstMessageDate.getDate() + 'æ—¥'
+            textContent: firstMessageDate.getFullYear() + '¦~' + (firstMessageDate.getMonth() + 1) + '¤ë' + firstMessageDate.getDate() + '¤é'
         });
         dateDivider.appendChild(dateSpan);
         main.appendChild(dateDivider);
@@ -412,33 +412,33 @@ async function renderChat(params) {
     addBtn.innerHTML = '<svg xmlns='http://www.w3.org/2000/svg' width='25' height='28' viewBox='0 0 25 28' fill='none'><path d='M11.0378 14.9722H5.20447V13.0278H11.0378V7.19443H12.9822V13.0278H18.8156V14.9722H12.9822V20.8055H11.0378V14.9722Z' fill='#6B6B6B'/></svg>';
     
     const plusMenu = createKakaoBottomSheet([
-        { icon: 'psychology', label: 'æ€ç¶­éˆ', onSelect: () => createToast('æ€ç¶­éˆåŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'favorite', label: 'å¿ƒè²', onSelect: () => createToast('å¿ƒè²åŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'summarize', label: 'ç”Ÿæˆç¸½çµ', onSelect: () => createToast('ç”Ÿæˆç¸½çµåŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'import_contacts', label: 'Wiki', onSelect: () => createToast('WikiåŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'photo_library', label: 'ç›¸ç°¿', onSelect: () => createToast('ç›¸ç°¿åŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'photo_camera', label: 'æ‹ç…§', onSelect: () => createToast('æ‹ç…§åŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'videocam', label: 'å½±ç‰‡', onSelect: () => createToast('å½±ç‰‡åŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'mic', label: 'èªéŸ³', onSelect: () => createToast('èªéŸ³åŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'attach_file', label: 'æª”æ¡ˆ', onSelect: () => createToast('æª”æ¡ˆåŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'emoji_emotions', label: 'è¡¨æƒ…', onSelect: () => createToast('è¡¨æƒ…åŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'redeem', label: 'Icon', onSelect: () => createToast('IconåŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'share', label: 'åˆ†äº«', onSelect: () => createToast('åˆ†äº«åŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'location_on', label: 'ä½ç½®', onSelect: () => createToast('ä½ç½®åŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'schedule', label: 'æ—¥ç¨‹', onSelect: () => createToast('æ—¥ç¨‹åŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'payments', label: 'è½‰å¸³', onSelect: () => createToast('è½‰å¸³åŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'shopping_bag', label: 'è³¼ç‰©', onSelect: () => createToast('è³¼ç‰©åŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'restaurant', label: 'å¤–é€', onSelect: () => createToast('å¤–é€åŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'map', label: 'åœ°åœ–', onSelect: () => createToast('åœ°åœ–åŠŸèƒ½é–‹ç™¼ä¸­') },
-        { icon: 'music_note', label: 'éŸ³æ¨‚', onSelect: () => createToast('éŸ³æ¨‚åŠŸèƒ½é–‹ç™¼ä¸­') },
+        { icon: 'psychology', label: '«äºûÃì', onSelect: () => createToast('«äºûÃì¥\¯à¶}µo¤¤') },
+        { icon: 'favorite', label: '¤ßÁn', onSelect: () => createToast('¤ßÁn¥\¯à¶}µo¤¤') },
+        { icon: 'summarize', label: '¥Í¦¨Á`µ²', onSelect: () => createToast('¥Í¦¨Á`µ²¥\¯à¶}µo¤¤') },
+        { icon: 'import_contacts', label: 'Wiki', onSelect: () => createToast('Wiki¥\¯à¶}µo¤¤') },
+        { icon: 'photo_library', label: '¬ÛÃ¯', onSelect: () => createToast('¬ÛÃ¯¥\¯à¶}µo¤¤') },
+        { icon: 'photo_camera', label: '©ç·Ó', onSelect: () => createToast('©ç·Ó¥\¯à¶}µo¤¤') },
+        { icon: 'videocam', label: '¼v¤ù', onSelect: () => createToast('¼v¤ù¥\¯à¶}µo¤¤') },
+        { icon: 'mic', label: '»y­µ', onSelect: () => createToast('»y­µ¥\¯à¶}µo¤¤') },
+        { icon: 'attach_file', label: 'ÀÉ®×', onSelect: () => createToast('ÀÉ®×¥\¯à¶}µo¤¤') },
+        { icon: 'emoji_emotions', label: 'ªí±¡', onSelect: () => createToast('ªí±¡¥\¯à¶}µo¤¤') },
+        { icon: 'redeem', label: 'Icon', onSelect: () => createToast('Icon¥\¯à¶}µo¤¤') },
+        { icon: 'share', label: '¤À¨É', onSelect: () => createToast('¤À¨É¥\¯à¶}µo¤¤') },
+        { icon: 'location_on', label: '¦ì¸m', onSelect: () => createToast('¦ì¸m¥\¯à¶}µo¤¤') },
+        { icon: 'schedule', label: '¤éµ{', onSelect: () => createToast('¤éµ{¥\¯à¶}µo¤¤') },
+        { icon: 'payments', label: 'Âà±b', onSelect: () => createToast('Âà±b¥\¯à¶}µo¤¤') },
+        { icon: 'shopping_bag', label: 'ÁÊª«', onSelect: () => createToast('ÁÊª«¥\¯à¶}µo¤¤') },
+        { icon: 'restaurant', label: '¥~°e', onSelect: () => createToast('¥~°e¥\¯à¶}µo¤¤') },
+        { icon: 'map', label: '¦a¹Ï', onSelect: () => createToast('¦a¹Ï¥\¯à¶}µo¤¤') },
+        { icon: 'music_note', label: '­µ¼Ö', onSelect: () => createToast('­µ¼Ö¥\¯à¶}µo¤¤') },
         { icon: '', label: '', onSelect: null }
-    ], { title: 'åŠŸèƒ½é¸å–®' });
+    ], { title: '¥\¯à¿ï³æ' });
     
     addBtn.onclick = () => plusMenu.open();
     inputWrapper.appendChild(addBtn);
     
     const textarea = createElement('textarea', 'kakao-chat-textarea', {
-        placeholder: 'è¼¸å…¥è¨Šæ¯',
+        placeholder: '¿é¤J°T®§',
         rows: '1'
     });
     textarea.addEventListener('input', () => {
@@ -447,7 +447,7 @@ async function renderChat(params) {
     });
     inputWrapper.appendChild(textarea);
     
-    const sendBtn = createElement('button', 'kakao-send-btn', { textContent: 'å‚³é€' });
+    const sendBtn = createElement('button', 'kakao-send-btn', { textContent: '¶Ç°e' });
     sendBtn.disabled = true;
     
     textarea.addEventListener('input', () => {
@@ -480,7 +480,7 @@ async function renderChat(params) {
     generateBtn.style.cssText = 'background:transparent;border:none;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center;width:28px;height:28px;margin-left:4px;';
     generateBtn.innerHTML = '<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21 12a9 9 0 1 1-9-9c2.52 0 4.85.83 6.72 2.24'></path><path d='M21 3v6h-6'></path></svg>';
     generateBtn.style.color = '#6B6B6B';
-    generateBtn.title = 'ç”Ÿæˆå›æ‡‰';
+    generateBtn.title = '¥Í¦¨¦^À³';
     generateBtn.disabled = true;
     
     textarea.addEventListener('input', () => {
@@ -695,13 +695,13 @@ async function renderChat(params) {
         main.scrollTop = main.scrollHeight;
     }, 100);
     
-    console.log('[Chat] èŠå¤©ç•Œé¢æ¸²æŸ“å®Œæˆ');
+    console.log('[Chat] ²á¤Ñ¬É­±´è¬V§¹¦¨');
     return { element: container, cleanup: null };
     } catch (error) {
-        console.error('[Chat] æ¸²æŸ“å¤±æ•—:', error);
+        console.error('[Chat] ´è¬V¥¢±Ñ:', error);
         window.showError({
-            message: 'ç„¡æ³•è¼‰å…¥èŠå¤©ç•Œé¢: ' + error.message,
-            title: 'èŠå¤©éŒ¯èª¤',
+            message: 'µLªk¸ü¤J²á¤Ñ¬É­±: ' + error.message,
+            title: '²á¤Ñ¿ù»~',
             details: error.stack || ''
         });
         Router.navigate('/chats');
@@ -711,7 +711,7 @@ async function renderChat(params) {
 
 export default {
     id: 'chat',
-    name: 'å°è©±',
+    name: '¹ï¸Ü',
     icon: 'chat',
     routes: [
         { path: '/chat/:id', render: renderChat }

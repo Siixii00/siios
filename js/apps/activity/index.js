@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { ActivityDB, ActivitySourcesDB, SettingsDB } from '../../db.js';
 
@@ -9,23 +9,23 @@ const PLATFORMS = [
     { id: 'facebook', name: 'Facebook', icon: 'thumb_up', color: '#1877F2' },
     { id: 'youtube', name: 'YouTube', icon: 'play_circle', color: '#FF0000' },
     { id: 'tiktok', name: 'TikTok', icon: 'music_note', color: '#000000' },
-    { id: 'message', name: 'ç°¡è¨Š', icon: 'message', color: '#34C759' },
-    { id: 'call', name: 'é€šè©±', icon: 'call', color: '#00C7BE' },
+    { id: 'message', name: 'Â²°T', icon: 'message', color: '#34C759' },
+    { id: 'call', name: '³q¸Ü', icon: 'call', color: '#00C7BE' },
     { id: 'email', name: 'Email', icon: 'mail', color: '#FF9500' },
-    { id: 'other', name: 'å…¶ä»–', icon: 'more_horiz', color: '#8E8E93' }
+    { id: 'other', name: '¨ä¥L', icon: 'more_horiz', color: '#8E8E93' }
 ];
 
 const ACTIVITY_TYPES = [
-    { id: 'message', name: 'è¨Šæ¯' },
-    { id: 'post', name: 'è²¼æ–‡' },
-    { id: 'like', name: 'æŒ‰è®š' },
-    { id: 'comment', name: 'ç•™è¨€' },
-    { id: 'share', name: 'åˆ†äº«' },
-    { id: 'view', name: 'è§€çœ‹' },
-    { id: 'call', name: 'é€šè©±' },
-    { id: 'email', name: 'éƒµä»¶' },
-    { id: 'notification', name: 'é€šçŸ¥' },
-    { id: 'other', name: 'å…¶ä»–' }
+    { id: 'message', name: '°T®§' },
+    { id: 'post', name: '¶K¤å' },
+    { id: 'like', name: '«öÆg' },
+    { id: 'comment', name: '¯d¨¥' },
+    { id: 'share', name: '¤À¨É' },
+    { id: 'view', name: 'Æ[¬İ' },
+    { id: 'call', name: '³q¸Ü' },
+    { id: 'email', name: '¶l¥ó' },
+    { id: 'notification', name: '³qª¾' },
+    { id: 'other', name: '¨ä¥L' }
 ];
 
 async function renderActivitySync() {
@@ -40,15 +40,15 @@ async function renderActivitySync() {
     };
 
     const header = createIOSNavBar({
-        title: 'æ´»å‹•åŒæ­¥',
+        title: '¬¡°Ê¦P¨B',
         backPath: '/settings',
         rightActions: [
             {
                 icon: 'delete',
                 onClick: async () => {
-                    if (confirm('ç¢ºå®šè¦æ¸…é™¤æ‰€æœ‰æ´»å‹•è¨˜éŒ„ï¼Ÿ')) {
+                    if (confirm('½T©w­n²M°£©Ò¦³¬¡°Ê°O¿ı¡H')) {
                         await ActivityDB.clear();
-                        createToast('å·²æ¸…é™¤æ‰€æœ‰æ´»å‹•è¨˜éŒ„', 'success');
+                        createToast('¤w²M°£©Ò¦³¬¡°Ê°O¿ı', 'success');
                         Router.navigate('/activity');
                     }
                 }
@@ -69,28 +69,28 @@ async function renderActivitySync() {
             <div class='flex items-center gap-3'>
                 <span class='material-symbols-outlined text-yellow-600 text-2xl'>warning</span>
                 <div>
-                    <h3 class='font-semibold text-sm text-yellow-800'>æ´»å‹•åŒæ­¥å·²åœç”¨</h3>
-                    <p class='text-xs text-yellow-700 mt-1'>å‰å¾€éš±ç§è¨­å®šå•Ÿç”¨ä»¥é–‹å§‹è¨˜éŒ„</p>
+                    <h3 class='font-semibold text-sm text-yellow-800'>¬¡°Ê¦P¨B¤w°±¥Î</h3>
+                    <p class='text-xs text-yellow-700 mt-1'>«e©¹Áô¨p³]©w±Ò¥Î¥H¶}©l°O¿ı</p>
                 </div>
             </div>
         `;
         const enableBtn = createElement('button', 'mt-3 w-full ios-btn ios-btn-primary');
-        enableBtn.textContent = 'å‰å¾€éš±ç§è¨­å®š';
+        enableBtn.textContent = '«e©¹Áô¨p³]©w';
         enableBtn.onclick = () => Router.navigate('/activity/privacy');
         disabledNotice.appendChild(enableBtn);
         statusCard.appendChild(disabledNotice);
     } else {
         const enabledNotice = createElement('div', 'p-4 bg-green-50 border border-green-200 rounded-xl');
-        const privacyLevelName = privacySettings.global_level === 'basic' ? 'åŸºæœ¬çµ±è¨ˆ' : 
-                                   privacySettings.global_level === 'summary' ? 'åŒ…å«æ‘˜è¦' : 'è©³ç´°è³‡è¨Š';
+        const privacyLevelName = privacySettings.global_level === 'basic' ? '°ò¥»²Î­p' : 
+                                   privacySettings.global_level === 'summary' ? '¥]§tºK­n' : '¸Ô²Ó¸ê°T';
         enabledNotice.innerHTML = `
             <div class='flex items-center gap-3'>
                 <span class='material-symbols-outlined text-green-600 text-2xl'>check_circle</span>
                 <div class='flex-1'>
-                    <h3 class='font-semibold text-sm text-green-800'>æ´»å‹•åŒæ­¥å·²å•Ÿç”¨</h3>
-                    <p class='text-xs text-green-700 mt-1'>éš±ç§ç­‰ç´šï¼š${privacyLevelName} Â· ä¿ç•™ ${privacySettings.retention_days} å¤©</p>
+                    <h3 class='font-semibold text-sm text-green-800'>¬¡°Ê¦P¨B¤w±Ò¥Î</h3>
+                    <p class='text-xs text-green-700 mt-1'>Áô¨pµ¥¯Å¡G${privacyLevelName} ¡P «O¯d ${privacySettings.retention_days} ¤Ñ</p>
                 </div>
-                <button class='text-green-600 text-sm underline' id='privacy-settings-link'>è¨­å®š</button>
+                <button class='text-green-600 text-sm underline' id='privacy-settings-link'>³]©w</button>
             </div>
         `;
         statusCard.appendChild(enabledNotice);
@@ -103,8 +103,8 @@ async function renderActivitySync() {
     const summaryCard = createElement('div', 'bg-white rounded-xl p-4 shadow-sm');
     
     const summaryHeader = createElement('div', 'flex items-center justify-between mb-3');
-    summaryHeader.appendChild(createElement('span', 'font-semibold', { textContent: 'ä»Šæ—¥æ´»å‹•æ‘˜è¦' }));
-    summaryHeader.appendChild(createElement('span', 'text-sm text-ios-muted', { textContent: `å…± ${summary.total} ç­†` }));
+    summaryHeader.appendChild(createElement('span', 'font-semibold', { textContent: '¤µ¤é¬¡°ÊºK­n' }));
+    summaryHeader.appendChild(createElement('span', 'text-sm text-ios-muted', { textContent: `¦@ ${summary.total} µ§` }));
     summaryCard.appendChild(summaryHeader);
 
     if (summary.total > 0) {
@@ -118,14 +118,14 @@ async function renderActivitySync() {
         }
         summaryCard.appendChild(platformStats);
     } else {
-        summaryCard.appendChild(createElement('p', 'text-ios-muted text-sm', { textContent: 'å°šæœªè¨˜éŒ„ä»»ä½•æ´»å‹•' }));
+        summaryCard.appendChild(createElement('p', 'text-ios-muted text-sm', { textContent: '©|¥¼°O¿ı¥ô¦ó¬¡°Ê' }));
     }
     
     summarySection.appendChild(summaryCard);
     main.appendChild(summarySection);
 
     const addSection = createElement('div', 'mx-4 mt-4');
-    addSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'æ–°å¢æ´»å‹•' }));
+    addSection.appendChild(createElement('p', 'ios-section-header', { textContent: '·s¼W¬¡°Ê' }));
     
     const addCard = createElement('div', 'bg-white rounded-xl p-4 shadow-sm');
 
@@ -145,21 +145,21 @@ async function renderActivitySync() {
 
     const titleInput = createElement('input', 'ios-input w-full mb-3', {
         type: 'text',
-        placeholder: 'æ´»å‹•æ¨™é¡Œï¼ˆé¸å¡«ï¼‰'
+        placeholder: '¬¡°Ê¼ĞÃD¡]¿ï¶ñ¡^'
     });
     addCard.appendChild(titleInput);
 
     const contentInput = createElement('textarea', 'ios-input w-full mb-3', {
-        placeholder: 'æ´»å‹•å…§å®¹æè¿°...',
+        placeholder: '¬¡°Ê¤º®e´y­z...',
         rows: 3
     });
     addCard.appendChild(contentInput);
 
     const addBtn = createElement('button', 'ios-btn ios-btn-primary w-full');
-    addBtn.textContent = 'è¨˜éŒ„æ´»å‹•';
+    addBtn.textContent = '°O¿ı¬¡°Ê';
     addBtn.onclick = async () => {
         if (!platformSelect.value || !typeSelect.value) {
-            createToast('è«‹é¸æ“‡å¹³å°å’Œæ´»å‹•é¡å‹', 'error');
+            createToast('½Ğ¿ï¾Ü¥­¥x©M¬¡°ÊÃş«¬', 'error');
             return;
         }
 
@@ -170,7 +170,7 @@ async function renderActivitySync() {
             content: contentInput.value.trim()
         });
 
-        createToast('æ´»å‹•å·²è¨˜éŒ„', 'success');
+        createToast('¬¡°Ê¤w°O¿ı', 'success');
         titleInput.value = '';
         contentInput.value = '';
         Router.navigate('/activity');
@@ -183,12 +183,12 @@ async function renderActivitySync() {
     const activities = await ActivityDB.getAll(50);
 
     const listSection = createElement('div', 'mx-4 mt-4');
-    listSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'æ´»å‹•è¨˜éŒ„' }));
+    listSection.appendChild(createElement('p', 'ios-section-header', { textContent: '¬¡°Ê°O¿ı' }));
 
     const listCard = createElement('div', 'bg-white rounded-xl shadow-sm overflow-hidden');
 
     if (activities.length === 0) {
-        listCard.appendChild(createElement('div', 'p-4 text-center text-ios-muted', { textContent: 'å°šæœªæœ‰ä»»ä½•æ´»å‹•è¨˜éŒ„' }));
+        listCard.appendChild(createElement('div', 'p-4 text-center text-ios-muted', { textContent: '©|¥¼¦³¥ô¦ó¬¡°Ê°O¿ı' }));
     } else {
         activities.forEach((activity, index) => {
             const item = createElement('div', `p-4 border-b border-gray-100 ${index === activities.length - 1 ? 'border-b-0' : ''}`);
@@ -238,7 +238,7 @@ async function renderActivitySync() {
 
 export default {
     id: 'activity',
-    name: 'æ´»å‹•åŒæ­¥',
+    name: '¬¡°Ê¦P¨B',
     icon: 'sync',
     routes: [
         { path: '/activity', render: renderActivitySync }

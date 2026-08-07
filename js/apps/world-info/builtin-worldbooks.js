@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar } from '../../components.js';
 import worldbookInstaller from '../../core/worldbook-installer.js';
 
@@ -6,7 +6,7 @@ async function renderBuiltinWorldbooks() {
     const container = createElement('div', 'app-container bg-ios-bg');
     
     const header = createIOSNavBar({
-        title: 'å…§å»ºä¸–ç•Œæ›¸',
+        title: '¤º«Ø¥@¬É®Ñ',
         backPath: '/world-info'
     });
     container.appendChild(header);
@@ -18,7 +18,7 @@ async function renderBuiltinWorldbooks() {
     const listContainer = createElement('div', 'px-4');
     
     const loadingState = createElement('div', 'text-center py-12 text-ios-muted');
-    loadingState.textContent = 'è¼‰å…¥ä¸­...';
+    loadingState.textContent = '¸ü¤J¤¤...';
     listContainer.appendChild(loadingState);
     main.appendChild(listContainer);
     container.appendChild(main);
@@ -29,7 +29,7 @@ async function renderBuiltinWorldbooks() {
         
         if (worldbooks.length === 0) {
             const emptyState = createElement('div', 'text-center py-12 text-ios-muted');
-            emptyState.textContent = 'æ²’æœ‰æ‰¾åˆ°å¯ç”¨çš„ä¸–ç•Œæ›¸';
+            emptyState.textContent = '¨S¦³§ä¨ì¥i¥Îªº¥@¬É®Ñ';
             listContainer.appendChild(emptyState);
         } else {
             const group = createElement('div', 'ios-grouped-list');
@@ -39,7 +39,7 @@ async function renderBuiltinWorldbooks() {
                 
                 const content = createElement('div', 'flex-1 min-h-[44px] flex flex-col justify-center');
                 content.appendChild(createElement('span', 'text-base font-semibold', { textContent: wb.id }));
-                content.appendChild(createElement('span', 'text-sm text-ios-muted', { textContent: 'é»æ“ŠåŒ¯å…¥åˆ°è¨­å®šåº«' }));
+                content.appendChild(createElement('span', 'text-sm text-ios-muted', { textContent: 'ÂIÀ»¶×¤J¨ì³]©w®w' }));
                 
                 cell.appendChild(content);
                 cell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
@@ -51,20 +51,20 @@ async function renderBuiltinWorldbooks() {
                         const result = await worldbookInstaller.importWorldbookWithPrompt(wb.id);
                         
                         if (result.needPrompt) {
-                            const confirmed = confirm(`ç™¼ç¾ ${result.duplicates.length} å€‹åŒåæ¢ç›®å·²å­˜åœ¨ã€‚\n\næ˜¯å¦è¦†è“‹é€™äº›æ¢ç›®ï¼Ÿ\n\né¸æ“‡ã€Œç¢ºå®šã€è¦†è“‹\né¸æ“‡ã€Œå–æ¶ˆã€è·³éé‡è¤‡é …ç›®`);
+                            const confirmed = confirm(`µo²{ ${result.duplicates.length} ­Ó¦P¦W±ø¥Ø¤w¦s¦b¡C\n\n¬O§_ÂĞ»\³o¨Ç±ø¥Ø¡H\n\n¿ï¾Ü¡u½T©w¡vÂĞ»\\n¿ï¾Ü¡u¨ú®ø¡v¸õ¹L­«½Æ¶µ¥Ø`);
                             
                             if (confirmed) {
                                 const importResult = await worldbookInstaller.importWorldbook(wb.id, 'overwrite');
-                                alert(`åŒ¯å…¥å®Œæˆ\nè¦†è“‹: ${importResult.imported} å€‹æ¢ç›®\nè·³é: ${importResult.skipped} å€‹æ¢ç›®`);
+                                alert(`¶×¤J§¹¦¨\nÂĞ»\: ${importResult.imported} ­Ó±ø¥Ø\n¸õ¹L: ${importResult.skipped} ­Ó±ø¥Ø`);
                             } else {
                                 const importResult = await worldbookInstaller.importWorldbook(wb.id, 'skip');
-                                alert(`åŒ¯å…¥å®Œæˆ\næ–°å¢: ${importResult.imported} å€‹æ¢ç›®\nè·³é: ${importResult.skipped} å€‹é‡è¤‡æ¢ç›®`);
+                                alert(`¶×¤J§¹¦¨\n·s¼W: ${importResult.imported} ­Ó±ø¥Ø\n¸õ¹L: ${importResult.skipped} ­Ó­«½Æ±ø¥Ø`);
                             }
                         } else {
-                            alert(`åŒ¯å…¥å®Œæˆ\næ–°å¢: ${result.imported} å€‹æ¢ç›®`);
+                            alert(`¶×¤J§¹¦¨\n·s¼W: ${result.imported} ­Ó±ø¥Ø`);
                         }
                     } catch (err) {
-                        alert('åŒ¯å…¥å¤±æ•—: ' + err.message);
+                        alert('¶×¤J¥¢±Ñ: ' + err.message);
                     }
                     
                     cell.style.pointerEvents = '';
@@ -78,7 +78,7 @@ async function renderBuiltinWorldbooks() {
     } catch (err) {
         listContainer.innerHTML = '';
         const errorState = createElement('div', 'text-center py-12 text-ios-danger');
-        errorState.textContent = 'è¼‰å…¥å¤±æ•—: ' + err.message;
+        errorState.textContent = '¸ü¤J¥¢±Ñ: ' + err.message;
         listContainer.appendChild(errorState);
     }
     

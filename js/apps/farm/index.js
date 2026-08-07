@@ -1,11 +1,11 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 const CROPS = [
-  { id: 'c1', name: 'ç•ªèŒ„', growTime: 30, sellPrice: 50, icon: 'ğŸ…' },
-  { id: 'c2', name: 'ç‰ç±³', growTime: 45, sellPrice: 80, icon: 'ğŸŒ½' },
-  { id: 'c3', name: 'è‰è“', growTime: 60, sellPrice: 120, icon: 'ğŸ“' }
+  { id: 'c1', name: 'µf­X', growTime: 30, sellPrice: 50, icon: '??' },
+  { id: 'c2', name: '¥É¦Ì', growTime: 45, sellPrice: 80, icon: '??' },
+  { id: 'c3', name: '¯ó²ù', growTime: 60, sellPrice: 120, icon: '??' }
 ];
 
 let farm = { plots: Array(6).fill(null), coins: 100 };
@@ -26,8 +26,8 @@ async function renderFarm(params) {
   const container = createElement('div', 'app-container farm-app');
   container.innerHTML = `
     <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> è¿”å›</button>
-      <h1 class='menu-title'>è¾²å ´</h1>
+      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
+      <h1 class='menu-title'>¹A³õ</h1>
       <div class='coins'><i class='fas fa-coins'></i> ${farm.coins}</div>
     </header>
     <div class='page'>
@@ -41,12 +41,12 @@ async function renderFarm(params) {
           const ready = elapsed >= crop.growTime;
           return `<div class='plot ${ready ? 'ready' : ''}' data-idx='${i}'>
             <span class='crop-icon'>${crop.icon}</span>
-            ${ready ? '<span class='ready-badge'>å¯æ”¶ç©«</span>' : `<span class='progress'>${Math.floor(elapsed)}/${crop.growTime}s</span>`}
+            ${ready ? '<span class='ready-badge'>¥i¦¬Ã¬</span>' : `<span class='progress'>${Math.floor(elapsed)}/${crop.growTime}s</span>`}
           </div>`;
         }).join('')}
       </div>
       <div class='shop-section'>
-        <h3>å•†åº—</h3>
+        <h3>°Ó©±</h3>
         <div class='crop-list'>
           ${CROPS.map(c => `
             <button class='crop-btn' data-id='${c.id}' data-price='20'>
@@ -63,7 +63,7 @@ async function renderFarm(params) {
   container.querySelectorAll('.plot.empty').forEach(plot => {
     plot.onclick = () => {
       const idx = parseInt(plot.dataset.idx);
-      const cropId = prompt('è¼¸å…¥ä½œç‰©ä»£ç¢¼ï¼ˆc1, c2, c3ï¼‰ï¼š');
+      const cropId = prompt('¿é¤J§@ª«¥N½X¡]c1, c2, c3¡^¡G');
       if (cropId && CROPS.find(c => c.id === cropId) && farm.coins >= 20) {
         farm.coins -= 20;
         farm.plots[idx] = { cropId, plantedAt: Date.now() };
@@ -90,9 +90,9 @@ async function renderFarm(params) {
 
 export default {
   id: 'farm',
-  name: 'è¾²å ´',
+  name: '¹A³õ',
   icon: 'seedling',
   routes: [{ path: '/farm', render: renderFarm }],
-  navItem: { label: 'è¾²å ´', icon: 'seedling', path: '/farm', showInNav: true, order: 127 },
+  navItem: { label: '¹A³õ', icon: 'seedling', path: '/farm', showInNav: true, order: 127 },
   stylesPath: 'js/apps/farm/style.css'
 };

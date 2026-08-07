@@ -1,24 +1,24 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBottomNav, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 import { CHATS_TABS } from './chats-nav.js';
 
 const THEMES = [
-    { id: 't1', name: 'æ˜Ÿç©º', icon: 'ğŸŒŒ', price: 0 },
-    { id: 't2', name: 'æ£®æ—', icon: 'ğŸŒ²', price: 50 },
-    { id: 't3', name: 'æµ·æ´‹', icon: 'ğŸŒŠ', price: 50 },
-    { id: 't4', name: 'æ—¥è½', icon: 'ğŸŒ…', price: 80 },
-    { id: 't5', name: 'æ¥µå…‰', icon: 'ğŸŒŒ', price: 100 },
-    { id: 't6', name: 'æ«»èŠ±', icon: 'ğŸŒ¸', price: 80 }
+    { id: 't1', name: '¬PªÅ', icon: '??', price: 0 },
+    { id: 't2', name: '´ËªL', icon: '??', price: 50 },
+    { id: 't3', name: '®ü¬v', icon: '??', price: 50 },
+    { id: 't4', name: '¤é¸¨', icon: '??', price: 80 },
+    { id: 't5', name: '·¥¥ú', icon: '??', price: 100 },
+    { id: 't6', name: 'Äåªá', icon: '??', price: 80 }
 ];
 
 const EMOJIS = [
-    { id: 'e1', name: 'ç¬‘è‡‰', icon: 'ğŸ˜Š', price: 0 },
-    { id: 'e2', name: 'æ„›å¿ƒ', icon: 'â¤ï¸', price: 20 },
-    { id: 'e3', name: 'æ˜Ÿæ˜Ÿ', icon: 'â­', price: 20 },
-    { id: 'e4', name: 'å½©è™¹', icon: 'ğŸŒˆ', price: 50 },
-    { id: 'e5', name: 'é–ƒé›»', icon: 'âš¡', price: 50 },
-    { id: 'e6', name: 'çš‡å† ', icon: 'ğŸ‘‘', price: 100 }
+    { id: 'e1', name: '¯ºÁy', icon: '??', price: 0 },
+    { id: 'e2', name: '·R¤ß', icon: '??', price: 20 },
+    { id: 'e3', name: '¬P¬P', icon: '?', price: 20 },
+    { id: 'e4', name: '±m­i', icon: '??', price: 50 },
+    { id: 'e5', name: '°{¹q', icon: '?', price: 50 },
+    { id: 'e6', name: '¬Ó«a', icon: '??', price: 100 }
 ];
 
 let ownedThemes = new Set();
@@ -52,14 +52,14 @@ async function renderShop() {
     const headerInner = createElement('div', 'flex justify-between items-center h-[86px] px-4');
 
     const title = createElement('h1', 'text-[32px] font-bold text-black leading-[31px]');
-    title.textContent = 'å¤–è§€å•†åº—';
+    title.textContent = '¥~Æ[°Ó©±';
     headerInner.appendChild(title);
 
     header.appendChild(headerInner);
     container.appendChild(header);
 
     const tabContainer = createElement('div', 'flex px-4 gap-2 mb-4');
-    const tabs = ['ä¸»é¡Œ', 'è²¼åœ–'];
+    const tabs = ['¥DÃD', '¶K¹Ï'];
     tabs.forEach((tabLabel, i) => {
         const tab = createElement('button', `flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${activeTab === i ? 'bg-[var(--kakao-yellow)] text-[var(--kakao-brown)]' : 'bg-gray-100 text-gray-600'}`, {
             textContent: tabLabel,
@@ -86,23 +86,23 @@ async function renderShop() {
             item.appendChild(createElement('div', 'text-sm font-medium', { textContent: t.name }));
 
             if (isOwned) {
-                item.appendChild(createElement('div', 'text-xs text-green-600 mt-1', { textContent: 'å·²æ“æœ‰' }));
+                item.appendChild(createElement('div', 'text-xs text-green-600 mt-1', { textContent: '¤w¾Ö¦³' }));
             } else {
-                item.appendChild(createElement('div', 'text-xs text-gray-500 mt-1', { textContent: t.price === 0 ? 'å…è²»' : t.price + ' å¹£' }));
+                item.appendChild(createElement('div', 'text-xs text-gray-500 mt-1', { textContent: t.price === 0 ? '§K¶O' : t.price + ' ¹ô' }));
             }
 
             item.onclick = async () => {
                 if (purchasing) return;
                 if (ownedThemes.has(t.id)) {
-                    createToast('å·²æ“æœ‰æ­¤ä¸»é¡Œ');
+                    createToast('¤w¾Ö¦³¦¹¥DÃD');
                     return;
                 }
                 purchasing = true;
                 try {
-                    if (t.price === 0 || confirm('è³¼è²·ã€Œ' + t.name + 'ã€ä¸»é¡Œï¼Ÿ')) {
+                    if (t.price === 0 || confirm('ÁÊ¶R¡u' + t.name + '¡v¥DÃD¡H')) {
                         ownedThemes.add(t.id);
                         await saveOwnedThemes();
-                        createToast('å·²è³¼è²·ä¸»é¡Œï¼š' + t.name);
+                        createToast('¤wÁÊ¶R¥DÃD¡G' + t.name);
                         Router.navigate('/chats/shop');
                     }
                 } finally {
@@ -125,23 +125,23 @@ async function renderShop() {
             item.appendChild(createElement('div', 'text-sm font-medium', { textContent: e.name }));
 
             if (isOwned) {
-                item.appendChild(createElement('div', 'text-xs text-green-600 mt-1', { textContent: 'å·²æ“æœ‰' }));
+                item.appendChild(createElement('div', 'text-xs text-green-600 mt-1', { textContent: '¤w¾Ö¦³' }));
             } else {
-                item.appendChild(createElement('div', 'text-xs text-gray-500 mt-1', { textContent: e.price === 0 ? 'å…è²»' : e.price + ' å¹£' }));
+                item.appendChild(createElement('div', 'text-xs text-gray-500 mt-1', { textContent: e.price === 0 ? '§K¶O' : e.price + ' ¹ô' }));
             }
 
             item.onclick = async () => {
                 if (purchasing) return;
                 if (ownedEmojis.has(e.id)) {
-                    createToast('å·²æ“æœ‰æ­¤è²¼åœ–');
+                    createToast('¤w¾Ö¦³¦¹¶K¹Ï');
                     return;
                 }
                 purchasing = true;
                 try {
-                    if (e.price === 0 || confirm('è³¼è²·ã€Œ' + e.name + 'ã€è²¼åœ–ï¼Ÿ')) {
+                    if (e.price === 0 || confirm('ÁÊ¶R¡u' + e.name + '¡v¶K¹Ï¡H')) {
                         ownedEmojis.add(e.id);
                         await saveOwnedEmojis();
-                        createToast('å·²è³¼è²·è²¼åœ–ï¼š' + e.name);
+                        createToast('¤wÁÊ¶R¶K¹Ï¡G' + e.name);
                         Router.navigate('/chats/shop');
                     }
                 } finally {

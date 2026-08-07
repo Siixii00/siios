@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon } from '../../components.js';
 import builtinWorldbooks from './builtin-worldbooks.js';
 
@@ -39,7 +39,7 @@ async function renderWorldInfo() {
     
     const backIcon = createIcon('chevron_left');
     backBtn.appendChild(backIcon);
-    backBtn.appendChild(createElement('span', '', { textContent: 'è¿”å›' }));
+    backBtn.appendChild(createElement('span', '', { textContent: 'ªğ¦^' }));
     inner.appendChild(backBtn);
     
     const titleContainer = createElement('div', '');
@@ -106,7 +106,7 @@ async function renderWorldInfo() {
     placeholderText.style.fontStyle = 'normal';
     placeholderText.style.fontWeight = '400';
     placeholderText.style.lineHeight = 'normal';
-    placeholderText.textContent = 'æœå°‹';
+    placeholderText.textContent = '·j´M';
     placeholder.appendChild(placeholderText);
     
     searchBar.appendChild(placeholder);
@@ -122,28 +122,28 @@ async function renderWorldInfo() {
     
     const settingsCells = [
         {
-            title: 'å…§å»ºä¸–ç•Œæ›¸',
-            description: 'å®‰è£ä¸¦ç®¡ç†å…§å»ºçš„ä¸–ç•Œæ›¸',
+            title: '¤º«Ø¥@¬É®Ñ',
+            description: '¦w¸Ë¨ÃºŞ²z¤º«Øªº¥@¬É®Ñ',
             onClick: () => Router.navigate('/builtin-worldbooks')
         },
         {
-            title: 'å…¨å±€è¨­å®š',
-            description: 'ç®¡ç†å…¨å±€è¨­å®šé …ç›®',
+            title: '¥ş§½³]©w',
+            description: 'ºŞ²z¥ş§½³]©w¶µ¥Ø',
             onClick: () => Router.navigate('/global-settings')
         },
         {
-            title: 'å…¨å±€ç¦è©',
-            description: 'ç®¡ç†å…¨å±€ç¦è©åˆ—è¡¨',
+            title: '¥ş§½¸Tµü',
+            description: 'ºŞ²z¥ş§½¸Tµü¦Cªí',
             onClick: () => Router.navigate('/global-forbidden')
         },
         {
-            title: 'åŠ‡å ´è¨­å®š',
-            description: 'ç®¡ç†ä¸åŒåŠ‡å ´çš„è¨­å®š',
+            title: '¼@³õ³]©w',
+            description: 'ºŞ²z¤£¦P¼@³õªº³]©w',
             onClick: () => Router.navigate('/theater-settings')
         },
         {
-            title: 'é—œéµå­—è¨­å®š',
-            description: 'ç®¡ç†é—œéµå­—è§¸ç™¼è¨­å®š',
+            title: 'ÃöÁä¦r³]©w',
+            description: 'ºŞ²zÃöÁä¦rÄ²µo³]©w',
             onClick: () => Router.navigate('/keyword-settings')
         }
     ];

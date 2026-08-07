@@ -1,4 +1,4 @@
-ï»¿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBottomNav, createKakaoBottomSheet, createEmptyState, createToast } from '../../components.js';
 import { CharactersDB, ChatsDB } from '../../db.js';
 import { CHATS_TABS } from './chats-nav.js';
@@ -12,7 +12,7 @@ async function renderContacts() {
     const headerInner = createElement('div', 'flex justify-between items-center h-[86px] px-4');
 
     const title = createElement('h1', 'text-[32px] font-bold text-black leading-[31px]');
-    title.textContent = 'å»ºç«‹è¯çµ¡';
+    title.textContent = '«Ø¥ßÁpµ¸';
     headerInner.appendChild(title);
 
     const actions = createElement('div', 'flex items-center gap-4');
@@ -33,10 +33,10 @@ async function renderContacts() {
     if (characters.length === 0) {
         const emptyState = createEmptyState(
             'person_add',
-            'æ²’æœ‰è¯çµ¡äºº',
-            'é»æ“Šå³ä¸Šè§’æŒ‰éˆ•å»ºç«‹æ–°çš„è§’è‰²è¯çµ¡',
+            '¨S¦³Ápµ¸¤H',
+            'ÂIÀ»¥k¤W¨¤«ö¶s«Ø¥ß·sªº¨¤¦âÁpµ¸',
             {
-                label: 'å»ºç«‹è¯çµ¡',
+                label: '«Ø¥ßÁpµ¸',
                 onClick: () => openCreateSheet()
             }
         );
@@ -64,7 +64,7 @@ async function renderContacts() {
                     character_description: char.description || '',
                     bound_user_id: char.bound_user_id || null
                 });
-                createToast('å·²é–‹å§‹èˆ‡ ' + char.name + ' çš„å°è©±');
+                createToast('¤w¶}©l»P ' + char.name + ' ªº¹ï¸Ü');
                 Router.navigate('/chat/' + newChat.id);
             };
 
@@ -84,7 +84,7 @@ async function renderContacts() {
             content.appendChild(topRow);
 
             const bottomRow = createElement('div', 'kakao-chat-cell-bottom');
-            bottomRow.appendChild(createElement('span', 'kakao-chat-cell-msg', { textContent: char.description || 'é»æ“Šé–‹å§‹å°è©±' }));
+            bottomRow.appendChild(createElement('span', 'kakao-chat-cell-msg', { textContent: char.description || 'ÂIÀ»¶}©l¹ï¸Ü' }));
             content.appendChild(bottomRow);
 
             cell.appendChild(content);
@@ -108,7 +108,7 @@ async function openCreateSheet() {
 
     const nameInput = createElement('input', 'kakao-chat-textarea w-full', {
         type: 'text',
-        placeholder: 'è§’è‰²åç¨±'
+        placeholder: '¨¤¦â¦WºÙ'
     });
     nameInput.style.borderRadius = '12px';
     nameInput.style.height = '44px';
@@ -116,28 +116,28 @@ async function openCreateSheet() {
 
     const avatarInput = createElement('input', 'kakao-chat-textarea w-full', {
         type: 'url',
-        placeholder: 'é ­åƒ URLï¼ˆé¸å¡«ï¼‰'
+        placeholder: 'ÀY¹³ URL¡]¿ï¶ñ¡^'
     });
     avatarInput.style.borderRadius = '12px';
     avatarInput.style.height = '44px';
     avatarInput.style.padding = '0 12px';
 
     const personalityInput = createElement('textarea', 'kakao-chat-textarea w-full', {
-        placeholder: 'å€‹æ€§æè¿°ï¼ˆé¸å¡«ï¼‰',
+        placeholder: '­Ó©Ê´y­z¡]¿ï¶ñ¡^',
         rows: '3'
     });
     personalityInput.style.borderRadius = '12px';
     personalityInput.style.height = '80px';
 
     const scenarioInput = createElement('textarea', 'kakao-chat-textarea w-full', {
-        placeholder: 'å ´æ™¯è¨­å®šï¼ˆé¸å¡«ï¼‰',
+        placeholder: '³õ´º³]©w¡]¿ï¶ñ¡^',
         rows: '2'
     });
     scenarioInput.style.borderRadius = '12px';
     scenarioInput.style.height = '60px';
 
     const firstMsgInput = createElement('textarea', 'kakao-chat-textarea w-full', {
-        placeholder: 'ç¬¬ä¸€å¥è©±ï¼ˆé¸å¡«ï¼‰',
+        placeholder: '²Ä¤@¥y¸Ü¡]¿ï¶ñ¡^',
         rows: '2'
     });
     firstMsgInput.style.borderRadius = '12px';
@@ -151,20 +151,20 @@ async function openCreateSheet() {
     form.appendChild(firstMsgInput);
 
     const sheet = createKakaoBottomSheet([], {
-        title: 'å»ºç«‹æ–°è¯çµ¡',
+        title: '«Ø¥ß·sÁpµ¸',
         customContent: form
     });
 
     const submitBtn = createElement('button', 'kakao-send-btn w-full', {
-        textContent: 'å»ºç«‹è¯çµ¡',
+        textContent: '«Ø¥ßÁpµ¸',
         onClick: async () => {
             const name = nameInput.value.trim();
             if (!name) {
-                createToast('è«‹è¼¸å…¥è§’è‰²åç¨±');
+                createToast('½Ğ¿é¤J¨¤¦â¦WºÙ');
                 return;
             }
             if (existingNames.includes(name)) {
-                createToast('æ­¤è§’è‰²åç¨±å·²å­˜åœ¨');
+                createToast('¦¹¨¤¦â¦WºÙ¤w¦s¦b');
                 return;
             }
             await CharactersDB.create({
@@ -175,7 +175,7 @@ async function openCreateSheet() {
                 first_message: firstMsgInput.value.trim(),
                 description: personalityInput.value.trim()
             });
-            createToast('å·²å»ºç«‹è¯çµ¡ï¼š' + name);
+            createToast('¤w«Ø¥ßÁpµ¸¡G' + name);
             sheet.close();
             Router.navigate('/chats/contacts');
         }
