@@ -3,7 +3,7 @@ import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 const BOARD_SIZE = 7;
-const FRUITS = ['??', '??', '??', '??', '??', '??'];
+const FRUITS = ['ğŸ', 'ğŸŒ', 'ğŸ‡', 'ğŸ“', 'ğŸŠ', 'ğŸ'];
 
 let board = [];
 let score = 0;
@@ -108,7 +108,7 @@ function renderBoard(container) {
   if (!boardEl) return;
   
   boardEl.innerHTML = board.map((cell, idx) => `
-    <button class='tile ${selectedIndex === idx ? 'selected' : ''}' data-idx='${idx}'>
+    <button class="tile ${selectedIndex === idx ? 'selected' : ''}" data-idx="${idx}">
       ${cell.fruit || ''}
     </button>
   `).join('');
@@ -170,9 +170,9 @@ function handleTileClick(container, idx) {
   saveGameState();
   
   if (score >= target) {
-    alert('?? ¹F¦¨¥Ø¼Ğ¡I');
+    alert('ğŸ‰ é”æˆç›®æ¨™ï¼');
   } else if (moves <= 0) {
-    alert('?? ¨B¼Æ¥ÎºÉ¡I');
+    alert('ğŸ˜¢ æ­¥æ•¸ç”¨ç›¡ï¼');
   }
 }
 
@@ -183,32 +183,32 @@ async function renderMatch3(params) {
   const container = createElement('div', 'app-container match3-app');
   
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'>
-        <i class='fas fa-chevron-left'></i> ªğ¦^
+    <header class="ios-header">
+      <button class="ios-back-btn">
+        <i class="fas fa-chevron-left"></i> è¿”å›
       </button>
-      <h1 class='menu-title'>®ø®ø¼Ö</h1>
+      <h1 class="menu-title">æ¶ˆæ¶ˆæ¨‚</h1>
     </header>
     
-    <div class='page'>
-      <div class='game-info'>
-        <div class='info-item'>
-          <span class='info-label'>¤À¼Æ</span>
-          <span class='info-value score-value'>${score}</span>
+    <div class="page">
+      <div class="game-info">
+        <div class="info-item">
+          <span class="info-label">åˆ†æ•¸</span>
+          <span class="info-value score-value">${score}</span>
         </div>
-        <div class='info-item'>
-          <span class='info-label'>¥Ø¼Ğ</span>
-          <span class='info-value target-value'>${target}</span>
+        <div class="info-item">
+          <span class="info-label">ç›®æ¨™</span>
+          <span class="info-value target-value">${target}</span>
         </div>
-        <div class='info-item'>
-          <span class='info-label'>¨B¼Æ</span>
-          <span class='info-value moves-value'>${moves}</span>
+        <div class="info-item">
+          <span class="info-label">æ­¥æ•¸</span>
+          <span class="info-value moves-value">${moves}</span>
         </div>
       </div>
       
-      <div class='match-board' style='grid-template-columns: repeat(${BOARD_SIZE}, 1fr);'></div>
+      <div class="match-board" style="grid-template-columns: repeat(${BOARD_SIZE}, 1fr);"></div>
       
-      <button class='restart-btn'>­«·s¶}©l</button>
+      <button class="restart-btn">é‡æ–°é–‹å§‹</button>
     </div>
   `;
   
@@ -231,9 +231,9 @@ async function renderMatch3(params) {
 
 export default {
   id: 'match-3',
-  name: '®ø®ø¼Ö',
+  name: 'æ¶ˆæ¶ˆæ¨‚',
   icon: 'extension',
   routes: [{ path: '/match-3', render: renderMatch3 }],
-  navItem: { label: '®ø®ø¼Ö', icon: 'extension', path: '/match-3', showInNav: true, order: 101 },
+  navItem: { label: 'æ¶ˆæ¶ˆæ¨‚', icon: 'extension', path: '/match-3', showInNav: true, order: 101 },
   stylesPath: 'js/apps/match-3/style.css'
 };

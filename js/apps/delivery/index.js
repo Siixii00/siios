@@ -3,18 +3,18 @@ import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 const RESTAURANTS = [
-  { id: 'r1', name: '¬ü¨ı°a', cuisine: '¤¤¦¡', rating: 4.8, time: '25-35', menu: [
-    { name: '®c«OÂû¤B', price: 120 },
-    { name: '³Â±C¨§»G', price: 90 },
-    { name: 'ª£¶º', price: 80 }
+  { id: 'r1', name: 'ç¾å‘³è»’', cuisine: 'ä¸­å¼', rating: 4.8, time: '25-35', menu: [
+    { name: 'å®®ä¿é›ä¸', price: 120 },
+    { name: 'éº»å©†è±†è…', price: 90 },
+    { name: 'ç‚’é£¯', price: 80 }
   ]},
-  { id: 'r2', name: '¹Ø¥q­¦', cuisine: '¤é¦¡', rating: 4.6, time: '30-40', menu: [
-    { name: 'ºî¦X¹Ø¥q', price: 180 },
-    { name: 'ÂD³½¨ë¨­', price: 150 }
+  { id: 'r2', name: 'å£½å¸éƒ', cuisine: 'æ—¥å¼', rating: 4.6, time: '30-40', menu: [
+    { name: 'ç¶œåˆå£½å¸', price: 180 },
+    { name: 'é®­é­šåˆºèº«', price: 150 }
   ]},
-  { id: 'r3', name: 'Pasta House', cuisine: '¸q¦¡', rating: 4.5, time: '20-30', menu: [
-    { name: '¸q¤j§QÄÑ', price: 150 },
-    { name: '©ÜÂÄ', price: 220 }
+  { id: 'r3', name: 'Pasta House', cuisine: 'ç¾©å¼', rating: 4.5, time: '20-30', menu: [
+    { name: 'ç¾©å¤§åˆ©éºµ', price: 150 },
+    { name: 'æŠ«è–©', price: 220 }
   ]}
 ];
 
@@ -33,12 +33,12 @@ function renderRestaurants(container) {
   const list = container.querySelector('.restaurant-list');
   if (!list) return;
   list.innerHTML = RESTAURANTS.map(r => `
-    <div class='restaurant-card' data-id='${r.id}'>
-      <h3 class='restaurant-name'>${r.name}</h3>
-      <span class='restaurant-cuisine'>${r.cuisine}</span>
-      <div class='restaurant-meta'>
-        <span class='rating'><i class='fas fa-star'></i> ${r.rating}</span>
-        <span class='time'><i class='fas fa-clock'></i> ${r.time} ¤À</span>
+    <div class="restaurant-card" data-id="${r.id}">
+      <h3 class="restaurant-name">${r.name}</h3>
+      <span class="restaurant-cuisine">${r.cuisine}</span>
+      <div class="restaurant-meta">
+        <span class="rating"><i class="fas fa-star"></i> ${r.rating}</span>
+        <span class="time"><i class="fas fa-clock"></i> ${r.time} åˆ†</span>
       </div>
     </div>
   `).join('');
@@ -53,22 +53,22 @@ function openMenu(container, rid) {
   const sec = container.querySelector('.menu-section');
   if (!sec) return;
   sec.innerHTML = `
-    <div class='menu-header'>
-      <button class='back-btn'><i class='fas fa-arrow-left'></i></button>
+    <div class="menu-header">
+      <button class="back-btn"><i class="fas fa-arrow-left"></i></button>
       <h2>${r.name}</h2>
     </div>
-    <div class='menu-list'>
+    <div class="menu-list">
       ${r.menu.map(m => `
-        <div class='menu-item'>
-          <span class='item-name'>${m.name}</span>
-          <span class='item-price'>$${m.price}</span>
-          <button class='add-btn' data-name='${m.name}' data-price='${m.price}'>+</button>
+        <div class="menu-item">
+          <span class="item-name">${m.name}</span>
+          <span class="item-price">$${m.price}</span>
+          <button class="add-btn" data-name="${m.name}" data-price="${m.price}">+</button>
         </div>
       `).join('')}
     </div>
-    <div class='cart-summary'>
-      <span class='cart-count'>${cart.length} ¶µ</span>
-      <span class='cart-total'>$${cart.reduce((s, i) => s + i.price, 0)}</span>
+    <div class="cart-summary">
+      <span class="cart-count">${cart.length} é …</span>
+      <span class="cart-total">$${cart.reduce((s, i) => s + i.price, 0)}</span>
     </div>
   `;
   sec.classList.add('active');
@@ -77,7 +77,7 @@ function openMenu(container, rid) {
     btn.onclick = async () => {
       cart.push({ name: btn.dataset.name, price: parseInt(btn.dataset.price) });
       await saveCart();
-      sec.querySelector('.cart-count').textContent = `${cart.length} ¶µ`;
+      sec.querySelector('.cart-count').textContent = `${cart.length} é …`;
       sec.querySelector('.cart-total').textContent = `$${cart.reduce((s, i) => s + i.price, 0)}`;
     };
   });
@@ -87,13 +87,13 @@ async function renderDelivery(params) {
   await loadCart();
   const container = createElement('div', 'app-container delivery-app');
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
-      <h1 class='menu-title'>¥~°e</h1>
+    <header class="ios-header">
+      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> è¿”å›</button>
+      <h1 class="menu-title">å¤–é€</h1>
     </header>
-    <div class='page'>
-      <div class='restaurant-list'></div>
-      <div class='menu-section'></div>
+    <div class="page">
+      <div class="restaurant-list"></div>
+      <div class="menu-section"></div>
     </div>
   `;
   container.querySelector('.ios-back-btn').onclick = () => Router.back();
@@ -103,9 +103,9 @@ async function renderDelivery(params) {
 
 export default {
   id: 'delivery',
-  name: '¥~°e',
+  name: 'å¤–é€',
   icon: 'restaurant',
   routes: [{ path: '/delivery', render: renderDelivery }],
-  navItem: { label: '¥~°e', icon: 'restaurant', path: '/delivery', showInNav: true, order: 120 },
+  navItem: { label: 'å¤–é€', icon: 'restaurant', path: '/delivery', showInNav: true, order: 120 },
   stylesPath: 'js/apps/delivery/style.css'
 };

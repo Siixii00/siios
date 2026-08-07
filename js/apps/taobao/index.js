@@ -3,12 +3,12 @@ import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 const PRODUCTS = [
-  { id: 'p1', name: '¸g¨å¥Õ T «ò', price: 299, image: '??', category: 'ªA¹¢' },
-  { id: 'p2', name: '¥ğ¶¢¤û¥J¿Ç', price: 599, image: '??', category: 'ªA¹¢' },
-  { id: 'p3', name: '¹B°Ê¾c', price: 899, image: '??', category: '¾cÃş' },
-  { id: 'p4', name: '«á­I¥]', price: 450, image: '??', category: '°t¥ó' },
-  { id: 'p5', name: '¤â¿ö', price: 1200, image: '?', category: '°t¥ó' },
-  { id: 'p6', name: '¦Õ¾÷', price: 699, image: '??', category: '¹q¤l' }
+  { id: 'p1', name: 'ç¶“å…¸ç™½ T æ¤', price: 299, image: 'ğŸ‘•', category: 'æœé£¾' },
+  { id: 'p2', name: 'ä¼‘é–’ç‰›ä»”è¤²', price: 599, image: 'ğŸ‘–', category: 'æœé£¾' },
+  { id: 'p3', name: 'é‹å‹•é‹', price: 899, image: 'ğŸ‘Ÿ', category: 'é‹é¡' },
+  { id: 'p4', name: 'å¾ŒèƒŒåŒ…', price: 450, image: 'ğŸ’', category: 'é…ä»¶' },
+  { id: 'p5', name: 'æ‰‹éŒ¶', price: 1200, image: 'âŒš', category: 'é…ä»¶' },
+  { id: 'p6', name: 'è€³æ©Ÿ', price: 699, image: 'ğŸ§', category: 'é›»å­' }
 ];
 
 let cart = [];
@@ -26,19 +26,19 @@ async function renderTaobao(params) {
   await loadCart();
   const container = createElement('div', 'app-container taobao-app');
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
-      <h1 class='menu-title'>ÁÊª«</h1>
-      <div class='cart-icon'><i class='fas fa-shopping-cart'></i> <span class='cart-badge'>${cart.length}</span></div>
+    <header class="ios-header">
+      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> è¿”å›</button>
+      <h1 class="menu-title">è³¼ç‰©</h1>
+      <div class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-badge">${cart.length}</span></div>
     </header>
-    <div class='page'>
-      <div class='product-grid'>
+    <div class="page">
+      <div class="product-grid">
         ${PRODUCTS.map(p => `
-          <div class='product-card' data-id='${p.id}'>
-            <div class='product-image'>${p.image}</div>
-            <div class='product-name'>${p.name}</div>
-            <div class='product-price'>$${p.price}</div>
-            <button class='add-cart-btn' data-id='${p.id}' data-name='${p.name}' data-price='${p.price}'>¥[¤JÁÊª«¨®</button>
+          <div class="product-card" data-id="${p.id}">
+            <div class="product-image">${p.image}</div>
+            <div class="product-name">${p.name}</div>
+            <div class="product-price">$${p.price}</div>
+            <button class="add-cart-btn" data-id="${p.id}" data-name="${p.name}" data-price="${p.price}">åŠ å…¥è³¼ç‰©è»Š</button>
           </div>
         `).join('')}
       </div>
@@ -57,9 +57,9 @@ async function renderTaobao(params) {
 
 export default {
   id: 'taobao',
-  name: 'ÁÊª«',
+  name: 'è³¼ç‰©',
   icon: 'shopping_bag',
   routes: [{ path: '/taobao', render: renderTaobao }],
-  navItem: { label: 'ÁÊª«', icon: 'shopping_bag', path: '/taobao', showInNav: true, order: 122 },
+  navItem: { label: 'è³¼ç‰©', icon: 'shopping_bag', path: '/taobao', showInNav: true, order: 122 },
   stylesPath: 'js/apps/taobao/style.css'
 };

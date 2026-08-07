@@ -1,4 +1,4 @@
-﻿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
@@ -26,25 +26,25 @@ async function renderWidget(params) {
   await loadWidgets();
   const container = createElement('div', 'app-container widget-app');
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> 返回</button>
-      <h1 class='menu-title'>小工具</h1>
+    <header class="ios-header">
+      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
+      <h1 class="menu-title">小工具</h1>
     </header>
-    <div class='page'>
-      <div class='widget-preview'>
+    <div class="page">
+      <div class="widget-preview">
         ${activeWidgets.map(wid => {
           const w = WIDGETS.find(x => x.id === wid);
           if (!w) return '';
-          return `<div class='widget-card ${w.size}'><span class='w-icon'>${w.icon}</span><span class='w-name'>${w.name}</span></div>`;
-        }).join('') || '<div class='empty-preview'>點擊下方小工具加入</div>'}
+          return `<div class="widget-card ${w.size}"><span class="w-icon">${w.icon}</span><span class="w-name">${w.name}</span></div>`;
+        }).join('') || '<div class="empty-preview">點擊下方小工具加入</div>'}
       </div>
-      <h3 class='section-title'>可用小工具</h3>
-      <div class='widget-list'>
+      <h3 class="section-title">可用小工具</h3>
+      <div class="widget-list">
         ${WIDGETS.map(w => `
-          <div class='widget-item ${activeWidgets.includes(w.id) ? 'active' : ''}' data-id='${w.id}'>
-            <span class='w-icon'>${w.icon}</span>
-            <span class='w-name'>${w.name}</span>
-            <span class='w-size'>${w.size}</span>
+          <div class="widget-item ${activeWidgets.includes(w.id) ? 'active' : ''}" data-id="${w.id}">
+            <span class="w-icon">${w.icon}</span>
+            <span class="w-name">${w.name}</span>
+            <span class="w-size">${w.size}</span>
           </div>
         `).join('')}
       </div>

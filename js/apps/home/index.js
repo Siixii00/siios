@@ -3,12 +3,12 @@ import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 const ACTIVITIES = [
-  { id: 'a1', name: '¬İ¹q¼v', icon: '??', energy: -1 },
-  { id: 'a2', name: '¥´¹CÀ¸', icon: '??', energy: -2 },
-  { id: 'a3', name: 'Å¥­µ¼Ö', icon: '??', energy: 1 },
-  { id: 'a4', name: '¾\Åª', icon: '??', energy: 2 },
-  { id: 'a5', name: '¤pºÎ', icon: '??', energy: 3 },
-  { id: 'a6', name: '¦Y¹s­¹', icon: '??', energy: 1 }
+  { id: 'a1', name: 'çœ‹é›»å½±', icon: 'ğŸ¬', energy: -1 },
+  { id: 'a2', name: 'æ‰“éŠæˆ²', icon: 'ğŸ®', energy: -2 },
+  { id: 'a3', name: 'è½éŸ³æ¨‚', icon: 'ğŸµ', energy: 1 },
+  { id: 'a4', name: 'é–±è®€', icon: 'ğŸ“š', energy: 2 },
+  { id: 'a5', name: 'å°ç¡', icon: 'ğŸ˜´', energy: 3 },
+  { id: 'a6', name: 'åƒé›¶é£Ÿ', icon: 'ğŸ¿', energy: 1 }
 ];
 
 let state = { energy: 50, activities: [] };
@@ -26,28 +26,28 @@ async function renderHome(params) {
   await loadState();
   const container = createElement('div', 'app-container home-app');
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
-      <h1 class='menu-title'>Stay</h1>
+    <header class="ios-header">
+      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> è¿”å›</button>
+      <h1 class="menu-title">Stay</h1>
     </header>
-    <div class='page'>
-      <div class='energy-bar'>
-        <span class='energy-label'>ºë¤O­È</span>
-        <div class='energy-track'>
-          <div class='energy-fill' style='width: ${state.energy}%'></div>
+    <div class="page">
+      <div class="energy-bar">
+        <span class="energy-label">ç²¾åŠ›å€¼</span>
+        <div class="energy-track">
+          <div class="energy-fill" style="width: ${state.energy}%"></div>
         </div>
-        <span class='energy-value'>${state.energy}%</span>
+        <span class="energy-value">${state.energy}%</span>
       </div>
-      <div class='activity-grid'>
+      <div class="activity-grid">
         ${ACTIVITIES.map(a => `
-          <button class='activity-btn' data-id='${a.id}' data-energy='${a.energy}'>
-            <span class='activity-icon'>${a.icon}</span>
-            <span class='activity-name'>${a.name}</span>
+          <button class="activity-btn" data-id="${a.id}" data-energy="${a.energy}">
+            <span class="activity-icon">${a.icon}</span>
+            <span class="activity-name">${a.name}</span>
           </button>
         `).join('')}
       </div>
-      <div class='status-msg'>
-        ${state.energy > 70 ? 'ºë¯«¹¡º¡¡I' : state.energy > 30 ? 'ÁÙ¦æ¡AÄ~Äò¦v§a¡ã' : '¸Ó¥ğ®§¤F...'}
+      <div class="status-msg">
+        ${state.energy > 70 ? 'ç²¾ç¥é£½æ»¿ï¼' : state.energy > 30 ? 'é‚„è¡Œï¼Œç¹¼çºŒå®…å§ï½' : 'è©²ä¼‘æ¯äº†...'}
       </div>
     </div>
   `;
@@ -66,9 +66,9 @@ async function renderHome(params) {
 
 export default {
   id: 'stay',
-  name: '¦v®a',
+  name: 'å®…å®¶',
   icon: 'couch',
   routes: [{ path: '/stay', render: renderHome }],
-  navItem: { label: '¦v®a', icon: 'couch', path: '/stay', showInNav: true, order: 126 },
+  navItem: { label: 'å®…å®¶', icon: 'couch', path: '/stay', showInNav: true, order: 126 },
   stylesPath: 'js/apps/home/style.css'
 };

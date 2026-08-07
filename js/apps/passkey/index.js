@@ -21,33 +21,33 @@ async function renderPasskey(params) {
   await loadKeys();
   const container = createElement('div', 'app-container passkey-app');
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
-      <h1 class='menu-title'>Passkey</h1>
+    <header class="ios-header">
+      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> è¿”å›</button>
+      <h1 class="menu-title">Passkey</h1>
     </header>
-    <div class='page'>
-      <div class='info-card'>
-        <i class='fas fa-key'></i>
-        <p>Passkey ¬O¤@ºØ¦w¥şªº¨­¥÷ÅçÃÒ¤è¦¡¡A¥Î©ó¨ú¥N¶Ç²Î±K½X¡C</p>
+    <div class="page">
+      <div class="info-card">
+        <i class="fas fa-key"></i>
+        <p>Passkey æ˜¯ä¸€ç¨®å®‰å…¨çš„èº«ä»½é©—è­‰æ–¹å¼ï¼Œç”¨æ–¼å–ä»£å‚³çµ±å¯†ç¢¼ã€‚</p>
       </div>
-      <button class='create-btn'><i class='fas fa-plus'></i> «Ø¥ß·s Passkey</button>
-      <div class='key-list'>
-        <h3>¤w«Ø¥ßªº Passkey</h3>
+      <button class="create-btn"><i class="fas fa-plus"></i> å»ºç«‹æ–° Passkey</button>
+      <div class="key-list">
+        <h3>å·²å»ºç«‹çš„ Passkey</h3>
         ${keys.length > 0 
           ? keys.map(k => `
-              <div class='key-item'>
-                <span class='key-name'>${k.name}</span>
-                <span class='key-date'>${new Date(k.created).toLocaleDateString('zh-TW')}</span>
+              <div class="key-item">
+                <span class="key-name">${k.name}</span>
+                <span class="key-date">${new Date(k.created).toLocaleDateString('zh-TW')}</span>
               </div>
             `).join('')
-          : '<div class='empty-keys'>©|µL Passkey</div>'
+          : '<div class="empty-keys">å°šç„¡ Passkey</div>'
         }
       </div>
     </div>
   `;
   container.querySelector('.ios-back-btn').onclick = () => Router.back();
   container.querySelector('.create-btn').onclick = async () => {
-    const name = prompt('Passkey ¦WºÙ¡G');
+    const name = prompt('Passkey åç¨±ï¼š');
     if (name) {
       keys.push({ name, key: generateKey(), created: Date.now() });
       await saveKeys();

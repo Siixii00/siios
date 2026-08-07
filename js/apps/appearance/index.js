@@ -3,11 +3,11 @@ import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 const THEMES = [
-  { id: 'light', name: '²L¦â', bg: '#ffffff', text: '#333333' },
-  { id: 'dark', name: '²`¦â', bg: '#1a1a2e', text: '#e5e5e5' },
-  { id: 'pink', name: '¯»¦â', bg: '#fce4ec', text: '#880e4f' },
-  { id: 'blue', name: 'ÂÅ¦â', bg: '#e3f2fd', text: '#0d47a1' },
-  { id: 'green', name: 'ºñ¦â', bg: '#e8f5e9', text: '#2e7d32' }
+  { id: 'light', name: 'æ·ºè‰²', bg: '#ffffff', text: '#333333' },
+  { id: 'dark', name: 'æ·±è‰²', bg: '#1a1a2e', text: '#e5e5e5' },
+  { id: 'pink', name: 'ç²‰è‰²', bg: '#fce4ec', text: '#880e4f' },
+  { id: 'blue', name: 'è—è‰²', bg: '#e3f2fd', text: '#0d47a1' },
+  { id: 'green', name: 'ç¶ è‰²', bg: '#e8f5e9', text: '#2e7d32' }
 ];
 
 let currentTheme = 'light';
@@ -32,30 +32,30 @@ async function renderAppearance(params) {
   await loadTheme();
   const container = createElement('div', 'app-container appearance-app');
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
-      <h1 class='menu-title'>¥~Æ[³]©w</h1>
+    <header class="ios-header">
+      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> è¿”å›</button>
+      <h1 class="menu-title">å¤–è§€è¨­å®š</h1>
     </header>
-    <div class='page'>
-      <h2 class='section-title'>¥DÃD</h2>
-      <div class='theme-grid'>
+    <div class="page">
+      <h2 class="section-title">ä¸»é¡Œ</h2>
+      <div class="theme-grid">
         ${THEMES.map(t => `
-          <div class='theme-card ${t.id === currentTheme ? 'active' : ''}' data-id='${t.id}' style='background: ${t.bg}; color: ${t.text};'>
-            <span class='theme-name'>${t.name}</span>
-            ${t.id === currentTheme ? '<i class='fas fa-check'></i>' : ''}
+          <div class="theme-card ${t.id === currentTheme ? 'active' : ''}" data-id="${t.id}" style="background: ${t.bg}; color: ${t.text};">
+            <span class="theme-name">${t.name}</span>
+            ${t.id === currentTheme ? '<i class="fas fa-check"></i>' : ''}
           </div>
         `).join('')}
       </div>
-      <h2 class='section-title'>¦rÅé¤j¤p</h2>
-      <div class='font-size-control'>
-        <button class='font-btn small ${currentFontSize === 'small' ? 'active' : ''}'>¤p</button>
-        <button class='font-btn medium ${currentFontSize === 'medium' ? 'active' : ''}'>¤¤</button>
-        <button class='font-btn large ${currentFontSize === 'large' ? 'active' : ''}'>¤j</button>
+      <h2 class="section-title">å­—é«”å¤§å°</h2>
+      <div class="font-size-control">
+        <button class="font-btn small ${currentFontSize === 'small' ? 'active' : ''}">å°</button>
+        <button class="font-btn medium ${currentFontSize === 'medium' ? 'active' : ''}">ä¸­</button>
+        <button class="font-btn large ${currentFontSize === 'large' ? 'active' : ''}">å¤§</button>
       </div>
-      <h2 class='section-title'>¹wÄı</h2>
-      <div class='preview-box' style='background: ${THEMES.find(t => t.id === currentTheme)?.bg}; color: ${THEMES.find(t => t.id === currentTheme)?.text}; font-size: ${currentFontSize === 'small' ? '14px' : currentFontSize === 'large' ? '20px' : '16px'};'>
-        <p>³o¬O¹wÄı¤å¦r¡A¥Î¨Ó®i¥Ü¥DÃD®ÄªG¡C</p>
-        <p>·í«e¥DÃD¡G${THEMES.find(t => t.id === currentTheme)?.name}</p>
+      <h2 class="section-title">é è¦½</h2>
+      <div class="preview-box" style="background: ${THEMES.find(t => t.id === currentTheme)?.bg}; color: ${THEMES.find(t => t.id === currentTheme)?.text}; font-size: ${currentFontSize === 'small' ? '14px' : currentFontSize === 'large' ? '20px' : '16px'};">
+        <p>é€™æ˜¯é è¦½æ–‡å­—ï¼Œç”¨ä¾†å±•ç¤ºä¸»é¡Œæ•ˆæœã€‚</p>
+        <p>ç•¶å‰ä¸»é¡Œï¼š${THEMES.find(t => t.id === currentTheme)?.name}</p>
       </div>
     </div>
   `;
@@ -79,9 +79,9 @@ async function renderAppearance(params) {
 
 export default {
   id: 'appearance',
-  name: '¥~Æ[³]©w',
+  name: 'å¤–è§€è¨­å®š',
   icon: 'palette',
   routes: [{ path: '/appearance', render: renderAppearance }],
-  navItem: { label: '¥~Æ[', icon: 'palette', path: '/appearance', showInNav: true, order: 140 },
+  navItem: { label: 'å¤–è§€', icon: 'palette', path: '/appearance', showInNav: true, order: 140 },
   stylesPath: 'js/apps/appearance/style.css'
 };

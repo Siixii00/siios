@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+Ôªøimport Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
@@ -21,9 +21,9 @@ let storiesData = [
 ];
 
 let postsData = [
-    { id: 'post-1', user: 'circularstudio', location: 'Taipei, Taiwan', avatar: 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=60', image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=60', liked: false, likes: 1287, caption: 'Color grading session with gradient murals. #art #studio', time: '1 §pÆ…´e' },
-    { id: 'post-2', user: 'neon.night', location: 'Shibuya', avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=60', image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60', liked: true, likes: 40211, caption: '´B´·™∫¿O≠i¡`¨O≈˝§H≠´±“∆F∑P°C', time: '4 §pÆ…´e' },
-    { id: 'post-3', user: 'nomad.eats', location: 'Lisbon', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=60', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=60', liked: false, likes: 987, caption: 'æÒ∆V™o°BÆ¸∆QªP§”∂ß™∫®˝πD°C', time: '¨Q§—' }
+    { id: 'post-1', user: 'circularstudio', location: 'Taipei, Taiwan', avatar: 'https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=60', image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=60', liked: false, likes: 1287, caption: 'Color grading session with gradient murals. #art #studio', time: '1 Â∞èÊôÇÂâç' },
+    { id: 'post-2', user: 'neon.night', location: 'Shibuya', avatar: 'https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=200&q=60', image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=60', liked: true, likes: 40211, caption: 'Èõ®ÂæåÁöÑÈúìËôπÁ∏ΩÊòØËÆì‰∫∫ÈáçÂïüÈùàÊÑü„ÄÇ', time: '4 Â∞èÊôÇÂâç' },
+    { id: 'post-3', user: 'nomad.eats', location: 'Lisbon', avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=60', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=60', liked: false, likes: 987, caption: 'Ê©ÑÊ¨ñÊ≤π„ÄÅÊµ∑ÈπΩËàáÂ§™ÈôΩÁöÑÂë≥ÈÅì„ÄÇ', time: 'Êò®Â§©' }
 ];
 
 let isGeneratingPosts = false;
@@ -57,7 +57,7 @@ async function addPostMemory(post) {
     const memories = await getPostMemories();
     if (memories.find(m => m.id === post.id)) return;
     const date = new Date(post.timestamp || Date.now());
-    const dateStr = `${date.getFullYear()}¶~${date.getMonth() + 1}§Î${date.getDate()}§È`;
+    const dateStr = `${date.getFullYear()}Âπ¥${date.getMonth() + 1}Êúà${date.getDate()}Êó•`;
     memories.push({ id: post.id, user: post.user, caption: post.caption, date: dateStr, timestamp: post.timestamp });
     await savePostMemories(memories);
 }
@@ -141,11 +141,11 @@ async function addIgStory(authorName, content) {
 async function buildInstagramContext() {
     const characters = await CharactersDB.getAll();
     const char = characters.length > 0 ? characters[0] : null;
-    let context = '# ®œ•Œ™Ã≥]©w\n¶W∫Ÿ: User\n';
+    let context = '# ‰ΩøÁî®ËÄÖË®≠ÂÆö\nÂêçÁ®±: User\n';
     if (char) {
-        context += `\n# ®§¶‚≥]©w\n¶W∫Ÿ: ${char.name}\n`;
-        if (char.personality) context += `© ÆÊ: ${char.personality}\n`;
-        if (char.description) context += `≠I¥∫: ${char.description}\n`;
+        context += `\n# ËßíËâ≤Ë®≠ÂÆö\nÂêçÁ®±: ${char.name}\n`;
+        if (char.personality) context += `ÊÄßÊ†º: ${char.personality}\n`;
+        if (char.description) context += `ËÉåÊôØ: ${char.description}\n`;
     }
     return { context, character: char };
 }
@@ -153,7 +153,7 @@ async function buildInstagramContext() {
 async function callAPIWithMessages(systemPrompt, userPrompt, temperature = 0.85) {
     const settings = await APIClient.getSettings();
     if (!settings.api_url || !settings.api_key) {
-        throw new Error('©|•º≥]©w API');
+        throw new Error('Â∞öÊú™Ë®≠ÂÆö API');
     }
     const messages = [
         { role: 'system', content: systemPrompt },
@@ -176,7 +176,7 @@ async function callAPIWithMessages(systemPrompt, userPrompt, temperature = 0.85)
     });
     if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
-        throw new Error(errorData.error?.message || `API ø˘ª~ (${response.status})`);
+        throw new Error(errorData.error?.message || `API ÈåØË™§ (${response.status})`);
     }
     const data = await response.json();
     return data.choices?.[0]?.message?.content || '';
@@ -190,8 +190,8 @@ function getSelectedCharacterId(container) {
 async function generateCommentReply(container, post, commentText) {
     const characterId = getSelectedCharacterId(container);
     const context = await buildAppContext({ characterId });
-    const systemPrompt = context.systemPrompt || 'ßA¨O§@¶Ï±M∑~™∫™¿∏s¥C≈È®œ•Œ™Ã°Aæ’™¯º∂ºgµ˚Ω◊¶^¬–°CΩ–®œ•Œ¡c≈È§§§Âº∂ºg°CøÈ•XÆÊ¶°¨∞ JSON: {'reply': '¶^¬–§∫Æe'}';
-    const prompt = `${context.systemPrompt}\n\n∞wπÔ•H§U∂K§Â©Mµ˚Ω◊•Õ¶®§@´h¶^¬–°G\n\n∂K§Â: ${post.caption}\nµ˚Ω◊: ${commentText}\n\n≠n®D°G\n1. ≤≈¶X®§¶‚© ÆÊ\n2. ¬≤µu¶€µM°B§fªy§∆\n3. 10-30 ¶r\n\nøÈ•X JSON ÆÊ¶°°C`;
+    const systemPrompt = context.systemPrompt || '‰Ω†ÊòØ‰∏Ä‰ΩçÂ∞àÊ•≠ÁöÑÁ§æÁæ§Â™íÈ´î‰ΩøÁî®ËÄÖÔºåÊìÖÈï∑Êí∞ÂØ´Ë©ïË´ñÂõûË¶Ü„ÄÇË´ã‰ΩøÁî®ÁπÅÈ´î‰∏≠ÊñáÊí∞ÂØ´„ÄÇËº∏Âá∫Ê†ºÂºèÁÇ∫ JSON: {"reply": "ÂõûË¶ÜÂÖßÂÆπ"}';
+    const prompt = `${context.systemPrompt}\n\nÈáùÂ∞ç‰ª•‰∏ãË≤ºÊñáÂíåË©ïË´ñÁîüÊàê‰∏ÄÂâáÂõûË¶ÜÔºö\n\nË≤ºÊñá: ${post.caption}\nË©ïË´ñ: ${commentText}\n\nË¶ÅÊ±ÇÔºö\n1. Á¨¶ÂêàËßíËâ≤ÊÄßÊ†º\n2. Á∞°Áü≠Ëá™ÁÑ∂„ÄÅÂè£Ë™ûÂåñ\n3. 10-30 Â≠ó\n\nËº∏Âá∫ JSON Ê†ºÂºè„ÄÇ`;
     const result = await callAPIWithMessages(systemPrompt, prompt, 0.9);
     let parsed = null;
     try { parsed = JSON.parse(result); } catch (e) { const match = result.match(/\{[\s\S]*\}/); if (match) parsed = JSON.parse(match[0]); }
@@ -199,15 +199,15 @@ async function generateCommentReply(container, post, commentText) {
 }
 
 async function generateAIPosts(container) {
-    if (isGeneratingPosts) { createToast('•ø¶b•Õ¶®§§°AΩ–µy≠‘...'); return; }
+    if (isGeneratingPosts) { createToast('Ê≠£Âú®ÁîüÊàê‰∏≠ÔºåË´ãÁ®çÂÄô...'); return; }
     isGeneratingPosts = true;
     const generateBtn = container.querySelector('#ai-generate-posts-btn');
-    if (generateBtn) { generateBtn.disabled = true; generateBtn.textContent = '•Õ¶®§§...'; }
+    if (generateBtn) { generateBtn.disabled = true; generateBtn.textContent = 'ÁîüÊàê‰∏≠...'; }
     try {
         const characterId = getSelectedCharacterId(container);
         const context = await buildAppContext({ characterId });
-        const systemPrompt = context.systemPrompt || 'ßA¨O§@¶Ï±M∑~™∫™¿∏s¥C≈È§∫Æe≥–ß@™Ã°Aæ’™¯Æ⁄æ⁄®§¶‚≥]©w©M®œ•Œ™Ã≠I¥∫≥–ß@≤≈¶X§H™´© ÆÊ™∫ Instagram ∂K§Â°CΩ–®œ•Œ¡c≈È§§§Âº∂ºg°CøÈ•XÆÊ¶°¨∞ JSON: {'posts': [{'user': '•Œ§·¶W', 'location': '¶a¬I', 'caption': '∂K§Âª°©˙', 'likes': ¿Hæ˜∆gº∆}]}';
-        const prompt = `${context.systemPrompt}\n\nΩ–•Õ¶® 3 ´h Instagram ∂K§Â°A≠n®D°G\n1. ≤≈¶X®§¶‚© ÆÊ©M®œ•Œ™Ã≥]©w\n2. ®C´h∂K§Âª°©˙ 30-100 ¶r\n3. •i•H•]ßtæA∑Ì™∫™Ì±°≤≈∏π©Mº–º–≈“\n\nøÈ•X JSON ÆÊ¶°°C`;
+        const systemPrompt = context.systemPrompt || '‰Ω†ÊòØ‰∏Ä‰ΩçÂ∞àÊ•≠ÁöÑÁ§æÁæ§Â™íÈ´îÂÖßÂÆπÂâµ‰ΩúËÄÖÔºåÊìÖÈï∑Ê†πÊìöËßíËâ≤Ë®≠ÂÆöÂíå‰ΩøÁî®ËÄÖËÉåÊôØÂâµ‰ΩúÁ¨¶Âêà‰∫∫Áâ©ÊÄßÊ†ºÁöÑ Instagram Ë≤ºÊñá„ÄÇË´ã‰ΩøÁî®ÁπÅÈ´î‰∏≠ÊñáÊí∞ÂØ´„ÄÇËº∏Âá∫Ê†ºÂºèÁÇ∫ JSON: {"posts": [{"user": "Áî®Êà∂Âêç", "location": "Âú∞Èªû", "caption": "Ë≤ºÊñáË™™Êòé", "likes": Èö®Ê©üËÆöÊï∏}]}';
+        const prompt = `${context.systemPrompt}\n\nË´ãÁîüÊàê 3 Ââá Instagram Ë≤ºÊñáÔºåË¶ÅÊ±ÇÔºö\n1. Á¨¶ÂêàËßíËâ≤ÊÄßÊ†ºÂíå‰ΩøÁî®ËÄÖË®≠ÂÆö\n2. ÊØèÂâáË≤ºÊñáË™™Êòé 30-100 Â≠ó\n3. ÂèØ‰ª•ÂåÖÂê´ÈÅ©Áï∂ÁöÑË°®ÊÉÖÁ¨¶ËôüÂíåÊ®ôÊ®ôÁ±§\n\nËº∏Âá∫ JSON Ê†ºÂºè„ÄÇ`;
         const result = await callAPIWithMessages(systemPrompt, prompt, 0.85);
         let parsed = null;
         try { parsed = JSON.parse(result); } catch (e) { const match = result.match(/\{[\s\S]*\}/); if (match) parsed = JSON.parse(match[0]); }
@@ -224,7 +224,7 @@ async function generateAIPosts(container) {
                     liked: false,
                     likes: post.likes || Math.floor(Math.random() * 5000),
                     caption: post.caption,
-                    time: '≠Ë≠Ë',
+                    time: 'ÂâõÂâõ',
                     timestamp: Date.now(),
                     isUserPost: post.user === 'User'
                 };
@@ -232,34 +232,34 @@ async function generateAIPosts(container) {
             }
         });
         await saveStoredPosts(storedPosts);
-        if (posts.length > 0) { await renderFeed(container); } else { createToast('•Õ¶®•¢±—°AΩ–µy´·≠´∏’'); }
-    } catch (err) { createToast(`•Õ¶®•¢±—: ${err.message}`); } finally {
+        if (posts.length > 0) { await renderFeed(container); } else { createToast('ÁîüÊàêÂ§±ÊïóÔºåË´ãÁ®çÂæåÈáçË©¶'); }
+    } catch (err) { createToast(`ÁîüÊàêÂ§±Êïó: ${err.message}`); } finally {
         isGeneratingPosts = false;
-        if (generateBtn) { generateBtn.disabled = false; generateBtn.textContent = 'AI •Õ¶®∂K§Â'; }
+        if (generateBtn) { generateBtn.disabled = false; generateBtn.textContent = 'AI ÁîüÊàêË≤ºÊñá'; }
     }
 }
 
 async function generateAIStories(container) {
-    if (isGeneratingStories) { createToast('•ø¶b•Õ¶®§§°AΩ–µy≠‘...'); return; }
+    if (isGeneratingStories) { createToast('Ê≠£Âú®ÁîüÊàê‰∏≠ÔºåË´ãÁ®çÂÄô...'); return; }
     isGeneratingStories = true;
     const generateBtn = container.querySelector('#ai-generate-story-btn');
-    if (generateBtn) { generateBtn.disabled = true; generateBtn.textContent = '•Õ¶®§§...'; }
+    if (generateBtn) { generateBtn.disabled = true; generateBtn.textContent = 'ÁîüÊàê‰∏≠...'; }
     try {
         const characterId = getSelectedCharacterId(container);
         const context = await buildAppContext({ characterId });
         const characters = await CharactersDB.getAll();
         const authors = ['User'].concat(characters.slice(0, 1).map(c => c.name));
-        const systemPrompt = context.systemPrompt || 'ßA¨O§@¶Ï±M∑~™∫™¿∏s¥C≈È§∫Æe≥–ß@™Ã°Aæ’™¯≥–ß@ Instagram ≠≠Æ…∞ ∫A°CΩ–®œ•Œ¡c≈È§§§Âº∂ºg°CøÈ•XÆÊ¶°¨∞ JSON: {'stories': [{'author': 'ß@™Ã¶W', 'content': '≠≠∞ §∫Æe'}]}';
-        const prompt = `${context.systemPrompt}\n\nΩ–¨∞•H§Uß@™Ã¶U•Õ¶® 1 ´h≠≠Æ…∞ ∫A°G${authors.join('°B')}\n\n≠n®D°G\n1. ≤≈¶X¶U®§¶‚© ÆÊ©M≥]©w\n2. ¬≤µu¶≥ΩÏ°B•Õ¨°§∆\n3. 20-50 ¶r\n\nøÈ•X JSON ÆÊ¶°°C`;
+        const systemPrompt = context.systemPrompt || '‰Ω†ÊòØ‰∏Ä‰ΩçÂ∞àÊ•≠ÁöÑÁ§æÁæ§Â™íÈ´îÂÖßÂÆπÂâµ‰ΩúËÄÖÔºåÊìÖÈï∑Ââµ‰Ωú Instagram ÈôêÊôÇÂãïÊÖã„ÄÇË´ã‰ΩøÁî®ÁπÅÈ´î‰∏≠ÊñáÊí∞ÂØ´„ÄÇËº∏Âá∫Ê†ºÂºèÁÇ∫ JSON: {"stories": [{"author": "‰ΩúËÄÖÂêç", "content": "ÈôêÂãïÂÖßÂÆπ"}]}';
+        const prompt = `${context.systemPrompt}\n\nË´ãÁÇ∫‰ª•‰∏ã‰ΩúËÄÖÂêÑÁîüÊàê 1 ÂâáÈôêÊôÇÂãïÊÖãÔºö${authors.join('„ÄÅ')}\n\nË¶ÅÊ±ÇÔºö\n1. Á¨¶ÂêàÂêÑËßíËâ≤ÊÄßÊ†ºÂíåË®≠ÂÆö\n2. Á∞°Áü≠ÊúâË∂£„ÄÅÁîüÊ¥ªÂåñ\n3. 20-50 Â≠ó\n\nËº∏Âá∫ JSON Ê†ºÂºè„ÄÇ`;
         const result = await callAPIWithMessages(systemPrompt, prompt, 0.85);
         let parsed = null;
         try { parsed = JSON.parse(result); } catch (e) { const match = result.match(/\{[\s\S]*\}/); if (match) parsed = JSON.parse(match[0]); }
         const stories = Array.isArray(parsed && parsed.stories) ? parsed.stories : [];
         for (const story of stories) { if (story.author && story.content) await addIgStory(story.author, story.content); }
-        if (stories.length > 0) { await renderStories(container); } else { createToast('•Õ¶®•¢±—°AΩ–µy´·≠´∏’'); }
-    } catch (err) { createToast(`•Õ¶®•¢±—: ${err.message}`); } finally {
+        if (stories.length > 0) { await renderStories(container); } else { createToast('ÁîüÊàêÂ§±ÊïóÔºåË´ãÁ®çÂæåÈáçË©¶'); }
+    } catch (err) { createToast(`ÁîüÊàêÂ§±Êïó: ${err.message}`); } finally {
         isGeneratingStories = false;
-        if (generateBtn) { generateBtn.disabled = false; generateBtn.textContent = 'AI •Õ¶®≠≠∞ '; }
+        if (generateBtn) { generateBtn.disabled = false; generateBtn.textContent = 'AI ÁîüÊàêÈôêÂãï'; }
     }
 }
 
@@ -276,16 +276,16 @@ async function renderStories(container) {
     igStories.forEach((story) => {
         const button = createElement('button', 'story');
         if (story.avatar) {
-            button.innerHTML = `<div class='avatar'><img src='${story.avatar}' alt='${story.name} story'></div><span>${story.name}</span>`;
+            button.innerHTML = `<div class="avatar"><img src="${story.avatar}" alt="${story.name} story"></div><span>${story.name}</span>`;
         } else {
-            button.innerHTML = `<div class='avatar' style='background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);'></div><span>${story.name}</span>`;
+            button.innerHTML = `<div class="avatar" style="background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);"></div><span>${story.name}</span>`;
         }
         button.addEventListener('click', () => button.classList.add('seen'));
         storiesTrack.appendChild(button);
     });
     storiesData.forEach((story) => {
         const button = createElement('button', 'story');
-        button.innerHTML = `<div class='avatar'><img src='${story.avatar}' alt='${story.name} story'></div><span>${story.name}</span>`;
+        button.innerHTML = `<div class="avatar"><img src="${story.avatar}" alt="${story.name} story"></div><span>${story.name}</span>`;
         button.addEventListener('click', () => button.classList.add('seen'));
         storiesTrack.appendChild(button);
     });
@@ -295,32 +295,32 @@ function createPostElement(post) {
     const article = createElement('article', 'post');
     article.dataset.postId = post.id;
     article.innerHTML = `
-        <div class='post-header'>
-            <div class='post-user'>
-                <div class='avatar-ring'><img src='${post.avatar}' alt='${post.user}'></div>
+        <div class="post-header">
+            <div class="post-user">
+                <div class="avatar-ring"><img src="${post.avatar}" alt="${post.user}"></div>
                 <div>
                     <strong>${post.user}</strong>
-                    <div class='post-meta'>${post.location}</div>
+                    <div class="post-meta">${post.location}</div>
                 </div>
             </div>
-            <button class='icon-btn'><i class='fa-solid fa-ellipsis'></i></button>
+            <button class="icon-btn"><i class="fa-solid fa-ellipsis"></i></button>
         </div>
-        <div class='post-image'>
-            <img src='${post.image}' alt='${post.user} post'>
-            <i class='fa-solid fa-heart like-heart'></i>
+        <div class="post-image">
+            <img src="${post.image}" alt="${post.user} post">
+            <i class="fa-solid fa-heart like-heart"></i>
         </div>
-        <div class='post-actions'>
+        <div class="post-actions">
             <div>
-                <button class='like-btn'><i class='fa${post.liked ? '-solid' : '-regular'} fa-heart'></i></button>
-                <button><i class='fa-regular fa-comment'></i></button>
-                <button><i class='fa-regular fa-paper-plane'></i></button>
+                <button class="like-btn"><i class="fa${post.liked ? '-solid' : '-regular'} fa-heart"></i></button>
+                <button><i class="fa-regular fa-comment"></i></button>
+                <button><i class="fa-regular fa-paper-plane"></i></button>
             </div>
-            <button class='bookmark-btn' data-post-id='${post.id}'><i class='fa-regular fa-bookmark'></i></button>
+            <button class="bookmark-btn" data-post-id="${post.id}"><i class="fa-regular fa-bookmark"></i></button>
         </div>
-        <div class='post-stats'><strong class='likes-count'>${formatLikes(post.likes)} ≠”∆g</strong></div>
-        <div class='caption'><strong>${post.user}</strong>${post.caption}</div>
-        <div class='view-comments'>¨d¨›•˛≥° 37 ´hØd®•</div>
-        <div class='view-comments'>${post.time}</div>
+        <div class="post-stats"><strong class="likes-count">${formatLikes(post.likes)} ÂÄãËÆö</strong></div>
+        <div class="caption"><strong>${post.user}</strong>${post.caption}</div>
+        <div class="view-comments">Êü•ÁúãÂÖ®ÈÉ® 37 ÂâáÁïôË®Ä</div>
+        <div class="view-comments">${post.time}</div>
     `;
     bindPostInteractions(article, post);
     return article;
@@ -333,9 +333,9 @@ async function bindPostInteractions(article, post) {
     const image = article.querySelector('.post-image');
     const bookmarkBtn = article.querySelector('.bookmark-btn');
     const updateIcon = () => {
-        likeBtn.innerHTML = `<i class='fa${post.liked ? '-solid' : '-regular'} fa-heart'></i>`;
+        likeBtn.innerHTML = `<i class="fa${post.liked ? '-solid' : '-regular'} fa-heart"></i>`;
         likeBtn.classList.toggle('active', post.liked);
-        likesCount.textContent = `${formatLikes(post.likes)} ≠”∆g`;
+        likesCount.textContent = `${formatLikes(post.likes)} ÂÄãËÆö`;
     };
     const toggleLike = (triggerOverlay) => {
         post.liked = !post.liked;
@@ -362,11 +362,11 @@ async function bindPostInteractions(article, post) {
         if (isSaved) {
             const newSavedIds = savedIds.filter(id => id !== post.id);
             await saveSavedPosts(newSavedIds);
-            bookmarkBtn.innerHTML = '`<i class=`'`fa-regular fa-bookmark`'`></i>`';
+            bookmarkBtn.innerHTML = '<i class="fa-regular fa-bookmark"></i>';
         } else {
             savedIds.push(post.id);
             await saveSavedPosts(savedIds);
-            bookmarkBtn.innerHTML = '`<i class=`'`fa-solid fa-bookmark`'`></i>`';
+            bookmarkBtn.innerHTML = '<i class="fa-solid fa-bookmark"></i>';
         }
     });
 }
@@ -393,41 +393,41 @@ async function renderInstagram(params) {
     const characters = await CharactersDB.getAll();
     const container = createElement('div', 'ig-app');
     container.innerHTML = `
-        <header class='ig-header'>
-            <button class='icon-btn' id='back-btn' aria-label='™¶^'>
-                <i class='fa-solid fa-chevron-left'></i>
+        <header class="ig-header">
+            <button class="icon-btn" id="back-btn" aria-label="ËøîÂõû">
+                <i class="fa-solid fa-chevron-left"></i>
             </button>
-            <h1 class='logo'>Instagram</h1>
-            <div class='header-actions'>
-                <select id='character-selector' class='character-select' aria-label='øÔæ‹®§¶‚'>
-                    <option value=''>øÔæ‹®§¶‚</option>
-                    ${characters.map(c => `<option value='${c.id}'>${c.name}</option>`).join('')}
+            <h1 class="logo">Instagram</h1>
+            <div class="header-actions">
+                <select id="character-selector" class="character-select" aria-label="ÈÅ∏ÊìáËßíËâ≤">
+                    <option value="">ÈÅ∏ÊìáËßíËâ≤</option>
+                    ${characters.map(c => `<option value="${c.id}">${c.name}</option>`).join('')}
                 </select>
-                <button class='icon-btn' id='ai-generate-story-btn' aria-label='•Õ¶®≠≠∞ '>
-                    <i class='fa-solid fa-wand-magic-sparkles'></i>
+                <button class="icon-btn" id="ai-generate-story-btn" aria-label="ÁîüÊàêÈôêÂãï">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
                 </button>
-                <button class='icon-btn' id='ai-generate-posts-btn' aria-label='•Õ¶®∂K§Â'>
-                    <i class='fa-solid fa-robot'></i>
+                <button class="icon-btn" id="ai-generate-posts-btn" aria-label="ÁîüÊàêË≤ºÊñá">
+                    <i class="fa-solid fa-robot"></i>
                 </button>
             </div>
         </header>
-        <section class='stories' aria-label='Stories'>
-            <button class='story camera' aria-label='Add Story'>
-                <div class='avatar'>
-                    <i class='fa-solid fa-plus'></i>
+        <section class="stories" aria-label="Stories">
+            <button class="story camera" aria-label="Add Story">
+                <div class="avatar">
+                    <i class="fa-solid fa-plus"></i>
                 </div>
-                <span>ßA™∫≠≠∞ </span>
+                <span>‰Ω†ÁöÑÈôêÂãï</span>
             </button>
-            <div class='stories-track' id='stories-track'></div>
+            <div class="stories-track" id="stories-track"></div>
         </section>
-        <main class='feed' id='feed' aria-live='polite'></main>
-        <nav class='bottom-nav' aria-label='•D≠næ…ƒ˝'>
-            <button class='nav-btn active' data-tab='home'><i class='fa-solid fa-house'></i></button>
-            <button class='nav-btn' data-tab='search'><i class='fa-regular fa-compass'></i></button>
-            <button class='nav-btn' data-tab='reels'><i class='fa-solid fa-clapperboard'></i></button>
-            <button class='nav-btn' data-tab='shop'><i class='fa-regular fa-bag-shopping'></i></button>
-            <button class='nav-btn' data-tab='profile' id='profile-btn'>
-                <span class='nav-avatar'></span>
+        <main class="feed" id="feed" aria-live="polite"></main>
+        <nav class="bottom-nav" aria-label="‰∏ªË¶ÅÂ∞éË¶Ω">
+            <button class="nav-btn active" data-tab="home"><i class="fa-solid fa-house"></i></button>
+            <button class="nav-btn" data-tab="search"><i class="fa-regular fa-compass"></i></button>
+            <button class="nav-btn" data-tab="reels"><i class="fa-solid fa-clapperboard"></i></button>
+            <button class="nav-btn" data-tab="shop"><i class="fa-regular fa-bag-shopping"></i></button>
+            <button class="nav-btn" data-tab="profile" id="profile-btn">
+                <span class="nav-avatar"></span>
             </button>
         </nav>
     `;

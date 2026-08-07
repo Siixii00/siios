@@ -15,7 +15,7 @@ async function getCustomTools() {
         }
         return await database.getAll(CUSTOM_TOOLS_STORE);
     } catch (e) {
-        console.warn('[MCP] µLªkÅª¨ú¦Û©w¸q¤u¨ã:', e);
+        console.warn('[MCP] ç„¡æ³•è®€å–è‡ªå®šç¾©å·¥å…·:', e);
         return [];
     }
 }
@@ -26,7 +26,7 @@ async function saveCustomTool(tool) {
         await database.put(CUSTOM_TOOLS_STORE, tool);
         return true;
     } catch (e) {
-        console.error('[MCP] Àx¦s¦Û©w¸q¤u¨ã¥¢±Ñ:', e);
+        console.error('[MCP] å„²å­˜è‡ªå®šç¾©å·¥å…·å¤±æ•—:', e);
         return false;
     }
 }
@@ -37,7 +37,7 @@ async function deleteCustomToolFromDB(toolId) {
         await database.delete(CUSTOM_TOOLS_STORE, toolId);
         return true;
     } catch (e) {
-        console.error('[MCP] §R°£¦Û©w¸q¤u¨ã¥¢±Ñ:', e);
+        console.error('[MCP] åˆªé™¤è‡ªå®šç¾©å·¥å…·å¤±æ•—:', e);
         return false;
     }
 }
@@ -46,10 +46,10 @@ async function ensureCustomToolsStore() {
     try {
         const database = await initDB();
         if (!database.objectStoreNames.contains(CUSTOM_TOOLS_STORE)) {
-            console.log('[MCP] ³Ğ«Ø¦Û©w¸q¤u¨ã¦sÀx');
+            console.log('[MCP] å‰µå»ºè‡ªå®šç¾©å·¥å…·å­˜å„²');
         }
     } catch (e) {
-        console.error('[MCP] ÀË¬d¦sÀx¥¢±Ñ:', e);
+        console.error('[MCP] æª¢æŸ¥å­˜å„²å¤±æ•—:', e);
     }
 }
 
@@ -64,8 +64,8 @@ async function renderMCPMarket() {
     const container = createElement('div', 'app-container bg-ios-bg');
 
     const header = createIOSNavBar({
-        title: '¯«¯µªù',
-        subtitle: 'MCP ¤u¨ã¥«¶°',
+        title: 'ç¥ç§˜é–€',
+        subtitle: 'MCP å·¥å…·å¸‚é›†',
         backPath: '/home'
     });
     container.appendChild(header);
@@ -78,62 +78,62 @@ async function renderMCPMarket() {
     
     const introHeader = createElement('div', 'px-4 py-3 border-b border-gray-100');
     introHeader.innerHTML = `
-        <h2 class='text-lg font-semibold text-gray-900'>MCP ¤u¨ãÂ²¤¶»¡©ú</h2>
+        <h2 class="text-lg font-semibold text-gray-900">MCP å·¥å…·ç°¡ä»‹èªªæ˜</h2>
     `;
     introSection.appendChild(introHeader);
     
     const introContent = createElement('div', 'px-4 py-4 space-y-4');
     
-    // MCP Â²¤¶
+    // MCP ç°¡ä»‹
     const mcpIntro = createElement('div', '');
     mcpIntro.innerHTML = `
-        <h3 class='text-sm font-medium text-gray-900 mb-2'>¤°»ò¬O MCP¡H</h3>
-        <p class='text-xs text-gray-600 leading-relaxed'>
-            MCP (Model Context Protocol) ¬O¤@­Ó¶}©ñ¨óÄ³¡AÅı AI ¼Ò«¬¯à°÷¦w¥ş¦a½Õ¥Î¥~³¡¤u¨ã©MªA°È¡C
-            ³q¹L MCP¡A§Aªº AI ¨¤¦â¥i¥H°õ¦æ¹ê»Ú°Ê§@¡A¦p¬d¸ß¤Ñ®ğ¡B³]¸m´£¿ô¡B±±¨î´¼¼z®a©~µ¥¡C
+        <h3 class="text-sm font-medium text-gray-900 mb-2">ä»€éº¼æ˜¯ MCPï¼Ÿ</h3>
+        <p class="text-xs text-gray-600 leading-relaxed">
+            MCP (Model Context Protocol) æ˜¯ä¸€å€‹é–‹æ”¾å”è­°ï¼Œè®“ AI æ¨¡å‹èƒ½å¤ å®‰å…¨åœ°èª¿ç”¨å¤–éƒ¨å·¥å…·å’Œæœå‹™ã€‚
+            é€šé MCPï¼Œä½ çš„ AI è§’è‰²å¯ä»¥åŸ·è¡Œå¯¦éš›å‹•ä½œï¼Œå¦‚æŸ¥è©¢å¤©æ°£ã€è¨­ç½®æé†’ã€æ§åˆ¶æ™ºæ…§å®¶å±…ç­‰ã€‚
         </p>
     `;
     introContent.appendChild(mcpIntro);
     
-    // ¬[³]»¡©ú
+    // æ¶è¨­èªªæ˜
     const setupGuide = createElement('div', '');
     setupGuide.innerHTML = `
-        <h3 class='text-sm font-medium text-gray-900 mb-2'>¦p¦ó¬[³] MCP ¦øªA¾¹¡H</h3>
-        <div class='space-y-2'>
-            <div class='flex items-start gap-2'>
-                <div class='flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center'>
-                    <span class='text-xs font-medium text-gray-600'>1</span>
+        <h3 class="text-sm font-medium text-gray-900 mb-2">å¦‚ä½•æ¶è¨­ MCP ä¼ºæœå™¨ï¼Ÿ</h3>
+        <div class="space-y-2">
+            <div class="flex items-start gap-2">
+                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center">
+                    <span class="text-xs font-medium text-gray-600">1</span>
                 </div>
-                <p class='text-xs text-gray-600 flex-1'>¿ï¾Ü»İ­nªº¤u¨ã¡AÂIÀ»¡u¥Í¦¨µ{¦¡½X¡v</p>
+                <p class="text-xs text-gray-600 flex-1">é¸æ“‡éœ€è¦çš„å·¥å…·ï¼Œé»æ“Šã€Œç”Ÿæˆç¨‹å¼ç¢¼ã€</p>
             </div>
-            <div class='flex items-start gap-2'>
-                <div class='flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center'>
-                    <span class='text-xs font-medium text-gray-600'>2</span>
+            <div class="flex items-start gap-2">
+                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center">
+                    <span class="text-xs font-medium text-gray-600">2</span>
                 </div>
-                <p class='text-xs text-gray-600 flex-1'>¤U¸ü¥Í¦¨ªº Worker µ{¦¡½X</p>
+                <p class="text-xs text-gray-600 flex-1">ä¸‹è¼‰ç”Ÿæˆçš„ Worker ç¨‹å¼ç¢¼</p>
             </div>
-            <div class='flex items-start gap-2'>
-                <div class='flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center'>
-                    <span class='text-xs font-medium text-gray-600'>3</span>
+            <div class="flex items-start gap-2">
+                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center">
+                    <span class="text-xs font-medium text-gray-600">3</span>
                 </div>
-                <p class='text-xs text-gray-600 flex-1'>³¡¸p¨ì Cloudflare Workers¡]§K¶O¤è®×¡^</p>
+                <p class="text-xs text-gray-600 flex-1">éƒ¨ç½²åˆ° Cloudflare Workersï¼ˆå…è²»æ–¹æ¡ˆï¼‰</p>
             </div>
-            <div class='flex items-start gap-2'>
-                <div class='flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center'>
-                    <span class='text-xs font-medium text-gray-600'>4</span>
+            <div class="flex items-start gap-2">
+                <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center">
+                    <span class="text-xs font-medium text-gray-600">4</span>
                 </div>
-                <p class='text-xs text-gray-600 flex-1'>¦b³]©w¤¤°t¸m Worker URL</p>
+                <p class="text-xs text-gray-600 flex-1">åœ¨è¨­å®šä¸­é…ç½® Worker URL</p>
             </div>
         </div>
     `;
     introContent.appendChild(setupGuide);
     
-    // ´£¥Ü
+    // æç¤º
     const tip = createElement('div', 'flex items-start gap-2 p-3 bg-blue-50 rounded-lg');
     tip.innerHTML = `
-        <span class='material-symbols-outlined text-blue-600 text-sm'>info</span>
-        <p class='text-xs text-blue-800 flex-1'>
-            ©Ò¦³¤u¨ã³£¦b Cloudflare Workers ¤W¹B¦æ¡A§Aªº API Key ¦w¥ş¦a¦sÀx¦b Cloudflare Secrets ¤¤¡C
+        <span class="material-symbols-outlined text-blue-600 text-sm">info</span>
+        <p class="text-xs text-blue-800 flex-1">
+            æ‰€æœ‰å·¥å…·éƒ½åœ¨ Cloudflare Workers ä¸Šé‹è¡Œï¼Œä½ çš„ API Key å®‰å…¨åœ°å­˜å„²åœ¨ Cloudflare Secrets ä¸­ã€‚
         </p>
     `;
     introContent.appendChild(tip);
@@ -157,7 +157,7 @@ async function renderMCPMarket() {
     
     const filterText = createElement('span', 'text-sm font-medium text-gray-900');
     filterText.id = 'selected-category-text';
-    filterText.textContent = '¥ş³¡Ãş§O';
+    filterText.textContent = 'å…¨éƒ¨é¡åˆ¥';
     filterLabel.appendChild(filterText);
     filterHeader.appendChild(filterLabel);
     
@@ -174,7 +174,7 @@ async function renderMCPMarket() {
     const dropdownGrid = createElement('div', 'grid grid-cols-2 gap-2 p-3');
     
     const allOption = createElement('button', 'mcp-category-option active');
-    allOption.innerHTML = '`<span class=`'`material-symbols-outlined text-sm mr-1`'`>apps</span>¥ş³¡`';
+    allOption.innerHTML = '<span class="material-symbols-outlined text-sm mr-1">apps</span>å…¨éƒ¨';
     allOption.dataset.category = 'all';
     allOption.onclick = (e) => {
         e.stopPropagation();
@@ -184,7 +184,7 @@ async function renderMCPMarket() {
     
     for (const cat of CATEGORIES) {
         const option = createElement('button', 'mcp-category-option');
-        option.innerHTML = `<span class='material-symbols-outlined text-sm mr-1'>${cat.icon}</span>${cat.id}`;
+        option.innerHTML = `<span class="material-symbols-outlined text-sm mr-1">${cat.icon}</span>${cat.id}`;
         option.dataset.category = cat.id;
         option.onclick = (e) => {
             e.stopPropagation();
@@ -201,7 +201,7 @@ async function renderMCPMarket() {
     const searchSection = createElement('div', 'mx-4 mb-4');
     const searchInput = createElement('input', 'w-full p-3 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-gray-900 focus:border-transparent');
     searchInput.type = 'search';
-    searchInput.placeholder = '·j´M¤u¨ã...';
+    searchInput.placeholder = 'æœå°‹å·¥å…·...';
     searchInput.id = 'mcp-search';
     searchInput.oninput = () => searchTools(searchInput.value, container);
     searchSection.appendChild(searchInput);
@@ -215,17 +215,17 @@ async function renderMCPMarket() {
     const customIcon = createElement('span', 'material-symbols-outlined text-purple-600');
     customIcon.textContent = 'code';
     customTitle.appendChild(customIcon);
-    customTitle.appendChild(createElement('span', 'text-sm font-semibold text-purple-800', { textContent: '¦Û©w¸q MCP ¤u¨ã' }));
+    customTitle.appendChild(createElement('span', 'text-sm font-semibold text-purple-800', { textContent: 'è‡ªå®šç¾© MCP å·¥å…·' }));
     customHeader.appendChild(customTitle);
     
     const addCustomBtn = createElement('button', 'text-xs text-purple-600 font-medium hover:text-purple-800 transition-colors');
-    addCustomBtn.innerHTML = '`<span class=`'`material-symbols-outlined text-sm align-middle`'`>add_circle</span> ·s¼W¤u¨ã`';
+    addCustomBtn.innerHTML = '<span class="material-symbols-outlined text-sm align-middle">add_circle</span> æ–°å¢å·¥å…·';
     addCustomBtn.onclick = () => showCustomToolDialog(container);
     customHeader.appendChild(addCustomBtn);
     customSection.appendChild(customHeader);
     
     const customDesc = createElement('p', 'text-xs text-purple-600 mb-3');
-    customDesc.textContent = '·s¼W±z¦Û¤vªº MCP ¤u¨ã¡A¿é¤J¤u¨ã¦WºÙ¡B´y­z©M°õ¦æ¥N½X';
+    customDesc.textContent = 'æ–°å¢æ‚¨è‡ªå·±çš„ MCP å·¥å…·ï¼Œè¼¸å…¥å·¥å…·åç¨±ã€æè¿°å’ŒåŸ·è¡Œä»£ç¢¼';
     customSection.appendChild(customDesc);
     
     const customList = createElement('div', 'space-y-2');
@@ -241,7 +241,7 @@ async function renderMCPMarket() {
         });
     } else {
         const emptyMsg = createElement('p', 'text-xs text-purple-400 text-center');
-        emptyMsg.textContent = '©|¥¼·s¼W¦Û©w¸q¤u¨ã';
+        emptyMsg.textContent = 'å°šæœªæ–°å¢è‡ªå®šç¾©å·¥å…·';
         customList.appendChild(emptyMsg);
     }
     
@@ -261,11 +261,11 @@ async function renderMCPMarket() {
     const selectedInfo = createElement('div', 'flex items-center justify-between');
     const countEl = createElement('span', 'text-sm text-gray-700');
     countEl.id = 'selected-count';
-    countEl.textContent = '¤w¿ï¾Ü 0 ­Ó¤u¨ã';
+    countEl.textContent = 'å·²é¸æ“‡ 0 å€‹å·¥å…·';
     selectedInfo.appendChild(countEl);
 
     const generateBtn = createElement('button', 'ios-btn ios-btn-primary');
-    generateBtn.textContent = '¥Í¦¨µ{¦¡½X';
+    generateBtn.textContent = 'ç”Ÿæˆç¨‹å¼ç¢¼';
     generateBtn.id = 'generate-btn';
     generateBtn.onclick = () => showGenerateDialog(container);
     selectedInfo.appendChild(generateBtn);
@@ -296,7 +296,7 @@ function renderToolsList(container, category, searchTerm = '') {
 
     if (tools.length === 0) {
         const empty = createElement('div', 'text-center py-8 text-gray-500');
-        empty.textContent = '¨S¦³§ä¨ì²Å¦Xªº¤u¨ã';
+        empty.textContent = 'æ²’æœ‰æ‰¾åˆ°ç¬¦åˆçš„å·¥å…·';
         container.appendChild(empty);
         return;
     }
@@ -342,7 +342,7 @@ function createToolCard(tool) {
     const header = createElement('div', 'flex items-center gap-2');
     header.appendChild(createElement('span', 'font-medium', { textContent: tool.displayName }));
     const diffBadge = createElement('span', `mcp-badge ${tool.difficulty}`);
-    diffBadge.textContent = tool.difficulty === 'easy' ? 'Â²³æ' : tool.difficulty === 'medium' ? '¤¤µ¥' : '¶i¶¥';
+    diffBadge.textContent = tool.difficulty === 'easy' ? 'ç°¡å–®' : tool.difficulty === 'medium' ? 'ä¸­ç­‰' : 'é€²éš';
     header.appendChild(diffBadge);
     content.appendChild(header);
 
@@ -379,7 +379,7 @@ function toggleTool(toolId) {
 function updateSelectedCount() {
     const countEl = document.getElementById('selected-count');
     if (countEl) {
-        countEl.textContent = `¤w¿ï¾Ü ${selectedTools.size} ­Ó¤u¨ã`;
+        countEl.textContent = `å·²é¸æ“‡ ${selectedTools.size} å€‹å·¥å…·`;
     }
 }
 
@@ -402,7 +402,7 @@ function filterByCategory(category, container) {
     const textEl = document.getElementById('selected-category-text');
     if (textEl) {
         if (category === 'all') {
-            textEl.textContent = '¥ş³¡Ãş§O';
+            textEl.textContent = 'å…¨éƒ¨é¡åˆ¥';
         } else {
             const cat = CATEGORIES.find(c => c.id === category);
             textEl.textContent = cat ? cat.id : category;
@@ -448,30 +448,30 @@ function showToolDetail(tool) {
 
     const info = createElement('div', 'grid grid-cols-2 gap-2 text-sm');
     info.innerHTML = `
-        <div class='bg-gray-100 p-2 rounded'>
-            <span class='text-gray-500'>¤u¨ã¦WºÙ</span>
-            <div class='font-mono text-gray-900'>${tool.name}</div>
+        <div class="bg-gray-100 p-2 rounded">
+            <span class="text-gray-500">å·¥å…·åç¨±</span>
+            <div class="font-mono text-gray-900">${tool.name}</div>
         </div>
-        <div class='bg-gray-100 p-2 rounded'>
-            <span class='text-gray-500'>Ãø«×</span>
-            <div>${tool.difficulty === 'easy' ? 'Â²³æ' : tool.difficulty === 'medium' ? '¤¤µ¥' : '¶i¶¥'}</div>
+        <div class="bg-gray-100 p-2 rounded">
+            <span class="text-gray-500">é›£åº¦</span>
+            <div>${tool.difficulty === 'easy' ? 'ç°¡å–®' : tool.difficulty === 'medium' ? 'ä¸­ç­‰' : 'é€²éš'}</div>
         </div>
     `;
     content.appendChild(info);
 
     const desc = createElement('div');
-    desc.appendChild(createElement('h3', 'font-semibold mb-1', { textContent: '»¡©ú' }));
+    desc.appendChild(createElement('h3', 'font-semibold mb-1', { textContent: 'èªªæ˜' }));
     desc.appendChild(createElement('p', 'text-sm text-gray-600', { textContent: tool.description }));
     content.appendChild(desc);
 
     const useCase = createElement('div');
-    useCase.appendChild(createElement('h3', 'font-semibold mb-1', { textContent: '¨Ï¥Î½d¨Ò' }));
+    useCase.appendChild(createElement('h3', 'font-semibold mb-1', { textContent: 'ä½¿ç”¨ç¯„ä¾‹' }));
     useCase.appendChild(createElement('p', 'text-sm text-purple-600 italic', { textContent: tool.useCase }));
     content.appendChild(useCase);
 
     if (tool.requires && tool.requires.length > 0) {
         const req = createElement('div');
-        req.appendChild(createElement('h3', 'font-semibold mb-1', { textContent: '»İ¨D' }));
+        req.appendChild(createElement('h3', 'font-semibold mb-1', { textContent: 'éœ€æ±‚' }));
         const reqList = createElement('ul', 'text-sm text-gray-600 list-disc list-inside');
         for (const r of tool.requires) {
             reqList.appendChild(createElement('li', '', { textContent: r }));
@@ -481,17 +481,17 @@ function showToolDetail(tool) {
     }
 
     const params = createElement('div');
-    params.appendChild(createElement('h3', 'font-semibold mb-1', { textContent: '°Ñ¼Æ' }));
+    params.appendChild(createElement('h3', 'font-semibold mb-1', { textContent: 'åƒæ•¸' }));
     const paramsCode = createElement('pre', 'text-xs bg-gray-900 text-green-400 p-3 rounded-lg overflow-x-auto');
     paramsCode.textContent = JSON.stringify(tool.parameters, null, 2);
     params.appendChild(paramsCode);
     content.appendChild(params);
 
     const addBtn = createElement('button', 'ios-btn ios-btn-primary w-full mt-4');
-    addBtn.textContent = selectedTools.has(tool.id) ? '¤w¿ï¾Ü' : '¥[¤J¿ï¾Ü';
+    addBtn.textContent = selectedTools.has(tool.id) ? 'å·²é¸æ“‡' : 'åŠ å…¥é¸æ“‡';
     addBtn.onclick = () => {
         toggleTool(tool.id);
-        addBtn.textContent = selectedTools.has(tool.id) ? '¤w¿ï¾Ü' : '¥[¤J¿ï¾Ü';
+        addBtn.textContent = selectedTools.has(tool.id) ? 'å·²é¸æ“‡' : 'åŠ å…¥é¸æ“‡';
     };
     content.appendChild(addBtn);
 
@@ -502,7 +502,7 @@ function showToolDetail(tool) {
 
 async function showGenerateDialog(container) {
     if (selectedTools.size === 0) {
-        createToast('½Ğ¥ı¿ï¾Ü¦Ü¤Ö¤@­Ó¤u¨ã', 'error');
+        createToast('è«‹å…ˆé¸æ“‡è‡³å°‘ä¸€å€‹å·¥å…·', 'error');
         return;
     }
 
@@ -513,7 +513,7 @@ async function showGenerateDialog(container) {
         const sheet = createElement('div', 'bg-ios-bg w-full rounded-t-lg');
         
         const header = createElement('div', 'flex items-center justify-between p-4 border-b border-gray-200');
-        header.appendChild(createElement('h2', 'text-lg font-bold', { textContent: '¥Í¦¨ Worker µ{¦¡½X' }));
+        header.appendChild(createElement('h2', 'text-lg font-bold', { textContent: 'ç”Ÿæˆ Worker ç¨‹å¼ç¢¼' }));
         const closeBtn = createElement('button', 'text-gray-500');
         closeBtn.appendChild(createIcon('close'));
         closeBtn.onclick = () => overlay.remove();
@@ -524,16 +524,16 @@ async function showGenerateDialog(container) {
         
         const summary = createElement('div', 'bg-purple-50 p-3 rounded-lg');
         summary.innerHTML = `
-            <p class='text-sm text-purple-800 font-medium'>¤w¿ï¾Ü ${selectedTools.size} ­Ó¤u¨ã</p>
-            <p class='text-xs text-purple-600 mt-1'>${Array.from(selectedTools).map(id => {
+            <p class="text-sm text-purple-800 font-medium">å·²é¸æ“‡ ${selectedTools.size} å€‹å·¥å…·</p>
+            <p class="text-xs text-purple-600 mt-1">${Array.from(selectedTools).map(id => {
                 const tool = TOOLS_CATALOG.find(t => t.id === id);
                 return tool?.displayName;
-            }).join('¡B')}</p>
+            }).join('ã€')}</p>
         `;
         content.appendChild(summary);
         
         const downloadBtn = createElement('button', 'ios-btn ios-btn-primary w-full');
-        downloadBtn.textContent = '¤U¸ü ZIP ÀÉ®×';
+        downloadBtn.textContent = 'ä¸‹è¼‰ ZIP æª”æ¡ˆ';
         downloadBtn.onclick = () => {
             downloadAllFiles(files);
             overlay.remove();
@@ -541,7 +541,7 @@ async function showGenerateDialog(container) {
         content.appendChild(downloadBtn);
         
         const info = createElement('div', 'text-xs text-gray-500 text-center');
-        info.textContent = '¤U¸ü«á½Ğ¦b¹q¸£¤W¸ÑÀ£ÁY¨Ã³¡¸p¨ì Cloudflare Workers';
+        info.textContent = 'ä¸‹è¼‰å¾Œè«‹åœ¨é›»è…¦ä¸Šè§£å£“ç¸®ä¸¦éƒ¨ç½²åˆ° Cloudflare Workers';
         content.appendChild(info);
         
         sheet.appendChild(content);
@@ -552,7 +552,7 @@ async function showGenerateDialog(container) {
         const sheet = createElement('div', 'bg-ios-bg w-full rounded-t-lg max-h-[90vh] overflow-y-auto');
         
         const header = createElement('div', 'sticky top-0 bg-ios-bg p-4 border-b flex items-center justify-between z-10');
-        header.appendChild(createElement('h2', 'text-lg font-bold', { textContent: '¥Í¦¨ Worker µ{¦¡½X' }));
+        header.appendChild(createElement('h2', 'text-lg font-bold', { textContent: 'ç”Ÿæˆ Worker ç¨‹å¼ç¢¼' }));
         const closeBtn = createElement('button', 'text-gray-500');
         closeBtn.appendChild(createIcon('close'));
         closeBtn.onclick = () => overlay.remove();
@@ -563,11 +563,11 @@ async function showGenerateDialog(container) {
         
         const summary = createElement('div', 'bg-purple-50 p-3 rounded-lg');
         summary.innerHTML = `
-            <p class='text-sm text-purple-800 font-medium'>¤w¿ï¾Ü ${selectedTools.size} ­Ó¤u¨ã</p>
-            <p class='text-xs text-purple-600 mt-1'>${Array.from(selectedTools).map(id => {
+            <p class="text-sm text-purple-800 font-medium">å·²é¸æ“‡ ${selectedTools.size} å€‹å·¥å…·</p>
+            <p class="text-xs text-purple-600 mt-1">${Array.from(selectedTools).map(id => {
                 const tool = TOOLS_CATALOG.find(t => t.id === id);
                 return tool?.displayName;
-            }).join('¡B')}</p>
+            }).join('ã€')}</p>
         `;
         content.appendChild(summary);
         
@@ -580,10 +580,10 @@ async function showGenerateDialog(container) {
             fileSection.appendChild(codeBlock);
             
             const copyBtn = createElement('button', 'text-xs text-purple-600 mt-1');
-            copyBtn.textContent = '½Æ»sµ{¦¡½X';
+            copyBtn.textContent = 'è¤‡è£½ç¨‹å¼ç¢¼';
             copyBtn.onclick = () => {
                 navigator.clipboard.writeText(code);
-                createToast('¤w½Æ»s¨ì°Å¶KÃ¯', 'success');
+                createToast('å·²è¤‡è£½åˆ°å‰ªè²¼ç°¿', 'success');
             };
             fileSection.appendChild(copyBtn);
             
@@ -591,19 +591,19 @@ async function showGenerateDialog(container) {
         }
         
         const downloadBtn = createElement('button', 'ios-btn ios-btn-primary w-full mt-4');
-        downloadBtn.textContent = '¤U¸ü©Ò¦³ÀÉ®×';
+        downloadBtn.textContent = 'ä¸‹è¼‰æ‰€æœ‰æª”æ¡ˆ';
         downloadBtn.onclick = () => downloadAllFiles(files);
         content.appendChild(downloadBtn);
         
         const guideSection = createElement('div', 'bg-blue-50 p-3 rounded-lg mt-4');
         guideSection.innerHTML = `
-            <h3 class='font-semibold text-blue-800 mb-2'>³¡¸p¨BÆJ</h3>
-            <ol class='text-sm text-blue-700 space-y-1 list-decimal list-inside'>
-                <li>¸ÑÀ£ÁY¤U¸üªº ZIP ÀÉ</li>
-                <li>¦b²×ºİ¾÷¤Á´«¨ì¸Ó¥Ø¿ı¡G<code class='bg-blue-100 px-1'>cd siios-mcp-worker</code></li>
-                <li>¦w¸Ë¨Ì¿à¡G<code class='bg-blue-100 px-1'>npm install</code></li>
-                <li>µn¤J Cloudflare¡G<code class='bg-blue-100 px-1'>wrangler login</code></li>
-                <li>³¡¸p¡G<code class='bg-blue-100 px-1'>wrangler deploy</code></li>
+            <h3 class="font-semibold text-blue-800 mb-2">éƒ¨ç½²æ­¥é©Ÿ</h3>
+            <ol class="text-sm text-blue-700 space-y-1 list-decimal list-inside">
+                <li>è§£å£“ç¸®ä¸‹è¼‰çš„ ZIP æª”</li>
+                <li>åœ¨çµ‚ç«¯æ©Ÿåˆ‡æ›åˆ°è©²ç›®éŒ„ï¼š<code class="bg-blue-100 px-1">cd siios-mcp-worker</code></li>
+                <li>å®‰è£ä¾è³´ï¼š<code class="bg-blue-100 px-1">npm install</code></li>
+                <li>ç™»å…¥ Cloudflareï¼š<code class="bg-blue-100 px-1">wrangler login</code></li>
+                <li>éƒ¨ç½²ï¼š<code class="bg-blue-100 px-1">wrangler deploy</code></li>
             </ol>
         `;
         content.appendChild(guideSection);
@@ -631,7 +631,7 @@ function downloadAllFiles(files) {
         a.click();
 
         URL.revokeObjectURL(url);
-        createToast('¤w¤U¸ü ZIP ÀÉ®×', 'success');
+        createToast('å·²ä¸‹è¼‰ ZIP æª”æ¡ˆ', 'success');
     });
 }
 
@@ -664,7 +664,7 @@ function createCustomToolItem(tool, index, container) {
     actions.appendChild(selectCheckbox);
     
     const deleteBtn = createElement('button', 'text-red-500 hover:text-red-700 transition-colors');
-    deleteBtn.innerHTML = '`<span class=`'`material-symbols-outlined text-sm`'`>delete</span>`';
+    deleteBtn.innerHTML = '<span class="material-symbols-outlined text-sm">delete</span>';
     deleteBtn.onclick = () => deleteCustomTool(tool.id);
     actions.appendChild(deleteBtn);
     
@@ -677,7 +677,7 @@ function showCustomToolDialog(container) {
     const sheet = createElement('div', 'bg-ios-bg w-full rounded-t-lg max-h-[90vh] overflow-y-auto');
     
     const header = createElement('div', 'sticky top-0 bg-ios-bg p-4 border-b flex items-center justify-between z-10');
-    header.appendChild(createElement('h2', 'text-lg font-bold', { textContent: '·s¼W¦Û©w¸q¤u¨ã' }));
+    header.appendChild(createElement('h2', 'text-lg font-bold', { textContent: 'æ–°å¢è‡ªå®šç¾©å·¥å…·' }));
     const closeBtn = createElement('button', 'text-gray-500');
     closeBtn.appendChild(createIcon('close'));
     closeBtn.onclick = () => overlay.remove();
@@ -686,52 +686,52 @@ function showCustomToolDialog(container) {
     
     const content = createElement('div', 'p-4 space-y-4');
     
-    content.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-1', { textContent: '¤u¨ã¦WºÙ¡]­^¤å¡A¥Î©ó½Õ¥Î¡^' }));
+    content.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-1', { textContent: 'å·¥å…·åç¨±ï¼ˆè‹±æ–‡ï¼Œç”¨æ–¼èª¿ç”¨ï¼‰' }));
     const nameInput = createElement('input', 'w-full p-3 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent');
     nameInput.type = 'text';
-    nameInput.placeholder = '¨Ò¦p¡Gmy_custom_tool';
+    nameInput.placeholder = 'ä¾‹å¦‚ï¼šmy_custom_tool';
     nameInput.id = 'custom-tool-name';
     content.appendChild(nameInput);
     
-    content.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-1 mt-4', { textContent: 'Åã¥Ü¦WºÙ¡]¤¤¤å¡^' }));
+    content.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-1 mt-4', { textContent: 'é¡¯ç¤ºåç¨±ï¼ˆä¸­æ–‡ï¼‰' }));
     const displayNameInput = createElement('input', 'w-full p-3 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent');
     displayNameInput.type = 'text';
-    displayNameInput.placeholder = '¨Ò¦p¡G§Úªº¦Û©w¸q¤u¨ã';
+    displayNameInput.placeholder = 'ä¾‹å¦‚ï¼šæˆ‘çš„è‡ªå®šç¾©å·¥å…·';
     displayNameInput.id = 'custom-tool-display-name';
     content.appendChild(displayNameInput);
     
-    content.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-1 mt-4', { textContent: '´y­z' }));
+    content.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-1 mt-4', { textContent: 'æè¿°' }));
     const descInput = createElement('textarea', 'w-full p-3 bg-white rounded-lg border border-gray-200 focus:ring-2 focus:ring-purple-500 focus:border-transparent h-20');
-    descInput.placeholder = '´y­z³o­Ó¤u¨ãªº¥\¯à';
+    descInput.placeholder = 'æè¿°é€™å€‹å·¥å…·çš„åŠŸèƒ½';
     descInput.id = 'custom-tool-desc';
     content.appendChild(descInput);
     
-    content.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-1 mt-4', { textContent: '°Ñ¼Æ¡]JSON ®æ¦¡¡^' }));
+    content.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-1 mt-4', { textContent: 'åƒæ•¸ï¼ˆJSON æ ¼å¼ï¼‰' }));
     const paramsInput = createElement('textarea', 'w-full p-3 bg-gray-900 text-green-400 rounded-lg font-mono text-xs h-32');
-    paramsInput.placeholder = '{'type': 'object', 'properties': {'param1': {'type': 'string', 'description': '°Ñ¼Æ1'}}, 'required': ['param1']}';
+    paramsInput.placeholder = '{"type": "object", "properties": {"param1": {"type": "string", "description": "åƒæ•¸1"}}, "required": ["param1"]}';
     paramsInput.id = 'custom-tool-params';
     content.appendChild(paramsInput);
     
-    content.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-1 mt-4', { textContent: '°õ¦æ¥N½X¡]JavaScript¡^' }));
+    content.appendChild(createElement('label', 'block text-sm font-medium text-gray-700 mb-1 mt-4', { textContent: 'åŸ·è¡Œä»£ç¢¼ï¼ˆJavaScriptï¼‰' }));
     const codeInput = createElement('textarea', 'w-full p-3 bg-gray-900 text-green-400 rounded-lg font-mono text-xs h-48');
-    codeInput.placeholder = '// args ¥]§t¶Ç¤Jªº°Ñ¼Æ, env ¥]§tÀô¹ÒÅÜ¼Æ\nconst res = await fetch(\'https://api.example.com/endpoint\', {\n    method: \'POST\',\n    body: JSON.stringify(args)\n});\nconst data = await res.json();\nreturn data;';
+    codeInput.placeholder = '// args åŒ…å«å‚³å…¥çš„åƒæ•¸, env åŒ…å«ç’°å¢ƒè®Šæ•¸\nconst res = await fetch(\'https://api.example.com/endpoint\', {\n    method: \'POST\',\n    body: JSON.stringify(args)\n});\nconst data = await res.json();\nreturn data;';
     codeInput.id = 'custom-tool-code';
     content.appendChild(codeInput);
     
     const helpText = createElement('div', 'text-xs text-gray-500 mt-2 p-3 bg-blue-50 rounded-lg');
     helpText.innerHTML = `
-        <p class='font-semibold mb-1'>?? ´£¥Ü¡G</p>
-        <ul class='space-y-1 list-disc list-inside'>
-            <li><code class='bg-blue-100 px-1'>args</code> - ½Õ¥Î®É¶Ç¤Jªº°Ñ¼Æ</li>
-            <li><code class='bg-blue-100 px-1'>env</code> - Àô¹ÒÅÜ¼Æ¡]¦p API Keys¡^</li>
-            <li><code class='bg-blue-100 px-1'>fetch()</code> - µo°e HTTP ½Ğ¨D</li>
-            <li>³Ì«á¥²¶· <code class='bg-blue-100 px-1'>return</code> µ²ªG</li>
+        <p class="font-semibold mb-1">ğŸ’¡ æç¤ºï¼š</p>
+        <ul class="space-y-1 list-disc list-inside">
+            <li><code class="bg-blue-100 px-1">args</code> - èª¿ç”¨æ™‚å‚³å…¥çš„åƒæ•¸</li>
+            <li><code class="bg-blue-100 px-1">env</code> - ç’°å¢ƒè®Šæ•¸ï¼ˆå¦‚ API Keysï¼‰</li>
+            <li><code class="bg-blue-100 px-1">fetch()</code> - ç™¼é€ HTTP è«‹æ±‚</li>
+            <li>æœ€å¾Œå¿…é ˆ <code class="bg-blue-100 px-1">return</code> çµæœ</li>
         </ul>
     `;
     content.appendChild(helpText);
     
     const saveBtn = createElement('button', 'ios-btn ios-btn-primary w-full mt-4');
-    saveBtn.textContent = 'Àx¦s¤u¨ã';
+    saveBtn.textContent = 'å„²å­˜å·¥å…·';
     saveBtn.onclick = async () => {
         const name = nameInput.value.trim();
         const displayName = displayNameInput.value.trim();
@@ -740,21 +740,21 @@ function showCustomToolDialog(container) {
         const code = codeInput.value.trim();
         
         if (!name || !displayName || !desc || !params || !code) {
-            createToast('½Ğ¶ñ¼g©Ò¦³Äæ¦ì', 'error');
+            createToast('è«‹å¡«å¯«æ‰€æœ‰æ¬„ä½', 'error');
             return;
         }
         
         try {
             JSON.parse(params);
         } catch (e) {
-            createToast('°Ñ¼Æ®æ¦¡¿ù»~¡A½Ğ¿é¤J¦³®Äªº JSON', 'error');
+            createToast('åƒæ•¸æ ¼å¼éŒ¯èª¤ï¼Œè«‹è¼¸å…¥æœ‰æ•ˆçš„ JSON', 'error');
             return;
         }
         
         try {
             new Function('args', 'env', 'fetch', code);
         } catch (e) {
-            createToast('¥N½X»yªk¿ù»~¡G' + e.message, 'error');
+            createToast('ä»£ç¢¼èªæ³•éŒ¯èª¤ï¼š' + e.message, 'error');
             return;
         }
         
@@ -765,20 +765,20 @@ function showCustomToolDialog(container) {
             description: desc,
             parameters: JSON.parse(params),
             code: code,
-            category: '¦Û©w¸q',
+            category: 'è‡ªå®šç¾©',
             difficulty: 'custom',
-            useCase: '¦Û©w¸q¤u¨ã',
+            useCase: 'è‡ªå®šç¾©å·¥å…·',
             createdAt: new Date().toISOString()
         };
         
         const success = await saveCustomTool(customTool);
         
         if (success) {
-            createToast('¤u¨ã¤wÀx¦s', 'success');
+            createToast('å·¥å…·å·²å„²å­˜', 'success');
             overlay.remove();
             Router.navigate('/mcp-market');
         } else {
-            createToast('Àx¦s¥¢±Ñ¡A½Ğ­«¸Õ', 'error');
+            createToast('å„²å­˜å¤±æ•—ï¼Œè«‹é‡è©¦', 'error');
         }
     };
     content.appendChild(saveBtn);
@@ -792,22 +792,22 @@ async function deleteCustomTool(toolId) {
     const success = await deleteCustomToolFromDB(toolId);
     
     if (success) {
-        createToast('¤u¨ã¤w§R°£', 'success');
+        createToast('å·¥å…·å·²åˆªé™¤', 'success');
         Router.navigate('/mcp-market');
     } else {
-        createToast('§R°£¥¢±Ñ¡A½Ğ­«¸Õ', 'error');
+        createToast('åˆªé™¤å¤±æ•—ï¼Œè«‹é‡è©¦', 'error');
     }
 }
 
 export default {
     id: 'mcp-market',
-    name: '¯«¯µªù',
+    name: 'ç¥ç§˜é–€',
     icon: 'door_front',
     routes: [
         { path: '/mcp-market', render: renderMCPMarket }
     ],
     navItem: {
-        label: '¯«¯µªù',
+        label: 'ç¥ç§˜é–€',
         icon: 'door_front',
         path: '/mcp-market',
         showInNav: true,

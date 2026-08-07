@@ -1,17 +1,17 @@
-import Router from '../../router.js';
+ï»¿import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { MemoryDB, WikiRecordsDB, SettingsDB } from '../../db.js';
 
-const TYPE_TABS = ['¥ş³¡', '°ÊºA', '¥Ã¤[', '±¡·P', '­pµe', '®Ñ«H', '¦Û§Ú', '³Æ¥÷'];
+const TYPE_TABS = ['å…¨éƒ¨', 'å‹•æ…‹', 'æ°¸ä¹…', 'æƒ…æ„Ÿ', 'è¨ˆç•«', 'æ›¸ä¿¡', 'è‡ªæˆ‘', 'å‚™ä»½'];
 const TYPE_MAP = { 1: 'dynamic', 2: 'permanent', 3: 'feel', 4: 'plan', 5: 'letter', 6: 'i', 7: 'archive' };
-const TYPE_LABELS = { dynamic: '°ÊºA', permanent: '¥Ã¤[', feel: '±¡·P', plan: '­pµe', letter: '®Ñ«H', i: '¦Û§Ú', archive: 'ÂkÀÉ' };
+const TYPE_LABELS = { dynamic: 'å‹•æ…‹', permanent: 'æ°¸ä¹…', feel: 'æƒ…æ„Ÿ', plan: 'è¨ˆç•«', letter: 'æ›¸ä¿¡', i: 'è‡ªæˆ‘', archive: 'æ­¸æª”' };
 
 const SOURCE_LABELS = {
-    'chat': '¹ï¸Ü',
+    'chat': 'å°è©±',
     'youtube': 'YouTube',
     'instagram': 'Instagram',
     'chrome': 'Chrome',
-    'dating': '¬ù·|',
+    'dating': 'ç´„æœƒ',
     'bubbles': 'Bubbles',
     'weverse': 'Weverse',
     'bilibili': 'Bilibili',
@@ -19,19 +19,19 @@ const SOURCE_LABELS = {
     'twitter': 'Twitter',
     'ao3': 'AO3',
     'lofter': 'Lofter',
-    'theater': '¼@³õ'
+    'theater': 'åŠ‡å ´'
 };
 
 function getSourceLabel(sourceApp) {
-    return SOURCE_LABELS[sourceApp] || sourceApp || '¥¼ª¾';
+    return SOURCE_LABELS[sourceApp] || sourceApp || 'æœªçŸ¥';
 }
 
 function formatRelativeTime(timestamp) {
     const diff = Date.now() - timestamp;
-    if (diff < 60000) return '­è­è';
-    if (diff < 3600000) return Math.floor(diff / 60000) + ' ¤ÀÄÁ«e';
-    if (diff < 86400000) return Math.floor(diff / 3600000) + ' ¤p®É«e';
-    if (diff < 604800000) return Math.floor(diff / 86400000) + ' ¤Ñ«e';
+    if (diff < 60000) return 'å‰›å‰›';
+    if (diff < 3600000) return Math.floor(diff / 60000) + ' åˆ†é˜å‰';
+    if (diff < 86400000) return Math.floor(diff / 3600000) + ' å°æ™‚å‰';
+    if (diff < 604800000) return Math.floor(diff / 86400000) + ' å¤©å‰';
     const date = new Date(timestamp);
     return (date.getMonth() + 1) + '/' + date.getDate();
 }
@@ -40,10 +40,10 @@ function getDecayStage(memory) {
     const importance = memory.importance || 0.5;
     const decayFactor = memory.decayFactor || 1.0;
     const effective = importance * decayFactor;
-    if (effective >= 0.7) return { label: 'ÂA©ú', dotClass: 'decay-dot-fresh', badgeClass: 'decay-badge-fresh' };
-    if (effective >= 0.4) return { label: '¼Ò½k', dotClass: 'decay-dot-fading', badgeClass: 'decay-badge-fading' };
-    if (effective >= 0.1) return { label: '°I°h', dotClass: 'decay-dot-decaying', badgeClass: 'decay-badge-decaying' };
-    return { label: '·L®z', dotClass: 'decay-dot-weak', badgeClass: 'decay-badge-weak' };
+    if (effective >= 0.7) return { label: 'é®®æ˜', dotClass: 'decay-dot-fresh', badgeClass: 'decay-badge-fresh' };
+    if (effective >= 0.4) return { label: 'æ¨¡ç³Š', dotClass: 'decay-dot-fading', badgeClass: 'decay-badge-fading' };
+    if (effective >= 0.1) return { label: 'è¡°é€€', dotClass: 'decay-dot-decaying', badgeClass: 'decay-badge-decaying' };
+    return { label: 'å¾®å¼±', dotClass: 'decay-dot-weak', badgeClass: 'decay-badge-weak' };
 }
 
 async function renderMemoryList() {
@@ -57,7 +57,7 @@ async function renderMemoryList() {
     const container = createElement('div', 'app-container memory-app bg-ios-bg');
 
     const header = createIOSNavBar({
-        title: '°O¾ĞºŞ²z',
+        title: 'è¨˜æ†¶ç®¡ç†',
         largeTitle: false,
         backPath: '/home',
         rightActions: [{ icon: 'add', onClick: () => Router.navigate('/memory/new') }]
@@ -73,7 +73,7 @@ async function renderMemoryList() {
     searchBox.appendChild(createIcon('search', 'text-ios-muted mr-3'));
     const searchInput = createElement('input', 'flex-1 bg-transparent outline-none text-sm', {
         type: 'text',
-        placeholder: '·j´M°O¾Ğ...',
+        placeholder: 'æœå°‹è¨˜æ†¶...',
         value: searchTerm,
         onInput: (e) => {
             SettingsDB.set('memory_search', e.target.value);
@@ -81,7 +81,7 @@ async function renderMemoryList() {
     });
     searchBox.appendChild(searchInput);
     const searchBtn = createElement('button', 'px-3 py-1 bg-claude-primary text-white rounded text-sm', {
-        textContent: '·j´M',
+        textContent: 'æœå°‹',
         onClick: async () => {
             await SettingsDB.set('memory_filter', currentFilter);
             Router.navigate('/memory');
@@ -120,11 +120,11 @@ async function renderMemoryList() {
         option.addEventListener('click', async (e) => {
             e.stopPropagation();
             dropdown.classList.add('hidden');
-            console.log('[Memory] ¿ï¾Ü¤ÀÃş:', index, TYPE_TABS[index]);
+            console.log('[Memory] é¸æ“‡åˆ†é¡:', index, TYPE_TABS[index]);
             await SettingsDB.set('memory_filter', index);
             await SettingsDB.set('memory_search', '');
             const savedValue = await SettingsDB.get('memory_filter');
-            console.log('[Memory] ½T»{ DB ­È:', savedValue);
+            console.log('[Memory] ç¢ºèª DB å€¼:', savedValue);
             if (window.location.hash === '#/memory') {
                 await Router.handleRoute();
             } else {
@@ -137,9 +137,9 @@ async function renderMemoryList() {
     
     filterBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-        console.log('[Memory] ÂIÀ»¤U©Ô«ö¶s');
+        console.log('[Memory] é»æ“Šä¸‹æ‹‰æŒ‰éˆ•');
         dropdown.classList.toggle('hidden');
-        console.log('[Memory] ¤U©Ô¿ï³æª¬ºA:', dropdown.classList.contains('hidden') ? 'ÁôÂÃ' : 'Åã¥Ü');
+        console.log('[Memory] ä¸‹æ‹‰é¸å–®ç‹€æ…‹:', dropdown.classList.contains('hidden') ? 'éš±è—' : 'é¡¯ç¤º');
     });
     
     document.addEventListener('click', (e) => {
@@ -168,22 +168,22 @@ async function renderMemoryList() {
         const notionConfig = await SettingsDB.get('wiki_notion_config');
         
         const statsCard = createElement('div', 'bg-gradient-to-r from-claude-primary to-gray-700 rounded-lg mx-4 mb-4 p-4 text-white');
-        statsCard.innerHTML = '`<h2 class=`'`font-bold mb-3`'`>°O¾Ğ²Î­p</h2>`' +
-            '<div class='grid grid-cols-3 gap-2 text-center'>' +
-            '<div><div class='text-2xl font-bold'>' + memories.length + '</div><div class='text-xs opacity-80'>Á`°O¾Ğ</div></div>' +
-            '<div><div class='text-2xl font-bold'>' + memories.filter(m => m.memory_type === 'permanent').length + '</div><div class='text-xs opacity-80'>¥Ã¤[°O¾Ğ</div></div>' +
-            '<div><div class='text-2xl font-bold'>' + wikiPages.length + '</div><div class='text-xs opacity-80'>Wiki ­¶­±</div></div>' +
+        statsCard.innerHTML = '<h2 class="font-bold mb-3">è¨˜æ†¶çµ±è¨ˆ</h2>' +
+            '<div class="grid grid-cols-3 gap-2 text-center">' +
+            '<div><div class="text-2xl font-bold">' + memories.length + '</div><div class="text-xs opacity-80">ç¸½è¨˜æ†¶</div></div>' +
+            '<div><div class="text-2xl font-bold">' + memories.filter(m => m.memory_type === 'permanent').length + '</div><div class="text-xs opacity-80">æ°¸ä¹…è¨˜æ†¶</div></div>' +
+            '<div><div class="text-2xl font-bold">' + wikiPages.length + '</div><div class="text-xs opacity-80">Wiki é é¢</div></div>' +
             '</div>';
         main.appendChild(statsCard);
 
         const connectionsSection = createElement('div', 'mx-4 mb-4');
-        connectionsSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: '³s±µª¬ºA' }));
+        connectionsSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: 'é€£æ¥ç‹€æ…‹' }));
         
         const connectionsGrid = createElement('div', 'bg-white rounded-lg shadow-sm p-4');
         const connections = [
             { name: 'GitHub', connected: !!githubUser, user: githubUser?.login, icon: 'code', color: 'bg-gray-800' },
             { name: 'Google Drive', connected: !!googleUser, user: googleUser?.displayName, icon: 'cloud', color: 'bg-blue-500' },
-            { name: 'Notion', connected: !!notionConfig?.token, user: notionConfig?.token ? '¤w³s±µ' : '¥¼³s±µ', icon: 'article', color: 'bg-purple-500' }
+            { name: 'Notion', connected: !!notionConfig?.token, user: notionConfig?.token ? 'å·²é€£æ¥' : 'æœªé€£æ¥', icon: 'article', color: 'bg-purple-500' }
         ];
         
         connections.forEach(conn => {
@@ -196,7 +196,7 @@ async function renderMemoryList() {
             row.appendChild(left);
             
             const status = createElement('span', 'text-xs ' + (conn.connected ? 'text-green-600' : 'text-gray-400'));
-            status.textContent = conn.connected ? (conn.user || '¤w³s±µ') : '¥¼³s±µ';
+            status.textContent = conn.connected ? (conn.user || 'å·²é€£æ¥') : 'æœªé€£æ¥';
             row.appendChild(status);
             connectionsGrid.appendChild(row);
         });
@@ -205,7 +205,7 @@ async function renderMemoryList() {
         main.appendChild(connectionsSection);
 
         const exportSection = createElement('div', 'mx-4 mb-4');
-        exportSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: '¶×¥X°O¾Ğ' }));
+        exportSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: 'åŒ¯å‡ºè¨˜æ†¶' }));
         
         const exportGrid = createElement('div', 'bg-white rounded-lg shadow-sm');
         
@@ -214,8 +214,8 @@ async function renderMemoryList() {
         jsonIcon.appendChild(createIcon('download', 'text-white text-sm'));
         exportJSONCell.appendChild(jsonIcon);
         const jsonContent = createElement('div', 'flex-1 min-w-0');
-        jsonContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '¤U¸ü JSON ³Æ¥÷' }));
-        jsonContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '±N©Ò¦³°O¾Ğ¶×¥X¬° JSON ÀÉ®×' }));
+        jsonContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: 'ä¸‹è¼‰ JSON å‚™ä»½' }));
+        jsonContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: 'å°‡æ‰€æœ‰è¨˜æ†¶åŒ¯å‡ºç‚º JSON æª”æ¡ˆ' }));
         exportJSONCell.appendChild(jsonContent);
         exportJSONCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
         exportGrid.appendChild(exportJSONCell);
@@ -225,47 +225,47 @@ async function renderMemoryList() {
         wikiIcon.appendChild(createIcon('description', 'text-white text-sm'));
         exportWikiCell.appendChild(wikiIcon);
         const wikiContent = createElement('div', 'flex-1 min-w-0');
-        wikiContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '¶×¥X¨ì Wiki' }));
-        wikiContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '±N¥Ã¤[°O¾ĞÂà´«¬° Wiki ­¶­±' }));
+        wikiContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: 'åŒ¯å‡ºåˆ° Wiki' }));
+        wikiContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: 'å°‡æ°¸ä¹…è¨˜æ†¶è½‰æ›ç‚º Wiki é é¢' }));
         exportWikiCell.appendChild(wikiContent);
         exportWikiCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
         exportGrid.appendChild(exportWikiCell);
         
         const exportNotionCell = createElement('div', 'ios-list-cell cursor-pointer' + (!notionConfig?.token ? ' opacity-50' : ''), {
-            onClick: notionConfig?.token ? exportToNotion : () => createToast('½Ğ¥ı³s±µ Notion', 'error')
+            onClick: notionConfig?.token ? exportToNotion : () => createToast('è«‹å…ˆé€£æ¥ Notion', 'error')
         });
         const notionIcon = createElement('div', 'w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center');
         notionIcon.appendChild(createIcon('article', 'text-white text-sm'));
         exportNotionCell.appendChild(notionIcon);
         const notionContent = createElement('div', 'flex-1 min-w-0');
-        notionContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '¶×¥X¨ì Notion' }));
-        notionContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: notionConfig?.token ? '¦P¨B°O¾Ğ¨ì Notion ¸ê®Æ®w' : '½Ğ¥ı³s±µ Notion' }));
+        notionContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: 'åŒ¯å‡ºåˆ° Notion' }));
+        notionContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: notionConfig?.token ? 'åŒæ­¥è¨˜æ†¶åˆ° Notion è³‡æ–™åº«' : 'è«‹å…ˆé€£æ¥ Notion' }));
         exportNotionCell.appendChild(notionContent);
         exportNotionCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
         exportGrid.appendChild(exportNotionCell);
         
         const exportGitHubCell = createElement('div', 'ios-list-cell cursor-pointer' + (!githubUser ? ' opacity-50' : ''), {
-            onClick: githubUser ? exportToGitHub : () => createToast('½Ğ¥ı³s±µ GitHub', 'error')
+            onClick: githubUser ? exportToGitHub : () => createToast('è«‹å…ˆé€£æ¥ GitHub', 'error')
         });
         const ghIcon = createElement('div', 'w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center');
         ghIcon.appendChild(createIcon('cloud_upload', 'text-white text-sm'));
         exportGitHubCell.appendChild(ghIcon);
         const ghContent = createElement('div', 'flex-1 min-w-0');
-        ghContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '¤W¶Ç¨ì GitHub' }));
-        ghContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: githubUser ? '³Æ¥÷°O¾Ğ¨ì GitHub ¨p¤H­Ü®w' : '½Ğ¥ı³s±µ GitHub' }));
+        ghContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: 'ä¸Šå‚³åˆ° GitHub' }));
+        ghContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: githubUser ? 'å‚™ä»½è¨˜æ†¶åˆ° GitHub ç§äººå€‰åº«' : 'è«‹å…ˆé€£æ¥ GitHub' }));
         exportGitHubCell.appendChild(ghContent);
         exportGitHubCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
         exportGrid.appendChild(exportGitHubCell);
         
         const exportGoogleCell = createElement('div', 'ios-list-cell cursor-pointer' + (!googleUser ? ' opacity-50' : ''), {
-            onClick: googleUser ? exportToGoogleDrive : () => createToast('½Ğ¥ı³s±µ Google Drive', 'error')
+            onClick: googleUser ? exportToGoogleDrive : () => createToast('è«‹å…ˆé€£æ¥ Google Drive', 'error')
         });
         const gIcon = createElement('div', 'w-10 h-10 bg-red-500 rounded-lg flex items-center justify-center');
         gIcon.appendChild(createIcon('folder', 'text-white text-sm'));
         exportGoogleCell.appendChild(gIcon);
         const gContent = createElement('div', 'flex-1 min-w-0');
-        gContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '¤W¶Ç¨ì Google Drive' }));
-        gContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: googleUser ? '³Æ¥÷°O¾Ğ¨ì Google Drive' : '½Ğ¥ı³s±µ Google Drive' }));
+        gContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: 'ä¸Šå‚³åˆ° Google Drive' }));
+        gContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: googleUser ? 'å‚™ä»½è¨˜æ†¶åˆ° Google Drive' : 'è«‹å…ˆé€£æ¥ Google Drive' }));
         exportGoogleCell.appendChild(gContent);
         exportGoogleCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
         exportGrid.appendChild(exportGoogleCell);
@@ -274,7 +274,7 @@ async function renderMemoryList() {
         main.appendChild(exportSection);
 
         const importSection = createElement('div', 'mx-4 mb-4');
-        importSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: '¶×¤J°O¾Ğ' }));
+        importSection.appendChild(createElement('h3', 'text-sm font-semibold mb-2 text-ios-muted', { textContent: 'åŒ¯å…¥è¨˜æ†¶' }));
         
         const importGrid = createElement('div', 'bg-white rounded-lg shadow-sm');
         
@@ -283,8 +283,8 @@ async function renderMemoryList() {
         importIcon.appendChild(createIcon('upload', 'text-white text-sm'));
         importJSONCell.appendChild(importIcon);
         const importContent = createElement('div', 'flex-1 min-w-0');
-        importContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: '±q JSON ¶×¤J' }));
-        importContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: '±q³Æ¥÷ÀÉ®×ÁÙ­ì°O¾Ğ' }));
+        importContent.appendChild(createElement('span', 'text-sm font-medium', { textContent: 'å¾ JSON åŒ¯å…¥' }));
+        importContent.appendChild(createElement('span', 'block text-xs text-ios-muted truncate', { textContent: 'å¾å‚™ä»½æª”æ¡ˆé‚„åŸè¨˜æ†¶' }));
         importJSONCell.appendChild(importContent);
         importJSONCell.appendChild(createIcon('chevron_right', 'text-ios-muted'));
         importGrid.appendChild(importJSONCell);
@@ -293,7 +293,7 @@ async function renderMemoryList() {
         main.appendChild(importSection);
 
         const settingsBtn = createElement('button', 'mx-4 w-full bg-gray-100 text-gray-700 rounded-lg py-3 text-sm font-medium', {
-            textContent: 'ºŞ²z³s±µ³]©w',
+            textContent: 'ç®¡ç†é€£æ¥è¨­å®š',
             onClick: () => Router.navigate('/settings/backup')
         });
         main.appendChild(settingsBtn);
@@ -324,8 +324,8 @@ async function renderMemoryList() {
     if (filtered.length === 0) {
         const emptyState = createElement('div', 'flex flex-col items-center justify-center py-16');
         emptyState.appendChild(createIcon('psychology', 'text-5xl mb-4 opacity-30'));
-        emptyState.appendChild(createElement('h3', 'text-lg font-semibold mb-1', { textContent: '¨S¦³°O¾Ğ' }));
-        emptyState.appendChild(createElement('p', 'text-sm text-ios-muted', { textContent: '°O¾Ğ±N¦b¹ï¸Ü¤¤¦Û°Ê²£¥Í' }));
+        emptyState.appendChild(createElement('h3', 'text-lg font-semibold mb-1', { textContent: 'æ²’æœ‰è¨˜æ†¶' }));
+        emptyState.appendChild(createElement('p', 'text-sm text-ios-muted', { textContent: 'è¨˜æ†¶å°‡åœ¨å°è©±ä¸­è‡ªå‹•ç”¢ç”Ÿ' }));
         listContainer.appendChild(emptyState);
     } else {
         filtered.forEach(memory => {
@@ -344,14 +344,14 @@ async function renderMemoryList() {
             const metaRow = createElement('div', 'flex flex-wrap items-center gap-2 text-xs');
             metaRow.appendChild(createElement('span', 'text-ios-muted', { textContent: formatRelativeTime(memory.timestamp || memory.created_at) }));
             metaRow.appendChild(createElement('span', 'px-2 py-0.5 rounded ' + stage.badgeClass, { textContent: stage.label }));
-            const typeLabel = TYPE_LABELS[memory.memory_type] || memory.memory_type || '°ÊºA';
+            const typeLabel = TYPE_LABELS[memory.memory_type] || memory.memory_type || 'å‹•æ…‹';
             metaRow.appendChild(createElement('span', 'px-2 py-0.5 rounded bg-gray-100', { textContent: typeLabel }));
             
             if (memory.source_app && memory.source_app !== 'chat') {
                 metaRow.appendChild(createElement('span', 'px-2 py-0.5 rounded bg-blue-50 text-blue-600', { textContent: getSourceLabel(memory.source_app) }));
             }
             if (memory.is_fiction) {
-                metaRow.appendChild(createElement('span', 'px-2 py-0.5 rounded bg-orange-50 text-orange-600', { textContent: 'µêÀÀ' }));
+                metaRow.appendChild(createElement('span', 'px-2 py-0.5 rounded bg-orange-50 text-orange-600', { textContent: 'è™›æ“¬' }));
             }
             card.appendChild(metaRow);
 
@@ -372,7 +372,7 @@ async function renderMemoryList() {
 
 async function exportToJSON() {
     try {
-        createToast('¥¿¦b¶×¥X°O¾Ğ...', 'info');
+        createToast('æ­£åœ¨åŒ¯å‡ºè¨˜æ†¶...', 'info');
         const memories = await MemoryDB.getAll();
         const exportData = {
             version: '1.0',
@@ -387,15 +387,15 @@ async function exportToJSON() {
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
-        createToast('¤w¶×¥X ' + memories.length + ' «h°O¾Ğ', 'success');
+        createToast('å·²åŒ¯å‡º ' + memories.length + ' å‰‡è¨˜æ†¶', 'success');
     } catch (e) {
-        createToast('¶×¥X¥¢±Ñ¡G' + e.message, 'error');
+        createToast('åŒ¯å‡ºå¤±æ•—ï¼š' + e.message, 'error');
     }
 }
 
 async function exportToWiki() {
     try {
-        createToast('¥¿¦bÂà´«°O¾Ğ¬° Wiki ­¶­±...', 'info');
+        createToast('æ­£åœ¨è½‰æ›è¨˜æ†¶ç‚º Wiki é é¢...', 'info');
         const memories = await MemoryDB.getAll();
         const permanentMemories = memories.filter(m => m.memory_type === 'permanent' || m.importance >= 0.7);
         
@@ -419,21 +419,21 @@ async function exportToWiki() {
             });
             created++;
         }
-        createToast('¤w«Ø¥ß ' + created + ' ­Ó Wiki ­¶­±', 'success');
+        createToast('å·²å»ºç«‹ ' + created + ' å€‹ Wiki é é¢', 'success');
     } catch (e) {
-        createToast('¶×¥X¥¢±Ñ¡G' + e.message, 'error');
+        createToast('åŒ¯å‡ºå¤±æ•—ï¼š' + e.message, 'error');
     }
 }
 
 async function exportToNotion() {
     const notionConfig = await SettingsDB.get('wiki_notion_config');
     if (!notionConfig || !notionConfig.token) {
-        createToast('½Ğ¥ı¦b Wiki ³]©w¤¤³s±µ Notion', 'error');
+        createToast('è«‹å…ˆåœ¨ Wiki è¨­å®šä¸­é€£æ¥ Notion', 'error');
         return;
     }
     
     try {
-        createToast('¥¿¦b¶×¥X¨ì Notion...', 'info');
+        createToast('æ­£åœ¨åŒ¯å‡ºåˆ° Notion...', 'info');
         const memories = await MemoryDB.getAll();
         const importantMemories = memories.filter(m => m.memory_type === 'permanent' || m.importance >= 0.6);
         
@@ -461,9 +461,9 @@ async function exportToNotion() {
                 if (response.ok) exported++;
             } catch (e) {}
         }
-        createToast('¤w¶×¥X ' + exported + ' «h°O¾Ğ¨ì Notion', 'success');
+        createToast('å·²åŒ¯å‡º ' + exported + ' å‰‡è¨˜æ†¶åˆ° Notion', 'success');
     } catch (e) {
-        createToast('¶×¥X¥¢±Ñ¡G' + e.message, 'error');
+        createToast('åŒ¯å‡ºå¤±æ•—ï¼š' + e.message, 'error');
     }
 }
 
@@ -472,12 +472,12 @@ async function exportToGitHub() {
     const githubUser = await SettingsDB.get('github_user');
     
     if (!githubToken || !githubUser) {
-        createToast('½Ğ¥ı¦b³]©w¤¤³s±µ GitHub', 'error');
+        createToast('è«‹å…ˆåœ¨è¨­å®šä¸­é€£æ¥ GitHub', 'error');
         return;
     }
     
     try {
-        createToast('¥¿¦b¤W¶Ç¨ì GitHub...', 'info');
+        createToast('æ­£åœ¨ä¸Šå‚³åˆ° GitHub...', 'info');
         const memories = await MemoryDB.getAll();
         const content = JSON.stringify({ 
             version: '1.0',
@@ -503,13 +503,13 @@ async function exportToGitHub() {
         });
         
         if (response.ok) {
-            createToast('¤w¤W¶Ç ' + memories.length + ' «h°O¾Ğ¨ì GitHub', 'success');
+            createToast('å·²ä¸Šå‚³ ' + memories.length + ' å‰‡è¨˜æ†¶åˆ° GitHub', 'success');
         } else {
             const error = await response.json();
-            throw new Error(error.message || 'GitHub API ¿ù»~');
+            throw new Error(error.message || 'GitHub API éŒ¯èª¤');
         }
     } catch (e) {
-        createToast('¤W¶Ç¥¢±Ñ¡G' + e.message, 'error');
+        createToast('ä¸Šå‚³å¤±æ•—ï¼š' + e.message, 'error');
     }
 }
 
@@ -517,12 +517,12 @@ async function exportToGoogleDrive() {
     const googleToken = await SettingsDB.get('google_drive_token');
     
     if (!googleToken) {
-        createToast('½Ğ¥ı¦b³]©w¤¤³s±µ Google Drive', 'error');
+        createToast('è«‹å…ˆåœ¨è¨­å®šä¸­é€£æ¥ Google Drive', 'error');
         return;
     }
     
     try {
-        createToast('¥¿¦b¤W¶Ç¨ì Google Drive...', 'info');
+        createToast('æ­£åœ¨ä¸Šå‚³åˆ° Google Drive...', 'info');
         const memories = await MemoryDB.getAll();
         const content = JSON.stringify({ 
             version: '1.0',
@@ -547,12 +547,12 @@ async function exportToGoogleDrive() {
         });
         
         if (response.ok) {
-            createToast('¤w¤W¶Ç ' + memories.length + ' «h°O¾Ğ¨ì Google Drive', 'success');
+            createToast('å·²ä¸Šå‚³ ' + memories.length + ' å‰‡è¨˜æ†¶åˆ° Google Drive', 'success');
         } else {
-            throw new Error('Google Drive API ¿ù»~');
+            throw new Error('Google Drive API éŒ¯èª¤');
         }
     } catch (e) {
-        createToast('¤W¶Ç¥¢±Ñ¡G' + e.message, 'error');
+        createToast('ä¸Šå‚³å¤±æ•—ï¼š' + e.message, 'error');
     }
 }
 
@@ -567,10 +567,10 @@ function importFromJSON() {
             const data = JSON.parse(text);
             
             if (!data.memories || !Array.isArray(data.memories)) {
-                throw new Error('µL®Äªº°O¾Ğ³Æ¥÷®æ¦¡');
+                throw new Error('ç„¡æ•ˆçš„è¨˜æ†¶å‚™ä»½æ ¼å¼');
             }
             
-            createToast('¥¿¦b¶×¤J°O¾Ğ...', 'info');
+            createToast('æ­£åœ¨åŒ¯å…¥è¨˜æ†¶...', 'info');
             let imported = 0;
             
             for (const memory of data.memories) {
@@ -580,10 +580,10 @@ function importFromJSON() {
                 } catch (e) {}
             }
             
-            createToast('¤w¶×¤J ' + imported + ' «h°O¾Ğ', 'success');
+            createToast('å·²åŒ¯å…¥ ' + imported + ' å‰‡è¨˜æ†¶', 'success');
             Router.navigate('/memory');
         } catch (e) {
-            createToast('¶×¤J¥¢±Ñ¡G' + e.message, 'error');
+            createToast('åŒ¯å…¥å¤±æ•—ï¼š' + e.message, 'error');
         }
     };
     input.click();
@@ -593,13 +593,13 @@ async function renderMemoryDetail(params) {
     const { id } = params;
     const memory = await MemoryDB.access(id);
     if (!memory) {
-        createToast('°O¾Ğ¤£¦s¦b');
+        createToast('è¨˜æ†¶ä¸å­˜åœ¨');
         Router.navigate('/memory');
         return { element: createElement('div'), cleanup: null };
     }
 
     const container = createElement('div', 'app-container memory-app bg-ios-bg');
-    const header = createIOSNavBar({ title: '°O¾Ğ¸Ô±¡', backPath: '/memory' });
+    const header = createIOSNavBar({ title: 'è¨˜æ†¶è©³æƒ…', backPath: '/memory' });
     container.appendChild(header);
 
     const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-8');
@@ -610,14 +610,14 @@ async function renderMemoryDetail(params) {
     contentCard.appendChild(createElement('p', 'text-base leading-relaxed', { textContent: memory.content }));
     main.appendChild(contentCard);
 
-    const typeLabel = TYPE_LABELS[memory.memory_type] || memory.memory_type || '°ÊºA';
+    const typeLabel = TYPE_LABELS[memory.memory_type] || memory.memory_type || 'å‹•æ…‹';
     const stage = getDecayStage(memory);
     
     const categoryCards = [
-        { icon: 'category', iconBg: 'bg-claude-primary', title: 'Ãş«¬', value: typeLabel },
-        { icon: 'place', iconBg: 'bg-blue-500', title: '»â°ì', value: memory.domain || '¡X' },
-        { icon: 'lightbulb', iconBg: 'bg-yellow-500', title: '·N¸q', value: memory.meaning || '¡X' },
-        { icon: 'schedule', iconBg: 'bg-purple-500', title: '°IÅÜ', value: stage.label }
+        { icon: 'category', iconBg: 'bg-claude-primary', title: 'é¡å‹', value: typeLabel },
+        { icon: 'place', iconBg: 'bg-blue-500', title: 'é ˜åŸŸ', value: memory.domain || 'â€”' },
+        { icon: 'lightbulb', iconBg: 'bg-yellow-500', title: 'æ„ç¾©', value: memory.meaning || 'â€”' },
+        { icon: 'schedule', iconBg: 'bg-purple-500', title: 'è¡°è®Š', value: stage.label }
     ];
 
     const categoryGrid = createElement('div', 'grid grid-cols-2 gap-3 mx-4 mb-4');
@@ -636,20 +636,20 @@ async function renderMemoryDetail(params) {
     const actionsGrid = createElement('div', 'grid grid-cols-2 gap-2');
     
     const reinforceBtn = createElement('button', 'bg-claude-primary text-white rounded-lg py-2.5 text-sm font-medium', {
-        textContent: '±j¤Æ°O¾Ğ',
+        textContent: 'å¼·åŒ–è¨˜æ†¶',
         onClick: async () => {
             await MemoryDB.reinforce(id);
-            createToast('°O¾Ğ¤w±j¤Æ');
+            createToast('è¨˜æ†¶å·²å¼·åŒ–');
             Router.navigate('/memory/' + id);
         }
     });
     actionsGrid.appendChild(reinforceBtn);
     
     const permanentBtn = createElement('button', 'bg-claude-success text-white rounded-lg py-2.5 text-sm font-medium', {
-        textContent: '¼Ğ¬°¥Ã¤[',
+        textContent: 'æ¨™ç‚ºæ°¸ä¹…',
         onClick: async () => {
             await MemoryDB.update(id, { memory_type: 'permanent', decayFactor: 5.0 });
-            createToast('¤w¼Ğ¬°¥Ã¤[°O¾Ğ');
+            createToast('å·²æ¨™ç‚ºæ°¸ä¹…è¨˜æ†¶');
             Router.navigate('/memory/' + id);
         }
     });
@@ -659,21 +659,21 @@ async function renderMemoryDetail(params) {
     const actionsGrid2 = createElement('div', 'grid grid-cols-2 gap-2 mt-2');
     
     const archiveBtn = createElement('button', 'bg-gray-100 text-gray-700 rounded-lg py-2.5 text-sm font-medium', {
-        textContent: 'ÂkÀÉ',
+        textContent: 'æ­¸æª”',
         onClick: async () => {
             await MemoryDB.update(id, { memory_type: 'archive' });
-            createToast('°O¾Ğ¤wÂkÀÉ');
+            createToast('è¨˜æ†¶å·²æ­¸æª”');
             Router.navigate('/memory');
         }
     });
     actionsGrid2.appendChild(archiveBtn);
     
     const deleteBtn = createElement('button', 'bg-claude-danger text-white rounded-lg py-2.5 text-sm font-medium', {
-        textContent: '§R°£',
+        textContent: 'åˆªé™¤',
         onClick: () => {
-            if (confirm('½T©w­n§R°£¦¹°O¾Ğ¡H¦¹¾Ş§@µLªk´_­ì¡C')) {
+            if (confirm('ç¢ºå®šè¦åˆªé™¤æ­¤è¨˜æ†¶ï¼Ÿæ­¤æ“ä½œç„¡æ³•å¾©åŸã€‚')) {
                 MemoryDB.delete(id);
-                createToast('°O¾Ğ¤w§R°£');
+                createToast('è¨˜æ†¶å·²åˆªé™¤');
                 Router.navigate('/memory');
             }
         }
@@ -688,7 +688,7 @@ async function renderMemoryDetail(params) {
 
 export default {
     id: 'memory',
-    name: '°O¾ĞºŞ²z',
+    name: 'è¨˜æ†¶ç®¡ç†',
     icon: 'psychology',
     routes: [
         { path: '/memory', render: renderMemoryList },

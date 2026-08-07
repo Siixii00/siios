@@ -4,39 +4,39 @@ import { SettingsDB } from '../../db.js';
 
 const GACHA_CONFIGS = {
   genshin: {
-    name: '­ì¯«',
-    currency: '­ì¥Û',
+    name: 'åŸç¥',
+    currency: 'åŸçŸ³',
     pullCost: 160,
     pity: 90,
     rates: { rarity5: 0.006, rarity4: 0.051, rarity3: 0.943 },
     pool: {
-      rarity5: ['¨è´¸', '²ö®R', '¤C¤C', '­}¿c§J', 'µ^', '·Å­}', 'ïi', '¥Ì«B', '­J®ç', '¯«¨½ºğµØ', '¹p¹q±N­x', '¯Ç¦èÌH', 'ªÜ¹ç®R'],
-      rarity4: ['ªİªİ©Ô', 'µáÁÂº¸', '­»µÙ', '¦æ¬î', '¿Õ¦ãº¸', '¾®¥ú', '¯Z¥§¯S', '¬â¿}'],
-      rarity3: ['§N¤b', '¾¤©ú¯«¼C', '¾~¦Ğ¤}']
+      rarity5: ['åˆ»æ™´', 'è«å¨œ', 'ä¸ƒä¸ƒ', 'è¿ªç›§å…‹', 'ç´', 'æº«è¿ª', 'é­ˆ', 'ç”˜é›¨', 'èƒ¡æ¡ƒ', 'ç¥é‡Œç¶¾è¯', 'é›·é›»å°‡è»', 'ç´è¥¿å¦²', 'èŠ™å¯§å¨œ'],
+      rarity4: ['èŠ­èŠ­æ‹‰', 'è²è¬çˆ¾', 'é¦™è±', 'è¡Œç§‹', 'è«¾è‰¾çˆ¾', 'å‡å…‰', 'ç­å°¼ç‰¹', 'ç ‚ç³–'],
+      rarity3: ['å†·åˆƒ', 'é»æ˜ç¥åŠ', 'é´‰ç¾½å¼“']
     }
   },
   starrail: {
-    name: '±YÃa¡G¬PªÆÅK¹D',
-    currency: '¬PÃ£',
+    name: 'å´©å£ï¼šæ˜Ÿç©¹éµé“',
+    currency: 'æ˜Ÿç“Š',
     pullCost: 160,
     pity: 90,
     rates: { rarity5: 0.006, rarity4: 0.051, rarity3: 0.943 },
     pool: {
-      rarity5: ['®V¤l', '¥Ëº¸¯S', '¥¬¬¥©gÔÕ', '³Ç©¬¼w', '²Å¥È', '»È¯T', '´º¤¸', '¤b', 'Ãè¬y', '¶À¬u'],
-      rarity4: ['¦ãµ·ÌH', '¶Â¶ğ', '¤¦«í', '§Æ¨à', '®R¶ğ²ï', '¨Ø©Ô', '¯À»n', 'ªê§J'],
-      rarity3: ['µ[¬Ä', '¾WÃé', '¤Ñ¶É']
+      rarity5: ['å§¬å­', 'ç“¦çˆ¾ç‰¹', 'å¸ƒæ´›å¦®å©­', 'å‚‘å¸•å¾·', 'ç¬¦ç„', 'éŠ€ç‹¼', 'æ™¯å…ƒ', 'åˆƒ', 'é¡æµ', 'é»ƒæ³‰'],
+      rarity4: ['è‰¾çµ²å¦²', 'é»‘å¡”', 'ä¸¹æ†', 'å¸Œå…’', 'å¨œå¡”è', 'ä½©æ‹‰', 'ç´ è£³', 'è™å…‹'],
+      rarity3: ['ç¥ç€', 'é‹’é‘', 'å¤©å‚¾']
     }
   },
   zzz: {
-    name: 'µ´°Ï¹s',
-    currency: 'µáªL',
+    name: 'çµ•å€é›¶',
+    currency: 'è²æ—',
     pullCost: 160,
     pity: 90,
     rates: { rarity5: 0.006, rarity4: 0.051, rarity3: 0.943 },
     pool: {
-      rarity5: ['¦ã½¬', 'µÜ¥d®¦', '®æ²úµ·', '¿ß¤S', 'ÏÈÁ¢ÌH', 'ÄR®R', '11¸¹', '¦¶»ğ'],
-      rarity4: ['©g¥i', '¦w¤ñ', '¤ñ§Q', '»a¨¤', '¥»', '¦wªF'],
-      rarity3: ['³£¥«µóÀY²y', '·s¤â¤M', '°òÂ¦­µÀº']
+      rarity5: ['è‰¾è“®', 'èŠå¡æ©', 'æ ¼è‰çµ²', 'è²“åˆ', 'ç‚è•¾å¦²', 'éº—å¨œ', '11è™Ÿ', 'æœ±é³¶'],
+      rarity4: ['å¦®å¯', 'å®‰æ¯”', 'æ¯”åˆ©', 'è’¼è§’', 'æœ¬', 'å®‰æ±'],
+      rarity3: ['éƒ½å¸‚è¡—é ­çƒ', 'æ–°æ‰‹åˆ€', 'åŸºç¤éŸ³æ“']
     }
   }
 };
@@ -109,61 +109,61 @@ function renderGachaGame(container) {
   const config = GACHA_CONFIGS[gachaState.currentGame];
   
   container.innerHTML = `
-    <div class='gacha-container'>
-      <div class='gacha-header'>
-        <div class='game-tabs'>
+    <div class="gacha-container">
+      <div class="gacha-header">
+        <div class="game-tabs">
           ${Object.entries(GACHA_CONFIGS).map(([key, cfg]) => `
-            <button class='game-tab ${key === gachaState.currentGame ? 'active' : ''}' data-game='${key}'>${cfg.name}</button>
+            <button class="game-tab ${key === gachaState.currentGame ? 'active' : ''}" data-game="${key}">${cfg.name}</button>
           `).join('')}
         </div>
       </div>
       
-      <div class='gacha-info'>
-        <div class='currency-display'>
-          <i class='fas fa-gem'></i>
-          <span class='currency-amount'>${gachaState.currency}</span>
-          <span class='currency-name'>${config.currency}</span>
+      <div class="gacha-info">
+        <div class="currency-display">
+          <i class="fas fa-gem"></i>
+          <span class="currency-amount">${gachaState.currency}</span>
+          <span class="currency-name">${config.currency}</span>
         </div>
-        <div class='pity-info'>
-          <span>«O©³¶i«×: ${gachaState.pity5}/${config.pity}</span>
+        <div class="pity-info">
+          <span>ä¿åº•é€²åº¦: ${gachaState.pity5}/${config.pity}</span>
         </div>
       </div>
       
-      <div class='gacha-buttons'>
-        <button class='gacha-btn single' data-count='1'>
-          <span class='btn-label'>©â 1 ¦¸</span>
-          <span class='btn-cost'>${config.pullCost} ${config.currency}</span>
+      <div class="gacha-buttons">
+        <button class="gacha-btn single" data-count="1">
+          <span class="btn-label">æŠ½ 1 æ¬¡</span>
+          <span class="btn-cost">${config.pullCost} ${config.currency}</span>
         </button>
-        <button class='gacha-btn ten' data-count='10'>
-          <span class='btn-label'>©â 10 ¦¸</span>
-          <span class='btn-cost'>${config.pullCost * 10} ${config.currency}</span>
+        <button class="gacha-btn ten" data-count="10">
+          <span class="btn-label">æŠ½ 10 æ¬¡</span>
+          <span class="btn-cost">${config.pullCost * 10} ${config.currency}</span>
         </button>
       </div>
       
-      <div class='gacha-stats'>
-        <div class='stat-item'>
-          <span class='stat-label'>Á`©â¼Æ</span>
-          <span class='stat-value'>${gachaState.stats.total}</span>
+      <div class="gacha-stats">
+        <div class="stat-item">
+          <span class="stat-label">ç¸½æŠ½æ•¸</span>
+          <span class="stat-value">${gachaState.stats.total}</span>
         </div>
-        <div class='stat-item rarity-5'>
-          <span class='stat-label'>5¡¹</span>
-          <span class='stat-value'>${gachaState.stats.rarity5}</span>
+        <div class="stat-item rarity-5">
+          <span class="stat-label">5â˜…</span>
+          <span class="stat-value">${gachaState.stats.rarity5}</span>
         </div>
-        <div class='stat-item rarity-4'>
-          <span class='stat-label'>4¡¹</span>
-          <span class='stat-value'>${gachaState.stats.rarity4}</span>
+        <div class="stat-item rarity-4">
+          <span class="stat-label">4â˜…</span>
+          <span class="stat-value">${gachaState.stats.rarity4}</span>
         </div>
       </div>
       
-      <div class='gacha-history'>
-        <h3>³Ìªñ©â¥d¬ö¿ı</h3>
-        <div class='history-list'>
+      <div class="gacha-history">
+        <h3>æœ€è¿‘æŠ½å¡ç´€éŒ„</h3>
+        <div class="history-list">
           ${gachaState.history.slice(-10).reverse().map(h => `
-            <div class='history-item rarity-${h.rarity}'>
-              <span class='history-rarity'>${h.rarity}¡¹</span>
-              <span class='history-name'>${h.name}</span>
+            <div class="history-item rarity-${h.rarity}">
+              <span class="history-rarity">${h.rarity}â˜…</span>
+              <span class="history-name">${h.name}</span>
             </div>
-          `).join('') || '<div class='empty-history'>©|µL¬ö¿ı</div>'}
+          `).join('') || '<div class="empty-history">å°šç„¡ç´€éŒ„</div>'}
         </div>
       </div>
     </div>
@@ -186,7 +186,7 @@ function renderGachaGame(container) {
       const cost = config.pullCost * count;
       
       if (gachaState.currency < cost) {
-        alert('³f¹ô¤£¨¬¡I');
+        alert('è²¨å¹£ä¸è¶³ï¼');
         return;
       }
       
@@ -210,15 +210,15 @@ async function renderArcade(params) {
   const container = createElement('div', 'app-container arcade-app');
   
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'>
-        <i class='fas fa-chevron-left'></i> ªğ¦^
+    <header class="ios-header">
+      <button class="ios-back-btn">
+        <i class="fas fa-chevron-left"></i> è¿”å›
       </button>
-      <h1 class='menu-title'>µó¾÷ÆU</h1>
+      <h1 class="menu-title">è¡—æ©Ÿå»³</h1>
     </header>
     
-    <div class='page'>
-      <div id='arcade-content'></div>
+    <div class="page">
+      <div id="arcade-content"></div>
     </div>
   `;
   
@@ -233,9 +233,9 @@ async function renderArcade(params) {
 
 export default {
   id: 'arcade',
-  name: 'µó¾÷ÆU',
+  name: 'è¡—æ©Ÿå»³',
   icon: 'gamepad',
   routes: [{ path: '/arcade', render: renderArcade }],
-  navItem: { label: 'µó¾÷ÆU', icon: 'gamepad', path: '/arcade', showInNav: true, order: 100 },
+  navItem: { label: 'è¡—æ©Ÿå»³', icon: 'gamepad', path: '/arcade', showInNav: true, order: 100 },
   stylesPath: 'js/apps/arcade/style.css'
 };

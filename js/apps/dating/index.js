@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+ï»¿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { CharactersDB, SettingsDB } from '../../db.js';
 import APIClient from '../../api.js';
@@ -6,19 +6,19 @@ import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 
 const DATING_SCENES = [
-  { id: 'cafe', name: '©@°ØÆU', icon: 'fa-coffee', desc: '¦b·ÅÄÉªº©@°ØÆU¬ù·|' },
-  { id: 'park', name: '¤½¶é', icon: 'fa-tree', desc: '¦b¤½¶é´²¨B²á¤Ñ' },
-  { id: 'beach', name: '®üÅy', icon: 'fa-umbrella-beach', desc: '¦b®üÅy¨É¨ü¤i¶§' },
-  { id: 'restaurant', name: 'À\ÆU', icon: 'fa-utensils', desc: '¦bÀ\ÆU¦@¶i±ßÀ\' },
-  { id: 'cinema', name: '¹q¼v°|', icon: 'fa-film', desc: '¤@°_¬İ¹q¼v' },
-  { id: 'home', name: '®a¤¤', icon: 'fa-home', desc: '¦b®a¤¤©ñÃP¬ù·|' }
+  { id: 'cafe', name: 'å’–å•¡å»³', icon: 'fa-coffee', desc: 'åœ¨æº«é¦¨çš„å’–å•¡å»³ç´„æœƒ' },
+  { id: 'park', name: 'å…¬åœ’', icon: 'fa-tree', desc: 'åœ¨å…¬åœ’æ•£æ­¥èŠå¤©' },
+  { id: 'beach', name: 'æµ·ç˜', icon: 'fa-umbrella-beach', desc: 'åœ¨æµ·ç˜äº«å—å¤•é™½' },
+  { id: 'restaurant', name: 'é¤å»³', icon: 'fa-utensils', desc: 'åœ¨é¤å»³å…±é€²æ™šé¤' },
+  { id: 'cinema', name: 'é›»å½±é™¢', icon: 'fa-film', desc: 'ä¸€èµ·çœ‹é›»å½±' },
+  { id: 'home', name: 'å®¶ä¸­', icon: 'fa-home', desc: 'åœ¨å®¶ä¸­æ”¾é¬†ç´„æœƒ' }
 ];
 
 const DATING_ACTIONS = [
-  { id: 'talk', name: '²á¤Ñ', icon: 'fa-comments', prompt: '¶}©l´r§Öªº¹ï¸Ü' },
-  { id: 'gift', name: '°eÂ§', icon: 'fa-gift', prompt: '°e¤@¥÷¤pÂ§ª«' },
-  { id: 'touch', name: '¤¬°Ê', icon: 'fa-hand-holding-heart', prompt: '¶i¦æ¿Ë±K¤¬°Ê' },
-  { id: 'activity', name: '¬¡°Ê', icon: 'fa-gamepad', prompt: '¤@°_¶i¦æ¦³½ìªº¬¡°Ê' }
+  { id: 'talk', name: 'èŠå¤©', icon: 'fa-comments', prompt: 'é–‹å§‹æ„‰å¿«çš„å°è©±' },
+  { id: 'gift', name: 'é€ç¦®', icon: 'fa-gift', prompt: 'é€ä¸€ä»½å°ç¦®ç‰©' },
+  { id: 'touch', name: 'äº’å‹•', icon: 'fa-hand-holding-heart', prompt: 'é€²è¡Œè¦ªå¯†äº’å‹•' },
+  { id: 'activity', name: 'æ´»å‹•', icon: 'fa-gamepad', prompt: 'ä¸€èµ·é€²è¡Œæœ‰è¶£çš„æ´»å‹•' }
 ];
 
 let datingState = {
@@ -35,14 +35,14 @@ async function renderDating(params) {
   const characters = await CharactersDB.getAll();
   
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'>
-        <i class='fas fa-chevron-left'></i> ªğ¦^
+    <header class="ios-header">
+      <button class="ios-back-btn">
+        <i class="fas fa-chevron-left"></i> è¿”å›
       </button>
-      <h1 class='menu-title'>¬ù·|</h1>
+      <h1 class="menu-title">ç´„æœƒ</h1>
     </header>
     
-    <div class='page' id='dating-page'>
+    <div class="page" id="dating-page">
       ${characters.length === 0 ? renderNoCharacters() : renderCharacterSelect(characters)}
     </div>
   `;
@@ -72,27 +72,27 @@ async function renderDating(params) {
 
 function renderNoCharacters() {
   return `
-    <div class='dating-placeholder'>
-      <i class='fas fa-user-slash'></i>
-      <h2>©|µL¨¤¦â</h2>
-      <p>½Ğ¥ı«Ø¥ß¨¤¦â¥H¶}©l¬ù·|</p>
+    <div class="dating-placeholder">
+      <i class="fas fa-user-slash"></i>
+      <h2>å°šç„¡è§’è‰²</h2>
+      <p>è«‹å…ˆå»ºç«‹è§’è‰²ä»¥é–‹å§‹ç´„æœƒ</p>
     </div>
   `;
 }
 
 function renderCharacterSelect(characters) {
   return `
-    <div class='dating-select'>
-      <h2 class='dating-title'>¿ï¾Ü¬ù·|¹ï¶H</h2>
-      <div class='character-grid'>
+    <div class="dating-select">
+      <h2 class="dating-title">é¸æ“‡ç´„æœƒå°è±¡</h2>
+      <div class="character-grid">
         ${characters.map(char => `
-          <div class='character-card' data-id='${char.id}'>
-            <div class='character-avatar'>
-              ${char.avatar ? `<img src='${char.avatar}' alt='${char.name}'>` : `<i class='fas fa-user'></i>`}
+          <div class="character-card" data-id="${char.id}">
+            <div class="character-avatar">
+              ${char.avatar ? `<img src="${char.avatar}" alt="${char.name}">` : `<i class="fas fa-user"></i>`}
             </div>
-            <div class='character-info'>
+            <div class="character-info">
               <h3>${char.name}</h3>
-              <p class='character-personality'>${char.personality?.substring(0, 50) || '¯«¯µªº¨¤¦â'}${char.personality?.length > 50 ? '...' : ''}</p>
+              <p class="character-personality">${char.personality?.substring(0, 50) || 'ç¥ç§˜çš„è§’è‰²'}${char.personality?.length > 50 ? '...' : ''}</p>
             </div>
           </div>
         `).join('')}
@@ -103,13 +103,13 @@ function renderCharacterSelect(characters) {
 
 function renderSceneSelect() {
   return `
-    <div class='dating-select'>
-      <h2 class='dating-title'>¿ï¾Ü¬ù·|³õ´º</h2>
-      <div class='scene-grid'>
+    <div class="dating-select">
+      <h2 class="dating-title">é¸æ“‡ç´„æœƒå ´æ™¯</h2>
+      <div class="scene-grid">
         ${DATING_SCENES.map(scene => `
-          <div class='scene-card' data-id='${scene.id}'>
-            <div class='scene-icon'><i class='fas ${scene.icon}'></i></div>
-            <div class='scene-info'>
+          <div class="scene-card" data-id="${scene.id}">
+            <div class="scene-icon"><i class="fas ${scene.icon}"></i></div>
+            <div class="scene-info">
               <h3>${scene.name}</h3>
               <p>${scene.desc}</p>
             </div>
@@ -122,49 +122,49 @@ function renderSceneSelect() {
 
 function renderDatingScene(scene) {
   return `
-    <div class='dating-scene-container'>
-      <div class='dating-header'>
-        <div class='dating-partner'>
-          <div class='partner-avatar'>
-            ${datingState.character.avatar ? `<img src='${datingState.character.avatar}' alt='${datingState.character.name}'>` : `<i class='fas fa-user'></i>`}
+    <div class="dating-scene-container">
+      <div class="dating-header">
+        <div class="dating-partner">
+          <div class="partner-avatar">
+            ${datingState.character.avatar ? `<img src="${datingState.character.avatar}" alt="${datingState.character.name}">` : `<i class="fas fa-user"></i>`}
           </div>
-          <div class='partner-info'>
+          <div class="partner-info">
             <h3>${datingState.character.name}</h3>
-            <div class='affection-bar'>
-              <div class='affection-fill' style='width: ${datingState.affection}%'></div>
+            <div class="affection-bar">
+              <div class="affection-fill" style="width: ${datingState.affection}%"></div>
             </div>
-            <span class='affection-label'>¦n·P«×: ${datingState.affection}%</span>
+            <span class="affection-label">å¥½æ„Ÿåº¦: ${datingState.affection}%</span>
           </div>
         </div>
-        <div class='scene-badge'>
-          <i class='fas ${scene.icon}'></i> ${scene.name}
+        <div class="scene-badge">
+          <i class="fas ${scene.icon}"></i> ${scene.name}
         </div>
       </div>
       
-      <div class='dating-messages' id='dating-messages'>
+      <div class="dating-messages" id="dating-messages">
         ${datingState.messages.map(msg => `
-          <div class='dating-message ${msg.role}'>
+          <div class="dating-message ${msg.role}">
             ${msg.role === 'assistant' ? `
-              <div class='message-avatar'>
-                ${datingState.character.avatar ? `<img src='${datingState.character.avatar}'>` : `<i class='fas fa-user'></i>`}
+              <div class="message-avatar">
+                ${datingState.character.avatar ? `<img src="${datingState.character.avatar}">` : `<i class="fas fa-user"></i>`}
               </div>
             ` : ''}
-            <div class='message-content'>${msg.content}</div>
+            <div class="message-content">${msg.content}</div>
           </div>
         `).join('')}
       </div>
       
-      <div class='dating-actions'>
-        <div class='action-buttons'>
+      <div class="dating-actions">
+        <div class="action-buttons">
           ${DATING_ACTIONS.map(action => `
-            <button class='action-btn' data-id='${action.id}' title='${action.name}'>
-              <i class='fas ${action.icon}'></i>
+            <button class="action-btn" data-id="${action.id}" title="${action.name}">
+              <i class="fas ${action.icon}"></i>
             </button>
           `).join('')}
         </div>
-        <div class='dating-input-area'>
-          <input type='text' id='dating-input' placeholder='¿é¤J°T®§...' />
-          <button id='send-btn'><i class='fas fa-paper-plane'></i></button>
+        <div class="dating-input-area">
+          <input type="text" id="dating-input" placeholder="è¼¸å…¥è¨Šæ¯..." />
+          <button id="send-btn"><i class="fas fa-paper-plane"></i></button>
         </div>
       </div>
     </div>
@@ -230,14 +230,14 @@ async function generateSystemMessage(scene) {
   const char = datingState.character;
   const context = await buildAppContext(char, { scene });
   
-  let systemMessage = `§A¬O${char.name}¡A¥¿¦b»P¨Ï¥ÎªÌ¶i¦æ¬ù·|¡C
-³õ´º¡G${scene.name} - ${scene.desc}
-${char.personality ? `©Ê®æ¡G${char.personality}` : ''}
-${char.scenario ? `­I´º¡G${char.scenario}` : ''}
+  let systemMessage = `ä½ æ˜¯${char.name}ï¼Œæ­£åœ¨èˆ‡ä½¿ç”¨è€…é€²è¡Œç´„æœƒã€‚
+å ´æ™¯ï¼š${scene.name} - ${scene.desc}
+${char.personality ? `æ€§æ ¼ï¼š${char.personality}` : ''}
+${char.scenario ? `èƒŒæ™¯ï¼š${char.scenario}` : ''}
 
-½Ğ¥H¦ÛµM¡B¥Í°Êªº¤è¦¡¦^À³¨Ï¥ÎªÌªº¬ù·|¤¬°Ê¡C«O«ù¨¤¦â©Ê®æ¡A®i²{¾A·íªº±¡·P¤ÏÀ³¡C
-¥i¥H®Ú¾Ú¤¬°Ê½Õ¾ã¦n·P«×¡]¼vÅT¦^À³ªº¿Ë±Kµ{«×¡^¡C
-·í«e¦n·P«×¡G${datingState.affection}%`;
+è«‹ä»¥è‡ªç„¶ã€ç”Ÿå‹•çš„æ–¹å¼å›æ‡‰ä½¿ç”¨è€…çš„ç´„æœƒäº’å‹•ã€‚ä¿æŒè§’è‰²æ€§æ ¼ï¼Œå±•ç¾é©ç•¶çš„æƒ…æ„Ÿåæ‡‰ã€‚
+å¯ä»¥æ ¹æ“šäº’å‹•èª¿æ•´å¥½æ„Ÿåº¦ï¼ˆå½±éŸ¿å›æ‡‰çš„è¦ªå¯†ç¨‹åº¦ï¼‰ã€‚
+ç•¶å‰å¥½æ„Ÿåº¦ï¼š${datingState.affection}%`;
 
   if (context.systemPrompt) {
     systemMessage = `${systemMessage}\n\n${context.systemPrompt}`;
@@ -249,10 +249,10 @@ ${char.scenario ? `­I´º¡G${char.scenario}` : ''}
 function generateGreeting(scene) {
   const char = datingState.character;
   const greetings = [
-    `${char.name}·L¯ºµÛ¬İµÛ§A¡A¡u³o¸Ì¯u¬O­Ó¤£¿ùªº${scene.name}©O¡A§Ú«Ü°ª¿³§A¯à±a§Ú¨Ó³o¸Ì¡C¡v`,
-    `${char.name}ÀôÅU¥|©P¡A¡u«z¡A³o${scene.name}ªºª^³ò¯u¦n...ÁÂÁÂ§A¬ù§Ú¥X¨Ó¡C¡v`,
-    `${char.name}»´»´ÂIÀY¡A¡u¶â...§Ú«Ü³ßÅw³o­Ó${scene.name}¡C¤µ¤Ñ·|¬O¬ü¦nªº¤@¤Ñ§a¡H¡v`,
-    `${char.name}¬İµÛ§A¡A²´¯«¤¤±aµÛ´Á«İ¡A¡u¨º...§Ú­Ì­n°µ¨Ç¤°»ò©O¡H¡v`
+    `${char.name}å¾®ç¬‘è‘—çœ‹è‘—ä½ ï¼Œã€Œé€™è£¡çœŸæ˜¯å€‹ä¸éŒ¯çš„${scene.name}å‘¢ï¼Œæˆ‘å¾ˆé«˜èˆˆä½ èƒ½å¸¶æˆ‘ä¾†é€™è£¡ã€‚ã€`,
+    `${char.name}ç’°é¡§å››å‘¨ï¼Œã€Œå“‡ï¼Œé€™${scene.name}çš„æ°›åœçœŸå¥½...è¬è¬ä½ ç´„æˆ‘å‡ºä¾†ã€‚ã€`,
+    `${char.name}è¼•è¼•é»é ­ï¼Œã€Œå—¯...æˆ‘å¾ˆå–œæ­¡é€™å€‹${scene.name}ã€‚ä»Šå¤©æœƒæ˜¯ç¾å¥½çš„ä¸€å¤©å§ï¼Ÿã€`,
+    `${char.name}çœ‹è‘—ä½ ï¼Œçœ¼ç¥ä¸­å¸¶è‘—æœŸå¾…ï¼Œã€Œé‚£...æˆ‘å€‘è¦åšäº›ä»€éº¼å‘¢ï¼Ÿã€`
   ];
   return greetings[Math.floor(Math.random() * greetings.length)];
 }
@@ -265,11 +265,11 @@ function addMessage(container, role, content) {
   messageEl.className = `dating-message ${role}`;
   messageEl.innerHTML = `
     ${role === 'assistant' ? `
-      <div class='message-avatar'>
-        ${datingState.character.avatar ? `<img src='${datingState.character.avatar}'>` : `<i class='fas fa-user'></i>`}
+      <div class="message-avatar">
+        ${datingState.character.avatar ? `<img src="${datingState.character.avatar}">` : `<i class="fas fa-user"></i>`}
       </div>
     ` : ''}
-    <div class='message-content'>${content}</div>
+    <div class="message-content">${content}</div>
   `;
   messagesDiv.appendChild(messageEl);
   messagesDiv.scrollTop = messagesDiv.scrollHeight;
@@ -303,12 +303,12 @@ async function handleAction(container, actionId) {
 
 function generateActionPrompt(actionId) {
   const prompts = {
-    talk: '§Ú·Q©M§A²á²á¤Ñ',
-    gift: '§Ú·Ç³Æ¤F¤@¥÷¤pÂ§ª«°eµ¹§A',
-    touch: '»´»´´¤¦í¹ï¤èªº¤â',
-    activity: '§Ú­Ì¤@°_°µÂI¤°»ò§a'
+    talk: 'æˆ‘æƒ³å’Œä½ èŠèŠå¤©',
+    gift: 'æˆ‘æº–å‚™äº†ä¸€ä»½å°ç¦®ç‰©é€çµ¦ä½ ',
+    touch: 'è¼•è¼•æ¡ä½å°æ–¹çš„æ‰‹',
+    activity: 'æˆ‘å€‘ä¸€èµ·åšé»ä»€éº¼å§'
   };
-  return prompts[actionId] || '¶i¦æ¤¬°Ê';
+  return prompts[actionId] || 'é€²è¡Œäº’å‹•';
 }
 
 function calculateAffectionChange(actionId) {
@@ -328,7 +328,7 @@ function updateAffection(container, change) {
   const label = container.querySelector('.affection-label');
   
   if (fill) fill.style.width = `${datingState.affection}%`;
-  if (label) label.textContent = `¦n·P«×: ${datingState.affection}%`;
+  if (label) label.textContent = `å¥½æ„Ÿåº¦: ${datingState.affection}%`;
 }
 
 async function generateResponse(container, userMessage, isAction = false) {
@@ -381,9 +381,9 @@ async function generateResponse(container, userMessage, isAction = false) {
         datingState.isTyping = false;
         if (window.showError) {
           window.showError({
-            title: 'Dating ²á¤Ñ¿ù»~',
-            message: error || '¥¼ª¾¿ù»~',
-            details: 'API ¦^½Õ¿ù»~'
+            title: 'Dating èŠå¤©éŒ¯èª¤',
+            message: error || 'æœªçŸ¥éŒ¯èª¤',
+            details: 'API å›èª¿éŒ¯èª¤'
           });
         }
       }
@@ -395,8 +395,8 @@ async function generateResponse(container, userMessage, isAction = false) {
     datingState.isTyping = false;
     if (window.showError) {
       window.showError({
-        title: 'Dating ²á¤Ñ¿ù»~',
-        message: error.message || '¥¼ª¾¿ù»~',
+        title: 'Dating èŠå¤©éŒ¯èª¤',
+        message: error.message || 'æœªçŸ¥éŒ¯èª¤',
         details: error.stack || ''
       });
     }
@@ -409,19 +409,19 @@ function generateFallbackResponse(userMessage, isAction) {
   
   if (isAction) {
     if (affection > 70) {
-      return `${char.name}Áy¤Wªx°_¬õ·w¡A¡u...¶â¡A§Ú«Ü¶}¤ß§A¯à³o¼Ë°µ¡C¡v`;
+      return `${char.name}è‡‰ä¸Šæ³›èµ·ç´…æšˆï¼Œã€Œ...å—¯ï¼Œæˆ‘å¾ˆé–‹å¿ƒä½ èƒ½é€™æ¨£åšã€‚ã€`;
     } else if (affection > 40) {
-      return `${char.name}¦³¨ÇÅå³Y¡A¡u°Ú...ÁÂÁÂ§A¡C¡v`;
+      return `${char.name}æœ‰äº›é©šè¨ï¼Œã€Œå•Š...è¬è¬ä½ ã€‚ã€`;
     } else {
-      return `${char.name}µy·L°h«á¤F¤@ÂI¡A¡u¶â...§Ú­ÌÁÙ¬O¥ı¦h²á²á§a¡C¡v`;
+      return `${char.name}ç¨å¾®é€€å¾Œäº†ä¸€é»ï¼Œã€Œå—¯...æˆ‘å€‘é‚„æ˜¯å…ˆå¤šèŠèŠå§ã€‚ã€`;
     }
   }
   
   const responses = [
-    `${char.name}ÂIÂIÀY¡A¡u¶â¡A§Ú¤]³o»òÄ±±o©O¡C¡v`,
-    `${char.name}·L¯ºµÛ¡A¡u¸ò§A¦b¤@°_·PÄ±«Ü©ñÃP...¡v`,
-    `${char.name}¬İµÛ§A¡A¡u³o¼Ëªº®É¥ú¯u¤£¿ù©O¡C¡v`,
-    `${char.name}»´Án¦^À³¡A¡u¶â...§Ú©ú¥Õ§Aªº·N«ä¡C¡v`
+    `${char.name}é»é»é ­ï¼Œã€Œå—¯ï¼Œæˆ‘ä¹Ÿé€™éº¼è¦ºå¾—å‘¢ã€‚ã€`,
+    `${char.name}å¾®ç¬‘è‘—ï¼Œã€Œè·Ÿä½ åœ¨ä¸€èµ·æ„Ÿè¦ºå¾ˆæ”¾é¬†...ã€`,
+    `${char.name}çœ‹è‘—ä½ ï¼Œã€Œé€™æ¨£çš„æ™‚å…‰çœŸä¸éŒ¯å‘¢ã€‚ã€`,
+    `${char.name}è¼•è²å›æ‡‰ï¼Œã€Œå—¯...æˆ‘æ˜ç™½ä½ çš„æ„æ€ã€‚ã€`
   ];
   
   return responses[Math.floor(Math.random() * responses.length)];
@@ -432,13 +432,13 @@ function showTypingIndicator(container) {
   const typingEl = document.createElement('div');
   typingEl.className = 'dating-message assistant typing-indicator';
   typingEl.innerHTML = `
-    <div class='message-avatar'>
-      ${datingState.character.avatar ? `<img src='${datingState.character.avatar}'>` : `<i class='fas fa-user'></i>`}
+    <div class="message-avatar">
+      ${datingState.character.avatar ? `<img src="${datingState.character.avatar}">` : `<i class="fas fa-user"></i>`}
     </div>
-    <div class='message-content'>
-      <span class='typing-dot'></span>
-      <span class='typing-dot'></span>
-      <span class='typing-dot'></span>
+    <div class="message-content">
+      <span class="typing-dot"></span>
+      <span class="typing-dot"></span>
+      <span class="typing-dot"></span>
     </div>
   `;
   messagesDiv.appendChild(typingEl);
@@ -459,9 +459,9 @@ function hideTypingIndicator(container) {
 
 export default {
   id: 'dating',
-  name: '¬ù·|',
+  name: 'ç´„æœƒ',
   icon: 'heart',
   routes: [{ path: '/dating', render: renderDating }],
-  navItem: { label: '¬ù·|', icon: 'heart', path: '/dating', showInNav: true, order: 110 },
+  navItem: { label: 'ç´„æœƒ', icon: 'heart', path: '/dating', showInNav: true, order: 110 },
   stylesPath: 'js/apps/dating/style.css'
 };

@@ -1,4 +1,4 @@
-﻿import Router from '../../router.js';
+import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
@@ -294,8 +294,8 @@ function setLoadingState(container, message) {
     const dailyForecast = container.querySelector('#daily-forecast');
     const weeklyForecast = container.querySelector('#weekly-forecast');
     if (currentDesc) currentDesc.textContent = message;
-    if (dailyForecast) dailyForecast.innerHTML = `<div class='empty-state'>${message}</div>`;
-    if (weeklyForecast) weeklyForecast.innerHTML = `<div class='empty-state'>${message}</div>`;
+    if (dailyForecast) dailyForecast.innerHTML = `<div class="empty-state">${message}</div>`;
+    if (weeklyForecast) weeklyForecast.innerHTML = `<div class="empty-state">${message}</div>`;
 }
 
 function renderCurrent(placeName, data, container) {
@@ -338,10 +338,10 @@ function renderDailyForecast(data, container) {
         const icon = getWeatherIcon(daily.weathercode[index]);
         const range = `${Math.round(daily.temperature_2m_min[index])}° / ${Math.round(daily.temperature_2m_max[index])}°`;
         return `
-            <div class='forecast-card'>
-                <div class='day'>${dayLabel}</div>
-                <div class='icon'><i class='fas ${icon}'></i></div>
-                <div class='range'>${range}</div>
+            <div class="forecast-card">
+                <div class="day">${dayLabel}</div>
+                <div class="icon"><i class="fas ${icon}"></i></div>
+                <div class="range">${range}</div>
             </div>
         `;
     }).join('');
@@ -360,10 +360,10 @@ function renderWeeklyForecast(data, container) {
         const precipText = precip !== undefined ? `降雨 ${precip}%` : '降雨 --';
         const icon = getWeatherIcon(daily.weathercode[index]);
         return `
-            <div class='week-item'>
-                <div class='week-day'>${dayLabel}</div>
-                <div class='week-range'><i class='fas ${icon}'></i> ${range}</div>
-                <div class='week-precip'>${precipText}</div>
+            <div class="week-item">
+                <div class="week-day">${dayLabel}</div>
+                <div class="week-range"><i class="fas ${icon}"></i> ${range}</div>
+                <div class="week-precip">${precipText}</div>
             </div>
         `;
     }).join('');
@@ -397,7 +397,7 @@ function renderCharacterSection(container) {
     if (charName) charName.textContent = currentChar.name || '未命名角色';
     if (charAvatar) {
         if (currentChar.avatar) {
-            charAvatar.innerHTML = `<img src='${currentChar.avatar}' alt='${currentChar.name}' />`;
+            charAvatar.innerHTML = `<img src="${currentChar.avatar}" alt="${currentChar.name}" />`;
             charAvatar.classList.add('image');
         } else {
             charAvatar.textContent = currentChar.name?.charAt(0) || '?';
@@ -442,61 +442,61 @@ async function renderWeather(params) {
     const storedLocation = await SettingsDB.get('weather_location');
     
     container.innerHTML = `
-        <header class='ios-header'>
-            <button class='ios-back-btn'>
-                <i class='fas fa-chevron-left'></i> 返回
+        <header class="ios-header">
+            <button class="ios-back-btn">
+                <i class="fas fa-chevron-left"></i> 返回
             </button>
-            <h1 class='menu-title'>天氣</h1>
+            <h1 class="menu-title">天氣</h1>
         </header>
 
-        <div class='page'>
-            <div class='weather-panel'>
-                <div class='location-row'>
-                    <input type='text' id='location-input' placeholder='輸入城市名稱...' value='${storedLocation || ''}'>
-                    <button class='primary-btn' id='search-btn'>
-                        <i class='fas fa-search'></i>
+        <div class="page">
+            <div class="weather-panel">
+                <div class="location-row">
+                    <input type="text" id="location-input" placeholder="輸入城市名稱..." value="${storedLocation || ''}">
+                    <button class="primary-btn" id="search-btn">
+                        <i class="fas fa-search"></i>
                     </button>
                 </div>
-                <div class='status-row'>
-                    <span id='location-display'>尚未設定地點</span>
-                    <span id='update-time'></span>
+                <div class="status-row">
+                    <span id="location-display">尚未設定地點</span>
+                    <span id="update-time"></span>
                 </div>
-                <div class='current-card'>
-                    <div class='current-main'>
-                        <span class='temp' id='current-temp'>--°</span>
-                        <span class='desc' id='current-desc'>請輸入地區取得預報</span>
+                <div class="current-card">
+                    <div class="current-main">
+                        <span class="temp" id="current-temp">--°</span>
+                        <span class="desc" id="current-desc">請輸入地區取得預報</span>
                     </div>
-                    <div class='current-meta'>
-                        <span><i class='fas fa-wind'></i><span id='current-wind'>-- km/h</span></span>
-                        <span><i class='fas fa-tint'></i><span id='current-humidity'>--%</span></span>
-                        <span><i class='fas fa-cloud-rain'></i><span id='current-precip'>-- mm</span></span>
+                    <div class="current-meta">
+                        <span><i class="fas fa-wind"></i><span id="current-wind">-- km/h</span></span>
+                        <span><i class="fas fa-tint"></i><span id="current-humidity">--%</span></span>
+                        <span><i class="fas fa-cloud-rain"></i><span id="current-precip">-- mm</span></span>
                     </div>
                 </div>
             </div>
 
-            <div class='forecast-section'>
+            <div class="forecast-section">
                 <h2>近期預報</h2>
-                <div class='forecast-grid' id='daily-forecast'>
-                    <div class='empty-state'>請輸入地區取得預報</div>
+                <div class="forecast-grid" id="daily-forecast">
+                    <div class="empty-state">請輸入地區取得預報</div>
                 </div>
             </div>
 
-            <div class='forecast-section'>
+            <div class="forecast-section">
                 <h2>一週天氣</h2>
-                <div class='forecast-list' id='weekly-forecast'>
-                    <div class='empty-state'>請輸入地區取得預報</div>
+                <div class="forecast-list" id="weekly-forecast">
+                    <div class="empty-state">請輸入地區取得預報</div>
                 </div>
             </div>
 
-            <div class='char-section'>
-                <div class='char-card'>
-                    <div class='char-avatar' id='char-avatar'>?</div>
-                    <div class='char-info'>
-                        <div class='char-name' id='char-name'>尚未設定角色</div>
-                        <div id='char-note'>查詢天氣後，這裡會顯示天氣提醒</div>
+            <div class="char-section">
+                <div class="char-card">
+                    <div class="char-avatar" id="char-avatar">?</div>
+                    <div class="char-info">
+                        <div class="char-name" id="char-name">尚未設定角色</div>
+                        <div id="char-note">查詢天氣後，這裡會顯示天氣提醒</div>
                     </div>
                 </div>
-                <div class='char-placeholder' id='char-placeholder' style='display: none;'>
+                <div class="char-placeholder" id="char-placeholder" style="display: none;">
                     前往設定新增角色，即可獲得個人化天氣提醒
                 </div>
             </div>

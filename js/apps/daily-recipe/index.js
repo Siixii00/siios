@@ -3,34 +3,34 @@ import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 const RECIPES = [
-  { name: 'µf­Xª£³J', time: '15 ¤ÀÄÁ', difficulty: 'Â²³æ', ingredients: ['µf­X', 'Âû³J', '½µ'], steps: ['µf­X¤Á¶ô', 'Âû³J¥´´²', '¼öªoª£³J', '¥[¤Jµf­XÂ½ª£'] },
-  { name: '¸q¤j§QÄÑ', time: '20 ¤ÀÄÁ', difficulty: '¤¤µ¥', ingredients: ['¸q¤j§QÄÑ', 'µf­XÂæ', '¬v½µ', 'µ±¦×'], steps: ['µNÄÑ', 'ª£¬v½µ©Mµ±¦×', '¥[¤Jµf­XÂæ', '©Õ¤JÄÑ±ø'] },
-  { name: '¨ıäø´ö', time: '10 ¤ÀÄÁ', difficulty: 'Â²³æ', ingredients: ['¨ıäø', '¨§»G', '®ü±a'], steps: ['¤ôµN¶}', '¥[¤J®ü±a', '¥[¤J¨§»G', '·»¤J¨ıäø'] }
+  { name: 'ç•ªèŒ„ç‚’è›‹', time: '15 åˆ†é˜', difficulty: 'ç°¡å–®', ingredients: ['ç•ªèŒ„', 'é›è›‹', 'è”¥'], steps: ['ç•ªèŒ„åˆ‡å¡Š', 'é›è›‹æ‰“æ•£', 'ç†±æ²¹ç‚’è›‹', 'åŠ å…¥ç•ªèŒ„ç¿»ç‚’'] },
+  { name: 'ç¾©å¤§åˆ©éºµ', time: '20 åˆ†é˜', difficulty: 'ä¸­ç­‰', ingredients: ['ç¾©å¤§åˆ©éºµ', 'ç•ªèŒ„é†¬', 'æ´‹è”¥', 'çµè‚‰'], steps: ['ç…®éºµ', 'ç‚’æ´‹è”¥å’Œçµè‚‰', 'åŠ å…¥ç•ªèŒ„é†¬', 'æ‹Œå…¥éºµæ¢'] },
+  { name: 'å‘³å™Œæ¹¯', time: '10 åˆ†é˜', difficulty: 'ç°¡å–®', ingredients: ['å‘³å™Œ', 'è±†è…', 'æµ·å¸¶'], steps: ['æ°´ç…®é–‹', 'åŠ å…¥æµ·å¸¶', 'åŠ å…¥è±†è…', 'æº¶å…¥å‘³å™Œ'] }
 ];
 
 async function renderDailyRecipe(params) {
   const today = RECIPES[new Date().getDay() % RECIPES.length];
   const container = createElement('div', 'app-container recipe-app');
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
-      <h1 class='menu-title'>¨C¤é­¹ÃĞ</h1>
+    <header class="ios-header">
+      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> è¿”å›</button>
+      <h1 class="menu-title">æ¯æ—¥é£Ÿè­œ</h1>
     </header>
-    <div class='page'>
-      <div class='recipe-card'>
-        <div class='recipe-badge'>¤µ¤é±ÀÂË</div>
-        <h2 class='recipe-name'>${today.name}</h2>
-        <div class='recipe-meta'>
-          <span><i class='fas fa-clock'></i> ${today.time}</span>
-          <span><i class='fas fa-signal'></i> ${today.difficulty}</span>
+    <div class="page">
+      <div class="recipe-card">
+        <div class="recipe-badge">ä»Šæ—¥æ¨è–¦</div>
+        <h2 class="recipe-name">${today.name}</h2>
+        <div class="recipe-meta">
+          <span><i class="fas fa-clock"></i> ${today.time}</span>
+          <span><i class="fas fa-signal"></i> ${today.difficulty}</span>
         </div>
-        <div class='recipe-section'>
-          <h3>­¹§÷</h3>
-          <ul class='ingredient-list'>${today.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
+        <div class="recipe-section">
+          <h3>é£Ÿæ</h3>
+          <ul class="ingredient-list">${today.ingredients.map(i => `<li>${i}</li>`).join('')}</ul>
         </div>
-        <div class='recipe-section'>
-          <h3>¨BÆJ</h3>
-          <ol class='step-list'>${today.steps.map(s => `<li>${s}</li>`).join('')}</ol>
+        <div class="recipe-section">
+          <h3>æ­¥é©Ÿ</h3>
+          <ol class="step-list">${today.steps.map(s => `<li>${s}</li>`).join('')}</ol>
         </div>
       </div>
     </div>
@@ -41,9 +41,9 @@ async function renderDailyRecipe(params) {
 
 export default {
   id: 'daily-recipe',
-  name: '¨C¤é­¹ÃĞ',
+  name: 'æ¯æ—¥é£Ÿè­œ',
   icon: 'soup_kitchen',
   routes: [{ path: '/daily-recipe', render: renderDailyRecipe }],
-  navItem: { label: '¨C¤é­¹ÃĞ', icon: 'soup_kitchen', path: '/daily-recipe', showInNav: true, order: 121 },
+  navItem: { label: 'æ¯æ—¥é£Ÿè­œ', icon: 'soup_kitchen', path: '/daily-recipe', showInNav: true, order: 121 },
   stylesPath: 'js/apps/daily-recipe/style.css'
 };

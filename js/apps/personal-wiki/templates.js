@@ -18,7 +18,7 @@ export function createNotePage(title = 'Untitled') {
         blocks: [createBlock('text', '')],
         links: [],
         tags: [],
-        icon: '??'
+        icon: '📝'
     };
 }
 
@@ -34,6 +34,6 @@ export function createTopicPage(title = 'Untitled') {
         ],
         links: [],
         tags: [],
-        icon: '??'
+        icon: '📌'
     };
 }
