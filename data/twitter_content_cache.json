@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-07T09:00:21.421777",
-    "total_items": 61
+    "last_updated": "2026-08-07T10:08:03.634641",
+    "total_items": 60
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "AMD acquires Taalas to boost inference performance by etching models in silicon",
         "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344",
         "source": "Hacker News",
-        "score": 637
+        "score": 669
       },
       {
         "title": "New Mexico court orders Meta to pay $567m over harms to children’s mental health",
         "url": "https://www.theguardian.com/technology/2026/aug/06/new-mexico-court-meta",
         "source": "Hacker News",
-        "score": 233
+        "score": 282
       },
       {
         "title": "What is a product?",
         "url": "https://roge.onwrite.app/what-is-a-product",
         "source": "Hacker News",
-        "score": 42
-      },
-      {
-        "title": "Atomic Clocks",
-        "url": "https://www.nist.gov/atomic-clocks/how-do-atomic-clocks-work",
-        "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Taste Is All That's Left",
-        "url": "https://notashelf.dev/posts/taste-is-all-thats-left",
-        "source": "Hacker News",
-        "score": 408
-      },
-      {
-        "title": "Scientists discover Kelvin-Helmholtz Instability on the surface of the Sun",
-        "url": "https://nso.edu/press-release/nsf-inouye-solar-telescope-enables-major-discovery-of-a-hidden-solar-process/",
-        "source": "Hacker News",
-        "score": 221
+        "score": 59
       },
       {
         "title": "Parsers don't have to be complicated",
         "url": "https://bkaradzic.github.io/posts/scanner/",
         "source": "Hacker News",
-        "score": 14
+        "score": 35
+      },
+      {
+        "title": "Taste Is All That's Left",
+        "url": "https://notashelf.dev/posts/taste-is-all-thats-left",
+        "source": "Hacker News",
+        "score": 427
+      },
+      {
+        "title": "Atomic Clocks",
+        "url": "https://www.nist.gov/atomic-clocks/how-do-atomic-clocks-work",
+        "source": "Hacker News",
+        "score": 65
+      },
+      {
+        "title": "Scientists discover Kelvin-Helmholtz Instability on the surface of the Sun",
+        "url": "https://nso.edu/press-release/nsf-inouye-solar-telescope-enables-major-discovery-of-a-hidden-solar-process/",
+        "source": "Hacker News",
+        "score": 231
       },
       {
         "title": "Bioengineered chewing gum may offer a way to fight HPV and other microbes",
         "url": "https://www.sciencedaily.com/releases/2026/08/260803080917.htm",
         "source": "Hacker News",
-        "score": 123
+        "score": 131
       },
       {
-        "title": "Sao Paulo resident transforms degraded area into urban forest",
+        "title": "São Paulo resident transforms degraded area into urban forest",
         "url": "https://saopaulosecreto.com/en/tiquatira-linear-park-en/",
         "source": "Hacker News",
-        "score": 126
+        "score": 140
+      },
+      {
+        "title": "A quine in Piet – a GIF image that prints itself [video]",
+        "url": "https://www.youtube.com/watch?v=GwMtzhjCzyc",
+        "source": "Hacker News",
+        "score": 8
       },
       {
         "title": "GitHub Actions and Pages are experiencing degraded availability",
         "url": "https://www.githubstatus.com/incidents/qcvjkzcs7j74",
         "source": "Hacker News",
-        "score": 396
-      },
-      {
-        "title": "Launch HN: ProvenMetal (YC S26) delivers circuit boards in days instead of weeks",
-        "url": "https://provenmetal.com",
-        "source": "Hacker News",
-        "score": 205
+        "score": 408
       },
       {
         "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
         "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
         "source": "Hacker News",
-        "score": 233
+        "score": 243
       },
       {
-        "title": "Spin audit of SQD/QSCI quantum-chemistry benchmarks on iron–sulfur clusters",
-        "url": "https://zenodo.org/records/21359923",
+        "title": "Launch HN: ProvenMetal (YC S26) delivers circuit boards in days instead of weeks",
+        "url": "https://provenmetal.com",
         "source": "Hacker News",
-        "score": 12
+        "score": 206
       },
       {
-        "title": "2027 memory capacity is reportedly sold out",
-        "url": "https://www.ign.com/articles/ramageddon-continues-another-year-as-2027-memory-capacity-is-reportedly-sold-out",
+        "title": "Welcoming the Nepalese Government to Have I Been Pwned",
+        "url": "https://www.troyhunt.com/welcoming-the-nepalese-government-to-have-i-been-pwned/",
         "source": "Hacker News",
-        "score": 26
+        "score": 158
       },
       {
         "title": "I stopped trusting USB-C cable labels and started testing them",
         "url": "https://www.makeuseof.com/i-stopped-trusting-usb-c-cable-labels-started-testing-with-meter-instead/",
         "source": "Hacker News",
-        "score": 177
+        "score": 189
       }
     ],
     "ai": [
@@ -101,49 +101,43 @@
         "title": "GitHub Actions and Pages are experiencing degraded availability",
         "url": "https://www.githubstatus.com/incidents/qcvjkzcs7j74",
         "source": "Hacker News AI",
-        "score": 396
+        "score": 408
       },
       {
         "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
         "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
         "source": "Hacker News AI",
-        "score": 233
+        "score": 243
       },
       {
         "title": "Humans missed 1 in 3 threats approving AI agent commands across 40k game runs",
         "url": "https://scalex.dev/blog/ai-agent-permissions-stats/",
         "source": "Hacker News AI",
-        "score": 298
+        "score": 302
       },
       {
         "title": "New Orleans is testing Carbyne’s AI-powered Emergency Call Triage software",
         "url": "https://www.shreveporttimes.com/story/news/local/louisiana/2026/07/28/is-new-orleans-using-ai-to-answer-911-calls-instead-of-human-dispatchers-impacts-emergencies-crime/91065014007/",
         "source": "Hacker News AI",
-        "score": 56
+        "score": 60
       },
       {
         "title": "Inside vLLM: Anatomy of a High-Throughput LLM Inference System (2025)",
         "url": "https://www.aleksagordic.com/blog/vllm",
         "source": "Hacker News AI",
-        "score": 103
-      },
-      {
-        "title": "Artificial Intelligence used to design new viruses",
-        "url": "https://www.bbc.co.uk/news/articles/c5y3j3ngevmo",
-        "source": "Hacker News AI",
-        "score": 27
+        "score": 109
       },
       {
         "title": "The simple elegance of the integrated timing belt loopback fastener",
         "url": "https://danielmangum.com/posts/integrated-timing-belt-loopback-fastener/",
         "source": "Hacker News AI",
-        "score": 116
+        "score": 117
       },
       {
-        "title": "I won't read LLM authored fiction",
-        "url": "https://mccormick.cx/news/entries/why-i-won-t-read-llm-authored-fiction",
+        "title": "Artificial Intelligence used to design new viruses",
+        "url": "https://www.bbc.co.uk/news/articles/c5y3j3ngevmo",
         "source": "Hacker News AI",
-        "score": 50
+        "score": 35
       },
       {
         "title": "Learning to fly FPV drones with AI flight coach",
@@ -155,19 +149,19 @@
         "title": "The Sylvester–Gallai Theorem",
         "url": "https://www.futilitycloset.com/2026/07/26/the-sylvester-gallai-theorem/",
         "source": "Hacker News AI",
-        "score": 32
+        "score": 33
       },
       {
         "title": "Software development with AI is starting to feel like cooking steak",
         "url": "https://blog.sydorets.com/en/posts/almost-no-skill-required-to-cook-a-steak/",
         "source": "Hacker News AI",
-        "score": 365
+        "score": 367
       },
       {
         "title": "Mythos Attempted to Social Engineer Open Source Maintainer to Merge Malware",
         "url": "https://socket.dev/blog/ai-agent-open-source-malware",
         "source": "Hacker News AI",
-        "score": 33
+        "score": 37
       }
     ],
     "news": [
@@ -197,12 +191,22 @@
         "source": "BBC World"
       },
       {
-        "title": "South Korea space agency shares Moon images after SpaceX rocket debris crash",
-        "url": "https://www.bbc.co.uk/news/articles/cqjxgx5y51lo?at_medium=RSS&at_campaign=rss",
+        "title": "A new youth agitation grips an Indian state after 'cockroach' protests",
+        "url": "https://www.bbc.co.uk/news/articles/c5ywv6egvx8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " How to use Notch to create live concert effects ",
+        "url": "https://www.creativebloq.com/3d/how-to-use-notch-to-create-live-concert-effects",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Laika spotlights “hands” behind the craft in stunning Wildwood poster ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/laika-spotlights-hands-behind-the-craft-in-stunning-wildwood-poster",
+        "source": "Creative Bloq"
+      },
       {
         "title": " These editing consoles are time-saving and ergonomic ",
         "url": "https://www.creativebloq.com/entertainment/videography/these-editing-consoles-are-time-saving-and-ergonomic",
@@ -226,16 +230,6 @@
       {
         "title": " Onimusha: Way of the Sword (PS5) hands-on – Capcom’s samurai comeback is far stranger and more ambitious than I expected ",
         "url": "https://www.creativebloq.com/entertainment/gaming/onimusha-way-of-the-sword-ps5-hands-on-capcoms-samurai-comeback-is-far-stranger-and-more-ambitious-than-i-expected",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " GTA VI is so big Netflix is treating its trailer like a Hollywood premiere ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/gta-vi-is-so-big-netflix-is-treating-its-trailer-like-a-hollywood-premiere",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Secretlab expands luxury Pokémon chair Collection with 3 new arrivals ",
-        "url": "https://www.creativebloq.com/entertainment/secretlab-expands-luxury-pokemon-chair-collection-with-3-new-arrivals",
         "source": "Creative Bloq"
       }
     ],
@@ -278,6 +272,21 @@
     ],
     "gaming": [
       {
+        "title": "Fourth Wing Fans Have a New Reason to Get Excited While Waiting for the Next Book",
+        "url": "https://www.polygon.com/fourth-wing-graphic-novel-preorder-amazon/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The genius director behind the most unhinged thriller of the century officially returns in 3 weeks",
+        "url": "https://www.polygon.com/too-many-cooks-buddy-casper-kelly/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Manga Million Explained, Why Everyone’s Talking About One Piece Publisher’s Bold New Manga Project",
+        "url": "https://www.polygon.com/manga-million-shueisha-online-reader/",
+        "source": "Polygon"
+      },
+      {
         "title": "Netflix Just Quietly Released the Best Steven Spielberg Sci-Fi Thriller That Spielberg Never Made",
         "url": "https://www.polygon.com/the-last-house-review-steven-spielberg-movie/",
         "source": "Polygon"
@@ -295,21 +304,6 @@
       {
         "title": "Rust August Force Wipe Brings New DLC and Major Update",
         "url": "https://www.polygon.com/rust-august-force-wipe-update-shell/",
-        "source": "Polygon"
-      },
-      {
-        "title": "I played Elden Ring wrong for two years",
-        "url": "https://www.polygon.com/video/i-played-elden-ring-wrong-for-two-years/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Marvel Tokon Fighting Souls Review-in-Progress: Beautiful But Busted",
-        "url": "https://www.polygon.com/marvel-tokon-fighting-souls-day-one-review-first-impressions/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Quake Just Got a Major Update 30 Years Post-Launch, and You Can Play It Right Now",
-        "url": "https://www.polygon.com/quake-dawn-of-the-machine-anniversary-update/",
         "source": "Polygon"
       }
     ],
