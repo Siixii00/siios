@@ -1758,6 +1758,6 @@ function showUndoRedoToast(action, info) {
     const redoCount = info.redoCount;
     
     import('../../components.js').then(({ createToast }) => {
-        createToast(\\ (\ undo, \ redo available)\, 'info');
+        createToast('Undo / Redo available', 'info');
     });
 }
