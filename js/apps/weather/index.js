@@ -41,7 +41,7 @@ const CITY_NAME_MAP = {
     '苗栗': 'Miaoli', '澎湖': 'Penghu', '金門': 'Kinmen', '馬祖': 'Matsu',
     '香港': 'Hong Kong', '澳門': 'Macau', '上海': 'Shanghai', '北京': 'Beijing',
     '廣州': 'Guangzhou', '深圳': 'Shenzhen', '杭州': 'Hangzhou', '南京': 'Nanjing',
-    '成都': 'Chengdu', '重慶': 'Chongqing', '武漢': 'Wuhan', '西安': 'Xi'an',
+    '成都': 'Chengdu', '重慶': 'Chongqing', '武漢': 'Wuhan', '西安': "Xi'an",
     '蘇州': 'Suzhou', '天津': 'Tianjin', '青島': 'Qingdao', '大連': 'Dalian',
     '廈門': 'Xiamen', '福州': 'Fuzhou', '長沙': 'Changsha', '鄭州': 'Zhengzhou',
     '東京': 'Tokyo', '大阪': 'Osaka', '京都': 'Kyoto', '名古屋': 'Nagoya',
