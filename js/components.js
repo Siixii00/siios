@@ -23,7 +23,7 @@ function createIcon(name, className = '', filled = false) {
     const span = createElement('span', `material-symbols-outlined ${className}`.trim());
     span.textContent = name;
     if (filled) {
-        span.style.fontVariationSettings = ''FILL' 1';
+        span.style.fontVariationSettings = "'FILL' 1";
     }
     return span;
 }
