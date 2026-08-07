@@ -22,32 +22,32 @@ async function renderTimetree(params) {
   
   const container = createElement('div', 'app-container timetree-app');
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªð¦^</button>
-      <h1 class='menu-title'>®É¶¡¾ð</h1>
+    <header class="ios-header">
+      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> è¿”å›ž</button>
+      <h1 class="menu-title">æ™‚é–“æ¨¹</h1>
     </header>
-    <div class='page'>
-      <div class='calendar-header'>${month}</div>
-      <div class='calendar-grid'>
-        <div class='calendar-weekdays'>
-          <span>¤é</span><span>¤@</span><span>¤G</span><span>¤T</span><span>¥|</span><span>¤­</span><span>¤»</span>
+    <div class="page">
+      <div class="calendar-header">${month}</div>
+      <div class="calendar-grid">
+        <div class="calendar-weekdays">
+          <span>æ—¥</span><span>ä¸€</span><span>äºŒ</span><span>ä¸‰</span><span>å››</span><span>äº”</span><span>å…­</span>
         </div>
-        <div class='calendar-days'>
-          ${Array(firstDay).fill('<div class='day empty'></div>').join('')}
+        <div class="calendar-days">
+          ${Array(firstDay).fill('<div class="day empty"></div>').join('')}
           ${Array(daysInMonth).fill(0).map((_, i) => {
             const day = i + 1;
             const isToday = day === today.getDate();
             const hasEvent = events.some(e => new Date(e.date).getDate() === day);
-            return `<div class='day ${isToday ? 'today' : ''} ${hasEvent ? 'has-event' : ''}' data-day='${day}'>${day}</div>`;
+            return `<div class="day ${isToday ? 'today' : ''} ${hasEvent ? 'has-event' : ''}" data-day="${day}">${day}</div>`;
           }).join('')}
         </div>
       </div>
-      <button class='add-event-btn'><i class='fas fa-plus'></i> ·s¼W¨Æ¥ó</button>
+      <button class="add-event-btn"><i class="fas fa-plus"></i> æ–°å¢žäº‹ä»¶</button>
     </div>
   `;
   container.querySelector('.ios-back-btn').onclick = () => Router.back();
   container.querySelector('.add-event-btn').onclick = async () => {
-    const title = prompt('¨Æ¥ó¼ÐÃD¡G');
+    const title = prompt('äº‹ä»¶æ¨™é¡Œï¼š');
     if (title) {
       events.push({ title, date: today.toISOString(), id: Date.now() });
       await saveEvents();
@@ -59,9 +59,9 @@ async function renderTimetree(params) {
 
 export default {
   id: 'timetree',
-  name: '®É¶¡¾ð',
+  name: 'æ™‚é–“æ¨¹',
   icon: 'calendar_month',
   routes: [{ path: '/timetree', render: renderTimetree }],
-  navItem: { label: '®É¶¡¾ð', icon: 'calendar_month', path: '/timetree', showInNav: true, order: 125 },
+  navItem: { label: 'æ™‚é–“æ¨¹', icon: 'calendar_month', path: '/timetree', showInNav: true, order: 125 },
   stylesPath: 'js/apps/timetree/style.css'
 };

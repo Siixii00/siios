@@ -15,9 +15,9 @@ const SOURCE_ICONS = {
 };
 
 const SOURCE_LABELS = {
-    uploaded: '¤W¶Ç',
-    chat: '²á¤Ñ',
-    painter: '·Ó¬ÛÀ]'
+    uploaded: 'ä¸Šå‚³',
+    chat: 'èŠå¤©',
+    painter: 'ç…§ç›¸é¤¨'
 };
 
 async function loadImages() {
@@ -83,9 +83,9 @@ function renderGallery(container) {
     grid.innerHTML = filtered.map((img) => {
         const icon = SOURCE_ICONS[img.source] || 'image';
         const label = SOURCE_LABELS[img.source] || img.source;
-        return `<div class='gallery-item' data-id='${img.id}'>
-            <img src='${img.url}' loading='lazy' alt=''>
-            <span class='source-badge'><i class='fas fa-${icon}'></i> ${label}</span>
+        return `<div class="gallery-item" data-id="${img.id}">
+            <img src="${img.url}" loading="lazy" alt="">
+            <span class="source-badge"><i class="fas fa-${icon}"></i> ${label}</span>
         </div>`;
     }).join('');
 
@@ -123,20 +123,20 @@ async function setAsWallpaper() {
     const img = getCurrentViewerImage();
     if (!img) return;
     await SettingsDB.set('wallpaper_url', img.url);
-    createToast('¤w³]¬°®à¥¬', 'success');
+    createToast('å·²è¨­ç‚ºæ¡Œå¸ƒ', 'success');
 }
 
 async function setAsLockscreen() {
     const img = getCurrentViewerImage();
     if (!img) return;
     await SettingsDB.set('lockscreen_url', img.url);
-    createToast('¤w³]¬°Âê«Ì', 'success');
+    createToast('å·²è¨­ç‚ºé–å±', 'success');
 }
 
 async function deleteCurrentImage(container) {
     const img = getCurrentViewerImage();
     if (!img) return;
-    if (!confirm('½T©w­n§R°£³o±i·Ó¤ù¶Ü¡H')) return;
+    if (!confirm('ç¢ºå®šè¦åˆªé™¤é€™å¼µç…§ç‰‡å—ï¼Ÿ')) return;
     await deleteImage(img.id);
     closeViewer(container);
     renderGallery(container);
@@ -171,48 +171,48 @@ async function renderAlbum(params) {
     allImages = await loadImages();
     
     container.innerHTML = `
-        <header class='ios-header'>
-            <button class='ios-back-btn'>
-                <i class='fas fa-chevron-left'></i> ªğ¦^
+        <header class="ios-header">
+            <button class="ios-back-btn">
+                <i class="fas fa-chevron-left"></i> è¿”å›
             </button>
-            <h1 class='menu-title'>¬ÛÃ¯</h1>
-            <div class='header-actions'>
-                <button class='header-action' id='upload-btn' title='·s¼W·Ó¤ù'>
-                    <i class='fas fa-plus'></i>
+            <h1 class="menu-title">ç›¸ç°¿</h1>
+            <div class="header-actions">
+                <button class="header-action" id="upload-btn" title="æ–°å¢ç…§ç‰‡">
+                    <i class="fas fa-plus"></i>
                 </button>
             </div>
         </header>
 
-        <div class='tab-bar'>
-            <button class='tab-btn active' data-tab='all'>¥ş³¡</button>
-            <button class='tab-btn' data-tab='uploaded'>¤W¶Ç</button>
-            <button class='tab-btn' data-tab='chat'>²á¤Ñ</button>
-            <button class='tab-btn' data-tab='painter'>·Ó¬ÛÀ]</button>
+        <div class="tab-bar">
+            <button class="tab-btn active" data-tab="all">å…¨éƒ¨</button>
+            <button class="tab-btn" data-tab="uploaded">ä¸Šå‚³</button>
+            <button class="tab-btn" data-tab="chat">èŠå¤©</button>
+            <button class="tab-btn" data-tab="painter">ç…§ç›¸é¤¨</button>
         </div>
 
-        <div class='gallery-wrapper'>
-            <div class='gallery-grid' id='gallery-grid'></div>
-            <div class='empty-state hidden' id='empty-state'>
-                <i class='fas fa-images'></i>
-                <p>©|µL·Ó¤ù</p>
-                <p class='empty-hint'>ÂIÀ»¥k¤W¨¤ + ±q¸Ë¸m¤W¶Ç</p>
+        <div class="gallery-wrapper">
+            <div class="gallery-grid" id="gallery-grid"></div>
+            <div class="empty-state hidden" id="empty-state">
+                <i class="fas fa-images"></i>
+                <p>å°šç„¡ç…§ç‰‡</p>
+                <p class="empty-hint">é»æ“Šå³ä¸Šè§’ + å¾è£ç½®ä¸Šå‚³</p>
             </div>
         </div>
 
-        <input type='file' id='device-upload' hidden accept='image/*' multiple>
+        <input type="file" id="device-upload" hidden accept="image/*" multiple>
 
-        <div class='image-viewer hidden' id='image-viewer'>
-            <div class='viewer-backdrop'></div>
-            <img id='viewer-img' src='' alt=''>
-            <div class='viewer-actions'>
-                <button class='viewer-btn' id='set-wallpaper-btn'>
-                    <i class='fas fa-image'></i><span>®à¥¬</span>
+        <div class="image-viewer hidden" id="image-viewer">
+            <div class="viewer-backdrop"></div>
+            <img id="viewer-img" src="" alt="">
+            <div class="viewer-actions">
+                <button class="viewer-btn" id="set-wallpaper-btn">
+                    <i class="fas fa-image"></i><span>æ¡Œå¸ƒ</span>
                 </button>
-                <button class='viewer-btn' id='set-lockscreen-btn'>
-                    <i class='fas fa-lock'></i><span>Âê«Ì</span>
+                <button class="viewer-btn" id="set-lockscreen-btn">
+                    <i class="fas fa-lock"></i><span>é–å±</span>
                 </button>
-                <button class='viewer-btn viewer-btn-danger' id='delete-btn'>
-                    <i class='fas fa-trash'></i><span>§R°£</span>
+                <button class="viewer-btn viewer-btn-danger" id="delete-btn">
+                    <i class="fas fa-trash"></i><span>åˆªé™¤</span>
                 </button>
             </div>
         </div>
@@ -260,9 +260,9 @@ async function renderAlbum(params) {
 
 export default {
     id: 'album',
-    name: '¬ÛÃ¯',
+    name: 'ç›¸ç°¿',
     icon: 'photo_library',
     routes: [{ path: '/album', render: renderAlbum }],
-    navItem: { label: '¬ÛÃ¯', icon: 'photo_library', path: '/album', showInNav: true, order: 10 },
+    navItem: { label: 'ç›¸ç°¿', icon: 'photo_library', path: '/album', showInNav: true, order: 10 },
     stylesPath: 'js/apps/album/style.css'
 };

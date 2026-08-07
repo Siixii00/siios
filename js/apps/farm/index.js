@@ -3,9 +3,9 @@ import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 const CROPS = [
-  { id: 'c1', name: 'µf­X', growTime: 30, sellPrice: 50, icon: '??' },
-  { id: 'c2', name: '¥É¦Ì', growTime: 45, sellPrice: 80, icon: '??' },
-  { id: 'c3', name: '¯ó²ù', growTime: 60, sellPrice: 120, icon: '??' }
+  { id: 'c1', name: 'ç•ªèŒ„', growTime: 30, sellPrice: 50, icon: 'ğŸ…' },
+  { id: 'c2', name: 'ç‰ç±³', growTime: 45, sellPrice: 80, icon: 'ğŸŒ½' },
+  { id: 'c3', name: 'è‰è“', growTime: 60, sellPrice: 120, icon: 'ğŸ“' }
 ];
 
 let farm = { plots: Array(6).fill(null), coins: 100 };
@@ -25,31 +25,31 @@ async function renderFarm(params) {
   
   const container = createElement('div', 'app-container farm-app');
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
-      <h1 class='menu-title'>¹A³õ</h1>
-      <div class='coins'><i class='fas fa-coins'></i> ${farm.coins}</div>
+    <header class="ios-header">
+      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> è¿”å›</button>
+      <h1 class="menu-title">è¾²å ´</h1>
+      <div class="coins"><i class="fas fa-coins"></i> ${farm.coins}</div>
     </header>
-    <div class='page'>
-      <div class='farm-grid'>
+    <div class="page">
+      <div class="farm-grid">
         ${farm.plots.map((plot, i) => {
           if (!plot) {
-            return `<div class='plot empty' data-idx='${i}'><span class='plus'>+</span></div>`;
+            return `<div class="plot empty" data-idx="${i}"><span class="plus">+</span></div>`;
           }
           const crop = CROPS.find(c => c.id === plot.cropId);
           const elapsed = (now - plot.plantedAt) / 1000;
           const ready = elapsed >= crop.growTime;
-          return `<div class='plot ${ready ? 'ready' : ''}' data-idx='${i}'>
-            <span class='crop-icon'>${crop.icon}</span>
-            ${ready ? '<span class='ready-badge'>¥i¦¬Ã¬</span>' : `<span class='progress'>${Math.floor(elapsed)}/${crop.growTime}s</span>`}
+          return `<div class="plot ${ready ? 'ready' : ''}" data-idx="${i}">
+            <span class="crop-icon">${crop.icon}</span>
+            ${ready ? '<span class="ready-badge">å¯æ”¶ç©«</span>' : `<span class="progress">${Math.floor(elapsed)}/${crop.growTime}s</span>`}
           </div>`;
         }).join('')}
       </div>
-      <div class='shop-section'>
-        <h3>°Ó©±</h3>
-        <div class='crop-list'>
+      <div class="shop-section">
+        <h3>å•†åº—</h3>
+        <div class="crop-list">
           ${CROPS.map(c => `
-            <button class='crop-btn' data-id='${c.id}' data-price='20'>
+            <button class="crop-btn" data-id="${c.id}" data-price="20">
               ${c.icon} ${c.name} ($20)
             </button>
           `).join('')}
@@ -63,7 +63,7 @@ async function renderFarm(params) {
   container.querySelectorAll('.plot.empty').forEach(plot => {
     plot.onclick = () => {
       const idx = parseInt(plot.dataset.idx);
-      const cropId = prompt('¿é¤J§@ª«¥N½X¡]c1, c2, c3¡^¡G');
+      const cropId = prompt('è¼¸å…¥ä½œç‰©ä»£ç¢¼ï¼ˆc1, c2, c3ï¼‰ï¼š');
       if (cropId && CROPS.find(c => c.id === cropId) && farm.coins >= 20) {
         farm.coins -= 20;
         farm.plots[idx] = { cropId, plantedAt: Date.now() };
@@ -90,9 +90,9 @@ async function renderFarm(params) {
 
 export default {
   id: 'farm',
-  name: '¹A³õ',
+  name: 'è¾²å ´',
   icon: 'seedling',
   routes: [{ path: '/farm', render: renderFarm }],
-  navItem: { label: '¹A³õ', icon: 'seedling', path: '/farm', showInNav: true, order: 127 },
+  navItem: { label: 'è¾²å ´', icon: 'seedling', path: '/farm', showInNav: true, order: 127 },
   stylesPath: 'js/apps/farm/style.css'
 };

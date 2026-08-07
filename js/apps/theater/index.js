@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+ï»¿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import APIClient from '../../api.js';
 import { CharactersDB, SettingsDB } from '../../db.js';
@@ -48,37 +48,37 @@ async function generateScript(character) {
   const settings = await APIClient.getSettings();
   
   if (!settings.api_url || !settings.api_key) {
-    throw new Error('½Ğ¥ı³]©w API URL ©M API Key');
+    throw new Error('è«‹å…ˆè¨­å®š API URL å’Œ API Key');
   }
   
   const context = await buildTheaterContext(character.id);
   
   let theaterSettingsPrompt = '';
   if (context.theaterSettings && context.theaterSettings.length > 0) {
-    theaterSettingsPrompt = '\n\n¼@³õ³]©w¡G\n' + context.theaterSettings.map(t => 
-      `- ${t.name || '¥¼©R¦W'}: ${t.description || ''}`
+    theaterSettingsPrompt = '\n\nåŠ‡å ´è¨­å®šï¼š\n' + context.theaterSettings.map(t => 
+      `- ${t.name || 'æœªå‘½å'}: ${t.description || ''}`
     ).join('\n');
   }
   
   let htmlGuidePrompt = '';
   if (context.htmlGuide) {
-    htmlGuidePrompt = `\n\nHTML «ü«n¡G\n${context.htmlGuide}`;
+    htmlGuidePrompt = `\n\nHTML æŒ‡å—ï¼š\n${context.htmlGuide}`;
   }
   
-  const prompt = `§A¬O¤@¦ì±M·~½s¼@¡C½Ğ®Ú¾Ú¥H¤U¨¤¦â³]©w¡A³Ğ§@¤@­Óµu¼@¥»¡G
+  const prompt = `ä½ æ˜¯ä¸€ä½å°ˆæ¥­ç·¨åŠ‡ã€‚è«‹æ ¹æ“šä»¥ä¸‹è§’è‰²è¨­å®šï¼Œå‰µä½œä¸€å€‹çŸ­åŠ‡æœ¬ï¼š
 
-¨¤¦â¦WºÙ¡G${character.name || '¥¼©R¦W'}
-¨¤¦â´y­z¡G${character.description || ''}
-¨¤¦â©Ê®æ¡G${character.personality || ''}
-³õ´º³]©w¡G${character.scenario || ''}${theaterSettingsPrompt}${htmlGuidePrompt}
+è§’è‰²åç¨±ï¼š${character.name || 'æœªå‘½å'}
+è§’è‰²æè¿°ï¼š${character.description || ''}
+è§’è‰²æ€§æ ¼ï¼š${character.personality || ''}
+å ´æ™¯è¨­å®šï¼š${character.scenario || ''}${theaterSettingsPrompt}${htmlGuidePrompt}
 
-½Ğ¥Í¦¨¡G
-1. ¤@­Ó§l¤Ş¤Hªº¼ĞÃD¡]5¦r¥H¤º¡^
-2. Â²µu´y­z¡]20¦r¥H¤º¡^
-3. ¤@¬q¼@¥»¤º®e¡]HTML®æ¦¡¡A¥]§t¼ĞÃD©M¥¿¤å¡A¬ù100-200¦r¡^
+è«‹ç”Ÿæˆï¼š
+1. ä¸€å€‹å¸å¼•äººçš„æ¨™é¡Œï¼ˆ5å­—ä»¥å…§ï¼‰
+2. ç°¡çŸ­æè¿°ï¼ˆ20å­—ä»¥å…§ï¼‰
+3. ä¸€æ®µåŠ‡æœ¬å…§å®¹ï¼ˆHTMLæ ¼å¼ï¼ŒåŒ…å«æ¨™é¡Œå’Œæ­£æ–‡ï¼Œç´„100-200å­—ï¼‰
 
-½ĞÄY®æ«ö·Ó¥H¤UJSON®æ¦¡¦^ÂĞ¡A¤£­n¥]§t¨ä¥L¤å¦r¡G
-{'title':'¼ĞÃD','desc':'´y­z','category':'movie©Îseries','html':'<div style=\'padding: 20px; border-radius: 12px;\'><h2>³¹¸`¼ĞÃD</h2><p>¼@¥»¤º®e...</p></div>'}`;
+è«‹åš´æ ¼æŒ‰ç…§ä»¥ä¸‹JSONæ ¼å¼å›è¦†ï¼Œä¸è¦åŒ…å«å…¶ä»–æ–‡å­—ï¼š
+{"title":"æ¨™é¡Œ","desc":"æè¿°","category":"movieæˆ–series","html":"<div style=\"padding: 20px; border-radius: 12px;\"><h2>ç« ç¯€æ¨™é¡Œ</h2><p>åŠ‡æœ¬å…§å®¹...</p></div>"}`;
 
   try {
     const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
@@ -96,34 +96,34 @@ async function generateScript(character) {
     });
     
     if (!response.ok) {
-      throw new Error(`API ¿ù»~: ${response.status}`);
+      throw new Error(`API éŒ¯èª¤: ${response.status}`);
     }
     
     const data = await response.json();
     const content = data.choices?.[0]?.message?.content;
     
     if (!content) {
-      throw new Error('API ¥¼ªğ¦^¤º®e');
+      throw new Error('API æœªè¿”å›å…§å®¹');
     }
     
     const jsonMatch = content.match(/\{[\s\S]*\}/);
     if (!jsonMatch) {
-      throw new Error('µLªk¸ÑªR¥Í¦¨¤º®e');
+      throw new Error('ç„¡æ³•è§£æç”Ÿæˆå…§å®¹');
     }
     
     const result = JSON.parse(jsonMatch[0]);
     return {
-      title: result.title || '¥¼©R¦W¼@¥Ø',
-      desc: result.desc || '¼ÈµL´y­z',
+      title: result.title || 'æœªå‘½ååŠ‡ç›®',
+      desc: result.desc || 'æš«ç„¡æè¿°',
       category: result.category || 'movie',
       cover: result.cover || '',
-      html: result.html || '<div style='padding: 20px;'>¥Í¦¨¤º®e¸ÑªR¥¢±Ñ</div>'
+      html: result.html || '<div style="padding: 20px;">ç”Ÿæˆå…§å®¹è§£æå¤±æ•—</div>'
     };
   } catch (error) {
     if (error.message.includes('JSON')) {
       throw error;
     }
-    throw new Error('¥Í¦¨¥¢±Ñ: ' + error.message);
+    throw new Error('ç”Ÿæˆå¤±æ•—: ' + error.message);
   }
 }
 
@@ -132,14 +132,14 @@ function renderContent(container) {
   if (!grid) return;
   
   grid.innerHTML = contentData.map(item => `
-    <div class='theater-card' data-id='${item.id}'>
+    <div class="theater-card" data-id="${item.id}">
       ${item.cover 
-        ? `<img src='${item.cover}' alt='${item.title}' class='theater-poster'>`
-        : `<div class='theater-placeholder'><i class='fas fa-film'></i></div>`
+        ? `<img src="${item.cover}" alt="${item.title}" class="theater-poster">`
+        : `<div class="theater-placeholder"><i class="fas fa-film"></i></div>`
       }
-      <div class='theater-title'>${item.title}</div>
+      <div class="theater-title">${item.title}</div>
     </div>
-  `).join('') || '<div class='empty-state'>©|µL¼@¥Ø</div>';
+  `).join('') || '<div class="empty-state">å°šç„¡åŠ‡ç›®</div>';
   
   grid.querySelectorAll('.theater-card').forEach(card => {
     card.onclick = () => openDetail(container, card.dataset.id);
@@ -157,7 +157,7 @@ function openDetail(container, id) {
   
   if (title) title.textContent = currentContent.title;
   if (desc) desc.textContent = currentContent.desc;
-  if (preview) preview.innerHTML = currentContent.html || '<p style='color: #888;'>µL¹wÄı¤º®e</p>';
+  if (preview) preview.innerHTML = currentContent.html || '<p style="color: #888;">ç„¡é è¦½å…§å®¹</p>';
   if (modal) modal.classList.add('active');
 }
 
@@ -173,34 +173,34 @@ async function renderTheater(params) {
   const container = createElement('div', 'app-container theater-app');
   
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'>
-        <i class='fas fa-chevron-left'></i> ªğ¦^
+    <header class="ios-header">
+      <button class="ios-back-btn">
+        <i class="fas fa-chevron-left"></i> è¿”å›
       </button>
-      <h1 class='menu-title'>¼@³õ</h1>
+      <h1 class="menu-title">åŠ‡å ´</h1>
     </header>
     
-    <div class='page'>
-      <div class='theater-grid'></div>
+    <div class="page">
+      <div class="theater-grid"></div>
       
-      <div class='character-selector-container'>
-        <select class='character-selector'>
-          <option value=''>¿ï¾Ü¨¤¦â...</option>
+      <div class="character-selector-container">
+        <select class="character-selector">
+          <option value="">é¸æ“‡è§’è‰²...</option>
         </select>
       </div>
       
-      <button class='add-btn'>
-        <i class='fas fa-plus'></i> ·s¼W¼@¥Ø
+      <button class="add-btn">
+        <i class="fas fa-plus"></i> æ–°å¢åŠ‡ç›®
       </button>
       
-      <div class='detail-modal'>
-        <div class='detail-content'>
-          <button class='close-detail-btn'>
-            <i class='fas fa-times'></i>
+      <div class="detail-modal">
+        <div class="detail-content">
+          <button class="close-detail-btn">
+            <i class="fas fa-times"></i>
           </button>
-          <h2 class='detail-title'></h2>
-          <p class='detail-desc'></p>
-          <div class='detail-preview'></div>
+          <h2 class="detail-title"></h2>
+          <p class="detail-desc"></p>
+          <div class="detail-preview"></div>
         </div>
       </div>
     </div>
@@ -218,8 +218,8 @@ async function renderTheater(params) {
   const loadCharacters = async () => {
     const characters = await CharactersDB.getAll();
     if (characterSelector && characters && characters.length > 0) {
-      characterSelector.innerHTML = '<option value=''>¿ï¾Ü¨¤¦â...</option>' +
-        characters.map(c => `<option value='${c.id}'>${c.name || '¥¼©R¦W'}</option>`).join('');
+      characterSelector.innerHTML = '<option value="">é¸æ“‡è§’è‰²...</option>' +
+        characters.map(c => `<option value="${c.id}">${c.name || 'æœªå‘½å'}</option>`).join('');
     }
   };
   loadCharacters();
@@ -235,7 +235,7 @@ async function renderTheater(params) {
     addBtn.onclick = async () => {
       const characters = await CharactersDB.getAll();
       if (!characters || characters.length === 0) {
-        alert('½Ğ¥ı¦b²á¤Ñ«Ç³Ğ«Ø¨¤¦â');
+        alert('è«‹å…ˆåœ¨èŠå¤©å®¤å‰µå»ºè§’è‰²');
         return;
       }
       
@@ -248,7 +248,7 @@ async function renderTheater(params) {
       }
       
       addBtn.disabled = true;
-      addBtn.innerHTML = '`<i class=`'`fas fa-spinner fa-spin`'`></i> ¥Í¦¨¤¤...`';
+      addBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> ç”Ÿæˆä¸­...';
       
       try {
         const scriptContent = await generateScript(selectedChar);
@@ -271,16 +271,16 @@ async function renderTheater(params) {
       } catch (error) {
         if (window.showError) {
           window.showError({
-            title: '¼@³õ¥Í¦¨¥¢±Ñ',
+            title: 'åŠ‡å ´ç”Ÿæˆå¤±æ•—',
             message: error.message,
             details: error.stack || ''
           });
         } else {
-          alert('¥Í¦¨¥¢±Ñ: ' + error.message);
+          alert('ç”Ÿæˆå¤±æ•—: ' + error.message);
         }
       } finally {
         addBtn.disabled = false;
-        addBtn.innerHTML = '`<i class=`'`fas fa-plus`'`></i> ·s¼W¼@¥Ø`';
+        addBtn.innerHTML = '<i class="fas fa-plus"></i> æ–°å¢åŠ‡ç›®';
       }
     };
   }
@@ -292,9 +292,9 @@ async function renderTheater(params) {
 
 export default {
   id: 'theater',
-  name: '¼@³õ',
+  name: 'åŠ‡å ´',
   icon: 'theater_comedy',
   routes: [{ path: '/theater', render: renderTheater }],
-  navItem: { label: '¼@³õ', icon: 'theater_comedy', path: '/theater', showInNav: true, order: 103 },
+  navItem: { label: 'åŠ‡å ´', icon: 'theater_comedy', path: '/theater', showInNav: true, order: 103 },
   stylesPath: 'js/apps/theater/style.css'
 };

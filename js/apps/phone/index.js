@@ -6,9 +6,9 @@ const HISTORY_KEY = 'phone_history';
 const RECORDINGS_KEY = 'voice_call_recordings';
 
 const favorites = [
-    { name: '¤p³½', number: '0912123456', label: '®a¤H' },
-    { name: '¤u§@¸s²Õ', number: '0223456789', label: '¿ì¤½«Ç' },
-    { name: 'ºC¶]¦P¦ñ', number: '0987654321', label: 'ªB¤Í' }
+    { name: 'å°é­š', number: '0912123456', label: 'å®¶äºº' },
+    { name: 'å·¥ä½œç¾¤çµ„', number: '0223456789', label: 'è¾¦å…¬å®¤' },
+    { name: 'æ…¢è·‘åŒä¼´', number: '0987654321', label: 'æœ‹å‹' }
 ];
 
 let historyEntries = [];
@@ -64,11 +64,11 @@ async function clearAllRecordings() {
 }
 
 const formatDuration = (seconds) => {
-    if (!seconds) return '¥¼±µ';
+    if (!seconds) return 'æœªæ¥';
     const mins = Math.floor(seconds / 60);
     const secs = seconds % 60;
-    if (!mins) return `${secs} ¬í`;
-    return `${mins} ¤À ${secs.toString().padStart(2, '0')} ¬í`;
+    if (!mins) return `${secs} ç§’`;
+    return `${mins} åˆ† ${secs.toString().padStart(2, '0')} ç§’`;
 };
 
 const formatTimestamp = (ts) => {
@@ -79,8 +79,8 @@ const formatTimestamp = (ts) => {
     yesterday.setDate(now.getDate() - 1);
     const isYesterday = date.toDateString() === yesterday.toDateString();
     const time = date.toLocaleTimeString('zh-TW', { hour: '2-digit', minute: '2-digit' });
-    if (sameDay) return `¤µ¤Ñ ${time}`;
-    if (isYesterday) return `¬Q¤Ñ ${time}`;
+    if (sameDay) return `ä»Šå¤© ${time}`;
+    if (isYesterday) return `æ˜¨å¤© ${time}`;
     return date.toLocaleDateString('zh-TW', { month: 'numeric', day: 'numeric' }) + ' ' + time;
 };
 
@@ -101,7 +101,7 @@ function updateDialedNumber(container) {
     const el = container.querySelector('#dialed-number');
     if (!el) return;
     if (!state.number) {
-        el.textContent = '¿é¤J¸¹½X';
+        el.textContent = 'è¼¸å…¥è™Ÿç¢¼';
         el.classList.add('muted');
         return;
     }
@@ -123,7 +123,7 @@ function setStatus(message, container) {
 function appendDigit(value, container) {
     if (!value) return;
     if (state.number.length >= 24) {
-        setStatus('¸¹½X¤w¹F¤W­­', container);
+        setStatus('è™Ÿç¢¼å·²é”ä¸Šé™', container);
         return;
     }
     state.number += value;
@@ -138,22 +138,22 @@ function eraseDigit(container) {
 
 function clearNumber(container) {
     if (!state.number) {
-        setStatus('¨S¦³¸¹½X¥i²M°£', container);
+        setStatus('æ²’æœ‰è™Ÿç¢¼å¯æ¸…é™¤', container);
         return;
     }
     state.number = '';
     updateDialedNumber(container);
-    setStatus('¤w²M°£¸¹½X', container);
+    setStatus('å·²æ¸…é™¤è™Ÿç¢¼', container);
 }
 
 async function simulateCall(container, options = {}) {
     if (!state.number) {
-        setStatus('½Ğ¥ı¿é¤J¸¹½X', container);
+        setStatus('è«‹å…ˆè¼¸å…¥è™Ÿç¢¼', container);
         return;
     }
     const digits = state.number.replace(/\s+/g, '');
     const contact = findContactByNumber(digits);
-    const label = options.label || contact?.name || `Ápµ¸¤H ${digits.slice(-4)}`;
+    const label = options.label || contact?.name || `è¯çµ¡äºº ${digits.slice(-4)}`;
     const duration = options.duration ?? Math.floor(30 + Math.random() * 210);
     const entry = {
         id: `call-${Date.now()}`,
@@ -166,20 +166,20 @@ async function simulateCall(container, options = {}) {
     historyEntries = [entry, ...historyEntries].slice(0, 30);
     await saveHistory(historyEntries);
     renderHistory(container);
-    setStatus(`¤w¼·¥X¦Ü ${label}`, container);
+    setStatus(`å·²æ’¥å‡ºè‡³ ${label}`, container);
     state.number = '';
     updateDialedNumber(container);
 }
 
 async function clearHistory(container) {
     if (!historyEntries.length) {
-        setStatus('¨S¦³¬ö¿ı¥i²M°£', container);
+        setStatus('æ²’æœ‰ç´€éŒ„å¯æ¸…é™¤', container);
         return;
     }
     historyEntries = [];
     await saveHistory([]);
     renderHistory(container);
-    setStatus('³q¸Ü¬ö¿ı¤w²M°£', container);
+    setStatus('é€šè©±ç´€éŒ„å·²æ¸…é™¤', container);
 }
 
 function renderHistory(container) {
@@ -189,7 +189,7 @@ function renderHistory(container) {
     if (!historyEntries.length) {
         const empty = document.createElement('li');
         empty.className = 'history-empty';
-        empty.textContent = '¼ÈµL³q¸Ü¬ö¿ı';
+        empty.textContent = 'æš«ç„¡é€šè©±ç´€éŒ„';
         list.appendChild(empty);
         return;
     }
@@ -200,12 +200,12 @@ function renderHistory(container) {
         main.className = 'history-main';
         const type = document.createElement('div');
         type.className = `history-type ${entry.type}`;
-        type.textContent = entry.type === 'incoming' ? '¡ú' : entry.type === 'missed' ? '?' : '¡ù';
+        type.textContent = entry.type === 'incoming' ? 'â†™' : entry.type === 'missed' ? 'âš ' : 'â†—';
         const meta = document.createElement('div');
         meta.className = 'history-meta';
         const numberDisplay = formatDialText(entry.number);
-        const name = entry.name || numberDisplay || '¥¼ª¾¸¹½X';
-        meta.innerHTML = `<h3>${name}</h3><p>${entry.name ? numberDisplay : '¥¼Àx¦s'}</p>`;
+        const name = entry.name || numberDisplay || 'æœªçŸ¥è™Ÿç¢¼';
+        meta.innerHTML = `<h3>${name}</h3><p>${entry.name ? numberDisplay : 'æœªå„²å­˜'}</p>`;
         main.append(type, meta);
         const extra = document.createElement('div');
         extra.className = 'history-extra';
@@ -229,8 +229,8 @@ function renderFavorites(container) {
         card.type = 'button';
         card.className = 'favorite-card';
         card.innerHTML = `
-            <div class='favorite-avatar'>${contact.name.slice(0, 2)}</div>
-            <div class='favorite-meta'>
+            <div class="favorite-avatar">${contact.name.slice(0, 2)}</div>
+            <div class="favorite-meta">
                 <h3>${contact.name}</h3>
                 <p>${contact.label}</p>
             </div>
@@ -238,7 +238,7 @@ function renderFavorites(container) {
         card.addEventListener('click', () => {
             state.number = contact.number;
             updateDialedNumber(container);
-            setStatus(`¤w¶ñ¤J ${contact.name}`, container);
+            setStatus(`å·²å¡«å…¥ ${contact.name}`, container);
         });
         grid.appendChild(card);
     });
@@ -250,31 +250,31 @@ function shuffleFavorites(container) {
         [favorites[i], favorites[j]] = [favorites[j], favorites[i]];
     }
     renderFavorites(container);
-    setStatus('¤w­«·s±Æ§Ç±`¥ÎÁpµ¸¤H', container);
+    setStatus('å·²é‡æ–°æ’åºå¸¸ç”¨è¯çµ¡äºº', container);
 }
 
 function saveContact(container) {
     if (!state.number) {
-        setStatus('½Ğ¥ı¿é¤J¸¹½X', container);
+        setStatus('è«‹å…ˆè¼¸å…¥è™Ÿç¢¼', container);
         return;
     }
     const exists = favorites.some(contact => contact.number.replace(/\D/g, '') === state.number.replace(/\D/g, ''));
     if (exists) {
-        setStatus('¸¹½X¤w¦b±`¥ÎÁpµ¸¤H¤¤', container);
+        setStatus('è™Ÿç¢¼å·²åœ¨å¸¸ç”¨è¯çµ¡äººä¸­', container);
         return;
     }
     const suffix = state.number.slice(-4).padStart(4, '0');
-    const name = `Ápµ¸¤H ${suffix}`;
-    favorites.unshift({ name, number: state.number, label: '§Ö³t¥[¤J' });
+    const name = `è¯çµ¡äºº ${suffix}`;
+    favorites.unshift({ name, number: state.number, label: 'å¿«é€ŸåŠ å…¥' });
     renderFavorites(container);
-    setStatus(`${name} ¤w¥[¤J±`¥Î`, container);
+    setStatus(`${name} å·²åŠ å…¥å¸¸ç”¨`, container);
 }
 
 function updateConnectionStatus(container) {
     const el = container.querySelector('#connection-status');
     if (!el) return;
     const battery = Math.max(65, Math.min(99, Math.floor(80 + Math.random() * 15)));
-    el.textContent = `${state.silent ? 'ÀR­µ' : '4G'} ¡P ${battery}%`;
+    el.textContent = `${state.silent ? 'éœéŸ³' : '4G'} Â· ${battery}%`;
 }
 
 function playRecording(rec) {
@@ -293,7 +293,7 @@ function downloadRecording(rec) {
     if (!rec.audioData) return;
     const link = document.createElement('a');
     link.href = rec.audioData;
-    link.download = `³q¸Ü¿ı­µ_${rec.charName}_${new Date(rec.timestamp).toISOString().slice(0, 10)}.webm`;
+    link.download = `é€šè©±éŒ„éŸ³_${rec.charName}_${new Date(rec.timestamp).toISOString().slice(0, 10)}.webm`;
     link.click();
 }
 
@@ -305,7 +305,7 @@ async function renderRecordings(container) {
     if (!recordings.length) {
         const empty = document.createElement('li');
         empty.className = 'recordings-empty';
-        empty.innerHTML = '`<i class=`'`fas fa-microphone-slash`'`></i><p>©|µL¿ı­µ¬ö¿ı</p><span>³q¸Ü¿ı­µ±N¦Û°Ê«O¦s¦b³o¸Ì</span>`';
+        empty.innerHTML = '<i class="fas fa-microphone-slash"></i><p>å°šç„¡éŒ„éŸ³ç´€éŒ„</p><span>é€šè©±éŒ„éŸ³å°‡è‡ªå‹•ä¿å­˜åœ¨é€™è£¡</span>';
         list.appendChild(empty);
         return;
     }
@@ -314,18 +314,18 @@ async function renderRecordings(container) {
         item.className = 'recording-item';
         const playBtn = document.createElement('button');
         playBtn.className = 'recording-play';
-        playBtn.innerHTML = '`<i class=`'`fas fa-play`'`></i>`';
+        playBtn.innerHTML = '<i class="fas fa-play"></i>';
         playBtn.addEventListener('click', () => playRecording(rec));
         const info = document.createElement('div');
         info.className = 'recording-info';
         info.innerHTML = `
-            <h3><i class='fas fa-user'></i> ${rec.charName}</h3>
-            <p>${formatTimestamp(rec.timestamp)} ¡P ${formatDuration(rec.duration)}</p>
+            <h3><i class="fas fa-user"></i> ${rec.charName}</h3>
+            <p>${formatTimestamp(rec.timestamp)} Â· ${formatDuration(rec.duration)}</p>
         `;
         if (rec.transcript && rec.transcript.length > 0) {
             const transcriptToggle = document.createElement('button');
             transcriptToggle.className = 'transcript-toggle';
-            transcriptToggle.innerHTML = '`<i class=`'`fas fa-comment-dots`'`></i> ³q¸Ü¤º®e`';
+            transcriptToggle.innerHTML = '<i class="fas fa-comment-dots"></i> é€šè©±å…§å®¹';
             transcriptToggle.addEventListener('click', () => {
                 const details = item.querySelector('.recording-transcript');
                 if (details) {
@@ -339,8 +339,8 @@ async function renderRecordings(container) {
             rec.transcript.forEach(entry => {
                 const line = document.createElement('div');
                 line.className = `transcript-line ${entry.role === 'user' ? 'transcript-user' : 'transcript-char'}`;
-                const label = entry.role === 'user' ? '§Ú' : rec.charName;
-                line.innerHTML = `<span class='transcript-label'>${label}:</span> ${entry.text}`;
+                const label = entry.role === 'user' ? 'æˆ‘' : rec.charName;
+                line.innerHTML = `<span class="transcript-label">${label}:</span> ${entry.text}`;
                 transcriptDiv.appendChild(line);
             });
             item.append(playBtn, info, transcriptDiv);
@@ -351,13 +351,13 @@ async function renderRecordings(container) {
         actionsDiv.className = 'recording-actions';
         const downloadBtn = document.createElement('button');
         downloadBtn.className = 'recording-download';
-        downloadBtn.innerHTML = '`<i class=`'`fas fa-download`'`></i>`';
+        downloadBtn.innerHTML = '<i class="fas fa-download"></i>';
         downloadBtn.addEventListener('click', () => downloadRecording(rec));
         const deleteBtn = document.createElement('button');
         deleteBtn.className = 'recording-delete';
-        deleteBtn.innerHTML = '`<i class=`'`fas fa-trash`'`></i>`';
+        deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
         deleteBtn.addEventListener('click', async () => {
-            if (confirm('½T©w§R°£¦¹¿ı­µ¡H')) {
+            if (confirm('ç¢ºå®šåˆªé™¤æ­¤éŒ„éŸ³ï¼Ÿ')) {
                 await deleteRecording(rec.id);
                 renderRecordings(container);
             }
@@ -425,7 +425,7 @@ function bindEvents(container) {
     container.querySelector('#backspace')?.addEventListener('click', () => eraseDigit(container));
     container.querySelector('#hold-button')?.addEventListener('click', () => {
         appendDigit(',', container);
-        setStatus('¤w´¡¤J¼È°±²Å¸¹', container);
+        setStatus('å·²æ’å…¥æš«åœç¬¦è™Ÿ', container);
     });
     container.querySelector('#save-contact')?.addEventListener('click', () => saveContact(container));
     container.querySelector('#clear-number')?.addEventListener('click', () => clearNumber(container));
@@ -435,18 +435,18 @@ function bindEvents(container) {
         state.silent = !state.silent;
         const btn = container.querySelector('#toggle-silent');
         btn.setAttribute('aria-pressed', state.silent ? 'true' : 'false');
-        btn.textContent = state.silent ? '??' : '??';
-        setStatus(state.silent ? '¤w±Ò¥ÎÀR­µ' : '¤w«ì´_¹aÁn', container);
+        btn.textContent = state.silent ? 'ğŸ”•' : 'ğŸ””';
+        setStatus(state.silent ? 'å·²å•Ÿç”¨éœéŸ³' : 'å·²æ¢å¾©éˆ´è²', container);
         updateConnectionStatus(container);
     });
     container.querySelectorAll('.phone-tab').forEach(tab => {
         tab.addEventListener('click', () => switchTab(tab.dataset.tab, container));
     });
     container.querySelector('#clear-recordings')?.addEventListener('click', async () => {
-        if (confirm('½T©w²M°£©Ò¦³¿ı­µ¡H¦¹¾Ş§@µLªk´_­ì¡C')) {
+        if (confirm('ç¢ºå®šæ¸…é™¤æ‰€æœ‰éŒ„éŸ³ï¼Ÿæ­¤æ“ä½œç„¡æ³•å¾©åŸã€‚')) {
             await clearAllRecordings();
             renderRecordings(container);
-            setStatus('¤w²M°£©Ò¦³¿ı­µ', container);
+            setStatus('å·²æ¸…é™¤æ‰€æœ‰éŒ„éŸ³', container);
         }
     });
     const keyHandler = (event) => {
@@ -476,83 +476,83 @@ async function renderPhone() {
     historyEntries = await loadHistory();
 
     container.innerHTML = `
-        <header class='ios-header'>
-            <button class='ios-back-btn'>
-                <i class='fas fa-chevron-left'></i> ªğ¦^
+        <header class="ios-header">
+            <button class="ios-back-btn">
+                <i class="fas fa-chevron-left"></i> è¿”å›
             </button>
-            <h1 class='menu-title'>¹q¸Ü</h1>
-            <div class='header-actions'>
-                <button class='icon-btn' id='toggle-silent' aria-pressed='false'>??</button>
+            <h1 class="menu-title">é›»è©±</h1>
+            <div class="header-actions">
+                <button class="icon-btn" id="toggle-silent" aria-pressed="false">ğŸ””</button>
             </div>
         </header>
 
-        <div class='phone-tabs'>
-            <button class='phone-tab active' data-tab='keypad'>Áä½L</button>
-            <button class='phone-tab' data-tab='history'>¬ö¿ı</button>
-            <button class='phone-tab' data-tab='favorites'>±`¥Î</button>
-            <button class='phone-tab' data-tab='recordings'>¿ı­µ</button>
+        <div class="phone-tabs">
+            <button class="phone-tab active" data-tab="keypad">éµç›¤</button>
+            <button class="phone-tab" data-tab="history">ç´€éŒ„</button>
+            <button class="phone-tab" data-tab="favorites">å¸¸ç”¨</button>
+            <button class="phone-tab" data-tab="recordings">éŒ„éŸ³</button>
         </div>
 
-        <div class='tab-panel active' id='keypad-tab'>
-            <div class='call-display'>
-                <div class='dialed-number muted' id='dialed-number'>¿é¤J¸¹½X</div>
-                <p class='status-banner' id='status-banner'></p>
-                <div class='call-actions'>
-                    <button class='ghost-btn' id='hold-button'>¼È°± ,</button>
-                    <button class='ghost-btn' id='save-contact'>¥[¤J±`¥Î</button>
-                    <button class='ghost-btn ghost-danger' id='clear-number'>²M°£</button>
+        <div class="tab-panel active" id="keypad-tab">
+            <div class="call-display">
+                <div class="dialed-number muted" id="dialed-number">è¼¸å…¥è™Ÿç¢¼</div>
+                <p class="status-banner" id="status-banner"></p>
+                <div class="call-actions">
+                    <button class="ghost-btn" id="hold-button">æš«åœ ,</button>
+                    <button class="ghost-btn" id="save-contact">åŠ å…¥å¸¸ç”¨</button>
+                    <button class="ghost-btn ghost-danger" id="clear-number">æ¸…é™¤</button>
                 </div>
             </div>
 
-            <div class='keypad' id='keypad'>
-                <button class='key' data-value='1' data-alt=''><span>1</span><small>&nbsp;</small></button>
-                <button class='key' data-value='2' data-alt='A'><span>2</span><small>ABC</small></button>
-                <button class='key' data-value='3' data-alt='D'><span>3</span><small>DEF</small></button>
-                <button class='key' data-value='4' data-alt='G'><span>4</span><small>GHI</small></button>
-                <button class='key' data-value='5' data-alt='J'><span>5</span><small>JKL</small></button>
-                <button class='key' data-value='6' data-alt='M'><span>6</span><small>MNO</small></button>
-                <button class='key' data-value='7' data-alt='P'><span>7</span><small>PQRS</small></button>
-                <button class='key' data-value='8' data-alt='T'><span>8</span><small>TUV</small></button>
-                <button class='key' data-value='9' data-alt='W'><span>9</span><small>WXYZ</small></button>
-                <button class='key action' data-value='*' data-alt=''><span>*</span></button>
-                <button class='key' data-value='0' data-alt='+'><span>0</span><small>+</small></button>
-                <button class='key action' data-value='#' data-alt=''><span>#</span></button>
+            <div class="keypad" id="keypad">
+                <button class="key" data-value="1" data-alt=""><span>1</span><small>&nbsp;</small></button>
+                <button class="key" data-value="2" data-alt="A"><span>2</span><small>ABC</small></button>
+                <button class="key" data-value="3" data-alt="D"><span>3</span><small>DEF</small></button>
+                <button class="key" data-value="4" data-alt="G"><span>4</span><small>GHI</small></button>
+                <button class="key" data-value="5" data-alt="J"><span>5</span><small>JKL</small></button>
+                <button class="key" data-value="6" data-alt="M"><span>6</span><small>MNO</small></button>
+                <button class="key" data-value="7" data-alt="P"><span>7</span><small>PQRS</small></button>
+                <button class="key" data-value="8" data-alt="T"><span>8</span><small>TUV</small></button>
+                <button class="key" data-value="9" data-alt="W"><span>9</span><small>WXYZ</small></button>
+                <button class="key action" data-value="*" data-alt=""><span>*</span></button>
+                <button class="key" data-value="0" data-alt="+"><span>0</span><small>+</small></button>
+                <button class="key action" data-value="#" data-alt=""><span>#</span></button>
             </div>
 
-            <div class='keypad-actions'>
-                <button class='key call' id='call-button'><i class='fas fa-phone'></i></button>
-                <button class='key action' id='backspace'><i class='fas fa-backspace'></i></button>
+            <div class="keypad-actions">
+                <button class="key call" id="call-button"><i class="fas fa-phone"></i></button>
+                <button class="key action" id="backspace"><i class="fas fa-backspace"></i></button>
             </div>
 
-            <p class='status-line' id='connection-status'>4G ¡P 85%</p>
+            <p class="status-line" id="connection-status">4G Â· 85%</p>
         </div>
 
-        <div class='tab-panel' id='history-tab'>
-            <div class='call-history'>
-                <div class='history-header'>
-                    <h2>³q¸Ü¬ö¿ı</h2>
-                    <button class='ghost-btn ghost-sm ghost-danger' id='history-clear'>²M°£</button>
+        <div class="tab-panel" id="history-tab">
+            <div class="call-history">
+                <div class="history-header">
+                    <h2>é€šè©±ç´€éŒ„</h2>
+                    <button class="ghost-btn ghost-sm ghost-danger" id="history-clear">æ¸…é™¤</button>
                 </div>
-                <ul class='history-list' id='history-list'></ul>
+                <ul class="history-list" id="history-list"></ul>
             </div>
         </div>
 
-        <div class='tab-panel' id='favorites-tab'>
-            <div class='favorite-strip'>
-                <div class='favorite-header'>
-                    <h2>±`¥ÎÁpµ¸¤H</h2>
-                    <button class='ghost-btn ghost-sm' id='favorite-shuffle'>ÀH¾÷±Æ§Ç</button>
+        <div class="tab-panel" id="favorites-tab">
+            <div class="favorite-strip">
+                <div class="favorite-header">
+                    <h2>å¸¸ç”¨è¯çµ¡äºº</h2>
+                    <button class="ghost-btn ghost-sm" id="favorite-shuffle">éš¨æ©Ÿæ’åº</button>
                 </div>
-                <div class='favorite-grid' id='favorite-grid'></div>
+                <div class="favorite-grid" id="favorite-grid"></div>
             </div>
         </div>
 
-        <div class='tab-panel' id='recordings-tab'>
-            <div class='recordings-header'>
-                <h2>³q¸Ü¿ı­µ</h2>
-                <button class='clear-recordings-btn' id='clear-recordings'>²M°£¥ş³¡</button>
+        <div class="tab-panel" id="recordings-tab">
+            <div class="recordings-header">
+                <h2>é€šè©±éŒ„éŸ³</h2>
+                <button class="clear-recordings-btn" id="clear-recordings">æ¸…é™¤å…¨éƒ¨</button>
             </div>
-            <ul class='recordings-list' id='recordings-list'></ul>
+            <ul class="recordings-list" id="recordings-list"></ul>
         </div>
     `;
 
@@ -583,9 +583,9 @@ async function renderPhone() {
 
 export default {
     id: 'phone',
-    name: '¹q¸Ü',
+    name: 'é›»è©±',
     icon: 'phone',
     routes: [{ path: '/phone', render: renderPhone }],
-    navItem: { label: '¹q¸Ü', icon: 'phone', path: '/phone', showInNav: true, order: 19 },
+    navItem: { label: 'é›»è©±', icon: 'phone', path: '/phone', showInNav: true, order: 19 },
     stylesPath: 'js/apps/phone/style.css'
 };

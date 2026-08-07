@@ -17,34 +17,34 @@ async function renderTouch(params) {
   await loadState();
   const container = createElement('div', 'app-container touch-app');
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
-      <h1 class='menu-title'>»²§UÄ²±±</h1>
+    <header class="ios-header">
+      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> è¿”å›</button>
+      <h1 class="menu-title">è¼”åŠ©è§¸æ§</h1>
     </header>
-    <div class='page'>
-      <div class='toggle-card'>
-        <span class='toggle-label'>±Ò¥Î»²§UÄ²±±</span>
-        <label class='switch'>
-          <input type='checkbox' ${enabled ? 'checked' : ''}>
-          <span class='slider'></span>
+    <div class="page">
+      <div class="toggle-card">
+        <span class="toggle-label">å•Ÿç”¨è¼”åŠ©è§¸æ§</span>
+        <label class="switch">
+          <input type="checkbox" ${enabled ? 'checked' : ''}>
+          <span class="slider"></span>
         </label>
       </div>
-      <div class='preview-area'>
-        <div class='touch-ball ${enabled ? '' : 'hidden'}'>
-          <i class='fas fa-touch_app'></i>
+      <div class="preview-area">
+        <div class="touch-ball ${enabled ? '' : 'hidden'}">
+          <i class="fas fa-touch_app"></i>
         </div>
-        <p class='hint'>¯B°Ê«ö¶s±NÅã¥Ü¦bµe­±¤W¡A¤è«K§Ö³t¾Ş§@¡C</p>
+        <p class="hint">æµ®å‹•æŒ‰éˆ•å°‡é¡¯ç¤ºåœ¨ç•«é¢ä¸Šï¼Œæ–¹ä¾¿å¿«é€Ÿæ“ä½œã€‚</p>
       </div>
-      <div class='actions'>
-        <button class='action-btn'><i class='fas fa-home'></i> ¥Dµe­±</button>
-        <button class='action-btn'><i class='fas fa-volume-up'></i> ­µ¶q</button>
-        <button class='action-btn'><i class='fas fa-lock'></i> Âê©w</button>
-        <button class='action-btn'><i class='fas fa-camera'></i> ºI¹Ï</button>
+      <div class="actions">
+        <button class="action-btn"><i class="fas fa-home"></i> ä¸»ç•«é¢</button>
+        <button class="action-btn"><i class="fas fa-volume-up"></i> éŸ³é‡</button>
+        <button class="action-btn"><i class="fas fa-lock"></i> é–å®š</button>
+        <button class="action-btn"><i class="fas fa-camera"></i> æˆªåœ–</button>
       </div>
     </div>
   `;
   container.querySelector('.ios-back-btn').onclick = () => Router.back();
-  const checkbox = container.querySelector('input[type='checkbox']');
+  const checkbox = container.querySelector('input[type="checkbox"]');
   checkbox.onchange = async () => {
     enabled = checkbox.checked;
     await saveState();
@@ -52,17 +52,17 @@ async function renderTouch(params) {
   };
   const actionBtns = container.querySelectorAll('.action-btn');
   actionBtns[0].onclick = () => Router.navigate('/home');
-  actionBtns[1].onclick = () => { const v = window._touchVolume || 50; window._touchVolume = v >= 100 ? 0 : v + 25; createToast(`­µ¶q: ${window._touchVolume}%`); };
+  actionBtns[1].onclick = () => { const v = window._touchVolume || 50; window._touchVolume = v >= 100 ? 0 : v + 25; createToast(`éŸ³é‡: ${window._touchVolume}%`); };
   actionBtns[2].onclick = () => { window.App?.lock(); };
-  actionBtns[3].onclick = () => createToast('ºI¹Ï¥\¯à©|¥¼¹ê§@');
+  actionBtns[3].onclick = () => createToast('æˆªåœ–åŠŸèƒ½å°šæœªå¯¦ä½œ');
   return { element: container, cleanup: null };
 }
 
 export default {
   id: 'touch',
-  name: '»²§UÄ²±±',
+  name: 'è¼”åŠ©è§¸æ§',
   icon: 'touch_app',
   routes: [{ path: '/touch', render: renderTouch }],
-  navItem: { label: '»²§UÄ²±±', icon: 'touch_app', path: '/touch', showInNav: true, order: 145 },
+  navItem: { label: 'è¼”åŠ©è§¸æ§', icon: 'touch_app', path: '/touch', showInNav: true, order: 145 },
   stylesPath: 'js/apps/touch/style.css'
 };

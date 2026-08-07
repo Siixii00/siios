@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+ï»¿import Router from '../../router.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { createElement, createIcon, createToast } from '../../components.js';
@@ -14,68 +14,68 @@ const ratingMap = {
 };
 
 const worldSettings = [
-    { title: 'ABO ³]©w', desc: 'Alpha/Beta/Omega ¤TºØ²Ä¤G©Ê§O¡A°ò©ó«H®§¯À»P¥Í²z¥»¯àªº¶¥¯ÅªÀ·|¡C¥]§t¼Ğ°O¡Bµo±¡´Á¡B¦¨µ²µ¥¾÷¨î¡C', tags: ['ABO', '¥@¬ÉÆ['] },
-    { title: '­ï§LÂQ¾É', desc: '·P©x·¥ºİ±Ó¾Uªº­ï§L»Pºë¯«¤O¶q±j¤jªºÂQ¾É¡C¥]§tºë¯«Åé¡Bºë¯«¹Ï´º¡Bµ²¦Xµ¥³]©w¡C', tags: ['­ï§LÂQ¾É', '¥@¬ÉÆ['] },
-    { title: '«¢§Qªi¯S', desc: 'ÁôÂÃ¦b²{¥N­Û´°¤§¤UªºÅ]ªk¥@¬É¡CÀN®æµØ¯÷¾Ç°|¨î¡BÅ]§ú¡B¦å²Îª[µø»P¶ÂÅ]ªk¨¾¿m¡C', tags: ['HP', 'Å]ªk®Õ¶é'] },
-    { title: '¤é¦¡°ª¤¤®Õ¶é', desc: '«C¬KÀÇ¬Nªº®Õ¶é¥Í¬¡¡C¾Çªø©j¨î«×¡BªÀ¹Î¬¡°Ê¡B¤å¤Æ²½¡B«Î³»§i¥Õ¡C', tags: ['®Õ¶é', '«C¬K'] },
-    { title: '¬ü°ê¤j¾Ç¥Í¬¡', desc: '¥S§Ì·|©n©f·|¤å¤Æ¡B¬£¹ï¡B®Õ¶é¹B°ÊÁÉ¨Æ¡B±JªÙ¥Í¬¡»P¿W¥ß±´¯Á¡C', tags: ['¤j¾Ç', '¬ü¦¡'] },
-    { title: '¿ì¤½«ÇÂ¾³õ', desc: 'Åv¤Oµ¥¯Å»P¸T¤îÅÊ·Rªº¿ì¤½«Ç¡C¤W¤U¯ÅÃö«Y¡B¯ù¤ô¶¡¤K¨ö¡B¥[¯Z»P¯µ±KÅÊ±¡¡C', tags: ['Â¾³õ', '¿ì¤½«Ç'] },
-    { title: 'Áú°ê Idol', desc: 'µØÄR»R»O­I«áªº´İ»Å¡C½m²ß¥Í¨î«×¡BÅÊ·R¸T¥O¡B±JªÙ¥Í¬¡»P¨p¥Í¶º§xÂZ¡C', tags: ['K-Pop', '°¸¹³'] },
-    { title: '²{¥N·nºu¼Ö¹Î', desc: '«q°f»P¹Ú·Qªº­µ¼Ö¥@¬É¡C¦a¤ULive House¡B¨µ°j®Èµ{¡B¦¨­û¶¡ªºÅù²Ì»P¥Ù¬Ş¡C', tags: ['¼Ö¹Î', '·nºu'] },
-    { title: '¼Ú¬w¤¤¥@¬ö®c§Ê', desc: 'Ác¤åêĞ¸`¤UªºÅv¤O°«ª§¡C¶Q±Úµ¥¯Å¡B¬FªvÁp«Ã¡B»R·|±K¿Ñ»PÃM¤hºë¯«¡C', tags: ['¤¤¥@¬ö', '®c§Ê'] },
-    { title: 'ÆF»î¦ñ«Q³]©w', desc: '¨C­Ó¤H¥X¥Í®É´Nµù©w¦³¤@­Ó§¹¬üªº¥t¤@¥b¡C¦âª¼¼Ò¦¡¡B¤å¦r¼Ğ°O¡B¶Ë²ª¦@¨É¡B­Ë­p®Éµ¥ªí²{§Î¦¡¡C', tags: ['Soulmate', '±J©R'] },
-    { title: 'ªá¦R¯g', desc: '³æÅÊ®ÉªÍ³¡·|¥Íªø¥Xªá¦·¡AÀH«y¹Â¦R¥XªáÃ¤¡C°ß¦³¹ï¤èªº·R¯àªvÂ¡¡A©Î¤â³N²¾°£¦ı¥¢¥h·R·N¡C', tags: ['ªá¦R¯g', '­h¤ß'] },
-    { title: 'ÁÉ³ÕÃe§J', desc: '°ª¬ì§Ş¦ı»G±Ñªº¥¼¨Ó¥@¬É¡C¸qÅé§ï³y¡B¯«¸g³s±µ¡B¥ø·~°ª¼h»P©³¼h¶Ä§Lªº¶¥¯Å¹ï¥ß¡C', tags: ['ÁÉ³ÕÃe§J', '¬ì¤Û'] },
-    { title: 'µL­­¬y', desc: '³Q©Ô¤J¯«¯µ°Æ¥»¡A¥²¶·¿í¦u¯S©w³W«h¤~¯à¥Í¦s¡C¥Í¦sÀ£¤O¤Uªº«H¥ô»P¨Ì¿à¡C', tags: ['µL­­¬y', '¥Í¦s'] },
-    { title: '¯î®q¨D¥Í', desc: '¤å©ú·´·À«áªº¥@¬É©Î¨ü§xµL¤H¦a±a¡Cª«¸ê¹¼¥F¡B°ª«×¨Ì¿à¡B¦bµ´±æ¤¤«Ø¥ß¤p¤p¼Ö¶é¡C', tags: ['¥½¥@', '¨D¥Í'] },
-    { title: '­×¥P¥@¬É', desc: '­×·Ò¦¨¥Pªº©_¤Û¥@¬É¡C©vªù¡BÆF®Ú¡B´ç§T¡B®v®{Ãö«Y»P¤d¦~Åù²Ì¡C', tags: ['­×¥P', '¥P«L'] },
-    { title: 'ªZªL¦¿´ò', desc: '«L¸q»P®¦«èªºªZ«L¥@¬É¡Cªù¬£¯É¯Éª§¡Bµ´¥@ªZ¥\¡B´_¤³»P±ÏÅ«¡C', tags: ['ªZ«L', '¦¿´ò'] }
+    { title: 'ABO è¨­å®š', desc: 'Alpha/Beta/Omega ä¸‰ç¨®ç¬¬äºŒæ€§åˆ¥ï¼ŒåŸºæ–¼ä¿¡æ¯ç´ èˆ‡ç”Ÿç†æœ¬èƒ½çš„éšç´šç¤¾æœƒã€‚åŒ…å«æ¨™è¨˜ã€ç™¼æƒ…æœŸã€æˆçµç­‰æ©Ÿåˆ¶ã€‚', tags: ['ABO', 'ä¸–ç•Œè§€'] },
+    { title: 'å“¨å…µåš®å°', desc: 'æ„Ÿå®˜æ¥µç«¯æ•éŠ³çš„å“¨å…µèˆ‡ç²¾ç¥åŠ›é‡å¼·å¤§çš„åš®å°ã€‚åŒ…å«ç²¾ç¥é«”ã€ç²¾ç¥åœ–æ™¯ã€çµåˆç­‰è¨­å®šã€‚', tags: ['å“¨å…µåš®å°', 'ä¸–ç•Œè§€'] },
+    { title: 'å“ˆåˆ©æ³¢ç‰¹', desc: 'éš±è—åœ¨ç¾ä»£å€«æ•¦ä¹‹ä¸‹çš„é­”æ³•ä¸–ç•Œã€‚éœæ ¼è¯èŒ²å­¸é™¢åˆ¶ã€é­”æ–ã€è¡€çµ±æ­§è¦–èˆ‡é»‘é­”æ³•é˜²ç¦¦ã€‚', tags: ['HP', 'é­”æ³•æ ¡åœ’'] },
+    { title: 'æ—¥å¼é«˜ä¸­æ ¡åœ’', desc: 'é’æ˜¥æ›–æ˜§çš„æ ¡åœ’ç”Ÿæ´»ã€‚å­¸é•·å§åˆ¶åº¦ã€ç¤¾åœ˜æ´»å‹•ã€æ–‡åŒ–ç¥­ã€å±‹é ‚å‘Šç™½ã€‚', tags: ['æ ¡åœ’', 'é’æ˜¥'] },
+    { title: 'ç¾åœ‹å¤§å­¸ç”Ÿæ´»', desc: 'å…„å¼Ÿæœƒå§Šå¦¹æœƒæ–‡åŒ–ã€æ´¾å°ã€æ ¡åœ’é‹å‹•è³½äº‹ã€å®¿èˆç”Ÿæ´»èˆ‡ç¨ç«‹æ¢ç´¢ã€‚', tags: ['å¤§å­¸', 'ç¾å¼'] },
+    { title: 'è¾¦å…¬å®¤è·å ´', desc: 'æ¬ŠåŠ›ç­‰ç´šèˆ‡ç¦æ­¢æˆ€æ„›çš„è¾¦å…¬å®¤ã€‚ä¸Šä¸‹ç´šé—œä¿‚ã€èŒ¶æ°´é–“å…«å¦ã€åŠ ç­èˆ‡ç§˜å¯†æˆ€æƒ…ã€‚', tags: ['è·å ´', 'è¾¦å…¬å®¤'] },
+    { title: 'éŸ“åœ‹ Idol', desc: 'è¯éº—èˆè‡ºèƒŒå¾Œçš„æ®˜é…·ã€‚ç·´ç¿’ç”Ÿåˆ¶åº¦ã€æˆ€æ„›ç¦ä»¤ã€å®¿èˆç”Ÿæ´»èˆ‡ç§ç”Ÿé£¯å›°æ“¾ã€‚', tags: ['K-Pop', 'å¶åƒ'] },
+    { title: 'ç¾ä»£æ–æ»¾æ¨‚åœ˜', desc: 'å›é€†èˆ‡å¤¢æƒ³çš„éŸ³æ¨‚ä¸–ç•Œã€‚åœ°ä¸‹Live Houseã€å·¡è¿´æ—…ç¨‹ã€æˆå“¡é–“çš„ç¾ˆçµ†èˆ‡çŸ›ç›¾ã€‚', tags: ['æ¨‚åœ˜', 'æ–æ»¾'] },
+    { title: 'æ­æ´²ä¸­ä¸–ç´€å®®å»·', desc: 'ç¹æ–‡ç¸Ÿç¯€ä¸‹çš„æ¬ŠåŠ›é¬¥çˆ­ã€‚è²´æ—ç­‰ç´šã€æ”¿æ²»è¯å§»ã€èˆæœƒå¯†è¬€èˆ‡é¨å£«ç²¾ç¥ã€‚', tags: ['ä¸­ä¸–ç´€', 'å®®å»·'] },
+    { title: 'éˆé­‚ä¼´ä¾¶è¨­å®š', desc: 'æ¯å€‹äººå‡ºç”Ÿæ™‚å°±è¨»å®šæœ‰ä¸€å€‹å®Œç¾çš„å¦ä¸€åŠã€‚è‰²ç›²æ¨¡å¼ã€æ–‡å­—æ¨™è¨˜ã€å‚·ç—•å…±äº«ã€å€’è¨ˆæ™‚ç­‰è¡¨ç¾å½¢å¼ã€‚', tags: ['Soulmate', 'å®¿å‘½'] },
+    { title: 'èŠ±åç—‡', desc: 'å–®æˆ€æ™‚è‚ºéƒ¨æœƒç”Ÿé•·å‡ºèŠ±æœµï¼Œéš¨å’³å—½åå‡ºèŠ±ç“£ã€‚å”¯æœ‰å°æ–¹çš„æ„›èƒ½æ²»ç™’ï¼Œæˆ–æ‰‹è¡“ç§»é™¤ä½†å¤±å»æ„›æ„ã€‚', tags: ['èŠ±åç—‡', 'è™å¿ƒ'] },
+    { title: 'è³½åšé¾å…‹', desc: 'é«˜ç§‘æŠ€ä½†è…æ•—çš„æœªä¾†ä¸–ç•Œã€‚ç¾©é«”æ”¹é€ ã€ç¥ç¶“é€£æ¥ã€ä¼æ¥­é«˜å±¤èˆ‡åº•å±¤å‚­å…µçš„éšç´šå°ç«‹ã€‚', tags: ['è³½åšé¾å…‹', 'ç§‘å¹»'] },
+    { title: 'ç„¡é™æµ', desc: 'è¢«æ‹‰å…¥ç¥ç§˜å‰¯æœ¬ï¼Œå¿…é ˆéµå®ˆç‰¹å®šè¦å‰‡æ‰èƒ½ç”Ÿå­˜ã€‚ç”Ÿå­˜å£“åŠ›ä¸‹çš„ä¿¡ä»»èˆ‡ä¾è³´ã€‚', tags: ['ç„¡é™æµ', 'ç”Ÿå­˜'] },
+    { title: 'è’å³¶æ±‚ç”Ÿ', desc: 'æ–‡æ˜æ¯€æ»…å¾Œçš„ä¸–ç•Œæˆ–å—å›°ç„¡äººåœ°å¸¶ã€‚ç‰©è³‡åŒ±ä¹ã€é«˜åº¦ä¾è³´ã€åœ¨çµ•æœ›ä¸­å»ºç«‹å°å°æ¨‚åœ’ã€‚', tags: ['æœ«ä¸–', 'æ±‚ç”Ÿ'] },
+    { title: 'ä¿®ä»™ä¸–ç•Œ', desc: 'ä¿®ç…‰æˆä»™çš„å¥‡å¹»ä¸–ç•Œã€‚å®—é–€ã€éˆæ ¹ã€æ¸¡åŠ«ã€å¸«å¾’é—œä¿‚èˆ‡åƒå¹´ç¾ˆçµ†ã€‚', tags: ['ä¿®ä»™', 'ä»™ä¿ '] },
+    { title: 'æ­¦æ—æ±Ÿæ¹–', desc: 'ä¿ ç¾©èˆ‡æ©æ€¨çš„æ­¦ä¿ ä¸–ç•Œã€‚é–€æ´¾ç´›ç´›çˆ­ã€çµ•ä¸–æ­¦åŠŸã€å¾©ä»‡èˆ‡æ•‘è´–ã€‚', tags: ['æ­¦ä¿ ', 'æ±Ÿæ¹–'] }
 ];
 
 const interactionTropes = [
-    { title: '­«³{', desc: '¦h¦~«á¦A¦¸¬Û¹J¡A©¼¦¹³£ÅÜ¤F«o¤S¨SÅÜ¡C', tags: ['­«³{', '±¡·P'] },
-    { title: '»~·|¸Ñ¶}', desc: '¤@ª½¥H¨Óªº»~·|²×©ó¸Ñ¶}¡A¦ı¦ü¥G¤Ó¿ğ¤F¡C', tags: ['»~·|', '­h¤ß'] },
-    { title: '«B¤¤', desc: '¤U«B¤Ñªº°¸¹J¡A§ïÅÜ¤F¨â­Ó¤Hªº©R¹B¡C', tags: ['«B', '®öº©'] },
-    { title: '§i¥Õ', desc: '²×©ó¹ª°_«i®ğ»¡¥X¤ß·N¡C', tags: ['§i¥Õ', '²¢'] },
-    { title: '¤ÀÂ÷', desc: '¤£±o¤£¤À¶}¡A¦ı¬ù©w·|¦A¨£¡C', tags: ['¤ÀÂ÷', '¬ù©w'] },
-    { title: '¦uÅ@', desc: 'ÀqÀq¦uÅ@¦b¨­Ãä¡A¤£¨D¦^³ø¡C', tags: ['¦uÅ@', '·tÅÊ'] },
-    { title: '¦^¾Ğ', desc: '¦^¾Ğ°_¹L¥hªºÂIÂIºwºw¡C', tags: ['¦^¾Ğ', '¹L¥h'] },
-    { title: '«´¬ùÃö«Y', desc: '¦]§Q¯q³Q­¢°²§ê±¡«Q©Î¤Ò©d¡C¦P©~¥Í¬¡¡B¤½²³ºt¥X¡A¤é¤[¥Í±¡ªº²¢»e¹Lµ{¡C', tags: ['°²À¸¯u°µ', '«´¬ù'] },
-    { title: '¦º¹ïÀY', desc: 'Âù¤è³B©ó§¹¥ş¹ï¥ßªº¥ß³õ¡C°w¾W¬Û¹ïªº±i¤O¡B³Q­¢¦X§@®Éªº®ÉªºªÈµ²¡BÁôÂÃªº§l¤Ş¤O¡C', tags: ['±J¼Ä', '¹ï¥ß'] },
-    { title: 'ÂQ©¹¥­¤Zªº©Çª«', desc: '«D¤HÃş¡]AI¡B§l¦å°­¡B¥~¬P¤H¡B¤H³½¡^¸Õ¹Ï²z¸Ñ¤HÃş±¡·P¡C¸óª«ºØªº·¾³q»ÙÃª»P²Â©å·Å±¡¡C', tags: ['«D¤HÃş', '¸óª«ºØ'] },
-    { title: '¨­Åé¤¬´«', desc: '¦]·N¥~©Î¶A©G¥æ´«ÆF»î/¨­Åé¡C¥²¶·¥N´À¹ï¤è¥Í¬¡¡Aµo²{ÁôÂÃªº¯µ±K»P¶Ëµh¡C', tags: ['¨­Åé¤¬´«', 'ÆF»î'] },
-    { title: '¥u¦³¤@±i§É', desc: '®È©±«Èº¡©Î¨ü§xÁ×Ãø©Ò¡A¥u³Ñ¤@­Ó©Ğ¶¡¤@±i§É¡C½ÖºÎ¦aªO¡HÁÙ¬OÀ½¦b¤@°_¡H', tags: ['³Q­¢ªñ¶ZÂ÷', '¤@±i§É'] },
-    { title: '¯U¤pªÅ¶¡¨ü§x', desc: '¹q±è¬G»Ù¡B¸úÁ×¼Ä¤Hªº¦çÂd¡B¯U¯¶«Ñ§Ë¡C¥²¶·ºò¶K¹ï¤è¡A·P¨ü©I§l¡B¤ß¸õ»PÅé·Å¡C', tags: ['³Q­¢ªñ¶ZÂ÷', '±K³¬ªÅ¶¡'] },
-    { title: '¨ú·x', desc: '¼É­·³·¨ü§x¡B±¼¤J¦B§N´ò¤ô¡C¬°¤F¥Í¦s¥²¶·ºò¾Ö¶Ç»¼Åé·Å¡A±q¥Í¦s¥»¯àÂà¤Æ¬°©Ê±i¤O¡C', tags: ['³Q­¢ªñ¶ZÂ÷', '¥Í¦s'] },
-    { title: '½Ö§Ë¶Ë§Aªº', desc: '¤@¤è¨ü¶Ë¦^¨Ó¡A¥t¤@¤èÁö¥­®É§N²H¡A¬İ¨ì¶Ë¤fÀş¶¡¼É«ã©Î·¥«×¤ß¯k¡C¥]²Ï¶Ë¤fªº²Ó¿°»P¦û¦³±ı¡C', tags: ['·ÓÅU', '«OÅ@±ı'] },
-    { title: '¯f®z·ÓÅU', desc: 'µo°ª¿N¡B·NÃÑ¼Ò½k¡A¥­®É±j¶Õªº¨¤¦âÅÜ±o¹³¤p«Ä¤@¼Ë¨Ì¼Ë¨Ì¿à¡CÁıÃÄ¡BÀ¿¦½¡B¥b¹Ú¥b¿ô¶¡ªº¯u±¡¬yÅS¡C', tags: ['·ÓÅU', '¯Ü®z'] },
-    { title: '¾µ¹Ú»P¦w¼¾', desc: '²`©]¦]³Ğ¶ËÅå¿ô¡C¥t¤@¤èµ¹¤©¾Ö©ê¡BºNÀY¡B»´Án¦w¼¢¡A®i²{¥uµ¹¹ï¤èªº¬X³n­±¡C', tags: ['·ÓÅU', '¦w¼¾'] },
-    { title: '°s«á¦R¯u¨¥', desc: '·LÅH©Î¤j¾K¡C¥­®É¤£´±»¡ªº¸Ü¡B¤£´±°µªº¿Ë¼Ê¦æ¬°¥ş³£Ãzµo¡C¹j¤Ñ¿ô¨Ó«áªºÀª§¼´Á¡C', tags: ['¥¢±±', '§i¥Õ'] },
-    { title: '¯u¨¥¾¯/¶A©G', desc: '³Q­¢¥²¶·»¡¯u¸Ü¡A©Î¥²¶·¶i¦æ¿Ë±KÁ|°Ê¤~¯à¸Ñ°£ªº¶A©G¡C«÷©R§Ô­@¦ı³Ì²×¥¢±Ñªº±Ã¤ã·P¡C', tags: ['¥¢±±', 'Å]ªk'] },
-    { title: '¨º­Ó¡u¾¾¡vªº®É¨è', desc: '¦n¤Í©Î¦º¹ïÀY¦b¬Y­Ó¥­¤ZÀş¶¡¡]¦p¶§¥ú¤U¦^ÀY¤@¯º¡^¡A¬ğµM·NÃÑ¨ì¡G¡uÁV¤F¡A§Ú·R¤W¥L¤F¡C¡v', tags: ['¥¢±±', 'Ä±¿ô'] },
-    { title: '¤â§â¤â±Ğ¾Ç', desc: '±Ğ®g½b¡B¿ûµ^¡B¼²²y¡B¼g¦r¡C±q­I«áÀôÂ¶ªº«º¶Õ¡A¤â´xÂĞ»\¦b¤â­I¤W¡A¦ÕÃäªº§CÁn«ü¾É¡C', tags: ['ªÏÅé±i¤O', '±Ğ¾Ç'] },
-    { title: '¾ã²z¦çª«', desc: '¥X®u¥¿¦¡³õ¦X«e¡AÀ°¹ï¤è¥´»â±a¡BÂ½»â¤l¡B¼·¶}ÃB«e¸H¾v¡C·¥ªñ¶ZÂ÷ªº²´¯«¥æÂ´¡A©I§l¥æ¿ù¡C', tags: ['ªÏÅé±i¤O', '¿Ë±K'] },
-    { title: '¨­°ª®t/Åé«¬®t', desc: '®³¤£¨ì°ª³BªF¦è¡B¦çªA¤Ó¹L¼e¤j¡C°ªªº¤@¤è±q«á¤èÀ°¦£®³ªF¦è¡A©Î¤@¤è¬ïµÛ¥t¤@¤è¼e¤jªºÅ¨­m¡C', tags: ['ªÏÅé±i¤O', 'Åé«¬®t'] },
-    { title: 'Âù¦V·tÅÊ', desc: '¨â­Ó¤H³£Ä±±o¹ï¤è¤£³ßÅw¦Û¤v¡A³£¦bºÆ¨g¸Õ±´¡C¨è·NÁ×¶}ªº²´¯«¡B¹ï¥L¤H±µªñªº·L¤p¶ú§ª¡C', tags: ['·t¼é¬¤´é', '·tÅÊ'] },
-    { title: '¯µ±K·ù¤Í', desc: '²³¤H­±«e¸Ë§@¤£¼ô©Î¼Ä¹ï¡A¨p©³¤U«o¦³²`«pÁpÃ´¡C®à¤l©³¤Uªº¤Ä¸}¡B¥u¦³¨â¤HÀ´ªº·t¸¹¡C', tags: ['·t¼é¬¤´é', '¯µ±K'] },
-    { title: '¦~¤W¦~¤U', desc: '¦~ÄÖ®t¶Z±a¨ÓªºÅv¤O¤£¹ïµ¥¡C¦~ªøªÌªº·ÓÅU»P¦û¦³¡B¦~¤UªÌªº¦¨ªø»P¤ÏÀ»¡C', tags: ['¦~ÄÖ®t', 'Åv¤O'] },
-    { title: '®v¥ÍÃö«Y', desc: '¸T§Òªº®v¥Í¤§ÅÊ¡Cª¾ÃÑ¶Ç©Ó¤¤ªº±¡·P´şªø¡A¹D¼w»P¼¤±æªº±Ã¤ã¡C', tags: ['®v¥Í', '¸T§Ò'] },
-    { title: '«C±ö¦Ë°¨', desc: '±q¤p¤@°_ªø¤j¡A³Ì¤F¸Ñ©¼¦¹ªº¤H¡C¦ı¤Í±¡¦ó®ÉÅÜ¦¨·R±¡¡H', tags: ['«C±ö¦Ë°¨', '²¢'] },
-    { title: '¤@¨£Áé±¡', desc: '²Ä¤@²´´N½T©w¬O¨º­Ó¤H¤F¡C±q¦¹®i¶}ºÆ¨g°l¨D©ÎÀqÀq·tÅÊ¡C', tags: ['¤@¨£Áé±¡', '²¢'] },
-    { title: '¯}Ãè­«¶ê', desc: '´¿¸g¤À¤â¡A²{¦b­«·s¶}©l¡C¶Ë²ªÁÙ¦b¡A¦ıÄ@·N¦A¸Õ¤@¦¸¡C', tags: ['¯}Ãè­«¶ê', '­h²¢'] }
+    { title: 'é‡é€¢', desc: 'å¤šå¹´å¾Œå†æ¬¡ç›¸é‡ï¼Œå½¼æ­¤éƒ½è®Šäº†å»åˆæ²’è®Šã€‚', tags: ['é‡é€¢', 'æƒ…æ„Ÿ'] },
+    { title: 'èª¤æœƒè§£é–‹', desc: 'ä¸€ç›´ä»¥ä¾†çš„èª¤æœƒçµ‚æ–¼è§£é–‹ï¼Œä½†ä¼¼ä¹å¤ªé²äº†ã€‚', tags: ['èª¤æœƒ', 'è™å¿ƒ'] },
+    { title: 'é›¨ä¸­', desc: 'ä¸‹é›¨å¤©çš„å¶é‡ï¼Œæ”¹è®Šäº†å…©å€‹äººçš„å‘½é‹ã€‚', tags: ['é›¨', 'æµªæ¼«'] },
+    { title: 'å‘Šç™½', desc: 'çµ‚æ–¼é¼“èµ·å‹‡æ°£èªªå‡ºå¿ƒæ„ã€‚', tags: ['å‘Šç™½', 'ç”œ'] },
+    { title: 'åˆ†é›¢', desc: 'ä¸å¾—ä¸åˆ†é–‹ï¼Œä½†ç´„å®šæœƒå†è¦‹ã€‚', tags: ['åˆ†é›¢', 'ç´„å®š'] },
+    { title: 'å®ˆè­·', desc: 'é»˜é»˜å®ˆè­·åœ¨èº«é‚Šï¼Œä¸æ±‚å›å ±ã€‚', tags: ['å®ˆè­·', 'æš—æˆ€'] },
+    { title: 'å›æ†¶', desc: 'å›æ†¶èµ·éå»çš„é»é»æ»´æ»´ã€‚', tags: ['å›æ†¶', 'éå»'] },
+    { title: 'å¥‘ç´„é—œä¿‚', desc: 'å› åˆ©ç›Šè¢«è¿«å‡æ‰®æƒ…ä¾¶æˆ–å¤«å¦»ã€‚åŒå±…ç”Ÿæ´»ã€å…¬çœ¾æ¼”å‡ºï¼Œæ—¥ä¹…ç”Ÿæƒ…çš„ç”œèœœéç¨‹ã€‚', tags: ['å‡æˆ²çœŸåš', 'å¥‘ç´„'] },
+    { title: 'æ­»å°é ­', desc: 'é›™æ–¹è™•æ–¼å®Œå…¨å°ç«‹çš„ç«‹å ´ã€‚é‡é‹’ç›¸å°çš„å¼µåŠ›ã€è¢«è¿«åˆä½œæ™‚çš„æ™‚çš„ç³¾çµã€éš±è—çš„å¸å¼•åŠ›ã€‚', tags: ['å®¿æ•µ', 'å°ç«‹'] },
+    { title: 'åš®å¾€å¹³å‡¡çš„æ€ªç‰©', desc: 'éäººé¡ï¼ˆAIã€å¸è¡€é¬¼ã€å¤–æ˜Ÿäººã€äººé­šï¼‰è©¦åœ–ç†è§£äººé¡æƒ…æ„Ÿã€‚è·¨ç‰©ç¨®çš„æºé€šéšœç¤™èˆ‡ç¬¨æ‹™æº«æƒ…ã€‚', tags: ['éäººé¡', 'è·¨ç‰©ç¨®'] },
+    { title: 'èº«é«”äº’æ›', desc: 'å› æ„å¤–æˆ–è©›å’’äº¤æ›éˆé­‚/èº«é«”ã€‚å¿…é ˆä»£æ›¿å°æ–¹ç”Ÿæ´»ï¼Œç™¼ç¾éš±è—çš„ç§˜å¯†èˆ‡å‚·ç—›ã€‚', tags: ['èº«é«”äº’æ›', 'éˆé­‚'] },
+    { title: 'åªæœ‰ä¸€å¼µåºŠ', desc: 'æ—…åº—å®¢æ»¿æˆ–å—å›°é¿é›£æ‰€ï¼Œåªå‰©ä¸€å€‹æˆ¿é–“ä¸€å¼µåºŠã€‚èª°ç¡åœ°æ¿ï¼Ÿé‚„æ˜¯æ“ åœ¨ä¸€èµ·ï¼Ÿ', tags: ['è¢«è¿«è¿‘è·é›¢', 'ä¸€å¼µåºŠ'] },
+    { title: 'ç‹¹å°ç©ºé–“å—å›°', desc: 'é›»æ¢¯æ•…éšœã€èº²é¿æ•µäººçš„è¡£æ«ƒã€ç‹¹çª„å··å¼„ã€‚å¿…é ˆç·Šè²¼å°æ–¹ï¼Œæ„Ÿå—å‘¼å¸ã€å¿ƒè·³èˆ‡é«”æº«ã€‚', tags: ['è¢«è¿«è¿‘è·é›¢', 'å¯†é–‰ç©ºé–“'] },
+    { title: 'å–æš–', desc: 'æš´é¢¨é›ªå—å›°ã€æ‰å…¥å†°å†·æ¹–æ°´ã€‚ç‚ºäº†ç”Ÿå­˜å¿…é ˆç·Šæ“å‚³éé«”æº«ï¼Œå¾ç”Ÿå­˜æœ¬èƒ½è½‰åŒ–ç‚ºæ€§å¼µåŠ›ã€‚', tags: ['è¢«è¿«è¿‘è·é›¢', 'ç”Ÿå­˜'] },
+    { title: 'èª°å¼„å‚·ä½ çš„', desc: 'ä¸€æ–¹å—å‚·å›ä¾†ï¼Œå¦ä¸€æ–¹é›–å¹³æ™‚å†·æ·¡ï¼Œçœ‹åˆ°å‚·å£ç¬é–“æš´æ€’æˆ–æ¥µåº¦å¿ƒç–¼ã€‚åŒ…ç´®å‚·å£çš„ç´°è†©èˆ‡ä½”æœ‰æ¬²ã€‚', tags: ['ç…§é¡§', 'ä¿è­·æ¬²'] },
+    { title: 'ç—…å¼±ç…§é¡§', desc: 'ç™¼é«˜ç‡’ã€æ„è­˜æ¨¡ç³Šï¼Œå¹³æ™‚å¼·å‹¢çš„è§’è‰²è®Šå¾—åƒå°å­©ä¸€æ¨£ä¾æ¨£ä¾è³´ã€‚é¤µè—¥ã€æ“¦æ±—ã€åŠå¤¢åŠé†’é–“çš„çœŸæƒ…æµéœ²ã€‚', tags: ['ç…§é¡§', 'è„†å¼±'] },
+    { title: 'å™©å¤¢èˆ‡å®‰æ’«', desc: 'æ·±å¤œå› å‰µå‚·é©šé†’ã€‚å¦ä¸€æ–¹çµ¦äºˆæ“æŠ±ã€æ‘¸é ­ã€è¼•è²å®‰æ…°ï¼Œå±•ç¾åªçµ¦å°æ–¹çš„æŸ”è»Ÿé¢ã€‚', tags: ['ç…§é¡§', 'å®‰æ’«'] },
+    { title: 'é…’å¾ŒåçœŸè¨€', desc: 'å¾®é†ºæˆ–å¤§é†‰ã€‚å¹³æ™‚ä¸æ•¢èªªçš„è©±ã€ä¸æ•¢åšçš„è¦ªæš±è¡Œç‚ºå…¨éƒ½çˆ†ç™¼ã€‚éš”å¤©é†’ä¾†å¾Œçš„å°·å°¬æœŸã€‚', tags: ['å¤±æ§', 'å‘Šç™½'] },
+    { title: 'çœŸè¨€åŠ‘/è©›å’’', desc: 'è¢«è¿«å¿…é ˆèªªçœŸè©±ï¼Œæˆ–å¿…é ˆé€²è¡Œè¦ªå¯†èˆ‰å‹•æ‰èƒ½è§£é™¤çš„è©›å’’ã€‚æ‹¼å‘½å¿è€ä½†æœ€çµ‚å¤±æ•—çš„æ™æ‰æ„Ÿã€‚', tags: ['å¤±æ§', 'é­”æ³•'] },
+    { title: 'é‚£å€‹ã€Œå™¢ã€çš„æ™‚åˆ»', desc: 'å¥½å‹æˆ–æ­»å°é ­åœ¨æŸå€‹å¹³å‡¡ç¬é–“ï¼ˆå¦‚é™½å…‰ä¸‹å›é ­ä¸€ç¬‘ï¼‰ï¼Œçªç„¶æ„è­˜åˆ°ï¼šã€Œç³Ÿäº†ï¼Œæˆ‘æ„›ä¸Šä»–äº†ã€‚ã€', tags: ['å¤±æ§', 'è¦ºé†’'] },
+    { title: 'æ‰‹æŠŠæ‰‹æ•™å­¸', desc: 'æ•™å°„ç®­ã€é‹¼ç´ã€æ’çƒã€å¯«å­—ã€‚å¾èƒŒå¾Œç’°ç¹çš„å§¿å‹¢ï¼Œæ‰‹æŒè¦†è“‹åœ¨æ‰‹èƒŒä¸Šï¼Œè€³é‚Šçš„ä½è²æŒ‡å°ã€‚', tags: ['è‚¢é«”å¼µåŠ›', 'æ•™å­¸'] },
+    { title: 'æ•´ç†è¡£ç‰©', desc: 'å‡ºå¸­æ­£å¼å ´åˆå‰ï¼Œå¹«å°æ–¹æ‰“é ˜å¸¶ã€ç¿»é ˜å­ã€æ’¥é–‹é¡å‰ç¢é«®ã€‚æ¥µè¿‘è·é›¢çš„çœ¼ç¥äº¤ç¹”ï¼Œå‘¼å¸äº¤éŒ¯ã€‚', tags: ['è‚¢é«”å¼µåŠ›', 'è¦ªå¯†'] },
+    { title: 'èº«é«˜å·®/é«”å‹å·®', desc: 'æ‹¿ä¸åˆ°é«˜è™•æ±è¥¿ã€è¡£æœå¤ªéå¯¬å¤§ã€‚é«˜çš„ä¸€æ–¹å¾å¾Œæ–¹å¹«å¿™æ‹¿æ±è¥¿ï¼Œæˆ–ä¸€æ–¹ç©¿è‘—å¦ä¸€æ–¹å¯¬å¤§çš„è¥¯è¡«ã€‚', tags: ['è‚¢é«”å¼µåŠ›', 'é«”å‹å·®'] },
+    { title: 'é›™å‘æš—æˆ€', desc: 'å…©å€‹äººéƒ½è¦ºå¾—å°æ–¹ä¸å–œæ­¡è‡ªå·±ï¼Œéƒ½åœ¨ç˜‹ç‹‚è©¦æ¢ã€‚åˆ»æ„é¿é–‹çš„çœ¼ç¥ã€å°ä»–äººæ¥è¿‘çš„å¾®å°å«‰å¦’ã€‚', tags: ['æš—æ½®æ´¶æ¹§', 'æš—æˆ€'] },
+    { title: 'ç§˜å¯†ç›Ÿå‹', desc: 'çœ¾äººé¢å‰è£ä½œä¸ç†Ÿæˆ–æ•µå°ï¼Œç§åº•ä¸‹å»æœ‰æ·±åšè¯ç¹«ã€‚æ¡Œå­åº•ä¸‹çš„å‹¾è…³ã€åªæœ‰å…©äººæ‡‚çš„æš—è™Ÿã€‚', tags: ['æš—æ½®æ´¶æ¹§', 'ç§˜å¯†'] },
+    { title: 'å¹´ä¸Šå¹´ä¸‹', desc: 'å¹´é½¡å·®è·å¸¶ä¾†çš„æ¬ŠåŠ›ä¸å°ç­‰ã€‚å¹´é•·è€…çš„ç…§é¡§èˆ‡ä½”æœ‰ã€å¹´ä¸‹è€…çš„æˆé•·èˆ‡åæ“Šã€‚', tags: ['å¹´é½¡å·®', 'æ¬ŠåŠ›'] },
+    { title: 'å¸«ç”Ÿé—œä¿‚', desc: 'ç¦å¿Œçš„å¸«ç”Ÿä¹‹æˆ€ã€‚çŸ¥è­˜å‚³æ‰¿ä¸­çš„æƒ…æ„Ÿæ»‹é•·ï¼Œé“å¾·èˆ‡æ…¾æœ›çš„æ™æ‰ã€‚', tags: ['å¸«ç”Ÿ', 'ç¦å¿Œ'] },
+    { title: 'é’æ¢…ç«¹é¦¬', desc: 'å¾å°ä¸€èµ·é•·å¤§ï¼Œæœ€äº†è§£å½¼æ­¤çš„äººã€‚ä½†å‹æƒ…ä½•æ™‚è®Šæˆæ„›æƒ…ï¼Ÿ', tags: ['é’æ¢…ç«¹é¦¬', 'ç”œ'] },
+    { title: 'ä¸€è¦‹é¾æƒ…', desc: 'ç¬¬ä¸€çœ¼å°±ç¢ºå®šæ˜¯é‚£å€‹äººäº†ã€‚å¾æ­¤å±•é–‹ç˜‹ç‹‚è¿½æ±‚æˆ–é»˜é»˜æš—æˆ€ã€‚', tags: ['ä¸€è¦‹é¾æƒ…', 'ç”œ'] },
+    { title: 'ç ´é¡é‡åœ“', desc: 'æ›¾ç¶“åˆ†æ‰‹ï¼Œç¾åœ¨é‡æ–°é–‹å§‹ã€‚å‚·ç—•é‚„åœ¨ï¼Œä½†é¡˜æ„å†è©¦ä¸€æ¬¡ã€‚', tags: ['ç ´é¡é‡åœ“', 'è™ç”œ'] }
 ];
 
 const languageOptions = [
     { code: 'en', label: 'English' },
-    { code: 'zh-Hant', label: 'ÁcÅé¤¤¤å' },
-    { code: 'zh-Hans', label: '?Ê^¤¤¤å' },
-    { code: 'ja', label: '¤é¥»»y' },
-    { code: 'ko', label: '???' },
-    { code: 'es', label: 'Espanol' },
-    { code: 'fr', label: 'Francais' },
+    { code: 'zh-Hant', label: 'ç¹é«”ä¸­æ–‡' },
+    { code: 'zh-Hans', label: 'ç®€ä½“ä¸­æ–‡' },
+    { code: 'ja', label: 'æ—¥æœ¬èª' },
+    { code: 'ko', label: 'í•œêµ­ì–´' },
+    { code: 'es', label: 'EspaÃ±ol' },
+    { code: 'fr', label: 'FranÃ§ais' },
     { code: 'de', label: 'Deutsch' },
-    { code: 'th', label: '???' },
-    { code: 'ru', label: '???????' }
+    { code: 'th', label: 'à¹„à¸—à¸¢' },
+    { code: 'ru', label: 'Ğ ÑƒÑÑĞºĞ¸Ğ¹' }
 ];
 
 const tagLimits = {
@@ -177,174 +177,174 @@ async function renderAO3(params) {
     const container = createElement('div', 'app-container ao3-app');
     
     container.innerHTML = `
-        <header class='ios-header ao3-header'>
-            <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
-            <h1 class='menu-title'>AO3 ¼g§@¤u§@«Ç</h1>
-            <div class='header-actions'>
-                <button class='header-action' id='ao3-menu' title='¿ï³æ'><i class='fas fa-ellipsis-v'></i></button>
+        <header class="ios-header ao3-header">
+            <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> è¿”å›</button>
+            <h1 class="menu-title">AO3 å¯«ä½œå·¥ä½œå®¤</h1>
+            <div class="header-actions">
+                <button class="header-action" id="ao3-menu" title="é¸å–®"><i class="fas fa-ellipsis-v"></i></button>
             </div>
-            <div class='menu-dropdown hidden' id='ao3-menu-dropdown'>
-                <button class='menu-item' id='menu-export-txt'><i class='fas fa-file-alt'></i> ¶×¥X¬° TXT</button>
-                <button class='menu-item' id='menu-export-md'><i class='fas fa-file-code'></i> ¶×¥X¬° Markdown</button>
-                <button class='menu-item' id='menu-import'><i class='fas fa-file-import'></i> ¶×¤J¯ó½Z</button>
-                <button class='menu-item' id='menu-clear-form'><i class='fas fa-eraser'></i> ²MªÅªí³æ</button>
-                <hr class='menu-divider'>
-                <button class='menu-item' id='menu-help'><i class='fas fa-question-circle'></i> ¨Ï¥Î»¡©ú</button>
+            <div class="menu-dropdown hidden" id="ao3-menu-dropdown">
+                <button class="menu-item" id="menu-export-txt"><i class="fas fa-file-alt"></i> åŒ¯å‡ºç‚º TXT</button>
+                <button class="menu-item" id="menu-export-md"><i class="fas fa-file-code"></i> åŒ¯å‡ºç‚º Markdown</button>
+                <button class="menu-item" id="menu-import"><i class="fas fa-file-import"></i> åŒ¯å…¥è‰ç¨¿</button>
+                <button class="menu-item" id="menu-clear-form"><i class="fas fa-eraser"></i> æ¸…ç©ºè¡¨å–®</button>
+                <hr class="menu-divider">
+                <button class="menu-item" id="menu-help"><i class="fas fa-question-circle"></i> ä½¿ç”¨èªªæ˜</button>
             </div>
         </header>
 
-        <div class='ao3-main'>
-            <section class='card form-card'>
-                <h2>§@«~°ò¥»¸ê°T</h2>
-                <div class='field'>
-                    <label for='work-title'>§@«~¼ĞÃD</label>
-                    <input id='work-title' type='text' placeholder='½Ğ¿é¤J¼ĞÃD (¥²¶ñ)'>
+        <div class="ao3-main">
+            <section class="card form-card">
+                <h2>ä½œå“åŸºæœ¬è³‡è¨Š</h2>
+                <div class="field">
+                    <label for="work-title">ä½œå“æ¨™é¡Œ</label>
+                    <input id="work-title" type="text" placeholder="è«‹è¼¸å…¥æ¨™é¡Œ (å¿…å¡«)">
                 </div>
-                <div class='field-grid'>
+                <div class="field-grid">
                     <label>
-                        <span>§@«~¤À¯Å</span>
-                        <select id='work-rating'>
-                            <option value='G'>General Audiences</option>
-                            <option value='T'>Teen & Up</option>
-                            <option value='M'>Mature</option>
-                            <option value='E'>Explicit</option>
-                            <option value='NR'>Not Rated</option>
+                        <span>ä½œå“åˆ†ç´š</span>
+                        <select id="work-rating">
+                            <option value="G">General Audiences</option>
+                            <option value="T">Teen & Up</option>
+                            <option value="M">Mature</option>
+                            <option value="E">Explicit</option>
+                            <option value="NR">Not Rated</option>
                         </select>
                     </label>
                     <label>
-                        <span>¥D­n»y¨¥</span>
-                        <select id='language-select'>
-                            ${languageOptions.map(l => `<option value='${l.code}'>${l.label}</option>`).join('')}
+                        <span>ä¸»è¦èªè¨€</span>
+                        <select id="language-select">
+                            ${languageOptions.map(l => `<option value="${l.code}">${l.label}</option>`).join('')}
                         </select>
                     </label>
                 </div>
-                <div class='field'>
-                    <label>ªş¥[»y¨¥ (¥i¦h¿ï)</label>
-                    <div class='language-grid' id='language-grid'></div>
+                <div class="field">
+                    <label>é™„åŠ èªè¨€ (å¯å¤šé¸)</label>
+                    <div class="language-grid" id="language-grid"></div>
                 </div>
-                <div class='field'>
-                    <label for='work-summary'>ºK­n</label>
-                    <textarea id='work-summary' rows='3' placeholder='¥Î¼Æ¥y¸Ü´y­z§@«~¤º®e'></textarea>
+                <div class="field">
+                    <label for="work-summary">æ‘˜è¦</label>
+                    <textarea id="work-summary" rows="3" placeholder="ç”¨æ•¸å¥è©±æè¿°ä½œå“å…§å®¹"></textarea>
                 </div>
-                <div class='field'>
-                    <label for='work-notes'>§@ªÌ«e¨¥ / ³Æµù</label>
-                    <textarea id='work-notes' rows='2' placeholder='Optional: notes, warnings'></textarea>
+                <div class="field">
+                    <label for="work-notes">ä½œè€…å‰è¨€ / å‚™è¨»</label>
+                    <textarea id="work-notes" rows="2" placeholder="Optional: notes, warnings"></textarea>
                 </div>
             </section>
 
-            <section class='card tag-card'>
+            <section class="card tag-card">
                 <h2>Tags</h2>
-                <div class='tag-field' data-type='fandom'>
-                    <div class='tag-field-header'>
+                <div class="tag-field" data-type="fandom">
+                    <div class="tag-field-header">
                         <label>Fandoms</label>
-                        <span>³Ì¦h 20 ­Ó</span>
+                        <span>æœ€å¤š 20 å€‹</span>
                     </div>
-                    <div class='tag-input'>
-                        <div class='tag-chip-list' id='tags-fandom'></div>
-                        <input type='text' placeholder='¿é¤J«á«ö Enter ¥[¤J' data-tag-input='fandom'>
+                    <div class="tag-input">
+                        <div class="tag-chip-list" id="tags-fandom"></div>
+                        <input type="text" placeholder="è¼¸å…¥å¾ŒæŒ‰ Enter åŠ å…¥" data-tag-input="fandom">
                     </div>
                 </div>
-                <div class='tag-field' data-type='relationship'>
-                    <div class='tag-field-header'>
+                <div class="tag-field" data-type="relationship">
+                    <div class="tag-field-header">
                         <label>Relationships</label>
                         <span>Ex: Steve/Tony</span>
                     </div>
-                    <div class='tag-input'>
-                        <div class='tag-chip-list' id='tags-relationship'></div>
-                        <input type='text' placeholder='Ship¡B¤Í±¡©ÎÅù²Ì' data-tag-input='relationship'>
+                    <div class="tag-input">
+                        <div class="tag-chip-list" id="tags-relationship"></div>
+                        <input type="text" placeholder="Shipã€å‹æƒ…æˆ–ç¾ˆçµ†" data-tag-input="relationship">
                     </div>
                 </div>
-                <div class='tag-field' data-type='characters'>
-                    <div class='tag-field-header'>
+                <div class="tag-field" data-type="characters">
+                    <div class="tag-field-header">
                         <label>Characters</label>
                     </div>
-                    <div class='tag-input'>
-                        <div class='tag-chip-list' id='tags-characters'></div>
-                        <input type='text' placeholder='¥D­n¨¤¦â¦W³æ' data-tag-input='characters'>
+                    <div class="tag-input">
+                        <div class="tag-chip-list" id="tags-characters"></div>
+                        <input type="text" placeholder="ä¸»è¦è§’è‰²åå–®" data-tag-input="characters">
                     </div>
                 </div>
-                <div class='tag-field' data-type='additional'>
-                    <div class='tag-field-header'>
+                <div class="tag-field" data-type="additional">
+                    <div class="tag-field-header">
                         <label>Additional Tags</label>
-                        <span>¤ß±¡¡BÅéµô¡BÄµ¥Ü</span>
+                        <span>å¿ƒæƒ…ã€é«”è£ã€è­¦ç¤º</span>
                     </div>
-                    <div class='tag-input'>
-                        <div class='tag-chip-list' id='tags-additional'></div>
-                        <input type='text' placeholder='¦p Hurt/Comfort¡BSlow Burn' data-tag-input='additional'>
-                    </div>
-                </div>
-            </section>
-
-            <section class='card inspiration-card'>
-                <div class='inspiration-tabs'>
-                    <button class='inspiration-tab active' data-tab='tropes'>±ğ®w</button>
-                    <button class='inspiration-tab' data-tab='characters'>¨¤¦â</button>
-                    <button class='inspiration-tab' data-tab='worldsettings'>¥@¬É³]©w</button>
-                </div>
-                <div class='inspiration-content'>
-                    <div class='inspiration-panel active' id='tropes-panel'>
-                        <div class='panel-header'><span>¿ï¾Ü¤¬°Ê±ğ¨Ó±Òµo³Ğ§@ÆF·P</span></div>
-                        <div class='tropes-list' id='ao3-tropes-list'></div>
-                    </div>
-                    <div class='inspiration-panel' id='characters-panel'>
-                        <div class='panel-header'><span>±q¨¤¦â®w¾É¤J¨¤¦â</span></div>
-                        <div class='characters-list' id='ao3-characters-list'></div>
-                    </div>
-                    <div class='inspiration-panel' id='worldsettings-panel'>
-                        <div class='panel-header'><span>¿ï¾Ü¥@¬ÉÆ[³]©w</span></div>
-                        <div class='worldsettings-list' id='ao3-worldsettings-list'></div>
+                    <div class="tag-input">
+                        <div class="tag-chip-list" id="tags-additional"></div>
+                        <input type="text" placeholder="å¦‚ Hurt/Comfortã€Slow Burn" data-tag-input="additional">
                     </div>
                 </div>
             </section>
 
-            <section class='card editor-card'>
-                <h2>¤º¤å½s¿è¾¹</h2>
-                <div class='toolbar' id='format-toolbar'>
-                    <button type='button' data-format='bold' title='²ÊÅé'>B</button>
-                    <button type='button' data-format='italic' title='±×Åé'>I</button>
-                    <button type='button' data-format='highlight' title='¿Ã¥ú'>HL</button>
-                    <button type='button' data-format='blockquote' title='¤Ş¨¥'>?</button>
-                    <button type='button' data-format='heading' title='³¹¸`¤p¼Ğ'>H3</button>
+            <section class="card inspiration-card">
+                <div class="inspiration-tabs">
+                    <button class="inspiration-tab active" data-tab="tropes">æ¢—åº«</button>
+                    <button class="inspiration-tab" data-tab="characters">è§’è‰²</button>
+                    <button class="inspiration-tab" data-tab="worldsettings">ä¸–ç•Œè¨­å®š</button>
                 </div>
-                <textarea id='work-body' rows='12' placeholder='¨Ï¥Î Markdown »yªk¡G**²ÊÅé**¡B*±×Åé*¡B> ¤Ş¨¥¡B==¼Ğ°O==...'></textarea>
-                <div class='editor-footer'>
-                    <div id='body-stats'>0 words ¡P 0 chars</div>
-                    <div class='generator-controls'>
-                        <label>ª^³ò
-                            <select id='mood-select'>
-                                <option value='fluff'>Fluff</option>
-                                <option value='angst'>Angst</option>
-                                <option value='action'>Action</option>
-                                <option value='hurt'>Hurt/Comfort</option>
+                <div class="inspiration-content">
+                    <div class="inspiration-panel active" id="tropes-panel">
+                        <div class="panel-header"><span>é¸æ“‡äº’å‹•æ¢—ä¾†å•Ÿç™¼å‰µä½œéˆæ„Ÿ</span></div>
+                        <div class="tropes-list" id="ao3-tropes-list"></div>
+                    </div>
+                    <div class="inspiration-panel" id="characters-panel">
+                        <div class="panel-header"><span>å¾è§’è‰²åº«å°å…¥è§’è‰²</span></div>
+                        <div class="characters-list" id="ao3-characters-list"></div>
+                    </div>
+                    <div class="inspiration-panel" id="worldsettings-panel">
+                        <div class="panel-header"><span>é¸æ“‡ä¸–ç•Œè§€è¨­å®š</span></div>
+                        <div class="worldsettings-list" id="ao3-worldsettings-list"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card editor-card">
+                <h2>å…§æ–‡ç·¨è¼¯å™¨</h2>
+                <div class="toolbar" id="format-toolbar">
+                    <button type="button" data-format="bold" title="ç²—é«”">B</button>
+                    <button type="button" data-format="italic" title="æ–œé«”">I</button>
+                    <button type="button" data-format="highlight" title="è¢å…‰">HL</button>
+                    <button type="button" data-format="blockquote" title="å¼•è¨€">â</button>
+                    <button type="button" data-format="heading" title="ç« ç¯€å°æ¨™">H3</button>
+                </div>
+                <textarea id="work-body" rows="12" placeholder="ä½¿ç”¨ Markdown èªæ³•ï¼š**ç²—é«”**ã€*æ–œé«”*ã€> å¼•è¨€ã€==æ¨™è¨˜==..."></textarea>
+                <div class="editor-footer">
+                    <div id="body-stats">0 words Â· 0 chars</div>
+                    <div class="generator-controls">
+                        <label>æ°›åœ
+                            <select id="mood-select">
+                                <option value="fluff">Fluff</option>
+                                <option value="angst">Angst</option>
+                                <option value="action">Action</option>
+                                <option value="hurt">Hurt/Comfort</option>
                             </select>
                         </label>
-                        <button type='button' id='generate-snippet'>²£¥Í¬q¸¨</button>
-                        <button type='button' id='save-draft'>Àx¦s¯ó½Z</button>
-                        <span id='composer-status' class='composer-status'></span>
+                        <button type="button" id="generate-snippet">ç”¢ç”Ÿæ®µè½</button>
+                        <button type="button" id="save-draft">å„²å­˜è‰ç¨¿</button>
+                        <span id="composer-status" class="composer-status"></span>
                     </div>
-                    <div class='ai-controls'>
-                        <button id='ai-generate-btn' class='ai-btn'><i class='fas fa-magic'></i> AI ¥Í¦¨¦P¤H¤å</button>
+                    <div class="ai-controls">
+                        <button id="ai-generate-btn" class="ai-btn"><i class="fas fa-magic"></i> AI ç”ŸæˆåŒäººæ–‡</button>
                     </div>
                 </div>
             </section>
 
-            <section class='card preview-card'>
-                <h2>§Y®É¹wÄı</h2>
-                <div class='preview-header'>
-                    <h3 id='preview-title'>¥¼©R¦W§@«~</h3>
-                    <p id='preview-meta'>General Audiences ¡P English</p>
+            <section class="card preview-card">
+                <h2>å³æ™‚é è¦½</h2>
+                <div class="preview-header">
+                    <h3 id="preview-title">æœªå‘½åä½œå“</h3>
+                    <p id="preview-meta">General Audiences Â· English</p>
                 </div>
-                <p class='preview-summary' id='preview-summary'>¿é¤JºK­n«á·|Åã¥Ü©ó¦¹¡C</p>
-                <div class='preview-notes' id='preview-notes'></div>
-                <div class='preview-body' id='work-preview'>¶}©l®Ñ¼g©Î¨Ï¥Î¤º®e²£¥Í¾¹¡A§Y¥i¬İ¨ì±Æª©®ÄªG¡C</div>
+                <p class="preview-summary" id="preview-summary">è¼¸å…¥æ‘˜è¦å¾Œæœƒé¡¯ç¤ºæ–¼æ­¤ã€‚</p>
+                <div class="preview-notes" id="preview-notes"></div>
+                <div class="preview-body" id="work-preview">é–‹å§‹æ›¸å¯«æˆ–ä½¿ç”¨å…§å®¹ç”¢ç”Ÿå™¨ï¼Œå³å¯çœ‹åˆ°æ’ç‰ˆæ•ˆæœã€‚</div>
             </section>
 
-            <section class='card draft-card'>
-                <div class='draft-header'>
-                    <h2>§Úªº¯ó½Z</h2>
-                    <button type='button' class='ghost-btn' id='clear-drafts'>²M°£¥ş³¡</button>
+            <section class="card draft-card">
+                <div class="draft-header">
+                    <h2>æˆ‘çš„è‰ç¨¿</h2>
+                    <button type="button" class="ghost-btn" id="clear-drafts">æ¸…é™¤å…¨éƒ¨</button>
                 </div>
-                <ul class='draft-list' id='draft-list'></ul>
+                <ul class="draft-list" id="draft-list"></ul>
             </section>
         </div>
     `;
@@ -379,12 +379,12 @@ async function renderAO3(params) {
         if (!normalized) return;
         const current = state.tags[type];
         if (current.length >= tagLimits[type]) {
-            setStatus(container, `¡u${type}¡v¤w¹F¤W­­ (${tagLimits[type]})`);
+            setStatus(container, `ã€Œ${type}ã€å·²é”ä¸Šé™ (${tagLimits[type]})`);
             return;
         }
         const exists = current.some(tag => tag.toLowerCase() === normalized.toLowerCase());
         if (exists) {
-            setStatus(container, '¼ĞÅÒ¤w¦s¦b');
+            setStatus(container, 'æ¨™ç±¤å·²å­˜åœ¨');
             return;
         }
         state.tags[type] = [...current, normalized];
@@ -403,7 +403,7 @@ async function renderAO3(params) {
         state.tags[type].forEach((tag, index) => {
             const chip = document.createElement('span');
             chip.className = 'tag-chip';
-            chip.innerHTML = `${tag}<button type='button' aria-label='²¾°£'>¡Ñ</button>`;
+            chip.innerHTML = `${tag}<button type="button" aria-label="ç§»é™¤">Ã—</button>`;
             chip.querySelector('button')?.addEventListener('click', () => removeTag(type, index));
             tagContainer.appendChild(chip);
         });
@@ -421,17 +421,17 @@ async function renderAO3(params) {
         const notesEl = container.querySelector('#work-notes');
         const bodyEl = container.querySelector('#work-body');
 
-        const title = titleEl?.value.trim() || '¥¼©R¦W§@«~';
+        const title = titleEl?.value.trim() || 'æœªå‘½åä½œå“';
         const rating = ratingMap[ratingEl?.value || 'NR'] || 'Not Rated';
         const primaryLang = getLanguageLabel(langEl?.value || 'en');
         const secondary = state.languages.filter(code => code !== langEl?.value);
-        const languageMeta = secondary.length ? `${primaryLang} + ${secondary.length} »y¨t` : primaryLang;
+        const languageMeta = secondary.length ? `${primaryLang} + ${secondary.length} èªç³»` : primaryLang;
 
         container.querySelector('#preview-title').textContent = title;
-        container.querySelector('#preview-meta').textContent = `${rating} ¡P ${languageMeta}`;
+        container.querySelector('#preview-meta').textContent = `${rating} Â· ${languageMeta}`;
         
         const sum = summaryEl?.value.trim();
-        container.querySelector('#preview-summary').textContent = sum || '¿é¤JºK­n«á·|Åã¥Ü©ó¦¹¡C';
+        container.querySelector('#preview-summary').textContent = sum || 'è¼¸å…¥æ‘˜è¦å¾Œæœƒé¡¯ç¤ºæ–¼æ­¤ã€‚';
         
         const notes = notesEl?.value.trim();
         const notesPreview = container.querySelector('#preview-notes');
@@ -439,7 +439,7 @@ async function renderAO3(params) {
         notesPreview.style.display = notes ? 'block' : 'none';
         
         const body = bodyEl?.value || '';
-        const html = formatMarkdown(body) || '<p>¶}©l®Ñ¼g©Î¨Ï¥Î¤º®e²£¥Í¾¹¡A§Y¥i¬İ¨ì±Æª©®ÄªG¡C</p>';
+        const html = formatMarkdown(body) || '<p>é–‹å§‹æ›¸å¯«æˆ–ä½¿ç”¨å…§å®¹ç”¢ç”Ÿå™¨ï¼Œå³å¯çœ‹åˆ°æ’ç‰ˆæ•ˆæœã€‚</p>';
         container.querySelector('#work-preview').innerHTML = html;
     }
 
@@ -448,7 +448,7 @@ async function renderAO3(params) {
         const text = bodyEl?.value || '';
         const words = text.trim() ? text.trim().split(/\s+/).length : 0;
         const chars = text.length;
-        container.querySelector('#body-stats').textContent = `${words} words ¡P ${chars} chars`;
+        container.querySelector('#body-stats').textContent = `${words} words Â· ${chars} chars`;
     }
 
     function wrapSelection(before = '', after = '', placeholder = 'text') {
@@ -484,15 +484,15 @@ async function renderAO3(params) {
         const selectedLang = langEl?.value || 'zh-Hant';
         const mood = moodEl?.value || 'fluff';
         const langNames = {
-            'en': 'English', 'zh-Hant': 'ÁcÅé¤¤¤å', 'zh-Hans': '?Ê^¤¤¤å',
-            'ja': '¤é¥»»y', 'ko': '???', 'es': 'Espanol',
-            'fr': 'Francais', 'de': 'Deutsch', 'th': '???', 'ru': '???????'
+            'en': 'English', 'zh-Hant': 'ç¹é«”ä¸­æ–‡', 'zh-Hans': 'ç®€ä½“ä¸­æ–‡',
+            'ja': 'æ—¥æœ¬èª', 'ko': 'í•œêµ­ì–´', 'es': 'EspaÃ±ol',
+            'fr': 'FranÃ§ais', 'de': 'Deutsch', 'th': 'à¹„à¸—à¸¢', 'ru': 'Ğ ÑƒÑÑĞºĞ¸Ğ¹'
         };
-        const langName = langNames[selectedLang] || 'ÁcÅé¤¤¤å';
+        const langName = langNames[selectedLang] || 'ç¹é«”ä¸­æ–‡';
         
-        const fandom = state.tags.fandom[0] || '­ì³Ğ';
-        const relationship = state.tags.relationship[0] || '¨¤¦âA/¨¤¦âB';
-        const characters = state.tags.characters.slice(0, 3).join('¡B') || '¥D¨¤';
+        const fandom = state.tags.fandom[0] || 'åŸå‰µ';
+        const relationship = state.tags.relationship[0] || 'è§’è‰²A/è§’è‰²B';
+        const characters = state.tags.characters.slice(0, 3).join('ã€') || 'ä¸»è§’';
         
         const tropeInfo = state.selectedTropes.slice(0, 3).map(idx => {
             const trope = interactionTropes[idx];
@@ -505,7 +505,7 @@ async function renderAO3(params) {
         }).filter(Boolean).join('\n');
 
         const charInfo = state.selectedCharacters.map(c => 
-            `- ${c.name}: ${c.personality || '­Ó©Ê«İ¸É¥R'}`
+            `- ${c.name}: ${c.personality || 'å€‹æ€§å¾…è£œå……'}`
         ).join('\n');
 
         const firstCharId = state.selectedCharacters[0]?.id || null;
@@ -515,31 +515,31 @@ async function renderAO3(params) {
             ? `${context.systemPrompt}\n\n` 
             : '';
         
-        const systemPrompt = appSystemPrompt + `§A¬O¤@¦ì±M·~ªº¦P¤H¤å§@®a¡A¾Õªø®Ú¾Ú¨¤¦â³]©w©M¥@¬ÉÆ[³Ğ§@ ${mood} Ãş«¬ªº¬q¸¨¡C
-½Ğ¨Ï¥Î ${langName} ¼¶¼g¡C
-¿é¥X®æ¦¡¬°¯Â¤å¦r¡A¤£­n¥]§t¥ô¦ó JSON ©Î¼Ğ°O¡C`;
+        const systemPrompt = appSystemPrompt + `ä½ æ˜¯ä¸€ä½å°ˆæ¥­çš„åŒäººæ–‡ä½œå®¶ï¼Œæ“…é•·æ ¹æ“šè§’è‰²è¨­å®šå’Œä¸–ç•Œè§€å‰µä½œ ${mood} é¡å‹çš„æ®µè½ã€‚
+è«‹ä½¿ç”¨ ${langName} æ’°å¯«ã€‚
+è¼¸å‡ºæ ¼å¼ç‚ºç´”æ–‡å­—ï¼Œä¸è¦åŒ…å«ä»»ä½• JSON æˆ–æ¨™è¨˜ã€‚`;
 
-        let prompt = `½Ğ¼g¤@¬q ${mood} Ãş«¬ªº¦P¤H¤å¬q¸¨¡]¬ù 200-400 ¦r¡^¡G
+        let prompt = `è«‹å¯«ä¸€æ®µ ${mood} é¡å‹çš„åŒäººæ–‡æ®µè½ï¼ˆç´„ 200-400 å­—ï¼‰ï¼š
         
 Fandom: ${fandom}
-CP/Ãö«Y: ${relationship}
-¥D­n¨¤¦â: ${characters}
-${tropeInfo ? `\n¤¬°Ê±ğ:\n${tropeInfo}` : ''}
-${worldSettingInfo ? `\n¥@¬ÉÆ[:\n${worldSettingInfo}` : ''}
-${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
+CP/é—œä¿‚: ${relationship}
+ä¸»è¦è§’è‰²: ${characters}
+${tropeInfo ? `\näº’å‹•æ¢—:\n${tropeInfo}` : ''}
+${worldSettingInfo ? `\nä¸–ç•Œè§€:\n${worldSettingInfo}` : ''}
+${charInfo ? `\nè§’è‰²è¨­å®š:\n${charInfo}` : ''}
 
-­n¨D¡G
-1. ¦ÛµM¿Ä¤J¨¤¦â­Ó©Ê
-2. µe­±·P±j¡B¦³¹ï¸Ü
-3. ²Å¦X ${mood} ª^³ò`;
+è¦æ±‚ï¼š
+1. è‡ªç„¶èå…¥è§’è‰²å€‹æ€§
+2. ç•«é¢æ„Ÿå¼·ã€æœ‰å°è©±
+3. ç¬¦åˆ ${mood} æ°›åœ`;
 
-        setStatus(container, 'AI ¥Í¦¨¬q¸¨¤¤...');
+        setStatus(container, 'AI ç”Ÿæˆæ®µè½ä¸­...');
         
         try {
             const settings = await SettingsDB.getAll();
             
             if (!settings.api_url || !settings.api_key) {
-                setStatus(container, '½Ğ¥ı¦b³]©w­¶­±°t¸m API');
+                setStatus(container, 'è«‹å…ˆåœ¨è¨­å®šé é¢é…ç½® API');
                 return;
             }
 
@@ -561,7 +561,7 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
             });
 
             if (!response.ok) {
-                throw new Error(`API ¿ù»~ (${response.status})`);
+                throw new Error(`API éŒ¯èª¤ (${response.status})`);
             }
 
             const data = await response.json();
@@ -572,12 +572,12 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
                 bodyEl.value += `${prefix}${snippet}`;
                 updateStats();
                 updatePreview();
-                setStatus(container, '¤w´¡¤J AI ¥Í¦¨ªº¬q¸¨');
+                setStatus(container, 'å·²æ’å…¥ AI ç”Ÿæˆçš„æ®µè½');
             } else {
-                setStatus(container, '¥Í¦¨¥¢±Ñ¡A½Ğµy«á­«¸Õ');
+                setStatus(container, 'ç”Ÿæˆå¤±æ•—ï¼Œè«‹ç¨å¾Œé‡è©¦');
             }
         } catch (err) {
-            setStatus(container, `¥Í¦¨¥¢±Ñ: ${err.message}`);
+            setStatus(container, `ç”Ÿæˆå¤±æ•—: ${err.message}`);
         }
     }
     function buildDraftPayload() {
@@ -608,14 +608,14 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
         const body = bodyEl?.value.trim();
         const summary = summaryEl?.value.trim();
         if (!body && !summary) {
-            setStatus(container, '¦Ü¤Ö¿é¤J¤º¤å©ÎºK­n¤~¯àÀx¦s');
+            setStatus(container, 'è‡³å°‘è¼¸å…¥å…§æ–‡æˆ–æ‘˜è¦æ‰èƒ½å„²å­˜');
             return;
         }
         const payload = buildDraftPayload();
         state.drafts = [payload, ...state.drafts].slice(0, 12);
         await saveDrafts();
         renderDrafts();
-        setStatus(container, '¯ó½Z¤wÀx¦s');
+        setStatus(container, 'è‰ç¨¿å·²å„²å­˜');
     }
 
     function loadDraft(draft) {
@@ -641,25 +641,25 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
         renderAllTags();
         updateStats();
         updatePreview();
-        setStatus(container, '¤w¸ü¤J¯ó½Z');
+        setStatus(container, 'å·²è¼‰å…¥è‰ç¨¿');
     }
 
     async function deleteDraft(id) {
         state.drafts = state.drafts.filter(draft => draft.id !== id);
         await saveDrafts();
         renderDrafts();
-        setStatus(container, '¯ó½Z¤w§R°£');
+        setStatus(container, 'è‰ç¨¿å·²åˆªé™¤');
     }
 
     async function clearDrafts() {
         if (!state.drafts.length) {
-            setStatus(container, '¨S¦³¯ó½Z¥i²M°£');
+            setStatus(container, 'æ²’æœ‰è‰ç¨¿å¯æ¸…é™¤');
             return;
         }
         state.drafts = [];
         await saveDrafts();
         renderDrafts();
-        setStatus(container, '¯ó½Z¦Cªí¤w²MªÅ');
+        setStatus(container, 'è‰ç¨¿åˆ—è¡¨å·²æ¸…ç©º');
     }
 
     function renderDrafts() {
@@ -668,7 +668,7 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
         list.innerHTML = '';
         if (!state.drafts.length) {
             const empty = document.createElement('li');
-            empty.textContent = '©|¥¼Àx¦s¥ô¦ó¯ó½Z';
+            empty.textContent = 'å°šæœªå„²å­˜ä»»ä½•è‰ç¨¿';
             empty.style.opacity = '0.6';
             list.appendChild(empty);
             return;
@@ -681,10 +681,10 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
             const actions = document.createElement('div');
             actions.className = 'draft-actions';
             const loadBtn = document.createElement('button');
-            loadBtn.textContent = '¸ü¤J';
+            loadBtn.textContent = 'è¼‰å…¥';
             loadBtn.addEventListener('click', () => loadDraft(draft));
             const delBtn = document.createElement('button');
-            delBtn.textContent = '§R°£';
+            delBtn.textContent = 'åˆªé™¤';
             delBtn.addEventListener('click', () => deleteDraft(draft.id));
             actions.append(loadBtn, delBtn);
             item.append(meta, actions);
@@ -700,11 +700,11 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
             const item = document.createElement('div');
             item.className = 'trope-item' + (state.selectedTropes.includes(index) ? ' selected' : '');
             item.innerHTML = `
-                <div class='trope-header'>
-                    <span class='trope-title'>${trope.title}</span>
-                    <span class='trope-tags'>${trope.tags.map(t => `#${t}`).join(' ')}</span>
+                <div class="trope-header">
+                    <span class="trope-title">${trope.title}</span>
+                    <span class="trope-tags">${trope.tags.map(t => `#${t}`).join(' ')}</span>
                 </div>
-                <div class='trope-desc'>${trope.desc}</div>
+                <div class="trope-desc">${trope.desc}</div>
             `;
             item.addEventListener('click', () => toggleTrope(index));
             listContainer.appendChild(item);
@@ -727,7 +727,7 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
         listContainer.innerHTML = '';
 
         if (characters.length === 0) {
-            listContainer.innerHTML = '`<div class=`'`empty-hint`'`>½Ğ¥ı¦b³]©w¤¤²K¥[¨¤¦â</div>`';
+            listContainer.innerHTML = '<div class="empty-hint">è«‹å…ˆåœ¨è¨­å®šä¸­æ·»åŠ è§’è‰²</div>';
             return;
         }
 
@@ -736,10 +736,10 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
             const isSelected = state.selectedCharacters.some(c => c.id === char.id);
             item.className = 'char-item' + (isSelected ? ' selected' : '');
             item.innerHTML = `
-                <div class='char-avatar'>${char.avatar ? `<img src='${char.avatar}' alt='${char.name}'>` : `<span>${char.name[0]}</span>`}</div>
-                <div class='char-info'>
-                    <div class='char-name'>${char.name}</div>
-                    ${char.personality ? `<div class='char-desc'>${char.personality.slice(0, 50)}...</div>` : ''}
+                <div class="char-avatar">${char.avatar ? `<img src="${char.avatar}" alt="${char.name}">` : `<span>${char.name[0]}</span>`}</div>
+                <div class="char-info">
+                    <div class="char-name">${char.name}</div>
+                    ${char.personality ? `<div class="char-desc">${char.personality.slice(0, 50)}...</div>` : ''}
                 </div>
             `;
             item.addEventListener('click', () => toggleCharacter(char));
@@ -780,11 +780,11 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
             const item = document.createElement('div');
             item.className = 'worldsetting-item' + (state.selectedWorldSettings.includes(index) ? ' selected' : '');
             item.innerHTML = `
-                <div class='worldsetting-header'>
-                    <span class='worldsetting-title'>${setting.title}</span>
-                    <span class='worldsetting-tags'>${setting.tags.map(t => `#${t}`).join(' ')}</span>
+                <div class="worldsetting-header">
+                    <span class="worldsetting-title">${setting.title}</span>
+                    <span class="worldsetting-tags">${setting.tags.map(t => `#${t}`).join(' ')}</span>
                 </div>
-                <div class='worldsetting-desc'>${setting.desc}</div>
+                <div class="worldsetting-desc">${setting.desc}</div>
             `;
             item.addEventListener('click', () => toggleWorldSetting(index));
             listContainer.appendChild(item);
@@ -818,7 +818,7 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
         const notesEl = container.querySelector('#work-notes');
         const bodyEl = container.querySelector('#work-body');
 
-        const title = titleEl?.value || '¥¼©R¦W§@«~';
+        const title = titleEl?.value || 'æœªå‘½åä½œå“';
         const summary = summaryEl?.value || '';
         const notes = notesEl?.value || '';
         const body = bodyEl?.value || '';
@@ -836,7 +836,7 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
         a.click();
         URL.revokeObjectURL(url);
         
-        setStatus(container, '¤w¶×¥X¬° TXT');
+        setStatus(container, 'å·²åŒ¯å‡ºç‚º TXT');
         toggleMenuDropdown();
     }
 
@@ -848,7 +848,7 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
         const notesEl = container.querySelector('#work-notes');
         const bodyEl = container.querySelector('#work-body');
 
-        const title = titleEl?.value || '¥¼©R¦W§@«~';
+        const title = titleEl?.value || 'æœªå‘½åä½œå“';
         const rating = ratingEl?.value || 'G';
         const lang = langEl?.value || 'en';
         const summary = summaryEl?.value || '';
@@ -870,7 +870,7 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
         a.click();
         URL.revokeObjectURL(url);
         
-        setStatus(container, '¤w¶×¥X¬° Markdown');
+        setStatus(container, 'å·²åŒ¯å‡ºç‚º Markdown');
         toggleMenuDropdown();
     }
 
@@ -907,9 +907,9 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
                 }
                 
                 updatePreview();
-                setStatus(container, '¤w¶×¤J¯ó½Z');
+                setStatus(container, 'å·²åŒ¯å…¥è‰ç¨¿');
             } catch (err) {
-                setStatus(container, '¶×¤J¥¢±Ñ: ' + err.message);
+                setStatus(container, 'åŒ¯å…¥å¤±æ•—: ' + err.message);
             }
             
             toggleMenuDropdown();
@@ -919,7 +919,7 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
     }
 
     function clearForm() {
-        if (confirm('½T©w­n²MªÅ©Ò¦³Äæ¦ì¶Ü¡H')) {
+        if (confirm('ç¢ºå®šè¦æ¸…ç©ºæ‰€æœ‰æ¬„ä½å—ï¼Ÿ')) {
             const titleEl = container.querySelector('#work-title');
             const summaryEl = container.querySelector('#work-summary');
             const notesEl = container.querySelector('#work-notes');
@@ -934,25 +934,25 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
             renderAllTags();
             renderLanguageChips();
             updatePreview();
-            setStatus(container, '¤w²MªÅªí³æ');
+            setStatus(container, 'å·²æ¸…ç©ºè¡¨å–®');
         }
         toggleMenuDropdown();
     }
 
     function showHelp() {
-        alert(`AO3 ¦æ°Ê¼g§@¤u§@«Ç¨Ï¥Î»¡©ú¡G
+        alert(`AO3 è¡Œå‹•å¯«ä½œå·¥ä½œå®¤ä½¿ç”¨èªªæ˜ï¼š
 
-1. ¶ñ¼g§@«~¼ĞÃD¡B¤À¯Å©M»y¨¥
-2. ¨Ï¥Î¼ĞÅÒÄæ¦ì¥[¤J Fandom¡BCP¡B¨¤¦âµ¥
-3. ¦b½s¿è¾¹¤¤¼¶¼g¥¿¤å¡]¤ä´© Markdown¡^
-4. ¨Ï¥Î¡u²£¥Í¬q¸¨¡vÀò±oÆF·P
-5. Àx¦s¯ó½ZÁ×§K¿ò¥¢
-6. §¹¦¨«á¥i¶×¥X¬° TXT ©Î Markdown
+1. å¡«å¯«ä½œå“æ¨™é¡Œã€åˆ†ç´šå’Œèªè¨€
+2. ä½¿ç”¨æ¨™ç±¤æ¬„ä½åŠ å…¥ Fandomã€CPã€è§’è‰²ç­‰
+3. åœ¨ç·¨è¼¯å™¨ä¸­æ’°å¯«æ­£æ–‡ï¼ˆæ”¯æ´ Markdownï¼‰
+4. ä½¿ç”¨ã€Œç”¢ç”Ÿæ®µè½ã€ç²å¾—éˆæ„Ÿ
+5. å„²å­˜è‰ç¨¿é¿å…éºå¤±
+6. å®Œæˆå¾Œå¯åŒ¯å‡ºç‚º TXT æˆ– Markdown
 
-§Ö±¶Áä¡G
-- Ctrl/Cmd + S¡GÀx¦s¯ó½Z
-- Ctrl/Cmd + B¡G²ÊÅé
-- Ctrl/Cmd + I¡G±×Åé`);
+å¿«æ·éµï¼š
+- Ctrl/Cmd + Sï¼šå„²å­˜è‰ç¨¿
+- Ctrl/Cmd + Bï¼šç²—é«”
+- Ctrl/Cmd + Iï¼šæ–œé«”`);
         toggleMenuDropdown();
     }
 
@@ -993,15 +993,15 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
 
         const selectedLang = langEl?.value || 'zh-Hant';
         const langNames = {
-            'en': 'English', 'zh-Hant': 'ÁcÅé¤¤¤å', 'zh-Hans': '?Ê^¤¤¤å',
-            'ja': '¤é¥»»y', 'ko': '???', 'es': 'Espanol',
-            'fr': 'Francais', 'de': 'Deutsch', 'th': '???', 'ru': '???????'
+            'en': 'English', 'zh-Hant': 'ç¹é«”ä¸­æ–‡', 'zh-Hans': 'ç®€ä½“ä¸­æ–‡',
+            'ja': 'æ—¥æœ¬èª', 'ko': 'í•œêµ­ì–´', 'es': 'EspaÃ±ol',
+            'fr': 'FranÃ§ais', 'de': 'Deutsch', 'th': 'à¹„à¸—à¸¢', 'ru': 'Ğ ÑƒÑÑĞºĞ¸Ğ¹'
         };
-        const langName = langNames[selectedLang] || 'ÁcÅé¤¤¤å';
+        const langName = langNames[selectedLang] || 'ç¹é«”ä¸­æ–‡';
         
-        const fandom = state.tags.fandom.join(', ') || '­ì³Ğ';
-        const relationship = state.tags.relationship.join(', ') || '¥¼«ü©w';
-        const characters = state.tags.characters.join(', ') || '¥¼«ü©w';
+        const fandom = state.tags.fandom.join(', ') || 'åŸå‰µ';
+        const relationship = state.tags.relationship.join(', ') || 'æœªæŒ‡å®š';
+        const characters = state.tags.characters.join(', ') || 'æœªæŒ‡å®š';
         const additionalTags = state.tags.additional.join(', ') || '';
 
         const tropeInfo = state.selectedTropes.map(idx => {
@@ -1017,7 +1017,7 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
         const charPersonalities = [];
         for (const c of state.selectedCharacters) {
             if (c.personality) {
-                charPersonalities.push(`¡i${c.name}¡j\n${c.personality}`);
+                charPersonalities.push(`ã€${c.name}ã€‘\n${c.personality}`);
             }
         }
         const charInfo = charPersonalities.join('\n\n');
@@ -1029,37 +1029,37 @@ ${charInfo ? `\n¨¤¦â³]©w:\n${charInfo}` : ''}
             ? `${context.systemPrompt}\n\n` 
             : '';
         
-        const systemPrompt = `${appSystemPrompt}§A¬O¤@¦ì±M·~ªº¦P¤H¤å§@®a¡A¾Õªø®Ú¾Ú¨¤¦â³]©w¡B¥@¬ÉÆ[©M¤¬°Ê±ğ³Ğ§@²Å¦X¤Hª«©Ê®æªº¦P¤H¤å¡C
-½Ğ¨Ï¥Î ${langName} ¼¶¼g¡C
-¿é¥X®æ¦¡¬° JSON: {'title': '¼ĞÃD', 'summary': 'ºK­n¡]¤@¥y¸Ü¡^', 'content': '¥¿¤å¤º®e¡]¤À¬q¸¨¡^', 'tags': ['¼ĞÅÒ1', '¼ĞÅÒ2']}
+        const systemPrompt = `${appSystemPrompt}ä½ æ˜¯ä¸€ä½å°ˆæ¥­çš„åŒäººæ–‡ä½œå®¶ï¼Œæ“…é•·æ ¹æ“šè§’è‰²è¨­å®šã€ä¸–ç•Œè§€å’Œäº’å‹•æ¢—å‰µä½œç¬¦åˆäººç‰©æ€§æ ¼çš„åŒäººæ–‡ã€‚
+è«‹ä½¿ç”¨ ${langName} æ’°å¯«ã€‚
+è¼¸å‡ºæ ¼å¼ç‚º JSON: {"title": "æ¨™é¡Œ", "summary": "æ‘˜è¦ï¼ˆä¸€å¥è©±ï¼‰", "content": "æ­£æ–‡å…§å®¹ï¼ˆåˆ†æ®µè½ï¼‰", "tags": ["æ¨™ç±¤1", "æ¨™ç±¤2"]}
 
-­«­n³W«h¡G
-1. ¥²¶·²`¤J¬ã¨s¨¤¦â­Ó©Ê¡A¹ï¸Ü©M¦æ¬°­n²Å¦X¤H³]
-2. ¨Ì¾Ú¿ï¾Üªº¥@¬ÉÆ[©M¤¬°Ê±ğ®i¶}¬G¨Æ
-3. ¥¿¤å»İ¦³§¹¾ãªº°_©ÓÂà¦X
-4. ¦r¼Æ¬ù 800-1500 ¦r`;
+é‡è¦è¦å‰‡ï¼š
+1. å¿…é ˆæ·±å…¥ç ”ç©¶è§’è‰²å€‹æ€§ï¼Œå°è©±å’Œè¡Œç‚ºè¦ç¬¦åˆäººè¨­
+2. ä¾æ“šé¸æ“‡çš„ä¸–ç•Œè§€å’Œäº’å‹•æ¢—å±•é–‹æ•…äº‹
+3. æ­£æ–‡éœ€æœ‰å®Œæ•´çš„èµ·æ‰¿è½‰åˆ
+4. å­—æ•¸ç´„ 800-1500 å­—`;
 
-        let prompt = `½Ğ¥Í¦¨¤@½g§¹¾ãªº¦P¤H¤å¡G
+        let prompt = `è«‹ç”Ÿæˆä¸€ç¯‡å®Œæ•´çš„åŒäººæ–‡ï¼š
 
-¡i°ò¥»¸ê°T¡j
+ã€åŸºæœ¬è³‡è¨Šã€‘
 Fandom: ${fandom}
-CP/Ãö«Y: ${relationship}
-¥D­n¨¤¦â: ${characters}
-${additionalTags ? `ªş¥[¼ĞÅÒ: ${additionalTags}` : ''}
+CP/é—œä¿‚: ${relationship}
+ä¸»è¦è§’è‰²: ${characters}
+${additionalTags ? `é™„åŠ æ¨™ç±¤: ${additionalTags}` : ''}
 
-${tropeInfo ? `¡i¤¬°Ê±ğ¡j\n${tropeInfo}\n` : ''}
-${worldSettingInfo ? `¡i¥@¬ÉÆ[³]©w¡j\n${worldSettingInfo}\n` : ''}
-${charInfo ? `¡i¨¤¦â¸Ô²Ó³]©w¡j\n${charInfo}\n` : ''}
+${tropeInfo ? `ã€äº’å‹•æ¢—ã€‘\n${tropeInfo}\n` : ''}
+${worldSettingInfo ? `ã€ä¸–ç•Œè§€è¨­å®šã€‘\n${worldSettingInfo}\n` : ''}
+${charInfo ? `ã€è§’è‰²è©³ç´°è¨­å®šã€‘\n${charInfo}\n` : ''}
 
-½Ğ¥Í¦¨§¹¾ãªº¦P¤H¤å¡A½T«O¨¤¦â¦æ¬°²Å¦X¨ä­Ó©Ê³]©w¡C`;
+è«‹ç”Ÿæˆå®Œæ•´çš„åŒäººæ–‡ï¼Œç¢ºä¿è§’è‰²è¡Œç‚ºç¬¦åˆå…¶å€‹æ€§è¨­å®šã€‚`;
 
-        setStatus(container, 'AI ¥Í¦¨¤¤...');
+        setStatus(container, 'AI ç”Ÿæˆä¸­...');
         
         try {
             const settings = await SettingsDB.getAll();
             
             if (!settings.api_url || !settings.api_key) {
-                setStatus(container, '½Ğ¥ı¦b³]©w­¶­±°t¸m API');
+                setStatus(container, 'è«‹å…ˆåœ¨è¨­å®šé é¢é…ç½® API');
                 return;
             }
 
@@ -1081,7 +1081,7 @@ ${charInfo ? `¡i¨¤¦â¸Ô²Ó³]©w¡j\n${charInfo}\n` : ''}
             });
 
             if (!response.ok) {
-                throw new Error(`API ¿ù»~ (${response.status})`);
+                throw new Error(`API éŒ¯èª¤ (${response.status})`);
             }
 
             const data = await response.json();
@@ -1096,7 +1096,7 @@ ${charInfo ? `¡i¨¤¦â¸Ô²Ó³]©w¡j\n${charInfo}\n` : ''}
             }
 
             if (parsed && parsed.content) {
-                if (titleEl) titleEl.value = parsed.title || 'AI ¥Í¦¨ªº¦P¤H¤å';
+                if (titleEl) titleEl.value = parsed.title || 'AI ç”Ÿæˆçš„åŒäººæ–‡';
                 if (summaryEl && parsed.summary) summaryEl.value = parsed.summary;
                 if (bodyEl) bodyEl.value = parsed.content;
                 
@@ -1111,12 +1111,12 @@ ${charInfo ? `¡i¨¤¦â¸Ô²Ó³]©w¡j\n${charInfo}\n` : ''}
                 
                 updateStats();
                 updatePreview();
-                setStatus(container, '¤w¥Í¦¨§¹¾ãªº¦P¤H¤å¤º®e');
+                setStatus(container, 'å·²ç”Ÿæˆå®Œæ•´çš„åŒäººæ–‡å…§å®¹');
             } else {
-                setStatus(container, '¥Í¦¨¥¢±Ñ¡A½Ğµy«á­«¸Õ');
+                setStatus(container, 'ç”Ÿæˆå¤±æ•—ï¼Œè«‹ç¨å¾Œé‡è©¦');
             }
         } catch (err) {
-            setStatus(container, `¥Í¦¨¥¢±Ñ: ${err.message}`);
+            setStatus(container, `ç”Ÿæˆå¤±æ•—: ${err.message}`);
         }
     }
 

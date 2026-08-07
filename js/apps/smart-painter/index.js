@@ -3,12 +3,12 @@ import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 const FILTERS = [
-  { id: 'normal', name: '­ì¹Ï', filter: 'none' },
-  { id: 'vintage', name: '´_¥j', filter: 'sepia(0.6)' },
-  { id: 'bw', name: '¶Â¥Õ', filter: 'grayscale(1)' },
-  { id: 'warm', name: '·x¦â', filter: 'sepia(0.3) saturate(1.4)' },
-  { id: 'cool', name: '§N¦â', filter: 'hue-rotate(180deg) saturate(0.8)' },
-  { id: 'drama', name: 'À¸¼@', filter: 'contrast(1.3) brightness(0.9)' }
+  { id: 'normal', name: 'åŸåœ–', filter: 'none' },
+  { id: 'vintage', name: 'å¾©å¤', filter: 'sepia(0.6)' },
+  { id: 'bw', name: 'é»‘ç™½', filter: 'grayscale(1)' },
+  { id: 'warm', name: 'æš–è‰²', filter: 'sepia(0.3) saturate(1.4)' },
+  { id: 'cool', name: 'å†·è‰²', filter: 'hue-rotate(180deg) saturate(0.8)' },
+  { id: 'drama', name: 'æˆ²åŠ‡', filter: 'contrast(1.3) brightness(0.9)' }
 ];
 
 let photos = [];
@@ -27,32 +27,32 @@ async function renderSmartPainter(params) {
   await loadPhotos();
   const container = createElement('div', 'app-container painter-app');
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'><i class='fas fa-chevron-left'></i> ªğ¦^</button>
-      <h1 class='menu-title'>·Ó¬ÛÀ]</h1>
+    <header class="ios-header">
+      <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> è¿”å›</button>
+      <h1 class="menu-title">ç…§ç›¸é¤¨</h1>
     </header>
-    <div class='page'>
-      <div class='preview-area'>
-        <div class='preview-placeholder' id='preview'>
-          <i class='fas fa-camera'></i>
-          <p>¿ï¾Ü·Ó¤ù¶}©l½s¿è</p>
+    <div class="page">
+      <div class="preview-area">
+        <div class="preview-placeholder" id="preview">
+          <i class="fas fa-camera"></i>
+          <p>é¸æ“‡ç…§ç‰‡é–‹å§‹ç·¨è¼¯</p>
         </div>
       </div>
-      <div class='filter-bar'>
+      <div class="filter-bar">
         ${FILTERS.map(f => `
-          <button class='filter-btn ${f.id === activeFilter ? 'active' : ''}' data-filter='${f.filter}' data-id='${f.id}'>
+          <button class="filter-btn ${f.id === activeFilter ? 'active' : ''}" data-filter="${f.filter}" data-id="${f.id}">
             ${f.name}
           </button>
         `).join('')}
       </div>
-      <div class='action-row'>
-        <button class='upload-btn'><i class='fas fa-upload'></i> ¤W¶Ç·Ó¤ù</button>
-        <button class='save-btn'><i class='fas fa-download'></i> Àx¦s</button>
+      <div class="action-row">
+        <button class="upload-btn"><i class="fas fa-upload"></i> ä¸Šå‚³ç…§ç‰‡</button>
+        <button class="save-btn"><i class="fas fa-download"></i> å„²å­˜</button>
       </div>
-      <div class='gallery'>
-        <h3>¬ÛÃ¯ (${photos.length})</h3>
-        <div class='photo-grid'>
-          ${photos.slice(-6).map(p => `<div class='photo-thumb' style='background-image: url('${p.url}')'></div>`).join('') || '<div class='empty-gallery'>©|µL·Ó¤ù</div>'}
+      <div class="gallery">
+        <h3>ç›¸ç°¿ (${photos.length})</h3>
+        <div class="photo-grid">
+          ${photos.slice(-6).map(p => `<div class="photo-thumb" style="background-image: url('${p.url}')"></div>`).join('') || '<div class="empty-gallery">å°šç„¡ç…§ç‰‡</div>'}
         </div>
       </div>
     </div>
@@ -69,10 +69,10 @@ async function renderSmartPainter(params) {
     };
   });
   container.querySelector('.upload-btn').onclick = () => {
-    const url = prompt('¿é¤J¹Ï¤ù URL¡G');
+    const url = prompt('è¼¸å…¥åœ–ç‰‡ URLï¼š');
     if (url) {
       const preview = container.querySelector('#preview');
-      preview.innerHTML = `<img src='${url}' style='width: 100%; height: 100%; object-fit: contain; filter: ${FILTERS.find(f => f.id === activeFilter).filter};'>`;
+      preview.innerHTML = `<img src="${url}" style="width: 100%; height: 100%; object-fit: contain; filter: ${FILTERS.find(f => f.id === activeFilter).filter};">`;
     }
   };
   container.querySelector('.save-btn').onclick = async () => {
@@ -88,9 +88,9 @@ async function renderSmartPainter(params) {
 
 export default {
   id: 'smart-painter',
-  name: '·Ó¬ÛÀ]',
+  name: 'ç…§ç›¸é¤¨',
   icon: 'camera',
   routes: [{ path: '/smart-painter', render: renderSmartPainter }],
-  navItem: { label: '·Ó¬ÛÀ]', icon: 'camera', path: '/smart-painter', showInNav: true, order: 131 },
+  navItem: { label: 'ç…§ç›¸é¤¨', icon: 'camera', path: '/smart-painter', showInNav: true, order: 131 },
   stylesPath: 'js/apps/smart-painter/style.css'
 };

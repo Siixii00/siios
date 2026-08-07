@@ -1,4 +1,4 @@
-import Router from '../../router.js';
+ï»¿import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
@@ -10,7 +10,7 @@ let state = {
   artistName: '',
   artistAvatar: '',
   messages: [],
-  fanName: '?',
+  fanName: 'íŒ¬',
   mode: 'artist',
   isGenerating: false
 };
@@ -31,12 +31,12 @@ function renderFeed(container) {
   if (!feed) return;
   
   feed.innerHTML = state.messages.map(msg => `
-    <div class='bubble-msg ${msg.role}'>
-      ${msg.fanName ? `<span class='fan-name'>${msg.fanName}</span>` : ''}
+    <div class="bubble-msg ${msg.role}">
+      ${msg.fanName ? `<span class="fan-name">${msg.fanName}</span>` : ''}
       ${msg.text}
-      ${msg.isStreaming ? '<span class='streaming-indicator'>...</span>' : ''}
+      ${msg.isStreaming ? '<span class="streaming-indicator">...</span>' : ''}
     </div>
-  `).join('') || '<div class='empty-msg'>©|µL°T®§</div>';
+  `).join('') || '<div class="empty-msg">å°šç„¡è¨Šæ¯</div>';
   
   feed.scrollTop = feed.scrollHeight;
 }
@@ -62,7 +62,7 @@ async function generateArtistReply(container, fanMessage) {
     const settings = await APIClient.getSettings();
     
     if (!settings.api_url || !settings.api_key) {
-      state.messages[msgIndex].text = '[API ¥¼³]©w]';
+      state.messages[msgIndex].text = '[API æœªè¨­å®š]';
       state.messages[msgIndex].isStreaming = false;
       renderFeed(container);
       return;
@@ -97,7 +97,7 @@ async function generateArtistReply(container, fanMessage) {
     });
     
     if (!response.ok) {
-      throw new Error(`API ¿ù»~: ${response.status}`);
+      throw new Error(`API éŒ¯èª¤: ${response.status}`);
     }
     
     const reader = response.body.getReader();
@@ -134,11 +134,11 @@ async function generateArtistReply(container, fanMessage) {
     await saveState();
     
   } catch (error) {
-    state.messages[msgIndex].text = `[¿ù»~: ${error.message}]`;
+    state.messages[msgIndex].text = `[éŒ¯èª¤: ${error.message}]`;
     state.messages[msgIndex].isStreaming = false;
     if (window.showError) {
       window.showError({
-        title: 'Bubbles ¥Í¦¨¿ù»~',
+        title: 'Bubbles ç”ŸæˆéŒ¯èª¤',
         message: error.message,
         details: error.stack || ''
       });
@@ -179,50 +179,50 @@ async function renderBubbles(params) {
   const container = createElement('div', 'app-container bubbles-app');
   
   container.innerHTML = `
-    <header class='ios-header'>
-      <button class='ios-back-btn'>
-        <i class='fas fa-chevron-left'></i> ªğ¦^
+    <header class="ios-header">
+      <button class="ios-back-btn">
+        <i class="fas fa-chevron-left"></i> è¿”å›
       </button>
-      <h1 class='menu-title'>Bubble</h1>
+      <h1 class="menu-title">Bubble</h1>
     </header>
     
-    <div class='page'>
-      <div class='bubbles-settings'>
-        <div class='settings-row'>
-          <label>¿ï¾Ü¨¤¦â</label>
-          <select class='character-select'>
-            <option value=''>-- ½Ğ¿ï¾Ü --</option>
+    <div class="page">
+      <div class="bubbles-settings">
+        <div class="settings-row">
+          <label>é¸æ“‡è§’è‰²</label>
+          <select class="character-select">
+            <option value="">-- è«‹é¸æ“‡ --</option>
             ${characters.map(c => `
-              <option value='${c.id}' ${state.characterId === c.id ? 'selected' : ''}>
+              <option value="${c.id}" ${state.characterId === c.id ? 'selected' : ''}>
                 ${c.name}
               </option>
             `).join('')}
           </select>
         </div>
         
-        <div class='mode-switch'>
-          <button class='mode-btn ${state.mode === 'artist' ? 'active' : ''}' data-mode='artist'>
-            <i class='fas fa-star'></i> ÃÀ¤H¼Ò¦¡
+        <div class="mode-switch">
+          <button class="mode-btn ${state.mode === 'artist' ? 'active' : ''}" data-mode="artist">
+            <i class="fas fa-star"></i> è—äººæ¨¡å¼
           </button>
-          <button class='mode-btn ${state.mode === 'fan' ? 'active' : ''}' data-mode='fan'>
-            <i class='fas fa-heart'></i> ¯»µ·¼Ò¦¡
+          <button class="mode-btn ${state.mode === 'fan' ? 'active' : ''}" data-mode="fan">
+            <i class="fas fa-heart"></i> ç²‰çµ²æ¨¡å¼
           </button>
         </div>
         
         ${state.mode === 'fan' ? `
-          <div class='settings-row'>
-            <label>¯»µ·¦WºÙ</label>
-            <input type='text' class='fan-name-input' value='${state.fanName}' placeholder='¿é¤J¯»µ·¦WºÙ'>
+          <div class="settings-row">
+            <label>ç²‰çµ²åç¨±</label>
+            <input type="text" class="fan-name-input" value="${state.fanName}" placeholder="è¼¸å…¥ç²‰çµ²åç¨±">
           </div>
         ` : ''}
       </div>
       
-      <div class='bubbles-feed'></div>
+      <div class="bubbles-feed"></div>
       
-      <div class='bubbles-input-area'>
-        <input type='text' class='bubble-input' placeholder='¿é¤J°T®§...' ${state.isGenerating ? 'disabled' : ''}>
-        <button class='send-btn' ${state.isGenerating ? 'disabled' : ''}>
-          <i class='fas fa-paper-plane'></i>
+      <div class="bubbles-input-area">
+        <input type="text" class="bubble-input" placeholder="è¼¸å…¥è¨Šæ¯..." ${state.isGenerating ? 'disabled' : ''}>
+        <button class="send-btn" ${state.isGenerating ? 'disabled' : ''}>
+          <i class="fas fa-paper-plane"></i>
         </button>
       </div>
     </div>
