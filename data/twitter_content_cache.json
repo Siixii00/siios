@@ -1,137 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-08-07T15:57:06.388411",
-    "total_items": 49
+    "last_updated": "2026-08-07T16:58:32.291396",
+    "total_items": 52
   },
   "content": {
     "tech": [
       {
-        "title": "99% of My Website Traffic Is Bots",
-        "url": "https://patronview.com/news/99-percent-of-my-website-traffic-is-bots/",
+        "title": "An all-sky map of half a million supermassive black holes",
+        "url": "https://www.sdss.org/black-hole-mapper-release-20/",
         "source": "Hacker News",
-        "score": 127
-      },
-      {
-        "title": "Show HN: Wyzer Programming Language",
-        "url": "https://github.com/Wyzer-Lang/wyzer",
-        "source": "Hacker News",
-        "score": 74
-      },
-      {
-        "title": "Iceberg Collapses and Flips over in Ilulissat, Greenland (July 25, 2026) [video]",
-        "url": "https://www.youtube.com/watch?v=UufMqwyO7pY",
-        "source": "Hacker News",
-        "score": 62
+        "score": 28
       },
       {
         "title": "New Mexico court orders Meta to pay $567m over harms to children’s mental health",
         "url": "https://www.theguardian.com/technology/2026/aug/06/new-mexico-court-meta",
         "source": "Hacker News",
-        "score": 514
+        "score": 559
+      },
+      {
+        "title": "Responding to the next frontier of critical cyber capabilities",
+        "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
+        "source": "Hacker News",
+        "score": 7
       },
       {
         "title": "AMD acquires Taalas to boost inference performance by etching models in silicon",
         "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344",
         "source": "Hacker News",
-        "score": 781
+        "score": 801
       },
       {
-        "title": "Thoroughly Understanding C++ ABI",
-        "url": "https://ykiko.me/en/articles/692886292/",
+        "title": "Show HN: Wyzer Programming Language",
+        "url": "https://github.com/Wyzer-Lang/wyzer",
         "source": "Hacker News",
-        "score": 25
-      },
-      {
-        "title": "Kitesurf: Agent-first browser that runs in V8 isolates",
-        "url": "https://blog.cloudflare.com/kitesurf/",
-        "source": "Hacker News",
-        "score": 54
-      },
-      {
-        "title": "U.S. economy lost 23,000 jobs in July, a sudden reversal",
-        "url": "https://www.nbcnews.com/business/economy/july-2026-jobs-report-rcna591138",
-        "source": "Hacker News",
-        "score": 280
-      },
-      {
-        "title": "Show HN: textlog – A quiet, text-only microblogging platform, open-source, no JS",
-        "url": "https://textlog.cc/about",
-        "source": "Hacker News",
-        "score": 35
+        "score": 100
       },
       {
         "title": "Making Postgres 300x faster for analytics: batching, operator fusion, and SIMD",
         "url": "https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/",
         "source": "Hacker News",
-        "score": 56
+        "score": 88
       },
       {
-        "title": "Taste Is All That's Left",
-        "url": "https://notashelf.dev/posts/taste-is-all-thats-left",
+        "title": "Show HN: textlog – A quiet, text-only microblogging platform, open-source, no JS",
+        "url": "https://textlog.cc/about",
         "source": "Hacker News",
-        "score": 575
+        "score": 65
       },
       {
-        "title": "USA Today Co., partners with Palantir to analyze audience data",
-        "url": "https://www.niemanlab.org/2026/08/americas-largest-newspaper-chain-usa-today-co-partners-with-palantir-to-analyze-audience-data/",
+        "title": "Kitesurf: Agent-first browser that runs in V8 isolates",
+        "url": "https://blog.cloudflare.com/kitesurf/",
         "source": "Hacker News",
-        "score": 89
+        "score": 75
       },
       {
-        "title": "Software is about people, not code",
-        "url": "https://letterstoanewdeveloper.com/2020/01/27/software-is-about-people-not-code/",
+        "title": "Thoroughly Understanding C++ ABI",
+        "url": "https://ykiko.me/en/articles/692886292/",
         "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "São Paulo resident transforms degraded area into urban forest",
-        "url": "https://saopaulosecreto.com/en/tiquatira-linear-park-en/",
-        "source": "Hacker News",
-        "score": 238
+        "score": 38
       },
       {
         "title": "Petri Nets as a Music Sequencer",
         "url": "https://blog.stackdump.com/posts/petri-net-sequencer",
         "source": "Hacker News",
-        "score": 7
+        "score": 24
+      },
+      {
+        "title": "Why Are There Statues of Beavers on Top of This Oxford Street Shop?",
+        "url": "https://londonist.com/london/history/oxford-street-beavers",
+        "source": "Hacker News",
+        "score": 14
+      },
+      {
+        "title": "Taste Is All That's Left",
+        "url": "https://notashelf.dev/posts/taste-is-all-thats-left",
+        "source": "Hacker News",
+        "score": 595
+      },
+      {
+        "title": "USA Today Co., partners with Palantir to analyze audience data",
+        "url": "https://www.niemanlab.org/2026/08/americas-largest-newspaper-chain-usa-today-co-partners-with-palantir-to-analyze-audience-data/",
+        "source": "Hacker News",
+        "score": 123
+      },
+      {
+        "title": "99% of My Website Traffic Is Bots",
+        "url": "https://patronview.com/news/99-percent-of-my-website-traffic-is-bots/",
+        "source": "Hacker News",
+        "score": 216
+      },
+      {
+        "title": "São Paulo resident transforms degraded area into urban forest",
+        "url": "https://saopaulosecreto.com/en/tiquatira-linear-park-en/",
+        "source": "Hacker News",
+        "score": 261
       }
     ],
     "ai": [
       {
+        "title": "The AI Billboards Are Killing SF",
+        "url": "https://sfstandard.com/pacific-standard-time/2026/08/07/sf-ai-billboards-dystopian-not-funny/",
+        "source": "Hacker News AI",
+        "score": 11
+      },
+      {
         "title": "GitHub Actions and Pages are experiencing degraded availability",
         "url": "https://www.githubstatus.com/incidents/qcvjkzcs7j74",
         "source": "Hacker News AI",
-        "score": 457
+        "score": 465
       },
       {
         "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
         "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
         "source": "Hacker News AI",
-        "score": 279
+        "score": 289
       },
       {
-        "title": "New Orleans is testing Carbyne’s AI-powered Emergency Call Triage software",
-        "url": "https://www.shreveporttimes.com/story/news/local/louisiana/2026/07/28/is-new-orleans-using-ai-to-answer-911-calls-instead-of-human-dispatchers-impacts-emergencies-crime/91065014007/",
+        "title": "The Tokenpocalypse Is Here: Companies Are Scrambling to Stop Spending on AI",
+        "url": "https://www.404media.co/the-tokenpocalypse-is-here-companies-are-scrambling-to-stop-spending-so-much-on-ai/",
         "source": "Hacker News AI",
-        "score": 67
+        "score": 5
+      },
+      {
+        "title": "This Mine Predicts Major Wars. It's Opening Again",
+        "url": "https://www.bloomberg.com/graphics/2026-opinion-australia-tungsten-mine-us-war-defense-china/",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
+        "title": "AI agents fake identities, target real people in new security incident",
+        "url": "https://www.cnn.com/2026/08/04/tech/ai-anthropic-openai-security-breach-intl-hnk",
+        "source": "Hacker News AI",
+        "score": 6
       },
       {
         "title": "Inside vLLM: Anatomy of a High-Throughput LLM Inference System (2025)",
         "url": "https://www.aleksagordic.com/blog/vllm",
         "source": "Hacker News AI",
-        "score": 132
+        "score": 135
+      },
+      {
+        "title": "New Orleans is testing Carbyne’s AI-powered Emergency Call Triage software",
+        "url": "https://www.shreveporttimes.com/story/news/local/louisiana/2026/07/28/is-new-orleans-using-ai-to-answer-911-calls-instead-of-human-dispatchers-impacts-emergencies-crime/91065014007/",
+        "source": "Hacker News AI",
+        "score": 68
       },
       {
         "title": "The simple elegance of the integrated timing belt loopback fastener",
         "url": "https://danielmangum.com/posts/integrated-timing-belt-loopback-fastener/",
         "source": "Hacker News AI",
-        "score": 121
-      },
-      {
-        "title": "AI psychosis is the new leadership blind spot",
-        "url": "https://www.fastcompany.com/91576086/ai-psychosis-is-the-new-leadership-blind-spot-ai-leadership-blind-spots",
-        "source": "Hacker News AI",
-        "score": 131
+        "score": 122
       }
     ],
     "news": [
@@ -141,8 +159,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Meta fined $567m in largest child safety ruling against social media giant",
-        "url": "https://www.bbc.co.uk/news/articles/cd7lz3wr2rlo?at_medium=RSS&at_campaign=rss",
+        "title": "Spain threatens retaliation if Italy fails to lift border controls after Ceuta crossings",
+        "url": "https://www.bbc.co.uk/news/articles/c5yv5l6yr5ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -151,8 +169,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Spain threatens retaliation if Italy fails to lift border controls after Ceuta crossings",
-        "url": "https://www.bbc.co.uk/news/articles/c5yv5l6yr5ko?at_medium=RSS&at_campaign=rss",
+        "title": "Meta fined $567m in largest child safety ruling against social media giant",
+        "url": "https://www.bbc.co.uk/news/articles/cd7lz3wr2rlo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Spanish police arrest 78 people in bust of 'one of largest' smuggling networks ",
+        "url": "https://www.bbc.co.uk/news/articles/clylejzkkx4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -163,11 +186,6 @@
       {
         "title": "Trump again tries to limit US birthright citizenship with new executive orders",
         "url": "https://www.bbc.co.uk/news/articles/cj63966j95yo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Australian aviation crew carries out daring midwinter Antarctica rescue",
-        "url": "https://www.bbc.co.uk/news/articles/c89nqlz5p4qo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -211,38 +229,38 @@
     ],
     "gaming": [
       {
-        "title": "Complete fish list in Fields of Mistria",
-        "url": "https://www.polygon.com/fields-of-mistria-guides/444802/complete-fish-list-in-fields-of-mistria/",
+        "title": "Robert Pattinson's Nerve-Wracking 105-Minute Psychological Thriller Officially Crowned a #1 Streaming Hit",
+        "url": "https://www.polygon.com/the-drama-popular-on-hbo-max-robert-pattinson/",
         "source": "Polygon"
       },
       {
-        "title": "We’re Getting Another In-Depth Look at Final Fantasy 7 Revelation Later This Month",
-        "url": "https://www.polygon.com/final-fantasy-7-revelation-gamescom-2026/",
+        "title": "BR1: Infinite Promises Players Real Money for Playing, Prompting Gambling Concerns",
+        "url": "https://www.polygon.com/br-1-infinite-extraction-shooter/",
         "source": "Polygon"
       },
       {
-        "title": "World of Warcraft: Midnight's First Huge Patch Makes World Bosses Hard Again",
-        "url": "https://www.polygon.com/world-of-warcraft-midnight-patch-12-1-world-boss-lairs/",
+        "title": "Star Trek Is Officially Recasting Captain Kirk With One of HBO's Biggest Stars",
+        "url": "https://www.polygon.com/star-trek-the-pitt-wgf-reading-noah-wyle-captain-kirk/",
         "source": "Polygon"
       },
       {
-        "title": "With One Character, Star Wars Is Quietly Changing Jedi Canon In an Extremely Overdue Way",
-        "url": "https://www.polygon.com/the-ninth-jedi-the-force-jedi/",
+        "title": "Complete bug list in Fields of Mistria",
+        "url": "https://www.polygon.com/fields-of-mistria-guides/444982/all-bugs-list-locations-seasons-weather/",
         "source": "Polygon"
       },
       {
-        "title": "Where to find a Windup Inkay in Pokémon Pokopia",
-        "url": "https://www.polygon.com/pokemon-pokopia-windup-inkay-where-to-find/",
+        "title": "Xbox Game Pass Officially Losing a Modern Classic Later This Month",
+        "url": "https://www.polygon.com/firewatch-leaving-xbox-game-pass-august-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Dragon Ball Super Beerus Could Get October Release Date, History Suggests",
-        "url": "https://www.polygon.com/dragon-ball-super-beerus-nycc-possible-release-date/",
+        "title": "Blizzard Officially Reveals Overwatch's Newest Hero, D.Mon, with First Gameplay",
+        "url": "https://www.polygon.com/overwatch-dmon-reveal-ability-kit-blizzard/",
         "source": "Polygon"
       },
       {
-        "title": "All generator device locations in Beast of Reincarnation",
-        "url": "https://www.polygon.com/beast-of-reincarnation-generator-device-location-where-to-find/",
+        "title": "33 Years Ago, Anime's Mecha Sci-Fi Masterpiece Was Ahead of Its Time in One Disturbing Way",
+        "url": "https://www.polygon.com/patlabor-2-mecha-anime-political-thriller/",
         "source": "Polygon"
       }
     ],
