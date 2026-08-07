@@ -1,155 +1,143 @@
 {
   "metadata": {
-    "last_updated": "2026-08-07T18:58:40.588695",
-    "total_items": 59
+    "last_updated": "2026-08-07T19:55:06.113376",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
-        "title": "Oracle bans AI-generated code from OpenJDK",
-        "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
-        "source": "Hacker News",
-        "score": 161
-      },
-      {
         "title": "DeepSeek V4 Flash 0731",
         "url": "https://arcprize.org/results/deepseek-v4-flash-0731",
         "source": "Hacker News",
-        "score": 89
+        "score": 175
       },
       {
         "title": "Assembly Hall of Shame",
         "url": "https://github.com/xoreaxeaxeax/asm-hall-of-shame",
         "source": "Hacker News",
-        "score": 35
+        "score": 82
       },
       {
-        "title": "An all-sky map of half a million supermassive black holes",
-        "url": "https://www.sdss.org/black-hole-mapper-release-20/",
+        "title": "Databricks drove down AI coding spend 70%",
+        "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
         "source": "Hacker News",
-        "score": 80
+        "score": 38
       },
       {
-        "title": "New Mexico court orders Meta to pay $567m over harms to children’s mental health",
-        "url": "https://www.theguardian.com/technology/2026/aug/06/new-mexico-court-meta",
+        "title": "Oracle bans AI-generated code from OpenJDK",
+        "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
         "source": "Hacker News",
-        "score": 637
-      },
-      {
-        "title": "Making Postgres 300x faster for analytics: batching, operator fusion, and SIMD",
-        "url": "https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/",
-        "source": "Hacker News",
-        "score": 159
-      },
-      {
-        "title": "AMD acquires Taalas to boost inference performance by etching models in silicon",
-        "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344",
-        "source": "Hacker News",
-        "score": 841
-      },
-      {
-        "title": "Show HN: Wyzer Programming Language",
-        "url": "https://github.com/Wyzer-Lang/wyzer",
-        "source": "Hacker News",
-        "score": 142
-      },
-      {
-        "title": "Möbius-Strip Crosswords",
-        "url": "https://quuxplusone.github.io/blog/2026/08/04/mobius-crossword/",
-        "source": "Hacker News",
-        "score": 25
-      },
-      {
-        "title": "Kitesurf: Agent-first browser that runs in V8 isolates",
-        "url": "https://blog.cloudflare.com/kitesurf/",
-        "source": "Hacker News",
-        "score": 104
-      },
-      {
-        "title": "Show HN: textlog – A quiet, text-only microblogging platform, open-source, no JS",
-        "url": "https://textlog.cc/about",
-        "source": "Hacker News",
-        "score": 92
-      },
-      {
-        "title": "Petri Nets as a Music Sequencer",
-        "url": "https://blog.stackdump.com/posts/petri-net-sequencer",
-        "source": "Hacker News",
-        "score": 46
-      },
-      {
-        "title": "Why Are There Statues of Beavers on Top of This Oxford Street Shop?",
-        "url": "https://londonist.com/london/history/oxford-street-beavers",
-        "source": "Hacker News",
-        "score": 33
+        "score": 228
       },
       {
         "title": "Responding to the next frontier of critical cyber capabilities",
         "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
         "source": "Hacker News",
-        "score": 87
+        "score": 100
       },
       {
-        "title": "Building Community Out of Strangers",
-        "url": "https://tracydurnell.com/2023/11/30/building-community-out-of-strangers/",
+        "title": "Ancient Library – 1,060 Greek/Latin texts, click any word to parse it",
+        "url": "https://ancientlibrary.net/",
         "source": "Hacker News",
-        "score": 18
+        "score": 23
+      },
+      {
+        "title": "An all-sky map of half a million supermassive black holes",
+        "url": "https://www.sdss.org/black-hole-mapper-release-20/",
+        "source": "Hacker News",
+        "score": 94
+      },
+      {
+        "title": "New Mexico court orders Meta to pay $567m over harms to children’s mental health",
+        "url": "https://www.theguardian.com/technology/2026/aug/06/new-mexico-court-meta",
+        "source": "Hacker News",
+        "score": 673
+      },
+      {
+        "title": "What happens if an entire class of workers loses faith in their careers",
+        "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
+        "source": "Hacker News",
+        "score": 123
+      },
+      {
+        "title": "Making Postgres 300x faster for analytics: batching, operator fusion, and SIMD",
+        "url": "https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/",
+        "source": "Hacker News",
+        "score": 182
+      },
+      {
+        "title": "A year of fighting scrapers on my 1.5 million-page website",
+        "url": "https://patronview.com/news/99-percent-of-my-website-traffic-is-bots/",
+        "source": "Hacker News",
+        "score": 308
+      },
+      {
+        "title": "Möbius-Strip Crosswords",
+        "url": "https://quuxplusone.github.io/blog/2026/08/04/mobius-crossword/",
+        "source": "Hacker News",
+        "score": 35
+      },
+      {
+        "title": "Kitesurf: Agent-first browser that runs in V8 isolates",
+        "url": "https://blog.cloudflare.com/kitesurf/",
+        "source": "Hacker News",
+        "score": 113
+      },
+      {
+        "title": "App Store Rejection of the Week: Dark Hours",
+        "url": "https://daringfireball.net/2026/08/app_store_rejection_of_the_week_dark_hours",
+        "source": "Hacker News",
+        "score": 47
+      },
+      {
+        "title": "Carl's Required Reading",
+        "url": "https://carlkolon.com/reading/",
+        "source": "Hacker News",
+        "score": 11
       }
     ],
     "ai": [
       {
+        "title": "Databricks drove down AI coding spend 70%",
+        "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
+        "source": "Hacker News AI",
+        "score": 38
+      },
+      {
         "title": "Oracle bans AI-generated code from OpenJDK",
         "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
         "source": "Hacker News AI",
-        "score": 161
+        "score": 228
       },
       {
-        "title": "This Mine Predicts Major Wars. It's Opening Again",
-        "url": "https://www.bloomberg.com/graphics/2026-opinion-australia-tungsten-mine-us-war-defense-china/",
+        "title": "What happens if an entire class of workers loses faith in their careers",
+        "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News AI",
-        "score": 47
+        "score": 123
       },
       {
         "title": "GitHub Actions and Pages are experiencing degraded availability",
         "url": "https://www.githubstatus.com/incidents/qcvjkzcs7j74",
         "source": "Hacker News AI",
-        "score": 481
+        "score": 487
       },
       {
         "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
         "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
         "source": "Hacker News AI",
-        "score": 300
+        "score": 304
       },
       {
-        "title": "The Tokenpocalypse Is Here: Companies Are Scrambling to Stop Spending on AI",
-        "url": "https://www.404media.co/the-tokenpocalypse-is-here-companies-are-scrambling-to-stop-spending-so-much-on-ai/",
+        "title": "This Mine Predicts Major Wars. It's Opening Again",
+        "url": "https://www.bloomberg.com/graphics/2026-opinion-australia-tungsten-mine-us-war-defense-china/",
         "source": "Hacker News AI",
-        "score": 10
+        "score": 58
       },
       {
-        "title": "New Orleans is testing Carbyne’s AI-powered Emergency Call Triage software",
-        "url": "https://www.shreveporttimes.com/story/news/local/louisiana/2026/07/28/is-new-orleans-using-ai-to-answer-911-calls-instead-of-human-dispatchers-impacts-emergencies-crime/91065014007/",
+        "title": "Claude Code: Starting August 14, auto mode will be the default permission mode",
+        "url": "https://twitter.com/ClaudeDevs/status/2085794862608318627",
         "source": "Hacker News AI",
-        "score": 71
-      },
-      {
-        "title": "Inside vLLM: Anatomy of a High-Throughput LLM Inference System (2025)",
-        "url": "https://www.aleksagordic.com/blog/vllm",
-        "source": "Hacker News AI",
-        "score": 137
-      },
-      {
-        "title": "Estrogen masculinizes neural pathways and sex-specific behaviors",
-        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2851224/",
-        "source": "Hacker News AI",
-        "score": 6
-      },
-      {
-        "title": "The simple elegance of the integrated timing belt loopback fastener",
-        "url": "https://danielmangum.com/posts/integrated-timing-belt-loopback-fastener/",
-        "source": "Hacker News AI",
-        "score": 124
+        "score": 3
       }
     ],
     "news": [
@@ -159,7 +147,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Spain threatens retaliation if Italy fails to lift border controls after Ceuta crossings",
+        "title": "Spain to impose border controls against Italy as row over Ceuta migrant influx intensifies",
         "url": "https://www.bbc.co.uk/news/articles/c5yv5l6yr5ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -265,6 +253,31 @@
     ],
     "gaming": [
       {
+        "title": "26 Years Later, Attack on Titan's Best Quote Is Still One of the Coldest Quotes in Anime History",
+        "url": "https://www.polygon.com/how-attack-on-titan-turned-its-heros-battle-cry-into-a-villains-manifesto/",
+        "source": "Polygon"
+      },
+      {
+        "title": "How to solve the microphone puzzle in Big Walk",
+        "url": "https://www.polygon.com/big-walk-microphone-puzzle-how-to-solve-walkthrough/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Fields of Mistria romance and best gifts list",
+        "url": "https://www.polygon.com/fields-of-mistria-guides/443158/romance-marriage-candidates-characters-best-gifts/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Pokemon Pokopia's Bubbly Basin DLC is great, but Palworld does one thing better",
+        "url": "https://www.polygon.com/pokopia-bubbly-basin-dlc-popplio-temple-construction/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Grand Theft Auto 6 Parent Company Doubles Down on No Physical Edition, Calls Digital ‘Much More Convenient'",
+        "url": "https://www.polygon.com/grand-theft-auto-6-no-physical-disc-take-two-earnings-call-digital-games/",
+        "source": "Polygon"
+      },
+      {
         "title": "'Build the Beautiful Building!' walkthrough and quest steps in Pokémon Pokopia",
         "url": "https://www.polygon.com/pokemon-pokopia-guide-build-beautiful-building-walkthrough/",
         "source": "Polygon"
@@ -272,31 +285,6 @@
       {
         "title": "Fortnite Chapter 7 Season 4 Will Bring More Sprites",
         "url": "https://www.polygon.com/fortnite-chapter-7-season-4-sprites/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Where to find the Thunderbird Drift Zone in Forza Horizon 6",
-        "url": "https://www.polygon.com/forza-horizon-6-fh6-thunderbird-drift-zone-location-where-to-find/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Clair Obscur: Expedition 33's Best Quote Still Lives in My Head a Year Later",
-        "url": "https://www.polygon.com/clair-obscur-expedition-33-esquie-wheee-whooo/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Duskbloods Beta Selections Are Done: Here’s How to Check if You Got In",
-        "url": "https://www.polygon.com/duskbloods-network-test-nintendo-switch-2-how-to-check-if-you-got-in/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Pokémon TCG Pocket Player Count Drops Sharply from a Year Ago",
-        "url": "https://www.polygon.com/pokemon-tcg-pocket-revenue-drop/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Critical Role's major D&D campaign officially returns — what to know",
-        "url": "https://www.polygon.com/critical-role-campaign-4-release-soon/",
         "source": "Polygon"
       }
     ],
