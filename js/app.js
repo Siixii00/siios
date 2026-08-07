@@ -268,7 +268,7 @@ const App = {
             
             const installBtn = document.createElement('button');
             installBtn.className = 'ios-btn ios-btn-primary fixed bottom-24 left-1/2 -translate-x-1/2 z-50 shadow-lg';
-            installBtn.innerHTML = '<span class='material-symbols-outlined mr-1'>install_mobile</span> 安裝 App';
+            installBtn.innerHTML = "<span class='material-symbols-outlined mr-1'>install_mobile</span> 安裝 App";
             installBtn.onclick = async () => {
                 installBtn.remove();
                 deferredPrompt.prompt();
