@@ -1,0 +1,12 @@
+name = "siios-discord-bot"
+main = "../../scripts/discord-bot-worker.js"
+compatibility_date = "2024-01-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "siios-discord-db"
+database_id = "YOUR_DATABASE_ID_HERE"
+
+[vars]
+AI_API_URL = "https://your-ai-api.com"
+AI_MODEL = "gpt-3.5-turbo"
