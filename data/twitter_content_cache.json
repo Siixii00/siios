@@ -1,179 +1,161 @@
 {
   "metadata": {
-    "last_updated": "2026-08-06T15:22:26.517145",
-    "total_items": 63
+    "last_updated": "2026-08-07T00:02:32.853581",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "Mario Meets Pareto",
-        "url": "https://www.mayerowitz.io/blog/mario-meets-pareto",
-        "source": "Hacker News",
-        "score": 330
-      },
-      {
-        "title": "Degrees of Wealth",
-        "url": "https://jaapgrolleman.com/degrees-of-wealth/",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Tiny Black Holes May Be Exploding Stars Across the Milky Way",
-        "url": "https://www.sciencedaily.com/releases/2026/07/260729051515.htm",
-        "source": "Hacker News",
-        "score": 31
-      },
-      {
-        "title": "Humans missed 1 in 3 threats approving AI agent commands across 40k game runs",
-        "url": "https://scalex.dev/blog/ai-agent-permissions-stats/",
-        "source": "Hacker News",
-        "score": 102
-      },
-      {
-        "title": "How to Make a Nintendo 64 Game in 2026",
-        "url": "https://phoboslab.org/log/2026/08/xibalba64-making-of",
+        "title": "AMD acquires Taalas to boost inference performance by etching models in silicon",
+        "url": "https://www.theregister.com/systems/2026/08/06/amd-acquires-ai-chip-startup-taalas-to-boost-inference-performance-by-etching-models-into-silicon/5284344",
         "source": "Hacker News",
         "score": 299
       },
       {
-        "title": "Crime Pays but Botany Doesn't",
-        "url": "https://www.crimepaysbutbotanydoesnt.com/reading-list",
+        "title": "Scientists discover Kelvin-Helmholtz Instability on the surface of the Sun",
+        "url": "https://nso.edu/press-release/nsf-inouye-solar-telescope-enables-major-discovery-of-a-hidden-solar-process/",
         "source": "Hacker News",
-        "score": 429
+        "score": 115
       },
       {
-        "title": "Pareto Front",
-        "url": "https://en.wikipedia.org/wiki/Pareto_front",
-        "source": "Hacker News",
-        "score": 119
-      },
-      {
-        "title": "DeepSeek planning to significantly raise prices",
-        "url": "https://platform.deepseek.com/usage",
+        "title": "Welcoming the Nepalese Government to Have I Been Pwned",
+        "url": "https://www.troyhunt.com/welcoming-the-nepalese-government-to-have-i-been-pwned/",
         "source": "Hacker News",
         "score": 51
       },
       {
-        "title": "Discovery Loop",
-        "url": "https://www.discoveryloop.com/",
+        "title": "Mario Meets Pareto",
+        "url": "https://www.mayerowitz.io/blog/mario-meets-pareto",
         "source": "Hacker News",
-        "score": 830
+        "score": 844
       },
       {
-        "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
-        "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+        "title": "Herdr is joining Y Combinator. The runtime stays open",
+        "url": "https://herdr.dev/blog/herdr-is-joining-y-combinator/",
         "source": "Hacker News",
-        "score": 751
+        "score": 123
       },
       {
-        "title": "Join Me in Jamverse",
-        "url": "https://contraptions.venkateshrao.com/p/join-me-in-jamverse",
+        "title": "Inside vLLM: Anatomy of a High-Throughput LLM Inference System (2025)",
+        "url": "https://www.aleksagordic.com/blog/vllm",
         "source": "Hacker News",
-        "score": 22
+        "score": 39
       },
       {
-        "title": "Taylor Farms Cyclospora outbreak triples in size",
-        "url": "https://efoodalert.com/2026/08/05/taylor-farms-cyclospora-outbreak-triples-in-size/",
+        "title": "Taste Is All That's Left",
+        "url": "https://notashelf.dev/posts/taste-is-all-thats-left",
         "source": "Hacker News",
-        "score": 12
+        "score": 164
       },
       {
-        "title": "The title cards in Blade Runner are amazing",
-        "url": "https://randsinrepose.com/archives/blade-runner-title-cards/",
+        "title": "I stopped trusting USB-C cable labels and started testing them",
+        "url": "https://www.makeuseof.com/i-stopped-trusting-usb-c-cable-labels-started-testing-with-meter-instead/",
         "source": "Hacker News",
-        "score": 353
+        "score": 40
       },
       {
-        "title": "Zed DeltaDB",
-        "url": "https://zed.dev/deltadb",
+        "title": "Launch HN: ProvenMetal (YC S26) delivers circuit boards in days instead of weeks",
+        "url": "https://provenmetal.com",
         "source": "Hacker News",
-        "score": 486
+        "score": 180
       },
       {
-        "title": "Show HN: demake – one source project compiles to any retro game console ROM",
-        "url": "https://geosona.com/demake/",
+        "title": "Show HN: Pokémon Emerald Ported to Raspberry Pi Pico 2",
+        "url": "https://github.com/mattdeeds/pokeemerald-rp2350",
         "source": "Hacker News",
-        "score": 29
+        "score": 33
+      },
+      {
+        "title": "Almost no skill required to cook a steak",
+        "url": "https://blog.sydorets.com/en/posts/almost-no-skill-required-to-cook-a-steak/",
+        "source": "Hacker News",
+        "score": 259
+      },
+      {
+        "title": "GitHub Actions and Pages are experiencing degraded availability",
+        "url": "https://www.githubstatus.com/incidents/qcvjkzcs7j74",
+        "source": "Hacker News",
+        "score": 301
+      },
+      {
+        "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
+        "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
+        "source": "Hacker News",
+        "score": 132
+      },
+      {
+        "title": "My phone detects going on a run as “someone snatching my phone and running off”",
+        "url": "https://mastodon.gamedev.place/@rygorous/117047697255584965",
+        "source": "Hacker News",
+        "score": 75
+      },
+      {
+        "title": "STV: A full-motion video codec for the Atari ST",
+        "url": "https://medium.com/@jonas.eschenburg/stv-a-video-codec-for-the-atari-st-6e46355c50e4",
+        "source": "Hacker News",
+        "score": 11
       }
     ],
     "ai": [
       {
+        "title": "Inside vLLM: Anatomy of a High-Throughput LLM Inference System (2025)",
+        "url": "https://www.aleksagordic.com/blog/vllm",
+        "source": "Hacker News AI",
+        "score": 39
+      },
+      {
+        "title": "GitHub Actions and Pages are experiencing degraded availability",
+        "url": "https://www.githubstatus.com/incidents/qcvjkzcs7j74",
+        "source": "Hacker News AI",
+        "score": 301
+      },
+      {
+        "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
+        "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
+        "source": "Hacker News AI",
+        "score": 132
+      },
+      {
         "title": "Humans missed 1 in 3 threats approving AI agent commands across 40k game runs",
         "url": "https://scalex.dev/blog/ai-agent-permissions-stats/",
         "source": "Hacker News AI",
-        "score": 102
+        "score": 240
       },
       {
-        "title": "DeepSeek planning to significantly raise prices",
-        "url": "https://platform.deepseek.com/usage",
+        "title": "The simple elegance of the integrated timing belt loopback fastener",
+        "url": "https://danielmangum.com/posts/integrated-timing-belt-loopback-fastener/",
         "source": "Hacker News AI",
-        "score": 51
+        "score": 91
       },
       {
-        "title": "Changes at Google DeepMind: Demis Hassabis from CEO to Chair, Jeff Dean departs",
-        "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/",
+        "title": "OpenAI and four rivals just agreed on one standard for AI agents",
+        "url": "https://thenextweb.com/news/openai-agent-plugins-open-standard-skills-mcp",
         "source": "Hacker News AI",
-        "score": 751
-      },
-      {
-        "title": "Show HN: demake – one source project compiles to any retro game console ROM",
-        "url": "https://geosona.com/demake/",
-        "source": "Hacker News AI",
-        "score": 29
-      },
-      {
-        "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
-        "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
-        "source": "Hacker News AI",
-        "score": 370
+        "score": 13
       },
       {
         "title": "Born Against, or why hobby programming communities are against LLM usage",
         "url": "https://blog.fogus.me/llm/born-against.html",
         "source": "Hacker News AI",
-        "score": 342
+        "score": 407
       },
       {
-        "title": "On non-rooted Android 17, ADB uninstall of system apps fails",
-        "url": "https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation/issues/1426",
+        "title": "Beating GPT-5.6 Sol on retrieval with 100x cheaper open models",
+        "url": "https://neon.com/blog/how-castform-neon-beats-frontier-models-on-price-and-efficiency",
         "source": "Hacker News AI",
-        "score": 166
+        "score": 422
       },
       {
-        "title": "Decimen Optical Transfer: fountain-coded QR file transfer",
-        "url": "https://github.com/bashalarmistalt/decimen-optical-transfer",
+        "title": "Poles of Inaccessibility in the San Gabriel Mountains (2015)",
+        "url": "https://notes.secretsauce.net/notes/2015/05/06_poles-of-inaccessibility-in-the-san-gabriel-mountains.html",
         "source": "Hacker News AI",
-        "score": 45
+        "score": 31
       },
       {
-        "title": "Sycophantic AI Decreases Prosocial Intentions and Promotes Dependence (2025)",
-        "url": "https://arxiv.org/abs/2510.01395",
+        "title": "Trump again tries to limit US birthright citizenship with new executive orders",
+        "url": "https://www.bbc.com/news/articles/cj63966j95yo",
         "source": "Hacker News AI",
-        "score": 152
-      },
-      {
-        "title": "Shopify says AI search is driving more traffic and sales, not replacing Google",
-        "url": "https://techcrunch.com/2026/08/05/shopify-says-ai-search-is-driving-more-traffic-and-sales-not-replacing-google/",
-        "source": "Hacker News AI",
-        "score": 4
-      },
-      {
-        "title": "The Entropy of a Markov Chain",
-        "url": "https://chillphysicsenjoyer.substack.com/p/the-entropy-of-a-markov-chain",
-        "source": "Hacker News AI",
-        "score": 136
-      },
-      {
-        "title": "Nashville uses eminent domain to block data center near zoo",
-        "url": "https://www.costar.com/article/970809918/nashville-council-approves-eminent-domain-action-to-halt-data-center-project",
-        "source": "Hacker News AI",
-        "score": 297
-      },
-      {
-        "title": "When online commenters detect my art as AI",
-        "url": "https://www.davidrevoy.com/article1164/when-online-commenters-detect-my-art-as-ai",
-        "source": "Hacker News AI",
-        "score": 68
+        "score": 5
       }
     ],
     "news": [
@@ -183,37 +165,37 @@
         "source": "BBC World"
       },
       {
+        "title": "Meta fined $567m in largest child safety ruling against social media giant",
+        "url": "https://www.bbc.co.uk/news/articles/cd7lz3wr2rlo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Uefa says boycott may still go ahead as FA withdraws Infantino support",
+        "url": "https://www.bbc.co.uk/sport/football/articles/c2k74yevgzwo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "South Korea space agency shares Moon images after SpaceX rocket debris crash",
+        "url": "https://www.bbc.co.uk/news/articles/cqjxgx5y51lo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Israel charges settler over killing of Palestinian involved in Oscar-winning West Bank film",
+        "url": "https://www.bbc.co.uk/news/articles/cn4n1e8159yo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Ukraine hits two oil refineries deep in Russian territory",
         "url": "https://www.bbc.co.uk/news/articles/cwymv212xrxo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "US Senate committee votes to hold Fauci in contempt over Covid hearing",
-        "url": "https://www.bbc.co.uk/news/articles/c1m18158my9o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "DR Congo river boat under quarantine for Ebola after five deaths",
-        "url": "https://www.bbc.co.uk/news/articles/ce971plr2nvo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "EasyJet agrees to £5.7bn takeover by US firm ",
-        "url": "https://www.bbc.co.uk/news/articles/cjejzjpy98wo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Iran says deal with Oman on Strait of Hormuz is in final stages",
-        "url": "https://www.bbc.co.uk/news/articles/ckg9d3eyeggo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Livestreamer's murder raises questions over relations between Mexico's creators and cartels",
-        "url": "https://www.bbc.co.uk/news/articles/ckg9dwz8p30o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Want to know which laptop you actually need for your major? We got you ",
+        "url": "https://www.creativebloq.com/tech/laptops/want-to-know-which-laptop-you-actually-need-for-your-major-we-got-you",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Onimusha: Way of the Sword (PS5) hands-on – Capcom’s samurai comeback is far stranger and more ambitious than I expected ",
         "url": "https://www.creativebloq.com/entertainment/gaming/onimusha-way-of-the-sword-ps5-hands-on-capcoms-samurai-comeback-is-far-stranger-and-more-ambitious-than-i-expected",
@@ -235,18 +217,13 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " Focal headphones are inspired by high-end watchmaking and though they look utterly unique, the design language remains 100% functional, says project manager ",
+        "title": " Inspired by watchmaking, Focal headphones look like nothing else ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/these-headphones-remind-me-of-supercar-design-and-turns-out-for-good-reason",
         "source": "Creative Bloq"
       },
       {
         "title": " ASAP Rocky just dumped this designer over leaked DMs ",
         "url": "https://www.creativebloq.com/design/asap-rocky-just-dumped-this-designer-over-leaked-dms",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Forget 3D printers, CNC machines could be the next big craze of 2027 ",
-        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/forget-3d-printers-cnc-machines-could-be-the-next-big-craze-of-2027",
         "source": "Creative Bloq"
       }
     ],
@@ -289,43 +266,53 @@
     ],
     "gaming": [
       {
-        "title": "Where to find the Sotoyama Ski Resort in Forza Horizon 6",
-        "url": "https://www.polygon.com/forza-horizon-6-fh6-sotoyama-ski-resort-location-where-to-find/",
+        "title": "Jon Bernthal’s 121 Minute 10/10 Neo-Western Thriller Is Officially a Streaming Hit",
+        "url": "https://www.polygon.com/jon-bernthal-sicario-hbo-max-movies-streaming-hit-august-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Spring Takashiro region treasure hunt location in Forza Horizon 6",
-        "url": "https://www.polygon.com/forza-horizon-6-fh6-treasure-hunt-location/",
+        "title": "Resident Evil Meets Papers Please in a Wild New Xbox Game Pass Offering",
+        "url": "https://www.polygon.com/quarantine-zone-steam-xbox-game-pass/",
         "source": "Polygon"
       },
       {
-        "title": "Epic Games Store's new free PC games revealed, including a creepy visual novel and a great coop game",
-        "url": "https://www.polygon.com/epic-games-store-free-games-8-6-2026-download/",
+        "title": "Rust August Force Wipe Brings New DLC and Major Update",
+        "url": "https://www.polygon.com/rust-august-force-wipe-update-shell/",
         "source": "Polygon"
       },
       {
-        "title": "Onimusha: Way of the Sword’s Switch 2 hands-on: another impressive Capcom feat",
-        "url": "https://www.polygon.com/onimusha-way-of-the-swords-switch-2-impressions/",
+        "title": "I played Elden Ring wrong for two years",
+        "url": "https://www.polygon.com/video/i-played-elden-ring-wrong-for-two-years/",
         "source": "Polygon"
       },
       {
-        "title": "Onimusha: Way of the Sword Preview Teases More Capcom 2026 Domination",
-        "url": "https://www.polygon.com/onimusha-way-of-the-sword-final-preview/",
+        "title": "Marvel Tokon Fighting Souls Review-in-Progress: Beautiful But Busted",
+        "url": "https://www.polygon.com/marvel-tokon-fighting-souls-day-one-review-first-impressions/",
         "source": "Polygon"
       },
       {
-        "title": "Where to find the Starmie doll in Pokémon Pokopia",
-        "url": "https://www.polygon.com/pokemon-pokopia-starmie-doll-location-where-to-find-frillish/",
+        "title": "Quake Just Got a Major Update 30 Years Post-Launch, and You Can Play It Right Now",
+        "url": "https://www.polygon.com/quake-dawn-of-the-machine-anniversary-update/",
         "source": "Polygon"
       },
       {
-        "title": "Marvel Tokon fans think they've discovered new DLC fighters — and the team makes perfect sense",
-        "url": "https://www.polygon.com/marvel-tokon-fighting-souls-year-1-dlc-fighters-nova-silver-surfer-thor/",
+        "title": "Nintendo’s Legend of Zelda Film May Be Sam Neill’s Final Performance",
+        "url": "https://www.polygon.com/zelda-movie-cast-actors-sam-neill-final-performance-impa-queen/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "A guide to slash commands in the GitHub Copilot app",
+        "url": "https://github.blog/ai-and-ml/github-copilot/a-guide-to-slash-commands-in-the-github-copilot-app/",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "How we took malware advisories beyond npm",
+        "url": "https://github.blog/security/supply-chain-security/how-we-took-malware-advisories-beyond-npm/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "How the GitHub legal team used Copilot CLI to streamline their workflows",
         "url": "https://github.blog/ai-and-ml/github-copilot/how-the-github-legal-team-used-copilot-cli-to-streamline-their-workflows/",
@@ -349,16 +336,6 @@
       {
         "title": "Tame Dependabot: Group your updates, slow the cadence, keep security fast",
         "url": "https://github.blog/security/supply-chain-security/tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Disrupting supply chain attacks on npm and GitHub Actions",
-        "url": "https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "The harness is all you need (mostly)",
-        "url": "https://github.blog/ai-and-ml/github-copilot/the-harness-is-all-you-need-mostly/",
         "source": "GitHub Blog"
       }
     ]
