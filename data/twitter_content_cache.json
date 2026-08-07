@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-07T19:55:06.113376",
+    "last_updated": "2026-08-07T20:41:59.519420",
     "total_items": 57
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "DeepSeek V4 Flash 0731",
         "url": "https://arcprize.org/results/deepseek-v4-flash-0731",
         "source": "Hacker News",
-        "score": 175
+        "score": 234
       },
       {
         "title": "Assembly Hall of Shame",
         "url": "https://github.com/xoreaxeaxeax/asm-hall-of-shame",
         "source": "Hacker News",
-        "score": 82
+        "score": 113
       },
       {
         "title": "Databricks drove down AI coding spend 70%",
         "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
         "source": "Hacker News",
-        "score": 38
-      },
-      {
-        "title": "Oracle bans AI-generated code from OpenJDK",
-        "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
-        "source": "Hacker News",
-        "score": 228
-      },
-      {
-        "title": "Responding to the next frontier of critical cyber capabilities",
-        "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
-        "source": "Hacker News",
-        "score": 100
+        "score": 95
       },
       {
         "title": "Ancient Library – 1,060 Greek/Latin texts, click any word to parse it",
         "url": "https://ancientlibrary.net/",
         "source": "Hacker News",
-        "score": 23
+        "score": 40
+      },
+      {
+        "title": "Responding to the next frontier of critical cyber capabilities",
+        "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
+        "source": "Hacker News",
+        "score": 107
+      },
+      {
+        "title": "Oracle bans AI-generated code from OpenJDK",
+        "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
+        "source": "Hacker News",
+        "score": 256
       },
       {
         "title": "An all-sky map of half a million supermassive black holes",
         "url": "https://www.sdss.org/black-hole-mapper-release-20/",
         "source": "Hacker News",
-        "score": 94
-      },
-      {
-        "title": "New Mexico court orders Meta to pay $567m over harms to children’s mental health",
-        "url": "https://www.theguardian.com/technology/2026/aug/06/new-mexico-court-meta",
-        "source": "Hacker News",
-        "score": 673
+        "score": 101
       },
       {
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News",
-        "score": 123
-      },
-      {
-        "title": "Making Postgres 300x faster for analytics: batching, operator fusion, and SIMD",
-        "url": "https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/",
-        "source": "Hacker News",
-        "score": 182
-      },
-      {
-        "title": "A year of fighting scrapers on my 1.5 million-page website",
-        "url": "https://patronview.com/news/99-percent-of-my-website-traffic-is-bots/",
-        "source": "Hacker News",
-        "score": 308
-      },
-      {
-        "title": "Möbius-Strip Crosswords",
-        "url": "https://quuxplusone.github.io/blog/2026/08/04/mobius-crossword/",
-        "source": "Hacker News",
-        "score": 35
-      },
-      {
-        "title": "Kitesurf: Agent-first browser that runs in V8 isolates",
-        "url": "https://blog.cloudflare.com/kitesurf/",
-        "source": "Hacker News",
-        "score": 113
+        "score": 174
       },
       {
         "title": "App Store Rejection of the Week: Dark Hours",
         "url": "https://daringfireball.net/2026/08/app_store_rejection_of_the_week_dark_hours",
         "source": "Hacker News",
-        "score": 47
+        "score": 114
+      },
+      {
+        "title": "Psychological Warfare in Reverse Engineering",
+        "url": "https://github.com/xoreaxeaxeax/repsych",
+        "source": "Hacker News",
+        "score": 10
+      },
+      {
+        "title": "Guarded Methods in OCaml",
+        "url": "https://xvw.lol/en/articles/oop-refl.html",
+        "source": "Hacker News",
+        "score": 10
+      },
+      {
+        "title": "Making Postgres 300x faster for analytics: batching, operator fusion, and SIMD",
+        "url": "https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/",
+        "source": "Hacker News",
+        "score": 199
+      },
+      {
+        "title": "The Claudyssey: A line-for-line translation of Homer's Odyssey by Claude Fable 5",
+        "url": "https://theclaudyssey.com/",
+        "source": "Hacker News",
+        "score": 20
       },
       {
         "title": "Carl's Required Reading",
         "url": "https://carlkolon.com/reading/",
         "source": "Hacker News",
-        "score": 11
+        "score": 32
+      },
+      {
+        "title": "Kitesurf: Agent-first browser that runs in V8 isolates",
+        "url": "https://blog.cloudflare.com/kitesurf/",
+        "source": "Hacker News",
+        "score": 121
       }
     ],
     "ai": [
@@ -101,43 +101,43 @@
         "title": "Databricks drove down AI coding spend 70%",
         "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
         "source": "Hacker News AI",
-        "score": 38
+        "score": 95
       },
       {
         "title": "Oracle bans AI-generated code from OpenJDK",
         "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
         "source": "Hacker News AI",
-        "score": 228
+        "score": 256
       },
       {
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News AI",
-        "score": 123
+        "score": 175
       },
       {
-        "title": "GitHub Actions and Pages are experiencing degraded availability",
-        "url": "https://www.githubstatus.com/incidents/qcvjkzcs7j74",
+        "title": "The Claudyssey: A line-for-line translation of Homer's Odyssey by Claude Fable 5",
+        "url": "https://theclaudyssey.com/",
         "source": "Hacker News AI",
-        "score": 487
-      },
-      {
-        "title": "Improving GPT‑5.6 Sol in ChatGPT, expanding GPT‑5.6 Luna access for free users",
-        "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/",
-        "source": "Hacker News AI",
-        "score": 304
+        "score": 20
       },
       {
         "title": "This Mine Predicts Major Wars. It's Opening Again",
         "url": "https://www.bloomberg.com/graphics/2026-opinion-australia-tungsten-mine-us-war-defense-china/",
         "source": "Hacker News AI",
-        "score": 58
+        "score": 60
+      },
+      {
+        "title": "Mykhailo Fedorov reveals struggle to secure Patriot missiles and Western support",
+        "url": "https://www.uawire.org/former-ukrainian-defense-minister-mykhailo-fedorov-reveals-struggles-to-secure-patriot-missiles-and-western-support",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "Claude Code: Starting August 14, auto mode will be the default permission mode",
         "url": "https://twitter.com/ClaudeDevs/status/2085794862608318627",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 4
       }
     ],
     "news": [
@@ -179,7 +179,7 @@
     ],
     "art": [
       {
-        "title": " Budget banger! The $35 Op.22 earphone has 2 sound profiles, both great ",
+        "title": " High-end audio take note: These $35 earphones have 2 sound profiles and they're both great ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/budget-banger-the-usd35-op-22-earphone-has-2-sound-profiles-both-great",
         "source": "Creative Bloq"
       },
@@ -253,6 +253,11 @@
     ],
     "gaming": [
       {
+        "title": "31 Years Later, One 'Calvin and Hobbes' Line Remains The Greatest Quote In Comic Strip History",
+        "url": "https://www.polygon.com/best-calvin-hobbes-quote/",
+        "source": "Polygon"
+      },
+      {
         "title": "26 Years Later, Attack on Titan's Best Quote Is Still One of the Coldest Quotes in Anime History",
         "url": "https://www.polygon.com/how-attack-on-titan-turned-its-heros-battle-cry-into-a-villains-manifesto/",
         "source": "Polygon"
@@ -280,11 +285,6 @@
       {
         "title": "'Build the Beautiful Building!' walkthrough and quest steps in Pokémon Pokopia",
         "url": "https://www.polygon.com/pokemon-pokopia-guide-build-beautiful-building-walkthrough/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fortnite Chapter 7 Season 4 Will Bring More Sprites",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-sprites/",
         "source": "Polygon"
       }
     ],
