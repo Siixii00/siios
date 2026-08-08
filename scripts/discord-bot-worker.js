@@ -162,12 +162,12 @@ async function registerCommands(env) {
             description: '設定 Bot 的 API 參數',
             options: [
                 {
-                    type: 3, name: 'key', description: '設定項目 (api_url / api_key / model)',
+                    type: 3, name: 'key', description: '設定項目 (AI_API_URL / AI_API_KEY / AI_MODEL)',
                     required: true,
                     choices: [
-                        { name: 'API URL', value: 'api_url' },
-                        { name: 'API Key', value: 'api_key' },
-                        { name: 'Model', value: 'model' }
+                        { name: 'API URL', value: 'AI_API_URL' },
+                        { name: 'API Key', value: 'AI_API_KEY' },
+                        { name: 'Model', value: 'AI_MODEL' }
                     ]
                 },
                 { type: 3, name: 'value', description: '設定值', required: true }
@@ -221,58 +221,61 @@ async function handleDiscordEvent(event, env) {
 
 // ===== 斜線指令處理 =====
 async function handleSlashCommand(event, env) {
-    const { name, options } = event.data;
-    const channelId = event.channel_id;
-    const guildId = event.guild_id;
+    try {
+        const { name, options } = event.data;
+        const channelId = event.channel_id;
+        const guildId = event.guild_id;
 
-    if (name === 'configure') {
-        const key = options.find(o => o.name === 'key')?.value;
-        const value = options.find(o => o.name === 'value')?.value;
-        if (!key || !value) return Response.json({ type: 4, data: { content: '❌ 請提供 key 和 value', flags: 64 } });
-        await setConfig(env, key, value);
-        const masked = key === 'api_key' ? value.slice(0, 4) + '****' : value;
-        return Response.json({ type: 4, data: { content: `✅ 已設定 ${key} = ${masked}` } });
-    }
-
-    if (name === 'config') {
-        const apiUrl = await getConfig(env, 'AI_API_URL') || '(未設定)';
-        const apiKey = await getConfig(env, 'AI_API_KEY') || '(未設定)';
-        const model = await getConfig(env, 'AI_MODEL') || 'gpt-3.5-turbo';
-        const keyDisplay = apiKey === '(未設定)' ? '(未設定)' : apiKey.slice(0, 4) + '****';
-        return Response.json({ type: 4, data: { content: `📋 **目前設定**\n\`\`\`\nAPI URL: ${apiUrl}\nAPI Key: ${keyDisplay}\nModel:   ${model}\n\`\`\`\n使用 /configure 修改設定` } });
-    }
-
-    if (name === 'channel') {
-        const sub = options?.[0];
-        if (!sub) return Response.json({ type: 4, data: { content: '❌ 請指定子指令 (bind / unbind / status)', flags: 64 } });
-
-        if (sub.name === 'bind') {
-            const characterId = sub.options.find(o => o.name === 'character_id')?.value;
-            if (!characterId) return Response.json({ type: 4, data: { content: '❌ 請提供角色 ID', flags: 64 } });
-            await bindChannel(channelId, characterId, guildId, env);
-
-            // 查角色名稱
-            const char = await env.DB.prepare(`SELECT name FROM characters WHERE id = ?`).bind(characterId).first();
-            const charName = char?.name || characterId;
-            return Response.json({ type: 4, data: { content: `✅ 已將此頻道綁定到角色 **${charName}** (${characterId})` } });
+        if (name === 'configure') {
+            const key = options.find(o => o.name === 'key')?.value;
+            const value = options.find(o => o.name === 'value')?.value;
+            if (!key || !value) return Response.json({ type: 4, data: { content: '❌ 請提供 key 和 value', flags: 64 } });
+            await setConfig(env, key, value);
+            const masked = key === 'AI_API_KEY' ? value.slice(0, 4) + '****' : value;
+            return Response.json({ type: 4, data: { content: `✅ 已設定 ${key} = ${masked}` } });
         }
 
-        if (sub.name === 'unbind') {
-            await env.DB.prepare(`DELETE FROM channel_bindings WHERE channel_id = ?`).bind(channelId).run();
-            return Response.json({ type: 4, data: { content: '✅ 已解除此頻道的角色綁定' } });
+        if (name === 'config') {
+            const apiUrl = await getConfig(env, 'AI_API_URL') || '(未設定)';
+            const apiKey = await getConfig(env, 'AI_API_KEY') || '(未設定)';
+            const model = await getConfig(env, 'AI_MODEL') || 'gpt-3.5-turbo';
+            const keyDisplay = apiKey === '(未設定)' ? '(未設定)' : apiKey.slice(0, 4) + '****';
+            return Response.json({ type: 4, data: { content: `📋 **目前設定**\n\`\`\`\nAPI URL: ${apiUrl}\nAPI Key: ${keyDisplay}\nModel:   ${model}\n\`\`\`\n使用 /configure 修改設定` } });
         }
 
-        if (sub.name === 'status') {
-            const binding = await env.DB.prepare(`SELECT * FROM channel_bindings WHERE channel_id = ?`).bind(channelId).first();
-            if (binding) {
-                const char = await env.DB.prepare(`SELECT name FROM characters WHERE id = ?`).bind(binding.character_id).first();
-                return Response.json({ type: 4, data: { content: `📋 **此頻道綁定狀態**\n角色: **${char?.name || binding.character_id}** (${binding.character_id})` } });
+        if (name === 'channel') {
+            const sub = options?.[0];
+            if (!sub) return Response.json({ type: 4, data: { content: '❌ 請指定子指令 (bind / unbind / status)', flags: 64 } });
+
+            if (sub.name === 'bind') {
+                const characterId = sub.options.find(o => o.name === 'character_id')?.value;
+                if (!characterId) return Response.json({ type: 4, data: { content: '❌ 請提供角色 ID', flags: 64 } });
+                await bindChannel(channelId, characterId, guildId, env);
+
+                const char = await env.DB.prepare(`SELECT name FROM characters WHERE id = ?`).bind(characterId).first();
+                const charName = char?.name || characterId;
+                return Response.json({ type: 4, data: { content: `✅ 已將此頻道綁定到角色 **${charName}** (${characterId})` } });
             }
-            return Response.json({ type: 4, data: { content: '📋 此頻道尚未綁定任何角色' } });
-        }
-    }
 
-    return Response.json({ type: 4, data: { content: '❌ 未知指令', flags: 64 } });
+            if (sub.name === 'unbind') {
+                await env.DB.prepare(`DELETE FROM channel_bindings WHERE channel_id = ?`).bind(channelId).run();
+                return Response.json({ type: 4, data: { content: '✅ 已解除此頻道的角色綁定' } });
+            }
+
+            if (sub.name === 'status') {
+                const binding = await env.DB.prepare(`SELECT * FROM channel_bindings WHERE channel_id = ?`).bind(channelId).first();
+                if (binding) {
+                    const char = await env.DB.prepare(`SELECT name FROM characters WHERE id = ?`).bind(binding.character_id).first();
+                    return Response.json({ type: 4, data: { content: `📋 **此頻道綁定狀態**\n角色: **${char?.name || binding.character_id}** (${binding.character_id})` } });
+                }
+                return Response.json({ type: 4, data: { content: '📋 此頻道尚未綁定任何角色' } });
+            }
+        }
+
+        return Response.json({ type: 4, data: { content: '❌ 未知指令', flags: 64 } });
+    } catch (error) {
+        return Response.json({ type: 4, data: { content: `❌ 執行指令時發生錯誤: ${error.message}`, flags: 64 } });
+    }
 }
 
 // ===== 處理訊息 =====
