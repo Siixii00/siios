@@ -1,143 +1,131 @@
 {
   "metadata": {
-    "last_updated": "2026-08-08T01:43:05.149998",
-    "total_items": 57
+    "last_updated": "2026-08-08T03:26:56.110908",
+    "total_items": 55
   },
   "content": {
     "tech": [
       {
+        "title": "The Nixpkgs core team has disbanded",
+        "url": "https://discourse.nixos.org/t/the-nixpkgs-core-team-has-disbanded/79413",
+        "source": "Hacker News",
+        "score": 142
+      },
+      {
+        "title": "NASA to keep its 48-year-old Voyager 2 probe running for yet another year",
+        "url": "https://www.space.com/space-exploration/voyager/nasa-figured-out-how-to-keep-its-48-year-old-voyager-2-probe-running-for-yet-another-year",
+        "source": "Hacker News",
+        "score": 59
+      },
+      {
         "title": "DeepSeek V4 Flash 0731",
         "url": "https://arcprize.org/results/deepseek-v4-flash-0731",
         "source": "Hacker News",
-        "score": 464
+        "score": 499
       },
       {
         "title": "U.S. Department of Energy Launches the Genesis Open Models Initiative",
         "url": "https://genesisopenmodels.anl.gov/",
         "source": "Hacker News",
-        "score": 81
+        "score": 129
       },
       {
         "title": "Assembly Hall of Shame",
         "url": "https://github.com/xoreaxeaxeax/asm-hall-of-shame",
         "source": "Hacker News",
-        "score": 248
-      },
-      {
-        "title": "Should AI labs be treated like the owners of dangerous animals?",
-        "url": "https://www.economist.com/science-and-technology/2026/08/06/should-ai-labs-be-treated-like-the-owners-of-dangerous-animals",
-        "source": "Hacker News",
-        "score": 30
+        "score": 273
       },
       {
         "title": "Ancient Library – 1,060 Greek/Latin texts, click any word to parse it",
         "url": "https://ancientlibrary.net/",
         "source": "Hacker News",
-        "score": 146
+        "score": 164
       },
       {
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News",
-        "score": 419
+        "score": 473
+      },
+      {
+        "title": "SupererDuperer",
+        "url": "https://www.shirtpocket.com/blog/supererduperer",
+        "source": "Hacker News",
+        "score": 29
+      },
+      {
+        "title": "Managing AI Coding Costs at Scale",
+        "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
+        "source": "Hacker News",
+        "score": 179
       },
       {
         "title": "Responding to the next frontier of critical cyber capabilities",
         "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
         "source": "Hacker News",
-        "score": 153
+        "score": 165
       },
       {
         "title": "Oracle bans AI-generated code from OpenJDK",
         "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
         "source": "Hacker News",
-        "score": 390
-      },
-      {
-        "title": "Workers Drilling in Romania Broke into a Cave Sealed for 5.5M Years",
-        "url": "https://travelandtannins.com/workers-drilling-in-romania-broke-into-a-cave-sealed-for-5-5-million-years-and-found-an-entire-living-world-that-has-never-seen-the-sun/",
-        "source": "Hacker News",
-        "score": 8
-      },
-      {
-        "title": "Managing AI Coding Costs at Scale",
-        "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
-        "source": "Hacker News",
-        "score": 167
+        "score": 408
       },
       {
         "title": "An all-sky map of half a million supermassive black holes",
         "url": "https://www.sdss.org/black-hole-mapper-release-20/",
         "source": "Hacker News",
-        "score": 139
+        "score": 149
       },
       {
-        "title": "Guarded Methods in OCaml (2025)",
-        "url": "https://xvw.lol/en/articles/oop-refl.html",
+        "title": "2027 memory capacity is reportedly sold out",
+        "url": "https://www.ign.com/articles/ramageddon-continues-another-year-as-2027-memory-capacity-is-reportedly-sold-out",
         "source": "Hacker News",
-        "score": 56
+        "score": 274
       },
       {
         "title": "Water system controllers don't belong on the internet, says ex-NSA chief",
         "url": "https://www.theregister.com/security/2026/08/07/water-system-controllers-dont-belong-on-the-internet-says-ex-nsa-chief-after-suspected-iran-attacks/5285070",
         "source": "Hacker News",
-        "score": 124
+        "score": 145
       },
       {
-        "title": "Carl's Required Reading",
-        "url": "https://carlkolon.com/reading/",
+        "title": "Guarded Methods in OCaml (2025)",
+        "url": "https://xvw.lol/en/articles/oop-refl.html",
         "source": "Hacker News",
-        "score": 98
-      },
-      {
-        "title": "Psychological Warfare in Reverse Engineering (2015)",
-        "url": "https://github.com/xoreaxeaxeax/repsych",
-        "source": "Hacker News",
-        "score": 50
+        "score": 57
       }
     ],
     "ai": [
       {
-        "title": "Should AI labs be treated like the owners of dangerous animals?",
-        "url": "https://www.economist.com/science-and-technology/2026/08/06/should-ai-labs-be-treated-like-the-owners-of-dangerous-animals",
-        "source": "Hacker News AI",
-        "score": 30
-      },
-      {
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News AI",
-        "score": 419
-      },
-      {
-        "title": "Oracle bans AI-generated code from OpenJDK",
-        "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
-        "source": "Hacker News AI",
-        "score": 390
+        "score": 473
       },
       {
         "title": "Managing AI Coding Costs at Scale",
         "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
         "source": "Hacker News AI",
-        "score": 167
+        "score": 179
+      },
+      {
+        "title": "Oracle bans AI-generated code from OpenJDK",
+        "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
+        "source": "Hacker News AI",
+        "score": 408
       },
       {
         "title": "Captain Bible Reverse Engineering",
         "url": "https://github.com/peterkelly/captain-bible-re",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 21
       },
       {
         "title": "Lost my phone at the office. Claude suggested tracking Bluetooth signal strength",
         "url": "https://twitter.com/un1c0rnioz/status/2084686552299634805",
         "source": "Hacker News AI",
-        "score": 29
-      },
-      {
-        "title": "Britain's New World of Tobacco (2017)",
-        "url": "https://www.historytoday.com/archive/feature/britains-new-world-tobacco",
-        "source": "Hacker News AI",
-        "score": 17
+        "score": 36
       }
     ],
     "news": [
