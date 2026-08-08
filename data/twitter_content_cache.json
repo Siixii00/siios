@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-08T07:51:02.939591",
+    "last_updated": "2026-08-08T08:42:24.612779",
     "total_items": 55
   },
   "content": {
     "tech": [
       {
+        "title": "Hardware backdoors in some x86 CPUs",
+        "url": "https://github.com/xoreaxeaxeax/rosenbridge",
+        "source": "Hacker News",
+        "score": 55
+      },
+      {
         "title": "A Physicist Rigged His Pet Hamster’s Wheel to Upload to Strava",
         "url": "https://www.runnersworld.com/news/a73355106/hamster-wheel-strava-running/",
         "source": "Hacker News",
-        "score": 135
+        "score": 159
       },
       {
         "title": "DeepSeek V4 Flash 0731",
         "url": "https://arcprize.org/results/deepseek-v4-flash-0731",
         "source": "Hacker News",
-        "score": 588
-      },
-      {
-        "title": "Hardware backdoors in some x86 CPUs",
-        "url": "https://github.com/xoreaxeaxeax/rosenbridge",
-        "source": "Hacker News",
-        "score": 9
+        "score": 606
       },
       {
         "title": "U.S. Department of Energy Launches the Genesis Open Models Initiative",
         "url": "https://genesisopenmodels.anl.gov/",
         "source": "Hacker News",
-        "score": 209
-      },
-      {
-        "title": "Assembly Hall of Shame",
-        "url": "https://github.com/xoreaxeaxeax/asm-hall-of-shame",
-        "source": "Hacker News",
-        "score": 323
+        "score": 218
       },
       {
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News",
-        "score": 584
+        "score": 615
+      },
+      {
+        "title": "Assembly Hall of Shame",
+        "url": "https://github.com/xoreaxeaxeax/asm-hall-of-shame",
+        "source": "Hacker News",
+        "score": 334
       },
       {
         "title": "NASA figured out how to keep its Voyager 2 probe running for another year",
         "url": "https://www.space.com/space-exploration/voyager/nasa-figured-out-how-to-keep-its-48-year-old-voyager-2-probe-running-for-yet-another-year",
         "source": "Hacker News",
-        "score": 207
+        "score": 217
       },
       {
         "title": "Ancient Library – 1,060 Greek/Latin texts, click any word to parse it",
         "url": "https://ancientlibrary.net/",
         "source": "Hacker News",
-        "score": 198
+        "score": 202
       },
       {
         "title": "SupererDuperer",
         "url": "https://www.shirtpocket.com/blog/supererduperer",
         "source": "Hacker News",
-        "score": 89
+        "score": 96
       },
       {
         "title": "The Nixpkgs core team has disbanded",
         "url": "https://discourse.nixos.org/t/the-nixpkgs-core-team-has-disbanded/79413",
         "source": "Hacker News",
-        "score": 272
-      },
-      {
-        "title": "Managing AI Coding Costs at Scale",
-        "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
-        "source": "Hacker News",
-        "score": 221
-      },
-      {
-        "title": "How the 'fecal revolution' changed Earth's ecosystems",
-        "url": "https://phys.org/news/2026-08-fecal-revolution-earth-ecosystems.html",
-        "source": "Hacker News",
-        "score": 10
+        "score": 283
       },
       {
         "title": "Workers Drilling in Romania Broke into a Cave Sealed for 5.5M Years",
         "url": "https://travelandtannins.com/workers-drilling-in-romania-broke-into-a-cave-sealed-for-5-5-million-years-and-found-an-entire-living-world-that-has-never-seen-the-sun/",
         "source": "Hacker News",
-        "score": 57
-      },
-      {
-        "title": "2027 memory capacity is reportedly sold out",
-        "url": "https://www.ign.com/articles/ramageddon-continues-another-year-as-2027-memory-capacity-is-reportedly-sold-out",
-        "source": "Hacker News",
-        "score": 335
+        "score": 67
       },
       {
         "title": "From One Seed to a Thousand Leaves – Merkle's Authentication Tree",
         "url": "https://0xkrt26.github.io/math_behind_security/2026/08/03/merkle-tree.html",
         "source": "Hacker News",
-        "score": 9
+        "score": 14
+      },
+      {
+        "title": "Managing AI Coding Costs at Scale",
+        "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
+        "source": "Hacker News",
+        "score": 229
+      },
+      {
+        "title": "2027 memory capacity is reportedly sold out",
+        "url": "https://www.ign.com/articles/ramageddon-continues-another-year-as-2027-memory-capacity-is-reportedly-sold-out",
+        "source": "Hacker News",
+        "score": 349
+      },
+      {
+        "title": "An all-sky map of half a million supermassive black holes",
+        "url": "https://www.sdss.org/black-hole-mapper-release-20/",
+        "source": "Hacker News",
+        "score": 165
       }
     ],
     "ai": [
@@ -101,37 +101,42 @@
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News AI",
-        "score": 584
+        "score": 615
       },
       {
         "title": "Managing AI Coding Costs at Scale",
         "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
         "source": "Hacker News AI",
-        "score": 221
+        "score": 229
       },
       {
         "title": "Oracle bans AI-generated code from OpenJDK",
         "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
         "source": "Hacker News AI",
-        "score": 450
+        "score": 462
       },
       {
         "title": "Mythos social engineering AISI INC-2026-07-28-01",
         "url": "https://web.archive.org/web/20260731053721/http://github.com/ancaferro/myNetwork/pull/3",
         "source": "Hacker News AI",
-        "score": 50
+        "score": 59
       },
       {
         "title": "Captain Bible Reverse Engineering",
         "url": "https://github.com/peterkelly/captain-bible-re",
         "source": "Hacker News AI",
-        "score": 27
+        "score": 29
       }
     ],
     "news": [
       {
         "title": "Child among three killed in Russian missile attacks near Kyiv",
         "url": "https://www.bbc.co.uk/news/articles/cz7dy8gq99eo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "The phone book that led us to Assad's spy chief in hiding",
+        "url": "https://www.bbc.co.uk/news/articles/c4gyrzn8p94o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -158,14 +163,14 @@
         "title": "Saudi Arabia, Turkey and Pakistan sign defence pact",
         "url": "https://www.bbc.co.uk/news/articles/c30418m4mj4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Spanish police arrest 78 people in bust of 'one of largest' smuggling networks ",
-        "url": "https://www.bbc.co.uk/news/articles/clylejzkkx4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " MacBook Neo vs budget Windows laptops: which is worth your money? ",
+        "url": "https://www.creativebloq.com/tech/laptops/macbook-neo-vs-budget-windows-laptops-which-is-worth-your-money",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Get the luxury look with stationery starting from $10 ",
         "url": "https://www.creativebloq.com/creative-inspiration/fashion/get-the-luxury-look-with-stationery-starting-from-usd10",
@@ -194,11 +199,6 @@
       {
         "title": " Japan asks Trump to quit it with the weird Super Mario videos already ",
         "url": "https://www.creativebloq.com/3d/video-game-design/japan-asks-trump-to-quit-it-with-the-weird-super-mario-videos-already",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Alexander Skarsgård's wood in Wicker is almost entirely real ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/alexander-skarsgards-wood-in-wicker-is-almost-entirely-real",
         "source": "Creative Bloq"
       }
     ],
