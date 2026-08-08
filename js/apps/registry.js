@@ -88,11 +88,13 @@ async function loadApps() {
         import('./settings/cross-device-settings.js')
     ];
 
-    const results = await Promise.all(appModules);
+    const results = await Promise.allSettled(appModules);
 
-    results.forEach(module => {
-        if (module.default) {
-            apps.push(module.default);
+    results.forEach(result => {
+        if (result.status === 'fulfilled' && result.value.default) {
+            apps.push(result.value.default);
+        } else if (result.status === 'rejected') {
+            console.warn('模組載入失敗（已跳過）:', result.reason?.url || result.reason);
         }
     });
 
