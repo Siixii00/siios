@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-08T03:26:56.110908",
+    "last_updated": "2026-08-08T04:57:57.825887",
     "total_items": 55
   },
   "content": {
     "tech": [
       {
-        "title": "The Nixpkgs core team has disbanded",
-        "url": "https://discourse.nixos.org/t/the-nixpkgs-core-team-has-disbanded/79413",
-        "source": "Hacker News",
-        "score": 142
-      },
-      {
         "title": "NASA to keep its 48-year-old Voyager 2 probe running for yet another year",
         "url": "https://www.space.com/space-exploration/voyager/nasa-figured-out-how-to-keep-its-48-year-old-voyager-2-probe-running-for-yet-another-year",
         "source": "Hacker News",
-        "score": 59
+        "score": 118
+      },
+      {
+        "title": "The Nixpkgs core team has disbanded",
+        "url": "https://discourse.nixos.org/t/the-nixpkgs-core-team-has-disbanded/79413",
+        "source": "Hacker News",
+        "score": 186
       },
       {
         "title": "DeepSeek V4 Flash 0731",
         "url": "https://arcprize.org/results/deepseek-v4-flash-0731",
         "source": "Hacker News",
-        "score": 499
+        "score": 533
       },
       {
         "title": "U.S. Department of Energy Launches the Genesis Open Models Initiative",
         "url": "https://genesisopenmodels.anl.gov/",
         "source": "Hacker News",
-        "score": 129
+        "score": 166
+      },
+      {
+        "title": "Physicist Rigged His Pet Hamster's Wheel to Strava. It Runs Far Every Night",
+        "url": "https://www.runnersworld.com/news/a73355106/hamster-wheel-strava-running/",
+        "source": "Hacker News",
+        "score": 48
       },
       {
         "title": "Assembly Hall of Shame",
         "url": "https://github.com/xoreaxeaxeax/asm-hall-of-shame",
         "source": "Hacker News",
-        "score": 273
-      },
-      {
-        "title": "Ancient Library – 1,060 Greek/Latin texts, click any word to parse it",
-        "url": "https://ancientlibrary.net/",
-        "source": "Hacker News",
-        "score": 164
-      },
-      {
-        "title": "What happens if an entire class of workers loses faith in their careers",
-        "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
-        "source": "Hacker News",
-        "score": 473
+        "score": 286
       },
       {
         "title": "SupererDuperer",
         "url": "https://www.shirtpocket.com/blog/supererduperer",
         "source": "Hacker News",
-        "score": 29
+        "score": 67
+      },
+      {
+        "title": "What happens if an entire class of workers loses faith in their careers",
+        "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
+        "source": "Hacker News",
+        "score": 510
+      },
+      {
+        "title": "Ancient Library – 1,060 Greek/Latin texts, click any word to parse it",
+        "url": "https://ancientlibrary.net/",
+        "source": "Hacker News",
+        "score": 175
       },
       {
         "title": "Managing AI Coding Costs at Scale",
         "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
         "source": "Hacker News",
-        "score": 179
-      },
-      {
-        "title": "Responding to the next frontier of critical cyber capabilities",
-        "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
-        "source": "Hacker News",
-        "score": 165
+        "score": 196
       },
       {
         "title": "Oracle bans AI-generated code from OpenJDK",
         "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
         "source": "Hacker News",
-        "score": 408
+        "score": 424
+      },
+      {
+        "title": "Responding to the next frontier of critical cyber capabilities",
+        "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
+        "source": "Hacker News",
+        "score": 168
       },
       {
         "title": "An all-sky map of half a million supermassive black holes",
         "url": "https://www.sdss.org/black-hole-mapper-release-20/",
         "source": "Hacker News",
-        "score": 149
+        "score": 154
       },
       {
         "title": "2027 memory capacity is reportedly sold out",
         "url": "https://www.ign.com/articles/ramageddon-continues-another-year-as-2027-memory-capacity-is-reportedly-sold-out",
         "source": "Hacker News",
-        "score": 274
+        "score": 293
       },
       {
-        "title": "Water system controllers don't belong on the internet, says ex-NSA chief",
-        "url": "https://www.theregister.com/security/2026/08/07/water-system-controllers-dont-belong-on-the-internet-says-ex-nsa-chief-after-suspected-iran-attacks/5285070",
+        "title": "Mythos social engineering AISI INC-2026-07-28-01",
+        "url": "https://web.archive.org/web/20260731053721/http://github.com/ancaferro/myNetwork/pull/3",
         "source": "Hacker News",
-        "score": 145
-      },
-      {
-        "title": "Guarded Methods in OCaml (2025)",
-        "url": "https://xvw.lol/en/articles/oop-refl.html",
-        "source": "Hacker News",
-        "score": 57
+        "score": 27
       }
     ],
     "ai": [
@@ -101,34 +101,39 @@
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News AI",
-        "score": 473
+        "score": 510
       },
       {
         "title": "Managing AI Coding Costs at Scale",
         "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
         "source": "Hacker News AI",
-        "score": 179
+        "score": 196
       },
       {
         "title": "Oracle bans AI-generated code from OpenJDK",
         "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
         "source": "Hacker News AI",
-        "score": 408
+        "score": 424
+      },
+      {
+        "title": "Mythos social engineering AISI INC-2026-07-28-01",
+        "url": "https://web.archive.org/web/20260731053721/http://github.com/ancaferro/myNetwork/pull/3",
+        "source": "Hacker News AI",
+        "score": 27
       },
       {
         "title": "Captain Bible Reverse Engineering",
         "url": "https://github.com/peterkelly/captain-bible-re",
         "source": "Hacker News AI",
-        "score": 21
-      },
-      {
-        "title": "Lost my phone at the office. Claude suggested tracking Bluetooth signal strength",
-        "url": "https://twitter.com/un1c0rnioz/status/2084686552299634805",
-        "source": "Hacker News AI",
-        "score": 36
+        "score": 22
       }
     ],
     "news": [
+      {
+        "title": "Child among three killed in Russian missile attacks near Kyiv",
+        "url": "https://www.bbc.co.uk/news/articles/cz7dy8gq99eo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Spain imposes border controls against Italy as row over Ceuta migrant influx intensifies",
         "url": "https://www.bbc.co.uk/news/articles/c5yv5l6yr5ko?at_medium=RSS&at_campaign=rss",
@@ -145,6 +150,11 @@
         "source": "BBC World"
       },
       {
+        "title": "'I ran because I knew I would die': Russian drones target medics in Ukraine",
+        "url": "https://www.bbc.co.uk/news/articles/c3r073eqvrjo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Saudi Arabia, Turkey and Pakistan sign defence pact",
         "url": "https://www.bbc.co.uk/news/articles/c30418m4mj4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -152,16 +162,6 @@
       {
         "title": "Spanish police arrest 78 people in bust of 'one of largest' smuggling networks ",
         "url": "https://www.bbc.co.uk/news/articles/clylejzkkx4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Kidnapped rare Serbian eagle freed into wild after rescue",
-        "url": "https://www.bbc.co.uk/news/articles/cdewxgw69exo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Hunter Biden tells BBC his pardon was 'not good' for America or his father's legacy",
-        "url": "https://www.bbc.co.uk/news/articles/cy8ey458pv5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
