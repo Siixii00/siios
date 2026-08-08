@@ -1,125 +1,131 @@
 {
   "metadata": {
-    "last_updated": "2026-08-08T11:30:07.827997",
-    "total_items": 54
+    "last_updated": "2026-08-08T12:50:14.045633",
+    "total_items": 55
   },
   "content": {
     "tech": [
       {
+        "title": "A Tome of Forbidden Technologies",
+        "url": "https://ecosophia.net/a-tome-of-forbidden-technologies/",
+        "source": "Hacker News",
+        "score": 12
+      },
+      {
+        "title": "The USSR in 100 Photographs",
+        "url": "https://trinixy.ru/7039-sssr_v_fotografijakh_100_foto.html",
+        "source": "Hacker News",
+        "score": 46
+      },
+      {
+        "title": "DeepMind's WeatherNext model achieves breakthrough forecasting cyclones",
+        "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+        "source": "Hacker News",
+        "score": 39
+      },
+      {
+        "title": "The CPU is back: Rethinking the CPU-GPU split for LLM inference",
+        "url": "https://www.redhat.com/en/blog/cpu-back-rethinking-cpu-gpu-split-llm-inference",
+        "source": "Hacker News",
+        "score": 6
+      },
+      {
         "title": "A Physicist Rigged His Pet Hamster’s Wheel to Upload to Strava",
         "url": "https://www.runnersworld.com/news/a73355106/hamster-wheel-strava-running/",
         "source": "Hacker News",
-        "score": 241
+        "score": 271
       },
       {
         "title": "Hardware backdoors in some x86 CPUs",
         "url": "https://github.com/xoreaxeaxeax/rosenbridge",
         "source": "Hacker News",
-        "score": 137
-      },
-      {
-        "title": "New Amazon Data Center Is Set to Have the Most Polluting Power Plant in the U.S.",
-        "url": "https://www.nytimes.com/2026/08/08/climate/amazon-data-center-texas-pollution.html",
-        "source": "Hacker News",
-        "score": 64
+        "score": 170
       },
       {
         "title": "DeepSeek V4 Flash 0731",
         "url": "https://arcprize.org/results/deepseek-v4-flash-0731",
         "source": "Hacker News",
-        "score": 652
+        "score": 672
       },
       {
         "title": "U.S. Department of Energy Launches the Genesis Open Models Initiative",
         "url": "https://genesisopenmodels.anl.gov/",
         "source": "Hacker News",
-        "score": 252
+        "score": 265
       },
       {
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News",
-        "score": 712
+        "score": 755
+      },
+      {
+        "title": "k-Coloring is Faster than Computing the Chromatic Number",
+        "url": "https://arxiv.org/abs/2607.25973",
+        "source": "Hacker News",
+        "score": 13
       },
       {
         "title": "Europe's free satellite service just made it easier to track wildfires",
         "url": "https://arstechnica.com/gadgets/2026/08/europes-free-satellite-service-just-made-it-easier-to-track-wildfires/",
         "source": "Hacker News",
-        "score": 26
+        "score": 56
       },
       {
         "title": "Assembly Hall of Shame",
         "url": "https://github.com/xoreaxeaxeax/asm-hall-of-shame",
         "source": "Hacker News",
-        "score": 356
+        "score": 362
       },
       {
         "title": "ao486: x86-compatible Verilog core implementing all features of a 486 SX (2014)",
         "url": "https://github.com/alfikpl/ao486",
         "source": "Hacker News",
-        "score": 26
+        "score": 32
       },
       {
-        "title": "NASA figured out how to keep its Voyager 2 probe running for another year",
-        "url": "https://www.space.com/space-exploration/voyager/nasa-figured-out-how-to-keep-its-48-year-old-voyager-2-probe-running-for-yet-another-year",
+        "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
+        "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
         "source": "Hacker News",
-        "score": 257
-      },
-      {
-        "title": "SupererDuperer",
-        "url": "https://www.shirtpocket.com/blog/supererduperer",
-        "source": "Hacker News",
-        "score": 118
+        "score": 48
       },
       {
         "title": "Ancient Library – 1,060 Greek/Latin texts, click any word to parse it",
         "url": "https://ancientlibrary.net/",
         "source": "Hacker News",
-        "score": 211
-      },
-      {
-        "title": "Apple Introduces Leasing Program for iPhones and Other Devices",
-        "url": "https://www.nytimes.com/2026/07/28/technology/apple-leasing-program.html",
-        "source": "Hacker News",
-        "score": 10
-      },
-      {
-        "title": "Show HN: Sign language translation with smart glasses",
-        "url": "https://github.com/aadisang/hand-wave",
-        "source": "Hacker News",
-        "score": 5
-      },
-      {
-        "title": "2027 memory capacity is reportedly sold out",
-        "url": "https://www.ign.com/articles/ramageddon-continues-another-year-as-2027-memory-capacity-is-reportedly-sold-out",
-        "source": "Hacker News",
-        "score": 387
+        "score": 217
       }
     ],
     "ai": [
       {
+        "title": "The CPU is back: Rethinking the CPU-GPU split for LLM inference",
+        "url": "https://www.redhat.com/en/blog/cpu-back-rethinking-cpu-gpu-split-llm-inference",
+        "source": "Hacker News AI",
+        "score": 6
+      },
+      {
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News AI",
-        "score": 712
+        "score": 755
+      },
+      {
+        "title": "Now we have a timeline of the OpenAI accidental attack against Hugging Face",
+        "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+        "source": "Hacker News AI",
+        "score": 48
       },
       {
         "title": "Managing AI Coding Costs at Scale",
         "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
         "source": "Hacker News AI",
-        "score": 251
+        "score": 258
       },
       {
         "title": "Oracle bans AI-generated code from OpenJDK",
         "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
         "source": "Hacker News AI",
-        "score": 481
-      },
-      {
-        "title": "Mythos social engineering AISI INC-2026-07-28-01",
-        "url": "https://web.archive.org/web/20260731053721/http://github.com/ancaferro/myNetwork/pull/3",
-        "source": "Hacker News AI",
-        "score": 67
+        "score": 489
       }
     ],
     "news": [
@@ -144,22 +150,27 @@
         "source": "BBC World"
       },
       {
+        "title": "US pledges $1bn support to Colombia as Trump-backed president sworn in",
+        "url": "https://www.bbc.co.uk/news/articles/cy9wy3y0e5wo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "NBA forward Clarke's death due to effects of drugs",
+        "url": "https://www.bbc.co.uk/sport/basketball/articles/czekj4wg41po?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Thai PM vows to introduce stricter gun laws after eight killed in shooting",
         "url": "https://www.bbc.co.uk/news/articles/cdewx6rew04o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "'I ran because I knew I would die': Russian drones target medics in Ukraine",
-        "url": "https://www.bbc.co.uk/news/articles/c3r073eqvrjo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Saudi Arabia, Turkey and Pakistan sign defence pact",
-        "url": "https://www.bbc.co.uk/news/articles/c30418m4mj4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " So, it seems Disney music is our only protection against Meta's pervert glasses ",
+        "url": "https://www.creativebloq.com/tech/so-it-seems-disney-music-is-our-only-protection-against-metas-pervert-glasses",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Ikea goes viral with racy wicker bench photo because Alexander Skarsgård ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/ikea-goes-viral-with-racy-photo-of-a-wicker-bench",
@@ -188,11 +199,6 @@
       {
         "title": " High-end audio take note: These $35 earphones have 2 sound profiles and they're both great ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/budget-banger-the-usd35-op-22-earphone-has-2-sound-profiles-both-great",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Ricky Gervais’ Alley Cats proves animation is the perfect home for weird ideas ",
-        "url": "https://www.creativebloq.com/art/animation/ricky-gervais-alley-cats-proves-animation-is-the-perfect-home-for-weird-ideas",
         "source": "Creative Bloq"
       }
     ],
@@ -235,6 +241,16 @@
     ],
     "gaming": [
       {
+        "title": "Disney's Genius 11-Part Crime Thriller Saga So Good, You'll Finish It in One Weekend",
+        "url": "https://www.polygon.com/fargo-season-4-weekend-binge/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Nintendo Switch 2's 2026 Looks Very Different After Fire Emblem: Fortune's Weave Direct",
+        "url": "https://www.polygon.com/nintendo-switch-2-fire-emblem-fortunes-weave-direct-switchboard/",
+        "source": "Polygon"
+      },
+      {
         "title": "X-Men Actor Says Marvel Never Told Him Why He Was Replaced In 'X-Men '97'",
         "url": "https://www.polygon.com/x-men-97-cable-gambit-actor-replaced/",
         "source": "Polygon"
@@ -257,16 +273,6 @@
       {
         "title": "2025's Best Soulslike You Missed Is Officially a Sleeper Hit on Xbox Game Pass",
         "url": "https://www.polygon.com/hell-is-us-game-pass-hit/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Memoirium combines Dark Souls, Inception, and Backrooms in Steam's Coolest New Action RPG",
-        "url": "https://www.polygon.com/new-soulslike-memoirium-on-steam/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Contrapoints devours forbidden, decadent games | Shelf Quest",
-        "url": "https://www.polygon.com/video/contrapoints-devours-forbidden-decadent-games-shelf-quest/",
         "source": "Polygon"
       }
     ],
