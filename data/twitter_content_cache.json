@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-08T22:30:13.697730",
-    "total_items": 62
+    "last_updated": "2026-08-08T23:29:55.544674",
+    "total_items": 61
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Denmark Requires Oral Defenses for Students' Written Work to Counter AI Cheating",
         "url": "https://mezha.net/eng/bukvy/ca117584_denmark_requires_oral/",
         "source": "Hacker News",
-        "score": 409
-      },
-      {
-        "title": "\"Code was never the hard part\" is an insult to all programmers",
-        "url": "https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers",
-        "source": "Hacker News",
-        "score": 473
-      },
-      {
-        "title": "Fastmail offers EU data region",
-        "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
-        "source": "Hacker News",
-        "score": 274
+        "score": 460
       },
       {
         "title": "Maryland Closes More of Cunningham Falls State Park After Second Beaver Attack",
         "url": "https://news.maryland.gov/dnr/2026/08/05/dnr-closes-additional-areas-of-cunningham-falls-state-park-following-second-beaver-attack/",
         "source": "Hacker News",
-        "score": 34
+        "score": 57
+      },
+      {
+        "title": "Fastmail offers EU data region",
+        "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
+        "source": "Hacker News",
+        "score": 291
       },
       {
         "title": "A domain can now say it is for sale, in DNS",
         "url": "https://specification.website/spec/foundations/for-sale-dns/",
         "source": "Hacker News",
-        "score": 306
-      },
-      {
-        "title": "LinkedIn Feed Blocker",
-        "url": "https://github.com/andrewpollack/linkedin-feed-blocker",
-        "source": "Hacker News",
-        "score": 150
+        "score": 323
       },
       {
         "title": "Open-source interactive map for the Aug 12 total solar eclipse",
         "url": "https://eclipsefan.org/?v=2&t=max&layers=eclipse%2Cbesselian%2Cumbra-live%2Cshadow-3d%2Ccloud-projection%2Cosm&lat=43.4623&lon=-3.8099&opacity=besselian%3A0.2%2Cumbra-live%3A0.2&zoom=6&palier=minute",
         "source": "Hacker News",
-        "score": 45
+        "score": 63
+      },
+      {
+        "title": "LinkedIn Feed Blocker",
+        "url": "https://github.com/andrewpollack/linkedin-feed-blocker",
+        "source": "Hacker News",
+        "score": 157
       },
       {
         "title": "Can Intel finally beat ARM on performance per Watt?",
         "url": "https://hackaday.com/2026/08/08/want-energy-efficiency-dude-youre-getting-a-dell/",
         "source": "Hacker News",
-        "score": 125
+        "score": 141
       },
       {
         "title": "Making difficulty curves in games",
         "url": "http://www.davetech.co.uk/difficultycurves",
         "source": "Hacker News",
-        "score": 14
+        "score": 29
       },
       {
-        "title": "Wikipedia's founder on his life's work: \"A propaganda tool\"",
-        "url": "https://nordictimes.com/world/wikipedias-founder-on-his-lifes-work-a-propaganda-tool/",
+        "title": "DDisasm: Reversible (bi-directional) Disassembler",
+        "url": "https://github.com/GrammaTech/ddisasm",
         "source": "Hacker News",
-        "score": 7
+        "score": 6
       },
       {
         "title": "DeepMind's WeatherNext model achieves breakthrough forecasting cyclones",
         "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
         "source": "Hacker News",
-        "score": 348
+        "score": 357
       },
       {
         "title": "Preventing Misfolding by Preventing Folding",
         "url": "https://www.science.org/content/blog-post/preventing-misfolding-preventing-folding",
         "source": "Hacker News",
-        "score": 31
+        "score": 38
       },
       {
         "title": "Timeline of the OpenAI accidental attack against Hugging Face",
         "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
         "source": "Hacker News",
-        "score": 292
+        "score": 305
+      },
+      {
+        "title": "My server is a phone now",
+        "url": "https://seg6.space/posts/phone-server/",
+        "source": "Hacker News",
+        "score": 3
       },
       {
         "title": "Building a local positioning system to track runners using Ultra-Wideband",
         "url": "https://zeus.ugent.be/blog/25-26/12urenloop-uwb/",
         "source": "Hacker News",
-        "score": 24
+        "score": 29
       },
       {
-        "title": "TinySol, a tiny solitaire game for DOS",
-        "url": "https://classicbits.net/coding-and-software/my-software/monosol/",
+        "title": "Triton: DirectX 11 Driver for QEMU",
+        "url": "https://blog.getutm.app/2026/introducing-triton-directx-11-driver-for-qemu/",
         "source": "Hacker News",
-        "score": 36
+        "score": 123
       }
     ],
     "ai": [
@@ -101,73 +101,67 @@
         "title": "Denmark Requires Oral Defenses for Students' Written Work to Counter AI Cheating",
         "url": "https://mezha.net/eng/bukvy/ca117584_denmark_requires_oral/",
         "source": "Hacker News AI",
-        "score": 409
+        "score": 460
       },
       {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News AI",
-        "score": 274
+        "score": 291
       },
       {
         "title": "A domain can now say it is for sale, in DNS",
         "url": "https://specification.website/spec/foundations/for-sale-dns/",
         "source": "Hacker News AI",
-        "score": 306
-      },
-      {
-        "title": "Wikipedia's founder on his life's work: \"A propaganda tool\"",
-        "url": "https://nordictimes.com/world/wikipedias-founder-on-his-lifes-work-a-propaganda-tool/",
-        "source": "Hacker News AI",
-        "score": 7
+        "score": 323
       },
       {
         "title": "Timeline of the OpenAI accidental attack against Hugging Face",
         "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
         "source": "Hacker News AI",
-        "score": 292
+        "score": 305
       },
       {
         "title": "TinySol, a tiny solitaire game for DOS",
         "url": "https://classicbits.net/coding-and-software/my-software/monosol/",
         "source": "Hacker News AI",
-        "score": 36
-      },
-      {
-        "title": "What happens if an entire class of workers loses faith in their careers",
-        "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
-        "source": "Hacker News AI",
-        "score": 952
-      },
-      {
-        "title": "Message your other Claude Code sessions",
-        "url": "https://code.claude.com/docs/en/cross-session-messaging",
-        "source": "Hacker News AI",
-        "score": 32
-      },
-      {
-        "title": "Gentoo bugzilla closed due AI bot scraper overload",
-        "url": "https://social.treehouse.systems/@mgorny/117058483039362779",
-        "source": "Hacker News AI",
-        "score": 145
+        "score": 41
       },
       {
         "title": "Lost my phone at the office. Claude suggested tracking Bluetooth signal strength",
         "url": "https://twitter.com/un1c0rnioz/status/2084686552299634805",
         "source": "Hacker News AI",
-        "score": 173
+        "score": 200
       },
       {
-        "title": "Coldcard hardware wallet firmware flaw sees 2k BTC (~$130M) drained",
-        "url": "https://www.web3isgoinggreat.com/?id=coldcard-hardware-wallet-flaw",
+        "title": "Message your other Claude Code sessions",
+        "url": "https://code.claude.com/docs/en/cross-session-messaging",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 40
+      },
+      {
+        "title": "Gentoo bugzilla closed due AI bot scraper overload",
+        "url": "https://social.treehouse.systems/@mgorny/117058483039362779",
+        "source": "Hacker News AI",
+        "score": 150
       },
       {
         "title": "Managing AI Coding Costs at Scale",
         "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
         "source": "Hacker News AI",
-        "score": 298
+        "score": 299
+      },
+      {
+        "title": "What happens if an entire class of workers loses faith in their careers",
+        "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
+        "source": "Hacker News AI",
+        "score": 971
+      },
+      {
+        "title": "AI Settles a 25 Year-Old Problem We Left Behind",
+        "url": "https://twitter.com/DimitrisPapail/status/2086158118354887060",
+        "source": "Hacker News AI",
+        "score": 5
       }
     ],
     "news": [
