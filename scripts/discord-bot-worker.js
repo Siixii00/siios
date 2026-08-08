@@ -377,6 +377,17 @@ async function generateAIResponseWithContext(message, characterId, userId, userD
     const rpPrompt = RP_SYSTEM_PROMPT_TEMPLATE.replace(/\{\{char_name\}\}/g, charName);
     systemMessages.push({ role: 'system', content: rpPrompt });
 
+    // Discord 環境提醒（公開頻道 + 人數判斷）
+    const environ = await getDiscordEnvironment(message, env);
+    const discordDirective = `[Discord Environment]
+You are currently replying as **${charName}** in Discord.
+- Discord 主要是公開頻道，回覆請用輕鬆、聊天式的口吻，語句簡短，限縮在聊天模式。
+- 可適度加入動作描寫（例如 *歪頭*、*笑*），但不要寫太長的敘述。
+- 不要使用 markdown、程式碼區塊或落落長的段落。
+${environ.isPublic ? '- 這是公開頻道，內容會被其他成員看到。' : '- 這是私訊／群組對話。'}
+${environ.memberCount >= 3 ? '- 頻道內有 3 人以上在場，請避免成人相關或敏感話題，維持適合公開場合的內容。' : ''}`;
+    systemMessages.push({ role: 'system', content: discordDirective });
+
     // 4. 角色人格 + 場景 + 記憶
     let promptContent = '';
     if (characterData) {
@@ -512,6 +523,26 @@ async function loadWorldInfoContext(chatId, userMessage, characterId, userId, en
         }
     } catch (error) { console.error('Error loading world info:', error); }
     return entries;
+}
+
+// ===== 判斷 Discord 環境（公開頻道 + 在場人數）=====
+async function getDiscordEnvironment(message, env) {
+    let isPublic = true;
+    let memberCount = 0;
+    try {
+        const channel = await fetch(`https://discord.com/api/v10/channels/${message.channel_id}`, {
+            headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
+        }).then(r => r.json());
+        if (channel.type === 1 || channel.type === 3) isPublic = false;
+    } catch (_) {}
+    if (isPublic) {
+        try {
+            const history = await getDiscordHistory(message.channel_id, 50, env);
+            const authors = new Set(history.filter(m => m.role !== 'assistant').map(m => m.author_id));
+            memberCount = authors.size;
+        } catch (_) {}
+    }
+    return { isPublic, memberCount };
 }
 
 // ===== 發送 Discord 訊息 =====
