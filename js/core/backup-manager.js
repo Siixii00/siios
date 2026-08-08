@@ -555,7 +555,7 @@ class BackupManager {
         // 檢查是否已存在備份檔案
         const listRes = await fetch(
             'https://www.googleapis.com/drive/v3/files?q=' + 
-            encodeURIComponent('name='siios-backup.json' and trashed=false'),
+            encodeURIComponent("name='siios-backup.json' and trashed=false"),
             {
                 headers: { 'Authorization': `Bearer ${this.googleAccessToken}` }
             }
@@ -633,7 +633,7 @@ class BackupManager {
         // 取得檔案列表
         const listRes = await fetch(
             'https://www.googleapis.com/drive/v3/files?q=' + 
-            encodeURIComponent('name='siios-backup.json' and trashed=false'),
+            encodeURIComponent("name='siios-backup.json' and trashed=false"),
             {
                 headers: { 'Authorization': `Bearer ${this.googleAccessToken}` }
             }
@@ -686,9 +686,9 @@ class BackupManager {
 
         try {
             const listRes = await fetch(
-                'https://www.googleapis.com/drive/v3/files?q=' + 
-                encodeURIComponent('name='siios-backup.json' and trashed=false') + 
-                '&fields=files(id,name,size,modifiedTime',
+'https://www.googleapis.com/drive/v3/files?q=' + 
+            encodeURIComponent("name='siios-backup.json' and trashed=false") + 
+            '&fields=files(id,name,size,modifiedTime)',
                 {
                     headers: { 'Authorization': `Bearer ${this.googleAccessToken}` }
                 }
