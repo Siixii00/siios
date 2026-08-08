@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-07T23:34:44.431306",
-    "total_items": 58
+    "last_updated": "2026-08-08T01:43:05.149998",
+    "total_items": 57
   },
   "content": {
     "tech": [
@@ -9,141 +9,135 @@
         "title": "DeepSeek V4 Flash 0731",
         "url": "https://arcprize.org/results/deepseek-v4-flash-0731",
         "source": "Hacker News",
-        "score": 382
+        "score": 464
+      },
+      {
+        "title": "U.S. Department of Energy Launches the Genesis Open Models Initiative",
+        "url": "https://genesisopenmodels.anl.gov/",
+        "source": "Hacker News",
+        "score": 81
       },
       {
         "title": "Assembly Hall of Shame",
         "url": "https://github.com/xoreaxeaxeax/asm-hall-of-shame",
         "source": "Hacker News",
-        "score": 216
+        "score": 248
+      },
+      {
+        "title": "Should AI labs be treated like the owners of dangerous animals?",
+        "url": "https://www.economist.com/science-and-technology/2026/08/06/should-ai-labs-be-treated-like-the-owners-of-dangerous-animals",
+        "source": "Hacker News",
+        "score": 30
       },
       {
         "title": "Ancient Library – 1,060 Greek/Latin texts, click any word to parse it",
         "url": "https://ancientlibrary.net/",
         "source": "Hacker News",
-        "score": 123
+        "score": 146
       },
       {
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News",
-        "score": 336
+        "score": 419
       },
       {
         "title": "Responding to the next frontier of critical cyber capabilities",
         "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/",
         "source": "Hacker News",
-        "score": 142
+        "score": 153
       },
       {
         "title": "Oracle bans AI-generated code from OpenJDK",
         "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
         "source": "Hacker News",
-        "score": 348
+        "score": 390
+      },
+      {
+        "title": "Workers Drilling in Romania Broke into a Cave Sealed for 5.5M Years",
+        "url": "https://travelandtannins.com/workers-drilling-in-romania-broke-into-a-cave-sealed-for-5-5-million-years-and-found-an-entire-living-world-that-has-never-seen-the-sun/",
+        "source": "Hacker News",
+        "score": 8
+      },
+      {
+        "title": "Managing AI Coding Costs at Scale",
+        "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
+        "source": "Hacker News",
+        "score": 167
       },
       {
         "title": "An all-sky map of half a million supermassive black holes",
         "url": "https://www.sdss.org/black-hole-mapper-release-20/",
         "source": "Hacker News",
-        "score": 129
+        "score": 139
+      },
+      {
+        "title": "Guarded Methods in OCaml (2025)",
+        "url": "https://xvw.lol/en/articles/oop-refl.html",
+        "source": "Hacker News",
+        "score": 56
       },
       {
         "title": "Water system controllers don't belong on the internet, says ex-NSA chief",
         "url": "https://www.theregister.com/security/2026/08/07/water-system-controllers-dont-belong-on-the-internet-says-ex-nsa-chief-after-suspected-iran-attacks/5285070",
         "source": "Hacker News",
-        "score": 78
-      },
-      {
-        "title": "Guarded Methods in OCaml",
-        "url": "https://xvw.lol/en/articles/oop-refl.html",
-        "source": "Hacker News",
-        "score": 42
+        "score": 124
       },
       {
         "title": "Carl's Required Reading",
         "url": "https://carlkolon.com/reading/",
         "source": "Hacker News",
-        "score": 82
-      },
-      {
-        "title": "App Store Rejection of the Week: Dark Hours",
-        "url": "https://daringfireball.net/2026/08/app_store_rejection_of_the_week_dark_hours",
-        "source": "Hacker News",
-        "score": 247
+        "score": 98
       },
       {
         "title": "Psychological Warfare in Reverse Engineering (2015)",
         "url": "https://github.com/xoreaxeaxeax/repsych",
         "source": "Hacker News",
-        "score": 38
-      },
-      {
-        "title": "Making Postgres 300x faster for analytics: batching, operator fusion, and SIMD",
-        "url": "https://malisper.me/how-we-made-postgres-hundreds-of-times-faster-the-query-engine/",
-        "source": "Hacker News",
-        "score": 227
-      },
-      {
-        "title": "Kitesurf: Agent-first browser that runs in V8 isolates",
-        "url": "https://blog.cloudflare.com/kitesurf/",
-        "source": "Hacker News",
-        "score": 152
-      },
-      {
-        "title": "2027 memory capacity is reportedly sold out",
-        "url": "https://www.ign.com/articles/ramageddon-continues-another-year-as-2027-memory-capacity-is-reportedly-sold-out",
-        "source": "Hacker News",
-        "score": 199
+        "score": 50
       }
     ],
     "ai": [
       {
+        "title": "Should AI labs be treated like the owners of dangerous animals?",
+        "url": "https://www.economist.com/science-and-technology/2026/08/06/should-ai-labs-be-treated-like-the-owners-of-dangerous-animals",
+        "source": "Hacker News AI",
+        "score": 30
+      },
+      {
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News AI",
-        "score": 336
+        "score": 419
       },
       {
         "title": "Oracle bans AI-generated code from OpenJDK",
         "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
         "source": "Hacker News AI",
-        "score": 348
+        "score": 390
+      },
+      {
+        "title": "Managing AI Coding Costs at Scale",
+        "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
+        "source": "Hacker News AI",
+        "score": 167
+      },
+      {
+        "title": "Captain Bible Reverse Engineering",
+        "url": "https://github.com/peterkelly/captain-bible-re",
+        "source": "Hacker News AI",
+        "score": 11
       },
       {
         "title": "Lost my phone at the office. Claude suggested tracking Bluetooth signal strength",
         "url": "https://twitter.com/un1c0rnioz/status/2084686552299634805",
         "source": "Hacker News AI",
-        "score": 22
-      },
-      {
-        "title": "Databricks drove down AI coding spend 70%",
-        "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
-        "source": "Hacker News AI",
-        "score": 148
+        "score": 29
       },
       {
         "title": "Britain's New World of Tobacco (2017)",
         "url": "https://www.historytoday.com/archive/feature/britains-new-world-tobacco",
         "source": "Hacker News AI",
-        "score": 15
-      },
-      {
-        "title": "Mailüfterl (Early Transistorized Computer)",
-        "url": "https://en.wikipedia.org/wiki/Mail%C3%BCfterl",
-        "source": "Hacker News AI",
-        "score": 8
-      },
-      {
-        "title": "YouTube's AI Detection Kicked Us in the Face",
-        "url": "https://twitter.com/Kurz_Gesagt/status/2083191397981561232",
-        "source": "Hacker News AI",
-        "score": 10
-      },
-      {
-        "title": "This Mine Predicts Major Wars. It's Opening Again",
-        "url": "https://www.bloomberg.com/graphics/2026-opinion-australia-tungsten-mine-us-war-defense-china/",
-        "source": "Hacker News AI",
-        "score": 66
+        "score": 17
       }
     ],
     "news": [
@@ -259,6 +253,11 @@
     ],
     "gaming": [
       {
+        "title": "2025's Best Soulslike You Missed Is Officially a Sleeper Hit on Xbox Game Pass",
+        "url": "https://www.polygon.com/hell-is-us-game-pass-hit/",
+        "source": "Polygon"
+      },
+      {
         "title": "Memoirium combines Dark Souls, Inception, and Backrooms in Steam's Coolest New Action RPG",
         "url": "https://www.polygon.com/new-soulslike-memoirium-on-steam/",
         "source": "Polygon"
@@ -286,11 +285,6 @@
       {
         "title": "All treasure map locations in Pokémon Pokopia's Bubbly Basin DLC",
         "url": "https://www.polygon.com/pokemon-pokopia-treasure-map-reward-location-rewards-mermaid-gym-starmie-habitat/",
-        "source": "Polygon"
-      },
-      {
-        "title": "What can Tom Holland tell us about Spider-Man: Brand New Day?",
-        "url": "https://www.polygon.com/video/what-can-tom-holland-tell-us-about-spider-man-brand-new-day/",
         "source": "Polygon"
       }
     ],
