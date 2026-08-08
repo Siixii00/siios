@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-08T18:38:35.200739",
+    "last_updated": "2026-08-08T19:30:59.065191",
     "total_items": 60
   },
   "content": {
@@ -9,53 +9,65 @@
         "title": "Denmark Requires Oral Defenses for Students' Written Work to Counter AI Cheating",
         "url": "https://mezha.net/eng/bukvy/ca117584_denmark_requires_oral/",
         "source": "Hacker News",
-        "score": 36
+        "score": 143
       },
       {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News",
-        "score": 111
-      },
-      {
-        "title": "LinkedIn Feed Blocker",
-        "url": "https://github.com/andrewpollack/linkedin-feed-blocker",
-        "source": "Hacker News",
-        "score": 51
-      },
-      {
-        "title": "A domain can now say it is for sale, in DNS",
-        "url": "https://specification.website/spec/foundations/for-sale-dns/",
-        "source": "Hacker News",
-        "score": 225
+        "score": 151
       },
       {
         "title": "\"Code was never the hard part\" is an insult to all programmers",
         "url": "https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers",
         "source": "Hacker News",
-        "score": 96
+        "score": 192
+      },
+      {
+        "title": "LinkedIn Feed Blocker",
+        "url": "https://github.com/andrewpollack/linkedin-feed-blocker",
+        "source": "Hacker News",
+        "score": 81
+      },
+      {
+        "title": "A domain can now say it is for sale, in DNS",
+        "url": "https://specification.website/spec/foundations/for-sale-dns/",
+        "source": "Hacker News",
+        "score": 243
+      },
+      {
+        "title": "Can Intel finally beat ARM on performance per Watt?",
+        "url": "https://hackaday.com/2026/08/08/want-energy-efficiency-dude-youre-getting-a-dell/",
+        "source": "Hacker News",
+        "score": 51
       },
       {
         "title": "DeepMind's WeatherNext model achieves breakthrough forecasting cyclones",
         "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
         "source": "Hacker News",
-        "score": 296
+        "score": 311
       },
       {
         "title": "Timeline of the OpenAI accidental attack against Hugging Face",
         "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
         "source": "Hacker News",
-        "score": 209
-      },
-      {
-        "title": "Gateway 2000's hilariously bad ads in the 90s (Part II)",
-        "url": "https://buttondown.com/suchbadtechads/archive/gateway-2000-part-2/",
-        "source": "Hacker News",
-        "score": 65
+        "score": 234
       },
       {
         "title": "Triton: DirectX 11 Driver for QEMU",
         "url": "https://blog.getutm.app/2026/introducing-triton-directx-11-driver-for-qemu/",
+        "source": "Hacker News",
+        "score": 87
+      },
+      {
+        "title": "Python string literals are kinda funny",
+        "url": "https://sebsite.pw/w/20260806-pystrings.html",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Gateway 2000's hilariously bad ads in the 90s (Part II)",
+        "url": "https://buttondown.com/suchbadtechads/archive/gateway-2000-part-2/",
         "source": "Hacker News",
         "score": 67
       },
@@ -63,31 +75,19 @@
         "title": "Voyager 1 FDS Computer Emulator",
         "url": "https://zaneham.github.io/voyager-fds-emulator/",
         "source": "Hacker News",
+        "score": 56
+      },
+      {
+        "title": "TinySol, a tiny solitaire game for DOS",
+        "url": "https://classicbits.net/coding-and-software/my-software/monosol/",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
+        "title": "Amazon Is Creating the Biggest Pollution Source in the Country",
+        "url": "https://newrepublic.com/post/214111/amazon-data-center-biggest-pollution-source-entire-country",
+        "source": "Hacker News",
         "score": 51
-      },
-      {
-        "title": "Can Intel finally beat ARM on performance per Watt?",
-        "url": "https://hackaday.com/2026/08/08/want-energy-efficiency-dude-youre-getting-a-dell/",
-        "source": "Hacker News",
-        "score": 17
-      },
-      {
-        "title": "From your doorbell to your home network",
-        "url": "https://adepts.of0x.cc/eufy-doorbell-hacking/",
-        "source": "Hacker News",
-        "score": 44
-      },
-      {
-        "title": "A physicist rigged his pet hamster’s wheel to upload to Strava",
-        "url": "https://www.runnersworld.com/news/a73355106/hamster-wheel-strava-running/",
-        "source": "Hacker News",
-        "score": 368
-      },
-      {
-        "title": "Monitors for Work",
-        "url": "https://etbe.coker.com.au/2026/08/05/monitors-for-work/",
-        "source": "Hacker News",
-        "score": 18
       }
     ],
     "ai": [
@@ -95,49 +95,49 @@
         "title": "Denmark Requires Oral Defenses for Students' Written Work to Counter AI Cheating",
         "url": "https://mezha.net/eng/bukvy/ca117584_denmark_requires_oral/",
         "source": "Hacker News AI",
-        "score": 36
+        "score": 143
       },
       {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News AI",
-        "score": 111
+        "score": 151
       },
       {
         "title": "A domain can now say it is for sale, in DNS",
         "url": "https://specification.website/spec/foundations/for-sale-dns/",
         "source": "Hacker News AI",
-        "score": 225
+        "score": 243
       },
       {
         "title": "Timeline of the OpenAI accidental attack against Hugging Face",
         "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
         "source": "Hacker News AI",
-        "score": 209
+        "score": 234
       },
       {
-        "title": "Gentoo bugzilla closed due AI bot scraper overload",
-        "url": "https://social.treehouse.systems/@mgorny/117058483039362779",
+        "title": "TinySol, a tiny solitaire game for DOS",
+        "url": "https://classicbits.net/coding-and-software/my-software/monosol/",
         "source": "Hacker News AI",
-        "score": 110
+        "score": 9
       },
       {
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News AI",
-        "score": 897
+        "score": 911
+      },
+      {
+        "title": "Gentoo bugzilla closed due AI bot scraper overload",
+        "url": "https://social.treehouse.systems/@mgorny/117058483039362779",
+        "source": "Hacker News AI",
+        "score": 116
       },
       {
         "title": "Lost my phone at the office. Claude suggested tracking Bluetooth signal strength",
         "url": "https://twitter.com/un1c0rnioz/status/2084686552299634805",
         "source": "Hacker News AI",
-        "score": 110
-      },
-      {
-        "title": "Message your other Claude Code sessions",
-        "url": "https://code.claude.com/docs/en/cross-session-messaging",
-        "source": "Hacker News AI",
-        "score": 3
+        "score": 125
       },
       {
         "title": "Managing AI Coding Costs at Scale",
@@ -146,19 +146,24 @@
         "score": 290
       },
       {
+        "title": "Message your other Claude Code sessions",
+        "url": "https://code.claude.com/docs/en/cross-session-messaging",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
         "title": "OpenAI Trained Models While They Were Coordinating Exploits via Message Boards",
         "url": "https://thezvi.substack.com/p/openai-trained-its-models-for-months",
         "source": "Hacker News AI",
-        "score": 18
-      },
-      {
-        "title": "Oracle bans AI-generated code from OpenJDK",
-        "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
-        "source": "Hacker News AI",
-        "score": 506
+        "score": 20
       }
     ],
     "news": [
+      {
+        "title": "Hormuz talks positive, Oman says, as Iran warns deal would not open strait",
+        "url": "https://www.bbc.co.uk/news/articles/c934j5y2lq9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Trump's ex-lawyer Todd Blanche narrowly confirmed as US attorney general",
         "url": "https://www.bbc.co.uk/news/articles/cewr898jy8go?at_medium=RSS&at_campaign=rss",
@@ -182,11 +187,6 @@
       {
         "title": "Madonna pays tribute to 'genius, otherworldly' producer William Orbit",
         "url": "https://www.bbc.co.uk/news/articles/cewr8wel4z8o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Child among three killed in Russian missile attacks near Kyiv",
-        "url": "https://www.bbc.co.uk/news/articles/cz7dy8gq99eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -271,6 +271,11 @@
     ],
     "gaming": [
       {
+        "title": "Ambrosia Sky Review: Steam's Fascinating Sci-fi Shooter Tackles the Tough Questions",
+        "url": "https://www.polygon.com/ambrosia-sky-review/",
+        "source": "Polygon"
+      },
+      {
         "title": "Marvel Tokon's Roster Should Add These 10 Characters You Forgot About",
         "url": "https://www.polygon.com/marvel-tokon-fighting-souls-dlc-characters-wishlist/",
         "source": "Polygon"
@@ -298,11 +303,6 @@
       {
         "title": "What time does Mastery Monday start in Fortnite?",
         "url": "https://www.polygon.com/fortnite-chapter-7-season-3-mastery-monday-start-end-time-when/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The 10 Most Ambitious Video Games Ever Made",
-        "url": "https://www.polygon.com/most-ambitious-video-games-ever/",
         "source": "Polygon"
       }
     ],
