@@ -1,0 +1,52 @@
+name: Discord 自動備份
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - 'scripts/discord-bot-worker.js'
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 從 Worker 拉取備份
+        id: fetch
+        run: |
+          RESPONSE=$(curl -s -o discord-backup.json -w "%{http_code}" \
+            "https://siios-discord-bot.yaninlin.workers.dev/backup?key=${{ secrets.DISCORD_BACKUP_KEY }}")
+          if [ "$RESPONSE" != "200" ]; then
+            echo "❌ 備份失敗 (HTTP $RESPONSE)"
+            cat discord-backup.json
+            exit 1
+          fi
+          echo "✅ 備份下載成功"
+
+      - name: 整理備份檔案
+        run: |
+          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          mkdir -p backups/discord
+          cp discord-backup.json "backups/discord/${TIMESTAMP}.json"
+          cp discord-backup.json "backups/discord/latest.json"
+          # 只保留最近 30 筆歷史備份
+          ls -t backups/discord/*.json | tail -n +31 | xargs -r rm
+
+      - name: 提交到 Git
+        run: |
+          git config user.name "discord-backup-bot"
+          git config user.email "bot@siios.app"
+          git add backups/discord/
+          if git diff --cached --quiet; then
+            echo "🟢 無變更，跳過提交"
+            exit 0
+          fi
+          git commit -m "📦 Discord 自動備份 $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
