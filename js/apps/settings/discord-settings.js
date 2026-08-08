@@ -163,7 +163,7 @@ async function renderDiscordSettings() {
     testBtn.textContent = '測試連接';
     testBtn.onclick = async () => {
         try {
-            const workerUrl = workerInput.value;
+            const workerUrl = workerInput.value.replace(/\/+$/, '');
             if (!workerUrl) {
                 createToast('請先輸入 Worker URL', 'error');
                 return;
@@ -191,7 +191,7 @@ async function renderDiscordSettings() {
     syncBtn.textContent = '🔄 同步角色資料到 Worker';
     syncBtn.onclick = async () => {
         try {
-            const workerUrl = workerInput.value;
+            const workerUrl = workerInput.value.replace(/\/+$/, '');
             if (!workerUrl) {
                 createToast('請先輸入 Worker URL', 'error');
                 return;
@@ -235,7 +235,7 @@ async function renderDiscordSettings() {
     memSyncBtn.textContent = '🧠 同步記憶到 Worker';
     memSyncBtn.onclick = async () => {
         try {
-            const workerUrl = workerInput.value;
+            const workerUrl = workerInput.value.replace(/\/+$/, '');
             if (!workerUrl) {
                 createToast('請先輸入 Worker URL', 'error');
                 return;
@@ -279,7 +279,7 @@ async function renderDiscordSettings() {
     wiSyncBtn.textContent = '📖 同步世界書到 Worker';
     wiSyncBtn.onclick = async () => {
         try {
-            const workerUrl = workerInput.value;
+            const workerUrl = workerInput.value.replace(/\/+$/, '');
             if (!workerUrl) {
                 createToast('請先輸入 Worker URL', 'error');
                 return;
