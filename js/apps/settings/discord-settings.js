@@ -1,6 +1,6 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast, createKakaoBottomSheet } from '../../components.js';
-import { SettingsDB } from '../../db.js';
+import { SettingsDB, CharactersDB, MemoryDB, WorldInfoDB, GlobalSettingsDB, GlobalForbiddenDB } from '../../db.js';
 
 async function renderDiscordSettings() {
     const container = createElement('div', 'app-container bg-ios-bg');
@@ -182,6 +182,147 @@ async function renderDiscordSettings() {
         }
     };
     main.appendChild(testBtn);
+
+    // 同步角色資料到 Worker
+    const syncBtn = createElement('button', 'ios-btn w-full mt-2 mx-4');
+    syncBtn.style.maxWidth = 'calc(100% - 32px)';
+    syncBtn.style.background = '#5865F2';
+    syncBtn.style.color = '#fff';
+    syncBtn.textContent = '🔄 同步角色資料到 Worker';
+    syncBtn.onclick = async () => {
+        try {
+            const workerUrl = workerInput.value;
+            if (!workerUrl) {
+                createToast('請先輸入 Worker URL', 'error');
+                return;
+            }
+
+            const characters = await CharactersDB.getAll();
+            if (characters.length === 0) {
+                createToast('沒有角色資料可同步', 'warning');
+                return;
+            }
+
+            syncBtn.disabled = true;
+            syncBtn.textContent = '同步中...';
+
+            const response = await fetch(`${workerUrl}/sync/characters`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ characters })
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                createToast(`已同步 ${data.count} 個角色到 Worker`, 'success');
+            } else {
+                createToast('同步失敗：' + data.error, 'error');
+            }
+        } catch (error) {
+            createToast('同步失敗：' + error.message, 'error');
+        } finally {
+            syncBtn.disabled = false;
+            syncBtn.textContent = '🔄 同步角色資料到 Worker';
+        }
+    };
+    main.appendChild(syncBtn);
+
+    // 同步記憶到 Worker
+    const memSyncBtn = createElement('button', 'ios-btn w-full mt-2 mx-4');
+    memSyncBtn.style.maxWidth = 'calc(100% - 32px)';
+    memSyncBtn.style.background = '#10B981';
+    memSyncBtn.style.color = '#fff';
+    memSyncBtn.textContent = '🧠 同步記憶到 Worker';
+    memSyncBtn.onclick = async () => {
+        try {
+            const workerUrl = workerInput.value;
+            if (!workerUrl) {
+                createToast('請先輸入 Worker URL', 'error');
+                return;
+            }
+
+            const memories = await MemoryDB.getAll();
+            if (memories.length === 0) {
+                createToast('沒有記憶資料可同步', 'warning');
+                return;
+            }
+
+            memSyncBtn.disabled = true;
+            memSyncBtn.textContent = '同步中...';
+
+            const response = await fetch(`${workerUrl}/sync/memories`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ memories })
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                createToast(`已同步 ${data.count} 條記憶到 Worker`, 'success');
+            } else {
+                createToast('同步失敗：' + data.error, 'error');
+            }
+        } catch (error) {
+            createToast('同步失敗：' + error.message, 'error');
+        } finally {
+            memSyncBtn.disabled = false;
+            memSyncBtn.textContent = '🧠 同步記憶到 Worker';
+        }
+    };
+    main.appendChild(memSyncBtn);
+
+    // 同步世界書到 Worker
+    const wiSyncBtn = createElement('button', 'ios-btn w-full mt-2 mx-4');
+    wiSyncBtn.style.maxWidth = 'calc(100% - 32px)';
+    wiSyncBtn.style.background = '#8B5CF6';
+    wiSyncBtn.style.color = '#fff';
+    wiSyncBtn.textContent = '📖 同步世界書到 Worker';
+    wiSyncBtn.onclick = async () => {
+        try {
+            const workerUrl = workerInput.value;
+            if (!workerUrl) {
+                createToast('請先輸入 Worker URL', 'error');
+                return;
+            }
+
+            const [globalSettings, globalForbidden, worldInfo] = await Promise.all([
+                GlobalSettingsDB.getAll(),
+                GlobalForbiddenDB.getAll(),
+                WorldInfoDB.getAll()
+            ]);
+
+            if (globalSettings.length === 0 && globalForbidden.length === 0 && worldInfo.length === 0) {
+                createToast('沒有世界書資料可同步', 'warning');
+                return;
+            }
+
+            wiSyncBtn.disabled = true;
+            wiSyncBtn.textContent = '同步中...';
+
+            const response = await fetch(`${workerUrl}/sync/world-info`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ globalSettings, globalForbidden, worldInfo })
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                const parts = [];
+                if (data.globalSettings) parts.push(`設定 ${data.globalSettings} 條`);
+                if (data.globalForbidden) parts.push(`禁用詞 ${data.globalForbidden} 條`);
+                if (data.worldInfo) parts.push(`世界書 ${data.worldInfo} 條`);
+                createToast(`已同步：${parts.join('、')}`, 'success');
+            } else {
+                createToast('同步失敗：' + data.error, 'error');
+            }
+        } catch (error) {
+            createToast('同步失敗：' + error.message, 'error');
+        } finally {
+            wiSyncBtn.disabled = false;
+            wiSyncBtn.textContent = '📖 同步世界書到 Worker';
+        }
+    };
+    main.appendChild(wiSyncBtn);
     
     // 用戶綁定管理
     const bindingSection = createElement('div', 'mx-4 mt-6 mb-4');

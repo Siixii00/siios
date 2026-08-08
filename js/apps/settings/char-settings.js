@@ -306,12 +306,55 @@ async function renderCharEdit(params) {
     main.appendChild(userSection);
     main.appendChild(userGroup);
 
+    // Discord 綁定
+    const discordSection = createElement('div', 'mb-2 ml-8 mt-4');
+    discordSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'Discord 綁定' }));
+    const discordGroup = createElement('div', 'ios-grouped-list mx-4');
+
+    const discordCell = createElement('div', 'p-4');
+    const discordEnableRow = createElement('div', 'flex items-center justify-between mb-3');
+    const discordEnableText = createElement('div');
+    discordEnableText.appendChild(createElement('div', 'text-sm font-medium', { textContent: '啟用 Discord 角色' }));
+    discordEnableText.appendChild(createElement('div', 'text-xs text-ios-muted', { textContent: '讓這個角色在綁定的 Discord 頻道回覆' }));
+    discordEnableRow.appendChild(discordEnableText);
+
+    const discordToggle = createElement('button', 'relative w-12 h-7 rounded-full transition-colors');
+    discordToggle.className = char.discord_enabled ? 'bg-green-500' : 'bg-gray-300';
+    const discordToggleKnob = createElement('div', 'absolute top-1 w-5 h-5 bg-white rounded-full shadow transition-transform');
+    discordToggleKnob.style.transform = char.discord_enabled ? 'translateX(24px)' : 'translateX(4px)';
+    discordToggle.appendChild(discordToggleKnob);
+    discordToggle.onclick = (e) => {
+        e.stopPropagation();
+        const enabled = !discordToggle.classList.contains('bg-green-500');
+        discordToggle.className = enabled ? 'bg-green-500' : 'bg-gray-300';
+        discordToggleKnob.style.transform = enabled ? 'translateX(24px)' : 'translateX(4px)';
+    };
+    discordEnableRow.appendChild(discordToggle);
+    discordCell.appendChild(discordEnableRow);
+
+    discordCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: 'Discord 頻道 ID' }));
+    const discordChannelInput = createElement('input', 'ios-input w-full', {
+        type: 'text',
+        placeholder: '貼上 Discord 頻道 ID（右鍵頻道 → 複製 ID）',
+        value: char.discord_channel_id || ''
+    });
+    discordCell.appendChild(discordChannelInput);
+
+    const discordHint = createElement('p', 'text-xs text-ios-muted mt-2');
+    discordHint.textContent = '填寫後儲存，會自動把這個角色綁定到該頻道。也可以在 Discord 用 /channel bind';
+    discordCell.appendChild(discordHint);
+    discordGroup.appendChild(discordCell);
+    main.appendChild(discordSection);
+    main.appendChild(discordGroup);
+
 
     const saveSection = createElement('div', 'mx-4 mt-6');
     const saveBtn = createElement('button', 'ios-btn ios-btn-primary w-full py-3', { textContent: '儲存角色設定' });
     saveBtn.onclick = async () => {
         const nicknames = nickInput.value.split(',').map(s => s.trim()).filter(Boolean);
         const boundUserId = userSelect.value || null;
+        const discordEnabled = discordToggle.classList.contains('bg-green-500');
+        const discordChannelId = discordChannelInput.value.trim();
 
         await CharactersDB.update(params.id, {
             avatar: avatarInput.value.trim(),
@@ -327,8 +370,30 @@ async function renderCharEdit(params) {
             birth_time: birthTimeInput.value || null,
             birth_location: birthLocationInput.value.trim() || null,
             birth_calendar_type: calendarSelect.value,
-            gender: genderSelect.value || null
+            gender: genderSelect.value || null,
+            discord_enabled: discordEnabled,
+            discord_channel_id: discordChannelId || null
         });
+
+        // 同步綁定到 Worker（若已填頻道 ID）
+        if (discordEnabled && discordChannelId) {
+            const workerUrl = await SettingsDB.get('discord_worker_url');
+            if (workerUrl) {
+                try {
+                    await fetch(`${workerUrl}/sync/channel-bind`, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            channel_id: discordChannelId,
+                            character_id: params.id
+                        })
+                    });
+                } catch (e) {
+                    console.warn('同步 Discord 綁定失敗（Worker 可能未設定）', e);
+                }
+            }
+        }
+
         createToast('角色設定已儲存');
         Router.navigate('/settings/char/' + params.id);
     };

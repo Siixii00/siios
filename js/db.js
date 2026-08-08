@@ -1452,7 +1452,7 @@ const ZiweiCacheDB = {
     }
 };
 
-export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, HealthDB, MCPConfigDB, ActivityDB, DiscordUserBindingDB, ActivitySettingsDB, ActivitySourcesDB, ZiweiCacheDB, hashContent, cosineSimilarity };
+export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, WorldInfoDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, HealthDB, MCPConfigDB, ActivityDB, DiscordUserBindingDB, ActivitySettingsDB, ActivitySourcesDB, ZiweiCacheDB, hashContent, cosineSimilarity };
 
 
 
