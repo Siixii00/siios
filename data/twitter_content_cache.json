@@ -1,149 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-08-08T17:31:24.889898",
-    "total_items": 59
+    "last_updated": "2026-08-08T18:38:35.200739",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "A domain can now say it is for sale, in DNS",
-        "url": "https://specification.website/spec/foundations/for-sale-dns/",
+        "title": "Denmark Requires Oral Defenses for Students' Written Work to Counter AI Cheating",
+        "url": "https://mezha.net/eng/bukvy/ca117584_denmark_requires_oral/",
         "source": "Hacker News",
-        "score": 176
+        "score": 36
       },
       {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News",
-        "score": 21
-      },
-      {
-        "title": "DeepMind's WeatherNext model achieves breakthrough forecasting cyclones",
-        "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
-        "source": "Hacker News",
-        "score": 270
-      },
-      {
-        "title": "Timeline of the OpenAI accidental attack against Hugging Face",
-        "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
-        "source": "Hacker News",
-        "score": 178
-      },
-      {
-        "title": "Gateway 2000's hilariously bad ads in the 90s (Part II)",
-        "url": "https://buttondown.com/suchbadtechads/archive/gateway-2000-part-2/",
-        "source": "Hacker News",
-        "score": 61
-      },
-      {
-        "title": "Triton: DirectX 11 Driver for QEMU",
-        "url": "https://blog.getutm.app/2026/introducing-triton-directx-11-driver-for-qemu/",
-        "source": "Hacker News",
-        "score": 51
+        "score": 111
       },
       {
         "title": "LinkedIn Feed Blocker",
         "url": "https://github.com/andrewpollack/linkedin-feed-blocker",
         "source": "Hacker News",
-        "score": 7
+        "score": 51
+      },
+      {
+        "title": "A domain can now say it is for sale, in DNS",
+        "url": "https://specification.website/spec/foundations/for-sale-dns/",
+        "source": "Hacker News",
+        "score": 225
+      },
+      {
+        "title": "\"Code was never the hard part\" is an insult to all programmers",
+        "url": "https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers",
+        "source": "Hacker News",
+        "score": 96
+      },
+      {
+        "title": "DeepMind's WeatherNext model achieves breakthrough forecasting cyclones",
+        "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
+        "source": "Hacker News",
+        "score": 296
+      },
+      {
+        "title": "Timeline of the OpenAI accidental attack against Hugging Face",
+        "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+        "source": "Hacker News",
+        "score": 209
+      },
+      {
+        "title": "Gateway 2000's hilariously bad ads in the 90s (Part II)",
+        "url": "https://buttondown.com/suchbadtechads/archive/gateway-2000-part-2/",
+        "source": "Hacker News",
+        "score": 65
+      },
+      {
+        "title": "Triton: DirectX 11 Driver for QEMU",
+        "url": "https://blog.getutm.app/2026/introducing-triton-directx-11-driver-for-qemu/",
+        "source": "Hacker News",
+        "score": 67
       },
       {
         "title": "Voyager 1 FDS Computer Emulator",
         "url": "https://zaneham.github.io/voyager-fds-emulator/",
         "source": "Hacker News",
-        "score": 47
+        "score": 51
+      },
+      {
+        "title": "Can Intel finally beat ARM on performance per Watt?",
+        "url": "https://hackaday.com/2026/08/08/want-energy-efficiency-dude-youre-getting-a-dell/",
+        "source": "Hacker News",
+        "score": 17
       },
       {
         "title": "From your doorbell to your home network",
         "url": "https://adepts.of0x.cc/eufy-doorbell-hacking/",
         "source": "Hacker News",
-        "score": 31
-      },
-      {
-        "title": "BYOC Is Not Just 'Deploy into Their Cloud'",
-        "url": "https://omnistrate.com/blog/byoc-anywhere-the-spectrum-of-bring-your-own-cloud-deployments",
-        "source": "Hacker News",
-        "score": 42
+        "score": 44
       },
       {
         "title": "A physicist rigged his pet hamster’s wheel to upload to Strava",
         "url": "https://www.runnersworld.com/news/a73355106/hamster-wheel-strava-running/",
         "source": "Hacker News",
-        "score": 358
+        "score": 368
       },
       {
-        "title": "Gentoo bugzilla closed due AI bot scraper overload",
-        "url": "https://social.treehouse.systems/@mgorny/117058483039362779",
+        "title": "Monitors for Work",
+        "url": "https://etbe.coker.com.au/2026/08/05/monitors-for-work/",
         "source": "Hacker News",
-        "score": 94
-      },
-      {
-        "title": "Building a Rust Inference Engine That Matches Llama.cpp",
-        "url": "https://www.fratepietro.com/2026/ferrox-rust-gguf-inference-engine/",
-        "source": "Hacker News",
-        "score": 14
-      },
-      {
-        "title": "Hardware backdoors in some x86 CPUs",
-        "url": "https://github.com/xoreaxeaxeax/rosenbridge",
-        "source": "Hacker News",
-        "score": 265
+        "score": 18
       }
     ],
     "ai": [
       {
-        "title": "A domain can now say it is for sale, in DNS",
-        "url": "https://specification.website/spec/foundations/for-sale-dns/",
+        "title": "Denmark Requires Oral Defenses for Students' Written Work to Counter AI Cheating",
+        "url": "https://mezha.net/eng/bukvy/ca117584_denmark_requires_oral/",
         "source": "Hacker News AI",
-        "score": 176
+        "score": 36
       },
       {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News AI",
-        "score": 21
+        "score": 111
+      },
+      {
+        "title": "A domain can now say it is for sale, in DNS",
+        "url": "https://specification.website/spec/foundations/for-sale-dns/",
+        "source": "Hacker News AI",
+        "score": 225
       },
       {
         "title": "Timeline of the OpenAI accidental attack against Hugging Face",
         "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
         "source": "Hacker News AI",
-        "score": 178
+        "score": 209
       },
       {
         "title": "Gentoo bugzilla closed due AI bot scraper overload",
         "url": "https://social.treehouse.systems/@mgorny/117058483039362779",
         "source": "Hacker News AI",
-        "score": 94
+        "score": 110
       },
       {
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News AI",
-        "score": 872
+        "score": 897
       },
       {
         "title": "Lost my phone at the office. Claude suggested tracking Bluetooth signal strength",
         "url": "https://twitter.com/un1c0rnioz/status/2084686552299634805",
         "source": "Hacker News AI",
-        "score": 90
+        "score": 110
+      },
+      {
+        "title": "Message your other Claude Code sessions",
+        "url": "https://code.claude.com/docs/en/cross-session-messaging",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "Managing AI Coding Costs at Scale",
         "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
         "source": "Hacker News AI",
-        "score": 289
+        "score": 290
       },
       {
         "title": "OpenAI Trained Models While They Were Coordinating Exploits via Message Boards",
         "url": "https://thezvi.substack.com/p/openai-trained-its-models-for-months",
         "source": "Hacker News AI",
-        "score": 14
-      },
-      {
-        "title": "Sensitive Info Goes into 'No Reply' Emails Constantly. This Guy Sees It All",
-        "url": "https://www.wired.com/story/sensitive-info-goes-into-no-reply-emails-constantly-this-guy-sees-it-all/",
-        "source": "Hacker News AI",
-        "score": 31
+        "score": 18
       },
       {
         "title": "Oracle bans AI-generated code from OpenJDK",
@@ -265,6 +271,11 @@
     ],
     "gaming": [
       {
+        "title": "Marvel Tokon's Roster Should Add These 10 Characters You Forgot About",
+        "url": "https://www.polygon.com/marvel-tokon-fighting-souls-dlc-characters-wishlist/",
+        "source": "Polygon"
+      },
+      {
         "title": "10 Near-Perfect New Sci-fi Books for Star Wars and Dune Fans",
         "url": "https://www.polygon.com/sci-fi-books-like-star-wars-dune/",
         "source": "Polygon"
@@ -292,11 +303,6 @@
       {
         "title": "The 10 Most Ambitious Video Games Ever Made",
         "url": "https://www.polygon.com/most-ambitious-video-games-ever/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Disney's Genius 11-Part Crime Thriller Saga So Good, You'll Finish It in One Weekend",
-        "url": "https://www.polygon.com/fargo-season-4-weekend-binge/",
         "source": "Polygon"
       }
     ],
