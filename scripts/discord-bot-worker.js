@@ -19,6 +19,11 @@ export default {
             });
         }
 
+        // 健康檢查（PWA 測試連接用）
+        if (url.pathname === '/discord/ping' && request.method === 'GET') {
+            return Response.json({ success: true, worker: 'siios-discord-bot' }, { headers: corsHeaders });
+        }
+
         // 註冊斜線指令
         if (url.pathname === '/discord/register-commands' && request.method === 'POST') {
             try {

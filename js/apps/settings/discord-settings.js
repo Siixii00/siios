@@ -169,13 +169,13 @@ async function renderDiscordSettings() {
                 return;
             }
             
-            const response = await fetch(`${workerUrl}/discord/history?channel_id=test&limit=1`);
+            const response = await fetch(`${workerUrl}/discord/ping`);
             const data = await response.json();
             
             if (data.success) {
                 createToast('連接成功！');
             } else {
-                createToast('連接失敗：' + data.error, 'error');
+                createToast('連接失敗：' + (data.error || '未知錯誤'), 'error');
             }
         } catch (error) {
             createToast('連接失敗：' + error.message, 'error');
