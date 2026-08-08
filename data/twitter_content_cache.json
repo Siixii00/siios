@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-08T16:34:35.609732",
-    "total_items": 57
+    "last_updated": "2026-08-08T17:31:24.889898",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,85 +9,85 @@
         "title": "A domain can now say it is for sale, in DNS",
         "url": "https://specification.website/spec/foundations/for-sale-dns/",
         "source": "Hacker News",
-        "score": 133
+        "score": 176
+      },
+      {
+        "title": "Fastmail offers EU data region",
+        "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
+        "source": "Hacker News",
+        "score": 21
       },
       {
         "title": "DeepMind's WeatherNext model achieves breakthrough forecasting cyclones",
         "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
         "source": "Hacker News",
-        "score": 238
+        "score": 270
+      },
+      {
+        "title": "Timeline of the OpenAI accidental attack against Hugging Face",
+        "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+        "source": "Hacker News",
+        "score": 178
       },
       {
         "title": "Gateway 2000's hilariously bad ads in the 90s (Part II)",
         "url": "https://buttondown.com/suchbadtechads/archive/gateway-2000-part-2/",
         "source": "Hacker News",
-        "score": 50
-      },
-      {
-        "title": "Don't use your phone while you poop",
-        "url": "https://nate.spot/no-phone-while-poop/",
-        "source": "Hacker News",
-        "score": 150
-      },
-      {
-        "title": "Voyager 1 FDS Computer Emulator",
-        "url": "https://zaneham.github.io/voyager-fds-emulator/",
-        "source": "Hacker News",
-        "score": 31
+        "score": 61
       },
       {
         "title": "Triton: DirectX 11 Driver for QEMU",
         "url": "https://blog.getutm.app/2026/introducing-triton-directx-11-driver-for-qemu/",
         "source": "Hacker News",
-        "score": 21
+        "score": 51
       },
       {
-        "title": "BYOC Is Not Just 'Deploy into Their Cloud'",
-        "url": "https://omnistrate.com/blog/byoc-anywhere-the-spectrum-of-bring-your-own-cloud-deployments",
+        "title": "LinkedIn Feed Blocker",
+        "url": "https://github.com/andrewpollack/linkedin-feed-blocker",
         "source": "Hacker News",
-        "score": 36
+        "score": 7
       },
       {
-        "title": "Gentoo bugzilla closed due AI bot scraper overload",
-        "url": "https://social.treehouse.systems/@mgorny/117058483039362779",
+        "title": "Voyager 1 FDS Computer Emulator",
+        "url": "https://zaneham.github.io/voyager-fds-emulator/",
         "source": "Hacker News",
-        "score": 78
-      },
-      {
-        "title": "A physicist rigged his pet hamster’s wheel to upload to Strava",
-        "url": "https://www.runnersworld.com/news/a73355106/hamster-wheel-strava-running/",
-        "source": "Hacker News",
-        "score": 350
-      },
-      {
-        "title": "Hardware backdoors in some x86 CPUs",
-        "url": "https://github.com/xoreaxeaxeax/rosenbridge",
-        "source": "Hacker News",
-        "score": 249
-      },
-      {
-        "title": "DeepSeek V4 Flash 0731",
-        "url": "https://arcprize.org/results/deepseek-v4-flash-0731",
-        "source": "Hacker News",
-        "score": 714
+        "score": 47
       },
       {
         "title": "From your doorbell to your home network",
         "url": "https://adepts.of0x.cc/eufy-doorbell-hacking/",
         "source": "Hacker News",
+        "score": 31
+      },
+      {
+        "title": "BYOC Is Not Just 'Deploy into Their Cloud'",
+        "url": "https://omnistrate.com/blog/byoc-anywhere-the-spectrum-of-bring-your-own-cloud-deployments",
+        "source": "Hacker News",
+        "score": 42
+      },
+      {
+        "title": "A physicist rigged his pet hamster’s wheel to upload to Strava",
+        "url": "https://www.runnersworld.com/news/a73355106/hamster-wheel-strava-running/",
+        "source": "Hacker News",
+        "score": 358
+      },
+      {
+        "title": "Gentoo bugzilla closed due AI bot scraper overload",
+        "url": "https://social.treehouse.systems/@mgorny/117058483039362779",
+        "source": "Hacker News",
+        "score": 94
+      },
+      {
+        "title": "Building a Rust Inference Engine That Matches Llama.cpp",
+        "url": "https://www.fratepietro.com/2026/ferrox-rust-gguf-inference-engine/",
+        "source": "Hacker News",
         "score": 14
       },
       {
-        "title": "U.S. Department of Energy Launches the Genesis Open Models Initiative",
-        "url": "https://genesisopenmodels.anl.gov/",
+        "title": "Hardware backdoors in some x86 CPUs",
+        "url": "https://github.com/xoreaxeaxeax/rosenbridge",
         "source": "Hacker News",
-        "score": 307
-      },
-      {
-        "title": "What happens if an entire class of workers loses faith in their careers",
-        "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
-        "source": "Hacker News",
-        "score": 860
+        "score": 265
       }
     ],
     "ai": [
@@ -95,49 +95,61 @@
         "title": "A domain can now say it is for sale, in DNS",
         "url": "https://specification.website/spec/foundations/for-sale-dns/",
         "source": "Hacker News AI",
-        "score": 133
+        "score": 176
       },
       {
-        "title": "Gentoo bugzilla closed due AI bot scraper overload",
-        "url": "https://social.treehouse.systems/@mgorny/117058483039362779",
+        "title": "Fastmail offers EU data region",
+        "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News AI",
-        "score": 78
-      },
-      {
-        "title": "What happens if an entire class of workers loses faith in their careers",
-        "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
-        "source": "Hacker News AI",
-        "score": 860
-      },
-      {
-        "title": "Sensitive Info Goes into 'No Reply' Emails Constantly. This Guy Sees It All",
-        "url": "https://www.wired.com/story/sensitive-info-goes-into-no-reply-emails-constantly-this-guy-sees-it-all/",
-        "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "Lost my phone at the office. Claude suggested tracking Bluetooth signal strength",
-        "url": "https://twitter.com/un1c0rnioz/status/2084686552299634805",
-        "source": "Hacker News AI",
-        "score": 78
-      },
-      {
-        "title": "Managing AI Coding Costs at Scale",
-        "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
-        "source": "Hacker News AI",
-        "score": 283
+        "score": 21
       },
       {
         "title": "Timeline of the OpenAI accidental attack against Hugging Face",
         "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
         "source": "Hacker News AI",
-        "score": 137
+        "score": 178
+      },
+      {
+        "title": "Gentoo bugzilla closed due AI bot scraper overload",
+        "url": "https://social.treehouse.systems/@mgorny/117058483039362779",
+        "source": "Hacker News AI",
+        "score": 94
+      },
+      {
+        "title": "What happens if an entire class of workers loses faith in their careers",
+        "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
+        "source": "Hacker News AI",
+        "score": 872
+      },
+      {
+        "title": "Lost my phone at the office. Claude suggested tracking Bluetooth signal strength",
+        "url": "https://twitter.com/un1c0rnioz/status/2084686552299634805",
+        "source": "Hacker News AI",
+        "score": 90
+      },
+      {
+        "title": "Managing AI Coding Costs at Scale",
+        "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
+        "source": "Hacker News AI",
+        "score": 289
+      },
+      {
+        "title": "OpenAI Trained Models While They Were Coordinating Exploits via Message Boards",
+        "url": "https://thezvi.substack.com/p/openai-trained-its-models-for-months",
+        "source": "Hacker News AI",
+        "score": 14
+      },
+      {
+        "title": "Sensitive Info Goes into 'No Reply' Emails Constantly. This Guy Sees It All",
+        "url": "https://www.wired.com/story/sensitive-info-goes-into-no-reply-emails-constantly-this-guy-sees-it-all/",
+        "source": "Hacker News AI",
+        "score": 31
       },
       {
         "title": "Oracle bans AI-generated code from OpenJDK",
         "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
         "source": "Hacker News AI",
-        "score": 504
+        "score": 506
       }
     ],
     "news": [
@@ -152,8 +164,8 @@
         "source": "BBC World"
       },
       {
-        "title": "The phone book that led us to Assad's spy chief in hiding",
-        "url": "https://www.bbc.co.uk/news/articles/c4gyrzn8p94o?at_medium=RSS&at_campaign=rss",
+        "title": "Messi's father Jorge dies aged 68 after illness",
+        "url": "https://www.bbc.co.uk/sport/football/articles/c70gn3w5ek5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -167,13 +179,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Typhoon Dolphin batters Japan's Okinawa before bearing down on China",
-        "url": "https://www.bbc.co.uk/news/articles/cvglp2zlvrlo?at_medium=RSS&at_campaign=rss",
+        "title": "Child among three killed in Russian missile attacks near Kyiv",
+        "url": "https://www.bbc.co.uk/news/articles/cz7dy8gq99eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Messi's father Jorge dies aged 68 after illness",
-        "url": "https://www.bbc.co.uk/sport/football/articles/c70gn3w5ek5o?at_medium=RSS&at_campaign=rss",
+        "title": "Watch: Moment opposition MP throws eggs at Kosovo's acting PM",
+        "url": "https://www.bbc.co.uk/news/videos/cvg8je12xxeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
