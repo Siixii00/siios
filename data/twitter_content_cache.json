@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-08T19:30:59.065191",
-    "total_items": 60
+    "last_updated": "2026-08-08T20:31:11.979233",
+    "total_items": 61
   },
   "content": {
     "tech": [
@@ -9,85 +9,91 @@
         "title": "Denmark Requires Oral Defenses for Students' Written Work to Counter AI Cheating",
         "url": "https://mezha.net/eng/bukvy/ca117584_denmark_requires_oral/",
         "source": "Hacker News",
-        "score": 143
+        "score": 248
       },
       {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News",
-        "score": 151
-      },
-      {
-        "title": "\"Code was never the hard part\" is an insult to all programmers",
-        "url": "https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers",
-        "source": "Hacker News",
-        "score": 192
+        "score": 204
       },
       {
         "title": "LinkedIn Feed Blocker",
         "url": "https://github.com/andrewpollack/linkedin-feed-blocker",
         "source": "Hacker News",
-        "score": 81
+        "score": 113
       },
       {
         "title": "A domain can now say it is for sale, in DNS",
         "url": "https://specification.website/spec/foundations/for-sale-dns/",
         "source": "Hacker News",
-        "score": 243
+        "score": 265
+      },
+      {
+        "title": "\"Code was never the hard part\" is an insult to all programmers",
+        "url": "https://blog.senko.net/code-was-never-the-hard-part-is-an-insult-to-all-programmers",
+        "source": "Hacker News",
+        "score": 282
       },
       {
         "title": "Can Intel finally beat ARM on performance per Watt?",
         "url": "https://hackaday.com/2026/08/08/want-energy-efficiency-dude-youre-getting-a-dell/",
         "source": "Hacker News",
-        "score": 51
+        "score": 80
       },
       {
         "title": "DeepMind's WeatherNext model achieves breakthrough forecasting cyclones",
         "url": "https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/",
         "source": "Hacker News",
-        "score": 311
+        "score": 325
       },
       {
         "title": "Timeline of the OpenAI accidental attack against Hugging Face",
         "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
         "source": "Hacker News",
-        "score": 234
-      },
-      {
-        "title": "Triton: DirectX 11 Driver for QEMU",
-        "url": "https://blog.getutm.app/2026/introducing-triton-directx-11-driver-for-qemu/",
-        "source": "Hacker News",
-        "score": 87
+        "score": 252
       },
       {
         "title": "Python string literals are kinda funny",
         "url": "https://sebsite.pw/w/20260806-pystrings.html",
         "source": "Hacker News",
-        "score": 16
+        "score": 33
+      },
+      {
+        "title": "Triton: DirectX 11 Driver for QEMU",
+        "url": "https://blog.getutm.app/2026/introducing-triton-directx-11-driver-for-qemu/",
+        "source": "Hacker News",
+        "score": 94
       },
       {
         "title": "Gateway 2000's hilariously bad ads in the 90s (Part II)",
         "url": "https://buttondown.com/suchbadtechads/archive/gateway-2000-part-2/",
         "source": "Hacker News",
-        "score": 67
-      },
-      {
-        "title": "Voyager 1 FDS Computer Emulator",
-        "url": "https://zaneham.github.io/voyager-fds-emulator/",
-        "source": "Hacker News",
-        "score": 56
+        "score": 78
       },
       {
         "title": "TinySol, a tiny solitaire game for DOS",
         "url": "https://classicbits.net/coding-and-software/my-software/monosol/",
         "source": "Hacker News",
-        "score": 9
+        "score": 18
+      },
+      {
+        "title": "Monitors for Work",
+        "url": "https://etbe.coker.com.au/2026/08/05/monitors-for-work/",
+        "source": "Hacker News",
+        "score": 45
       },
       {
         "title": "Amazon Is Creating the Biggest Pollution Source in the Country",
         "url": "https://newrepublic.com/post/214111/amazon-data-center-biggest-pollution-source-entire-country",
         "source": "Hacker News",
-        "score": 51
+        "score": 103
+      },
+      {
+        "title": "Preventing Misfolding by Preventing Folding",
+        "url": "https://www.science.org/content/blog-post/preventing-misfolding-preventing-folding",
+        "source": "Hacker News",
+        "score": 10
       }
     ],
     "ai": [
@@ -95,67 +101,67 @@
         "title": "Denmark Requires Oral Defenses for Students' Written Work to Counter AI Cheating",
         "url": "https://mezha.net/eng/bukvy/ca117584_denmark_requires_oral/",
         "source": "Hacker News AI",
-        "score": 143
+        "score": 248
       },
       {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News AI",
-        "score": 151
+        "score": 204
       },
       {
         "title": "A domain can now say it is for sale, in DNS",
         "url": "https://specification.website/spec/foundations/for-sale-dns/",
         "source": "Hacker News AI",
-        "score": 243
+        "score": 265
       },
       {
         "title": "Timeline of the OpenAI accidental attack against Hugging Face",
         "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
         "source": "Hacker News AI",
-        "score": 234
+        "score": 252
       },
       {
         "title": "TinySol, a tiny solitaire game for DOS",
         "url": "https://classicbits.net/coding-and-software/my-software/monosol/",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 18
       },
       {
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News AI",
-        "score": 911
+        "score": 931
       },
       {
         "title": "Gentoo bugzilla closed due AI bot scraper overload",
         "url": "https://social.treehouse.systems/@mgorny/117058483039362779",
         "source": "Hacker News AI",
-        "score": 116
+        "score": 124
       },
       {
         "title": "Lost my phone at the office. Claude suggested tracking Bluetooth signal strength",
         "url": "https://twitter.com/un1c0rnioz/status/2084686552299634805",
         "source": "Hacker News AI",
-        "score": 125
-      },
-      {
-        "title": "Managing AI Coding Costs at Scale",
-        "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
-        "source": "Hacker News AI",
-        "score": 290
+        "score": 149
       },
       {
         "title": "Message your other Claude Code sessions",
         "url": "https://code.claude.com/docs/en/cross-session-messaging",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 12
       },
       {
-        "title": "OpenAI Trained Models While They Were Coordinating Exploits via Message Boards",
-        "url": "https://thezvi.substack.com/p/openai-trained-its-models-for-months",
+        "title": "Managing AI Coding Costs at Scale",
+        "url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
         "source": "Hacker News AI",
-        "score": 20
+        "score": 293
+      },
+      {
+        "title": "Oracle bans AI-generated code from OpenJDK",
+        "url": "https://app.dealroom.co/news/feed/oracle-bans-ai-generated-code-from-openjdk-despite-ellison-s-claim-oracle-isn-t-writing-its-own-code",
+        "source": "Hacker News AI",
+        "score": 508
       }
     ],
     "news": [
@@ -180,11 +186,6 @@
         "source": "BBC World"
       },
       {
-        "title": "Spain imposes border controls against Italy as row over Ceuta migrant influx intensifies",
-        "url": "https://www.bbc.co.uk/news/articles/c5yv5l6yr5ko?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Madonna pays tribute to 'genius, otherworldly' producer William Orbit",
         "url": "https://www.bbc.co.uk/news/articles/cewr8wel4z8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -192,6 +193,11 @@
       {
         "title": "Watch: Moment opposition MP throws eggs at Kosovo's acting PM",
         "url": "https://www.bbc.co.uk/news/videos/cvg8je12xxeo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Paris tells e-scooter riders to wear safety gear or face fines",
+        "url": "https://www.bbc.co.uk/news/articles/c89nkln7w7ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -271,6 +277,11 @@
     ],
     "gaming": [
       {
+        "title": "Magic Designer Wants to Resurrect a Forgotten Card That Tells a Perfect Miniature Horror Story",
+        "url": "https://www.polygon.com/mtg-vengeful-pharaoh-card-mummy-horror-story-magic-2012/",
+        "source": "Polygon"
+      },
+      {
         "title": "Ambrosia Sky Review: Steam's Fascinating Sci-fi Shooter Tackles the Tough Questions",
         "url": "https://www.polygon.com/ambrosia-sky-review/",
         "source": "Polygon"
@@ -298,11 +309,6 @@
       {
         "title": "Deborah Ann Woll Says Tales from Woodcreek Season 2 Is 'Clue at the Overlook Hotel'",
         "url": "https://www.polygon.com/deborah-ann-woll-tales-from-woodcreek-season-2-is-clue-at-the-overlook-hotel/",
-        "source": "Polygon"
-      },
-      {
-        "title": "What time does Mastery Monday start in Fortnite?",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-3-mastery-monday-start-end-time-when/",
         "source": "Polygon"
       }
     ],
