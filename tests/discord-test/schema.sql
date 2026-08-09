@@ -58,7 +58,8 @@ CREATE TABLE IF NOT EXISTS discordUserBindings (
     discord_user_id TEXT PRIMARY KEY,
     user_id TEXT,
     character_id TEXT,
-    user_display_name TEXT
+    user_display_name TEXT,
+    discord_username TEXT
 );
 
 -- Discord 頻道映射表
