@@ -1,125 +1,119 @@
 {
   "metadata": {
-    "last_updated": "2026-08-09T13:50:50.682245",
-    "total_items": 59
+    "last_updated": "2026-08-09T14:35:23.468850",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "Reviving a four year old reMarkable 2",
-        "url": "https://oskrim.github.io/hardware/2026/08/09/remarkable-over-ssh.html",
-        "source": "Hacker News",
-        "score": 49
-      },
-      {
         "title": "Mea Culpa – Dark Hours",
         "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
         "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "There Are Magic Hexagons of Every Order",
-        "url": "https://gukov.dev/math/2026/08/02/new-magic-hexagons.html",
-        "source": "Hacker News",
-        "score": 99
-      },
-      {
-        "title": "The Alpha 21264 CPU: NT's Greatest RISC (1998)",
-        "url": "https://halfhill.com/byte/1998-12_alpha.html",
-        "source": "Hacker News",
-        "score": 34
-      },
-      {
-        "title": "My server is a phone now",
-        "url": "https://seg6.space/posts/phone-server/",
-        "source": "Hacker News",
-        "score": 398
-      },
-      {
-        "title": "The Grid That Doubles the Strength of the Ground",
-        "url": "https://practical.engineering/blog/2026/8/4/the-grid-that-doubles-the-strength-of-the-ground",
-        "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "Amazon circumvents Gilroy community vote for AI data center",
-        "url": "https://www.tomshardware.com/tech-industry/data-centers/amazon-secretly-circumvents-community-vote-for-massive-ai-data-center-45-year-old-rules-lock-gilroy-residents-out-of-public-comment-window",
-        "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Microsoft Word for Windows 1.1a, Native X64 Port",
-        "url": "https://github.com/jmarshall23/msword",
-        "source": "Hacker News",
-        "score": 108
-      },
-      {
-        "title": "Os8088: A powerful Mac-like OS for the IBM XT, 286, 386",
-        "url": "https://os8088.com/",
-        "source": "Hacker News",
-        "score": 206
-      },
-      {
-        "title": "Uber SubmitQueue: a high-performance speculative merge queue",
-        "url": "https://github.com/uber/submitqueue/",
-        "source": "Hacker News",
-        "score": 16
+        "score": 97
       },
       {
         "title": "Show HN: A Project Oberon System version running on RISC-V instead of RISC-5",
         "url": "https://github.com/rochus-keller/OberonSystem/tree/op2-rv32",
         "source": "Hacker News",
-        "score": 6
+        "score": 22
+      },
+      {
+        "title": "There Are Magic Hexagons of Every Order",
+        "url": "https://gukov.dev/math/2026/08/02/new-magic-hexagons.html",
+        "source": "Hacker News",
+        "score": 110
+      },
+      {
+        "title": "The Alpha 21264 CPU: NT's Greatest RISC (1998)",
+        "url": "https://halfhill.com/byte/1998-12_alpha.html",
+        "source": "Hacker News",
+        "score": 40
+      },
+      {
+        "title": "My server is a phone now",
+        "url": "https://seg6.space/posts/phone-server/",
+        "source": "Hacker News",
+        "score": 408
+      },
+      {
+        "title": "Uber SubmitQueue: a high-performance speculative merge queue",
+        "url": "https://github.com/uber/submitqueue/",
+        "source": "Hacker News",
+        "score": 28
+      },
+      {
+        "title": "Microsoft Word for Windows 1.1a, Native X64 Port",
+        "url": "https://github.com/jmarshall23/msword",
+        "source": "Hacker News",
+        "score": 112
+      },
+      {
+        "title": "The Grid That Doubles the Strength of the Ground",
+        "url": "https://practical.engineering/blog/2026/8/4/the-grid-that-doubles-the-strength-of-the-ground",
+        "source": "Hacker News",
+        "score": 74
+      },
+      {
+        "title": "Os8088: A powerful Mac-like OS for the IBM XT, 286, 386",
+        "url": "https://os8088.com/",
+        "source": "Hacker News",
+        "score": 211
       },
       {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News",
-        "score": 456
+        "score": 464
       },
       {
         "title": "Improving Heuristics for A* Pathfinding",
         "url": "https://www.redblobgames.com/pathfinding/heuristics/differential.html",
         "source": "Hacker News",
-        "score": 297
+        "score": 303
       },
       {
         "title": "Dithered QR Codes",
         "url": "https://www.andrewt.net/dithered-qr-codes/wtf/",
         "source": "Hacker News",
-        "score": 269
+        "score": 282
+      },
+      {
+        "title": "Reviving a four year old reMarkable 2",
+        "url": "https://oskrim.github.io/hardware/2026/08/09/remarkable-over-ssh.html",
+        "source": "Hacker News",
+        "score": 62
+      },
+      {
+        "title": "Honey, I shrunk the embeddings: Matryoshka vs. PCA",
+        "url": "https://dylancastillo.co/posts/matryoshka-vs-pca",
+        "source": "Hacker News",
+        "score": 6
       },
       {
         "title": "Shopify replaced Redis with MySQL for inventory reservations–and it scaled",
         "url": "https://shopify.engineering/scaling-inventory-reservations",
         "source": "Hacker News",
-        "score": 259
+        "score": 268
       }
     ],
     "ai": [
       {
-        "title": "Amazon circumvents Gilroy community vote for AI data center",
-        "url": "https://www.tomshardware.com/tech-industry/data-centers/amazon-secretly-circumvents-community-vote-for-massive-ai-data-center-45-year-old-rules-lock-gilroy-residents-out-of-public-comment-window",
-        "source": "Hacker News AI",
-        "score": 39
-      },
-      {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News AI",
-        "score": 456
+        "score": 464
       },
       {
-        "title": "Israeli startup was linked to rogue AI hacks at OpenAI, Anthropic and Meta",
-        "url": "https://www.cnbc.com/2026/08/09/israeli-startup-irregular-linked-to-ai-hacks-openai-anthropic-meta.html",
+        "title": "Honey, I shrunk the embeddings: Matryoshka vs. PCA",
+        "url": "https://dylancastillo.co/posts/matryoshka-vs-pca",
         "source": "Hacker News AI",
-        "score": 34
+        "score": 6
       },
       {
         "title": "The original URL for this prediction will no longer be available in 11 years (2011)",
         "url": "http://longbets.org/601/",
         "source": "Hacker News AI",
-        "score": 174
+        "score": 176
       },
       {
         "title": "Show HN: Airy – Free, fast, and simple voice content creation",
@@ -128,16 +122,28 @@
         "score": 13
       },
       {
-        "title": "Software Giant SAP Stops Most Travel and Hiring Because of AI's Soaring Cost",
-        "url": "https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/",
+        "title": "Switching to electric stoves can dramatically cut indoor air pollution",
+        "url": "https://news.stanford.edu/stories/2025/12/gas-propane-stoves-nitrogen-dioxide-exposure-health-risks-switching-electric",
         "source": "Hacker News AI",
-        "score": 69
+        "score": 5
+      },
+      {
+        "title": "70% of AI revenue comes from OpenAI and Anthropic",
+        "url": "https://www.youtube.com/watch?v=68X8yEatepQ",
+        "source": "Hacker News AI",
+        "score": 17
       },
       {
         "title": "Melatonin impairs morning cognition in healthy young adults (2023)",
         "url": "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621",
         "source": "Hacker News AI",
-        "score": 156
+        "score": 157
+      },
+      {
+        "title": "Software Giant SAP Stops Most Travel and Hiring Because of AI's Soaring Cost",
+        "url": "https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/",
+        "source": "Hacker News AI",
+        "score": 69
       },
       {
         "title": "Message your other Claude Code sessions",
@@ -146,16 +152,21 @@
         "score": 138
       },
       {
-        "title": "70% of AI revenue comes from OpenAI and Anthropic",
-        "url": "https://www.youtube.com/watch?v=68X8yEatepQ",
+        "title": "Timeline of the OpenAI accidental attack against Hugging Face",
+        "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 402
       }
     ],
     "news": [
       {
         "title": "Israel rejects Trump's 15-point plan for Gaza, Netanyahu says",
         "url": "https://www.bbc.co.uk/news/articles/c5yw4lpe0yeo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Suspected crime boss Daniel Kinahan returning to Ireland in high-security operation ",
+        "url": "https://www.bbc.co.uk/news/articles/c62qd5plzp6o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -171,11 +182,6 @@
       {
         "title": "Israel accused of weaponising archaeology at ancient West Bank sites",
         "url": "https://www.bbc.co.uk/news/articles/c20d8qre98do?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Suspected crime boss Daniel Kinahan returning to Ireland in high-security operation ",
-        "url": "https://www.bbc.co.uk/news/articles/c62qd5plzp6o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -265,6 +271,11 @@
     ],
     "gaming": [
       {
+        "title": "The 10 Best Tales from the Crypt Episodes of All Time, Ranked",
+        "url": "https://www.polygon.com/the-10-best-tales-from-the-crypt-episodes/",
+        "source": "Polygon"
+      },
+      {
         "title": "A Legend of Zelda Player’s Girlfriend Is Finishing His Save to Honor His Death",
         "url": "https://www.polygon.com/zelda-totk-botw-peyton-chrissy-save-file-beat-game-nintendo-switch/",
         "source": "Polygon"
@@ -292,11 +303,6 @@
       {
         "title": "5 Anime Endings That Fans Still Argue About (I'm Still Mad About #3)",
         "url": "https://www.polygon.com/best-anime-endings-divisive-controversial/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Spider-Man: Brand New Day's Most Talked About Character Quietly Sets Up Marvel's X-Men Future",
-        "url": "https://www.polygon.com/spider-man-jean-grey-new-take-x-men/",
         "source": "Polygon"
       }
     ],
