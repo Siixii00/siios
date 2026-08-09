@@ -91,6 +91,12 @@ CREATE TABLE IF NOT EXISTS channel_bindings (
     updated_at TEXT
 );
 
+-- Bot 狀態（用於 cron 追蹤上次處理的訊息）
+CREATE TABLE IF NOT EXISTS botState (
+    key TEXT PRIMARY KEY,
+    cursor TEXT
+);
+
 -- 建立索引
 CREATE INDEX IF NOT EXISTS idx_messages_chat_id ON messages(chat_id);
 CREATE INDEX IF NOT EXISTS idx_messages_timestamp ON messages(timestamp);

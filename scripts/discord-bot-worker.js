@@ -1,4 +1,4 @@
-// Discord Bot Worker - 支援角色綁定、記憶同步、斜線指令
+// Discord Bot Worker - 支援角色綁定、記憶同步、斜線指令、插嘴 (Interject)
 export default {
     async fetch(request, env, ctx) {
         const url = new URL(request.url);
@@ -22,6 +22,21 @@ export default {
         // 健康檢查（PWA 測試連接用）
         if (url.pathname === '/discord/ping' && request.method === 'GET') {
             return Response.json({ success: true, worker: 'siios-discord-bot' }, { headers: corsHeaders });
+        }
+
+        // Keep-alive（cron 觸發，保持 Worker 暖機）
+        if (url.pathname === '/keepalive' && request.method === 'GET') {
+            return Response.json({ success: true, worker: 'siios-discord-bot', ts: Date.now() }, { headers: corsHeaders });
+        }
+
+        // 手動觸發：掃描已綁定頻道的新訊息並讓 AI 決定是否插嘴（供 cron 與手動測試）
+        if (url.pathname === '/poll' && request.method === 'GET') {
+            try {
+                const result = await pollBoundChannels(env);
+                return Response.json({ success: true, ...result }, { headers: corsHeaders });
+            } catch (error) {
+                return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
+            }
         }
 
         // 註冊斜線指令
@@ -192,8 +207,124 @@ export default {
         }
 
         return Response.json({ error: 'Not found' }, { status: 404, headers: corsHeaders });
+    },
+
+    // ===== Cron 觸發：保持暖機 + 掃描頻道新訊息並讓 AI 決定是否插嘴 =====
+    async scheduled(event, env, ctx) {
+        try {
+            await pollBoundChannels(env);
+        } catch (error) {
+            console.error('scheduled poll error:', error);
+        }
     }
 };
+
+// ===== 掃描已綁定頻道，處理新訊息（供 cron 與手動觸發）=====
+async function pollBoundChannels(env) {
+    const bindings = await env.DB.prepare(`SELECT * FROM channel_bindings`).all();
+    const channels = bindings.results || [];
+    let processed = 0, replied = 0;
+
+    for (const b of channels) {
+        const channelId = b.channel_id;
+        const characterId = b.character_id;
+        if (!channelId) continue;
+
+        // 取得上次處理的訊息 ID
+        const state = await env.DB.prepare(`SELECT cursor FROM botState WHERE key = ?`).bind('last_msg_' + channelId).first();
+
+        // 取最近 20 則訊息（Discord API 回傳由新到舊）
+        const url = `https://discord.com/api/v10/channels/${channelId}/messages?limit=20${state?.cursor ? `&after=${state.cursor}` : ''}`;
+        const resp = await fetch(url, { headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` } });
+        if (!resp.ok) continue;
+
+        const messages = await resp.json();
+        if (!Array.isArray(messages) || messages.length === 0) continue;
+
+        // 由舊到新處理
+        const newMessages = messages.filter(m => !m.author.bot).reverse();
+
+        for (const msg of newMessages) {
+            // 檢查是否已處理過（避免重複）
+            const exists = await env.DB.prepare(`SELECT id FROM messages WHERE id = ?`).bind(msg.id).first();
+            if (exists) continue;
+            processed++;
+
+            // 存使用者訊息
+            const userBinding = await env.DB.prepare(`SELECT * FROM discordUserBindings WHERE discord_user_id = ?`).bind(msg.author.id).first();
+            const userId = userBinding?.user_id || null;
+            const userDisplayName = userBinding?.user_display_name || msg.author.username;
+
+            await env.DB.prepare(`INSERT INTO messages (id, chat_id, role, content, timestamp, metadata) VALUES (?, ?, 'user', ?, ?, ?)`).bind(
+                msg.id, characterId || msg.channel_id, msg.content,
+                new Date(msg.timestamp).toISOString(),
+                JSON.stringify({ source: 'discord', author: msg.author.username, author_id: msg.author.id, channel_id: msg.channel_id, bound_user_id: userId, user_display_name: userDisplayName })
+            ).run();
+
+            // 自動存簡易記憶
+            await saveDiscordMemory(env, characterId, userId, userDisplayName, msg.content);
+
+            // 決定是否回應：@機器人 一定回；否則讓 AI 判斷是否有興趣插嘴
+            const mentioned = (msg.mentions || []).some(m => m.id === env.DISCORD_APPLICATION_ID);
+            const interested = mentioned || await aiInterestedIn(msg.content, characterId, env);
+
+            if (interested) {
+                const ctx = await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? ORDER BY timestamp DESC LIMIT 10`).bind(characterId || msg.channel_id).all();
+                const aiResponse = await generateAIResponseWithContext(msg, characterId, userId, userDisplayName, env);
+                await sendDiscordMessage(msg.channel_id, aiResponse.content, characterId, env);
+
+                await env.DB.prepare(`INSERT INTO messages (id, chat_id, role, content, timestamp, metadata) VALUES (?, ?, 'assistant', ?, ?, ?)`).bind(
+                    'ai-' + Date.now() + '-' + msg.id, characterId || msg.channel_id, aiResponse.content,
+                    new Date().toISOString(),
+                    JSON.stringify({ source: 'discord', channel_id: msg.channel_id, character_id: characterId, responding_to_user: userId })
+                ).run();
+                replied++;
+            }
+        }
+
+        // 更新游標為最新的訊息 ID
+        const latestId = messages[0].id;
+        await env.DB.prepare(`INSERT INTO botState (key, cursor) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET cursor = excluded.cursor`).bind('last_msg_' + channelId, latestId).run();
+    }
+
+    return { type: 'keepalive', channels: channels.length, processed, replied, ts: Date.now() };
+}
+
+// 讓 AI 判斷是否對話題有興趣要插嘴
+async function aiInterestedIn(message, characterId, env) {
+    const aiUrl = await getConfig(env, 'AI_API_URL');
+    const aiKey = await getConfig(env, 'AI_API_KEY');
+    const aiModel = await getConfig(env, 'AI_MODEL') || 'gpt-3.5-turbo';
+    if (!aiUrl || !aiKey) return false;
+
+    // 隨機觸發，避免每次都呼叫 AI（降低花費與噪音）
+    if (Math.random() > 0.5) return false;
+
+    const charName = (await env.DB.prepare(`SELECT name FROM characters WHERE id = ?`).bind(characterId).first())?.name || 'AI';
+    const prompt = `你是 ${charName}。以下是一則頻道訊息。判斷你是否對這個話題「有興趣」而想要主動插嘴回覆。\n只回覆單一數字：1 表示有興趣想插嘴，0 表示沒興趣。\n\n頻道訊息：${message.slice(0, 300)}`;
+    const resp = await fetch(`${aiUrl}/v1/chat/completions`, {
+        method: 'POST', headers: { 'Authorization': `Bearer ${aiKey}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model: aiModel, messages: [{ role: 'user', content: prompt }], temperature: 0.5, max_tokens: 10 })
+    });
+    if (!resp.ok) return false;
+    const data = await resp.json();
+    const answer = (data.choices?.[0]?.message?.content || '').trim();
+    return answer === '1';
+}
+
+// 存 Discord 訊息為簡易記憶
+async function saveDiscordMemory(env, characterId, userId, userDisplayName, content) {
+    if (!characterId) return;
+    const nowIso = new Date().toISOString();
+    const charRow = await env.DB.prepare(`SELECT name FROM characters WHERE id = ?`).bind(characterId).first();
+    const charName = charRow?.name || 'AI';
+    const memoryMeta = JSON.stringify({ source: 'discord', platform: 'discord', channel_id: 'poll' });
+    await env.DB.prepare(`INSERT INTO memories (id, chat_id, character_id, content, memory_type, importance, timestamp, metadata) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`).bind(
+        'mem-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8), characterId, characterId,
+        `[Discord 聊天] ${nowIso} User (${userDisplayName}): ${content}`, 'dynamic', 0.5,
+        nowIso, memoryMeta
+    ).run();
+}
 
 // ===== 斜線指令註冊 =====
 async function registerCommands(env) {
