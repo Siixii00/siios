@@ -1,11 +1,13 @@
-﻿import { GlobalSettingsDB, KeywordSettingsDB, SettingsDB } from '../db.js';
+﻿import { GlobalSettingsDB, KeywordSettingsDB, TheaterSettingsDB, SettingsDB } from '../db.js';
 
 const CATEGORY_PRIORITY_MAP = {
     'sx_worldbook_cot': 'front',
     'sx_worldbook_style': 'front',
     'sx_worldbook_global': 'front',
     'sx_worldbook_keywords': 'middle',
-    'sx_worldbook_backend': 'back'
+    'sx_worldbook_backend': 'back',
+    'sx_worldbook_core': 'front',
+    'sx_worldbook_theater': 'middle'
 };
 
 const CATEGORY_TARGET_DB = {
@@ -13,7 +15,9 @@ const CATEGORY_TARGET_DB = {
     'sx_worldbook_style': 'global',
     'sx_worldbook_global': 'global',
     'sx_worldbook_keywords': 'keyword',
-    'sx_worldbook_backend': 'global'
+    'sx_worldbook_backend': 'global',
+    'sx_worldbook_core': 'global',
+    'sx_worldbook_theater': 'theater'
 };
 
 function extractWorldbookId(filename) {
@@ -51,20 +55,32 @@ class WorldbookInstaller {
         return await response.json();
     }
     
+    async _getCategoryEntries(worldbook) {
+        const result = [];
+        for (const [category, value] of Object.entries(worldbook)) {
+            if (category.startsWith('sx_worldbook_') && Array.isArray(value)) {
+                const targetDB = CATEGORY_TARGET_DB[category];
+                if (targetDB) {
+                    result.push({ category, entries: value, targetDB });
+                }
+            } else if (value && typeof value === 'object' && !Array.isArray(value) && Array.isArray(value.entries)) {
+                result.push({ category, entries: value.entries, targetDB: 'keyword' });
+            }
+        }
+        return result;
+    }
+
     async checkDuplicates(worldbookId) {
         const worldbook = await this.loadWorldbook(worldbookId);
         const duplicates = [];
         
         const existingGlobal = await GlobalSettingsDB.getAll();
         const existingKeyword = await KeywordSettingsDB.getAll();
+        const existingTheater = await TheaterSettingsDB.getAll();
         
-        for (const [category, entries] of Object.entries(worldbook)) {
-            if (!category.startsWith('sx_worldbook_') || !Array.isArray(entries)) {
-                continue;
-            }
-            
-            const targetDB = CATEGORY_TARGET_DB[category];
-            
+        const categories = this._getCategoryEntries(worldbook);
+        
+        for (const { category, entries, targetDB } of categories) {
             for (const entry of entries) {
                 const name = entry.title || 'Untitled';
                 
@@ -77,6 +93,11 @@ class WorldbookInstaller {
                     const found = existingKeyword.find(e => e.name === name);
                     if (found) {
                         duplicates.push({ name, category, existingId: found.id, type: 'keyword' });
+                    }
+                } else if (targetDB === 'theater') {
+                    const found = existingTheater.find(e => e.name === name);
+                    if (found) {
+                        duplicates.push({ name, category, existingId: found.id, type: 'theater' });
                     }
                 }
             }
@@ -91,17 +112,14 @@ class WorldbookInstaller {
         let imported = 0;
         let skipped = 0;
         
-        for (const [category, entries] of Object.entries(worldbook)) {
-            if (!category.startsWith('sx_worldbook_') || !Array.isArray(entries)) {
-                continue;
-            }
-            
-            const targetDB = CATEGORY_TARGET_DB[category];
-            const priority = CATEGORY_PRIORITY_MAP[category];
+        const categories = this._getCategoryEntries(worldbook);
+        
+        for (const { category, entries, targetDB } of categories) {
+            const priority = CATEGORY_PRIORITY_MAP[category] || (targetDB === 'keyword' ? 'middle' : 'front');
             
             for (const entry of entries) {
                 const name = entry.title || 'Untitled';
-                const duplicate = duplicates.find(d => d.name === name);
+                const duplicate = duplicates.find(d => d.name === name && d.type === targetDB);
                 
                 if (duplicate) {
                     if (mode === 'overwrite') {
@@ -115,6 +133,12 @@ class WorldbookInstaller {
                             await KeywordSettingsDB.update(duplicate.existingId, {
                                 content: entry.content || '',
                                 keywords: entry.triggers || [],
+                                priority: priority,
+                                enabled: entry.enabled !== undefined ? entry.enabled : true
+                            });
+                        } else if (duplicate.type === 'theater') {
+                            await TheaterSettingsDB.update(duplicate.existingId, {
+                                content: entry.content || '',
                                 priority: priority,
                                 enabled: entry.enabled !== undefined ? entry.enabled : true
                             });
@@ -136,6 +160,13 @@ class WorldbookInstaller {
                             name: name,
                             content: entry.content || '',
                             keywords: entry.triggers || [],
+                            priority: priority,
+                            enabled: entry.enabled !== undefined ? entry.enabled : true
+                        });
+                    } else if (targetDB === 'theater') {
+                        await TheaterSettingsDB.create({
+                            name: name,
+                            content: entry.content || '',
                             priority: priority,
                             enabled: entry.enabled !== undefined ? entry.enabled : true
                         });

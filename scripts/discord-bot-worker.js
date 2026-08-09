@@ -37,10 +37,11 @@ export default {
         // Discord Webhook（含簽名驗證）
         if (url.pathname === '/discord/webhook' && request.method === 'POST') {
             try {
-                if (!(await verifyDiscordRequest(request, env))) {
+                const rawBody = await request.text();
+                if (!(await verifyDiscordRequest(request, env, rawBody))) {
                     return Response.json({ error: 'Invalid signature' }, { status: 401, headers: corsHeaders });
                 }
-                const event = await request.json();
+                const event = JSON.parse(rawBody);
                 return await handleDiscordEvent(event, env);
             } catch (error) {
                 return Response.json({ error: error.message }, { status: 400, headers: corsHeaders });
@@ -200,6 +201,7 @@ async function registerCommands(env) {
         {
             name: 'configure',
             description: '設定 Bot 的 API 參數',
+            default_member_permissions: '0',
             options: [
                 {
                     type: 3, name: 'key', description: '設定項目 (AI_API_URL / AI_API_KEY / AI_MODEL)',
@@ -213,10 +215,11 @@ async function registerCommands(env) {
                 { type: 3, name: 'value', description: '設定值', required: true }
             ]
         },
-        { name: 'config', description: '查看目前的 API 設定狀態' },
+        { name: 'config', description: '查看目前的 API 設定狀態', default_member_permissions: '0' },
         {
             name: 'channel',
             description: '頻道管理',
+            default_member_permissions: '0',
             options: [{
                 type: 1, name: 'bind', description: '綁定此頻道到一個角色',
                 options: [
@@ -226,6 +229,13 @@ async function registerCommands(env) {
                 type: 1, name: 'unbind', description: '解除此頻道的角色綁定'
             }, {
                 type: 1, name: 'status', description: '查看此頻道的綁定狀態'
+            }]
+        },
+        {
+            name: 'bindme',
+            description: '將你的 Discord 帳號綁定到 Siios 用戶',
+            options: [{
+                type: 3, name: 'user_id', description: '你的 Siios PWA 用戶 ID', required: true
             }]
         }
     ];
@@ -238,7 +248,7 @@ async function registerCommands(env) {
 }
 
 // ===== 驗證 Discord Webhook 簽名 =====
-async function verifyDiscordRequest(request, env) {
+async function verifyDiscordRequest(request, env, rawBody) {
     try {
         const publicKey = env.DISCORD_PUBLIC_KEY;
         if (!publicKey || publicKey === 'your_discord_public_key_here') return true; // 未設定公鑰時不阻擋（向後相容）
@@ -247,7 +257,6 @@ async function verifyDiscordRequest(request, env) {
         const timestamp = request.headers.get('X-Signature-Timestamp');
         if (!signature || !timestamp) return false;
 
-        const rawBody = await request.text();
         const message = timestamp + rawBody;
 
         const key = await crypto.subtle.importKey(
@@ -352,6 +361,25 @@ async function handleSlashCommand(event, env) {
                 }
                 return Response.json({ type: 4, data: { content: '📋 此頻道尚未綁定任何角色' } });
             }
+        }
+
+        if (name === 'bindme') {
+            const targetUserId = options.find(o => o.name === 'user_id')?.value;
+            if (!targetUserId) return Response.json({ type: 4, data: { content: '❌ 請提供你的 Siios 用戶 ID', flags: 64 } });
+
+            const discordUserId = event.member?.user?.id || event.user?.id;
+            const discordUsername = event.member?.user?.username || 'unknown';
+            const discordNick = event.member?.nick || null;
+            const displayName = discordNick || event.member?.user?.global_name || discordUsername;
+
+            const existing = await env.DB.prepare(`SELECT * FROM discordUserBindings WHERE discord_user_id = ?`).bind(discordUserId).first();
+            if (existing) {
+                await env.DB.prepare(`UPDATE discordUserBindings SET user_id = ?, user_display_name = ?, discord_username = ? WHERE discord_user_id = ?`).bind(targetUserId, displayName, discordUsername, discordUserId).run();
+            } else {
+                await env.DB.prepare(`INSERT INTO discordUserBindings (discord_user_id, user_id, discord_username, user_display_name) VALUES (?, ?, ?, ?)`).bind(discordUserId, targetUserId, discordUsername, displayName).run();
+            }
+
+            return Response.json({ type: 4, data: { content: `✅ 已綁定 Discord 用戶 **${discordUsername}** (${discordNick ? `暱稱: ${discordNick}` : ''}) → Siios 用戶 **${targetUserId}**` } });
         }
 
         return Response.json({ type: 4, data: { content: '❌ 未知指令', flags: 64 } });
