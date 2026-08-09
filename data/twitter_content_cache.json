@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-09T14:35:23.468850",
+    "last_updated": "2026-08-09T15:32:44.788758",
     "total_items": 60
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "Mea Culpa – Dark Hours",
         "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
         "source": "Hacker News",
-        "score": 97
+        "score": 191
       },
       {
         "title": "Show HN: A Project Oberon System version running on RISC-V instead of RISC-5",
         "url": "https://github.com/rochus-keller/OberonSystem/tree/op2-rv32",
         "source": "Hacker News",
-        "score": 22
+        "score": 40
+      },
+      {
+        "title": "John C. Lilly on solid state intelligence and the elimination of man (1978)",
+        "url": "https://kibotronics.net/unlisted/lilly-machines/",
+        "source": "Hacker News",
+        "score": 19
       },
       {
         "title": "There Are Magic Hexagons of Every Order",
         "url": "https://gukov.dev/math/2026/08/02/new-magic-hexagons.html",
         "source": "Hacker News",
-        "score": 110
-      },
-      {
-        "title": "The Alpha 21264 CPU: NT's Greatest RISC (1998)",
-        "url": "https://halfhill.com/byte/1998-12_alpha.html",
-        "source": "Hacker News",
-        "score": 40
-      },
-      {
-        "title": "My server is a phone now",
-        "url": "https://seg6.space/posts/phone-server/",
-        "source": "Hacker News",
-        "score": 408
+        "score": 125
       },
       {
         "title": "Uber SubmitQueue: a high-performance speculative merge queue",
         "url": "https://github.com/uber/submitqueue/",
         "source": "Hacker News",
-        "score": 28
+        "score": 50
+      },
+      {
+        "title": "The Alpha 21264 CPU: NT's Greatest RISC (1998)",
+        "url": "https://halfhill.com/byte/1998-12_alpha.html",
+        "source": "Hacker News",
+        "score": 48
+      },
+      {
+        "title": "My server is a phone now",
+        "url": "https://seg6.space/posts/phone-server/",
+        "source": "Hacker News",
+        "score": 426
       },
       {
         "title": "Microsoft Word for Windows 1.1a, Native X64 Port",
         "url": "https://github.com/jmarshall23/msword",
         "source": "Hacker News",
-        "score": 112
+        "score": 119
       },
       {
         "title": "The Grid That Doubles the Strength of the Ground",
         "url": "https://practical.engineering/blog/2026/8/4/the-grid-that-doubles-the-strength-of-the-ground",
         "source": "Hacker News",
-        "score": 74
+        "score": 86
       },
       {
         "title": "Os8088: A powerful Mac-like OS for the IBM XT, 286, 386",
         "url": "https://os8088.com/",
         "source": "Hacker News",
-        "score": 211
+        "score": 215
       },
       {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News",
-        "score": 464
-      },
-      {
-        "title": "Improving Heuristics for A* Pathfinding",
-        "url": "https://www.redblobgames.com/pathfinding/heuristics/differential.html",
-        "source": "Hacker News",
-        "score": 303
-      },
-      {
-        "title": "Dithered QR Codes",
-        "url": "https://www.andrewt.net/dithered-qr-codes/wtf/",
-        "source": "Hacker News",
-        "score": 282
-      },
-      {
-        "title": "Reviving a four year old reMarkable 2",
-        "url": "https://oskrim.github.io/hardware/2026/08/09/remarkable-over-ssh.html",
-        "source": "Hacker News",
-        "score": 62
+        "score": 471
       },
       {
         "title": "Honey, I shrunk the embeddings: Matryoshka vs. PCA",
         "url": "https://dylancastillo.co/posts/matryoshka-vs-pca",
         "source": "Hacker News",
-        "score": 6
+        "score": 19
       },
       {
-        "title": "Shopify replaced Redis with MySQL for inventory reservations–and it scaled",
-        "url": "https://shopify.engineering/scaling-inventory-reservations",
+        "title": "Dithered QR Codes",
+        "url": "https://www.andrewt.net/dithered-qr-codes/wtf/",
         "source": "Hacker News",
-        "score": 268
+        "score": 300
+      },
+      {
+        "title": "Improving Heuristics for A* Pathfinding",
+        "url": "https://www.redblobgames.com/pathfinding/heuristics/differential.html",
+        "source": "Hacker News",
+        "score": 311
+      },
+      {
+        "title": "Protopia",
+        "url": "https://kevinkelly.substack.com/p/protopia",
+        "source": "Hacker News",
+        "score": 40
       }
     ],
     "ai": [
@@ -101,61 +101,61 @@
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News AI",
-        "score": 464
+        "score": 471
       },
       {
         "title": "Honey, I shrunk the embeddings: Matryoshka vs. PCA",
         "url": "https://dylancastillo.co/posts/matryoshka-vs-pca",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 19
       },
       {
         "title": "The original URL for this prediction will no longer be available in 11 years (2011)",
         "url": "http://longbets.org/601/",
         "source": "Hacker News AI",
-        "score": 176
+        "score": 183
       },
       {
         "title": "Show HN: Airy – Free, fast, and simple voice content creation",
         "url": "https://airy.so",
         "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Switching to electric stoves can dramatically cut indoor air pollution",
-        "url": "https://news.stanford.edu/stories/2025/12/gas-propane-stoves-nitrogen-dioxide-exposure-health-risks-switching-electric",
-        "source": "Hacker News AI",
-        "score": 5
+        "score": 16
       },
       {
         "title": "70% of AI revenue comes from OpenAI and Anthropic",
         "url": "https://www.youtube.com/watch?v=68X8yEatepQ",
         "source": "Hacker News AI",
-        "score": 17
+        "score": 33
       },
       {
         "title": "Melatonin impairs morning cognition in healthy young adults (2023)",
         "url": "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621",
         "source": "Hacker News AI",
-        "score": 157
-      },
-      {
-        "title": "Software Giant SAP Stops Most Travel and Hiring Because of AI's Soaring Cost",
-        "url": "https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/",
-        "source": "Hacker News AI",
-        "score": 69
+        "score": 160
       },
       {
         "title": "Message your other Claude Code sessions",
         "url": "https://code.claude.com/docs/en/cross-session-messaging",
         "source": "Hacker News AI",
-        "score": 138
+        "score": 139
+      },
+      {
+        "title": "Switching to electric stoves can dramatically cut indoor air pollution",
+        "url": "https://news.stanford.edu/stories/2025/12/gas-propane-stoves-nitrogen-dioxide-exposure-health-risks-switching-electric",
+        "source": "Hacker News AI",
+        "score": 37
+      },
+      {
+        "title": "Software Giant SAP Stops Most Travel and Hiring Because of AI's Soaring Cost",
+        "url": "https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/",
+        "source": "Hacker News AI",
+        "score": 70
       },
       {
         "title": "Timeline of the OpenAI accidental attack against Hugging Face",
         "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
         "source": "Hacker News AI",
-        "score": 402
+        "score": 404
       }
     ],
     "news": [
@@ -175,13 +175,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Fifa criticises campaign to oust president Infantino",
-        "url": "https://www.bbc.co.uk/sport/football/articles/cj03drn965do?at_medium=RSS&at_campaign=rss",
+        "title": "Israel accused of weaponising archaeology at ancient West Bank sites",
+        "url": "https://www.bbc.co.uk/news/articles/c20d8qre98do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Israel accused of weaponising archaeology at ancient West Bank sites",
-        "url": "https://www.bbc.co.uk/news/articles/c20d8qre98do?at_medium=RSS&at_campaign=rss",
+        "title": "Perez Hilton faces long recovery after reports he self-harmed during livestream",
+        "url": "https://www.bbc.co.uk/news/articles/cg5lnqjz497o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -190,8 +190,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Hormuz talks positive, Oman says, as Iran warns deal would not open strait",
-        "url": "https://www.bbc.co.uk/news/articles/c934j5y2lq9o?at_medium=RSS&at_campaign=rss",
+        "title": "Man arrested after boat capsizes near Statue of Liberty killing woman and infant",
+        "url": "https://www.bbc.co.uk/news/articles/c935w1d05d7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -222,13 +222,13 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " BMW's controversial Spider-Man advert could be even more damaging than the Jaguar rebrand ",
-        "url": "https://www.creativebloq.com/design/advertising/bmws-controversial-spider-man-advert-is-more-harmful-than-the-jaguar-rebrand",
+        "title": " OLED vs IPS: which laptop screen should students actually buy? ",
+        "url": "https://www.creativebloq.com/tech/laptops/oled-vs-ips-which-laptop-screen-should-students-actually-buy",
         "source": "Creative Bloq"
       },
       {
-        "title": " OLED vs IPS: which laptop screen should students actually buy? ",
-        "url": "https://www.creativebloq.com/tech/laptops/oled-vs-ips-which-laptop-screen-should-students-actually-buy",
+        "title": " BMW's controversial Spider-Man advert could be even more damaging than the Jaguar rebrand ",
+        "url": "https://www.creativebloq.com/design/advertising/bmws-controversial-spider-man-advert-is-more-harmful-than-the-jaguar-rebrand",
         "source": "Creative Bloq"
       }
     ],
@@ -271,6 +271,16 @@
     ],
     "gaming": [
       {
+        "title": "Amid Xbox woes, Blizzard has reportedly become the ‘top performing’ studio at the company",
+        "url": "https://www.polygon.com/xbox-blizzard-becomes-top-performing-studio-overwatch/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Big Walk Ending, Explained: What Happens Once You Unlock the Gate",
+        "url": "https://www.polygon.com/big-walk-ending-explained/",
+        "source": "Polygon"
+      },
+      {
         "title": "The 10 Best Tales from the Crypt Episodes of All Time, Ranked",
         "url": "https://www.polygon.com/the-10-best-tales-from-the-crypt-episodes/",
         "source": "Polygon"
@@ -293,16 +303,6 @@
       {
         "title": "Baldur's Gate 3 Feels Like a Brand-New Experience With These 12 Replay Ideas",
         "url": "https://www.polygon.com/12-new-bg3-replay-ideas/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Robert Downey Jr.'s 157-Minute Crime-Thriller Masterpiece Is Officially Back on Free Streaming",
-        "url": "https://www.polygon.com/robert-downey-crime-thriller-free-streaming-tubi/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Anime Endings That Fans Still Argue About (I'm Still Mad About #3)",
-        "url": "https://www.polygon.com/best-anime-endings-divisive-controversial/",
         "source": "Polygon"
       }
     ],
