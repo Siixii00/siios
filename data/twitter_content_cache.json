@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-09T10:35:40.851021",
-    "total_items": 60
+    "last_updated": "2026-08-09T11:29:55.290137",
+    "total_items": 58
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "There Are Magic Hexagons of Every Order",
         "url": "https://gukov.dev/math/2026/08/02/new-magic-hexagons.html",
         "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "Microsoft Word for Windows 1.1a, Native X64 Port",
-        "url": "https://github.com/jmarshall23/msword",
-        "source": "Hacker News",
-        "score": 80
+        "score": 49
       },
       {
         "title": "My server is a phone now",
         "url": "https://seg6.space/posts/phone-server/",
         "source": "Hacker News",
-        "score": 338
+        "score": 355
+      },
+      {
+        "title": "Microsoft Word for Windows 1.1a, Native X64 Port",
+        "url": "https://github.com/jmarshall23/msword",
+        "source": "Hacker News",
+        "score": 89
+      },
+      {
+        "title": "The Alpha 21264 CPU: NT's Greatest RISC (1998)",
+        "url": "https://halfhill.com/byte/1998-12_alpha.html",
+        "source": "Hacker News",
+        "score": 10
       },
       {
         "title": "Os8088: A powerful Mac-like OS for the IBM XT, 286, 386",
         "url": "https://os8088.com/",
         "source": "Hacker News",
-        "score": 178
-      },
-      {
-        "title": "Improving Heuristics for A* Pathfinding",
-        "url": "https://www.redblobgames.com/pathfinding/heuristics/differential.html",
-        "source": "Hacker News",
-        "score": 242
+        "score": 185
       },
       {
         "title": "Shopify replaced Redis with MySQL for inventory reservations–and it scaled",
         "url": "https://shopify.engineering/scaling-inventory-reservations",
         "source": "Hacker News",
-        "score": 210
+        "score": 225
       },
       {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News",
-        "score": 423
+        "score": 436
+      },
+      {
+        "title": "Improving Heuristics for A* Pathfinding",
+        "url": "https://www.redblobgames.com/pathfinding/heuristics/differential.html",
+        "source": "Hacker News",
+        "score": 260
       },
       {
         "title": "Dithered QR Codes",
         "url": "https://www.andrewt.net/dithered-qr-codes/wtf/",
         "source": "Hacker News",
-        "score": 216
+        "score": 229
       },
       {
         "title": "The Grid That Doubles the Strength of the Ground",
         "url": "https://practical.engineering/blog/2026/8/4/the-grid-that-doubles-the-strength-of-the-ground",
         "source": "Hacker News",
-        "score": 16
+        "score": 22
       },
       {
         "title": "Melatonin impairs morning cognition in healthy young adults (2023)",
         "url": "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621",
         "source": "Hacker News",
-        "score": 129
+        "score": 139
       },
       {
         "title": "The original URL for this prediction will no longer be available in 11 years (2011)",
         "url": "http://longbets.org/601/",
         "source": "Hacker News",
-        "score": 148
+        "score": 152
+      },
+      {
+        "title": "CSS: The bomb inside your inbox",
+        "url": "https://portswigger.net/research/css-the-bomb-inside-your-inbox",
+        "source": "Hacker News",
+        "score": 19
       },
       {
         "title": "Protopia",
         "url": "https://kevinkelly.substack.com/p/protopia",
         "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "Stylized GGX Shading",
-        "url": "https://alexandrelamure.github.io/graphics-posts/stylized-ggx-shading.html",
-        "source": "Hacker News",
-        "score": 27
+        "score": 18
       },
       {
         "title": "_for-sale DNS records",
         "url": "https://specification.website/spec/foundations/for-sale-dns/",
         "source": "Hacker News",
-        "score": 399
-      },
-      {
-        "title": "Unexpected events and prosocial behavior: the Batman effect (2025)",
-        "url": "https://www.nature.com/articles/s44184-025-00171-5",
-        "source": "Hacker News",
-        "score": 63
+        "score": 401
       }
     ],
     "ai": [
@@ -101,31 +101,37 @@
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News AI",
-        "score": 423
+        "score": 436
       },
       {
         "title": "Melatonin impairs morning cognition in healthy young adults (2023)",
         "url": "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621",
         "source": "Hacker News AI",
-        "score": 129
+        "score": 139
       },
       {
         "title": "The original URL for this prediction will no longer be available in 11 years (2011)",
         "url": "http://longbets.org/601/",
         "source": "Hacker News AI",
-        "score": 148
+        "score": 152
       },
       {
         "title": "Software Giant SAP Stops Most Travel and Hiring Because of AI's Soaring Cost",
         "url": "https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/",
         "source": "Hacker News AI",
-        "score": 28
+        "score": 36
       },
       {
         "title": "Message your other Claude Code sessions",
         "url": "https://code.claude.com/docs/en/cross-session-messaging",
         "source": "Hacker News AI",
-        "score": 132
+        "score": 137
+      },
+      {
+        "title": "Timeline of the OpenAI accidental attack against Hugging Face",
+        "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+        "source": "Hacker News AI",
+        "score": 399
       },
       {
         "title": "TinySol, a tiny solitaire game for DOS",
@@ -134,39 +140,21 @@
         "score": 56
       },
       {
-        "title": "Timeline of the OpenAI accidental attack against Hugging Face",
-        "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
-        "source": "Hacker News AI",
-        "score": 396
-      },
-      {
         "title": "ChatGPT starts blocking direct requests to copy an author's style",
         "url": "https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/",
         "source": "Hacker News AI",
-        "score": 57
-      },
-      {
-        "title": "I asked 4 AI companions what they were. They lied, then texted me the next day",
-        "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7244220",
-        "source": "Hacker News AI",
-        "score": 6
-      },
-      {
-        "title": "What happens if an entire class of workers loses faith in their careers",
-        "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
-        "source": "Hacker News AI",
-        "score": 1019
+        "score": 59
       }
     ],
     "news": [
       {
-        "title": "Israel accused of weaponising archaeology at ancient West Bank sites",
-        "url": "https://www.bbc.co.uk/news/articles/c20d8qre98do?at_medium=RSS&at_campaign=rss",
+        "title": "Fifa criticises campaign to oust president Infantino",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cj03drn965do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Fifa criticises campaign to oust president Infantino",
-        "url": "https://www.bbc.co.uk/sport/football/articles/cj03drn965do?at_medium=RSS&at_campaign=rss",
+        "title": "Israel accused of weaponising archaeology at ancient West Bank sites",
+        "url": "https://www.bbc.co.uk/news/articles/c20d8qre98do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -197,6 +185,11 @@
     ],
     "art": [
       {
+        "title": " Robert Pattinson’s Primetime performance is making me nauseous, and that’s great filmmaking ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/robert-pattinsons-primetime-performance-is-making-me-nauseous-and-thats-great-filmmaking",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " The Simpsons might be ending, and millennials think they know why ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/the-simpsons-might-be-coming-to-an-end-and-i-can-see-why",
         "source": "Creative Bloq"
@@ -224,11 +217,6 @@
       {
         "title": " So, it seems Disney music is our only protection against Meta's pervert glasses ",
         "url": "https://www.creativebloq.com/tech/so-it-seems-disney-music-is-our-only-protection-against-metas-pervert-glasses",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Ikea goes viral with racy wicker bench photo because Alexander Skarsgård ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/ikea-goes-viral-with-racy-photo-of-a-wicker-bench",
         "source": "Creative Bloq"
       }
     ],
@@ -271,6 +259,11 @@
     ],
     "gaming": [
       {
+        "title": "Baldur's Gate 3 Feels Like a Brand-New Experience With These 12 Replay Ideas",
+        "url": "https://www.polygon.com/12-new-bg3-replay-ideas/",
+        "source": "Polygon"
+      },
+      {
         "title": "Robert Downey Jr.'s 157-Minute Crime-Thriller Masterpiece Is Officially Back on Free Streaming",
         "url": "https://www.polygon.com/robert-downey-crime-thriller-free-streaming-tubi/",
         "source": "Polygon"
@@ -298,11 +291,6 @@
       {
         "title": "Matt Damon’s 113-Minute 10/10 Action Thriller Officially Crowned as Netflix’s Biggest Movie of 2026",
         "url": "https://www.polygon.com/matt-damon-action-thriller-netflix-biggest-streaming-hit-of-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Magic Designer Wants to Resurrect a Forgotten Card That Tells a Perfect Miniature Horror Story",
-        "url": "https://www.polygon.com/mtg-vengeful-pharaoh-card-mummy-horror-story-magic-2012/",
         "source": "Polygon"
       }
     ],
