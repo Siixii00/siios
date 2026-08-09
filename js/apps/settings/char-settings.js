@@ -138,6 +138,18 @@ async function renderCharEdit(params) {
     main.appendChild(nameSection);
     main.appendChild(nameGroup);
 
+    // 角色 ID 顯示（僅供參考，不可編輯）
+    const idSection = createElement('div', 'mb-2 ml-8 mt-4');
+    idSection.appendChild(createElement('p', 'ios-section-header', { textContent: '角色 ID' }));
+    const idGroup = createElement('div', 'ios-grouped-list mx-4');
+    const idCell = createElement('div', 'p-4');
+    const idText = createElement('div', 'text-sm text-gray-400 font-mono select-all');
+    idText.textContent = char.id;
+    idCell.appendChild(idText);
+    idGroup.appendChild(idCell);
+    main.appendChild(idSection);
+    main.appendChild(idGroup);
+
     const nickSection = createElement('div', 'mb-2 ml-8 mt-4');
     nickSection.appendChild(createElement('p', 'ios-section-header', { textContent: '暱稱' }));
     const nickGroup = createElement('div', 'ios-grouped-list mx-4');
