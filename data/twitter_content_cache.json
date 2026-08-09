@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-09T12:52:19.604628",
-    "total_items": 58
+    "last_updated": "2026-08-09T13:50:50.682245",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,141 +9,147 @@
         "title": "Reviving a four year old reMarkable 2",
         "url": "https://oskrim.github.io/hardware/2026/08/09/remarkable-over-ssh.html",
         "source": "Hacker News",
-        "score": 16
+        "score": 49
+      },
+      {
+        "title": "Mea Culpa – Dark Hours",
+        "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
+        "source": "Hacker News",
+        "score": 20
       },
       {
         "title": "There Are Magic Hexagons of Every Order",
         "url": "https://gukov.dev/math/2026/08/02/new-magic-hexagons.html",
         "source": "Hacker News",
-        "score": 72
-      },
-      {
-        "title": "My server is a phone now",
-        "url": "https://seg6.space/posts/phone-server/",
-        "source": "Hacker News",
-        "score": 377
-      },
-      {
-        "title": "Microsoft Word for Windows 1.1a, Native X64 Port",
-        "url": "https://github.com/jmarshall23/msword",
-        "source": "Hacker News",
-        "score": 102
-      },
-      {
-        "title": "Os8088: A powerful Mac-like OS for the IBM XT, 286, 386",
-        "url": "https://os8088.com/",
-        "source": "Hacker News",
-        "score": 197
+        "score": 99
       },
       {
         "title": "The Alpha 21264 CPU: NT's Greatest RISC (1998)",
         "url": "https://halfhill.com/byte/1998-12_alpha.html",
         "source": "Hacker News",
-        "score": 20
+        "score": 34
+      },
+      {
+        "title": "My server is a phone now",
+        "url": "https://seg6.space/posts/phone-server/",
+        "source": "Hacker News",
+        "score": 398
       },
       {
         "title": "The Grid That Doubles the Strength of the Ground",
         "url": "https://practical.engineering/blog/2026/8/4/the-grid-that-doubles-the-strength-of-the-ground",
         "source": "Hacker News",
-        "score": 43
+        "score": 63
       },
       {
-        "title": "Everything You Do Is Being Recorded",
-        "url": "https://www.theatlantic.com/technology/2026/05/ai-wearable-surveillance-countermeasures/687203/",
+        "title": "Amazon circumvents Gilroy community vote for AI data center",
+        "url": "https://www.tomshardware.com/tech-industry/data-centers/amazon-secretly-circumvents-community-vote-for-massive-ai-data-center-45-year-old-rules-lock-gilroy-residents-out-of-public-comment-window",
         "source": "Hacker News",
-        "score": 40
+        "score": 39
       },
       {
-        "title": "You might want to build your WebApp in Canvas instead of HTML",
-        "url": "https://hivekit.io/blog/why-you-might-want-to-build-your-webapp-in-canvas-instead-of-html/",
+        "title": "Microsoft Word for Windows 1.1a, Native X64 Port",
+        "url": "https://github.com/jmarshall23/msword",
         "source": "Hacker News",
-        "score": 26
+        "score": 108
       },
       {
-        "title": "Fastmail offers EU data region",
-        "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
+        "title": "Os8088: A powerful Mac-like OS for the IBM XT, 286, 386",
+        "url": "https://os8088.com/",
         "source": "Hacker News",
-        "score": 451
-      },
-      {
-        "title": "Improving Heuristics for A* Pathfinding",
-        "url": "https://www.redblobgames.com/pathfinding/heuristics/differential.html",
-        "source": "Hacker News",
-        "score": 280
-      },
-      {
-        "title": "Show HN: DeepSeek-V4 Latent Reasoning – moving \"thinking\" into latent space",
-        "url": "https://blog.n.ichol.ai/packaging-latent-reasoning-as-a-real-model",
-        "source": "Hacker News",
-        "score": 6
-      },
-      {
-        "title": "Dithered QR Codes",
-        "url": "https://www.andrewt.net/dithered-qr-codes/wtf/",
-        "source": "Hacker News",
-        "score": 249
-      },
-      {
-        "title": "Shopify replaced Redis with MySQL for inventory reservations–and it scaled",
-        "url": "https://shopify.engineering/scaling-inventory-reservations",
-        "source": "Hacker News",
-        "score": 244
+        "score": 206
       },
       {
         "title": "Uber SubmitQueue: a high-performance speculative merge queue",
         "url": "https://github.com/uber/submitqueue/",
         "source": "Hacker News",
-        "score": 9
+        "score": 16
+      },
+      {
+        "title": "Show HN: A Project Oberon System version running on RISC-V instead of RISC-5",
+        "url": "https://github.com/rochus-keller/OberonSystem/tree/op2-rv32",
+        "source": "Hacker News",
+        "score": 6
+      },
+      {
+        "title": "Fastmail offers EU data region",
+        "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
+        "source": "Hacker News",
+        "score": 456
+      },
+      {
+        "title": "Improving Heuristics for A* Pathfinding",
+        "url": "https://www.redblobgames.com/pathfinding/heuristics/differential.html",
+        "source": "Hacker News",
+        "score": 297
+      },
+      {
+        "title": "Dithered QR Codes",
+        "url": "https://www.andrewt.net/dithered-qr-codes/wtf/",
+        "source": "Hacker News",
+        "score": 269
+      },
+      {
+        "title": "Shopify replaced Redis with MySQL for inventory reservations–and it scaled",
+        "url": "https://shopify.engineering/scaling-inventory-reservations",
+        "source": "Hacker News",
+        "score": 259
       }
     ],
     "ai": [
       {
+        "title": "Amazon circumvents Gilroy community vote for AI data center",
+        "url": "https://www.tomshardware.com/tech-industry/data-centers/amazon-secretly-circumvents-community-vote-for-massive-ai-data-center-45-year-old-rules-lock-gilroy-residents-out-of-public-comment-window",
+        "source": "Hacker News AI",
+        "score": 39
+      },
+      {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News AI",
-        "score": 451
+        "score": 456
+      },
+      {
+        "title": "Israeli startup was linked to rogue AI hacks at OpenAI, Anthropic and Meta",
+        "url": "https://www.cnbc.com/2026/08/09/israeli-startup-irregular-linked-to-ai-hacks-openai-anthropic-meta.html",
+        "source": "Hacker News AI",
+        "score": 34
       },
       {
         "title": "The original URL for this prediction will no longer be available in 11 years (2011)",
         "url": "http://longbets.org/601/",
         "source": "Hacker News AI",
-        "score": 165
-      },
-      {
-        "title": "Melatonin impairs morning cognition in healthy young adults (2023)",
-        "url": "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621",
-        "source": "Hacker News AI",
-        "score": 151
+        "score": 174
       },
       {
         "title": "Show HN: Airy – Free, fast, and simple voice content creation",
         "url": "https://airy.so",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 13
       },
       {
         "title": "Software Giant SAP Stops Most Travel and Hiring Because of AI's Soaring Cost",
         "url": "https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/",
         "source": "Hacker News AI",
-        "score": 53
+        "score": 69
+      },
+      {
+        "title": "Melatonin impairs morning cognition in healthy young adults (2023)",
+        "url": "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621",
+        "source": "Hacker News AI",
+        "score": 156
       },
       {
         "title": "Message your other Claude Code sessions",
         "url": "https://code.claude.com/docs/en/cross-session-messaging",
         "source": "Hacker News AI",
-        "score": 137
+        "score": 138
       },
       {
-        "title": "Timeline of the OpenAI accidental attack against Hugging Face",
-        "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+        "title": "70% of AI revenue comes from OpenAI and Anthropic",
+        "url": "https://www.youtube.com/watch?v=68X8yEatepQ",
         "source": "Hacker News AI",
-        "score": 401
-      },
-      {
-        "title": "TinySol, a tiny solitaire game for DOS",
-        "url": "https://classicbits.net/coding-and-software/my-software/monosol/",
-        "source": "Hacker News AI",
-        "score": 58
+        "score": 9
       }
     ],
     "news": [
@@ -173,7 +179,7 @@
         "source": "BBC World"
       },
       {
-        "title": "State of emergency declared as fast-moving Canada wildfire doubles in size",
+        "title": "Residents warned to brace for the worst as Canada wildfire rages out of control",
         "url": "https://www.bbc.co.uk/news/articles/cx25dkwk3e3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -184,6 +190,11 @@
       }
     ],
     "art": [
+      {
+        "title": " Wacom MovinkPad Pro 14 vs iPad Air: which is the better tablet for digital artists? ",
+        "url": "https://www.creativebloq.com/art/digital-art/wacom-movinkpad-pro-14-vs-ipad-air-which-is-the-better-tablet-for-digital-artists",
+        "source": "Creative Bloq"
+      },
       {
         "title": " From Zootopia and Toy Story to X-Men's Storm, the Disney D23 poster design is raising big expectations ",
         "url": "https://www.creativebloq.com/art/animation/from-zootopia-and-toy-story-to-storm-the-disney-d23-poster-design-has-it-all",
@@ -205,18 +216,13 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " OLED vs IPS: which laptop screen should students actually buy? ",
-        "url": "https://www.creativebloq.com/tech/laptops/oled-vs-ips-which-laptop-screen-should-students-actually-buy",
-        "source": "Creative Bloq"
-      },
-      {
         "title": " BMW's controversial Spider-Man advert could be even more damaging than the Jaguar rebrand ",
         "url": "https://www.creativebloq.com/design/advertising/bmws-controversial-spider-man-advert-is-more-harmful-than-the-jaguar-rebrand",
         "source": "Creative Bloq"
       },
       {
-        "title": " The Square Enix AI fiasco convinces me we all need to start documenting our creative process ",
-        "url": "https://www.creativebloq.com/ai/ai-art/the-square-enix-ai-fiasco-convinces-me-we-all-need-to-start-documenting-our-creative-process",
+        "title": " OLED vs IPS: which laptop screen should students actually buy? ",
+        "url": "https://www.creativebloq.com/tech/laptops/oled-vs-ips-which-laptop-screen-should-students-actually-buy",
         "source": "Creative Bloq"
       }
     ],
@@ -259,6 +265,16 @@
     ],
     "gaming": [
       {
+        "title": "A Legend of Zelda Player’s Girlfriend Is Finishing His Save to Honor His Death",
+        "url": "https://www.polygon.com/zelda-totk-botw-peyton-chrissy-save-file-beat-game-nintendo-switch/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Say Goodbye to Any Chance Marvel Had at Fixing Spider-Man's Most Hated Storyline",
+        "url": "https://www.polygon.com/spider-man-brand-new-day-fix-one-more-day/",
+        "source": "Polygon"
+      },
+      {
         "title": "GTA 6’s Netflix Trailer Signals That Rockstar Wants Its Halo Moment",
         "url": "https://www.polygon.com/gta-6-netflix-patch-notes/",
         "source": "Polygon"
@@ -281,16 +297,6 @@
       {
         "title": "Spider-Man: Brand New Day's Most Talked About Character Quietly Sets Up Marvel's X-Men Future",
         "url": "https://www.polygon.com/spider-man-jean-grey-new-take-x-men/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Apple TV’s Smartest Sci-Fi Thriller Officially Returns in 3 Weeks",
-        "url": "https://www.polygon.com/dark-matter-season-2-recap/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Witcher season 5 delayed on Netflix, new report says",
-        "url": "https://www.polygon.com/the-witcher-season-5-has-been-quietly-delayed/",
         "source": "Polygon"
       }
     ],
