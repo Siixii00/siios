@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-09T03:44:12.534122",
-    "total_items": 59
+    "last_updated": "2026-08-09T05:06:31.240159",
+    "total_items": 60
   },
   "content": {
     "tech": [
@@ -9,153 +9,174 @@
         "title": "My server is a phone now",
         "url": "https://seg6.space/posts/phone-server/",
         "source": "Hacker News",
-        "score": 158
+        "score": 197
       },
       {
         "title": "Os8088: A powerful Mac-like OS for the IBM XT, 286, 386",
         "url": "https://os8088.com/",
         "source": "Hacker News",
-        "score": 78
+        "score": 99
       },
       {
         "title": "Improving Heuristics for A* Pathfinding",
         "url": "https://www.redblobgames.com/pathfinding/heuristics/differential.html",
         "source": "Hacker News",
-        "score": 111
+        "score": 141
       },
       {
-        "title": "The phone book that led us to Assad's spy chief in hiding",
-        "url": "https://www.bbc.com/news/articles/c4gyrzn8p94o",
+        "title": "\"The original URL for this prediction will no longer be available in 11 years.\" (2011)",
+        "url": "https://longbets.org/601/",
         "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "Fastmail offers EU data region",
-        "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
-        "source": "Hacker News",
-        "score": 335
-      },
-      {
-        "title": "Shopify replaced Redis with MySQL for inventory reservations–and it scaled",
-        "url": "https://shopify.engineering/scaling-inventory-reservations",
-        "source": "Hacker News",
-        "score": 78
+        "score": 9
       },
       {
         "title": "Dithered QR Codes",
         "url": "https://www.andrewt.net/dithered-qr-codes/wtf/",
         "source": "Hacker News",
-        "score": 58
+        "score": 95
       },
       {
-        "title": "_for-sale DNS records",
-        "url": "https://specification.website/spec/foundations/for-sale-dns/",
+        "title": "Shopify replaced Redis with MySQL for inventory reservations–and it scaled",
+        "url": "https://shopify.engineering/scaling-inventory-reservations",
         "source": "Hacker News",
-        "score": 364
+        "score": 112
+      },
+      {
+        "title": "Fastmail offers EU data region",
+        "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
+        "source": "Hacker News",
+        "score": 355
       },
       {
         "title": "Unexpected events and prosocial behavior: the Batman effect",
         "url": "https://www.nature.com/articles/s44184-025-00171-5",
         "source": "Hacker News",
-        "score": 16
+        "score": 33
+      },
+      {
+        "title": "Incentives Are for Losers",
+        "url": "https://www.experimental-history.com/p/incentives-are-for-losers",
+        "source": "Hacker News",
+        "score": 20
+      },
+      {
+        "title": "_for-sale DNS records",
+        "url": "https://specification.website/spec/foundations/for-sale-dns/",
+        "source": "Hacker News",
+        "score": 371
       },
       {
         "title": "Open-source interactive map for the Aug 12 total solar eclipse",
         "url": "https://eclipsefan.org/?v=2&t=max&layers=eclipse%2Cbesselian%2Cumbra-live%2Cshadow-3d%2Ccloud-projection%2Cosm&lat=43.4623&lon=-3.8099&opacity=besselian%3A0.2%2Cumbra-live%3A0.2&zoom=6&palier=minute",
         "source": "Hacker News",
-        "score": 99
+        "score": 112
+      },
+      {
+        "title": "Melatonin impairs morning cognition in healthy young adults",
+        "url": "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621",
+        "source": "Hacker News",
+        "score": 21
       },
       {
         "title": "Making difficulty curves in games",
         "url": "http://www.davetech.co.uk/difficultycurves",
         "source": "Hacker News",
-        "score": 73
+        "score": 85
       },
       {
         "title": "The Sound and Music of 'Hyper Light Drifter' [video]",
         "url": "https://gdcvault.com/play/1024135/The-Sound-and-Music-of",
         "source": "Hacker News",
-        "score": 32
+        "score": 35
       },
       {
-        "title": "Timeline of the OpenAI accidental attack against Hugging Face",
-        "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+        "title": "Retraction: The App Store Rejection of the Week That Was a Correct Rejection",
+        "url": "https://daringfireball.net/2026/08/retraction_app_store_rejection_of_the_week",
         "source": "Hacker News",
-        "score": 362
-      },
-      {
-        "title": "Triton: DirectX 11 Driver for QEMU",
-        "url": "https://blog.getutm.app/2026/introducing-triton-directx-11-driver-for-qemu/",
-        "source": "Hacker News",
-        "score": 146
+        "score": 57
       }
     ],
     "ai": [
       {
+        "title": "\"The original URL for this prediction will no longer be available in 11 years.\" (2011)",
+        "url": "https://longbets.org/601/",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News AI",
-        "score": 335
+        "score": 355
       },
       {
-        "title": "Timeline of the OpenAI accidental attack against Hugging Face",
-        "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
+        "title": "Melatonin impairs morning cognition in healthy young adults",
+        "url": "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621",
         "source": "Hacker News AI",
-        "score": 362
-      },
-      {
-        "title": "ChatGPT starts blocking direct requests to copy an author's style",
-        "url": "https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/",
-        "source": "Hacker News AI",
-        "score": 15
+        "score": 21
       },
       {
         "title": "Lost my phone at the office. Claude suggested tracking Bluetooth signal strength",
         "url": "https://twitter.com/un1c0rnioz/status/2084686552299634805",
         "source": "Hacker News AI",
-        "score": 234
+        "score": 250
       },
       {
-        "title": "TinySol, a tiny solitaire game for DOS",
-        "url": "https://classicbits.net/coding-and-software/my-software/monosol/",
+        "title": "ChatGPT starts blocking direct requests to copy an author's style",
+        "url": "https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/",
         "source": "Hacker News AI",
-        "score": 50
+        "score": 30
       },
       {
         "title": "Message your other Claude Code sessions",
         "url": "https://code.claude.com/docs/en/cross-session-messaging",
         "source": "Hacker News AI",
-        "score": 75
+        "score": 93
       },
       {
-        "title": "Gentoo bugzilla closed due AI bot scraper overload",
-        "url": "https://social.treehouse.systems/@mgorny/117058483039362779",
+        "title": "TinySol, a tiny solitaire game for DOS",
+        "url": "https://classicbits.net/coding-and-software/my-software/monosol/",
         "source": "Hacker News AI",
-        "score": 155
+        "score": 51
       },
       {
-        "title": "The AI Apocalypse Is Here",
-        "url": "https://www.compactmag.com/article/the-ai-apocalypse-is-already-here/",
+        "title": "Timeline of the OpenAI accidental attack against Hugging Face",
+        "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
         "source": "Hacker News AI",
-        "score": 30
+        "score": 377
       },
       {
         "title": "What happens if an entire class of workers loses faith in their careers",
         "url": "https://www.noemamag.com/why-is-everyone-in-tech-so-sad/",
         "source": "Hacker News AI",
-        "score": 989
+        "score": 1000
       },
       {
-        "title": "Show HN: Algebruh - Cross-check arithmetic claims with Z3, cvc5, and Lean",
-        "url": "https://github.com/skorotkiewicz/algebruh",
+        "title": "Gentoo bugzilla closed due AI bot scraper overload",
+        "url": "https://social.treehouse.systems/@mgorny/117058483039362779",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 157
       }
     ],
     "news": [
       {
+        "title": "Israel accused of weaponising archaeology at ancient West Bank sites",
+        "url": "https://www.bbc.co.uk/news/articles/c20d8qre98do?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Hundreds arrested over French wildfires, but who is to blame?",
+        "url": "https://www.bbc.co.uk/news/articles/cvgxjn92x9jo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Hormuz talks positive, Oman says, as Iran warns deal would not open strait",
         "url": "https://www.bbc.co.uk/news/articles/c934j5y2lq9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Perez Hilton faces long recovery after self-harm livestream",
+        "url": "https://www.bbc.co.uk/news/articles/cg5lnqjz497o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -171,21 +192,6 @@
       {
         "title": "Messi's father Jorge dies aged 68 after illness",
         "url": "https://www.bbc.co.uk/sport/football/articles/c70gn3w5ek5o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Madonna pays tribute to 'genius, otherworldly' producer William Orbit",
-        "url": "https://www.bbc.co.uk/news/articles/cewr8wel4z8o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Watch: Moment opposition MP throws eggs at Kosovo's acting PM",
-        "url": "https://www.bbc.co.uk/news/videos/cvg8je12xxeo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Paris tells e-scooter riders to wear safety gear or face fines",
-        "url": "https://www.bbc.co.uk/news/articles/c89nkln7w7ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
