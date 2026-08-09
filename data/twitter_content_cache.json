@@ -1,143 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-08-09T18:42:01.499993",
-    "total_items": 57
+    "last_updated": "2026-08-09T19:33:49.988791",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "Criminal Deception in Silicon Valley",
-        "url": "https://pubsonline.informs.org/doi/full/10.1287/orsc.2024.19981",
+        "title": "Saying No",
+        "url": "https://rozumem.xyz/posts/19",
         "source": "Hacker News",
-        "score": 124
-      },
-      {
-        "title": "Mea Culpa – Dark Hours",
-        "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
-        "source": "Hacker News",
-        "score": 390
+        "score": 31
       },
       {
         "title": "Ask HN: What are you working on? (August 2026)",
         "url": "https://news.ycombinator.com/item?id=49233423",
         "source": "Hacker News",
-        "score": 40
+        "score": 68
       },
       {
-        "title": "Production Imminent: 40 Solar-Charging Aptera EVs Coming Soon",
-        "url": "https://frequal.com/aptera/ProductionImminent.html",
+        "title": "Mea Culpa – Dark Hours",
+        "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
         "source": "Hacker News",
-        "score": 28
+        "score": 436
+      },
+      {
+        "title": "How I use LLMs to learn complex topics",
+        "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
+        "source": "Hacker News",
+        "score": 12
       },
       {
         "title": "OpenChamber: An Agentic Development Environment",
         "url": "https://openchamber.dev/",
         "source": "Hacker News",
-        "score": 23
+        "score": 38
       },
       {
         "title": "Cool URIs Don't Change (1998)",
         "url": "https://www.w3.org/Provider/Style/URI",
         "source": "Hacker News",
-        "score": 72
+        "score": 93
+      },
+      {
+        "title": "Production Imminent: 40 Solar-Charging Aptera EVs Coming Soon",
+        "url": "https://frequal.com/aptera/ProductionImminent.html",
+        "source": "Hacker News",
+        "score": 40
       },
       {
         "title": "John C. Lilly on solid state intelligence and the elimination of man (1978)",
         "url": "https://kibotronics.net/unlisted/lilly-machines/",
         "source": "Hacker News",
-        "score": 71
-      },
-      {
-        "title": "Every fast write moves work somewhere else",
-        "url": "https://www.shayon.dev/post/2026/220/every-fast-write-moves-work-somewhere-else/",
-        "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "Show HN: A Project Oberon System version running on RISC-V instead of RISC-5",
-        "url": "https://github.com/rochus-keller/OberonSystem/tree/op2-rv32",
-        "source": "Hacker News",
-        "score": 79
-      },
-      {
-        "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
-        "url": "https://github.com/eighttrigrams/us-vs-them",
-        "source": "Hacker News",
-        "score": 20
+        "score": 85
       },
       {
         "title": "Crickets as Pets",
         "url": "https://en.wikipedia.org/wiki/Crickets_as_pets",
         "source": "Hacker News",
-        "score": 28
+        "score": 40
+      },
+      {
+        "title": "Show HN: A Project Oberon System version running on RISC-V instead of RISC-5",
+        "url": "https://github.com/rochus-keller/OberonSystem/tree/op2-rv32",
+        "source": "Hacker News",
+        "score": 83
       },
       {
         "title": "There Are Magic Hexagons of Every Order",
         "url": "https://gukov.dev/math/2026/08/02/new-magic-hexagons.html",
         "source": "Hacker News",
-        "score": 154
+        "score": 159
       },
       {
-        "title": "Show HN: A replayable A2A jury for tracing how agents influence decisions",
-        "url": "https://github.com/nMaroulis/protolink/tree/main/examples/ai_courtroom",
+        "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
+        "url": "https://github.com/eighttrigrams/us-vs-them",
         "source": "Hacker News",
-        "score": 7
+        "score": 29
       },
       {
         "title": "FCC moves to ban Lidar-equipped foreign drones from US",
         "url": "https://www.tomshardware.com/tech-industry/drones/fcc-moves-to-ban-lidar-equipped-foreign-drones-from-us-classifies-the-technology-as-military-grade-in-a-proposal-that-could-also-hit-thermal-models-and-the-swarms-used-drone-light-shows",
         "source": "Hacker News",
-        "score": 48
+        "score": 76
       },
       {
-        "title": "Tom Stanton's supersonic trebuchet breaks sound barrier with gravity alone",
-        "url": "https://www.techeblog.com/tom-stanton-supersonic-trebuchet/",
+        "title": "Every fast write moves work somewhere else",
+        "url": "https://www.shayon.dev/post/2026/220/every-fast-write-moves-work-somewhere-else/",
         "source": "Hacker News",
-        "score": 106
+        "score": 39
+      },
+      {
+        "title": "Analyzing data from Silicon Valley ventures and founders prosecuted for fraud",
+        "url": "https://pubsonline.informs.org/doi/full/10.1287/orsc.2024.19981",
+        "source": "Hacker News",
+        "score": 150
       }
     ],
     "ai": [
       {
+        "title": "How I use LLMs to learn complex topics",
+        "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
+        "source": "Hacker News AI",
+        "score": 12
+      },
+      {
         "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
         "url": "https://github.com/eighttrigrams/us-vs-them",
         "source": "Hacker News AI",
-        "score": 20
+        "score": 29
       },
       {
-        "title": "An OpenAI Strategist Says AI Labs Should Rival Government Power",
-        "url": "https://ai-updates.net/an-openai-strategist-says-ai-labs-should-rival-government-power/",
-        "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Cross-Compilation with Wails",
+        "title": "Cross-compilation with Wails (2025)",
         "url": "https://chriswheeler.dev/posts/cross-compilation-with-wails/",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 4
+      },
+      {
+        "title": "The Meme Factory: The Indonesians Making Money Off Facebook Outrage",
+        "url": "https://netbajura.blogspot.com/2026/08/inside-meme-factory-how-indonesians-are.html",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
+        "title": "Ransomware gangs skip the CEO, head straight for the 40-something IT manager",
+        "url": "https://www.theregister.com/security/2026/08/09/ransomware-gangs-skip-the-ceo-head-straight-for-the-40-something-it-manager/5284499",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "Show HN: Airy – Free, fast, and simple voice content creation",
         "url": "https://airy.so",
         "source": "Hacker News AI",
-        "score": 28
+        "score": 29
+      },
+      {
+        "title": "I got an email about resistance",
+        "url": "https://www.seangoedecke.com/i-got-an-email-about-resistance/",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "The original URL for this prediction will no longer be available in 11 years (2011)",
         "url": "http://longbets.org/601/",
         "source": "Hacker News AI",
-        "score": 190
+        "score": 192
       },
       {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News AI",
         "score": 488
-      },
-      {
-        "title": "Message your other Claude Code sessions",
-        "url": "https://code.claude.com/docs/en/cross-session-messaging",
-        "source": "Hacker News AI",
-        "score": 145
       }
     ],
     "news": [
@@ -253,6 +265,16 @@
     ],
     "gaming": [
       {
+        "title": "7 Years Later, Game of Thrones Finally Redeems Its Biggest Failure With a Near-Perfect Prequel",
+        "url": "https://www.polygon.com/the-mad-king-saved-game-of-thrones/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Odyssey passes The Dark Knight Rises to become Nolan’s highest-grossing film ever",
+        "url": "https://www.polygon.com/the-odyssey-christopher-nolan-highest-grossing-film/",
+        "source": "Polygon"
+      },
+      {
         "title": "5 'Solo Leveling' Characters Who Deserved Better (#4's Fate Is Tragic)",
         "url": "https://www.polygon.com/solo-leveling-characters-sidelined-deserved-better/",
         "source": "Polygon"
@@ -275,16 +297,6 @@
       {
         "title": "26 Years Later, Anime’s Most Influential Vampire Movie Deserves Another Shot",
         "url": "https://www.polygon.com/blood-the-last-vampire-anime-movie/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Amid Xbox woes, Blizzard has reportedly become the ‘top performing’ studio at the company",
-        "url": "https://www.polygon.com/xbox-blizzard-becomes-top-performing-studio-overwatch/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Big Walk Ending, Explained: What Happens Once You Unlock the Gate",
-        "url": "https://www.polygon.com/big-walk-ending-explained/",
         "source": "Polygon"
       }
     ],
