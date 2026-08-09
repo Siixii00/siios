@@ -1,6 +1,6 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast, createKakaoBottomSheet } from '../../components.js';
-import { SettingsDB, CharactersDB, MemoryDB, WorldInfoDB, GlobalSettingsDB, GlobalForbiddenDB } from '../../db.js';
+import { SettingsDB, CharactersDB, MemoryDB, WorldInfoDB, GlobalSettingsDB, GlobalForbiddenDB, MessagesDB, ChatsDB, DiscordUserBindingDB, initDB, parseWorkerTimestamp } from '../../db.js';
 
 async function renderDiscordSettings() {
     const container = createElement('div', 'app-container bg-ios-bg');
@@ -93,6 +93,33 @@ async function renderDiscordSettings() {
     workerSection.appendChild(workerCard);
     main.appendChild(workerSection);
     
+    // Backup Key 設定（用於從 Worker 拉取完整備份）
+    const backupSection = createElement('div', 'mx-4 mb-4');
+    const backupCard = createElement('div', 'bg-white rounded-xl p-4');
+
+    const backupLabel = createElement('label', 'block text-sm font-medium text-gray-700 mb-2');
+    backupLabel.textContent = 'Backup Key（備份金鑰）';
+    backupCard.appendChild(backupLabel);
+
+    const backupInput = createElement('input', 'w-full p-3 border rounded-lg text-sm');
+    backupInput.type = 'password';
+    backupInput.placeholder = '輸入 Worker 的 BACKUP_KEY';
+    backupInput.id = 'discord-backup-key';
+
+    const savedBackupKey = await SettingsDB.get('discord_backup_key');
+    if (savedBackupKey) {
+        backupInput.value = savedBackupKey;
+    }
+
+    backupCard.appendChild(backupInput);
+
+    const backupHint = createElement('p', 'text-xs text-gray-500 mt-2');
+    backupHint.innerHTML = '與 Worker 的 <code>BACKUP_KEY</code> 環境變數相同。可在 Cloudflare 用 <code>wrangler secret put BACKUP_KEY</code> 設定';
+    backupCard.appendChild(backupHint);
+
+    backupSection.appendChild(backupCard);
+    main.appendChild(backupSection);
+    
     // 頻道映射設定
     const channelSection = createElement('div', 'mx-4 mb-4');
     const channelCard = createElement('div', 'bg-white rounded-xl p-4');
@@ -136,6 +163,7 @@ async function renderDiscordSettings() {
         try {
             await SettingsDB.set('discord_bot_token', tokenInput.value);
             await SettingsDB.set('discord_worker_url', workerInput.value);
+            await SettingsDB.set('discord_backup_key', backupInput.value);
             
             // 收集頻道映射
             const mappings = [];
@@ -322,8 +350,172 @@ async function renderDiscordSettings() {
             wiSyncBtn.textContent = '📖 同步世界書到 Worker';
         }
     };
-    main.appendChild(wiSyncBtn);
-    
+main.appendChild(wiSyncBtn);
+
+    // 備份資料並下載（直接從 PWA 觸發，不需 GitHub Actions）
+    const backupBtn = createElement('button', 'ios-btn w-full mt-2 mx-4');
+    backupBtn.style.maxWidth = 'calc(100% - 32px)';
+    backupBtn.style.background = '#F59E0B';
+    backupBtn.style.color = '#fff';
+    backupBtn.textContent = '💾 備份資料並下載';
+    backupBtn.onclick = async () => {
+        try {
+            const workerUrl = workerInput.value.replace(/\/+$/, '');
+            const backupKey = backupInput.value;
+            if (!workerUrl) {
+                createToast('請先輸入 Worker URL', 'error');
+                return;
+            }
+            if (!backupKey) {
+                createToast('請先輸入 Backup Key', 'error');
+                return;
+            }
+
+            backupBtn.disabled = true;
+            backupBtn.textContent = '備份中...';
+
+            const response = await fetch(`${workerUrl}/backup?key=${encodeURIComponent(backupKey)}`);
+            if (!response.ok) {
+                const err = await response.json().catch(() => ({}));
+                throw new Error(err.error || `HTTP ${response.status}`);
+            }
+
+            const data = await response.json();
+            const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `discord-backup-${new Date().toISOString().slice(0, 10)}.json`;
+            a.click();
+            URL.revokeObjectURL(url);
+
+            createToast(`備份完成！共 ${data.messages?.length || 0} 條訊息、${data.memories?.length || 0} 條記憶`, 'success');
+        } catch (error) {
+            createToast('備份失敗：' + error.message, 'error');
+        } finally {
+            backupBtn.disabled = false;
+            backupBtn.textContent = '💾 備份資料並下載';
+        }
+    };
+    main.appendChild(backupBtn);
+
+    // 同步 Discord 對話到 PWA（跨裝置：電腦 DC → 手機 PWA）
+    const pullBtn = createElement('button', 'ios-btn w-full mt-2 mx-4');
+    pullBtn.style.maxWidth = 'calc(100% - 32px)';
+    pullBtn.style.background = '#3B82F6';
+    pullBtn.style.color = '#fff';
+    pullBtn.textContent = '🔄 同步 Discord 對話到 PWA';
+    pullBtn.onclick = async () => {
+        try {
+            const workerUrl = workerInput.value.replace(/\/+$/, '');
+            if (!workerUrl) {
+                createToast('請先輸入 Worker URL', 'error');
+                return;
+            }
+            const characters = await CharactersDB.getAll();
+            const bound = characters.filter(c => c.discord_enabled && c.discord_channel_id);
+            if (bound.length === 0) {
+                createToast('沒有設定 Discord 頻道綁定的角色\n請在角色設定中啟用 Discord 並填寫頻道 ID', 'warning');
+                return;
+            }
+
+            pullBtn.disabled = true;
+            pullBtn.textContent = '同步中...';
+            let totalMsg = 0, totalMem = 0;
+            const syncedNames = [];
+
+            for (const char of bound) {
+                const response = await fetch(`${workerUrl}/sync/chat?character_id=${encodeURIComponent(char.id)}`);
+                if (!response.ok) continue;
+                const data = await response.json();
+                if (!data.success || (data.messages.length === 0 && data.memories.length === 0)) continue;
+
+                // 確保聊天室存在
+                await ChatsDB.ensureExists(char.id, {
+                    character_name: char.name || 'AI',
+                    character_avatar: char.avatar || '',
+                    last_message: data.messages.length > 0 ? data.messages[data.messages.length - 1].content : ''
+                });
+
+                // 匯入訊息與記憶
+                await MessagesDB.importMany(data.messages);
+                await MemoryDB.importMany(data.memories);
+
+                syncedNames.push(char.name || char.id);
+                totalMsg += data.messages.length;
+                totalMem += data.memories.length;
+            }
+
+            if (syncedNames.length === 0) {
+                createToast('這些角色在 Worker 上還沒有對話記錄', 'info');
+            } else {
+                createToast(`已同步 ${syncedNames.join('、')}\n共 ${totalMsg} 條訊息、${totalMem} 條記憶`, 'success');
+            }
+        } catch (error) {
+            createToast('同步失敗：' + error.message, 'error');
+        } finally {
+            pullBtn.disabled = false;
+            pullBtn.textContent = '🔄 同步 Discord 對話到 PWA';
+        }
+    };
+    main.appendChild(pullBtn);
+
+    // 從備份檔還原
+    const restoreBtn = createElement('button', 'ios-btn w-full mt-2 mx-4');
+    restoreBtn.style.maxWidth = 'calc(100% - 32px)';
+    restoreBtn.style.background = '#EF4444';
+    restoreBtn.style.color = '#fff';
+    restoreBtn.textContent = '♻️ 從備份檔還原';
+    restoreBtn.onclick = () => {
+        const fileInput = document.createElement('input');
+        fileInput.type = 'file';
+        fileInput.accept = '.json,application/json';
+        fileInput.onchange = async () => {
+            const file = fileInput.files[0];
+            if (!file) return;
+            try {
+                const text = await file.text();
+                const data = JSON.parse(text);
+
+                restoreBtn.disabled = true;
+                restoreBtn.textContent = '還原中...';
+
+                // 1. 推送到 Worker
+                const workerUrl = workerInput.value.replace(/\/+$/, '');
+                let workerResult = null;
+                if (workerUrl) {
+                    const res = await fetch(`${workerUrl}/sync/restore`, {
+                        method: 'POST', headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    });
+                    const rd = await res.json();
+                    if (!rd.success) throw new Error(rd.error || 'Worker 還原失敗');
+                    workerResult = rd;
+                }
+
+                // 2. 匯入 PWA IndexedDB
+                if (Array.isArray(data.characters)) await CharactersDB.importMany(data.characters);
+                if (Array.isArray(data.discordUserBindings)) await DiscordUserBindingDB.importMany(data.discordUserBindings);
+                if (Array.isArray(data.memories)) await MemoryDB.importMany(data.memories);
+                if (Array.isArray(data.messages)) await importMessagesToPWA(data.messages);
+
+                const parts = [];
+                if (workerResult) {
+                    parts.push(`✅ Worker：${workerResult.messages || 0} 訊息 / ${workerResult.memories || 0} 記憶 / ${workerResult.characters || 0} 角色 / ${workerResult.discordUserBindings || 0} 綁定`);
+                }
+                parts.push(`✅ PWA：${data.messages?.length || 0} 訊息 / ${data.memories?.length || 0} 記憶 / ${data.characters?.length || 0} 角色 / ${data.discordUserBindings?.length || 0} 綁定`);
+                createToast(parts.join('\n'), 'success');
+            } catch (error) {
+                createToast('還原失敗：' + error.message, 'error');
+            } finally {
+                restoreBtn.disabled = false;
+                restoreBtn.textContent = '♻️ 從備份檔還原';
+            }
+        };
+        fileInput.click();
+    };
+    main.appendChild(restoreBtn);
+
     // 用戶綁定管理
     const bindingSection = createElement('div', 'mx-4 mt-6 mb-4');
     const bindingCard = createElement('div', 'bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-4 border border-blue-200 cursor-pointer', {
@@ -371,6 +563,30 @@ async function renderDiscordSettings() {
     container.appendChild(main);
     
     return { element: container, cleanup: null };
+}
+
+// 從備份檔匯入訊息到 PWA（自動建立聊天室）
+async function importMessagesToPWA(messages) {
+    const db = await initDB();
+    const chatIds = new Set(messages.map(m => m.chat_id).filter(Boolean));
+    for (const chatId of chatIds) {
+        const existing = await db.get('chats', chatId);
+        if (!existing) {
+            const chatMsgs = messages.filter(m => m.chat_id === chatId);
+            const lastMsg = chatMsgs.sort((a, b) => parseWorkerTimestamp(b.timestamp) - parseWorkerTimestamp(a.timestamp))[0];
+            await db.put('chats', {
+                id: chatId,
+                character_name: chatId,
+                character_avatar: '',
+                last_message: lastMsg?.content || '',
+                last_updated: parseWorkerTimestamp(lastMsg?.timestamp),
+                created_at: Date.now(),
+                is_group: false,
+                member_ids: []
+            });
+        }
+    }
+    await MessagesDB.importMany(messages);
 }
 
 function createChannelMappingRow(mapping = {}) {

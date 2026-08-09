@@ -1,6 +1,6 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast, createKakaoBottomSheet } from '../../components.js';
-import { DiscordUserBindingDB, UsersDB } from '../../db.js';
+import { DiscordUserBindingDB, UsersDB, SettingsDB } from '../../db.js';
 
 async function renderDiscordUserBinding() {
     const container = createElement('div', 'app-container bg-ios-bg');
@@ -39,11 +39,51 @@ async function renderDiscordUserBinding() {
     main.appendChild(introCard);
     
     // 添加綁定按鈕
-    const addBtn = createElement('button', 'ios-btn ios-btn-primary w-full mb-4 mx-4');
+    const addBtn = createElement('button', 'ios-btn ios-btn-primary w-full mb-2 mx-4');
     addBtn.style.maxWidth = 'calc(100% - 32px)';
     addBtn.innerHTML = '<span class="material-symbols-outlined mr-2">person_add</span> 新增綁定';
     addBtn.onclick = () => showAddBindingDialog();
     main.appendChild(addBtn);
+
+    // 同步綁定到 Worker
+    const syncBtn = createElement('button', 'ios-btn w-full mb-2 mx-4');
+    syncBtn.style.maxWidth = 'calc(100% - 32px)';
+    syncBtn.style.background = '#10B981';
+    syncBtn.style.color = '#fff';
+    syncBtn.textContent = '🔄 同步綁定到 Worker';
+    syncBtn.onclick = async () => {
+        try {
+            const workerUrl = await SettingsDB.get('discord_worker_url');
+            if (!workerUrl) {
+                createToast('請先在「Discord 整合設定」填寫 Worker URL', 'error');
+                return;
+            }
+            const bindings = await DiscordUserBindingDB.getAll();
+            if (bindings.length === 0) {
+                createToast('沒有綁定資料可同步', 'warning');
+                return;
+            }
+            syncBtn.disabled = true;
+            syncBtn.textContent = '同步中...';
+            const response = await fetch(`${workerUrl.replace(/\/+$/, '')}/sync/user-bindings`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ bindings })
+            });
+            const data = await response.json();
+            if (data.success) {
+                createToast(`已同步 ${data.count} 筆綁定到 Worker`, 'success');
+            } else {
+                createToast('同步失敗：' + data.error, 'error');
+            }
+        } catch (error) {
+            createToast('同步失敗：' + error.message, 'error');
+        } finally {
+            syncBtn.disabled = false;
+            syncBtn.textContent = '🔄 同步綁定到 Worker';
+        }
+    };
+    main.appendChild(syncBtn);
     
     // 綁定列表
     const bindings = await DiscordUserBindingDB.getAll();

@@ -200,6 +200,17 @@ function hashContent(content) {
     return hash.toString(16);
 }
 
+// 將 Worker 回傳的 timestamp（ISO 字串、數字 ms、數字秒）轉為 Date.now() 數字
+function parseWorkerTimestamp(ts) {
+    if (!ts && ts !== 0) return Date.now();
+    const asNum = Number(ts);
+    if (!Number.isNaN(asNum)) {
+        return asNum < 1e12 ? asNum * 1000 : asNum; // 秒 → ms
+    }
+    const d = new Date(ts).getTime();
+    return Number.isNaN(d) ? Date.now() : d;
+}
+
 const ChatsDB = {
     async getAll() {
         const database = await initDB();
@@ -290,6 +301,22 @@ const MessagesDB = {
         const tx = database.transaction('messages', 'readwrite');
         for (const msg of messages) {
             await tx.store.delete(msg.id);
+        }
+    },
+
+    // 從 Worker 匯入多條訊息（跨裝置同步用）
+    async importMany(messages) {
+        const database = await initDB();
+        const tx = database.transaction('messages', 'readwrite');
+        for (const m of messages) {
+            await tx.store.put({
+                id: m.id,
+                chat_id: m.chat_id,
+                role: m.role,
+                content: m.content,
+                speaker_character_id: m.chat_id,
+                timestamp: parseWorkerTimestamp(m.timestamp)
+            });
         }
     }
 };
@@ -505,6 +532,30 @@ const MemoryDB = {
         await database.delete('memories', id);
     },
 
+    // 從 Worker 匯入多條記憶（跨裝置同步用）
+    async importMany(memories) {
+        const database = await initDB();
+        const tx = database.transaction('memories', 'readwrite');
+        for (const mem of memories) {
+            await tx.store.put({
+                id: mem.id,
+                chat_id: mem.chat_id || mem.character_id,
+                character_id: mem.character_id,
+                content: mem.content,
+                memory_type: mem.memory_type || 'dynamic',
+                importance: mem.importance || 0.5,
+                timestamp: parseWorkerTimestamp(mem.timestamp),
+                created_at: Date.now(),
+                sensory: { visual: [], auditory: [], olfactory: [], tactile: [], gustatory: [] },
+                spatiotemporal: { location: '', environment: '', activity: '', context: '', relativeTime: '' },
+                emotional: { valence: 0, arousal: 0, emotions: [] },
+                aiTags: [], decayFactor: 1.0, accessCount: 0, domain: '', status: '', resolved: false,
+                meaning: '', embedding: null, embeddingHash: '', embeddingMeaning: null, embeddingMeaningHash: '',
+                reinforcementCount: 0, lastReinforced: null, lastAccessed: Date.now()
+            });
+        }
+    },
+
     async searchByVector(queryVector, threshold = 0.7) {
         const all = await this.getAll();
         const results = [];
@@ -583,6 +634,28 @@ const CharactersDB = {
     async delete(id) {
         const database = await initDB();
         await database.delete('characters', id);
+    },
+
+    // 從備份/Worker 匯入多個角色（依 id 覆寫）
+    async importMany(characters) {
+        const database = await initDB();
+        const tx = database.transaction('characters', 'readwrite');
+        for (const c of characters) {
+            if (!c || !c.id) continue;
+            await tx.store.put({
+                id: c.id,
+                name: c.name || '未命名',
+                avatar: c.avatar || '',
+                personality: c.personality || '',
+                scenario: c.scenario || '',
+                description: c.description || '',
+                discord_enabled: c.discord_enabled,
+                discord_channel_id: c.discord_channel_id,
+                bound_user_id: c.bound_user_id,
+                created_at: c.created_at || Date.now(),
+                ...c
+            });
+        }
     }
 };
 
@@ -1103,10 +1176,30 @@ const HealthDB = {
         return updated;
     },
 
-    async delete(id) {
+async delete(id) {
         const database = await initDB();
-        await database.delete('health', id);
+        await database.delete('chats', id);
     },
+
+    // 確保聊天室存在（跨裝置同步用，若不存在則建立）
+    async ensureExists(id, data) {
+        const database = await initDB();
+        const existing = await database.get('chats', id);
+        if (existing) return existing;
+        const chat = {
+            id,
+            character_name: data.character_name || 'AI',
+            character_avatar: data.character_avatar || '',
+            last_message: data.last_message || '',
+            last_updated: Date.now(),
+            created_at: Date.now(),
+            is_group: false,
+            member_ids: [],
+            ...data
+        };
+        await database.put('chats', chat);
+        return chat;
+    }
 
     async getRecentPeriods(userId, limit = 12) {
         const database = await initDB();
@@ -1327,6 +1420,24 @@ const DiscordUserBindingDB = {
     async getAll() {
         const database = await initDB();
         return database.getAll('discordUserBindings');
+    },
+
+    // 從備份匯入多筆 Discord 用戶綁定
+    async importMany(bindings) {
+        const database = await initDB();
+        const tx = database.transaction('discordUserBindings', 'readwrite');
+        for (const b of bindings) {
+            if (!b || !b.discord_user_id) continue;
+            await tx.store.put({
+                discord_user_id: b.discord_user_id,
+                user_id: b.user_id || null,
+                character_id: b.character_id || null,
+                discord_username: b.discord_username || '',
+                user_display_name: b.user_display_name || '',
+                created_at: Date.now(),
+                updated_at: Date.now()
+            });
+        }
     }
 };
 
@@ -1452,7 +1563,7 @@ const ZiweiCacheDB = {
     }
 };
 
-export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, WorldInfoDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, HealthDB, MCPConfigDB, ActivityDB, DiscordUserBindingDB, ActivitySettingsDB, ActivitySourcesDB, ZiweiCacheDB, hashContent, cosineSimilarity };
+export { initDB, ChatsDB, MessagesDB, MemoryDB, CharactersDB, SettingsDB, WikiRecordsDB, UsersDB, WorldInfoDB, GlobalSettingsDB, GlobalForbiddenDB, TheaterSettingsDB, KeywordSettingsDB, HealthDB, MCPConfigDB, ActivityDB, DiscordUserBindingDB, ActivitySettingsDB, ActivitySourcesDB, ZiweiCacheDB, hashContent, cosineSimilarity, parseWorkerTimestamp };
 
 
 
