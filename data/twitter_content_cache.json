@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-09T11:29:55.290137",
+    "last_updated": "2026-08-09T12:52:19.604628",
     "total_items": 58
   },
   "content": {
     "tech": [
       {
+        "title": "Reviving a four year old reMarkable 2",
+        "url": "https://oskrim.github.io/hardware/2026/08/09/remarkable-over-ssh.html",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
         "title": "There Are Magic Hexagons of Every Order",
         "url": "https://gukov.dev/math/2026/08/02/new-magic-hexagons.html",
         "source": "Hacker News",
-        "score": 49
+        "score": 72
       },
       {
         "title": "My server is a phone now",
         "url": "https://seg6.space/posts/phone-server/",
         "source": "Hacker News",
-        "score": 355
+        "score": 377
       },
       {
         "title": "Microsoft Word for Windows 1.1a, Native X64 Port",
         "url": "https://github.com/jmarshall23/msword",
         "source": "Hacker News",
-        "score": 89
-      },
-      {
-        "title": "The Alpha 21264 CPU: NT's Greatest RISC (1998)",
-        "url": "https://halfhill.com/byte/1998-12_alpha.html",
-        "source": "Hacker News",
-        "score": 10
+        "score": 102
       },
       {
         "title": "Os8088: A powerful Mac-like OS for the IBM XT, 286, 386",
         "url": "https://os8088.com/",
         "source": "Hacker News",
-        "score": 185
+        "score": 197
       },
       {
-        "title": "Shopify replaced Redis with MySQL for inventory reservations–and it scaled",
-        "url": "https://shopify.engineering/scaling-inventory-reservations",
+        "title": "The Alpha 21264 CPU: NT's Greatest RISC (1998)",
+        "url": "https://halfhill.com/byte/1998-12_alpha.html",
         "source": "Hacker News",
-        "score": 225
-      },
-      {
-        "title": "Fastmail offers EU data region",
-        "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
-        "source": "Hacker News",
-        "score": 436
-      },
-      {
-        "title": "Improving Heuristics for A* Pathfinding",
-        "url": "https://www.redblobgames.com/pathfinding/heuristics/differential.html",
-        "source": "Hacker News",
-        "score": 260
-      },
-      {
-        "title": "Dithered QR Codes",
-        "url": "https://www.andrewt.net/dithered-qr-codes/wtf/",
-        "source": "Hacker News",
-        "score": 229
+        "score": 20
       },
       {
         "title": "The Grid That Doubles the Strength of the Ground",
         "url": "https://practical.engineering/blog/2026/8/4/the-grid-that-doubles-the-strength-of-the-ground",
         "source": "Hacker News",
-        "score": 22
+        "score": 43
       },
       {
-        "title": "Melatonin impairs morning cognition in healthy young adults (2023)",
-        "url": "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621",
+        "title": "Everything You Do Is Being Recorded",
+        "url": "https://www.theatlantic.com/technology/2026/05/ai-wearable-surveillance-countermeasures/687203/",
         "source": "Hacker News",
-        "score": 139
+        "score": 40
       },
       {
-        "title": "The original URL for this prediction will no longer be available in 11 years (2011)",
-        "url": "http://longbets.org/601/",
+        "title": "You might want to build your WebApp in Canvas instead of HTML",
+        "url": "https://hivekit.io/blog/why-you-might-want-to-build-your-webapp-in-canvas-instead-of-html/",
         "source": "Hacker News",
-        "score": 152
+        "score": 26
       },
       {
-        "title": "CSS: The bomb inside your inbox",
-        "url": "https://portswigger.net/research/css-the-bomb-inside-your-inbox",
+        "title": "Fastmail offers EU data region",
+        "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News",
-        "score": 19
+        "score": 451
       },
       {
-        "title": "Protopia",
-        "url": "https://kevinkelly.substack.com/p/protopia",
+        "title": "Improving Heuristics for A* Pathfinding",
+        "url": "https://www.redblobgames.com/pathfinding/heuristics/differential.html",
         "source": "Hacker News",
-        "score": 18
+        "score": 280
       },
       {
-        "title": "_for-sale DNS records",
-        "url": "https://specification.website/spec/foundations/for-sale-dns/",
+        "title": "Show HN: DeepSeek-V4 Latent Reasoning – moving \"thinking\" into latent space",
+        "url": "https://blog.n.ichol.ai/packaging-latent-reasoning-as-a-real-model",
         "source": "Hacker News",
-        "score": 401
+        "score": 6
+      },
+      {
+        "title": "Dithered QR Codes",
+        "url": "https://www.andrewt.net/dithered-qr-codes/wtf/",
+        "source": "Hacker News",
+        "score": 249
+      },
+      {
+        "title": "Shopify replaced Redis with MySQL for inventory reservations–and it scaled",
+        "url": "https://shopify.engineering/scaling-inventory-reservations",
+        "source": "Hacker News",
+        "score": 244
+      },
+      {
+        "title": "Uber SubmitQueue: a high-performance speculative merge queue",
+        "url": "https://github.com/uber/submitqueue/",
+        "source": "Hacker News",
+        "score": 9
       }
     ],
     "ai": [
@@ -101,25 +101,31 @@
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News AI",
-        "score": 436
-      },
-      {
-        "title": "Melatonin impairs morning cognition in healthy young adults (2023)",
-        "url": "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621",
-        "source": "Hacker News AI",
-        "score": 139
+        "score": 451
       },
       {
         "title": "The original URL for this prediction will no longer be available in 11 years (2011)",
         "url": "http://longbets.org/601/",
         "source": "Hacker News AI",
-        "score": 152
+        "score": 165
+      },
+      {
+        "title": "Melatonin impairs morning cognition in healthy young adults (2023)",
+        "url": "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621",
+        "source": "Hacker News AI",
+        "score": 151
+      },
+      {
+        "title": "Show HN: Airy – Free, fast, and simple voice content creation",
+        "url": "https://airy.so",
+        "source": "Hacker News AI",
+        "score": 8
       },
       {
         "title": "Software Giant SAP Stops Most Travel and Hiring Because of AI's Soaring Cost",
         "url": "https://www.404media.co/software-giant-sap-stops-most-travel-and-hiring-because-of-ais-soaring-cost/",
         "source": "Hacker News AI",
-        "score": 36
+        "score": 53
       },
       {
         "title": "Message your other Claude Code sessions",
@@ -131,22 +137,26 @@
         "title": "Timeline of the OpenAI accidental attack against Hugging Face",
         "url": "https://simonwillison.net/2026/Aug/7/openai-timeline/",
         "source": "Hacker News AI",
-        "score": 399
+        "score": 401
       },
       {
         "title": "TinySol, a tiny solitaire game for DOS",
         "url": "https://classicbits.net/coding-and-software/my-software/monosol/",
         "source": "Hacker News AI",
-        "score": 56
-      },
-      {
-        "title": "ChatGPT starts blocking direct requests to copy an author's style",
-        "url": "https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/",
-        "source": "Hacker News AI",
-        "score": 59
+        "score": 58
       }
     ],
     "news": [
+      {
+        "title": "Israel rejects Trump's 15-point plan for Gaza, Netanyahu says",
+        "url": "https://www.bbc.co.uk/news/articles/c5yw4lpe0yeo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ancient Roman shipwreck discovered off Sicily coast",
+        "url": "https://www.bbc.co.uk/news/articles/cvgx1kpz17go?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Fifa criticises campaign to oust president Infantino",
         "url": "https://www.bbc.co.uk/sport/football/articles/cj03drn965do?at_medium=RSS&at_campaign=rss",
@@ -171,19 +181,14 @@
         "title": "Hormuz talks positive, Oman says, as Iran warns deal would not open strait",
         "url": "https://www.bbc.co.uk/news/articles/c934j5y2lq9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Perez Hilton faces long recovery after reports he self-harmed during livestream",
-        "url": "https://www.bbc.co.uk/news/articles/cg5lnqjz497o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Trump's ex-lawyer Todd Blanche narrowly confirmed as US attorney general",
-        "url": "https://www.bbc.co.uk/news/articles/cewr898jy8go?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " From Zootopia and Toy Story to X-Men's Storm, the Disney D23 poster design is raising big expectations ",
+        "url": "https://www.creativebloq.com/art/animation/from-zootopia-and-toy-story-to-storm-the-disney-d23-poster-design-has-it-all",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Robert Pattinson’s Primetime performance is making me nauseous, and that’s great filmmaking ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/robert-pattinsons-primetime-performance-is-making-me-nauseous-and-thats-great-filmmaking",
@@ -213,51 +218,51 @@
         "title": " The Square Enix AI fiasco convinces me we all need to start documenting our creative process ",
         "url": "https://www.creativebloq.com/ai/ai-art/the-square-enix-ai-fiasco-convinces-me-we-all-need-to-start-documenting-our-creative-process",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " So, it seems Disney music is our only protection against Meta's pervert glasses ",
-        "url": "https://www.creativebloq.com/tech/so-it-seems-disney-music-is-our-only-protection-against-metas-pervert-glasses",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
+        "title": "60,000-year-old ostrich eggshell engravings reveal a surprisingly sophisticated human mind",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260808235013.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Wine, beer, or spirits? Massive study finds a surprising health divide",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260808235008.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Frequent cannabis users wake up with their “stress hormone” already elevated",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260808234953.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "For decades, we were told to choose low-fat dairy. New research says otherwise",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260808234948.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A 0.42-nanometer breakthrough could push transistors beyond silicon",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260808234943.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists say just 7 days of meditation can rewire your brain",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260807235243.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Cutting sweet foods doesn’t curb cravings or improve health",
         "url": "https://www.sciencedaily.com/releases/2026/08/260807235103.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Meteorite that smashed through a New Jersey roof reveals clues to life’s origins",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260807035145.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "The sun is covered in tiny whirlpools we’ve never seen before",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260807035142.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "New fuel cell breakthrough could help power energy-hungry data centers",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260807035140.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Sunlight creates quantum entanglement once thought to require lasers",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260807035133.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A drug already used for osteoporosis blocked spinal damage in a new study",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260806051943.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Teen cannabis use linked to slower memory and thinking growth",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260806050726.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "GTA 6’s Netflix Trailer Signals That Rockstar Wants Its Halo Moment",
+        "url": "https://www.polygon.com/gta-6-netflix-patch-notes/",
+        "source": "Polygon"
+      },
       {
         "title": "Baldur's Gate 3 Feels Like a Brand-New Experience With These 12 Replay Ideas",
         "url": "https://www.polygon.com/12-new-bg3-replay-ideas/",
@@ -286,11 +291,6 @@
       {
         "title": "The Witcher season 5 delayed on Netflix, new report says",
         "url": "https://www.polygon.com/the-witcher-season-5-has-been-quietly-delayed/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Matt Damon’s 113-Minute 10/10 Action Thriller Officially Crowned as Netflix’s Biggest Movie of 2026",
-        "url": "https://www.polygon.com/matt-damon-action-thriller-netflix-biggest-streaming-hit-of-2026/",
         "source": "Polygon"
       }
     ],
