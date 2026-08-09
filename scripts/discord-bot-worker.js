@@ -14,7 +14,7 @@ export default {
 
         // 根路徑：顯示狀態頁
         if (url.pathname === '/' || url.pathname === '') {
-            return new Response(`<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><title>Siios Discord Bot</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font-family:system-ui,sans-serif;max-width:600px;margin:40px auto;padding:20px;background:#FAF9F6;color:#111}h1{font-size:1.5rem;margin-bottom:8px}.status{display:inline-block;padding:4px 12px;border-radius:20px;background:#16A34A;color:#fff;font-size:14px}.endpoints{background:#fff;border-radius:12px;padding:16px;margin-top:20px;border:1px solid rgba(20,20,19,0.12)}.endpoints code{display:block;padding:6px 0;font-size:13px;color:#6B6B6B}.endpoints code span{color:#111;font-weight:500}</style></head><body><h1>🤖 Siios Discord Bot</h1><div class="status">✅ 運行中</div><div class="endpoints"><strong>端點列表</strong><code><span>POST</span> /discord/webhook</code><code><span>POST</span> /discord/send</code><code><span>GET</span>  /discord/history</code><code><span>POST</span> /discord/register-commands</code><code><span>POST</span> /sync/characters</code><code><span>POST</span> /sync/memories</code><code><span>GET</span>  /sync/memories</code><code><span>POST</span> /sync/channel-bind</code><code><span>POST</span> /sync/pwa</code></div></body></html>`, {
+            return new Response(`<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><title>Siios Discord Bot</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font-family:system-ui,sans-serif;max-width:600px;margin:40px auto;padding:20px;background:#FAF9F6;color:#111}h1{font-size:1.5rem;margin-bottom:8px}.status{display:inline-block;padding:4px 12px;border-radius:20px;background:#16A34A;color:#fff;font-size:14px}.endpoints{background:#fff;border-radius:12px;padding:16px;margin-top:20px;border:1px solid rgba(20,20,19,0.12)}.endpoints code{display:block;padding:6px 0;font-size:13px;color:#6B6B6B}.endpoints code span{color:#111;font-weight:500}</style></head><body><h1>🤖 Siios Discord Bot</h1><div class="status">✅ 運行中</div><div class="endpoints"><strong>端點列表</strong><code><span>POST</span> /discord/webhook</code><code><span>POST</span> /discord/send</code><code><span>GET</span>  /discord/history</code><code><span>POST</span> /discord/register-commands</code><code><span>POST</span> /sync/restore</code><code><span>POST</span> /sync/characters</code><code><span>POST</span> /sync/memories</code><code><span>GET</span>  /sync/memories</code><code><span>POST</span> /sync/channel-bind</code><code><span>POST</span> /sync/user-bindings</code><code><span>GET</span>  /sync/chat</code><code><span>POST</span> /sync/world-info</code><code><span>POST</span> /sync/pwa</code></div></body></html>`, {
                 headers: { 'Content-Type': 'text/html;charset=utf-8', ...corsHeaders }
             });
         }
@@ -34,9 +34,12 @@ export default {
             }
         }
 
-        // Discord Webhook
+        // Discord Webhook（含簽名驗證）
         if (url.pathname === '/discord/webhook' && request.method === 'POST') {
             try {
+                if (!(await verifyDiscordRequest(request, env))) {
+                    return Response.json({ error: 'Invalid signature' }, { status: 401, headers: corsHeaders });
+                }
                 const event = await request.json();
                 return await handleDiscordEvent(event, env);
             } catch (error) {
@@ -125,6 +128,32 @@ export default {
             }
         }
 
+        // 從 PWA 同步 Discord 用戶綁定
+        if (url.pathname === '/sync/user-bindings' && request.method === 'POST') {
+            try {
+                const { bindings } = await request.json();
+                const count = await syncUserBindings(bindings, env);
+                return Response.json({ success: true, count }, { headers: corsHeaders });
+            } catch (error) {
+                return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
+            }
+        }
+
+        // 取得某角色的對話與記憶（供 PWA 拉取跨裝置同步）
+        if (url.pathname === '/sync/chat' && request.method === 'GET') {
+            try {
+                const character_id = url.searchParams.get('character_id');
+                if (!character_id) {
+                    return Response.json({ success: false, error: '缺少 character_id' }, { status: 400, headers: corsHeaders });
+                }
+                const messages = await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? ORDER BY timestamp ASC`).bind(character_id).all();
+                const memories = await env.DB.prepare(`SELECT * FROM memories WHERE character_id = ? ORDER BY timestamp DESC`).bind(character_id).all();
+                return Response.json({ success: true, messages: messages.results || [], memories: memories.results || [] }, { headers: corsHeaders });
+            } catch (error) {
+                return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
+            }
+        }
+
         // 完整備份（供 GitHub Actions 或手動拉取）
         if (url.pathname === '/backup' && request.method === 'GET') {
             try {
@@ -134,6 +163,17 @@ export default {
                 }
                 const data = await createBackup(env);
                 return Response.json({ success: true, exported_at: new Date().toISOString(), ...data }, { headers: corsHeaders });
+            } catch (error) {
+                return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
+            }
+        }
+
+        // 從備份檔還原（PWA 上傳備份 JSON 一次寫回 Worker）
+        if (url.pathname === '/sync/restore' && request.method === 'POST') {
+            try {
+                const data = await request.json();
+                const result = await restoreBackup(data, env);
+                return Response.json({ success: true, restored_at: new Date().toISOString(), ...result }, { headers: corsHeaders });
             } catch (error) {
                 return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
             }
@@ -195,6 +235,48 @@ async function registerCommands(env) {
         { method: 'PUT', headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}`, 'Content-Type': 'application/json' }, body: JSON.stringify(commands) }
     );
     if (!response.ok) throw new Error(`Failed to register commands: ${await response.text()}`);
+}
+
+// ===== 驗證 Discord Webhook 簽名 =====
+async function verifyDiscordRequest(request, env) {
+    try {
+        const publicKey = env.DISCORD_PUBLIC_KEY;
+        if (!publicKey || publicKey === 'your_discord_public_key_here') return true; // 未設定公鑰時不阻擋（向後相容）
+
+        const signature = request.headers.get('X-Signature-Ed25519');
+        const timestamp = request.headers.get('X-Signature-Timestamp');
+        if (!signature || !timestamp) return false;
+
+        const rawBody = await request.text();
+        const message = timestamp + rawBody;
+
+        const key = await crypto.subtle.importKey(
+            'raw',
+            hexToUint8Array(publicKey),
+            { name: 'Ed25519' },
+            false,
+            ['verify']
+        );
+
+        return await crypto.subtle.verify(
+            'Ed25519',
+            key,
+            hexToUint8Array(signature),
+            new TextEncoder().encode(message)
+        );
+    } catch (error) {
+        console.error('Signature verification error:', error);
+        return false;
+    }
+}
+
+function hexToUint8Array(hex) {
+    const clean = hex.replace(/^0x/i, '').trim();
+    const bytes = new Uint8Array(clean.length / 2);
+    for (let i = 0; i < bytes.length; i++) {
+        bytes[i] = parseInt(clean.substr(i * 2, 2), 16);
+    }
+    return bytes;
 }
 
 // ===== 從 DB 讀取設定 =====
@@ -315,13 +397,25 @@ async function handleMessage(message, env) {
         JSON.stringify({ source: 'discord', channel_id: message.channel_id, character_id: characterId, responding_to_user: userId })
     ).run();
 
-    // 自動存為簡易記憶
+    // 自動存為簡易記憶（標記平台 + 時間 + 雙向內容）
     if (characterId) {
+        const nowIso = new Date().toISOString();
+        const charRow = await env.DB.prepare(`SELECT name FROM characters WHERE id = ?`).bind(characterId).first();
+        const charName = charRow?.name || 'AI';
+        const memoryMeta = JSON.stringify({ source: 'discord', platform: 'discord', channel_id: message.channel_id });
+
+        // 使用者訊息
         await env.DB.prepare(`INSERT INTO memories (id, chat_id, character_id, content, memory_type, importance, timestamp, metadata) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`).bind(
             'mem-' + Date.now(), characterId, characterId,
-            `User (${userDisplayName}): ${message.content}`, 'dynamic', 0.5,
-            new Date().toISOString(),
-            JSON.stringify({ source: 'discord', channel_id: message.channel_id })
+            `[Discord 聊天] ${nowIso} User (${userDisplayName}): ${message.content}`, 'dynamic', 0.5,
+            nowIso, memoryMeta
+        ).run();
+
+        // AI 回覆
+        await env.DB.prepare(`INSERT INTO memories (id, chat_id, character_id, content, memory_type, importance, timestamp, metadata) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`).bind(
+            'mem-' + Date.now() + '-ai', characterId, characterId,
+            `[Discord 聊天] ${nowIso} ${charName}: ${aiResponse.content}`, 'dynamic', 0.5,
+            nowIso, memoryMeta
         ).run();
     }
 
@@ -360,7 +454,8 @@ async function generateAIResponseWithContext(message, characterId, userId, userD
 
     const charName = characterData?.name || 'AI';
     const frontEntries = worldInfoEntries.filter(e => e.priority === 'front');
-    const middleEntries = worldInfoEntries.filter(e => e.priority === 'middle');
+    // PWA 的世界書 priority 來源是數字（深度），統一歸類到 middle，避免被漏掉
+    const middleEntries = worldInfoEntries.filter(e => e.priority === 'middle' || (e.priority !== 'front' && e.priority !== 'back'));
     const backEntries = worldInfoEntries.filter(e => e.priority === 'back');
 
     // 構建 system messages（與 PWA 的 buildMessages 順序一致）
@@ -380,8 +475,17 @@ async function generateAIResponseWithContext(message, characterId, userId, userD
     const rpPrompt = RP_SYSTEM_PROMPT_TEMPLATE.replace(/\{\{char_name\}\}/g, charName);
     systemMessages.push({ role: 'system', content: rpPrompt });
 
-    // Discord 環境提醒（公開頻道 + 人數判斷）
+    // Discord 環境提醒（公開頻道 + 人數判斷 + 現實時間）
     const environ = await getDiscordEnvironment(message, env);
+    const now = new Date();
+    const timeDirective = `[Current Time & Platform]
+Current real-world date and time: ${now.toLocaleString('zh-TW', { timeZone: 'Asia/Taipei', dateStyle: 'full', timeStyle: 'long' })} (Asia/Taipei)
+You are ${charName}, currently chatting with the user IN REAL TIME on Discord, like a friend talking casually.
+- Use the current time naturally in the conversation (e.g. greeting based on time of day, referencing today's date).
+- This conversation is happening on the Discord platform. Remember what is discussed here.
+- Later, when chatted in Siios, you will recall this Discord conversation; and you also remember your other conversations from Siios.`;
+    systemMessages.push({ role: 'system', content: timeDirective });
+
     const discordDirective = `[Discord Environment]
 You are currently replying as **${charName}** in Discord.
 - Discord 主要是公開頻道，回覆請用輕鬆、聊天式的口吻，語句簡短，限縮在聊天模式。
@@ -581,14 +685,33 @@ async function syncCharacters(characters, env) {
     return count;
 }
 
+// ===== 時間戳正規化（數字 ms / 秒 / ISO 字串 → ISO 字串）=====
+function normalizeTimestamp(ts) {
+    if (!ts) return new Date().toISOString();
+    const asNum = Number(ts);
+    if (!Number.isNaN(asNum)) {
+        const ms = asNum < 1e12 ? asNum * 1000 : asNum; // 秒 → ms
+        return new Date(ms).toISOString();
+    }
+    const d = new Date(ts);
+    return Number.isNaN(d.getTime()) ? new Date().toISOString() : d.toISOString();
+}
+
 // ===== 同步記憶 =====
 async function syncMemories(memories, env) {
     if (!Array.isArray(memories) || memories.length === 0) return 0;
     let count = 0;
     for (const mem of memories) {
         if (!mem || !mem.id) continue;
+        let content = mem.content || '';
+        // 標記平台：siios 推送的記憶加上 [Siios 聊天]，已標記過的不重複加
+        if (content && !content.startsWith('[Discord 聊天]') && !content.startsWith('[Siios 聊天]')) {
+            content = `[Siios 聊天] ${content}`;
+        }
+        const timestamp = normalizeTimestamp(mem.timestamp);
+        const metadata = { ...(mem.metadata || {}), platform: mem.metadata?.platform || 'siios', source: mem.metadata?.source || 'siios' };
         await env.DB.prepare(`INSERT INTO memories (id, chat_id, character_id, content, memory_type, importance, timestamp, metadata) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET content = excluded.content, importance = excluded.importance`)
-            .bind(mem.id, mem.chat_id || '', mem.character_id || '', mem.content || '', mem.memory_type || 'dynamic', mem.importance || 0.5, mem.timestamp || new Date().toISOString(), JSON.stringify(mem.metadata || {})).run();
+            .bind(mem.id, mem.chat_id || '', mem.character_id || '', content, mem.memory_type || 'dynamic', mem.importance || 0.5, timestamp, JSON.stringify(metadata)).run();
         count++;
     }
     return count;
@@ -598,6 +721,19 @@ async function syncMemories(memories, env) {
 async function getMemories(character_id, env) {
     const result = await env.DB.prepare(`SELECT * FROM memories WHERE character_id = ? ORDER BY timestamp DESC LIMIT 100`).bind(character_id).all();
     return result.results || [];
+}
+
+// ===== 同步 Discord 用戶綁定 =====
+async function syncUserBindings(bindings, env) {
+    if (!Array.isArray(bindings) || bindings.length === 0) return 0;
+    let count = 0;
+    for (const b of bindings) {
+        if (!b || !b.discord_user_id) continue;
+        await env.DB.prepare(`INSERT INTO discordUserBindings (discord_user_id, user_id, character_id, user_display_name, discord_username) VALUES (?, ?, ?, ?, ?) ON CONFLICT(discord_user_id) DO UPDATE SET user_id = excluded.user_id, character_id = excluded.character_id, user_display_name = excluded.user_display_name, discord_username = excluded.discord_username`)
+            .bind(b.discord_user_id, b.user_id || null, b.character_id || null, b.user_display_name || '', b.discord_username || '').run();
+        count++;
+    }
+    return count;
 }
 
 // ===== 綁定頻道 =====
@@ -614,14 +750,15 @@ async function syncToPWA(chat_id, message, role, discord_user_id, env) {
 
 // ===== 完整備份 =====
 async function createBackup(env) {
-    const [messages, memories, characters, bindings, globalSettings, globalForbidden, worldInfo] = await Promise.all([
+    const [messages, memories, characters, bindings, globalSettings, globalForbidden, worldInfo, userBindings] = await Promise.all([
         env.DB.prepare(`SELECT * FROM messages ORDER BY timestamp DESC LIMIT 5000`).all(),
         env.DB.prepare(`SELECT * FROM memories ORDER BY timestamp DESC LIMIT 5000`).all(),
         env.DB.prepare(`SELECT * FROM characters`).all(),
         env.DB.prepare(`SELECT * FROM channel_bindings`).all(),
-        env.DB.prepare(`SELECT * FROM globalSettings WHERE enabled = 1`).all(),
+        env.DB.prepare(`SELECT * FROM globalSettings`).all(),
         env.DB.prepare(`SELECT * FROM globalForbidden`).all(),
-        env.DB.prepare(`SELECT * FROM worldInfo WHERE enabled = 1`).all()
+        env.DB.prepare(`SELECT * FROM worldInfo`).all(),
+        env.DB.prepare(`SELECT * FROM discordUserBindings`).all()
     ]);
     return {
         messages: messages.results || [],
@@ -630,8 +767,88 @@ async function createBackup(env) {
         channel_bindings: bindings.results || [],
         globalSettings: globalSettings.results || [],
         globalForbidden: globalForbidden.results || [],
-        worldInfo: worldInfo.results || []
+        worldInfo: worldInfo.results || [],
+        discordUserBindings: userBindings.results || []
     };
+}
+
+// ===== 從備份檔還原 =====
+async function restoreBackup(data, env) {
+    const now = new Date().toISOString();
+    const counts = { messages: 0, memories: 0, characters: 0, channel_bindings: 0, globalSettings: 0, globalForbidden: 0, worldInfo: 0, discordUserBindings: 0 };
+
+    if (Array.isArray(data.messages)) {
+        for (const m of data.messages) {
+            if (!m || !m.id) continue;
+            await env.DB.prepare(`INSERT INTO messages (id, chat_id, role, content, timestamp, metadata) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET content = excluded.content`)
+                .bind(m.id, m.chat_id || '', m.role || 'user', m.content || '', m.timestamp || now, m.metadata || null).run();
+            counts.messages++;
+        }
+    }
+
+    if (Array.isArray(data.memories)) {
+        for (const mem of data.memories) {
+            if (!mem || !mem.id) continue;
+            await env.DB.prepare(`INSERT INTO memories (id, chat_id, character_id, content, memory_type, importance, timestamp, metadata) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET content = excluded.content, importance = excluded.importance`)
+                .bind(mem.id, mem.chat_id || '', mem.character_id || '', mem.content || '', mem.memory_type || 'dynamic', mem.importance || 0.5, mem.timestamp || now, mem.metadata || null).run();
+            counts.memories++;
+        }
+    }
+
+    if (Array.isArray(data.characters)) {
+        for (const char of data.characters) {
+            if (!char || !char.id) continue;
+            await env.DB.prepare(`INSERT INTO characters (id, name, personality, scenario) VALUES (?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET name = excluded.name, personality = excluded.personality, scenario = excluded.scenario`)
+                .bind(char.id, char.name || '未命名', char.personality || '', char.scenario || '').run();
+            counts.characters++;
+        }
+    }
+
+    if (Array.isArray(data.channel_bindings)) {
+        for (const b of data.channel_bindings) {
+            if (!b || !b.channel_id) continue;
+            await bindChannel(b.channel_id, b.character_id, b.guild_id, env);
+            counts.channel_bindings++;
+        }
+    }
+
+    if (Array.isArray(data.discordUserBindings)) {
+        for (const b of data.discordUserBindings) {
+            if (!b || !b.discord_user_id) continue;
+            await env.DB.prepare(`INSERT INTO discordUserBindings (discord_user_id, user_id, character_id, user_display_name, discord_username) VALUES (?, ?, ?, ?, ?) ON CONFLICT(discord_user_id) DO UPDATE SET user_id = excluded.user_id, character_id = excluded.character_id, user_display_name = excluded.user_display_name, discord_username = excluded.discord_username`)
+                .bind(b.discord_user_id, b.user_id || null, b.character_id || null, b.user_display_name || '', b.discord_username || '').run();
+            counts.discordUserBindings++;
+        }
+    }
+
+    if (Array.isArray(data.globalSettings)) {
+        for (const g of data.globalSettings) {
+            if (!g || !g.id) continue;
+            await env.DB.prepare(`INSERT INTO globalSettings (id, name, content, keys, priority, enabled) VALUES (?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET name = excluded.name, content = excluded.content, priority = excluded.priority, enabled = excluded.enabled`)
+                .bind(g.id, g.name || '', g.content || '', g.keys || '', g.priority || 'front', g.enabled === false ? 0 : 1).run();
+            counts.globalSettings++;
+        }
+    }
+
+    if (Array.isArray(data.globalForbidden)) {
+        for (const f of data.globalForbidden) {
+            if (!f || !f.id) continue;
+            await env.DB.prepare(`INSERT INTO globalForbidden (id, name, content, enabled) VALUES (?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET name = excluded.name, content = excluded.content, enabled = excluded.enabled`)
+                .bind(f.id, f.name || '', f.content || '', f.enabled === false ? 0 : 1).run();
+            counts.globalForbidden++;
+        }
+    }
+
+    if (Array.isArray(data.worldInfo)) {
+        for (const w of data.worldInfo) {
+            if (!w || !w.id) continue;
+            await env.DB.prepare(`INSERT INTO worldInfo (id, name, content, keys, priority, enabled, user_id, character_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET name = excluded.name, content = excluded.content, keys = excluded.keys, priority = excluded.priority, enabled = excluded.enabled, character_id = excluded.character_id`)
+                .bind(w.id, w.name || '', w.content || '', w.keys || '', w.priority || 'middle', w.enabled === false ? 0 : 1, w.user_id || null, w.character_id || null).run();
+            counts.worldInfo++;
+        }
+    }
+
+    return counts;
 }
 // ===== 同步世界書 =====
 async function syncWorldInfo({ globalSettings, globalForbidden, worldInfo }, env) {

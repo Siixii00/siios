@@ -143,8 +143,12 @@ database_name = "siios-discord-db"
 database_id = "your-database-id"
 
 [vars]
-AI_API_URL = "https://your-ai-api.com"
+# 注意：AI_API_URL 是 API 基礎網址，不要包含 /v1
+# Worker 會自動補上 /v1/chat/completions
+AI_API_URL = "https://api.openai.com"
 AI_MODEL = "gpt-3.5-turbo"
+# 在 Discord Developer Portal → General Information 取得 Public Key
+DISCORD_PUBLIC_KEY = "your-discord-public-key"
 ```
 
 ### 3. 部署 D1 Database
@@ -256,6 +260,10 @@ CREATE INDEX IF NOT EXISTS idx_worldinfo_character ON worldInfo(character_id);
 
 ```bash
 wrangler d1 execute siios-discord-db --file=./schema.sql
+
+# 必要！schema.sql 不含 memories 與 channel_bindings 表，
+# 需再執行 migration_002.sql 補上，否則 Bot 會出錯
+wrangler d1 execute siios-discord-db --file=./migration_002.sql
 ```
 
 ### 6. 部署 Worker
@@ -276,8 +284,9 @@ https://siios-discord-bot.你的帳號.workers.dev
 
 1. 前往你的應用程式 →「General Information」
 2. 複製「Application ID」
-3. 前往「Interactions」→「Webhooks」
-4. 設定 Webhook URL：
+3. 複製「Public Key」，填入 `wrangler.toml` 的 `DISCORD_PUBLIC_KEY`（用於驗證 Webhook 請求簽名）
+4. 前往「Interactions」→「Webhooks」
+5. 設定 Webhook URL：
    ```
    https://siios-discord-bot.你的帳號.workers.dev/discord/webhook
    ```

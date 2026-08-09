@@ -79,6 +79,15 @@ if ($LASTEXITCODE -eq 0) {
     Write-Host "⚠️  資料庫初始化失敗: $result" -ForegroundColor Yellow
 }
 
+Write-Host "執行 migration_002.sql（memories / channel_bindings）..." -ForegroundColor Yellow
+$result = wrangler d1 execute $dbName --file=./migration_002.sql 2>&1
+
+if ($LASTEXITCODE -eq 0) {
+    Write-Host "✅ 遷移腳本執行成功" -ForegroundColor Green
+} else {
+    Write-Host "⚠️  遷移腳本執行失敗: $result" -ForegroundColor Yellow
+}
+
 Write-Host ""
 
 # 步驟 5: 設定環境變數
