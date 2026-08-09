@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-09T19:33:49.988791",
-    "total_items": 59
+    "last_updated": "2026-08-09T20:33:54.194547",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "Saying No",
-        "url": "https://rozumem.xyz/posts/19",
+        "title": "How I use LLMs to learn complex topics",
+        "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
         "source": "Hacker News",
-        "score": 31
-      },
-      {
-        "title": "Ask HN: What are you working on? (August 2026)",
-        "url": "https://news.ycombinator.com/item?id=49233423",
-        "source": "Hacker News",
-        "score": 68
+        "score": 112
       },
       {
         "title": "Mea Culpa – Dark Hours",
         "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
         "source": "Hacker News",
-        "score": 436
+        "score": 459
       },
       {
-        "title": "How I use LLMs to learn complex topics",
-        "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
+        "title": "Ask HN: What are you working on? (August 2026)",
+        "url": "https://news.ycombinator.com/item?id=49233423",
         "source": "Hacker News",
-        "score": 12
+        "score": 94
       },
       {
         "title": "OpenChamber: An Agentic Development Environment",
         "url": "https://openchamber.dev/",
         "source": "Hacker News",
-        "score": 38
+        "score": 61
       },
       {
         "title": "Cool URIs Don't Change (1998)",
         "url": "https://www.w3.org/Provider/Style/URI",
         "source": "Hacker News",
-        "score": 93
-      },
-      {
-        "title": "Production Imminent: 40 Solar-Charging Aptera EVs Coming Soon",
-        "url": "https://frequal.com/aptera/ProductionImminent.html",
-        "source": "Hacker News",
-        "score": 40
+        "score": 112
       },
       {
         "title": "John C. Lilly on solid state intelligence and the elimination of man (1978)",
         "url": "https://kibotronics.net/unlisted/lilly-machines/",
         "source": "Hacker News",
-        "score": 85
+        "score": 98
+      },
+      {
+        "title": "Deletes all instances of Microsoft's GDID and prevents minting of new ones",
+        "url": "https://github.com/yegors/deGDID",
+        "source": "Hacker News",
+        "score": 4
       },
       {
         "title": "Crickets as Pets",
         "url": "https://en.wikipedia.org/wiki/Crickets_as_pets",
         "source": "Hacker News",
-        "score": 40
+        "score": 52
       },
       {
         "title": "Show HN: A Project Oberon System version running on RISC-V instead of RISC-5",
         "url": "https://github.com/rochus-keller/OberonSystem/tree/op2-rv32",
         "source": "Hacker News",
-        "score": 83
+        "score": 85
       },
       {
-        "title": "There Are Magic Hexagons of Every Order",
-        "url": "https://gukov.dev/math/2026/08/02/new-magic-hexagons.html",
+        "title": "Ransomware gangs skip the CEO, head straight for the 40-something IT manager",
+        "url": "https://www.theregister.com/security/2026/08/09/ransomware-gangs-skip-the-ceo-head-straight-for-the-40-something-it-manager/5284499",
         "source": "Hacker News",
-        "score": 159
+        "score": 23
       },
       {
-        "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
-        "url": "https://github.com/eighttrigrams/us-vs-them",
+        "title": "How Golden Is Silence, Actually?",
+        "url": "https://www.newyorker.com/magazine/2026/08/10/silence-kate-mcloughlin-book-review",
         "source": "Hacker News",
-        "score": 29
+        "score": 13
       },
       {
-        "title": "FCC moves to ban Lidar-equipped foreign drones from US",
-        "url": "https://www.tomshardware.com/tech-industry/drones/fcc-moves-to-ban-lidar-equipped-foreign-drones-from-us-classifies-the-technology-as-military-grade-in-a-proposal-that-could-also-hit-thermal-models-and-the-swarms-used-drone-light-shows",
+        "title": "Saying No",
+        "url": "https://rozumem.xyz/posts/19",
         "source": "Hacker News",
-        "score": 76
+        "score": 61
+      },
+      {
+        "title": "When Compilers Disagree About UTF‑8",
+        "url": "https://nemanjatrifunovic.substack.com/p/when-compilers-disagree-about-utf8",
+        "source": "Hacker News",
+        "score": 7
       },
       {
         "title": "Every fast write moves work somewhere else",
         "url": "https://www.shayon.dev/post/2026/220/every-fast-write-moves-work-somewhere-else/",
         "source": "Hacker News",
-        "score": 39
+        "score": 49
       },
       {
-        "title": "Analyzing data from Silicon Valley ventures and founders prosecuted for fraud",
-        "url": "https://pubsonline.informs.org/doi/full/10.1287/orsc.2024.19981",
+        "title": "There Are Magic Hexagons of Every Order",
+        "url": "https://gukov.dev/math/2026/08/02/new-magic-hexagons.html",
         "source": "Hacker News",
-        "score": 150
+        "score": 171
       }
     ],
     "ai": [
@@ -101,55 +101,49 @@
         "title": "How I use LLMs to learn complex topics",
         "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
         "source": "Hacker News AI",
-        "score": 12
-      },
-      {
-        "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
-        "url": "https://github.com/eighttrigrams/us-vs-them",
-        "source": "Hacker News AI",
-        "score": 29
-      },
-      {
-        "title": "Cross-compilation with Wails (2025)",
-        "url": "https://chriswheeler.dev/posts/cross-compilation-with-wails/",
-        "source": "Hacker News AI",
-        "score": 4
-      },
-      {
-        "title": "The Meme Factory: The Indonesians Making Money Off Facebook Outrage",
-        "url": "https://netbajura.blogspot.com/2026/08/inside-meme-factory-how-indonesians-are.html",
-        "source": "Hacker News AI",
-        "score": 5
+        "score": 112
       },
       {
         "title": "Ransomware gangs skip the CEO, head straight for the 40-something IT manager",
         "url": "https://www.theregister.com/security/2026/08/09/ransomware-gangs-skip-the-ceo-head-straight-for-the-40-something-it-manager/5284499",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 23
+      },
+      {
+        "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
+        "url": "https://github.com/eighttrigrams/us-vs-them",
+        "source": "Hacker News AI",
+        "score": 36
+      },
+      {
+        "title": "Cross-compilation with Wails (2025)",
+        "url": "https://chriswheeler.dev/posts/cross-compilation-with-wails/",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "Show HN: Airy – Free, fast, and simple voice content creation",
         "url": "https://airy.so",
         "source": "Hacker News AI",
-        "score": 29
-      },
-      {
-        "title": "I got an email about resistance",
-        "url": "https://www.seangoedecke.com/i-got-an-email-about-resistance/",
-        "source": "Hacker News AI",
-        "score": 5
+        "score": 30
       },
       {
         "title": "The original URL for this prediction will no longer be available in 11 years (2011)",
         "url": "http://longbets.org/601/",
         "source": "Hacker News AI",
-        "score": 192
+        "score": 193
       },
       {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News AI",
-        "score": 488
+        "score": 490
+      },
+      {
+        "title": "NoRecognition: AI Adversarial Clothing",
+        "url": "https://sandbox.norecognition.org/",
+        "source": "Hacker News AI",
+        "score": 4
       }
     ],
     "news": [
@@ -161,11 +155,6 @@
       {
         "title": "Ancient Roman shipwreck discovered off Sicily coast",
         "url": "https://www.bbc.co.uk/news/articles/cvgx1kpz17go?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Perez Hilton faces long recovery after reports he self-harmed during livestream",
-        "url": "https://www.bbc.co.uk/news/articles/cg5lnqjz497o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -184,12 +173,22 @@
         "source": "BBC World"
       },
       {
-        "title": "Puerto Rico rations water supplies due to intense drought",
-        "url": "https://www.bbc.co.uk/news/articles/cqlxgk7r2vwo?at_medium=RSS&at_campaign=rss",
+        "title": "Nigerian army says it safely rescued 33 people kidnapped by gunmen",
+        "url": "https://www.bbc.co.uk/news/articles/c89nkkvx2veo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Perez Hilton faces long recovery after reports he self-harmed during livestream",
+        "url": "https://www.bbc.co.uk/news/articles/cg5lnqjz497o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Viture's new Pro XR glasses have the most useful party trick ever ",
+        "url": "https://www.creativebloq.com/tech/vitures-new-pro-xr-glasses-have-the-most-useful-party-trick-ever",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Wacom MovinkPad Pro 14 vs iPad Air: which is the better tablet for digital artists? ",
         "url": "https://www.creativebloq.com/art/digital-art/wacom-movinkpad-pro-14-vs-ipad-air-which-is-the-better-tablet-for-digital-artists",
@@ -213,11 +212,6 @@
       {
         "title": " Netflix, get that man out of your billboard ",
         "url": "https://www.creativebloq.com/design/advertising/netflix-get-that-man-out-of-your-billboard",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " OLED vs IPS: which laptop screen should students actually buy? ",
-        "url": "https://www.creativebloq.com/tech/laptops/oled-vs-ips-which-laptop-screen-should-students-actually-buy",
         "source": "Creative Bloq"
       },
       {
