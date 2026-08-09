@@ -252,6 +252,26 @@ const ChatsDB = {
     async delete(id) {
         const database = await initDB();
         await database.delete('chats', id);
+    },
+
+    // 確保聊天室存在（跨裝置同步用，若不存在則建立）
+    async ensureExists(id, data) {
+        const database = await initDB();
+        const existing = await database.get('chats', id);
+        if (existing) return existing;
+        const chat = {
+            id,
+            character_name: data.character_name || 'AI',
+            character_avatar: data.character_avatar || '',
+            last_message: data.last_message || '',
+            last_updated: Date.now(),
+            created_at: Date.now(),
+            is_group: false,
+            member_ids: [],
+            ...data
+        };
+        await database.put('chats', chat);
+        return chat;
     }
 };
 
@@ -1178,28 +1198,8 @@ const HealthDB = {
 
 async delete(id) {
         const database = await initDB();
-        await database.delete('chats', id);
+        await database.delete('health', id);
     },
-
-    // 確保聊天室存在（跨裝置同步用，若不存在則建立）
-    async ensureExists(id, data) {
-        const database = await initDB();
-        const existing = await database.get('chats', id);
-        if (existing) return existing;
-        const chat = {
-            id,
-            character_name: data.character_name || 'AI',
-            character_avatar: data.character_avatar || '',
-            last_message: data.last_message || '',
-            last_updated: Date.now(),
-            created_at: Date.now(),
-            is_group: false,
-            member_ids: [],
-            ...data
-        };
-        await database.put('chats', chat);
-        return chat;
-    }
 
     async getRecentPeriods(userId, limit = 12) {
         const database = await initDB();
