@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-09T17:32:43.124397",
-    "total_items": 58
+    "last_updated": "2026-08-09T18:42:01.499993",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
-        "title": "Mea Culpa – Dark Hours",
-        "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
-        "source": "Hacker News",
-        "score": 330
-      },
-      {
         "title": "Criminal Deception in Silicon Valley",
         "url": "https://pubsonline.informs.org/doi/full/10.1287/orsc.2024.19981",
         "source": "Hacker News",
-        "score": 62
+        "score": 124
+      },
+      {
+        "title": "Mea Culpa – Dark Hours",
+        "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
+        "source": "Hacker News",
+        "score": 390
+      },
+      {
+        "title": "Ask HN: What are you working on? (August 2026)",
+        "url": "https://news.ycombinator.com/item?id=49233423",
+        "source": "Hacker News",
+        "score": 40
+      },
+      {
+        "title": "Production Imminent: 40 Solar-Charging Aptera EVs Coming Soon",
+        "url": "https://frequal.com/aptera/ProductionImminent.html",
+        "source": "Hacker News",
+        "score": 28
+      },
+      {
+        "title": "OpenChamber: An Agentic Development Environment",
+        "url": "https://openchamber.dev/",
+        "source": "Hacker News",
+        "score": 23
       },
       {
         "title": "Cool URIs Don't Change (1998)",
         "url": "https://www.w3.org/Provider/Style/URI",
         "source": "Hacker News",
-        "score": 47
-      },
-      {
-        "title": "Show HN: A Project Oberon System version running on RISC-V instead of RISC-5",
-        "url": "https://github.com/rochus-keller/OberonSystem/tree/op2-rv32",
-        "source": "Hacker News",
-        "score": 67
+        "score": 72
       },
       {
         "title": "John C. Lilly on solid state intelligence and the elimination of man (1978)",
         "url": "https://kibotronics.net/unlisted/lilly-machines/",
         "source": "Hacker News",
-        "score": 51
-      },
-      {
-        "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
-        "url": "https://github.com/eighttrigrams/us-vs-them",
-        "source": "Hacker News",
-        "score": 11
+        "score": 71
       },
       {
         "title": "Every fast write moves work somewhere else",
         "url": "https://www.shayon.dev/post/2026/220/every-fast-write-moves-work-somewhere-else/",
         "source": "Hacker News",
-        "score": 16
+        "score": 29
       },
       {
-        "title": "There Are Magic Hexagons of Every Order",
-        "url": "https://gukov.dev/math/2026/08/02/new-magic-hexagons.html",
+        "title": "Show HN: A Project Oberon System version running on RISC-V instead of RISC-5",
+        "url": "https://github.com/rochus-keller/OberonSystem/tree/op2-rv32",
         "source": "Hacker News",
-        "score": 146
+        "score": 79
+      },
+      {
+        "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
+        "url": "https://github.com/eighttrigrams/us-vs-them",
+        "source": "Hacker News",
+        "score": 20
       },
       {
         "title": "Crickets as Pets",
         "url": "https://en.wikipedia.org/wiki/Crickets_as_pets",
         "source": "Hacker News",
-        "score": 10
+        "score": 28
       },
       {
-        "title": "My server is a phone now",
-        "url": "https://seg6.space/posts/phone-server/",
+        "title": "There Are Magic Hexagons of Every Order",
+        "url": "https://gukov.dev/math/2026/08/02/new-magic-hexagons.html",
         "source": "Hacker News",
-        "score": 457
+        "score": 154
+      },
+      {
+        "title": "Show HN: A replayable A2A jury for tracing how agents influence decisions",
+        "url": "https://github.com/nMaroulis/protolink/tree/main/examples/ai_courtroom",
+        "source": "Hacker News",
+        "score": 7
+      },
+      {
+        "title": "FCC moves to ban Lidar-equipped foreign drones from US",
+        "url": "https://www.tomshardware.com/tech-industry/drones/fcc-moves-to-ban-lidar-equipped-foreign-drones-from-us-classifies-the-technology-as-military-grade-in-a-proposal-that-could-also-hit-thermal-models-and-the-swarms-used-drone-light-shows",
+        "source": "Hacker News",
+        "score": 48
       },
       {
         "title": "Tom Stanton's supersonic trebuchet breaks sound barrier with gravity alone",
         "url": "https://www.techeblog.com/tom-stanton-supersonic-trebuchet/",
         "source": "Hacker News",
-        "score": 72
-      },
-      {
-        "title": "Silicon Valley misreads science fiction and undermines democracy",
-        "url": "https://techcrunch.com/2026/08/09/historian-jill-lepore-says-the-tech-industry-is-led-by-bad-readers-who-are-undermining-democracy/",
-        "source": "Hacker News",
-        "score": 125
-      },
-      {
-        "title": "Microsoft Word for Windows 1.1a, Native X64 Port",
-        "url": "https://github.com/jmarshall23/msword",
-        "source": "Hacker News",
-        "score": 136
-      },
-      {
-        "title": "Os8088: A powerful Mac-like OS for the IBM XT, 286, 386",
-        "url": "https://os8088.com/",
-        "source": "Hacker News",
-        "score": 231
-      },
-      {
-        "title": "Windows 11's built-in Weather app wastes more than 1 GB of RAM",
-        "url": "https://www.notebookcheck.net/Windows-11-s-built-in-Weather-app-wastes-more-than-1-GB-of-RAM.1364205.0.html",
-        "source": "Hacker News",
-        "score": 85
+        "score": 106
       }
     ],
     "ai": [
@@ -101,49 +101,43 @@
         "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
         "url": "https://github.com/eighttrigrams/us-vs-them",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 20
+      },
+      {
+        "title": "An OpenAI Strategist Says AI Labs Should Rival Government Power",
+        "url": "https://ai-updates.net/an-openai-strategist-says-ai-labs-should-rival-government-power/",
+        "source": "Hacker News AI",
+        "score": 13
+      },
+      {
+        "title": "Cross-Compilation with Wails",
+        "url": "https://chriswheeler.dev/posts/cross-compilation-with-wails/",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "Show HN: Airy – Free, fast, and simple voice content creation",
         "url": "https://airy.so",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 28
       },
       {
         "title": "The original URL for this prediction will no longer be available in 11 years (2011)",
         "url": "http://longbets.org/601/",
         "source": "Hacker News AI",
-        "score": 188
+        "score": 190
       },
       {
         "title": "Fastmail offers EU data region",
         "url": "https://www.fastmail.com/blog/fastmail-offers-eu-data-region/",
         "source": "Hacker News AI",
-        "score": 484
-      },
-      {
-        "title": "I Wanted to Own the Harness. Then Codex Desktop Won",
-        "url": "https://jorypestorious.com/blog/portable-agent-factory/",
-        "source": "Hacker News AI",
-        "score": 18
-      },
-      {
-        "title": "70% of AI revenue comes from OpenAI and Anthropic",
-        "url": "https://www.youtube.com/watch?v=68X8yEatepQ",
-        "source": "Hacker News AI",
-        "score": 57
+        "score": 488
       },
       {
         "title": "Message your other Claude Code sessions",
         "url": "https://code.claude.com/docs/en/cross-session-messaging",
         "source": "Hacker News AI",
-        "score": 144
-      },
-      {
-        "title": "Melatonin impairs morning cognition in healthy young adults (2023)",
-        "url": "https://academic.oup.com/sleep/article/46/Supplement_1/A34/7181621",
-        "source": "Hacker News AI",
-        "score": 164
+        "score": 145
       }
     ],
     "news": [
