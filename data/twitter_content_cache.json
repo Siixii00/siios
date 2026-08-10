@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-10T22:38:15.361547",
-    "total_items": 58
+    "last_updated": "2026-08-10T23:36:01.365328",
+    "total_items": 65
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Muse Glimmer: 30B-parameter model optimized for always-on local agent workflows",
         "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
         "source": "Hacker News",
-        "score": 962
-      },
-      {
-        "title": "Rust SIMD on the GPU",
-        "url": "https://www.vectorware.com/blog/simd-on-gpu/",
-        "source": "Hacker News",
-        "score": 90
-      },
-      {
-        "title": "Sonic Pi v5",
-        "url": "https://www.patreon.com/samaaron/posts/sonic-pi-v5-166001392",
-        "source": "Hacker News",
-        "score": 266
+        "score": 984
       },
       {
         "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
         "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News",
-        "score": 277
+        "score": 326
       },
       {
-        "title": "Publishing Schematics Before \"Open Source\" Was a Word",
+        "title": "Rust SIMD on the GPU",
+        "url": "https://www.vectorware.com/blog/simd-on-gpu/",
+        "source": "Hacker News",
+        "score": 104
+      },
+      {
+        "title": "Sonic Pi v5",
+        "url": "https://www.patreon.com/samaaron/posts/sonic-pi-v5-166001392",
+        "source": "Hacker News",
+        "score": 282
+      },
+      {
+        "title": "Publishing Schematics Before “Open Source” Was a Word",
         "url": "https://fabscene.medium.com/publishing-schematics-before-open-source-was-a-word-55-years-of-akizuki-denshi-japans-be7ca9629704",
         "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Illinois Just Passed a Law That Puts Linux on the Hook for Age Verification",
-        "url": "https://linuxstans.com/illinois-hb5511-operating-system-age-verification/",
-        "source": "Hacker News",
-        "score": 216
+        "score": 38
       },
       {
         "title": "Confessions of a Long-Distance Sailor",
         "url": "https://arachnoid.com/lutusp/sailbook.html",
         "source": "Hacker News",
-        "score": 14
+        "score": 36
       },
       {
         "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
         "url": "https://cactuscompute.com/needle",
         "source": "Hacker News",
-        "score": 77
-      },
-      {
-        "title": "The Psychedelic Toad of the Sonoran Desert",
-        "url": "https://en.wikipedia.org/wiki/Bufo_Alvarius:_the_Psychedelic_Toad_of_the_Sonoran_Desert",
-        "source": "Hacker News",
-        "score": 58
-      },
-      {
-        "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
-        "url": "https://www.stoaexchange.com",
-        "source": "Hacker News",
-        "score": 59
+        "score": 98
       },
       {
         "title": "Stop Killing Games: It's time to sue Sony, join us",
         "url": "https://www.massaschadeconsument.nl/collectieve-acties/playstation/",
         "source": "Hacker News",
-        "score": 57
+        "score": 102
       },
       {
         "title": "Exploiting System Management Mode with a very long interrupt",
         "url": "https://github.com/xoreaxeaxeax/smiiiiiiiiiiiiiiii",
         "source": "Hacker News",
-        "score": 105
+        "score": 111
+      },
+      {
+        "title": "Stowaway – take the window seat on any plane or satellite overhead",
+        "url": "https://stowaway.live/",
+        "source": "Hacker News",
+        "score": 63
       },
       {
         "title": "Squeak 6.1",
         "url": "https://squeak.org/release_notes/6.1/",
         "source": "Hacker News",
-        "score": 197
+        "score": 206
       },
       {
-        "title": "Humanising LLM Outputs Is Dumb",
-        "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
+        "title": "Google Search Is Dying. What Comes Next Is Worse",
+        "url": "https://thewalrus.ca/google-search-is-dying/",
         "source": "Hacker News",
-        "score": 112
+        "score": 27
+      },
+      {
+        "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
+        "url": "https://www.stoaexchange.com",
+        "source": "Hacker News",
+        "score": 60
       },
       {
         "title": "Amazon backs power plant that may become top source of US climate pollution",
         "url": "https://arstechnica.com/tech-policy/2026/08/amazon-funds-biggest-gas-power-plant-in-us-despite-climate-pledge/",
         "source": "Hacker News",
-        "score": 62
+        "score": 116
+      },
+      {
+        "title": "Humanising LLM Outputs Is Dumb",
+        "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
+        "source": "Hacker News",
+        "score": 131
       }
     ],
     "ai": [
@@ -101,91 +101,91 @@
         "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
         "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News AI",
-        "score": 277
+        "score": 326
       },
       {
         "title": "Confessions of a Long-Distance Sailor",
         "url": "https://arachnoid.com/lutusp/sailbook.html",
         "source": "Hacker News AI",
-        "score": 14
+        "score": 36
       },
       {
         "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
         "url": "https://cactuscompute.com/needle",
         "source": "Hacker News AI",
-        "score": 77
+        "score": 98
       },
       {
         "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
         "url": "https://www.stoaexchange.com",
         "source": "Hacker News AI",
-        "score": 59
+        "score": 60
       },
       {
         "title": "Humanising LLM Outputs Is Dumb",
         "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
         "source": "Hacker News AI",
-        "score": 112
+        "score": 131
+      },
+      {
+        "title": "World Train Map – 1247 train routes around the world",
+        "url": "https://worldtrainmap.com/",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "Letter to Governor Abbott on responsible AI infrastructure in Texas",
         "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
         "source": "Hacker News AI",
-        "score": 76
+        "score": 82
       },
       {
         "title": "Exploring Claude/GPT Knowledge Cutoffs and Pre-Training Timelines",
         "url": "https://blog.sshh.io/p/exploring-claudegpt-knowledge-cutoffs",
         "source": "Hacker News AI",
-        "score": 85
+        "score": 91
       },
       {
         "title": "Mistral Patent for “Code implemented tool calls”",
         "url": "https://patentsgazette.uspto.gov/week26/OG/html/1547-5/US12670045-20260630.html",
         "source": "Hacker News AI",
-        "score": 200
+        "score": 205
       },
       {
         "title": "Tail-call optimization in C is relatively recent (2025)",
         "url": "https://lwn.net/Articles/1034703/",
         "source": "Hacker News AI",
-        "score": 110
-      },
-      {
-        "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
-        "url": "https://www.docker.com/products/docker-sandboxes/",
-        "source": "Hacker News AI",
-        "score": 613
-      },
-      {
-        "title": "The Tragedy of the Cognitive Commons",
-        "url": "https://arxiv.org/abs/2607.29380",
-        "source": "Hacker News AI",
-        "score": 83
-      },
-      {
-        "title": "Kinney Drugs pulls back AI phone assistant after hundreds of customer complaints",
-        "url": "https://www.wcax.com/2026/08/07/kinney-drugs-pulls-back-ai-phone-assistant-after-hundreds-customer-complaints/",
-        "source": "Hacker News AI",
-        "score": 131
+        "score": 113
       },
       {
         "title": "GPT 5.6 Cyber",
         "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
         "source": "Hacker News AI",
-        "score": 37
+        "score": 47
       },
       {
-        "title": "There is no “done”: Reflections on a completed Appalachian Trail thru-hike (2022)",
-        "url": "https://thetrek.co/appalachian-trail/there-is-no-done-reflections-on-a-completed-at-thru-hike/",
+        "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
+        "url": "https://www.docker.com/products/docker-sandboxes/",
         "source": "Hacker News AI",
-        "score": 38
+        "score": 619
       },
       {
-        "title": "Signal is working on a paid option to create an account without a phone number",
-        "url": "https://aboutsignal.com/news/signal-login-registration-without-a-phone-number/",
+        "title": "Kinney Drugs pulls back AI phone assistant after hundreds of customer complaints",
+        "url": "https://www.wcax.com/2026/08/07/kinney-drugs-pulls-back-ai-phone-assistant-after-hundreds-customer-complaints/",
         "source": "Hacker News AI",
-        "score": 40
+        "score": 137
+      },
+      {
+        "title": "The Tragedy of the Cognitive Commons",
+        "url": "https://arxiv.org/abs/2607.29380",
+        "source": "Hacker News AI",
+        "score": 86
+      },
+      {
+        "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
+        "url": "https://www.whodunnitai.com/",
+        "source": "Hacker News AI",
+        "score": 188
       }
     ],
     "news": [
@@ -225,7 +225,43 @@
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " Buc-ee's infamous logo design lawsuits are coming back to bite it ",
+        "url": "https://www.creativebloq.com/design/logos-icons/buc-ees-has-unleashed-a-demon-with-its-logo-design-lawsuits",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Apple Watch redesign can't come soon enough ",
+        "url": "https://www.creativebloq.com/design/product-design/the-apple-watch-redesign-cant-come-soon-enough",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " What are blend shapes in 3D animation, and how do you use them? ",
+        "url": "https://www.creativebloq.com/art/animation/what-are-blend-shapes-in-3d-animation-and-how-do-you-use-them",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Viture's new Pro XR glasses have the most useful party trick ever ",
+        "url": "https://www.creativebloq.com/tech/vitures-new-pro-xr-glasses-have-the-most-useful-party-trick-ever",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Wacom MovinkPad Pro 14 vs iPad Air: which is the better tablet for digital artists? ",
+        "url": "https://www.creativebloq.com/art/digital-art/wacom-movinkpad-pro-14-vs-ipad-air-which-is-the-better-tablet-for-digital-artists",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " From Zootopia and Toy Story to X-Men's Storm, the Disney D23 poster design is raising big expectations ",
+        "url": "https://www.creativebloq.com/art/animation/from-zootopia-and-toy-story-to-storm-the-disney-d23-poster-design-has-it-all",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Robert Pattinson’s Primetime performance is making me nauseous, and that’s great filmmaking ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/robert-pattinsons-primetime-performance-is-making-me-nauseous-and-thats-great-filmmaking",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "New GLP-1 pill delivers up to 12% weight loss in 36 weeks",
