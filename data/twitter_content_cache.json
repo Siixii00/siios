@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-10T19:57:13.348702",
+    "last_updated": "2026-08-10T20:51:13.442198",
     "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Illinois Just Passed a Law That Puts Linux on the Hook for Age Verification",
+        "url": "https://linuxstans.com/illinois-hb5511-operating-system-age-verification/",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
         "title": "Muse Glimmer: 30B-parameter model optimized for always-on local agent workflows",
         "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
         "source": "Hacker News",
-        "score": 862
+        "score": 918
       },
       {
         "title": "Sonic Pi v5",
         "url": "https://www.patreon.com/samaaron/posts/sonic-pi-v5-166001392",
         "source": "Hacker News",
-        "score": 185
-      },
-      {
-        "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
-        "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
-        "source": "Hacker News",
-        "score": 172
-      },
-      {
-        "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
-        "url": "https://www.stoaexchange.com",
-        "source": "Hacker News",
-        "score": 48
-      },
-      {
-        "title": "Exploiting System Management Mode with a very long interrupt",
-        "url": "https://github.com/xoreaxeaxeax/smiiiiiiiiiiiiiiii",
-        "source": "Hacker News",
-        "score": 82
-      },
-      {
-        "title": "Show HN: Ante, a coding agent in a single binary that runs offline",
-        "url": "https://github.com/AntigmaLabs/ante",
-        "source": "Hacker News",
-        "score": 97
-      },
-      {
-        "title": "The Psychedelic Toad of the Sonoran Desert",
-        "url": "https://en.wikipedia.org/wiki/Bufo_Alvarius:_the_Psychedelic_Toad_of_the_Sonoran_Desert",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Squeak 6.1",
-        "url": "https://squeak.org/release_notes/6.1/",
-        "source": "Hacker News",
-        "score": 164
-      },
-      {
-        "title": "The Tragedy of the Cognitive Commons",
-        "url": "https://arxiv.org/abs/2607.29380",
-        "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
-        "url": "https://www.docker.com/products/docker-sandboxes/",
-        "source": "Hacker News",
-        "score": 565
-      },
-      {
-        "title": "Why Can't You Pack a Bag?",
-        "url": "https://www.newyorker.com/culture/open-questions/why-cant-you-pack-a-bag",
-        "source": "Hacker News",
-        "score": 10
+        "score": 216
       },
       {
         "title": "Rust SIMD on the GPU",
         "url": "https://www.vectorware.com/blog/simd-on-gpu/",
         "source": "Hacker News",
-        "score": 19
+        "score": 53
       },
       {
-        "title": "Magnitude 7.4 Earthquake – 5 km S of San José del Palmar, Colombia",
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjl2/executive",
+        "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
+        "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News",
-        "score": 123
+        "score": 216
       },
       {
-        "title": "Extreme 220GHz+Broadband Silicon Capacitor X2SC 0201M 22nF BV11",
-        "url": "https://pim.murata.com/asset/pim4/siliconCapacitor/SICAP_X2SC422522_PDF_SILICONCAPACITOR",
+        "title": "The Psychedelic Toad of the Sonoran Desert",
+        "url": "https://en.wikipedia.org/wiki/Bufo_Alvarius:_the_Psychedelic_Toad_of_the_Sonoran_Desert",
         "source": "Hacker News",
-        "score": 44
+        "score": 38
+      },
+      {
+        "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
+        "url": "https://www.stoaexchange.com",
+        "source": "Hacker News",
+        "score": 55
+      },
+      {
+        "title": "Exploiting System Management Mode with a very long interrupt",
+        "url": "https://github.com/xoreaxeaxeax/smiiiiiiiiiiiiiiii",
+        "source": "Hacker News",
+        "score": 92
+      },
+      {
+        "title": "Why Can't You Pack a Bag? (2024)",
+        "url": "https://www.newyorker.com/culture/open-questions/why-cant-you-pack-a-bag",
+        "source": "Hacker News",
+        "score": 26
+      },
+      {
+        "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
+        "url": "https://www.docker.com/products/docker-sandboxes/",
+        "source": "Hacker News",
+        "score": 583
+      },
+      {
+        "title": "Squeak 6.1",
+        "url": "https://squeak.org/release_notes/6.1/",
+        "source": "Hacker News",
+        "score": 175
       },
       {
         "title": "Ask HN: In your experience, what are sound conventions for e-ink UI development?",
         "url": "https://news.ycombinator.com/item?id=49213660",
         "source": "Hacker News",
-        "score": 81
+        "score": 97
+      },
+      {
+        "title": "Show HN: Ante, a coding agent in a single binary that runs offline",
+        "url": "https://github.com/AntigmaLabs/ante",
+        "source": "Hacker News",
+        "score": 107
+      },
+      {
+        "title": "Extreme 220GHz+Broadband Silicon Capacitor X2SC 0201M 22nF BV11",
+        "url": "https://pim.murata.com/asset/pim4/siliconCapacitor/SICAP_X2SC422522_PDF_SILICONCAPACITOR",
+        "source": "Hacker News",
+        "score": 48
+      },
+      {
+        "title": "Humanising LLM Outputs Is Dumb",
+        "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
+        "source": "Hacker News",
+        "score": 79
       }
     ],
     "ai": [
@@ -101,17 +101,11 @@
         "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
         "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News AI",
-        "score": 172
+        "score": 216
       },
       {
         "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
         "url": "https://www.stoaexchange.com",
-        "source": "Hacker News AI",
-        "score": 48
-      },
-      {
-        "title": "The Tragedy of the Cognitive Commons",
-        "url": "https://arxiv.org/abs/2607.29380",
         "source": "Hacker News AI",
         "score": 55
       },
@@ -119,73 +113,79 @@
         "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
         "url": "https://www.docker.com/products/docker-sandboxes/",
         "source": "Hacker News AI",
-        "score": 565
-      },
-      {
-        "title": "Letter to Governor Abbott on responsible AI infrastructure in Texas",
-        "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
-        "source": "Hacker News AI",
-        "score": 60
-      },
-      {
-        "title": "Mistral Patent for “Code implemented tool calls”",
-        "url": "https://patentsgazette.uspto.gov/week26/OG/html/1547-5/US12670045-20260630.html",
-        "source": "Hacker News AI",
-        "score": 163
+        "score": 583
       },
       {
         "title": "Humanising LLM Outputs Is Dumb",
         "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
         "source": "Hacker News AI",
-        "score": 60
+        "score": 79
       },
       {
-        "title": "Tail-call optimization in C is relatively recent (2025)",
-        "url": "https://lwn.net/Articles/1034703/",
+        "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
+        "url": "https://cactuscompute.com/needle",
         "source": "Hacker News AI",
-        "score": 101
+        "score": 6
+      },
+      {
+        "title": "Mistral Patent for “Code implemented tool calls”",
+        "url": "https://patentsgazette.uspto.gov/week26/OG/html/1547-5/US12670045-20260630.html",
+        "source": "Hacker News AI",
+        "score": 178
+      },
+      {
+        "title": "Letter to Governor Abbott on responsible AI infrastructure in Texas",
+        "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
+        "source": "Hacker News AI",
+        "score": 67
       },
       {
         "title": "Exploring Claude/GPT Knowledge Cutoffs and Pre-Training Timelines",
         "url": "https://blog.sshh.io/p/exploring-claudegpt-knowledge-cutoffs",
         "source": "Hacker News AI",
-        "score": 42
+        "score": 61
       },
       {
-        "title": "Learning more about Claude's mathematical capabilities",
-        "url": "https://www.anthropic.com/research/riemann-zeta",
+        "title": "Tail-call optimization in C is relatively recent (2025)",
+        "url": "https://lwn.net/Articles/1034703/",
         "source": "Hacker News AI",
         "score": 102
+      },
+      {
+        "title": "The Tragedy of the Cognitive Commons",
+        "url": "https://arxiv.org/abs/2607.29380",
+        "source": "Hacker News AI",
+        "score": 65
       },
       {
         "title": "Kinney Drugs pulls back AI phone assistant after hundreds of customer complaints",
         "url": "https://www.wcax.com/2026/08/07/kinney-drugs-pulls-back-ai-phone-assistant-after-hundreds-customer-complaints/",
         "source": "Hacker News AI",
-        "score": 115
+        "score": 119
       },
       {
         "title": "There is no “done”: Reflections on a completed Appalachian Trail thru-hike (2022)",
         "url": "https://thetrek.co/appalachian-trail/there-is-no-done-reflections-on-a-completed-at-thru-hike/",
         "source": "Hacker News AI",
-        "score": 32
+        "score": 34
       },
       {
-        "title": "AI Fortunes Are Reviving an Old Debate About Private Power",
-        "url": "https://ai-updates.net/ai-fortunes-philanthropy-private-power/",
+        "title": "Learning more about Claude's mathematical capabilities",
+        "url": "https://www.anthropic.com/research/riemann-zeta",
         "source": "Hacker News AI",
-        "score": 27
+        "score": 119
       },
       {
         "title": "Claude moves bound of the Riemann Hypothesis from 41.6% to 67.2%",
         "url": "https://twitter.com/jarredsumner/status/2086869681785500011",
         "source": "Hacker News AI",
-        "score": 22
+        "score": 28
       },
       {
         "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
         "url": "https://www.whodunnitai.com/",
         "source": "Hacker News AI",
-        "score": 185
+        "score": 187
       }
     ],
     "news": [
@@ -220,7 +220,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Trump signs order to limit and split childhood vaccines",
+        "title": "Trump signs order to limit childhood vaccines and split MMR shots",
         "url": "https://www.bbc.co.uk/news/articles/ce3q5vl581wo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
@@ -301,6 +301,31 @@
     ],
     "gaming": [
       {
+        "title": "Chiikawa the Movie Is Killing It in Japan's Cinemas — While Leaving Children Crying in Fear",
+        "url": "https://www.polygon.com/chiikawa-the-movie-secret-of-mermaid-island-box-office/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Marvel Tokon's New PC Patch Finally Makes the Game Work, Players Say",
+        "url": "https://www.polygon.com/marvel-tokon-fighting-souls-pc-patch-reportedly-fixes-game/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Samara Weaving | Shelf Quest Episode 5",
+        "url": "https://www.polygon.com/video/samara-weaving-shelf-quest-episode-5/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Large lost sunken relics list in Pokémon Pokopia",
+        "url": "https://www.polygon.com/pokemon-pokopia-lost-sunken-relics-dlc-list-how-to-get/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Big Walk's Award-winning Predecessor is a Must Play PlayStation Plus Game",
+        "url": "https://www.polygon.com/untitled-goose-game-ps-plus-recommendation/",
+        "source": "Polygon"
+      },
+      {
         "title": "Super Mario Bros. Players Are Closing In on a Perfect Playthrough",
         "url": "https://www.polygon.com/super-mario-bros-speedrun-lekukie-world-record/",
         "source": "Polygon"
@@ -308,31 +333,6 @@
       {
         "title": "Switch 2 Just Got One of the Decade’s Best Soulslikes",
         "url": "https://www.polygon.com/lies-of-p-complete-edition-nintendo-swtich-2-release/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Batman's new Joker actor officially confirms a shocking change to the iconic villains backstory",
-        "url": "https://www.polygon.com/batman-caped-crusader-joker-matthew-needham-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "A Cult Favorite Marvel Character's Dominance Officially Continues in New Release",
-        "url": "https://www.polygon.com/marvel-comics-x-men-x-orcists-magik-series/",
-        "source": "Polygon"
-      },
-      {
-        "title": "40 Years Later, This Is Still The Greatest Video Game Quote of All Time",
-        "url": "https://www.polygon.com/greatest-video-game-quote-all-time/",
-        "source": "Polygon"
-      },
-      {
-        "title": "When and how does Ulf the White die in House of the Dragon?",
-        "url": "https://www.polygon.com/house-of-the-dragon-ulf-the-white-how-does-he-die/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Netflix’s 112-Minute Sci-Fi Thriller Is Officially #1 Worldwide Despite Terrible Rotten Tomatoes Score",
-        "url": "https://www.polygon.com/netlifx-streaming-movies-august-10-2026/",
         "source": "Polygon"
       }
     ],
