@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-09T23:32:14.463458",
-    "total_items": 57
+    "last_updated": "2026-08-10T01:53:06.125970",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "How I use LLMs to learn complex topics",
         "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
         "source": "Hacker News",
-        "score": 300
+        "score": 423
       },
       {
-        "title": "New Zealand lost its music media, and what we're building to replace it",
-        "url": "https://propelmusic.co.nz/articles/the-sound-went-quiet-nz-music-media",
+        "title": "How We Pushed CDC into Postgres",
+        "url": "https://www.snowflake.com/en/blog/engineering/postgres-to-snowflake-replication-mirroring/",
         "source": "Hacker News",
-        "score": 48
+        "score": 16
       },
       {
         "title": "Mea Culpa – Dark Hours",
         "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
         "source": "Hacker News",
-        "score": 530
+        "score": 561
       },
       {
         "title": "Ask HN: What are you working on? (August 2026)",
         "url": "https://news.ycombinator.com/item?id=49233423",
         "source": "Hacker News",
-        "score": 147
+        "score": 171
       },
       {
-        "title": "The tragedy of the commons, AI edition",
-        "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
-        "source": "Hacker News",
-        "score": 56
-      },
-      {
-        "title": "Cool URIs Don't Change (1998)",
-        "url": "https://www.w3.org/Provider/Style/URI",
-        "source": "Hacker News",
-        "score": 167
-      },
-      {
-        "title": "Tuxedo No. 2 – Cocktail recipes",
-        "url": "https://tuxedono2.com",
+        "title": "\"The Persian MâR-Nâmeh Or, the Book for Taking Omens from Snakes\" (1892)",
+        "url": "https://publicdomainreview.org/collection/marnameh/",
         "source": "Hacker News",
         "score": 24
+      },
+      {
+        "title": "New Zealand lost its music media, and what we're building to replace it",
+        "url": "https://propelmusic.co.nz/articles/the-sound-went-quiet-nz-music-media",
+        "source": "Hacker News",
+        "score": 73
       },
       {
         "title": "Taxi drivers rarely die of Alzheimer's",
         "url": "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650",
         "source": "Hacker News",
-        "score": 150
+        "score": 183
+      },
+      {
+        "title": "Tuxedo No. 2 – Cocktail recipes",
+        "url": "https://tuxedono2.com",
+        "source": "Hacker News",
+        "score": 48
+      },
+      {
+        "title": "Picophysics: Single file physics for games on platforms like N64, PSX, DC",
+        "url": "https://gitlab.com/Kazade/picophysics",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "Cool URIs Don't Change (1998)",
+        "url": "https://www.w3.org/Provider/Style/URI",
+        "source": "Hacker News",
+        "score": 185
+      },
+      {
+        "title": "The tragedy of the commons, AI edition",
+        "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
+        "source": "Hacker News",
+        "score": 75
       },
       {
         "title": "Andrew Wiles on proving Fermat’s Last Theorem (1995) [video]",
         "url": "https://www.youtube.com/watch?v=GS7CxAtV5Ks",
         "source": "Hacker News",
-        "score": 22
+        "score": 34
       },
       {
-        "title": "I made tinnitus my friend, then it disappeared [video]",
-        "url": "https://mynoise.net/vlog.php?ep=20260803",
+        "title": "Japanese court overturns Red RAW video patent",
+        "url": "https://www.dpreview.com/news/panasonic-did-what-apple-sony-and-nikon-couldnt-overturn-a-red-raw-video-patent/",
         "source": "Hacker News",
-        "score": 44
-      },
-      {
-        "title": "The Hacker's Renaissance",
-        "url": "https://phrack.org/issues/72/19#article",
-        "source": "Hacker News",
-        "score": 69
-      },
-      {
-        "title": "OpenChamber: An Agentic Development Environment",
-        "url": "https://openchamber.dev/",
-        "source": "Hacker News",
-        "score": 94
-      },
-      {
-        "title": "The climate benefits of retiring an operational combustion engine vehicle",
-        "url": "https://www.science.org/doi/10.1126/science.adv5441",
-        "source": "Hacker News",
-        "score": 15
-      },
-      {
-        "title": "Touring the Consensus, Six Months In",
-        "url": "https://theconsensus.dev/blog/2026/08/05/touring-the-consensus-six-months-in.html",
-        "source": "Hacker News",
-        "score": 5
+        "score": 18
       },
       {
         "title": "Everything you do is being recorded",
         "url": "https://www.theatlantic.com/technology/2026/05/ai-wearable-surveillance-countermeasures/687203/",
         "source": "Hacker News",
-        "score": 178
+        "score": 211
+      },
+      {
+        "title": "The German Mittelstand",
+        "url": "https://kieranvelasquez.substack.com/p/on-the-german-mittelstand",
+        "source": "Hacker News",
+        "score": 13
       }
     ],
     "ai": [
@@ -101,54 +101,76 @@
         "title": "How I use LLMs to learn complex topics",
         "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
         "source": "Hacker News AI",
-        "score": 300
-      },
-      {
-        "title": "The tragedy of the commons, AI edition",
-        "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
-        "source": "Hacker News AI",
-        "score": 56
+        "score": 423
       },
       {
         "title": "Tuxedo No. 2 – Cocktail recipes",
         "url": "https://tuxedono2.com",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 48
       },
       {
-        "title": "The Hacker's Renaissance",
+        "title": "The tragedy of the commons, AI edition",
+        "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
+        "source": "Hacker News AI",
+        "score": 75
+      },
+      {
+        "title": "The Hacker's Renaissance (2025)",
         "url": "https://phrack.org/issues/72/19#article",
         "source": "Hacker News AI",
-        "score": 70
-      },
-      {
-        "title": "The main way I've seen people turn ideologically crazy (2025)",
-        "url": "https://blog.andymasley.com/p/the-main-way-ive-seen-people-turn",
-        "source": "Hacker News AI",
-        "score": 79
-      },
-      {
-        "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
-        "url": "https://github.com/eighttrigrams/us-vs-them",
-        "source": "Hacker News AI",
-        "score": 42
+        "score": 95
       },
       {
         "title": "AI assistant hacks gym website in first known Australian autonomous cyber attack",
         "url": "https://www.abc.net.au/news/2026-08-10/ai-assistant-hacks-gym-website-aus-cyber-attack/107007986",
         "source": "Hacker News AI",
-        "score": 10
+        "score": 43
+      },
+      {
+        "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
+        "url": "https://github.com/eighttrigrams/us-vs-them",
+        "source": "Hacker News AI",
+        "score": 44
+      },
+      {
+        "title": "Blender MCP maintainer GitHub account hacked",
+        "url": "https://twitter.com/sidahuj/status/2086445625147793503",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
+        "title": "Cross-compilation with Wails (2025)",
+        "url": "https://chriswheeler.dev/posts/cross-compilation-with-wails/",
+        "source": "Hacker News AI",
+        "score": 7
+      },
+      {
+        "title": "ChatGPT starts blocking direct requests to copy an author's style",
+        "url": "https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/",
+        "source": "Hacker News AI",
+        "score": 81
       }
     ],
     "news": [
+      {
+        "title": "Suspected crime boss Daniel Kinahan appears in court after extradition",
+        "url": "https://www.bbc.co.uk/news/articles/c62qd5plzp6o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Israel rejects Trump's 15-point plan for Gaza, Netanyahu says",
         "url": "https://www.bbc.co.uk/news/articles/c5yw4lpe0yeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Suspected crime boss Daniel Kinahan appears in court after extradition",
-        "url": "https://www.bbc.co.uk/news/articles/c62qd5plzp6o?at_medium=RSS&at_campaign=rss",
+        "title": "Evidence that South African special forces murdered top detective shared with BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cly8djwgem0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Drones spotted over German base days after Leipzig bomb incident",
+        "url": "https://www.bbc.co.uk/news/articles/cwyeg1ljp2eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -164,16 +186,6 @@
       {
         "title": "Ecuador charges ex-minister over presidential candidate assassination case",
         "url": "https://www.bbc.co.uk/news/articles/cgjeznj6979o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Drones spotted over German base days after Leipzig bomb incident",
-        "url": "https://www.bbc.co.uk/news/articles/cwyeg1ljp2eo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Nigerian army says it safely rescued 33 people kidnapped by gunmen",
-        "url": "https://www.bbc.co.uk/news/articles/c89nkkvx2veo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -209,8 +221,8 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " OLED vs IPS: which laptop screen should students actually buy? ",
-        "url": "https://www.creativebloq.com/tech/laptops/oled-vs-ips-which-laptop-screen-should-students-actually-buy",
+        "title": " BMW's controversial Spider-Man advert could be even more damaging than the Jaguar rebrand ",
+        "url": "https://www.creativebloq.com/design/advertising/bmws-controversial-spider-man-advert-is-more-harmful-than-the-jaguar-rebrand",
         "source": "Creative Bloq"
       }
     ],
