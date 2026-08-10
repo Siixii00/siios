@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-10T07:43:36.429616",
-    "total_items": 62
+    "last_updated": "2026-08-10T09:23:45.112122",
+    "total_items": 55
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
         "url": "https://www.docker.com/products/docker-sandboxes/",
         "source": "Hacker News",
-        "score": 94
+        "score": 179
       },
       {
         "title": "What Happened to HackerOne?",
         "url": "https://blog.teknogeek.io/posts/what-happened-to-hackerone/",
         "source": "Hacker News",
-        "score": 178
-      },
-      {
-        "title": "Auto mode is now the default in Claude Code",
-        "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
-        "source": "Hacker News",
-        "score": 166
+        "score": 216
       },
       {
         "title": "Run Android ARM64 VR APKs on Apple Vision Pro",
         "url": "https://github.com/shinyquagsire23/Klepton",
         "source": "Hacker News",
-        "score": 50
+        "score": 69
       },
       {
         "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
         "url": "https://www.whodunnitai.com/",
         "source": "Hacker News",
-        "score": 59
-      },
-      {
-        "title": "The Philippines' big offshoring industry is growing despite AI",
-        "url": "https://www.economist.com/asia/2026/08/06/the-philippines-big-offshoring-industry-is-growing-despite-ai",
-        "source": "Hacker News",
-        "score": 24
+        "score": 77
       },
       {
         "title": "How I use LLMs to learn complex topics",
         "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
         "source": "Hacker News",
-        "score": 598
-      },
-      {
-        "title": "Turn satellite imagery into a paper globe you fold yourself",
-        "url": "https://foldingglobes.com/",
-        "source": "Hacker News",
-        "score": 42
-      },
-      {
-        "title": "How We Pushed CDC into Postgres",
-        "url": "https://www.snowflake.com/en/blog/engineering/postgres-to-snowflake-replication-mirroring/",
-        "source": "Hacker News",
-        "score": 81
+        "score": 627
       },
       {
         "title": "An Interesting Fourier Transform – 1/F Noise",
         "url": "https://www.dsprelated.com/showarticle/40.php",
         "source": "Hacker News",
-        "score": 14
+        "score": 33
       },
       {
-        "title": "Slap ROM Patcher",
-        "url": "https://nyuu.page/projects/slap/",
+        "title": "Auto mode is now the default in Claude Code",
+        "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
         "source": "Hacker News",
-        "score": 11
+        "score": 202
       },
       {
-        "title": "Taxi drivers rarely die of Alzheimer's",
-        "url": "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650",
+        "title": "How We Pushed CDC into Postgres",
+        "url": "https://www.snowflake.com/en/blog/engineering/postgres-to-snowflake-replication-mirroring/",
         "source": "Hacker News",
-        "score": 272
+        "score": 89
       },
       {
         "title": "Nearest Pint",
         "url": "https://knowwhereconsulting.co.uk/maps/pubs/",
         "source": "Hacker News",
-        "score": 23
+        "score": 30
+      },
+      {
+        "title": "An alias-based formulation of the borrow checker (2018)",
+        "url": "https://smallcultfollowing.com/babysteps/blog/2018/04/27/an-alias-based-formulation-of-the-borrow-checker/",
+        "source": "Hacker News",
+        "score": 5
+      },
+      {
+        "title": "Turn satellite imagery into a paper globe you fold yourself",
+        "url": "https://foldingglobes.com/",
+        "source": "Hacker News",
+        "score": 57
+      },
+      {
+        "title": "Taxi drivers rarely die of Alzheimer's",
+        "url": "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650",
+        "source": "Hacker News",
+        "score": 283
       },
       {
         "title": "Ask HN: What are you working on? (August 2026)",
         "url": "https://news.ycombinator.com/item?id=49233423",
         "source": "Hacker News",
-        "score": 233
+        "score": 238
       },
       {
         "title": "ATProto for Distributed Systems Engineers",
         "url": "https://atproto.com/articles/atproto-for-distsys-engineers",
         "source": "Hacker News",
-        "score": 61
+        "score": 77
+      },
+      {
+        "title": "Cool URIs Don't Change (1998)",
+        "url": "https://www.w3.org/Provider/Style/URI",
+        "source": "Hacker News",
+        "score": 237
       }
     ],
     "ai": [
@@ -101,76 +101,86 @@
         "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
         "url": "https://www.docker.com/products/docker-sandboxes/",
         "source": "Hacker News AI",
-        "score": 94
-      },
-      {
-        "title": "Auto mode is now the default in Claude Code",
-        "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
-        "source": "Hacker News AI",
-        "score": 166
+        "score": 179
       },
       {
         "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
         "url": "https://www.whodunnitai.com/",
         "source": "Hacker News AI",
-        "score": 59
-      },
-      {
-        "title": "The Philippines' big offshoring industry is growing despite AI",
-        "url": "https://www.economist.com/asia/2026/08/06/the-philippines-big-offshoring-industry-is-growing-despite-ai",
-        "source": "Hacker News AI",
-        "score": 24
+        "score": 77
       },
       {
         "title": "How I use LLMs to learn complex topics",
         "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
         "source": "Hacker News AI",
-        "score": 598
+        "score": 627
       },
       {
-        "title": "The tragedy of the commons, AI edition",
-        "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
+        "title": "Auto mode is now the default in Claude Code",
+        "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
         "source": "Hacker News AI",
-        "score": 111
+        "score": 202
+      },
+      {
+        "title": "The Philippines' big offshoring industry is growing despite AI",
+        "url": "https://www.economist.com/asia/2026/08/06/the-philippines-big-offshoring-industry-is-growing-despite-ai",
+        "source": "Hacker News AI",
+        "score": 49
       },
       {
         "title": "Tuxedo No. 2 – Cocktail recipes",
         "url": "https://tuxedono2.com",
         "source": "Hacker News AI",
-        "score": 83
+        "score": 91
+      },
+      {
+        "title": "The tragedy of the commons, AI edition",
+        "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
+        "source": "Hacker News AI",
+        "score": 122
       },
       {
         "title": "The Hacker's Renaissance (2025)",
         "url": "https://phrack.org/issues/72/19#article",
         "source": "Hacker News AI",
-        "score": 110
+        "score": 111
       },
       {
         "title": "The main way I've seen people turn ideologically crazy (2025)",
         "url": "https://blog.andymasley.com/p/the-main-way-ive-seen-people-turn",
         "source": "Hacker News AI",
-        "score": 111
+        "score": 118
       },
       {
         "title": "As AI grips world, the thrill of collecting vintage computers is growing",
         "url": "https://apnews.com/article/vintage-computers-silicon-valley-technology-apple-history-43d28a08d77cc477cdcd6951315d2f2d",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 15
+      },
+      {
+        "title": "ChatGPT starts blocking direct requests to copy an author's style",
+        "url": "https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/",
+        "source": "Hacker News AI",
+        "score": 93
       },
       {
         "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
         "url": "https://github.com/eighttrigrams/us-vs-them",
         "source": "Hacker News AI",
         "score": 51
-      },
-      {
-        "title": "ChatGPT starts blocking direct requests to copy an author's style",
-        "url": "https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/",
-        "source": "Hacker News AI",
-        "score": 91
       }
     ],
     "news": [
+      {
+        "title": "At least 13 killed in Ukrainian drone strike on Russia's Tatarstan region, officials say",
+        "url": "https://www.bbc.co.uk/news/articles/cvgjvgv926po?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "China evacuates one million from homes as massive storm arrives",
+        "url": "https://www.bbc.co.uk/news/articles/cx2rgzyplg2o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Suspected crime boss Daniel Kinahan appears in court after extradition",
         "url": "https://www.bbc.co.uk/news/articles/c62qd5plzp6o?at_medium=RSS&at_campaign=rss",
@@ -195,55 +205,9 @@
         "title": "Ancient Roman shipwreck discovered off Sicily coast",
         "url": "https://www.bbc.co.uk/news/articles/cvgx1kpz17go?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Residents warned to brace for the worst as Canada wildfire rages out of control",
-        "url": "https://www.bbc.co.uk/news/articles/cx25dkwk3e3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Ecuador charges ex-minister over presidential candidate assassination case",
-        "url": "https://www.bbc.co.uk/news/articles/cgjeznj6979o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " What are blend shapes in 3D animation, and how do you use them? ",
-        "url": "https://www.creativebloq.com/art/animation/what-are-blend-shapes-in-3d-animation-and-how-do-you-use-them",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Viture's new Pro XR glasses have the most useful party trick ever ",
-        "url": "https://www.creativebloq.com/tech/vitures-new-pro-xr-glasses-have-the-most-useful-party-trick-ever",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Wacom MovinkPad Pro 14 vs iPad Air: which is the better tablet for digital artists? ",
-        "url": "https://www.creativebloq.com/art/digital-art/wacom-movinkpad-pro-14-vs-ipad-air-which-is-the-better-tablet-for-digital-artists",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " From Zootopia and Toy Story to X-Men's Storm, the Disney D23 poster design is raising big expectations ",
-        "url": "https://www.creativebloq.com/art/animation/from-zootopia-and-toy-story-to-storm-the-disney-d23-poster-design-has-it-all",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Robert Pattinson’s Primetime performance is making me nauseous, and that’s great filmmaking ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/robert-pattinsons-primetime-performance-is-making-me-nauseous-and-thats-great-filmmaking",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Simpsons might be ending, and millennials think they know why ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/the-simpsons-might-be-coming-to-an-end-and-i-can-see-why",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Netflix, get that man out of your billboard ",
-        "url": "https://www.creativebloq.com/design/advertising/netflix-get-that-man-out-of-your-billboard",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "60,000-year-old ostrich eggshell engravings reveal a surprisingly sophisticated human mind",
