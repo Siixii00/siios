@@ -221,13 +221,15 @@ export default {
 
 // ===== 掃描已綁定頻道，處理新訊息（供 cron 與手動觸發）=====
 async function pollBoundChannels(env) {
+    // 從兩種綁定來源收集頻道：channel_bindings（/channel bind）與 discord_channel_mappings（PWA 設定）
     const bindings = await env.DB.prepare(`SELECT * FROM channel_bindings`).all();
-    const channels = bindings.results || [];
+    const mappings = await env.DB.prepare(`SELECT * FROM discord_channel_mappings`).all();
+    const channelMap = new Map();
+    for (const b of (bindings.results || [])) channelMap.set(b.channel_id, b.character_id);
+    for (const m of (mappings.results || [])) if (!channelMap.has(m.channel_id)) channelMap.set(m.channel_id, m.character_id);
     let processed = 0, replied = 0;
 
-    for (const b of channels) {
-        const channelId = b.channel_id;
-        const characterId = b.character_id;
+    for (const [channelId, characterId] of channelMap) {
         if (!channelId) continue;
 
         // 取得上次處理的訊息 ID
@@ -287,7 +289,7 @@ async function pollBoundChannels(env) {
         await env.DB.prepare(`INSERT INTO botState (key, cursor) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET cursor = excluded.cursor`).bind('last_msg_' + channelId, latestId).run();
     }
 
-    return { type: 'keepalive', channels: channels.length, processed, replied, ts: Date.now() };
+    return { type: 'keepalive', channels: channelMap.size, processed, replied, ts: Date.now() };
 }
 
 // 讓 AI 判斷是否對話題有興趣要插嘴
