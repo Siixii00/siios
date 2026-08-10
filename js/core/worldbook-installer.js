@@ -79,8 +79,14 @@ class WorldbookInstaller {
         const existingTheater = await TheaterSettingsDB.getAll();
         
         const categories = this._getCategoryEntries(worldbook);
+        if (!categories || !Array.isArray(categories)) {
+            throw new Error(`世界書結構異常: 找不到 sx_worldbook_* 類別 (categories=${typeof categories})`);
+        }
         
         for (const { category, entries, targetDB } of categories) {
+            if (!Array.isArray(entries)) {
+                throw new Error(`類別 ${category} 的 entries 不是陣列`);
+            }
             for (const entry of entries) {
                 const name = entry.title || 'Untitled';
                 
@@ -113,8 +119,14 @@ class WorldbookInstaller {
         let skipped = 0;
         
         const categories = this._getCategoryEntries(worldbook);
+        if (!categories || !Array.isArray(categories)) {
+            throw new Error(`世界書結構異常: 找不到 sx_worldbook_* 類別 (categories=${typeof categories})`);
+        }
         
         for (const { category, entries, targetDB } of categories) {
+            if (!Array.isArray(entries)) {
+                throw new Error(`類別 ${category} 的 entries 不是陣列`);
+            }
             const priority = CATEGORY_PRIORITY_MAP[category] || (targetDB === 'keyword' ? 'middle' : 'front');
             
             for (const entry of entries) {
