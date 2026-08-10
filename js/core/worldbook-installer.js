@@ -55,7 +55,7 @@ class WorldbookInstaller {
         return await response.json();
     }
     
-    async _getCategoryEntries(worldbook) {
+    _getCategoryEntries(worldbook) {
         const result = [];
         for (const [category, value] of Object.entries(worldbook)) {
             if (category.startsWith('sx_worldbook_') && Array.isArray(value)) {
