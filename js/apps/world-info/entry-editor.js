@@ -97,8 +97,7 @@ async function renderEntryEditor(params) {
     
     const enabledCell = createElement('div', 'ios-list-cell ios-list-cell-full');
     enabledCell.appendChild(createElement('span', 'flex-1', { textContent: '啟用' }));
-    const enabledToggle = createIOSToggle(formState.enabled);
-    enabledToggle.onclick = () => { formState.enabled = !formState.enabled; enabledToggle.classList.toggle('active'); };
+    const enabledToggle = createIOSToggle(formState.enabled, (checked) => { formState.enabled = checked; });
     enabledCell.appendChild(enabledToggle);
     settingsGroup.appendChild(enabledCell);
     main.appendChild(settingsGroup);
