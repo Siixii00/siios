@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-10T11:09:39.285141",
+    "last_updated": "2026-08-10T13:10:26.180698",
     "total_items": 63
   },
   "content": {
@@ -9,177 +9,182 @@
         "title": "Meta Muse Glimmer – open weights 30B local coding model",
         "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
         "source": "Hacker News",
-        "score": 80
+        "score": 298
+      },
+      {
+        "title": "Because It's Not Fun Enough: why languages fail",
+        "url": "https://bytecode.news/posts/2026/08/because-it-s-not-fun-enough",
+        "source": "Hacker News",
+        "score": 53
       },
       {
         "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
         "url": "https://www.docker.com/products/docker-sandboxes/",
         "source": "Hacker News",
-        "score": 252
+        "score": 329
+      },
+      {
+        "title": "Tail-call optimization in C is relatively recent",
+        "url": "https://lwn.net/Articles/1034703/",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
+        "title": "50k Boat Names",
+        "url": "https://www.beautifulpublicdata.com/boat-names/",
+        "source": "Hacker News",
+        "score": 5
+      },
+      {
+        "title": "Squeak/Smalltalk 6.1 Release Notes",
+        "url": "https://squeak.org/release_notes/6.1/",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Parametron: 50s Japanese computer that uses neither transistors nor vacuum tubes",
+        "url": "https://ethw.org/Milestones:Parametron,_1954",
+        "source": "Hacker News",
+        "score": 25
       },
       {
         "title": "What Happened to HackerOne?",
         "url": "https://blog.teknogeek.io/posts/what-happened-to-hackerone/",
         "source": "Hacker News",
-        "score": 254
-      },
-      {
-        "title": "Tail-Call Interpreters in Rust – Jimmy Ostler",
-        "url": "https://lordgoati.us/blog/tail-call/",
-        "source": "Hacker News",
-        "score": 25
+        "score": 285
       },
       {
         "title": "Run Android ARM64 VR APKs on Apple Vision Pro",
         "url": "https://github.com/shinyquagsire23/Klepton",
         "source": "Hacker News",
-        "score": 94
+        "score": 116
       },
       {
-        "title": "One Email, Three Identities: SPF, DKIM and DMARC Explained",
-        "url": "https://senderledger.com/articles/one-email-three-identities-spf-dkim-dmarc",
+        "title": "Tail-Call Interpreters in Rust – Jimmy Ostler",
+        "url": "https://lordgoati.us/blog/tail-call/",
         "source": "Hacker News",
-        "score": 5
-      },
-      {
-        "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
-        "url": "https://www.whodunnitai.com/",
-        "source": "Hacker News",
-        "score": 104
+        "score": 45
       },
       {
         "title": "An Interesting Fourier Transform – 1/F Noise",
         "url": "https://www.dsprelated.com/showarticle/40.php",
         "source": "Hacker News",
-        "score": 53
+        "score": 69
       },
       {
-        "title": "How I use LLMs to learn complex topics",
-        "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
+        "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
+        "url": "https://www.whodunnitai.com/",
         "source": "Hacker News",
-        "score": 662
+        "score": 125
       },
       {
-        "title": "Taxi drivers rarely die of Alzheimer's",
-        "url": "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650",
+        "title": "Over 181,000 AI meeting recordings left wide open in note taking app",
+        "url": "https://bobdahacker.com/blog/tldv-hack",
         "source": "Hacker News",
-        "score": 302
+        "score": 14
       },
       {
-        "title": "How We Pushed CDC into Postgres",
-        "url": "https://www.snowflake.com/en/blog/engineering/postgres-to-snowflake-replication-mirroring/",
+        "title": "DeepSeek costs OpenCode Go user $1.14/day; dual DGX breaks even in 24 years",
+        "url": "https://twitter.com/thdxr/status/2086599224674681242",
         "source": "Hacker News",
-        "score": 102
+        "score": 14
       },
       {
-        "title": "How Blackwing Pencils are Made [video]",
-        "url": "https://www.youtube.com/watch?v=fow-LsdaH2E",
+        "title": "Findphone: Locate a nearby Bluetooth device by signal strength",
+        "url": "https://github.com/ben-z/findphone",
         "source": "Hacker News",
-        "score": 11
-      },
-      {
-        "title": "Turn satellite imagery into a paper globe you fold yourself",
-        "url": "https://foldingglobes.com/",
-        "source": "Hacker News",
-        "score": 66
-      },
-      {
-        "title": "Ask HN: What are you working on? (August 2026)",
-        "url": "https://news.ycombinator.com/item?id=49233423",
-        "source": "Hacker News",
-        "score": 254
-      },
-      {
-        "title": "An alias-based formulation of the borrow checker (2018)",
-        "url": "https://smallcultfollowing.com/babysteps/blog/2018/04/27/an-alias-based-formulation-of-the-borrow-checker/",
-        "source": "Hacker News",
-        "score": 11
+        "score": 7
       }
     ],
     "ai": [
       {
+        "title": "Because It's Not Fun Enough: why languages fail",
+        "url": "https://bytecode.news/posts/2026/08/because-it-s-not-fun-enough",
+        "source": "Hacker News AI",
+        "score": 53
+      },
+      {
         "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
         "url": "https://www.docker.com/products/docker-sandboxes/",
         "source": "Hacker News AI",
-        "score": 252
+        "score": 329
+      },
+      {
+        "title": "Tail-call optimization in C is relatively recent",
+        "url": "https://lwn.net/Articles/1034703/",
+        "source": "Hacker News AI",
+        "score": 31
       },
       {
         "title": "Tail-Call Interpreters in Rust – Jimmy Ostler",
         "url": "https://lordgoati.us/blog/tail-call/",
         "source": "Hacker News AI",
-        "score": 25
-      },
-      {
-        "title": "One Email, Three Identities: SPF, DKIM and DMARC Explained",
-        "url": "https://senderledger.com/articles/one-email-three-identities-spf-dkim-dmarc",
-        "source": "Hacker News AI",
-        "score": 5
+        "score": 45
       },
       {
         "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
         "url": "https://www.whodunnitai.com/",
         "source": "Hacker News AI",
-        "score": 104
+        "score": 125
+      },
+      {
+        "title": "Over 181,000 AI meeting recordings left wide open in note taking app",
+        "url": "https://bobdahacker.com/blog/tldv-hack",
+        "source": "Hacker News AI",
+        "score": 14
       },
       {
         "title": "How I use LLMs to learn complex topics",
         "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
         "source": "Hacker News AI",
-        "score": 662
-      },
-      {
-        "title": "Meta's new open-weight model targets local agentic AI",
-        "url": "https://twitter.com/finkd/status/2086754845218726027",
-        "source": "Hacker News AI",
-        "score": 4
-      },
-      {
-        "title": "Auto mode is now the default in Claude Code",
-        "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
-        "source": "Hacker News AI",
-        "score": 227
+        "score": 706
       },
       {
         "title": "Tuxedo No. 2 – Cocktail recipes",
         "url": "https://tuxedono2.com",
         "source": "Hacker News AI",
-        "score": 100
+        "score": 110
+      },
+      {
+        "title": "Meta's new open-weight model targets local agentic AI",
+        "url": "https://twitter.com/finkd/status/2086754845218726027",
+        "source": "Hacker News AI",
+        "score": 16
+      },
+      {
+        "title": "Auto mode is now the default in Claude Code",
+        "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
+        "source": "Hacker News AI",
+        "score": 254
       },
       {
         "title": "The tragedy of the commons, AI edition",
         "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
         "source": "Hacker News AI",
-        "score": 129
-      },
-      {
-        "title": "The Hacker's Renaissance (2025)",
-        "url": "https://phrack.org/issues/72/19#article",
-        "source": "Hacker News AI",
-        "score": 116
+        "score": 134
       },
       {
         "title": "The main way I've seen people turn ideologically crazy (2025)",
         "url": "https://blog.andymasley.com/p/the-main-way-ive-seen-people-turn",
         "source": "Hacker News AI",
-        "score": 127
+        "score": 140
       },
       {
-        "title": "ChatGPT starts blocking direct requests to copy an author's style",
-        "url": "https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/",
+        "title": "The Hacker's Renaissance (2025)",
+        "url": "https://phrack.org/issues/72/19#article",
         "source": "Hacker News AI",
-        "score": 94
-      },
-      {
-        "title": "The Philippines' big offshoring industry is growing despite AI",
-        "url": "https://www.economist.com/asia/2026/08/06/the-philippines-big-offshoring-industry-is-growing-despite-ai",
-        "source": "Hacker News AI",
-        "score": 55
+        "score": 119
       }
     ],
     "news": [
       {
-        "title": "At least 13 killed in Ukrainian strike on Russia's Tatarstan region, officials say",
+        "title": "At least 13 killed in Ukrainian drone strike deep into Russia",
         "url": "https://www.bbc.co.uk/news/articles/cvgjvgv926po?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Evidence that South African special forces murdered top detective shared with BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cly8djwgem0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -193,27 +198,27 @@
         "source": "BBC World"
       },
       {
-        "title": "'Body in suitcase' found in Australia turns out to be lifelike doll",
-        "url": "https://www.bbc.co.uk/news/articles/clyqg4w3gz9o?at_medium=RSS&at_campaign=rss",
+        "title": "Alleged rebel leader killed in Colombia as president targets armed groups",
+        "url": "https://www.bbc.co.uk/news/articles/c5yrljp9x9eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Suspected crime boss Kinahan spends first night in custody in Ireland",
-        "url": "https://www.bbc.co.uk/news/articles/c62qd5plzp6o?at_medium=RSS&at_campaign=rss",
+        "title": "World's oceans hit record-high July temperatures",
+        "url": "https://www.bbc.co.uk/news/articles/cpvw8vmmgrwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Israel rejects Trump's 15-point plan for Gaza, Netanyahu says",
-        "url": "https://www.bbc.co.uk/news/articles/c5yw4lpe0yeo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Evidence that South African special forces murdered top detective shared with BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cly8djwgem0o?at_medium=RSS&at_campaign=rss",
+        "title": "India police fire tear gas at protesters seeking exam reforms ",
+        "url": "https://www.bbc.co.uk/news/articles/c89nkz4vjyxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The Apple Watch redesign can't come soon enough ",
+        "url": "https://www.creativebloq.com/design/product-design/the-apple-watch-redesign-cant-come-soon-enough",
+        "source": "Creative Bloq"
+      },
       {
         "title": " What are blend shapes in 3D animation, and how do you use them? ",
         "url": "https://www.creativebloq.com/art/animation/what-are-blend-shapes-in-3d-animation-and-how-do-you-use-them",
@@ -242,11 +247,6 @@
       {
         "title": " The Simpsons might be ending, and millennials think they know why ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/the-simpsons-might-be-coming-to-an-end-and-i-can-see-why",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Netflix, get that man out of your billboard ",
-        "url": "https://www.creativebloq.com/design/advertising/netflix-get-that-man-out-of-your-billboard",
         "source": "Creative Bloq"
       }
     ],
@@ -289,6 +289,21 @@
     ],
     "gaming": [
       {
+        "title": "You Can Play PS Plus Games Without Owning a PS5, but There’s a Catch",
+        "url": "https://www.polygon.com/asobi-remote-play-ps-plus-games-steam-deck/",
+        "source": "Polygon"
+      },
+      {
+        "title": "I Played the Game Recommended by the Weeknd, and It Could Be 2026’s Sleeper Hit",
+        "url": "https://www.polygon.com/about-fishing-game-the-weeknd-recommend/",
+        "source": "Polygon"
+      },
+      {
+        "title": "How 'Camp Miasma’s Crew Revived a Pre-CGI Technique with \"Old-School Film Nerd\" Ambition",
+        "url": "https://www.polygon.com/teenage-sex-death-camp-miasma-matte-painting-interview/",
+        "source": "Polygon"
+      },
+      {
         "title": "One Piece Follows in Pokémon’s Footsteps With Controversial ID Measures",
         "url": "https://www.polygon.com/one-piece-card-game-facial-recognition-scalpers/",
         "source": "Polygon"
@@ -306,21 +321,6 @@
       {
         "title": "In One Line, 'House of the Dragon' Just Quietly Retconned the Entire Plot of 'Game of Thrones'",
         "url": "https://www.polygon.com/house-of-the-dragon-season-3-finale-prince-that-was-promised/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'House of the Dragon' Season 3 Ending Explained: I Finally Understand Why George R.R. Martin Hates This Show",
-        "url": "https://www.polygon.com/house-of-the-dragon-season-3-ending-explained-grrm/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Best Games Like Dungeon Crawler Carl",
-        "url": "https://www.polygon.com/games-like-dungeon-crawler-carl/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Marvel Tokon players are trying weird solutions to fix the bad PC port",
-        "url": "https://www.polygon.com/marvel-tokons-pc-issues-egs-store/",
         "source": "Polygon"
       }
     ],
