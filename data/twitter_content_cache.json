@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-10T14:59:41.678973",
+    "last_updated": "2026-08-10T16:06:02.510386",
     "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Mars Bar from 1991 found – and it's 20g bigger than today's",
+        "url": "https://www.bbc.com/news/articles/c1j1kjy7gewo",
+        "source": "Hacker News",
+        "score": 60
+      },
+      {
         "title": "Meta Muse Glimmer – open weights 30B local coding model",
         "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
         "source": "Hacker News",
-        "score": 496
+        "score": 623
+      },
+      {
+        "title": "Itadakimasu: A Word You Say to the Food, Not the Cook",
+        "url": "https://thetokyohermit.substack.com/p/itadakimasu-a-word-you-say-to-the",
+        "source": "Hacker News",
+        "score": 18
       },
       {
         "title": "Squeak/Smalltalk 6.1 Release Notes",
         "url": "https://squeak.org/release_notes/6.1/",
         "source": "Hacker News",
-        "score": 66
+        "score": 88
       },
       {
         "title": "50k Boat Names",
         "url": "https://www.beautifulpublicdata.com/boat-names/",
         "source": "Hacker News",
-        "score": 61
+        "score": 84
       },
       {
         "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
         "url": "https://www.docker.com/products/docker-sandboxes/",
         "source": "Hacker News",
-        "score": 399
-      },
-      {
-        "title": "Tail-call optimization in C is relatively recent",
-        "url": "https://lwn.net/Articles/1034703/",
-        "source": "Hacker News",
-        "score": 65
+        "score": 448
       },
       {
         "title": "Parametron: 50s Japanese computer that uses neither transistors nor vacuum tubes",
         "url": "https://ethw.org/Milestones:Parametron,_1954",
         "source": "Hacker News",
-        "score": 70
+        "score": 108
       },
       {
-        "title": "OpenAI's letter to Governor Abbott on responsible AI infrastructure in Texas",
-        "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
+        "title": "Ask HN: In your experience, what are sound conventions for e-ink UI development?",
+        "url": "https://news.ycombinator.com/item?id=49213660",
         "source": "Hacker News",
-        "score": 9
+        "score": 13
       },
       {
         "title": "Over 181,000 AI meeting recordings left wide open in note taking app",
         "url": "https://bobdahacker.com/blog/tldv-hack",
         "source": "Hacker News",
-        "score": 198
+        "score": 284
       },
       {
         "title": "Mistral Patent for \"Code implemented tool calls\"",
         "url": "https://patentsgazette.uspto.gov/week26/OG/html/1547-5/US12670045-20260630.html",
         "source": "Hacker News",
-        "score": 75
+        "score": 103
       },
       {
-        "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
-        "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
+        "title": "Magnitude 7.4 Earthquake – 5 km S of San José del Palmar, Colombia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjl2/executive",
         "source": "Hacker News",
-        "score": 25
+        "score": 3
       },
       {
-        "title": "What Happened to HackerOne?",
-        "url": "https://blog.teknogeek.io/posts/what-happened-to-hackerone/",
+        "title": "'Pervert glasses': Backlash against Meta's smart glasses grows",
+        "url": "https://www.seattletimes.com/business/technology/pervert-glasses-backlash-against-metas-smart-glasses-grows/",
         "source": "Hacker News",
-        "score": 316
+        "score": 33
       },
       {
-        "title": "Defending my own brain against enshittification",
-        "url": "https://mrmarket.lol/how-i-feel-calmin-control-of-my-life-in-the-time-of-enshittification/",
+        "title": "OpenAI's New Device Will Be Hockey Puck-Sized and Cost over $300",
+        "url": "https://www.bloomberg.com/news/articles/2026-08-06/what-is-openai-s-device-a-doughnut-shaped-speaker-that-costs-over-300",
         "source": "Hacker News",
-        "score": 55
+        "score": 21
       },
       {
-        "title": "Run Android ARM64 VR APKs on Apple Vision Pro",
-        "url": "https://github.com/shinyquagsire23/Klepton",
+        "title": "Oil giants face backlash as Iran conflict fuels multi-billion-pound profits",
+        "url": "https://leftfootforward.org/2026/08/oil-giants-face-backlash-as-conflict-fuels-multi-billion-pound-profits/",
         "source": "Hacker News",
-        "score": 138
+        "score": 3
       },
       {
-        "title": "Tail-Call Interpreters in Rust – Jimmy Ostler",
-        "url": "https://lordgoati.us/blog/tail-call/",
+        "title": "Tail-call optimization in C is relatively recent",
+        "url": "https://lwn.net/Articles/1034703/",
         "source": "Hacker News",
-        "score": 64
-      },
-      {
-        "title": "An Interesting Fourier Transform – 1/F Noise",
-        "url": "https://www.dsprelated.com/showarticle/40.php",
-        "source": "Hacker News",
-        "score": 86
+        "score": 74
       }
     ],
     "ai": [
@@ -101,71 +101,83 @@
         "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
         "url": "https://www.docker.com/products/docker-sandboxes/",
         "source": "Hacker News AI",
-        "score": 399
-      },
-      {
-        "title": "Tail-call optimization in C is relatively recent",
-        "url": "https://lwn.net/Articles/1034703/",
-        "source": "Hacker News AI",
-        "score": 65
-      },
-      {
-        "title": "OpenAI's letter to Governor Abbott on responsible AI infrastructure in Texas",
-        "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
-        "source": "Hacker News AI",
-        "score": 9
+        "score": 448
       },
       {
         "title": "Over 181,000 AI meeting recordings left wide open in note taking app",
         "url": "https://bobdahacker.com/blog/tldv-hack",
         "source": "Hacker News AI",
-        "score": 198
+        "score": 284
       },
       {
         "title": "Mistral Patent for \"Code implemented tool calls\"",
         "url": "https://patentsgazette.uspto.gov/week26/OG/html/1547-5/US12670045-20260630.html",
         "source": "Hacker News AI",
-        "score": 75
+        "score": 103
+      },
+      {
+        "title": "'Pervert glasses': Backlash against Meta's smart glasses grows",
+        "url": "https://www.seattletimes.com/business/technology/pervert-glasses-backlash-against-metas-smart-glasses-grows/",
+        "source": "Hacker News AI",
+        "score": 33
+      },
+      {
+        "title": "OpenAI's New Device Will Be Hockey Puck-Sized and Cost over $300",
+        "url": "https://www.bloomberg.com/news/articles/2026-08-06/what-is-openai-s-device-a-doughnut-shaped-speaker-that-costs-over-300",
+        "source": "Hacker News AI",
+        "score": 21
+      },
+      {
+        "title": "Tail-call optimization in C is relatively recent",
+        "url": "https://lwn.net/Articles/1034703/",
+        "source": "Hacker News AI",
+        "score": 74
+      },
+      {
+        "title": "Kinney Drugs pulls back AI phone assistant after hundreds of customer complaints",
+        "url": "https://www.wcax.com/2026/08/07/kinney-drugs-pulls-back-ai-phone-assistant-after-hundreds-customer-complaints/",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
         "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News AI",
-        "score": 25
+        "score": 75
       },
       {
-        "title": "Defending my own brain against enshittification",
-        "url": "https://mrmarket.lol/how-i-feel-calmin-control-of-my-life-in-the-time-of-enshittification/",
+        "title": "OpenAI's letter to Governor Abbott on responsible AI infrastructure in Texas",
+        "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
         "source": "Hacker News AI",
-        "score": 55
-      },
-      {
-        "title": "Tail-Call Interpreters in Rust – Jimmy Ostler",
-        "url": "https://lordgoati.us/blog/tail-call/",
-        "source": "Hacker News AI",
-        "score": 64
+        "score": 48
       },
       {
         "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
         "url": "https://www.whodunnitai.com/",
         "source": "Hacker News AI",
-        "score": 156
+        "score": 165
+      },
+      {
+        "title": "Tail-Call Interpreters in Rust – Jimmy Ostler",
+        "url": "https://lordgoati.us/blog/tail-call/",
+        "source": "Hacker News AI",
+        "score": 71
+      },
+      {
+        "title": "Convince an AI it's not alive in psychological horror game Prove You're Human",
+        "url": "https://www.theguardian.com/games/2026/aug/10/ai-psychological-horror-game-prove-youre-human-sunset-visitor-studio",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "How I use LLMs to learn complex topics",
         "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
         "source": "Hacker News AI",
-        "score": 750
+        "score": 764
       },
       {
-        "title": "The Future Is for Everyone – The Path to a Positive AI Future",
-        "url": "https://www.meta.com/thefutureisforeveryone/",
-        "source": "Hacker News AI",
-        "score": 15
-      },
-      {
-        "title": "Because It's Not Fun Enough: why languages fail",
-        "url": "https://bytecode.news/posts/2026/08/because-it-s-not-fun-enough",
+        "title": "Defending my own brain against enshittification",
+        "url": "https://mrmarket.lol/how-i-feel-calmin-control-of-my-life-in-the-time-of-enshittification/",
         "source": "Hacker News AI",
         "score": 79
       },
@@ -173,19 +185,7 @@
         "title": "Tuxedo No. 2 – Cocktail recipes",
         "url": "https://tuxedono2.com",
         "source": "Hacker News AI",
-        "score": 123
-      },
-      {
-        "title": "Meta's new open-weight model targets local agentic AI",
-        "url": "https://twitter.com/finkd/status/2086754845218726027",
-        "source": "Hacker News AI",
-        "score": 32
-      },
-      {
-        "title": "Auto mode is now the default in Claude Code",
-        "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
-        "source": "Hacker News AI",
-        "score": 261
+        "score": 126
       }
     ],
     "news": [
@@ -227,6 +227,11 @@
     ],
     "art": [
       {
+        "title": " Buc-ee's infamous logo design lawsuits are coming back to bite it ",
+        "url": "https://www.creativebloq.com/design/logos-icons/buc-ees-has-unleashed-a-demon-with-its-logo-design-lawsuits",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " The Apple Watch redesign can't come soon enough ",
         "url": "https://www.creativebloq.com/design/product-design/the-apple-watch-redesign-cant-come-soon-enough",
         "source": "Creative Bloq"
@@ -254,11 +259,6 @@
       {
         "title": " Robert Pattinson’s Primetime performance is making me nauseous, and that’s great filmmaking ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/robert-pattinsons-primetime-performance-is-making-me-nauseous-and-thats-great-filmmaking",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Simpsons might be ending, and millennials think they know why ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/the-simpsons-might-be-coming-to-an-end-and-i-can-see-why",
         "source": "Creative Bloq"
       }
     ],
@@ -301,6 +301,21 @@
     ],
     "gaming": [
       {
+        "title": "1666 Amsterdam, from the Creator of Assassin's Creed, Launches into Early Access in Just 2 Weeks",
+        "url": "https://www.polygon.com/1666-amsterdam-early-access-release-date-new-trailer/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Genshin Impact 7.0 release time in your time zone",
+        "url": "https://www.polygon.com/genshin-impact-version-7-0-release-time-edt-pdt/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Black Myth Devs Were Inspired by 2026's Hottest Movie to Reject AI in Sequel’s Development",
+        "url": "https://www.polygon.com/black-myth-wukong-devs-ai-sequel-nolan-odyssey/",
+        "source": "Polygon"
+      },
+      {
         "title": "HBO’s House of the Dragon Replacement Officially Arrives in 1 Week",
         "url": "https://www.polygon.com/lanterns-hbo-dcu-premiere/",
         "source": "Polygon"
@@ -318,21 +333,6 @@
       {
         "title": "Steam’s Controversial Refund Decision Could Set a Dangerous Precedent",
         "url": "https://www.polygon.com/steam-battlefield-6-refund-removed-modes/",
-        "source": "Polygon"
-      },
-      {
-        "title": "You Can Play PS Plus Games Without Owning a PS5, but There’s a Catch",
-        "url": "https://www.polygon.com/asobi-remote-play-ps-plus-games-steam-deck/",
-        "source": "Polygon"
-      },
-      {
-        "title": "I Played the Game Recommended by the Weeknd, and It Could Be 2026’s Sleeper Hit",
-        "url": "https://www.polygon.com/about-fishing-game-the-weeknd-recommend/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How 'Camp Miasma’s Crew Revived a Pre-CGI Technique with \"Old-School Film Nerd\" Ambition",
-        "url": "https://www.polygon.com/teenage-sex-death-camp-miasma-matte-painting-interview/",
         "source": "Polygon"
       }
     ],
