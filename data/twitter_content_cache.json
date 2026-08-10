@@ -1,191 +1,191 @@
 {
   "metadata": {
-    "last_updated": "2026-08-10T17:52:20.739746",
+    "last_updated": "2026-08-10T18:58:26.786817",
     "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Learning more about Claude's mathematical capabilities",
+        "url": "https://www.anthropic.com/research/riemann-zeta",
+        "source": "Hacker News",
+        "score": 74
+      },
+      {
         "title": "Muse Glimmer: 30B-parameter model optimized for always-on local agent workflows",
         "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
         "source": "Hacker News",
-        "score": 751
+        "score": 815
       },
       {
         "title": "Sonic Pi v5",
         "url": "https://www.patreon.com/samaaron/posts/sonic-pi-v5-166001392",
         "source": "Hacker News",
-        "score": 70
+        "score": 147
+      },
+      {
+        "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
+        "url": "https://www.stoaexchange.com",
+        "source": "Hacker News",
+        "score": 36
       },
       {
         "title": "Show HN: Ante, a coding agent in a single binary that runs offline",
         "url": "https://github.com/AntigmaLabs/ante",
         "source": "Hacker News",
-        "score": 61
-      },
-      {
-        "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
-        "url": "https://www.stoaexchange.com",
-        "source": "Hacker News",
-        "score": 22
+        "score": 79
       },
       {
         "title": "Exploiting System Management Mode with a very long interrupt",
         "url": "https://github.com/xoreaxeaxeax/smiiiiiiiiiiiiiiii",
         "source": "Hacker News",
-        "score": 45
-      },
-      {
-        "title": "The Tragedy of the Cognitive Commons",
-        "url": "https://arxiv.org/abs/2607.29380",
-        "source": "Hacker News",
-        "score": 21
-      },
-      {
-        "title": "Magnitude 7.4 Earthquake – 5 km S of San José del Palmar, Colombia",
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjl2/executive",
-        "source": "Hacker News",
-        "score": 91
-      },
-      {
-        "title": "50k Boat Names",
-        "url": "https://www.beautifulpublicdata.com/boat-names/",
-        "source": "Hacker News",
-        "score": 107
-      },
-      {
-        "title": "Squeak 6.1",
-        "url": "https://squeak.org/release_notes/6.1/",
-        "source": "Hacker News",
-        "score": 121
-      },
-      {
-        "title": "Itadakimasu: A word you say to the food, not the cook",
-        "url": "https://thetokyohermit.substack.com/p/itadakimasu-a-word-you-say-to-the",
-        "source": "Hacker News",
-        "score": 56
-      },
-      {
-        "title": "Ask HN: In your experience, what are sound conventions for e-ink UI development?",
-        "url": "https://news.ycombinator.com/item?id=49213660",
-        "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
-        "url": "https://www.docker.com/products/docker-sandboxes/",
-        "source": "Hacker News",
-        "score": 517
-      },
-      {
-        "title": "Kinney Drugs pulls back AI phone assistant after hundreds of customer complaints",
-        "url": "https://www.wcax.com/2026/08/07/kinney-drugs-pulls-back-ai-phone-assistant-after-hundreds-customer-complaints/",
-        "source": "Hacker News",
-        "score": 77
+        "score": 66
       },
       {
         "title": "Midlife Vascular Risk Burden and Dementia-Free Survival Years",
         "url": "https://www.neurology.org/doi/10.1212/WN9.0000000000000152",
         "source": "Hacker News",
-        "score": 32
+        "score": 52
       },
       {
-        "title": "Extreme 220GHz+Broadband Silicon Capacitor X2SC 0201M 22nF BV11",
-        "url": "https://pim.murata.com/asset/pim4/siliconCapacitor/SICAP_X2SC422522_PDF_SILICONCAPACITOR",
+        "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
+        "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News",
-        "score": 19
+        "score": 106
+      },
+      {
+        "title": "The Tragedy of the Cognitive Commons",
+        "url": "https://arxiv.org/abs/2607.29380",
+        "source": "Hacker News",
+        "score": 43
+      },
+      {
+        "title": "Itadakimasu: A word you say to the food, not the cook",
+        "url": "https://thetokyohermit.substack.com/p/itadakimasu-a-word-you-say-to-the",
+        "source": "Hacker News",
+        "score": 83
+      },
+      {
+        "title": "50k Boat Names",
+        "url": "https://www.beautifulpublicdata.com/boat-names/",
+        "source": "Hacker News",
+        "score": 122
+      },
+      {
+        "title": "Squeak 6.1",
+        "url": "https://squeak.org/release_notes/6.1/",
+        "source": "Hacker News",
+        "score": 141
+      },
+      {
+        "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
+        "url": "https://www.docker.com/products/docker-sandboxes/",
+        "source": "Hacker News",
+        "score": 541
+      },
+      {
+        "title": "Magnitude 7.4 Earthquake – 5 km S of San José del Palmar, Colombia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tjl2/executive",
+        "source": "Hacker News",
+        "score": 114
+      },
+      {
+        "title": "The Psychedelic Toad of the Sonoran Desert",
+        "url": "https://en.wikipedia.org/wiki/Bufo_Alvarius:_the_Psychedelic_Toad_of_the_Sonoran_Desert",
+        "source": "Hacker News",
+        "score": 7
       }
     ],
     "ai": [
       {
+        "title": "Learning more about Claude's mathematical capabilities",
+        "url": "https://www.anthropic.com/research/riemann-zeta",
+        "source": "Hacker News AI",
+        "score": 74
+      },
+      {
         "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
         "url": "https://www.stoaexchange.com",
         "source": "Hacker News AI",
-        "score": 22
+        "score": 36
+      },
+      {
+        "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
+        "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
+        "source": "Hacker News AI",
+        "score": 106
       },
       {
         "title": "The Tragedy of the Cognitive Commons",
         "url": "https://arxiv.org/abs/2607.29380",
         "source": "Hacker News AI",
-        "score": 21
+        "score": 43
       },
       {
         "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
         "url": "https://www.docker.com/products/docker-sandboxes/",
         "source": "Hacker News AI",
-        "score": 517
+        "score": 541
       },
       {
-        "title": "Kinney Drugs pulls back AI phone assistant after hundreds of customer complaints",
-        "url": "https://www.wcax.com/2026/08/07/kinney-drugs-pulls-back-ai-phone-assistant-after-hundreds-customer-complaints/",
+        "title": "Letter to Governor Abbott on responsible AI infrastructure in Texas",
+        "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
         "source": "Hacker News AI",
-        "score": 77
+        "score": 55
       },
       {
         "title": "Mistral Patent for “Code implemented tool calls”",
         "url": "https://patentsgazette.uspto.gov/week26/OG/html/1547-5/US12670045-20260630.html",
         "source": "Hacker News AI",
-        "score": 138
-      },
-      {
-        "title": "Tail-call optimization in C is relatively recent (2025)",
-        "url": "https://lwn.net/Articles/1034703/",
-        "source": "Hacker News AI",
-        "score": 88
-      },
-      {
-        "title": "There is no “done”: Reflections on a completed Appalachian Trail thru-hike (2022)",
-        "url": "https://thetrek.co/appalachian-trail/there-is-no-done-reflections-on-a-completed-at-thru-hike/",
-        "source": "Hacker News AI",
-        "score": 18
-      },
-      {
-        "title": "Exploring Claude/GPT Knowledge Cutoffs and Pre-Training Timelines",
-        "url": "https://blog.sshh.io/p/exploring-claudegpt-knowledge-cutoffs",
-        "source": "Hacker News AI",
-        "score": 23
+        "score": 149
       },
       {
         "title": "Humanising LLM Outputs Is Dumb",
         "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
         "source": "Hacker News AI",
-        "score": 18
+        "score": 43
       },
       {
-        "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
-        "url": "https://www.whodunnitai.com/",
+        "title": "Tail-call optimization in C is relatively recent (2025)",
+        "url": "https://lwn.net/Articles/1034703/",
         "source": "Hacker News AI",
-        "score": 178
+        "score": 96
+      },
+      {
+        "title": "Kinney Drugs pulls back AI phone assistant after hundreds of customer complaints",
+        "url": "https://www.wcax.com/2026/08/07/kinney-drugs-pulls-back-ai-phone-assistant-after-hundreds-customer-complaints/",
+        "source": "Hacker News AI",
+        "score": 102
+      },
+      {
+        "title": "Exploring Claude/GPT Knowledge Cutoffs and Pre-Training Timelines",
+        "url": "https://blog.sshh.io/p/exploring-claudegpt-knowledge-cutoffs",
+        "source": "Hacker News AI",
+        "score": 34
+      },
+      {
+        "title": "There is no “done”: Reflections on a completed Appalachian Trail thru-hike (2022)",
+        "url": "https://thetrek.co/appalachian-trail/there-is-no-done-reflections-on-a-completed-at-thru-hike/",
+        "source": "Hacker News AI",
+        "score": 25
       },
       {
         "title": "AI Fortunes Are Reviving an Old Debate About Private Power",
         "url": "https://ai-updates.net/ai-fortunes-philanthropy-private-power/",
         "source": "Hacker News AI",
-        "score": 15
+        "score": 24
       },
       {
-        "title": "Signal is working on a paid option to create an account without a phone number",
-        "url": "https://aboutsignal.com/news/signal-login-registration-without-a-phone-number/",
+        "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
+        "url": "https://www.whodunnitai.com/",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 183
       },
       {
-        "title": "'Pervert glasses': Backlash against Meta's smart glasses grows",
-        "url": "https://www.seattletimes.com/business/technology/pervert-glasses-backlash-against-metas-smart-glasses-grows/",
+        "title": "Claude moves bound of the Riemann Hypothesis from 41.6% to 67.2%",
+        "url": "https://twitter.com/jarredsumner/status/2086869681785500011",
         "source": "Hacker News AI",
-        "score": 141
-      },
-      {
-        "title": "Tail-Call Interpreters in Rust – Jimmy Ostler",
-        "url": "https://lordgoati.us/blog/tail-call/",
-        "source": "Hacker News AI",
-        "score": 74
-      },
-      {
-        "title": "AI Boot Camps Surge as Workers Race to Learn New Skills",
-        "url": "https://www.bloomberg.com/news/articles/2026-08-08/ai-training-boom-sends-colleges-racing-to-offer-credentials",
-        "source": "Hacker News AI",
-        "score": 4
+        "score": 11
       }
     ],
     "news": [
@@ -210,18 +210,18 @@
         "source": "BBC World"
       },
       {
-        "title": "Evidence that South African special forces murdered top detective shared with BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cly8djwgem0o?at_medium=RSS&at_campaign=rss",
+        "title": "We are chasing Ebola virus - it is ahead of us, WHO warns",
+        "url": "https://www.bbc.co.uk/news/articles/c5ydx7m8gzeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Former Thai MP allegedly kills official and confesses on YouTube",
-        "url": "https://www.bbc.co.uk/news/articles/cqx7lje8l79o?at_medium=RSS&at_campaign=rss",
+        "title": "Russian court bars only anti-war party from standing in parliamentary elections",
+        "url": "https://www.bbc.co.uk/news/articles/cy9w1l5jr7lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Alleged rebel leader killed in Colombia as president targets armed groups",
-        "url": "https://www.bbc.co.uk/news/articles/c5yrljp9x9eo?at_medium=RSS&at_campaign=rss",
+        "title": "New train service connects Finland and Sweden for first time in decades",
+        "url": "https://www.bbc.co.uk/news/articles/cx2lwpzz6qjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -301,6 +301,21 @@
     ],
     "gaming": [
       {
+        "title": "A Cult Favorite Marvel Character's Dominance Officially Continues in New Release",
+        "url": "https://www.polygon.com/marvel-comics-x-men-x-orcists-magik-series/",
+        "source": "Polygon"
+      },
+      {
+        "title": "40 Years Later, This Is Still The Greatest Video Game Quote of All Time",
+        "url": "https://www.polygon.com/greatest-video-game-quote-all-time/",
+        "source": "Polygon"
+      },
+      {
+        "title": "When and how does Ulf the White die in House of the Dragon?",
+        "url": "https://www.polygon.com/house-of-the-dragon-ulf-the-white-how-does-he-die/",
+        "source": "Polygon"
+      },
+      {
         "title": "Netflix’s 112-Minute Sci-Fi Thriller Is Officially #1 Worldwide Despite Terrible Rotten Tomatoes Score",
         "url": "https://www.polygon.com/netlifx-streaming-movies-august-10-2026/",
         "source": "Polygon"
@@ -318,21 +333,6 @@
       {
         "title": "Ser Roderick Dustin? Why Roddy the Ruin Was the Best Part of 'House of the Dragon's Season 3 Finale",
         "url": "https://www.polygon.com/roddy-the-ruin-death-ormund-hightower-hotd-s3e8-finale-dragon/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The 9 Best RPGs Like Dragon Age",
-        "url": "https://www.polygon.com/best-games-like-dragon-age/",
-        "source": "Polygon"
-      },
-      {
-        "title": "1666 Amsterdam, from the Creator of Assassin's Creed, Launches into Early Access in Just 2 Weeks",
-        "url": "https://www.polygon.com/1666-amsterdam-early-access-release-date-new-trailer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Genshin Impact 7.0 release time in your time zone",
-        "url": "https://www.polygon.com/genshin-impact-version-7-0-release-time-edt-pdt/",
         "source": "Polygon"
       }
     ],
