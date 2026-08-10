@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-10T13:10:26.180698",
-    "total_items": 63
+    "last_updated": "2026-08-10T14:59:41.678973",
+    "total_items": 65
   },
   "content": {
     "tech": [
@@ -9,41 +9,59 @@
         "title": "Meta Muse Glimmer – open weights 30B local coding model",
         "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
         "source": "Hacker News",
-        "score": 298
-      },
-      {
-        "title": "Because It's Not Fun Enough: why languages fail",
-        "url": "https://bytecode.news/posts/2026/08/because-it-s-not-fun-enough",
-        "source": "Hacker News",
-        "score": 53
-      },
-      {
-        "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
-        "url": "https://www.docker.com/products/docker-sandboxes/",
-        "source": "Hacker News",
-        "score": 329
-      },
-      {
-        "title": "Tail-call optimization in C is relatively recent",
-        "url": "https://lwn.net/Articles/1034703/",
-        "source": "Hacker News",
-        "score": 31
-      },
-      {
-        "title": "50k Boat Names",
-        "url": "https://www.beautifulpublicdata.com/boat-names/",
-        "source": "Hacker News",
-        "score": 5
+        "score": 496
       },
       {
         "title": "Squeak/Smalltalk 6.1 Release Notes",
         "url": "https://squeak.org/release_notes/6.1/",
         "source": "Hacker News",
-        "score": 16
+        "score": 66
+      },
+      {
+        "title": "50k Boat Names",
+        "url": "https://www.beautifulpublicdata.com/boat-names/",
+        "source": "Hacker News",
+        "score": 61
+      },
+      {
+        "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
+        "url": "https://www.docker.com/products/docker-sandboxes/",
+        "source": "Hacker News",
+        "score": 399
+      },
+      {
+        "title": "Tail-call optimization in C is relatively recent",
+        "url": "https://lwn.net/Articles/1034703/",
+        "source": "Hacker News",
+        "score": 65
       },
       {
         "title": "Parametron: 50s Japanese computer that uses neither transistors nor vacuum tubes",
         "url": "https://ethw.org/Milestones:Parametron,_1954",
+        "source": "Hacker News",
+        "score": 70
+      },
+      {
+        "title": "OpenAI's letter to Governor Abbott on responsible AI infrastructure in Texas",
+        "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
+        "title": "Over 181,000 AI meeting recordings left wide open in note taking app",
+        "url": "https://bobdahacker.com/blog/tldv-hack",
+        "source": "Hacker News",
+        "score": 198
+      },
+      {
+        "title": "Mistral Patent for \"Code implemented tool calls\"",
+        "url": "https://patentsgazette.uspto.gov/week26/OG/html/1547-5/US12670045-20260630.html",
+        "source": "Hacker News",
+        "score": 75
+      },
+      {
+        "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
+        "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News",
         "score": 25
       },
@@ -51,129 +69,123 @@
         "title": "What Happened to HackerOne?",
         "url": "https://blog.teknogeek.io/posts/what-happened-to-hackerone/",
         "source": "Hacker News",
-        "score": 285
+        "score": 316
+      },
+      {
+        "title": "Defending my own brain against enshittification",
+        "url": "https://mrmarket.lol/how-i-feel-calmin-control-of-my-life-in-the-time-of-enshittification/",
+        "source": "Hacker News",
+        "score": 55
       },
       {
         "title": "Run Android ARM64 VR APKs on Apple Vision Pro",
         "url": "https://github.com/shinyquagsire23/Klepton",
         "source": "Hacker News",
-        "score": 116
+        "score": 138
       },
       {
         "title": "Tail-Call Interpreters in Rust – Jimmy Ostler",
         "url": "https://lordgoati.us/blog/tail-call/",
         "source": "Hacker News",
-        "score": 45
+        "score": 64
       },
       {
         "title": "An Interesting Fourier Transform – 1/F Noise",
         "url": "https://www.dsprelated.com/showarticle/40.php",
         "source": "Hacker News",
-        "score": 69
-      },
-      {
-        "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
-        "url": "https://www.whodunnitai.com/",
-        "source": "Hacker News",
-        "score": 125
-      },
-      {
-        "title": "Over 181,000 AI meeting recordings left wide open in note taking app",
-        "url": "https://bobdahacker.com/blog/tldv-hack",
-        "source": "Hacker News",
-        "score": 14
-      },
-      {
-        "title": "DeepSeek costs OpenCode Go user $1.14/day; dual DGX breaks even in 24 years",
-        "url": "https://twitter.com/thdxr/status/2086599224674681242",
-        "source": "Hacker News",
-        "score": 14
-      },
-      {
-        "title": "Findphone: Locate a nearby Bluetooth device by signal strength",
-        "url": "https://github.com/ben-z/findphone",
-        "source": "Hacker News",
-        "score": 7
+        "score": 86
       }
     ],
     "ai": [
       {
-        "title": "Because It's Not Fun Enough: why languages fail",
-        "url": "https://bytecode.news/posts/2026/08/because-it-s-not-fun-enough",
-        "source": "Hacker News AI",
-        "score": 53
-      },
-      {
         "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
         "url": "https://www.docker.com/products/docker-sandboxes/",
         "source": "Hacker News AI",
-        "score": 329
+        "score": 399
       },
       {
         "title": "Tail-call optimization in C is relatively recent",
         "url": "https://lwn.net/Articles/1034703/",
         "source": "Hacker News AI",
-        "score": 31
+        "score": 65
       },
       {
-        "title": "Tail-Call Interpreters in Rust – Jimmy Ostler",
-        "url": "https://lordgoati.us/blog/tail-call/",
+        "title": "OpenAI's letter to Governor Abbott on responsible AI infrastructure in Texas",
+        "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
         "source": "Hacker News AI",
-        "score": 45
-      },
-      {
-        "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
-        "url": "https://www.whodunnitai.com/",
-        "source": "Hacker News AI",
-        "score": 125
+        "score": 9
       },
       {
         "title": "Over 181,000 AI meeting recordings left wide open in note taking app",
         "url": "https://bobdahacker.com/blog/tldv-hack",
         "source": "Hacker News AI",
-        "score": 14
+        "score": 198
+      },
+      {
+        "title": "Mistral Patent for \"Code implemented tool calls\"",
+        "url": "https://patentsgazette.uspto.gov/week26/OG/html/1547-5/US12670045-20260630.html",
+        "source": "Hacker News AI",
+        "score": 75
+      },
+      {
+        "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
+        "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
+        "source": "Hacker News AI",
+        "score": 25
+      },
+      {
+        "title": "Defending my own brain against enshittification",
+        "url": "https://mrmarket.lol/how-i-feel-calmin-control-of-my-life-in-the-time-of-enshittification/",
+        "source": "Hacker News AI",
+        "score": 55
+      },
+      {
+        "title": "Tail-Call Interpreters in Rust – Jimmy Ostler",
+        "url": "https://lordgoati.us/blog/tail-call/",
+        "source": "Hacker News AI",
+        "score": 64
+      },
+      {
+        "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
+        "url": "https://www.whodunnitai.com/",
+        "source": "Hacker News AI",
+        "score": 156
       },
       {
         "title": "How I use LLMs to learn complex topics",
         "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
         "source": "Hacker News AI",
-        "score": 706
+        "score": 750
+      },
+      {
+        "title": "The Future Is for Everyone – The Path to a Positive AI Future",
+        "url": "https://www.meta.com/thefutureisforeveryone/",
+        "source": "Hacker News AI",
+        "score": 15
+      },
+      {
+        "title": "Because It's Not Fun Enough: why languages fail",
+        "url": "https://bytecode.news/posts/2026/08/because-it-s-not-fun-enough",
+        "source": "Hacker News AI",
+        "score": 79
       },
       {
         "title": "Tuxedo No. 2 – Cocktail recipes",
         "url": "https://tuxedono2.com",
         "source": "Hacker News AI",
-        "score": 110
+        "score": 123
       },
       {
         "title": "Meta's new open-weight model targets local agentic AI",
         "url": "https://twitter.com/finkd/status/2086754845218726027",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 32
       },
       {
         "title": "Auto mode is now the default in Claude Code",
         "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
         "source": "Hacker News AI",
-        "score": 254
-      },
-      {
-        "title": "The tragedy of the commons, AI edition",
-        "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
-        "source": "Hacker News AI",
-        "score": 134
-      },
-      {
-        "title": "The main way I've seen people turn ideologically crazy (2025)",
-        "url": "https://blog.andymasley.com/p/the-main-way-ive-seen-people-turn",
-        "source": "Hacker News AI",
-        "score": 140
-      },
-      {
-        "title": "The Hacker's Renaissance (2025)",
-        "url": "https://phrack.org/issues/72/19#article",
-        "source": "Hacker News AI",
-        "score": 119
+        "score": 261
       }
     ],
     "news": [
@@ -183,13 +195,18 @@
         "source": "BBC World"
       },
       {
-        "title": "Evidence that South African special forces murdered top detective shared with BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cly8djwgem0o?at_medium=RSS&at_campaign=rss",
+        "title": "World's oceans hit record-high July temperatures",
+        "url": "https://www.bbc.co.uk/news/articles/cpvw8vmmgrwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "China evacuates one million from homes as massive storm arrives",
-        "url": "https://www.bbc.co.uk/news/articles/cx2rgzyplg2o?at_medium=RSS&at_campaign=rss",
+        "title": "Netanyahu's rejection of Trump's 15-point Gaza plan unlikely to be final word",
+        "url": "https://www.bbc.co.uk/news/articles/ce3q5282ep3o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Evidence that South African special forces murdered top detective shared with BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cly8djwgem0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -203,13 +220,8 @@
         "source": "BBC World"
       },
       {
-        "title": "World's oceans hit record-high July temperatures",
-        "url": "https://www.bbc.co.uk/news/articles/cpvw8vmmgrwo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "India police fire tear gas at protesters seeking exam reforms ",
-        "url": "https://www.bbc.co.uk/news/articles/c89nkz4vjyxo?at_medium=RSS&at_campaign=rss",
+        "title": "China evacuates one million from homes as massive storm arrives",
+        "url": "https://www.bbc.co.uk/news/articles/cx2rgzyplg2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -252,42 +264,62 @@
     ],
     "science": [
       {
+        "title": "New GLP-1 pill delivers up to 12% weight loss in 36 weeks",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260810015717.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists discover a hidden switch inside silver nanocatalysts",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260810015714.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "The sun will vanish over Europe in a rare total solar eclipse: Watch live",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260810015709.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Voyager 2 was running out of power. NASA just bought it more time",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260810015703.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "For 15,000 years, humans and dogs have been changing each other",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260810015700.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "60,000-year-old ostrich eggshell engravings reveal a surprisingly sophisticated human mind",
         "url": "https://www.sciencedaily.com/releases/2026/08/260808235013.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Wine, beer, or spirits? Massive study finds a surprising health divide",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260808235008.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Frequent cannabis users wake up with their “stress hormone” already elevated",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260808234953.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "For decades, we were told to choose low-fat dairy. New research says otherwise",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260808234948.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A 0.42-nanometer breakthrough could push transistors beyond silicon",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260808234943.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists say just 7 days of meditation can rewire your brain",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260807235243.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Cutting sweet foods doesn’t curb cravings or improve health",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260807235103.htm",
+        "title": "1 in 5 people may carry this hidden genetic heart risk",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260808235011.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "HBO’s House of the Dragon Replacement Officially Arrives in 1 Week",
+        "url": "https://www.polygon.com/lanterns-hbo-dcu-premiere/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Valve warns Steam Machine and Steam Controller users about data breach",
+        "url": "https://www.polygon.com/valve-hardware-data-breach-scam-emails/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Darkest Dungeon Is Getting an Expansion from a Dark Souls Veteran",
+        "url": "https://www.polygon.com/darkest-dungeon-graphic-novel-crowdfunding/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Steam’s Controversial Refund Decision Could Set a Dangerous Precedent",
+        "url": "https://www.polygon.com/steam-battlefield-6-refund-removed-modes/",
+        "source": "Polygon"
+      },
       {
         "title": "You Can Play PS Plus Games Without Owning a PS5, but There’s a Catch",
         "url": "https://www.polygon.com/asobi-remote-play-ps-plus-games-steam-deck/",
@@ -301,26 +333,6 @@
       {
         "title": "How 'Camp Miasma’s Crew Revived a Pre-CGI Technique with \"Old-School Film Nerd\" Ambition",
         "url": "https://www.polygon.com/teenage-sex-death-camp-miasma-matte-painting-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "One Piece Follows in Pokémon’s Footsteps With Controversial ID Measures",
-        "url": "https://www.polygon.com/one-piece-card-game-facial-recognition-scalpers/",
-        "source": "Polygon"
-      },
-      {
-        "title": "An Xbox Game With 50% One-Star Reviews Is Still the Top Game With a Million Players in Week 1",
-        "url": "https://www.polygon.com/mistfall-hunter-1-million-players-negative-reviews/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Most Unhinged Sci-Fi Anime of 2026 Already Feels Like an Instant Cult Classic",
-        "url": "https://www.polygon.com/false-memory-anime-review/",
-        "source": "Polygon"
-      },
-      {
-        "title": "In One Line, 'House of the Dragon' Just Quietly Retconned the Entire Plot of 'Game of Thrones'",
-        "url": "https://www.polygon.com/house-of-the-dragon-season-3-finale-prince-that-was-promised/",
         "source": "Polygon"
       }
     ],
