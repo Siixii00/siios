@@ -1,137 +1,149 @@
 {
   "metadata": {
-    "last_updated": "2026-08-10T03:57:36.015306",
-    "total_items": 56
+    "last_updated": "2026-08-10T05:39:49.402319",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
+        "title": "Auto mode is now the default in Claude Code",
+        "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
+        "source": "Hacker News",
+        "score": 80
+      },
+      {
         "title": "What Happened to HackerOne?",
         "url": "https://blog.teknogeek.io/posts/what-happened-to-hackerone/",
         "source": "Hacker News",
-        "score": 74
+        "score": 142
+      },
+      {
+        "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
+        "url": "https://www.whodunnitai.com/",
+        "source": "Hacker News",
+        "score": 36
       },
       {
         "title": "How I use LLMs to learn complex topics",
         "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
         "source": "Hacker News",
-        "score": 486
+        "score": 544
+      },
+      {
+        "title": "Long-Run Effects of H-1B Immigration on the U.S. Economy (July 2026)",
+        "url": "https://www.nber.org/papers/w35560",
+        "source": "Hacker News",
+        "score": 41
       },
       {
         "title": "Turn satellite imagery into a paper globe you fold yourself",
         "url": "https://foldingglobes.com/",
         "source": "Hacker News",
-        "score": 13
+        "score": 24
+      },
+      {
+        "title": "Run Android ARM64 VR APKs on Apple Vision Pro",
+        "url": "https://github.com/shinyquagsire23/Klepton",
+        "source": "Hacker News",
+        "score": 22
       },
       {
         "title": "How We Pushed CDC into Postgres",
         "url": "https://www.snowflake.com/en/blog/engineering/postgres-to-snowflake-replication-mirroring/",
         "source": "Hacker News",
-        "score": 42
-      },
-      {
-        "title": "Ask HN: What are you working on? (August 2026)",
-        "url": "https://news.ycombinator.com/item?id=49233423",
-        "source": "Hacker News",
-        "score": 197
+        "score": 65
       },
       {
         "title": "Taxi drivers rarely die of Alzheimer's",
         "url": "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650",
         "source": "Hacker News",
-        "score": 215
+        "score": 236
       },
       {
-        "title": "New Zealand lost its music media, and what we're building to replace it",
-        "url": "https://propelmusic.co.nz/articles/the-sound-went-quiet-nz-music-media",
+        "title": "Ask HN: What are you working on? (August 2026)",
+        "url": "https://news.ycombinator.com/item?id=49233423",
         "source": "Hacker News",
-        "score": 92
+        "score": 214
       },
       {
-        "title": "Tuxedo No. 2 – Cocktail recipes",
-        "url": "https://tuxedono2.com",
+        "title": "Nearest Pint",
+        "url": "https://knowwhereconsulting.co.uk/maps/pubs/",
         "source": "Hacker News",
-        "score": 64
+        "score": 12
       },
       {
-        "title": "Picophysics: Single file physics for games on platforms like N64, PSX, DC",
-        "url": "https://gitlab.com/Kazade/picophysics",
+        "title": "Slap ROM Patcher",
+        "url": "https://nyuu.page/projects/slap/",
         "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "\"The Persian MâR-Nâmeh Or, the Book for Taking Omens from Snakes\" (1892)",
-        "url": "https://publicdomainreview.org/collection/marnameh/",
-        "source": "Hacker News",
-        "score": 38
+        "score": 4
       },
       {
         "title": "ATProto for Distributed Systems Engineers",
         "url": "https://atproto.com/articles/atproto-for-distsys-engineers",
         "source": "Hacker News",
-        "score": 19
+        "score": 41
+      },
+      {
+        "title": "Picophysics: Single file physics for games on platforms like N64, PSX, DC",
+        "url": "https://gitlab.com/Kazade/picophysics",
+        "source": "Hacker News",
+        "score": 39
       },
       {
         "title": "Cool URIs Don't Change (1998)",
         "url": "https://www.w3.org/Provider/Style/URI",
         "source": "Hacker News",
-        "score": 204
-      },
-      {
-        "title": "The tragedy of the commons, AI edition",
-        "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
-        "source": "Hacker News",
-        "score": 87
-      },
-      {
-        "title": "Andrew Wiles on proving Fermat’s Last Theorem (1995) [video]",
-        "url": "https://www.youtube.com/watch?v=GS7CxAtV5Ks",
-        "source": "Hacker News",
-        "score": 41
-      },
-      {
-        "title": "OpenChamber: An Agentic Development Environment",
-        "url": "https://openchamber.dev/",
-        "source": "Hacker News",
-        "score": 118
+        "score": 215
       }
     ],
     "ai": [
       {
+        "title": "Auto mode is now the default in Claude Code",
+        "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
+        "source": "Hacker News AI",
+        "score": 80
+      },
+      {
+        "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
+        "url": "https://www.whodunnitai.com/",
+        "source": "Hacker News AI",
+        "score": 36
+      },
+      {
         "title": "How I use LLMs to learn complex topics",
         "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
         "source": "Hacker News AI",
-        "score": 486
+        "score": 544
       },
       {
         "title": "Tuxedo No. 2 – Cocktail recipes",
         "url": "https://tuxedono2.com",
         "source": "Hacker News AI",
-        "score": 64
+        "score": 73
       },
       {
         "title": "The tragedy of the commons, AI edition",
         "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
         "source": "Hacker News AI",
-        "score": 87
-      },
-      {
-        "title": "The Hacker's Renaissance (2025)",
-        "url": "https://phrack.org/issues/72/19#article",
-        "source": "Hacker News AI",
-        "score": 105
+        "score": 99
       },
       {
         "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
         "url": "https://github.com/eighttrigrams/us-vs-them",
         "source": "Hacker News AI",
-        "score": 46
+        "score": 47
+      },
+      {
+        "title": "The Hacker's Renaissance (2025)",
+        "url": "https://phrack.org/issues/72/19#article",
+        "source": "Hacker News AI",
+        "score": 108
       },
       {
         "title": "ChatGPT starts blocking direct requests to copy an author's style",
         "url": "https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/",
         "source": "Hacker News AI",
-        "score": 85
+        "score": 89
       }
     ],
     "news": [
@@ -203,8 +215,8 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " BMW's controversial Spider-Man advert could be even more damaging than the Jaguar rebrand ",
-        "url": "https://www.creativebloq.com/design/advertising/bmws-controversial-spider-man-advert-is-more-harmful-than-the-jaguar-rebrand",
+        "title": " OLED vs IPS: which laptop screen should students actually buy? ",
+        "url": "https://www.creativebloq.com/tech/laptops/oled-vs-ips-which-laptop-screen-should-students-actually-buy",
         "source": "Creative Bloq"
       }
     ],
