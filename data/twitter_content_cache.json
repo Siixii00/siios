@@ -1,149 +1,173 @@
 {
   "metadata": {
-    "last_updated": "2026-08-10T05:39:49.402319",
-    "total_items": 58
+    "last_updated": "2026-08-10T07:43:36.429616",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "Auto mode is now the default in Claude Code",
-        "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
+        "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
+        "url": "https://www.docker.com/products/docker-sandboxes/",
         "source": "Hacker News",
-        "score": 80
+        "score": 94
       },
       {
         "title": "What Happened to HackerOne?",
         "url": "https://blog.teknogeek.io/posts/what-happened-to-hackerone/",
         "source": "Hacker News",
-        "score": 142
+        "score": 178
       },
       {
-        "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
-        "url": "https://www.whodunnitai.com/",
+        "title": "Auto mode is now the default in Claude Code",
+        "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
         "source": "Hacker News",
-        "score": 36
-      },
-      {
-        "title": "How I use LLMs to learn complex topics",
-        "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
-        "source": "Hacker News",
-        "score": 544
-      },
-      {
-        "title": "Long-Run Effects of H-1B Immigration on the U.S. Economy (July 2026)",
-        "url": "https://www.nber.org/papers/w35560",
-        "source": "Hacker News",
-        "score": 41
-      },
-      {
-        "title": "Turn satellite imagery into a paper globe you fold yourself",
-        "url": "https://foldingglobes.com/",
-        "source": "Hacker News",
-        "score": 24
+        "score": 166
       },
       {
         "title": "Run Android ARM64 VR APKs on Apple Vision Pro",
         "url": "https://github.com/shinyquagsire23/Klepton",
         "source": "Hacker News",
-        "score": 22
+        "score": 50
+      },
+      {
+        "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
+        "url": "https://www.whodunnitai.com/",
+        "source": "Hacker News",
+        "score": 59
+      },
+      {
+        "title": "The Philippines' big offshoring industry is growing despite AI",
+        "url": "https://www.economist.com/asia/2026/08/06/the-philippines-big-offshoring-industry-is-growing-despite-ai",
+        "source": "Hacker News",
+        "score": 24
+      },
+      {
+        "title": "How I use LLMs to learn complex topics",
+        "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
+        "source": "Hacker News",
+        "score": 598
+      },
+      {
+        "title": "Turn satellite imagery into a paper globe you fold yourself",
+        "url": "https://foldingglobes.com/",
+        "source": "Hacker News",
+        "score": 42
       },
       {
         "title": "How We Pushed CDC into Postgres",
         "url": "https://www.snowflake.com/en/blog/engineering/postgres-to-snowflake-replication-mirroring/",
         "source": "Hacker News",
-        "score": 65
+        "score": 81
       },
       {
-        "title": "Taxi drivers rarely die of Alzheimer's",
-        "url": "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650",
+        "title": "An Interesting Fourier Transform – 1/F Noise",
+        "url": "https://www.dsprelated.com/showarticle/40.php",
         "source": "Hacker News",
-        "score": 236
-      },
-      {
-        "title": "Ask HN: What are you working on? (August 2026)",
-        "url": "https://news.ycombinator.com/item?id=49233423",
-        "source": "Hacker News",
-        "score": 214
-      },
-      {
-        "title": "Nearest Pint",
-        "url": "https://knowwhereconsulting.co.uk/maps/pubs/",
-        "source": "Hacker News",
-        "score": 12
+        "score": 14
       },
       {
         "title": "Slap ROM Patcher",
         "url": "https://nyuu.page/projects/slap/",
         "source": "Hacker News",
-        "score": 4
+        "score": 11
+      },
+      {
+        "title": "Taxi drivers rarely die of Alzheimer's",
+        "url": "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650",
+        "source": "Hacker News",
+        "score": 272
+      },
+      {
+        "title": "Nearest Pint",
+        "url": "https://knowwhereconsulting.co.uk/maps/pubs/",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
+        "title": "Ask HN: What are you working on? (August 2026)",
+        "url": "https://news.ycombinator.com/item?id=49233423",
+        "source": "Hacker News",
+        "score": 233
       },
       {
         "title": "ATProto for Distributed Systems Engineers",
         "url": "https://atproto.com/articles/atproto-for-distsys-engineers",
         "source": "Hacker News",
-        "score": 41
-      },
-      {
-        "title": "Picophysics: Single file physics for games on platforms like N64, PSX, DC",
-        "url": "https://gitlab.com/Kazade/picophysics",
-        "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Cool URIs Don't Change (1998)",
-        "url": "https://www.w3.org/Provider/Style/URI",
-        "source": "Hacker News",
-        "score": 215
+        "score": 61
       }
     ],
     "ai": [
       {
+        "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
+        "url": "https://www.docker.com/products/docker-sandboxes/",
+        "source": "Hacker News AI",
+        "score": 94
+      },
+      {
         "title": "Auto mode is now the default in Claude Code",
         "url": "https://claude.com/blog/auto-mode-default-in-claude-code",
         "source": "Hacker News AI",
-        "score": 80
+        "score": 166
       },
       {
         "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
         "url": "https://www.whodunnitai.com/",
         "source": "Hacker News AI",
-        "score": 36
+        "score": 59
+      },
+      {
+        "title": "The Philippines' big offshoring industry is growing despite AI",
+        "url": "https://www.economist.com/asia/2026/08/06/the-philippines-big-offshoring-industry-is-growing-despite-ai",
+        "source": "Hacker News AI",
+        "score": 24
       },
       {
         "title": "How I use LLMs to learn complex topics",
         "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
         "source": "Hacker News AI",
-        "score": 544
-      },
-      {
-        "title": "Tuxedo No. 2 – Cocktail recipes",
-        "url": "https://tuxedono2.com",
-        "source": "Hacker News AI",
-        "score": 73
+        "score": 598
       },
       {
         "title": "The tragedy of the commons, AI edition",
         "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
         "source": "Hacker News AI",
-        "score": 99
+        "score": 111
       },
       {
-        "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
-        "url": "https://github.com/eighttrigrams/us-vs-them",
+        "title": "Tuxedo No. 2 – Cocktail recipes",
+        "url": "https://tuxedono2.com",
         "source": "Hacker News AI",
-        "score": 47
+        "score": 83
       },
       {
         "title": "The Hacker's Renaissance (2025)",
         "url": "https://phrack.org/issues/72/19#article",
         "source": "Hacker News AI",
-        "score": 108
+        "score": 110
+      },
+      {
+        "title": "The main way I've seen people turn ideologically crazy (2025)",
+        "url": "https://blog.andymasley.com/p/the-main-way-ive-seen-people-turn",
+        "source": "Hacker News AI",
+        "score": 111
+      },
+      {
+        "title": "As AI grips world, the thrill of collecting vintage computers is growing",
+        "url": "https://apnews.com/article/vintage-computers-silicon-valley-technology-apple-history-43d28a08d77cc477cdcd6951315d2f2d",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
+        "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
+        "url": "https://github.com/eighttrigrams/us-vs-them",
+        "source": "Hacker News AI",
+        "score": 51
       },
       {
         "title": "ChatGPT starts blocking direct requests to copy an author's style",
         "url": "https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/",
         "source": "Hacker News AI",
-        "score": 89
+        "score": 91
       }
     ],
     "news": [
@@ -185,6 +209,11 @@
     ],
     "art": [
       {
+        "title": " What are blend shapes in 3D animation, and how do you use them? ",
+        "url": "https://www.creativebloq.com/art/animation/what-are-blend-shapes-in-3d-animation-and-how-do-you-use-them",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Viture's new Pro XR glasses have the most useful party trick ever ",
         "url": "https://www.creativebloq.com/tech/vitures-new-pro-xr-glasses-have-the-most-useful-party-trick-ever",
         "source": "Creative Bloq"
@@ -212,11 +241,6 @@
       {
         "title": " Netflix, get that man out of your billboard ",
         "url": "https://www.creativebloq.com/design/advertising/netflix-get-that-man-out-of-your-billboard",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " OLED vs IPS: which laptop screen should students actually buy? ",
-        "url": "https://www.creativebloq.com/tech/laptops/oled-vs-ips-which-laptop-screen-should-students-actually-buy",
         "source": "Creative Bloq"
       }
     ],
