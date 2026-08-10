@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-10T01:53:06.125970",
-    "total_items": 59
+    "last_updated": "2026-08-10T03:57:36.015306",
+    "total_items": 56
   },
   "content": {
     "tech": [
       {
+        "title": "What Happened to HackerOne?",
+        "url": "https://blog.teknogeek.io/posts/what-happened-to-hackerone/",
+        "source": "Hacker News",
+        "score": 74
+      },
+      {
         "title": "How I use LLMs to learn complex topics",
         "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
         "source": "Hacker News",
-        "score": 423
+        "score": 486
+      },
+      {
+        "title": "Turn satellite imagery into a paper globe you fold yourself",
+        "url": "https://foldingglobes.com/",
+        "source": "Hacker News",
+        "score": 13
       },
       {
         "title": "How We Pushed CDC into Postgres",
         "url": "https://www.snowflake.com/en/blog/engineering/postgres-to-snowflake-replication-mirroring/",
         "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "Mea Culpa – Dark Hours",
-        "url": "https://blog.terrygodier.com/2026/08/09/mea-culpa-dark-hours.html",
-        "source": "Hacker News",
-        "score": 561
+        "score": 42
       },
       {
         "title": "Ask HN: What are you working on? (August 2026)",
         "url": "https://news.ycombinator.com/item?id=49233423",
         "source": "Hacker News",
-        "score": 171
-      },
-      {
-        "title": "\"The Persian MâR-Nâmeh Or, the Book for Taking Omens from Snakes\" (1892)",
-        "url": "https://publicdomainreview.org/collection/marnameh/",
-        "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "New Zealand lost its music media, and what we're building to replace it",
-        "url": "https://propelmusic.co.nz/articles/the-sound-went-quiet-nz-music-media",
-        "source": "Hacker News",
-        "score": 73
+        "score": 197
       },
       {
         "title": "Taxi drivers rarely die of Alzheimer's",
         "url": "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650",
         "source": "Hacker News",
-        "score": 183
+        "score": 215
+      },
+      {
+        "title": "New Zealand lost its music media, and what we're building to replace it",
+        "url": "https://propelmusic.co.nz/articles/the-sound-went-quiet-nz-music-media",
+        "source": "Hacker News",
+        "score": 92
       },
       {
         "title": "Tuxedo No. 2 – Cocktail recipes",
         "url": "https://tuxedono2.com",
         "source": "Hacker News",
-        "score": 48
+        "score": 64
       },
       {
         "title": "Picophysics: Single file physics for games on platforms like N64, PSX, DC",
         "url": "https://gitlab.com/Kazade/picophysics",
         "source": "Hacker News",
-        "score": 11
+        "score": 27
+      },
+      {
+        "title": "\"The Persian MâR-Nâmeh Or, the Book for Taking Omens from Snakes\" (1892)",
+        "url": "https://publicdomainreview.org/collection/marnameh/",
+        "source": "Hacker News",
+        "score": 38
+      },
+      {
+        "title": "ATProto for Distributed Systems Engineers",
+        "url": "https://atproto.com/articles/atproto-for-distsys-engineers",
+        "source": "Hacker News",
+        "score": 19
       },
       {
         "title": "Cool URIs Don't Change (1998)",
         "url": "https://www.w3.org/Provider/Style/URI",
         "source": "Hacker News",
-        "score": 185
+        "score": 204
       },
       {
         "title": "The tragedy of the commons, AI edition",
         "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
         "source": "Hacker News",
-        "score": 75
+        "score": 87
       },
       {
         "title": "Andrew Wiles on proving Fermat’s Last Theorem (1995) [video]",
         "url": "https://www.youtube.com/watch?v=GS7CxAtV5Ks",
         "source": "Hacker News",
-        "score": 34
+        "score": 41
       },
       {
-        "title": "Japanese court overturns Red RAW video patent",
-        "url": "https://www.dpreview.com/news/panasonic-did-what-apple-sony-and-nikon-couldnt-overturn-a-red-raw-video-patent/",
+        "title": "OpenChamber: An Agentic Development Environment",
+        "url": "https://openchamber.dev/",
         "source": "Hacker News",
-        "score": 18
-      },
-      {
-        "title": "Everything you do is being recorded",
-        "url": "https://www.theatlantic.com/technology/2026/05/ai-wearable-surveillance-countermeasures/687203/",
-        "source": "Hacker News",
-        "score": 211
-      },
-      {
-        "title": "The German Mittelstand",
-        "url": "https://kieranvelasquez.substack.com/p/on-the-german-mittelstand",
-        "source": "Hacker News",
-        "score": 13
+        "score": 118
       }
     ],
     "ai": [
@@ -101,55 +101,37 @@
         "title": "How I use LLMs to learn complex topics",
         "url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
         "source": "Hacker News AI",
-        "score": 423
+        "score": 486
       },
       {
         "title": "Tuxedo No. 2 – Cocktail recipes",
         "url": "https://tuxedono2.com",
         "source": "Hacker News AI",
-        "score": 48
+        "score": 64
       },
       {
         "title": "The tragedy of the commons, AI edition",
         "url": "https://www.economist.com/britain/2026/08/06/the-tragedy-of-the-commons-ai-edition",
         "source": "Hacker News AI",
-        "score": 75
+        "score": 87
       },
       {
         "title": "The Hacker's Renaissance (2025)",
         "url": "https://phrack.org/issues/72/19#article",
         "source": "Hacker News AI",
-        "score": 95
-      },
-      {
-        "title": "AI assistant hacks gym website in first known Australian autonomous cyber attack",
-        "url": "https://www.abc.net.au/news/2026-08-10/ai-assistant-hacks-gym-website-aus-cyber-attack/107007986",
-        "source": "Hacker News AI",
-        "score": 43
+        "score": 105
       },
       {
         "title": "Human vs. AI – Diff-based line-level provenance for text under agentic editing",
         "url": "https://github.com/eighttrigrams/us-vs-them",
         "source": "Hacker News AI",
-        "score": 44
-      },
-      {
-        "title": "Blender MCP maintainer GitHub account hacked",
-        "url": "https://twitter.com/sidahuj/status/2086445625147793503",
-        "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "Cross-compilation with Wails (2025)",
-        "url": "https://chriswheeler.dev/posts/cross-compilation-with-wails/",
-        "source": "Hacker News AI",
-        "score": 7
+        "score": 46
       },
       {
         "title": "ChatGPT starts blocking direct requests to copy an author's style",
         "url": "https://arstechnica.com/ai/2026/07/chatgpt-stops-cloning-famous-writers-voices-but-may-capture-a-similar-feeling/",
         "source": "Hacker News AI",
-        "score": 81
+        "score": 85
       }
     ],
     "news": [
@@ -265,6 +247,16 @@
     ],
     "gaming": [
       {
+        "title": "In One Line, 'House of the Dragon' Just Quietly Retconned the Entire Plot of 'Game of Thrones'",
+        "url": "https://www.polygon.com/house-of-the-dragon-season-3-finale-prince-that-was-promised/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'House of the Dragon' Season 3 Ending Explained: I Finally Understand Why George R.R. Martin Hates This Show",
+        "url": "https://www.polygon.com/house-of-the-dragon-season-3-ending-explained-grrm/",
+        "source": "Polygon"
+      },
+      {
         "title": "The Best Games Like Dungeon Crawler Carl",
         "url": "https://www.polygon.com/games-like-dungeon-crawler-carl/",
         "source": "Polygon"
@@ -287,16 +279,6 @@
       {
         "title": "The Odyssey passes The Dark Knight Rises to become Nolan’s highest-grossing film ever",
         "url": "https://www.polygon.com/the-odyssey-christopher-nolan-highest-grossing-film/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 'Solo Leveling' Characters Who Deserved Better (#4's Fate Is Tragic)",
-        "url": "https://www.polygon.com/solo-leveling-characters-sidelined-deserved-better/",
-        "source": "Polygon"
-      },
-      {
-        "title": "PowerWash Simulator Meets Unpacking In a Cozy Gaming Steam Sleeper Hit",
-        "url": "https://www.polygon.com/restory-steam-review/",
         "source": "Polygon"
       }
     ],
