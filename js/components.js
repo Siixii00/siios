@@ -12,6 +12,8 @@ function createElement(tag, className, attrs = {}) {
             el.dataset[key.slice(4).toLowerCase()] = value;
         } else if (key.startsWith('on')) {
             el.addEventListener(key.slice(2).toLowerCase(), value);
+        } else if (key === 'value') {
+            el.value = value;
         } else {
             el.setAttribute(key, value);
         }
