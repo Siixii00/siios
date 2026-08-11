@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-11T17:57:43.905266",
+    "last_updated": "2026-08-11T19:13:00.045447",
     "total_items": 63
   },
   "content": {
     "tech": [
       {
-        "title": "England set to be one of the first countries to eliminate hepatitis C",
-        "url": "https://www.bbc.com/news/articles/c75gk620r22o",
-        "source": "Hacker News",
-        "score": 368
-      },
-      {
         "title": "Apple Silicon and macOS VMs: 11–16× Faster LLM Inference with Llama.cpp",
         "url": "https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md",
         "source": "Hacker News",
-        "score": 171
+        "score": 226
       },
       {
-        "title": "Why Go Is an Ideal Language for AI-Assisted Software Engineering",
-        "url": "https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/",
+        "title": "OpenSSH 10.5/10.5p1",
+        "url": "https://www.openssh.org/releasenotes.html#10.5",
         "source": "Hacker News",
-        "score": 42
+        "score": 35
       },
       {
-        "title": "Woman Pulled over at Gunpoint Twice After Flock Camera Glitch",
-        "url": "https://guessingheadlights.com/yall-failed-me-woman-pulled-over-at-gunpoint-twice-after-flock-camera-glitch/",
+        "title": "Mojo 1.0",
+        "url": "https://www.modular.com/blog/modular-26-5-mojo-1-0-is-here",
         "source": "Hacker News",
-        "score": 43
+        "score": 56
       },
       {
         "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
         "url": "https://stolen-thoughts.com/",
         "source": "Hacker News",
-        "score": 253
+        "score": 302
       },
       {
-        "title": "Manus will return to operating as an independent company",
-        "url": "https://manus.im/blog/a-note-to-our-users",
+        "title": "How We Used To Get Jobs: A Newspaper Classifieds Story",
+        "url": "https://ironicsans.ghost.io/how-we-used-to-get-jobs/",
         "source": "Hacker News",
-        "score": 73
+        "score": 24
+      },
+      {
+        "title": "England set to be one of the first countries to eliminate hepatitis C",
+        "url": "https://www.bbc.com/news/articles/c75gk620r22o",
+        "source": "Hacker News",
+        "score": 418
       },
       {
         "title": "Show HN: iPhone app takes simultaneous images from 2 lenses, fuses into 1 photo",
         "url": "https://photosynthesis.camera",
         "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Jolt: Clojure compiler implemented with Chez Scheme",
-        "url": "https://jolt-lang.github.io",
-        "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Nvidia's Risky Business",
-        "url": "https://stratechery.com/2026/nvidias-risky-business/",
-        "source": "Hacker News",
-        "score": 187
+        "score": 75
       },
       {
         "title": "Show HN: Git-knife – edit commit messages, authors, and dates like a spreadsheet",
         "url": "https://github.com/TheRealYT/git-knife",
         "source": "Hacker News",
-        "score": 69
+        "score": 78
+      },
+      {
+        "title": "Jolt: Clojure compiler implemented with Chez Scheme",
+        "url": "https://jolt-lang.github.io",
+        "source": "Hacker News",
+        "score": 84
+      },
+      {
+        "title": "Manus will return to operating as an independent company",
+        "url": "https://manus.im/blog/a-note-to-our-users",
+        "source": "Hacker News",
+        "score": 91
+      },
+      {
+        "title": "The Tradeoffs Facing Japan's Economy",
+        "url": "https://www.emergingtrajectories.com/lh/japan-economy-tradeoffs/",
+        "source": "Hacker News",
+        "score": 12
       },
       {
         "title": "As AI eats the web, the internet’s collective memory is disappearing",
         "url": "https://thewalrus.ca/google-search-is-dying/",
         "source": "Hacker News",
-        "score": 737
+        "score": 788
       },
       {
-        "title": "France to ban unsolicited telemarketing calls",
-        "url": "https://www.lemonde.fr/en/france/article/2026/08/06/france-to-ban-unsolicited-telemarketing-calls-from-august-11_6756208_7.html",
+        "title": "Why Go Is an Ideal Language for AI-Assisted Software Engineering",
+        "url": "https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/",
         "source": "Hacker News",
-        "score": 901
+        "score": 125
       },
       {
-        "title": "Launch HN: Keet (YC S24) – An app to create video courses on anything",
-        "url": "https://www.trykeet.com/",
+        "title": "Nvidia's Risky Business",
+        "url": "https://stratechery.com/2026/nvidias-risky-business/",
         "source": "Hacker News",
-        "score": 21
+        "score": 219
       },
       {
-        "title": "H3-metal – Native MiniMax-H3 inference for Apple Silicon",
-        "url": "https://github.com/antirez/h3.c",
+        "title": "OpenAI’s head of ethics leaves less than a year after joining",
+        "url": "https://www.ft.com/content/e49dfb75-f841-4466-a577-f7aaff8779a0",
         "source": "Hacker News",
-        "score": 396
-      },
-      {
-        "title": "What I learned by putting GitHub Copilot behind a MitM proxy",
-        "url": "https://www.lighthousenewsletter.com/p/i-put-github-copilot-behind-a-mitm",
-        "source": "Hacker News",
-        "score": 92
+        "score": 68
       }
     ],
     "ai": [
@@ -101,79 +101,79 @@
         "title": "Apple Silicon and macOS VMs: 11–16× Faster LLM Inference with Llama.cpp",
         "url": "https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md",
         "source": "Hacker News AI",
-        "score": 171
-      },
-      {
-        "title": "Why Go Is an Ideal Language for AI-Assisted Software Engineering",
-        "url": "https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/",
-        "source": "Hacker News AI",
-        "score": 42
+        "score": 226
       },
       {
         "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
         "url": "https://stolen-thoughts.com/",
         "source": "Hacker News AI",
-        "score": 253
+        "score": 302
       },
       {
         "title": "As AI eats the web, the internet’s collective memory is disappearing",
         "url": "https://thewalrus.ca/google-search-is-dying/",
         "source": "Hacker News AI",
-        "score": 737
+        "score": 788
+      },
+      {
+        "title": "Why Go Is an Ideal Language for AI-Assisted Software Engineering",
+        "url": "https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/",
+        "source": "Hacker News AI",
+        "score": 125
+      },
+      {
+        "title": "OpenAI’s head of ethics leaves less than a year after joining",
+        "url": "https://www.ft.com/content/e49dfb75-f841-4466-a577-f7aaff8779a0",
+        "source": "Hacker News AI",
+        "score": 68
       },
       {
         "title": "What I learned by putting GitHub Copilot behind a MitM proxy",
         "url": "https://www.lighthousenewsletter.com/p/i-put-github-copilot-behind-a-mitm",
         "source": "Hacker News AI",
-        "score": 92
+        "score": 112
       },
       {
         "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
         "url": "https://cactuscompute.com/needle",
         "source": "Hacker News AI",
-        "score": 482
+        "score": 488
       },
       {
         "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
         "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News AI",
-        "score": 603
+        "score": 619
       },
       {
         "title": "How Claude marks AI-generated content",
         "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
         "source": "Hacker News AI",
-        "score": 363
+        "score": 387
       },
       {
         "title": "The “mechanical miracle” that ruined Mark Twain’s life",
         "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
         "source": "Hacker News AI",
-        "score": 206
-      },
-      {
-        "title": "Why Did OpenAI's Head of Ethics Chloé Bakalar Leave?",
-        "url": "https://aimagazine.com/news/why-did-openai-head-of-ethics-chloe-bakalar-leave",
-        "source": "Hacker News AI",
-        "score": 82
-      },
-      {
-        "title": "Confessions of a Long-Distance Sailor",
-        "url": "https://arachnoid.com/lutusp/sailbook.html",
-        "source": "Hacker News AI",
-        "score": 160
-      },
-      {
-        "title": "Tail-call optimization in C is relatively recent (2025)",
-        "url": "https://lwn.net/Articles/1034703/",
-        "source": "Hacker News AI",
-        "score": 164
+        "score": 213
       },
       {
         "title": "Learning more about Claude's mathematical capabilities",
         "url": "https://www.anthropic.com/research/riemann-zeta",
         "source": "Hacker News AI",
-        "score": 256
+        "score": 257
+      },
+      {
+        "title": "Confessions of a Long-Distance Sailor",
+        "url": "https://arachnoid.com/lutusp/sailbook.html",
+        "source": "Hacker News AI",
+        "score": 162
+      },
+      {
+        "title": "ChatGPT Desktop App for Linux",
+        "url": "https://twitter.com/OpenAI/status/2087231350134980830",
+        "source": "Hacker News AI",
+        "score": 5
       }
     ],
     "news": [
@@ -289,43 +289,48 @@
     ],
     "gaming": [
       {
-        "title": "'Overwatch''s Big Battle Pass Changes For Season 4 Have Fans Celebrating",
-        "url": "https://www.polygon.com/overwatch-battle-pass-season-4-changes-fans-celebrating/",
+        "title": "'House of the Dragon' Star Officially Breaks Silence About Season 4",
+        "url": "https://www.polygon.com/house-of-the-dragon-season-3-steve-toussaint-interview/",
         "source": "Polygon"
       },
       {
-        "title": "Fortnite Giving Away Free Skin Ahead of Control Resonant Launch",
-        "url": "https://www.polygon.com/fortnite-control-skin-free-steam/",
+        "title": "The Sims 4 Will Be Getting Major Free Content Drops in the Near Future",
+        "url": "https://www.polygon.com/sims-4-free-content-update-anniversary-event/",
         "source": "Polygon"
       },
       {
-        "title": "'The Mighty Nein — Stories Untold' Review: A 10/10 Spin-Off of Critical Role's Best Campaign",
-        "url": "https://www.polygon.com/critical-role-best-campaign-2-spin-off/",
+        "title": "Luke Skywalker and Captain America Will Officially Join Forces in New Star Wars-Marvel Crossover",
+        "url": "https://www.polygon.com/new-marvel-and-star-wars-crossover-finally-brings-darth-vader-face-to-face-with-doctor-doom/",
         "source": "Polygon"
       },
       {
-        "title": "When Does House of the Dragon Return? Everything We Know About Season 4",
-        "url": "https://www.polygon.com/house-of-the-dragon-season-4-release-date-plot/",
+        "title": "‘Crimson Desert’ Dev Finally Reveals DLC Release Window, and It’s Soon",
+        "url": "https://www.polygon.com/crimson-desert-dlc-switch-2-release-windows/",
         "source": "Polygon"
       },
       {
-        "title": "Playstation Announces 'Marvel's Wolverine' Limited Edition PS5 and Controller",
-        "url": "https://www.polygon.com/marvels-wolverine-playstation-5-dualsense-controller-limited-edition-bundle-pre-order/",
+        "title": "Does Daeron Die in 'House of the Dragon'? What to Expect from Season 4",
+        "url": "https://www.polygon.com/house-of-the-dragon-does-daeron-die-season-3-finale-spoilers/",
         "source": "Polygon"
       },
       {
-        "title": "'Spider-Man 2' Players Are Getting Rocked by the Game's Sweatiest Challenge After 'Brand New Day'",
-        "url": "https://www.polygon.com/spider-man-brand-new-day-marvel-ps5-game-swing-assist-what-does-it-do/",
+        "title": "Jeff The Killer Movie In Development As Film Industry Chases 'Backrooms'’ Success",
+        "url": "https://www.polygon.com/jeff-the-killer-movie-announced-backrooms-success/",
         "source": "Polygon"
       },
       {
-        "title": "Alan Wake 2 Finally Clears 3 Million Sales, Overcoming Its Weak Start",
-        "url": "https://www.polygon.com/2023s-best-game-is-finally-selling-the-millions-it-deserves/",
+        "title": "All small and large lost relics list in Pokémon Pokopia",
+        "url": "https://www.polygon.com/pokemon-pokopia-large-lost-relics-small-list-how-to-get/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "From coder to orchestrator: How agents shift the role of a developer",
+        "url": "https://github.blog/developer-skills/career-growth/from-coder-to-orchestrator-how-agents-shift-the-role-of-a-developer/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "Using the GitHub Copilot SDK for Java",
         "url": "https://github.blog/engineering/using-the-github-copilot-sdk-for-java/",
@@ -354,11 +359,6 @@
       {
         "title": "Don’t stop early: Case-folding source code at memory speed",
         "url": "https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Stacked sessions and pull requests in the GitHub Copilot app",
-        "url": "https://github.blog/ai-and-ml/github-copilot/stacked-sessions-and-pull-requests-in-the-github-copilot-app/",
         "source": "GitHub Blog"
       }
     ]
