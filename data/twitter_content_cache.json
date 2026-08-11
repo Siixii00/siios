@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-11T07:09:21.821796",
+    "last_updated": "2026-08-11T08:58:05.272016",
     "total_items": 65
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "H3-metal – Native MiniMax-H3 inference for Apple Silicon",
         "url": "https://github.com/antirez/h3.c",
         "source": "Hacker News",
-        "score": 199
-      },
-      {
-        "title": "Show HN: Mcptoon – Token-efficient MCP CLI client",
-        "url": "https://github.com/activeing123/mcptoon",
-        "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Chicken Scheme 6.0",
-        "url": "https://code.call-cc.org/releases/6.0.0/NEWS",
-        "source": "Hacker News",
-        "score": 146
-      },
-      {
-        "title": "LFM2.5 2.6B model competitive with 4x larger models",
-        "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B",
-        "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Show HN: Scroll through all 43252003274489856000 Rubik's Cube states",
-        "url": "https://everycube.alen.is/",
-        "source": "Hacker News",
-        "score": 163
+        "score": 245
       },
       {
         "title": "As AI eats the web, the internet’s collective memory is disappearing",
         "url": "https://thewalrus.ca/google-search-is-dying/",
         "source": "Hacker News",
-        "score": 144
+        "score": 247
+      },
+      {
+        "title": "Show HN: Mcptoon – Token-efficient MCP CLI client",
+        "url": "https://github.com/activeing123/mcptoon",
+        "source": "Hacker News",
+        "score": 40
+      },
+      {
+        "title": "Chicken Scheme 6.0",
+        "url": "https://code.call-cc.org/releases/6.0.0/NEWS",
+        "source": "Hacker News",
+        "score": 182
+      },
+      {
+        "title": "LFM2.5 2.6B model competitive with 4x larger models",
+        "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B",
+        "source": "Hacker News",
+        "score": 64
+      },
+      {
+        "title": "To Save C, We Must Save ABI",
+        "url": "https://thephd.dev/to-save-c-we-must-save-abi-fixing-c-function-abi",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Show HN: Scroll through all 43252003274489856000 Rubik's Cube states",
+        "url": "https://everycube.alen.is/",
+        "source": "Hacker News",
+        "score": 183
       },
       {
         "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
         "url": "https://cactuscompute.com/needle",
         "source": "Hacker News",
-        "score": 291
-      },
-      {
-        "title": "The “mechanical miracle” that ruined Mark Twain’s life",
-        "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
-        "source": "Hacker News",
-        "score": 117
-      },
-      {
-        "title": "Recycle – Floppydisks",
-        "url": "https://www.floppydisk.com/recycle",
-        "source": "Hacker News",
-        "score": 49
+        "score": 318
       },
       {
         "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
         "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News",
-        "score": 474
+        "score": 499
       },
       {
-        "title": "The UK's war on anonymity has come to America",
-        "url": "https://www.effort.news/uk-lobby",
+        "title": "France to ban unsolicited telemarketing calls",
+        "url": "https://www.lemonde.fr/en/france/article/2026/08/06/france-to-ban-unsolicited-telemarketing-calls-from-august-11_6756208_7.html",
         "source": "Hacker News",
-        "score": 436
+        "score": 24
+      },
+      {
+        "title": "The “mechanical miracle” that ruined Mark Twain’s life",
+        "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
+        "source": "Hacker News",
+        "score": 129
+      },
+      {
+        "title": "Recycle – Floppydisks",
+        "url": "https://www.floppydisk.com/recycle",
+        "source": "Hacker News",
+        "score": 58
       },
       {
         "title": "Stowaway – Take the window seat on any plane or satellite overhead",
         "url": "https://stowaway.live/",
         "source": "Hacker News",
-        "score": 224
+        "score": 258
+      },
+      {
+        "title": "The UK's war on anonymity has come to America",
+        "url": "https://www.effort.news/uk-lobby",
+        "source": "Hacker News",
+        "score": 480
       },
       {
         "title": "Sonic Pi v5",
         "url": "https://www.patreon.com/samaaron/posts/sonic-pi-v5-166001392",
         "source": "Hacker News",
-        "score": 358
-      },
-      {
-        "title": "Rust SIMD on the GPU",
-        "url": "https://www.vectorware.com/blog/simd-on-gpu/",
-        "source": "Hacker News",
-        "score": 169
-      },
-      {
-        "title": "How Claude marks AI-generated content",
-        "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
-        "source": "Hacker News",
-        "score": 111
+        "score": 367
       }
     ],
     "ai": [
@@ -101,61 +101,61 @@
         "title": "As AI eats the web, the internet’s collective memory is disappearing",
         "url": "https://thewalrus.ca/google-search-is-dying/",
         "source": "Hacker News AI",
-        "score": 144
+        "score": 247
       },
       {
         "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
         "url": "https://cactuscompute.com/needle",
         "source": "Hacker News AI",
-        "score": 291
-      },
-      {
-        "title": "The “mechanical miracle” that ruined Mark Twain’s life",
-        "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
-        "source": "Hacker News AI",
-        "score": 117
+        "score": 318
       },
       {
         "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
         "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News AI",
-        "score": 474
+        "score": 499
+      },
+      {
+        "title": "The “mechanical miracle” that ruined Mark Twain’s life",
+        "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
+        "source": "Hacker News AI",
+        "score": 129
       },
       {
         "title": "How Claude marks AI-generated content",
         "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
         "source": "Hacker News AI",
-        "score": 111
+        "score": 165
       },
       {
         "title": "Confessions of a Long-Distance Sailor",
         "url": "https://arachnoid.com/lutusp/sailbook.html",
         "source": "Hacker News AI",
-        "score": 97
+        "score": 110
       },
       {
         "title": "Tail-call optimization in C is relatively recent (2025)",
         "url": "https://lwn.net/Articles/1034703/",
         "source": "Hacker News AI",
-        "score": 141
+        "score": 146
       },
       {
         "title": "Learning more about Claude's mathematical capabilities",
         "url": "https://www.anthropic.com/research/riemann-zeta",
         "source": "Hacker News AI",
-        "score": 180
+        "score": 191
       },
       {
         "title": "Humanising LLM Outputs Is Dumb",
         "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
         "source": "Hacker News AI",
-        "score": 195
+        "score": 210
       },
       {
-        "title": "World Train Map – 1247 train routes around the world",
-        "url": "https://worldtrainmap.com/",
+        "title": "Exploring Claude/GPT Knowledge Cutoffs and Pre-Training Timelines",
+        "url": "https://blog.sshh.io/p/exploring-claudegpt-knowledge-cutoffs",
         "source": "Hacker News AI",
-        "score": 111
+        "score": 142
       },
       {
         "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
@@ -164,22 +164,22 @@
         "score": 75
       },
       {
-        "title": "Exploring Claude/GPT Knowledge Cutoffs and Pre-Training Timelines",
-        "url": "https://blog.sshh.io/p/exploring-claudegpt-knowledge-cutoffs",
+        "title": "World Train Map – 1247 train routes around the world",
+        "url": "https://worldtrainmap.com/",
         "source": "Hacker News AI",
-        "score": 140
+        "score": 121
       },
       {
         "title": "Letter to Governor Abbott on responsible AI infrastructure in Texas",
         "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
         "source": "Hacker News AI",
-        "score": 107
+        "score": 108
       },
       {
-        "title": "OpenAI wraps $7B share sale ahead of potential IPO",
-        "url": "https://www.cnbc.com/2026/08/10/openai-wraps-7-billion-share-sale-ahead-of-potential-ipo-.html",
+        "title": "Claude Code pricing: same tokens, same model, up to 40x the price",
+        "url": "https://quesma.com/blog/claude-code-pricing-for-enterprise/",
         "source": "Hacker News AI",
-        "score": 12
+        "score": 5
       },
       {
         "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
@@ -227,6 +227,11 @@
     ],
     "art": [
       {
+        "title": " What does the sale of ArtStation and Sketchfab mean for digital artists? ",
+        "url": "https://www.creativebloq.com/art/digital-art/what-does-the-sale-of-artstation-and-sketchfab-mean-for-digital-artists",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " People can't decide whether Newcastle United's logo design poll is a joke ",
         "url": "https://www.creativebloq.com/design/logos-icons/people-cant-decide-whether-newcastle-uniteds-logo-design-poll-is-a-joke",
         "source": "Creative Bloq"
@@ -254,11 +259,6 @@
       {
         "title": " What are blend shapes in 3D animation, and how do you use them? ",
         "url": "https://www.creativebloq.com/art/animation/what-are-blend-shapes-in-3d-animation-and-how-do-you-use-them",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Viture's new Pro XR glasses have the most useful party trick ever ",
-        "url": "https://www.creativebloq.com/tech/vitures-new-pro-xr-glasses-have-the-most-useful-party-trick-ever",
         "source": "Creative Bloq"
       }
     ],
