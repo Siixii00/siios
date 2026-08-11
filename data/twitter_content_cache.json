@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-11T01:49:14.322129",
+    "last_updated": "2026-08-11T03:45:40.404687",
     "total_items": 65
   },
   "content": {
@@ -9,53 +9,59 @@
         "title": "The UK's War on Anonymity Has Come to America",
         "url": "https://www.effort.news/uk-lobby",
         "source": "Hacker News",
-        "score": 167
+        "score": 354
+      },
+      {
+        "title": "Antirez/h3.c: MiniMax H3 inference engine for Mac computers",
+        "url": "https://github.com/antirez/h3.c",
+        "source": "Hacker News",
+        "score": 73
       },
       {
         "title": "Chicken Scheme 6.0",
         "url": "https://code.call-cc.org/releases/6.0.0/NEWS",
         "source": "Hacker News",
-        "score": 31
+        "score": 87
       },
       {
         "title": "Show HN: Scroll through all 43252003274489856000 Rubik's Cube states",
         "url": "https://everycube.alen.is/",
         "source": "Hacker News",
-        "score": 52
+        "score": 103
       },
       {
-        "title": "Muse Glimmer: 30B-parameter model optimized for always-on local agent workflows",
-        "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
+        "title": "Recycle – Floppydisks",
+        "url": "https://www.floppydisk.com/recycle",
         "source": "Hacker News",
-        "score": 1041
-      },
-      {
-        "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
-        "url": "https://cactuscompute.com/needle",
-        "source": "Hacker News",
-        "score": 172
+        "score": 22
       },
       {
         "title": "The “mechanical miracle” that ruined Mark Twain’s life",
         "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
         "source": "Hacker News",
-        "score": 37
+        "score": 75
+      },
+      {
+        "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
+        "url": "https://cactuscompute.com/needle",
+        "source": "Hacker News",
+        "score": 218
       },
       {
         "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
         "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News",
-        "score": 366
+        "score": 412
       },
       {
-        "title": "Flock Cameras Can Track Every Car in America. Police Love Them. Citizens Don't",
-        "url": "https://www.nytimes.com/2026/08/10/us/flock-cameras-can-track-every-car-in-america-police-love-them-citizens-dont.html",
+        "title": "Rust SIMD on the GPU",
+        "url": "https://www.vectorware.com/blog/simd-on-gpu/",
         "source": "Hacker News",
-        "score": 42
+        "score": 148
       },
       {
-        "title": "Publishing Schematics Before “Open Source” Was a Word",
-        "url": "https://fabscene.medium.com/publishing-schematics-before-open-source-was-a-word-55-years-of-akizuki-denshi-japans-be7ca9629704",
+        "title": "World Train Map – 1247 train routes around the world",
+        "url": "https://worldtrainmap.com/",
         "source": "Hacker News",
         "score": 64
       },
@@ -63,132 +69,141 @@
         "title": "Sonic Pi v5",
         "url": "https://www.patreon.com/samaaron/posts/sonic-pi-v5-166001392",
         "source": "Hacker News",
-        "score": 311
+        "score": 327
       },
       {
-        "title": "Rust SIMD on the GPU",
-        "url": "https://www.vectorware.com/blog/simd-on-gpu/",
+        "title": "Hyperspace",
+        "url": "https://hypercritical.co/hyperspace/",
         "source": "Hacker News",
-        "score": 122
-      },
-      {
-        "title": "Confessions of a Long-Distance Sailor",
-        "url": "https://arachnoid.com/lutusp/sailbook.html",
-        "source": "Hacker News",
-        "score": 64
-      },
-      {
-        "title": "World Train Map – 1247 train routes around the world",
-        "url": "https://worldtrainmap.com/",
-        "source": "Hacker News",
-        "score": 32
-      },
-      {
-        "title": "The Story of Mac: A Just-So Story",
-        "url": "https://gigamonkeys.com/book/macros-defining-your-own",
-        "source": "Hacker News",
-        "score": 6
+        "score": 5
       },
       {
         "title": "Stowaway – Take the window seat on any plane or satellite overhead",
         "url": "https://stowaway.live/",
         "source": "Hacker News",
-        "score": 114
+        "score": 162
+      },
+      {
+        "title": "Publishing Schematics Before “Open Source” Was a Word",
+        "url": "https://fabscene.medium.com/publishing-schematics-before-open-source-was-a-word-55-years-of-akizuki-denshi-japans-be7ca9629704",
+        "source": "Hacker News",
+        "score": 75
+      },
+      {
+        "title": "Confessions of a Long-Distance Sailor",
+        "url": "https://arachnoid.com/lutusp/sailbook.html",
+        "source": "Hacker News",
+        "score": 78
       }
     ],
     "ai": [
       {
-        "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
-        "url": "https://cactuscompute.com/needle",
-        "source": "Hacker News AI",
-        "score": 172
-      },
-      {
         "title": "The “mechanical miracle” that ruined Mark Twain’s life",
         "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
         "source": "Hacker News AI",
-        "score": 37
+        "score": 75
+      },
+      {
+        "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
+        "url": "https://cactuscompute.com/needle",
+        "source": "Hacker News AI",
+        "score": 218
       },
       {
         "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
         "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News AI",
-        "score": 366
-      },
-      {
-        "title": "Confessions of a Long-Distance Sailor",
-        "url": "https://arachnoid.com/lutusp/sailbook.html",
-        "source": "Hacker News AI",
-        "score": 64
+        "score": 412
       },
       {
         "title": "World Train Map – 1247 train routes around the world",
         "url": "https://worldtrainmap.com/",
         "source": "Hacker News AI",
-        "score": 32
+        "score": 64
+      },
+      {
+        "title": "Confessions of a Long-Distance Sailor",
+        "url": "https://arachnoid.com/lutusp/sailbook.html",
+        "source": "Hacker News AI",
+        "score": 78
       },
       {
         "title": "Humanising LLM Outputs Is Dumb",
         "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
         "source": "Hacker News AI",
-        "score": 154
+        "score": 177
       },
       {
         "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
         "url": "https://www.stoaexchange.com",
         "source": "Hacker News AI",
-        "score": 63
+        "score": 69
       },
       {
         "title": "Letter to Governor Abbott on responsible AI infrastructure in Texas",
         "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
         "source": "Hacker News AI",
-        "score": 91
+        "score": 99
       },
       {
         "title": "Exploring Claude/GPT Knowledge Cutoffs and Pre-Training Timelines",
         "url": "https://blog.sshh.io/p/exploring-claudegpt-knowledge-cutoffs",
         "source": "Hacker News AI",
-        "score": 101
+        "score": 122
       },
       {
         "title": "Tail-call optimization in C is relatively recent (2025)",
         "url": "https://lwn.net/Articles/1034703/",
         "source": "Hacker News AI",
-        "score": 123
-      },
-      {
-        "title": "GPT 5.6 Cyber",
-        "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
-        "source": "Hacker News AI",
-        "score": 66
-      },
-      {
-        "title": "Mistral Patent for “Code implemented tool calls”",
-        "url": "https://patentsgazette.uspto.gov/week26/OG/html/1547-5/US12670045-20260630.html",
-        "source": "Hacker News AI",
-        "score": 208
+        "score": 133
       },
       {
         "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
         "url": "https://www.docker.com/products/docker-sandboxes/",
         "source": "Hacker News AI",
-        "score": 627
+        "score": 636
       },
       {
-        "title": "Show HN: AI Pulse a fake LED strip beside the macOS Dock that shows agent status",
-        "url": "https://github.com/leog/ai-pulse",
+        "title": "Mistral Patent for “Code implemented tool calls”",
+        "url": "https://patentsgazette.uspto.gov/week26/OG/html/1547-5/US12670045-20260630.html",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 211
+      },
+      {
+        "title": "GPT 5.6 Cyber",
+        "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
+        "source": "Hacker News AI",
+        "score": 95
       },
       {
         "title": "Kinney Drugs pulls back AI phone assistant after hundreds of customer complaints",
         "url": "https://www.wcax.com/2026/08/07/kinney-drugs-pulls-back-ai-phone-assistant-after-hundreds-customer-complaints/",
         "source": "Hacker News AI",
-        "score": 143
+        "score": 146
+      },
+      {
+        "title": "Musk's Daily Starship Problem",
+        "url": "https://tmfassociates.com/blog/2026/08/10/musks-daily-starship-problem/",
+        "source": "Hacker News AI",
+        "score": 4
       }
     ],
     "news": [
+      {
+        "title": "At least 132 killed in Colombia's largest  earthquake in years",
+        "url": "https://www.bbc.co.uk/news/articles/c20e360lx0vo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Canada flight cancelled after child refuses to wear seat belt",
+        "url": "https://www.bbc.co.uk/news/articles/cj6307x3wdgo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Watch: What we know about Tupac murder suspect Duane 'Keffe D' Davis",
+        "url": "https://www.bbc.co.uk/news/videos/cjd48zkg5n9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "At least 13 killed in Ukrainian drone strike deep into Russia",
         "url": "https://www.bbc.co.uk/news/articles/cvgjvgv926po?at_medium=RSS&at_campaign=rss",
@@ -205,23 +220,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Canada flight cancelled after child refuses to wear seat belt",
-        "url": "https://www.bbc.co.uk/news/articles/cj6307x3wdgo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "30 years later, a former gang member will stand trial for Tupac's murder",
         "url": "https://www.bbc.co.uk/news/articles/cgmkl1j3dwvo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "We are chasing Ebola virus - it is ahead of us, WHO warns",
-        "url": "https://www.bbc.co.uk/news/articles/c5ydx7m8gzeo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Trump signs order to limit childhood vaccines and split MMR shots",
-        "url": "https://www.bbc.co.uk/news/articles/ce3q5vl581wo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
