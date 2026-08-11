@@ -1,191 +1,191 @@
 {
   "metadata": {
-    "last_updated": "2026-08-10T23:36:01.365328",
+    "last_updated": "2026-08-11T01:49:14.322129",
     "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "The UK's War on Anonymity Has Come to America",
+        "url": "https://www.effort.news/uk-lobby",
+        "source": "Hacker News",
+        "score": 167
+      },
+      {
+        "title": "Chicken Scheme 6.0",
+        "url": "https://code.call-cc.org/releases/6.0.0/NEWS",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
+        "title": "Show HN: Scroll through all 43252003274489856000 Rubik's Cube states",
+        "url": "https://everycube.alen.is/",
+        "source": "Hacker News",
+        "score": 52
+      },
+      {
         "title": "Muse Glimmer: 30B-parameter model optimized for always-on local agent workflows",
         "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model",
         "source": "Hacker News",
-        "score": 984
+        "score": 1041
+      },
+      {
+        "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
+        "url": "https://cactuscompute.com/needle",
+        "source": "Hacker News",
+        "score": 172
+      },
+      {
+        "title": "The “mechanical miracle” that ruined Mark Twain’s life",
+        "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
+        "source": "Hacker News",
+        "score": 37
       },
       {
         "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
         "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News",
-        "score": 326
+        "score": 366
       },
       {
-        "title": "Rust SIMD on the GPU",
-        "url": "https://www.vectorware.com/blog/simd-on-gpu/",
+        "title": "Flock Cameras Can Track Every Car in America. Police Love Them. Citizens Don't",
+        "url": "https://www.nytimes.com/2026/08/10/us/flock-cameras-can-track-every-car-in-america-police-love-them-citizens-dont.html",
         "source": "Hacker News",
-        "score": 104
-      },
-      {
-        "title": "Sonic Pi v5",
-        "url": "https://www.patreon.com/samaaron/posts/sonic-pi-v5-166001392",
-        "source": "Hacker News",
-        "score": 282
+        "score": 42
       },
       {
         "title": "Publishing Schematics Before “Open Source” Was a Word",
         "url": "https://fabscene.medium.com/publishing-schematics-before-open-source-was-a-word-55-years-of-akizuki-denshi-japans-be7ca9629704",
         "source": "Hacker News",
-        "score": 38
+        "score": 64
+      },
+      {
+        "title": "Sonic Pi v5",
+        "url": "https://www.patreon.com/samaaron/posts/sonic-pi-v5-166001392",
+        "source": "Hacker News",
+        "score": 311
+      },
+      {
+        "title": "Rust SIMD on the GPU",
+        "url": "https://www.vectorware.com/blog/simd-on-gpu/",
+        "source": "Hacker News",
+        "score": 122
       },
       {
         "title": "Confessions of a Long-Distance Sailor",
         "url": "https://arachnoid.com/lutusp/sailbook.html",
         "source": "Hacker News",
-        "score": 36
+        "score": 64
       },
       {
-        "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
-        "url": "https://cactuscompute.com/needle",
+        "title": "World Train Map – 1247 train routes around the world",
+        "url": "https://worldtrainmap.com/",
         "source": "Hacker News",
-        "score": 98
+        "score": 32
       },
       {
-        "title": "Stop Killing Games: It's time to sue Sony, join us",
-        "url": "https://www.massaschadeconsument.nl/collectieve-acties/playstation/",
+        "title": "The Story of Mac: A Just-So Story",
+        "url": "https://gigamonkeys.com/book/macros-defining-your-own",
         "source": "Hacker News",
-        "score": 102
+        "score": 6
       },
       {
-        "title": "Exploiting System Management Mode with a very long interrupt",
-        "url": "https://github.com/xoreaxeaxeax/smiiiiiiiiiiiiiiii",
-        "source": "Hacker News",
-        "score": 111
-      },
-      {
-        "title": "Stowaway – take the window seat on any plane or satellite overhead",
+        "title": "Stowaway – Take the window seat on any plane or satellite overhead",
         "url": "https://stowaway.live/",
         "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "Squeak 6.1",
-        "url": "https://squeak.org/release_notes/6.1/",
-        "source": "Hacker News",
-        "score": 206
-      },
-      {
-        "title": "Google Search Is Dying. What Comes Next Is Worse",
-        "url": "https://thewalrus.ca/google-search-is-dying/",
-        "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
-        "url": "https://www.stoaexchange.com",
-        "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "Amazon backs power plant that may become top source of US climate pollution",
-        "url": "https://arstechnica.com/tech-policy/2026/08/amazon-funds-biggest-gas-power-plant-in-us-despite-climate-pledge/",
-        "source": "Hacker News",
-        "score": 116
-      },
-      {
-        "title": "Humanising LLM Outputs Is Dumb",
-        "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
-        "source": "Hacker News",
-        "score": 131
+        "score": 114
       }
     ],
     "ai": [
       {
+        "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
+        "url": "https://cactuscompute.com/needle",
+        "source": "Hacker News AI",
+        "score": 172
+      },
+      {
+        "title": "The “mechanical miracle” that ruined Mark Twain’s life",
+        "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
+        "source": "Hacker News AI",
+        "score": 37
+      },
+      {
         "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
         "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News AI",
-        "score": 326
+        "score": 366
       },
       {
         "title": "Confessions of a Long-Distance Sailor",
         "url": "https://arachnoid.com/lutusp/sailbook.html",
         "source": "Hacker News AI",
-        "score": 36
-      },
-      {
-        "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
-        "url": "https://cactuscompute.com/needle",
-        "source": "Hacker News AI",
-        "score": 98
-      },
-      {
-        "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
-        "url": "https://www.stoaexchange.com",
-        "source": "Hacker News AI",
-        "score": 60
-      },
-      {
-        "title": "Humanising LLM Outputs Is Dumb",
-        "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
-        "source": "Hacker News AI",
-        "score": 131
+        "score": 64
       },
       {
         "title": "World Train Map – 1247 train routes around the world",
         "url": "https://worldtrainmap.com/",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 32
+      },
+      {
+        "title": "Humanising LLM Outputs Is Dumb",
+        "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
+        "source": "Hacker News AI",
+        "score": 154
+      },
+      {
+        "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
+        "url": "https://www.stoaexchange.com",
+        "source": "Hacker News AI",
+        "score": 63
       },
       {
         "title": "Letter to Governor Abbott on responsible AI infrastructure in Texas",
         "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
         "source": "Hacker News AI",
-        "score": 82
+        "score": 91
       },
       {
         "title": "Exploring Claude/GPT Knowledge Cutoffs and Pre-Training Timelines",
         "url": "https://blog.sshh.io/p/exploring-claudegpt-knowledge-cutoffs",
         "source": "Hacker News AI",
-        "score": 91
-      },
-      {
-        "title": "Mistral Patent for “Code implemented tool calls”",
-        "url": "https://patentsgazette.uspto.gov/week26/OG/html/1547-5/US12670045-20260630.html",
-        "source": "Hacker News AI",
-        "score": 205
+        "score": 101
       },
       {
         "title": "Tail-call optimization in C is relatively recent (2025)",
         "url": "https://lwn.net/Articles/1034703/",
         "source": "Hacker News AI",
-        "score": 113
+        "score": 123
       },
       {
         "title": "GPT 5.6 Cyber",
         "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows/",
         "source": "Hacker News AI",
-        "score": 47
+        "score": 66
+      },
+      {
+        "title": "Mistral Patent for “Code implemented tool calls”",
+        "url": "https://patentsgazette.uspto.gov/week26/OG/html/1547-5/US12670045-20260630.html",
+        "source": "Hacker News AI",
+        "score": 208
       },
       {
         "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
         "url": "https://www.docker.com/products/docker-sandboxes/",
         "source": "Hacker News AI",
-        "score": 619
+        "score": 627
+      },
+      {
+        "title": "Show HN: AI Pulse a fake LED strip beside the macOS Dock that shows agent status",
+        "url": "https://github.com/leog/ai-pulse",
+        "source": "Hacker News AI",
+        "score": 6
       },
       {
         "title": "Kinney Drugs pulls back AI phone assistant after hundreds of customer complaints",
         "url": "https://www.wcax.com/2026/08/07/kinney-drugs-pulls-back-ai-phone-assistant-after-hundreds-customer-complaints/",
         "source": "Hacker News AI",
-        "score": 137
-      },
-      {
-        "title": "The Tragedy of the Cognitive Commons",
-        "url": "https://arxiv.org/abs/2607.29380",
-        "source": "Hacker News AI",
-        "score": 86
-      },
-      {
-        "title": "Show HN: Voice driven murder mystery, Interview AI suspects with your voice",
-        "url": "https://www.whodunnitai.com/",
-        "source": "Hacker News AI",
-        "score": 188
+        "score": 143
       }
     ],
     "news": [
@@ -301,6 +301,11 @@
     ],
     "gaming": [
       {
+        "title": "Netflix's The Last House ending explained by director: 'We humans are the bad guys of this planet'",
+        "url": "https://www.polygon.com/the-last-house-director-dives-into-a-murky-ending-of-cosmic-proportions/",
+        "source": "Polygon"
+      },
+      {
         "title": "'House of the Dragon' Officially Rewrites the Saddest Downfall in Game of Thrones History",
         "url": "https://www.polygon.com/house-of-the-dragon-season-4-changes-rhaenyra/",
         "source": "Polygon"
@@ -328,11 +333,6 @@
       {
         "title": "Large lost sunken relics list in Pokémon Pokopia",
         "url": "https://www.polygon.com/pokemon-pokopia-lost-sunken-relics-dlc-list-how-to-get/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Big Walk's Award-winning Predecessor is a Must Play PlayStation Plus Game",
-        "url": "https://www.polygon.com/untitled-goose-game-ps-plus-recommendation/",
         "source": "Polygon"
       }
     ],
