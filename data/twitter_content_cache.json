@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-11T14:58:32.533671",
-    "total_items": 65
+    "last_updated": "2026-08-11T16:06:10.452817",
+    "total_items": 63
   },
   "content": {
     "tech": [
@@ -9,183 +9,171 @@
         "title": "England set to be one of the first countries to eliminate hepatitis C",
         "url": "https://www.bbc.com/news/articles/c75gk620r22o",
         "source": "Hacker News",
-        "score": 162
+        "score": 258
+      },
+      {
+        "title": "Apple Silicon and macOS VMs: 11–16× Faster LLM Inference with Llama.cpp",
+        "url": "https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md",
+        "source": "Hacker News",
+        "score": 73
+      },
+      {
+        "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
+        "url": "https://stolen-thoughts.com/",
+        "source": "Hacker News",
+        "score": 104
+      },
+      {
+        "title": "Show HN: Git-knife – edit commit messages, authors, and dates like a spreadsheet",
+        "url": "https://github.com/TheRealYT/git-knife",
+        "source": "Hacker News",
+        "score": 38
+      },
+      {
+        "title": "Manus will return to operating as an independent company",
+        "url": "https://manus.im/blog/a-note-to-our-users",
+        "source": "Hacker News",
+        "score": 28
+      },
+      {
+        "title": "Launch HN: Keet (YC S24) – An app to create video courses on anything",
+        "url": "https://www.trykeet.com/",
+        "source": "Hacker News",
+        "score": 10
       },
       {
         "title": "France to ban unsolicited telemarketing calls",
         "url": "https://www.lemonde.fr/en/france/article/2026/08/06/france-to-ban-unsolicited-telemarketing-calls-from-august-11_6756208_7.html",
         "source": "Hacker News",
-        "score": 700
+        "score": 797
       },
       {
         "title": "Nvidia's Risky Business",
         "url": "https://stratechery.com/2026/nvidias-risky-business/",
         "source": "Hacker News",
-        "score": 77
+        "score": 125
       },
       {
         "title": "As AI eats the web, the internet’s collective memory is disappearing",
         "url": "https://thewalrus.ca/google-search-is-dying/",
         "source": "Hacker News",
-        "score": 582
-      },
-      {
-        "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
-        "url": "https://stolen-thoughts.com/",
-        "source": "Hacker News",
-        "score": 13
+        "score": 640
       },
       {
         "title": "H3-metal – Native MiniMax-H3 inference for Apple Silicon",
         "url": "https://github.com/antirez/h3.c",
         "source": "Hacker News",
-        "score": 367
-      },
-      {
-        "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
-        "url": "https://cactuscompute.com/needle",
-        "source": "Hacker News",
-        "score": 439
+        "score": 384
       },
       {
         "title": "Why Did OpenAI's Head of Ethics Chloé Bakalar Leave?",
         "url": "https://aimagazine.com/news/why-did-openai-head-of-ethics-chloe-bakalar-leave",
         "source": "Hacker News",
-        "score": 19
+        "score": 54
       },
       {
-        "title": "Chicken Scheme 6.0",
-        "url": "https://code.call-cc.org/releases/6.0.0/NEWS",
+        "title": "Halcyon Video – a 3D video store for your media server",
+        "url": "https://github.com/halcyon-video/halcyon-video",
         "source": "Hacker News",
-        "score": 244
+        "score": 20
       },
       {
-        "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
-        "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
+        "title": "Beltrunner: Game Design Postmortem",
+        "url": "https://blog.gingerbeardman.com/2026/07/30/beltrunner-game-design-postmortem/",
         "source": "Hacker News",
-        "score": 567
+        "score": 6
       },
       {
-        "title": "LFM2.5 2.6B model competitive with 4x larger models",
-        "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B",
+        "title": "The US tried to stop cartel money-laundering; devastated mom-and-pop businesses",
+        "url": "https://www.theguardian.com/us-news/2026/aug/11/us-mexico-border-area-money-transfer-rule-change-small-businesses",
         "source": "Hacker News",
-        "score": 119
-      },
-      {
-        "title": "Show HN: Scroll through all 43252003274489856000 Rubik's Cube states",
-        "url": "https://everycube.alen.is/",
-        "source": "Hacker News",
-        "score": 245
+        "score": 44
       },
       {
         "title": "What I learned by putting GitHub Copilot behind a MitM proxy",
         "url": "https://www.lighthousenewsletter.com/p/i-put-github-copilot-behind-a-mitm",
         "source": "Hacker News",
-        "score": 48
-      },
-      {
-        "title": "$580M undersea cable rerouted to avoid the grave of Dobby the House Elf",
-        "url": "https://www.tomshardware.com/networking/usd580-million-undersea-cable-rerouted-to-avoid-the-grave-of-dobby-the-house-elf-company-caves-to-fan-demands-to-safeguard-harry-potter-filming-location-will-instead-pass-by-bronze-age-burial-site",
-        "source": "Hacker News",
-        "score": 18
-      },
-      {
-        "title": "Closing Canario Terminal source code",
-        "url": "https://rapha.land/closing-canario-terminal-source-code/",
-        "source": "Hacker News",
-        "score": 34
+        "score": 67
       }
     ],
     "ai": [
       {
-        "title": "As AI eats the web, the internet’s collective memory is disappearing",
-        "url": "https://thewalrus.ca/google-search-is-dying/",
+        "title": "Apple Silicon and macOS VMs: 11–16× Faster LLM Inference with Llama.cpp",
+        "url": "https://github.com/trycua/cua/blob/main/blog/gpu-passthrough-macos-vms.md",
         "source": "Hacker News AI",
-        "score": 582
+        "score": 73
       },
       {
         "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
         "url": "https://stolen-thoughts.com/",
         "source": "Hacker News AI",
-        "score": 13
+        "score": 104
       },
       {
-        "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
-        "url": "https://cactuscompute.com/needle",
+        "title": "As AI eats the web, the internet’s collective memory is disappearing",
+        "url": "https://thewalrus.ca/google-search-is-dying/",
         "source": "Hacker News AI",
-        "score": 439
+        "score": 640
       },
       {
         "title": "Why Did OpenAI's Head of Ethics Chloé Bakalar Leave?",
         "url": "https://aimagazine.com/news/why-did-openai-head-of-ethics-chloe-bakalar-leave",
         "source": "Hacker News AI",
-        "score": 19
-      },
-      {
-        "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
-        "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
-        "source": "Hacker News AI",
-        "score": 567
+        "score": 54
       },
       {
         "title": "What I learned by putting GitHub Copilot behind a MitM proxy",
         "url": "https://www.lighthousenewsletter.com/p/i-put-github-copilot-behind-a-mitm",
         "source": "Hacker News AI",
-        "score": 48
+        "score": 67
+      },
+      {
+        "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
+        "url": "https://cactuscompute.com/needle",
+        "source": "Hacker News AI",
+        "score": 462
+      },
+      {
+        "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
+        "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
+        "source": "Hacker News AI",
+        "score": 581
       },
       {
         "title": "The “mechanical miracle” that ruined Mark Twain’s life",
         "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
         "source": "Hacker News AI",
-        "score": 178
+        "score": 183
       },
       {
         "title": "How Claude marks AI-generated content",
         "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
         "source": "Hacker News AI",
-        "score": 303
+        "score": 332
+      },
+      {
+        "title": "Confessions of a Long-Distance Sailor",
+        "url": "https://arachnoid.com/lutusp/sailbook.html",
+        "source": "Hacker News AI",
+        "score": 154
       },
       {
         "title": "Learning more about Claude's mathematical capabilities",
         "url": "https://www.anthropic.com/research/riemann-zeta",
         "source": "Hacker News AI",
-        "score": 238
+        "score": 247
+      },
+      {
+        "title": "Tail-call optimization in C is relatively recent (2025)",
+        "url": "https://lwn.net/Articles/1034703/",
+        "source": "Hacker News AI",
+        "score": 161
       },
       {
         "title": "Hollywood and Shanghai Cinema in the 1930s [pdf]",
         "url": "https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2225&context=clcweb",
         "source": "Hacker News AI",
         "score": 8
-      },
-      {
-        "title": "Confessions of a Long-Distance Sailor",
-        "url": "https://arachnoid.com/lutusp/sailbook.html",
-        "source": "Hacker News AI",
-        "score": 148
-      },
-      {
-        "title": "Tail-call optimization in C is relatively recent (2025)",
-        "url": "https://lwn.net/Articles/1034703/",
-        "source": "Hacker News AI",
-        "score": 160
-      },
-      {
-        "title": "Letter to Governor Abbott on responsible AI infrastructure in Texas",
-        "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
-        "source": "Hacker News AI",
-        "score": 113
-      },
-      {
-        "title": "Exploring Claude/GPT Knowledge Cutoffs and Pre-Training Timelines",
-        "url": "https://blog.sshh.io/p/exploring-claudegpt-knowledge-cutoffs",
-        "source": "Hacker News AI",
-        "score": 151
-      },
-      {
-        "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
-        "url": "https://www.stoaexchange.com",
-        "source": "Hacker News AI",
-        "score": 75
       }
     ],
     "news": [
@@ -205,27 +193,32 @@
         "source": "BBC World"
       },
       {
-        "title": "At least 169 killed in Colombia's largest  earthquake in years",
-        "url": "https://www.bbc.co.uk/news/articles/c20e360lx0vo?at_medium=RSS&at_campaign=rss",
+        "title": "Russia releases former US Marine reported in poor health",
+        "url": "https://www.bbc.co.uk/news/articles/cvgj4m8e1ryo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Luigi Mangione back in court as key questions remain over case ahead of murder trial",
-        "url": "https://www.bbc.co.uk/news/articles/cgje05wd1v4o?at_medium=RSS&at_campaign=rss",
+        "title": "Watch: Family escapes home during Colombia earthquake",
+        "url": "https://www.bbc.co.uk/news/videos/cwyl3w1e6zxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Australia PM under fire for remarks on Japanese counterpart's melon gifts",
-        "url": "https://www.bbc.co.uk/news/articles/c0jl6ewvq42o?at_medium=RSS&at_campaign=rss",
+        "title": "Lebanon parliament votes to abolish death penalty",
+        "url": "https://www.bbc.co.uk/news/articles/c8enj8p1xwgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Canada flight cancelled after child refuses to wear seat belt",
-        "url": "https://www.bbc.co.uk/news/articles/cj6307x3wdgo?at_medium=RSS&at_campaign=rss",
+        "title": "France bans unsolicited telemarketing calls",
+        "url": "https://www.bbc.co.uk/news/articles/cy5d11g72ppo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Are Chromebooks finally good enough for university students? ",
+        "url": "https://www.creativebloq.com/tech/laptops/are-chromebooks-finally-good-enough-for-university-students",
+        "source": "Creative Bloq"
+      },
       {
         "title": " This $240 office chair is supremely light and packs a boing ",
         "url": "https://www.creativebloq.com/tech/chairs-desks/this-usd240-office-chair-is-supremely-light-and-packs-a-boing",
@@ -254,11 +247,6 @@
       {
         "title": " People can't decide whether Newcastle United's logo design poll is a joke ",
         "url": "https://www.creativebloq.com/design/logos-icons/people-cant-decide-whether-newcastle-uniteds-logo-design-poll-is-a-joke",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " See how this 3D artist experiments with colour in renders ",
-        "url": "https://www.creativebloq.com/3d/3d-art/see-how-this-3d-artist-experiments-with-colour-in-renders",
         "source": "Creative Bloq"
       }
     ],
@@ -301,6 +289,31 @@
     ],
     "gaming": [
       {
+        "title": "2026’s Most Anticipated FPS, Wardogs, Finally Has a Release Date",
+        "url": "https://www.polygon.com/wardogs-release-date-steam-early-access/",
+        "source": "Polygon"
+      },
+      {
+        "title": "X-Files Creator Reveals the Biggest Changes He Made to His New R-Rated Director's Cut",
+        "url": "https://www.polygon.com/x-files-i-want-to-believe-directors-cut-chris-carter-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Critical Role Book Confirms a New Future for Campaign 2",
+        "url": "https://www.polygon.com/critical-role-mighty-nein-changes/",
+        "source": "Polygon"
+      },
+      {
+        "title": "All purple gourd puzzles and how to solve them in Big Walk",
+        "url": "https://www.polygon.com/big-walk-purple-gourd-puzzles-walkthrough-how-to-solve-what-to-do-with/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Marvel Tokon: Fighting Souls Commits a Cardinal Video Game Sin",
+        "url": "https://www.polygon.com/marvel-tokon-fighting-souls-tutorial/",
+        "source": "Polygon"
+      },
+      {
         "title": "Gundam Director Kenji Kamiyama Says His New Anime Is a Metaphor for AI Fears",
         "url": "https://www.polygon.com/mobile-suit-gundam-new-series-ai-fears-kenji-kamiyama/",
         "source": "Polygon"
@@ -308,31 +321,6 @@
       {
         "title": "The Blood of Dawnwalker Is a Serious Witcher 3 Competitor, and It’s Launching Soon",
         "url": "https://www.polygon.com/games-like-witcher-3-blood-dawnwalker-release-date/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Madoka Magica’s Long-Awaited Fourth Film Will Be Released in the Biggest Format Possible",
-        "url": "https://www.polygon.com/puella-magi-madoka-magika-walpurgisnacht-rising-imax-release-japan/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Star Wars Zero Company Preview: XCOM + Star Wars Is A Perfect Combo ",
-        "url": "https://www.polygon.com/star-wars-zero-company-preview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Reacher' Season 4 review: Prime Video Puts Alan Ritchson in Mission: Impossible mode",
-        "url": "https://www.polygon.com/reacher-season-4-review/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Xbox Outage Bug Has Been Fixed, Microsoft Says",
-        "url": "https://www.polygon.com/xbox-outage-cant-play-games-bug-fixed/",
-        "source": "Polygon"
-      },
-      {
-        "title": "MTG’s 15 Best Goblin Commanders, Ranked From Worst to Best",
-        "url": "https://www.polygon.com/best-goblin-commanders-mtg-magic-the-gathering/",
         "source": "Polygon"
       }
     ],
