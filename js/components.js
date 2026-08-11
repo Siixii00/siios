@@ -494,7 +494,13 @@ function createKakaoBottomSheet(items, options = {}) {
     }
     
     if (options.customContent) {
-        sheet.appendChild(options.customContent);
+        const scrollContainer = createElement('div');
+        scrollContainer.style.flex = '1';
+        scrollContainer.style.overflowY = 'auto';
+        scrollContainer.style.minHeight = '0';
+        scrollContainer.style.webkitOverflowScrolling = 'touch';
+        scrollContainer.appendChild(options.customContent);
+        sheet.appendChild(scrollContainer);
     } else {
         const grid = createElement('div', 'kakao-bottom-sheet-grid');
         

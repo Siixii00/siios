@@ -14,3 +14,9 @@ DISCORD_PUBLIC_KEY = "584cd98b6ee6fb4114359285ed597cff36f43c90e36cf2ca7345f7b8da
 
 [triggers]
 crons = ["*/2 * * * *"]
+
+# 需用 wrangler secret put 設定的密鑰：
+#   DISCORD_BOT_TOKEN       - Discord Bot Token（必填）
+#   AI_API_KEY              - AI 服務 API Key（必填，否則不會回覆）
+#   DISCORD_APPLICATION_ID  - Discord Application ID（斜線指令註冊用；@mention 偵測已自動取得，可選）
+#   BACKUP_KEY              - 備份金鑰（/backup 端點用，可選）
