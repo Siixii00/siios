@@ -63,6 +63,7 @@ async function renderUserList() {
 
             const info = createElement('div', 'flex-1 ml-3 min-w-0');
             info.appendChild(createElement('span', 'text-body-lg font-medium', { textContent: user.name || '未命名' }));
+            info.appendChild(createElement('span', 'block text-xs text-ios-muted font-mono truncate', { textContent: user.id }));
             if (user.nicknames && user.nicknames.length > 0) {
                 info.appendChild(createElement('span', 'block text-sm text-ios-muted truncate', { textContent: user.nicknames.join(', ') }));
             } else if (user.personality) {
@@ -138,6 +139,26 @@ async function renderUserEdit(params) {
     nameGroup.appendChild(nameCell);
     main.appendChild(nameSection);
     main.appendChild(nameGroup);
+
+    const idSection = createElement('div', 'mb-2 ml-8 mt-4');
+    idSection.appendChild(createElement('p', 'ios-section-header', { textContent: '用戶 ID（Discord /bindme 綁定用）' }));
+    const idGroup = createElement('div', 'ios-grouped-list mx-4');
+    const idCell = createElement('div', 'p-4 flex items-center gap-3');
+    const idText = createElement('span', 'flex-1 font-mono text-sm text-ios-muted break-all', { textContent: user.id });
+    const copyBtn = createElement('button', 'ios-btn text-sm px-3 py-1', { textContent: '複製' });
+    copyBtn.onclick = async () => {
+        try {
+            await navigator.clipboard.writeText(user.id);
+            createToast('已複製用戶 ID');
+        } catch (e) {
+            createToast('複製失敗：' + e.message, 'error');
+        }
+    };
+    idCell.appendChild(idText);
+    idCell.appendChild(copyBtn);
+    idGroup.appendChild(idCell);
+    main.appendChild(idSection);
+    main.appendChild(idGroup);
 
     const nickSection = createElement('div', 'mb-2 ml-8 mt-4');
     nickSection.appendChild(createElement('p', 'ios-section-header', { textContent: '暱稱' }));

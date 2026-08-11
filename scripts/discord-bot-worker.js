@@ -49,6 +49,24 @@ export default {
             }
         }
 
+        // 自動設定 Discord Webhook URL（即時接收頻道訊息）
+        if (url.pathname === '/discord/setup-webhook' && request.method === 'POST') {
+            try {
+                const workerUrl = `${url.protocol}//${url.host}`;
+                const webhookUrl = `${workerUrl}/discord/webhook`;
+                const resp = await fetch(`https://discord.com/api/v10/applications/@me`, {
+                    method: 'PATCH',
+                    headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}`, 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ interactions_endpoint_url: webhookUrl })
+                });
+                const data = await resp.json();
+                if (!resp.ok) throw new Error(data.message || `HTTP ${resp.status}`);
+                return Response.json({ success: true, webhook_url: webhookUrl, application: data.id }, { headers: corsHeaders });
+            } catch (error) {
+                return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
+            }
+        }
+
         // Discord Webhook（含簽名驗證）
         if (url.pathname === '/discord/webhook' && request.method === 'POST') {
             try {
@@ -229,6 +247,9 @@ async function pollBoundChannels(env) {
     for (const m of (mappings.results || [])) if (!channelMap.has(m.channel_id)) channelMap.set(m.channel_id, m.character_id);
     let processed = 0, replied = 0;
 
+    // 取得 Bot 自己的用戶 ID（用於偵測 @mention），失敗時退回 env.DISCORD_APPLICATION_ID
+    const botUserId = await getBotUserId(env);
+
     for (const [channelId, characterId] of channelMap) {
         if (!channelId) continue;
 
@@ -267,7 +288,7 @@ async function pollBoundChannels(env) {
             await saveDiscordMemory(env, characterId, userId, userDisplayName, msg.content);
 
             // 決定是否回應：@機器人 一定回；否則讓 AI 判斷是否有興趣插嘴
-            const mentioned = (msg.mentions || []).some(m => m.id === env.DISCORD_APPLICATION_ID);
+            const mentioned = (msg.mentions || []).some(m => m.id === botUserId);
             const interested = mentioned || await aiInterestedIn(msg.content, characterId, env);
 
             if (interested) {
@@ -290,6 +311,27 @@ async function pollBoundChannels(env) {
     }
 
     return { type: 'keepalive', channels: channelMap.size, processed, replied, ts: Date.now() };
+}
+
+// ===== 取得 Bot 自己的用戶 ID（用於偵測 @mention），自動從 Discord API 抓取並快取 =====
+async function getBotUserId(env) {
+    try {
+        const cached = await env.DB.prepare(`SELECT cursor FROM botState WHERE key = 'bot_user_id'`).first();
+        if (cached?.cursor) return cached.cursor;
+
+        const resp = await fetch(`https://discord.com/api/v10/users/@me`, {
+            headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
+        });
+        if (!resp.ok) return null;
+        const me = await resp.json();
+        if (!me?.id) return null;
+
+        await env.DB.prepare(`INSERT INTO botState (key, cursor) VALUES ('bot_user_id', ?) ON CONFLICT(key) DO UPDATE SET cursor = excluded.cursor`).bind(me.id).run();
+        return me.id;
+    } catch (error) {
+        console.error('getBotUserId error:', error);
+        return null;
+    }
 }
 
 // 讓 AI 判斷是否對話題有興趣要插嘴
@@ -330,6 +372,8 @@ async function saveDiscordMemory(env, characterId, userId, userDisplayName, cont
 
 // ===== 斜線指令註冊 =====
 async function registerCommands(env) {
+    const applicationId = await getBotUserId(env);
+    if (!applicationId) throw new Error('無法取得 Application ID（請確認 DISCORD_BOT_TOKEN）');
     const commands = [
         {
             name: 'configure',
@@ -374,7 +418,7 @@ async function registerCommands(env) {
     ];
 
     const response = await fetch(
-        `https://discord.com/api/v10/applications/${env.DISCORD_APPLICATION_ID}/commands`,
+        `https://discord.com/api/v10/applications/${applicationId}/commands`,
         { method: 'PUT', headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}`, 'Content-Type': 'application/json' }, body: JSON.stringify(commands) }
     );
     if (!response.ok) throw new Error(`Failed to register commands: ${await response.text()}`);
