@@ -40,7 +40,7 @@ export default {
         }
 
         // 啟動 Gateway WebSocket 即時接收 MESSAGE_CREATE
-        if (url.pathname === '/gateway/start' && request.method === 'GET') {
+        if (url.pathname === '/gateway/start' && (request.method === 'GET' || request.method === 'POST')) {
             try {
                 ctx.waitUntil(startGatewayConnection(env, ctx));
                 return Response.json({ success: true, message: 'Gateway 連線已啟動，事件會即時進來。若 Worker 暖機中請稍候。' }, { headers: corsHeaders });
@@ -49,11 +49,24 @@ export default {
             }
         }
 
-        // 註冊斜線指令
-        if (url.pathname === '/discord/register-commands' && request.method === 'POST') {
+        // 註冊斜線指令（GET 方便瀏覽器直接觸發）
+        if (url.pathname === '/discord/register-commands' && (request.method === 'GET' || request.method === 'POST')) {
             try {
                 await registerCommands(env);
+                await env.DB.prepare(`INSERT INTO botState (key, cursor) VALUES ('commands_registered', '1') ON CONFLICT(key) DO UPDATE SET cursor = '1'`).run();
                 return Response.json({ success: true, message: '斜線指令已註冊' }, { headers: corsHeaders });
+            } catch (error) {
+                return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
+            }
+        }
+
+        // 一鍵設定：註冊斜線指令 + 啟動 Gateway
+        if (url.pathname === '/setup' && (request.method === 'GET' || request.method === 'POST')) {
+            try {
+                await registerCommands(env);
+                await env.DB.prepare(`INSERT INTO botState (key, cursor) VALUES ('commands_registered', '1') ON CONFLICT(key) DO UPDATE SET cursor = '1'`).run();
+                ctx.waitUntil(startGatewayConnection(env, ctx));
+                return Response.json({ success: true, message: '✅ 斜線指令已註冊，Gateway 連線已啟動' }, { headers: corsHeaders });
             } catch (error) {
                 return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
             }
@@ -241,6 +254,19 @@ export default {
     async scheduled(event, env, ctx) {
         try {
             await pollBoundChannels(env);
+
+            // 首次啟動時自動註冊斜線指令
+            const registered = await env.DB.prepare(`SELECT cursor FROM botState WHERE key = 'commands_registered'`).first();
+            if (!registered) {
+                try {
+                    await registerCommands(env);
+                    await env.DB.prepare(`INSERT INTO botState (key, cursor) VALUES ('commands_registered', '1') ON CONFLICT(key) DO UPDATE SET cursor = '1'`).run();
+                    console.log('Slash commands registered');
+                } catch (err) {
+                    console.error('Failed to register commands:', err);
+                }
+            }
+
             ctx.waitUntil(startGatewayConnection(env, ctx));
         } catch (error) {
             console.error('scheduled error:', error);
