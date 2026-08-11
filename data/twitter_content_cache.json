@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-11T10:06:09.960267",
+    "last_updated": "2026-08-11T11:44:06.137888",
     "total_items": 65
   },
   "content": {
     "tech": [
       {
-        "title": "H3-metal – Native MiniMax-H3 inference for Apple Silicon",
-        "url": "https://github.com/antirez/h3.c",
-        "source": "Hacker News",
-        "score": 275
-      },
-      {
         "title": "France to ban unsolicited telemarketing calls",
         "url": "https://www.lemonde.fr/en/france/article/2026/08/06/france-to-ban-unsolicited-telemarketing-calls-from-august-11_6756208_7.html",
         "source": "Hacker News",
-        "score": 122
+        "score": 314
+      },
+      {
+        "title": "H3-metal – Native MiniMax-H3 inference for Apple Silicon",
+        "url": "https://github.com/antirez/h3.c",
+        "source": "Hacker News",
+        "score": 302
       },
       {
         "title": "As AI eats the web, the internet’s collective memory is disappearing",
         "url": "https://thewalrus.ca/google-search-is-dying/",
         "source": "Hacker News",
-        "score": 302
+        "score": 364
       },
       {
         "title": "To Save C, We Must Save ABI",
         "url": "https://thephd.dev/to-save-c-we-must-save-abi-fixing-c-function-abi",
         "source": "Hacker News",
-        "score": 44
+        "score": 72
       },
       {
         "title": "Chicken Scheme 6.0",
         "url": "https://code.call-cc.org/releases/6.0.0/NEWS",
         "source": "Hacker News",
-        "score": 194
+        "score": 204
       },
       {
         "title": "LFM2.5 2.6B model competitive with 4x larger models",
         "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B",
         "source": "Hacker News",
-        "score": 77
-      },
-      {
-        "title": "Show HN: Mcptoon – Token-efficient MCP CLI client",
-        "url": "https://github.com/activeing123/mcptoon",
-        "source": "Hacker News",
-        "score": 47
-      },
-      {
-        "title": "About Rx Kids",
-        "url": "https://rxkids.org/about/",
-        "source": "Hacker News",
-        "score": 19
+        "score": 89
       },
       {
         "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
         "url": "https://cactuscompute.com/needle",
         "source": "Hacker News",
-        "score": 334
+        "score": 365
       },
       {
         "title": "Show HN: Scroll through all 43252003274489856000 Rubik's Cube states",
         "url": "https://everycube.alen.is/",
         "source": "Hacker News",
-        "score": 192
+        "score": 213
       },
       {
         "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
         "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News",
-        "score": 507
+        "score": 531
+      },
+      {
+        "title": "Show HN: Mcptoon – Token-efficient MCP CLI client",
+        "url": "https://github.com/activeing123/mcptoon",
+        "source": "Hacker News",
+        "score": 52
       },
       {
         "title": "The “mechanical miracle” that ruined Mark Twain’s life",
         "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
         "source": "Hacker News",
-        "score": 139
+        "score": 148
+      },
+      {
+        "title": "Programming the Gigatron",
+        "url": "https://www.iwriteiam.nl/PGigatron.html",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "Closing Canario Terminal source code",
+        "url": "https://rapha.land/closing-canario-terminal-source-code/",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "About Rx Kids",
+        "url": "https://rxkids.org/about/",
+        "source": "Hacker News",
+        "score": 31
       },
       {
         "title": "Recycle – Floppydisks",
         "url": "https://www.floppydisk.com/recycle",
         "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "Stowaway – Take the window seat on any plane or satellite overhead",
-        "url": "https://stowaway.live/",
-        "source": "Hacker News",
-        "score": 270
-      },
-      {
-        "title": "Sonic Pi v5",
-        "url": "https://www.patreon.com/samaaron/posts/sonic-pi-v5-166001392",
-        "source": "Hacker News",
-        "score": 377
+        "score": 69
       }
     ],
     "ai": [
@@ -101,67 +101,61 @@
         "title": "As AI eats the web, the internet’s collective memory is disappearing",
         "url": "https://thewalrus.ca/google-search-is-dying/",
         "source": "Hacker News AI",
-        "score": 302
+        "score": 364
       },
       {
         "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
         "url": "https://cactuscompute.com/needle",
         "source": "Hacker News AI",
-        "score": 334
+        "score": 365
       },
       {
         "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
         "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News AI",
-        "score": 507
+        "score": 531
       },
       {
         "title": "The “mechanical miracle” that ruined Mark Twain’s life",
         "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
         "source": "Hacker News AI",
-        "score": 139
+        "score": 148
       },
       {
         "title": "How Claude marks AI-generated content",
         "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
         "source": "Hacker News AI",
-        "score": 179
-      },
-      {
-        "title": "Confessions of a Long-Distance Sailor",
-        "url": "https://arachnoid.com/lutusp/sailbook.html",
-        "source": "Hacker News AI",
-        "score": 117
-      },
-      {
-        "title": "Learning more about Claude's mathematical capabilities",
-        "url": "https://www.anthropic.com/research/riemann-zeta",
-        "source": "Hacker News AI",
-        "score": 206
+        "score": 205
       },
       {
         "title": "Tail-call optimization in C is relatively recent (2025)",
         "url": "https://lwn.net/Articles/1034703/",
         "source": "Hacker News AI",
-        "score": 150
+        "score": 152
       },
       {
-        "title": "The Water Footprint of AI",
-        "url": "https://doi.org/10.1016/j.watres.2026.125866",
+        "title": "Confessions of a Long-Distance Sailor",
+        "url": "https://arachnoid.com/lutusp/sailbook.html",
         "source": "Hacker News AI",
-        "score": 13
+        "score": 126
+      },
+      {
+        "title": "Learning more about Claude's mathematical capabilities",
+        "url": "https://www.anthropic.com/research/riemann-zeta",
+        "source": "Hacker News AI",
+        "score": 216
       },
       {
         "title": "Humanising LLM Outputs Is Dumb",
         "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
         "source": "Hacker News AI",
-        "score": 211
+        "score": 214
       },
       {
         "title": "Exploring Claude/GPT Knowledge Cutoffs and Pre-Training Timelines",
         "url": "https://blog.sshh.io/p/exploring-claudegpt-knowledge-cutoffs",
         "source": "Hacker News AI",
-        "score": 144
+        "score": 145
       },
       {
         "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
@@ -173,19 +167,25 @@
         "title": "Letter to Governor Abbott on responsible AI infrastructure in Texas",
         "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
         "source": "Hacker News AI",
-        "score": 108
+        "score": 109
       },
       {
         "title": "World Train Map – 1247 train routes around the world",
         "url": "https://worldtrainmap.com/",
         "source": "Hacker News AI",
-        "score": 126
+        "score": 129
       },
       {
         "title": "Docker Sandboxes – Disposable, isolated sandboxes for AI agents",
         "url": "https://www.docker.com/products/docker-sandboxes/",
         "source": "Hacker News AI",
-        "score": 654
+        "score": 658
+      },
+      {
+        "title": "Fairy Ring",
+        "url": "https://en.wikipedia.org/wiki/Fairy_ring",
+        "source": "Hacker News AI",
+        "score": 7
       }
     ],
     "news": [
@@ -301,38 +301,38 @@
     ],
     "gaming": [
       {
-        "title": "The Best Classic JRPGs You Can Still Easily Play Today",
-        "url": "https://www.polygon.com/classic-jrpgs-no-remake/",
+        "title": "Why Wo Long’s Zhang Liang is so good at killing you",
+        "url": "https://www.polygon.com/video/why-wo-long-s-zhang-liang-is-so-good-at-killing-you/",
         "source": "Polygon"
       },
       {
-        "title": "Upcoming RPG Promises Neverwinter Nights Vibes With a Steampunk Touch",
-        "url": "https://www.polygon.com/covenant-of-gears-three-musketeers-classic-rpg/",
+        "title": "Christopher Nolan’s The Odyssey Opens With a Surpising Star Wars Reference",
+        "url": "https://www.polygon.com/christopher-nolan-the-odyssey-star-wars/",
         "source": "Polygon"
       },
       {
-        "title": "Netflix's The Last House ending explained by director: 'We humans are the bad guys of this planet'",
-        "url": "https://www.polygon.com/the-last-house-director-dives-into-a-murky-ending-of-cosmic-proportions/",
+        "title": "Why Margit is so good at killing you in Elden Ring",
+        "url": "https://www.polygon.com/video/why-margit-is-so-good-at-killing-you-in-elden-ring/",
         "source": "Polygon"
       },
       {
-        "title": "'House of the Dragon' Officially Rewrites the Saddest Downfall in Game of Thrones History",
-        "url": "https://www.polygon.com/house-of-the-dragon-season-4-changes-rhaenyra/",
+        "title": "Darktide's gory animations are smarter than you think",
+        "url": "https://www.polygon.com/video/darktide-s-gory-animations-are-smarter-than-you-think/",
         "source": "Polygon"
       },
       {
-        "title": "2,000 Fortnite Players Hired as Air Traffic Controllers by US Government",
-        "url": "https://www.polygon.com/fortnite-united-states-air-traffic-control/",
+        "title": "How to get started with Fighting Games and have a Nice Time",
+        "url": "https://www.polygon.com/video/how-to-get-started-with-fighting-games-and-have-a-nice-time/",
         "source": "Polygon"
       },
       {
-        "title": "Chiikawa the Movie Is Killing It in Japan's Cinemas — While Leaving Children Crying in Fear",
-        "url": "https://www.polygon.com/chiikawa-the-movie-secret-of-mermaid-island-box-office/",
+        "title": "30 Years Later, Buffy: The Vampire Slayer’s Best Quote Still Lives in My Head Rent Free",
+        "url": "https://www.polygon.com/buffy-the-vampire-slayer-best-quote/",
         "source": "Polygon"
       },
       {
-        "title": "Marvel Tokon's New PC Patch Finally Makes the Game Work, Players Say",
-        "url": "https://www.polygon.com/marvel-tokon-fighting-souls-pc-patch-reportedly-fixes-game/",
+        "title": "Why Armored Core 6's Balteus is so good at killing you",
+        "url": "https://www.polygon.com/video/why-armored-core-6-s-balteus-is-so-good-at-killing-you/",
         "source": "Polygon"
       }
     ],
