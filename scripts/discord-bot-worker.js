@@ -330,14 +330,17 @@ async function pollBoundChannels(env) {
             // 自動存簡易記憶
             await saveDiscordMemory(env, characterId, userId, userDisplayName, msg.content);
 
-            // 決定是否回應：@機器人 一定回；否則讓 AI 判斷是否有興趣插嘴
+            // 獨立於插嘴的表情反應
+            await maybeAddReaction(msg, env);
+
+            // 決定是否回應：@機器人 一定回；否則 AI 判斷興趣與隨機插嘴是兩個獨立事件
             const mentioned = (msg.mentions || []).some(m => m.id === botUserId);
             let interested = mentioned;
             if (!mentioned) {
                 const prob = await getInterjectProbability(env);
-                if (Math.random() < prob) {
-                    interested = await aiInterestedIn(msg.content, characterId, env);
-                }
+                const aiInterested = await aiInterestedIn(msg.content, characterId, env);
+                const randomInterject = prob > 0 && Math.random() < prob;
+                interested = aiInterested || randomInterject;
             }
 
             if (interested) {
@@ -410,6 +413,14 @@ async function getInterjectProbability(env) {
     return Math.min(1, Math.max(0, prob));
 }
 
+// 取得反應機率（獨立於插嘴機率，預設 0.5）
+async function getReactionProbability(env) {
+    const val = await getConfig(env, 'REACTION_PROBABILITY');
+    const prob = parseFloat(val);
+    if (Number.isNaN(prob)) return 0.5;
+    return Math.min(1, Math.max(0, prob));
+}
+
 // 檢查訊息是否提到角色名字或暱稱（命中時 100% 插嘴）
 async function isCharacterNameMentioned(content, characterId, env) {
     if (!characterId || !content) return false;
@@ -456,6 +467,7 @@ async function registerCommands(env) {
                         { name: 'API Key', value: 'AI_API_KEY' },
                         { name: 'Model', value: 'AI_MODEL' },
                         { name: 'Interject Probability (0~1)', value: 'INTERJECT_PROBABILITY' },
+                        { name: 'Reaction Probability (0~1)', value: 'REACTION_PROBABILITY' },
                         { name: 'Backup Key', value: 'BACKUP_KEY' }
                     ]
                 },
@@ -594,11 +606,12 @@ async function handleSlashCommand(event, env) {
             const apiKey = await getConfig(env, 'AI_API_KEY') || '(未設定)';
             const model = await getConfig(env, 'AI_MODEL') || 'gpt-3.5-turbo';
             const interjectProb = await getConfig(env, 'INTERJECT_PROBABILITY') || '0.3';
+            const reactionProb = await getConfig(env, 'REACTION_PROBABILITY') || '0.5';
             const allowedChannels = await getConfig(env, 'ALLOWED_CHANNELS') || '(無)';
             const backupKey = await getConfig(env, 'BACKUP_KEY') || '(未設定)';
             const keyDisplay = apiKey === '(未設定)' ? '(未設定)' : apiKey.slice(0, 4) + '****';
             const backupDisplay = backupKey === '(未設定)' ? '(未設定)' : backupKey.slice(0, 4) + '****';
-            return Response.json({ type: 4, data: { content: `📋 **目前設定**\n\`\`\`\nAPI URL:     ${apiUrl}\nAPI Key:     ${keyDisplay}\nModel:       ${model}\nInterject:   ${interjectProb}\nAllowChan:   ${allowedChannels}\nBackupKey:   ${backupDisplay}\n\`\`\`\n使用 /configure 修改設定` } });
+            return Response.json({ type: 4, data: { content: `📋 **目前設定**\n\`\`\`\nAPI URL:     ${apiUrl}\nAPI Key:     ${keyDisplay}\nModel:       ${model}\nInterject:   ${interjectProb}\nReaction:    ${reactionProb}\nAllowChan:   ${allowedChannels}\nBackupKey:   ${backupDisplay}\n\`\`\`\n使用 /configure 修改設定` } });
         }
 
         if (name === 'channel') {
@@ -734,16 +747,15 @@ async function handleMessage(message, env) {
         // 未綁定角色時，仍可依機率插嘴（使用通用 AI 身份）
     }
 
-    // 沒被 @mention 時，依使用者設定的機率決定是否讓 AI 判斷插嘴
+    // 沒被 @mention 時，AI 判斷興趣與隨機插嘴是兩個獨立事件
     if (!mentioned) {
         // 若訊息提到角色名字或暱稱，100% 插嘴（不經機率與 AI 興趣判斷）
         const nameMentioned = await isCharacterNameMentioned(message.content, characterId, env);
         if (!nameMentioned) {
             const prob = await getInterjectProbability(env);
-            if (prob <= 0 || Math.random() > prob) return Response.json({ status: 'not_interested' });
-
-            const interested = await aiInterestedIn(message.content, characterId, env);
-            if (!interested) return Response.json({ status: 'not_interested' });
+            const aiInterested = await aiInterestedIn(message.content, characterId, env);
+            const randomInterject = prob > 0 && Math.random() < prob;
+            if (!aiInterested && !randomInterject) return Response.json({ status: 'not_interested' });
         }
     }
 
@@ -758,10 +770,8 @@ async function handleMessage(message, env) {
         JSON.stringify({ source: 'discord', author: message.author.username, author_id: message.author.id, channel_id: message.channel_id, bound_user_id: userId, user_display_name: userDisplayName })
     ).run();
 
-    // 對所有允許的訊息加隨機表情反應（即時回饋）
-    try {
-        await addReaction(message.channel_id, message.id, randomReactionEmoji(), env);
-    } catch (_) {}
+    // 對所有允許的訊息加隨機表情反應（即時回饋，獨立於插嘴）
+    await maybeAddReaction(message, env);
 
     // 生成 AI 回覆（含記憶），失敗時回傳錯誤訊息給使用者
     let aiResponse;
@@ -878,7 +888,8 @@ You are currently replying as **${charName}** in Discord.
 - 可適度加入動作描寫（例如 *歪頭*、*笑*），但不要寫太長的敘述。
 - 不要使用 markdown、程式碼區塊或落落長的段落。
 ${environ.isPublic ? '- 這是公開頻道，內容會被其他成員看到。' : '- 這是私訊／群組對話。'}
-${environ.memberCount >= 3 ? '- 頻道內有 3 人以上在場，請避免成人相關或敏感話題，維持適合公開場合的內容。' : ''}`;
+${environ.memberCount >= 3 ? '- 頻道內有 3 人以上在場，請避免成人相關或敏感話題，維持適合公開場合的內容。' : ''}
+${environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道，可以聊 15+ 的擦邊、曖昧或稍微露骨的話題，但仍禁止到達 R18 露骨性內容。' : ''}`;
     systemMessages.push({ role: 'system', content: discordDirective });
 
     // 4. 角色人格 + 場景 + 記憶
@@ -1022,11 +1033,13 @@ async function loadWorldInfoContext(chatId, userMessage, characterId, userId, en
 async function getDiscordEnvironment(message, env) {
     let isPublic = true;
     let memberCount = 0;
+    let isNsfw = false;
     try {
         const channel = await fetch(`https://discord.com/api/v10/channels/${message.channel_id}`, {
             headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
         }).then(r => r.json());
         if (channel.type === 1 || channel.type === 3) isPublic = false;
+        isNsfw = !!channel.nsfw;
     } catch (_) {}
     if (isPublic) {
         try {
@@ -1035,7 +1048,7 @@ async function getDiscordEnvironment(message, env) {
             memberCount = authors.size;
         } catch (_) {}
     }
-    return { isPublic, memberCount };
+    return { isPublic, memberCount, isNsfw };
 }
 
 // ===== 發送 Discord 訊息 =====
@@ -1056,6 +1069,16 @@ function randomReactionEmoji() {
 }
 
 // ===== Discord 表情符號反應 =====
+// 依獨立機率決定是否加表情反應
+async function maybeAddReaction(message, env) {
+    try {
+        const prob = await getReactionProbability(env);
+        if (prob > 0 && Math.random() < prob) {
+            await addReaction(message.channel_id, message.id, randomReactionEmoji(), env);
+        }
+    } catch (_) {}
+}
+
 async function addReaction(channel_id, message_id, emoji, env) {
     const encoded = encodeURIComponent(emoji);
     const response = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages/${message_id}/reactions/${encoded}/@me`, {
