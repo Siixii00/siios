@@ -9,6 +9,7 @@ let activeResponseCount = 0;
 let messageCount = 0;
 let batchProcessing = false;
 let streamingPlaceholders = new Map();
+let awaitingResponse = false;
 
 async function applyCustomTheme() {
     const theme = await SettingsDB.get('chat_custom_theme');
@@ -50,6 +51,8 @@ async function renderChat(params) {
         console.log('[Chat] 載入訊息...');
         messages = await MessagesDB.getByChatId(chatId);
         console.log('[Chat] 訊息載入成功，共', messages.length, '條');
+        const lastMsg = messages[messages.length - 1];
+        awaitingResponse = !!lastMsg && lastMsg.role === 'user';
         
         const container = createElement('div', 'app-container kakao-chat-bg');
         
@@ -472,6 +475,8 @@ async function renderChat(params) {
         
         messages = await MessagesDB.getByChatId(chatId);
         messageCount = messages.length;
+        awaitingResponse = true;
+        updateInputDisabled();
     };
     
     sendBtn.onclick = sendMessage;
@@ -482,10 +487,6 @@ async function renderChat(params) {
     generateBtn.style.color = '#6B6B6B';
     generateBtn.title = '生成回應';
     generateBtn.disabled = true;
-    
-    textarea.addEventListener('input', () => {
-        generateBtn.disabled = textarea.value.trim() === '' || activeResponseCount > 0;
-    });
     
     async function startGroupResponses(userMessage) {
         const memberIds = currentChat.member_ids || [];
@@ -555,6 +556,7 @@ async function renderChat(params) {
                     messageCount = messages.length;
                     
                     activeResponseCount--;
+                    if (activeResponseCount === 0) awaitingResponse = false;
                     updateInputDisabled();
                 },
                 onError: (error) => {
@@ -565,6 +567,7 @@ async function renderChat(params) {
                     }
                     createToast(name + ': ' + error, 'error');
                     activeResponseCount--;
+                    if (activeResponseCount === 0) awaitingResponse = false;
                     updateInputDisabled();
                 }
             };
@@ -576,7 +579,7 @@ async function renderChat(params) {
     function updateInputDisabled() {
         const isEmpty = textarea.value.trim() === '';
         sendBtn.disabled = isEmpty || activeResponseCount > 0;
-        generateBtn.disabled = isEmpty || activeResponseCount > 0;
+        generateBtn.disabled = !awaitingResponse || activeResponseCount > 0;
         
         if (activeResponseCount > 0) {
             generateBtn.style.color = '#141413';
@@ -589,17 +592,16 @@ async function renderChat(params) {
     let styleSheet = null;
     
     const generateResponse = async () => {
-        const content = textarea.value.trim();
-        if (!content || activeResponseCount > 0) return;
+        if (activeResponseCount > 0) return;
         
-        textarea.value = '';
-        textarea.style.height = '';
-        
-        await MessagesDB.create(chatId, 'user', content);
-        
-        const userBubble = createKakaoBubble('user', content);
-        main.appendChild(userBubble);
-        
+        const msgs = await MessagesDB.getByChatId(chatId);
+        const lastUser = [...msgs].reverse().find(m => m.role === 'user');
+        if (!lastUser) {
+            awaitingResponse = false;
+            updateInputDisabled();
+            return;
+        }
+        const content = lastUser.content;
         main.scrollTop = main.scrollHeight;
         
         if (currentChat.is_group) {
@@ -672,12 +674,14 @@ async function renderChat(params) {
                     messageCount = messages.length;
                     
                     activeResponseCount = 0;
+                    awaitingResponse = false;
                     updateInputDisabled();
                 },
                 (error) => {
                     streamingBubble.classList.add('hidden');
                     createToast(error, 'error');
                     activeResponseCount = 0;
+                    awaitingResponse = false;
                     updateInputDisabled();
                 }
             );
