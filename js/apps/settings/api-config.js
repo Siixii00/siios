@@ -59,6 +59,44 @@ async function renderApiConfig() {
     keyInput.oninput = (e) => settings.api_key = e.target.value;
     keyCell.appendChild(keyInput);
     connectionGroup.appendChild(keyCell);
+
+    // 模型選擇
+    const modelCell = createElement('div', 'p-4 mt-2');
+    modelCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-2 block', { textContent: '模型' }));
+    const modelRow = createElement('div', 'flex gap-2');
+    const modelInput = createElement('input', 'ios-input flex-1', {
+        type: 'text',
+        placeholder: 'gpt-3.5-turbo',
+        value: settings.model || ''
+    });
+    modelInput.oninput = (e) => settings.model = e.target.value;
+    modelRow.appendChild(modelInput);
+    const fetchBtn = createElement('button', 'ios-btn text-sm px-3', { textContent: '抓取模型' });
+    fetchBtn.onclick = async () => {
+        const apiUrl = settings.api_url || urlInput.value;
+        const apiKey = settings.api_key || keyInput.value;
+        if (!apiUrl) { createToast('請先輸入 API URL', 'error'); return; }
+        fetchBtn.disabled = true;
+        fetchBtn.textContent = '載入中...';
+        try {
+            const resp = await fetch(`${apiUrl.replace(/\/+$/, '')}/v1/models`, {
+                headers: { 'Authorization': `Bearer ${apiKey}` }
+            });
+            if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+            const data = await resp.json();
+            const models = (data.data || []).filter(m => m.id && !m.id.includes('embedding')).map(m => m.id);
+            if (models.length === 0) throw new Error('無可用模型');
+            showModelPicker(models, modelInput);
+        } catch (err) {
+            createToast('抓取失敗：' + err.message, 'error');
+        } finally {
+            fetchBtn.disabled = false;
+            fetchBtn.textContent = '抓取模型';
+        }
+    };
+    modelRow.appendChild(fetchBtn);
+    modelCell.appendChild(modelRow);
+    connectionGroup.appendChild(modelCell);
     
     main.appendChild(connectionSection);
     main.appendChild(connectionGroup);
@@ -162,7 +200,7 @@ async function renderApiConfig() {
     const saveBtn = createElement('button', 'ios-btn ios-btn-primary w-full py-3', { textContent: '儲存設定' });
     saveBtn.onclick = async () => {
         const keys = [
-            'api_url', 'api_key',
+            'api_url', 'api_key', 'model',
             'embedding_url', 'embedding_model', 'embedding_dimensions', 'embedding_api_key',
             'memory_enabled', 'memory_decay_rate', 'memory_threshold'
         ];
@@ -177,6 +215,54 @@ async function renderApiConfig() {
     container.appendChild(main);
     
     return { element: container, cleanup: null };
+}
+
+function showModelPicker(models, modelInput) {
+    const overlay = createElement('div', 'fixed inset-0 z-50 bg-black/40 flex items-end justify-center');
+    const sheet = createElement('div', 'w-full max-w-lg bg-white rounded-t-2xl p-4 max-h-[60vh] flex flex-col');
+    sheet.style.margin = '0 auto';
+
+    const handle = createElement('div', 'w-9 h-1 bg-gray-300 rounded-full mx-auto mb-4');
+    sheet.appendChild(handle);
+
+    const title = createElement('div', 'text-base font-semibold text-center mb-3', { textContent: '選擇模型' });
+    sheet.appendChild(title);
+
+    const searchInput = createElement('input', 'w-full p-2 border rounded-lg text-sm mb-3', {
+        type: 'text',
+        placeholder: '搜尋模型...'
+    });
+    sheet.appendChild(searchInput);
+
+    const list = createElement('div', 'flex-1 overflow-y-auto');
+    function renderList(filter) {
+        list.innerHTML = '';
+        const filtered = filter ? models.filter(m => m.toLowerCase().includes(filter.toLowerCase())) : models;
+        filtered.forEach(m => {
+            const item = createElement('div', 'p-3 rounded-lg cursor-pointer hover:bg-gray-100 text-sm flex items-center justify-between');
+            item.innerHTML = `<span class="font-mono">${m}</span>`;
+            if (m === modelInput.value) {
+                item.innerHTML += '<span class="text-green-500 text-xs">✓ 已選</span>';
+            }
+            item.onclick = () => {
+                modelInput.value = m;
+                settings.model = m;
+                overlay.remove();
+            };
+            list.appendChild(item);
+        });
+        if (filtered.length === 0) {
+            list.innerHTML = '<div class="text-center text-gray-400 text-sm py-4">無符合的模型</div>';
+        }
+    }
+    renderList('');
+
+    searchInput.oninput = (e) => renderList(e.target.value);
+
+    sheet.appendChild(list);
+    overlay.appendChild(sheet);
+    overlay.onclick = (e) => { if (e.target === overlay) overlay.remove(); };
+    document.body.appendChild(overlay);
 }
 
 export default {
