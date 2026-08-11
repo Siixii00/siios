@@ -82,10 +82,15 @@ async function renderApiConfig() {
             const resp = await fetch(`${apiUrl.replace(/\/+$/, '')}/v1/models`, {
                 headers: { 'Authorization': `Bearer ${apiKey}` }
             });
-            if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+            if (!resp.ok) {
+                if (resp.status === 404) {
+                    throw new Error('此 API 不支援列出模型，請手動輸入模型名稱');
+                }
+                throw new Error(`HTTP ${resp.status}`);
+            }
             const data = await resp.json();
             const models = (data.data || []).filter(m => m.id && !m.id.includes('embedding')).map(m => m.id);
-            if (models.length === 0) throw new Error('無可用模型');
+            if (models.length === 0) throw new Error('無可用模型，請手動輸入模型名稱');
             showModelPicker(models, modelInput);
         } catch (err) {
             createToast('抓取失敗：' + err.message, 'error');
@@ -97,6 +102,37 @@ async function renderApiConfig() {
     modelRow.appendChild(fetchBtn);
     modelCell.appendChild(modelRow);
     connectionGroup.appendChild(modelCell);
+
+    // 測試連接（放在模型抓取按鈕下方）
+    const testCell = createElement('div', 'p-4 pt-0');
+    const testBtn = createElement('button', 'ios-btn w-full py-3', { textContent: '測試連接' });
+    testBtn.onclick = async () => {
+        const apiUrl = settings.api_url || urlInput.value;
+        const apiKey = settings.api_key || keyInput.value;
+        if (!apiUrl) { createToast('請先輸入 API URL', 'error'); return; }
+        testBtn.disabled = true;
+        testBtn.textContent = '測試中...';
+        try {
+            const resp = await fetch(`${apiUrl.replace(/\/+$/, '')}/v1/chat/completions`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
+                body: JSON.stringify({ model: 'gpt-3.5-turbo', messages: [{ role: 'user', content: 'hi' }], max_tokens: 1 })
+            });
+            if (resp.ok) {
+                createToast('✅ 連線成功！API 正常運作', 'success');
+            } else {
+                const err = await resp.json().catch(() => ({}));
+                createToast('❌ 連線失敗：' + (err.error?.message || `HTTP ${resp.status}`), 'error');
+            }
+        } catch (err) {
+            createToast('❌ 連線失敗：' + (err.message || '無法連線，請檢查網址'), 'error');
+        } finally {
+            testBtn.disabled = false;
+            testBtn.textContent = '測試連接';
+        }
+    };
+    testCell.appendChild(testBtn);
+    connectionGroup.appendChild(testCell);
     
     main.appendChild(connectionSection);
     main.appendChild(connectionGroup);
