@@ -12,6 +12,11 @@ export default {
             return new Response(null, { headers: corsHeaders });
         }
 
+        // 自動遷移：確保 characters 表有 nicknames 欄位
+        try {
+            await env.DB.prepare(`ALTER TABLE characters ADD COLUMN nicknames TEXT`).run();
+        } catch (_) {} // 欄位已存在時會拋錯，忽略即可
+
         // 根路徑：顯示狀態頁
         if (url.pathname === '/' || url.pathname === '') {
             return new Response(`<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><title>Siios Discord Bot</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font-family:system-ui,sans-serif;max-width:600px;margin:40px auto;padding:20px;background:#FAF9F6;color:#111}h1{font-size:1.5rem;margin-bottom:8px}.status{display:inline-block;padding:4px 12px;border-radius:20px;background:#16A34A;color:#fff;font-size:14px}.endpoints{background:#fff;border-radius:12px;padding:16px;margin-top:20px;border:1px solid rgba(20,20,19,0.12)}.endpoints code{display:block;padding:6px 0;font-size:13px;color:#6B6B6B}.endpoints code span{color:#111;font-weight:500}</style></head><body><h1>🤖 Siios Discord Bot</h1><div class="status">✅ 運行中</div><div class="endpoints"><strong>端點列表</strong><code><span>POST</span> /discord/webhook</code><code><span>POST</span> /discord/send</code><code><span>GET</span>  /discord/history</code><code><span>POST</span> /discord/register-commands</code><code><span>POST</span> /sync/restore</code><code><span>POST</span> /sync/characters</code><code><span>POST</span> /sync/memories</code><code><span>GET</span>  /sync/memories</code><code><span>POST</span> /sync/channel-bind</code><code><span>POST</span> /sync/user-bindings</code><code><span>GET</span>  /sync/chat</code><code><span>POST</span> /sync/world-info</code><code><span>POST</span> /sync/pwa</code></div></body></html>`, {
@@ -211,11 +216,12 @@ export default {
             }
         }
 
-        // 完整備份（供 GitHub Actions 或手動拉取）
+        // 完整備份（供 GitHub Actions、手動拉取、斜線指令觸發）
         if (url.pathname === '/backup' && request.method === 'GET') {
             try {
                 const authKey = url.searchParams.get('key');
-                if (!env.BACKUP_KEY || authKey !== env.BACKUP_KEY) {
+                const expectedKey = await getConfig(env, 'BACKUP_KEY');
+                if (expectedKey && authKey !== expectedKey) {
                     return Response.json({ success: false, error: '未授權' }, { status: 401, headers: corsHeaders });
                 }
                 const data = await createBackup(env);
@@ -404,6 +410,20 @@ async function getInterjectProbability(env) {
     return Math.min(1, Math.max(0, prob));
 }
 
+// 檢查訊息是否提到角色名字或暱稱（命中時 100% 插嘴）
+async function isCharacterNameMentioned(content, characterId, env) {
+    if (!characterId || !content) return false;
+    const char = await env.DB.prepare(`SELECT name, nicknames FROM characters WHERE id = ?`).bind(characterId).first();
+    if (!char) return false;
+    const names = [char.name];
+    try {
+        const nicks = JSON.parse(char.nicknames || '[]');
+        if (Array.isArray(nicks)) names.push(...nicks);
+    } catch (_) {}
+    const lower = content.toLowerCase();
+    return names.filter(Boolean).some(n => lower.includes(String(n).toLowerCase()));
+}
+
 // 存 Discord 訊息為簡易記憶
 async function saveDiscordMemory(env, characterId, userId, userDisplayName, content) {
     if (!characterId) return;
@@ -435,7 +455,8 @@ async function registerCommands(env) {
                         { name: 'API URL', value: 'AI_API_URL' },
                         { name: 'API Key', value: 'AI_API_KEY' },
                         { name: 'Model', value: 'AI_MODEL' },
-                        { name: 'Interject Probability (0~1)', value: 'INTERJECT_PROBABILITY' }
+                        { name: 'Interject Probability (0~1)', value: 'INTERJECT_PROBABILITY' },
+                        { name: 'Backup Key', value: 'BACKUP_KEY' }
                     ]
                 },
                 { type: 3, name: 'value', description: '設定值', required: true }
@@ -470,6 +491,14 @@ async function registerCommands(env) {
             description: '將你的 Discord 帳號綁定到 Siios 用戶',
             options: [{
                 type: 3, name: 'user_id', description: '你的 Siios PWA 用戶 ID', required: true
+            }]
+        },
+        {
+            name: 'backup',
+            description: '產生完整備份（需 Backup Key）並傳送 JSON 檔案',
+            default_member_permissions: '0',
+            options: [{
+                type: 3, name: 'key', description: 'Backup Key', required: true
             }]
         }
     ];
@@ -556,7 +585,7 @@ async function handleSlashCommand(event, env) {
             const value = options.find(o => o.name === 'value')?.value;
             if (!key || !value) return Response.json({ type: 4, data: { content: '❌ 請提供 key 和 value', flags: 64 } });
             await setConfig(env, key, value);
-            const masked = key === 'AI_API_KEY' ? value.slice(0, 4) + '****' : value;
+            const masked = (key === 'AI_API_KEY' || key === 'BACKUP_KEY') ? value.slice(0, 4) + '****' : value;
             return Response.json({ type: 4, data: { content: `✅ 已設定 ${key} = ${masked}` } });
         }
 
@@ -566,8 +595,10 @@ async function handleSlashCommand(event, env) {
             const model = await getConfig(env, 'AI_MODEL') || 'gpt-3.5-turbo';
             const interjectProb = await getConfig(env, 'INTERJECT_PROBABILITY') || '0.3';
             const allowedChannels = await getConfig(env, 'ALLOWED_CHANNELS') || '(無)';
+            const backupKey = await getConfig(env, 'BACKUP_KEY') || '(未設定)';
             const keyDisplay = apiKey === '(未設定)' ? '(未設定)' : apiKey.slice(0, 4) + '****';
-            return Response.json({ type: 4, data: { content: `📋 **目前設定**\n\`\`\`\nAPI URL:     ${apiUrl}\nAPI Key:     ${keyDisplay}\nModel:       ${model}\nInterject:   ${interjectProb}\nAllowChan:   ${allowedChannels}\n\`\`\`\n使用 /configure 修改設定` } });
+            const backupDisplay = backupKey === '(未設定)' ? '(未設定)' : backupKey.slice(0, 4) + '****';
+            return Response.json({ type: 4, data: { content: `📋 **目前設定**\n\`\`\`\nAPI URL:     ${apiUrl}\nAPI Key:     ${keyDisplay}\nModel:       ${model}\nInterject:   ${interjectProb}\nAllowChan:   ${allowedChannels}\nBackupKey:   ${backupDisplay}\n\`\`\`\n使用 /configure 修改設定` } });
         }
 
         if (name === 'channel') {
@@ -641,6 +672,17 @@ async function handleSlashCommand(event, env) {
             return Response.json({ type: 4, data: { content: `✅ 已綁定 Discord 用戶 **${discordUsername}** (${discordNick ? `暱稱: ${discordNick}` : ''}) → Siios 用戶 **${targetUserId}**` } });
         }
 
+        if (name === 'backup') {
+            const key = options.find(o => o.name === 'key')?.value;
+            const expectedKey = await getConfig(env, 'BACKUP_KEY');
+            if (!expectedKey || key !== expectedKey) {
+                return Response.json({ type: 4, data: { content: '❌ Backup Key 錯誤或未設定。請先用 `/configure key:BACKUP_KEY value:你的金鑰` 設定。', flags: 64 } });
+            }
+            const data = await createBackup(env);
+            const counts = `📊 **備份摘要**\n訊息：${data.messages.length} 條\n記憶：${data.memories.length} 條\n角色：${data.characters.length} 個\n頻道綁定：${data.channel_bindings.length} 個\n用戶綁定：${data.userBindings.length} 個\n全域設定：${data.globalSettings.length} 條\n世界書：${data.worldInfo.length} 條`;
+            return Response.json({ type: 4, data: { content: `✅ 備份成功！\n${counts}\n\n💡 請到 Siios → 設定 → Discord 整合 → 備份資料並下載 取得完整 JSON 檔案（需填入相同的 Backup Key）` } });
+        }
+
         return Response.json({ type: 4, data: { content: '❌ 未知指令', flags: 64 } });
     } catch (error) {
         return Response.json({ type: 4, data: { content: `❌ 執行指令時發生錯誤: ${error.message}`, flags: 64 } });
@@ -687,17 +729,22 @@ async function handleMessage(message, env) {
     if (!characterId) {
         if (mentioned) {
             await sendDiscordMessage(message.channel_id, '⚠️ 此頻道尚未綁定角色哦。請到 **Siios** 中把這個頻道綁定到一個角色，之後我就能用那個角色的身份回覆你了。', characterId, env);
+            return Response.json({ status: 'no_character' });
         }
-        return Response.json({ status: 'no_character' });
+        // 未綁定角色時，仍可依機率插嘴（使用通用 AI 身份）
     }
 
     // 沒被 @mention 時，依使用者設定的機率決定是否讓 AI 判斷插嘴
     if (!mentioned) {
-        const prob = await getInterjectProbability(env);
-        if (prob <= 0 || Math.random() > prob) return Response.json({ status: 'not_interested' });
+        // 若訊息提到角色名字或暱稱，100% 插嘴（不經機率與 AI 興趣判斷）
+        const nameMentioned = await isCharacterNameMentioned(message.content, characterId, env);
+        if (!nameMentioned) {
+            const prob = await getInterjectProbability(env);
+            if (prob <= 0 || Math.random() > prob) return Response.json({ status: 'not_interested' });
 
-        const interested = await aiInterestedIn(message.content, characterId, env);
-        if (!interested) return Response.json({ status: 'not_interested' });
+            const interested = await aiInterestedIn(message.content, characterId, env);
+            if (!interested) return Response.json({ status: 'not_interested' });
+        }
     }
 
     const userBinding = await env.DB.prepare(`SELECT * FROM discordUserBindings WHERE discord_user_id = ?`).bind(message.author.id).first();
@@ -711,16 +758,23 @@ async function handleMessage(message, env) {
         JSON.stringify({ source: 'discord', author: message.author.username, author_id: message.author.id, channel_id: message.channel_id, bound_user_id: userId, user_display_name: userDisplayName })
     ).run();
 
-    // 被 @mention 時先加表情反應（即時回饋）
-    if (mentioned) {
-        try {
-            await addReaction(message.channel_id, message.id, '👀', env);
-        } catch (_) {}
-    }
+    // 對所有允許的訊息加隨機表情反應（即時回饋）
+    try {
+        await addReaction(message.channel_id, message.id, randomReactionEmoji(), env);
+    } catch (_) {}
 
-    // 生成 AI 回覆（含記憶）
-    const aiResponse = await generateAIResponseWithContext(message, characterId, userId, userDisplayName, env);
-    await sendDiscordMessage(message.channel_id, aiResponse.content, characterId, env);
+    // 生成 AI 回覆（含記憶），失敗時回傳錯誤訊息給使用者
+    let aiResponse;
+    try {
+        aiResponse = await generateAIResponseWithContext(message, characterId, userId, userDisplayName, env);
+        await sendDiscordMessage(message.channel_id, aiResponse.content, characterId, env);
+    } catch (error) {
+        console.error('AI response error:', error);
+        try {
+            await sendDiscordMessage(message.channel_id, `⚠️ AI 回覆時發生錯誤：${error.message}`, characterId, env);
+        } catch (_) {}
+        return Response.json({ status: 'error', error: error.message });
+    }
 
     // 存 AI 回覆
     await env.DB.prepare(`INSERT INTO messages (id, chat_id, role, content, timestamp, metadata) VALUES (?, ?, 'assistant', ?, ?, ?)`).bind(
@@ -994,6 +1048,13 @@ async function sendDiscordMessage(channel_id, content, character_id, env) {
     return await response.json();
 }
 
+// ===== 隨機表情池 =====
+const REACTION_EMOJIS = ['👀', '👍', '❤️', '😊', '🔥', '💯', '✨', '👏', '🤔', '💜', '🌟', '🎉'];
+
+function randomReactionEmoji() {
+    return REACTION_EMOJIS[Math.floor(Math.random() * REACTION_EMOJIS.length)];
+}
+
 // ===== Discord 表情符號反應 =====
 async function addReaction(channel_id, message_id, emoji, env) {
     const encoded = encodeURIComponent(emoji);
@@ -1021,8 +1082,9 @@ async function syncCharacters(characters, env) {
     let count = 0;
     for (const char of characters) {
         if (!char || !char.id) continue;
-        await env.DB.prepare(`INSERT INTO characters (id, name, personality, scenario) VALUES (?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET name = excluded.name, personality = excluded.personality, scenario = excluded.scenario`)
-            .bind(char.id, char.name || '未命名', char.personality || '', char.scenario || '').run();
+        const nickJSON = Array.isArray(char.nicknames) ? JSON.stringify(char.nicknames) : (char.nicknames || '');
+        await env.DB.prepare(`INSERT INTO characters (id, name, personality, scenario, nicknames) VALUES (?, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET name = excluded.name, personality = excluded.personality, scenario = excluded.scenario, nicknames = excluded.nicknames`)
+            .bind(char.id, char.name || '未命名', char.personality || '', char.scenario || '', nickJSON).run();
         count++;
     }
     return count;
@@ -1141,8 +1203,8 @@ async function restoreBackup(data, env) {
     if (Array.isArray(data.characters)) {
         for (const char of data.characters) {
             if (!char || !char.id) continue;
-            await env.DB.prepare(`INSERT INTO characters (id, name, personality, scenario) VALUES (?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET name = excluded.name, personality = excluded.personality, scenario = excluded.scenario`)
-                .bind(char.id, char.name || '未命名', char.personality || '', char.scenario || '').run();
+            await env.DB.prepare(`INSERT INTO characters (id, name, personality, scenario, nicknames) VALUES (?, ?, ?, ?, ?) ON CONFLICT(id) DO UPDATE SET name = excluded.name, personality = excluded.personality, scenario = excluded.scenario, nicknames = excluded.nicknames`)
+                .bind(char.id, char.name || '未命名', char.personality || '', char.scenario || '', Array.isArray(char.nicknames) ? JSON.stringify(char.nicknames) : (char.nicknames || '')).run();
             counts.characters++;
         }
     }

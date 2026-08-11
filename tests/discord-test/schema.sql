@@ -13,7 +13,8 @@ CREATE TABLE IF NOT EXISTS characters (
     id TEXT PRIMARY KEY,
     name TEXT,
     personality TEXT,
-    scenario TEXT
+    scenario TEXT,
+    nicknames TEXT
 );
 
 -- 用戶表
