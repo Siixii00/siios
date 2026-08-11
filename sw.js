@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sxios-v42';
+const CACHE_NAME = 'sxios-v43';
 
 const STATIC_ASSETS = [
   '/siios/',
@@ -35,6 +35,10 @@ const STATIC_ASSETS = [
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'FORCE_UPDATE') {
     console.log('[SW] Force update requested');
+    self.skipWaiting();
+  }
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    console.log('[SW] Skip waiting via message');
     self.skipWaiting();
   }
 });
@@ -80,6 +84,26 @@ self.addEventListener('fetch', (event) => {
   }
   
   if (request.method !== 'GET') {
+    return;
+  }
+
+  // Navigation（HTML 頁面）：network-first，確保每次打開都抓到最新版
+  if (request.mode === 'navigate') {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          const clone = response.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(request, clone);
+          });
+          return response;
+        })
+        .catch(() => {
+          return caches.match(request).then((cached) => {
+            return cached || caches.match('/siios/index.html');
+          });
+        })
+    );
     return;
   }
   

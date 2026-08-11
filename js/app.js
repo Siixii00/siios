@@ -251,11 +251,38 @@ const App = {
     async registerServiceWorker() {
         if ('serviceWorker' in navigator) {
             try {
-                const registration = await navigator.serviceWorker.register('/siios/sw.js');
+                const registration = await navigator.serviceWorker.register('/siios/sw.js', {
+                    updateViaCache: 'none'
+                });
                 console.log('ServiceWorker registered:', registration.scope);
+
+                // 主動檢查 SW 更新（iOS 不會自動檢查）
+                registration.update();
+                setInterval(() => registration.update(), 1000 * 60 * 30);
+
+                // 當新 SW 安裝完成等待時，通知它接管
+                if (registration.waiting) {
+                    registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+                }
+
+                registration.addEventListener('updatefound', () => {
+                    const newWorker = registration.installing;
+                    newWorker.addEventListener('statechange', () => {
+                        if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                            console.log('[SW] New version available, activating');
+                            newWorker.postMessage({ type: 'SKIP_WAITING' });
+                        }
+                    });
+                });
             } catch (error) {
                 console.warn('ServiceWorker registration failed:', error);
             }
+
+            // 當新 SW 接管後重新載入頁面，確保取得最新資源
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                console.log('[SW] New controller activated, reloading');
+                window.location.reload();
+            });
         }
     },
     

@@ -1,7 +1,7 @@
 ﻿import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
 
 const DB_NAME = 'sxios';
-const DB_VERSION = 13;
+const DB_VERSION = 14;
 const LEGACY_DB_NAMES = ['ios-classic-ai'];
 
 let db = null;
@@ -57,8 +57,9 @@ async function initDB() {
                     messagesStore.createIndex('timestamp', 'timestamp');
                 }
 
-                if (database.objectStoreNames.contains('worldInfo')) {
-                    database.deleteObjectStore('worldInfo');
+                if (!database.objectStoreNames.contains('worldInfo')) {
+                    const worldInfoStore = database.createObjectStore('worldInfo', { keyPath: 'id' });
+                    worldInfoStore.createIndex('strategy', 'strategy');
                 }
 
                 if (!database.objectStoreNames.contains('globalSettings')) {
