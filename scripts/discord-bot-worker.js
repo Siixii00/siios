@@ -39,6 +39,16 @@ export default {
             }
         }
 
+        // 啟動 Gateway WebSocket 即時接收 MESSAGE_CREATE
+        if (url.pathname === '/gateway/start' && request.method === 'GET') {
+            try {
+                ctx.waitUntil(startGatewayConnection(env, ctx));
+                return Response.json({ success: true, message: 'Gateway 連線已啟動，事件會即時進來。若 Worker 暖機中請稍候。' }, { headers: corsHeaders });
+            } catch (error) {
+                return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
+            }
+        }
+
         // 註冊斜線指令
         if (url.pathname === '/discord/register-commands' && request.method === 'POST') {
             try {
@@ -231,8 +241,9 @@ export default {
     async scheduled(event, env, ctx) {
         try {
             await pollBoundChannels(env);
+            ctx.waitUntil(startGatewayConnection(env, ctx));
         } catch (error) {
-            console.error('scheduled poll error:', error);
+            console.error('scheduled error:', error);
         }
     }
 };
@@ -289,7 +300,13 @@ async function pollBoundChannels(env) {
 
             // 決定是否回應：@機器人 一定回；否則讓 AI 判斷是否有興趣插嘴
             const mentioned = (msg.mentions || []).some(m => m.id === botUserId);
-            const interested = mentioned || await aiInterestedIn(msg.content, characterId, env);
+            let interested = mentioned;
+            if (!mentioned) {
+                const prob = await getInterjectProbability(env);
+                if (Math.random() < prob) {
+                    interested = await aiInterestedIn(msg.content, characterId, env);
+                }
+            }
 
             if (interested) {
                 const ctx = await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? ORDER BY timestamp DESC LIMIT 10`).bind(characterId || msg.channel_id).all();
@@ -341,9 +358,6 @@ async function aiInterestedIn(message, characterId, env) {
     const aiModel = await getConfig(env, 'AI_MODEL') || 'gpt-3.5-turbo';
     if (!aiUrl || !aiKey) return false;
 
-    // 隨機觸發，避免每次都呼叫 AI（降低花費與噪音）
-    if (Math.random() > 0.5) return false;
-
     const charName = (await env.DB.prepare(`SELECT name FROM characters WHERE id = ?`).bind(characterId).first())?.name || 'AI';
     const prompt = `你是 ${charName}。以下是一則頻道訊息。判斷你是否對這個話題「有興趣」而想要主動插嘴回覆。\n只回覆單一數字：1 表示有興趣想插嘴，0 表示沒興趣。\n\n頻道訊息：${message.slice(0, 300)}`;
     const resp = await fetch(`${aiUrl}/v1/chat/completions`, {
@@ -354,6 +368,14 @@ async function aiInterestedIn(message, characterId, env) {
     const data = await resp.json();
     const answer = (data.choices?.[0]?.message?.content || '').trim();
     return answer === '1';
+}
+
+// 取得插嘴機率（使用者可透過 /configure 設定，預設 0.3）
+async function getInterjectProbability(env) {
+    const val = await getConfig(env, 'INTERJECT_PROBABILITY');
+    const prob = parseFloat(val);
+    if (Number.isNaN(prob)) return 0.3;
+    return Math.min(1, Math.max(0, prob));
 }
 
 // 存 Discord 訊息為簡易記憶
@@ -377,22 +399,27 @@ async function registerCommands(env) {
     const commands = [
         {
             name: 'configure',
-            description: '設定 Bot 的 API 參數',
+            description: '設定 Bot 的參數',
             default_member_permissions: '0',
             options: [
                 {
-                    type: 3, name: 'key', description: '設定項目 (AI_API_URL / AI_API_KEY / AI_MODEL)',
+                    type: 3, name: 'key', description: '設定項目',
                     required: true,
                     choices: [
                         { name: 'API URL', value: 'AI_API_URL' },
                         { name: 'API Key', value: 'AI_API_KEY' },
-                        { name: 'Model', value: 'AI_MODEL' }
+                        { name: 'Model', value: 'AI_MODEL' },
+                        { name: 'Interject Probability (0~1)', value: 'INTERJECT_PROBABILITY' }
                     ]
                 },
                 { type: 3, name: 'value', description: '設定值', required: true }
             ]
         },
-        { name: 'config', description: '查看目前的 API 設定狀態', default_member_permissions: '0' },
+        {
+            name: 'config',
+            description: '查看目前的 Bot 設定狀態',
+            default_member_permissions: '0'
+        },
         {
             name: 'channel',
             description: '頻道管理',
@@ -405,7 +432,11 @@ async function registerCommands(env) {
             }, {
                 type: 1, name: 'unbind', description: '解除此頻道的角色綁定'
             }, {
-                type: 1, name: 'status', description: '查看此頻道的綁定狀態'
+                type: 1, name: 'allow', description: '將此頻道加入允許清單（Bot 可閱讀/插嘴/回應）'
+            }, {
+                type: 1, name: 'unallow', description: '將此頻道從允許清單移除'
+            }, {
+                type: 1, name: 'status', description: '查看此頻道的綁定與允許狀態'
             }]
         },
         {
@@ -507,13 +538,15 @@ async function handleSlashCommand(event, env) {
             const apiUrl = await getConfig(env, 'AI_API_URL') || '(未設定)';
             const apiKey = await getConfig(env, 'AI_API_KEY') || '(未設定)';
             const model = await getConfig(env, 'AI_MODEL') || 'gpt-3.5-turbo';
+            const interjectProb = await getConfig(env, 'INTERJECT_PROBABILITY') || '0.3';
+            const allowedChannels = await getConfig(env, 'ALLOWED_CHANNELS') || '(無)';
             const keyDisplay = apiKey === '(未設定)' ? '(未設定)' : apiKey.slice(0, 4) + '****';
-            return Response.json({ type: 4, data: { content: `📋 **目前設定**\n\`\`\`\nAPI URL: ${apiUrl}\nAPI Key: ${keyDisplay}\nModel:   ${model}\n\`\`\`\n使用 /configure 修改設定` } });
+            return Response.json({ type: 4, data: { content: `📋 **目前設定**\n\`\`\`\nAPI URL:     ${apiUrl}\nAPI Key:     ${keyDisplay}\nModel:       ${model}\nInterject:   ${interjectProb}\nAllowChan:   ${allowedChannels}\n\`\`\`\n使用 /configure 修改設定` } });
         }
 
         if (name === 'channel') {
             const sub = options?.[0];
-            if (!sub) return Response.json({ type: 4, data: { content: '❌ 請指定子指令 (bind / unbind / status)', flags: 64 } });
+            if (!sub) return Response.json({ type: 4, data: { content: '❌ 請指定子指令 (bind / unbind / allow / unallow / status)', flags: 64 } });
 
             if (sub.name === 'bind') {
                 const characterId = sub.options.find(o => o.name === 'character_id')?.value;
@@ -530,13 +563,36 @@ async function handleSlashCommand(event, env) {
                 return Response.json({ type: 4, data: { content: '✅ 已解除此頻道的角色綁定' } });
             }
 
+            if (sub.name === 'allow') {
+                const existing = await getConfig(env, 'ALLOWED_CHANNELS') || '';
+                const channels = existing.split(',').map(c => c.trim()).filter(c => c && c !== channelId);
+                channels.push(channelId);
+                await setConfig(env, 'ALLOWED_CHANNELS', channels.join(','));
+                return Response.json({ type: 4, data: { content: `✅ 已將此頻道 (<#${channelId}>) 加入 Bot 允許清單。\nBot 可在無綁定角色的情況下閱讀、插嘴與回應。` } });
+            }
+
+            if (sub.name === 'unallow') {
+                const existing = await getConfig(env, 'ALLOWED_CHANNELS') || '';
+                const channels = existing.split(',').map(c => c.trim()).filter(c => c && c !== channelId);
+                await setConfig(env, 'ALLOWED_CHANNELS', channels.join(','));
+                return Response.json({ type: 4, data: { content: `✅ 已將此頻道 (<#${channelId}>) 從 Bot 允許清單移除。` } });
+            }
+
             if (sub.name === 'status') {
                 const binding = await env.DB.prepare(`SELECT * FROM channel_bindings WHERE channel_id = ?`).bind(channelId).first();
+                const allowed = await isChannelAllowed(binding?.character_id, channelId, env);
+                let msg = `📋 **此頻道狀態**\n`;
                 if (binding) {
                     const char = await env.DB.prepare(`SELECT name FROM characters WHERE id = ?`).bind(binding.character_id).first();
-                    return Response.json({ type: 4, data: { content: `📋 **此頻道綁定狀態**\n角色: **${char?.name || binding.character_id}** (${binding.character_id})` } });
+                    msg += `角色綁定: **${char?.name || binding.character_id}** (${binding.character_id})`;
+                } else {
+                    msg += `角色綁定: 無`;
                 }
-                return Response.json({ type: 4, data: { content: '📋 此頻道尚未綁定任何角色' } });
+                msg += `\n允許清單中: ${allowed ? '✅ 是' : '❌ 否'}`;
+                if (!binding && allowed) {
+                    msg += `\n⚠️ 此頻道在允許清單但無角色綁定，Bot 會用通用身份回覆。`;
+                }
+                return Response.json({ type: 4, data: { content: msg } });
             }
         }
 
@@ -565,9 +621,21 @@ async function handleSlashCommand(event, env) {
     }
 }
 
+// ===== 檢查頻道是否允許 Bot 活動（綁定頻道或允許頻道列表）=====
+async function isChannelAllowed(characterId, channelId, env) {
+    if (characterId) return true; // 已綁定角色的頻道一定允許
+    const allowedStr = await getConfig(env, 'ALLOWED_CHANNELS');
+    if (!allowedStr) return false;
+    const channels = allowedStr.split(',').map(c => c.trim()).filter(Boolean);
+    return channels.includes(channelId);
+}
+
 // ===== 處理訊息 =====
 async function handleMessage(message, env) {
     if (message.author.bot) return Response.json({ status: 'ignored' });
+
+    const exists = await env.DB.prepare(`SELECT id FROM messages WHERE id = ?`).bind(message.id).first();
+    if (exists) return Response.json({ status: 'duplicate' });
 
     // 先查頻道綁定（從角色設定頁來的綁定優先）
     let characterId = null;
@@ -580,6 +648,32 @@ async function handleMessage(message, env) {
         characterId = mapping?.character_id;
     }
 
+    // 檢查頻道是否在允許範圍（綁定頻道或 ALLOWED_CHANNELS 列表）
+    if (!(await isChannelAllowed(characterId, message.channel_id, env))) {
+        return Response.json({ status: 'not_allowed' });
+    }
+
+    // 是否被 @mention（@機器人 一定 100% 回應）
+    const botUserId = await getBotUserId(env);
+    const mentioned = (message.mentions || []).some(m => m.id === botUserId);
+
+    // 完全以角色回覆：如果沒有綁定角色，就提示使用者去 Siios 綁定
+    if (!characterId) {
+        if (mentioned) {
+            await sendDiscordMessage(message.channel_id, '⚠️ 此頻道尚未綁定角色哦。請到 **Siios** 中把這個頻道綁定到一個角色，之後我就能用那個角色的身份回覆你了。', characterId, env);
+        }
+        return Response.json({ status: 'no_character' });
+    }
+
+    // 沒被 @mention 時，依使用者設定的機率決定是否讓 AI 判斷插嘴
+    if (!mentioned) {
+        const prob = await getInterjectProbability(env);
+        if (prob <= 0 || Math.random() > prob) return Response.json({ status: 'not_interested' });
+
+        const interested = await aiInterestedIn(message.content, characterId, env);
+        if (!interested) return Response.json({ status: 'not_interested' });
+    }
+
     const userBinding = await env.DB.prepare(`SELECT * FROM discordUserBindings WHERE discord_user_id = ?`).bind(message.author.id).first();
     let userId = userBinding?.user_id || null;
     let userDisplayName = userBinding?.user_display_name || message.author.username;
@@ -590,6 +684,13 @@ async function handleMessage(message, env) {
         new Date(message.timestamp).toISOString(),
         JSON.stringify({ source: 'discord', author: message.author.username, author_id: message.author.id, channel_id: message.channel_id, bound_user_id: userId, user_display_name: userDisplayName })
     ).run();
+
+    // 被 @mention 時先加表情反應（即時回饋）
+    if (mentioned) {
+        try {
+            await addReaction(message.channel_id, message.id, '👀', env);
+        } catch (_) {}
+    }
 
     // 生成 AI 回覆（含記憶）
     const aiResponse = await generateAIResponseWithContext(message, characterId, userId, userDisplayName, env);
@@ -867,6 +968,17 @@ async function sendDiscordMessage(channel_id, content, character_id, env) {
     return await response.json();
 }
 
+// ===== Discord 表情符號反應 =====
+async function addReaction(channel_id, message_id, emoji, env) {
+    const encoded = encodeURIComponent(emoji);
+    const response = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages/${message_id}/reactions/${encoded}/@me`, {
+        method: 'PUT',
+        headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
+    });
+    if (!response.ok) throw new Error(`Reaction API error: ${response.status}`);
+    return await response.json();
+}
+
 // ===== Discord 對話歷史 =====
 async function getDiscordHistory(channel_id, limit, env) {
     const response = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages?limit=${limit}`, {
@@ -1095,4 +1207,126 @@ async function syncWorldInfo({ globalSettings, globalForbidden, worldInfo }, env
     }
 
     return { globalSettings: gCount, globalForbidden: fCount, worldInfo: wCount };
+}
+
+// ===== Discord Gateway (WebSocket) 連線：即時接收 MESSAGE_CREATE =====
+let gatewayWs = null;
+let gatewayHeartbeatTimer = null;
+let gatewaySeq = null;
+let gatewayReconnectTimer = null;
+
+async function startGatewayConnection(env, ctx) {
+    const token = env.DISCORD_BOT_TOKEN;
+    if (!token) {
+        console.error('Gateway: 缺少 DISCORD_BOT_TOKEN');
+        return Promise.resolve();
+    }
+
+    if (gatewayReconnectTimer) {
+        clearTimeout(gatewayReconnectTimer);
+        gatewayReconnectTimer = null;
+    }
+
+    try {
+        const resp = await fetch('https://discord.com/api/v10/gateway/bot', {
+            headers: { 'Authorization': `Bot ${token}` }
+        });
+        if (!resp.ok) {
+            console.error('Gateway: 無法取得 gateway URL', resp.status);
+            return Promise.resolve();
+        }
+        const { url: gatewayUrl } = await resp.json();
+        if (!gatewayUrl) {
+            console.error('Gateway: 回傳空的 gateway URL');
+            return Promise.resolve();
+        }
+
+        const wsUrl = `${gatewayUrl}?v=10&encoding=json`;
+        const ws = new WebSocket(wsUrl);
+        gatewayWs = ws;
+
+        ws.onopen = () => {
+            console.log('Gateway: WebSocket 連線成功');
+        };
+
+        ws.onmessage = (event) => {
+            try {
+                const data = JSON.parse(event.data);
+                const { op, t, d, s } = data;
+
+                if (s != null) gatewaySeq = s;
+
+                switch (op) {
+                    case 10: // Hello
+                        if (gatewayHeartbeatTimer) clearInterval(gatewayHeartbeatTimer);
+                        gatewayHeartbeatTimer = setInterval(() => {
+                            if (gatewayWs && gatewayWs.readyState === WebSocket.OPEN) {
+                                gatewayWs.send(JSON.stringify({ op: 1, d: gatewaySeq }));
+                            }
+                        }, d.heartbeat_interval);
+
+                        ws.send(JSON.stringify({
+                            op: 2,
+                            d: {
+                                token: token,
+                                intents: 32768 + 512 + 4096,
+                                properties: { os: 'linux', browser: 'siios', device: 'siios' }
+                            }
+                        }));
+                        break;
+
+                    case 0: // Dispatch
+                        if (t === 'MESSAGE_CREATE') {
+                            handleMessage(d, env).catch(err => {
+                                console.error('Gateway handleMessage error:', err);
+                            });
+                        }
+                        break;
+
+                    case 7: // Reconnect
+                        try { ws.close(1000); } catch (_) {}
+                        break;
+
+                    case 9: // Invalid Session
+                        gatewaySeq = null;
+                        try { ws.close(1000); } catch (_) {}
+                        break;
+                }
+            } catch (err) {
+                console.error('Gateway 訊息解析錯誤:', err);
+            }
+        };
+
+        ws.onclose = (event) => {
+            if (gatewayHeartbeatTimer) {
+                clearInterval(gatewayHeartbeatTimer);
+                gatewayHeartbeatTimer = null;
+            }
+            gatewayWs = null;
+
+            // 非正常關閉時嘗試重連
+            if (event.code !== 1000) {
+                gatewayReconnectTimer = setTimeout(() => startGatewayConnection(env, ctx), 5000);
+            }
+        };
+
+        ws.onerror = (error) => {
+            console.error('Gateway WebSocket 錯誤:', error);
+        };
+
+        // 回傳一個等到 WebSocket 關閉才會 resolved 的 promise，讓 ctx.waitUntil 能延長 Worker 生命週期
+        return new Promise((resolve) => {
+            ws._resolve = resolve;
+            // 把 resolve 掛到 onclose 上，避免重複監聽
+            const originalOnClose = ws.onclose;
+            ws.onclose = (event) => {
+                if (originalOnClose) originalOnClose(event);
+                resolve();
+            };
+        });
+    } catch (error) {
+        console.error('Gateway 連線錯誤:', error);
+        gatewayReconnectTimer = setTimeout(() => startGatewayConnection(env, ctx), 5000);
+        return Promise.resolve();
+    }
 }
