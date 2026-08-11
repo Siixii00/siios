@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-11T13:07:15.988153",
-    "total_items": 58
+    "last_updated": "2026-08-11T14:58:32.533671",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "England set to be one of the first countries to eliminate hepatitis C",
+        "url": "https://www.bbc.com/news/articles/c75gk620r22o",
+        "source": "Hacker News",
+        "score": 162
+      },
+      {
         "title": "France to ban unsolicited telemarketing calls",
         "url": "https://www.lemonde.fr/en/france/article/2026/08/06/france-to-ban-unsolicited-telemarketing-calls-from-august-11_6756208_7.html",
         "source": "Hacker News",
-        "score": 495
-      },
-      {
-        "title": "H3-metal – Native MiniMax-H3 inference for Apple Silicon",
-        "url": "https://github.com/antirez/h3.c",
-        "source": "Hacker News",
-        "score": 331
-      },
-      {
-        "title": "As AI eats the web, the internet’s collective memory is disappearing",
-        "url": "https://thewalrus.ca/google-search-is-dying/",
-        "source": "Hacker News",
-        "score": 452
-      },
-      {
-        "title": "More than 10 firms pay up to $100k a month for access to Truth Social posts",
-        "url": "https://www.bbc.com/news/articles/ce3q5nxpgk1o",
-        "source": "Hacker News",
-        "score": 31
-      },
-      {
-        "title": "OpenAI's Only Ethicist Reportedly Left Last Month",
-        "url": "https://gizmodo.com/openais-only-ethicist-reportedly-left-last-month-she-wasnt-replaced-2000796883",
-        "source": "Hacker News",
-        "score": 25
-      },
-      {
-        "title": "Chicken Scheme 6.0",
-        "url": "https://code.call-cc.org/releases/6.0.0/NEWS",
-        "source": "Hacker News",
-        "score": 226
-      },
-      {
-        "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
-        "url": "https://cactuscompute.com/needle",
-        "source": "Hacker News",
-        "score": 392
-      },
-      {
-        "title": "LFM2.5 2.6B model competitive with 4x larger models",
-        "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B",
-        "source": "Hacker News",
-        "score": 99
-      },
-      {
-        "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
-        "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
-        "source": "Hacker News",
-        "score": 551
-      },
-      {
-        "title": "Show HN: Scroll through all 43252003274489856000 Rubik's Cube states",
-        "url": "https://everycube.alen.is/",
-        "source": "Hacker News",
-        "score": 226
+        "score": 700
       },
       {
         "title": "Nvidia's Risky Business",
         "url": "https://stratechery.com/2026/nvidias-risky-business/",
         "source": "Hacker News",
-        "score": 9
+        "score": 77
+      },
+      {
+        "title": "As AI eats the web, the internet’s collective memory is disappearing",
+        "url": "https://thewalrus.ca/google-search-is-dying/",
+        "source": "Hacker News",
+        "score": 582
+      },
+      {
+        "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
+        "url": "https://stolen-thoughts.com/",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "H3-metal – Native MiniMax-H3 inference for Apple Silicon",
+        "url": "https://github.com/antirez/h3.c",
+        "source": "Hacker News",
+        "score": 367
+      },
+      {
+        "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
+        "url": "https://cactuscompute.com/needle",
+        "source": "Hacker News",
+        "score": 439
+      },
+      {
+        "title": "Why Did OpenAI's Head of Ethics Chloé Bakalar Leave?",
+        "url": "https://aimagazine.com/news/why-did-openai-head-of-ethics-chloe-bakalar-leave",
+        "source": "Hacker News",
+        "score": 19
+      },
+      {
+        "title": "Chicken Scheme 6.0",
+        "url": "https://code.call-cc.org/releases/6.0.0/NEWS",
+        "source": "Hacker News",
+        "score": 244
+      },
+      {
+        "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
+        "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
+        "source": "Hacker News",
+        "score": 567
+      },
+      {
+        "title": "LFM2.5 2.6B model competitive with 4x larger models",
+        "url": "https://huggingface.co/LiquidAI/LFM2.5-2.6B",
+        "source": "Hacker News",
+        "score": 119
+      },
+      {
+        "title": "Show HN: Scroll through all 43252003274489856000 Rubik's Cube states",
+        "url": "https://everycube.alen.is/",
+        "source": "Hacker News",
+        "score": 245
+      },
+      {
+        "title": "What I learned by putting GitHub Copilot behind a MitM proxy",
+        "url": "https://www.lighthousenewsletter.com/p/i-put-github-copilot-behind-a-mitm",
+        "source": "Hacker News",
+        "score": 48
+      },
+      {
+        "title": "$580M undersea cable rerouted to avoid the grave of Dobby the House Elf",
+        "url": "https://www.tomshardware.com/networking/usd580-million-undersea-cable-rerouted-to-avoid-the-grave-of-dobby-the-house-elf-company-caves-to-fan-demands-to-safeguard-harry-potter-filming-location-will-instead-pass-by-bronze-age-burial-site",
+        "source": "Hacker News",
+        "score": 18
       },
       {
         "title": "Closing Canario Terminal source code",
         "url": "https://rapha.land/closing-canario-terminal-source-code/",
         "source": "Hacker News",
-        "score": 21
-      },
-      {
-        "title": "The “mechanical miracle” that ruined Mark Twain’s life",
-        "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
-        "source": "Hacker News",
-        "score": 159
-      },
-      {
-        "title": "To Save C, We Must Save ABI (2022)",
-        "url": "https://thephd.dev/to-save-c-we-must-save-abi-fixing-c-function-abi",
-        "source": "Hacker News",
-        "score": 87
-      },
-      {
-        "title": "How Claude marks AI-generated content",
-        "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
-        "source": "Hacker News",
-        "score": 244
+        "score": 34
       }
     ],
     "ai": [
@@ -101,91 +101,91 @@
         "title": "As AI eats the web, the internet’s collective memory is disappearing",
         "url": "https://thewalrus.ca/google-search-is-dying/",
         "source": "Hacker News AI",
-        "score": 452
+        "score": 582
       },
       {
-        "title": "OpenAI's Only Ethicist Reportedly Left Last Month",
-        "url": "https://gizmodo.com/openais-only-ethicist-reportedly-left-last-month-she-wasnt-replaced-2000796883",
+        "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
+        "url": "https://stolen-thoughts.com/",
         "source": "Hacker News AI",
-        "score": 25
+        "score": 13
       },
       {
         "title": "Show HN: Needle2: 14MB agentic LLM for phones, wearables, smart home and robots",
         "url": "https://cactuscompute.com/needle",
         "source": "Hacker News AI",
-        "score": 392
+        "score": 439
+      },
+      {
+        "title": "Why Did OpenAI's Head of Ethics Chloé Bakalar Leave?",
+        "url": "https://aimagazine.com/news/why-did-openai-head-of-ethics-chloe-bakalar-leave",
+        "source": "Hacker News AI",
+        "score": 19
       },
       {
         "title": "Mark Zuckerberg attacks 'closed' AI rivals as Meta returns to open models",
         "url": "https://www.ft.com/content/4e3957f8-ea7c-4c46-a3de-cdce8e526878",
         "source": "Hacker News AI",
-        "score": 551
+        "score": 567
+      },
+      {
+        "title": "What I learned by putting GitHub Copilot behind a MitM proxy",
+        "url": "https://www.lighthousenewsletter.com/p/i-put-github-copilot-behind-a-mitm",
+        "source": "Hacker News AI",
+        "score": 48
       },
       {
         "title": "The “mechanical miracle” that ruined Mark Twain’s life",
         "url": "https://resobscura.substack.com/p/the-mechanical-miracle-that-ruined",
         "source": "Hacker News AI",
-        "score": 159
+        "score": 178
       },
       {
         "title": "How Claude marks AI-generated content",
         "url": "https://support.claude.com/en/articles/16266773-how-claude-marks-ai-generated-content",
         "source": "Hacker News AI",
-        "score": 244
-      },
-      {
-        "title": "Hollywood and Shanghai Cinema in the 1930s [pdf]",
-        "url": "https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2225&context=clcweb",
-        "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "How to organize Claude Code for product work",
-        "url": "https://www.theaithinker.com/p/how-to-organize-claude-code-for-product",
-        "source": "Hacker News AI",
-        "score": 4
+        "score": 303
       },
       {
         "title": "Learning more about Claude's mathematical capabilities",
         "url": "https://www.anthropic.com/research/riemann-zeta",
         "source": "Hacker News AI",
-        "score": 229
+        "score": 238
       },
       {
-        "title": "Tail-call optimization in C is relatively recent (2025)",
-        "url": "https://lwn.net/Articles/1034703/",
+        "title": "Hollywood and Shanghai Cinema in the 1930s [pdf]",
+        "url": "https://docs.lib.purdue.edu/cgi/viewcontent.cgi?article=2225&context=clcweb",
         "source": "Hacker News AI",
-        "score": 155
+        "score": 8
       },
       {
         "title": "Confessions of a Long-Distance Sailor",
         "url": "https://arachnoid.com/lutusp/sailbook.html",
         "source": "Hacker News AI",
-        "score": 135
+        "score": 148
+      },
+      {
+        "title": "Tail-call optimization in C is relatively recent (2025)",
+        "url": "https://lwn.net/Articles/1034703/",
+        "source": "Hacker News AI",
+        "score": 160
+      },
+      {
+        "title": "Letter to Governor Abbott on responsible AI infrastructure in Texas",
+        "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
+        "source": "Hacker News AI",
+        "score": 113
+      },
+      {
+        "title": "Exploring Claude/GPT Knowledge Cutoffs and Pre-Training Timelines",
+        "url": "https://blog.sshh.io/p/exploring-claudegpt-knowledge-cutoffs",
+        "source": "Hacker News AI",
+        "score": 151
       },
       {
         "title": "Launch HN: Stoa Markets (YC S26) – A Marketplace for GPUs and AI Servers",
         "url": "https://www.stoaexchange.com",
         "source": "Hacker News AI",
         "score": 75
-      },
-      {
-        "title": "Letter to Governor Abbott on responsible AI infrastructure in Texas",
-        "url": "https://openai.com/index/responsible-ai-infrastructure-texas/",
-        "source": "Hacker News AI",
-        "score": 109
-      },
-      {
-        "title": "Exploring Claude/GPT Knowledge Cutoffs and Pre-Training Timelines",
-        "url": "https://blog.sshh.io/p/exploring-claudegpt-knowledge-cutoffs",
-        "source": "Hacker News AI",
-        "score": 147
-      },
-      {
-        "title": "Humanising LLM Outputs Is Dumb",
-        "url": "https://kuber.studio/blog/Reflections/Humanising-LLM-Outputs-is-Actually-Dumb",
-        "source": "Hacker News AI",
-        "score": 216
       }
     ],
     "news": [
@@ -205,13 +205,13 @@
         "source": "BBC World"
       },
       {
-        "title": "At least 132 killed in Colombia's largest  earthquake in years",
+        "title": "At least 169 killed in Colombia's largest  earthquake in years",
         "url": "https://www.bbc.co.uk/news/articles/c20e360lx0vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Libyan authorities battle big blaze at major oil refinery",
-        "url": "https://www.bbc.co.uk/news/articles/cp308z9pl30o?at_medium=RSS&at_campaign=rss",
+        "title": "Luigi Mangione back in court as key questions remain over case ahead of murder trial",
+        "url": "https://www.bbc.co.uk/news/articles/cgje05wd1v4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -225,7 +225,43 @@
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " This $240 office chair is supremely light and packs a boing ",
+        "url": "https://www.creativebloq.com/tech/chairs-desks/this-usd240-office-chair-is-supremely-light-and-packs-a-boing",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " A drawing tablet I use every day just got a $60 discount ",
+        "url": "https://www.creativebloq.com/art/digital-art/a-drawing-tablet-i-use-every-day-just-got-a-usd60-discount",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The new 7UP rebrand is bound to be contentious ",
+        "url": "https://www.creativebloq.com/design/branding/the-new-7up-rebrand-is-bound-to-be-contentious",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How to make a pinhole projector to view the solar eclipse ",
+        "url": "https://www.creativebloq.com/entertainment/how-to-make-a-pinhole-projector-to-view-the-solar-eclipse",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " What does the sale of ArtStation and Sketchfab mean for digital artists? ",
+        "url": "https://www.creativebloq.com/art/digital-art/what-does-the-sale-of-artstation-and-sketchfab-mean-for-digital-artists",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " People can't decide whether Newcastle United's logo design poll is a joke ",
+        "url": "https://www.creativebloq.com/design/logos-icons/people-cant-decide-whether-newcastle-uniteds-logo-design-poll-is-a-joke",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " See how this 3D artist experiments with colour in renders ",
+        "url": "https://www.creativebloq.com/3d/3d-art/see-how-this-3d-artist-experiments-with-colour-in-renders",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "New GLP-1 pill delivers up to 12% weight loss in 36 weeks",
@@ -265,6 +301,26 @@
     ],
     "gaming": [
       {
+        "title": "Gundam Director Kenji Kamiyama Says His New Anime Is a Metaphor for AI Fears",
+        "url": "https://www.polygon.com/mobile-suit-gundam-new-series-ai-fears-kenji-kamiyama/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Blood of Dawnwalker Is a Serious Witcher 3 Competitor, and It’s Launching Soon",
+        "url": "https://www.polygon.com/games-like-witcher-3-blood-dawnwalker-release-date/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Madoka Magica’s Long-Awaited Fourth Film Will Be Released in the Biggest Format Possible",
+        "url": "https://www.polygon.com/puella-magi-madoka-magika-walpurgisnacht-rising-imax-release-japan/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Star Wars Zero Company Preview: XCOM + Star Wars Is A Perfect Combo ",
+        "url": "https://www.polygon.com/star-wars-zero-company-preview/",
+        "source": "Polygon"
+      },
+      {
         "title": "'Reacher' Season 4 review: Prime Video Puts Alan Ritchson in Mission: Impossible mode",
         "url": "https://www.polygon.com/reacher-season-4-review/",
         "source": "Polygon"
@@ -277,26 +333,6 @@
       {
         "title": "MTG’s 15 Best Goblin Commanders, Ranked From Worst to Best",
         "url": "https://www.polygon.com/best-goblin-commanders-mtg-magic-the-gathering/",
-        "source": "Polygon"
-      },
-      {
-        "title": "2021 Game of the Year Could Be Coming to Nintendo Switch 2",
-        "url": "https://www.polygon.com/it-takes-two-coming-to-nintendo-switch-2/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Why Wo Long’s Zhang Liang is so good at killing you",
-        "url": "https://www.polygon.com/video/why-wo-long-s-zhang-liang-is-so-good-at-killing-you/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Christopher Nolan’s The Odyssey Opens With a Surpising Star Wars Reference",
-        "url": "https://www.polygon.com/christopher-nolan-the-odyssey-star-wars/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Why Margit is so good at killing you in Elden Ring",
-        "url": "https://www.polygon.com/video/why-margit-is-so-good-at-killing-you-in-elden-ring/",
         "source": "Polygon"
       }
     ],
