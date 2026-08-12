@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-12T17:57:21.914724",
-    "total_items": 62
+    "last_updated": "2026-08-12T19:10:51.977462",
+    "total_items": 55
   },
   "content": {
     "tech": [
@@ -9,43 +9,55 @@
         "title": "DeepSeek V4 Pro 0813",
         "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
         "source": "Hacker News",
-        "score": 267
+        "score": 418
+      },
+      {
+        "title": "Zed: Delta",
+        "url": "https://zed.dev/blog/introducing-delta",
+        "source": "Hacker News",
+        "score": 77
       },
       {
         "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
         "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
         "source": "Hacker News",
-        "score": 420
+        "score": 512
+      },
+      {
+        "title": "Qwen3.8-2.4T",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+        "source": "Hacker News",
+        "score": 246
       },
       {
         "title": "2026 Eclipse Webcams",
         "url": "https://jonty.github.io/2026_eclipse_webcams/",
         "source": "Hacker News",
-        "score": 380
+        "score": 408
       },
       {
         "title": "Tim King, AmigaDOS developer, has died",
         "url": "https://amiga-news.de/en/news/AN-2026-08-00070-EN.html",
         "source": "Hacker News",
-        "score": 121
-      },
-      {
-        "title": "Glaciers on the Climate Dashboard",
-        "url": "https://climate.metoffice.cloud/glaciers.html",
-        "source": "Hacker News",
-        "score": 39
+        "score": 146
       },
       {
         "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
         "url": "https://knownagents.com/insights",
         "source": "Hacker News",
-        "score": 125
+        "score": 151
       },
       {
-        "title": "Why Tiny JPEGs Look Different in Chrome",
-        "url": "https://guillaumetech.github.io/posts/jpg-scaling-chrome/",
+        "title": "HTML over WebSockets: real-time SPAs with barely any JavaScript",
+        "url": "https://en.andros.dev/blog/ef4968f5/html-over-websockets-real-time-spas-with-barely-any-javascript/",
         "source": "Hacker News",
-        "score": 155
+        "score": 41
+      },
+      {
+        "title": "Glaciers on the Climate Dashboard",
+        "url": "https://climate.metoffice.cloud/glaciers.html",
+        "source": "Hacker News",
+        "score": 60
       },
       {
         "title": "Reflex (YC W23) Is hiring Growth and GTM Roles",
@@ -54,46 +66,34 @@
         "score": 1
       },
       {
-        "title": "Wednesday, August 12: GitHub, Incident with Pull Requests and Issues",
-        "url": "https://www.githubstatus.com/incidents/76t89hbfb09h",
+        "title": "Why Tiny JPEGs Look Different in Chrome",
+        "url": "https://guillaumetech.github.io/posts/jpg-scaling-chrome/",
         "source": "Hacker News",
-        "score": 34
+        "score": 176
       },
       {
         "title": "SpaceXAI's Grok 4.6 Scores 61 on the Artificial Analysis Intelligence Index",
         "url": "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis",
         "source": "Hacker News",
-        "score": 81
+        "score": 180
       },
       {
-        "title": "HTML over WebSockets: real-time SPAs with barely any JavaScript",
-        "url": "https://en.andros.dev/blog/ef4968f5/html-over-websockets-real-time-spas-with-barely-any-javascript/",
+        "title": "Wednesday, August 12: GitHub, Incident with Pull Requests and Issues",
+        "url": "https://www.githubstatus.com/incidents/76t89hbfb09h",
         "source": "Hacker News",
-        "score": 18
+        "score": 46
       },
       {
         "title": "License plate reader searches should require a warrant",
         "url": "https://andrewpwheeler.com/2026/08/12/license-plate-reader-searches-should-require-a-warrant/",
         "source": "Hacker News",
-        "score": 347
+        "score": 395
       },
       {
-        "title": "AI is removing the middle class of software engineering",
-        "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
+        "title": "Your Key to Success Isn't More Luck or Hard Work",
+        "url": "https://julienreszka.com/blog/your-key-to-success-isn-t-more-luck-or-hard-work/",
         "source": "Hacker News",
-        "score": 425
-      },
-      {
-        "title": "Bike Bureau: Report Bike Lane Obstructions",
-        "url": "https://loudbicycle.com/bb",
-        "source": "Hacker News",
-        "score": 25
-      },
-      {
-        "title": "Qwen/Qwen3.8-2.4T-A95B",
-        "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
-        "source": "Hacker News",
-        "score": 200
+        "score": 11
       }
     ],
     "ai": [
@@ -101,73 +101,73 @@
         "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
         "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
         "source": "Hacker News AI",
-        "score": 420
+        "score": 512
       },
       {
         "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
         "url": "https://knownagents.com/insights",
         "source": "Hacker News AI",
-        "score": 125
+        "score": 151
       },
       {
         "title": "SpaceXAI's Grok 4.6 Scores 61 on the Artificial Analysis Intelligence Index",
         "url": "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis",
         "source": "Hacker News AI",
-        "score": 81
+        "score": 180
       },
       {
         "title": "AI is removing the middle class of software engineering",
         "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
         "source": "Hacker News AI",
-        "score": 425
+        "score": 492
       },
       {
         "title": "We just raised $400M in Series C",
         "url": "https://lovable.dev/blog/series-c",
         "source": "Hacker News AI",
-        "score": 28
+        "score": 40
       },
       {
         "title": "What sort of maths are LLMs good at?",
         "url": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
         "source": "Hacker News AI",
-        "score": 199
+        "score": 206
       },
       {
-        "title": "Delphi 13 Community Edition Is Now Available",
-        "url": "https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/",
+        "title": "SpaceXAI: Grok 4.6",
+        "url": "https://openrouter.ai/x-ai/grok-4.6",
         "source": "Hacker News AI",
-        "score": 122
+        "score": 16
       },
       {
         "title": "High-Res Photo Shows Sand-Capped Butte Rising from Mars Plain of Polygons",
         "url": "https://petapixel.com/2026/08/04/amazing-high-res-photo-shows-a-butte-rising-from-mars/",
         "source": "Hacker News AI",
-        "score": 127
+        "score": 135
+      },
+      {
+        "title": "Delphi 13 Community Edition Is Now Available",
+        "url": "https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/",
+        "source": "Hacker News AI",
+        "score": 133
       },
       {
         "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
         "url": "https://discoveredmaterials.com/research/",
         "source": "Hacker News AI",
-        "score": 55
+        "score": 56
       },
       {
         "title": "German advocacy group lodges criminal complaint over Meta AI glasses",
         "url": "https://www.reuters.com/legal/government/german-advocacy-group-lodges-criminal-complaint-over-meta-ai-glasses-2026-08-12/",
         "source": "Hacker News AI",
-        "score": 81
-      },
-      {
-        "title": "Fail Faster",
-        "url": "https://derickrethans.nl/fail-faster.html",
-        "source": "Hacker News AI",
-        "score": 3
+        "score": 87
       },
       {
         "title": "US hires over 2k video gamers as air traffic controllers",
         "url": "https://www.cbsnews.com/news/video-gamer-air-traffic-controllers-faa-recruitment-sean-duffy/",
         "source": "Hacker News AI",
-        "score": 179
+        "score": 183
       }
     ],
     "news": [
@@ -207,43 +207,7 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " Sinclair GamerCard review: the novel Raspberry Pi handheld is much more than a ZX Spectrum nostalgia trip ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/sinclair-gamercard-review-the-novel-raspberry-pi-handheld-is-much-more-than-a-zx-spectrum-nostalgia-trip",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This artist creates stylised but detailed 3D art inspired by nature ",
-        "url": "https://www.creativebloq.com/3d/3d-art/this-artist-creates-stylised-but-detailed-3d-art-inspired-by-nature",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The 3D software created for Lord of the Rings is being discontinued – for a strange reason ",
-        "url": "https://www.creativebloq.com/3d/3d-software/the-3d-software-that-was-created-for-lord-of-the-rings-is-being-discontinued-for-a-strange-reason",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Has the world been too harsh on Disney's Hexed? ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/has-the-world-been-too-harsh-on-disneys-hexed",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " AI will have the biggest impact on the future of gaming, developers say ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/ai-will-have-the-biggest-impact-on-the-future-of-gaming-developers-say",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Sir Brian May gives Queen fans a fright with bizarre AI tribute band ",
-        "url": "https://www.creativebloq.com/ai/ai-art/brian-may-wants-ai-to-bite-the-dust-after-it-generated-a-fifth-member-of-queen",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Are Chromebooks finally good enough for university students? ",
-        "url": "https://www.creativebloq.com/tech/laptops/are-chromebooks-finally-good-enough-for-university-students",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "Scientists turn Starlink into a giant scanner for Earth’s upper atmosphere",
@@ -283,43 +247,53 @@
     ],
     "gaming": [
       {
-        "title": "Dimension 20 Returns on Dropout: Here's A First Look at Its Twisted Take on Toy Story",
-        "url": "https://www.polygon.com/dropout-dimension-20-toylight-new-campaign-trailer/",
+        "title": "Is 'The End of Oak Street' a Cloverfield Spin-Off? A Spoiler Free Guide",
+        "url": "https://www.polygon.com/the-end-of-oak-street-ending-cloverfield-spin-off/",
         "source": "Polygon"
       },
       {
-        "title": "The Movie That Hollywood Tried to Kill Officially Releases in Theaters This Week",
-        "url": "https://www.polygon.com/coyote-vs-acme-release-date-looney-tunes/",
+        "title": "The 13 Most Influential Games of All Time",
+        "url": "https://www.polygon.com/most-influential-video-games-ever/",
         "source": "Polygon"
       },
       {
-        "title": "Amazon Further Abandons Gaming, Dropping MMOs Lost Ark & Throne And Liberty",
-        "url": "https://www.polygon.com/amazon-games-mmo-lost-ark-throne-and-liberty/",
+        "title": "Waller and Paradise Lost shows Reportedly Canceled by DC Studios",
+        "url": "https://www.polygon.com/dcu-canceled-shows-waller-paradise-lost-james-gunn/",
         "source": "Polygon"
       },
       {
-        "title": "Xbox Reveals Limited Edition Controllers for October 2026 Release",
-        "url": "https://www.polygon.com/gears-of-war-e-day-xbox-limited-edition-controllers/",
+        "title": "Oblivion Remastered Switch 2 Fixes May Come To Other Platforms",
+        "url": "https://www.polygon.com/elder-scrolls-4-oblivion-remastered-switch-2-patch-optimizations/",
         "source": "Polygon"
       },
       {
-        "title": "The Sims 4 Mod Creates Immersive World Selection Screen",
-        "url": "https://www.polygon.com/the-sims-4-world-section-mod/",
+        "title": "Steam shooter explodes in popularity after devs warn fans not to buy it",
+        "url": "https://www.polygon.com/steam-wardogs-bulkhead-10-reasons-not-buy-tactical-fps-early-access/",
         "source": "Polygon"
       },
       {
-        "title": "How does the Explorer Gadget work in Pokémon Go?",
-        "url": "https://www.polygon.com/pokemon-go-explorer-gadget-how-to-use/",
+        "title": "Warhammer 40K: Dawn Of War 4 Delayed",
+        "url": "https://www.polygon.com/warhammer-dawn-of-war-4-delayed-december/",
         "source": "Polygon"
       },
       {
-        "title": "Team behind multiplayer Witcher game 'Project Sirius' hit by layoffs",
-        "url": "https://www.polygon.com/multiplayer-witcher-game-layoffs-project-sirius-update/",
+        "title": "MTG's Most Popular Commander Has Been Officially Dethroned by a Final Fantasy Card",
+        "url": "https://www.polygon.com/mtg-yshtola-nights-blessed-most-popular-commander-final-fantasy/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "Write your first prompt with the GitHub Copilot app",
+        "url": "https://github.blog/ai-and-ml/github-copilot/write-your-first-prompt-with-the-github-copilot-app/",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "Your contributors are AI-first now. Is your project?",
+        "url": "https://github.blog/open-source/maintainers/your-contributors-are-ai-first-now-is-your-project/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "From coder to orchestrator: How agents shift the role of a developer",
         "url": "https://github.blog/developer-skills/career-growth/from-coder-to-orchestrator-how-agents-shift-the-role-of-a-developer/",
@@ -343,16 +317,6 @@
       {
         "title": "How the GitHub legal team used Copilot CLI to streamline their workflows",
         "url": "https://github.blog/ai-and-ml/github-copilot/how-the-github-legal-team-used-copilot-cli-to-streamline-their-workflows/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Turn one giant AI-generated pull request to a reviewable stack",
-        "url": "https://github.blog/engineering/turn-one-giant-ai-generated-pull-request-to-a-reviewable-stack/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Don’t stop early: Case-folding source code at memory speed",
-        "url": "https://github.blog/engineering/architecture-optimization/dont-stop-early-case-folding-source-code-at-memory-speed/",
         "source": "GitHub Blog"
       }
     ]
