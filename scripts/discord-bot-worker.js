@@ -909,9 +909,8 @@ ${environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道，可以聊 15+ �
         systemMessages.push({ role: 'system', content: `[${entry.name}]\n${entry.content}` });
     }
 
-    // 6. 對話歷史 + 用戶訊息
+    // 6. 對話歷史
     const conversationMessages = (history.results || []).reverse().map(m => ({ role: m.role, content: m.content }));
-    conversationMessages.push({ role: 'user', content: message.content });
 
     // 7. 世界書後置
     const backMessages = backEntries.map(entry => ({ role: 'system', content: `[${entry.name}]\n${entry.content}` }));

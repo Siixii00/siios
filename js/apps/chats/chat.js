@@ -579,7 +579,8 @@ async function renderChat(params) {
     function updateInputDisabled() {
         const isEmpty = textarea.value.trim() === '';
         sendBtn.disabled = isEmpty || activeResponseCount > 0;
-        generateBtn.disabled = !awaitingResponse || activeResponseCount > 0;
+        const hasUserMessage = messages.some(m => m.role === 'user');
+        generateBtn.disabled = !hasUserMessage || activeResponseCount > 0;
         
         if (activeResponseCount > 0) {
             generateBtn.style.color = '#141413';
