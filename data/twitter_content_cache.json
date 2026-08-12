@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-12T16:04:09.802577",
-    "total_items": 60
+    "last_updated": "2026-08-12T17:57:21.914724",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
+        "title": "DeepSeek V4 Pro 0813",
+        "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
+        "source": "Hacker News",
+        "score": 267
+      },
+      {
         "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
         "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
         "source": "Hacker News",
-        "score": 170
+        "score": 420
       },
       {
         "title": "2026 Eclipse Webcams",
         "url": "https://jonty.github.io/2026_eclipse_webcams/",
         "source": "Hacker News",
-        "score": 336
+        "score": 380
       },
       {
         "title": "Tim King, AmigaDOS developer, has died",
         "url": "https://amiga-news.de/en/news/AN-2026-08-00070-EN.html",
         "source": "Hacker News",
-        "score": 79
+        "score": 121
+      },
+      {
+        "title": "Glaciers on the Climate Dashboard",
+        "url": "https://climate.metoffice.cloud/glaciers.html",
+        "source": "Hacker News",
+        "score": 39
       },
       {
         "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
         "url": "https://knownagents.com/insights",
         "source": "Hacker News",
-        "score": 74
+        "score": 125
       },
       {
         "title": "Why Tiny JPEGs Look Different in Chrome",
         "url": "https://guillaumetech.github.io/posts/jpg-scaling-chrome/",
         "source": "Hacker News",
-        "score": 99
+        "score": 155
+      },
+      {
+        "title": "Reflex (YC W23) Is hiring Growth and GTM Roles",
+        "url": "https://www.ycombinator.com/companies/reflex/jobs/71x5GFb-growth-engineer",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "Wednesday, August 12: GitHub, Incident with Pull Requests and Issues",
+        "url": "https://www.githubstatus.com/incidents/76t89hbfb09h",
+        "source": "Hacker News",
+        "score": 34
+      },
+      {
+        "title": "SpaceXAI's Grok 4.6 Scores 61 on the Artificial Analysis Intelligence Index",
+        "url": "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis",
+        "source": "Hacker News",
+        "score": 81
+      },
+      {
+        "title": "HTML over WebSockets: real-time SPAs with barely any JavaScript",
+        "url": "https://en.andros.dev/blog/ef4968f5/html-over-websockets-real-time-spas-with-barely-any-javascript/",
+        "source": "Hacker News",
+        "score": 18
       },
       {
         "title": "License plate reader searches should require a warrant",
         "url": "https://andrewpwheeler.com/2026/08/12/license-plate-reader-searches-should-require-a-warrant/",
         "source": "Hacker News",
-        "score": 208
-      },
-      {
-        "title": "Grok 4.6",
-        "url": "https://x.ai/news/grok-4-6",
-        "source": "Hacker News",
-        "score": 57
-      },
-      {
-        "title": "GiveCampus (YC S15) Is Hiring Engineering Managers",
-        "url": "https://job-boards.greenhouse.io/givecampus/jobs/4112793009",
-        "source": "Hacker News",
-        "score": 1
+        "score": 347
       },
       {
         "title": "AI is removing the middle class of software engineering",
         "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
         "source": "Hacker News",
-        "score": 246
+        "score": 425
       },
       {
-        "title": "My Agent Setup",
-        "url": "https://chad.cm/posts/2026-8-11-my-agent-setup",
+        "title": "Bike Bureau: Report Bike Lane Obstructions",
+        "url": "https://loudbicycle.com/bb",
         "source": "Hacker News",
-        "score": 50
-      },
-      {
-        "title": "What sort of maths are LLMs good at?",
-        "url": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
-        "source": "Hacker News",
-        "score": 182
-      },
-      {
-        "title": "Show HN: Woxi - Open-source Mathematica / Wolfram Language reimplementation",
-        "url": "https://woxi.ad-si.com",
-        "source": "Hacker News",
-        "score": 175
+        "score": 25
       },
       {
         "title": "Qwen/Qwen3.8-2.4T-A95B",
         "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
         "source": "Hacker News",
-        "score": 81
-      },
-      {
-        "title": "Automatic1111 for Apple metal, 40% speed up sd1.5",
-        "url": "https://therad.ninja/from-8-10-seconds-to-3-7-teaching-automatic1111-to-speak-metal-on-an-m3-pro/",
-        "source": "Hacker News",
-        "score": 30
-      },
-      {
-        "title": "Solving the Shortest Vector Problem in $2^{0.6039n}$ Time via Mid-Point Hessian",
-        "url": "https://arxiv.org/abs/2608.02478",
-        "source": "Hacker News",
-        "score": 11
+        "score": 200
       }
     ],
     "ai": [
@@ -101,61 +101,73 @@
         "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
         "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
         "source": "Hacker News AI",
-        "score": 170
+        "score": 420
       },
       {
         "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
         "url": "https://knownagents.com/insights",
         "source": "Hacker News AI",
-        "score": 74
+        "score": 125
+      },
+      {
+        "title": "SpaceXAI's Grok 4.6 Scores 61 on the Artificial Analysis Intelligence Index",
+        "url": "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis",
+        "source": "Hacker News AI",
+        "score": 81
       },
       {
         "title": "AI is removing the middle class of software engineering",
         "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
         "source": "Hacker News AI",
-        "score": 246
+        "score": 425
+      },
+      {
+        "title": "We just raised $400M in Series C",
+        "url": "https://lovable.dev/blog/series-c",
+        "source": "Hacker News AI",
+        "score": 28
       },
       {
         "title": "What sort of maths are LLMs good at?",
         "url": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
         "source": "Hacker News AI",
-        "score": 182
+        "score": 199
       },
       {
         "title": "Delphi 13 Community Edition Is Now Available",
         "url": "https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/",
         "source": "Hacker News AI",
-        "score": 96
+        "score": 122
       },
       {
         "title": "High-Res Photo Shows Sand-Capped Butte Rising from Mars Plain of Polygons",
         "url": "https://petapixel.com/2026/08/04/amazing-high-res-photo-shows-a-butte-rising-from-mars/",
         "source": "Hacker News AI",
-        "score": 113
+        "score": 127
       },
       {
         "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
         "url": "https://discoveredmaterials.com/research/",
         "source": "Hacker News AI",
-        "score": 48
+        "score": 55
       },
       {
         "title": "German advocacy group lodges criminal complaint over Meta AI glasses",
         "url": "https://www.reuters.com/legal/government/german-advocacy-group-lodges-criminal-complaint-over-meta-ai-glasses-2026-08-12/",
         "source": "Hacker News AI",
-        "score": 53
+        "score": 81
+      },
+      {
+        "title": "Fail Faster",
+        "url": "https://derickrethans.nl/fail-faster.html",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "US hires over 2k video gamers as air traffic controllers",
         "url": "https://www.cbsnews.com/news/video-gamer-air-traffic-controllers-faa-recruitment-sean-duffy/",
         "source": "Hacker News AI",
-        "score": 172
-      },
-      {
-        "title": "Electricity Pricing in the Age of AI",
-        "url": "https://power2026.ai/",
-        "source": "Hacker News AI",
-        "score": 11
+        "score": 179
       }
     ],
     "news": [
@@ -165,13 +177,23 @@
         "source": "BBC World"
       },
       {
+        "title": "Israeli settlers besieging Palestinian families in West Bank village",
+        "url": "https://www.bbc.co.uk/news/articles/cn0npjkqrleo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Woman pulled alive from rubble 36 hours after Colombia quake",
         "url": "https://www.bbc.co.uk/news/articles/cz7d2e5wlgno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Israeli settlers besieging Palestinian families in West Bank village",
-        "url": "https://www.bbc.co.uk/news/articles/cn0npjkqrleo?at_medium=RSS&at_campaign=rss",
+        "title": "Major Russian grain export terminals hit in Ukraine Black Sea port attack",
+        "url": "https://www.bbc.co.uk/news/articles/c5y49xp2wrno?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "LA Lakers to be sold in record $12.5bn deal",
+        "url": "https://www.bbc.co.uk/sport/basketball/articles/c04k2dn422xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -180,18 +202,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Danube river's low water levels reveal remains of WWII soldiers and motorcycle",
-        "url": "https://www.bbc.co.uk/news/articles/cm2gp3zmkpmo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Singapore and S Korea pull Trader Joe's seasoning over poppy seeds",
-        "url": "https://www.bbc.co.uk/news/articles/cdewpklnzwxo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Zhu Rongji, who helped turn China into a trading giant, dies at 97",
-        "url": "https://www.bbc.co.uk/news/articles/c75g9777wwxo?at_medium=RSS&at_campaign=rss",
+        "title": "Thousands of Canadians call for US ambassador's expulsion ",
+        "url": "https://www.bbc.co.uk/news/articles/c9d83j4ql2xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -271,38 +283,38 @@
     ],
     "gaming": [
       {
-        "title": "D&D Rival Announces New Partnership to Fight Financial Struggles",
-        "url": "https://www.polygon.com/paizo-drivethrurpg-partnership-pathfinder/",
+        "title": "Dimension 20 Returns on Dropout: Here's A First Look at Its Twisted Take on Toy Story",
+        "url": "https://www.polygon.com/dropout-dimension-20-toylight-new-campaign-trailer/",
         "source": "Polygon"
       },
       {
-        "title": "Game Awards 2026: All Game of the Year Front-Runners and Predictions",
-        "url": "https://www.polygon.com/game-of-the-year-goty-game-awards-2026-frontrunners/",
+        "title": "The Movie That Hollywood Tried to Kill Officially Releases in Theaters This Week",
+        "url": "https://www.polygon.com/coyote-vs-acme-release-date-looney-tunes/",
         "source": "Polygon"
       },
       {
-        "title": "'Ghost of Yotei' Is Getting a Narrative Expansion and a Roguelike Mode in new Complete Edition",
-        "url": "https://www.polygon.com/ghost-of-yotei-complete-edition-story-expansion-most-wanted-roguelike-mode-ps5/",
+        "title": "Amazon Further Abandons Gaming, Dropping MMOs Lost Ark & Throne And Liberty",
+        "url": "https://www.polygon.com/amazon-games-mmo-lost-ark-throne-and-liberty/",
         "source": "Polygon"
       },
       {
-        "title": "Andy Weir's New Time Travel Thriller Launches in Just Three Months",
-        "url": "https://www.polygon.com/andy-weir-benjamin-percy-audible-exoplanet/",
+        "title": "Xbox Reveals Limited Edition Controllers for October 2026 Release",
+        "url": "https://www.polygon.com/gears-of-war-e-day-xbox-limited-edition-controllers/",
         "source": "Polygon"
       },
       {
-        "title": "The 7 Worst FPS Games From the 2000s",
-        "url": "https://www.polygon.com/worst-2000s-fps-shooters-aged-like-milk/",
+        "title": "The Sims 4 Mod Creates Immersive World Selection Screen",
+        "url": "https://www.polygon.com/the-sims-4-world-section-mod/",
         "source": "Polygon"
       },
       {
-        "title": "Bionicle Fan-Made Game Devs Return with Rustbound, and It Looks Sick",
-        "url": "https://www.polygon.com/rustbound-bionicle-fan-game-returns-lego-canceled/",
+        "title": "How does the Explorer Gadget work in Pokémon Go?",
+        "url": "https://www.polygon.com/pokemon-go-explorer-gadget-how-to-use/",
         "source": "Polygon"
       },
       {
-        "title": "Netflix's Live-Action 'Yu Yu Hakusho' Is Reportedly Getting a Second Season",
-        "url": "https://www.polygon.com/yu-yu-hakusho-netflix-season-2/",
+        "title": "Team behind multiplayer Witcher game 'Project Sirius' hit by layoffs",
+        "url": "https://www.polygon.com/multiplayer-witcher-game-layoffs-project-sirius-update/",
         "source": "Polygon"
       }
     ],
