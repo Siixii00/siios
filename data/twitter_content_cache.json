@@ -1,93 +1,93 @@
 {
   "metadata": {
-    "last_updated": "2026-08-12T11:47:10.841953",
-    "total_items": 62
+    "last_updated": "2026-08-12T13:11:46.494383",
+    "total_items": 54
   },
   "content": {
     "tech": [
       {
+        "title": "2026 Eclipse Webcams",
+        "url": "https://jonty.github.io/2026_eclipse_webcams/",
+        "source": "Hacker News",
+        "score": 114
+      },
+      {
         "title": "What sort of maths are LLMs good at?",
         "url": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
         "source": "Hacker News",
-        "score": 84
+        "score": 124
       },
       {
         "title": "Show HN: Woxi - Open-source Mathematica / Wolfram Language reimplementation",
         "url": "https://woxi.ad-si.com",
         "source": "Hacker News",
-        "score": 70
+        "score": 112
       },
       {
         "title": "LinkedIn CringeBot 3000",
         "url": "https://www.cringebot3000.com/",
         "source": "Hacker News",
-        "score": 259
+        "score": 355
       },
       {
-        "title": "Dutch Train Map Simulator",
-        "url": "https://spoorkaart.zaza.dev",
+        "title": "Delphi 13 Community Edition Is Now Available",
+        "url": "https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/",
         "source": "Hacker News",
-        "score": 57
+        "score": 38
       },
       {
         "title": "High-Res Photo Shows Sand-Capped Butte Rising from Mars Plain of Polygons",
         "url": "https://petapixel.com/2026/08/04/amazing-high-res-photo-shows-a-butte-rising-from-mars/",
         "source": "Hacker News",
-        "score": 25
+        "score": 53
       },
       {
         "title": "Facebook is paying controversial creators to produce rage-bait content",
         "url": "https://www.abc.net.au/news/2026-08-06/ragebait-how-facebook-is-paying-controversial-creators/106940696",
         "source": "Hacker News",
-        "score": 146
+        "score": 271
       },
       {
-        "title": "Worms: The Future of Yesterday's Worms Today",
-        "url": "https://worm.net/",
+        "title": "Facebook ads are so hard to block that uBlock Origin stopped filtering them",
+        "url": "https://www.neowin.net/news/facebook-ads-are-so-hard-to-block-that-ublock-origin-stopped-filtering-them/",
         "source": "Hacker News",
-        "score": 77
-      },
-      {
-        "title": "Compression is prediction",
-        "url": "https://ngrok.com/blog/compression-is-prediction",
-        "source": "Hacker News",
-        "score": 565
+        "score": 65
       },
       {
         "title": "The hardest working font in Manhattan (2025)",
         "url": "https://aresluna.org/the-hardest-working-font-in-manhattan/",
         "source": "Hacker News",
-        "score": 240
+        "score": 267
+      },
+      {
+        "title": "Compression is prediction",
+        "url": "https://ngrok.com/blog/compression-is-prediction",
+        "source": "Hacker News",
+        "score": 589
+      },
+      {
+        "title": "Worms: The Future of Yesterday's Worms Today",
+        "url": "https://worm.net/",
+        "source": "Hacker News",
+        "score": 101
+      },
+      {
+        "title": "I built a jellyfish laboratory in my backyard [video]",
+        "url": "https://www.youtube.com/watch?v=MILwxfQBm6Q",
+        "source": "Hacker News",
+        "score": 13
       },
       {
         "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
         "url": "https://discoveredmaterials.com/research/",
         "source": "Hacker News",
-        "score": 24
+        "score": 31
       },
       {
         "title": "WorldClaw Agentic 3D open-world generation at scale",
         "url": "https://tencent-hunyuan.github.io/Hunyuan3D-WorldClaw/",
         "source": "Hacker News",
-        "score": 239
-      },
-      {
-        "title": "llama.cpp",
-        "url": "https://llama.app",
-        "source": "Hacker News",
-        "score": 263
-      },
-      {
-        "title": "A shell exclamation mark is not for yelling. Be lazy",
-        "url": "https://refp.se/articles/your-shell-and-the-lazy-exclamation-mark",
-        "source": "Hacker News",
-        "score": 99
-      },
-      {
-        "title": "Newfoundland has a hard bread shortage, but why do they eat it?",
-        "url": "https://www.cbc.ca/news/canada/newfoundland-labrador/nl-hard-bread-history-shortage-9.7299276",
-        "source": "Hacker News",
-        "score": 28
+        "score": 251
       }
     ],
     "ai": [
@@ -95,87 +95,76 @@
         "title": "What sort of maths are LLMs good at?",
         "url": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
         "source": "Hacker News AI",
-        "score": 84
+        "score": 124
       },
       {
-        "title": "Dutch Train Map Simulator",
-        "url": "https://spoorkaart.zaza.dev",
+        "title": "Delphi 13 Community Edition Is Now Available",
+        "url": "https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/",
         "source": "Hacker News AI",
-        "score": 57
+        "score": 38
       },
       {
         "title": "High-Res Photo Shows Sand-Capped Butte Rising from Mars Plain of Polygons",
         "url": "https://petapixel.com/2026/08/04/amazing-high-res-photo-shows-a-butte-rising-from-mars/",
         "source": "Hacker News AI",
-        "score": 25
+        "score": 53
       },
       {
         "title": "Facebook is paying controversial creators to produce rage-bait content",
         "url": "https://www.abc.net.au/news/2026-08-06/ragebait-how-facebook-is-paying-controversial-creators/106940696",
         "source": "Hacker News AI",
-        "score": 146
+        "score": 271
       },
       {
         "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
         "url": "https://discoveredmaterials.com/research/",
         "source": "Hacker News AI",
-        "score": 24
-      },
-      {
-        "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
-        "url": "https://stolen-thoughts.com/",
-        "source": "Hacker News AI",
-        "score": 638
+        "score": 31
       },
       {
         "title": "OpenAI’s head of ethics leaves less than a year after joining",
         "url": "https://www.ft.com/content/e49dfb75-f841-4466-a577-f7aaff8779a0",
         "source": "Hacker News AI",
-        "score": 457
+        "score": 474
+      },
+      {
+        "title": "Stealing Reasoning Traces from Proprietary LLM APIs",
+        "url": "https://stolen-thoughts.com/",
+        "source": "Hacker News AI",
+        "score": 649
       },
       {
         "title": "US hires over 2k video gamers as air traffic controllers",
         "url": "https://www.cbsnews.com/news/video-gamer-air-traffic-controllers-faa-recruitment-sean-duffy/",
         "source": "Hacker News AI",
-        "score": 124
+        "score": 152
       },
       {
         "title": "Go is an ideal language for AI-assisted software engineering",
         "url": "https://developers.googleblog.com/why-go-is-an-ideal-language-for-ai-assisted-software-engineering/",
         "source": "Hacker News AI",
-        "score": 395
+        "score": 397
+      },
+      {
+        "title": "Dutch Train Map Simulator",
+        "url": "https://spoorkaart.zaza.dev",
+        "source": "Hacker News AI",
+        "score": 68
       },
       {
         "title": "Show HN: Line9 – A Mermaid rendering engine with its own layout",
         "url": "https://line9.ai/diagram",
         "source": "Hacker News AI",
-        "score": 75
-      },
-      {
-        "title": "What I learned by putting GitHub Copilot behind a MitM proxy",
-        "url": "https://www.lighthousenewsletter.com/p/i-put-github-copilot-behind-a-mitm",
-        "source": "Hacker News AI",
-        "score": 183
+        "score": 78
       },
       {
         "title": "As AI eats the web, the internet’s collective memory is disappearing",
         "url": "https://thewalrus.ca/google-search-is-dying/",
         "source": "Hacker News AI",
-        "score": 908
-      },
-      {
-        "title": "Beef and dairy drive 41% of biodiversity damage linked to global farmland",
-        "url": "https://www.oxfordmartin.ox.ac.uk/news/beef-and-dairy-drive-41-of-biodiversity-damage-linked-to-global-farmland",
-        "source": "Hacker News AI",
-        "score": 97
+        "score": 910
       }
     ],
     "news": [
-      {
-        "title": "Rescuers scramble for survivors with 180 dead in Colombia earthquake ",
-        "url": "https://www.bbc.co.uk/news/articles/c20dqd9qwq4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
       {
         "title": "Trump confirms he switched planes after Nato summit because of possible threat ",
         "url": "https://www.bbc.co.uk/news/articles/c980r4wpl9lo?at_medium=RSS&at_campaign=rss",
@@ -187,63 +176,32 @@
         "source": "BBC World"
       },
       {
-        "title": "Singapore and S Korea pull Trader Joe's seasoning over poppy seeds",
-        "url": "https://www.bbc.co.uk/news/articles/cdewpklnzwxo?at_medium=RSS&at_campaign=rss",
+        "title": "Woman pulled alive from rubble 36 hours after Colombia quake",
+        "url": "https://www.bbc.co.uk/news/articles/cz7d2e5wlgno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Wisconsin result dents winning streak for Democratic Party's left wing ",
-        "url": "https://www.bbc.co.uk/news/articles/c9347ezzwljo?at_medium=RSS&at_campaign=rss",
+        "title": "Israeli settlers besieging Palestinian families in West Bank village",
+        "url": "https://www.bbc.co.uk/news/articles/cn0npjkqrleo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US says helicopter fired missiles to disable ship breaking Iran blockade",
-        "url": "https://www.bbc.co.uk/news/articles/cvg8lyyyjedo?at_medium=RSS&at_campaign=rss",
+        "title": "US inflation eases as food costs cool",
+        "url": "https://www.bbc.co.uk/news/articles/c0qv2nn1gpeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Cristiano Ronaldo marries long-time partner Georgina Rodríguez",
-        "url": "https://www.bbc.co.uk/news/articles/clyj0325z3ko?at_medium=RSS&at_campaign=rss",
+        "title": "Danube river's low water levels reveal remains of WWII soldiers and motorcycle",
+        "url": "https://www.bbc.co.uk/news/articles/cm2gp3zmkpmo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Zhu Rongji, who helped turn China into a trading giant, dies at 97",
+        "url": "https://www.bbc.co.uk/news/articles/c75g9777wwxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " This artist creates stylised but detailed 3D art inspired by nature ",
-        "url": "https://www.creativebloq.com/3d/3d-art/this-artist-creates-stylised-but-detailed-3d-art-inspired-by-nature",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The 3D software created for Lord of the Rings is being discontinued – for a strange reason ",
-        "url": "https://www.creativebloq.com/3d/3d-software/the-3d-software-that-was-created-for-lord-of-the-rings-is-being-discontinued-for-a-strange-reason",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Has the world been too harsh on Disney's Hexed? ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/has-the-world-been-too-harsh-on-disneys-hexed",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " AI will have the biggest impact on the future of gaming, developers say ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/ai-will-have-the-biggest-impact-on-the-future-of-gaming-developers-say",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Sir Brian May gives Queen fans a fright with bizarre AI tribute band ",
-        "url": "https://www.creativebloq.com/ai/ai-art/brian-may-wants-ai-to-bite-the-dust-after-it-generated-a-fifth-member-of-queen",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Are Chromebooks finally good enough for university students? ",
-        "url": "https://www.creativebloq.com/tech/laptops/are-chromebooks-finally-good-enough-for-university-students",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This $240 office chair is supremely light and packs a boing ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/this-usd240-office-chair-is-supremely-light-and-packs-a-boing",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "New GLP-1 pill delivers up to 12% weight loss in 36 weeks",
@@ -283,6 +241,16 @@
     ],
     "gaming": [
       {
+        "title": "Armored Core 2 Was Ahead of Its Time in One Important Way",
+        "url": "https://www.polygon.com/armored-core-2-25th-anniversary/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Steam is Getting an Absurd New Vampire Survivors Clone in 2 Weeks",
+        "url": "https://www.polygon.com/blood-dungeon-steam-release-date/",
+        "source": "Polygon"
+      },
+      {
         "title": "Doctor Who Should Leave David Tennant Alone As He Isn't Going to Save the Franchise",
         "url": "https://www.polygon.com/doctor-who-reboot-david-tennant/",
         "source": "Polygon"
@@ -305,16 +273,6 @@
       {
         "title": "X-Men ’97 Season 3 Confirmed? Plot, Potential Release Date, and Everything You Need to Know",
         "url": "https://www.polygon.com/x-men-97-season-3-release-date-plot-explained/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Why Nier: Automata has one of the best soundtracks ever",
-        "url": "https://www.polygon.com/video/why-nier-automata-has-one-of-the-best-soundtracks-ever/",
-        "source": "Polygon"
-      },
-      {
-        "title": "I fixed Fallout's music by creating a totally new genre | Unraveled",
-        "url": "https://www.polygon.com/video/i-fixed-fallout-s-music-by-creating-a-totally-new-genre-unraveled/",
         "source": "Polygon"
       }
     ],
