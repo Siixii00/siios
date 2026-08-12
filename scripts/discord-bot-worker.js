@@ -103,7 +103,7 @@ export default {
                     return Response.json({ error: 'Invalid signature' }, { status: 401, headers: corsHeaders });
                 }
                 const event = JSON.parse(rawBody);
-                return await handleDiscordEvent(event, env);
+                return await handleDiscordEvent(event, env, ctx);
             } catch (error) {
                 return Response.json({ error: error.message }, { status: 400, headers: corsHeaders });
             }
@@ -506,6 +506,10 @@ async function registerCommands(env) {
             }]
         },
         {
+            name: 'reroll',
+            description: '重新生成 AI 對上一則使用者訊息的回覆'
+        },
+        {
             name: 'backup',
             description: '產生完整備份（需 Backup Key）並傳送 JSON 檔案',
             default_member_permissions: '0',
@@ -578,15 +582,15 @@ async function setConfig(env, key, value) {
 }
 
 // ===== 處理 Discord 事件 =====
-async function handleDiscordEvent(event, env) {
+async function handleDiscordEvent(event, env, ctx) {
     if (event.type === 1) return Response.json({ type: 1 });
-    if (event.type === 2) return await handleSlashCommand(event, env);
+    if (event.type === 2) return await handleSlashCommand(event, env, ctx);
     if (event.t === 'MESSAGE_CREATE') return await handleMessage(event.d, env);
     return Response.json({ status: 'unknown_event' });
 }
 
 // ===== 斜線指令處理 =====
-async function handleSlashCommand(event, env) {
+async function handleSlashCommand(event, env, ctx) {
     try {
         const { name, options } = event.data;
         const channelId = event.channel_id;
@@ -683,6 +687,79 @@ async function handleSlashCommand(event, env) {
             }
 
             return Response.json({ type: 4, data: { content: `✅ 已綁定 Discord 用戶 **${discordUsername}** (${discordNick ? `暱稱: ${discordNick}` : ''}) → Siios 用戶 **${targetUserId}**` } });
+        }
+
+        if (name === 'reroll') {
+            const interactionToken = event.token;
+            const appId = event.application_id;
+
+            ctx.waitUntil((async () => {
+                try {
+                    const characterId = await resolveChannelCharacter(channelId, env);
+                    const chatId = characterId || channelId;
+
+                    const history = await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? ORDER BY timestamp DESC LIMIT 10`).bind(chatId).all();
+                    const msgs = (history.results || []);
+
+                    // 找最新的 AI 回覆
+                    let lastAiIdx = -1;
+                    for (let i = 0; i < msgs.length; i++) {
+                        if (msgs[i].role === 'assistant') { lastAiIdx = i; break; }
+                    }
+                    if (lastAiIdx === -1) {
+                        await editInteraction(appId, interactionToken, '❌ 沒有找到可以重新生成的 AI 回覆', env);
+                        return;
+                    }
+
+                    // 找該 AI 回覆之前的最後一則使用者訊息
+                    let lastUserIdx = -1;
+                    for (let i = lastAiIdx + 1; i < msgs.length; i++) {
+                        if (msgs[i].role === 'user') { lastUserIdx = i; break; }
+                    }
+                    if (lastUserIdx === -1) {
+                        await editInteraction(appId, interactionToken, '❌ 沒有找到可生成的用戶訊息', env);
+                        return;
+                    }
+
+                    const lastAiMsg = msgs[lastAiIdx];
+                    const lastUserMsg = msgs[lastUserIdx];
+
+                    await env.DB.prepare(`DELETE FROM messages WHERE id = ?`).bind(lastAiMsg.id).run();
+
+                    let userId = null;
+                    let userDisplayName = 'User';
+                    try {
+                        const meta = JSON.parse(lastUserMsg.metadata || '{}');
+                        userId = meta.bound_user_id || null;
+                        userDisplayName = meta.user_display_name || 'User';
+                    } catch (_) {}
+
+                    const fakeMessage = { content: lastUserMsg.content, channel_id: channelId, id: lastUserMsg.id };
+                    const aiResponse = await generateAIResponseWithContext(fakeMessage, characterId, userId, userDisplayName, env);
+
+                    // 刪除 Discord 上的舊 AI 回覆（若存在）
+                    try {
+                        const oldDiscordId = await findBotLastMessageId(channelId, env);
+                        if (oldDiscordId) await deleteDiscordMessage(channelId, oldDiscordId, env);
+                    } catch (_) {}
+
+                    const discordMsg = await sendDiscordMessage(channelId, aiResponse.content, characterId, env);
+                    await env.DB.prepare(`INSERT INTO messages (id, chat_id, role, content, timestamp, metadata) VALUES (?, ?, 'assistant', ?, ?, ?)`).bind(
+                        discordMsg.id, chatId, aiResponse.content,
+                        new Date().toISOString(),
+                        JSON.stringify({ source: 'discord', channel_id: channelId, character_id: characterId, responding_to_user: userId })
+                    ).run();
+
+                    await editInteraction(appId, interactionToken, '✅ 已重新生成回覆', env);
+                } catch (error) {
+                    console.error('reroll error:', error);
+                    try {
+                        await editInteraction(appId, interactionToken, `❌ 重新生成失敗: ${error.message}`, env);
+                    } catch (_) {}
+                }
+            })());
+
+            return Response.json({ type: 5, data: { flags: 64 } });
         }
 
         if (name === 'backup') {
@@ -1058,6 +1135,43 @@ async function sendDiscordMessage(channel_id, content, character_id, env) {
     });
     if (!response.ok) throw new Error(`Discord API error: ${response.status}`);
     return await response.json();
+}
+
+// ===== Discord 互動回應編輯（用於 deferred 斜線指令）=====
+async function editInteraction(applicationId, interactionToken, content, env) {
+    const response = await fetch(`https://discord.com/api/v10/webhooks/${applicationId}/${interactionToken}/messages/@original`, {
+        method: 'PATCH', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ content })
+    });
+    if (!response.ok) throw new Error(`Edit interaction error: ${response.status}`);
+}
+
+// ===== 刪除 Discord 訊息 =====
+async function deleteDiscordMessage(channel_id, message_id, env) {
+    const response = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages/${message_id}`, {
+        method: 'DELETE', headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
+    });
+    if (!response.ok && response.status !== 404) throw new Error(`Discord delete error: ${response.status}`);
+}
+
+// ===== 尋找 Bot 在頻道中的最後一則訊息 ID =====
+async function findBotLastMessageId(channel_id, env) {
+    const response = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages?limit=10`, {
+        headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
+    });
+    if (!response.ok) return null;
+    const messages = await response.json();
+    if (!Array.isArray(messages)) return null;
+    const botMsg = messages.find(m => m.author?.id === await getBotUserId(env));
+    return botMsg?.id || null;
+}
+
+// ===== 解析頻道綁定的角色 ID =====
+async function resolveChannelCharacter(channelId, env) {
+    const binding = await env.DB.prepare(`SELECT character_id FROM channel_bindings WHERE channel_id = ?`).bind(channelId).first();
+    if (binding) return binding.character_id;
+    const mapping = await env.DB.prepare(`SELECT character_id FROM discord_channel_mappings WHERE channel_id = ?`).bind(channelId).first();
+    return mapping?.character_id || null;
 }
 
 // ===== 隨機表情池 =====
