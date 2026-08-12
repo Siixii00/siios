@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-12T19:10:51.977462",
-    "total_items": 55
+    "last_updated": "2026-08-12T20:46:13.232440",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,55 +9,79 @@
         "title": "DeepSeek V4 Pro 0813",
         "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
         "source": "Hacker News",
-        "score": 418
+        "score": 527
       },
       {
-        "title": "Zed: Delta",
+        "title": "Delta",
         "url": "https://zed.dev/blog/introducing-delta",
         "source": "Hacker News",
-        "score": 77
+        "score": 188
       },
       {
         "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
         "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
         "source": "Hacker News",
-        "score": 512
+        "score": 596
       },
       {
         "title": "Qwen3.8-2.4T",
         "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
         "source": "Hacker News",
-        "score": 246
+        "score": 337
+      },
+      {
+        "title": "Grok 4.6 scores 61 on the Artificial Analysis Intelligence Index",
+        "url": "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis",
+        "source": "Hacker News",
+        "score": 229
       },
       {
         "title": "2026 Eclipse Webcams",
         "url": "https://jonty.github.io/2026_eclipse_webcams/",
         "source": "Hacker News",
-        "score": 408
+        "score": 428
       },
       {
         "title": "Tim King, AmigaDOS developer, has died",
         "url": "https://amiga-news.de/en/news/AN-2026-08-00070-EN.html",
         "source": "Hacker News",
-        "score": 146
+        "score": 180
       },
       {
         "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
         "url": "https://knownagents.com/insights",
         "source": "Hacker News",
-        "score": 151
+        "score": 178
       },
       {
         "title": "HTML over WebSockets: real-time SPAs with barely any JavaScript",
         "url": "https://en.andros.dev/blog/ef4968f5/html-over-websockets-real-time-spas-with-barely-any-javascript/",
         "source": "Hacker News",
-        "score": 41
+        "score": 68
+      },
+      {
+        "title": "Why tiny JPEGs look different in Chrome",
+        "url": "https://guillaumetech.github.io/posts/jpg-scaling-chrome/",
+        "source": "Hacker News",
+        "score": 200
+      },
+      {
+        "title": "People who grew up with high economic connectedness earn more",
+        "url": "https://julienreszka.com/blog/your-key-to-success-isn-t-more-luck-or-hard-work/",
+        "source": "Hacker News",
+        "score": 59
       },
       {
         "title": "Glaciers on the Climate Dashboard",
         "url": "https://climate.metoffice.cloud/glaciers.html",
         "source": "Hacker News",
-        "score": 60
+        "score": 80
+      },
+      {
+        "title": "Grok 4.6",
+        "url": "https://x.ai/news/grok-4-6",
+        "source": "Hacker News",
+        "score": 265
       },
       {
         "title": "Reflex (YC W23) Is hiring Growth and GTM Roles",
@@ -66,34 +90,10 @@
         "score": 1
       },
       {
-        "title": "Why Tiny JPEGs Look Different in Chrome",
-        "url": "https://guillaumetech.github.io/posts/jpg-scaling-chrome/",
+        "title": "Breaking the WAL",
+        "url": "https://antithesis.com/blog/2026/wal-reset-bug/",
         "source": "Hacker News",
-        "score": 176
-      },
-      {
-        "title": "SpaceXAI's Grok 4.6 Scores 61 on the Artificial Analysis Intelligence Index",
-        "url": "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis",
-        "source": "Hacker News",
-        "score": 180
-      },
-      {
-        "title": "Wednesday, August 12: GitHub, Incident with Pull Requests and Issues",
-        "url": "https://www.githubstatus.com/incidents/76t89hbfb09h",
-        "source": "Hacker News",
-        "score": 46
-      },
-      {
-        "title": "License plate reader searches should require a warrant",
-        "url": "https://andrewpwheeler.com/2026/08/12/license-plate-reader-searches-should-require-a-warrant/",
-        "source": "Hacker News",
-        "score": 395
-      },
-      {
-        "title": "Your Key to Success Isn't More Luck or Hard Work",
-        "url": "https://julienreszka.com/blog/your-key-to-success-isn-t-more-luck-or-hard-work/",
-        "source": "Hacker News",
-        "score": 11
+        "score": 5
       }
     ],
     "ai": [
@@ -101,79 +101,61 @@
         "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
         "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
         "source": "Hacker News AI",
-        "score": 512
+        "score": 596
       },
       {
         "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
         "url": "https://knownagents.com/insights",
         "source": "Hacker News AI",
-        "score": 151
+        "score": 178
       },
       {
-        "title": "SpaceXAI's Grok 4.6 Scores 61 on the Artificial Analysis Intelligence Index",
-        "url": "https://artificialanalysis.ai/articles/grok-4-6-benchmarks-and-analysis",
-        "source": "Hacker News AI",
-        "score": 180
-      },
-      {
-        "title": "AI is removing the middle class of software engineering",
+        "title": "AI is removing the middle class of software engineering?",
         "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
         "source": "Hacker News AI",
-        "score": 492
+        "score": 589
       },
       {
-        "title": "We just raised $400M in Series C",
+        "title": "Lovable raises $400M Series C",
         "url": "https://lovable.dev/blog/series-c",
         "source": "Hacker News AI",
-        "score": 40
+        "score": 60
       },
       {
         "title": "What sort of maths are LLMs good at?",
         "url": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
         "source": "Hacker News AI",
-        "score": 206
-      },
-      {
-        "title": "SpaceXAI: Grok 4.6",
-        "url": "https://openrouter.ai/x-ai/grok-4.6",
-        "source": "Hacker News AI",
-        "score": 16
+        "score": 217
       },
       {
         "title": "High-Res Photo Shows Sand-Capped Butte Rising from Mars Plain of Polygons",
         "url": "https://petapixel.com/2026/08/04/amazing-high-res-photo-shows-a-butte-rising-from-mars/",
         "source": "Hacker News AI",
-        "score": 135
+        "score": 142
       },
       {
         "title": "Delphi 13 Community Edition Is Now Available",
         "url": "https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/",
         "source": "Hacker News AI",
-        "score": 133
+        "score": 152
       },
       {
         "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
         "url": "https://discoveredmaterials.com/research/",
         "source": "Hacker News AI",
-        "score": 56
-      },
-      {
-        "title": "German advocacy group lodges criminal complaint over Meta AI glasses",
-        "url": "https://www.reuters.com/legal/government/german-advocacy-group-lodges-criminal-complaint-over-meta-ai-glasses-2026-08-12/",
-        "source": "Hacker News AI",
-        "score": 87
+        "score": 58
       },
       {
         "title": "US hires over 2k video gamers as air traffic controllers",
         "url": "https://www.cbsnews.com/news/video-gamer-air-traffic-controllers-faa-recruitment-sean-duffy/",
         "source": "Hacker News AI",
-        "score": 183
+        "score": 188
       }
     ],
     "news": [
       {
-        "title": "Members of Trump's cabinet remained on decoy plane, after president's quiet exit",
-        "url": "https://www.bbc.co.uk/news/articles/c4g306eln8wo?at_medium=RSS&at_campaign=rss",
+        "title": "Major Russian grain export terminals hit in Ukraine Black Sea port attack",
+        "url": "https://www.bbc.co.uk/news/articles/c5y49xp2wrno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -182,13 +164,18 @@
         "source": "BBC World"
       },
       {
-        "title": "Woman pulled alive from rubble 36 hours after Colombia quake",
-        "url": "https://www.bbc.co.uk/news/articles/cz7d2e5wlgno?at_medium=RSS&at_campaign=rss",
+        "title": "US immigration officers to be equipped with gloves that deliver electric shocks",
+        "url": "https://www.bbc.co.uk/news/articles/c20d292gdp4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Major Russian grain export terminals hit in Ukraine Black Sea port attack",
-        "url": "https://www.bbc.co.uk/news/articles/c5y49xp2wrno?at_medium=RSS&at_campaign=rss",
+        "title": "Trump says White House press secretary Karoline Leavitt to leave post",
+        "url": "https://www.bbc.co.uk/news/articles/cvglzrvyrz3o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Woman pulled alive from rubble 36 hours after Colombia quake",
+        "url": "https://www.bbc.co.uk/news/articles/cz7d2e5wlgno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -197,17 +184,48 @@
         "source": "BBC World"
       },
       {
-        "title": "US inflation eases as food and fuel costs cool",
-        "url": "https://www.bbc.co.uk/news/articles/c0qv2nn1gpeo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Thousands of Canadians call for US ambassador's expulsion ",
         "url": "https://www.bbc.co.uk/news/articles/c9d83j4ql2xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " Sinclair GamerCard review: the novel Raspberry Pi handheld is much more than a ZX Spectrum nostalgia trip ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/sinclair-gamercard-review-the-novel-raspberry-pi-handheld-is-much-more-than-a-zx-spectrum-nostalgia-trip",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This artist creates stylised but detailed 3D art inspired by nature ",
+        "url": "https://www.creativebloq.com/3d/3d-art/this-artist-creates-stylised-but-detailed-3d-art-inspired-by-nature",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The 3D software created for Lord of the Rings is being discontinued – for a strange reason ",
+        "url": "https://www.creativebloq.com/3d/3d-software/the-3d-software-that-was-created-for-lord-of-the-rings-is-being-discontinued-for-a-strange-reason",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Has the world been too harsh on Disney's Hexed? ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/has-the-world-been-too-harsh-on-disneys-hexed",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " AI will have the biggest impact on the future of gaming, developers say ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/ai-will-have-the-biggest-impact-on-the-future-of-gaming-developers-say",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Sir Brian May gives Queen fans a fright with bizarre AI tribute band ",
+        "url": "https://www.creativebloq.com/ai/ai-art/brian-may-wants-ai-to-bite-the-dust-after-it-generated-a-fifth-member-of-queen",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Are Chromebooks finally good enough for university students? ",
+        "url": "https://www.creativebloq.com/tech/laptops/are-chromebooks-finally-good-enough-for-university-students",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "Scientists turn Starlink into a giant scanner for Earth’s upper atmosphere",
@@ -247,6 +265,31 @@
     ],
     "gaming": [
       {
+        "title": "D23's Kingdom Hearts Panel Will Only Be Streamed Live",
+        "url": "https://www.polygon.com/d23-kingdom-hearts-25th-anniversary-deep-dive-panel-kh4/",
+        "source": "Polygon"
+      },
+      {
+        "title": "How to get a toe biter buggy in Grounded 2",
+        "url": "https://www.polygon.com/grounded-2-toe-biter-buggy-how-to-get-egg-nest-recipe-location/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Pokémon TCG's 30th Anniversary Fat Pikachu Revealed",
+        "url": "https://www.polygon.com/pokemon-30th-anniversary-tcg-fat-pikachu-ken-sugimori-new-design/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Liam Neeson's 106-Minute Crime-Thriller Is Officially One of the Biggest Movies on Netflix",
+        "url": "https://www.polygon.com/liam-neesons-106-minute-crime-thriller-officially-one-of-the-biggest-movies-on-streaming/",
+        "source": "Polygon"
+      },
+      {
+        "title": "All large lost sunken relics list in Pokémon Pokopia",
+        "url": "https://www.polygon.com/pokemon-pokopia-lost-sunken-relics-dlc-list-how-to-get/",
+        "source": "Polygon"
+      },
+      {
         "title": "Is 'The End of Oak Street' a Cloverfield Spin-Off? A Spoiler Free Guide",
         "url": "https://www.polygon.com/the-end-of-oak-street-ending-cloverfield-spin-off/",
         "source": "Polygon"
@@ -254,31 +297,6 @@
       {
         "title": "The 13 Most Influential Games of All Time",
         "url": "https://www.polygon.com/most-influential-video-games-ever/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Waller and Paradise Lost shows Reportedly Canceled by DC Studios",
-        "url": "https://www.polygon.com/dcu-canceled-shows-waller-paradise-lost-james-gunn/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Oblivion Remastered Switch 2 Fixes May Come To Other Platforms",
-        "url": "https://www.polygon.com/elder-scrolls-4-oblivion-remastered-switch-2-patch-optimizations/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Steam shooter explodes in popularity after devs warn fans not to buy it",
-        "url": "https://www.polygon.com/steam-wardogs-bulkhead-10-reasons-not-buy-tactical-fps-early-access/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Warhammer 40K: Dawn Of War 4 Delayed",
-        "url": "https://www.polygon.com/warhammer-dawn-of-war-4-delayed-december/",
-        "source": "Polygon"
-      },
-      {
-        "title": "MTG's Most Popular Commander Has Been Officially Dethroned by a Final Fantasy Card",
-        "url": "https://www.polygon.com/mtg-yshtola-nights-blessed-most-popular-commander-final-fantasy/",
         "source": "Polygon"
       }
     ],
