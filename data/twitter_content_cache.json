@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-13T19:13:46.260921",
-    "total_items": 65
+    "last_updated": "2026-08-13T20:44:09.196929",
+    "total_items": 63
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Gemini 3.7 Flash",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News",
-        "score": 289
+        "score": 417
       },
       {
         "title": "Accelerating GPT-5.6 Sol Ultrafast",
         "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
         "source": "Hacker News",
-        "score": 105
-      },
-      {
-        "title": "Choose Boring Technology (2015)",
-        "url": "https://mcfunley.com/choose-boring-technology",
-        "source": "Hacker News",
-        "score": 83
+        "score": 235
       },
       {
         "title": "Donkey.bas is 45 Years Old – 131 line of Glory",
         "url": "https://donkeybas.com/",
         "source": "Hacker News",
-        "score": 60
+        "score": 112
       },
       {
         "title": "Mistral OCR 4.1",
         "url": "https://docs.mistral.ai/models/ocr-4-1",
         "source": "Hacker News",
-        "score": 114
+        "score": 172
       },
       {
         "title": "Spaghettifying DRAM",
         "url": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
         "source": "Hacker News",
-        "score": 328
+        "score": 388
       },
       {
         "title": "Where did the old web go? We followed 657,607 links to find out",
         "url": "https://0.mk/blog/link-rot",
         "source": "Hacker News",
-        "score": 36
+        "score": 79
       },
       {
-        "title": "Tocharian Online",
-        "url": "https://lrc.la.utexas.edu/eieol/tokol/0",
+        "title": "Choose Boring Technology (2015)",
+        "url": "https://mcfunley.com/choose-boring-technology",
         "source": "Hacker News",
-        "score": 31
+        "score": 140
       },
       {
-        "title": "AI At Home Part 1: A Box Of Scraps",
-        "url": "https://jdagostino.github.io/ai-pt1-box-o-scraps/index.html",
+        "title": "Understanding is the new bottleneck",
+        "url": "https://www.geoffreylitt.com/2026/07/02/understanding-is-the-new-bottleneck",
         "source": "Hacker News",
-        "score": 35
+        "score": 42
       },
       {
-        "title": "Come for ENIAC, Stay for UNIVAC and Skeduflo",
-        "url": "https://uniqueatpenn.wordpress.com/2026/08/05/come-for-eniac-stay-for-univac-and-skeduflo/",
+        "title": "Idol Mahjong Final Romance: A Slideshow Disguised as a Video Game",
+        "url": "https://nicole.express/2026/more-like-idle-mahjong.html",
         "source": "Hacker News",
-        "score": 46
+        "score": 15
       },
       {
-        "title": "DeepSeek Harness developer preview",
-        "url": "https://deepseek.com/harness/en/",
+        "title": "Single log line is 49KB+ (ext4) / 110KB+ (btrfs) of systemd-journald disk writes",
+        "url": "https://github.com/systemd/systemd/issues/40262",
         "source": "Hacker News",
-        "score": 458
+        "score": 61
+      },
+      {
+        "title": "How Gödel's Proof Works",
+        "url": "https://www.quantamagazine.org/how-godels-proof-works-20200714/",
+        "source": "Hacker News",
+        "score": 17
+      },
+      {
+        "title": "How Organizations Use AI: Evidence from ChatGPT [pdf]",
+        "url": "https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf",
+        "source": "Hacker News",
+        "score": 19
+      },
+      {
+        "title": "NP-Overrated",
+        "url": "https://gruhn.me/blog/2026-08-13/",
+        "source": "Hacker News",
+        "score": 7
+      },
+      {
+        "title": "AI Is Threatening Natural Resources for Billions",
+        "url": "https://unric.org/en/ais-environmental-costs-threaten-water-land-and-climate/",
+        "source": "Hacker News",
+        "score": 41
       },
       {
         "title": "Kubernetes on Oxide: How customer needs shaped our integrations",
         "url": "https://oxide.computer/blog/kubernetes-on-oxide",
         "source": "Hacker News",
-        "score": 101
-      },
-      {
-        "title": "Ordinary abundance",
-        "url": "https://ordinaryabundance.com/",
-        "source": "Hacker News",
-        "score": 120
-      },
-      {
-        "title": "Gloomberb",
-        "url": "https://gloom.sh/",
-        "source": "Hacker News",
-        "score": 305
-      },
-      {
-        "title": "How art invented humanity",
-        "url": "https://aeon.co/essays/humans-did-not-invent-art-it-was-the-other-way-around",
-        "source": "Hacker News",
-        "score": 52
+        "score": 124
       }
     ],
     "ai": [
@@ -101,91 +101,79 @@
         "title": "Gemini 3.7 Flash",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News AI",
-        "score": 289
+        "score": 417
       },
       {
         "title": "Accelerating GPT-5.6 Sol Ultrafast",
         "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
         "source": "Hacker News AI",
-        "score": 105
+        "score": 235
       },
       {
         "title": "Mistral OCR 4.1",
         "url": "https://docs.mistral.ai/models/ocr-4-1",
         "source": "Hacker News AI",
-        "score": 114
+        "score": 172
+      },
+      {
+        "title": "How Organizations Use AI: Evidence from ChatGPT [pdf]",
+        "url": "https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf",
+        "source": "Hacker News AI",
+        "score": 19
+      },
+      {
+        "title": "AI Is Threatening Natural Resources for Billions",
+        "url": "https://unric.org/en/ais-environmental-costs-threaten-water-land-and-climate/",
+        "source": "Hacker News AI",
+        "score": 41
       },
       {
         "title": "AI At Home Part 1: A Box Of Scraps",
         "url": "https://jdagostino.github.io/ai-pt1-box-o-scraps/index.html",
         "source": "Hacker News AI",
-        "score": 35
+        "score": 57
       },
       {
         "title": "Choosing an AI model: one prompt, 11 models, different results",
         "url": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results/",
         "source": "Hacker News AI",
-        "score": 132
+        "score": 148
       },
       {
         "title": "Codex in ChatGPT desktop app for Linux is now in preview",
         "url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027",
         "source": "Hacker News AI",
-        "score": 408
+        "score": 425
       },
       {
         "title": "I built a 500k-domain search engine for makers in a weekend for $10",
         "url": "https://alexmorleyfinch.github.io/marlin/history/v1/article/the_birth.html",
         "source": "Hacker News AI",
-        "score": 95
+        "score": 117
+      },
+      {
+        "title": "Airbnb Eval-driven development: Lessons from evaluating GenAI at scale",
+        "url": "https://medium.com/airbnb-engineering/eval-driven-development-lessons-from-evaluating-genai-at-scale-e817e5ae5788",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "Graduate student proves a quantum uncertainty principle for fractals",
         "url": "https://www.quantamagazine.org/graduate-student-proves-the-fractal-uncertainty-principle-20260812/",
         "source": "Hacker News AI",
-        "score": 48
+        "score": 51
       },
       {
-        "title": "The mathematical physics of rainbows and glories (2001) [pdf]",
-        "url": "https://tlakoba.w3.uvm.edu/AppliedUGMath/auxpaper_rainbow_glory_review.pdf",
+        "title": "Person Hides Prompt Injection in Legal Filing Telling AI to Side with Them",
+        "url": "https://www.404media.co/person-hides-prompt-injection-in-legal-filing-telling-ai-to-side-with-them/",
         "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "Surfil On-device control plane for AI coding agents",
-        "url": "https://surfil.com/",
-        "source": "Hacker News AI",
-        "score": 4
-      },
-      {
-        "title": "Translating the Renaissance: 17,000+ historical source texts",
-        "url": "https://sourcelibrary.org",
-        "source": "Hacker News AI",
-        "score": 12
+        "score": 25
       },
       {
         "title": "Flock (Again) Activates a Camera System a Town Had Voted to Shut Down",
         "url": "https://www.techdirt.com/2026/08/13/flock-again-activates-a-camera-system-a-town-had-voted-to-shut-down/",
         "source": "Hacker News AI",
-        "score": 15
-      },
-      {
-        "title": "We eliminated 1,400 CVEs in NanoClaw's container images",
-        "url": "https://www.echo.ai/blog/echo-xnanoclaw-under-the-hood",
-        "source": "Hacker News AI",
-        "score": 59
-      },
-      {
-        "title": "Amazon will train on Twitch streamers' content by default, unless they opt out",
-        "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/",
-        "source": "Hacker News AI",
-        "score": 17
-      },
-      {
-        "title": "Show HN: At 16K features, flat autoencoders break. Curved space doesn't",
-        "url": "https://github.com/vishal-dehurdle/hypersae",
-        "source": "Hacker News AI",
-        "score": 6
+        "score": 29
       }
     ],
     "news": [
@@ -301,38 +289,38 @@
     ],
     "gaming": [
       {
+        "title": "‘A Court of Thorns and Roses’ Is Getting a New Strategy Board Game",
+        "url": "https://www.polygon.com/acotar-board-game-court-of-thorn-and-roses-release-date/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Free on Steam Right Now: Deponia, a Classic Adventure Comedy",
+        "url": "https://www.polygon.com/free-games-on-steam-right-now-aug-13-20-deponia/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Brilliant Anime That Don’t Waste a Single Episode",
+        "url": "https://www.polygon.com/anime-with-no-bad-episodes/",
+        "source": "Polygon"
+      },
+      {
+        "title": "All summer 'Horizon Mascot Party' challenges and rewards in Forza Horizon 6",
+        "url": "https://www.polygon.com/forza-horizon-6-fh6-all-horizon-mascot-party-series-4-playlist-challenges-rewards/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Matt Damon's Near-Perfect 109-Minute Dystopian Sci-Fi Epic Is Officially Streaming on Netflix",
+        "url": "https://www.polygon.com/matt-damon-elysium-netflix-august-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Genshin Impact's Latest Update Takes a Jab at Donald Trump Reflecting Pool Drama",
+        "url": "https://www.polygon.com/genshin-impact-new-update-bashes-donald-trump/",
+        "source": "Polygon"
+      },
+      {
         "title": "Two of the Greatest Assassin's Creed Games Are Coming to Amazon Prime",
         "url": "https://www.polygon.com/amazon-gaming-luna-august-2026-assassins-creed-9-free-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "6 Divisive 'Buffy the Vampire Slayer' Episodes That Fans Hated But Have Aged Like Fine Wine",
-        "url": "https://www.polygon.com/buffy-the-vampire-slayer-controversial-episodes/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Spider-Man: Brand New Day Star Reveals a Deleted Scene With the Movie’s Secret Villain",
-        "url": "https://www.polygon.com/spider-man-brand-new-day-the-bear-liza-coln-zayas-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Where to find the Tokyo Central Railway Station in Forza Horizon 6",
-        "url": "https://www.polygon.com/forza-horizon-6-fh6-tokyo-central-railway-station-location-where-to-find/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Target Begins Pokémon TCG 30th Anniversary Pre-orders, but There's a Catch",
-        "url": "https://www.polygon.com/target-pokemon-tcg-30th-anniversary-preorders/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Sprite Spree Week schedule for Fortnite Chapter 7 Season 3",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-3-sprite-spree-week-schedule-hours-days-mythic-galaxy-holo-cube-gem/",
-        "source": "Polygon"
-      },
-      {
-        "title": "What time does the Fortnite Unstable live event start?",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-3-unstable-event-time-when/",
         "source": "Polygon"
       }
     ],
