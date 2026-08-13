@@ -1,191 +1,191 @@
 {
   "metadata": {
-    "last_updated": "2026-08-13T17:58:04.354172",
+    "last_updated": "2026-08-13T19:13:46.260921",
     "total_items": 65
   },
   "content": {
     "tech": [
       {
         "title": "Gemini 3.7 Flash",
-        "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News",
-        "score": 128
+        "score": 289
       },
       {
-        "title": "Spaghettifying DRAM",
-        "url": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
+        "title": "Accelerating GPT-5.6 Sol Ultrafast",
+        "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
         "source": "Hacker News",
-        "score": 281
-      },
-      {
-        "title": "Mistral OCR 4.1",
-        "url": "https://docs.mistral.ai/models/ocr-4-1",
-        "source": "Hacker News",
-        "score": 38
-      },
-      {
-        "title": "Come for ENIAC, Stay for UNIVAC and Skeduflo",
-        "url": "https://uniqueatpenn.wordpress.com/2026/08/05/come-for-eniac-stay-for-univac-and-skeduflo/",
-        "source": "Hacker News",
-        "score": 44
-      },
-      {
-        "title": "DeepSeek Harness developer preview",
-        "url": "https://deepseek.com/harness/en/",
-        "source": "Hacker News",
-        "score": 418
-      },
-      {
-        "title": "Tocharian Online",
-        "url": "https://lrc.la.utexas.edu/eieol/tokol/0",
-        "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "How art invented humanity",
-        "url": "https://aeon.co/essays/humans-did-not-invent-art-it-was-the-other-way-around",
-        "source": "Hacker News",
-        "score": 36
-      },
-      {
-        "title": "Gloomberb",
-        "url": "https://gloom.sh/",
-        "source": "Hacker News",
-        "score": 278
-      },
-      {
-        "title": "Kubernetes on Oxide: How customer needs shaped our integrations",
-        "url": "https://oxide.computer/blog/kubernetes-on-oxide",
-        "source": "Hacker News",
-        "score": 91
-      },
-      {
-        "title": "Donkey.bas is 45 Years Old – 131 line of Glory",
-        "url": "https://donkeybas.com/",
-        "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "Ordinary Abundance",
-        "url": "https://ordinaryabundance.com/",
-        "source": "Hacker News",
-        "score": 77
-      },
-      {
-        "title": "We Have AI at Home Chapter 1: A Box of Scraps",
-        "url": "https://jdagostino.github.io/ai-pt1-box-o-scraps/index.html",
-        "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "Codex in ChatGPT desktop app for Linux is now in preview",
-        "url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027",
-        "source": "Hacker News",
-        "score": 394
-      },
-      {
-        "title": "I built a 500k-domain search engine for makers in a weekend for $10",
-        "url": "https://alexmorleyfinch.github.io/marlin/history/v1/article/the_birth.html",
-        "source": "Hacker News",
-        "score": 86
+        "score": 105
       },
       {
         "title": "Choose Boring Technology (2015)",
         "url": "https://mcfunley.com/choose-boring-technology",
         "source": "Hacker News",
-        "score": 5
+        "score": 83
+      },
+      {
+        "title": "Donkey.bas is 45 Years Old – 131 line of Glory",
+        "url": "https://donkeybas.com/",
+        "source": "Hacker News",
+        "score": 60
+      },
+      {
+        "title": "Mistral OCR 4.1",
+        "url": "https://docs.mistral.ai/models/ocr-4-1",
+        "source": "Hacker News",
+        "score": 114
+      },
+      {
+        "title": "Spaghettifying DRAM",
+        "url": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
+        "source": "Hacker News",
+        "score": 328
+      },
+      {
+        "title": "Where did the old web go? We followed 657,607 links to find out",
+        "url": "https://0.mk/blog/link-rot",
+        "source": "Hacker News",
+        "score": 36
+      },
+      {
+        "title": "Tocharian Online",
+        "url": "https://lrc.la.utexas.edu/eieol/tokol/0",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
+        "title": "AI At Home Part 1: A Box Of Scraps",
+        "url": "https://jdagostino.github.io/ai-pt1-box-o-scraps/index.html",
+        "source": "Hacker News",
+        "score": 35
+      },
+      {
+        "title": "Come for ENIAC, Stay for UNIVAC and Skeduflo",
+        "url": "https://uniqueatpenn.wordpress.com/2026/08/05/come-for-eniac-stay-for-univac-and-skeduflo/",
+        "source": "Hacker News",
+        "score": 46
+      },
+      {
+        "title": "DeepSeek Harness developer preview",
+        "url": "https://deepseek.com/harness/en/",
+        "source": "Hacker News",
+        "score": 458
+      },
+      {
+        "title": "Kubernetes on Oxide: How customer needs shaped our integrations",
+        "url": "https://oxide.computer/blog/kubernetes-on-oxide",
+        "source": "Hacker News",
+        "score": 101
+      },
+      {
+        "title": "Ordinary abundance",
+        "url": "https://ordinaryabundance.com/",
+        "source": "Hacker News",
+        "score": 120
+      },
+      {
+        "title": "Gloomberb",
+        "url": "https://gloom.sh/",
+        "source": "Hacker News",
+        "score": 305
+      },
+      {
+        "title": "How art invented humanity",
+        "url": "https://aeon.co/essays/humans-did-not-invent-art-it-was-the-other-way-around",
+        "source": "Hacker News",
+        "score": 52
       }
     ],
     "ai": [
       {
         "title": "Gemini 3.7 Flash",
-        "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News AI",
-        "score": 128
+        "score": 289
+      },
+      {
+        "title": "Accelerating GPT-5.6 Sol Ultrafast",
+        "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
+        "source": "Hacker News AI",
+        "score": 105
       },
       {
         "title": "Mistral OCR 4.1",
         "url": "https://docs.mistral.ai/models/ocr-4-1",
         "source": "Hacker News AI",
-        "score": 38
+        "score": 114
       },
       {
-        "title": "We Have AI at Home Chapter 1: A Box of Scraps",
+        "title": "AI At Home Part 1: A Box Of Scraps",
         "url": "https://jdagostino.github.io/ai-pt1-box-o-scraps/index.html",
         "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Codex in ChatGPT desktop app for Linux is now in preview",
-        "url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027",
-        "source": "Hacker News AI",
-        "score": 394
-      },
-      {
-        "title": "I built a 500k-domain search engine for makers in a weekend for $10",
-        "url": "https://alexmorleyfinch.github.io/marlin/history/v1/article/the_birth.html",
-        "source": "Hacker News AI",
-        "score": 86
-      },
-      {
-        "title": "Graduate student proves a quantum uncertainty principle for fractals",
-        "url": "https://www.quantamagazine.org/graduate-student-proves-the-fractal-uncertainty-principle-20260812/",
-        "source": "Hacker News AI",
-        "score": 37
+        "score": 35
       },
       {
         "title": "Choosing an AI model: one prompt, 11 models, different results",
         "url": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results/",
         "source": "Hacker News AI",
-        "score": 115
+        "score": 132
       },
       {
-        "title": "We eliminated 1,400 CVEs in NanoClaw's container images",
-        "url": "https://www.echo.ai/blog/echo-xnanoclaw-under-the-hood",
+        "title": "Codex in ChatGPT desktop app for Linux is now in preview",
+        "url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027",
         "source": "Hacker News AI",
-        "score": 52
+        "score": 408
+      },
+      {
+        "title": "I built a 500k-domain search engine for makers in a weekend for $10",
+        "url": "https://alexmorleyfinch.github.io/marlin/history/v1/article/the_birth.html",
+        "source": "Hacker News AI",
+        "score": 95
+      },
+      {
+        "title": "Graduate student proves a quantum uncertainty principle for fractals",
+        "url": "https://www.quantamagazine.org/graduate-student-proves-the-fractal-uncertainty-principle-20260812/",
+        "source": "Hacker News AI",
+        "score": 48
       },
       {
         "title": "The mathematical physics of rainbows and glories (2001) [pdf]",
         "url": "https://tlakoba.w3.uvm.edu/AppliedUGMath/auxpaper_rainbow_glory_review.pdf",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 27
       },
       {
-        "title": "Gemini 3.7 Flash",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+        "title": "Surfil On-device control plane for AI coding agents",
+        "url": "https://surfil.com/",
         "source": "Hacker News AI",
-        "score": 44
+        "score": 4
       },
       {
         "title": "Translating the Renaissance: 17,000+ historical source texts",
         "url": "https://sourcelibrary.org",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 12
       },
       {
-        "title": "Show HN: At 16K features, flat autoencoders break. Curved space doesn't",
-        "url": "https://github.com/vishal-dehurdle/hypersae",
+        "title": "Flock (Again) Activates a Camera System a Town Had Voted to Shut Down",
+        "url": "https://www.techdirt.com/2026/08/13/flock-again-activates-a-camera-system-a-town-had-voted-to-shut-down/",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 15
       },
       {
-        "title": "OpenCV AI Competition 2026",
-        "url": "https://opencv.org/opencv-ai-competition-2026/",
+        "title": "We eliminated 1,400 CVEs in NanoClaw's container images",
+        "url": "https://www.echo.ai/blog/echo-xnanoclaw-under-the-hood",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 59
       },
       {
         "title": "Amazon will train on Twitch streamers' content by default, unless they opt out",
         "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 17
       },
       {
-        "title": "Heart aerospace completes first flight of largest electric aircraft",
-        "url": "https://www.heartaerospace.com/newsroom/heart-aerospace-completes-first-flight-of-world-s-largest-electric-aircraft",
+        "title": "Show HN: At 16K features, flat autoencoders break. Curved space doesn't",
+        "url": "https://github.com/vishal-dehurdle/hypersae",
         "source": "Hacker News AI",
-        "score": 103
+        "score": 6
       }
     ],
     "news": [
@@ -195,13 +195,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Putin can no longer claim victory in Ukraine, Nobel Peace Prize winner tells BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c74grmy2v7ko?at_medium=RSS&at_campaign=rss",
+        "title": "Romania shuts only nuclear plant as heat causes huge drop in Danube River level",
+        "url": "https://www.bbc.co.uk/news/articles/cqlxpq5q799o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ebola outbreak on track to be deadliest ever, WHO chief says",
-        "url": "https://www.bbc.co.uk/news/articles/cgk4pex4mn8o?at_medium=RSS&at_campaign=rss",
+        "title": "Putin can no longer claim victory in Ukraine, Nobel Peace Prize winner tells BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c74grmy2v7ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -301,43 +301,48 @@
     ],
     "gaming": [
       {
-        "title": "New 'Attack on Titan' Project Will Be Announced Next Week, WIT Studio Teases",
-        "url": "https://www.polygon.com/attack-on-titan-studio-teases-new-project/",
+        "title": "Two of the Greatest Assassin's Creed Games Are Coming to Amazon Prime",
+        "url": "https://www.polygon.com/amazon-gaming-luna-august-2026-assassins-creed-9-free-games/",
         "source": "Polygon"
       },
       {
-        "title": "Where to find the Hokuryu Sunflower Farm in Forza Horizon 6",
-        "url": "https://www.polygon.com/forza-horizon-6-fh6-hokuryu-sunflower-farm-location-where-to-find/",
+        "title": "6 Divisive 'Buffy the Vampire Slayer' Episodes That Fans Hated But Have Aged Like Fine Wine",
+        "url": "https://www.polygon.com/buffy-the-vampire-slayer-controversial-episodes/",
         "source": "Polygon"
       },
       {
-        "title": "How to get fire bricks in Grounded 2",
-        "url": "https://www.polygon.com/grounded-2-fire-bricks-recipe-how-to-get/",
+        "title": "Spider-Man: Brand New Day Star Reveals a Deleted Scene With the Movie’s Secret Villain",
+        "url": "https://www.polygon.com/spider-man-brand-new-day-the-bear-liza-coln-zayas-interview/",
         "source": "Polygon"
       },
       {
-        "title": "After Bombing in Theaters, Amazon's $200M Sci-Fi Epic Is a Prime Video Sensation 3 Weeks Running",
-        "url": "https://www.polygon.com/masters-of-the-universe-amazon-prime-video-streaming/",
+        "title": "Where to find the Tokyo Central Railway Station in Forza Horizon 6",
+        "url": "https://www.polygon.com/forza-horizon-6-fh6-tokyo-central-railway-station-location-where-to-find/",
         "source": "Polygon"
       },
       {
-        "title": "‘Persona 5’ Is Coming to ‘Fortnite'",
-        "url": "https://www.polygon.com/fortnite-override-chapter-7-season-4-persona-5-crossover-revealed/",
+        "title": "Target Begins Pokémon TCG 30th Anniversary Pre-orders, but There's a Catch",
+        "url": "https://www.polygon.com/target-pokemon-tcg-30th-anniversary-preorders/",
         "source": "Polygon"
       },
       {
-        "title": "Steam’s Greatest New Roguelite Is Tony Hawk’s Pro Skater Meets Beyblade",
-        "url": "https://www.polygon.com/slayblade-steam-tony-hawk-beyblade/",
+        "title": "Sprite Spree Week schedule for Fortnite Chapter 7 Season 3",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-3-sprite-spree-week-schedule-hours-days-mythic-galaxy-holo-cube-gem/",
         "source": "Polygon"
       },
       {
-        "title": "37 Years Later, the Best 'Calvin and Hobbes' Dad Quote Is Still in a League of Its Own",
-        "url": "https://www.polygon.com/best-quote-calvin-hobbes-dad/",
+        "title": "What time does the Fortnite Unstable live event start?",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-3-unstable-event-time-when/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "Your guide to GitHub Universe 2026 is here: The schedule just launched!",
+        "url": "https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "What 50 open source projects taught us about security in the AI era",
         "url": "https://github.blog/open-source/maintainers/what-50-open-source-projects-taught-us-about-security-in-the-ai-era/",
@@ -366,11 +371,6 @@
       {
         "title": "Using the GitHub Copilot SDK for Java",
         "url": "https://github.blog/engineering/using-the-github-copilot-sdk-for-java/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "A guide to slash commands in the GitHub Copilot app",
-        "url": "https://github.blog/ai-and-ml/github-copilot/a-guide-to-slash-commands-in-the-github-copilot-app/",
         "source": "GitHub Blog"
       }
     ]
