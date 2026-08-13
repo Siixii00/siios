@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-13T08:22:15.393461",
+    "last_updated": "2026-08-13T10:07:37.967824",
     "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "DeepSeek V4 Pro 0813",
-        "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
-        "source": "Hacker News",
-        "score": 897
-      },
-      {
-        "title": "Mushroom behind 'tiny people' hallucinations identified",
-        "url": "https://phys.org/news/2026-08-qa-mushroom-tiny-people-hallucinations.html",
-        "source": "Hacker News",
-        "score": 110
-      },
-      {
-        "title": "We tracked down the 16-year-old WAL-reset SQLite bug",
-        "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
-        "source": "Hacker News",
-        "score": 1007
-      },
-      {
         "title": "ChatGPT Desktop (Codex Desktop) for Linux",
         "url": "https://openai.com/codex/",
         "source": "Hacker News",
-        "score": 46
+        "score": 140
       },
       {
-        "title": "Delta",
-        "url": "https://zed.dev/blog/introducing-delta",
+        "title": "DeepSeek V4 Pro 0813",
+        "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
         "source": "Hacker News",
-        "score": 530
+        "score": 931
+      },
+      {
+        "title": "Tracking down the 16-year-old WAL-reset SQLite bug",
+        "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
+        "source": "Hacker News",
+        "score": 1046
       },
       {
         "title": "Qwen3.8-2.4T",
         "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
         "source": "Hacker News",
-        "score": 601
+        "score": 628
+      },
+      {
+        "title": "Delta",
+        "url": "https://zed.dev/blog/introducing-delta",
+        "source": "Hacker News",
+        "score": 554
       },
       {
         "title": "Principia Mathematica is modern and insightful",
         "url": "https://okmij.org/ftp/Computation/Impressions/PrincipiaMathematica.html",
         "source": "Hacker News",
-        "score": 140
+        "score": 157
+      },
+      {
+        "title": "The punched card tabulator",
+        "url": "https://www.ibm.com/history/punched-card-tabulator",
+        "source": "Hacker News",
+        "score": 14
       },
       {
         "title": "Antiqua–Fraktur dispute",
         "url": "https://en.wikipedia.org/wiki/Antiqua%E2%80%93Fraktur_dispute",
         "source": "Hacker News",
-        "score": 75
-      },
-      {
-        "title": "2026 Eclipse Webcams",
-        "url": "https://jonty.github.io/2026_eclipse_webcams/",
-        "source": "Hacker News",
-        "score": 478
-      },
-      {
-        "title": "Why Target Common Lisp for Code Generation?",
-        "url": "http://funcall.blogspot.com/2026/08/why-vibe-code-in-lisp.html",
-        "source": "Hacker News",
-        "score": 94
-      },
-      {
-        "title": "Flutter 3.47",
-        "url": "https://flutter.dev/blog/whats-new-in-flutter-3-47",
-        "source": "Hacker News",
-        "score": 88
-      },
-      {
-        "title": "Happy 45th Birthday to the IBM PC and Model F/XT",
-        "url": "https://sharktastica.co.uk/articles/pc-fxt-45",
-        "source": "Hacker News",
-        "score": 81
+        "score": 93
       },
       {
         "title": "uBlock Origin Is Giving Up the Fight to Keep Ads Off Facebook",
         "url": "https://digitalescapetools.com/2026/08/ublock-origin-stops-chasing-facebook-ads.html",
         "source": "Hacker News",
-        "score": 455
+        "score": 515
+      },
+      {
+        "title": "2026 Eclipse Webcams",
+        "url": "https://jonty.github.io/2026_eclipse_webcams/",
+        "source": "Hacker News",
+        "score": 486
+      },
+      {
+        "title": "Flutter 3.47",
+        "url": "https://flutter.dev/blog/whats-new-in-flutter-3-47",
+        "source": "Hacker News",
+        "score": 109
+      },
+      {
+        "title": "Happy 45th Birthday to the IBM PC and Model F/XT",
+        "url": "https://sharktastica.co.uk/articles/pc-fxt-45",
+        "source": "Hacker News",
+        "score": 92
+      },
+      {
+        "title": "The lattice of sets of natural numbers is rich",
+        "url": "https://jdh.hamkins.org/the-lattice-of-sets-of-natural-numbers-is-rich/",
+        "source": "Hacker News",
+        "score": 5
+      },
+      {
+        "title": "Why Target Common Lisp for Code Generation?",
+        "url": "http://funcall.blogspot.com/2026/08/why-vibe-code-in-lisp.html",
+        "source": "Hacker News",
+        "score": 103
       },
       {
         "title": "Tim King, AmigaDOS developer, has died",
         "url": "https://amiga-news.de/en/news/AN-2026-08-00070-EN.html",
         "source": "Hacker News",
-        "score": 265
-      },
-      {
-        "title": "HTML over WebSockets: real-time SPAs with barely any JavaScript",
-        "url": "https://en.andros.dev/blog/ef4968f5/html-over-websockets-real-time-spas-with-barely-any-javascript/",
-        "source": "Hacker News",
-        "score": 191
+        "score": 273
       }
     ],
     "ai": [
@@ -101,31 +101,31 @@
         "title": "ChatGPT Desktop (Codex Desktop) for Linux",
         "url": "https://openai.com/codex/",
         "source": "Hacker News AI",
-        "score": 46
+        "score": 140
       },
       {
         "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
         "url": "https://discoveredmaterials.com/research/",
         "source": "Hacker News AI",
-        "score": 135
+        "score": 137
       },
       {
         "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
         "url": "https://knownagents.com/insights",
         "source": "Hacker News AI",
-        "score": 270
+        "score": 278
       },
       {
         "title": "Lovable raises $400M Series C",
         "url": "https://lovable.dev/blog/series-c",
         "source": "Hacker News AI",
-        "score": 135
+        "score": 144
       },
       {
         "title": "AI is removing the middle class of software engineering?",
         "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
         "source": "Hacker News AI",
-        "score": 859
+        "score": 882
       },
       {
         "title": "Show HN: Ballet – Workflow automation that writes integrations against any API",
@@ -143,13 +143,18 @@
         "title": "Delphi 13 Community Edition Is Now Available",
         "url": "https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/",
         "source": "Hacker News AI",
-        "score": 172
+        "score": 173
       }
     ],
     "news": [
       {
         "title": "Putin can no longer claim victory in Ukraine, Nobel Peace Prize winner tells BBC",
         "url": "https://www.bbc.co.uk/news/articles/c74grmy2v7ko?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "UK defends seizing shadow fleet tanker after Putin threat",
+        "url": "https://www.bbc.co.uk/news/articles/cn0npn249qvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -163,11 +168,6 @@
         "source": "BBC World"
       },
       {
-        "title": "Why are 'human fridges' being sold in Japan?",
-        "url": "https://www.bbc.co.uk/news/videos/cjej4y3gvzlo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Indian actor's video with endangered gibbon sparks investigation",
         "url": "https://www.bbc.co.uk/news/articles/c9q9351yp1xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -178,19 +178,29 @@
         "source": "BBC World"
       },
       {
-        "title": "Travis Kelce shares first details from his wedding to Taylor Swift - 'Best night of my life'",
+        "title": "Travis Kelce shares first details from his wedding to Taylor Swift: 'Best night of my life'",
         "url": "https://www.bbc.co.uk/news/articles/cx2r179e232o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
+        "title": " This 3D artist depicts characters like Super Mario and Sonic as you've never seen them before using Unreal Engine and 3ds Max ",
+        "url": "https://www.creativebloq.com/3d/3d-art/see-how-this-3d-artist-depicts-game-characters-like-super-mario-and-sonic-as-youve-never-seen-them-before-using-unreal-engine-and-3ds-max",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The viral cursed milk cat has been turned into a hilarious animation using Blender ",
+        "url": "https://www.creativebloq.com/art/animation/the-viral-cursed-milk-cat-photos-been-turned-into-a-hilarious-animation-in-blender",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Jaguar doubles down on its controversial rebrand with a (literally) divisive interior design ",
         "url": "https://www.creativebloq.com/design/product-design/jaguar-interiors-feel-built-to-troll-the-haters-of-its-rebrand",
         "source": "Creative Bloq"
       },
       {
-        "title": " A cinema's viral hand-drawn Spider-Man poster shows people are craving more art and originality in movie marketing ",
+        "title": " Viral hand-drawn Spider-Man poster shows people are craving more originality in movie art ",
         "url": "https://www.creativebloq.com/design/poster-design/viral-hand-drawn-spider-man-ad-shows-how-people-crave-more-art-and-originality-in-advertising",
         "source": "Creative Bloq"
       },
@@ -207,16 +217,6 @@
       {
         "title": " This artist creates stylised but detailed 3D art inspired by nature ",
         "url": "https://www.creativebloq.com/3d/3d-art/this-artist-creates-stylised-but-detailed-3d-art-inspired-by-nature",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The 3D software created for Lord of the Rings is being discontinued – for a strange reason ",
-        "url": "https://www.creativebloq.com/3d/3d-software/the-3d-software-that-was-created-for-lord-of-the-rings-is-being-discontinued-for-a-strange-reason",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Has the world been too harsh on Disney's Hexed? ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/has-the-world-been-too-harsh-on-disneys-hexed",
         "source": "Creative Bloq"
       }
     ],
@@ -259,38 +259,38 @@
     ],
     "gaming": [
       {
-        "title": "Cities Skylines meets Balatro in the excellent new roguelike city builder Combolands",
-        "url": "https://www.polygon.com/combolands-demo-preview-impressions/",
+        "title": "Google Finally Agrees to Refund LOTR Fan After Trilogy Disappeared from Digital Library, but There's a Catch",
+        "url": "https://www.polygon.com/lotr-lord-of-the-rings-digital-refund-google-denied/",
         "source": "Polygon"
       },
       {
-        "title": "Xbox Gamers Can Play Co-Op RPG Sunderfolk for a Limited Time",
-        "url": "https://www.polygon.com/xbox-free-games-sunderfolk-tabletop-rgp-couch-coop/",
+        "title": "Final Fantasy's Biggest Competition Officially Returns In 2026",
+        "url": "https://www.polygon.com/tales-eternia-remastered-release-date-platforms/",
         "source": "Polygon"
       },
       {
-        "title": "After 2 Years, My Hero Academia's Creator Finally Returns With a Near-Perfect Follow-Up",
-        "url": "https://www.polygon.com/horikoshi-horror-manga-quit-laughing-shijima-review/",
+        "title": "Elden Ring does this better than anyone else",
+        "url": "https://www.polygon.com/video/elden-ring-does-this-better-than-anyone-else/",
         "source": "Polygon"
       },
       {
-        "title": "Hogwarts Legacy 2 Officially Announced by Warner Bros.",
-        "url": "https://www.polygon.com/hogwarts-legacy-2-announcement-harry-potter-warner-bros-games/",
+        "title": "Why horses are so hard for video games to get right",
+        "url": "https://www.polygon.com/video/why-horses-are-so-hard-for-video-games-to-get-right/",
         "source": "Polygon"
       },
       {
-        "title": "Where to find the pond jockey location in Grounded 2",
-        "url": "https://www.polygon.com/grounded-2-pond-jockey-location-where-to-find/",
+        "title": "I hate dogs (in Elden Ring)",
+        "url": "https://www.polygon.com/video/i-hate-dogs-in-elden-ring/",
         "source": "Polygon"
       },
       {
-        "title": "A Knight of the Seven Kingdoms showrunner is working with George RR Martin to develop future seasons ",
-        "url": "https://www.polygon.com/video/a-knight-of-the-seven-kingdoms-showrunner-future-plans/",
+        "title": "The mythic origins of Elden Ring’s spooky scary skeletons",
+        "url": "https://www.polygon.com/video/the-mythic-origins-of-elden-ring-s-spooky-scary-skeletons/",
         "source": "Polygon"
       },
       {
-        "title": "D23's Kingdom Hearts Panel Will Only Be Streamed Live",
-        "url": "https://www.polygon.com/d23-kingdom-hearts-25th-anniversary-deep-dive-panel-kh4/",
+        "title": "FromSoftware fans should get excited for Armored Core",
+        "url": "https://www.polygon.com/video/fromsoftware-fans-should-get-excited-for-armored-core/",
         "source": "Polygon"
       }
     ],
