@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-13T06:17:15.358523",
-    "total_items": 59
+    "last_updated": "2026-08-13T08:22:15.393461",
+    "total_items": 58
   },
   "content": {
     "tech": [
@@ -9,147 +9,141 @@
         "title": "DeepSeek V4 Pro 0813",
         "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
         "source": "Hacker News",
-        "score": 851
-      },
-      {
-        "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
-        "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
-        "source": "Hacker News",
-        "score": 941
-      },
-      {
-        "title": "Delta",
-        "url": "https://zed.dev/blog/introducing-delta",
-        "source": "Hacker News",
-        "score": 488
-      },
-      {
-        "title": "Qwen3.8-2.4T",
-        "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
-        "source": "Hacker News",
-        "score": 570
-      },
-      {
-        "title": "Principia Mathematica is modern and insightful",
-        "url": "https://okmij.org/ftp/Computation/Impressions/PrincipiaMathematica.html",
-        "source": "Hacker News",
-        "score": 110
+        "score": 897
       },
       {
         "title": "Mushroom behind 'tiny people' hallucinations identified",
         "url": "https://phys.org/news/2026-08-qa-mushroom-tiny-people-hallucinations.html",
         "source": "Hacker News",
-        "score": 27
+        "score": 110
+      },
+      {
+        "title": "We tracked down the 16-year-old WAL-reset SQLite bug",
+        "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
+        "source": "Hacker News",
+        "score": 1007
+      },
+      {
+        "title": "ChatGPT Desktop (Codex Desktop) for Linux",
+        "url": "https://openai.com/codex/",
+        "source": "Hacker News",
+        "score": 46
+      },
+      {
+        "title": "Delta",
+        "url": "https://zed.dev/blog/introducing-delta",
+        "source": "Hacker News",
+        "score": 530
+      },
+      {
+        "title": "Qwen3.8-2.4T",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+        "source": "Hacker News",
+        "score": 601
+      },
+      {
+        "title": "Principia Mathematica is modern and insightful",
+        "url": "https://okmij.org/ftp/Computation/Impressions/PrincipiaMathematica.html",
+        "source": "Hacker News",
+        "score": 140
       },
       {
         "title": "Antiqua–Fraktur dispute",
         "url": "https://en.wikipedia.org/wiki/Antiqua%E2%80%93Fraktur_dispute",
         "source": "Hacker News",
-        "score": 51
+        "score": 75
       },
       {
         "title": "2026 Eclipse Webcams",
         "url": "https://jonty.github.io/2026_eclipse_webcams/",
         "source": "Hacker News",
-        "score": 471
-      },
-      {
-        "title": "Happy 45th Birthday to the IBM PC and Model F/XT",
-        "url": "https://sharktastica.co.uk/articles/pc-fxt-45",
-        "source": "Hacker News",
-        "score": 63
+        "score": 478
       },
       {
         "title": "Why Target Common Lisp for Code Generation?",
         "url": "http://funcall.blogspot.com/2026/08/why-vibe-code-in-lisp.html",
         "source": "Hacker News",
-        "score": 78
+        "score": 94
       },
       {
-        "title": "Tim King, AmigaDOS developer, has died",
-        "url": "https://amiga-news.de/en/news/AN-2026-08-00070-EN.html",
+        "title": "Flutter 3.47",
+        "url": "https://flutter.dev/blog/whats-new-in-flutter-3-47",
         "source": "Hacker News",
-        "score": 254
+        "score": 88
       },
       {
-        "title": "Build Wide, Ship Narrow",
-        "url": "https://adapt.com/blog/build-wide-ship-narrow",
+        "title": "Happy 45th Birthday to the IBM PC and Model F/XT",
+        "url": "https://sharktastica.co.uk/articles/pc-fxt-45",
         "source": "Hacker News",
-        "score": 73
+        "score": 81
       },
       {
         "title": "uBlock Origin Is Giving Up the Fight to Keep Ads Off Facebook",
         "url": "https://digitalescapetools.com/2026/08/ublock-origin-stops-chasing-facebook-ads.html",
         "source": "Hacker News",
-        "score": 394
+        "score": 455
       },
       {
-        "title": "Grok 4.6",
-        "url": "https://x.ai/news/grok-4-6",
+        "title": "Tim King, AmigaDOS developer, has died",
+        "url": "https://amiga-news.de/en/news/AN-2026-08-00070-EN.html",
         "source": "Hacker News",
-        "score": 493
+        "score": 265
       },
       {
         "title": "HTML over WebSockets: real-time SPAs with barely any JavaScript",
         "url": "https://en.andros.dev/blog/ef4968f5/html-over-websockets-real-time-spas-with-barely-any-javascript/",
         "source": "Hacker News",
-        "score": 176
+        "score": 191
       }
     ],
     "ai": [
       {
-        "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
-        "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
+        "title": "ChatGPT Desktop (Codex Desktop) for Linux",
+        "url": "https://openai.com/codex/",
         "source": "Hacker News AI",
-        "score": 941
+        "score": 46
       },
       {
         "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
         "url": "https://discoveredmaterials.com/research/",
         "source": "Hacker News AI",
-        "score": 131
+        "score": 135
       },
       {
         "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
         "url": "https://knownagents.com/insights",
         "source": "Hacker News AI",
-        "score": 261
-      },
-      {
-        "title": "Show HN: Ballet – Workflow automation that writes integrations against any API",
-        "url": "https://www.ballet.dev/",
-        "source": "Hacker News AI",
-        "score": 28
+        "score": 270
       },
       {
         "title": "Lovable raises $400M Series C",
         "url": "https://lovable.dev/blog/series-c",
         "source": "Hacker News AI",
-        "score": 123
+        "score": 135
       },
       {
         "title": "AI is removing the middle class of software engineering?",
         "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
         "source": "Hacker News AI",
-        "score": 825
+        "score": 859
+      },
+      {
+        "title": "Show HN: Ballet – Workflow automation that writes integrations against any API",
+        "url": "https://www.ballet.dev/",
+        "source": "Hacker News AI",
+        "score": 29
       },
       {
         "title": "High-Res Photo Shows Sand-Capped Butte Rising from Mars Plain of Polygons",
         "url": "https://petapixel.com/2026/08/04/amazing-high-res-photo-shows-a-butte-rising-from-mars/",
         "source": "Hacker News AI",
-        "score": 159
+        "score": 160
       },
       {
         "title": "Delphi 13 Community Edition Is Now Available",
         "url": "https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/",
         "source": "Hacker News AI",
-        "score": 171
-      },
-      {
-        "title": "Waits: Arthur Samuel's Checkers",
-        "url": "https://timereshared.com/waits-samuel-checkers/",
-        "source": "Hacker News AI",
-        "score": 7
+        "score": 172
       }
     ],
     "news": [
@@ -159,8 +153,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Israeli settlers besieging Palestinian families in West Bank village",
-        "url": "https://www.bbc.co.uk/news/articles/cn0npjkqrleo?at_medium=RSS&at_campaign=rss",
+        "title": "More troops to be sent to West Bank village besieged by Israeli settlers",
+        "url": "https://www.bbc.co.uk/news/articles/cj4kppdk2qwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -169,13 +163,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Three men will be executed on the same day as death penalties rise in US",
-        "url": "https://www.bbc.co.uk/news/articles/cn5n399n6zvo?at_medium=RSS&at_campaign=rss",
+        "title": "Why are 'human fridges' being sold in Japan?",
+        "url": "https://www.bbc.co.uk/news/videos/cjej4y3gvzlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Why are 'human fridges' being sold in Japan?",
-        "url": "https://www.bbc.co.uk/news/videos/cjej4y3gvzlo?at_medium=RSS&at_campaign=rss",
+        "title": "Indian actor's video with endangered gibbon sparks investigation",
+        "url": "https://www.bbc.co.uk/news/articles/c9q9351yp1xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -190,6 +184,16 @@
       }
     ],
     "art": [
+      {
+        "title": " Jaguar doubles down on its controversial rebrand with a (literally) divisive interior design ",
+        "url": "https://www.creativebloq.com/design/product-design/jaguar-interiors-feel-built-to-troll-the-haters-of-its-rebrand",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " A cinema's viral hand-drawn Spider-Man poster shows people are craving more art and originality in movie marketing ",
+        "url": "https://www.creativebloq.com/design/poster-design/viral-hand-drawn-spider-man-ad-shows-how-people-crave-more-art-and-originality-in-advertising",
+        "source": "Creative Bloq"
+      },
       {
         "title": " YouTube's new policy is bad news for animators ",
         "url": "https://www.creativebloq.com/art/animation/youtubes-new-policy-is-bad-news-for-animators",
@@ -213,16 +217,6 @@
       {
         "title": " Has the world been too harsh on Disney's Hexed? ",
         "url": "https://www.creativebloq.com/3d/video-game-design/has-the-world-been-too-harsh-on-disneys-hexed",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " AI will have the biggest impact on the future of gaming, developers say ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/ai-will-have-the-biggest-impact-on-the-future-of-gaming-developers-say",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Sir Brian May gives Queen fans a fright with bizarre AI tribute band ",
-        "url": "https://www.creativebloq.com/ai/ai-art/brian-may-wants-ai-to-bite-the-dust-after-it-generated-a-fifth-member-of-queen",
         "source": "Creative Bloq"
       }
     ],
