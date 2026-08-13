@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-13T11:48:16.752439",
-    "total_items": 58
+    "last_updated": "2026-08-13T13:13:12.929619",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
+        "title": "Deutsche Bank becomes first foreign yuan clearing bank in Europe",
+        "url": "https://tradersunion.com/news/central-banks/show/2973571-deutsche-bank-becomes/",
+        "source": "Hacker News",
+        "score": 121
+      },
+      {
         "title": "ChatGPT Desktop (Codex Desktop) for Linux",
         "url": "https://openai.com/codex/",
         "source": "Hacker News",
-        "score": 208
+        "score": 265
       },
       {
-        "title": "The lattice of sets of natural numbers is rich",
+        "title": "The lattice of sets of natural numbers is rich (2021)",
         "url": "https://jdh.hamkins.org/the-lattice-of-sets-of-natural-numbers-is-rich/",
         "source": "Hacker News",
-        "score": 38
+        "score": 59
       },
       {
-        "title": "DeepSeek V4 Pro 0813",
-        "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
+        "title": "Better Gaussian Splatting in Julia",
+        "url": "https://pxl-th.github.io/blog/better-gs-julia/",
         "source": "Hacker News",
-        "score": 958
-      },
-      {
-        "title": "Tracking down the 16-year-old WAL-reset SQLite bug",
-        "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
-        "source": "Hacker News",
-        "score": 1079
-      },
-      {
-        "title": "Qwen3.8-2.4T",
-        "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
-        "source": "Hacker News",
-        "score": 646
-      },
-      {
-        "title": "Delta",
-        "url": "https://zed.dev/blog/introducing-delta",
-        "source": "Hacker News",
-        "score": 577
+        "score": 13
       },
       {
         "title": "Picking berries is my meditation",
         "url": "https://www.tsoon.com/posts/picking-berries-meditation/",
         "source": "Hacker News",
-        "score": 13
+        "score": 37
+      },
+      {
+        "title": "DeepSeek V4 Pro 0813",
+        "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
+        "source": "Hacker News",
+        "score": 977
+      },
+      {
+        "title": "Tracking down the 16-year-old WAL-reset SQLite bug",
+        "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
+        "source": "Hacker News",
+        "score": 1110
+      },
+      {
+        "title": "ATG (YC F25) Is Hiring Member of Technical Staff (Data Platform)",
+        "url": "https://atg.science/careers",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "Qwen3.8-2.4T",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+        "source": "Hacker News",
+        "score": 669
+      },
+      {
+        "title": "Delta",
+        "url": "https://zed.dev/blog/introducing-delta",
+        "source": "Hacker News",
+        "score": 601
       },
       {
         "title": "Principia Mathematica is modern and insightful",
         "url": "https://okmij.org/ftp/Computation/Impressions/PrincipiaMathematica.html",
         "source": "Hacker News",
-        "score": 181
+        "score": 213
       },
       {
         "title": "Antiqua–Fraktur dispute",
         "url": "https://en.wikipedia.org/wiki/Antiqua%E2%80%93Fraktur_dispute",
         "source": "Hacker News",
-        "score": 109
+        "score": 123
       },
       {
         "title": "uBlock Origin Is Giving Up the Fight to Keep Ads Off Facebook",
         "url": "https://digitalescapetools.com/2026/08/ublock-origin-stops-chasing-facebook-ads.html",
         "source": "Hacker News",
-        "score": 558
+        "score": 606
       },
       {
-        "title": "2026 Eclipse Webcams",
-        "url": "https://jonty.github.io/2026_eclipse_webcams/",
+        "title": "Come for Eniac, Stay for Univac and Skeduflo",
+        "url": "https://uniqueatpenn.wordpress.com/2026/08/05/come-for-eniac-stay-for-univac-and-skeduflo/",
         "source": "Hacker News",
-        "score": 497
+        "score": 11
       },
       {
-        "title": "Flutter 3.47",
-        "url": "https://flutter.dev/blog/whats-new-in-flutter-3-47",
+        "title": "Mushroom behind 'tiny people' hallucinations identified",
+        "url": "https://phys.org/news/2026-08-qa-mushroom-tiny-people-hallucinations.html",
         "source": "Hacker News",
-        "score": 127
-      },
-      {
-        "title": "The punched card tabulator",
-        "url": "https://www.ibm.com/history/punched-card-tabulator",
-        "source": "Hacker News",
-        "score": 18
-      },
-      {
-        "title": "Why Target Common Lisp for Code Generation?",
-        "url": "http://funcall.blogspot.com/2026/08/why-vibe-code-in-lisp.html",
-        "source": "Hacker News",
-        "score": 114
-      },
-      {
-        "title": "Tim King, AmigaDOS developer, has died",
-        "url": "https://amiga-news.de/en/news/AN-2026-08-00070-EN.html",
-        "source": "Hacker News",
-        "score": 280
+        "score": 211
       }
     ],
     "ai": [
@@ -101,49 +101,43 @@
         "title": "ChatGPT Desktop (Codex Desktop) for Linux",
         "url": "https://openai.com/codex/",
         "source": "Hacker News AI",
-        "score": 208
+        "score": 265
       },
       {
         "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
         "url": "https://discoveredmaterials.com/research/",
         "source": "Hacker News AI",
-        "score": 143
+        "score": 149
       },
       {
         "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
         "url": "https://knownagents.com/insights",
         "source": "Hacker News AI",
-        "score": 282
+        "score": 287
       },
       {
         "title": "Lovable raises $400M Series C",
         "url": "https://lovable.dev/blog/series-c",
         "source": "Hacker News AI",
-        "score": 150
+        "score": 151
       },
       {
         "title": "AI is removing the middle class of software engineering?",
         "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
         "source": "Hacker News AI",
-        "score": 905
+        "score": 918
       },
       {
         "title": "High-Res Photo Shows Sand-Capped Butte Rising from Mars Plain of Polygons",
         "url": "https://petapixel.com/2026/08/04/amazing-high-res-photo-shows-a-butte-rising-from-mars/",
         "source": "Hacker News AI",
-        "score": 160
+        "score": 164
       },
       {
         "title": "Show HN: Ballet – Workflow automation that writes integrations against any API",
         "url": "https://www.ballet.dev/",
         "source": "Hacker News AI",
-        "score": 29
-      },
-      {
-        "title": "Delphi 13 Community Edition Is Now Available",
-        "url": "https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/",
-        "source": "Hacker News AI",
-        "score": 174
+        "score": 31
       }
     ],
     "news": [
@@ -185,6 +179,16 @@
     ],
     "art": [
       {
+        "title": " Duskfade (Switch 2) review: the Unreal Engine 5 platformer feels like a lost PS2 classic – for better and worse ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/duskfade-switch-2-review-the-unreal-engine-5-platformer-feels-like-a-lost-ps2-classic-for-better-and-worse",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Raleigh's collapse proves that even iconic brands can't rely on nostalgia alone ",
+        "url": "https://www.creativebloq.com/design/branding/raleighs-collapse-proves-that-even-iconic-brands-cant-rely-on-nostalgia-alone",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Apple's iPhone 18 line up is looking like a radical departure in more ways than one ",
         "url": "https://www.creativebloq.com/design/product-design/apples-iphone-18-line-up-is-looking-like-a-radical-departure-in-more-ways-than-one",
         "source": "Creative Bloq"
@@ -207,16 +211,6 @@
       {
         "title": " Jaguar doubles down on its controversial rebrand with a (literally) divisive interior design ",
         "url": "https://www.creativebloq.com/design/product-design/jaguar-interiors-feel-built-to-troll-the-haters-of-its-rebrand",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Viral hand-drawn Spider-Man poster shows people are craving more originality in movie art ",
-        "url": "https://www.creativebloq.com/design/poster-design/viral-hand-drawn-spider-man-ad-shows-how-people-crave-more-art-and-originality-in-advertising",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " YouTube's new policy is bad news for animators ",
-        "url": "https://www.creativebloq.com/art/animation/youtubes-new-policy-is-bad-news-for-animators",
         "source": "Creative Bloq"
       }
     ],
@@ -259,6 +253,26 @@
     ],
     "gaming": [
       {
+        "title": "Duskfade Review: Kingdom Hearts New Replacement Is the Best Mario Game of the Year",
+        "url": "https://www.polygon.com/duskfade-review/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Fire Emblem: Fortune's Weave Preview: Potentially Nintendo's Best Strategy Game Yet",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-preview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Silent Hill Lead Designer Teams up With Infinity Pool Director on New Sci-Fi Horror Game",
+        "url": "https://www.polygon.com/precognition-sam-barlow-brandon-cronenberg-horror-game/",
+        "source": "Polygon"
+      },
+      {
+        "title": "HBO won't let Game of Thrones look 'too dark' ever again says insider",
+        "url": "https://www.polygon.com/a-knight-of-the-seven-kingdoms-game-of-thrones-darkness/",
+        "source": "Polygon"
+      },
+      {
         "title": "Henry Cavill's 2-Hour Action-Movie Masterpiece With a Secret 007 Connection Is Officially Free to Stream",
         "url": "https://www.polygon.com/henry-cavill-movies-free-streaming-august-2026/",
         "source": "Polygon"
@@ -271,26 +285,6 @@
       {
         "title": "Google Finally Agrees to Refund LOTR Fan After Trilogy Disappeared from Digital Library, but There's a Catch",
         "url": "https://www.polygon.com/lotr-lord-of-the-rings-digital-refund-google-denied/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Final Fantasy's Biggest Competition Officially Returns In 2026",
-        "url": "https://www.polygon.com/tales-eternia-remastered-release-date-platforms/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Elden Ring does this better than anyone else",
-        "url": "https://www.polygon.com/video/elden-ring-does-this-better-than-anyone-else/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Why horses are so hard for video games to get right",
-        "url": "https://www.polygon.com/video/why-horses-are-so-hard-for-video-games-to-get-right/",
-        "source": "Polygon"
-      },
-      {
-        "title": "I hate dogs (in Elden Ring)",
-        "url": "https://www.polygon.com/video/i-hate-dogs-in-elden-ring/",
         "source": "Polygon"
       }
     ],
