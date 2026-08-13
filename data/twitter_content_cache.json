@@ -1,190 +1,197 @@
 {
   "metadata": {
-    "last_updated": "2026-08-13T16:04:27.826912",
-    "total_items": 63
+    "last_updated": "2026-08-13T17:58:04.354172",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
-        "title": "DeepSeek Harness",
-        "url": "https://github.com/deepseek-ai/deepseek-harness",
+        "title": "Gemini 3.7 Flash",
+        "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
         "source": "Hacker News",
-        "score": 317
-      },
-      {
-        "title": "Gloomberb",
-        "url": "https://gloom.sh/",
-        "source": "Hacker News",
-        "score": 161
+        "score": 128
       },
       {
         "title": "Spaghettifying DRAM",
         "url": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
         "source": "Hacker News",
-        "score": 154
+        "score": 281
       },
       {
-        "title": "AI agents lie, cheat and steal. That is putting off users",
-        "url": "https://www.economist.com/business/2026/08/12/ai-agents-lie-cheat-and-steal-that-is-putting-off-users",
+        "title": "Mistral OCR 4.1",
+        "url": "https://docs.mistral.ai/models/ocr-4-1",
         "source": "Hacker News",
-        "score": 132
+        "score": 38
       },
       {
-        "title": "Heart Aerospace Completes First Flight of Largest Electric Aircraft",
-        "url": "https://www.heartaerospace.com/newsroom/heart-aerospace-completes-first-flight-of-world-s-largest-electric-aircraft",
+        "title": "Come for ENIAC, Stay for UNIVAC and Skeduflo",
+        "url": "https://uniqueatpenn.wordpress.com/2026/08/05/come-for-eniac-stay-for-univac-and-skeduflo/",
         "source": "Hacker News",
-        "score": 70
+        "score": 44
       },
       {
-        "title": "Kubernetes on Oxide: How Customer Needs Shaped Our Integrations",
+        "title": "DeepSeek Harness developer preview",
+        "url": "https://deepseek.com/harness/en/",
+        "source": "Hacker News",
+        "score": 418
+      },
+      {
+        "title": "Tocharian Online",
+        "url": "https://lrc.la.utexas.edu/eieol/tokol/0",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "How art invented humanity",
+        "url": "https://aeon.co/essays/humans-did-not-invent-art-it-was-the-other-way-around",
+        "source": "Hacker News",
+        "score": 36
+      },
+      {
+        "title": "Gloomberb",
+        "url": "https://gloom.sh/",
+        "source": "Hacker News",
+        "score": 278
+      },
+      {
+        "title": "Kubernetes on Oxide: How customer needs shaped our integrations",
         "url": "https://oxide.computer/blog/kubernetes-on-oxide",
         "source": "Hacker News",
-        "score": 40
+        "score": 91
       },
       {
-        "title": "Show HN: MCP Memory – Fast Agent Memory Using Google's OKF and SQLite FTS5",
-        "url": "https://github.com/fellowgeek/mcp-memory",
+        "title": "Donkey.bas is 45 Years Old – 131 line of Glory",
+        "url": "https://donkeybas.com/",
         "source": "Hacker News",
-        "score": 32
+        "score": 7
       },
       {
-        "title": "I Built a 500k-Domain Search Engine for Makers in a Weekend for $10",
+        "title": "Ordinary Abundance",
+        "url": "https://ordinaryabundance.com/",
+        "source": "Hacker News",
+        "score": 77
+      },
+      {
+        "title": "We Have AI at Home Chapter 1: A Box of Scraps",
+        "url": "https://jdagostino.github.io/ai-pt1-box-o-scraps/index.html",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "Codex in ChatGPT desktop app for Linux is now in preview",
+        "url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027",
+        "source": "Hacker News",
+        "score": 394
+      },
+      {
+        "title": "I built a 500k-domain search engine for makers in a weekend for $10",
         "url": "https://alexmorleyfinch.github.io/marlin/history/v1/article/the_birth.html",
         "source": "Hacker News",
-        "score": 42
+        "score": 86
       },
       {
-        "title": "We eliminated 1,400 CVEs in NanoClaw's container images",
-        "url": "https://www.echo.ai/blog/echo-xnanoclaw-under-the-hood",
+        "title": "Choose Boring Technology (2015)",
+        "url": "https://mcfunley.com/choose-boring-technology",
         "source": "Hacker News",
-        "score": 21
-      },
-      {
-        "title": "Anthropic: Introducing The Conceptual Reasoning Index",
-        "url": "https://alignment.anthropic.com/2026/conceptual-reasoning-index/",
-        "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Flock Safety changes system defaults in response to criticisms",
-        "url": "https://www.flocksafety.com/blog/flock-guardrails-address-lpr-privacy-concerns-and-police-transparency",
-        "source": "Hacker News",
-        "score": 15
-      },
-      {
-        "title": "Time to Move On: Querying Without Nulls and Bags",
-        "url": "https://arxiv.org/abs/2608.10863",
-        "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Deutsche Bank becomes first foreign yuan clearing bank in Europe",
-        "url": "https://tradersunion.com/news/central-banks/show/2973571-deutsche-bank-becomes/",
-        "source": "Hacker News",
-        "score": 259
-      },
-      {
-        "title": "ATG (YC F25) Is Hiring Member of Technical Staff (Data Platform)",
-        "url": "https://atg.science/careers",
-        "source": "Hacker News",
-        "score": 1
-      },
-      {
-        "title": "Picking berries is my meditation",
-        "url": "https://www.tsoon.com/posts/picking-berries-meditation/",
-        "source": "Hacker News",
-        "score": 80
+        "score": 5
       }
     ],
     "ai": [
       {
-        "title": "AI agents lie, cheat and steal. That is putting off users",
-        "url": "https://www.economist.com/business/2026/08/12/ai-agents-lie-cheat-and-steal-that-is-putting-off-users",
+        "title": "Gemini 3.7 Flash",
+        "url": "https://ai.google.dev/gemini-api/docs/models/gemini-3.7-flash",
         "source": "Hacker News AI",
-        "score": 133
+        "score": 128
       },
       {
-        "title": "Heart Aerospace Completes First Flight of Largest Electric Aircraft",
-        "url": "https://www.heartaerospace.com/newsroom/heart-aerospace-completes-first-flight-of-world-s-largest-electric-aircraft",
+        "title": "Mistral OCR 4.1",
+        "url": "https://docs.mistral.ai/models/ocr-4-1",
         "source": "Hacker News AI",
-        "score": 72
+        "score": 38
       },
       {
-        "title": "I Built a 500k-Domain Search Engine for Makers in a Weekend for $10",
+        "title": "We Have AI at Home Chapter 1: A Box of Scraps",
+        "url": "https://jdagostino.github.io/ai-pt1-box-o-scraps/index.html",
+        "source": "Hacker News AI",
+        "score": 13
+      },
+      {
+        "title": "Codex in ChatGPT desktop app for Linux is now in preview",
+        "url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027",
+        "source": "Hacker News AI",
+        "score": 394
+      },
+      {
+        "title": "I built a 500k-domain search engine for makers in a weekend for $10",
         "url": "https://alexmorleyfinch.github.io/marlin/history/v1/article/the_birth.html",
         "source": "Hacker News AI",
-        "score": 42
+        "score": 86
       },
       {
-        "title": "We eliminated 1,400 CVEs in NanoClaw's container images",
-        "url": "https://www.echo.ai/blog/echo-xnanoclaw-under-the-hood",
+        "title": "Graduate student proves a quantum uncertainty principle for fractals",
+        "url": "https://www.quantamagazine.org/graduate-student-proves-the-fractal-uncertainty-principle-20260812/",
         "source": "Hacker News AI",
-        "score": 21
-      },
-      {
-        "title": "ChatGPT Desktop (Codex Desktop) for Linux",
-        "url": "https://openai.com/codex/",
-        "source": "Hacker News AI",
-        "score": 349
+        "score": 37
       },
       {
         "title": "Choosing an AI model: one prompt, 11 models, different results",
         "url": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results/",
         "source": "Hacker News AI",
-        "score": 92
+        "score": 115
       },
       {
-        "title": "Graduate Student Proves a Quantum Uncertainty Principle for Fractals",
-        "url": "https://www.quantamagazine.org/graduate-student-proves-the-fractal-uncertainty-principle-20260812/",
+        "title": "We eliminated 1,400 CVEs in NanoClaw's container images",
+        "url": "https://www.echo.ai/blog/echo-xnanoclaw-under-the-hood",
         "source": "Hacker News AI",
-        "score": 12
+        "score": 52
       },
       {
         "title": "The mathematical physics of rainbows and glories (2001) [pdf]",
         "url": "https://tlakoba.w3.uvm.edu/AppliedUGMath/auxpaper_rainbow_glory_review.pdf",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 24
       },
       {
-        "title": "Text AI watermarks will always be trivial to remove",
-        "url": "https://www.seangoedecke.com/text-ai-watermarks/",
+        "title": "Gemini 3.7 Flash",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 44
       },
       {
-        "title": "Anthropic: Introducing The Conceptual Reasoning Index",
-        "url": "https://alignment.anthropic.com/2026/conceptual-reasoning-index/",
+        "title": "Translating the Renaissance: 17,000+ historical source texts",
+        "url": "https://sourcelibrary.org",
         "source": "Hacker News AI",
-        "score": 55
+        "score": 9
       },
       {
-        "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
-        "url": "https://discoveredmaterials.com/research/",
+        "title": "Show HN: At 16K features, flat autoencoders break. Curved space doesn't",
+        "url": "https://github.com/vishal-dehurdle/hypersae",
         "source": "Hacker News AI",
-        "score": 151
+        "score": 3
       },
       {
-        "title": "Three years after police raid on Kansas newspaper, reporter settles for $850K",
-        "url": "https://kansasreflector.com/2026/08/11/three-years-after-police-raid-on-kansas-newspaper-reporter-settles-lawsuit-for-850k/",
+        "title": "OpenCV AI Competition 2026",
+        "url": "https://opencv.org/opencv-ai-competition-2026/",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 3
       },
       {
-        "title": "AI Generated 3D Models Flood Market, but Almost No One Is Buying Them",
-        "url": "https://www.404media.co/ai-generated-3d-models-flood-market-but-almost-no-one-is-buying-them/",
+        "title": "Amazon will train on Twitch streamers' content by default, unless they opt out",
+        "url": "https://techcrunch.com/2026/08/12/amazon-will-train-on-twitch-streamers-content-by-default-unless-they-opt-out/",
         "source": "Hacker News AI",
-        "score": 17
+        "score": 8
+      },
+      {
+        "title": "Heart aerospace completes first flight of largest electric aircraft",
+        "url": "https://www.heartaerospace.com/newsroom/heart-aerospace-completes-first-flight-of-world-s-largest-electric-aircraft",
+        "source": "Hacker News AI",
+        "score": 103
       }
     ],
     "news": [
       {
         "title": "Palestinians told to leave homes in village where Israeli settlers besieged houses",
         "url": "https://www.bbc.co.uk/news/articles/cj4kppdk2qwo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "UK defends seizing shadow fleet tanker after Putin threat",
-        "url": "https://www.bbc.co.uk/news/articles/cn0npn249qvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -198,6 +205,11 @@
         "source": "BBC World"
       },
       {
+        "title": "Conditions on US aircraft carrier at sea for more than 250 days raise alarms",
+        "url": "https://www.bbc.co.uk/news/articles/cyvl2d5j52lo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Person fined after using foghorn to wake sleeping polar bear",
         "url": "https://www.bbc.co.uk/news/articles/cx2k1r97vx7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -208,8 +220,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Four Canadian hockey stars remain suspended after sexual assault acquittal",
-        "url": "https://www.bbc.co.uk/news/articles/cj9dpdmr77do?at_medium=RSS&at_campaign=rss",
+        "title": "Mangione lawyers to meet federal prosecutors amid reports of plea deal",
+        "url": "https://www.bbc.co.uk/news/articles/c5yw71q9y00o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -289,38 +301,38 @@
     ],
     "gaming": [
       {
-        "title": "10 Years Later, Anne Hathaway's 110-Minute Sci-Fi Monster Movie Is Aging Like Fine Wine",
-        "url": "https://www.polygon.com/anne-hathaway-colossal-movie-streaming/",
+        "title": "New 'Attack on Titan' Project Will Be Announced Next Week, WIT Studio Teases",
+        "url": "https://www.polygon.com/attack-on-titan-studio-teases-new-project/",
         "source": "Polygon"
       },
       {
-        "title": "Summer Shimanoyama region treasure hunt location in Forza Horizon 6",
-        "url": "https://www.polygon.com/forza-horizon-6-fh6-treasure-hunt-location/",
+        "title": "Where to find the Hokuryu Sunflower Farm in Forza Horizon 6",
+        "url": "https://www.polygon.com/forza-horizon-6-fh6-hokuryu-sunflower-farm-location-where-to-find/",
         "source": "Polygon"
       },
       {
-        "title": "Baldur's Gate 3 Coloring Book Easter Eggs Explained",
-        "url": "https://www.polygon.com/baldurs-gate-3-coloring-book-easter-eggs/",
+        "title": "How to get fire bricks in Grounded 2",
+        "url": "https://www.polygon.com/grounded-2-fire-bricks-recipe-how-to-get/",
         "source": "Polygon"
       },
       {
-        "title": "An Elder Scrolls 6 Secret Has Been Hiding In Starfield For Years",
-        "url": "https://www.polygon.com/elder-scrolls-6-name-title-starfield-easter-egg/",
+        "title": "After Bombing in Theaters, Amazon's $200M Sci-Fi Epic Is a Prime Video Sensation 3 Weeks Running",
+        "url": "https://www.polygon.com/masters-of-the-universe-amazon-prime-video-streaming/",
         "source": "Polygon"
       },
       {
-        "title": "Saber Interactive CEO Doubles Down On AI Amid Rideshare Stimulator Controversy",
-        "url": "https://www.polygon.com/space-marine-2-saber-interactive-ai-controversy-rideshare-stimulator/",
+        "title": "‘Persona 5’ Is Coming to ‘Fortnite'",
+        "url": "https://www.polygon.com/fortnite-override-chapter-7-season-4-persona-5-crossover-revealed/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon Bank Shutting Down Leaves Fans in Mourning",
-        "url": "https://www.polygon.com/pokemon-bank-end-of-service-announced-transfer-to-home/",
+        "title": "Steam’s Greatest New Roguelite Is Tony Hawk’s Pro Skater Meets Beyblade",
+        "url": "https://www.polygon.com/slayblade-steam-tony-hawk-beyblade/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon FireRed & LeafGreen Players Get Home Support and Free Celebi Soon",
-        "url": "https://www.polygon.com/pokemon-firered-leafgreen-home-free-celebi/",
+        "title": "37 Years Later, the Best 'Calvin and Hobbes' Dad Quote Is Still in a League of Its Own",
+        "url": "https://www.polygon.com/best-quote-calvin-hobbes-dad/",
         "source": "Polygon"
       }
     ],
