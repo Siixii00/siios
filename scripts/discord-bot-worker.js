@@ -37,7 +37,7 @@ export default {
         // 手動觸發：掃描已綁定頻道的新訊息並讓 AI 決定是否插嘴（供 cron 與手動測試）
         if (url.pathname === '/poll' && request.method === 'GET') {
             try {
-                const result = await pollBoundChannels(env);
+                const result = await pollBoundChannels(env, ctx);
                 return Response.json({ success: true, ...result }, { headers: corsHeaders });
             } catch (error) {
                 return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
@@ -259,7 +259,7 @@ export default {
     // ===== Cron 觸發：保持暖機 + 掃描頻道新訊息並讓 AI 決定是否插嘴 =====
     async scheduled(event, env, ctx) {
         try {
-            await pollBoundChannels(env);
+            await pollBoundChannels(env, ctx);
 
             // 首次啟動時自動註冊斜線指令
             const registered = await env.DB.prepare(`SELECT cursor FROM botState WHERE key = 'commands_registered'`).first();
@@ -281,7 +281,7 @@ export default {
 };
 
 // ===== 掃描已綁定頻道，處理新訊息（供 cron 與手動觸發）=====
-async function pollBoundChannels(env) {
+async function pollBoundChannels(env, ctx) {
     // 從兩種綁定來源收集頻道：channel_bindings（/channel bind）與 discord_channel_mappings（PWA 設定）
     const bindings = await env.DB.prepare(`SELECT * FROM channel_bindings`).all();
     const mappings = await env.DB.prepare(`SELECT * FROM discord_channel_mappings`).all();
@@ -360,6 +360,11 @@ async function pollBoundChannels(env) {
         // 更新游標為最新的訊息 ID
         const latestId = messages[0].id;
         await env.DB.prepare(`INSERT INTO botState (key, cursor) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET cursor = excluded.cursor`).bind('last_msg_' + channelId, latestId).run();
+
+        // 後台總結：每 3 則對話觸發一次
+        const summaryChatId = characterId || channelId;
+        if (ctx?.waitUntil) ctx.waitUntil(maybeSummarizeConversation(summaryChatId, characterId, env));
+        else maybeSummarizeConversation(summaryChatId, characterId, env).catch(() => {});
     }
 
     return { type: 'keepalive', channels: channelMap.size, processed, replied, ts: Date.now() };
@@ -447,6 +452,64 @@ async function saveDiscordMemory(env, characterId, userId, userDisplayName, cont
         `[Discord 聊天] ${nowIso} User (${userDisplayName}): ${content}`, 'dynamic', 0.5,
         nowIso, memoryMeta
     ).run();
+}
+
+// ===== 後台總結：每 3 則對話自動總結為條列式記憶 =====
+const SUMMARY_INTERVAL = 3;
+
+async function maybeSummarizeConversation(chatId, characterId, env) {
+    try {
+        const stateKey = 'last_summary_' + chatId;
+        const state = await env.DB.prepare(`SELECT cursor FROM botState WHERE key = ?`).bind(stateKey).first();
+        const cursor = state?.cursor || '';
+
+        const countRow = await env.DB.prepare(`SELECT COUNT(*) AS c FROM messages WHERE chat_id = ? AND role = 'user' AND timestamp > ?`).bind(chatId, cursor).first();
+        const unsummarized = countRow?.c || 0;
+        if (unsummarized < SUMMARY_INTERVAL) return;
+
+        const historyRows = await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? AND timestamp > ? ORDER BY timestamp ASC LIMIT 30`).bind(chatId, cursor).all();
+        const msgs = historyRows.results || [];
+        if (msgs.length === 0) return;
+
+        let userCount = 0;
+        const toSummarize = [];
+        for (const m of msgs) {
+            toSummarize.push(m);
+            if (m.role === 'user') {
+                userCount++;
+                if (userCount >= SUMMARY_INTERVAL) break;
+            }
+        }
+
+        const aiUrl = await getConfig(env, 'AI_API_URL');
+        const aiKey = await getConfig(env, 'AI_API_KEY');
+        const aiModel = await getConfig(env, 'AI_MODEL') || 'gpt-3.5-turbo';
+        if (!aiUrl || !aiKey) return;
+
+        const transcript = toSummarize.map(m => `${m.role === 'user' ? 'User' : 'AI'}: ${m.content}`).join('\n');
+        const prompt = `請將以下 Discord 角色扮演對話摘要成條列式記憶（每行一個重點，以 - 開頭）。\n保留重要資訊：事件、約定、事實、情感、使用者偏好、具體數字與名稱。\n忽略寒暄與無關內容。只輸出條列，不要其他說明。\n\n對話：\n${transcript.slice(0, 6000)}`;
+
+        const resp = await fetch(`${aiUrl}/v1/chat/completions`, {
+            method: 'POST', headers: { 'Authorization': `Bearer ${aiKey}`, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ model: aiModel, messages: [{ role: 'user', content: prompt }], temperature: 0.5, max_tokens: 500 })
+        });
+        if (!resp.ok) return;
+        const data = await resp.json();
+        const summary = (data.choices?.[0]?.message?.content || '').trim();
+        if (!summary) return;
+
+        const nowIso = new Date().toISOString();
+        await env.DB.prepare(`INSERT INTO memories (id, chat_id, character_id, content, memory_type, importance, timestamp, metadata) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`).bind(
+            'sum-' + Date.now(), chatId, characterId,
+            `[Discord 總結] ${nowIso}\n${summary}`, 'archive', 0.8, nowIso,
+            JSON.stringify({ source: 'discord', platform: 'discord', summary: 'auto' })
+        ).run();
+
+        const lastSummarized = toSummarize[toSummarize.length - 1];
+        await env.DB.prepare(`INSERT INTO botState (key, cursor) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET cursor = excluded.cursor`).bind(stateKey, lastSummarized.timestamp).run();
+    } catch (error) {
+        console.error('Summarize error:', error);
+    }
 }
 
 // ===== 斜線指令註冊 =====
@@ -585,7 +648,7 @@ async function setConfig(env, key, value) {
 async function handleDiscordEvent(event, env, ctx) {
     if (event.type === 1) return Response.json({ type: 1 });
     if (event.type === 2) return await handleSlashCommand(event, env, ctx);
-    if (event.t === 'MESSAGE_CREATE') return await handleMessage(event.d, env);
+    if (event.t === 'MESSAGE_CREATE') return await handleMessage(event.d, env, ctx);
     return Response.json({ status: 'unknown_event' });
 }
 
@@ -698,7 +761,7 @@ async function handleSlashCommand(event, env, ctx) {
                     const characterId = await resolveChannelCharacter(channelId, env);
                     const chatId = characterId || channelId;
 
-                    const history = await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? ORDER BY timestamp DESC LIMIT 10`).bind(chatId).all();
+                    const history = await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? ORDER BY timestamp DESC LIMIT 50`).bind(chatId).all();
                     const msgs = (history.results || []);
 
                     // 找最新的 AI 回覆
@@ -789,7 +852,7 @@ async function isChannelAllowed(characterId, channelId, env) {
 }
 
 // ===== 處理訊息 =====
-async function handleMessage(message, env) {
+async function handleMessage(message, env, ctx) {
     if (message.author.bot) return Response.json({ status: 'ignored' });
 
     const exists = await env.DB.prepare(`SELECT id FROM messages WHERE id = ?`).bind(message.id).first();
@@ -892,6 +955,11 @@ async function handleMessage(message, env) {
         ).run();
     }
 
+    // 後台總結
+    const summaryChatId = characterId || message.channel_id;
+    if (ctx?.waitUntil) ctx.waitUntil(maybeSummarizeConversation(summaryChatId, characterId, env));
+    else maybeSummarizeConversation(summaryChatId, characterId, env).catch(() => {});
+
     return Response.json({ status: 'processed' });
 }
 
@@ -916,7 +984,7 @@ async function generateAIResponseWithContext(message, characterId, userId, userD
     const worldInfoEntries = await loadWorldInfoContext(chatId, message.content, characterId, userId, env);
 
     // 對話歷史
-    const history = await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? ORDER BY timestamp DESC LIMIT 10`).bind(chatId).all();
+    const history = await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? ORDER BY timestamp DESC LIMIT 50`).bind(chatId).all();
 
     // 記憶
     let memories = [];
@@ -964,9 +1032,9 @@ You are currently replying as **${charName}** in Discord.
 - Discord 主要是公開頻道，回覆請用輕鬆、聊天式的口吻，語句簡短，限縮在聊天模式。
 - 可適度加入動作描寫（例如 *歪頭*、*笑*），但不要寫太長的敘述。
 - 不要使用 markdown、程式碼區塊或落落長的段落。
-${environ.isPublic ? '- 這是公開頻道，內容會被其他成員看到。' : '- 這是私訊／群組對話。'}
-${environ.memberCount >= 3 ? '- 頻道內有 3 人以上在場，請避免成人相關或敏感話題，維持適合公開場合的內容。' : ''}
-${environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道，可以聊 15+ 的擦邊、曖昧或稍微露骨的話題，但仍禁止到達 R18 露骨性內容。' : ''}`;
+${environ.isDM ? '- 這是私訊(DM)，只有你們兩人，可以完全放開聊，包含 R18 成人內容皆可，只要對方主動開啟話題。' : (environ.isPublic ? '- 這是公開頻道，內容會被其他成員看到。' : '- 這是私訊／群組對話。')}
+${environ.isPublic && environ.memberCount >= 3 ? '- 頻道內有 3 人以上在場，請避免成人相關或敏感話題，維持適合公開場合的內容。' : ''}
+${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道，可以聊 15+ 的擦邊、曖昧或稍微露骨的話題，但仍禁止到達 R18 露骨性內容。' : ''}`;
     systemMessages.push({ role: 'system', content: discordDirective });
 
     // 4. 角色人格 + 場景 + 記憶
@@ -1108,13 +1176,15 @@ async function loadWorldInfoContext(chatId, userMessage, characterId, userId, en
 // ===== 判斷 Discord 環境（公開頻道 + 在場人數）=====
 async function getDiscordEnvironment(message, env) {
     let isPublic = true;
+    let isDM = false;
     let memberCount = 0;
     let isNsfw = false;
     try {
         const channel = await fetch(`https://discord.com/api/v10/channels/${message.channel_id}`, {
             headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
         }).then(r => r.json());
-        if (channel.type === 1 || channel.type === 3) isPublic = false;
+        if (channel.type === 1) { isPublic = false; isDM = true; }
+        else if (channel.type === 3) isPublic = false;
         isNsfw = !!channel.nsfw;
     } catch (_) {}
     if (isPublic) {
@@ -1124,7 +1194,7 @@ async function getDiscordEnvironment(message, env) {
             memberCount = authors.size;
         } catch (_) {}
     }
-    return { isPublic, memberCount, isNsfw };
+    return { isPublic, isDM, memberCount, isNsfw };
 }
 
 // ===== 發送 Discord 訊息 =====
@@ -1501,7 +1571,7 @@ async function startGatewayConnection(env, ctx) {
 
                     case 0: // Dispatch
                         if (t === 'MESSAGE_CREATE') {
-                            handleMessage(d, env).catch(err => {
+                            handleMessage(d, env, ctx).catch(err => {
                                 console.error('Gateway handleMessage error:', err);
                             });
                         }

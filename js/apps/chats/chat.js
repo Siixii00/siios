@@ -486,7 +486,6 @@ async function renderChat(params) {
     generateBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.85.83 6.72 2.24"></path><path d="M21 3v6h-6"></path></svg>';
     generateBtn.style.color = '#6B6B6B';
     generateBtn.title = '生成回應';
-    generateBtn.disabled = true;
     
     async function startGroupResponses(userMessage) {
         const memberIds = currentChat.member_ids || [];
@@ -579,8 +578,6 @@ async function renderChat(params) {
     function updateInputDisabled() {
         const isEmpty = textarea.value.trim() === '';
         sendBtn.disabled = isEmpty || activeResponseCount > 0;
-        const hasUserMessage = messages.some(m => m.role === 'user');
-        generateBtn.disabled = !hasUserMessage || activeResponseCount > 0;
         
         if (activeResponseCount > 0) {
             generateBtn.style.color = '#141413';
