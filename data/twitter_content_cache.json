@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-13T02:03:56.892911",
-    "total_items": 62
+    "last_updated": "2026-08-13T04:51:32.438953",
+    "total_items": 60
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "DeepSeek V4 Pro 0813",
         "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
         "source": "Hacker News",
-        "score": 759
-      },
-      {
-        "title": "Delta",
-        "url": "https://zed.dev/blog/introducing-delta",
-        "source": "Hacker News",
-        "score": 399
+        "score": 816
       },
       {
         "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
         "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
         "source": "Hacker News",
-        "score": 806
+        "score": 885
+      },
+      {
+        "title": "Delta",
+        "url": "https://zed.dev/blog/introducing-delta",
+        "source": "Hacker News",
+        "score": 461
       },
       {
         "title": "Qwen3.8-2.4T",
         "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
         "source": "Hacker News",
-        "score": 501
-      },
-      {
-        "title": "Happy 45th Birthday to the IBM PC and Model F/XT",
-        "url": "https://sharktastica.co.uk/articles/pc-fxt-45",
-        "source": "Hacker News",
-        "score": 29
+        "score": 544
       },
       {
         "title": "Principia Mathematica is modern and insightful",
         "url": "https://okmij.org/ftp/Computation/Impressions/PrincipiaMathematica.html",
         "source": "Hacker News",
-        "score": 46
+        "score": 93
       },
       {
-        "title": "What's New in Flutter 3.47",
-        "url": "https://flutter.dev/blog/whats-new-in-flutter-3-47",
+        "title": "Antiqua–Fraktur dispute",
+        "url": "https://en.wikipedia.org/wiki/Antiqua%E2%80%93Fraktur_dispute",
         "source": "Hacker News",
-        "score": 42
+        "score": 26
       },
       {
         "title": "Build Wide, Ship Narrow",
         "url": "https://adapt.com/blog/build-wide-ship-narrow",
         "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "Why Target Common Lisp for Code Generation?",
-        "url": "http://funcall.blogspot.com/2026/08/why-vibe-code-in-lisp.html",
-        "source": "Hacker News",
-        "score": 34
+        "score": 62
       },
       {
         "title": "2026 Eclipse Webcams",
         "url": "https://jonty.github.io/2026_eclipse_webcams/",
         "source": "Hacker News",
-        "score": 459
+        "score": 462
       },
       {
-        "title": "Show HN: Ballet – Workflow automation that writes integrations against any API",
-        "url": "https://www.ballet.dev/",
+        "title": "Happy 45th Birthday to the IBM PC and Model F/XT",
+        "url": "https://sharktastica.co.uk/articles/pc-fxt-45",
         "source": "Hacker News",
-        "score": 17
+        "score": 47
       },
       {
         "title": "Tim King, AmigaDOS developer, has died",
         "url": "https://amiga-news.de/en/news/AN-2026-08-00070-EN.html",
         "source": "Hacker News",
-        "score": 240
+        "score": 247
+      },
+      {
+        "title": "From rubber boots to Copa: When MicroProse Soccer revolutionized football",
+        "url": "https://spillhistorie.no/2026/08/08/fra-gummistovler-til-copa-da-microprose-soccer-revolusjonerte-fotballen/",
+        "source": "Hacker News",
+        "score": 6
       },
       {
         "title": "HTML over WebSockets: real-time SPAs with barely any JavaScript",
         "url": "https://en.andros.dev/blog/ef4968f5/html-over-websockets-real-time-spas-with-barely-any-javascript/",
         "source": "Hacker News",
-        "score": 148
+        "score": 166
       },
       {
         "title": "Grok 4.6",
         "url": "https://x.ai/news/grok-4-6",
         "source": "Hacker News",
-        "score": 412
+        "score": 463
       },
       {
-        "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
-        "url": "https://discoveredmaterials.com/research/",
+        "title": "Probabilistic Estimation for Localizing a Radioactive Source in an Urban Setting",
+        "url": "https://repository.lib.ncsu.edu/items/451b001d-e63a-4968-866d-3fb3a599b1e7",
         "source": "Hacker News",
-        "score": 115
+        "score": 18
+      },
+      {
+        "title": "uBlock Origin Is Giving Up the Fight to Keep Ads Off Facebook",
+        "url": "https://digitalescapetools.com/2026/08/ublock-origin-stops-chasing-facebook-ads.html",
+        "source": "Hacker News",
+        "score": 363
       }
     ],
     "ai": [
@@ -101,73 +101,61 @@
         "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
         "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
         "source": "Hacker News AI",
-        "score": 806
-      },
-      {
-        "title": "Show HN: Ballet – Workflow automation that writes integrations against any API",
-        "url": "https://www.ballet.dev/",
-        "source": "Hacker News AI",
-        "score": 17
+        "score": 885
       },
       {
         "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
         "url": "https://discoveredmaterials.com/research/",
         "source": "Hacker News AI",
-        "score": 115
+        "score": 128
+      },
+      {
+        "title": "Show HN: Ballet – Workflow automation that writes integrations against any API",
+        "url": "https://www.ballet.dev/",
+        "source": "Hacker News AI",
+        "score": 25
       },
       {
         "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
         "url": "https://knownagents.com/insights",
         "source": "Hacker News AI",
-        "score": 235
-      },
-      {
-        "title": "Waits: Arthur Samuel's Checkers",
-        "url": "https://timereshared.com/waits-samuel-checkers/",
-        "source": "Hacker News AI",
-        "score": 4
-      },
-      {
-        "title": "What Is AI Governance and How to Operationalize It?",
-        "url": "https://www.etherionconsulting.com/blog/what-is-ai-governance-and-how-to-operationalize-it/",
-        "source": "Hacker News AI",
-        "score": 3
+        "score": 252
       },
       {
         "title": "Lovable raises $400M Series C",
         "url": "https://lovable.dev/blog/series-c",
         "source": "Hacker News AI",
-        "score": 95
+        "score": 109
       },
       {
         "title": "AI is removing the middle class of software engineering?",
         "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
         "source": "Hacker News AI",
-        "score": 730
+        "score": 788
       },
       {
         "title": "What sort of maths are LLMs good at?",
         "url": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
         "source": "Hacker News AI",
-        "score": 238
+        "score": 247
       },
       {
         "title": "High-Res Photo Shows Sand-Capped Butte Rising from Mars Plain of Polygons",
         "url": "https://petapixel.com/2026/08/04/amazing-high-res-photo-shows-a-butte-rising-from-mars/",
         "source": "Hacker News AI",
-        "score": 155
+        "score": 159
+      },
+      {
+        "title": "Waits: Arthur Samuel's Checkers",
+        "url": "https://timereshared.com/waits-samuel-checkers/",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Delphi 13 Community Edition Is Now Available",
         "url": "https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/",
         "source": "Hacker News AI",
-        "score": 165
-      },
-      {
-        "title": "DLLM: Minimal, clean coding agent built directly on llama.cpp without overhead",
-        "url": "https://github.com/DannyArends/DLLM",
-        "source": "Hacker News AI",
-        "score": 6
+        "score": 168
       }
     ],
     "news": [
@@ -187,8 +175,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Trump says White House press secretary Karoline Leavitt to leave post",
-        "url": "https://www.bbc.co.uk/news/articles/cvglzrvyrz3o?at_medium=RSS&at_campaign=rss",
+        "title": "Three men will be executed on the same day as death penalties rise in US",
+        "url": "https://www.bbc.co.uk/news/articles/cn5n399n6zvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -197,8 +185,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Woman pulled alive from rubble 36 hours after Colombia quake",
-        "url": "https://www.bbc.co.uk/news/articles/cz7d2e5wlgno?at_medium=RSS&at_campaign=rss",
+        "title": "BTS star V reveals hearing loss battle during livestream",
+        "url": "https://www.bbc.co.uk/news/articles/cx2v1893n3eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
