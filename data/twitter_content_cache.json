@@ -1,51 +1,75 @@
 {
   "metadata": {
-    "last_updated": "2026-08-13T13:13:12.929619",
-    "total_items": 57
+    "last_updated": "2026-08-13T14:58:27.424864",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "Deutsche Bank becomes first foreign yuan clearing bank in Europe",
-        "url": "https://tradersunion.com/news/central-banks/show/2973571-deutsche-bank-becomes/",
+        "title": "DeepSeek Harness",
+        "url": "https://github.com/deepseek-ai/deepseek-harness",
         "source": "Hacker News",
-        "score": 121
+        "score": 185
       },
       {
-        "title": "ChatGPT Desktop (Codex Desktop) for Linux",
-        "url": "https://openai.com/codex/",
+        "title": "Gloomberb",
+        "url": "https://gloom.sh/",
         "source": "Hacker News",
-        "score": 265
+        "score": 78
       },
       {
-        "title": "The lattice of sets of natural numbers is rich (2021)",
-        "url": "https://jdh.hamkins.org/the-lattice-of-sets-of-natural-numbers-is-rich/",
+        "title": "AI agents lie, cheat and steal. That is putting off users",
+        "url": "https://www.economist.com/business/2026/08/12/ai-agents-lie-cheat-and-steal-that-is-putting-off-users",
         "source": "Hacker News",
         "score": 59
       },
       {
-        "title": "Better Gaussian Splatting in Julia",
-        "url": "https://pxl-th.github.io/blog/better-gs-julia/",
+        "title": "Spaghettifying DRAM",
+        "url": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
         "source": "Hacker News",
-        "score": 13
+        "score": 55
+      },
+      {
+        "title": "Heart Aerospace Completes First Flight of Largest Electric Aircraft",
+        "url": "https://www.heartaerospace.com/newsroom/heart-aerospace-completes-first-flight-of-world-s-largest-electric-aircraft",
+        "source": "Hacker News",
+        "score": 30
+      },
+      {
+        "title": "Show HN: MCP Memory – Fast Agent Memory Using Google's OKF and SQLite FTS5",
+        "url": "https://github.com/fellowgeek/mcp-memory",
+        "source": "Hacker News",
+        "score": 22
+      },
+      {
+        "title": "Anthropic: Introducing The Conceptual Reasoning Index",
+        "url": "https://alignment.anthropic.com/2026/conceptual-reasoning-index/",
+        "source": "Hacker News",
+        "score": 26
+      },
+      {
+        "title": "My Rules for Using Spreadsheets",
+        "url": "https://leancrew.com/all-this/2026/08/my-rules-for-using-spreadsheets/",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
+        "title": "I Built a 500k-Domain Search Engine for Makers in a Weekend for $10",
+        "url": "https://alexmorleyfinch.github.io/marlin/history/v1/article/the_birth.html",
+        "source": "Hacker News",
+        "score": 19
+      },
+      {
+        "title": "Kubernetes on Oxide: How Customer Needs Shaped Our Integrations",
+        "url": "https://oxide.computer/blog/kubernetes-on-oxide",
+        "source": "Hacker News",
+        "score": 8
       },
       {
         "title": "Picking berries is my meditation",
         "url": "https://www.tsoon.com/posts/picking-berries-meditation/",
         "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "DeepSeek V4 Pro 0813",
-        "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
-        "source": "Hacker News",
-        "score": 977
-      },
-      {
-        "title": "Tracking down the 16-year-old WAL-reset SQLite bug",
-        "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
-        "source": "Hacker News",
-        "score": 1110
+        "score": 69
       },
       {
         "title": "ATG (YC F25) Is Hiring Member of Technical Staff (Data Platform)",
@@ -54,90 +78,96 @@
         "score": 1
       },
       {
-        "title": "Qwen3.8-2.4T",
-        "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+        "title": "Deutsche Bank becomes first foreign yuan clearing bank in Europe",
+        "url": "https://tradersunion.com/news/central-banks/show/2973571-deutsche-bank-becomes/",
         "source": "Hacker News",
-        "score": 669
+        "score": 221
       },
       {
-        "title": "Delta",
-        "url": "https://zed.dev/blog/introducing-delta",
+        "title": "ChatGPT Desktop (Codex Desktop) for Linux",
+        "url": "https://openai.com/codex/",
         "source": "Hacker News",
-        "score": 601
+        "score": 324
       },
       {
-        "title": "Principia Mathematica is modern and insightful",
-        "url": "https://okmij.org/ftp/Computation/Impressions/PrincipiaMathematica.html",
+        "title": "Better Gaussian Splatting in Julia",
+        "url": "https://pxl-th.github.io/blog/better-gs-julia/",
         "source": "Hacker News",
-        "score": 213
-      },
-      {
-        "title": "Antiqua–Fraktur dispute",
-        "url": "https://en.wikipedia.org/wiki/Antiqua%E2%80%93Fraktur_dispute",
-        "source": "Hacker News",
-        "score": 123
-      },
-      {
-        "title": "uBlock Origin Is Giving Up the Fight to Keep Ads Off Facebook",
-        "url": "https://digitalescapetools.com/2026/08/ublock-origin-stops-chasing-facebook-ads.html",
-        "source": "Hacker News",
-        "score": 606
-      },
-      {
-        "title": "Come for Eniac, Stay for Univac and Skeduflo",
-        "url": "https://uniqueatpenn.wordpress.com/2026/08/05/come-for-eniac-stay-for-univac-and-skeduflo/",
-        "source": "Hacker News",
-        "score": 11
-      },
-      {
-        "title": "Mushroom behind 'tiny people' hallucinations identified",
-        "url": "https://phys.org/news/2026-08-qa-mushroom-tiny-people-hallucinations.html",
-        "source": "Hacker News",
-        "score": 211
+        "score": 49
       }
     ],
     "ai": [
       {
+        "title": "AI agents lie, cheat and steal. That is putting off users",
+        "url": "https://www.economist.com/business/2026/08/12/ai-agents-lie-cheat-and-steal-that-is-putting-off-users",
+        "source": "Hacker News AI",
+        "score": 59
+      },
+      {
+        "title": "Heart Aerospace Completes First Flight of Largest Electric Aircraft",
+        "url": "https://www.heartaerospace.com/newsroom/heart-aerospace-completes-first-flight-of-world-s-largest-electric-aircraft",
+        "source": "Hacker News AI",
+        "score": 30
+      },
+      {
+        "title": "Anthropic: Introducing The Conceptual Reasoning Index",
+        "url": "https://alignment.anthropic.com/2026/conceptual-reasoning-index/",
+        "source": "Hacker News AI",
+        "score": 26
+      },
+      {
+        "title": "I Built a 500k-Domain Search Engine for Makers in a Weekend for $10",
+        "url": "https://alexmorleyfinch.github.io/marlin/history/v1/article/the_birth.html",
+        "source": "Hacker News AI",
+        "score": 19
+      },
+      {
         "title": "ChatGPT Desktop (Codex Desktop) for Linux",
         "url": "https://openai.com/codex/",
         "source": "Hacker News AI",
-        "score": 265
+        "score": 324
+      },
+      {
+        "title": "The mathematical physics of rainbows and glories(2001) [pdf]",
+        "url": "https://tlakoba.w3.uvm.edu/AppliedUGMath/auxpaper_rainbow_glory_review.pdf",
+        "source": "Hacker News AI",
+        "score": 4
+      },
+      {
+        "title": "Graduate Student Proves a Quantum Uncertainty Principle for Fractals",
+        "url": "https://www.quantamagazine.org/graduate-student-proves-the-fractal-uncertainty-principle-20260812/",
+        "source": "Hacker News AI",
+        "score": 4
+      },
+      {
+        "title": "We eliminated 1,400 CVEs in NanoClaw's container images",
+        "url": "https://www.echo.ai/blog/echo-xnanoclaw-under-the-hood",
+        "source": "Hacker News AI",
+        "score": 4
+      },
+      {
+        "title": "Choosing an AI model: one prompt, 11 models, different results",
+        "url": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results/",
+        "source": "Hacker News AI",
+        "score": 79
+      },
+      {
+        "title": "AI Generated 3D Models Flood Market, but Almost No One Is Buying Them",
+        "url": "https://www.404media.co/ai-generated-3d-models-flood-market-but-almost-no-one-is-buying-them/",
+        "source": "Hacker News AI",
+        "score": 10
       },
       {
         "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
         "url": "https://discoveredmaterials.com/research/",
         "source": "Hacker News AI",
-        "score": 149
+        "score": 151
       },
       {
         "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
         "url": "https://knownagents.com/insights",
         "source": "Hacker News AI",
-        "score": 287
-      },
-      {
-        "title": "Lovable raises $400M Series C",
-        "url": "https://lovable.dev/blog/series-c",
-        "source": "Hacker News AI",
-        "score": 151
-      },
-      {
-        "title": "AI is removing the middle class of software engineering?",
-        "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
-        "source": "Hacker News AI",
-        "score": 918
-      },
-      {
-        "title": "High-Res Photo Shows Sand-Capped Butte Rising from Mars Plain of Polygons",
-        "url": "https://petapixel.com/2026/08/04/amazing-high-res-photo-shows-a-butte-rising-from-mars/",
-        "source": "Hacker News AI",
-        "score": 164
-      },
-      {
-        "title": "Show HN: Ballet – Workflow automation that writes integrations against any API",
-        "url": "https://www.ballet.dev/",
-        "source": "Hacker News AI",
-        "score": 31
+        "score": 293
       }
     ],
     "news": [
@@ -162,8 +192,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Travis Kelce shares first details from his wedding to Taylor Swift: 'Best night of my life'",
-        "url": "https://www.bbc.co.uk/news/articles/cx2r179e232o?at_medium=RSS&at_campaign=rss",
+        "title": "Four Canadian hockey stars remain suspended after sexual assault acquittal",
+        "url": "https://www.bbc.co.uk/news/articles/cj9dpdmr77do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -172,12 +202,17 @@
         "source": "BBC World"
       },
       {
-        "title": "French ambassador to CAR accused of bringing women to official residence faces disciplinary action",
+        "title": "French ambassador to CAR accused of misconduct at official residence faces disciplinary action",
         "url": "https://www.bbc.co.uk/news/articles/cqx7pp3yd25o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " This dark Slavic fairy-tale game is like Devil May Cry with ballet combat ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/this-dark-slavic-fairy-tale-game-is-like-devil-may-cry-with-ballet-combat",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Duskfade (Switch 2) review: the Unreal Engine 5 platformer feels like a lost PS2 classic – for better and worse ",
         "url": "https://www.creativebloq.com/entertainment/gaming/duskfade-switch-2-review-the-unreal-engine-5-platformer-feels-like-a-lost-ps2-classic-for-better-and-worse",
@@ -206,11 +241,6 @@
       {
         "title": " The viral cursed milk cat has been turned into a hilarious animation using Blender ",
         "url": "https://www.creativebloq.com/art/animation/the-viral-cursed-milk-cat-photos-been-turned-into-a-hilarious-animation-in-blender",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Jaguar doubles down on its controversial rebrand with a (literally) divisive interior design ",
-        "url": "https://www.creativebloq.com/design/product-design/jaguar-interiors-feel-built-to-troll-the-haters-of-its-rebrand",
         "source": "Creative Bloq"
       }
     ],
@@ -253,6 +283,31 @@
     ],
     "gaming": [
       {
+        "title": "Event Habitat Dex and Pokédex list in Pokémon Pokopia",
+        "url": "https://www.polygon.com/pokemon-pokopia-event-habitat-dex-pokedex-list-requirements-unlock/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Marvel Rivals Fans Get Furious Over Storm Skin, Developer Responds",
+        "url": "https://www.polygon.com/marvel-rivals-storm-summer-skies-skin-backlash/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Pokémon Pokopia 'Fetch Scales for Feebas' event guide",
+        "url": "https://www.polygon.com/pokemon-pokopia-fetch-scales-for-feebas-event-milotic-habitats-items/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Modern King of Sci-Fi Is Officially Returning to Theaters This Week After 7 Years",
+        "url": "https://www.polygon.com/jj-abrams-end-of-oak-street-sci-fi/",
+        "source": "Polygon"
+      },
+      {
+        "title": "McDonald's Happy Meals Get Hello Kitty x Godzilla Crossover Toys",
+        "url": "https://www.polygon.com/hello-kitty-godzilla-mcdonalds-happy-meals-release-date-images/",
+        "source": "Polygon"
+      },
+      {
         "title": "Duskfade Review: Kingdom Hearts New Replacement Is the Best Mario Game of the Year",
         "url": "https://www.polygon.com/duskfade-review/",
         "source": "Polygon"
@@ -260,31 +315,6 @@
       {
         "title": "Fire Emblem: Fortune's Weave Preview: Potentially Nintendo's Best Strategy Game Yet",
         "url": "https://www.polygon.com/fire-emblem-fortunes-weave-preview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Silent Hill Lead Designer Teams up With Infinity Pool Director on New Sci-Fi Horror Game",
-        "url": "https://www.polygon.com/precognition-sam-barlow-brandon-cronenberg-horror-game/",
-        "source": "Polygon"
-      },
-      {
-        "title": "HBO won't let Game of Thrones look 'too dark' ever again says insider",
-        "url": "https://www.polygon.com/a-knight-of-the-seven-kingdoms-game-of-thrones-darkness/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Henry Cavill's 2-Hour Action-Movie Masterpiece With a Secret 007 Connection Is Officially Free to Stream",
-        "url": "https://www.polygon.com/henry-cavill-movies-free-streaming-august-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Pokémon Go Is Giving All Players a Perfect Mewtwo to Apologize for Times Square Stunt",
-        "url": "https://www.polygon.com/pokemon-go-perfect-mewtwo-anniversary/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Google Finally Agrees to Refund LOTR Fan After Trilogy Disappeared from Digital Library, but There's a Catch",
-        "url": "https://www.polygon.com/lotr-lord-of-the-rings-digital-refund-google-denied/",
         "source": "Polygon"
       }
     ],
