@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-13T04:51:32.438953",
-    "total_items": 60
+    "last_updated": "2026-08-13T06:17:15.358523",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "DeepSeek V4 Pro 0813",
         "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
         "source": "Hacker News",
-        "score": 816
+        "score": 851
       },
       {
         "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
         "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
         "source": "Hacker News",
-        "score": 885
+        "score": 941
       },
       {
         "title": "Delta",
         "url": "https://zed.dev/blog/introducing-delta",
         "source": "Hacker News",
-        "score": 461
+        "score": 488
       },
       {
         "title": "Qwen3.8-2.4T",
         "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
         "source": "Hacker News",
-        "score": 544
+        "score": 570
       },
       {
         "title": "Principia Mathematica is modern and insightful",
         "url": "https://okmij.org/ftp/Computation/Impressions/PrincipiaMathematica.html",
         "source": "Hacker News",
-        "score": 93
+        "score": 110
+      },
+      {
+        "title": "Mushroom behind 'tiny people' hallucinations identified",
+        "url": "https://phys.org/news/2026-08-qa-mushroom-tiny-people-hallucinations.html",
+        "source": "Hacker News",
+        "score": 27
       },
       {
         "title": "Antiqua–Fraktur dispute",
         "url": "https://en.wikipedia.org/wiki/Antiqua%E2%80%93Fraktur_dispute",
         "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "Build Wide, Ship Narrow",
-        "url": "https://adapt.com/blog/build-wide-ship-narrow",
-        "source": "Hacker News",
-        "score": 62
+        "score": 51
       },
       {
         "title": "2026 Eclipse Webcams",
         "url": "https://jonty.github.io/2026_eclipse_webcams/",
         "source": "Hacker News",
-        "score": 462
+        "score": 471
       },
       {
         "title": "Happy 45th Birthday to the IBM PC and Model F/XT",
         "url": "https://sharktastica.co.uk/articles/pc-fxt-45",
         "source": "Hacker News",
-        "score": 47
+        "score": 63
+      },
+      {
+        "title": "Why Target Common Lisp for Code Generation?",
+        "url": "http://funcall.blogspot.com/2026/08/why-vibe-code-in-lisp.html",
+        "source": "Hacker News",
+        "score": 78
       },
       {
         "title": "Tim King, AmigaDOS developer, has died",
         "url": "https://amiga-news.de/en/news/AN-2026-08-00070-EN.html",
         "source": "Hacker News",
-        "score": 247
+        "score": 254
       },
       {
-        "title": "From rubber boots to Copa: When MicroProse Soccer revolutionized football",
-        "url": "https://spillhistorie.no/2026/08/08/fra-gummistovler-til-copa-da-microprose-soccer-revolusjonerte-fotballen/",
+        "title": "Build Wide, Ship Narrow",
+        "url": "https://adapt.com/blog/build-wide-ship-narrow",
         "source": "Hacker News",
-        "score": 6
-      },
-      {
-        "title": "HTML over WebSockets: real-time SPAs with barely any JavaScript",
-        "url": "https://en.andros.dev/blog/ef4968f5/html-over-websockets-real-time-spas-with-barely-any-javascript/",
-        "source": "Hacker News",
-        "score": 166
-      },
-      {
-        "title": "Grok 4.6",
-        "url": "https://x.ai/news/grok-4-6",
-        "source": "Hacker News",
-        "score": 463
-      },
-      {
-        "title": "Probabilistic Estimation for Localizing a Radioactive Source in an Urban Setting",
-        "url": "https://repository.lib.ncsu.edu/items/451b001d-e63a-4968-866d-3fb3a599b1e7",
-        "source": "Hacker News",
-        "score": 18
+        "score": 73
       },
       {
         "title": "uBlock Origin Is Giving Up the Fight to Keep Ads Off Facebook",
         "url": "https://digitalescapetools.com/2026/08/ublock-origin-stops-chasing-facebook-ads.html",
         "source": "Hacker News",
-        "score": 363
+        "score": 394
+      },
+      {
+        "title": "Grok 4.6",
+        "url": "https://x.ai/news/grok-4-6",
+        "source": "Hacker News",
+        "score": 493
+      },
+      {
+        "title": "HTML over WebSockets: real-time SPAs with barely any JavaScript",
+        "url": "https://en.andros.dev/blog/ef4968f5/html-over-websockets-real-time-spas-with-barely-any-javascript/",
+        "source": "Hacker News",
+        "score": 176
       }
     ],
     "ai": [
@@ -101,43 +101,37 @@
         "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
         "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
         "source": "Hacker News AI",
-        "score": 885
+        "score": 941
       },
       {
         "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
         "url": "https://discoveredmaterials.com/research/",
         "source": "Hacker News AI",
-        "score": 128
-      },
-      {
-        "title": "Show HN: Ballet – Workflow automation that writes integrations against any API",
-        "url": "https://www.ballet.dev/",
-        "source": "Hacker News AI",
-        "score": 25
+        "score": 131
       },
       {
         "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
         "url": "https://knownagents.com/insights",
         "source": "Hacker News AI",
-        "score": 252
+        "score": 261
+      },
+      {
+        "title": "Show HN: Ballet – Workflow automation that writes integrations against any API",
+        "url": "https://www.ballet.dev/",
+        "source": "Hacker News AI",
+        "score": 28
       },
       {
         "title": "Lovable raises $400M Series C",
         "url": "https://lovable.dev/blog/series-c",
         "source": "Hacker News AI",
-        "score": 109
+        "score": 123
       },
       {
         "title": "AI is removing the middle class of software engineering?",
         "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
         "source": "Hacker News AI",
-        "score": 788
-      },
-      {
-        "title": "What sort of maths are LLMs good at?",
-        "url": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
-        "source": "Hacker News AI",
-        "score": 247
+        "score": 825
       },
       {
         "title": "High-Res Photo Shows Sand-Capped Butte Rising from Mars Plain of Polygons",
@@ -146,22 +140,22 @@
         "score": 159
       },
       {
+        "title": "Delphi 13 Community Edition Is Now Available",
+        "url": "https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/",
+        "source": "Hacker News AI",
+        "score": 171
+      },
+      {
         "title": "Waits: Arthur Samuel's Checkers",
         "url": "https://timereshared.com/waits-samuel-checkers/",
         "source": "Hacker News AI",
         "score": 7
-      },
-      {
-        "title": "Delphi 13 Community Edition Is Now Available",
-        "url": "https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/",
-        "source": "Hacker News AI",
-        "score": 168
       }
     ],
     "news": [
       {
-        "title": "Major Russian grain export terminals hit in Ukraine Black Sea port attack",
-        "url": "https://www.bbc.co.uk/news/articles/c5y49xp2wrno?at_medium=RSS&at_campaign=rss",
+        "title": "Putin can no longer claim victory in Ukraine, Nobel Peace Prize winner tells BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c74grmy2v7ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -197,6 +191,11 @@
     ],
     "art": [
       {
+        "title": " YouTube's new policy is bad news for animators ",
+        "url": "https://www.creativebloq.com/art/animation/youtubes-new-policy-is-bad-news-for-animators",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Sinclair GamerCard review: the novel Raspberry Pi handheld is much more than a ZX Spectrum nostalgia trip ",
         "url": "https://www.creativebloq.com/entertainment/gaming/sinclair-gamercard-review-the-novel-raspberry-pi-handheld-is-much-more-than-a-zx-spectrum-nostalgia-trip",
         "source": "Creative Bloq"
@@ -224,11 +223,6 @@
       {
         "title": " Sir Brian May gives Queen fans a fright with bizarre AI tribute band ",
         "url": "https://www.creativebloq.com/ai/ai-art/brian-may-wants-ai-to-bite-the-dust-after-it-generated-a-fifth-member-of-queen",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Are Chromebooks finally good enough for university students? ",
-        "url": "https://www.creativebloq.com/tech/laptops/are-chromebooks-finally-good-enough-for-university-students",
         "source": "Creative Bloq"
       }
     ],
