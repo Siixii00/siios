@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-12T23:42:34.840492",
+    "last_updated": "2026-08-13T04:51:32.438953",
     "total_items": 60
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "DeepSeek V4 Pro 0813",
         "url": "https://openrouter.ai/deepseek/deepseek-v4-pro-0813",
         "source": "Hacker News",
-        "score": 692
-      },
-      {
-        "title": "Delta",
-        "url": "https://zed.dev/blog/introducing-delta",
-        "source": "Hacker News",
-        "score": 339
+        "score": 816
       },
       {
         "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
         "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
         "source": "Hacker News",
-        "score": 737
+        "score": 885
+      },
+      {
+        "title": "Delta",
+        "url": "https://zed.dev/blog/introducing-delta",
+        "source": "Hacker News",
+        "score": 461
       },
       {
         "title": "Qwen3.8-2.4T",
         "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
         "source": "Hacker News",
-        "score": 455
+        "score": 544
       },
       {
-        "title": "Why Target Common Lisp for Code Generation?",
-        "url": "http://funcall.blogspot.com/2026/08/why-vibe-code-in-lisp.html",
+        "title": "Principia Mathematica is modern and insightful",
+        "url": "https://okmij.org/ftp/Computation/Impressions/PrincipiaMathematica.html",
         "source": "Hacker News",
-        "score": 11
+        "score": 93
+      },
+      {
+        "title": "Antiqua–Fraktur dispute",
+        "url": "https://en.wikipedia.org/wiki/Antiqua%E2%80%93Fraktur_dispute",
+        "source": "Hacker News",
+        "score": 26
+      },
+      {
+        "title": "Build Wide, Ship Narrow",
+        "url": "https://adapt.com/blog/build-wide-ship-narrow",
+        "source": "Hacker News",
+        "score": 62
       },
       {
         "title": "2026 Eclipse Webcams",
         "url": "https://jonty.github.io/2026_eclipse_webcams/",
         "source": "Hacker News",
-        "score": 452
+        "score": 462
+      },
+      {
+        "title": "Happy 45th Birthday to the IBM PC and Model F/XT",
+        "url": "https://sharktastica.co.uk/articles/pc-fxt-45",
+        "source": "Hacker News",
+        "score": 47
       },
       {
         "title": "Tim King, AmigaDOS developer, has died",
         "url": "https://amiga-news.de/en/news/AN-2026-08-00070-EN.html",
         "source": "Hacker News",
-        "score": 217
+        "score": 247
+      },
+      {
+        "title": "From rubber boots to Copa: When MicroProse Soccer revolutionized football",
+        "url": "https://spillhistorie.no/2026/08/08/fra-gummistovler-til-copa-da-microprose-soccer-revolusjonerte-fotballen/",
+        "source": "Hacker News",
+        "score": 6
       },
       {
         "title": "HTML over WebSockets: real-time SPAs with barely any JavaScript",
         "url": "https://en.andros.dev/blog/ef4968f5/html-over-websockets-real-time-spas-with-barely-any-javascript/",
         "source": "Hacker News",
-        "score": 125
-      },
-      {
-        "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
-        "url": "https://knownagents.com/insights",
-        "source": "Hacker News",
-        "score": 218
+        "score": 166
       },
       {
         "title": "Grok 4.6",
         "url": "https://x.ai/news/grok-4-6",
         "source": "Hacker News",
-        "score": 358
+        "score": 463
       },
       {
-        "title": "I built a browser-native SysEx librarian for 80s/90s synthesizers",
-        "url": "https://bipluk.com/",
+        "title": "Probabilistic Estimation for Localizing a Radioactive Source in an Urban Setting",
+        "url": "https://repository.lib.ncsu.edu/items/451b001d-e63a-4968-866d-3fb3a599b1e7",
         "source": "Hacker News",
-        "score": 5
+        "score": 18
       },
       {
-        "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
-        "url": "https://discoveredmaterials.com/research/",
+        "title": "uBlock Origin Is Giving Up the Fight to Keep Ads Off Facebook",
+        "url": "https://digitalescapetools.com/2026/08/ublock-origin-stops-chasing-facebook-ads.html",
         "source": "Hacker News",
-        "score": 111
-      },
-      {
-        "title": "Why tiny JPEGs look different in Chrome",
-        "url": "https://guillaumetech.github.io/posts/jpg-scaling-chrome/",
-        "source": "Hacker News",
-        "score": 238
-      },
-      {
-        "title": "A Tale of Dynamic Programming (2022)",
-        "url": "https://iagoleal.com/posts/dynamic-programming/",
-        "source": "Hacker News",
-        "score": 59
-      },
-      {
-        "title": "Pixel Watch 5",
-        "url": "https://blog.google/products-and-platforms/devices/pixel/pixel-watch-5/",
-        "source": "Hacker News",
-        "score": 88
+        "score": 363
       }
     ],
     "ai": [
@@ -101,61 +101,61 @@
         "title": "Tailscale Traces Database Corruption to 16y/o SQLite WAL-Reset Bug",
         "url": "https://tailscale.com/blog/sqlite-wal-reset-bug",
         "source": "Hacker News AI",
-        "score": 737
-      },
-      {
-        "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
-        "url": "https://knownagents.com/insights",
-        "source": "Hacker News AI",
-        "score": 218
+        "score": 885
       },
       {
         "title": "Launch HN: Discovered Materials (YC P26) – AI agents to discover new materials",
         "url": "https://discoveredmaterials.com/research/",
         "source": "Hacker News AI",
-        "score": 111
+        "score": 128
       },
       {
-        "title": "Show HN: A marketplace where AI agents buy services from AI agents",
-        "url": "https://aaas-marketplace-1089237826218.asia-northeast1.run.app",
+        "title": "Show HN: Ballet – Workflow automation that writes integrations against any API",
+        "url": "https://www.ballet.dev/",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 25
+      },
+      {
+        "title": "Someone is running mass vulnerability scans, spoofing AI bots like ClaudeBot",
+        "url": "https://knownagents.com/insights",
+        "source": "Hacker News AI",
+        "score": 252
       },
       {
         "title": "Lovable raises $400M Series C",
         "url": "https://lovable.dev/blog/series-c",
         "source": "Hacker News AI",
-        "score": 85
+        "score": 109
       },
       {
         "title": "AI is removing the middle class of software engineering?",
         "url": "https://blog.florianherrengt.com/ai-removing-middle-class-software-engineering.html",
         "source": "Hacker News AI",
-        "score": 671
+        "score": 788
       },
       {
         "title": "What sort of maths are LLMs good at?",
         "url": "https://gowers.wordpress.com/2026/08/12/what-sort-of-maths-are-llms-good-at/",
         "source": "Hacker News AI",
-        "score": 230
-      },
-      {
-        "title": "DLLM: Minimal, clean coding agent built directly on llama.cpp without overhead",
-        "url": "https://github.com/DannyArends/DLLM",
-        "source": "Hacker News AI",
-        "score": 3
+        "score": 247
       },
       {
         "title": "High-Res Photo Shows Sand-Capped Butte Rising from Mars Plain of Polygons",
         "url": "https://petapixel.com/2026/08/04/amazing-high-res-photo-shows-a-butte-rising-from-mars/",
         "source": "Hacker News AI",
-        "score": 153
+        "score": 159
+      },
+      {
+        "title": "Waits: Arthur Samuel's Checkers",
+        "url": "https://timereshared.com/waits-samuel-checkers/",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Delphi 13 Community Edition Is Now Available",
         "url": "https://blogs.embarcadero.com/delphi-13-community-edition-is-now-available/",
         "source": "Hacker News AI",
-        "score": 162
+        "score": 168
       }
     ],
     "news": [
@@ -170,13 +170,13 @@
         "source": "BBC World"
       },
       {
-        "title": "ICE plans to equip agents with gloves that can deliver electric shocks",
-        "url": "https://www.bbc.co.uk/news/articles/c20d292gdp4o?at_medium=RSS&at_campaign=rss",
+        "title": "Ebola outbreak on track to be deadliest ever, WHO chief says",
+        "url": "https://www.bbc.co.uk/news/articles/cgk4pex4mn8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump says White House press secretary Karoline Leavitt to leave post",
-        "url": "https://www.bbc.co.uk/news/articles/cvglzrvyrz3o?at_medium=RSS&at_campaign=rss",
+        "title": "Three men will be executed on the same day as death penalties rise in US",
+        "url": "https://www.bbc.co.uk/news/articles/cn5n399n6zvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -185,8 +185,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Woman pulled alive from rubble 36 hours after Colombia quake",
-        "url": "https://www.bbc.co.uk/news/articles/cz7d2e5wlgno?at_medium=RSS&at_campaign=rss",
+        "title": "BTS star V reveals hearing loss battle during livestream",
+        "url": "https://www.bbc.co.uk/news/articles/cx2v1893n3eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -271,6 +271,16 @@
     ],
     "gaming": [
       {
+        "title": "Cities Skylines meets Balatro in the excellent new roguelike city builder Combolands",
+        "url": "https://www.polygon.com/combolands-demo-preview-impressions/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Xbox Gamers Can Play Co-Op RPG Sunderfolk for a Limited Time",
+        "url": "https://www.polygon.com/xbox-free-games-sunderfolk-tabletop-rgp-couch-coop/",
+        "source": "Polygon"
+      },
+      {
         "title": "After 2 Years, My Hero Academia's Creator Finally Returns With a Near-Perfect Follow-Up",
         "url": "https://www.polygon.com/horikoshi-horror-manga-quit-laughing-shijima-review/",
         "source": "Polygon"
@@ -293,16 +303,6 @@
       {
         "title": "D23's Kingdom Hearts Panel Will Only Be Streamed Live",
         "url": "https://www.polygon.com/d23-kingdom-hearts-25th-anniversary-deep-dive-panel-kh4/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How to get a toe biter buggy in Grounded 2",
-        "url": "https://www.polygon.com/grounded-2-toe-biter-buggy-how-to-get-egg-nest-recipe-location/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Pokémon TCG's 30th Anniversary Fat Pikachu Revealed",
-        "url": "https://www.polygon.com/pokemon-30th-anniversary-tcg-fat-pikachu-ken-sugimori-new-design/",
         "source": "Polygon"
       }
     ],
