@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-14T10:03:39.641873",
-    "total_items": 62
+    "last_updated": "2026-08-14T11:44:05.728684",
+    "total_items": 60
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "GLM-5.3: Frontier coding with emergent cyber capabilities",
         "url": "https://z.ai/blog/glm-5.3",
         "source": "Hacker News",
-        "score": 471
+        "score": 580
+      },
+      {
+        "title": "DeepSeek peak/off-peak pricing update",
+        "url": "https://api-docs.deepseek.com/news/news260813/",
+        "source": "Hacker News",
+        "score": 52
       },
       {
         "title": "Gemini 3.7 Flash",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News",
-        "score": 841
+        "score": 876
       },
       {
         "title": "Accelerating GPT-5.6 Sol Ultrafast",
         "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
         "source": "Hacker News",
-        "score": 602
+        "score": 631
       },
       {
         "title": "Hello, me. It's been a while",
         "url": "https://themech.net/2026/08/hello-me-its-been-a-while/",
         "source": "Hacker News",
-        "score": 214
+        "score": 251
       },
       {
-        "title": "Show HN: Lumabri – Run Moe Models on a P2P Swarm with Colibri",
-        "url": "https://github.com/JustVugg/lumabri",
+        "title": "Differential Heuristics",
+        "url": "https://www.redblobgames.com/blog/2026-08-08-differential-heuristics/",
         "source": "Hacker News",
-        "score": 20
+        "score": 24
       },
       {
         "title": "Show HN: C# Game Engine with its own scripting language and IDE",
         "url": "https://github.com/ArcadeMakerSources/ArcadeMaker",
         "source": "Hacker News",
-        "score": 46
+        "score": 58
       },
       {
         "title": "DeepSeek Harness developer preview",
         "url": "https://deepseek.com/harness/en/",
         "source": "Hacker News",
-        "score": 662
+        "score": 678
       },
       {
-        "title": "Bluesky Protocol Services",
-        "url": "https://atproto.com/blog/introducing-bluesky-protocol-services",
+        "title": "Protect Your Relays",
+        "url": "https://www.iroh.computer/blog/authenticated-relays",
         "source": "Hacker News",
-        "score": 165
+        "score": 5
+      },
+      {
+        "title": "Show HN: Lumabri – Run Moe Models on a P2P Swarm with Colibri",
+        "url": "https://github.com/JustVugg/lumabri",
+        "source": "Hacker News",
+        "score": 31
       },
       {
         "title": "Spaghettifying DRAM",
         "url": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
         "source": "Hacker News",
-        "score": 624
-      },
-      {
-        "title": "Mistral OCR 4.1",
-        "url": "https://docs.mistral.ai/models/ocr-4-1",
-        "source": "Hacker News",
-        "score": 353
+        "score": 642
       },
       {
         "title": "Ruby 4.0 Universal RCE Deserialization Gadget Chain",
         "url": "https://www.elttam.com/blog/ruby-4-0-universal-rce-deserialization-gadget-chain",
         "source": "Hacker News",
-        "score": 28
+        "score": 40
       },
       {
-        "title": "Understanding is the new bottleneck",
-        "url": "https://www.geoffreylitt.com/2026/07/02/understanding-is-the-new-bottleneck",
+        "title": "Mistral OCR 4.1",
+        "url": "https://docs.mistral.ai/models/ocr-4-1",
         "source": "Hacker News",
-        "score": 335
+        "score": 366
       },
       {
-        "title": "Choose Boring Technology (2015)",
-        "url": "https://mcfunley.com/choose-boring-technology",
+        "title": "For the love of god stop using CPU limits in Kubernetes",
+        "url": "https://github.com/inevolin/k8s-cpu-limits-analyzed",
         "source": "Hacker News",
-        "score": 342
+        "score": 36
       },
       {
-        "title": "Donkey.bas is 45 Years Old – 131 line of Glory",
-        "url": "https://donkeybas.com/",
+        "title": "Bluesky Protocol Services",
+        "url": "https://atproto.com/blog/introducing-bluesky-protocol-services",
         "source": "Hacker News",
-        "score": 234
-      },
-      {
-        "title": "Nine PBS sues Iron Mountain over blocked access to archival data",
-        "url": "https://current.org/2026/08/nine-pbs-sues-iron-mountain-over-blocked-access-to-archival-data/",
-        "source": "Hacker News",
-        "score": 312
+        "score": 170
       }
     ],
     "ai": [
@@ -101,84 +101,67 @@
         "title": "Gemini 3.7 Flash",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News AI",
-        "score": 841
+        "score": 876
       },
       {
         "title": "Accelerating GPT-5.6 Sol Ultrafast",
         "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
         "source": "Hacker News AI",
-        "score": 602
-      },
-      {
-        "title": "Mistral OCR 4.1",
-        "url": "https://docs.mistral.ai/models/ocr-4-1",
-        "source": "Hacker News AI",
-        "score": 353
+        "score": 631
       },
       {
         "title": "Ruby 4.0 Universal RCE Deserialization Gadget Chain",
         "url": "https://www.elttam.com/blog/ruby-4-0-universal-rce-deserialization-gadget-chain",
         "source": "Hacker News AI",
-        "score": 28
+        "score": 40
+      },
+      {
+        "title": "Mistral OCR 4.1",
+        "url": "https://docs.mistral.ai/models/ocr-4-1",
+        "source": "Hacker News AI",
+        "score": 366
       },
       {
         "title": "Nine PBS sues Iron Mountain over blocked access to archival data",
         "url": "https://current.org/2026/08/nine-pbs-sues-iron-mountain-over-blocked-access-to-archival-data/",
         "source": "Hacker News AI",
-        "score": 312
+        "score": 323
       },
       {
         "title": "How Organizations Use AI: Evidence from ChatGPT [pdf]",
         "url": "https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf",
         "source": "Hacker News AI",
-        "score": 109
+        "score": 114
       },
       {
         "title": "Choosing an AI model: one prompt, 11 models, different results",
         "url": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results/",
         "source": "Hacker News AI",
-        "score": 205
+        "score": 207
       },
       {
         "title": "Text AI watermarks will always be trivial to remove",
         "url": "https://www.seangoedecke.com/text-ai-watermarks/",
         "source": "Hacker News AI",
-        "score": 124
+        "score": 129
       },
       {
         "title": "AI At Home Part 1: A Box Of Scraps",
         "url": "https://jdagostino.github.io/ai-pt1-box-o-scraps/index.html",
         "source": "Hacker News AI",
-        "score": 118
-      },
-      {
-        "title": "Covert CIA program said to be behind mysterious attacks on Galápagos boats",
-        "url": "https://www.washingtonpost.com/investigations/2026/08/13/covert-cia-program-said-be-behind-mysterious-attacks-galpagos-boats/",
-        "source": "Hacker News AI",
-        "score": 13
+        "score": 120
       },
       {
         "title": "Heart aerospace completes first flight of largest electric aircraft",
         "url": "https://www.heartaerospace.com/newsroom/heart-aerospace-completes-first-flight-of-world-s-largest-electric-aircraft",
         "source": "Hacker News AI",
         "score": 131
-      },
-      {
-        "title": "Connecticut judge says plaintiff hid messages for AI in court filings",
-        "url": "https://www.reuters.com/legal/litigation/connecticut-judge-says-plaintiff-hid-messages-ai-court-filings-2026-08-13/",
-        "source": "Hacker News AI",
-        "score": 10
       }
     ],
     "news": [
       {
-        "title": "'Unprecedented' rain in Japan kills six people",
+        "title": "'Unprecedented' rain in Japan kills eight people",
         "url": "https://www.bbc.co.uk/news/articles/cq561gpen8lo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Palestinians told to leave homes in village where Israeli settlers besieged houses",
-        "url": "https://www.bbc.co.uk/news/articles/cj4kppdk2qwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -202,8 +185,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Person fined after using foghorn to wake sleeping polar bear",
-        "url": "https://www.bbc.co.uk/news/articles/cx2k1r97vx7o?at_medium=RSS&at_campaign=rss",
+        "title": "Presidential vote counting halted in Zambia over alleged attacks on polling staff",
+        "url": "https://www.bbc.co.uk/news/articles/c5yr8r04edvo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "US missionary released following kidnap in Niger, Christian group says",
+        "url": "https://www.bbc.co.uk/news/articles/ckg40jvvkp7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -229,13 +217,13 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " Quote of the Day by Hayao Miyazaki: \"It’s a dangerous way to make an animated film, and I wish it could be different… we never know where the story will go, but we just keep working on the film as it develops\" ",
-        "url": "https://www.creativebloq.com/art/animation/quote-of-the-day-by-hayao-miyazaki-its-a-dangerous-way-to-make-an-animated-film-and-i-wish-it-could-be-different-we-never-know-where-the-story-will-go-but-we-just-keep-working-on-the-film-as-it-develops",
+        "title": " Instagram just redesigned its logo for the worst possible reason ",
+        "url": "https://www.creativebloq.com/design/branding/instagram-redesigned-its-logo-for-the-worst-possible-reason",
         "source": "Creative Bloq"
       },
       {
-        "title": " Instagram just redesigned its logo for the worst possible reason ",
-        "url": "https://www.creativebloq.com/design/branding/instagram-redesigned-its-logo-for-the-worst-possible-reason",
+        "title": " Quote of the Day by Hayao Miyazaki: \"It’s a dangerous way to make an animated film, and I wish it could be different… we never know where the story will go, but we just keep working on the film as it develops\" ",
+        "url": "https://www.creativebloq.com/art/animation/quote-of-the-day-by-hayao-miyazaki-its-a-dangerous-way-to-make-an-animated-film-and-i-wish-it-could-be-different-we-never-know-where-the-story-will-go-but-we-just-keep-working-on-the-film-as-it-develops",
         "source": "Creative Bloq"
       },
       {
