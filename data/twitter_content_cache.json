@@ -1,161 +1,161 @@
 {
   "metadata": {
-    "last_updated": "2026-08-14T14:53:00.693550",
+    "last_updated": "2026-08-14T15:52:57.948722",
     "total_items": 59
   },
   "content": {
     "tech": [
       {
+        "title": "Every Fucking Website (2020)",
+        "url": "https://lxe.github.io/everywebsite/",
+        "source": "Hacker News",
+        "score": 337
+      },
+      {
+        "title": "When Genius Fails: The Intellectual Arrogance of the AI Labs",
+        "url": "https://weightythoughts.com/p/when-genius-failsthe-intellectual",
+        "source": "Hacker News",
+        "score": 69
+      },
+      {
+        "title": "Seven books I keep close because I love them",
+        "url": "https://blog.plover.com/2026/08/02/",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Introducing Toast 1",
+        "url": "https://www.mixedbread.com/blog/toast-1",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
         "title": "GLM-5.3: Frontier coding with emergent cyber capabilities",
         "url": "https://z.ai/blog/glm-5.3",
         "source": "Hacker News",
-        "score": 800
+        "score": 847
+      },
+      {
+        "title": "Qwen3.8-27B",
+        "url": "https://twitter.com/alibaba_qwen/status/2088280182356611304",
+        "source": "Hacker News",
+        "score": 147
       },
       {
         "title": "In Australia, a Home Battery Boom Has Helped Cut Wholesale Power Prices in Half",
         "url": "https://e360.yale.edu/digest/australia-home-batteries",
         "source": "Hacker News",
-        "score": 79
+        "score": 137
       },
       {
         "title": "Don't classify, hallucinate!",
         "url": "https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications",
         "source": "Hacker News",
-        "score": 109
+        "score": 137
+      },
+      {
+        "title": "Self-hosted web push Cloudflare Worker, works on iOS",
+        "url": "https://kukuroo.cc/",
+        "source": "Hacker News",
+        "score": 15
       },
       {
         "title": "DeepSeek peak/off-peak pricing update",
         "url": "https://api-docs.deepseek.com/news/news260813/",
         "source": "Hacker News",
-        "score": 154
+        "score": 175
       },
       {
-        "title": "Every Fucking Website",
-        "url": "https://lxe.github.io/everywebsite/",
+        "title": "I turned my RSS feeds into an e-ink newspaper to stop reading on my phone",
+        "url": "https://heyjonny.dev/posts/rss-to-eink-newspaper/",
         "source": "Hacker News",
-        "score": 8
-      },
-      {
-        "title": "HashAgent – Share an AI agent as a URL, runs locally via WebGPU",
-        "url": "https://hashagent.pages.dev/",
-        "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "Show HN: Lambdock – Wayland-native GTK4 dock with a live Lisp REPL",
-        "url": "https://codeberg.org/jjba23/lambdock",
-        "source": "Hacker News",
-        "score": 14
-      },
-      {
-        "title": "Gemini 3.7 Flash",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
-        "source": "Hacker News",
-        "score": 921
+        "score": 18
       },
       {
         "title": "The TEMU-Fication of Software, Digital Goods and Services",
         "url": "https://xn--gckvb8fzb.com/the-temu-fication-of-software-digital-goods-services/",
         "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Why does Opus 5 feel worse to work with?",
-        "url": "https://mun-logadan.github.io/why-does-opus-5-feel-worse/",
-        "source": "Hacker News",
-        "score": 322
-      },
-      {
-        "title": "Differential Heuristics",
-        "url": "https://www.redblobgames.com/blog/2026-08-08-differential-heuristics/",
-        "source": "Hacker News",
-        "score": 78
+        "score": 48
       },
       {
         "title": "WhatCable: Know what your USB-C cable can do",
         "url": "https://www.whatcable.uk/",
         "source": "Hacker News",
-        "score": 21
+        "score": 48
       },
       {
-        "title": "We're not done with point clouds",
-        "url": "https://claytonwramsey.com/blog/mvt/",
+        "title": "Qwen 3.8 27B is out: open weights, best local dense model yet",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
         "source": "Hacker News",
-        "score": 44
+        "score": 50
       },
       {
-        "title": "Hello, me. It's been a while",
-        "url": "https://themech.net/2026/08/hello-me-its-been-a-while/",
+        "title": "Gödel, Escher, Elisp: The Beauty of Macros",
+        "url": "https://www.chiply.dev/post-elisp-macros-are-beautiful",
         "source": "Hacker News",
-        "score": 319
-      },
-      {
-        "title": "Protect Your Relays",
-        "url": "https://www.iroh.computer/blog/authenticated-relays",
-        "source": "Hacker News",
-        "score": 31
+        "score": 16
       }
     ],
     "ai": [
       {
+        "title": "When Genius Fails: The Intellectual Arrogance of the AI Labs",
+        "url": "https://weightythoughts.com/p/when-genius-failsthe-intellectual",
+        "source": "Hacker News AI",
+        "score": 69
+      },
+      {
         "title": "HashAgent – Share an AI agent as a URL, runs locally via WebGPU",
         "url": "https://hashagent.pages.dev/",
         "source": "Hacker News AI",
-        "score": 13
+        "score": 19
       },
       {
-        "title": "Gemini 3.7 Flash",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+        "title": "Show HN: Graft – Claude Code hooks that cut grep tokens by 42%",
+        "url": "https://github.com/NanoNets/Graft",
         "source": "Hacker News AI",
-        "score": 921
+        "score": 3
+      },
+      {
+        "title": "AI Model Atlas – visualizing populations of ML models as interconnected 3D graph",
+        "url": "https://run.cosmograph.app/public/ca9fd1ad-fe83-4238-8b69-b707c633aef0",
+        "source": "Hacker News AI",
+        "score": 8
       },
       {
         "title": "Accelerating GPT-5.6 Sol Ultrafast",
         "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
         "source": "Hacker News AI",
-        "score": 668
+        "score": 671
       },
       {
         "title": "Mistral OCR 4.1",
         "url": "https://docs.mistral.ai/models/ocr-4-1",
         "source": "Hacker News AI",
-        "score": 390
+        "score": 394
       },
       {
         "title": "Ruby 4.0 Universal RCE Deserialization Gadget Chain",
         "url": "https://www.elttam.com/blog/ruby-4-0-universal-rce-deserialization-gadget-chain",
         "source": "Hacker News AI",
-        "score": 64
+        "score": 67
       },
       {
-        "title": "Nine PBS sues Iron Mountain over blocked access to archival data",
-        "url": "https://current.org/2026/08/nine-pbs-sues-iron-mountain-over-blocked-access-to-archival-data/",
+        "title": "Gemini 3.7 Flash",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News AI",
-        "score": 367
+        "score": 931
+      },
+      {
+        "title": "US loses one-fourth of drone fleet as Iran war drains its arsenal",
+        "url": "https://www.indiatoday.in/world/story/us-loses-one-fourth-mq-9-reaper-drones-near-strait-of-hormuz-in-iran-war-2970823-2026-08-14",
+        "source": "Hacker News AI",
+        "score": 26
       },
       {
         "title": "How Organizations Use AI: Evidence from ChatGPT [pdf]",
         "url": "https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf",
         "source": "Hacker News AI",
         "score": 120
-      },
-      {
-        "title": "Choosing an AI model: one prompt, 11 models, different results",
-        "url": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results/",
-        "source": "Hacker News AI",
-        "score": 210
-      },
-      {
-        "title": "Text AI watermarks will always be trivial to remove",
-        "url": "https://www.seangoedecke.com/text-ai-watermarks/",
-        "source": "Hacker News AI",
-        "score": 134
-      },
-      {
-        "title": "AI At Home Part 1: A Box Of Scraps",
-        "url": "https://jdagostino.github.io/ai-pt1-box-o-scraps/index.html",
-        "source": "Hacker News AI",
-        "score": 123
       }
     ],
     "news": [
@@ -170,7 +170,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Builders unearth €9m gold loot sealed in walls of Belgian property",
+        "title": "Builders unearth €9m gold stash sealed in walls of Belgian property",
         "url": "https://www.bbc.co.uk/news/articles/c5ydzg0dnz7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -191,6 +191,16 @@
       }
     ],
     "art": [
+      {
+        "title": " Stunning demo shows Unreal Engine 6 should be a game changer for rendering cinematics ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/stunning-demo-shows-unreal-engine-6-should-be-a-game-changer-for-rendering-cinematics",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Audeze wants to make the only headphones you ever need ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/audeze-wants-to-make-the-only-headphones-you-ever-need",
+        "source": "Creative Bloq"
+      },
       {
         "title": " 8BitDo just turned your iPhone into a perfect retro handheld with this clever controller ",
         "url": "https://www.creativebloq.com/tech/accessories/8bitdo-just-turned-your-iphone-into-a-perfect-retro-handheld-with-this-clever-controller",
@@ -214,16 +224,6 @@
       {
         "title": " Marvel fans apologise to your wallets, the PlayStation x Wolverine collab is here ",
         "url": "https://www.creativebloq.com/entertainment/gaming/marvel-fans-apologise-to-your-wallets-the-playstation-x-wolverine-collab-is-here",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Quote of the Day by Hayao Miyazaki: \"It’s a dangerous way to make an animated film, and I wish it could be different… we never know where the story will go, but we just keep working on the film as it develops\" ",
-        "url": "https://www.creativebloq.com/art/animation/quote-of-the-day-by-hayao-miyazaki-its-a-dangerous-way-to-make-an-animated-film-and-i-wish-it-could-be-different-we-never-know-where-the-story-will-go-but-we-just-keep-working-on-the-film-as-it-develops",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Instagram just redesigned its logo for the worst possible reason ",
-        "url": "https://www.creativebloq.com/design/branding/instagram-redesigned-its-logo-for-the-worst-possible-reason",
         "source": "Creative Bloq"
       }
     ],
@@ -266,6 +266,31 @@
     ],
     "gaming": [
       {
+        "title": "Marvel’s 'Alien vs. X-Men' Looks Like a Must Read Comic in New Preview Pages",
+        "url": "https://www.polygon.com/marvel-alien-vs-x-men-crossover-series-release-date-covers/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Modern Warfare 4 Beta Will Include Campaign and Warzone In Series First",
+        "url": "https://www.polygon.com/modern-warfare-4-beta-campaign-mission/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Marvel Tokon' Reportedly Moves 500K Units In First Week, Kicking Off Sales Figures Debate",
+        "url": "https://www.polygon.com/marvel-tokon-sales-debate-steam-ps5/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Star Wars The Mandalorian and Grogu Gets Disney Plus Streaming Date",
+        "url": "https://www.polygon.com/mandalorian-and-grogu-disney-plus-release-date-star-wars/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Anne Hathaway's Best Sci-Fi Movie Boils Down to One Perfect Quote",
+        "url": "https://www.polygon.com/anne-hathaways-best-sci-fi-performance/",
+        "source": "Polygon"
+      },
+      {
         "title": "Matt Mercer's 6-Part Critical Role Campaign Was a Perfect Dystopian Tragedy",
         "url": "https://www.polygon.com/critical-role-age-of-umbra-sallowlands-review/",
         "source": "Polygon"
@@ -273,31 +298,6 @@
       {
         "title": "Honkai Star Rail version 4.5 livestream codes",
         "url": "https://www.polygon.com/honkai-star-rail-version-4-5-livestream-codes/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Forget Control Resonant, You Can Play 2024's Best Action Game on PS Plus and Game Pass Now",
-        "url": "https://www.polygon.com/banishers-ghosts-of-new-eden-ps-plus-game-pass/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Fortnite'’s Most Prized Collectible Is Easier Than Ever to Get, but for a Limited Time",
-        "url": "https://www.polygon.com/fortnite-complete-sprite-collection-easier/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Disney Reveals Kingdom Hearts Is Now a Billion-dollar Game Franchise",
-        "url": "https://www.polygon.com/disney-kingdom-hearts-billion-dollar-franchise/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Madden NFL 27 Review: A Franchise Mode With Some Football on the Side",
-        "url": "https://www.polygon.com/madden-nfl-27-like-umamusume/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Hey what's up with all these eye hand bosses?",
-        "url": "https://www.polygon.com/video/hey-what-s-up-with-all-these-eye-hand-bosses/",
         "source": "Polygon"
       }
     ],
