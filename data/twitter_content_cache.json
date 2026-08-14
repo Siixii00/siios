@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-14T11:44:05.728684",
+    "last_updated": "2026-08-14T13:08:09.334266",
     "total_items": 60
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "GLM-5.3: Frontier coding with emergent cyber capabilities",
         "url": "https://z.ai/blog/glm-5.3",
         "source": "Hacker News",
-        "score": 580
+        "score": 675
+      },
+      {
+        "title": "Don't classify, hallucinate!",
+        "url": "https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications",
+        "source": "Hacker News",
+        "score": 35
       },
       {
         "title": "DeepSeek peak/off-peak pricing update",
         "url": "https://api-docs.deepseek.com/news/news260813/",
         "source": "Hacker News",
-        "score": 52
+        "score": 95
       },
       {
         "title": "Gemini 3.7 Flash",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News",
-        "score": 876
+        "score": 893
       },
       {
-        "title": "Accelerating GPT-5.6 Sol Ultrafast",
-        "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
+        "title": "Why does Opus 5 feel worse to work with?",
+        "url": "https://mun-logadan.github.io/why-does-opus-5-feel-worse/",
         "source": "Hacker News",
-        "score": 631
-      },
-      {
-        "title": "Hello, me. It's been a while",
-        "url": "https://themech.net/2026/08/hello-me-its-been-a-while/",
-        "source": "Hacker News",
-        "score": 251
+        "score": 192
       },
       {
         "title": "Differential Heuristics",
         "url": "https://www.redblobgames.com/blog/2026-08-08-differential-heuristics/",
         "source": "Hacker News",
-        "score": 24
+        "score": 53
       },
       {
-        "title": "Show HN: C# Game Engine with its own scripting language and IDE",
-        "url": "https://github.com/ArcadeMakerSources/ArcadeMaker",
+        "title": "Accelerating GPT-5.6 Sol Ultrafast",
+        "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
         "source": "Hacker News",
-        "score": 58
+        "score": 649
       },
       {
-        "title": "DeepSeek Harness developer preview",
-        "url": "https://deepseek.com/harness/en/",
+        "title": "Hello, me. It's been a while",
+        "url": "https://themech.net/2026/08/hello-me-its-been-a-while/",
         "source": "Hacker News",
-        "score": 678
+        "score": 279
       },
       {
         "title": "Protect Your Relays",
         "url": "https://www.iroh.computer/blog/authenticated-relays",
         "source": "Hacker News",
-        "score": 5
+        "score": 13
       },
       {
-        "title": "Show HN: Lumabri – Run Moe Models on a P2P Swarm with Colibri",
-        "url": "https://github.com/JustVugg/lumabri",
+        "title": "Show HN: C# Game Engine with its own scripting language and IDE",
+        "url": "https://github.com/ArcadeMakerSources/ArcadeMaker",
         "source": "Hacker News",
-        "score": 31
+        "score": 73
+      },
+      {
+        "title": "DeepSeek Harness developer preview",
+        "url": "https://deepseek.com/harness/en/",
+        "source": "Hacker News",
+        "score": 691
       },
       {
         "title": "Spaghettifying DRAM",
         "url": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
         "source": "Hacker News",
-        "score": 642
-      },
-      {
-        "title": "Ruby 4.0 Universal RCE Deserialization Gadget Chain",
-        "url": "https://www.elttam.com/blog/ruby-4-0-universal-rce-deserialization-gadget-chain",
-        "source": "Hacker News",
-        "score": 40
+        "score": 662
       },
       {
         "title": "Mistral OCR 4.1",
         "url": "https://docs.mistral.ai/models/ocr-4-1",
         "source": "Hacker News",
-        "score": 366
+        "score": 381
       },
       {
-        "title": "For the love of god stop using CPU limits in Kubernetes",
-        "url": "https://github.com/inevolin/k8s-cpu-limits-analyzed",
+        "title": "Ruby 4.0 Universal RCE Deserialization Gadget Chain",
+        "url": "https://www.elttam.com/blog/ruby-4-0-universal-rce-deserialization-gadget-chain",
         "source": "Hacker News",
-        "score": 36
+        "score": 48
       },
       {
         "title": "Bluesky Protocol Services",
         "url": "https://atproto.com/blog/introducing-bluesky-protocol-services",
         "source": "Hacker News",
-        "score": 170
+        "score": 182
       }
     ],
     "ai": [
@@ -101,61 +101,61 @@
         "title": "Gemini 3.7 Flash",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News AI",
-        "score": 876
+        "score": 893
       },
       {
         "title": "Accelerating GPT-5.6 Sol Ultrafast",
         "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
         "source": "Hacker News AI",
-        "score": 631
-      },
-      {
-        "title": "Ruby 4.0 Universal RCE Deserialization Gadget Chain",
-        "url": "https://www.elttam.com/blog/ruby-4-0-universal-rce-deserialization-gadget-chain",
-        "source": "Hacker News AI",
-        "score": 40
+        "score": 649
       },
       {
         "title": "Mistral OCR 4.1",
         "url": "https://docs.mistral.ai/models/ocr-4-1",
         "source": "Hacker News AI",
-        "score": 366
+        "score": 381
+      },
+      {
+        "title": "Ruby 4.0 Universal RCE Deserialization Gadget Chain",
+        "url": "https://www.elttam.com/blog/ruby-4-0-universal-rce-deserialization-gadget-chain",
+        "source": "Hacker News AI",
+        "score": 48
       },
       {
         "title": "Nine PBS sues Iron Mountain over blocked access to archival data",
         "url": "https://current.org/2026/08/nine-pbs-sues-iron-mountain-over-blocked-access-to-archival-data/",
         "source": "Hacker News AI",
-        "score": 323
+        "score": 339
       },
       {
         "title": "How Organizations Use AI: Evidence from ChatGPT [pdf]",
         "url": "https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf",
         "source": "Hacker News AI",
-        "score": 114
+        "score": 117
       },
       {
         "title": "Choosing an AI model: one prompt, 11 models, different results",
         "url": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results/",
         "source": "Hacker News AI",
-        "score": 207
+        "score": 208
       },
       {
         "title": "Text AI watermarks will always be trivial to remove",
         "url": "https://www.seangoedecke.com/text-ai-watermarks/",
         "source": "Hacker News AI",
-        "score": 129
+        "score": 133
       },
       {
         "title": "AI At Home Part 1: A Box Of Scraps",
         "url": "https://jdagostino.github.io/ai-pt1-box-o-scraps/index.html",
         "source": "Hacker News AI",
-        "score": 120
+        "score": 121
       },
       {
         "title": "Heart aerospace completes first flight of largest electric aircraft",
         "url": "https://www.heartaerospace.com/newsroom/heart-aerospace-completes-first-flight-of-world-s-largest-electric-aircraft",
         "source": "Hacker News AI",
-        "score": 131
+        "score": 132
       }
     ],
     "news": [
@@ -197,6 +197,11 @@
     ],
     "art": [
       {
+        "title": " 8BitDo just turned your iPhone into a perfect retro handheld with this clever controller ",
+        "url": "https://www.creativebloq.com/tech/accessories/8bitdo-just-turned-your-iphone-into-a-perfect-retro-handheld-with-this-clever-controller",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " To target Gen Z, premium brands must learn the new codes of luxury ",
         "url": "https://www.creativebloq.com/design/branding/to-target-gen-z-premium-brands-must-learn-the-new-codes-of-luxury",
         "source": "Creative Bloq"
@@ -217,18 +222,13 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " Instagram just redesigned its logo for the worst possible reason ",
-        "url": "https://www.creativebloq.com/design/branding/instagram-redesigned-its-logo-for-the-worst-possible-reason",
-        "source": "Creative Bloq"
-      },
-      {
         "title": " Quote of the Day by Hayao Miyazaki: \"It’s a dangerous way to make an animated film, and I wish it could be different… we never know where the story will go, but we just keep working on the film as it develops\" ",
         "url": "https://www.creativebloq.com/art/animation/quote-of-the-day-by-hayao-miyazaki-its-a-dangerous-way-to-make-an-animated-film-and-i-wish-it-could-be-different-we-never-know-where-the-story-will-go-but-we-just-keep-working-on-the-film-as-it-develops",
         "source": "Creative Bloq"
       },
       {
-        "title": " The new Monoprix rebrand awakens a French icon ",
-        "url": "https://www.creativebloq.com/design/branding/the-new-monoprix-rebrand-awakens-a-french-icon",
+        "title": " Instagram just redesigned its logo for the worst possible reason ",
+        "url": "https://www.creativebloq.com/design/branding/instagram-redesigned-its-logo-for-the-worst-possible-reason",
         "source": "Creative Bloq"
       }
     ],
@@ -271,38 +271,38 @@
     ],
     "gaming": [
       {
-        "title": "New Sci-Fi Thriller From Godzilla Director Officially Drops in 3 Weeks",
-        "url": "https://www.polygon.com/onslaught-release-date-adria-arjona/",
+        "title": "Madden NFL 27 Review: A Franchise Mode With Some Football on the Side",
+        "url": "https://www.polygon.com/madden-nfl-27-like-umamusume/",
         "source": "Polygon"
       },
       {
-        "title": "Spider-Man: Beyond the Spider-Verse Clip Has Leaked, and Sony Is Working Hard to Take It Down",
-        "url": "https://www.polygon.com/spider-man-beyond-the-spider-verse-leaked-clip-trailer/",
+        "title": "Hey what's up with all these eye hand bosses?",
+        "url": "https://www.polygon.com/video/hey-what-s-up-with-all-these-eye-hand-bosses/",
         "source": "Polygon"
       },
       {
-        "title": "A Pokémon Game Becomes the Second Best-Selling Nintendo Switch 2 Game",
-        "url": "https://www.polygon.com/pokemon-pokopia-5-million-sales-switch-2/",
+        "title": "Investigating Tom Nook's predatory lending practices in Animal Crossing",
+        "url": "https://www.polygon.com/video/investigating-tom-nook-s-predatory-lending-practices-in-animal-crossing/",
         "source": "Polygon"
       },
       {
-        "title": "Magic's Reality Fracture Revives a 16-Year-Old Commander Card From an Erased Timeline",
-        "url": "https://www.polygon.com/magic-mtg-reality-fracture-darksteel-angel-mirrodin-pure/",
+        "title": "Why did Tony Hawk's Pro Skater 2 feature a booby trap banned by the UN?",
+        "url": "https://www.polygon.com/video/why-did-tony-hawk-s-pro-skater-2-feature-a-booby-trap-banned-by-the-un/",
         "source": "Polygon"
       },
       {
-        "title": "Rami Malek’s $60 Million Spy-Thriller Flop Is Officially a Streaming Hit on Prime Video ",
-        "url": "https://www.polygon.com/prime-video-streaming-august-2026-the-amateur/",
+        "title": "Is Cyberpunk 2077 wet enough?",
+        "url": "https://www.polygon.com/video/is-cyberpunk-2077-wet-enough/",
         "source": "Polygon"
       },
       {
-        "title": "How does the Explorer Gadget work in Pokémon Go?",
-        "url": "https://www.polygon.com/pokemon-go-explorer-gadget-how-to-use/",
+        "title": "The 5 Most Intense Thrillers on Netflix",
+        "url": "https://www.polygon.com/most-intense-thrillers-netflix-ranking/",
         "source": "Polygon"
       },
       {
-        "title": "Netflix closes more game studios as it pulls back on video games",
-        "url": "https://www.polygon.com/netflix-shutting-down-game-studios/",
+        "title": "What's up with Voldo from Soulcalibur?",
+        "url": "https://www.polygon.com/video/what-s-up-with-voldo-from-soulcalibur/",
         "source": "Polygon"
       }
     ],
