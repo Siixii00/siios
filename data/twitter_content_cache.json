@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-14T17:53:39.779492",
-    "total_items": 59
+    "last_updated": "2026-08-14T18:55:12.630508",
+    "total_items": 60
   },
   "content": {
     "tech": [
@@ -9,141 +9,141 @@
         "title": "Qwen 3.8 27B",
         "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
         "source": "Hacker News",
-        "score": 307
-      },
-      {
-        "title": "Seven books I keep close because I love them",
-        "url": "https://blog.plover.com/2026/08/02/",
-        "source": "Hacker News",
-        "score": 143
+        "score": 443
       },
       {
         "title": "Count Binface receives over a quarter of votes in Clacton by-election",
         "url": "https://www.bbc.com/news/articles/ce97mm3vvemo",
         "source": "Hacker News",
-        "score": 73
+        "score": 216
+      },
+      {
+        "title": "Seven books I keep close because I love them",
+        "url": "https://blog.plover.com/2026/08/02/",
+        "source": "Hacker News",
+        "score": 183
       },
       {
         "title": "RustDesk now supports true unattended remote access on Wayland",
         "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
         "source": "Hacker News",
-        "score": 62
-      },
-      {
-        "title": "Introducing Toast 1",
-        "url": "https://www.mixedbread.com/blog/toast-1",
-        "source": "Hacker News",
-        "score": 99
+        "score": 96
       },
       {
         "title": "Why does Opus 5 feel worse to work with?",
         "url": "https://mun-logadan.github.io/why-does-opus-5-feel-worse/",
         "source": "Hacker News",
-        "score": 442
+        "score": 516
       },
       {
         "title": "GLM-5.3: Frontier coding with emergent cyber capabilities",
         "url": "https://z.ai/blog/glm-5.3",
         "source": "Hacker News",
-        "score": 925
+        "score": 947
+      },
+      {
+        "title": "Introducing Toast 1",
+        "url": "https://www.mixedbread.com/blog/toast-1",
+        "source": "Hacker News",
+        "score": 122
+      },
+      {
+        "title": "Maximizing the value of your Claude Code sessions",
+        "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
+        "source": "Hacker News",
+        "score": 59
       },
       {
         "title": "AI by Hand",
         "url": "https://www.byhand.ai/",
         "source": "Hacker News",
-        "score": 35
-      },
-      {
-        "title": "Every Fucking Website (2020)",
-        "url": "https://lxe.github.io/everywebsite/",
-        "source": "Hacker News",
-        "score": 554
-      },
-      {
-        "title": "RayforceDB – a pure C analytics database with a Lisp-like syntax",
-        "url": "https://rayforcedb.com/",
-        "source": "Hacker News",
-        "score": 20
+        "score": 69
       },
       {
         "title": "Ultraviolet Bird Photography",
         "url": "https://uvbirds.com/",
         "source": "Hacker News",
-        "score": 29
+        "score": 47
       },
       {
         "title": "I turned my RSS feeds into an e-ink newspaper to stop reading on my phone",
         "url": "https://heyjonny.dev/posts/rss-to-eink-newspaper/",
         "source": "Hacker News",
-        "score": 61
+        "score": 75
       },
       {
         "title": "Forbidden City Cabbage",
         "url": "https://www.cnn.com/2025/11/10/style/jadeite-cabbage-taiwan-forbidden-city-curio-hnk-intl",
         "source": "Hacker News",
-        "score": 14
+        "score": 29
       },
       {
-        "title": "Maximizing the value of your Claude Code sessions",
-        "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
+        "title": "Every Fucking Website (2020)",
+        "url": "https://lxe.github.io/everywebsite/",
         "source": "Hacker News",
-        "score": 20
+        "score": 584
       },
       {
-        "title": "France's top court blocks social media ban for under-15s",
-        "url": "https://www.reuters.com/world/frances-top-court-rules-social-media-ban-curtails-freedom-expression-2026-08-14/",
+        "title": "Show HN: Embed a real Linux terminal on your website",
+        "url": "https://sandbox.bio/training/embed",
         "source": "Hacker News",
-        "score": 108
+        "score": 3
+      },
+      {
+        "title": "A Contract-Grade Verifier for LLM-Generated GPU Kernels",
+        "url": "https://arxiv.org/abs/2608.12700",
+        "source": "Hacker News",
+        "score": 11
       }
     ],
     "ai": [
       {
-        "title": "AI by Hand",
-        "url": "https://www.byhand.ai/",
-        "source": "Hacker News AI",
-        "score": 35
-      },
-      {
         "title": "Maximizing the value of your Claude Code sessions",
         "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
         "source": "Hacker News AI",
-        "score": 20
+        "score": 59
       },
       {
-        "title": "Google is making private AI practical with homomorphic encryption",
-        "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+        "title": "AI by Hand",
+        "url": "https://www.byhand.ai/",
         "source": "Hacker News AI",
-        "score": 68
+        "score": 69
       },
       {
         "title": "A Contract-Grade Verifier for LLM-Generated GPU Kernels",
         "url": "https://arxiv.org/abs/2608.12700",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 11
+      },
+      {
+        "title": "Google is making private AI practical with homomorphic encryption",
+        "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+        "source": "Hacker News AI",
+        "score": 91
       },
       {
         "title": "AI Model Atlas – visualizing populations of ML models as interconnected 3D graph",
         "url": "https://run.cosmograph.app/public/ca9fd1ad-fe83-4238-8b69-b707c633aef0",
         "source": "Hacker News AI",
-        "score": 25
+        "score": 35
       },
       {
         "title": "HashAgent – Share an AI agent as a URL, runs locally via WebGPU",
         "url": "https://hashagent.pages.dev/",
         "source": "Hacker News AI",
-        "score": 34
-      },
-      {
-        "title": "Show HN: Graft – Claude Code hooks that cut grep tokens by 42%",
-        "url": "https://github.com/NanoNets/Graft",
-        "source": "Hacker News AI",
-        "score": 33
+        "score": 38
       },
       {
         "title": "Show HN: Is AI Dumber Today? An index of AI model experience from user's opinion",
         "url": "https://isaidumber.today/",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 10
+      },
+      {
+        "title": "Gemini 3.7 Flash",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+        "source": "Hacker News AI",
+        "score": 938
       },
       {
         "title": "Ruby 4.0 Universal RCE Deserialization Gadget Chain",
@@ -152,10 +152,16 @@
         "score": 70
       },
       {
-        "title": "Gemini 3.7 Flash",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+        "title": "Show HN: Graft – Claude Code hooks that cut grep tokens by 42%",
+        "url": "https://github.com/NanoNets/Graft",
         "source": "Hacker News AI",
-        "score": 938
+        "score": 35
+      },
+      {
+        "title": "People Are 'Marrying' Chatbots. These Lawmakers Want to Stop Them",
+        "url": "https://www.wired.com/story/people-are-marrying-chatbots-these-lawmakers-want-to-stop-them/",
+        "source": "Hacker News AI",
+        "score": 5
       }
     ],
     "news": [
@@ -207,13 +213,13 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " To target Gen Z, premium brands must learn the new codes of luxury ",
-        "url": "https://www.creativebloq.com/design/branding/to-target-gen-z-premium-brands-must-learn-the-new-codes-of-luxury",
+        "title": " Nothing’s CMF Clip Pro is the perfect cure to my individuality complex ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/nothings-cmf-clip-pro-is-the-perfect-cure-to-my-individuality-complex",
         "source": "Creative Bloq"
       },
       {
-        "title": " Nothing’s CMF Clip Pro is the perfect cure to my individuality complex ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/nothings-cmf-clip-pro-is-the-perfect-cure-to-my-individuality-complex",
+        "title": " To target Gen Z, premium brands must learn the new codes of luxury ",
+        "url": "https://www.creativebloq.com/design/branding/to-target-gen-z-premium-brands-must-learn-the-new-codes-of-luxury",
         "source": "Creative Bloq"
       },
       {
@@ -266,6 +272,16 @@
     ],
     "gaming": [
       {
+        "title": "Highly-Rated Steam MMO In Development For 10 Years Shocks World With Free Release",
+        "url": "https://www.polygon.com/free-steam-game-like-maplestory-souls-remnant-mmo-rpg-what-is/",
+        "source": "Polygon"
+      },
+      {
+        "title": "58 Years Later, Captain Kirk's Best Star Trek Quote Hits Harder Than Ever",
+        "url": "https://www.polygon.com/best-star-trek-quote/",
+        "source": "Polygon"
+      },
+      {
         "title": "KPop Demon Hunters Criterion Collection Release Includes New Features, Physical Goodies",
         "url": "https://www.polygon.com/kpop-demon-hunters-criterion-physical-release-pre-order-details/",
         "source": "Polygon"
@@ -288,16 +304,6 @@
       {
         "title": "Patchdle is the Toughest Wordle-like for Gamers",
         "url": "https://www.polygon.com/patchdle-daily-browser-patch-notes-game-trivia-wordle/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Majora's Mask Gets a Sci-Fi Twist in This Cozy 2023 RPG",
-        "url": "https://www.polygon.com/i-was-a-teenage-exocolonist-review-endings-replay/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Lanterns' Review: 'Watchmen' Meets 'Yellowstone' in HBO's Brilliant New Sci-Fi Show",
-        "url": "https://www.polygon.com/lanterns-review-hbo/",
         "source": "Polygon"
       }
     ],
