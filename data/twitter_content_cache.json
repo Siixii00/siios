@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-13T23:41:51.773997",
-    "total_items": 64
+    "last_updated": "2026-08-14T02:01:34.334222",
+    "total_items": 60
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Gemini 3.7 Flash",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News",
-        "score": 554
+        "score": 624
+      },
+      {
+        "title": "Bluesky Protocol Services",
+        "url": "https://atproto.com/blog/introducing-bluesky-protocol-services",
+        "source": "Hacker News",
+        "score": 66
+      },
+      {
+        "title": "SparrowMap – Cameras that watch government vehicles",
+        "url": "https://sparrowmap.com/",
+        "source": "Hacker News",
+        "score": 38
       },
       {
         "title": "Accelerating GPT-5.6 Sol Ultrafast",
         "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
         "source": "Hacker News",
-        "score": 378
+        "score": 428
       },
       {
-        "title": "NP-Overrated",
+        "title": "NP-overrated",
         "url": "https://gruhn.me/blog/2026-08-13/",
         "source": "Hacker News",
-        "score": 105
+        "score": 152
       },
       {
         "title": "Understanding is the new bottleneck",
         "url": "https://www.geoffreylitt.com/2026/07/02/understanding-is-the-new-bottleneck",
         "source": "Hacker News",
-        "score": 150
-      },
-      {
-        "title": "Donkey.bas is 45 Years Old – 131 line of Glory",
-        "url": "https://donkeybas.com/",
-        "source": "Hacker News",
-        "score": 170
-      },
-      {
-        "title": "Mistral OCR 4.1",
-        "url": "https://docs.mistral.ai/models/ocr-4-1",
-        "source": "Hacker News",
-        "score": 232
+        "score": 210
       },
       {
         "title": "DeepSeek Harness developer preview",
         "url": "https://deepseek.com/harness/en/",
         "source": "Hacker News",
-        "score": 528
+        "score": 560
+      },
+      {
+        "title": "Donkey.bas is 45 Years Old – 131 line of Glory",
+        "url": "https://donkeybas.com/",
+        "source": "Hacker News",
+        "score": 192
+      },
+      {
+        "title": "Mistral OCR 4.1",
+        "url": "https://docs.mistral.ai/models/ocr-4-1",
+        "source": "Hacker News",
+        "score": 253
       },
       {
         "title": "Spaghettifying DRAM",
         "url": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
         "source": "Hacker News",
-        "score": 467
+        "score": 497
       },
       {
         "title": "Choose Boring Technology (2015)",
         "url": "https://mcfunley.com/choose-boring-technology",
         "source": "Hacker News",
-        "score": 214
+        "score": 255
+      },
+      {
+        "title": "Hello, me. It's been a while",
+        "url": "https://themech.net/2026/08/hello-me-its-been-a-while/",
+        "source": "Hacker News",
+        "score": 24
       },
       {
         "title": "Finite State Machines in Forth (1994)",
         "url": "https://www.forth.org/literature/noble.html",
         "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "How Gödel's Proof Works (2020)",
-        "url": "https://www.quantamagazine.org/how-godels-proof-works-20200714/",
-        "source": "Hacker News",
-        "score": 53
-      },
-      {
-        "title": "Single log line is 49KB+ (ext4) / 110KB+ (btrfs) of systemd-journald disk writes",
-        "url": "https://github.com/systemd/systemd/issues/40262",
-        "source": "Hacker News",
-        "score": 129
-      },
-      {
-        "title": "How Organizations Use AI: Evidence from ChatGPT [pdf]",
-        "url": "https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf",
-        "source": "Hacker News",
-        "score": 52
+        "score": 47
       },
       {
         "title": "Where did the old web go? We followed 657,607 links to find out",
         "url": "https://0.mk/blog/link-rot",
         "source": "Hacker News",
-        "score": 110
+        "score": 133
       },
       {
-        "title": "How Compaction Works in Pi",
-        "url": "https://earendil.com/posts/compaction-in-pi/",
+        "title": "How Gödel's Proof Works (2020)",
+        "url": "https://www.quantamagazine.org/how-godels-proof-works-20200714/",
         "source": "Hacker News",
-        "score": 81
+        "score": 72
       }
     ],
     "ai": [
@@ -101,85 +101,61 @@
         "title": "Gemini 3.7 Flash",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News AI",
-        "score": 554
+        "score": 624
       },
       {
         "title": "Accelerating GPT-5.6 Sol Ultrafast",
         "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
         "source": "Hacker News AI",
-        "score": 378
+        "score": 428
       },
       {
         "title": "Mistral OCR 4.1",
         "url": "https://docs.mistral.ai/models/ocr-4-1",
         "source": "Hacker News AI",
-        "score": 232
+        "score": 253
       },
       {
         "title": "How Organizations Use AI: Evidence from ChatGPT [pdf]",
         "url": "https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf",
         "source": "Hacker News AI",
-        "score": 52
+        "score": 66
       },
       {
         "title": "Nine PBS sues Iron Mountain over blocked access to archival data",
         "url": "https://current.org/2026/08/nine-pbs-sues-iron-mountain-over-blocked-access-to-archival-data/",
         "source": "Hacker News AI",
-        "score": 205
+        "score": 247
+      },
+      {
+        "title": "How AI text watermarking works",
+        "url": "https://declaude.org/watermarking/",
+        "source": "Hacker News AI",
+        "score": 78
       },
       {
         "title": "AI At Home Part 1: A Box Of Scraps",
         "url": "https://jdagostino.github.io/ai-pt1-box-o-scraps/index.html",
         "source": "Hacker News AI",
-        "score": 79
+        "score": 92
       },
       {
         "title": "Choosing an AI model: one prompt, 11 models, different results",
         "url": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results/",
         "source": "Hacker News AI",
-        "score": 167
+        "score": 178
       },
       {
         "title": "Text AI watermarks will always be trivial to remove",
         "url": "https://www.seangoedecke.com/text-ai-watermarks/",
         "source": "Hacker News AI",
-        "score": 79
-      },
-      {
-        "title": "PBS loses 70 years of TV history after cloud storage vendor goes defunct",
-        "url": "https://www.tomshardware.com/software/cloud-storage/nine-pbs-loses-access-to-70-years-of-data-after-contracted-cloud-storage-vendor-goes-defunct-public-tv-channel-sues-iron-mountain-data-center-which-hosts-archival-materials-to-ensure-preservation",
-        "source": "Hacker News AI",
-        "score": 14
+        "score": 98
       },
       {
         "title": "Heart aerospace completes first flight of largest electric aircraft",
         "url": "https://www.heartaerospace.com/newsroom/heart-aerospace-completes-first-flight-of-world-s-largest-electric-aircraft",
         "source": "Hacker News AI",
-        "score": 110
-      },
-      {
-        "title": "Terabytes of credentials leaked in supply-chain attack",
-        "url": "https://arstechnica.com/security/2026/08/terabytes-of-credentials-leaked-in-massive-supply-chain-attack/",
-        "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "We eliminated 1,400 CVEs in NanoClaw's container images",
-        "url": "https://www.echo.ai/blog/echo-xnanoclaw-under-the-hood",
-        "source": "Hacker News AI",
-        "score": 66
-      },
-      {
-        "title": "Graduate student proves a quantum uncertainty principle for fractals",
-        "url": "https://www.quantamagazine.org/graduate-student-proves-the-fractal-uncertainty-principle-20260812/",
-        "source": "Hacker News AI",
-        "score": 56
-      },
-      {
-        "title": "Codex in ChatGPT desktop app for Linux is now in preview",
-        "url": "https://community.openai.com/t/codex-in-chatgpt-desktop-app-for-linux-is-now-in-preview/1390027",
-        "source": "Hacker News AI",
-        "score": 442
+        "score": 120
       }
     ],
     "news": [
