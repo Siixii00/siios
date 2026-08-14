@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-14T13:08:09.334266",
-    "total_items": 60
+    "last_updated": "2026-08-14T14:53:00.693550",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,153 +9,153 @@
         "title": "GLM-5.3: Frontier coding with emergent cyber capabilities",
         "url": "https://z.ai/blog/glm-5.3",
         "source": "Hacker News",
-        "score": 675
+        "score": 800
+      },
+      {
+        "title": "In Australia, a Home Battery Boom Has Helped Cut Wholesale Power Prices in Half",
+        "url": "https://e360.yale.edu/digest/australia-home-batteries",
+        "source": "Hacker News",
+        "score": 79
       },
       {
         "title": "Don't classify, hallucinate!",
         "url": "https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications",
         "source": "Hacker News",
-        "score": 35
+        "score": 109
       },
       {
         "title": "DeepSeek peak/off-peak pricing update",
         "url": "https://api-docs.deepseek.com/news/news260813/",
         "source": "Hacker News",
-        "score": 95
+        "score": 154
+      },
+      {
+        "title": "Every Fucking Website",
+        "url": "https://lxe.github.io/everywebsite/",
+        "source": "Hacker News",
+        "score": 8
+      },
+      {
+        "title": "HashAgent – Share an AI agent as a URL, runs locally via WebGPU",
+        "url": "https://hashagent.pages.dev/",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "Show HN: Lambdock – Wayland-native GTK4 dock with a live Lisp REPL",
+        "url": "https://codeberg.org/jjba23/lambdock",
+        "source": "Hacker News",
+        "score": 14
       },
       {
         "title": "Gemini 3.7 Flash",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News",
-        "score": 893
+        "score": 921
+      },
+      {
+        "title": "The TEMU-Fication of Software, Digital Goods and Services",
+        "url": "https://xn--gckvb8fzb.com/the-temu-fication-of-software-digital-goods-services/",
+        "source": "Hacker News",
+        "score": 27
       },
       {
         "title": "Why does Opus 5 feel worse to work with?",
         "url": "https://mun-logadan.github.io/why-does-opus-5-feel-worse/",
         "source": "Hacker News",
-        "score": 192
+        "score": 322
       },
       {
         "title": "Differential Heuristics",
         "url": "https://www.redblobgames.com/blog/2026-08-08-differential-heuristics/",
         "source": "Hacker News",
-        "score": 53
+        "score": 78
       },
       {
-        "title": "Accelerating GPT-5.6 Sol Ultrafast",
-        "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
+        "title": "WhatCable: Know what your USB-C cable can do",
+        "url": "https://www.whatcable.uk/",
         "source": "Hacker News",
-        "score": 649
+        "score": 21
+      },
+      {
+        "title": "We're not done with point clouds",
+        "url": "https://claytonwramsey.com/blog/mvt/",
+        "source": "Hacker News",
+        "score": 44
       },
       {
         "title": "Hello, me. It's been a while",
         "url": "https://themech.net/2026/08/hello-me-its-been-a-while/",
         "source": "Hacker News",
-        "score": 279
+        "score": 319
       },
       {
         "title": "Protect Your Relays",
         "url": "https://www.iroh.computer/blog/authenticated-relays",
         "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "Show HN: C# Game Engine with its own scripting language and IDE",
-        "url": "https://github.com/ArcadeMakerSources/ArcadeMaker",
-        "source": "Hacker News",
-        "score": 73
-      },
-      {
-        "title": "DeepSeek Harness developer preview",
-        "url": "https://deepseek.com/harness/en/",
-        "source": "Hacker News",
-        "score": 691
-      },
-      {
-        "title": "Spaghettifying DRAM",
-        "url": "https://github.com/xoreaxeaxeax/skitter-creek-bath-salts",
-        "source": "Hacker News",
-        "score": 662
-      },
-      {
-        "title": "Mistral OCR 4.1",
-        "url": "https://docs.mistral.ai/models/ocr-4-1",
-        "source": "Hacker News",
-        "score": 381
-      },
-      {
-        "title": "Ruby 4.0 Universal RCE Deserialization Gadget Chain",
-        "url": "https://www.elttam.com/blog/ruby-4-0-universal-rce-deserialization-gadget-chain",
-        "source": "Hacker News",
-        "score": 48
-      },
-      {
-        "title": "Bluesky Protocol Services",
-        "url": "https://atproto.com/blog/introducing-bluesky-protocol-services",
-        "source": "Hacker News",
-        "score": 182
+        "score": 31
       }
     ],
     "ai": [
       {
+        "title": "HashAgent – Share an AI agent as a URL, runs locally via WebGPU",
+        "url": "https://hashagent.pages.dev/",
+        "source": "Hacker News AI",
+        "score": 13
+      },
+      {
         "title": "Gemini 3.7 Flash",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News AI",
-        "score": 893
+        "score": 921
       },
       {
         "title": "Accelerating GPT-5.6 Sol Ultrafast",
         "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
         "source": "Hacker News AI",
-        "score": 649
+        "score": 668
       },
       {
         "title": "Mistral OCR 4.1",
         "url": "https://docs.mistral.ai/models/ocr-4-1",
         "source": "Hacker News AI",
-        "score": 381
+        "score": 390
       },
       {
         "title": "Ruby 4.0 Universal RCE Deserialization Gadget Chain",
         "url": "https://www.elttam.com/blog/ruby-4-0-universal-rce-deserialization-gadget-chain",
         "source": "Hacker News AI",
-        "score": 48
+        "score": 64
       },
       {
         "title": "Nine PBS sues Iron Mountain over blocked access to archival data",
         "url": "https://current.org/2026/08/nine-pbs-sues-iron-mountain-over-blocked-access-to-archival-data/",
         "source": "Hacker News AI",
-        "score": 339
+        "score": 367
       },
       {
         "title": "How Organizations Use AI: Evidence from ChatGPT [pdf]",
         "url": "https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf",
         "source": "Hacker News AI",
-        "score": 117
+        "score": 120
       },
       {
         "title": "Choosing an AI model: one prompt, 11 models, different results",
         "url": "https://www.netlify.com/blog/one-prompt-11-models-very-different-results/",
         "source": "Hacker News AI",
-        "score": 208
+        "score": 210
       },
       {
         "title": "Text AI watermarks will always be trivial to remove",
         "url": "https://www.seangoedecke.com/text-ai-watermarks/",
         "source": "Hacker News AI",
-        "score": 133
+        "score": 134
       },
       {
         "title": "AI At Home Part 1: A Box Of Scraps",
         "url": "https://jdagostino.github.io/ai-pt1-box-o-scraps/index.html",
         "source": "Hacker News AI",
-        "score": 121
-      },
-      {
-        "title": "Heart aerospace completes first flight of largest electric aircraft",
-        "url": "https://www.heartaerospace.com/newsroom/heart-aerospace-completes-first-flight-of-world-s-largest-electric-aircraft",
-        "source": "Hacker News AI",
-        "score": 132
+        "score": 123
       }
     ],
     "news": [
@@ -170,13 +170,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Engine parts smashed Ryanair window that man's head was sucked out of, report says",
-        "url": "https://www.bbc.co.uk/news/articles/cr59j4z3vl8o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Conditions on US aircraft carrier at sea for more than 250 days raise alarms",
-        "url": "https://www.bbc.co.uk/news/articles/cyvl2d5j52lo?at_medium=RSS&at_campaign=rss",
+        "title": "Builders unearth €9m gold loot sealed in walls of Belgian property",
+        "url": "https://www.bbc.co.uk/news/articles/c5ydzg0dnz7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -190,8 +185,8 @@
         "source": "BBC World"
       },
       {
-        "title": "US missionary released following kidnap in Niger, Christian group says",
-        "url": "https://www.bbc.co.uk/news/articles/ckg40jvvkp7o?at_medium=RSS&at_campaign=rss",
+        "title": "Conditions on US aircraft carrier at sea for more than 250 days raise alarms",
+        "url": "https://www.bbc.co.uk/news/articles/cyvl2d5j52lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -234,42 +229,67 @@
     ],
     "science": [
       {
-        "title": "Scientists turn Starlink into a giant scanner for Earth’s upper atmosphere",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260812015212.htm",
+        "title": "A stress hormone may help the brain repair itself",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260814011044.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists turn sheep’s wool into a material that helps regrow bone",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260812015210.htm",
+        "title": "World’s first superconducting quantum heat engine could help unlock massive quantum computers",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260814011041.htm",
         "source": "Science Daily"
       },
       {
-        "title": "James Webb captures a cosmic lion sculpted by a dying star",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260812015206.htm",
+        "title": "Scientists detect a nuclear reactor’s ghostly afterglow for the first time",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260814011036.htm",
         "source": "Science Daily"
       },
       {
-        "title": "The adult brain can repair itself better than scientists thought",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260812015158.htm",
+        "title": "Immune cells flood into the aging brain, Stanford scientists discover",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260814011033.htm",
         "source": "Science Daily"
       },
       {
-        "title": "A strange crystal made of electrons just revealed its hidden motion",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260812015156.htm",
+        "title": "The Atlantic Ocean can handle more warming than expected — with one big catch",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260814011031.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Ordinary WiFi can now identify you with near-perfect accuracy",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260811052857.htm",
+        "title": "Taking the stairs could protect your heart and help you live longer",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260814011029.htm",
         "source": "Science Daily"
       },
       {
-        "title": "“Cannot be explained” – New super steel stuns scientists",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260811052717.htm",
+        "title": "Women taking estrogen had fewer signs of Alzheimer’s in their brains",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260814011028.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "Matt Mercer's 6-Part Critical Role Campaign Was a Perfect Dystopian Tragedy",
+        "url": "https://www.polygon.com/critical-role-age-of-umbra-sallowlands-review/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Honkai Star Rail version 4.5 livestream codes",
+        "url": "https://www.polygon.com/honkai-star-rail-version-4-5-livestream-codes/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Forget Control Resonant, You Can Play 2024's Best Action Game on PS Plus and Game Pass Now",
+        "url": "https://www.polygon.com/banishers-ghosts-of-new-eden-ps-plus-game-pass/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Fortnite'’s Most Prized Collectible Is Easier Than Ever to Get, but for a Limited Time",
+        "url": "https://www.polygon.com/fortnite-complete-sprite-collection-easier/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Disney Reveals Kingdom Hearts Is Now a Billion-dollar Game Franchise",
+        "url": "https://www.polygon.com/disney-kingdom-hearts-billion-dollar-franchise/",
+        "source": "Polygon"
+      },
       {
         "title": "Madden NFL 27 Review: A Franchise Mode With Some Football on the Side",
         "url": "https://www.polygon.com/madden-nfl-27-like-umamusume/",
@@ -278,31 +298,6 @@
       {
         "title": "Hey what's up with all these eye hand bosses?",
         "url": "https://www.polygon.com/video/hey-what-s-up-with-all-these-eye-hand-bosses/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Investigating Tom Nook's predatory lending practices in Animal Crossing",
-        "url": "https://www.polygon.com/video/investigating-tom-nook-s-predatory-lending-practices-in-animal-crossing/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Why did Tony Hawk's Pro Skater 2 feature a booby trap banned by the UN?",
-        "url": "https://www.polygon.com/video/why-did-tony-hawk-s-pro-skater-2-feature-a-booby-trap-banned-by-the-un/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Is Cyberpunk 2077 wet enough?",
-        "url": "https://www.polygon.com/video/is-cyberpunk-2077-wet-enough/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The 5 Most Intense Thrillers on Netflix",
-        "url": "https://www.polygon.com/most-intense-thrillers-netflix-ranking/",
-        "source": "Polygon"
-      },
-      {
-        "title": "What's up with Voldo from Soulcalibur?",
-        "url": "https://www.polygon.com/video/what-s-up-with-voldo-from-soulcalibur/",
         "source": "Polygon"
       }
     ],
