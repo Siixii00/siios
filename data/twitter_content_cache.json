@@ -1,161 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-08-14T15:52:57.948722",
-    "total_items": 59
+    "last_updated": "2026-08-14T16:54:24.074007",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "Every Fucking Website (2020)",
-        "url": "https://lxe.github.io/everywebsite/",
+        "title": "Qwen 3.8 27B",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
         "source": "Hacker News",
-        "score": 337
-      },
-      {
-        "title": "When Genius Fails: The Intellectual Arrogance of the AI Labs",
-        "url": "https://weightythoughts.com/p/when-genius-failsthe-intellectual",
-        "source": "Hacker News",
-        "score": 69
+        "score": 108
       },
       {
         "title": "Seven books I keep close because I love them",
         "url": "https://blog.plover.com/2026/08/02/",
         "source": "Hacker News",
-        "score": 27
+        "score": 86
       },
       {
         "title": "Introducing Toast 1",
         "url": "https://www.mixedbread.com/blog/toast-1",
         "source": "Hacker News",
-        "score": 31
+        "score": 68
       },
       {
         "title": "GLM-5.3: Frontier coding with emergent cyber capabilities",
         "url": "https://z.ai/blog/glm-5.3",
         "source": "Hacker News",
-        "score": 847
+        "score": 894
       },
       {
-        "title": "Qwen3.8-27B",
-        "url": "https://twitter.com/alibaba_qwen/status/2088280182356611304",
+        "title": "RustDesk now supports true unattended remote access on Wayland",
+        "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
         "source": "Hacker News",
-        "score": 147
+        "score": 25
+      },
+      {
+        "title": "Every Fucking Website (2020)",
+        "url": "https://lxe.github.io/everywebsite/",
+        "source": "Hacker News",
+        "score": 496
+      },
+      {
+        "title": "Google Is Making Private AI Practical with Homomorphic Encryption",
+        "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+        "source": "Hacker News",
+        "score": 25
       },
       {
         "title": "In Australia, a Home Battery Boom Has Helped Cut Wholesale Power Prices in Half",
         "url": "https://e360.yale.edu/digest/australia-home-batteries",
         "source": "Hacker News",
-        "score": 137
+        "score": 191
       },
       {
-        "title": "Don't classify, hallucinate!",
-        "url": "https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications",
+        "title": "When Genius Fails: The Intellectual Arrogance of the AI Labs",
+        "url": "https://weightythoughts.com/p/when-genius-failsthe-intellectual",
         "source": "Hacker News",
-        "score": 137
+        "score": 143
       },
       {
-        "title": "Self-hosted web push Cloudflare Worker, works on iOS",
-        "url": "https://kukuroo.cc/",
+        "title": "RayforceDB – a pure C analytics database with a Lisp-like syntax",
+        "url": "https://rayforcedb.com/",
         "source": "Hacker News",
-        "score": 15
-      },
-      {
-        "title": "DeepSeek peak/off-peak pricing update",
-        "url": "https://api-docs.deepseek.com/news/news260813/",
-        "source": "Hacker News",
-        "score": 175
+        "score": 11
       },
       {
         "title": "I turned my RSS feeds into an e-ink newspaper to stop reading on my phone",
         "url": "https://heyjonny.dev/posts/rss-to-eink-newspaper/",
         "source": "Hacker News",
-        "score": 18
+        "score": 46
       },
       {
-        "title": "The TEMU-Fication of Software, Digital Goods and Services",
-        "url": "https://xn--gckvb8fzb.com/the-temu-fication-of-software-digital-goods-services/",
+        "title": "Don't classify, hallucinate!",
+        "url": "https://softwaredoug.com/blog/2026/08/10/hypothetical-classifications",
         "source": "Hacker News",
-        "score": 48
+        "score": 155
       },
       {
-        "title": "WhatCable: Know what your USB-C cable can do",
-        "url": "https://www.whatcable.uk/",
+        "title": "\"Solving a largely imaginary user goal\"",
+        "url": "https://unsung.aresluna.org/solving-a-largely-imaginary-user-goal/",
         "source": "Hacker News",
-        "score": 48
+        "score": 24
       },
       {
-        "title": "Qwen 3.8 27B is out: open weights, best local dense model yet",
-        "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
+        "title": "DeepSeek peak/off-peak pricing update",
+        "url": "https://api-docs.deepseek.com/news/news260813/",
         "source": "Hacker News",
-        "score": 50
+        "score": 192
       },
       {
-        "title": "Gödel, Escher, Elisp: The Beauty of Macros",
-        "url": "https://www.chiply.dev/post-elisp-macros-are-beautiful",
+        "title": "France blocks social media ban because it would require adults to prove age",
+        "url": "https://www.reuters.com/world/frances-top-court-rules-social-media-ban-curtails-freedom-expression-2026-08-14/",
         "source": "Hacker News",
-        "score": 16
+        "score": 44
       }
     ],
     "ai": [
       {
+        "title": "Google Is Making Private AI Practical with Homomorphic Encryption",
+        "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+        "source": "Hacker News AI",
+        "score": 25
+      },
+      {
         "title": "When Genius Fails: The Intellectual Arrogance of the AI Labs",
         "url": "https://weightythoughts.com/p/when-genius-failsthe-intellectual",
         "source": "Hacker News AI",
-        "score": 69
-      },
-      {
-        "title": "HashAgent – Share an AI agent as a URL, runs locally via WebGPU",
-        "url": "https://hashagent.pages.dev/",
-        "source": "Hacker News AI",
-        "score": 19
+        "score": 143
       },
       {
         "title": "Show HN: Graft – Claude Code hooks that cut grep tokens by 42%",
         "url": "https://github.com/NanoNets/Graft",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 18
+      },
+      {
+        "title": "HashAgent – Share an AI agent as a URL, runs locally via WebGPU",
+        "url": "https://hashagent.pages.dev/",
+        "source": "Hacker News AI",
+        "score": 26
       },
       {
         "title": "AI Model Atlas – visualizing populations of ML models as interconnected 3D graph",
         "url": "https://run.cosmograph.app/public/ca9fd1ad-fe83-4238-8b69-b707c633aef0",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 19
       },
       {
-        "title": "Accelerating GPT-5.6 Sol Ultrafast",
-        "url": "https://www.cerebras.ai/blog/accelerating-gpt-5-6-sol-ultrafast-with-openai",
+        "title": "AI by Hand",
+        "url": "https://www.byhand.ai/",
         "source": "Hacker News AI",
-        "score": 671
-      },
-      {
-        "title": "Mistral OCR 4.1",
-        "url": "https://docs.mistral.ai/models/ocr-4-1",
-        "source": "Hacker News AI",
-        "score": 394
+        "score": 3
       },
       {
         "title": "Ruby 4.0 Universal RCE Deserialization Gadget Chain",
         "url": "https://www.elttam.com/blog/ruby-4-0-universal-rce-deserialization-gadget-chain",
         "source": "Hacker News AI",
-        "score": 67
+        "score": 69
+      },
+      {
+        "title": "Show HN: Is AI Dumber Today? An index of AI model experience from user's opinion",
+        "url": "https://isaidumber.today/",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "Gemini 3.7 Flash",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News AI",
-        "score": 931
-      },
-      {
-        "title": "US loses one-fourth of drone fleet as Iran war drains its arsenal",
-        "url": "https://www.indiatoday.in/world/story/us-loses-one-fourth-mq-9-reaper-drones-near-strait-of-hormuz-in-iran-war-2970823-2026-08-14",
-        "source": "Hacker News AI",
-        "score": 26
-      },
-      {
-        "title": "How Organizations Use AI: Evidence from ChatGPT [pdf]",
-        "url": "https://cdn.openai.com/pdf/how-organizations-use-chatgpt.pdf",
-        "source": "Hacker News AI",
-        "score": 120
+        "score": 935
       }
     ],
     "news": [
@@ -165,8 +159,8 @@
         "source": "BBC World"
       },
       {
-        "title": "US says dozens of countries helped China dodge Trump's tariffs",
-        "url": "https://www.bbc.co.uk/news/articles/c78gy6ep3n5o?at_medium=RSS&at_campaign=rss",
+        "title": "Trump asks Supreme Court to allow ballroom work to continue",
+        "url": "https://www.bbc.co.uk/news/articles/c3v0yz2r4wlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -180,7 +174,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Presidential vote counting halted in Zambia over alleged attacks on polling staff",
+        "title": "Zambia vote counting resumes after pause over alleged attacks on polling staff",
         "url": "https://www.bbc.co.uk/news/articles/c5yr8r04edvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -207,13 +201,13 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " To target Gen Z, premium brands must learn the new codes of luxury ",
-        "url": "https://www.creativebloq.com/design/branding/to-target-gen-z-premium-brands-must-learn-the-new-codes-of-luxury",
+        "title": " Nothing’s CMF Clip Pro is the perfect cure to my individuality complex ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/nothings-cmf-clip-pro-is-the-perfect-cure-to-my-individuality-complex",
         "source": "Creative Bloq"
       },
       {
-        "title": " Nothing’s CMF Clip Pro is the perfect cure to my individuality complex ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/nothings-cmf-clip-pro-is-the-perfect-cure-to-my-individuality-complex",
+        "title": " To target Gen Z, premium brands must learn the new codes of luxury ",
+        "url": "https://www.creativebloq.com/design/branding/to-target-gen-z-premium-brands-must-learn-the-new-codes-of-luxury",
         "source": "Creative Bloq"
       },
       {
@@ -266,6 +260,31 @@
     ],
     "gaming": [
       {
+        "title": "Congress Is Opening an Investigation Into ‘Roblox’ Over Child Exploitation",
+        "url": "https://www.polygon.com/roblox-senate-investigation-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Patchdle is the Toughest Wordle-like for Gamers",
+        "url": "https://www.polygon.com/patchdle-daily-browser-patch-notes-game-trivia-wordle/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Majora's Mask Gets a Sci-Fi Twist in This Cozy 2023 RPG",
+        "url": "https://www.polygon.com/i-was-a-teenage-exocolonist-review-endings-replay/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Lanterns' Review: 'Watchmen' Meets 'Yellowstone' in HBO's Brilliant New Sci-Fi Show",
+        "url": "https://www.polygon.com/lanterns-review-hbo/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Miracle 'Skyrim' Mod Adds Essential Feature That Was Impossible For Nearly 15 Years",
+        "url": "https://www.polygon.com/skyrim-realistic-snow-deformation-mod-best-weather-why-impossible/",
+        "source": "Polygon"
+      },
+      {
         "title": "Marvel’s 'Alien vs. X-Men' Looks Like a Must Read Comic in New Preview Pages",
         "url": "https://www.polygon.com/marvel-alien-vs-x-men-crossover-series-release-date-covers/",
         "source": "Polygon"
@@ -274,35 +293,15 @@
         "title": "Modern Warfare 4 Beta Will Include Campaign and Warzone In Series First",
         "url": "https://www.polygon.com/modern-warfare-4-beta-campaign-mission/",
         "source": "Polygon"
-      },
-      {
-        "title": "'Marvel Tokon' Reportedly Moves 500K Units In First Week, Kicking Off Sales Figures Debate",
-        "url": "https://www.polygon.com/marvel-tokon-sales-debate-steam-ps5/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Star Wars The Mandalorian and Grogu Gets Disney Plus Streaming Date",
-        "url": "https://www.polygon.com/mandalorian-and-grogu-disney-plus-release-date-star-wars/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Anne Hathaway's Best Sci-Fi Movie Boils Down to One Perfect Quote",
-        "url": "https://www.polygon.com/anne-hathaways-best-sci-fi-performance/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Matt Mercer's 6-Part Critical Role Campaign Was a Perfect Dystopian Tragedy",
-        "url": "https://www.polygon.com/critical-role-age-of-umbra-sallowlands-review/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Honkai Star Rail version 4.5 livestream codes",
-        "url": "https://www.polygon.com/honkai-star-rail-version-4-5-livestream-codes/",
-        "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "How to bring your software delivery workflow into GitHub with agent apps",
+        "url": "https://github.blog/ai-and-ml/github-copilot/how-to-bring-your-software-delivery-workflow-into-github-with-agent-apps/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "Your guide to GitHub Universe 2026 is here: The schedule just launched!",
         "url": "https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/",
@@ -331,11 +330,6 @@
       {
         "title": "From coder to orchestrator: How agents shift the role of a developer",
         "url": "https://github.blog/developer-skills/career-growth/from-coder-to-orchestrator-how-agents-shift-the-role-of-a-developer/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Using the GitHub Copilot SDK for Java",
-        "url": "https://github.blog/engineering/using-the-github-copilot-sdk-for-java/",
         "source": "GitHub Blog"
       }
     ]
