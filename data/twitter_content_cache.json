@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-15T05:25:37.273821",
-    "total_items": 58
+    "last_updated": "2026-08-15T06:39:07.785173",
+    "total_items": 49
   },
   "content": {
     "tech": [
       {
-        "title": "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia",
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2/executive",
-        "source": "Hacker News",
-        "score": 151
-      },
-      {
         "title": "Qwen 3.8 27B",
         "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
         "source": "Hacker News",
-        "score": 1003
+        "score": 1043
       },
       {
-        "title": "Going Dark, and the era of law enforcement hacking",
-        "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
+        "title": "Coin-sized device can hack a Boeing 737",
+        "url": "https://www.wired.com/story/this-coin-sized-device-can-hack-a-boeing-737/",
         "source": "Hacker News",
-        "score": 268
+        "score": 34
       },
       {
         "title": "The other Sean Byrne doesn't exist",
         "url": "https://conic.al/writing/the-other-sean-byrne-doesnt-exist/",
         "source": "Hacker News",
-        "score": 8
+        "score": 41
+      },
+      {
+        "title": "\"That's not SoC 2 compliant\"",
+        "url": "https://ampcode.com/notes/thats-not-soc-2-compliant",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "Going Dark, and the era of law enforcement hacking",
+        "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
+        "source": "Hacker News",
+        "score": 293
+      },
+      {
+        "title": "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2/executive",
+        "source": "Hacker News",
+        "score": 170
       },
       {
         "title": "The Ploopy A+ Trackball Is Here",
         "url": "https://blog.ploopy.co/the-aplus-is-finally-here-499",
         "source": "Hacker News",
-        "score": 70
-      },
-      {
-        "title": "I close SSH port 22 (and what I use instead)",
-        "url": "https://www.michelebologna.net/2026/ssh-port-22-fwknop-single-packet-authorization/",
-        "source": "Hacker News",
-        "score": 17
+        "score": 89
       },
       {
         "title": "Google is making private AI practical with homomorphic encryption",
         "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
         "source": "Hacker News",
-        "score": 332
+        "score": 350
+      },
+      {
+        "title": "Ask HN: How do you keep up with HN these days?",
+        "url": "https://news.ycombinator.com/item?id=49308059",
+        "source": "Hacker News",
+        "score": 12
       },
       {
         "title": "eigendrum",
         "url": "https://eigendrum.com/#p=circle",
         "source": "Hacker News",
-        "score": 85
-      },
-      {
-        "title": "AI Driven Testing",
-        "url": "https://app.deltix.ai",
-        "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "Simplifying and Refactoring Introductory Calculus",
-        "url": "https://arxiv.org/abs/1811.03459",
-        "source": "Hacker News",
-        "score": 63
+        "score": 109
       },
       {
         "title": "RustDesk now supports true unattended remote access on Wayland",
         "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
         "source": "Hacker News",
-        "score": 251
+        "score": 261
+      },
+      {
+        "title": "Simplifying and Refactoring Introductory Calculus (2018)",
+        "url": "https://arxiv.org/abs/1811.03459",
+        "source": "Hacker News",
+        "score": 71
       },
       {
         "title": "Firefox is now the last major browser that still supports uBlock Origin",
         "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
         "source": "Hacker News",
-        "score": 667
-      },
-      {
-        "title": "Show HN: A website for exploring historical photographs of my city",
-        "url": "https://yesterdays.maprva.org/",
-        "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "Unearthing a 31 year old Easter egg in Ecco the Dolphin",
-        "url": "https://32bits.substack.com/p/under-the-microscope-ecco-the-dolphin-98c",
-        "source": "Hacker News",
-        "score": 59
+        "score": 759
       },
       {
         "title": "AI by Hand",
         "url": "https://www.byhand.ai/",
         "source": "Hacker News",
-        "score": 246
+        "score": 270
+      },
+      {
+        "title": "Unearthing a 31 year old Easter egg in Ecco the Dolphin",
+        "url": "https://32bits.substack.com/p/under-the-microscope-ecco-the-dolphin-98c",
+        "source": "Hacker News",
+        "score": 67
       }
     ],
     "ai": [
@@ -101,55 +101,43 @@
         "title": "Google is making private AI practical with homomorphic encryption",
         "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
         "source": "Hacker News AI",
-        "score": 332
-      },
-      {
-        "title": "AI Driven Testing",
-        "url": "https://app.deltix.ai",
-        "source": "Hacker News AI",
-        "score": 16
+        "score": 350
       },
       {
         "title": "AI by Hand",
         "url": "https://www.byhand.ai/",
         "source": "Hacker News AI",
-        "score": 246
+        "score": 270
       },
       {
         "title": "Maximizing the value of your Claude Code sessions",
         "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
         "source": "Hacker News AI",
-        "score": 166
+        "score": 181
+      },
+      {
+        "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
+        "url": "https://chenxiachan.github.io/thoughtdag/",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
+        "title": "Show HN: Deltix – AI Driven Testing",
+        "url": "https://app.deltix.ai",
+        "source": "Hacker News AI",
+        "score": 23
+      },
+      {
+        "title": "AI Model Atlas – visualizing populations of ML models as interconnected 3D graph",
+        "url": "https://run.cosmograph.app/public/ca9fd1ad-fe83-4238-8b69-b707c633aef0",
+        "source": "Hacker News AI",
+        "score": 59
       },
       {
         "title": "A Contract-Grade Verifier for LLM-Generated GPU Kernels",
         "url": "https://arxiv.org/abs/2608.12700",
         "source": "Hacker News AI",
         "score": 40
-      },
-      {
-        "title": "People Who Will Thrive in the AI Age",
-        "url": "https://www.theatlantic.com/ideas/2026/06/ai-open-ai-anthropic/687689/",
-        "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "AI Model Atlas – visualizing populations of ML models as interconnected 3D graph",
-        "url": "https://run.cosmograph.app/public/ca9fd1ad-fe83-4238-8b69-b707c633aef0",
-        "source": "Hacker News AI",
-        "score": 56
-      },
-      {
-        "title": "Youngest Black professor at Cambridge who faced plagiarism claims is found dead",
-        "url": "https://apnews.com/article/jason-arday-cambridge-professor-london-dead-reports-9036e2b405f5849415534e80bb1b9cb1",
-        "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "Gemini 3.7 Flash",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
-        "source": "Hacker News AI",
-        "score": 949
       }
     ],
     "news": [
@@ -164,7 +152,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Five dead after 7.7 magnitude earthquake strikes Indonesia",
+        "title": "At least 14 dead after 7.7-magnitude earthquake strikes Indonesia",
         "url": "https://www.bbc.co.uk/news/articles/c5y0zz63gero?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -184,43 +172,7 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " Stunning demo shows Unreal Engine 6 should be a game changer for rendering cinematics ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/stunning-demo-shows-unreal-engine-6-should-be-a-game-changer-for-rendering-cinematics",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Audeze want to make the only headphones you'll ever need ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/audeze-wants-to-make-the-only-headphones-you-ever-need",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " 8BitDo just turned your iPhone into a perfect retro handheld with this clever controller ",
-        "url": "https://www.creativebloq.com/tech/accessories/8bitdo-just-turned-your-iphone-into-a-perfect-retro-handheld-with-this-clever-controller",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " To target Gen Z, premium brands must learn the new codes of luxury ",
-        "url": "https://www.creativebloq.com/design/branding/to-target-gen-z-premium-brands-must-learn-the-new-codes-of-luxury",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Nothing’s CMF Clip Pro is the perfect cure to my individuality complex ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/nothings-cmf-clip-pro-is-the-perfect-cure-to-my-individuality-complex",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This concept artist uses ZBrush and Blender to create detailed depictions of  mysterious powers, forgotten species and malevolent demons ",
-        "url": "https://www.creativebloq.com/3d/3d-art/this-concept-artist-uses-zbrush-and-blender-to-create-detailed-depictions-of-mysterious-powers-forgotten-species-and-malevolent-demons",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Marvel fans apologise to your wallets, the PlayStation x Wolverine collab is here ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/marvel-fans-apologise-to-your-wallets-the-playstation-x-wolverine-collab-is-here",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "A stress hormone may help the brain repair itself",
