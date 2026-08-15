@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-15T09:26:44.215065",
-    "total_items": 60
+    "last_updated": "2026-08-15T10:23:41.498675",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,129 +9,135 @@
         "title": "The other Sean Byrne doesn't exist",
         "url": "https://conic.al/writing/the-other-sean-byrne-doesnt-exist/",
         "source": "Hacker News",
-        "score": 137
+        "score": 161
       },
       {
         "title": "Qwen 3.8 27B",
         "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
         "source": "Hacker News",
-        "score": 1134
+        "score": 1149
+      },
+      {
+        "title": "Show HN: Eigendrum - Draw any shape and hear what it sounds like as a drum",
+        "url": "https://baselashraf81.github.io/eigendrum/",
+        "source": "Hacker News",
+        "score": 11
       },
       {
         "title": "Going Dark, and the era of law enforcement hacking",
         "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
         "source": "Hacker News",
-        "score": 337
+        "score": 346
+      },
+      {
+        "title": "Using GCC's Nested Functions with Wide Pointers and No Trampolines II",
+        "url": "https://uecker.codeberg.page/2026-07-14.html",
+        "source": "Hacker News",
+        "score": 7
       },
       {
         "title": "In 1962, Egypt's Missile Program Lost Its Key Scientist Without a Trace",
         "url": "https://www.popularmechanics.com/military/a73358518/nazi-rocket-scientist-disappearance/",
         "source": "Hacker News",
-        "score": 35
-      },
-      {
-        "title": "Coin-sized device can hack a Boeing 737",
-        "url": "https://www.wired.com/story/this-coin-sized-device-can-hack-a-boeing-737/",
-        "source": "Hacker News",
-        "score": 73
+        "score": 40
       },
       {
         "title": "Understanding WCAG 2.2 as ePub and PDF",
         "url": "https://doeken.org/wcag-ebook",
         "source": "Hacker News",
-        "score": 10
+        "score": 16
+      },
+      {
+        "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
+        "url": "https://chenxiachan.github.io/thoughtdag/",
+        "source": "Hacker News",
+        "score": 35
+      },
+      {
+        "title": "Google is making private AI practical with homomorphic encryption",
+        "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+        "source": "Hacker News",
+        "score": 394
+      },
+      {
+        "title": "Coin-sized device can hack a Boeing 737",
+        "url": "https://www.wired.com/story/this-coin-sized-device-can-hack-a-boeing-737/",
+        "source": "Hacker News",
+        "score": 78
       },
       {
         "title": "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia",
         "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2/executive",
         "source": "Hacker News",
-        "score": 191
-      },
-      {
-        "title": "Google is making private AI practical with homomorphic encryption",
-        "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
-        "source": "Hacker News",
-        "score": 384
+        "score": 196
       },
       {
         "title": "eigendrum",
         "url": "https://eigendrum.com/#p=circle",
         "source": "Hacker News",
-        "score": 149
-      },
-      {
-        "title": "RustDesk now supports true unattended remote access on Wayland",
-        "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
-        "source": "Hacker News",
-        "score": 292
+        "score": 162
       },
       {
         "title": "Firefox is now the last major browser that still supports uBlock Origin",
         "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
         "source": "Hacker News",
-        "score": 989
+        "score": 1048
       },
       {
-        "title": "Show HN: Silent Shark – tactical map-based WWII submarine sim",
-        "url": "https://silentshark.app/",
+        "title": "RustDesk now supports true unattended remote access on Wayland",
+        "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
         "source": "Hacker News",
-        "score": 23
+        "score": 297
       },
       {
         "title": "AI by Hand",
         "url": "https://www.byhand.ai/",
         "source": "Hacker News",
-        "score": 300
-      },
-      {
-        "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
-        "url": "https://chenxiachan.github.io/thoughtdag/",
-        "source": "Hacker News",
-        "score": 25
-      },
-      {
-        "title": "Simplifying and Refactoring Introductory Calculus (2018)",
-        "url": "https://arxiv.org/abs/1811.03459",
-        "source": "Hacker News",
-        "score": 86
+        "score": 307
       }
     ],
     "ai": [
       {
+        "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
+        "url": "https://chenxiachan.github.io/thoughtdag/",
+        "source": "Hacker News AI",
+        "score": 35
+      },
+      {
         "title": "Google is making private AI practical with homomorphic encryption",
         "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
         "source": "Hacker News AI",
-        "score": 384
+        "score": 394
       },
       {
         "title": "AI by Hand",
         "url": "https://www.byhand.ai/",
         "source": "Hacker News AI",
-        "score": 300
-      },
-      {
-        "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
-        "url": "https://chenxiachan.github.io/thoughtdag/",
-        "source": "Hacker News AI",
-        "score": 25
+        "score": 307
       },
       {
         "title": "Maximizing the value of your Claude Code sessions",
         "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
         "source": "Hacker News AI",
-        "score": 217
+        "score": 228
       },
       {
         "title": "Show HN: Deltix – AI Driven Testing",
         "url": "https://app.deltix.ai",
         "source": "Hacker News AI",
-        "score": 30
+        "score": 32
       },
       {
         "title": "Suspecting court of using AI, man injected prompts in filings to try to win case",
         "url": "https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/",
         "source": "Hacker News AI",
-        "score": 15
+        "score": 22
+      },
+      {
+        "title": "Debian has begun voting on the future of AI/LLM contributions",
+        "url": "https://lists.debian.org/debian-devel-announce/2026/08/msg00002.html",
+        "source": "Hacker News AI",
+        "score": 6
       },
       {
         "title": "AI Model Atlas – visualizing populations of ML models as interconnected 3D graph",
@@ -140,22 +146,10 @@
         "score": 62
       },
       {
-        "title": "Artificial Ignorance: The Political Falsehoods of Leading AIs",
-        "url": "https://www.justfacts.com/news_artificial_ignorance_political_falsehoods_leading_ais",
-        "source": "Hacker News AI",
-        "score": 6
-      },
-      {
         "title": "Gemini 3.7 Flash",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News AI",
         "score": 952
-      },
-      {
-        "title": "A Contract-Grade Verifier for LLM-Generated GPU Kernels",
-        "url": "https://arxiv.org/abs/2608.12700",
-        "source": "Hacker News AI",
-        "score": 41
       }
     ],
     "news": [
@@ -180,8 +174,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Activists try to deliver aid to Palestinians in homes besieged by Israeli settlers",
-        "url": "https://www.bbc.co.uk/news/articles/c1w1ylw0p3no?at_medium=RSS&at_campaign=rss",
+        "title": "South Korea proposes talks to officially end war with North",
+        "url": "https://www.bbc.co.uk/news/articles/c8en2z9jp2xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -196,6 +190,11 @@
       }
     ],
     "art": [
+      {
+        "title": " No, Gen Z isn’t to blame for Instagram’s controversial new logo ",
+        "url": "https://www.creativebloq.com/design/logos-icons/no-gen-z-isnt-to-blame-for-instagrams-controversial-new-logo",
+        "source": "Creative Bloq"
+      },
       {
         "title": " You can now plug Adobe straight into ChatGPT - but should you? ",
         "url": "https://www.creativebloq.com/design/you-can-now-plug-adobe-straight-into-chatgpt-but-should-you",
@@ -224,11 +223,6 @@
       {
         "title": " Audeze want to make the only headphones you'll ever need ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/audeze-wants-to-make-the-only-headphones-you-ever-need",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " 8BitDo just turned your iPhone into a perfect retro handheld with this clever controller ",
-        "url": "https://www.creativebloq.com/tech/accessories/8bitdo-just-turned-your-iphone-into-a-perfect-retro-handheld-with-this-clever-controller",
         "source": "Creative Bloq"
       }
     ],
@@ -291,11 +285,6 @@
         "source": "Polygon"
       },
       {
-        "title": "'My Adventures with Superman’s Showrunners Tease a Final Villain Who's Scarier That Darkseid",
-        "url": "https://www.polygon.com/my-adventures-with-superman-showrunners-interview-season-3-finale/",
-        "source": "Polygon"
-      },
-      {
         "title": "Disney's Bluey movie trailer at D23 2026 is an Avengers-level event",
         "url": "https://www.polygon.com/bluey-movie-trailer-d23-2026/",
         "source": "Polygon"
@@ -303,6 +292,11 @@
       {
         "title": "Kingdom Hearts 4 Release Date and Anime Announced at D23",
         "url": "https://www.polygon.com/kingdom-hearts-4-pixar-coco-anime-disney-plus-d23/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Disney's D23 2026: All the trailers, news, and reveals in one place",
+        "url": "https://www.polygon.com/d23-2026-marvel-trailers-star-wars-frozen-pixar-kingdom-hearts/",
         "source": "Polygon"
       }
     ],
