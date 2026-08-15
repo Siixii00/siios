@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-15T01:17:00.079598",
-    "total_items": 49
+    "last_updated": "2026-08-15T02:52:53.812542",
+    "total_items": 56
   },
   "content": {
     "tech": [
       {
+        "title": "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2/executive",
+        "source": "Hacker News",
+        "score": 72
+      },
+      {
         "title": "Qwen 3.8 27B",
         "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
         "source": "Hacker News",
-        "score": 891
+        "score": 937
       },
       {
         "title": "Going Dark, and the era of law enforcement hacking",
         "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
         "source": "Hacker News",
-        "score": 188
+        "score": 228
       },
       {
-        "title": "The case for overhauling American science",
-        "url": "https://www.economist.com/by-invitation/2026/08/13/the-case-for-overhauling-american-science",
+        "title": "The Ploopy A+ Trackball Is Here",
+        "url": "https://blog.ploopy.co/the-aplus-is-finally-here-499",
         "source": "Hacker News",
-        "score": 30
+        "score": 32
       },
       {
-        "title": "RISC-V: They should have known better",
-        "url": "https://dmitry.gr/?r=06.%20Thoughts&proj=12.%20RV",
+        "title": "Simplifying and Refactoring Introductory Calculus",
+        "url": "https://arxiv.org/abs/1811.03459",
         "source": "Hacker News",
-        "score": 109
-      },
-      {
-        "title": "Why does Opus 5 feel worse to work with?",
-        "url": "https://mun-logadan.github.io/why-does-opus-5-feel-worse/",
-        "source": "Hacker News",
-        "score": 778
-      },
-      {
-        "title": "Stop sending me huge PRs; a rant",
-        "url": "https://getsmall.xyz/post/cmstjfl9l000if70ljmpzr4va",
-        "source": "Hacker News",
-        "score": 51
+        "score": 35
       },
       {
         "title": "Google is making private AI practical with homomorphic encryption",
         "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
         "source": "Hacker News",
-        "score": 275
+        "score": 296
       },
       {
         "title": "RustDesk now supports true unattended remote access on Wayland",
         "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
         "source": "Hacker News",
-        "score": 216
+        "score": 232
       },
       {
-        "title": "Super Mario Derivations",
-        "url": "https://fzakaria.com/2026/08/05/super-mario-derivations",
+        "title": "Hi-Fi Tape Recorder Changed Radio Forever",
+        "url": "https://spectrum.ieee.org/magnetophon-laugh-track",
         "source": "Hacker News",
-        "score": 46
-      },
-      {
-        "title": "Jane Street suffers $15B hit after meltdown at Situational Awareness",
-        "url": "https://www.ft.com/content/47dd5308-dd17-404a-a615-61046defd697",
-        "source": "Hacker News",
-        "score": 71
+        "score": 15
       },
       {
         "title": "eigendrum",
         "url": "https://eigendrum.com/#p=circle",
         "source": "Hacker News",
-        "score": 21
-      },
-      {
-        "title": "AI by Hand",
-        "url": "https://www.byhand.ai/",
-        "source": "Hacker News",
-        "score": 198
+        "score": 41
       },
       {
         "title": "Firefox is now the last major browser that still supports uBlock Origin",
         "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
         "source": "Hacker News",
-        "score": 377
+        "score": 479
       },
       {
-        "title": "Introducing Toast 1",
-        "url": "https://www.mixedbread.com/blog/toast-1",
+        "title": "Super Mario Derivations",
+        "url": "https://fzakaria.com/2026/08/05/super-mario-derivations",
         "source": "Hacker News",
-        "score": 174
+        "score": 64
       },
       {
-        "title": "Ultraviolet Bird Photography",
-        "url": "https://uvbirds.com/",
+        "title": "AI by Hand",
+        "url": "https://www.byhand.ai/",
         "source": "Hacker News",
-        "score": 106
+        "score": 215
+      },
+      {
+        "title": "Stop sending me huge PRs; a rant",
+        "url": "https://getsmall.xyz/post/cmstjfl9l000if70ljmpzr4va",
+        "source": "Hacker News",
+        "score": 88
+      },
+      {
+        "title": "Unearthing a 31 year old Easter egg in Ecco the Dolphin",
+        "url": "https://32bits.substack.com/p/under-the-microscope-ecco-the-dolphin-98c",
+        "source": "Hacker News",
+        "score": 32
+      },
+      {
+        "title": "NSA and IETF, Part 9",
+        "url": "https://blog.cr.yp.to/20260814-update.html",
+        "source": "Hacker News",
+        "score": 15
       }
     ],
     "ai": [
@@ -101,43 +101,43 @@
         "title": "Google is making private AI practical with homomorphic encryption",
         "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
         "source": "Hacker News AI",
-        "score": 275
+        "score": 296
       },
       {
         "title": "AI by Hand",
         "url": "https://www.byhand.ai/",
         "source": "Hacker News AI",
-        "score": 198
+        "score": 215
       },
       {
         "title": "Maximizing the value of your Claude Code sessions",
         "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
         "source": "Hacker News AI",
-        "score": 130
+        "score": 139
       },
       {
         "title": "A Contract-Grade Verifier for LLM-Generated GPU Kernels",
         "url": "https://arxiv.org/abs/2608.12700",
         "source": "Hacker News AI",
-        "score": 33
+        "score": 36
+      },
+      {
+        "title": "Youngest Black professor at Cambridge who faced plagiarism claims is found dead",
+        "url": "https://apnews.com/article/jason-arday-cambridge-professor-london-dead-reports-9036e2b405f5849415534e80bb1b9cb1",
+        "source": "Hacker News AI",
+        "score": 14
       },
       {
         "title": "AI Model Atlas – visualizing populations of ML models as interconnected 3D graph",
         "url": "https://run.cosmograph.app/public/ca9fd1ad-fe83-4238-8b69-b707c633aef0",
         "source": "Hacker News AI",
-        "score": 52
+        "score": 54
       },
       {
-        "title": "HashAgent – Share an AI agent as a URL, runs locally via WebGPU",
-        "url": "https://hashagent.pages.dev/",
+        "title": "Flownie – Open and Visual Data Workflow Platform with AI Agent Assistance",
+        "url": "https://flownie.com/",
         "source": "Hacker News AI",
-        "score": 46
-      },
-      {
-        "title": "Being Against LLMs Is Against the Spirit of Floss",
-        "url": "https://joarvarndt.se/free-vibes-2",
-        "source": "Hacker News AI",
-        "score": 13
+        "score": 7
       }
     ],
     "news": [
@@ -172,7 +172,43 @@
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " Stunning demo shows Unreal Engine 6 should be a game changer for rendering cinematics ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/stunning-demo-shows-unreal-engine-6-should-be-a-game-changer-for-rendering-cinematics",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Audeze want to make the only headphones you'll ever need ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/audeze-wants-to-make-the-only-headphones-you-ever-need",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " 8BitDo just turned your iPhone into a perfect retro handheld with this clever controller ",
+        "url": "https://www.creativebloq.com/tech/accessories/8bitdo-just-turned-your-iphone-into-a-perfect-retro-handheld-with-this-clever-controller",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " To target Gen Z, premium brands must learn the new codes of luxury ",
+        "url": "https://www.creativebloq.com/design/branding/to-target-gen-z-premium-brands-must-learn-the-new-codes-of-luxury",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Nothing’s CMF Clip Pro is the perfect cure to my individuality complex ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/nothings-cmf-clip-pro-is-the-perfect-cure-to-my-individuality-complex",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This concept artist uses ZBrush and Blender to create detailed depictions of  mysterious powers, forgotten species and malevolent demons ",
+        "url": "https://www.creativebloq.com/3d/3d-art/this-concept-artist-uses-zbrush-and-blender-to-create-detailed-depictions-of-mysterious-powers-forgotten-species-and-malevolent-demons",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Marvel fans apologise to your wallets, the PlayStation x Wolverine collab is here ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/marvel-fans-apologise-to-your-wallets-the-playstation-x-wolverine-collab-is-here",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "A stress hormone may help the brain repair itself",
@@ -212,6 +248,11 @@
     ],
     "gaming": [
       {
+        "title": "Disney's D23 2026: All the trailers, news, and reveals in one place",
+        "url": "https://www.polygon.com/d23-2026-marvel-trailers-star-wars-frozen-pixar-kingdom-hearts/",
+        "source": "Polygon"
+      },
+      {
         "title": "The 7 Most Perfect Cozy Games Like Animal Crossing",
         "url": "https://www.polygon.com/best-games-like-animal-crossing/",
         "source": "Polygon"
@@ -239,11 +280,6 @@
       {
         "title": "Baldur's Gate 3 is like a brand-new game with its most popular combat mod",
         "url": "https://www.polygon.com/baldurs-gate-3-mod-real-time-combat/",
-        "source": "Polygon"
-      },
-      {
-        "title": "A 'Kingdom Hearts' Anime Is Exactly What the Series Needs After 25 Years",
-        "url": "https://www.polygon.com/kingdom-hearts-anime-animated-series-25th-anniversary/",
         "source": "Polygon"
       }
     ],
