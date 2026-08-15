@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-15T02:52:53.812542",
+    "last_updated": "2026-08-15T03:39:55.456528",
     "total_items": 56
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia",
         "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2/executive",
         "source": "Hacker News",
-        "score": 72
+        "score": 105
       },
       {
         "title": "Qwen 3.8 27B",
         "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
         "source": "Hacker News",
-        "score": 937
+        "score": 952
       },
       {
         "title": "Going Dark, and the era of law enforcement hacking",
         "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
         "source": "Hacker News",
-        "score": 228
+        "score": 238
       },
       {
         "title": "The Ploopy A+ Trackball Is Here",
         "url": "https://blog.ploopy.co/the-aplus-is-finally-here-499",
         "source": "Hacker News",
-        "score": 32
+        "score": 45
       },
       {
         "title": "Simplifying and Refactoring Introductory Calculus",
         "url": "https://arxiv.org/abs/1811.03459",
         "source": "Hacker News",
-        "score": 35
+        "score": 44
       },
       {
         "title": "Google is making private AI practical with homomorphic encryption",
         "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
         "source": "Hacker News",
-        "score": 296
-      },
-      {
-        "title": "RustDesk now supports true unattended remote access on Wayland",
-        "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
-        "source": "Hacker News",
-        "score": 232
-      },
-      {
-        "title": "Hi-Fi Tape Recorder Changed Radio Forever",
-        "url": "https://spectrum.ieee.org/magnetophon-laugh-track",
-        "source": "Hacker News",
-        "score": 15
+        "score": 302
       },
       {
         "title": "eigendrum",
         "url": "https://eigendrum.com/#p=circle",
         "source": "Hacker News",
-        "score": 41
+        "score": 61
       },
       {
-        "title": "Firefox is now the last major browser that still supports uBlock Origin",
-        "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
+        "title": "RustDesk now supports true unattended remote access on Wayland",
+        "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
         "source": "Hacker News",
-        "score": 479
-      },
-      {
-        "title": "Super Mario Derivations",
-        "url": "https://fzakaria.com/2026/08/05/super-mario-derivations",
-        "source": "Hacker News",
-        "score": 64
-      },
-      {
-        "title": "AI by Hand",
-        "url": "https://www.byhand.ai/",
-        "source": "Hacker News",
-        "score": 215
-      },
-      {
-        "title": "Stop sending me huge PRs; a rant",
-        "url": "https://getsmall.xyz/post/cmstjfl9l000if70ljmpzr4va",
-        "source": "Hacker News",
-        "score": 88
-      },
-      {
-        "title": "Unearthing a 31 year old Easter egg in Ecco the Dolphin",
-        "url": "https://32bits.substack.com/p/under-the-microscope-ecco-the-dolphin-98c",
-        "source": "Hacker News",
-        "score": 32
+        "score": 237
       },
       {
         "title": "NSA and IETF, Part 9",
         "url": "https://blog.cr.yp.to/20260814-update.html",
         "source": "Hacker News",
-        "score": 15
+        "score": 28
+      },
+      {
+        "title": "Hi-Fi Tape Recorder Changed Radio Forever",
+        "url": "https://spectrum.ieee.org/magnetophon-laugh-track",
+        "source": "Hacker News",
+        "score": 22
+      },
+      {
+        "title": "Firefox is now the last major browser that still supports uBlock Origin",
+        "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
+        "source": "Hacker News",
+        "score": 538
+      },
+      {
+        "title": "Super Mario Derivations",
+        "url": "https://fzakaria.com/2026/08/05/super-mario-derivations",
+        "source": "Hacker News",
+        "score": 69
+      },
+      {
+        "title": "AI Driven Testing",
+        "url": "https://app.deltix.ai",
+        "source": "Hacker News",
+        "score": 3
+      },
+      {
+        "title": "AI by Hand",
+        "url": "https://www.byhand.ai/",
+        "source": "Hacker News",
+        "score": 225
+      },
+      {
+        "title": "Unearthing a 31 year old Easter egg in Ecco the Dolphin",
+        "url": "https://32bits.substack.com/p/under-the-microscope-ecco-the-dolphin-98c",
+        "source": "Hacker News",
+        "score": 40
       }
     ],
     "ai": [
@@ -101,19 +101,31 @@
         "title": "Google is making private AI practical with homomorphic encryption",
         "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
         "source": "Hacker News AI",
-        "score": 296
+        "score": 302
+      },
+      {
+        "title": "AI Driven Testing",
+        "url": "https://app.deltix.ai",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "AI by Hand",
         "url": "https://www.byhand.ai/",
         "source": "Hacker News AI",
-        "score": 215
+        "score": 225
       },
       {
         "title": "Maximizing the value of your Claude Code sessions",
         "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
         "source": "Hacker News AI",
-        "score": 139
+        "score": 146
+      },
+      {
+        "title": "Youngest Black professor at Cambridge who faced plagiarism claims is found dead",
+        "url": "https://apnews.com/article/jason-arday-cambridge-professor-london-dead-reports-9036e2b405f5849415534e80bb1b9cb1",
+        "source": "Hacker News AI",
+        "score": 18
       },
       {
         "title": "A Contract-Grade Verifier for LLM-Generated GPU Kernels",
@@ -122,22 +134,10 @@
         "score": 36
       },
       {
-        "title": "Youngest Black professor at Cambridge who faced plagiarism claims is found dead",
-        "url": "https://apnews.com/article/jason-arday-cambridge-professor-london-dead-reports-9036e2b405f5849415534e80bb1b9cb1",
-        "source": "Hacker News AI",
-        "score": 14
-      },
-      {
         "title": "AI Model Atlas – visualizing populations of ML models as interconnected 3D graph",
         "url": "https://run.cosmograph.app/public/ca9fd1ad-fe83-4238-8b69-b707c633aef0",
         "source": "Hacker News AI",
         "score": 54
-      },
-      {
-        "title": "Flownie – Open and Visual Data Workflow Platform with AI Agent Assistance",
-        "url": "https://flownie.com/",
-        "source": "Hacker News AI",
-        "score": 7
       }
     ],
     "news": [
@@ -248,6 +248,16 @@
     ],
     "gaming": [
       {
+        "title": "Disney's Bluey movie trailer at D23 2026 is an Avengers-level event",
+        "url": "https://www.polygon.com/bluey-movie-trailer-d23-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Kingdom Hearts 4 Release Date and Anime Announced at D23",
+        "url": "https://www.polygon.com/kingdom-hearts-4-pixar-coco-anime-disney-plus-d23/",
+        "source": "Polygon"
+      },
+      {
         "title": "Disney's D23 2026: All the trailers, news, and reveals in one place",
         "url": "https://www.polygon.com/d23-2026-marvel-trailers-star-wars-frozen-pixar-kingdom-hearts/",
         "source": "Polygon"
@@ -270,16 +280,6 @@
       {
         "title": "Beloved Legend of Zelda Games Get New Enhanced 3DS Ports",
         "url": "https://www.polygon.com/legend-of-zelda-3ds-minish-cap-link-to-the-past-mario-kart-fan-port-pc/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Super Mario Bros. Speedrunner Sets a New World Record That's 4 Frames From Perfect",
-        "url": "https://www.polygon.com/super-mario-bros-niftski-speedrun-world-record/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Baldur's Gate 3 is like a brand-new game with its most popular combat mod",
-        "url": "https://www.polygon.com/baldurs-gate-3-mod-real-time-combat/",
         "source": "Polygon"
       }
     ],
