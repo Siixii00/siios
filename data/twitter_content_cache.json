@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-15T07:31:37.118752",
-    "total_items": 58
+    "last_updated": "2026-08-15T08:29:59.797056",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "The other Sean Byrne doesn't exist",
         "url": "https://conic.al/writing/the-other-sean-byrne-doesnt-exist/",
         "source": "Hacker News",
-        "score": 66
+        "score": 104
       },
       {
         "title": "Qwen 3.8 27B",
         "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
         "source": "Hacker News",
-        "score": 1082
+        "score": 1113
       },
       {
         "title": "Going Dark, and the era of law enforcement hacking",
         "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
         "source": "Hacker News",
-        "score": 307
-      },
-      {
-        "title": "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia",
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2/executive",
-        "source": "Hacker News",
-        "score": 176
-      },
-      {
-        "title": "eigendrum",
-        "url": "https://eigendrum.com/#p=circle",
-        "source": "Hacker News",
-        "score": 128
-      },
-      {
-        "title": "Google is making private AI practical with homomorphic encryption",
-        "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
-        "source": "Hacker News",
-        "score": 362
-      },
-      {
-        "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
-        "url": "https://chenxiachan.github.io/thoughtdag/",
-        "source": "Hacker News",
-        "score": 11
-      },
-      {
-        "title": "The Ploopy A+ Trackball Is Here",
-        "url": "https://blog.ploopy.co/the-aplus-is-finally-here-499",
-        "source": "Hacker News",
-        "score": 93
-      },
-      {
-        "title": "RustDesk now supports true unattended remote access on Wayland",
-        "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
-        "source": "Hacker News",
-        "score": 272
+        "score": 325
       },
       {
         "title": "Coin-sized device can hack a Boeing 737",
         "url": "https://www.wired.com/story/this-coin-sized-device-can-hack-a-boeing-737/",
         "source": "Hacker News",
-        "score": 49
+        "score": 60
+      },
+      {
+        "title": "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2/executive",
+        "source": "Hacker News",
+        "score": 183
+      },
+      {
+        "title": "Google is making private AI practical with homomorphic encryption",
+        "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+        "source": "Hacker News",
+        "score": 375
+      },
+      {
+        "title": "eigendrum",
+        "url": "https://eigendrum.com/#p=circle",
+        "source": "Hacker News",
+        "score": 139
+      },
+      {
+        "title": "RustDesk now supports true unattended remote access on Wayland",
+        "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
+        "source": "Hacker News",
+        "score": 285
       },
       {
         "title": "Firefox is now the last major browser that still supports uBlock Origin",
         "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
         "source": "Hacker News",
-        "score": 837
+        "score": 914
       },
       {
-        "title": "Simplifying and Refactoring Introductory Calculus (2018)",
-        "url": "https://arxiv.org/abs/1811.03459",
+        "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
+        "url": "https://chenxiachan.github.io/thoughtdag/",
         "source": "Hacker News",
-        "score": 78
+        "score": 16
+      },
+      {
+        "title": "In 1962, Egypt's Missile Program Lost Its Key Scientist Without a Trace",
+        "url": "https://www.popularmechanics.com/military/a73358518/nazi-rocket-scientist-disappearance/",
+        "source": "Hacker News",
+        "score": 17
+      },
+      {
+        "title": "Show HN: Silent Shark – tactical map-based WWII submarine sim",
+        "url": "https://silentshark.app/",
+        "source": "Hacker News",
+        "score": 9
       },
       {
         "title": "AI by Hand",
         "url": "https://www.byhand.ai/",
         "source": "Hacker News",
-        "score": 280
+        "score": 289
       },
       {
-        "title": "\"That's not SOC 2 compliant\"",
-        "url": "https://ampcode.com/notes/thats-not-soc-2-compliant",
+        "title": "Simplifying and Refactoring Introductory Calculus (2018)",
+        "url": "https://arxiv.org/abs/1811.03459",
         "source": "Hacker News",
-        "score": 32
+        "score": 83
       },
       {
-        "title": "Unearthing a 31 year old Easter egg in Ecco the Dolphin",
-        "url": "https://32bits.substack.com/p/under-the-microscope-ecco-the-dolphin-98c",
+        "title": "The Ploopy A+ Trackball Is Here",
+        "url": "https://blog.ploopy.co/the-aplus-is-finally-here-499",
         "source": "Hacker News",
-        "score": 68
+        "score": 98
       }
     ],
     "ai": [
@@ -101,37 +101,37 @@
         "title": "Google is making private AI practical with homomorphic encryption",
         "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
         "source": "Hacker News AI",
-        "score": 362
+        "score": 375
       },
       {
         "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
         "url": "https://chenxiachan.github.io/thoughtdag/",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 16
       },
       {
         "title": "AI by Hand",
         "url": "https://www.byhand.ai/",
         "source": "Hacker News AI",
-        "score": 280
+        "score": 289
       },
       {
         "title": "Maximizing the value of your Claude Code sessions",
         "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
         "source": "Hacker News AI",
-        "score": 194
+        "score": 204
       },
       {
         "title": "Show HN: Deltix – AI Driven Testing",
         "url": "https://app.deltix.ai",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 26
       },
       {
-        "title": "Israel's done little to rein in spiraling settler violence against Palestinians",
-        "url": "https://apnews.com/article/israel-palestinians-settler-violence-us-siege-west-bank-bd4ae76cec1773c1c09233cc0b33a378",
+        "title": "Suspecting court of using AI, man injected prompts in filings to try to win case",
+        "url": "https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/",
         "source": "Hacker News AI",
-        "score": 15
+        "score": 6
       },
       {
         "title": "AI Model Atlas – visualizing populations of ML models as interconnected 3D graph",
@@ -154,8 +154,13 @@
     ],
     "news": [
       {
-        "title": "Mangione admits killing healthcare CEO and pleads guilty to federal charges",
-        "url": "https://www.bbc.co.uk/news/articles/cwy0nlq1l2wo?at_medium=RSS&at_campaign=rss",
+        "title": "At least 20 dead after 7.7-magnitude earthquake strikes Indonesia",
+        "url": "https://www.bbc.co.uk/news/articles/c5y0zz63gero?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "'I shot Mr Thompson'- What it was like inside court as Mangione pleaded guilty",
+        "url": "https://www.bbc.co.uk/news/articles/c4gkyez7195o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -164,18 +169,18 @@
         "source": "BBC World"
       },
       {
-        "title": "At least 14 dead after 7.7-magnitude earthquake strikes Indonesia",
-        "url": "https://www.bbc.co.uk/news/articles/c5y0zz63gero?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Afghan women tell the BBC their lives are unrecognisable after five years of Taliban rule",
-        "url": "https://www.bbc.co.uk/news/articles/clyje43dz4eo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "US aircraft carrier on way to relieve USS Lincoln after issues reported aboard",
         "url": "https://www.bbc.co.uk/news/articles/c171yp5zdrxo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Activists try to deliver aid to Palestinians in homes besieged by Israeli settlers",
+        "url": "https://www.bbc.co.uk/news/articles/c1w1ylw0p3no?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "France's top court blocks social media ban for under-15s",
+        "url": "https://www.bbc.co.uk/news/articles/cx2vj433xqlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -185,6 +190,16 @@
       }
     ],
     "art": [
+      {
+        "title": " You can now plug Adobe straight into ChatGPT - but should you? ",
+        "url": "https://www.creativebloq.com/design/you-can-now-plug-adobe-straight-into-chatgpt-but-should-you",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Spotify's AI debacle is a mess of its own making ",
+        "url": "https://www.creativebloq.com/entertainment/spotifys-ai-debacle-is-a-mess-of-its-own-making",
+        "source": "Creative Bloq"
+      },
       {
         "title": " This smartphone's solar eclipse fail shows the problem with AI-enhanced photography ",
         "url": "https://www.creativebloq.com/ai/this-smartphones-solar-eclipse-fail-shows-the-problem-with-ai-enhanced-photography",
@@ -208,16 +223,6 @@
       {
         "title": " 8BitDo just turned your iPhone into a perfect retro handheld with this clever controller ",
         "url": "https://www.creativebloq.com/tech/accessories/8bitdo-just-turned-your-iphone-into-a-perfect-retro-handheld-with-this-clever-controller",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " To target Gen Z, premium brands must learn the new codes of luxury ",
-        "url": "https://www.creativebloq.com/design/branding/to-target-gen-z-premium-brands-must-learn-the-new-codes-of-luxury",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Nothing’s CMF Clip Pro is the perfect cure to my individuality complex ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/nothings-cmf-clip-pro-is-the-perfect-cure-to-my-individuality-complex",
         "source": "Creative Bloq"
       }
     ],
