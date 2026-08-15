@@ -1,166 +1,167 @@
 {
   "metadata": {
-    "last_updated": "2026-08-15T11:21:01.223112",
-    "total_items": 59
+    "last_updated": "2026-08-15T12:39:01.361740",
+    "total_items": 53
   },
   "content": {
     "tech": [
       {
+        "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
+        "url": "https://sankalp.bearblog.dev/autoresearch/",
+        "source": "Hacker News",
+        "score": 47
+      },
+      {
         "title": "The other Sean Byrne doesn't exist",
         "url": "https://conic.al/writing/the-other-sean-byrne-doesnt-exist/",
         "source": "Hacker News",
-        "score": 194
+        "score": 240
       },
       {
         "title": "Qwen 3.8 27B",
         "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
         "source": "Hacker News",
-        "score": 1172
-      },
-      {
-        "title": "Using GCC's Nested Functions with Wide Pointers and No Trampolines II",
-        "url": "https://uecker.codeberg.page/2026-07-14.html",
-        "source": "Hacker News",
-        "score": 22
+        "score": 1202
       },
       {
         "title": "The mathematical beauty of hyperbezier curves",
         "url": "https://linebender.org/blog/hyperbezier/",
         "source": "Hacker News",
-        "score": 15
+        "score": 41
+      },
+      {
+        "title": "Using GCC's Nested Functions with Wide Pointers and No Trampolines II",
+        "url": "https://uecker.codeberg.page/2026-07-14.html",
+        "source": "Hacker News",
+        "score": 34
       },
       {
         "title": "Going Dark, and the era of law enforcement hacking",
         "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
         "source": "Hacker News",
-        "score": 352
+        "score": 368
       },
       {
         "title": "Show HN: Eigendrum - Draw any shape and hear what it sounds like as a drum",
         "url": "https://baselashraf81.github.io/eigendrum/",
         "source": "Hacker News",
-        "score": 26
+        "score": 38
       },
       {
         "title": "In 1962, Egypt's Missile Program Lost Its Key Scientist Without a Trace",
         "url": "https://www.popularmechanics.com/military/a73358518/nazi-rocket-scientist-disappearance/",
         "source": "Hacker News",
-        "score": 49
+        "score": 62
       },
       {
         "title": "Understanding WCAG 2.2 as ePub and PDF",
         "url": "https://doeken.org/wcag-ebook",
         "source": "Hacker News",
-        "score": 22
+        "score": 34
+      },
+      {
+        "title": "The Color of White Light",
+        "url": "https://ludens.cl/photo/spectra/spectra.html",
+        "source": "Hacker News",
+        "score": 8
       },
       {
         "title": "Google is making private AI practical with homomorphic encryption",
         "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
         "source": "Hacker News",
-        "score": 407
-      },
-      {
-        "title": "Coin-sized device can hack a Boeing 737",
-        "url": "https://www.wired.com/story/this-coin-sized-device-can-hack-a-boeing-737/",
-        "source": "Hacker News",
-        "score": 88
+        "score": 424
       },
       {
         "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
         "url": "https://chenxiachan.github.io/thoughtdag/",
         "source": "Hacker News",
-        "score": 45
+        "score": 53
       },
       {
         "title": "Firefox is now the last major browser that still supports uBlock Origin",
         "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
         "source": "Hacker News",
-        "score": 1120
-      },
-      {
-        "title": "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia",
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2/executive",
-        "source": "Hacker News",
-        "score": 200
+        "score": 1216
       },
       {
         "title": "RustDesk now supports true unattended remote access on Wayland",
         "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
         "source": "Hacker News",
-        "score": 302
+        "score": 314
       },
       {
-        "title": "AI by Hand",
-        "url": "https://www.byhand.ai/",
+        "title": "Show HN: Silent Shark – tactical map-based WWII submarine sim",
+        "url": "https://silentshark.app/",
         "source": "Hacker News",
-        "score": 315
+        "score": 45
       }
     ],
     "ai": [
       {
+        "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
+        "url": "https://sankalp.bearblog.dev/autoresearch/",
+        "source": "Hacker News AI",
+        "score": 47
+      },
+      {
         "title": "Google is making private AI practical with homomorphic encryption",
         "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
         "source": "Hacker News AI",
-        "score": 407
+        "score": 424
       },
       {
         "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
         "url": "https://chenxiachan.github.io/thoughtdag/",
         "source": "Hacker News AI",
-        "score": 45
+        "score": 53
       },
       {
         "title": "AI by Hand",
         "url": "https://www.byhand.ai/",
         "source": "Hacker News AI",
-        "score": 315
+        "score": 329
       },
       {
         "title": "Maximizing the value of your Claude Code sessions",
         "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
         "source": "Hacker News AI",
-        "score": 237
-      },
-      {
-        "title": "Suspecting court of using AI, man injected prompts in filings to try to win case",
-        "url": "https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/",
-        "source": "Hacker News AI",
-        "score": 36
+        "score": 258
       },
       {
         "title": "Debian has begun voting on the future of AI/LLM contributions",
         "url": "https://lists.debian.org/debian-devel-announce/2026/08/msg00002.html",
         "source": "Hacker News AI",
-        "score": 13
+        "score": 39
+      },
+      {
+        "title": "Suspecting court of using AI, man injected prompts in filings to try to win case",
+        "url": "https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/",
+        "source": "Hacker News AI",
+        "score": 53
       },
       {
         "title": "Show HN: Deltix – AI Driven Testing",
         "url": "https://app.deltix.ai",
         "source": "Hacker News AI",
-        "score": 35
+        "score": 37
       },
       {
-        "title": "AI Model Atlas – visualizing populations of ML models as interconnected 3D graph",
-        "url": "https://run.cosmograph.app/public/ca9fd1ad-fe83-4238-8b69-b707c633aef0",
+        "title": "OpenAI rolling out ads for Europe later this month",
+        "url": "https://openai.com/policies/eu-privacy-policy-preview/",
         "source": "Hacker News AI",
-        "score": 62
+        "score": 10
       },
       {
         "title": "Gemini 3.7 Flash",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
         "source": "Hacker News AI",
-        "score": 953
+        "score": 954
       }
     ],
     "news": [
       {
-        "title": "Powerful 7.7-magnitude earthquake kills at least 38 in Indonesia",
+        "title": "Powerful magnitude 7.7 earthquake kills at least 38 in Indonesia",
         "url": "https://www.bbc.co.uk/news/articles/c5y0zz63gero?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "'I shot Mr Thompson'- What it was like inside court as Mangione pleaded guilty",
-        "url": "https://www.bbc.co.uk/news/articles/c4gkyez7195o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -171,6 +172,11 @@
       {
         "title": "US aircraft carrier on way to relieve USS Lincoln after issues reported aboard",
         "url": "https://www.bbc.co.uk/news/articles/c171yp5zdrxo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Nine killed in Israeli strikes on southern Lebanon, authorities say",
+        "url": "https://www.bbc.co.uk/news/articles/c4gjygx4gjeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -189,43 +195,7 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " No, Gen Z isn’t to blame for Instagram’s controversial new logo ",
-        "url": "https://www.creativebloq.com/design/logos-icons/no-gen-z-isnt-to-blame-for-instagrams-controversial-new-logo",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " You can now plug Adobe straight into ChatGPT - but should you? ",
-        "url": "https://www.creativebloq.com/design/you-can-now-plug-adobe-straight-into-chatgpt-but-should-you",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Spotify's AI debacle is a mess of its own making ",
-        "url": "https://www.creativebloq.com/entertainment/spotifys-ai-debacle-is-a-mess-of-its-own-making",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This smartphone's solar eclipse fail shows the problem with AI-enhanced photography ",
-        "url": "https://www.creativebloq.com/ai/this-smartphones-solar-eclipse-fail-shows-the-problem-with-ai-enhanced-photography",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Coyote Vs Acme's rave reviews are about more than Looney Tunes nostalgia ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/coyote-vs-acmes-rave-reviews-are-about-more-than-looney-tunes-nostalgia",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Stunning demo shows Unreal Engine 6 should be a game changer for rendering cinematics ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/stunning-demo-shows-unreal-engine-6-should-be-a-game-changer-for-rendering-cinematics",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Audeze want to make the only headphones you'll ever need ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/audeze-wants-to-make-the-only-headphones-you-ever-need",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "A stress hormone may help the brain repair itself",
@@ -265,6 +235,16 @@
     ],
     "gaming": [
       {
+        "title": "Super Mario Sunshine and Wind Waker Doomed the GameCube but Saved Nintendo",
+        "url": "https://www.polygon.com/switchboard-mario-sunshine-gamecube-nintendo/",
+        "source": "Polygon"
+      },
+      {
+        "title": "WheelMates Is Like It Takes Two and Micro Machines Combined",
+        "url": "https://www.polygon.com/wheelmates-it-takes-two-inspired-release-date/",
+        "source": "Polygon"
+      },
+      {
         "title": "Disney's Unpredictable 10-Part Crime Thriller Saga is So Good, You'll Finish it in One Weekend",
         "url": "https://www.polygon.com/fargo-season-3-weekend-binge/",
         "source": "Polygon"
@@ -287,16 +267,6 @@
       {
         "title": "New Avengers: Doomsday Trailer Revealed at D23",
         "url": "https://www.polygon.com/avengers-doomsday-trailer-2-marvel-d23/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Marvel's Releases First Official VisionQuest Trailer at D23",
-        "url": "https://www.polygon.com/visionquest-trailer-d23-marvel/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Disney's Bluey movie trailer at D23 2026 is an Avengers-level event",
-        "url": "https://www.polygon.com/bluey-movie-trailer-d23-2026/",
         "source": "Polygon"
       }
     ],
