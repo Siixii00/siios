@@ -1,173 +1,173 @@
 {
   "metadata": {
-    "last_updated": "2026-08-15T15:21:36.213827",
+    "last_updated": "2026-08-15T16:25:25.272384",
     "total_items": 62
   },
   "content": {
     "tech": [
       {
+        "title": "The First At-Home Test for Infected Ticks Could Improve Lyme Disease Diagnosis",
+        "url": "https://www.smithsonianmag.com/innovation/the-first-at-home-test-for-infected-ticks-could-improve-lyme-disease-diagnosis-180989235/",
+        "source": "Hacker News",
+        "score": 63
+      },
+      {
+        "title": "AI Can Now Design Functional Viruses. Should We Worry?",
+        "url": "https://spectrum.ieee.org/ai-designed-virus",
+        "source": "Hacker News",
+        "score": 21
+      },
+      {
         "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
         "url": "https://sankalp.bearblog.dev/autoresearch/",
         "source": "Hacker News",
-        "score": 172
+        "score": 224
       },
       {
-        "title": "Writergate: Zig I/O Interface Overhaul",
-        "url": "https://alexrios.me/blog/writergate/",
+        "title": "The AI Situation in Software Development",
+        "url": "https://srikanth.ch/posts/the-ai-situation/",
         "source": "Hacker News",
-        "score": 20
+        "score": 25
       },
       {
-        "title": "GenRec: Towards LLM-Native Recommendation at Netflix",
-        "url": "https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3",
+        "title": "Yadda 3.0.0: BDD in the Age of AI Agents",
+        "url": "http://www.stephen-cresswell.com/2026/08/15/Yadda-3.0.0-BDD-in-the-Age-of-AI-Agents.html",
         "source": "Hacker News",
-        "score": 29
+        "score": 28
+      },
+      {
+        "title": "RISC-V: They Should Have Known Better",
+        "url": "https://dmitry.gr/?r=06.%20Thoughts&proj=12.%20RV",
+        "source": "Hacker News",
+        "score": 15
       },
       {
         "title": "The other Sean Byrne doesn't exist",
         "url": "https://conic.al/writing/the-other-sean-byrne-doesnt-exist/",
         "source": "Hacker News",
-        "score": 290
-      },
-      {
-        "title": "Working with AI Feels More Like Leadership Than Coding",
-        "url": "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/",
-        "source": "Hacker News",
-        "score": 69
+        "score": 309
       },
       {
         "title": "The mathematical beauty of hyperbezier curves",
         "url": "https://linebender.org/blog/hyperbezier/",
         "source": "Hacker News",
-        "score": 89
-      },
-      {
-        "title": "Yadda 3.0.0: BDD in the Age of AI Agents",
-        "url": "http://www.stephen-cresswell.com/2026/08/15/Yadda-3.0.0-BDD-in-the-Age-of-AI-Agents.html",
-        "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "Secondhand book sales are booming. Is it because of AI?",
-        "url": "https://www.bbc.co.uk/news/articles/cp3rprx2wl4o",
-        "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "The Color of White Light",
-        "url": "https://ludens.cl/photo/spectra/spectra.html",
-        "source": "Hacker News",
-        "score": 38
+        "score": 115
       },
       {
         "title": "Show HN: Eigendrum - Draw any shape and hear what it sounds like as a drum",
         "url": "https://baselashraf81.github.io/eigendrum/",
         "source": "Hacker News",
-        "score": 85
+        "score": 107
       },
       {
         "title": "Show HN: Quasicrystals Animation Playground with WebXR",
         "url": "https://hypnagogic-quasicrystals.github.io/",
         "source": "Hacker News",
-        "score": 8
+        "score": 19
+      },
+      {
+        "title": "The Color of White Light",
+        "url": "https://ludens.cl/photo/spectra/spectra.html",
+        "source": "Hacker News",
+        "score": 49
+      },
+      {
+        "title": "2D Gaussian Splatting for Bézier Spline Line Art Vectorization",
+        "url": "https://studios.disneyresearch.com/2026/07/16/2d-gaussian-splatting-for-bezier-spline-line-art-vectorization/",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
+        "title": "Could a computer scientist build a brain?",
+        "url": "https://stankerstjens.github.io/could-a-computer-scientist-build-a-brain/",
+        "source": "Hacker News",
+        "score": 15
       },
       {
         "title": "Going Dark, and the era of law enforcement hacking",
         "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
         "source": "Hacker News",
-        "score": 399
+        "score": 414
       },
       {
-        "title": "Using GCC's Nested Functions with Wide Pointers and No Trampolines II",
-        "url": "https://uecker.codeberg.page/2026-07-14.html",
+        "title": "The Problem",
+        "url": "https://intelligence.org/the-problem/",
         "source": "Hacker News",
-        "score": 49
-      },
-      {
-        "title": "Could a computer scientist build a brain?",
-        "url": "https://stankerstjens.github.io/could-a-computer-scientist-build-a-brain/",
-        "source": "Hacker News",
-        "score": 4
-      },
-      {
-        "title": "A Planet Position Widget",
-        "url": "https://leancrew.com/all-this/2026/08/a-planet-position-widget/",
-        "source": "Hacker News",
-        "score": 4
+        "score": 16
       }
     ],
     "ai": [
       {
+        "title": "AI Can Now Design Functional Viruses. Should We Worry?",
+        "url": "https://spectrum.ieee.org/ai-designed-virus",
+        "source": "Hacker News AI",
+        "score": 21
+      },
+      {
         "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
         "url": "https://sankalp.bearblog.dev/autoresearch/",
         "source": "Hacker News AI",
-        "score": 172
+        "score": 224
       },
       {
-        "title": "GenRec: Towards LLM-Native Recommendation at Netflix",
-        "url": "https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3",
+        "title": "The AI Situation in Software Development",
+        "url": "https://srikanth.ch/posts/the-ai-situation/",
         "source": "Hacker News AI",
-        "score": 29
-      },
-      {
-        "title": "Working with AI Feels More Like Leadership Than Coding",
-        "url": "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/",
-        "source": "Hacker News AI",
-        "score": 69
+        "score": 25
       },
       {
         "title": "Yadda 3.0.0: BDD in the Age of AI Agents",
         "url": "http://www.stephen-cresswell.com/2026/08/15/Yadda-3.0.0-BDD-in-the-Age-of-AI-Agents.html",
         "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Secondhand book sales are booming. Is it because of AI?",
-        "url": "https://www.bbc.co.uk/news/articles/cp3rprx2wl4o",
-        "source": "Hacker News AI",
-        "score": 26
+        "score": 28
       },
       {
         "title": "Could a computer scientist build a brain?",
         "url": "https://stankerstjens.github.io/could-a-computer-scientist-build-a-brain/",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 15
       },
       {
-        "title": "Brain turns listening inward during REM sleep, EEG recordings suggest",
-        "url": "https://medicalxpress.com/news/2026-07-brain-rem-eeg.html",
+        "title": "Working with AI Feels More Like Leadership Than Coding",
+        "url": "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 99
       },
       {
         "title": "Google is making private AI practical with homomorphic encryption",
         "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
         "source": "Hacker News AI",
-        "score": 448
+        "score": 458
+      },
+      {
+        "title": "Brain turns listening inward during REM sleep, EEG recordings suggest",
+        "url": "https://medicalxpress.com/news/2026-07-brain-rem-eeg.html",
+        "source": "Hacker News AI",
+        "score": 33
       },
       {
         "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
         "url": "https://chenxiachan.github.io/thoughtdag/",
         "source": "Hacker News AI",
-        "score": 81
+        "score": 89
+      },
+      {
+        "title": "Secondhand book sales are booming. Is it because of AI?",
+        "url": "https://www.bbc.co.uk/news/articles/cp3rprx2wl4o",
+        "source": "Hacker News AI",
+        "score": 51
       },
       {
         "title": "Maximizing the value of your Claude Code sessions",
         "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
         "source": "Hacker News AI",
-        "score": 285
+        "score": 290
       },
       {
         "title": "AI by Hand",
         "url": "https://www.byhand.ai/",
         "source": "Hacker News AI",
-        "score": 339
-      },
-      {
-        "title": "Cloudflare's AI Psychosis",
-        "url": "https://opensauce.it/cloudflare-ai-psychosis/",
-        "source": "Hacker News AI",
-        "score": 79
+        "score": 341
       }
     ],
     "news": [
@@ -229,13 +229,13 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " You can now plug Adobe straight into ChatGPT - but should you? ",
-        "url": "https://www.creativebloq.com/design/you-can-now-plug-adobe-straight-into-chatgpt-but-should-you",
+        "title": " Spotify's AI debacle is a mess of its own making ",
+        "url": "https://www.creativebloq.com/entertainment/spotifys-ai-debacle-is-a-mess-of-its-own-making",
         "source": "Creative Bloq"
       },
       {
-        "title": " Spotify's AI debacle is a mess of its own making ",
-        "url": "https://www.creativebloq.com/entertainment/spotifys-ai-debacle-is-a-mess-of-its-own-making",
+        "title": " You can now plug Adobe straight into ChatGPT - but should you? ",
+        "url": "https://www.creativebloq.com/design/you-can-now-plug-adobe-straight-into-chatgpt-but-should-you",
         "source": "Creative Bloq"
       },
       {
@@ -283,6 +283,21 @@
     ],
     "gaming": [
       {
+        "title": "'Epic Mickey' Fans Vindicated With 2027 'Oswald' Series Announcement",
+        "url": "https://www.polygon.com/oswald-disney-plus-epic-mickey-d23/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The 10 Best Classic Video Games That Need Modern Remakes",
+        "url": "https://www.polygon.com/10-games-need-modern-remakes/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Disney's 8-Part 10/10 Epic Sci-fi Series Has Officially Resurrected a Dying Franchise",
+        "url": "https://www.polygon.com/star-wars-ninth-jedi-streaming-hit-disney-plus/",
+        "source": "Polygon"
+      },
+      {
         "title": "'Disney Dreamlight Valley' Will Get Free 'Lilo & Stitch' and 'Nightmare Before Christmas' Updates",
         "url": "https://www.polygon.com/disney-dreamlight-valley-free-updates-roadmap/",
         "source": "Polygon"
@@ -300,21 +315,6 @@
       {
         "title": "How to perform air skills in Forza Horizon 6",
         "url": "https://www.polygon.com/forza-horizon-6-fh6-air-skill-how-to/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 Classic Sci-fi Cyberpunk Books You Must Read in 2026",
-        "url": "https://www.polygon.com/best-cyberpunk-books-like-neuromancer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Simpsons: Hit & Run' Fans Finally Have Hope For A Remaster After 23 Years, Thanks To Matt Groening",
-        "url": "https://www.polygon.com/the-simpsons-hit-and-run-coming-back-matt-groening/",
-        "source": "Polygon"
-      },
-      {
-        "title": "27 Years Later, 'Cowboy Bebop's Greatest Quote Still Haunts Me",
-        "url": "https://www.polygon.com/cowboy-bebop-best-quote-finale-explained/",
         "source": "Polygon"
       }
     ],
