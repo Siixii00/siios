@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-15T08:29:59.797056",
-    "total_items": 59
+    "last_updated": "2026-08-15T09:26:44.215065",
+    "total_items": 60
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "The other Sean Byrne doesn't exist",
         "url": "https://conic.al/writing/the-other-sean-byrne-doesnt-exist/",
         "source": "Hacker News",
-        "score": 104
+        "score": 137
       },
       {
         "title": "Qwen 3.8 27B",
         "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
         "source": "Hacker News",
-        "score": 1113
+        "score": 1134
       },
       {
         "title": "Going Dark, and the era of law enforcement hacking",
         "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
         "source": "Hacker News",
-        "score": 325
-      },
-      {
-        "title": "Coin-sized device can hack a Boeing 737",
-        "url": "https://www.wired.com/story/this-coin-sized-device-can-hack-a-boeing-737/",
-        "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia",
-        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2/executive",
-        "source": "Hacker News",
-        "score": 183
-      },
-      {
-        "title": "Google is making private AI practical with homomorphic encryption",
-        "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
-        "source": "Hacker News",
-        "score": 375
-      },
-      {
-        "title": "eigendrum",
-        "url": "https://eigendrum.com/#p=circle",
-        "source": "Hacker News",
-        "score": 139
-      },
-      {
-        "title": "RustDesk now supports true unattended remote access on Wayland",
-        "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
-        "source": "Hacker News",
-        "score": 285
-      },
-      {
-        "title": "Firefox is now the last major browser that still supports uBlock Origin",
-        "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
-        "source": "Hacker News",
-        "score": 914
-      },
-      {
-        "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
-        "url": "https://chenxiachan.github.io/thoughtdag/",
-        "source": "Hacker News",
-        "score": 16
+        "score": 337
       },
       {
         "title": "In 1962, Egypt's Missile Program Lost Its Key Scientist Without a Trace",
         "url": "https://www.popularmechanics.com/military/a73358518/nazi-rocket-scientist-disappearance/",
         "source": "Hacker News",
-        "score": 17
+        "score": 35
+      },
+      {
+        "title": "Coin-sized device can hack a Boeing 737",
+        "url": "https://www.wired.com/story/this-coin-sized-device-can-hack-a-boeing-737/",
+        "source": "Hacker News",
+        "score": 73
+      },
+      {
+        "title": "Understanding WCAG 2.2 as ePub and PDF",
+        "url": "https://doeken.org/wcag-ebook",
+        "source": "Hacker News",
+        "score": 10
+      },
+      {
+        "title": "Magnitude 7.7 Earthquake – 68 km NNW of Ende, Indonesia",
+        "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tkt2/executive",
+        "source": "Hacker News",
+        "score": 191
+      },
+      {
+        "title": "Google is making private AI practical with homomorphic encryption",
+        "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+        "source": "Hacker News",
+        "score": 384
+      },
+      {
+        "title": "eigendrum",
+        "url": "https://eigendrum.com/#p=circle",
+        "source": "Hacker News",
+        "score": 149
+      },
+      {
+        "title": "RustDesk now supports true unattended remote access on Wayland",
+        "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
+        "source": "Hacker News",
+        "score": 292
+      },
+      {
+        "title": "Firefox is now the last major browser that still supports uBlock Origin",
+        "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
+        "source": "Hacker News",
+        "score": 989
       },
       {
         "title": "Show HN: Silent Shark – tactical map-based WWII submarine sim",
         "url": "https://silentshark.app/",
         "source": "Hacker News",
-        "score": 9
+        "score": 23
       },
       {
         "title": "AI by Hand",
         "url": "https://www.byhand.ai/",
         "source": "Hacker News",
-        "score": 289
+        "score": 300
+      },
+      {
+        "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
+        "url": "https://chenxiachan.github.io/thoughtdag/",
+        "source": "Hacker News",
+        "score": 25
       },
       {
         "title": "Simplifying and Refactoring Introductory Calculus (2018)",
         "url": "https://arxiv.org/abs/1811.03459",
         "source": "Hacker News",
-        "score": 83
-      },
-      {
-        "title": "The Ploopy A+ Trackball Is Here",
-        "url": "https://blog.ploopy.co/the-aplus-is-finally-here-499",
-        "source": "Hacker News",
-        "score": 98
+        "score": 86
       }
     ],
     "ai": [
@@ -101,60 +101,66 @@
         "title": "Google is making private AI practical with homomorphic encryption",
         "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
         "source": "Hacker News AI",
-        "score": 375
-      },
-      {
-        "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
-        "url": "https://chenxiachan.github.io/thoughtdag/",
-        "source": "Hacker News AI",
-        "score": 16
+        "score": 384
       },
       {
         "title": "AI by Hand",
         "url": "https://www.byhand.ai/",
         "source": "Hacker News AI",
-        "score": 289
+        "score": 300
+      },
+      {
+        "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
+        "url": "https://chenxiachan.github.io/thoughtdag/",
+        "source": "Hacker News AI",
+        "score": 25
       },
       {
         "title": "Maximizing the value of your Claude Code sessions",
         "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
         "source": "Hacker News AI",
-        "score": 204
+        "score": 217
       },
       {
         "title": "Show HN: Deltix – AI Driven Testing",
         "url": "https://app.deltix.ai",
         "source": "Hacker News AI",
-        "score": 26
+        "score": 30
       },
       {
         "title": "Suspecting court of using AI, man injected prompts in filings to try to win case",
         "url": "https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 15
       },
       {
         "title": "AI Model Atlas – visualizing populations of ML models as interconnected 3D graph",
         "url": "https://run.cosmograph.app/public/ca9fd1ad-fe83-4238-8b69-b707c633aef0",
         "source": "Hacker News AI",
-        "score": 61
+        "score": 62
+      },
+      {
+        "title": "Artificial Ignorance: The Political Falsehoods of Leading AIs",
+        "url": "https://www.justfacts.com/news_artificial_ignorance_political_falsehoods_leading_ais",
+        "source": "Hacker News AI",
+        "score": 6
+      },
+      {
+        "title": "Gemini 3.7 Flash",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
+        "source": "Hacker News AI",
+        "score": 952
       },
       {
         "title": "A Contract-Grade Verifier for LLM-Generated GPU Kernels",
         "url": "https://arxiv.org/abs/2608.12700",
         "source": "Hacker News AI",
         "score": 41
-      },
-      {
-        "title": "Gemini 3.7 Flash",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
-        "source": "Hacker News AI",
-        "score": 951
       }
     ],
     "news": [
       {
-        "title": "At least 20 dead after 7.7-magnitude earthquake strikes Indonesia",
+        "title": "Powerful 7.7-magnitude earthquake kills at least 38 in Indonesia",
         "url": "https://www.bbc.co.uk/news/articles/c5y0zz63gero?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
