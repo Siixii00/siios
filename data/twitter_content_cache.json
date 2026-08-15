@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-15T13:31:23.107482",
-    "total_items": 63
+    "last_updated": "2026-08-15T14:23:15.362763",
+    "total_items": 64
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
         "url": "https://sankalp.bearblog.dev/autoresearch/",
         "source": "Hacker News",
-        "score": 87
-      },
-      {
-        "title": "Brazilian election filter in X For You timeline",
-        "url": "https://github.com/xai-org/x-algorithm/blob/main/home-mixer/filters/brazil_2026_election_filter.rs",
-        "source": "Hacker News",
-        "score": 8
+        "score": 130
       },
       {
         "title": "Strait of Hormuz Live Traffic Tracking",
         "url": "https://hormuz.now/",
         "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "The other Sean Byrne doesn't exist",
-        "url": "https://conic.al/writing/the-other-sean-byrne-doesnt-exist/",
-        "source": "Hacker News",
-        "score": 258
-      },
-      {
-        "title": "Qwen 3.8 27B",
-        "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
-        "source": "Hacker News",
-        "score": 1223
+        "score": 25
       },
       {
         "title": "GenRec: Towards LLM-Native Recommendation at Netflix",
         "url": "https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3",
         "source": "Hacker News",
-        "score": 4
+        "score": 18
       },
       {
-        "title": "The mathematical beauty of hyperbezier curves",
-        "url": "https://linebender.org/blog/hyperbezier/",
+        "title": "The other Sean Byrne doesn't exist",
+        "url": "https://conic.al/writing/the-other-sean-byrne-doesnt-exist/",
         "source": "Hacker News",
-        "score": 58
+        "score": 270
       },
       {
-        "title": "The Color of White Light",
-        "url": "https://ludens.cl/photo/spectra/spectra.html",
+        "title": "Qwen 3.8 27B",
+        "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
         "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "Using GCC's Nested Functions with Wide Pointers and No Trampolines II",
-        "url": "https://uecker.codeberg.page/2026-07-14.html",
-        "source": "Hacker News",
-        "score": 41
-      },
-      {
-        "title": "Show HN: Eigendrum - Draw any shape and hear what it sounds like as a drum",
-        "url": "https://baselashraf81.github.io/eigendrum/",
-        "source": "Hacker News",
-        "score": 56
-      },
-      {
-        "title": "Going Dark, and the era of law enforcement hacking",
-        "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
-        "source": "Hacker News",
-        "score": 385
-      },
-      {
-        "title": "In 1962, Egypt's Missile Program Lost Its Key Scientist Without a Trace",
-        "url": "https://www.popularmechanics.com/military/a73358518/nazi-rocket-scientist-disappearance/",
-        "source": "Hacker News",
-        "score": 72
+        "score": 1242
       },
       {
         "title": "Working with AI Feels More Like Leadership Than Coding",
         "url": "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/",
         "source": "Hacker News",
-        "score": 7
+        "score": 35
       },
       {
-        "title": "Google is making private AI practical with homomorphic encryption",
-        "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+        "title": "The mathematical beauty of hyperbezier curves",
+        "url": "https://linebender.org/blog/hyperbezier/",
         "source": "Hacker News",
-        "score": 436
+        "score": 70
       },
       {
-        "title": "Understanding WCAG 2.2 as ePub and PDF",
-        "url": "https://doeken.org/wcag-ebook",
+        "title": "Yadda 3.0.0: BDD in the Age of AI Agents",
+        "url": "http://www.stephen-cresswell.com/2026/08/15/Yadda-3.0.0-BDD-in-the-Age-of-AI-Agents.html",
         "source": "Hacker News",
-        "score": 39
+        "score": 4
+      },
+      {
+        "title": "Show HN: Eigendrum - Draw any shape and hear what it sounds like as a drum",
+        "url": "https://baselashraf81.github.io/eigendrum/",
+        "source": "Hacker News",
+        "score": 72
+      },
+      {
+        "title": "The Color of White Light",
+        "url": "https://ludens.cl/photo/spectra/spectra.html",
+        "source": "Hacker News",
+        "score": 32
+      },
+      {
+        "title": "Using GCC's Nested Functions with Wide Pointers and No Trampolines II",
+        "url": "https://uecker.codeberg.page/2026-07-14.html",
+        "source": "Hacker News",
+        "score": 45
+      },
+      {
+        "title": "Going Dark, and the era of law enforcement hacking",
+        "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
+        "source": "Hacker News",
+        "score": 392
+      },
+      {
+        "title": "Brazilian election filter in X For You timeline",
+        "url": "https://github.com/xai-org/x-algorithm/blob/main/home-mixer/filters/brazil_2026_election_filter.rs",
+        "source": "Hacker News",
+        "score": 26
+      },
+      {
+        "title": "In 1962, Egypt's Missile Program Lost Its Key Scientist Without a Trace",
+        "url": "https://www.popularmechanics.com/military/a73358518/nazi-rocket-scientist-disappearance/",
+        "source": "Hacker News",
+        "score": 76
+      },
+      {
+        "title": "Brain turns listening inward during REM sleep, EEG recordings suggest",
+        "url": "https://medicalxpress.com/news/2026-07-brain-rem-eeg.html",
+        "source": "Hacker News",
+        "score": 16
       }
     ],
     "ai": [
@@ -101,85 +101,96 @@
         "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
         "url": "https://sankalp.bearblog.dev/autoresearch/",
         "source": "Hacker News AI",
-        "score": 87
+        "score": 130
       },
       {
         "title": "Strait of Hormuz Live Traffic Tracking",
         "url": "https://hormuz.now/",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 25
       },
       {
         "title": "GenRec: Towards LLM-Native Recommendation at Netflix",
         "url": "https://netflixtechblog.com/genrec-towards-llm-native-recommendation-at-netflix-f20be6f643e3",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 18
       },
       {
         "title": "Working with AI Feels More Like Leadership Than Coding",
         "url": "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 35
       },
       {
-        "title": "Google is making private AI practical with homomorphic encryption",
-        "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+        "title": "Yadda 3.0.0: BDD in the Age of AI Agents",
+        "url": "http://www.stephen-cresswell.com/2026/08/15/Yadda-3.0.0-BDD-in-the-Age-of-AI-Agents.html",
         "source": "Hacker News AI",
-        "score": 436
-      },
-      {
-        "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
-        "url": "https://chenxiachan.github.io/thoughtdag/",
-        "source": "Hacker News AI",
-        "score": 67
-      },
-      {
-        "title": "AI by Hand",
-        "url": "https://www.byhand.ai/",
-        "source": "Hacker News AI",
-        "score": 335
+        "score": 4
       },
       {
         "title": "Brain turns listening inward during REM sleep, EEG recordings suggest",
         "url": "https://medicalxpress.com/news/2026-07-brain-rem-eeg.html",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 16
+      },
+      {
+        "title": "Google is making private AI practical with homomorphic encryption",
+        "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
+        "source": "Hacker News AI",
+        "score": 443
+      },
+      {
+        "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
+        "url": "https://chenxiachan.github.io/thoughtdag/",
+        "source": "Hacker News AI",
+        "score": 75
+      },
+      {
+        "title": "Secondhand book sales are booming. Is it because of AI?",
+        "url": "https://www.bbc.co.uk/news/articles/cp3rprx2wl4o",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "Maximizing the value of your Claude Code sessions",
         "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
         "source": "Hacker News AI",
-        "score": 266
+        "score": 274
+      },
+      {
+        "title": "AI by Hand",
+        "url": "https://www.byhand.ai/",
+        "source": "Hacker News AI",
+        "score": 337
+      },
+      {
+        "title": "The Plasticity Thesis: How the Brain Learns to Be Conscious – PMC",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3110382/",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "Debian has begun voting on the future of AI/LLM contributions",
         "url": "https://lists.debian.org/debian-devel-announce/2026/08/msg00002.html",
         "source": "Hacker News AI",
-        "score": 51
+        "score": 58
       },
       {
         "title": "Show HN: Deltix – AI Driven Testing",
         "url": "https://app.deltix.ai",
         "source": "Hacker News AI",
         "score": 39
-      },
-      {
-        "title": "OpenAI rolling out ads for Europe later this month",
-        "url": "https://openai.com/policies/eu-privacy-policy-preview/",
-        "source": "Hacker News AI",
-        "score": 12
-      },
-      {
-        "title": "Suspecting court of using AI, man injected prompts in filings to try to win case",
-        "url": "https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/",
-        "source": "Hacker News AI",
-        "score": 56
       }
     ],
     "news": [
       {
-        "title": "Powerful magnitude 7.7 earthquake kills at least 38 in Indonesia",
+        "title": "Powerful magnitude 7.7 earthquake kills at least 47 in Indonesia",
         "url": "https://www.bbc.co.uk/news/articles/c5y0zz63gero?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Eleven killed in Israeli strikes on southern Lebanon, authorities say",
+        "url": "https://www.bbc.co.uk/news/articles/c4gjygx4gjeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -190,11 +201,6 @@
       {
         "title": "US aircraft carrier on way to relieve USS Lincoln after issues reported aboard",
         "url": "https://www.bbc.co.uk/news/articles/c171yp5zdrxo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Eleven killed in Israeli strikes on southern Lebanon, authorities say",
-        "url": "https://www.bbc.co.uk/news/articles/c4gjygx4gjeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -289,6 +295,16 @@
     ],
     "gaming": [
       {
+        "title": "10 Classic Sci-fi Cyberpunk Books You Must Read in 2026",
+        "url": "https://www.polygon.com/best-cyberpunk-books-like-neuromancer/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Simpsons: Hit & Run' Fans Finally Have Hope For A Remaster After 23 Years, Thanks To Matt Groening",
+        "url": "https://www.polygon.com/the-simpsons-hit-and-run-coming-back-matt-groening/",
+        "source": "Polygon"
+      },
+      {
         "title": "27 Years Later, 'Cowboy Bebop's Greatest Quote Still Haunts Me",
         "url": "https://www.polygon.com/cowboy-bebop-best-quote-finale-explained/",
         "source": "Polygon"
@@ -311,16 +327,6 @@
       {
         "title": "What to Expect in Fortnite Chapter 7 Season 4 and its Gaming Theme",
         "url": "https://www.polygon.com/fortnite-gaming-legends-season-what-to-expect/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Marvel Officially Reveals New X-Men Movie Cast at D23",
-        "url": "https://www.polygon.com/x-men-movie-news-cast-announced-d23-marvel/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Disney Reveals First Look at Star Wars: Ahsoka Season 2 at D23 Fan Event",
-        "url": "https://www.polygon.com/ahsoka-season-2-trailer-release-date-d23/",
         "source": "Polygon"
       }
     ],
