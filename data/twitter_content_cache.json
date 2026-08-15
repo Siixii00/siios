@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-14T23:22:09.850656",
-    "total_items": 59
+    "last_updated": "2026-08-15T01:17:00.079598",
+    "total_items": 49
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Qwen 3.8 27B",
         "url": "https://huggingface.co/Qwen/Qwen3.8-27B-FP8",
         "source": "Hacker News",
-        "score": 803
+        "score": 891
       },
       {
         "title": "Going Dark, and the era of law enforcement hacking",
         "url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
         "source": "Hacker News",
-        "score": 121
+        "score": 188
+      },
+      {
+        "title": "The case for overhauling American science",
+        "url": "https://www.economist.com/by-invitation/2026/08/13/the-case-for-overhauling-american-science",
+        "source": "Hacker News",
+        "score": 30
       },
       {
         "title": "RISC-V: They should have known better",
         "url": "https://dmitry.gr/?r=06.%20Thoughts&proj=12.%20RV",
         "source": "Hacker News",
-        "score": 27
+        "score": 109
       },
       {
         "title": "Why does Opus 5 feel worse to work with?",
         "url": "https://mun-logadan.github.io/why-does-opus-5-feel-worse/",
         "source": "Hacker News",
-        "score": 731
+        "score": 778
       },
       {
-        "title": "RustDesk now supports true unattended remote access on Wayland",
-        "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
+        "title": "Stop sending me huge PRs; a rant",
+        "url": "https://getsmall.xyz/post/cmstjfl9l000if70ljmpzr4va",
         "source": "Hacker News",
-        "score": 197
+        "score": 51
       },
       {
         "title": "Google is making private AI practical with homomorphic encryption",
         "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
         "source": "Hacker News",
-        "score": 239
+        "score": 275
+      },
+      {
+        "title": "RustDesk now supports true unattended remote access on Wayland",
+        "url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
+        "source": "Hacker News",
+        "score": 216
       },
       {
         "title": "Super Mario Derivations",
         "url": "https://fzakaria.com/2026/08/05/super-mario-derivations",
         "source": "Hacker News",
-        "score": 24
+        "score": 46
+      },
+      {
+        "title": "Jane Street suffers $15B hit after meltdown at Situational Awareness",
+        "url": "https://www.ft.com/content/47dd5308-dd17-404a-a615-61046defd697",
+        "source": "Hacker News",
+        "score": 71
+      },
+      {
+        "title": "eigendrum",
+        "url": "https://eigendrum.com/#p=circle",
+        "source": "Hacker News",
+        "score": 21
       },
       {
         "title": "AI by Hand",
         "url": "https://www.byhand.ai/",
         "source": "Hacker News",
-        "score": 169
-      },
-      {
-        "title": "Introducing Toast 1",
-        "url": "https://www.mixedbread.com/blog/toast-1",
-        "source": "Hacker News",
-        "score": 171
+        "score": 198
       },
       {
         "title": "Firefox is now the last major browser that still supports uBlock Origin",
         "url": "https://www.pcworld.com/article/3212428/firefox-is-now-the-last-major-browser-that-still-supports-ublock-origin.html",
         "source": "Hacker News",
-        "score": 224
+        "score": 377
+      },
+      {
+        "title": "Introducing Toast 1",
+        "url": "https://www.mixedbread.com/blog/toast-1",
+        "source": "Hacker News",
+        "score": 174
       },
       {
         "title": "Ultraviolet Bird Photography",
         "url": "https://uvbirds.com/",
         "source": "Hacker News",
-        "score": 92
-      },
-      {
-        "title": "I turned my RSS feeds into an e-ink newspaper to stop reading on my phone",
-        "url": "https://heyjonny.dev/posts/rss-to-eink-newspaper/",
-        "source": "Hacker News",
-        "score": 130
-      },
-      {
-        "title": "New Lower and Upper Bounds for the Grothendieck Constant",
-        "url": "https://arxiv.org/abs/2608.11158",
-        "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "Show HN: Mole – Deep research agent for your terminal",
-        "url": "https://github.com/lajosdeme/mole",
-        "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Maximizing the value of your Claude Code sessions",
-        "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
-        "source": "Hacker News",
-        "score": 114
+        "score": 106
       }
     ],
     "ai": [
@@ -101,61 +101,43 @@
         "title": "Google is making private AI practical with homomorphic encryption",
         "url": "https://blog.google/security/how-google-is-making-private-ai-practical-with-homomorphic-encryption/",
         "source": "Hacker News AI",
-        "score": 239
+        "score": 275
       },
       {
         "title": "AI by Hand",
         "url": "https://www.byhand.ai/",
         "source": "Hacker News AI",
-        "score": 169
+        "score": 198
       },
       {
         "title": "Maximizing the value of your Claude Code sessions",
         "url": "https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions",
         "source": "Hacker News AI",
-        "score": 114
+        "score": 130
       },
       {
         "title": "A Contract-Grade Verifier for LLM-Generated GPU Kernels",
         "url": "https://arxiv.org/abs/2608.12700",
         "source": "Hacker News AI",
-        "score": 30
+        "score": 33
       },
       {
         "title": "AI Model Atlas – visualizing populations of ML models as interconnected 3D graph",
         "url": "https://run.cosmograph.app/public/ca9fd1ad-fe83-4238-8b69-b707c633aef0",
         "source": "Hacker News AI",
-        "score": 50
-      },
-      {
-        "title": "Soup Raiders goes native: What you gain by building your own game engine",
-        "url": "https://eliasfarhan.ch/gamedev/cpp/2026/08/14/srnative-01-why-a-custom-engine.html",
-        "source": "Hacker News AI",
-        "score": 47
+        "score": 52
       },
       {
         "title": "HashAgent – Share an AI agent as a URL, runs locally via WebGPU",
         "url": "https://hashagent.pages.dev/",
         "source": "Hacker News AI",
-        "score": 45
+        "score": 46
       },
       {
         "title": "Being Against LLMs Is Against the Spirit of Floss",
         "url": "https://joarvarndt.se/free-vibes-2",
         "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "Anthropic Risk August 2026 [pdf]",
-        "url": "https://www-cdn.anthropic.com/f61d49fa5596956a5dec75fea0e973bf6a6a8378/Redacted%20Risk%20Report%20August%202026%20.pdf",
-        "source": "Hacker News AI",
-        "score": 51
-      },
-      {
-        "title": "Gemini 3.7 Flash",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-3-7-flash/",
-        "source": "Hacker News AI",
-        "score": 946
+        "score": 13
       }
     ],
     "news": [
@@ -190,43 +172,7 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " Stunning demo shows Unreal Engine 6 should be a game changer for rendering cinematics ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/stunning-demo-shows-unreal-engine-6-should-be-a-game-changer-for-rendering-cinematics",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Audeze want to make the only headphones you'll ever need ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/audeze-wants-to-make-the-only-headphones-you-ever-need",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " 8BitDo just turned your iPhone into a perfect retro handheld with this clever controller ",
-        "url": "https://www.creativebloq.com/tech/accessories/8bitdo-just-turned-your-iphone-into-a-perfect-retro-handheld-with-this-clever-controller",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " To target Gen Z, premium brands must learn the new codes of luxury ",
-        "url": "https://www.creativebloq.com/design/branding/to-target-gen-z-premium-brands-must-learn-the-new-codes-of-luxury",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Nothing’s CMF Clip Pro is the perfect cure to my individuality complex ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/nothings-cmf-clip-pro-is-the-perfect-cure-to-my-individuality-complex",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This concept artist uses ZBrush and Blender to create detailed depictions of  mysterious powers, forgotten species and malevolent demons ",
-        "url": "https://www.creativebloq.com/3d/3d-art/this-concept-artist-uses-zbrush-and-blender-to-create-detailed-depictions-of-mysterious-powers-forgotten-species-and-malevolent-demons",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Marvel fans apologise to your wallets, the PlayStation x Wolverine collab is here ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/marvel-fans-apologise-to-your-wallets-the-playstation-x-wolverine-collab-is-here",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "A stress hormone may help the brain repair itself",
