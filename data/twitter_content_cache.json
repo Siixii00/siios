@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-16T01:21:59.992871",
-    "total_items": 61
+    "last_updated": "2026-08-16T03:01:57.433325",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
+        "title": "Asus Bike Booster",
+        "url": "https://www.asus.com/accessories/bike-booster/asus-oxiis/oxiis-intelligent-bike-booster/",
+        "source": "Hacker News",
+        "score": 124
+      },
+      {
+        "title": "Asynchronous I/O in DuckDB: Work, Thread, Work",
+        "url": "https://duckdb.org/2026/07/31/asynchronous-io",
+        "source": "Hacker News",
+        "score": 34
+      },
+      {
         "title": "Semaglutide linked to lower predicted dementia risk",
         "url": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/dad2.70432",
         "source": "Hacker News",
-        "score": 342
+        "score": 363
+      },
+      {
+        "title": "Show HN: Mic Drop, a real-time multiplayer karaoke game",
+        "url": "https://www.micdrop.gg/",
+        "source": "Hacker News",
+        "score": 18
       },
       {
         "title": "Cultivating a state of mind where new ideas are born (2023)",
         "url": "https://www.henrikkarlsson.xyz/p/good-ideas",
         "source": "Hacker News",
-        "score": 73
+        "score": 96
       },
       {
         "title": "AI in drug discovery – what it is, where we stand and the path forward",
         "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
         "source": "Hacker News",
-        "score": 84
-      },
-      {
-        "title": "At-home test for infected ticks could improve Lyme Disease diagnosis",
-        "url": "https://www.smithsonianmag.com/innovation/the-first-at-home-test-for-infected-ticks-could-improve-lyme-disease-diagnosis-180989235/",
-        "source": "Hacker News",
-        "score": 210
-      },
-      {
-        "title": "Abdominal fat predicts heart disease risk better than BMI",
-        "url": "https://www.acc.org/about-acc/press-releases/2026/08/11/14/59/abdominal-fat-predicts-heart-disease-risk-better-than-bmi",
-        "source": "Hacker News",
-        "score": 142
-      },
-      {
-        "title": "Asus Bike Booster",
-        "url": "https://www.asus.com/accessories/bike-booster/asus-oxiis/oxiis-intelligent-bike-booster/",
-        "source": "Hacker News",
-        "score": 18
-      },
-      {
-        "title": "RISC-V: They Should Have Known Better",
-        "url": "https://dmitry.gr/?r=06.%20Thoughts&proj=12.%20RV",
-        "source": "Hacker News",
-        "score": 229
-      },
-      {
-        "title": "Super El Niño Keeps Growing as New Forecasts Reach Record Territory Ahead Winter",
-        "url": "https://www.severe-weather.eu/long-range-2/super-el-nino-growth-accelerating-to-record-strength-fall-winter-2026-2027-forecast-impact-united-states-canada-europe-fa/",
-        "source": "Hacker News",
-        "score": 61
-      },
-      {
-        "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
-        "url": "https://sankalp.bearblog.dev/autoresearch/",
-        "source": "Hacker News",
-        "score": 392
-      },
-      {
-        "title": "AI has access to a vastly larger working memory than the human brain",
-        "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
-        "source": "Hacker News",
-        "score": 407
-      },
-      {
-        "title": "A fortuitous decade as an indie software developer",
-        "url": "https://lapcatsoftware.com/articles/2026/8/3.html",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Tracking down a Zsh history data loss bug",
-        "url": "https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/",
-        "source": "Hacker News",
-        "score": 31
+        "score": 104
       },
       {
         "title": "Tea5767-Radio-Tuner",
         "url": "https://github.com/turtushig22-blip/tea5767-radio-tuner",
         "source": "Hacker News",
-        "score": 7
+        "score": 24
       },
       {
-        "title": "ChatGPT lost 22 points of web share in a year",
-        "url": "https://aicharts.grok.me/c/market-share",
+        "title": "At-home test for infected ticks could improve Lyme Disease diagnosis",
+        "url": "https://www.smithsonianmag.com/innovation/the-first-at-home-test-for-infected-ticks-could-improve-lyme-disease-diagnosis-180989235/",
         "source": "Hacker News",
-        "score": 14
+        "score": 220
       },
       {
-        "title": "SugarTrack – an offline Android logbook for blood sugar (no account, no cloud)",
-        "url": "https://sugartrack-beta.vercel.app/",
+        "title": "Super El Niño Keeps Growing as New Forecasts Reach Record Territory Ahead Winter",
+        "url": "https://www.severe-weather.eu/long-range-2/super-el-nino-growth-accelerating-to-record-strength-fall-winter-2026-2027-forecast-impact-united-states-canada-europe-fa/",
         "source": "Hacker News",
-        "score": 17
+        "score": 104
+      },
+      {
+        "title": "Abdominal fat predicts heart disease risk better than BMI",
+        "url": "https://www.acc.org/about-acc/press-releases/2026/08/11/14/59/abdominal-fat-predicts-heart-disease-risk-better-than-bmi",
+        "source": "Hacker News",
+        "score": 173
+      },
+      {
+        "title": "RISC-V: They Should Have Known Better",
+        "url": "https://dmitry.gr/?r=06.%20Thoughts&proj=12.%20RV",
+        "source": "Hacker News",
+        "score": 243
+      },
+      {
+        "title": "Tracking down a Zsh history data loss bug",
+        "url": "https://michael.stapelberg.ch/posts/2026-08-09-zsh-history-truncation-bug/",
+        "source": "Hacker News",
+        "score": 47
+      },
+      {
+        "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
+        "url": "https://sankalp.bearblog.dev/autoresearch/",
+        "source": "Hacker News",
+        "score": 401
+      },
+      {
+        "title": "Show HN: I built a native app for coding agents with Rust and GPUI",
+        "url": "https://waku.sh",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
+        "title": "AI has access to a vastly larger working memory than the human brain",
+        "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
+        "source": "Hacker News",
+        "score": 426
       }
     ],
     "ai": [
@@ -101,31 +101,25 @@
         "title": "AI in drug discovery – what it is, where we stand and the path forward",
         "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
         "source": "Hacker News AI",
-        "score": 84
+        "score": 104
       },
       {
         "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
         "url": "https://sankalp.bearblog.dev/autoresearch/",
         "source": "Hacker News AI",
-        "score": 392
+        "score": 401
       },
       {
         "title": "AI has access to a vastly larger working memory than the human brain",
         "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
         "source": "Hacker News AI",
-        "score": 407
+        "score": 426
       },
       {
-        "title": "ChatGPT lost 22 points of web share in a year",
-        "url": "https://aicharts.grok.me/c/market-share",
+        "title": "AI-Assisted GPU Porting of a 250k Line Legacy Weather Simulation Code",
+        "url": "https://arxiv.org/abs/2608.13122",
         "source": "Hacker News AI",
-        "score": 14
-      },
-      {
-        "title": "Working with AI feels more like leadership than coding",
-        "url": "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/",
-        "source": "Hacker News AI",
-        "score": 264
+        "score": 8
       },
       {
         "title": "Voltair (YC W26) Is Hiring a Test Flight Engineer",
@@ -134,28 +128,28 @@
         "score": 1
       },
       {
-        "title": "Jaithon 3, a fast programming language with the perfect syntax",
-        "url": "https://github.com/abhiramasonny/jaithon",
+        "title": "Working with AI feels more like leadership than coding",
+        "url": "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/",
         "source": "Hacker News AI",
-        "score": 21
-      },
-      {
-        "title": "I Remain a Skeptic",
-        "url": "https://blog.jsbarretto.com/post/i-remain-a-skeptic",
-        "source": "Hacker News AI",
-        "score": 58
+        "score": 275
       },
       {
         "title": "A controversial Alzheimer's surgery is said to reverse symptoms",
         "url": "https://www.nature.com/articles/d41586-026-02448-x",
         "source": "Hacker News AI",
-        "score": 156
+        "score": 160
+      },
+      {
+        "title": "I Remain a Skeptic",
+        "url": "https://blog.jsbarretto.com/post/i-remain-a-skeptic",
+        "source": "Hacker News AI",
+        "score": 85
       },
       {
         "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
         "url": "https://chenxiachan.github.io/thoughtdag/",
         "source": "Hacker News AI",
-        "score": 112
+        "score": 113
       },
       {
         "title": "Yadda 3.0.0: BDD in the Age of AI Agents",
@@ -277,6 +271,16 @@
     ],
     "gaming": [
       {
+        "title": "5 Classic Anime That Deserve To Get Remakes ASAP",
+        "url": "https://www.polygon.com/classic-anime-that-should-get-remakes/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Lego and Mario Are Officially Teaming Up for New Releases in 2027",
+        "url": "https://www.polygon.com/lego-super-mario-minifigure-new-release-2027/",
+        "source": "Polygon"
+      },
+      {
         "title": "Vin Diesel's 10/10 130-Minute Heist Action Thriller Is Finally Back on Netflix",
         "url": "https://www.polygon.com/netflix-streaming-movies-august-2026-fast-five/",
         "source": "Polygon"
@@ -299,16 +303,6 @@
       {
         "title": "12 Best Zelda: TOTK Replay Ideas and Challenge Runs",
         "url": "https://www.polygon.com/zelda-tears-kingdom-replay-ideas-challenge-runs/",
-        "source": "Polygon"
-      },
-      {
-        "title": "There's Never Been a Better Time to Be an Isekai Anime Fan",
-        "url": "https://www.polygon.com/2026-best-isekai-anime-re-zero-mushoku-tensei-reincarnated-as-a-slime/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Fortnite's Unstable Event And Sonic Comic Seemingly Confirm Massive Chapter 7 Season 4 Leak",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-leaks/",
         "source": "Polygon"
       }
     ],
