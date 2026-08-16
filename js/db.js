@@ -287,6 +287,20 @@ const MessagesDB = {
         return database.getAllFromIndex('messages', 'chat_id', chatId);
     },
 
+    async getById(id) {
+        const database = await initDB();
+        return database.get('messages', id);
+    },
+
+    async update(id, data) {
+        const database = await initDB();
+        const message = await database.get('messages', id);
+        if (!message) throw new Error('Message not found');
+        const updated = { ...message, ...data, timestamp: message.timestamp };
+        await database.put('messages', updated);
+        return updated;
+    },
+
     async create(chatId, role, content, speakerCharacterId = null) {
         const database = await initDB();
         const id = generateId();

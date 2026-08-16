@@ -11,6 +11,18 @@ let batchProcessing = false;
 let streamingPlaceholders = new Map();
 let awaitingResponse = false;
 
+const MODE_OPTIONS = [
+    { id: 'full', label: '完整模式', desc: '包含動作、場景、對話等描述，不少於 400 字' },
+    { id: 'dialogue_single', label: '對話模式（單句回應）', desc: '每次只用一句話回應' },
+    { id: 'dialogue_multi', label: '對話模式（多句回應）', desc: '用多句話自然回應' },
+    { id: 'custom', label: '自定義模式', desc: '自行輸入想要的回應方式' }
+];
+
+function getModeLabel(mode) {
+    const found = MODE_OPTIONS.find(o => o.id === mode);
+    return found ? found.label : '對話模式（多句回應）';
+}
+
 async function applyCustomTheme() {
     const theme = await SettingsDB.get('chat_custom_theme');
     const savedTheme = await SettingsDB.get('appearance_theme');
@@ -119,7 +131,7 @@ async function renderChat(params) {
                     if (value) {
                         await ChatsDB.update(chatId, { weather_location: value });
                         currentChat = await ChatsDB.getById(chatId);
-                        createToast('Weather location saved: ' + value);
+                        createToast('已儲存天氣地點：' + value);
                         inputSheet.close();
                     }
                 };
@@ -130,6 +142,171 @@ async function renderChat(params) {
             })()
         });
         inputSheet.open();
+    }
+    
+    async function openOutputModeSheet() {
+        const currentMode = currentChat.response_mode || 'dialogue_multi';
+        const currentCustom = currentChat.custom_response_prompt || '';
+        
+        const wrapper = createElement('div', 'p-4 flex flex-col gap-2');
+        
+        const renderOptions = () => {
+            wrapper.innerHTML = '';
+            MODE_OPTIONS.forEach(opt => {
+                const row = createElement('div', 'flex items-center gap-3 p-3 rounded-lg cursor-pointer border ' + (opt.id === currentMode ? 'border-kakao-yellow bg-kakao-yellow/10' : 'border-gray-100 bg-gray-50'));
+                const name = createElement('div', 'flex-1');
+                name.appendChild(createElement('div', 'font-medium', { textContent: opt.label }));
+                name.appendChild(createElement('div', 'text-xs text-gray-500 mt-0.5', { textContent: opt.desc }));
+                row.appendChild(name);
+                if (opt.id === currentMode) {
+                    row.appendChild(createElement('span', 'text-kakao-yellow font-bold', { textContent: '✓' }));
+                }
+                row.onclick = () => {
+                    if (opt.id === 'custom') {
+                        renderCustomInput();
+                    } else {
+                        ChatsDB.update(chatId, { response_mode: opt.id }).then(async () => {
+                            currentChat = await ChatsDB.getById(chatId);
+                            createToast('已切換為「' + opt.label + '」');
+                            sheet.close();
+                        });
+                    }
+                };
+                wrapper.appendChild(row);
+            });
+        };
+        
+        const renderCustomInput = () => {
+            wrapper.innerHTML = '';
+            wrapper.appendChild(createElement('div', 'font-medium mb-2', { textContent: '輸入你想要的回應方式：' }));
+            const textarea = createElement('textarea', 'w-full p-3 border rounded-lg text-base', {
+                rows: '4',
+                placeholder: '例：用詩意的語氣回覆，每一段結尾加上一句感想…'
+            });
+            textarea.value = currentCustom;
+            wrapper.appendChild(textarea);
+            const saveBtn = createElement('button', 'w-full mt-3 p-3 bg-kakao-yellow text-kakao-brown font-bold rounded-lg', { textContent: '儲存' });
+            saveBtn.onclick = async () => {
+                const prompt = textarea.value.trim();
+                await ChatsDB.update(chatId, { response_mode: 'custom', custom_response_prompt: prompt });
+                currentChat = await ChatsDB.getById(chatId);
+                createToast('已儲存自定義模式');
+                sheet.close();
+            };
+            wrapper.appendChild(saveBtn);
+            const backBtn = createElement('button', 'w-full mt-2 p-3 border rounded-lg font-medium', { textContent: '返回' });
+            backBtn.onclick = () => renderOptions();
+            wrapper.appendChild(backBtn);
+        };
+        
+        renderOptions();
+        
+        const sheet = createKakaoBottomSheet([], {
+            title: '輸出模式',
+            customContent: wrapper
+        });
+        sheet.open();
+    }
+    
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if (isIOS) {
+        const iosStyle = document.createElement('style');
+        iosStyle.textContent = '.kakao-message-row .kakao-bubble-text { -webkit-user-select: none !important; user-select: none !important; -webkit-touch-callout: none !important; }';
+        document.head.appendChild(iosStyle);
+    }
+    
+    function setupBubbleLongPress(bubbleEl, messageId, role) {
+        let longPressTimer = null;
+        const clear = () => { if (longPressTimer) { clearTimeout(longPressTimer); longPressTimer = null; } };
+        bubbleEl.addEventListener('touchstart', (e) => {
+            longPressTimer = setTimeout(() => {
+                e.preventDefault();
+                showBubbleMenu(messageId, bubbleEl, role);
+            }, 600);
+        }, { passive: false });
+        bubbleEl.addEventListener('touchmove', clear, { passive: true });
+        bubbleEl.addEventListener('touchend', clear, { passive: true });
+        bubbleEl.addEventListener('touchcancel', clear, { passive: true });
+        bubbleEl.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            showBubbleMenu(messageId, bubbleEl, role);
+        });
+    }
+    
+    function showBubbleMenu(messageId, bubbleEl, role) {
+        const content = bubbleEl.querySelector('.kakao-bubble-text')?.textContent || '';
+        const sheet = createKakaoBottomSheet([
+            { icon: 'edit', label: '編輯該句聊天', onSelect: () => editMessage(messageId, content, bubbleEl) },
+            { icon: 'delete', label: '刪除該句聊天', onSelect: () => deleteMessage(messageId, bubbleEl) },
+            { icon: 'star', label: '設定為重要記憶', onSelect: () => saveAsImportantMemory(content, role) }
+        ], { title: '訊息操作' });
+        sheet.open();
+    }
+    
+    async function deleteMessage(messageId, bubbleEl) {
+        await MessagesDB.delete(messageId);
+        bubbleEl.remove();
+        messages = await MessagesDB.getByChatId(chatId);
+        messageCount = messages.length;
+        createToast('已刪除');
+    }
+    
+    async function editMessage(messageId, originalContent, bubbleEl) {
+        const textEl = bubbleEl.querySelector('.kakao-bubble-text');
+        if (!textEl) return;
+        
+        const textarea = document.createElement('textarea');
+        textarea.value = originalContent;
+        textarea.rows = 3;
+        textarea.style.cssText = 'width:100%;min-height:60px;resize:vertical;font-size:14px;padding:8px;border:1px solid #ddd;border-radius:8px;box-sizing:border-box;';
+        
+        const cancelBtn = document.createElement('button');
+        cancelBtn.textContent = '取消';
+        cancelBtn.style.cssText = 'padding:4px 12px;font-size:13px;border:none;border-radius:6px;background:#f0f0f0;cursor:pointer;';
+        const saveBtn = document.createElement('button');
+        saveBtn.textContent = '儲存';
+        saveBtn.style.cssText = 'padding:4px 12px;font-size:13px;border:none;border-radius:6px;background:#FEE500;cursor:pointer;font-weight:500;';
+        
+        const btnBar = document.createElement('div');
+        btnBar.style.cssText = 'display:flex;gap:8px;margin-top:8px;justify-content:flex-end;';
+        btnBar.appendChild(cancelBtn);
+        btnBar.appendChild(saveBtn);
+        
+        const wrapper = document.createElement('div');
+        wrapper.appendChild(textarea);
+        wrapper.appendChild(btnBar);
+        
+        textEl.replaceWith(wrapper);
+        
+        const restore = () => {
+            wrapper.replaceWith(textEl);
+            textEl.textContent = originalContent;
+        };
+        
+        cancelBtn.onclick = restore;
+        saveBtn.onclick = async () => {
+            const newContent = textarea.value.trim();
+            if (!newContent || newContent === originalContent) {
+                restore();
+                return;
+            }
+            await MessagesDB.update(messageId, { content: newContent });
+            textEl.textContent = newContent;
+            wrapper.replaceWith(textEl);
+            createToast('已更新');
+        };
+    }
+    
+    async function saveAsImportantMemory(content, role) {
+        if (!content) return;
+        await MemoryDB.create({
+            chat_id: chatId,
+            content,
+            importance: 1.0,
+            memory_type: 'important',
+            domain: role === 'user' ? 'user_message' : 'assistant_message'
+        });
+        createToast('已設為重要記憶');
     }
     
     async function exportChatToHTML() {
@@ -298,19 +475,19 @@ async function renderChat(params) {
     const sideMenuItems = [
         {
             icon: 'person',
-            label: 'Character Info',
+            label: '角色資訊',
             onClick: () => currentChat.is_group ? createToast('群組聊天') : Router.navigate('/characters/' + currentChat.character_id)
         },
-        { icon: 'account_circle', label: 'User Mask', onClick: () => createToast('User mask feature in development') },
-        { icon: 'public', label: 'World Setting', onClick: () => createToast('World setting feature in development') }
+        { icon: 'account_circle', label: '使用者形象', onClick: () => createToast('使用者形象功能開發中') },
+        { icon: 'public', label: '世界觀設定', onClick: () => createToast('世界觀設定功能開發中') }
     ];
     
     if (currentChat.is_group) {
         const memberIds = currentChat.member_ids || [];
         sideMenuItems.push({
             icon: 'group',
-            label: 'Participants',
-            value: memberIds.length + ' members',
+            label: '群組成員',
+            value: memberIds.length + ' 位成員',
             onClick: openGroupMemberSheet
         });
     }
@@ -319,47 +496,53 @@ async function renderChat(params) {
         title: currentChat.is_group ? '群組聊天' : currentChat.character_name,
         sections: [
             {
-                title: 'Info',
+                title: '資訊',
                 items: sideMenuItems
             },
             {
-                title: 'Settings',
+                title: '輸出模式',
                 items: [
-                    { icon: 'settings', label: 'Chat Settings', onClick: () => Router.navigate('/chats/settings/' + chatId) },
-                    { icon: 'location_on', label: 'Weather Location', value: currentChat.weather_location || 'Not set', onClick: showWeatherLocationDialog },
-                    { icon: 'wb_sunny', label: 'Real World Info', toggle: currentChat.enable_real_world_info || false, onToggle: async (val) => {
+                    { icon: 'chat', label: '回應模式', value: getModeLabel(currentChat.response_mode || 'dialogue_multi'), onClick: openOutputModeSheet }
+                ]
+            },
+            {
+                title: '設定',
+                items: [
+                    { icon: 'settings', label: '聊天設定', onClick: () => Router.navigate('/chats/settings/' + chatId) },
+                    { icon: 'location_on', label: '天氣地點', value: currentChat.weather_location || '未設定', onClick: showWeatherLocationDialog },
+                    { icon: 'wb_sunny', label: '真實世界資訊', toggle: currentChat.enable_real_world_info || false, onToggle: async (val) => {
                         await ChatsDB.update(chatId, { enable_real_world_info: val });
                         currentChat = await ChatsDB.getById(chatId);
-                        createToast(val ? 'Real world info enabled' : 'Real world info disabled');
+                        createToast(val ? '已啟用真實世界資訊' : '已停用真實世界資訊');
                     }}
                 ]
             },
             {
-                title: 'Export & Memory',
+                title: '匯出與記憶',
                 items: [
-                    { icon: 'download', label: 'Export Chat', onClick: exportChatToHTML },
-                    { icon: 'psychology', label: 'Generate Memory Summary', onClick: generateMemorySummary },
-                    { icon: 'bedtime', label: 'Force Sleep', onClick: forceSleepCycle }
+                    { icon: 'download', label: '匯出聊天記錄', onClick: exportChatToHTML },
+                    { icon: 'psychology', label: '生成記憶摘要', onClick: generateMemorySummary },
+                    { icon: 'bedtime', label: '執行休眠', onClick: forceSleepCycle }
                 ]
             },
             {
-                title: 'Daily',
+                title: '每日',
                 items: [
-                    { icon: 'backup', label: 'Daily Backup', onClick: createDailyBackup },
-                    { icon: 'history_edu', label: 'Daily Record', onClick: () => createToast('Daily record feature in development') }
+                    { icon: 'backup', label: '每日備份', onClick: createDailyBackup },
+                    { icon: 'history_edu', label: '每日紀錄', onClick: () => createToast('每日紀錄功能開發中') }
                 ]
             },
             {
-                title: 'Danger Zone',
+                title: '危險區',
                 items: [
                     { divider: true },
-                    { icon: 'block', label: 'Block Character', danger: true, onClick: blockCharacter },
-                    { icon: 'delete', label: 'Clear Chat', danger: true, onClick: async () => {
+                    { icon: 'block', label: '封鎖角色', danger: true, onClick: blockCharacter },
+                    { icon: 'delete', label: '清空聊天', danger: true, onClick: async () => {
                         await MessagesDB.clearByChatId(chatId);
-                        createToast('Chat cleared');
+                        createToast('聊天記錄已清空');
                         Router.navigate('/chats');
                     }},
-                    { icon: 'delete_forever', label: 'Clear Memory', danger: true, onClick: clearMemory }
+                    { icon: 'delete_forever', label: '清除記憶', danger: true, onClick: clearMemory }
                 ]
             }
         ]
@@ -401,6 +584,7 @@ async function renderChat(params) {
             name,
             msg.speaker_character_id || undefined
         );
+        setupBubbleLongPress(bubble, msg.id, msg.role);
         main.appendChild(bubble);
     }
     
@@ -464,9 +648,10 @@ async function renderChat(params) {
         textarea.value = '';
         textarea.style.height = '';
         
-        await MessagesDB.create(chatId, 'user', content);
+        const msg = await MessagesDB.create(chatId, 'user', content);
         
         const userBubble = createKakaoBubble('user', content);
+        setupBubbleLongPress(userBubble, msg.id, 'user');
         main.appendChild(userBubble);
         
         requestAnimationFrame(() => {
@@ -526,11 +711,12 @@ async function renderChat(params) {
                     main.scrollTop = main.scrollHeight;
                 },
                 onComplete: async (fullContent) => {
-                    await MessagesDB.create(chatId, 'assistant', fullContent, memberId);
+                    const msg = await MessagesDB.create(chatId, 'assistant', fullContent, memberId);
                     
                     const placeholder = streamingPlaceholders.get(memberId);
                     if (placeholder) {
                         const finalBubble = createKakaoBubble('ai', fullContent, avatar, name, memberId);
+                        setupBubbleLongPress(finalBubble, msg.id, 'assistant');
                         placeholder.replaceWith(finalBubble);
                         streamingPlaceholders.delete(memberId);
                     }
@@ -648,9 +834,10 @@ async function renderChat(params) {
                     main.scrollTop = main.scrollHeight;
                 },
                 async (fullContent) => {
-                    await MessagesDB.create(chatId, 'assistant', fullContent);
+                    const msg = await MessagesDB.create(chatId, 'assistant', fullContent);
                     
                     const aiBubble = createKakaoBubble('ai', fullContent, currentChat.character_avatar, currentChat.character_name);
+                    setupBubbleLongPress(aiBubble, msg.id, 'assistant');
                     streamingBubble.replaceWith(aiBubble);
                     
                     await ChatsDB.update(chatId, { last_message: fullContent.substring(0, 50) });
