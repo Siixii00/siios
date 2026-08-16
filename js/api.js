@@ -1,7 +1,7 @@
 ﻿import Router from './router.js';
 import { SettingsDB, ChatsDB, CharactersDB, UsersDB, HealthDB, ZiweiCacheDB } from './db.js';
 import { loadWorldInfoContext } from './core/world-info-loader.js';
-import { generateRPPrompt } from './constants/rp-system-prompt.js';
+import { generateRPPrompt, buildResponseModePrompt } from './constants/rp-system-prompt.js';
 import { buildRealWorldContext } from './core/real-world-context.js';
 import { PeriodCalculator } from './core/period-calculator.js';
 import { createErrorModal } from './components.js';
@@ -97,6 +97,14 @@ const APIClient = {
             role: 'system',
             content: rpPrompt
         });
+        
+        const modePrompt = buildResponseModePrompt(chat?.response_mode, chat?.custom_response_prompt);
+        if (modePrompt) {
+            systemMessages.push({
+                role: 'system',
+                content: modePrompt
+            });
+        }
         
         const worldInfoOptions = {};
         if (characterData?.id) {
@@ -238,6 +246,7 @@ const APIClient = {
                 top_p: settings.top_p || 1.0,
                 frequency_penalty: settings.frequency_penalty || 0,
                 presence_penalty: settings.presence_penalty || 0,
+                max_tokens: Math.min(4096, settings.context_size || 4096),
                 stream: true
             };
             
@@ -273,72 +282,129 @@ const APIClient = {
         }
     },
     
-    async processStreamWithTools(response, apiMessages, settings, characterData, onChunk, onComplete, onError) {
+    async processStreamWithTools(response, apiMessages, settings, characterData, onChunk, onComplete, onError, options = {}) {
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
         let fullContent = '';
         let toolCalls = [];
         let currentToolCall = null;
+        let buffer = '';
+        
+        const processLine = (line) => {
+            if (!line.startsWith('data: ')) return;
+            
+            const data = line.slice(6);
+            if (data === '[DONE]') return;
+            
+            try {
+                const parsed = JSON.parse(data);
+                const delta = parsed.choices?.[0]?.delta;
+                
+                if (delta?.content) {
+                    fullContent += delta.content;
+                    onChunk(delta.content, fullContent);
+                }
+                
+                if (delta?.tool_calls) {
+                    for (const toolCallDelta of delta.tool_calls) {
+                        const index = toolCallDelta.index;
+                        
+                        if (!toolCalls[index]) {
+                            toolCalls[index] = {
+                                id: toolCallDelta.id,
+                                type: 'function',
+                                function: {
+                                    name: '',
+                                    arguments: ''
+                                }
+                            };
+                        }
+                        
+                        if (toolCallDelta.id) {
+                            toolCalls[index].id = toolCallDelta.id;
+                        }
+                        if (toolCallDelta.function?.name) {
+                            toolCalls[index].function.name = toolCallDelta.function.name;
+                        }
+                        if (toolCallDelta.function?.arguments) {
+                            toolCalls[index].function.arguments += toolCallDelta.function.arguments;
+                        }
+                    }
+                }
+            } catch (e) {
+            }
+        };
         
         while (true) {
             const { done, value } = await reader.read();
             if (done) break;
             
-            const chunk = decoder.decode(value, { stream: true });
-            const lines = chunk.split('\n');
+            buffer += decoder.decode(value, { stream: true });
+            const lines = buffer.split('\n');
+            buffer = lines.pop() || '';
             
             for (const line of lines) {
-                if (line.startsWith('data: ')) {
-                    const data = line.slice(6);
-                    if (data === '[DONE]') continue;
-                    
-                    try {
-                        const parsed = JSON.parse(data);
-                        const delta = parsed.choices?.[0]?.delta;
-                        
-                        if (delta?.content) {
-                            fullContent += delta.content;
-                            onChunk(delta.content, fullContent);
-                        }
-                        
-                        if (delta?.tool_calls) {
-                            for (const toolCallDelta of delta.tool_calls) {
-                                const index = toolCallDelta.index;
-                                
-                                if (!toolCalls[index]) {
-                                    toolCalls[index] = {
-                                        id: toolCallDelta.id,
-                                        type: 'function',
-                                        function: {
-                                            name: '',
-                                            arguments: ''
-                                        }
-                                    };
-                                }
-                                
-                                if (toolCallDelta.id) {
-                                    toolCalls[index].id = toolCallDelta.id;
-                                }
-                                if (toolCallDelta.function?.name) {
-                                    toolCalls[index].function.name = toolCallDelta.function.name;
-                                }
-                                if (toolCallDelta.function?.arguments) {
-                                    toolCalls[index].function.arguments += toolCallDelta.function.arguments;
-                                }
-                            }
-                        }
-                    } catch (e) {
-                    }
-                }
+                processLine(line);
             }
+        }
+        
+        buffer += decoder.decode();
+        if (buffer.trim()) {
+            processLine(buffer);
         }
         
         if (toolCalls.length > 0) {
             await this.handleToolCalls(toolCalls, apiMessages, settings, characterData, onChunk, onComplete, onError);
         } else if (fullContent) {
-            onComplete(fullContent);
+            if (options.skipVerify) {
+                onComplete(fullContent);
+            } else {
+                await this.verifyReply(apiMessages, fullContent, settings, characterData, onChunk, onComplete, onError);
+            }
         } else {
             onComplete('');
+        }
+    },
+    
+    async verifyReply(apiMessages, draftContent, settings, characterData, onChunk, onComplete, onError) {
+        const verifyMessages = [
+            ...apiMessages,
+            { role: 'assistant', content: draftContent },
+            {
+                role: 'user',
+                content: '請檢查你剛才的那則回覆：句子是否完整、語氣是否符合角色、是否使用自然口語（避免文言文或書面語）。如果沒有問題，就直接原樣重複一次；如果有問題，修正後重新輸出完整回覆。只輸出回覆內容本身，不要解釋或說明。'
+            }
+        ];
+        
+        try {
+            const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${settings.api_key}`
+                },
+                body: JSON.stringify({
+                    model: settings.model || 'gpt-3.5-turbo',
+                    messages: verifyMessages,
+                    temperature: settings.temperature || 0.7,
+                    top_p: settings.top_p || 1.0,
+                    frequency_penalty: settings.frequency_penalty || 0,
+                    presence_penalty: settings.presence_penalty || 0,
+                    max_tokens: Math.min(4096, settings.context_size || 4096),
+                    stream: true
+                })
+            });
+            
+            if (!response.ok) {
+                const errorData = await response.json().catch(() => ({}));
+                throw new Error(errorData.error?.message || `API 錯誤: ${response.status}`);
+            }
+            
+            await this.processStreamWithTools(response, verifyMessages, settings, characterData, onChunk, onComplete, onError, { skipVerify: true });
+            
+        } catch (error) {
+            console.error('[API] Reply verification failed, using draft:', error);
+            onComplete(draftContent);
         }
     },
     
@@ -414,6 +480,7 @@ const APIClient = {
                     top_p: settings.top_p || 1.0,
                     frequency_penalty: settings.frequency_penalty || 0,
                     presence_penalty: settings.presence_penalty || 0,
+                    max_tokens: Math.min(4096, settings.context_size || 4096),
                     stream: true
                 })
             });
