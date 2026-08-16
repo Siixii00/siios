@@ -109,14 +109,16 @@ async function renderApiConfig() {
     testBtn.onclick = async () => {
         const apiUrl = settings.api_url || urlInput.value;
         const apiKey = settings.api_key || keyInput.value;
+        const model = settings.model || modelInput.value;
         if (!apiUrl) { createToast('請先輸入 API URL', 'error'); return; }
+        if (!model) { createToast('請先輸入或選擇模型', 'error'); return; }
         testBtn.disabled = true;
         testBtn.textContent = '測試中...';
         try {
             const resp = await fetch(`${apiUrl.replace(/\/+$/, '')}/v1/chat/completions`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${apiKey}` },
-                body: JSON.stringify({ model: 'gpt-3.5-turbo', messages: [{ role: 'user', content: 'hi' }], max_tokens: 1 })
+                body: JSON.stringify({ model, messages: [{ role: 'user', content: 'hi' }], max_tokens: 1 })
             });
             if (resp.ok) {
                 createToast('✅ 連線成功！API 正常運作', 'success');
