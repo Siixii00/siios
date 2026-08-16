@@ -1,131 +1,131 @@
 {
   "metadata": {
-    "last_updated": "2026-08-16T07:31:42.331694",
-    "total_items": 60
+    "last_updated": "2026-08-16T08:30:35.832194",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "Show HN: Laptop is the last place your secrets are still in plaintext",
-        "url": "https://github.com/jitpass/jit",
+        "title": "What happens when an LLM never sees material beyond fifth grade?",
+        "url": "https://littlelearner-ll.github.io/",
         "source": "Hacker News",
-        "score": 17
+        "score": 56
       },
       {
         "title": "Asus Bike Booster",
         "url": "https://www.asus.com/accessories/bike-booster/asus-oxiis/oxiis-intelligent-bike-booster/",
         "source": "Hacker News",
-        "score": 321
+        "score": 348
       },
       {
         "title": "Asynchronous I/O in DuckDB: Work, Thread, Work",
         "url": "https://duckdb.org/2026/07/31/asynchronous-io",
         "source": "Hacker News",
-        "score": 126
+        "score": 140
       },
       {
         "title": "Semaglutide linked to lower predicted dementia risk",
         "url": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/dad2.70432",
         "source": "Hacker News",
-        "score": 411
+        "score": 419
       },
       {
         "title": "Patterns and problems in emerging multi-agent systems",
         "url": "https://www.anthropic.com/research/multiagent-systems",
         "source": "Hacker News",
-        "score": 53
-      },
-      {
-        "title": "Cultivating a state of mind where new ideas are born (2023)",
-        "url": "https://www.henrikkarlsson.xyz/p/good-ideas",
-        "source": "Hacker News",
-        "score": 150
+        "score": 72
       },
       {
         "title": "Software Engineering fundamentals matter more",
         "url": "https://rhonabwy.com/2026/08/15/software-engineering-fundamentals-matter-more-than-ever/",
         "source": "Hacker News",
-        "score": 99
+        "score": 113
       },
       {
-        "title": "Guiding Ships with Moire Patterns",
-        "url": "https://tinkerings.org/2018/03/28/guiding-ships-with-moire-patterns/",
+        "title": "Cultivating a state of mind where new ideas are born (2023)",
+        "url": "https://www.henrikkarlsson.xyz/p/good-ideas",
         "source": "Hacker News",
-        "score": 36
+        "score": 160
       },
       {
         "title": "Super El Niño Keeps Growing as New Forecasts Reach Record Territory Ahead Winter",
         "url": "https://www.severe-weather.eu/long-range-2/super-el-nino-growth-accelerating-to-record-strength-fall-winter-2026-2027-forecast-impact-united-states-canada-europe-fa/",
         "source": "Hacker News",
-        "score": 195
+        "score": 222
       },
       {
-        "title": "Show HN: Mic Drop, a real-time multiplayer karaoke game",
-        "url": "https://www.micdrop.gg/",
+        "title": "Guiding Ships with Moire Patterns",
+        "url": "https://tinkerings.org/2018/03/28/guiding-ships-with-moire-patterns/",
         "source": "Hacker News",
-        "score": 47
+        "score": 42
       },
       {
         "title": "At-home test for infected ticks could improve Lyme Disease diagnosis",
         "url": "https://www.smithsonianmag.com/innovation/the-first-at-home-test-for-infected-ticks-could-improve-lyme-disease-diagnosis-180989235/",
         "source": "Hacker News",
-        "score": 252
+        "score": 253
+      },
+      {
+        "title": "Show HN: Mic Drop, a real-time multiplayer karaoke game",
+        "url": "https://www.micdrop.gg/",
+        "source": "Hacker News",
+        "score": 52
       },
       {
         "title": "AI in drug discovery – what it is, where we stand and the path forward",
         "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
         "source": "Hacker News",
-        "score": 132
+        "score": 136
       },
       {
         "title": "RISC-V: They Should Have Known Better",
         "url": "https://dmitry.gr/?r=06.%20Thoughts&proj=12.%20RV",
         "source": "Hacker News",
-        "score": 284
+        "score": 296
+      },
+      {
+        "title": "I built a browser-native SysEx librarian for 80s/90s synthesizers",
+        "url": "https://bipluk.com/",
+        "source": "Hacker News",
+        "score": 15
       },
       {
         "title": "Numba in the Browser: Unlocking a New Scientific Python Stack in JupyterLite",
         "url": "https://notebook.link/blog/numba-in-the-browser/",
         "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "Abdominal fat predicts heart disease risk better than BMI",
-        "url": "https://www.acc.org/about-acc/press-releases/2026/08/11/14/59/abdominal-fat-predicts-heart-disease-risk-better-than-bmi",
-        "source": "Hacker News",
-        "score": 235
+        "score": 36
       }
     ],
     "ai": [
       {
-        "title": "Show HN: Laptop is the last place your secrets are still in plaintext",
-        "url": "https://github.com/jitpass/jit",
+        "title": "What happens when an LLM never sees material beyond fifth grade?",
+        "url": "https://littlelearner-ll.github.io/",
         "source": "Hacker News AI",
-        "score": 17
+        "score": 56
       },
       {
         "title": "AI in drug discovery – what it is, where we stand and the path forward",
         "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
         "source": "Hacker News AI",
-        "score": 132
+        "score": 136
       },
       {
         "title": "AI has access to a vastly larger working memory than the human brain",
         "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
         "source": "Hacker News AI",
-        "score": 476
-      },
-      {
-        "title": "Program with Paint Brushes, Not Pencils",
-        "url": "https://blog.pickcode.io/program-with-paint-brushes-not-pencils/",
-        "source": "Hacker News AI",
-        "score": 8
+        "score": 485
       },
       {
         "title": "AI-Assisted GPU Porting of a 250k Line Legacy Weather Simulation Code",
         "url": "https://arxiv.org/abs/2608.13122",
         "source": "Hacker News AI",
-        "score": 23
+        "score": 32
+      },
+      {
+        "title": "Program with Paint Brushes, Not Pencils",
+        "url": "https://blog.pickcode.io/program-with-paint-brushes-not-pencils/",
+        "source": "Hacker News AI",
+        "score": 9
       },
       {
         "title": "Voltair (YC W26) Is Hiring a Test Flight Engineer",
@@ -137,35 +137,34 @@
         "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
         "url": "https://sankalp.bearblog.dev/autoresearch/",
         "source": "Hacker News AI",
-        "score": 415
+        "score": 417
+      },
+      {
+        "title": "Show HN: Laptop is the last place your secrets are still in plaintext",
+        "url": "https://github.com/jitpass/jit",
+        "source": "Hacker News AI",
+        "score": 41
       },
       {
         "title": "Show HN: ThoughtDAG – An editable context graph for LLM conversations",
         "url": "https://chenxiachan.github.io/thoughtdag/",
         "source": "Hacker News AI",
-        "score": 119
-      },
-      {
-        "title": "A controversial Alzheimer's surgery is said to reverse symptoms",
-        "url": "https://www.nature.com/articles/d41586-026-02448-x",
-        "source": "Hacker News AI",
-        "score": 169
-      },
-      {
-        "title": "Working with AI feels more like leadership than coding",
-        "url": "https://allen.bargi.org/notes/working-with-ai-feels-like-leadership/",
-        "source": "Hacker News AI",
-        "score": 297
+        "score": 121
       }
     ],
     "news": [
       {
-        "title": "Rescuers search for survivors of powerful Indonesia earthquake",
+        "title": "Three killed as Russia launches fresh aerial attacks across Ukraine",
+        "url": "https://www.bbc.co.uk/news/articles/c1411pgje8xo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Thousands displaced by deadly Indonesia earthquake as rescue efforts continue",
         "url": "https://www.bbc.co.uk/news/articles/c3v00w5ylw9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Hawaii battles strong winds and rain as Hurricane Lala threat looms",
+        "title": "Hurricane Lala lashes Hawaii with strong winds and torrential rain",
         "url": "https://www.bbc.co.uk/news/articles/crmrr7kjy9vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -188,14 +187,14 @@
         "title": "Qatar denies capturing three Iranian pilots after downing fighter jets",
         "url": "https://www.bbc.co.uk/news/articles/cj4kk8kz271o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Multiple suspects at large after five shot at Virginia State University, police say",
-        "url": "https://www.bbc.co.uk/news/articles/c0l5583903yo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Other brands are throwing shade at the new Instagram logo ",
+        "url": "https://www.creativebloq.com/design/logos-icons/other-brands-are-throwing-shade-at-the-new-instagram-logo",
+        "source": "Creative Bloq"
+      },
       {
         "title": " People are freaking out that the iPhone 18 Pro will be super expensive - but will it? ",
         "url": "https://www.creativebloq.com/tech/phones-tablets/people-are-freaking-out-that-the-iphone-18-pro-will-be-super-expensive-but-will-it",
@@ -224,11 +223,6 @@
       {
         "title": " No, Gen Z isn’t to blame for Instagram’s controversial new logo ",
         "url": "https://www.creativebloq.com/design/logos-icons/no-gen-z-isnt-to-blame-for-instagrams-controversial-new-logo",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " You can now plug Adobe straight into ChatGPT - but should you? ",
-        "url": "https://www.creativebloq.com/design/you-can-now-plug-adobe-straight-into-chatgpt-but-should-you",
         "source": "Creative Bloq"
       }
     ],
