@@ -1,6 +1,6 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
-import { ActivityDB, ActivitySourcesDB, SettingsDB } from '../../db.js';
+import { ActivityDB, ActivitySourcesDB, ActivitySettingsDB } from '../../db.js';
 
 const PLATFORMS = [
     { id: 'line', name: 'LINE', icon: 'chat', color: '#00B900' },
@@ -32,7 +32,7 @@ async function renderActivitySync() {
     const container = createElement('div', 'app-container bg-ios-bg');
     container.style.cssText = 'display: flex; flex-direction: column; height: 100vh; height: 100dvh; overflow: hidden;';
     
-    const privacySettings = await SettingsDB.get('activity_privacy_settings') || {
+    const privacySettings = await ActivitySettingsDB.get() || {
         global_enabled: false,
         global_level: 'basic',
         retention_days: 30,

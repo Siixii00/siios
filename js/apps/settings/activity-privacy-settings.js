@@ -1,6 +1,6 @@
 ﻿import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
-import { SettingsDB } from '../../db.js';
+import { ActivitySettingsDB } from '../../db.js';
 
 const PRIVACY_LEVELS = [
     { 
@@ -127,7 +127,7 @@ async function renderActivityPrivacySettings() {
     const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar');
     main.style.paddingTop = 'calc(env(safe-area-inset-top, 44px) + 44px + 16px)';
     
-    const savedSettings = await SettingsDB.get('activity_privacy_settings') || {
+    const savedSettings = await ActivitySettingsDB.get() || {
         global_enabled: false,
         global_level: 'basic',
         retention_days: 30,
@@ -352,7 +352,7 @@ async function renderActivityPrivacySettings() {
             platforms
         };
         
-        await SettingsDB.set('activity_privacy_settings', settings);
+        await ActivitySettingsDB.set(settings);
         createToast('設定已保存', 'success');
         Router.navigate('/activity');
     };
