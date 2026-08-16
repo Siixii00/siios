@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-16T14:24:03.160190",
-    "total_items": 61
+    "last_updated": "2026-08-16T15:22:23.937079",
+    "total_items": 64
   },
   "content": {
     "tech": [
@@ -9,43 +9,55 @@
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News",
-        "score": 94
+        "score": 166
       },
       {
-        "title": "A SAT Attack on Tarski's High School Algebra Problem",
-        "url": "https://arxiv.org/abs/2608.08421",
+        "title": "The AI Credit Resale Economy",
+        "url": "https://vectoral.com/blog/who-are-the-token-brokers",
         "source": "Hacker News",
-        "score": 30
+        "score": 23
       },
       {
         "title": "Firefox for iOS now has a native adblocker",
         "url": "https://support.mozilla.org/en-US/kb/block-ads-firefox-ios",
         "source": "Hacker News",
-        "score": 51
+        "score": 135
+      },
+      {
+        "title": "A True Telnet BBS on a Casio Calculator",
+        "url": "https://ei3lh.eu/2026/08/16/a-true-telnet-bbs-on-a-casio-calculator/",
+        "source": "Hacker News",
+        "score": 21
       },
       {
         "title": "Does anyone run Postgres without PgBouncer?",
         "url": "https://brandur.org/fragments/postgres-without-pgbouncer",
         "source": "Hacker News",
-        "score": 46
+        "score": 75
+      },
+      {
+        "title": "A SAT Attack on Tarski's High School Algebra Problem",
+        "url": "https://arxiv.org/abs/2608.08421",
+        "source": "Hacker News",
+        "score": 37
       },
       {
         "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
         "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
         "source": "Hacker News",
-        "score": 77
+        "score": 140
+      },
+      {
+        "title": "Show HN: A public AI whose memory is shared across all users",
+        "url": "https://wildstatic.com/",
+        "source": "Hacker News",
+        "score": 7
       },
       {
         "title": "Asus Bike Booster",
         "url": "https://www.asus.com/accessories/bike-booster/asus-oxiis/oxiis-intelligent-bike-booster/",
         "source": "Hacker News",
-        "score": 509
-      },
-      {
-        "title": "Chestnut – eGPU dock with open-source firmware",
-        "url": "https://hwbusters.com/news/comma-ai-egpu-dock-runs-open-source-firmware-249-bare-799-with-an-rx-9060/",
-        "source": "Hacker News",
-        "score": 62
+        "score": 533
       },
       {
         "title": "Tasklet (YC P26) Is Hiring a Head of Design Engineering",
@@ -54,46 +66,34 @@
         "score": 1
       },
       {
+        "title": "Chestnut – eGPU dock with open-source firmware",
+        "url": "https://hwbusters.com/news/comma-ai-egpu-dock-runs-open-source-firmware-249-bare-799-with-an-rx-9060/",
+        "source": "Hacker News",
+        "score": 73
+      },
+      {
+        "title": "Anthropic revenue reportedly jumps to more than $11.5B in second quarter",
+        "url": "https://www.cnbc.com/2026/08/15/anthropic-revenue-jumps-to-over-11point5-billion-in-q2-report.html",
+        "source": "Hacker News",
+        "score": 22
+      },
+      {
         "title": "Asynchronous I/O in DuckDB: Work, Thread, Work",
         "url": "https://duckdb.org/2026/07/31/asynchronous-io",
         "source": "Hacker News",
-        "score": 214
-      },
-      {
-        "title": "Superconducting monolayer cuprate with a single CuO2 plane",
-        "url": "https://www.nature.com/articles/s41586-026-10857-1",
-        "source": "Hacker News",
-        "score": 35
+        "score": 226
       },
       {
         "title": "Software Engineering fundamentals matter more",
         "url": "https://rhonabwy.com/2026/08/15/software-engineering-fundamentals-matter-more-than-ever/",
         "source": "Hacker News",
-        "score": 223
+        "score": 242
       },
       {
-        "title": "Super El Niño Keeps Growing as New Forecasts Reach Record Territory Ahead Winter",
-        "url": "https://www.severe-weather.eu/long-range-2/super-el-nino-growth-accelerating-to-record-strength-fall-winter-2026-2027-forecast-impact-united-states-canada-europe-fa/",
+        "title": "Superconducting monolayer cuprate with a single CuO2 plane",
+        "url": "https://www.nature.com/articles/s41586-026-10857-1",
         "source": "Hacker News",
-        "score": 321
-      },
-      {
-        "title": "Cultivating a state of mind where new ideas are born (2023)",
-        "url": "https://www.henrikkarlsson.xyz/p/good-ideas",
-        "source": "Hacker News",
-        "score": 213
-      },
-      {
-        "title": "Patterns and problems in emerging multi-agent systems",
-        "url": "https://www.anthropic.com/research/multiagent-systems",
-        "source": "Hacker News",
-        "score": 147
-      },
-      {
-        "title": "Semaglutide linked to lower predicted dementia risk",
-        "url": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/dad2.70432",
-        "source": "Hacker News",
-        "score": 449
+        "score": 38
       }
     ],
     "ai": [
@@ -101,72 +101,90 @@
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News AI",
-        "score": 94
+        "score": 166
+      },
+      {
+        "title": "The AI Credit Resale Economy",
+        "url": "https://vectoral.com/blog/who-are-the-token-brokers",
+        "source": "Hacker News AI",
+        "score": 23
       },
       {
         "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
         "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
         "source": "Hacker News AI",
-        "score": 77
+        "score": 140
+      },
+      {
+        "title": "Show HN: A public AI whose memory is shared across all users",
+        "url": "https://wildstatic.com/",
+        "source": "Hacker News AI",
+        "score": 7
+      },
+      {
+        "title": "Anthropic revenue reportedly jumps to more than $11.5B in second quarter",
+        "url": "https://www.cnbc.com/2026/08/15/anthropic-revenue-jumps-to-over-11point5-billion-in-q2-report.html",
+        "source": "Hacker News AI",
+        "score": 22
       },
       {
         "title": "AI in drug discovery – what it is, where we stand and the path forward",
         "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
         "source": "Hacker News AI",
-        "score": 159
-      },
-      {
-        "title": "What happens when an LLM never sees material beyond fifth grade?",
-        "url": "https://littlelearner-ll.github.io/",
-        "source": "Hacker News AI",
-        "score": 196
+        "score": 163
       },
       {
         "title": "AI Coding Without the Vibes",
         "url": "https://peterbloem.nl/blog/craft-coding",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 15
+      },
+      {
+        "title": "Mathematicians Despair as AI Achieves Jaw-Dropping Breakthroughs",
+        "url": "https://www.telegraph.co.uk/business/2026/08/16/mathematicians-despair-ai-breakthrough/",
+        "source": "Hacker News AI",
+        "score": 9
       },
       {
         "title": "AI has access to a vastly larger working memory than the human brain",
         "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
         "source": "Hacker News AI",
-        "score": 533
+        "score": 537
+      },
+      {
+        "title": "What happens when an LLM never sees material beyond fifth grade?",
+        "url": "https://littlelearner-ll.github.io/",
+        "source": "Hacker News AI",
+        "score": 212
       },
       {
         "title": "AI-Assisted GPU Porting of a 250k Line Legacy Weather Simulation Code",
         "url": "https://arxiv.org/abs/2608.13122",
         "source": "Hacker News AI",
-        "score": 43
-      },
-      {
-        "title": "Testing Moonshot AI's Kimi K3 Inside Claude Code",
-        "url": "https://philippdubach.com/posts/kimi-k3-inside-claude-code/",
-        "source": "Hacker News AI",
-        "score": 4
-      },
-      {
-        "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
-        "url": "https://sankalp.bearblog.dev/autoresearch/",
-        "source": "Hacker News AI",
-        "score": 430
+        "score": 44
       },
       {
         "title": "Health benefits of Tai Chi",
         "url": "https://www.health.harvard.edu/exercise-and-fitness/the-health-benefits-of-tai-chi",
         "source": "Hacker News AI",
-        "score": 17
+        "score": 21
       },
       {
-        "title": "Program with Paint Brushes, Not Pencils",
-        "url": "https://blog.pickcode.io/program-with-paint-brushes-not-pencils/",
+        "title": "Testing Moonshot AI's Kimi K3 Inside Claude Code",
+        "url": "https://philippdubach.com/posts/kimi-k3-inside-claude-code/",
         "source": "Hacker News AI",
-        "score": 14
+        "score": 6
+      },
+      {
+        "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
+        "url": "https://sankalp.bearblog.dev/autoresearch/",
+        "source": "Hacker News AI",
+        "score": 431
       }
     ],
     "news": [
       {
-        "title": "Five killed as Russia launches fresh aerial attacks across Ukraine",
+        "title": "Russia says at least seven killed in largest Ukrainian attack of 2026",
         "url": "https://www.bbc.co.uk/news/articles/c1411pgje8xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -277,6 +295,11 @@
     ],
     "gaming": [
       {
+        "title": "Ron Gilbert Says Making Another 'Monkey Island' Game Would Be \"Really Complicated\"",
+        "url": "https://www.polygon.com/no-new-monkey-island-ron-gilbert/",
+        "source": "Polygon"
+      },
+      {
         "title": "One of Marvel's Strongest Heroes Is Officially Making a Near-Perfect Comeback",
         "url": "https://www.polygon.com/marvel-tokon-gladiator-worst-life-ever/",
         "source": "Polygon"
@@ -304,11 +327,6 @@
       {
         "title": "Stephen King's 103-Minute Sci-Fi Movie Masterpiece Has Officially Returned to Free Streaming",
         "url": "https://www.polygon.com/stephen-king-dead-zone-streaming-free-august-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "One Punch Man’s Original Director Will Unleash His Dazzling New Sci-Fi Movie in 6 Months",
-        "url": "https://www.polygon.com/ghost-end-of-night-anime-shingo-natsume-sonny-boy-director/",
         "source": "Polygon"
       }
     ],
