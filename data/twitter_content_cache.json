@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-16T15:22:23.937079",
-    "total_items": 64
+    "last_updated": "2026-08-16T16:26:03.955338",
+    "total_items": 54
   },
   "content": {
     "tech": [
@@ -9,55 +9,67 @@
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News",
-        "score": 166
+        "score": 233
       },
       {
         "title": "The AI Credit Resale Economy",
         "url": "https://vectoral.com/blog/who-are-the-token-brokers",
         "source": "Hacker News",
-        "score": 23
+        "score": 75
+      },
+      {
+        "title": "St Lucie Nuclear Reactor Unit 1 manually shutdown, 3 control rods drop into core",
+        "url": "https://www.wptv.com/news/treasure-coast/region-st-lucie-county/saint-lucie-nuclear-power-plant-unit-1-manually-shut-down-after-3-control-rods-drop-into-reactor-core",
+        "source": "Hacker News",
+        "score": 28
       },
       {
         "title": "Firefox for iOS now has a native adblocker",
         "url": "https://support.mozilla.org/en-US/kb/block-ads-firefox-ios",
         "source": "Hacker News",
-        "score": 135
+        "score": 207
       },
       {
         "title": "A True Telnet BBS on a Casio Calculator",
         "url": "https://ei3lh.eu/2026/08/16/a-true-telnet-bbs-on-a-casio-calculator/",
         "source": "Hacker News",
-        "score": 21
-      },
-      {
-        "title": "Does anyone run Postgres without PgBouncer?",
-        "url": "https://brandur.org/fragments/postgres-without-pgbouncer",
-        "source": "Hacker News",
-        "score": 75
-      },
-      {
-        "title": "A SAT Attack on Tarski's High School Algebra Problem",
-        "url": "https://arxiv.org/abs/2608.08421",
-        "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
-        "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
-        "source": "Hacker News",
-        "score": 140
+        "score": 36
       },
       {
         "title": "Show HN: A public AI whose memory is shared across all users",
         "url": "https://wildstatic.com/",
         "source": "Hacker News",
-        "score": 7
+        "score": 25
       },
       {
-        "title": "Asus Bike Booster",
-        "url": "https://www.asus.com/accessories/bike-booster/asus-oxiis/oxiis-intelligent-bike-booster/",
+        "title": "The weekend is 100 years old",
+        "url": "https://www.theguardian.com/money/2026/aug/16/the-weekend-is-100-years-old-skiveday-fridays-and-hybrid-working-ruined-it",
         "source": "Hacker News",
-        "score": 533
+        "score": 30
+      },
+      {
+        "title": "Clamiga: Common Lisp for the Amiga",
+        "url": "https://nnamgreb.de/blog/Clamiga+-+Common+Lisp+for+the+Amiga",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
+        "title": "A SAT Attack on Tarski's High School Algebra Problem",
+        "url": "https://arxiv.org/abs/2608.08421",
+        "source": "Hacker News",
+        "score": 46
+      },
+      {
+        "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
+        "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
+        "source": "Hacker News",
+        "score": 194
+      },
+      {
+        "title": "GPS and the Lost Art of Getting Lost",
+        "url": "https://www.newyorker.com/news/annals-of-inquiry/gps-and-the-lost-art-of-getting-lost",
+        "source": "Hacker News",
+        "score": 8
       },
       {
         "title": "Tasklet (YC P26) Is Hiring a Head of Design Engineering",
@@ -66,34 +78,22 @@
         "score": 1
       },
       {
+        "title": "Does anyone run Postgres without PgBouncer?",
+        "url": "https://brandur.org/fragments/postgres-without-pgbouncer",
+        "source": "Hacker News",
+        "score": 93
+      },
+      {
         "title": "Chestnut – eGPU dock with open-source firmware",
         "url": "https://hwbusters.com/news/comma-ai-egpu-dock-runs-open-source-firmware-249-bare-799-with-an-rx-9060/",
         "source": "Hacker News",
-        "score": 73
+        "score": 93
       },
       {
-        "title": "Anthropic revenue reportedly jumps to more than $11.5B in second quarter",
-        "url": "https://www.cnbc.com/2026/08/15/anthropic-revenue-jumps-to-over-11point5-billion-in-q2-report.html",
+        "title": "Asus Bike Booster",
+        "url": "https://www.asus.com/accessories/bike-booster/asus-oxiis/oxiis-intelligent-bike-booster/",
         "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Asynchronous I/O in DuckDB: Work, Thread, Work",
-        "url": "https://duckdb.org/2026/07/31/asynchronous-io",
-        "source": "Hacker News",
-        "score": 226
-      },
-      {
-        "title": "Software Engineering fundamentals matter more",
-        "url": "https://rhonabwy.com/2026/08/15/software-engineering-fundamentals-matter-more-than-ever/",
-        "source": "Hacker News",
-        "score": 242
-      },
-      {
-        "title": "Superconducting monolayer cuprate with a single CuO2 plane",
-        "url": "https://www.nature.com/articles/s41586-026-10857-1",
-        "source": "Hacker News",
-        "score": 38
+        "score": 544
       }
     ],
     "ai": [
@@ -101,79 +101,61 @@
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News AI",
-        "score": 166
+        "score": 233
       },
       {
         "title": "The AI Credit Resale Economy",
         "url": "https://vectoral.com/blog/who-are-the-token-brokers",
         "source": "Hacker News AI",
-        "score": 23
-      },
-      {
-        "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
-        "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
-        "source": "Hacker News AI",
-        "score": 140
+        "score": 75
       },
       {
         "title": "Show HN: A public AI whose memory is shared across all users",
         "url": "https://wildstatic.com/",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 25
       },
       {
-        "title": "Anthropic revenue reportedly jumps to more than $11.5B in second quarter",
-        "url": "https://www.cnbc.com/2026/08/15/anthropic-revenue-jumps-to-over-11point5-billion-in-q2-report.html",
+        "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
+        "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
         "source": "Hacker News AI",
-        "score": 22
+        "score": 194
       },
       {
         "title": "AI in drug discovery – what it is, where we stand and the path forward",
         "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
         "source": "Hacker News AI",
-        "score": 163
+        "score": 170
       },
       {
         "title": "AI Coding Without the Vibes",
         "url": "https://peterbloem.nl/blog/craft-coding",
         "source": "Hacker News AI",
-        "score": 15
+        "score": 19
       },
       {
-        "title": "Mathematicians Despair as AI Achieves Jaw-Dropping Breakthroughs",
-        "url": "https://www.telegraph.co.uk/business/2026/08/16/mathematicians-despair-ai-breakthrough/",
-        "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "AI has access to a vastly larger working memory than the human brain",
+        "title": "AI isn’t outthinking mathematicians, it’s out-remembering them",
         "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
         "source": "Hacker News AI",
-        "score": 537
+        "score": 544
       },
       {
         "title": "What happens when an LLM never sees material beyond fifth grade?",
         "url": "https://littlelearner-ll.github.io/",
         "source": "Hacker News AI",
-        "score": 212
+        "score": 219
       },
       {
         "title": "AI-Assisted GPU Porting of a 250k Line Legacy Weather Simulation Code",
         "url": "https://arxiv.org/abs/2608.13122",
         "source": "Hacker News AI",
-        "score": 44
+        "score": 45
       },
       {
         "title": "Health benefits of Tai Chi",
         "url": "https://www.health.harvard.edu/exercise-and-fitness/the-health-benefits-of-tai-chi",
         "source": "Hacker News AI",
-        "score": 21
-      },
-      {
-        "title": "Testing Moonshot AI's Kimi K3 Inside Claude Code",
-        "url": "https://philippdubach.com/posts/kimi-k3-inside-claude-code/",
-        "source": "Hacker News AI",
-        "score": 6
+        "score": 23
       },
       {
         "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
@@ -204,58 +186,22 @@
         "source": "BBC World"
       },
       {
+        "title": "Two dead and evacuation under way as fires break out on Greek island",
+        "url": "https://www.bbc.co.uk/news/articles/c87nnwlpe5no?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Europe's tallest Virgin Mary statue unveiled in rural Poland",
         "url": "https://www.bbc.co.uk/news/articles/cn5nnlq2pwpo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Qatar denies capturing three Iranian pilots after downing fighter jets",
-        "url": "https://www.bbc.co.uk/news/articles/cj4kk8kz271o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Four 'extraordinary' Renaissance paintings stolen from Italian museum",
-        "url": "https://www.bbc.co.uk/news/articles/cqjxx2gzd9qo?at_medium=RSS&at_campaign=rss",
+        "title": "Belgian wildfire doubles in size on third day tearing through nature reserve",
+        "url": "https://www.bbc.co.uk/news/articles/cp8eex1nmpvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " AI art is making digital artists embrace imperfections – here's how ",
-        "url": "https://www.creativebloq.com/art/digital-art/ai-art-is-making-digital-artists-embrace-imperfections-heres-how",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This ridiculous film poster makes me wish movies would get silly again ",
-        "url": "https://www.creativebloq.com/design/poster-design/this-ridiculous-film-poster-makes-me-wish-movies-would-get-silly-again",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Disney's Hexed controversy isn't going anywhere after its big D23 character reveal ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/disneys-hexed-controversy-isnt-going-anywhere-after-its-d23-character-reveal",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " From robot pets to Lego sets, level up your desk with these quirky accessories ",
-        "url": "https://www.creativebloq.com/entertainment/toys-collectibles/from-robot-pets-to-lego-sets-level-up-your-desk-with-these-quirky-accessories",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Other brands are throwing shade at the new Instagram logo ",
-        "url": "https://www.creativebloq.com/design/logos-icons/other-brands-are-throwing-shade-at-the-new-instagram-logo",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " People are freaking out that the iPhone 18 Pro will be super expensive - but will it? ",
-        "url": "https://www.creativebloq.com/tech/phones-tablets/people-are-freaking-out-that-the-iphone-18-pro-will-be-super-expensive-but-will-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " 5 laptops and Chromebooks on sale and worth buying if you're going back to school ",
-        "url": "https://www.creativebloq.com/tech/laptops/these-are-the-3-laptops-you-should-shortlist-for-your-studies-clone",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "Scientists reveal why walking gets so much harder with age",
@@ -295,6 +241,21 @@
     ],
     "gaming": [
       {
+        "title": "Netflix Games’ Latest Pivot Is a Reminder of Its Messy Past",
+        "url": "https://www.polygon.com/netflix-night-school-studio-closure-analysis/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Indiana Jones' next Disney attraction will feature a robot Harrison Ford",
+        "url": "https://www.polygon.com/indiana-jones-animatronic-harrison-ford/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Ewan McGregor's $205 Million Superhero Flop Deserves Another Shot",
+        "url": "https://www.polygon.com/birds-of-prey-ewan-mcgregor-streaming-rec/",
+        "source": "Polygon"
+      },
+      {
         "title": "Ron Gilbert Says Making Another 'Monkey Island' Game Would Be \"Really Complicated\"",
         "url": "https://www.polygon.com/no-new-monkey-island-ron-gilbert/",
         "source": "Polygon"
@@ -312,21 +273,6 @@
       {
         "title": "Gamescom, Not SGF, is Now the Biggest Video Games Event",
         "url": "https://www.polygon.com/patch-notes-gamescom-preview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Tom Cruise's 113-Minute Sci-Fi Action Masterpiece Is Officially Dominating Netflix",
-        "url": "https://www.polygon.com/edge-of-tomorrow-popular-on-netflix-tom-cruise/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fablehaven author Brandon Mull teases books, movies, and the future",
-        "url": "https://www.polygon.com/new-fablehaven-brandon-mull/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Stephen King's 103-Minute Sci-Fi Movie Masterpiece Has Officially Returned to Free Streaming",
-        "url": "https://www.polygon.com/stephen-king-dead-zone-streaming-free-august-2026/",
         "source": "Polygon"
       }
     ],
