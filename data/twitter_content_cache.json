@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-16T18:29:54.663974",
-    "total_items": 62
+    "last_updated": "2026-08-16T19:21:15.942212",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "Claude: System Prompts",
-        "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
-        "source": "Hacker News",
-        "score": 351
-      },
-      {
         "title": "A 3rd World Embedded Engineer Responds to \"RISC-V They Should Have Known Better\"",
         "url": "https://rvembedded.com/blog_post/12/",
         "source": "Hacker News",
-        "score": 47
+        "score": 136
+      },
+      {
+        "title": "Claude: System Prompts",
+        "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
+        "source": "Hacker News",
+        "score": 388
       },
       {
         "title": "The AI Credit Resale Economy",
         "url": "https://vectoral.com/blog/who-are-the-token-brokers",
         "source": "Hacker News",
-        "score": 141
-      },
-      {
-        "title": "NIH is ending a key grant for budding clinical researchers",
-        "url": "https://www.science.org/content/article/nih-ending-key-grant-budding-clinical-researchers",
-        "source": "Hacker News",
-        "score": 49
+        "score": 162
       },
       {
         "title": "St Lucie Nuclear Reactor Unit 1 manually shutdown, 3 control rods drop into core",
         "url": "https://www.wptv.com/news/treasure-coast/region-st-lucie-county/saint-lucie-nuclear-power-plant-unit-1-manually-shut-down-after-3-control-rods-drop-into-reactor-core",
         "source": "Hacker News",
-        "score": 87
+        "score": 102
+      },
+      {
+        "title": "NIH is ending a key grant for budding clinical researchers",
+        "url": "https://www.science.org/content/article/nih-ending-key-grant-budding-clinical-researchers",
+        "source": "Hacker News",
+        "score": 70
+      },
+      {
+        "title": "MathCode, Mathematical Coding Agent",
+        "url": "https://math-ai-org.github.io/mathcode/",
+        "source": "Hacker News",
+        "score": 11
       },
       {
         "title": "Anton Chekhov played at love most of his life",
         "url": "https://commonreader.wustl.edu/winning-and-losing-at-the-great-game-of-intimacy/",
         "source": "Hacker News",
-        "score": 27
+        "score": 35
       },
       {
         "title": "GPS and the Lost Art of Getting Lost",
         "url": "https://www.newyorker.com/news/annals-of-inquiry/gps-and-the-lost-art-of-getting-lost",
         "source": "Hacker News",
-        "score": 38
+        "score": 47
       },
       {
         "title": "Clamiga: Common Lisp for the Amiga",
         "url": "https://nnamgreb.de/blog/Clamiga+-+Common+Lisp+for+the+Amiga",
         "source": "Hacker News",
-        "score": 39
+        "score": 47
       },
       {
         "title": "Firefox for iOS now has a native adblocker",
         "url": "https://support.mozilla.org/en-US/kb/block-ads-firefox-ios",
         "source": "Hacker News",
-        "score": 334
-      },
-      {
-        "title": "Archie G. Norcross' Maine Forest Fire Maps (1918–22)",
-        "url": "https://publicdomainreview.org/collection/maine-forest-fire-maps/",
-        "source": "Hacker News",
-        "score": 13
+        "score": 370
       },
       {
         "title": "Plastic mechanical computer from 1963: The Digi-Comp 1 [video]",
         "url": "https://www.youtube.com/watch?v=-y8bGBE71yw",
         "source": "Hacker News",
-        "score": 9
+        "score": 13
+      },
+      {
+        "title": "Tell HN: Cloudflare silently injects its analytics when you switch nameservers",
+        "url": "https://news.ycombinator.com/item?id=49322107",
+        "source": "Hacker News",
+        "score": 48
+      },
+      {
+        "title": "Archie G. Norcross' Maine Forest Fire Maps (1918–22)",
+        "url": "https://publicdomainreview.org/collection/maine-forest-fire-maps/",
+        "source": "Hacker News",
+        "score": 17
       },
       {
         "title": "Before Rightmove, there was the Cosmorama",
         "url": "https://www.ianvisits.co.uk/articles/before-rightmove-there-was-the-cosmorama-londons-forgotten-property-innovation-91687/",
         "source": "Hacker News",
-        "score": 9
+        "score": 12
       },
       {
-        "title": "A True Telnet BBS on a Casio Calculator",
-        "url": "https://ei3lh.eu/2026/08/16/a-true-telnet-bbs-on-a-casio-calculator/",
+        "title": "Show HN: A public AI whose memory is shared across all users",
+        "url": "https://wildstatic.com/",
         "source": "Hacker News",
-        "score": 56
-      },
-      {
-        "title": "A SAT Attack on Tarski's High School Algebra Problem",
-        "url": "https://arxiv.org/abs/2608.08421",
-        "source": "Hacker News",
-        "score": 62
-      },
-      {
-        "title": "Tasklet (YC P26) Is Hiring a Head of Design Engineering",
-        "url": "https://tasklet.ai/careers/head-of-design-engineering",
-        "source": "Hacker News",
-        "score": 1
+        "score": 58
       }
     ],
     "ai": [
@@ -101,73 +101,61 @@
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News AI",
-        "score": 351
+        "score": 388
       },
       {
         "title": "The AI Credit Resale Economy",
         "url": "https://vectoral.com/blog/who-are-the-token-brokers",
         "source": "Hacker News AI",
-        "score": 141
+        "score": 162
       },
       {
         "title": "Archie G. Norcross' Maine Forest Fire Maps (1918–22)",
         "url": "https://publicdomainreview.org/collection/maine-forest-fire-maps/",
         "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
-        "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
-        "source": "Hacker News AI",
-        "score": 258
-      },
-      {
-        "title": "The deep history behind the Road to Nowhere inside the Great Smoky Mountains",
-        "url": "https://www.wunc.org/environment/2026-08-10/road-to-nowhere-great-smoky-mountains",
-        "source": "Hacker News AI",
-        "score": 6
+        "score": 17
       },
       {
         "title": "Show HN: A public AI whose memory is shared across all users",
         "url": "https://wildstatic.com/",
         "source": "Hacker News AI",
-        "score": 46
+        "score": 58
+      },
+      {
+        "title": "The deep history behind the Road to Nowhere inside the Great Smoky Mountains",
+        "url": "https://www.wunc.org/environment/2026-08-10/road-to-nowhere-great-smoky-mountains",
+        "source": "Hacker News AI",
+        "score": 8
+      },
+      {
+        "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
+        "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
+        "source": "Hacker News AI",
+        "score": 277
       },
       {
         "title": "AI Coding Without the Vibes",
         "url": "https://peterbloem.nl/blog/craft-coding",
         "source": "Hacker News AI",
-        "score": 52
+        "score": 64
       },
       {
         "title": "AI in drug discovery – what it is, where we stand and the path forward",
         "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
         "source": "Hacker News AI",
-        "score": 175
+        "score": 177
+      },
+      {
+        "title": "The AI store manager fired its first human",
+        "url": "https://thenextweb.com/news/andon-market-luna-ai-store-manager-fires-employee",
+        "source": "Hacker News AI",
+        "score": 6
       },
       {
         "title": "AI isn’t outthinking mathematicians, it’s out-remembering them",
         "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
         "source": "Hacker News AI",
-        "score": 561
-      },
-      {
-        "title": "AI-Assisted GPU Porting of a 250k Line Legacy Weather Simulation Code",
-        "url": "https://arxiv.org/abs/2608.13122",
-        "source": "Hacker News AI",
-        "score": 46
-      },
-      {
-        "title": "What happens when an LLM never sees material beyond fifth grade?",
-        "url": "https://littlelearner-ll.github.io/",
-        "source": "Hacker News AI",
-        "score": 226
-      },
-      {
-        "title": "Health benefits of Tai Chi",
-        "url": "https://www.health.harvard.edu/exercise-and-fitness/the-health-benefits-of-tai-chi",
-        "source": "Hacker News AI",
-        "score": 27
+        "score": 566
       }
     ],
     "news": [
@@ -177,13 +165,23 @@
         "source": "BBC World"
       },
       {
+        "title": "Two dead and hundreds evacuated as twin fires break out on Greek island",
+        "url": "https://www.bbc.co.uk/news/articles/c87nnwlpe5no?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Thousands displaced by deadly Indonesia earthquake as rescue efforts continue",
         "url": "https://www.bbc.co.uk/news/articles/c3v00w5ylw9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Hurricane Lala sparks flash floods in Hawaii as strong winds and rain persist",
+        "title": "One dead, homes swept away after Hurricane Lala lashes Hawaii",
         "url": "https://www.bbc.co.uk/news/articles/crmrr7kjy9vo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Teen suspect in Virginia campus shooting found hiding in closet",
+        "url": "https://www.bbc.co.uk/news/articles/c0l5583903yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -192,18 +190,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Two dead and hundreds evacuated as twin fires break out on Greek island",
-        "url": "https://www.bbc.co.uk/news/articles/c87nnwlpe5no?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Europe's tallest Virgin Mary statue unveiled in rural Poland",
         "url": "https://www.bbc.co.uk/news/articles/cn5nnlq2pwpo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Belgian wildfire doubles in size on third day tearing through nature reserve",
-        "url": "https://www.bbc.co.uk/news/articles/cp8eex1nmpvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -283,6 +271,16 @@
     ],
     "gaming": [
       {
+        "title": "'Fatal Fury: City of the Wolves Revenge Edition' Makes It Easy To Get All Of The Street Fighter Rival's DLC",
+        "url": "https://www.polygon.com/fatal-fury-revenge-edition/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Gerard Butler's 109-Minute Sci-Fi Disaster Movie Masterpiece Officially Arrives on Free Streaming",
+        "url": "https://www.polygon.com/gerard-butler-geostorm-streaming-tubi/",
+        "source": "Polygon"
+      },
+      {
         "title": "After 52 Years, Wolverine's Best Quote Is Still One Of The Greatest Lines In X-Men History",
         "url": "https://www.polygon.com/wolverine-best-quote-x-men/",
         "source": "Polygon"
@@ -305,16 +303,6 @@
       {
         "title": "Indiana Jones' next Disney attraction will feature a robot Harrison Ford",
         "url": "https://www.polygon.com/indiana-jones-animatronic-harrison-ford/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Ewan McGregor's $205 Million Superhero Flop Deserves Another Shot",
-        "url": "https://www.polygon.com/birds-of-prey-ewan-mcgregor-streaming-rec/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Ron Gilbert Says Making Another 'Monkey Island' Game Would Be \"Really Complicated\"",
-        "url": "https://www.polygon.com/no-new-monkey-island-ron-gilbert/",
         "source": "Polygon"
       }
     ],
