@@ -1,39 +1,51 @@
 {
   "metadata": {
-    "last_updated": "2026-08-16T13:32:12.345899",
+    "last_updated": "2026-08-16T14:24:03.160190",
     "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "Banned Words List",
-        "url": "https://pen.org/banned-words-list/",
-        "source": "Hacker News",
-        "score": 31
-      },
-      {
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News",
-        "score": 14
+        "score": 94
       },
       {
         "title": "A SAT Attack on Tarski's High School Algebra Problem",
         "url": "https://arxiv.org/abs/2608.08421",
         "source": "Hacker News",
-        "score": 29
+        "score": 30
       },
       {
-        "title": "Is the industry ready for tokens-constrained work?",
-        "url": "https://blog.alaindichiappari.dev/p/what-to-do-when-tokens-run-out",
+        "title": "Firefox for iOS now has a native adblocker",
+        "url": "https://support.mozilla.org/en-US/kb/block-ads-firefox-ios",
         "source": "Hacker News",
-        "score": 8
+        "score": 51
       },
       {
-        "title": "How Many Employees Does It Take to Reach $100M ARR Now?",
-        "url": "https://nazr.com/blog/how-many-employees-100m-arr",
+        "title": "Does anyone run Postgres without PgBouncer?",
+        "url": "https://brandur.org/fragments/postgres-without-pgbouncer",
         "source": "Hacker News",
-        "score": 5
+        "score": 46
+      },
+      {
+        "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
+        "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
+        "source": "Hacker News",
+        "score": 77
+      },
+      {
+        "title": "Asus Bike Booster",
+        "url": "https://www.asus.com/accessories/bike-booster/asus-oxiis/oxiis-intelligent-bike-booster/",
+        "source": "Hacker News",
+        "score": 509
+      },
+      {
+        "title": "Chestnut – eGPU dock with open-source firmware",
+        "url": "https://hwbusters.com/news/comma-ai-egpu-dock-runs-open-source-firmware-249-bare-799-with-an-rx-9060/",
+        "source": "Hacker News",
+        "score": 62
       },
       {
         "title": "Tasklet (YC P26) Is Hiring a Head of Design Engineering",
@@ -42,58 +54,46 @@
         "score": 1
       },
       {
-        "title": "Stripe 2.9% vs. Adyen 0.6% vs. Braintree 2.59%: 2026 Fees",
-        "url": "https://valueaddvc.com/blog/stripe-vs-adyen-vs-braintree-enterprise-payment-processing-compared-in-2026",
+        "title": "Asynchronous I/O in DuckDB: Work, Thread, Work",
+        "url": "https://duckdb.org/2026/07/31/asynchronous-io",
         "source": "Hacker News",
-        "score": 17
-      },
-      {
-        "title": "Show HN: Remove AI voice from AI writings",
-        "url": "https://unslopai.com",
-        "source": "Hacker News",
-        "score": 8
-      },
-      {
-        "title": "Asus Bike Booster",
-        "url": "https://www.asus.com/accessories/bike-booster/asus-oxiis/oxiis-intelligent-bike-booster/",
-        "source": "Hacker News",
-        "score": 498
-      },
-      {
-        "title": "Chestnut – eGPU dock with open-source firmware",
-        "url": "https://hwbusters.com/news/comma-ai-egpu-dock-runs-open-source-firmware-249-bare-799-with-an-rx-9060/",
-        "source": "Hacker News",
-        "score": 51
+        "score": 214
       },
       {
         "title": "Superconducting monolayer cuprate with a single CuO2 plane",
         "url": "https://www.nature.com/articles/s41586-026-10857-1",
         "source": "Hacker News",
-        "score": 31
-      },
-      {
-        "title": "Does anyone run Postgres without PgBouncer?",
-        "url": "https://brandur.org/fragments/postgres-without-pgbouncer",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Asynchronous I/O in DuckDB: Work, Thread, Work",
-        "url": "https://duckdb.org/2026/07/31/asynchronous-io",
-        "source": "Hacker News",
-        "score": 204
-      },
-      {
-        "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
-        "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
-        "source": "Hacker News",
-        "score": 31
+        "score": 35
       },
       {
         "title": "Software Engineering fundamentals matter more",
         "url": "https://rhonabwy.com/2026/08/15/software-engineering-fundamentals-matter-more-than-ever/",
         "source": "Hacker News",
-        "score": 207
+        "score": 223
+      },
+      {
+        "title": "Super El Niño Keeps Growing as New Forecasts Reach Record Territory Ahead Winter",
+        "url": "https://www.severe-weather.eu/long-range-2/super-el-nino-growth-accelerating-to-record-strength-fall-winter-2026-2027-forecast-impact-united-states-canada-europe-fa/",
+        "source": "Hacker News",
+        "score": 321
+      },
+      {
+        "title": "Cultivating a state of mind where new ideas are born (2023)",
+        "url": "https://www.henrikkarlsson.xyz/p/good-ideas",
+        "source": "Hacker News",
+        "score": 213
+      },
+      {
+        "title": "Patterns and problems in emerging multi-agent systems",
+        "url": "https://www.anthropic.com/research/multiagent-systems",
+        "source": "Hacker News",
+        "score": 147
+      },
+      {
+        "title": "Semaglutide linked to lower predicted dementia risk",
+        "url": "https://alz-journals.onlinelibrary.wiley.com/doi/10.1002/dad2.70432",
+        "source": "Hacker News",
+        "score": 449
       }
     ],
     "ai": [
@@ -101,49 +101,37 @@
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News AI",
-        "score": 14
-      },
-      {
-        "title": "Is the industry ready for tokens-constrained work?",
-        "url": "https://blog.alaindichiappari.dev/p/what-to-do-when-tokens-run-out",
-        "source": "Hacker News AI",
-        "score": 8
-      },
-      {
-        "title": "Stripe 2.9% vs. Adyen 0.6% vs. Braintree 2.59%: 2026 Fees",
-        "url": "https://valueaddvc.com/blog/stripe-vs-adyen-vs-braintree-enterprise-payment-processing-compared-in-2026",
-        "source": "Hacker News AI",
-        "score": 17
-      },
-      {
-        "title": "Show HN: Remove AI voice from AI writings",
-        "url": "https://unslopai.com",
-        "source": "Hacker News AI",
-        "score": 8
+        "score": 94
       },
       {
         "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
         "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
         "source": "Hacker News AI",
-        "score": 31
-      },
-      {
-        "title": "What happens when an LLM never sees material beyond fifth grade?",
-        "url": "https://littlelearner-ll.github.io/",
-        "source": "Hacker News AI",
-        "score": 186
+        "score": 77
       },
       {
         "title": "AI in drug discovery – what it is, where we stand and the path forward",
         "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
         "source": "Hacker News AI",
-        "score": 156
+        "score": 159
+      },
+      {
+        "title": "What happens when an LLM never sees material beyond fifth grade?",
+        "url": "https://littlelearner-ll.github.io/",
+        "source": "Hacker News AI",
+        "score": 196
+      },
+      {
+        "title": "AI Coding Without the Vibes",
+        "url": "https://peterbloem.nl/blog/craft-coding",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "AI has access to a vastly larger working memory than the human brain",
         "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
         "source": "Hacker News AI",
-        "score": 529
+        "score": 533
       },
       {
         "title": "AI-Assisted GPU Porting of a 250k Line Legacy Weather Simulation Code",
@@ -155,13 +143,25 @@
         "title": "Testing Moonshot AI's Kimi K3 Inside Claude Code",
         "url": "https://philippdubach.com/posts/kimi-k3-inside-claude-code/",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 4
       },
       {
         "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
         "url": "https://sankalp.bearblog.dev/autoresearch/",
         "source": "Hacker News AI",
-        "score": 427
+        "score": 430
+      },
+      {
+        "title": "Health benefits of Tai Chi",
+        "url": "https://www.health.harvard.edu/exercise-and-fitness/the-health-benefits-of-tai-chi",
+        "source": "Hacker News AI",
+        "score": 17
+      },
+      {
+        "title": "Program with Paint Brushes, Not Pencils",
+        "url": "https://blog.pickcode.io/program-with-paint-brushes-not-pencils/",
+        "source": "Hacker News AI",
+        "score": 14
       }
     ],
     "news": [
@@ -191,13 +191,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Morocco detains dozens of migrants trying to cross into Ceuta, reports say",
-        "url": "https://www.bbc.co.uk/news/articles/ckg44x2ey1ro?at_medium=RSS&at_campaign=rss",
+        "title": "Qatar denies capturing three Iranian pilots after downing fighter jets",
+        "url": "https://www.bbc.co.uk/news/articles/cj4kk8kz271o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Qatar denies capturing three Iranian pilots after downing fighter jets",
-        "url": "https://www.bbc.co.uk/news/articles/cj4kk8kz271o?at_medium=RSS&at_campaign=rss",
+        "title": "Four 'extraordinary' Renaissance paintings stolen from Italian museum",
+        "url": "https://www.bbc.co.uk/news/articles/cqjxx2gzd9qo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -277,6 +277,11 @@
     ],
     "gaming": [
       {
+        "title": "One of Marvel's Strongest Heroes Is Officially Making a Near-Perfect Comeback",
+        "url": "https://www.polygon.com/marvel-tokon-gladiator-worst-life-ever/",
+        "source": "Polygon"
+      },
+      {
         "title": "5 Most Terrifying Devils In All of Chainsaw Man",
         "url": "https://www.polygon.com/chainsaw-man-most-powerful-devils-scariest/",
         "source": "Polygon"
@@ -304,11 +309,6 @@
       {
         "title": "One Punch Man’s Original Director Will Unleash His Dazzling New Sci-Fi Movie in 6 Months",
         "url": "https://www.polygon.com/ghost-end-of-night-anime-shingo-natsume-sonny-boy-director/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Classic Anime That Deserve To Get Remakes ASAP",
-        "url": "https://www.polygon.com/classic-anime-that-should-get-remakes/",
         "source": "Polygon"
       }
     ],
