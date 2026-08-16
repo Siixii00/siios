@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-16T16:26:03.955338",
-    "total_items": 54
+    "last_updated": "2026-08-16T17:20:01.911486",
+    "total_items": 61
   },
   "content": {
     "tech": [
@@ -9,17 +9,47 @@
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News",
-        "score": 233
+        "score": 298
       },
       {
         "title": "The AI Credit Resale Economy",
         "url": "https://vectoral.com/blog/who-are-the-token-brokers",
         "source": "Hacker News",
-        "score": 75
+        "score": 102
       },
       {
         "title": "St Lucie Nuclear Reactor Unit 1 manually shutdown, 3 control rods drop into core",
         "url": "https://www.wptv.com/news/treasure-coast/region-st-lucie-county/saint-lucie-nuclear-power-plant-unit-1-manually-shut-down-after-3-control-rods-drop-into-reactor-core",
+        "source": "Hacker News",
+        "score": 59
+      },
+      {
+        "title": "Anton Chekhov played at love most of his life",
+        "url": "https://commonreader.wustl.edu/winning-and-losing-at-the-great-game-of-intimacy/",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "Archie G. Norcross' Maine Forest Fire Maps (1918–22)",
+        "url": "https://publicdomainreview.org/collection/maine-forest-fire-maps/",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "GPS and the Lost Art of Getting Lost",
+        "url": "https://www.newyorker.com/news/annals-of-inquiry/gps-and-the-lost-art-of-getting-lost",
+        "source": "Hacker News",
+        "score": 25
+      },
+      {
+        "title": "NIH is ending a key grant for budding clinical researchers",
+        "url": "https://www.science.org/content/article/nih-ending-key-grant-budding-clinical-researchers",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
+        "title": "Clamiga: Common Lisp for the Amiga",
+        "url": "https://nnamgreb.de/blog/Clamiga+-+Common+Lisp+for+the+Amiga",
         "source": "Hacker News",
         "score": 28
       },
@@ -27,49 +57,31 @@
         "title": "Firefox for iOS now has a native adblocker",
         "url": "https://support.mozilla.org/en-US/kb/block-ads-firefox-ios",
         "source": "Hacker News",
-        "score": 207
-      },
-      {
-        "title": "A True Telnet BBS on a Casio Calculator",
-        "url": "https://ei3lh.eu/2026/08/16/a-true-telnet-bbs-on-a-casio-calculator/",
-        "source": "Hacker News",
-        "score": 36
-      },
-      {
-        "title": "Show HN: A public AI whose memory is shared across all users",
-        "url": "https://wildstatic.com/",
-        "source": "Hacker News",
-        "score": 25
+        "score": 272
       },
       {
         "title": "The weekend is 100 years old",
         "url": "https://www.theguardian.com/money/2026/aug/16/the-weekend-is-100-years-old-skiveday-fridays-and-hybrid-working-ruined-it",
         "source": "Hacker News",
-        "score": 30
+        "score": 65
       },
       {
-        "title": "Clamiga: Common Lisp for the Amiga",
-        "url": "https://nnamgreb.de/blog/Clamiga+-+Common+Lisp+for+the+Amiga",
+        "title": "Show HN: A public AI whose memory is shared across all users",
+        "url": "https://wildstatic.com/",
         "source": "Hacker News",
-        "score": 9
+        "score": 37
       },
       {
-        "title": "A SAT Attack on Tarski's High School Algebra Problem",
-        "url": "https://arxiv.org/abs/2608.08421",
+        "title": "A True Telnet BBS on a Casio Calculator",
+        "url": "https://ei3lh.eu/2026/08/16/a-true-telnet-bbs-on-a-casio-calculator/",
         "source": "Hacker News",
-        "score": 46
+        "score": 51
       },
       {
-        "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
-        "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
+        "title": "Before Rightmove, there was the Cosmorama",
+        "url": "https://www.ianvisits.co.uk/articles/before-rightmove-there-was-the-cosmorama-londons-forgotten-property-innovation-91687/",
         "source": "Hacker News",
-        "score": 194
-      },
-      {
-        "title": "GPS and the Lost Art of Getting Lost",
-        "url": "https://www.newyorker.com/news/annals-of-inquiry/gps-and-the-lost-art-of-getting-lost",
-        "source": "Hacker News",
-        "score": 8
+        "score": 4
       },
       {
         "title": "Tasklet (YC P26) Is Hiring a Head of Design Engineering",
@@ -78,22 +90,10 @@
         "score": 1
       },
       {
-        "title": "Does anyone run Postgres without PgBouncer?",
-        "url": "https://brandur.org/fragments/postgres-without-pgbouncer",
+        "title": "Kimi Work attaches raw agent sessions to feedback reports",
+        "url": "https://news.ycombinator.com/item?id=49313711",
         "source": "Hacker News",
-        "score": 93
-      },
-      {
-        "title": "Chestnut – eGPU dock with open-source firmware",
-        "url": "https://hwbusters.com/news/comma-ai-egpu-dock-runs-open-source-firmware-249-bare-799-with-an-rx-9060/",
-        "source": "Hacker News",
-        "score": 93
-      },
-      {
-        "title": "Asus Bike Booster",
-        "url": "https://www.asus.com/accessories/bike-booster/asus-oxiis/oxiis-intelligent-bike-booster/",
-        "source": "Hacker News",
-        "score": 544
+        "score": 18
       }
     ],
     "ai": [
@@ -101,49 +101,49 @@
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News AI",
-        "score": 233
+        "score": 298
       },
       {
         "title": "The AI Credit Resale Economy",
         "url": "https://vectoral.com/blog/who-are-the-token-brokers",
         "source": "Hacker News AI",
-        "score": 75
+        "score": 102
+      },
+      {
+        "title": "Archie G. Norcross' Maine Forest Fire Maps (1918–22)",
+        "url": "https://publicdomainreview.org/collection/maine-forest-fire-maps/",
+        "source": "Hacker News AI",
+        "score": 11
       },
       {
         "title": "Show HN: A public AI whose memory is shared across all users",
         "url": "https://wildstatic.com/",
         "source": "Hacker News AI",
-        "score": 25
+        "score": 37
       },
       {
         "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
         "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
         "source": "Hacker News AI",
-        "score": 194
-      },
-      {
-        "title": "AI in drug discovery – what it is, where we stand and the path forward",
-        "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
-        "source": "Hacker News AI",
-        "score": 170
+        "score": 222
       },
       {
         "title": "AI Coding Without the Vibes",
         "url": "https://peterbloem.nl/blog/craft-coding",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 34
+      },
+      {
+        "title": "AI in drug discovery – what it is, where we stand and the path forward",
+        "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
+        "source": "Hacker News AI",
+        "score": 171
       },
       {
         "title": "AI isn’t outthinking mathematicians, it’s out-remembering them",
         "url": "https://davidepiffer.com/p/ai-isnt-outthinking-mathematicians",
         "source": "Hacker News AI",
-        "score": 544
-      },
-      {
-        "title": "What happens when an LLM never sees material beyond fifth grade?",
-        "url": "https://littlelearner-ll.github.io/",
-        "source": "Hacker News AI",
-        "score": 219
+        "score": 552
       },
       {
         "title": "AI-Assisted GPU Porting of a 250k Line Legacy Weather Simulation Code",
@@ -152,16 +152,16 @@
         "score": 45
       },
       {
+        "title": "What happens when an LLM never sees material beyond fifth grade?",
+        "url": "https://littlelearner-ll.github.io/",
+        "source": "Hacker News AI",
+        "score": 224
+      },
+      {
         "title": "Health benefits of Tai Chi",
         "url": "https://www.health.harvard.edu/exercise-and-fitness/the-health-benefits-of-tai-chi",
         "source": "Hacker News AI",
-        "score": 23
-      },
-      {
-        "title": "Auto-research with codex: How I achieved a 232x Faster Kernel",
-        "url": "https://sankalp.bearblog.dev/autoresearch/",
-        "source": "Hacker News AI",
-        "score": 431
+        "score": 25
       }
     ],
     "news": [
@@ -186,7 +186,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Two dead and evacuation under way as fires break out on Greek island",
+        "title": "Two dead and hundreds evacuated as twin fires break out on Greek island",
         "url": "https://www.bbc.co.uk/news/articles/c87nnwlpe5no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -201,7 +201,43 @@
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " AI art is making digital artists embrace imperfections – here's how ",
+        "url": "https://www.creativebloq.com/art/digital-art/ai-art-is-making-digital-artists-embrace-imperfections-heres-how",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This ridiculous film poster makes me wish movies would get silly again ",
+        "url": "https://www.creativebloq.com/design/poster-design/this-ridiculous-film-poster-makes-me-wish-movies-would-get-silly-again",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Disney's Hexed controversy isn't going anywhere after its big D23 character reveal ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/disneys-hexed-controversy-isnt-going-anywhere-after-its-d23-character-reveal",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " From robot pets to Lego sets, level up your desk with these quirky accessories ",
+        "url": "https://www.creativebloq.com/entertainment/toys-collectibles/from-robot-pets-to-lego-sets-level-up-your-desk-with-these-quirky-accessories",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Other brands are throwing shade at the new Instagram logo ",
+        "url": "https://www.creativebloq.com/design/logos-icons/other-brands-are-throwing-shade-at-the-new-instagram-logo",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " People are freaking out that the iPhone 18 Pro will be super expensive - but will it? ",
+        "url": "https://www.creativebloq.com/tech/phones-tablets/people-are-freaking-out-that-the-iphone-18-pro-will-be-super-expensive-but-will-it",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " 5 laptops and Chromebooks on sale and worth buying if you're going back to school ",
+        "url": "https://www.creativebloq.com/tech/laptops/these-are-the-3-laptops-you-should-shortlist-for-your-studies-clone",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "Scientists reveal why walking gets so much harder with age",
@@ -241,6 +277,16 @@
     ],
     "gaming": [
       {
+        "title": "Resonance: A Plague Tale Legacy’s Developer Walked an Unexpected Path to Success",
+        "url": "https://www.polygon.com/asobo-studio-plague-tale-ratatouille/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Persona 5' And More Iconic Games Will Dominate The Next Season Of Fortnite",
+        "url": "https://www.polygon.com/fortnite-override-season-trailer/",
+        "source": "Polygon"
+      },
+      {
         "title": "Netflix Games’ Latest Pivot Is a Reminder of Its Messy Past",
         "url": "https://www.polygon.com/netflix-night-school-studio-closure-analysis/",
         "source": "Polygon"
@@ -263,16 +309,6 @@
       {
         "title": "One of Marvel's Strongest Heroes Is Officially Making a Near-Perfect Comeback",
         "url": "https://www.polygon.com/marvel-tokon-gladiator-worst-life-ever/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Most Terrifying Devils In All of Chainsaw Man",
-        "url": "https://www.polygon.com/chainsaw-man-most-powerful-devils-scariest/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Gamescom, Not SGF, is Now the Biggest Video Games Event",
-        "url": "https://www.polygon.com/patch-notes-gamescom-preview/",
         "source": "Polygon"
       }
     ],
