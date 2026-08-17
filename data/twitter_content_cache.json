@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-17T06:57:28.517040",
-    "total_items": 58
+    "last_updated": "2026-08-17T07:56:43.667187",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,141 +9,147 @@
         "title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
         "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
         "source": "Hacker News",
-        "score": 319
-      },
-      {
-        "title": "The Life and Death of Direct File [pdf]",
-        "url": "https://www.ischool.berkeley.edu/sites/default/files/vinton_report_5.pdf",
-        "source": "Hacker News",
-        "score": 170
-      },
-      {
-        "title": "A third world engineer responds to “RISC-V: They should have known better”",
-        "url": "https://rvembedded.com/blog_post/12/",
-        "source": "Hacker News",
-        "score": 460
-      },
-      {
-        "title": "AGI-64 Brings Sierra Adventures to the Commodore 64",
-        "url": "https://meanhamster.com/news/agi-64-brings-sierra-adventures-to-the-commodore-64",
-        "source": "Hacker News",
-        "score": 64
-      },
-      {
-        "title": "Reticulum – Decentralized Mesh Network",
-        "url": "https://reticulum.network/",
-        "source": "Hacker News",
-        "score": 89
-      },
-      {
-        "title": "Claude: System Prompts",
-        "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
-        "source": "Hacker News",
-        "score": 622
+        "score": 374
       },
       {
         "title": "Linear Algebra Done Right – Sheldon Axler",
         "url": "https://linear.axler.net/",
         "source": "Hacker News",
-        "score": 13
+        "score": 43
+      },
+      {
+        "title": "GIMP Development Update",
+        "url": "https://www.gimp.org/news/2026/08/16/dev-update-august-2026/",
+        "source": "Hacker News",
+        "score": 76
+      },
+      {
+        "title": "A third world engineer responds to “RISC-V: They should have known better”",
+        "url": "https://rvembedded.com/blog_post/12/",
+        "source": "Hacker News",
+        "score": 480
+      },
+      {
+        "title": "On A.I. regulation and messaging",
+        "url": "https://twitter.com/DarioAmodei/status/2088758816376807762",
+        "source": "Hacker News",
+        "score": 6
+      },
+      {
+        "title": "Reticulum – Decentralized Mesh Network",
+        "url": "https://reticulum.network/",
+        "source": "Hacker News",
+        "score": 106
+      },
+      {
+        "title": "Anthropic's 'Watermark' Text Adulteration in Claude Is a Perversion of Writing",
+        "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
+        "source": "Hacker News",
+        "score": 186
+      },
+      {
+        "title": "Claude: System Prompts",
+        "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
+        "source": "Hacker News",
+        "score": 635
+      },
+      {
+        "title": "AGI-64 Brings Sierra Adventures to the Commodore 64",
+        "url": "https://meanhamster.com/news/agi-64-brings-sierra-adventures-to-the-commodore-64",
+        "source": "Hacker News",
+        "score": 73
       },
       {
         "title": "Rhombus 1.1 is now available",
         "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
         "source": "Hacker News",
-        "score": 59
-      },
-      {
-        "title": "Low-Tech Ceramic Water Filter",
-        "url": "https://wiki.lowtechlab.org/wiki/Filtre_%C3%A0_eau_c%C3%A9ramique/en",
-        "source": "Hacker News",
-        "score": 153
+        "score": 69
       },
       {
         "title": "Show HN: Vocal Slice – Cut audio by selecting text, fully on-device",
         "url": "https://vocalslice.com/",
         "source": "Hacker News",
-        "score": 14
+        "score": 26
       },
       {
-        "title": "Applying a photosynthetic process to treat “dry eye”",
-        "url": "https://www.science.org/content/blog-post/taking-tip-plants-eyes",
+        "title": "Gakutensoku",
+        "url": "https://en.wikipedia.org/wiki/Gakutensoku",
         "source": "Hacker News",
-        "score": 36
+        "score": 9
       },
       {
-        "title": "Interview with Amit Patel, Creator of “Solar Realms Elite” (2013)",
-        "url": "https://breakintochat.com/blog/2013/02/18/amit-patel-creator-of-solar-realms-elite/",
+        "title": "Low-Tech Ceramic Water Filter",
+        "url": "https://wiki.lowtechlab.org/wiki/Filtre_%C3%A0_eau_c%C3%A9ramique/en",
         "source": "Hacker News",
-        "score": 46
+        "score": 166
       },
       {
-        "title": "Design 3D-printable parts by talking",
-        "url": "https://nurb.dev/",
+        "title": "How do I permanently disable random Google Photos popup to backup photos? (2024)",
+        "url": "https://support.google.com/photos/thread/256212140/how-do-i-permanently-disable-google-photos-pop-up-prompt-to-backup-my-photos-i?hl=en",
         "source": "Hacker News",
-        "score": 8
+        "score": 94
       },
       {
-        "title": "SIMD in the 90s: Programming Intel's Pentium MMX",
-        "url": "https://pikuma.com/blog/programming-intel-pentium-mmx-simd",
+        "title": "Prolly: A content-addressed ordered map built on prolly trees",
+        "url": "https://github.com/crabbuild/prolly",
         "source": "Hacker News",
-        "score": 105
-      },
-      {
-        "title": "$12B of US ratepayers' money wasted on a modeling mistake in PJM",
-        "url": "https://newsletter.semianalysis.com/p/12b-of-us-ratepayers-money-wasted",
-        "source": "Hacker News",
-        "score": 23
+        "score": 41
       }
     ],
     "ai": [
       {
+        "title": "Anthropic's 'Watermark' Text Adulteration in Claude Is a Perversion of Writing",
+        "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
+        "source": "Hacker News AI",
+        "score": 186
+      },
+      {
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News AI",
-        "score": 622
+        "score": 635
       },
       {
         "title": "Rhombus 1.1 is now available",
         "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
         "source": "Hacker News AI",
-        "score": 59
+        "score": 69
       },
       {
         "title": "The AI Credit Resale Economy",
         "url": "https://vectoral.com/blog/who-are-the-token-brokers",
         "source": "Hacker News AI",
-        "score": 268
+        "score": 277
       },
       {
         "title": "Red queen hypothesis – A new way forward for self-improving AI",
         "url": "https://www.cst.cam.ac.uk/news/red-queen-hypothesis-new-way-forward-self-improving-ai",
         "source": "Hacker News AI",
-        "score": 42
+        "score": 50
       },
       {
         "title": "Nvidia dramatically reduces amount of OpenAI infra financing it may guarantee",
         "url": "https://www.reuters.com/business/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-2026-08-14/",
         "source": "Hacker News AI",
-        "score": 188
+        "score": 199
+      },
+      {
+        "title": "Show HN: A public AI whose memory is shared across all users",
+        "url": "https://wildstatic.com/",
+        "source": "Hacker News AI",
+        "score": 70
       },
       {
         "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
         "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
         "source": "Hacker News AI",
-        "score": 384
+        "score": 392
       },
       {
         "title": "Archie G. Norcross' Maine Forest Fire Maps (1918–22)",
         "url": "https://publicdomainreview.org/collection/maine-forest-fire-maps/",
         "source": "Hacker News AI",
         "score": 27
-      },
-      {
-        "title": "The deep history behind the Road to Nowhere inside the Great Smoky Mountains",
-        "url": "https://www.wunc.org/environment/2026-08-10/road-to-nowhere-great-smoky-mountains",
-        "source": "Hacker News AI",
-        "score": 28
       }
     ],
     "news": [
@@ -185,6 +191,11 @@
     ],
     "art": [
       {
+        "title": " If you're making the transition from 2D to 3D art, you need to understand pivots and centre points to prevent total chaos ",
+        "url": "https://www.creativebloq.com/3d/if-youre-making-the-transition-from-2d-to-3d-art-you-need-to-fully-understand-pivots-and-centre-points-to-prevent-total-chaos",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " XPPen's new Artist Ultra 14 drawing display gets the important specs right ",
         "url": "https://www.creativebloq.com/art/digital-art/xppens-new-artist-ultra-14-drawing-display-gets-the-important-specs-right",
         "source": "Creative Bloq"
@@ -212,11 +223,6 @@
       {
         "title": " Other brands are throwing shade at the new Instagram logo ",
         "url": "https://www.creativebloq.com/design/logos-icons/other-brands-are-throwing-shade-at-the-new-instagram-logo",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " People are freaking out that the iPhone 18 Pro will be super expensive - but will it? ",
-        "url": "https://www.creativebloq.com/tech/phones-tablets/people-are-freaking-out-that-the-iphone-18-pro-will-be-super-expensive-but-will-it",
         "source": "Creative Bloq"
       }
     ],
@@ -259,6 +265,31 @@
     ],
     "gaming": [
       {
+        "title": "Gaming’s oldest urban legend is Atari’s fault",
+        "url": "https://www.polygon.com/video/gaming-s-oldest-urban-legend-is-atari-s-fault/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Why French games have always been way ahead of their time",
+        "url": "https://www.polygon.com/video/why-french-games-have-always-been-way-ahead-of-their-time/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The hated exploit some developers actually want you to use",
+        "url": "https://www.polygon.com/video/the-hated-exploit-some-developers-actually-want-you-to-use/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The real reason the Super Mario Bros movie tanked",
+        "url": "https://www.polygon.com/video/the-real-reason-the-super-mario-bros-movie-tanked/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Sekiro and a brief history of spraying blood all over the darn place",
+        "url": "https://www.polygon.com/video/sekiro-and-a-brief-history-of-spraying-blood-all-over-the-darn-place/",
+        "source": "Polygon"
+      },
+      {
         "title": "After 10 Years, Tom Cruise's Forgotten 118-Minute Mystery-Thriller Is Back on Free Streaming",
         "url": "https://www.polygon.com/tubi-movies-august-2026-jack-reacher/",
         "source": "Polygon"
@@ -266,31 +297,6 @@
       {
         "title": "'Spider-Man: Brand New Day' Hits $2 Billion at the Box Office",
         "url": "https://www.polygon.com/spider-man-brand-new-day-2-billion-box-office/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Mahershala Ali’s 'Blade' Is Dead, But His Forgotten 4-Part Sci-Fi Masterpiece Is Free on Streaming",
-        "url": "https://www.polygon.com/4400-mahershala-ali-free-streaming-tubi/",
-        "source": "Polygon"
-      },
-      {
-        "title": "8 Years Later, Marvel Tokon Team's Amazing Dragon Ball Fighting Game Still Holds Up",
-        "url": "https://www.polygon.com/dragon-ball-fighterz-recommendation-marvel-tokon-arc-system-works/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Fatal Fury: City of the Wolves Revenge Edition' Makes It Easy To Get All Of The Street Fighter Rival's DLC",
-        "url": "https://www.polygon.com/fatal-fury-revenge-edition/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Gerard Butler's 109-Minute Sci-Fi Disaster Movie Masterpiece Officially Arrives on Free Streaming",
-        "url": "https://www.polygon.com/gerard-butler-geostorm-streaming-tubi/",
-        "source": "Polygon"
-      },
-      {
-        "title": "After 52 Years, Wolverine's Best Quote Is Still One Of The Greatest Lines In X-Men History",
-        "url": "https://www.polygon.com/wolverine-best-quote-x-men/",
         "source": "Polygon"
       }
     ],
