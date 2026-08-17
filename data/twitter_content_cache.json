@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-17T18:40:39.542444",
-    "total_items": 64
+    "last_updated": "2026-08-17T19:28:52.548685",
+    "total_items": 65
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "A Preview of DuckDB v2.0",
         "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
         "source": "Hacker News",
-        "score": 350
-      },
-      {
-        "title": "Qwen3.8 27B scores 52 on Artificial Analysis",
-        "url": "https://artificialanalysis.ai/models/qwen3-8-27b",
-        "source": "Hacker News",
-        "score": 61
+        "score": 386
       },
       {
         "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
         "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
         "source": "Hacker News",
-        "score": 198
+        "score": 217
       },
       {
         "title": "Incident with Github.com",
         "url": "https://www.githubstatus.com/incidents/zkxwbgr0cnmx",
         "source": "Hacker News",
-        "score": 278
+        "score": 337
       },
       {
         "title": "How to disable or avoid intrusive AI",
         "url": "https://www.librarian.net/notoai/",
         "source": "Hacker News",
-        "score": 148
-      },
-      {
-        "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
-        "url": "https://speko.ai/",
-        "source": "Hacker News",
-        "score": 58
-      },
-      {
-        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
-        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
-        "source": "Hacker News",
-        "score": 225
+        "score": 175
       },
       {
         "title": "Sun Clock",
         "url": "https://sunclock.net/",
         "source": "Hacker News",
-        "score": 30
+        "score": 60
       },
       {
-        "title": "Olo (Color)",
-        "url": "https://en.wikipedia.org/wiki/Olo_(color)",
+        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
+        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
         "source": "Hacker News",
-        "score": 146
+        "score": 242
+      },
+      {
+        "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
+        "url": "https://speko.ai/",
+        "source": "Hacker News",
+        "score": 66
+      },
+      {
+        "title": "GPU Offload in Rust: Portable, Safe, and Fast",
+        "url": "https://arxiv.org/abs/2608.13759",
+        "source": "Hacker News",
+        "score": 18
       },
       {
         "title": "Judge sets framework for Nine PBS to retrieve archival data",
         "url": "https://current.org/2026/08/judge-sets-framework-for-nine-pbs-to-retrieve-archival-data/",
         "source": "Hacker News",
-        "score": 25
+        "score": 49
       },
       {
-        "title": "Ask HN: Alternatives to GitHub",
-        "url": "https://news.ycombinator.com/item?id=49331033",
+        "title": "Olo (Color)",
+        "url": "https://en.wikipedia.org/wiki/Olo_(color)",
         "source": "Hacker News",
-        "score": 343
+        "score": 173
       },
       {
-        "title": "The Lonely Men Who Work in Patagonia, at the End of the World",
-        "url": "https://www.newyorker.com/culture/photo-booth/the-lonely-men-at-the-end-of-the-world",
+        "title": "Roboflow Playground: Try and Compare 30 Computer Vision Models",
+        "url": "https://blog.roboflow.com/roboflow-playground/",
         "source": "Hacker News",
-        "score": 3
-      },
-      {
-        "title": "How to put 170 atoms in an atom",
-        "url": "https://signoregalilei.com/2026/08/02/how-to-put-170-atoms-in-an-atom/",
-        "source": "Hacker News",
-        "score": 66
-      },
-      {
-        "title": "A particle made of force: physicists say they've found mysterious 'glueball'",
-        "url": "https://www.nature.com/articles/d41586-026-02498-1",
-        "source": "Hacker News",
-        "score": 26
+        "score": 7
       },
       {
         "title": "Llama.cpp v0.1.0",
         "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.1.0",
         "source": "Hacker News",
-        "score": 6
+        "score": 25
+      },
+      {
+        "title": "We Are Forking dotenvy into dotenv-ng",
+        "url": "https://secretspec.dev/blog/we-are-forking-dotenvy-into-dotenv-ng/",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "Qwen3.8 27B scores 52 on Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/qwen3-8-27b",
+        "source": "Hacker News",
+        "score": 147
+      },
+      {
+        "title": "How I Over-Engineered My Book",
+        "url": "https://ben.balter.com/2026/08/17/how-i-over-engineered-my-book/",
+        "source": "Hacker News",
+        "score": 18
       }
     ],
     "ai": [
@@ -101,85 +101,91 @@
         "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
         "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
         "source": "Hacker News AI",
-        "score": 198
+        "score": 217
       },
       {
         "title": "How to disable or avoid intrusive AI",
         "url": "https://www.librarian.net/notoai/",
         "source": "Hacker News AI",
-        "score": 148
-      },
-      {
-        "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
-        "url": "https://speko.ai/",
-        "source": "Hacker News AI",
-        "score": 58
+        "score": 175
       },
       {
         "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
         "url": "https://blog.roboflow.com/openai-gpt-5-6/",
         "source": "Hacker News AI",
-        "score": 225
+        "score": 242
+      },
+      {
+        "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
+        "url": "https://speko.ai/",
+        "source": "Hacker News AI",
+        "score": 66
+      },
+      {
+        "title": "Roboflow Playground: Try and Compare 30 Computer Vision Models",
+        "url": "https://blog.roboflow.com/roboflow-playground/",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Anthropic's ‘watermark’ text adulteration in Claude is a perversion of writing",
         "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
         "source": "Hacker News AI",
-        "score": 697
+        "score": 717
       },
       {
         "title": "Show HN: Sokoban AI Solver",
         "url": "https://mkornreich.me/projects/sokoban/",
         "source": "Hacker News AI",
-        "score": 52
+        "score": 57
+      },
+      {
+        "title": "AirTag reveals Amazon is trashing rare books to train AI",
+        "url": "https://arstechnica.com/tech-policy/2026/08/hidden-airtag-reveals-amazon-is-trashing-rare-books-to-train-ai/",
+        "source": "Hacker News AI",
+        "score": 11
       },
       {
         "title": "Show HN: Saggar, a Mac terminal that keeps sessions and your attention organized",
         "url": "https://saggar.marginalutility.dev/",
         "source": "Hacker News AI",
-        "score": 27
+        "score": 34
       },
       {
         "title": "On AI regulation and messaging",
         "url": "https://twitter.com/DarioAmodei/status/2088758816376807762",
         "source": "Hacker News AI",
-        "score": 211
-      },
-      {
-        "title": "An Update on Leaving Gmail for Fastmail",
-        "url": "https://moddedbear.com/an-update-on-leaving-gmail-for-fastmail/",
-        "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "Anthropic's War on open source AI",
-        "url": "https://twitter.com/TheAhmadOsman/status/2065307070044234186",
-        "source": "Hacker News AI",
-        "score": 94
+        "score": 216
       },
       {
         "title": "Amazon, which started off selling books, is destroying rare texts to train AI",
         "url": "https://techcrunch.com/2026/08/17/amazon-once-an-online-bookseller-is-destroying-rare-books-to-train-ai-models/",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 34
+      },
+      {
+        "title": "An Update on Leaving Gmail for Fastmail",
+        "url": "https://moddedbear.com/an-update-on-leaving-gmail-for-fastmail/",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
+        "title": "Anthropic's War on open source AI",
+        "url": "https://twitter.com/TheAhmadOsman/status/2065307070044234186",
+        "source": "Hacker News AI",
+        "score": 104
       },
       {
         "title": "Apple AirTag reveals how Amazon destroys rare books for AI training",
         "url": "https://the-decoder.com/airtag-reveals-how-amazon-destroys-rare-books-for-ai-training/",
         "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "LLM City – 3D render of all Kimi K3's weights as 2.5mm tiles",
-        "url": "https://magik.net/llmcity/",
-        "source": "Hacker News AI",
-        "score": 3
+        "score": 13
       },
       {
         "title": "Tim O'Reilly – Why Open Source Matters for AI",
         "url": "https://oreillyradar.substack.com/p/why-open-source-matters-for-ai",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 7
       }
     ],
     "news": [
@@ -295,6 +301,21 @@
     ],
     "gaming": [
       {
+        "title": "Bethesda Warns Skyrim & Fallout 4 Players of Mod-breaking Update",
+        "url": "https://www.polygon.com/skyrim-fallout-4-update-bethesda-mods-error-break-nexus/",
+        "source": "Polygon"
+      },
+      {
+        "title": "‘It: Welcome to Derry’ Season 2 Officially Confirmed by HBO",
+        "url": "https://www.polygon.com/it-welcome-to-derry-season-2-renewed-hbo/",
+        "source": "Polygon"
+      },
+      {
+        "title": "9 Major Mutants Marvel Still Needs to Cast for the MCU X-Men Reboot",
+        "url": "https://www.polygon.com/marvel-x-movie-cast-beast-magneto-gambit-kitty-pryde-iceman-angel/",
+        "source": "Polygon"
+      },
+      {
         "title": "Christopher Nolan’s ‘Oppenheimer’ Now Streaming Free on Two Platforms",
         "url": "https://www.polygon.com/oppenheimer-movie-where-to-stream-free-peacock-fandango/",
         "source": "Polygon"
@@ -312,21 +333,6 @@
       {
         "title": "Everything we know about PS6, Sony’s next-gen PlayStation console",
         "url": "https://www.polygon.com/ps6-sony-playstation-6-release-date-price/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Netflix's Sydney Sweeney Gundam Movie is a 'Big Action-Romance Space' Epic",
-        "url": "https://www.polygon.com/netflix-live-action-gundam-movie-sydney-sweeney-romance/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Supreme Reveals 24K Gold Analogue Pocket Handhelds",
-        "url": "https://www.polygon.com/game-boy-analogue-pocket-supreme-release-date/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Matt Damon's 10/10 Sci-Fi Masterpiece Is Essential Viewing After Becoming Streaming Smash Hit",
-        "url": "https://www.polygon.com/appletv-streaming-august-2026-the-martian/",
         "source": "Polygon"
       }
     ],
