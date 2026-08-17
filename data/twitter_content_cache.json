@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-17T04:42:30.419458",
+    "last_updated": "2026-08-17T05:35:48.138284",
     "total_items": 61
   },
   "content": {
@@ -9,47 +9,53 @@
         "title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
         "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
         "source": "Hacker News",
-        "score": 194
+        "score": 240
+      },
+      {
+        "title": "Stripe Clinches over $7B Deal to Buy AI Firm OpenRouter",
+        "url": "https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion",
+        "source": "Hacker News",
+        "score": 259
       },
       {
         "title": "The Life and Death of Direct File [pdf]",
         "url": "https://www.ischool.berkeley.edu/sites/default/files/vinton_report_5.pdf",
         "source": "Hacker News",
-        "score": 126
+        "score": 145
       },
       {
         "title": "AGI-64 Brings Sierra Adventures to the Commodore 64",
         "url": "https://meanhamster.com/news/agi-64-brings-sierra-adventures-to-the-commodore-64",
         "source": "Hacker News",
-        "score": 33
+        "score": 44
       },
       {
-        "title": "A 3rd World Embedded Engineer Responds to \"RISC-V They Should Have Known Better\"",
+        "title": "A third world engineer responds to ”RISC-V: They should have known better“",
         "url": "https://rvembedded.com/blog_post/12/",
         "source": "Hacker News",
-        "score": 414
-      },
-      {
-        "title": "Gmail might partially be to blame for receiving emails from other Sean Conners",
-        "url": "https://boston.conman.org/2026/08/11.1",
-        "source": "Hacker News",
-        "score": 16
+        "score": 430
       },
       {
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News",
-        "score": 583
+        "score": 600
       },
       {
         "title": "Rhombus 1.1 is now available",
         "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
         "source": "Hacker News",
-        "score": 38
+        "score": 44
       },
       {
         "title": "Reticulum – Decentralized Mesh Network",
         "url": "https://reticulum.network/",
+        "source": "Hacker News",
+        "score": 57
+      },
+      {
+        "title": "Interview with Amit Patel, Creator of “Solar Realms Elite” (2013)",
+        "url": "https://breakintochat.com/blog/2013/02/18/amit-patel-creator-of-solar-realms-elite/",
         "source": "Hacker News",
         "score": 42
       },
@@ -57,93 +63,87 @@
         "title": "Low-Tech Ceramic Water Filter",
         "url": "https://wiki.lowtechlab.org/wiki/Filtre_%C3%A0_eau_c%C3%A9ramique/en",
         "source": "Hacker News",
-        "score": 130
+        "score": 141
       },
       {
-        "title": "Interview with Amit Patel, Creator of \"Solar Realms Elite\"",
-        "url": "https://breakintochat.com/blog/2013/02/18/amit-patel-creator-of-solar-realms-elite/",
+        "title": "Applying a photosynthetic process to treat “dry eye”",
+        "url": "https://www.science.org/content/blog-post/taking-tip-plants-eyes",
         "source": "Hacker News",
-        "score": 29
+        "score": 25
       },
       {
         "title": "SIMD in the 90s: Programming Intel's Pentium MMX",
         "url": "https://pikuma.com/blog/programming-intel-pentium-mmx-simd",
         "source": "Hacker News",
-        "score": 85
+        "score": 96
       },
       {
-        "title": "Dancing with friends and enemies: boids' swarm intelligence",
-        "url": "https://community.wolfram.com/groups/-/m/t/122095",
-        "source": "Hacker News",
-        "score": 31
-      },
-      {
-        "title": "Applying a photosynthetic process to treat \"dry eye\"",
-        "url": "https://www.science.org/content/blog-post/taking-tip-plants-eyes",
-        "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "Protobuf has LSP support. You're welcome",
-        "url": "https://buf.build/blog/protobuf-lsp",
-        "source": "Hacker News",
-        "score": 131
-      },
-      {
-        "title": "How do I permanently disable Google Photos pop-up prompt to backup my photos?",
+        "title": "How do I permanently disable random Google Photos popup to backup photos? (2024)",
         "url": "https://support.google.com/photos/thread/256212140/how-do-i-permanently-disable-google-photos-pop-up-prompt-to-backup-my-photos-i?hl=en",
         "source": "Hacker News",
-        "score": 34
+        "score": 64
+      },
+      {
+        "title": "Dancing with friends and enemies: boids' swarm intelligence (2012)",
+        "url": "https://community.wolfram.com/groups/-/m/t/122095",
+        "source": "Hacker News",
+        "score": 36
+      },
+      {
+        "title": "Gmail might partially be to blame for receiving emails from other Sean Conners",
+        "url": "https://boston.conman.org/2026/08/11.1",
+        "source": "Hacker News",
+        "score": 23
       }
     ],
     "ai": [
       {
-        "title": "Gmail might partially be to blame for receiving emails from other Sean Conners",
-        "url": "https://boston.conman.org/2026/08/11.1",
+        "title": "Stripe Clinches over $7B Deal to Buy AI Firm OpenRouter",
+        "url": "https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 259
       },
       {
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News AI",
-        "score": 583
+        "score": 600
       },
       {
         "title": "Rhombus 1.1 is now available",
         "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
         "source": "Hacker News AI",
-        "score": 38
+        "score": 44
+      },
+      {
+        "title": "Gmail might partially be to blame for receiving emails from other Sean Conners",
+        "url": "https://boston.conman.org/2026/08/11.1",
+        "source": "Hacker News AI",
+        "score": 23
       },
       {
         "title": "The AI Credit Resale Economy",
         "url": "https://vectoral.com/blog/who-are-the-token-brokers",
         "source": "Hacker News AI",
-        "score": 251
+        "score": 255
+      },
+      {
+        "title": "Red queen hypothesis – A new way forward for self-improving AI",
+        "url": "https://www.cst.cam.ac.uk/news/red-queen-hypothesis-new-way-forward-self-improving-ai",
+        "source": "Hacker News AI",
+        "score": 34
       },
       {
         "title": "Nvidia dramatically reduces amount of OpenAI infra financing it may guarantee",
         "url": "https://www.reuters.com/business/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-2026-08-14/",
         "source": "Hacker News AI",
-        "score": 158
-      },
-      {
-        "title": "Red queen hypothesis – a new way forward for self-improving AI",
-        "url": "https://www.cst.cam.ac.uk/news/red-queen-hypothesis-new-way-forward-self-improving-ai",
-        "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "Stripe Clinches over $7B Deal to Buy AI Firm OpenRouter",
-        "url": "https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion",
-        "source": "Hacker News AI",
-        "score": 240
+        "score": 175
       },
       {
         "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
         "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
         "source": "Hacker News AI",
-        "score": 373
+        "score": 379
       },
       {
         "title": "Archie G. Norcross' Maine Forest Fire Maps (1918–22)",
@@ -166,38 +166,38 @@
     ],
     "news": [
       {
-        "title": "Trump says US to scale back South Korea military drills after it stayed out of Iran war",
-        "url": "https://www.bbc.co.uk/news/articles/cx2lll7zvn0o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Trump envoy Kushner meets Hamas leader to push Gaza peace plan",
+        "title": "Trump envoy Kushner arrives in Israel after rare Hamas talks on Gaza peace plan",
         "url": "https://www.bbc.co.uk/news/articles/c77gg5vn44yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Russia says at least seven killed in largest Ukrainian attack of 2026",
-        "url": "https://www.bbc.co.uk/news/articles/c1411pgje8xo?at_medium=RSS&at_campaign=rss",
+        "title": "Ukrainian strikes kill six in Russia, acting governor says",
+        "url": "https://www.bbc.co.uk/news/articles/cn7n4lm11vro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Actress Hayden Panettiere dies aged 36, US media report",
+        "title": "Trump says US to reduce military drills with South Korea after it stayed out of Iran war",
+        "url": "https://www.bbc.co.uk/news/articles/cx2lll7zvn0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Heroes actress Hayden Panettiere dies aged 36",
         "url": "https://www.bbc.co.uk/news/articles/cq5665zgg1po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Two dead and hundreds evacuated after twin fires break out on Greek island",
-        "url": "https://www.bbc.co.uk/news/articles/c87nnwlpe5no?at_medium=RSS&at_campaign=rss",
+        "title": "Ebola outbreak in DR Congo becomes deadliest in its history",
+        "url": "https://www.bbc.co.uk/news/articles/cvgll74vvydo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Record rains drench South Korean city as landslide kills one",
+        "url": "https://www.bbc.co.uk/news/articles/cvgww971nn2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Four 'extraordinary' Renaissance paintings stolen from Italian museum",
         "url": "https://www.bbc.co.uk/news/articles/cqjxx2gzd9qo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Ferrari's first ever electric car sold for record $40m at auction",
-        "url": "https://www.bbc.co.uk/news/articles/c77ggpgrp2do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
