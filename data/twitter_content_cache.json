@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-17T17:27:52.352928",
-    "total_items": 65
+    "last_updated": "2026-08-17T18:40:39.542444",
+    "total_items": 64
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "A Preview of DuckDB v2.0",
         "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
         "source": "Hacker News",
-        "score": 276
+        "score": 350
+      },
+      {
+        "title": "Qwen3.8 27B scores 52 on Artificial Analysis",
+        "url": "https://artificialanalysis.ai/models/qwen3-8-27b",
+        "source": "Hacker News",
+        "score": 61
       },
       {
         "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
         "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
         "source": "Hacker News",
-        "score": 144
-      },
-      {
-        "title": "Buy Your Friends Batteries",
-        "url": "https://domenkozar.com/2026/08/17/buy-your-friends-batteries/",
-        "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "How to disable or avoid intrusive AI",
-        "url": "https://www.librarian.net/notoai/",
-        "source": "Hacker News",
-        "score": 111
-      },
-      {
-        "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
-        "url": "https://speko.ai/",
-        "source": "Hacker News",
-        "score": 41
-      },
-      {
-        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
-        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
-        "source": "Hacker News",
-        "score": 206
+        "score": 198
       },
       {
         "title": "Incident with Github.com",
         "url": "https://www.githubstatus.com/incidents/zkxwbgr0cnmx",
         "source": "Hacker News",
-        "score": 178
+        "score": 278
       },
       {
-        "title": "How to put 170 atoms in an atom",
-        "url": "https://signoregalilei.com/2026/08/02/how-to-put-170-atoms-in-an-atom/",
+        "title": "How to disable or avoid intrusive AI",
+        "url": "https://www.librarian.net/notoai/",
         "source": "Hacker News",
-        "score": 53
+        "score": 148
       },
       {
-        "title": "Ask HN: Alternatives to GitHub",
-        "url": "https://news.ycombinator.com/item?id=49331033",
+        "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
+        "url": "https://speko.ai/",
         "source": "Hacker News",
-        "score": 252
+        "score": 58
+      },
+      {
+        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
+        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
+        "source": "Hacker News",
+        "score": 225
+      },
+      {
+        "title": "Sun Clock",
+        "url": "https://sunclock.net/",
+        "source": "Hacker News",
+        "score": 30
       },
       {
         "title": "Olo (Color)",
         "url": "https://en.wikipedia.org/wiki/Olo_(color)",
         "source": "Hacker News",
-        "score": 92
+        "score": 146
       },
       {
-        "title": "How I developed an Am29000 C compiler and web browser",
-        "url": "https://nanochess.org/am29000_c_compiler_web_browser.html",
+        "title": "Judge sets framework for Nine PBS to retrieve archival data",
+        "url": "https://current.org/2026/08/judge-sets-framework-for-nine-pbs-to-retrieve-archival-data/",
         "source": "Hacker News",
-        "score": 46
+        "score": 25
       },
       {
-        "title": "Show HN: Sokoban AI Solver",
-        "url": "https://mkornreich.me/projects/sokoban/",
+        "title": "Ask HN: Alternatives to GitHub",
+        "url": "https://news.ycombinator.com/item?id=49331033",
         "source": "Hacker News",
-        "score": 48
+        "score": 343
       },
       {
-        "title": "Apple's App Tracking Transparency treated its own apps better than rivals",
-        "url": "https://www.bundeskartellamt.de/SharedDocs/Meldung/EN/Pressemitteilungen/2026/08_17_2026_Apple_ATTF.html",
+        "title": "The Lonely Men Who Work in Patagonia, at the End of the World",
+        "url": "https://www.newyorker.com/culture/photo-booth/the-lonely-men-at-the-end-of-the-world",
         "source": "Hacker News",
-        "score": 184
+        "score": 3
       },
       {
-        "title": "Anthropic's ‘watermark’ text adulteration in Claude is a perversion of writing",
-        "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
+        "title": "How to put 170 atoms in an atom",
+        "url": "https://signoregalilei.com/2026/08/02/how-to-put-170-atoms-in-an-atom/",
         "source": "Hacker News",
-        "score": 639
+        "score": 66
       },
       {
-        "title": "How to ship a database every day",
-        "url": "https://turbopuffer.com/blog/control-plane",
+        "title": "A particle made of force: physicists say they've found mysterious 'glueball'",
+        "url": "https://www.nature.com/articles/d41586-026-02498-1",
         "source": "Hacker News",
-        "score": 39
+        "score": 26
+      },
+      {
+        "title": "Llama.cpp v0.1.0",
+        "url": "https://github.com/ggml-org/llama.cpp/releases/tag/v0.1.0",
+        "source": "Hacker News",
+        "score": 6
       }
     ],
     "ai": [
@@ -101,91 +101,85 @@
         "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
         "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
         "source": "Hacker News AI",
-        "score": 144
+        "score": 198
       },
       {
         "title": "How to disable or avoid intrusive AI",
         "url": "https://www.librarian.net/notoai/",
         "source": "Hacker News AI",
-        "score": 111
+        "score": 148
       },
       {
         "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
         "url": "https://speko.ai/",
         "source": "Hacker News AI",
-        "score": 41
+        "score": 58
       },
       {
         "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
         "url": "https://blog.roboflow.com/openai-gpt-5-6/",
         "source": "Hacker News AI",
-        "score": 206
-      },
-      {
-        "title": "Show HN: Sokoban AI Solver",
-        "url": "https://mkornreich.me/projects/sokoban/",
-        "source": "Hacker News AI",
-        "score": 48
+        "score": 225
       },
       {
         "title": "Anthropic's ‘watermark’ text adulteration in Claude is a perversion of writing",
         "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
         "source": "Hacker News AI",
-        "score": 639
+        "score": 697
+      },
+      {
+        "title": "Show HN: Sokoban AI Solver",
+        "url": "https://mkornreich.me/projects/sokoban/",
+        "source": "Hacker News AI",
+        "score": 52
       },
       {
         "title": "Show HN: Saggar, a Mac terminal that keeps sessions and your attention organized",
         "url": "https://saggar.marginalutility.dev/",
         "source": "Hacker News AI",
-        "score": 17
+        "score": 27
       },
       {
         "title": "On AI regulation and messaging",
         "url": "https://twitter.com/DarioAmodei/status/2088758816376807762",
         "source": "Hacker News AI",
-        "score": 199
+        "score": 211
       },
       {
-        "title": "Universal Health Coverage Could Save $1T and 114k Lives a Year, Yale Study",
-        "url": "https://ysph.yale.edu/news-article/universal-health-coverage-could-save-one-trillion-dollars-and-114000-lives-every-year/",
+        "title": "An Update on Leaving Gmail for Fastmail",
+        "url": "https://moddedbear.com/an-update-on-leaving-gmail-for-fastmail/",
         "source": "Hacker News AI",
-        "score": 253
+        "score": 5
       },
       {
-        "title": "Ahmad on X: \"Anthropic's War on open source AI\" / X",
+        "title": "Anthropic's War on open source AI",
         "url": "https://twitter.com/TheAhmadOsman/status/2065307070044234186",
         "source": "Hacker News AI",
-        "score": 30
+        "score": 94
       },
       {
-        "title": "Judge relying wholly on AI in order is covered by judicial immunity, court rules",
-        "url": "https://reason.com/volokh/2026/08/17/judges-allegedly-relying-wholly-on-ai-in-order-is-covered-by-judicial-immunity-court-rules/",
+        "title": "Amazon, which started off selling books, is destroying rare texts to train AI",
+        "url": "https://techcrunch.com/2026/08/17/amazon-once-an-online-bookseller-is-destroying-rare-books-to-train-ai-models/",
         "source": "Hacker News AI",
-        "score": 41
+        "score": 11
       },
       {
-        "title": "Rhombus 1.1 is now available",
-        "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
+        "title": "Apple AirTag reveals how Amazon destroys rare books for AI training",
+        "url": "https://the-decoder.com/airtag-reveals-how-amazon-destroys-rare-books-for-ai-training/",
         "source": "Hacker News AI",
-        "score": 116
+        "score": 9
       },
       {
-        "title": "GitHub Has an Availability Problem. Is It Time to Look Elsewhere?",
-        "url": "https://dhruv2038.bearblog.dev/github-has-an-availability-problem-is-it-time-to-look-elsewhere/",
+        "title": "LLM City – 3D render of all Kimi K3's weights as 2.5mm tiles",
+        "url": "https://magik.net/llmcity/",
         "source": "Hacker News AI",
-        "score": 46
+        "score": 3
       },
       {
-        "title": "Show HN: A community library for Claude Code status lines",
-        "url": "https://statuslin.es",
+        "title": "Tim O'Reilly – Why Open Source Matters for AI",
+        "url": "https://oreillyradar.substack.com/p/why-open-source-matters-for-ai",
         "source": "Hacker News AI",
-        "score": 7
-      },
-      {
-        "title": "Claude: System Prompts",
-        "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
-        "source": "Hacker News AI",
-        "score": 732
+        "score": 4
       }
     ],
     "news": [
@@ -200,28 +194,28 @@
         "source": "BBC World"
       },
       {
-        "title": "Trump says US to reduce military drills with South Korea after it stayed out of Iran war",
-        "url": "https://www.bbc.co.uk/news/articles/cx2lll7zvn0o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Russia's prominent anti-war politician jailed for 11 years",
         "url": "https://www.bbc.co.uk/news/articles/cj4kjnle2neo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
+        "title": "French PM heckled over wildfire response as blazes continue across Europe",
+        "url": "https://www.bbc.co.uk/news/articles/cx2rzx5g5yro?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Mushroom murderer Erin Patterson is appealing - here's what you need to know",
+        "url": "https://www.bbc.co.uk/news/articles/cj9dx03jrgjo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Tributes to actress Hayden Panettiere as coroner finds 'no signs of trauma'",
+        "url": "https://www.bbc.co.uk/news/articles/cq5665zgg1po?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "US hiker dies after being struck by lightning on Mount Etna",
         "url": "https://www.bbc.co.uk/news/articles/ce34rlkw6q7o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Trump envoy Kushner meets Netanyahu after Hamas talks on peace plan",
-        "url": "https://www.bbc.co.uk/news/articles/c77gg5vn44yo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Aid shortages and fears of starvation as Indonesia reels from deadly earthquake",
-        "url": "https://www.bbc.co.uk/news/articles/crl7686r71yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -301,38 +295,38 @@
     ],
     "gaming": [
       {
-        "title": "'Lanterns' Episode 1 Ending Explained: What That Big Twist Means for Hal Jordan and John Stewart",
-        "url": "https://www.polygon.com/lanterns-episode-1-cliffhanger-hal-jordan-death-2026-timeline/",
+        "title": "Christopher Nolan’s ‘Oppenheimer’ Now Streaming Free on Two Platforms",
+        "url": "https://www.polygon.com/oppenheimer-movie-where-to-stream-free-peacock-fandango/",
         "source": "Polygon"
       },
       {
-        "title": "Fortnite's New Star Wars Skin Requires Going to Disneyland",
-        "url": "https://www.polygon.com/fortnite-star-wars-free-disney-park-skin-expensive/",
+        "title": "2024’s Greatest Roguelike Is a Must-Play on Xbox Game Pass",
+        "url": "https://www.polygon.com/balatro-xbox-game-pass/",
         "source": "Polygon"
       },
       {
-        "title": "Marvel Officially Confirms a Star Wars Fan Favorite as Its Next Great X-Men Villain",
-        "url": "https://www.polygon.com/sinister-x-men-live-action-adam-driver/",
+        "title": "Fan-favorite Star Wars The Clone Wars Character Officially Confirmed for New Game",
+        "url": "https://www.polygon.com/star-wars-zero-company-rex-return/",
         "source": "Polygon"
       },
       {
-        "title": "Castlevania's Underrated Mobile Game is About to be Shutdown Forever",
-        "url": "https://www.polygon.com/castlevania-grimoire-of-souls-end-of-service-announced/",
+        "title": "Everything we know about PS6, Sony’s next-gen PlayStation console",
+        "url": "https://www.polygon.com/ps6-sony-playstation-6-release-date-price/",
         "source": "Polygon"
       },
       {
-        "title": "Fields of Mistria Time Mods Let You Freeze or Speed Up Your Day",
-        "url": "https://www.polygon.com/fields-of-mistria-time-mods/",
+        "title": "Netflix's Sydney Sweeney Gundam Movie is a 'Big Action-Romance Space' Epic",
+        "url": "https://www.polygon.com/netflix-live-action-gundam-movie-sydney-sweeney-romance/",
         "source": "Polygon"
       },
       {
-        "title": "Dragon Ball Finally Reveals Vegeta's Mother in New Artwork",
-        "url": "https://www.polygon.com/dragon-ball-super-vegeta-mother-revealed/",
+        "title": "Supreme Reveals 24K Gold Analogue Pocket Handhelds",
+        "url": "https://www.polygon.com/game-boy-analogue-pocket-supreme-release-date/",
         "source": "Polygon"
       },
       {
-        "title": "Wild Steam Game Lets You Deal Drugs From Your Ice Cream Truck",
-        "url": "https://www.polygon.com/mr-trippy-ice-cream-truck-drug-dealing/",
+        "title": "Matt Damon's 10/10 Sci-Fi Masterpiece Is Essential Viewing After Becoming Streaming Smash Hit",
+        "url": "https://www.polygon.com/appletv-streaming-august-2026-the-martian/",
         "source": "Polygon"
       }
     ],
