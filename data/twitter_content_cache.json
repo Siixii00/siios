@@ -1,173 +1,173 @@
 {
   "metadata": {
-    "last_updated": "2026-08-17T12:45:09.022820",
-    "total_items": 62
+    "last_updated": "2026-08-17T13:40:05.951205",
+    "total_items": 55
   },
   "content": {
     "tech": [
       {
-        "title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
-        "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
-        "source": "Hacker News",
-        "score": 589
-      },
-      {
-        "title": "On A.I. regulation and messaging",
-        "url": "https://twitter.com/DarioAmodei/status/2088758816376807762",
-        "source": "Hacker News",
-        "score": 130
-      },
-      {
-        "title": "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing",
-        "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
-        "source": "Hacker News",
-        "score": 398
-      },
-      {
         "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
         "url": "https://blog.roboflow.com/openai-gpt-5-6/",
         "source": "Hacker News",
-        "score": 4
+        "score": 56
       },
       {
-        "title": "A third world engineer responds to “RISC-V: They should have known better”",
-        "url": "https://rvembedded.com/blog_post/12/",
+        "title": "Show HN: Sokoban AI Solver",
+        "url": "https://mkornreich.me/projects/sokoban/",
         "source": "Hacker News",
-        "score": 551
+        "score": 10
+      },
+      {
+        "title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
+        "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+        "source": "Hacker News",
+        "score": 624
       },
       {
         "title": "How Go detects struct copies with sync.noCopy",
         "url": "https://func25.dev/posts/go-sync-nocopy/",
         "source": "Hacker News",
-        "score": 7
+        "score": 19
+      },
+      {
+        "title": "Mexico Crackdown on Coastal Development Underway",
+        "url": "https://yucatanmagazine.com/mexico-crackdown-on-coastal-development/",
+        "source": "Hacker News",
+        "score": 21
+      },
+      {
+        "title": "On A.I. regulation and messaging",
+        "url": "https://twitter.com/DarioAmodei/status/2088758816376807762",
+        "source": "Hacker News",
+        "score": 145
+      },
+      {
+        "title": "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing",
+        "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
+        "source": "Hacker News",
+        "score": 466
       },
       {
         "title": "Show HN: Desktopcolors.com – A museum for solid background colors of classic OS",
         "url": "https://desktopcolors.com",
         "source": "Hacker News",
-        "score": 38
+        "score": 61
       },
       {
-        "title": "Reticulum – Decentralized Mesh Network",
-        "url": "https://reticulum.network/",
+        "title": "A third world engineer responds to “RISC-V: They should have known better”",
+        "url": "https://rvembedded.com/blog_post/12/",
         "source": "Hacker News",
-        "score": 152
-      },
-      {
-        "title": "Claude: System Prompts",
-        "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
-        "source": "Hacker News",
-        "score": 690
-      },
-      {
-        "title": "Production-ready detection and response queries for osquery",
-        "url": "https://github.com/chainguard-dev/osquery-defense-kit",
-        "source": "Hacker News",
-        "score": 17
+        "score": 566
       },
       {
         "title": "The Mysterious Syndrome Destroying Endurance Athletes",
         "url": "https://www.outsideonline.com/health/training-performance/running-empty/",
         "source": "Hacker News",
-        "score": 32
+        "score": 47
       },
       {
-        "title": "People are worried about America's solvency",
-        "url": "https://www.ft.com/content/e04f286c-f5ed-46d1-8e3f-0bbe4cce4d3e",
+        "title": "Reticulum – Decentralized Mesh Network",
+        "url": "https://reticulum.network/",
         "source": "Hacker News",
-        "score": 45
+        "score": 164
+      },
+      {
+        "title": "Claude: System Prompts",
+        "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
+        "source": "Hacker News",
+        "score": 704
       },
       {
         "title": "Linear algebra done right",
         "url": "https://linear.axler.net/",
         "source": "Hacker News",
-        "score": 116
+        "score": 132
       },
       {
         "title": "AGI-64 Brings Sierra Adventures to the Commodore 64",
         "url": "https://meanhamster.com/news/agi-64-brings-sierra-adventures-to-the-commodore-64",
         "source": "Hacker News",
-        "score": 100
+        "score": 107
       },
       {
-        "title": "Rhombus 1.1 is now available",
-        "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
+        "title": "Build a Stratum 1 PTP Grandmaster on a Budget",
+        "url": "https://opscode.io/posts/ptp-grandmaster-cm4-sr1723u10/",
         "source": "Hacker News",
-        "score": 97
+        "score": 29
       }
     ],
     "ai": [
       {
-        "title": "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing",
-        "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
-        "source": "Hacker News AI",
-        "score": 398
-      },
-      {
         "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
         "url": "https://blog.roboflow.com/openai-gpt-5-6/",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 56
+      },
+      {
+        "title": "Show HN: Sokoban AI Solver",
+        "url": "https://mkornreich.me/projects/sokoban/",
+        "source": "Hacker News AI",
+        "score": 10
+      },
+      {
+        "title": "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing",
+        "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
+        "source": "Hacker News AI",
+        "score": 466
       },
       {
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News AI",
-        "score": 690
-      },
-      {
-        "title": "Rhombus 1.1 is now available",
-        "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
-        "source": "Hacker News AI",
-        "score": 97
-      },
-      {
-        "title": "Self hosted email continues to steeply decline",
-        "url": "https://labs.ripe.net/author/artem-berezin/two-providers-a-stubborn-plateau-and-a-very-long-tail-email-in-the-tranco-top-1m/",
-        "source": "Hacker News AI",
-        "score": 59
+        "score": 704
       },
       {
         "title": "Who Owns Commodore? The Retro PC Brand Still Exists, but a Lot Has Changed",
         "url": "https://www.bgr.com/2233625/who-owns-commodore-retro-brand/",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 12
+      },
+      {
+        "title": "Rhombus 1.1 is now available",
+        "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
+        "source": "Hacker News AI",
+        "score": 98
+      },
+      {
+        "title": "Self hosted email continues to steeply decline",
+        "url": "https://labs.ripe.net/author/artem-berezin/two-providers-a-stubborn-plateau-and-a-very-long-tail-email-in-the-tranco-top-1m/",
+        "source": "Hacker News AI",
+        "score": 85
       },
       {
         "title": "The AI Credit Resale Economy",
         "url": "https://vectoral.com/blog/who-are-the-token-brokers",
         "source": "Hacker News AI",
-        "score": 302
+        "score": 311
       },
       {
         "title": "Red queen hypothesis – A new way forward for self-improving AI",
         "url": "https://www.cst.cam.ac.uk/news/red-queen-hypothesis-new-way-forward-self-improving-ai",
         "source": "Hacker News AI",
-        "score": 80
+        "score": 84
       },
       {
         "title": "Nvidia dramatically reduces amount of OpenAI infra financing it may guarantee",
         "url": "https://www.reuters.com/business/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-2026-08-14/",
         "source": "Hacker News AI",
-        "score": 215
+        "score": 224
       },
       {
         "title": "Anthropic becomes the 'Apple of AI': Most revenue despite being most expensive",
         "url": "https://www.techradar.com/pro/anthropic-becomes-the-apple-of-ai-as-it-grabs-most-revenue-despite-being-the-most-expensive",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 9
       },
       {
         "title": "Show HN: A public AI whose memory is shared across all users",
         "url": "https://wildstatic.com/",
         "source": "Hacker News AI",
         "score": 75
-      },
-      {
-        "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
-        "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
-        "source": "Hacker News AI",
-        "score": 409
       }
     ],
     "news": [
@@ -182,7 +182,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Ukrainian strikes kill six in Russia, acting governor says",
+        "title": "Russia and Ukraine trade more deadly strikes",
         "url": "https://www.bbc.co.uk/news/articles/cn7n4lm11vro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -207,47 +207,31 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " Instagram's new brand identity is more than just a wordmark ",
-        "url": "https://www.creativebloq.com/design/branding/instagrams-new-brand-identity-is-more-than-just-a-wordmark",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " While you were angry at Instagram, Jif quietly debuted a perfect new logo ",
-        "url": "https://www.creativebloq.com/design/branding/while-you-were-angry-at-instagram-jif-quietly-debuted-a-perfect-new-logo",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Is there a world where a £4,500 vibrating chair makes sense? ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/is-there-a-world-where-a-gbp4-500-vibrating-chair-makes-sense",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How Planet Coaster 2’s artists made Hollywood work as a theme park ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/how-planet-coaster-2s-artists-made-hollywood-work-as-a-theme-park",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Sony's answer to Hello Kitty is a kawaii character design for our times. ",
-        "url": "https://www.creativebloq.com/art/character-design/sonys-answer-to-hello-kitty-is-a-kawaii-character-design-for-our-times",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " If you're making the transition from 2D to 3D art, you need to understand pivots and centre points to prevent total chaos ",
-        "url": "https://www.creativebloq.com/3d/if-youre-making-the-transition-from-2d-to-3d-art-you-need-to-fully-understand-pivots-and-centre-points-to-prevent-total-chaos",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " XPPen's new Artist Ultra 14 drawing display gets the important specs right ",
-        "url": "https://www.creativebloq.com/art/digital-art/xppens-new-artist-ultra-14-drawing-display-gets-the-important-specs-right",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
+      {
+        "title": "Scientists turn DNA into a memory device that uses 100x less power",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260816044853.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Scientists reveal why walking gets so much harder with age",
         "url": "https://www.sciencedaily.com/releases/2026/08/260815065014.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Low-fat vegan diet helps people lose weight without eating less",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260815064825.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Tiny 1.7-billion-year-old fossils could reveal how complex life began",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260815064811.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Webb’s mysterious little red dots may be hiding entire galaxies",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260815064808.htm",
         "source": "Science Daily"
       },
       {
@@ -259,29 +243,14 @@
         "title": "Scientists tracked kids for 8 years — the screen time result was unexpected",
         "url": "https://www.sciencedaily.com/releases/2026/08/260815064803.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "Tiny graphene wrinkles create surprisingly powerful electrical effects",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260815064801.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Animals have been eating nature’s original bioplastic for millions of years",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260815064759.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "This 10-cent heart drug cuts hospitalizations by 25%",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260814235858.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A little-known protein may be fueling Alzheimer’s — and scientists found a way to block it",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260814235856.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "The Most Bonkers Thriller of 2025 Officially Lands on Free Streaming",
+        "url": "https://www.polygon.com/bambi-the-reckoning-streaming-free-tubi/",
+        "source": "Polygon"
+      },
       {
         "title": "Canceled Star Wars Game Was the Bioware-Style ARPG That Fans Deserved",
         "url": "https://www.polygon.com/star-wars-magellan-action-rpg-canceled/",
@@ -310,11 +279,6 @@
       {
         "title": "Will King of the Hill Pit Hank And Buck Against Each Other?",
         "url": "https://www.polygon.com/video/will-king-of-the-hill-pit-hank-and-buck-against-each-other/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Pokémon Pokopia Player Discovers Trick to Get Missing Event Pokémon",
-        "url": "https://www.polygon.com/pokemon-pokopia-trick-past-events-mysterious-goggles/",
         "source": "Polygon"
       }
     ],
