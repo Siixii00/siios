@@ -1,191 +1,191 @@
 {
   "metadata": {
-    "last_updated": "2026-08-17T22:25:25.849466",
+    "last_updated": "2026-08-17T23:23:28.000271",
     "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "How Bluesky draws its logo on screenshots",
+        "url": "https://timmarinin.net/2026/bluesky-screenshots/",
+        "source": "Hacker News",
+        "score": 82
+      },
+      {
+        "title": "Quake Shareware, a CD-ROM just a little too full",
+        "url": "https://fabiensanglard.net/quake_shareware_cd/index.html",
+        "source": "Hacker News",
+        "score": 60
+      },
+      {
         "title": "GPU Offload in Rust: Portable, Safe, and Fast",
         "url": "https://arxiv.org/abs/2608.13759",
         "source": "Hacker News",
-        "score": 120
+        "score": 140
       },
       {
         "title": "A Preview of DuckDB v2.0",
         "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
         "source": "Hacker News",
-        "score": 488
+        "score": 502
+      },
+      {
+        "title": "Fairphone 6 and PostmarketOS working main camera",
+        "url": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
+        "source": "Hacker News",
+        "score": 36
       },
       {
         "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
         "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
         "source": "Hacker News",
-        "score": 289
-      },
-      {
-        "title": "AI;DR (AI; Didn't Read)",
-        "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
-        "source": "Hacker News",
-        "score": 422
+        "score": 299
       },
       {
         "title": "Incident with Github.com",
         "url": "https://www.githubstatus.com/incidents/zkxwbgr0cnmx",
         "source": "Hacker News",
-        "score": 469
+        "score": 492
       },
       {
-        "title": "The Origin of Consciousness (2008)",
-        "url": "https://blog.plover.com/brain/Jaynes.html",
+        "title": "AI;DR (AI; Didn't Read)",
+        "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
         "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Sun Clock",
-        "url": "https://sunclock.net/",
-        "source": "Hacker News",
-        "score": 148
+        "score": 489
       },
       {
         "title": "How to disable or avoid intrusive AI",
         "url": "https://www.librarian.net/notoai/",
         "source": "Hacker News",
-        "score": 219
+        "score": 237
       },
       {
-        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
-        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
+        "title": "My friends all hate AI; I just joined an AI startup",
+        "url": "https://www.fast.ai/posts/2026-08-18-returning-to-AI/",
         "source": "Hacker News",
-        "score": 282
+        "score": 11
       },
       {
         "title": "Olo (Color)",
         "url": "https://en.wikipedia.org/wiki/Olo_(color)",
         "source": "Hacker News",
-        "score": 251
+        "score": 273
       },
       {
-        "title": "Fairphone 6 and PostmarketOS working main camera",
-        "url": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
+        "title": "Sun Clock",
+        "url": "https://sunclock.net/",
         "source": "Hacker News",
-        "score": 8
+        "score": 154
       },
       {
-        "title": "Intriguing Stories in Computer Science",
-        "url": "https://inventwithpython.com/blog/intriguing-stories-in-cs.html",
+        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
+        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
         "source": "Hacker News",
-        "score": 10
+        "score": 289
       },
       {
         "title": "Judge sets framework for Nine PBS to retrieve archival data",
         "url": "https://current.org/2026/08/judge-sets-framework-for-nine-pbs-to-retrieve-archival-data/",
         "source": "Hacker News",
-        "score": 101
+        "score": 117
       },
       {
-        "title": "Bluesky draws its logo on screenshots",
-        "url": "https://timmarinin.net/2026/bluesky-screenshots/",
+        "title": "Intriguing stories in computer science",
+        "url": "https://inventwithpython.com/blog/intriguing-stories-in-cs.html",
         "source": "Hacker News",
-        "score": 3
-      },
-      {
-        "title": "Roboflow Playground: Try and Compare 30 Computer Vision Models",
-        "url": "https://blog.roboflow.com/roboflow-playground/",
-        "source": "Hacker News",
-        "score": 30
+        "score": 19
       }
     ],
     "ai": [
       {
+        "title": "Fairphone 6 and PostmarketOS working main camera",
+        "url": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
+        "source": "Hacker News AI",
+        "score": 36
+      },
+      {
         "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
         "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
         "source": "Hacker News AI",
-        "score": 289
+        "score": 299
       },
       {
         "title": "AI;DR (AI; Didn't Read)",
         "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
         "source": "Hacker News AI",
-        "score": 422
+        "score": 489
       },
       {
         "title": "How to disable or avoid intrusive AI",
         "url": "https://www.librarian.net/notoai/",
         "source": "Hacker News AI",
-        "score": 219
+        "score": 237
+      },
+      {
+        "title": "My friends all hate AI; I just joined an AI startup",
+        "url": "https://www.fast.ai/posts/2026-08-18-returning-to-AI/",
+        "source": "Hacker News AI",
+        "score": 11
       },
       {
         "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
         "url": "https://blog.roboflow.com/openai-gpt-5-6/",
         "source": "Hacker News AI",
-        "score": 282
-      },
-      {
-        "title": "Fairphone 6 and PostmarketOS working main camera",
-        "url": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
-        "source": "Hacker News AI",
-        "score": 8
+        "score": 289
       },
       {
         "title": "Roboflow Playground: Try and Compare 30 Computer Vision Models",
         "url": "https://blog.roboflow.com/roboflow-playground/",
         "source": "Hacker News AI",
-        "score": 30
+        "score": 37
       },
       {
         "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
         "url": "https://speko.ai/",
         "source": "Hacker News AI",
-        "score": 81
+        "score": 86
       },
       {
         "title": "A simple fix for LLM tail latency",
         "url": "https://engineering.myhoai.com/posts/a-simple-fix-for-llm-tail-latency/",
         "source": "Hacker News AI",
-        "score": 22
+        "score": 27
+      },
+      {
+        "title": "GPT-5.6 Sol Pricing Cut by 50%",
+        "url": "https://openrouter.ai/openai/gpt-5.6-sol",
+        "source": "Hacker News AI",
+        "score": 6
       },
       {
         "title": "An update on leaving Gmail for Fastmail",
         "url": "https://moddedbear.com/an-update-on-leaving-gmail-for-fastmail/",
         "source": "Hacker News AI",
-        "score": 71
-      },
-      {
-        "title": "Show HN: Sokoban AI Solver",
-        "url": "https://mkornreich.me/projects/sokoban/",
-        "source": "Hacker News AI",
-        "score": 65
+        "score": 88
       },
       {
         "title": "On AI regulation and messaging",
         "url": "https://twitter.com/DarioAmodei/status/2088758816376807762",
         "source": "Hacker News AI",
-        "score": 227
+        "score": 230
+      },
+      {
+        "title": "Show HN: Sokoban AI Solver",
+        "url": "https://mkornreich.me/projects/sokoban/",
+        "source": "Hacker News AI",
+        "score": 66
+      },
+      {
+        "title": "Anthropic's ‘watermark’ text adulteration in Claude is a perversion of writing",
+        "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
+        "source": "Hacker News AI",
+        "score": 753
       },
       {
         "title": "LLM City – 3D render of all Kimi K3's weights as 2.5mm tiles",
         "url": "https://magik.net/llmcity/",
         "source": "Hacker News AI",
         "score": 16
-      },
-      {
-        "title": "Anthropic's ‘watermark’ text adulteration in Claude is a perversion of writing",
-        "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
-        "source": "Hacker News AI",
-        "score": 751
-      },
-      {
-        "title": "Show HN: Tesana – An AI game engine that builds quality games end-to-end",
-        "url": "https://tesana.ai/en",
-        "source": "Hacker News AI",
-        "score": 7
-      },
-      {
-        "title": "Anthropic's War on open source AI",
-        "url": "https://twitter.com/TheAhmadOsman/status/2065307070044234186",
-        "source": "Hacker News AI",
-        "score": 124
       }
     ],
     "news": [
@@ -301,6 +301,11 @@
     ],
     "gaming": [
       {
+        "title": "Sarah J. Maas Reveals New ‘ACOTAR’ Books, Titles and Release Dates",
+        "url": "https://www.polygon.com/acotar-6-and-7-covers-book-titles-sarah-j-maas/",
+        "source": "Polygon"
+      },
+      {
         "title": "The 12 Biggest Video Game Flops of All Time",
         "url": "https://www.polygon.com/12-biggest-gaming-flops-ever/",
         "source": "Polygon"
@@ -328,11 +333,6 @@
       {
         "title": "Fire Emblem Fortune's Weave is Officially Unplayable for Millions of People",
         "url": "https://www.polygon.com/fire-emblem-fortunes-weave-switch-2-exclusive/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Bethesda Warns Skyrim & Fallout 4 Players of Mod-breaking Update",
-        "url": "https://www.polygon.com/skyrim-fallout-4-update-bethesda-mods-error-break-nexus/",
         "source": "Polygon"
       }
     ],
