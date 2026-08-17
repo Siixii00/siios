@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-17T08:50:15.091287",
-    "total_items": 53
+    "last_updated": "2026-08-17T09:42:29.778792",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
         "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
         "source": "Hacker News",
-        "score": 433
-      },
-      {
-        "title": "GIMP Development Update",
-        "url": "https://www.gimp.org/news/2026/08/16/dev-update-august-2026/",
-        "source": "Hacker News",
-        "score": 122
-      },
-      {
-        "title": "On A.I. regulation and messaging",
-        "url": "https://twitter.com/DarioAmodei/status/2088758816376807762",
-        "source": "Hacker News",
-        "score": 43
-      },
-      {
-        "title": "Linear algebra done right",
-        "url": "https://linear.axler.net/",
-        "source": "Hacker News",
-        "score": 58
-      },
-      {
-        "title": "A third world engineer responds to “RISC-V: They should have known better”",
-        "url": "https://rvembedded.com/blog_post/12/",
-        "source": "Hacker News",
-        "score": 495
+        "score": 459
       },
       {
         "title": "Beware the Permanent Periphery",
         "url": "https://asteriskmag.com/issues/15/beware-the-permanent-periphery",
         "source": "Hacker News",
-        "score": 7
+        "score": 17
+      },
+      {
+        "title": "On A.I. regulation and messaging",
+        "url": "https://twitter.com/DarioAmodei/status/2088758816376807762",
+        "source": "Hacker News",
+        "score": 50
+      },
+      {
+        "title": "GIMP Development Update",
+        "url": "https://www.gimp.org/news/2026/08/16/dev-update-august-2026/",
+        "source": "Hacker News",
+        "score": 164
+      },
+      {
+        "title": "A third world engineer responds to “RISC-V: They should have known better”",
+        "url": "https://rvembedded.com/blog_post/12/",
+        "source": "Hacker News",
+        "score": 504
+      },
+      {
+        "title": "Linear algebra done right",
+        "url": "https://linear.axler.net/",
+        "source": "Hacker News",
+        "score": 78
       },
       {
         "title": "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing",
         "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
         "source": "Hacker News",
-        "score": 228
+        "score": 261
       },
       {
         "title": "Reticulum – Decentralized Mesh Network",
         "url": "https://reticulum.network/",
         "source": "Hacker News",
-        "score": 116
+        "score": 121
       },
       {
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News",
-        "score": 645
-      },
-      {
-        "title": "AGI-64 Brings Sierra Adventures to the Commodore 64",
-        "url": "https://meanhamster.com/news/agi-64-brings-sierra-adventures-to-the-commodore-64",
-        "source": "Hacker News",
-        "score": 81
-      },
-      {
-        "title": "Show HN: Vocal Slice – Cut audio by selecting text, fully on-device",
-        "url": "https://vocalslice.com/",
-        "source": "Hacker News",
-        "score": 35
-      },
-      {
-        "title": "Rhombus 1.1 is now available",
-        "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
-        "source": "Hacker News",
-        "score": 75
+        "score": 660
       },
       {
         "title": "Gakutensoku",
         "url": "https://en.wikipedia.org/wiki/Gakutensoku",
         "source": "Hacker News",
-        "score": 18
+        "score": 27
       },
       {
-        "title": "HackEurope 2026: A short rant on AI and hackathons",
-        "url": "https://duti.dev/blog/2026/spr/",
+        "title": "AGI-64 Brings Sierra Adventures to the Commodore 64",
+        "url": "https://meanhamster.com/news/agi-64-brings-sierra-adventures-to-the-commodore-64",
         "source": "Hacker News",
-        "score": 19
+        "score": 83
+      },
+      {
+        "title": "Rhombus 1.1 is now available",
+        "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
+        "source": "Hacker News",
+        "score": 81
       },
       {
         "title": "Low-Tech Ceramic Water Filter",
         "url": "https://wiki.lowtechlab.org/wiki/Filtre_%C3%A0_eau_c%C3%A9ramique/en",
         "source": "Hacker News",
-        "score": 174
+        "score": 185
+      },
+      {
+        "title": "HackEurope 2026: A short rant on AI and hackathons",
+        "url": "https://duti.dev/blog/2026/spr/",
+        "source": "Hacker News",
+        "score": 28
+      },
+      {
+        "title": "Show HN: Vocal Slice – Cut audio by selecting text, fully on-device",
+        "url": "https://vocalslice.com/",
+        "source": "Hacker News",
+        "score": 43
       }
     ],
     "ai": [
@@ -101,64 +101,63 @@
         "title": "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing",
         "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
         "source": "Hacker News AI",
-        "score": 228
+        "score": 261
       },
       {
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News AI",
-        "score": 645
+        "score": 660
       },
       {
         "title": "Rhombus 1.1 is now available",
         "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
         "source": "Hacker News AI",
-        "score": 75
+        "score": 81
       },
       {
         "title": "HackEurope 2026: A short rant on AI and hackathons",
         "url": "https://duti.dev/blog/2026/spr/",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 28
       },
       {
         "title": "The AI Credit Resale Economy",
         "url": "https://vectoral.com/blog/who-are-the-token-brokers",
         "source": "Hacker News AI",
-        "score": 278
+        "score": 287
       },
       {
         "title": "Red queen hypothesis – A new way forward for self-improving AI",
         "url": "https://www.cst.cam.ac.uk/news/red-queen-hypothesis-new-way-forward-self-improving-ai",
         "source": "Hacker News AI",
-        "score": 56
+        "score": 61
       },
       {
         "title": "Nvidia dramatically reduces amount of OpenAI infra financing it may guarantee",
         "url": "https://www.reuters.com/business/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-2026-08-14/",
         "source": "Hacker News AI",
-        "score": 205
+        "score": 207
       },
       {
         "title": "Show HN: A public AI whose memory is shared across all users",
         "url": "https://wildstatic.com/",
         "source": "Hacker News AI",
-        "score": 70
+        "score": 72
       },
       {
         "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
         "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
         "source": "Hacker News AI",
-        "score": 394
-      },
-      {
-        "title": "Archie G. Norcross' Maine Forest Fire Maps (1918–22)",
-        "url": "https://publicdomainreview.org/collection/maine-forest-fire-maps/",
-        "source": "Hacker News AI",
-        "score": 27
+        "score": 397
       }
     ],
     "news": [
+      {
+        "title": "Trump says US to reduce military drills with South Korea after it stayed out of Iran war",
+        "url": "https://www.bbc.co.uk/news/articles/cx2lll7zvn0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Trump envoy Kushner arrives in Israel after rare Hamas talks on Gaza peace plan",
         "url": "https://www.bbc.co.uk/news/articles/c77gg5vn44yo?at_medium=RSS&at_campaign=rss",
@@ -170,18 +169,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Trump says US to reduce military drills with South Korea after it stayed out of Iran war",
-        "url": "https://www.bbc.co.uk/news/articles/cx2lll7zvn0o?at_medium=RSS&at_campaign=rss",
+        "title": "Aid shortages and fears of starvation as Indonesia reels from deadly earthquake",
+        "url": "https://www.bbc.co.uk/news/articles/crl7686r71yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Ebola outbreak in DR Congo becomes deadliest in its history",
         "url": "https://www.bbc.co.uk/news/articles/cvgll74vvydo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Record rains drench South Korean city as landslide kills one",
-        "url": "https://www.bbc.co.uk/news/articles/cvgww971nn2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -195,7 +189,43 @@
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " How Planet Coaster 2’s artists made Hollywood work as a theme park ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/how-planet-coaster-2s-artists-made-hollywood-work-as-a-theme-park",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Sony's answer to Hello Kitty is a kawaii character design for our times. ",
+        "url": "https://www.creativebloq.com/art/character-design/sonys-answer-to-hello-kitty-is-a-kawaii-character-design-for-our-times",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " If you're making the transition from 2D to 3D art, you need to understand pivots and centre points to prevent total chaos ",
+        "url": "https://www.creativebloq.com/3d/if-youre-making-the-transition-from-2d-to-3d-art-you-need-to-fully-understand-pivots-and-centre-points-to-prevent-total-chaos",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " XPPen's new Artist Ultra 14 drawing display gets the important specs right ",
+        "url": "https://www.creativebloq.com/art/digital-art/xppens-new-artist-ultra-14-drawing-display-gets-the-important-specs-right",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " AI art is making digital artists embrace imperfections – here's how ",
+        "url": "https://www.creativebloq.com/art/digital-art/ai-art-is-making-digital-artists-embrace-imperfections-heres-how",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This ridiculous film poster makes me wish movies would get silly again ",
+        "url": "https://www.creativebloq.com/design/poster-design/this-ridiculous-film-poster-makes-me-wish-movies-would-get-silly-again",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Disney's Hexed controversy isn't going anywhere after its big D23 character reveal ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/disneys-hexed-controversy-isnt-going-anywhere-after-its-d23-character-reveal",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "Scientists reveal why walking gets so much harder with age",
@@ -235,6 +265,31 @@
     ],
     "gaming": [
       {
+        "title": "Will King of the Hill Pit Hank And Buck Against Each Other?",
+        "url": "https://www.polygon.com/video/will-king-of-the-hill-pit-hank-and-buck-against-each-other/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Pokémon Pokopia Player Discovers Trick to Get Missing Event Pokémon",
+        "url": "https://www.polygon.com/pokemon-pokopia-trick-past-events-mysterious-goggles/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Why Did The Train To Busan Sequel Fail?",
+        "url": "https://www.polygon.com/video/why-did-the-train-to-busan-sequel-fail/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Johnny Depp is in talks to return as Jack Sparrow in 'Pirates of the Caribbean 6'",
+        "url": "https://www.polygon.com/johnny-depp-pirates-of-the-carribean-6-jack-sparrow-return/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Why does Destiny have so many orbs?",
+        "url": "https://www.polygon.com/video/why-does-destiny-have-so-many-orbs/",
+        "source": "Polygon"
+      },
+      {
         "title": "How scary is Metroid Dread actually?",
         "url": "https://www.polygon.com/video/how-scary-is-metroid-dread-actually/",
         "source": "Polygon"
@@ -242,31 +297,6 @@
       {
         "title": "Why Assassin’s Creed Unity can’t rebuild Notre Dame cathedral",
         "url": "https://www.polygon.com/video/why-assassin-s-creed-unity-can-t-rebuild-notre-dame-cathedral/",
-        "source": "Polygon"
-      },
-      {
-        "title": "What does Columbo have to do with Ace Attorney?",
-        "url": "https://www.polygon.com/video/what-does-columbo-have-to-do-with-ace-attorney/",
-        "source": "Polygon"
-      },
-      {
-        "title": "DINOTOPIA: Turning a classic book into a video game",
-        "url": "https://www.polygon.com/video/dinotopia-turning-a-classic-book-into-a-video-game/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Gaming’s oldest urban legend is Atari’s fault",
-        "url": "https://www.polygon.com/video/gaming-s-oldest-urban-legend-is-atari-s-fault/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Why French games have always been way ahead of their time",
-        "url": "https://www.polygon.com/video/why-french-games-have-always-been-way-ahead-of-their-time/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The hated exploit some developers actually want you to use",
-        "url": "https://www.polygon.com/video/the-hated-exploit-some-developers-actually-want-you-to-use/",
         "source": "Polygon"
       }
     ],
