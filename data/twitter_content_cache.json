@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-17T11:27:14.709837",
-    "total_items": 60
+    "last_updated": "2026-08-17T12:45:09.022820",
+    "total_items": 62
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
         "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
         "source": "Hacker News",
-        "score": 539
+        "score": 589
       },
       {
         "title": "On A.I. regulation and messaging",
         "url": "https://twitter.com/DarioAmodei/status/2088758816376807762",
         "source": "Hacker News",
-        "score": 84
+        "score": 130
       },
       {
         "title": "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing",
         "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
         "source": "Hacker News",
-        "score": 336
+        "score": 398
+      },
+      {
+        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
+        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
+        "source": "Hacker News",
+        "score": 4
       },
       {
         "title": "A third world engineer responds to “RISC-V: They should have known better”",
         "url": "https://rvembedded.com/blog_post/12/",
         "source": "Hacker News",
-        "score": 531
+        "score": 551
       },
       {
-        "title": "The continuing \"Q collar\" scandal",
-        "url": "https://statmodeling.stat.columbia.edu/2026/08/13/we-should-probably-be-doing-more-coverage-of-science-adjacent-medical-scams-like-the-q-collar-and-less-on-repulsively-self-promoting-but-ultimately-less-harmful-academic-grifters/",
+        "title": "How Go detects struct copies with sync.noCopy",
+        "url": "https://func25.dev/posts/go-sync-nocopy/",
         "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Reticulum – Decentralized Mesh Network",
-        "url": "https://reticulum.network/",
-        "source": "Hacker News",
-        "score": 142
-      },
-      {
-        "title": "Claude: System Prompts",
-        "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
-        "source": "Hacker News",
-        "score": 677
-      },
-      {
-        "title": "AGI-64 Brings Sierra Adventures to the Commodore 64",
-        "url": "https://meanhamster.com/news/agi-64-brings-sierra-adventures-to-the-commodore-64",
-        "source": "Hacker News",
-        "score": 94
-      },
-      {
-        "title": "Gakutensoku",
-        "url": "https://en.wikipedia.org/wiki/Gakutensoku",
-        "source": "Hacker News",
-        "score": 36
+        "score": 7
       },
       {
         "title": "Show HN: Desktopcolors.com – A museum for solid background colors of classic OS",
         "url": "https://desktopcolors.com",
         "source": "Hacker News",
-        "score": 13
+        "score": 38
       },
       {
-        "title": "Rhombus 1.1 is now available",
-        "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
+        "title": "Reticulum – Decentralized Mesh Network",
+        "url": "https://reticulum.network/",
         "source": "Hacker News",
-        "score": 93
+        "score": 152
       },
       {
-        "title": "How do I permanently disable random Google Photos popup to backup photos? (2024)",
-        "url": "https://support.google.com/photos/thread/256212140/how-do-i-permanently-disable-google-photos-pop-up-prompt-to-backup-my-photos-i?hl=en",
+        "title": "Claude: System Prompts",
+        "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News",
-        "score": 139
-      },
-      {
-        "title": "Linear algebra done right",
-        "url": "https://linear.axler.net/",
-        "source": "Hacker News",
-        "score": 100
-      },
-      {
-        "title": "The Mysterious Syndrome Destroying Endurance Athletes",
-        "url": "https://www.outsideonline.com/health/training-performance/running-empty/",
-        "source": "Hacker News",
-        "score": 14
+        "score": 690
       },
       {
         "title": "Production-ready detection and response queries for osquery",
         "url": "https://github.com/chainguard-dev/osquery-defense-kit",
         "source": "Hacker News",
-        "score": 6
+        "score": 17
+      },
+      {
+        "title": "The Mysterious Syndrome Destroying Endurance Athletes",
+        "url": "https://www.outsideonline.com/health/training-performance/running-empty/",
+        "source": "Hacker News",
+        "score": 32
+      },
+      {
+        "title": "People are worried about America's solvency",
+        "url": "https://www.ft.com/content/e04f286c-f5ed-46d1-8e3f-0bbe4cce4d3e",
+        "source": "Hacker News",
+        "score": 45
+      },
+      {
+        "title": "Linear algebra done right",
+        "url": "https://linear.axler.net/",
+        "source": "Hacker News",
+        "score": 116
+      },
+      {
+        "title": "AGI-64 Brings Sierra Adventures to the Commodore 64",
+        "url": "https://meanhamster.com/news/agi-64-brings-sierra-adventures-to-the-commodore-64",
+        "source": "Hacker News",
+        "score": 100
+      },
+      {
+        "title": "Rhombus 1.1 is now available",
+        "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
+        "source": "Hacker News",
+        "score": 97
       }
     ],
     "ai": [
@@ -101,61 +101,73 @@
         "title": "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing",
         "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
         "source": "Hacker News AI",
-        "score": 336
+        "score": 398
+      },
+      {
+        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
+        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News AI",
-        "score": 677
+        "score": 690
       },
       {
         "title": "Rhombus 1.1 is now available",
         "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
         "source": "Hacker News AI",
-        "score": 93
+        "score": 97
+      },
+      {
+        "title": "Self hosted email continues to steeply decline",
+        "url": "https://labs.ripe.net/author/artem-berezin/two-providers-a-stubborn-plateau-and-a-very-long-tail-email-in-the-tranco-top-1m/",
+        "source": "Hacker News AI",
+        "score": 59
+      },
+      {
+        "title": "Who Owns Commodore? The Retro PC Brand Still Exists, but a Lot Has Changed",
+        "url": "https://www.bgr.com/2233625/who-owns-commodore-retro-brand/",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "The AI Credit Resale Economy",
         "url": "https://vectoral.com/blog/who-are-the-token-brokers",
         "source": "Hacker News AI",
-        "score": 298
+        "score": 302
       },
       {
         "title": "Red queen hypothesis – A new way forward for self-improving AI",
         "url": "https://www.cst.cam.ac.uk/news/red-queen-hypothesis-new-way-forward-self-improving-ai",
         "source": "Hacker News AI",
-        "score": 75
+        "score": 80
       },
       {
         "title": "Nvidia dramatically reduces amount of OpenAI infra financing it may guarantee",
         "url": "https://www.reuters.com/business/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-2026-08-14/",
         "source": "Hacker News AI",
-        "score": 213
+        "score": 215
+      },
+      {
+        "title": "Anthropic becomes the 'Apple of AI': Most revenue despite being most expensive",
+        "url": "https://www.techradar.com/pro/anthropic-becomes-the-apple-of-ai-as-it-grabs-most-revenue-despite-being-the-most-expensive",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Show HN: A public AI whose memory is shared across all users",
         "url": "https://wildstatic.com/",
         "source": "Hacker News AI",
-        "score": 74
+        "score": 75
       },
       {
         "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
         "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
         "source": "Hacker News AI",
-        "score": 403
-      },
-      {
-        "title": "Archie G. Norcross' Maine Forest Fire Maps (1918–22)",
-        "url": "https://publicdomainreview.org/collection/maine-forest-fire-maps/",
-        "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "The deep history behind the Road to Nowhere inside the Great Smoky Mountains",
-        "url": "https://www.wunc.org/environment/2026-08-10/road-to-nowhere-great-smoky-mountains",
-        "source": "Hacker News AI",
-        "score": 29
+        "score": 409
       }
     ],
     "news": [
@@ -197,6 +209,16 @@
     ],
     "art": [
       {
+        "title": " Instagram's new brand identity is more than just a wordmark ",
+        "url": "https://www.creativebloq.com/design/branding/instagrams-new-brand-identity-is-more-than-just-a-wordmark",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " While you were angry at Instagram, Jif quietly debuted a perfect new logo ",
+        "url": "https://www.creativebloq.com/design/branding/while-you-were-angry-at-instagram-jif-quietly-debuted-a-perfect-new-logo",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Is there a world where a £4,500 vibrating chair makes sense? ",
         "url": "https://www.creativebloq.com/tech/chairs-desks/is-there-a-world-where-a-gbp4-500-vibrating-chair-makes-sense",
         "source": "Creative Bloq"
@@ -219,16 +241,6 @@
       {
         "title": " XPPen's new Artist Ultra 14 drawing display gets the important specs right ",
         "url": "https://www.creativebloq.com/art/digital-art/xppens-new-artist-ultra-14-drawing-display-gets-the-important-specs-right",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " AI art is making digital artists embrace imperfections – here's how ",
-        "url": "https://www.creativebloq.com/art/digital-art/ai-art-is-making-digital-artists-embrace-imperfections-heres-how",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This ridiculous film poster makes me wish movies would get silly again ",
-        "url": "https://www.creativebloq.com/design/poster-design/this-ridiculous-film-poster-makes-me-wish-movies-would-get-silly-again",
         "source": "Creative Bloq"
       }
     ],
@@ -271,6 +283,16 @@
     ],
     "gaming": [
       {
+        "title": "Canceled Star Wars Game Was the Bioware-Style ARPG That Fans Deserved",
+        "url": "https://www.polygon.com/star-wars-magellan-action-rpg-canceled/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Blade Runner 2099' Creator Officially Reveals Whether Harrison Ford Is in Her Prime Video Show",
+        "url": "https://www.polygon.com/blade-runner-2099-harrison-ford/",
+        "source": "Polygon"
+      },
+      {
         "title": "'Train to Busan' Director's New Zombie Movie Was Inspired By a 48-Year-Old Sci-Fi Masterpiece",
         "url": "https://www.polygon.com/yeon-sang-ho-interview-colony-director/",
         "source": "Polygon"
@@ -293,16 +315,6 @@
       {
         "title": "Pokémon Pokopia Player Discovers Trick to Get Missing Event Pokémon",
         "url": "https://www.polygon.com/pokemon-pokopia-trick-past-events-mysterious-goggles/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Why Did The Train To Busan Sequel Fail?",
-        "url": "https://www.polygon.com/video/why-did-the-train-to-busan-sequel-fail/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Johnny Depp is in talks to return as Jack Sparrow in 'Pirates of the Caribbean 6'",
-        "url": "https://www.polygon.com/johnny-depp-pirates-of-the-carribean-6-jack-sparrow-return/",
         "source": "Polygon"
       }
     ],
