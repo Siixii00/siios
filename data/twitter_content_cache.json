@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-17T15:26:09.962178",
-    "total_items": 63
+    "last_updated": "2026-08-17T16:28:30.041001",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
-        "title": "Apple's App Tracking Transparency treated its own apps better than rivals",
-        "url": "https://www.bundeskartellamt.de/SharedDocs/Meldung/EN/Pressemitteilungen/2026/08_17_2026_Apple_ATTF.html",
-        "source": "Hacker News",
-        "score": 107
-      },
-      {
         "title": "A Preview of DuckDB v2.0",
         "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
         "source": "Hacker News",
-        "score": 110
+        "score": 205
       },
       {
         "title": "AI-Generated GitHub Copilot \"Autofix\" Allowed Compromise of Snowflake's Jira",
         "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
         "source": "Hacker News",
-        "score": 42
+        "score": 96
+      },
+      {
+        "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
+        "url": "https://speko.ai/",
+        "source": "Hacker News",
+        "score": 22
       },
       {
         "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
         "url": "https://blog.roboflow.com/openai-gpt-5-6/",
         "source": "Hacker News",
-        "score": 147
+        "score": 183
       },
       {
         "title": "How to disable or avoid intrusive AI",
         "url": "https://www.librarian.net/notoai/",
         "source": "Hacker News",
-        "score": 30
+        "score": 72
       },
       {
         "title": "Incident with Github.com",
         "url": "https://www.githubstatus.com/incidents/zkxwbgr0cnmx",
         "source": "Hacker News",
-        "score": 520
-      },
-      {
-        "title": "GitHub down again? no PR access",
-        "url": "https://news.ycombinator.com/item?id=49330632",
-        "source": "Hacker News",
-        "score": 183
+        "score": 679
       },
       {
         "title": "How to put 170 atoms in an atom",
         "url": "https://signoregalilei.com/2026/08/02/how-to-put-170-atoms-in-an-atom/",
         "source": "Hacker News",
-        "score": 22
+        "score": 40
       },
       {
-        "title": "Show HN: Sokoban AI Solver",
-        "url": "https://mkornreich.me/projects/sokoban/",
+        "title": "GitHub down again? no PR access",
+        "url": "https://news.ycombinator.com/item?id=49330632",
         "source": "Hacker News",
-        "score": 33
+        "score": 276
       },
       {
-        "title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
-        "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+        "title": "Olo (Color)",
+        "url": "https://en.wikipedia.org/wiki/Olo_(color)",
         "source": "Hacker News",
-        "score": 681
+        "score": 51
       },
       {
-        "title": "How to ship a database every day",
-        "url": "https://turbopuffer.com/blog/control-plane",
+        "title": "Apple's App Tracking Transparency treated its own apps better than rivals",
+        "url": "https://www.bundeskartellamt.de/SharedDocs/Meldung/EN/Pressemitteilungen/2026/08_17_2026_Apple_ATTF.html",
         "source": "Hacker News",
-        "score": 11
-      },
-      {
-        "title": "Mexico Crackdown on Coastal Development Underway",
-        "url": "https://yucatanmagazine.com/mexico-crackdown-on-coastal-development/",
-        "source": "Hacker News",
-        "score": 58
-      },
-      {
-        "title": "How Go detects struct copies with sync.noCopy",
-        "url": "https://func25.dev/posts/go-sync-nocopy/",
-        "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "Ask HN: Alternatives to GitHub",
-        "url": "https://news.ycombinator.com/item?id=49331033",
-        "source": "Hacker News",
-        "score": 121
+        "score": 164
       },
       {
         "title": "How I developed an Am29000 C compiler and web browser",
         "url": "https://nanochess.org/am29000_c_compiler_web_browser.html",
         "source": "Hacker News",
-        "score": 13
+        "score": 30
+      },
+      {
+        "title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
+        "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+        "source": "Hacker News",
+        "score": 702
+      },
+      {
+        "title": "Universal Health Coverage Could Save $1T and 114k Lives a Year, Yale Study",
+        "url": "https://ysph.yale.edu/news-article/universal-health-coverage-could-save-one-trillion-dollars-and-114000-lives-every-year/",
+        "source": "Hacker News",
+        "score": 172
+      },
+      {
+        "title": "Show HN: Sokoban AI Solver",
+        "url": "https://mkornreich.me/projects/sokoban/",
+        "source": "Hacker News",
+        "score": 38
+      },
+      {
+        "title": "Qwen3.8-27B at 256K on a 24GB RTX PRO 4000 SFF (432 GB/s): 50 tok/s with MTP",
+        "url": "https://piszczek.pl/blog/qwen38-27b-256k-50-tps-24gb-gpu",
+        "source": "Hacker News",
+        "score": 32
       }
     ],
     "ai": [
@@ -101,67 +101,79 @@
         "title": "AI-Generated GitHub Copilot \"Autofix\" Allowed Compromise of Snowflake's Jira",
         "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
         "source": "Hacker News AI",
-        "score": 43
+        "score": 96
+      },
+      {
+        "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
+        "url": "https://speko.ai/",
+        "source": "Hacker News AI",
+        "score": 22
       },
       {
         "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
         "url": "https://blog.roboflow.com/openai-gpt-5-6/",
         "source": "Hacker News AI",
-        "score": 147
+        "score": 183
       },
       {
         "title": "How to disable or avoid intrusive AI",
         "url": "https://www.librarian.net/notoai/",
         "source": "Hacker News AI",
-        "score": 31
+        "score": 72
       },
       {
         "title": "GitHub down again? no PR access",
         "url": "https://news.ycombinator.com/item?id=49330632",
         "source": "Hacker News AI",
-        "score": 184
+        "score": 276
+      },
+      {
+        "title": "Universal Health Coverage Could Save $1T and 114k Lives a Year, Yale Study",
+        "url": "https://ysph.yale.edu/news-article/universal-health-coverage-could-save-one-trillion-dollars-and-114000-lives-every-year/",
+        "source": "Hacker News AI",
+        "score": 172
       },
       {
         "title": "Show HN: Sokoban AI Solver",
         "url": "https://mkornreich.me/projects/sokoban/",
         "source": "Hacker News AI",
-        "score": 33
+        "score": 38
       },
       {
         "title": "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing",
         "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
         "source": "Hacker News AI",
-        "score": 565
+        "score": 600
       },
       {
-        "title": "Claude: System Prompts",
-        "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
+        "title": "Show HN: Saggar, a Mac terminal that keeps sessions and your attention organized",
+        "url": "https://saggar.marginalutility.dev/",
         "source": "Hacker News AI",
-        "score": 722
+        "score": 6
       },
       {
         "title": "Judge relying wholly on AI in order is covered by judicial immunity, court rules",
         "url": "https://reason.com/volokh/2026/08/17/judges-allegedly-relying-wholly-on-ai-in-order-is-covered-by-judicial-immunity-court-rules/",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 21
       },
       {
         "title": "Rhombus 1.1 is now available",
         "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
         "source": "Hacker News AI",
-        "score": 113
+        "score": 115
       },
       {
-        "title": "Who Owns Commodore? The Retro PC Brand Still Exists, but a Lot Has Changed",
-        "url": "https://www.bgr.com/2233625/who-owns-commodore-retro-brand/",
+        "title": "Ahmad on X: \"Anthropic's War on open source AI\" / X",
+        "url": "https://twitter.com/TheAhmadOsman/status/2065307070044234186",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 9
       },
       {
-        "title": "We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility",
-        "url": "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/",
+        "title": "Show HN: A community library for Claude Code status lines",
+        "url": "https://statuslin.es",
         "source": "Hacker News AI",
-        "score": 68
+        "score": 4
       },
       {
         "title": "The AI Credit Resale Economy",
@@ -170,15 +182,15 @@
         "score": 317
       },
       {
-        "title": "The beautiful mathematics behind OpenAI's sphere packing result",
-        "url": "https://www.empirical.health/blog/ai-math-sphere-packing/",
+        "title": "Claude: System Prompts",
+        "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 731
       }
     ],
     "news": [
       {
-        "title": "Trump threatens to bomb Oman if it 'gets in the way' over Iran issue",
+        "title": "Trump threatens to bomb US ally Oman if it 'gets in the way' over Iran issue",
         "url": "https://www.bbc.co.uk/news/articles/cy5dzk0ryzdo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -208,12 +220,17 @@
         "source": "BBC World"
       },
       {
-        "title": "Ebola outbreak in DR Congo becomes deadliest in its history",
-        "url": "https://www.bbc.co.uk/news/articles/cvgll74vvydo?at_medium=RSS&at_campaign=rss",
+        "title": "Supreme Court again rejects Trump's bid to overturn E Jean Carroll  sex abuse case ",
+        "url": "https://www.bbc.co.uk/news/articles/c74gekjgrllo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Why are we still treating Canva like a dirty little secret? ",
+        "url": "https://www.creativebloq.com/design/design-software/why-are-we-still-treating-canva-like-a-dirty-little-secret",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Dear Disney, please keep Bluey's animation the way it is ",
         "url": "https://www.creativebloq.com/art/animation/dear-disney-please-change-bluey-back-to-normal",
@@ -242,11 +259,6 @@
       {
         "title": " Sony's answer to Hello Kitty is a kawaii character design for our times ",
         "url": "https://www.creativebloq.com/art/character-design/sonys-answer-to-hello-kitty-is-a-kawaii-character-design-for-our-times",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " If you're making the transition from 2D to 3D art, you need to understand pivots and centre points to prevent total chaos ",
-        "url": "https://www.creativebloq.com/3d/if-youre-making-the-transition-from-2d-to-3d-art-you-need-to-fully-understand-pivots-and-centre-points-to-prevent-total-chaos",
         "source": "Creative Bloq"
       }
     ],
@@ -289,43 +301,48 @@
     ],
     "gaming": [
       {
+        "title": "The Pokémon Center just dropped a bunch of rare ETBs for TCG sets everyone wants",
+        "url": "https://www.polygon.com/pokemon-center-etb-new-release-prismatic-destined-rivals-30th-in-stock/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Anya Taylor-Joy’s 'The Gorge' Remains A Streaming Hit Almost 2 Years After Release",
+        "url": "https://www.polygon.com/the-gorge-thriller-romance-streaming-hit-apple-tv/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Netflix's 3-Part Sci-fi Masterpiece Is Officially Getting the Collector's Edition it Deserves",
+        "url": "https://www.polygon.com/3-body-problem-illustrated-exclusive/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Lost' Creator Reveals How His New Sci-Fi Show Will Avoid Repeating the Same Annoying Mistake",
+        "url": "https://www.polygon.com/lanterns-damon-lindelof-lost-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Sony CEO Quietly Confirms the PS6's Future Is in a Tough Spot ",
+        "url": "https://www.polygon.com/ps6-release-date-when-is-ceo-hiroki-totoki-wsj-august-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Marvel Reveals New Jean Grey Comic Hot Off MCU X-Men Casting",
+        "url": "https://www.polygon.com/marvel-comics-x-men-jean-grey-solo-series-announced/",
+        "source": "Polygon"
+      },
+      {
         "title": "Nintendo Just Teased a Big Story Twist for 'Fire Emblem: Fortune’s Weave' in New Trailer",
         "url": "https://www.polygon.com/fire-emblem-fortunes-weave-time-skip/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Marvel Cosmic Invasion Doctor Doom DLC Arrives this Fall",
-        "url": "https://www.polygon.com/marvel-cosmic-invasion-doctor-doom-dlc-announced/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Resident Evil Requiem' Star Has Reportedly Found Her Next Starring Role",
-        "url": "https://www.polygon.com/tides-of-annihilation-lead-actor-resident-evil-requiem-grace/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Skip and Loafer' Season 2 Anime Finally Coming in 2027",
-        "url": "https://www.polygon.com/skip-and-loafer-season-2-release-date-announced/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Marvel Rivals' Players Are Exploiting a Cheat That Lets Them End Matches Without Penalties",
-        "url": "https://www.polygon.com/marvel-rivals-match-quit-hack/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Mortal Shell 2 Reviews Say It's One of 2026's Best New Soulslikes",
-        "url": "https://www.polygon.com/mortal-shell-review-roundup/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Hayden Panettiere, Star of Heroes and Kingdom Hearts, Dies at 36",
-        "url": "https://www.polygon.com/hayden-panetierre-death-heroes-kingdom-hearts/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "How canvases make agentic workflows visible, steerable, and cost-efficient",
+        "url": "https://github.blog/ai-and-ml/github-copilot/how-canvases-make-agentic-workflows-visible-steerable-and-cost-efficient/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "How to bring your software delivery workflow into GitHub with agent apps",
         "url": "https://github.blog/ai-and-ml/github-copilot/how-to-bring-your-software-delivery-workflow-into-github-with-agent-apps/",
@@ -354,11 +371,6 @@
       {
         "title": "Your contributors are AI-first now. Is your project?",
         "url": "https://github.blog/open-source/maintainers/your-contributors-are-ai-first-now-is-your-project/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "From coder to orchestrator: How agents shift the role of a developer",
-        "url": "https://github.blog/developer-skills/career-growth/from-coder-to-orchestrator-how-agents-shift-the-role-of-a-developer/",
         "source": "GitHub Blog"
       }
     ]
