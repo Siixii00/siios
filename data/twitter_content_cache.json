@@ -1,131 +1,143 @@
 {
   "metadata": {
-    "last_updated": "2026-08-17T01:18:53.993102",
+    "last_updated": "2026-08-17T03:00:51.045550",
     "total_items": 62
   },
   "content": {
     "tech": [
       {
+        "title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
+        "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+        "source": "Hacker News",
+        "score": 98
+      },
+      {
         "title": "The Life and Death of Direct File [pdf]",
         "url": "https://www.ischool.berkeley.edu/sites/default/files/vinton_report_5.pdf",
         "source": "Hacker News",
-        "score": 30
+        "score": 98
+      },
+      {
+        "title": "AGI-64 Brings Sierra Adventures to the Commodore 64",
+        "url": "https://meanhamster.com/news/agi-64-brings-sierra-adventures-to-the-commodore-64",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "Rhombus 1.1 is now available",
+        "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
+        "source": "Hacker News",
+        "score": 23
       },
       {
         "title": "A 3rd World Embedded Engineer Responds to \"RISC-V They Should Have Known Better\"",
         "url": "https://rvembedded.com/blog_post/12/",
         "source": "Hacker News",
-        "score": 368
+        "score": 396
       },
       {
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News",
-        "score": 532
+        "score": 561
       },
       {
-        "title": "SIMD in the 90s: Programming Intel's Pentium MMX",
-        "url": "https://pikuma.com/blog/programming-intel-pentium-mmx-simd",
+        "title": "Reticulum – Decentralized Mesh Network",
+        "url": "https://reticulum.network/",
         "source": "Hacker News",
-        "score": 68
+        "score": 24
+      },
+      {
+        "title": "Interview with Amit Patel, Creator of \"Solar Realms Elite\"",
+        "url": "https://breakintochat.com/blog/2013/02/18/amit-patel-creator-of-solar-realms-elite/",
+        "source": "Hacker News",
+        "score": 17
       },
       {
         "title": "Low-Tech Ceramic Water Filter",
         "url": "https://wiki.lowtechlab.org/wiki/Filtre_%C3%A0_eau_c%C3%A9ramique/en",
         "source": "Hacker News",
-        "score": 90
+        "score": 106
       },
       {
-        "title": "Models Are Getting Dumber on Purpose",
-        "url": "https://w4g1.dev/blog/models-are-getting-dumber-on-purpose",
+        "title": "SIMD in the 90s: Programming Intel's Pentium MMX",
+        "url": "https://pikuma.com/blog/programming-intel-pentium-mmx-simd",
         "source": "Hacker News",
-        "score": 262
-      },
-      {
-        "title": "The AI Credit Resale Economy",
-        "url": "https://vectoral.com/blog/who-are-the-token-brokers",
-        "source": "Hacker News",
-        "score": 223
-      },
-      {
-        "title": "A quick look at zero-knowledge proofs",
-        "url": "https://bernsteinbear.com/blog/zkp/",
-        "source": "Hacker News",
-        "score": 42
+        "score": 76
       },
       {
         "title": "Protobuf has LSP support. You're welcome",
         "url": "https://buf.build/blog/protobuf-lsp",
         "source": "Hacker News",
-        "score": 104
+        "score": 122
+      },
+      {
+        "title": "Dancing with friends and enemies: boids' swarm intelligence",
+        "url": "https://community.wolfram.com/groups/-/m/t/122095",
+        "source": "Hacker News",
+        "score": 19
+      },
+      {
+        "title": "The federal keyword lists that canceled billions in research funding",
+        "url": "https://www.highereddive.com/news/inside-the-federal-keyword-lists-that-canceled-billions-in-research-funding/826203/",
+        "source": "Hacker News",
+        "score": 111
+      },
+      {
+        "title": "The AI Credit Resale Economy",
+        "url": "https://vectoral.com/blog/who-are-the-token-brokers",
+        "source": "Hacker News",
+        "score": 237
       },
       {
         "title": "MathCode, Mathematical Coding Agent",
         "url": "https://math-ai-org.github.io/mathcode/",
         "source": "Hacker News",
-        "score": 54
-      },
-      {
-        "title": "Nvidia dramatically reduces amount of OpenAI infra financing it may guarantee",
-        "url": "https://www.reuters.com/business/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-2026-08-14/",
-        "source": "Hacker News",
-        "score": 94
-      },
-      {
-        "title": "Clamiga: Common Lisp for the Amiga",
-        "url": "https://nnamgreb.de/blog/Clamiga+-+Common+Lisp+for+the+Amiga",
-        "source": "Hacker News",
-        "score": 81
-      },
-      {
-        "title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
-        "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
-        "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "Anton Chekhov played at love most of his life",
-        "url": "https://commonreader.wustl.edu/winning-and-losing-at-the-great-game-of-intimacy/",
-        "source": "Hacker News",
-        "score": 59
-      },
-      {
-        "title": "Plastic mechanical computer from 1963: The Digi-Comp 1 [video]",
-        "url": "https://www.youtube.com/watch?v=-y8bGBE71yw",
-        "source": "Hacker News",
-        "score": 44
+        "score": 67
       }
     ],
     "ai": [
       {
+        "title": "Rhombus 1.1 is now available",
+        "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
+        "source": "Hacker News AI",
+        "score": 23
+      },
+      {
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News AI",
-        "score": 532
+        "score": 561
       },
       {
         "title": "The AI Credit Resale Economy",
         "url": "https://vectoral.com/blog/who-are-the-token-brokers",
         "source": "Hacker News AI",
-        "score": 223
+        "score": 237
       },
       {
         "title": "Nvidia dramatically reduces amount of OpenAI infra financing it may guarantee",
         "url": "https://www.reuters.com/business/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-2026-08-14/",
         "source": "Hacker News AI",
-        "score": 94
+        "score": 123
       },
       {
         "title": "Stripe Clinches over $7B Deal to Buy AI Firm OpenRouter",
         "url": "https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion",
         "source": "Hacker News AI",
-        "score": 184
+        "score": 221
       },
       {
-        "title": "The Case Against Formal Verification, 50 Years Later",
-        "url": "https://ivan-gavran.github.io/0-social-processes-paper",
+        "title": "Red queen hypothesis – a new way forward for self-improving AI",
+        "url": "https://www.cst.cam.ac.uk/news/red-queen-hypothesis-new-way-forward-self-improving-ai",
         "source": "Hacker News AI",
-        "score": 78
+        "score": 17
+      },
+      {
+        "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
+        "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
+        "source": "Hacker News AI",
+        "score": 368
       },
       {
         "title": "Archie G. Norcross' Maine Forest Fire Maps (1918–22)",
@@ -137,42 +149,30 @@
         "title": "The deep history behind the Road to Nowhere inside the Great Smoky Mountains",
         "url": "https://www.wunc.org/environment/2026-08-10/road-to-nowhere-great-smoky-mountains",
         "source": "Hacker News AI",
-        "score": 23
+        "score": 25
       },
       {
-        "title": "Research papers using \"kidney disappointment\" instead of \"kidney failure\"",
-        "url": "https://scholar.google.com/scholar?q=%22kidney+disappointment%22",
+        "title": "Show HN: Continuum – Financial simulations for DIY multimillionaires",
+        "url": "https://continuum-app.xyz/",
         "source": "Hacker News AI",
-        "score": 354
-      },
-      {
-        "title": "Anthropic's 'Watermark' Text Adulteration in Claude Is a Perversion of Writing",
-        "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
-        "source": "Hacker News AI",
-        "score": 142
-      },
-      {
-        "title": "Red queen hypothesis – a new way forward for self-improving AI",
-        "url": "https://www.cst.cam.ac.uk/news/red-queen-hypothesis-new-way-forward-self-improving-ai",
-        "source": "Hacker News AI",
-        "score": 5
+        "score": 4
       },
       {
         "title": "AI in drug discovery – what it is, where we stand and the path forward",
         "url": "https://www.science.org/content/blog-post/so-how-ai-drug-discovery-doing-really",
         "source": "Hacker News AI",
-        "score": 179
+        "score": 181
       },
       {
-        "title": "AI Coding Without the Vibes",
-        "url": "https://peterbloem.nl/blog/craft-coding",
+        "title": "Anthropic's 'Watermark' Text Adulteration in Claude Is a Perversion of Writing",
+        "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
         "source": "Hacker News AI",
-        "score": 76
+        "score": 156
       }
     ],
     "news": [
       {
-        "title": "Trump says US to scale back military drills with South Korea after it stayed out of Iran war",
+        "title": "Trump says US to scale back South Korea military drills after it stayed out of Iran war",
         "url": "https://www.bbc.co.uk/news/articles/cx2lll7zvn0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -202,12 +202,17 @@
         "source": "BBC World"
       },
       {
-        "title": "US commander says mental health a 'priority' on USS Lincoln",
-        "url": "https://www.bbc.co.uk/news/articles/ceqeeendz42o?at_medium=RSS&at_campaign=rss",
+        "title": "Ferrari's first ever electric car sold for record $40m at auction",
+        "url": "https://www.bbc.co.uk/news/articles/c77ggpgrp2do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " XPPen's new Artist Ultra 14 drawing display gets the important specs right ",
+        "url": "https://www.creativebloq.com/art/digital-art/xppens-new-artist-ultra-14-drawing-display-gets-the-important-specs-right",
+        "source": "Creative Bloq"
+      },
       {
         "title": " AI art is making digital artists embrace imperfections – here's how ",
         "url": "https://www.creativebloq.com/art/digital-art/ai-art-is-making-digital-artists-embrace-imperfections-heres-how",
@@ -236,11 +241,6 @@
       {
         "title": " People are freaking out that the iPhone 18 Pro will be super expensive - but will it? ",
         "url": "https://www.creativebloq.com/tech/phones-tablets/people-are-freaking-out-that-the-iphone-18-pro-will-be-super-expensive-but-will-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " 5 laptops and Chromebooks on sale and worth buying if you're going back to school ",
-        "url": "https://www.creativebloq.com/tech/laptops/these-are-the-3-laptops-you-should-shortlist-for-your-studies-clone",
         "source": "Creative Bloq"
       }
     ],
