@@ -1,137 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-08-17T14:28:59.677342",
+    "last_updated": "2026-08-17T15:26:09.962178",
     "total_items": 63
   },
   "content": {
     "tech": [
       {
+        "title": "Apple's App Tracking Transparency treated its own apps better than rivals",
+        "url": "https://www.bundeskartellamt.de/SharedDocs/Meldung/EN/Pressemitteilungen/2026/08_17_2026_Apple_ATTF.html",
+        "source": "Hacker News",
+        "score": 107
+      },
+      {
+        "title": "A Preview of DuckDB v2.0",
+        "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
+        "source": "Hacker News",
+        "score": 110
+      },
+      {
+        "title": "AI-Generated GitHub Copilot \"Autofix\" Allowed Compromise of Snowflake's Jira",
+        "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+        "source": "Hacker News",
+        "score": 42
+      },
+      {
         "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
         "url": "https://blog.roboflow.com/openai-gpt-5-6/",
         "source": "Hacker News",
-        "score": 106
+        "score": 147
+      },
+      {
+        "title": "How to disable or avoid intrusive AI",
+        "url": "https://www.librarian.net/notoai/",
+        "source": "Hacker News",
+        "score": 30
       },
       {
         "title": "Incident with Github.com",
         "url": "https://www.githubstatus.com/incidents/zkxwbgr0cnmx",
         "source": "Hacker News",
-        "score": 327
+        "score": 520
+      },
+      {
+        "title": "GitHub down again? no PR access",
+        "url": "https://news.ycombinator.com/item?id=49330632",
+        "source": "Hacker News",
+        "score": 183
+      },
+      {
+        "title": "How to put 170 atoms in an atom",
+        "url": "https://signoregalilei.com/2026/08/02/how-to-put-170-atoms-in-an-atom/",
+        "source": "Hacker News",
+        "score": 22
       },
       {
         "title": "Show HN: Sokoban AI Solver",
         "url": "https://mkornreich.me/projects/sokoban/",
         "source": "Hacker News",
-        "score": 24
+        "score": 33
       },
       {
         "title": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
         "url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
         "source": "Hacker News",
-        "score": 654
+        "score": 681
       },
       {
-        "title": "How Go detects struct copies with sync.noCopy",
-        "url": "https://func25.dev/posts/go-sync-nocopy/",
+        "title": "How to ship a database every day",
+        "url": "https://turbopuffer.com/blog/control-plane",
         "source": "Hacker News",
-        "score": 32
-      },
-      {
-        "title": "GitHub down again? no PR access",
-        "url": "https://news.ycombinator.com/item?id=49330632",
-        "source": "Hacker News",
-        "score": 84
-      },
-      {
-        "title": "My Ten Years in No Man's Sky",
-        "url": "https://nmsspot.com/2026/08/09/my-ten-years-in-no-mans-sky/",
-        "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "Stripe to Buy OpenRouter for $7B",
-        "url": "https://www.bloomberg.com/news/articles/2026-08-16/stripe-nears-deal-to-buy-ai-firm-openrouter-for-over-7-billion",
-        "source": "Hacker News",
-        "score": 66
-      },
-      {
-        "title": "Ask HN: Alternatives to GitHub",
-        "url": "https://news.ycombinator.com/item?id=49331033",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "On A.I. regulation and messaging",
-        "url": "https://twitter.com/DarioAmodei/status/2088758816376807762",
-        "source": "Hacker News",
-        "score": 165
-      },
-      {
-        "title": "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing",
-        "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
-        "source": "Hacker News",
-        "score": 517
-      },
-      {
-        "title": "Cialis is an erectile dysfunction drug. Could it also help you live longer?",
-        "url": "https://www.npr.org/2026/08/17/nx-s1-5928263/cialis-viagra-tadalafil-longevity-heart-health",
-        "source": "Hacker News",
-        "score": 31
+        "score": 11
       },
       {
         "title": "Mexico Crackdown on Coastal Development Underway",
         "url": "https://yucatanmagazine.com/mexico-crackdown-on-coastal-development/",
         "source": "Hacker News",
-        "score": 38
+        "score": 58
       },
       {
-        "title": "Show HN: Desktopcolors.com – A museum for solid background colors of classic OS",
-        "url": "https://desktopcolors.com",
+        "title": "How Go detects struct copies with sync.noCopy",
+        "url": "https://func25.dev/posts/go-sync-nocopy/",
         "source": "Hacker News",
-        "score": 70
+        "score": 37
       },
       {
-        "title": "A third world engineer responds to “RISC-V: They should have known better”",
-        "url": "https://rvembedded.com/blog_post/12/",
+        "title": "Ask HN: Alternatives to GitHub",
+        "url": "https://news.ycombinator.com/item?id=49331033",
         "source": "Hacker News",
-        "score": 570
+        "score": 121
+      },
+      {
+        "title": "How I developed an Am29000 C compiler and web browser",
+        "url": "https://nanochess.org/am29000_c_compiler_web_browser.html",
+        "source": "Hacker News",
+        "score": 13
       }
     ],
     "ai": [
       {
+        "title": "AI-Generated GitHub Copilot \"Autofix\" Allowed Compromise of Snowflake's Jira",
+        "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+        "source": "Hacker News AI",
+        "score": 43
+      },
+      {
         "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
         "url": "https://blog.roboflow.com/openai-gpt-5-6/",
         "source": "Hacker News AI",
-        "score": 106
+        "score": 147
       },
       {
-        "title": "Show HN: Sokoban AI Solver",
-        "url": "https://mkornreich.me/projects/sokoban/",
+        "title": "How to disable or avoid intrusive AI",
+        "url": "https://www.librarian.net/notoai/",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 31
       },
       {
         "title": "GitHub down again? no PR access",
         "url": "https://news.ycombinator.com/item?id=49330632",
         "source": "Hacker News AI",
-        "score": 84
+        "score": 184
+      },
+      {
+        "title": "Show HN: Sokoban AI Solver",
+        "url": "https://mkornreich.me/projects/sokoban/",
+        "source": "Hacker News AI",
+        "score": 33
       },
       {
         "title": "Anthropic's 'watermark' text adulteration in Claude is a perversion of writing",
         "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
         "source": "Hacker News AI",
-        "score": 517
-      },
-      {
-        "title": "We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility",
-        "url": "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/",
-        "source": "Hacker News AI",
-        "score": 16
+        "score": 565
       },
       {
         "title": "Claude: System Prompts",
         "url": "https://platform.claude.com/docs/en/release-notes/system-prompts",
         "source": "Hacker News AI",
-        "score": 716
+        "score": 722
+      },
+      {
+        "title": "Judge relying wholly on AI in order is covered by judicial immunity, court rules",
+        "url": "https://reason.com/volokh/2026/08/17/judges-allegedly-relying-wholly-on-ai-in-order-is-covered-by-judicial-immunity-court-rules/",
+        "source": "Hacker News AI",
+        "score": 8
+      },
+      {
+        "title": "Rhombus 1.1 is now available",
+        "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
+        "source": "Hacker News AI",
+        "score": 113
       },
       {
         "title": "Who Owns Commodore? The Retro PC Brand Still Exists, but a Lot Has Changed",
@@ -140,51 +158,33 @@
         "score": 19
       },
       {
-        "title": "Rhombus 1.1 is now available",
-        "url": "https://blog.racket-lang.org/2026/08/rhombus-v1.1.html",
+        "title": "We Tracked a Shipment of Rare Books. It Ended at an Amazon AI Training Facility",
+        "url": "https://www.404media.co/we-tracked-a-shipment-of-rare-books-it-ended-at-an-amazon-ai-training-facility/",
         "source": "Hacker News AI",
-        "score": 107
+        "score": 68
       },
       {
         "title": "The AI Credit Resale Economy",
         "url": "https://vectoral.com/blog/who-are-the-token-brokers",
         "source": "Hacker News AI",
-        "score": 316
+        "score": 317
       },
       {
-        "title": "Red queen hypothesis – A new way forward for self-improving AI",
-        "url": "https://www.cst.cam.ac.uk/news/red-queen-hypothesis-new-way-forward-self-improving-ai",
+        "title": "The beautiful mathematics behind OpenAI's sphere packing result",
+        "url": "https://www.empirical.health/blog/ai-math-sphere-packing/",
         "source": "Hacker News AI",
-        "score": 86
-      },
-      {
-        "title": "Anthropic becomes the 'Apple of AI': Most revenue despite being most expensive",
-        "url": "https://www.techradar.com/pro/anthropic-becomes-the-apple-of-ai-as-it-grabs-most-revenue-despite-being-the-most-expensive",
-        "source": "Hacker News AI",
-        "score": 12
-      },
-      {
-        "title": "Self hosted email continues to steeply decline",
-        "url": "https://labs.ripe.net/author/artem-berezin/two-providers-a-stubborn-plateau-and-a-very-long-tail-email-in-the-tranco-top-1m/",
-        "source": "Hacker News AI",
-        "score": 97
-      },
-      {
-        "title": "Nvidia dramatically reduces amount of OpenAI infra financing it may guarantee",
-        "url": "https://www.reuters.com/business/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-2026-08-14/",
-        "source": "Hacker News AI",
-        "score": 229
+        "score": 5
       }
     ],
     "news": [
       {
-        "title": "Trump says US to reduce military drills with South Korea after it stayed out of Iran war",
-        "url": "https://www.bbc.co.uk/news/articles/cx2lll7zvn0o?at_medium=RSS&at_campaign=rss",
+        "title": "Trump threatens to bomb Oman if it 'gets in the way' over Iran issue",
+        "url": "https://www.bbc.co.uk/news/articles/cy5dzk0ryzdo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump envoy Kushner meets Netanyahu after Hamas talks on peace plan",
-        "url": "https://www.bbc.co.uk/news/articles/c77gg5vn44yo?at_medium=RSS&at_campaign=rss",
+        "title": "Trump says US to reduce military drills with South Korea after it stayed out of Iran war",
+        "url": "https://www.bbc.co.uk/news/articles/cx2lll7zvn0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -198,18 +198,18 @@
         "source": "BBC World"
       },
       {
+        "title": "US hiker dies after being struck by lightning on Mount Etna",
+        "url": "https://www.bbc.co.uk/news/articles/ce34rlkw6q7o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Trump envoy Kushner meets Netanyahu after Hamas talks on peace plan",
+        "url": "https://www.bbc.co.uk/news/articles/c77gg5vn44yo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Ebola outbreak in DR Congo becomes deadliest in its history",
         "url": "https://www.bbc.co.uk/news/articles/cvgll74vvydo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Top Zambian opposition figures arrested days after presidential vote",
-        "url": "https://www.bbc.co.uk/news/articles/cn0nj3ln8r5o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Two dead and hundreds evacuated after twin fires break out on Greek island",
-        "url": "https://www.bbc.co.uk/news/articles/c87nnwlpe5no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -289,6 +289,26 @@
     ],
     "gaming": [
       {
+        "title": "Nintendo Just Teased a Big Story Twist for 'Fire Emblem: Fortune’s Weave' in New Trailer",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-time-skip/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Marvel Cosmic Invasion Doctor Doom DLC Arrives this Fall",
+        "url": "https://www.polygon.com/marvel-cosmic-invasion-doctor-doom-dlc-announced/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Resident Evil Requiem' Star Has Reportedly Found Her Next Starring Role",
+        "url": "https://www.polygon.com/tides-of-annihilation-lead-actor-resident-evil-requiem-grace/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Skip and Loafer' Season 2 Anime Finally Coming in 2027",
+        "url": "https://www.polygon.com/skip-and-loafer-season-2-release-date-announced/",
+        "source": "Polygon"
+      },
+      {
         "title": "'Marvel Rivals' Players Are Exploiting a Cheat That Lets Them End Matches Without Penalties",
         "url": "https://www.polygon.com/marvel-rivals-match-quit-hack/",
         "source": "Polygon"
@@ -301,26 +321,6 @@
       {
         "title": "Hayden Panettiere, Star of Heroes and Kingdom Hearts, Dies at 36",
         "url": "https://www.polygon.com/hayden-panetierre-death-heroes-kingdom-hearts/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Most Bonkers Thriller of 2025 Officially Lands on Free Streaming",
-        "url": "https://www.polygon.com/bambi-the-reckoning-streaming-free-tubi/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Canceled Star Wars Game Was the Bioware-Style ARPG That Fans Deserved",
-        "url": "https://www.polygon.com/star-wars-magellan-action-rpg-canceled/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Blade Runner 2099' Creator Officially Reveals Whether Harrison Ford Is in Her Prime Video Show",
-        "url": "https://www.polygon.com/blade-runner-2099-harrison-ford/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Train to Busan' Director's New Zombie Movie Was Inspired By a 48-Year-Old Sci-Fi Masterpiece",
-        "url": "https://www.polygon.com/yeon-sang-ho-interview-colony-director/",
         "source": "Polygon"
       }
     ],
