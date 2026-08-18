@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-18T02:56:45.999896",
-    "total_items": 65
+    "last_updated": "2026-08-18T03:49:34.716970",
+    "total_items": 58
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "How Bluesky draws its logo on screenshots",
         "url": "https://timmarinin.net/2026/bluesky-screenshots/",
         "source": "Hacker News",
-        "score": 265
+        "score": 287
       },
       {
         "title": "Quake Shareware, a CD-ROM just a little too full",
         "url": "https://fabiensanglard.net/quake_shareware_cd/index.html",
         "source": "Hacker News",
-        "score": 176
+        "score": 193
       },
       {
         "title": "GPT-5.6 Sol Pricing Cut by 50%",
         "url": "https://openrouter.ai/openai/gpt-5.6-sol",
         "source": "Hacker News",
-        "score": 171
+        "score": 208
       },
       {
         "title": "A Preview of DuckDB v2.0",
         "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
         "source": "Hacker News",
-        "score": 558
+        "score": 567
+      },
+      {
+        "title": "Shattered skeleton is first confirmed death from trebuchet",
+        "url": "https://www.science.org/content/article/shattered-skeleton-scottish-castle-first-confirmed-death-trebuchet",
+        "source": "Hacker News",
+        "score": 20
       },
       {
         "title": "Fairphone 6 and PostmarketOS working main camera",
         "url": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
         "source": "Hacker News",
-        "score": 92
-      },
-      {
-        "title": "GPU Offload in Rust: Portable, Safe, and Fast",
-        "url": "https://arxiv.org/abs/2608.13759",
-        "source": "Hacker News",
-        "score": 166
+        "score": 97
       },
       {
         "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
         "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
         "source": "Hacker News",
-        "score": 322
+        "score": 329
+      },
+      {
+        "title": "GPU Offload in Rust: Portable, Safe, and Fast",
+        "url": "https://arxiv.org/abs/2608.13759",
+        "source": "Hacker News",
+        "score": 172
+      },
+      {
+        "title": "Israel creates fake think tank in likely attempt to dupe AI chatbots",
+        "url": "https://responsiblestatecraft.org/israel-influence-chatgpt/",
+        "source": "Hacker News",
+        "score": 197
       },
       {
         "title": "Olo (Color)",
         "url": "https://en.wikipedia.org/wiki/Olo_(color)",
         "source": "Hacker News",
-        "score": 334
-      },
-      {
-        "title": "AI;DR (AI; Didn't Read)",
-        "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
-        "source": "Hacker News",
-        "score": 638
+        "score": 349
       },
       {
         "title": "The Road to MS-DOS 2.0",
         "url": "https://nemanjatrifunovic.substack.com/p/the-road-to-ms-dos-2",
         "source": "Hacker News",
-        "score": 26
+        "score": 33
       },
       {
-        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
-        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
+        "title": "AI;DR (AI; Didn't Read)",
+        "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
         "source": "Hacker News",
-        "score": 307
+        "score": 668
       },
       {
         "title": "Repair Cafe – Fix Your Broken Items",
         "url": "https://www.repaircafe.org/",
         "source": "Hacker News",
-        "score": 28
+        "score": 40
       },
       {
-        "title": "Judge sets framework for Nine PBS to retrieve archival data",
-        "url": "https://current.org/2026/08/judge-sets-framework-for-nine-pbs-to-retrieve-archival-data/",
+        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
+        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
         "source": "Hacker News",
-        "score": 140
+        "score": 311
       },
       {
         "title": "An update on leaving Gmail for Fastmail",
         "url": "https://moddedbear.com/an-update-on-leaving-gmail-for-fastmail/",
         "source": "Hacker News",
-        "score": 129
-      },
-      {
-        "title": "India has paved the way for charging merchants a fee on UPI transactions",
-        "url": "https://www.bbc.com/news/articles/c8xnwqe00v1o",
-        "source": "Hacker News",
-        "score": 100
+        "score": 139
       }
     ],
     "ai": [
@@ -101,67 +101,67 @@
         "title": "GPT-5.6 Sol Pricing Cut by 50%",
         "url": "https://openrouter.ai/openai/gpt-5.6-sol",
         "source": "Hacker News AI",
-        "score": 171
+        "score": 208
       },
       {
         "title": "Fairphone 6 and PostmarketOS working main camera",
         "url": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
         "source": "Hacker News AI",
-        "score": 92
+        "score": 97
       },
       {
         "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
         "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
         "source": "Hacker News AI",
-        "score": 322
-      },
-      {
-        "title": "AI;DR (AI; Didn't Read)",
-        "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
-        "source": "Hacker News AI",
-        "score": 638
-      },
-      {
-        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
-        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
-        "source": "Hacker News AI",
-        "score": 307
-      },
-      {
-        "title": "Repair Cafe – Fix Your Broken Items",
-        "url": "https://www.repaircafe.org/",
-        "source": "Hacker News AI",
-        "score": 28
-      },
-      {
-        "title": "An update on leaving Gmail for Fastmail",
-        "url": "https://moddedbear.com/an-update-on-leaving-gmail-for-fastmail/",
-        "source": "Hacker News AI",
-        "score": 129
-      },
-      {
-        "title": "How to disable or avoid intrusive AI",
-        "url": "https://www.librarian.net/notoai/",
-        "source": "Hacker News AI",
-        "score": 262
+        "score": 329
       },
       {
         "title": "Israel creates fake think tank in likely attempt to dupe AI chatbots",
         "url": "https://responsiblestatecraft.org/israel-influence-chatgpt/",
         "source": "Hacker News AI",
-        "score": 135
+        "score": 197
+      },
+      {
+        "title": "AI;DR (AI; Didn't Read)",
+        "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
+        "source": "Hacker News AI",
+        "score": 668
+      },
+      {
+        "title": "Repair Cafe – Fix Your Broken Items",
+        "url": "https://www.repaircafe.org/",
+        "source": "Hacker News AI",
+        "score": 40
+      },
+      {
+        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
+        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
+        "source": "Hacker News AI",
+        "score": 311
+      },
+      {
+        "title": "An update on leaving Gmail for Fastmail",
+        "url": "https://moddedbear.com/an-update-on-leaving-gmail-for-fastmail/",
+        "source": "Hacker News AI",
+        "score": 139
+      },
+      {
+        "title": "How to disable or avoid intrusive AI",
+        "url": "https://www.librarian.net/notoai/",
+        "source": "Hacker News AI",
+        "score": 264
       },
       {
         "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
         "url": "https://speko.ai/",
         "source": "Hacker News AI",
-        "score": 92
+        "score": 94
       },
       {
         "title": "A simple fix for LLM tail latency",
         "url": "https://engineering.myhoai.com/posts/a-simple-fix-for-llm-tail-latency/",
         "source": "Hacker News AI",
-        "score": 40
+        "score": 42
       },
       {
         "title": "Roboflow Playground: Try and Compare 30 Computer Vision Models",
@@ -173,7 +173,7 @@
         "title": "Google wins bankruptcy auction for Spirit Airlines emails, chats, documents",
         "url": "https://www.axios.com/2026/08/17/google-spirit-airlines-bankruptcy",
         "source": "Hacker News AI",
-        "score": 38
+        "score": 49
       },
       {
         "title": "On AI regulation and messaging",
@@ -182,10 +182,10 @@
         "score": 235
       },
       {
-        "title": "Google to buy Spirit Airlines business data for $10M",
-        "url": "https://www.reuters.com/legal/litigation/google-buy-spirit-airlines-business-data-10-million-2026-08-17/",
+        "title": "Anthropic's ‘watermark’ text adulteration in Claude is a perversion of writing",
+        "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
         "source": "Hacker News AI",
-        "score": 28
+        "score": 769
       }
     ],
     "news": [
@@ -225,43 +225,7 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " Why are we still treating Canva like a dirty little secret? ",
-        "url": "https://www.creativebloq.com/design/design-software/why-are-we-still-treating-canva-like-a-dirty-little-secret",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Dear Disney, please keep Bluey's animation the way it is ",
-        "url": "https://www.creativebloq.com/art/animation/dear-disney-please-change-bluey-back-to-normal",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Instagram's new brand identity is more than just a wordmark ",
-        "url": "https://www.creativebloq.com/design/branding/instagrams-new-brand-identity-is-more-than-just-a-wordmark",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " While you were angry at Instagram, Jif quietly debuted a perfect new logo ",
-        "url": "https://www.creativebloq.com/design/branding/while-you-were-angry-at-instagram-jif-quietly-debuted-a-perfect-new-logo",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Is there a world where a £4,500 vibrating chair makes sense? ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/is-there-a-world-where-a-gbp4-500-vibrating-chair-makes-sense",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How Planet Coaster 2’s artists made Hollywood work as a theme park ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/how-planet-coaster-2s-artists-made-hollywood-work-as-a-theme-park",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Sony's answer to Hello Kitty is a kawaii character design for our times ",
-        "url": "https://www.creativebloq.com/art/character-design/sonys-answer-to-hello-kitty-is-a-kawaii-character-design-for-our-times",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "Scientists turn DNA into a memory device that uses 100x less power",
