@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-17T23:23:28.000271",
+    "last_updated": "2026-08-18T01:16:02.668744",
     "total_items": 65
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "How Bluesky draws its logo on screenshots",
         "url": "https://timmarinin.net/2026/bluesky-screenshots/",
         "source": "Hacker News",
-        "score": 82
+        "score": 198
       },
       {
         "title": "Quake Shareware, a CD-ROM just a little too full",
         "url": "https://fabiensanglard.net/quake_shareware_cd/index.html",
         "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "GPU Offload in Rust: Portable, Safe, and Fast",
-        "url": "https://arxiv.org/abs/2608.13759",
-        "source": "Hacker News",
-        "score": 140
-      },
-      {
-        "title": "A Preview of DuckDB v2.0",
-        "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
-        "source": "Hacker News",
-        "score": 502
+        "score": 130
       },
       {
         "title": "Fairphone 6 and PostmarketOS working main camera",
         "url": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
         "source": "Hacker News",
-        "score": 36
+        "score": 76
       },
       {
-        "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
-        "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+        "title": "Flock cameras haven't improved Atlanta's crime clearance rates",
+        "url": "https://atlpresscollective.com/2026/07/28/flock-cameras-atlanta-clearance-rates/",
         "source": "Hacker News",
-        "score": 299
+        "score": 33
+      },
+      {
+        "title": "A Preview of DuckDB v2.0",
+        "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
+        "source": "Hacker News",
+        "score": 528
+      },
+      {
+        "title": "GPU Offload in Rust: Portable, Safe, and Fast",
+        "url": "https://arxiv.org/abs/2608.13759",
+        "source": "Hacker News",
+        "score": 155
+      },
+      {
+        "title": "GPT-5.6 Sol Pricing Cut by 50%",
+        "url": "https://openrouter.ai/openai/gpt-5.6-sol",
+        "source": "Hacker News",
+        "score": 88
       },
       {
         "title": "Incident with Github.com",
         "url": "https://www.githubstatus.com/incidents/zkxwbgr0cnmx",
         "source": "Hacker News",
-        "score": 492
+        "score": 524
       },
       {
-        "title": "AI;DR (AI; Didn't Read)",
-        "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
+        "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
+        "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
         "source": "Hacker News",
-        "score": 489
-      },
-      {
-        "title": "How to disable or avoid intrusive AI",
-        "url": "https://www.librarian.net/notoai/",
-        "source": "Hacker News",
-        "score": 237
-      },
-      {
-        "title": "My friends all hate AI; I just joined an AI startup",
-        "url": "https://www.fast.ai/posts/2026-08-18-returning-to-AI/",
-        "source": "Hacker News",
-        "score": 11
+        "score": 311
       },
       {
         "title": "Olo (Color)",
         "url": "https://en.wikipedia.org/wiki/Olo_(color)",
         "source": "Hacker News",
-        "score": 273
-      },
-      {
-        "title": "Sun Clock",
-        "url": "https://sunclock.net/",
-        "source": "Hacker News",
-        "score": 154
+        "score": 308
       },
       {
         "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
         "url": "https://blog.roboflow.com/openai-gpt-5-6/",
         "source": "Hacker News",
-        "score": 289
+        "score": 298
+      },
+      {
+        "title": "The Road to MS-DOS 2.0",
+        "url": "https://nemanjatrifunovic.substack.com/p/the-road-to-ms-dos-2",
+        "source": "Hacker News",
+        "score": 14
       },
       {
         "title": "Judge sets framework for Nine PBS to retrieve archival data",
         "url": "https://current.org/2026/08/judge-sets-framework-for-nine-pbs-to-retrieve-archival-data/",
         "source": "Hacker News",
-        "score": 117
+        "score": 131
       },
       {
-        "title": "Intriguing stories in computer science",
-        "url": "https://inventwithpython.com/blog/intriguing-stories-in-cs.html",
+        "title": "How do functions like alloca allocate memory from the stack?",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20260817-40/?p=112617",
         "source": "Hacker News",
-        "score": 19
+        "score": 26
+      },
+      {
+        "title": "AI;DR (AI; Didn't Read)",
+        "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
+        "source": "Hacker News",
+        "score": 570
       }
     ],
     "ai": [
@@ -101,91 +101,91 @@
         "title": "Fairphone 6 and PostmarketOS working main camera",
         "url": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
         "source": "Hacker News AI",
-        "score": 36
-      },
-      {
-        "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
-        "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
-        "source": "Hacker News AI",
-        "score": 299
-      },
-      {
-        "title": "AI;DR (AI; Didn't Read)",
-        "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
-        "source": "Hacker News AI",
-        "score": 489
-      },
-      {
-        "title": "How to disable or avoid intrusive AI",
-        "url": "https://www.librarian.net/notoai/",
-        "source": "Hacker News AI",
-        "score": 237
-      },
-      {
-        "title": "My friends all hate AI; I just joined an AI startup",
-        "url": "https://www.fast.ai/posts/2026-08-18-returning-to-AI/",
-        "source": "Hacker News AI",
-        "score": 11
-      },
-      {
-        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
-        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
-        "source": "Hacker News AI",
-        "score": 289
-      },
-      {
-        "title": "Roboflow Playground: Try and Compare 30 Computer Vision Models",
-        "url": "https://blog.roboflow.com/roboflow-playground/",
-        "source": "Hacker News AI",
-        "score": 37
-      },
-      {
-        "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
-        "url": "https://speko.ai/",
-        "source": "Hacker News AI",
-        "score": 86
-      },
-      {
-        "title": "A simple fix for LLM tail latency",
-        "url": "https://engineering.myhoai.com/posts/a-simple-fix-for-llm-tail-latency/",
-        "source": "Hacker News AI",
-        "score": 27
+        "score": 76
       },
       {
         "title": "GPT-5.6 Sol Pricing Cut by 50%",
         "url": "https://openrouter.ai/openai/gpt-5.6-sol",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 88
       },
       {
-        "title": "An update on leaving Gmail for Fastmail",
-        "url": "https://moddedbear.com/an-update-on-leaving-gmail-for-fastmail/",
+        "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
+        "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
         "source": "Hacker News AI",
-        "score": 88
+        "score": 311
+      },
+      {
+        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
+        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
+        "source": "Hacker News AI",
+        "score": 298
+      },
+      {
+        "title": "AI;DR (AI; Didn't Read)",
+        "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
+        "source": "Hacker News AI",
+        "score": 570
+      },
+      {
+        "title": "How to disable or avoid intrusive AI",
+        "url": "https://www.librarian.net/notoai/",
+        "source": "Hacker News AI",
+        "score": 250
+      },
+      {
+        "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
+        "url": "https://speko.ai/",
+        "source": "Hacker News AI",
+        "score": 90
+      },
+      {
+        "title": "Repair Cafe – Fix Your Broken Items",
+        "url": "https://www.repaircafe.org/",
+        "source": "Hacker News AI",
+        "score": 7
+      },
+      {
+        "title": "Roboflow Playground: Try and Compare 30 Computer Vision Models",
+        "url": "https://blog.roboflow.com/roboflow-playground/",
+        "source": "Hacker News AI",
+        "score": 42
+      },
+      {
+        "title": "A simple fix for LLM tail latency",
+        "url": "https://engineering.myhoai.com/posts/a-simple-fix-for-llm-tail-latency/",
+        "source": "Hacker News AI",
+        "score": 36
+      },
+      {
+        "title": "Google wins bankruptcy auction for Spirit Airlines emails, chats, documents",
+        "url": "https://www.axios.com/2026/08/17/google-spirit-airlines-bankruptcy",
+        "source": "Hacker News AI",
+        "score": 8
       },
       {
         "title": "On AI regulation and messaging",
         "url": "https://twitter.com/DarioAmodei/status/2088758816376807762",
         "source": "Hacker News AI",
-        "score": 230
+        "score": 234
+      },
+      {
+        "title": "An update on leaving Gmail for Fastmail",
+        "url": "https://moddedbear.com/an-update-on-leaving-gmail-for-fastmail/",
+        "source": "Hacker News AI",
+        "score": 106
       },
       {
         "title": "Show HN: Sokoban AI Solver",
         "url": "https://mkornreich.me/projects/sokoban/",
         "source": "Hacker News AI",
-        "score": 66
+        "score": 67
       },
       {
         "title": "Anthropic's ‘watermark’ text adulteration in Claude is a perversion of writing",
         "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
         "source": "Hacker News AI",
-        "score": 753
-      },
-      {
-        "title": "LLM City – 3D render of all Kimi K3's weights as 2.5mm tiles",
-        "url": "https://magik.net/llmcity/",
-        "source": "Hacker News AI",
-        "score": 16
+        "score": 762
       }
     ],
     "news": [
@@ -364,7 +364,7 @@
         "source": "GitHub Blog"
       },
       {
-        "title": "Write your first prompt with the GitHub Copilot app",
+        "title": "GitHub Copilot app for Beginners: Write your first prompt",
         "url": "https://github.blog/ai-and-ml/github-copilot/write-your-first-prompt-with-the-github-copilot-app/",
         "source": "GitHub Blog"
       },
