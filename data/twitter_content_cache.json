@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-18T16:32:17.359908",
-    "total_items": 65
+    "last_updated": "2026-08-18T17:27:53.234107",
+    "total_items": 64
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Using the railway network as a flatbed scanner",
         "url": "https://philo.gay/linecam/",
         "source": "Hacker News",
-        "score": 220
+        "score": 266
       },
       {
-        "title": "Fixing a Bricked Framework Laptop",
+        "title": "Fixing a bricked Framework laptop",
         "url": "https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/",
         "source": "Hacker News",
-        "score": 167
+        "score": 199
       },
       {
-        "title": "The Amazon Tax",
+        "title": "The Amazon tax",
         "url": "https://seths.blog/2026/08/the-amazon-tax/",
         "source": "Hacker News",
-        "score": 364
+        "score": 450
       },
       {
-        "title": "Apple announces changes for apps in the European Union",
-        "url": "https://www.apple.com/newsroom/2026/08/apple-announces-changes-for-apps-in-the-european-union/",
+        "title": "Cursor launches Origin, GitHub alternative",
+        "url": "https://cursor.com/changelog/origin-code-hosting",
         "source": "Hacker News",
-        "score": 11
-      },
-      {
-        "title": "How I Under-Engineered My Book",
-        "url": "https://chriskiehl.com/article/how-i-under-engineered-my-book",
-        "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "Linux 7.3 improves performance when running out of vRAM",
-        "url": "https://pixelcluster.dev/VRAM-Overcommit/",
-        "source": "Hacker News",
-        "score": 392
-      },
-      {
-        "title": "Python Polars Cheatsheet (based on our O'Reilly book)",
-        "url": "https://opensource.posit.co/resources/cheatsheets/polars/",
-        "source": "Hacker News",
-        "score": 65
+        "score": 191
       },
       {
         "title": "Launch HN: machine0 (YC S26) – Persistent CPU and GPU VMs from the CLI",
         "url": "https://machine0.io",
         "source": "Hacker News",
-        "score": 3
+        "score": 13
       },
       {
-        "title": "Teaching my kid to code with a modern MUD",
-        "url": "https://tau.dev/2026/08/07/canon",
+        "title": "Linux 7.3 improves performance when running out of vRAM",
+        "url": "https://pixelcluster.dev/VRAM-Overcommit/",
         "source": "Hacker News",
-        "score": 138
+        "score": 417
       },
       {
-        "title": "Fairphone is now officially available in the United States",
-        "url": "https://www.fairphone.com/nl/stories/the-fairphone-gen-6-is-all-about-giving-you-more",
+        "title": "Python Polars Cheatsheet (based on our O'Reilly book)",
+        "url": "https://opensource.posit.co/resources/cheatsheets/polars/",
         "source": "Hacker News",
-        "score": 205
-      },
-      {
-        "title": "Composable Tests",
-        "url": "https://newsletter.kentbeck.com/p/composable-tests",
-        "source": "Hacker News",
-        "score": 38
-      },
-      {
-        "title": "Babies born under sugar rationing grew into adults with lower cancer risk",
-        "url": "https://theconversation.com/babies-born-under-sugar-rationing-grew-into-adults-with-lower-cancer-risk-289873",
-        "source": "Hacker News",
-        "score": 90
+        "score": 87
       },
       {
         "title": "Code-native generation of highly programmable 3D assets (2026)",
         "url": "https://arxiv.org/abs/2607.22738",
         "source": "Hacker News",
-        "score": 16
+        "score": 26
       },
       {
-        "title": "Google has acquired the data of failed US airline Spirit",
-        "url": "https://www.theregister.com/ai-and-ml/2026/08/18/google-buys-crashed-airline-spirits-data-at-auction-because-ai/5288962",
+        "title": "Teaching my kid to code with a modern MUD",
+        "url": "https://tau.dev/2026/08/07/canon",
         "source": "Hacker News",
-        "score": 428
+        "score": 152
       },
       {
         "title": "Splitting a Git Commit",
         "url": "https://blog.gnoack.org/post/git-history-split",
         "source": "Hacker News",
-        "score": 29
+        "score": 52
+      },
+      {
+        "title": "Degraded performance for multiple models",
+        "url": "https://status.claude.com/incidents/q7txxvbsftgq",
+        "source": "Hacker News",
+        "score": 120
+      },
+      {
+        "title": "We've flown a radiation-blocking vest to the Moon and back, and it worked",
+        "url": "https://arstechnica.com/science/2026/08/weve-flown-a-radiation-blocking-vest-to-the-moon-and-back-and-it-worked/",
+        "source": "Hacker News",
+        "score": 6
+      },
+      {
+        "title": "Superpowers, Not Superintelligence",
+        "url": "https://bond.now/news/superpowers-not-superintelligence",
+        "source": "Hacker News",
+        "score": 8
+      },
+      {
+        "title": "Composable Tests",
+        "url": "https://newsletter.kentbeck.com/p/composable-tests",
+        "source": "Hacker News",
+        "score": 50
+      },
+      {
+        "title": "Ask HN: I've quit six systems for tracking my illness. What works?",
+        "url": "https://news.ycombinator.com/item?id=49313346",
+        "source": "Hacker News",
+        "score": 19
       }
     ],
     "ai": [
@@ -101,61 +101,55 @@
         "title": "Using the railway network as a flatbed scanner",
         "url": "https://philo.gay/linecam/",
         "source": "Hacker News AI",
-        "score": 220
+        "score": 266
       },
       {
         "title": "Fairphone is now officially available in the United States",
         "url": "https://www.fairphone.com/nl/stories/the-fairphone-gen-6-is-all-about-giving-you-more",
         "source": "Hacker News AI",
-        "score": 205
+        "score": 241
       },
       {
         "title": "Google has acquired the data of failed US airline Spirit",
         "url": "https://www.theregister.com/ai-and-ml/2026/08/18/google-buys-crashed-airline-spirits-data-at-auction-because-ai/5288962",
         "source": "Hacker News AI",
-        "score": 428
+        "score": 464
+      },
+      {
+        "title": "Universal health coverage could save $1T and 114k lives a year: study",
+        "url": "https://ysph.yale.edu/news-article/universal-health-coverage-could-save-one-trillion-dollars-and-114000-lives-every-year/",
+        "source": "Hacker News AI",
+        "score": 421
       },
       {
         "title": "Baking a Model: A Metaphor for LLM Training",
         "url": "https://newsletter.kentbeck.com/p/baking-a-model",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 29
       },
       {
         "title": "Show HN: Saggar, a Mac terminal that keeps sessions and your attention organized",
         "url": "https://saggar.marginalutility.dev/",
         "source": "Hacker News AI",
-        "score": 40
-      },
-      {
-        "title": "Israel creates fake think tank in likely attempt to dupe AI chatbots",
-        "url": "https://responsiblestatecraft.org/israel-influence-chatgpt/",
-        "source": "Hacker News AI",
-        "score": 931
-      },
-      {
-        "title": "GPT-5.6 Sol Pricing Cut by 50%",
-        "url": "https://openrouter.ai/openai/gpt-5.6-sol",
-        "source": "Hacker News AI",
-        "score": 592
+        "score": 46
       },
       {
         "title": "Claude writing a macOS driver for my obscure HP printer built only for Windows",
         "url": "https://twitter.com/kuberwastaken/status/2089377982536388964",
         "source": "Hacker News AI",
-        "score": 109
+        "score": 122
       },
       {
-        "title": "Tell HN: Cursor has a hidden terminal command for steering its desktop AI agents",
-        "url": "https://news.ycombinator.com/item?id=49348049",
+        "title": "Why your Amazon order confirmation emails have become so unhelpful",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/977733/amazon-order-emails-google-gmail-ai-agents-data",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 8
       },
       {
         "title": "Fairphone 6 and PostmarketOS working main camera",
         "url": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
         "source": "Hacker News AI",
-        "score": 269
+        "score": 274
       },
       {
         "title": "IBM Simon (1994): the original smartphone, explained in its own ad [video]",
@@ -167,25 +161,25 @@
         "title": "Exercise intensity modulates interorgan communication and is associated with",
         "url": "https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791%2826%2900405-2?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2666379126004052%3Fshowall%3Dtrue",
         "source": "Hacker News AI",
-        "score": 86
+        "score": 88
+      },
+      {
+        "title": "US Government is pushing to gain unprecedented access to your medical records",
+        "url": "https://theconversation.com/us-government-is-pushing-to-gain-unprecedented-access-to-your-medical-records-as-data-protections-are-weakening-287021",
+        "source": "Hacker News AI",
+        "score": 6
       },
       {
         "title": "Repair Cafe – Fix Your Broken Items",
         "url": "https://www.repaircafe.org/",
         "source": "Hacker News AI",
-        "score": 163
+        "score": 166
       },
       {
         "title": "An update on leaving Gmail for Fastmail",
         "url": "https://moddedbear.com/an-update-on-leaving-gmail-for-fastmail/",
         "source": "Hacker News AI",
-        "score": 291
-      },
-      {
-        "title": "How to disable or avoid intrusive AI",
-        "url": "https://www.librarian.net/notoai/",
-        "source": "Hacker News AI",
-        "score": 331
+        "score": 293
       }
     ],
     "news": [
@@ -220,8 +214,8 @@
         "source": "BBC World"
       },
       {
-        "title": "IVF staff accused of misleading UK parents about sperm and egg donors in northern Cyprus",
-        "url": "https://www.bbc.co.uk/news/articles/c75gv9xnr3po?at_medium=RSS&at_campaign=rss",
+        "title": "Disney and ABC sue Trump's media regulator to stop early licence renewal ",
+        "url": "https://www.bbc.co.uk/news/articles/cx2rzr49vr2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -301,6 +295,31 @@
     ],
     "gaming": [
       {
+        "title": "Elden Ring: Tarnished Edition Gameplay Shows Off Switch 2 Version",
+        "url": "https://www.polygon.com/elden-ring-switch-2-tarnished-edition-gameplay-video/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Animal Crossing Fans Chose Best and Worst Villagers After 1.8 Million Votes",
+        "url": "https://www.polygon.com/animal-crossing-fans-vote-on-best-villagers-surprising-result/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Ryan Reynold's $200 Million Sci-fi Flop is Officially a Global Streaming Sleeper Hit",
+        "url": "https://www.polygon.com/ryan-reynolds-green-lantern-streaming-success-hbo-max-august-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Generative AI in Games is Being Embraced by More Players, New Study Says",
+        "url": "https://www.polygon.com/survey-gamers-more-comfortable-ai/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Prince of Persia: The Sands of Time Added to GOG Preservation Program Following Canceled Remake",
+        "url": "https://www.polygon.com/prince-of-persia-sands-of-time-gog-preservation-program-widescreen-support/",
+        "source": "Polygon"
+      },
+      {
         "title": "Is Scully Immortal? 'X-Files' Creator Chris Carter Answers the Internet’s 5 Biggest Questions",
         "url": "https://www.polygon.com/x-files-creator-chris-carter-5-fan-questions/",
         "source": "Polygon"
@@ -308,31 +327,6 @@
       {
         "title": "Tomodachi Life Player Recreates An Iconic SNES RPG: 'How is this even possible?'",
         "url": "https://www.polygon.com/earthbound-tomodachi-life-living-the-dream/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Batman Part 2's Sebastian Stan May Have Just Confirmed His Role",
-        "url": "https://www.polygon.com/sebastian-stan-the-batman-part-2-role-harvey-dent/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Surprising Reason 'Pokémon' Fans Are Giving The 30th Anniversary's \"Ugly\" Cards A Second Chance",
-        "url": "https://www.polygon.com/pokemon-tcg-30th-anniversary-future-rare-yoshirotten-rbg/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Marvel's Wolverine on PS5 Nails the Character, Not Much Else | Preview",
-        "url": "https://www.polygon.com/marvels-wolverine-hands-on/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The 6 Kingdom Hearts 4 Worlds We Want to See — and 4 Better Left in Darkness",
-        "url": "https://www.polygon.com/kingdom-hearts-4-worlds-theory/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Marvel Tokon' Has Allegedly Been Cracked And Runs Better Than Official Release",
-        "url": "https://www.polygon.com/marvel-tokon-drm-cracked-version-pc-release/",
         "source": "Polygon"
       }
     ],
