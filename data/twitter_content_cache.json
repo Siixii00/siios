@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-18T09:34:41.987746",
+    "last_updated": "2026-08-18T10:29:18.909326",
     "total_items": 65
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "Linux 7.3 improves performance when running out of vRAM",
         "url": "https://pixelcluster.dev/VRAM-Overcommit/",
         "source": "Hacker News",
-        "score": 68
+        "score": 134
       },
       {
         "title": "How Bluesky draws its logo on screenshots",
         "url": "https://timmarinin.net/2026/bluesky-screenshots/",
         "source": "Hacker News",
-        "score": 494
-      },
-      {
-        "title": "GPT-5.6 Sol Pricing Cut by 50%",
-        "url": "https://openrouter.ai/openai/gpt-5.6-sol",
-        "source": "Hacker News",
-        "score": 429
-      },
-      {
-        "title": "Quake Shareware, a CD-ROM just a little too full",
-        "url": "https://fabiensanglard.net/quake_shareware_cd/index.html",
-        "source": "Hacker News",
-        "score": 342
-      },
-      {
-        "title": "Fairphone 6 and PostmarketOS working main camera",
-        "url": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
-        "source": "Hacker News",
-        "score": 191
+        "score": 530
       },
       {
         "title": "Rethinking Database Programming",
         "url": "https://acadia.engineering/blog/rethinking-database-programming",
         "source": "Hacker News",
-        "score": 24
+        "score": 54
       },
       {
-        "title": "A Preview of DuckDB v2.0",
-        "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
+        "title": "GPT-5.6 Sol Pricing Cut by 50%",
+        "url": "https://openrouter.ai/openai/gpt-5.6-sol",
         "source": "Hacker News",
-        "score": 637
+        "score": 452
       },
       {
-        "title": "The Benchmarkpocalypse",
-        "url": "https://danluu.com/benchpocalypse/",
+        "title": "Quake Shareware, a CD-ROM just a little too full",
+        "url": "https://fabiensanglard.net/quake_shareware_cd/index.html",
         "source": "Hacker News",
-        "score": 98
+        "score": 359
+      },
+      {
+        "title": "Fairphone 6 and PostmarketOS working main camera",
+        "url": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
+        "source": "Hacker News",
+        "score": 204
       },
       {
         "title": "Ranking the Most Brilliantly Colored Birds with Data",
         "url": "https://moultano.wordpress.com/2026/08/14/fairly-ranking-the-most-brilliant-birds/",
         "source": "Hacker News",
-        "score": 15
+        "score": 24
       },
       {
-        "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
-        "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+        "title": "The Benchmarkpocalypse",
+        "url": "https://danluu.com/benchpocalypse/",
         "source": "Hacker News",
-        "score": 370
+        "score": 111
       },
       {
-        "title": "Olo (Color)",
-        "url": "https://en.wikipedia.org/wiki/Olo_(color)",
+        "title": "A Preview of DuckDB v2.0",
+        "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
         "source": "Hacker News",
-        "score": 436
-      },
-      {
-        "title": "Exercise intensity modulates interorgan communication and is associated with",
-        "url": "https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791%2826%2900405-2?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2666379126004052%3Fshowall%3Dtrue",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Shattered skeleton is first confirmed death from trebuchet",
-        "url": "https://www.science.org/content/article/shattered-skeleton-scottish-castle-first-confirmed-death-trebuchet",
-        "source": "Hacker News",
-        "score": 67
+        "score": 639
       },
       {
         "title": "IBM Simon (1994): the original smartphone, explained in its own ad [video]",
         "url": "https://www.youtube.com/watch?v=xoTFywZpPcc",
         "source": "Hacker News",
-        "score": 19
+        "score": 29
       },
       {
-        "title": "GPU Offload in Rust: Portable, Safe, and Fast",
-        "url": "https://arxiv.org/abs/2608.13759",
+        "title": "Israel creates fake think tank in likely attempt to dupe AI chatbots",
+        "url": "https://responsiblestatecraft.org/israel-influence-chatgpt/",
         "source": "Hacker News",
-        "score": 211
+        "score": 524
+      },
+      {
+        "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
+        "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+        "source": "Hacker News",
+        "score": 376
+      },
+      {
+        "title": "Exercise intensity modulates interorgan communication and is associated with",
+        "url": "https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791%2826%2900405-2?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2666379126004052%3Fshowall%3Dtrue",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
+        "title": "Olo (Color)",
+        "url": "https://en.wikipedia.org/wiki/Olo_(color)",
+        "source": "Hacker News",
+        "score": 450
+      },
+      {
+        "title": "I built a golf career management SIM (like Basketball GM, but golf)",
+        "url": "https://www.rainydaygc.com/",
+        "source": "Hacker News",
+        "score": 4
       }
     ],
     "ai": [
@@ -101,102 +101,102 @@
         "title": "GPT-5.6 Sol Pricing Cut by 50%",
         "url": "https://openrouter.ai/openai/gpt-5.6-sol",
         "source": "Hacker News AI",
-        "score": 429
+        "score": 452
       },
       {
         "title": "Fairphone 6 and PostmarketOS working main camera",
         "url": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
         "source": "Hacker News AI",
-        "score": 191
-      },
-      {
-        "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
-        "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
-        "source": "Hacker News AI",
-        "score": 370
-      },
-      {
-        "title": "Exercise intensity modulates interorgan communication and is associated with",
-        "url": "https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791%2826%2900405-2?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2666379126004052%3Fshowall%3Dtrue",
-        "source": "Hacker News AI",
-        "score": 22
+        "score": 204
       },
       {
         "title": "IBM Simon (1994): the original smartphone, explained in its own ad [video]",
         "url": "https://www.youtube.com/watch?v=xoTFywZpPcc",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 29
       },
       {
         "title": "Israel creates fake think tank in likely attempt to dupe AI chatbots",
         "url": "https://responsiblestatecraft.org/israel-influence-chatgpt/",
         "source": "Hacker News AI",
-        "score": 482
+        "score": 524
+      },
+      {
+        "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
+        "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+        "source": "Hacker News AI",
+        "score": 376
+      },
+      {
+        "title": "Exercise intensity modulates interorgan communication and is associated with",
+        "url": "https://www.cell.com/cell-reports-medicine/fulltext/S2666-3791%2826%2900405-2?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS2666379126004052%3Fshowall%3Dtrue",
+        "source": "Hacker News AI",
+        "score": 31
       },
       {
         "title": "An update on leaving Gmail for Fastmail",
         "url": "https://moddedbear.com/an-update-on-leaving-gmail-for-fastmail/",
         "source": "Hacker News AI",
-        "score": 230
-      },
-      {
-        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
-        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
-        "source": "Hacker News AI",
-        "score": 338
-      },
-      {
-        "title": "AI;DR (AI; Didn't Read)",
-        "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
-        "source": "Hacker News AI",
-        "score": 874
+        "score": 241
       },
       {
         "title": "Repair Cafe – Fix Your Broken Items",
         "url": "https://www.repaircafe.org/",
         "source": "Hacker News AI",
-        "score": 104
+        "score": 116
+      },
+      {
+        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
+        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
+        "source": "Hacker News AI",
+        "score": 340
       },
       {
         "title": "How to disable or avoid intrusive AI",
         "url": "https://www.librarian.net/notoai/",
         "source": "Hacker News AI",
-        "score": 297
+        "score": 301
+      },
+      {
+        "title": "AI;DR (AI; Didn't Read)",
+        "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
+        "source": "Hacker News AI",
+        "score": 891
+      },
+      {
+        "title": "Google buys crashed airline Spirit's data at auction, because AI",
+        "url": "https://www.theregister.com/ai-and-ml/2026/08/18/google-buys-crashed-airline-spirits-data-at-auction-because-ai/5288962",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
         "url": "https://speko.ai/",
         "source": "Hacker News AI",
-        "score": 104
+        "score": 106
       },
       {
         "title": "OpenAI disbanded the team that assessed catastrophic model risks",
         "url": "https://thenextweb.com/news/openai-preparedness-team-disbanded-ipo-streamlining",
         "source": "Hacker News AI",
-        "score": 8
-      },
-      {
-        "title": "Roboflow Playground: Try and Compare 30 Computer Vision Models",
-        "url": "https://blog.roboflow.com/roboflow-playground/",
-        "source": "Hacker News AI",
-        "score": 49
+        "score": 10
       },
       {
         "title": "On AI regulation and messaging",
         "url": "https://twitter.com/DarioAmodei/status/2088758816376807762",
         "source": "Hacker News AI",
-        "score": 241
+        "score": 242
       }
     ],
     "news": [
       {
-        "title": "IVF staff accused of misleading UK parents about sperm and egg donors in northern Cyprus",
-        "url": "https://www.bbc.co.uk/news/articles/c75gv9xnr3po?at_medium=RSS&at_campaign=rss",
+        "title": "Russia warns UK will pay for supplying drones to Ukraine",
+        "url": "https://www.bbc.co.uk/news/articles/cy5dz0kkn0wo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Russia warns UK will pay for supplying drones to Ukraine",
-        "url": "https://www.bbc.co.uk/news/articles/cy5dz0kkn0wo?at_medium=RSS&at_campaign=rss",
+        "title": "IVF staff accused of misleading UK parents about sperm and egg donors in northern Cyprus",
+        "url": "https://www.bbc.co.uk/news/articles/c75gv9xnr3po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -227,6 +227,11 @@
     ],
     "art": [
       {
+        "title": " Tell us what you think about the new Instagram wordmark ",
+        "url": "https://www.creativebloq.com/design/logos-icons/tell-us-what-you-think-about-the-new-instagram-wordmark",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Clay looks like Disney's most unusual and creative movie in years ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/clay-looks-like-disneys-most-unusual-and-creative-movie-in-years",
         "source": "Creative Bloq"
@@ -254,11 +259,6 @@
       {
         "title": " Dear Disney, please keep Bluey's animation the way it is ",
         "url": "https://www.creativebloq.com/art/animation/dear-disney-please-change-bluey-back-to-normal",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Instagram's new brand identity is more than just a wordmark ",
-        "url": "https://www.creativebloq.com/design/branding/instagrams-new-brand-identity-is-more-than-just-a-wordmark",
         "source": "Creative Bloq"
       }
     ],
@@ -301,6 +301,21 @@
     ],
     "gaming": [
       {
+        "title": "Time loops are a weird genre for an anxious time",
+        "url": "https://www.polygon.com/video/time-loops-are-a-weird-genre-for-an-anxious-time/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Disappointing 'Fortnite' Chapter 7 Season 4 Battle Pass Will at Least Give Players a Sonic Skin",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-battle-pass-reveal-trailer/",
+        "source": "Polygon"
+      },
+      {
+        "title": "MTG Arena Players Can Now Report Salty Losers",
+        "url": "https://www.polygon.com/mtg-arena-report-players-update/",
+        "source": "Polygon"
+      },
+      {
         "title": "The Most Important Sci-Fi Movie of the Century Is Officially Streaming on Hulu",
         "url": "https://www.polygon.com/ex-machina-sci-fi-thriller-movies-hulu-august-2026/",
         "source": "Polygon"
@@ -318,21 +333,6 @@
       {
         "title": "The 12 Biggest Video Game Flops of All Time",
         "url": "https://www.polygon.com/12-biggest-gaming-flops-ever/",
-        "source": "Polygon"
-      },
-      {
-        "title": "MTG Hobbit Secret Lair Bonus Sheet: Diabolic Intent gets the perfect LOTR art",
-        "url": "https://www.polygon.com/mtg-hobbit-bonus-sheet-secret-lair-spoilers-diabolic-intent/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Marvel's Ghost Rider Movie Gets Official 2028 Release Date",
-        "url": "https://www.polygon.com/ghost-rider-ryan-gosling-2028-release-date/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Luna Abyss is quietly one of the best shooters of 2026",
-        "url": "https://www.polygon.com/luna-abyss-impressions-game-pass/",
         "source": "Polygon"
       }
     ],
