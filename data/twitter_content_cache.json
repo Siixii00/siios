@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-18T21:25:47.479572",
-    "total_items": 65
+    "last_updated": "2026-08-18T22:24:28.550834",
+    "total_items": 58
   },
   "content": {
     "tech": [
@@ -9,123 +9,129 @@
         "title": "Beware Management Consultants",
         "url": "https://about.iceland.co.uk/our-story/the-dark-ages/beware-management-consultants/",
         "source": "Hacker News",
-        "score": 264
+        "score": 365
+      },
+      {
+        "title": "Claude Code Teaching macOS to Natively Print to the HP Laser 1008a",
+        "url": "https://cdn.kuber.studio/chat/hp-laser-1008a-driver",
+        "source": "Hacker News",
+        "score": 59
+      },
+      {
+        "title": "Being Ambitious and Being a Dad",
+        "url": "https://nicholascharriere.com/blog/being-ambitious-and-being-a-dad/",
+        "source": "Hacker News",
+        "score": 78
       },
       {
         "title": "Turbovec – Google's TurboQuant for vector search in Rust",
         "url": "https://github.com/RyanCodrai/turbovec",
         "source": "Hacker News",
-        "score": 148
+        "score": 181
+      },
+      {
+        "title": "A 3D fruit fly on macOS desktop powered by the real FlyWire connectome",
+        "url": "https://github.com/DenisSergeevitch/desktop-fly",
+        "source": "Hacker News",
+        "score": 10
       },
       {
         "title": "The Amazon tax",
         "url": "https://seths.blog/2026/08/the-amazon-tax/",
         "source": "Hacker News",
-        "score": 723
+        "score": 772
+      },
+      {
+        "title": "Companies promote incompetent employees to management tolimit damage they can do",
+        "url": "https://lawsofsoftwareengineering.com/laws/dilbert-principle/",
+        "source": "Hacker News",
+        "score": 29
       },
       {
         "title": "Using the railway network as a flatbed scanner",
         "url": "https://philo.gay/linecam/",
         "source": "Hacker News",
-        "score": 359
+        "score": 370
       },
       {
         "title": "Fixing a bricked Framework laptop",
         "url": "https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/",
         "source": "Hacker News",
-        "score": 306
+        "score": 325
       },
       {
         "title": "Cursor launches Origin, GitHub alternative",
         "url": "https://cursor.com/changelog/origin-code-hosting",
         "source": "Hacker News",
-        "score": 367
-      },
-      {
-        "title": "How does IKEA come up with names for its products?",
-        "url": "https://www.ikea.com/se/en/customer-service/knowledge/articles/6f564c4d-2ccc-46de-b643-545a3948dc79.html",
-        "source": "Hacker News",
-        "score": 157
-      },
-      {
-        "title": "Pacing model development in an era of cyber-critical capabilities",
-        "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/",
-        "source": "Hacker News",
-        "score": 39
+        "score": 402
       },
       {
         "title": "2,500-year-old sculpture discovered at UNESCO site in Turkey",
         "url": "https://www.theartnewspaper.com/2026/08/07/colossal-2500-year-old-sculpture-discovered-turkey-unesco-site",
         "source": "Hacker News",
-        "score": 34
+        "score": 48
       },
       {
         "title": "Linux 7.3 improves performance when running out of vRAM",
         "url": "https://pixelcluster.dev/VRAM-Overcommit/",
         "source": "Hacker News",
-        "score": 479
+        "score": 488
       },
       {
-        "title": "Claude Code Teaching macOS to Natively Print to the HP Laser 1008a",
-        "url": "https://cdn.kuber.studio/chat/hp-laser-1008a-driver",
+        "title": "How does IKEA come up with names for its products?",
+        "url": "https://www.ikea.com/se/en/customer-service/knowledge/articles/6f564c4d-2ccc-46de-b643-545a3948dc79.html",
         "source": "Hacker News",
-        "score": 3
+        "score": 174
+      },
+      {
+        "title": "Pacing model development in an era of cyber-critical capabilities",
+        "url": "https://openai.com/index/pacing-model-development-cyber-capabilities/",
+        "source": "Hacker News",
+        "score": 50
       },
       {
         "title": "Memory prices climb 500% in 12 months",
         "url": "https://www.tomshardware.com/pc-components/ram/memory-prices-climb-500-percent-in-12-months-up-to-10x-the-lowest-ever-tracked-prices-128gb-of-ddr5-now-usd3-399",
         "source": "Hacker News",
-        "score": 364
-      },
-      {
-        "title": "Mycorrhizal Infrastructure Map",
-        "url": "https://a-hidden-infrastructure.spun.earth/map",
-        "source": "Hacker News",
-        "score": 17
-      },
-      {
-        "title": "Launch HN: machine0 (YC S26) – Persistent CPU and GPU VMs from the CLI",
-        "url": "https://machine0.io",
-        "source": "Hacker News",
-        "score": 44
-      },
-      {
-        "title": "Python Polars Cheatsheet (based on our O'Reilly book)",
-        "url": "https://opensource.posit.co/resources/cheatsheets/polars/",
-        "source": "Hacker News",
-        "score": 138
+        "score": 400
       }
     ],
     "ai": [
       {
-        "title": "Using the railway network as a flatbed scanner",
-        "url": "https://philo.gay/linecam/",
-        "source": "Hacker News AI",
-        "score": 359
-      },
-      {
         "title": "Claude Code Teaching macOS to Natively Print to the HP Laser 1008a",
         "url": "https://cdn.kuber.studio/chat/hp-laser-1008a-driver",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 59
       },
       {
-        "title": "Data centers raise nearby temperatures by up to 4 degrees in Phoenix",
-        "url": "https://asmedigitalcollection.asme.org/sustainablebuildings/article/7/2/024501/1233035/Data-Center-Waste-Heat-as-an-Emerging-Urban",
+        "title": "Using the railway network as a flatbed scanner",
+        "url": "https://philo.gay/linecam/",
         "source": "Hacker News AI",
-        "score": 254
+        "score": 370
       },
       {
         "title": "Norway Should Buy OpenAI",
         "url": "https://www.onethousandmeans.com/p/norway-should-buy-openai",
         "source": "Hacker News AI",
-        "score": 150
+        "score": 172
       },
       {
         "title": "Universal health coverage could save $1T and 114k lives a year: study",
         "url": "https://ysph.yale.edu/news-article/universal-health-coverage-could-save-one-trillion-dollars-and-114000-lives-every-year/",
         "source": "Hacker News AI",
-        "score": 601
+        "score": 633
+      },
+      {
+        "title": "Data centers raise nearby temperatures by up to 4 degrees in Phoenix",
+        "url": "https://asmedigitalcollection.asme.org/sustainablebuildings/article/7/2/024501/1233035/Data-Center-Waste-Heat-as-an-Emerging-Urban",
+        "source": "Hacker News AI",
+        "score": 275
+      },
+      {
+        "title": "Fairphone is now officially available in the United States",
+        "url": "https://www.fairphone.com/nl/stories/the-fairphone-gen-6-is-all-about-giving-you-more",
+        "source": "Hacker News AI",
+        "score": 339
       },
       {
         "title": "Show HN: macOS data protection keychain for Electron apps",
@@ -134,28 +140,16 @@
         "score": 19
       },
       {
-        "title": "Fairphone is now officially available in the United States",
-        "url": "https://www.fairphone.com/nl/stories/the-fairphone-gen-6-is-all-about-giving-you-more",
-        "source": "Hacker News AI",
-        "score": 329
-      },
-      {
         "title": "Google has acquired the data of failed US airline Spirit",
         "url": "https://www.theregister.com/ai-and-ml/2026/08/18/google-buys-crashed-airline-spirits-data-at-auction-because-ai/5288962",
         "source": "Hacker News AI",
-        "score": 547
-      },
-      {
-        "title": "Show HN: PantheonGPU – GPU health testing and AI workload benchmarking",
-        "url": "https://pantheongpu.com/",
-        "source": "Hacker News AI",
-        "score": 10
+        "score": 553
       },
       {
         "title": "AI won't solve the work-theater problem",
         "url": "https://think-twice.me/?p=102",
         "source": "Hacker News AI",
-        "score": 15
+        "score": 18
       },
       {
         "title": "Show HN: Saggar, a Mac terminal that keeps sessions and your attention organized",
@@ -164,10 +158,22 @@
         "score": 59
       },
       {
+        "title": "Show HN: PantheonGPU – GPU health testing and AI workload benchmarking",
+        "url": "https://pantheongpu.com/",
+        "source": "Hacker News AI",
+        "score": 10
+      },
+      {
+        "title": "OpenAI pauses frontier model training",
+        "url": "https://twitter.com/sama/status/2089787807611195475",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
         "title": "Claude Code May–August 2026 weekly limits promotion",
         "url": "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion",
         "source": "Hacker News AI",
-        "score": 238
+        "score": 244
       },
       {
         "title": "Baking a Model: A Metaphor for LLM Training",
@@ -176,16 +182,10 @@
         "score": 31
       },
       {
-        "title": "IBM Simon (1994): the original smartphone, explained in its own ad [video]",
-        "url": "https://www.youtube.com/watch?v=xoTFywZpPcc",
+        "title": "200B Tokens Later: A Month of Letting AI Agents Decompile MW2",
+        "url": "https://momo5502.com/posts/2026-08-17-mw2-decompilation/",
         "source": "Hacker News AI",
-        "score": 80
-      },
-      {
-        "title": "Why your Amazon order confirmation emails have become so unhelpful",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/977733/amazon-order-emails-google-gmail-ai-agents-data",
-        "source": "Hacker News AI",
-        "score": 57
+        "score": 5
       }
     ],
     "news": [
@@ -225,43 +225,7 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " This beautiful fountain pen is 40% off right now ",
-        "url": "https://www.creativebloq.com/design/product-design/this-beautiful-fountain-pen-is-40-percent-off-right-now",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Build your own t-shirt printing empire with £1,130 off this starter kit ",
-        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/build-your-own-t-shirt-printing-empire-with-gbp1-130-off-this-starter-kit",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Has Apple dropped the ball with its Gen Z marketing? ",
-        "url": "https://www.creativebloq.com/design/advertising/has-apple-dropped-the-ball-with-its-gen-z-marketing",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " My favourite iPhone accessories I've tested this year – cases, power banks, ring holders and stands ",
-        "url": "https://www.creativebloq.com/tech/accessories/my-favourite-iphone-accessories-ive-tested-this-year-cases-power-banks-ring-holders-and-stands",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The story of China's viral \"worst animation ever\" just keeps getting weirder ",
-        "url": "https://www.creativebloq.com/art/animation/the-story-of-chinas-viral-worst-animation-ever-just-keeps-getting-weirder",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Our favourite 5* gaming chair just got a comfort upgrade ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/our-favourite-5-gaming-chair-just-got-a-comfort-upgrade",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apple's leaked new AirPods Pro look like a privacy nightmare ",
-        "url": "https://www.creativebloq.com/design/product-design/apples-leaked-airpods-pro-upgrade-looks-like-a-privacy-nightmare",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "Scientists turn DNA into a memory device that uses 100x less power",
@@ -301,6 +265,16 @@
     ],
     "gaming": [
       {
+        "title": "Peacock Just Raised Its Prices for the Fourth Straight Year",
+        "url": "https://www.polygon.com/peacock-price-increase-august-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "32 Years Later, The Single Best 'X-Files' Quote Of All Time Still Haunts Me",
+        "url": "https://www.polygon.com/best-x-files-quote/",
+        "source": "Polygon"
+      },
+      {
         "title": "'GTA 6' Hackers Are Targeting Rockstar's Controversial Decisions",
         "url": "https://www.polygon.com/gta-6-hackers-cyberleek-physical-discs/",
         "source": "Polygon"
@@ -323,16 +297,6 @@
       {
         "title": "New Star Wars Series Officially Exposes a Dark Secret Behind the Sequel Trilogy",
         "url": "https://www.polygon.com/ahsoka-season-2-star-wars-canon/",
-        "source": "Polygon"
-      },
-      {
-        "title": "HBO’s Sci-Fi Detective Series With a Near-Perfect Rotten Tomatoes Score Is Officially #1 on Streaming",
-        "url": "https://www.polygon.com/lanterns-popular-on-hbo-max-august-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Wolverine Director Explains Why the New PS5 Game Isn't Open-World",
-        "url": "https://www.polygon.com/wolverine-linear-open-world-interview/",
         "source": "Polygon"
       }
     ],
