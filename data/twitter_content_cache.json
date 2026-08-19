@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-19T22:25:40.950650",
-    "total_items": 59
+    "last_updated": "2026-08-19T23:23:33.693642",
+    "total_items": 58
   },
   "content": {
     "tech": [
@@ -9,35 +9,35 @@
         "title": "OpenRouter is joining Stripe",
         "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
         "source": "Hacker News",
-        "score": 483
+        "score": 539
       },
       {
         "title": "Go 1.27",
         "url": "https://go.dev/blog/go1.27",
         "source": "Hacker News",
-        "score": 351
-      },
-      {
-        "title": "Unsloth Dynamic 3.0 GGUFs",
-        "url": "https://unsloth.ai/docs/basics/dynamic-3.0-ggufs",
-        "source": "Hacker News",
-        "score": 135
-      },
-      {
-        "title": "Unlocking a locked/deactivated e-waste Cricut Maker",
-        "url": "https://sprocketfox.io/xssfox/2026/07/01/cricut-unlock/",
-        "source": "Hacker News",
-        "score": 79
+        "score": 390
       },
       {
         "title": "Google replaced Git tags for certain source code with obtaining via Google Drive",
         "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
         "source": "Hacker News",
-        "score": 174
+        "score": 229
       },
       {
-        "title": "DFlash 2: Keep Drafting Parallel",
-        "url": "https://inco.ai/blog/dflash2/",
+        "title": "Unsloth Dynamic 3.0 GGUFs",
+        "url": "https://unsloth.ai/docs/basics/dynamic-3.0-ggufs",
+        "source": "Hacker News",
+        "score": 157
+      },
+      {
+        "title": "Unlocking a locked/deactivated e-waste Cricut Maker",
+        "url": "https://sprocketfox.io/xssfox/2026/07/01/cricut-unlock/",
+        "source": "Hacker News",
+        "score": 102
+      },
+      {
+        "title": "Sol Loves to Cheat",
+        "url": "https://jumploops.com/blog/sol-loves-to-cheat/",
         "source": "Hacker News",
         "score": 40
       },
@@ -45,55 +45,55 @@
         "title": "A joke domain purchase turned in geopolitical warfare",
         "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
         "source": "Hacker News",
-        "score": 680
-      },
-      {
-        "title": "Casio F-B100W-1A",
-        "url": "https://www.casio.com/uk/watches/casio/product.F-B100W-1A/",
-        "source": "Hacker News",
-        "score": 228
-      },
-      {
-        "title": "The little-known winstart.bat batch file",
-        "url": "https://devblogs.microsoft.com/oldnewthing/20260811-00/?p=112605",
-        "source": "Hacker News",
-        "score": 47
-      },
-      {
-        "title": "Pressed Penny Machine Map",
-        "url": "https://pennypresses.net/home/map.php",
-        "source": "Hacker News",
-        "score": 25
+        "score": 707
       },
       {
         "title": "Os8088.com: IBM XT OS now has a Browser, CP/M 2.2 with Z80 core and MS Word 1.1a",
         "url": "https://os8088.com/spotlight/",
         "source": "Hacker News",
-        "score": 11
+        "score": 22
+      },
+      {
+        "title": "Feature Request: Support AGENTS.md",
+        "url": "https://github.com/anthropics/claude-code/issues/6235",
+        "source": "Hacker News",
+        "score": 74
+      },
+      {
+        "title": "DFlash 2: Keep Drafting Parallel",
+        "url": "https://inco.ai/blog/dflash2/",
+        "source": "Hacker News",
+        "score": 53
+      },
+      {
+        "title": "Casio F-B100W-1A",
+        "url": "https://www.casio.com/uk/watches/casio/product.F-B100W-1A/",
+        "source": "Hacker News",
+        "score": 244
+      },
+      {
+        "title": "Pressed Penny Machine Map",
+        "url": "https://pennypresses.net/home/map.php",
+        "source": "Hacker News",
+        "score": 32
+      },
+      {
+        "title": "The little-known winstart.bat batch file",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20260811-00/?p=112605",
+        "source": "Hacker News",
+        "score": 61
       },
       {
         "title": "Geolocating a random island using geometry and CUDA programming",
         "url": "https://yassa9.github.io/osint/gralhix-004/",
         "source": "Hacker News",
-        "score": 380
-      },
-      {
-        "title": "Ornith-1.5: From Self-Scaffolding to Self-Improvement",
-        "url": "https://ornith.ai/ornith_1_5.html",
-        "source": "Hacker News",
-        "score": 155
+        "score": 388
       },
       {
         "title": "Mathematics in the age of AI",
         "url": "https://arxiv.org/abs/2608.16753",
         "source": "Hacker News",
-        "score": 96
-      },
-      {
-        "title": "Rules of good social skills (2025)",
-        "url": "https://liamrosen.com/2025/07/24/33-rules-of-good-social-skills/",
-        "source": "Hacker News",
-        "score": 60
+        "score": 104
       }
     ],
     "ai": [
@@ -101,55 +101,49 @@
         "title": "Google replaced Git tags for certain source code with obtaining via Google Drive",
         "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
         "source": "Hacker News AI",
-        "score": 174
+        "score": 229
       },
       {
         "title": "A joke domain purchase turned in geopolitical warfare",
         "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
         "source": "Hacker News AI",
-        "score": 680
+        "score": 707
       },
       {
         "title": "Mathematics in the age of AI",
         "url": "https://arxiv.org/abs/2608.16753",
         "source": "Hacker News AI",
-        "score": 96
+        "score": 104
       },
       {
         "title": "Extensible Software in the age of LLMs",
         "url": "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/",
         "source": "Hacker News AI",
-        "score": 89
+        "score": 96
       },
       {
         "title": "Air Theremin – A browser theremin you play by waving at your webcam",
         "url": "https://theremin.bizibah.com/",
         "source": "Hacker News AI",
-        "score": 231
+        "score": 235
       },
       {
         "title": "MicroGPT-C in pure C hits 10M TPS on Apple M5",
         "url": "https://github.com/vixhal-baraiya/microgpt-c",
         "source": "Hacker News AI",
-        "score": 115
+        "score": 118
       },
       {
         "title": "Devices with GrapheneOS support should be available in 2027",
         "url": "https://grapheneos.social/@GrapheneOS/117078064184215730",
         "source": "Hacker News AI",
-        "score": 564
+        "score": 569
       },
       {
         "title": "Chain-of-Thought Reasoning in the Wild Is Not Always Faithful (2025)",
         "url": "https://arxiv.org/abs/2503.08679",
         "source": "Hacker News AI",
-        "score": 56
-      },
-      {
-        "title": "Claude writing a macOS driver for my obscure HP printer built only for Windows",
-        "url": "https://twitter.com/kuberwastaken/status/2089377982536388964",
-        "source": "Hacker News AI",
-        "score": 307
+        "score": 59
       }
     ],
     "news": [
