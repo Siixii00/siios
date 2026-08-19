@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-19T19:26:31.611569",
-    "total_items": 54
+    "last_updated": "2026-08-19T20:28:53.511552",
+    "total_items": 61
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "OpenRouter is joining Stripe",
         "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
         "source": "Hacker News",
-        "score": 226
+        "score": 334
       },
       {
         "title": "Go 1.27",
         "url": "https://go.dev/blog/go1.27",
         "source": "Hacker News",
-        "score": 82
-      },
-      {
-        "title": "A joke domain purchase turned in geopolitical warfare",
-        "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
-        "source": "Hacker News",
-        "score": 520
-      },
-      {
-        "title": "Ornith-1.5: From Self-Scaffolding to Self-Improvement",
-        "url": "https://ornith.ai/ornith_1_5.html",
-        "source": "Hacker News",
-        "score": 114
-      },
-      {
-        "title": "Geolocating a random island using geometry and CUDA programming",
-        "url": "https://yassa9.github.io/osint/gralhix-004/",
-        "source": "Hacker News",
-        "score": 318
-      },
-      {
-        "title": "Extensible Software in the age of LLMs",
-        "url": "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/",
-        "source": "Hacker News",
-        "score": 54
-      },
-      {
-        "title": "OpenLogi",
-        "url": "https://openlogi.org/en",
-        "source": "Hacker News",
-        "score": 1440
-      },
-      {
-        "title": "How Kubernetes Probes Work",
-        "url": "https://ngrok.com/blog/probes",
-        "source": "Hacker News",
-        "score": 61
-      },
-      {
-        "title": "Introducing MicroLighter",
-        "url": "https://daverupert.com/2026/08/microlighter/",
-        "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "Launch HN: OneCLI (YC S26) – OSS sandboxed agent harness for teams",
-        "url": "https://github.com/onecli/onecli",
-        "source": "Hacker News",
-        "score": 32
+        "score": 224
       },
       {
         "title": "Unsloth Dynamic 3.0 GGUFs",
         "url": "https://unsloth.ai/docs/basics/dynamic-3.0-ggufs",
         "source": "Hacker News",
-        "score": 8
+        "score": 65
       },
       {
-        "title": "Remote workers report the highest well-being in study of 7,700 employees",
-        "url": "https://www.colorado.edu/today/2026/08/12/remote-workers-report-highest-well-being-study-7700-employees",
+        "title": "Pixel 11 Pro Fold feels like the end of an era",
+        "url": "https://www.theverge.com/tech/981956/google-pixel-11-pro-fold-review",
         "source": "Hacker News",
-        "score": 294
+        "score": 19
       },
       {
-        "title": "Mathematics in the Age of AI",
+        "title": "A joke domain purchase turned in geopolitical warfare",
+        "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
+        "source": "Hacker News",
+        "score": 589
+      },
+      {
+        "title": "Unlocking a locked/deactivated e-waste Cricut Maker",
+        "url": "https://sprocketfox.io/xssfox/2026/07/01/cricut-unlock/",
+        "source": "Hacker News",
+        "score": 25
+      },
+      {
+        "title": "Police officer used Flock cameras to track estranged wife 717 times",
+        "url": "https://www.wsbtv.com/news/trending/affidavit-police-officer-used-flock-cameras-track-estranged-wife-717-times/5DVBYU2XTJEVDJR7LPZCBR7M5M/",
+        "source": "Hacker News",
+        "score": 146
+      },
+      {
+        "title": "New Casio F-B100W – Upgrade to the iconic F-91W after 40 years",
+        "url": "https://www.casio.com/uk/watches/casio/product.F-B100W-1A/",
+        "source": "Hacker News",
+        "score": 170
+      },
+      {
+        "title": "Ornith-1.5: From Self-Scaffolding to Self-Improvement",
+        "url": "https://ornith.ai/ornith_1_5.html",
+        "source": "Hacker News",
+        "score": 133
+      },
+      {
+        "title": "Geolocating a random island using geometry and CUDA programming",
+        "url": "https://yassa9.github.io/osint/gralhix-004/",
+        "source": "Hacker News",
+        "score": 346
+      },
+      {
+        "title": "Extensible Software in the age of LLMs",
+        "url": "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/",
+        "source": "Hacker News",
+        "score": 72
+      },
+      {
+        "title": "How Kubernetes Probes Work",
+        "url": "https://ngrok.com/blog/probes",
+        "source": "Hacker News",
+        "score": 80
+      },
+      {
+        "title": "Mathematics in the age of AI",
         "url": "https://arxiv.org/abs/2608.16753",
         "source": "Hacker News",
-        "score": 49
+        "score": 65
       },
       {
-        "title": "Chain-of-Thought Reasoning in the Wild Is Not Always Faithful",
-        "url": "https://arxiv.org/abs/2503.08679",
+        "title": "Google replaced Git tags for certain source code with obtaining via Google Drive",
+        "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
         "source": "Hacker News",
-        "score": 38
+        "score": 60
       },
       {
-        "title": "Air Theremin – a browser theremin you play by waving at your webcam",
-        "url": "https://theremin.bizibah.com/",
+        "title": "Ramp Launches a Model Router",
+        "url": "https://router.com",
         "source": "Hacker News",
-        "score": 199
+        "score": 25
       }
     ],
     "ai": [
@@ -101,67 +101,67 @@
         "title": "A joke domain purchase turned in geopolitical warfare",
         "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
         "source": "Hacker News AI",
-        "score": 520
+        "score": 589
       },
       {
         "title": "Extensible Software in the age of LLMs",
         "url": "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/",
         "source": "Hacker News AI",
-        "score": 54
+        "score": 72
       },
       {
-        "title": "Mathematics in the Age of AI",
+        "title": "Mathematics in the age of AI",
         "url": "https://arxiv.org/abs/2608.16753",
         "source": "Hacker News AI",
-        "score": 49
+        "score": 65
       },
       {
-        "title": "Chain-of-Thought Reasoning in the Wild Is Not Always Faithful",
-        "url": "https://arxiv.org/abs/2503.08679",
+        "title": "Google replaced Git tags for certain source code with obtaining via Google Drive",
+        "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
         "source": "Hacker News AI",
-        "score": 38
+        "score": 60
       },
       {
         "title": "Air Theremin – a browser theremin you play by waving at your webcam",
         "url": "https://theremin.bizibah.com/",
         "source": "Hacker News AI",
-        "score": 199
-      },
-      {
-        "title": "Devices with GrapheneOS support should be available in 2027",
-        "url": "https://grapheneos.social/@GrapheneOS/117078064184215730",
-        "source": "Hacker News AI",
-        "score": 519
+        "score": 207
       },
       {
         "title": "Microgpt in pure C hits 10M tps on Apple m5",
         "url": "https://github.com/vixhal-baraiya/microgpt-c",
         "source": "Hacker News AI",
-        "score": 90
+        "score": 102
+      },
+      {
+        "title": "Chain-of-Thought Reasoning in the Wild Is Not Always Faithful",
+        "url": "https://arxiv.org/abs/2503.08679",
+        "source": "Hacker News AI",
+        "score": 48
+      },
+      {
+        "title": "Devices with GrapheneOS support should be available in 2027",
+        "url": "https://grapheneos.social/@GrapheneOS/117078064184215730",
+        "source": "Hacker News AI",
+        "score": 541
+      },
+      {
+        "title": "Human brain organoids record the passage of time over multiple years",
+        "url": "https://www.nature.com/articles/s41586-026-10877-x",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Show HN: Nikon F100 Film Camera Repair Notes",
         "url": "https://github.com/enthdegree/f100",
         "source": "Hacker News AI",
-        "score": 37
+        "score": 38
       },
       {
         "title": "Cop Explains Why He Used License Plate Reader to Stalk Woman",
         "url": "https://www.404media.co/i-saw-a-shiny-thing-cop-explains-why-he-used-license-plate-reader-to-stalk-woman/",
         "source": "Hacker News AI",
-        "score": 32
-      },
-      {
-        "title": "A recipe for drone racing with reinforcement learning",
-        "url": "https://mrandri19.github.io/2026/07/19/drone-racing-with-reinforcement-learning.html",
-        "source": "Hacker News AI",
-        "score": 21
-      },
-      {
-        "title": "Claude writing a macOS driver for my obscure HP printer built only for Windows",
-        "url": "https://twitter.com/kuberwastaken/status/2089377982536388964",
-        "source": "Hacker News AI",
-        "score": 294
+        "score": 43
       }
     ],
     "news": [
@@ -201,7 +201,43 @@
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " The new ACOTAR book covers are giving 2016 ",
+        "url": "https://www.creativebloq.com/entertainment/books/the-new-acotar-book-covers-are-giving-2016",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Amazon's wanton destruction of rare books is a betrayal of the brand's origins ",
+        "url": "https://www.creativebloq.com/design/branding/amazons-massacre-of-rare-books-is-a-betrayal-of-the-brands-origins",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Star Wars: Galactic Racer's podracing meets Burnout had me on the edge of my seat ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/star-wars-galactic-racers-podracing-meets-burnout-had-me-on-the-edge-of-my-seat",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The 5 best Android drawing tablets that we've tried and tested ",
+        "url": "https://www.creativebloq.com/art/digital-art/the-best-android-drawing-tablets",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " I decoded the Camp Flog Gnaw lineup so you don’t have to ",
+        "url": "https://www.creativebloq.com/design/poster-design/i-decoded-the-camp-flog-gnaw-lineup-so-you-dont-have-to",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Some of my favourite earphones are now as low as $20 in this Back to School sale ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/some-of-my-favourite-iems-are-now-as-low-as-usd20-in-this-back-to-school-sale",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " GTA 6's leak exposes the uncomfortable truth about digital-only games ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/gta-6s-leak-exposes-the-uncomfortable-truth-about-digital-only-games",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "Pollen has a surprising problem — and honeybees have found a way around it",
@@ -241,6 +277,31 @@
     ],
     "gaming": [
       {
+        "title": "MrBeast Meets 'Battle Royale' In New Thriller From GenZ's Next Great Director",
+        "url": "https://www.polygon.com/alex-ullom-4-x-4-the-event-movie-plot-cast/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Best Dark Fantasy Books for Fans of the Witcher and Game of Thrones",
+        "url": "https://www.polygon.com/best-dark-fantasy-books-like-the-witcher-game-of-thrones/",
+        "source": "Polygon"
+      },
+      {
+        "title": "BG3 meets Fire Emblem in a Brand-New Steam RPG",
+        "url": "https://www.polygon.com/ledgerbound-tactical-rpg-insurance-dating-sim/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Avengers: Doomsday Star Might Have Just Spoiled a Doctor Doom Reveal",
+        "url": "https://www.polygon.com/avengers-doomsday-doctor-doom-robert-downey-jr-david-harbour/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Marvel Tokon: Fighting Souls Review: A Worthy Fighting Game That Can't Overcome Tech Problems",
+        "url": "https://www.polygon.com/marvel-tokon-fighting-souls-review/",
+        "source": "Polygon"
+      },
+      {
         "title": "10 Canceled Games We're Still Upset About Years Later",
         "url": "https://www.polygon.com/canceled-games-nooooo/",
         "source": "Polygon"
@@ -248,31 +309,6 @@
       {
         "title": "Original Xbox Returns in Brick Form With $324 Mattel Set",
         "url": "https://www.polygon.com/xbox-mattel-brick-shop-set-announced/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GTA 6 Leaks Gave Fans a Soundtrack Tease, But We Want More",
-        "url": "https://www.polygon.com/gta-leak-6-soundtrack-wishlist/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GTA 6's Newest Gameplay Leak Drama Has Turned Ugly",
-        "url": "https://www.polygon.com/gta-6-leaks-unmoderated-cyberleek-stop-killing-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Minecraft's Biggest Replacement, Valheim, Officially Returns in 3 Weeks",
-        "url": "https://www.polygon.com/valheim-early-access-full-release-date/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Star Trek's Best Spock Quote Perfectly Explains Why Sci-Fi Series Has Lasted Nearly 60 Years",
-        "url": "https://www.polygon.com/best-star-trek-spock-quote/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Jason Statham's Mutiny Debuts With Horrible Rotten Tomatoes Score",
-        "url": "https://www.polygon.com/jason-statham-new-movie-mutiny-rotten-tomatoes-review-roundup/",
         "source": "Polygon"
       }
     ],
