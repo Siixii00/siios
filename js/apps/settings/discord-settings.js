@@ -1,6 +1,6 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast, createKakaoBottomSheet } from '../../components.js';
-import { SettingsDB, CharactersDB, MemoryDB, WorldInfoDB, GlobalSettingsDB, GlobalForbiddenDB, MessagesDB, ChatsDB, DiscordUserBindingDB, initDB, parseWorkerTimestamp } from '../../db.js';
+import { SettingsDB, CharactersDB, UsersDB, MemoryDB, WorldInfoDB, GlobalSettingsDB, GlobalForbiddenDB, MessagesDB, ChatsDB, DiscordUserBindingDB, initDB, parseWorkerTimestamp } from '../../db.js';
 
 async function renderDiscordSettings() {
     const container = createElement('div', 'app-container bg-ios-bg');
@@ -254,6 +254,50 @@ async function renderDiscordSettings() {
         }
     };
     main.appendChild(syncBtn);
+
+    // 同步用戶面具（含禁忌詞）到 Worker
+    const userSyncBtn = createElement('button', 'ios-btn w-full mt-2 mx-4');
+    userSyncBtn.style.maxWidth = 'calc(100% - 32px)';
+    userSyncBtn.style.background = '#8E44AD';
+    userSyncBtn.style.color = '#fff';
+    userSyncBtn.textContent = '👤 同步用戶面具（含禁忌詞）到 Worker';
+    userSyncBtn.onclick = async () => {
+        try {
+            const workerUrl = workerInput.value.replace(/\/+$/, '');
+            if (!workerUrl) {
+                createToast('請先輸入 Worker URL', 'error');
+                return;
+            }
+
+            const users = await UsersDB.getAll();
+            if (users.length === 0) {
+                createToast('沒有用戶資料可同步', 'warning');
+                return;
+            }
+
+            userSyncBtn.disabled = true;
+            userSyncBtn.textContent = '同步中...';
+
+            const response = await fetch(`${workerUrl}/sync/users`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ users })
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                createToast(`已同步 ${data.count} 個用戶面具到 Worker`, 'success');
+            } else {
+                createToast('同步失敗：' + data.error, 'error');
+            }
+        } catch (error) {
+            createToast('同步失敗：' + error.message, 'error');
+        } finally {
+            userSyncBtn.disabled = false;
+            userSyncBtn.textContent = '👤 同步用戶面具（含禁忌詞）到 Worker';
+        }
+    };
+    main.appendChild(userSyncBtn);
 
     // 同步記憶到 Worker
     const memSyncBtn = createElement('button', 'ios-btn w-full mt-2 mx-4');
