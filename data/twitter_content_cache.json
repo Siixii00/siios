@@ -1,140 +1,151 @@
 {
   "metadata": {
-    "last_updated": "2026-08-19T11:26:27.860547",
-    "total_items": 56
+    "last_updated": "2026-08-19T13:44:54.751320",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
+        "title": "GrapheneOS in 2027 available on high-end Motorola phones",
+        "url": "https://grapheneos.social/@GrapheneOS/117078064184215730",
+        "source": "Hacker News",
+        "score": 212
+      },
+      {
+        "title": "Geolocating a random island using geometry and CUDA programming",
+        "url": "https://yassa9.github.io/osint/gralhix-004/",
+        "source": "Hacker News",
+        "score": 78
+      },
+      {
         "title": "OpenLogi",
         "url": "https://openlogi.org/en",
         "source": "Hacker News",
-        "score": 819
+        "score": 1058
       },
       {
         "title": "Air Theremin – a browser theremin you play by waving at your webcam",
         "url": "https://theremin.bizibah.com/",
         "source": "Hacker News",
-        "score": 29
+        "score": 102
+      },
+      {
+        "title": "A joke domain purchase turned in geopolitical warfare",
+        "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
+        "source": "Hacker News",
+        "score": 25
       },
       {
         "title": "Cerebras CS-4",
         "url": "https://www.cerebras.ai/cs4",
         "source": "Hacker News",
-        "score": 306
-      },
-      {
-        "title": "The Two Factions of C++ (2024)",
-        "url": "https://herecomesthemoon.net/2024/11/two-factions-of-cpp/",
-        "source": "Hacker News",
-        "score": 42
-      },
-      {
-        "title": "Being ambitious and being a dad",
-        "url": "https://nicholascharriere.com/blog/being-ambitious-and-being-a-dad/",
-        "source": "Hacker News",
-        "score": 554
+        "score": 360
       },
       {
         "title": "Rings forged from meteorites may have been fashionable among ancient Greek elite",
         "url": "https://phys.org/news/2026-08-forged-meteorites-fashionable-ancient-greek.html",
         "source": "Hacker News",
-        "score": 13
+        "score": 46
       },
       {
-        "title": "Palomar: A registry of Lean verified mathematics",
-        "url": "https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/",
+        "title": "PostgreSQL for Everything",
+        "url": "https://www.raphaelbauer.com:443/posts/postgresql-everything/",
         "source": "Hacker News",
-        "score": 113
+        "score": 3
+      },
+      {
+        "title": "Being ambitious and being a dad",
+        "url": "https://nicholascharriere.com/blog/being-ambitious-and-being-a-dad/",
+        "source": "Hacker News",
+        "score": 684
+      },
+      {
+        "title": "A decades-old bug in Knuth's long division (TAOCP Vol II, Algorithm 4.3.1D)",
+        "url": "https://kolja.rs/algorithm-d/",
+        "source": "Hacker News",
+        "score": 31
       },
       {
         "title": "Supersonic Trebuchet [video]",
         "url": "https://www.youtube.com/watch?v=Co57SfcT-h0",
         "source": "Hacker News",
-        "score": 124
+        "score": 178
+      },
+      {
+        "title": "Palomar: A registry of Lean verified mathematics",
+        "url": "https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/",
+        "source": "Hacker News",
+        "score": 135
+      },
+      {
+        "title": "Train your own AI model, even on your laptop",
+        "url": "https://news.ycombinator.com/item?id=49361322",
+        "source": "Hacker News",
+        "score": 5
       },
       {
         "title": "A 3D fruit fly on macOS desktop powered by the real FlyWire connectome",
         "url": "https://github.com/DenisSergeevitch/desktop-fly",
         "source": "Hacker News",
-        "score": 297
+        "score": 328
       },
       {
         "title": "λλ: A Programming Language for Silicon Photonics",
         "url": "https://dl.acm.org/doi/10.1145/3789240.3829151",
         "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "How does IKEA come up with names for its products?",
-        "url": "https://www.ikea.com/se/en/customer-service/knowledge/articles/6f564c4d-2ccc-46de-b643-545a3948dc79.html",
-        "source": "Hacker News",
-        "score": 363
-      },
-      {
-        "title": "Scientists stunned by children's lung recovery in ultra low emission zone",
-        "url": "https://www.bbc.com/news/articles/c1l1r1zne1ro",
-        "source": "Hacker News",
-        "score": 286
-      },
-      {
-        "title": "Solo – a .so loader for static Linux binaries",
-        "url": "https://github.com/pg83/solo",
-        "source": "Hacker News",
-        "score": 148
-      },
-      {
-        "title": "The Vietnam Binh Chau (Chau Tan) Late Tang Wreck",
-        "url": "https://www.koh-antique.com/client/tangwreck/tangwreck.html",
-        "source": "Hacker News",
-        "score": 43
-      },
-      {
-        "title": "Show HN: Automatically detect and patch walking-dead states in Sierra games",
-        "url": "https://github.com/katiahayati/lucasartsifier/",
-        "source": "Hacker News",
-        "score": 81
+        "score": 54
       }
     ],
     "ai": [
       {
+        "title": "GrapheneOS in 2027 available on high-end Motorola phones",
+        "url": "https://grapheneos.social/@GrapheneOS/117078064184215730",
+        "source": "Hacker News AI",
+        "score": 212
+      },
+      {
         "title": "Air Theremin – a browser theremin you play by waving at your webcam",
         "url": "https://theremin.bizibah.com/",
         "source": "Hacker News AI",
-        "score": 29
+        "score": 102
+      },
+      {
+        "title": "A joke domain purchase turned in geopolitical warfare",
+        "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
+        "source": "Hacker News AI",
+        "score": 25
+      },
+      {
+        "title": "Train your own AI model, even on your laptop",
+        "url": "https://news.ycombinator.com/item?id=49361322",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "Claude writing a macOS driver for my obscure HP printer built only for Windows",
         "url": "https://twitter.com/kuberwastaken/status/2089377982536388964",
         "source": "Hacker News AI",
-        "score": 215
+        "score": 247
       },
       {
         "title": "AI usage patterns in software teams",
         "url": "https://linear.app/data",
         "source": "Hacker News AI",
-        "score": 148
+        "score": 158
       },
       {
-        "title": "Claude Code May–August 2026 weekly limits promotion",
-        "url": "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion",
+        "title": "AI Has Plunged the Book Publishing Industry into Utter Chaos",
+        "url": "https://www.wsj.com/arts-culture/books/generative-ai-book-publishing-be79a287",
         "source": "Hacker News AI",
-        "score": 279
-      },
-      {
-        "title": "Using the railway network as a flatbed scanner",
-        "url": "https://philo.gay/linecam/",
-        "source": "Hacker News AI",
-        "score": 429
-      },
-      {
-        "title": "Universal health coverage could save $1T and 114k lives a year: study",
-        "url": "https://ysph.yale.edu/news-article/universal-health-coverage-could-save-one-trillion-dollars-and-114000-lives-every-year/",
-        "source": "Hacker News AI",
-        "score": 846
+        "score": 4
       }
     ],
     "news": [
+      {
+        "title": "Israeli army orders criminal investigation into killing of Palestinian girl Hind Rajab in Gaza",
+        "url": "https://www.bbc.co.uk/news/articles/crl7yjlpx2po?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Sacked Ukrainian defence minister calls for presidential election",
         "url": "https://www.bbc.co.uk/news/articles/cdew8n9erlwo?at_medium=RSS&at_campaign=rss",
@@ -156,22 +167,32 @@
         "source": "BBC World"
       },
       {
-        "title": "Apparent human remains found in US reservoir as water levels hit record low",
-        "url": "https://www.bbc.co.uk/news/articles/cp87gvmedlmo?at_medium=RSS&at_campaign=rss",
+        "title": "Ukrainian man arrested in Croatia over Nord Stream pipeline blasts",
+        "url": "https://www.bbc.co.uk/news/articles/c78gp7l5348o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Meta hooked children on Facebook and Instagram, US court hears",
-        "url": "https://www.bbc.co.uk/news/articles/cly5r7vr7q1o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Liberia agrees to accept 1,200 foreign deportees from the US",
-        "url": "https://www.bbc.co.uk/news/articles/cpq8g22715vo?at_medium=RSS&at_campaign=rss",
+        "title": "Six tourists and pilot killed in Kenya helicopter crash",
+        "url": "https://www.bbc.co.uk/news/articles/clylkv4z59vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The 5 best Android drawing tablets that we've tried and tested ",
+        "url": "https://www.creativebloq.com/art/digital-art/the-best-android-drawing-tablets",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " I decoded the Camp Flog Gnaw lineup so you don’t have to ",
+        "url": "https://www.creativebloq.com/design/poster-design/i-decoded-the-camp-flog-gnaw-lineup-so-you-dont-have-to",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Some of my favourite earphones are now as low as $20 in this Back to School sale ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/some-of-my-favourite-iems-are-now-as-low-as-usd20-in-this-back-to-school-sale",
+        "source": "Creative Bloq"
+      },
       {
         "title": " GTA 6's leak exposes the uncomfortable truth about digital-only games ",
         "url": "https://www.creativebloq.com/entertainment/gaming/gta-6s-leak-exposes-the-uncomfortable-truth-about-digital-only-games",
@@ -191,27 +212,27 @@
         "title": " The surprising reason why Resonance: A Plague Tale Legacy’s ancient Greece is historically wrong ",
         "url": "https://www.creativebloq.com/3d/video-game-design/the-surprising-reason-why-resonance-a-plague-tale-legacys-ancient-greece-is-historically-wrong",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Replacing creative jobs with AI could have a hidden cost, a new report warns ",
-        "url": "https://www.creativebloq.com/ai/replacing-creative-jobs-with-ai-could-have-a-hidden-cost-new-report-warns",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The easy way to make epic fantasy art using Blender and Photoshop ",
-        "url": "https://www.creativebloq.com/3d/the-easy-way-to-make-epic-fantasy-art-using-blender-and-photoshop",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This beautiful fountain pen is 40% off right now ",
-        "url": "https://www.creativebloq.com/design/product-design/this-beautiful-fountain-pen-is-40-percent-off-right-now",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
+        "title": "Pollen has a surprising problem — and honeybees have found a way around it",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260819041237.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Coffee drinkers have less fat, more muscle, and surprising hormone differences",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260819041228.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "This 23-foot crocodylian may have ruled South America’s food chain",
         "url": "https://www.sciencedaily.com/releases/2026/08/260819041226.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Tiny quantum engines reveal useful energy hiding in “waste heat”",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260819041222.htm",
         "source": "Science Daily"
       },
       {
@@ -228,57 +249,42 @@
         "title": "Tiny robots powered by light can hunt down and collect bacteria",
         "url": "https://www.sciencedaily.com/releases/2026/08/260816044850.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "The bacteria that make cheese taste so good may also benefit your gut",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260816044847.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Widely prescribed blood pressure drugs linked to 33% higher kidney risk in type 2 diabetes",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260816044844.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Japanese scientists use tiny silver particles to make DNA assembly up to 5x more efficient",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260816044842.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Demon Slayer Fans Can't Miss Netflix's Other Excellent Anime Movie Trilogy's Final Chapter",
-        "url": "https://www.polygon.com/mononoke-movie-the-curse-of-the-serpent-netflix/",
+        "title": "Nobody can stop you from stealing The Great Gatsby",
+        "url": "https://www.polygon.com/video/nobody-can-stop-you-from-stealing-the-great-gatsby/",
         "source": "Polygon"
       },
       {
-        "title": "'The Sims 4' Is Getting Two Classic Teen Movies-Inspired Kits",
-        "url": "https://www.polygon.com/the-sims-4-mean-girls-clueless-capsule-kits/",
+        "title": "I love note-taking games and I DON'T CARE if that sounds boring",
+        "url": "https://www.polygon.com/video/i-love-note-taking-games-and-i-don-t-care-if-that-sounds-boring/",
         "source": "Polygon"
       },
       {
-        "title": "28 Years Later, Jim Carrey's Most Unhinged Movie Performance of All Time Is Officially Free on Streaming",
-        "url": "https://www.polygon.com/the-truman-show-movies-free-streaming-august-2026/",
+        "title": "Wardogs Devs Reveal How Much It Costs to Have a Trailer in Huge Gaming Showcase",
+        "url": "https://www.polygon.com/wardogs-bulkhead-300k-showcase-trailer/",
         "source": "Polygon"
       },
       {
-        "title": "Crunchyroll Store Removes Tons of Physical Products After Being Locked Behind Subscription",
-        "url": "https://www.polygon.com/crunchyroll-store-removes-physical-products-manga-anime/",
+        "title": "FPS Games Are Finally Getting a Dedicated Showcase",
+        "url": "https://www.polygon.com/fps-games-show-announcement-september/",
         "source": "Polygon"
       },
       {
-        "title": "GTA 6 Leaks Confirms Iconic 6-Star Wanted Level System Returns After 13 Years",
-        "url": "https://www.polygon.com/gta-6-leak-wanted-level-six-stars-five-how-does-it-work-cops-tanks/",
+        "title": "FFXIV’s Switch 2 Version Might Be the Best It’s Ever Been (For Casuals)",
+        "url": "https://www.polygon.com/ffxiv-switch-2-impressions/",
         "source": "Polygon"
       },
       {
-        "title": "30 Years Ago, Tom Cruise's 10/10 Spy-Thriller Launched an Unstoppable Franchise. Now It's Free to Stream.",
-        "url": "https://www.polygon.com/mission-impossible-tom-cruise-free-streaming-august-2026/",
+        "title": "The New ‘Wildwood’ Trailer Shows a Mix of Coraline’s Style With a Haunting Fairy Tale",
+        "url": "https://www.polygon.com/wildwood-trailer-laika-movie-coraline/",
         "source": "Polygon"
       },
       {
-        "title": "Sega's 84-Hour Open-World Masterpiece Has Aged Like Fine Wine",
-        "url": "https://www.polygon.com/like-a-dragon-infinite-wealth-hawaii-rec/",
+        "title": "David Tennant Returns to 'Doctor Who' for a New Adventure - but There's a Catch",
+        "url": "https://www.polygon.com/david-tennant-returns-doctor-who-audio-drama-rani/",
         "source": "Polygon"
       }
     ],
