@@ -1,167 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-08-18T23:22:48.984899",
-    "total_items": 61
+    "last_updated": "2026-08-19T01:18:05.992043",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "GLM-5.3 Artificial Analysis Benchmarks",
-        "url": "https://artificialanalysis.ai/models/glm-5-3",
-        "source": "Hacker News",
-        "score": 38
-      },
-      {
         "title": "A 3D fruit fly on macOS desktop powered by the real FlyWire connectome",
         "url": "https://github.com/DenisSergeevitch/desktop-fly",
         "source": "Hacker News",
-        "score": 48
-      },
-      {
-        "title": "Who owns the code?",
-        "url": "https://whoownsthecode.com/",
-        "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "Being ambitious and being a dad",
-        "url": "https://nicholascharriere.com/blog/being-ambitious-and-being-a-dad/",
-        "source": "Hacker News",
-        "score": 141
+        "score": 136
       },
       {
         "title": "The Amazon tax",
         "url": "https://seths.blog/2026/08/the-amazon-tax/",
         "source": "Hacker News",
-        "score": 825
+        "score": 920
       },
       {
-        "title": "fx :Tiny, open, native coding agent.",
-        "url": "https://fx.sh",
+        "title": "Solo – a .so loader for static Linux binaries",
+        "url": "https://github.com/pg83/solo",
         "source": "Hacker News",
-        "score": 36
+        "score": 27
       },
       {
         "title": "How does IKEA come up with names for its products?",
         "url": "https://www.ikea.com/se/en/customer-service/knowledge/articles/6f564c4d-2ccc-46de-b643-545a3948dc79.html",
         "source": "Hacker News",
-        "score": 192
+        "score": 222
       },
       {
-        "title": "Claude Code Teaching macOS to Natively Print to the HP Laser 1008a",
-        "url": "https://cdn.kuber.studio/chat/hp-laser-1008a-driver",
+        "title": "Show HN: Interactive, animated architecture of any HuggingFace models",
+        "url": "https://modelmap.cc",
         "source": "Hacker News",
-        "score": 84
+        "score": 27
       },
       {
         "title": "Turbovec – Google's TurboQuant for vector search in Rust",
         "url": "https://github.com/RyanCodrai/turbovec",
         "source": "Hacker News",
-        "score": 187
+        "score": 202
       },
       {
-        "title": "Companies promote incompetent employees to management to limit damage they do",
-        "url": "https://lawsofsoftwareengineering.com/laws/dilbert-principle/",
+        "title": "Being ambitious and being a dad",
+        "url": "https://nicholascharriere.com/blog/being-ambitious-and-being-a-dad/",
         "source": "Hacker News",
-        "score": 49
-      },
-      {
-        "title": "Beware Management Consultants",
-        "url": "https://about.iceland.co.uk/our-story/the-dark-ages/beware-management-consultants/",
-        "source": "Hacker News",
-        "score": 408
+        "score": 254
       },
       {
         "title": "Using the railway network as a flatbed scanner",
         "url": "https://philo.gay/linecam/",
         "source": "Hacker News",
-        "score": 375
+        "score": 396
       },
       {
-        "title": "Fixing a bricked Framework laptop",
-        "url": "https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/",
+        "title": "AI usage patterns in software teams",
+        "url": "https://linear.app/data",
         "source": "Hacker News",
-        "score": 333
+        "score": 32
       },
       {
         "title": "Cursor launches Origin, GitHub alternative",
         "url": "https://cursor.com/changelog/origin-code-hosting",
         "source": "Hacker News",
-        "score": 421
+        "score": 458
       },
       {
-        "title": "The Microsoft Rebrand Registry",
-        "url": "https://www.msrebrandregistry.com/analysis.html",
+        "title": "Beware Management Consultants",
+        "url": "https://about.iceland.co.uk/our-story/the-dark-ages/beware-management-consultants/",
         "source": "Hacker News",
-        "score": 5
+        "score": 434
+      },
+      {
+        "title": "Fixing a bricked Framework laptop",
+        "url": "https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/",
+        "source": "Hacker News",
+        "score": 351
+      },
+      {
+        "title": "A 25-year-old video patent just expired, ending a legal headache for Linux",
+        "url": "https://www.xda-developers.com/25-year-old-brazilian-video-patent-expired-legal-headache-linux/",
+        "source": "Hacker News",
+        "score": 82
+      },
+      {
+        "title": "GLM-5.3 Artificial Analysis Benchmarks",
+        "url": "https://artificialanalysis.ai/models/glm-5-3",
+        "source": "Hacker News",
+        "score": 73
+      },
+      {
+        "title": "And then the men with guns tell you to do it anyway",
+        "url": "https://shkspr.mobi/blog/2026/08/and-then-the-men-with-guns-tell-you-to-do-it-anyway/",
+        "source": "Hacker News",
+        "score": 154
       }
     ],
     "ai": [
       {
-        "title": "Claude Code Teaching macOS to Natively Print to the HP Laser 1008a",
-        "url": "https://cdn.kuber.studio/chat/hp-laser-1008a-driver",
-        "source": "Hacker News AI",
-        "score": 84
-      },
-      {
         "title": "Using the railway network as a flatbed scanner",
         "url": "https://philo.gay/linecam/",
         "source": "Hacker News AI",
-        "score": 375
-      },
-      {
-        "title": "Norway should buy OpenAI",
-        "url": "https://www.onethousandmeans.com/p/norway-should-buy-openai",
-        "source": "Hacker News AI",
-        "score": 188
-      },
-      {
-        "title": "Claude Code May–August 2026 weekly limits promotion",
-        "url": "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion",
-        "source": "Hacker News AI",
-        "score": 246
-      },
-      {
-        "title": "Field measurements of neighborhood-scale air temperature impacts of data centers",
-        "url": "https://asmedigitalcollection.asme.org/sustainablebuildings/article/7/2/024501/1233035/Data-Center-Waste-Heat-as-an-Emerging-Urban",
-        "source": "Hacker News AI",
-        "score": 278
-      },
-      {
-        "title": "Universal health coverage could save $1T and 114k lives a year: study",
-        "url": "https://ysph.yale.edu/news-article/universal-health-coverage-could-save-one-trillion-dollars-and-114000-lives-every-year/",
-        "source": "Hacker News AI",
-        "score": 657
-      },
-      {
-        "title": "GPT-5.6 Sol: 70% off in Devin",
-        "url": "https://devin.ai/blog/gpt-5-6-sol-promo",
-        "source": "Hacker News AI",
-        "score": 5
+        "score": 396
       },
       {
         "title": "AI usage patterns in software teams",
         "url": "https://linear.app/data",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 32
+      },
+      {
+        "title": "Universal health coverage could save $1T and 114k lives a year: study",
+        "url": "https://ysph.yale.edu/news-article/universal-health-coverage-could-save-one-trillion-dollars-and-114000-lives-every-year/",
+        "source": "Hacker News AI",
+        "score": 701
+      },
+      {
+        "title": "Norway should buy OpenAI",
+        "url": "https://www.onethousandmeans.com/p/norway-should-buy-openai",
+        "source": "Hacker News AI",
+        "score": 205
+      },
+      {
+        "title": "Claude Code May–August 2026 weekly limits promotion",
+        "url": "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion",
+        "source": "Hacker News AI",
+        "score": 255
+      },
+      {
+        "title": "Claude Code Teaching macOS to Natively Print to the HP Laser 1008a",
+        "url": "https://cdn.kuber.studio/chat/hp-laser-1008a-driver",
+        "source": "Hacker News AI",
+        "score": 108
+      },
+      {
+        "title": "GPT-5.6 Sol: 70% off in Devin",
+        "url": "https://devin.ai/blog/gpt-5-6-sol-promo",
+        "source": "Hacker News AI",
+        "score": 10
+      },
+      {
+        "title": "Field measurements of neighborhood-scale air temperature impacts of data centers",
+        "url": "https://asmedigitalcollection.asme.org/sustainablebuildings/article/7/2/024501/1233035/Data-Center-Waste-Heat-as-an-Emerging-Urban",
+        "source": "Hacker News AI",
+        "score": 285
       },
       {
         "title": "Fairphone is now officially available in the United States",
         "url": "https://www.fairphone.com/nl/stories/the-fairphone-gen-6-is-all-about-giving-you-more",
         "source": "Hacker News AI",
-        "score": 340
-      },
-      {
-        "title": "Show HN: macOS data protection keychain for Electron apps",
-        "url": "https://github.com/biw/keychain-store",
-        "source": "Hacker News AI",
-        "score": 21
-      },
-      {
-        "title": "Google has acquired the data of failed US airline Spirit",
-        "url": "https://www.theregister.com/ai-and-ml/2026/08/18/google-buys-crashed-airline-spirits-data-at-auction-because-ai/5288962",
-        "source": "Hacker News AI",
-        "score": 556
+        "score": 349
       }
     ],
     "news": [
@@ -191,13 +179,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Kariba ferry death toll rises to 93, making it Zimbabwe's deadliest transport disaster",
-        "url": "https://www.bbc.co.uk/news/articles/cjwx58n1153o?at_medium=RSS&at_campaign=rss",
+        "title": "ZZ Top drummer Frank Beard dies aged 77",
+        "url": "https://www.bbc.co.uk/news/articles/czdmzdnp3z0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Pakistan top court orders ex-PM Imran Khan be moved to hospital from jail",
-        "url": "https://www.bbc.co.uk/news/articles/cy4kzzlydrro?at_medium=RSS&at_campaign=rss",
+        "title": "US announces new sanctions on top ICC figures ",
+        "url": "https://www.bbc.co.uk/news/articles/cnvnl0elz47o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -277,6 +265,16 @@
     ],
     "gaming": [
       {
+        "title": "GTA 6 Leaks Confirms Iconic 6-Star Wanted Level System Returns After 13 Years",
+        "url": "https://www.polygon.com/gta-6-leak-wanted-level-six-stars-five-how-does-it-work-cops-tanks/",
+        "source": "Polygon"
+      },
+      {
+        "title": "30 Years Ago, Tom Cruise's 10/10 Spy-Thriller Launched an Unstoppable Franchise. Now It's Free to Stream.",
+        "url": "https://www.polygon.com/mission-impossible-tom-cruise-free-streaming-august-2026/",
+        "source": "Polygon"
+      },
+      {
         "title": "Sega's 84-Hour Open-World Masterpiece Has Aged Like Fine Wine",
         "url": "https://www.polygon.com/like-a-dragon-infinite-wealth-hawaii-rec/",
         "source": "Polygon"
@@ -299,16 +297,6 @@
       {
         "title": "Marvel's Wolverine Is At the Center of the Most Complex Online War In Years",
         "url": "https://www.polygon.com/marvels-wolverine-backlash/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'GTA 6' Map Leak Reveals Size of Rockstar's New Vice City",
-        "url": "https://www.polygon.com/gta-6-map-leak-rockstar-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Games With the Longest Development Time That Still Haven’t Been Released",
-        "url": "https://www.polygon.com/games-in-development-10-years/",
         "source": "Polygon"
       }
     ],
