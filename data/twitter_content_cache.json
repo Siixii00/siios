@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-19T21:26:04.976726",
-    "total_items": 54
+    "last_updated": "2026-08-19T22:25:40.950650",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,165 +9,158 @@
         "title": "OpenRouter is joining Stripe",
         "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
         "source": "Hacker News",
-        "score": 425
+        "score": 483
       },
       {
         "title": "Go 1.27",
         "url": "https://go.dev/blog/go1.27",
         "source": "Hacker News",
-        "score": 296
+        "score": 351
       },
       {
         "title": "Unsloth Dynamic 3.0 GGUFs",
         "url": "https://unsloth.ai/docs/basics/dynamic-3.0-ggufs",
         "source": "Hacker News",
-        "score": 103
+        "score": 135
       },
       {
         "title": "Unlocking a locked/deactivated e-waste Cricut Maker",
         "url": "https://sprocketfox.io/xssfox/2026/07/01/cricut-unlock/",
         "source": "Hacker News",
-        "score": 61
-      },
-      {
-        "title": "Router by Ramp",
-        "url": "https://router.com",
-        "source": "Hacker News",
-        "score": 66
-      },
-      {
-        "title": "A joke domain purchase turned in geopolitical warfare",
-        "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
-        "source": "Hacker News",
-        "score": 639
+        "score": 79
       },
       {
         "title": "Google replaced Git tags for certain source code with obtaining via Google Drive",
         "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
         "source": "Hacker News",
-        "score": 110
+        "score": 174
       },
       {
-        "title": "Pressed Penny Machine Map",
-        "url": "https://pennypresses.net/home/map.php",
+        "title": "DFlash 2: Keep Drafting Parallel",
+        "url": "https://inco.ai/blog/dflash2/",
         "source": "Hacker News",
-        "score": 20
+        "score": 40
+      },
+      {
+        "title": "A joke domain purchase turned in geopolitical warfare",
+        "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
+        "source": "Hacker News",
+        "score": 680
       },
       {
         "title": "Casio F-B100W-1A",
         "url": "https://www.casio.com/uk/watches/casio/product.F-B100W-1A/",
         "source": "Hacker News",
-        "score": 207
+        "score": 228
       },
       {
         "title": "The little-known winstart.bat batch file",
         "url": "https://devblogs.microsoft.com/oldnewthing/20260811-00/?p=112605",
         "source": "Hacker News",
-        "score": 29
+        "score": 47
+      },
+      {
+        "title": "Pressed Penny Machine Map",
+        "url": "https://pennypresses.net/home/map.php",
+        "source": "Hacker News",
+        "score": 25
+      },
+      {
+        "title": "Os8088.com: IBM XT OS now has a Browser, CP/M 2.2 with Z80 core and MS Word 1.1a",
+        "url": "https://os8088.com/spotlight/",
+        "source": "Hacker News",
+        "score": 11
       },
       {
         "title": "Geolocating a random island using geometry and CUDA programming",
         "url": "https://yassa9.github.io/osint/gralhix-004/",
         "source": "Hacker News",
-        "score": 367
-      },
-      {
-        "title": "A portable, sensitive, low power, analog Geiger counter",
-        "url": "https://ludens.cl/Electron/geiger2/geiger2.html",
-        "source": "Hacker News",
-        "score": 14
+        "score": 380
       },
       {
         "title": "Ornith-1.5: From Self-Scaffolding to Self-Improvement",
         "url": "https://ornith.ai/ornith_1_5.html",
         "source": "Hacker News",
-        "score": 146
+        "score": 155
       },
       {
         "title": "Mathematics in the age of AI",
         "url": "https://arxiv.org/abs/2608.16753",
         "source": "Hacker News",
-        "score": 81
+        "score": 96
       },
       {
-        "title": "How Kubernetes Probes Work",
-        "url": "https://ngrok.com/blog/probes",
+        "title": "Rules of good social skills (2025)",
+        "url": "https://liamrosen.com/2025/07/24/33-rules-of-good-social-skills/",
         "source": "Hacker News",
-        "score": 94
+        "score": 60
       }
     ],
     "ai": [
       {
-        "title": "A joke domain purchase turned in geopolitical warfare",
-        "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
-        "source": "Hacker News AI",
-        "score": 639
-      },
-      {
         "title": "Google replaced Git tags for certain source code with obtaining via Google Drive",
         "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
         "source": "Hacker News AI",
-        "score": 110
+        "score": 174
+      },
+      {
+        "title": "A joke domain purchase turned in geopolitical warfare",
+        "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
+        "source": "Hacker News AI",
+        "score": 680
       },
       {
         "title": "Mathematics in the age of AI",
         "url": "https://arxiv.org/abs/2608.16753",
         "source": "Hacker News AI",
-        "score": 81
+        "score": 96
       },
       {
         "title": "Extensible Software in the age of LLMs",
         "url": "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/",
         "source": "Hacker News AI",
-        "score": 81
+        "score": 89
       },
       {
-        "title": "Air Theremin – a browser theremin you play by waving at your webcam",
+        "title": "Air Theremin – A browser theremin you play by waving at your webcam",
         "url": "https://theremin.bizibah.com/",
         "source": "Hacker News AI",
-        "score": 220
+        "score": 231
       },
       {
-        "title": "Microgpt in pure C hits 10M tps on Apple m5",
+        "title": "MicroGPT-C in pure C hits 10M TPS on Apple M5",
         "url": "https://github.com/vixhal-baraiya/microgpt-c",
         "source": "Hacker News AI",
-        "score": 110
+        "score": 115
       },
       {
         "title": "Devices with GrapheneOS support should be available in 2027",
         "url": "https://grapheneos.social/@GrapheneOS/117078064184215730",
         "source": "Hacker News AI",
-        "score": 553
+        "score": 564
       },
       {
         "title": "Chain-of-Thought Reasoning in the Wild Is Not Always Faithful (2025)",
         "url": "https://arxiv.org/abs/2503.08679",
         "source": "Hacker News AI",
-        "score": 54
-      },
-      {
-        "title": "OpenAI's Unraveling Has Begun",
-        "url": "https://garymarcus.substack.com/p/breaking-openais-unraveling-has-begun",
-        "source": "Hacker News AI",
-        "score": 12
+        "score": 56
       },
       {
         "title": "Claude writing a macOS driver for my obscure HP printer built only for Windows",
         "url": "https://twitter.com/kuberwastaken/status/2089377982536388964",
         "source": "Hacker News AI",
-        "score": 302
-      },
-      {
-        "title": "Human brain organoids record the passage of time over multiple years",
-        "url": "https://www.nature.com/articles/s41586-026-10877-x",
-        "source": "Hacker News AI",
-        "score": 8
+        "score": 307
       }
     ],
     "news": [
       {
         "title": "Israel confirms soldiers fired at car in which Hind Rajab was killed and opens criminal investigation",
         "url": "https://www.bbc.co.uk/news/articles/crl7yjlpx2po?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Australia 'outraged' after Israeli decision not to prosecute over killing of aid worker in Gaza",
+        "url": "https://www.bbc.co.uk/news/articles/cp87g29r718o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -193,11 +186,6 @@
       {
         "title": "Ecuador intelligence chief and five Americans killed in Kenya helicopter crash",
         "url": "https://www.bbc.co.uk/news/articles/clylkv4z59vo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Canada and US say they are finalising a trade deal, but details remain murky",
-        "url": "https://www.bbc.co.uk/news/articles/c3ekl74jnk5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -275,7 +263,43 @@
         "source": "Science Daily"
       }
     ],
-    "gaming": [],
+    "gaming": [
+      {
+        "title": "Steam Sale Includes Indie Horror Hit Carrion for 80% Off",
+        "url": "https://www.polygon.com/steam-sale-carrion-steam-sale-80-percent-off-august-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "GTA 6 Is Too Big For These Leaks To Hurt It",
+        "url": "https://www.polygon.com/gta-6-leaks-rockstar-games-impact/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Pokémon Halloween 2026 Merch Is Here So Ditch The 12-foot Home Depot Skeleton",
+        "url": "https://www.polygon.com/pokemon-center-new-halloween-merchandise-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Short Games Under 20 Hours",
+        "url": "https://www.polygon.com/best-games-under-20-hours/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Magic’s Leaked Secret Lair Commander Deck Includes an Overpowered $60 Cyborg",
+        "url": "https://www.polygon.com/mtg-secret-lair-odds-and-ends-commander-decklist-leak/",
+        "source": "Polygon"
+      },
+      {
+        "title": "MrBeast Meets 'Battle Royale' In New Thriller From GenZ's Next Great Director",
+        "url": "https://www.polygon.com/alex-ullom-4-x-4-the-event-movie-plot-cast/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Best Dark Fantasy Books for Fans of the Witcher and Game of Thrones",
+        "url": "https://www.polygon.com/best-dark-fantasy-books-like-the-witcher-game-of-thrones/",
+        "source": "Polygon"
+      }
+    ],
     "steam": [],
     "github": [
       {
