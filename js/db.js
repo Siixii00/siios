@@ -850,6 +850,9 @@ const UsersDB = {
             sleep_end: data.sleep_end || '07:00',
             assigned_chars: data.assigned_chars || [],
             taboos: data.taboos || [],
+            height: data.height || null,
+            weight: data.weight || null,
+            body_type: data.body_type || null,
             created_at: Date.now(),
             ...data
         };

@@ -240,6 +240,32 @@ async function renderUserEdit(params) {
     main.appendChild(sleepSection);
     main.appendChild(sleepGroup);
 
+    const bodySection = createElement('div', 'mb-2 ml-8 mt-4');
+    bodySection.appendChild(createElement('p', 'ios-section-header', { textContent: '身體數據（用於推斷體型）' }));
+    const bodyGroup = createElement('div', 'ios-grouped-list mx-4');
+    const bodyCell = createElement('div', 'p-4 flex gap-4');
+    const heightWrap = createElement('div', 'flex-1');
+    heightWrap.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '身高（cm）' }));
+    const heightInput = createElement('input', 'ios-input w-full', {
+        type: 'number',
+        placeholder: '例如：162',
+        value: user.height || ''
+    });
+    heightWrap.appendChild(heightInput);
+    bodyCell.appendChild(heightWrap);
+    const weightWrap = createElement('div', 'flex-1');
+    weightWrap.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '體重（kg）' }));
+    const weightInput = createElement('input', 'ios-input w-full', {
+        type: 'number',
+        placeholder: '例如：52',
+        value: user.weight || ''
+    });
+    weightWrap.appendChild(weightInput);
+    bodyCell.appendChild(weightWrap);
+    bodyGroup.appendChild(bodyCell);
+    main.appendChild(bodySection);
+    main.appendChild(bodyGroup);
+
     const charSection = createElement('div', 'mb-2 ml-8 mt-4');
     charSection.appendChild(createElement('p', 'ios-section-header', { textContent: '對應的 Char' }));
     const charGroup = createElement('div', 'ios-grouped-list mx-4');
@@ -284,6 +310,8 @@ async function renderUserEdit(params) {
             speech_style: styleInput.value.trim(),
             sleep_start: sleepStartInput.value,
             sleep_end: sleepEndInput.value,
+            height: heightInput.value ? Number(heightInput.value) : null,
+            weight: weightInput.value ? Number(weightInput.value) : null,
             assigned_chars: assignedChars,
             taboos
         });
