@@ -1399,41 +1399,56 @@ async function getDiscordHistory(channel_id, limit, env) {
 }
 
 async function clearChannelHistory(channel_id, env, mode = 'chat') {
-    const response = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages?limit=100`, {
-        headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
-    });
-    if (!response.ok) throw new Error(`Discord API error: ${response.status}`);
-    const messages = await response.json();
-    if (!Array.isArray(messages)) return '❌ 無法取得頻道訊息';
-
     const botUserId = await getBotUserId(env);
     if (!botUserId) return '❌ 無法取得 Bot 用戶 ID';
 
-    const botMessages = messages.filter(m => m.author?.id === botUserId);
-    if (botMessages.length === 0) {
-        await env.DB.prepare(`DELETE FROM messages WHERE chat_id = ?`).bind(channel_id).run();
-        return '✅ 頻道已無機器人訊息，內部對話已清除';
-    }
+    let lastId = null;
+    let totalDeleted = 0;
+    let hasMore = true;
 
-    let deleted = 0;
-    for (const msg of botMessages) {
-        try {
-            const deleteResp = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages/${msg.id}`, {
-                method: 'DELETE',
-                headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
-            });
-            if (deleteResp.ok || deleteResp.status === 404) deleted++;
-        } catch (_) {}
+    while (hasMore) {
+        const url = `https://discord.com/api/v10/channels/${channel_id}/messages?limit=100${lastId ? `&before=${lastId}` : ''}`;
+        const response = await fetch(url, {
+            headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
+        });
+        if (!response.ok) {
+            if (response.status === 429) {
+                await new Promise(r => setTimeout(r, 3000));
+                continue;
+            }
+            break;
+        }
+        const messages = await response.json();
+        if (!Array.isArray(messages) || messages.length === 0) {
+            hasMore = false;
+            break;
+        }
+
+        const botMessages = messages.filter(m => m.author?.id === botUserId);
+        for (const msg of botMessages) {
+            try {
+                const deleteResp = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages/${msg.id}`, {
+                    method: 'DELETE',
+                    headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
+                });
+                if (deleteResp.ok || deleteResp.status === 404) totalDeleted++;
+            } catch (_) {}
+            await new Promise(r => setTimeout(r, 200));
+        }
+
+        lastId = messages[messages.length - 1].id;
+        hasMore = messages.length >= 100;
+        if (hasMore) await new Promise(r => setTimeout(r, 500));
     }
 
     await env.DB.prepare(`DELETE FROM messages WHERE chat_id = ?`).bind(channel_id).run();
 
     if (mode === 'all') {
         await env.DB.prepare(`DELETE FROM memories WHERE chat_id = ?`).bind(channel_id).run();
-        return `✅ 已刪除 ${deleted} 則機器人訊息、清除對話歷史，並清除相關記憶`;
+        return `✅ 已刪除 ${totalDeleted} 則機器人訊息、清除對話歷史，並清除相關記憶`;
     }
 
-    return `✅ 已刪除 ${deleted} 則機器人訊息並清除對話歷史（記憶保留）`;
+    return `✅ 已刪除 ${totalDeleted} 則機器人訊息並清除對話歷史（記憶保留）`;
 }
 
 // ===== 同步角色 =====
