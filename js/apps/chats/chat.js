@@ -167,6 +167,9 @@ async function renderChat(params) {
                     } else {
                         ChatsDB.update(chatId, { response_mode: opt.id }).then(async () => {
                             currentChat = await ChatsDB.getById(chatId);
+                            if (modeValueEl) {
+                                modeValueEl.textContent = getModeLabel(opt.id);
+                            }
                             createToast('已切換為「' + opt.label + '」');
                             sheet.close();
                         });
@@ -190,6 +193,9 @@ async function renderChat(params) {
                 const prompt = textarea.value.trim();
                 await ChatsDB.update(chatId, { response_mode: 'custom', custom_response_prompt: prompt });
                 currentChat = await ChatsDB.getById(chatId);
+                if (modeValueEl) {
+                    modeValueEl.textContent = getModeLabel('custom');
+                }
                 createToast('已儲存自定義模式');
                 sheet.close();
             };
@@ -547,6 +553,7 @@ async function renderChat(params) {
             }
         ]
     });
+    const modeValueEl = sideMenu.menu.querySelector('.kakao-side-menu-item-value');
     
     menuBtn.onclick = () => sideMenu.open();
     header.appendChild(menuBtn);

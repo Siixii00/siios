@@ -1,5 +1,5 @@
 ﻿import Router from './router.js';
-import { SettingsDB, initDB } from './db.js';
+import { SettingsDB, initDB, GlobalForbiddenDB } from './db.js';
 import { createElement, createIcon, createToast, createErrorModal } from './components.js';
 import LockScreen from './lockscreen.js';
 import HomeScreen from './homescreen.js';
@@ -85,6 +85,29 @@ const App = {
             console.log('[App] 開始初始化數據庫...');
             await initDB();
             console.log('[App] 數據庫初始化成功');
+            
+            console.log('[App] 檢查並注入默認禁止詞...');
+            const existingForbidden = await GlobalForbiddenDB.getAll();
+            if (existingForbidden.length === 0) {
+                const defaultForbidden = [
+                    {
+                        name: '禁止將人物化',
+                        content: '嚴禁使用將人物化的詞彙來描述使用者或角色，例如：變量、實驗、數據、測試、樣本、參數、數值、計算、分析、處理、輸入、輸出、程式、演算法、模型等。這些詞彙會將人物視為非人物的對象，嚴重暴露AI身份。一旦偵測到此類詞彙，必須立即使用符合角色語境的同義詞替換。',
+                        priority: 'front',
+                        enabled: true
+                    },
+                    {
+                        name: '禁止實驗與數據詞彙',
+                        content: '嚴禁使用與實驗或數據性質相關的詞語來描述人物，例如：實驗對象、數據點、變量、測試組、控制組、樣本、參數、觀測值、測量、實驗組、對照組等。在角色扮演中，人物是活生生的人，不是實驗品或數據。',
+                        priority: 'front',
+                        enabled: true
+                    }
+                ];
+                for (const entry of defaultForbidden) {
+                    await GlobalForbiddenDB.create(entry);
+                }
+                console.log('[App] 默認禁止詞已注入');
+            }
             
             console.log('[App] 載入設定...');
             const allSettings = await SettingsDB.getAll();
