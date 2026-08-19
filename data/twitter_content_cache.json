@@ -1,264 +1,222 @@
 {
   "metadata": {
-    "last_updated": "2026-08-17T23:23:28.000271",
-    "total_items": 65
+    "last_updated": "2026-08-19T02:57:59.465762",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "How Bluesky draws its logo on screenshots",
-        "url": "https://timmarinin.net/2026/bluesky-screenshots/",
+        "title": "New paper shows that 37% of workers in US saw real wages decline from 2021-2024 [pdf]",
+        "url": "https://bfi.uchicago.edu/wp-content/uploads/2026/08/BFI_WP_2026-108-1.pdf",
         "source": "Hacker News",
-        "score": 82
+        "score": 161
       },
       {
-        "title": "Quake Shareware, a CD-ROM just a little too full",
-        "url": "https://fabiensanglard.net/quake_shareware_cd/index.html",
+        "title": "Cerebras CS-4",
+        "url": "https://www.cerebras.ai/cs4",
         "source": "Hacker News",
-        "score": 60
+        "score": 92
       },
       {
-        "title": "GPU Offload in Rust: Portable, Safe, and Fast",
-        "url": "https://arxiv.org/abs/2608.13759",
+        "title": "A 3D fruit fly on macOS desktop powered by the real FlyWire connectome",
+        "url": "https://github.com/DenisSergeevitch/desktop-fly",
         "source": "Hacker News",
-        "score": 140
+        "score": 177
       },
       {
-        "title": "A Preview of DuckDB v2.0",
-        "url": "https://duckdb.org/2026/08/17/duckdb-20-highlights",
+        "title": "The Amazon tax",
+        "url": "https://seths.blog/2026/08/the-amazon-tax/",
         "source": "Hacker News",
-        "score": 502
+        "score": 973
       },
       {
-        "title": "Fairphone 6 and PostmarketOS working main camera",
-        "url": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
+        "title": "Solo – a .so loader for static Linux binaries",
+        "url": "https://github.com/pg83/solo",
         "source": "Hacker News",
-        "score": 36
+        "score": 55
       },
       {
-        "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
-        "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+        "title": "How does IKEA come up with names for its products?",
+        "url": "https://www.ikea.com/se/en/customer-service/knowledge/articles/6f564c4d-2ccc-46de-b643-545a3948dc79.html",
         "source": "Hacker News",
-        "score": 299
+        "score": 247
       },
       {
-        "title": "Incident with Github.com",
-        "url": "https://www.githubstatus.com/incidents/zkxwbgr0cnmx",
+        "title": "Meta's blockbuster trial draws parallels to big tobacco",
+        "url": "https://www.economist.com/business/2026/08/18/metas-blockbuster-trial-draws-parallels-to-big-tobacco",
         "source": "Hacker News",
-        "score": 492
+        "score": 5
       },
       {
-        "title": "AI;DR (AI; Didn't Read)",
-        "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
+        "title": "OpenLogi",
+        "url": "https://openlogi.org/en",
         "source": "Hacker News",
-        "score": 489
+        "score": 8
       },
       {
-        "title": "How to disable or avoid intrusive AI",
-        "url": "https://www.librarian.net/notoai/",
+        "title": "That Disgraceful, Disreputable, (Wonderful) Form of Punctuation: The Parenthesis",
+        "url": "https://lithub.com/on-that-disgraceful-disreputable-wonderful-form-of-punctuation-the-parenthesis/",
         "source": "Hacker News",
-        "score": 237
+        "score": 12
       },
       {
-        "title": "My friends all hate AI; I just joined an AI startup",
-        "url": "https://www.fast.ai/posts/2026-08-18-returning-to-AI/",
+        "title": "AI usage patterns in software teams",
+        "url": "https://linear.app/data",
         "source": "Hacker News",
-        "score": 11
+        "score": 52
       },
       {
-        "title": "Olo (Color)",
-        "url": "https://en.wikipedia.org/wiki/Olo_(color)",
+        "title": "Turbovec – Google's TurboQuant for vector search in Rust",
+        "url": "https://github.com/RyanCodrai/turbovec",
         "source": "Hacker News",
-        "score": 273
+        "score": 212
       },
       {
-        "title": "Sun Clock",
-        "url": "https://sunclock.net/",
+        "title": "Using the railway network as a flatbed scanner",
+        "url": "https://philo.gay/linecam/",
         "source": "Hacker News",
-        "score": 154
+        "score": 410
       },
       {
-        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
-        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
+        "title": "Cursor launches Origin, GitHub alternative",
+        "url": "https://cursor.com/changelog/origin-code-hosting",
         "source": "Hacker News",
-        "score": 289
+        "score": 488
       },
       {
-        "title": "Judge sets framework for Nine PBS to retrieve archival data",
-        "url": "https://current.org/2026/08/judge-sets-framework-for-nine-pbs-to-retrieve-archival-data/",
+        "title": "Fixing a bricked Framework laptop",
+        "url": "https://quantum5.ca/2026/08/16/fixing-bricked-amd-7040-series-framework-13-laptop-with-20-tools/",
         "source": "Hacker News",
-        "score": 117
+        "score": 368
       },
       {
-        "title": "Intriguing stories in computer science",
-        "url": "https://inventwithpython.com/blog/intriguing-stories-in-cs.html",
+        "title": "Show HN: Interactive, animated architecture of any HuggingFace models",
+        "url": "https://modelmap.cc",
         "source": "Hacker News",
-        "score": 19
+        "score": 37
       }
     ],
     "ai": [
       {
-        "title": "Fairphone 6 and PostmarketOS working main camera",
-        "url": "https://catcrafts.net/posts/fairphone-6-postmarketos-working-main-camera",
+        "title": "AI usage patterns in software teams",
+        "url": "https://linear.app/data",
         "source": "Hacker News AI",
-        "score": 36
+        "score": 52
       },
       {
-        "title": "AI-Generated GitHub Copilot “Autofix” Allowed Compromise of Snowflake's Jira",
-        "url": "https://www.wiz.io/blog/red-agent-snowflake-copilot-cicd-bug",
+        "title": "Using the railway network as a flatbed scanner",
+        "url": "https://philo.gay/linecam/",
         "source": "Hacker News AI",
-        "score": 299
+        "score": 410
       },
       {
-        "title": "AI;DR (AI; Didn't Read)",
-        "url": "https://www.rickmanelius.com/p/aidr-ai-didnt-read",
+        "title": "Universal health coverage could save $1T and 114k lives a year: study",
+        "url": "https://ysph.yale.edu/news-article/universal-health-coverage-could-save-one-trillion-dollars-and-114000-lives-every-year/",
         "source": "Hacker News AI",
-        "score": 489
+        "score": 743
       },
       {
-        "title": "How to disable or avoid intrusive AI",
-        "url": "https://www.librarian.net/notoai/",
+        "title": "How to build an eval set you can maintain",
+        "url": "https://langfuse.com/academy/evaluate/choosing-what-to-evaluate",
         "source": "Hacker News AI",
-        "score": 237
+        "score": 3
       },
       {
-        "title": "My friends all hate AI; I just joined an AI startup",
-        "url": "https://www.fast.ai/posts/2026-08-18-returning-to-AI/",
+        "title": "Norway should buy OpenAI",
+        "url": "https://www.onethousandmeans.com/p/norway-should-buy-openai",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 221
       },
       {
-        "title": "GPT 5.6 Sol is the best \"vision\" model OpenAI ever released",
-        "url": "https://blog.roboflow.com/openai-gpt-5-6/",
+        "title": "Claude Code May–August 2026 weekly limits promotion",
+        "url": "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion",
         "source": "Hacker News AI",
-        "score": 289
+        "score": 262
       },
       {
-        "title": "Roboflow Playground: Try and Compare 30 Computer Vision Models",
-        "url": "https://blog.roboflow.com/roboflow-playground/",
+        "title": "Claude Code Teaching macOS to Natively Print to the HP Laser 1008a",
+        "url": "https://cdn.kuber.studio/chat/hp-laser-1008a-driver",
         "source": "Hacker News AI",
-        "score": 37
+        "score": 117
       },
       {
-        "title": "Launch HN: Speko (YC S26) – OpenRouter for Voice AI",
-        "url": "https://speko.ai/",
+        "title": "Field measurements of neighborhood-scale air temperature impacts of data centers",
+        "url": "https://asmedigitalcollection.asme.org/sustainablebuildings/article/7/2/024501/1233035/Data-Center-Waste-Heat-as-an-Emerging-Urban",
         "source": "Hacker News AI",
-        "score": 86
-      },
-      {
-        "title": "A simple fix for LLM tail latency",
-        "url": "https://engineering.myhoai.com/posts/a-simple-fix-for-llm-tail-latency/",
-        "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "GPT-5.6 Sol Pricing Cut by 50%",
-        "url": "https://openrouter.ai/openai/gpt-5.6-sol",
-        "source": "Hacker News AI",
-        "score": 6
-      },
-      {
-        "title": "An update on leaving Gmail for Fastmail",
-        "url": "https://moddedbear.com/an-update-on-leaving-gmail-for-fastmail/",
-        "source": "Hacker News AI",
-        "score": 88
-      },
-      {
-        "title": "On AI regulation and messaging",
-        "url": "https://twitter.com/DarioAmodei/status/2088758816376807762",
-        "source": "Hacker News AI",
-        "score": 230
-      },
-      {
-        "title": "Show HN: Sokoban AI Solver",
-        "url": "https://mkornreich.me/projects/sokoban/",
-        "source": "Hacker News AI",
-        "score": 66
-      },
-      {
-        "title": "Anthropic's ‘watermark’ text adulteration in Claude is a perversion of writing",
-        "url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
-        "source": "Hacker News AI",
-        "score": 753
-      },
-      {
-        "title": "LLM City – 3D render of all Kimi K3's weights as 2.5mm tiles",
-        "url": "https://magik.net/llmcity/",
-        "source": "Hacker News AI",
-        "score": 16
+        "score": 287
       }
     ],
     "news": [
       {
-        "title": "Trump threatens to bomb US ally Oman if it 'gets in the way' over Iran deal",
-        "url": "https://www.bbc.co.uk/news/articles/cy5dzk0ryzdo?at_medium=RSS&at_campaign=rss",
+        "title": "Sacked Ukrainian defence minister calls for presidential election",
+        "url": "https://www.bbc.co.uk/news/articles/cdew8n9erlwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Russia and Ukraine trade more deadly strikes",
-        "url": "https://www.bbc.co.uk/news/articles/cn7n4lm11vro?at_medium=RSS&at_campaign=rss",
+        "title": "Trump pauses new tariffs on Canada and says countries close to a deal",
+        "url": "https://www.bbc.co.uk/news/articles/cy9wz79ze29o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Russia's prominent anti-war politician jailed for 11 years",
-        "url": "https://www.bbc.co.uk/news/articles/cj4kjnle2neo?at_medium=RSS&at_campaign=rss",
+        "title": "Meta hooked children on Facebook and Instagram, US court hears",
+        "url": "https://www.bbc.co.uk/news/articles/cly5r7vr7q1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "French PM heckled over wildfire response as blazes continue across Europe",
-        "url": "https://www.bbc.co.uk/news/articles/cx2rzx5g5yro?at_medium=RSS&at_campaign=rss",
+        "title": "Witness gets combative in Tupac murder trial - 'I don't want to send him to prison'",
+        "url": "https://www.bbc.co.uk/news/articles/ckg3j15v2npo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Mushroom murderer Erin Patterson is appealing - here's what you need to know",
-        "url": "https://www.bbc.co.uk/news/articles/cj9dx03jrgjo?at_medium=RSS&at_campaign=rss",
+        "title": "Brazil's President Lula hails oil discovery near Amazon river",
+        "url": "https://www.bbc.co.uk/news/articles/c4gd7xd8e8lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Tributes to actress Hayden Panettiere as coroner finds 'no signs of trauma'",
-        "url": "https://www.bbc.co.uk/news/articles/cq5665zgg1po?at_medium=RSS&at_campaign=rss",
+        "title": "ZZ Top drummer Frank Beard dies aged 77",
+        "url": "https://www.bbc.co.uk/news/articles/czdmzdnp3z0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US hiker dies after being struck by lightning on Mount Etna",
-        "url": "https://www.bbc.co.uk/news/articles/ce34rlkw6q7o?at_medium=RSS&at_campaign=rss",
+        "title": "Earthquake rocks Spain's historic Granada, injuring three",
+        "url": "https://www.bbc.co.uk/news/articles/cdx755dyy1yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " Why are we still treating Canva like a dirty little secret? ",
-        "url": "https://www.creativebloq.com/design/design-software/why-are-we-still-treating-canva-like-a-dirty-little-secret",
+        "title": " This beautiful fountain pen is 40% off right now ",
+        "url": "https://www.creativebloq.com/design/product-design/this-beautiful-fountain-pen-is-40-percent-off-right-now",
         "source": "Creative Bloq"
       },
       {
-        "title": " Dear Disney, please keep Bluey's animation the way it is ",
-        "url": "https://www.creativebloq.com/art/animation/dear-disney-please-change-bluey-back-to-normal",
+        "title": " Build your own t-shirt printing empire with £1,130 off this starter kit ",
+        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/build-your-own-t-shirt-printing-empire-with-gbp1-130-off-this-starter-kit",
         "source": "Creative Bloq"
       },
       {
-        "title": " Instagram's new brand identity is more than just a wordmark ",
-        "url": "https://www.creativebloq.com/design/branding/instagrams-new-brand-identity-is-more-than-just-a-wordmark",
+        "title": " Has Apple dropped the ball with its Gen Z marketing? ",
+        "url": "https://www.creativebloq.com/design/advertising/has-apple-dropped-the-ball-with-its-gen-z-marketing",
         "source": "Creative Bloq"
       },
       {
-        "title": " While you were angry at Instagram, Jif quietly debuted a perfect new logo ",
-        "url": "https://www.creativebloq.com/design/branding/while-you-were-angry-at-instagram-jif-quietly-debuted-a-perfect-new-logo",
+        "title": " My favourite iPhone accessories I've tested this year – cases, power banks, ring holders and stands ",
+        "url": "https://www.creativebloq.com/tech/accessories/my-favourite-iphone-accessories-ive-tested-this-year-cases-power-banks-ring-holders-and-stands",
         "source": "Creative Bloq"
       },
       {
-        "title": " Is there a world where a £4,500 vibrating chair makes sense? ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/is-there-a-world-where-a-gbp4-500-vibrating-chair-makes-sense",
+        "title": " The story of China's viral \"worst animation ever\" just keeps getting weirder ",
+        "url": "https://www.creativebloq.com/art/animation/the-story-of-chinas-viral-worst-animation-ever-just-keeps-getting-weirder",
         "source": "Creative Bloq"
       },
       {
-        "title": " How Planet Coaster 2’s artists made Hollywood work as a theme park ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/how-planet-coaster-2s-artists-made-hollywood-work-as-a-theme-park",
+        "title": " Our favourite 5* gaming chair just got a comfort upgrade ",
+        "url": "https://www.creativebloq.com/tech/chairs-desks/our-favourite-5-gaming-chair-just-got-a-comfort-upgrade",
         "source": "Creative Bloq"
       },
       {
-        "title": " Sony's answer to Hello Kitty is a kawaii character design for our times ",
-        "url": "https://www.creativebloq.com/art/character-design/sonys-answer-to-hello-kitty-is-a-kawaii-character-design-for-our-times",
+        "title": " Apple's leaked new AirPods Pro look like a privacy nightmare ",
+        "url": "https://www.creativebloq.com/design/product-design/apples-leaked-airpods-pro-upgrade-looks-like-a-privacy-nightmare",
         "source": "Creative Bloq"
       }
     ],
@@ -269,70 +227,70 @@
         "source": "Science Daily"
       },
       {
+        "title": "The bacteria that make cheese taste so good may also benefit your gut",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260816044847.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Einstein’s biggest “mistake” came back — and changed cosmology forever",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260816044835.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Scientists reveal why walking gets so much harder with age",
         "url": "https://www.sciencedaily.com/releases/2026/08/260815065014.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists may have finally proved that “empty” space isn’t really empty",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260815065007.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A therapy that “rewrites” childhood memories can ease fear of failure",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260815064833.htm",
         "source": "Science Daily"
       },
       {
         "title": "Low-fat vegan diet helps people lose weight without eating less",
         "url": "https://www.sciencedaily.com/releases/2026/08/260815064825.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "Tiny 1.7-billion-year-old fossils could reveal how complex life began",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260815064811.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Webb’s mysterious little red dots may be hiding entire galaxies",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260815064808.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Physicists discover a hidden gluon structure inside protons that could rewrite textbooks",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260815064805.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists tracked kids for 8 years — the screen time result was unexpected",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260815064803.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Sarah J. Maas Reveals New ‘ACOTAR’ Books, Titles and Release Dates",
-        "url": "https://www.polygon.com/acotar-6-and-7-covers-book-titles-sarah-j-maas/",
+        "title": "GTA 6 Leaks Confirms Iconic 6-Star Wanted Level System Returns After 13 Years",
+        "url": "https://www.polygon.com/gta-6-leak-wanted-level-six-stars-five-how-does-it-work-cops-tanks/",
         "source": "Polygon"
       },
       {
-        "title": "The 12 Biggest Video Game Flops of All Time",
-        "url": "https://www.polygon.com/12-biggest-gaming-flops-ever/",
+        "title": "30 Years Ago, Tom Cruise's 10/10 Spy-Thriller Launched an Unstoppable Franchise. Now It's Free to Stream.",
+        "url": "https://www.polygon.com/mission-impossible-tom-cruise-free-streaming-august-2026/",
         "source": "Polygon"
       },
       {
-        "title": "MTG Hobbit Secret Lair Bonus Sheet: Diabolic Intent gets the perfect LOTR art",
-        "url": "https://www.polygon.com/mtg-hobbit-bonus-sheet-secret-lair-spoilers-diabolic-intent/",
+        "title": "Sega's 84-Hour Open-World Masterpiece Has Aged Like Fine Wine",
+        "url": "https://www.polygon.com/like-a-dragon-infinite-wealth-hawaii-rec/",
         "source": "Polygon"
       },
       {
-        "title": "Marvel's Ghost Rider Movie Gets Official 2028 Release Date",
-        "url": "https://www.polygon.com/ghost-rider-ryan-gosling-2028-release-date/",
+        "title": "Peacock Just Raised Its Prices for the Fourth Straight Year",
+        "url": "https://www.polygon.com/peacock-price-increase-august-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Luna Abyss is quietly one of the best shooters of 2026",
-        "url": "https://www.polygon.com/luna-abyss-impressions-game-pass/",
+        "title": "32 Years Later, The Single Best 'X-Files' Quote Of All Time Still Haunts Me",
+        "url": "https://www.polygon.com/best-x-files-quote/",
         "source": "Polygon"
       },
       {
-        "title": "BG3 Fans Just Found a Secret Voice Line That Shouldn't Exist",
-        "url": "https://www.polygon.com/baldurs-gate-3-cut-content-mods-voice-lines/",
+        "title": "'GTA 6' Hackers Are Targeting Rockstar's Controversial Decisions",
+        "url": "https://www.polygon.com/gta-6-hackers-cyberleek-physical-discs/",
         "source": "Polygon"
       },
       {
-        "title": "Fire Emblem Fortune's Weave is Officially Unplayable for Millions of People",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-switch-2-exclusive/",
+        "title": "Marvel's Wolverine Is At the Center of the Most Complex Online War In Years",
+        "url": "https://www.polygon.com/marvels-wolverine-backlash/",
         "source": "Polygon"
       }
     ],
@@ -364,7 +322,7 @@
         "source": "GitHub Blog"
       },
       {
-        "title": "Write your first prompt with the GitHub Copilot app",
+        "title": "GitHub Copilot app for Beginners: Write your first prompt",
         "url": "https://github.blog/ai-and-ml/github-copilot/write-your-first-prompt-with-the-github-copilot-app/",
         "source": "GitHub Blog"
       },
