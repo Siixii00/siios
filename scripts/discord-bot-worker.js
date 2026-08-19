@@ -1060,6 +1060,8 @@ async function generateAIResponseWithContext(message, characterId, userId, userD
         systemMessages.push({ role: 'system', content: '[Reroll]\nThis is a reroll. The previous AI reply was removed. Provide a COMPLETELY DIFFERENT response. Do NOT repeat or closely mirror the previous reply. Use a different angle, tone, or direction.' });
     }
 
+    systemMessages.push({ role: 'system', content: '[Language Rule]\nYou MUST reply in Traditional Chinese (繁體中文) at all times. Do NOT switch to Simplified Chinese (簡體中文). All output must use 繁體中文 characters and grammar. This rule overrides any language detection or user input language.' });
+
     // Discord 環境提醒（公開頻道 + 人數判斷 + 現實時間）
     const environ = await getDiscordEnvironment(message, env);
     const now = new Date();
