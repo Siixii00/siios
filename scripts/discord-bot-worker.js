@@ -366,6 +366,12 @@ async function pollBoundChannels(env, ctx) {
                     new Date().toISOString(),
                     JSON.stringify({ source: 'discord', channel_id: msg.channel_id, character_id: characterId, responding_to_user: userId })
                 ).run();
+                const memCharRow = characterId ? await env.DB.prepare(`SELECT name FROM characters WHERE id = ?`).bind(characterId).first() : null;
+                const memCharName = memCharRow?.name || 'AI';
+                const pollMemChatId = characterId || msg.channel_id;
+                if (ctx?.waitUntil) ctx.waitUntil(extractDiscordMemories(env, msg.content, aiResponse.content, userDisplayName, memCharName)
+                    .then(facts => saveExtractedMemories(env, pollMemChatId, characterId, facts, { source: 'discord', platform: 'discord', channel_id: msg.channel_id }))
+                    .catch(() => {}));
                 replied++;
             }
         }
@@ -466,6 +472,76 @@ async function saveDiscordMemory(env, characterId, chatId, userId, userDisplayNa
         `[Discord 聊天] ${nowIso} User (${userDisplayName}): ${content}`, 'dynamic', 0.5,
         nowIso, memoryMeta
     ).run();
+}
+
+// ===== 記憶萃取：將對話轉成結構化事實記憶（不保留對話格式）=====
+const MEMORY_TYPE_KEYWORDS = [
+    { type: 'permanent', keywords: ['永遠', '最重要', '核心', '本質', '始終', '絕不', '永遠不會'] },
+    { type: 'plan', keywords: ['計畫', '待辦', '要記得', '必須', '需要', '打算', '準備', '目標', 'deadline', '約好', '說好'] },
+    { type: 'feel', keywords: ['感覺', '覺得', '心情', '難過', '開心', '焦慮', '害怕', '感動', '失望', '憤怒', '悲傷', '快樂', '喜歡'] },
+    { type: 'i', keywords: ['我是', '我喜歡', '我討厭', '我的個性', '我通常', '我習慣', '我偏好', '我重視', '使用者喜歡', '使用者討厭'] }
+];
+
+function classifyMemoryType(content) {
+    for (const rule of MEMORY_TYPE_KEYWORDS) {
+        if (rule.keywords.some(kw => content.includes(kw))) return rule.type;
+    }
+    return 'dynamic';
+}
+
+async function extractDiscordMemories(env, userContent, aiContent, userDisplayName, charName) {
+    const aiUrl = await getConfig(env, 'AI_API_URL');
+    const aiKey = await getConfig(env, 'AI_API_KEY');
+    const aiModel = await getConfig(env, 'AI_MODEL') || 'gpt-3.5-turbo';
+    if (!aiUrl || !aiKey) return [];
+
+    const prompt = `請萃取下列 Discord 角色扮演對話中值得長期記住的事實記憶。
+要求：
+- 只保留重要資訊：事件、約定、事實、情感、使用者具體偏好、數字、名稱、時間
+- 每條以角色第一人稱「我」的視角簡要敘述，例如「使用者今天加班到很晚」、「我和使用者約好週末看電影」、「使用者喜歡喝無糖綠茶」
+- 每行一條，以 - 開頭
+- 嚴禁輸出對話逐字稿或對話格式，嚴禁加 [Discord 聊天] 之類前綴，嚴禁複製原句
+- 若沒有值得記住的內容，只輸出：無
+
+對方名字：${userDisplayName}
+角色名字：${charName}
+
+對話：
+使用者（${userDisplayName}）：${(userContent || '').slice(0, 1500)}
+${charName}：${(aiContent || '').slice(0, 1500)}`;
+
+    try {
+        const resp = await fetch(`${aiUrl}/v1/chat/completions`, {
+            method: 'POST',
+            headers: { 'Authorization': `Bearer ${aiKey}`, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ model: aiModel, messages: [{ role: 'user', content: prompt }], temperature: 0.3, max_tokens: 500 })
+        });
+        if (!resp.ok) return [];
+        const data = await resp.json();
+        const output = (data.choices?.[0]?.message?.content || '').trim();
+        if (!output || output === '無') return [];
+        return output.split('\n')
+            .map(line => line.replace(/^[-*•\s]+/, '').trim())
+            .filter(line => line.length > 2 && !/^無$/.test(line));
+    } catch (e) {
+        console.error('extractDiscordMemories error:', e);
+        return [];
+    }
+}
+
+async function saveExtractedMemories(env, chatId, characterId, lines, metadata) {
+    if (!Array.isArray(lines) || lines.length === 0) return 0;
+    const nowIso = new Date().toISOString();
+    let saved = 0;
+    for (const line of lines) {
+        const memoryType = classifyMemoryType(line);
+        const importance = memoryType === 'permanent' ? 0.9 : memoryType === 'plan' ? 0.7 : memoryType === 'feel' ? 0.6 : memoryType === 'i' ? 0.8 : 0.5;
+        const memCharId = characterId || chatId;
+        await env.DB.prepare(`INSERT INTO memories (id, chat_id, character_id, content, memory_type, importance, timestamp, metadata) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`)
+            .bind('mem-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8), chatId, memCharId, line, memoryType, importance, nowIso, JSON.stringify(metadata)).run();
+        saved++;
+    }
+    return saved;
 }
 
 // ===== 後台總結：每 3 則對話自動總結為條列式記憶 =====
@@ -983,27 +1059,22 @@ async function handleMessage(message, env, ctx) {
         JSON.stringify({ source: 'discord', channel_id: message.channel_id, character_id: characterId, responding_to_user: userId })
     ).run();
 
-    // 自動存為簡易記憶（標記平台 + 時間 + 雙向內容）
+    // 萃取結構化記憶（以事實為主、不保留對話格式；異步執行不卡回覆）
     const memoryChatId = characterId || message.channel_id;
-    const memoryCharId = characterId || message.channel_id;
-    const nowIso = new Date().toISOString();
     const charRow = characterId ? await env.DB.prepare(`SELECT name FROM characters WHERE id = ?`).bind(characterId).first() : null;
     const charName = charRow?.name || 'AI';
-    const memoryMeta = JSON.stringify({ source: 'discord', platform: 'discord', channel_id: message.channel_id });
+    const memoryMeta = { source: 'discord', platform: 'discord', channel_id: message.channel_id };
 
-    // 使用者訊息
-    await env.DB.prepare(`INSERT INTO memories (id, chat_id, character_id, content, memory_type, importance, timestamp, metadata) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`).bind(
-        'mem-' + Date.now(), memoryChatId, memoryCharId,
-        `[Discord 聊天] ${nowIso} User (${userDisplayName}): ${message.content}`, 'dynamic', 0.5,
-        nowIso, memoryMeta
-    ).run();
-
-    // AI 回覆
-    await env.DB.prepare(`INSERT INTO memories (id, chat_id, character_id, content, memory_type, importance, timestamp, metadata) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`).bind(
-        'mem-' + Date.now() + '-ai', memoryChatId, memoryCharId,
-        `[Discord 聊天] ${nowIso} ${charName}: ${aiResponse.content}`, 'dynamic', 0.5,
-        nowIso, memoryMeta
-    ).run();
+    if (ctx?.waitUntil) {
+        ctx.waitUntil((async () => {
+            const facts = await extractDiscordMemories(env, message.content, aiResponse.content, userDisplayName, charName);
+            await saveExtractedMemories(env, memoryChatId, characterId, facts, memoryMeta);
+        })().catch(() => {}));
+    } else {
+        extractDiscordMemories(env, message.content, aiResponse.content, userDisplayName, charName)
+            .then(facts => saveExtractedMemories(env, memoryChatId, characterId, facts, memoryMeta))
+            .catch(() => {});
+    }
 
     // 後台總結
     const summaryChatId = characterId || message.channel_id;
@@ -1107,8 +1178,21 @@ ${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道�
         if (characterData.scenario) promptContent += '\n\n場景設定:\n' + characterData.scenario;
     }
     if (memories.length > 0) {
-        const memoryText = memories.map(m => `- ${m.content}`).join('\n');
-        promptContent += `\n\n[Related Memories]\n${memoryText}`;
+        const maxChars = 2000;
+        let usedChars = 0;
+        const memoryLines = [];
+        for (const m of memories) {
+            if ((m.content || '').startsWith('[Discord 聊天]') || m.memory_type === 'raw') continue;
+            const sanitized = (m.content || '').replace(/[\r\n]/g, ' ').replace(/\[.*?\]/g, '').replace(/\d{4}-\d{2}-\d{2}T[\d:.Z-]+/g, '').replace(/\s+/g, ' ').trim();
+            if (!sanitized) continue;
+            const line = `- ${sanitized}`;
+            if (usedChars + line.length > maxChars) break;
+            memoryLines.push(line);
+            usedChars += line.length;
+        }
+        if (memoryLines.length > 0) {
+            promptContent += `\n\n[Related Memories]\n${memoryLines.join('\n')}`;
+        }
     }
     if (promptContent) systemMessages.push({ role: 'system', content: promptContent });
 
@@ -1402,6 +1486,10 @@ async function clearChannelHistory(channel_id, env, mode = 'chat') {
     const botUserId = await getBotUserId(env);
     if (!botUserId) return '❌ 無法取得 Bot 用戶 ID';
 
+    const characterId = await resolveChannelCharacter(channel_id, env);
+    const chatIds = [channel_id];
+    if (characterId && characterId !== channel_id) chatIds.push(characterId);
+
     let lastId = null;
     let totalDeleted = 0;
     let hasMore = true;
@@ -1441,14 +1529,20 @@ async function clearChannelHistory(channel_id, env, mode = 'chat') {
         if (hasMore) await new Promise(r => setTimeout(r, 500));
     }
 
-    await env.DB.prepare(`DELETE FROM messages WHERE chat_id = ?`).bind(channel_id).run();
+    for (const cid of chatIds) {
+        await env.DB.prepare(`DELETE FROM messages WHERE chat_id = ?`).bind(cid).run();
+        // 清除原始對話日誌型記憶（對話格式），保留結構化事實記憶與總結
+        await env.DB.prepare(`DELETE FROM memories WHERE chat_id = ? AND (content LIKE '[Discord 聊天]%' OR memory_type = 'raw')`).bind(cid).run();
+    }
 
     if (mode === 'all') {
-        await env.DB.prepare(`DELETE FROM memories WHERE chat_id = ?`).bind(channel_id).run();
+        for (const cid of chatIds) {
+            await env.DB.prepare(`DELETE FROM memories WHERE chat_id = ?`).bind(cid).run();
+        }
         return `✅ 已刪除 ${totalDeleted} 則機器人訊息、清除對話歷史，並清除相關記憶`;
     }
 
-    return `✅ 已刪除 ${totalDeleted} 則機器人訊息並清除對話歷史（記憶保留）`;
+    return `✅ 已刪除 ${totalDeleted} 則機器人訊息、清除對話歷史與對話日誌（事實記憶保留）`;
 }
 
 // ===== 同步角色 =====
