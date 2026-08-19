@@ -1249,7 +1249,8 @@ async function findBotLastMessageId(channel_id, env) {
     if (!response.ok) return null;
     const messages = await response.json();
     if (!Array.isArray(messages)) return null;
-    const botMsg = messages.find(m => m.author?.id === await getBotUserId(env));
+    const botUserId = await getBotUserId(env);
+    const botMsg = messages.find(m => m.author?.id === botUserId);
     return botMsg?.id || null;
 }
 
