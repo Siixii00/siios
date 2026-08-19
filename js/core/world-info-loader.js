@@ -10,6 +10,16 @@ function sortByPriority(entries) {
     });
 }
 
+function inferBodyType(heightCm, weightKg) {
+    if (!heightCm || !weightKg || heightCm <= 0 || weightKg <= 0) return null;
+    const heightM = heightCm / 100;
+    const bmi = weightKg / (heightM * heightM);
+    if (bmi < 18.5) return { category: 'slender', bmi, label: '纖細/骨感', vocabSet: 'slender' };
+    if (bmi < 24) return { category: 'healthy', bmi, label: '健康勻稱', vocabSet: 'normal' };
+    if (bmi < 27) return { category: 'round', bmi, label: '豐腴/圓潤', vocabSet: 'round' };
+    return { category: 'plus_size', bmi, label: '豐滿', vocabSet: 'round' };
+}
+
 async function getCharacterData(chatId) {
     const chat = await ChatsDB.getById(chatId);
     if (!chat || !chat.character_id) return null;
@@ -130,6 +140,20 @@ async function loadWorldInfoContext(chatId, userMessage, options = {}) {
                     type: 'user',
                     enabled: true
                 });
+            }
+
+            if (userData.height || userData.weight) {
+                const bodyType = inferBodyType(userData.height, userData.weight);
+                if (bodyType) {
+                    results.push({
+                        id: 'user-body-type',
+                        name: '使用者體型',
+                        content: `[使用者體型推斷]\n根據使用者提供的數據（身高 ${userData.height}cm，體重 ${userData.weight}kg，BMI ${bodyType.bmi.toFixed(1)}），推斷使用者體型為「${bodyType.label}」。\n嚴格遵守：必須使用符合此體型的描述詞彙，禁止使用不符合的詞彙。`,
+                        priority: 'front',
+                        type: 'user',
+                        enabled: true
+                    });
+                }
             }
         }
         
