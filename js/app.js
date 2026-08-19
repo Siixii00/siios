@@ -88,25 +88,42 @@ const App = {
             
             console.log('[App] 檢查並注入默認禁止詞...');
             const existingForbidden = await GlobalForbiddenDB.getAll();
-            if (existingForbidden.length === 0) {
-                const defaultForbidden = [
-                    {
-                        name: '禁止將人物化',
-                        content: '嚴禁使用將人物化的詞彙來描述使用者或角色，例如：變量、實驗、數據、測試、樣本、參數、數值、計算、分析、處理、輸入、輸出、程式、演算法、模型等。這些詞彙會將人物視為非人物的對象，嚴重暴露AI身份。一旦偵測到此類詞彙，必須立即使用符合角色語境的同義詞替換。',
-                        priority: 'front',
-                        enabled: true
-                    },
-                    {
-                        name: '禁止實驗與數據詞彙',
-                        content: '嚴禁使用與實驗或數據性質相關的詞語來描述人物，例如：實驗對象、數據點、變量、測試組、控制組、樣本、參數、觀測值、測量、實驗組、對照組等。在角色扮演中，人物是活生生的人，不是實驗品或數據。',
-                        priority: 'front',
-                        enabled: true
-                    }
-                ];
-                for (const entry of defaultForbidden) {
-                    await GlobalForbiddenDB.create(entry);
+            const existingNames = new Set((existingForbidden || []).map(f => f.name));
+            const defaultForbidden = [
+                {
+                    name: '禁止將人物化',
+                    content: '嚴禁使用將人物化的詞彙來描述使用者或角色，例如：變量、實驗、數據、測試、樣本、參數、數值、計算、分析、處理、輸入、輸出、程式、演算法、模型等。這些詞彙會將人物視為非人物的對象，嚴重暴露AI身份。一旦偵測到此類詞彙，必須立即使用符合角色語境的同義詞替換。',
+                    priority: 'front',
+                    enabled: true
+                },
+                {
+                    name: '禁止實驗與數據詞彙',
+                    content: '嚴禁使用與實驗或數據性質相關的詞語來描述人物，例如：實驗對象、數據點、變量、測試組、控制組、樣本、參數、觀測值、測量、實驗組、對照組等。在角色扮演中，人物是活生生的人，不是實驗品或數據。',
+                    priority: 'front',
+                    enabled: true
+                },
+                {
+                    name: '禁止不健康體型詞彙',
+                    content: '嚴禁使用描述不健康體型的詞彙，包括：鎖骨、腰窩、膝彎、腰線、曲線、A4腰、漫畫腿、竹竿、紙片人、骨瘦如柴、瘦得皮包骨、皮包骨、肋骨、鎖骨、馬甲線、蝴蝶骨、骨感、纖瘦、苗條到不真實、過瘦、極瘦、超瘦、瘦削、纖細、盈盈一握、不堪一握、盈盈腰肢、纖腰、蜂腰、蛇腰、柳葉腰、水蛇腰、A4紙、iPhone腰、馬甲、馬甲線、蜜桃臀、鉛筆腿、筷子腿、火腿腸、樹枝、竹籤、竹竿腿、漫畫腿、網紅腿、少女腿、小孩腿、蘿蔔腿、雞爪、骷髏、骷髏手、骷髏腿。這些是不符合正常健康人體的描述，絕對禁止用於任何角色或使用者描述。',
+                    priority: 'front',
+                    enabled: true
+                },
+                {
+                    name: '尊重真實體型',
+                    content: '角色必須嚴格閱讀並遵守使用者(user)的外觀描述和世界書中的身材設定。若使用者設定為較為圓潤、豐滿、健康體型，角色必須完全遵循該設定進行描述，絕不可使用上述不健康體型的詞彙，也絕不可將使用者描寫為不符合其設定的體型。每個人的身體都是獨特的，必須給予最大的尊重。',
+                    priority: 'front',
+                    enabled: true
                 }
-                console.log('[App] 默認禁止詞已注入');
+            ];
+            let addedCount = 0;
+            for (const entry of defaultForbidden) {
+                if (!existingNames.has(entry.name)) {
+                    await GlobalForbiddenDB.create(entry);
+                    addedCount++;
+                }
+            }
+            if (addedCount > 0) {
+                console.log(`[App] 已注入 ${addedCount} 條新的默認禁止詞`);
             }
             
             console.log('[App] 載入設定...');
