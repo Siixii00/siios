@@ -132,6 +132,18 @@ export default {
             }
         }
 
+        // 一鍵清空當前頻道訊息（Discord + 內部歷史）
+        if (url.pathname === '/discord/clear' && request.method === 'POST') {
+            try {
+                const { channel_id } = await request.json();
+                if (!channel_id) return Response.json({ success: false, error: '缺少 channel_id' }, { status: 400, headers: corsHeaders });
+                const result = await clearChannelHistory(channel_id, env);
+                return Response.json({ success: true, result }, { headers: corsHeaders });
+            } catch (error) {
+                return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
+            }
+        }
+
         // 從 PWA 同步角色
         if (url.pathname === '/sync/characters' && request.method === 'POST') {
             try {
@@ -575,6 +587,10 @@ async function registerCommands(env) {
             description: '重新生成 AI 對上一則使用者訊息的回覆'
         },
         {
+            name: 'clear',
+            description: '清除當前頻道的所有訊息歷史（包含 Discord 與內部）'
+        },
+        {
             name: 'backup',
             description: '產生完整備份（需 Backup Key）並傳送 JSON 檔案',
             default_member_permissions: '0',
@@ -800,7 +816,7 @@ async function handleSlashCommand(event, env, ctx) {
                     } catch (_) {}
 
                     const fakeMessage = { content: lastUserMsg.content, channel_id: channelId, id: lastUserMsg.id };
-                    const aiResponse = await generateAIResponseWithContext(fakeMessage, characterId, userId, userDisplayName, env);
+                    const aiResponse = await generateAIResponseWithContext(fakeMessage, characterId, userId, userDisplayName, env, { reroll: true });
 
                     // 刪除 Discord 上的舊 AI 回覆（若存在）
                     try {
@@ -824,6 +840,21 @@ async function handleSlashCommand(event, env, ctx) {
                 }
             })());
 
+            return Response.json({ type: 5, data: { flags: 64 } });
+        }
+
+        if (name === 'clear') {
+            ctx.waitUntil((async () => {
+                try {
+                    const result = await clearChannelHistory(channelId, env);
+                    await editInteraction(appId, interactionToken, result, env);
+                } catch (error) {
+                    console.error('clear error:', error);
+                    try {
+                        await editInteraction(appId, interactionToken, `❌ 清除失敗: ${error.message}`, env);
+                    } catch (_) {}
+                }
+            })());
             return Response.json({ type: 5, data: { flags: 64 } });
         }
 
@@ -974,7 +1005,7 @@ async function handleMessage(message, env, ctx) {
 }
 
 // ===== 生成 AI 回覆（含記憶上下文 + RP 系統提示詞）=====
-async function generateAIResponseWithContext(message, characterId, userId, userDisplayName, env) {
+async function generateAIResponseWithContext(message, characterId, userId, userDisplayName, env, options = {}) {
     const chatId = characterId || message.channel_id;
 
     const aiUrl = await getConfig(env, 'AI_API_URL');
@@ -1024,6 +1055,10 @@ async function generateAIResponseWithContext(message, characterId, userId, userD
     // 3. RP 系統提示詞（與 PWA 完全一致）
     const rpPrompt = RP_SYSTEM_PROMPT_TEMPLATE.replace(/\{\{char_name\}\}/g, charName);
     systemMessages.push({ role: 'system', content: rpPrompt });
+
+    if (options.reroll) {
+        systemMessages.push({ role: 'system', content: '[Reroll]\nThis is a reroll. The previous AI reply was removed. Provide a COMPLETELY DIFFERENT response. Do NOT repeat or closely mirror the previous reply. Use a different angle, tone, or direction.' });
+    }
 
     // Discord 環境提醒（公開頻道 + 人數判斷 + 現實時間）
     const environ = await getDiscordEnvironment(message, env);
@@ -1079,9 +1114,13 @@ ${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道�
 
     const allMessages = [...systemMessages, ...conversationMessages, ...backMessages];
 
+    const body = { model: aiModel, messages: allMessages, temperature: 0.7, max_tokens: 2000 };
+    if (options.reroll) {
+        body.seed = Math.floor(Math.random() * 999999);
+    }
     const response = await fetch(`${aiUrl}/v1/chat/completions`, {
         method: 'POST', headers: { 'Authorization': `Bearer ${aiKey}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ model: aiModel, messages: allMessages, temperature: 0.7, max_tokens: 2000 })
+        body: JSON.stringify(body)
     });
 
     if (!response.ok) throw new Error(`AI API error: ${response.status}`);
@@ -1344,6 +1383,38 @@ async function getDiscordHistory(channel_id, limit, env) {
     if (!response.ok) throw new Error(`Discord API error: ${response.status}`);
     const messages = await response.json();
     return messages.map(m => ({ id: m.id, author: m.author.username, author_id: m.author.id, content: m.content, timestamp: m.timestamp, role: m.author.bot ? 'assistant' : 'user' }));
+}
+
+async function clearChannelHistory(channel_id, env) {
+    const response = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages?limit=100`, {
+        headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
+    });
+    if (!response.ok) throw new Error(`Discord API error: ${response.status}`);
+    const messages = await response.json();
+    if (!Array.isArray(messages)) return '❌ 無法取得頻道訊息';
+
+    const botUserId = await getBotUserId(env);
+    if (!botUserId) return '❌ 無法取得 Bot 用戶 ID';
+
+    const botMessages = messages.filter(m => m.author?.id === botUserId);
+    if (botMessages.length === 0) {
+        await env.DB.prepare(`DELETE FROM messages WHERE chat_id = ?`).bind(channel_id).run();
+        return '✅ 頻道已無機器人訊息，內部歷史已清除';
+    }
+
+    let deleted = 0;
+    for (const msg of botMessages) {
+        try {
+            const deleteResp = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages/${msg.id}`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
+            });
+            if (deleteResp.ok || deleteResp.status === 404) deleted++;
+        } catch (_) {}
+    }
+
+    await env.DB.prepare(`DELETE FROM messages WHERE chat_id = ?`).bind(channel_id).run();
+    return `✅ 已刪除 ${deleted} 則機器人訊息並清除內部歷史`;
 }
 
 // ===== 同步角色 =====
