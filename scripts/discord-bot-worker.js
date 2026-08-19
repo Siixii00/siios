@@ -1066,7 +1066,7 @@ async function generateAIResponseWithContext(message, characterId, userId, userD
     systemMessages.push({ role: 'system', content: rpPrompt });
 
     if (options.reroll) {
-        systemMessages.push({ role: 'system', content: '[Reroll]\nThis is a reroll. The previous AI reply was removed. Provide a COMPLETELY DIFFERENT response. Do NOT repeat or closely mirror the previous reply. Use a different angle, tone, or direction.' });
+        systemMessages.push({ role: 'system', content: '[Reroll - CRITICAL]\nThe previous AI reply has been REMOVED from history. You MUST generate a TOTALLY NEW response.\n- ABSOLUTELY FORBIDDEN from repeating, paraphrasing, or closely mirroring the previous reply.\n- Use a completely different tone, angle, and direction.\n- If the previous reply was sweet, make this one tsundere or neutral. If it was long, make this one short. Vary sentence structure, word choice, and pacing.\n- Treat this as a fresh start with the same user message.' });
     }
 
     systemMessages.push({ role: 'system', content: '[Language Rule]\nYou MUST reply in Traditional Chinese (繁體中文) at all times. Do NOT switch to Simplified Chinese (簡體中文). All output must use 繁體中文 characters and grammar. This rule overrides any language detection or user input language.' });
@@ -1128,6 +1128,8 @@ ${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道�
     const body = { model: aiModel, messages: allMessages, temperature: 0.7, max_tokens: 2000 };
     if (options.reroll) {
         body.seed = Math.floor(Math.random() * 999999);
+        body.temperature = 1.2;
+        body.top_p = 0.95;
     }
     const response = await fetch(`${aiUrl}/v1/chat/completions`, {
         method: 'POST', headers: { 'Authorization': `Bearer ${aiKey}`, 'Content-Type': 'application/json' },
