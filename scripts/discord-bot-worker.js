@@ -878,7 +878,7 @@ async function handleMessage(message, env, ctx) {
 
     // 是否被 @mention（@機器人 一定 100% 回應）
     const botUserId = await getBotUserId(env);
-    const mentioned = (message.mentions || []).some(m => m.id === botUserId);
+    let mentioned = (message.mentions || []).some(m => m.id === botUserId);
 
     // 完全以角色回覆：如果沒有綁定角色，就提示使用者去 Siios 綁定
     if (!characterId) {
