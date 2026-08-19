@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-19T09:35:20.609439",
-    "total_items": 56
+    "last_updated": "2026-08-19T10:29:53.542194",
+    "total_items": 48
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "OpenLogi",
         "url": "https://openlogi.org/en",
         "source": "Hacker News",
-        "score": 626
-      },
-      {
-        "title": "Where Human Sleep Went Wrong",
-        "url": "https://nautil.us/where-human-sleep-went-wrong-1283797",
-        "source": "Hacker News",
-        "score": 48
+        "score": 713
       },
       {
         "title": "Cerebras CS-4",
         "url": "https://www.cerebras.ai/cs4",
         "source": "Hacker News",
-        "score": 269
-      },
-      {
-        "title": "Palomar: A registry of Lean verified mathematics",
-        "url": "https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/",
-        "source": "Hacker News",
-        "score": 99
-      },
-      {
-        "title": "Supersonic Trebuchet [video]",
-        "url": "https://www.youtube.com/watch?v=Co57SfcT-h0",
-        "source": "Hacker News",
-        "score": 98
-      },
-      {
-        "title": "Being ambitious and being a dad",
-        "url": "https://nicholascharriere.com/blog/being-ambitious-and-being-a-dad/",
-        "source": "Hacker News",
-        "score": 483
-      },
-      {
-        "title": "Scientists stunned by children's lung recovery in ultra low emission zone",
-        "url": "https://www.bbc.com/news/articles/c1l1r1zne1ro",
-        "source": "Hacker News",
-        "score": 248
-      },
-      {
-        "title": "A 3D fruit fly on macOS desktop powered by the real FlyWire connectome",
-        "url": "https://github.com/DenisSergeevitch/desktop-fly",
-        "source": "Hacker News",
-        "score": 272
+        "score": 287
       },
       {
         "title": "The Two Factions of C++",
         "url": "https://herecomesthemoon.net/2024/11/two-factions-of-cpp/",
         "source": "Hacker News",
-        "score": 15
+        "score": 30
       },
       {
-        "title": "λλ: A Programming Language for Silicon Photonics",
-        "url": "https://dl.acm.org/doi/10.1145/3789240.3829151",
+        "title": "Being ambitious and being a dad",
+        "url": "https://nicholascharriere.com/blog/being-ambitious-and-being-a-dad/",
         "source": "Hacker News",
-        "score": 18
+        "score": 509
       },
       {
-        "title": "Solo – a .so loader for static Linux binaries",
-        "url": "https://github.com/pg83/solo",
+        "title": "Palomar: A registry of Lean verified mathematics",
+        "url": "https://terrytao.wordpress.com/2026/08/18/palomar-a-registry-of-lean-verified-mathematics/",
         "source": "Hacker News",
-        "score": 144
+        "score": 106
+      },
+      {
+        "title": "Supersonic Trebuchet [video]",
+        "url": "https://www.youtube.com/watch?v=Co57SfcT-h0",
+        "source": "Hacker News",
+        "score": 111
+      },
+      {
+        "title": "A 3D fruit fly on macOS desktop powered by the real FlyWire connectome",
+        "url": "https://github.com/DenisSergeevitch/desktop-fly",
+        "source": "Hacker News",
+        "score": 285
+      },
+      {
+        "title": "Scientists stunned by children's lung recovery in ultra low emission zone",
+        "url": "https://www.bbc.com/news/articles/c1l1r1zne1ro",
+        "source": "Hacker News",
+        "score": 270
       },
       {
         "title": "How does IKEA come up with names for its products?",
         "url": "https://www.ikea.com/se/en/customer-service/knowledge/articles/6f564c4d-2ccc-46de-b643-545a3948dc79.html",
         "source": "Hacker News",
-        "score": 344
+        "score": 350
+      },
+      {
+        "title": "Solo – a .so loader for static Linux binaries",
+        "url": "https://github.com/pg83/solo",
+        "source": "Hacker News",
+        "score": 145
+      },
+      {
+        "title": "λλ: A Programming Language for Silicon Photonics",
+        "url": "https://dl.acm.org/doi/10.1145/3789240.3829151",
+        "source": "Hacker News",
+        "score": 25
+      },
+      {
+        "title": "Where Human Sleep Went Wrong",
+        "url": "https://nautil.us/where-human-sleep-went-wrong-1283797",
+        "source": "Hacker News",
+        "score": 63
+      },
+      {
+        "title": "Activation Energy is a good model for a lot of things",
+        "url": "https://homosabiens.substack.com/p/activation-energy-is-a-good-model",
+        "source": "Hacker News",
+        "score": 9
       },
       {
         "title": "The Vietnam Binh Chau (Chau Tan) Late Tang Wreck",
         "url": "https://www.koh-antique.com/client/tangwreck/tangwreck.html",
         "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "AI usage patterns in software teams",
-        "url": "https://linear.app/data",
-        "source": "Hacker News",
-        "score": 136
+        "score": 41
       },
       {
         "title": "The Mojo language (by Modular, now Qualcomm) is now open-source",
         "url": "https://www.modular.com/blog/modcon-announcements",
         "source": "Hacker News",
-        "score": 37
+        "score": 52
       }
     ],
     "ai": [
@@ -101,19 +101,19 @@
         "title": "AI usage patterns in software teams",
         "url": "https://linear.app/data",
         "source": "Hacker News AI",
-        "score": 136
+        "score": 142
       },
       {
         "title": "Claude writing a macOS driver for my obscure HP printer built only for Windows",
         "url": "https://twitter.com/kuberwastaken/status/2089377982536388964",
         "source": "Hacker News AI",
-        "score": 197
+        "score": 205
       },
       {
         "title": "Claude Code May–August 2026 weekly limits promotion",
         "url": "https://support.claude.com/en/articles/15910845-claude-code-may-august-2026-weekly-limits-promotion",
         "source": "Hacker News AI",
-        "score": 274
+        "score": 276
       },
       {
         "title": "Using the railway network as a flatbed scanner",
@@ -122,16 +122,10 @@
         "score": 429
       },
       {
-        "title": "Norway should buy OpenAI",
-        "url": "https://www.onethousandmeans.com/p/norway-should-buy-openai",
-        "source": "Hacker News AI",
-        "score": 240
-      },
-      {
         "title": "Universal health coverage could save $1T and 114k lives a year: study",
         "url": "https://ysph.yale.edu/news-article/universal-health-coverage-could-save-one-trillion-dollars-and-114000-lives-every-year/",
         "source": "Hacker News AI",
-        "score": 840
+        "score": 842
       }
     ],
     "news": [
@@ -151,11 +145,6 @@
         "source": "BBC World"
       },
       {
-        "title": "Meta hooked children on Facebook and Instagram, US court hears",
-        "url": "https://www.bbc.co.uk/news/articles/cly5r7vr7q1o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "South Korea shortens war games with US, citing Washington request",
         "url": "https://www.bbc.co.uk/news/articles/cnvn0j31qj8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -166,52 +155,36 @@
         "source": "BBC World"
       },
       {
-        "title": "Thai teen found in suitcase died from suffocation, police reveal",
-        "url": "https://www.bbc.co.uk/news/articles/c141605846jo?at_medium=RSS&at_campaign=rss",
+        "title": "Meta hooked children on Facebook and Instagram, US court hears",
+        "url": "https://www.bbc.co.uk/news/articles/cly5r7vr7q1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Apparent human remains found in US reservoir as water levels hit record low",
+        "url": "https://www.bbc.co.uk/news/articles/cp87gvmedlmo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " The surprising reason why Resonance: A Plague Tale Legacy’s ancient Greece is historically wrong ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/the-surprising-reason-why-resonance-a-plague-tale-legacys-ancient-greece-is-historically-wrong",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Replacing creative jobs with AI could have a hidden cost, a new report warns ",
-        "url": "https://www.creativebloq.com/ai/replacing-creative-jobs-with-ai-could-have-a-hidden-cost-new-report-warns",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The easy way to make epic fantasy art using Blender and Photoshop ",
-        "url": "https://www.creativebloq.com/3d/the-easy-way-to-make-epic-fantasy-art-using-blender-and-photoshop",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This beautiful fountain pen is 40% off right now ",
-        "url": "https://www.creativebloq.com/design/product-design/this-beautiful-fountain-pen-is-40-percent-off-right-now",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Build your own t-shirt printing empire with £1,130 off this starter kit ",
-        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/build-your-own-t-shirt-printing-empire-with-gbp1-130-off-this-starter-kit",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Has Apple dropped the ball with its Gen Z marketing? ",
-        "url": "https://www.creativebloq.com/design/advertising/has-apple-dropped-the-ball-with-its-gen-z-marketing",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " My favourite iPhone accessories I've tested this year – cases, power banks, ring holders and stands ",
-        "url": "https://www.creativebloq.com/tech/accessories/my-favourite-iphone-accessories-ive-tested-this-year-cases-power-banks-ring-holders-and-stands",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
+      {
+        "title": "This 23-foot crocodylian may have ruled South America’s food chain",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260819041226.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "16 mummies and a dog reveal a hidden order inside an ancient Egyptian tomb",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260819041218.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Scientists turn DNA into a memory device that uses 100x less power",
         "url": "https://www.sciencedaily.com/releases/2026/08/260816044853.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Tiny robots powered by light can hunt down and collect bacteria",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260816044850.htm",
         "source": "Science Daily"
       },
       {
@@ -220,32 +193,37 @@
         "source": "Science Daily"
       },
       {
-        "title": "Einstein’s biggest “mistake” came back — and changed cosmology forever",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260816044835.htm",
+        "title": "Widely prescribed blood pressure drugs linked to 33% higher kidney risk in type 2 diabetes",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260816044844.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists reveal why walking gets so much harder with age",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260815065014.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists may have finally proved that “empty” space isn’t really empty",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260815065007.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A therapy that “rewrites” childhood memories can ease fear of failure",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260815064833.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Low-fat vegan diet helps people lose weight without eating less",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260815064825.htm",
+        "title": "Japanese scientists use tiny silver particles to make DNA assembly up to 5x more efficient",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260816044842.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "Demon Slayer Fans Can't Miss Netflix's Other Excellent Anime Movie Trilogy's Final Chapter",
+        "url": "https://www.polygon.com/mononoke-movie-the-curse-of-the-serpent-netflix/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'The Sims 4' Is Getting Two Classic Teen Movies-Inspired Kits",
+        "url": "https://www.polygon.com/the-sims-4-mean-girls-clueless-capsule-kits/",
+        "source": "Polygon"
+      },
+      {
+        "title": "28 Years Later, Jim Carrey's Most Unhinged Movie Performance of All Time Is Officially Free on Streaming",
+        "url": "https://www.polygon.com/the-truman-show-movies-free-streaming-august-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Crunchyroll Store Removes Tons of Physical Products After Being Locked Behind Subscription",
+        "url": "https://www.polygon.com/crunchyroll-store-removes-physical-products-manga-anime/",
+        "source": "Polygon"
+      },
       {
         "title": "GTA 6 Leaks Confirms Iconic 6-Star Wanted Level System Returns After 13 Years",
         "url": "https://www.polygon.com/gta-6-leak-wanted-level-six-stars-five-how-does-it-work-cops-tanks/",
@@ -259,26 +237,6 @@
       {
         "title": "Sega's 84-Hour Open-World Masterpiece Has Aged Like Fine Wine",
         "url": "https://www.polygon.com/like-a-dragon-infinite-wealth-hawaii-rec/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Peacock Just Raised Its Prices for the Fourth Straight Year",
-        "url": "https://www.polygon.com/peacock-price-increase-august-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "32 Years Later, The Single Best 'X-Files' Quote Of All Time Still Haunts Me",
-        "url": "https://www.polygon.com/best-x-files-quote/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'GTA 6' Hackers Are Targeting Rockstar's Controversial Decisions",
-        "url": "https://www.polygon.com/gta-6-hackers-cyberleek-physical-discs/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Marvel's Wolverine Is At the Center of the Most Complex Online War In Years",
-        "url": "https://www.polygon.com/marvels-wolverine-backlash/",
         "source": "Polygon"
       }
     ],
