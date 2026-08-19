@@ -135,9 +135,9 @@ export default {
         // 一鍵清空當前頻道訊息（Discord + 內部歷史）
         if (url.pathname === '/discord/clear' && request.method === 'POST') {
             try {
-                const { channel_id } = await request.json();
+                const { channel_id, mode } = await request.json();
                 if (!channel_id) return Response.json({ success: false, error: '缺少 channel_id' }, { status: 400, headers: corsHeaders });
-                const result = await clearChannelHistory(channel_id, env);
+                const result = await clearChannelHistory(channel_id, env, mode || 'chat');
                 return Response.json({ success: true, result }, { headers: corsHeaders });
             } catch (error) {
                 return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
@@ -588,7 +588,15 @@ async function registerCommands(env) {
         },
         {
             name: 'clear',
-            description: '清除當前頻道的所有訊息歷史（包含 Discord 與內部）'
+            description: '清除當前頻道的訊息歷史（可選是否連記憶一起清除）',
+            options: [{
+                type: 3, name: 'mode', description: '清除模式',
+                required: false,
+                choices: [
+                    { name: '仅清除對話（保留記憶）', value: 'chat' },
+                    { name: '全部清除（含記憶）', value: 'all' }
+                ]
+            }]
         },
         {
             name: 'backup',
@@ -844,9 +852,10 @@ async function handleSlashCommand(event, env, ctx) {
         }
 
         if (name === 'clear') {
+            const mode = options.find(o => o.name === 'mode')?.value || 'chat';
             ctx.waitUntil((async () => {
                 try {
-                    const result = await clearChannelHistory(channelId, env);
+                    const result = await clearChannelHistory(channelId, env, mode);
                     await editInteraction(appId, interactionToken, result, env);
                 } catch (error) {
                     console.error('clear error:', error);
@@ -1387,7 +1396,7 @@ async function getDiscordHistory(channel_id, limit, env) {
     return messages.map(m => ({ id: m.id, author: m.author.username, author_id: m.author.id, content: m.content, timestamp: m.timestamp, role: m.author.bot ? 'assistant' : 'user' }));
 }
 
-async function clearChannelHistory(channel_id, env) {
+async function clearChannelHistory(channel_id, env, mode = 'chat') {
     const response = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages?limit=100`, {
         headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
     });
@@ -1401,7 +1410,7 @@ async function clearChannelHistory(channel_id, env) {
     const botMessages = messages.filter(m => m.author?.id === botUserId);
     if (botMessages.length === 0) {
         await env.DB.prepare(`DELETE FROM messages WHERE chat_id = ?`).bind(channel_id).run();
-        return '✅ 頻道已無機器人訊息，內部歷史已清除';
+        return '✅ 頻道已無機器人訊息，內部對話已清除';
     }
 
     let deleted = 0;
@@ -1416,7 +1425,13 @@ async function clearChannelHistory(channel_id, env) {
     }
 
     await env.DB.prepare(`DELETE FROM messages WHERE chat_id = ?`).bind(channel_id).run();
-    return `✅ 已刪除 ${deleted} 則機器人訊息並清除內部歷史`;
+
+    if (mode === 'all') {
+        await env.DB.prepare(`DELETE FROM memories WHERE chat_id = ?`).bind(channel_id).run();
+        return `✅ 已刪除 ${deleted} 則機器人訊息、清除對話歷史，並清除相關記憶`;
+    }
+
+    return `✅ 已刪除 ${deleted} 則機器人訊息並清除對話歷史（記憶保留）`;
 }
 
 // ===== 同步角色 =====
