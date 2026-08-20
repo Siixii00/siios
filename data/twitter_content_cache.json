@@ -1,167 +1,161 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T06:47:49.300011",
-    "total_items": 60
+    "last_updated": "2026-08-20T07:41:52.246676",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "Why Microsoft Entertainment Pack had a sticker announcing that it had Tetris?",
-        "url": "https://devblogs.microsoft.com/oldnewthing/20260818-00/?p=112621",
+        "title": "Windows brings out the Rorschach test in everyone",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20030825-00/?p=42803",
         "source": "Hacker News",
-        "score": 35
+        "score": 69
       },
       {
         "title": "OpenRouter is joining Stripe",
         "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
         "source": "Hacker News",
-        "score": 791
+        "score": 810
       },
       {
         "title": "Turns are Better than Radians (2022)",
         "url": "https://www.computerenhance.com/p/turns-are-better-than-radians",
         "source": "Hacker News",
-        "score": 140
+        "score": 165
       },
       {
         "title": "Go 1.27",
         "url": "https://go.dev/blog/go1.27",
         "source": "Hacker News",
-        "score": 578
+        "score": 600
       },
       {
         "title": "A faster way to calculate the day of the week",
         "url": "https://www.benjoffe.com/fast-day-of-week",
         "source": "Hacker News",
-        "score": 102
+        "score": 116
       },
       {
         "title": "Google has stopped pushing Git tags for some Android source code",
         "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
         "source": "Hacker News",
-        "score": 435
+        "score": 480
       },
       {
         "title": "Manabu Kosaka's Handmade Paper Sculptures",
         "url": "https://coca11272000.wixsite.com/manabukosaka",
         "source": "Hacker News",
-        "score": 108
+        "score": 116
+      },
+      {
+        "title": "A joke domain purchase turned in geopolitical warfare",
+        "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
+        "source": "Hacker News",
+        "score": 871
       },
       {
         "title": "Unlocking a locked/deactivated e-waste Cricut Maker",
         "url": "https://sprocketfox.io/xssfox/2026/07/01/cricut-unlock/",
         "source": "Hacker News",
-        "score": 189
-      },
-      {
-        "title": "A joke domain purchase turned in geopolitical warfare",
-        "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
-        "source": "Hacker News",
-        "score": 841
-      },
-      {
-        "title": "Windows brings out the Rorschach test in everyone",
-        "url": "https://devblogs.microsoft.com/oldnewthing/20030825-00/?p=42803",
-        "source": "Hacker News",
-        "score": 4
+        "score": 196
       },
       {
         "title": "Unsloth Dynamic 3.0 GGUFs",
         "url": "https://unsloth.ai/docs/basics/dynamic-3.0-ggufs",
         "source": "Hacker News",
-        "score": 232
+        "score": 246
       },
       {
         "title": "Sol loves to cheat",
         "url": "https://jumploops.com/blog/sol-loves-to-cheat/",
         "source": "Hacker News",
-        "score": 135
+        "score": 149
       },
       {
         "title": "Casio F-B100W-1A",
         "url": "https://www.casio.com/uk/watches/casio/product.F-B100W-1A/",
         "source": "Hacker News",
-        "score": 336
+        "score": 352
+      },
+      {
+        "title": "Feature Request: Support AGENTS.md",
+        "url": "https://github.com/anthropics/claude-code/issues/6235",
+        "source": "Hacker News",
+        "score": 228
+      },
+      {
+        "title": "What's missing to have reproducible builds on PyPI",
+        "url": "https://snarky.ca/whats-missing-to-have-reproducible-builds-on-pypi/",
+        "source": "Hacker News",
+        "score": 6
       },
       {
         "title": "Os8088.com: IBM XT OS now has a Browser, CP/M 2.2 with Z80 core and MS Word 1.1a",
         "url": "https://os8088.com/spotlight/",
         "source": "Hacker News",
-        "score": 79
-      },
-      {
-        "title": "Geolocating a random island using geometry and CUDA programming",
-        "url": "https://yassa9.github.io/osint/gralhix-004/",
-        "source": "Hacker News",
-        "score": 454
+        "score": 83
       }
     ],
     "ai": [
       {
-        "title": "Why Microsoft Entertainment Pack had a sticker announcing that it had Tetris?",
-        "url": "https://devblogs.microsoft.com/oldnewthing/20260818-00/?p=112621",
-        "source": "Hacker News AI",
-        "score": 35
-      },
-      {
         "title": "A joke domain purchase turned in geopolitical warfare",
         "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
         "source": "Hacker News AI",
-        "score": 841
+        "score": 871
+      },
+      {
+        "title": "Why Microsoft Entertainment Pack had a sticker announcing that it had Tetris?",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20260818-00/?p=112621",
+        "source": "Hacker News AI",
+        "score": 44
       },
       {
         "title": "Mathematics in the age of AI",
         "url": "https://arxiv.org/abs/2608.16753",
         "source": "Hacker News AI",
-        "score": 153
+        "score": 157
       },
       {
         "title": "Extensible Software in the age of LLMs",
         "url": "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/",
         "source": "Hacker News AI",
-        "score": 141
+        "score": 144
       },
       {
         "title": "Air Theremin – A browser theremin you play by waving at your webcam",
         "url": "https://theremin.bizibah.com/",
         "source": "Hacker News AI",
-        "score": 269
+        "score": 270
       },
       {
         "title": "Universality of Gradient Descent Neural Network Training",
         "url": "https://arxiv.org/abs/2007.13664",
         "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "Error by AI scribe during medical appointment leaves patient devastated",
-        "url": "https://www.abc.net.au/news/2026-08-14/ai-medical-scribe-error-leaves-patient-devastated/107031672",
-        "source": "Hacker News AI",
-        "score": 137
-      },
-      {
-        "title": "Zuckerberg encouraged growth over child safety, ex-Meta executive testifies",
-        "url": "https://www.reuters.com/legal/litigation/former-meta-engineer-resumes-testimony-landmark-trial-over-social-medias-harm-2026-08-19/",
-        "source": "Hacker News AI",
-        "score": 54
+        "score": 28
       },
       {
         "title": "MicroGPT-C in pure C hits 10M TPS on Apple M5",
         "url": "https://github.com/vixhal-baraiya/microgpt-c",
         "source": "Hacker News AI",
-        "score": 127
+        "score": 128
       },
       {
         "title": "Devices with GrapheneOS support should be available in 2027",
         "url": "https://grapheneos.social/@GrapheneOS/117078064184215730",
         "source": "Hacker News AI",
-        "score": 593
+        "score": 599
+      },
+      {
+        "title": "Flock Has a Powerful New AI Tool for Police. We Got Its Code",
+        "url": "https://www.wired.com/story/flock-safety-os-investigate/",
+        "source": "Hacker News AI",
+        "score": 7
       }
     ],
     "news": [
       {
-        "title": "Australia 'outraged' after Israel decides not to open criminal investigation into killing of aid worker in Gaza",
-        "url": "https://www.bbc.co.uk/news/articles/cp87g29r718o?at_medium=RSS&at_campaign=rss",
+        "title": "At least 13 killed in Kyiv as Ukraine grapples with air defence shortages",
+        "url": "https://www.bbc.co.uk/news/articles/c98vzmden5yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -170,32 +164,37 @@
         "source": "BBC World"
       },
       {
-        "title": "At least 12 killed in Kyiv as Ukraine grapples with air defence shortages",
-        "url": "https://www.bbc.co.uk/news/articles/c98vzmden5yo?at_medium=RSS&at_campaign=rss",
+        "title": "Trump vows tougher economic measures on Iran and supporting countries",
+        "url": "https://www.bbc.co.uk/news/articles/c2k7e83ynj4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump threatens 'tremendous economic consequences' on any country helping Iran",
-        "url": "https://www.bbc.co.uk/news/articles/c2k7e83ynj4o?at_medium=RSS&at_campaign=rss",
+        "title": "Mushroom killer must stay in jail forever for 'truly dreadful' crime, appeal court told",
+        "url": "https://www.bbc.co.uk/news/articles/ckg3j3yn4exo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Australia 'outraged' after Israel decides not to open criminal investigation into killing of aid worker in Gaza",
+        "url": "https://www.bbc.co.uk/news/articles/cp87g29r718o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Missing teen hiker found dead in Australian bush after eight-day search",
+        "url": "https://www.bbc.co.uk/news/articles/c304e2dlv20o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Giant whales move into Greenland waters as ice disappears",
         "url": "https://www.bbc.co.uk/news/articles/cq6dn9gj7eno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Former Liberian vice president charged in drug-trafficking probe",
-        "url": "https://www.bbc.co.uk/news/articles/clyx028ryy6o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Israel confirms soldiers fired at car in which Hind Rajab was killed and opens criminal investigation",
-        "url": "https://www.bbc.co.uk/news/articles/crl7yjlpx2po?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Studio Ghibli has no plan, isn't anti-AI after all, and doesn't know what Miyazaki is up to other than that he turns up for work every day ",
+        "url": "https://www.creativebloq.com/art/animation/studio-ghibli-has-no-plan-isnt-anti-ai-after-all-and-doesnt-know-what-miyazaki-is-up-to-other-than-that-he-turns-up-for-work-every-day",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Help! I'm instantly addicted to my new under desk treadmill ",
         "url": "https://www.creativebloq.com/tech/chairs-desks/help-im-instantly-addicted-to-my-new-under-the-desk-treadmill",
@@ -224,11 +223,6 @@
       {
         "title": " I decoded the Camp Flog Gnaw lineup so you don’t have to ",
         "url": "https://www.creativebloq.com/design/poster-design/i-decoded-the-camp-flog-gnaw-lineup-so-you-dont-have-to",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Some of my favourite earphones are now as low as $20 in this Back to School sale ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/some-of-my-favourite-iems-are-now-as-low-as-usd20-in-this-back-to-school-sale",
         "source": "Creative Bloq"
       }
     ],
