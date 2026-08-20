@@ -1,207 +1,205 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T04:38:04.257657",
-    "total_items": 61
+    "last_updated": "2026-08-20T07:41:52.246676",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
+        "title": "Windows brings out the Rorschach test in everyone",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20030825-00/?p=42803",
+        "source": "Hacker News",
+        "score": 69
+      },
+      {
         "title": "OpenRouter is joining Stripe",
         "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
         "source": "Hacker News",
-        "score": 731
-      },
-      {
-        "title": "Go 1.27",
-        "url": "https://go.dev/blog/go1.27",
-        "source": "Hacker News",
-        "score": 513
+        "score": 810
       },
       {
         "title": "Turns are Better than Radians (2022)",
         "url": "https://www.computerenhance.com/p/turns-are-better-than-radians",
         "source": "Hacker News",
-        "score": 64
+        "score": 165
+      },
+      {
+        "title": "Go 1.27",
+        "url": "https://go.dev/blog/go1.27",
+        "source": "Hacker News",
+        "score": 600
       },
       {
         "title": "A faster way to calculate the day of the week",
         "url": "https://www.benjoffe.com/fast-day-of-week",
         "source": "Hacker News",
-        "score": 51
+        "score": 116
       },
       {
-        "title": "Google replaced Git tags for certain source code with obtaining via Google Drive",
+        "title": "Google has stopped pushing Git tags for some Android source code",
         "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
         "source": "Hacker News",
-        "score": 366
-      },
-      {
-        "title": "Error by AI scribe during medical appointment leaves patient devastated",
-        "url": "https://www.abc.net.au/news/2026-08-14/ai-medical-scribe-error-leaves-patient-devastated/107031672",
-        "source": "Hacker News",
-        "score": 28
+        "score": 480
       },
       {
         "title": "Manabu Kosaka's Handmade Paper Sculptures",
         "url": "https://coca11272000.wixsite.com/manabukosaka",
         "source": "Hacker News",
-        "score": 73
+        "score": 116
+      },
+      {
+        "title": "A joke domain purchase turned in geopolitical warfare",
+        "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
+        "source": "Hacker News",
+        "score": 871
       },
       {
         "title": "Unlocking a locked/deactivated e-waste Cricut Maker",
         "url": "https://sprocketfox.io/xssfox/2026/07/01/cricut-unlock/",
         "source": "Hacker News",
-        "score": 162
-      },
-      {
-        "title": "A joke domain purchase turned in geopolitical warfare",
-        "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
-        "source": "Hacker News",
-        "score": 804
+        "score": 196
       },
       {
         "title": "Unsloth Dynamic 3.0 GGUFs",
         "url": "https://unsloth.ai/docs/basics/dynamic-3.0-ggufs",
         "source": "Hacker News",
-        "score": 206
+        "score": 246
+      },
+      {
+        "title": "Sol loves to cheat",
+        "url": "https://jumploops.com/blog/sol-loves-to-cheat/",
+        "source": "Hacker News",
+        "score": 149
       },
       {
         "title": "Casio F-B100W-1A",
         "url": "https://www.casio.com/uk/watches/casio/product.F-B100W-1A/",
         "source": "Hacker News",
-        "score": 306
-      },
-      {
-        "title": "Sol Loves to Cheat",
-        "url": "https://jumploops.com/blog/sol-loves-to-cheat/",
-        "source": "Hacker News",
-        "score": 99
-      },
-      {
-        "title": "Geolocating a random island using geometry and CUDA programming",
-        "url": "https://yassa9.github.io/osint/gralhix-004/",
-        "source": "Hacker News",
-        "score": 431
-      },
-      {
-        "title": "Os8088.com: IBM XT OS now has a Browser, CP/M 2.2 with Z80 core and MS Word 1.1a",
-        "url": "https://os8088.com/spotlight/",
-        "source": "Hacker News",
-        "score": 60
+        "score": 352
       },
       {
         "title": "Feature Request: Support AGENTS.md",
         "url": "https://github.com/anthropics/claude-code/issues/6235",
         "source": "Hacker News",
-        "score": 166
+        "score": 228
+      },
+      {
+        "title": "What's missing to have reproducible builds on PyPI",
+        "url": "https://snarky.ca/whats-missing-to-have-reproducible-builds-on-pypi/",
+        "source": "Hacker News",
+        "score": 6
+      },
+      {
+        "title": "Os8088.com: IBM XT OS now has a Browser, CP/M 2.2 with Z80 core and MS Word 1.1a",
+        "url": "https://os8088.com/spotlight/",
+        "source": "Hacker News",
+        "score": 83
       }
     ],
     "ai": [
       {
-        "title": "Error by AI scribe during medical appointment leaves patient devastated",
-        "url": "https://www.abc.net.au/news/2026-08-14/ai-medical-scribe-error-leaves-patient-devastated/107031672",
-        "source": "Hacker News AI",
-        "score": 29
-      },
-      {
-        "title": "Google replaced Git tags for certain source code with obtaining via Google Drive",
-        "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
-        "source": "Hacker News AI",
-        "score": 366
-      },
-      {
         "title": "A joke domain purchase turned in geopolitical warfare",
         "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
         "source": "Hacker News AI",
-        "score": 804
+        "score": 871
+      },
+      {
+        "title": "Why Microsoft Entertainment Pack had a sticker announcing that it had Tetris?",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20260818-00/?p=112621",
+        "source": "Hacker News AI",
+        "score": 44
       },
       {
         "title": "Mathematics in the age of AI",
         "url": "https://arxiv.org/abs/2608.16753",
         "source": "Hacker News AI",
-        "score": 135
-      },
-      {
-        "title": "Universality of Gradient Descent Neural Network Training",
-        "url": "https://arxiv.org/abs/2007.13664",
-        "source": "Hacker News AI",
-        "score": 16
-      },
-      {
-        "title": "Air Theremin – A browser theremin you play by waving at your webcam",
-        "url": "https://theremin.bizibah.com/",
-        "source": "Hacker News AI",
-        "score": 264
+        "score": 157
       },
       {
         "title": "Extensible Software in the age of LLMs",
         "url": "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/",
         "source": "Hacker News AI",
-        "score": 125
+        "score": 144
+      },
+      {
+        "title": "Air Theremin – A browser theremin you play by waving at your webcam",
+        "url": "https://theremin.bizibah.com/",
+        "source": "Hacker News AI",
+        "score": 270
+      },
+      {
+        "title": "Universality of Gradient Descent Neural Network Training",
+        "url": "https://arxiv.org/abs/2007.13664",
+        "source": "Hacker News AI",
+        "score": 28
       },
       {
         "title": "MicroGPT-C in pure C hits 10M TPS on Apple M5",
         "url": "https://github.com/vixhal-baraiya/microgpt-c",
         "source": "Hacker News AI",
-        "score": 125
+        "score": 128
       },
       {
         "title": "Devices with GrapheneOS support should be available in 2027",
         "url": "https://grapheneos.social/@GrapheneOS/117078064184215730",
         "source": "Hacker News AI",
-        "score": 585
+        "score": 599
       },
       {
-        "title": "Raiders of the Lost Array: vibe-coding a macOS driver for my orphaned Drobo",
-        "url": "https://fetzu.ch/blog/20260819_claudevsdrobo/",
+        "title": "Flock Has a Powerful New AI Tool for Police. We Got Its Code",
+        "url": "https://www.wired.com/story/flock-safety-os-investigate/",
         "source": "Hacker News AI",
-        "score": 15
-      },
-      {
-        "title": "Chain-of-Thought Reasoning in the Wild Is Not Always Faithful (2025)",
-        "url": "https://arxiv.org/abs/2503.08679",
-        "source": "Hacker News AI",
-        "score": 59
+        "score": 7
       }
     ],
     "news": [
       {
-        "title": "Israel confirms soldiers fired at car in which Hind Rajab was killed and opens criminal investigation",
-        "url": "https://www.bbc.co.uk/news/articles/crl7yjlpx2po?at_medium=RSS&at_campaign=rss",
+        "title": "At least 13 killed in Kyiv as Ukraine grapples with air defence shortages",
+        "url": "https://www.bbc.co.uk/news/articles/c98vzmden5yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Australia 'outraged' after Israeli decision not to prosecute over killing of aid worker in Gaza",
+        "title": "Founder of collapsed Chinese property giant Evergrande sentenced to life in prison",
+        "url": "https://www.bbc.co.uk/news/articles/cd0x9mjjmgjo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Trump vows tougher economic measures on Iran and supporting countries",
+        "url": "https://www.bbc.co.uk/news/articles/c2k7e83ynj4o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Mushroom killer must stay in jail forever for 'truly dreadful' crime, appeal court told",
+        "url": "https://www.bbc.co.uk/news/articles/ckg3j3yn4exo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Australia 'outraged' after Israel decides not to open criminal investigation into killing of aid worker in Gaza",
         "url": "https://www.bbc.co.uk/news/articles/cp87g29r718o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump threatens 'tremendous economic consequences' on any country helping Iran",
-        "url": "https://www.bbc.co.uk/news/articles/c2k7e83ynj4o?at_medium=RSS&at_campaign=rss",
+        "title": "Missing teen hiker found dead in Australian bush after eight-day search",
+        "url": "https://www.bbc.co.uk/news/articles/c304e2dlv20o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Giant whales move into Greenland waters as ice disappears",
         "url": "https://www.bbc.co.uk/news/articles/cq6dn9gj7eno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Former Liberian vice president charged in drug-trafficking probe",
-        "url": "https://www.bbc.co.uk/news/articles/clyx028ryy6o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Ecuador intelligence chief and five Americans killed in Kenya helicopter crash",
-        "url": "https://www.bbc.co.uk/news/articles/clylkv4z59vo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Israel opens up bids for highly-sensitive West Bank settlement project",
-        "url": "https://www.bbc.co.uk/news/articles/cly50gn1e54o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Studio Ghibli has no plan, isn't anti-AI after all, and doesn't know what Miyazaki is up to other than that he turns up for work every day ",
+        "url": "https://www.creativebloq.com/art/animation/studio-ghibli-has-no-plan-isnt-anti-ai-after-all-and-doesnt-know-what-miyazaki-is-up-to-other-than-that-he-turns-up-for-work-every-day",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Help! I'm instantly addicted to my new under desk treadmill ",
+        "url": "https://www.creativebloq.com/tech/chairs-desks/help-im-instantly-addicted-to-my-new-under-the-desk-treadmill",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The new ACOTAR book covers are giving 2016 ",
         "url": "https://www.creativebloq.com/entertainment/books/the-new-acotar-book-covers-are-giving-2016",
@@ -225,16 +223,6 @@
       {
         "title": " I decoded the Camp Flog Gnaw lineup so you don’t have to ",
         "url": "https://www.creativebloq.com/design/poster-design/i-decoded-the-camp-flog-gnaw-lineup-so-you-dont-have-to",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Some of my favourite earphones are now as low as $20 in this Back to School sale ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/some-of-my-favourite-iems-are-now-as-low-as-usd20-in-this-back-to-school-sale",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " GTA 6's leak exposes the uncomfortable truth about digital-only games ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/gta-6s-leak-exposes-the-uncomfortable-truth-about-digital-only-games",
         "source": "Creative Bloq"
       }
     ],
