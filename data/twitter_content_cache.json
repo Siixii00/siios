@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T17:30:36.130446",
-    "total_items": 52
+    "last_updated": "2026-08-20T18:39:59.014507",
+    "total_items": 57
   },
   "content": {
     "tech": [
@@ -9,37 +9,49 @@
         "title": "I like 'em thick: an apology to my English teachers",
         "url": "https://www.experimental-history.com/p/i-like-em-thick",
         "source": "Hacker News",
-        "score": 215
+        "score": 313
+      },
+      {
+        "title": "I should have loved biology",
+        "url": "https://jsomers.net/i-should-have-loved-biology/",
+        "source": "Hacker News",
+        "score": 31
       },
       {
         "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
         "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
         "source": "Hacker News",
-        "score": 632
+        "score": 703
       },
       {
         "title": "HTML Can Do That",
         "url": "https://chrisburnell.com/html-can-do-that/",
         "source": "Hacker News",
-        "score": 243
+        "score": 337
       },
       {
-        "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
-        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
+        "title": "Linux 7.2",
+        "url": "https://www.igalia.com/2026/08/19/Linux-72-Released.html",
         "source": "Hacker News",
-        "score": 340
+        "score": 74
       },
       {
         "title": "CIA funding helped keep NeXT afloat in the 80s",
         "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
         "source": "Hacker News",
-        "score": 156
+        "score": 211
       },
       {
-        "title": "Malicious Rust crate Arrayref runs a build-time payload",
-        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
+        "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
+        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News",
-        "score": 254
+        "score": 370
+      },
+      {
+        "title": "Show HN: We chased a weather balloon across Montana and never found it",
+        "url": "https://radi8.dev/blog/uplink/",
+        "source": "Hacker News",
+        "score": 24
       },
       {
         "title": "Sixtyfour (YC P25) Is Hiring",
@@ -48,52 +60,40 @@
         "score": 1
       },
       {
-        "title": "Clean up Claude 5's token vomit with a separate LLM",
-        "url": "https://github.com/zachahn/vomit",
+        "title": "Malicious Rust crate Arrayref runs a build-time payload",
+        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
         "source": "Hacker News",
-        "score": 78
+        "score": 287
       },
       {
-        "title": "Linux 7.2 Released",
-        "url": "https://www.igalia.com/2026/08/19/Linux-72-Released.html",
+        "title": "Optimizing things in the USSR (2016)",
+        "url": "https://chris-said.io/2016/05/11/optimizing-things-in-the-ussr/",
         "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "DiffusionGemma Technical Report",
-        "url": "https://arxiv.org/abs/2608.00146",
-        "source": "Hacker News",
-        "score": 89
+        "score": 12
       },
       {
         "title": "How to compromise your system with a job interview",
         "url": "https://www.codedge.de/posts/how-to-compromise-your-system-with-a-job-interview",
         "source": "Hacker News",
-        "score": 40
+        "score": 60
       },
       {
-        "title": "Generic Methods in Go 1.27",
-        "url": "https://dominik.info/blog/go-generic-methods",
+        "title": "DiffusionGemma Technical Report",
+        "url": "https://arxiv.org/abs/2608.00146",
         "source": "Hacker News",
-        "score": 26
+        "score": 108
       },
       {
-        "title": "Xorg-Server 26.0.99.901",
+        "title": "Xorg-server 26.1.0 rc1",
         "url": "https://lists.x.org/archives/xorg-announce/2026-August/003741.html",
         "source": "Hacker News",
-        "score": 72
+        "score": 85
       },
       {
-        "title": "Anti-AI fonts are useless and harmful",
-        "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
+        "title": "Project Cybersyn",
+        "url": "https://bactra.org/notebooks/cybersyn.html",
         "source": "Hacker News",
-        "score": 40
-      },
-      {
-        "title": "Hacking with Claude on a $27 Smart Watch",
-        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
-        "source": "Hacker News",
-        "score": 53
+        "score": 7
       }
     ],
     "ai": [
@@ -101,60 +101,54 @@
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 340
-      },
-      {
-        "title": "Clean up Claude 5's token vomit with a separate LLM",
-        "url": "https://github.com/zachahn/vomit",
-        "source": "Hacker News AI",
-        "score": 78
-      },
-      {
-        "title": "Anti-AI fonts are useless and harmful",
-        "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
-        "source": "Hacker News AI",
-        "score": 40
+        "score": 370
       },
       {
         "title": "Hacking with Claude on a $27 Smart Watch",
         "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
         "source": "Hacker News AI",
-        "score": 53
+        "score": 59
       },
       {
         "title": "Show HN: Check if any of the $656M in unclaimed royalties at The MLC is yours",
         "url": "https://pub.doub.ly/",
         "source": "Hacker News AI",
-        "score": 36
+        "score": 47
+      },
+      {
+        "title": "Clean up Claude 5's token vomit with a separate LLM",
+        "url": "https://github.com/zachahn/vomit",
+        "source": "Hacker News AI",
+        "score": 108
+      },
+      {
+        "title": "AI at Home Part 2: Multi-GPU Drifting",
+        "url": "https://jdagostino.github.io/ai-pt2-multi-gpu-drifting/index.html",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
+        "title": "Anti-AI fonts are useless and harmful",
+        "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
+        "source": "Hacker News AI",
+        "score": 61
+      },
+      {
+        "title": "Could AIs Become Conscious?",
+        "url": "https://economist.com/leaders/2026/08/20/could-ais-become-conscious",
+        "source": "Hacker News AI",
+        "score": 14
       },
       {
         "title": "An American Mosaic (interactive map of ancestry census data)",
         "url": "https://www.nytimes.com/interactive/2026/07/01/us/america-ancestry-census-data-map.html",
         "source": "Hacker News AI",
         "score": 25
-      },
-      {
-        "title": "Could AIs Become Conscious?",
-        "url": "https://economist.com/leaders/2026/08/20/could-ais-become-conscious",
-        "source": "Hacker News AI",
-        "score": 8
-      },
-      {
-        "title": "Don't paste the AI, please",
-        "url": "https://dontpastetheai.com/",
-        "source": "Hacker News AI",
-        "score": 940
-      },
-      {
-        "title": "Guess which of these LLM outputs is watermarked",
-        "url": "https://sgoedecke.github.io/watermark-quiz/",
-        "source": "Hacker News AI",
-        "score": 7
       }
     ],
     "news": [
       {
-        "title": "At least 15 killed in Kyiv as Ukraine grapples with air defence shortages",
+        "title": "Russia 'purposefully' hit critical infrastructure in latest strikes, Kyiv mayor says",
         "url": "https://www.bbc.co.uk/news/articles/c98vzmden5yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -189,7 +183,38 @@
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " 4 of my top-rated budget earphones are on sale right now! ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/4-of-my-top-rated-budget-earphones-are-on-sale-right-now",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Move over Duolingo, there’s a new brand mascot in town ",
+        "url": "https://www.creativebloq.com/design/branding/move-over-duolingo-theres-a-new-brand-mascot-in-town",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " A 16-year-old girl's iPhone theme is breaking UI designers' brains ",
+        "url": "https://www.creativebloq.com/web-design/ux-ui/a-16-year-old-girls-iphone-xis-breaking-ui-designers-brains",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Studio Ghibli has no plan, isn't anti-AI after all, and doesn't know what Miyazaki is up to other than that he turns up for work every day ",
+        "url": "https://www.creativebloq.com/art/animation/studio-ghibli-has-no-plan-isnt-anti-ai-after-all-and-doesnt-know-what-miyazaki-is-up-to-other-than-that-he-turns-up-for-work-every-day",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Help! I'm instantly addicted to my new under desk treadmill ",
+        "url": "https://www.creativebloq.com/tech/chairs-desks/help-im-instantly-addicted-to-my-new-under-the-desk-treadmill",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The new ACOTAR book covers are giving 2016 ",
+        "url": "https://www.creativebloq.com/entertainment/books/the-new-acotar-book-covers-are-giving-2016",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "The “Asian water tower” is losing 24 billion tonnes of groundwater every year",
@@ -229,43 +254,48 @@
     ],
     "gaming": [
       {
+        "title": "Prime Video’s 95-Minute Action Thriller Is Officially One of the Biggest Films on Streaming",
+        "url": "https://www.polygon.com/ice-fall-prime-video-streaming-action-movies-august-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "HBO's Near-Perfect Sci-Fi Mystery Still Has One of the Best Endings in TV History",
+        "url": "https://www.polygon.com/lanterns-damon-lindelof-the-leftovers-hbo-sci-fi-shows/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Replay Ideas to Make Elden Ring Feel Brand New Again",
+        "url": "https://www.polygon.com/elden-ring-new-game-plus-run-ideas-switch-2-release/",
+        "source": "Polygon"
+      },
+      {
+        "title": "James Bond 007 First Light Sequel All But Confirmed With 4 Million Copies Sold",
+        "url": "https://www.polygon.com/james-bond-007-first-light-sequel-guaranteed-after-4-million-copies-sold/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Jim Caviezel Goes Full Jason Statham in Action-Thriller Ghost Soldier",
+        "url": "https://www.polygon.com/ghost-soldier-jim-caviezel-movie-trailer-release-date/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Pokémon Silver and Gold Remake Rumors Sparked by Nintendo Tease",
+        "url": "https://www.polygon.com/pokemon-gen-2-nintendo-tease-pokopia/",
+        "source": "Polygon"
+      },
+      {
         "title": "Where to find the Shimanoyama Heat mascots in Forza Horizon 6",
         "url": "https://www.polygon.com/forza-horizon-6-fh6-shimanoyama-heat-mascot-collectibles-location-where-to-find/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All autumn 'Horizon Mascot Party' challenges and rewards in Forza Horizon 6",
-        "url": "https://www.polygon.com/forza-horizon-6-fh6-all-horizon-mascot-party-series-4-playlist-challenges-rewards/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How to complete the #DeliciousDango photo challenge in Forza Horizon 6",
-        "url": "https://www.polygon.com/forza-horizon-6-fh6-delicious-dango-photo-challenge-mascot-party-tokyo-city/",
-        "source": "Polygon"
-      },
-      {
-        "title": "7 Criminally Underappreciated Final Fantasy Games You Must Play Before FF7 Revelation",
-        "url": "https://www.polygon.com/final-fantasy-games-underrated-overlooked/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Pokémon TCG Delta Reign Set Brings Back Rayquaza This November",
-        "url": "https://www.polygon.com/pokemon-trading-card-games-mega-evolution-delta-reign-set-announced-rayquaza/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Sega's Golden Axe Officially Returns in New Streaming Comedy",
-        "url": "https://www.polygon.com/golden-axe-tv-show-trailer-release-date-september-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Switch 2 Just Got One of The Best Zelda-likes in Years",
-        "url": "https://www.polygon.com/pipistrello-and-the-cursed-yoyo-switch-2-recommendation/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "The August 17 outage, and the work ahead",
+        "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "GitHub Copilot app for Beginners: Managing your work",
         "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work/",
@@ -294,11 +324,6 @@
       {
         "title": "GitHub availability report: July 2026",
         "url": "https://github.blog/news-insights/company-news/github-availability-report-july-2026/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "GitHub Copilot app for Beginners: Write your first prompt",
-        "url": "https://github.blog/ai-and-ml/github-copilot/write-your-first-prompt-with-the-github-copilot-app/",
         "source": "GitHub Blog"
       }
     ]
