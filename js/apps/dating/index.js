@@ -369,7 +369,7 @@ async function generateResponse(container, userMessage, isAction = false) {
         fullContent = content;
         updateTypingMessage(container, content);
       },
-      (content) => {
+      async (content) => {
         hideTypingIndicator(container);
         addMessage(container, 'assistant', content);
         datingState.isTyping = false;
