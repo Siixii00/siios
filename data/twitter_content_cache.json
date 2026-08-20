@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T21:29:16.816286",
-    "total_items": 57
+    "last_updated": "2026-08-20T22:28:53.297439",
+    "total_items": 56
   },
   "content": {
     "tech": [
       {
-        "title": "Show HN: Huzzah – a novel approach to coding with AI",
-        "url": "https://www.danielvaughn.dev/posts/huzzah/",
-        "source": "Hacker News",
-        "score": 128
-      },
-      {
         "title": "The August 17 outage, and the work ahead",
         "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
         "source": "Hacker News",
-        "score": 91
-      },
-      {
-        "title": "I like 'em thick: an apology to my English teachers",
-        "url": "https://www.experimental-history.com/p/i-like-em-thick",
-        "source": "Hacker News",
-        "score": 454
+        "score": 168
       },
       {
         "title": "Consumer Rights Wiki",
         "url": "https://consumerrights.wiki/w/Main_Page",
         "source": "Hacker News",
-        "score": 96
+        "score": 135
+      },
+      {
+        "title": "I like 'em thick: an apology to my English teachers",
+        "url": "https://www.experimental-history.com/p/i-like-em-thick",
+        "source": "Hacker News",
+        "score": 480
       },
       {
         "title": "I should have loved biology (2020)",
         "url": "https://jsomers.net/i-should-have-loved-biology/",
         "source": "Hacker News",
-        "score": 143
-      },
-      {
-        "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
-        "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
-        "source": "Hacker News",
-        "score": 786
-      },
-      {
-        "title": "HTML Can Do That",
-        "url": "https://chrisburnell.com/html-can-do-that/",
-        "source": "Hacker News",
-        "score": 470
-      },
-      {
-        "title": "Malicious Rust crate Arrayref runs a build-time payload",
-        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
-        "source": "Hacker News",
-        "score": 332
+        "score": 159
       },
       {
         "title": "Aaron Swartz was prosecuted for scraping, while Meta does it without consequence",
         "url": "https://blog.curiousquail.com/im-upset-again-about-a-co-creator-of-rss-being-prosecuted-for-something-meta-is-doing-with-little-consequence/",
         "source": "Hacker News",
-        "score": 190
+        "score": 431
       },
       {
-        "title": "Linux 7.2",
-        "url": "https://www.igalia.com/2026/08/19/Linux-72-Released.html",
+        "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
+        "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
         "source": "Hacker News",
-        "score": 157
+        "score": 809
+      },
+      {
+        "title": "Show HN: Huzzah – a novel approach to coding with AI",
+        "url": "https://www.danielvaughn.dev/posts/huzzah/",
+        "source": "Hacker News",
+        "score": 166
+      },
+      {
+        "title": "HTML Can Do That",
+        "url": "https://chrisburnell.com/html-can-do-that/",
+        "source": "Hacker News",
+        "score": 493
+      },
+      {
+        "title": "Malicious Rust crate Arrayref runs a build-time payload",
+        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
+        "source": "Hacker News",
+        "score": 343
+      },
+      {
+        "title": "Citizen Devs: Everyone is an engineer now",
+        "url": "https://www.massdriver.cloud/blogs/the-citizen-developer",
+        "source": "Hacker News",
+        "score": 18
       },
       {
         "title": "CIA funding helped keep NeXT afloat in the 80s",
         "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
         "source": "Hacker News",
-        "score": 278
+        "score": 292
       },
       {
         "title": "SpacetimeDB: A Short Technical Review",
         "url": "https://strn.cat/posts/spacetime/",
         "source": "Hacker News",
-        "score": 25
+        "score": 39
+      },
+      {
+        "title": "Linux 7.2",
+        "url": "https://www.igalia.com/2026/08/19/Linux-72-Released.html",
+        "source": "Hacker News",
+        "score": 171
+      },
+      {
+        "title": "Code as an Artifact",
+        "url": "https://pradeeproark.com/posts/code-as-an-artifact-means-to-an-end/",
+        "source": "Hacker News",
+        "score": 9
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News",
-        "score": 443
-      },
-      {
-        "title": "Watching TikTok and Instagram deactivates the cognitive control network: Study",
-        "url": "https://www.rathbiotaclan.com/tiktok-videos-deactivate-key-cognitive-brain-regions/",
-        "source": "Hacker News",
-        "score": 249
-      },
-      {
-        "title": "Sixtyfour (YC P25) Is Hiring",
-        "url": "https://www.ycombinator.com/companies/sixtyfour/jobs/39SkSrA-software-engineering-intern",
-        "source": "Hacker News",
-        "score": 1
+        "score": 456
       }
     ],
     "ai": [
@@ -101,49 +101,43 @@
         "title": "Show HN: Huzzah – a novel approach to coding with AI",
         "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News AI",
-        "score": 128
+        "score": 166
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 443
+        "score": 456
       },
       {
         "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News AI",
-        "score": 136
+        "score": 154
       },
       {
         "title": "Hacking with Claude on a $27 smart watch",
         "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
         "source": "Hacker News AI",
-        "score": 66
+        "score": 73
       },
       {
         "title": "Anti-AI fonts are useless and harmful",
         "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
         "source": "Hacker News AI",
-        "score": 77
+        "score": 84
       },
       {
         "title": "Gauguin, Descartes, Bayes: A Diurnal Golem's Brain",
         "url": "https://dl.acm.org/doi/10.1145/3759429.3762631",
         "source": "Hacker News AI",
-        "score": 18
+        "score": 19
       },
       {
-        "title": "Show HN: Check if any of the $656M in unclaimed royalties at The MLC is yours",
-        "url": "https://pub.doub.ly/",
+        "title": "Early-life stress leaves a 'scar' inside brain cells",
+        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
         "source": "Hacker News AI",
-        "score": 55
-      },
-      {
-        "title": "AI at Home Part 2: Multi-GPU Drifting",
-        "url": "https://jdagostino.github.io/ai-pt2-multi-gpu-drifting/index.html",
-        "source": "Hacker News AI",
-        "score": 14
+        "score": 4
       }
     ],
     "news": [
@@ -279,7 +273,7 @@
         "source": "Polygon"
       },
       {
-        "title": "Naruto Live-Action Movie Has Filled a Key Role, Report Says",
+        "title": "Naruto Live-Action Movie Has Reportedly Found Its Kakashi",
         "url": "https://www.polygon.com/charles-melton-naruto-live-action-movie-kakashi-spider-man-director/",
         "source": "Polygon"
       },
