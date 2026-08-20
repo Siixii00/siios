@@ -1,63 +1,63 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T13:48:09.139335",
-    "total_items": 52
+    "last_updated": "2026-08-20T14:37:12.727671",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "Don't Paste the AI, please",
-        "url": "https://dontpastetheai.com/",
+        "title": "Malicious Rust Crate Arrayref Runs a Build-Time Payload",
+        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
         "source": "Hacker News",
-        "score": 754
+        "score": 106
       },
       {
         "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
         "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
         "source": "Hacker News",
-        "score": 280
-      },
-      {
-        "title": "Malicious Rust Crate Arrayref Runs a Build-Time Payload",
-        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
-        "source": "Hacker News",
-        "score": 22
+        "score": 349
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News",
-        "score": 96
+        "score": 164
+      },
+      {
+        "title": "DiffusionGemma Technical Report",
+        "url": "https://arxiv.org/abs/2608.00146",
+        "source": "Hacker News",
+        "score": 32
+      },
+      {
+        "title": "I Spent Twenty Years Becoming Good at the Wrong Game",
+        "url": "https://savvynormie.com/i-spent-twenty-years-becoming-good-at-the-wrong-game/",
+        "source": "Hacker News",
+        "score": 22
+      },
+      {
+        "title": "Hacking with Claude on a $27 Smart Watch",
+        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "Stwipe Acquires OpenWouter",
+        "url": "https://stwipe.com/",
+        "source": "Hacker News",
+        "score": 21
       },
       {
         "title": "Windows brings out the Rorschach test in everyone (2003)",
         "url": "https://devblogs.microsoft.com/oldnewthing/20030825-00/?p=42803",
         "source": "Hacker News",
-        "score": 268
+        "score": 284
       },
       {
         "title": "OpenRouter is joining Stripe",
         "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
         "source": "Hacker News",
-        "score": 910
-      },
-      {
-        "title": "Turns are Better than Radians (2022)",
-        "url": "https://www.computerenhance.com/p/turns-are-better-than-radians",
-        "source": "Hacker News",
-        "score": 273
-      },
-      {
-        "title": "Seeing beyond BMI: Estimating cardiometabolic risk with smartphone imagery",
-        "url": "https://research.google/blog/seeing-beyond-bmi-estimating-cardiometabolic-risk-with-smartphone-imagery/",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Google has stopped pushing Git tags for some Android source code",
-        "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
-        "source": "Hacker News",
-        "score": 710
+        "score": 924
       },
       {
         "title": "Proof of Human (YC S23) Is Hiring a Member of Technical Staff",
@@ -66,90 +66,90 @@
         "score": 1
       },
       {
-        "title": "Go 1.27",
-        "url": "https://go.dev/blog/go1.27",
+        "title": "Harvest hikes bills by 1500% after purchased by Bending Spoons",
+        "url": "https://www.bbc.com/news/articles/clyq011414eo",
         "source": "Hacker News",
-        "score": 711
+        "score": 4
       },
       {
-        "title": "A faster way to calculate the day of the week",
-        "url": "https://www.benjoffe.com/fast-day-of-week",
+        "title": "Seeing beyond BMI: Estimating cardiometabolic risk with smartphone imagery",
+        "url": "https://research.google/blog/seeing-beyond-bmi-estimating-cardiometabolic-risk-with-smartphone-imagery/",
         "source": "Hacker News",
-        "score": 204
+        "score": 31
+      },
+      {
+        "title": "Turns are Better than Radians (2022)",
+        "url": "https://www.computerenhance.com/p/turns-are-better-than-radians",
+        "source": "Hacker News",
+        "score": 287
       },
       {
         "title": "Risk Engineering",
         "url": "https://risk-engineering.org/",
         "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "A joke domain purchase turned in geopolitical warfare",
-        "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
-        "source": "Hacker News",
-        "score": 967
-      },
-      {
-        "title": "Show HN: Streambench – Native Mac Client for Kafka and NATS",
-        "url": "https://streambench.app",
-        "source": "Hacker News",
-        "score": 7
+        "score": 38
       }
     ],
     "ai": [
       {
-        "title": "Don't Paste the AI, please",
-        "url": "https://dontpastetheai.com/",
-        "source": "Hacker News AI",
-        "score": 754
-      },
-      {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 96
+        "score": 165
+      },
+      {
+        "title": "Hacking with Claude on a $27 Smart Watch",
+        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
+        "source": "Hacker News AI",
+        "score": 11
+      },
+      {
+        "title": "An American Mosaic (interactive map of ancestry census data)",
+        "url": "https://www.nytimes.com/interactive/2026/07/01/us/america-ancestry-census-data-map.html",
+        "source": "Hacker News AI",
+        "score": 6
+      },
+      {
+        "title": "Don't paste the AI, please",
+        "url": "https://dontpastetheai.com/",
+        "source": "Hacker News AI",
+        "score": 874
       },
       {
         "title": "A joke domain purchase turned in geopolitical warfare",
         "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
         "source": "Hacker News AI",
-        "score": 967
+        "score": 980
       },
       {
         "title": "Australia passes law to levy tech giants that fail to pay for local news",
         "url": "https://www.reuters.com/legal/litigation/australia-passes-law-levy-tech-giants-that-fail-pay-local-news-2026-08-20/",
         "source": "Hacker News AI",
-        "score": 33
-      },
-      {
-        "title": "Mathematics in the age of AI",
-        "url": "https://arxiv.org/abs/2608.16753",
-        "source": "Hacker News AI",
-        "score": 197
-      },
-      {
-        "title": "German court rules: Emails must be end-to-end encrypted",
-        "url": "https://tuta.com/blog/german-court-rules-emails-e2ee",
-        "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "Air Theremin – A browser theremin you play by waving at your webcam",
-        "url": "https://theremin.bizibah.com/",
-        "source": "Hacker News AI",
-        "score": 289
-      },
-      {
-        "title": "Extensible Software in the age of LLMs",
-        "url": "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/",
-        "source": "Hacker News AI",
-        "score": 158
+        "score": 47
       },
       {
         "title": "Frustrated GP patients hang up as Yorkshire accent baffles AI receptionist",
         "url": "https://www.theguardian.com/society/2026/aug/20/yorkshire-rotherham-ai-gp-receptionist-cannot-understand-accent",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 10
+      },
+      {
+        "title": "Mathematics in the age of AI",
+        "url": "https://arxiv.org/abs/2608.16753",
+        "source": "Hacker News AI",
+        "score": 198
+      },
+      {
+        "title": "German court rules: Emails must be end-to-end encrypted",
+        "url": "https://tuta.com/blog/german-court-rules-emails-e2ee",
+        "source": "Hacker News AI",
+        "score": 13
+      },
+      {
+        "title": "Air Theremin – A browser theremin you play by waving at your webcam",
+        "url": "https://theremin.bizibah.com/",
+        "source": "Hacker News AI",
+        "score": 290
       }
     ],
     "news": [
@@ -159,13 +159,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Founder of collapsed Chinese property giant Evergrande sentenced to life in prison",
-        "url": "https://www.bbc.co.uk/news/articles/cd0x9mjjmgjo?at_medium=RSS&at_campaign=rss",
+        "title": "Trump vows tougher economic measures on Iran and supporting countries",
+        "url": "https://www.bbc.co.uk/news/articles/c2k7e83ynj4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump vows tougher economic measures on Iran and supporting countries",
-        "url": "https://www.bbc.co.uk/news/articles/c2k7e83ynj4o?at_medium=RSS&at_campaign=rss",
+        "title": "Founder of collapsed Chinese property giant Evergrande sentenced to life in prison",
+        "url": "https://www.bbc.co.uk/news/articles/cd0x9mjjmgjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -174,13 +174,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Mushroom killer must stay in jail forever for 'truly dreadful' crime, appeal court told",
-        "url": "https://www.bbc.co.uk/news/articles/ckg3j3yn4exo?at_medium=RSS&at_campaign=rss",
+        "title": "Assad officer extradited to Syria on war crimes charges for first time",
+        "url": "https://www.bbc.co.uk/news/articles/cvgjdy8q766o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Australia 'outraged' after Israel decides not to open criminal investigation into killing of aid worker in Gaza",
-        "url": "https://www.bbc.co.uk/news/articles/cp87g29r718o?at_medium=RSS&at_campaign=rss",
+        "title": "Mushroom killer must stay in jail forever for 'truly dreadful' crime, appeal court told",
+        "url": "https://www.bbc.co.uk/news/articles/ckg3j3yn4exo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -189,7 +189,43 @@
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " 4 of my top-rated budget earphones are on sale right now! ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/4-of-my-top-rated-budget-earphones-are-on-sale-right-now",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Move over Duolingo, there’s a new brand mascot in town ",
+        "url": "https://www.creativebloq.com/design/branding/move-over-duolingo-theres-a-new-brand-mascot-in-town",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " A 16-year-old girl's iPhone theme is breaking UI designers' brains ",
+        "url": "https://www.creativebloq.com/web-design/ux-ui/a-16-year-old-girls-iphone-xis-breaking-ui-designers-brains",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Studio Ghibli has no plan, isn't anti-AI after all, and doesn't know what Miyazaki is up to other than that he turns up for work every day ",
+        "url": "https://www.creativebloq.com/art/animation/studio-ghibli-has-no-plan-isnt-anti-ai-after-all-and-doesnt-know-what-miyazaki-is-up-to-other-than-that-he-turns-up-for-work-every-day",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Help! I'm instantly addicted to my new under desk treadmill ",
+        "url": "https://www.creativebloq.com/tech/chairs-desks/help-im-instantly-addicted-to-my-new-under-the-desk-treadmill",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The new ACOTAR book covers are giving 2016 ",
+        "url": "https://www.creativebloq.com/entertainment/books/the-new-acotar-book-covers-are-giving-2016",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Amazon's wanton destruction of rare books is a betrayal of the brand's origins ",
+        "url": "https://www.creativebloq.com/design/branding/amazons-massacre-of-rare-books-is-a-betrayal-of-the-brands-origins",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "The “Asian water tower” is losing 24 billion tonnes of groundwater every year",
@@ -229,6 +265,31 @@
     ],
     "gaming": [
       {
+        "title": "Fizz And EB Games Team Up To Create A Special Starter Pack That’s Perfect For Mobile Gamers",
+        "url": "https://www.polygon.com/fizz-eb-games-starter-pack/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Duskbloods Could Have Been a 'Cute' Nintendo Game",
+        "url": "https://www.polygon.com/the-duskbloods-cute-nintendo-game-early-development/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Mass Effect’s Future In Doubt: Ex-Manager Says New Game Unlikely Under New EA",
+        "url": "https://www.polygon.com/mass-effect-5-new-game-unlikey-saudi-deal/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Elden Ring Meets Settlers of Catan' Revealed as Switch 2's Next Multiplayer Swing",
+        "url": "https://www.polygon.com/the-duskbloods-preview-fromsoftware-nintendo-switch-2/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Duskbloods' Full Character List Officially Revealed",
+        "url": "https://www.polygon.com/the-duskbloods-characters-starting-classes-official/",
+        "source": "Polygon"
+      },
+      {
         "title": "Arc Raiders' Fast Food Promo Skins Let You Wear a Sandwich in the Apocalypse",
         "url": "https://www.polygon.com/arc-raiders-subway-skins-promotion/",
         "source": "Polygon"
@@ -236,31 +297,6 @@
       {
         "title": "5 Controversial Star Trek Episodes That Have Aged Like Fine Wine",
         "url": "https://www.polygon.com/best-star-trek-episodes-most-controversial/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 Funniest Far Side Comics About Cows",
-        "url": "https://www.polygon.com/10-funniest-far-side-comics-about-cows/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fortnite's New Season Is Here, and It Creates a Massive Video Game Multiverse",
-        "url": "https://www.polygon.com/fortnite-new-season-4-chapter-7-override-launch/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GTA 6 Leaker May Have a Playable Copy of the Game",
-        "url": "https://www.polygon.com/gta-6-leaks-playable-build/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Black Myth Zhong Kui Protagonist Revealed in New Gameplay Trailer",
-        "url": "https://www.polygon.com/black-myth-zhong-kui-new-gameplay-trailer-protagonist/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Nintendo Switch 2 Officially Just Got One of the Decade's Best Games",
-        "url": "https://www.polygon.com/1000xresist-nintendo-switch-2-release-fyi/",
         "source": "Polygon"
       }
     ],
