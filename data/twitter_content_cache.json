@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T09:35:38.892399",
-    "total_items": 59
+    "last_updated": "2026-08-20T10:31:34.023966",
+    "total_items": 52
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Don't Paste the AI, please",
         "url": "https://dontpastetheai.com/",
         "source": "Hacker News",
-        "score": 140
+        "score": 272
       },
       {
         "title": "Windows brings out the Rorschach test in everyone",
         "url": "https://devblogs.microsoft.com/oldnewthing/20030825-00/?p=42803",
         "source": "Hacker News",
-        "score": 156
+        "score": 185
       },
       {
         "title": "OpenRouter is joining Stripe",
         "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
         "source": "Hacker News",
-        "score": 837
+        "score": 847
       },
       {
         "title": "Turns are Better than Radians (2022)",
         "url": "https://www.computerenhance.com/p/turns-are-better-than-radians",
         "source": "Hacker News",
-        "score": 202
+        "score": 215
       },
       {
         "title": "Go 1.27",
         "url": "https://go.dev/blog/go1.27",
         "source": "Hacker News",
-        "score": 633
+        "score": 649
       },
       {
         "title": "Google has stopped pushing Git tags for some Android source code",
         "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
         "source": "Hacker News",
-        "score": 548
+        "score": 579
       },
       {
         "title": "A faster way to calculate the day of the week",
         "url": "https://www.benjoffe.com/fast-day-of-week",
         "source": "Hacker News",
-        "score": 142
-      },
-      {
-        "title": "Manabu Kosaka's Handmade Paper Sculptures",
-        "url": "https://coca11272000.wixsite.com/manabukosaka",
-        "source": "Hacker News",
-        "score": 128
+        "score": 156
       },
       {
         "title": "A joke domain purchase turned in geopolitical warfare",
         "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
         "source": "Hacker News",
-        "score": 899
+        "score": 909
+      },
+      {
+        "title": "Manabu Kosaka's Handmade Paper Sculptures",
+        "url": "https://coca11272000.wixsite.com/manabukosaka",
+        "source": "Hacker News",
+        "score": 133
+      },
+      {
+        "title": "Free v4 front end for your v6 site",
+        "url": "https://v4-frontend.netiter.com/",
+        "source": "Hacker News",
+        "score": 9
       },
       {
         "title": "Unsloth Dynamic 3.0 GGUFs",
         "url": "https://unsloth.ai/docs/basics/dynamic-3.0-ggufs",
         "source": "Hacker News",
-        "score": 265
+        "score": 274
       },
       {
         "title": "Unlocking a locked/deactivated e-waste Cricut Maker",
         "url": "https://sprocketfox.io/xssfox/2026/07/01/cricut-unlock/",
         "source": "Hacker News",
-        "score": 205
-      },
-      {
-        "title": "The Chauffeur Problem",
-        "url": "https://engines.egr.uh.edu/episode/1495",
-        "source": "Hacker News",
-        "score": 15
+        "score": 210
       },
       {
         "title": "Casio F-B100W-1A",
         "url": "https://www.casio.com/uk/watches/casio/product.F-B100W-1A/",
         "source": "Hacker News",
-        "score": 375
+        "score": 387
+      },
+      {
+        "title": "The Chauffeur Problem",
+        "url": "https://engines.egr.uh.edu/episode/1495",
+        "source": "Hacker News",
+        "score": 22
       },
       {
         "title": "Sol loves to cheat",
         "url": "https://jumploops.com/blog/sol-loves-to-cheat/",
         "source": "Hacker News",
-        "score": 164
-      },
-      {
-        "title": "Feature Request: Support AGENTS.md",
-        "url": "https://github.com/anthropics/claude-code/issues/6235",
-        "source": "Hacker News",
-        "score": 254
+        "score": 169
       }
     ],
     "ai": [
@@ -101,49 +101,49 @@
         "title": "Don't Paste the AI, please",
         "url": "https://dontpastetheai.com/",
         "source": "Hacker News AI",
-        "score": 140
+        "score": 272
       },
       {
         "title": "A joke domain purchase turned in geopolitical warfare",
         "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
         "source": "Hacker News AI",
-        "score": 899
+        "score": 909
       },
       {
         "title": "Mathematics in the age of AI",
         "url": "https://arxiv.org/abs/2608.16753",
         "source": "Hacker News AI",
-        "score": 168
-      },
-      {
-        "title": "Why Microsoft Entertainment Pack had a sticker announcing that it had Tetris?",
-        "url": "https://devblogs.microsoft.com/oldnewthing/20260818-00/?p=112621",
-        "source": "Hacker News AI",
-        "score": 55
+        "score": 174
       },
       {
         "title": "Air Theremin – A browser theremin you play by waving at your webcam",
         "url": "https://theremin.bizibah.com/",
         "source": "Hacker News AI",
-        "score": 274
+        "score": 275
       },
       {
         "title": "Extensible Software in the age of LLMs",
         "url": "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/",
         "source": "Hacker News AI",
-        "score": 150
+        "score": 152
+      },
+      {
+        "title": "Why Microsoft Entertainment Pack had a sticker announcing that it had Tetris?",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20260818-00/?p=112621",
+        "source": "Hacker News AI",
+        "score": 58
       },
       {
         "title": "Universality of Gradient Descent Neural Network Training",
         "url": "https://arxiv.org/abs/2007.13664",
         "source": "Hacker News AI",
-        "score": 30
+        "score": 31
       },
       {
         "title": "MicroGPT-C in pure C hits 10M TPS on Apple M5",
         "url": "https://github.com/vixhal-baraiya/microgpt-c",
         "source": "Hacker News AI",
-        "score": 129
+        "score": 131
       },
       {
         "title": "Devices with GrapheneOS support should be available in 2027",
@@ -189,43 +189,7 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " A 16-year-old girl's iPhone theme is breaking UI designers' brains ",
-        "url": "https://www.creativebloq.com/web-design/ux-ui/a-16-year-old-girls-iphone-xis-breaking-ui-designers-brains",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Studio Ghibli has no plan, isn't anti-AI after all, and doesn't know what Miyazaki is up to other than that he turns up for work every day ",
-        "url": "https://www.creativebloq.com/art/animation/studio-ghibli-has-no-plan-isnt-anti-ai-after-all-and-doesnt-know-what-miyazaki-is-up-to-other-than-that-he-turns-up-for-work-every-day",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Help! I'm instantly addicted to my new under desk treadmill ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/help-im-instantly-addicted-to-my-new-under-the-desk-treadmill",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The new ACOTAR book covers are giving 2016 ",
-        "url": "https://www.creativebloq.com/entertainment/books/the-new-acotar-book-covers-are-giving-2016",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Amazon's wanton destruction of rare books is a betrayal of the brand's origins ",
-        "url": "https://www.creativebloq.com/design/branding/amazons-massacre-of-rare-books-is-a-betrayal-of-the-brands-origins",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Star Wars: Galactic Racer's podracing meets Burnout had me on the edge of my seat ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/star-wars-galactic-racers-podracing-meets-burnout-had-me-on-the-edge-of-my-seat",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The 5 best Android drawing tablets that we've tried and tested ",
-        "url": "https://www.creativebloq.com/art/digital-art/the-best-android-drawing-tablets",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "AI-designed “intrabodies” could unlock new treatments for Alzheimer’s, Parkinson’s and MND",
@@ -265,6 +229,11 @@
     ],
     "gaming": [
       {
+        "title": "Nintendo Switch 2 Officially Just Got One of the Decade's Best Games",
+        "url": "https://www.polygon.com/1000xresist-nintendo-switch-2-release-fyi/",
+        "source": "Polygon"
+      },
+      {
         "title": "Nobody understands gambling, especially in video games",
         "url": "https://www.polygon.com/video/nobody-understands-gambling-especially-in-video-games/",
         "source": "Polygon"
@@ -292,11 +261,6 @@
       {
         "title": "The Marvel Movie That Killed Sony's Spider-Man Universe Is Coming to Disney Plus",
         "url": "https://www.polygon.com/kraven-the-hunter-streaming-date-disney-plus-september-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Steam Sale Includes Indie Horror Hit Carrion for 80% Off",
-        "url": "https://www.polygon.com/steam-sale-carrion-steam-sale-80-percent-off-august-2026/",
         "source": "Polygon"
       }
     ],
