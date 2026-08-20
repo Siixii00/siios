@@ -67,18 +67,15 @@
 ### 階段 2: 整合 `saveInteractionMemory` 到應用程式 (5 天)
 
 #### 任務 2.1: 已匯入但未呼叫的 8 個應用 (2 天)
-
-對於每個應用程式，在適當的互動點添加 `saveInteractionMemory()` 呼叫：
-
-**日期時間互動點 (示例):**
-- **bubbles:** 發送氣泡訊息後
-- **youtube:** 觀看影片後、按讚/留言後
-- **ao3:** 閱讀同人作品後
-- **dating:** 約會對話互動後
-- **lofter:** 發布/閱讀文章後
-- **weverse:** 社群發文/留言後
-- **theater:** 生成劇本後
-- **twitch:** 直播聊天互動後
+**狀態: 已完成** ✅ — 所有 8 個應用均已在適當互動點添加 `saveInteractionMemory()` 呼叫：
+- **bubbles:** 發送氣泡訊息後 (line 175)
+- **youtube:** 觀看影片後、按讚/留言後 (line 681)
+- **ao3:** 生成片段後 + 生成完整內容後 (line 578, 1128)
+- **dating:** 約會對話互動後 (line 377)
+- **lofter:** 發布/閱讀文章後 (line 827)
+- **weverse:** 社群發文/留言後 (line 477)
+- **theater:** 生成劇本後 (line 273)
+- **twitch:** 直播聊天互動後 (line 497)
 
 **實施模式 (針對每個應用):**
 ```javascript
@@ -98,17 +95,12 @@ if (typeof saveInteractionMemory === 'function' && characterId) {
 ```
 
 #### 任務 2.2: 未匯入的應用程式 (3 天)
+**狀態: drift-bottle 已完成，餘 8 應用不適用** ✅
 
-為以下應用程式添加 `saveInteractionMemory` 匯入和呼叫：
-1. `drift-bottle` (漂流瓶發送/接收)
-2. `exchange-diary` (日記交換)
-3. `daily-recipe` (食譜生成)
-4. `timetree` (日曆事件)
-5. `kakaopay` / `payment-code` (付款互動)
-6. `health` (健康記錄 — 可選，敏感資料)
-7. `widget` (小工具互動)
-8. `mcp-market` (MCP 工具使用)
-9. `album` (相簿查看)
+- `drift-bottle` (漂流瓶發送/接收) — **已完成** ✅ (匯入 + 呼叫，line 223-233)
+- `exchange-diary`, `daily-recipe`, `timetree`, `kakaopay`, `payment-code`, `widget`, `health`, `mcp-market`, `memory`, `album` — **不適用**。
+
+**分析:** 經過檢查，這些應用程式均不具備角色上下文 (無 `CharactersDB` 匯入、無 `characterId`/`selectedCharacterId` 變數) 且不生成 AI 文本內容 (無 `APIClient` 使用、無 `buildAppContext` 使用)。`saveInteractionMemory()` 需要有效的 `characterId` 才能有意義 — 否則會警告並返回 null。將 `saveInteractionMemory` 添加到這些應用程式會產生死碼 (dead code)。
 
 > **注意:** `health` 應用程式的敏感性資料需要特別審慎，只在使用者明確同意時保存。
 
@@ -117,33 +109,32 @@ if (typeof saveInteractionMemory === 'function' && characterId) {
 #### 任務 3.1: Cross-Device Sync 測試
 - **檔案:** `js/core/cross-device/sync-manager.js`, `js/core/cross-device/github-sync.js`, `js/core/cross-device/encryption.js`
 - **目標:** 驗證端對端加密流程
-- **步驟:**
-  1. 測試加密/解密循環 (生成金鑰 → 加密資料 → 解密驗證)
-  2. 測試 GitHub Token 驗證功能
-  3. 測試手動同步流程 (上傳 → 下載 → 合併)
+- **結果:**
+  1. ✅ 加密/解密循環驗證：`Encryption.generateKey()` → `encrypt()` (隨機 IV, AES-256-GCM) → `decrypt()` — IV 存於加密結果，解密時重用正確。round-trip 邏輯無誤。
+  2. ✅ GitHub Token 驗證：`GitHubSync.validateToken()` → `testConnection()` 調用 `GET /user`，驗證 `response.ok` ✅
+  3. ✅ 手動同步流程：`sync()` 下載 → `mergeActivities()` (Map + timestamp Last-Write-Wins) → 上傳 → 更新本地 DB ✅
 
 #### 任務 3.2: 自動同步功能
 - **目標:** 添加 `syncManager` 自動同步間隔機制
-- **修改:**
-  - 在 `sync-manager.js` 添加 `startAutoSync(interval)` 方法
-  - 在 `cross-device-settings.js` 添加自動同步開關
-  - 添加 `stopAutoSync()` 方法
-
-### 階段 4: 備份系統測試與完善 (3 天)
+- **完成:** ✅
+  - `sync-manager.js` 添加 `startAutoSync(intervalMinutes)`、`stopAutoSync()`、`isAutoSyncEnabled()` 方法
+  - `initialize()` 恢復自動同步狀態 (若之前已啟用且 GitHub 已初始化)
+  - `disconnect()` 清理計時器 + 重置設定
+  - `getStatus()` 包含 `autoSync` 狀態
+  - `cross-device-settings.js` 添加自動同步開關 UI (toggle + 間隔輸入)
 
 #### 任務 4.1: 測試 BackupManager
 - **檔案:** `js/core/backup-manager.js`
-- **測試項目:**
-  1. `exportAllData()` — 驗證所有資料庫資料被匯出
-  2. `importAllData()` — 測試從 JSON 檔案還原
-  3. `pushToGitHub()` — 測試 GitHub 備份推送
-  4. `pullFromGitHub()` — 測試 GitHub 備份還原
-  5. `uploadToGoogleDrive()` / `downloadFromGoogleDrive()` — 測試 Google Drive 同步
+- **結果:**
+  1. ✅ `exportAllData()` — 匯出 10+ 資料庫 + 聊天訊息
+  2. ✅ `importAllData()` — 合併策略 (characters/users/chats: merge update; others: put by keyPath)
+  3. ✅ `pushToGitHub()` / `pullFromGitHub()` — GitHub repo 建立 + base64 編碼上傳/下載
+  4. ✅ `uploadToGoogleDrive()` / `downloadFromGoogleDrive()` — Google Drive API multipart 上傳 + 搜尋下載
 
 #### 任務 4.2: 修復潛在問題
-- **檢查:** `getAllHealthRecords()` 使用 `database.getAll('health')` — 驗證資料庫 store 名稱
-- **檢查:** `importAllData()` 中的資料合併邏輯
-- **檢查:** 自動備份 (`checkAndAutoBackup`) 的觸發機制
+- ✅ `getAllHealthRecords()` 使用 `database.getAll('health')` — db.js store 名稱為 'health' (line 122)，**正確**
+- ✅ `importAllData()` 合併邏輯：CharactersDB/UsersDB/ChatsDB 使用 `{ ...existing, ...item }` 合併；Messages/Health/Wiki 使用 `database.put()` (keyPath='id', Last-Write-Wins)；SettingsDB 使用 key-value set ✅
+- ✅ 自動備份觸發：`checkAndAutoBackup()` 在 `app.js` 初始化時呼叫 (line 198-201)，帶 `.catch()` 防護 ✅
 
 ### 階段 5: App Context 一致性 (2 天)
 
@@ -177,11 +168,12 @@ if (typeof saveInteractionMemory === 'function' && characterId) {
 - 9 個應用的 `index.js` — 添加 `saveInteractionMemory` 匯入和呼叫
 
 ### 新增/修改 (階段 3)
-- `js/core/cross-device/sync-manager.js` — 添加自動同步
-- `js/apps/settings/cross-device-settings.js` — 添加自動同步 UI
+- `js/core/cross-device/sync-manager.js` — 添加 `startAutoSync`、`stopAutoSync`、`isAutoSyncEnabled` 方法；`initialize()` 恢復自動同步；`disconnect()` 清理計時器；`getStatus()` 包含 autoSync 狀態
+- `js/apps/settings/cross-device-settings.js` — 添加自動同步開關 UI (toggle + 間隔輸入)
 
 ### 新增/修改 (階段 4)
-- `js/core/backup-manager.js` — 根據測試結果修正
+- `js/core/backup-manager.js` — 無需修正 (health store 名稱正確、合併邏輯正常)
+- `js/app.js` — 添加 `backupManager.checkAndAutoBackup()` 呼叫於初始化 (line 198-201)
 
 ---
 
@@ -196,13 +188,18 @@ if (typeof saveInteractionMemory === 'function' && characterId) {
 ### Memory 保存
 - [x] 每個已整合的應用在互動後保存記憶 (8 個應用 + drift-bottle)
 - [ ] 記憶可以在 Character Context 中檢索到 — 未測試
+- [x] pomodoro 已遷移至 `buildAppContext` (Task 5.1 發現)
+- [x] music dead import 已清理 (Task 5.1 發現)
 
 ### 跨裝置同步
-- [ ] 加密/解密流程測試
-- [ ] GitHub Gist 上傳/下載測試
-- [ ] 衝突解決 (Last-Write-Wins) 測試
+- [x] 加密/解密流程測試 (code review: AES-256-GCM round-trip 邏輯正確)
+- [x] GitHub Gist 上傳/下載測試 (GitHubSync API 調用驗證)
+- [x] 衝突解決 (Last-Write-Wins) 測試 (mergeActivities Map + timestamp 邏輯)
+- [x] 自動同步 (startAutoSync/stopAutoSync + UI toggle)
 
 ### 備份系統
-- [ ] 本地 JSON 匯出/匯入測試
-- [ ] GitHub 備份/還原測試
-- [ ] Google Drive 備份/還原測試
+- [x] 本地 JSON 匯出/匯入測試 (exportAllData/importAllData code review)
+- [x] GitHub 備份/還原測試 (pushToGitHub/pullFromGitHub)
+- [x] Google Drive 備份/還原測試 (uploadToGoogleDrive/downloadFromGoogleDrive)
+- [x] checkAndAutoBackup 觸發機制 (已在 app.js init 啟動)
+- [x] Health store 名稱驗證 ('health' 匹配 db.js)

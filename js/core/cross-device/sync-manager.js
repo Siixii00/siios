@@ -8,6 +8,7 @@ class CrossDeviceSync {
     this.encryptionKey = null;
     this.gistId = null;
     this.deviceId = this.getOrCreateDeviceId();
+    this.autoSyncTimer = null;
   }
 
   getOrCreateDeviceId() {
@@ -32,6 +33,12 @@ class CrossDeviceSync {
       } else {
         console.warn('[CrossDeviceSync] No encryption key found');
       }
+    }
+
+    const autoSyncEnabled = await SettingsDB.get('auto_sync_enabled');
+    const autoSyncInterval = await SettingsDB.get('auto_sync_interval');
+    if (autoSyncEnabled && autoSyncInterval && this.github) {
+      this.startAutoSync(autoSyncInterval);
     }
   }
 
@@ -229,11 +236,57 @@ class CrossDeviceSync {
     }
 
     await SettingsDB.delete('cross_device_sync');
+    await SettingsDB.set('auto_sync_enabled', false);
     localStorage.removeItem('siios_encryption_key');
     
+    if (this.autoSyncTimer) {
+      clearInterval(this.autoSyncTimer);
+      this.autoSyncTimer = null;
+    }
+
     this.github = null;
     this.encryptionKey = null;
     this.gistId = null;
+  }
+
+  async startAutoSync(intervalMinutes = 30) {
+    if (!this.github) {
+      throw new Error('Cross-device sync not initialized');
+    }
+
+    await SettingsDB.set('auto_sync_enabled', true);
+    await SettingsDB.set('auto_sync_interval', intervalMinutes);
+
+    if (this.autoSyncTimer) {
+      clearInterval(this.autoSyncTimer);
+    }
+
+    this.autoSyncTimer = setInterval(async () => {
+      try {
+        await this.sync();
+      } catch (e) {
+        console.warn('[CrossDeviceSync] Auto-sync failed:', e);
+      }
+    }, intervalMinutes * 60 * 1000);
+
+    return { success: true, interval: intervalMinutes };
+  }
+
+  async stopAutoSync() {
+    await SettingsDB.set('auto_sync_enabled', false);
+
+    if (this.autoSyncTimer) {
+      clearInterval(this.autoSyncTimer);
+      this.autoSyncTimer = null;
+    }
+
+    return { success: true };
+  }
+
+  async isAutoSyncEnabled() {
+    const enabled = await SettingsDB.get('auto_sync_enabled');
+    const interval = await SettingsDB.get('auto_sync_interval');
+    return { enabled: !!enabled, interval: interval || 30 };
   }
 
   getDeviceName() {
@@ -267,13 +320,15 @@ class CrossDeviceSync {
     }
 
     const validation = await GitHubSync.validateToken(settings.github_token);
+    const autoSync = await this.isAutoSyncEnabled();
     
     return {
       enabled: true,
       connected: validation.success,
       user: validation.user,
       gistId: settings.gist_id,
-      deviceId: this.deviceId
+      deviceId: this.deviceId,
+      autoSync
     };
   }
 }

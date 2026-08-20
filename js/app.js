@@ -7,6 +7,7 @@ import { registerRoutes } from './apps/registry.js';
 import { MemorySystem } from './core/memory-system/index.js';
 import { initActivityAPI } from './activity-interceptor.js';
 import { ziweiLazyLoader } from './core/ziwei-lazy-loader.js';
+import { backupManager } from './core/backup-manager.js';
 
 window.showError = function(errorInfo) {
     const info = typeof errorInfo === 'string' 
@@ -193,6 +194,11 @@ const App = {
             
             console.log('[App] 啟動紫微斗數懶加載器...');
             ziweiLazyLoader.startDayChangeDetection();
+            
+            console.log('[App] 檢查自動備份...');
+            backupManager.checkAndAutoBackup().catch(e => {
+                console.warn('[App] 自動備份檢查失敗:', e);
+            });
             
             this.registerServiceWorker();
             this.setupInstallPrompt();

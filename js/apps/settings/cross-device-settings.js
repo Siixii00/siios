@@ -223,6 +223,53 @@ async function renderCrossDeviceSettings() {
         syncSection.appendChild(syncCard);
         main.appendChild(syncSection);
         
+        const autoSyncSection = createElement('div', 'mx-4 mb-4');
+        autoSyncSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: '自動同步' }));
+        
+        const autoSyncCard = createElement('div', 'bg-white rounded-xl p-4 shadow-sm');
+        
+        const autoSyncStatus = await syncManager.isAutoSyncEnabled();
+        
+        const toggleRow = createElement('div', 'flex items-center justify-between mb-3');
+        
+        const toggleLabel = createElement('span', 'text-sm font-medium text-gray-700');
+        toggleLabel.textContent = '啟用自動同步';
+        
+        const toggleSwitch = createElement('button', 'relative inline-flex h-6 w-10 items-center rounded-full transition-colors', {
+            onClick: async () => {
+                if (autoSyncStatus.enabled) {
+                    await syncManager.stopAutoSync();
+                    createToast('自動同步已關閉', 'success');
+                } else {
+                    const interval = parseInt(intervalInput.value, 10) || 30;
+                    await syncManager.startAutoSync(interval);
+                    createToast(`自動同步已啟用（每${interval}分鐘）`, 'success');
+                }
+                Router.navigate('/settings/cross-device');
+            }
+        });
+        toggleSwitch.style.background = autoSyncStatus.enabled ? '#4CAF50' : '#ccc';
+        toggleSwitch.innerHTML = `<span class="absolute top-1 ${autoSyncStatus.enabled ? 'right-1' : 'left-1'} w-4 h-4 bg-white rounded-full"></span>`;
+        toggleRow.appendChild(toggleLabel);
+        toggleRow.appendChild(toggleSwitch);
+        autoSyncCard.appendChild(toggleRow);
+        
+        const intervalLabel = createElement('label', 'block text-sm font-medium text-gray-700 mb-2');
+        intervalLabel.textContent = '同步間隔 (分鐘)';
+        
+        const intervalInput = createElement('input', 'w-full p-3 border rounded-lg text-sm mb-2', {
+            type: 'number',
+            min: '5',
+            max: '1440',
+            value: String(autoSyncStatus.interval)
+        });
+        
+        autoSyncCard.appendChild(intervalLabel);
+        autoSyncCard.appendChild(intervalInput);
+        
+        autoSyncSection.appendChild(autoSyncCard);
+        main.appendChild(autoSyncSection);
+        
         const dangerSection = createElement('div', 'mx-4 mb-8');
         dangerSection.appendChild(createElement('p', 'ios-section-header mb-2', { textContent: '危險操作' }));
         
