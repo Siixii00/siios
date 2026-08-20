@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T16:36:10.279947",
-    "total_items": 58
+    "last_updated": "2026-08-20T17:30:36.130446",
+    "total_items": 52
   },
   "content": {
     "tech": [
       {
-        "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
-        "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
-        "source": "Hacker News",
-        "score": 567
-      },
-      {
         "title": "I like 'em thick: an apology to my English teachers",
         "url": "https://www.experimental-history.com/p/i-like-em-thick",
         "source": "Hacker News",
-        "score": 111
+        "score": 215
       },
       {
-        "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
-        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
+        "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
+        "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
         "source": "Hacker News",
-        "score": 293
+        "score": 632
       },
       {
         "title": "HTML Can Do That",
         "url": "https://chrisburnell.com/html-can-do-that/",
         "source": "Hacker News",
-        "score": 166
+        "score": 243
       },
       {
-        "title": "Malicious Rust crate Arrayref runs a build-time payload",
-        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
+        "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
+        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News",
-        "score": 233
+        "score": 340
       },
       {
         "title": "CIA funding helped keep NeXT afloat in the 80s",
         "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
         "source": "Hacker News",
-        "score": 108
+        "score": 156
+      },
+      {
+        "title": "Malicious Rust crate Arrayref runs a build-time payload",
+        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
+        "source": "Hacker News",
+        "score": 254
+      },
+      {
+        "title": "Sixtyfour (YC P25) Is Hiring",
+        "url": "https://www.ycombinator.com/companies/sixtyfour/jobs/39SkSrA-software-engineering-intern",
+        "source": "Hacker News",
+        "score": 1
       },
       {
         "title": "Clean up Claude 5's token vomit with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News",
-        "score": 43
+        "score": 78
+      },
+      {
+        "title": "Linux 7.2 Released",
+        "url": "https://www.igalia.com/2026/08/19/Linux-72-Released.html",
+        "source": "Hacker News",
+        "score": 27
       },
       {
         "title": "DiffusionGemma Technical Report",
         "url": "https://arxiv.org/abs/2608.00146",
         "source": "Hacker News",
-        "score": 73
+        "score": 89
       },
       {
         "title": "How to compromise your system with a job interview",
         "url": "https://www.codedge.de/posts/how-to-compromise-your-system-with-a-job-interview",
         "source": "Hacker News",
-        "score": 19
+        "score": 40
+      },
+      {
+        "title": "Generic Methods in Go 1.27",
+        "url": "https://dominik.info/blog/go-generic-methods",
+        "source": "Hacker News",
+        "score": 26
       },
       {
         "title": "Xorg-Server 26.0.99.901",
         "url": "https://lists.x.org/archives/xorg-announce/2026-August/003741.html",
         "source": "Hacker News",
-        "score": 59
+        "score": 72
+      },
+      {
+        "title": "Anti-AI fonts are useless and harmful",
+        "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
+        "source": "Hacker News",
+        "score": 40
       },
       {
         "title": "Hacking with Claude on a $27 Smart Watch",
         "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
         "source": "Hacker News",
-        "score": 41
-      },
-      {
-        "title": "Every Model Cheats",
-        "url": "https://dreadnode.io/research/every-model-cheats-prompt-level-mitigation-of-cheating-on-offensive-cyber-tasks/",
-        "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Launch HN: Vendo (YC S26) – Let users build features on top of your product",
-        "url": "https://github.com/runvendo/vendo",
-        "source": "Hacker News",
-        "score": 12
-      },
-      {
-        "title": "A theory for decades of C vulnerabilities",
-        "url": "https://strawberry9.github.io/the-wrong-memory/Appendix_02.html",
-        "source": "Hacker News",
-        "score": 10
-      },
-      {
-        "title": "Proof of Human (YC S23) Is Hiring a Member of Technical Staff",
-        "url": "https://www.ycombinator.com/companies/proof-of-human/jobs/ZTZHEbb-member-of-technical-staff",
-        "source": "Hacker News",
-        "score": 1
+        "score": 53
       }
     ],
     "ai": [
@@ -101,55 +101,55 @@
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 293
+        "score": 340
       },
       {
         "title": "Clean up Claude 5's token vomit with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News AI",
-        "score": 43
-      },
-      {
-        "title": "Hacking with Claude on a $27 Smart Watch",
-        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
-        "source": "Hacker News AI",
-        "score": 41
+        "score": 78
       },
       {
         "title": "Anti-AI fonts are useless and harmful",
         "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 40
+      },
+      {
+        "title": "Hacking with Claude on a $27 Smart Watch",
+        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
+        "source": "Hacker News AI",
+        "score": 53
       },
       {
         "title": "Show HN: Check if any of the $656M in unclaimed royalties at The MLC is yours",
         "url": "https://pub.doub.ly/",
         "source": "Hacker News AI",
-        "score": 26
+        "score": 36
       },
       {
         "title": "An American Mosaic (interactive map of ancestry census data)",
         "url": "https://www.nytimes.com/interactive/2026/07/01/us/america-ancestry-census-data-map.html",
         "source": "Hacker News AI",
-        "score": 23
+        "score": 25
       },
       {
         "title": "Could AIs Become Conscious?",
         "url": "https://economist.com/leaders/2026/08/20/could-ais-become-conscious",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 8
       },
       {
         "title": "Don't paste the AI, please",
         "url": "https://dontpastetheai.com/",
         "source": "Hacker News AI",
-        "score": 928
+        "score": 940
       },
       {
-        "title": "Code Factories Without Quality: The AI Development Blind Spot",
-        "url": "https://www.qawolf.com/blog/code-factories-without-quality",
+        "title": "Guess which of these LLM outputs is watermarked",
+        "url": "https://sgoedecke.github.io/watermark-quiz/",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 7
       }
     ],
     "news": [
@@ -169,8 +169,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Belgian car salesman becomes prince after royal parentage confirmed",
-        "url": "https://www.bbc.co.uk/news/articles/c4g616gvxr0o?at_medium=RSS&at_campaign=rss",
+        "title": "Como mayor bans 'beasts' in city centre after being hit by bike",
+        "url": "https://www.bbc.co.uk/news/articles/cn8n077vxd7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -189,38 +189,7 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " 4 of my top-rated budget earphones are on sale right now! ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/4-of-my-top-rated-budget-earphones-are-on-sale-right-now",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Move over Duolingo, there’s a new brand mascot in town ",
-        "url": "https://www.creativebloq.com/design/branding/move-over-duolingo-theres-a-new-brand-mascot-in-town",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " A 16-year-old girl's iPhone theme is breaking UI designers' brains ",
-        "url": "https://www.creativebloq.com/web-design/ux-ui/a-16-year-old-girls-iphone-xis-breaking-ui-designers-brains",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Studio Ghibli has no plan, isn't anti-AI after all, and doesn't know what Miyazaki is up to other than that he turns up for work every day ",
-        "url": "https://www.creativebloq.com/art/animation/studio-ghibli-has-no-plan-isnt-anti-ai-after-all-and-doesnt-know-what-miyazaki-is-up-to-other-than-that-he-turns-up-for-work-every-day",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Help! I'm instantly addicted to my new under desk treadmill ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/help-im-instantly-addicted-to-my-new-under-the-desk-treadmill",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The new ACOTAR book covers are giving 2016 ",
-        "url": "https://www.creativebloq.com/entertainment/books/the-new-acotar-book-covers-are-giving-2016",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "The “Asian water tower” is losing 24 billion tonnes of groundwater every year",
@@ -260,6 +229,31 @@
     ],
     "gaming": [
       {
+        "title": "Where to find the Shimanoyama Heat mascots in Forza Horizon 6",
+        "url": "https://www.polygon.com/forza-horizon-6-fh6-shimanoyama-heat-mascot-collectibles-location-where-to-find/",
+        "source": "Polygon"
+      },
+      {
+        "title": "All autumn 'Horizon Mascot Party' challenges and rewards in Forza Horizon 6",
+        "url": "https://www.polygon.com/forza-horizon-6-fh6-all-horizon-mascot-party-series-4-playlist-challenges-rewards/",
+        "source": "Polygon"
+      },
+      {
+        "title": "How to complete the #DeliciousDango photo challenge in Forza Horizon 6",
+        "url": "https://www.polygon.com/forza-horizon-6-fh6-delicious-dango-photo-challenge-mascot-party-tokyo-city/",
+        "source": "Polygon"
+      },
+      {
+        "title": "7 Criminally Underappreciated Final Fantasy Games You Must Play Before FF7 Revelation",
+        "url": "https://www.polygon.com/final-fantasy-games-underrated-overlooked/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Pokémon TCG Delta Reign Set Brings Back Rayquaza This November",
+        "url": "https://www.polygon.com/pokemon-trading-card-games-mega-evolution-delta-reign-set-announced-rayquaza/",
+        "source": "Polygon"
+      },
+      {
         "title": "Sega's Golden Axe Officially Returns in New Streaming Comedy",
         "url": "https://www.polygon.com/golden-axe-tv-show-trailer-release-date-september-2026/",
         "source": "Polygon"
@@ -267,31 +261,6 @@
       {
         "title": "Switch 2 Just Got One of The Best Zelda-likes in Years",
         "url": "https://www.polygon.com/pipistrello-and-the-cursed-yoyo-switch-2-recommendation/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Borderlands 4 Story Pack 2 DLC Adds New Island and John Wick-Inspired Story",
-        "url": "https://www.polygon.com/borderlands-4-story-pack-2-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Skyrim' Mod Makers Wage War Over Competing Ambitious Graphics Mods",
-        "url": "https://www.polygon.com/best-skyrim-graphics-mods-cs-enb-patreon-dmca-notice-boris-vorontsov/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All map and weapon loot pool changes in Fortnite Chapter 7 Season 4",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-c7s4-override-map-weapons-loot-pool-poi/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All battle pass skins in Fortnite Chapter 7 Season 4",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-battle-pass-skins-list-outfits-c7s4/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Best Star Trek Episode of 2026 Takes the Sci-Fi Series to Chaotic New Heights",
-        "url": "https://www.polygon.com/star-trek-strange-new-worlds-puppet-episode-interview/",
         "source": "Polygon"
       }
     ],
