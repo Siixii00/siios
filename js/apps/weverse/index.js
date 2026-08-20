@@ -472,6 +472,17 @@ async function renderWeverse(params) {
         input.value = '';
         scheduleSettingsSave();
         renderUI();
+        
+        if (viewerSettings.selectedCharacterId) {
+            await saveInteractionMemory({
+                characterId: viewerSettings.selectedCharacterId,
+                sourceApp: 'weverse',
+                sourceType: 'interaction',
+                sourceSubtype: 'social',
+                content: `${isArtistMode ? '官方發文' : '粉絲留言'}：${finalText}`,
+                importance: 0.5
+            });
+        }
     };
     setTimeout(() => { const postBtn = container.querySelector('#post-btn'); const postInput = container.querySelector('#post-input'); if (postBtn) postBtn.onclick = addPost; if (postInput) postInput.onkeydown = (e) => { if (e.key === 'Enter') { e.preventDefault(); addPost(); } }; bindCharacterSelectEvent(container); }, 100);
     return { element: container, cleanup: () => { if (saveTimer) clearTimeout(saveTimer); } };

@@ -573,6 +573,17 @@ ${charInfo ? `\n角色設定:\n${charInfo}` : ''}
                 updateStats();
                 updatePreview();
                 setStatus(container, '已插入 AI 生成的段落');
+                
+                if (firstCharId) {
+                    await saveInteractionMemory({
+                        characterId: firstCharId,
+                        sourceApp: 'ao3',
+                        sourceType: 'fiction',
+                        sourceSubtype: 'ao3',
+                        content: snippet,
+                        importance: 0.5
+                    });
+                }
             } else {
                 setStatus(container, '生成失敗，請稍後重試');
             }
@@ -1112,6 +1123,17 @@ ${charInfo ? `【角色詳細設定】\n${charInfo}\n` : ''}
                 updateStats();
                 updatePreview();
                 setStatus(container, '已生成完整的同人文內容');
+                
+                if (firstCharId) {
+                    await saveInteractionMemory({
+                        characterId: firstCharId,
+                        sourceApp: 'ao3',
+                        sourceType: 'fiction',
+                        sourceSubtype: 'ao3',
+                        content: `${parsed.title || ''}\n${parsed.summary || ''}\n${parsed.content || ''}`,
+                        importance: 0.6
+                    });
+                }
             } else {
                 setStatus(container, '生成失敗，請稍後重試');
             }

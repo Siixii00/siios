@@ -823,6 +823,17 @@ async function handleGenerate() {
         postData.recommend.unshift(post);
         postData.follow.unshift(post);
         
+        if (selectedCharacterId) {
+            await saveInteractionMemory({
+                characterId: selectedCharacterId,
+                sourceApp: 'lofter',
+                sourceType: 'interaction',
+                sourceSubtype: 'social',
+                content: `標題：${title}\n${summary}`,
+                importance: 0.5
+            });
+        }
+        
         const feed = document.getElementById('lofter-feed');
         if (feed) renderFeed(feed);
         

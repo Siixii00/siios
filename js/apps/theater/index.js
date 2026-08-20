@@ -268,6 +268,17 @@ async function renderTheater(params) {
         contentData.unshift(newContent);
         await saveContent();
         renderContent(container);
+        
+        if (selectedChar?.id) {
+            await saveInteractionMemory({
+                characterId: selectedChar.id,
+                sourceApp: 'theater',
+                sourceType: 'interaction',
+                sourceSubtype: 'theater',
+                content: `標題：${scriptContent.title}\n描述：${scriptContent.desc}`,
+                importance: 0.5
+            });
+        }
       } catch (error) {
         if (window.showError) {
           window.showError({

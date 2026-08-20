@@ -3,6 +3,7 @@ import { createElement } from '../../components.js';
 import { CharactersDB, SettingsDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
+import { saveInteractionMemory } from '../../core/memory-saver.js';
 
 let lastCard = null;
 let selectedCharacterId = null;
@@ -218,6 +219,18 @@ async function renderDriftBottle(params) {
       const card = await drawCard(selectedCharacterId);
       renderCard(container, card);
       await saveLastCard();
+      
+      if (selectedCharacterId) {
+        await saveInteractionMemory({
+          characterId: selectedCharacterId,
+          userId: '',
+          sourceApp: 'drift-bottle',
+          sourceType: 'interaction',
+          sourceSubtype: 'tarot-reading',
+          content: `卡牌: ${card.name} (${card.upright ? '正位' : '逆位'})\n解讀: ${card.meaning}`,
+          importance: 0.5
+        });
+      }
       
       drawBtn.disabled = false;
       drawBtn.innerHTML = '<i class="fas fa-water_bottle"></i> 撿起漂流瓶';
