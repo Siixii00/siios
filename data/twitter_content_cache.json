@@ -1,57 +1,69 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T18:39:59.014507",
-    "total_items": 57
+    "last_updated": "2026-08-20T19:32:03.396632",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
+        "title": "Scientific study reveals TikTok videos deactivate key cognitive brain regions",
+        "url": "https://www.rathbiotaclan.com/tiktok-videos-deactivate-key-cognitive-brain-regions/",
+        "source": "Hacker News",
+        "score": 44
+      },
+      {
         "title": "I like 'em thick: an apology to my English teachers",
         "url": "https://www.experimental-history.com/p/i-like-em-thick",
         "source": "Hacker News",
-        "score": 313
+        "score": 369
       },
       {
         "title": "I should have loved biology",
         "url": "https://jsomers.net/i-should-have-loved-biology/",
         "source": "Hacker News",
-        "score": 31
+        "score": 77
       },
       {
         "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
         "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
         "source": "Hacker News",
-        "score": 703
+        "score": 729
       },
       {
         "title": "HTML Can Do That",
         "url": "https://chrisburnell.com/html-can-do-that/",
         "source": "Hacker News",
-        "score": 337
+        "score": 379
       },
       {
         "title": "Linux 7.2",
         "url": "https://www.igalia.com/2026/08/19/Linux-72-Released.html",
         "source": "Hacker News",
-        "score": 74
+        "score": 105
       },
       {
         "title": "CIA funding helped keep NeXT afloat in the 80s",
         "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
         "source": "Hacker News",
-        "score": 211
+        "score": 237
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News",
-        "score": 370
+        "score": 395
+      },
+      {
+        "title": "How to compromise your system with a job interview",
+        "url": "https://www.codedge.de/posts/how-to-compromise-your-system-with-a-job-interview",
+        "source": "Hacker News",
+        "score": 77
       },
       {
         "title": "Show HN: We chased a weather balloon across Montana and never found it",
         "url": "https://radi8.dev/blog/uplink/",
         "source": "Hacker News",
-        "score": 24
+        "score": 32
       },
       {
         "title": "Sixtyfour (YC P25) Is Hiring",
@@ -60,101 +72,100 @@
         "score": 1
       },
       {
-        "title": "Malicious Rust crate Arrayref runs a build-time payload",
-        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
+        "title": "Consumer Rights Wiki",
+        "url": "https://consumerrights.wiki/w/Main_Page",
         "source": "Hacker News",
-        "score": 287
+        "score": 12
       },
       {
         "title": "Optimizing things in the USSR (2016)",
         "url": "https://chris-said.io/2016/05/11/optimizing-things-in-the-ussr/",
         "source": "Hacker News",
-        "score": 12
-      },
-      {
-        "title": "How to compromise your system with a job interview",
-        "url": "https://www.codedge.de/posts/how-to-compromise-your-system-with-a-job-interview",
-        "source": "Hacker News",
-        "score": 60
+        "score": 19
       },
       {
         "title": "DiffusionGemma Technical Report",
         "url": "https://arxiv.org/abs/2608.00146",
         "source": "Hacker News",
-        "score": 108
+        "score": 113
       },
       {
-        "title": "Xorg-server 26.1.0 rc1",
-        "url": "https://lists.x.org/archives/xorg-announce/2026-August/003741.html",
+        "title": "Malicious Rust crate Arrayref runs a build-time payload",
+        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
         "source": "Hacker News",
-        "score": 85
-      },
-      {
-        "title": "Project Cybersyn",
-        "url": "https://bactra.org/notebooks/cybersyn.html",
-        "source": "Hacker News",
-        "score": 7
+        "score": 299
       }
     ],
     "ai": [
       {
+        "title": "Scientific study reveals TikTok videos deactivate key cognitive brain regions",
+        "url": "https://www.rathbiotaclan.com/tiktok-videos-deactivate-key-cognitive-brain-regions/",
+        "source": "Hacker News AI",
+        "score": 44
+      },
+      {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 370
+        "score": 395
       },
       {
-        "title": "Hacking with Claude on a $27 Smart Watch",
-        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
+        "title": "Show HN: Huzzah – a novel approach to coding with AI",
+        "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News AI",
-        "score": 59
+        "score": 4
+      },
+      {
+        "title": "Gauguin, Descartes, Bayes: A Diurnal Golem's Brain",
+        "url": "https://dl.acm.org/doi/10.1145/3759429.3762631",
+        "source": "Hacker News AI",
+        "score": 6
       },
       {
         "title": "Show HN: Check if any of the $656M in unclaimed royalties at The MLC is yours",
         "url": "https://pub.doub.ly/",
         "source": "Hacker News AI",
-        "score": 47
-      },
-      {
-        "title": "Clean up Claude 5's token vomit with a separate LLM",
-        "url": "https://github.com/zachahn/vomit",
-        "source": "Hacker News AI",
-        "score": 108
+        "score": 50
       },
       {
         "title": "AI at Home Part 2: Multi-GPU Drifting",
         "url": "https://jdagostino.github.io/ai-pt2-multi-gpu-drifting/index.html",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 10
       },
       {
         "title": "Anti-AI fonts are useless and harmful",
         "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
         "source": "Hacker News AI",
-        "score": 61
+        "score": 65
       },
       {
-        "title": "Could AIs Become Conscious?",
-        "url": "https://economist.com/leaders/2026/08/20/could-ais-become-conscious",
+        "title": "Clean up Claude 5's token vomit with a separate LLM",
+        "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News AI",
-        "score": 14
+        "score": 114
       },
       {
-        "title": "An American Mosaic (interactive map of ancestry census data)",
-        "url": "https://www.nytimes.com/interactive/2026/07/01/us/america-ancestry-census-data-map.html",
+        "title": "Hacking with Claude on a $27 Smart Watch",
+        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
         "source": "Hacker News AI",
-        "score": 25
+        "score": 64
       }
     ],
     "news": [
       {
-        "title": "Russia 'purposefully' hit critical infrastructure in latest strikes, Kyiv mayor says",
-        "url": "https://www.bbc.co.uk/news/articles/c98vzmden5yo?at_medium=RSS&at_campaign=rss",
+        "title": "US says sanctions will 'squash' Iran's economy and 'collapse' its regime",
+        "url": "https://www.bbc.co.uk/news/articles/c87n90eg0p2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump vows tougher economic measures on Iran and supporting countries",
-        "url": "https://www.bbc.co.uk/news/articles/c2k7e83ynj4o?at_medium=RSS&at_campaign=rss",
+        "title": "UK, France, Germany, Italy and Canada condemn Israel's West Bank settlement project",
+        "url": "https://www.bbc.co.uk/news/articles/c998evlgz8ko?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Russia 'purposefully' hit critical infrastructure in latest strikes, Kyiv mayor says",
+        "url": "https://www.bbc.co.uk/news/articles/c98vzmden5yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -170,11 +181,6 @@
       {
         "title": "Assad officer extradited to Syria on war crimes charges for first time",
         "url": "https://www.bbc.co.uk/news/articles/cvgjdy8q766o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Mushroom killer must stay in jail forever for 'truly dreadful' crime, appeal court told",
-        "url": "https://www.bbc.co.uk/news/articles/ckg3j3yn4exo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -254,6 +260,21 @@
     ],
     "gaming": [
       {
+        "title": "All sprites in Fortnite Chapter 7 Season 4",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-sprite-list-abilities-c7s4/",
+        "source": "Polygon"
+      },
+      {
+        "title": "BG3's Best New Mod Adds an Entire 3-Part Campaign About Astarion",
+        "url": "https://www.polygon.com/baldurs-gate-3-astarion-mod-dream-of-silence/",
+        "source": "Polygon"
+      },
+      {
+        "title": "How to open the Temple Vault in Stone Sanctum in Fortnite Chapter 7 Season 4",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-temple-vault-stone-sanctum-keys-how-to-open-c7s4/",
+        "source": "Polygon"
+      },
+      {
         "title": "Prime Video’s 95-Minute Action Thriller Is Officially One of the Biggest Films on Streaming",
         "url": "https://www.polygon.com/ice-fall-prime-video-streaming-action-movies-august-2026/",
         "source": "Polygon"
@@ -271,21 +292,6 @@
       {
         "title": "James Bond 007 First Light Sequel All But Confirmed With 4 Million Copies Sold",
         "url": "https://www.polygon.com/james-bond-007-first-light-sequel-guaranteed-after-4-million-copies-sold/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Jim Caviezel Goes Full Jason Statham in Action-Thriller Ghost Soldier",
-        "url": "https://www.polygon.com/ghost-soldier-jim-caviezel-movie-trailer-release-date/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Pokémon Silver and Gold Remake Rumors Sparked by Nintendo Tease",
-        "url": "https://www.polygon.com/pokemon-gen-2-nintendo-tease-pokopia/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Where to find the Shimanoyama Heat mascots in Forza Horizon 6",
-        "url": "https://www.polygon.com/forza-horizon-6-fh6-shimanoyama-heat-mascot-collectibles-location-where-to-find/",
         "source": "Polygon"
       }
     ],
