@@ -233,38 +233,67 @@ function generateCaseBody(tool) {
 
         case 'entertainment_anime':
             return `// AniList GraphQL API（免費）
-            const query = \`
-                query ($search: String, $season: String) {
-                    Page {
-                        media(search: $search, season: $season, type: ANIME) {
-                            title { romaji native english }
-                            episodes
-                            status
-                            averageScore
-                            genres
+            try {
+                const query = \`
+                    query ($search: String, $season: String) {
+                        Page {
+                            media(search: $search, season: $season, type: ANIME) {
+                                title { romaji native english }
+                                episodes
+                                status
+                                averageScore
+                                genres
+                            }
                         }
                     }
+                \`;
+                const animeRes = await fetch('https://graphql.anilist.co', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query, variables: { search: args.query, season: args.season } })
+                });
+                const animeData = await animeRes.json();
+                if (!animeRes.ok || animeData.errors) {
+                    return {
+                        success: false,
+                        error: animeData.errors?.map(err => err.message).join(',') || '動漫查詢失敗'
+                    };
                 }
-            \`;
-            const animeRes = await fetch('https://graphql.anilist.co', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ query, variables: { search: args.query, season: args.season } })
-            });
-            const animeData = await animeRes.json();
-            return animeData.data.Page.media;`;
+                return {
+                    success: true,
+                    results: (animeData.data?.Page?.media || []).map(m => ({
+                        title: m.title?.romaji || m.title?.native || '',
+                        episodes: m.episodes,
+                        status: m.status,
+                        averageScore: m.averageScore,
+                        genres: m.genres || []
+                    }))
+                };
+            } catch (error) {
+                return { success: false, error: error.message || '動漫服務暫時無法使用' };
+            }`;
 
         case 'entertainment_game_price':
             return `// CheapShark API（免費）
-            const gameRes = await fetch(
-                \`https://www.cheapshark.com/api/1.0/games?title=\${encodeURIComponent(args.game)}\`
-            );
-            const gameData = await gameRes.json();
-            return gameData.slice(0, 5).map(g => ({
-                title: g.external,
-                cheapestPrice: g.cheapest / 100,
-                cheapestStore: g.cheapestDealID
-            }));`;
+            try {
+                const gameRes = await fetch(
+                    \`https://www.cheapshark.com/api/1.0/games?title=\${encodeURIComponent(args.game)}\`
+                );
+                const gameData = await gameRes.json();
+                if (!Array.isArray(gameData)) {
+                    return { success: false, error: '遊戲價格格式異常' };
+                }
+                return {
+                    success: true,
+                    results: gameData.slice(0, 5).map(g => ({
+                        title: g.external,
+                        cheapestPrice: g.cheapest / 100,
+                        cheapestStore: g.cheapestDealID
+                    }))
+                };
+            } catch (error) {
+                return { success: false, error: error.message || '遊戲價格查詢暫時無法使用' };
+            }`;
 
         case 'work_translate':
             return `// 需要設定 GOOGLE_TRANSLATE_API_KEY 或 DEEPL_API_KEY
@@ -280,15 +309,23 @@ function generateCaseBody(tool) {
 
         case 'work_wiki':
             return `// MediaWiki API（免費）
-            const wikiRes = await fetch(
-                \`https://\${args.lang || 'zh'}.wikipedia.org/w/api.php?action=query&list=search&srsearch=\${encodeURIComponent(args.query)}&format=json&origin=*\`
-            );
-            const wikiData = await wikiRes.json();
-            return wikiData.query.search.slice(0, 5).map(r => ({
-                title: r.title,
-                snippet: r.snippet.replace(/<[^>]+>/g, ''),
-                link: \`https://\${args.lang || 'zh'}.wikipedia.org/wiki/\${encodeURIComponent(r.title)}\`
-            }));`;
+            try {
+                const wikiRes = await fetch(
+                    \`https://\${args.lang || 'zh'}.wikipedia.org/w/api.php?action=query&list=search&srsearch=\${encodeURIComponent(args.query)}&format=json&origin=*\`
+                );
+                const wikiData = await wikiRes.json();
+                const results = Array.isArray(wikiData.query?.search) ? wikiData.query.search : [];
+                return {
+                    success: true,
+                    results: results.slice(0, 5).map(r => ({
+                        title: r.title,
+                        snippet: r.snippet.replace(/<[^>]+>/g, ''),
+                        link: \`https://\${args.lang || 'zh'}.wikipedia.org/wiki/\${encodeURIComponent(r.title)}\`
+                    }))
+                };
+            } catch (error) {
+                return { success: false, error: error.message || '維基百科查詢暫時無法使用' };
+            }`;
 
         case 'work_notion':
             return `// 需要設定 NOTION_API_KEY 和 NOTION_DATABASE_ID
