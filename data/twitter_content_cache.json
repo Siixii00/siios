@@ -1,143 +1,149 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T20:29:49.992654",
-    "total_items": 56
+    "last_updated": "2026-08-20T21:29:16.816286",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
-        "title": "Scientific study reveals TikTok videos deactivate key cognitive brain regions",
-        "url": "https://www.rathbiotaclan.com/tiktok-videos-deactivate-key-cognitive-brain-regions/",
+        "title": "Show HN: Huzzah – a novel approach to coding with AI",
+        "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News",
-        "score": 205
+        "score": 128
       },
       {
-        "title": "Stop Eating Lady Gaga's Oreos",
-        "url": "https://www.experimental-history.com/p/stop-eating-lady-gagas-oreos",
+        "title": "The August 17 outage, and the work ahead",
+        "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
         "source": "Hacker News",
-        "score": 52
-      },
-      {
-        "title": "I should have loved biology",
-        "url": "https://jsomers.net/i-should-have-loved-biology/",
-        "source": "Hacker News",
-        "score": 120
+        "score": 91
       },
       {
         "title": "I like 'em thick: an apology to my English teachers",
         "url": "https://www.experimental-history.com/p/i-like-em-thick",
         "source": "Hacker News",
-        "score": 414
-      },
-      {
-        "title": "Show HN: Huzzah – a novel approach to coding with AI",
-        "url": "https://www.danielvaughn.dev/posts/huzzah/",
-        "source": "Hacker News",
-        "score": 42
-      },
-      {
-        "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
-        "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
-        "source": "Hacker News",
-        "score": 762
-      },
-      {
-        "title": "HTML Can Do That",
-        "url": "https://chrisburnell.com/html-can-do-that/",
-        "source": "Hacker News",
-        "score": 433
-      },
-      {
-        "title": "Linux 7.2",
-        "url": "https://www.igalia.com/2026/08/19/Linux-72-Released.html",
-        "source": "Hacker News",
-        "score": 133
+        "score": 454
       },
       {
         "title": "Consumer Rights Wiki",
         "url": "https://consumerrights.wiki/w/Main_Page",
         "source": "Hacker News",
-        "score": 42
+        "score": 96
+      },
+      {
+        "title": "I should have loved biology (2020)",
+        "url": "https://jsomers.net/i-should-have-loved-biology/",
+        "source": "Hacker News",
+        "score": 143
+      },
+      {
+        "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
+        "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
+        "source": "Hacker News",
+        "score": 786
+      },
+      {
+        "title": "HTML Can Do That",
+        "url": "https://chrisburnell.com/html-can-do-that/",
+        "source": "Hacker News",
+        "score": 470
+      },
+      {
+        "title": "Malicious Rust crate Arrayref runs a build-time payload",
+        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
+        "source": "Hacker News",
+        "score": 332
+      },
+      {
+        "title": "Aaron Swartz was prosecuted for scraping, while Meta does it without consequence",
+        "url": "https://blog.curiousquail.com/im-upset-again-about-a-co-creator-of-rss-being-prosecuted-for-something-meta-is-doing-with-little-consequence/",
+        "source": "Hacker News",
+        "score": 190
+      },
+      {
+        "title": "Linux 7.2",
+        "url": "https://www.igalia.com/2026/08/19/Linux-72-Released.html",
+        "source": "Hacker News",
+        "score": 157
       },
       {
         "title": "CIA funding helped keep NeXT afloat in the 80s",
         "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
         "source": "Hacker News",
-        "score": 261
-      },
-      {
-        "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
-        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
-        "source": "Hacker News",
-        "score": 417
+        "score": 278
       },
       {
         "title": "SpacetimeDB: A Short Technical Review",
         "url": "https://strn.cat/posts/spacetime/",
         "source": "Hacker News",
-        "score": 13
+        "score": 25
+      },
+      {
+        "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
+        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
+        "source": "Hacker News",
+        "score": 443
+      },
+      {
+        "title": "Watching TikTok and Instagram deactivates the cognitive control network: Study",
+        "url": "https://www.rathbiotaclan.com/tiktok-videos-deactivate-key-cognitive-brain-regions/",
+        "source": "Hacker News",
+        "score": 249
       },
       {
         "title": "Sixtyfour (YC P25) Is Hiring",
         "url": "https://www.ycombinator.com/companies/sixtyfour/jobs/39SkSrA-software-engineering-intern",
         "source": "Hacker News",
         "score": 1
-      },
-      {
-        "title": "Tidal Cycles – Live coding music with Algorithmic patterns",
-        "url": "https://tidalcycles.org/",
-        "source": "Hacker News",
-        "score": 15
-      },
-      {
-        "title": "GitHub, autoscaling, and the component substitution fallacy",
-        "url": "https://surfingcomplexity.blog/2026/08/19/github-autoscaling-and-the-component-substitution-fallacy/",
-        "source": "Hacker News",
-        "score": 12
       }
     ],
     "ai": [
       {
-        "title": "Scientific study reveals TikTok videos deactivate key cognitive brain regions",
-        "url": "https://www.rathbiotaclan.com/tiktok-videos-deactivate-key-cognitive-brain-regions/",
-        "source": "Hacker News AI",
-        "score": 205
-      },
-      {
         "title": "Show HN: Huzzah – a novel approach to coding with AI",
         "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News AI",
-        "score": 42
+        "score": 128
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 417
+        "score": 443
       },
       {
-        "title": "Gauguin, Descartes, Bayes: A Diurnal Golem's Brain",
-        "url": "https://dl.acm.org/doi/10.1145/3759429.3762631",
+        "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
+        "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 136
       },
       {
-        "title": "Show HN: Check if any of the $656M in unclaimed royalties at The MLC is yours",
-        "url": "https://pub.doub.ly/",
+        "title": "Hacking with Claude on a $27 smart watch",
+        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
         "source": "Hacker News AI",
-        "score": 53
-      },
-      {
-        "title": "AI at Home Part 2: Multi-GPU Drifting",
-        "url": "https://jdagostino.github.io/ai-pt2-multi-gpu-drifting/index.html",
-        "source": "Hacker News AI",
-        "score": 12
+        "score": 66
       },
       {
         "title": "Anti-AI fonts are useless and harmful",
         "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
         "source": "Hacker News AI",
-        "score": 68
+        "score": 77
+      },
+      {
+        "title": "Gauguin, Descartes, Bayes: A Diurnal Golem's Brain",
+        "url": "https://dl.acm.org/doi/10.1145/3759429.3762631",
+        "source": "Hacker News AI",
+        "score": 18
+      },
+      {
+        "title": "Show HN: Check if any of the $656M in unclaimed royalties at The MLC is yours",
+        "url": "https://pub.doub.ly/",
+        "source": "Hacker News AI",
+        "score": 55
+      },
+      {
+        "title": "AI at Home Part 2: Multi-GPU Drifting",
+        "url": "https://jdagostino.github.io/ai-pt2-multi-gpu-drifting/index.html",
+        "source": "Hacker News AI",
+        "score": 14
       }
     ],
     "news": [
@@ -157,8 +163,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Founder of collapsed Chinese property giant Evergrande sentenced to life in prison",
-        "url": "https://www.bbc.co.uk/news/articles/cd0x9mjjmgjo?at_medium=RSS&at_campaign=rss",
+        "title": "Dozens dead after boat capsizes in north-western Nigeria",
+        "url": "https://www.bbc.co.uk/news/articles/cj035jg256no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -248,6 +254,16 @@
     ],
     "gaming": [
       {
+        "title": "All match overrides and console locations in Fortnite Chapter 7 Season 4",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-match-overrides-console-locations-c7s4/",
+        "source": "Polygon"
+      },
+      {
+        "title": "D&D Is Playtesting Baldur’s Gate 3’s Nastiest Transformation on Tabletop",
+        "url": "https://www.polygon.com/dnd-baldurs-gate-3-mind-flayer-tabletop-transformation/",
+        "source": "Polygon"
+      },
+      {
         "title": "Riot Games Officially Confirms End of an Era for League of Legends",
         "url": "https://www.polygon.com/riot-games-cancels-2xko-league-of-legends/",
         "source": "Polygon"
@@ -270,16 +286,6 @@
       {
         "title": "All sprites in Fortnite Chapter 7 Season 4",
         "url": "https://www.polygon.com/fortnite-chapter-7-season-4-sprite-list-abilities-c7s4/",
-        "source": "Polygon"
-      },
-      {
-        "title": "BG3's Best New Mod Adds an Entire 3-Part Campaign About Astarion",
-        "url": "https://www.polygon.com/baldurs-gate-3-astarion-mod-dream-of-silence/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How to open the Temple Vault in Stone Sanctum in Fortnite Chapter 7 Season 4",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-temple-vault-stone-sanctum-keys-how-to-open-c7s4/",
         "source": "Polygon"
       }
     ],
