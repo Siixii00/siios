@@ -1,63 +1,81 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T14:37:12.727671",
-    "total_items": 59
+    "last_updated": "2026-08-20T15:35:00.279214",
+    "total_items": 50
   },
   "content": {
     "tech": [
       {
-        "title": "Malicious Rust Crate Arrayref Runs a Build-Time Payload",
-        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
-        "source": "Hacker News",
-        "score": 106
-      },
-      {
         "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
         "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
         "source": "Hacker News",
-        "score": 349
+        "score": 440
+      },
+      {
+        "title": "Malicious Rust crate Arrayref runs a build-time payload",
+        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
+        "source": "Hacker News",
+        "score": 183
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News",
-        "score": 164
+        "score": 225
       },
       {
         "title": "DiffusionGemma Technical Report",
         "url": "https://arxiv.org/abs/2608.00146",
         "source": "Hacker News",
-        "score": 32
-      },
-      {
-        "title": "I Spent Twenty Years Becoming Good at the Wrong Game",
-        "url": "https://savvynormie.com/i-spent-twenty-years-becoming-good-at-the-wrong-game/",
-        "source": "Hacker News",
-        "score": 22
+        "score": 52
       },
       {
         "title": "Hacking with Claude on a $27 Smart Watch",
         "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
         "source": "Hacker News",
-        "score": 11
+        "score": 27
       },
       {
-        "title": "Stwipe Acquires OpenWouter",
-        "url": "https://stwipe.com/",
+        "title": "HTML Can Do That",
+        "url": "https://chrisburnell.com/html-can-do-that/",
+        "source": "Hacker News",
+        "score": 81
+      },
+      {
+        "title": "Every Model Cheats",
+        "url": "https://dreadnode.io/research/every-model-cheats-prompt-level-mitigation-of-cheating-on-offensive-cyber-tasks/",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "CIA funding helped keep NeXT afloat in the 80s",
+        "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
+        "source": "Hacker News",
+        "score": 44
+      },
+      {
+        "title": "I like 'em thick: an apology to my English teachers",
+        "url": "https://www.experimental-history.com/p/i-like-em-thick",
+        "source": "Hacker News",
+        "score": 7
+      },
+      {
+        "title": "An elliptic curve of rank ≥ 30",
+        "url": "https://elliptic-rank.icarm.cloud/curve/273",
         "source": "Hacker News",
         "score": 21
+      },
+      {
+        "title": "Mojo is now open source",
+        "url": "https://www.modular.com/blog/mojo-open-source",
+        "source": "Hacker News",
+        "score": 185
       },
       {
         "title": "Windows brings out the Rorschach test in everyone (2003)",
         "url": "https://devblogs.microsoft.com/oldnewthing/20030825-00/?p=42803",
         "source": "Hacker News",
-        "score": 284
-      },
-      {
-        "title": "OpenRouter is joining Stripe",
-        "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
-        "source": "Hacker News",
-        "score": 924
+        "score": 299
       },
       {
         "title": "Proof of Human (YC S23) Is Hiring a Member of Technical Staff",
@@ -66,28 +84,16 @@
         "score": 1
       },
       {
-        "title": "Harvest hikes bills by 1500% after purchased by Bending Spoons",
-        "url": "https://www.bbc.com/news/articles/clyq011414eo",
+        "title": "Git at any scale",
+        "url": "https://cursor.com/blog/git-at-any-scale",
         "source": "Hacker News",
-        "score": 4
+        "score": 77
       },
       {
-        "title": "Seeing beyond BMI: Estimating cardiometabolic risk with smartphone imagery",
-        "url": "https://research.google/blog/seeing-beyond-bmi-estimating-cardiometabolic-risk-with-smartphone-imagery/",
+        "title": "Xorg-Server 26.0.99.901",
+        "url": "https://lists.x.org/archives/xorg-announce/2026-August/003741.html",
         "source": "Hacker News",
-        "score": 31
-      },
-      {
-        "title": "Turns are Better than Radians (2022)",
-        "url": "https://www.computerenhance.com/p/turns-are-better-than-radians",
-        "source": "Hacker News",
-        "score": 287
-      },
-      {
-        "title": "Risk Engineering",
-        "url": "https://risk-engineering.org/",
-        "source": "Hacker News",
-        "score": 38
+        "score": 27
       }
     ],
     "ai": [
@@ -95,61 +101,43 @@
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 165
+        "score": 225
       },
       {
         "title": "Hacking with Claude on a $27 Smart Watch",
         "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 27
+      },
+      {
+        "title": "Clean up Claude 5's token vomit with a separate LLM",
+        "url": "https://github.com/zachahn/vomit",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "An American Mosaic (interactive map of ancestry census data)",
         "url": "https://www.nytimes.com/interactive/2026/07/01/us/america-ancestry-census-data-map.html",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 21
+      },
+      {
+        "title": "Show HN: Check if any of the $656M in unclaimed royalties at The MLC is yours",
+        "url": "https://pub.doub.ly/",
+        "source": "Hacker News AI",
+        "score": 8
+      },
+      {
+        "title": "AI didn't erase the junior engineer's value, it increased it it",
+        "url": "https://franciscotrindade.me/blog/the-kids-are-really-alright/",
+        "source": "Hacker News AI",
+        "score": 54
       },
       {
         "title": "Don't paste the AI, please",
         "url": "https://dontpastetheai.com/",
         "source": "Hacker News AI",
-        "score": 874
-      },
-      {
-        "title": "A joke domain purchase turned in geopolitical warfare",
-        "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
-        "source": "Hacker News AI",
-        "score": 980
-      },
-      {
-        "title": "Australia passes law to levy tech giants that fail to pay for local news",
-        "url": "https://www.reuters.com/legal/litigation/australia-passes-law-levy-tech-giants-that-fail-pay-local-news-2026-08-20/",
-        "source": "Hacker News AI",
-        "score": 47
-      },
-      {
-        "title": "Frustrated GP patients hang up as Yorkshire accent baffles AI receptionist",
-        "url": "https://www.theguardian.com/society/2026/aug/20/yorkshire-rotherham-ai-gp-receptionist-cannot-understand-accent",
-        "source": "Hacker News AI",
-        "score": 10
-      },
-      {
-        "title": "Mathematics in the age of AI",
-        "url": "https://arxiv.org/abs/2608.16753",
-        "source": "Hacker News AI",
-        "score": 198
-      },
-      {
-        "title": "German court rules: Emails must be end-to-end encrypted",
-        "url": "https://tuta.com/blog/german-court-rules-emails-e2ee",
-        "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Air Theremin – A browser theremin you play by waving at your webcam",
-        "url": "https://theremin.bizibah.com/",
-        "source": "Hacker News AI",
-        "score": 290
+        "score": 915
       }
     ],
     "news": [
@@ -189,43 +177,7 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " 4 of my top-rated budget earphones are on sale right now! ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/4-of-my-top-rated-budget-earphones-are-on-sale-right-now",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Move over Duolingo, there’s a new brand mascot in town ",
-        "url": "https://www.creativebloq.com/design/branding/move-over-duolingo-theres-a-new-brand-mascot-in-town",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " A 16-year-old girl's iPhone theme is breaking UI designers' brains ",
-        "url": "https://www.creativebloq.com/web-design/ux-ui/a-16-year-old-girls-iphone-xis-breaking-ui-designers-brains",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Studio Ghibli has no plan, isn't anti-AI after all, and doesn't know what Miyazaki is up to other than that he turns up for work every day ",
-        "url": "https://www.creativebloq.com/art/animation/studio-ghibli-has-no-plan-isnt-anti-ai-after-all-and-doesnt-know-what-miyazaki-is-up-to-other-than-that-he-turns-up-for-work-every-day",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Help! I'm instantly addicted to my new under desk treadmill ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/help-im-instantly-addicted-to-my-new-under-the-desk-treadmill",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The new ACOTAR book covers are giving 2016 ",
-        "url": "https://www.creativebloq.com/entertainment/books/the-new-acotar-book-covers-are-giving-2016",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Amazon's wanton destruction of rare books is a betrayal of the brand's origins ",
-        "url": "https://www.creativebloq.com/design/branding/amazons-massacre-of-rare-books-is-a-betrayal-of-the-brands-origins",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "The “Asian water tower” is losing 24 billion tonnes of groundwater every year",
@@ -265,38 +217,38 @@
     ],
     "gaming": [
       {
-        "title": "Fizz And EB Games Team Up To Create A Special Starter Pack That’s Perfect For Mobile Gamers",
-        "url": "https://www.polygon.com/fizz-eb-games-starter-pack/",
+        "title": "Poe Dameron Is Officially Returning to Star Wars With a New Release Next Month",
+        "url": "https://www.polygon.com/poe-dameron-omnibus-star-wars/",
         "source": "Polygon"
       },
       {
-        "title": "The Duskbloods Could Have Been a 'Cute' Nintendo Game",
-        "url": "https://www.polygon.com/the-duskbloods-cute-nintendo-game-early-development/",
+        "title": "PlayStation and Xbox Sales Are in Big Trouble After Massive Price Hikes",
+        "url": "https://www.polygon.com/ps5-xbox-game-console-sales-july-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Mass Effect’s Future In Doubt: Ex-Manager Says New Game Unlikely Under New EA",
-        "url": "https://www.polygon.com/mass-effect-5-new-game-unlikey-saudi-deal/",
+        "title": "Where to find the Edamame Time Attack Circuit in Forza Horizon 6",
+        "url": "https://www.polygon.com/forza-horizon-6-fh6-edamame-time-attack-location-where-to-find/",
         "source": "Polygon"
       },
       {
-        "title": "'Elden Ring Meets Settlers of Catan' Revealed as Switch 2's Next Multiplayer Swing",
-        "url": "https://www.polygon.com/the-duskbloods-preview-fromsoftware-nintendo-switch-2/",
+        "title": "A Pulitzer, a Movie, and Two Mind-Melting New Books — Best Year Ever?",
+        "url": "https://www.polygon.com/a-pulitzer-a-movie-and-two-mind-melting-new-horror-books-best-year-ever/",
         "source": "Polygon"
       },
       {
-        "title": "The Duskbloods' Full Character List Officially Revealed",
-        "url": "https://www.polygon.com/the-duskbloods-characters-starting-classes-official/",
+        "title": "PC Gamers Can Get 2 Great Games Completely Free of Charge From Epic for a Limited Time",
+        "url": "https://www.polygon.com/epic-games-store-free-games-8-20-2026-download/",
         "source": "Polygon"
       },
       {
-        "title": "Arc Raiders' Fast Food Promo Skins Let You Wear a Sandwich in the Apocalypse",
-        "url": "https://www.polygon.com/arc-raiders-subway-skins-promotion/",
+        "title": "All admin panel codes in Fortnite Chapter 7 Season 4",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-admin-panel-lobby-hack-codes-list-all/",
         "source": "Polygon"
       },
       {
-        "title": "5 Controversial Star Trek Episodes That Have Aged Like Fine Wine",
-        "url": "https://www.polygon.com/best-star-trek-episodes-most-controversial/",
+        "title": "New Pokémon TCG Pocket Expansion Gives Team Rocket A Shot",
+        "url": "https://www.polygon.com/pokemon-tcg-pocket-team-rockets-ambition-expansion-announced/",
         "source": "Polygon"
       }
     ],
