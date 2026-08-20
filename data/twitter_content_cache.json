@@ -1,166 +1,166 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T05:32:14.922890",
+    "last_updated": "2026-08-20T06:47:49.300011",
     "total_items": 60
   },
   "content": {
     "tech": [
       {
+        "title": "Why Microsoft Entertainment Pack had a sticker announcing that it had Tetris?",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20260818-00/?p=112621",
+        "source": "Hacker News",
+        "score": 35
+      },
+      {
         "title": "OpenRouter is joining Stripe",
         "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
         "source": "Hacker News",
-        "score": 756
-      },
-      {
-        "title": "Error by AI scribe during medical appointment leaves patient devastated",
-        "url": "https://www.abc.net.au/news/2026-08-14/ai-medical-scribe-error-leaves-patient-devastated/107031672",
-        "source": "Hacker News",
-        "score": 85
+        "score": 791
       },
       {
         "title": "Turns are Better than Radians (2022)",
         "url": "https://www.computerenhance.com/p/turns-are-better-than-radians",
         "source": "Hacker News",
-        "score": 91
+        "score": 140
       },
       {
         "title": "Go 1.27",
         "url": "https://go.dev/blog/go1.27",
         "source": "Hacker News",
-        "score": 546
+        "score": 578
       },
       {
         "title": "A faster way to calculate the day of the week",
         "url": "https://www.benjoffe.com/fast-day-of-week",
         "source": "Hacker News",
-        "score": 69
+        "score": 102
       },
       {
-        "title": "Google replaced Git tags for certain source code with obtaining via Google Drive",
+        "title": "Google has stopped pushing Git tags for some Android source code",
         "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
         "source": "Hacker News",
-        "score": 389
+        "score": 435
       },
       {
         "title": "Manabu Kosaka's Handmade Paper Sculptures",
         "url": "https://coca11272000.wixsite.com/manabukosaka",
         "source": "Hacker News",
-        "score": 82
+        "score": 108
       },
       {
         "title": "Unlocking a locked/deactivated e-waste Cricut Maker",
         "url": "https://sprocketfox.io/xssfox/2026/07/01/cricut-unlock/",
         "source": "Hacker News",
-        "score": 174
+        "score": 189
       },
       {
         "title": "A joke domain purchase turned in geopolitical warfare",
         "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
         "source": "Hacker News",
-        "score": 817
+        "score": 841
+      },
+      {
+        "title": "Windows brings out the Rorschach test in everyone",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20030825-00/?p=42803",
+        "source": "Hacker News",
+        "score": 4
       },
       {
         "title": "Unsloth Dynamic 3.0 GGUFs",
         "url": "https://unsloth.ai/docs/basics/dynamic-3.0-ggufs",
         "source": "Hacker News",
-        "score": 217
+        "score": 232
+      },
+      {
+        "title": "Sol loves to cheat",
+        "url": "https://jumploops.com/blog/sol-loves-to-cheat/",
+        "source": "Hacker News",
+        "score": 135
       },
       {
         "title": "Casio F-B100W-1A",
         "url": "https://www.casio.com/uk/watches/casio/product.F-B100W-1A/",
         "source": "Hacker News",
-        "score": 323
-      },
-      {
-        "title": "Sol Loves to Cheat",
-        "url": "https://jumploops.com/blog/sol-loves-to-cheat/",
-        "source": "Hacker News",
-        "score": 107
-      },
-      {
-        "title": "Geolocating a random island using geometry and CUDA programming",
-        "url": "https://yassa9.github.io/osint/gralhix-004/",
-        "source": "Hacker News",
-        "score": 442
+        "score": 336
       },
       {
         "title": "Os8088.com: IBM XT OS now has a Browser, CP/M 2.2 with Z80 core and MS Word 1.1a",
         "url": "https://os8088.com/spotlight/",
         "source": "Hacker News",
-        "score": 66
+        "score": 79
       },
       {
-        "title": "Pixel 11 Pro Fold feels like the end of an era",
-        "url": "https://www.theverge.com/tech/981956/google-pixel-11-pro-fold-review",
+        "title": "Geolocating a random island using geometry and CUDA programming",
+        "url": "https://yassa9.github.io/osint/gralhix-004/",
         "source": "Hacker News",
-        "score": 47
+        "score": 454
       }
     ],
     "ai": [
       {
-        "title": "Error by AI scribe during medical appointment leaves patient devastated",
-        "url": "https://www.abc.net.au/news/2026-08-14/ai-medical-scribe-error-leaves-patient-devastated/107031672",
+        "title": "Why Microsoft Entertainment Pack had a sticker announcing that it had Tetris?",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20260818-00/?p=112621",
         "source": "Hacker News AI",
-        "score": 85
-      },
-      {
-        "title": "Google replaced Git tags for certain source code with obtaining via Google Drive",
-        "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
-        "source": "Hacker News AI",
-        "score": 389
+        "score": 35
       },
       {
         "title": "A joke domain purchase turned in geopolitical warfare",
         "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
         "source": "Hacker News AI",
-        "score": 817
+        "score": 841
       },
       {
         "title": "Mathematics in the age of AI",
         "url": "https://arxiv.org/abs/2608.16753",
         "source": "Hacker News AI",
-        "score": 140
+        "score": 153
       },
       {
         "title": "Extensible Software in the age of LLMs",
         "url": "https://jeremymorrell.dev/blog/extensible-software-in-the-age-of-llms/",
         "source": "Hacker News AI",
-        "score": 132
+        "score": 141
       },
       {
         "title": "Air Theremin – A browser theremin you play by waving at your webcam",
         "url": "https://theremin.bizibah.com/",
         "source": "Hacker News AI",
-        "score": 266
+        "score": 269
       },
       {
         "title": "Universality of Gradient Descent Neural Network Training",
         "url": "https://arxiv.org/abs/2007.13664",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 27
       },
       {
-        "title": "MicroGPT-C in pure C hits 10M TPS on Apple M5",
-        "url": "https://github.com/vixhal-baraiya/microgpt-c",
+        "title": "Error by AI scribe during medical appointment leaves patient devastated",
+        "url": "https://www.abc.net.au/news/2026-08-14/ai-medical-scribe-error-leaves-patient-devastated/107031672",
         "source": "Hacker News AI",
-        "score": 126
+        "score": 137
       },
       {
         "title": "Zuckerberg encouraged growth over child safety, ex-Meta executive testifies",
         "url": "https://www.reuters.com/legal/litigation/former-meta-engineer-resumes-testimony-landmark-trial-over-social-medias-harm-2026-08-19/",
         "source": "Hacker News AI",
-        "score": 18
+        "score": 54
+      },
+      {
+        "title": "MicroGPT-C in pure C hits 10M TPS on Apple M5",
+        "url": "https://github.com/vixhal-baraiya/microgpt-c",
+        "source": "Hacker News AI",
+        "score": 127
       },
       {
         "title": "Devices with GrapheneOS support should be available in 2027",
         "url": "https://grapheneos.social/@GrapheneOS/117078064184215730",
         "source": "Hacker News AI",
-        "score": 590
+        "score": 593
       }
     ],
     "news": [
       {
-        "title": "Australia 'outraged' after Israeli decision not to prosecute over killing of aid worker in Gaza",
+        "title": "Australia 'outraged' after Israel decides not to open criminal investigation into killing of aid worker in Gaza",
         "url": "https://www.bbc.co.uk/news/articles/cp87g29r718o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -170,7 +170,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Russia launches missile strikes on Kyiv and surrounding region, killing at least eight",
+        "title": "At least 12 killed in Kyiv as Ukraine grapples with air defence shortages",
         "url": "https://www.bbc.co.uk/news/articles/c98vzmden5yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -196,6 +196,11 @@
       }
     ],
     "art": [
+      {
+        "title": " Help! I'm instantly addicted to my new under desk treadmill ",
+        "url": "https://www.creativebloq.com/tech/chairs-desks/help-im-instantly-addicted-to-my-new-under-the-desk-treadmill",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The new ACOTAR book covers are giving 2016 ",
         "url": "https://www.creativebloq.com/entertainment/books/the-new-acotar-book-covers-are-giving-2016",
@@ -224,11 +229,6 @@
       {
         "title": " Some of my favourite earphones are now as low as $20 in this Back to School sale ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/some-of-my-favourite-iems-are-now-as-low-as-usd20-in-this-back-to-school-sale",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These clever Coyote Vs Acme ads are stopping traffic ",
-        "url": "https://www.creativebloq.com/design/advertising/these-clever-coyote-vs-acme-ads-are-stopping-traffic",
         "source": "Creative Bloq"
       }
     ],
