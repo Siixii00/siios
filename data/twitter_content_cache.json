@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T12:51:52.441438",
-    "total_items": 60
+    "last_updated": "2026-08-20T13:48:09.139335",
+    "total_items": 52
   },
   "content": {
     "tech": [
@@ -9,43 +9,55 @@
         "title": "Don't Paste the AI, please",
         "url": "https://dontpastetheai.com/",
         "source": "Hacker News",
-        "score": 615
+        "score": 754
       },
       {
         "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
         "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
         "source": "Hacker News",
-        "score": 194
+        "score": 280
+      },
+      {
+        "title": "Malicious Rust Crate Arrayref Runs a Build-Time Payload",
+        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
+        "source": "Hacker News",
+        "score": 22
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News",
-        "score": 37
+        "score": 96
       },
       {
         "title": "Windows brings out the Rorschach test in everyone (2003)",
         "url": "https://devblogs.microsoft.com/oldnewthing/20030825-00/?p=42803",
         "source": "Hacker News",
-        "score": 253
+        "score": 268
       },
       {
         "title": "OpenRouter is joining Stripe",
         "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
         "source": "Hacker News",
-        "score": 894
+        "score": 910
       },
       {
         "title": "Turns are Better than Radians (2022)",
         "url": "https://www.computerenhance.com/p/turns-are-better-than-radians",
         "source": "Hacker News",
-        "score": 250
+        "score": 273
+      },
+      {
+        "title": "Seeing beyond BMI: Estimating cardiometabolic risk with smartphone imagery",
+        "url": "https://research.google/blog/seeing-beyond-bmi-estimating-cardiometabolic-risk-with-smartphone-imagery/",
+        "source": "Hacker News",
+        "score": 22
       },
       {
         "title": "Google has stopped pushing Git tags for some Android source code",
         "url": "https://grapheneos.social/@GrapheneOS/117057099753905023",
         "source": "Hacker News",
-        "score": 682
+        "score": 710
       },
       {
         "title": "Proof of Human (YC S23) Is Hiring a Member of Technical Staff",
@@ -57,43 +69,31 @@
         "title": "Go 1.27",
         "url": "https://go.dev/blog/go1.27",
         "source": "Hacker News",
-        "score": 694
+        "score": 711
       },
       {
         "title": "A faster way to calculate the day of the week",
         "url": "https://www.benjoffe.com/fast-day-of-week",
         "source": "Hacker News",
-        "score": 196
+        "score": 204
       },
       {
-        "title": "Seeing beyond BMI: Estimating cardiometabolic risk with smartphone imagery",
-        "url": "https://research.google/blog/seeing-beyond-bmi-estimating-cardiometabolic-risk-with-smartphone-imagery/",
+        "title": "Risk Engineering",
+        "url": "https://risk-engineering.org/",
         "source": "Hacker News",
-        "score": 7
+        "score": 24
       },
       {
         "title": "A joke domain purchase turned in geopolitical warfare",
         "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
         "source": "Hacker News",
-        "score": 946
+        "score": 967
       },
       {
-        "title": "Manabu Kosaka's Handmade Paper Sculptures",
-        "url": "https://coca11272000.wixsite.com/manabukosaka",
+        "title": "Show HN: Streambench – Native Mac Client for Kafka and NATS",
+        "url": "https://streambench.app",
         "source": "Hacker News",
-        "score": 153
-      },
-      {
-        "title": "Unsloth Dynamic 3.0 GGUFs",
-        "url": "https://unsloth.ai/docs/basics/dynamic-3.0-ggufs",
-        "source": "Hacker News",
-        "score": 296
-      },
-      {
-        "title": "Unlocking a locked/deactivated e-waste Cricut Maker",
-        "url": "https://sprocketfox.io/xssfox/2026/07/01/cricut-unlock/",
-        "source": "Hacker News",
-        "score": 234
+        "score": 7
       }
     ],
     "ai": [
@@ -101,37 +101,43 @@
         "title": "Don't Paste the AI, please",
         "url": "https://dontpastetheai.com/",
         "source": "Hacker News AI",
-        "score": 615
+        "score": 754
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 37
+        "score": 96
       },
       {
         "title": "A joke domain purchase turned in geopolitical warfare",
         "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
         "source": "Hacker News AI",
-        "score": 946
+        "score": 967
       },
       {
         "title": "Australia passes law to levy tech giants that fail to pay for local news",
         "url": "https://www.reuters.com/legal/litigation/australia-passes-law-levy-tech-giants-that-fail-pay-local-news-2026-08-20/",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 33
       },
       {
         "title": "Mathematics in the age of AI",
         "url": "https://arxiv.org/abs/2608.16753",
         "source": "Hacker News AI",
-        "score": 187
+        "score": 197
+      },
+      {
+        "title": "German court rules: Emails must be end-to-end encrypted",
+        "url": "https://tuta.com/blog/german-court-rules-emails-e2ee",
+        "source": "Hacker News AI",
+        "score": 9
       },
       {
         "title": "Air Theremin – A browser theremin you play by waving at your webcam",
         "url": "https://theremin.bizibah.com/",
         "source": "Hacker News AI",
-        "score": 287
+        "score": 289
       },
       {
         "title": "Extensible Software in the age of LLMs",
@@ -140,22 +146,10 @@
         "score": 158
       },
       {
-        "title": "Why Microsoft Entertainment Pack had a sticker announcing that it had Tetris?",
-        "url": "https://devblogs.microsoft.com/oldnewthing/20260818-00/?p=112621",
+        "title": "Frustrated GP patients hang up as Yorkshire accent baffles AI receptionist",
+        "url": "https://www.theguardian.com/society/2026/aug/20/yorkshire-rotherham-ai-gp-receptionist-cannot-understand-accent",
         "source": "Hacker News AI",
-        "score": 65
-      },
-      {
-        "title": "AI didn't erase the junior engineer's value, it increased it it",
-        "url": "https://franciscotrindade.me/blog/the-kids-are-really-alright/",
-        "source": "Hacker News AI",
-        "score": 38
-      },
-      {
-        "title": "Universality of Gradient Descent Neural Network Training",
-        "url": "https://arxiv.org/abs/2007.13664",
-        "source": "Hacker News AI",
-        "score": 34
+        "score": 5
       }
     ],
     "news": [
@@ -195,43 +189,7 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " 4 of my top-rated budget earphones are on sale right now! ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/4-of-my-top-rated-budget-earphones-are-on-sale-right-now",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Move over Duolingo, there’s a new brand mascot in town ",
-        "url": "https://www.creativebloq.com/design/branding/move-over-duolingo-theres-a-new-brand-mascot-in-town",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " A 16-year-old girl's iPhone theme is breaking UI designers' brains ",
-        "url": "https://www.creativebloq.com/web-design/ux-ui/a-16-year-old-girls-iphone-xis-breaking-ui-designers-brains",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Studio Ghibli has no plan, isn't anti-AI after all, and doesn't know what Miyazaki is up to other than that he turns up for work every day ",
-        "url": "https://www.creativebloq.com/art/animation/studio-ghibli-has-no-plan-isnt-anti-ai-after-all-and-doesnt-know-what-miyazaki-is-up-to-other-than-that-he-turns-up-for-work-every-day",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Help! I'm instantly addicted to my new under desk treadmill ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/help-im-instantly-addicted-to-my-new-under-the-desk-treadmill",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The new ACOTAR book covers are giving 2016 ",
-        "url": "https://www.creativebloq.com/entertainment/books/the-new-acotar-book-covers-are-giving-2016",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Amazon's wanton destruction of rare books is a betrayal of the brand's origins ",
-        "url": "https://www.creativebloq.com/design/branding/amazons-massacre-of-rare-books-is-a-betrayal-of-the-brands-origins",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "The “Asian water tower” is losing 24 billion tonnes of groundwater every year",
@@ -271,6 +229,16 @@
     ],
     "gaming": [
       {
+        "title": "Arc Raiders' Fast Food Promo Skins Let You Wear a Sandwich in the Apocalypse",
+        "url": "https://www.polygon.com/arc-raiders-subway-skins-promotion/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Controversial Star Trek Episodes That Have Aged Like Fine Wine",
+        "url": "https://www.polygon.com/best-star-trek-episodes-most-controversial/",
+        "source": "Polygon"
+      },
+      {
         "title": "10 Funniest Far Side Comics About Cows",
         "url": "https://www.polygon.com/10-funniest-far-side-comics-about-cows/",
         "source": "Polygon"
@@ -293,16 +261,6 @@
       {
         "title": "Nintendo Switch 2 Officially Just Got One of the Decade's Best Games",
         "url": "https://www.polygon.com/1000xresist-nintendo-switch-2-release-fyi/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Nobody understands gambling, especially in video games",
-        "url": "https://www.polygon.com/video/nobody-understands-gambling-especially-in-video-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "A brief history of Nintendo NOT letting you play as Zelda",
-        "url": "https://www.polygon.com/video/a-brief-history-of-nintendo-not-letting-you-play-as-zelda/",
         "source": "Polygon"
       }
     ],
