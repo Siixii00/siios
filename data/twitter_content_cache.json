@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T22:28:53.297439",
+    "last_updated": "2026-08-20T23:26:38.660650",
     "total_items": 56
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "The August 17 outage, and the work ahead",
         "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
         "source": "Hacker News",
-        "score": 168
+        "score": 224
       },
       {
         "title": "Consumer Rights Wiki",
         "url": "https://consumerrights.wiki/w/Main_Page",
         "source": "Hacker News",
-        "score": 135
+        "score": 167
       },
       {
         "title": "I like 'em thick: an apology to my English teachers",
         "url": "https://www.experimental-history.com/p/i-like-em-thick",
         "source": "Hacker News",
-        "score": 480
-      },
-      {
-        "title": "I should have loved biology (2020)",
-        "url": "https://jsomers.net/i-should-have-loved-biology/",
-        "source": "Hacker News",
-        "score": 159
+        "score": 506
       },
       {
         "title": "Aaron Swartz was prosecuted for scraping, while Meta does it without consequence",
         "url": "https://blog.curiousquail.com/im-upset-again-about-a-co-creator-of-rss-being-prosecuted-for-something-meta-is-doing-with-little-consequence/",
         "source": "Hacker News",
-        "score": 431
+        "score": 635
       },
       {
         "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
         "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
         "source": "Hacker News",
-        "score": 809
+        "score": 836
       },
       {
-        "title": "Show HN: Huzzah – a novel approach to coding with AI",
-        "url": "https://www.danielvaughn.dev/posts/huzzah/",
+        "title": "I should have loved biology (2020)",
+        "url": "https://jsomers.net/i-should-have-loved-biology/",
         "source": "Hacker News",
-        "score": 166
+        "score": 172
       },
       {
         "title": "HTML Can Do That",
         "url": "https://chrisburnell.com/html-can-do-that/",
         "source": "Hacker News",
-        "score": 493
+        "score": 523
       },
       {
         "title": "Malicious Rust crate Arrayref runs a build-time payload",
         "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
         "source": "Hacker News",
-        "score": 343
+        "score": 360
       },
       {
-        "title": "Citizen Devs: Everyone is an engineer now",
-        "url": "https://www.massdriver.cloud/blogs/the-citizen-developer",
+        "title": "Show HN: Huzzah – a novel approach to coding with AI",
+        "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News",
-        "score": 18
+        "score": 184
       },
       {
         "title": "CIA funding helped keep NeXT afloat in the 80s",
         "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
         "source": "Hacker News",
-        "score": 292
-      },
-      {
-        "title": "SpacetimeDB: A Short Technical Review",
-        "url": "https://strn.cat/posts/spacetime/",
-        "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Linux 7.2",
-        "url": "https://www.igalia.com/2026/08/19/Linux-72-Released.html",
-        "source": "Hacker News",
-        "score": 171
-      },
-      {
-        "title": "Code as an Artifact",
-        "url": "https://pradeeproark.com/posts/code-as-an-artifact-means-to-an-end/",
-        "source": "Hacker News",
-        "score": 9
+        "score": 302
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News",
-        "score": 456
+        "score": 470
+      },
+      {
+        "title": "SpacetimeDB: A Short Technical Review",
+        "url": "https://strn.cat/posts/spacetime/",
+        "source": "Hacker News",
+        "score": 44
+      },
+      {
+        "title": "Why aren't smart people happier? (2022)",
+        "url": "https://www.experimental-history.com/p/why-arent-smart-people-happier",
+        "source": "Hacker News",
+        "score": 62
+      },
+      {
+        "title": "Linux 7.2",
+        "url": "https://www.igalia.com/2026/08/19/Linux-72-Released.html",
+        "source": "Hacker News",
+        "score": 180
+      },
+      {
+        "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
+        "url": "https://github.com/zachahn/vomit",
+        "source": "Hacker News",
+        "score": 164
       }
     ],
     "ai": [
@@ -101,31 +101,31 @@
         "title": "Show HN: Huzzah – a novel approach to coding with AI",
         "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News AI",
-        "score": 166
+        "score": 184
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 456
+        "score": 470
       },
       {
         "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News AI",
-        "score": 154
-      },
-      {
-        "title": "Hacking with Claude on a $27 smart watch",
-        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
-        "source": "Hacker News AI",
-        "score": 73
+        "score": 164
       },
       {
         "title": "Anti-AI fonts are useless and harmful",
         "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
         "source": "Hacker News AI",
-        "score": 84
+        "score": 94
+      },
+      {
+        "title": "Hacking with Claude on a $27 smart watch",
+        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
+        "source": "Hacker News AI",
+        "score": 78
       },
       {
         "title": "Gauguin, Descartes, Bayes: A Diurnal Golem's Brain",
@@ -137,7 +137,7 @@
         "title": "Early-life stress leaves a 'scar' inside brain cells",
         "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 6
       }
     ],
     "news": [
@@ -248,6 +248,16 @@
     ],
     "gaming": [
       {
+        "title": "US Army Is Officially Using 'GTA 6' Time as a Reenlistment Incentive",
+        "url": "https://www.polygon.com/gta-6-us-army-reenlistment-rockstar-games-release-date/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Star of Unfairly Canceled Masterpiece Marvel Series Calls Out Disney: Optics Are Obvious",
+        "url": "https://www.polygon.com/marvel-wonder-man-blade-canceled-yahya-abdul-mateen-interview/",
+        "source": "Polygon"
+      },
+      {
         "title": "All match overrides and console locations in Fortnite Chapter 7 Season 4",
         "url": "https://www.polygon.com/fortnite-chapter-7-season-4-match-overrides-console-locations-c7s4/",
         "source": "Polygon"
@@ -270,16 +280,6 @@
       {
         "title": "The Most Completely Bonkers Sci-Fi Action Thriller of 2026 Officially Releases in 3 Weeks",
         "url": "https://www.polygon.com/hope-us-release-date-sci-fi-movie/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Naruto Live-Action Movie Has Reportedly Found Its Kakashi",
-        "url": "https://www.polygon.com/charles-melton-naruto-live-action-movie-kakashi-spider-man-director/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All sprites in Fortnite Chapter 7 Season 4",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-sprite-list-abilities-c7s4/",
         "source": "Polygon"
       }
     ],
