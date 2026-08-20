@@ -492,6 +492,17 @@ async function renderStream(params) {
                 const streamerMsg = createChatMessage({ author: streamerName, text: response, color: '#9146FF' }, true);
                 chatMessages.appendChild(streamerMsg);
                 chatMessages.scrollTop = chatMessages.scrollHeight;
+                
+                if (character?.id) {
+                    await saveInteractionMemory({
+                        characterId: character.id,
+                        sourceApp: 'twitch',
+                        sourceType: 'interaction',
+                        sourceSubtype: 'social',
+                        content: `觀眾: ${text}\n主播: ${response}`,
+                        importance: 0.5
+                    });
+                }
             }
         }
     };

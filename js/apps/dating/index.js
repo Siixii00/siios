@@ -373,6 +373,17 @@ async function generateResponse(container, userMessage, isAction = false) {
         hideTypingIndicator(container);
         addMessage(container, 'assistant', content);
         datingState.isTyping = false;
+        if (datingState.character?.id) {
+            await saveInteractionMemory({
+                characterId: datingState.character.id,
+                userId: '',
+                sourceApp: 'dating',
+                sourceType: 'interaction',
+                sourceSubtype: 'dating',
+                content: `使用者: ${userMessage}\n角色: ${content}`,
+                importance: 0.6
+            });
+        }
       },
       (error) => {
         hideTypingIndicator(container);

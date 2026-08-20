@@ -8,6 +8,7 @@ import { runFullSync, incrementalSync } from './sync-engine.js';
 import { parseLinks, getBacklinks, renderLinksInContent, showLinkPicker, updateLinks, setRecordsCache } from './link-system.js';
 import { createBlock, createNotePage, createTopicPage } from './templates.js';
 import { HistoryManager } from './history-manager.js';
+import { SaveManager } from './operation-queue.js';
 
 const BLOCK_TYPES = [
   { type: 'text', label: 'Text', icon: 'T', desc: 'Plain text' },
@@ -41,27 +42,16 @@ let notionConfig = { token: '', databaseId: '', mcpUrl: '' };
 let isSyncing = false;
 let historyManager = new HistoryManager(50);
 
-let pendingSaveId = null;
-let pendingSaveTimer = null;
+const saveManager = new SaveManager();
 
 const debouncedSaveRecord = (recordId) => {
-    if (pendingSaveTimer) clearTimeout(pendingSaveTimer);
-    pendingSaveId = recordId;
-    pendingSaveTimer = setTimeout(async () => {
-        if (pendingSaveId) {
-            const record = records.find(r => r.id === pendingSaveId);
-            if (record) await WikiRecordsDB.update(pendingSaveId, record);
-            pendingSaveId = null;
-        }
-    }, 300);
+    const record = records.find(r => r.id === recordId);
+    if (!record) return;
+    return saveManager.saveWithDebounce(recordId, () => WikiRecordsDB.update(recordId, record));
 };
 
 function cancelPendingSave() {
-    if (pendingSaveTimer) {
-        clearTimeout(pendingSaveTimer);
-        pendingSaveTimer = null;
-        pendingSaveId = null;
-    }
+    saveManager.clearAll();
 }
 
 async function loadData() {
@@ -176,6 +166,7 @@ function uploadCoverImage(record, container) {
     input.onchange = async (e) => {
         const file = e.target.files[0];
         if (!file) return;
+        saveStateForUndo(record, '修改封面圖片');
         record.cover_image = await compressImage(file);
         record.updated_at = Date.now();
         await WikiRecordsDB.update(record.id, { cover_image: record.cover_image });
@@ -320,6 +311,7 @@ function renderEditor(container) {
 
     const titleInput = editorArea.querySelector('.wiki-page-title-input');
     titleInput.oninput = debounce(async () => {
+        saveStateForUndo(record, '標題修改');
         record.title = titleInput.value;
         record.updated_at = Date.now();
         await debouncedSaveRecord(record.id);
@@ -336,11 +328,11 @@ function renderEditor(container) {
     const coverImg = editorArea.querySelector('.wiki-cover');
     if (coverImg) coverImg.onclick = () => uploadCoverImage(record, container);
 
-    const emojiBtn = editorArea.querySelector('[data-action="change-icon"]');
-    if (emojiBtn) {
+        if (emojiBtn) {
         emojiBtn.onclick = async () => {
             const current = record.icon || '📄';
             const idx = PAGE_ICONS.indexOf(current);
+            saveStateForUndo(record, '修改頁面圖示');
             record.icon = PAGE_ICONS[(idx + 1) % PAGE_ICONS.length];
             record.updated_at = Date.now();
             await WikiRecordsDB.update(record.id, { icon: record.icon });
@@ -431,6 +423,7 @@ function bindBlockEvents(container, record) {
             const blockId = el.dataset.blockId;
             const block = record.blocks.find(b => b.id === blockId);
             if (block) {
+                saveStateForUndo(record, '編輯區塊');
                 block.content = el.innerHTML;
                 record.updated_at = Date.now();
                 debouncedSaveRecord(record.id);
@@ -444,6 +437,7 @@ function bindBlockEvents(container, record) {
 
             if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();
+                saveStateForUndo(record, '新增區塊');
                 const newBlock = createBlock('text', '');
                 const idx = record.blocks.findIndex(b => b.id === blockId);
                 record.blocks.splice(idx + 1, 0, newBlock);
@@ -458,6 +452,7 @@ function bindBlockEvents(container, record) {
 
             if (e.key === 'Backspace' && isBlockEmpty(el) && record.blocks.length > 1) {
                 e.preventDefault();
+                saveStateForUndo(record, '刪除區塊');
                 const idx = record.blocks.findIndex(b => b.id === blockId);
                 record.blocks.splice(idx, 1);
                 record.updated_at = Date.now();
@@ -488,6 +483,7 @@ function bindBlockEvents(container, record) {
                         const linkText = `[[${title}]]`;
                         const currentContent = el.textContent || '';
                         el.textContent = currentContent + linkText;
+                        saveStateForUndo(record, '插入連結');
                         block.content = el.innerHTML;
                         record.updated_at = Date.now();
                         debouncedSaveRecord(record.id);
@@ -511,6 +507,7 @@ function bindBlockEvents(container, record) {
             const blockId = el.dataset.check;
             const block = record.blocks.find(b => b.id === blockId);
             if (block) {
+                saveStateForUndo(record, '切換複選框');
                 block.checked = !block.checked;
                 record.updated_at = Date.now();
                 await WikiRecordsDB.update(record.id, { blocks: record.blocks });
@@ -532,6 +529,7 @@ function bindBlockEvents(container, record) {
                 if (!file) return;
                 const result = await compressImage(file);
                 if (result) {
+                    saveStateForUndo(record, '插入圖片');
                     block.metadata.src = result;
                     record.updated_at = Date.now();
                     await WikiRecordsDB.update(record.id, { blocks: record.blocks });
@@ -579,6 +577,7 @@ function bindBlockEvents(container, record) {
             const el = blocksEl.querySelector(`[data-block-id="${lastBlock.id}"]`);
             if (el) el.focus();
         } else {
+            saveStateForUndo(record, '新增區塊');
             const newBlock = createBlock('text', '');
             record.blocks.push(newBlock);
             record.updated_at = Date.now();
@@ -878,15 +877,18 @@ function applyBlockType(container, blockId, type) {
     if (!block) return;
 
     if (type === 'page-link') {
+        saveStateForUndo(record, '變更區塊類型');
         block.type = 'page-link';
         block.content = '';
         block.metadata = { pageId: '' };
         showPagePicker(container, block);
     } else if (type === 'image') {
+        saveStateForUndo(record, '變更區塊類型');
         block.type = 'image';
         block.content = '';
         block.metadata = { src: '' };
     } else {
+        saveStateForUndo(record, '變更區塊類型');
         block.type = type;
         block.content = '';
     }
@@ -924,6 +926,7 @@ function showPagePicker(container, block) {
 
     picker.querySelectorAll('.wiki-slash-item').forEach(item => {
         item.onclick = async () => {
+            saveStateForUndo(record, '選擇頁面連結');
             block.metadata.pageId = item.dataset.pickPage;
             const linkedRecord = getRecord(block.metadata.pageId);
             block.content = linkedRecord ? `${linkedRecord.icon || '📄'} ${escapeHtml(linkedRecord.title)}` : '';
@@ -982,6 +985,7 @@ function startDrag(container, record, blockId, startEvent) {
         document.removeEventListener('mouseup', onMouseUp);
 
         if (targetIdx !== idx) {
+            saveStateForUndo(record, '重新排列區塊');
             const adjustedIdx = targetIdx > idx ? targetIdx - 1 : targetIdx;
             const [moved] = record.blocks.splice(idx, 1);
             record.blocks.splice(adjustedIdx, 0, moved);
@@ -1025,6 +1029,7 @@ function showContextMenu(container, recordId, x, y) {
             if (action === 'rename') {
                 const newName = prompt('頁面名稱', record.title);
                 if (newName !== null) {
+                    saveStateForUndo(record, '重新命名');
                     record.title = newName;
                     record.updated_at = Date.now();
                     await WikiRecordsDB.update(record.id, { title: newName });

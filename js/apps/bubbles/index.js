@@ -167,7 +167,21 @@ async function sendMessage(container) {
   await saveState();
   
   if (state.mode === 'fan' && state.characterId) {
+    const lastMsgIdx = state.messages.length;
     await generateArtistReply(container, text);
+    
+    const artistReply = state.messages[lastMsgIdx]?.text || '';
+    if (state.characterId) {
+      await saveInteractionMemory({
+        characterId: state.characterId,
+        userId: '',
+        sourceApp: 'bubbles',
+        sourceType: 'interaction',
+        sourceSubtype: 'chat',
+        content: `粉絲: ${text}\n藝人: ${artistReply}`,
+        importance: 0.5
+      });
+    }
   }
 }
 

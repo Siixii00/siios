@@ -676,6 +676,17 @@ async function showCharReaction(container, char, video) {
     if (charWatchHistory.length > 50) {
         charWatchHistory = charWatchHistory.slice(0, 50);
     }
+    
+    if (currentWatchingChar) {
+        await saveInteractionMemory({
+            characterId: currentWatchingChar,
+            sourceApp: 'youtube',
+            sourceType: 'interaction',
+            sourceSubtype: 'viewing',
+            content: `觀看影片「${video.title}」，角色反應：${reaction}`,
+            importance: 0.5
+        });
+    }
 }
 
 function renderCharWatchHistory(container) {

@@ -1,6 +1,7 @@
 import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
+import { buildAppContext } from '../../core/app-context-builder.js';
 
 const CONFIG_KEY = 'pomodoro_config';
 const COMPLETED_KEY = 'pomodoro_completed';
@@ -139,32 +140,24 @@ async function generateAIEncouragement(charConfig, userConfig, phase, elapsedMin
     if (!apiConfig || !apiConfig.url) return null;
 
     const charName = charConfig.name || '角色';
-    const charPersonality = charConfig.personality || '';
-    const charBackground = charConfig.background || '';
     const userName = userConfig.name || 'User';
     const lang = await SettingsDB.get('sxiphone_lang') || 'zh-TW';
     const phaseDesc = phase === 'focus' ? '專注時間' : phase === 'short' ? '短休息' : '長休息';
 
-    const systemPrompt = `# CHARACTER_PROFILE
-## 角色資訊
-- 名字: ${charName}
-- 性格特質: ${charPersonality || '友善、溫柔'}
-- 背景故事: ${charBackground || '無'}
+    const context = await buildAppContext({ characterId: charConfig.id });
 
-## 角色扮演指南
-你現在要扮演 ${charName} 這個角色。請完全沉浸在這個角色中，用角色的視角、語氣和說話方式來生成番茄鐘鼓勵訊息。
+    const systemPrompt = (context.systemPrompt ? context.systemPrompt + '\n\n' : '') + `# 番茄鐘角色扮演
+你現在扮演 ${charName}，正在険伴 ${userName} 使用番茄鐘專注工作/休息。
+請完全沉浸在角色中，用角色的視角、語氣和方式生成鼓勵訊息。
 
-# USER_CONTEXT
-- 用戶名稱: ${userName}
-
-# RESPONSE_GUIDELINES
+# 回應規則
 1. **角色一致性**: 始終保持 ${charName} 的角色特質，包括說話方式、用詞習慣、情感表達。
 2. **語言**: 使用 ${lang} 進行交流。
 3. **身分保密**: 絕對不要提及你是 AI 或語言模型。
 4. **語氣**: 根據角色性格決定語氣（溫柔/冷淡/活潑/嚴厲等）。
 5. **長度**: 簡短自然，15-50字。
 
-輸出格式為 JSON: {"message": "你的鼓勵訊息"}`;
+輸出格式為 JSON: {"message": "鼓勵訊息"}`;
 
     let contextPrompt = `# 番茄鐘狀態
 - 目前階段: ${phaseDesc}
@@ -569,16 +562,14 @@ async function renderPomodoro() {
         if (!apiConfig || !apiConfig.url) return null;
 
         const charName = charConfig.name || '角色';
-        const charPersonality = charConfig.personality || '';
         const userName = userConfig.name || 'User';
         const lang = await SettingsDB.get('sxiphone_lang') || 'zh-TW';
 
-        const systemPrompt = `# CHARACTER_PROFILE
-- 名字: ${charName}
-- 性格特質: ${charPersonality || '友善、溫柔'}
+        const context = await buildAppContext({ characterId: charConfig.id });
 
-你是 ${charName}，正在陪伴 ${userName} 使用番茄鐘專注。
-用角色特有的語氣和方式回應用戶，保持角色一致性。
+        const systemPrompt = (context.systemPrompt ? context.systemPrompt + '\n\n' : '') + `# 番茄鐘聊天
+你是 ${charName}，正在険伴 ${userName} 使用番茄鐘專注時光。
+用角色特有的語氣和方式回應用戶，用戶發言在 USER_MESSAGE。保持角色一致性。
 輸出 JSON: {"message": "回應內容"}`;
 
         try {
