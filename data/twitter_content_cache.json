@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T19:32:03.396632",
-    "total_items": 58
+    "last_updated": "2026-08-20T20:29:49.992654",
+    "total_items": 56
   },
   "content": {
     "tech": [
@@ -9,61 +9,73 @@
         "title": "Scientific study reveals TikTok videos deactivate key cognitive brain regions",
         "url": "https://www.rathbiotaclan.com/tiktok-videos-deactivate-key-cognitive-brain-regions/",
         "source": "Hacker News",
-        "score": 44
+        "score": 205
       },
       {
-        "title": "I like 'em thick: an apology to my English teachers",
-        "url": "https://www.experimental-history.com/p/i-like-em-thick",
+        "title": "Stop Eating Lady Gaga's Oreos",
+        "url": "https://www.experimental-history.com/p/stop-eating-lady-gagas-oreos",
         "source": "Hacker News",
-        "score": 369
+        "score": 52
       },
       {
         "title": "I should have loved biology",
         "url": "https://jsomers.net/i-should-have-loved-biology/",
         "source": "Hacker News",
-        "score": 77
+        "score": 120
+      },
+      {
+        "title": "I like 'em thick: an apology to my English teachers",
+        "url": "https://www.experimental-history.com/p/i-like-em-thick",
+        "source": "Hacker News",
+        "score": 414
+      },
+      {
+        "title": "Show HN: Huzzah – a novel approach to coding with AI",
+        "url": "https://www.danielvaughn.dev/posts/huzzah/",
+        "source": "Hacker News",
+        "score": 42
       },
       {
         "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
         "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
         "source": "Hacker News",
-        "score": 729
+        "score": 762
       },
       {
         "title": "HTML Can Do That",
         "url": "https://chrisburnell.com/html-can-do-that/",
         "source": "Hacker News",
-        "score": 379
+        "score": 433
       },
       {
         "title": "Linux 7.2",
         "url": "https://www.igalia.com/2026/08/19/Linux-72-Released.html",
         "source": "Hacker News",
-        "score": 105
+        "score": 133
+      },
+      {
+        "title": "Consumer Rights Wiki",
+        "url": "https://consumerrights.wiki/w/Main_Page",
+        "source": "Hacker News",
+        "score": 42
       },
       {
         "title": "CIA funding helped keep NeXT afloat in the 80s",
         "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
         "source": "Hacker News",
-        "score": 237
+        "score": 261
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News",
-        "score": 395
+        "score": 417
       },
       {
-        "title": "How to compromise your system with a job interview",
-        "url": "https://www.codedge.de/posts/how-to-compromise-your-system-with-a-job-interview",
+        "title": "SpacetimeDB: A Short Technical Review",
+        "url": "https://strn.cat/posts/spacetime/",
         "source": "Hacker News",
-        "score": 77
-      },
-      {
-        "title": "Show HN: We chased a weather balloon across Montana and never found it",
-        "url": "https://radi8.dev/blog/uplink/",
-        "source": "Hacker News",
-        "score": 32
+        "score": 13
       },
       {
         "title": "Sixtyfour (YC P25) Is Hiring",
@@ -72,28 +84,16 @@
         "score": 1
       },
       {
-        "title": "Consumer Rights Wiki",
-        "url": "https://consumerrights.wiki/w/Main_Page",
+        "title": "Tidal Cycles – Live coding music with Algorithmic patterns",
+        "url": "https://tidalcycles.org/",
+        "source": "Hacker News",
+        "score": 15
+      },
+      {
+        "title": "GitHub, autoscaling, and the component substitution fallacy",
+        "url": "https://surfingcomplexity.blog/2026/08/19/github-autoscaling-and-the-component-substitution-fallacy/",
         "source": "Hacker News",
         "score": 12
-      },
-      {
-        "title": "Optimizing things in the USSR (2016)",
-        "url": "https://chris-said.io/2016/05/11/optimizing-things-in-the-ussr/",
-        "source": "Hacker News",
-        "score": 19
-      },
-      {
-        "title": "DiffusionGemma Technical Report",
-        "url": "https://arxiv.org/abs/2608.00146",
-        "source": "Hacker News",
-        "score": 113
-      },
-      {
-        "title": "Malicious Rust crate Arrayref runs a build-time payload",
-        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
-        "source": "Hacker News",
-        "score": 299
       }
     ],
     "ai": [
@@ -101,55 +101,43 @@
         "title": "Scientific study reveals TikTok videos deactivate key cognitive brain regions",
         "url": "https://www.rathbiotaclan.com/tiktok-videos-deactivate-key-cognitive-brain-regions/",
         "source": "Hacker News AI",
-        "score": 44
-      },
-      {
-        "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
-        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
-        "source": "Hacker News AI",
-        "score": 395
+        "score": 205
       },
       {
         "title": "Show HN: Huzzah – a novel approach to coding with AI",
         "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 42
+      },
+      {
+        "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
+        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
+        "source": "Hacker News AI",
+        "score": 417
       },
       {
         "title": "Gauguin, Descartes, Bayes: A Diurnal Golem's Brain",
         "url": "https://dl.acm.org/doi/10.1145/3759429.3762631",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 11
       },
       {
         "title": "Show HN: Check if any of the $656M in unclaimed royalties at The MLC is yours",
         "url": "https://pub.doub.ly/",
         "source": "Hacker News AI",
-        "score": 50
+        "score": 53
       },
       {
         "title": "AI at Home Part 2: Multi-GPU Drifting",
         "url": "https://jdagostino.github.io/ai-pt2-multi-gpu-drifting/index.html",
         "source": "Hacker News AI",
-        "score": 10
+        "score": 12
       },
       {
         "title": "Anti-AI fonts are useless and harmful",
         "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
         "source": "Hacker News AI",
-        "score": 65
-      },
-      {
-        "title": "Clean up Claude 5's token vomit with a separate LLM",
-        "url": "https://github.com/zachahn/vomit",
-        "source": "Hacker News AI",
-        "score": 114
-      },
-      {
-        "title": "Hacking with Claude on a $27 Smart Watch",
-        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
-        "source": "Hacker News AI",
-        "score": 64
+        "score": 68
       }
     ],
     "news": [
@@ -174,7 +162,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Como mayor bans 'beasts' in city centre after being hit by bike",
+        "title": "Como mayor hit by electric bike and issues blanket ban in Italian city",
         "url": "https://www.bbc.co.uk/news/articles/cn8n077vxd7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -260,6 +248,26 @@
     ],
     "gaming": [
       {
+        "title": "Riot Games Officially Confirms End of an Era for League of Legends",
+        "url": "https://www.polygon.com/riot-games-cancels-2xko-league-of-legends/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Classic Nintendo Games that Are Completely Unplayable Today",
+        "url": "https://www.polygon.com/unplayable-classic-nintendo-games/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Most Completely Bonkers Sci-Fi Action Thriller of 2026 Officially Releases in 3 Weeks",
+        "url": "https://www.polygon.com/hope-us-release-date-sci-fi-movie/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Naruto Live-Action Movie Has Filled a Key Role, Report Says",
+        "url": "https://www.polygon.com/charles-melton-naruto-live-action-movie-kakashi-spider-man-director/",
+        "source": "Polygon"
+      },
+      {
         "title": "All sprites in Fortnite Chapter 7 Season 4",
         "url": "https://www.polygon.com/fortnite-chapter-7-season-4-sprite-list-abilities-c7s4/",
         "source": "Polygon"
@@ -272,26 +280,6 @@
       {
         "title": "How to open the Temple Vault in Stone Sanctum in Fortnite Chapter 7 Season 4",
         "url": "https://www.polygon.com/fortnite-chapter-7-season-4-temple-vault-stone-sanctum-keys-how-to-open-c7s4/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Prime Video’s 95-Minute Action Thriller Is Officially One of the Biggest Films on Streaming",
-        "url": "https://www.polygon.com/ice-fall-prime-video-streaming-action-movies-august-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "HBO's Near-Perfect Sci-Fi Mystery Still Has One of the Best Endings in TV History",
-        "url": "https://www.polygon.com/lanterns-damon-lindelof-the-leftovers-hbo-sci-fi-shows/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 Replay Ideas to Make Elden Ring Feel Brand New Again",
-        "url": "https://www.polygon.com/elden-ring-new-game-plus-run-ideas-switch-2-release/",
-        "source": "Polygon"
-      },
-      {
-        "title": "James Bond 007 First Light Sequel All But Confirmed With 4 Million Copies Sold",
-        "url": "https://www.polygon.com/james-bond-007-first-light-sequel-guaranteed-after-4-million-copies-sold/",
         "source": "Polygon"
       }
     ],
