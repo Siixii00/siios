@@ -192,7 +192,15 @@ async function generateCommentReply(container, post, commentText) {
     const context = await buildAppContext({ characterId });
     const systemPrompt = context.systemPrompt || '你是一位專業的社群媒體使用者，擅長撰寫評論回覆。請使用繁體中文撰寫。輸出格式為 JSON: {"reply": "回覆內容"}';
     const prompt = `${context.systemPrompt}\n\n針對以下貼文和評論生成一則回覆：\n\n貼文: ${post.caption}\n評論: ${commentText}\n\n要求：\n1. 符合角色性格\n2. 簡短自然、口語化\n3. 10-30 字\n\n輸出 JSON 格式。`;
-    const result = await callAPIWithMessages(systemPrompt, prompt, 0.9);
+    // 在生成回覆範例時寫入記憶
+    if (typeof saveInteractionMemory === 'function') {
+        try {
+            const reply = parsed?.reply || '';
+            saveInteractionMemory({ type: 'commentReply', postId: post.id, reply, timestamp: Date.now() });
+        } catch (e) {
+            console.warn('[Instagram] 互動寫入失敗', e);
+        }
+    }
     let parsed = null;
     try { parsed = JSON.parse(result); } catch (e) { const match = result.match(/\{[\s\S]*\}/); if (match) parsed = JSON.parse(match[0]); }
     return parsed?.reply || '';
@@ -347,7 +355,20 @@ async function bindPostInteractions(article, post) {
             heartOverlay.classList.add('active');
         }
     };
-    likeBtn.addEventListener('click', () => toggleLike(false));
+    // 針對 Like 動作寫入互動記錄
+        if (typeof saveInteractionMemory === 'function') {
+            try {
+                const likesInfo = {
+                    type: 'like',
+                    postId: article.dataset.postId,
+                    liked: post.liked,
+                    timestamp: Date.now()
+                };
+                saveInteractionMemory(likesInfo);
+            } catch (e) {
+                console.warn('[Instagram] Like 互動寫入失敗', e);
+            }
+        }
     image.addEventListener('dblclick', () => {
         if (!post.liked) toggleLike(true);
         else {
