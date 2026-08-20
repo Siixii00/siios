@@ -147,11 +147,11 @@ function clearNumber(container) {
 }
 
 async function simulateCall(container, options = {}) {
-    if (!state.number) {
+    if (!state.number && !options.number) {
         setStatus('請先輸入號碼', container);
         return;
     }
-    const digits = state.number.replace(/\s+/g, '');
+    const digits = (state.number || options.number || '').replace(/\s+/g, '');
     const contact = findContactByNumber(digits);
     const label = options.label || contact?.name || `聯絡人 ${digits.slice(-4)}`;
     const duration = options.duration ?? Math.floor(30 + Math.random() * 210);
@@ -165,10 +165,80 @@ async function simulateCall(container, options = {}) {
     };
     historyEntries = [entry, ...historyEntries].slice(0, 30);
     await saveHistory(historyEntries);
+    await addRecording({
+        id: `rec-${Date.now()}`,
+        charName: contact?.name || label,
+        timestamp: Date.now(),
+        duration,
+        transcript: generateMockTranscript(duration),
+        audioData: null
+    });
     renderHistory(container);
     setStatus(`已撥出至 ${label}`, container);
     state.number = '';
     updateDialedNumber(container);
+}
+
+async function simulateIncomingCall(container, caller) {
+    if (!caller) {
+        setStatus('沒有來電資訊', container);
+        return;
+    }
+    const digits = caller.number.replace(/\s+/g, '');
+    const contact = findContactByNumber(digits);
+    const label = contact?.name || caller.name || `聯絡人 ${digits.slice(-4)}`;
+    const duration = Math.floor(20 + Math.random() * 120);
+    const entry = {
+        id: `call-${Date.now()}`,
+        name: contact?.name || '',
+        number: digits,
+        type: 'incoming',
+        timestamp: Date.now(),
+        duration
+    };
+    historyEntries = [entry, ...historyEntries].slice(0, 30);
+    await saveHistory(historyEntries);
+    await addRecording({
+        id: `rec-${Date.now()}`,
+        charName: contact?.name || label,
+        timestamp: Date.now(),
+        duration,
+        transcript: generateMockTranscript(duration),
+        audioData: null
+    });
+    renderHistory(container);
+    setStatus(`已接聽來電：${label}`, container);
+}
+
+async function simulateMissedCall(container, caller) {
+    const digits = (caller?.number || '').replace(/\s+/g, '');
+    const contact = digits ? findContactByNumber(digits) : null;
+    const label = contact?.name || caller?.name || `聯絡人 ${digits.slice(-4)}`;
+    const entry = {
+        id: `call-${Date.now()}`,
+        name: contact?.name || '',
+        number: digits,
+        type: 'missed',
+        timestamp: Date.now(),
+        duration: 0
+    };
+    historyEntries = [entry, ...historyEntries].slice(0, 30);
+    await saveHistory(historyEntries);
+    renderHistory(container);
+    setStatus(`未接來電：${label}`, container);
+}
+
+function generateMockTranscript(duration) {
+    const lines = [
+        { role: 'assistant', text: '喂？你好呀。' },
+        { role: 'user', text: '嗨，現在方便講幾句話嗎？' },
+        { role: 'assistant', text: '方便的，剛好在忙完手邊的事。' },
+        { role: 'user', text: '那我們現在的進度先這樣可以嗎？' },
+        { role: 'assistant', text: '沒問題，你說了算，我配合你。' }
+    ];
+    if (duration <= 20) return lines.slice(0, 2);
+    if (duration <= 60) return lines.slice(0, 3);
+    return lines;
 }
 
 async function clearHistory(container) {
@@ -422,6 +492,22 @@ function bindKeypad(container) {
 
 function bindEvents(container) {
     container.querySelector('#call-button')?.addEventListener('click', () => simulateCall(container));
+    container.querySelector('#incoming-btn')?.addEventListener('click', async () => {
+        const contact = favorites[0];
+        if (!contact) {
+            setStatus('請先新增常用聯絡人', container);
+            return;
+        }
+        await simulateIncomingCall(container, { name: contact.name, number: contact.number });
+    });
+    container.querySelector('#missed-btn')?.addEventListener('click', async () => {
+        const contact = favorites[0];
+        if (!contact) {
+            setStatus('請先新增常用聯絡人', container);
+            return;
+        }
+        await simulateMissedCall(container, { name: contact.name, number: contact.number });
+    });
     container.querySelector('#backspace')?.addEventListener('click', () => eraseDigit(container));
     container.querySelector('#hold-button')?.addEventListener('click', () => {
         appendDigit(',', container);
@@ -522,6 +608,8 @@ async function renderPhone() {
             <div class="keypad-actions">
                 <button class="key call" id="call-button"><i class="fas fa-phone"></i></button>
                 <button class="key action" id="backspace"><i class="fas fa-backspace"></i></button>
+                <button class="key action" id="incoming-btn" title="模擬來電"><i class="fas fa-phone-volume"></i></button>
+                <button class="key action" id="missed-btn" title="模擬未接來電"><i class="fas fa-phone-slash"></i></button>
             </div>
 
             <p class="status-line" id="connection-status">4G · 85%</p>
