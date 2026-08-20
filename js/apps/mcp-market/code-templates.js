@@ -107,24 +107,34 @@ function generateCaseBody(tool) {
     switch (tool.id) {
         case 'daily_weather':
             return `// 需要設定 OPENWEATHER_API_KEY
-            const weatherRes = await fetch(
-                \`https://api.openweathermap.org/data/2.5/weather?q=\${encodeURIComponent(args.city)}&appid=\${env.OPENWEATHER_API_KEY}&units=metric\`
-            );
-            const weatherData = await weatherRes.json();
-            return {
-                city: weatherData.name,
-                temp: weatherData.main.temp,
-                feels_like: weatherData.main.feels_like,
-                humidity: weatherData.main.humidity,
-                description: weatherData.weather[0].description,
-                icon: weatherData.weather[0].icon
-            };`;
+            if (!env.OPENWEATHER_API_KEY) {
+                return { success: false, error: '尚未設定 OPENWEATHER_API_KEY' };
+            }
+            try {
+                const weatherRes = await fetch(
+                    \`https://api.openweathermap.org/data/2.5/weather?q=\${encodeURIComponent(args.city)}&appid=\${env.OPENWEATHER_API_KEY}&units=metric\`
+                );
+                const weatherData = await weatherRes.json();
+                if (!weatherRes.ok || weatherData.cod && weatherData.cod !== 200) {
+                    return { success: false, error: weatherData.message || '無法取得天氣資料' };
+                }
+                return {
+                    success: true,
+                    city: weatherData.name,
+                    temp: weatherData.main.temp,
+                    feels_like: weatherData.main.feels_like,
+                    humidity: weatherData.main.humidity,
+                    description: weatherData.weather?.[0]?.description || '',
+                    icon: weatherData.weather?.[0]?.icon || ''
+                };
+            } catch (error) {
+                return { success: false, error: error.message || '天氣服務暫時無法使用' };
+            }`;
 
         case 'daily_reminder':
-            return `// 需要實作推播服務
-            // 這裡可以串接 FCM、APNs 或其他推播服務
-            return {
-                scheduled: true,
+            return `return {
+                success: false,
+                error: '提醒功能尚未實作，需要串接推播服務',
                 message: args.message,
                 time: args.time,
                 repeat: args.repeat || false
@@ -132,25 +142,34 @@ function generateCaseBody(tool) {
 
         case 'daily_recipe':
             return `// 需要設定 SPOONACULAR_API_KEY
-            const recipeRes = await fetch(
-                \`https://api.spoonacular.com/recipes/complexSearch?query=\${encodeURIComponent(args.query)}&number=\${args.limit || 5}&apiKey=\${env.SPOONACULAR_API_KEY}\`
-            );
-            const recipeData = await recipeRes.json();
-            return recipeData.results.map(r => ({
-                id: r.id,
-                title: r.title,
-                image: r.image
-            }));`;
+            if (!env.SPOONACULAR_API_KEY) {
+                return { success: false, error: '尚未設定 SPOONACULAR_API_KEY' };
+            }
+            try {
+                const recipeRes = await fetch(
+                    \`https://api.spoonacular.com/recipes/complexSearch?query=\${encodeURIComponent(args.query)}&number=\${args.limit || 5}&apiKey=\${env.SPOONACULAR_API_KEY}\`
+                );
+                const recipeData = await recipeRes.json();
+                return {
+                    success: true,
+                    results: (recipeData.results || []).map(r => ({
+                        id: r.id,
+                        title: r.title,
+                        image: r.image
+                    }))
+                };
+            } catch (error) {
+                return { success: false, error: error.message || '食譜服務暫時無法使用' };
+            }`;
 
         case 'shop_sanitary_pads':
-            return `// 這裡串接實際購物 API
-            // 例如 momo、pchome 或自建訂單系統
-            return {
-                orderId: 'ORD-' + Date.now(),
+            return `return {
+                success: false,
+                error: '購物功能尚未實作，需要串接電商 API',
+                orderId: null,
                 product: \`\${args.brand || '好自在'} \${args.type || '日用'}\`,
                 quantity: args.quantity || 1,
-                status: '已下單',
-                estimatedDelivery: '3-5 個工作天'
+                status: '未實作'
             };`;
 
         case 'health_period_log':
@@ -165,134 +184,203 @@ function generateCaseBody(tool) {
             };`;
 
         case 'smart_light':
-            return `// 需要串接 Philips Hue、Google Home 等
-            return {
+            return `return {
+                success: false,
+                error: '智慧燈光控制尚未實作，需要串接智慧家居平台',
                 room: args.room,
                 action: args.action,
                 brightness: args.brightness || 100,
-                executed: true
+                executed: false
             };`;
 
         case 'smart_ac':
-            return `// 需要串接智慧家居平台
-            return {
+            return `return {
+                success: false,
+                error: '智慧空調控制尚未實作，需要串接智慧家居平台',
                 room: args.room,
                 temperature: args.temperature || 24,
                 mode: args.mode || 'cool',
-                executed: true
+                executed: false
             };`;
 
         case 'smart_music':
         case 'entertainment_music_search':
-            return `// 需要設定 SPOTIFY_API_KEY
-            const musicRes = await fetch(
-                \`https://api.spotify.com/v1/search?q=\${encodeURIComponent(args.query)}&type=track&limit=\${args.limit || 10}\`,
-                { headers: { 'Authorization': \`Bearer \${env.SPOTIFY_ACCESS_TOKEN}\` } }
-            );
-            const musicData = await musicRes.json();
-            return musicData.tracks.items.map(t => ({
-                name: t.name,
-                artist: t.artists[0].name,
-                album: t.album.name,
-                preview_url: t.preview_url
-            }));`;
+            return `// 需要設定 SPOTIFY_API_KEY 或 SPOTIFY_ACCESS_TOKEN
+            if (!env.SPOTIFY_API_KEY && !env.SPOTIFY_ACCESS_TOKEN) {
+                return { success: false, error: '尚未設定 Spotify API 憑證' };
+            }
+            try {
+                const musicRes = await fetch(
+                    \`https://api.spotify.com/v1/search?q=\${encodeURIComponent(args.query)}&type=track&limit=\${args.limit || 10}\`,
+                    { headers: { 'Authorization': \`Bearer \${env.SPOTIFY_ACCESS_TOKEN || ''}\` } }
+                );
+                const musicData = await musicRes.json();
+                if (!musicRes.ok) {
+                    return { success: false, error: musicData.error?.message || '音樂搜尋失敗' };
+                }
+                return {
+                    success: true,
+                    results: (musicData.tracks?.items || []).map(t => ({
+                        name: t.name,
+                        artist: t.artists?.[0]?.name || '',
+                        album: t.album?.name || '',
+                        preview_url: t.preview_url
+                    }))
+                };
+            } catch (error) {
+                return { success: false, error: error.message || '音樂服務暫時無法使用' };
+            }`;
 
         case 'entertainment_anime':
             return `// AniList GraphQL API（免費）
-            const query = \`
-                query ($search: String, $season: String) {
-                    Page {
-                        media(search: $search, season: $season, type: ANIME) {
-                            title { romaji native english }
-                            episodes
-                            status
-                            averageScore
-                            genres
+            try {
+                const query = \`
+                    query ($search: String, $season: String) {
+                        Page {
+                            media(search: $search, season: $season, type: ANIME) {
+                                title { romaji native english }
+                                episodes
+                                status
+                                averageScore
+                                genres
+                            }
                         }
                     }
+                \`;
+                const animeRes = await fetch('https://graphql.anilist.co', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query, variables: { search: args.query, season: args.season } })
+                });
+                const animeData = await animeRes.json();
+                if (!animeRes.ok || animeData.errors) {
+                    return {
+                        success: false,
+                        error: animeData.errors?.map(err => err.message).join(',') || '動漫查詢失敗'
+                    };
                 }
-            \`;
-            const animeRes = await fetch('https://graphql.anilist.co', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ query, variables: { search: args.query, season: args.season } })
-            });
-            const animeData = await animeRes.json();
-            return animeData.data.Page.media;`;
+                return {
+                    success: true,
+                    results: (animeData.data?.Page?.media || []).map(m => ({
+                        title: m.title?.romaji || m.title?.native || '',
+                        episodes: m.episodes,
+                        status: m.status,
+                        averageScore: m.averageScore,
+                        genres: m.genres || []
+                    }))
+                };
+            } catch (error) {
+                return { success: false, error: error.message || '動漫服務暫時無法使用' };
+            }`;
 
         case 'entertainment_game_price':
             return `// CheapShark API（免費）
-            const gameRes = await fetch(
-                \`https://www.cheapshark.com/api/1.0/games?title=\${encodeURIComponent(args.game)}\`
-            );
-            const gameData = await gameRes.json();
-            return gameData.slice(0, 5).map(g => ({
-                title: g.external,
-                cheapestPrice: g.cheapest / 100,
-                cheapestStore: g.cheapestDealID
-            }));`;
+            try {
+                const gameRes = await fetch(
+                    \`https://www.cheapshark.com/api/1.0/games?title=\${encodeURIComponent(args.game)}\`
+                );
+                const gameData = await gameRes.json();
+                if (!Array.isArray(gameData)) {
+                    return { success: false, error: '遊戲價格格式異常' };
+                }
+                return {
+                    success: true,
+                    results: gameData.slice(0, 5).map(g => ({
+                        title: g.external,
+                        cheapestPrice: g.cheapest / 100,
+                        cheapestStore: g.cheapestDealID
+                    }))
+                };
+            } catch (error) {
+                return { success: false, error: error.message || '遊戲價格查詢暫時無法使用' };
+            }`;
 
         case 'work_translate':
             return `// 需要設定 GOOGLE_TRANSLATE_API_KEY 或 DEEPL_API_KEY
-            const transRes = await fetch(
-                \`https://translation.googleapis.com/language/translate/v2?key=\${env.GOOGLE_TRANSLATE_API_KEY}\`,
-                {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ q: args.text, target: args.targetLang })
-                }
-            );
-            const transData = await transRes.json();
+            if (!env.GOOGLE_TRANSLATE_API_KEY && !env.DEEPL_API_KEY) {
+                return { success: false, error: '尚未設定翻譯 API Key' };
+            }
             return {
+                success: false,
+                error: '翻譯工具已預留接口，請在本機 MCP 環境執行',
                 original: args.text,
-                translated: transData.data.translations[0].translatedText,
                 targetLang: args.targetLang
             };`;
 
         case 'work_wiki':
             return `// MediaWiki API（免費）
-            const wikiRes = await fetch(
-                \`https://\${args.lang || 'zh'}.wikipedia.org/w/api.php?action=query&list=search&srsearch=\${encodeURIComponent(args.query)}&format=json&origin=*\`
-            );
-            const wikiData = await wikiRes.json();
-            return wikiData.query.search.slice(0, 5).map(r => ({
-                title: r.title,
-                snippet: r.snippet.replace(/<[^>]+>/g, ''),
-                link: \`https://\${args.lang || 'zh'}.wikipedia.org/wiki/\${encodeURIComponent(r.title)}\`
-            }));`;
+            try {
+                const wikiRes = await fetch(
+                    \`https://\${args.lang || 'zh'}.wikipedia.org/w/api.php?action=query&list=search&srsearch=\${encodeURIComponent(args.query)}&format=json&origin=*\`
+                );
+                const wikiData = await wikiRes.json();
+                const results = Array.isArray(wikiData.query?.search) ? wikiData.query.search : [];
+                return {
+                    success: true,
+                    results: results.slice(0, 5).map(r => ({
+                        title: r.title,
+                        snippet: r.snippet.replace(/<[^>]+>/g, ''),
+                        link: \`https://\${args.lang || 'zh'}.wikipedia.org/wiki/\${encodeURIComponent(r.title)}\`
+                    }))
+                };
+            } catch (error) {
+                return { success: false, error: error.message || '維基百科查詢暫時無法使用' };
+            }`;
 
         case 'work_notion':
             return `// 需要設定 NOTION_API_KEY 和 NOTION_DATABASE_ID
-            const notionRes = await fetch('https://api.notion.com/v1/pages', {
-                method: 'POST',
-                headers: {
-                    'Authorization': \`Bearer \${env.NOTION_API_KEY}\`,
-                    'Content-Type': 'application/json',
-                    'Notion-Version': '2022-06-28'
-                },
-                body: JSON.stringify({
-                    parent: { database_id: env.NOTION_DATABASE_ID },
-                    properties: {
-                        Title: { title: [{ text: { content: args.title } }] },
-                        Tags: { multi_select: (args.tags || []).map(t => ({ name: t })) }
-                    }
-                })
-            });
-            const notionData = await notionRes.json();
-            return { pageId: notionData.id, url: notionData.url };`;
+            if (!env.NOTION_API_KEY || !env.NOTION_DATABASE_ID) {
+                return { success: false, error: '尚未設定 NOTION_API_KEY 或 NOTION_DATABASE_ID' };
+            }
+            try {
+                const notionRes = await fetch('https://api.notion.com/v1/pages', {
+                    method: 'POST',
+                    headers: {
+                        'Authorization': \`Bearer \${env.NOTION_API_KEY}\`,
+                        'Content-Type': 'application/json',
+                        'Notion-Version': '2022-06-28'
+                    },
+                    body: JSON.stringify({
+                        parent: { database_id: env.NOTION_DATABASE_ID },
+                        properties: {
+                            Title: { title: [{ text: { content: args.title || '' } }] },
+                            Tags: { multi_select: (args.tags || []).map(t => ({ name: t })) }
+                        }
+                    })
+                });
+                const notionData = await notionRes.json();
+                if (!notionRes.ok) {
+                    return { success: false, error: notionData.message || 'Notion 寫入失敗' };
+                }
+                return { success: true, pageId: notionData.id, url: notionData.url };
+            } catch (error) {
+                return { success: false, error: error.message || 'Notion 服務暫時無法使用' };
+            }`;
 
         case 'finance_stock':
             return `// 需要 ALPHA_VANTAGE_API_KEY 或 Yahoo Finance
-            const stockRes = await fetch(
-                \`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=\${args.symbol}&apikey=\${env.ALPHA_VANTAGE_API_KEY}\`
-            );
-            const stockData = await stockRes.json();
-            return {
-                symbol: args.symbol,
-                price: parseFloat(stockData['Global Quote']['05. price']),
-                change: stockData['Global Quote']['09. change'],
-                changePercent: stockData['Global Quote']['10. change percent']
-            };`;
+            if (!env.ALPHA_VANTAGE_API_KEY) {
+                return { success: false, error: '尚未設定 ALPHA_VANTAGE_API_KEY' };
+            }
+            try {
+                const stockRes = await fetch(
+                    \`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=\${args.symbol}&apikey=\${env.ALPHA_VANTAGE_API_KEY}\`
+                );
+                const stockData = await stockRes.json();
+                const quote = stockData['Global Quote'];
+                if (!stockRes.ok || !quote) {
+                    return { success: false, error: stockData.message || '股票查詢失敗' };
+                }
+                return {
+                    success: true,
+                    symbol: args.symbol,
+                    price: parseFloat(quote['05. price'] || '0'),
+                    change: quote['09. change'],
+                    changePercent: quote['10. change percent']
+                };
+            } catch (error) {
+                return { success: false, error: error.message || '股票查詢服務暂时無法使用' };
+            }`;
 
         case 'finance_crypto':
             return `// CoinGecko API（免費）
@@ -328,8 +416,12 @@ function generateCaseBody(tool) {
             };`;
 
         default:
-            return `// TODO: 實作 ${tool.name}
-            return { success: true, args };`;
+            return `// 尚未支援於 Worker 環境: ${tool.name}
+            return {
+                success: false,
+                error: '此工具尚未實作於 Worker 環境',
+                tool: '${tool.name}'
+            };`;
     }
 }
 

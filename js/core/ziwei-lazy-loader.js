@@ -42,16 +42,18 @@ class ZiweiLazyLoader {
         try {
             const result = await ziweiClient.analyzeBirth(characterId);
             
+            const chart = result.chart || {};
+            const runtime = result.runtime || {};
             const newCache = await ZiweiCacheDB.create({
                 character_id: characterId,
                 analysis_date: today,
                 analysis_type: 'daily',
-                chart_data: result.chart,
-                fortune_summary: result.fortune_summary,
-                sihua: result.runtime?.sihua,
-                liu_nian_temple: result.runtime?.liu_nian?.temple,
-                liu_yue_temple: result.runtime?.liu_yue?.temple,
-                liu_ri_temple: result.runtime?.liu_ri?.temple,
+                chart_data: chart,
+                fortune_summary: result.fortune_summary || '',
+                sihua: chart.sihua || runtime.sihua || {},
+                liu_nian_temple: runtime.liu_nian_temple,
+                liu_yue_temple: runtime.liu_yue_temple,
+                liu_ri_temple: runtime.liu_ri_temple,
                 events: result.events || [],
                 expires_at: this.getTomorrowMidnight()
             });

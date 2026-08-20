@@ -192,7 +192,15 @@ async function generateCommentReply(container, post, commentText) {
     const context = await buildAppContext({ characterId });
     const systemPrompt = context.systemPrompt || '你是一位專業的社群媒體使用者，擅長撰寫評論回覆。請使用繁體中文撰寫。輸出格式為 JSON: {"reply": "回覆內容"}';
     const prompt = `${context.systemPrompt}\n\n針對以下貼文和評論生成一則回覆：\n\n貼文: ${post.caption}\n評論: ${commentText}\n\n要求：\n1. 符合角色性格\n2. 簡短自然、口語化\n3. 10-30 字\n\n輸出 JSON 格式。`;
-    const result = await callAPIWithMessages(systemPrompt, prompt, 0.9);
+    // 在生成回覆範例時寫入記憶
+    if (typeof saveInteractionMemory === 'function') {
+        try {
+            const reply = parsed?.reply || '';
+            saveInteractionMemory({ type: 'commentReply', postId: post.id, reply, timestamp: Date.now() });
+        } catch (e) {
+            console.warn('[Instagram] 互動寫入失敗', e);
+        }
+    }
     let parsed = null;
     try { parsed = JSON.parse(result); } catch (e) { const match = result.match(/\{[\s\S]*\}/); if (match) parsed = JSON.parse(match[0]); }
     return parsed?.reply || '';
@@ -347,7 +355,20 @@ async function bindPostInteractions(article, post) {
             heartOverlay.classList.add('active');
         }
     };
-    likeBtn.addEventListener('click', () => toggleLike(false));
+    // 針對 Like 動作寫入互動記錄
+        if (typeof saveInteractionMemory === 'function') {
+            try {
+                const likesInfo = {
+                    type: 'like',
+                    postId: article.dataset.postId,
+                    liked: post.liked,
+                    timestamp: Date.now()
+                };
+                saveInteractionMemory(likesInfo);
+            } catch (e) {
+                console.warn('[Instagram] Like 互動寫入失敗', e);
+            }
+        }
     image.addEventListener('dblclick', () => {
         if (!post.liked) toggleLike(true);
         else {
@@ -387,6 +408,97 @@ async function renderFeed(container) {
     if (displayPosts.length === 0) displayPosts.push.apply(displayPosts, postsData);
     feedEl.innerHTML = '';
     displayPosts.forEach(post => feedEl.appendChild(createPostElement(post)));
+}
+
+async function renderTabContent(container, tab) {
+    const feed = container.querySelector('#feed');
+    const stories = container.querySelector('.stories');
+    if (!feed) return;
+
+    // 清空並重置狀態
+    feed.innerHTML = '';
+    if (stories) stories.style.display = tab === 'home' ? 'flex' : 'none';
+
+    switch (tab) {
+        case 'home':
+            await renderFeed(container);
+            break;
+        case 'search':
+            renderSearch(feed);
+            break;
+        case 'profile':
+            await renderProfile(feed);
+            break;
+        case 'reels':
+        case 'shop':
+            renderComingSoon(feed, tab);
+            break;
+    }
+}
+
+function renderSearch(container) {
+    container.innerHTML = `
+        <div class="search-container">
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="搜尋" readonly>
+            </div>
+            <div class="search-grid">
+                ${Array.from({ length: 12 }).map((_, i) => `
+                    <div class="grid-item">
+                        <img src="https://images.unsplash.com/photo-${1500000000000 + i * 1000}?auto=format&fit=crop&w=300&q=60" alt="search result">
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `;
+}
+
+async function renderProfile(container) {
+    const characters = await CharactersDB.getAll();
+    const userPosts = await getUserPosts();
+    
+    container.innerHTML = `
+        <div class="profile-container">
+            <header class="profile-header">
+                <div class="profile-avatar">
+                    <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=200&q=60" alt="User">
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-item"><strong>${userPosts.length}</strong><span>貼文</span></div>
+                    <div class="stat-item"><strong>${Math.floor(Math.random() * 1000)}</strong><span>粉絲</span></div>
+                    <div class="stat-item"><strong>${Math.floor(Math.random() * 1000)}</strong><span>追蹤中</span></div>
+                </div>
+            </header>
+            <div class="profile-info">
+                <strong>User</strong>
+                <p>AI 角色互動平台探索者 🚀</p>
+            </div>
+            <div class="profile-tabs">
+                <button class="active"><i class="fa-solid fa-grid-cells"></i></button>
+                <button><i class="fa-solid fa-clapperboard"></i></button>
+                <button><i class="fa-regular fa-id-card"></i></button>
+            </div>
+            <div class="profile-grid">
+                ${userPosts.length > 0 ? userPosts.map(post => `
+                    <div class="grid-item">
+                        <img src="${post.image}" alt="user post">
+                    </div>
+                `).join('') : '<div class="empty-msg">尚無貼文</div>'}
+            </div>
+        </div>
+    `;
+}
+
+function renderComingSoon(container, tab) {
+    const names = { reels: 'Reels', shop: '商店' };
+    container.innerHTML = `
+        <div class="coming-soon">
+            <i class="fa-solid fa-hourglass-half"></i>
+            <p>${names[tab]} 功能開發中</p>
+            <span>敬請期待下一版本更新</span>
+        </div>
+    `;
 }
 
 async function renderInstagram(params) {
@@ -434,13 +546,17 @@ async function renderInstagram(params) {
     container.querySelector('#back-btn').onclick = () => Router.back();
     container.querySelector('#ai-generate-posts-btn').onclick = () => generateAIPosts(container);
     container.querySelector('#ai-generate-story-btn').onclick = () => generateAIStories(container);
+    
     const navButtons = container.querySelectorAll('.bottom-nav .nav-btn');
     navButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
+        btn.addEventListener('click', async () => {
+            const tab = btn.dataset.tab;
             navButtons.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
+            await renderTabContent(container, tab);
         });
     });
+
     await renderStories(container);
     await renderFeed(container);
     return { element: container, cleanup: null };
