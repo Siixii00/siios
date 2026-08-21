@@ -1,149 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-08-21T10:31:26.779387",
+    "last_updated": "2026-08-21T11:27:03.834268",
     "total_items": 61
   },
   "content": {
     "tech": [
       {
+        "title": "DeepSeek-v4-flash-vision-exp",
+        "url": "https://api-docs.deepseek.com/guides/vision/",
+        "source": "Hacker News",
+        "score": 88
+      },
+      {
         "title": "The Lost Treasure of Sid Meier's Pirates",
         "url": "https://remapradio.com/articles/the-lost-treasure-of-sid-meiers-pirates/",
         "source": "Hacker News",
-        "score": 92
-      },
-      {
-        "title": "We Rebuilt the Linux MicroVM Stack on Apple Silicon",
-        "url": "https://encore.dev/blog/firecracker-apple-silicon",
-        "source": "Hacker News",
-        "score": 75
+        "score": 112
       },
       {
         "title": "Small, native web tricks worth remembering",
         "url": "https://htmlcat.net/",
         "source": "Hacker News",
-        "score": 17
+        "score": 43
+      },
+      {
+        "title": "We Rebuilt the Linux MicroVM Stack on Apple Silicon",
+        "url": "https://encore.dev/blog/firecracker-apple-silicon",
+        "source": "Hacker News",
+        "score": 86
       },
       {
         "title": "The August 17 outage",
         "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
         "source": "Hacker News",
-        "score": 536
+        "score": 552
       },
       {
-        "title": "The case against a C alternative (2022)",
-        "url": "https://c3.handmade.network/blog/p/8486-the_case_against_a_c_alternative",
+        "title": "Flat Chair by Sara Paculdo",
+        "url": "https://www.toxel.com/tech/2026/08/07/flat-chair-by-sara-paculdo/",
         "source": "Hacker News",
-        "score": 32
+        "score": 23
       },
       {
         "title": "I like 'em thick: an apology to my English teachers",
         "url": "https://www.experimental-history.com/p/i-like-em-thick",
         "source": "Hacker News",
-        "score": 736
+        "score": 753
+      },
+      {
+        "title": "The case against a C alternative (2022)",
+        "url": "https://c3.handmade.network/blog/p/8486-the_case_against_a_c_alternative",
+        "source": "Hacker News",
+        "score": 45
       },
       {
         "title": "HTML Can Do That",
         "url": "https://chrisburnell.com/html-can-do-that/",
         "source": "Hacker News",
-        "score": 823
+        "score": 846
       },
       {
         "title": "Malicious Rust crate Arrayref runs a build-time payload",
         "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
         "source": "Hacker News",
-        "score": 504
+        "score": 511
       },
       {
         "title": "Ox Alpha",
         "url": "https://openrouter.ai/stealth/ox-alpha",
         "source": "Hacker News",
-        "score": 162
-      },
-      {
-        "title": "Flat Chair by Sara Paculdo",
-        "url": "https://www.toxel.com/tech/2026/08/07/flat-chair-by-sara-paculdo/",
-        "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "I should have loved biology (2020)",
-        "url": "https://jsomers.net/i-should-have-loved-biology/",
-        "source": "Hacker News",
-        "score": 284
+        "score": 175
       },
       {
         "title": "The Religious Experience of Philip K. Dick by R. Crumb (1986)",
         "url": "https://philipdick.com/resources/miscellaneous/the-religious-experience-of-philip-k-dick-by-r-crumb-from-weirdo-17/",
         "source": "Hacker News",
-        "score": 41
+        "score": 47
+      },
+      {
+        "title": "I should have loved biology (2020)",
+        "url": "https://jsomers.net/i-should-have-loved-biology/",
+        "source": "Hacker News",
+        "score": 292
       },
       {
         "title": "Japan tried to build an operating system for the world, the US intervened",
         "url": "https://www.xda-developers.com/japan-tried-build-operating-system-entire-world-us-government-intervened/",
         "source": "Hacker News",
-        "score": 174
+        "score": 212
       },
       {
-        "title": "Why aren't smart people happier? (2022)",
-        "url": "https://www.experimental-history.com/p/why-arent-smart-people-happier",
+        "title": "Micron announces $10B research hub in Boise",
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Unveils-Micron-Research-Labs-a-U-S--Based-Long-Horizon-Innovation-Hub-to-Shape-the-Future-of-Memory-and-AI/default.aspx",
         "source": "Hacker News",
-        "score": 187
-      },
-      {
-        "title": "Show HN: Huzzah – a novel approach to coding with AI",
-        "url": "https://www.danielvaughn.dev/posts/huzzah/",
-        "source": "Hacker News",
-        "score": 316
+        "score": 32
       }
     ],
     "ai": [
       {
-        "title": "The case against a C alternative (2022)",
-        "url": "https://c3.handmade.network/blog/p/8486-the_case_against_a_c_alternative",
-        "source": "Hacker News AI",
-        "score": 32
-      },
-      {
         "title": "Flat Chair by Sara Paculdo",
         "url": "https://www.toxel.com/tech/2026/08/07/flat-chair-by-sara-paculdo/",
         "source": "Hacker News AI",
-        "score": 13
+        "score": 23
+      },
+      {
+        "title": "The case against a C alternative (2022)",
+        "url": "https://c3.handmade.network/blog/p/8486-the_case_against_a_c_alternative",
+        "source": "Hacker News AI",
+        "score": 45
       },
       {
         "title": "Show HN: Huzzah – a novel approach to coding with AI",
         "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News AI",
-        "score": 316
-      },
-      {
-        "title": "Captain Zilog",
-        "url": "https://www.zilog.com/captain_zilog/",
-        "source": "Hacker News AI",
-        "score": 59
+        "score": 325
       },
       {
         "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News AI",
-        "score": 260
+        "score": 263
+      },
+      {
+        "title": "Captain Zilog",
+        "url": "https://www.zilog.com/captain_zilog/",
+        "source": "Hacker News AI",
+        "score": 60
       },
       {
         "title": "Anti-AI fonts are useless and harmful",
         "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
         "source": "Hacker News AI",
-        "score": 170
+        "score": 174
       },
       {
         "title": "Codex on AWS bedrock bug causing 10x charges",
         "url": "https://github.com/openai/codex/issues/37674",
         "source": "Hacker News AI",
-        "score": 133
+        "score": 136
       },
       {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.gl/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 336
+        "score": 350
+      },
+      {
+        "title": "Hacking with Claude on a $27 smart watch",
+        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
+        "source": "Hacker News AI",
+        "score": 98
       },
       {
         "title": "Show HN: Argentic – An L402 Lightning toll booth for AI scraping agents",
@@ -152,22 +158,16 @@
         "score": 7
       },
       {
-        "title": "Hacking with Claude on a $27 smart watch",
-        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
-        "source": "Hacker News AI",
-        "score": 97
-      },
-      {
-        "title": "The smell of rain: how Aussie scientists invented a new word in 1964",
-        "url": "https://www.csiro.au/en/news/All/Articles/2015/March/the-smell-of-rain-how-our-scientists-invented-a-new-word",
-        "source": "Hacker News AI",
-        "score": 8
-      },
-      {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 555
+        "score": 556
+      },
+      {
+        "title": "Early-life stress leaves a 'scar' inside brain cells",
+        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
+        "source": "Hacker News AI",
+        "score": 38
       }
     ],
     "news": [
@@ -202,12 +202,17 @@
         "source": "BBC World"
       },
       {
-        "title": "Gandhi's handwritten notes on life sold for $1.69m at Indian auction",
-        "url": "https://www.bbc.co.uk/news/articles/c4gdn2vmgvwo?at_medium=RSS&at_campaign=rss",
+        "title": "Bodies of two hikers missing for decades found after Swiss glacier melts",
+        "url": "https://www.bbc.co.uk/news/articles/cd9w1jwdkkjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " I rate both Sennheiser Momentum 4 and 5 Bluetooth headphones – but in 2026 there's only one I'd buy ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/i-rate-both-sennheiser-momentum-4-and-5-bluetooth-headphones-but-in-2026-theres-only-one-id-buy",
+        "source": "Creative Bloq"
+      },
       {
         "title": " McDonald's SpongeBob x One Piece collab is as bonkers as it sounds ",
         "url": "https://www.creativebloq.com/design/advertising/mcdonalds-spongebob-x-one-piece-collab-is-as-bonkers-as-it-sounds",
@@ -231,11 +236,6 @@
       {
         "title": " There's nothing fishy about these protein bars, honestly ",
         "url": "https://www.creativebloq.com/design/packaging-design/theres-nothing-fishy-about-these-protein-bars-honestly",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " 4 of my top-rated budget earphones are on sale right now! ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/4-of-my-top-rated-budget-earphones-are-on-sale-right-now",
         "source": "Creative Bloq"
       }
     ],
