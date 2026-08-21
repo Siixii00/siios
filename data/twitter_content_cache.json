@@ -1,45 +1,57 @@
 {
   "metadata": {
-    "last_updated": "2026-08-21T17:29:52.115818",
-    "total_items": 59
+    "last_updated": "2026-08-21T18:37:30.871961",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
+        "title": "Kobo can run apps now",
+        "url": "https://bandarlabs.github.io/Cobalt/",
+        "source": "Hacker News",
+        "score": 113
+      },
+      {
         "title": "Kagi added a setting for removing paywalled links from search results",
         "url": "https://kagi.com/changelog#11296",
         "source": "Hacker News",
-        "score": 628
-      },
-      {
-        "title": "AI Boosted Homework Scores by 18% – Then Exam Scores Dropped 20%, Study Shows",
-        "url": "https://canews24.online/?p=71",
-        "source": "Hacker News",
-        "score": 135
-      },
-      {
-        "title": "DeepSeek-v4-flash-vision-exp",
-        "url": "https://api-docs.deepseek.com/guides/vision/",
-        "source": "Hacker News",
-        "score": 368
-      },
-      {
-        "title": "I Just Want to Search",
-        "url": "https://www.0xsid.com/blog/just-want-to-search",
-        "source": "Hacker News",
-        "score": 39
+        "score": 746
       },
       {
         "title": "Felony Bench",
         "url": "https://www.felonybench.com/",
         "source": "Hacker News",
-        "score": 72
+        "score": 158
       },
       {
-        "title": "I accidentally logged phone calls to military bases",
+        "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
         "url": "https://lina.sh/blog/hijacking-e164-arpa",
         "source": "Hacker News",
-        "score": 192
+        "score": 244
+      },
+      {
+        "title": "DeepSeek-v4-flash-vision-exp",
+        "url": "https://api-docs.deepseek.com/guides/vision/",
+        "source": "Hacker News",
+        "score": 387
+      },
+      {
+        "title": "AI boosted homework scores, then exam scores dropped: study",
+        "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
+        "source": "Hacker News",
+        "score": 58
+      },
+      {
+        "title": "Rebuilding our Electron meeting-recording engine in Swift",
+        "url": "https://circleback.ai/blog/how-we-rebuilt-our-electron-recording-engine-in-swift",
+        "source": "Hacker News",
+        "score": 22
+      },
+      {
+        "title": "How we made a text-to-speech model respond in sub-50 ms",
+        "url": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/",
+        "source": "Hacker News",
+        "score": 30
       },
       {
         "title": "LiteLLM (YC W23) Is Hiring – Rust / Performance Engineers",
@@ -48,60 +60,48 @@
         "score": 1
       },
       {
-        "title": "WPD won't replace stolen Flock cameras, citing public trust",
-        "url": "https://www.winonapost.com/news/wpd-wont-replace-stolen-flock-cameras-citing-public-trust/article_06a67859-2d97-414b-aa8f-d8751ad214bb.html",
-        "source": "Hacker News",
-        "score": 70
-      },
-      {
-        "title": "Kobo can run apps now",
-        "url": "https://bandarlabs.github.io/Cobalt/",
-        "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "Omacom Foundation Launches with $8M",
-        "url": "https://omarchy.org/news/2026/08/omacom-foundation-launches-with-8-million/",
-        "source": "Hacker News",
-        "score": 99
-      },
-      {
-        "title": "We are living in a version of the future out of J.G. Ballard or William Gibson",
+        "title": "New Worlds: We are living in the future of J.G. Ballard or William Gibson",
         "url": "https://precastreinforced.co.uk/2026/08/16/new-worlds/",
         "source": "Hacker News",
-        "score": 107
+        "score": 150
       },
       {
-        "title": "Grand jury declines to indict Ohio man charged with destroying Flock camera",
-        "url": "https://san.com/cc/grand-jury-declines-to-indict-ohio-man-charged-with-destroying-flock-camera/",
+        "title": "I ran Photoshop on a £0.60 computer chip",
+        "url": "https://pointinthecloud.com/2026-08-19-144600.html",
         "source": "Hacker News",
-        "score": 497
+        "score": 21
+      },
+      {
+        "title": "Quantifying the honey bee dance floor",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0341456",
+        "source": "Hacker News",
+        "score": 12
       },
       {
         "title": "What happens when a GPU reads memory",
         "url": "https://blog.doubleword.ai/what-happens-when-a-gpu-reads-memory",
         "source": "Hacker News",
-        "score": 13
+        "score": 37
       },
       {
-        "title": "What We Lost When Search Stopped Making Us Think",
-        "url": "https://blog.8ball.space/what-we-lost-when-search/",
+        "title": "Kodak's \"pre-invented\" lunar orbiter camera; or, the fate of SAMOS readout",
+        "url": "https://invertingvision.com/2026/08/10/kodaks-pre-invented-lunar-orbiter-camera-or-the-fate-of-samos-readout/",
         "source": "Hacker News",
-        "score": 70
+        "score": 35
       },
       {
-        "title": "Radiation damage to Hubble has been 4.3 years out of phase with the Solar cycle",
-        "url": "https://arxiv.org/abs/2608.18214",
+        "title": "Galactic Compass 2: now with new augmented reality mode",
+        "url": "https://interconnected.org/home/2026/08/21/galactic",
         "source": "Hacker News",
-        "score": 71
+        "score": 6
       }
     ],
     "ai": [
       {
-        "title": "AI Boosted Homework Scores by 18% – Then Exam Scores Dropped 20%, Study Shows",
-        "url": "https://canews24.online/?p=71",
+        "title": "AI boosted homework scores, then exam scores dropped: study",
+        "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News AI",
-        "score": 135
+        "score": 58
       },
       {
         "title": "LiteLLM (YC W23) Is Hiring – Rust / Performance Engineers",
@@ -110,46 +110,52 @@
         "score": 1
       },
       {
-        "title": "A self hosted AI software factory",
-        "url": "https://blog.jakesaunders.dev/building-an-almost-fully-self-hosted-sandboxed-agentic-software-factory/",
-        "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "AI companies destroy physical books – let's scan rare books before it's too late",
-        "url": "https://annas-archive.gl/blog/physical-destruction.html",
-        "source": "Hacker News AI",
-        "score": 386
-      },
-      {
         "title": "Does whispering to agents in docs help?",
         "url": "https://passo.uno/if-you-are-an-agent-read-this/",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 19
+      },
+      {
+        "title": "I'm becoming AI-blind",
+        "url": "https://cymerys.com/w/im-becoming-ai-blind",
+        "source": "Hacker News AI",
+        "score": 117
+      },
+      {
+        "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
+        "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
+        "source": "Hacker News AI",
+        "score": 79
+      },
+      {
+        "title": "LLMs are proof that Unix won",
+        "url": "https://bastian.rieck.me/blog/2026/unix/",
+        "source": "Hacker News AI",
+        "score": 13
       },
       {
         "title": "Show HN: Proliferate- open-source, self-hostable Codex for any coding agent",
         "url": "https://github.com/proliferate-ai/proliferate",
         "source": "Hacker News AI",
+        "score": 18
+      },
+      {
+        "title": "AI companies destroy physical books – let's scan rare books before it's too late",
+        "url": "https://annas-archive.gl/blog/physical-destruction.html",
+        "source": "Hacker News AI",
+        "score": 424
+      },
+      {
+        "title": "Show HN: Declarative-forms – await an object the way prompt() awaits a string",
+        "url": "https://wolfoo2931.github.io/declarative-forms/",
+        "source": "Hacker News AI",
         "score": 5
       },
       {
         "title": "Flat Chair by Sara Paculdo",
-        "url": "https://www.toxel.com/tech/2026/08/07/flat-chair-by-sara-paculdo/",
+        "url": "https://paculdo.com/innovative-housewares-inside-out-design-oliso/",
         "source": "Hacker News AI",
         "score": 102
-      },
-      {
-        "title": "The Prague of Deus Ex: Mankind Divided",
-        "url": "https://www.killscreen.com/disjointed-prague-deus-ex-mankind-divided/",
-        "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Claudette: Make Claude Stop Talking Like a BuzzFeed Article",
-        "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
-        "source": "Hacker News AI",
-        "score": 73
       }
     ],
     "news": [
@@ -159,13 +165,18 @@
         "source": "BBC World"
       },
       {
-        "title": "Rosenberg: Shortage of petrol but not patriotism as Russians feel growing impact of war",
-        "url": "https://www.bbc.co.uk/news/articles/c4gknzgje7go?at_medium=RSS&at_campaign=rss",
+        "title": "Russian double-tap drone strike kills 14 in Ukrainian mall, officials say",
+        "url": "https://www.bbc.co.uk/news/articles/c39egw7nmk2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Hong Kong's Tiananmen activists guilty in national security trial",
         "url": "https://www.bbc.co.uk/news/articles/c1l10mdrld5o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "UK, Canada and Australia condemn Israel for refusing criminal probe into aid worker killings in Gaza",
+        "url": "https://www.bbc.co.uk/news/articles/cvgl2pe09eno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -179,13 +190,8 @@
         "source": "BBC World"
       },
       {
-        "title": "UK, Canada and Australia condemn Israel for refusing criminal probe into aid worker killings in Gaza",
-        "url": "https://www.bbc.co.uk/news/articles/cvgl2pe09eno?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Germany investigates Russia links to weapons cache discovered in woods, reports say",
-        "url": "https://www.bbc.co.uk/news/articles/cp9edjpvplpo?at_medium=RSS&at_campaign=rss",
+        "title": "Tupac murder accused told police in 2008 his nephew fired fatal shots",
+        "url": "https://www.bbc.co.uk/news/articles/cly57kzgr0ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -265,6 +271,21 @@
     ],
     "gaming": [
       {
+        "title": "Fallout Meets Fable in the Perfect Game Pass Weekend Binge",
+        "url": "https://www.polygon.com/atomfall-game-pass-fallout-bioshock-fable/",
+        "source": "Polygon"
+      },
+      {
+        "title": "HBO Reveals Cast for The Pitt Season 3 in First Trailer",
+        "url": "https://www.polygon.com/the-pitt-season-3-trailer-release-date-2027/",
+        "source": "Polygon"
+      },
+      {
+        "title": "A 16-Year-Old Canon DSLR Now Runs Doom, Somehow",
+        "url": "https://www.polygon.com/doom-canon-dslr-550d-magic-lantern-port/",
+        "source": "Polygon"
+      },
+      {
         "title": "Naughty Dog’s New Game ‘Intergalactic’ Adds Beloved Last of Us and Uncharted Vet",
         "url": "https://www.polygon.com/naughty-dog-intergalactic-the-heretic-prophet-robert-atkins-downes-casting/",
         "source": "Polygon"
@@ -282,21 +303,6 @@
       {
         "title": "Ms. Marvel Is Returning for Official Avengers: Doomsday Release Coming Aug. 27",
         "url": "https://www.polygon.com/avengers-doomsday-official-podcast-iman-vellani-ms-marvel/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GTA 6 Leaks: Take-Two Goes After Microsoft, Discord in New Legal Action",
-        "url": "https://www.polygon.com/gta-6-leaks-microsoft-discord-subpoenas-rockstar-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "What time does The Duskbloods network test start in your time zone?",
-        "url": "https://www.polygon.com/duskbloods-network-test-sign-up-schedule-dates-times/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Duskbloods Network Test on Switch 2 Is Already a Flop",
-        "url": "https://www.polygon.com/duskbloods-fromsoftware-first-network-test-closed-server-issues/",
         "source": "Polygon"
       }
     ],
