@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-21T22:25:45.667285",
-    "total_items": 59
+    "last_updated": "2026-08-21T23:25:01.702844",
+    "total_items": 58
   },
   "content": {
     "tech": [
@@ -9,49 +9,61 @@
         "title": "Kobo can run apps now",
         "url": "https://bandarlabs.github.io/Cobalt/",
         "source": "Hacker News",
-        "score": 343
+        "score": 371
       },
       {
         "title": "Felony Bench",
         "url": "https://www.felonybench.com/",
         "source": "Hacker News",
-        "score": 410
+        "score": 451
       },
       {
         "title": "Felony charges for citizen deleting phone data at US Border",
         "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
         "source": "Hacker News",
-        "score": 367
+        "score": 452
+      },
+      {
+        "title": "I own 28,000 books – here's what I've learned",
+        "url": "https://www.shelvd.org/blog/28000-books",
+        "source": "Hacker News",
+        "score": 19
       },
       {
         "title": "Scientists release biggest 2D map of the universe",
         "url": "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/",
         "source": "Hacker News",
-        "score": 101
+        "score": 121
       },
       {
         "title": "Kagi added a setting for removing paywalled links from search results",
         "url": "https://kagi.com/changelog#11296",
         "source": "Hacker News",
-        "score": 924
+        "score": 955
       },
       {
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News",
-        "score": 189
+        "score": 205
       },
       {
         "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
         "url": "https://lina.sh/blog/hijacking-e164-arpa",
         "source": "Hacker News",
-        "score": 383
+        "score": 397
       },
       {
-        "title": "Bringing the cybersecurity capabilities of Claude Mythos 5 to more defenders",
-        "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders",
+        "title": "DeepSeek-v4-flash-vision-exp",
+        "url": "https://api-docs.deepseek.com/guides/vision/",
         "source": "Hacker News",
-        "score": 38
+        "score": 443
+      },
+      {
+        "title": "How we made a text-to-speech model respond in sub-50 ms",
+        "url": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/",
+        "source": "Hacker News",
+        "score": 91
       },
       {
         "title": "SalesPatriot (YC W25) Is Hiring Forward Deployed Engineers",
@@ -60,40 +72,28 @@
         "score": 1
       },
       {
-        "title": "DeepSeek-v4-flash-vision-exp",
-        "url": "https://api-docs.deepseek.com/guides/vision/",
-        "source": "Hacker News",
-        "score": 432
-      },
-      {
-        "title": "People of ACM – Russ Cox",
-        "url": "https://www.acm.org/articles/people-of-acm/2026/russ-cox",
-        "source": "Hacker News",
-        "score": 68
-      },
-      {
         "title": "I ran Photoshop on a £0.60 computer chip",
         "url": "https://pointinthecloud.com/2026-08-19-144600.html",
         "source": "Hacker News",
-        "score": 96
-      },
-      {
-        "title": "How we made a text-to-speech model respond in sub-50 ms",
-        "url": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/",
-        "source": "Hacker News",
-        "score": 80
+        "score": 105
       },
       {
         "title": "A look under our trunk: what's in our compute",
         "url": "https://waymo.com/blog/2026/08/look-under-our-trunk/",
         "source": "Hacker News",
-        "score": 69
+        "score": 79
       },
       {
-        "title": "What happens when a GPU reads memory",
-        "url": "https://blog.doubleword.ai/what-happens-when-a-gpu-reads-memory",
+        "title": "People of ACM – Russ Cox",
+        "url": "https://www.acm.org/articles/people-of-acm/2026/russ-cox",
         "source": "Hacker News",
-        "score": 83
+        "score": 74
+      },
+      {
+        "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
+        "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
+        "source": "Hacker News",
+        "score": 169
       }
     ],
     "ai": [
@@ -101,55 +101,49 @@
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News AI",
-        "score": 189
-      },
-      {
-        "title": "Bringing the cybersecurity capabilities of Claude Mythos 5 to more defenders",
-        "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders",
-        "source": "Hacker News AI",
-        "score": 38
+        "score": 205
       },
       {
         "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
         "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
         "source": "Hacker News AI",
-        "score": 150
-      },
-      {
-        "title": "Quick impressions: A week of using Codex more than Claude",
-        "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
-        "source": "Hacker News AI",
-        "score": 60
+        "score": 169
       },
       {
         "title": "I'm becoming AI-blind",
         "url": "https://cymerys.com/w/im-becoming-ai-blind",
         "source": "Hacker News AI",
-        "score": 205
+        "score": 229
       },
       {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.gl/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 479
+        "score": 497
       },
       {
-        "title": "Show HN: Proliferate- open-source, self-hostable Codex for any coding agent",
-        "url": "https://github.com/proliferate-ai/proliferate",
+        "title": "Quick impressions: A week of using Codex more than Claude",
+        "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
         "source": "Hacker News AI",
-        "score": 34
+        "score": 68
       },
       {
         "title": "How Thailand Resisted Colonization",
         "url": "https://worksinprogress.co/issue/how-thailand-resisted-colonization/",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 14
+      },
+      {
+        "title": "Bringing the cybersecurity capabilities of Claude Mythos 5 to more defenders",
+        "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders",
+        "source": "Hacker News AI",
+        "score": 40
       },
       {
         "title": "Flat Chair by Sara Paculdo",
         "url": "https://paculdo.com/innovative-housewares-inside-out-design-oliso/",
         "source": "Hacker News AI",
-        "score": 103
+        "score": 105
       }
     ],
     "news": [
