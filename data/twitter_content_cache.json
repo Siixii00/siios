@@ -1,164 +1,169 @@
 {
   "metadata": {
-    "last_updated": "2026-08-21T06:48:58.386239",
+    "last_updated": "2026-08-21T07:43:13.746684",
     "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "Codex on AWS bedrock bug causing 10x charges",
-        "url": "https://github.com/openai/codex/issues/37674",
+        "title": "Stop Making TUIs",
+        "url": "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/",
         "source": "Hacker News",
-        "score": 94
+        "score": 28
       },
       {
         "title": "The August 17 outage",
         "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
         "source": "Hacker News",
-        "score": 452
+        "score": 478
       },
       {
         "title": "I like 'em thick: an apology to my English teachers",
         "url": "https://www.experimental-history.com/p/i-like-em-thick",
         "source": "Hacker News",
-        "score": 676
+        "score": 697
       },
       {
         "title": "HTML Can Do That",
         "url": "https://chrisburnell.com/html-can-do-that/",
         "source": "Hacker News",
-        "score": 704
+        "score": 737
       },
       {
         "title": "The Religious Experience of Philip K. Dick by R. Crumb (1986)",
         "url": "https://philipdick.com/resources/miscellaneous/the-religious-experience-of-philip-k-dick-by-r-crumb-from-weirdo-17/",
         "source": "Hacker News",
-        "score": 12
+        "score": 21
       },
       {
         "title": "Malicious Rust crate Arrayref runs a build-time payload",
         "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
         "source": "Hacker News",
-        "score": 465
-      },
-      {
-        "title": "I should have loved biology (2020)",
-        "url": "https://jsomers.net/i-should-have-loved-biology/",
-        "source": "Hacker News",
-        "score": 250
+        "score": 477
       },
       {
         "title": "Ox Alpha",
         "url": "https://openrouter.ai/stealth/ox-alpha",
         "source": "Hacker News",
-        "score": 95
+        "score": 120
       },
       {
-        "title": "There's no such thing as a small software team anymore",
-        "url": "https://jacob.gold/posts/theres-no-such-thing-as-a-small-software-team/",
+        "title": "Version Control for Everything",
+        "url": "https://tyoverby.com/posts/version-control-for-everything-else/",
         "source": "Hacker News",
-        "score": 72
+        "score": 18
       },
       {
-        "title": "Captain Zilog",
-        "url": "https://www.zilog.com/captain_zilog/",
+        "title": "We Rebuilt the Linux MicroVM Stack on Apple Silicon",
+        "url": "https://encore.dev/blog/firecracker-apple-silicon",
         "source": "Hacker News",
-        "score": 42
+        "score": 4
+      },
+      {
+        "title": "I should have loved biology (2020)",
+        "url": "https://jsomers.net/i-should-have-loved-biology/",
+        "source": "Hacker News",
+        "score": 257
       },
       {
         "title": "Japan tried to build an operating system for the world, the US intervened",
         "url": "https://www.xda-developers.com/japan-tried-build-operating-system-entire-world-us-government-intervened/",
         "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Make a 6-Tesla-class high-temperature superconducting dipole magnet at 4.2 K",
-        "url": "https://journals.aps.org/prab/abstract/10.1103/4nhs-bkwh",
-        "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Show HN: Huzzah – a novel approach to coding with AI",
-        "url": "https://www.danielvaughn.dev/posts/huzzah/",
-        "source": "Hacker News",
-        "score": 282
+        "score": 64
       },
       {
         "title": "Why aren't smart people happier? (2022)",
         "url": "https://www.experimental-history.com/p/why-arent-smart-people-happier",
         "source": "Hacker News",
-        "score": 145
+        "score": 157
       },
       {
         "title": "CIA funding helped keep NeXT afloat in the 80s",
         "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
         "source": "Hacker News",
-        "score": 387
-      }
-    ],
-    "ai": [
-      {
-        "title": "Codex on AWS bedrock bug causing 10x charges",
-        "url": "https://github.com/openai/codex/issues/37674",
-        "source": "Hacker News AI",
-        "score": 94
+        "score": 392
       },
       {
         "title": "Captain Zilog",
         "url": "https://www.zilog.com/captain_zilog/",
+        "source": "Hacker News",
+        "score": 45
+      },
+      {
+        "title": "Launch HN: Vendo (YC S26) – Let users build features on top of your product",
+        "url": "https://github.com/runvendo/vendo",
+        "source": "Hacker News",
+        "score": 34
+      }
+    ],
+    "ai": [
+      {
+        "title": "Captain Zilog",
+        "url": "https://www.zilog.com/captain_zilog/",
         "source": "Hacker News AI",
-        "score": 42
+        "score": 45
+      },
+      {
+        "title": "Codex on AWS bedrock bug causing 10x charges",
+        "url": "https://github.com/openai/codex/issues/37674",
+        "source": "Hacker News AI",
+        "score": 124
+      },
+      {
+        "title": "Show HN: Argentic – An L402 Lightning toll booth for AI scraping agents",
+        "url": "https://Argentic.network",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "Show HN: Huzzah – a novel approach to coding with AI",
         "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News AI",
-        "score": 282
-      },
-      {
-        "title": "AI companies destroy physical books – let's scan rare books before it's too late",
-        "url": "https://annas-archive.gl/blog/physical-destruction.html",
-        "source": "Hacker News AI",
-        "score": 260
+        "score": 288
       },
       {
         "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News AI",
-        "score": 233
+        "score": 240
       },
       {
         "title": "Anti-AI fonts are useless and harmful",
         "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
         "source": "Hacker News AI",
-        "score": 146
+        "score": 151
+      },
+      {
+        "title": "AI companies destroy physical books – let's scan rare books before it's too late",
+        "url": "https://annas-archive.gl/blog/physical-destruction.html",
+        "source": "Hacker News AI",
+        "score": 285
       },
       {
         "title": "Hacking with Claude on a $27 smart watch",
         "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
         "source": "Hacker News AI",
-        "score": 92
+        "score": 93
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 543
-      },
-      {
-        "title": "Artificial Intelligence Policy",
-        "url": "https://www.law.berkeley.edu/academics/registrar/academic-rules/artificial-intelligence-policy/",
-        "source": "Hacker News AI",
-        "score": 35
+        "score": 547
       },
       {
         "title": "Early-life stress leaves a 'scar' inside brain cells",
         "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
         "source": "Hacker News AI",
-        "score": 31
+        "score": 32
       }
     ],
     "news": [
+      {
+        "title": "Israel re-establishes closed West Bank settlement, defying growing international protests",
+        "url": "https://www.bbc.co.uk/news/articles/cn7n0l4p0kzo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "UK, France, Germany, Italy and Canada condemn Israel's West Bank settlement project",
         "url": "https://www.bbc.co.uk/news/articles/c998evlgz8ko?at_medium=RSS&at_campaign=rss",
@@ -170,32 +175,32 @@
         "source": "BBC World"
       },
       {
-        "title": "El Niño set to be 'strongest in living memory', says Met Office",
-        "url": "https://www.bbc.co.uk/weather/articles/c3ekg93vjz9o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "British rapper Yung Filly to face retrial on rape charges in Australia",
-        "url": "https://www.bbc.co.uk/news/articles/cd7l1g8922jo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Why the US economy is ringing alarm bells",
-        "url": "https://www.bbc.co.uk/news/articles/c9d8z72nn02o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Hong Kong's Tiananmen activists guilty in national security trial",
         "url": "https://www.bbc.co.uk/news/articles/c1l10mdrld5o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Five missing after fire in Swiss Alpine town",
+        "url": "https://www.bbc.co.uk/news/articles/cy8e6g13497o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Bali jails Swiss tourist for insulting sacred Day of Silence",
         "url": "https://www.bbc.co.uk/news/articles/cj4kr59r28ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
+      },
+      {
+        "title": "Panama Canal to cut number of ships passing through due to El Niño",
+        "url": "https://www.bbc.co.uk/news/articles/cwyl0jkxxryo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Metal Gear Solid: Master Collection Vol. 2 review – 18 years later, MGS4 still feels like an event ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/metal-gear-solid-master-collection-vol-2-review-18-years-later-mgs4-still-feels-like-an-event",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Paramount's Golden Axe animation is an affront to the best sword and sorcery game of 1989 ",
         "url": "https://www.creativebloq.com/art/animation/paramounts-golden-axe-animation-is-an-affront-to-the-best-sword-and-sorcery-game-of-1989",
@@ -219,11 +224,6 @@
       {
         "title": " A 16-year-old girl's iPhone theme is breaking UI designers' brains ",
         "url": "https://www.creativebloq.com/web-design/ux-ui/a-16-year-old-girls-iphone-xis-breaking-ui-designers-brains",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Studio Ghibli has no plan, isn't anti-AI after all, and doesn't know what Miyazaki is up to other than that he turns up for work every day ",
-        "url": "https://www.creativebloq.com/art/animation/studio-ghibli-has-no-plan-isnt-anti-ai-after-all-and-doesnt-know-what-miyazaki-is-up-to-other-than-that-he-turns-up-for-work-every-day",
         "source": "Creative Bloq"
       }
     ],
@@ -266,6 +266,11 @@
     ],
     "gaming": [
       {
+        "title": "There Will Never Be Another Game Like Metal Gear Solid 4",
+        "url": "https://www.polygon.com/metal-gear-solid-4-master-collection-review/",
+        "source": "Polygon"
+      },
+      {
         "title": "Forget 'The Odyssey,' Anne Hathaway's Unforgettable Thriller Is Officially Streaming on HBO Max",
         "url": "https://www.polygon.com/anne-hathaway-mother-mary-best-performance-hbo-max/",
         "source": "Polygon"
@@ -293,11 +298,6 @@
       {
         "title": "'Cyberpunk: Edgerunners' Gets Official Return Date With Brutal New Trailer",
         "url": "https://www.polygon.com/cyberpunk-edgerunners-2-release-date-announced-new-trailer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "‘God of War’ TV Show Officially Recasts Its New Kratos",
-        "url": "https://www.polygon.com/dave-bautista-kratos-god-of-war-tv-series-official-recast/",
         "source": "Polygon"
       }
     ],
