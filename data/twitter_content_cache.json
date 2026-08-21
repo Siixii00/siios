@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-21T08:41:05.549304",
-    "total_items": 61
+    "last_updated": "2026-08-21T09:37:18.706342",
+    "total_items": 60
   },
   "content": {
     "tech": [
@@ -9,105 +9,135 @@
         "title": "The Lost Treasure of Sid Meier's Pirates",
         "url": "https://remapradio.com/articles/the-lost-treasure-of-sid-meiers-pirates/",
         "source": "Hacker News",
-        "score": 37
+        "score": 63
       },
       {
         "title": "We Rebuilt the Linux MicroVM Stack on Apple Silicon",
         "url": "https://encore.dev/blog/firecracker-apple-silicon",
         "source": "Hacker News",
-        "score": 37
+        "score": 57
       },
       {
         "title": "The August 17 outage",
         "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
         "source": "Hacker News",
-        "score": 495
+        "score": 520
       },
       {
         "title": "I like 'em thick: an apology to my English teachers",
         "url": "https://www.experimental-history.com/p/i-like-em-thick",
         "source": "Hacker News",
-        "score": 717
+        "score": 729
       },
       {
         "title": "HTML Can Do That",
         "url": "https://chrisburnell.com/html-can-do-that/",
         "source": "Hacker News",
-        "score": 777
+        "score": 798
       },
       {
         "title": "Version Control for Everything",
         "url": "https://tyoverby.com/posts/version-control-for-everything-else/",
         "source": "Hacker News",
-        "score": 28
+        "score": 37
       },
       {
         "title": "Malicious Rust crate Arrayref runs a build-time payload",
         "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
         "source": "Hacker News",
-        "score": 484
+        "score": 493
       },
       {
-        "title": "The Religious Experience of Philip K. Dick by R. Crumb (1986)",
-        "url": "https://philipdick.com/resources/miscellaneous/the-religious-experience-of-philip-k-dick-by-r-crumb-from-weirdo-17/",
+        "title": "The case against a C alternative (2022)",
+        "url": "https://c3.handmade.network/blog/p/8486-the_case_against_a_c_alternative",
         "source": "Hacker News",
-        "score": 29
+        "score": 19
       },
       {
         "title": "Ox Alpha",
         "url": "https://openrouter.ai/stealth/ox-alpha",
         "source": "Hacker News",
-        "score": 132
+        "score": 149
       },
       {
         "title": "I should have loved biology (2020)",
         "url": "https://jsomers.net/i-should-have-loved-biology/",
         "source": "Hacker News",
-        "score": 272
+        "score": 282
+      },
+      {
+        "title": "The Religious Experience of Philip K. Dick by R. Crumb (1986)",
+        "url": "https://philipdick.com/resources/miscellaneous/the-religious-experience-of-philip-k-dick-by-r-crumb-from-weirdo-17/",
+        "source": "Hacker News",
+        "score": 35
       },
       {
         "title": "Japan tried to build an operating system for the world, the US intervened",
         "url": "https://www.xda-developers.com/japan-tried-build-operating-system-entire-world-us-government-intervened/",
         "source": "Hacker News",
-        "score": 104
-      },
-      {
-        "title": "CIA funding helped keep NeXT afloat in the 80s",
-        "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
-        "source": "Hacker News",
-        "score": 394
+        "score": 132
       },
       {
         "title": "Why aren't smart people happier? (2022)",
         "url": "https://www.experimental-history.com/p/why-arent-smart-people-happier",
         "source": "Hacker News",
-        "score": 163
+        "score": 175
+      },
+      {
+        "title": "CIA funding helped keep NeXT afloat in the 80s",
+        "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
+        "source": "Hacker News",
+        "score": 398
       },
       {
         "title": "Launch HN: Vendo (YC S26) – Let users build features on top of your product",
         "url": "https://github.com/runvendo/vendo",
         "source": "Hacker News",
-        "score": 34
-      },
-      {
-        "title": "Show HN: Huzzah – a novel approach to coding with AI",
-        "url": "https://www.danielvaughn.dev/posts/huzzah/",
-        "source": "Hacker News",
-        "score": 301
+        "score": 36
       }
     ],
     "ai": [
       {
+        "title": "The case against a C alternative (2022)",
+        "url": "https://c3.handmade.network/blog/p/8486-the_case_against_a_c_alternative",
+        "source": "Hacker News AI",
+        "score": 19
+      },
+      {
         "title": "Show HN: Huzzah – a novel approach to coding with AI",
         "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News AI",
-        "score": 301
+        "score": 307
+      },
+      {
+        "title": "Flat Chair by Sara Paculdo",
+        "url": "https://www.toxel.com/tech/2026/08/07/flat-chair-by-sara-paculdo/",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News AI",
-        "score": 247
+        "score": 255
+      },
+      {
+        "title": "Captain Zilog",
+        "url": "https://www.zilog.com/captain_zilog/",
+        "source": "Hacker News AI",
+        "score": 53
+      },
+      {
+        "title": "Anti-AI fonts are useless and harmful",
+        "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
+        "source": "Hacker News AI",
+        "score": 163
+      },
+      {
+        "title": "Codex on AWS bedrock bug causing 10x charges",
+        "url": "https://github.com/openai/codex/issues/37674",
+        "source": "Hacker News AI",
+        "score": 132
       },
       {
         "title": "Show HN: Argentic – An L402 Lightning toll booth for AI scraping agents",
@@ -116,69 +146,28 @@
         "score": 7
       },
       {
-        "title": "Captain Zilog",
-        "url": "https://www.zilog.com/captain_zilog/",
-        "source": "Hacker News AI",
-        "score": 49
-      },
-      {
-        "title": "The case against a C alternative (2022)",
-        "url": "https://c3.handmade.network/blog/p/8486-the_case_against_a_c_alternative",
-        "source": "Hacker News AI",
-        "score": 3
-      },
-      {
-        "title": "Codex on AWS bedrock bug causing 10x charges",
-        "url": "https://github.com/openai/codex/issues/37674",
-        "source": "Hacker News AI",
-        "score": 129
-      },
-      {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.gl/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 312
-      },
-      {
-        "title": "Anti-AI fonts are useless and harmful",
-        "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
-        "source": "Hacker News AI",
-        "score": 156
+        "score": 330
       },
       {
         "title": "Hacking with Claude on a $27 smart watch",
         "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
         "source": "Hacker News AI",
-        "score": 94
-      },
-      {
-        "title": "Young Americans increasingly fear AI will take their jobs",
-        "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/",
-        "source": "Hacker News AI",
-        "score": 10
+        "score": 96
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 552
-      },
-      {
-        "title": "Early-life stress leaves a 'scar' inside brain cells",
-        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
-        "source": "Hacker News AI",
-        "score": 34
+        "score": 553
       }
     ],
     "news": [
       {
         "title": "Israel re-establishes closed West Bank settlement, defying growing international protests",
         "url": "https://www.bbc.co.uk/news/articles/cn7n0l4p0kzo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "UK, France, Germany, Italy and Canada condemn Israel's West Bank settlement project",
-        "url": "https://www.bbc.co.uk/news/articles/c998evlgz8ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -197,8 +186,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Bali jails Swiss tourist for insulting sacred Day of Silence",
-        "url": "https://www.bbc.co.uk/news/articles/cj4kr59r28ko?at_medium=RSS&at_campaign=rss",
+        "title": "Meghan could return to acting once back in UK",
+        "url": "https://www.bbc.co.uk/news/articles/c79g28zxwzdo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Pakistan ex-PM Imran Khan back in jail after hospital examination",
+        "url": "https://www.bbc.co.uk/news/articles/ckgdr9vr50po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -278,6 +272,16 @@
     ],
     "gaming": [
       {
+        "title": "Metal Gear Solid: Master Collection Vol. 2 Review Roundup: All Hail the Return of MGS4",
+        "url": "https://www.polygon.com/metal-gear-solid-master-collection-vol-2-review-roundup/",
+        "source": "Polygon"
+      },
+      {
+        "title": "8 Extremely Spoilery Questions with 'Spider-Man: Brand New Day' Star Tramell Tillman",
+        "url": "https://www.polygon.com/spider-man-brand-new-day-tramell-tillman-interview/",
+        "source": "Polygon"
+      },
+      {
         "title": "65 Years Later, the Best \"Peanuts' Linus Quote Is Still an All-Time Great Comic Strip Moment",
         "url": "https://www.polygon.com/best-linus-quote-peanuts/",
         "source": "Polygon"
@@ -300,16 +304,6 @@
       {
         "title": "Forget 'The Odyssey,' Anne Hathaway's Unforgettable Thriller Is Officially Streaming on HBO Max",
         "url": "https://www.polygon.com/anne-hathaway-mother-mary-best-performance-hbo-max/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Steam Makes Two Games Completely Free To Play Until Aug. 4",
-        "url": "https://www.polygon.com/steam-free-games-weekend-august-21-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Zelda: Ocarina of Time Mod Remakes the N64 Classic in True 3D",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-mod-nintendo-64-replaces-games-fake-3d/",
         "source": "Polygon"
       }
     ],
