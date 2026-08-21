@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-21T12:49:46.348024",
+    "last_updated": "2026-08-21T13:46:05.807059",
     "total_items": 59
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "DeepSeek-v4-flash-vision-exp",
         "url": "https://api-docs.deepseek.com/guides/vision/",
         "source": "Hacker News",
-        "score": 181
+        "score": 233
       },
       {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.pk/blog/physical-destruction.html",
         "source": "Hacker News",
-        "score": 137
+        "score": 257
       },
       {
         "title": "TigerBeetle Core System Architecture: Deconstructing Performance Engineering",
         "url": "https://ixuvo.com/blog/tigerbeetle-core-system-architecture-performance-engineering",
         "source": "Hacker News",
-        "score": 35
-      },
-      {
-        "title": "The Lost Treasure of Sid Meier's Pirates",
-        "url": "https://remapradio.com/articles/the-lost-treasure-of-sid-meiers-pirates/",
-        "source": "Hacker News",
-        "score": 146
+        "score": 61
       },
       {
         "title": "Small, native web tricks worth remembering",
         "url": "https://htmlcat.net/",
         "source": "Hacker News",
-        "score": 91
+        "score": 129
+      },
+      {
+        "title": "The Lost Treasure of Sid Meier's Pirates",
+        "url": "https://remapradio.com/articles/the-lost-treasure-of-sid-meiers-pirates/",
+        "source": "Hacker News",
+        "score": 168
       },
       {
         "title": "Kino: A high-performance Ractor web server for Ruby 4.0",
         "url": "https://github.com/yaroslav/kino",
         "source": "Hacker News",
-        "score": 15
+        "score": 30
+      },
+      {
+        "title": "Grand jury declines to indict Ohio man charged with destroying Flock camera",
+        "url": "https://san.com/cc/grand-jury-declines-to-indict-ohio-man-charged-with-destroying-flock-camera/",
+        "source": "Hacker News",
+        "score": 46
       },
       {
         "title": "We Rebuilt the Linux MicroVM Stack on Apple Silicon",
         "url": "https://encore.dev/blog/firecracker-apple-silicon",
         "source": "Hacker News",
-        "score": 110
-      },
-      {
-        "title": "The August 17 outage",
-        "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
-        "source": "Hacker News",
-        "score": 576
+        "score": 119
       },
       {
         "title": "Flat Chair by Sara Paculdo",
         "url": "https://www.toxel.com/tech/2026/08/07/flat-chair-by-sara-paculdo/",
         "source": "Hacker News",
-        "score": 52
-      },
-      {
-        "title": "I like 'em thick: an apology to my English teachers",
-        "url": "https://www.experimental-history.com/p/i-like-em-thick",
-        "source": "Hacker News",
-        "score": 781
+        "score": 73
       },
       {
         "title": "The Mystery of Dark Oxygen",
         "url": "https://www.newyorker.com/science/elements/the-mystery-of-dark-oxygen",
         "source": "Hacker News",
-        "score": 13
+        "score": 31
+      },
+      {
+        "title": "The August 17 outage",
+        "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
+        "source": "Hacker News",
+        "score": 592
+      },
+      {
+        "title": "I like 'em thick: an apology to my English teachers",
+        "url": "https://www.experimental-history.com/p/i-like-em-thick",
+        "source": "Hacker News",
+        "score": 797
       },
       {
         "title": "HTML Can Do That",
         "url": "https://chrisburnell.com/html-can-do-that/",
         "source": "Hacker News",
-        "score": 888
-      },
-      {
-        "title": "Felony charges for citizen deleting phone data at US Border",
-        "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
-        "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "Siemens PC-X (2015)",
-        "url": "https://www.geekdot.com/siemens-pc-x/",
-        "source": "Hacker News",
-        "score": 4
+        "score": 909
       },
       {
         "title": "Malicious Rust crate Arrayref runs a build-time payload",
         "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
         "source": "Hacker News",
-        "score": 518
+        "score": 524
+      },
+      {
+        "title": "Micron announces $10B research hub in Boise",
+        "url": "https://investors.micron.com/news/press-release/2026/Micron-Unveils-Micron-Research-Labs-a-U-S--Based-Long-Horizon-Innovation-Hub-to-Shape-the-Future-of-Memory-and-AI/default.aspx",
+        "source": "Hacker News",
+        "score": 72
       }
     ],
     "ai": [
@@ -101,43 +101,43 @@
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.pk/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 137
+        "score": 257
       },
       {
         "title": "Flat Chair by Sara Paculdo",
         "url": "https://www.toxel.com/tech/2026/08/07/flat-chair-by-sara-paculdo/",
         "source": "Hacker News AI",
-        "score": 52
+        "score": 73
+      },
+      {
+        "title": "I'm Becoming AI-Blind",
+        "url": "https://cymerys.com/w/im-becoming-ai-blind",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News AI",
-        "score": 267
+        "score": 276
       },
       {
         "title": "Anti-AI fonts are useless and harmful",
         "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
         "source": "Hacker News AI",
-        "score": 182
+        "score": 187
       },
       {
         "title": "Captain Zilog",
         "url": "https://www.zilog.com/captain_zilog/",
         "source": "Hacker News AI",
-        "score": 62
+        "score": 64
       },
       {
         "title": "Show HN: Huzzah – a novel approach to coding with AI",
         "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News AI",
-        "score": 337
-      },
-      {
-        "title": "Codex on AWS bedrock bug causing 10x charges",
-        "url": "https://github.com/openai/codex/issues/37674",
-        "source": "Hacker News AI",
-        "score": 139
+        "score": 341
       },
       {
         "title": "Hacking with Claude on a $27 smart watch",
@@ -146,10 +146,10 @@
         "score": 100
       },
       {
-        "title": "Bandai don't sue me please",
-        "url": "https://github.com/Irtaza2009/Hackamon",
+        "title": "Codex on AWS bedrock bug causing 10x charges",
+        "url": "https://github.com/openai/codex/issues/37674",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 141
       }
     ],
     "news": [
@@ -191,6 +191,11 @@
     ],
     "art": [
       {
+        "title": " I tested the new Galaxy Z Fold8 in a camera phone shootout against the Z Fold8 Ultra ",
+        "url": "https://www.creativebloq.com/tech/phones-tablets/i-tested-the-new-galaxy-z-fold8-in-a-camera-phone-shootout-against-the-z-fold8-ultra",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " XPPen Artist Ultra 14 review: an OLED drawing tablet that's surprisingly portable and fun ",
         "url": "https://www.creativebloq.com/art/digital-art/xppen-artist-ultra-14-review-an-oled-drawing-tablet-thats-surprisingly-portable-and-fun",
         "source": "Creative Bloq"
@@ -218,11 +223,6 @@
       {
         "title": " Paramount's Golden Axe animation is an affront to the best sword and sorcery game of 1989 ",
         "url": "https://www.creativebloq.com/art/animation/paramounts-golden-axe-animation-is-an-affront-to-the-best-sword-and-sorcery-game-of-1989",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " There's nothing fishy about these protein bars, honestly ",
-        "url": "https://www.creativebloq.com/design/packaging-design/theres-nothing-fishy-about-these-protein-bars-honestly",
         "source": "Creative Bloq"
       }
     ],
