@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-21T19:26:45.740849",
-    "total_items": 59
+    "last_updated": "2026-08-21T20:26:53.012306",
+    "total_items": 52
   },
   "content": {
     "tech": [
@@ -9,61 +9,73 @@
         "title": "Kobo can run apps now",
         "url": "https://bandarlabs.github.io/Cobalt/",
         "source": "Hacker News",
-        "score": 187
+        "score": 251
       },
       {
         "title": "Felony Bench",
         "url": "https://www.felonybench.com/",
         "source": "Hacker News",
-        "score": 222
-      },
-      {
-        "title": "Kagi added a setting for removing paywalled links from search results",
-        "url": "https://kagi.com/changelog#11296",
-        "source": "Hacker News",
-        "score": 810
-      },
-      {
-        "title": "AI boosted homework scores, then exam scores dropped: study",
-        "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
-        "source": "Hacker News",
-        "score": 98
+        "score": 304
       },
       {
         "title": "Scientists release biggest 2D map of the universe",
         "url": "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/",
         "source": "Hacker News",
-        "score": 25
+        "score": 56
+      },
+      {
+        "title": "Kagi added a setting for removing paywalled links from search results",
+        "url": "https://kagi.com/changelog#11296",
+        "source": "Hacker News",
+        "score": 854
+      },
+      {
+        "title": "AI boosted homework scores, then exam scores dropped: study",
+        "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
+        "source": "Hacker News",
+        "score": 135
       },
       {
         "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
         "url": "https://lina.sh/blog/hijacking-e164-arpa",
         "source": "Hacker News",
-        "score": 286
-      },
-      {
-        "title": "I ran Photoshop on a £0.60 computer chip",
-        "url": "https://pointinthecloud.com/2026-08-19-144600.html",
-        "source": "Hacker News",
-        "score": 48
-      },
-      {
-        "title": "DeepSeek-v4-flash-vision-exp",
-        "url": "https://api-docs.deepseek.com/guides/vision/",
-        "source": "Hacker News",
-        "score": 396
+        "score": 322
       },
       {
         "title": "Felony charges for citizen deleting phone data at US Border",
         "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
         "source": "Hacker News",
-        "score": 117
+        "score": 198
       },
       {
-        "title": "Rebuilding our Electron meeting-recording engine in Swift",
-        "url": "https://circleback.ai/blog/how-we-rebuilt-our-electron-recording-engine-in-swift",
+        "title": "Quick impressions: A week of using Codex more than Claude",
+        "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
         "source": "Hacker News",
-        "score": 33
+        "score": 8
+      },
+      {
+        "title": "People of ACM – Russ Cox",
+        "url": "https://www.acm.org/articles/people-of-acm/2026/russ-cox",
+        "source": "Hacker News",
+        "score": 34
+      },
+      {
+        "title": "A look under our trunk: what's in our compute",
+        "url": "https://waymo.com/blog/2026/08/look-under-our-trunk/",
+        "source": "Hacker News",
+        "score": 47
+      },
+      {
+        "title": "DeepSeek-v4-flash-vision-exp",
+        "url": "https://api-docs.deepseek.com/guides/vision/",
+        "source": "Hacker News",
+        "score": 408
+      },
+      {
+        "title": "How we made a text-to-speech model respond in sub-50 ms",
+        "url": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/",
+        "source": "Hacker News",
+        "score": 56
       },
       {
         "title": "LiteLLM (YC W23) Is Hiring – Rust / Performance Engineers",
@@ -72,28 +84,16 @@
         "score": 1
       },
       {
-        "title": "A look under our trunk: what's in our compute",
-        "url": "https://waymo.com/blog/2026/08/look-under-our-trunk/",
+        "title": "Bringing the cybersecurity capabilities of Claude Mythos 5 to more defenders",
+        "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders",
         "source": "Hacker News",
-        "score": 33
+        "score": 15
       },
       {
-        "title": "People of ACM – Russ Cox",
-        "url": "https://www.acm.org/articles/people-of-acm/2026/russ-cox",
+        "title": "I ran Photoshop on a £0.60 computer chip",
+        "url": "https://pointinthecloud.com/2026-08-19-144600.html",
         "source": "Hacker News",
-        "score": 17
-      },
-      {
-        "title": "How we made a text-to-speech model respond in sub-50 ms",
-        "url": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/",
-        "source": "Hacker News",
-        "score": 42
-      },
-      {
-        "title": "What happens when a GPU reads memory",
-        "url": "https://blog.doubleword.ai/what-happens-when-a-gpu-reads-memory",
-        "source": "Hacker News",
-        "score": 47
+        "score": 69
       }
     ],
     "ai": [
@@ -101,7 +101,13 @@
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News AI",
-        "score": 98
+        "score": 135
+      },
+      {
+        "title": "Quick impressions: A week of using Codex more than Claude",
+        "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
+        "source": "Hacker News AI",
+        "score": 8
       },
       {
         "title": "LiteLLM (YC W23) Is Hiring – Rust / Performance Engineers",
@@ -110,46 +116,40 @@
         "score": 1
       },
       {
-        "title": "Show HN: Proliferate- open-source, self-hostable Codex for any coding agent",
-        "url": "https://github.com/proliferate-ai/proliferate",
+        "title": "Bringing the cybersecurity capabilities of Claude Mythos 5 to more defenders",
+        "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders",
         "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "Does whispering to agents in docs help?",
-        "url": "https://passo.uno/if-you-are-an-agent-read-this/",
-        "source": "Hacker News AI",
-        "score": 26
+        "score": 15
       },
       {
         "title": "I'm becoming AI-blind",
         "url": "https://cymerys.com/w/im-becoming-ai-blind",
         "source": "Hacker News AI",
-        "score": 139
+        "score": 168
       },
       {
         "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
         "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
         "source": "Hacker News AI",
-        "score": 93
+        "score": 119
       },
       {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.gl/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 433
+        "score": 445
       },
       {
-        "title": "Show HN: Declarative-forms – await an object the way prompt() awaits a string",
-        "url": "https://wolfoo2931.github.io/declarative-forms/",
+        "title": "Does whispering to agents in docs help?",
+        "url": "https://passo.uno/if-you-are-an-agent-read-this/",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 27
       },
       {
-        "title": "Flat Chair by Sara Paculdo",
-        "url": "https://paculdo.com/innovative-housewares-inside-out-design-oliso/",
+        "title": "Show HN: Proliferate- open-source, self-hostable Codex for any coding agent",
+        "url": "https://github.com/proliferate-ai/proliferate",
         "source": "Hacker News AI",
-        "score": 102
+        "score": 31
       }
     ],
     "news": [
@@ -189,43 +189,7 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " Elevate your workspace with up to 30% off floating shelves ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/elevate-your-workspace-with-up-to-30-percent-off-floating-shelves",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " KPop Demon Hunters might have to change its name ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/kpop-demon-hunters-might-have-to-change-its-name",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Swifties calm down, not everything is a Taylor Swift Easter egg ",
-        "url": "https://www.creativebloq.com/design/branding/swifties-calm-down-not-everything-is-a-taylor-swift-easter-egg",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " I tested the new Galaxy Z Fold8 in a camera phone shootout against the Z Fold8 Ultra ",
-        "url": "https://www.creativebloq.com/tech/phones-tablets/i-tested-the-new-galaxy-z-fold8-in-a-camera-phone-shootout-against-the-z-fold8-ultra",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " XPPen Artist Ultra 14 review: an OLED drawing tablet that's surprisingly portable and fun ",
-        "url": "https://www.creativebloq.com/art/digital-art/xppen-artist-ultra-14-review-an-oled-drawing-tablet-thats-surprisingly-portable-and-fun",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " I rate both Sennheiser Momentum 4 and 5 Bluetooth headphones – but in 2026 there's only one I'd buy ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/i-rate-both-sennheiser-momentum-4-and-5-bluetooth-headphones-but-in-2026-theres-only-one-id-buy",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " McDonald's SpongeBob x One Piece collab is as bonkers as it sounds ",
-        "url": "https://www.creativebloq.com/design/advertising/mcdonalds-spongebob-x-one-piece-collab-is-as-bonkers-as-it-sounds",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "3 minutes of sprinting does something 90 minutes of exercise does not",
@@ -265,7 +229,22 @@
     ],
     "gaming": [
       {
-        "title": "HBO and James Gunn Officially Confirm New 8-Episode 'True Crime' Superman Spinoff",
+        "title": "Noomi Rapace’s Sci-Fi Thriller 'Hot Spot' Is Like 'Dune's Deranged Cousin",
+        "url": "https://www.polygon.com/hot-spot-noomi-rapace-director-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "3 Marvel Movies Definitely Missing From Disney's Official 'Avengers: Doomsday' Watchlist",
+        "url": "https://www.polygon.com/avengers-doomsday-mcu-movie-watchlist-missing/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Psychonauts Developer Double Fine Reveals Post-Xbox Comeback Plan",
+        "url": "https://www.polygon.com/double-fine-kickstarter-xbox-layoffs/",
+        "source": "Polygon"
+      },
+      {
+        "title": "HBO and James Gunn Confirm New 8-Part Action True-Crime Series Spinoff",
         "url": "https://www.polygon.com/dc-jimmy-olsen-show-people-v-gorilla-grodd-hbo-max/",
         "source": "Polygon"
       },
@@ -275,28 +254,13 @@
         "source": "Polygon"
       },
       {
-        "title": "Nintendo Goes After Switch Emulation With Aggressive New Takedowns",
+        "title": "Nintendo Just Delivered Devastating News to Emulator Users ",
         "url": "https://www.polygon.com/nintendo-emulation-take-downs-piracy/",
         "source": "Polygon"
       },
       {
         "title": "Fallout Meets Fable in the Perfect Game Pass Weekend Binge",
         "url": "https://www.polygon.com/atomfall-game-pass-fallout-bioshock-fable/",
-        "source": "Polygon"
-      },
-      {
-        "title": "HBO Reveals Cast for The Pitt Season 3 in First Trailer",
-        "url": "https://www.polygon.com/the-pitt-season-3-trailer-release-date-2027/",
-        "source": "Polygon"
-      },
-      {
-        "title": "A 16-Year-Old Canon DSLR Now Runs Doom, Somehow",
-        "url": "https://www.polygon.com/doom-canon-dslr-550d-magic-lantern-port/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Naughty Dog’s New Game ‘Intergalactic’ Adds Beloved Last of Us and Uncharted Vet",
-        "url": "https://www.polygon.com/naughty-dog-intergalactic-the-heretic-prophet-robert-atkins-downes-casting/",
         "source": "Polygon"
       }
     ],
