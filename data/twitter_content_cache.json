@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T23:26:38.660650",
-    "total_items": 56
+    "last_updated": "2026-08-21T01:20:50.258314",
+    "total_items": 52
   },
   "content": {
     "tech": [
@@ -9,151 +9,168 @@
         "title": "The August 17 outage, and the work ahead",
         "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
         "source": "Hacker News",
-        "score": 224
+        "score": 306
+      },
+      {
+        "title": "Copyright does not protect AI-generated content in EU",
+        "url": "https://mathstodon.xyz/@maxpool/117128107757895678",
+        "source": "Hacker News",
+        "score": 47
       },
       {
         "title": "Consumer Rights Wiki",
         "url": "https://consumerrights.wiki/w/Main_Page",
         "source": "Hacker News",
-        "score": 167
+        "score": 212
       },
       {
         "title": "I like 'em thick: an apology to my English teachers",
         "url": "https://www.experimental-history.com/p/i-like-em-thick",
         "source": "Hacker News",
-        "score": 506
+        "score": 553
       },
       {
         "title": "Aaron Swartz was prosecuted for scraping, while Meta does it without consequence",
         "url": "https://blog.curiousquail.com/im-upset-again-about-a-co-creator-of-rss-being-prosecuted-for-something-meta-is-doing-with-little-consequence/",
         "source": "Hacker News",
-        "score": 635
+        "score": 919
       },
       {
         "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
         "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
         "source": "Hacker News",
-        "score": 836
+        "score": 873
       },
       {
         "title": "I should have loved biology (2020)",
         "url": "https://jsomers.net/i-should-have-loved-biology/",
         "source": "Hacker News",
-        "score": 172
+        "score": 196
       },
       {
         "title": "HTML Can Do That",
         "url": "https://chrisburnell.com/html-can-do-that/",
         "source": "Hacker News",
-        "score": 523
+        "score": 562
       },
       {
         "title": "Malicious Rust crate Arrayref runs a build-time payload",
         "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
         "source": "Hacker News",
-        "score": 360
+        "score": 391
+      },
+      {
+        "title": "There's no such thing as a small software team anymore",
+        "url": "https://jacob.gold/posts/theres-no-such-thing-as-a-small-software-team/",
+        "source": "Hacker News",
+        "score": 10
       },
       {
         "title": "Show HN: Huzzah – a novel approach to coding with AI",
         "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News",
-        "score": 184
+        "score": 217
+      },
+      {
+        "title": "Stealth Model",
+        "url": "https://openrouter.ai/stealth/ox-alpha",
+        "source": "Hacker News",
+        "score": 17
       },
       {
         "title": "CIA funding helped keep NeXT afloat in the 80s",
         "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
         "source": "Hacker News",
-        "score": 302
+        "score": 329
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News",
-        "score": 470
-      },
-      {
-        "title": "SpacetimeDB: A Short Technical Review",
-        "url": "https://strn.cat/posts/spacetime/",
-        "source": "Hacker News",
-        "score": 44
+        "score": 496
       },
       {
         "title": "Why aren't smart people happier? (2022)",
         "url": "https://www.experimental-history.com/p/why-arent-smart-people-happier",
         "source": "Hacker News",
-        "score": 62
-      },
-      {
-        "title": "Linux 7.2",
-        "url": "https://www.igalia.com/2026/08/19/Linux-72-Released.html",
-        "source": "Hacker News",
-        "score": 180
-      },
-      {
-        "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
-        "url": "https://github.com/zachahn/vomit",
-        "source": "Hacker News",
-        "score": 164
+        "score": 83
       }
     ],
     "ai": [
       {
+        "title": "Copyright does not protect AI-generated content in EU",
+        "url": "https://mathstodon.xyz/@maxpool/117128107757895678",
+        "source": "Hacker News AI",
+        "score": 47
+      },
+      {
         "title": "Show HN: Huzzah – a novel approach to coding with AI",
         "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News AI",
-        "score": 184
+        "score": 217
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 470
+        "score": 496
       },
       {
         "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News AI",
-        "score": 164
+        "score": 189
       },
       {
         "title": "Anti-AI fonts are useless and harmful",
         "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
         "source": "Hacker News AI",
-        "score": 94
+        "score": 114
       },
       {
         "title": "Hacking with Claude on a $27 smart watch",
         "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
         "source": "Hacker News AI",
-        "score": 78
-      },
-      {
-        "title": "Gauguin, Descartes, Bayes: A Diurnal Golem's Brain",
-        "url": "https://dl.acm.org/doi/10.1145/3759429.3762631",
-        "source": "Hacker News AI",
-        "score": 19
+        "score": 84
       },
       {
         "title": "Early-life stress leaves a 'scar' inside brain cells",
         "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 13
+      },
+      {
+        "title": "In Which I Lose My Mind over Embeddings (HPLM Chapter 2)",
+        "url": "https://www.maayanroth.com/blog/posts/hundred-page-lm-book-chapter-2.html",
+        "source": "Hacker News AI",
+        "score": 7
+      },
+      {
+        "title": "Gauguin, Descartes, Bayes: A Diurnal Golem's Brain",
+        "url": "https://dl.acm.org/doi/10.1145/3759429.3762631",
+        "source": "Hacker News AI",
+        "score": 20
       }
     ],
     "news": [
-      {
-        "title": "US says sanctions will 'squash' Iran's economy and 'collapse' its regime",
-        "url": "https://www.bbc.co.uk/news/articles/c87n90eg0p2o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
       {
         "title": "UK, France, Germany, Italy and Canada condemn Israel's West Bank settlement project",
         "url": "https://www.bbc.co.uk/news/articles/c998evlgz8ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
+        "title": "How much could Trump's 'economic D-Day' hurt Iran? ",
+        "url": "https://www.bbc.co.uk/news/articles/cre4gdvlj9ro?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Russia 'purposefully' hit critical infrastructure in latest strikes, Kyiv mayor says",
         "url": "https://www.bbc.co.uk/news/articles/c98vzmden5yo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Trump wants to be friends with Kim - but South Korea could pay the price",
+        "url": "https://www.bbc.co.uk/news/articles/c4gj1vje8dxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -167,48 +184,12 @@
         "source": "BBC World"
       },
       {
-        "title": "Assad officer extradited to Syria on war crimes charges for first time",
-        "url": "https://www.bbc.co.uk/news/articles/cvgjdy8q766o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Giant whales move into Greenland waters as ice disappears",
-        "url": "https://www.bbc.co.uk/news/articles/cq6dn9gj7eno?at_medium=RSS&at_campaign=rss",
+        "title": "FBI arrests woman over alleged plot to bomb New York capitol building",
+        "url": "https://www.bbc.co.uk/news/articles/c5y615l2w46o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " 4 of my top-rated budget earphones are on sale right now! ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/4-of-my-top-rated-budget-earphones-are-on-sale-right-now",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Move over Duolingo, there’s a new brand mascot in town ",
-        "url": "https://www.creativebloq.com/design/branding/move-over-duolingo-theres-a-new-brand-mascot-in-town",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " A 16-year-old girl's iPhone theme is breaking UI designers' brains ",
-        "url": "https://www.creativebloq.com/web-design/ux-ui/a-16-year-old-girls-iphone-xis-breaking-ui-designers-brains",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Studio Ghibli has no plan, isn't anti-AI after all, and doesn't know what Miyazaki is up to other than that he turns up for work every day ",
-        "url": "https://www.creativebloq.com/art/animation/studio-ghibli-has-no-plan-isnt-anti-ai-after-all-and-doesnt-know-what-miyazaki-is-up-to-other-than-that-he-turns-up-for-work-every-day",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Help! I'm instantly addicted to my new under desk treadmill ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/help-im-instantly-addicted-to-my-new-under-the-desk-treadmill",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The new ACOTAR book covers are giving 2016 ",
-        "url": "https://www.creativebloq.com/entertainment/books/the-new-acotar-book-covers-are-giving-2016",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "The “Asian water tower” is losing 24 billion tonnes of groundwater every year",
@@ -248,38 +229,38 @@
     ],
     "gaming": [
       {
+        "title": "Zelda: Ocarina of Time Mod Remakes the N64 Classic in True 3D",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-mod-nintendo-64-replaces-games-fake-3d/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Netflix’s Near-Perfect Revenge Thriller Blue Eye Samurai Is Getting a Third Season",
+        "url": "https://www.polygon.com/blue-eye-samurai-season-3-announced/",
+        "source": "Polygon"
+      },
+      {
+        "title": "One Piece Returns to Netflix With A New Special and a New Look",
+        "url": "https://www.polygon.com/lego-one-piece-sets-sail-with-charming-new-trailer/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Cyberpunk: Edgerunners' Gets Official Return Date With Brutal New Trailer",
+        "url": "https://www.polygon.com/cyberpunk-edgerunners-2-release-date-announced-new-trailer/",
+        "source": "Polygon"
+      },
+      {
+        "title": "‘God of War’ TV Show Officially Recasts Its New Kratos",
+        "url": "https://www.polygon.com/dave-bautista-kratos-god-of-war-tv-series-official-recast/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Insidious: Out of the Further' Post-Credits Scene Explained: How It Sets Up a Sequel",
+        "url": "https://www.polygon.com/insidious-out-of-the-further-post-credits-scene-explained-spoilers/",
+        "source": "Polygon"
+      },
+      {
         "title": "US Army Is Officially Using 'GTA 6' Time as a Reenlistment Incentive",
         "url": "https://www.polygon.com/gta-6-us-army-reenlistment-rockstar-games-release-date/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Star of Unfairly Canceled Masterpiece Marvel Series Calls Out Disney: Optics Are Obvious",
-        "url": "https://www.polygon.com/marvel-wonder-man-blade-canceled-yahya-abdul-mateen-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All match overrides and console locations in Fortnite Chapter 7 Season 4",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-match-overrides-console-locations-c7s4/",
-        "source": "Polygon"
-      },
-      {
-        "title": "D&D Is Playtesting Baldur’s Gate 3’s Nastiest Transformation on Tabletop",
-        "url": "https://www.polygon.com/dnd-baldurs-gate-3-mind-flayer-tabletop-transformation/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Riot Games Officially Confirms End of an Era for League of Legends",
-        "url": "https://www.polygon.com/riot-games-cancels-2xko-league-of-legends/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Classic Nintendo Games that Are Completely Unplayable Today",
-        "url": "https://www.polygon.com/unplayable-classic-nintendo-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Most Completely Bonkers Sci-Fi Action Thriller of 2026 Officially Releases in 3 Weeks",
-        "url": "https://www.polygon.com/hope-us-release-date-sci-fi-movie/",
         "source": "Polygon"
       }
     ],
