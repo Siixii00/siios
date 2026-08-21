@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-21T11:27:03.834268",
-    "total_items": 61
+    "last_updated": "2026-08-21T12:49:46.348024",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,165 +9,147 @@
         "title": "DeepSeek-v4-flash-vision-exp",
         "url": "https://api-docs.deepseek.com/guides/vision/",
         "source": "Hacker News",
-        "score": 88
+        "score": 181
+      },
+      {
+        "title": "AI companies destroy physical books – let's scan rare books before it's too late",
+        "url": "https://annas-archive.pk/blog/physical-destruction.html",
+        "source": "Hacker News",
+        "score": 137
+      },
+      {
+        "title": "TigerBeetle Core System Architecture: Deconstructing Performance Engineering",
+        "url": "https://ixuvo.com/blog/tigerbeetle-core-system-architecture-performance-engineering",
+        "source": "Hacker News",
+        "score": 35
       },
       {
         "title": "The Lost Treasure of Sid Meier's Pirates",
         "url": "https://remapradio.com/articles/the-lost-treasure-of-sid-meiers-pirates/",
         "source": "Hacker News",
-        "score": 112
+        "score": 146
       },
       {
         "title": "Small, native web tricks worth remembering",
         "url": "https://htmlcat.net/",
         "source": "Hacker News",
-        "score": 43
+        "score": 91
+      },
+      {
+        "title": "Kino: A high-performance Ractor web server for Ruby 4.0",
+        "url": "https://github.com/yaroslav/kino",
+        "source": "Hacker News",
+        "score": 15
       },
       {
         "title": "We Rebuilt the Linux MicroVM Stack on Apple Silicon",
         "url": "https://encore.dev/blog/firecracker-apple-silicon",
         "source": "Hacker News",
-        "score": 86
+        "score": 110
       },
       {
         "title": "The August 17 outage",
         "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
         "source": "Hacker News",
-        "score": 552
+        "score": 576
       },
       {
         "title": "Flat Chair by Sara Paculdo",
         "url": "https://www.toxel.com/tech/2026/08/07/flat-chair-by-sara-paculdo/",
         "source": "Hacker News",
-        "score": 23
+        "score": 52
       },
       {
         "title": "I like 'em thick: an apology to my English teachers",
         "url": "https://www.experimental-history.com/p/i-like-em-thick",
         "source": "Hacker News",
-        "score": 753
+        "score": 781
       },
       {
-        "title": "The case against a C alternative (2022)",
-        "url": "https://c3.handmade.network/blog/p/8486-the_case_against_a_c_alternative",
+        "title": "The Mystery of Dark Oxygen",
+        "url": "https://www.newyorker.com/science/elements/the-mystery-of-dark-oxygen",
         "source": "Hacker News",
-        "score": 45
+        "score": 13
       },
       {
         "title": "HTML Can Do That",
         "url": "https://chrisburnell.com/html-can-do-that/",
         "source": "Hacker News",
-        "score": 846
+        "score": 888
+      },
+      {
+        "title": "Felony charges for citizen deleting phone data at US Border",
+        "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
+        "source": "Hacker News",
+        "score": 20
+      },
+      {
+        "title": "Siemens PC-X (2015)",
+        "url": "https://www.geekdot.com/siemens-pc-x/",
+        "source": "Hacker News",
+        "score": 4
       },
       {
         "title": "Malicious Rust crate Arrayref runs a build-time payload",
         "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
         "source": "Hacker News",
-        "score": 511
-      },
-      {
-        "title": "Ox Alpha",
-        "url": "https://openrouter.ai/stealth/ox-alpha",
-        "source": "Hacker News",
-        "score": 175
-      },
-      {
-        "title": "The Religious Experience of Philip K. Dick by R. Crumb (1986)",
-        "url": "https://philipdick.com/resources/miscellaneous/the-religious-experience-of-philip-k-dick-by-r-crumb-from-weirdo-17/",
-        "source": "Hacker News",
-        "score": 47
-      },
-      {
-        "title": "I should have loved biology (2020)",
-        "url": "https://jsomers.net/i-should-have-loved-biology/",
-        "source": "Hacker News",
-        "score": 292
-      },
-      {
-        "title": "Japan tried to build an operating system for the world, the US intervened",
-        "url": "https://www.xda-developers.com/japan-tried-build-operating-system-entire-world-us-government-intervened/",
-        "source": "Hacker News",
-        "score": 212
-      },
-      {
-        "title": "Micron announces $10B research hub in Boise",
-        "url": "https://investors.micron.com/news/press-release/2026/Micron-Unveils-Micron-Research-Labs-a-U-S--Based-Long-Horizon-Innovation-Hub-to-Shape-the-Future-of-Memory-and-AI/default.aspx",
-        "source": "Hacker News",
-        "score": 32
+        "score": 518
       }
     ],
     "ai": [
       {
+        "title": "AI companies destroy physical books – let's scan rare books before it's too late",
+        "url": "https://annas-archive.pk/blog/physical-destruction.html",
+        "source": "Hacker News AI",
+        "score": 137
+      },
+      {
         "title": "Flat Chair by Sara Paculdo",
         "url": "https://www.toxel.com/tech/2026/08/07/flat-chair-by-sara-paculdo/",
         "source": "Hacker News AI",
-        "score": 23
-      },
-      {
-        "title": "The case against a C alternative (2022)",
-        "url": "https://c3.handmade.network/blog/p/8486-the_case_against_a_c_alternative",
-        "source": "Hacker News AI",
-        "score": 45
-      },
-      {
-        "title": "Show HN: Huzzah – a novel approach to coding with AI",
-        "url": "https://www.danielvaughn.dev/posts/huzzah/",
-        "source": "Hacker News AI",
-        "score": 325
+        "score": 52
       },
       {
         "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News AI",
-        "score": 263
-      },
-      {
-        "title": "Captain Zilog",
-        "url": "https://www.zilog.com/captain_zilog/",
-        "source": "Hacker News AI",
-        "score": 60
+        "score": 267
       },
       {
         "title": "Anti-AI fonts are useless and harmful",
         "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
         "source": "Hacker News AI",
-        "score": 174
+        "score": 182
+      },
+      {
+        "title": "Captain Zilog",
+        "url": "https://www.zilog.com/captain_zilog/",
+        "source": "Hacker News AI",
+        "score": 62
+      },
+      {
+        "title": "Show HN: Huzzah – a novel approach to coding with AI",
+        "url": "https://www.danielvaughn.dev/posts/huzzah/",
+        "source": "Hacker News AI",
+        "score": 337
       },
       {
         "title": "Codex on AWS bedrock bug causing 10x charges",
         "url": "https://github.com/openai/codex/issues/37674",
         "source": "Hacker News AI",
-        "score": 136
-      },
-      {
-        "title": "AI companies destroy physical books – let's scan rare books before it's too late",
-        "url": "https://annas-archive.gl/blog/physical-destruction.html",
-        "source": "Hacker News AI",
-        "score": 350
+        "score": 139
       },
       {
         "title": "Hacking with Claude on a $27 smart watch",
         "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
         "source": "Hacker News AI",
-        "score": 98
+        "score": 100
       },
       {
-        "title": "Show HN: Argentic – An L402 Lightning toll booth for AI scraping agents",
-        "url": "https://Argentic.network",
+        "title": "Bandai don't sue me please",
+        "url": "https://github.com/Irtaza2009/Hackamon",
         "source": "Hacker News AI",
-        "score": 7
-      },
-      {
-        "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
-        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
-        "source": "Hacker News AI",
-        "score": 556
-      },
-      {
-        "title": "Early-life stress leaves a 'scar' inside brain cells",
-        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
-        "source": "Hacker News AI",
-        "score": 38
+        "score": 5
       }
     ],
     "news": [
@@ -177,8 +159,8 @@
         "source": "BBC World"
       },
       {
-        "title": "How much could Trump's 'economic D-Day' hurt Iran? ",
-        "url": "https://www.bbc.co.uk/news/articles/cre4gdvlj9ro?at_medium=RSS&at_campaign=rss",
+        "title": "Rosenberg: Shortage of petrol but not patriotism as Russians feel growing impact of war",
+        "url": "https://www.bbc.co.uk/news/articles/c4gknzgje7go?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -192,11 +174,6 @@
         "source": "BBC World"
       },
       {
-        "title": "Pakistan ex-PM Imran Khan back in jail after hospital examination",
-        "url": "https://www.bbc.co.uk/news/articles/ckgdr9vr50po?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Panama Canal to cut number of ships passing through due to El Niño",
         "url": "https://www.bbc.co.uk/news/articles/cwyl0jkxxryo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -205,9 +182,19 @@
         "title": "Bodies of two hikers missing for decades found after Swiss glacier melts",
         "url": "https://www.bbc.co.uk/news/articles/cd9w1jwdkkjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
+      },
+      {
+        "title": "Two Mexicans arrested as police uncover big meth lab on South African farm",
+        "url": "https://www.bbc.co.uk/news/articles/c80n8d4xz1eo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " XPPen Artist Ultra 14 review: an OLED drawing tablet that's surprisingly portable and fun ",
+        "url": "https://www.creativebloq.com/art/digital-art/xppen-artist-ultra-14-review-an-oled-drawing-tablet-thats-surprisingly-portable-and-fun",
+        "source": "Creative Bloq"
+      },
       {
         "title": " I rate both Sennheiser Momentum 4 and 5 Bluetooth headphones – but in 2026 there's only one I'd buy ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/i-rate-both-sennheiser-momentum-4-and-5-bluetooth-headphones-but-in-2026-theres-only-one-id-buy",
@@ -241,42 +228,62 @@
     ],
     "science": [
       {
-        "title": "The “Asian water tower” is losing 24 billion tonnes of groundwater every year",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260820002454.htm",
+        "title": "3 minutes of sprinting does something 90 minutes of exercise does not",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260821012208.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Schizophrenia’s lost brain connections follow a surprising pattern",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260820002443.htm",
+        "title": "2,200-year-old Roman shipwreck reveals ancient waterproofing secrets",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260820202907.htm",
         "source": "Science Daily"
       },
       {
-        "title": "This total solar eclipse looked strangely golden — here’s why",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260820002432.htm",
+        "title": "Scientists catch a hidden electronic state forming in just 30 femtoseconds",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260820202856.htm",
         "source": "Science Daily"
       },
       {
-        "title": "A SpaceX rocket smashed into the Moon — NASA just revealed the crater",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260820002429.htm",
+        "title": "This weight-loss hormone may protect the liver even without weight loss",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260820202854.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists crushed diamond beyond Neptune-like pressures—and solved a 20-year mystery",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260820002424.htm",
+        "title": "Hidden magnetism inside atoms may explain mysterious gamma rays",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260820202849.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Knee osteoarthritis isn’t inevitable — here’s what you can do",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260820002420.htm",
+        "title": "A strange new quantum droplet can hold itself together",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260820202846.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists say the human family tree may need a major rewrite",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260820002413.htm",
+        "title": "AI may know how you’ll respond to a vaccine before you get it",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260820202842.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "Pokémon Fans Found a Way to Bring Rare Event Pokémon to FireRed and LeafGreen",
+        "url": "https://www.polygon.com/pokemon-firered-leafgreen-celebi-custom-event-local-wireless/",
+        "source": "Polygon"
+      },
+      {
+        "title": "You Can Now Try the Best Silksong Competitor for Free",
+        "url": "https://www.polygon.com/chronoscript-best-silksong-competitor-demo-free/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Animal Crossing’s fake language is different in Japan, and here’s why",
+        "url": "https://www.polygon.com/video/animal-crossing-s-fake-language-is-different-in-japan-and-here-s-why/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Netflix's 10/10 Action Thriller Is the Perfect Introduction to the DC Universe's Newest Star",
+        "url": "https://www.polygon.com/rebel-ridge-aaron-pierre-streaming-rec/",
+        "source": "Polygon"
+      },
       {
         "title": "GTA 6 Leaks Could Be Part of a Big Crypto Scheme",
         "url": "https://www.polygon.com/gta-6-leaks-cyberleek-crypto-scheme/",
@@ -290,26 +297,6 @@
       {
         "title": "8 Extremely Spoilery Questions with 'Spider-Man: Brand New Day' Star Tramell Tillman",
         "url": "https://www.polygon.com/spider-man-brand-new-day-tramell-tillman-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "65 Years Later, the Best \"Peanuts' Linus Quote Is Still an All-Time Great Comic Strip Moment",
-        "url": "https://www.polygon.com/best-linus-quote-peanuts/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Nintendo Games You Need to Play at Least Once",
-        "url": "https://www.polygon.com/must-play-nintendo-games-switch/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Classic Anime That Will Never Need Remakes",
-        "url": "https://www.polygon.com/classic-anime-perfect-no-remakes-required/",
-        "source": "Polygon"
-      },
-      {
-        "title": "There Will Never Be Another Game Like Metal Gear Solid 4",
-        "url": "https://www.polygon.com/metal-gear-solid-4-master-collection-review/",
         "source": "Polygon"
       }
     ],
