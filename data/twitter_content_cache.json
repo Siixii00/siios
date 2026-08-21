@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-21T21:25:19.839144",
-    "total_items": 58
+    "last_updated": "2026-08-21T22:25:45.667285",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,37 +9,49 @@
         "title": "Kobo can run apps now",
         "url": "https://bandarlabs.github.io/Cobalt/",
         "source": "Hacker News",
-        "score": 312
+        "score": 343
       },
       {
         "title": "Felony Bench",
         "url": "https://www.felonybench.com/",
         "source": "Hacker News",
-        "score": 360
-      },
-      {
-        "title": "Scientists release biggest 2D map of the universe",
-        "url": "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/",
-        "source": "Hacker News",
-        "score": 78
-      },
-      {
-        "title": "AI boosted homework scores, then exam scores dropped: study",
-        "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
-        "source": "Hacker News",
-        "score": 163
-      },
-      {
-        "title": "Kagi added a setting for removing paywalled links from search results",
-        "url": "https://kagi.com/changelog#11296",
-        "source": "Hacker News",
-        "score": 895
+        "score": 410
       },
       {
         "title": "Felony charges for citizen deleting phone data at US Border",
         "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
         "source": "Hacker News",
-        "score": 274
+        "score": 367
+      },
+      {
+        "title": "Scientists release biggest 2D map of the universe",
+        "url": "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/",
+        "source": "Hacker News",
+        "score": 101
+      },
+      {
+        "title": "Kagi added a setting for removing paywalled links from search results",
+        "url": "https://kagi.com/changelog#11296",
+        "source": "Hacker News",
+        "score": 924
+      },
+      {
+        "title": "AI boosted homework scores, then exam scores dropped: study",
+        "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
+        "source": "Hacker News",
+        "score": 189
+      },
+      {
+        "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
+        "url": "https://lina.sh/blog/hijacking-e164-arpa",
+        "source": "Hacker News",
+        "score": 383
+      },
+      {
+        "title": "Bringing the cybersecurity capabilities of Claude Mythos 5 to more defenders",
+        "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders",
+        "source": "Hacker News",
+        "score": 38
       },
       {
         "title": "SalesPatriot (YC W25) Is Hiring Forward Deployed Engineers",
@@ -48,52 +60,40 @@
         "score": 1
       },
       {
-        "title": "Quick impressions: A week of using Codex more than Claude",
-        "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
+        "title": "DeepSeek-v4-flash-vision-exp",
+        "url": "https://api-docs.deepseek.com/guides/vision/",
         "source": "Hacker News",
-        "score": 47
-      },
-      {
-        "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
-        "url": "https://lina.sh/blog/hijacking-e164-arpa",
-        "source": "Hacker News",
-        "score": 355
-      },
-      {
-        "title": "Bringing the cybersecurity capabilities of Claude Mythos 5 to more defenders",
-        "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders",
-        "source": "Hacker News",
-        "score": 28
+        "score": 432
       },
       {
         "title": "People of ACM – Russ Cox",
         "url": "https://www.acm.org/articles/people-of-acm/2026/russ-cox",
         "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "How we made a text-to-speech model respond in sub-50 ms",
-        "url": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/",
-        "source": "Hacker News",
         "score": 68
-      },
-      {
-        "title": "DeepSeek-v4-flash-vision-exp",
-        "url": "https://api-docs.deepseek.com/guides/vision/",
-        "source": "Hacker News",
-        "score": 424
-      },
-      {
-        "title": "A look under our trunk: what's in our compute",
-        "url": "https://waymo.com/blog/2026/08/look-under-our-trunk/",
-        "source": "Hacker News",
-        "score": 62
       },
       {
         "title": "I ran Photoshop on a £0.60 computer chip",
         "url": "https://pointinthecloud.com/2026-08-19-144600.html",
         "source": "Hacker News",
-        "score": 84
+        "score": 96
+      },
+      {
+        "title": "How we made a text-to-speech model respond in sub-50 ms",
+        "url": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/",
+        "source": "Hacker News",
+        "score": 80
+      },
+      {
+        "title": "A look under our trunk: what's in our compute",
+        "url": "https://waymo.com/blog/2026/08/look-under-our-trunk/",
+        "source": "Hacker News",
+        "score": 69
+      },
+      {
+        "title": "What happens when a GPU reads memory",
+        "url": "https://blog.doubleword.ai/what-happens-when-a-gpu-reads-memory",
+        "source": "Hacker News",
+        "score": 83
       }
     ],
     "ai": [
@@ -101,49 +101,55 @@
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News AI",
-        "score": 163
-      },
-      {
-        "title": "Quick impressions: A week of using Codex more than Claude",
-        "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
-        "source": "Hacker News AI",
-        "score": 47
+        "score": 189
       },
       {
         "title": "Bringing the cybersecurity capabilities of Claude Mythos 5 to more defenders",
         "url": "https://claude.com/blog/bringing-claude-mythos-5-to-more-defenders",
         "source": "Hacker News AI",
-        "score": 28
+        "score": 38
       },
       {
         "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
         "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
         "source": "Hacker News AI",
-        "score": 139
+        "score": 150
+      },
+      {
+        "title": "Quick impressions: A week of using Codex more than Claude",
+        "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
+        "source": "Hacker News AI",
+        "score": 60
       },
       {
         "title": "I'm becoming AI-blind",
         "url": "https://cymerys.com/w/im-becoming-ai-blind",
         "source": "Hacker News AI",
-        "score": 192
+        "score": 205
       },
       {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.gl/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 456
+        "score": 479
       },
       {
         "title": "Show HN: Proliferate- open-source, self-hostable Codex for any coding agent",
         "url": "https://github.com/proliferate-ai/proliferate",
         "source": "Hacker News AI",
-        "score": 33
+        "score": 34
       },
       {
         "title": "How Thailand Resisted Colonization",
         "url": "https://worksinprogress.co/issue/how-thailand-resisted-colonization/",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 9
+      },
+      {
+        "title": "Flat Chair by Sara Paculdo",
+        "url": "https://paculdo.com/innovative-housewares-inside-out-design-oliso/",
+        "source": "Hacker News AI",
+        "score": 103
       }
     ],
     "news": [
@@ -274,7 +280,7 @@
         "source": "Polygon"
       },
       {
-        "title": "'Psychonauts' Studio Is Officially Making a Comeback After Xbox Layoffs",
+        "title": "Famed Studio Is Officially Making a Comeback After Xbox Layoffs",
         "url": "https://www.polygon.com/double-fine-kickstarter-xbox-layoffs/",
         "source": "Polygon"
       },
