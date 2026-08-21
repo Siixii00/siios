@@ -1,155 +1,167 @@
 {
   "metadata": {
-    "last_updated": "2026-08-21T03:04:02.271709",
-    "total_items": 58
+    "last_updated": "2026-08-21T04:38:54.981259",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
+        "title": "Codex on AWS bedrock bug causing 10x charges",
+        "url": "https://github.com/openai/codex/issues/37674",
+        "source": "Hacker News",
+        "score": 28
+      },
+      {
         "title": "The August 17 outage",
         "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
         "source": "Hacker News",
-        "score": 354
+        "score": 400
       },
       {
         "title": "I like 'em thick: an apology to my English teachers",
         "url": "https://www.experimental-history.com/p/i-like-em-thick",
         "source": "Hacker News",
-        "score": 592
+        "score": 625
       },
       {
         "title": "HTML Can Do That",
         "url": "https://chrisburnell.com/html-can-do-that/",
         "source": "Hacker News",
-        "score": 603
-      },
-      {
-        "title": "There's no such thing as a small software team anymore",
-        "url": "https://jacob.gold/posts/theres-no-such-thing-as-a-small-software-team/",
-        "source": "Hacker News",
-        "score": 30
-      },
-      {
-        "title": "I should have loved biology (2020)",
-        "url": "https://jsomers.net/i-should-have-loved-biology/",
-        "source": "Hacker News",
-        "score": 204
+        "score": 638
       },
       {
         "title": "Malicious Rust crate Arrayref runs a build-time payload",
         "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
         "source": "Hacker News",
-        "score": 407
+        "score": 425
+      },
+      {
+        "title": "I should have loved biology (2020)",
+        "url": "https://jsomers.net/i-should-have-loved-biology/",
+        "source": "Hacker News",
+        "score": 217
+      },
+      {
+        "title": "Captain Zilog",
+        "url": "https://www.zilog.com/captain_zilog/",
+        "source": "Hacker News",
+        "score": 20
+      },
+      {
+        "title": "Ox Alpha",
+        "url": "https://openrouter.ai/stealth/ox-alpha",
+        "source": "Hacker News",
+        "score": 63
+      },
+      {
+        "title": "AI companies destroy physical books – let's scan rare books before it's too late",
+        "url": "https://annas-archive.gl/blog/physical-destruction.html",
+        "source": "Hacker News",
+        "score": 150
       },
       {
         "title": "Make a 6-Tesla-class high-temperature superconducting dipole magnet at 4.2 K",
         "url": "https://journals.aps.org/prab/abstract/10.1103/4nhs-bkwh",
         "source": "Hacker News",
-        "score": 12
-      },
-      {
-        "title": "Stealth Model",
-        "url": "https://openrouter.ai/stealth/ox-alpha",
-        "source": "Hacker News",
-        "score": 46
-      },
-      {
-        "title": "CIA funding helped keep NeXT afloat in the 80s",
-        "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
-        "source": "Hacker News",
-        "score": 350
-      },
-      {
-        "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
-        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
-        "source": "Hacker News",
-        "score": 528
+        "score": 20
       },
       {
         "title": "Why aren't smart people happier? (2022)",
         "url": "https://www.experimental-history.com/p/why-arent-smart-people-happier",
         "source": "Hacker News",
-        "score": 97
+        "score": 122
+      },
+      {
+        "title": "CIA funding helped keep NeXT afloat in the 80s",
+        "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
+        "source": "Hacker News",
+        "score": 370
       },
       {
         "title": "Show HN: Huzzah – a novel approach to coding with AI",
         "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News",
-        "score": 228
+        "score": 245
+      },
+      {
+        "title": "There's no such thing as a small software team anymore",
+        "url": "https://jacob.gold/posts/theres-no-such-thing-as-a-small-software-team/",
+        "source": "Hacker News",
+        "score": 46
       },
       {
         "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News",
-        "score": 195
-      },
-      {
-        "title": "Detecting scraper bots through scroll behaviour",
-        "url": "https://niki.cat/detecting-scraper-bots-through-scroll-behaviour",
-        "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "Linux 7.2",
-        "url": "https://www.igalia.com/2026/08/19/Linux-72-Released.html",
-        "source": "Hacker News",
-        "score": 199
+        "score": 210
       }
     ],
     "ai": [
       {
-        "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
-        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
+        "title": "Codex on AWS bedrock bug causing 10x charges",
+        "url": "https://github.com/openai/codex/issues/37674",
         "source": "Hacker News AI",
-        "score": 528
+        "score": 28
+      },
+      {
+        "title": "Captain Zilog",
+        "url": "https://www.zilog.com/captain_zilog/",
+        "source": "Hacker News AI",
+        "score": 20
+      },
+      {
+        "title": "AI companies destroy physical books – let's scan rare books before it's too late",
+        "url": "https://annas-archive.gl/blog/physical-destruction.html",
+        "source": "Hacker News AI",
+        "score": 150
       },
       {
         "title": "Show HN: Huzzah – a novel approach to coding with AI",
         "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News AI",
-        "score": 228
+        "score": 245
       },
       {
         "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News AI",
-        "score": 195
-      },
-      {
-        "title": "Copyright does not protect AI-generated content in EU",
-        "url": "https://mathstodon.xyz/@maxpool/117128107757895678",
-        "source": "Hacker News AI",
-        "score": 143
-      },
-      {
-        "title": "Artificial Intelligence Policy",
-        "url": "https://www.law.berkeley.edu/academics/registrar/academic-rules/artificial-intelligence-policy/",
-        "source": "Hacker News AI",
-        "score": 21
+        "score": 210
       },
       {
         "title": "Anti-AI fonts are useless and harmful",
         "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
         "source": "Hacker News AI",
-        "score": 120
+        "score": 133
+      },
+      {
+        "title": "Artificial Intelligence Policy",
+        "url": "https://www.law.berkeley.edu/academics/registrar/academic-rules/artificial-intelligence-policy/",
+        "source": "Hacker News AI",
+        "score": 32
       },
       {
         "title": "Hacking with Claude on a $27 smart watch",
         "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
         "source": "Hacker News AI",
-        "score": 87
+        "score": 90
       },
       {
-        "title": "It is a sign of the times that Amazon gets to call this fair use",
-        "url": "http://observationalepidemiology.blogspot.com/2026/08/it-is-sign-of-times-that-amazon-gets-to.html",
+        "title": "Copyright does not protect AI-generated content in EU",
+        "url": "https://mathstodon.xyz/@maxpool/117128107757895678",
         "source": "Hacker News AI",
-        "score": 96
+        "score": 152
+      },
+      {
+        "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
+        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
+        "source": "Hacker News AI",
+        "score": 536
       },
       {
         "title": "Early-life stress leaves a 'scar' inside brain cells",
         "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
         "source": "Hacker News AI",
-        "score": 20
+        "score": 26
       }
     ],
     "news": [
