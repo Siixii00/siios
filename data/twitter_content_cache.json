@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-21T05:33:19.527413",
-    "total_items": 60
+    "last_updated": "2026-08-21T06:48:58.386239",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Codex on AWS bedrock bug causing 10x charges",
         "url": "https://github.com/openai/codex/issues/37674",
         "source": "Hacker News",
-        "score": 57
+        "score": 94
       },
       {
         "title": "The August 17 outage",
         "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
         "source": "Hacker News",
-        "score": 424
+        "score": 452
       },
       {
         "title": "I like 'em thick: an apology to my English teachers",
         "url": "https://www.experimental-history.com/p/i-like-em-thick",
         "source": "Hacker News",
-        "score": 642
+        "score": 676
       },
       {
         "title": "HTML Can Do That",
         "url": "https://chrisburnell.com/html-can-do-that/",
         "source": "Hacker News",
-        "score": 658
+        "score": 704
+      },
+      {
+        "title": "The Religious Experience of Philip K. Dick by R. Crumb (1986)",
+        "url": "https://philipdick.com/resources/miscellaneous/the-religious-experience-of-philip-k-dick-by-r-crumb-from-weirdo-17/",
+        "source": "Hacker News",
+        "score": 12
       },
       {
         "title": "Malicious Rust crate Arrayref runs a build-time payload",
         "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
         "source": "Hacker News",
-        "score": 436
+        "score": 465
       },
       {
         "title": "I should have loved biology (2020)",
         "url": "https://jsomers.net/i-should-have-loved-biology/",
         "source": "Hacker News",
-        "score": 228
+        "score": 250
       },
       {
         "title": "Ox Alpha",
         "url": "https://openrouter.ai/stealth/ox-alpha",
         "source": "Hacker News",
-        "score": 69
-      },
-      {
-        "title": "CIA funding helped keep NeXT afloat in the 80s",
-        "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
-        "source": "Hacker News",
-        "score": 382
-      },
-      {
-        "title": "Captain Zilog",
-        "url": "https://www.zilog.com/captain_zilog/",
-        "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "AI companies destroy physical books – let's scan rare books before it's too late",
-        "url": "https://annas-archive.gl/blog/physical-destruction.html",
-        "source": "Hacker News",
-        "score": 200
+        "score": 95
       },
       {
         "title": "There's no such thing as a small software team anymore",
         "url": "https://jacob.gold/posts/theres-no-such-thing-as-a-small-software-team/",
         "source": "Hacker News",
-        "score": 54
+        "score": 72
       },
       {
-        "title": "Why aren't smart people happier? (2022)",
-        "url": "https://www.experimental-history.com/p/why-arent-smart-people-happier",
+        "title": "Captain Zilog",
+        "url": "https://www.zilog.com/captain_zilog/",
         "source": "Hacker News",
-        "score": 131
+        "score": 42
+      },
+      {
+        "title": "Japan tried to build an operating system for the world, the US intervened",
+        "url": "https://www.xda-developers.com/japan-tried-build-operating-system-entire-world-us-government-intervened/",
+        "source": "Hacker News",
+        "score": 33
       },
       {
         "title": "Make a 6-Tesla-class high-temperature superconducting dipole magnet at 4.2 K",
         "url": "https://journals.aps.org/prab/abstract/10.1103/4nhs-bkwh",
         "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
-        "url": "https://github.com/zachahn/vomit",
-        "source": "Hacker News",
-        "score": 219
+        "score": 33
       },
       {
         "title": "Show HN: Huzzah – a novel approach to coding with AI",
         "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News",
-        "score": 258
+        "score": 282
+      },
+      {
+        "title": "Why aren't smart people happier? (2022)",
+        "url": "https://www.experimental-history.com/p/why-arent-smart-people-happier",
+        "source": "Hacker News",
+        "score": 145
+      },
+      {
+        "title": "CIA funding helped keep NeXT afloat in the 80s",
+        "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
+        "source": "Hacker News",
+        "score": 387
       }
     ],
     "ai": [
@@ -101,37 +101,37 @@
         "title": "Codex on AWS bedrock bug causing 10x charges",
         "url": "https://github.com/openai/codex/issues/37674",
         "source": "Hacker News AI",
-        "score": 57
+        "score": 94
       },
       {
         "title": "Captain Zilog",
         "url": "https://www.zilog.com/captain_zilog/",
         "source": "Hacker News AI",
-        "score": 29
-      },
-      {
-        "title": "AI companies destroy physical books – let's scan rare books before it's too late",
-        "url": "https://annas-archive.gl/blog/physical-destruction.html",
-        "source": "Hacker News AI",
-        "score": 200
-      },
-      {
-        "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
-        "url": "https://github.com/zachahn/vomit",
-        "source": "Hacker News AI",
-        "score": 219
+        "score": 42
       },
       {
         "title": "Show HN: Huzzah – a novel approach to coding with AI",
         "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News AI",
-        "score": 258
+        "score": 282
+      },
+      {
+        "title": "AI companies destroy physical books – let's scan rare books before it's too late",
+        "url": "https://annas-archive.gl/blog/physical-destruction.html",
+        "source": "Hacker News AI",
+        "score": 260
+      },
+      {
+        "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
+        "url": "https://github.com/zachahn/vomit",
+        "source": "Hacker News AI",
+        "score": 233
       },
       {
         "title": "Anti-AI fonts are useless and harmful",
         "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
         "source": "Hacker News AI",
-        "score": 139
+        "score": 146
       },
       {
         "title": "Hacking with Claude on a $27 smart watch",
@@ -140,28 +140,22 @@
         "score": 92
       },
       {
-        "title": "Artificial Intelligence Policy",
-        "url": "https://www.law.berkeley.edu/academics/registrar/academic-rules/artificial-intelligence-policy/",
-        "source": "Hacker News AI",
-        "score": 34
-      },
-      {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 538
+        "score": 543
+      },
+      {
+        "title": "Artificial Intelligence Policy",
+        "url": "https://www.law.berkeley.edu/academics/registrar/academic-rules/artificial-intelligence-policy/",
+        "source": "Hacker News AI",
+        "score": 35
       },
       {
         "title": "Early-life stress leaves a 'scar' inside brain cells",
         "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
         "source": "Hacker News AI",
-        "score": 29
-      },
-      {
-        "title": "Copyright does not protect AI-generated content in EU",
-        "url": "https://mathstodon.xyz/@maxpool/117128107757895678",
-        "source": "Hacker News AI",
-        "score": 159
+        "score": 31
       }
     ],
     "news": [
@@ -203,6 +197,11 @@
     ],
     "art": [
       {
+        "title": " Paramount's Golden Axe animation is an affront to the best sword and sorcery game of 1989 ",
+        "url": "https://www.creativebloq.com/art/animation/paramounts-golden-axe-animation-is-an-affront-to-the-best-sword-and-sorcery-game-of-1989",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " There's nothing fishy about these protein bars, honestly ",
         "url": "https://www.creativebloq.com/design/packaging-design/theres-nothing-fishy-about-these-protein-bars-honestly",
         "source": "Creative Bloq"
@@ -225,11 +224,6 @@
       {
         "title": " Studio Ghibli has no plan, isn't anti-AI after all, and doesn't know what Miyazaki is up to other than that he turns up for work every day ",
         "url": "https://www.creativebloq.com/art/animation/studio-ghibli-has-no-plan-isnt-anti-ai-after-all-and-doesnt-know-what-miyazaki-is-up-to-other-than-that-he-turns-up-for-work-every-day",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Help! I'm instantly addicted to my new under desk treadmill ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/help-im-instantly-addicted-to-my-new-under-the-desk-treadmill",
         "source": "Creative Bloq"
       }
     ],
