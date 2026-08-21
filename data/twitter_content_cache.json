@@ -1,161 +1,173 @@
 {
   "metadata": {
-    "last_updated": "2026-08-21T07:43:13.746684",
-    "total_items": 59
+    "last_updated": "2026-08-21T08:41:05.549304",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "Stop Making TUIs",
-        "url": "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/",
+        "title": "The Lost Treasure of Sid Meier's Pirates",
+        "url": "https://remapradio.com/articles/the-lost-treasure-of-sid-meiers-pirates/",
         "source": "Hacker News",
-        "score": 28
-      },
-      {
-        "title": "The August 17 outage",
-        "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
-        "source": "Hacker News",
-        "score": 478
-      },
-      {
-        "title": "I like 'em thick: an apology to my English teachers",
-        "url": "https://www.experimental-history.com/p/i-like-em-thick",
-        "source": "Hacker News",
-        "score": 697
-      },
-      {
-        "title": "HTML Can Do That",
-        "url": "https://chrisburnell.com/html-can-do-that/",
-        "source": "Hacker News",
-        "score": 737
-      },
-      {
-        "title": "The Religious Experience of Philip K. Dick by R. Crumb (1986)",
-        "url": "https://philipdick.com/resources/miscellaneous/the-religious-experience-of-philip-k-dick-by-r-crumb-from-weirdo-17/",
-        "source": "Hacker News",
-        "score": 21
-      },
-      {
-        "title": "Malicious Rust crate Arrayref runs a build-time payload",
-        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
-        "source": "Hacker News",
-        "score": 477
-      },
-      {
-        "title": "Ox Alpha",
-        "url": "https://openrouter.ai/stealth/ox-alpha",
-        "source": "Hacker News",
-        "score": 120
-      },
-      {
-        "title": "Version Control for Everything",
-        "url": "https://tyoverby.com/posts/version-control-for-everything-else/",
-        "source": "Hacker News",
-        "score": 18
+        "score": 37
       },
       {
         "title": "We Rebuilt the Linux MicroVM Stack on Apple Silicon",
         "url": "https://encore.dev/blog/firecracker-apple-silicon",
         "source": "Hacker News",
-        "score": 4
+        "score": 37
+      },
+      {
+        "title": "The August 17 outage",
+        "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
+        "source": "Hacker News",
+        "score": 495
+      },
+      {
+        "title": "I like 'em thick: an apology to my English teachers",
+        "url": "https://www.experimental-history.com/p/i-like-em-thick",
+        "source": "Hacker News",
+        "score": 717
+      },
+      {
+        "title": "HTML Can Do That",
+        "url": "https://chrisburnell.com/html-can-do-that/",
+        "source": "Hacker News",
+        "score": 777
+      },
+      {
+        "title": "Version Control for Everything",
+        "url": "https://tyoverby.com/posts/version-control-for-everything-else/",
+        "source": "Hacker News",
+        "score": 28
+      },
+      {
+        "title": "Malicious Rust crate Arrayref runs a build-time payload",
+        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
+        "source": "Hacker News",
+        "score": 484
+      },
+      {
+        "title": "The Religious Experience of Philip K. Dick by R. Crumb (1986)",
+        "url": "https://philipdick.com/resources/miscellaneous/the-religious-experience-of-philip-k-dick-by-r-crumb-from-weirdo-17/",
+        "source": "Hacker News",
+        "score": 29
+      },
+      {
+        "title": "Ox Alpha",
+        "url": "https://openrouter.ai/stealth/ox-alpha",
+        "source": "Hacker News",
+        "score": 132
       },
       {
         "title": "I should have loved biology (2020)",
         "url": "https://jsomers.net/i-should-have-loved-biology/",
         "source": "Hacker News",
-        "score": 257
+        "score": 272
       },
       {
         "title": "Japan tried to build an operating system for the world, the US intervened",
         "url": "https://www.xda-developers.com/japan-tried-build-operating-system-entire-world-us-government-intervened/",
         "source": "Hacker News",
-        "score": 64
-      },
-      {
-        "title": "Why aren't smart people happier? (2022)",
-        "url": "https://www.experimental-history.com/p/why-arent-smart-people-happier",
-        "source": "Hacker News",
-        "score": 157
+        "score": 104
       },
       {
         "title": "CIA funding helped keep NeXT afloat in the 80s",
         "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
         "source": "Hacker News",
-        "score": 392
+        "score": 394
       },
       {
-        "title": "Captain Zilog",
-        "url": "https://www.zilog.com/captain_zilog/",
+        "title": "Why aren't smart people happier? (2022)",
+        "url": "https://www.experimental-history.com/p/why-arent-smart-people-happier",
         "source": "Hacker News",
-        "score": 45
+        "score": 163
       },
       {
         "title": "Launch HN: Vendo (YC S26) – Let users build features on top of your product",
         "url": "https://github.com/runvendo/vendo",
         "source": "Hacker News",
         "score": 34
-      }
-    ],
-    "ai": [
-      {
-        "title": "Captain Zilog",
-        "url": "https://www.zilog.com/captain_zilog/",
-        "source": "Hacker News AI",
-        "score": 45
-      },
-      {
-        "title": "Codex on AWS bedrock bug causing 10x charges",
-        "url": "https://github.com/openai/codex/issues/37674",
-        "source": "Hacker News AI",
-        "score": 124
-      },
-      {
-        "title": "Show HN: Argentic – An L402 Lightning toll booth for AI scraping agents",
-        "url": "https://Argentic.network",
-        "source": "Hacker News AI",
-        "score": 5
       },
       {
         "title": "Show HN: Huzzah – a novel approach to coding with AI",
         "url": "https://www.danielvaughn.dev/posts/huzzah/",
+        "source": "Hacker News",
+        "score": 301
+      }
+    ],
+    "ai": [
+      {
+        "title": "Show HN: Huzzah – a novel approach to coding with AI",
+        "url": "https://www.danielvaughn.dev/posts/huzzah/",
         "source": "Hacker News AI",
-        "score": 288
+        "score": 301
       },
       {
         "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News AI",
-        "score": 240
+        "score": 247
       },
       {
-        "title": "Anti-AI fonts are useless and harmful",
-        "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
+        "title": "Show HN: Argentic – An L402 Lightning toll booth for AI scraping agents",
+        "url": "https://Argentic.network",
         "source": "Hacker News AI",
-        "score": 151
+        "score": 7
+      },
+      {
+        "title": "Captain Zilog",
+        "url": "https://www.zilog.com/captain_zilog/",
+        "source": "Hacker News AI",
+        "score": 49
+      },
+      {
+        "title": "The case against a C alternative (2022)",
+        "url": "https://c3.handmade.network/blog/p/8486-the_case_against_a_c_alternative",
+        "source": "Hacker News AI",
+        "score": 3
+      },
+      {
+        "title": "Codex on AWS bedrock bug causing 10x charges",
+        "url": "https://github.com/openai/codex/issues/37674",
+        "source": "Hacker News AI",
+        "score": 129
       },
       {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.gl/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 285
+        "score": 312
+      },
+      {
+        "title": "Anti-AI fonts are useless and harmful",
+        "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
+        "source": "Hacker News AI",
+        "score": 156
       },
       {
         "title": "Hacking with Claude on a $27 smart watch",
         "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
         "source": "Hacker News AI",
-        "score": 93
+        "score": 94
+      },
+      {
+        "title": "Young Americans increasingly fear AI will take their jobs",
+        "url": "https://www.pewresearch.org/short-reads/2026/08/18/young-adults-in-the-us-are-increasingly-wary-of-ai-concerned-it-will-take-jobs/",
+        "source": "Hacker News AI",
+        "score": 10
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 547
+        "score": 552
       },
       {
         "title": "Early-life stress leaves a 'scar' inside brain cells",
         "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
         "source": "Hacker News AI",
-        "score": 32
+        "score": 34
       }
     ],
     "news": [
@@ -197,6 +209,11 @@
     ],
     "art": [
       {
+        "title": " Quote of the Day by Salvador Dalí: \"Have no fear of perfection, you’ll never reach it\" ",
+        "url": "https://www.creativebloq.com/art/quote-of-the-day-by-salvador-dali-have-no-fear-of-perfection-youll-never-reach-it",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Metal Gear Solid: Master Collection Vol. 2 review – 18 years later, MGS4 still feels like an event ",
         "url": "https://www.creativebloq.com/entertainment/gaming/metal-gear-solid-master-collection-vol-2-review-18-years-later-mgs4-still-feels-like-an-event",
         "source": "Creative Bloq"
@@ -219,11 +236,6 @@
       {
         "title": " Move over Duolingo, there’s a new brand mascot in town ",
         "url": "https://www.creativebloq.com/design/branding/move-over-duolingo-theres-a-new-brand-mascot-in-town",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " A 16-year-old girl's iPhone theme is breaking UI designers' brains ",
-        "url": "https://www.creativebloq.com/web-design/ux-ui/a-16-year-old-girls-iphone-xis-breaking-ui-designers-brains",
         "source": "Creative Bloq"
       }
     ],
@@ -266,6 +278,21 @@
     ],
     "gaming": [
       {
+        "title": "65 Years Later, the Best \"Peanuts' Linus Quote Is Still an All-Time Great Comic Strip Moment",
+        "url": "https://www.polygon.com/best-linus-quote-peanuts/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Nintendo Games You Need to Play at Least Once",
+        "url": "https://www.polygon.com/must-play-nintendo-games-switch/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Classic Anime That Will Never Need Remakes",
+        "url": "https://www.polygon.com/classic-anime-perfect-no-remakes-required/",
+        "source": "Polygon"
+      },
+      {
         "title": "There Will Never Be Another Game Like Metal Gear Solid 4",
         "url": "https://www.polygon.com/metal-gear-solid-4-master-collection-review/",
         "source": "Polygon"
@@ -283,21 +310,6 @@
       {
         "title": "Zelda: Ocarina of Time Mod Remakes the N64 Classic in True 3D",
         "url": "https://www.polygon.com/zelda-ocarina-of-time-mod-nintendo-64-replaces-games-fake-3d/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Netflix’s Near-Perfect Revenge Thriller Blue Eye Samurai Is Getting a Third Season",
-        "url": "https://www.polygon.com/blue-eye-samurai-season-3-announced/",
-        "source": "Polygon"
-      },
-      {
-        "title": "One Piece Returns to Netflix With A New Special and a New Look",
-        "url": "https://www.polygon.com/lego-one-piece-sets-sail-with-charming-new-trailer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Cyberpunk: Edgerunners' Gets Official Return Date With Brutal New Trailer",
-        "url": "https://www.polygon.com/cyberpunk-edgerunners-2-release-date-announced-new-trailer/",
         "source": "Polygon"
       }
     ],
