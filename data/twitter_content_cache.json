@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-21T04:38:54.981259",
+    "last_updated": "2026-08-21T05:33:19.527413",
     "total_items": 60
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "Codex on AWS bedrock bug causing 10x charges",
         "url": "https://github.com/openai/codex/issues/37674",
         "source": "Hacker News",
-        "score": 28
+        "score": 57
       },
       {
         "title": "The August 17 outage",
         "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
         "source": "Hacker News",
-        "score": 400
+        "score": 424
       },
       {
         "title": "I like 'em thick: an apology to my English teachers",
         "url": "https://www.experimental-history.com/p/i-like-em-thick",
         "source": "Hacker News",
-        "score": 625
+        "score": 642
       },
       {
         "title": "HTML Can Do That",
         "url": "https://chrisburnell.com/html-can-do-that/",
         "source": "Hacker News",
-        "score": 638
+        "score": 658
       },
       {
         "title": "Malicious Rust crate Arrayref runs a build-time payload",
         "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
         "source": "Hacker News",
-        "score": 425
+        "score": 436
       },
       {
         "title": "I should have loved biology (2020)",
         "url": "https://jsomers.net/i-should-have-loved-biology/",
         "source": "Hacker News",
-        "score": 217
-      },
-      {
-        "title": "Captain Zilog",
-        "url": "https://www.zilog.com/captain_zilog/",
-        "source": "Hacker News",
-        "score": 20
+        "score": 228
       },
       {
         "title": "Ox Alpha",
         "url": "https://openrouter.ai/stealth/ox-alpha",
         "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "AI companies destroy physical books – let's scan rare books before it's too late",
-        "url": "https://annas-archive.gl/blog/physical-destruction.html",
-        "source": "Hacker News",
-        "score": 150
-      },
-      {
-        "title": "Make a 6-Tesla-class high-temperature superconducting dipole magnet at 4.2 K",
-        "url": "https://journals.aps.org/prab/abstract/10.1103/4nhs-bkwh",
-        "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "Why aren't smart people happier? (2022)",
-        "url": "https://www.experimental-history.com/p/why-arent-smart-people-happier",
-        "source": "Hacker News",
-        "score": 122
+        "score": 69
       },
       {
         "title": "CIA funding helped keep NeXT afloat in the 80s",
         "url": "https://www.wsj.com/tech/steve-jobs-apple-next-cia-161b65f9?st=NWWds1&reflink=desktopwebshare_permalink",
         "source": "Hacker News",
-        "score": 370
+        "score": 382
       },
       {
-        "title": "Show HN: Huzzah – a novel approach to coding with AI",
-        "url": "https://www.danielvaughn.dev/posts/huzzah/",
+        "title": "Captain Zilog",
+        "url": "https://www.zilog.com/captain_zilog/",
         "source": "Hacker News",
-        "score": 245
+        "score": 29
+      },
+      {
+        "title": "AI companies destroy physical books – let's scan rare books before it's too late",
+        "url": "https://annas-archive.gl/blog/physical-destruction.html",
+        "source": "Hacker News",
+        "score": 200
       },
       {
         "title": "There's no such thing as a small software team anymore",
         "url": "https://jacob.gold/posts/theres-no-such-thing-as-a-small-software-team/",
         "source": "Hacker News",
-        "score": 46
+        "score": 54
+      },
+      {
+        "title": "Why aren't smart people happier? (2022)",
+        "url": "https://www.experimental-history.com/p/why-arent-smart-people-happier",
+        "source": "Hacker News",
+        "score": 131
+      },
+      {
+        "title": "Make a 6-Tesla-class high-temperature superconducting dipole magnet at 4.2 K",
+        "url": "https://journals.aps.org/prab/abstract/10.1103/4nhs-bkwh",
+        "source": "Hacker News",
+        "score": 23
       },
       {
         "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News",
-        "score": 210
+        "score": 219
+      },
+      {
+        "title": "Show HN: Huzzah – a novel approach to coding with AI",
+        "url": "https://www.danielvaughn.dev/posts/huzzah/",
+        "source": "Hacker News",
+        "score": 258
       }
     ],
     "ai": [
@@ -101,67 +101,67 @@
         "title": "Codex on AWS bedrock bug causing 10x charges",
         "url": "https://github.com/openai/codex/issues/37674",
         "source": "Hacker News AI",
-        "score": 28
+        "score": 57
       },
       {
         "title": "Captain Zilog",
         "url": "https://www.zilog.com/captain_zilog/",
         "source": "Hacker News AI",
-        "score": 20
+        "score": 29
       },
       {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.gl/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 150
-      },
-      {
-        "title": "Show HN: Huzzah – a novel approach to coding with AI",
-        "url": "https://www.danielvaughn.dev/posts/huzzah/",
-        "source": "Hacker News AI",
-        "score": 245
+        "score": 200
       },
       {
         "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News AI",
-        "score": 210
+        "score": 219
+      },
+      {
+        "title": "Show HN: Huzzah – a novel approach to coding with AI",
+        "url": "https://www.danielvaughn.dev/posts/huzzah/",
+        "source": "Hacker News AI",
+        "score": 258
       },
       {
         "title": "Anti-AI fonts are useless and harmful",
         "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
         "source": "Hacker News AI",
-        "score": 133
-      },
-      {
-        "title": "Artificial Intelligence Policy",
-        "url": "https://www.law.berkeley.edu/academics/registrar/academic-rules/artificial-intelligence-policy/",
-        "source": "Hacker News AI",
-        "score": 32
+        "score": 139
       },
       {
         "title": "Hacking with Claude on a $27 smart watch",
         "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
         "source": "Hacker News AI",
-        "score": 90
+        "score": 92
       },
       {
-        "title": "Copyright does not protect AI-generated content in EU",
-        "url": "https://mathstodon.xyz/@maxpool/117128107757895678",
+        "title": "Artificial Intelligence Policy",
+        "url": "https://www.law.berkeley.edu/academics/registrar/academic-rules/artificial-intelligence-policy/",
         "source": "Hacker News AI",
-        "score": 152
+        "score": 34
       },
       {
         "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
         "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
         "source": "Hacker News AI",
-        "score": 536
+        "score": 538
       },
       {
         "title": "Early-life stress leaves a 'scar' inside brain cells",
         "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
         "source": "Hacker News AI",
-        "score": 26
+        "score": 29
+      },
+      {
+        "title": "Copyright does not protect AI-generated content in EU",
+        "url": "https://mathstodon.xyz/@maxpool/117128107757895678",
+        "source": "Hacker News AI",
+        "score": 159
       }
     ],
     "news": [
@@ -181,6 +181,11 @@
         "source": "BBC World"
       },
       {
+        "title": "British rapper Yung Filly to face retrial on rape charges in Australia",
+        "url": "https://www.bbc.co.uk/news/articles/cd7l1g8922jo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Why the US economy is ringing alarm bells",
         "url": "https://www.bbc.co.uk/news/articles/c9d8z72nn02o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -194,14 +199,14 @@
         "title": "Bali jails Swiss tourist for insulting sacred Day of Silence",
         "url": "https://www.bbc.co.uk/news/articles/cj4kr59r28ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Como mayor hit by electric bike and issues blanket ban in Italian city",
-        "url": "https://www.bbc.co.uk/news/articles/cn8n077vxd7o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " There's nothing fishy about these protein bars, honestly ",
+        "url": "https://www.creativebloq.com/design/packaging-design/theres-nothing-fishy-about-these-protein-bars-honestly",
+        "source": "Creative Bloq"
+      },
       {
         "title": " 4 of my top-rated budget earphones are on sale right now! ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/4-of-my-top-rated-budget-earphones-are-on-sale-right-now",
@@ -225,11 +230,6 @@
       {
         "title": " Help! I'm instantly addicted to my new under desk treadmill ",
         "url": "https://www.creativebloq.com/tech/chairs-desks/help-im-instantly-addicted-to-my-new-under-the-desk-treadmill",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The new ACOTAR book covers are giving 2016 ",
-        "url": "https://www.creativebloq.com/entertainment/books/the-new-acotar-book-covers-are-giving-2016",
         "source": "Creative Bloq"
       }
     ],
