@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-21T13:46:05.807059",
-    "total_items": 59
+    "last_updated": "2026-08-21T14:36:08.517200",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
+        "title": "Kagi added a setting for removing paywalled links from search results",
+        "url": "https://kagi.com/changelog#11296",
+        "source": "Hacker News",
+        "score": 114
+      },
+      {
         "title": "DeepSeek-v4-flash-vision-exp",
         "url": "https://api-docs.deepseek.com/guides/vision/",
         "source": "Hacker News",
-        "score": 233
+        "score": 277
       },
       {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.pk/blog/physical-destruction.html",
         "source": "Hacker News",
-        "score": 257
-      },
-      {
-        "title": "TigerBeetle Core System Architecture: Deconstructing Performance Engineering",
-        "url": "https://ixuvo.com/blog/tigerbeetle-core-system-architecture-performance-engineering",
-        "source": "Hacker News",
-        "score": 61
-      },
-      {
-        "title": "Small, native web tricks worth remembering",
-        "url": "https://htmlcat.net/",
-        "source": "Hacker News",
-        "score": 129
-      },
-      {
-        "title": "The Lost Treasure of Sid Meier's Pirates",
-        "url": "https://remapradio.com/articles/the-lost-treasure-of-sid-meiers-pirates/",
-        "source": "Hacker News",
-        "score": 168
-      },
-      {
-        "title": "Kino: A high-performance Ractor web server for Ruby 4.0",
-        "url": "https://github.com/yaroslav/kino",
-        "source": "Hacker News",
-        "score": 30
+        "score": 355
       },
       {
         "title": "Grand jury declines to indict Ohio man charged with destroying Flock camera",
         "url": "https://san.com/cc/grand-jury-declines-to-indict-ohio-man-charged-with-destroying-flock-camera/",
         "source": "Hacker News",
-        "score": 46
+        "score": 194
       },
       {
-        "title": "We Rebuilt the Linux MicroVM Stack on Apple Silicon",
-        "url": "https://encore.dev/blog/firecracker-apple-silicon",
+        "title": "Kodak's \"Pre-Invented\" Lunar Orbiter Camera; Or, the Fate of SAMOS Readout",
+        "url": "https://invertingvision.com/2026/08/10/kodaks-pre-invented-lunar-orbiter-camera-or-the-fate-of-samos-readout/",
         "source": "Hacker News",
-        "score": 119
+        "score": 8
+      },
+      {
+        "title": "TigerBeetle Core System Architecture: Deconstructing Performance Engineering",
+        "url": "https://ixuvo.com/blog/tigerbeetle-core-system-architecture-performance-engineering",
+        "source": "Hacker News",
+        "score": 80
+      },
+      {
+        "title": "What Happens When the Cost of Intelligence Drops 100x",
+        "url": "https://catalystneuro.com/blog/cost-of-intelligence-drops-100x/",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "Small, native web tricks worth remembering",
+        "url": "https://htmlcat.net/",
+        "source": "Hacker News",
+        "score": 152
+      },
+      {
+        "title": "Radiation damage to Hubble has been 4.3 years out of phase with the Solar cycle",
+        "url": "https://arxiv.org/abs/2608.18214",
+        "source": "Hacker News",
+        "score": 19
+      },
+      {
+        "title": "Kino: A high-performance Ractor web server for Ruby 4.0",
+        "url": "https://github.com/yaroslav/kino",
+        "source": "Hacker News",
+        "score": 41
+      },
+      {
+        "title": "The Lost Treasure of Sid Meier's Pirates",
+        "url": "https://remapradio.com/articles/the-lost-treasure-of-sid-meiers-pirates/",
+        "source": "Hacker News",
+        "score": 189
+      },
+      {
+        "title": "What We Lost When Search Stopped Making Us Think",
+        "url": "https://blog.8ball.space/what-we-lost-when-search/",
+        "source": "Hacker News",
+        "score": 6
+      },
+      {
+        "title": "We are living in a version of the future out of J.G. Ballard or William Gibson",
+        "url": "https://precastreinforced.co.uk/2026/08/16/new-worlds/",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
+        "title": "Rama 0.4: System proxy and PAC support",
+        "url": "https://plabayo.tech/blog/rama-0-4",
+        "source": "Hacker News",
+        "score": 5
       },
       {
         "title": "Flat Chair by Sara Paculdo",
         "url": "https://www.toxel.com/tech/2026/08/07/flat-chair-by-sara-paculdo/",
         "source": "Hacker News",
-        "score": 73
-      },
-      {
-        "title": "The Mystery of Dark Oxygen",
-        "url": "https://www.newyorker.com/science/elements/the-mystery-of-dark-oxygen",
-        "source": "Hacker News",
-        "score": 31
-      },
-      {
-        "title": "The August 17 outage",
-        "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
-        "source": "Hacker News",
-        "score": 592
-      },
-      {
-        "title": "I like 'em thick: an apology to my English teachers",
-        "url": "https://www.experimental-history.com/p/i-like-em-thick",
-        "source": "Hacker News",
-        "score": 797
-      },
-      {
-        "title": "HTML Can Do That",
-        "url": "https://chrisburnell.com/html-can-do-that/",
-        "source": "Hacker News",
-        "score": 909
-      },
-      {
-        "title": "Malicious Rust crate Arrayref runs a build-time payload",
-        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
-        "source": "Hacker News",
-        "score": 524
-      },
-      {
-        "title": "Micron announces $10B research hub in Boise",
-        "url": "https://investors.micron.com/news/press-release/2026/Micron-Unveils-Micron-Research-Labs-a-U-S--Based-Long-Horizon-Innovation-Hub-to-Shape-the-Future-of-Memory-and-AI/default.aspx",
-        "source": "Hacker News",
-        "score": 72
+        "score": 86
       }
     ],
     "ai": [
@@ -101,55 +101,49 @@
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.pk/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 257
+        "score": 355
       },
       {
         "title": "Flat Chair by Sara Paculdo",
         "url": "https://www.toxel.com/tech/2026/08/07/flat-chair-by-sara-paculdo/",
         "source": "Hacker News AI",
-        "score": 73
+        "score": 86
+      },
+      {
+        "title": "AI;DR or Don't be a meat proxy",
+        "url": "https://theaspiringnerd.com/aidr-or-dont-be-a-meat-proxy/",
+        "source": "Hacker News AI",
+        "score": 8
       },
       {
         "title": "I'm Becoming AI-Blind",
         "url": "https://cymerys.com/w/im-becoming-ai-blind",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 51
+      },
+      {
+        "title": "Show HN: Agent Office (Slack for AI Agents) – Similar to Grok Bot but older",
+        "url": "https://github.com/baturyilmaz/agent-office",
+        "source": "Hacker News AI",
+        "score": 6
+      },
+      {
+        "title": "We burned 11.7B tokens to find the best cyber AI model",
+        "url": "https://www.aikido.dev/blog/ai-model-benchmarks-aug-21-2026",
+        "source": "Hacker News AI",
+        "score": 4
+      },
+      {
+        "title": "The Prague of Deus Ex: Mankind Divided",
+        "url": "https://www.killscreen.com/disjointed-prague-deus-ex-mankind-divided/",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "Vomit: Clean up Claude 5's token output with a separate LLM",
         "url": "https://github.com/zachahn/vomit",
         "source": "Hacker News AI",
-        "score": 276
-      },
-      {
-        "title": "Anti-AI fonts are useless and harmful",
-        "url": "https://blog.yaros.ae/anti-ai-fonts-are-useless-and-harmful/",
-        "source": "Hacker News AI",
-        "score": 187
-      },
-      {
-        "title": "Captain Zilog",
-        "url": "https://www.zilog.com/captain_zilog/",
-        "source": "Hacker News AI",
-        "score": 64
-      },
-      {
-        "title": "Show HN: Huzzah – a novel approach to coding with AI",
-        "url": "https://www.danielvaughn.dev/posts/huzzah/",
-        "source": "Hacker News AI",
-        "score": 341
-      },
-      {
-        "title": "Hacking with Claude on a $27 smart watch",
-        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
-        "source": "Hacker News AI",
-        "score": 100
-      },
-      {
-        "title": "Codex on AWS bedrock bug causing 10x charges",
-        "url": "https://github.com/openai/codex/issues/37674",
-        "source": "Hacker News AI",
-        "score": 141
+        "score": 282
       }
     ],
     "news": [
@@ -191,6 +185,11 @@
     ],
     "art": [
       {
+        "title": " Swifties calm down, not everything is a Taylor Swift Easter egg ",
+        "url": "https://www.creativebloq.com/design/branding/swifties-calm-down-not-everything-is-a-taylor-swift-easter-egg",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " I tested the new Galaxy Z Fold8 in a camera phone shootout against the Z Fold8 Ultra ",
         "url": "https://www.creativebloq.com/tech/phones-tablets/i-tested-the-new-galaxy-z-fold8-in-a-camera-phone-shootout-against-the-z-fold8-ultra",
         "source": "Creative Bloq"
@@ -218,11 +217,6 @@
       {
         "title": " Metal Gear Solid: Master Collection Vol. 2 review – 18 years later, MGS4 still feels like an event ",
         "url": "https://www.creativebloq.com/entertainment/gaming/metal-gear-solid-master-collection-vol-2-review-18-years-later-mgs4-still-feels-like-an-event",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Paramount's Golden Axe animation is an affront to the best sword and sorcery game of 1989 ",
-        "url": "https://www.creativebloq.com/art/animation/paramounts-golden-axe-animation-is-an-affront-to-the-best-sword-and-sorcery-game-of-1989",
         "source": "Creative Bloq"
       }
     ],
@@ -265,6 +259,16 @@
     ],
     "gaming": [
       {
+        "title": "New Xbox Hardware Release Price Leak Reveals Most Expensive Xbox Yet",
+        "url": "https://www.polygon.com/xbox-series-x-25-year-anniversary-console-price-leak/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Persona 3's Amazing 4-Part Adaptation Is Now Completely Free",
+        "url": "https://www.polygon.com/persona-3-the-movie-streaming-for-free-on-aniplex-youtube/",
+        "source": "Polygon"
+      },
+      {
         "title": "Pokémon Fans Found a Way to Bring Rare Event Pokémon to FireRed and LeafGreen",
         "url": "https://www.polygon.com/pokemon-firered-leafgreen-celebi-custom-event-local-wireless/",
         "source": "Polygon"
@@ -287,16 +291,6 @@
       {
         "title": "GTA 6 Leaks Could Be Part of a Big Crypto Scheme",
         "url": "https://www.polygon.com/gta-6-leaks-cyberleek-crypto-scheme/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Metal Gear Solid: Master Collection Vol. 2 Review Roundup: All Hail the Return of MGS4",
-        "url": "https://www.polygon.com/metal-gear-solid-master-collection-vol-2-review-roundup/",
-        "source": "Polygon"
-      },
-      {
-        "title": "8 Extremely Spoilery Questions with 'Spider-Man: Brand New Day' Star Tramell Tillman",
-        "url": "https://www.polygon.com/spider-man-brand-new-day-tramell-tillman-interview/",
         "source": "Polygon"
       }
     ],
