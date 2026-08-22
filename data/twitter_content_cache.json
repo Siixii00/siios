@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-22T03:42:20.789575",
-    "total_items": 58
+    "last_updated": "2026-08-22T04:33:47.863719",
+    "total_items": 57
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "There's no reason for software to be slow anymore",
         "url": "https://danluu.com/perf-opt/",
         "source": "Hacker News",
-        "score": 120
+        "score": 171
       },
       {
         "title": "Felony Bench",
         "url": "https://www.felonybench.com/",
         "source": "Hacker News",
-        "score": 573
-      },
-      {
-        "title": "Kobo can run apps now",
-        "url": "https://bandarlabs.github.io/Cobalt/",
-        "source": "Hacker News",
-        "score": 455
+        "score": 585
       },
       {
         "title": "Rust Glancer: Rust LSP using 100x less RAM",
         "url": "https://rust-glancer.github.io/blog/hello-world/",
         "source": "Hacker News",
-        "score": 65
+        "score": 78
+      },
+      {
+        "title": "Kobo can run apps now",
+        "url": "https://bandarlabs.github.io/Cobalt/",
+        "source": "Hacker News",
+        "score": 466
       },
       {
         "title": "Initial focus for our partnership with Motorola is a regular non-folding device",
         "url": "https://grapheneos.social/@GrapheneOS/117136278553665985",
         "source": "Hacker News",
-        "score": 29
+        "score": 40
       },
       {
         "title": "Three important steps in my maturation process",
         "url": "https://thomasdullien.github.io/posts/2026-08-21-three-important-steps-in-my-maturation-process/",
         "source": "Hacker News",
-        "score": 82
-      },
-      {
-        "title": "Scientists release biggest 2D map of the universe",
-        "url": "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/",
-        "source": "Hacker News",
-        "score": 161
-      },
-      {
-        "title": "Kagi added a setting for removing paywalled links from search results",
-        "url": "https://kagi.com/changelog#11296",
-        "source": "Hacker News",
-        "score": 1042
-      },
-      {
-        "title": "Felony charges for citizen deleting phone data at US Border",
-        "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
-        "source": "Hacker News",
-        "score": 622
-      },
-      {
-        "title": "Ozone: The fault is not in our trees, but in ourselves",
-        "url": "https://www.science.org/content/blog-post/fault-not-our-trees-ourselves",
-        "source": "Hacker News",
-        "score": 11
-      },
-      {
-        "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
-        "url": "https://ozbrain.com",
-        "source": "Hacker News",
-        "score": 50
-      },
-      {
-        "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
-        "url": "https://lina.sh/blog/hijacking-e164-arpa",
-        "source": "Hacker News",
-        "score": 471
-      },
-      {
-        "title": "OTel isn't going well (and I made a spreadsheet about it)",
-        "url": "https://matduggan.com/otel-isnt-going-well-and-i-made-a-spreadsheet-about-it/",
-        "source": "Hacker News",
-        "score": 50
+        "score": 90
       },
       {
         "title": "Early Humans Likely Ate Carbs and Sugary Foods",
         "url": "https://www.history.com/articles/early-human-ancestors-diet-sugar-carbs",
         "source": "Hacker News",
-        "score": 6
+        "score": 14
+      },
+      {
+        "title": "Scientists release biggest 2D map of the universe",
+        "url": "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/",
+        "source": "Hacker News",
+        "score": 165
+      },
+      {
+        "title": "Kagi added a setting for removing paywalled links from search results",
+        "url": "https://kagi.com/changelog#11296",
+        "source": "Hacker News",
+        "score": 1045
+      },
+      {
+        "title": "Felony charges for citizen deleting phone data at US Border",
+        "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
+        "source": "Hacker News",
+        "score": 636
+      },
+      {
+        "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
+        "url": "https://lina.sh/blog/hijacking-e164-arpa",
+        "source": "Hacker News",
+        "score": 478
+      },
+      {
+        "title": "OTel isn't going well (and I made a spreadsheet about it)",
+        "url": "https://matduggan.com/otel-isnt-going-well-and-i-made-a-spreadsheet-about-it/",
+        "source": "Hacker News",
+        "score": 60
+      },
+      {
+        "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
+        "url": "https://ozbrain.com",
+        "source": "Hacker News",
+        "score": 52
+      },
+      {
+        "title": "Ozone: The fault is not in our trees, but in ourselves",
+        "url": "https://www.science.org/content/blog-post/fault-not-our-trees-ourselves",
+        "source": "Hacker News",
+        "score": 12
       },
       {
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News",
-        "score": 253
+        "score": 260
       }
     ],
     "ai": [
@@ -101,49 +101,43 @@
         "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
         "url": "https://ozbrain.com",
         "source": "Hacker News AI",
-        "score": 50
+        "score": 52
       },
       {
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News AI",
-        "score": 253
-      },
-      {
-        "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
-        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
-        "source": "Hacker News AI",
-        "score": 58
+        "score": 260
       },
       {
         "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
         "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
         "source": "Hacker News AI",
-        "score": 217
+        "score": 225
+      },
+      {
+        "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
+        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
+        "source": "Hacker News AI",
+        "score": 63
       },
       {
         "title": "I'm becoming AI-blind",
         "url": "https://cymerys.com/w/im-becoming-ai-blind",
         "source": "Hacker News AI",
-        "score": 290
+        "score": 306
       },
       {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.gl/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 539
-      },
-      {
-        "title": "Quick impressions: A week of using Codex more than Claude",
-        "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
-        "source": "Hacker News AI",
-        "score": 83
+        "score": 542
       },
       {
         "title": "Flat Chair by Sara Paculdo",
         "url": "https://paculdo.com/innovative-housewares-inside-out-design-oliso/",
         "source": "Hacker News AI",
-        "score": 108
+        "score": 109
       }
     ],
     "news": [
@@ -259,6 +253,11 @@
     ],
     "gaming": [
       {
+        "title": "5 Times Disney’s Sci-Fi Ambitions Crashed and Burned at the Box Office",
+        "url": "https://www.polygon.com/disneys-5-biggest-sci-fi-box-office-flops/",
+        "source": "Polygon"
+      },
+      {
         "title": "5 Must-Play New Steam Games to Try This Weekend",
         "url": "https://www.polygon.com/new-steam-games-august-21-2026/",
         "source": "Polygon"
@@ -286,11 +285,6 @@
       {
         "title": "Famed Studio Is Officially Making a Comeback After Xbox Layoffs",
         "url": "https://www.polygon.com/double-fine-kickstarter-xbox-layoffs/",
-        "source": "Polygon"
-      },
-      {
-        "title": "HBO and James Gunn Confirm New 8-Part Action True-Crime Series Spinoff",
-        "url": "https://www.polygon.com/dc-jimmy-olsen-show-people-v-gorilla-grodd-hbo-max/",
         "source": "Polygon"
       }
     ],
