@@ -1,125 +1,137 @@
 {
   "metadata": {
-    "last_updated": "2026-08-22T18:31:41.610557",
+    "last_updated": "2026-08-22T19:22:54.352460",
     "total_items": 58
   },
   "content": {
     "tech": [
       {
+        "title": "hdiutil is deprecated in macOS 27 Golden Gate",
+        "url": "https://lapcatsoftware.com/articles/2026/8/7.html",
+        "source": "Hacker News",
+        "score": 14
+      },
+      {
+        "title": "Scrap",
+        "url": "https://twitter.com/moxie/status/2091218652133732491",
+        "source": "Hacker News",
+        "score": 41
+      },
+      {
         "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
         "url": "https://quantumi.sh/public/labs.html",
         "source": "Hacker News",
-        "score": 133
+        "score": 188
       },
       {
         "title": "A Friendly Introduction to Racket",
         "url": "https://geometridae.bearblog.dev/a-friendly-introduction-to-racket/",
         "source": "Hacker News",
-        "score": 72
-      },
-      {
-        "title": "RF Cafe",
-        "url": "https://www.rfcafe.com/",
-        "source": "Hacker News",
-        "score": 35
-      },
-      {
-        "title": "Munder Difflin – Agent harness to run an office of your clones",
-        "url": "https://munderdiffl.in/",
-        "source": "Hacker News",
-        "score": 202
-      },
-      {
-        "title": "New MCP Roadmap",
-        "url": "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/",
-        "source": "Hacker News",
-        "score": 129
+        "score": 89
       },
       {
         "title": "Hister – A private, full content search index that you control",
         "url": "https://hister.org/",
         "source": "Hacker News",
-        "score": 21
+        "score": 65
       },
       {
-        "title": "Z80 – The 1970s Microprocessor Still Alive (2021)",
-        "url": "https://www.computer.org/csdl/magazine/mi/2021/06/09623402/1yJTvlRLmhi",
+        "title": "Chinese robot runs 100M sprint quicker than Usain Bolt's world record",
+        "url": "https://www.theguardian.com/sport/2026/aug/22/chinese-robot-runs-100m-sprint-quicker-usain-bolt-world-record",
         "source": "Hacker News",
-        "score": 89
+        "score": 44
       },
       {
-        "title": "Learning about \"The Unix Time-Sharing System\"",
-        "url": "https://playtechnique.io/long/the-unix-time-sharing-system.html",
+        "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
+        "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
         "source": "Hacker News",
-        "score": 15
+        "score": 29
       },
       {
-        "title": "Belgian car salesman becomes prince after DNA test proves royal parentage",
-        "url": "https://www.cnn.com/2026/08/22/europe/prince-belgium-secret-son-scli-intl",
+        "title": "RF Cafe",
+        "url": "https://www.rfcafe.com/",
         "source": "Hacker News",
-        "score": 39
+        "score": 52
       },
       {
         "title": "typ.ing",
         "url": "https://typ.ing/",
         "source": "Hacker News",
-        "score": 24
+        "score": 55
       },
       {
-        "title": "Ameliorate",
-        "url": "https://ameliorate.app/",
+        "title": "Munder Difflin – Agent harness to run an office of your clones",
+        "url": "https://munderdiffl.in/",
         "source": "Hacker News",
-        "score": 51
+        "score": 221
+      },
+      {
+        "title": "ATProto spaces: A new extension to ATProto that enables non-public data",
+        "url": "https://atproto.com/blog/atproto-spaces-alpha",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Guess which of these LLM outputs is watermarked",
+        "url": "https://sgoedecke.github.io/watermark-quiz/",
+        "source": "Hacker News",
+        "score": 22
+      },
+      {
+        "title": "Z80 – The 1970s Microprocessor Still Alive (2021)",
+        "url": "https://www.computer.org/csdl/magazine/mi/2021/06/09623402/1yJTvlRLmhi",
+        "source": "Hacker News",
+        "score": 95
       },
       {
         "title": "Why it might be time to rethink the human family tree",
         "url": "https://nautil.us/why-it-might-be-time-to-rethink-the-human-family-tree-1283985",
         "source": "Hacker News",
-        "score": 15
+        "score": 23
       },
       {
-        "title": "Show HN: Rotation via Double Reflection",
-        "url": "https://static.laszlokorte.de/rotor-reflect/",
+        "title": "New MCP Roadmap",
+        "url": "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/",
         "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "Rust Glancer: Rust LSP using 100x less RAM",
-        "url": "https://rust-glancer.github.io/blog/hello-world/",
-        "source": "Hacker News",
-        "score": 371
-      },
-      {
-        "title": "What's in a PowerPoint File?",
-        "url": "https://editide.com/blog/what-is-a-pptx-file/",
-        "source": "Hacker News",
-        "score": 17
+        "score": 141
       }
     ],
     "ai": [
       {
-        "title": "Hook, hold, harvest and hide: Meta's alleged strategy laid out in first week",
-        "url": "https://www.theguardian.com/technology/2026/aug/22/meta-trial-children-privacy",
+        "title": "Chinese robot runs 100M sprint quicker than Usain Bolt's world record",
+        "url": "https://www.theguardian.com/sport/2026/aug/22/chinese-robot-runs-100m-sprint-quicker-usain-bolt-world-record",
         "source": "Hacker News AI",
-        "score": 176
+        "score": 44
       },
       {
-        "title": "How Thailand Resisted Colonization",
-        "url": "https://worksinprogress.co/issue/how-thailand-resisted-colonization/",
+        "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
+        "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
         "source": "Hacker News AI",
-        "score": 107
+        "score": 29
       },
       {
-        "title": "Embedded AI",
-        "url": "https://nostarch.com/embedded-ai",
+        "title": "Guess which of these LLM outputs is watermarked",
+        "url": "https://sgoedecke.github.io/watermark-quiz/",
         "source": "Hacker News AI",
-        "score": 30
+        "score": 22
       },
       {
         "title": "Anthropic appears to be A/B testing reduced effort levels in Claude Code",
         "url": "https://twitter.com/argofowl/status/2091150597374537729",
         "source": "Hacker News AI",
-        "score": 52
+        "score": 69
+      },
+      {
+        "title": "Hook, hold, harvest and hide: Meta's alleged strategy laid out in first week",
+        "url": "https://www.theguardian.com/technology/2026/aug/22/meta-trial-children-privacy",
+        "source": "Hacker News AI",
+        "score": 186
+      },
+      {
+        "title": "How Thailand Resisted Colonization",
+        "url": "https://worksinprogress.co/issue/how-thailand-resisted-colonization/",
+        "source": "Hacker News AI",
+        "score": 109
       },
       {
         "title": "AI boosted homework scores, then exam scores dropped: study",
@@ -131,19 +143,7 @@
         "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
         "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
         "source": "Hacker News AI",
-        "score": 336
-      },
-      {
-        "title": "I'm becoming AI-blind",
-        "url": "https://cymerys.com/w/im-becoming-ai-blind",
-        "source": "Hacker News AI",
-        "score": 463
-      },
-      {
-        "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
-        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
-        "source": "Hacker News AI",
-        "score": 133
+        "score": 337
       }
     ],
     "news": [
