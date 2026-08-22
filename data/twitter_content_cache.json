@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-22T14:22:31.504289",
+    "last_updated": "2026-08-22T15:21:55.583217",
     "total_items": 59
   },
   "content": {
     "tech": [
       {
+        "title": "The New MCP Roadmap",
+        "url": "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/",
+        "source": "Hacker News",
+        "score": 44
+      },
+      {
         "title": "A Kantian Critique of \"Sorry\" by Justin Bieber",
         "url": "https://decodingvibes.com/blog/a-kantian-critique-of-sorry-by-justin-bieber/",
         "source": "Hacker News",
-        "score": 43
+        "score": 84
+      },
+      {
+        "title": "A Friendly Introduction to Racket",
+        "url": "https://geometridae.bearblog.dev/a-friendly-introduction-to-racket/",
+        "source": "Hacker News",
+        "score": 21
       },
       {
         "title": "Munder Difflin – Agent harness to run an office of your clones",
         "url": "https://munderdiffl.in/",
         "source": "Hacker News",
-        "score": 124
+        "score": 153
       },
       {
-        "title": "Z80–The 1970s Microprocessor Still Alive",
+        "title": "Z80 – The 1970s Microprocessor Still Alive (2021)",
         "url": "https://www.computer.org/csdl/magazine/mi/2021/06/09623402/1yJTvlRLmhi",
         "source": "Hacker News",
-        "score": 55
+        "score": 66
       },
       {
-        "title": "The New MCP Roadmap",
-        "url": "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/",
+        "title": "Show HN: Rotation via Double Reflection",
+        "url": "https://static.laszlokorte.de/rotor-reflect/",
         "source": "Hacker News",
-        "score": 9
-      },
-      {
-        "title": "A formal degree and algorithmic problem-solving is the answer. Always has been",
-        "url": "https://zaksa.zip/blog/formal-education-is-the-answer/",
-        "source": "Hacker News",
-        "score": 12
+        "score": 11
       },
       {
         "title": "Hook, hold, harvest and hide: Meta's alleged strategy laid out in first week",
         "url": "https://www.theguardian.com/technology/2026/aug/22/meta-trial-children-privacy",
         "source": "Hacker News",
-        "score": 87
+        "score": 117
       },
       {
         "title": "Rust Glancer: Rust LSP using 100x less RAM",
         "url": "https://rust-glancer.github.io/blog/hello-world/",
         "source": "Hacker News",
-        "score": 322
+        "score": 337
       },
       {
         "title": "Felony Bench",
         "url": "https://www.felonybench.com/",
         "source": "Hacker News",
-        "score": 769
+        "score": 781
       },
       {
         "title": "Kobo can run apps now",
         "url": "https://bandarlabs.github.io/Cobalt/",
         "source": "Hacker News",
-        "score": 596
-      },
-      {
-        "title": "Canada suspends trade negotiations with USA and match tariffs dollar for dollar",
-        "url": "https://www.pm.gc.ca/en/news/statements/2026/08/21/statement-prime-minister-carney-canada-us-trade-negotiations",
-        "source": "Hacker News",
-        "score": 507
+        "score": 610
       },
       {
         "title": "Felony charges for citizen deleting phone data at US Border",
         "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
         "source": "Hacker News",
-        "score": 893
+        "score": 923
+      },
+      {
+        "title": "Digging the grave of my skills: Hollywood creatives training AI to do their jobs",
+        "url": "https://www.theguardian.com/technology/2026/aug/22/the-hollywood-creatives-training-ai-to-do-their-jobs",
+        "source": "Hacker News",
+        "score": 18
       },
       {
         "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
         "url": "https://lina.sh/blog/hijacking-e164-arpa",
         "source": "Hacker News",
-        "score": 597
-      },
-      {
-        "title": "There's no reason for software to be slow anymore",
-        "url": "https://danluu.com/perf-opt/",
-        "source": "Hacker News",
-        "score": 527
+        "score": 607
       },
       {
         "title": "Stop Making TUIs",
         "url": "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/",
         "source": "Hacker News",
-        "score": 239
+        "score": 272
       },
       {
-        "title": "Kagi added a setting for removing paywalled links from search results",
-        "url": "https://kagi.com/changelog#11296",
+        "title": "There's no reason for software to be slow anymore",
+        "url": "https://danluu.com/perf-opt/",
         "source": "Hacker News",
-        "score": 1181
+        "score": 548
       }
     ],
     "ai": [
@@ -101,58 +101,63 @@
         "title": "Hook, hold, harvest and hide: Meta's alleged strategy laid out in first week",
         "url": "https://www.theguardian.com/technology/2026/aug/22/meta-trial-children-privacy",
         "source": "Hacker News AI",
-        "score": 87
+        "score": 117
+      },
+      {
+        "title": "Digging the grave of my skills: Hollywood creatives training AI to do their jobs",
+        "url": "https://www.theguardian.com/technology/2026/aug/22/the-hollywood-creatives-training-ai-to-do-their-jobs",
+        "source": "Hacker News AI",
+        "score": 18
       },
       {
         "title": "How Thailand Resisted Colonization",
         "url": "https://worksinprogress.co/issue/how-thailand-resisted-colonization/",
         "source": "Hacker News AI",
-        "score": 66
+        "score": 74
       },
       {
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News AI",
-        "score": 336
-      },
-      {
-        "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
-        "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
-        "source": "Hacker News AI",
-        "score": 315
-      },
-      {
-        "title": "I'm becoming AI-blind",
-        "url": "https://cymerys.com/w/im-becoming-ai-blind",
-        "source": "Hacker News AI",
-        "score": 424
-      },
-      {
-        "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
-        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
-        "source": "Hacker News AI",
-        "score": 106
+        "score": 343
       },
       {
         "title": "Embedded AI",
         "url": "https://nostarch.com/embedded-ai",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 14
+      },
+      {
+        "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
+        "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
+        "source": "Hacker News AI",
+        "score": 319
+      },
+      {
+        "title": "I'm becoming AI-blind",
+        "url": "https://cymerys.com/w/im-becoming-ai-blind",
+        "source": "Hacker News AI",
+        "score": 434
+      },
+      {
+        "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
+        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
+        "source": "Hacker News AI",
+        "score": 114
       },
       {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.gl/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 580
-      },
-      {
-        "title": "Who Should Pay for Source Code Availability?",
-        "url": "https://kristoff.it/blog/source-code-availability/",
-        "source": "Hacker News AI",
-        "score": 5
+        "score": 582
       }
     ],
     "news": [
+      {
+        "title": "Carney faces crucial test after walking away from Trump's deal",
+        "url": "https://www.bbc.co.uk/news/articles/c3040pn8lmmo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Canada says it will match US tariffs 'dollar for dollar' as trade talks break down",
         "url": "https://www.bbc.co.uk/news/articles/cvgvyy4x2mvo?at_medium=RSS&at_campaign=rss",
@@ -179,12 +184,7 @@
         "source": "BBC World"
       },
       {
-        "title": "One killed in sword attack at Swedish school",
-        "url": "https://www.bbc.co.uk/news/articles/c3r0g7gj2n3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Father leaves 7-year-old son alone on Mount Fuji to continue hike, reports say",
+        "title": "Father leaves 7-year-old son alone on Mount Fuji to continue hike",
         "url": "https://www.bbc.co.uk/news/articles/c93403wg288o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
@@ -265,6 +265,21 @@
     ],
     "gaming": [
       {
+        "title": "Destiny 2's Slow, Painful Death Removes a Critical Third Space for Gamers",
+        "url": "https://www.polygon.com/destiny-2-live-service-end-mactics-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Amazon Is Under Fire After Leaking Jason Statham's New Movie",
+        "url": "https://www.polygon.com/mutiny-jason-statham-amazon-prime-leak-consequences/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'GTA 6' Leaks May Finally Be Coming To An End",
+        "url": "https://www.polygon.com/gta-6-leaks-cyberleek-website-down/",
+        "source": "Polygon"
+      },
+      {
         "title": "6 Hugely Popular Video Games We'd Love to See in Fortnite's New Season",
         "url": "https://www.polygon.com/fortnite-chapter-7-season-4-next-video-games/",
         "source": "Polygon"
@@ -282,21 +297,6 @@
       {
         "title": "HBO Max's R-Rated 116-Minute Action Sci-Fi Sequel Is Officially a Streaming Smash Hit",
         "url": "https://www.polygon.com/mortal-kombat-2-karl-urban-streaming-success-mk3-hbo/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Prime Video's $175M Action Fantasy Flop Is Officially Soaring on Global Streaming",
-        "url": "https://www.polygon.com/masters-of-the-universe-streaming-success-prime-video-august-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GTA 6 Leak and Wolverine Rage Are Symptoms of Gaming's Summer of Hate",
-        "url": "https://www.polygon.com/patch-notes-gta-6-leak-wolverine-summer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "30 Years Ago, One Console and Two Games Changed My Life",
-        "url": "https://www.polygon.com/switchboard-snes-personal-history-super-mario-world-kart/",
         "source": "Polygon"
       }
     ],
