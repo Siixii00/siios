@@ -1,149 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-08-22T16:25:41.264253",
-    "total_items": 58
+    "last_updated": "2026-08-22T17:21:25.074529",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "A Kantian Critique of \"Sorry\" by Justin Bieber",
-        "url": "https://decodingvibes.com/blog/a-kantian-critique-of-sorry-by-justin-bieber/",
-        "source": "Hacker News",
-        "score": 128
-      },
-      {
         "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
         "url": "https://quantumi.sh/public/labs.html",
         "source": "Hacker News",
-        "score": 54
+        "score": 92
+      },
+      {
+        "title": "A Kantian Critique of \"Sorry\" by Justin Bieber",
+        "url": "https://decodingvibes.com/blog/a-kantian-critique-of-sorry-by-justin-bieber/",
+        "source": "Hacker News",
+        "score": 153
+      },
+      {
+        "title": "Htmx live is cool. Datastar is fast. This cow is raw and strong",
+        "url": "https://stario.dev/ox",
+        "source": "Hacker News",
+        "score": 4
       },
       {
         "title": "A Friendly Introduction to Racket",
         "url": "https://geometridae.bearblog.dev/a-friendly-introduction-to-racket/",
         "source": "Hacker News",
-        "score": 34
+        "score": 47
       },
       {
         "title": "The New MCP Roadmap",
         "url": "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/",
         "source": "Hacker News",
-        "score": 83
+        "score": 110
       },
       {
         "title": "Munder Difflin – Agent harness to run an office of your clones",
         "url": "https://munderdiffl.in/",
         "source": "Hacker News",
-        "score": 173
+        "score": 183
       },
       {
         "title": "Z80 – The 1970s Microprocessor Still Alive (2021)",
         "url": "https://www.computer.org/csdl/magazine/mi/2021/06/09623402/1yJTvlRLmhi",
         "source": "Hacker News",
-        "score": 78
+        "score": 84
       },
       {
         "title": "Show HN: Rotation via Double Reflection",
         "url": "https://static.laszlokorte.de/rotor-reflect/",
         "source": "Hacker News",
-        "score": 23
+        "score": 29
+      },
+      {
+        "title": "Anthropic IPO filing will show AI backlash as a risk factor, sources say",
+        "url": "https://www.cnbc.com/2026/08/21/-anthropic-ipo-filing-will-show-ai-backlash-as-risk-sources-say.html",
+        "source": "Hacker News",
+        "score": 18
       },
       {
         "title": "Rust Glancer: Rust LSP using 100x less RAM",
         "url": "https://rust-glancer.github.io/blog/hello-world/",
         "source": "Hacker News",
-        "score": 351
-      },
-      {
-        "title": "Hook, hold, harvest and hide: Meta's alleged strategy laid out in first week",
-        "url": "https://www.theguardian.com/technology/2026/aug/22/meta-trial-children-privacy",
-        "source": "Hacker News",
-        "score": 144
+        "score": 360
       },
       {
         "title": "Felony Bench",
         "url": "https://www.felonybench.com/",
         "source": "Hacker News",
-        "score": 791
+        "score": 800
+      },
+      {
+        "title": "Learning about \"The Unix Time-Sharing System\"",
+        "url": "https://playtechnique.io/long/the-unix-time-sharing-system.html",
+        "source": "Hacker News",
+        "score": 4
       },
       {
         "title": "Kobo can run apps now",
         "url": "https://bandarlabs.github.io/Cobalt/",
         "source": "Hacker News",
-        "score": 618
+        "score": 626
       },
       {
         "title": "Felony charges for citizen deleting phone data at US Border",
         "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
         "source": "Hacker News",
-        "score": 954
+        "score": 981
       },
       {
-        "title": "Stop Making TUIs",
-        "url": "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/",
+        "title": "Hook, hold, harvest and hide: Meta's alleged strategy laid out in first week",
+        "url": "https://www.theguardian.com/technology/2026/aug/22/meta-trial-children-privacy",
         "source": "Hacker News",
-        "score": 301
-      },
-      {
-        "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
-        "url": "https://lina.sh/blog/hijacking-e164-arpa",
-        "source": "Hacker News",
-        "score": 621
-      },
-      {
-        "title": "There's no reason for software to be slow anymore",
-        "url": "https://danluu.com/perf-opt/",
-        "source": "Hacker News",
-        "score": 561
+        "score": 162
       }
     ],
     "ai": [
       {
+        "title": "Anthropic IPO filing will show AI backlash as a risk factor, sources say",
+        "url": "https://www.cnbc.com/2026/08/21/-anthropic-ipo-filing-will-show-ai-backlash-as-risk-sources-say.html",
+        "source": "Hacker News AI",
+        "score": 18
+      },
+      {
         "title": "Hook, hold, harvest and hide: Meta's alleged strategy laid out in first week",
         "url": "https://www.theguardian.com/technology/2026/aug/22/meta-trial-children-privacy",
         "source": "Hacker News AI",
-        "score": 144
-      },
-      {
-        "title": "How Thailand Resisted Colonization",
-        "url": "https://worksinprogress.co/issue/how-thailand-resisted-colonization/",
-        "source": "Hacker News AI",
-        "score": 90
+        "score": 162
       },
       {
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News AI",
-        "score": 354
+        "score": 360
       },
       {
-        "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
-        "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
+        "title": "How Thailand Resisted Colonization",
+        "url": "https://worksinprogress.co/issue/how-thailand-resisted-colonization/",
         "source": "Hacker News AI",
-        "score": 328
+        "score": 99
       },
       {
         "title": "Embedded AI",
         "url": "https://nostarch.com/embedded-ai",
         "source": "Hacker News AI",
-        "score": 17
+        "score": 24
+      },
+      {
+        "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
+        "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
+        "source": "Hacker News AI",
+        "score": 333
       },
       {
         "title": "I'm becoming AI-blind",
         "url": "https://cymerys.com/w/im-becoming-ai-blind",
         "source": "Hacker News AI",
-        "score": 447
+        "score": 456
       },
       {
         "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
         "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
         "source": "Hacker News AI",
-        "score": 121
+        "score": 130
       },
       {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.gl/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 585
+        "score": 589
       }
     ],
     "news": [
@@ -168,13 +174,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Israel re-establishes closed West Bank settlement, defying growing international protests",
-        "url": "https://www.bbc.co.uk/news/articles/cn7n0l4p0kzo?at_medium=RSS&at_campaign=rss",
+        "title": "Rescuers dig through Ukraine mall wreckage as Zelensky condemns 'despicable' Russian strike",
+        "url": "https://www.bbc.co.uk/news/articles/c39egw7nmk2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Rescuers dig through Ukraine mall wreckage as Zelensky condemns 'despicable' Russian strike",
-        "url": "https://www.bbc.co.uk/news/articles/c39egw7nmk2o?at_medium=RSS&at_campaign=rss",
+        "title": "US military newspaper editor voices censorship fears after being fired",
+        "url": "https://www.bbc.co.uk/news/articles/cm2g23ng8p4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -259,6 +265,21 @@
     ],
     "gaming": [
       {
+        "title": "Marvel's Best Mobile Game Is About To Get Its Most Requested Feature",
+        "url": "https://www.polygon.com/marvel-snap-draft-mode/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Fortnite's New Season Kicks Off With Bot-Infested Lobbies",
+        "url": "https://www.polygon.com/fortnite-new-season-bot-lobbies-problem/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Sci-Fi Shows That Are Perfect From Start to Finish",
+        "url": "https://www.polygon.com/sci-fi-shows-best-perfect-run/",
+        "source": "Polygon"
+      },
+      {
         "title": "Celebrate the SNES's 35th Birthday With the 5 Weirdest Switch Online Games",
         "url": "https://www.polygon.com/snes-hidden-gems-switch-online/",
         "source": "Polygon"
@@ -276,21 +297,6 @@
       {
         "title": "'GTA 6' Leaks May Finally Be Coming To An End",
         "url": "https://www.polygon.com/gta-6-leaks-cyberleek-website-down/",
-        "source": "Polygon"
-      },
-      {
-        "title": "6 Hugely Popular Video Games We'd Love to See in Fortnite's New Season",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-next-video-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Double Fine Boss Breaks Silence on 'Brütal Legend 2'",
-        "url": "https://www.polygon.com/brutal-legend-2-not-in-development/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Best New Card From Magic's Hobbit Set Made My Dr. Eggman Deck Unstoppable",
-        "url": "https://www.polygon.com/magic-mtg-hobbit-card-dr-eggman-deck/",
         "source": "Polygon"
       }
     ],
