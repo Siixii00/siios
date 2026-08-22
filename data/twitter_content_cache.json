@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-22T01:16:41.976590",
+    "last_updated": "2026-08-22T02:54:48.124509",
     "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "Kobo can run apps now",
-        "url": "https://bandarlabs.github.io/Cobalt/",
+        "title": "There's no reason for software to be slow anymore",
+        "url": "https://danluu.com/perf-opt/",
         "source": "Hacker News",
-        "score": 424
+        "score": 81
       },
       {
         "title": "Felony Bench",
         "url": "https://www.felonybench.com/",
         "source": "Hacker News",
-        "score": 510
+        "score": 557
       },
       {
-        "title": "Three important steps in my maturation process",
-        "url": "https://thomasdullien.github.io/posts/2026-08-21-three-important-steps-in-my-maturation-process/",
+        "title": "Kobo can run apps now",
+        "url": "https://bandarlabs.github.io/Cobalt/",
         "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Scientists release biggest 2D map of the universe",
-        "url": "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/",
-        "source": "Hacker News",
-        "score": 144
-      },
-      {
-        "title": "Kagi added a setting for removing paywalled links from search results",
-        "url": "https://kagi.com/changelog#11296",
-        "source": "Hacker News",
-        "score": 1004
-      },
-      {
-        "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
-        "url": "https://lina.sh/blog/hijacking-e164-arpa",
-        "source": "Hacker News",
-        "score": 437
-      },
-      {
-        "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
-        "url": "https://ozbrain.com",
-        "source": "Hacker News",
-        "score": 30
-      },
-      {
-        "title": "Felony charges for citizen deleting phone data at US Border",
-        "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
-        "source": "Hacker News",
-        "score": 544
-      },
-      {
-        "title": "People of ACM – Russ Cox",
-        "url": "https://www.acm.org/articles/people-of-acm/2026/russ-cox",
-        "source": "Hacker News",
-        "score": 90
-      },
-      {
-        "title": "DeepSeek-v4-flash-vision-exp",
-        "url": "https://api-docs.deepseek.com/guides/vision/",
-        "source": "Hacker News",
-        "score": 458
+        "score": 450
       },
       {
         "title": "Rust Glancer: Rust LSP using 100x less RAM",
         "url": "https://rust-glancer.github.io/blog/hello-world/",
         "source": "Hacker News",
-        "score": 6
+        "score": 49
+      },
+      {
+        "title": "Initial focus for our partnership with Motorola is a regular non-folding device",
+        "url": "https://grapheneos.social/@GrapheneOS/117136278553665985",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
+        "title": "Three important steps in my maturation process",
+        "url": "https://thomasdullien.github.io/posts/2026-08-21-three-important-steps-in-my-maturation-process/",
+        "source": "Hacker News",
+        "score": 73
+      },
+      {
+        "title": "Scientists release biggest 2D map of the universe",
+        "url": "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/",
+        "source": "Hacker News",
+        "score": 157
+      },
+      {
+        "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
+        "url": "https://ozbrain.com",
+        "source": "Hacker News",
+        "score": 48
+      },
+      {
+        "title": "Kagi added a setting for removing paywalled links from search results",
+        "url": "https://kagi.com/changelog#11296",
+        "source": "Hacker News",
+        "score": 1028
+      },
+      {
+        "title": "Felony charges for citizen deleting phone data at US Border",
+        "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
+        "source": "Hacker News",
+        "score": 603
+      },
+      {
+        "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
+        "url": "https://lina.sh/blog/hijacking-e164-arpa",
+        "source": "Hacker News",
+        "score": 464
       },
       {
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News",
-        "score": 228
+        "score": 246
       },
       {
-        "title": "Autolith: A programming agent with a live runtime",
-        "url": "https://www.lambda-symbolics.com/autolith",
+        "title": "OTel isn't going well (and I made a spreadsheet about it)",
+        "url": "https://matduggan.com/otel-isnt-going-well-and-i-made-a-spreadsheet-about-it/",
+        "source": "Hacker News",
+        "score": 39
+      },
+      {
+        "title": "People of ACM – Russ Cox",
+        "url": "https://www.acm.org/articles/people-of-acm/2026/russ-cox",
+        "source": "Hacker News",
+        "score": 97
+      },
+      {
+        "title": "HN: The Good Parts (2016)",
+        "url": "https://danluu.com/hn-comments/",
         "source": "Hacker News",
         "score": 23
-      },
-      {
-        "title": "How we made a text-to-speech model respond in sub-50 ms",
-        "url": "https://nari-labs.com/blog/qwen3-tts-speed-cost-frontier/",
-        "source": "Hacker News",
-        "score": 102
-      },
-      {
-        "title": "I ran Photoshop on a £0.60 computer chip",
-        "url": "https://pointinthecloud.com/2026-08-19-144600.html",
-        "source": "Hacker News",
-        "score": 120
       }
     ],
     "ai": [
@@ -101,70 +101,75 @@
         "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
         "url": "https://ozbrain.com",
         "source": "Hacker News AI",
-        "score": 30
+        "score": 48
       },
       {
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News AI",
-        "score": 228
+        "score": 246
+      },
+      {
+        "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
+        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
+        "source": "Hacker News AI",
+        "score": 53
       },
       {
         "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
         "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
         "source": "Hacker News AI",
-        "score": 197
+        "score": 211
       },
       {
         "title": "I'm becoming AI-blind",
         "url": "https://cymerys.com/w/im-becoming-ai-blind",
         "source": "Hacker News AI",
-        "score": 262
+        "score": 283
       },
       {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.gl/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 528
+        "score": 537
       },
       {
-        "title": "How Thailand Resisted Colonization",
-        "url": "https://worksinprogress.co/issue/how-thailand-resisted-colonization/",
+        "title": "OpenAI cuts developer pricing for frontier GPT-5.6 Sol model by more than 20%",
+        "url": "https://www.reuters.com/technology/openai-cuts-developer-pricing-frontier-gpt-56-sol-model-by-more-than-20-2026-08-21/",
         "source": "Hacker News AI",
         "score": 18
-      },
-      {
-        "title": "Quick impressions: A week of using Codex more than Claude",
-        "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
-        "source": "Hacker News AI",
-        "score": 77
       },
       {
         "title": "Flat Chair by Sara Paculdo",
         "url": "https://paculdo.com/innovative-housewares-inside-out-design-oliso/",
         "source": "Hacker News AI",
-        "score": 107
+        "score": 108
       }
     ],
     "news": [
+      {
+        "title": "'We have more work to do', says Canada negotiator as US trade deadline looms",
+        "url": "https://www.bbc.co.uk/news/articles/czjlr0evy0do?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "TikTok to pay $400m to US in one of largest child privacy settlements",
+        "url": "https://www.bbc.co.uk/news/articles/cwyr0l45xjro?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Israel re-establishes closed West Bank settlement, defying growing international protests",
         "url": "https://www.bbc.co.uk/news/articles/cn7n0l4p0kzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Russian double-tap drone strike kills 15 in Ukrainian mall, officials say",
+        "title": "Russian double-tap drone strike kills 16 in Ukrainian mall, officials say",
         "url": "https://www.bbc.co.uk/news/articles/c39egw7nmk2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "One killed in sword attack at Swedish school",
         "url": "https://www.bbc.co.uk/news/articles/c3r0g7gj2n3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Hong Kong's Tiananmen activists guilty in national security trial",
-        "url": "https://www.bbc.co.uk/news/articles/c1l10mdrld5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -175,11 +180,6 @@
       {
         "title": "Two injured in stabbing attack at Canada Sikh temple",
         "url": "https://www.bbc.co.uk/news/articles/ce8l7w0n0jeo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Ebola vaccine trial to start in DR Congo as warning issued over speed of infections",
-        "url": "https://www.bbc.co.uk/news/articles/czxe9n0vxzdo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
