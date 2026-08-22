@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-22T11:21:07.495909",
-    "total_items": 56
+    "last_updated": "2026-08-22T12:40:24.464394",
+    "total_items": 58
   },
   "content": {
     "tech": [
@@ -9,129 +9,141 @@
         "title": "Canada suspends trade negotiations with USA and match tariffs dollar for dollar",
         "url": "https://www.pm.gc.ca/en/news/statements/2026/08/21/statement-prime-minister-carney-canada-us-trade-negotiations",
         "source": "Hacker News",
-        "score": 96
+        "score": 340
       },
       {
         "title": "Z80–The 1970s Microprocessor Still Alive",
         "url": "https://www.computer.org/csdl/magazine/mi/2021/06/09623402/1yJTvlRLmhi",
         "source": "Hacker News",
-        "score": 12
+        "score": 34
       },
       {
         "title": "Munder Difflin – Agent harness to run an office of your clones",
         "url": "https://munderdiffl.in/",
         "source": "Hacker News",
-        "score": 8
+        "score": 48
       },
       {
         "title": "Rust Glancer: Rust LSP using 100x less RAM",
         "url": "https://rust-glancer.github.io/blog/hello-world/",
         "source": "Hacker News",
-        "score": 270
+        "score": 299
       },
       {
         "title": "Felony Bench",
         "url": "https://www.felonybench.com/",
         "source": "Hacker News",
-        "score": 731
+        "score": 752
       },
       {
         "title": "Kobo can run apps now",
         "url": "https://bandarlabs.github.io/Cobalt/",
         "source": "Hacker News",
-        "score": 569
+        "score": 583
       },
       {
         "title": "Felony charges for citizen deleting phone data at US Border",
         "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
         "source": "Hacker News",
-        "score": 825
+        "score": 859
       },
       {
         "title": "There's no reason for software to be slow anymore",
         "url": "https://danluu.com/perf-opt/",
         "source": "Hacker News",
-        "score": 443
+        "score": 484
       },
       {
         "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
         "url": "https://lina.sh/blog/hijacking-e164-arpa",
         "source": "Hacker News",
-        "score": 568
+        "score": 580
       },
       {
         "title": "Zig’s io.threaded is neat",
         "url": "https://matklad.github.io/2026/08/06/neat-io-threaded.html",
         "source": "Hacker News",
-        "score": 85
+        "score": 94
       },
       {
         "title": "Kagi added a setting for removing paywalled links from search results",
         "url": "https://kagi.com/changelog#11296",
         "source": "Hacker News",
-        "score": 1147
+        "score": 1162
       },
       {
         "title": "Three important steps in my maturation process",
         "url": "https://thomasdullien.github.io/posts/2026-08-21-three-important-steps-in-my-maturation-process/",
         "source": "Hacker News",
-        "score": 152
-      },
-      {
-        "title": "Scientists release biggest 2D map of the universe",
-        "url": "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/",
-        "source": "Hacker News",
-        "score": 215
+        "score": 166
       },
       {
         "title": "Stop Making TUIs",
         "url": "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/",
         "source": "Hacker News",
-        "score": 165
+        "score": 191
+      },
+      {
+        "title": "Hook, hold, harvest and hide: Meta's alleged strategy laid out in first week",
+        "url": "https://www.theguardian.com/technology/2026/aug/22/meta-trial-children-privacy",
+        "source": "Hacker News",
+        "score": 8
       },
       {
         "title": "OTel isn’t going well",
         "url": "https://matduggan.com/otel-isnt-going-well-and-i-made-a-spreadsheet-about-it/",
         "source": "Hacker News",
-        "score": 134
+        "score": 145
       }
     ],
     "ai": [
       {
+        "title": "Hook, hold, harvest and hide: Meta's alleged strategy laid out in first week",
+        "url": "https://www.theguardian.com/technology/2026/aug/22/meta-trial-children-privacy",
+        "source": "Hacker News AI",
+        "score": 8
+      },
+      {
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News AI",
-        "score": 316
+        "score": 323
+      },
+      {
+        "title": "How Thailand Resisted Colonization",
+        "url": "https://worksinprogress.co/issue/how-thailand-resisted-colonization/",
+        "source": "Hacker News AI",
+        "score": 39
       },
       {
         "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
         "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
         "source": "Hacker News AI",
-        "score": 288
+        "score": 302
       },
       {
         "title": "I'm becoming AI-blind",
         "url": "https://cymerys.com/w/im-becoming-ai-blind",
         "source": "Hacker News AI",
-        "score": 386
+        "score": 406
       },
       {
         "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
         "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
         "source": "Hacker News AI",
-        "score": 94
+        "score": 97
+      },
+      {
+        "title": "Embedded AI",
+        "url": "https://nostarch.com/embedded-ai",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.gl/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 570
-      },
-      {
-        "title": "Building a Quantum Computer, One Fragile Qubit at a Time",
-        "url": "https://www.quantamagazine.org/building-a-quantum-computer-one-fragile-qubit-at-a-time-20260819/",
-        "source": "Hacker News AI",
-        "score": 4
+        "score": 575
       }
     ],
     "news": [
@@ -151,7 +163,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Rescuers dig through Ukraine mall wreckage as Zelensky condemns 'despicable' strike",
+        "title": "Rescuers dig through Ukraine mall wreckage as Zelensky condemns 'despicable' Russian strike",
         "url": "https://www.bbc.co.uk/news/articles/c39egw7nmk2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -172,6 +184,11 @@
       }
     ],
     "art": [
+      {
+        "title": " The Spider-Man AI scandal shouldn’t be a surprise ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/the-spider-man-ai-scandal-shouldnt-be-a-surprise",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The best portable CAD laptops for on-site work ",
         "url": "https://www.creativebloq.com/tech/laptops/the-best-portable-cad-laptops-for-on-site-work",
@@ -200,11 +217,6 @@
       {
         "title": " KPop Demon Hunters might have to change its name ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/kpop-demon-hunters-might-have-to-change-its-name",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Swifties calm down, not everything is a Taylor Swift Easter egg ",
-        "url": "https://www.creativebloq.com/design/branding/swifties-calm-down-not-everything-is-a-taylor-swift-easter-egg",
         "source": "Creative Bloq"
       }
     ],
@@ -247,6 +259,21 @@
     ],
     "gaming": [
       {
+        "title": "HBO Max's R-Rated 116-Minute Action Sci-Fi Sequel Is Officially a Streaming Smash Hit",
+        "url": "https://www.polygon.com/mortal-kombat-2-karl-urban-streaming-success-mk3-hbo/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Prime Video's $175M Action Fantasy Flop Is Officially Soaring on Global Streaming",
+        "url": "https://www.polygon.com/masters-of-the-universe-streaming-success-prime-video-august-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "GTA 6 Leak and Wolverine Rage Are Symptoms of Gaming's Summer of Hate",
+        "url": "https://www.polygon.com/patch-notes-gta-6-leak-wolverine-summer/",
+        "source": "Polygon"
+      },
+      {
         "title": "30 Years Ago, One Console and Two Games Changed My Life",
         "url": "https://www.polygon.com/switchboard-snes-personal-history-super-mario-world-kart/",
         "source": "Polygon"
@@ -264,21 +291,6 @@
       {
         "title": "19 Years Later, Doctor Who Officially Has a Chance to Fix Its Worst Mistake",
         "url": "https://www.polygon.com/doctor-who-big-finish-martha-jones/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Taylor Sheridan Meets 'Breaking Bad' in FX's Near-Perfect 10-Part Detective Thriller Series",
-        "url": "https://www.polygon.com/fargo-season-2-binge-watch/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Nintendo Blurred the Lines Between Handhelds and Consoles Decades Before the Switch",
-        "url": "https://www.polygon.com/super-game-boy-retrospective/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Steven Spielberg’s 115-minute Sci-fi Masterpiece Soars Back to the Top of the Streaming Charts",
-        "url": "https://www.polygon.com/steven-spielberg-et-extra-terrestrial-streaming-success-apple-tv-august-2026/",
         "source": "Polygon"
       }
     ],
