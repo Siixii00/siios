@@ -1,149 +1,143 @@
 {
   "metadata": {
-    "last_updated": "2026-08-22T06:41:05.273901",
-    "total_items": 58
+    "last_updated": "2026-08-22T07:32:43.539581",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
-        "title": "There's no reason for software to be slow anymore",
-        "url": "https://danluu.com/perf-opt/",
-        "source": "Hacker News",
-        "score": 297
-      },
-      {
-        "title": "GPT 5.6 Sol 20% price reduction",
-        "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
-        "source": "Hacker News",
-        "score": 35
-      },
-      {
-        "title": "Initial focus for our partnership with Motorola is a regular non-folding device",
-        "url": "https://grapheneos.social/@GrapheneOS/117136278553665985",
-        "source": "Hacker News",
-        "score": 89
-      },
-      {
         "title": "Felony Bench",
         "url": "https://www.felonybench.com/",
         "source": "Hacker News",
-        "score": 616
-      },
-      {
-        "title": "Kobo can run apps now",
-        "url": "https://bandarlabs.github.io/Cobalt/",
-        "source": "Hacker News",
-        "score": 488
+        "score": 649
       },
       {
         "title": "Rust Glancer: Rust LSP using 100x less RAM",
         "url": "https://rust-glancer.github.io/blog/hello-world/",
         "source": "Hacker News",
-        "score": 112
+        "score": 132
+      },
+      {
+        "title": "Kobo can run apps now",
+        "url": "https://bandarlabs.github.io/Cobalt/",
+        "source": "Hacker News",
+        "score": 507
+      },
+      {
+        "title": "There's no reason for software to be slow anymore",
+        "url": "https://danluu.com/perf-opt/",
+        "source": "Hacker News",
+        "score": 331
       },
       {
         "title": "Optimizing meshoptimizer to process billions of triangles in minutes (2025)",
         "url": "https://zeux.io/2025/09/30/billions-of-triangles-in-minutes/",
         "source": "Hacker News",
-        "score": 7
+        "score": 15
       },
       {
         "title": "Felony charges for citizen deleting phone data at US Border",
         "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
         "source": "Hacker News",
-        "score": 695
+        "score": 727
       },
       {
         "title": "Three important steps in my maturation process",
         "url": "https://thomasdullien.github.io/posts/2026-08-21-three-important-steps-in-my-maturation-process/",
         "source": "Hacker News",
-        "score": 112
+        "score": 121
+      },
+      {
+        "title": "Zig’s io.threaded is neat",
+        "url": "https://matklad.github.io/2026/08/06/neat-io-threaded.html",
+        "source": "Hacker News",
+        "score": 51
       },
       {
         "title": "Kagi added a setting for removing paywalled links from search results",
         "url": "https://kagi.com/changelog#11296",
         "source": "Hacker News",
-        "score": 1080
-      },
-      {
-        "title": "Zig's Io.Threaded Is Neat",
-        "url": "https://matklad.github.io/2026/08/06/neat-io-threaded.html",
-        "source": "Hacker News",
-        "score": 40
-      },
-      {
-        "title": "Scientists release biggest 2D map of the universe",
-        "url": "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/",
-        "source": "Hacker News",
-        "score": 179
-      },
-      {
-        "title": "OTel isn't going well (and I made a spreadsheet about it)",
-        "url": "https://matduggan.com/otel-isnt-going-well-and-i-made-a-spreadsheet-about-it/",
-        "source": "Hacker News",
-        "score": 82
+        "score": 1093
       },
       {
         "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
         "url": "https://lina.sh/blog/hijacking-e164-arpa",
         "source": "Hacker News",
-        "score": 495
+        "score": 517
       },
       {
-        "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
-        "url": "https://ozbrain.com",
+        "title": "Scientists release biggest 2D map of the universe",
+        "url": "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/",
         "source": "Hacker News",
-        "score": 64
-      }
-    ],
-    "ai": [
-      {
-        "title": "GPT 5.6 Sol 20% price reduction",
-        "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
-        "source": "Hacker News AI",
-        "score": 35
+        "score": 185
       },
       {
-        "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
-        "url": "https://ozbrain.com",
-        "source": "Hacker News AI",
-        "score": 64
+        "title": "OTel isn’t going well",
+        "url": "https://matduggan.com/otel-isnt-going-well-and-i-made-a-spreadsheet-about-it/",
+        "source": "Hacker News",
+        "score": 93
       },
       {
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
+        "source": "Hacker News",
+        "score": 294
+      },
+      {
+        "title": "Initial focus for our partnership with Motorola is a regular non-folding device",
+        "url": "https://grapheneos.social/@GrapheneOS/117136278553665985",
+        "source": "Hacker News",
+        "score": 99
+      },
+      {
+        "title": "People of ACM – Russ Cox",
+        "url": "https://www.acm.org/articles/people-of-acm/2026/russ-cox",
+        "source": "Hacker News",
+        "score": 124
+      }
+    ],
+    "ai": [
+      {
+        "title": "AI boosted homework scores, then exam scores dropped: study",
+        "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News AI",
-        "score": 282
+        "score": 294
+      },
+      {
+        "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
+        "url": "https://ozbrain.com",
+        "source": "Hacker News AI",
+        "score": 65
       },
       {
         "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
         "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
         "source": "Hacker News AI",
-        "score": 76
+        "score": 81
       },
       {
         "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
         "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
         "source": "Hacker News AI",
-        "score": 242
+        "score": 251
       },
       {
         "title": "I'm becoming AI-blind",
         "url": "https://cymerys.com/w/im-becoming-ai-blind",
         "source": "Hacker News AI",
-        "score": 332
+        "score": 336
+      },
+      {
+        "title": "GPT 5.6 Sol 20% price reduction",
+        "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
+        "source": "Hacker News AI",
+        "score": 62
       },
       {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.gl/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 553
-      },
-      {
-        "title": "Giving an LLM your prod database is easy. Taking access away is the hard part",
-        "url": "https://deepsql.ai/blog/giving-an-llm-your-database-is-easy-taking-access-away-is-hard",
-        "source": "Hacker News AI",
-        "score": 3
+        "score": 554
       }
     ],
     "news": [
@@ -168,6 +162,11 @@
         "source": "BBC World"
       },
       {
+        "title": "Lindsay Clancy suffering 'command hallucination' when she killed children, court hears",
+        "url": "https://www.bbc.co.uk/news/articles/c62xpre63j2o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "One killed in sword attack at Swedish school",
         "url": "https://www.bbc.co.uk/news/articles/c3r0g7gj2n3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -175,11 +174,6 @@
       {
         "title": "UK, Canada and Australia condemn Israel for refusing criminal probe into aid worker killings in Gaza",
         "url": "https://www.bbc.co.uk/news/articles/cvgl2pe09eno?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "As they return to the UK, Harry and Meghan search for a brand that sticks",
-        "url": "https://www.bbc.co.uk/news/articles/c0l5d387j18o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
