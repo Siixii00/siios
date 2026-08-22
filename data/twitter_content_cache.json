@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-22T08:31:33.535149",
+    "last_updated": "2026-08-22T09:27:49.327586",
     "total_items": 57
   },
   "content": {
     "tech": [
       {
-        "title": "Felony Bench",
-        "url": "https://www.felonybench.com/",
-        "source": "Hacker News",
-        "score": 684
-      },
-      {
         "title": "Rust Glancer: Rust LSP using 100x less RAM",
         "url": "https://rust-glancer.github.io/blog/hello-world/",
         "source": "Hacker News",
-        "score": 166
+        "score": 198
+      },
+      {
+        "title": "Felony Bench",
+        "url": "https://www.felonybench.com/",
+        "source": "Hacker News",
+        "score": 697
       },
       {
         "title": "Kobo can run apps now",
         "url": "https://bandarlabs.github.io/Cobalt/",
         "source": "Hacker News",
-        "score": 527
+        "score": 540
       },
       {
         "title": "There's no reason for software to be slow anymore",
         "url": "https://danluu.com/perf-opt/",
         "source": "Hacker News",
-        "score": 366
-      },
-      {
-        "title": "Felony charges for citizen deleting phone data at US Border",
-        "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
-        "source": "Hacker News",
-        "score": 754
+        "score": 394
       },
       {
         "title": "Optimizing meshoptimizer to process billions of triangles in minutes (2025)",
         "url": "https://zeux.io/2025/09/30/billions-of-triangles-in-minutes/",
         "source": "Hacker News",
-        "score": 17
+        "score": 28
+      },
+      {
+        "title": "Felony charges for citizen deleting phone data at US Border",
+        "url": "https://www.nytimes.com/2026/08/21/us/politics/samuel-tunick-deleted-phone-felony.html",
+        "source": "Hacker News",
+        "score": 775
       },
       {
         "title": "I accidentally logged hundreds of thousands of phone calls to military bases",
         "url": "https://lina.sh/blog/hijacking-e164-arpa",
         "source": "Hacker News",
-        "score": 532
+        "score": 538
       },
       {
         "title": "Kagi added a setting for removing paywalled links from search results",
         "url": "https://kagi.com/changelog#11296",
         "source": "Hacker News",
-        "score": 1106
-      },
-      {
-        "title": "OTel isn’t going well",
-        "url": "https://matduggan.com/otel-isnt-going-well-and-i-made-a-spreadsheet-about-it/",
-        "source": "Hacker News",
-        "score": 104
+        "score": 1117
       },
       {
         "title": "Three important steps in my maturation process",
         "url": "https://thomasdullien.github.io/posts/2026-08-21-three-important-steps-in-my-maturation-process/",
         "source": "Hacker News",
-        "score": 128
-      },
-      {
-        "title": "Scientists release biggest 2D map of the universe",
-        "url": "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/",
-        "source": "Hacker News",
-        "score": 198
+        "score": 136
       },
       {
         "title": "Zig’s io.threaded is neat",
         "url": "https://matklad.github.io/2026/08/06/neat-io-threaded.html",
         "source": "Hacker News",
-        "score": 59
+        "score": 70
       },
       {
-        "title": "Canada will match US tariffs 'dollar for dollar' as trade talks break down",
-        "url": "https://www.bbc.com/news/articles/cvgvyy4x2mvo",
+        "title": "Scientists release biggest 2D map of the universe",
+        "url": "https://newscenter.lbl.gov/2026/08/10/scientists-release-biggest-2d-map-of-the-universe/",
         "source": "Hacker News",
-        "score": 59
+        "score": 201
+      },
+      {
+        "title": "OTel isn’t going well",
+        "url": "https://matduggan.com/otel-isnt-going-well-and-i-made-a-spreadsheet-about-it/",
+        "source": "Hacker News",
+        "score": 113
       },
       {
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News",
-        "score": 298
+        "score": 304
       },
       {
         "title": "Stop Making TUIs",
         "url": "https://sockpuppet.org/blog/2026/08/20/stop-making-tuis/",
         "source": "Hacker News",
-        "score": 111
+        "score": 126
+      },
+      {
+        "title": "Autolith: A programming agent with a live runtime",
+        "url": "https://www.lambda-symbolics.com/autolith",
+        "source": "Hacker News",
+        "score": 64
       }
     ],
     "ai": [
@@ -101,31 +101,31 @@
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News AI",
-        "score": 298
+        "score": 304
       },
       {
         "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
         "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
         "source": "Hacker News AI",
-        "score": 258
-      },
-      {
-        "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
-        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
-        "source": "Hacker News AI",
-        "score": 85
+        "score": 266
       },
       {
         "title": "I'm becoming AI-blind",
         "url": "https://cymerys.com/w/im-becoming-ai-blind",
         "source": "Hacker News AI",
-        "score": 351
+        "score": 361
+      },
+      {
+        "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
+        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
+        "source": "Hacker News AI",
+        "score": 86
       },
       {
         "title": "AI companies destroy physical books – let's scan rare books before it's too late",
         "url": "https://annas-archive.gl/blog/physical-destruction.html",
         "source": "Hacker News AI",
-        "score": 559
+        "score": 561
       },
       {
         "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
@@ -137,7 +137,7 @@
         "title": "GPT 5.6 Sol 20% price reduction",
         "url": "https://developers.openai.com/api/docs/models/gpt-5.6-sol",
         "source": "Hacker News AI",
-        "score": 65
+        "score": 68
       }
     ],
     "news": [
@@ -172,8 +172,8 @@
         "source": "BBC World"
       },
       {
-        "title": "UK, Canada and Australia condemn Israel for refusing criminal probe into aid worker killings in Gaza",
-        "url": "https://www.bbc.co.uk/news/articles/cvgl2pe09eno?at_medium=RSS&at_campaign=rss",
+        "title": "Father leaves 7-year-old son alone on Mount Fuji to continue hike, reports say",
+        "url": "https://www.bbc.co.uk/news/articles/c93403wg288o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -253,6 +253,16 @@
     ],
     "gaming": [
       {
+        "title": "League of Legends Spinoff Cancellation Leaves Players Fuming",
+        "url": "https://www.polygon.com/riot-games-2xko-cancellation-reactions/",
+        "source": "Polygon"
+      },
+      {
+        "title": "19 Years Later, Doctor Who Officially Has a Chance to Fix Its Worst Mistake",
+        "url": "https://www.polygon.com/doctor-who-big-finish-martha-jones/",
+        "source": "Polygon"
+      },
+      {
         "title": "Taylor Sheridan Meets 'Breaking Bad' in FX's Near-Perfect 10-Part Detective Thriller Series",
         "url": "https://www.polygon.com/fargo-season-2-binge-watch/",
         "source": "Polygon"
@@ -275,16 +285,6 @@
       {
         "title": "5 Must-Play New Steam Games to Try This Weekend",
         "url": "https://www.polygon.com/new-steam-games-august-21-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Pokémon' Free August 2026 DLC Confirmed for Pokémon Worlds",
-        "url": "https://www.polygon.com/pokemon-worlds-twitch-drops-how-to-get-tcg-pikachu-card-astronaut/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 New Movies to Watch This Weekend on Netflix, HBO Max, and Hulu (August 21-23)",
-        "url": "https://www.polygon.com/new-movies-streaming-this-weekend-netflix-august-21-23/",
         "source": "Polygon"
       }
     ],
