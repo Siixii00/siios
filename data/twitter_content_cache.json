@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-22T19:22:54.352460",
-    "total_items": 58
+    "last_updated": "2026-08-22T20:23:24.650265",
+    "total_items": 56
   },
   "content": {
     "tech": [
@@ -9,141 +9,129 @@
         "title": "hdiutil is deprecated in macOS 27 Golden Gate",
         "url": "https://lapcatsoftware.com/articles/2026/8/7.html",
         "source": "Hacker News",
-        "score": 14
+        "score": 69
+      },
+      {
+        "title": "NetBSD and My Life (2005)",
+        "url": "https://mail-index.netbsd.org/netbsd-advocacy/2005/09/10/0000.html",
+        "source": "Hacker News",
+        "score": 36
       },
       {
         "title": "Scrap",
         "url": "https://twitter.com/moxie/status/2091218652133732491",
         "source": "Hacker News",
-        "score": 41
+        "score": 100
       },
       {
         "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
         "url": "https://quantumi.sh/public/labs.html",
         "source": "Hacker News",
-        "score": 188
-      },
-      {
-        "title": "A Friendly Introduction to Racket",
-        "url": "https://geometridae.bearblog.dev/a-friendly-introduction-to-racket/",
-        "source": "Hacker News",
-        "score": 89
+        "score": 230
       },
       {
         "title": "Hister – A private, full content search index that you control",
         "url": "https://hister.org/",
         "source": "Hacker News",
-        "score": 65
+        "score": 110
       },
       {
-        "title": "Chinese robot runs 100M sprint quicker than Usain Bolt's world record",
-        "url": "https://www.theguardian.com/sport/2026/aug/22/chinese-robot-runs-100m-sprint-quicker-usain-bolt-world-record",
+        "title": "A Friendly Introduction to Racket",
+        "url": "https://geometridae.bearblog.dev/a-friendly-introduction-to-racket/",
         "source": "Hacker News",
-        "score": 44
+        "score": 104
       },
       {
-        "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
-        "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
+        "title": "Show HN: Make your logo extra bright on HDR screens",
+        "url": "https://www.soverybright.com/",
         "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "RF Cafe",
-        "url": "https://www.rfcafe.com/",
-        "source": "Hacker News",
-        "score": 52
+        "score": 16
       },
       {
         "title": "typ.ing",
         "url": "https://typ.ing/",
         "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Munder Difflin – Agent harness to run an office of your clones",
-        "url": "https://munderdiffl.in/",
-        "source": "Hacker News",
-        "score": 221
+        "score": 85
       },
       {
         "title": "ATProto spaces: A new extension to ATProto that enables non-public data",
         "url": "https://atproto.com/blog/atproto-spaces-alpha",
         "source": "Hacker News",
-        "score": 27
+        "score": 48
       },
       {
-        "title": "Guess which of these LLM outputs is watermarked",
-        "url": "https://sgoedecke.github.io/watermark-quiz/",
+        "title": "RF Cafe",
+        "url": "https://www.rfcafe.com/",
         "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Z80 – The 1970s Microprocessor Still Alive (2021)",
-        "url": "https://www.computer.org/csdl/magazine/mi/2021/06/09623402/1yJTvlRLmhi",
-        "source": "Hacker News",
-        "score": 95
-      },
-      {
-        "title": "Why it might be time to rethink the human family tree",
-        "url": "https://nautil.us/why-it-might-be-time-to-rethink-the-human-family-tree-1283985",
-        "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "New MCP Roadmap",
-        "url": "https://blog.modelcontextprotocol.io/posts/mcp-roadmap/",
-        "source": "Hacker News",
-        "score": 141
-      }
-    ],
-    "ai": [
-      {
-        "title": "Chinese robot runs 100M sprint quicker than Usain Bolt's world record",
-        "url": "https://www.theguardian.com/sport/2026/aug/22/chinese-robot-runs-100m-sprint-quicker-usain-bolt-world-record",
-        "source": "Hacker News AI",
-        "score": 44
+        "score": 73
       },
       {
         "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
         "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
-        "source": "Hacker News AI",
-        "score": 29
+        "source": "Hacker News",
+        "score": 50
       },
       {
-        "title": "Guess which of these LLM outputs is watermarked",
-        "url": "https://sgoedecke.github.io/watermark-quiz/",
-        "source": "Hacker News AI",
+        "title": "Why your local LLM feels dumber than it is",
+        "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "Munder Difflin – Agent harness to run an office of your clones",
+        "url": "https://munderdiffl.in/",
+        "source": "Hacker News",
+        "score": 226
+      },
+      {
+        "title": "Canada will match US tariffs 'dollar for dollar' as trade talks break down",
+        "url": "https://www.bbc.com/news/articles/cvgvyy4x2mvo",
+        "source": "Hacker News",
+        "score": 255
+      },
+      {
+        "title": "One night in Uzbekistan: Why was this one data point so influential?",
+        "url": "https://statmodeling.stat.columbia.edu/2026/08/20/we-couldnt-reproduce-their-findings-and-realized-that-it-was-all-driven-by-weird-data-from-uzbekistan/",
+        "source": "Hacker News",
         "score": 22
+      }
+    ],
+    "ai": [
+      {
+        "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
+        "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
+        "source": "Hacker News AI",
+        "score": 50
+      },
+      {
+        "title": "Why your local LLM feels dumber than it is",
+        "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+        "source": "Hacker News AI",
+        "score": 11
       },
       {
         "title": "Anthropic appears to be A/B testing reduced effort levels in Claude Code",
         "url": "https://twitter.com/argofowl/status/2091150597374537729",
         "source": "Hacker News AI",
-        "score": 69
+        "score": 90
+      },
+      {
+        "title": "Chinese robot runs 100M sprint quicker than Usain Bolt's world record",
+        "url": "https://www.theguardian.com/sport/2026/aug/22/chinese-robot-runs-100m-sprint-quicker-usain-bolt-world-record",
+        "source": "Hacker News AI",
+        "score": 48
       },
       {
         "title": "Hook, hold, harvest and hide: Meta's alleged strategy laid out in first week",
         "url": "https://www.theguardian.com/technology/2026/aug/22/meta-trial-children-privacy",
         "source": "Hacker News AI",
-        "score": 186
+        "score": 193
       },
       {
         "title": "How Thailand Resisted Colonization",
         "url": "https://worksinprogress.co/issue/how-thailand-resisted-colonization/",
         "source": "Hacker News AI",
-        "score": 109
-      },
-      {
-        "title": "AI boosted homework scores, then exam scores dropped: study",
-        "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
-        "source": "Hacker News AI",
-        "score": 364
-      },
-      {
-        "title": "Claudette: Make Claude stop talking like a BuzzFeed article",
-        "url": "https://github.com/adnanakil/nobuzz/blob/main/README.md",
-        "source": "Hacker News AI",
-        "score": 337
+        "score": 111
       }
     ],
     "news": [
@@ -259,6 +247,26 @@
     ],
     "gaming": [
       {
+        "title": "7 Years Later, the Best Outer Wilds Quote Hits Harder Than Ever",
+        "url": "https://www.polygon.com/outer-wilds-be-curious-on-your-journey/",
+        "source": "Polygon"
+      },
+      {
+        "title": "27 Years Later, the Best 'Peanuts' Snoopy Quote Is Still in a League of Its Own",
+        "url": "https://www.polygon.com/best-snoopy-quote-peanuts/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Trainspotting' Meets 'Zodiac' in This Star Wars Actor's 10/10 Cult Classic Thriller",
+        "url": "https://www.polygon.com/ewan-mcgregors-second-movie-might-still-be-his-darkest/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Diablo 3 Is Still the Best Diablo and I Will Die On This Hill, 14 Years Later",
+        "url": "https://www.polygon.com/diabo-3-best-xbox-game-pass/",
+        "source": "Polygon"
+      },
+      {
         "title": "Marvel's Best Mobile Game Is About To Get Its Most Requested Feature",
         "url": "https://www.polygon.com/marvel-snap-draft-mode/",
         "source": "Polygon"
@@ -271,26 +279,6 @@
       {
         "title": "5 Sci-Fi Shows That Are Perfect From Start to Finish",
         "url": "https://www.polygon.com/sci-fi-shows-best-perfect-run/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Celebrate the SNES's 35th Birthday With the 5 Weirdest Switch Online Games",
-        "url": "https://www.polygon.com/snes-hidden-gems-switch-online/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Destiny 2's Slow, Painful Death Removes a Critical Third Space for Gamers",
-        "url": "https://www.polygon.com/destiny-2-live-service-end-mactics-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Amazon Is Under Fire After Leaking Jason Statham's New Movie",
-        "url": "https://www.polygon.com/mutiny-jason-statham-amazon-prime-leak-consequences/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'GTA 6' Leaks May Finally Be Coming To An End",
-        "url": "https://www.polygon.com/gta-6-leaks-cyberleek-website-down/",
         "source": "Polygon"
       }
     ],
