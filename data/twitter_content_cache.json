@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-23T11:21:43.220300",
-    "total_items": 55
+    "last_updated": "2026-08-23T12:40:53.321104",
+    "total_items": 49
   },
   "content": {
     "tech": [
       {
-        "title": "The End of an Athlon",
-        "url": "http://www.os2museum.com/wp/the-end-of-an-athlon/",
+        "title": "Sydney Marathon medal mistakenly depicts Munich stadium",
+        "url": "https://www.bbc.com/news/articles/cvg92y1wzn8o",
         "source": "Hacker News",
-        "score": 110
+        "score": 26
       },
       {
         "title": "To become a better writer, read as much as you can",
         "url": "https://nappertime.com/the-golden-rule-of-becoming-a-better-writer/",
         "source": "Hacker News",
-        "score": 185
+        "score": 232
+      },
+      {
+        "title": "The End of an Athlon",
+        "url": "http://www.os2museum.com/wp/the-end-of-an-athlon/",
+        "source": "Hacker News",
+        "score": 124
+      },
+      {
+        "title": "Show HN: Live 3D satellite tracker and the declassified Pentagon UFO archive",
+        "url": "https://skylens.yantraai.app/",
+        "source": "Hacker News",
+        "score": 19
       },
       {
         "title": "JIT Compiling Code in 5μs",
         "url": "https://malisper.me/jit-compiling-code-in-5-us/",
         "source": "Hacker News",
-        "score": 76
+        "score": 88
       },
       {
         "title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
         "url": "https://martypc.net/",
         "source": "Hacker News",
-        "score": 124
+        "score": 137
+      },
+      {
+        "title": "I gave Qwen 3.8 27B a reverse-engineering job and it finished in 30 minutes",
+        "url": "https://www.xda-developers.com/qwen-3-8-27b-reverse-engineering-job-frontier-model/",
+        "source": "Hacker News",
+        "score": 55
       },
       {
         "title": "Fast and Hard Code",
         "url": "https://lucumr.pocoo.org/2026/8/22/fast-hard-code/",
         "source": "Hacker News",
-        "score": 45
+        "score": 56
       },
       {
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News",
-        "score": 372
+        "score": 386
       },
       {
         "title": "The Art and Beauty of Blade Runner (2015)",
         "url": "https://nappertime.com/the-art-of-and-beauty-of-blade-runner/",
         "source": "Hacker News",
-        "score": 95
-      },
-      {
-        "title": "Scrap (2006)",
-        "url": "https://twitter.com/moxie/status/2091218652133732491",
-        "source": "Hacker News",
-        "score": 376
+        "score": 108
       },
       {
         "title": "The Sloppification of Peptides",
         "url": "https://henryaj.substack.com/p/the-sloppification-of-peptides",
         "source": "Hacker News",
-        "score": 28
+        "score": 50
+      },
+      {
+        "title": "Scrap (2006)",
+        "url": "https://twitter.com/moxie/status/2091218652133732491",
+        "source": "Hacker News",
+        "score": 382
       },
       {
         "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
         "url": "https://quantumi.sh/public/labs.html",
         "source": "Hacker News",
-        "score": 408
+        "score": 420
       },
       {
         "title": "Hister – A private, full content search index that you control",
         "url": "https://hister.org/",
         "source": "Hacker News",
-        "score": 370
-      },
-      {
-        "title": "Thinking in Python",
-        "url": "https://thinkinginpython.com/",
-        "source": "Hacker News",
-        "score": 190
-      },
-      {
-        "title": "NanoGPT Speedrun Frontier",
-        "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
-        "source": "Hacker News",
-        "score": 110
+        "score": 387
       },
       {
         "title": "typ.ing",
         "url": "https://typ.ing/",
         "source": "Hacker News",
-        "score": 283
-      },
-      {
-        "title": "RF Cafe",
-        "url": "https://www.rfcafe.com/",
-        "source": "Hacker News",
-        "score": 206
+        "score": 296
       }
     ],
     "ai": [
@@ -101,25 +101,31 @@
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News AI",
-        "score": 372
+        "score": 386
       },
       {
         "title": "NanoGPT Speedrun Frontier",
         "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
         "source": "Hacker News AI",
-        "score": 110
-      },
-      {
-        "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
-        "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
-        "source": "Hacker News AI",
-        "score": 167
+        "score": 115
       },
       {
         "title": "A week of using Codex more than Claude",
         "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
         "source": "Hacker News AI",
-        "score": 205
+        "score": 214
+      },
+      {
+        "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
+        "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
+        "source": "Hacker News AI",
+        "score": 175
+      },
+      {
+        "title": "Steve French (SMB3/CIFSFS Linux kernel maintainer) has died",
+        "url": "https://www.phoronix.com/news/SMB3-CIFS-Maintainer-Change",
+        "source": "Hacker News AI",
+        "score": 19
       },
       {
         "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
@@ -165,43 +171,7 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " A single artist spent 14 years making this hand-drawn animated movie, and every frame of the trailer looks stunning ",
-        "url": "https://www.creativebloq.com/art/animation/a-single-artist-spent-14-years-making-this-hand-drawn-animated-movie-and-every-frame-of-the-trailer-looks-stunning",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " What to expect from Gamescom Opening Night Live 2026 – and how to watch it ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/what-to-expect-from-gamescom-opening-night-live-2026-and-how-to-watch-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Yes, there are reasons why Disney uses one-word movie titles ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/are-disneys-one-word-movie-titles-really-that-bad",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Archery World Cup's dramatic rebrand has me quivering in anticipation ",
-        "url": "https://www.creativebloq.com/design/logos-icons/the-archery-world-cup-final-is-coming-and-its-dramatic-rebrand-has-me-quivering-in-anticipation",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Reduce eye strain and eliminate screen glare with 31% off this monitor light bar ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/reduce-eye-strain-and-eliminate-screen-glare-with-31-percent-off-this-monitor-light-bar",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These '90s classics are brutally hard – but that's exactly why you should play them again ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/these-90s-classics-are-brutally-hard-but-thats-exactly-why-you-should-play-them-again",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Spider-Man AI scandal shouldn’t be a surprise ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/the-spider-man-ai-scandal-shouldnt-be-a-surprise",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "Quitting alcohol may prime the brain for relapse",
