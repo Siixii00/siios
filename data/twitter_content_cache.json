@@ -1,153 +1,170 @@
 {
   "metadata": {
-    "last_updated": "2026-08-23T16:26:55.866607",
-    "total_items": 56
+    "last_updated": "2026-08-23T17:20:58.254929",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "Malware infects Android-based automotive head unit firmware",
-        "url": "https://securelist.com/android-head-unit-malware/121106/",
+        "title": "GLM-5.3 (open-weight) beat Anthropic/OpenAI models – for 1/5 the cost",
+        "url": "https://reinvently.co.uk/tools/ed-o-meter/",
         "source": "Hacker News",
-        "score": 137
-      },
-      {
-        "title": "How Complex Systems Fail",
-        "url": "https://how.complexsystems.fail/",
-        "source": "Hacker News",
-        "score": 41
-      },
-      {
-        "title": "My favorite nonfiction books about cults, scams, and schemes",
-        "url": "https://bookdna.com/best-books/nonfiction-about-cults-scams-and-schemes",
-        "source": "Hacker News",
-        "score": 82
+        "score": 78
       },
       {
         "title": "I spent $266 and four AI models to own my tablet. GLM-5.3 finished it in a day",
         "url": "https://ericpardee.github.io/fire-hd-ownership/",
         "source": "Hacker News",
-        "score": 75
+        "score": 193
       },
       {
-        "title": "Things I want in a modern relational query language",
-        "url": "https://sporks.space/2026/08/19/things-i-want-in-a-modern-relational-query-language/",
+        "title": "How Complex Systems Fail (1998)",
+        "url": "https://how.complexsystems.fail/",
         "source": "Hacker News",
-        "score": 42
+        "score": 87
       },
       {
-        "title": "Slovakia finds Russian backdoor in traffic speed cameras",
-        "url": "https://risky.biz/risky-bulletin-slovakia-finds-russian-backdoor-in-traffic-speed-cameras/",
+        "title": "Malware infects Android-based automotive head unit firmware",
+        "url": "https://securelist.com/android-head-unit-malware/121106/",
         "source": "Hacker News",
-        "score": 97
+        "score": 148
       },
       {
         "title": "Coconut Oil Jet Fuel Matches Kerosene's Efficiency in Engine Tests",
         "url": "https://studyfinds.com/coconut-oil-jet-fuel-matches-kerosenes-efficiency-in-engine-tests/",
         "source": "Hacker News",
-        "score": 4
+        "score": 36
+      },
+      {
+        "title": "A website for debloated open source alternatives",
+        "url": "https://debloat.dev/",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "My favorite nonfiction books about cults, scams, and schemes",
+        "url": "https://bookdna.com/best-books/nonfiction-about-cults-scams-and-schemes",
+        "source": "Hacker News",
+        "score": 102
+      },
+      {
+        "title": "Why Sal Khan't: On Learning by Making but Teaching by Telling",
+        "url": "https://punyamishra.com/2026/04/16/why-sal-khant-on-learning-by-making-but-teaching-by-telling/",
+        "source": "Hacker News",
+        "score": 24
+      },
+      {
+        "title": "Slovakia finds Russian backdoor in traffic speed cameras",
+        "url": "https://risky.biz/risky-bulletin-slovakia-finds-russian-backdoor-in-traffic-speed-cameras/",
+        "source": "Hacker News",
+        "score": 157
+      },
+      {
+        "title": "Things I want in a modern relational query language",
+        "url": "https://sporks.space/2026/08/19/things-i-want-in-a-modern-relational-query-language/",
+        "source": "Hacker News",
+        "score": 49
       },
       {
         "title": "To become a better writer, read as much as you can",
         "url": "https://nappertime.com/the-golden-rule-of-becoming-a-better-writer/",
         "source": "Hacker News",
-        "score": 352
+        "score": 364
       },
       {
-        "title": "The End of an Athlon",
-        "url": "http://www.os2museum.com/wp/the-end-of-an-athlon/",
+        "title": "Wi-Fi 8 is the first wireless upgrade in years that isn't chasing speed",
+        "url": "https://www.xda-developers.com/wi-fi-8-first-wireless-upgrade-years-isnt-chasing-speed-home-networks-need-it/",
         "source": "Hacker News",
-        "score": 153
+        "score": 178
       },
       {
         "title": "What Is a Harness?",
         "url": "https://earendil.com/posts/what-is-a-harness/",
         "source": "Hacker News",
-        "score": 86
+        "score": 113
+      },
+      {
+        "title": "The End of an Athlon",
+        "url": "http://www.os2museum.com/wp/the-end-of-an-athlon/",
+        "source": "Hacker News",
+        "score": 161
       },
       {
         "title": "I gave Qwen 3.8 27B a reverse-engineering job and it finished in 30 minutes",
         "url": "https://www.xda-developers.com/qwen-3-8-27b-reverse-engineering-job-frontier-model/",
         "source": "Hacker News",
-        "score": 200
-      },
-      {
-        "title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
-        "url": "https://martypc.net/",
-        "source": "Hacker News",
-        "score": 169
-      },
-      {
-        "title": "Why your local LLM feels dumber than it is",
-        "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
-        "source": "Hacker News",
-        "score": 430
-      },
-      {
-        "title": "Show HN: Live 3D satellite tracker and the declassified Pentagon UFO archive",
-        "url": "https://skylens.yantraai.app/",
-        "source": "Hacker News",
-        "score": 43
-      },
-      {
-        "title": "JIT Compiling Code in 5μs",
-        "url": "https://malisper.me/jit-compiling-code-in-5-us/",
-        "source": "Hacker News",
-        "score": 130
+        "score": 220
       }
     ],
     "ai": [
       {
-        "title": "How Complex Systems Fail",
-        "url": "https://how.complexsystems.fail/",
+        "title": "GLM-5.3 (open-weight) beat Anthropic/OpenAI models – for 1/5 the cost",
+        "url": "https://reinvently.co.uk/tools/ed-o-meter/",
         "source": "Hacker News AI",
-        "score": 41
+        "score": 78
       },
       {
         "title": "I spent $266 and four AI models to own my tablet. GLM-5.3 finished it in a day",
         "url": "https://ericpardee.github.io/fire-hd-ownership/",
         "source": "Hacker News AI",
-        "score": 75
+        "score": 193
+      },
+      {
+        "title": "How Complex Systems Fail (1998)",
+        "url": "https://how.complexsystems.fail/",
+        "source": "Hacker News AI",
+        "score": 87
       },
       {
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News AI",
-        "score": 430
+        "score": 442
       },
       {
         "title": "NanoGPT Speedrun Frontier",
         "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
         "source": "Hacker News AI",
-        "score": 130
+        "score": 132
       },
       {
         "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
         "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
         "source": "Hacker News AI",
-        "score": 195
+        "score": 199
       },
       {
-        "title": "Andrew Ng: \"AI Engineering Skills Map: Building and Deploying AI Applications\"",
-        "url": "https://twitter.com/AndrewYNg/status/2090840747738374568",
+        "title": "Vit D assoc w better cognition in those w sleep disturb./mild cognitive impair",
+        "url": "https://www.sciencedirect.com/science/article/abs/pii/S1389945726001991?via%3Dihub",
         "source": "Hacker News AI",
-        "score": 20
+        "score": 5
+      },
+      {
+        "title": "How Much of the Internet Is Written with AI?",
+        "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/",
+        "source": "Hacker News AI",
+        "score": 4
       }
     ],
     "news": [
-      {
-        "title": "Trump says Canada wants 'benefits' of being US state after trade talks collapse",
-        "url": "https://www.bbc.co.uk/news/articles/cx272np7vgyo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
       {
         "title": "Zelensky should be asked what he knew about government corruption, sacked minister tells BBC",
         "url": "https://www.bbc.co.uk/news/articles/cwy4ypzvd7po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
+        "title": "Trump says Canada wants 'benefits' of being US state after trade talks collapse",
+        "url": "https://www.bbc.co.uk/news/articles/cx272np7vgyo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "DR Congo and M23 rebels agree roadmap for peace talks",
         "url": "https://www.bbc.co.uk/news/articles/cre4e1q3wewo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Trump arrives at high-speed IndyCar race through Washington's streets",
+        "url": "https://www.bbc.co.uk/news/articles/c0qvq24vlj4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -164,14 +181,14 @@
         "title": "Thousands struggling without power in Indiana 12 days after severe storms",
         "url": "https://www.bbc.co.uk/news/articles/clyly8vdpdwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "The hotel booking mix-up that could free mushroom murderer",
-        "url": "https://www.bbc.co.uk/news/articles/c9w09dj7qk5o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " XPPen slashes 50% off drawing tablets for its 21st Anniversary sale ",
+        "url": "https://www.creativebloq.com/art/digital-art/xppen-slashes-50-percent-off-drawing-tablets-for-its-21st-anniversary-sale",
+        "source": "Creative Bloq"
+      },
       {
         "title": " This is the only budget ergonomic office chair to get a 10/10 review from Creative Bloq, and it's now reduced by 22% ",
         "url": "https://www.creativebloq.com/tech/chairs-desks/one-of-the-top-rated-economic-office-chairs-is-reduced-by-22-percent",
@@ -200,11 +217,6 @@
       {
         "title": " The Archery World Cup's dramatic rebrand has me quivering in anticipation ",
         "url": "https://www.creativebloq.com/design/logos-icons/the-archery-world-cup-final-is-coming-and-its-dramatic-rebrand-has-me-quivering-in-anticipation",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Reduce eye strain and eliminate screen glare with 31% off this monitor light bar ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/reduce-eye-strain-and-eliminate-screen-glare-with-31-percent-off-this-monitor-light-bar",
         "source": "Creative Bloq"
       }
     ],
@@ -247,6 +259,21 @@
     ],
     "gaming": [
       {
+        "title": "Gamescom Is Officially the Biggest Gaming Event in the World. So What’s Next?",
+        "url": "https://www.polygon.com/gamescom-2026-interview-tim-endres-stefan-heikhaus/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Mewgenics' Xbox Port Is Coming Sooner Than Expected, Store Leak Suggests",
+        "url": "https://www.polygon.com/mewgenics-xbox-release-date-leak/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Xbox's Most Beautiful Game Series Is Coming Back Soon, New Leaks Suggest",
+        "url": "https://www.polygon.com/xbox-ori-series-return-gamescom-rumors/",
+        "source": "Polygon"
+      },
+      {
         "title": "The 10 Greatest Soulslikes of the Past 10 years, Ranked",
         "url": "https://www.polygon.com/best-new-soulslikes-ranked/",
         "source": "Polygon"
@@ -264,21 +291,6 @@
       {
         "title": "Nintendo’s Forgotten ‘90s Mario Spinoff Deserves a Switch 2 Reboot",
         "url": "https://www.polygon.com/super-nintendo-35th-anniversary-mario-paint-switch-2/",
-        "source": "Polygon"
-      },
-      {
-        "title": "One Piece Will Get Two More Movies Before The End Of The Decade",
-        "url": "https://www.polygon.com/one-piece-movies-2027-and-2029/",
-        "source": "Polygon"
-      },
-      {
-        "title": "PlayStation Reminds Players Of Its All-Digital Future In The Worst Way Possible",
-        "url": "https://www.polygon.com/sony-playstation-digital-license-agreements-terms-on-game-ownership/",
-        "source": "Polygon"
-      },
-      {
-        "title": "HBO's 8-Part \"Stephen King Meets X-Files\" Detective Thriller Series Is a Perfect Weekend Binge",
-        "url": "https://www.polygon.com/lanterns-true-detective-season-1-weeknd-binge/",
         "source": "Polygon"
       }
     ],
