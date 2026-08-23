@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-23T05:30:10.053150",
-    "total_items": 57
+    "last_updated": "2026-08-23T06:42:02.269585",
+    "total_items": 49
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
         "url": "https://martypc.net/",
         "source": "Hacker News",
-        "score": 47
-      },
-      {
-        "title": "I Dream of Quieter Computing",
-        "url": "https://henry.codes/writing/i-dream-of-quieter-computing/",
-        "source": "Hacker News",
-        "score": 29
+        "score": 73
       },
       {
         "title": "The Golden Rule for Becoming a Better Writer",
         "url": "https://nappertime.com/the-golden-rule-of-becoming-a-better-writer/",
         "source": "Hacker News",
-        "score": 18
+        "score": 48
       },
       {
-        "title": "The Art and Beauty of Blade Runner",
+        "title": "The End of an Athlon",
+        "url": "http://www.os2museum.com/wp/the-end-of-an-athlon/",
+        "source": "Hacker News",
+        "score": 10
+      },
+      {
+        "title": "I Dream of Quieter Computing",
+        "url": "https://henry.codes/writing/i-dream-of-quieter-computing/",
+        "source": "Hacker News",
+        "score": 46
+      },
+      {
+        "title": "The Art and Beauty of Blade Runner (2015)",
         "url": "https://nappertime.com/the-art-of-and-beauty-of-blade-runner/",
         "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Scrap (2006)",
-        "url": "https://twitter.com/moxie/status/2091218652133732491",
-        "source": "Hacker News",
-        "score": 358
+        "score": 52
       },
       {
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News",
-        "score": 257
+        "score": 280
       },
       {
-        "title": "NanoGPT Speedrun Frontier",
-        "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
+        "title": "Scrap (2006)",
+        "url": "https://twitter.com/moxie/status/2091218652133732491",
         "source": "Hacker News",
-        "score": 78
-      },
-      {
-        "title": "Hister – A private, full content search index that you control",
-        "url": "https://hister.org/",
-        "source": "Hacker News",
-        "score": 291
+        "score": 364
       },
       {
         "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
         "url": "https://quantumi.sh/public/labs.html",
         "source": "Hacker News",
-        "score": 352
+        "score": 365
+      },
+      {
+        "title": "NanoGPT Speedrun Frontier",
+        "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
+        "source": "Hacker News",
+        "score": 84
+      },
+      {
+        "title": "Hister – A private, full content search index that you control",
+        "url": "https://hister.org/",
+        "source": "Hacker News",
+        "score": 305
+      },
+      {
+        "title": "I set a trap for a book-marketing scammer (2025)",
+        "url": "https://rwwgreene.substack.com/p/i-set-a-trap-for-a-book-marketing",
+        "source": "Hacker News",
+        "score": 29
       },
       {
         "title": "RF Cafe",
         "url": "https://www.rfcafe.com/",
         "source": "Hacker News",
-        "score": 178
+        "score": 187
       },
       {
         "title": "typ.ing",
         "url": "https://typ.ing/",
         "source": "Hacker News",
-        "score": 228
-      },
-      {
-        "title": "A Friendly Introduction to Racket",
-        "url": "https://geometridae.bearblog.dev/a-friendly-introduction-to-racket/",
-        "source": "Hacker News",
-        "score": 214
+        "score": 240
       },
       {
         "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
         "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
         "source": "Hacker News",
-        "score": 138
+        "score": 148
       },
       {
         "title": "Thinking in Python",
         "url": "https://thinkinginpython.com/",
         "source": "Hacker News",
-        "score": 118
-      },
-      {
-        "title": "NetBSD and my life (2005)",
-        "url": "https://mail-index.netbsd.org/netbsd-advocacy/2005/09/10/0000.html",
-        "source": "Hacker News",
-        "score": 108
+        "score": 126
       }
     ],
     "ai": [
@@ -101,37 +101,31 @@
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News AI",
-        "score": 257
+        "score": 280
       },
       {
         "title": "NanoGPT Speedrun Frontier",
         "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
         "source": "Hacker News AI",
-        "score": 78
+        "score": 84
       },
       {
         "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
         "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
         "source": "Hacker News AI",
-        "score": 138
+        "score": 148
       },
       {
         "title": "A week of using Codex more than Claude",
         "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
         "source": "Hacker News AI",
-        "score": 167
+        "score": 179
       },
       {
         "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
         "url": "https://ozbrain.com",
         "source": "Hacker News AI",
-        "score": 82
-      },
-      {
-        "title": "Palantir's Karp – frontier AI labs that are 'trying to drug addict us'",
-        "url": "https://www.cnbc.com/2026/08/03/palantir-karp-open-ai-anthropic-open-weight.html",
-        "source": "Hacker News AI",
-        "score": 8
+        "score": 83
       },
       {
         "title": "AI boosted homework scores, then exam scores dropped: study",
@@ -142,7 +136,7 @@
     ],
     "news": [
       {
-        "title": "Carney says Trump started trade war with fresh tarrifs 'attack'",
+        "title": "Trump says Canada wants 'benefits' of being US state as Carney says countries in trade war",
         "url": "https://www.bbc.co.uk/news/articles/cx272np7vgyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -172,48 +166,12 @@
         "source": "BBC World"
       },
       {
-        "title": "Swedish sword attack victim was 17-year-old girl, police say",
+        "title": "Girl, 17, killed in Swedish sword attack, police say",
         "url": "https://www.bbc.co.uk/news/articles/c8jnjp0lwlwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " Reduce eye strain and eliminate screen glare with 31% off this monitor light bar ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/reduce-eye-strain-and-eliminate-screen-glare-with-31-percent-off-this-monitor-light-bar",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These '90s classics are brutally hard – but that's exactly why you should play them again ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/these-90s-classics-are-brutally-hard-but-thats-exactly-why-you-should-play-them-again",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Spider-Man AI scandal shouldn’t be a surprise ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/the-spider-man-ai-scandal-shouldnt-be-a-surprise",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The best portable CAD laptops for on-site work ",
-        "url": "https://www.creativebloq.com/tech/laptops/the-best-portable-cad-laptops-for-on-site-work",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " I'd still buy the Pokémon X Polaroid cameras, but I think the designs had potential to be so much better ",
-        "url": "https://www.creativebloq.com/photography/cameras-accessories/id-still-buy-the-pokemon-x-polaroid-cameras-but-i-think-the-designs-had-potential-to-be-so-much-better",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Is AI destroying the art and magic of children's books? ",
-        "url": "https://www.creativebloq.com/ai/ai-art/is-ai-destroying-the-art-and-magic-of-childrens-books",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Meta's new social media app swaps photos and reels for your own AI-generated video games ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/metas-new-social-media-app-swaps-photos-and-reels-for-ai-generated-video-games",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "Quitting alcohol may prime the brain for relapse",
