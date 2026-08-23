@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-23T10:25:17.771670",
-    "total_items": 57
+    "last_updated": "2026-08-23T11:21:43.220300",
+    "total_items": 55
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "The End of an Athlon",
         "url": "http://www.os2museum.com/wp/the-end-of-an-athlon/",
         "source": "Hacker News",
-        "score": 89
+        "score": 110
       },
       {
         "title": "To become a better writer, read as much as you can",
         "url": "https://nappertime.com/the-golden-rule-of-becoming-a-better-writer/",
         "source": "Hacker News",
-        "score": 150
+        "score": 185
       },
       {
         "title": "JIT Compiling Code in 5μs",
         "url": "https://malisper.me/jit-compiling-code-in-5-us/",
         "source": "Hacker News",
-        "score": 66
+        "score": 76
       },
       {
         "title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
         "url": "https://martypc.net/",
         "source": "Hacker News",
-        "score": 117
+        "score": 124
       },
       {
         "title": "Fast and Hard Code",
         "url": "https://lucumr.pocoo.org/2026/8/22/fast-hard-code/",
         "source": "Hacker News",
-        "score": 27
+        "score": 45
       },
       {
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News",
-        "score": 358
+        "score": 372
       },
       {
         "title": "The Art and Beauty of Blade Runner (2015)",
         "url": "https://nappertime.com/the-art-of-and-beauty-of-blade-runner/",
         "source": "Hacker News",
-        "score": 86
+        "score": 95
       },
       {
         "title": "Scrap (2006)",
         "url": "https://twitter.com/moxie/status/2091218652133732491",
         "source": "Hacker News",
-        "score": 374
+        "score": 376
+      },
+      {
+        "title": "The Sloppification of Peptides",
+        "url": "https://henryaj.substack.com/p/the-sloppification-of-peptides",
+        "source": "Hacker News",
+        "score": 28
       },
       {
         "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
         "url": "https://quantumi.sh/public/labs.html",
         "source": "Hacker News",
-        "score": 401
+        "score": 408
       },
       {
         "title": "Hister – A private, full content search index that you control",
         "url": "https://hister.org/",
         "source": "Hacker News",
-        "score": 355
-      },
-      {
-        "title": "NanoGPT Speedrun Frontier",
-        "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
-        "source": "Hacker News",
-        "score": 102
-      },
-      {
-        "title": "I Dream of Quieter Computing",
-        "url": "https://henry.codes/writing/i-dream-of-quieter-computing/",
-        "source": "Hacker News",
-        "score": 74
-      },
-      {
-        "title": "typ.ing",
-        "url": "https://typ.ing/",
-        "source": "Hacker News",
-        "score": 276
-      },
-      {
-        "title": "RF Cafe",
-        "url": "https://www.rfcafe.com/",
-        "source": "Hacker News",
-        "score": 202
+        "score": 370
       },
       {
         "title": "Thinking in Python",
         "url": "https://thinkinginpython.com/",
         "source": "Hacker News",
-        "score": 174
+        "score": 190
+      },
+      {
+        "title": "NanoGPT Speedrun Frontier",
+        "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
+        "source": "Hacker News",
+        "score": 110
+      },
+      {
+        "title": "typ.ing",
+        "url": "https://typ.ing/",
+        "source": "Hacker News",
+        "score": 283
+      },
+      {
+        "title": "RF Cafe",
+        "url": "https://www.rfcafe.com/",
+        "source": "Hacker News",
+        "score": 206
       }
     ],
     "ai": [
@@ -101,43 +101,31 @@
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News AI",
-        "score": 358
+        "score": 372
       },
       {
         "title": "NanoGPT Speedrun Frontier",
         "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
         "source": "Hacker News AI",
-        "score": 102
+        "score": 110
       },
       {
         "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
         "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
         "source": "Hacker News AI",
-        "score": 161
+        "score": 167
       },
       {
         "title": "A week of using Codex more than Claude",
         "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
         "source": "Hacker News AI",
-        "score": 195
+        "score": 205
       },
       {
-        "title": "Tragically, as many as 9625 out of every 10k individuals may be neurotypical",
-        "url": "https://erikengdahl.se/autism/isnt/",
+        "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
+        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
         "source": "Hacker News AI",
-        "score": 60
-      },
-      {
-        "title": "Nobody Explained the Schrödinger Equation Like This [video]",
-        "url": "https://www.youtube.com/watch?v=X-q2eZVhff8",
-        "source": "Hacker News AI",
-        "score": 6
-      },
-      {
-        "title": "Steve French (SMB3/CIFSFS Linux kernel maintainer) has died",
-        "url": "https://www.phoronix.com/news/SMB3-CIFS-Maintainer-Change",
-        "source": "Hacker News AI",
-        "score": 12
+        "score": 142
       }
     ],
     "news": [
@@ -179,6 +167,11 @@
     ],
     "art": [
       {
+        "title": " A single artist spent 14 years making this hand-drawn animated movie, and every frame of the trailer looks stunning ",
+        "url": "https://www.creativebloq.com/art/animation/a-single-artist-spent-14-years-making-this-hand-drawn-animated-movie-and-every-frame-of-the-trailer-looks-stunning",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " What to expect from Gamescom Opening Night Live 2026 – and how to watch it ",
         "url": "https://www.creativebloq.com/entertainment/gaming/what-to-expect-from-gamescom-opening-night-live-2026-and-how-to-watch-it",
         "source": "Creative Bloq"
@@ -206,11 +199,6 @@
       {
         "title": " The Spider-Man AI scandal shouldn’t be a surprise ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/the-spider-man-ai-scandal-shouldnt-be-a-surprise",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The best portable CAD laptops for on-site work ",
-        "url": "https://www.creativebloq.com/tech/laptops/the-best-portable-cad-laptops-for-on-site-work",
         "source": "Creative Bloq"
       }
     ],
@@ -253,6 +241,16 @@
     ],
     "gaming": [
       {
+        "title": "HBO Max's New 9/10 Hardcore Thriller Is an Unforgettable Modern Cult Classic",
+        "url": "https://www.polygon.com/eli-roth-thanksgiving-hbo-max-streaming-august-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Best Dog Game You’ve Never Played Is Waiting Patiently for You on PS Plus",
+        "url": "https://www.polygon.com/playstation-plus-game-catalog-neva-nomada-studio-gris/",
+        "source": "Polygon"
+      },
+      {
         "title": "D&D's New Hardcore Setting Fixes the Game's Most Iconic Monster",
         "url": "https://www.polygon.com/dnd-dragons-dark-sun-setting/",
         "source": "Polygon"
@@ -275,16 +273,6 @@
       {
         "title": "After 49 Years, It's Officially the End of an Era for Star Wars",
         "url": "https://www.polygon.com/star-wars-starfighter-jacket-ryan-gosling-rebel-alliance/",
-        "source": "Polygon"
-      },
-      {
-        "title": "29 Years Later, the Best Cosmic Sci-Fi Thriller of All Time Is Officially Free To Stream",
-        "url": "https://www.polygon.com/best-cosmic-sci-fi-thriller-free-streaming/",
-        "source": "Polygon"
-      },
-      {
-        "title": "23 Years Later, Spike's Best 'Buffy' Quote Is Still One of the Greatest Moments in TV History",
-        "url": "https://www.polygon.com/spike-best-quote-buffy-the-vampire-slayer/",
         "source": "Polygon"
       }
     ],
