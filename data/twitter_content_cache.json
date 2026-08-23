@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-23T08:31:10.909621",
-    "total_items": 55
+    "last_updated": "2026-08-23T09:28:13.773671",
+    "total_items": 57
   },
   "content": {
     "tech": [
@@ -9,123 +9,135 @@
         "title": "The End of an Athlon",
         "url": "http://www.os2museum.com/wp/the-end-of-an-athlon/",
         "source": "Hacker News",
-        "score": 62
+        "score": 73
       },
       {
         "title": "JIT Compiling Code in 5μs",
         "url": "https://malisper.me/jit-compiling-code-in-5-us/",
         "source": "Hacker News",
-        "score": 42
+        "score": 53
       },
       {
         "title": "To become a better writer, read as much as you can",
         "url": "https://nappertime.com/the-golden-rule-of-becoming-a-better-writer/",
         "source": "Hacker News",
-        "score": 105
+        "score": 132
       },
       {
         "title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
         "url": "https://martypc.net/",
         "source": "Hacker News",
-        "score": 101
+        "score": 112
+      },
+      {
+        "title": "Tragically, as many as 9625 out of every 10k individuals may be neurotypical",
+        "url": "https://erikengdahl.se/autism/isnt/",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
+        "title": "Why your local LLM feels dumber than it is",
+        "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+        "source": "Hacker News",
+        "score": 344
       },
       {
         "title": "I Dream of Quieter Computing",
         "url": "https://henry.codes/writing/i-dream-of-quieter-computing/",
         "source": "Hacker News",
-        "score": 57
+        "score": 68
       },
       {
-        "title": "Why your local LLM feels dumber than it is",
-        "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+        "title": "Fast and Hard Code",
+        "url": "https://lucumr.pocoo.org/2026/8/22/fast-hard-code/",
         "source": "Hacker News",
-        "score": 322
-      },
-      {
-        "title": "Wi-Fi 8 is the first wireless upgrade in years that isn't chasing speed",
-        "url": "https://www.xda-developers.com/wi-fi-8-first-wireless-upgrade-years-isnt-chasing-speed-home-networks-need-it/",
-        "source": "Hacker News",
-        "score": 70
+        "score": 17
       },
       {
         "title": "The Art and Beauty of Blade Runner (2015)",
         "url": "https://nappertime.com/the-art-of-and-beauty-of-blade-runner/",
         "source": "Hacker News",
-        "score": 68
+        "score": 77
       },
       {
         "title": "Scrap (2006)",
         "url": "https://twitter.com/moxie/status/2091218652133732491",
         "source": "Hacker News",
-        "score": 367
+        "score": 371
       },
       {
         "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
         "url": "https://quantumi.sh/public/labs.html",
         "source": "Hacker News",
-        "score": 391
+        "score": 398
       },
       {
         "title": "Hister – A private, full content search index that you control",
         "url": "https://hister.org/",
         "source": "Hacker News",
-        "score": 334
+        "score": 346
       },
       {
         "title": "NanoGPT Speedrun Frontier",
         "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
         "source": "Hacker News",
-        "score": 92
+        "score": 98
       },
       {
         "title": "typ.ing",
         "url": "https://typ.ing/",
         "source": "Hacker News",
-        "score": 261
+        "score": 270
       },
       {
         "title": "RF Cafe",
         "url": "https://www.rfcafe.com/",
         "source": "Hacker News",
-        "score": 196
-      },
-      {
-        "title": "I set a trap for a book-marketing scammer (2025)",
-        "url": "https://rwwgreene.substack.com/p/i-set-a-trap-for-a-book-marketing",
-        "source": "Hacker News",
-        "score": 37
+        "score": 199
       }
     ],
     "ai": [
       {
+        "title": "Tragically, as many as 9625 out of every 10k individuals may be neurotypical",
+        "url": "https://erikengdahl.se/autism/isnt/",
+        "source": "Hacker News AI",
+        "score": 23
+      },
+      {
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News AI",
-        "score": 322
+        "score": 344
       },
       {
         "title": "NanoGPT Speedrun Frontier",
         "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
         "source": "Hacker News AI",
-        "score": 92
+        "score": 98
       },
       {
         "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
         "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
         "source": "Hacker News AI",
-        "score": 153
+        "score": 155
       },
       {
         "title": "A week of using Codex more than Claude",
         "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
         "source": "Hacker News AI",
-        "score": 189
+        "score": 192
+      },
+      {
+        "title": "AI boosted homework scores, then exam scores dropped: study",
+        "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
+        "source": "Hacker News AI",
+        "score": 374
       },
       {
         "title": "Steve French (SMB3/CIFSFS Linux kernel maintainer) has died",
         "url": "https://www.phoronix.com/news/SMB3-CIFS-Maintainer-Change",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 9
       }
     ],
     "news": [
@@ -167,6 +179,11 @@
     ],
     "art": [
       {
+        "title": " Yes, there are reasons why Disney uses one-word movie titles ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/are-disneys-one-word-movie-titles-really-that-bad",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " The Archery World Cup's dramatic rebrand has me quivering in anticipation ",
         "url": "https://www.creativebloq.com/design/logos-icons/the-archery-world-cup-final-is-coming-and-its-dramatic-rebrand-has-me-quivering-in-anticipation",
         "source": "Creative Bloq"
@@ -194,11 +211,6 @@
       {
         "title": " I'd still buy the Pokémon X Polaroid cameras, but I think the designs had potential to be so much better ",
         "url": "https://www.creativebloq.com/photography/cameras-accessories/id-still-buy-the-pokemon-x-polaroid-cameras-but-i-think-the-designs-had-potential-to-be-so-much-better",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Is AI destroying the art and magic of children's books? ",
-        "url": "https://www.creativebloq.com/ai/ai-art/is-ai-destroying-the-art-and-magic-of-childrens-books",
         "source": "Creative Bloq"
       }
     ],
