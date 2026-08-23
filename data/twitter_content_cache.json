@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-23T01:23:03.732911",
-    "total_items": 59
+    "last_updated": "2026-08-23T03:03:42.233271",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "NanoGPT Speedrun Frontier",
-        "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
-        "source": "Hacker News",
-        "score": 43
-      },
-      {
         "title": "Figmimic – A bookmarklet to copy any webpage into Figma as editable layers",
         "url": "https://marcua.net/minitools/figmimic/",
         "source": "Hacker News",
-        "score": 7
+        "score": 58
       },
       {
         "title": "Scrap (2006)",
         "url": "https://twitter.com/moxie/status/2091218652133732491",
         "source": "Hacker News",
-        "score": 309
+        "score": 326
+      },
+      {
+        "title": "NanoGPT Speedrun Frontier",
+        "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
+        "source": "Hacker News",
+        "score": 54
       },
       {
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News",
-        "score": 174
+        "score": 202
       },
       {
         "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
         "url": "https://quantumi.sh/public/labs.html",
         "source": "Hacker News",
-        "score": 295
+        "score": 330
       },
       {
         "title": "Hister – A private, full content search index that you control",
         "url": "https://hister.org/",
         "source": "Hacker News",
-        "score": 229
-      },
-      {
-        "title": "NetBSD and my life (2005)",
-        "url": "https://mail-index.netbsd.org/netbsd-advocacy/2005/09/10/0000.html",
-        "source": "Hacker News",
-        "score": 94
-      },
-      {
-        "title": "Reading Maps – Journeys from fiction drawn on the real world",
-        "url": "https://readingmaps.com/",
-        "source": "Hacker News",
-        "score": 5
-      },
-      {
-        "title": "RF Cafe",
-        "url": "https://www.rfcafe.com/",
-        "source": "Hacker News",
-        "score": 148
-      },
-      {
-        "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
-        "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
-        "source": "Hacker News",
-        "score": 107
-      },
-      {
-        "title": "typ.ing",
-        "url": "https://typ.ing/",
-        "source": "Hacker News",
-        "score": 173
-      },
-      {
-        "title": "A Friendly Introduction to Racket",
-        "url": "https://geometridae.bearblog.dev/a-friendly-introduction-to-racket/",
-        "source": "Hacker News",
-        "score": 189
-      },
-      {
-        "title": "ATProto spaces: A new extension to ATProto that enables non-public data",
-        "url": "https://atproto.com/blog/atproto-spaces-alpha",
-        "source": "Hacker News",
-        "score": 109
+        "score": 250
       },
       {
         "title": "I set a trap for a book-marketing scammer (2025)",
         "url": "https://rwwgreene.substack.com/p/i-set-a-trap-for-a-book-marketing",
         "source": "Hacker News",
-        "score": 3
+        "score": 12
       },
       {
-        "title": "hdiutil is deprecated in macOS 27 Golden Gate",
-        "url": "https://lapcatsoftware.com/articles/2026/8/7.html",
+        "title": "typ.ing",
+        "url": "https://typ.ing/",
         "source": "Hacker News",
-        "score": 159
+        "score": 198
+      },
+      {
+        "title": "RF Cafe",
+        "url": "https://www.rfcafe.com/",
+        "source": "Hacker News",
+        "score": 157
+      },
+      {
+        "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
+        "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
+        "source": "Hacker News",
+        "score": 117
+      },
+      {
+        "title": "A Friendly Introduction to Racket",
+        "url": "https://geometridae.bearblog.dev/a-friendly-introduction-to-racket/",
+        "source": "Hacker News",
+        "score": 203
+      },
+      {
+        "title": "ATProto spaces: A new extension to ATProto that enables non-public data",
+        "url": "https://atproto.com/blog/atproto-spaces-alpha",
+        "source": "Hacker News",
+        "score": 121
+      },
+      {
+        "title": "NetBSD and my life (2005)",
+        "url": "https://mail-index.netbsd.org/netbsd-advocacy/2005/09/10/0000.html",
+        "source": "Hacker News",
+        "score": 101
+      },
+      {
+        "title": "Reading Maps – Journeys from fiction drawn on the real world",
+        "url": "https://readingmaps.com/",
+        "source": "Hacker News",
+        "score": 8
+      },
+      {
+        "title": "Thinking in Python",
+        "url": "https://thinkinginpython.com/",
+        "source": "Hacker News",
+        "score": 69
       }
     ],
     "ai": [
@@ -101,55 +101,61 @@
         "title": "NanoGPT Speedrun Frontier",
         "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
         "source": "Hacker News AI",
-        "score": 43
+        "score": 54
       },
       {
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News AI",
-        "score": 174
+        "score": 202
       },
       {
         "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
         "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
         "source": "Hacker News AI",
-        "score": 107
+        "score": 117
       },
       {
         "title": "A week of using Codex more than Claude",
         "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
         "source": "Hacker News AI",
-        "score": 124
+        "score": 139
       },
       {
         "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
         "url": "https://ozbrain.com",
         "source": "Hacker News AI",
-        "score": 78
+        "score": 80
       },
       {
         "title": "Anthropic appears to be A/B testing reduced effort levels in Claude Code",
         "url": "https://twitter.com/argofowl/status/2091150597374537729",
         "source": "Hacker News AI",
-        "score": 163
+        "score": 167
       },
       {
         "title": "AI has failed to win people's trust. Its makers? less trusted",
         "url": "https://www.euronews.com/next/2026/08/20/ai-has-failed-to-win-peoples-trust-its-makers-even-less-trusted",
         "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Guess which of these LLM outputs is watermarked",
-        "url": "https://sgoedecke.github.io/watermark-quiz/",
-        "source": "Hacker News AI",
-        "score": 63
+        "score": 20
       },
       {
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News AI",
         "score": 370
+      },
+      {
+        "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
+        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
+        "source": "Hacker News AI",
+        "score": 137
+      },
+      {
+        "title": "How Thailand Resisted Colonization",
+        "url": "https://worksinprogress.co/issue/how-thailand-resisted-colonization/",
+        "source": "Hacker News AI",
+        "score": 121
       }
     ],
     "news": [
@@ -265,6 +271,11 @@
     ],
     "gaming": [
       {
+        "title": "29 Years Later, the Best Cosmic Sci-Fi Thriller of All Time Is Officially Free To Stream",
+        "url": "https://www.polygon.com/best-cosmic-sci-fi-thriller-free-streaming/",
+        "source": "Polygon"
+      },
+      {
         "title": "23 Years Later, Spike's Best 'Buffy' Quote Is Still One of the Greatest Moments in TV History",
         "url": "https://www.polygon.com/spike-best-quote-buffy-the-vampire-slayer/",
         "source": "Polygon"
@@ -292,11 +303,6 @@
       {
         "title": "Diablo 3 Is Still the Best Diablo and I Will Die On This Hill, 14 Years Later",
         "url": "https://www.polygon.com/diabo-3-best-xbox-game-pass/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Marvel's Best Mobile Game Is About To Get Its Most Requested Feature",
-        "url": "https://www.polygon.com/marvel-snap-draft-mode/",
         "source": "Polygon"
       }
     ],
