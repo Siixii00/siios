@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-23T12:40:53.321104",
+    "last_updated": "2026-08-23T13:33:08.956478",
     "total_items": 49
   },
   "content": {
     "tech": [
       {
+        "title": "Malware infects Android-based automotive head unit firmware",
+        "url": "https://securelist.com/android-head-unit-malware/121106/",
+        "source": "Hacker News",
+        "score": 30
+      },
+      {
         "title": "Sydney Marathon medal mistakenly depicts Munich stadium",
         "url": "https://www.bbc.com/news/articles/cvg92y1wzn8o",
         "source": "Hacker News",
-        "score": 26
+        "score": 59
       },
       {
         "title": "To become a better writer, read as much as you can",
         "url": "https://nappertime.com/the-golden-rule-of-becoming-a-better-writer/",
         "source": "Hacker News",
-        "score": 232
+        "score": 259
       },
       {
         "title": "The End of an Athlon",
         "url": "http://www.os2museum.com/wp/the-end-of-an-athlon/",
         "source": "Hacker News",
-        "score": 124
-      },
-      {
-        "title": "Show HN: Live 3D satellite tracker and the declassified Pentagon UFO archive",
-        "url": "https://skylens.yantraai.app/",
-        "source": "Hacker News",
-        "score": 19
+        "score": 128
       },
       {
         "title": "JIT Compiling Code in 5μs",
         "url": "https://malisper.me/jit-compiling-code-in-5-us/",
         "source": "Hacker News",
-        "score": 88
+        "score": 103
+      },
+      {
+        "title": "Show HN: Live 3D satellite tracker and the declassified Pentagon UFO archive",
+        "url": "https://skylens.yantraai.app/",
+        "source": "Hacker News",
+        "score": 24
       },
       {
         "title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
         "url": "https://martypc.net/",
         "source": "Hacker News",
-        "score": 137
+        "score": 144
       },
       {
         "title": "I gave Qwen 3.8 27B a reverse-engineering job and it finished in 30 minutes",
         "url": "https://www.xda-developers.com/qwen-3-8-27b-reverse-engineering-job-frontier-model/",
         "source": "Hacker News",
-        "score": 55
+        "score": 97
       },
       {
         "title": "Fast and Hard Code",
         "url": "https://lucumr.pocoo.org/2026/8/22/fast-hard-code/",
         "source": "Hacker News",
-        "score": 56
+        "score": 65
       },
       {
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News",
-        "score": 386
+        "score": 395
       },
       {
         "title": "The Art and Beauty of Blade Runner (2015)",
         "url": "https://nappertime.com/the-art-of-and-beauty-of-blade-runner/",
         "source": "Hacker News",
-        "score": 108
-      },
-      {
-        "title": "The Sloppification of Peptides",
-        "url": "https://henryaj.substack.com/p/the-sloppification-of-peptides",
-        "source": "Hacker News",
-        "score": 50
-      },
-      {
-        "title": "Scrap (2006)",
-        "url": "https://twitter.com/moxie/status/2091218652133732491",
-        "source": "Hacker News",
-        "score": 382
-      },
-      {
-        "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
-        "url": "https://quantumi.sh/public/labs.html",
-        "source": "Hacker News",
-        "score": 420
+        "score": 119
       },
       {
         "title": "Hister – A private, full content search index that you control",
         "url": "https://hister.org/",
         "source": "Hacker News",
-        "score": 387
+        "score": 398
       },
       {
-        "title": "typ.ing",
-        "url": "https://typ.ing/",
+        "title": "Scrap (2006)",
+        "url": "https://twitter.com/moxie/status/2091218652133732491",
         "source": "Hacker News",
-        "score": 296
+        "score": 384
+      },
+      {
+        "title": "The Sloppification of Peptides",
+        "url": "https://henryaj.substack.com/p/the-sloppification-of-peptides",
+        "source": "Hacker News",
+        "score": 61
+      },
+      {
+        "title": "Thinking in Python",
+        "url": "https://thinkinginpython.com/",
+        "source": "Hacker News",
+        "score": 225
       }
     ],
     "ai": [
@@ -101,31 +101,31 @@
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News AI",
-        "score": 386
+        "score": 395
       },
       {
         "title": "NanoGPT Speedrun Frontier",
         "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
         "source": "Hacker News AI",
-        "score": 115
+        "score": 116
       },
       {
         "title": "A week of using Codex more than Claude",
         "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
         "source": "Hacker News AI",
-        "score": 214
+        "score": 222
       },
       {
         "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
         "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
         "source": "Hacker News AI",
-        "score": 175
+        "score": 181
       },
       {
         "title": "Steve French (SMB3/CIFSFS Linux kernel maintainer) has died",
         "url": "https://www.phoronix.com/news/SMB3-CIFS-Maintainer-Change",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 27
       },
       {
         "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
@@ -141,23 +141,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Zelensky has 'questions to answer' about corruption in his government, sacked minister tells BBC",
+        "title": "Zelensky should be asked what he knew about government corruption, sacked minister tells BBC",
         "url": "https://www.bbc.co.uk/news/articles/cwy4ypzvd7po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Girl, 17, killed in Swedish sword attack, police say",
-        "url": "https://www.bbc.co.uk/news/articles/c8jnjp0lwlwo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Father leaves 7-year-old son alone on Mount Fuji to continue hike",
-        "url": "https://www.bbc.co.uk/news/articles/c93403wg288o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "The hotel booking mix-up that could free mushroom murderer",
-        "url": "https://www.bbc.co.uk/news/articles/c9w09dj7qk5o?at_medium=RSS&at_campaign=rss",
+        "title": "DR Congo and M23 rebels agree roadmap for peace talks",
+        "url": "https://www.bbc.co.uk/news/articles/cre4e1q3wewo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -166,8 +156,18 @@
         "source": "BBC World"
       },
       {
-        "title": "Trump Mobile promoted a 'Made in the USA' phone - but the details kept changing",
-        "url": "https://www.bbc.co.uk/news/videos/c20eq9ywplqo?at_medium=RSS&at_campaign=rss",
+        "title": "The hotel booking mix-up that could free mushroom murderer",
+        "url": "https://www.bbc.co.uk/news/articles/c9w09dj7qk5o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "'New season, new trim' - Haaland reveals buzzcut",
+        "url": "https://www.bbc.co.uk/sport/football/articles/cr4941zkgevo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Golf brand apologises for advert that shows woman being pushed over",
+        "url": "https://www.bbc.co.uk/sport/golf/articles/cx2j2g42xq9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -211,6 +211,11 @@
     ],
     "gaming": [
       {
+        "title": "HBO's 8-Part \"Stephen King Meets X-Files\" Detective Thriller Series Is a Perfect Weekend Binge",
+        "url": "https://www.polygon.com/lanterns-true-detective-season-1-weeknd-binge/",
+        "source": "Polygon"
+      },
+      {
         "title": "HBO Max's New 9/10 Hardcore Thriller Is an Unforgettable Modern Cult Classic",
         "url": "https://www.polygon.com/eli-roth-thanksgiving-hbo-max-streaming-august-2026/",
         "source": "Polygon"
@@ -238,11 +243,6 @@
       {
         "title": "The 5 Best Sci-Fi Movie Quotes of the Decade So Far",
         "url": "https://www.polygon.com/5-best-sci-fi-movie-quotes-of-the-2020s-so-far/",
-        "source": "Polygon"
-      },
-      {
-        "title": "After 49 Years, It's Officially the End of an Era for Star Wars",
-        "url": "https://www.polygon.com/star-wars-starfighter-jacket-ryan-gosling-rebel-alliance/",
         "source": "Polygon"
       }
     ],
