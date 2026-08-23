@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-23T14:24:37.249383",
-    "total_items": 57
+    "last_updated": "2026-08-23T15:23:32.565973",
+    "total_items": 50
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Malware infects Android-based automotive head unit firmware",
         "url": "https://securelist.com/android-head-unit-malware/121106/",
         "source": "Hacker News",
-        "score": 66
+        "score": 89
       },
       {
         "title": "My favorite nonfiction books about cults, scams, and schemes",
         "url": "https://bookdna.com/best-books/nonfiction-about-cults-scams-and-schemes",
         "source": "Hacker News",
-        "score": 8
+        "score": 48
+      },
+      {
+        "title": "What Is a Harness?",
+        "url": "https://earendil.com/posts/what-is-a-harness/",
+        "source": "Hacker News",
+        "score": 29
       },
       {
         "title": "Sydney Marathon medal mistakenly depicts Munich stadium",
         "url": "https://www.bbc.com/news/articles/cvg92y1wzn8o",
         "source": "Hacker News",
-        "score": 75
+        "score": 92
+      },
+      {
+        "title": "Things I want in a modern relational query language",
+        "url": "https://sporks.space/2026/08/19/things-i-want-in-a-modern-relational-query-language/",
+        "source": "Hacker News",
+        "score": 19
       },
       {
         "title": "To become a better writer, read as much as you can",
         "url": "https://nappertime.com/the-golden-rule-of-becoming-a-better-writer/",
         "source": "Hacker News",
-        "score": 287
+        "score": 316
+      },
+      {
+        "title": "Slovakia finds Russian backdoor in traffic speed cameras",
+        "url": "https://risky.biz/risky-bulletin-slovakia-finds-russian-backdoor-in-traffic-speed-cameras/",
+        "source": "Hacker News",
+        "score": 30
       },
       {
         "title": "The End of an Athlon",
         "url": "http://www.os2museum.com/wp/the-end-of-an-athlon/",
         "source": "Hacker News",
-        "score": 138
-      },
-      {
-        "title": "Show HN: Live 3D satellite tracker and the declassified Pentagon UFO archive",
-        "url": "https://skylens.yantraai.app/",
-        "source": "Hacker News",
-        "score": 32
-      },
-      {
-        "title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
-        "url": "https://martypc.net/",
-        "source": "Hacker News",
-        "score": 149
+        "score": 144
       },
       {
         "title": "I gave Qwen 3.8 27B a reverse-engineering job and it finished in 30 minutes",
         "url": "https://www.xda-developers.com/qwen-3-8-27b-reverse-engineering-job-frontier-model/",
         "source": "Hacker News",
-        "score": 125
+        "score": 163
       },
       {
-        "title": "JIT Compiling Code in 5μs",
-        "url": "https://malisper.me/jit-compiling-code-in-5-us/",
+        "title": "Show HN: Live 3D satellite tracker and the declassified Pentagon UFO archive",
+        "url": "https://skylens.yantraai.app/",
         "source": "Hacker News",
-        "score": 112
+        "score": 36
       },
       {
-        "title": "Fast and Hard Code",
-        "url": "https://lucumr.pocoo.org/2026/8/22/fast-hard-code/",
+        "title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
+        "url": "https://martypc.net/",
         "source": "Hacker News",
-        "score": 74
+        "score": 156
       },
       {
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News",
-        "score": 404
+        "score": 419
       },
       {
-        "title": "The Art and Beauty of Blade Runner (2015)",
-        "url": "https://nappertime.com/the-art-of-and-beauty-of-blade-runner/",
+        "title": "Fast and Hard Code",
+        "url": "https://lucumr.pocoo.org/2026/8/22/fast-hard-code/",
         "source": "Hacker News",
-        "score": 128
+        "score": 82
       },
       {
-        "title": "Hister – A private, full content search index that you control",
-        "url": "https://hister.org/",
+        "title": "JIT Compiling Code in 5μs",
+        "url": "https://malisper.me/jit-compiling-code-in-5-us/",
         "source": "Hacker News",
-        "score": 411
+        "score": 124
       },
       {
-        "title": "Thinking in Python",
-        "url": "https://thinkinginpython.com/",
+        "title": "Death to px, long live ch",
+        "url": "https://shkspr.mobi/blog/2026/08/death-to-px-long-live-ch/",
         "source": "Hacker News",
-        "score": 235
-      },
-      {
-        "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
-        "url": "https://quantumi.sh/public/labs.html",
-        "source": "Hacker News",
-        "score": 433
+        "score": 24
       }
     ],
     "ai": [
@@ -101,43 +101,43 @@
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News AI",
-        "score": 404
+        "score": 419
       },
       {
         "title": "NanoGPT Speedrun Frontier",
         "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
         "source": "Hacker News AI",
-        "score": 123
+        "score": 127
       },
       {
         "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
         "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
         "source": "Hacker News AI",
-        "score": 184
+        "score": 188
       },
       {
         "title": "Andrew Ng: \"AI Engineering Skills Map: Building and Deploying AI Applications\"",
         "url": "https://twitter.com/AndrewYNg/status/2090840747738374568",
         "source": "Hacker News AI",
-        "score": 10
+        "score": 16
       },
       {
         "title": "Steve French (SMB3/CIFSFS Linux kernel maintainer) has died",
         "url": "https://www.phoronix.com/news/SMB3-CIFS-Maintainer-Change",
         "source": "Hacker News AI",
-        "score": 30
+        "score": 35
+      },
+      {
+        "title": "Airbus bows to remote working demands after series of strikes",
+        "url": "https://www.theguardian.com/business/2026/aug/21/airbus-bows-remote-working-strikes",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "A week of using Codex more than Claude",
         "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
         "source": "Hacker News AI",
-        "score": 224
-      },
-      {
-        "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
-        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
-        "source": "Hacker News AI",
-        "score": 142
+        "score": 231
       }
     ],
     "news": [
@@ -162,6 +162,11 @@
         "source": "BBC World"
       },
       {
+        "title": "France links rise in drownings to heatwaves",
+        "url": "https://www.bbc.co.uk/news/articles/cqlxlp4lx9yo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "The hotel booking mix-up that could free mushroom murderer",
         "url": "https://www.bbc.co.uk/news/articles/c9w09dj7qk5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -170,88 +175,57 @@
         "title": "'New season, new trim' - Haaland reveals buzzcut",
         "url": "https://www.bbc.co.uk/sport/football/articles/cr4941zkgevo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Golf brand apologises for advert that shows woman being pushed over",
-        "url": "https://www.bbc.co.uk/sport/golf/articles/cx2j2g42xq9o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " This is the only budget ergonomic office chair to get a 10/10 review from Creative Bloq, and it's now reduced by 22% ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/one-of-the-top-rated-economic-office-chairs-is-reduced-by-22-percent",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These striking futuristic-looking earphones come with 2 sound profiles and cost only $35 ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/these-usd35-earphones-have-2-sound-profiles-making-them-great-value",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " A single artist spent 14 years making this hand-drawn animated movie, and every frame of the trailer looks stunning ",
-        "url": "https://www.creativebloq.com/art/animation/a-single-artist-spent-14-years-making-this-hand-drawn-animated-movie-and-every-frame-of-the-trailer-looks-stunning",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " What to expect from Gamescom Opening Night Live 2026 – and how to watch it ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/what-to-expect-from-gamescom-opening-night-live-2026-and-how-to-watch-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Yes, there are reasons why Disney uses one-word movie titles ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/are-disneys-one-word-movie-titles-really-that-bad",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Archery World Cup's dramatic rebrand has me quivering in anticipation ",
-        "url": "https://www.creativebloq.com/design/logos-icons/the-archery-world-cup-final-is-coming-and-its-dramatic-rebrand-has-me-quivering-in-anticipation",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Reduce eye strain and eliminate screen glare with 31% off this monitor light bar ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/reduce-eye-strain-and-eliminate-screen-glare-with-31-percent-off-this-monitor-light-bar",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
+      {
+        "title": "Experimental compound helps burn fat without muscle loss",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260823014953.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A hidden “on switch” in human DNA has finally been decoded",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260823014943.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists turn tiny “defects” into a 5.5x heat transfer boost",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260823014940.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "The dental crown of the future could be 3D-printed while you wait",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260822015217.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Cannabis use linked to 37% higher stroke risk in massive study",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260822015215.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists left this farm field alone. Thousands of orchids appeared",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260822015208.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Quitting alcohol may prime the brain for relapse",
         "url": "https://www.sciencedaily.com/releases/2026/08/260822015148.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "JWST finds early galaxies may be 4 times more massive than thought",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260822015141.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Black holes keep tearing these stars apart, but they survive",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260822015119.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Exercise may work better for keeping weight off than losing it",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260821012240.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Peppermint oil lowers blood pressure in just 20 days",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260821012238.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "This shark can live 400 years. Its eyes barely seem to age",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260821012232.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "This yeast supplement may boost cancer-fighting immunity",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260821012230.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "'One Piece Card Game' Is Collaborating With 'Final Fantasy's Best Artist",
+        "url": "https://www.polygon.com/one-piece-card-game-final-fantasy/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'It Ends' Director Alex Ullom Reveals the Movie's Meaning and His Surprising Sequel Plan",
+        "url": "https://www.polygon.com/it-ends-director-interview-alex-ullom/",
+        "source": "Polygon"
+      },
       {
         "title": "Nintendo’s Forgotten ‘90s Mario Spinoff Deserves a Switch 2 Reboot",
         "url": "https://www.polygon.com/super-nintendo-35th-anniversary-mario-paint-switch-2/",
@@ -275,16 +249,6 @@
       {
         "title": "HBO Max's New 9/10 Hardcore Thriller Is an Unforgettable Modern Cult Classic",
         "url": "https://www.polygon.com/eli-roth-thanksgiving-hbo-max-streaming-august-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Best Dog Game You’ve Never Played Is Waiting Patiently for You on PS Plus",
-        "url": "https://www.polygon.com/playstation-plus-game-catalog-neva-nomada-studio-gris/",
-        "source": "Polygon"
-      },
-      {
-        "title": "D&D's New Hardcore Setting Fixes the Game's Most Iconic Monster",
-        "url": "https://www.polygon.com/dnd-dragons-dark-sun-setting/",
         "source": "Polygon"
       }
     ],
