@@ -1,149 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-08-23T17:20:58.254929",
-    "total_items": 58
+    "last_updated": "2026-08-23T18:31:08.508680",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "GLM-5.3 (open-weight) beat Anthropic/OpenAI models – for 1/5 the cost",
-        "url": "https://reinvently.co.uk/tools/ed-o-meter/",
-        "source": "Hacker News",
-        "score": 78
-      },
-      {
         "title": "I spent $266 and four AI models to own my tablet. GLM-5.3 finished it in a day",
         "url": "https://ericpardee.github.io/fire-hd-ownership/",
         "source": "Hacker News",
-        "score": 193
+        "score": 328
       },
       {
         "title": "How Complex Systems Fail (1998)",
         "url": "https://how.complexsystems.fail/",
         "source": "Hacker News",
-        "score": 87
-      },
-      {
-        "title": "Malware infects Android-based automotive head unit firmware",
-        "url": "https://securelist.com/android-head-unit-malware/121106/",
-        "source": "Hacker News",
-        "score": 148
-      },
-      {
-        "title": "Coconut Oil Jet Fuel Matches Kerosene's Efficiency in Engine Tests",
-        "url": "https://studyfinds.com/coconut-oil-jet-fuel-matches-kerosenes-efficiency-in-engine-tests/",
-        "source": "Hacker News",
-        "score": 36
+        "score": 115
       },
       {
         "title": "A website for debloated open source alternatives",
         "url": "https://debloat.dev/",
         "source": "Hacker News",
-        "score": 13
+        "score": 48
       },
       {
-        "title": "My favorite nonfiction books about cults, scams, and schemes",
-        "url": "https://bookdna.com/best-books/nonfiction-about-cults-scams-and-schemes",
+        "title": "GLM-5.3 (open-weight) beat Anthropic/OpenAI models – for 1/5 the cost",
+        "url": "https://reinvently.co.uk/tools/ed-o-meter/",
         "source": "Hacker News",
-        "score": 102
+        "score": 180
+      },
+      {
+        "title": "Malware infects Android-based automotive head unit firmware",
+        "url": "https://securelist.com/android-head-unit-malware/121106/",
+        "source": "Hacker News",
+        "score": 164
       },
       {
         "title": "Why Sal Khan't: On Learning by Making but Teaching by Telling",
         "url": "https://punyamishra.com/2026/04/16/why-sal-khant-on-learning-by-making-but-teaching-by-telling/",
         "source": "Hacker News",
-        "score": 24
+        "score": 42
+      },
+      {
+        "title": "My favorite nonfiction books about cults, scams, and schemes",
+        "url": "https://bookdna.com/best-books/nonfiction-about-cults-scams-and-schemes",
+        "source": "Hacker News",
+        "score": 117
+      },
+      {
+        "title": "Coconut Oil Jet Fuel Matches Kerosene's Efficiency in Engine Tests",
+        "url": "https://studyfinds.com/coconut-oil-jet-fuel-matches-kerosenes-efficiency-in-engine-tests/",
+        "source": "Hacker News",
+        "score": 64
       },
       {
         "title": "Slovakia finds Russian backdoor in traffic speed cameras",
         "url": "https://risky.biz/risky-bulletin-slovakia-finds-russian-backdoor-in-traffic-speed-cameras/",
         "source": "Hacker News",
-        "score": 157
-      },
-      {
-        "title": "Things I want in a modern relational query language",
-        "url": "https://sporks.space/2026/08/19/things-i-want-in-a-modern-relational-query-language/",
-        "source": "Hacker News",
-        "score": 49
+        "score": 224
       },
       {
         "title": "To become a better writer, read as much as you can",
         "url": "https://nappertime.com/the-golden-rule-of-becoming-a-better-writer/",
         "source": "Hacker News",
-        "score": 364
-      },
-      {
-        "title": "Wi-Fi 8 is the first wireless upgrade in years that isn't chasing speed",
-        "url": "https://www.xda-developers.com/wi-fi-8-first-wireless-upgrade-years-isnt-chasing-speed-home-networks-need-it/",
-        "source": "Hacker News",
-        "score": 178
+        "score": 379
       },
       {
         "title": "What Is a Harness?",
         "url": "https://earendil.com/posts/what-is-a-harness/",
         "source": "Hacker News",
-        "score": 113
+        "score": 134
+      },
+      {
+        "title": "Wi-Fi 8 is the first wireless upgrade in years that isn't chasing speed",
+        "url": "https://www.xda-developers.com/wi-fi-8-first-wireless-upgrade-years-isnt-chasing-speed-home-networks-need-it/",
+        "source": "Hacker News",
+        "score": 207
+      },
+      {
+        "title": "Things I want in a modern relational query language",
+        "url": "https://sporks.space/2026/08/19/things-i-want-in-a-modern-relational-query-language/",
+        "source": "Hacker News",
+        "score": 56
       },
       {
         "title": "The End of an Athlon",
         "url": "http://www.os2museum.com/wp/the-end-of-an-athlon/",
         "source": "Hacker News",
-        "score": 161
+        "score": 165
       },
       {
-        "title": "I gave Qwen 3.8 27B a reverse-engineering job and it finished in 30 minutes",
-        "url": "https://www.xda-developers.com/qwen-3-8-27b-reverse-engineering-job-frontier-model/",
+        "title": "We must not grant AI agents legal personhood",
+        "url": "https://www.ft.com/content/b8cc4bf4-6d3c-4974-8428-9a091983c473",
         "source": "Hacker News",
-        "score": 220
+        "score": 21
       }
     ],
     "ai": [
       {
-        "title": "GLM-5.3 (open-weight) beat Anthropic/OpenAI models – for 1/5 the cost",
-        "url": "https://reinvently.co.uk/tools/ed-o-meter/",
-        "source": "Hacker News AI",
-        "score": 78
-      },
-      {
         "title": "I spent $266 and four AI models to own my tablet. GLM-5.3 finished it in a day",
         "url": "https://ericpardee.github.io/fire-hd-ownership/",
         "source": "Hacker News AI",
-        "score": 193
+        "score": 328
       },
       {
         "title": "How Complex Systems Fail (1998)",
         "url": "https://how.complexsystems.fail/",
         "source": "Hacker News AI",
-        "score": 87
+        "score": 115
+      },
+      {
+        "title": "GLM-5.3 (open-weight) beat Anthropic/OpenAI models – for 1/5 the cost",
+        "url": "https://reinvently.co.uk/tools/ed-o-meter/",
+        "source": "Hacker News AI",
+        "score": 180
+      },
+      {
+        "title": "We must not grant AI agents legal personhood",
+        "url": "https://www.ft.com/content/b8cc4bf4-6d3c-4974-8428-9a091983c473",
+        "source": "Hacker News AI",
+        "score": 21
       },
       {
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News AI",
-        "score": 442
+        "score": 452
       },
       {
         "title": "NanoGPT Speedrun Frontier",
         "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
         "source": "Hacker News AI",
-        "score": 132
+        "score": 134
       },
       {
         "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
         "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
         "source": "Hacker News AI",
-        "score": 199
+        "score": 200
       },
       {
-        "title": "Vit D assoc w better cognition in those w sleep disturb./mild cognitive impair",
+        "title": "Vit D assoc w better cognition in those w sleep disturb + mild cognitive impair",
         "url": "https://www.sciencedirect.com/science/article/abs/pii/S1389945726001991?via%3Dihub",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 18
       },
       {
         "title": "How Much of the Internet Is Written with AI?",
         "url": "https://www.pewresearch.org/data-labs/2026/08/20/how-much-of-the-internet-is-written-with-ai/",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 8
       }
     ],
     "news": [
@@ -158,13 +164,18 @@
         "source": "BBC World"
       },
       {
+        "title": "Guinea rubbish landfill collapse kills 30",
+        "url": "https://www.bbc.co.uk/news/articles/c4g3g36z7p6o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "DR Congo and M23 rebels agree roadmap for peace talks",
         "url": "https://www.bbc.co.uk/news/articles/cre4e1q3wewo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump arrives at high-speed IndyCar race through Washington's streets",
-        "url": "https://www.bbc.co.uk/news/articles/c0qvq24vlj4o?at_medium=RSS&at_campaign=rss",
+        "title": "France links sharp rise in drownings to heatwaves",
+        "url": "https://www.bbc.co.uk/news/articles/cqlxlp4lx9yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -173,13 +184,8 @@
         "source": "BBC World"
       },
       {
-        "title": "France links rise in drownings to heatwaves",
-        "url": "https://www.bbc.co.uk/news/articles/cqlxlp4lx9yo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Thousands struggling without power in Indiana 12 days after severe storms",
-        "url": "https://www.bbc.co.uk/news/articles/clyly8vdpdwo?at_medium=RSS&at_campaign=rss",
+        "title": "Trump waves green flag kicking off high-speed IndyCar race through Washington",
+        "url": "https://www.bbc.co.uk/news/articles/c0qvq24vlj4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
