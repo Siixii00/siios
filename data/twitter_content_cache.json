@@ -1,155 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-08-22T23:21:57.452844",
-    "total_items": 52
+    "last_updated": "2026-08-23T01:23:03.732911",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "Scrap",
-        "url": "https://twitter.com/moxie/status/2091218652133732491",
+        "title": "NanoGPT Speedrun Frontier",
+        "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
         "source": "Hacker News",
-        "score": 233
+        "score": 43
       },
       {
-        "title": "NetBSD and my life (2005)",
-        "url": "https://mail-index.netbsd.org/netbsd-advocacy/2005/09/10/0000.html",
+        "title": "Figmimic – A bookmarklet to copy any webpage into Figma as editable layers",
+        "url": "https://marcua.net/minitools/figmimic/",
         "source": "Hacker News",
-        "score": 81
+        "score": 7
+      },
+      {
+        "title": "Scrap (2006)",
+        "url": "https://twitter.com/moxie/status/2091218652133732491",
+        "source": "Hacker News",
+        "score": 309
       },
       {
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News",
-        "score": 131
+        "score": 174
       },
       {
         "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
         "url": "https://quantumi.sh/public/labs.html",
         "source": "Hacker News",
-        "score": 280
+        "score": 295
       },
       {
         "title": "Hister – A private, full content search index that you control",
         "url": "https://hister.org/",
         "source": "Hacker News",
-        "score": 194
+        "score": 229
+      },
+      {
+        "title": "NetBSD and my life (2005)",
+        "url": "https://mail-index.netbsd.org/netbsd-advocacy/2005/09/10/0000.html",
+        "source": "Hacker News",
+        "score": 94
+      },
+      {
+        "title": "Reading Maps – Journeys from fiction drawn on the real world",
+        "url": "https://readingmaps.com/",
+        "source": "Hacker News",
+        "score": 5
       },
       {
         "title": "RF Cafe",
         "url": "https://www.rfcafe.com/",
         "source": "Hacker News",
-        "score": 126
+        "score": 148
+      },
+      {
+        "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
+        "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
+        "source": "Hacker News",
+        "score": 107
       },
       {
         "title": "typ.ing",
         "url": "https://typ.ing/",
         "source": "Hacker News",
-        "score": 151
-      },
-      {
-        "title": "hdiutil is deprecated in macOS 27 Golden Gate",
-        "url": "https://lapcatsoftware.com/articles/2026/8/7.html",
-        "source": "Hacker News",
-        "score": 147
-      },
-      {
-        "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
-        "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
-        "source": "Hacker News",
-        "score": 88
+        "score": 173
       },
       {
         "title": "A Friendly Introduction to Racket",
         "url": "https://geometridae.bearblog.dev/a-friendly-introduction-to-racket/",
         "source": "Hacker News",
-        "score": 175
+        "score": 189
       },
       {
         "title": "ATProto spaces: A new extension to ATProto that enables non-public data",
         "url": "https://atproto.com/blog/atproto-spaces-alpha",
         "source": "Hacker News",
-        "score": 90
+        "score": 109
       },
       {
-        "title": "One night in Uzbekistan: Why was this one data point so influential?",
-        "url": "https://statmodeling.stat.columbia.edu/2026/08/20/we-couldnt-reproduce-their-findings-and-realized-that-it-was-all-driven-by-weird-data-from-uzbekistan/",
+        "title": "I set a trap for a book-marketing scammer (2025)",
+        "url": "https://rwwgreene.substack.com/p/i-set-a-trap-for-a-book-marketing",
         "source": "Hacker News",
-        "score": 64
+        "score": 3
       },
       {
-        "title": "Munder Difflin – Agent harness to run an office of your clones",
-        "url": "https://munderdiffl.in/",
+        "title": "hdiutil is deprecated in macOS 27 Golden Gate",
+        "url": "https://lapcatsoftware.com/articles/2026/8/7.html",
         "source": "Hacker News",
-        "score": 242
-      },
-      {
-        "title": "NanoGPT Speedrun Frontier",
-        "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
-        "source": "Hacker News",
-        "score": 5
-      },
-      {
-        "title": "English ↔ Claudish Translator",
-        "url": "https://programasweights.com/claudish",
-        "source": "Hacker News",
-        "score": 37
+        "score": 159
       }
     ],
     "ai": [
       {
+        "title": "NanoGPT Speedrun Frontier",
+        "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
+        "source": "Hacker News AI",
+        "score": 43
+      },
+      {
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News AI",
-        "score": 131
+        "score": 174
       },
       {
         "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
         "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
         "source": "Hacker News AI",
-        "score": 88
-      },
-      {
-        "title": "NanoGPT Speedrun Frontier",
-        "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
-        "source": "Hacker News AI",
-        "score": 5
+        "score": 107
       },
       {
         "title": "A week of using Codex more than Claude",
         "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
         "source": "Hacker News AI",
-        "score": 105
+        "score": 124
       },
       {
         "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
         "url": "https://ozbrain.com",
         "source": "Hacker News AI",
-        "score": 75
-      },
-      {
-        "title": "Guess which of these LLM outputs is watermarked",
-        "url": "https://sgoedecke.github.io/watermark-quiz/",
-        "source": "Hacker News AI",
-        "score": 58
+        "score": 78
       },
       {
         "title": "Anthropic appears to be A/B testing reduced effort levels in Claude Code",
         "url": "https://twitter.com/argofowl/status/2091150597374537729",
         "source": "Hacker News AI",
-        "score": 155
+        "score": 163
+      },
+      {
+        "title": "AI has failed to win people's trust. Its makers? less trusted",
+        "url": "https://www.euronews.com/next/2026/08/20/ai-has-failed-to-win-peoples-trust-its-makers-even-less-trusted",
+        "source": "Hacker News AI",
+        "score": 13
+      },
+      {
+        "title": "Guess which of these LLM outputs is watermarked",
+        "url": "https://sgoedecke.github.io/watermark-quiz/",
+        "source": "Hacker News AI",
+        "score": 63
       },
       {
         "title": "AI boosted homework scores, then exam scores dropped: study",
         "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
         "source": "Hacker News AI",
-        "score": 369
-      },
-      {
-        "title": "How Thailand Resisted Colonization",
-        "url": "https://worksinprogress.co/issue/how-thailand-resisted-colonization/",
-        "source": "Hacker News AI",
-        "score": 119
+        "score": 370
       }
     ],
     "news": [
@@ -164,6 +164,21 @@
         "source": "BBC World"
       },
       {
+        "title": "Rescuers dig through Ukraine mall wreckage as Zelensky condemns 'despicable' Russian strike",
+        "url": "https://www.bbc.co.uk/news/articles/c39egw7nmk2o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Father leaves 7-year-old son alone on Mount Fuji to continue hike",
+        "url": "https://www.bbc.co.uk/news/articles/c93403wg288o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Syria says Israeli strike near Damascus violation of international law",
+        "url": "https://www.bbc.co.uk/news/articles/c2dkdegr2xeo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "TikTok to pay $400m to US in one of largest child privacy settlements",
         "url": "https://www.bbc.co.uk/news/articles/cwyr0l45xjro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -172,24 +187,45 @@
         "title": "Fourteen killed in strike on Myanmar monastery",
         "url": "https://www.bbc.co.uk/news/articles/cqlxlvz01z1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Rescuers dig through Ukraine mall wreckage as Zelensky condemns 'despicable' Russian strike",
-        "url": "https://www.bbc.co.uk/news/articles/c39egw7nmk2o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "US military newspaper editor voices censorship fears after being fired",
-        "url": "https://www.bbc.co.uk/news/articles/cm2g23ng8p4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Father leaves 7-year-old son alone on Mount Fuji to continue hike",
-        "url": "https://www.bbc.co.uk/news/articles/c93403wg288o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " Reduce eye strain and eliminate screen glare with 31% off this monitor light bar ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/reduce-eye-strain-and-eliminate-screen-glare-with-31-percent-off-this-monitor-light-bar",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " These '90s classics are brutally hard – but that's exactly why you should play them again ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/these-90s-classics-are-brutally-hard-but-thats-exactly-why-you-should-play-them-again",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Spider-Man AI scandal shouldn’t be a surprise ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/the-spider-man-ai-scandal-shouldnt-be-a-surprise",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The best portable CAD laptops for on-site work ",
+        "url": "https://www.creativebloq.com/tech/laptops/the-best-portable-cad-laptops-for-on-site-work",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " I'd still buy the Pokémon X Polaroid cameras, but I think the designs had potential to be so much better ",
+        "url": "https://www.creativebloq.com/photography/cameras-accessories/id-still-buy-the-pokemon-x-polaroid-cameras-but-i-think-the-designs-had-potential-to-be-so-much-better",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Is AI destroying the art and magic of children's books? ",
+        "url": "https://www.creativebloq.com/ai/ai-art/is-ai-destroying-the-art-and-magic-of-childrens-books",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Meta's new social media app swaps photos and reels for your own AI-generated video games ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/metas-new-social-media-app-swaps-photos-and-reels-for-ai-generated-video-games",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "JWST finds early galaxies may be 4 times more massive than thought",
@@ -229,6 +265,11 @@
     ],
     "gaming": [
       {
+        "title": "23 Years Later, Spike's Best 'Buffy' Quote Is Still One of the Greatest Moments in TV History",
+        "url": "https://www.polygon.com/spike-best-quote-buffy-the-vampire-slayer/",
+        "source": "Polygon"
+      },
+      {
         "title": "10 Classic Game Series That Started on the SNES",
         "url": "https://www.polygon.com/10-classic-snes-franchises/",
         "source": "Polygon"
@@ -256,11 +297,6 @@
       {
         "title": "Marvel's Best Mobile Game Is About To Get Its Most Requested Feature",
         "url": "https://www.polygon.com/marvel-snap-draft-mode/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fortnite's New Season Kicks Off With Bot-Infested Lobbies",
-        "url": "https://www.polygon.com/fortnite-new-season-bot-lobbies-problem/",
         "source": "Polygon"
       }
     ],
