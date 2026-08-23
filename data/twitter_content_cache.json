@@ -1,166 +1,154 @@
 {
   "metadata": {
-    "last_updated": "2026-08-23T03:03:42.233271",
-    "total_items": 60
+    "last_updated": "2026-08-23T04:38:17.319393",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "Figmimic – A bookmarklet to copy any webpage into Figma as editable layers",
-        "url": "https://marcua.net/minitools/figmimic/",
+        "title": "MartyPC is a cross-platform emulator of early PCs written in Rust",
+        "url": "https://martypc.net/",
         "source": "Hacker News",
-        "score": 58
+        "score": 14
       },
       {
         "title": "Scrap (2006)",
         "url": "https://twitter.com/moxie/status/2091218652133732491",
         "source": "Hacker News",
-        "score": 326
-      },
-      {
-        "title": "NanoGPT Speedrun Frontier",
-        "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
-        "source": "Hacker News",
-        "score": 54
+        "score": 344
       },
       {
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News",
-        "score": 202
+        "score": 236
+      },
+      {
+        "title": "NanoGPT Speedrun Frontier",
+        "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
+        "source": "Hacker News",
+        "score": 68
       },
       {
         "title": "ElevenLabs, TwelveLabs, ThirteenLabs",
         "url": "https://quantumi.sh/public/labs.html",
         "source": "Hacker News",
-        "score": 330
+        "score": 342
       },
       {
         "title": "Hister – A private, full content search index that you control",
         "url": "https://hister.org/",
         "source": "Hacker News",
-        "score": 250
+        "score": 277
       },
       {
-        "title": "I set a trap for a book-marketing scammer (2025)",
-        "url": "https://rwwgreene.substack.com/p/i-set-a-trap-for-a-book-marketing",
+        "title": "I Dream of Quieter Computing",
+        "url": "https://henry.codes/writing/i-dream-of-quieter-computing/",
         "source": "Hacker News",
-        "score": 12
+        "score": 8
+      },
+      {
+        "title": "The Art and Beauty of Blade Runner",
+        "url": "https://nappertime.com/the-art-of-and-beauty-of-blade-runner/",
+        "source": "Hacker News",
+        "score": 19
       },
       {
         "title": "typ.ing",
         "url": "https://typ.ing/",
         "source": "Hacker News",
-        "score": 198
+        "score": 213
       },
       {
         "title": "RF Cafe",
         "url": "https://www.rfcafe.com/",
         "source": "Hacker News",
-        "score": 157
-      },
-      {
-        "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
-        "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
-        "source": "Hacker News",
-        "score": 117
-      },
-      {
-        "title": "A Friendly Introduction to Racket",
-        "url": "https://geometridae.bearblog.dev/a-friendly-introduction-to-racket/",
-        "source": "Hacker News",
-        "score": 203
-      },
-      {
-        "title": "ATProto spaces: A new extension to ATProto that enables non-public data",
-        "url": "https://atproto.com/blog/atproto-spaces-alpha",
-        "source": "Hacker News",
-        "score": 121
-      },
-      {
-        "title": "NetBSD and my life (2005)",
-        "url": "https://mail-index.netbsd.org/netbsd-advocacy/2005/09/10/0000.html",
-        "source": "Hacker News",
-        "score": 101
+        "score": 172
       },
       {
         "title": "Reading Maps – Journeys from fiction drawn on the real world",
         "url": "https://readingmaps.com/",
         "source": "Hacker News",
-        "score": 8
+        "score": 16
+      },
+      {
+        "title": "A Friendly Introduction to Racket",
+        "url": "https://geometridae.bearblog.dev/a-friendly-introduction-to-racket/",
+        "source": "Hacker News",
+        "score": 209
+      },
+      {
+        "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
+        "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
+        "source": "Hacker News",
+        "score": 131
       },
       {
         "title": "Thinking in Python",
         "url": "https://thinkinginpython.com/",
         "source": "Hacker News",
-        "score": 69
+        "score": 100
+      },
+      {
+        "title": "NetBSD and my life (2005)",
+        "url": "https://mail-index.netbsd.org/netbsd-advocacy/2005/09/10/0000.html",
+        "source": "Hacker News",
+        "score": 105
       }
     ],
     "ai": [
       {
-        "title": "NanoGPT Speedrun Frontier",
-        "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
-        "source": "Hacker News AI",
-        "score": 54
-      },
-      {
         "title": "Why your local LLM feels dumber than it is",
         "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
         "source": "Hacker News AI",
-        "score": 202
+        "score": 236
+      },
+      {
+        "title": "NanoGPT Speedrun Frontier",
+        "url": "https://www.primeintellect.ai/research/nanogpt-speedrun",
+        "source": "Hacker News AI",
+        "score": 68
       },
       {
         "title": "How a Texas student blew the whistle on a rogue AI hacking attempt",
         "url": "https://www.reuters.com/world/how-texas-student-blew-whistle-rogue-ai-hacking-attempt-2026-08-20/",
         "source": "Hacker News AI",
-        "score": 117
+        "score": 131
       },
       {
         "title": "A week of using Codex more than Claude",
         "url": "https://allaboutcoding.ghinda.com/a-week-of-using-codex-more-than-claude/",
         "source": "Hacker News AI",
-        "score": 139
+        "score": 160
       },
       {
         "title": "Show HN: OzBrain, a shared brain for knowledge between agents and your team",
         "url": "https://ozbrain.com",
         "source": "Hacker News AI",
-        "score": 80
+        "score": 82
+      },
+      {
+        "title": "Palantir's Karp – frontier AI labs that are 'trying to drug addict us'",
+        "url": "https://www.cnbc.com/2026/08/03/palantir-karp-open-ai-anthropic-open-weight.html",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
+        "title": "Why can AI generate Super Mario but not a wedge ramp for my robot vacuum?",
+        "url": "https://news.ycombinator.com/item?id=49405520",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Anthropic appears to be A/B testing reduced effort levels in Claude Code",
         "url": "https://twitter.com/argofowl/status/2091150597374537729",
         "source": "Hacker News AI",
-        "score": 167
-      },
-      {
-        "title": "AI has failed to win people's trust. Its makers? less trusted",
-        "url": "https://www.euronews.com/next/2026/08/20/ai-has-failed-to-win-peoples-trust-its-makers-even-less-trusted",
-        "source": "Hacker News AI",
-        "score": 20
-      },
-      {
-        "title": "AI boosted homework scores, then exam scores dropped: study",
-        "url": "https://www.economist.com/graphic-detail/2026/08/18/does-ai-stop-children-from-learning",
-        "source": "Hacker News AI",
-        "score": 370
-      },
-      {
-        "title": "Early-life stress leaves a 'scar' inside brain cells in mice",
-        "url": "https://medicine.washu.edu/news/how-early-life-stress-leaves-a-scar-inside-brain-cells/",
-        "source": "Hacker News AI",
-        "score": 137
-      },
-      {
-        "title": "How Thailand Resisted Colonization",
-        "url": "https://worksinprogress.co/issue/how-thailand-resisted-colonization/",
-        "source": "Hacker News AI",
-        "score": 121
+        "score": 175
       }
     ],
     "news": [
       {
-        "title": "Carney calls Trump's fresh tariffs a 'miscalculation' after trade talks collapse",
+        "title": "Carney say Trump started trade war with fresh tarrifs 'attack'",
         "url": "https://www.bbc.co.uk/news/articles/cx272np7vgyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -185,13 +173,13 @@
         "source": "BBC World"
       },
       {
-        "title": "TikTok to pay $400m to US in one of largest child privacy settlements",
-        "url": "https://www.bbc.co.uk/news/articles/cwyr0l45xjro?at_medium=RSS&at_campaign=rss",
+        "title": "'We're not going to run from it': Sydney Marathon laughs off medal error",
+        "url": "https://www.bbc.co.uk/news/articles/cn4n4l1yyvro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Fourteen killed in strike on Myanmar monastery",
-        "url": "https://www.bbc.co.uk/news/articles/cqlxlvz01z1o?at_medium=RSS&at_campaign=rss",
+        "title": "Swedish sword attack victim was 17-year-old girl, police say",
+        "url": "https://www.bbc.co.uk/news/articles/c8jnjp0lwlwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -234,8 +222,18 @@
     ],
     "science": [
       {
+        "title": "Quitting alcohol may prime the brain for relapse",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260822015148.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "JWST finds early galaxies may be 4 times more massive than thought",
         "url": "https://www.sciencedaily.com/releases/2026/08/260822015141.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Black holes keep tearing these stars apart, but they survive",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260822015119.htm",
         "source": "Science Daily"
       },
       {
@@ -249,23 +247,13 @@
         "source": "Science Daily"
       },
       {
+        "title": "This shark can live 400 years. Its eyes barely seem to age",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260821012232.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "This yeast supplement may boost cancer-fighting immunity",
         "url": "https://www.sciencedaily.com/releases/2026/08/260821012230.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "This frozen fiber makes light and sound interact 1,000x more strongly",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260821012228.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Multilingual people may have brains up to 13 years younger",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260821012226.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Queen bees have a disturbing way to survive pesticides",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260821012224.htm",
         "source": "Science Daily"
       }
     ],
