@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-24T10:38:03.026451",
+    "last_updated": "2026-08-24T11:29:40.839489",
     "total_items": 65
   },
   "content": {
     "tech": [
       {
-        "title": "Everything I own, owned",
-        "url": "https://schlarp.com/posts/everything-i-own-owned/",
-        "source": "Hacker News",
-        "score": 960
-      },
-      {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News",
-        "score": 142
+        "score": 184
+      },
+      {
+        "title": "Everything I own, owned",
+        "url": "https://schlarp.com/posts/everything-i-own-owned/",
+        "source": "Hacker News",
+        "score": 1013
       },
       {
         "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
         "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
         "source": "Hacker News",
-        "score": 52
+        "score": 65
       },
       {
         "title": "OCR It – pull text out of un-copyable documents for your LLM",
         "url": "https://github.com/thiagotigaz/ocr-it",
         "source": "Hacker News",
-        "score": 44
+        "score": 56
       },
       {
         "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
         "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
         "source": "Hacker News",
-        "score": 537
+        "score": 563
       },
       {
         "title": "Executable Is a SQLite Database",
         "url": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database",
         "source": "Hacker News",
-        "score": 96
-      },
-      {
-        "title": "How I find problems to solve as a staff engineer",
-        "url": "https://lalitm.com/post/find-problems-staff-engineer/",
-        "source": "Hacker News",
-        "score": 419
-      },
-      {
-        "title": "Woman stranded in Spain after UK's eVisa system mistakes her for twin sister",
-        "url": "https://www.theguardian.com/uk-news/2026/aug/24/woman-stranded-spain-uk-evisa-system-mistakes-twin-sister",
-        "source": "Hacker News",
-        "score": 28
-      },
-      {
-        "title": "The Future Belongs to the Weird",
-        "url": "https://essays.georgestrakhov.com/weird/",
-        "source": "Hacker News",
-        "score": 11
-      },
-      {
-        "title": "Andreessen Horowitz is investing billions into a bleak future",
-        "url": "https://www.modelrepublic.org/articles/a16z-portfolio",
-        "source": "Hacker News",
-        "score": 169
-      },
-      {
-        "title": "I built a low-latency AI companion that plays Skyrim with me",
-        "url": "https://pantel.is/projects/ai-gaming-companion/",
-        "source": "Hacker News",
-        "score": 170
+        "score": 120
       },
       {
         "title": "Fast drilldown dashboards from a single Parquet file",
         "url": "https://www.hamiltonulmer.com/customer-dashboards-r2-hyparquet/",
         "source": "Hacker News",
-        "score": 11
+        "score": 28
       },
       {
-        "title": "New EU-wide product repair rules come into force",
-        "url": "https://www.rte.ie/news/business/2026/0824/1588931-repair-rules/",
+        "title": "How I find problems to solve as a staff engineer",
+        "url": "https://lalitm.com/post/find-problems-staff-engineer/",
         "source": "Hacker News",
-        "score": 134
+        "score": 429
+      },
+      {
+        "title": "Woman stranded in Spain after UK's eVisa system mistakes her for twin sister",
+        "url": "https://www.theguardian.com/uk-news/2026/aug/24/woman-stranded-spain-uk-evisa-system-mistakes-twin-sister",
+        "source": "Hacker News",
+        "score": 56
+      },
+      {
+        "title": "The Future Belongs to the Weird",
+        "url": "https://essays.georgestrakhov.com/weird/",
+        "source": "Hacker News",
+        "score": 20
+      },
+      {
+        "title": "Andreessen Horowitz is investing billions into a bleak future",
+        "url": "https://www.modelrepublic.org/articles/a16z-portfolio",
+        "source": "Hacker News",
+        "score": 221
+      },
+      {
+        "title": "I built a low-latency AI companion that plays Skyrim with me",
+        "url": "https://pantel.is/projects/ai-gaming-companion/",
+        "source": "Hacker News",
+        "score": 182
+      },
+      {
+        "title": "The treasury bond mess: is this the demise of the US as a safe haven?",
+        "url": "https://www.theguardian.com/business/2026/aug/24/treasury-bonds-trump-administration-debt",
+        "source": "Hacker News",
+        "score": 15
       },
       {
         "title": "Google Workspace thinks my domain is an email provider (2025)",
         "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
         "source": "Hacker News",
-        "score": 308
+        "score": 315
       },
       {
-        "title": "My agent.md to improve LLM-assisted code quality",
-        "url": "https://fabiensanglard.net/agent.md/index.html",
+        "title": "What Is a Harness?",
+        "url": "https://earendil.com/posts/what-is-a-harness/",
         "source": "Hacker News",
-        "score": 317
+        "score": 468
       }
     ],
     "ai": [
@@ -101,97 +101,102 @@
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News AI",
-        "score": 142
+        "score": 184
       },
       {
         "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
         "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
         "source": "Hacker News AI",
-        "score": 52
+        "score": 65
       },
       {
         "title": "OCR It – pull text out of un-copyable documents for your LLM",
         "url": "https://github.com/thiagotigaz/ocr-it",
         "source": "Hacker News AI",
-        "score": 44
+        "score": 56
       },
       {
         "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
         "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
         "source": "Hacker News AI",
-        "score": 537
+        "score": 563
       },
       {
         "title": "Woman stranded in Spain after UK's eVisa system mistakes her for twin sister",
         "url": "https://www.theguardian.com/uk-news/2026/aug/24/woman-stranded-spain-uk-evisa-system-mistakes-twin-sister",
         "source": "Hacker News AI",
-        "score": 28
+        "score": 56
       },
       {
         "title": "I built a low-latency AI companion that plays Skyrim with me",
         "url": "https://pantel.is/projects/ai-gaming-companion/",
         "source": "Hacker News AI",
-        "score": 170
+        "score": 182
       },
       {
         "title": "Google Workspace thinks my domain is an email provider (2025)",
         "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
         "source": "Hacker News AI",
-        "score": 308
-      },
-      {
-        "title": "New EU-wide product repair rules come into force",
-        "url": "https://www.rte.ie/news/business/2026/0824/1588931-repair-rules/",
-        "source": "Hacker News AI",
-        "score": 134
+        "score": 315
       },
       {
         "title": "My agent.md to improve LLM-assisted code quality",
         "url": "https://fabiensanglard.net/agent.md/index.html",
         "source": "Hacker News AI",
-        "score": 317
+        "score": 327
+      },
+      {
+        "title": "New EU-wide product repair rules come into force",
+        "url": "https://www.rte.ie/news/business/2026/0824/1588931-repair-rules/",
+        "source": "Hacker News AI",
+        "score": 150
       },
       {
         "title": "How Complex Systems Fail (1998)",
         "url": "https://how.complexsystems.fail/",
         "source": "Hacker News AI",
-        "score": 320
+        "score": 329
       },
       {
         "title": "AI Chip Architectures",
         "url": "https://www.jepeake.com/ai-chip-architectures",
         "source": "Hacker News AI",
-        "score": 85
-      },
-      {
-        "title": "Explain it to me like I'm ten",
-        "url": "https://timharford.com/2026/08/explain-it-to-me-like-im-ten/",
-        "source": "Hacker News AI",
-        "score": 143
+        "score": 94
       },
       {
         "title": "Why is Anthropic's public writing style so unlike Claude's?",
         "url": "https://cmart.blog/claude-writing/",
         "source": "Hacker News AI",
-        "score": 31
+        "score": 40
+      },
+      {
+        "title": "Explain it to me like I'm ten",
+        "url": "https://timharford.com/2026/08/explain-it-to-me-like-im-ten/",
+        "source": "Hacker News AI",
+        "score": 149
       },
       {
         "title": "Implementation of GPT-2 in pure CMake",
         "url": "https://github.com/AlpinDale/gpt2.cmake",
         "source": "Hacker News AI",
-        "score": 79
+        "score": 83
       },
       {
         "title": "Anthropic Claude and API service outages",
         "url": "https://status.claude.com/uptime",
         "source": "Hacker News AI",
-        "score": 59
+        "score": 62
       }
     ],
     "news": [
       {
-        "title": "Divorce, smartphones and control - BBC sees how Taliban run Afghanistan",
-        "url": "https://www.bbc.co.uk/news/articles/ckgvk9p2n7ko?at_medium=RSS&at_campaign=rss",
+        "title": "Russia's second-biggest online retailer targeted in Ukrainian strikes",
+        "url": "https://www.bbc.co.uk/news/articles/cg598yvrzpro?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Iran faces 'greatest financial offensive ever', says US treasury secretary",
+        "url": "https://www.bbc.co.uk/news/articles/c0qxew81y83o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -200,28 +205,23 @@
         "source": "BBC World"
       },
       {
-        "title": "Trump says Canada wants 'benefits' of being US state after trade talks collapse",
-        "url": "https://www.bbc.co.uk/news/articles/cx272np7vgyo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "King of Norway's health has worsened, palace says",
         "url": "https://www.bbc.co.uk/news/articles/c36lnekj659o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Zambia courts sealed off as election petition deadline looms",
+        "title": "Nearly three million Teslas recalled in China over hidden door handles",
+        "url": "https://www.bbc.co.uk/news/articles/c4g6ggdg030o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Access to Zambian courts prevented as election petition deadline looms",
         "url": "https://www.bbc.co.uk/news/articles/cgrvjn88rxqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "China probes use of formaldehyde to keep cabbages fresh",
-        "url": "https://www.bbc.co.uk/news/articles/cy9ze48l2yeo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Ex-cricket captains urge 'proper medical care' for Imran Khan",
-        "url": "https://www.bbc.co.uk/news/articles/cx2z889l0dxo?at_medium=RSS&at_campaign=rss",
+        "title": "Four arrested over suspected poisoning of elephants in Kenya",
+        "url": "https://www.bbc.co.uk/news/articles/c790w8wxv0do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -301,6 +301,16 @@
     ],
     "gaming": [
       {
+        "title": "PlayStation Owners Begin Sony Boycott with Digital Blackout Protest",
+        "url": "https://www.polygon.com/playstation-digital-blackout-begins-sony-boycott/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Hayley Atwell Slams Controversial Captain Carter Scene: 'A Complete Disservice to the Character'",
+        "url": "https://www.polygon.com/hayley-atwell-captain-carter-death/",
+        "source": "Polygon"
+      },
+      {
         "title": "A Bizarre $5 Fishing Game Just Sold 1 Million Copies in Two Days on Steam",
         "url": "https://www.polygon.com/how-to-fish-friendslop-steam-game-launch-weekend-sales/",
         "source": "Polygon"
@@ -323,16 +333,6 @@
       {
         "title": "HBO Officially Changes a Fundamental Rule of DC Superhero Canon",
         "url": "https://www.polygon.com/hbo-lanterns-episode-2-john-stewart-green-lantern-special-powers/",
-        "source": "Polygon"
-      },
-      {
-        "title": "‘Lanterns’ Episode 2 Ending Explained: Who Are Sinestro and the Manhunters?",
-        "url": "https://www.polygon.com/lanterns-episode-2-ending-explained-sinestro-manhunters-dc-comics-lore/",
-        "source": "Polygon"
-      },
-      {
-        "title": "7 Greatest 'Far Side' Comics With No Words",
-        "url": "https://www.polygon.com/7-greatest-far-side-comics-with-no-words/",
         "source": "Polygon"
       }
     ],
