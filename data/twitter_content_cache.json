@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-24T20:31:09.180074",
+    "last_updated": "2026-08-24T21:30:47.885221",
     "total_items": 65
   },
   "content": {
@@ -9,61 +9,73 @@
         "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
         "url": "https://twitter.com/lemire/status/2091894299289874926",
         "source": "Hacker News",
-        "score": 550
+        "score": 619
+      },
+      {
+        "title": "One corner of China’s internet is insisting that the Tang Dynasty never existed",
+        "url": "https://www.cnn.com/2026/08/19/style/china-tang-dynasty-never-existed-hoax-intl-hnk",
+        "source": "Hacker News",
+        "score": 22
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News",
-        "score": 388
+        "score": 441
       },
       {
         "title": "The entire city of San Francisco as a video game",
         "url": "https://sf.thijs.gg/",
         "source": "Hacker News",
-        "score": 183
-      },
-      {
-        "title": "IPFS Maintainers Winding Down",
-        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
-        "source": "Hacker News",
-        "score": 254
-      },
-      {
-        "title": "A Claude Code skill that recovers export-blocked Kindle highlights",
-        "url": "https://github.com/l3a0/claude-plugins",
-        "source": "Hacker News",
-        "score": 19
-      },
-      {
-        "title": "LLMs could control their host machines by exploiting inference engines",
-        "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
-        "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "How Europe is killing makers and micro-entrepreneurs",
-        "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
-        "source": "Hacker News",
-        "score": 851
+        "score": 240
       },
       {
         "title": "Oceans hit highest temperature on record",
         "url": "https://www.bbc.com/news/articles/c62m4gpnp78o",
         "source": "Hacker News",
-        "score": 130
+        "score": 230
+      },
+      {
+        "title": "IPFS Maintainers Winding Down",
+        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
+        "source": "Hacker News",
+        "score": 277
+      },
+      {
+        "title": "How Europe is killing makers and micro-entrepreneurs",
+        "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
+        "source": "Hacker News",
+        "score": 908
       },
       {
         "title": "Jabber/XMPP: 25 Years of Digital Independence",
         "url": "https://gultsch.de/posts/25-years-of-digital-independence/",
         "source": "Hacker News",
-        "score": 94
+        "score": 119
       },
       {
-        "title": "Hot Chips 2026: CUDA Targets RISC-V – By Chester Lam",
-        "url": "https://chipsandcheese.com/p/hot-chips-2026-cuda-targets-risc",
+        "title": "LLMs could control their host machines by exploiting inference engines",
+        "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
         "source": "Hacker News",
-        "score": 52
+        "score": 50
+      },
+      {
+        "title": "Where did all the public bathrooms go?",
+        "url": "https://daily.jstor.org/where-did-all-the-public-bathrooms-go/",
+        "source": "Hacker News",
+        "score": 71
+      },
+      {
+        "title": "Anger, Anxiety and Agency",
+        "url": "https://lucumr.pocoo.org/2026/8/24/anger-anxiety-agency/",
+        "source": "Hacker News",
+        "score": 57
+      },
+      {
+        "title": "Vintage Artificial Intelligence: Before It Got Awkward",
+        "url": "https://blog.archive.org/2026/08/16/vintage-artificial-intelligence-before-it-got-awkward/",
+        "source": "Hacker News",
+        "score": 8
       },
       {
         "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
@@ -72,28 +84,16 @@
         "score": 1
       },
       {
+        "title": "Hot Chips 2026: CUDA Targets RISC-V – By Chester Lam",
+        "url": "https://chipsandcheese.com/p/hot-chips-2026-cuda-targets-risc",
+        "source": "Hacker News",
+        "score": 58
+      },
+      {
         "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
         "url": "https://picomq.com/",
         "source": "Hacker News",
-        "score": 53
-      },
-      {
-        "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
-        "url": "https://developers.openai.com/api/docs/pricing",
-        "source": "Hacker News",
-        "score": 227
-      },
-      {
-        "title": "Show HN: Kern – container and resource runtime in a 1.5 MB binary, no daemon",
-        "url": "https://github.com/getkern/kern",
-        "source": "Hacker News",
-        "score": 25
-      },
-      {
-        "title": "SeL4 security proofs now complete on AArch64",
-        "url": "https://proofcraft.systems/news-2026/#2026-08-21",
-        "source": "Hacker News",
-        "score": 151
+        "score": 62
       }
     ],
     "ai": [
@@ -101,25 +101,25 @@
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News AI",
-        "score": 388
+        "score": 441
       },
       {
         "title": "IPFS Maintainers Winding Down",
         "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
         "source": "Hacker News AI",
-        "score": 254
-      },
-      {
-        "title": "A Claude Code skill that recovers export-blocked Kindle highlights",
-        "url": "https://github.com/l3a0/claude-plugins",
-        "source": "Hacker News AI",
-        "score": 19
+        "score": 277
       },
       {
         "title": "LLMs could control their host machines by exploiting inference engines",
         "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
         "source": "Hacker News AI",
-        "score": 33
+        "score": 50
+      },
+      {
+        "title": "Vintage Artificial Intelligence: Before It Got Awkward",
+        "url": "https://blog.archive.org/2026/08/16/vintage-artificial-intelligence-before-it-got-awkward/",
+        "source": "Hacker News AI",
+        "score": 8
       },
       {
         "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
@@ -131,61 +131,61 @@
         "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
         "url": "https://picomq.com/",
         "source": "Hacker News AI",
-        "score": 53
+        "score": 62
+      },
+      {
+        "title": "A Claude Code skill that recovers export-blocked Kindle highlights",
+        "url": "https://github.com/l3a0/claude-plugins",
+        "source": "Hacker News AI",
+        "score": 38
       },
       {
         "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
         "url": "https://developers.openai.com/api/docs/pricing",
         "source": "Hacker News AI",
-        "score": 227
-      },
-      {
-        "title": "Show HN: Kern – container and resource runtime in a 1.5 MB binary, no daemon",
-        "url": "https://github.com/getkern/kern",
-        "source": "Hacker News AI",
-        "score": 25
+        "score": 246
       },
       {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News AI",
-        "score": 462
+        "score": 483
+      },
+      {
+        "title": "Show HN: Kern – container and resource runtime in a 1.5 MB binary, no daemon",
+        "url": "https://github.com/getkern/kern",
+        "source": "Hacker News AI",
+        "score": 33
       },
       {
         "title": "Coding expertise is going to collapse from AI reliance",
         "url": "https://larsfaye.com/articles/ai-coding-will-prevent-expertise",
         "source": "Hacker News AI",
-        "score": 320
+        "score": 354
       },
       {
         "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
         "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
         "source": "Hacker News AI",
-        "score": 165
+        "score": 172
       },
       {
         "title": "Qwen 3.6 is now much easier to run locally on your Mac, thanks to JetBrains",
         "url": "https://www.neowin.net/news/qwen-36-is-now-much-easier-to-run-locally-on-your-mac-thanks-to-jetbrains/",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 12
       },
       {
-        "title": "Anna's Archive Owes $340 Million, Lost Several Domains, but It's Still Online",
-        "url": "https://torrentfreak.com/annas-archive-owes-340-million-lost-several-domains-but-its-still-online/",
+        "title": "I built a low-latency AI companion that plays Skyrim with me",
+        "url": "https://pantel.is/projects/ai-gaming-companion/",
         "source": "Hacker News AI",
-        "score": 225
-      },
-      {
-        "title": "Public services are increasingly strained by LLM-written appeals for benefits",
-        "url": "https://arxiv.org/abs/2608.16603",
-        "source": "Hacker News AI",
-        "score": 58
+        "score": 325
       },
       {
         "title": "NetBSD GSoC 2026 Improving RAIDframe",
         "url": "https://blog.netbsd.org/tnf/entry/gsoc2026_raidframe",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 20
       }
     ],
     "news": [
@@ -339,6 +339,11 @@
     "steam": [],
     "github": [
       {
+        "title": "Your alt text passes automated checks. That doesn’t mean it’s any good.",
+        "url": "https://github.blog/engineering/user-experience/your-alt-text-passes-automated-checks-that-doesnt-mean-its-any-good/",
+        "source": "GitHub Blog"
+      },
+      {
         "title": "The August 17 outage, and the work ahead",
         "url": "https://github.blog/news-insights/company-news/the-august-17-outage-and-the-work-ahead/",
         "source": "GitHub Blog"
@@ -366,11 +371,6 @@
       {
         "title": "What 50 open source projects taught us about security in the AI era",
         "url": "https://github.blog/open-source/maintainers/what-50-open-source-projects-taught-us-about-security-in-the-ai-era/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "GitHub availability report: July 2026",
-        "url": "https://github.blog/news-insights/company-news/github-availability-report-july-2026/",
         "source": "GitHub Blog"
       }
     ]
