@@ -1,202 +1,207 @@
 {
   "metadata": {
-    "last_updated": "2026-08-24T14:43:07.316359",
+    "last_updated": "2026-08-24T15:40:09.339673",
     "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
+        "url": "https://twitter.com/lemire/status/2091894299289874926",
+        "source": "Hacker News",
+        "score": 61
+      },
+      {
         "title": "How Europe is killing makers and micro-entrepreneurs",
         "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
         "source": "Hacker News",
-        "score": 322
+        "score": 501
+      },
+      {
+        "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
+        "url": "https://developers.openai.com/api/docs/pricing",
+        "source": "Hacker News",
+        "score": 15
       },
       {
         "title": "SeL4 security proofs now complete on AArch64",
         "url": "https://proofcraft.systems/news-2026/#2026-08-21",
         "source": "Hacker News",
-        "score": 88
+        "score": 104
+      },
+      {
+        "title": "Hot Chips 2026: Applying High Bandwidth Flash (HBF)",
+        "url": "https://chipsandcheese.com/p/hot-chips-2026-applying-high-bandwidth",
+        "source": "Hacker News",
+        "score": 15
       },
       {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News",
-        "score": 317
+        "score": 356
       },
       {
         "title": "Everything I own, owned",
         "url": "https://schlarp.com/posts/everything-i-own-owned/",
         "source": "Hacker News",
-        "score": 1182
+        "score": 1229
+      },
+      {
+        "title": "Anna's Archive Owes $340 Million, Lost Several Domains, but It's Still Online",
+        "url": "https://torrentfreak.com/annas-archive-owes-340-million-lost-several-domains-but-its-still-online/",
+        "source": "Hacker News",
+        "score": 41
       },
       {
         "title": "Why older tech is sometimes safer from hackers",
         "url": "https://www.bbc.com/future/article/20260821-why-older-tech-is-sometimes-safer-from-hackers",
         "source": "Hacker News",
-        "score": 33
+        "score": 57
       },
       {
         "title": "Executable Is a SQLite Database",
         "url": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database",
         "source": "Hacker News",
-        "score": 260
+        "score": 298
+      },
+      {
+        "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
+        "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
+        "source": "Hacker News",
+        "score": 3
       },
       {
         "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
         "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
         "source": "Hacker News",
-        "score": 106
+        "score": 125
       },
       {
         "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
         "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
         "source": "Hacker News",
-        "score": 665
+        "score": 692
       },
       {
         "title": "Fast drilldown dashboards from a single Parquet file",
         "url": "https://www.hamiltonulmer.com/customer-dashboards-r2-hyparquet/",
         "source": "Hacker News",
-        "score": 97
-      },
-      {
-        "title": "Show HN: A techno machine in one HTML file, with verifiable renders",
-        "url": "https://ssx360.github.io/rack-02/?src=hn",
-        "source": "Hacker News",
-        "score": 9
-      },
-      {
-        "title": "How I find problems to solve as a staff engineer",
-        "url": "https://lalitm.com/post/find-problems-staff-engineer/",
-        "source": "Hacker News",
-        "score": 484
+        "score": 114
       },
       {
         "title": "Agent Is Not the Model",
         "url": "https://code.joejag.com/2026/your-agent-is-not-the-model.html",
         "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "Andreessen Horowitz is investing billions into a bleak future",
-        "url": "https://www.modelrepublic.org/articles/a16z-portfolio",
-        "source": "Hacker News",
-        "score": 419
-      },
-      {
-        "title": "The Future Belongs to the Weird",
-        "url": "https://essays.georgestrakhov.com/weird/",
-        "source": "Hacker News",
-        "score": 82
-      },
-      {
-        "title": "I built a low-latency AI companion that plays Skyrim with me",
-        "url": "https://pantel.is/projects/ai-gaming-companion/",
-        "source": "Hacker News",
-        "score": 259
+        "score": 50
       }
     ],
     "ai": [
       {
+        "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
+        "url": "https://developers.openai.com/api/docs/pricing",
+        "source": "Hacker News AI",
+        "score": 15
+      },
+      {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News AI",
-        "score": 317
+        "score": 356
+      },
+      {
+        "title": "Anna's Archive Owes $340 Million, Lost Several Domains, but It's Still Online",
+        "url": "https://torrentfreak.com/annas-archive-owes-340-million-lost-several-domains-but-its-still-online/",
+        "source": "Hacker News AI",
+        "score": 41
+      },
+      {
+        "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
+        "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
         "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
         "source": "Hacker News AI",
-        "score": 106
+        "score": 125
       },
       {
         "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
         "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
         "source": "Hacker News AI",
-        "score": 665
+        "score": 692
       },
       {
         "title": "I built a low-latency AI companion that plays Skyrim with me",
         "url": "https://pantel.is/projects/ai-gaming-companion/",
         "source": "Hacker News AI",
-        "score": 259
+        "score": 279
       },
       {
         "title": "OCR It – pull text out of un-copyable documents for your LLM",
         "url": "https://github.com/thiagotigaz/ocr-it",
         "source": "Hacker News AI",
-        "score": 87
-      },
-      {
-        "title": "Woman stranded in Spain after UK's eVisa system mistakes her for twin sister",
-        "url": "https://www.theguardian.com/uk-news/2026/aug/24/woman-stranded-spain-uk-evisa-system-mistakes-twin-sister",
-        "source": "Hacker News AI",
-        "score": 124
+        "score": 97
       },
       {
         "title": "Google Workspace thinks my domain is an email provider (2025)",
         "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
         "source": "Hacker News AI",
-        "score": 354
+        "score": 367
       },
       {
         "title": "My agent.md to improve LLM-assisted code quality",
         "url": "https://fabiensanglard.net/agent.md/index.html",
         "source": "Hacker News AI",
-        "score": 354
+        "score": 367
       },
       {
-        "title": "New EU-wide product repair rules come into force",
-        "url": "https://www.rte.ie/news/business/2026/0824/1588931-repair-rules/",
+        "title": "Woman stranded in Spain after UK's eVisa system mistakes her for twin sister",
+        "url": "https://www.theguardian.com/uk-news/2026/aug/24/woman-stranded-spain-uk-evisa-system-mistakes-twin-sister",
         "source": "Hacker News AI",
-        "score": 198
+        "score": 144
       },
       {
         "title": "How Complex Systems Fail (1998)",
         "url": "https://how.complexsystems.fail/",
         "source": "Hacker News AI",
-        "score": 348
+        "score": 357
+      },
+      {
+        "title": "New EU-wide product repair rules come into force",
+        "url": "https://www.rte.ie/news/business/2026/0824/1588931-repair-rules/",
+        "source": "Hacker News AI",
+        "score": 213
       },
       {
         "title": "AI Chip Architectures",
         "url": "https://www.jepeake.com/ai-chip-architectures",
         "source": "Hacker News AI",
-        "score": 114
+        "score": 124
       },
       {
         "title": "Explain it to me like I'm ten",
         "url": "https://timharford.com/2026/08/explain-it-to-me-like-im-ten/",
         "source": "Hacker News AI",
-        "score": 169
-      },
-      {
-        "title": "Most AI Work Can Wait",
-        "url": "https://tomtunguz.com/ai-execution-routing/",
-        "source": "Hacker News AI",
-        "score": 10
-      },
-      {
-        "title": "Implementation of GPT-2 in pure CMake",
-        "url": "https://github.com/AlpinDale/gpt2.cmake",
-        "source": "Hacker News AI",
-        "score": 88
-      },
-      {
-        "title": "Anthropic Claude and API service outages",
-        "url": "https://status.claude.com/uptime",
-        "source": "Hacker News AI",
-        "score": 71
+        "score": 182
       }
     ],
     "news": [
+      {
+        "title": "Iran faces 'greatest financial offensive ever', says US treasury secretary",
+        "url": "https://www.bbc.co.uk/news/articles/c0qxew81y83o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Russia's second-biggest online retailer targeted in Ukrainian strikes",
         "url": "https://www.bbc.co.uk/news/articles/cg598yvrzpro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Iran faces 'greatest financial offensive ever', says US treasury secretary",
-        "url": "https://www.bbc.co.uk/news/articles/c0qxew81y83o?at_medium=RSS&at_campaign=rss",
+        "title": "Israel warns of 'forceful' response to kites flown from Gaza",
+        "url": "https://www.bbc.co.uk/news/articles/c5y58g2dp3xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -210,18 +215,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Access to Zambian courts prevented as election petition deadline looms",
-        "url": "https://www.bbc.co.uk/news/articles/cgrvjn88rxqo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Sonya Massey's killer Sean Grayson dies in US prison",
         "url": "https://www.bbc.co.uk/news/articles/cgrvj28wrxgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Four arrested over suspected poisoning of elephants in Kenya",
-        "url": "https://www.bbc.co.uk/news/articles/c790w8wxv0do?at_medium=RSS&at_campaign=rss",
+        "title": "Access to Zambian courts prevented as election petition deadline looms",
+        "url": "https://www.bbc.co.uk/news/articles/cgrvjn88rxqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -301,6 +301,31 @@
     ],
     "gaming": [
       {
+        "title": "Guy Richie’s Netflix Crime Series Is So Good It’s Already Been Renewed",
+        "url": "https://www.polygon.com/the-gentlemen-season-2-trailer-renewal/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'GTA 6' Leaks Confirm Rockstar's Raunchiest Game Yet With Shocking New Clips",
+        "url": "https://www.polygon.com/gta-6-leak-strip-club-nudist-town-gameplay/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Gamescom 2026: When Is Gamescom and How to Watch Opening Night Live",
+        "url": "https://www.polygon.com/gamescom-2026-when-how-to-watch-opening-night-live/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Black Mirror Sets Official Return to Netflix for New Season",
+        "url": "https://www.polygon.com/black-mirror-netflix-season-8-in-production/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Pokémon Legends: Z-A Mega Evolves With Game-Changing Rules This Week",
+        "url": "https://www.polygon.com/pokemon-legends-z-a-season-16-release-time-details-banned-pokemon/",
+        "source": "Polygon"
+      },
+      {
         "title": "Pokemon’s Creators Are Ready to Officially Ditch a 30-Year-Old Series Tradition",
         "url": "https://www.polygon.com/pokemon-turn-based-gameplay-changes/",
         "source": "Polygon"
@@ -308,31 +333,6 @@
       {
         "title": "Honkai Star Rail version 4.5 release time in your time zone",
         "url": "https://www.polygon.com/honkai-star-rail-version-4-5-release-time-maintenance-start-end/",
-        "source": "Polygon"
-      },
-      {
-        "title": "25 Years Later, Anime’s First Cinematic Masterpiece Is Officially Returning to Theaters",
-        "url": "https://www.polygon.com/vampire-hunter-d-bloodlust-new-theatrical-release-gkids/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Best Guns in the Modern Warfare 4 Beta",
-        "url": "https://www.polygon.com/modern-warfare-4-mw4-best-guns-weapons-meta/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Billie Piper Addresses Doctor Who’s Shocking Ending and Uncertain Future",
-        "url": "https://www.polygon.com/billie-piper-doctor-who-future/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Final Fantasy Resonance is Going All In On the Series' Golden Age",
-        "url": "https://www.polygon.com/final-fantasy-resonance-news-world-characters-summons/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Amid the Blood of Dawnwalker Performance Fears, Rebel Wolves Promises a Day One Console Patch",
-        "url": "https://www.polygon.com/the-blood-of-dawnwalker-performance-mode-day-one-console-patch/",
         "source": "Polygon"
       }
     ],
