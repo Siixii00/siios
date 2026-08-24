@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-24T15:40:09.339673",
+    "last_updated": "2026-08-24T16:38:40.690001",
     "total_items": 65
   },
   "content": {
@@ -9,189 +9,194 @@
         "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
         "url": "https://twitter.com/lemire/status/2091894299289874926",
         "source": "Hacker News",
+        "score": 229
+      },
+      {
+        "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
+        "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
+        "source": "Hacker News",
+        "score": 102
+      },
+      {
+        "title": "IPFS Maintainers Winding Down",
+        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
+        "source": "Hacker News",
         "score": 61
       },
       {
         "title": "How Europe is killing makers and micro-entrepreneurs",
         "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
         "source": "Hacker News",
-        "score": 501
+        "score": 587
+      },
+      {
+        "title": "Coding expertise is going to collapse from AI reliance",
+        "url": "https://larsfaye.com/articles/ai-coding-will-prevent-expertise",
+        "source": "Hacker News",
+        "score": 83
       },
       {
         "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
         "url": "https://developers.openai.com/api/docs/pricing",
         "source": "Hacker News",
-        "score": 15
+        "score": 96
       },
       {
         "title": "SeL4 security proofs now complete on AArch64",
         "url": "https://proofcraft.systems/news-2026/#2026-08-21",
         "source": "Hacker News",
-        "score": 104
+        "score": 127
       },
       {
         "title": "Hot Chips 2026: Applying High Bandwidth Flash (HBF)",
         "url": "https://chipsandcheese.com/p/hot-chips-2026-applying-high-bandwidth",
         "source": "Hacker News",
-        "score": 15
+        "score": 26
       },
       {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News",
-        "score": 356
+        "score": 379
       },
       {
         "title": "Everything I own, owned",
         "url": "https://schlarp.com/posts/everything-i-own-owned/",
         "source": "Hacker News",
-        "score": 1229
+        "score": 1273
       },
       {
-        "title": "Anna's Archive Owes $340 Million, Lost Several Domains, but It's Still Online",
-        "url": "https://torrentfreak.com/annas-archive-owes-340-million-lost-several-domains-but-its-still-online/",
+        "title": "A Practical Intuition for C++20 Coroutines",
+        "url": "https://blog.ydb.tech/making-coroutines-routine-building-a-scalable-tpc-c-client-in-c-b14f55a09471?postPublishedType=repub",
         "source": "Hacker News",
-        "score": 41
+        "score": 4
       },
       {
-        "title": "Why older tech is sometimes safer from hackers",
-        "url": "https://www.bbc.com/future/article/20260821-why-older-tech-is-sometimes-safer-from-hackers",
+        "title": "Show HN: A Modern GUI Library for Ada: CSS Styling, XML UI, SDL3",
+        "url": "https://github.com/ovenpasta/adi2",
         "source": "Hacker News",
-        "score": 57
+        "score": 4
       },
       {
-        "title": "Executable Is a SQLite Database",
-        "url": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database",
+        "title": "A Server Lost Power at 00:32. We Found Out at 08:18",
+        "url": "https://danubedata.ro/blog/storage-power-loss-postmortem-august-2026",
         "source": "Hacker News",
-        "score": 298
+        "score": 4
       },
       {
-        "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
-        "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
+        "title": "a Blackstone real estate company exposed SSN digits, DOBs, addresses and more",
+        "url": "https://alexschapiro.com/security/vulnerability/2026/07/16/beam-living-graphql-data-exposure",
         "source": "Hacker News",
-        "score": 3
+        "score": 7
       },
       {
-        "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
-        "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
+        "title": "Adafruit USB Type C CC Resistor Fixer",
+        "url": "https://www.adafruit.com/product/6323",
         "source": "Hacker News",
-        "score": 125
-      },
-      {
-        "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
-        "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
-        "source": "Hacker News",
-        "score": 692
-      },
-      {
-        "title": "Fast drilldown dashboards from a single Parquet file",
-        "url": "https://www.hamiltonulmer.com/customer-dashboards-r2-hyparquet/",
-        "source": "Hacker News",
-        "score": 114
-      },
-      {
-        "title": "Agent Is Not the Model",
-        "url": "https://code.joejag.com/2026/your-agent-is-not-the-model.html",
-        "source": "Hacker News",
-        "score": 50
+        "score": 14
       }
     ],
     "ai": [
       {
+        "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
+        "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
+        "source": "Hacker News AI",
+        "score": 102
+      },
+      {
+        "title": "IPFS Maintainers Winding Down",
+        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
+        "source": "Hacker News AI",
+        "score": 61
+      },
+      {
+        "title": "Coding expertise is going to collapse from AI reliance",
+        "url": "https://larsfaye.com/articles/ai-coding-will-prevent-expertise",
+        "source": "Hacker News AI",
+        "score": 83
+      },
+      {
         "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
         "url": "https://developers.openai.com/api/docs/pricing",
         "source": "Hacker News AI",
-        "score": 15
+        "score": 96
       },
       {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News AI",
-        "score": 356
-      },
-      {
-        "title": "Anna's Archive Owes $340 Million, Lost Several Domains, but It's Still Online",
-        "url": "https://torrentfreak.com/annas-archive-owes-340-million-lost-several-domains-but-its-still-online/",
-        "source": "Hacker News AI",
-        "score": 41
-      },
-      {
-        "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
-        "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
-        "source": "Hacker News AI",
-        "score": 3
+        "score": 379
       },
       {
         "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
         "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
         "source": "Hacker News AI",
-        "score": 125
+        "score": 137
+      },
+      {
+        "title": "NetBSD GSoC 2026 Improving RAIDframe",
+        "url": "https://blog.netbsd.org/tnf/entry/gsoc2026_raidframe",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
         "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
         "source": "Hacker News AI",
-        "score": 692
+        "score": 714
+      },
+      {
+        "title": "Anna's Archive Owes $340 Million, Lost Several Domains, but It's Still Online",
+        "url": "https://torrentfreak.com/annas-archive-owes-340-million-lost-several-domains-but-its-still-online/",
+        "source": "Hacker News AI",
+        "score": 104
+      },
+      {
+        "title": "Show HN: Free Inference Engineer and Model Training Roadmap",
+        "url": "https://inferquest.org",
+        "source": "Hacker News AI",
+        "score": 8
       },
       {
         "title": "I built a low-latency AI companion that plays Skyrim with me",
         "url": "https://pantel.is/projects/ai-gaming-companion/",
         "source": "Hacker News AI",
-        "score": 279
+        "score": 297
       },
       {
         "title": "OCR It – pull text out of un-copyable documents for your LLM",
         "url": "https://github.com/thiagotigaz/ocr-it",
         "source": "Hacker News AI",
-        "score": 97
-      },
-      {
-        "title": "Google Workspace thinks my domain is an email provider (2025)",
-        "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
-        "source": "Hacker News AI",
-        "score": 367
-      },
-      {
-        "title": "My agent.md to improve LLM-assisted code quality",
-        "url": "https://fabiensanglard.net/agent.md/index.html",
-        "source": "Hacker News AI",
-        "score": 367
+        "score": 103
       },
       {
         "title": "Woman stranded in Spain after UK's eVisa system mistakes her for twin sister",
         "url": "https://www.theguardian.com/uk-news/2026/aug/24/woman-stranded-spain-uk-evisa-system-mistakes-twin-sister",
         "source": "Hacker News AI",
-        "score": 144
+        "score": 162
       },
       {
-        "title": "How Complex Systems Fail (1998)",
-        "url": "https://how.complexsystems.fail/",
+        "title": "My agent.md to improve LLM-assisted code quality",
+        "url": "https://fabiensanglard.net/agent.md/index.html",
         "source": "Hacker News AI",
-        "score": 357
+        "score": 378
       },
       {
-        "title": "New EU-wide product repair rules come into force",
-        "url": "https://www.rte.ie/news/business/2026/0824/1588931-repair-rules/",
+        "title": "Google Workspace thinks my domain is an email provider (2025)",
+        "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
         "source": "Hacker News AI",
-        "score": 213
-      },
-      {
-        "title": "AI Chip Architectures",
-        "url": "https://www.jepeake.com/ai-chip-architectures",
-        "source": "Hacker News AI",
-        "score": 124
-      },
-      {
-        "title": "Explain it to me like I'm ten",
-        "url": "https://timharford.com/2026/08/explain-it-to-me-like-im-ten/",
-        "source": "Hacker News AI",
-        "score": 182
+        "score": 371
       }
     ],
     "news": [
       {
         "title": "Iran faces 'greatest financial offensive ever', says US treasury secretary",
         "url": "https://www.bbc.co.uk/news/articles/c0qxew81y83o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "UK PM Burnham vows support for Ukraine despite 'outrageous threats' from Russia",
+        "url": "https://www.bbc.co.uk/news/articles/clyqypkrzq5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -217,11 +222,6 @@
       {
         "title": "Sonya Massey's killer Sean Grayson dies in US prison",
         "url": "https://www.bbc.co.uk/news/articles/cgrvj28wrxgo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Access to Zambian courts prevented as election petition deadline looms",
-        "url": "https://www.bbc.co.uk/news/articles/cgrvjn88rxqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -301,6 +301,16 @@
     ],
     "gaming": [
       {
+        "title": "New D&D Book Gives Every Class More Magic and Pets to Play With",
+        "url": "https://www.polygon.com/dnd-arcana-unleashed-review-deadfall-dungeons-dragons/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Vampire Survivors Gets Bloodier and Raunchier In This Wild New Game ",
+        "url": "https://www.polygon.com/blood-dungeon-review/",
+        "source": "Polygon"
+      },
+      {
         "title": "Guy Richie’s Netflix Crime Series Is So Good It’s Already Been Renewed",
         "url": "https://www.polygon.com/the-gentlemen-season-2-trailer-renewal/",
         "source": "Polygon"
@@ -323,16 +333,6 @@
       {
         "title": "Pokémon Legends: Z-A Mega Evolves With Game-Changing Rules This Week",
         "url": "https://www.polygon.com/pokemon-legends-z-a-season-16-release-time-details-banned-pokemon/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Pokemon’s Creators Are Ready to Officially Ditch a 30-Year-Old Series Tradition",
-        "url": "https://www.polygon.com/pokemon-turn-based-gameplay-changes/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Honkai Star Rail version 4.5 release time in your time zone",
-        "url": "https://www.polygon.com/honkai-star-rail-version-4-5-release-time-maintenance-start-end/",
         "source": "Polygon"
       }
     ],
