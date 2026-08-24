@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-24T22:27:13.830020",
+    "last_updated": "2026-08-24T23:23:13.464306",
     "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
+        "url": "https://developer.apple.com/news/?id=1ptvdtcm",
+        "source": "Hacker News",
+        "score": 104
+      },
+      {
         "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
         "url": "https://twitter.com/lemire/status/2091894299289874926",
         "source": "Hacker News",
-        "score": 653
+        "score": 684
       },
       {
         "title": "One corner of China’s internet is insisting that the Tang Dynasty never existed",
         "url": "https://www.cnn.com/2026/08/19/style/china-tang-dynasty-never-existed-hoax-intl-hnk",
         "source": "Hacker News",
-        "score": 60
+        "score": 91
       },
       {
-        "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
-        "url": "https://developer.apple.com/news/?id=1ptvdtcm",
+        "title": "Moon",
+        "url": "https://ciechanow.ski/moon/",
         "source": "Hacker News",
-        "score": 18
+        "score": 42
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News",
-        "score": 477
+        "score": 508
       },
       {
         "title": "The entire city of San Francisco as a video game",
         "url": "https://sf.thijs.gg/",
         "source": "Hacker News",
-        "score": 275
+        "score": 300
       },
       {
         "title": "How Europe is killing makers and micro-entrepreneurs",
         "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
         "source": "Hacker News",
-        "score": 964
-      },
-      {
-        "title": "IPFS Maintainers Winding Down",
-        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
-        "source": "Hacker News",
-        "score": 295
+        "score": 1005
       },
       {
         "title": "Vintage Artificial Intelligence: Before It Got Awkward",
         "url": "https://blog.archive.org/2026/08/16/vintage-artificial-intelligence-before-it-got-awkward/",
         "source": "Hacker News",
-        "score": 24
+        "score": 36
+      },
+      {
+        "title": "IPFS Maintainers Winding Down",
+        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
+        "source": "Hacker News",
+        "score": 308
       },
       {
         "title": "Oceans hit highest temperature on record",
         "url": "https://www.bbc.com/news/articles/c62m4gpnp78o",
         "source": "Hacker News",
-        "score": 294
+        "score": 343
       },
       {
         "title": "Where did all the public bathrooms go?",
         "url": "https://daily.jstor.org/where-did-all-the-public-bathrooms-go/",
         "source": "Hacker News",
-        "score": 99
+        "score": 119
       },
       {
         "title": "Jabber/XMPP: 25 Years of Digital Independence",
         "url": "https://gultsch.de/posts/25-years-of-digital-independence/",
         "source": "Hacker News",
-        "score": 136
+        "score": 147
       },
       {
         "title": "LLMs could control their host machines by exploiting inference engines",
         "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
         "source": "Hacker News",
-        "score": 66
-      },
-      {
-        "title": "Anger, Anxiety and Agency",
-        "url": "https://lucumr.pocoo.org/2026/8/24/anger-anxiety-agency/",
-        "source": "Hacker News",
-        "score": 73
+        "score": 76
       },
       {
         "title": "Octopus intelligence may be related to never-before-seen mutation",
         "url": "https://www.smithsonianmag.com/smart-news/why-are-some-octopuses-so-smart-the-answer-might-lie-in-a-never-before-seen-mutation-that-helps-them-accurately-build-proteins-180989319/",
         "source": "Hacker News",
-        "score": 46
+        "score": 59
       },
       {
-        "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
-        "url": "https://app.dover.com/Autostep/careers/e9510e3b-a854-4e48-9e5d-c89796acaed4",
+        "title": "Anger, Anxiety and Agency",
+        "url": "https://lucumr.pocoo.org/2026/8/24/anger-anxiety-agency/",
         "source": "Hacker News",
-        "score": 1
+        "score": 82
       }
     ],
     "ai": [
@@ -101,31 +101,31 @@
         "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News AI",
-        "score": 18
+        "score": 104
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News AI",
-        "score": 477
-      },
-      {
-        "title": "IPFS Maintainers Winding Down",
-        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
-        "source": "Hacker News AI",
-        "score": 295
+        "score": 508
       },
       {
         "title": "Vintage Artificial Intelligence: Before It Got Awkward",
         "url": "https://blog.archive.org/2026/08/16/vintage-artificial-intelligence-before-it-got-awkward/",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 36
+      },
+      {
+        "title": "IPFS Maintainers Winding Down",
+        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
+        "source": "Hacker News AI",
+        "score": 308
       },
       {
         "title": "LLMs could control their host machines by exploiting inference engines",
         "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
         "source": "Hacker News AI",
-        "score": 67
+        "score": 76
       },
       {
         "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
@@ -134,34 +134,28 @@
         "score": 1
       },
       {
-        "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
-        "url": "https://developers.openai.com/api/docs/pricing",
-        "source": "Hacker News AI",
-        "score": 263
-      },
-      {
         "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
         "url": "https://picomq.com/",
         "source": "Hacker News AI",
-        "score": 74
+        "score": 81
       },
       {
-        "title": "Show HN: Kern – container and resource runtime in a 1.5 MB binary, no daemon",
-        "url": "https://github.com/getkern/kern",
+        "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
+        "url": "https://developers.openai.com/api/docs/pricing",
         "source": "Hacker News AI",
-        "score": 42
+        "score": 271
       },
       {
         "title": "Coding expertise is going to collapse from AI reliance",
         "url": "https://larsfaye.com/articles/ai-coding-will-prevent-expertise",
         "source": "Hacker News AI",
-        "score": 385
+        "score": 410
       },
       {
-        "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
-        "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
+        "title": "Show HN: Kern – container and resource runtime in a 1.5 MB binary, no daemon",
+        "url": "https://github.com/getkern/kern",
         "source": "Hacker News AI",
-        "score": 177
+        "score": 45
       },
       {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
@@ -170,22 +164,28 @@
         "score": 498
       },
       {
-        "title": "Qwen 3.6 is now much easier to run locally on your Mac, thanks to JetBrains",
-        "url": "https://www.neowin.net/news/qwen-36-is-now-much-easier-to-run-locally-on-your-mac-thanks-to-jetbrains/",
-        "source": "Hacker News AI",
-        "score": 19
-      },
-      {
         "title": "I built a low-latency AI companion that plays Skyrim with me",
         "url": "https://pantel.is/projects/ai-gaming-companion/",
         "source": "Hacker News AI",
-        "score": 329
+        "score": 333
       },
       {
-        "title": "Show HN: I built a lite LPU that can do inference on Karpathy's MicroGPT",
-        "url": "https://www.lpulite.com",
+        "title": "Qwen 3.6 is now much easier to run locally on your Mac, thanks to JetBrains",
+        "url": "https://www.neowin.net/news/qwen-36-is-now-much-easier-to-run-locally-on-your-mac-thanks-to-jetbrains/",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 22
+      },
+      {
+        "title": "A Claude Code skill that recovers export-blocked Kindle highlights",
+        "url": "https://github.com/l3a0/claude-plugins",
+        "source": "Hacker News AI",
+        "score": 43
+      },
+      {
+        "title": "Show HN: See how much your AI knows about you",
+        "url": "https://www.withcorpus.com/knows",
+        "source": "Hacker News AI",
+        "score": 7
       }
     ],
     "news": [
@@ -227,6 +227,16 @@
     ],
     "art": [
       {
+        "title": " Master the monochrome with issue 270 of ImagineFX ",
+        "url": "https://www.creativebloq.com/professional-development/artistic-tips-techniques/master-the-monochrome-with-issue-270-of-imaginefx",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Download resources for ImagineFX 270 ",
+        "url": "https://www.creativebloq.com/design/magazines/download-resources-for-imaginefx-270",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Nintendo's Game Boy ads were outrageous in the nineties – here are three examples that would never get made today ",
         "url": "https://www.creativebloq.com/design/print-design-publishing/nintendos-game-boy-ads-were-outrageous-in-the-nineties-here-are-three-examples-that-would-never-get-made-today",
         "source": "Creative Bloq"
@@ -249,16 +259,6 @@
       {
         "title": " XPPen slashes 50% off drawing tablets for its 21st Anniversary sale ",
         "url": "https://www.creativebloq.com/art/digital-art/xppen-slashes-50-percent-off-drawing-tablets-for-its-21st-anniversary-sale",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This is the only budget ergonomic office chair to get a 10/10 review from Creative Bloq, and it's now reduced by 22% ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/one-of-the-top-rated-economic-office-chairs-is-reduced-by-22-percent",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These striking futuristic-looking earphones come with 2 sound profiles and cost only $35 ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/these-usd35-earphones-have-2-sound-profiles-making-them-great-value",
         "source": "Creative Bloq"
       }
     ],
@@ -306,7 +306,7 @@
         "source": "Polygon"
       },
       {
-        "title": "'Roblox' Game With Grim Black Mirror Vibes Mysteriously Pulled After Hitting #1",
+        "title": "The 'Black Mirror' of Roblox Games Disappears After Hitting No. 1",
         "url": "https://www.polygon.com/steal-an-egg-roblox-what-happened-discord-black-mirror-netflix/",
         "source": "Polygon"
       },
