@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-24T05:39:07.345897",
-    "total_items": 56
+    "last_updated": "2026-08-24T07:00:06.386651",
+    "total_items": 65
   },
   "content": {
     "tech": [
@@ -9,179 +9,186 @@
         "title": "Everything I own, owned",
         "url": "https://schlarp.com/posts/everything-i-own-owned/",
         "source": "Hacker News",
-        "score": 534
+        "score": 655
+      },
+      {
+        "title": "I were 17, I'd learn how to build LLMs from scratch",
+        "url": "https://twitter.com/paulg/status/2091544343589060625",
+        "source": "Hacker News",
+        "score": 15
+      },
+      {
+        "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
+        "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
+        "source": "Hacker News",
+        "score": 431
       },
       {
         "title": "How I find problems to solve as a staff engineer",
         "url": "https://lalitm.com/post/find-problems-staff-engineer/",
         "source": "Hacker News",
-        "score": 349
+        "score": 376
       },
       {
-        "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
-        "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
+        "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
+        "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
         "source": "Hacker News",
-        "score": 367
+        "score": 4
       },
       {
-        "title": "Google Workspace thinks my domain is an email provider (2025)",
-        "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
+        "title": "OCR It – pull text out of un-copyable documents for your LLM",
+        "url": "https://github.com/thiagotigaz/ocr-it",
         "source": "Hacker News",
-        "score": 236
+        "score": 5
       },
       {
         "title": "My agent.md to improve LLM-assisted code quality",
         "url": "https://fabiensanglard.net/agent.md/index.html",
         "source": "Hacker News",
-        "score": 246
+        "score": 283
       },
       {
         "title": "Migrating a Synology NAS to a UniFi UNAS Pro 8 with Robocopy, SMB Multichannel",
         "url": "https://www.hanselman.com/blog/migrating-a-synology-nas-to-a-unifi-unas-pro-8-with-robocopy-smb-multichannel-and-surprising-performance-traps",
         "source": "Hacker News",
-        "score": 33
+        "score": 43
       },
       {
-        "title": "Nearly 3M Teslas recalled in China over hidden door handles",
-        "url": "https://www.bbc.com/news/articles/c4g6ggdg030o",
+        "title": "Google Workspace thinks my domain is an email provider (2025)",
+        "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
         "source": "Hacker News",
-        "score": 52
+        "score": 268
+      },
+      {
+        "title": "I built a low-latency AI companion that plays Skyrim with me",
+        "url": "https://pantel.is/projects/ai-gaming-companion/",
+        "source": "Hacker News",
+        "score": 95
       },
       {
         "title": "What Is a Harness?",
         "url": "https://earendil.com/posts/what-is-a-harness/",
         "source": "Hacker News",
-        "score": 382
-      },
-      {
-        "title": "I built a low-latency AI companion that plays Skyrim with me",
-        "url": "https://pantel.is/projects/ai-gaming-companion/",
-        "source": "Hacker News",
-        "score": 56
+        "score": 406
       },
       {
         "title": "How Complex Systems Fail (1998)",
         "url": "https://how.complexsystems.fail/",
         "source": "Hacker News",
-        "score": 278
+        "score": 295
+      },
+      {
+        "title": "AI Chip Architectures",
+        "url": "https://www.jepeake.com/ai-chip-architectures",
+        "source": "Hacker News",
+        "score": 61
+      },
+      {
+        "title": "New EU-wide product repair rules come into force",
+        "url": "https://www.rte.ie/news/business/2026/0824/1588931-repair-rules/",
+        "source": "Hacker News",
+        "score": 22
       },
       {
         "title": "Malware infects Android-based automotive head unit firmware",
         "url": "https://securelist.com/android-head-unit-malware/121106/",
         "source": "Hacker News",
-        "score": 229
-      },
-      {
-        "title": "My favorite nonfiction books about cults, scams, and schemes",
-        "url": "https://bookdna.com/best-books/nonfiction-about-cults-scams-and-schemes",
-        "source": "Hacker News",
-        "score": 213
-      },
-      {
-        "title": "Rural Village in Spain Is Welcoming Digital Nomads with Open Arms",
-        "url": "https://www.cntraveler.com/story/this-rural-village-in-spain-is-welcoming-digital-nomads-with-open-arms",
-        "source": "Hacker News",
-        "score": 56
-      },
-      {
-        "title": "Why Sal Khan't: On Learning by Making but Teaching by Telling",
-        "url": "https://punyamishra.com/2026/04/16/why-sal-khant-on-learning-by-making-but-teaching-by-telling/",
-        "source": "Hacker News",
-        "score": 162
-      },
-      {
-        "title": "Explain it to me like I'm ten",
-        "url": "https://timharford.com/2026/08/explain-it-to-me-like-im-ten/",
-        "source": "Hacker News",
-        "score": 109
+        "score": 232
       }
     ],
     "ai": [
       {
+        "title": "I were 17, I'd learn how to build LLMs from scratch",
+        "url": "https://twitter.com/paulg/status/2091544343589060625",
+        "source": "Hacker News AI",
+        "score": 15
+      },
+      {
         "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
         "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
         "source": "Hacker News AI",
-        "score": 367
+        "score": 431
       },
       {
-        "title": "Google Workspace thinks my domain is an email provider (2025)",
-        "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
+        "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
+        "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
         "source": "Hacker News AI",
-        "score": 236
+        "score": 4
+      },
+      {
+        "title": "OCR It – pull text out of un-copyable documents for your LLM",
+        "url": "https://github.com/thiagotigaz/ocr-it",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "My agent.md to improve LLM-assisted code quality",
         "url": "https://fabiensanglard.net/agent.md/index.html",
         "source": "Hacker News AI",
-        "score": 246
+        "score": 283
+      },
+      {
+        "title": "Google Workspace thinks my domain is an email provider (2025)",
+        "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
+        "source": "Hacker News AI",
+        "score": 268
       },
       {
         "title": "I built a low-latency AI companion that plays Skyrim with me",
         "url": "https://pantel.is/projects/ai-gaming-companion/",
         "source": "Hacker News AI",
-        "score": 56
+        "score": 95
       },
       {
         "title": "How Complex Systems Fail (1998)",
         "url": "https://how.complexsystems.fail/",
         "source": "Hacker News AI",
-        "score": 278
-      },
-      {
-        "title": "Rural Village in Spain Is Welcoming Digital Nomads with Open Arms",
-        "url": "https://www.cntraveler.com/story/this-rural-village-in-spain-is-welcoming-digital-nomads-with-open-arms",
-        "source": "Hacker News AI",
-        "score": 56
-      },
-      {
-        "title": "Explain it to me like I'm ten",
-        "url": "https://timharford.com/2026/08/explain-it-to-me-like-im-ten/",
-        "source": "Hacker News AI",
-        "score": 109
-      },
-      {
-        "title": "Implementation of GPT-2 in pure CMake",
-        "url": "https://github.com/AlpinDale/gpt2.cmake",
-        "source": "Hacker News AI",
-        "score": 58
-      },
-      {
-        "title": "AI and Infrastructure Engineering",
-        "url": "https://omegion.dev/2026/08/ai-and-infrastructure-engineering/",
-        "source": "Hacker News AI",
-        "score": 61
+        "score": 295
       },
       {
         "title": "AI Chip Architectures",
         "url": "https://www.jepeake.com/ai-chip-architectures",
         "source": "Hacker News AI",
-        "score": 56
+        "score": 61
+      },
+      {
+        "title": "New EU-wide product repair rules come into force",
+        "url": "https://www.rte.ie/news/business/2026/0824/1588931-repair-rules/",
+        "source": "Hacker News AI",
+        "score": 22
+      },
+      {
+        "title": "Rural Village in Spain Is Welcoming Digital Nomads with Open Arms",
+        "url": "https://www.cntraveler.com/story/this-rural-village-in-spain-is-welcoming-digital-nomads-with-open-arms",
+        "source": "Hacker News AI",
+        "score": 78
+      },
+      {
+        "title": "Explain it to me like I'm ten",
+        "url": "https://timharford.com/2026/08/explain-it-to-me-like-im-ten/",
+        "source": "Hacker News AI",
+        "score": 120
+      },
+      {
+        "title": "Implementation of GPT-2 in pure CMake",
+        "url": "https://github.com/AlpinDale/gpt2.cmake",
+        "source": "Hacker News AI",
+        "score": 70
+      },
+      {
+        "title": "AI and Infrastructure Engineering",
+        "url": "https://omegion.dev/2026/08/ai-and-infrastructure-engineering/",
+        "source": "Hacker News AI",
+        "score": 66
       },
       {
         "title": "Training AI to Paint with Code",
         "url": "https://surya.website/rling-qwen-to-paint-with-code",
         "source": "Hacker News AI",
-        "score": 24
-      },
-      {
-        "title": "I turned Unix talk from 1983 into the interface for my AI",
-        "url": "https://en.andros.dev/blog/09a21bdd/i-turned-unix-talk-from-1983-into-the-interface-for-my-ai/",
-        "source": "Hacker News AI",
-        "score": 23
-      },
-      {
-        "title": "Why your local LLM feels dumber than it is",
-        "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
-        "source": "Hacker News AI",
-        "score": 480
+        "score": 25
       }
     ],
     "news": [
-      {
-        "title": "Burnham to hand long-range missile blueprints to Zelensky as he visits Kyiv",
-        "url": "https://www.bbc.co.uk/news/articles/clyqypkrzq5o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
       {
         "title": "Divorce, smartphones and control - BBC sees how Taliban run Afghanistan",
         "url": "https://www.bbc.co.uk/news/articles/ckgvk9p2n7ko?at_medium=RSS&at_campaign=rss",
@@ -195,6 +202,11 @@
       {
         "title": "Shein aims for almost $27bn valuation in stock market debut",
         "url": "https://www.bbc.co.uk/news/articles/cdeweewjdxno?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "China probes use of formaldehyde to keep cabbages fresh",
+        "url": "https://www.bbc.co.uk/news/articles/cy9ze48l2yeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -213,7 +225,43 @@
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " XPPen slashes 50% off drawing tablets for its 21st Anniversary sale ",
+        "url": "https://www.creativebloq.com/art/digital-art/xppen-slashes-50-percent-off-drawing-tablets-for-its-21st-anniversary-sale",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This is the only budget ergonomic office chair to get a 10/10 review from Creative Bloq, and it's now reduced by 22% ",
+        "url": "https://www.creativebloq.com/tech/chairs-desks/one-of-the-top-rated-economic-office-chairs-is-reduced-by-22-percent",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " These striking futuristic-looking earphones come with 2 sound profiles and cost only $35 ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/these-usd35-earphones-have-2-sound-profiles-making-them-great-value",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " A single artist spent 14 years making this hand-drawn animated movie, and every frame of the trailer looks stunning ",
+        "url": "https://www.creativebloq.com/art/animation/a-single-artist-spent-14-years-making-this-hand-drawn-animated-movie-and-every-frame-of-the-trailer-looks-stunning",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " What to expect from Gamescom Opening Night Live 2026 – and how to watch it ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/what-to-expect-from-gamescom-opening-night-live-2026-and-how-to-watch-it",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Yes, there are reasons why Disney uses one-word movie titles ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/are-disneys-one-word-movie-titles-really-that-bad",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Archery World Cup's dramatic rebrand has me quivering in anticipation ",
+        "url": "https://www.creativebloq.com/design/logos-icons/the-archery-world-cup-final-is-coming-and-its-dramatic-rebrand-has-me-quivering-in-anticipation",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "Experimental compound helps burn fat without muscle loss",
