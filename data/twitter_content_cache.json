@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-24T13:52:29.267494",
-    "total_items": 58
+    "last_updated": "2026-08-24T14:43:07.316359",
+    "total_items": 65
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "How Europe is killing makers and micro-entrepreneurs",
         "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
         "source": "Hacker News",
-        "score": 130
+        "score": 322
       },
       {
         "title": "SeL4 security proofs now complete on AArch64",
         "url": "https://proofcraft.systems/news-2026/#2026-08-21",
         "source": "Hacker News",
-        "score": 67
+        "score": 88
       },
       {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News",
-        "score": 279
+        "score": 317
       },
       {
         "title": "Everything I own, owned",
         "url": "https://schlarp.com/posts/everything-i-own-owned/",
         "source": "Hacker News",
-        "score": 1135
-      },
-      {
-        "title": "Executable Is a SQLite Database",
-        "url": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database",
-        "source": "Hacker News",
-        "score": 216
-      },
-      {
-        "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
-        "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
-        "source": "Hacker News",
-        "score": 96
-      },
-      {
-        "title": "The Future Belongs to the Weird",
-        "url": "https://essays.georgestrakhov.com/weird/",
-        "source": "Hacker News",
-        "score": 65
-      },
-      {
-        "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
-        "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
-        "source": "Hacker News",
-        "score": 637
-      },
-      {
-        "title": "Fast drilldown dashboards from a single Parquet file",
-        "url": "https://www.hamiltonulmer.com/customer-dashboards-r2-hyparquet/",
-        "source": "Hacker News",
-        "score": 79
+        "score": 1182
       },
       {
         "title": "Why older tech is sometimes safer from hackers",
         "url": "https://www.bbc.com/future/article/20260821-why-older-tech-is-sometimes-safer-from-hackers",
         "source": "Hacker News",
-        "score": 15
+        "score": 33
+      },
+      {
+        "title": "Executable Is a SQLite Database",
+        "url": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database",
+        "source": "Hacker News",
+        "score": 260
+      },
+      {
+        "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
+        "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
+        "source": "Hacker News",
+        "score": 106
+      },
+      {
+        "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
+        "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
+        "source": "Hacker News",
+        "score": 665
+      },
+      {
+        "title": "Fast drilldown dashboards from a single Parquet file",
+        "url": "https://www.hamiltonulmer.com/customer-dashboards-r2-hyparquet/",
+        "source": "Hacker News",
+        "score": 97
+      },
+      {
+        "title": "Show HN: A techno machine in one HTML file, with verifiable renders",
+        "url": "https://ssx360.github.io/rack-02/?src=hn",
+        "source": "Hacker News",
+        "score": 9
       },
       {
         "title": "How I find problems to solve as a staff engineer",
         "url": "https://lalitm.com/post/find-problems-staff-engineer/",
         "source": "Hacker News",
-        "score": 466
-      },
-      {
-        "title": "Andreessen Horowitz is investing billions into a bleak future",
-        "url": "https://www.modelrepublic.org/articles/a16z-portfolio",
-        "source": "Hacker News",
-        "score": 364
-      },
-      {
-        "title": "I built a low-latency AI companion that plays Skyrim with me",
-        "url": "https://pantel.is/projects/ai-gaming-companion/",
-        "source": "Hacker News",
-        "score": 241
-      },
-      {
-        "title": "OCR It – pull text out of un-copyable documents for your LLM",
-        "url": "https://github.com/thiagotigaz/ocr-it",
-        "source": "Hacker News",
-        "score": 80
+        "score": 484
       },
       {
         "title": "Agent Is Not the Model",
         "url": "https://code.joejag.com/2026/your-agent-is-not-the-model.html",
         "source": "Hacker News",
-        "score": 28
+        "score": 37
+      },
+      {
+        "title": "Andreessen Horowitz is investing billions into a bleak future",
+        "url": "https://www.modelrepublic.org/articles/a16z-portfolio",
+        "source": "Hacker News",
+        "score": 419
+      },
+      {
+        "title": "The Future Belongs to the Weird",
+        "url": "https://essays.georgestrakhov.com/weird/",
+        "source": "Hacker News",
+        "score": 82
+      },
+      {
+        "title": "I built a low-latency AI companion that plays Skyrim with me",
+        "url": "https://pantel.is/projects/ai-gaming-companion/",
+        "source": "Hacker News",
+        "score": 259
       }
     ],
     "ai": [
@@ -101,91 +101,91 @@
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News AI",
-        "score": 279
+        "score": 317
       },
       {
         "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
         "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
         "source": "Hacker News AI",
-        "score": 96
+        "score": 106
       },
       {
         "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
         "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
         "source": "Hacker News AI",
-        "score": 637
+        "score": 665
       },
       {
         "title": "I built a low-latency AI companion that plays Skyrim with me",
         "url": "https://pantel.is/projects/ai-gaming-companion/",
         "source": "Hacker News AI",
-        "score": 241
+        "score": 259
       },
       {
         "title": "OCR It – pull text out of un-copyable documents for your LLM",
         "url": "https://github.com/thiagotigaz/ocr-it",
         "source": "Hacker News AI",
-        "score": 80
+        "score": 87
       },
       {
         "title": "Woman stranded in Spain after UK's eVisa system mistakes her for twin sister",
         "url": "https://www.theguardian.com/uk-news/2026/aug/24/woman-stranded-spain-uk-evisa-system-mistakes-twin-sister",
         "source": "Hacker News AI",
-        "score": 103
+        "score": 124
       },
       {
         "title": "Google Workspace thinks my domain is an email provider (2025)",
         "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
         "source": "Hacker News AI",
-        "score": 346
+        "score": 354
       },
       {
         "title": "My agent.md to improve LLM-assisted code quality",
         "url": "https://fabiensanglard.net/agent.md/index.html",
         "source": "Hacker News AI",
-        "score": 341
+        "score": 354
       },
       {
         "title": "New EU-wide product repair rules come into force",
         "url": "https://www.rte.ie/news/business/2026/0824/1588931-repair-rules/",
         "source": "Hacker News AI",
-        "score": 182
+        "score": 198
       },
       {
         "title": "How Complex Systems Fail (1998)",
         "url": "https://how.complexsystems.fail/",
         "source": "Hacker News AI",
-        "score": 342
+        "score": 348
       },
       {
         "title": "AI Chip Architectures",
         "url": "https://www.jepeake.com/ai-chip-architectures",
         "source": "Hacker News AI",
-        "score": 105
-      },
-      {
-        "title": "Ask HN: Why do corporate failures always seem to punish the wrong people?",
-        "url": "https://news.ycombinator.com/item?id=49418675",
-        "source": "Hacker News AI",
-        "score": 80
+        "score": 114
       },
       {
         "title": "Explain it to me like I'm ten",
         "url": "https://timharford.com/2026/08/explain-it-to-me-like-im-ten/",
         "source": "Hacker News AI",
-        "score": 162
+        "score": 169
       },
       {
         "title": "Most AI Work Can Wait",
         "url": "https://tomtunguz.com/ai-execution-routing/",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 10
       },
       {
-        "title": "Why is Anthropic's public writing style so unlike Claude's?",
-        "url": "https://cmart.blog/claude-writing/",
+        "title": "Implementation of GPT-2 in pure CMake",
+        "url": "https://github.com/AlpinDale/gpt2.cmake",
         "source": "Hacker News AI",
-        "score": 62
+        "score": 88
+      },
+      {
+        "title": "Anthropic Claude and API service outages",
+        "url": "https://status.claude.com/uptime",
+        "source": "Hacker News AI",
+        "score": 71
       }
     ],
     "news": [
@@ -225,7 +225,43 @@
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " Nintendo's Game Boy ads were outrageous in the nineties – here are three examples that would never get made today ",
+        "url": "https://www.creativebloq.com/design/print-design-publishing/nintendos-game-boy-ads-were-outrageous-in-the-nineties-here-are-three-examples-that-would-never-get-made-today",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Razer Blade 18 (2026) review: Oh boy, this is the biggest and baddest of them all ",
+        "url": "https://www.creativebloq.com/tech/laptops/oh-boy-the-razer-blade-18-is-the-biggest-and-baddest-of-them-all",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " PBS getting ghosted by a cloud storage provider makes me terrified I'll lose all my creative work too ",
+        "url": "https://www.creativebloq.com/web-design/cloud-storage/pbs-getting-ghosted-by-a-cloud-storage-provider-makes-me-terrified-ill-lose-all-my-creative-work-too",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Monster Munch rebrand shows a great brand mascot can last a lifetime ",
+        "url": "https://www.creativebloq.com/design/logos-icons/the-monster-munch-rebrand-shows-that-a-great-brand-mascot-can-last-a-lifetime",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " XPPen slashes 50% off drawing tablets for its 21st Anniversary sale ",
+        "url": "https://www.creativebloq.com/art/digital-art/xppen-slashes-50-percent-off-drawing-tablets-for-its-21st-anniversary-sale",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This is the only budget ergonomic office chair to get a 10/10 review from Creative Bloq, and it's now reduced by 22% ",
+        "url": "https://www.creativebloq.com/tech/chairs-desks/one-of-the-top-rated-economic-office-chairs-is-reduced-by-22-percent",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " These striking futuristic-looking earphones come with 2 sound profiles and cost only $35 ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/these-usd35-earphones-have-2-sound-profiles-making-them-great-value",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "Common medications may change your gut for years",
@@ -265,6 +301,21 @@
     ],
     "gaming": [
       {
+        "title": "Pokemon’s Creators Are Ready to Officially Ditch a 30-Year-Old Series Tradition",
+        "url": "https://www.polygon.com/pokemon-turn-based-gameplay-changes/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Honkai Star Rail version 4.5 release time in your time zone",
+        "url": "https://www.polygon.com/honkai-star-rail-version-4-5-release-time-maintenance-start-end/",
+        "source": "Polygon"
+      },
+      {
+        "title": "25 Years Later, Anime’s First Cinematic Masterpiece Is Officially Returning to Theaters",
+        "url": "https://www.polygon.com/vampire-hunter-d-bloodlust-new-theatrical-release-gkids/",
+        "source": "Polygon"
+      },
+      {
         "title": "Best Guns in the Modern Warfare 4 Beta",
         "url": "https://www.polygon.com/modern-warfare-4-mw4-best-guns-weapons-meta/",
         "source": "Polygon"
@@ -282,21 +333,6 @@
       {
         "title": "Amid the Blood of Dawnwalker Performance Fears, Rebel Wolves Promises a Day One Console Patch",
         "url": "https://www.polygon.com/the-blood-of-dawnwalker-performance-mode-day-one-console-patch/",
-        "source": "Polygon"
-      },
-      {
-        "title": "PlayStation Owners Begin Sony Boycott with Digital Blackout Protest",
-        "url": "https://www.polygon.com/playstation-digital-blackout-begins-sony-boycott/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Hayley Atwell Slams Controversial Captain Carter Scene: 'A Complete Disservice to the Character'",
-        "url": "https://www.polygon.com/hayley-atwell-captain-carter-death/",
-        "source": "Polygon"
-      },
-      {
-        "title": "A Bizarre $5 Fishing Game Just Sold 1 Million Copies in Two Days on Steam",
-        "url": "https://www.polygon.com/how-to-fish-friendslop-steam-game-launch-weekend-sales/",
         "source": "Polygon"
       }
     ],
