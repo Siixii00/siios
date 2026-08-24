@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-24T01:20:36.810855",
+    "last_updated": "2026-08-24T03:03:59.466763",
     "total_items": 65
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "Everything I own, owned",
         "url": "https://schlarp.com/posts/everything-i-own-owned/",
         "source": "Hacker News",
-        "score": 236
+        "score": 353
       },
       {
         "title": "How I find problems to solve as a staff engineer",
         "url": "https://lalitm.com/post/find-problems-staff-engineer/",
         "source": "Hacker News",
-        "score": 257
+        "score": 293
       },
       {
         "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
         "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
         "source": "Hacker News",
-        "score": 193
+        "score": 268
+      },
+      {
+        "title": "Migrating a Synology NAS to a UniFi UNAS Pro 8 with Robocopy, SMB Multichannel",
+        "url": "https://www.hanselman.com/blog/migrating-a-synology-nas-to-a-unifi-unas-pro-8-with-robocopy-smb-multichannel-and-surprising-performance-traps",
+        "source": "Hacker News",
+        "score": 14
       },
       {
         "title": "Google Workspace thinks my domain is an email provider (2025)",
         "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
         "source": "Hacker News",
-        "score": 172
+        "score": 193
       },
       {
         "title": "My agent.md to improve LLM-assisted code quality",
         "url": "https://fabiensanglard.net/agent.md/index.html",
         "source": "Hacker News",
-        "score": 147
+        "score": 189
+      },
+      {
+        "title": "Fastmail Pricing Changes",
+        "url": "https://www.fastmail.com/pricing/us/",
+        "source": "Hacker News",
+        "score": 3
       },
       {
         "title": "What Is a Harness?",
         "url": "https://earendil.com/posts/what-is-a-harness/",
         "source": "Hacker News",
-        "score": 295
+        "score": 326
       },
       {
         "title": "How Complex Systems Fail (1998)",
         "url": "https://how.complexsystems.fail/",
         "source": "Hacker News",
-        "score": 235
-      },
-      {
-        "title": "AI Chip Architectures",
-        "url": "https://www.jepeake.com/ai-chip-architectures",
-        "source": "Hacker News",
-        "score": 37
+        "score": 252
       },
       {
         "title": "Malware infects Android-based automotive head unit firmware",
         "url": "https://securelist.com/android-head-unit-malware/121106/",
         "source": "Hacker News",
-        "score": 213
-      },
-      {
-        "title": "Implementation of GPT-2 in pure CMake",
-        "url": "https://github.com/AlpinDale/gpt2.cmake",
-        "source": "Hacker News",
-        "score": 27
+        "score": 218
       },
       {
         "title": "My favorite nonfiction books about cults, scams, and schemes",
         "url": "https://bookdna.com/best-books/nonfiction-about-cults-scams-and-schemes",
         "source": "Hacker News",
-        "score": 191
+        "score": 203
       },
       {
-        "title": "A website for debloated open source alternatives",
-        "url": "https://debloat.dev/",
+        "title": "Implementation of GPT-2 in pure CMake",
+        "url": "https://github.com/AlpinDale/gpt2.cmake",
         "source": "Hacker News",
-        "score": 262
+        "score": 40
       },
       {
         "title": "Why Sal Khan't: On Learning by Making but Teaching by Telling",
         "url": "https://punyamishra.com/2026/04/16/why-sal-khant-on-learning-by-making-but-teaching-by-telling/",
         "source": "Hacker News",
-        "score": 129
+        "score": 144
       },
       {
-        "title": "Decoding silent reading from non-invasive EEG",
-        "url": "https://arxiv.org/abs/2608.20186",
+        "title": "A website for debloated open source alternatives",
+        "url": "https://debloat.dev/",
         "source": "Hacker News",
-        "score": 29
+        "score": 276
       },
       {
-        "title": "Explain it to me like I'm ten",
-        "url": "https://timharford.com/2026/08/explain-it-to-me-like-im-ten/",
+        "title": "Rural Village in Spain Is Welcoming Digital Nomads with Open Arms",
+        "url": "https://www.cntraveler.com/story/this-rural-village-in-spain-is-welcoming-digital-nomads-with-open-arms",
         "source": "Hacker News",
-        "score": 78
+        "score": 33
       }
     ],
     "ai": [
@@ -101,91 +101,91 @@
         "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
         "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
         "source": "Hacker News AI",
-        "score": 193
+        "score": 268
       },
       {
         "title": "Google Workspace thinks my domain is an email provider (2025)",
         "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
         "source": "Hacker News AI",
-        "score": 172
+        "score": 193
       },
       {
         "title": "My agent.md to improve LLM-assisted code quality",
         "url": "https://fabiensanglard.net/agent.md/index.html",
         "source": "Hacker News AI",
-        "score": 147
+        "score": 189
+      },
+      {
+        "title": "Fastmail Pricing Changes",
+        "url": "https://www.fastmail.com/pricing/us/",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "How Complex Systems Fail (1998)",
         "url": "https://how.complexsystems.fail/",
         "source": "Hacker News AI",
-        "score": 235
-      },
-      {
-        "title": "AI Chip Architectures",
-        "url": "https://www.jepeake.com/ai-chip-architectures",
-        "source": "Hacker News AI",
-        "score": 37
+        "score": 252
       },
       {
         "title": "Implementation of GPT-2 in pure CMake",
         "url": "https://github.com/AlpinDale/gpt2.cmake",
         "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "Explain it to me like I'm ten",
-        "url": "https://timharford.com/2026/08/explain-it-to-me-like-im-ten/",
-        "source": "Hacker News AI",
-        "score": 78
+        "score": 40
       },
       {
         "title": "Rural Village in Spain Is Welcoming Digital Nomads with Open Arms",
         "url": "https://www.cntraveler.com/story/this-rural-village-in-spain-is-welcoming-digital-nomads-with-open-arms",
         "source": "Hacker News AI",
-        "score": 22
+        "score": 33
+      },
+      {
+        "title": "Explain it to me like I'm ten",
+        "url": "https://timharford.com/2026/08/explain-it-to-me-like-im-ten/",
+        "source": "Hacker News AI",
+        "score": 85
+      },
+      {
+        "title": "AI Chip Architectures",
+        "url": "https://www.jepeake.com/ai-chip-architectures",
+        "source": "Hacker News AI",
+        "score": 52
       },
       {
         "title": "AI and Infrastructure Engineering",
         "url": "https://omegion.dev/2026/08/ai-and-infrastructure-engineering/",
         "source": "Hacker News AI",
-        "score": 39
+        "score": 48
       },
       {
         "title": "Training AI to Paint with Code",
         "url": "https://surya.website/rling-qwen-to-paint-with-code",
         "source": "Hacker News AI",
-        "score": 15
-      },
-      {
-        "title": "Residential proxies scraping your site? Drain their bandwidth",
-        "url": "https://layer3intel.com/blog/residential-proxy-bandwidth-drain",
-        "source": "Hacker News AI",
-        "score": 14
+        "score": 20
       },
       {
         "title": "I turned Unix talk from 1983 into the interface for my AI",
         "url": "https://en.andros.dev/blog/09a21bdd/i-turned-unix-talk-from-1983-into-the-interface-for-my-ai/",
         "source": "Hacker News AI",
-        "score": 16
-      },
-      {
-        "title": "I ran out of space extracting a RAR so I built ReclaimArc",
-        "url": "https://github.com/harlixay7/ReclaimArc",
-        "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "Predicting AI model release dates with stats",
-        "url": "https://releaseoracle.xyz/",
-        "source": "Hacker News AI",
-        "score": 23
+        "score": 20
       },
       {
         "title": "I spent $266 and four AI models to own my tablet. GLM-5.3 finished it in a day",
         "url": "https://ericpardee.github.io/fire-hd-ownership/",
         "source": "Hacker News AI",
-        "score": 613
+        "score": 623
+      },
+      {
+        "title": "Predicting AI model release dates with stats",
+        "url": "https://releaseoracle.xyz/",
+        "source": "Hacker News AI",
+        "score": 27
+      },
+      {
+        "title": "Why your local LLM feels dumber than it is",
+        "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+        "source": "Hacker News AI",
+        "score": 476
       }
     ],
     "news": [
@@ -220,8 +220,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Trump waves green flag to start IndyCar race through Washington streets",
-        "url": "https://www.bbc.co.uk/news/articles/c0qvq24vlj4o?at_medium=RSS&at_campaign=rss",
+        "title": "Australian shark attack victim grateful for 'second chance at life'",
+        "url": "https://www.bbc.co.uk/news/articles/c87n792dnlno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -301,6 +301,21 @@
     ],
     "gaming": [
       {
+        "title": "5 Strongest Characters In Kaiju No. 8",
+        "url": "https://www.polygon.com/strongest-characters-kaiju-no-8-ranked/",
+        "source": "Polygon"
+      },
+      {
+        "title": "HBO Officially Changes a Fundamental Rule of DC Superhero Canon",
+        "url": "https://www.polygon.com/hbo-lanterns-episode-2-john-stewart-green-lantern-special-powers/",
+        "source": "Polygon"
+      },
+      {
+        "title": "‘Lanterns’ Episode 2 Ending Explained: Who Are Sinestro and the Manhunters?",
+        "url": "https://www.polygon.com/lanterns-episode-2-ending-explained-sinestro-manhunters-dc-comics-lore/",
+        "source": "Polygon"
+      },
+      {
         "title": "7 Greatest 'Far Side' Comics With No Words",
         "url": "https://www.polygon.com/7-greatest-far-side-comics-with-no-words/",
         "source": "Polygon"
@@ -318,21 +333,6 @@
       {
         "title": "18 Years Later, the Best 'XKCD' Comic Strip Quote Still Lives in My Head Rent Free",
         "url": "https://www.polygon.com/xkcd-best-quote-duty-calls/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The 7 Most-Anticipated Games at Gamescom 2026, the Show's Biggest Year Yet",
-        "url": "https://www.polygon.com/gamescom-2026-confirmed-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Gamescom Is Officially the Biggest Gaming Event in the World. So What’s Next?",
-        "url": "https://www.polygon.com/gamescom-2026-interview-tim-endres-stefan-heikhaus/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Mewgenics' Xbox Port Is Coming Sooner Than Expected, Store Leak Suggests",
-        "url": "https://www.polygon.com/mewgenics-xbox-release-date-leak/",
         "source": "Polygon"
       }
     ],
