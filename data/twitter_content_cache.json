@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-24T18:40:52.312107",
-    "total_items": 63
+    "last_updated": "2026-08-24T19:30:37.437174",
+    "total_items": 64
   },
   "content": {
     "tech": [
@@ -9,43 +9,49 @@
         "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
         "url": "https://twitter.com/lemire/status/2091894299289874926",
         "source": "Hacker News",
-        "score": 429
+        "score": 490
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News",
-        "score": 273
+        "score": 329
       },
       {
         "title": "IPFS Maintainers Winding Down",
         "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
         "source": "Hacker News",
-        "score": 179
+        "score": 225
       },
       {
         "title": "The entire city of San Francisco as a video game",
         "url": "https://sf.thijs.gg/",
         "source": "Hacker News",
-        "score": 80
+        "score": 127
+      },
+      {
+        "title": "Anger, Anxiety and Agency",
+        "url": "https://lucumr.pocoo.org/2026/8/24/anger-anxiety-agency/",
+        "source": "Hacker News",
+        "score": 29
       },
       {
         "title": "How Europe is killing makers and micro-entrepreneurs",
         "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
         "source": "Hacker News",
-        "score": 740
-      },
-      {
-        "title": "Hot Chips 2026: CUDA Targets RISC-V – By Chester Lam",
-        "url": "https://chipsandcheese.com/p/hot-chips-2026-cuda-targets-risc",
-        "source": "Hacker News",
-        "score": 35
+        "score": 792
       },
       {
         "title": "Jabber/XMPP: 25 Years of Digital Independence",
         "url": "https://gultsch.de/posts/25-years-of-digital-independence/",
         "source": "Hacker News",
-        "score": 56
+        "score": 72
+      },
+      {
+        "title": "LLMs could control their host machines by exploiting inference engines",
+        "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
+        "source": "Hacker News",
+        "score": 8
       },
       {
         "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
@@ -54,46 +60,40 @@
         "score": 1
       },
       {
-        "title": "Show HN: GlassBox – what the browser reveals, and how identifiable you are",
-        "url": "https://glassbox.codecanary.org",
+        "title": "Hot Chips 2026: CUDA Targets RISC-V – By Chester Lam",
+        "url": "https://chipsandcheese.com/p/hot-chips-2026-cuda-targets-risc",
         "source": "Hacker News",
-        "score": 43
+        "score": 47
       },
       {
         "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
         "url": "https://picomq.com/",
         "source": "Hacker News",
-        "score": 35
+        "score": 45
       },
       {
         "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
         "url": "https://developers.openai.com/api/docs/pricing",
         "source": "Hacker News",
-        "score": 172
+        "score": 199
       },
       {
-        "title": "Adding 4 more 2.5GbE interfaces to the GMKtec NucBox G9",
-        "url": "https://catskull.net/adding-4-more-25gbe-interfaces-to-the-gmktec-nucbox-g9.html",
+        "title": "What Is a Syslog Server?",
+        "url": "https://blog.greencloudvps.com/what-is-a-syslog-server.php",
         "source": "Hacker News",
-        "score": 9
+        "score": 15
       },
       {
         "title": "SeL4 security proofs now complete on AArch64",
         "url": "https://proofcraft.systems/news-2026/#2026-08-21",
         "source": "Hacker News",
-        "score": 142
+        "score": 148
       },
       {
-        "title": "Coding expertise is going to collapse from AI reliance",
-        "url": "https://larsfaye.com/articles/ai-coding-will-prevent-expertise",
+        "title": "Show HN: GlassBox – what the browser reveals, and how identifiable you are",
+        "url": "https://glassbox.codecanary.org",
         "source": "Hacker News",
-        "score": 247
-      },
-      {
-        "title": "I were 17, I'd learn how to build LLMs from scratch",
-        "url": "https://twitter.com/paulg/status/2091544343589060625",
-        "source": "Hacker News",
-        "score": 425
+        "score": 57
       }
     ],
     "ai": [
@@ -101,13 +101,19 @@
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News AI",
-        "score": 273
+        "score": 329
       },
       {
         "title": "IPFS Maintainers Winding Down",
         "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
         "source": "Hacker News AI",
-        "score": 179
+        "score": 225
+      },
+      {
+        "title": "LLMs could control their host machines by exploiting inference engines",
+        "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
+        "source": "Hacker News AI",
+        "score": 8
       },
       {
         "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
@@ -119,61 +125,61 @@
         "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
         "url": "https://picomq.com/",
         "source": "Hacker News AI",
-        "score": 35
+        "score": 45
       },
       {
         "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
         "url": "https://developers.openai.com/api/docs/pricing",
         "source": "Hacker News AI",
-        "score": 172
-      },
-      {
-        "title": "Coding expertise is going to collapse from AI reliance",
-        "url": "https://larsfaye.com/articles/ai-coding-will-prevent-expertise",
-        "source": "Hacker News AI",
-        "score": 247
+        "score": 199
       },
       {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News AI",
-        "score": 425
+        "score": 440
+      },
+      {
+        "title": "Show HN: Kern – container and resource runtime in a 1.5 MB binary, no daemon",
+        "url": "https://github.com/getkern/kern",
+        "source": "Hacker News AI",
+        "score": 11
+      },
+      {
+        "title": "Coding expertise is going to collapse from AI reliance",
+        "url": "https://larsfaye.com/articles/ai-coding-will-prevent-expertise",
+        "source": "Hacker News AI",
+        "score": 276
       },
       {
         "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
         "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
         "source": "Hacker News AI",
-        "score": 157
+        "score": 162
       },
       {
         "title": "Anna's Archive Owes $340 Million, Lost Several Domains, but It's Still Online",
         "url": "https://torrentfreak.com/annas-archive-owes-340-million-lost-several-domains-but-its-still-online/",
         "source": "Hacker News AI",
-        "score": 189
-      },
-      {
-        "title": "Public services are increasingly strained by LLM-written appeals for benefits",
-        "url": "https://arxiv.org/abs/2608.16603",
-        "source": "Hacker News AI",
-        "score": 51
+        "score": 210
       },
       {
         "title": "NetBSD GSoC 2026 Improving RAIDframe",
         "url": "https://blog.netbsd.org/tnf/entry/gsoc2026_raidframe",
         "source": "Hacker News AI",
-        "score": 17
+        "score": 19
+      },
+      {
+        "title": "Public services are increasingly strained by LLM-written appeals for benefits",
+        "url": "https://arxiv.org/abs/2608.16603",
+        "source": "Hacker News AI",
+        "score": 55
       },
       {
         "title": "I built a low-latency AI companion that plays Skyrim with me",
         "url": "https://pantel.is/projects/ai-gaming-companion/",
         "source": "Hacker News AI",
-        "score": 314
-      },
-      {
-        "title": "OCR It – pull text out of un-copyable documents for your LLM",
-        "url": "https://github.com/thiagotigaz/ocr-it",
-        "source": "Hacker News AI",
-        "score": 108
+        "score": 319
       }
     ],
     "news": [
@@ -289,6 +295,31 @@
     ],
     "gaming": [
       {
+        "title": "Forget GTA 6, Everyone is Obsessed with the 'Find a Needle in a Haystack' Game",
+        "url": "https://www.polygon.com/needle-in-a-haystack-viral-game/",
+        "source": "Polygon"
+      },
+      {
+        "title": "This Pokémon-inspired RPG is Free to Keep Forever on Steam Right Now",
+        "url": "https://www.polygon.com/free-games-on-steam-right-now-dokimon-quest-rpg-pokemon-like/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'GTA 6' Leak Reveals New Feature Rockstar Was Probably Saving For Netflix",
+        "url": "https://www.polygon.com/gta-6-leak-how-long-is-a-day-night-cycle-gameplay/",
+        "source": "Polygon"
+      },
+      {
+        "title": "D&D Revives an Absurdly Powerful Gary Gygax Artifact After 26 Years",
+        "url": "https://www.polygon.com/dnd-arcana-unleashed-queen-ehlissas-marvelous-nightingale-artifact-gary-gygax/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Nintendo Fan Loses Nearly Complete NES Collection in Heartbreaking Theft",
+        "url": "https://www.polygon.com/nintendo-game-collection-stolen-from-washington-home/",
+        "source": "Polygon"
+      },
+      {
         "title": "Steam’s Trippiest Game in Years Deserves a Second Shot Before GTA 6 Buries Everything",
         "url": "https://www.polygon.com/burden-street-station-steam-impressions/",
         "source": "Polygon"
@@ -296,31 +327,6 @@
       {
         "title": "Ichigo's New Form Has Bleach Anime Fans Asking Some Big Questions",
         "url": "https://www.polygon.com/bleach-new-ichigo-form/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Playstation Doubles Down on Ditching PC in New PS5 Video",
-        "url": "https://www.polygon.com/ps5-sony-exclusives-pc-ports-wolverine-god-of-war-laufey/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'GTA 6' Leaks Take Dire Turn As Hackers Urge Fans To Harass Rockstar IRL",
-        "url": "https://www.polygon.com/gta-6-new-leak-beach-cyberleek-rockstar-protest-discs/",
-        "source": "Polygon"
-      },
-      {
-        "title": "9 Years Ago, Jason Statham Perfectly Summed up His Entire Movie Career",
-        "url": "https://www.polygon.com/jason-statham-action-movie-roles-quote/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Avengers: Doomsday Gets Surprise Official Trailer With an All-New Look",
-        "url": "https://www.polygon.com/marvel-avengers-doomsday-lego-trailer-released/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All admin panel lobby hack codes in Fortnite Chapter 7 Season 4",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-admin-panel-lobby-hack-codes-list-all/",
         "source": "Polygon"
       }
     ],
