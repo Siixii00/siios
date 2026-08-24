@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-24T19:30:37.437174",
-    "total_items": 64
+    "last_updated": "2026-08-24T20:31:09.180074",
+    "total_items": 65
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
         "url": "https://twitter.com/lemire/status/2091894299289874926",
         "source": "Hacker News",
-        "score": 490
+        "score": 550
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News",
-        "score": 329
-      },
-      {
-        "title": "IPFS Maintainers Winding Down",
-        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
-        "source": "Hacker News",
-        "score": 225
+        "score": 388
       },
       {
         "title": "The entire city of San Francisco as a video game",
         "url": "https://sf.thijs.gg/",
         "source": "Hacker News",
-        "score": 127
+        "score": 183
       },
       {
-        "title": "Anger, Anxiety and Agency",
-        "url": "https://lucumr.pocoo.org/2026/8/24/anger-anxiety-agency/",
+        "title": "IPFS Maintainers Winding Down",
+        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
         "source": "Hacker News",
-        "score": 29
+        "score": 254
       },
       {
-        "title": "How Europe is killing makers and micro-entrepreneurs",
-        "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
+        "title": "A Claude Code skill that recovers export-blocked Kindle highlights",
+        "url": "https://github.com/l3a0/claude-plugins",
         "source": "Hacker News",
-        "score": 792
-      },
-      {
-        "title": "Jabber/XMPP: 25 Years of Digital Independence",
-        "url": "https://gultsch.de/posts/25-years-of-digital-independence/",
-        "source": "Hacker News",
-        "score": 72
+        "score": 19
       },
       {
         "title": "LLMs could control their host machines by exploiting inference engines",
         "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
         "source": "Hacker News",
-        "score": 8
+        "score": 33
       },
       {
-        "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
-        "url": "https://www.ycombinator.com/companies/autostep/jobs",
+        "title": "How Europe is killing makers and micro-entrepreneurs",
+        "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
         "source": "Hacker News",
-        "score": 1
+        "score": 851
+      },
+      {
+        "title": "Oceans hit highest temperature on record",
+        "url": "https://www.bbc.com/news/articles/c62m4gpnp78o",
+        "source": "Hacker News",
+        "score": 130
+      },
+      {
+        "title": "Jabber/XMPP: 25 Years of Digital Independence",
+        "url": "https://gultsch.de/posts/25-years-of-digital-independence/",
+        "source": "Hacker News",
+        "score": 94
       },
       {
         "title": "Hot Chips 2026: CUDA Targets RISC-V – By Chester Lam",
         "url": "https://chipsandcheese.com/p/hot-chips-2026-cuda-targets-risc",
         "source": "Hacker News",
-        "score": 47
+        "score": 52
+      },
+      {
+        "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
+        "url": "https://app.dover.com/Autostep/careers/e9510e3b-a854-4e48-9e5d-c89796acaed4",
+        "source": "Hacker News",
+        "score": 1
       },
       {
         "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
         "url": "https://picomq.com/",
         "source": "Hacker News",
-        "score": 45
+        "score": 53
       },
       {
         "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
         "url": "https://developers.openai.com/api/docs/pricing",
         "source": "Hacker News",
-        "score": 199
+        "score": 227
       },
       {
-        "title": "What Is a Syslog Server?",
-        "url": "https://blog.greencloudvps.com/what-is-a-syslog-server.php",
+        "title": "Show HN: Kern – container and resource runtime in a 1.5 MB binary, no daemon",
+        "url": "https://github.com/getkern/kern",
         "source": "Hacker News",
-        "score": 15
+        "score": 25
       },
       {
         "title": "SeL4 security proofs now complete on AArch64",
         "url": "https://proofcraft.systems/news-2026/#2026-08-21",
         "source": "Hacker News",
-        "score": 148
-      },
-      {
-        "title": "Show HN: GlassBox – what the browser reveals, and how identifiable you are",
-        "url": "https://glassbox.codecanary.org",
-        "source": "Hacker News",
-        "score": 57
+        "score": 151
       }
     ],
     "ai": [
@@ -101,23 +101,29 @@
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News AI",
-        "score": 329
+        "score": 388
       },
       {
         "title": "IPFS Maintainers Winding Down",
         "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
         "source": "Hacker News AI",
-        "score": 225
+        "score": 254
+      },
+      {
+        "title": "A Claude Code skill that recovers export-blocked Kindle highlights",
+        "url": "https://github.com/l3a0/claude-plugins",
+        "source": "Hacker News AI",
+        "score": 19
       },
       {
         "title": "LLMs could control their host machines by exploiting inference engines",
         "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 33
       },
       {
         "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
-        "url": "https://www.ycombinator.com/companies/autostep/jobs",
+        "url": "https://app.dover.com/Autostep/careers/e9510e3b-a854-4e48-9e5d-c89796acaed4",
         "source": "Hacker News AI",
         "score": 1
       },
@@ -125,61 +131,61 @@
         "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
         "url": "https://picomq.com/",
         "source": "Hacker News AI",
-        "score": 45
+        "score": 53
       },
       {
         "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
         "url": "https://developers.openai.com/api/docs/pricing",
         "source": "Hacker News AI",
-        "score": 199
-      },
-      {
-        "title": "I were 17, I'd learn how to build LLMs from scratch",
-        "url": "https://twitter.com/paulg/status/2091544343589060625",
-        "source": "Hacker News AI",
-        "score": 440
+        "score": 227
       },
       {
         "title": "Show HN: Kern – container and resource runtime in a 1.5 MB binary, no daemon",
         "url": "https://github.com/getkern/kern",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 25
+      },
+      {
+        "title": "I were 17, I'd learn how to build LLMs from scratch",
+        "url": "https://twitter.com/paulg/status/2091544343589060625",
+        "source": "Hacker News AI",
+        "score": 462
       },
       {
         "title": "Coding expertise is going to collapse from AI reliance",
         "url": "https://larsfaye.com/articles/ai-coding-will-prevent-expertise",
         "source": "Hacker News AI",
-        "score": 276
+        "score": 320
       },
       {
         "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
         "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
         "source": "Hacker News AI",
-        "score": 162
+        "score": 165
+      },
+      {
+        "title": "Qwen 3.6 is now much easier to run locally on your Mac, thanks to JetBrains",
+        "url": "https://www.neowin.net/news/qwen-36-is-now-much-easier-to-run-locally-on-your-mac-thanks-to-jetbrains/",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Anna's Archive Owes $340 Million, Lost Several Domains, but It's Still Online",
         "url": "https://torrentfreak.com/annas-archive-owes-340-million-lost-several-domains-but-its-still-online/",
         "source": "Hacker News AI",
-        "score": 210
+        "score": 225
+      },
+      {
+        "title": "Public services are increasingly strained by LLM-written appeals for benefits",
+        "url": "https://arxiv.org/abs/2608.16603",
+        "source": "Hacker News AI",
+        "score": 58
       },
       {
         "title": "NetBSD GSoC 2026 Improving RAIDframe",
         "url": "https://blog.netbsd.org/tnf/entry/gsoc2026_raidframe",
         "source": "Hacker News AI",
         "score": 19
-      },
-      {
-        "title": "Public services are increasingly strained by LLM-written appeals for benefits",
-        "url": "https://arxiv.org/abs/2608.16603",
-        "source": "Hacker News AI",
-        "score": 55
-      },
-      {
-        "title": "I built a low-latency AI companion that plays Skyrim with me",
-        "url": "https://pantel.is/projects/ai-gaming-companion/",
-        "source": "Hacker News AI",
-        "score": 319
       }
     ],
     "news": [
@@ -295,6 +301,31 @@
     ],
     "gaming": [
       {
+        "title": "Tom Hardy’s $478M Sci-Fi Action Movie Officially Surges to #2 on Netflix",
+        "url": "https://www.polygon.com/venom-3-the-last-dance-tom-hardy-streaming-success-netflix/",
+        "source": "Polygon"
+      },
+      {
+        "title": "38 Years Later, The Best 'Calvin and Hobbes' Mom Quote Is Still Unmatched in Comic Strip History",
+        "url": "https://www.polygon.com/best-quote-mom-calvin-hobbes/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Perfectly Written High Fantasy Books for Fans of Lord of the Rings and Game of Thrones",
+        "url": "https://www.polygon.com/10-best-high-fantasy-books/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Ambitious $140M Sci-Fi Thriller Guilty Pleasure Is Officially Streaming Free on YouTube",
+        "url": "https://www.polygon.com/ang-lee-hulk-now-streaming-free/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Magic Is Officially Reprinting a Treasured Card with the Perfect '80s Throwback",
+        "url": "https://www.polygon.com/mtg-he-man-secret-lair-command-tower/",
+        "source": "Polygon"
+      },
+      {
         "title": "Forget GTA 6, Everyone is Obsessed with the 'Find a Needle in a Haystack' Game",
         "url": "https://www.polygon.com/needle-in-a-haystack-viral-game/",
         "source": "Polygon"
@@ -302,31 +333,6 @@
       {
         "title": "This Pokémon-inspired RPG is Free to Keep Forever on Steam Right Now",
         "url": "https://www.polygon.com/free-games-on-steam-right-now-dokimon-quest-rpg-pokemon-like/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'GTA 6' Leak Reveals New Feature Rockstar Was Probably Saving For Netflix",
-        "url": "https://www.polygon.com/gta-6-leak-how-long-is-a-day-night-cycle-gameplay/",
-        "source": "Polygon"
-      },
-      {
-        "title": "D&D Revives an Absurdly Powerful Gary Gygax Artifact After 26 Years",
-        "url": "https://www.polygon.com/dnd-arcana-unleashed-queen-ehlissas-marvelous-nightingale-artifact-gary-gygax/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Nintendo Fan Loses Nearly Complete NES Collection in Heartbreaking Theft",
-        "url": "https://www.polygon.com/nintendo-game-collection-stolen-from-washington-home/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Steam’s Trippiest Game in Years Deserves a Second Shot Before GTA 6 Buries Everything",
-        "url": "https://www.polygon.com/burden-street-station-steam-impressions/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Ichigo's New Form Has Bleach Anime Fans Asking Some Big Questions",
-        "url": "https://www.polygon.com/bleach-new-ichigo-form/",
         "source": "Polygon"
       }
     ],
