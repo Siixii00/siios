@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-24T04:46:05.123304",
-    "total_items": 55
+    "last_updated": "2026-08-24T05:39:07.345897",
+    "total_items": 56
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Everything I own, owned",
         "url": "https://schlarp.com/posts/everything-i-own-owned/",
         "source": "Hacker News",
-        "score": 473
+        "score": 534
       },
       {
         "title": "How I find problems to solve as a staff engineer",
         "url": "https://lalitm.com/post/find-problems-staff-engineer/",
         "source": "Hacker News",
-        "score": 335
+        "score": 349
       },
       {
         "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
         "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
         "source": "Hacker News",
-        "score": 333
-      },
-      {
-        "title": "Migrating a Synology NAS to a UniFi UNAS Pro 8 with Robocopy, SMB Multichannel",
-        "url": "https://www.hanselman.com/blog/migrating-a-synology-nas-to-a-unifi-unas-pro-8-with-robocopy-smb-multichannel-and-surprising-performance-traps",
-        "source": "Hacker News",
-        "score": 26
+        "score": 367
       },
       {
         "title": "Google Workspace thinks my domain is an email provider (2025)",
         "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
         "source": "Hacker News",
-        "score": 219
+        "score": 236
       },
       {
         "title": "My agent.md to improve LLM-assisted code quality",
         "url": "https://fabiensanglard.net/agent.md/index.html",
         "source": "Hacker News",
-        "score": 219
+        "score": 246
       },
       {
-        "title": "I built a low-latency AI companion that plays Skyrim with me",
-        "url": "https://pantel.is/projects/ai-gaming-companion/",
+        "title": "Migrating a Synology NAS to a UniFi UNAS Pro 8 with Robocopy, SMB Multichannel",
+        "url": "https://www.hanselman.com/blog/migrating-a-synology-nas-to-a-unifi-unas-pro-8-with-robocopy-smb-multichannel-and-surprising-performance-traps",
         "source": "Hacker News",
-        "score": 36
-      },
-      {
-        "title": "What Is a Harness?",
-        "url": "https://earendil.com/posts/what-is-a-harness/",
-        "source": "Hacker News",
-        "score": 363
+        "score": 33
       },
       {
         "title": "Nearly 3M Teslas recalled in China over hidden door handles",
         "url": "https://www.bbc.com/news/articles/c4g6ggdg030o",
         "source": "Hacker News",
-        "score": 13
+        "score": 52
+      },
+      {
+        "title": "What Is a Harness?",
+        "url": "https://earendil.com/posts/what-is-a-harness/",
+        "source": "Hacker News",
+        "score": 382
+      },
+      {
+        "title": "I built a low-latency AI companion that plays Skyrim with me",
+        "url": "https://pantel.is/projects/ai-gaming-companion/",
+        "source": "Hacker News",
+        "score": 56
       },
       {
         "title": "How Complex Systems Fail (1998)",
         "url": "https://how.complexsystems.fail/",
         "source": "Hacker News",
-        "score": 273
+        "score": 278
       },
       {
         "title": "Malware infects Android-based automotive head unit firmware",
         "url": "https://securelist.com/android-head-unit-malware/121106/",
         "source": "Hacker News",
-        "score": 225
+        "score": 229
       },
       {
         "title": "My favorite nonfiction books about cults, scams, and schemes",
         "url": "https://bookdna.com/best-books/nonfiction-about-cults-scams-and-schemes",
         "source": "Hacker News",
-        "score": 209
+        "score": 213
       },
       {
         "title": "Rural Village in Spain Is Welcoming Digital Nomads with Open Arms",
         "url": "https://www.cntraveler.com/story/this-rural-village-in-spain-is-welcoming-digital-nomads-with-open-arms",
         "source": "Hacker News",
-        "score": 50
+        "score": 56
       },
       {
         "title": "Why Sal Khan't: On Learning by Making but Teaching by Telling",
         "url": "https://punyamishra.com/2026/04/16/why-sal-khant-on-learning-by-making-but-teaching-by-telling/",
         "source": "Hacker News",
-        "score": 160
+        "score": 162
       },
       {
-        "title": "The first search engine for Internet-connected devices",
-        "url": "https://www.shodan.io/",
+        "title": "Explain it to me like I'm ten",
+        "url": "https://timharford.com/2026/08/explain-it-to-me-like-im-ten/",
         "source": "Hacker News",
-        "score": 11
+        "score": 109
       }
     ],
     "ai": [
@@ -101,61 +101,61 @@
         "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
         "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
         "source": "Hacker News AI",
-        "score": 333
+        "score": 367
       },
       {
         "title": "Google Workspace thinks my domain is an email provider (2025)",
         "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
         "source": "Hacker News AI",
-        "score": 219
+        "score": 236
       },
       {
         "title": "My agent.md to improve LLM-assisted code quality",
         "url": "https://fabiensanglard.net/agent.md/index.html",
         "source": "Hacker News AI",
-        "score": 219
+        "score": 246
       },
       {
         "title": "I built a low-latency AI companion that plays Skyrim with me",
         "url": "https://pantel.is/projects/ai-gaming-companion/",
         "source": "Hacker News AI",
-        "score": 36
+        "score": 56
       },
       {
         "title": "How Complex Systems Fail (1998)",
         "url": "https://how.complexsystems.fail/",
         "source": "Hacker News AI",
-        "score": 273
+        "score": 278
       },
       {
         "title": "Rural Village in Spain Is Welcoming Digital Nomads with Open Arms",
         "url": "https://www.cntraveler.com/story/this-rural-village-in-spain-is-welcoming-digital-nomads-with-open-arms",
         "source": "Hacker News AI",
-        "score": 50
-      },
-      {
-        "title": "Implementation of GPT-2 in pure CMake",
-        "url": "https://github.com/AlpinDale/gpt2.cmake",
-        "source": "Hacker News AI",
-        "score": 55
+        "score": 56
       },
       {
         "title": "Explain it to me like I'm ten",
         "url": "https://timharford.com/2026/08/explain-it-to-me-like-im-ten/",
         "source": "Hacker News AI",
-        "score": 100
+        "score": 109
+      },
+      {
+        "title": "Implementation of GPT-2 in pure CMake",
+        "url": "https://github.com/AlpinDale/gpt2.cmake",
+        "source": "Hacker News AI",
+        "score": 58
       },
       {
         "title": "AI and Infrastructure Engineering",
         "url": "https://omegion.dev/2026/08/ai-and-infrastructure-engineering/",
         "source": "Hacker News AI",
-        "score": 59
+        "score": 61
       },
       {
         "title": "AI Chip Architectures",
         "url": "https://www.jepeake.com/ai-chip-architectures",
         "source": "Hacker News AI",
-        "score": 55
+        "score": 56
       },
       {
         "title": "Training AI to Paint with Code",
@@ -168,12 +168,23 @@
         "url": "https://en.andros.dev/blog/09a21bdd/i-turned-unix-talk-from-1983-into-the-interface-for-my-ai/",
         "source": "Hacker News AI",
         "score": 23
+      },
+      {
+        "title": "Why your local LLM feels dumber than it is",
+        "url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+        "source": "Hacker News AI",
+        "score": 480
       }
     ],
     "news": [
       {
-        "title": "Burnham to visit Kyiv on first foreign trip and reaffirm UK support for Ukraine",
+        "title": "Burnham to hand long-range missile blueprints to Zelensky as he visits Kyiv",
         "url": "https://www.bbc.co.uk/news/articles/clyqypkrzq5o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Divorce, smartphones and control - BBC sees how Taliban run Afghanistan",
+        "url": "https://www.bbc.co.uk/news/articles/ckgvk9p2n7ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -187,23 +198,18 @@
         "source": "BBC World"
       },
       {
+        "title": "Ex-cricket captains urge 'proper medical care' for Imran Khan",
+        "url": "https://www.bbc.co.uk/news/articles/cx2z889l0dxo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Guinea rubbish landfill collapse kills 30",
         "url": "https://www.bbc.co.uk/news/articles/c4g3g36z7p6o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Nearly 3 million Teslas recalled in China over hidden door handles",
+        "title": "Nearly three million Teslas recalled in China over hidden door handles",
         "url": "https://www.bbc.co.uk/news/articles/c4g6ggdg030o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "France links sharp rise in drownings to heatwaves",
-        "url": "https://www.bbc.co.uk/news/articles/cqlxlp4lx9yo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Australian shark attack victim grateful for 'second chance at life'",
-        "url": "https://www.bbc.co.uk/news/articles/c87n792dnlno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
