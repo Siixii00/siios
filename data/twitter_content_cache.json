@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-24T08:02:00.251214",
-    "total_items": 65
+    "last_updated": "2026-08-24T09:49:22.028041",
+    "total_items": 58
   },
   "content": {
     "tech": [
@@ -9,183 +9,183 @@
         "title": "Everything I own, owned",
         "url": "https://schlarp.com/posts/everything-i-own-owned/",
         "source": "Hacker News",
-        "score": 759
-      },
-      {
-        "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
-        "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
-        "source": "Hacker News",
-        "score": 19
-      },
-      {
-        "title": "Anthropic Claude and API service outages",
-        "url": "https://status.claude.com/uptime",
-        "source": "Hacker News",
-        "score": 28
+        "score": 900
       },
       {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News",
-        "score": 47
+        "score": 105
       },
       {
-        "title": "Your Open Source Model Could Have a Hidden Time-Release Backdoor",
-        "url": "https://morgin.ai/articles/your-open-source-model-could-have-a-hidden-time-release-backdoor.html",
+        "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
+        "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
         "source": "Hacker News",
-        "score": 29
+        "score": 41
       },
       {
         "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
         "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
         "source": "Hacker News",
-        "score": 468
+        "score": 511
+      },
+      {
+        "title": "OCR It – pull text out of un-copyable documents for your LLM",
+        "url": "https://github.com/thiagotigaz/ocr-it",
+        "source": "Hacker News",
+        "score": 28
       },
       {
         "title": "How I find problems to solve as a staff engineer",
         "url": "https://lalitm.com/post/find-problems-staff-engineer/",
         "source": "Hacker News",
-        "score": 391
+        "score": 412
       },
       {
-        "title": "OCR It – pull text out of un-copyable documents for your LLM",
-        "url": "https://github.com/thiagotigaz/ocr-it",
+        "title": "Executable Is a SQLite Database",
+        "url": "https://fzakaria.com/2026/08/23/your-executable-is-a-sqlite-database",
         "source": "Hacker News",
-        "score": 12
+        "score": 60
       },
       {
-        "title": "The Work Number: credit score but for your employment history – by Equifax",
-        "url": "https://employees.theworknumber.com",
+        "title": "Andreessen Horowitz is investing billions into a bleak future",
+        "url": "https://www.modelrepublic.org/articles/a16z-portfolio",
         "source": "Hacker News",
-        "score": 9
+        "score": 136
       },
       {
         "title": "I built a low-latency AI companion that plays Skyrim with me",
         "url": "https://pantel.is/projects/ai-gaming-companion/",
         "source": "Hacker News",
-        "score": 119
+        "score": 157
       },
       {
         "title": "New EU-wide product repair rules come into force",
         "url": "https://www.rte.ie/news/business/2026/0824/1588931-repair-rules/",
         "source": "Hacker News",
-        "score": 61
-      },
-      {
-        "title": "Migrating a Synology NAS to a UniFi UNAS Pro 8 with Robocopy, SMB Multichannel",
-        "url": "https://www.hanselman.com/blog/migrating-a-synology-nas-to-a-unifi-unas-pro-8-with-robocopy-smb-multichannel-and-surprising-performance-traps",
-        "source": "Hacker News",
-        "score": 48
-      },
-      {
-        "title": "My agent.md to improve LLM-assisted code quality",
-        "url": "https://fabiensanglard.net/agent.md/index.html",
-        "source": "Hacker News",
-        "score": 295
+        "score": 122
       },
       {
         "title": "Google Workspace thinks my domain is an email provider (2025)",
         "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
         "source": "Hacker News",
-        "score": 281
+        "score": 304
+      },
+      {
+        "title": "My agent.md to improve LLM-assisted code quality",
+        "url": "https://fabiensanglard.net/agent.md/index.html",
+        "source": "Hacker News",
+        "score": 312
       },
       {
         "title": "What Is a Harness?",
         "url": "https://earendil.com/posts/what-is-a-harness/",
         "source": "Hacker News",
-        "score": 426
+        "score": 450
+      },
+      {
+        "title": "Fast drilldown dashboards from a single Parquet file",
+        "url": "https://www.hamiltonulmer.com/customer-dashboards-r2-hyparquet/",
+        "source": "Hacker News",
+        "score": 4
+      },
+      {
+        "title": "How Complex Systems Fail (1998)",
+        "url": "https://how.complexsystems.fail/",
+        "source": "Hacker News",
+        "score": 313
       }
     ],
     "ai": [
       {
-        "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
-        "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
-        "source": "Hacker News AI",
-        "score": 19
-      },
-      {
-        "title": "Anthropic Claude and API service outages",
-        "url": "https://status.claude.com/uptime",
-        "source": "Hacker News AI",
-        "score": 28
-      },
-      {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News AI",
-        "score": 47
+        "score": 105
+      },
+      {
+        "title": "FDA clears blood test to aid evaluation for Alzheimer's disease",
+        "url": "https://medicine.washu.edu/news/fda-clears-blood-test-to-aid-evaluation-for-alzheimers-disease/",
+        "source": "Hacker News AI",
+        "score": 42
       },
       {
         "title": "Anthropic's best AI model struggles to attract users as cheaper tools thrive",
         "url": "https://www.ft.com/content/5ee49718-c258-4f01-aa32-7e5b76ae5245",
         "source": "Hacker News AI",
-        "score": 468
+        "score": 513
       },
       {
         "title": "OCR It – pull text out of un-copyable documents for your LLM",
         "url": "https://github.com/thiagotigaz/ocr-it",
         "source": "Hacker News AI",
-        "score": 12
+        "score": 28
       },
       {
         "title": "I built a low-latency AI companion that plays Skyrim with me",
         "url": "https://pantel.is/projects/ai-gaming-companion/",
         "source": "Hacker News AI",
-        "score": 119
+        "score": 157
       },
       {
         "title": "New EU-wide product repair rules come into force",
         "url": "https://www.rte.ie/news/business/2026/0824/1588931-repair-rules/",
         "source": "Hacker News AI",
-        "score": 61
-      },
-      {
-        "title": "My agent.md to improve LLM-assisted code quality",
-        "url": "https://fabiensanglard.net/agent.md/index.html",
-        "source": "Hacker News AI",
-        "score": 295
+        "score": 122
       },
       {
         "title": "Google Workspace thinks my domain is an email provider (2025)",
         "url": "https://blog.elis.cc/articles/google-workspace-thinks-my-domain-is-an-email-provider/",
         "source": "Hacker News AI",
-        "score": 281
+        "score": 304
+      },
+      {
+        "title": "My agent.md to improve LLM-assisted code quality",
+        "url": "https://fabiensanglard.net/agent.md/index.html",
+        "source": "Hacker News AI",
+        "score": 312
       },
       {
         "title": "How Complex Systems Fail (1998)",
         "url": "https://how.complexsystems.fail/",
         "source": "Hacker News AI",
-        "score": 305
+        "score": 313
       },
       {
-        "title": "LLM Tool Failures: Only 3 Root Causes – Value, Condition, Intent",
-        "url": "https://github.com/Jang-woo-AnnaSoft/execution-state-preflight/blob/main/who-fills-in-the-form.md",
+        "title": "Why is Anthropic's public writing style so unlike Claude's?",
+        "url": "https://cmart.blog/claude-writing/",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 25
       },
       {
         "title": "AI Chip Architectures",
         "url": "https://www.jepeake.com/ai-chip-architectures",
         "source": "Hacker News AI",
-        "score": 68
-      },
-      {
-        "title": "Implementation of GPT-2 in pure CMake",
-        "url": "https://github.com/AlpinDale/gpt2.cmake",
-        "source": "Hacker News AI",
-        "score": 75
+        "score": 80
       },
       {
         "title": "Explain it to me like I'm ten",
         "url": "https://timharford.com/2026/08/explain-it-to-me-like-im-ten/",
         "source": "Hacker News AI",
-        "score": 125
+        "score": 136
       },
       {
-        "title": "Rural Village in Spain Is Welcoming Digital Nomads with Open Arms",
-        "url": "https://www.cntraveler.com/story/this-rural-village-in-spain-is-welcoming-digital-nomads-with-open-arms",
+        "title": "Woman stranded in Spain after UK's eVisa system mistakes her for twin sister",
+        "url": "https://www.theguardian.com/uk-news/2026/aug/24/woman-stranded-spain-uk-evisa-system-mistakes-twin-sister",
         "source": "Hacker News AI",
-        "score": 90
+        "score": 3
+      },
+      {
+        "title": "Anthropic Claude and API service outages",
+        "url": "https://status.claude.com/uptime",
+        "source": "Hacker News AI",
+        "score": 57
+      },
+      {
+        "title": "Implementation of GPT-2 in pure CMake",
+        "url": "https://github.com/AlpinDale/gpt2.cmake",
+        "source": "Hacker News AI",
+        "score": 79
       }
     ],
     "news": [
@@ -195,13 +195,23 @@
         "source": "BBC World"
       },
       {
+        "title": "Nearly 90,000 told to evacuate as wildfire approaches Reno, Nevada",
+        "url": "https://www.bbc.co.uk/news/articles/c4gqlp0yzyjo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Trump says Canada wants 'benefits' of being US state after trade talks collapse",
         "url": "https://www.bbc.co.uk/news/articles/cx272np7vgyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Shein aims for almost $27bn valuation in stock market debut",
-        "url": "https://www.bbc.co.uk/news/articles/cdeweewjdxno?at_medium=RSS&at_campaign=rss",
+        "title": "Nearly three million Teslas recalled in China over hidden door handles",
+        "url": "https://www.bbc.co.uk/news/articles/c4g6ggdg030o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "King of Norway's health has worsened, palace says",
+        "url": "https://www.bbc.co.uk/news/articles/c36lnekj659o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -213,55 +223,9 @@
         "title": "Ex-cricket captains urge 'proper medical care' for Imran Khan",
         "url": "https://www.bbc.co.uk/news/articles/cx2z889l0dxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Guinea rubbish landfill collapse kills 30",
-        "url": "https://www.bbc.co.uk/news/articles/c4g3g36z7p6o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Nearly three million Teslas recalled in China over hidden door handles",
-        "url": "https://www.bbc.co.uk/news/articles/c4g6ggdg030o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " PBS getting ghosted by a cloud storage provider makes me terrified I'll lose all my creative work too ",
-        "url": "https://www.creativebloq.com/web-design/cloud-storage/pbs-getting-ghosted-by-a-cloud-storage-provider-makes-me-terrified-ill-lose-all-my-creative-work-too",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Monster Munch rebrand shows a great brand mascot can last a lifetime ",
-        "url": "https://www.creativebloq.com/design/logos-icons/the-monster-munch-rebrand-shows-that-a-great-brand-mascot-can-last-a-lifetime",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " XPPen slashes 50% off drawing tablets for its 21st Anniversary sale ",
-        "url": "https://www.creativebloq.com/art/digital-art/xppen-slashes-50-percent-off-drawing-tablets-for-its-21st-anniversary-sale",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This is the only budget ergonomic office chair to get a 10/10 review from Creative Bloq, and it's now reduced by 22% ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/one-of-the-top-rated-economic-office-chairs-is-reduced-by-22-percent",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These striking futuristic-looking earphones come with 2 sound profiles and cost only $35 ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/these-usd35-earphones-have-2-sound-profiles-making-them-great-value",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " A single artist spent 14 years making this hand-drawn animated movie, and every frame of the trailer looks stunning ",
-        "url": "https://www.creativebloq.com/art/animation/a-single-artist-spent-14-years-making-this-hand-drawn-animated-movie-and-every-frame-of-the-trailer-looks-stunning",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " What to expect from Gamescom Opening Night Live 2026 – and how to watch it ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/what-to-expect-from-gamescom-opening-night-live-2026-and-how-to-watch-it",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "Experimental compound helps burn fat without muscle loss",
