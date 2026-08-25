@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-25T06:50:02.000114",
-    "total_items": 60
+    "last_updated": "2026-08-25T07:44:12.722728",
+    "total_items": 61
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News",
-        "score": 385
-      },
-      {
-        "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
-        "url": "https://twitter.com/lemire/status/2091894299289874926",
-        "source": "Hacker News",
-        "score": 816
+        "score": 409
       },
       {
         "title": "Nostr is an inclusive communication commons",
         "url": "https://nostr.org/",
         "source": "Hacker News",
-        "score": 91
+        "score": 106
+      },
+      {
+        "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
+        "url": "https://twitter.com/lemire/status/2091894299289874926",
+        "source": "Hacker News",
+        "score": 837
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News",
-        "score": 659
+        "score": 677
       },
       {
         "title": "How Universities Should Prepare Founders",
         "url": "https://paulgraham.com/prepare.html",
         "source": "Hacker News",
-        "score": 89
-      },
-      {
-        "title": "Show HN: Screen memory without screenshots, just text to Markdown",
-        "url": "https://github.com/dragthelake/ambient-context",
-        "source": "Hacker News",
-        "score": 21
-      },
-      {
-        "title": "How Europe is killing makers and micro-entrepreneurs",
-        "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
-        "source": "Hacker News",
-        "score": 1219
-      },
-      {
-        "title": "Moon (2024)",
-        "url": "https://ciechanow.ski/moon/",
-        "source": "Hacker News",
-        "score": 150
+        "score": 98
       },
       {
         "title": "Headlong: A Microharness for Persistent Agents",
         "url": "https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents",
         "source": "Hacker News",
-        "score": 32
-      },
-      {
-        "title": "The entire city of San Francisco as a video game",
-        "url": "https://sf.thijs.gg/",
-        "source": "Hacker News",
-        "score": 423
-      },
-      {
-        "title": "Was modern art a CIA psy-op? (2020)",
-        "url": "https://daily.jstor.org/was-modern-art-really-a-cia-psy-op/",
-        "source": "Hacker News",
-        "score": 59
+        "score": 44
       },
       {
         "title": "SiFive's First Server Platform",
         "url": "https://chipsandcheese.com/p/sifives-first-server-platform",
         "source": "Hacker News",
-        "score": 15
+        "score": 34
+      },
+      {
+        "title": "How Europe is killing makers and micro-entrepreneurs",
+        "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
+        "source": "Hacker News",
+        "score": 1268
+      },
+      {
+        "title": "Moon (2024)",
+        "url": "https://ciechanow.ski/moon/",
+        "source": "Hacker News",
+        "score": 165
+      },
+      {
+        "title": "Show HN: Screen memory without screenshots, just text to Markdown",
+        "url": "https://github.com/dragthelake/ambient-context",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
+        "title": "The entire city of San Francisco as a video game",
+        "url": "https://sf.thijs.gg/",
+        "source": "Hacker News",
+        "score": 439
       },
       {
         "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
         "url": "https://github.com/murerkinn/bookshelf",
         "source": "Hacker News",
-        "score": 77
+        "score": 84
       },
       {
-        "title": "Where did all the public bathrooms go?",
-        "url": "https://daily.jstor.org/where-did-all-the-public-bathrooms-go/",
+        "title": "Was modern art a CIA psy-op? (2020)",
+        "url": "https://daily.jstor.org/was-modern-art-really-a-cia-psy-op/",
         "source": "Hacker News",
-        "score": 210
+        "score": 68
       },
       {
         "title": "What's new in Emacs 31.1",
         "url": "https://www.masteringemacs.org/article/whats-new-in-emacs-311",
         "source": "Hacker News",
-        "score": 97
+        "score": 108
+      },
+      {
+        "title": "Where did all the public bathrooms go?",
+        "url": "https://daily.jstor.org/where-did-all-the-public-bathrooms-go/",
+        "source": "Hacker News",
+        "score": 222
       }
     ],
     "ai": [
@@ -101,37 +101,43 @@
         "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News AI",
-        "score": 385
+        "score": 409
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News AI",
-        "score": 659
+        "score": 677
       },
       {
         "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
         "url": "https://github.com/murerkinn/bookshelf",
         "source": "Hacker News AI",
-        "score": 77
+        "score": 84
       },
       {
         "title": "Training AI to Paint with Code",
         "url": "https://surya.website/rling-qwen-to-paint-with-code",
         "source": "Hacker News AI",
-        "score": 70
+        "score": 79
       },
       {
         "title": "Vintage Artificial Intelligence: Before It Got Awkward",
         "url": "https://blog.archive.org/2026/08/16/vintage-artificial-intelligence-before-it-got-awkward/",
         "source": "Hacker News AI",
-        "score": 79
+        "score": 84
       },
       {
         "title": "LLMs could control their host machines by exploiting inference engines",
         "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
         "source": "Hacker News AI",
-        "score": 127
+        "score": 133
+      },
+      {
+        "title": "I were 17, I'd learn how to build LLMs from scratch",
+        "url": "https://twitter.com/paulg/status/2091544343589060625",
+        "source": "Hacker News AI",
+        "score": 540
       },
       {
         "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
@@ -140,28 +146,28 @@
         "score": 1
       },
       {
-        "title": "I were 17, I'd learn how to build LLMs from scratch",
-        "url": "https://twitter.com/paulg/status/2091544343589060625",
-        "source": "Hacker News AI",
-        "score": 536
-      },
-      {
         "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
         "url": "https://picomq.com/",
         "source": "Hacker News AI",
-        "score": 112
+        "score": 113
       },
       {
         "title": "IPFS Maintainers Winding Down",
         "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
         "source": "Hacker News AI",
-        "score": 341
+        "score": 342
       },
       {
         "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
         "url": "https://developers.openai.com/api/docs/pricing",
         "source": "Hacker News AI",
         "score": 319
+      },
+      {
+        "title": "I built a low-latency AI companion that plays Skyrim with me",
+        "url": "https://pantel.is/projects/ai-gaming-companion/",
+        "source": "Hacker News AI",
+        "score": 354
       }
     ],
     "news": [
@@ -186,7 +192,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Kit Harington joins HBO's Harry Potter series as Gilderoy Lockhart",
+        "title": "Kit Harington replaces Nicholas Hoult in HBO's Harry Potter series",
         "url": "https://www.bbc.co.uk/news/articles/c783lnz12vlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -198,17 +204,22 @@
     ],
     "art": [
       {
+        "title": " Forget John Lewis's ridiculous university packing list, these dupes will save you hundreds of pounds ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/everyones-roasting-john-lewiss-list-uni-essentials-here-are-some-cheaper-options",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " The Masters of the Universe AI art controversy shows Spider-Man: Brand New Day was just the tip of the iceberg ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/the-masters-of-the-universe-ai-art-controversy-shows-spider-man-brand-new-day-was-just-the-tip-of-the-iceberg",
         "source": "Creative Bloq"
       },
       {
-        "title": " Is animation having a punk rock moment? ",
+        "title": " Animation is having a punk rock moment – and it says a lot about how people view AI ",
         "url": "https://www.creativebloq.com/art/animation/is-animation-having-a-punk-rock-moment",
         "source": "Creative Bloq"
       },
       {
-        "title": " The Hamnet Netflix controversy proves AI accusations are getting out of hand ",
+        "title": " For proof AI accusations are getting out of hand, look no further than the Hamnet Netflix 'controversy' ",
         "url": "https://www.creativebloq.com/design/the-hamnet-netflix-controversy-proves-ai-accusations-are-getting-out-of-hand",
         "source": "Creative Bloq"
       },
@@ -225,11 +236,6 @@
       {
         "title": " Nintendo's Game Boy ads were outrageous in the nineties – here are three examples that would never get made today ",
         "url": "https://www.creativebloq.com/design/print-design-publishing/nintendos-game-boy-ads-were-outrageous-in-the-nineties-here-are-three-examples-that-would-never-get-made-today",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Razer Blade 18 (2026) review: Oh boy, this is the biggest and baddest of them all ",
-        "url": "https://www.creativebloq.com/tech/laptops/oh-boy-the-razer-blade-18-is-the-biggest-and-baddest-of-them-all",
         "source": "Creative Bloq"
       }
     ],
