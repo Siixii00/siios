@@ -1,194 +1,163 @@
 {
   "metadata": {
-    "last_updated": "2026-08-25T17:32:41.353046",
-    "total_items": 65
+    "last_updated": "2026-08-25T18:40:20.184756",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
+        "title": "Apple introduces M6 and M5 Ultra",
         "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
         "source": "Hacker News",
-        "score": 584
+        "score": 687
       },
       {
         "title": "New Mac Studio with M5 Max and M5 Ultra",
         "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
         "source": "Hacker News",
-        "score": 499
-      },
-      {
-        "title": "Nitter project received cease and desist",
-        "url": "https://github.com/zedeus/nitter/issues/1442",
-        "source": "Hacker News",
-        "score": 34
-      },
-      {
-        "title": "Bomb fishing is wreaking havoc on Indonesia's coral reefs",
-        "url": "https://e360.yale.edu/digest/bomb-fishing-coral-reefs",
-        "source": "Hacker News",
-        "score": 147
-      },
-      {
-        "title": "New Mac mini, featuring M6 and M5 Pro",
-        "url": "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/",
-        "source": "Hacker News",
-        "score": 267
-      },
-      {
-        "title": "Clara (YC P26) Is Hiring a Growth Engineer to Bring AI Doctors to Market",
-        "url": "https://www.ycombinator.com/companies/clara-2/jobs/8snci6k-founding-full-stack-growth-engineer",
-        "source": "Hacker News",
-        "score": 1
+        "score": 562
       },
       {
         "title": "Black hole singularity is a surface not a point",
         "url": "https://arxiv.org/abs/2608.21590",
         "source": "Hacker News",
-        "score": 20
+        "score": 60
       },
       {
-        "title": "Qwen 3.8-Flash-Next releasing tomorrow (125B a6B)",
-        "url": "https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next",
+        "title": "Nitter project received cease and desist",
+        "url": "https://github.com/zedeus/nitter/issues/1442",
         "source": "Hacker News",
-        "score": 228
-      },
-      {
-        "title": "Water Behind the Watts: The Hidden Risk of Powering Data Centers",
-        "url": "https://www.ceres.org/resources/reports/water-behind-the-watts-the-hidden-risk-of-powering-data-centers",
-        "source": "Hacker News",
-        "score": 9
-      },
-      {
-        "title": "Building a backyard office, the build and cost breakdown",
-        "url": "https://www.imkylelambert.com/articles/building-a-backyard-office-the-build-and-cost-breakdown",
-        "source": "Hacker News",
-        "score": 121
+        "score": 194
       },
       {
         "title": "My Friend Aaron",
         "url": "https://rorz.io/writing/my-friend-aaron",
         "source": "Hacker News",
-        "score": 18
+        "score": 94
+      },
+      {
+        "title": "New Mac mini, featuring M6 and M5 Pro",
+        "url": "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/",
+        "source": "Hacker News",
+        "score": 316
+      },
+      {
+        "title": "Bomb fishing is wreaking havoc on Indonesia's coral reefs",
+        "url": "https://e360.yale.edu/digest/bomb-fishing-coral-reefs",
+        "source": "Hacker News",
+        "score": 170
+      },
+      {
+        "title": "Clara (YC P26) is hiring a growth engineer to bring AI doctors to market",
+        "url": "https://www.ycombinator.com/companies/clara-2/jobs/8snci6k-founding-full-stack-growth-engineer",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
+        "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
+        "source": "Hacker News",
+        "score": 43
+      },
+      {
+        "title": "Run OpenBSD on DigitalOcean for $4/month",
+        "url": "https://nil.wallyjones.com/run-openbsd-on-digitalocean-for-4month/",
+        "source": "Hacker News",
+        "score": 24
+      },
+      {
+        "title": "Show HN: LatticeDB – Like SQLite but for graph databases",
+        "url": "https://github.com/jeffhajewski/latticedb",
+        "source": "Hacker News",
+        "score": 32
+      },
+      {
+        "title": "Tooltips need a delay, and then they need to skip it",
+        "url": "https://blog.master.dev/tooltips-need-a-delay-and-then-they-need-to-skip-it/",
+        "source": "Hacker News",
+        "score": 35
+      },
+      {
+        "title": "Building a backyard office, the build and cost breakdown",
+        "url": "https://www.imkylelambert.com/articles/building-a-backyard-office-the-build-and-cost-breakdown",
+        "source": "Hacker News",
+        "score": 154
+      },
+      {
+        "title": "Dolly Parton has died",
+        "url": "https://www.theguardian.com/music/2026/aug/25/dolly-parton-country-singer-dead",
+        "source": "Hacker News",
+        "score": 214
       },
       {
         "title": "Don't Wordle",
         "url": "https://dontwordle.com/",
         "source": "Hacker News",
-        "score": 220
-      },
-      {
-        "title": "SpaceX – Starbase, LA",
-        "url": "https://www.spacex.com/sites/starbase-la",
-        "source": "Hacker News",
-        "score": 17
-      },
-      {
-        "title": "Tooltips Need a Delay, and Then They Need to Skip It",
-        "url": "https://blog.master.dev/tooltips-need-a-delay-and-then-they-need-to-skip-it/",
-        "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "Lightweight system monitor for Linux VPS written in Go",
-        "url": "https://github.com/leodeim/vpsmon",
-        "source": "Hacker News",
-        "score": 3
+        "score": 240
       }
     ],
     "ai": [
       {
-        "title": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
-        "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
-        "source": "Hacker News AI",
-        "score": 584
-      },
-      {
-        "title": "Clara (YC P26) Is Hiring a Growth Engineer to Bring AI Doctors to Market",
+        "title": "Clara (YC P26) is hiring a growth engineer to bring AI doctors to market",
         "url": "https://www.ycombinator.com/companies/clara-2/jobs/8snci6k-founding-full-stack-growth-engineer",
         "source": "Hacker News AI",
         "score": 1
       },
       {
-        "title": "Water Behind the Watts: The Hidden Risk of Powering Data Centers",
-        "url": "https://www.ceres.org/resources/reports/water-behind-the-watts-the-hidden-risk-of-powering-data-centers",
+        "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
+        "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
         "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
-        "url": "https://developer.apple.com/news/?id=1ptvdtcm",
-        "source": "Hacker News AI",
-        "score": 580
-      },
-      {
-        "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
-        "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
-        "source": "Hacker News AI",
-        "score": 826
-      },
-      {
-        "title": "AI is hitting entry-level jobs hardest, Stanford study finds",
-        "url": "https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds/",
-        "source": "Hacker News AI",
-        "score": 103
-      },
-      {
-        "title": "Anthropic tells staff to work from home due to possible security team strike",
-        "url": "https://www.businessinsider.com/anthropic-san-francisco-staff-work-remote-office-security-strike-2026-8",
-        "source": "Hacker News AI",
-        "score": 76
-      },
-      {
-        "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
-        "url": "https://github.com/murerkinn/bookshelf",
-        "source": "Hacker News AI",
-        "score": 158
-      },
-      {
-        "title": "Training AI to Paint with Code",
-        "url": "https://surya.website/rling-qwen-to-paint-with-code",
-        "source": "Hacker News AI",
-        "score": 180
+        "score": 43
       },
       {
         "title": "How much of HN is AI?",
         "url": "https://blog.coredump.cx/p/how-much-of-hn-is-ai",
         "source": "Hacker News AI",
+        "score": 195
+      },
+      {
+        "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
+        "url": "https://github.com/murerkinn/bookshelf",
+        "source": "Hacker News AI",
+        "score": 160
+      },
+      {
+        "title": "Training AI to Paint with Code",
+        "url": "https://surya.website/rling-qwen-to-paint-with-code",
+        "source": "Hacker News AI",
         "score": 185
       },
       {
-        "title": "Vintage Artificial Intelligence: Before It Got Awkward",
-        "url": "https://blog.archive.org/2026/08/16/vintage-artificial-intelligence-before-it-got-awkward/",
+        "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
+        "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News AI",
-        "score": 144
+        "score": 832
       },
       {
-        "title": "I were 17, I'd learn how to build LLMs from scratch",
-        "url": "https://twitter.com/paulg/status/2091544343589060625",
+        "title": "AI is hitting entry-level jobs hardest, Stanford study finds",
+        "url": "https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds/",
         "source": "Hacker News AI",
-        "score": 584
+        "score": 119
       },
       {
-        "title": "LLMs could control their host machines by exploiting inference engines",
-        "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
+        "title": "AI Takeover at GopherCon 2026",
+        "url": "https://www.youtube.com/watch?v=Pny5TFP2r3U",
         "source": "Hacker News AI",
-        "score": 181
+        "score": 4
       },
       {
-        "title": "The AI Hater's Manifesto",
-        "url": "https://www.wheresyoured.at/the-ai-haters-manifesto/",
+        "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
+        "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "OpenAI Claims Its New Chips Can Outperform Nvidia Processors in Tests",
-        "url": "https://www.bloomberg.com/news/articles/2026-08-25/openai-claims-its-new-chips-can-outperform-nvidia-processors-in-tests",
-        "source": "Hacker News AI",
-        "score": 10
+        "score": 586
       }
     ],
     "news": [
+      {
+        "title": "Canada announces 'dollar-for-dollar' retaliatory tariffs on US as high as 50%",
+        "url": "https://www.bbc.co.uk/news/articles/c3v4xg5klx7o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "China hits out at 'illegal' new US sanctions on Iran and trading partners",
         "url": "https://www.bbc.co.uk/news/articles/clyl8965j5go?at_medium=RSS&at_campaign=rss",
@@ -217,11 +186,6 @@
       {
         "title": "European rights court orders Turkey to free imprisoned businessman",
         "url": "https://www.bbc.co.uk/news/articles/cn5drvyg92no?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Lockerbie bombing trial postponed days before it was due to start",
-        "url": "https://www.bbc.co.uk/news/articles/cq63rmj1zl1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -301,38 +265,38 @@
     ],
     "gaming": [
       {
+        "title": "New Game of Thrones Official Release Will Let Fans Rewrite Canon",
+        "url": "https://www.polygon.com/game-of-thrones-war-for-westeros-gameplay-trailer-gamescom/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Elden Ring Meets Monster Hunter In Gamescom's Most Surprising Reveal",
+        "url": "https://www.polygon.com/nodus-fall-trailer-hoyoverse-elden-ring-monster-hunter/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Dolly Parton Dies at 80, Family Officially Confirms",
+        "url": "https://www.polygon.com/dolly-parton-death-announcement/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Ridley Scott’s New Action Sci-Fi Thriller First Reactions Greatly Divide Critics",
+        "url": "https://www.polygon.com/ridley-scott-dog-stars-reviews-first-reactions/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Gamescom 2026: When Is Gamescom and How to Watch Opening Night Live",
+        "url": "https://www.polygon.com/gamescom-2026-when-how-to-watch-opening-night-live/",
+        "source": "Polygon"
+      },
+      {
+        "title": "PC Classic RollerCoaster Tycoon Officially Returns This Winter",
+        "url": "https://www.polygon.com/rollercoaster-tycoon-wonderworks-new-game-announcement/",
+        "source": "Polygon"
+      },
+      {
         "title": "Prime Video's RoboCop Reboot Has Officially Found Its Peter Weller Replacement",
         "url": "https://www.polygon.com/robocop-tv-reboot-alex-murphy-new-actor-prime-video/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GamesCom ONL 2026: Every reveal and trailer in one place",
-        "url": "https://www.polygon.com/gamescom-opening-night-live-2026-news-reveals/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Spider-Man: Brand New Day Continues to Smash Records, Beating Avengers: Endgame",
-        "url": "https://www.polygon.com/spider-man-brand-new-day-continues-to-smash-records-beating-avengers-endgame/",
-        "source": "Polygon"
-      },
-      {
-        "title": "‘Stranger Things’’ Return to Netflix Revealed in New Trailer",
-        "url": "https://www.polygon.com/stranger-things-tales-from-85-trailer-release-date/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'GTA 6' Hacker's New Leak Is Total Rage Bait For Rockstar",
-        "url": "https://www.polygon.com/gta-6-leak-game-store-physical-discs-cyberleek-rockstar/",
-        "source": "Polygon"
-      },
-      {
-        "title": "One of 2025’s Best Games Is Getting a Physical Edition and Collectable Vinyl",
-        "url": "https://www.polygon.com/dispatch-physical-edition-collectable-vinyl-price-release-date/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Nintendo Officially Reveals New Switch 2 Bundles Ahead of Console Price Hike",
-        "url": "https://www.polygon.com/nintendo-switch-2-mario-kart-world-sports-resort-bundles-announced/",
         "source": "Polygon"
       }
     ],
