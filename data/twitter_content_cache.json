@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-25T11:28:34.512370",
-    "total_items": 61
+    "last_updated": "2026-08-25T12:49:14.602519",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "Quantum battery upends the rules of charging",
-        "url": "https://www.bbc.com/future/article/20260824-this-quantum-battery-charges-faster-the-larger-it-gets",
+        "title": "Don't Wordle",
+        "url": "https://dontwordle.com/",
         "source": "Hacker News",
-        "score": 10
+        "score": 39
+      },
+      {
+        "title": "HelloAssembly The smallest possible complete Windows application",
+        "url": "https://github.com/PlummersSoftwareLLC/HelloAssembly",
+        "source": "Hacker News",
+        "score": 11
       },
       {
         "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News",
-        "score": 496
+        "score": 512
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News",
-        "score": 737
+        "score": 756
       },
       {
         "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
         "url": "https://twitter.com/lemire/status/2091894299289874926",
         "source": "Hacker News",
-        "score": 894
+        "score": 914
       },
       {
         "title": "How Universities Should Prepare Founders",
         "url": "https://paulgraham.com/prepare.html",
         "source": "Hacker News",
-        "score": 140
+        "score": 163
       },
       {
         "title": "SiFive's First Server Platform",
         "url": "https://chipsandcheese.com/p/sifives-first-server-platform",
         "source": "Hacker News",
-        "score": 66
-      },
-      {
-        "title": "Why some US restaurants are banning tips",
-        "url": "https://www.bbc.com/news/articles/c4g36yze692o",
-        "source": "Hacker News",
-        "score": 124
-      },
-      {
-        "title": "Moon (2024)",
-        "url": "https://ciechanow.ski/moon/",
-        "source": "Hacker News",
-        "score": 207
+        "score": 77
       },
       {
         "title": "How Europe is killing makers and micro-entrepreneurs",
         "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
         "source": "Hacker News",
-        "score": 1414
+        "score": 1459
       },
       {
         "title": "The entire city of San Francisco as a video game",
         "url": "https://sf.thijs.gg/",
         "source": "Hacker News",
-        "score": 492
+        "score": 515
+      },
+      {
+        "title": "Moon (2024)",
+        "url": "https://ciechanow.ski/moon/",
+        "source": "Hacker News",
+        "score": 217
       },
       {
         "title": "What's new in Emacs 31.1",
         "url": "https://www.masteringemacs.org/article/whats-new-in-emacs-311",
         "source": "Hacker News",
-        "score": 159
-      },
-      {
-        "title": "Headlong: A Microharness for Persistent Agents",
-        "url": "https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents",
-        "source": "Hacker News",
-        "score": 76
+        "score": 186
       },
       {
         "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
         "url": "https://github.com/murerkinn/bookshelf",
         "source": "Hacker News",
-        "score": 111
+        "score": 121
+      },
+      {
+        "title": "Headlong: A Microharness for Persistent Agents",
+        "url": "https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents",
+        "source": "Hacker News",
+        "score": 88
       },
       {
         "title": "Where did all the public bathrooms go?",
         "url": "https://daily.jstor.org/where-did-all-the-public-bathrooms-go/",
         "source": "Hacker News",
-        "score": 257
+        "score": 275
       },
       {
-        "title": "Nostr is an inclusive communication commons",
-        "url": "https://nostr.org/",
+        "title": "Quantum battery upends the rules of charging",
+        "url": "https://www.bbc.com/future/article/20260824-this-quantum-battery-charges-faster-the-larger-it-gets",
         "source": "Hacker News",
-        "score": 157
+        "score": 43
       }
     ],
     "ai": [
@@ -101,49 +101,43 @@
         "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News AI",
-        "score": 496
+        "score": 512
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News AI",
-        "score": 737
+        "score": 756
       },
       {
         "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
         "url": "https://github.com/murerkinn/bookshelf",
         "source": "Hacker News AI",
-        "score": 111
+        "score": 121
       },
       {
         "title": "Vintage Artificial Intelligence: Before It Got Awkward",
         "url": "https://blog.archive.org/2026/08/16/vintage-artificial-intelligence-before-it-got-awkward/",
         "source": "Hacker News AI",
-        "score": 109
+        "score": 121
       },
       {
         "title": "Training AI to Paint with Code",
         "url": "https://surya.website/rling-qwen-to-paint-with-code",
         "source": "Hacker News AI",
-        "score": 108
+        "score": 125
       },
       {
         "title": "LLMs could control their host machines by exploiting inference engines",
         "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
         "source": "Hacker News AI",
-        "score": 159
+        "score": 163
       },
       {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News AI",
-        "score": 559
-      },
-      {
-        "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
-        "url": "https://picomq.com/",
-        "source": "Hacker News AI",
-        "score": 133
+        "score": 565
       },
       {
         "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
@@ -152,27 +146,27 @@
         "score": 1
       },
       {
-        "title": "IPFS Maintainers Winding Down",
-        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
+        "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
+        "url": "https://picomq.com/",
         "source": "Hacker News AI",
-        "score": 348
-      },
-      {
-        "title": "Japan enlists 1,800 people to drag 360-tonne castle keep using ropes and rollers",
-        "url": "https://www.theguardian.com/world/2026/aug/25/japan-1800-people-move-pull-400-tonne-hirosaki-castle-with-ropes",
-        "source": "Hacker News AI",
-        "score": 15
+        "score": 138
       },
       {
         "title": "I built a low-latency AI companion that plays Skyrim with me",
         "url": "https://pantel.is/projects/ai-gaming-companion/",
         "source": "Hacker News AI",
-        "score": 364
+        "score": 367
+      },
+      {
+        "title": "IPFS Maintainers Winding Down",
+        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
+        "source": "Hacker News AI",
+        "score": 350
       }
     ],
     "news": [
       {
-        "title": "China warns it will safeguard its interests after US widens sanctions against Iran",
+        "title": "China warns it will protect its interests after US widens sanctions against Iran",
         "url": "https://www.bbc.co.uk/news/articles/clyl8965j5go?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -204,6 +198,16 @@
     ],
     "art": [
       {
+        "title": " How Screenbound's impossible '5D' platformer concept became a real game ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/how-screenbounds-impossible-5d-platformer-concept-became-a-real-game",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Apple's folding iPhone Ultra could have one fatal flaw for creatives ",
+        "url": "https://www.creativebloq.com/design/product-design/apples-folding-iphone-ultra-could-have-one-fatal-flaw-for-creatives",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " The Duskbloods is FromSoftware at its weirdest – 5 things I learned from playing the Switch 2 exclusive ",
         "url": "https://www.creativebloq.com/entertainment/gaming/the-duskbloods-is-fromsoftware-at-its-weirdest-5-things-i-learned-from-playing-the-switch-2-exclusive",
         "source": "Creative Bloq"
@@ -219,23 +223,13 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " Forget John Lewis's ridiculous university packing list, these dupes will save you hundreds of pounds ",
+        "title": " While everyone's laughing at John Lewis's ridiculous university packing list, these dupes will save you hundreds of pounds ",
         "url": "https://www.creativebloq.com/entertainment/gaming/everyones-roasting-john-lewiss-list-uni-essentials-here-are-some-cheaper-options",
         "source": "Creative Bloq"
       },
       {
         "title": " The Masters of the Universe AI art controversy shows Spider-Man: Brand New Day was just the tip of the iceberg ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/the-masters-of-the-universe-ai-art-controversy-shows-spider-man-brand-new-day-was-just-the-tip-of-the-iceberg",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Animation is having a punk rock moment – and it says a lot about how people view AI ",
-        "url": "https://www.creativebloq.com/art/animation/is-animation-having-a-punk-rock-moment",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " For proof AI accusations are getting out of hand, look no further than the Hamnet Netflix 'controversy' ",
-        "url": "https://www.creativebloq.com/design/the-hamnet-netflix-controversy-proves-ai-accusations-are-getting-out-of-hand",
         "source": "Creative Bloq"
       }
     ],
@@ -305,11 +299,6 @@
       {
         "title": "Akira Officially Returns to Theaters in IMAX and 4K for One Day Only",
         "url": "https://www.polygon.com/akira-movie-2026-theatrical-rerelease-imax-4k/",
-        "source": "Polygon"
-      },
-      {
-        "title": "41 Years, the Most Inventive Sci-Fi Thriller of the '80s Is Officially Free to Watch on Streaming",
-        "url": "https://www.polygon.com/re-animator-1985-zombie-movie-tubi/",
         "source": "Polygon"
       }
     ],
