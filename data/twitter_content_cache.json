@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-25T07:44:12.722728",
-    "total_items": 61
+    "last_updated": "2026-08-25T08:42:56.068006",
+    "total_items": 62
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News",
-        "score": 409
+        "score": 434
       },
       {
         "title": "Nostr is an inclusive communication commons",
         "url": "https://nostr.org/",
         "source": "Hacker News",
-        "score": 106
+        "score": 129
       },
       {
         "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
         "url": "https://twitter.com/lemire/status/2091894299289874926",
         "source": "Hacker News",
-        "score": 837
+        "score": 849
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News",
-        "score": 677
+        "score": 693
       },
       {
         "title": "How Universities Should Prepare Founders",
         "url": "https://paulgraham.com/prepare.html",
         "source": "Hacker News",
-        "score": 98
-      },
-      {
-        "title": "Headlong: A Microharness for Persistent Agents",
-        "url": "https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents",
-        "source": "Hacker News",
-        "score": 44
+        "score": 109
       },
       {
         "title": "SiFive's First Server Platform",
         "url": "https://chipsandcheese.com/p/sifives-first-server-platform",
         "source": "Hacker News",
-        "score": 34
+        "score": 41
       },
       {
         "title": "How Europe is killing makers and micro-entrepreneurs",
         "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
         "source": "Hacker News",
-        "score": 1268
+        "score": 1306
+      },
+      {
+        "title": "Headlong: A Microharness for Persistent Agents",
+        "url": "https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents",
+        "source": "Hacker News",
+        "score": 50
       },
       {
         "title": "Moon (2024)",
         "url": "https://ciechanow.ski/moon/",
         "source": "Hacker News",
-        "score": 165
-      },
-      {
-        "title": "Show HN: Screen memory without screenshots, just text to Markdown",
-        "url": "https://github.com/dragthelake/ambient-context",
-        "source": "Hacker News",
-        "score": 31
+        "score": 172
       },
       {
         "title": "The entire city of San Francisco as a video game",
         "url": "https://sf.thijs.gg/",
         "source": "Hacker News",
-        "score": 439
+        "score": 444
       },
       {
-        "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
-        "url": "https://github.com/murerkinn/bookshelf",
+        "title": "Show HN: Screen memory without screenshots, just text to Markdown",
+        "url": "https://github.com/dragthelake/ambient-context",
         "source": "Hacker News",
-        "score": 84
-      },
-      {
-        "title": "Was modern art a CIA psy-op? (2020)",
-        "url": "https://daily.jstor.org/was-modern-art-really-a-cia-psy-op/",
-        "source": "Hacker News",
-        "score": 68
+        "score": 41
       },
       {
         "title": "What's new in Emacs 31.1",
         "url": "https://www.masteringemacs.org/article/whats-new-in-emacs-311",
         "source": "Hacker News",
-        "score": 108
+        "score": 119
+      },
+      {
+        "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
+        "url": "https://github.com/murerkinn/bookshelf",
+        "source": "Hacker News",
+        "score": 89
       },
       {
         "title": "Where did all the public bathrooms go?",
         "url": "https://daily.jstor.org/where-did-all-the-public-bathrooms-go/",
         "source": "Hacker News",
-        "score": 222
+        "score": 230
+      },
+      {
+        "title": "Show HN: I wrote a BASIC interpreter that boots on UEFI machines",
+        "url": "https://tarjan.itch.io/thoreaubasic",
+        "source": "Hacker News",
+        "score": 53
       }
     ],
     "ai": [
@@ -101,43 +101,49 @@
         "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News AI",
-        "score": 409
+        "score": 434
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News AI",
-        "score": 677
+        "score": 693
       },
       {
         "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
         "url": "https://github.com/murerkinn/bookshelf",
         "source": "Hacker News AI",
-        "score": 84
+        "score": 89
       },
       {
         "title": "Training AI to Paint with Code",
         "url": "https://surya.website/rling-qwen-to-paint-with-code",
         "source": "Hacker News AI",
-        "score": 79
+        "score": 82
       },
       {
         "title": "Vintage Artificial Intelligence: Before It Got Awkward",
         "url": "https://blog.archive.org/2026/08/16/vintage-artificial-intelligence-before-it-got-awkward/",
         "source": "Hacker News AI",
-        "score": 84
+        "score": 89
       },
       {
         "title": "LLMs could control their host machines by exploiting inference engines",
         "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
         "source": "Hacker News AI",
-        "score": 133
+        "score": 136
       },
       {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News AI",
-        "score": 540
+        "score": 541
+      },
+      {
+        "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
+        "url": "https://picomq.com/",
+        "source": "Hacker News AI",
+        "score": 115
       },
       {
         "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
@@ -146,28 +152,28 @@
         "score": 1
       },
       {
-        "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
-        "url": "https://picomq.com/",
-        "source": "Hacker News AI",
-        "score": 113
-      },
-      {
         "title": "IPFS Maintainers Winding Down",
         "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
         "source": "Hacker News AI",
-        "score": 342
+        "score": 344
       },
       {
-        "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
-        "url": "https://developers.openai.com/api/docs/pricing",
+        "title": "'Never seen this level of objection': Scotland pushes back against datacentres",
+        "url": "https://www.theguardian.com/uk-news/2026/aug/25/never-seen-this-level-of-objection-scotland-pushes-back-against-datacentre-boom",
         "source": "Hacker News AI",
-        "score": 319
+        "score": 6
       },
       {
         "title": "I built a low-latency AI companion that plays Skyrim with me",
         "url": "https://pantel.is/projects/ai-gaming-companion/",
         "source": "Hacker News AI",
-        "score": 354
+        "score": 356
+      },
+      {
+        "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
+        "url": "https://developers.openai.com/api/docs/pricing",
+        "source": "Hacker News AI",
+        "score": 321
       }
     ],
     "news": [
@@ -204,6 +210,11 @@
     ],
     "art": [
       {
+        "title": " AI is killing folk graphic design, and the resulting \"Lovecraftian horrors\" are making people want to never eat out again ",
+        "url": "https://www.creativebloq.com/ai/ai-art/ai-is-killing-folk-graphic-design-and-the-resulting-lovecraftian-horrors-are-making-people-want-to-never-eat-out-again",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Forget John Lewis's ridiculous university packing list, these dupes will save you hundreds of pounds ",
         "url": "https://www.creativebloq.com/entertainment/gaming/everyones-roasting-john-lewiss-list-uni-essentials-here-are-some-cheaper-options",
         "source": "Creative Bloq"
@@ -231,11 +242,6 @@
       {
         "title": " Download resources for ImagineFX 270 ",
         "url": "https://www.creativebloq.com/design/magazines/download-resources-for-imaginefx-270",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Nintendo's Game Boy ads were outrageous in the nineties – here are three examples that would never get made today ",
-        "url": "https://www.creativebloq.com/design/print-design-publishing/nintendos-game-boy-ads-were-outrageous-in-the-nineties-here-are-three-examples-that-would-never-get-made-today",
         "source": "Creative Bloq"
       }
     ],
@@ -278,6 +284,16 @@
     ],
     "gaming": [
       {
+        "title": "Ridley Scott's Canceled 2-Part Sci-Fi Streaming Series Is \"Westworld Meets Blade Runner\"",
+        "url": "https://www.polygon.com/ridley-scott-raised-by-wolves-sci-fi-series/",
+        "source": "Polygon"
+      },
+      {
+        "title": "27 Years Ago, The Last True Star Wars Masterpiece Arrived a Month After Phantom Menace",
+        "url": "https://www.polygon.com/star-wars-weird-al-parody/",
+        "source": "Polygon"
+      },
+      {
         "title": "Tim Burton's Forgotten 10/10 Fantasy Masterpiece is Officially Free to Watch on Streaming",
         "url": "https://www.polygon.com/big-fish-tim-burton-movies-free-streaming-august-2026/",
         "source": "Polygon"
@@ -300,16 +316,6 @@
       {
         "title": "$7 Billion Dragon Ball Z Theme Park Officially in the Works",
         "url": "https://www.polygon.com/dragon-ball-z-manga-theme-park-paris/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The 'Black Mirror' of Roblox Games Disappears After Hitting No. 1",
-        "url": "https://www.polygon.com/steal-an-egg-roblox-what-happened-discord-black-mirror-netflix/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Tom Hardy’s $478M Sci-Fi Action Movie Officially Surges to #2 on Netflix",
-        "url": "https://www.polygon.com/venom-3-the-last-dance-tom-hardy-streaming-success-netflix/",
         "source": "Polygon"
       }
     ],
