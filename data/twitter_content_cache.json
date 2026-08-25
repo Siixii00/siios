@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-25T22:28:24.735226",
+    "last_updated": "2026-08-25T23:25:47.917585",
     "total_items": 56
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "FDA authorizes first wearable device that monitors ketone and blood sugar levels",
         "url": "https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar",
         "source": "Hacker News",
-        "score": 169
+        "score": 204
       },
       {
         "title": "Python's pre-declared constants are kinda weird",
         "url": "https://sebsite.pw/w/20260801-pythonconstants.html",
         "source": "Hacker News",
-        "score": 35
+        "score": 80
       },
       {
         "title": "Apple introduces M6 and M5 Ultra",
         "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
         "source": "Hacker News",
-        "score": 874
+        "score": 897
       },
       {
         "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
         "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
         "source": "Hacker News",
-        "score": 243
+        "score": 268
       },
       {
         "title": "New Mac Studio with M5 Max and M5 Ultra",
         "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
         "source": "Hacker News",
-        "score": 665
+        "score": 678
+      },
+      {
+        "title": "Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",
+        "url": "https://github.com/swimmingbrain/texbrain",
+        "source": "Hacker News",
+        "score": 16
       },
       {
         "title": "Black hole singularity is a surface not a point",
         "url": "https://arxiv.org/abs/2608.21590",
         "source": "Hacker News",
-        "score": 153
-      },
-      {
-        "title": "When str.lower() is a security vulnerability in Python – Seth Larson",
-        "url": "https://sethmlarson.dev/when-str-lower-is-a-security-vulnerability",
-        "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Show HN: I made a Raspberry with Qwen my local car AI",
-        "url": "https://github.com/ThinkOffApp/CarWatch",
-        "source": "Hacker News",
-        "score": 73
+        "score": 160
       },
       {
         "title": "C2PA Cameras Do Not Survive Contact with Reality",
         "url": "https://www.da.vidbuchanan.co.uk/blog/android-c2pa.html",
         "source": "Hacker News",
-        "score": 39
+        "score": 53
+      },
+      {
+        "title": "When str.lower() is a security vulnerability in Python – Seth Larson",
+        "url": "https://sethmlarson.dev/when-str-lower-is-a-security-vulnerability",
+        "source": "Hacker News",
+        "score": 34
+      },
+      {
+        "title": "Show HN: I made a Raspberry with Qwen my local car AI",
+        "url": "https://github.com/ThinkOffApp/CarWatch",
+        "source": "Hacker News",
+        "score": 81
       },
       {
         "title": "New Mac mini, featuring M6 and M5 Pro",
         "url": "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/",
         "source": "Hacker News",
-        "score": 393
+        "score": 404
       },
       {
-        "title": "Run OpenBSD on DigitalOcean for $4/month",
-        "url": "https://nil.wallyjones.com/run-openbsd-on-digitalocean-for-4month/",
+        "title": "XCancel also down, at least for time being",
+        "url": "https://news.ycombinator.com/item?id=49440786",
         "source": "Hacker News",
-        "score": 96
+        "score": 113
       },
       {
         "title": "Nitter project received cease and desist",
         "url": "https://github.com/zedeus/nitter/issues/1442",
         "source": "Hacker News",
-        "score": 465
-      },
-      {
-        "title": "One Go binary, one YAML file, one SQLite database: I wrote my monitoring tool",
-        "url": "https://rvier.fr/posts/why-i-wrote-my-own-monitoring-tool-EN",
-        "source": "Hacker News",
-        "score": 8
+        "score": 532
       },
       {
         "title": "Bomb fishing is wreaking havoc on Indonesia's coral reefs",
         "url": "https://e360.yale.edu/digest/bomb-fishing-coral-reefs",
         "source": "Hacker News",
-        "score": 234
+        "score": 243
       },
       {
         "title": "Dolly Parton has died",
         "url": "https://www.theguardian.com/music/2026/aug/25/dolly-parton-country-singer-dead",
         "source": "Hacker News",
-        "score": 994
+        "score": 1074
       }
     ],
     "ai": [
@@ -101,13 +101,19 @@
         "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
         "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
         "source": "Hacker News AI",
-        "score": 243
+        "score": 268
+      },
+      {
+        "title": "Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",
+        "url": "https://github.com/swimmingbrain/texbrain",
+        "source": "Hacker News AI",
+        "score": 16
       },
       {
         "title": "Show HN: I made a Raspberry with Qwen my local car AI",
         "url": "https://github.com/ThinkOffApp/CarWatch",
         "source": "Hacker News AI",
-        "score": 73
+        "score": 81
       },
       {
         "title": "Clara (YC P26) is hiring a growth engineer to bring AI doctors to market",
@@ -119,19 +125,13 @@
         "title": "Training AI to Paint with Code",
         "url": "https://surya.website/rling-qwen-to-paint-with-code",
         "source": "Hacker News AI",
-        "score": 191
+        "score": 193
       },
       {
-        "title": "OpenAI's Head of Data Centers Has Left the Company",
-        "url": "https://www.wsj.com/tech/ai/openais-head-of-data-centers-has-left-company-6d24fd83",
+        "title": "Cross-vendor byte-identical inference for a 72B LLM (AMD MI300X vs. Nvidia H100)",
+        "url": "https://zenodo.org/records/19882078",
         "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "How much of HN is AI?",
-        "url": "https://blog.coredump.cx/p/how-much-of-hn-is-ai",
-        "source": "Hacker News AI",
-        "score": 239
+        "score": 3
       }
     ],
     "news": [
@@ -247,6 +247,16 @@
     ],
     "gaming": [
       {
+        "title": "Steam's Most Intriguing Slow-Burn Adventure Game Takes 400 Real-World Days to Finish",
+        "url": "https://www.polygon.com/the-longing-steam/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The 5 Most Unforgettable Moments of Critical Role Campaign 4 So Far",
+        "url": "https://www.polygon.com/critical-role-campaign-4-5-best-moments/",
+        "source": "Polygon"
+      },
+      {
         "title": "After 25 Years, Sci-fi Cult Classic Donnie Darko is Officially Getting a Proper Sequel",
         "url": "https://www.polygon.com/donnie-darko-sequel-book-richard-kelly/",
         "source": "Polygon"
@@ -269,16 +279,6 @@
       {
         "title": "Final Fantasy 7 Revelation Shows Off Its Reimagined Superboss Battles in New Trailer",
         "url": "https://www.polygon.com/final-fantasy-7-revelation-weapons-trailer-gamescom/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'The Witcher 3' New DLC Gameplay Trailer Marks The End of an Era For The Epic RPG",
-        "url": "https://www.polygon.com/witcher-3-dlc-songs-of-the-past-trailer-release-date-gamescom/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Every Big Announcement from Gamescom Opening Night Live",
-        "url": "https://www.polygon.com/gamescom-2026-opening-night-live-all-news-announcements-trailers/",
         "source": "Polygon"
       }
     ],
