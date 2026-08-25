@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-25T10:33:50.758324",
-    "total_items": 62
+    "last_updated": "2026-08-25T11:28:34.512370",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "Why some US restaurants are banning tips",
-        "url": "https://www.bbc.com/news/articles/c4g36yze692o",
+        "title": "Quantum battery upends the rules of charging",
+        "url": "https://www.bbc.com/future/article/20260824-this-quantum-battery-charges-faster-the-larger-it-gets",
         "source": "Hacker News",
-        "score": 37
+        "score": 10
       },
       {
         "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News",
-        "score": 472
-      },
-      {
-        "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
-        "url": "https://twitter.com/lemire/status/2091894299289874926",
-        "source": "Hacker News",
-        "score": 882
+        "score": 496
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News",
-        "score": 722
+        "score": 737
+      },
+      {
+        "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
+        "url": "https://twitter.com/lemire/status/2091894299289874926",
+        "source": "Hacker News",
+        "score": 894
       },
       {
         "title": "How Universities Should Prepare Founders",
         "url": "https://paulgraham.com/prepare.html",
         "source": "Hacker News",
-        "score": 131
+        "score": 140
       },
       {
         "title": "SiFive's First Server Platform",
         "url": "https://chipsandcheese.com/p/sifives-first-server-platform",
         "source": "Hacker News",
-        "score": 58
+        "score": 66
       },
       {
-        "title": "How Europe is killing makers and micro-entrepreneurs",
-        "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
+        "title": "Why some US restaurants are banning tips",
+        "url": "https://www.bbc.com/news/articles/c4g36yze692o",
         "source": "Hacker News",
-        "score": 1389
+        "score": 124
       },
       {
         "title": "Moon (2024)",
         "url": "https://ciechanow.ski/moon/",
         "source": "Hacker News",
-        "score": 197
+        "score": 207
+      },
+      {
+        "title": "How Europe is killing makers and micro-entrepreneurs",
+        "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
+        "source": "Hacker News",
+        "score": 1414
       },
       {
         "title": "The entire city of San Francisco as a video game",
         "url": "https://sf.thijs.gg/",
         "source": "Hacker News",
-        "score": 477
-      },
-      {
-        "title": "Headlong: A Microharness for Persistent Agents",
-        "url": "https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents",
-        "source": "Hacker News",
-        "score": 63
+        "score": 492
       },
       {
         "title": "What's new in Emacs 31.1",
         "url": "https://www.masteringemacs.org/article/whats-new-in-emacs-311",
         "source": "Hacker News",
-        "score": 149
+        "score": 159
+      },
+      {
+        "title": "Headlong: A Microharness for Persistent Agents",
+        "url": "https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents",
+        "source": "Hacker News",
+        "score": 76
       },
       {
         "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
         "url": "https://github.com/murerkinn/bookshelf",
         "source": "Hacker News",
-        "score": 102
+        "score": 111
       },
       {
         "title": "Where did all the public bathrooms go?",
         "url": "https://daily.jstor.org/where-did-all-the-public-bathrooms-go/",
         "source": "Hacker News",
-        "score": 248
+        "score": 257
       },
       {
         "title": "Nostr is an inclusive communication commons",
         "url": "https://nostr.org/",
         "source": "Hacker News",
-        "score": 148
-      },
-      {
-        "title": "Show HN: I wrote a BASIC interpreter that boots on UEFI machines",
-        "url": "https://tarjan.itch.io/thoreaubasic",
-        "source": "Hacker News",
-        "score": 68
+        "score": 157
       }
     ],
     "ai": [
@@ -101,55 +101,49 @@
         "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News AI",
-        "score": 472
+        "score": 496
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News AI",
-        "score": 722
+        "score": 737
       },
       {
         "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
         "url": "https://github.com/murerkinn/bookshelf",
         "source": "Hacker News AI",
-        "score": 102
+        "score": 111
       },
       {
         "title": "Vintage Artificial Intelligence: Before It Got Awkward",
         "url": "https://blog.archive.org/2026/08/16/vintage-artificial-intelligence-before-it-got-awkward/",
         "source": "Hacker News AI",
-        "score": 105
+        "score": 109
       },
       {
         "title": "Training AI to Paint with Code",
         "url": "https://surya.website/rling-qwen-to-paint-with-code",
         "source": "Hacker News AI",
-        "score": 100
+        "score": 108
       },
       {
         "title": "LLMs could control their host machines by exploiting inference engines",
         "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
         "source": "Hacker News AI",
-        "score": 150
+        "score": 159
       },
       {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News AI",
-        "score": 556
+        "score": 559
       },
       {
         "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
         "url": "https://picomq.com/",
         "source": "Hacker News AI",
-        "score": 123
-      },
-      {
-        "title": "IPFS Maintainers Winding Down",
-        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
-        "source": "Hacker News AI",
-        "score": 346
+        "score": 133
       },
       {
         "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
@@ -158,28 +152,28 @@
         "score": 1
       },
       {
-        "title": "I built a low-latency AI companion that plays Skyrim with me",
-        "url": "https://pantel.is/projects/ai-gaming-companion/",
+        "title": "IPFS Maintainers Winding Down",
+        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
         "source": "Hacker News AI",
-        "score": 363
-      },
-      {
-        "title": "'Never seen this level of objection': Scotland pushes back against datacentres",
-        "url": "https://www.theguardian.com/uk-news/2026/aug/25/never-seen-this-level-of-objection-scotland-pushes-back-against-datacentre-boom",
-        "source": "Hacker News AI",
-        "score": 13
+        "score": 348
       },
       {
         "title": "Japan enlists 1,800 people to drag 360-tonne castle keep using ropes and rollers",
         "url": "https://www.theguardian.com/world/2026/aug/25/japan-1800-people-move-pull-400-tonne-hirosaki-castle-with-ropes",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 15
+      },
+      {
+        "title": "I built a low-latency AI companion that plays Skyrim with me",
+        "url": "https://pantel.is/projects/ai-gaming-companion/",
+        "source": "Hacker News AI",
+        "score": 364
       }
     ],
     "news": [
       {
-        "title": "Iran says it is 'fully prepared' to counter widened US economic sanctions",
-        "url": "https://www.bbc.co.uk/news/articles/c0qxew81y83o?at_medium=RSS&at_campaign=rss",
+        "title": "China warns it will safeguard its interests after US widens sanctions against Iran",
+        "url": "https://www.bbc.co.uk/news/articles/clyl8965j5go?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -188,8 +182,8 @@
         "source": "BBC World"
       },
       {
-        "title": "French tourist dies in Death Valley after car gets stuck in mud",
-        "url": "https://www.bbc.co.uk/news/articles/clyl81jlzr2o?at_medium=RSS&at_campaign=rss",
+        "title": "Tornado tears through French village, leaving dozens hurt and homes ravaged",
+        "url": "https://www.bbc.co.uk/news/articles/c0m3npvpgdno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -198,13 +192,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Moment tornado tears through southern France",
-        "url": "https://www.bbc.co.uk/news/videos/ckg8wkd0j7do?at_medium=RSS&at_campaign=rss",
+        "title": "US-Canada trade war escalates as Trump threatens tariff hike on vehicles",
+        "url": "https://www.bbc.co.uk/news/articles/c93vpd60654o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US-Canada trade war escalates as Trump threatens tariff hike on vehicles",
-        "url": "https://www.bbc.co.uk/news/articles/c93vpd60654o?at_medium=RSS&at_campaign=rss",
+        "title": "French tourist dies in Death Valley after car gets stuck in mud",
+        "url": "https://www.bbc.co.uk/news/articles/clyl81jlzr2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
