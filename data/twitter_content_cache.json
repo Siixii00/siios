@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-08-25T08:42:56.068006",
+    "last_updated": "2026-08-25T09:36:07.696279",
     "total_items": 62
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News",
-        "score": 434
-      },
-      {
-        "title": "Nostr is an inclusive communication commons",
-        "url": "https://nostr.org/",
-        "source": "Hacker News",
-        "score": 129
+        "score": 459
       },
       {
         "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
         "url": "https://twitter.com/lemire/status/2091894299289874926",
         "source": "Hacker News",
-        "score": 849
+        "score": 862
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News",
-        "score": 693
+        "score": 707
       },
       {
         "title": "How Universities Should Prepare Founders",
         "url": "https://paulgraham.com/prepare.html",
         "source": "Hacker News",
-        "score": 109
+        "score": 122
       },
       {
         "title": "SiFive's First Server Platform",
         "url": "https://chipsandcheese.com/p/sifives-first-server-platform",
         "source": "Hacker News",
-        "score": 41
+        "score": 51
       },
       {
         "title": "How Europe is killing makers and micro-entrepreneurs",
         "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
         "source": "Hacker News",
-        "score": 1306
-      },
-      {
-        "title": "Headlong: A Microharness for Persistent Agents",
-        "url": "https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents",
-        "source": "Hacker News",
-        "score": 50
+        "score": 1350
       },
       {
         "title": "Moon (2024)",
         "url": "https://ciechanow.ski/moon/",
         "source": "Hacker News",
-        "score": 172
+        "score": 186
+      },
+      {
+        "title": "Headlong: A Microharness for Persistent Agents",
+        "url": "https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents",
+        "source": "Hacker News",
+        "score": 54
       },
       {
         "title": "The entire city of San Francisco as a video game",
         "url": "https://sf.thijs.gg/",
         "source": "Hacker News",
-        "score": 444
-      },
-      {
-        "title": "Show HN: Screen memory without screenshots, just text to Markdown",
-        "url": "https://github.com/dragthelake/ambient-context",
-        "source": "Hacker News",
-        "score": 41
+        "score": 460
       },
       {
         "title": "What's new in Emacs 31.1",
         "url": "https://www.masteringemacs.org/article/whats-new-in-emacs-311",
         "source": "Hacker News",
-        "score": 119
+        "score": 133
       },
       {
         "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
         "url": "https://github.com/murerkinn/bookshelf",
         "source": "Hacker News",
-        "score": 89
+        "score": 96
+      },
+      {
+        "title": "Show HN: Screen memory without screenshots, just text to Markdown",
+        "url": "https://github.com/dragthelake/ambient-context",
+        "source": "Hacker News",
+        "score": 46
       },
       {
         "title": "Where did all the public bathrooms go?",
         "url": "https://daily.jstor.org/where-did-all-the-public-bathrooms-go/",
         "source": "Hacker News",
-        "score": 230
+        "score": 241
+      },
+      {
+        "title": "Nostr is an inclusive communication commons",
+        "url": "https://nostr.org/",
+        "source": "Hacker News",
+        "score": 137
       },
       {
         "title": "Show HN: I wrote a BASIC interpreter that boots on UEFI machines",
         "url": "https://tarjan.itch.io/thoreaubasic",
         "source": "Hacker News",
-        "score": 53
+        "score": 61
       }
     ],
     "ai": [
@@ -101,49 +101,55 @@
         "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News AI",
-        "score": 434
+        "score": 459
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News AI",
-        "score": 693
+        "score": 707
       },
       {
         "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
         "url": "https://github.com/murerkinn/bookshelf",
         "source": "Hacker News AI",
-        "score": 89
-      },
-      {
-        "title": "Training AI to Paint with Code",
-        "url": "https://surya.website/rling-qwen-to-paint-with-code",
-        "source": "Hacker News AI",
-        "score": 82
+        "score": 96
       },
       {
         "title": "Vintage Artificial Intelligence: Before It Got Awkward",
         "url": "https://blog.archive.org/2026/08/16/vintage-artificial-intelligence-before-it-got-awkward/",
         "source": "Hacker News AI",
-        "score": 89
+        "score": 97
+      },
+      {
+        "title": "Training AI to Paint with Code",
+        "url": "https://surya.website/rling-qwen-to-paint-with-code",
+        "source": "Hacker News AI",
+        "score": 90
       },
       {
         "title": "LLMs could control their host machines by exploiting inference engines",
         "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
         "source": "Hacker News AI",
-        "score": 136
+        "score": 141
       },
       {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News AI",
-        "score": 541
+        "score": 550
       },
       {
         "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
         "url": "https://picomq.com/",
         "source": "Hacker News AI",
-        "score": 115
+        "score": 118
+      },
+      {
+        "title": "IPFS Maintainers Winding Down",
+        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
+        "source": "Hacker News AI",
+        "score": 345
       },
       {
         "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
@@ -152,28 +158,22 @@
         "score": 1
       },
       {
-        "title": "IPFS Maintainers Winding Down",
-        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
-        "source": "Hacker News AI",
-        "score": 344
-      },
-      {
         "title": "'Never seen this level of objection': Scotland pushes back against datacentres",
         "url": "https://www.theguardian.com/uk-news/2026/aug/25/never-seen-this-level-of-objection-scotland-pushes-back-against-datacentre-boom",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 12
       },
       {
         "title": "I built a low-latency AI companion that plays Skyrim with me",
         "url": "https://pantel.is/projects/ai-gaming-companion/",
         "source": "Hacker News AI",
-        "score": 356
+        "score": 358
       },
       {
         "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
         "url": "https://developers.openai.com/api/docs/pricing",
         "source": "Hacker News AI",
-        "score": 321
+        "score": 323
       }
     ],
     "news": [
@@ -188,7 +188,7 @@
         "source": "BBC World"
       },
       {
-        "title": "UK drone factories may face attacks from 'unknown sources', says Kremlin adviser",
+        "title": "UK drone factories may face attacks from 'unknown sources', says former Russian minister",
         "url": "https://www.bbc.co.uk/news/articles/cg598m3meeyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -209,6 +209,11 @@
       }
     ],
     "art": [
+      {
+        "title": " The glaring design fail in the new iPhone Safari logo is proof that Apple's lost its direction ",
+        "url": "https://www.creativebloq.com/design/logos-icons/apples-glaring-safari-logo-design-fail-shows-the-company-has-lost-its-direction",
+        "source": "Creative Bloq"
+      },
       {
         "title": " AI is killing folk graphic design, and the resulting \"Lovecraftian horrors\" are making people want to never eat out again ",
         "url": "https://www.creativebloq.com/ai/ai-art/ai-is-killing-folk-graphic-design-and-the-resulting-lovecraftian-horrors-are-making-people-want-to-never-eat-out-again",
@@ -237,11 +242,6 @@
       {
         "title": " Master the monochrome with issue 270 of ImagineFX ",
         "url": "https://www.creativebloq.com/professional-development/artistic-tips-techniques/master-the-monochrome-with-issue-270-of-imaginefx",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Download resources for ImagineFX 270 ",
-        "url": "https://www.creativebloq.com/design/magazines/download-resources-for-imaginefx-270",
         "source": "Creative Bloq"
       }
     ],
