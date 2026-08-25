@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-25T13:51:38.502154",
-    "total_items": 62
+    "last_updated": "2026-08-25T14:46:39.138384",
+    "total_items": 63
   },
   "content": {
     "tech": [
       {
-        "title": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
-        "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
-        "source": "Hacker News",
-        "score": 200
-      },
-      {
         "title": "Apple Introduces New Mac Studio with M5 Max and M5 Ultra",
         "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
         "source": "Hacker News",
-        "score": 120
+        "score": 254
       },
       {
-        "title": "US data centers tripled annual water consumption to 17B gallons",
-        "url": "https://forgeeks.net/us-data-centers-water-use-17-billion-gallons/",
+        "title": "Apple's new Mac mini, featuring M6 and M5 Pro",
+        "url": "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/",
         "source": "Hacker News",
-        "score": 31
+        "score": 59
       },
       {
-        "title": "Don't Wordle",
-        "url": "https://dontwordle.com/",
+        "title": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
+        "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
         "source": "Hacker News",
-        "score": 105
+        "score": 323
       },
       {
         "title": "France's tax agency got hacked (in French)",
         "url": "https://www.cybernetica.fr/piratage-des-impots-comment-en-est-on-arrive-la/",
         "source": "Hacker News",
-        "score": 53
+        "score": 75
       },
       {
         "title": "Qwen 3.8-Flash-Next releasing tomorrow (125B a6B)",
         "url": "https://modelscope.cn/models/Qwen/Qwen3.8-Flash-Next",
         "source": "Hacker News",
-        "score": 53
+        "score": 106
+      },
+      {
+        "title": "Don't Wordle",
+        "url": "https://dontwordle.com/",
+        "source": "Hacker News",
+        "score": 143
+      },
+      {
+        "title": "Bomb Fishing Is Wreaking Havoc on Indonesia's Coral Reefs",
+        "url": "https://e360.yale.edu/digest/bomb-fishing-coral-reefs",
+        "source": "Hacker News",
+        "score": 15
+      },
+      {
+        "title": "Building a backyard office, the build and cost breakdown",
+        "url": "https://www.imkylelambert.com/articles/building-a-backyard-office-the-build-and-cost-breakdown",
+        "source": "Hacker News",
+        "score": 20
       },
       {
         "title": "HelloAssembly The smallest possible complete Windows application",
         "url": "https://github.com/PlummersSoftwareLLC/HelloAssembly",
         "source": "Hacker News",
-        "score": 27
+        "score": 42
       },
       {
         "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News",
-        "score": 533
+        "score": 548
       },
       {
-        "title": "OpenAI restores 5-hour Codex and Work limits for ChatGPT Plus users",
-        "url": "https://9to5mac.com/2026/08/24/openai-restores-5-hour-codex-and-work-limits-for-chatgpt-plus-users/",
+        "title": "MySQL CDC to BigQuery: what periodic syncs miss, and how binlog avoids it",
+        "url": "https://www.erathos.com/en/blog/mysql-cdc-to-bigquery",
         "source": "Hacker News",
-        "score": 41
+        "score": 3
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News",
-        "score": 778
+        "score": 792
       },
       {
         "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
         "url": "https://twitter.com/lemire/status/2091894299289874926",
         "source": "Hacker News",
-        "score": 928
+        "score": 934
       },
       {
-        "title": "How Universities Should Prepare Founders",
-        "url": "https://paulgraham.com/prepare.html",
+        "title": "OpenAI restores 5-hour Codex and Work limits for ChatGPT Plus users",
+        "url": "https://9to5mac.com/2026/08/24/openai-restores-5-hour-codex-and-work-limits-for-chatgpt-plus-users/",
         "source": "Hacker News",
-        "score": 180
+        "score": 75
       },
       {
-        "title": "SiFive's First Server Platform",
-        "url": "https://chipsandcheese.com/p/sifives-first-server-platform",
+        "title": "Anthropic tells staff to work from home due to possible security team strike",
+        "url": "https://www.businessinsider.com/anthropic-san-francisco-staff-work-remote-office-security-strike-2026-8",
         "source": "Hacker News",
-        "score": 90
-      },
-      {
-        "title": "How Europe is killing makers and micro-entrepreneurs",
-        "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
-        "source": "Hacker News",
-        "score": 1494
-      },
-      {
-        "title": "The entire city of San Francisco as a video game",
-        "url": "https://sf.thijs.gg/",
-        "source": "Hacker News",
-        "score": 533
+        "score": 25
       }
     ],
     "ai": [
@@ -101,43 +101,43 @@
         "title": "Apple introduces M6 and M5 Ultra for a big leap in performance and AI compute",
         "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
         "source": "Hacker News AI",
-        "score": 200
+        "score": 323
       },
       {
         "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News AI",
-        "score": 533
-      },
-      {
-        "title": "OpenAI restores 5-hour Codex and Work limits for ChatGPT Plus users",
-        "url": "https://9to5mac.com/2026/08/24/openai-restores-5-hour-codex-and-work-limits-for-chatgpt-plus-users/",
-        "source": "Hacker News AI",
-        "score": 41
+        "score": 548
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News AI",
-        "score": 778
+        "score": 792
+      },
+      {
+        "title": "OpenAI restores 5-hour Codex and Work limits for ChatGPT Plus users",
+        "url": "https://9to5mac.com/2026/08/24/openai-restores-5-hour-codex-and-work-limits-for-chatgpt-plus-users/",
+        "source": "Hacker News AI",
+        "score": 75
+      },
+      {
+        "title": "Anthropic tells staff to work from home due to possible security team strike",
+        "url": "https://www.businessinsider.com/anthropic-san-francisco-staff-work-remote-office-security-strike-2026-8",
+        "source": "Hacker News AI",
+        "score": 25
       },
       {
         "title": "The state of AI in 2026: On the road to ROI",
         "url": "https://www.mckinsey.com/capabilities/quantumblack/our-insights/the-state-of-ai",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 23
       },
       {
         "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
         "url": "https://github.com/murerkinn/bookshelf",
         "source": "Hacker News AI",
-        "score": 133
-      },
-      {
-        "title": "Vintage Artificial Intelligence: Before It Got Awkward",
-        "url": "https://blog.archive.org/2026/08/16/vintage-artificial-intelligence-before-it-got-awkward/",
-        "source": "Hacker News AI",
-        "score": 128
+        "score": 140
       },
       {
         "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
@@ -149,37 +149,37 @@
         "title": "Training AI to Paint with Code",
         "url": "https://surya.website/rling-qwen-to-paint-with-code",
         "source": "Hacker News AI",
-        "score": 136
+        "score": 148
+      },
+      {
+        "title": "Vintage Artificial Intelligence: Before It Got Awkward",
+        "url": "https://blog.archive.org/2026/08/16/vintage-artificial-intelligence-before-it-got-awkward/",
+        "source": "Hacker News AI",
+        "score": 132
       },
       {
         "title": "LLMs could control their host machines by exploiting inference engines",
         "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
         "source": "Hacker News AI",
-        "score": 171
+        "score": 178
       },
       {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News AI",
-        "score": 573
+        "score": 577
       },
       {
         "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
         "url": "https://picomq.com/",
         "source": "Hacker News AI",
-        "score": 138
+        "score": 141
       },
       {
         "title": "I built a low-latency AI companion that plays Skyrim with me",
         "url": "https://pantel.is/projects/ai-gaming-companion/",
         "source": "Hacker News AI",
-        "score": 368
-      },
-      {
-        "title": "IPFS Maintainers Winding Down",
-        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
-        "source": "Hacker News AI",
-        "score": 353
+        "score": 373
       }
     ],
     "news": [
@@ -194,6 +194,11 @@
         "source": "BBC World"
       },
       {
+        "title": "Brain disease in dead NFL players 'higher than previously shown'",
+        "url": "https://www.bbc.co.uk/sport/american-football/articles/cew9l95kyp0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Tornado tears through French village, leaving dozens hurt and homes ravaged",
         "url": "https://www.bbc.co.uk/news/articles/c0m3npvpgdno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -201,11 +206,6 @@
       {
         "title": "Kit Harington replaces Nicholas Hoult in HBO's Harry Potter series",
         "url": "https://www.bbc.co.uk/news/articles/c783lnz12vlo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "US-Canada trade war escalates as Trump threatens tariff hike on vehicles",
-        "url": "https://www.bbc.co.uk/news/articles/c93vpd60654o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -290,6 +290,21 @@
     ],
     "gaming": [
       {
+        "title": "Star Wars Zero Company release time in your time zone",
+        "url": "https://www.polygon.com/star-wars-zero-company-release-time-when-edt-pdt/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Over 30 Years Later, an Underrated SNES RPG Masterpiece Is Finally Getting a US Release",
+        "url": "https://www.polygon.com/terranigma-rebirth-square-enix-rpg-snes-remaster-announced/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Magic: The Gathering's 15 Best (and Most Annoying) Blue Cards",
+        "url": "https://www.polygon.com/mtg-magic-the-gathering-15-most-quintessential-blue-cards/",
+        "source": "Polygon"
+      },
+      {
         "title": "Rockstar Responds to GTA 6 Leaks: 'Employees Are Angry'",
         "url": "https://www.polygon.com/gta-6-leaks-rockstar-response/",
         "source": "Polygon"
@@ -307,16 +322,6 @@
       {
         "title": "How Are Comics Made? And WHO Makes Them?",
         "url": "https://www.polygon.com/video/how-are-comics-made-and-who-makes-them/",
-        "source": "Polygon"
-      },
-      {
-        "title": "It's the End of an Era for This Star Wars Character",
-        "url": "https://www.polygon.com/star-wars-unlimited-cad-bane-ban/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Metal Gear Solid Partners up With the Only Thing Stealthier Than Snake",
-        "url": "https://www.polygon.com/metal-gear-solid-mgs-catcon-exclusive-merch/",
         "source": "Polygon"
       }
     ],
