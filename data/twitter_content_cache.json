@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-25T04:39:34.715133",
-    "total_items": 54
+    "last_updated": "2026-08-25T05:32:47.681201",
+    "total_items": 61
   },
   "content": {
     "tech": [
@@ -9,53 +9,65 @@
         "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News",
-        "score": 317
+        "score": 335
       },
       {
         "title": "Xiaomi: New CPU matches Apple cores single threaded, much faster multithreaded",
         "url": "https://twitter.com/lemire/status/2091894299289874926",
         "source": "Hacker News",
-        "score": 778
+        "score": 793
+      },
+      {
+        "title": "Rupert Lowe set to be paid as much for divisive posts on X as for being MP",
+        "url": "https://www.theguardian.com/politics/2026/aug/24/rupert-lowe-restore-britain-earn-same-on-x-as-being-mp-elon-musk",
+        "source": "Hacker News",
+        "score": 7
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News",
-        "score": 614
-      },
-      {
-        "title": "Headlong: A Microharness for Persistent Agents",
-        "url": "https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents",
-        "source": "Hacker News",
-        "score": 10
+        "score": 630
       },
       {
         "title": "How Universities Should Prepare Founders",
         "url": "https://paulgraham.com/prepare.html",
         "source": "Hacker News",
-        "score": 51
+        "score": 69
+      },
+      {
+        "title": "Headlong: A Microharness for Persistent Agents",
+        "url": "https://www.laude.org/updates/headlong-a-microharness-for-persistent-agents",
+        "source": "Hacker News",
+        "score": 22
+      },
+      {
+        "title": "Nostr is an inclusive communication commons",
+        "url": "https://nostr.org/",
+        "source": "Hacker News",
+        "score": 60
       },
       {
         "title": "Moon (2024)",
         "url": "https://ciechanow.ski/moon/",
         "source": "Hacker News",
-        "score": 124
+        "score": 136
       },
       {
         "title": "How Europe is killing makers and micro-entrepreneurs",
         "url": "https://lectronz.com/u/lectronz/articles/how-europe-is-killing-makers-and-micro-entrepreneurs",
         "source": "Hacker News",
-        "score": 1126
+        "score": 1165
       },
       {
         "title": "The entire city of San Francisco as a video game",
         "url": "https://sf.thijs.gg/",
         "source": "Hacker News",
-        "score": 390
+        "score": 405
       },
       {
-        "title": "Nostr is an inclusive communication commons",
-        "url": "https://nostr.org/",
+        "title": "Ox-Alpha Is GLM?",
+        "url": "https://dejan.ai/blog/ox-alpha/",
         "source": "Hacker News",
         "score": 47
       },
@@ -63,37 +75,25 @@
         "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
         "url": "https://github.com/murerkinn/bookshelf",
         "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "Was modern art a CIA psy-op? (2020)",
-        "url": "https://daily.jstor.org/was-modern-art-really-a-cia-psy-op/",
-        "source": "Hacker News",
-        "score": 41
+        "score": 68
       },
       {
         "title": "Where did all the public bathrooms go?",
         "url": "https://daily.jstor.org/where-did-all-the-public-bathrooms-go/",
         "source": "Hacker News",
-        "score": 191
+        "score": 199
       },
       {
-        "title": "Crafting QR Codes: A deep dive into QR code art (2024)",
-        "url": "https://kylezhe.ng/writes/crafting-qr-codes",
+        "title": "Was modern art a CIA psy-op? (2020)",
+        "url": "https://daily.jstor.org/was-modern-art-really-a-cia-psy-op/",
         "source": "Hacker News",
-        "score": 32
+        "score": 48
       },
       {
-        "title": "Training AI to Paint with Code",
-        "url": "https://surya.website/rling-qwen-to-paint-with-code",
+        "title": "Show HN: Screen memory without screenshots, just text to Markdown",
+        "url": "https://github.com/dragthelake/ambient-context",
         "source": "Hacker News",
-        "score": 45
-      },
-      {
-        "title": "Show HN: I wrote a BASIC interpreter that boots on UEFI machines",
-        "url": "https://tarjan.itch.io/thoreaubasic",
-        "source": "Hacker News",
-        "score": 20
+        "score": 6
       }
     ],
     "ai": [
@@ -101,37 +101,43 @@
         "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
         "url": "https://developer.apple.com/news/?id=1ptvdtcm",
         "source": "Hacker News AI",
-        "score": 317
+        "score": 335
+      },
+      {
+        "title": "Rupert Lowe set to be paid as much for divisive posts on X as for being MP",
+        "url": "https://www.theguardian.com/politics/2026/aug/24/rupert-lowe-restore-britain-earn-same-on-x-as-being-mp-elon-musk",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
         "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
         "source": "Hacker News AI",
-        "score": 614
+        "score": 630
       },
       {
         "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
         "url": "https://github.com/murerkinn/bookshelf",
         "source": "Hacker News AI",
-        "score": 60
+        "score": 68
       },
       {
         "title": "Training AI to Paint with Code",
         "url": "https://surya.website/rling-qwen-to-paint-with-code",
         "source": "Hacker News AI",
-        "score": 45
+        "score": 58
       },
       {
         "title": "Vintage Artificial Intelligence: Before It Got Awkward",
         "url": "https://blog.archive.org/2026/08/16/vintage-artificial-intelligence-before-it-got-awkward/",
         "source": "Hacker News AI",
-        "score": 70
+        "score": 75
       },
       {
         "title": "LLMs could control their host machines by exploiting inference engines",
         "url": "https://boydkane.com/essays/llms-could-control-their-host-machines-by-exploiting-inference-engines",
         "source": "Hacker News AI",
-        "score": 112
+        "score": 116
       },
       {
         "title": "Autostep (YC P26) Is Hiring AI/Fullstack Engineers and a Chief of Staff",
@@ -143,31 +149,25 @@
         "title": "Show HN: PicoMQ – Durable Streams over HTTP, on object storage",
         "url": "https://picomq.com/",
         "source": "Hacker News AI",
-        "score": 105
-      },
-      {
-        "title": "IPFS Maintainers Winding Down",
-        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
-        "source": "Hacker News AI",
-        "score": 339
+        "score": 107
       },
       {
         "title": "I were 17, I'd learn how to build LLMs from scratch",
         "url": "https://twitter.com/paulg/status/2091544343589060625",
         "source": "Hacker News AI",
-        "score": 529
+        "score": 532
+      },
+      {
+        "title": "IPFS Maintainers Winding Down",
+        "url": "https://ipshipyard.com/blog/2026-the-end-of-ipfs-at-shipyard/",
+        "source": "Hacker News AI",
+        "score": 340
       },
       {
         "title": "OpenAI: GPT 5.6 Sol price reduction (until at least Nov 21)",
         "url": "https://developers.openai.com/api/docs/pricing",
         "source": "Hacker News AI",
         "score": 315
-      },
-      {
-        "title": "I built a low-latency AI companion that plays Skyrim with me",
-        "url": "https://pantel.is/projects/ai-gaming-companion/",
-        "source": "Hacker News AI",
-        "score": 347
       }
     ],
     "news": [
@@ -192,17 +192,53 @@
         "source": "BBC World"
       },
       {
-        "title": "Moment tornado tears through southern France",
-        "url": "https://www.bbc.co.uk/news/videos/ckg8wkd0j7do?at_medium=RSS&at_campaign=rss",
+        "title": "Songs created by AI banned from Australia's music charts",
+        "url": "https://www.bbc.co.uk/news/articles/c20vl4vm2pno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "King of Norway's health has worsened, palace says",
-        "url": "https://www.bbc.co.uk/news/articles/c36lnekj659o?at_medium=RSS&at_campaign=rss",
+        "title": "Moment tornado tears through southern France",
+        "url": "https://www.bbc.co.uk/news/videos/ckg8wkd0j7do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " Is animation having a punk rock moment? ",
+        "url": "https://www.creativebloq.com/art/animation/is-animation-having-a-punk-rock-moment",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Hamnet Netflix controversy proves AI accusations are getting out of hand ",
+        "url": "https://www.creativebloq.com/design/the-hamnet-netflix-controversy-proves-ai-accusations-are-getting-out-of-hand",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Master the monochrome with issue 270 of ImagineFX ",
+        "url": "https://www.creativebloq.com/professional-development/artistic-tips-techniques/master-the-monochrome-with-issue-270-of-imaginefx",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Download resources for ImagineFX 270 ",
+        "url": "https://www.creativebloq.com/design/magazines/download-resources-for-imaginefx-270",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Nintendo's Game Boy ads were outrageous in the nineties – here are three examples that would never get made today ",
+        "url": "https://www.creativebloq.com/design/print-design-publishing/nintendos-game-boy-ads-were-outrageous-in-the-nineties-here-are-three-examples-that-would-never-get-made-today",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Razer Blade 18 (2026) review: Oh boy, this is the biggest and baddest of them all ",
+        "url": "https://www.creativebloq.com/tech/laptops/oh-boy-the-razer-blade-18-is-the-biggest-and-baddest-of-them-all",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " PBS getting ghosted by a cloud storage provider makes me terrified I'll lose all my creative work too ",
+        "url": "https://www.creativebloq.com/web-design/cloud-storage/pbs-getting-ghosted-by-a-cloud-storage-provider-makes-me-terrified-ill-lose-all-my-creative-work-too",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "Common medications may change your gut for years",
