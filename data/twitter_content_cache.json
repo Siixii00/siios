@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-25T18:40:20.184756",
-    "total_items": 59
+    "last_updated": "2026-08-25T19:32:40.762224",
+    "total_items": 57
   },
   "content": {
     "tech": [
@@ -9,94 +9,106 @@
         "title": "Apple introduces M6 and M5 Ultra",
         "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
         "source": "Hacker News",
-        "score": 687
+        "score": 754
+      },
+      {
+        "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
+        "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
+        "source": "Hacker News",
+        "score": 117
       },
       {
         "title": "New Mac Studio with M5 Max and M5 Ultra",
         "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
         "source": "Hacker News",
-        "score": 562
+        "score": 610
       },
       {
         "title": "Black hole singularity is a surface not a point",
         "url": "https://arxiv.org/abs/2608.21590",
         "source": "Hacker News",
-        "score": 60
+        "score": 90
       },
       {
-        "title": "Nitter project received cease and desist",
-        "url": "https://github.com/zedeus/nitter/issues/1442",
+        "title": "FDA authorizes first wearable device that monitors ketone and blood sugar levels",
+        "url": "https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar",
         "source": "Hacker News",
-        "score": 194
+        "score": 19
+      },
+      {
+        "title": "Show HN: I made a Raspberry with Qwen my local car AI",
+        "url": "https://github.com/ThinkOffApp/CarWatch",
+        "source": "Hacker News",
+        "score": 15
       },
       {
         "title": "My Friend Aaron",
         "url": "https://rorz.io/writing/my-friend-aaron",
         "source": "Hacker News",
-        "score": 94
+        "score": 177
       },
       {
         "title": "New Mac mini, featuring M6 and M5 Pro",
         "url": "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/",
         "source": "Hacker News",
-        "score": 316
-      },
-      {
-        "title": "Bomb fishing is wreaking havoc on Indonesia's coral reefs",
-        "url": "https://e360.yale.edu/digest/bomb-fishing-coral-reefs",
-        "source": "Hacker News",
-        "score": 170
-      },
-      {
-        "title": "Clara (YC P26) is hiring a growth engineer to bring AI doctors to market",
-        "url": "https://www.ycombinator.com/companies/clara-2/jobs/8snci6k-founding-full-stack-growth-engineer",
-        "source": "Hacker News",
-        "score": 1
-      },
-      {
-        "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
-        "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
-        "source": "Hacker News",
-        "score": 43
+        "score": 342
       },
       {
         "title": "Run OpenBSD on DigitalOcean for $4/month",
         "url": "https://nil.wallyjones.com/run-openbsd-on-digitalocean-for-4month/",
         "source": "Hacker News",
-        "score": 24
+        "score": 48
       },
       {
-        "title": "Show HN: LatticeDB – Like SQLite but for graph databases",
-        "url": "https://github.com/jeffhajewski/latticedb",
+        "title": "Clara (YC P26) is hiring a growth engineer to bring AI doctors to market",
+        "url": "https://www.ycombinator.com/companies/clara-2/jobs/8snci6k-founding-full-stack-growth-engineer",
         "source": "Hacker News",
-        "score": 32
+        "score": 1
       },
       {
-        "title": "Tooltips need a delay, and then they need to skip it",
-        "url": "https://blog.master.dev/tooltips-need-a-delay-and-then-they-need-to-skip-it/",
+        "title": "Nitter project received cease and desist",
+        "url": "https://github.com/zedeus/nitter/issues/1442",
         "source": "Hacker News",
-        "score": 35
-      },
-      {
-        "title": "Building a backyard office, the build and cost breakdown",
-        "url": "https://www.imkylelambert.com/articles/building-a-backyard-office-the-build-and-cost-breakdown",
-        "source": "Hacker News",
-        "score": 154
+        "score": 261
       },
       {
         "title": "Dolly Parton has died",
         "url": "https://www.theguardian.com/music/2026/aug/25/dolly-parton-country-singer-dead",
         "source": "Hacker News",
-        "score": 214
+        "score": 495
       },
       {
-        "title": "Don't Wordle",
-        "url": "https://dontwordle.com/",
+        "title": "Show HN: LatticeDB – Like SQLite but for graph databases",
+        "url": "https://github.com/jeffhajewski/latticedb",
         "source": "Hacker News",
-        "score": 240
+        "score": 46
+      },
+      {
+        "title": "Bomb fishing is wreaking havoc on Indonesia's coral reefs",
+        "url": "https://e360.yale.edu/digest/bomb-fishing-coral-reefs",
+        "source": "Hacker News",
+        "score": 183
+      },
+      {
+        "title": "Pgbot: A 5.9 MB read-only Postgres tool for humans and agents",
+        "url": "https://pgbot.dev/",
+        "source": "Hacker News",
+        "score": 24
       }
     ],
     "ai": [
+      {
+        "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
+        "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
+        "source": "Hacker News AI",
+        "score": 117
+      },
+      {
+        "title": "Show HN: I made a Raspberry with Qwen my local car AI",
+        "url": "https://github.com/ThinkOffApp/CarWatch",
+        "source": "Hacker News AI",
+        "score": 15
+      },
       {
         "title": "Clara (YC P26) is hiring a growth engineer to bring AI doctors to market",
         "url": "https://www.ycombinator.com/companies/clara-2/jobs/8snci6k-founding-full-stack-growth-engineer",
@@ -104,52 +116,28 @@
         "score": 1
       },
       {
-        "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
-        "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
-        "source": "Hacker News AI",
-        "score": 43
-      },
-      {
         "title": "How much of HN is AI?",
         "url": "https://blog.coredump.cx/p/how-much-of-hn-is-ai",
         "source": "Hacker News AI",
-        "score": 195
-      },
-      {
-        "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
-        "url": "https://github.com/murerkinn/bookshelf",
-        "source": "Hacker News AI",
-        "score": 160
+        "score": 216
       },
       {
         "title": "Training AI to Paint with Code",
         "url": "https://surya.website/rling-qwen-to-paint-with-code",
         "source": "Hacker News AI",
-        "score": 185
+        "score": 189
       },
       {
-        "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
-        "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
+        "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
+        "url": "https://github.com/murerkinn/bookshelf",
         "source": "Hacker News AI",
-        "score": 832
+        "score": 161
       },
       {
-        "title": "AI is hitting entry-level jobs hardest, Stanford study finds",
-        "url": "https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds/",
+        "title": "Anthropic expected to tell investors it sees over $30T in potential revenue",
+        "url": "https://www.reuters.com/business/media-telecom/anthropic-expected-tell-investors-it-sees-over-30-trillion-potential-revenue-wsj-2026-08-25/",
         "source": "Hacker News AI",
-        "score": 119
-      },
-      {
-        "title": "AI Takeover at GopherCon 2026",
-        "url": "https://www.youtube.com/watch?v=Pny5TFP2r3U",
-        "source": "Hacker News AI",
-        "score": 4
-      },
-      {
-        "title": "iCloud+ Hide My Email addresses will remain on icloud.com",
-        "url": "https://developer.apple.com/news/?id=1ptvdtcm",
-        "source": "Hacker News AI",
-        "score": 586
+        "score": 9
       }
     ],
     "news": [
@@ -191,7 +179,7 @@
     ],
     "art": [
       {
-        "title": " Violent Obsession-inspired golf ad shows the risk of brands chasing viral trends ",
+        "title": " How did the violent Obsession-inspired golf ad ever get approved? ",
         "url": "https://www.creativebloq.com/design/advertising/violent-obsession-inspired-golf-ad-shows-the-risk-of-brands-chasing-viral-trends",
         "source": "Creative Bloq"
       },
@@ -265,38 +253,38 @@
     ],
     "gaming": [
       {
+        "title": "Pragmata is Finally, Officially a 'Mega Man Game'",
+        "url": "https://www.polygon.com/pragmata-dlc-mega-man-skin-dual-override-gamescom/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Dungeons & Dragons' Big Gamble Warlock Re-emerges in First Gameplay Trailer",
+        "url": "https://www.polygon.com/warlock-dungeons-dragons-dnd-gameplay-reveal-trailer-gamescom/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Mass Effect' Replacement 'Exodus' Finally Gets A Release Date",
+        "url": "https://www.polygon.com/exodus-release-date-reveal-gamescom-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "New PUBG Spinoff DED.NET Brings Wild Roguelite Chaos the Battlefield",
+        "url": "https://www.polygon.com/pubg-dednet-gamescom-announcement/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Anime GTA’ Game Ananta Gets Official Release Date Beyond GTA 6’s Blast Radius",
+        "url": "https://www.polygon.com/ananta-the-anime-gta-game-finally-has-a-release-date/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Rainbow Six Tactics Is the Series' First Single-player Game in Almost 20 Years",
+        "url": "https://www.polygon.com/rainbow-six-tactics-announced/",
+        "source": "Polygon"
+      },
+      {
         "title": "New Game of Thrones Official Release Will Let Fans Rewrite Canon",
         "url": "https://www.polygon.com/game-of-thrones-war-for-westeros-gameplay-trailer-gamescom/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Elden Ring Meets Monster Hunter In Gamescom's Most Surprising Reveal",
-        "url": "https://www.polygon.com/nodus-fall-trailer-hoyoverse-elden-ring-monster-hunter/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Dolly Parton Dies at 80, Family Officially Confirms",
-        "url": "https://www.polygon.com/dolly-parton-death-announcement/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Ridley Scott’s New Action Sci-Fi Thriller First Reactions Greatly Divide Critics",
-        "url": "https://www.polygon.com/ridley-scott-dog-stars-reviews-first-reactions/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Gamescom 2026: When Is Gamescom and How to Watch Opening Night Live",
-        "url": "https://www.polygon.com/gamescom-2026-when-how-to-watch-opening-night-live/",
-        "source": "Polygon"
-      },
-      {
-        "title": "PC Classic RollerCoaster Tycoon Officially Returns This Winter",
-        "url": "https://www.polygon.com/rollercoaster-tycoon-wonderworks-new-game-announcement/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Prime Video's RoboCop Reboot Has Officially Found Its Peter Weller Replacement",
-        "url": "https://www.polygon.com/robocop-tv-reboot-alex-murphy-new-actor-prime-video/",
         "source": "Polygon"
       }
     ],
