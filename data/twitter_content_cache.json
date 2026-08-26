@@ -1,161 +1,173 @@
 {
   "metadata": {
-    "last_updated": "2026-08-26T16:18:23.865132",
-    "total_items": 60
+    "last_updated": "2026-08-26T19:04:38.485348",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "AWS Acquires DuckDB",
-        "url": "https://ducklabs.com/news/2026/08/26/ducklabs-to-join-aws",
-        "source": "Hacker News",
-        "score": 611
-      },
-      {
         "title": "GLM-5.3-Flash",
         "url": "https://z.ai/blog/glm-5.3-flash",
         "source": "Hacker News",
-        "score": 342
+        "score": 612
       },
       {
-        "title": "Nebula Sans",
-        "url": "https://www.nebulasans.com",
+        "title": "An ongoing 3D-printer AGPL violation",
+        "url": "https://lwn.net/SubscriberLink/1089390/46116614cc74b814/",
         "source": "Hacker News",
-        "score": 85
+        "score": 94
       },
       {
-        "title": "Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency",
-        "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+        "title": "AWS Acquires DuckLabs",
+        "url": "https://ducklabs.com/news/2026/08/26/ducklabs-to-join-aws",
         "source": "Hacker News",
-        "score": 354
+        "score": 809
       },
       {
-        "title": "Taylor Farms: How One Company's Reach Became a National Risk",
-        "url": "https://farmaction.us/taylorfarmsreport/",
+        "title": "Tailcat",
+        "url": "https://github.com/tailscale/tailcat",
         "source": "Hacker News",
-        "score": 75
+        "score": 113
       },
       {
-        "title": "GLM-5.3-Flash Intelligence, Performance and Price Analysis",
-        "url": "https://artificialanalysis.ai/models/glm-5-3-flash",
+        "title": "Study Reveals UnitedHealth's Profit Margins Four Times What It Claimed [pdf]",
+        "url": "https://insurancewatchdogcoalition.com/wp-content/uploads/2026/08/UHG-Profits-Study_August-2026.pdf",
         "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "France reaches 94.9% fiber coverage in 2026",
-        "url": "https://cartefibre.arcep.fr",
-        "source": "Hacker News",
-        "score": 90
-      },
-      {
-        "title": "Launch HN: Risklytics (YC S26) – Insurance brokerage for frontier tech companies",
-        "url": "https://www.risklytics.ai/",
-        "source": "Hacker News",
-        "score": 4
-      },
-      {
-        "title": "WebMCP: Teaching Your Website to Talk to AI Agents",
-        "url": "https://sreenathmenon.com/blog/2026-08-04-webmcp-teaching-websites-to-talk-to-ai-agents/",
-        "source": "Hacker News",
-        "score": 36
+        "score": 49
       },
       {
         "title": "Disruption with Some GitHub Services",
         "url": "https://www.githubstatus.com/incidents/hcbtzksccj2f",
         "source": "Hacker News",
-        "score": 87
+        "score": 190
       },
       {
-        "title": "It's so hard to finish an idea that is not yours (and suggested by AI)",
-        "url": "https://www.ssp.sh/brain/using-obsidian-with-ai/",
-        "source": "Hacker News",
-        "score": 15
-      },
-      {
-        "title": "You could have invented PageRank",
-        "url": "https://praveshkoirala.com/2026/08/26/you-could-have-invented-pagerank/",
+        "title": "The Tariff Cost: analysis of the costs to Americans from new tariffs on Canada",
+        "url": "https://thetariffcost.com/",
         "source": "Hacker News",
         "score": 33
       },
       {
-        "title": "Show HN: How much of Hacker News is AI?",
-        "url": "https://hnstats.com",
+        "title": "Qwen3.8-Flash-Next",
+        "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
         "source": "Hacker News",
-        "score": 36
+        "score": 487
       },
       {
-        "title": "RAG Is Simpler Than You Think",
-        "url": "https://www.lighthousenewsletter.com/p/rag-is-simpler-than-you-think",
+        "title": "Nebula Sans",
+        "url": "https://www.nebulasans.com",
         "source": "Hacker News",
-        "score": 311
+        "score": 225
       },
       {
-        "title": "Proliferate (YC S25) Is Hiring",
-        "url": "https://www.ycombinator.com/companies/proliferate/jobs/OgpCKYJ-founding-product-engineer",
+        "title": "Tim Curry has died",
+        "url": "https://www.theguardian.com/film/2026/aug/26/tim-curry-dies-rocky-horror-show-stephen-king-it-legend-film",
         "source": "Hacker News",
-        "score": 1
+        "score": 344
+      },
+      {
+        "title": "Taylor Farms: How One Company's Reach Became a National Risk",
+        "url": "https://farmaction.us/taylorfarmsreport/",
+        "source": "Hacker News",
+        "score": 158
+      },
+      {
+        "title": "CoMaps: The Offline App That Guided Rescuers Without a Signal in Venezuela",
+        "url": "https://hotosm.org/en/news/comaps-the-offline-app-that-guided-rescuers-without-a-signal-in-the-venezuela-response/",
+        "source": "Hacker News",
+        "score": 41
+      },
+      {
+        "title": "It’s so hard to finish an idea that is not yours and is just suggested by AI",
+        "url": "https://www.ssp.sh/brain/using-obsidian-with-ai/",
+        "source": "Hacker News",
+        "score": 90
+      },
+      {
+        "title": "FDA Approves First in Class Targeted Therapy for Metastatic Pancreatic Cancer",
+        "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-class-targeted-therapy-metastatic-pancreatic-cancer",
+        "source": "Hacker News",
+        "score": 42
+      },
+      {
+        "title": "YouTube Format IDs",
+        "url": "https://gist.github.com/MartinEesmaa/2f4b261cb90a47e9c41ba115a011a4aa",
+        "source": "Hacker News",
+        "score": 26
       }
     ],
     "ai": [
       {
-        "title": "France reaches 94.9% fiber coverage in 2026",
-        "url": "https://cartefibre.arcep.fr",
+        "title": "Tailcat",
+        "url": "https://github.com/tailscale/tailcat",
+        "source": "Hacker News AI",
+        "score": 113
+      },
+      {
+        "title": "Study Reveals UnitedHealth's Profit Margins Four Times What It Claimed [pdf]",
+        "url": "https://insurancewatchdogcoalition.com/wp-content/uploads/2026/08/UHG-Profits-Study_August-2026.pdf",
+        "source": "Hacker News AI",
+        "score": 49
+      },
+      {
+        "title": "It’s so hard to finish an idea that is not yours and is just suggested by AI",
+        "url": "https://www.ssp.sh/brain/using-obsidian-with-ai/",
         "source": "Hacker News AI",
         "score": 90
+      },
+      {
+        "title": "PageRank explained",
+        "url": "https://praveshkoirala.com/2026/08/26/you-could-have-invented-pagerank/",
+        "source": "Hacker News AI",
+        "score": 77
+      },
+      {
+        "title": "RAG Is Simpler Than You Think",
+        "url": "https://www.lighthousenewsletter.com/p/rag-is-simpler-than-you-think",
+        "source": "Hacker News AI",
+        "score": 365
       },
       {
         "title": "Launch HN: Risklytics (YC S26) – Insurance brokerage for frontier tech companies",
         "url": "https://www.risklytics.ai/",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 16
       },
       {
-        "title": "WebMCP: Teaching Your Website to Talk to AI Agents",
-        "url": "https://sreenathmenon.com/blog/2026-08-04-webmcp-teaching-websites-to-talk-to-ai-agents/",
+        "title": "VMs won't contain cyber-capable agents",
+        "url": "https://blog.trailofbits.com/2026/08/26/vms-wont-contain-cyber-capable-agents/",
         "source": "Hacker News AI",
-        "score": 36
+        "score": 97
       },
       {
-        "title": "It's so hard to finish an idea that is not yours (and suggested by AI)",
-        "url": "https://www.ssp.sh/brain/using-obsidian-with-ai/",
+        "title": "The turbulent AI era is here",
+        "url": "https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make",
         "source": "Hacker News AI",
-        "score": 15
-      },
-      {
-        "title": "Show HN: How much of Hacker News is AI?",
-        "url": "https://hnstats.com",
-        "source": "Hacker News AI",
-        "score": 36
-      },
-      {
-        "title": "RAG Is Simpler Than You Think",
-        "url": "https://www.lighthousenewsletter.com/p/rag-is-simpler-than-you-think",
-        "source": "Hacker News AI",
-        "score": 311
-      },
-      {
-        "title": "AurionMail: E2EE suite (CryptPad/Stalwart) with single-password UX",
-        "url": "https://github.com/AurionMail/docs",
-        "source": "Hacker News AI",
-        "score": 21
+        "score": 94
       },
       {
         "title": "Z.ai confirms Ox Alpha is a new GLM-series model and will release its weights",
         "url": "https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek",
         "source": "Hacker News AI",
-        "score": 363
+        "score": 393
       },
       {
-        "title": "One endpoint between your AI and all your connections, memory, skills",
-        "url": "https://github.com/lanes-sh/link",
+        "title": "The turbulent AI era is here. The choices we make now are critical",
+        "url": "https://www.gatesnotes.com/home/home-page-topic/reader/a-turbulent-ai-era-and-critical-choices-to-make",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 9
+      },
+      {
+        "title": "Show HN: How much of Hacker News is about AI?",
+        "url": "https://hnstats.com",
+        "source": "Hacker News AI",
+        "score": 64
       },
       {
         "title": "\"Famous Deep Learning Papers\", David Bau",
         "url": "https://papers.baulab.info/",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 17
       }
     ],
     "news": [
@@ -197,6 +209,16 @@
     ],
     "art": [
       {
+        "title": " Guns of Eschaton turns Viktor Antonov's final game into a nightmare Western shooter ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/guns-of-eschaton-turns-viktor-antonovs-final-game-into-a-nightmare-western-shooter",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " People are already falling in love with Warlock: Dungeons & Dragons' main character ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/people-are-already-falling-in-love-with-warlock-dungeons-and-dragons-main-character",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Resonance: A Plague Tale Legacy review – Asobo takes a risk and delivers the best game in the series ",
         "url": "https://www.creativebloq.com/entertainment/gaming/resonance-a-plague-tale-legacy-review-asobo-takes-a-risk-and-delivers-the-best-game-in-the-series",
         "source": "Creative Bloq"
@@ -219,16 +241,6 @@
       {
         "title": " Marvel's dramatic Avengers: Endgame Encore colour change is dividing opinion ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/marvels-dramatic-colour-grading-change-in-avengers-endgame-encore-is-dividing-opinion",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Nope, the new Apple Mac mini ad isn't AI – and there's a delightful BTS video to prove it ",
-        "url": "https://www.creativebloq.com/design/advertising/nope-the-new-apple-ad-isnt-ai-and-theres-a-bts-video-to-prove-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Mega Man: Dual Override is everything I love about the retro series, and everything I fear ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/mega-man-dual-override-is-everything-i-love-about-the-retro-series-and-everything-i-fear",
         "source": "Creative Bloq"
       }
     ],
@@ -271,38 +283,38 @@
     ],
     "gaming": [
       {
-        "title": "Video Game Icon Tim Curry Dies at at 80",
-        "url": "https://www.polygon.com/tim-curry-death-movies-tv-shows-video-games/",
+        "title": "Roblox Officially Cracks Down on Doomscrolling-Reward Games After Controversy",
+        "url": "https://www.polygon.com/roblox-doomscroll-game-steal-an-egg-media-feed-restriction/",
         "source": "Polygon"
       },
       {
-        "title": "Resonance: A Plague Tale Legacy Feels More Like a Tomb Raider Game",
-        "url": "https://www.polygon.com/resonance-a-plague-tale-legacy-review/",
+        "title": "BG3 Fans, We've Been Pronouncing Astarion's Name Wrong",
+        "url": "https://www.polygon.com/baldurs-gate-3-bg3-astarion-surname-pronunciation-audiobook-ancunin/",
         "source": "Polygon"
       },
       {
-        "title": "PlayStation Plus September 2026 Free Games Lineup Officially Revealed, Includes a Great Retro RPG",
-        "url": "https://www.polygon.com/playstation-plus-september-2026-games-announced-ps4-ps5-free-essential/",
+        "title": "GTA 6's First Official Preview Reveals 5 Juicy New Details",
+        "url": "https://www.polygon.com/gta-6-dazed-magazine-preview-npc-honor-realism-gameplay/",
         "source": "Polygon"
       },
       {
-        "title": "Xbox’s Disc-To-Digital Program Officially Revealed, Launches Next Week",
-        "url": "https://www.polygon.com/xbox-disc-to-digital-program-release-date-announced/",
+        "title": "New James Bond 007 Actor Shortlist Shrinks to Just 6 Actors",
+        "url": "https://www.polygon.com/james-bond-26-next-007-actor-shortlist/",
         "source": "Polygon"
       },
       {
-        "title": "Ridley Scott Confirms an Unexpected Alien Sequel Is on the Way",
-        "url": "https://www.polygon.com/ridley-scott-alien-covenant-sequel/",
+        "title": "A New D&D Game Will Let You Live Every Adventurer's Dream",
+        "url": "https://www.polygon.com/dnd-dungeons-dragons-new-game-long-rest-tavern-sim/",
         "source": "Polygon"
       },
       {
-        "title": "GTA 6 Leaks Keep Spilling In Defiance of Rockstar's 'Heartbreaking' Response",
-        "url": "https://www.polygon.com/gta-6-leak-rideout-customs-rockstar-games-statement-netflix-reveal/",
+        "title": "After 3 Hours, I Can Say Game of Thrones Finally Has a Worthy Video Game",
+        "url": "https://www.polygon.com/game-of-thrones-war-for-westeros-preview/",
         "source": "Polygon"
       },
       {
-        "title": "Xbox Confirms New $899 Hardware Release With Official Pre-Order Launch",
-        "url": "https://www.polygon.com/xbox-25th-anniversary-console-controller-preorders-price/",
+        "title": "CD Projekt Red Officially Reveals First Look at New Witcher Release",
+        "url": "https://www.polygon.com/the-witcher-3-songs-of-the-past-dlc-first-look/",
         "source": "Polygon"
       }
     ],
