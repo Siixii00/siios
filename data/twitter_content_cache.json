@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-08-26T13:55:31.369752",
-    "total_items": 58
+    "last_updated": "2026-08-26T14:46:08.511370",
+    "total_items": 57
   },
   "content": {
     "tech": [
@@ -9,55 +9,67 @@
         "title": "AWS Acquires DuckDB",
         "url": "https://ducklabs.com/news/2026/08/26/ducklabs-to-join-aws",
         "source": "Hacker News",
-        "score": 255
+        "score": 413
+      },
+      {
+        "title": "GLM-5.3-Flash",
+        "url": "https://z.ai/blog/glm-5.3-flash",
+        "source": "Hacker News",
+        "score": 148
       },
       {
         "title": "Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency",
         "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
         "source": "Hacker News",
-        "score": 128
+        "score": 233
       },
       {
         "title": "RAG Is Simpler Than You Think",
         "url": "https://www.lighthousenewsletter.com/p/rag-is-simpler-than-you-think",
         "source": "Hacker News",
-        "score": 224
-      },
-      {
-        "title": "Oldinsurancemaps.net is now a Charter Project",
-        "url": "https://openstreetmap.us/news/2026/08/oim-charter-project/",
-        "source": "Hacker News",
-        "score": 117
+        "score": 264
       },
       {
         "title": "A curmudgeon tries a language server",
         "url": "https://entropicthoughts.com/curmudgeon-tries-language-server",
         "source": "Hacker News",
-        "score": 23
+        "score": 38
+      },
+      {
+        "title": "Oldinsurancemaps.net is now a Charter Project",
+        "url": "https://openstreetmap.us/news/2026/08/oim-charter-project/",
+        "source": "Hacker News",
+        "score": 123
       },
       {
         "title": "Meta reaches $16.68B settlement over social media harms to children",
         "url": "https://www.reuters.com/world/us/meta-settles-with-us-states-over-social-media-harms-2026-08-26/",
         "source": "Hacker News",
-        "score": 44
-      },
-      {
-        "title": "XCancel and Nitter are receiving C&D letters from XCorp",
-        "url": "https://news.ycombinator.com/item?id=49446210",
-        "source": "Hacker News",
-        "score": 206
-      },
-      {
-        "title": "Fake US thinktank set up and funded by Israel sought to game AI for propaganda",
-        "url": "https://www.theguardian.com/world/2026/aug/26/fake-thinktank-israel-ai-propaganda",
-        "source": "Hacker News",
-        "score": 133
+        "score": 175
       },
       {
         "title": "Z.ai confirms Ox Alpha is a new GLM-series model and will release its weights",
         "url": "https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek",
         "source": "Hacker News",
-        "score": 260
+        "score": 313
+      },
+      {
+        "title": "Twitter Viewer – View Twitter Without Account",
+        "url": "https://twitterwebviewer.com/",
+        "source": "Hacker News",
+        "score": 21
+      },
+      {
+        "title": "Apple introduces M6 and M5 Ultra",
+        "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+        "source": "Hacker News",
+        "score": 1251
+      },
+      {
+        "title": "Beyond Recall and the Illusion of Competence",
+        "url": "https://var0.xyz/posts/beyond-recall-and-the-illusion-of-competence.html",
+        "source": "Hacker News",
+        "score": 58
       },
       {
         "title": "Proliferate (YC S25) Is Hiring",
@@ -66,34 +78,22 @@
         "score": 1
       },
       {
-        "title": "Apple introduces M6 and M5 Ultra",
-        "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
-        "source": "Hacker News",
-        "score": 1233
-      },
-      {
-        "title": "Beyond Recall and the Illusion of Competence",
-        "url": "https://var0.xyz/posts/beyond-recall-and-the-illusion-of-competence.html",
-        "source": "Hacker News",
-        "score": 46
-      },
-      {
         "title": "Stalking the Wily Hacker: 40 years later – Cliff Stoll [video]",
         "url": "https://www.youtube.com/watch?v=656058JxTM0",
         "source": "Hacker News",
-        "score": 169
-      },
-      {
-        "title": "Value Classes Still Need Compiler Sympathy",
-        "url": "https://johan-sjolen.github.io/post/compiler-sympathy/compiler-sympathy/",
-        "source": "Hacker News",
-        "score": 58
+        "score": 182
       },
       {
         "title": "FDA authorizes first wearable device that monitors ketone and blood sugar levels",
         "url": "https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar",
         "source": "Hacker News",
-        "score": 459
+        "score": 466
+      },
+      {
+        "title": "Wiped out: US faces surging toilet paper prices amid trade war with Canada",
+        "url": "https://www.theguardian.com/us-news/2026/aug/26/paper-product-toilet-paper-tariffs-us-canada",
+        "source": "Hacker News",
+        "score": 34
       }
     ],
     "ai": [
@@ -101,52 +101,51 @@
         "title": "RAG Is Simpler Than You Think",
         "url": "https://www.lighthousenewsletter.com/p/rag-is-simpler-than-you-think",
         "source": "Hacker News AI",
-        "score": 224
-      },
-      {
-        "title": "Fake US thinktank set up and funded by Israel sought to game AI for propaganda",
-        "url": "https://www.theguardian.com/world/2026/aug/26/fake-thinktank-israel-ai-propaganda",
-        "source": "Hacker News AI",
-        "score": 133
+        "score": 264
       },
       {
         "title": "Z.ai confirms Ox Alpha is a new GLM-series model and will release its weights",
         "url": "https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek",
         "source": "Hacker News AI",
-        "score": 260
+        "score": 313
       },
       {
         "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
         "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
         "source": "Hacker News AI",
-        "score": 542
+        "score": 551
       },
       {
         "title": "Maiao: Gerrit-style code review workflow for GitHub, GitLab, Gitea, others",
         "url": "https://github.com/runetes/maiao",
         "source": "Hacker News AI",
-        "score": 100
-      },
-      {
-        "title": "Bill Gates: The turbulent AI era is here",
-        "url": "https://www.gatesnotes.com/work/make-ai-work-for-everyone/reader/a-turbulent-ai-era-and-critical-choices-to-make",
-        "source": "Hacker News AI",
-        "score": 81
+        "score": 103
       },
       {
         "title": "Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",
         "url": "https://github.com/swimmingbrain/texbrain",
         "source": "Hacker News AI",
-        "score": 106
+        "score": 107
+      },
+      {
+        "title": "Meta agrees multi-billion settlement to claims that its platforms harm children",
+        "url": "https://www.bbc.co.uk/news/live/cy5v0vrlp4xt",
+        "source": "Hacker News AI",
+        "score": 6
       },
       {
         "title": "Training AI to Paint with Code",
         "url": "https://surya.website/rling-qwen-to-paint-with-code",
         "source": "Hacker News AI",
-        "score": 211
+        "score": 213
       }
     ],
     "news": [
+      {
+        "title": "Heart, hope and a steely determination: Dolly Parton's musical legacy",
+        "url": "https://www.bbc.co.uk/news/articles/c74k8zwvez0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Door was locked at Pakistan hospital where fire killed 14 babies, witnesses say",
         "url": "https://www.bbc.co.uk/news/articles/czdz13elezlo?at_medium=RSS&at_campaign=rss",
@@ -158,8 +157,8 @@
         "source": "BBC World"
       },
       {
-        "title": "German airport worker dies of malaria after 'mosquito arrives on plane'",
-        "url": "https://www.bbc.co.uk/news/articles/cz6zwgg9y8go?at_medium=RSS&at_campaign=rss",
+        "title": "Radiation link in flight attendant's breast cancer, French court finds",
+        "url": "https://www.bbc.co.uk/news/articles/cn0j3z6147jo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -173,17 +172,22 @@
         "source": "BBC World"
       },
       {
-        "title": "China advises its citizens to leave Taiwan ally Eswatini over 'security risks'",
-        "url": "https://www.bbc.co.uk/news/articles/c3rel9rgnx5o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Radiation link in flight attendant's breast cancer, French court finds",
-        "url": "https://www.bbc.co.uk/news/articles/cn0j3z6147jo?at_medium=RSS&at_campaign=rss",
+        "title": "German airport worker dies of malaria after 'mosquito arrives on plane'",
+        "url": "https://www.bbc.co.uk/news/articles/cz6zwgg9y8go?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " No Law's new trailer shows why its Unreal Engine 5 city is the real star ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/no-laws-new-trailer-shows-why-its-unreal-engine-5-city-is-the-real-star",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Elden Ring Tarnished Edition review: FromSoftware's open world masterpiece is still full of grace on Switch 2 ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/elden-ring-tarnished-edition-review-fromsoftwares-open-world-masterpiece-is-still-full-of-grace-on-switch-2",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Marvel's dramatic Avengers: Endgame Encore colour change is dividing opinion ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/marvels-dramatic-colour-grading-change-in-avengers-endgame-encore-is-dividing-opinion",
@@ -207,16 +211,6 @@
       {
         "title": " The new Manic Miner remake has already got ZX Spectrum fans asking: “What happened?!” ",
         "url": "https://www.creativebloq.com/entertainment/gaming/the-new-manic-miner-remake-has-already-got-zx-spectrum-fans-asking-what-happened",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How to create a video game world using Blender and Photoshop ",
-        "url": "https://www.creativebloq.com/3d/how-to-create-a-video-game-world-using-blender-and-photoshop",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " I've found the brand with the most beautiful everyday essentials – and I'm obsessed with the sea of print and colour ",
-        "url": "https://www.creativebloq.com/tech/accessories/ive-found-the-brand-with-the-most-beautiful-everyday-essentials-and-im-obsessed-with-the-sea-of-print-and-colour",
         "source": "Creative Bloq"
       }
     ],
@@ -259,6 +253,21 @@
     ],
     "gaming": [
       {
+        "title": "Star Wars: Zero Company Is One of the Best Reviewed Star Wars Games of All-Time",
+        "url": "https://www.polygon.com/star-wars-zero-company-review-roundup/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Joker Just Became the New Lead of 2026’s Near-Perfect Batman Game",
+        "url": "https://www.polygon.com/lego-batman-legacy-of-the-dark-knight-mayhem-collection-joker-harley-quinn-dlc-trailer/",
+        "source": "Polygon"
+      },
+      {
+        "title": "\"Tweety's sadistic\": The Filmmakers Behind 'Coyote vs. ACME' Dissect Its Looniest Scene",
+        "url": "https://www.polygon.com/coyote-vs-acme-john-cena-tweety-scene/",
+        "source": "Polygon"
+      },
+      {
         "title": "The Sims' Biggest Rival Gets First Major Update Later This Year",
         "url": "https://www.polygon.com/paralives-free-expansion-release-late-2026/",
         "source": "Polygon"
@@ -276,21 +285,6 @@
       {
         "title": "'Buffy the Vampire Slayer' Star Breaks Silence on Canceled Hulu Sequel",
         "url": "https://www.polygon.com/buffy-new-sunnydale-seth-green-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "A Beloved Critical Role Cast Member Will Probably Miss Campaign 4 for a Long Time",
-        "url": "https://www.polygon.com/critical-role-campaign-4-travis-willingham-character-dead-return/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Rockstar Games Releases Official Response to 'Heartbreaking' GTA 6 Leaks",
-        "url": "https://www.polygon.com/rockstar-games-officially-responds-to-gta-6-leaks/",
-        "source": "Polygon"
-      },
-      {
-        "title": "What's Up with the Logan Trailer? The History of X-23",
-        "url": "https://www.polygon.com/video/what-s-up-with-the-logan-trailer-the-history-of-x-23/",
         "source": "Polygon"
       }
     ],
