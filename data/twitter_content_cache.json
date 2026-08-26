@@ -1,51 +1,63 @@
 {
   "metadata": {
-    "last_updated": "2026-08-26T12:53:37.924912",
+    "last_updated": "2026-08-26T13:55:31.369752",
     "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "Omarchy is full of security holes",
-        "url": "https://blog.happyfellow.dev/merchants-of-insecurity/",
+        "title": "AWS Acquires DuckDB",
+        "url": "https://ducklabs.com/news/2026/08/26/ducklabs-to-join-aws",
         "source": "Hacker News",
-        "score": 137
+        "score": 255
+      },
+      {
+        "title": "Qwen3.8-Flash-Next: A New Architecture, Towards Ultimate Cost-Efficiency",
+        "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
+        "source": "Hacker News",
+        "score": 128
       },
       {
         "title": "RAG Is Simpler Than You Think",
         "url": "https://www.lighthousenewsletter.com/p/rag-is-simpler-than-you-think",
         "source": "Hacker News",
-        "score": 168
+        "score": 224
       },
       {
         "title": "Oldinsurancemaps.net is now a Charter Project",
         "url": "https://openstreetmap.us/news/2026/08/oim-charter-project/",
         "source": "Hacker News",
-        "score": 97
+        "score": 117
       },
       {
-        "title": "Z.ai confirms Ox Alpha is a new GLM-series model and will release its weights",
-        "url": "https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek",
+        "title": "A curmudgeon tries a language server",
+        "url": "https://entropicthoughts.com/curmudgeon-tries-language-server",
         "source": "Hacker News",
-        "score": 198
+        "score": 23
+      },
+      {
+        "title": "Meta reaches $16.68B settlement over social media harms to children",
+        "url": "https://www.reuters.com/world/us/meta-settles-with-us-states-over-social-media-harms-2026-08-26/",
+        "source": "Hacker News",
+        "score": 44
       },
       {
         "title": "XCancel and Nitter are receiving C&D letters from XCorp",
         "url": "https://news.ycombinator.com/item?id=49446210",
         "source": "Hacker News",
-        "score": 101
+        "score": 206
       },
       {
-        "title": "Apple introduces M6 and M5 Ultra",
-        "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
+        "title": "Fake US thinktank set up and funded by Israel sought to game AI for propaganda",
+        "url": "https://www.theguardian.com/world/2026/aug/26/fake-thinktank-israel-ai-propaganda",
         "source": "Hacker News",
-        "score": 1207
+        "score": 133
       },
       {
-        "title": "Beyond Recall and the Illusion of Competence",
-        "url": "https://var0.xyz/posts/beyond-recall-and-the-illusion-of-competence.html",
+        "title": "Z.ai confirms Ox Alpha is a new GLM-series model and will release its weights",
+        "url": "https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek",
         "source": "Hacker News",
-        "score": 33
+        "score": 260
       },
       {
         "title": "Proliferate (YC S25) Is Hiring",
@@ -54,46 +66,34 @@
         "score": 1
       },
       {
-        "title": "Value Classes Still Need Compiler Sympathy",
-        "url": "https://johan-sjolen.github.io/post/compiler-sympathy/compiler-sympathy/",
+        "title": "Apple introduces M6 and M5 Ultra",
+        "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
         "source": "Hacker News",
-        "score": 49
+        "score": 1233
+      },
+      {
+        "title": "Beyond Recall and the Illusion of Competence",
+        "url": "https://var0.xyz/posts/beyond-recall-and-the-illusion-of-competence.html",
+        "source": "Hacker News",
+        "score": 46
       },
       {
         "title": "Stalking the Wily Hacker: 40 years later – Cliff Stoll [video]",
         "url": "https://www.youtube.com/watch?v=656058JxTM0",
         "source": "Hacker News",
-        "score": 151
+        "score": 169
+      },
+      {
+        "title": "Value Classes Still Need Compiler Sympathy",
+        "url": "https://johan-sjolen.github.io/post/compiler-sympathy/compiler-sympathy/",
+        "source": "Hacker News",
+        "score": 58
       },
       {
         "title": "FDA authorizes first wearable device that monitors ketone and blood sugar levels",
         "url": "https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar",
         "source": "Hacker News",
-        "score": 449
-      },
-      {
-        "title": "Queryable Executables",
-        "url": "https://fzakaria.com/2026/08/24/actually-queryable-executables",
-        "source": "Hacker News",
-        "score": 244
-      },
-      {
-        "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
-        "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
-        "source": "Hacker News",
-        "score": 525
-      },
-      {
-        "title": "New Mac Studio with M5 Max and M5 Ultra",
-        "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
-        "source": "Hacker News",
-        "score": 788
-      },
-      {
-        "title": "Show HN: Buslens – where can I get to by bus? (UK)",
-        "url": "https://rupertlinacre.com/buslens/",
-        "source": "Hacker News",
-        "score": 64
+        "score": 459
       }
     ],
     "ai": [
@@ -101,43 +101,43 @@
         "title": "RAG Is Simpler Than You Think",
         "url": "https://www.lighthousenewsletter.com/p/rag-is-simpler-than-you-think",
         "source": "Hacker News AI",
-        "score": 168
-      },
-      {
-        "title": "Z.ai confirms Ox Alpha is a new GLM-series model and will release its weights",
-        "url": "https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek",
-        "source": "Hacker News AI",
-        "score": 198
-      },
-      {
-        "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
-        "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
-        "source": "Hacker News AI",
-        "score": 525
-      },
-      {
-        "title": "Maiao: Gerrit-style code review workflow for GitHub, GitLab, Gitea, others",
-        "url": "https://github.com/runetes/maiao",
-        "source": "Hacker News AI",
-        "score": 95
-      },
-      {
-        "title": "Debian polls its developers on AI: permit or ban?",
-        "url": "https://www.theregister.com/ai-and-ml/2026/08/26/debian-polls-its-developers-on-whether-to-burn-the-bots-tame-the-bots-or-let-em-loose/5292270",
-        "source": "Hacker News AI",
-        "score": 32
+        "score": 224
       },
       {
         "title": "Fake US thinktank set up and funded by Israel sought to game AI for propaganda",
         "url": "https://www.theguardian.com/world/2026/aug/26/fake-thinktank-israel-ai-propaganda",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 133
+      },
+      {
+        "title": "Z.ai confirms Ox Alpha is a new GLM-series model and will release its weights",
+        "url": "https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek",
+        "source": "Hacker News AI",
+        "score": 260
+      },
+      {
+        "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
+        "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
+        "source": "Hacker News AI",
+        "score": 542
+      },
+      {
+        "title": "Maiao: Gerrit-style code review workflow for GitHub, GitLab, Gitea, others",
+        "url": "https://github.com/runetes/maiao",
+        "source": "Hacker News AI",
+        "score": 100
+      },
+      {
+        "title": "Bill Gates: The turbulent AI era is here",
+        "url": "https://www.gatesnotes.com/work/make-ai-work-for-everyone/reader/a-turbulent-ai-era-and-critical-choices-to-make",
+        "source": "Hacker News AI",
+        "score": 81
       },
       {
         "title": "Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",
         "url": "https://github.com/swimmingbrain/texbrain",
         "source": "Hacker News AI",
-        "score": 104
+        "score": 106
       },
       {
         "title": "Training AI to Paint with Code",
@@ -185,6 +185,11 @@
     ],
     "art": [
       {
+        "title": " Marvel's dramatic Avengers: Endgame Encore colour change is dividing opinion ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/marvels-dramatic-colour-grading-change-in-avengers-endgame-encore-is-dividing-opinion",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Nope, the new Apple Mac mini ad isn't AI – and there's a delightful BTS video to prove it ",
         "url": "https://www.creativebloq.com/design/advertising/nope-the-new-apple-ad-isnt-ai-and-theres-a-bts-video-to-prove-it",
         "source": "Creative Bloq"
@@ -213,14 +218,29 @@
         "title": " I've found the brand with the most beautiful everyday essentials – and I'm obsessed with the sea of print and colour ",
         "url": "https://www.creativebloq.com/tech/accessories/ive-found-the-brand-with-the-most-beautiful-everyday-essentials-and-im-obsessed-with-the-sea-of-print-and-colour",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Calendly's finally fixed its toilet bowl of a logo design ",
-        "url": "https://www.creativebloq.com/design/logos-icons/calendlys-finally-fixed-its-toilet-bowl-of-a-logo-design",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Scientists may have found a shortcut to calorie restriction’s anti-aging benefits",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260826055508.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Manhattan-sized ice island breaks off Greenland’s Petermann Glacier",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260826055503.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "190-year-old DNA reveals a hidden pangolin species",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260826055500.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "NASA’s Roman Space Telescope is ready to hunt thousands of alien worlds",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260826055448.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Common medications may change your gut for years",
         "url": "https://www.sciencedaily.com/releases/2026/08/260824065605.htm",
@@ -235,29 +255,24 @@
         "title": "Three forgotten kings could rewrite the history of ancient Assyria",
         "url": "https://www.sciencedaily.com/releases/2026/08/260824065549.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "Supercharged “natural killer” cells could be a powerful new cancer weapon",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260824065546.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Bird flu is spreading. Your backyard feeder could make it worse",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260824065519.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists find hidden “highways” guiding animal evolution",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260824065514.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Too much or too little sleep may make your body age faster",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260823094156.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "The Sims' Biggest Rival Gets First Major Update Later This Year",
+        "url": "https://www.polygon.com/paralives-free-expansion-release-late-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Chinese Pokémon-like Open-World Game With 15 million Players Is Set to Launch Globally",
+        "url": "https://www.polygon.com/roco-kingdom-closed-beta-global-launch/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Star Wars Zero Company' does something the prequels never could",
+        "url": "https://www.polygon.com/star-wars-zero-company-review/",
+        "source": "Polygon"
+      },
       {
         "title": "'Buffy the Vampire Slayer' Star Breaks Silence on Canceled Hulu Sequel",
         "url": "https://www.polygon.com/buffy-new-sunnydale-seth-green-interview/",
@@ -276,21 +291,6 @@
       {
         "title": "What's Up with the Logan Trailer? The History of X-23",
         "url": "https://www.polygon.com/video/what-s-up-with-the-logan-trailer-the-history-of-x-23/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Weird History of Supergirl & Power Girl",
-        "url": "https://www.polygon.com/video/the-weird-history-of-supergirl-power-girl/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Making Sense of the DC Multiverse",
-        "url": "https://www.polygon.com/video/making-sense-of-the-dc-multiverse/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Mega Man: Dual Override' Is Capcom Kicking It Old-School",
-        "url": "https://www.polygon.com/mega-man-dual-override-hands-on/",
         "source": "Polygon"
       }
     ],
