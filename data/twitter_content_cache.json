@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-26T08:44:14.213006",
-    "total_items": 59
+    "last_updated": "2026-08-26T09:42:36.278012",
+    "total_items": 55
   },
   "content": {
     "tech": [
       {
+        "title": "Oldinsurancemaps.net is now a Charter Project",
+        "url": "https://openstreetmap.us/news/2026/08/oim-charter-project/",
+        "source": "Hacker News",
+        "score": 6
+      },
+      {
         "title": "Apple introduces M6 and M5 Ultra",
         "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
         "source": "Hacker News",
-        "score": 1120
+        "score": 1142
       },
       {
         "title": "Stalking the Wily Hacker: 40 years later – Cliff Stoll [video]",
         "url": "https://www.youtube.com/watch?v=656058JxTM0",
         "source": "Hacker News",
-        "score": 80
+        "score": 98
+      },
+      {
+        "title": "Show HN: Buslens – where can I get to by bus? (UK)",
+        "url": "https://rupertlinacre.com/buslens/",
+        "source": "Hacker News",
+        "score": 16
       },
       {
         "title": "FDA authorizes first wearable device that monitors ketone and blood sugar levels",
         "url": "https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar",
         "source": "Hacker News",
-        "score": 379
-      },
-      {
-        "title": "Harvest (IBM 7950): Supercomputer for cryptanalysis at the NSA in the Cold War",
-        "url": "https://spectrum.ieee.org/cold-war-codebreaker-nsa-ibm",
-        "source": "Hacker News",
-        "score": 32
-      },
-      {
-        "title": "Queryable Executables",
-        "url": "https://fzakaria.com/2026/08/24/actually-queryable-executables",
-        "source": "Hacker News",
-        "score": 168
+        "score": 397
       },
       {
         "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
         "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
         "source": "Hacker News",
-        "score": 466
+        "score": 483
+      },
+      {
+        "title": "Queryable Executables",
+        "url": "https://fzakaria.com/2026/08/24/actually-queryable-executables",
+        "source": "Hacker News",
+        "score": 181
+      },
+      {
+        "title": "Harvest (IBM 7950): Supercomputer for cryptanalysis at the NSA in the Cold War",
+        "url": "https://spectrum.ieee.org/cold-war-codebreaker-nsa-ibm",
+        "source": "Hacker News",
+        "score": 36
+      },
+      {
+        "title": "Show HN: Banking Access Index – 19 US banking providers, 8 countries, CC-BY",
+        "url": "https://www.globalsolo.global/data/banking-access-index",
+        "source": "Hacker News",
+        "score": 3
+      },
+      {
+        "title": "Value Classes Still Need Compiler Sympathy",
+        "url": "https://johan-sjolen.github.io/post/compiler-sympathy/compiler-sympathy/",
+        "source": "Hacker News",
+        "score": 3
       },
       {
         "title": "New Mac Studio with M5 Max and M5 Ultra",
         "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
         "source": "Hacker News",
-        "score": 765
+        "score": 768
+      },
+      {
+        "title": "RAG Is Simpler Than You Think",
+        "url": "https://www.lighthousenewsletter.com/p/rag-is-simpler-than-you-think",
+        "source": "Hacker News",
+        "score": 4
       },
       {
         "title": "Maiao: Gerrit-style code review workflow for GitHub, GitLab, Gitea, others",
         "url": "https://github.com/runetes/maiao",
         "source": "Hacker News",
-        "score": 78
+        "score": 81
       },
       {
         "title": "Black hole singularity is a surface not a point",
         "url": "https://arxiv.org/abs/2608.21590",
         "source": "Hacker News",
-        "score": 236
+        "score": 244
       },
       {
         "title": "When str.lower() is a security vulnerability in Python",
         "url": "https://sethmlarson.dev/when-str-lower-is-a-security-vulnerability",
         "source": "Hacker News",
-        "score": 117
-      },
-      {
-        "title": "New Mac mini, featuring M6 and M5 Pro",
-        "url": "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/",
-        "source": "Hacker News",
-        "score": 490
-      },
-      {
-        "title": "Agentic Context Management: Memory and Cost as Architecture Problems",
-        "url": "https://arxiv.org/abs/2607.21503",
-        "source": "Hacker News",
-        "score": 49
-      },
-      {
-        "title": "C2PA Cameras Do Not Survive Contact with Reality",
-        "url": "https://www.da.vidbuchanan.co.uk/blog/android-c2pa.html",
-        "source": "Hacker News",
-        "score": 145
-      },
-      {
-        "title": "Nitter and XCancel receive cease and desist notices",
-        "url": "https://github.com/zedeus/nitter/issues/1442",
-        "source": "Hacker News",
-        "score": 894
-      },
-      {
-        "title": "Building a backyard office, the build and cost breakdown",
-        "url": "https://www.imkylelambert.com/articles/building-a-backyard-office-the-build-and-cost-breakdown",
-        "source": "Hacker News",
-        "score": 338
+        "score": 123
       }
     ],
     "ai": [
@@ -101,31 +101,25 @@
         "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
         "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
         "source": "Hacker News AI",
-        "score": 466
+        "score": 483
+      },
+      {
+        "title": "RAG Is Simpler Than You Think",
+        "url": "https://www.lighthousenewsletter.com/p/rag-is-simpler-than-you-think",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "Maiao: Gerrit-style code review workflow for GitHub, GitLab, Gitea, others",
         "url": "https://github.com/runetes/maiao",
         "source": "Hacker News AI",
-        "score": 78
+        "score": 81
       },
       {
         "title": "Disrupting a new covert influence campaign from Russia",
         "url": "https://openai.com/index/disrupting-malicious-uses-of-ai-influence-campaign-russia/",
         "source": "Hacker News AI",
-        "score": 26
-      },
-      {
-        "title": "Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",
-        "url": "https://github.com/swimmingbrain/texbrain",
-        "source": "Hacker News AI",
-        "score": 92
-      },
-      {
-        "title": "Show HN: I made a Raspberry with Qwen my local car AI",
-        "url": "https://github.com/ThinkOffApp/CarWatch",
-        "source": "Hacker News AI",
-        "score": 135
+        "score": 48
       },
       {
         "title": "Clara (YC P26) is hiring a growth engineer to bring AI doctors to market",
@@ -134,22 +128,46 @@
         "score": 1
       },
       {
-        "title": "I miss the old Claude Code",
-        "url": "https://alexkras.com/focus-is-the-main-feature-why-i-miss-the-old-claude-code/",
+        "title": "Show HN: I made a Raspberry with Qwen my local car AI",
+        "url": "https://github.com/ThinkOffApp/CarWatch",
         "source": "Hacker News AI",
-        "score": 22
+        "score": 141
+      },
+      {
+        "title": "My Anti-AI Manifesto",
+        "url": "http://alessandrorosa.altervista.org/pages/my.anti.ai.manifesto.html",
+        "source": "Hacker News AI",
+        "score": 4
+      },
+      {
+        "title": "Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",
+        "url": "https://github.com/swimmingbrain/texbrain",
+        "source": "Hacker News AI",
+        "score": 95
+      },
+      {
+        "title": "CMU Introduction To Deep Learning 11-785, Fall 2026: Lecture 1 [video]",
+        "url": "https://www.youtube.com/watch?v=40Ql7hdaJfU",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "Training AI to Paint with Code",
         "url": "https://surya.website/rling-qwen-to-paint-with-code",
         "source": "Hacker News AI",
-        "score": 207
+        "score": 208
       },
       {
-        "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
-        "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
+        "title": "I miss the old Claude Code",
+        "url": "https://alexkras.com/focus-is-the-main-feature-why-i-miss-the-old-claude-code/",
         "source": "Hacker News AI",
-        "score": 846
+        "score": 24
+      },
+      {
+        "title": "How to Build a McKinsey-Style PowerPoint with AI: 8 Rules for Consulting Slides",
+        "url": "https://medium.com/@2315610426/how-to-build-a-mckinsey-style-powerpoint-with-ai-8-simple-rules-for-consulting-grade-slides-a58c009dcb72",
+        "source": "Hacker News AI",
+        "score": 3
       }
     ],
     "news": [
@@ -189,43 +207,7 @@
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " Calendly's finally fixed its toilet bowl of a logo design ",
-        "url": "https://www.creativebloq.com/design/logos-icons/calendlys-finally-fixed-its-toilet-bowl-of-a-logo-design",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " A dev recreated Super Mario Bros level 1 pixel-by-pixel in free Godot Engine ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/a-dev-recreated-super-mario-bros-level-1-pixel-by-pixel-in-free-godot-engine",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How did the violent Obsession-inspired golf ad ever get approved? ",
-        "url": "https://www.creativebloq.com/design/advertising/violent-obsession-inspired-golf-ad-shows-the-risk-of-brands-chasing-viral-trends",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How Screenbound's impossible '5D' platformer concept became a real game ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/how-screenbounds-impossible-5d-platformer-concept-became-a-real-game",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apple's folding iPhone Ultra could have one fatal flaw for creatives ",
-        "url": "https://www.creativebloq.com/design/product-design/apples-folding-iphone-ultra-could-have-one-fatal-flaw-for-creatives",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Duskbloods is FromSoftware at its weirdest – 5 things I learned from playing the Switch 2 exclusive ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/the-duskbloods-is-fromsoftware-at-its-weirdest-5-things-i-learned-from-playing-the-switch-2-exclusive",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The glaring design fail in the new iPhone Safari logo is proof that Apple's lost its direction ",
-        "url": "https://www.creativebloq.com/design/logos-icons/apples-glaring-safari-logo-design-fail-shows-the-company-has-lost-its-direction",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "Common medications may change your gut for years",
@@ -265,6 +247,11 @@
     ],
     "gaming": [
       {
+        "title": "The Witcher 3 Songs of the Past’s First Gameplay Demo Showcases Geralt’s New Weapon and Deadly Enemies",
+        "url": "https://www.polygon.com/witcher-3-songs-past-preview-gameplay-gamescom/",
+        "source": "Polygon"
+      },
+      {
         "title": "10 Years Ago, Anime’s Most Powerful Quote Is Still an All Time Classic",
         "url": "https://www.polygon.com/mob-psycho-100-best-quote-anime/",
         "source": "Polygon"
@@ -292,11 +279,6 @@
       {
         "title": "Taylor Sheridan and Jon Bernthal's 121-minute 10/10 Action Western Remains a Streaming Smash Hit",
         "url": "https://www.polygon.com/taylor-sheridan-jon-bernthal-sicario-streaming-hbo-max-august-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Say Goodbye to DC's 4-Part Sci-Fi Action Series Leaving Netflix Next Week",
-        "url": "https://www.polygon.com/black-lightning-leaving-netflix-superhero-sci-fi-action-series/",
         "source": "Polygon"
       }
     ],
