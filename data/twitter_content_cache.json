@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-26T05:35:06.368962",
-    "total_items": 59
+    "last_updated": "2026-08-26T06:51:22.256522",
+    "total_items": 56
   },
   "content": {
     "tech": [
       {
+        "title": "More than half of adults in U.S. say they lack basic statistical understanding",
+        "url": "https://www.psu.edu/news/research/story/more-half-adults-us-say-they-lack-basic-statistical-understanding",
+        "source": "Hacker News",
+        "score": 28
+      },
+      {
         "title": "Apple introduces M6 and M5 Ultra",
         "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
         "source": "Hacker News",
-        "score": 1043
+        "score": 1077
       },
       {
         "title": "FDA authorizes first wearable device that monitors ketone and blood sugar levels",
         "url": "https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar",
         "source": "Hacker News",
-        "score": 333
+        "score": 353
       },
       {
         "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
         "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
         "source": "Hacker News",
-        "score": 398
+        "score": 426
       },
       {
-        "title": "New Mac Studio with M5 Max and M5 Ultra",
-        "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
+        "title": "Stalking the Wily Hacker: 40 years later – Cliff Stoll [video]",
+        "url": "https://www.youtube.com/watch?v=656058JxTM0",
         "source": "Hacker News",
-        "score": 735
+        "score": 31
       },
       {
         "title": "Queryable Executables",
         "url": "https://fzakaria.com/2026/08/24/actually-queryable-executables",
         "source": "Hacker News",
-        "score": 69
+        "score": 111
+      },
+      {
+        "title": "New Mac Studio with M5 Max and M5 Ultra",
+        "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
+        "source": "Hacker News",
+        "score": 747
+      },
+      {
+        "title": "Secret Cold War IBM Supercomputer Was Built for One Job",
+        "url": "https://spectrum.ieee.org/cold-war-codebreaker-nsa-ibm",
+        "source": "Hacker News",
+        "score": 6
       },
       {
         "title": "Maiao: Gerrit-style code review workflow for GitHub, GitLab, Gitea, others",
         "url": "https://github.com/runetes/maiao",
         "source": "Hacker News",
-        "score": 53
+        "score": 62
       },
       {
         "title": "Black hole singularity is a surface not a point",
         "url": "https://arxiv.org/abs/2608.21590",
         "source": "Hacker News",
-        "score": 216
+        "score": 223
       },
       {
         "title": "New Mac mini, featuring M6 and M5 Pro",
         "url": "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/",
         "source": "Hacker News",
-        "score": 462
+        "score": 478
       },
       {
-        "title": "Students prefer Gemini over ChatGPT and Claude for AI essays in blind tests",
-        "url": "https://studyarena.com/blog/chatgpt-vs-claude-vs-gemini-college-essays-2026",
-        "source": "Hacker News",
-        "score": 11
-      },
-      {
-        "title": "When str.lower() is a security vulnerability in Python – Seth Larson",
+        "title": "When str.lower() is a security vulnerability in Python",
         "url": "https://sethmlarson.dev/when-str-lower-is-a-security-vulnerability",
         "source": "Hacker News",
-        "score": 92
-      },
-      {
-        "title": "C2PA Cameras Do Not Survive Contact with Reality",
-        "url": "https://www.da.vidbuchanan.co.uk/blog/android-c2pa.html",
-        "source": "Hacker News",
-        "score": 112
+        "score": 98
       },
       {
         "title": "Agentic Context Management: Memory and Cost as Architecture Problems",
         "url": "https://arxiv.org/abs/2607.21503",
         "source": "Hacker News",
-        "score": 14
+        "score": 23
+      },
+      {
+        "title": "C2PA Cameras Do Not Survive Contact with Reality",
+        "url": "https://www.da.vidbuchanan.co.uk/blog/android-c2pa.html",
+        "source": "Hacker News",
+        "score": 126
       },
       {
         "title": "Nitter and XCancel receive cease and desist notices",
         "url": "https://github.com/zedeus/nitter/issues/1442",
         "source": "Hacker News",
-        "score": 756
-      },
-      {
-        "title": "Building a backyard office, the build and cost breakdown",
-        "url": "https://www.imkylelambert.com/articles/building-a-backyard-office-the-build-and-cost-breakdown",
-        "source": "Hacker News",
-        "score": 305
-      },
-      {
-        "title": "Run OpenBSD on DigitalOcean for $4/month",
-        "url": "https://nil.wallyjones.com/run-openbsd-on-digitalocean-for-4month/",
-        "source": "Hacker News",
-        "score": 142
+        "score": 808
       }
     ],
     "ai": [
@@ -101,31 +101,25 @@
         "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
         "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
         "source": "Hacker News AI",
-        "score": 398
+        "score": 426
       },
       {
         "title": "Maiao: Gerrit-style code review workflow for GitHub, GitLab, Gitea, others",
         "url": "https://github.com/runetes/maiao",
         "source": "Hacker News AI",
-        "score": 53
-      },
-      {
-        "title": "Students prefer Gemini over ChatGPT and Claude for AI essays in blind tests",
-        "url": "https://studyarena.com/blog/chatgpt-vs-claude-vs-gemini-college-essays-2026",
-        "source": "Hacker News AI",
-        "score": 11
+        "score": 62
       },
       {
         "title": "Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",
         "url": "https://github.com/swimmingbrain/texbrain",
         "source": "Hacker News AI",
-        "score": 71
+        "score": 77
       },
       {
         "title": "Show HN: I made a Raspberry with Qwen my local car AI",
         "url": "https://github.com/ThinkOffApp/CarWatch",
         "source": "Hacker News AI",
-        "score": 119
+        "score": 127
       },
       {
         "title": "Clara (YC P26) is hiring a growth engineer to bring AI doctors to market",
@@ -137,19 +131,7 @@
         "title": "Training AI to Paint with Code",
         "url": "https://surya.website/rling-qwen-to-paint-with-code",
         "source": "Hacker News AI",
-        "score": 199
-      },
-      {
-        "title": "The brain may be about to have its Ozempic moment",
-        "url": "https://www.economist.com/science-and-technology/2026/08/11/the-brain-may-be-about-to-have-its-ozempic-moment",
-        "source": "Hacker News AI",
-        "score": 73
-      },
-      {
-        "title": "MS Paint and Photos inivisibly watermark even locally generated output with GUID",
-        "url": "https://xusheng.dev/posts/reversing/mspaint_invisible_watermark/main/",
-        "source": "Hacker News AI",
-        "score": 843
+        "score": 201
       }
     ],
     "news": [
@@ -191,6 +173,11 @@
     ],
     "art": [
       {
+        "title": " A dev recreated Super Mario Bros level 1 pixel-by-pixel in free Godot Engine ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/a-dev-recreated-super-mario-bros-level-1-pixel-by-pixel-in-free-godot-engine",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " How did the violent Obsession-inspired golf ad ever get approved? ",
         "url": "https://www.creativebloq.com/design/advertising/violent-obsession-inspired-golf-ad-shows-the-risk-of-brands-chasing-viral-trends",
         "source": "Creative Bloq"
@@ -218,11 +205,6 @@
       {
         "title": " AI is killing folk graphic design, and the resulting \"Lovecraftian horrors\" are making people want to never eat out again ",
         "url": "https://www.creativebloq.com/ai/ai-art/ai-is-killing-folk-graphic-design-and-the-resulting-lovecraftian-horrors-are-making-people-want-to-never-eat-out-again",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " While everyone's laughing at John Lewis's ridiculous university packing list, these dupes will save you hundreds of pounds ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/everyones-roasting-john-lewiss-list-uni-essentials-here-are-some-cheaper-options",
         "source": "Creative Bloq"
       }
     ],
