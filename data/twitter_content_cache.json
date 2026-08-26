@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-26T06:51:22.256522",
-    "total_items": 56
+    "last_updated": "2026-08-26T07:47:23.386126",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
-        "title": "More than half of adults in U.S. say they lack basic statistical understanding",
-        "url": "https://www.psu.edu/news/research/story/more-half-adults-us-say-they-lack-basic-statistical-understanding",
-        "source": "Hacker News",
-        "score": 28
-      },
-      {
         "title": "Apple introduces M6 and M5 Ultra",
         "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
         "source": "Hacker News",
-        "score": 1077
-      },
-      {
-        "title": "FDA authorizes first wearable device that monitors ketone and blood sugar levels",
-        "url": "https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar",
-        "source": "Hacker News",
-        "score": 353
-      },
-      {
-        "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
-        "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
-        "source": "Hacker News",
-        "score": 426
+        "score": 1100
       },
       {
         "title": "Stalking the Wily Hacker: 40 years later – Cliff Stoll [video]",
         "url": "https://www.youtube.com/watch?v=656058JxTM0",
         "source": "Hacker News",
-        "score": 31
+        "score": 62
+      },
+      {
+        "title": "FDA authorizes first wearable device that monitors ketone and blood sugar levels",
+        "url": "https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar",
+        "source": "Hacker News",
+        "score": 367
+      },
+      {
+        "title": "Harvest (IBM 7950): Supercomputer for cryptanalysis at the NSA in the Cold War",
+        "url": "https://spectrum.ieee.org/cold-war-codebreaker-nsa-ibm",
+        "source": "Hacker News",
+        "score": 20
       },
       {
         "title": "Queryable Executables",
         "url": "https://fzakaria.com/2026/08/24/actually-queryable-executables",
         "source": "Hacker News",
-        "score": 111
+        "score": 139
+      },
+      {
+        "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
+        "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
+        "source": "Hacker News",
+        "score": 448
       },
       {
         "title": "New Mac Studio with M5 Max and M5 Ultra",
         "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
         "source": "Hacker News",
-        "score": 747
-      },
-      {
-        "title": "Secret Cold War IBM Supercomputer Was Built for One Job",
-        "url": "https://spectrum.ieee.org/cold-war-codebreaker-nsa-ibm",
-        "source": "Hacker News",
-        "score": 6
-      },
-      {
-        "title": "Maiao: Gerrit-style code review workflow for GitHub, GitLab, Gitea, others",
-        "url": "https://github.com/runetes/maiao",
-        "source": "Hacker News",
-        "score": 62
-      },
-      {
-        "title": "Black hole singularity is a surface not a point",
-        "url": "https://arxiv.org/abs/2608.21590",
-        "source": "Hacker News",
-        "score": 223
-      },
-      {
-        "title": "New Mac mini, featuring M6 and M5 Pro",
-        "url": "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/",
-        "source": "Hacker News",
-        "score": 478
-      },
-      {
-        "title": "When str.lower() is a security vulnerability in Python",
-        "url": "https://sethmlarson.dev/when-str-lower-is-a-security-vulnerability",
-        "source": "Hacker News",
-        "score": 98
+        "score": 756
       },
       {
         "title": "Agentic Context Management: Memory and Cost as Architecture Problems",
         "url": "https://arxiv.org/abs/2607.21503",
         "source": "Hacker News",
-        "score": 23
+        "score": 40
+      },
+      {
+        "title": "Black hole singularity is a surface not a point",
+        "url": "https://arxiv.org/abs/2608.21590",
+        "source": "Hacker News",
+        "score": 230
+      },
+      {
+        "title": "New Mac mini, featuring M6 and M5 Pro",
+        "url": "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/",
+        "source": "Hacker News",
+        "score": 487
+      },
+      {
+        "title": "Maiao: Gerrit-style code review workflow for GitHub, GitLab, Gitea, others",
+        "url": "https://github.com/runetes/maiao",
+        "source": "Hacker News",
+        "score": 71
+      },
+      {
+        "title": "When str.lower() is a security vulnerability in Python",
+        "url": "https://sethmlarson.dev/when-str-lower-is-a-security-vulnerability",
+        "source": "Hacker News",
+        "score": 107
       },
       {
         "title": "C2PA Cameras Do Not Survive Contact with Reality",
         "url": "https://www.da.vidbuchanan.co.uk/blog/android-c2pa.html",
         "source": "Hacker News",
-        "score": 126
+        "score": 138
+      },
+      {
+        "title": "More than half of adults in U.S. say they lack basic statistical understanding",
+        "url": "https://www.psu.edu/news/research/story/more-half-adults-us-say-they-lack-basic-statistical-understanding",
+        "source": "Hacker News",
+        "score": 64
       },
       {
         "title": "Nitter and XCancel receive cease and desist notices",
         "url": "https://github.com/zedeus/nitter/issues/1442",
         "source": "Hacker News",
-        "score": 808
+        "score": 852
       }
     ],
     "ai": [
@@ -101,25 +101,25 @@
         "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
         "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
         "source": "Hacker News AI",
-        "score": 426
+        "score": 448
       },
       {
         "title": "Maiao: Gerrit-style code review workflow for GitHub, GitLab, Gitea, others",
         "url": "https://github.com/runetes/maiao",
         "source": "Hacker News AI",
-        "score": 62
+        "score": 71
       },
       {
         "title": "Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",
         "url": "https://github.com/swimmingbrain/texbrain",
         "source": "Hacker News AI",
-        "score": 77
+        "score": 85
       },
       {
         "title": "Show HN: I made a Raspberry with Qwen my local car AI",
         "url": "https://github.com/ThinkOffApp/CarWatch",
         "source": "Hacker News AI",
-        "score": 127
+        "score": 130
       },
       {
         "title": "Clara (YC P26) is hiring a growth engineer to bring AI doctors to market",
@@ -131,7 +131,13 @@
         "title": "Training AI to Paint with Code",
         "url": "https://surya.website/rling-qwen-to-paint-with-code",
         "source": "Hacker News AI",
-        "score": 201
+        "score": 206
+      },
+      {
+        "title": "I miss the old Claude Code",
+        "url": "https://alexkras.com/focus-is-the-main-feature-why-i-miss-the-old-claude-code/",
+        "source": "Hacker News AI",
+        "score": 8
       }
     ],
     "news": [
@@ -173,6 +179,11 @@
     ],
     "art": [
       {
+        "title": " Calendly's finally fixed its toilet bowl of a logo design ",
+        "url": "https://www.creativebloq.com/design/logos-icons/calendlys-finally-fixed-its-toilet-bowl-of-a-logo-design",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " A dev recreated Super Mario Bros level 1 pixel-by-pixel in free Godot Engine ",
         "url": "https://www.creativebloq.com/3d/video-game-design/a-dev-recreated-super-mario-bros-level-1-pixel-by-pixel-in-free-godot-engine",
         "source": "Creative Bloq"
@@ -200,11 +211,6 @@
       {
         "title": " The glaring design fail in the new iPhone Safari logo is proof that Apple's lost its direction ",
         "url": "https://www.creativebloq.com/design/logos-icons/apples-glaring-safari-logo-design-fail-shows-the-company-has-lost-its-direction",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " AI is killing folk graphic design, and the resulting \"Lovecraftian horrors\" are making people want to never eat out again ",
-        "url": "https://www.creativebloq.com/ai/ai-art/ai-is-killing-folk-graphic-design-and-the-resulting-lovecraftian-horrors-are-making-people-want-to-never-eat-out-again",
         "source": "Creative Bloq"
       }
     ],
@@ -247,6 +253,16 @@
     ],
     "gaming": [
       {
+        "title": "Metro 2039 Dev Reveals How the Ukraine War Led to the Series’ Darkest Game Yet",
+        "url": "https://www.polygon.com/metro-2039-interview-preview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Activision Embraces Physical Games With 39 Classic Rereleases",
+        "url": "https://www.polygon.com/atari-actvision-collection-announcement/",
+        "source": "Polygon"
+      },
+      {
         "title": "CBS's Legendary 156-Episode Sci-Fi Anthology Series is Officially Free to Watch on Streaming",
         "url": "https://www.polygon.com/cbs-sci-fi-shows-twilight-zone-free-streaming/",
         "source": "Polygon"
@@ -269,16 +285,6 @@
       {
         "title": "Steam's Most Intriguing Slow-Burn Adventure Game Takes 400 Real-World Days to Finish",
         "url": "https://www.polygon.com/the-longing-steam/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The 5 Most Unforgettable Moments of Critical Role Campaign 4 So Far",
-        "url": "https://www.polygon.com/critical-role-campaign-4-5-best-moments/",
-        "source": "Polygon"
-      },
-      {
-        "title": "After 25 Years, Sci-fi Cult Classic Donnie Darko is Officially Getting a Proper Sequel",
-        "url": "https://www.polygon.com/donnie-darko-sequel-book-richard-kelly/",
         "source": "Polygon"
       }
     ],
