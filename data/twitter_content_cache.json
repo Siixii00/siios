@@ -1,125 +1,131 @@
 {
   "metadata": {
-    "last_updated": "2026-08-26T01:21:29.027922",
-    "total_items": 50
+    "last_updated": "2026-08-26T03:05:54.709306",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
-        "title": "FDA authorizes first wearable device that monitors ketone and blood sugar levels",
-        "url": "https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar",
-        "source": "Hacker News",
-        "score": 251
-      },
-      {
         "title": "Apple introduces M6 and M5 Ultra",
         "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-m6-and-m5-ultra-for-a-big-leap-in-performance-and-ai-compute/",
         "source": "Hacker News",
-        "score": 946
+        "score": 990
+      },
+      {
+        "title": "FDA authorizes first wearable device that monitors ketone and blood sugar levels",
+        "url": "https://www.fda.gov/news-events/press-announcements/fda-authorizes-first-wearable-device-continuously-monitors-both-ketone-levels-and-blood-sugar",
+        "source": "Hacker News",
+        "score": 304
+      },
+      {
+        "title": "The brain may be about to have its Ozempic moment",
+        "url": "https://www.economist.com/science-and-technology/2026/08/11/the-brain-may-be-about-to-have-its-ozempic-moment",
+        "source": "Hacker News",
+        "score": 45
       },
       {
         "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
         "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
         "source": "Hacker News",
-        "score": 319
+        "score": 355
       },
       {
         "title": "New Mac Studio with M5 Max and M5 Ultra",
         "url": "https://www.apple.com/newsroom/2026/08/apple-introduces-new-mac-studio-with-m5-max-and-m5-ultra/",
         "source": "Hacker News",
-        "score": 699
-      },
-      {
-        "title": "Python's pre-declared constants are kinda weird",
-        "url": "https://sebsite.pw/w/20260801-pythonconstants.html",
-        "source": "Hacker News",
-        "score": 134
-      },
-      {
-        "title": "Maiao: Gerrit-style code review workflow for GitHub, GitLab, Gitea, others",
-        "url": "https://github.com/runetes/maiao",
-        "source": "Hacker News",
-        "score": 25
+        "score": 713
       },
       {
         "title": "Black hole singularity is a surface not a point",
         "url": "https://arxiv.org/abs/2608.21590",
         "source": "Hacker News",
-        "score": 183
+        "score": 204
       },
       {
         "title": "When str.lower() is a security vulnerability in Python – Seth Larson",
         "url": "https://sethmlarson.dev/when-str-lower-is-a-security-vulnerability",
         "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "C2PA Cameras Do Not Survive Contact with Reality",
-        "url": "https://www.da.vidbuchanan.co.uk/blog/android-c2pa.html",
-        "source": "Hacker News",
-        "score": 73
-      },
-      {
-        "title": "Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",
-        "url": "https://github.com/swimmingbrain/texbrain",
-        "source": "Hacker News",
-        "score": 43
+        "score": 76
       },
       {
         "title": "New Mac mini, featuring M6 and M5 Pro",
         "url": "https://www.apple.com/newsroom/2026/08/apple-unveils-a-more-powerful-mac-mini-featuring-the-all-new-m6-and-m5-pro/",
         "source": "Hacker News",
-        "score": 419
+        "score": 445
       },
       {
-        "title": "Bomb fishing is wreaking havoc on Indonesia's coral reefs",
-        "url": "https://e360.yale.edu/digest/bomb-fishing-coral-reefs",
+        "title": "C2PA Cameras Do Not Survive Contact with Reality",
+        "url": "https://www.da.vidbuchanan.co.uk/blog/android-c2pa.html",
         "source": "Hacker News",
-        "score": 261
+        "score": 91
+      },
+      {
+        "title": "Maiao: Gerrit-style code review workflow for GitHub, GitLab, Gitea, others",
+        "url": "https://github.com/runetes/maiao",
+        "source": "Hacker News",
+        "score": 37
+      },
+      {
+        "title": "Queryable Executables",
+        "url": "https://fzakaria.com/2026/08/24/actually-queryable-executables",
+        "source": "Hacker News",
+        "score": 26
+      },
+      {
+        "title": "Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",
+        "url": "https://github.com/swimmingbrain/texbrain",
+        "source": "Hacker News",
+        "score": 57
       },
       {
         "title": "Nitter and XCancel receive cease and desist notices",
         "url": "https://github.com/zedeus/nitter/issues/1442",
         "source": "Hacker News",
-        "score": 609
+        "score": 690
       },
       {
         "title": "Run OpenBSD on DigitalOcean for $4/month",
         "url": "https://nil.wallyjones.com/run-openbsd-on-digitalocean-for-4month/",
         "source": "Hacker News",
-        "score": 118
+        "score": 133
       },
       {
-        "title": "Building a backyard office, the build and cost breakdown",
-        "url": "https://www.imkylelambert.com/articles/building-a-backyard-office-the-build-and-cost-breakdown",
+        "title": "Bomb fishing is wreaking havoc on Indonesia's coral reefs",
+        "url": "https://e360.yale.edu/digest/bomb-fishing-coral-reefs",
         "source": "Hacker News",
-        "score": 261
+        "score": 281
       }
     ],
     "ai": [
       {
+        "title": "The brain may be about to have its Ozempic moment",
+        "url": "https://www.economist.com/science-and-technology/2026/08/11/the-brain-may-be-about-to-have-its-ozempic-moment",
+        "source": "Hacker News AI",
+        "score": 45
+      },
+      {
         "title": "OpenAI Jalapeño: Better than Nvidia Blackwell",
         "url": "https://newsletter.semianalysis.com/p/openai-jalapeno-better-than-nvidia",
         "source": "Hacker News AI",
-        "score": 319
+        "score": 355
       },
       {
         "title": "Maiao: Gerrit-style code review workflow for GitHub, GitLab, Gitea, others",
         "url": "https://github.com/runetes/maiao",
         "source": "Hacker News AI",
-        "score": 25
+        "score": 37
       },
       {
         "title": "Show HN: TeXbrain, a LaTeX editor that runs pdfTeX in the browser via WASM",
         "url": "https://github.com/swimmingbrain/texbrain",
         "source": "Hacker News AI",
-        "score": 43
+        "score": 57
       },
       {
         "title": "Show HN: I made a Raspberry with Qwen my local car AI",
         "url": "https://github.com/ThinkOffApp/CarWatch",
         "source": "Hacker News AI",
-        "score": 97
+        "score": 111
       },
       {
         "title": "Clara (YC P26) is hiring a growth engineer to bring AI doctors to market",
@@ -131,13 +137,7 @@
         "title": "Training AI to Paint with Code",
         "url": "https://surya.website/rling-qwen-to-paint-with-code",
         "source": "Hacker News AI",
-        "score": 195
-      },
-      {
-        "title": "Bookshelf – Self-hosted eBook library that runs on object storage",
-        "url": "https://github.com/murerkinn/bookshelf",
-        "source": "Hacker News AI",
-        "score": 165
+        "score": 197
       }
     ],
     "news": [
@@ -177,7 +177,43 @@
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " How did the violent Obsession-inspired golf ad ever get approved? ",
+        "url": "https://www.creativebloq.com/design/advertising/violent-obsession-inspired-golf-ad-shows-the-risk-of-brands-chasing-viral-trends",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How Screenbound's impossible '5D' platformer concept became a real game ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/how-screenbounds-impossible-5d-platformer-concept-became-a-real-game",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Apple's folding iPhone Ultra could have one fatal flaw for creatives ",
+        "url": "https://www.creativebloq.com/design/product-design/apples-folding-iphone-ultra-could-have-one-fatal-flaw-for-creatives",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Duskbloods is FromSoftware at its weirdest – 5 things I learned from playing the Switch 2 exclusive ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/the-duskbloods-is-fromsoftware-at-its-weirdest-5-things-i-learned-from-playing-the-switch-2-exclusive",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The glaring design fail in the new iPhone Safari logo is proof that Apple's lost its direction ",
+        "url": "https://www.creativebloq.com/design/logos-icons/apples-glaring-safari-logo-design-fail-shows-the-company-has-lost-its-direction",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " AI is killing folk graphic design, and the resulting \"Lovecraftian horrors\" are making people want to never eat out again ",
+        "url": "https://www.creativebloq.com/ai/ai-art/ai-is-killing-folk-graphic-design-and-the-resulting-lovecraftian-horrors-are-making-people-want-to-never-eat-out-again",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " While everyone's laughing at John Lewis's ridiculous university packing list, these dupes will save you hundreds of pounds ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/everyones-roasting-john-lewiss-list-uni-essentials-here-are-some-cheaper-options",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "Common medications may change your gut for years",
@@ -187,6 +223,11 @@
       {
         "title": "Atomic catalyst unlocks the hidden value of plant waste",
         "url": "https://www.sciencedaily.com/releases/2026/08/260824065601.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Three forgotten kings could rewrite the history of ancient Assyria",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260824065549.htm",
         "source": "Science Daily"
       },
       {
@@ -208,14 +249,14 @@
         "title": "Too much or too little sleep may make your body age faster",
         "url": "https://www.sciencedaily.com/releases/2026/08/260823094156.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "Screen time at ages 1 and 6 may matter more than parents realize",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260823094152.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "Taylor Sheridan and Jon Bernthal's 121-minute 10/10 Action Western Remains a Streaming Smash Hit",
+        "url": "https://www.polygon.com/taylor-sheridan-jon-bernthal-sicario-streaming-hbo-max-august-2026/",
+        "source": "Polygon"
+      },
       {
         "title": "Say Goodbye to DC's 4-Part Sci-Fi Action Series Leaving Netflix Next Week",
         "url": "https://www.polygon.com/black-lightning-leaving-netflix-superhero-sci-fi-action-series/",
@@ -244,11 +285,6 @@
       {
         "title": "33 Years Later, Magic’s Head Designer Reveals One of His Biggest Regrets",
         "url": "https://www.polygon.com/mtg-secret-regrets-magic-artifacts-enchantments-card-type-mark-rosewater-blog/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Witcher 3's 10/10 DLC Is Now Completely Free Ahead of Remaster",
-        "url": "https://www.polygon.com/witcher-3-free-dlc-blood-wine-hearts-stone-how-to-get-switch/",
         "source": "Polygon"
       }
     ],
