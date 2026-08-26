@@ -1,173 +1,179 @@
 {
   "metadata": {
-    "last_updated": "2026-08-26T19:04:38.485348",
-    "total_items": 62
+    "last_updated": "2026-08-26T22:49:10.253352",
+    "total_items": 63
   },
   "content": {
     "tech": [
       {
+        "title": "Tailcat – Like netcat, but over Tailscale’s data plane",
+        "url": "https://github.com/tailscale/tailcat",
+        "source": "Hacker News",
+        "score": 411
+      },
+      {
         "title": "GLM-5.3-Flash",
         "url": "https://z.ai/blog/glm-5.3-flash",
         "source": "Hacker News",
-        "score": 612
+        "score": 803
       },
       {
-        "title": "An ongoing 3D-printer AGPL violation",
-        "url": "https://lwn.net/SubscriberLink/1089390/46116614cc74b814/",
+        "title": "Actinide is first startup to produce high-assay low-enriched uranium (HALEU)",
+        "url": "https://www.actinideinc.com/press/actinide-becomes-first-startup-to-ever-enrich-natural-uranium-to-produce-haleu",
         "source": "Hacker News",
-        "score": 94
+        "score": 124
       },
       {
         "title": "AWS Acquires DuckLabs",
         "url": "https://ducklabs.com/news/2026/08/26/ducklabs-to-join-aws",
         "source": "Hacker News",
-        "score": 809
+        "score": 915
       },
       {
-        "title": "Tailcat",
-        "url": "https://github.com/tailscale/tailcat",
+        "title": "An ongoing 3D-printer AGPL violation",
+        "url": "https://lwn.net/SubscriberLink/1089390/46116614cc74b814/",
         "source": "Hacker News",
-        "score": 113
+        "score": 249
       },
       {
-        "title": "Study Reveals UnitedHealth's Profit Margins Four Times What It Claimed [pdf]",
-        "url": "https://insurancewatchdogcoalition.com/wp-content/uploads/2026/08/UHG-Profits-Study_August-2026.pdf",
+        "title": "GitHub Outage Tracker: Is GitHub Cooked?",
+        "url": "https://isgithubcooked.com/",
         "source": "Hacker News",
-        "score": 49
+        "score": 105
       },
       {
-        "title": "Disruption with Some GitHub Services",
-        "url": "https://www.githubstatus.com/incidents/hcbtzksccj2f",
+        "title": "The Hugging Face incident and the road ahead",
+        "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
         "source": "Hacker News",
-        "score": 190
+        "score": 116
       },
       {
-        "title": "The Tariff Cost: analysis of the costs to Americans from new tariffs on Canada",
-        "url": "https://thetariffcost.com/",
+        "title": "Serve Markdown to AI Agents with Accept Headers",
+        "url": "https://acceptmarkdown.com/",
         "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Qwen3.8-Flash-Next",
-        "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
-        "source": "Hacker News",
-        "score": 487
-      },
-      {
-        "title": "Nebula Sans",
-        "url": "https://www.nebulasans.com",
-        "source": "Hacker News",
-        "score": 225
-      },
-      {
-        "title": "Tim Curry has died",
-        "url": "https://www.theguardian.com/film/2026/aug/26/tim-curry-dies-rocky-horror-show-stephen-king-it-legend-film",
-        "source": "Hacker News",
-        "score": 344
-      },
-      {
-        "title": "Taylor Farms: How One Company's Reach Became a National Risk",
-        "url": "https://farmaction.us/taylorfarmsreport/",
-        "source": "Hacker News",
-        "score": 158
+        "score": 63
       },
       {
         "title": "CoMaps: The Offline App That Guided Rescuers Without a Signal in Venezuela",
         "url": "https://hotosm.org/en/news/comaps-the-offline-app-that-guided-rescuers-without-a-signal-in-the-venezuela-response/",
         "source": "Hacker News",
-        "score": 41
+        "score": 165
       },
       {
-        "title": "It’s so hard to finish an idea that is not yours and is just suggested by AI",
-        "url": "https://www.ssp.sh/brain/using-obsidian-with-ai/",
+        "title": "Qwen3.8-Flash-Next",
+        "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
         "source": "Hacker News",
-        "score": 90
+        "score": 593
+      },
+      {
+        "title": "Disruption with Some GitHub Services",
+        "url": "https://www.githubstatus.com/incidents/hcbtzksccj2f",
+        "source": "Hacker News",
+        "score": 252
+      },
+      {
+        "title": "Nebula Sans",
+        "url": "https://www.nebulasans.com",
+        "source": "Hacker News",
+        "score": 310
       },
       {
         "title": "FDA Approves First in Class Targeted Therapy for Metastatic Pancreatic Cancer",
         "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-class-targeted-therapy-metastatic-pancreatic-cancer",
         "source": "Hacker News",
-        "score": 42
+        "score": 133
       },
       {
-        "title": "YouTube Format IDs",
-        "url": "https://gist.github.com/MartinEesmaa/2f4b261cb90a47e9c41ba115a011a4aa",
+        "title": "mold: A Parallel Linker",
+        "url": "https://arxiv.org/abs/2608.23228",
         "source": "Hacker News",
-        "score": 26
+        "score": 37
+      },
+      {
+        "title": "Twitter Viewer – View Twitter Without Account",
+        "url": "https://twitterwebviewer.com/",
+        "source": "Hacker News",
+        "score": 268
       }
     ],
     "ai": [
       {
-        "title": "Tailcat",
+        "title": "Tailcat – Like netcat, but over Tailscale’s data plane",
         "url": "https://github.com/tailscale/tailcat",
         "source": "Hacker News AI",
-        "score": 113
+        "score": 411
       },
       {
-        "title": "Study Reveals UnitedHealth's Profit Margins Four Times What It Claimed [pdf]",
-        "url": "https://insurancewatchdogcoalition.com/wp-content/uploads/2026/08/UHG-Profits-Study_August-2026.pdf",
+        "title": "The Hugging Face incident and the road ahead",
+        "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
         "source": "Hacker News AI",
-        "score": 49
+        "score": 116
+      },
+      {
+        "title": "Serve Markdown to AI Agents with Accept Headers",
+        "url": "https://acceptmarkdown.com/",
+        "source": "Hacker News AI",
+        "score": 63
       },
       {
         "title": "It’s so hard to finish an idea that is not yours and is just suggested by AI",
         "url": "https://www.ssp.sh/brain/using-obsidian-with-ai/",
         "source": "Hacker News AI",
-        "score": 90
-      },
-      {
-        "title": "PageRank explained",
-        "url": "https://praveshkoirala.com/2026/08/26/you-could-have-invented-pagerank/",
-        "source": "Hacker News AI",
-        "score": 77
+        "score": 155
       },
       {
         "title": "RAG Is Simpler Than You Think",
         "url": "https://www.lighthousenewsletter.com/p/rag-is-simpler-than-you-think",
         "source": "Hacker News AI",
-        "score": 365
+        "score": 418
+      },
+      {
+        "title": "PageRank explained",
+        "url": "https://praveshkoirala.com/2026/08/26/you-could-have-invented-pagerank/",
+        "source": "Hacker News AI",
+        "score": 113
+      },
+      {
+        "title": "Show HN: We built the smallest dual-band aircraft tracker",
+        "url": "https://pantsforbirds.com/the-worlds-smallest-dual-band-ads-b-receiver-module/",
+        "source": "Hacker News AI",
+        "score": 14
       },
       {
         "title": "Launch HN: Risklytics (YC S26) – Insurance brokerage for frontier tech companies",
         "url": "https://www.risklytics.ai/",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 24
       },
       {
-        "title": "VMs won't contain cyber-capable agents",
-        "url": "https://blog.trailofbits.com/2026/08/26/vms-wont-contain-cyber-capable-agents/",
+        "title": "WebMCP Challenge – OpenAI",
+        "url": "https://openai.com/webmcp-challenge/",
         "source": "Hacker News AI",
-        "score": 97
-      },
-      {
-        "title": "The turbulent AI era is here",
-        "url": "https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make",
-        "source": "Hacker News AI",
-        "score": 94
-      },
-      {
-        "title": "Z.ai confirms Ox Alpha is a new GLM-series model and will release its weights",
-        "url": "https://www.bloomberg.com/news/articles/2026-08-26/china-s-z-ai-made-ox-alpha-stealth-model-that-rivals-deepseek",
-        "source": "Hacker News AI",
-        "score": 393
+        "score": 13
       },
       {
         "title": "The turbulent AI era is here. The choices we make now are critical",
-        "url": "https://www.gatesnotes.com/home/home-page-topic/reader/a-turbulent-ai-era-and-critical-choices-to-make",
+        "url": "https://www.gatesnotes.com/work/make-ai-work-for-everyone/reader/a-turbulent-ai-era-and-critical-choices-to-make?WT.mc_id=20260826_ai-overture-2026-med-med",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 11
       },
       {
-        "title": "Show HN: How much of Hacker News is about AI?",
-        "url": "https://hnstats.com",
+        "title": "Show HN: Devx – Autonomous AI coding agent built for Android Termux and desktop",
+        "url": "https://github.com/apvcode/Termux-Dev",
         "source": "Hacker News AI",
-        "score": 64
+        "score": 7
       },
       {
-        "title": "\"Famous Deep Learning Papers\", David Bau",
-        "url": "https://papers.baulab.info/",
+        "title": "Why AI Agents Need Persistent Browser Identities",
+        "url": "https://github.com/Radek-B3/browser3/blob/main/WHY_AI_AGENTS_NEED_PERSISTENT_BROWSER_IDENTITIES.md",
         "source": "Hacker News AI",
-        "score": 17
+        "score": 7
+      },
+      {
+        "title": "The risks of AI are real but manageable (2023)",
+        "url": "https://www.gatesnotes.com/work/make-ai-work-for-everyone/reader/the-risks-of-ai-are-real-but-manageable",
+        "source": "Hacker News AI",
+        "score": 27
       }
     ],
     "news": [
@@ -187,13 +193,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Canada announces 'dollar-for-dollar' retaliatory tariffs on US as high as 50%",
-        "url": "https://www.bbc.co.uk/news/articles/c3v4xg5klx7o?at_medium=RSS&at_campaign=rss",
+        "title": "US drug agency approves breakthrough treatment for pancreatic cancer",
+        "url": "https://www.bbc.co.uk/news/articles/clyq4ge4wk9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Radiation link in flight attendant's breast cancer, French court finds",
-        "url": "https://www.bbc.co.uk/news/articles/cn0j3z6147jo?at_medium=RSS&at_campaign=rss",
+        "title": "Canada announces 'dollar-for-dollar' retaliatory tariffs on US as high as 50%",
+        "url": "https://www.bbc.co.uk/news/articles/c3v4xg5klx7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -202,8 +208,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Libyan who was cleared after Lockerbie bombing trial dies aged 70",
-        "url": "https://www.bbc.co.uk/news/articles/cy0zgx6wlz3o?at_medium=RSS&at_campaign=rss",
+        "title": "Parrot eggs hatch after suspected Thai smuggler arrested at South African airport",
+        "url": "https://www.bbc.co.uk/news/articles/ceq8n04q0gxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -283,43 +289,48 @@
     ],
     "gaming": [
       {
+        "title": "David Fincher and Quentin Tarantino's Once Upon a Time in Hollywood Sequel Gets Official Release Update",
+        "url": "https://www.polygon.com/once-upon-a-time-in-hollywood-sequel-cliff-booth-quentin-tarantion-netflix/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Lego Unveils Massive New Star Wars 6,130-Piece Set Inspired by the Empire Strikes Back",
+        "url": "https://www.polygon.com/lego-star-wars-super-star-destroyer-set-photos-price-release-date/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Ubisoft’s Botched Release of Classic Might and Magic Game Was a Hilarious Blunder",
+        "url": "https://www.polygon.com/ubisoft-heroes-of-might-and-magic-3-steam-missing-game/",
+        "source": "Polygon"
+      },
+      {
+        "title": "How to vote in The Council in League Classic",
+        "url": "https://www.polygon.com/league-classic-the-council-voting-how-to/",
+        "source": "Polygon"
+      },
+      {
+        "title": "19 Years Later, Ridley Scott's 10/10 Detective Thriller Just Keeps Getting Better With Age",
+        "url": "https://www.polygon.com/ridley-scott-american-gangster/",
+        "source": "Polygon"
+      },
+      {
+        "title": "A Mind-Blowing Star Wars Fan Theory About Grogu's Force Powers Has Officially Been Confirmed",
+        "url": "https://www.polygon.com/the-mandalorian-and-grogu-vfx-interview/",
+        "source": "Polygon"
+      },
+      {
         "title": "Roblox Officially Cracks Down on Doomscrolling-Reward Games After Controversy",
         "url": "https://www.polygon.com/roblox-doomscroll-game-steal-an-egg-media-feed-restriction/",
-        "source": "Polygon"
-      },
-      {
-        "title": "BG3 Fans, We've Been Pronouncing Astarion's Name Wrong",
-        "url": "https://www.polygon.com/baldurs-gate-3-bg3-astarion-surname-pronunciation-audiobook-ancunin/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GTA 6's First Official Preview Reveals 5 Juicy New Details",
-        "url": "https://www.polygon.com/gta-6-dazed-magazine-preview-npc-honor-realism-gameplay/",
-        "source": "Polygon"
-      },
-      {
-        "title": "New James Bond 007 Actor Shortlist Shrinks to Just 6 Actors",
-        "url": "https://www.polygon.com/james-bond-26-next-007-actor-shortlist/",
-        "source": "Polygon"
-      },
-      {
-        "title": "A New D&D Game Will Let You Live Every Adventurer's Dream",
-        "url": "https://www.polygon.com/dnd-dungeons-dragons-new-game-long-rest-tavern-sim/",
-        "source": "Polygon"
-      },
-      {
-        "title": "After 3 Hours, I Can Say Game of Thrones Finally Has a Worthy Video Game",
-        "url": "https://www.polygon.com/game-of-thrones-war-for-westeros-preview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "CD Projekt Red Officially Reveals First Look at New Witcher Release",
-        "url": "https://www.polygon.com/the-witcher-3-songs-of-the-past-dlc-first-look/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "GitHub Copilot app for Beginners: Automate Dependabot pull request triage",
+        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "How to evaluate LLMs before production",
         "url": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/",
@@ -348,11 +359,6 @@
       {
         "title": "How to bring your software delivery workflow into GitHub with agent apps",
         "url": "https://github.blog/ai-and-ml/github-copilot/how-to-bring-your-software-delivery-workflow-into-github-with-agent-apps/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Your guide to GitHub Universe 2026 is here: The schedule just launched!",
-        "url": "https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/",
         "source": "GitHub Blog"
       }
     ]
