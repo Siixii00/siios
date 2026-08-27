@@ -1,179 +1,185 @@
 {
   "metadata": {
-    "last_updated": "2026-08-26T22:49:10.253352",
-    "total_items": 63
+    "last_updated": "2026-08-27T04:20:49.847539",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
-        "title": "Tailcat – Like netcat, but over Tailscale’s data plane",
-        "url": "https://github.com/tailscale/tailcat",
+        "title": "Nvidia agrees to acquire Hugging Face for $13B",
+        "url": "https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8",
         "source": "Hacker News",
-        "score": 411
+        "score": 503
+      },
+      {
+        "title": "CEO fired developers to make room for AI. Developers create open source AI CEO",
+        "url": "https://github.com/SenteLabsAI/OpenExecutive",
+        "source": "Hacker News",
+        "score": 196
+      },
+      {
+        "title": "Mechanical Turk shutting down September 30",
+        "url": "https://www.mturk.com/",
+        "source": "Hacker News",
+        "score": 202
       },
       {
         "title": "GLM-5.3-Flash",
         "url": "https://z.ai/blog/glm-5.3-flash",
         "source": "Hacker News",
-        "score": 803
+        "score": 929
       },
       {
-        "title": "Actinide is first startup to produce high-assay low-enriched uranium (HALEU)",
-        "url": "https://www.actinideinc.com/press/actinide-becomes-first-startup-to-ever-enrich-natural-uranium-to-produce-haleu",
+        "title": "Laion Big Video Dataset",
+        "url": "https://projects.laion.ai/bvd/",
         "source": "Hacker News",
-        "score": 124
+        "score": 26
+      },
+      {
+        "title": "Kusama Yayoi Dies at 97",
+        "url": "https://news.jp/i/1465528042000662661",
+        "source": "Hacker News",
+        "score": 71
+      },
+      {
+        "title": "Asahi Linux Progress Report: Linux 7.2",
+        "url": "https://asahilinux.org/2026/08/progress-report-7-2/",
+        "source": "Hacker News",
+        "score": 142
+      },
+      {
+        "title": "Tailcat – Like netcat, but over Tailscale’s data plane",
+        "url": "https://github.com/tailscale/tailcat",
+        "source": "Hacker News",
+        "score": 505
       },
       {
         "title": "AWS Acquires DuckLabs",
         "url": "https://ducklabs.com/news/2026/08/26/ducklabs-to-join-aws",
         "source": "Hacker News",
-        "score": 915
+        "score": 1007
+      },
+      {
+        "title": "Worst-case glacial lake flood scenarios in a transboundary Himalayan basin 2022",
+        "url": "https://nhess.copernicus.org/articles/22/3765/2022/nhess-22-3765-2022.html",
+        "source": "Hacker News",
+        "score": 100
       },
       {
         "title": "An ongoing 3D-printer AGPL violation",
         "url": "https://lwn.net/SubscriberLink/1089390/46116614cc74b814/",
         "source": "Hacker News",
-        "score": 249
+        "score": 344
       },
       {
-        "title": "GitHub Outage Tracker: Is GitHub Cooked?",
-        "url": "https://isgithubcooked.com/",
+        "title": "Zohran and the Short Link",
+        "url": "https://iamwillwang.com/notes/zohran-and-the-short-link/",
         "source": "Hacker News",
-        "score": 105
+        "score": 135
       },
       {
-        "title": "The Hugging Face incident and the road ahead",
-        "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
+        "title": "U.S. State Department pauses immigrant visa applications",
+        "url": "https://www.wsj.com/politics/policy/u-s-state-department-pauses-immigrant-visa-applications-25b31b23",
         "source": "Hacker News",
-        "score": 116
+        "score": 358
       },
       {
-        "title": "Serve Markdown to AI Agents with Accept Headers",
-        "url": "https://acceptmarkdown.com/",
+        "title": "Stripe acquires Clerky",
+        "url": "https://www.clerky.com/blog/clerky-is-joining-stripe",
         "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "CoMaps: The Offline App That Guided Rescuers Without a Signal in Venezuela",
-        "url": "https://hotosm.org/en/news/comaps-the-offline-app-that-guided-rescuers-without-a-signal-in-the-venezuela-response/",
-        "source": "Hacker News",
-        "score": 165
+        "score": 103
       },
       {
         "title": "Qwen3.8-Flash-Next",
         "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
         "source": "Hacker News",
-        "score": 593
-      },
-      {
-        "title": "Disruption with Some GitHub Services",
-        "url": "https://www.githubstatus.com/incidents/hcbtzksccj2f",
-        "source": "Hacker News",
-        "score": 252
-      },
-      {
-        "title": "Nebula Sans",
-        "url": "https://www.nebulasans.com",
-        "source": "Hacker News",
-        "score": 310
-      },
-      {
-        "title": "FDA Approves First in Class Targeted Therapy for Metastatic Pancreatic Cancer",
-        "url": "https://www.fda.gov/news-events/press-announcements/fda-approves-first-class-targeted-therapy-metastatic-pancreatic-cancer",
-        "source": "Hacker News",
-        "score": 133
-      },
-      {
-        "title": "mold: A Parallel Linker",
-        "url": "https://arxiv.org/abs/2608.23228",
-        "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "Twitter Viewer – View Twitter Without Account",
-        "url": "https://twitterwebviewer.com/",
-        "source": "Hacker News",
-        "score": 268
+        "score": 648
       }
     ],
     "ai": [
       {
+        "title": "Nvidia agrees to acquire Hugging Face for $13B",
+        "url": "https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8",
+        "source": "Hacker News AI",
+        "score": 505
+      },
+      {
+        "title": "CEO fired developers to make room for AI. Developers create open source AI CEO",
+        "url": "https://github.com/SenteLabsAI/OpenExecutive",
+        "source": "Hacker News AI",
+        "score": 197
+      },
+      {
+        "title": "Laion Big Video Dataset",
+        "url": "https://projects.laion.ai/bvd/",
+        "source": "Hacker News AI",
+        "score": 26
+      },
+      {
         "title": "Tailcat – Like netcat, but over Tailscale’s data plane",
         "url": "https://github.com/tailscale/tailcat",
         "source": "Hacker News AI",
-        "score": 411
+        "score": 505
       },
       {
         "title": "The Hugging Face incident and the road ahead",
         "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
         "source": "Hacker News AI",
-        "score": 116
+        "score": 207
+      },
+      {
+        "title": "Humanity has the debate about AI consciousness backwards",
+        "url": "https://economist.com/by-invitation/2026/08/20/humanity-has-the-debate-about-ai-consciousness-backwards",
+        "source": "Hacker News AI",
+        "score": 14
       },
       {
         "title": "Serve Markdown to AI Agents with Accept Headers",
         "url": "https://acceptmarkdown.com/",
         "source": "Hacker News AI",
-        "score": 63
-      },
-      {
-        "title": "It’s so hard to finish an idea that is not yours and is just suggested by AI",
-        "url": "https://www.ssp.sh/brain/using-obsidian-with-ai/",
-        "source": "Hacker News AI",
-        "score": 155
-      },
-      {
-        "title": "RAG Is Simpler Than You Think",
-        "url": "https://www.lighthousenewsletter.com/p/rag-is-simpler-than-you-think",
-        "source": "Hacker News AI",
-        "score": 418
-      },
-      {
-        "title": "PageRank explained",
-        "url": "https://praveshkoirala.com/2026/08/26/you-could-have-invented-pagerank/",
-        "source": "Hacker News AI",
-        "score": 113
-      },
-      {
-        "title": "Show HN: We built the smallest dual-band aircraft tracker",
-        "url": "https://pantsforbirds.com/the-worlds-smallest-dual-band-ads-b-receiver-module/",
-        "source": "Hacker News AI",
-        "score": 14
+        "score": 106
       },
       {
         "title": "Launch HN: Risklytics (YC S26) – Insurance brokerage for frontier tech companies",
         "url": "https://www.risklytics.ai/",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 46
       },
       {
-        "title": "WebMCP Challenge – OpenAI",
-        "url": "https://openai.com/webmcp-challenge/",
+        "title": "The turbulent AI era is here",
+        "url": "https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make",
         "source": "Hacker News AI",
-        "score": 13
+        "score": 184
       },
       {
-        "title": "The turbulent AI era is here. The choices we make now are critical",
-        "url": "https://www.gatesnotes.com/work/make-ai-work-for-everyone/reader/a-turbulent-ai-era-and-critical-choices-to-make?WT.mc_id=20260826_ai-overture-2026-med-med",
+        "title": "It’s so hard to finish an idea that is not yours and is just suggested by AI",
+        "url": "https://www.ssp.sh/brain/using-obsidian-with-ai/",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 188
       },
       {
-        "title": "Show HN: Devx – Autonomous AI coding agent built for Android Termux and desktop",
-        "url": "https://github.com/apvcode/Termux-Dev",
+        "title": "RAG Is Simpler Than You Think",
+        "url": "https://www.lighthousenewsletter.com/p/rag-is-simpler-than-you-think",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 446
       },
       {
-        "title": "Why AI Agents Need Persistent Browser Identities",
-        "url": "https://github.com/Radek-B3/browser3/blob/main/WHY_AI_AGENTS_NEED_PERSISTENT_BROWSER_IDENTITIES.md",
+        "title": "VMs won't contain cyber-capable agents",
+        "url": "https://blog.trailofbits.com/2026/08/26/vms-wont-contain-cyber-capable-agents/",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 152
       },
       {
-        "title": "The risks of AI are real but manageable (2023)",
-        "url": "https://www.gatesnotes.com/work/make-ai-work-for-everyone/reader/the-risks-of-ai-are-real-but-manageable",
+        "title": "PageRank explained",
+        "url": "https://praveshkoirala.com/2026/08/26/you-could-have-invented-pagerank/",
         "source": "Hacker News AI",
-        "score": 27
+        "score": 125
+      },
+      {
+        "title": "Show HN: We built the smallest dual-band aircraft tracker",
+        "url": "https://pantsforbirds.com/the-worlds-smallest-dual-band-ads-b-receiver-module/",
+        "source": "Hacker News AI",
+        "score": 26
       }
     ],
     "news": [
@@ -193,23 +199,23 @@
         "source": "BBC World"
       },
       {
+        "title": "At least 12 dead as wildfires sweep through northern Algeria",
+        "url": "https://www.bbc.co.uk/news/articles/cvgyd4x6nj4o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "US drug agency approves breakthrough treatment for pancreatic cancer",
         "url": "https://www.bbc.co.uk/news/articles/clyq4ge4wk9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
+        "title": "At least one dead after car crashes into crowd in northern France",
+        "url": "https://www.bbc.co.uk/news/articles/cqxvrl744nyo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Canada announces 'dollar-for-dollar' retaliatory tariffs on US as high as 50%",
         "url": "https://www.bbc.co.uk/news/articles/c3v4xg5klx7o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Far-right Israeli lawmaker damages Palestinian memorial with sledgehammer",
-        "url": "https://www.bbc.co.uk/news/articles/c0lrw8325pzo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Parrot eggs hatch after suspected Thai smuggler arrested at South African airport",
-        "url": "https://www.bbc.co.uk/news/articles/ceq8n04q0gxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -289,6 +295,16 @@
     ],
     "gaming": [
       {
+        "title": "Tom Cruise's Unforgettable 10/10 Action Movie is Officially Free to Watch on YouTube",
+        "url": "https://www.polygon.com/tropic-thunder-tom-cruise-free-youtube-streaming/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Michael B. Jordan’s Near-Perfect Action Trilogy Is About to Leave Netflix",
+        "url": "https://www.polygon.com/creed-trilogy-leaving-netflix-action-movie-august-2026/",
+        "source": "Polygon"
+      },
+      {
         "title": "David Fincher and Quentin Tarantino's Once Upon a Time in Hollywood Sequel Gets Official Release Update",
         "url": "https://www.polygon.com/once-upon-a-time-in-hollywood-sequel-cliff-booth-quentin-tarantion-netflix/",
         "source": "Polygon"
@@ -311,16 +327,6 @@
       {
         "title": "19 Years Later, Ridley Scott's 10/10 Detective Thriller Just Keeps Getting Better With Age",
         "url": "https://www.polygon.com/ridley-scott-american-gangster/",
-        "source": "Polygon"
-      },
-      {
-        "title": "A Mind-Blowing Star Wars Fan Theory About Grogu's Force Powers Has Officially Been Confirmed",
-        "url": "https://www.polygon.com/the-mandalorian-and-grogu-vfx-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Roblox Officially Cracks Down on Doomscrolling-Reward Games After Controversy",
-        "url": "https://www.polygon.com/roblox-doomscroll-game-steal-an-egg-media-feed-restriction/",
         "source": "Polygon"
       }
     ],
