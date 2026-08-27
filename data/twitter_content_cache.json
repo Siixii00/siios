@@ -1,337 +1,348 @@
 {
   "metadata": {
-    "last_updated": "2026-08-27T04:20:49.847539",
-    "total_items": 64
+    "last_updated": "2026-08-27T16:10:06.467598",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Japanese polka dot artist Yayoi Kusama dies aged 97",
+        "url": "https://www.bbc.com/news/articles/c3v4k0re3vwo",
+        "source": "Hacker News",
+        "score": 32
+      },
+      {
+        "title": "507 Mechanical Movements",
+        "url": "https://507movements.com/",
+        "source": "Hacker News",
+        "score": 127
+      },
+      {
+        "title": "Pollen Robotics (Hugging Face) Microduck",
+        "url": "https://pollen-robotics.com/microduck/",
+        "source": "Hacker News",
+        "score": 261
+      },
+      {
         "title": "Nvidia agrees to acquire Hugging Face for $13B",
         "url": "https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8",
         "source": "Hacker News",
-        "score": 503
+        "score": 1626
       },
       {
-        "title": "CEO fired developers to make room for AI. Developers create open source AI CEO",
-        "url": "https://github.com/SenteLabsAI/OpenExecutive",
+        "title": "Emacs 31: An unofficial guide to Markdown-ts-mode",
+        "url": "https://rahuljuliato.com/posts/markdown-ts-mode-emacs-31",
         "source": "Hacker News",
-        "score": 196
+        "score": 77
       },
       {
-        "title": "Mechanical Turk shutting down September 30",
-        "url": "https://www.mturk.com/",
+        "title": "Software engineering is about managing complexity",
+        "url": "https://hack8s.com/422/once-again-software-engineering-is-about-managing-complexity",
         "source": "Hacker News",
-        "score": 202
+        "score": 51
       },
       {
-        "title": "GLM-5.3-Flash",
-        "url": "https://z.ai/blog/glm-5.3-flash",
+        "title": "Launching Route 53 Files",
+        "url": "https://www.daemonology.net/blog/2026-08-27-Launching-Route-53-Files.html",
         "source": "Hacker News",
-        "score": 929
+        "score": 29
       },
       {
-        "title": "Laion Big Video Dataset",
-        "url": "https://projects.laion.ai/bvd/",
+        "title": "CoMaps integration with the wider FLOSS ecosystem",
+        "url": "https://www.comaps.app/news/2026-08-23/comaps-integration-with-the-wider-floss-ecosystem/",
         "source": "Hacker News",
-        "score": 26
+        "score": 76
       },
       {
-        "title": "Kusama Yayoi Dies at 97",
-        "url": "https://news.jp/i/1465528042000662661",
+        "title": "Launch HN: Salem Robotics (YC S26) – Software for industrial inspection robots",
+        "url": "https://news.ycombinator.com/item?id=49466715",
         "source": "Hacker News",
-        "score": 71
+        "score": 7
       },
       {
-        "title": "Asahi Linux Progress Report: Linux 7.2",
-        "url": "https://asahilinux.org/2026/08/progress-report-7-2/",
+        "title": "MIT's Ad Hoc Committee on AI Use in Teaching, Learning, and Research Training",
+        "url": "https://aiandeducation.mit.edu/report/",
         "source": "Hacker News",
-        "score": 142
+        "score": 49
       },
       {
-        "title": "Tailcat – Like netcat, but over Tailscale’s data plane",
-        "url": "https://github.com/tailscale/tailcat",
+        "title": "Trade (and Tariffs)",
+        "url": "https://xkcd.com/3290/",
         "source": "Hacker News",
-        "score": 505
+        "score": 198
       },
       {
-        "title": "AWS Acquires DuckLabs",
-        "url": "https://ducklabs.com/news/2026/08/26/ducklabs-to-join-aws",
+        "title": "The Teaser Period: Why the AI Boom Is Hitting a Reset Wall",
+        "url": "https://www.groundbrkr.com/p/the-teaser-period-why-the-ai-boom",
         "source": "Hacker News",
-        "score": 1007
+        "score": 12
       },
       {
-        "title": "Worst-case glacial lake flood scenarios in a transboundary Himalayan basin 2022",
-        "url": "https://nhess.copernicus.org/articles/22/3765/2022/nhess-22-3765-2022.html",
+        "title": "Show HN: Restoredrill – proves your Postgres backups restore",
+        "url": "https://github.com/ahmadpiran/restoredrill",
         "source": "Hacker News",
-        "score": 100
+        "score": 17
       },
       {
-        "title": "An ongoing 3D-printer AGPL violation",
-        "url": "https://lwn.net/SubscriberLink/1089390/46116614cc74b814/",
+        "title": "Adentris (YC P25) Is Hiring",
+        "url": "https://www.ycombinator.com/companies/adentris/jobs/ZpMXZ0C-founding-engineer-ai-rcm-healthcare-platform-typescript-python",
         "source": "Hacker News",
-        "score": 344
+        "score": 1
       },
       {
-        "title": "Zohran and the Short Link",
-        "url": "https://iamwillwang.com/notes/zohran-and-the-short-link/",
+        "title": "Suica, Japan's First IC Transit Card",
+        "url": "https://www.tokyodev.com/articles/the-story-of-suica",
         "source": "Hacker News",
-        "score": 135
-      },
-      {
-        "title": "U.S. State Department pauses immigrant visa applications",
-        "url": "https://www.wsj.com/politics/policy/u-s-state-department-pauses-immigrant-visa-applications-25b31b23",
-        "source": "Hacker News",
-        "score": 358
-      },
-      {
-        "title": "Stripe acquires Clerky",
-        "url": "https://www.clerky.com/blog/clerky-is-joining-stripe",
-        "source": "Hacker News",
-        "score": 103
-      },
-      {
-        "title": "Qwen3.8-Flash-Next",
-        "url": "https://qwen.ai/blog?id=qwen3.8-flash-next",
-        "source": "Hacker News",
-        "score": 648
+        "score": 3
       }
     ],
     "ai": [
       {
+        "title": "Pollen Robotics (Hugging Face) Microduck",
+        "url": "https://pollen-robotics.com/microduck/",
+        "source": "Hacker News AI",
+        "score": 261
+      },
+      {
         "title": "Nvidia agrees to acquire Hugging Face for $13B",
         "url": "https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8",
         "source": "Hacker News AI",
-        "score": 505
+        "score": 1626
+      },
+      {
+        "title": "MIT's Ad Hoc Committee on AI Use in Teaching, Learning, and Research Training",
+        "url": "https://aiandeducation.mit.edu/report/",
+        "source": "Hacker News AI",
+        "score": 49
+      },
+      {
+        "title": "The Teaser Period: Why the AI Boom Is Hitting a Reset Wall",
+        "url": "https://www.groundbrkr.com/p/the-teaser-period-why-the-ai-boom",
+        "source": "Hacker News AI",
+        "score": 12
+      },
+      {
+        "title": "Show HN: The load-bearing vocabulary of Claude",
+        "url": "https://louisabraham.github.io/load-bearing/",
+        "source": "Hacker News AI",
+        "score": 78
+      },
+      {
+        "title": "Peter Cullen, Voice of Optimus Prime in 'Transformers,' Dies at 85",
+        "url": "https://www.hollywoodreporter.com/movies/movie-news/peter-cullen-optimus-prime-transformers-eeyore-1236683075/",
+        "source": "Hacker News AI",
+        "score": 39
       },
       {
         "title": "CEO fired developers to make room for AI. Developers create open source AI CEO",
         "url": "https://github.com/SenteLabsAI/OpenExecutive",
         "source": "Hacker News AI",
-        "score": 197
-      },
-      {
-        "title": "Laion Big Video Dataset",
-        "url": "https://projects.laion.ai/bvd/",
-        "source": "Hacker News AI",
-        "score": 26
-      },
-      {
-        "title": "Tailcat – Like netcat, but over Tailscale’s data plane",
-        "url": "https://github.com/tailscale/tailcat",
-        "source": "Hacker News AI",
-        "score": 505
+        "score": 856
       },
       {
         "title": "The Hugging Face incident and the road ahead",
         "url": "https://openai.com/index/hugging-face-incident-and-the-road-ahead/",
         "source": "Hacker News AI",
-        "score": 207
-      },
-      {
-        "title": "Humanity has the debate about AI consciousness backwards",
-        "url": "https://economist.com/by-invitation/2026/08/20/humanity-has-the-debate-about-ai-consciousness-backwards",
-        "source": "Hacker News AI",
-        "score": 14
-      },
-      {
-        "title": "Serve Markdown to AI Agents with Accept Headers",
-        "url": "https://acceptmarkdown.com/",
-        "source": "Hacker News AI",
-        "score": 106
-      },
-      {
-        "title": "Launch HN: Risklytics (YC S26) – Insurance brokerage for frontier tech companies",
-        "url": "https://www.risklytics.ai/",
-        "source": "Hacker News AI",
-        "score": 46
+        "score": 320
       },
       {
         "title": "The turbulent AI era is here",
         "url": "https://www.gatesnotes.com/a-turbulent-ai-era-and-critical-choices-to-make",
         "source": "Hacker News AI",
-        "score": 184
+        "score": 323
       },
       {
-        "title": "It’s so hard to finish an idea that is not yours and is just suggested by AI",
-        "url": "https://www.ssp.sh/brain/using-obsidian-with-ai/",
+        "title": "Why Did Stripe Acquire an AI Model Routing Company?",
+        "url": "https://thefinancialengineer.substack.com/p/why-did-stripe-acquire-an-ai-model",
         "source": "Hacker News AI",
-        "score": 188
+        "score": 3
+      },
+      {
+        "title": "Laion Big Video Dataset",
+        "url": "https://projects.laion.ai/bvd/",
+        "source": "Hacker News AI",
+        "score": 80
+      },
+      {
+        "title": "Chinese Implants in the Supply Chain",
+        "url": "https://www.vulncheck.com/blog/zbt-darklantern-speakingstone",
+        "source": "Hacker News AI",
+        "score": 15
       },
       {
         "title": "RAG Is Simpler Than You Think",
         "url": "https://www.lighthousenewsletter.com/p/rag-is-simpler-than-you-think",
         "source": "Hacker News AI",
-        "score": 446
+        "score": 478
       },
       {
-        "title": "VMs won't contain cyber-capable agents",
-        "url": "https://blog.trailofbits.com/2026/08/26/vms-wont-contain-cyber-capable-agents/",
+        "title": "It’s so hard to finish an idea that is not yours and is just suggested by AI",
+        "url": "https://www.ssp.sh/brain/using-obsidian-with-ai/",
         "source": "Hacker News AI",
-        "score": 152
+        "score": 240
       },
       {
-        "title": "PageRank explained",
-        "url": "https://praveshkoirala.com/2026/08/26/you-could-have-invented-pagerank/",
+        "title": "Launch HN: Risklytics (YC S26) – Insurance brokerage for frontier tech companies",
+        "url": "https://www.risklytics.ai/",
         "source": "Hacker News AI",
-        "score": 125
-      },
-      {
-        "title": "Show HN: We built the smallest dual-band aircraft tracker",
-        "url": "https://pantsforbirds.com/the-worlds-smallest-dual-band-ads-b-receiver-module/",
-        "source": "Hacker News AI",
-        "score": 26
+        "score": 53
       }
     ],
     "news": [
       {
-        "title": "Heart, hope and a steely determination: Dolly Parton's musical legacy",
-        "url": "https://www.bbc.co.uk/news/articles/c74k8zwvez0o?at_medium=RSS&at_campaign=rss",
+        "title": "Collapsed glacier likely caused devastating Nepal-Tibet floods, scientists say",
+        "url": "https://www.bbc.co.uk/news/articles/cly464k252yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Door was locked at Pakistan hospital where fire killed 14 babies, witnesses say",
-        "url": "https://www.bbc.co.uk/news/articles/czdz13elezlo?at_medium=RSS&at_campaign=rss",
+        "title": "What we know about deadly Nepal-Tibet floods",
+        "url": "https://www.bbc.co.uk/news/articles/cd948kn02e5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump officials threaten Kennedy Center demolition if court blocks renovations",
-        "url": "https://www.bbc.co.uk/news/articles/c62mr97n936o?at_medium=RSS&at_campaign=rss",
+        "title": "Convicted Bosnian Serb war criminal Mladić dies aged 84",
+        "url": "https://www.bbc.co.uk/news/articles/c5ywxpryj95o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "At least 12 dead as wildfires sweep through northern Algeria",
-        "url": "https://www.bbc.co.uk/news/articles/cvgyd4x6nj4o?at_medium=RSS&at_campaign=rss",
+        "title": "Norwegians lay flowers at palace as King Harald's condition worsens",
+        "url": "https://www.bbc.co.uk/news/articles/cqxvrnvrr5do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US drug agency approves breakthrough treatment for pancreatic cancer",
-        "url": "https://www.bbc.co.uk/news/articles/clyq4ge4wk9o?at_medium=RSS&at_campaign=rss",
+        "title": "Board of Peace's Gaza envoy criticises Israeli strikes and Hamas actions",
+        "url": "https://www.bbc.co.uk/news/articles/cew92l07kwzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "At least one dead after car crashes into crowd in northern France",
-        "url": "https://www.bbc.co.uk/news/articles/cqxvrl744nyo?at_medium=RSS&at_campaign=rss",
+        "title": "Two killed in 'violent incident' at school near Berlin",
+        "url": "https://www.bbc.co.uk/news/articles/cgqdy8g2zlgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Canada announces 'dollar-for-dollar' retaliatory tariffs on US as high as 50%",
-        "url": "https://www.bbc.co.uk/news/articles/c3v4xg5klx7o?at_medium=RSS&at_campaign=rss",
+        "title": "Man who attacked nun on CCTV in Jerusalem acquitted on grounds of mental health",
+        "url": "https://www.bbc.co.uk/news/articles/cpwl54kddeko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " Guns of Eschaton turns Viktor Antonov's final game into a nightmare Western shooter ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/guns-of-eschaton-turns-viktor-antonovs-final-game-into-a-nightmare-western-shooter",
+        "title": " This indie dev found a use for AI but says the project was still firmly human led ",
+        "url": "https://www.creativebloq.com/ai/this-indie-dev-found-a-use-for-ai-but-says-the-project-was-still-firmly-human-led",
         "source": "Creative Bloq"
       },
       {
-        "title": " People are already falling in love with Warlock: Dungeons & Dragons' main character ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/people-are-already-falling-in-love-with-warlock-dungeons-and-dragons-main-character",
+        "title": " Joe & Mac Retro Collection is bringing back the gloriously weird art of 16-bit gaming ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/joe-and-mac-retro-collection-is-bringing-back-the-gloriously-weird-art-of-16-bit-gaming",
         "source": "Creative Bloq"
       },
       {
-        "title": " Resonance: A Plague Tale Legacy review – Asobo takes a risk and delivers the best game in the series ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/resonance-a-plague-tale-legacy-review-asobo-takes-a-risk-and-delivers-the-best-game-in-the-series",
+        "title": " The Galaxy Z Fold8 Ultra is a five-star phone, but has one key disappointment for digital artists ",
+        "url": "https://www.creativebloq.com/tech/phones-tablets/the-galaxy-z-fold8-ultra-is-a-five-star-phone-but-has-one-key-disappointment-for-digital-artists",
         "source": "Creative Bloq"
       },
       {
-        "title": " The Humankind 2 trailer looks so much like AI the developer had to explain it's not ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/the-humankind-2-trailer-looks-so-much-like-ai-the-developer-had-to-explain-its-not",
+        "title": " Adobe just added a brand new AI-assisted editor to Photoshop ",
+        "url": "https://www.creativebloq.com/design/design-software/adobe-just-added-a-brand-new-ai-assisted-editor-to-photoshop",
         "source": "Creative Bloq"
       },
       {
-        "title": " No Law's new trailer shows why its Unreal Engine 5 city is the real star ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/no-laws-new-trailer-shows-why-its-unreal-engine-5-city-is-the-real-star",
+        "title": " If I were a creative student today, this is the complete home desktop setup I'd get ",
+        "url": "https://www.creativebloq.com/tech/if-i-were-a-creative-student-today-this-is-the-complete-home-desktop-setup-id-get",
         "source": "Creative Bloq"
       },
       {
-        "title": " Elden Ring Tarnished Edition review: FromSoftware's open world masterpiece is still full of grace on Switch 2 ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/elden-ring-tarnished-edition-review-fromsoftwares-open-world-masterpiece-is-still-full-of-grace-on-switch-2",
+        "title": " Quote of the Day by Yayoi Kusama: \"I fight pain, anxiety, and fear every day, and the only method I have found that relieves my illness is to keep creating art\" ",
+        "url": "https://www.creativebloq.com/art/quote-of-the-day-by-yayoi-kusama-i-fight-pain-anxiety-and-fear-every-day-and-the-only-method-i-have-found-that-relieves-my-illness-is-to-keep-creating-art",
         "source": "Creative Bloq"
       },
       {
-        "title": " Marvel's dramatic Avengers: Endgame Encore colour change is dividing opinion ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/marvels-dramatic-colour-grading-change-in-avengers-endgame-encore-is-dividing-opinion",
+        "title": " Buy Nintendo Switch 2 now and save up to $80 before next week's price rise ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/buy-nintendo-switch-2-now-and-save-up-to-usd80-before-next-weeks-price-rise",
         "source": "Creative Bloq"
       }
     ],
     "science": [
       {
-        "title": "Scientists may have found a shortcut to calorie restriction’s anti-aging benefits",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260826055508.htm",
+        "title": "Your dislike of eating bugs may be 9,000 years old",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260827010516.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Manhattan-sized ice island breaks off Greenland’s Petermann Glacier",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260826055503.htm",
+        "title": "“I jumped from my chair” – Astronomers spot Betelgeuse’s hidden companion",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260827010514.htm",
         "source": "Science Daily"
       },
       {
-        "title": "190-year-old DNA reveals a hidden pangolin species",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260826055500.htm",
+        "title": "Vitamin C won’t prevent most colds, but it may do one small thing",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260827010507.htm",
         "source": "Science Daily"
       },
       {
-        "title": "NASA’s Roman Space Telescope is ready to hunt thousands of alien worlds",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260826055448.htm",
+        "title": "AI searched 100 million possibilities and found a cheaper way to 3D-print a NASA rocket alloy",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260827010504.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Common medications may change your gut for years",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260824065605.htm",
+        "title": "A mysterious cosmic hum may come from 13-billion-year-old dark stars",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260827010457.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Atomic catalyst unlocks the hidden value of plant waste",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260824065601.htm",
+        "title": "324-million-year-old fossil reveals how insects conquered land",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260827010455.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Three forgotten kings could rewrite the history of ancient Assyria",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260824065549.htm",
+        "title": "Smart nanoparticles light up brain cancer and destroy what surgery misses",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260826060617.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Tom Cruise's Unforgettable 10/10 Action Movie is Officially Free to Watch on YouTube",
-        "url": "https://www.polygon.com/tropic-thunder-tom-cruise-free-youtube-streaming/",
+        "title": "Xbox 25th Anniversary Release Sells Out Within Minutes, Despite $899 Price",
+        "url": "https://www.polygon.com/xbox-25th-anniversary-console-pre-order-sold-out/",
         "source": "Polygon"
       },
       {
-        "title": "Michael B. Jordan’s Near-Perfect Action Trilogy Is About to Leave Netflix",
-        "url": "https://www.polygon.com/creed-trilogy-leaving-netflix-action-movie-august-2026/",
+        "title": "'From Hell It Rose' spike trap puzzle solution in Resonance A Plague Tale Legacy",
+        "url": "https://www.polygon.com/resonance-a-plague-tale-legacy-chapter-4-spike-trap-puzzle-solution/",
         "source": "Polygon"
       },
       {
-        "title": "David Fincher and Quentin Tarantino's Once Upon a Time in Hollywood Sequel Gets Official Release Update",
-        "url": "https://www.polygon.com/once-upon-a-time-in-hollywood-sequel-cliff-booth-quentin-tarantion-netflix/",
+        "title": "'From Hell It Rose' maze puzzle solution in Resonance A Plague Tale Legacy",
+        "url": "https://www.polygon.com/resonance-a-plague-tale-legacy-chapter-4-maze-puzzle-solution/",
         "source": "Polygon"
       },
       {
-        "title": "Lego Unveils Massive New Star Wars 6,130-Piece Set Inspired by the Empire Strikes Back",
-        "url": "https://www.polygon.com/lego-star-wars-super-star-destroyer-set-photos-price-release-date/",
+        "title": "'From Hell It Rose' lens puzzle solution in Resonance A Plague Tale Legacy",
+        "url": "https://www.polygon.com/resonance-a-plague-tale-legacy-chapter-4-lens-puzzle-solution/",
         "source": "Polygon"
       },
       {
-        "title": "Ubisoft’s Botched Release of Classic Might and Magic Game Was a Hilarious Blunder",
-        "url": "https://www.polygon.com/ubisoft-heroes-of-might-and-magic-3-steam-missing-game/",
+        "title": "'From Hell It Rose' door puzzle solution in Resonance A Plague Tale Legacy",
+        "url": "https://www.polygon.com/resonance-a-plague-tale-legacy-chapter-4-door-puzzle-solution/",
         "source": "Polygon"
       },
       {
-        "title": "How to vote in The Council in League Classic",
-        "url": "https://www.polygon.com/league-classic-the-council-voting-how-to/",
+        "title": "'Those Before Us' lens puzzle solution in Resonance A Plague Tale Legacy",
+        "url": "https://www.polygon.com/resonance-a-plague-tale-legacy-chapter-3-lens-puzzle-solution/",
         "source": "Polygon"
       },
       {
-        "title": "19 Years Later, Ridley Scott's 10/10 Detective Thriller Just Keeps Getting Better With Age",
-        "url": "https://www.polygon.com/ridley-scott-american-gangster/",
+        "title": "Where to find vending machines in Forza Horizon 6",
+        "url": "https://www.polygon.com/forza-horizon-6-fh6-vending-machine-locations-where-to-find-snack-attack/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "OpenClaw went viral. Meet the maintainers building and securing it.",
+        "url": "https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "GitHub Copilot app for Beginners: Automate Dependabot pull request triage",
         "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/",
@@ -360,11 +371,6 @@
       {
         "title": "How canvases make agentic workflows visible, steerable, and cost-efficient",
         "url": "https://github.blog/ai-and-ml/github-copilot/how-canvases-make-agentic-workflows-visible-steerable-and-cost-efficient/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "How to bring your software delivery workflow into GitHub with agent apps",
-        "url": "https://github.blog/ai-and-ml/github-copilot/how-to-bring-your-software-delivery-workflow-into-github-with-agent-apps/",
         "source": "GitHub Blog"
       }
     ]
