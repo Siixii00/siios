@@ -1,131 +1,143 @@
 {
   "metadata": {
-    "last_updated": "2026-08-29T17:04:18.591600",
-    "total_items": 55
+    "last_updated": "2026-08-29T20:32:12.293944",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
-        "title": "Debian votes to allow \"responsible use of generative AI\"",
-        "url": "https://lwn.net/Articles/1091231/",
+        "title": "The Internet Is Kind of a Predatory Cesspit Now",
+        "url": "https://www.stephendiehl.com/posts/internet_predatory_cesspit/",
         "source": "Hacker News",
-        "score": 317
+        "score": 278
       },
       {
-        "title": "SQLite as a Document Database (2020)",
-        "url": "https://dgl.cx/2020/06/sqlite-json-support",
+        "title": "Tencent Releases and Open-Sources Tencent Hy4 Preview",
+        "url": "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/",
         "source": "Hacker News",
-        "score": 55
+        "score": 27
       },
       {
-        "title": "Indirect Calling of Nested Functions on GCC Without Executable Stack",
-        "url": "https://uecker.codeberg.page/2026-08-29.html",
+        "title": "Warp builds self-improving agents on Claude",
+        "url": "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude",
         "source": "Hacker News",
-        "score": 37
+        "score": 39
+      },
+      {
+        "title": "Calibrate Before You Accelerate: Bias Toward Action in a New Role",
+        "url": "https://tucker.wales/writing/bias-towards-action/",
+        "source": "Hacker News",
+        "score": 43
       },
       {
         "title": "Tether: iMessage, SMS, etc. on Linux",
         "url": "https://zackbartel.com/blog/2026/08/tether/",
         "source": "Hacker News",
-        "score": 46
+        "score": 191
+      },
+      {
+        "title": "SQLite as a Document Database (2020)",
+        "url": "https://dgl.cx/2020/06/sqlite-json-support",
+        "source": "Hacker News",
+        "score": 127
+      },
+      {
+        "title": "vLLM v0.28.0",
+        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.28.0",
+        "source": "Hacker News",
+        "score": 17
+      },
+      {
+        "title": "DHS is using obscure law to snoop on journalists, non-profits, unions",
+        "url": "https://www.theguardian.com/us-news/2026/aug/29/trump-dhs-1509-summons-records-journalists-nonprofits",
+        "source": "Hacker News",
+        "score": 121
+      },
+      {
+        "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
+        "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
+        "source": "Hacker News",
+        "score": 123
+      },
+      {
+        "title": "The elementary school pickup incident and the road ahead",
+        "url": "https://shitposting.ai/pickup-incident/",
+        "source": "Hacker News",
+        "score": 6
+      },
+      {
+        "title": "Indirect Calling of Nested Functions on GCC Without Executable Stack",
+        "url": "https://uecker.codeberg.page/2026-08-29.html",
+        "source": "Hacker News",
+        "score": 55
+      },
+      {
+        "title": "Sleepwalker: Passive Backdoor with Its Own Command Language",
+        "url": "https://r136a1.dev/2026/08/24/sleepwalker-a-passive-backdoor-with-its-own-command-language/",
+        "source": "Hacker News",
+        "score": 43
       },
       {
         "title": "Show HN: Typebase – A single-folder back end you write in TypeScript",
         "url": "https://typebase.io",
         "source": "Hacker News",
-        "score": 49
-      },
-      {
-        "title": "Samsung's Processing-in-Memory (PIM)",
-        "url": "https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing",
-        "source": "Hacker News",
-        "score": 199
-      },
-      {
-        "title": "Creating the Aetheryte Radio",
-        "url": "https://haz.ee/posts/aetheryte-radio.html",
-        "source": "Hacker News",
-        "score": 34
+        "score": 81
       },
       {
         "title": "Glacier Mice",
         "url": "https://en.wikipedia.org/wiki/Glacier_mice",
         "source": "Hacker News",
-        "score": 151
+        "score": 210
       },
       {
-        "title": "GUIs should be fully keyboard-driven",
-        "url": "https://ckardaris.com/blog/2026/08/28/keyboard-driven-guis.html",
+        "title": "Samsung's Processing-in-Memory (PIM)",
+        "url": "https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing",
         "source": "Hacker News",
-        "score": 960
-      },
-      {
-        "title": "Quantifying Colour",
-        "url": "https://ekunazanu.foo/lab/quantifying-colour/",
-        "source": "Hacker News",
-        "score": 8
-      },
-      {
-        "title": "Nancy Grace Roman Space Telescope",
-        "url": "https://science.nasa.gov/mission/roman-space-telescope/",
-        "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "EVE Online moves to Python 3",
-        "url": "https://www.eveonline.com/news/view/the-move-to-python-3-begins",
-        "source": "Hacker News",
-        "score": 166
-      },
-      {
-        "title": "Show HN: Galaxium, an experimental WebGPU space explorer",
-        "url": "https://galaxium.app",
-        "source": "Hacker News",
-        "score": 68
-      },
-      {
-        "title": "Boot a Virtual iPhone via Apple's Virtualization.framework",
-        "url": "https://github.com/Lakr233/vphone-cli",
-        "source": "Hacker News",
-        "score": 347
-      },
-      {
-        "title": "Htmx 4.0",
-        "url": "https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released",
-        "source": "Hacker News",
-        "score": 752
+        "score": 223
       }
     ],
     "ai": [
       {
-        "title": "Debian votes to allow \"responsible use of generative AI\"",
-        "url": "https://lwn.net/Articles/1091231/",
+        "title": "Warp builds self-improving agents on Claude",
+        "url": "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude",
         "source": "Hacker News AI",
-        "score": 317
+        "score": 39
       },
       {
-        "title": "U.S. sanctions against the A/I Collective",
-        "url": "https://www.inventati.org/",
+        "title": "vLLM v0.28.0",
+        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.28.0",
         "source": "Hacker News AI",
-        "score": 675
+        "score": 17
+      },
+      {
+        "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
+        "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
+        "source": "Hacker News AI",
+        "score": 123
+      },
+      {
+        "title": "Domain-Driven Agents",
+        "url": "https://coldtake.dev/blog/domain-driven-agents",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "StemDeck, a free, open-source and local AI stem separator",
         "url": "https://github.com/stemdeckapp/stemdeck",
         "source": "Hacker News AI",
-        "score": 172
+        "score": 187
       },
       {
         "title": "I accidentally turned LLM memory into program analysis",
         "url": "https://pwning.systems/posts/llm-memory-program-analysis/",
         "source": "Hacker News AI",
-        "score": 236
+        "score": 263
       },
       {
-        "title": "Judge rules Trump administration’s blacklisting of Anthropic was illegal",
-        "url": "https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html",
+        "title": "Debian votes to allow \"responsible use of generative AI\"",
+        "url": "https://lwn.net/Articles/1091231/",
         "source": "Hacker News AI",
-        "score": 594
+        "score": 451
       }
     ],
     "news": [
@@ -140,23 +152,23 @@
         "source": "BBC World"
       },
       {
-        "title": "Trump hails 'historic' deal for US to control 65bn barrels of Venezuela's oil",
-        "url": "https://www.bbc.co.uk/news/articles/cx2zlwe7qj1o?at_medium=RSS&at_campaign=rss",
+        "title": "Right-wing commentator Milo Yiannopoulos deported from US to UK",
+        "url": "https://www.bbc.co.uk/news/articles/cqlw52vr0dwo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Norway's new king remembers 'my dear father' in first speech",
+        "url": "https://www.bbc.co.uk/news/articles/cvgy79wmv4jo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Former Ecuadorian president imprisoned for corruption",
+        "url": "https://www.bbc.co.uk/news/articles/cvgym9rz07zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Landlady to 9/11 hijackers reveals their links to alleged Saudi spy",
         "url": "https://www.bbc.co.uk/news/articles/c99dvm39mreo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Norway mourns King Harald as Haakon VIII ascends throne",
-        "url": "https://www.bbc.co.uk/news/articles/cm2rzxrdr71o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Right-wing commentator Milo Yiannopoulos detained by ICE",
-        "url": "https://www.bbc.co.uk/news/articles/cj06jgq62v9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -241,38 +253,38 @@
     ],
     "gaming": [
       {
-        "title": "‘Frieren’ Meets ‘The Little Mermaid’ in Crunchyroll’s Near-Perfect 12-Part Fantasy Series",
-        "url": "https://www.polygon.com/goodbye-lara-captures-what-makes-old-school-anime-so-special/",
+        "title": "Animal Crossing Gets Its First Serious Competition In Years",
+        "url": "https://www.polygon.com/petit-planet-gamescom-2026-preview/",
         "source": "Polygon"
       },
       {
-        "title": "12 Best Zelda: BOTW Replay Ideas and Challenge Runs",
-        "url": "https://www.polygon.com/breath-of-the-wild-replay-ideas-challenge-runs/",
+        "title": "60 Years Later, the Best 'Peanuts' Quote of All Time Still Doesn't Get the Credit it Deserves",
+        "url": "https://www.polygon.com/charles-schulz-peanuts-best-quote/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon TCG Pocket adds a game-changing new kind of card this October",
-        "url": "https://www.polygon.com/pokemon-tcg-pocket-dual-type-cards/",
+        "title": "Resonance: A Plague Tale Legacy’s Post-Credits Scene, Explained",
+        "url": "https://www.polygon.com/resonance-a-plague-tale-legacy-post-credits-scene-cameo-explained/",
         "source": "Polygon"
       },
       {
-        "title": "EA Officially Reacts Iron Man Leak: \"Well, That Didn't Go As Planned\"",
-        "url": "https://www.polygon.com/ea-acknowledges-iron-man-leak/",
+        "title": "Tom Cruise's Next Movie Is Not One You'd Expect",
+        "url": "https://www.polygon.com/days-of-thunder-sequel/",
         "source": "Polygon"
       },
       {
-        "title": "How 'Coyote vs. ACME' Broke All the Rules of Live-Action Looney Tunes Movies, and Got Away with It",
-        "url": "https://www.polygon.com/coyote-vs-acme-director-screenwriter-interview/",
+        "title": "All sprites in Fortnite Chapter 7 Season 4",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-sprite-list-abilities-c7s4/",
         "source": "Polygon"
       },
       {
-        "title": "Gamescom Responds To Rampant Reports Of Theft At The Event",
-        "url": "https://www.polygon.com/gamescom-event-theft-response/",
+        "title": "Exclusive: D&D's Japanese Rival Creators Talk About Imminent English Launch",
+        "url": "https://www.polygon.com/exclusive-dds-japanese-rival-creators-talk-about-imminent-english-launch/",
         "source": "Polygon"
       },
       {
-        "title": "This Driving Survival Roguelike is one of the Great Video Game Mash-ups",
-        "url": "https://www.polygon.com/pacific-drive-what-to-play-xbox-game-pass-playstation-plus/",
+        "title": "Call of Duty Touts Anti-Cheat Commitment Ahead Of Modern Warfare 4",
+        "url": "https://www.polygon.com/call-of-duty-modern-warfare-4-ricochet-anti-cheat/",
         "source": "Polygon"
       }
     ],
