@@ -1,143 +1,137 @@
 {
   "metadata": {
-    "last_updated": "2026-08-29T20:32:12.293944",
-    "total_items": 57
+    "last_updated": "2026-08-29T23:01:26.388192",
+    "total_items": 56
   },
   "content": {
     "tech": [
       {
-        "title": "The Internet Is Kind of a Predatory Cesspit Now",
-        "url": "https://www.stephendiehl.com/posts/internet_predatory_cesspit/",
-        "source": "Hacker News",
-        "score": 278
-      },
-      {
         "title": "Tencent Releases and Open-Sources Tencent Hy4 Preview",
         "url": "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/",
         "source": "Hacker News",
-        "score": 27
+        "score": 125
       },
       {
-        "title": "Warp builds self-improving agents on Claude",
-        "url": "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude",
+        "title": "Aptera announces a $44M to design and build a solar electric vehicle",
+        "url": "https://frequal.com/aptera/ProductionDealAug2026.html",
         "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Calibrate Before You Accelerate: Bias Toward Action in a New Role",
-        "url": "https://tucker.wales/writing/bias-towards-action/",
-        "source": "Hacker News",
-        "score": 43
+        "score": 22
       },
       {
         "title": "Tether: iMessage, SMS, etc. on Linux",
         "url": "https://zackbartel.com/blog/2026/08/tether/",
         "source": "Hacker News",
-        "score": 191
+        "score": 281
+      },
+      {
+        "title": "vLLM v0.28.0",
+        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.28.0",
+        "source": "Hacker News",
+        "score": 73
+      },
+      {
+        "title": "Nancy Grace Roman Space Telescope Launches this Sunday",
+        "url": "https://www.npr.org/2026/08/28/nx-s1-5905370/nasa-nancy-grace-roman-space-telescope-dark-energy-supernova",
+        "source": "Hacker News",
+        "score": 40
+      },
+      {
+        "title": "Calibrate Before You Accelerate: Bias Toward Action in a New Role",
+        "url": "https://tucker.wales/writing/bias-towards-action/",
+        "source": "Hacker News",
+        "score": 80
       },
       {
         "title": "SQLite as a Document Database (2020)",
         "url": "https://dgl.cx/2020/06/sqlite-json-support",
         "source": "Hacker News",
-        "score": 127
+        "score": 152
       },
       {
-        "title": "vLLM v0.28.0",
-        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.28.0",
+        "title": "Functional State Machines in Rust: Typestate and Newtype Patterns",
+        "url": "https://dl.acm.org/doi/10.1145/3830438.3830958",
         "source": "Hacker News",
-        "score": 17
+        "score": 27
+      },
+      {
+        "title": "Domain-Driven Agents",
+        "url": "https://coldtake.dev/blog/domain-driven-agents",
+        "source": "Hacker News",
+        "score": 25
+      },
+      {
+        "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
+        "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
+        "source": "Hacker News",
+        "score": 199
       },
       {
         "title": "DHS is using obscure law to snoop on journalists, non-profits, unions",
         "url": "https://www.theguardian.com/us-news/2026/aug/29/trump-dhs-1509-summons-records-journalists-nonprofits",
         "source": "Hacker News",
-        "score": 121
+        "score": 238
       },
       {
-        "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
-        "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
+        "title": "A safe MySQL upgrade that wasn't so safe",
+        "url": "https://blog.elis.cc/articles/a-safe-mysql-upgrade-that-wasnt-so-safe/",
         "source": "Hacker News",
-        "score": 123
-      },
-      {
-        "title": "The elementary school pickup incident and the road ahead",
-        "url": "https://shitposting.ai/pickup-incident/",
-        "source": "Hacker News",
-        "score": 6
-      },
-      {
-        "title": "Indirect Calling of Nested Functions on GCC Without Executable Stack",
-        "url": "https://uecker.codeberg.page/2026-08-29.html",
-        "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Sleepwalker: Passive Backdoor with Its Own Command Language",
-        "url": "https://r136a1.dev/2026/08/24/sleepwalker-a-passive-backdoor-with-its-own-command-language/",
-        "source": "Hacker News",
-        "score": 43
-      },
-      {
-        "title": "Show HN: Typebase – A single-folder back end you write in TypeScript",
-        "url": "https://typebase.io",
-        "source": "Hacker News",
-        "score": 81
+        "score": 22
       },
       {
         "title": "Glacier Mice",
         "url": "https://en.wikipedia.org/wiki/Glacier_mice",
         "source": "Hacker News",
-        "score": 210
+        "score": 234
+      },
+      {
+        "title": "Indirect Calling of Nested Functions on GCC Without Executable Stack",
+        "url": "https://uecker.codeberg.page/2026-08-29.html",
+        "source": "Hacker News",
+        "score": 63
       },
       {
         "title": "Samsung's Processing-in-Memory (PIM)",
         "url": "https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing",
         "source": "Hacker News",
-        "score": 223
+        "score": 235
       }
     ],
     "ai": [
       {
-        "title": "Warp builds self-improving agents on Claude",
-        "url": "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude",
-        "source": "Hacker News AI",
-        "score": 39
-      },
-      {
         "title": "vLLM v0.28.0",
         "url": "https://github.com/vllm-project/vllm/releases/tag/v0.28.0",
         "source": "Hacker News AI",
-        "score": 17
-      },
-      {
-        "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
-        "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
-        "source": "Hacker News AI",
-        "score": 123
+        "score": 73
       },
       {
         "title": "Domain-Driven Agents",
         "url": "https://coldtake.dev/blog/domain-driven-agents",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 25
+      },
+      {
+        "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
+        "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
+        "source": "Hacker News AI",
+        "score": 199
       },
       {
         "title": "StemDeck, a free, open-source and local AI stem separator",
         "url": "https://github.com/stemdeckapp/stemdeck",
         "source": "Hacker News AI",
-        "score": 187
+        "score": 193
       },
       {
         "title": "I accidentally turned LLM memory into program analysis",
         "url": "https://pwning.systems/posts/llm-memory-program-analysis/",
         "source": "Hacker News AI",
-        "score": 263
+        "score": 266
       },
       {
-        "title": "Debian votes to allow \"responsible use of generative AI\"",
-        "url": "https://lwn.net/Articles/1091231/",
+        "title": "Warp builds self-improving agents on Claude",
+        "url": "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude",
         "source": "Hacker News AI",
-        "score": 451
+        "score": 53
       }
     ],
     "news": [
@@ -253,6 +247,11 @@
     ],
     "gaming": [
       {
+        "title": "Doom Meets Hades In the Coolest New Action Game of Gamescom 2026",
+        "url": "https://www.polygon.com/murals-gamescom-2026-preview/",
+        "source": "Polygon"
+      },
+      {
         "title": "Animal Crossing Gets Its First Serious Competition In Years",
         "url": "https://www.polygon.com/petit-planet-gamescom-2026-preview/",
         "source": "Polygon"
@@ -280,11 +279,6 @@
       {
         "title": "Exclusive: D&D's Japanese Rival Creators Talk About Imminent English Launch",
         "url": "https://www.polygon.com/exclusive-dds-japanese-rival-creators-talk-about-imminent-english-launch/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Call of Duty Touts Anti-Cheat Commitment Ahead Of Modern Warfare 4",
-        "url": "https://www.polygon.com/call-of-duty-modern-warfare-4-ricochet-anti-cheat/",
         "source": "Polygon"
       }
     ],
