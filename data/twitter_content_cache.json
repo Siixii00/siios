@@ -1,137 +1,148 @@
 {
   "metadata": {
-    "last_updated": "2026-08-29T06:02:17.801149",
-    "total_items": 48
+    "last_updated": "2026-08-29T12:59:15.250766",
+    "total_items": 56
   },
   "content": {
     "tech": [
       {
-        "title": "Boot a Virtual iPhone via Apple's Virtualization.framework",
-        "url": "https://github.com/Lakr233/vphone-cli",
+        "title": "Iceland votes on whether to restart talks on joining EU",
+        "url": "https://www.bbc.com/news/articles/cn45vdxyvvlo",
         "source": "Hacker News",
-        "score": 203
+        "score": 104
+      },
+      {
+        "title": "Samsung's Processing-in-Memory (PIM)",
+        "url": "https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing",
+        "source": "Hacker News",
+        "score": 138
       },
       {
         "title": "GUIs should be fully keyboard-driven",
         "url": "https://ckardaris.com/blog/2026/08/28/keyboard-driven-guis.html",
         "source": "Hacker News",
-        "score": 718
+        "score": 873
       },
       {
-        "title": "TurboKV: Insanely fast Rust key-value store",
-        "url": "https://github.com/kingroryg/turbokv",
+        "title": "Boot a Virtual iPhone via Apple's Virtualization.framework",
+        "url": "https://github.com/Lakr233/vphone-cli",
         "source": "Hacker News",
-        "score": 59
+        "score": 306
+      },
+      {
+        "title": "Europe's last regular standard-gauge steam passenger service",
+        "url": "https://parowozowniawolsztyn.pl/?page_id=2141",
+        "source": "Hacker News",
+        "score": 63
       },
       {
         "title": "Htmx 4.0",
         "url": "https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released",
         "source": "Hacker News",
-        "score": 602
+        "score": 704
       },
       {
-        "title": "StemDeck, a free, open-source and local AI stem separator",
-        "url": "https://github.com/stemdeckapp/stemdeck",
+        "title": "Hunting Down a Go Runtime Bug on 32-Bit Embedded Systems",
+        "url": "https://sigma-star.at/blog/2026/08/go-runtime-netpoll-bug/",
         "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "9th Circuit sides with states in Kalshi gambling fight",
-        "url": "https://azmirror.com/2026/08/28/9th-circuit-sides-with-states-in-kalshi-gambling-fight-potentially-reviving-arizonas-prosecution/",
-        "source": "Hacker News",
-        "score": 111
-      },
-      {
-        "title": "Our decision on Cursor following its acquisition by SpaceX",
-        "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
-        "source": "Hacker News",
-        "score": 329
+        "score": 46
       },
       {
         "title": "U.S. sanctions against the A/I Collective",
         "url": "https://www.inventati.org/",
         "source": "Hacker News",
-        "score": 542
+        "score": 634
+      },
+      {
+        "title": "StemDeck, a free, open-source and local AI stem separator",
+        "url": "https://github.com/stemdeckapp/stemdeck",
+        "source": "Hacker News",
+        "score": 128
       },
       {
         "title": "I accidentally turned LLM memory into program analysis",
         "url": "https://pwning.systems/posts/llm-memory-program-analysis/",
         "source": "Hacker News",
-        "score": 90
+        "score": 180
       },
       {
-        "title": "Does the Sumerian King List Align with Paleoclimate Events?",
-        "url": "https://www.vectorian.be/articles/2026-06-07/sumerian-king-list-paleoclimate-alignment-explorer/",
+        "title": "TurboKV: Insanely fast Rust key-value store",
+        "url": "https://github.com/kingroryg/turbokv",
         "source": "Hacker News",
-        "score": 76
-      },
-      {
-        "title": "Just the rumour of a bug is enough to find an exploit these days",
-        "url": "https://anil.recoil.org/notes/rumour-is-the-exploit",
-        "source": "Hacker News",
-        "score": 286
+        "score": 127
       },
       {
         "title": "Inception-style curved map for turn-by-turn directions",
         "url": "https://www.orbify.eu/demo/",
         "source": "Hacker News",
-        "score": 463
+        "score": 533
       },
       {
-        "title": "Monzo Stand-In",
-        "url": "https://monzo.com/blog/tolerating-full-cloud-outages-with-monzo-stand-in",
+        "title": "Just the rumour of a bug is enough to find an exploit these days",
+        "url": "https://anil.recoil.org/notes/rumour-is-the-exploit",
         "source": "Hacker News",
-        "score": 49
+        "score": 342
       },
       {
-        "title": "Review: Chuwi's $449 Unibook laptop is a funhouse-mirror MacBook Neo",
-        "url": "https://arstechnica.com/gadgets/2026/08/review-chuwis-449-unibook-laptop-is-a-funhouse-mirror-macbook-neo/",
+        "title": "Glacier Mice",
+        "url": "https://en.wikipedia.org/wiki/Glacier_mice",
         "source": "Hacker News",
-        "score": 23
+        "score": 37
       },
       {
-        "title": "Kumander Linux – A Linux Distro with a Windows 7 Desktop",
-        "url": "https://www.kumander.org/",
+        "title": "Our decision on Cursor following its acquisition by SpaceX",
+        "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
         "source": "Hacker News",
-        "score": 33
+        "score": 608
       }
     ],
     "ai": [
       {
-        "title": "StemDeck, a free, open-source and local AI stem separator",
-        "url": "https://github.com/stemdeckapp/stemdeck",
-        "source": "Hacker News AI",
-        "score": 63
-      },
-      {
         "title": "U.S. sanctions against the A/I Collective",
         "url": "https://www.inventati.org/",
         "source": "Hacker News AI",
-        "score": 542
+        "score": 634
+      },
+      {
+        "title": "StemDeck, a free, open-source and local AI stem separator",
+        "url": "https://github.com/stemdeckapp/stemdeck",
+        "source": "Hacker News AI",
+        "score": 128
       },
       {
         "title": "I accidentally turned LLM memory into program analysis",
         "url": "https://pwning.systems/posts/llm-memory-program-analysis/",
         "source": "Hacker News AI",
-        "score": 90
-      },
-      {
-        "title": "Identifying fake cosmetics using AI",
-        "url": "https://groverlab.org/hnbfpr/2026-08-26-ai-counterfeit-cosmetics.html",
-        "source": "Hacker News AI",
-        "score": 46
+        "score": 180
       },
       {
         "title": "Judge rules Trump administration’s blacklisting of Anthropic was illegal",
         "url": "https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html",
         "source": "Hacker News AI",
-        "score": 566
+        "score": 580
+      },
+      {
+        "title": "Identifying fake cosmetics using AI",
+        "url": "https://groverlab.org/hnbfpr/2026-08-26-ai-counterfeit-cosmetics.html",
+        "source": "Hacker News AI",
+        "score": 56
+      },
+      {
+        "title": "Nvidia agrees to acquire Hugging Face for $13B",
+        "url": "https://www.businessinsider.com/nvidia-in-talks-to-buy-hugging-face-13-billion-dollars-2026-8",
+        "source": "Hacker News AI",
+        "score": 1958
       }
     ],
     "news": [
       {
         "title": "Footage of Tibet floods isn't being shown in China - and we know little about victims there",
         "url": "https://www.bbc.co.uk/news/articles/cx2z415w2gpo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "At least 37 dead and hundreds evacuated after strike on Kyiv weapons depot",
+        "url": "https://www.bbc.co.uk/news/articles/c86xwqez4npo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -158,85 +169,116 @@
         "title": "Close race as Iceland votes on whether to restart talks on joining EU",
         "url": "https://www.bbc.co.uk/news/articles/cn45vdxyvvlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Oslo mayor calls off wedding ceremony after death of Norway's king",
-        "url": "https://www.bbc.co.uk/news/articles/c5ydgk3v60eo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
       {
+        "title": " The $3.4m Disney auction is a reminder of what AI concept art takes from us ",
+        "url": "https://www.creativebloq.com/art/animation/the-usd3-4m-disney-auction-is-a-reminder-of-what-ai-concept-art-takes-from-us",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This artist reimagined Star Wars with a League of Legends splash art style ",
+        "url": "https://www.creativebloq.com/art/digital-art/this-artist-reimagined-star-wars-with-a-league-of-legends-splash-art-style",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This is the most beautiful logo I've seen in years, but there's just one problem ",
+        "url": "https://www.creativebloq.com/design/logos-icons/this-is-the-most-beautiful-logo-ive-seen-in-years-but-theres-just-one-problem",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The new CD Projekt Red logo just sparked the weirdest backlash graphic design has ever seen ",
+        "url": "https://www.creativebloq.com/design/logos-icons/the-new-cd-projekt-red-logo-has-sparked-the-weirdest-backlash-graphic-design-has-seen",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The massive Amazon Tech Week sale has up to 49% off these essential tools for creatives ",
+        "url": "https://www.creativebloq.com/tech/the-massive-amazon-tech-week-sale-has-up-to-46-percent-off-these-essential-tools-for-creatives",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Catch yourself a budget mouse from as little as $11 ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/catch-yourself-a-budget-mouse-from-as-little-as-usd11",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " The Acer Chromebook Plus Spin 514 is the Chromebook I've spent the last 5 years waiting for ",
         "url": "https://www.creativebloq.com/tech/laptops/the-acer-chromebook-plus-spin-514-is-the-chromebook-ive-spent-the-last-5-years-waiting-for",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " \"Unsettling\" – Nvidia’s controversial DLSS 5 AI filter has leaked, and gamers are horrified ",
-        "url": "https://www.creativebloq.com/3d/unsettling-nvidias-dlss-5-controversial-ai-filter-has-leaked-and-gamers-are-horrified",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How Origame Digital built a “souped-up PS2” Lovecraftian horror game about penguins ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/how-origame-digital-built-a-souped-up-ps2-lovecraftian-horror-game-about-penguins",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These delightfully cheap retro pens are the art world's best-kept secret ",
-        "url": "https://www.creativebloq.com/design/product-design/these-delightfully-cheap-retro-pens-are-the-art-worlds-best-kept-secret",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This PC mouse has 31,400 five-star reviews on Amazon, and it's down to $30 ",
-        "url": "https://www.creativebloq.com/tech/keyboards-mice/this-pc-mouse-has-31-400-five-star-reviews-on-amazon-and-its-down-to-usd30",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How those epic Hearthstone cards are made ",
-        "url": "https://www.creativebloq.com/3d/how-those-epic-hearthstone-cards-are-made",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The return of Twitter could be a happy ending after the worst rebrand of all time ",
-        "url": "https://www.creativebloq.com/design/social-media/could-the-return-of-twitter-be-a-happy-ending-for-the-worst-rebrand-of-all-time",
-        "source": "Creative Bloq"
       }
     ],
-    "science": [],
+    "science": [
+      {
+        "title": "Australia’s red soil may be hiding a massive clean energy source",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260829035214.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "NASA’s Roman telescope will see 100 times more sky than Hubble",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260828082333.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists discover why damaged nerves struggle to heal",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260828005427.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Experimental eye drops help blind mice see again",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260828005224.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Your sleep may be hiding an early clue to Alzheimer’s",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260828005218.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists tested 212 plant-based meat alternatives. Every one contained fungal toxins",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260828005216.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A common vape flavoring may disrupt early embryo development",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260828005215.htm",
+        "source": "Science Daily"
+      }
+    ],
     "gaming": [
       {
-        "title": "Hit Survival Game Rust Releases Major Overhaul to 2026 Roadmap",
-        "url": "https://www.polygon.com/rust-roadmap-changes-2026/",
+        "title": "Arnold Schwarzenegger's 105-Minute One-Man-Army Action Flop Is Officially Free to Watch",
+        "url": "https://www.polygon.com/arnold-schwarzenegger-raw-deal-full-movie-free-to-watch-youtube/",
         "source": "Polygon"
       },
       {
-        "title": "Henry Cavill's New Action Thriller From Guy Ritchie Is Officially a Massive Streaming Hit",
-        "url": "https://www.polygon.com/henry-cavill-guy-ritchie-in-the-grey-streaming-success/",
+        "title": "Star Wars Zero Company Uses Anakin Skywalker for So Much More than a Cameo",
+        "url": "https://www.polygon.com/star-wars-zero-company-anakin-skywalker-mission/",
         "source": "Polygon"
       },
       {
-        "title": "You Need to Watch Netflix's 7 Best Original Anime At Least Once",
-        "url": "https://www.polygon.com/best-netflix-original-anime-everyone-needs-to-watch-stream/",
+        "title": "The Switch 2 Is About to Face Its Toughest Challenge Yet",
+        "url": "https://www.polygon.com/switchboard-fromsoftware-elden-ring-the-duskbloods/",
         "source": "Polygon"
       },
       {
-        "title": "The Best Sci-Fi Action Epic of All Time Is About to Be Streaming on Netflix",
-        "url": "https://www.polygon.com/james-cameron-aliens-on-netflix/",
+        "title": "Alan Ritchson's New 103-Minute Action Revenge Thriller Is an Instant Streaming Hit",
+        "url": "https://www.polygon.com/alan-ritchson-motor-city-digital-streaming-success-august-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Magic’s Next Set Is Caught in a ‘Naval Snarl’ at the Panama Canal",
-        "url": "https://www.polygon.com/mtg-reality-fracture-shipping-delay-panama-canal-explained/",
+        "title": "Rachel McAdams' 10/10 Time-Travel Movie Is Officially Coming to Streaming Next Week",
+        "url": "https://www.polygon.com/about-time-movie-streaming-netflix-september-2026/",
         "source": "Polygon"
       },
       {
-        "title": "'Star Wars' Officially Returns to Disney Plus Next Week with New Streaming Release",
-        "url": "https://www.polygon.com/star-wars-mandalorian-and-grogu-streaming-date-disney-plus/",
+        "title": "The Dog Stars Release Date Window for Disney Plus Streaming, Blu-ray, and DVD",
+        "url": "https://www.polygon.com/ridley-scott-the-dog-stars-streaming-release-date-vod-disney-plus/",
         "source": "Polygon"
       },
       {
-        "title": "10 New Movies to Watch This Weekend on Netflix, HBO Max, and Hulu (August 28-30)",
-        "url": "https://www.polygon.com/new-movies-streaming-this-weekend-netflix-august-28-30/",
+        "title": "Marvel Star's Forgotten 100-Minute Action Thriller Is About to Disappear From Streaming",
+        "url": "https://www.polygon.com/legion-2010-netflix/",
         "source": "Polygon"
       }
     ],
