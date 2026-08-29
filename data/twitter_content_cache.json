@@ -1,149 +1,131 @@
 {
   "metadata": {
-    "last_updated": "2026-08-28T23:27:05.711382",
-    "total_items": 44
+    "last_updated": "2026-08-29T06:02:17.801149",
+    "total_items": 48
   },
   "content": {
     "tech": [
       {
+        "title": "Boot a Virtual iPhone via Apple's Virtualization.framework",
+        "url": "https://github.com/Lakr233/vphone-cli",
+        "source": "Hacker News",
+        "score": 203
+      },
+      {
         "title": "GUIs should be fully keyboard-driven",
         "url": "https://ckardaris.com/blog/2026/08/28/keyboard-driven-guis.html",
         "source": "Hacker News",
-        "score": 520
+        "score": 718
+      },
+      {
+        "title": "TurboKV: Insanely fast Rust key-value store",
+        "url": "https://github.com/kingroryg/turbokv",
+        "source": "Hacker News",
+        "score": 59
       },
       {
         "title": "Htmx 4.0",
         "url": "https://four.htmx.org/announcements/2026-08-28-htmx-4.0.0-is-released",
         "source": "Hacker News",
-        "score": 462
+        "score": 602
+      },
+      {
+        "title": "StemDeck, a free, open-source and local AI stem separator",
+        "url": "https://github.com/stemdeckapp/stemdeck",
+        "source": "Hacker News",
+        "score": 63
+      },
+      {
+        "title": "9th Circuit sides with states in Kalshi gambling fight",
+        "url": "https://azmirror.com/2026/08/28/9th-circuit-sides-with-states-in-kalshi-gambling-fight-potentially-reviving-arizonas-prosecution/",
+        "source": "Hacker News",
+        "score": 111
+      },
+      {
+        "title": "Our decision on Cursor following its acquisition by SpaceX",
+        "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex/",
+        "source": "Hacker News",
+        "score": 329
+      },
+      {
+        "title": "U.S. sanctions against the A/I Collective",
+        "url": "https://www.inventati.org/",
+        "source": "Hacker News",
+        "score": 542
+      },
+      {
+        "title": "I accidentally turned LLM memory into program analysis",
+        "url": "https://pwning.systems/posts/llm-memory-program-analysis/",
+        "source": "Hacker News",
+        "score": 90
+      },
+      {
+        "title": "Does the Sumerian King List Align with Paleoclimate Events?",
+        "url": "https://www.vectorian.be/articles/2026-06-07/sumerian-king-list-paleoclimate-alignment-explorer/",
+        "source": "Hacker News",
+        "score": 76
       },
       {
         "title": "Just the rumour of a bug is enough to find an exploit these days",
         "url": "https://anil.recoil.org/notes/rumour-is-the-exploit",
         "source": "Hacker News",
-        "score": 225
-      },
-      {
-        "title": "U.S. sanctions against the A/I Collective",
-        "url": "https://www.inventati.org/",
-        "source": "Hacker News",
-        "score": 437
+        "score": 286
       },
       {
         "title": "Inception-style curved map for turn-by-turn directions",
         "url": "https://www.orbify.eu/demo/",
         "source": "Hacker News",
-        "score": 397
+        "score": 463
       },
       {
-        "title": "Curvature Beziers: Improving on a timeless recipe",
-        "url": "https://acko.net/blog/curvature-beziers/",
+        "title": "Monzo Stand-In",
+        "url": "https://monzo.com/blog/tolerating-full-cloud-outages-with-monzo-stand-in",
         "source": "Hacker News",
-        "score": 63
+        "score": 49
       },
       {
-        "title": "Judge rules Trump administration’s blacklisting of Anthropic was illegal",
-        "url": "https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html",
+        "title": "Review: Chuwi's $449 Unibook laptop is a funhouse-mirror MacBook Neo",
+        "url": "https://arstechnica.com/gadgets/2026/08/review-chuwis-449-unibook-laptop-is-a-funhouse-mirror-macbook-neo/",
         "source": "Hacker News",
-        "score": 477
+        "score": 23
       },
       {
-        "title": "The Twelve-Factor App (2025)",
-        "url": "https://12factor.net/",
+        "title": "Kumander Linux – A Linux Distro with a Windows 7 Desktop",
+        "url": "https://www.kumander.org/",
         "source": "Hacker News",
-        "score": 208
-      },
-      {
-        "title": "Processing in Memory: DRAM Is About to Do Math",
-        "url": "https://ben3d.ca/blog/processing-in-memory",
-        "source": "Hacker News",
-        "score": 45
-      },
-      {
-        "title": "GLM-5.3 is now open-weight",
-        "url": "https://huggingface.co/zai-org/GLM-5.3",
-        "source": "Hacker News",
-        "score": 545
-      },
-      {
-        "title": "Autonomous Mathematical Discovery in an Open-World Multi-Agent Environment",
-        "url": "https://arxiv.org/abs/2608.23691",
-        "source": "Hacker News",
-        "score": 71
-      },
-      {
-        "title": "Visual Analysis of Binary Files",
-        "url": "https://binvis.io/#/",
-        "source": "Hacker News",
-        "score": 54
-      },
-      {
-        "title": "Show HN: Sesame - a local-first, open-source password manager",
-        "url": "https://usesesame.app/",
-        "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "Stopping the smart TV from being used against you",
-        "url": "https://www.s-config.com/stopping-a-smart-tv-from-being-used-against-you/",
-        "source": "Hacker News",
-        "score": 127
-      },
-      {
-        "title": "Verschlimmbesserung: The Word Your Software Updates Need",
-        "url": "https://geekyschmidt.com/post/2026-08-25-verschlimmbesserung/",
-        "source": "Hacker News",
-        "score": 97
+        "score": 33
       }
     ],
     "ai": [
       {
+        "title": "StemDeck, a free, open-source and local AI stem separator",
+        "url": "https://github.com/stemdeckapp/stemdeck",
+        "source": "Hacker News AI",
+        "score": 63
+      },
+      {
         "title": "U.S. sanctions against the A/I Collective",
         "url": "https://www.inventati.org/",
         "source": "Hacker News AI",
-        "score": 437
+        "score": 542
       },
       {
-        "title": "Judge rules Trump administration’s blacklisting of Anthropic was illegal",
-        "url": "https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html",
+        "title": "I accidentally turned LLM memory into program analysis",
+        "url": "https://pwning.systems/posts/llm-memory-program-analysis/",
         "source": "Hacker News AI",
-        "score": 477
-      },
-      {
-        "title": "Stopping the smart TV from being used against you",
-        "url": "https://www.s-config.com/stopping-a-smart-tv-from-being-used-against-you/",
-        "source": "Hacker News AI",
-        "score": 127
-      },
-      {
-        "title": "Luanti removed from Google Play due to baseless AI copyright notice",
-        "url": "https://blog.luanti.org/2026/08/27/luanti-dmca-tracer-ai/",
-        "source": "Hacker News AI",
-        "score": 417
+        "score": 90
       },
       {
         "title": "Identifying fake cosmetics using AI",
         "url": "https://groverlab.org/hnbfpr/2026-08-26-ai-counterfeit-cosmetics.html",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 46
       },
       {
-        "title": "Milo Yiannopoulos Detained by ICE in Louisiana",
-        "url": "https://www.wired.com/story/milo-yiannopoulos-detained-by-ice-in-louisiana/",
+        "title": "Judge rules Trump administration’s blacklisting of Anthropic was illegal",
+        "url": "https://www.nytimes.com/2026/08/27/technology/anthropic-government-blacklisting-ruling.html",
         "source": "Hacker News AI",
-        "score": 19
-      },
-      {
-        "title": "Show HN: Hacker News Client with Claude Code and Codex Integration",
-        "url": "https://github.com/nilbuild/rundown",
-        "source": "Hacker News AI",
-        "score": 6
-      },
-      {
-        "title": "I used AWS cognito for a startup. I wouldn't do it again",
-        "url": "https://joshkaramuth.com/blog/aws-cognito-authentication-startup-nightmare/",
-        "source": "Hacker News AI",
-        "score": 160
+        "score": 566
       }
     ],
     "news": [
@@ -153,18 +135,18 @@
         "source": "BBC World"
       },
       {
+        "title": "Trump hails 'historic' deal for US to control 65bn barrels of Venezuela's oil",
+        "url": "https://www.bbc.co.uk/news/articles/cx2zlwe7qj1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Landlady to 9/11 hijackers reveals their links to alleged Saudi spy",
+        "url": "https://www.bbc.co.uk/news/articles/c99dvm39mreo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Norway mourns King Harald as Haakon VIII ascends throne",
         "url": "https://www.bbc.co.uk/news/articles/cm2rzxrdr71o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Oslo mayor calls off wedding ceremony after death of Norway's king",
-        "url": "https://www.bbc.co.uk/news/articles/c5ydgk3v60eo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Russia ramps up rhetoric but wants to avoid war with Nato, Western officials say",
-        "url": "https://www.bbc.co.uk/news/articles/cz0zm2j7ld1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -173,52 +155,88 @@
         "source": "BBC World"
       },
       {
-        "title": "Berlin is being blackmailed by hackers, mayor says",
-        "url": "https://www.bbc.co.uk/news/articles/cm2q7gv3l5qo?at_medium=RSS&at_campaign=rss",
+        "title": "Close race as Iceland votes on whether to restart talks on joining EU",
+        "url": "https://www.bbc.co.uk/news/articles/cn45vdxyvvlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Thieves steal 600-diamond necklace from Vienna museum in broad daylight",
-        "url": "https://www.bbc.co.uk/news/articles/cqxvwpe0plro?at_medium=RSS&at_campaign=rss",
+        "title": "Oslo mayor calls off wedding ceremony after death of Norway's king",
+        "url": "https://www.bbc.co.uk/news/articles/c5ydgk3v60eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " The Acer Chromebook Plus Spin 514 is the Chromebook I've spent the last 5 years waiting for ",
+        "url": "https://www.creativebloq.com/tech/laptops/the-acer-chromebook-plus-spin-514-is-the-chromebook-ive-spent-the-last-5-years-waiting-for",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " \"Unsettling\" – Nvidia’s controversial DLSS 5 AI filter has leaked, and gamers are horrified ",
+        "url": "https://www.creativebloq.com/3d/unsettling-nvidias-dlss-5-controversial-ai-filter-has-leaked-and-gamers-are-horrified",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How Origame Digital built a “souped-up PS2” Lovecraftian horror game about penguins ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/how-origame-digital-built-a-souped-up-ps2-lovecraftian-horror-game-about-penguins",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " These delightfully cheap retro pens are the art world's best-kept secret ",
+        "url": "https://www.creativebloq.com/design/product-design/these-delightfully-cheap-retro-pens-are-the-art-worlds-best-kept-secret",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This PC mouse has 31,400 five-star reviews on Amazon, and it's down to $30 ",
+        "url": "https://www.creativebloq.com/tech/keyboards-mice/this-pc-mouse-has-31-400-five-star-reviews-on-amazon-and-its-down-to-usd30",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How those epic Hearthstone cards are made ",
+        "url": "https://www.creativebloq.com/3d/how-those-epic-hearthstone-cards-are-made",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The return of Twitter could be a happy ending after the worst rebrand of all time ",
+        "url": "https://www.creativebloq.com/design/social-media/could-the-return-of-twitter-be-a-happy-ending-for-the-worst-rebrand-of-all-time",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [],
     "gaming": [
       {
+        "title": "Hit Survival Game Rust Releases Major Overhaul to 2026 Roadmap",
+        "url": "https://www.polygon.com/rust-roadmap-changes-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Henry Cavill's New Action Thriller From Guy Ritchie Is Officially a Massive Streaming Hit",
+        "url": "https://www.polygon.com/henry-cavill-guy-ritchie-in-the-grey-streaming-success/",
+        "source": "Polygon"
+      },
+      {
+        "title": "You Need to Watch Netflix's 7 Best Original Anime At Least Once",
+        "url": "https://www.polygon.com/best-netflix-original-anime-everyone-needs-to-watch-stream/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Best Sci-Fi Action Epic of All Time Is About to Be Streaming on Netflix",
+        "url": "https://www.polygon.com/james-cameron-aliens-on-netflix/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Magic’s Next Set Is Caught in a ‘Naval Snarl’ at the Panama Canal",
+        "url": "https://www.polygon.com/mtg-reality-fracture-shipping-delay-panama-canal-explained/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Star Wars' Officially Returns to Disney Plus Next Week with New Streaming Release",
+        "url": "https://www.polygon.com/star-wars-mandalorian-and-grogu-streaming-date-disney-plus/",
+        "source": "Polygon"
+      },
+      {
         "title": "10 New Movies to Watch This Weekend on Netflix, HBO Max, and Hulu (August 28-30)",
         "url": "https://www.polygon.com/new-movies-streaming-this-weekend-netflix-august-28-30/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Last of Us, Skyrim and More Get Unreal Makeovers With Nvidia's Controversial AI Tech",
-        "url": "https://www.polygon.com/nvidia-dlss-5-ai-filter-neural-graphics-skyrim-gta-tech-leak/",
-        "source": "Polygon"
-      },
-      {
-        "title": "FX's Near-Perfect 11-Part Neo-Western Detective Series Is a Brilliant from Start to Finish",
-        "url": "https://www.polygon.com/fx-fargo-season-4-weekend-binge/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Most Unforgettable Apocalypse Action Movie of the 21st Century Is Officially Leaving Streaming",
-        "url": "https://www.polygon.com/zombieland-leaving-netflix-movies-rec/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Excellent New Steam Games to Try This Weekend",
-        "url": "https://www.polygon.com/new-steam-games-august-28-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Netflix's New 26-Minute GTA 6 Release Is Already the No. 1 Movie on Streaming",
-        "url": "https://www.polygon.com/gta-6-netflix-charts/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 Near-Perfect Far Side Comics About Movies",
-        "url": "https://www.polygon.com/best-far-side-comics-movies/",
         "source": "Polygon"
       }
     ],
