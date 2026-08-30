@@ -1,170 +1,163 @@
 {
   "metadata": {
-    "last_updated": "2026-08-30T15:11:28.750988",
-    "total_items": 61
+    "last_updated": "2026-08-30T19:05:43.731006",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
+        "title": "Haiku R1/beta6 has been released",
+        "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
+        "source": "Hacker News",
+        "score": 143
+      },
+      {
         "title": "Creepy Crawlies",
         "url": "https://people.kernel.org/monsieuricon/creepy-crawlies",
         "source": "Hacker News",
-        "score": 82
+        "score": 463
       },
       {
-        "title": "No AI Fridays",
-        "url": "https://noaifridays.com/",
+        "title": "Coordination Headwind: How Organizations Are Like Slime Molds",
+        "url": "https://komoroske.com/slime-mold/",
         "source": "Hacker News",
-        "score": 101
+        "score": 55
+      },
+      {
+        "title": "Running SQLite Apps on Docker and Kubernetes with Litestream",
+        "url": "https://openrun.dev/blog/litestream/",
+        "source": "Hacker News",
+        "score": 10
+      },
+      {
+        "title": "METR and Redwood Offer Holy %^ Postmortem of the HuggingFace Hack",
+        "url": "https://thezvi.wordpress.com/2026/08/29/metr-and-redwood-offer-holy-postmortem-of-the-huggingface-hack/",
+        "source": "Hacker News",
+        "score": 85
       },
       {
         "title": "Hacking IKEA Furniture",
         "url": "https://greenlightning.eu/diy/hacking-ikea-furniture/",
         "source": "Hacker News",
-        "score": 110
+        "score": 200
+      },
+      {
+        "title": "Electric rain can eat through metal",
+        "url": "https://www.scientificamerican.com/article/electric-rain-can-eat-through-metal/",
+        "source": "Hacker News",
+        "score": 52
+      },
+      {
+        "title": "Zig: Pointer Stability for ArrayLists",
+        "url": "https://ziglang.org/devlog/2026/#2026-08-27",
+        "source": "Hacker News",
+        "score": 42
+      },
+      {
+        "title": "Storm Summoner, a MIDI controller for effects pedals",
+        "url": "https://kabaragoya.com/products/storm-summoner",
+        "source": "Hacker News",
+        "score": 10
+      },
+      {
+        "title": "Artie (YC S23) Is Hiring Technical AES",
+        "url": "https://www.artie.com/careers?ashby_jid=e87b84d2-78b3-41a3-937a-47e83643cdf1",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "European Commission Revives Push for Encryption Backdoors in ProtectEU Strategy",
+        "url": "https://reclaimthenet.org/eu-protecteu-strategy-encryption-backdoor-law-enforcement",
+        "source": "Hacker News",
+        "score": 204
       },
       {
         "title": "Casey Muratori – The Root of the Root of All Evil – BSC 2026 [video]",
         "url": "https://www.youtube.com/watch?v=hpj6r6CjJf8",
         "source": "Hacker News",
-        "score": 148
-      },
-      {
-        "title": "What my dad taught me about AI coding in the 90s",
-        "url": "https://askmike.org/articles/ai-coding-lessons-in-the-90s-from-my-dad/",
-        "source": "Hacker News",
-        "score": 65
+        "score": 233
       },
       {
         "title": "Arbitrary code execution in QubesOS via copy-to-VM error reporting backchannel",
         "url": "https://www.qubes-os.org/news/2026/08/29/qsb-118/",
         "source": "Hacker News",
-        "score": 125
+        "score": 171
+      },
+      {
+        "title": "Omarchy: Any User Process Can Escalate to Root",
+        "url": "https://0xcc.io/posts/omarchy-root-creds/",
+        "source": "Hacker News",
+        "score": 220
       },
       {
         "title": "Longest Straight Line Paths on Water or Land on the Earth (2018)",
         "url": "https://arxiv.org/abs/1804.07389",
         "source": "Hacker News",
-        "score": 145
-      },
-      {
-        "title": "An implementation of Conway's Game of Life for Windows 3.1x and later",
-        "url": "https://www.muppetlabs.com/~breadbox/software/windows.html",
-        "source": "Hacker News",
-        "score": 30
-      },
-      {
-        "title": "When Fruit Is Scarce, These Monkeys Hunt Animals",
-        "url": "https://www.smithsonianmag.com/smart-news/when-fruit-is-scarce-these-monkeys-hunt-animals-the-behavior-may-offer-clues-about-the-origins-of-humans-meat-eating-habits-180989412/",
-        "source": "Hacker News",
-        "score": 14
-      },
-      {
-        "title": "Brits would quite like their private messages to stay private",
-        "url": "https://www.theregister.com/security/2026/08/30/turns-out-brits-would-quite-like-their-private-messages-to-stay-private/5292994",
-        "source": "Hacker News",
-        "score": 260
-      },
-      {
-        "title": "RISC-V is now officially supported by CPython",
-        "url": "https://blog.python.org/2026/08/riscv-now-officially-supported/",
-        "source": "Hacker News",
-        "score": 241
-      },
-      {
-        "title": "Automating Immersive Reading",
-        "url": "https://smoores.dev/post/automating_immersive_reading/",
-        "source": "Hacker News",
-        "score": 34
-      },
-      {
-        "title": "Europe's summer drought is so extreme that desertification is a growing threat",
-        "url": "https://fortune.com/2026/08/29/europe-summer-drought-desertification-threat-rivers-fish/",
-        "source": "Hacker News",
-        "score": 21
-      },
-      {
-        "title": "monty-go: Pure-Go wrapper for Pydantic's Monty Python Interpreter",
-        "url": "https://github.com/fugue-labs/monty-go",
-        "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "JupyterGIS 0.16: a grammar of graphics for maps, and collaborative story maps",
-        "url": "https://blog.jupyter.org/jupytergis-0-16-new-visualization-capabilities-collaborative-story-maps-and-more-03e6b78bacc0",
-        "source": "Hacker News",
-        "score": 68
+        "score": 174
       }
     ],
     "ai": [
       {
-        "title": "No AI Fridays",
-        "url": "https://noaifridays.com/",
+        "title": "Haiku R1/beta6 has been released",
+        "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
         "source": "Hacker News AI",
-        "score": 102
+        "score": 143
+      },
+      {
+        "title": "Coordination Headwind: How Organizations Are Like Slime Molds",
+        "url": "https://komoroske.com/slime-mold/",
+        "source": "Hacker News AI",
+        "score": 55
+      },
+      {
+        "title": "Electric rain can eat through metal",
+        "url": "https://www.scientificamerican.com/article/electric-rain-can-eat-through-metal/",
+        "source": "Hacker News AI",
+        "score": 52
+      },
+      {
+        "title": "Longest Straight Line Paths on Water or Land on the Earth (2018)",
+        "url": "https://arxiv.org/abs/1804.07389",
+        "source": "Hacker News AI",
+        "score": 174
       },
       {
         "title": "What my dad taught me about AI coding in the 90s",
         "url": "https://askmike.org/articles/ai-coding-lessons-in-the-90s-from-my-dad/",
         "source": "Hacker News AI",
-        "score": 65
-      },
-      {
-        "title": "Longest Straight Line Paths on Water or Land on the Earth (2018)",
-        "url": "https://arxiv.org/abs/1804.07389",
-        "source": "Hacker News AI",
-        "score": 145
-      },
-      {
-        "title": "Fair Work Commission condemns 'plain wrong' AI legal advice",
-        "url": "https://www.abc.net.au/news/2026-08-29/fair-work-commission-condemns-ai-legal-advice/107089766",
-        "source": "Hacker News AI",
-        "score": 48
+        "score": 97
       },
       {
         "title": "Claude Session URL appended to commit messages and PR descriptions by default",
         "url": "https://github.com/anthropics/claude-code/issues/66504",
         "source": "Hacker News AI",
-        "score": 91
+        "score": 137
       },
       {
-        "title": "Lawmakers added $1 to car insurance policies. That money paid for Flock cameras",
-        "url": "https://www.texastribune.org/2026/08/28/texas-flock-cameras-auto-insurance-fee-mvcpa-grants/",
+        "title": "What We Tell AI",
+        "url": "https://www.whatwetellai.com/",
         "source": "Hacker News AI",
-        "score": 369
+        "score": 18
       },
       {
-        "title": "Show HN: Bolnee-Chat – Self Hosted Chatbot Integration in Your Business Website",
-        "url": "https://github.com/AniketWathore/bolnee-chat",
+        "title": "Show HN: I missed the moving blocks, so I built a real Linux disk defragmenter",
+        "url": "https://github.com/gbin/defragger",
         "source": "Hacker News AI",
-        "score": 29
+        "score": 78
       },
       {
-        "title": "Open Oscar Server: open-source server compatible with AIM and ICQ clients",
-        "url": "https://github.com/mk6i/open-oscar-server",
+        "title": "Berlin is being blackmailed by hackers",
+        "url": "https://www.bbc.com/news/articles/cm2q7gv3l5qo",
         "source": "Hacker News AI",
-        "score": 51
-      },
-      {
-        "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
-        "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
-        "source": "Hacker News AI",
-        "score": 421
-      },
-      {
-        "title": "StemDeck, a free, open-source and local AI stem separator",
-        "url": "https://github.com/stemdeckapp/stemdeck",
-        "source": "Hacker News AI",
-        "score": 232
-      },
-      {
-        "title": "The shrinking landscape of linguistic diversity in the age of LLMs",
-        "url": "https://www.nature.com/articles/s41562-026-02550-0",
-        "source": "Hacker News AI",
-        "score": 6
+        "score": 12
       }
     ],
     "news": [
+      {
+        "title": "Eight killed and others missing after ferry capsizes off northern Cyprus",
+        "url": "https://www.bbc.co.uk/news/articles/c770jyd4l7lo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Iceland votes against restarting EU membership talks",
         "url": "https://www.bbc.co.uk/news/articles/c70le8ed1plo?at_medium=RSS&at_campaign=rss",
@@ -176,28 +169,23 @@
         "source": "BBC World"
       },
       {
+        "title": "Nasa launches new space telescope able to see 100 times more than Hubble",
+        "url": "https://www.bbc.co.uk/news/articles/ce87e55vgpjo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Canada installs large Lake Ontario sign in latest jab at US",
         "url": "https://www.bbc.co.uk/news/articles/cpq09594vw7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "WhatsApp chat used to send cash for crime and extremism",
-        "url": "https://www.bbc.co.uk/news/articles/cgk57lg7566o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "At least 37 dead and hundreds evacuated after strike on Kyiv weapons depot",
-        "url": "https://www.bbc.co.uk/news/articles/c86xwqez4npo?at_medium=RSS&at_campaign=rss",
+        "title": "Russia says it helped to repel Niger attempted coup",
+        "url": "https://www.bbc.co.uk/news/articles/c5ye8egg596o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Zambian opposition leader charged with treason",
         "url": "https://www.bbc.co.uk/news/articles/c20lwqpx70qo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Right-wing commentator Milo Yiannopoulos deported from US to UK",
-        "url": "https://www.bbc.co.uk/news/articles/cqlw52vr0dwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -260,55 +248,55 @@
         "source": "Science Daily"
       },
       {
+        "title": "This strange “spacetime crystal” can suddenly become a black hole",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260829035225.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "1.4-million-year-old footprints reveal a surprisingly large human relative",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260829035221.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "IBM quantum computer solves classically intractable problem in 15 minutes",
         "url": "https://www.sciencedaily.com/releases/2026/08/260829035219.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Common supplements rival antibiotics for severe gum disease",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260829035216.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Australia’s red soil may be hiding a massive clean energy source",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260829035214.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "CBS's Legendary 82-Episode Sci-Fi Action Series is Officially Free to Watch on Streaming",
-        "url": "https://www.polygon.com/incredible-hulk-1978-free-on-tubi/",
+        "title": "11 Replay Ideas to Make Stardew Valley Feel New Again",
+        "url": "https://www.polygon.com/stardew-valley-replay-ideas-challenge-runs/",
         "source": "Polygon"
       },
       {
-        "title": "Fable Will Officially Be 20 Hours Long, Xbox Confirms In New Interview",
-        "url": "https://www.polygon.com/fable-game-length-interview-xbox/",
+        "title": "The 10 Nastiest Video Game Foods That'll Ruin Your Appetite",
+        "url": "https://www.polygon.com/worst-video-game-foods-nastiest-gross-menu-items/",
         "source": "Polygon"
       },
       {
-        "title": "PlayStation Wants To Prove In Court That You Don't Own Your Digital Games",
-        "url": "https://www.polygon.com/sony-digital-games-lawsuit-california/",
+        "title": "'Coyote Vs. ACME' Beat 'The Odyssey' And Ridley Scott At The Box Office This Weekend",
+        "url": "https://www.polygon.com/coyote-vs-acme-box-office/",
         "source": "Polygon"
       },
       {
-        "title": "MCU Actor Reveals the 'Avengers: Endgame' Spinoff He's Been Pitching to Marvel for 7 Years",
-        "url": "https://www.polygon.com/ross-marquand-red-skull-captain-america-infinity-stones-pitch/",
+        "title": "WB's Iconic 263-Episode Series Is Officially Free on Streaming, and Every Episode Is a Masterpiece",
+        "url": "https://www.polygon.com/best-classic-looney-tunes-shorts-coyote-vs-acme/",
         "source": "Polygon"
       },
       {
-        "title": "Steam Just Suffered the Biggest Leak in Video Game History",
-        "url": "https://www.polygon.com/steam-leak-valve-portal-2-beta-half-life-3-what-is/",
+        "title": "Maybe It's a Good Thing AAA Games Take 13 Years to Make",
+        "url": "https://www.polygon.com/patch-notes-gta-6-the-witcher-3-gamescom/",
         "source": "Polygon"
       },
       {
-        "title": "October 2026 Has Way Too Many Games Trying to Escape GTA 6",
-        "url": "https://www.polygon.com/october-2026-new-video-games/",
+        "title": "10 Action Series to Watch If You Love Prime Video's Reacher",
+        "url": "https://www.polygon.com/reacher-action-series-to-watch-streaming/",
         "source": "Polygon"
       },
       {
-        "title": "The 7 Best Cosmic Sci-Fi Thrillers of All Time",
-        "url": "https://www.polygon.com/best-cosmic-sci-fi-thrillers-all-time/",
+        "title": "The Witcher 4 Will Still Get A Physical Release, Even Though It's Launching In 2028",
+        "url": "https://www.polygon.com/the-witcher-4-physical-release/",
         "source": "Polygon"
       }
     ],
