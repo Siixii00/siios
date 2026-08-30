@@ -1,143 +1,160 @@
 {
   "metadata": {
-    "last_updated": "2026-08-29T23:01:26.388192",
-    "total_items": 56
+    "last_updated": "2026-08-30T04:08:42.884691",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "Tencent Releases and Open-Sources Tencent Hy4 Preview",
-        "url": "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/",
+        "title": "Bug Blindness",
+        "url": "https://danluu.com/bug-blind/",
         "source": "Hacker News",
-        "score": 125
+        "score": 115
       },
       {
-        "title": "Aptera announces a $44M to design and build a solar electric vehicle",
-        "url": "https://frequal.com/aptera/ProductionDealAug2026.html",
+        "title": "FreeCORE TrueNAS Core – Continued",
+        "url": "https://freecore.org/",
         "source": "Hacker News",
-        "score": 22
+        "score": 49
+      },
+      {
+        "title": "Hy4 preview",
+        "url": "https://www.tencent.com/tencent-releases-and-open-sources-tencent-hy4-preview/",
+        "source": "Hacker News",
+        "score": 227
+      },
+      {
+        "title": "RISC-V is now officially supported by CPython",
+        "url": "https://blog.python.org/2026/08/riscv-now-officially-supported/",
+        "source": "Hacker News",
+        "score": 55
+      },
+      {
+        "title": "Algorithmic Rent-Pricing Litigation Expands Under New State and Local Laws",
+        "url": "https://www.morganlewis.com/pubs/2026/08/algorithmic-rent-pricing-litigation-expands-under-new-state-and-local-laws",
+        "source": "Hacker News",
+        "score": 14
       },
       {
         "title": "Tether: iMessage, SMS, etc. on Linux",
         "url": "https://zackbartel.com/blog/2026/08/tether/",
         "source": "Hacker News",
-        "score": 281
+        "score": 390
       },
       {
-        "title": "vLLM v0.28.0",
-        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.28.0",
+        "title": "Show HN: I missed the moving blocks, so I built a real Linux disk defragmenter",
+        "url": "https://github.com/gbin/defragger",
         "source": "Hacker News",
-        "score": 73
+        "score": 21
       },
       {
-        "title": "Nancy Grace Roman Space Telescope Launches this Sunday",
-        "url": "https://www.npr.org/2026/08/28/nx-s1-5905370/nasa-nancy-grace-roman-space-telescope-dark-energy-supernova",
+        "title": "Nancy Grace Roman Space Telescope",
+        "url": "https://science.nasa.gov/mission/roman-space-telescope/",
         "source": "Hacker News",
-        "score": 40
+        "score": 155
+      },
+      {
+        "title": "Lawmakers added $1 to car insurance policies. That money paid for Flock cameras",
+        "url": "https://www.texastribune.org/2026/08/28/texas-flock-cameras-auto-insurance-fee-mvcpa-grants/",
+        "source": "Hacker News",
+        "score": 179
+      },
+      {
+        "title": "Benjamin Franklin's Alter Egos Gave Him the Most Freedom",
+        "url": "https://www.smithsonianmag.com/history/among-all-great-things-benjamin-franklin-invented-discovered-alter-egos-gave-him-most-freedom-180988824/",
+        "source": "Hacker News",
+        "score": 9
       },
       {
         "title": "Calibrate Before You Accelerate: Bias Toward Action in a New Role",
         "url": "https://tucker.wales/writing/bias-towards-action/",
         "source": "Hacker News",
-        "score": 80
+        "score": 131
+      },
+      {
+        "title": "Is it safe to call print in a Python signal handler?",
+        "url": "https://iafisher.com/2026/08/sigprint",
+        "source": "Hacker News",
+        "score": 27
       },
       {
         "title": "SQLite as a Document Database (2020)",
         "url": "https://dgl.cx/2020/06/sqlite-json-support",
         "source": "Hacker News",
-        "score": 152
+        "score": 186
       },
       {
         "title": "Functional State Machines in Rust: Typestate and Newtype Patterns",
         "url": "https://dl.acm.org/doi/10.1145/3830438.3830958",
         "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Domain-Driven Agents",
-        "url": "https://coldtake.dev/blog/domain-driven-agents",
-        "source": "Hacker News",
-        "score": 25
-      },
-      {
-        "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
-        "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
-        "source": "Hacker News",
-        "score": 199
-      },
-      {
-        "title": "DHS is using obscure law to snoop on journalists, non-profits, unions",
-        "url": "https://www.theguardian.com/us-news/2026/aug/29/trump-dhs-1509-summons-records-journalists-nonprofits",
-        "source": "Hacker News",
-        "score": 238
-      },
-      {
-        "title": "A safe MySQL upgrade that wasn't so safe",
-        "url": "https://blog.elis.cc/articles/a-safe-mysql-upgrade-that-wasnt-so-safe/",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Glacier Mice",
-        "url": "https://en.wikipedia.org/wiki/Glacier_mice",
-        "source": "Hacker News",
-        "score": 234
-      },
-      {
-        "title": "Indirect Calling of Nested Functions on GCC Without Executable Stack",
-        "url": "https://uecker.codeberg.page/2026-08-29.html",
-        "source": "Hacker News",
         "score": 63
       },
       {
-        "title": "Samsung's Processing-in-Memory (PIM)",
-        "url": "https://chipsandcheese.com/p/hot-chips-2026-samsungs-processing",
+        "title": "Benchmarking Pocket-Scale Inference",
+        "url": "https://artificialanalysis.ai/hardware-inference-stack/mobile-phones",
         "source": "Hacker News",
-        "score": 235
+        "score": 8
       }
     ],
     "ai": [
       {
-        "title": "vLLM v0.28.0",
-        "url": "https://github.com/vllm-project/vllm/releases/tag/v0.28.0",
+        "title": "Show HN: I missed the moving blocks, so I built a real Linux disk defragmenter",
+        "url": "https://github.com/gbin/defragger",
         "source": "Hacker News AI",
-        "score": 73
+        "score": 21
+      },
+      {
+        "title": "Lawmakers added $1 to car insurance policies. That money paid for Flock cameras",
+        "url": "https://www.texastribune.org/2026/08/28/texas-flock-cameras-auto-insurance-fee-mvcpa-grants/",
+        "source": "Hacker News AI",
+        "score": 179
       },
       {
         "title": "Domain-Driven Agents",
         "url": "https://coldtake.dev/blog/domain-driven-agents",
         "source": "Hacker News AI",
-        "score": 25
+        "score": 68
       },
       {
         "title": "Good Culture Is the Biggest Productivity Hack, Not AI",
         "url": "https://newsletter.eng-leadership.com/p/good-culture-is-the-biggest-productivity",
         "source": "Hacker News AI",
-        "score": 199
+        "score": 292
       },
       {
         "title": "StemDeck, a free, open-source and local AI stem separator",
         "url": "https://github.com/stemdeckapp/stemdeck",
         "source": "Hacker News AI",
-        "score": 193
+        "score": 210
       },
       {
         "title": "I accidentally turned LLM memory into program analysis",
         "url": "https://pwning.systems/posts/llm-memory-program-analysis/",
         "source": "Hacker News AI",
-        "score": 266
+        "score": 281
       },
       {
-        "title": "Warp builds self-improving agents on Claude",
-        "url": "https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude",
+        "title": "Defrag98: Windows 98 Disk Defragmenter Simulator Online",
+        "url": "https://defrag98.com",
         "source": "Hacker News AI",
-        "score": 53
+        "score": 107
+      },
+      {
+        "title": "Open Oscar Server: open-source server compatible with AIM and ICQ clients",
+        "url": "https://github.com/mk6i/open-oscar-server",
+        "source": "Hacker News AI",
+        "score": 6
       }
     ],
     "news": [
       {
         "title": "Footage of Tibet floods isn't being shown in China - and we know little about victims there",
         "url": "https://www.bbc.co.uk/news/articles/cx2z415w2gpo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Iceland EU referendum on a knife edge as counting continues",
+        "url": "https://www.bbc.co.uk/news/articles/c70le8ed1plo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -151,6 +168,11 @@
         "source": "BBC World"
       },
       {
+        "title": "Canada installs large Lake Ontario sign in latest jab at US",
+        "url": "https://www.bbc.co.uk/news/articles/cpq09594vw7o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Norway's new king remembers 'my dear father' in first speech",
         "url": "https://www.bbc.co.uk/news/articles/cvgy79wmv4jo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -158,16 +180,6 @@
       {
         "title": "Former Ecuadorian president imprisoned for corruption",
         "url": "https://www.bbc.co.uk/news/articles/cvgym9rz07zo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Landlady to 9/11 hijackers reveals their links to alleged Saudi spy",
-        "url": "https://www.bbc.co.uk/news/articles/c99dvm39mreo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Close race as Iceland votes on whether to restart talks on joining EU",
-        "url": "https://www.bbc.co.uk/news/articles/cn45vdxyvvlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -247,6 +259,26 @@
     ],
     "gaming": [
       {
+        "title": "Ridley Scott's Near-Perfect Sci-Fi Masterpiece is Officially Streaming on YouTube for Free",
+        "url": "https://www.polygon.com/ridley-scott-blade-runner-final-cut-free-on-youtube/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Relive Nintendo's wild Donkey Kong court case from 1983",
+        "url": "https://www.polygon.com/donkey-kong-lawsuit-king-shigeru-miyamoto-deposition/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Baldur's Gate 3's Astarion Is Getting an Official Prequel Novel",
+        "url": "https://www.polygon.com/baldurs-gate-3-astarion-prequel-novel-release-date/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Netflix's New 10-Part Mystery Thriller Is a Perfect Weekend Binge From Start to Finish",
+        "url": "https://www.polygon.com/revival-syfy-zombie-show-on-netflix/",
+        "source": "Polygon"
+      },
+      {
         "title": "Doom Meets Hades In the Coolest New Action Game of Gamescom 2026",
         "url": "https://www.polygon.com/murals-gamescom-2026-preview/",
         "source": "Polygon"
@@ -259,26 +291,6 @@
       {
         "title": "60 Years Later, the Best 'Peanuts' Quote of All Time Still Doesn't Get the Credit it Deserves",
         "url": "https://www.polygon.com/charles-schulz-peanuts-best-quote/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Resonance: A Plague Tale Legacy’s Post-Credits Scene, Explained",
-        "url": "https://www.polygon.com/resonance-a-plague-tale-legacy-post-credits-scene-cameo-explained/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Tom Cruise's Next Movie Is Not One You'd Expect",
-        "url": "https://www.polygon.com/days-of-thunder-sequel/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All sprites in Fortnite Chapter 7 Season 4",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-sprite-list-abilities-c7s4/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Exclusive: D&D's Japanese Rival Creators Talk About Imminent English Launch",
-        "url": "https://www.polygon.com/exclusive-dds-japanese-rival-creators-talk-about-imminent-english-launch/",
         "source": "Polygon"
       }
     ],
