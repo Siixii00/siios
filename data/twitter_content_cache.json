@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-30T19:05:43.731006",
-    "total_items": 59
+    "last_updated": "2026-08-30T22:27:37.911810",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "Haiku R1/beta6 has been released",
-        "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
-        "source": "Hacker News",
-        "score": 143
-      },
-      {
         "title": "Creepy Crawlies",
         "url": "https://people.kernel.org/monsieuricon/creepy-crawlies",
         "source": "Hacker News",
-        "score": 463
+        "score": 786
+      },
+      {
+        "title": "Cores in space: The core memory module from a 1980 Spacelab computer",
+        "url": "https://www.righto.com/2026/08/spacelab-core-memory.html",
+        "source": "Hacker News",
+        "score": 42
+      },
+      {
+        "title": "Haiku R1/beta6 has been released",
+        "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
+        "source": "Hacker News",
+        "score": 213
+      },
+      {
+        "title": "Continuous Diffusion Language Models (CDLM's)",
+        "url": "https://sander.ai/2026/08/24/continuous-dlms.html",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "NFC Energy-Harvesting PCB Business Card with an MCU",
+        "url": "https://wilsonharper.net/projects/businesscard/",
+        "source": "Hacker News",
+        "score": 57
+      },
+      {
+        "title": "Sort branches by last commit date",
+        "url": "https://ryangreenberg.com/til/git-branches-by-commit-date/",
+        "source": "Hacker News",
+        "score": 49
+      },
+      {
+        "title": "Why open source rocks – a new SM750 (Silicon Motion GPU) HDMI Driver",
+        "url": "https://github.com/KodeMunkie/sm750hdmifb",
+        "source": "Hacker News",
+        "score": 50
       },
       {
         "title": "Coordination Headwind: How Organizations Are Like Slime Molds",
         "url": "https://komoroske.com/slime-mold/",
         "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Running SQLite Apps on Docker and Kubernetes with Litestream",
-        "url": "https://openrun.dev/blog/litestream/",
-        "source": "Hacker News",
-        "score": 10
-      },
-      {
-        "title": "METR and Redwood Offer Holy %^ Postmortem of the HuggingFace Hack",
-        "url": "https://thezvi.wordpress.com/2026/08/29/metr-and-redwood-offer-holy-postmortem-of-the-huggingface-hack/",
-        "source": "Hacker News",
-        "score": 85
+        "score": 110
       },
       {
         "title": "Hacking IKEA Furniture",
         "url": "https://greenlightning.eu/diy/hacking-ikea-furniture/",
         "source": "Hacker News",
-        "score": 200
-      },
-      {
-        "title": "Electric rain can eat through metal",
-        "url": "https://www.scientificamerican.com/article/electric-rain-can-eat-through-metal/",
-        "source": "Hacker News",
-        "score": 52
+        "score": 240
       },
       {
         "title": "Zig: Pointer Stability for ArrayLists",
         "url": "https://ziglang.org/devlog/2026/#2026-08-27",
         "source": "Hacker News",
-        "score": 42
+        "score": 72
       },
       {
-        "title": "Storm Summoner, a MIDI controller for effects pedals",
-        "url": "https://kabaragoya.com/products/storm-summoner",
+        "title": "METR and Redwood Offer Holy %^ Postmortem of the HuggingFace Hack",
+        "url": "https://thezvi.wordpress.com/2026/08/29/metr-and-redwood-offer-holy-postmortem-of-the-huggingface-hack/",
         "source": "Hacker News",
-        "score": 10
+        "score": 191
       },
       {
-        "title": "Artie (YC S23) Is Hiring Technical AES",
-        "url": "https://www.artie.com/careers?ashby_jid=e87b84d2-78b3-41a3-937a-47e83643cdf1",
+        "title": "Dad’s Custom Atari Peripherals",
+        "url": "https://www.goto10retro.com/p/dads-custom-atari-peripherals",
         "source": "Hacker News",
-        "score": 1
-      },
-      {
-        "title": "European Commission Revives Push for Encryption Backdoors in ProtectEU Strategy",
-        "url": "https://reclaimthenet.org/eu-protecteu-strategy-encryption-backdoor-law-enforcement",
-        "source": "Hacker News",
-        "score": 204
-      },
-      {
-        "title": "Casey Muratori – The Root of the Root of All Evil – BSC 2026 [video]",
-        "url": "https://www.youtube.com/watch?v=hpj6r6CjJf8",
-        "source": "Hacker News",
-        "score": 233
+        "score": 81
       },
       {
         "title": "Arbitrary code execution in QubesOS via copy-to-VM error reporting backchannel",
         "url": "https://www.qubes-os.org/news/2026/08/29/qsb-118/",
         "source": "Hacker News",
-        "score": 171
+        "score": 191
       },
       {
         "title": "Omarchy: Any User Process Can Escalate to Root",
         "url": "https://0xcc.io/posts/omarchy-root-creds/",
         "source": "Hacker News",
-        "score": 220
+        "score": 335
       },
       {
-        "title": "Longest Straight Line Paths on Water or Land on the Earth (2018)",
-        "url": "https://arxiv.org/abs/1804.07389",
+        "title": "European Commission Revives Push for Encryption Backdoors in ProtectEU Strategy",
+        "url": "https://reclaimthenet.org/eu-protecteu-strategy-encryption-backdoor-law-enforcement",
         "source": "Hacker News",
-        "score": 174
+        "score": 310
       }
     ],
     "ai": [
@@ -101,61 +101,60 @@
         "title": "Haiku R1/beta6 has been released",
         "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
         "source": "Hacker News AI",
-        "score": 143
+        "score": 213
       },
       {
         "title": "Coordination Headwind: How Organizations Are Like Slime Molds",
         "url": "https://komoroske.com/slime-mold/",
         "source": "Hacker News AI",
-        "score": 55
+        "score": 110
       },
       {
         "title": "Electric rain can eat through metal",
         "url": "https://www.scientificamerican.com/article/electric-rain-can-eat-through-metal/",
         "source": "Hacker News AI",
-        "score": 52
+        "score": 80
       },
       {
         "title": "Longest Straight Line Paths on Water or Land on the Earth (2018)",
         "url": "https://arxiv.org/abs/1804.07389",
         "source": "Hacker News AI",
-        "score": 174
+        "score": 184
       },
       {
         "title": "What my dad taught me about AI coding in the 90s",
         "url": "https://askmike.org/articles/ai-coding-lessons-in-the-90s-from-my-dad/",
         "source": "Hacker News AI",
-        "score": 97
+        "score": 120
       },
       {
         "title": "Claude Session URL appended to commit messages and PR descriptions by default",
         "url": "https://github.com/anthropics/claude-code/issues/66504",
         "source": "Hacker News AI",
-        "score": 137
-      },
-      {
-        "title": "What We Tell AI",
-        "url": "https://www.whatwetellai.com/",
-        "source": "Hacker News AI",
-        "score": 18
-      },
-      {
-        "title": "Show HN: I missed the moving blocks, so I built a real Linux disk defragmenter",
-        "url": "https://github.com/gbin/defragger",
-        "source": "Hacker News AI",
-        "score": 78
+        "score": 174
       },
       {
         "title": "Berlin is being blackmailed by hackers",
         "url": "https://www.bbc.com/news/articles/cm2q7gv3l5qo",
         "source": "Hacker News AI",
-        "score": 12
+        "score": 22
+      },
+      {
+        "title": "What We Tell AI",
+        "url": "https://www.whatwetellai.com/",
+        "source": "Hacker News AI",
+        "score": 29
       }
     ],
     "news": [
       {
         "title": "Eight killed and others missing after ferry capsizes off northern Cyprus",
         "url": "https://www.bbc.co.uk/news/articles/c770jyd4l7lo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "US strikes Iranian launchers on Larak Island in first known attack in weeks",
+        "url": "https://www.bbc.co.uk/news/articles/cx2z72x5z1po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -169,18 +168,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Nasa launches new space telescope able to see 100 times more than Hubble",
+        "title": "Hikers feared missing after 'terrifying' flash flooding hits Grand Canyon",
+        "url": "https://www.bbc.co.uk/news/articles/clylkjyez1do?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "'A giant leap forward': Nasa launches powerful new space telescope",
         "url": "https://www.bbc.co.uk/news/articles/ce87e55vgpjo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Canada installs large Lake Ontario sign in latest jab at US",
-        "url": "https://www.bbc.co.uk/news/articles/cpq09594vw7o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Russia says it helped to repel Niger attempted coup",
-        "url": "https://www.bbc.co.uk/news/articles/c5ye8egg596o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -265,6 +259,16 @@
     ],
     "gaming": [
       {
+        "title": "55 Years Later, Lucy's Best Quote In 'Peanuts' History Proves She's The Real Star",
+        "url": "https://www.polygon.com/lucy-peanuts-best-line/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Years Later, Anime's Forgotten WWII Epic Is Waiting to be Rediscovered on Prime Video",
+        "url": "https://www.polygon.com/in-this-corner-of-the-world-wwii-anime-movie-rec/",
+        "source": "Polygon"
+      },
+      {
         "title": "11 Replay Ideas to Make Stardew Valley Feel New Again",
         "url": "https://www.polygon.com/stardew-valley-replay-ideas-challenge-runs/",
         "source": "Polygon"
@@ -287,16 +291,6 @@
       {
         "title": "Maybe It's a Good Thing AAA Games Take 13 Years to Make",
         "url": "https://www.polygon.com/patch-notes-gta-6-the-witcher-3-gamescom/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 Action Series to Watch If You Love Prime Video's Reacher",
-        "url": "https://www.polygon.com/reacher-action-series-to-watch-streaming/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Witcher 4 Will Still Get A Physical Release, Even Though It's Launching In 2028",
-        "url": "https://www.polygon.com/the-witcher-4-physical-release/",
         "source": "Polygon"
       }
     ],
