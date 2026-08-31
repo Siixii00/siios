@@ -1,11 +1,157 @@
 {
   "metadata": {
-    "last_updated": "2026-08-31T08:13:24.574230",
-    "total_items": 35
+    "last_updated": "2026-08-31T16:47:03.009805",
+    "total_items": 52
   },
   "content": {
-    "tech": [],
-    "ai": [],
+    "tech": [
+      {
+        "title": "Playa Phone",
+        "url": "https://playaphone.com/",
+        "source": "Hacker News",
+        "score": 162
+      },
+      {
+        "title": "OpenShot 4.0: Record, Edit, and Color Like Never Before",
+        "url": "https://www.openshot.org/blog/2026/08/30/openshot-40-record-edit-color-like-never-before/",
+        "source": "Hacker News",
+        "score": 402
+      },
+      {
+        "title": "Apache Iggy, a message streaming platform in Rust, graduates to an Apache TLP",
+        "url": "https://iggy.apache.org/blogs/2026/08/24/apache-iggy-top-level-project-tlp-graduation/",
+        "source": "Hacker News",
+        "score": 59
+      },
+      {
+        "title": "ChatGPT Work Tool and Skill Reference",
+        "url": "https://codex-tool-reference.simonw.chatgpt.site/",
+        "source": "Hacker News",
+        "score": 90
+      },
+      {
+        "title": "ravynOS: Pre-alpha open-source OS based on Darwin, FreeBSD, Apple open-source",
+        "url": "https://ravynos.com/",
+        "source": "Hacker News",
+        "score": 10
+      },
+      {
+        "title": "Culture Clash",
+        "url": "https://aeon.co/essays/at-the-heart-of-the-snow-leavis-two-cultures-clash",
+        "source": "Hacker News",
+        "score": 29
+      },
+      {
+        "title": "Marx, Keynes, and A.I",
+        "url": "https://www.unpopularfront.news/p/marx-keynes-and-ai",
+        "source": "Hacker News",
+        "score": 25
+      },
+      {
+        "title": "C++26: Standard Library Hardening Experiments",
+        "url": "https://www.cppstories.com/2026/hardening-experiments/",
+        "source": "Hacker News",
+        "score": 33
+      },
+      {
+        "title": "Launch HN: Hebbian Robotics (YC S26) – Build scalable robotics data pipelines",
+        "url": "https://github.com/Hebbian-Robotics/hflow",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Launch HN: Almanac (YC S26) – AI that knows your company",
+        "url": "https://usealmanac.com/",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "Show HN: Linux server management over SSH – written in Rust and Tauri",
+        "url": "https://serverbox.stupidlabs.lol/",
+        "source": "Hacker News",
+        "score": 39
+      },
+      {
+        "title": "Breaking Claude Code Opus 5 Auto Mode",
+        "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
+        "source": "Hacker News",
+        "score": 282
+      },
+      {
+        "title": "Agentic Trust Controls",
+        "url": "https://trustcontrols.ai/",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Navigation App for People with Blindness and Low Vision",
+        "url": "https://seas.harvard.edu/news/smartphone-navigation-app-people-blindness-and-low-vision",
+        "source": "Hacker News",
+        "score": 12
+      },
+      {
+        "title": "DNS Abuse and Criminal Infrastructure",
+        "url": "https://labs.ripe.net/author/andrew_campling/dns-abuse-and-criminal-infrastructure-beyond-definitions-and-blocklists/",
+        "source": "Hacker News",
+        "score": 32
+      }
+    ],
+    "ai": [
+      {
+        "title": "ChatGPT Work Tool and Skill Reference",
+        "url": "https://codex-tool-reference.simonw.chatgpt.site/",
+        "source": "Hacker News AI",
+        "score": 90
+      },
+      {
+        "title": "Launch HN: Almanac (YC S26) – AI that knows your company",
+        "url": "https://usealmanac.com/",
+        "source": "Hacker News AI",
+        "score": 11
+      },
+      {
+        "title": "Breaking Claude Code Opus 5 Auto Mode",
+        "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
+        "source": "Hacker News AI",
+        "score": 282
+      },
+      {
+        "title": "Study: Blue light impairs the eye's ability to distinguish fine detail most",
+        "url": "https://research.uga.edu/news/blue-light-has-a-surprising-effect-on-your-eyes-study-finds/",
+        "source": "Hacker News AI",
+        "score": 68
+      },
+      {
+        "title": "P99 0 ms* autocomplete for 240M domain names",
+        "url": "https://ruurtjan.com/articles/p99-0ms-autocomplete-for-240-million-domain-names",
+        "source": "Hacker News AI",
+        "score": 199
+      },
+      {
+        "title": "Ask HN: What would happen if your company stopped using all AI tomorrow?",
+        "url": "https://news.ycombinator.com/item?id=49510066",
+        "source": "Hacker News AI",
+        "score": 16
+      },
+      {
+        "title": "Understanding ChatGPT Work",
+        "url": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
+        "source": "Hacker News AI",
+        "score": 289
+      },
+      {
+        "title": "Libertix installs Linux with 3 mouse clicks for Windows users",
+        "url": "https://ekimia.fr/libertix/",
+        "source": "Hacker News AI",
+        "score": 28
+      },
+      {
+        "title": "ChatGPT to face tougher regulation in the EU",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa",
+        "source": "Hacker News AI",
+        "score": 14
+      }
+    ],
     "news": [
       {
         "title": "US and Iran trade strikes for first time in weeks",
@@ -13,144 +159,108 @@
         "source": "BBC World"
       },
       {
-        "title": "Eight killed and 18 missing after ferry capsizes off northern Cyprus",
-        "url": "https://www.bbc.co.uk/news/articles/c770jyd4l7lo?at_medium=RSS&at_campaign=rss",
+        "title": "Man arrested after Swiss rave shooting that killed woman",
+        "url": "https://www.bbc.co.uk/news/articles/cddv92n194vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "15 hikers feared missing after 'terrifying' flash flooding hits Grand Canyon",
-        "url": "https://www.bbc.co.uk/news/articles/clylkjyez1do?at_medium=RSS&at_campaign=rss",
+        "title": "South African airline defends low-altitude aerial stunt over packed stadium",
+        "url": "https://www.bbc.co.uk/news/articles/c3rew8jqny5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Iceland votes against restarting EU membership talks",
-        "url": "https://www.bbc.co.uk/news/articles/c70le8ed1plo?at_medium=RSS&at_campaign=rss",
+        "title": "The jury's options in Lindsay Clancy's murder trial",
+        "url": "https://www.bbc.co.uk/news/articles/c93vgv4kr49o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Manhunt after shooting at Swiss rave kills woman, 22, and injures five",
-        "url": "https://www.bbc.co.uk/news/articles/c9qr750je1go?at_medium=RSS&at_campaign=rss",
+        "title": "'She slipped out of my hand' - children missing after ferry sinks off northern Cyprus",
+        "url": "https://www.bbc.co.uk/news/articles/c1mv5ggg1l8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "'A giant leap forward': Nasa launches powerful new space telescope",
-        "url": "https://www.bbc.co.uk/news/articles/ce87e55vgpjo?at_medium=RSS&at_campaign=rss",
+        "title": "Dolly Parton laid to rest alongside husband in Nashville",
+        "url": "https://www.bbc.co.uk/news/articles/cew95ke74l7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Zambian opposition leader charged with treason",
-        "url": "https://www.bbc.co.uk/news/articles/c20lwqpx70qo?at_medium=RSS&at_campaign=rss",
+        "title": "Messi retires from Argentina duty with 'nothing left to give'",
+        "url": "https://www.bbc.co.uk/sport/football/articles/ceq89y38elro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " Graphic designers are trying to fix people's terrible AI flyers ",
-        "url": "https://www.creativebloq.com/design/graphic-design/graphic-designers-are-trying-to-fix-peoples-terrible-ai-flyers",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " I’m sorry, is this Bluetooth headphone – with full parametric EQ –seriously only $49?! ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/im-sorry-is-this-bluetooth-headphone-with-full-parametric-eq-seriously-only-usd49",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The best budget laptops for 3D printing ",
-        "url": "https://www.creativebloq.com/tech/laptops/the-best-budget-laptops-for-3d-printing",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " If Apple and Spotify are cracking down on AI slop, why can't YouTube? I think I know the answer ",
-        "url": "https://www.creativebloq.com/ai/if-apple-and-spotify-are-cracking-down-on-ai-slop-why-cant-youtube-i-think-i-know-the-answer",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " “I wanted to create something poetic and elegant, with a sense of movement, as if a wave were breaking in the middle of the forest\" ",
-        "url": "https://www.creativebloq.com/art/digital-art/this-artist-embraces-a-poetic-and-painterly-fantasy-art-style",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Ikea's latest clever billboard adverts work because they reveal a common truth about every home ",
-        "url": "https://www.creativebloq.com/design/advertising/ikeas-latest-surprising-billboard-ads-work-because-they-reveal-a-common-truth-about-every-home",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This clone of our favourite gaming chair adds massaging balls ti a winning formula ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/this-clone-of-our-favourite-gaming-chair-adds-massaging-balls-ti-a-winning-formula",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
+      {
+        "title": "NASA’s Roman Space Telescope launches to reveal the Universe’s darkest secrets",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260831035213.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists find why the liver may not heal even after you stop drinking",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260831015205.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Popular sweeteners may leave effects that last for generations",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260830000019.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "HEPA air purifiers may boost brain function after just one month",
         "url": "https://www.sciencedaily.com/releases/2026/08/260830000016.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Hundreds of hidden earthquakes found at Antarctica’s Doomsday Glacier",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260829035328.htm",
+        "title": "A “quantum bath” puts quantum entanglement on autopilot",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260830000002.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Long-term melatonin use linked to 90% higher heart failure risk",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260829035228.htm",
+        "title": "Scientists challenge a 70-year-old “lizard brain” myth",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260829235958.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Researchers unveil sustainable spirulina solution to vitamin B12 deficiency",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260829035227.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "This strange “spacetime crystal” can suddenly become a black hole",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260829035225.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "1.4-million-year-old footprints reveal a surprisingly large human relative",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260829035221.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "IBM quantum computer solves classically intractable problem in 15 minutes",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260829035219.htm",
+        "title": "One injection could keep osteoarthritis drugs working for weeks",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260829235947.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "The Expanse: Osiris Reborn Looks Like the Best Video Game Adaptation Ever",
-        "url": "https://www.polygon.com/expanse-osiris-reborn-gamescom-preview-2026/",
+        "title": "The Blood of Dawnwalker Reviews Say The Witcher 3 Finally Has a Worthy Successor",
+        "url": "https://www.polygon.com/blood-of-dawnwalker-review-roundup/",
         "source": "Polygon"
       },
       {
-        "title": "HBO Just Officially Introduced a Notorious Batman Villain to the DC Universe",
-        "url": "https://www.polygon.com/lanterns-episode-3-janus-cosmetics-roman-sionis-clayface-easter-egg/",
+        "title": "'Taken' Meets Jason Bourne in Mark Wahlberg's 124-Minute Action Thriller Officially Streaming for Free",
+        "url": "https://www.polygon.com/mark-wahlberg-best-movie-shooter-streaming-free/",
         "source": "Polygon"
       },
       {
-        "title": "HBO Officially Retcons One DC Superhero’s Backstory for the Better",
-        "url": "https://www.polygon.com/lanterns-episode-3-john-stewart-family-explainer/",
+        "title": "Pokémon Go Mega Evolution guide",
+        "url": "https://www.polygon.com/pokemon-go-guide/22447919/mega-evolution-list-candy-bonus-buddy-raids/",
         "source": "Polygon"
       },
       {
-        "title": "Yellowstone and Lioness Games Could Be in Paramount Games' Future",
-        "url": "https://www.polygon.com/yellowstone-lionness-sheridanverse-video-games-paramount/",
+        "title": "Wallace & Gromit Goes From Fan Creation to Official Lego Set In New Release",
+        "url": "https://www.polygon.com/wallace-and-gromit-lego-set/",
         "source": "Polygon"
       },
       {
-        "title": "The 90-Minute Action Thriller Quentin Tarantino Called \"My Favorite\" Is Officially Free on Streaming",
-        "url": "https://www.polygon.com/my-bloody-valentine-thrillers-free-streaming-august-2026/",
+        "title": "Thundercats Movie Director Shares Promising Update on '80s Cartoon Classic Revival",
+        "url": "https://www.polygon.com/thundercats-movie-update-adam-wingard/",
         "source": "Polygon"
       },
       {
-        "title": "A Incredible Looking and Unofficial 'Zelda Maker 64' Is Coming to Steam",
-        "url": "https://www.polygon.com/legend-of-zelda-temple-maker-steam-game/",
+        "title": "Walmart Is Selling Hot Pokémon Card Sets in a New and Improved Way ",
+        "url": "https://www.polygon.com/walmart-drawing-pokemon-cards-raffle-drop-when-is-near-me/",
         "source": "Polygon"
       },
       {
-        "title": "The Definitive ’90s Sci-Fi Action Blockbuster Is Officially Streaming for Free on YouTube",
-        "url": "https://www.polygon.com/stargate-movie-free-streaming-youtube-roland-emmerich/",
+        "title": "Pokémon Go 'Mega Ascension' event raid schedule and bonuses",
+        "url": "https://www.polygon.com/pokemon-go-mega-ascension-event-raid-schedule/",
         "source": "Polygon"
       }
     ],
