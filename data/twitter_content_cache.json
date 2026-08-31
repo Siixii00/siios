@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-08-30T22:27:37.911810",
-    "total_items": 58
+    "last_updated": "2026-08-31T01:08:46.018922",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
+        "title": "“I just chose words carefully”",
+        "url": "https://unsung.aresluna.org/i-just-chose-words-carefully/",
+        "source": "Hacker News",
+        "score": 222
+      },
+      {
         "title": "Creepy Crawlies",
         "url": "https://people.kernel.org/monsieuricon/creepy-crawlies",
         "source": "Hacker News",
-        "score": 786
-      },
-      {
-        "title": "Cores in space: The core memory module from a 1980 Spacelab computer",
-        "url": "https://www.righto.com/2026/08/spacelab-core-memory.html",
-        "source": "Hacker News",
-        "score": 42
+        "score": 910
       },
       {
         "title": "Haiku R1/beta6 has been released",
         "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
         "source": "Hacker News",
-        "score": 213
+        "score": 247
       },
       {
-        "title": "Continuous Diffusion Language Models (CDLM's)",
-        "url": "https://sander.ai/2026/08/24/continuous-dlms.html",
+        "title": "Cores in space: The core memory module from a 1980 Spacelab computer",
+        "url": "https://www.righto.com/2026/08/spacelab-core-memory.html",
         "source": "Hacker News",
-        "score": 27
+        "score": 71
       },
       {
-        "title": "NFC Energy-Harvesting PCB Business Card with an MCU",
+        "title": "Show HN: NFC Energy-Harvesting PCB Business Card with an MCU",
         "url": "https://wilsonharper.net/projects/businesscard/",
         "source": "Hacker News",
-        "score": 57
+        "score": 90
       },
       {
         "title": "Sort branches by last commit date",
         "url": "https://ryangreenberg.com/til/git-branches-by-commit-date/",
         "source": "Hacker News",
-        "score": 49
+        "score": 84
+      },
+      {
+        "title": "Continuous Diffusion Language Models (CDLM's)",
+        "url": "https://sander.ai/2026/08/24/continuous-dlms.html",
+        "source": "Hacker News",
+        "score": 50
+      },
+      {
+        "title": "Relm4 makes developing beautiful cross-platform applications idiomatic",
+        "url": "https://relm4.org/",
+        "source": "Hacker News",
+        "score": 11
       },
       {
         "title": "Why open source rocks – a new SM750 (Silicon Motion GPU) HDMI Driver",
         "url": "https://github.com/KodeMunkie/sm750hdmifb",
         "source": "Hacker News",
-        "score": 50
+        "score": 64
       },
       {
         "title": "Coordination Headwind: How Organizations Are Like Slime Molds",
         "url": "https://komoroske.com/slime-mold/",
         "source": "Hacker News",
-        "score": 110
+        "score": 125
+      },
+      {
+        "title": "Commercially Available Bike Generators Are Not Sustainable (2011)",
+        "url": "https://solar.lowtechmagazine.com/2011/05/bike-powered-electricity-generators-are-not-sustainable/",
+        "source": "Hacker News",
+        "score": 20
       },
       {
         "title": "Hacking IKEA Furniture",
         "url": "https://greenlightning.eu/diy/hacking-ikea-furniture/",
         "source": "Hacker News",
-        "score": 240
+        "score": 263
+      },
+      {
+        "title": "How would you know whether an ancient culture had zero?",
+        "url": "https://www.johndcook.com/blog/2026/08/21/ancient-number-system/",
+        "source": "Hacker News",
+        "score": 15
       },
       {
         "title": "Zig: Pointer Stability for ArrayLists",
         "url": "https://ziglang.org/devlog/2026/#2026-08-27",
         "source": "Hacker News",
-        "score": 72
+        "score": 83
       },
       {
-        "title": "METR and Redwood Offer Holy %^ Postmortem of the HuggingFace Hack",
-        "url": "https://thezvi.wordpress.com/2026/08/29/metr-and-redwood-offer-holy-postmortem-of-the-huggingface-hack/",
+        "title": "Startup Anti-Patterns",
+        "url": "https://www.itamarnovick.com/intro-to-startup-anti-pattern-series/",
         "source": "Hacker News",
-        "score": 191
-      },
-      {
-        "title": "Dad’s Custom Atari Peripherals",
-        "url": "https://www.goto10retro.com/p/dads-custom-atari-peripherals",
-        "source": "Hacker News",
-        "score": 81
-      },
-      {
-        "title": "Arbitrary code execution in QubesOS via copy-to-VM error reporting backchannel",
-        "url": "https://www.qubes-os.org/news/2026/08/29/qsb-118/",
-        "source": "Hacker News",
-        "score": 191
-      },
-      {
-        "title": "Omarchy: Any User Process Can Escalate to Root",
-        "url": "https://0xcc.io/posts/omarchy-root-creds/",
-        "source": "Hacker News",
-        "score": 335
-      },
-      {
-        "title": "European Commission Revives Push for Encryption Backdoors in ProtectEU Strategy",
-        "url": "https://reclaimthenet.org/eu-protecteu-strategy-encryption-backdoor-law-enforcement",
-        "source": "Hacker News",
-        "score": 310
+        "score": 74
       }
     ],
     "ai": [
@@ -101,49 +101,61 @@
         "title": "Haiku R1/beta6 has been released",
         "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
         "source": "Hacker News AI",
-        "score": 213
+        "score": 247
       },
       {
         "title": "Coordination Headwind: How Organizations Are Like Slime Molds",
         "url": "https://komoroske.com/slime-mold/",
         "source": "Hacker News AI",
-        "score": 110
+        "score": 125
+      },
+      {
+        "title": "Commercially Available Bike Generators Are Not Sustainable (2011)",
+        "url": "https://solar.lowtechmagazine.com/2011/05/bike-powered-electricity-generators-are-not-sustainable/",
+        "source": "Hacker News AI",
+        "score": 20
+      },
+      {
+        "title": "Yen weakens past ¥160 per dollar, eroding intervention gains",
+        "url": "https://www.japantimes.co.jp/business/2026/08/29/markets/yen-160-dollar-intervention/",
+        "source": "Hacker News AI",
+        "score": 9
       },
       {
         "title": "Electric rain can eat through metal",
         "url": "https://www.scientificamerican.com/article/electric-rain-can-eat-through-metal/",
         "source": "Hacker News AI",
-        "score": 80
+        "score": 92
       },
       {
         "title": "Longest Straight Line Paths on Water or Land on the Earth (2018)",
         "url": "https://arxiv.org/abs/1804.07389",
         "source": "Hacker News AI",
-        "score": 184
+        "score": 190
       },
       {
         "title": "What my dad taught me about AI coding in the 90s",
         "url": "https://askmike.org/articles/ai-coding-lessons-in-the-90s-from-my-dad/",
         "source": "Hacker News AI",
-        "score": 120
-      },
-      {
-        "title": "Claude Session URL appended to commit messages and PR descriptions by default",
-        "url": "https://github.com/anthropics/claude-code/issues/66504",
-        "source": "Hacker News AI",
-        "score": 174
+        "score": 130
       },
       {
         "title": "Berlin is being blackmailed by hackers",
         "url": "https://www.bbc.com/news/articles/cm2q7gv3l5qo",
         "source": "Hacker News AI",
-        "score": 22
+        "score": 29
+      },
+      {
+        "title": "Claude Session URL appended to commit messages and PR descriptions by default",
+        "url": "https://github.com/anthropics/claude-code/issues/66504",
+        "source": "Hacker News AI",
+        "score": 183
       },
       {
         "title": "What We Tell AI",
         "url": "https://www.whatwetellai.com/",
         "source": "Hacker News AI",
-        "score": 29
+        "score": 34
       }
     ],
     "news": [
@@ -168,7 +180,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Hikers feared missing after 'terrifying' flash flooding hits Grand Canyon",
+        "title": "15 hikers feared missing after 'terrifying' flash flooding hits Grand Canyon",
         "url": "https://www.bbc.co.uk/news/articles/clylkjyez1do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -259,6 +271,21 @@
     ],
     "gaming": [
       {
+        "title": "A Incredible Looking and Unofficial 'Zelda Maker 64' Is Coming to Steam",
+        "url": "https://www.polygon.com/legend-of-zelda-temple-maker-steam-game/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Definitive ’90s Sci-Fi Action Blockbuster Is Officially Streaming for Free on YouTube",
+        "url": "https://www.polygon.com/stargate-movie-free-streaming-youtube-roland-emmerich/",
+        "source": "Polygon"
+      },
+      {
+        "title": "HoYoverse's 'Elden Ring Meets Monster Hunter' Actually Plays More Like Final Fantasy 16",
+        "url": "https://www.polygon.com/nodusfall-preview-gamescom-2026/",
+        "source": "Polygon"
+      },
+      {
         "title": "55 Years Later, Lucy's Best Quote In 'Peanuts' History Proves She's The Real Star",
         "url": "https://www.polygon.com/lucy-peanuts-best-line/",
         "source": "Polygon"
@@ -276,21 +303,6 @@
       {
         "title": "The 10 Nastiest Video Game Foods That'll Ruin Your Appetite",
         "url": "https://www.polygon.com/worst-video-game-foods-nastiest-gross-menu-items/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Coyote Vs. ACME' Beat 'The Odyssey' And Ridley Scott At The Box Office This Weekend",
-        "url": "https://www.polygon.com/coyote-vs-acme-box-office/",
-        "source": "Polygon"
-      },
-      {
-        "title": "WB's Iconic 263-Episode Series Is Officially Free on Streaming, and Every Episode Is a Masterpiece",
-        "url": "https://www.polygon.com/best-classic-looney-tunes-shorts-coyote-vs-acme/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Maybe It's a Good Thing AAA Games Take 13 Years to Make",
-        "url": "https://www.polygon.com/patch-notes-gta-6-the-witcher-3-gamescom/",
         "source": "Polygon"
       }
     ],
