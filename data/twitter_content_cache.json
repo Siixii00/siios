@@ -1,172 +1,25 @@
 {
   "metadata": {
-    "last_updated": "2026-08-31T01:08:46.018922",
-    "total_items": 60
+    "last_updated": "2026-08-31T08:13:24.574230",
+    "total_items": 35
   },
   "content": {
-    "tech": [
-      {
-        "title": "“I just chose words carefully”",
-        "url": "https://unsung.aresluna.org/i-just-chose-words-carefully/",
-        "source": "Hacker News",
-        "score": 222
-      },
-      {
-        "title": "Creepy Crawlies",
-        "url": "https://people.kernel.org/monsieuricon/creepy-crawlies",
-        "source": "Hacker News",
-        "score": 910
-      },
-      {
-        "title": "Haiku R1/beta6 has been released",
-        "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
-        "source": "Hacker News",
-        "score": 247
-      },
-      {
-        "title": "Cores in space: The core memory module from a 1980 Spacelab computer",
-        "url": "https://www.righto.com/2026/08/spacelab-core-memory.html",
-        "source": "Hacker News",
-        "score": 71
-      },
-      {
-        "title": "Show HN: NFC Energy-Harvesting PCB Business Card with an MCU",
-        "url": "https://wilsonharper.net/projects/businesscard/",
-        "source": "Hacker News",
-        "score": 90
-      },
-      {
-        "title": "Sort branches by last commit date",
-        "url": "https://ryangreenberg.com/til/git-branches-by-commit-date/",
-        "source": "Hacker News",
-        "score": 84
-      },
-      {
-        "title": "Continuous Diffusion Language Models (CDLM's)",
-        "url": "https://sander.ai/2026/08/24/continuous-dlms.html",
-        "source": "Hacker News",
-        "score": 50
-      },
-      {
-        "title": "Relm4 makes developing beautiful cross-platform applications idiomatic",
-        "url": "https://relm4.org/",
-        "source": "Hacker News",
-        "score": 11
-      },
-      {
-        "title": "Why open source rocks – a new SM750 (Silicon Motion GPU) HDMI Driver",
-        "url": "https://github.com/KodeMunkie/sm750hdmifb",
-        "source": "Hacker News",
-        "score": 64
-      },
-      {
-        "title": "Coordination Headwind: How Organizations Are Like Slime Molds",
-        "url": "https://komoroske.com/slime-mold/",
-        "source": "Hacker News",
-        "score": 125
-      },
-      {
-        "title": "Commercially Available Bike Generators Are Not Sustainable (2011)",
-        "url": "https://solar.lowtechmagazine.com/2011/05/bike-powered-electricity-generators-are-not-sustainable/",
-        "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "Hacking IKEA Furniture",
-        "url": "https://greenlightning.eu/diy/hacking-ikea-furniture/",
-        "source": "Hacker News",
-        "score": 263
-      },
-      {
-        "title": "How would you know whether an ancient culture had zero?",
-        "url": "https://www.johndcook.com/blog/2026/08/21/ancient-number-system/",
-        "source": "Hacker News",
-        "score": 15
-      },
-      {
-        "title": "Zig: Pointer Stability for ArrayLists",
-        "url": "https://ziglang.org/devlog/2026/#2026-08-27",
-        "source": "Hacker News",
-        "score": 83
-      },
-      {
-        "title": "Startup Anti-Patterns",
-        "url": "https://www.itamarnovick.com/intro-to-startup-anti-pattern-series/",
-        "source": "Hacker News",
-        "score": 74
-      }
-    ],
-    "ai": [
-      {
-        "title": "Haiku R1/beta6 has been released",
-        "url": "https://www.haiku-os.org/news/2026-08-26_haiku_r1_beta6",
-        "source": "Hacker News AI",
-        "score": 247
-      },
-      {
-        "title": "Coordination Headwind: How Organizations Are Like Slime Molds",
-        "url": "https://komoroske.com/slime-mold/",
-        "source": "Hacker News AI",
-        "score": 125
-      },
-      {
-        "title": "Commercially Available Bike Generators Are Not Sustainable (2011)",
-        "url": "https://solar.lowtechmagazine.com/2011/05/bike-powered-electricity-generators-are-not-sustainable/",
-        "source": "Hacker News AI",
-        "score": 20
-      },
-      {
-        "title": "Yen weakens past ¥160 per dollar, eroding intervention gains",
-        "url": "https://www.japantimes.co.jp/business/2026/08/29/markets/yen-160-dollar-intervention/",
-        "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "Electric rain can eat through metal",
-        "url": "https://www.scientificamerican.com/article/electric-rain-can-eat-through-metal/",
-        "source": "Hacker News AI",
-        "score": 92
-      },
-      {
-        "title": "Longest Straight Line Paths on Water or Land on the Earth (2018)",
-        "url": "https://arxiv.org/abs/1804.07389",
-        "source": "Hacker News AI",
-        "score": 190
-      },
-      {
-        "title": "What my dad taught me about AI coding in the 90s",
-        "url": "https://askmike.org/articles/ai-coding-lessons-in-the-90s-from-my-dad/",
-        "source": "Hacker News AI",
-        "score": 130
-      },
-      {
-        "title": "Berlin is being blackmailed by hackers",
-        "url": "https://www.bbc.com/news/articles/cm2q7gv3l5qo",
-        "source": "Hacker News AI",
-        "score": 29
-      },
-      {
-        "title": "Claude Session URL appended to commit messages and PR descriptions by default",
-        "url": "https://github.com/anthropics/claude-code/issues/66504",
-        "source": "Hacker News AI",
-        "score": 183
-      },
-      {
-        "title": "What We Tell AI",
-        "url": "https://www.whatwetellai.com/",
-        "source": "Hacker News AI",
-        "score": 34
-      }
-    ],
+    "tech": [],
+    "ai": [],
     "news": [
       {
-        "title": "Eight killed and others missing after ferry capsizes off northern Cyprus",
+        "title": "US and Iran trade strikes for first time in weeks",
+        "url": "https://www.bbc.co.uk/news/articles/cx2z72x5z1po?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Eight killed and 18 missing after ferry capsizes off northern Cyprus",
         "url": "https://www.bbc.co.uk/news/articles/c770jyd4l7lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US strikes Iranian launchers on Larak Island in first known attack in weeks",
-        "url": "https://www.bbc.co.uk/news/articles/cx2z72x5z1po?at_medium=RSS&at_campaign=rss",
+        "title": "15 hikers feared missing after 'terrifying' flash flooding hits Grand Canyon",
+        "url": "https://www.bbc.co.uk/news/articles/clylkjyez1do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -177,11 +30,6 @@
       {
         "title": "Manhunt after shooting at Swiss rave kills woman, 22, and injures five",
         "url": "https://www.bbc.co.uk/news/articles/c9qr750je1go?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "15 hikers feared missing after 'terrifying' flash flooding hits Grand Canyon",
-        "url": "https://www.bbc.co.uk/news/articles/clylkjyez1do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -196,6 +44,16 @@
       }
     ],
     "art": [
+      {
+        "title": " Graphic designers are trying to fix people's terrible AI flyers ",
+        "url": "https://www.creativebloq.com/design/graphic-design/graphic-designers-are-trying-to-fix-peoples-terrible-ai-flyers",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " I’m sorry, is this Bluetooth headphone – with full parametric EQ –seriously only $49?! ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/im-sorry-is-this-bluetooth-headphone-with-full-parametric-eq-seriously-only-usd49",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The best budget laptops for 3D printing ",
         "url": "https://www.creativebloq.com/tech/laptops/the-best-budget-laptops-for-3d-printing",
@@ -219,16 +77,6 @@
       {
         "title": " This clone of our favourite gaming chair adds massaging balls ti a winning formula ",
         "url": "https://www.creativebloq.com/tech/chairs-desks/this-clone-of-our-favourite-gaming-chair-adds-massaging-balls-ti-a-winning-formula",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " I threw every creative AI tool that I could think of at the Acer Nitro V 16 AI, and this is what happened ",
-        "url": "https://www.creativebloq.com/tech/laptops/i-threw-every-creative-ai-tool-that-i-could-think-of-at-the-acer-nitro-v-16-ai-and-this-is-what-happened",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The $3.4m Disney auction is a reminder of what AI concept art takes from us ",
-        "url": "https://www.creativebloq.com/art/animation/the-usd3-4m-disney-auction-is-a-reminder-of-what-ai-concept-art-takes-from-us",
         "source": "Creative Bloq"
       }
     ],
@@ -271,6 +119,31 @@
     ],
     "gaming": [
       {
+        "title": "The Expanse: Osiris Reborn Looks Like the Best Video Game Adaptation Ever",
+        "url": "https://www.polygon.com/expanse-osiris-reborn-gamescom-preview-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "HBO Just Officially Introduced a Notorious Batman Villain to the DC Universe",
+        "url": "https://www.polygon.com/lanterns-episode-3-janus-cosmetics-roman-sionis-clayface-easter-egg/",
+        "source": "Polygon"
+      },
+      {
+        "title": "HBO Officially Retcons One DC Superhero’s Backstory for the Better",
+        "url": "https://www.polygon.com/lanterns-episode-3-john-stewart-family-explainer/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Yellowstone and Lioness Games Could Be in Paramount Games' Future",
+        "url": "https://www.polygon.com/yellowstone-lionness-sheridanverse-video-games-paramount/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The 90-Minute Action Thriller Quentin Tarantino Called \"My Favorite\" Is Officially Free on Streaming",
+        "url": "https://www.polygon.com/my-bloody-valentine-thrillers-free-streaming-august-2026/",
+        "source": "Polygon"
+      },
+      {
         "title": "A Incredible Looking and Unofficial 'Zelda Maker 64' Is Coming to Steam",
         "url": "https://www.polygon.com/legend-of-zelda-temple-maker-steam-game/",
         "source": "Polygon"
@@ -278,31 +151,6 @@
       {
         "title": "The Definitive ’90s Sci-Fi Action Blockbuster Is Officially Streaming for Free on YouTube",
         "url": "https://www.polygon.com/stargate-movie-free-streaming-youtube-roland-emmerich/",
-        "source": "Polygon"
-      },
-      {
-        "title": "HoYoverse's 'Elden Ring Meets Monster Hunter' Actually Plays More Like Final Fantasy 16",
-        "url": "https://www.polygon.com/nodusfall-preview-gamescom-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "55 Years Later, Lucy's Best Quote In 'Peanuts' History Proves She's The Real Star",
-        "url": "https://www.polygon.com/lucy-peanuts-best-line/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 Years Later, Anime's Forgotten WWII Epic Is Waiting to be Rediscovered on Prime Video",
-        "url": "https://www.polygon.com/in-this-corner-of-the-world-wwii-anime-movie-rec/",
-        "source": "Polygon"
-      },
-      {
-        "title": "11 Replay Ideas to Make Stardew Valley Feel New Again",
-        "url": "https://www.polygon.com/stardew-valley-replay-ideas-challenge-runs/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The 10 Nastiest Video Game Foods That'll Ruin Your Appetite",
-        "url": "https://www.polygon.com/worst-video-game-foods-nastiest-gross-menu-items/",
         "source": "Polygon"
       }
     ],
