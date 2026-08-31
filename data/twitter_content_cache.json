@@ -1,161 +1,166 @@
 {
   "metadata": {
-    "last_updated": "2026-08-31T16:47:03.009805",
-    "total_items": 52
+    "last_updated": "2026-08-31T21:45:14.890564",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
+        "title": "Google Has Removed MV2 Extensions from the Chrome Web Store, Including UBO",
+        "url": "https://webiterate.dev/google-removed-extensions-ublock-origin-108/",
+        "source": "Hacker News",
+        "score": 49
+      },
+      {
+        "title": "I turned my security cameras into an automatic bird identification system",
+        "url": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/",
+        "source": "Hacker News",
+        "score": 288
+      },
+      {
+        "title": "A walkable ASCII cyberpunk city in one HTML file [video]",
+        "url": "https://www.youtube.com/watch?v=3YtygAx_C6A",
+        "source": "Hacker News",
+        "score": 136
+      },
+      {
         "title": "Playa Phone",
         "url": "https://playaphone.com/",
         "source": "Hacker News",
-        "score": 162
+        "score": 413
       },
       {
-        "title": "OpenShot 4.0: Record, Edit, and Color Like Never Before",
-        "url": "https://www.openshot.org/blog/2026/08/30/openshot-40-record-edit-color-like-never-before/",
+        "title": "'Mad honey' that can stop your heart is being sold online",
+        "url": "https://phys.org/news/2026-08-mad-honey-heart-sold-online.html",
         "source": "Hacker News",
-        "score": 402
+        "score": 39
       },
       {
-        "title": "Apache Iggy, a message streaming platform in Rust, graduates to an Apache TLP",
-        "url": "https://iggy.apache.org/blogs/2026/08/24/apache-iggy-top-level-project-tlp-graduation/",
+        "title": "Show HN: Laser Graffiti",
+        "url": "https://laser.consti.de",
         "source": "Hacker News",
-        "score": 59
+        "score": 79
+      },
+      {
+        "title": "Autonomous (YC F25) Is Hiring Engineers",
+        "url": "https://news.ycombinator.com/item?id=49514781",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "Smartphone LED detects hidden cameras with AI",
+        "url": "https://www.chosun.com/english/industry-en/2026/08/30/SBFXUIJQYZEARKP5T4FBAY25HQ/",
+        "source": "Hacker News",
+        "score": 94
+      },
+      {
+        "title": "Terence Tao explains 6 essential mathematical concepts [video]",
+        "url": "https://www.youtube.com/watch?v=OOMx2BHHWtE",
+        "source": "Hacker News",
+        "score": 91
+      },
+      {
+        "title": "Dwarf Fortress is getting the mother of all magic updates",
+        "url": "https://www.rockpapershotgun.com/dwarf-fortress-is-getting-the-mother-of-all-magic-updates-extending-to-the-fundamental-cosmological-makeup-of-the-universe",
+        "source": "Hacker News",
+        "score": 221
+      },
+      {
+        "title": "Tmp.0ut, Vol. 5",
+        "url": "https://tmpout.sh/5/",
+        "source": "Hacker News",
+        "score": 102
+      },
+      {
+        "title": "Apple caught off guard by AI demand for Mac Mini and Mac Studio",
+        "url": "https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/",
+        "source": "Hacker News",
+        "score": 227
       },
       {
         "title": "ChatGPT Work Tool and Skill Reference",
         "url": "https://codex-tool-reference.simonw.chatgpt.site/",
         "source": "Hacker News",
-        "score": 90
+        "score": 156
       },
       {
         "title": "ravynOS: Pre-alpha open-source OS based on Darwin, FreeBSD, Apple open-source",
         "url": "https://ravynos.com/",
         "source": "Hacker News",
-        "score": 10
+        "score": 125
       },
       {
-        "title": "Culture Clash",
-        "url": "https://aeon.co/essays/at-the-heart-of-the-snow-leavis-two-cultures-clash",
+        "title": "I think the military commissary's freezers were hacked",
+        "url": "https://signalandsilence.substack.com/p/i-think-someone-hacked-the-commissary",
         "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "Marx, Keynes, and A.I",
-        "url": "https://www.unpopularfront.news/p/marx-keynes-and-ai",
-        "source": "Hacker News",
-        "score": 25
-      },
-      {
-        "title": "C++26: Standard Library Hardening Experiments",
-        "url": "https://www.cppstories.com/2026/hardening-experiments/",
-        "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Launch HN: Hebbian Robotics (YC S26) – Build scalable robotics data pipelines",
-        "url": "https://github.com/Hebbian-Robotics/hflow",
-        "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "Launch HN: Almanac (YC S26) – AI that knows your company",
-        "url": "https://usealmanac.com/",
-        "source": "Hacker News",
-        "score": 11
-      },
-      {
-        "title": "Show HN: Linux server management over SSH – written in Rust and Tauri",
-        "url": "https://serverbox.stupidlabs.lol/",
-        "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Breaking Claude Code Opus 5 Auto Mode",
-        "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
-        "source": "Hacker News",
-        "score": 282
-      },
-      {
-        "title": "Agentic Trust Controls",
-        "url": "https://trustcontrols.ai/",
-        "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "Navigation App for People with Blindness and Low Vision",
-        "url": "https://seas.harvard.edu/news/smartphone-navigation-app-people-blindness-and-low-vision",
-        "source": "Hacker News",
-        "score": 12
-      },
-      {
-        "title": "DNS Abuse and Criminal Infrastructure",
-        "url": "https://labs.ripe.net/author/andrew_campling/dns-abuse-and-criminal-infrastructure-beyond-definitions-and-blocklists/",
-        "source": "Hacker News",
-        "score": 32
+        "score": 189
       }
     ],
     "ai": [
       {
+        "title": "Smartphone LED detects hidden cameras with AI",
+        "url": "https://www.chosun.com/english/industry-en/2026/08/30/SBFXUIJQYZEARKP5T4FBAY25HQ/",
+        "source": "Hacker News AI",
+        "score": 94
+      },
+      {
+        "title": "Terence Tao explains 6 essential mathematical concepts [video]",
+        "url": "https://www.youtube.com/watch?v=OOMx2BHHWtE",
+        "source": "Hacker News AI",
+        "score": 91
+      },
+      {
+        "title": "Apple caught off guard by AI demand for Mac Mini and Mac Studio",
+        "url": "https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/",
+        "source": "Hacker News AI",
+        "score": 227
+      },
+      {
         "title": "ChatGPT Work Tool and Skill Reference",
         "url": "https://codex-tool-reference.simonw.chatgpt.site/",
         "source": "Hacker News AI",
-        "score": 90
+        "score": 156
       },
       {
         "title": "Launch HN: Almanac (YC S26) – AI that knows your company",
         "url": "https://usealmanac.com/",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 33
+      },
+      {
+        "title": "The safest job from AI may be writing",
+        "url": "http://muratbuffalo.blogspot.com/2026/08/the-safest-job-from-ai-may-be-writing.html",
+        "source": "Hacker News AI",
+        "score": 46
+      },
+      {
+        "title": "Show HN: We built the smallest dual-band aircraft tracker",
+        "url": "https://pantsforbirds.com/the-worlds-smallest-dual-band-ads-b-receiver-module/",
+        "source": "Hacker News AI",
+        "score": 59
       },
       {
         "title": "Breaking Claude Code Opus 5 Auto Mode",
         "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
         "source": "Hacker News AI",
-        "score": 282
+        "score": 321
       },
       {
         "title": "Study: Blue light impairs the eye's ability to distinguish fine detail most",
         "url": "https://research.uga.edu/news/blue-light-has-a-surprising-effect-on-your-eyes-study-finds/",
         "source": "Hacker News AI",
-        "score": 68
-      },
-      {
-        "title": "P99 0 ms* autocomplete for 240M domain names",
-        "url": "https://ruurtjan.com/articles/p99-0ms-autocomplete-for-240-million-domain-names",
-        "source": "Hacker News AI",
-        "score": 199
-      },
-      {
-        "title": "Ask HN: What would happen if your company stopped using all AI tomorrow?",
-        "url": "https://news.ycombinator.com/item?id=49510066",
-        "source": "Hacker News AI",
-        "score": 16
-      },
-      {
-        "title": "Understanding ChatGPT Work",
-        "url": "https://simonwillison.net/2026/Aug/30/understanding-chatgpt-work/",
-        "source": "Hacker News AI",
-        "score": 289
-      },
-      {
-        "title": "Libertix installs Linux with 3 mouse clicks for Windows users",
-        "url": "https://ekimia.fr/libertix/",
-        "source": "Hacker News AI",
-        "score": 28
-      },
-      {
-        "title": "ChatGPT to face tougher regulation in the EU",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/986682/openai-chatgpt-eu-dsa",
-        "source": "Hacker News AI",
-        "score": 14
+        "score": 85
       }
     ],
     "news": [
       {
-        "title": "US and Iran trade strikes for first time in weeks",
-        "url": "https://www.bbc.co.uk/news/articles/cx2z72x5z1po?at_medium=RSS&at_campaign=rss",
+        "title": "Nepal rescuers blast hillside in search of hydropower workers as families wait anxiously",
+        "url": "https://www.bbc.co.uk/news/articles/c5ylvgq9q71o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "US singer D4vd's celebrity lawyers withdraw from murder case",
+        "url": "https://www.bbc.co.uk/news/articles/crr451lpl4no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -164,32 +169,58 @@
         "source": "BBC World"
       },
       {
-        "title": "South African airline defends low-altitude aerial stunt over packed stadium",
-        "url": "https://www.bbc.co.uk/news/articles/c3rew8jqny5o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "The jury's options in Lindsay Clancy's murder trial",
-        "url": "https://www.bbc.co.uk/news/articles/c93vgv4kr49o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "'She slipped out of my hand' - children missing after ferry sinks off northern Cyprus",
         "url": "https://www.bbc.co.uk/news/articles/c1mv5ggg1l8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Dolly Parton laid to rest alongside husband in Nashville",
-        "url": "https://www.bbc.co.uk/news/articles/cew95ke74l7o?at_medium=RSS&at_campaign=rss",
+        "title": "US and Iran trade strikes for first time in weeks",
+        "url": "https://www.bbc.co.uk/news/articles/cx2z72x5z1po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Messi retires from Argentina duty with 'nothing left to give'",
-        "url": "https://www.bbc.co.uk/sport/football/articles/ceq89y38elro?at_medium=RSS&at_campaign=rss",
+        "title": "US Supreme Court clears way for Trump to keep building White House ballroom",
+        "url": "https://www.bbc.co.uk/news/articles/c9w457e7ydlo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Festival honouring Dolly Parton set for Nashville and London",
+        "url": "https://www.bbc.co.uk/news/articles/c5ywd9q3ywvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " Is Nvidia’s DLSS 5 an AI slop machine or a game-changing technology that will take us closer to artists' original vision? ",
+        "url": "https://www.creativebloq.com/3d/is-nvidias-dlss-5-an-ai-slop-machine-or-a-game-changing-technology-that-will-take-us-closer-to-artists-original-vision",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Onimusha: Way of the Sword (PS5) review – Capcom’s samurai comeback gets the swordplay right ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/onimusha-way-of-the-sword-review-sublime-swordplay-spectacular-samurai-horror-and-a-little-too-much-genma-busywork",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The best budget laptops for graphic design students ",
+        "url": "https://www.creativebloq.com/tech/laptops/the-best-budget-laptops-for-graphic-design-students",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " There's £500 off the new Honor Magic V6 foldable phone, and I have no idea why ",
+        "url": "https://www.creativebloq.com/tech/phones-tablets/theres-gbp500-off-the-new-honor-magic-v6-foldable-phone-and-i-have-no-idea-why",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " These crystal clear earphones only went on sale in July and there's already 5% off ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/these-crystal-clear-earphones-only-went-on-sale-in-july-and-theres-already-5-percent-off-for-the-back-to-school-crowd",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Traditional Korean folklore, attire and weaponry inspire this artist's striking fantasy character designs ",
+        "url": "https://www.creativebloq.com/art/digital-art/traditional-korean-folklore-inspires-this-artists-striking-fantasy-character-designs",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "NASA’s Roman Space Telescope launches to reveal the Universe’s darkest secrets",
@@ -229,38 +260,38 @@
     ],
     "gaming": [
       {
-        "title": "The Blood of Dawnwalker Reviews Say The Witcher 3 Finally Has a Worthy Successor",
-        "url": "https://www.polygon.com/blood-of-dawnwalker-review-roundup/",
+        "title": "10 Greatest 'Far Side' Comics From the ‘80’s, Ranked",
+        "url": "https://www.polygon.com/10-greatest-far-side-comics-1980s-ranked/",
         "source": "Polygon"
       },
       {
-        "title": "'Taken' Meets Jason Bourne in Mark Wahlberg's 124-Minute Action Thriller Officially Streaming for Free",
-        "url": "https://www.polygon.com/mark-wahlberg-best-movie-shooter-streaming-free/",
+        "title": "Steam’s Best New Game Demo Is So Good I Spent 5 Hours Shoveling Sand",
+        "url": "https://www.polygon.com/sandcastle-steam-demo-cozy-beach-game/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon Go Mega Evolution guide",
-        "url": "https://www.polygon.com/pokemon-go-guide/22447919/mega-evolution-list-candy-bonus-buddy-raids/",
+        "title": "Steven Spielberg's Most Polarizing Movie Gets a Major New 4k Release This Fall",
+        "url": "https://www.polygon.com/steven-spielberg-hook-4k-release-fall-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Wallace & Gromit Goes From Fan Creation to Official Lego Set In New Release",
-        "url": "https://www.polygon.com/wallace-and-gromit-lego-set/",
+        "title": "Fortnite Releases New Official Roadmap Ahead of Season's First Major Update",
+        "url": "https://www.polygon.com/fortnite-week-2-roadmap-revealed/",
         "source": "Polygon"
       },
       {
-        "title": "Thundercats Movie Director Shares Promising Update on '80s Cartoon Classic Revival",
-        "url": "https://www.polygon.com/thundercats-movie-update-adam-wingard/",
+        "title": "New Sci-Fi Action Game Might Be One of The Best Shooters of 2027",
+        "url": "https://www.polygon.com/alien-deathstorm-preview-gamescom-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Walmart Is Selling Hot Pokémon Card Sets in a New and Improved Way ",
-        "url": "https://www.polygon.com/walmart-drawing-pokemon-cards-raffle-drop-when-is-near-me/",
+        "title": "PlayStation Officially Launches New Free TV App on PS5 with 100 Channels",
+        "url": "https://www.polygon.com/ps5-live-tv-launch-free-anime-movies/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon Go 'Mega Ascension' event raid schedule and bonuses",
-        "url": "https://www.polygon.com/pokemon-go-mega-ascension-event-raid-schedule/",
+        "title": "Zack Snyder’s New Action-Thriller Sets Release Date With Grisly First Trailer",
+        "url": "https://www.polygon.com/zack-snyder-new-movie-the-last-photograph/",
         "source": "Polygon"
       }
     ],
