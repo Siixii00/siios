@@ -1,45 +1,81 @@
 {
   "metadata": {
-    "last_updated": "2026-09-01T17:39:52.866880",
-    "total_items": 60
+    "last_updated": "2026-09-01T20:41:06.818078",
+    "total_items": 63
   },
   "content": {
     "tech": [
       {
+        "title": "Claude Fable 5.1 and Claude Mythos 5.1",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source": "Hacker News",
+        "score": 599
+      },
+      {
+        "title": "The ChatGPT/Codex app bundles a full copy of LibreOffice",
+        "url": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
+        "source": "Hacker News",
+        "score": 42
+      },
+      {
         "title": "Play Store blocks AuroraStore, hurting GrapheneOS users",
         "url": "https://gitlab.com/AuroraOSS/AuroraStore/-/work_items/1566",
         "source": "Hacker News",
-        "score": 205
+        "score": 402
+      },
+      {
+        "title": "Refurbishing a Tektronix TDS7104 Oscilloscope",
+        "url": "https://tomverbeure.github.io/2026/08/23/Tektronix-TDS7104-Refurbishing.html",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development",
+        "url": "https://www.norirobotics.com/",
+        "source": "Hacker News",
+        "score": 75
       },
       {
         "title": "AnkiDroid: Google Play no longer allowing Open Collective donation link",
         "url": "https://github.com/ankidroid/Anki-Android/issues/21656",
         "source": "Hacker News",
-        "score": 661
+        "score": 754
       },
       {
         "title": "Ambient CSS v3 – Blender meets CSS",
         "url": "https://ambientcss.vercel.app/",
         "source": "Hacker News",
-        "score": 78
+        "score": 140
       },
       {
         "title": "Show HN: Running 104GB Qwen3.8-Flash-Next on 48GB Mac with at ~12 tok/s",
         "url": "https://github.com/carloslfu/slotstream",
         "source": "Hacker News",
-        "score": 30
+        "score": 92
       },
       {
         "title": "Ask HN: Who is hiring? (September 2026)",
         "url": "https://news.ycombinator.com/item?id=49522897",
         "source": "Hacker News",
-        "score": 102
+        "score": 155
+      },
+      {
+        "title": "Movie Scene Map – 13,312 films, series, games, anime and manga",
+        "url": "https://moviescenemap.com/",
+        "source": "Hacker News",
+        "score": 92
       },
       {
         "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
         "url": "https://mvakde.github.io/blog/44-on-arc-1/",
         "source": "Hacker News",
-        "score": 327
+        "score": 463
+      },
+      {
+        "title": "Magic eye tube",
+        "url": "https://en.wikipedia.org/wiki/Magic_eye_tube",
+        "source": "Hacker News",
+        "score": 37
       },
       {
         "title": "Quill (YC W20) Is Hiring a Fullstack SWE",
@@ -48,120 +84,107 @@
         "score": 1
       },
       {
-        "title": "Movie Scene Map – 13,312 films, series, games, anime and manga",
-        "url": "https://moviescenemap.com/",
+        "title": "Ask HN: Who wants to be hired? (September 2026)",
+        "url": "https://news.ycombinator.com/item?id=49522896",
         "source": "Hacker News",
-        "score": 14
+        "score": 43
       },
       {
-        "title": "Io_uring Without Readahead",
-        "url": "https://frn.sh/io-uring/",
+        "title": "How bicycle coaster brakes work (2018)",
+        "url": "https://www.dougbarnesauthor.com/2018/06/how-bicycle-coaster-brakes-work.html",
         "source": "Hacker News",
-        "score": 77
-      },
-      {
-        "title": "Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development",
-        "url": "https://www.norirobotics.com/",
-        "source": "Hacker News",
-        "score": 2
-      },
-      {
-        "title": "Dr. Melvin Scheinman: 40th Anniversary of Catheter Ablation",
-        "url": "https://ucsfhealthcardiology.ucsf.edu/facstaff/spotlight/dr-melvin-scheinman-40th-anniversary-catheter-ablation",
-        "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "American Airlines' Legendary Mechanic Passes Away at 100 After 80-Year Career",
-        "url": "https://simpleflying.com/american-airlines-mechanic-passes-away-100-record-80-years/",
-        "source": "Hacker News",
-        "score": 306
-      },
-      {
-        "title": "We Are Rebuilding Monica",
-        "url": "https://www.monicahq.com/en/blog/we-are-rebuilding-monica/",
-        "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "Thanks to Lake Ontario, MapQuest is popular all over again",
-        "url": "https://www.washingtonpost.com/politics/2026/09/01/thanks-lake-ontario-mapquest-is-popular-all-over-again/",
-        "source": "Hacker News",
-        "score": 46
-      },
-      {
-        "title": "Fastpotify",
-        "url": "https://fastpotify.rocks/",
-        "source": "Hacker News",
-        "score": 722
+        "score": 20
       }
     ],
     "ai": [
       {
+        "title": "Claude Fable 5.1 and Claude Mythos 5.1",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source": "Hacker News AI",
+        "score": 599
+      },
+      {
+        "title": "The ChatGPT/Codex app bundles a full copy of LibreOffice",
+        "url": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
+        "source": "Hacker News AI",
+        "score": 42
+      },
+      {
         "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
         "url": "https://mvakde.github.io/blog/44-on-arc-1/",
         "source": "Hacker News AI",
-        "score": 327
+        "score": 463
       },
       {
-        "title": "American Airlines' Legendary Mechanic Passes Away at 100 After 80-Year Career",
+        "title": "How accurate have Ed Zitron's AI skeptic predictions been?",
+        "url": "https://danluu.com/zitron/",
+        "source": "Hacker News AI",
+        "score": 134
+      },
+      {
+        "title": "American Airlines mechanic Azriel “Al” Blackman has died",
         "url": "https://simpleflying.com/american-airlines-mechanic-passes-away-100-record-80-years/",
         "source": "Hacker News AI",
-        "score": 306
+        "score": 348
       },
       {
-        "title": "Thanks to Lake Ontario, MapQuest is popular all over again",
-        "url": "https://www.washingtonpost.com/politics/2026/09/01/thanks-lake-ontario-mapquest-is-popular-all-over-again/",
+        "title": "There Is No AI",
+        "url": "https://wadler.blogspot.com/2026/08/there-is-no-ai.html",
         "source": "Hacker News AI",
-        "score": 46
+        "score": 18
       },
       {
         "title": "Dwarf Fortress' creator says the industry's in shambles over AI",
         "url": "https://www.pcgamer.com/gaming-industry/dwarf-fortress-creator-says-the-industrys-in-shambles-over-ai-and-layoff-happy-ceos-everyone-i-know-their-bosses-are-slowly-getting-psychosis/",
         "source": "Hacker News AI",
-        "score": 55
+        "score": 161
       },
       {
-        "title": "Saab Enters Collaborative Combat Aircraft Race with High-End Concept",
-        "url": "https://aviationweek.com/defense/aircraft-propulsion/saab-enters-collaborative-combat-aircraft-race-high-end-concept",
+        "title": "Apple reveals 'shocking evidence' from ex-employee's MacBook in OpenAI suit",
+        "url": "https://9to5mac.com/2026/08/31/apple-openai-forensic-macbook-evidence/",
         "source": "Hacker News AI",
-        "score": 74
+        "score": 9
+      },
+      {
+        "title": "The EU's repair policies are changing the way tech is designed",
+        "url": "https://theconversation.com/the-eus-repair-policies-are-changing-the-way-tech-is-designed-288468",
+        "source": "Hacker News AI",
+        "score": 9
       },
       {
         "title": "Terence Tao explains 6 essential mathematical concepts [video]",
         "url": "https://www.youtube.com/watch?v=OOMx2BHHWtE",
         "source": "Hacker News AI",
-        "score": 568
+        "score": 597
+      },
+      {
+        "title": "Faiss vs. Turbovec vs. Infino: Comparing 4-bit vector quantization",
+        "url": "https://infino.ai/blog/fixed-grid-quantization/",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
+        "title": "James Dyson Sold Us on a $400 Hair Dryer. Now He's Trying a $499 Toothbrush",
+        "url": "https://www.wsj.com/cmo-today/james-dyson-sold-us-on-a-400-hair-dryer-now-hes-trying-a-499-toothbrush-c2740126",
+        "source": "Hacker News AI",
+        "score": 13
       },
       {
         "title": "Apple caught off guard by AI demand for Mac Mini and Mac Studio",
         "url": "https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/",
         "source": "Hacker News AI",
-        "score": 482
-      },
-      {
-        "title": "Smartphone LED detects hidden cameras with AI",
-        "url": "https://www.chosun.com/english/industry-en/2026/08/30/SBFXUIJQYZEARKP5T4FBAY25HQ/",
-        "source": "Hacker News AI",
-        "score": 262
-      },
-      {
-        "title": "The war with Iran will not be won through airstrikes, so what's left?",
-        "url": "https://www.jpost.com/defense-and-tech/article-906985",
-        "source": "Hacker News AI",
-        "score": 8
-      },
-      {
-        "title": "ChatGPT Work Tool and Skill Reference",
-        "url": "https://codex-tool-reference.simonw.chatgpt.site/",
-        "source": "Hacker News AI",
-        "score": 233
+        "score": 488
       }
     ],
     "news": [
       {
         "title": "Germany says Russia behind Leipzig airport drone attack",
         "url": "https://www.bbc.co.uk/news/articles/c5ylm3m67n2o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "US launches more strikes on Iran as state media reports explosions",
+        "url": "https://www.bbc.co.uk/news/articles/cj06q4ynpmjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -180,18 +203,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Vance calls Michigan Senate candidate El-Sayed 'evil' at campaign rally",
-        "url": "https://www.bbc.co.uk/news/articles/cn9w39py48xo?at_medium=RSS&at_campaign=rss",
+        "title": "Jurors in Lindsay Clancy trial deadlocked but judge asks them to keep trying",
+        "url": "https://www.bbc.co.uk/news/articles/c9qr4gp8qy9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Pistol in a lake gives hope for French cold case",
         "url": "https://www.bbc.co.uk/news/articles/c74eklrm344o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "France targets Shein and Temu with fast fashion fees",
-        "url": "https://www.bbc.co.uk/news/articles/cm2792pendro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -271,38 +289,38 @@
     ],
     "gaming": [
       {
-        "title": "Star Trek Is Officially Switching Genre In 2027 With New Release",
-        "url": "https://www.polygon.com/star-trek-2027-horror-shadow-frontier-game/",
+        "title": "Pokémon is Getting Its Own Official Fitbit for Evolved Sleep Tracking",
+        "url": "https://www.polygon.com/pokemon-sleep-fitbit-air-wearable/",
         "source": "Polygon"
       },
       {
-        "title": "Nvidia’s Hated AI Filter Will Also Officially Make Games Run Worse",
-        "url": "https://www.polygon.com/nvidia-dlss-5-performance-hit-ai-generated-graphics/",
+        "title": "Days After GTA 6's Big Reveal, Rockstar Announces A Major GTA 5 Update",
+        "url": "https://www.polygon.com/gta-5-nopixel-beta-when-is-roleplay-customization-new-gameplay/",
         "source": "Polygon"
       },
       {
-        "title": "Warrior Cats Game Based on Acclaimed Ya Series Finally Has a Release Date",
-        "url": "https://www.polygon.com/warrior-cats-clans-of-the-forest-game-release-date-announced/",
+        "title": "11 Best Anime You Can Stream Completely Free of Charge Right Now",
+        "url": "https://www.polygon.com/best-free-anime-to-stream-watch-on-pluto-tv-roku-tubi/",
         "source": "Polygon"
       },
       {
-        "title": "Warlock Won’t Have One of Baldur’s Gate 3’s Most Beloved D&D Mechanics",
-        "url": "https://www.polygon.com/warlock-baldurs-gate-3-romance-dungeons-dragons/",
+        "title": "New Transformers Film with Peter Cullen's Final Performance Announced",
+        "url": "https://www.polygon.com/transformers-optimus-prime-awakening-peter-cullen-final-performance/",
         "source": "Polygon"
       },
       {
-        "title": "Modern Warfare 4 beta end time in your time zone",
-        "url": "https://www.polygon.com/call-of-duty-modern-warfare-4-mw4-cod-beta-start-time-edt-pdt/",
+        "title": "14 Years Later, 'Skyrim' Fans Can't Believe Bethesda's \"Diabolical\" Default Character Build",
+        "url": "https://www.polygon.com/skyrim-elder-scrolls-demo-todd-howard-default-build-meme/",
         "source": "Polygon"
       },
       {
-        "title": "New Sony Policy Could Lead To Legal Action Against Vocal PS5 Disc Critics",
-        "url": "https://www.polygon.com/ps5-disc-sony-harassment-policy-digital-games/",
+        "title": "Cyberpunk 2077 Is Leaving Xbox Game Pass This Month",
+        "url": "https://www.polygon.com/xbox-game-pass-leaving-september-2026-cyberpunk-2077/",
         "source": "Polygon"
       },
       {
-        "title": "'Pokémon Winds and Waves' Leak Reveals New Pokémon After Huge Disappointment",
-        "url": "https://www.polygon.com/pokemon-leak-winds-waves-moltres-bird-paradise-starter-evolution/",
+        "title": "'Avatar Aang: The Last Airbender' Breaks Free of Streaming With New Physical Release",
+        "url": "https://www.polygon.com/avatar-aang-the-last-airbender-breaks-free-of-streaming-with-new-physical-release/",
         "source": "Polygon"
       }
     ],
