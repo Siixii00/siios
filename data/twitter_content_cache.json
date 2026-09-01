@@ -1,195 +1,206 @@
 {
   "metadata": {
-    "last_updated": "2026-09-01T13:11:17.403867",
-    "total_items": 59
+    "last_updated": "2026-09-01T17:39:52.866880",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
+        "title": "Play Store blocks AuroraStore, hurting GrapheneOS users",
+        "url": "https://gitlab.com/AuroraOSS/AuroraStore/-/work_items/1566",
+        "source": "Hacker News",
+        "score": 205
+      },
+      {
         "title": "AnkiDroid: Google Play no longer allowing Open Collective donation link",
         "url": "https://github.com/ankidroid/Anki-Android/issues/21656",
         "source": "Hacker News",
-        "score": 305
+        "score": 661
       },
       {
-        "title": "44% on ARC-AGI-1 in 67 cents",
+        "title": "Ambient CSS v3 – Blender meets CSS",
+        "url": "https://ambientcss.vercel.app/",
+        "source": "Hacker News",
+        "score": 78
+      },
+      {
+        "title": "Show HN: Running 104GB Qwen3.8-Flash-Next on 48GB Mac with at ~12 tok/s",
+        "url": "https://github.com/carloslfu/slotstream",
+        "source": "Hacker News",
+        "score": 30
+      },
+      {
+        "title": "Ask HN: Who is hiring? (September 2026)",
+        "url": "https://news.ycombinator.com/item?id=49522897",
+        "source": "Hacker News",
+        "score": 102
+      },
+      {
+        "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
         "url": "https://mvakde.github.io/blog/44-on-arc-1/",
         "source": "Hacker News",
-        "score": 138
+        "score": 327
+      },
+      {
+        "title": "Quill (YC W20) Is Hiring a Fullstack SWE",
+        "url": "https://news.ycombinator.com/item?id=49524704",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "Movie Scene Map – 13,312 films, series, games, anime and manga",
+        "url": "https://moviescenemap.com/",
+        "source": "Hacker News",
+        "score": 14
+      },
+      {
+        "title": "Io_uring Without Readahead",
+        "url": "https://frn.sh/io-uring/",
+        "source": "Hacker News",
+        "score": 77
+      },
+      {
+        "title": "Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development",
+        "url": "https://www.norirobotics.com/",
+        "source": "Hacker News",
+        "score": 2
+      },
+      {
+        "title": "Dr. Melvin Scheinman: 40th Anniversary of Catheter Ablation",
+        "url": "https://ucsfhealthcardiology.ucsf.edu/facstaff/spotlight/dr-melvin-scheinman-40th-anniversary-catheter-ablation",
+        "source": "Hacker News",
+        "score": 26
+      },
+      {
+        "title": "American Airlines' Legendary Mechanic Passes Away at 100 After 80-Year Career",
+        "url": "https://simpleflying.com/american-airlines-mechanic-passes-away-100-record-80-years/",
+        "source": "Hacker News",
+        "score": 306
+      },
+      {
+        "title": "We Are Rebuilding Monica",
+        "url": "https://www.monicahq.com/en/blog/we-are-rebuilding-monica/",
+        "source": "Hacker News",
+        "score": 60
+      },
+      {
+        "title": "Thanks to Lake Ontario, MapQuest is popular all over again",
+        "url": "https://www.washingtonpost.com/politics/2026/09/01/thanks-lake-ontario-mapquest-is-popular-all-over-again/",
+        "source": "Hacker News",
+        "score": 46
       },
       {
         "title": "Fastpotify",
         "url": "https://fastpotify.rocks/",
         "source": "Hacker News",
-        "score": 545
-      },
-      {
-        "title": "American Airlines' Legendary Mechanic Passes Away at 100 After 80-Year Career",
-        "url": "https://simpleflying.com/american-airlines-mechanic-passes-away-100-record-80-years/",
-        "source": "Hacker News",
-        "score": 127
-      },
-      {
-        "title": "GPU World",
-        "url": "https://www.gpuworld.org/",
-        "source": "Hacker News",
-        "score": 294
-      },
-      {
-        "title": "Tmp.0ut Volume 5",
-        "url": "https://tmpout.sh/5/",
-        "source": "Hacker News",
-        "score": 117
-      },
-      {
-        "title": "Restroom Archive",
-        "url": "https://restroomarchive.com",
-        "source": "Hacker News",
-        "score": 183
-      },
-      {
-        "title": "EFF to Courts: Don't Rewrite Copyright over AI Hype",
-        "url": "https://www.eff.org/deeplinks/2026/08/eff-courts-dont-rewrite-copyright-over-ai-hype",
-        "source": "Hacker News",
-        "score": 9
-      },
-      {
-        "title": "Playa Phone",
-        "url": "https://playaphone.com/",
-        "source": "Hacker News",
-        "score": 671
-      },
-      {
-        "title": "I turned my security cameras into an automatic bird identification system",
-        "url": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/",
-        "source": "Hacker News",
-        "score": 537
-      },
-      {
-        "title": "Tim Cook Sold Out Steve Jobs",
-        "url": "https://www.anildash.com/2025/09/09/how-tim-cook-sold-out-steve-jobs/",
-        "source": "Hacker News",
-        "score": 88
-      },
-      {
-        "title": "Terence Tao explains 6 essential mathematical concepts [video]",
-        "url": "https://www.youtube.com/watch?v=OOMx2BHHWtE",
-        "source": "Hacker News",
-        "score": 481
-      },
-      {
-        "title": "A walkable ASCII cyberpunk city in one HTML file [video]",
-        "url": "https://www.youtube.com/watch?v=3YtygAx_C6A",
-        "source": "Hacker News",
-        "score": 347
-      },
-      {
-        "title": "RotaryCell: Making an unmodified rotary phone work over LTE with an ESP32-S3",
-        "url": "https://github.com/fregacmols/RotaryCell",
-        "source": "Hacker News",
-        "score": 97
-      },
-      {
-        "title": "CollectWise (YC F24) Is Hiring",
-        "url": "https://www.ycombinator.com/companies/collectwise/jobs/7U500pP-founding-customer-success-engineer",
-        "source": "Hacker News",
-        "score": 1
+        "score": 722
       }
     ],
     "ai": [
       {
+        "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
+        "url": "https://mvakde.github.io/blog/44-on-arc-1/",
+        "source": "Hacker News AI",
+        "score": 327
+      },
+      {
         "title": "American Airlines' Legendary Mechanic Passes Away at 100 After 80-Year Career",
         "url": "https://simpleflying.com/american-airlines-mechanic-passes-away-100-record-80-years/",
         "source": "Hacker News AI",
-        "score": 127
+        "score": 306
       },
       {
-        "title": "EFF to Courts: Don't Rewrite Copyright over AI Hype",
-        "url": "https://www.eff.org/deeplinks/2026/08/eff-courts-dont-rewrite-copyright-over-ai-hype",
+        "title": "Thanks to Lake Ontario, MapQuest is popular all over again",
+        "url": "https://www.washingtonpost.com/politics/2026/09/01/thanks-lake-ontario-mapquest-is-popular-all-over-again/",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 46
+      },
+      {
+        "title": "Dwarf Fortress' creator says the industry's in shambles over AI",
+        "url": "https://www.pcgamer.com/gaming-industry/dwarf-fortress-creator-says-the-industrys-in-shambles-over-ai-and-layoff-happy-ceos-everyone-i-know-their-bosses-are-slowly-getting-psychosis/",
+        "source": "Hacker News AI",
+        "score": 55
+      },
+      {
+        "title": "Saab Enters Collaborative Combat Aircraft Race with High-End Concept",
+        "url": "https://aviationweek.com/defense/aircraft-propulsion/saab-enters-collaborative-combat-aircraft-race-high-end-concept",
+        "source": "Hacker News AI",
+        "score": 74
       },
       {
         "title": "Terence Tao explains 6 essential mathematical concepts [video]",
         "url": "https://www.youtube.com/watch?v=OOMx2BHHWtE",
         "source": "Hacker News AI",
-        "score": 481
+        "score": 568
       },
       {
         "title": "Apple caught off guard by AI demand for Mac Mini and Mac Studio",
         "url": "https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/",
         "source": "Hacker News AI",
-        "score": 433
+        "score": 482
       },
       {
         "title": "Smartphone LED detects hidden cameras with AI",
         "url": "https://www.chosun.com/english/industry-en/2026/08/30/SBFXUIJQYZEARKP5T4FBAY25HQ/",
         "source": "Hacker News AI",
-        "score": 237
+        "score": 262
+      },
+      {
+        "title": "The war with Iran will not be won through airstrikes, so what's left?",
+        "url": "https://www.jpost.com/defense-and-tech/article-906985",
+        "source": "Hacker News AI",
+        "score": 8
       },
       {
         "title": "ChatGPT Work Tool and Skill Reference",
         "url": "https://codex-tool-reference.simonw.chatgpt.site/",
         "source": "Hacker News AI",
-        "score": 231
-      },
-      {
-        "title": "Breaking Claude Code Opus 5 Auto Mode",
-        "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
-        "source": "Hacker News AI",
-        "score": 378
-      },
-      {
-        "title": "Launch HN: Almanac (YC S26) – AI that knows your company",
-        "url": "https://usealmanac.com/",
-        "source": "Hacker News AI",
-        "score": 56
-      },
-      {
-        "title": "Show HN: We built the smallest dual-band aircraft tracker",
-        "url": "https://pantsforbirds.com/the-worlds-smallest-dual-band-ads-b-receiver-module/",
-        "source": "Hacker News AI",
-        "score": 88
+        "score": 233
       }
     ],
     "news": [
+      {
+        "title": "Germany says Russia behind Leipzig airport drone attack",
+        "url": "https://www.bbc.co.uk/news/articles/c5ylm3m67n2o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "'I've never been to Afghanistan': Six million deportees forced to start over under the Taliban",
         "url": "https://www.bbc.co.uk/news/articles/c2e074nn8eko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Nepal death toll crosses 1,000 as rescuers race to find workers trapped in mud-filled tunnels",
-        "url": "https://www.bbc.co.uk/news/articles/c5ylvgq9q71o?at_medium=RSS&at_campaign=rss",
+        "title": "River water smashed into tunnel and chased me for 20 minutes, Nepal worker tells BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cg49590v6k1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Russian attack hits rail workers in new deadly strikes on Kyiv",
-        "url": "https://www.bbc.co.uk/news/articles/cx2zmdgry3do?at_medium=RSS&at_campaign=rss",
+        "title": "Sexual assaults happening almost every day in Ceuta, prosecutors say",
+        "url": "https://www.bbc.co.uk/news/articles/c3v4pgk7gweo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "The final minutes before floodwater crashed through Nepal-China border",
-        "url": "https://www.bbc.co.uk/news/articles/c0qxw1qw3g7o?at_medium=RSS&at_campaign=rss",
+        "title": "Vance calls Michigan Senate candidate El-Sayed 'evil' at campaign rally",
+        "url": "https://www.bbc.co.uk/news/articles/cn9w39py48xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Israel says senior Hamas member seized as strikes kill three during Gaza raid",
-        "url": "https://www.bbc.co.uk/news/articles/c1wxex4vg35o?at_medium=RSS&at_campaign=rss",
+        "title": "Pistol in a lake gives hope for French cold case",
+        "url": "https://www.bbc.co.uk/news/articles/c74eklrm344o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ex-gang boss guilty of orchestrating 1996 murder of rapper Tupac Shakur",
-        "url": "https://www.bbc.co.uk/news/articles/c24j5192j7jo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Teen girl charged with murder over recording of San Diego mosque attack",
-        "url": "https://www.bbc.co.uk/news/articles/c2dw3wn972no?at_medium=RSS&at_campaign=rss",
+        "title": "France targets Shein and Temu with fast fashion fees",
+        "url": "https://www.bbc.co.uk/news/articles/cm2792pendro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " This city's drastic logo redesign has hit a bum note ",
+        "url": "https://www.creativebloq.com/design/logos-icons/this-us-citys-drastic-logo-redesign-has-hit-a-bum-note",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The best e-ink art frames are starting to deliver on the early promise of the technology ",
         "url": "https://www.creativebloq.com/art/digital-art/the-best-e-ink-art-frames-finally-deliver-on-the-early-promise-of-the-technology-at-a-price",
@@ -206,7 +217,7 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " A viral creative challenge ingeniously rebranded pens for the AI age ",
+        "title": " A viral creative challenge just gifted Parker pens the perfect anti-AI billboard advert ",
         "url": "https://www.creativebloq.com/design/advertising/this-viral-creative-challenge-rebrands-pens-for-the-ai-age",
         "source": "Creative Bloq"
       },
@@ -218,11 +229,6 @@
       {
         "title": " A new online archive tries to predict Microsoft's next confusing rebrand ",
         "url": "https://www.creativebloq.com/design/branding/a-new-online-archive-tries-to-predict-microsofts-next-confusing-rebrand",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This tiny \"life-saving\" charger takes the guesswork out of juicing up – and right now it's 26% off ",
-        "url": "https://www.creativebloq.com/tech/accessories/this-tiny-life-saving-charger-takes-the-guesswork-out-of-juicing-up-and-right-now-its-26-percent-off",
         "source": "Creative Bloq"
       }
     ],
@@ -265,38 +271,38 @@
     ],
     "gaming": [
       {
-        "title": "Steven Spielberg and The Odyssey Inspired The Fantasy Blockbuster Event of the Decade",
-        "url": "https://www.polygon.com/katherine-rundell-neverfear-adaptation-interview/",
+        "title": "Star Trek Is Officially Switching Genre In 2027 With New Release",
+        "url": "https://www.polygon.com/star-trek-2027-horror-shadow-frontier-game/",
         "source": "Polygon"
       },
       {
-        "title": "Onslaught review: The nastiest action thriller of 2026, and also the most important",
-        "url": "https://www.polygon.com/onslaught-review-2026/",
+        "title": "Nvidia’s Hated AI Filter Will Also Officially Make Games Run Worse",
+        "url": "https://www.polygon.com/nvidia-dlss-5-performance-hit-ai-generated-graphics/",
         "source": "Polygon"
       },
       {
-        "title": "Up to 80% of the Team Behind Star Wars' Best-Reviewed Game in Years was Furloughed Before Launch",
-        "url": "https://www.polygon.com/star-wars-zero-company-bit-reactor-furlough/",
+        "title": "Warrior Cats Game Based on Acclaimed Ya Series Finally Has a Release Date",
+        "url": "https://www.polygon.com/warrior-cats-clans-of-the-forest-game-release-date-announced/",
         "source": "Polygon"
       },
       {
-        "title": "Disney Scraps Live Action Reboot of the Cult Classic Fantasy Series Gargoyles",
-        "url": "https://www.polygon.com/gargoyles-live-action-reboot-cancelled/",
+        "title": "Warlock Won’t Have One of Baldur’s Gate 3’s Most Beloved D&D Mechanics",
+        "url": "https://www.polygon.com/warlock-baldurs-gate-3-romance-dungeons-dragons/",
         "source": "Polygon"
       },
       {
-        "title": "Xbox's Disc-to-Digital Program Supports Delisted Games",
-        "url": "https://www.polygon.com/xbox-disc-to-digital-program-delisted-game-support/",
+        "title": "Modern Warfare 4 beta end time in your time zone",
+        "url": "https://www.polygon.com/call-of-duty-modern-warfare-4-mw4-cod-beta-start-time-edt-pdt/",
         "source": "Polygon"
       },
       {
-        "title": "Steven Spielberg's Most Important Blockbuster of All Time Is Officially Back on Streaming",
-        "url": "https://www.polygon.com/jaws-streaming-netflix-september-2026/",
+        "title": "New Sony Policy Could Lead To Legal Action Against Vocal PS5 Disc Critics",
+        "url": "https://www.polygon.com/ps5-disc-sony-harassment-policy-digital-games/",
         "source": "Polygon"
       },
       {
-        "title": "How to Watch Capcom's Spotlight stream at Tokyo Game Show 2026",
-        "url": "https://www.polygon.com/capcom-tokyo-game-show-spotlight-lineup-where-to-watch-when/",
+        "title": "'Pokémon Winds and Waves' Leak Reveals New Pokémon After Huge Disappointment",
+        "url": "https://www.polygon.com/pokemon-leak-winds-waves-moltres-bird-paradise-starter-evolution/",
         "source": "Polygon"
       }
     ],
