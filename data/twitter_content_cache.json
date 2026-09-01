@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-01T20:41:06.818078",
-    "total_items": 63
+    "last_updated": "2026-09-01T23:05:02.486840",
+    "total_items": 62
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Claude Fable 5.1 and Claude Mythos 5.1",
         "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
         "source": "Hacker News",
-        "score": 599
+        "score": 801
+      },
+      {
+        "title": "How accurate have Ed Zitron's AI skeptic predictions been?",
+        "url": "https://danluu.com/zitron/",
+        "source": "Hacker News",
+        "score": 285
+      },
+      {
+        "title": "Hang on to Your Firefox",
+        "url": "https://www.newsonaut.com/articles/hang-on-to-your-firefox",
+        "source": "Hacker News",
+        "score": 91
+      },
+      {
+        "title": "Show HN: Weedout – Safari extension that hides YouTube AI-labeled videos",
+        "url": "https://masteranza.github.io/weedout/",
+        "source": "Hacker News",
+        "score": 24
       },
       {
         "title": "The ChatGPT/Codex app bundles a full copy of LibreOffice",
         "url": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
         "source": "Hacker News",
-        "score": 42
-      },
-      {
-        "title": "Play Store blocks AuroraStore, hurting GrapheneOS users",
-        "url": "https://gitlab.com/AuroraOSS/AuroraStore/-/work_items/1566",
-        "source": "Hacker News",
-        "score": 402
+        "score": 183
       },
       {
         "title": "Refurbishing a Tektronix TDS7104 Oscilloscope",
         "url": "https://tomverbeure.github.io/2026/08/23/Tektronix-TDS7104-Refurbishing.html",
         "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development",
-        "url": "https://www.norirobotics.com/",
-        "source": "Hacker News",
-        "score": 75
+        "score": 59
       },
       {
         "title": "AnkiDroid: Google Play no longer allowing Open Collective donation link",
         "url": "https://github.com/ankidroid/Anki-Android/issues/21656",
         "source": "Hacker News",
-        "score": 754
+        "score": 802
       },
       {
-        "title": "Ambient CSS v3 – Blender meets CSS",
-        "url": "https://ambientcss.vercel.app/",
+        "title": "The creator of Jujutsu has joined ERSC",
+        "url": "https://ersc.io/blog/martin-joins-ersc",
         "source": "Hacker News",
-        "score": 140
+        "score": 156
+      },
+      {
+        "title": "Introducing Ad Blocker for Firefox on iOS",
+        "url": "https://blog.mozilla.org/en/firefox/ad-blocker-on-ios/",
+        "source": "Hacker News",
+        "score": 262
+      },
+      {
+        "title": "Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development",
+        "url": "https://www.norirobotics.com/",
+        "source": "Hacker News",
+        "score": 102
+      },
+      {
+        "title": "Show HN: HN Match Maker – Matching \"Who Wants to Be Hired?\" With \"Who's Hiring?\"",
+        "url": "https://hnmatchmaker.com/",
+        "source": "Hacker News",
+        "score": 20
       },
       {
         "title": "Show HN: Running 104GB Qwen3.8-Flash-Next on 48GB Mac with at ~12 tok/s",
         "url": "https://github.com/carloslfu/slotstream",
         "source": "Hacker News",
-        "score": 92
+        "score": 126
       },
       {
-        "title": "Ask HN: Who is hiring? (September 2026)",
-        "url": "https://news.ycombinator.com/item?id=49522897",
+        "title": "Ambient CSS v3 – Blender meets CSS",
+        "url": "https://ambientcss.vercel.app/",
         "source": "Hacker News",
-        "score": 155
+        "score": 173
       },
       {
         "title": "Movie Scene Map – 13,312 films, series, games, anime and manga",
         "url": "https://moviescenemap.com/",
         "source": "Hacker News",
-        "score": 92
+        "score": 133
       },
       {
         "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
         "url": "https://mvakde.github.io/blog/44-on-arc-1/",
         "source": "Hacker News",
-        "score": 463
-      },
-      {
-        "title": "Magic eye tube",
-        "url": "https://en.wikipedia.org/wiki/Magic_eye_tube",
-        "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "Quill (YC W20) Is Hiring a Fullstack SWE",
-        "url": "https://news.ycombinator.com/item?id=49524704",
-        "source": "Hacker News",
-        "score": 1
-      },
-      {
-        "title": "Ask HN: Who wants to be hired? (September 2026)",
-        "url": "https://news.ycombinator.com/item?id=49522896",
-        "source": "Hacker News",
-        "score": 43
-      },
-      {
-        "title": "How bicycle coaster brakes work (2018)",
-        "url": "https://www.dougbarnesauthor.com/2018/06/how-bicycle-coaster-brakes-work.html",
-        "source": "Hacker News",
-        "score": 20
+        "score": 536
       }
     ],
     "ai": [
@@ -101,47 +101,59 @@
         "title": "Claude Fable 5.1 and Claude Mythos 5.1",
         "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
         "source": "Hacker News AI",
-        "score": 599
-      },
-      {
-        "title": "The ChatGPT/Codex app bundles a full copy of LibreOffice",
-        "url": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
-        "source": "Hacker News AI",
-        "score": 42
-      },
-      {
-        "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
-        "url": "https://mvakde.github.io/blog/44-on-arc-1/",
-        "source": "Hacker News AI",
-        "score": 463
+        "score": 801
       },
       {
         "title": "How accurate have Ed Zitron's AI skeptic predictions been?",
         "url": "https://danluu.com/zitron/",
         "source": "Hacker News AI",
-        "score": 134
+        "score": 285
+      },
+      {
+        "title": "Show HN: Weedout – Safari extension that hides YouTube AI-labeled videos",
+        "url": "https://masteranza.github.io/weedout/",
+        "source": "Hacker News AI",
+        "score": 24
+      },
+      {
+        "title": "The ChatGPT/Codex app bundles a full copy of LibreOffice",
+        "url": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
+        "source": "Hacker News AI",
+        "score": 183
+      },
+      {
+        "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
+        "url": "https://mvakde.github.io/blog/44-on-arc-1/",
+        "source": "Hacker News AI",
+        "score": 536
+      },
+      {
+        "title": "Apple reveals 'shocking evidence' from ex-employee's MacBook in OpenAI suit",
+        "url": "https://9to5mac.com/2026/08/31/apple-openai-forensic-macbook-evidence/",
+        "source": "Hacker News AI",
+        "score": 139
       },
       {
         "title": "American Airlines mechanic Azriel “Al” Blackman has died",
         "url": "https://simpleflying.com/american-airlines-mechanic-passes-away-100-record-80-years/",
         "source": "Hacker News AI",
-        "score": 348
+        "score": 362
       },
       {
-        "title": "There Is No AI",
-        "url": "https://wadler.blogspot.com/2026/08/there-is-no-ai.html",
+        "title": "AI is making back-office work extinct",
+        "url": "https://www.whitecollardream.com/",
         "source": "Hacker News AI",
-        "score": 18
+        "score": 4
       },
       {
         "title": "Dwarf Fortress' creator says the industry's in shambles over AI",
         "url": "https://www.pcgamer.com/gaming-industry/dwarf-fortress-creator-says-the-industrys-in-shambles-over-ai-and-layoff-happy-ceos-everyone-i-know-their-bosses-are-slowly-getting-psychosis/",
         "source": "Hacker News AI",
-        "score": 161
+        "score": 186
       },
       {
-        "title": "Apple reveals 'shocking evidence' from ex-employee's MacBook in OpenAI suit",
-        "url": "https://9to5mac.com/2026/08/31/apple-openai-forensic-macbook-evidence/",
+        "title": "TikTok CEO says over two dozen Jewish organizations are telling them who to ban",
+        "url": "https://twitter.com/MaryBowdenMD/status/2094500265206407223",
         "source": "Hacker News AI",
         "score": 9
       },
@@ -149,31 +161,13 @@
         "title": "The EU's repair policies are changing the way tech is designed",
         "url": "https://theconversation.com/the-eus-repair-policies-are-changing-the-way-tech-is-designed-288468",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 28
       },
       {
-        "title": "Terence Tao explains 6 essential mathematical concepts [video]",
-        "url": "https://www.youtube.com/watch?v=OOMx2BHHWtE",
+        "title": "AI Can Make You Suck Faster Too",
+        "url": "https://www.hermit-tech.com/blog/ai-can-make-you-suck-faster-too",
         "source": "Hacker News AI",
-        "score": 597
-      },
-      {
-        "title": "Faiss vs. Turbovec vs. Infino: Comparing 4-bit vector quantization",
-        "url": "https://infino.ai/blog/fixed-grid-quantization/",
-        "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "James Dyson Sold Us on a $400 Hair Dryer. Now He's Trying a $499 Toothbrush",
-        "url": "https://www.wsj.com/cmo-today/james-dyson-sold-us-on-a-400-hair-dryer-now-hes-trying-a-499-toothbrush-c2740126",
-        "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Apple caught off guard by AI demand for Mac Mini and Mac Studio",
-        "url": "https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/",
-        "source": "Hacker News AI",
-        "score": 488
+        "score": 139
       }
     ],
     "news": [
@@ -183,7 +177,7 @@
         "source": "BBC World"
       },
       {
-        "title": "US launches more strikes on Iran as state media reports explosions",
+        "title": "US strikes Iran as state media reports four killed at wedding party",
         "url": "https://www.bbc.co.uk/news/articles/cj06q4ynpmjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -208,8 +202,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Pistol in a lake gives hope for French cold case",
-        "url": "https://www.bbc.co.uk/news/articles/c74eklrm344o?at_medium=RSS&at_campaign=rss",
+        "title": "Ariana Grande completes tour and steps back from public life",
+        "url": "https://www.bbc.co.uk/news/articles/c4gj0l34g78o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -289,6 +283,21 @@
     ],
     "gaming": [
       {
+        "title": "Star Wars Zero Company Is the Andor Replacement No One Expected",
+        "url": "https://www.polygon.com/star-wars-zero-company-andor-story/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Final Fantasy Meets Zelda in Steam's Best New RPG",
+        "url": "https://www.polygon.com/zenonia-1-steam-port/",
+        "source": "Polygon"
+      },
+      {
+        "title": "New Avengers: Secret Wars Casting Announcement Sparks Wild Fan Theories",
+        "url": "https://www.polygon.com/avengers-secret-wars-casting-noah-jupe/",
+        "source": "Polygon"
+      },
+      {
         "title": "Pokémon is Getting Its Own Official Fitbit for Evolved Sleep Tracking",
         "url": "https://www.polygon.com/pokemon-sleep-fitbit-air-wearable/",
         "source": "Polygon"
@@ -306,21 +315,6 @@
       {
         "title": "New Transformers Film with Peter Cullen's Final Performance Announced",
         "url": "https://www.polygon.com/transformers-optimus-prime-awakening-peter-cullen-final-performance/",
-        "source": "Polygon"
-      },
-      {
-        "title": "14 Years Later, 'Skyrim' Fans Can't Believe Bethesda's \"Diabolical\" Default Character Build",
-        "url": "https://www.polygon.com/skyrim-elder-scrolls-demo-todd-howard-default-build-meme/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Cyberpunk 2077 Is Leaving Xbox Game Pass This Month",
-        "url": "https://www.polygon.com/xbox-game-pass-leaving-september-2026-cyberpunk-2077/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Avatar Aang: The Last Airbender' Breaks Free of Streaming With New Physical Release",
-        "url": "https://www.polygon.com/avatar-aang-the-last-airbender-breaks-free-of-streaming-with-new-physical-release/",
         "source": "Polygon"
       }
     ],
