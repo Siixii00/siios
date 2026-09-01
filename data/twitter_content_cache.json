@@ -1,161 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-09-01T07:24:05.958551",
+    "last_updated": "2026-09-01T13:11:17.403867",
     "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "GPU World",
-        "url": "https://www.gpuworld.org/",
+        "title": "AnkiDroid: Google Play no longer allowing Open Collective donation link",
+        "url": "https://github.com/ankidroid/Anki-Android/issues/21656",
         "source": "Hacker News",
-        "score": 131
+        "score": 305
+      },
+      {
+        "title": "44% on ARC-AGI-1 in 67 cents",
+        "url": "https://mvakde.github.io/blog/44-on-arc-1/",
+        "source": "Hacker News",
+        "score": 138
       },
       {
         "title": "Fastpotify",
         "url": "https://fastpotify.rocks/",
         "source": "Hacker News",
-        "score": 258
+        "score": 545
+      },
+      {
+        "title": "American Airlines' Legendary Mechanic Passes Away at 100 After 80-Year Career",
+        "url": "https://simpleflying.com/american-airlines-mechanic-passes-away-100-record-80-years/",
+        "source": "Hacker News",
+        "score": 127
+      },
+      {
+        "title": "GPU World",
+        "url": "https://www.gpuworld.org/",
+        "source": "Hacker News",
+        "score": 294
       },
       {
         "title": "Tmp.0ut Volume 5",
         "url": "https://tmpout.sh/5/",
         "source": "Hacker News",
-        "score": 13
+        "score": 117
       },
       {
         "title": "Restroom Archive",
         "url": "https://restroomarchive.com",
         "source": "Hacker News",
-        "score": 88
+        "score": 183
       },
       {
-        "title": "I turned my security cameras into an automatic bird identification system",
-        "url": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/",
+        "title": "EFF to Courts: Don't Rewrite Copyright over AI Hype",
+        "url": "https://www.eff.org/deeplinks/2026/08/eff-courts-dont-rewrite-copyright-over-ai-hype",
         "source": "Hacker News",
-        "score": 458
+        "score": 9
       },
       {
         "title": "Playa Phone",
         "url": "https://playaphone.com/",
         "source": "Hacker News",
-        "score": 595
+        "score": 671
+      },
+      {
+        "title": "I turned my security cameras into an automatic bird identification system",
+        "url": "https://jasontucker.blog/how-i-turned-my-security-cameras-into-an-automatic-bird-identification-system-with-birdnet-go/",
+        "source": "Hacker News",
+        "score": 537
+      },
+      {
+        "title": "Tim Cook Sold Out Steve Jobs",
+        "url": "https://www.anildash.com/2025/09/09/how-tim-cook-sold-out-steve-jobs/",
+        "source": "Hacker News",
+        "score": 88
+      },
+      {
+        "title": "Terence Tao explains 6 essential mathematical concepts [video]",
+        "url": "https://www.youtube.com/watch?v=OOMx2BHHWtE",
+        "source": "Hacker News",
+        "score": 481
+      },
+      {
+        "title": "A walkable ASCII cyberpunk city in one HTML file [video]",
+        "url": "https://www.youtube.com/watch?v=3YtygAx_C6A",
+        "source": "Hacker News",
+        "score": 347
+      },
+      {
+        "title": "RotaryCell: Making an unmodified rotary phone work over LTE with an ESP32-S3",
+        "url": "https://github.com/fregacmols/RotaryCell",
+        "source": "Hacker News",
+        "score": 97
       },
       {
         "title": "CollectWise (YC F24) Is Hiring",
         "url": "https://www.ycombinator.com/companies/collectwise/jobs/7U500pP-founding-customer-success-engineer",
         "source": "Hacker News",
         "score": 1
-      },
-      {
-        "title": "Evidence of Fraud in an Influential Study About Procrastination",
-        "url": "https://datacolada.org/138",
-        "source": "Hacker News",
-        "score": 190
-      },
-      {
-        "title": "A walkable ASCII cyberpunk city in one HTML file [video]",
-        "url": "https://www.youtube.com/watch?v=3YtygAx_C6A",
-        "source": "Hacker News",
-        "score": 301
-      },
-      {
-        "title": "Terence Tao explains 6 essential mathematical concepts [video]",
-        "url": "https://www.youtube.com/watch?v=OOMx2BHHWtE",
-        "source": "Hacker News",
-        "score": 375
-      },
-      {
-        "title": "Dwarf Fortress is getting the mother of all magic updates",
-        "url": "https://www.rockpapershotgun.com/dwarf-fortress-is-getting-the-mother-of-all-magic-updates-extending-to-the-fundamental-cosmological-makeup-of-the-universe",
-        "source": "Hacker News",
-        "score": 386
-      },
-      {
-        "title": "2004 RuneScape fit a multiplayer RPG into 56k dial-up",
-        "url": "https://jkm.dev/posts/how-2004-runescape-fit-a-multiplayer-rpg-into-56k-dialup/",
-        "source": "Hacker News",
-        "score": 97
-      },
-      {
-        "title": "Borges Labyrinth in Venice reopens to the public",
-        "url": "https://www.wallpaper.com/design-interiors/labirinto-borges-venice-reopening",
-        "source": "Hacker News",
-        "score": 59
-      },
-      {
-        "title": "RotaryCell: Making an unmodified rotary phone work over LTE with an ESP32-S3",
-        "url": "https://github.com/fregacmols/RotaryCell",
-        "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Apple caught off guard by AI demand for Mac Mini and Mac Studio",
-        "url": "https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/",
-        "source": "Hacker News",
-        "score": 386
       }
     ],
     "ai": [
       {
+        "title": "American Airlines' Legendary Mechanic Passes Away at 100 After 80-Year Career",
+        "url": "https://simpleflying.com/american-airlines-mechanic-passes-away-100-record-80-years/",
+        "source": "Hacker News AI",
+        "score": 127
+      },
+      {
+        "title": "EFF to Courts: Don't Rewrite Copyright over AI Hype",
+        "url": "https://www.eff.org/deeplinks/2026/08/eff-courts-dont-rewrite-copyright-over-ai-hype",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
         "title": "Terence Tao explains 6 essential mathematical concepts [video]",
         "url": "https://www.youtube.com/watch?v=OOMx2BHHWtE",
         "source": "Hacker News AI",
-        "score": 375
+        "score": 481
       },
       {
         "title": "Apple caught off guard by AI demand for Mac Mini and Mac Studio",
         "url": "https://www.macrumors.com/2026/08/30/apple-unexpected-mac-mini-and-studio-demand/",
         "source": "Hacker News AI",
-        "score": 386
-      },
-      {
-        "title": "AI Can Make You Suck Faster Too",
-        "url": "https://www.hermit-tech.com/blog/ai-can-make-you-suck-faster-too",
-        "source": "Hacker News AI",
-        "score": 59
+        "score": 433
       },
       {
         "title": "Smartphone LED detects hidden cameras with AI",
         "url": "https://www.chosun.com/english/industry-en/2026/08/30/SBFXUIJQYZEARKP5T4FBAY25HQ/",
         "source": "Hacker News AI",
-        "score": 200
+        "score": 237
       },
       {
         "title": "ChatGPT Work Tool and Skill Reference",
         "url": "https://codex-tool-reference.simonw.chatgpt.site/",
         "source": "Hacker News AI",
-        "score": 210
-      },
-      {
-        "title": "Launch HN: Almanac (YC S26) – AI that knows your company",
-        "url": "https://usealmanac.com/",
-        "source": "Hacker News AI",
-        "score": 52
+        "score": 231
       },
       {
         "title": "Breaking Claude Code Opus 5 Auto Mode",
         "url": "https://embracethered.com/blog/posts/2026/breaking-claude-code-opus-5-and-automode/",
         "source": "Hacker News AI",
-        "score": 364
+        "score": 378
+      },
+      {
+        "title": "Launch HN: Almanac (YC S26) – AI that knows your company",
+        "url": "https://usealmanac.com/",
+        "source": "Hacker News AI",
+        "score": 56
       },
       {
         "title": "Show HN: We built the smallest dual-band aircraft tracker",
         "url": "https://pantsforbirds.com/the-worlds-smallest-dual-band-ads-b-receiver-module/",
         "source": "Hacker News AI",
-        "score": 80
-      },
-      {
-        "title": "ArXiv has almost 600 submissions today and most are AI slop",
-        "url": "https://arxiv.org/list/math/new",
-        "source": "Hacker News AI",
-        "score": 14
-      },
-      {
-        "title": "The safest job from AI may be writing",
-        "url": "http://muratbuffalo.blogspot.com/2026/08/the-safest-job-from-ai-may-be-writing.html",
-        "source": "Hacker News AI",
-        "score": 125
+        "score": 88
       }
     ],
     "news": [
@@ -165,13 +159,23 @@
         "source": "BBC World"
       },
       {
-        "title": "Nepal death toll nears 1,000 as rescuers race to find workers trapped in mud-filled tunnels",
+        "title": "Nepal death toll crosses 1,000 as rescuers race to find workers trapped in mud-filled tunnels",
         "url": "https://www.bbc.co.uk/news/articles/c5ylvgq9q71o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "How catastrophic flash flood unfolded at remote Nepal-China border point",
+        "title": "Russian attack hits rail workers in new deadly strikes on Kyiv",
+        "url": "https://www.bbc.co.uk/news/articles/cx2zmdgry3do?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "The final minutes before floodwater crashed through Nepal-China border",
         "url": "https://www.bbc.co.uk/news/articles/c0qxw1qw3g7o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Israel says senior Hamas member seized as strikes kill three during Gaza raid",
+        "url": "https://www.bbc.co.uk/news/articles/c1wxex4vg35o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -180,24 +184,29 @@
         "source": "BBC World"
       },
       {
-        "title": "Zambia's president to be sworn in for second term while opponent detained",
-        "url": "https://www.bbc.co.uk/news/articles/c62m7vp5895o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "South Korean police officer admits to closing missing person cases to avoid work",
-        "url": "https://www.bbc.co.uk/news/articles/c780wy7ype4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Shein shares fall in long-awaited stock market debut",
-        "url": "https://www.bbc.co.uk/news/articles/c3v0qrz7z25o?at_medium=RSS&at_campaign=rss",
+        "title": "Teen girl charged with murder over recording of San Diego mosque attack",
+        "url": "https://www.bbc.co.uk/news/articles/c2dw3wn972no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " This viral creative challenge ingeniously rebranded pens for the AI age ",
+        "title": " The best e-ink art frames are starting to deliver on the early promise of the technology ",
+        "url": "https://www.creativebloq.com/art/digital-art/the-best-e-ink-art-frames-finally-deliver-on-the-early-promise-of-the-technology-at-a-price",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Witcher 3: Songs of the Past's lush new location and remaster improvements have me excited to be Geralt again ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/the-witcher-3-songs-of-the-pasts-lush-new-location-and-remaster-improvements-have-me-excited-to-be-geralt-again",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " “Ideas for my art come from different places. In this case, I was inspired by an iron maiden paired with a goblin who takes great zeal in his work” ",
+        "url": "https://www.creativebloq.com/art/digital-art/ideas-for-my-art-come-from-different-places-in-this-case-i-was-inspired-by-an-iron-maiden-paired-with-a-goblin-who-takes-great-zeal-in-his-work",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " A viral creative challenge ingeniously rebranded pens for the AI age ",
         "url": "https://www.creativebloq.com/design/advertising/this-viral-creative-challenge-rebrands-pens-for-the-ai-age",
         "source": "Creative Bloq"
       },
@@ -215,89 +224,79 @@
         "title": " This tiny \"life-saving\" charger takes the guesswork out of juicing up – and right now it's 26% off ",
         "url": "https://www.creativebloq.com/tech/accessories/this-tiny-life-saving-charger-takes-the-guesswork-out-of-juicing-up-and-right-now-its-26-percent-off",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Is Nvidia’s DLSS 5 an AI slop machine or a game-changing technology that will take us closer to artists' original vision? ",
-        "url": "https://www.creativebloq.com/3d/is-nvidias-dlss-5-an-ai-slop-machine-or-a-game-changing-technology-that-will-take-us-closer-to-artists-original-vision",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Onimusha: Way of the Sword (PS5) review – Capcom’s samurai comeback gets the swordplay right ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/onimusha-way-of-the-sword-review-sublime-swordplay-spectacular-samurai-horror-and-a-little-too-much-genma-busywork",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Scientists discover why snake embryos twist into spirals",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260901070516.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Mindfulness may lower blood pressure in just 8 weeks",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260901010721.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "One of Earth’s driest places was just covered in snow",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260901010709.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "NASA delays Crew-13 launch after leak found on SpaceX Dragon",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260901010705.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "NASA’s Swift telescope is back, but time is running out",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260901010702.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "NASA’s Roman Space Telescope launches to reveal the Universe’s darkest secrets",
         "url": "https://www.sciencedaily.com/releases/2026/08/260831035213.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists find why the liver may not heal even after you stop drinking",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260831015205.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Popular sweeteners may leave effects that last for generations",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260830000019.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "HEPA air purifiers may boost brain function after just one month",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260830000016.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A “quantum bath” puts quantum entanglement on autopilot",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260830000002.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists challenge a 70-year-old “lizard brain” myth",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260829235958.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "One injection could keep osteoarthritis drugs working for weeks",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260829235947.htm",
+        "title": "A massive plume deep beneath Africa is pulling the continent apart",
+        "url": "https://www.sciencedaily.com/releases/2026/08/260831015210.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "35 Years Later, This Remains the Most Near-Perfect Action Sci-Fi Movie of All Time",
-        "url": "https://www.polygon.com/best-sci-fi-movie-terminator-2/",
+        "title": "Steven Spielberg and The Odyssey Inspired The Fantasy Blockbuster Event of the Decade",
+        "url": "https://www.polygon.com/katherine-rundell-neverfear-adaptation-interview/",
         "source": "Polygon"
       },
       {
-        "title": "Switch 2 Officially Has 2 Exclusive GOTY Contenders In September 2026",
-        "url": "https://www.polygon.com/new-switch-2-games-september-2026/",
+        "title": "Onslaught review: The nastiest action thriller of 2026, and also the most important",
+        "url": "https://www.polygon.com/onslaught-review-2026/",
         "source": "Polygon"
       },
       {
-        "title": "The Bizarre Cult Sci-fi Classic ‘Donnie Darko’ Is Now Free to Watch",
-        "url": "https://www.polygon.com/donnie-darko-free-to-watch-youtube-september-2026/",
+        "title": "Up to 80% of the Team Behind Star Wars' Best-Reviewed Game in Years was Furloughed Before Launch",
+        "url": "https://www.polygon.com/star-wars-zero-company-bit-reactor-furlough/",
         "source": "Polygon"
       },
       {
-        "title": "Xbox Officially Has 4 GOTY Contenders Coming in September",
-        "url": "https://www.polygon.com/new-xbox-games-september-2026/",
+        "title": "Disney Scraps Live Action Reboot of the Cult Classic Fantasy Series Gargoyles",
+        "url": "https://www.polygon.com/gargoyles-live-action-reboot-cancelled/",
         "source": "Polygon"
       },
       {
-        "title": "'GTA 6' Hype is Sending PS5 Pro Prices Through the Roof",
-        "url": "https://www.polygon.com/gta-6-fans-ps5-pro-prices/",
+        "title": "Xbox's Disc-to-Digital Program Supports Delisted Games",
+        "url": "https://www.polygon.com/xbox-disc-to-digital-program-delisted-game-support/",
         "source": "Polygon"
       },
       {
-        "title": "PS5 Officially Has 5 GOTY Contenders Coming in September",
-        "url": "https://www.polygon.com/new-ps5-games-september-2026/",
+        "title": "Steven Spielberg's Most Important Blockbuster of All Time Is Officially Back on Streaming",
+        "url": "https://www.polygon.com/jaws-streaming-netflix-september-2026/",
         "source": "Polygon"
       },
       {
-        "title": "September.2026 Is Officially the Busiest Month in Years for Millions of Gamers",
-        "url": "https://www.polygon.com/september-2026-new-video-games-gta-6/",
+        "title": "How to Watch Capcom's Spotlight stream at Tokyo Game Show 2026",
+        "url": "https://www.polygon.com/capcom-tokyo-game-show-spotlight-lineup-where-to-watch-when/",
         "source": "Polygon"
       }
     ],
