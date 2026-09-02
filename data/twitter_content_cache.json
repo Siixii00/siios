@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-02T17:40:19.798856",
-    "total_items": 65
+    "last_updated": "2026-09-02T20:38:49.610149",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
+        "title": "Muse Spark 1.3",
+        "url": "https://developer.meta.com/ai/models/muse-spark/",
+        "source": "Hacker News",
+        "score": 131
+      },
+      {
         "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
         "source": "Hacker News",
-        "score": 437
+        "score": 666
       },
       {
-        "title": "A Note from LWN",
-        "url": "https://lwn.net/Articles/1090585/",
+        "title": "Google avoids a breakup of its ad tech business",
+        "url": "https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html",
         "source": "Hacker News",
-        "score": 541
+        "score": 102
       },
       {
-        "title": "Mushroom hunting with LLMs: what can go wrong?",
-        "url": "https://quesma.com/blog/mushroom-llm-vision/",
+        "title": "I wanna live an NPC life",
+        "url": "https://signalundefied.bearblog.dev/i-wanna-live-an-npc-life/",
         "source": "Hacker News",
-        "score": 23
+        "score": 24
       },
       {
-        "title": "Mistral now trains on user input by default, except on enterprise tier",
+        "title": "Wendell Berry has died",
+        "url": "https://www.nytimes.com/2026/08/31/us/wendell-berry-dead.html",
+        "source": "Hacker News",
+        "score": 62
+      },
+      {
+        "title": "Can I opt out of my input or output data being used for training?",
         "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
         "source": "Hacker News",
-        "score": 245
+        "score": 322
+      },
+      {
+        "title": "Fable 5.1 World Modeling",
+        "url": "https://github.com/PhiloLabs/fable51-worlds",
+        "source": "Hacker News",
+        "score": 21
       },
       {
         "title": "Biggest dark matter detector spots a single weird particle",
         "url": "https://www.science.org/content/article/world-s-biggest-dark-matter-detector-spots-single-weird-particle",
         "source": "Hacker News",
-        "score": 151
+        "score": 208
       },
       {
-        "title": "GrapheneOS says Pixel 11 has MTE support after all",
-        "url": "https://grapheneos.social/@GrapheneOS/117194007157499435",
+        "title": "Introducing Muse Spark 1.3",
+        "url": "https://research.meta.ai/blog/introducing-muse-spark-1-3",
         "source": "Hacker News",
-        "score": 124
+        "score": 44
+      },
+      {
+        "title": "Embedded Rust RTOS vs. C RTOS",
+        "url": "https://tweedegolf.nl/en/blog/65/async-rust-vs-rtos-showdown/",
+        "source": "Hacker News",
+        "score": 25
       },
       {
         "title": "Exit the Cave",
         "url": "https://turtlespace.blog/p/exit-the-cave",
         "source": "Hacker News",
-        "score": 100
-      },
-      {
-        "title": "A third of Perplexity's citations don't contain the number they're cited for",
-        "url": "https://hausresearch.com/reports/perplexity-citation-audit/",
-        "source": "Hacker News",
-        "score": 79
-      },
-      {
-        "title": "Three sites made 215,128 “best software” pages for AI. Perplexity cites them",
-        "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
-        "source": "Hacker News",
-        "score": 184
-      },
-      {
-        "title": "A Selection of Los Alamos Rolodex Business Cards",
-        "url": "https://clui.org/collections/los-alamos-business-cards/selection-cards",
-        "source": "Hacker News",
-        "score": 78
-      },
-      {
-        "title": "ChatGPT ad targeting is garbage",
-        "url": "https://successfulsoftware.net/2026/09/02/chatgpt-ad-targeting-is-garbage/",
-        "source": "Hacker News",
-        "score": 12
-      },
-      {
-        "title": "Commodore 64 released September 1, 1982",
-        "url": "https://dfarq.homeip.net/commodore-64-released-september-1-1982/",
-        "source": "Hacker News",
-        "score": 263
-      },
-      {
-        "title": "Poisson Disk Sampling",
-        "url": "https://stripeacross.com/posts/poisson-disk-sampling/",
-        "source": "Hacker News",
-        "score": 77
+        "score": 159
       },
       {
         "title": "Aging Brains Blend Memories Together Instead of Just Forgetting Them",
         "url": "https://studyfinds.com/aging-brains-blend-memories-together-instead-of-forgetting-them-study-finds/",
         "source": "Hacker News",
-        "score": 99
+        "score": 156
       },
       {
-        "title": "WebLLM: high-performance in-browser LLM inference engine",
-        "url": "https://github.com/mlc-ai/web-llm",
+        "title": "Qantas Airbus A380 catastrophic engine failure in 2010",
+        "url": "https://admiralcloudberg.medium.com/a-matter-of-millimeters-the-story-of-qantas-flight-32-bdaa62dc98e7",
         "source": "Hacker News",
-        "score": 45
+        "score": 22
+      },
+      {
+        "title": "AI Agents and the Refactoring That Never Happens",
+        "url": "https://www.rosenfeld.page/articles/programming/2026_09_02_ai_agents_and_the_refactoring_that_never_happens/",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "SteamdDB Joins Nexus Mods",
+        "url": "https://www.nexusmods.com/news/15597",
+        "source": "Hacker News",
+        "score": 81
       }
     ],
     "ai": [
@@ -101,91 +101,91 @@
         "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
         "source": "Hacker News AI",
-        "score": 437
+        "score": 666
       },
       {
-        "title": "Mushroom hunting with LLMs: what can go wrong?",
-        "url": "https://quesma.com/blog/mushroom-llm-vision/",
-        "source": "Hacker News AI",
-        "score": 23
-      },
-      {
-        "title": "Mistral now trains on user input by default, except on enterprise tier",
+        "title": "Can I opt out of my input or output data being used for training?",
         "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
         "source": "Hacker News AI",
-        "score": 245
+        "score": 322
       },
       {
-        "title": "A third of Perplexity's citations don't contain the number they're cited for",
-        "url": "https://hausresearch.com/reports/perplexity-citation-audit/",
+        "title": "Qantas Airbus A380 catastrophic engine failure in 2010",
+        "url": "https://admiralcloudberg.medium.com/a-matter-of-millimeters-the-story-of-qantas-flight-32-bdaa62dc98e7",
         "source": "Hacker News AI",
-        "score": 79
-      },
-      {
-        "title": "Three sites made 215,128 “best software” pages for AI. Perplexity cites them",
-        "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
-        "source": "Hacker News AI",
-        "score": 184
-      },
-      {
-        "title": "ChatGPT ad targeting is garbage",
-        "url": "https://successfulsoftware.net/2026/09/02/chatgpt-ad-targeting-is-garbage/",
-        "source": "Hacker News AI",
-        "score": 12
+        "score": 23
       },
       {
         "title": "Aging Brains Blend Memories Together Instead of Just Forgetting Them",
         "url": "https://studyfinds.com/aging-brains-blend-memories-together-instead-of-forgetting-them-study-finds/",
         "source": "Hacker News AI",
-        "score": 99
+        "score": 157
       },
       {
-        "title": "WebLLM: high-performance in-browser LLM inference engine",
-        "url": "https://github.com/mlc-ai/web-llm",
+        "title": "AI Agents and the Refactoring That Never Happens",
+        "url": "https://www.rosenfeld.page/articles/programming/2026_09_02_ai_agents_and_the_refactoring_that_never_happens/",
         "source": "Hacker News AI",
-        "score": 45
+        "score": 11
       },
       {
-        "title": "AI Policy",
-        "url": "https://dbushell.com/ai/",
+        "title": "We could save petabytes of cache storage with Zstandard and Pingora",
+        "url": "https://blog.cloudflare.com/cache-transcoding/",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 34
       },
       {
         "title": "Paint.net 5.2 alpha now runs on Linux",
         "url": "https://forums.paint.net/topic/134562-paintnet-52-alpha-build-9739/",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 140
       },
       {
-        "title": "Six curl CVEs after OpenAI and Anthropic came back with zero",
-        "url": "https://aisle.com/blog/aisle-discovered-six-curl-cves-after-openai-and-anthropic-found-zero",
+        "title": "WebLLM: high-performance in-browser LLM inference engine",
+        "url": "https://github.com/mlc-ai/web-llm",
         "source": "Hacker News AI",
-        "score": 115
+        "score": 65
+      },
+      {
+        "title": "Three sites made 215,128 “best software” pages for AI. Perplexity cites them",
+        "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
+        "source": "Hacker News AI",
+        "score": 247
+      },
+      {
+        "title": "Altair Basic Interpreter Source Code (1975) [pdf]",
+        "url": "https://images.gatesnotes.com/12514eb8-7b51-008e-41a9-512542cf683b/34d561c8-cf5c-4e69-af47-3782ea11482e/Original-Microsoft-Source-Code.pdf",
+        "source": "Hacker News AI",
+        "score": 4
+      },
+      {
+        "title": "The Post-AI Internet Doesn't Look Great",
+        "url": "https://www.jordangoodman.xyz/the-post-ai-internet-doesnt-look-great/",
+        "source": "Hacker News AI",
+        "score": 60
       },
       {
         "title": "Discontinuation of third level domain registrations for the .name TLD [pdf]",
         "url": "https://itp.cdn.icann.org/en/files/consensus-policies/rsep-2026013-name-request-15-04-2026-en.pdf",
         "source": "Hacker News AI",
-        "score": 15
-      },
-      {
-        "title": "Saving money on Google Photos with Immich: Your own personal photo storage",
-        "url": "https://www.markpitblado.me/blog/saving-on-google-photos-with-immich-your-own-personal-photo-storage/",
-        "source": "Hacker News AI",
-        "score": 67
-      },
-      {
-        "title": "How Railroad Crossings Work",
-        "url": "https://practical.engineering/blog/2023/12/29/how-railroad-crossings-work",
-        "source": "Hacker News AI",
-        "score": 7
+        "score": 43
       },
       {
         "title": "The race to engineer new knobs for the human brain",
         "url": "https://www.neuroai.science/p/the-race-to-engineer-new-knobs-for",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 34
+      },
+      {
+        "title": "The Emergent Symbolic Structure of Artificial Neural Networks",
+        "url": "https://arxiv.org/abs/2608.29530",
+        "source": "Hacker News AI",
+        "score": 266
+      },
+      {
+        "title": "Check if a file was made with Claude",
+        "url": "https://claude.com/check-content",
+        "source": "Hacker News AI",
+        "score": 136
       }
     ],
     "news": [
@@ -210,22 +210,22 @@
         "source": "BBC World"
       },
       {
+        "title": "Maltese tycoon acquitted of orchestrating murder of renowned journalist",
+        "url": "https://www.bbc.co.uk/news/articles/c5ye295pxgxo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "US sailors arrive in Thailand's Pattaya after record 250 days at sea",
         "url": "https://www.bbc.co.uk/news/articles/cg7k09z4lj9o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Woman charged with juror intimidation in Lindsay Clancy trial ",
-        "url": "https://www.bbc.co.uk/news/articles/cwyze4593zwo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Zelensky says airlines should avoid Russian airspace as Ukraine escalates drone operations",
-        "url": "https://www.bbc.co.uk/news/articles/c9v9yydy2wvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The perfect slim and light back-to-school MacBook alternative has $450 off ",
+        "url": "https://www.creativebloq.com/tech/laptops/this-slim-and-light-back-to-school-macbook-alternative-is-now-usd450-off",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Yes, a Chromebook can be the perfect school laptop – and there's $170 off the best we've ever tested ",
         "url": "https://www.creativebloq.com/tech/laptops/yes-a-chromebook-can-be-the-perfect-school-laptop-and-theres-usd170-off-the-best-weve-ever-reviewed",
@@ -254,11 +254,6 @@
       {
         "title": " Tomb Raider: Legacy of Atlantis's Unreal Engine reimagining looks breathtaking but I'm concerned by some modern design creep ",
         "url": "https://www.creativebloq.com/entertainment/gaming/tomb-raider-legacy-of-atlantiss-unreal-engine-reimagining-of-the-iconic-classic-looks-breathtaking-but-im-a-bit-concerned-by-some-modern-design-creep",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Move over, Cosmic Orange – iPhone 18 colours just leaked online ",
-        "url": "https://www.creativebloq.com/design/product-design/move-over-cosmic-orange-iphone-18-colours-just-leaked-online",
         "source": "Creative Bloq"
       }
     ],
@@ -301,43 +296,48 @@
     ],
     "gaming": [
       {
-        "title": "Controversial GTA 6 Change Has Fans Flipping Out",
-        "url": "https://www.polygon.com/gta-6-preview-sprint-change-l3-hold-tap-how-does-it-work/",
+        "title": "Judge Dredd Meets Studio Ghibli in the Most Exciting Cyberpunk Game in Years",
+        "url": "https://www.polygon.com/no-law-preview-gamescom-2026/",
         "source": "Polygon"
       },
       {
-        "title": "One GTA 6 Preview Stunned Rockstar With Something It Had Never Seen Before",
-        "url": "https://www.polygon.com/gta-6-release-preview-random-events-npc-rockstar-youtube/",
+        "title": "Keanu Reeves' \"John Wick Meets Die Hard\" Action-Thriller Officially Finds a New Streaming Home",
+        "url": "https://www.polygon.com/speed-keanu-reeves-streaming-hbo-max-september-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Harry Potter Officially Returns in 2026 in New Look at HBO's Remake",
-        "url": "https://www.polygon.com/harry-potter-season-1-hbo-trailer-release-date/",
+        "title": "Godzilla Director Reveals the Secret MonsterVerse Easter Egg In His New Action Thriller",
+        "url": "https://www.polygon.com/adam-wingard-onslaught-director-interview/",
         "source": "Polygon"
       },
       {
-        "title": "Tom And Jerry’s New Movie Is Chinese And It Makes Perfect Sense Why",
-        "url": "https://www.polygon.com/tom-and-jerry-forbidden-compass-asian-popularity/",
+        "title": "Prime Video's Fallout Officially Returns with New Game Tie-in This Week",
+        "url": "https://www.polygon.com/fallout-stern-pinball-release-prime-video/",
         "source": "Polygon"
       },
       {
-        "title": "World's biggest modding site buys the No. 1 Steam resource — and fans are worried",
-        "url": "https://www.polygon.com/steamdb-nexus-mods-purchased-sale/",
+        "title": "7 Years Later, What Remains of Edith Finch Still Has the Most Haunting Quote in Gaming",
+        "url": "https://www.polygon.com/what-remains-edith-finch-best-quote/",
         "source": "Polygon"
       },
       {
-        "title": "Starcraft 3 Might Actually Happen in Surprise New Partnership",
-        "url": "https://www.polygon.com/starcraft-3-blizzard-nexon-blizzcon-2026/",
+        "title": "A Classic 'Pokémon' Card Is About To Break An Incredible Sales Record Against All Odds",
+        "url": "https://www.polygon.com/pokemon-tcg-torchic-star-record-why-price-psa-10-grade/",
         "source": "Polygon"
       },
       {
-        "title": "One 23-year-old Magic Card Protects a Popular Hobbit Commander From Total Annihilation",
-        "url": "https://www.polygon.com/mtg-best-hobbit-commander-beorn-the-fierce-decklist-caller-of-the-claw-price/",
+        "title": "Final Fantasy 14’s Free Ride on Switch 2 Is Coming to an End",
+        "url": "https://www.polygon.com/final-fantasy-14-nintendo-switch-2-free-subscribtion-period-end-date-announced/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "How we make AI coding more cost efficient without sacrificing task quality",
+        "url": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "OpenClaw went viral. Meet the maintainers building and securing it.",
         "url": "https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/",
@@ -366,11 +366,6 @@
       {
         "title": "GitHub Copilot app for Beginners: Managing your work",
         "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "How canvases make agentic workflows visible, steerable, and cost-efficient",
-        "url": "https://github.blog/ai-and-ml/github-copilot/how-canvases-make-agentic-workflows-visible-steerable-and-cost-efficient/",
         "source": "GitHub Blog"
       }
     ]
