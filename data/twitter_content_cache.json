@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-02T08:29:56.725495",
-    "total_items": 62
+    "last_updated": "2026-09-02T13:20:13.950244",
+    "total_items": 52
   },
   "content": {
     "tech": [
       {
+        "title": "Commodore 64 released September 1, 1982",
+        "url": "https://dfarq.homeip.net/commodore-64-released-september-1-1982/",
+        "source": "Hacker News",
+        "score": 178
+      },
+      {
+        "title": "A Small Telescope That Surprised Me",
+        "url": "https://adfr.io/thoughts/20260831_a_small_telescope_that_surprised_me/",
+        "source": "Hacker News",
+        "score": 29
+      },
+      {
         "title": "Claude Fable 5.1 and Claude Mythos 5.1",
         "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
         "source": "Hacker News",
-        "score": 1200
+        "score": 1317
+      },
+      {
+        "title": "HomeOS – A self-hosted family dashboard for a kitchen touchscreen",
+        "url": "https://github.com/danialkhilji/HomeOS",
+        "source": "Hacker News",
+        "score": 10
       },
       {
         "title": "The Emergent Symbolic Structure of Artificial Neural Networks",
         "url": "https://arxiv.org/abs/2608.29530",
         "source": "Hacker News",
-        "score": 109
+        "score": 203
+      },
+      {
+        "title": "Quasar 438B: Europe's Leading AI Model",
+        "url": "https://multiversecomputing.com/resources/introducing-quasar-438b-europe-s-leading-ai-model",
+        "source": "Hacker News",
+        "score": 64
+      },
+      {
+        "title": "Move in C++ without a std:move",
+        "url": "https://andreasfertig.com/blog/2026/09/move-in-cpp-without-a-stdmove/",
+        "source": "Hacker News",
+        "score": 20
+      },
+      {
+        "title": "The Lost Art of Carrying Loads",
+        "url": "https://www.carryology.com/insights/the-lost-art-of-carrying-loads/",
+        "source": "Hacker News",
+        "score": 8
+      },
+      {
+        "title": "You Know Who Hates AI? Insurance Claims Adjusters",
+        "url": "https://www.wired.com/story/insurance-claims-adjusters-really-hate-ai/",
+        "source": "Hacker News",
+        "score": 77
       },
       {
         "title": "How accurate have Ed Zitron's AI skeptic predictions been?",
         "url": "https://danluu.com/zitron/",
         "source": "Hacker News",
-        "score": 665
+        "score": 784
       },
       {
         "title": "Fine, I'll build my own text editor",
         "url": "https://dbushell.com/2026/09/01/text-editor/",
         "source": "Hacker News",
-        "score": 82
-      },
-      {
-        "title": "WebFPGA",
-        "url": "https://webfpga.io/",
-        "source": "Hacker News",
-        "score": 60
+        "score": 181
       },
       {
         "title": "FBI Probes Service Selling 153M+ Drivers Licenses",
         "url": "https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/",
         "source": "Hacker News",
-        "score": 190
+        "score": 294
       },
       {
-        "title": "Introducing Ad Blocker for Firefox on iOS",
-        "url": "https://blog.mozilla.org/en/firefox/ad-blocker-on-ios/",
+        "title": "Sweden pauses Denmark power cable over EU grid rules",
+        "url": "https://www.nordiskpost.com/2026/05/08/sweden-power-cable-dispute-freezes-link-to-denmark/",
         "source": "Hacker News",
-        "score": 442
+        "score": 41
       },
       {
-        "title": "My local model setup on an M4 Pro Mac Mini",
-        "url": "https://lws.io/blog/my-local-model-setup/",
+        "title": "Telli (YC F24) is hiring engineers and designers [Berlin, on-site]",
+        "url": "https://careers.telli.com/",
         "source": "Hacker News",
-        "score": 179
+        "score": 1
       },
       {
-        "title": "Show HN: Weedout – Safari extension that hides YouTube AI-labeled videos",
-        "url": "https://masteranza.github.io/weedout/",
+        "title": "Banca Etica Suspends A/I's Account While Condemning the Sanctions Behind It",
+        "url": "https://sabot.media/post/banca-etica-statement-english",
         "source": "Hacker News",
-        "score": 131
-      },
-      {
-        "title": "Sonic Pi",
-        "url": "https://sonic-pi.net/",
-        "source": "Hacker News",
-        "score": 138
-      },
-      {
-        "title": "The efficient frontier of LLM inference",
-        "url": "https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/",
-        "source": "Hacker News",
-        "score": 111
-      },
-      {
-        "title": "True Rate of Unemployment",
-        "url": "https://www.lisep.org/tru",
-        "source": "Hacker News",
-        "score": 203
-      },
-      {
-        "title": "Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development",
-        "url": "https://www.norirobotics.com/",
-        "source": "Hacker News",
-        "score": 157
-      },
-      {
-        "title": "Ambient CSS v3 – Blender meets CSS",
-        "url": "https://ambientcss.vercel.app/",
-        "source": "Hacker News",
-        "score": 258
-      },
-      {
-        "title": "Movie Scene Map – 13,312 films, series, games, anime and manga",
-        "url": "https://moviescenemap.com/",
-        "source": "Hacker News",
-        "score": 236
+        "score": 15
       }
     ],
     "ai": [
@@ -101,149 +101,95 @@
         "title": "Claude Fable 5.1 and Claude Mythos 5.1",
         "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
         "source": "Hacker News AI",
-        "score": 1200
+        "score": 1317
       },
       {
         "title": "The Emergent Symbolic Structure of Artificial Neural Networks",
         "url": "https://arxiv.org/abs/2608.29530",
         "source": "Hacker News AI",
-        "score": 109
+        "score": 203
+      },
+      {
+        "title": "Quasar 438B: Europe's Leading AI Model",
+        "url": "https://multiversecomputing.com/resources/introducing-quasar-438b-europe-s-leading-ai-model",
+        "source": "Hacker News AI",
+        "score": 64
+      },
+      {
+        "title": "You Know Who Hates AI? Insurance Claims Adjusters",
+        "url": "https://www.wired.com/story/insurance-claims-adjusters-really-hate-ai/",
+        "source": "Hacker News AI",
+        "score": 77
       },
       {
         "title": "How accurate have Ed Zitron's AI skeptic predictions been?",
         "url": "https://danluu.com/zitron/",
         "source": "Hacker News AI",
-        "score": 665
+        "score": 784
       },
       {
         "title": "Show HN: Weedout – Safari extension that hides YouTube AI-labeled videos",
         "url": "https://masteranza.github.io/weedout/",
         "source": "Hacker News AI",
-        "score": 131
+        "score": 161
+      },
+      {
+        "title": "Praearcturus gigas: giant scorpion from Lower Devonian (Lochkovian) of Britain",
+        "url": "https://onlinelibrary.wiley.com/doi/10.1111/pala.70064",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "The efficient frontier of LLM inference",
         "url": "https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/",
         "source": "Hacker News AI",
-        "score": 111
+        "score": 135
       },
       {
         "title": "The ChatGPT/Codex app bundles a full copy of LibreOffice",
         "url": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
         "source": "Hacker News AI",
-        "score": 386
-      },
-      {
-        "title": "Mayor says 'large chunks' of Wellington council Deloitte report written by AI",
-        "url": "https://www.rnz.co.nz/news/regions/1229348/mayor-says-large-chunks-of-wellington-council-deloitte-report-written-by-ai",
-        "source": "Hacker News AI",
-        "score": 7
-      },
-      {
-        "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
-        "url": "https://mvakde.github.io/blog/44-on-arc-1/",
-        "source": "Hacker News AI",
-        "score": 611
-      },
-      {
-        "title": "Google Pics is generally available starting today",
-        "url": "https://workspace.google.com/products/pics/",
-        "source": "Hacker News AI",
-        "score": 6
-      },
-      {
-        "title": "When Claude Code went rogue, years of Bengaluru heritage work disappeared",
-        "url": "https://www.deccanherald.com/india/karnataka/bengaluru/when-claude-code-went-rogue-years-of-bengaluru-heritage-work-disappeared-4131958",
-        "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "AI Coding Agent Skills for Real Engineers",
-        "url": "https://github.com/mattpocock/skills",
-        "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "Apple reveals 'shocking evidence' from ex-employee's MacBook in OpenAI suit",
-        "url": "https://9to5mac.com/2026/08/31/apple-openai-forensic-macbook-evidence/",
-        "source": "Hacker News AI",
-        "score": 209
+        "score": 448
       }
     ],
     "news": [
+      {
+        "title": "US sailors arrive in Thailand's Pattaya after record 250 days at sea",
+        "url": "https://www.bbc.co.uk/news/articles/cg7k09z4lj9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Why US troops have a history in this raucous Thai city",
+        "url": "https://www.bbc.co.uk/news/videos/c5yw03jr892o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Zelensky says airlines should avoid Russian airspace as Ukraine escalates drone operations",
         "url": "https://www.bbc.co.uk/news/articles/c9v9yydy2wvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "BBC travels inside occupied Lebanon as officials say Israel expanding positions",
-        "url": "https://www.bbc.co.uk/news/articles/cge41d19gq9o?at_medium=RSS&at_campaign=rss",
+        "title": "Rosenberg: Putin's veiled threat to UK part of Russia's campaign against West",
+        "url": "https://www.bbc.co.uk/news/articles/c62j50n131mo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Why do US troops have history with this Thai city?",
-        "url": "https://www.bbc.co.uk/news/videos/c5yw03jr892o?at_medium=RSS&at_campaign=rss",
+        "title": "EU and Nato vow to step up pressure on Russia after 'new escalation' in Germany",
+        "url": "https://www.bbc.co.uk/news/articles/ce9e810pg7ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "South Korea jails care home head for sexually assaulting disabled residents",
-        "url": "https://www.bbc.co.uk/news/articles/cn74vzl52l4o?at_medium=RSS&at_campaign=rss",
+        "title": "Nepal intensifies relief and recovery efforts after deadly floods, UN says",
+        "url": "https://www.bbc.co.uk/news/articles/c8xk45k9r1go?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Bus crash on Egypt's Red Sea coast kills 16",
-        "url": "https://www.bbc.co.uk/news/articles/cn8mr1myy2ko?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Charlie Kirk murder suspect pleads not guilty as judge clears way for death penalty trial",
-        "url": "https://www.bbc.co.uk/news/articles/cj4jn9q7evpo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Tiger Woods to change plea after crash arrest",
-        "url": "https://www.bbc.co.uk/news/articles/c5y7xvpn5kno?at_medium=RSS&at_campaign=rss",
+        "title": "More than 900 killed in Gaza this year despite ceasefire, Hamas-run health ministry says",
+        "url": "https://www.bbc.co.uk/news/articles/c7708dy33pdo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " The best TourBox editing consoles: Legit shortcuts to creativity ",
-        "url": "https://www.creativebloq.com/entertainment/videography/the-best-tourbox-editing-consoles-weve-tested-them-and-selected-the-best",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The new Disney World logo design is actually kind of genius ",
-        "url": "https://www.creativebloq.com/design/logos-icons/the-new-disney-world-logo-design-is-actually-kind-of-genius",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Making your own Backrooms in free 3D software is surprisingly easy ",
-        "url": "https://www.creativebloq.com/3d/making-your-own-backrooms-in-free-3d-software-is-surprisingly-easy",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How to draw Sanrio characters like Hello Kitty the easy way ",
-        "url": "https://www.creativebloq.com/art/character-design/how-to-draw-sanrio-characters-like-hello-kitty-the-easy-way",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This city's drastic logo redesign has hit a bum note ",
-        "url": "https://www.creativebloq.com/design/logos-icons/this-us-citys-drastic-logo-redesign-has-hit-a-bum-note",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The best e-ink art frames are starting to deliver on the early promise of the technology ",
-        "url": "https://www.creativebloq.com/art/digital-art/the-best-e-ink-art-frames-finally-deliver-on-the-early-promise-of-the-technology-at-a-price",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Witcher 3: Songs of the Past's lush new location and remaster improvements have me excited to be Geralt again ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/the-witcher-3-songs-of-the-pasts-lush-new-location-and-remaster-improvements-have-me-excited-to-be-geralt-again",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "Too much coffee may weaken bones, study finds",
@@ -283,38 +229,38 @@
     ],
     "gaming": [
       {
-        "title": "28 Years Later, This Remains the Most Near-Perfect WWII Movie of All Time",
-        "url": "https://www.polygon.com/saving-private-ryan-near-perfect-wwii-28-years-later/",
+        "title": "After 7 Hours, Lego Skylines Really Is the Perfect Twist on Cities Skylines",
+        "url": "https://www.polygon.com/lego-skylines-preview/",
         "source": "Polygon"
       },
       {
-        "title": "Onimusha Way of the Sword release time in your time zone",
-        "url": "https://www.polygon.com/onimusha-way-of-the-sword-release-time-when-edt-pdt/",
+        "title": "PlayStation Faces $7.85 Million Lawsuit for Allegedly Establishing Digital Game Monopoly on PlayStation",
+        "url": "https://www.polygon.com/sony-playstation-lawsuit-digital-game-monopoly/",
         "source": "Polygon"
       },
       {
-        "title": "63 Years Later, the Creepiest Episode of 'The Twilight Zone' is Still Nightmare Fuel",
-        "url": "https://www.polygon.com/creepiest-episode-twilight-zone-living-doll/",
+        "title": "Marvel Officially Reveals New Version of Doctor Strange Ahead of 'Avengers: Doomsday'",
+        "url": "https://www.polygon.com/doctor-strange-endless-nightmare-marvel-comics-exclusive-preview/",
         "source": "Polygon"
       },
       {
-        "title": "Mario Kart 8 Just Got a Game-Changing Update for Nintendo Switch 2",
-        "url": "https://www.polygon.com/mario-kart-8-deluxe-switch-2-update-patch-notes-nintendo/",
+        "title": "Overwatch Is Getting the Critical Role Treatment With Upcoming TTRPG Adventure",
+        "url": "https://www.polygon.com/overwatch-questwatch-ttrpg-critical-role-matt-mercer/",
         "source": "Polygon"
       },
       {
-        "title": "GTA 6 Soars to No. 1 on Netflix's Movie Chart",
-        "url": "https://www.polygon.com/gta-6-netflix-movie-charts/",
+        "title": "Star Wars Zero Company Handles Difficulty Like No Other Game Ever Has",
+        "url": "https://www.polygon.com/star-wars-zero-company-crisis-missions/",
         "source": "Polygon"
       },
       {
-        "title": "Star Wars Zero Company Is the Andor Replacement No One Expected",
-        "url": "https://www.polygon.com/star-wars-zero-company-andor-story/",
+        "title": "All 24 Pokémon Movies Will Be Available in Pricey Amazon-Exclusive Set",
+        "url": "https://www.polygon.com/pokemon-amazon-movie-collection-viz-media/",
         "source": "Polygon"
       },
       {
-        "title": "Final Fantasy Meets Zelda in Steam's Best New RPG",
-        "url": "https://www.polygon.com/zenonia-1-steam-port/",
+        "title": "10 Unforgettable 'Far Side' Comics About Dinosaurs",
+        "url": "https://www.polygon.com/best-far-side-comics-about-dinosaurs/",
         "source": "Polygon"
       }
     ],
