@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-02T03:21:48.050771",
+    "last_updated": "2026-09-02T08:29:56.725495",
     "total_items": 62
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "Claude Fable 5.1 and Claude Mythos 5.1",
         "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
         "source": "Hacker News",
-        "score": 978
+        "score": 1200
+      },
+      {
+        "title": "The Emergent Symbolic Structure of Artificial Neural Networks",
+        "url": "https://arxiv.org/abs/2608.29530",
+        "source": "Hacker News",
+        "score": 109
       },
       {
         "title": "How accurate have Ed Zitron's AI skeptic predictions been?",
         "url": "https://danluu.com/zitron/",
         "source": "Hacker News",
-        "score": 476
+        "score": 665
       },
       {
-        "title": "'Idiocracy' Predicted All of This",
-        "url": "https://www.texasmonthly.com/culture/mike-judge-idiocracy-turns-20/",
+        "title": "Fine, I'll build my own text editor",
+        "url": "https://dbushell.com/2026/09/01/text-editor/",
         "source": "Hacker News",
-        "score": 26
+        "score": 82
       },
       {
-        "title": "The efficient frontier of LLM inference",
-        "url": "https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/",
+        "title": "WebFPGA",
+        "url": "https://webfpga.io/",
         "source": "Hacker News",
-        "score": 57
+        "score": 60
       },
       {
-        "title": "Show HN: Weedout – Safari extension that hides YouTube AI-labeled videos",
-        "url": "https://masteranza.github.io/weedout/",
+        "title": "FBI Probes Service Selling 153M+ Drivers Licenses",
+        "url": "https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/",
         "source": "Hacker News",
-        "score": 77
-      },
-      {
-        "title": "My local model setup on an M4 Pro Mac Mini",
-        "url": "https://lws.io/blog/my-local-model-setup/",
-        "source": "Hacker News",
-        "score": 90
+        "score": 190
       },
       {
         "title": "Introducing Ad Blocker for Firefox on iOS",
         "url": "https://blog.mozilla.org/en/firefox/ad-blocker-on-ios/",
         "source": "Hacker News",
-        "score": 340
+        "score": 442
+      },
+      {
+        "title": "My local model setup on an M4 Pro Mac Mini",
+        "url": "https://lws.io/blog/my-local-model-setup/",
+        "source": "Hacker News",
+        "score": 179
+      },
+      {
+        "title": "Show HN: Weedout – Safari extension that hides YouTube AI-labeled videos",
+        "url": "https://masteranza.github.io/weedout/",
+        "source": "Hacker News",
+        "score": 131
       },
       {
         "title": "Sonic Pi",
         "url": "https://sonic-pi.net/",
         "source": "Hacker News",
-        "score": 54
+        "score": 138
       },
       {
-        "title": "The ChatGPT/Codex app bundles a full copy of LibreOffice",
-        "url": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
+        "title": "The efficient frontier of LLM inference",
+        "url": "https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/",
         "source": "Hacker News",
-        "score": 275
+        "score": 111
       },
       {
-        "title": "The creator of Jujutsu has joined ERSC",
-        "url": "https://ersc.io/blog/martin-joins-ersc",
+        "title": "True Rate of Unemployment",
+        "url": "https://www.lisep.org/tru",
         "source": "Hacker News",
-        "score": 196
+        "score": 203
       },
       {
         "title": "Launch HN: Nori Robotics (YC S26) – A low-cost humanoid robot for development",
         "url": "https://www.norirobotics.com/",
         "source": "Hacker News",
-        "score": 121
+        "score": 157
       },
       {
-        "title": "Path to Astra: critical capabilities and frontier safeguards",
-        "url": "https://openai.com/index/path-to-astra/",
+        "title": "Ambient CSS v3 – Blender meets CSS",
+        "url": "https://ambientcss.vercel.app/",
         "source": "Hacker News",
-        "score": 102
+        "score": 258
       },
       {
-        "title": "Building Autonomous Goal Loops That Deliver",
-        "url": "https://jx0.ca/building-autonomous-goal-loops-that-deliver/",
+        "title": "Movie Scene Map – 13,312 films, series, games, anime and manga",
+        "url": "https://moviescenemap.com/",
         "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "Building an interactive instrument for a one-of-a-kind festival",
-        "url": "https://benholmen.com/blog/halfmoon-chimes/",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Refurbishing a Tektronix TDS7104 Oscilloscope",
-        "url": "https://tomverbeure.github.io/2026/08/23/Tektronix-TDS7104-Refurbishing.html",
-        "source": "Hacker News",
-        "score": 98
+        "score": 236
       }
     ],
     "ai": [
@@ -101,113 +101,133 @@
         "title": "Claude Fable 5.1 and Claude Mythos 5.1",
         "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
         "source": "Hacker News AI",
-        "score": 978
+        "score": 1200
+      },
+      {
+        "title": "The Emergent Symbolic Structure of Artificial Neural Networks",
+        "url": "https://arxiv.org/abs/2608.29530",
+        "source": "Hacker News AI",
+        "score": 109
       },
       {
         "title": "How accurate have Ed Zitron's AI skeptic predictions been?",
         "url": "https://danluu.com/zitron/",
         "source": "Hacker News AI",
-        "score": 476
-      },
-      {
-        "title": "The efficient frontier of LLM inference",
-        "url": "https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/",
-        "source": "Hacker News AI",
-        "score": 57
+        "score": 665
       },
       {
         "title": "Show HN: Weedout – Safari extension that hides YouTube AI-labeled videos",
         "url": "https://masteranza.github.io/weedout/",
         "source": "Hacker News AI",
-        "score": 77
+        "score": 131
+      },
+      {
+        "title": "The efficient frontier of LLM inference",
+        "url": "https://www.baseten.co/blog/the-efficient-frontier-of-llm-inference/",
+        "source": "Hacker News AI",
+        "score": 111
       },
       {
         "title": "The ChatGPT/Codex app bundles a full copy of LibreOffice",
         "url": "https://simonwillison.net/2026/Sep/1/codex-libreoffice/",
         "source": "Hacker News AI",
-        "score": 275
+        "score": 386
       },
       {
-        "title": "Anthropic banned me for \"suspicious signals\"",
-        "url": "https://kix.codes/anthropic-banned-me-for-suspicious-signals/",
+        "title": "Mayor says 'large chunks' of Wellington council Deloitte report written by AI",
+        "url": "https://www.rnz.co.nz/news/regions/1229348/mayor-says-large-chunks-of-wellington-council-deloitte-report-written-by-ai",
         "source": "Hacker News AI",
-        "score": 12
+        "score": 7
       },
       {
         "title": "I trained a small transformer in 1.5hrs and it beats many LLMs",
         "url": "https://mvakde.github.io/blog/44-on-arc-1/",
         "source": "Hacker News AI",
-        "score": 588
+        "score": 611
       },
       {
-        "title": "AI is making back-office work extinct",
-        "url": "https://www.whitecollardream.com/",
+        "title": "Google Pics is generally available starting today",
+        "url": "https://workspace.google.com/products/pics/",
         "source": "Hacker News AI",
-        "score": 20
+        "score": 6
+      },
+      {
+        "title": "When Claude Code went rogue, years of Bengaluru heritage work disappeared",
+        "url": "https://www.deccanherald.com/india/karnataka/bengaluru/when-claude-code-went-rogue-years-of-bengaluru-heritage-work-disappeared-4131958",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "AI Coding Agent Skills for Real Engineers",
         "url": "https://github.com/mattpocock/skills",
         "source": "Hacker News AI",
-        "score": 12
-      },
-      {
-        "title": "American Airlines mechanic Azriel “Al” Blackman has died",
-        "url": "https://simpleflying.com/american-airlines-mechanic-passes-away-100-record-80-years/",
-        "source": "Hacker News AI",
-        "score": 374
-      },
-      {
-        "title": "AI Can Make You Suck Faster Too",
-        "url": "https://www.hermit-tech.com/blog/ai-can-make-you-suck-faster-too",
-        "source": "Hacker News AI",
-        "score": 153
+        "score": 27
       },
       {
         "title": "Apple reveals 'shocking evidence' from ex-employee's MacBook in OpenAI suit",
         "url": "https://9to5mac.com/2026/08/31/apple-openai-forensic-macbook-evidence/",
         "source": "Hacker News AI",
-        "score": 182
+        "score": 209
       }
     ],
     "news": [
       {
-        "title": "Germany says Russia behind Leipzig airport drone attack",
-        "url": "https://www.bbc.co.uk/news/articles/c5ylm3m67n2o?at_medium=RSS&at_campaign=rss",
+        "title": "Zelensky says airlines should avoid Russian airspace as Ukraine escalates drone operations",
+        "url": "https://www.bbc.co.uk/news/articles/c9v9yydy2wvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Iran retaliates after US strikes kill four at wedding party, state media reports",
-        "url": "https://www.bbc.co.uk/news/articles/cj06q4ynpmjo?at_medium=RSS&at_campaign=rss",
+        "title": "BBC travels inside occupied Lebanon as officials say Israel expanding positions",
+        "url": "https://www.bbc.co.uk/news/articles/cge41d19gq9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "'I've never been to Afghanistan': Six million deportees forced to start over under the Taliban",
-        "url": "https://www.bbc.co.uk/news/articles/c2e074nn8eko?at_medium=RSS&at_campaign=rss",
+        "title": "Why do US troops have history with this Thai city?",
+        "url": "https://www.bbc.co.uk/news/videos/c5yw03jr892o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "River water smashed into tunnel and chased me for 20 minutes, Nepal worker tells BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cg49590v6k1o?at_medium=RSS&at_campaign=rss",
+        "title": "South Korea jails care home head for sexually assaulting disabled residents",
+        "url": "https://www.bbc.co.uk/news/articles/cn74vzl52l4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Sexual assaults happening almost every day in Ceuta, prosecutors say",
-        "url": "https://www.bbc.co.uk/news/articles/c3v4pgk7gweo?at_medium=RSS&at_campaign=rss",
+        "title": "Bus crash on Egypt's Red Sea coast kills 16",
+        "url": "https://www.bbc.co.uk/news/articles/cn8mr1myy2ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Jurors in Lindsay Clancy trial deadlocked but judge asks them to keep trying",
-        "url": "https://www.bbc.co.uk/news/articles/c9qr4gp8qy9o?at_medium=RSS&at_campaign=rss",
+        "title": "Charlie Kirk murder suspect pleads not guilty as judge clears way for death penalty trial",
+        "url": "https://www.bbc.co.uk/news/articles/cj4jn9q7evpo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ariana Grande completes tour and steps back from public life",
-        "url": "https://www.bbc.co.uk/news/articles/c4gj0l34g78o?at_medium=RSS&at_campaign=rss",
+        "title": "Tiger Woods to change plea after crash arrest",
+        "url": "https://www.bbc.co.uk/news/articles/c5y7xvpn5kno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The best TourBox editing consoles: Legit shortcuts to creativity ",
+        "url": "https://www.creativebloq.com/entertainment/videography/the-best-tourbox-editing-consoles-weve-tested-them-and-selected-the-best",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The new Disney World logo design is actually kind of genius ",
+        "url": "https://www.creativebloq.com/design/logos-icons/the-new-disney-world-logo-design-is-actually-kind-of-genius",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Making your own Backrooms in free 3D software is surprisingly easy ",
+        "url": "https://www.creativebloq.com/3d/making-your-own-backrooms-in-free-3d-software-is-surprisingly-easy",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How to draw Sanrio characters like Hello Kitty the easy way ",
+        "url": "https://www.creativebloq.com/art/character-design/how-to-draw-sanrio-characters-like-hello-kitty-the-easy-way",
+        "source": "Creative Bloq"
+      },
       {
         "title": " This city's drastic logo redesign has hit a bum note ",
         "url": "https://www.creativebloq.com/design/logos-icons/this-us-citys-drastic-logo-redesign-has-hit-a-bum-note",
@@ -222,29 +242,19 @@
         "title": " The Witcher 3: Songs of the Past's lush new location and remaster improvements have me excited to be Geralt again ",
         "url": "https://www.creativebloq.com/entertainment/gaming/the-witcher-3-songs-of-the-pasts-lush-new-location-and-remaster-improvements-have-me-excited-to-be-geralt-again",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " “Ideas for my art come from different places. In this case, I was inspired by an iron maiden paired with a goblin who takes great zeal in his work” ",
-        "url": "https://www.creativebloq.com/art/digital-art/ideas-for-my-art-come-from-different-places-in-this-case-i-was-inspired-by-an-iron-maiden-paired-with-a-goblin-who-takes-great-zeal-in-his-work",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " A viral creative challenge just gifted Parker pens the perfect anti-AI billboard advert ",
-        "url": "https://www.creativebloq.com/design/advertising/this-viral-creative-challenge-rebrands-pens-for-the-ai-age",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " See how this 3D artist uses Blender to make scenes that look hand painted ",
-        "url": "https://www.creativebloq.com/3d/see-how-this-3d-artist-uses-blender-to-make-scenes-that-look-hand-painted",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " A new online archive tries to predict Microsoft's next confusing rebrand ",
-        "url": "https://www.creativebloq.com/design/branding/a-new-online-archive-tries-to-predict-microsofts-next-confusing-rebrand",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Too much coffee may weaken bones, study finds",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260901070550.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Earth may have lost the Sun’s protective shield millions of years ago",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260901070523.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Scientists discover why snake embryos twist into spirals",
         "url": "https://www.sciencedaily.com/releases/2026/09/260901070516.htm",
@@ -269,19 +279,24 @@
         "title": "NASA’s Swift telescope is back, but time is running out",
         "url": "https://www.sciencedaily.com/releases/2026/09/260901010702.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "NASA’s Roman Space Telescope launches to reveal the Universe’s darkest secrets",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260831035213.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A massive plume deep beneath Africa is pulling the continent apart",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260831015210.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "28 Years Later, This Remains the Most Near-Perfect WWII Movie of All Time",
+        "url": "https://www.polygon.com/saving-private-ryan-near-perfect-wwii-28-years-later/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Onimusha Way of the Sword release time in your time zone",
+        "url": "https://www.polygon.com/onimusha-way-of-the-sword-release-time-when-edt-pdt/",
+        "source": "Polygon"
+      },
+      {
+        "title": "63 Years Later, the Creepiest Episode of 'The Twilight Zone' is Still Nightmare Fuel",
+        "url": "https://www.polygon.com/creepiest-episode-twilight-zone-living-doll/",
+        "source": "Polygon"
+      },
       {
         "title": "Mario Kart 8 Just Got a Game-Changing Update for Nintendo Switch 2",
         "url": "https://www.polygon.com/mario-kart-8-deluxe-switch-2-update-patch-notes-nintendo/",
@@ -300,21 +315,6 @@
       {
         "title": "Final Fantasy Meets Zelda in Steam's Best New RPG",
         "url": "https://www.polygon.com/zenonia-1-steam-port/",
-        "source": "Polygon"
-      },
-      {
-        "title": "New Avengers: Secret Wars Casting Announcement Sparks Wild Fan Theories",
-        "url": "https://www.polygon.com/avengers-secret-wars-casting-noah-jupe/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Pokémon is Getting Its Own Official Fitbit for Evolved Sleep Tracking",
-        "url": "https://www.polygon.com/pokemon-sleep-fitbit-air-wearable/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Days After GTA 6's Big Reveal, Rockstar Announces A Major GTA 5 Update",
-        "url": "https://www.polygon.com/gta-5-nopixel-beta-when-is-roleplay-customization-new-gameplay/",
         "source": "Polygon"
       }
     ],
