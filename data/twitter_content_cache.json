@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-03T03:23:14.869078",
-    "total_items": 63
+    "last_updated": "2026-09-03T08:38:29.575507",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
+        "title": "Pre-Release of Polars 2.0",
+        "url": "https://pola.rs/posts/announcing-polars-2/",
+        "source": "Hacker News",
+        "score": 61
+      },
+      {
         "title": "Muse Spark 1.3",
         "url": "https://developer.meta.com/ai/models/muse-spark/",
         "source": "Hacker News",
-        "score": 428
+        "score": 556
       },
       {
         "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
         "source": "Hacker News",
-        "score": 862
+        "score": 995
       },
       {
-        "title": "Google avoids a breakup of its ad tech business",
-        "url": "https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html",
+        "title": "Three schoolgirls in Kinsale pulled up a pea plant covered in warts (2016)",
+        "url": "https://scienceblog.com/b-three-schoolgirls-in-kinsale-pulled-up-a-pea-plant-covered-in-warts-and-instead-of-binning-it-spent-three-years-testing-13000-seeds-in-a-spare-bedroom-the-bacteria-living-in-those-warts-made-barley/",
         "source": "Hacker News",
-        "score": 290
+        "score": 14
+      },
+      {
+        "title": "The Computer Museum of America reclamation project",
+        "url": "https://computer-museum.org/wp/",
+        "source": "Hacker News",
+        "score": 36
+      },
+      {
+        "title": "LLMs and Self-Referentiality",
+        "url": "https://scottaaronson.blog/?p=10046",
+        "source": "Hacker News",
+        "score": 30
       },
       {
         "title": "Holden's Lightning Flight",
         "url": "https://en.wikipedia.org/wiki/Holden%27s_Lightning_flight",
         "source": "Hacker News",
-        "score": 77
-      },
-      {
-        "title": "Launch HN: RonanRX (YC S26) – Personalized Peptides and GLP-1s",
-        "url": "https://news.ycombinator.com/item?id=49543530",
-        "source": "Hacker News",
-        "score": 33
+        "score": 148
       },
       {
         "title": "Three sites made 215,128 “best software” pages for AI. Perplexity cites them",
         "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
         "source": "Hacker News",
-        "score": 327
+        "score": 401
       },
       {
-        "title": "Reverse Engineering Unknown File Formats with ImHex",
-        "url": "https://werwolv.net/posts/file_format_reverse_engineering/",
+        "title": "Google avoids a breakup of its ad tech business",
+        "url": "https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html",
         "source": "Hacker News",
-        "score": 121
-      },
-      {
-        "title": "The shrinking landscape of linguistic diversity in the age of LLMs",
-        "url": "https://www.nature.com/articles/s41562-026-02550-0",
-        "source": "Hacker News",
-        "score": 53
-      },
-      {
-        "title": "Fable 5.1 World Modeling",
-        "url": "https://github.com/PhiloLabs/fable51-worlds",
-        "source": "Hacker News",
-        "score": 157
+        "score": 366
       },
       {
         "title": "Can I opt out of my input or output data being used for training?",
         "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
         "source": "Hacker News",
-        "score": 384
+        "score": 433
       },
       {
-        "title": "Reasons robotics is hard",
-        "url": "https://secondthoughts.ai/p/14-reasons-robotics-is-hard",
+        "title": "The Browser's Main Thread Is Expensive",
+        "url": "https://kciter.so/posts/the-expensive-main-thread/en/",
         "source": "Hacker News",
-        "score": 54
+        "score": 3
       },
       {
-        "title": "Engineering of the fastest WebAssembly interpreters",
-        "url": "https://wasmi-labs.github.io/blog/posts/wasmi-v2.0/",
+        "title": "Reverse Engineering Unknown File Formats with ImHex",
+        "url": "https://werwolv.net/posts/file_format_reverse_engineering/",
         "source": "Hacker News",
-        "score": 54
-      },
-      {
-        "title": "Biggest dark matter detector spots a single weird particle",
-        "url": "https://www.science.org/content/article/world-s-biggest-dark-matter-detector-spots-single-weird-particle",
-        "source": "Hacker News",
-        "score": 258
-      },
-      {
-        "title": "Wendell Berry has died",
-        "url": "https://www.nytimes.com/2026/08/31/us/wendell-berry-dead.html",
-        "source": "Hacker News",
-        "score": 148
+        "score": 189
       },
       {
         "title": "Higher Multipoles of the Cow",
         "url": "https://arxiv.org/abs/2504.00506",
         "source": "Hacker News",
-        "score": 7
+        "score": 62
+      },
+      {
+        "title": "Fable 5.1 World Modeling",
+        "url": "https://github.com/PhiloLabs/fable51-worlds",
+        "source": "Hacker News",
+        "score": 234
+      },
+      {
+        "title": "Launch HN: RonanRX (YC S26) – Personalized Peptides and GLP-1s",
+        "url": "https://news.ycombinator.com/item?id=49543530",
+        "source": "Hacker News",
+        "score": 56
       }
     ],
     "ai": [
@@ -101,161 +101,155 @@
         "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
         "source": "Hacker News AI",
-        "score": 862
+        "score": 995
+      },
+      {
+        "title": "LLMs and Self-Referentiality",
+        "url": "https://scottaaronson.blog/?p=10046",
+        "source": "Hacker News AI",
+        "score": 30
       },
       {
         "title": "Three sites made 215,128 “best software” pages for AI. Perplexity cites them",
         "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
         "source": "Hacker News AI",
-        "score": 327
-      },
-      {
-        "title": "The shrinking landscape of linguistic diversity in the age of LLMs",
-        "url": "https://www.nature.com/articles/s41562-026-02550-0",
-        "source": "Hacker News AI",
-        "score": 53
+        "score": 401
       },
       {
         "title": "Can I opt out of my input or output data being used for training?",
         "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
         "source": "Hacker News AI",
-        "score": 384
+        "score": 433
       },
       {
-        "title": "Whistleblower warns Postal Service mail ballot system has catastrophic problems",
-        "url": "https://www.cbsnews.com/news/whistleblower-postal-service-new-mail-ballot-system/",
+        "title": "The Browser's Main Thread Is Expensive",
+        "url": "https://kciter.so/posts/the-expensive-main-thread/en/",
         "source": "Hacker News AI",
-        "score": 147
+        "score": 3
       },
       {
         "title": "Aging brains blend memories together instead of just forgetting them",
         "url": "https://studyfinds.com/aging-brains-blend-memories-together-instead-of-forgetting-them-study-finds/",
         "source": "Hacker News AI",
-        "score": 221
+        "score": 271
       },
       {
         "title": "Qantas Airbus A380 engine failure in 2010 (2023)",
         "url": "https://admiralcloudberg.medium.com/a-matter-of-millimeters-the-story-of-qantas-flight-32-bdaa62dc98e7",
         "source": "Hacker News AI",
-        "score": 91
+        "score": 127
       },
       {
         "title": "Altair Basic Interpreter Source Code (1975) [pdf]",
         "url": "https://images.gatesnotes.com/12514eb8-7b51-008e-41a9-512542cf683b/34d561c8-cf5c-4e69-af47-3782ea11482e/Original-Microsoft-Source-Code.pdf",
         "source": "Hacker News AI",
-        "score": 43
-      },
-      {
-        "title": "Uber shuts operations in Nigeria and Uganda with immediate effect",
-        "url": "https://www.bbc.com/news/articles/c86xpv8l9y9o",
-        "source": "Hacker News AI",
-        "score": 110
+        "score": 57
       },
       {
         "title": "We could save petabytes of cache storage with Zstandard and Pingora",
         "url": "https://blog.cloudflare.com/cache-transcoding/",
         "source": "Hacker News AI",
-        "score": 77
+        "score": 109
+      },
+      {
+        "title": "The shrinking landscape of linguistic diversity in the age of LLMs",
+        "url": "https://www.nature.com/articles/s41562-026-02550-0",
+        "source": "Hacker News AI",
+        "score": 139
       },
       {
         "title": "WebLLM: high-performance in-browser LLM inference engine",
         "url": "https://github.com/mlc-ai/web-llm",
         "source": "Hacker News AI",
-        "score": 92
-      },
-      {
-        "title": "The Emergent Symbolic Structure of Artificial Neural Networks",
-        "url": "https://arxiv.org/abs/2608.29530",
-        "source": "Hacker News AI",
-        "score": 277
+        "score": 114
       },
       {
         "title": "Quasar 438B: Europe's Leading AI Model",
         "url": "https://multiversecomputing.com/resources/introducing-quasar-438b-europe-s-leading-ai-model",
         "source": "Hacker News AI",
-        "score": 163
+        "score": 173
+      },
+      {
+        "title": "Kids go from curious to frustrated playing with AI-stuffed toys, UW study finds",
+        "url": "https://www.geekwire.com/2026/kids-go-from-curious-to-frustrated-playing-with-ai-stuffed-toys-uw-study-finds/",
+        "source": "Hacker News AI",
+        "score": 3
+      },
+      {
+        "title": "Claude Fable 5.1 and Claude Mythos 5.1",
+        "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
+        "source": "Hacker News AI",
+        "score": 1389
       },
       {
         "title": "Six curl CVEs after OpenAI and Anthropic came back with zero",
         "url": "https://aisle.com/blog/aisle-discovered-six-curl-cves-after-openai-and-anthropic-found-zero",
         "source": "Hacker News AI",
-        "score": 158
-      },
-      {
-        "title": "US gov sides with OpenAI on issue of training LLMs on copyrighted material",
-        "url": "https://techcrunch.com/2026/09/02/u-s-government-sides-with-openai-on-issue-of-training-llms-on-copyrighted-material/",
-        "source": "Hacker News AI",
-        "score": 22
+        "score": 167
       }
     ],
     "news": [
+      {
+        "title": "UN warns of 'supersized' El Niño as countries prepare for impact",
+        "url": "https://www.bbc.co.uk/news/articles/c17jqp0xzpzo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Channel smuggling gangs resort to 'mega-dinghies' as crackdown limits small boat supply",
+        "url": "https://www.bbc.co.uk/news/articles/ce3rn93de9eo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Iranian attack on Saudi tanker killed two Filipino sailors, Saudi Arabia says",
         "url": "https://www.bbc.co.uk/news/articles/cx2zxgg4mx9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "EU and Nato vow to step up pressure on Russia after 'new escalation' in Germany",
-        "url": "https://www.bbc.co.uk/news/articles/ce9e810pg7ko?at_medium=RSS&at_campaign=rss",
+        "title": "Could Lindsay Clancy trial end in a mistrial? Here are the jury's options",
+        "url": "https://www.bbc.co.uk/news/articles/c93vgv4kr49o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Rosenberg: Putin's veiled threat to UK part of Russia's campaign against West",
-        "url": "https://www.bbc.co.uk/news/articles/c62j50n131mo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Watch: Jury still unable to reach unanimous decision in Lindsay Clancy case",
-        "url": "https://www.bbc.co.uk/news/videos/cy8z32v7130o?at_medium=RSS&at_campaign=rss",
+        "title": "Trump $1 coin makes him first living president on US currency in a century",
+        "url": "https://www.bbc.co.uk/news/articles/c7507g9v992o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Maltese tycoon acquitted of orchestrating murder of renowned journalist",
         "url": "https://www.bbc.co.uk/news/articles/c5ye295pxgxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
+      },
+      {
+        "title": "'Below the dignity of the office': Canadian officials condemn Pete Hegseth cadet post",
+        "url": "https://www.bbc.co.uk/news/articles/clyk32nr1emo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " The perfect slim and light back-to-school MacBook alternative has $450 off ",
-        "url": "https://www.creativebloq.com/tech/laptops/this-slim-and-light-back-to-school-macbook-alternative-is-now-usd450-off",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Yes, a Chromebook can be the perfect school laptop – and there's $170 off the best we've ever tested ",
-        "url": "https://www.creativebloq.com/tech/laptops/yes-a-chromebook-can-be-the-perfect-school-laptop-and-theres-usd170-off-the-best-weve-ever-reviewed",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Evercade Nexus is the retro antidote to modern gaming's anti-physical and expensive dead-end future ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/the-evercade-nexus-is-the-retro-antidote-to-modern-gamings-anti-physical-and-expensive-dead-end-future",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Blood of Dawnwalker (PS5) review: a smart vampire RPG that doesn't quite sink its teeth into the fantasy ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/the-blood-of-dawnwalker-review-a-smart-vampire-rpg-that-doesnt-quite-sink-its-teeth-into-the-fantasy",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Castlevania: Belmont's Curse is a glorious return to the series' 2D roots with a more modern 2.5D aesthetic ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/castlevania-belmonts-curse-is-a-glorious-return-to-the-series-2d-roots-with-a-more-modern-2-5d-aesthetic",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Designers, do you recognise this old-school equipment? ",
-        "url": "https://www.creativebloq.com/design/graphic-design/designers-do-you-recognise-this-old-school-equipment",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Tomb Raider: Legacy of Atlantis's Unreal Engine reimagining looks breathtaking but I'm concerned by some modern design creep ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/tomb-raider-legacy-of-atlantiss-unreal-engine-reimagining-of-the-iconic-classic-looks-breathtaking-but-im-a-bit-concerned-by-some-modern-design-creep",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
+      {
+        "title": "September brings a dazzling Venus and a glowing Harvest Moon",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260902234500.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "New Mexico’s largest reservoir plunges to just 1.4% full",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260902234454.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "The universe has plenty of hydrogen. So why is star formation collapsing?",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260902234442.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Too much coffee may weaken bones, study finds",
         "url": "https://www.sciencedaily.com/releases/2026/09/260901070550.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Each extra hour of prolonged sitting linked to 9% higher cancer death risk",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260901070548.htm",
         "source": "Science Daily"
       },
       {
@@ -267,29 +261,34 @@
         "title": "“Broken heart syndrome” can look just like a heart attack. This test can tell them apart",
         "url": "https://www.sciencedaily.com/releases/2026/09/260901070518.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover why snake embryos twist into spirals",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260901070516.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Mindfulness may lower blood pressure in just 8 weeks",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260901010721.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "One of Earth’s driest places was just covered in snow",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260901010709.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA delays Crew-13 launch after leak found on SpaceX Dragon",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260901010705.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "Clint Eastwood's Forgotten Western That Redefined His Career Is Officially Free to Watch on YouTube",
+        "url": "https://www.polygon.com/clint-eastwood-hang-em-high-streaming-free-youtube/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Dragon Ball Super Shares Release Date and Spectacular Trailer Full of New Details",
+        "url": "https://www.polygon.com/dragon-ball-super-beerus-release-date-surge-trailer/",
+        "source": "Polygon"
+      },
+      {
+        "title": "11 Best MAPPA Anime That Aren’t 'Jujutsu Kaisen' or 'Chainsaw Man'",
+        "url": "https://www.polygon.com/best-anime-from-jujutsu-kaisen-chainsaw-man-studio-mappa/",
+        "source": "Polygon"
+      },
+      {
+        "title": "31 Years Later, the Smartest 'Calvin and Hobbes' Character Still Doesn't Get the Recognition They Deserve",
+        "url": "https://www.polygon.com/calvin-hobbes-susie-best-quote/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Guy Ritchie’s Netflix Crime Thriller Just Got Even More Ambitious",
+        "url": "https://www.polygon.com/the-gentlemen-season-2-review-guy-ritchie/",
+        "source": "Polygon"
+      },
       {
         "title": "The 12 Best Star Wars Video Games of All Time, Ranked",
         "url": "https://www.polygon.com/best-star-wars-games-ranked/",
@@ -298,31 +297,6 @@
       {
         "title": "Fall 2 Replaces Its Deadly Tower With a Real-Life Nightmare",
         "url": "https://www.polygon.com/fall-2-directors-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "7 Best Games Like Silksong to Play While You Wait for Sea of Sorrows",
-        "url": "https://www.polygon.com/games-like-silksong-wait-for-dlc/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Stronger Than Achilles' quest walkthrough in The Blood of Dawnwalker",
-        "url": "https://www.polygon.com/blood-of-dawnwalker-stronger-than-achilles-quest-walkthrough/",
-        "source": "Polygon"
-      },
-      {
-        "title": "What quests should you do before mass in The Blood of Dawnwalker?",
-        "url": "https://www.polygon.com/blood-of-dawnwalker-mass-quests-which-prologue/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Someone Needs A Lesson' quest walkthrough in The Blood of Dawnwalker",
-        "url": "https://www.polygon.com/blood-of-dawnwalker-someone-needs-a-lesson-quest-walkthrough-vasil-atanas/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 The Blood of Dawnwalker beginner's tips to help you defeat Brencis",
-        "url": "https://www.polygon.com/blood-of-dawnwalker-beginners-tips-tricks/",
         "source": "Polygon"
       }
     ],
