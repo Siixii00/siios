@@ -1,111 +1,117 @@
 {
   "metadata": {
-    "last_updated": "2026-09-03T08:38:29.575507",
-    "total_items": 58
+    "last_updated": "2026-09-03T13:19:08.004922",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Audacity 4.0",
+        "url": "https://github.com/audacity/audacity/releases/tag/Audacity-4.0.0",
+        "source": "Hacker News",
+        "score": 284
+      },
+      {
         "title": "Pre-Release of Polars 2.0",
         "url": "https://pola.rs/posts/announcing-polars-2/",
         "source": "Hacker News",
-        "score": 61
+        "score": 255
+      },
+      {
+        "title": "The Browser's Main Thread Is Expensive",
+        "url": "https://kciter.so/posts/the-expensive-main-thread/en/",
+        "source": "Hacker News",
+        "score": 200
+      },
+      {
+        "title": "Invisible Companies",
+        "url": "https://colossus.com/article/invisible-companies/",
+        "source": "Hacker News",
+        "score": 41
+      },
+      {
+        "title": "What I Learned from My Mom (1941-2026)",
+        "url": "https://experimentalliving.substack.com/p/what-i-learned-from-my-mom-1941-2026",
+        "source": "Hacker News",
+        "score": 85
       },
       {
         "title": "Muse Spark 1.3",
         "url": "https://developer.meta.com/ai/models/muse-spark/",
         "source": "Hacker News",
-        "score": 556
+        "score": 625
       },
       {
         "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
         "source": "Hacker News",
-        "score": 995
+        "score": 1073
+      },
+      {
+        "title": "Intrusive Linked Lists",
+        "url": "https://www.data-structures-in-practice.com/intrusive-linked-lists/",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "9 Mothers (YC P26) Is Hiring in Austin, TX",
+        "url": "https://9mothers.com/careers",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "Fish Bad, Sugar Good and Other Medieval Ideas About Food",
+        "url": "https://lithub.com/fish-bad-sugar-good-and-other-medieval-ideas-about-food/",
+        "source": "Hacker News",
+        "score": 40
+      },
+      {
+        "title": "Nvidia to Acquire Hugging Face",
+        "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
+        "source": "Hacker News",
+        "score": 30
       },
       {
         "title": "Three schoolgirls in Kinsale pulled up a pea plant covered in warts (2016)",
         "url": "https://scienceblog.com/b-three-schoolgirls-in-kinsale-pulled-up-a-pea-plant-covered-in-warts-and-instead-of-binning-it-spent-three-years-testing-13000-seeds-in-a-spare-bedroom-the-bacteria-living-in-those-warts-made-barley/",
         "source": "Hacker News",
-        "score": 14
-      },
-      {
-        "title": "The Computer Museum of America reclamation project",
-        "url": "https://computer-museum.org/wp/",
-        "source": "Hacker News",
-        "score": 36
-      },
-      {
-        "title": "LLMs and Self-Referentiality",
-        "url": "https://scottaaronson.blog/?p=10046",
-        "source": "Hacker News",
-        "score": 30
-      },
-      {
-        "title": "Holden's Lightning Flight",
-        "url": "https://en.wikipedia.org/wiki/Holden%27s_Lightning_flight",
-        "source": "Hacker News",
-        "score": 148
+        "score": 102
       },
       {
         "title": "Three sites made 215,128 “best software” pages for AI. Perplexity cites them",
         "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
         "source": "Hacker News",
-        "score": 401
+        "score": 463
       },
       {
         "title": "Google avoids a breakup of its ad tech business",
         "url": "https://www.nytimes.com/2026/09/02/technology/google-ad-tech-remedies.html",
         "source": "Hacker News",
-        "score": 366
+        "score": 421
       },
       {
-        "title": "Can I opt out of my input or output data being used for training?",
-        "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
+        "title": "The Computer Museum of America reclamation project",
+        "url": "https://computer-museum.org/wp/",
         "source": "Hacker News",
-        "score": 433
-      },
-      {
-        "title": "The Browser's Main Thread Is Expensive",
-        "url": "https://kciter.so/posts/the-expensive-main-thread/en/",
-        "source": "Hacker News",
-        "score": 3
-      },
-      {
-        "title": "Reverse Engineering Unknown File Formats with ImHex",
-        "url": "https://werwolv.net/posts/file_format_reverse_engineering/",
-        "source": "Hacker News",
-        "score": 189
-      },
-      {
-        "title": "Higher Multipoles of the Cow",
-        "url": "https://arxiv.org/abs/2504.00506",
-        "source": "Hacker News",
-        "score": 62
-      },
-      {
-        "title": "Fable 5.1 World Modeling",
-        "url": "https://github.com/PhiloLabs/fable51-worlds",
-        "source": "Hacker News",
-        "score": 234
-      },
-      {
-        "title": "Launch HN: RonanRX (YC S26) – Personalized Peptides and GLP-1s",
-        "url": "https://news.ycombinator.com/item?id=49543530",
-        "source": "Hacker News",
-        "score": 56
+        "score": 67
       }
     ],
     "ai": [
       {
+        "title": "The Browser's Main Thread Is Expensive",
+        "url": "https://kciter.so/posts/the-expensive-main-thread/en/",
+        "source": "Hacker News AI",
+        "score": 200
+      },
+      {
         "title": "Gemini 3.8 Flash and 3.8 Flash Cyber",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/",
         "source": "Hacker News AI",
-        "score": 995
+        "score": 1073
       },
       {
-        "title": "LLMs and Self-Referentiality",
-        "url": "https://scottaaronson.blog/?p=10046",
+        "title": "Nvidia to Acquire Hugging Face",
+        "url": "https://blogs.nvidia.com/blog/nvidia-to-acquire-hugging-face/",
         "source": "Hacker News AI",
         "score": 30
       },
@@ -113,79 +119,73 @@
         "title": "Three sites made 215,128 “best software” pages for AI. Perplexity cites them",
         "url": "https://trellner.com/reports/manufactured-sources-behind-ai-recommendations/",
         "source": "Hacker News AI",
-        "score": 401
+        "score": 463
       },
       {
         "title": "Can I opt out of my input or output data being used for training?",
         "url": "https://help.mistral.ai/en/articles/455207-can-i-opt-out-of-my-input-or-output-data-being-used-for-training",
         "source": "Hacker News AI",
-        "score": 433
+        "score": 470
       },
       {
-        "title": "The Browser's Main Thread Is Expensive",
-        "url": "https://kciter.so/posts/the-expensive-main-thread/en/",
+        "title": "A dark horse enters China's AI race: StartLux",
+        "url": "https://chinaonchina.com/article/chen-dawei-returns-enters-the-large-model-sector",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 26
+      },
+      {
+        "title": "Claude for Commerce Agents",
+        "url": "https://claude.com/blog/claude-for-commerce-agents",
+        "source": "Hacker News AI",
+        "score": 9
       },
       {
         "title": "Aging brains blend memories together instead of just forgetting them",
         "url": "https://studyfinds.com/aging-brains-blend-memories-together-instead-of-forgetting-them-study-finds/",
         "source": "Hacker News AI",
-        "score": 271
+        "score": 305
       },
       {
         "title": "Qantas Airbus A380 engine failure in 2010 (2023)",
         "url": "https://admiralcloudberg.medium.com/a-matter-of-millimeters-the-story-of-qantas-flight-32-bdaa62dc98e7",
         "source": "Hacker News AI",
-        "score": 127
-      },
-      {
-        "title": "Altair Basic Interpreter Source Code (1975) [pdf]",
-        "url": "https://images.gatesnotes.com/12514eb8-7b51-008e-41a9-512542cf683b/34d561c8-cf5c-4e69-af47-3782ea11482e/Original-Microsoft-Source-Code.pdf",
-        "source": "Hacker News AI",
-        "score": 57
+        "score": 162
       },
       {
         "title": "We could save petabytes of cache storage with Zstandard and Pingora",
         "url": "https://blog.cloudflare.com/cache-transcoding/",
         "source": "Hacker News AI",
-        "score": 109
-      },
-      {
-        "title": "The shrinking landscape of linguistic diversity in the age of LLMs",
-        "url": "https://www.nature.com/articles/s41562-026-02550-0",
-        "source": "Hacker News AI",
-        "score": 139
+        "score": 125
       },
       {
         "title": "WebLLM: high-performance in-browser LLM inference engine",
         "url": "https://github.com/mlc-ai/web-llm",
         "source": "Hacker News AI",
-        "score": 114
+        "score": 132
+      },
+      {
+        "title": "Altair Basic Interpreter Source Code (1975) [pdf]",
+        "url": "https://images.gatesnotes.com/12514eb8-7b51-008e-41a9-512542cf683b/34d561c8-cf5c-4e69-af47-3782ea11482e/Original-Microsoft-Source-Code.pdf",
+        "source": "Hacker News AI",
+        "score": 67
       },
       {
         "title": "Quasar 438B: Europe's Leading AI Model",
         "url": "https://multiversecomputing.com/resources/introducing-quasar-438b-europe-s-leading-ai-model",
         "source": "Hacker News AI",
-        "score": 173
-      },
-      {
-        "title": "Kids go from curious to frustrated playing with AI-stuffed toys, UW study finds",
-        "url": "https://www.geekwire.com/2026/kids-go-from-curious-to-frustrated-playing-with-ai-stuffed-toys-uw-study-finds/",
-        "source": "Hacker News AI",
-        "score": 3
+        "score": 185
       },
       {
         "title": "Claude Fable 5.1 and Claude Mythos 5.1",
         "url": "https://www.anthropic.com/claude-fable-and-mythos-5-1",
         "source": "Hacker News AI",
-        "score": 1389
+        "score": 1397
       },
       {
         "title": "Six curl CVEs after OpenAI and Anthropic came back with zero",
         "url": "https://aisle.com/blog/aisle-discovered-six-curl-cves-after-openai-and-anthropic-found-zero",
         "source": "Hacker News AI",
-        "score": 167
+        "score": 174
       }
     ],
     "news": [
@@ -195,18 +195,23 @@
         "source": "BBC World"
       },
       {
+        "title": "Toxic wildfire haze spreads across South East Asia as 'super' El Niño intensifies",
+        "url": "https://www.bbc.co.uk/news/articles/clyqw44w142o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Feminist activist and journalist Gloria Steinem dies, aged 92",
+        "url": "https://www.bbc.co.uk/news/articles/clyeq3ngwe4o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Channel smuggling gangs resort to 'mega-dinghies' as crackdown limits small boat supply",
         "url": "https://www.bbc.co.uk/news/articles/ce3rn93de9eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Iranian attack on Saudi tanker killed two Filipino sailors, Saudi Arabia says",
-        "url": "https://www.bbc.co.uk/news/articles/cx2zxgg4mx9o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Could Lindsay Clancy trial end in a mistrial? Here are the jury's options",
-        "url": "https://www.bbc.co.uk/news/articles/c93vgv4kr49o?at_medium=RSS&at_campaign=rss",
+        "title": "More than 80 migrants feared dead after boat rescued off Canary Islands",
+        "url": "https://www.bbc.co.uk/news/articles/c33kzv7kly4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -215,18 +220,59 @@
         "source": "BBC World"
       },
       {
-        "title": "Maltese tycoon acquitted of orchestrating murder of renowned journalist",
-        "url": "https://www.bbc.co.uk/news/articles/c5ye295pxgxo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "'Below the dignity of the office': Canadian officials condemn Pete Hegseth cadet post",
-        "url": "https://www.bbc.co.uk/news/articles/clyk32nr1emo?at_medium=RSS&at_campaign=rss",
+        "title": "US man struck by lightning describes 'horrific' experience",
+        "url": "https://www.bbc.co.uk/news/videos/cz7z93zde3po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " Meet Lamp: An \"alive\" Pixar-like desk robot that watches your posture, remembers strangers' faces and answers your emails ",
+        "url": "https://www.creativebloq.com/ai/meet-lamp-an-alive-pixar-like-robot-that-watches-your-posture-remembers-strangers-faces-and-answers-your-emails",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " iPhone 18 Pro leaks suggest photographers are finally getting the feature they've been waiting for ",
+        "url": "https://www.creativebloq.com/design/product-design/iphone-18-pro-leaks-suggest-photographers-are-finally-getting-the-feature-theyve-been-waiting-for",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Squeeze the stress away with these 12 beautiful and bizarre squishies – starting from £5.29 ",
+        "url": "https://www.creativebloq.com/entertainment/toys-collectibles/squeeze-the-stress-away-with-these-12-beautiful-and-bizarre-squishies-starting-from-gbp5-29",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This artist turns iconic characters like Spider-Man and Hulk into sculptural Marvels ",
+        "url": "https://www.creativebloq.com/3d/3d-art/this-artist-turns-iconic-characters-like-spider-man-and-hulk-into-sculptural-marvels",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Orbitals review: a co-op playable anime dream ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/orbitals-review-a-co-op-playable-anime-dream",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Street Fighter's 'world-first' playable trailer is a hadouken to traditional movie advertising ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/street-fighters-playable-trailer-is-a-hadouken-to-traditional-movie-advertising",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This premium 4K monitor from Eizo is a dream for photo editors ",
+        "url": "https://www.creativebloq.com/tech/monitors/this-premium-4k-monitor-from-eizo-is-a-dream-for-photo-editors",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
+      {
+        "title": "NASA scientists discover a giant 10-sided pattern on Saturn",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260903064229.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Ancient “living fossils” may reveal how complex life began",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260902234514.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "September brings a dazzling Venus and a glowing Harvest Moon",
         "url": "https://www.sciencedaily.com/releases/2026/09/260902234500.htm",
@@ -251,52 +297,42 @@
         "title": "Each extra hour of prolonged sitting linked to 9% higher cancer death risk",
         "url": "https://www.sciencedaily.com/releases/2026/09/260901070548.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "Earth may have lost the Sun’s protective shield millions of years ago",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260901070523.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "“Broken heart syndrome” can look just like a heart attack. This test can tell them apart",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260901070518.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
       {
+        "title": "Guild Wars 3 is the First MMO for Fans with ‘Real-Life Schedules’",
+        "url": "https://www.polygon.com/guild-wars-3-preview-mmo-stagnant-change/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Fortnite’s Big New Update Is Here With New Sprites and a Retro ‘Big Head’ Mode",
+        "url": "https://www.polygon.com/fortnite-update-september-3-v42-10-chapter-7-season-2/",
+        "source": "Polygon"
+      },
+      {
+        "title": "PlayStation State of Play Officially Returns This Week",
+        "url": "https://www.polygon.com/playstation-state-of-play-returns-this-week/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Careful What You Wish For' walkthrough in Onimusha Way of the Sword",
+        "url": "https://www.polygon.com/onimusha-way-of-the-sword-careful-what-you-wish-for-walkthrough/",
+        "source": "Polygon"
+      },
+      {
+        "title": "How to break malice barriers in Onimusha Way of the Sword",
+        "url": "https://www.polygon.com/onimusha-way-of-the-sword-malice-barrier-how-to-break/",
+        "source": "Polygon"
+      },
+      {
+        "title": "MTG Secret Lair 'Disaster' Provokes Apology from Wizards of the Coast",
+        "url": "https://www.polygon.com/magic-secret-lair-zeta-set-apology-wizards-of-the-coast-disaster/",
+        "source": "Polygon"
+      },
+      {
         "title": "Clint Eastwood's Forgotten Western That Redefined His Career Is Officially Free to Watch on YouTube",
         "url": "https://www.polygon.com/clint-eastwood-hang-em-high-streaming-free-youtube/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Dragon Ball Super Shares Release Date and Spectacular Trailer Full of New Details",
-        "url": "https://www.polygon.com/dragon-ball-super-beerus-release-date-surge-trailer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "11 Best MAPPA Anime That Aren’t 'Jujutsu Kaisen' or 'Chainsaw Man'",
-        "url": "https://www.polygon.com/best-anime-from-jujutsu-kaisen-chainsaw-man-studio-mappa/",
-        "source": "Polygon"
-      },
-      {
-        "title": "31 Years Later, the Smartest 'Calvin and Hobbes' Character Still Doesn't Get the Recognition They Deserve",
-        "url": "https://www.polygon.com/calvin-hobbes-susie-best-quote/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Guy Ritchie’s Netflix Crime Thriller Just Got Even More Ambitious",
-        "url": "https://www.polygon.com/the-gentlemen-season-2-review-guy-ritchie/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The 12 Best Star Wars Video Games of All Time, Ranked",
-        "url": "https://www.polygon.com/best-star-wars-games-ranked/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fall 2 Replaces Its Deadly Tower With a Real-Life Nightmare",
-        "url": "https://www.polygon.com/fall-2-directors-interview/",
         "source": "Polygon"
       }
     ],
