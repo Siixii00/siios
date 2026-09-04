@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-04T03:21:29.083271",
-    "total_items": 63
+    "last_updated": "2026-09-04T08:33:09.478434",
+    "total_items": 62
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "GPT-6 Astra",
         "url": "https://openai.com/index/gpt-6-astra/",
         "source": "Hacker News",
-        "score": 1417
+        "score": 1732
       },
       {
         "title": ".name Termination",
         "url": "https://neil.fraser.name/news/2026/09/03/",
         "source": "Hacker News",
-        "score": 1449
+        "score": 1755
       },
       {
         "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
         "url": "https://inference-docs.cerebras.ai/models/overview",
         "source": "Hacker News",
-        "score": 472
+        "score": 541
       },
       {
-        "title": "Project Xanadu: Even More Hindsight",
-        "url": "https://gwern.net/xanadu",
+        "title": "Authorization terminology is a mess: Let's fix it",
+        "url": "https://idpro.org/authorization-terminology-is-a-mess-lets-fix-it/",
         "source": "Hacker News",
-        "score": 18
-      },
-      {
-        "title": "New type of dice guarantees no tie when deciding who goes first",
-        "url": "https://www.cbc.ca/lite/story/9.7328614",
-        "source": "Hacker News",
-        "score": 60
+        "score": 14
       },
       {
         "title": "The largest electric aircraft just flew [video]",
         "url": "https://www.youtube.com/watch?v=nM86DBOqgPM",
         "source": "Hacker News",
-        "score": 217
+        "score": 303
       },
       {
-        "title": "How an MIT research project became a global programming language",
+        "title": "Hackers Had a Live Feed of Every ID Verification Company Scanned for over a Year",
+        "url": "http://www.techdirt.com/2026/09/03/hackers-had-a-live-feed-of-every-id-this-verification-company-scanned-for-over-a-year/",
+        "source": "Hacker News",
+        "score": 67
+      },
+      {
+        "title": "How an MIT research project became the Julia programming language",
         "url": "https://news.mit.edu/2026/how-mit-research-project-became-global-programming-language-0831",
         "source": "Hacker News",
-        "score": 20
+        "score": 85
       },
       {
         "title": "Artificial beaver dams saw juvenile coho salmon survival rates go from 8% to 60%",
         "url": "https://www.discoverwildlife.com/animal-facts/artificial-beaver-dams-california",
         "source": "Hacker News",
-        "score": 178
+        "score": 243
       },
       {
-        "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
-        "url": "https://armature.tech/blog/which-tools-coding-agents-install",
+        "title": "Project Xanadu: Even More Hindsight (2025)",
+        "url": "https://gwern.net/xanadu",
         "source": "Hacker News",
-        "score": 120
+        "score": 74
       },
       {
         "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
         "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
         "source": "Hacker News",
-        "score": 214
+        "score": 286
       },
       {
-        "title": "From Hookswitch to Grave",
-        "url": "https://computer.rip/2026-06-14-hookswitch-to-grave.html",
+        "title": "Move in C++ without a std:move",
+        "url": "https://andreasfertig.com/blog/2026/09/move-in-cpp-without-a-stdmove/",
         "source": "Hacker News",
-        "score": 5
+        "score": 41
+      },
+      {
+        "title": "Go grandmaster Shin defeats AI KataGo with a two-stone handicap",
+        "url": "https://www.kedglobal.com/artificial-intelligence/newsView/ked202607210007",
+        "source": "Hacker News",
+        "score": 287
+      },
+      {
+        "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
+        "url": "https://armature.tech/blog/which-tools-coding-agents-install",
+        "source": "Hacker News",
+        "score": 204
       },
       {
         "title": "K2 Horizon: A connected fleet of six open models",
         "url": "https://ifm.ai/blog/k2/",
         "source": "Hacker News",
-        "score": 268
+        "score": 293
       },
       {
         "title": "GPS glitched across the US by as much as 33 feet",
         "url": "https://www.sciencealert.com/gps-glitched-across-the-us-by-as-much-as-33-feet-scientists-have-never-seen-this-before",
         "source": "Hacker News",
-        "score": 135
-      },
-      {
-        "title": "Any Human Ever – One life, drawn at random from all who have ever lived",
-        "url": "https://anyhumanever.com/",
-        "source": "Hacker News",
-        "score": 489
-      },
-      {
-        "title": "Xanadu was waiting for agents",
-        "url": "https://zed.dev/blog/agentic-xanadu",
-        "source": "Hacker News",
-        "score": 95
+        "score": 174
       }
     ],
     "ai": [
@@ -101,89 +101,88 @@
         "title": "GPT-6 Astra",
         "url": "https://openai.com/index/gpt-6-astra/",
         "source": "Hacker News AI",
-        "score": 1417
+        "score": 1732
       },
       {
         "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
         "url": "https://inference-docs.cerebras.ai/models/overview",
         "source": "Hacker News AI",
-        "score": 472
+        "score": 541
       },
       {
         "title": "The largest electric aircraft just flew [video]",
         "url": "https://www.youtube.com/watch?v=nM86DBOqgPM",
         "source": "Hacker News AI",
-        "score": 217
-      },
-      {
-        "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
-        "url": "https://armature.tech/blog/which-tools-coding-agents-install",
-        "source": "Hacker News AI",
-        "score": 120
+        "score": 303
       },
       {
         "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
         "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
         "source": "Hacker News AI",
-        "score": 214
-      },
-      {
-        "title": "Xanadu was waiting for agents",
-        "url": "https://zed.dev/blog/agentic-xanadu",
-        "source": "Hacker News AI",
-        "score": 95
+        "score": 286
       },
       {
         "title": "Go grandmaster Shin defeats AI KataGo with a two-stone handicap",
         "url": "https://www.kedglobal.com/artificial-intelligence/newsView/ked202607210007",
         "source": "Hacker News AI",
-        "score": 212
+        "score": 287
       },
       {
-        "title": "OpenAI's GPT-6 Astra on ARC-AGI-3",
-        "url": "https://arcprize.org/blog/astra",
+        "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
+        "url": "https://armature.tech/blog/which-tools-coding-agents-install",
         "source": "Hacker News AI",
-        "score": 175
+        "score": 204
       },
       {
-        "title": "How to get a free .arpa domain",
-        "url": "https://hawksley.dev/blog/get-free-arpa-domain",
+        "title": "Xanadu was waiting for agents",
+        "url": "https://zed.dev/blog/agentic-xanadu",
         "source": "Hacker News AI",
-        "score": 125
-      },
-      {
-        "title": "Ask HN: Why were OpenAI, Claude, and Grok simultaneously down?",
-        "url": "https://news.ycombinator.com/item?id=49551096",
-        "source": "Hacker News AI",
-        "score": 343
+        "score": 118
       },
       {
         "title": "The browser's main thread is expensive",
         "url": "https://kciter.so/posts/the-expensive-main-thread/en/",
         "source": "Hacker News AI",
-        "score": 380
+        "score": 402
+      },
+      {
+        "title": "How to get a free .arpa domain",
+        "url": "https://hawksley.dev/blog/get-free-arpa-domain",
+        "source": "Hacker News AI",
+        "score": 141
+      },
+      {
+        "title": "Ask HN: Why were OpenAI, Claude, and Grok simultaneously down?",
+        "url": "https://news.ycombinator.com/item?id=49551096",
+        "source": "Hacker News AI",
+        "score": 368
+      },
+      {
+        "title": "OpenAI's GPT-6 Astra on ARC-AGI-3",
+        "url": "https://arcprize.org/blog/astra",
+        "source": "Hacker News AI",
+        "score": 205
       },
       {
         "title": "Nvidia to acquire Hugging Face",
         "url": "https://www.cnbc.com/2026/09/03/nvidia-agrees-to-buy-hugging-face-for-almost-13-billion-ai-expansion.html",
         "source": "Hacker News AI",
-        "score": 302
-      },
-      {
-        "title": "NYC mayor Mamdani imposes 1 year ban on AI for schools through 8th grade",
-        "url": "https://www.nyc.gov/mayors-office/news/2026/09/mayor-mamdani-and-chancellor-samuels-put-students-first-with-nat",
-        "source": "Hacker News AI",
-        "score": 30
+        "score": 311
       }
     ],
     "news": [
+      {
+        "title": "Nepal says it will need billions in funding to rebuild after flash floods",
+        "url": "https://www.bbc.co.uk/news/videos/ce8x2401zdeo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Tensions flare as judge declines to remove juror in Lindsay Clancy trial",
         "url": "https://www.bbc.co.uk/news/articles/c7v4n7pv5epo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Argentine leader says oil firms working off Falklands face sanctions",
+        "title": "Argentine leader threatens to sanction oil firms and reiterates Falklands claim",
         "url": "https://www.bbc.co.uk/news/articles/clyk18g1l8ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -193,13 +192,8 @@
         "source": "BBC World"
       },
       {
-        "title": "UN warns of 'supersized' El Niño as countries prepare for impact",
-        "url": "https://www.bbc.co.uk/news/articles/c17jqp0xzpzo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Volkswagen board approves plan to cut another 50,000 jobs",
-        "url": "https://www.bbc.co.uk/news/articles/cx2z0kvy4n4o?at_medium=RSS&at_campaign=rss",
+        "title": "Steve Irwin's family celebrates 'superhero' dad, 20 years after shock death",
+        "url": "https://www.bbc.co.uk/news/articles/cjrx75ldydwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -208,12 +202,32 @@
         "source": "BBC World"
       },
       {
-        "title": "Feminist activist and journalist Gloria Steinem dies, aged 92",
-        "url": "https://www.bbc.co.uk/news/articles/clyeq3ngwe4o?at_medium=RSS&at_campaign=rss",
+        "title": "UN warns of 'supersized' El Niño as countries prepare for impact",
+        "url": "https://www.bbc.co.uk/news/articles/c17jqp0xzpzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Noble FoKus Artemis review: this feels (and sounds) to me like the future of wireless ANC headphones ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/noble-fokus-artemis-review-this-feels-and-sounds-to-me-like-the-future-of-wireless-anc-headphones",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Parker only went and made those viral anti-AI pen billboards real ",
+        "url": "https://www.creativebloq.com/design/advertising/parker-only-went-and-made-those-viral-anti-ai-pen-billboards-real",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Quote of the Day by Pablo Picasso: “The chief enemy of creativity is ‘good’ sense\" ",
+        "url": "https://www.creativebloq.com/art/quote-of-the-day-by-pablo-picasso-the-chief-enemy-of-creativity-is-good-sense",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The HP Omen 35L for 2026 may be gaming-focused, but it delivers for creatives too ",
+        "url": "https://www.creativebloq.com/tech/the-hp-omen-35l-for-2026-may-be-gaming-focused-but-it-delivers-for-creatives-too",
+        "source": "Creative Bloq"
+      },
       {
         "title": " These 11 Walmart Bricktember Lego deals are worth grabbing quickly, and 10 of them are under $50 ",
         "url": "https://www.creativebloq.com/entertainment/toys-collectibles/these-are-the-11-walmart-bricktember-lego-deals-actually-worth-considering-and-10-of-them-are-under-usd50",
@@ -227,26 +241,6 @@
       {
         "title": " Meet Lamp: An \"alive\" Pixar-like desk robot that watches your posture, remembers strangers' faces and answers your emails ",
         "url": "https://www.creativebloq.com/ai/meet-lamp-an-alive-pixar-like-robot-that-watches-your-posture-remembers-strangers-faces-and-answers-your-emails",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " iPhone 18 Pro leaks suggest photographers are finally getting the feature they've been waiting for ",
-        "url": "https://www.creativebloq.com/design/product-design/iphone-18-pro-leaks-suggest-photographers-are-finally-getting-the-feature-theyve-been-waiting-for",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Squeeze the stress away with these 12 beautiful and bizarre squishies – starting from £5.29 ",
-        "url": "https://www.creativebloq.com/entertainment/toys-collectibles/squeeze-the-stress-away-with-these-12-beautiful-and-bizarre-squishies-starting-from-gbp5-29",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This artist turns iconic characters like Spider-Man and Hulk into sculptural Marvels ",
-        "url": "https://www.creativebloq.com/3d/3d-art/this-artist-turns-iconic-characters-like-spider-man-and-hulk-into-sculptural-marvels",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Orbitals review: a co-op playable anime dream ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/orbitals-review-a-co-op-playable-anime-dream",
         "source": "Creative Bloq"
       }
     ],
@@ -289,6 +283,31 @@
     ],
     "gaming": [
       {
+        "title": "8 Near-Perfect Anime To Watch if You Like 'Solo Leveling'",
+        "url": "https://www.polygon.com/8-best-anime-like-solo-leveling-to-watch/",
+        "source": "Polygon"
+      },
+      {
+        "title": "DreamWorks’ 'Kpop Demon Hunters' Replacement Officially Arrives in 1 Week",
+        "url": "https://www.polygon.com/forgotten-island-premiere/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Marvel’s Most Valuable Figure Right Now Is Based on a Bizarre 1977 Spider-Man Show",
+        "url": "https://www.polygon.com/marvel-spider-man-1977-action-figure-most-valuable-collectable/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Netflix Is Officially Streaming the Most Satisfying Action Thriller of the Decade",
+        "url": "https://www.polygon.com/ready-of-not-streaming-netflix-september-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "39 Years Later, an Iconic X-Men Villain's First Appearance Is Suddenly the Hottest Comic on the Market",
+        "url": "https://www.polygon.com/x-men-mister-sinister-first-appearance-39-years-later-major-price/",
+        "source": "Polygon"
+      },
+      {
         "title": "Blizzard Starts Teasing StarCraft News with Cryptic Secret Messages",
         "url": "https://www.polygon.com/starcraft-teaser-blizzard-blizzcon-2026/",
         "source": "Polygon"
@@ -296,31 +315,6 @@
       {
         "title": "10 Games Where Every Level Is a Flawless Masterpiece",
         "url": "https://www.polygon.com/best-perfect-video-game-levels/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Obsession' Breakout Inde Navarrette Finds Her Next Big Sci-fi Thriller",
-        "url": "https://www.polygon.com/inde-navarrette-apple-waffle-house-index/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Point It Out! Episode 2",
-        "url": "https://www.polygon.com/video/the-state-of-gaming-in-2026-yikes-point-it-out-episode-2/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Most Divisive Civilization Game is Completely Free to Play on Steam for One Week",
-        "url": "https://www.polygon.com/civilization-7-free-steam-september-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Rust's New Force Wipe Update Includes Major Game Changes",
-        "url": "https://www.polygon.com/rust-force-wipe-breach-clear-update-september-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Magic: The Gathering Isn’t Done With Final Fantasy Just Yet",
-        "url": "https://www.polygon.com/mtg-final-fantasy-7-revelation-promo-card-magic-the-gathering/",
         "source": "Polygon"
       }
     ],
