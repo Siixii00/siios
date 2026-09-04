@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-04T17:24:27.128883",
-    "total_items": 63
+    "last_updated": "2026-09-04T20:24:22.320653",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
+        "title": "Formalizing Fermat's Last Theorem",
+        "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+        "source": "Hacker News",
+        "score": 210
+      },
+      {
         "title": "Discovery of a new OpenAI agent message board",
         "url": "https://collusion.wiki/",
         "source": "Hacker News",
-        "score": 893
+        "score": 1239
       },
       {
-        "title": "Solving the Jane Street reverse engineering challenge",
-        "url": "https://jestoph.com/2026/09/04/jane-street-challenge.html",
+        "title": "Shutting down our public encrypted DNS",
+        "url": "https://mullvad.net/en/blog/shutting-down-our-public-encrypted-dns-servers-and-sponsoring-quad9-instead",
         "source": "Hacker News",
-        "score": 290
+        "score": 107
+      },
+      {
+        "title": "Can AI design circuit boards yet?",
+        "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Show HN: Open-Source eInk Bike Computer",
+        "url": "https://opentrailpaper.com",
+        "source": "Hacker News",
+        "score": 144
+      },
+      {
+        "title": "Government Rails Site Hit Hours After CVE Patch",
+        "url": "https://rietta.com/blog/ruby-on-rails-cve-exploited-hours-after-patch/",
+        "source": "Hacker News",
+        "score": 29
+      },
+      {
+        "title": "The Rust React Compiler is now native in Vite",
+        "url": "https://blog.master.dev/react-now-rusted-all-the-way-out/",
+        "source": "Hacker News",
+        "score": 49
       },
       {
         "title": "IBM Bob",
         "url": "https://bob.ibm.com/",
         "source": "Hacker News",
-        "score": 109
+        "score": 180
       },
       {
-        "title": "GPT-6 Astra",
-        "url": "https://openai.com/index/gpt-6-astra/",
+        "title": "Solving the Jane Street reverse engineering challenge",
+        "url": "https://jestoph.com/2026/09/04/jane-street-challenge.html",
         "source": "Hacker News",
-        "score": 2061
+        "score": 345
+      },
+      {
+        "title": "deSEC – Free Secure DNS",
+        "url": "https://desec.io/",
+        "source": "Hacker News",
+        "score": 69
       },
       {
         "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
         "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/",
         "source": "Hacker News",
-        "score": 11
+        "score": 44
       },
       {
-        "title": "Corporate America is getting hooked on open-source AI",
-        "url": "https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html",
+        "title": "An open DNS recursive service for free security and high privacy",
+        "url": "https://quad9.net/",
         "source": "Hacker News",
-        "score": 109
+        "score": 3
       },
       {
-        "title": ".name Termination",
-        "url": "https://neil.fraser.name/news/2026/09/03/",
+        "title": "Adult Film Producer Unmasks Prolific 'John DOE' Torrent Pirate as Meta Executive",
+        "url": "https://torrentfreak.com/adult-film-producer-unmasks-prolific-john-doe-torrent-pirate-as-meta-executive/",
         "source": "Hacker News",
-        "score": 2089
+        "score": 182
       },
       {
-        "title": "The Two Abstractions of System Design: Hide or Reduce",
-        "url": "http://muratbuffalo.blogspot.com/2026/05/the-two-abstractions-of-system-design.html",
+        "title": "Show HN: TERMy – A fast terminal assistant that does not use LLMs",
+        "url": "https://github.com/gioblu/NPC-Forge/blob/main/docs/development.md",
         "source": "Hacker News",
-        "score": 68
+        "score": 51
       },
       {
-        "title": "Elevator of the Year Winner Modernization of the Metropolis Trust Building",
-        "url": "https://www.starelevator.com/projects/star-elevator-modernization-of-the-metropolis-trust-building",
+        "title": "Resources to Get Good at Soldering?",
+        "url": "https://news.ycombinator.com/item?id=49533840",
         "source": "Hacker News",
-        "score": 104
-      },
-      {
-        "title": "Google AI Mode shows same products 21.6% more expensive than traditional search",
-        "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products",
-        "source": "Hacker News",
-        "score": 296
-      },
-      {
-        "title": "Getting Started with AT Protocol",
-        "url": "https://bnb.im/posts/atproto-essential-resources/",
-        "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "Restoring 5 GHz Wi-Fi on an LG C5 by changing its webOS region",
-        "url": "https://github.com/hawshemi/lg-c5-webos25-region-change",
-        "source": "Hacker News",
-        "score": 40
-      },
-      {
-        "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
-        "url": "https://inference-docs.cerebras.ai/models/overview",
-        "source": "Hacker News",
-        "score": 657
-      },
-      {
-        "title": "How Fairphone built the Fairphone Gen 6+",
-        "url": "https://arstechnica.com/gadgets/2026/09/nearly-impossible-how-fairphone-built-the-ethical-repairable-fairphone-gen-6/",
-        "source": "Hacker News",
-        "score": 137
-      },
-      {
-        "title": "SubImage (YC W25) Is Hiring a Founding Engineer in SF",
-        "url": "https://www.ycombinator.com/companies/subimage/jobs/NCTFgKK-founding-engineer",
-        "source": "Hacker News",
-        "score": 1
+        "score": 48
       }
     ],
     "ai": [
@@ -101,91 +101,91 @@
         "title": "Discovery of a new OpenAI agent message board",
         "url": "https://collusion.wiki/",
         "source": "Hacker News AI",
-        "score": 893
+        "score": 1239
       },
       {
-        "title": "GPT-6 Astra",
-        "url": "https://openai.com/index/gpt-6-astra/",
+        "title": "Can AI design circuit boards yet?",
+        "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
         "source": "Hacker News AI",
-        "score": 2061
+        "score": 27
       },
       {
-        "title": "Corporate America is getting hooked on open-source AI",
-        "url": "https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html",
+        "title": "Government Rails Site Hit Hours After CVE Patch",
+        "url": "https://rietta.com/blog/ruby-on-rails-cve-exploited-hours-after-patch/",
         "source": "Hacker News AI",
-        "score": 109
+        "score": 29
       },
       {
-        "title": "Google AI Mode shows same products 21.6% more expensive than traditional search",
-        "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products",
+        "title": "Show HN: TERMy – A fast terminal assistant that does not use LLMs",
+        "url": "https://github.com/gioblu/NPC-Forge/blob/main/docs/development.md",
         "source": "Hacker News AI",
-        "score": 296
+        "score": 51
       },
       {
         "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
         "url": "https://inference-docs.cerebras.ai/models/overview",
         "source": "Hacker News AI",
-        "score": 657
+        "score": 673
       },
       {
-        "title": "How Fairphone built the Fairphone Gen 6+",
-        "url": "https://arstechnica.com/gadgets/2026/09/nearly-impossible-how-fairphone-built-the-ethical-repairable-fairphone-gen-6/",
+        "title": "GPT-6 Astra",
+        "url": "https://openai.com/index/gpt-6-astra/",
         "source": "Hacker News AI",
-        "score": 137
+        "score": 2123
+      },
+      {
+        "title": "Google AI Mode shows same products 21.6% more expensive than traditional search",
+        "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products",
+        "source": "Hacker News AI",
+        "score": 339
       },
       {
         "title": "The largest electric aircraft just flew [video]",
         "url": "https://www.youtube.com/watch?v=nM86DBOqgPM",
         "source": "Hacker News AI",
-        "score": 431
+        "score": 455
       },
       {
-        "title": "Go grandmaster Shin defeats AI KataGo with a two-stone handicap",
-        "url": "https://www.kedglobal.com/artificial-intelligence/newsView/ked202607210007",
+        "title": "How Fairphone built the Fairphone Gen 6+",
+        "url": "https://arstechnica.com/gadgets/2026/09/nearly-impossible-how-fairphone-built-the-ethical-repairable-fairphone-gen-6/",
         "source": "Hacker News AI",
-        "score": 434
-      },
-      {
-        "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
-        "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
-        "source": "Hacker News AI",
-        "score": 349
-      },
-      {
-        "title": "Gmail to end support for \"Send as\" for third-party addresses, such as @yahoo.com",
-        "url": "https://support.google.com/mail/answer/22370?hl=en",
-        "source": "Hacker News AI",
-        "score": 131
-      },
-      {
-        "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
-        "url": "https://armature.tech/blog/which-tools-coding-agents-install",
-        "source": "Hacker News AI",
-        "score": 282
-      },
-      {
-        "title": "Carbon-aware electricity pricing, measured daily on 38 grids",
-        "url": "https://carbonawarepricing.com/",
-        "source": "Hacker News AI",
-        "score": 81
+        "score": 174
       },
       {
         "title": "Georgi Gerganov on llama.cpp/ggml future after Nvidia acquisition of HuggingFace",
         "url": "https://twitter.com/ggerganov/status/2095897173376618881",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 57
       },
       {
-        "title": "Xanadu was waiting for agents",
-        "url": "https://zed.dev/blog/agentic-xanadu",
+        "title": "Corporate America is getting hooked on open-source AI",
+        "url": "https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html",
         "source": "Hacker News AI",
-        "score": 143
+        "score": 206
       },
       {
-        "title": "How to get a free .arpa domain",
-        "url": "https://hawksley.dev/blog/get-free-arpa-domain",
+        "title": "Porting my 1993 Amiga game to Godot, with an LLM reading the 68000 assembly",
+        "url": "https://babyloniantwins.com/blog/porting-a-1993-amiga-game-to-godot/",
         "source": "Hacker News AI",
-        "score": 164
+        "score": 362
+      },
+      {
+        "title": "GPT-6 Astra Generally Available",
+        "url": "https://twitter.com/OpenAI/status/2095968413646737608",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
+        "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
+        "url": "https://armature.tech/blog/which-tools-coding-agents-install",
+        "source": "Hacker News AI",
+        "score": 286
+      },
+      {
+        "title": "Leading Theory for How Life on Earth Began Is 'Highly Unlikely'",
+        "url": "https://www.sciencealert.com/leading-theory-for-how-life-on-earth-began-is-highly-unlikely-says-contentious-new-paper",
+        "source": "Hacker News AI",
+        "score": 9
       }
     ],
     "news": [
@@ -222,6 +222,11 @@
     ],
     "art": [
       {
+        "title": " Genigods: Nezha is China's answer to God of War in Unreal Engine 5 ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/genigods-nezha-is-chinas-answer-to-god-of-war-in-unreal-engine-5",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " The White House just used Xbox and Sega logos to promote MAGA video games, and players want to know what's up ",
         "url": "https://www.creativebloq.com/entertainment/gaming/the-white-house-just-used-xbox-and-sega-logos-to-promote-maga-video-games-and-players-want-to-know-whats-up",
         "source": "Creative Bloq"
@@ -249,11 +254,6 @@
       {
         "title": " Parker only went and made those viral anti-AI pen billboards real ",
         "url": "https://www.creativebloq.com/design/advertising/parker-only-went-and-made-those-viral-anti-ai-pen-billboards-real",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Quote of the Day by Pablo Picasso: “The chief enemy of creativity is ‘good’ sense\" ",
-        "url": "https://www.creativebloq.com/art/quote-of-the-day-by-pablo-picasso-the-chief-enemy-of-creativity-is-good-sense",
         "source": "Creative Bloq"
       }
     ],
@@ -296,33 +296,38 @@
     ],
     "gaming": [
       {
-        "title": "Game of Thrones: The Mad King Confirms New 2027 Release",
-        "url": "https://www.polygon.com/game-of-thrones-the-mad-king-play-announces-2027-london-production/",
+        "title": "Tetris Maker Officially Responds to White House's Hateful Tetris Clone",
+        "url": "https://www.polygon.com/tetris-white-house-arcade-game-copyright-infringement-trump/",
         "source": "Polygon"
       },
       {
-        "title": "Rainbow Six Tactics’ Best Feature Will Raise the Bar for All Strategy Games",
-        "url": "https://www.polygon.com/rainbow-six-tactics-preview-gamescom/",
+        "title": "After Conquering Esports, T1 Faker Officially Stuns the TCG Market With a $50K Card",
+        "url": "https://www.polygon.com/riftbound-t1-faker-card-resale-price-ebay-auction/",
         "source": "Polygon"
       },
       {
-        "title": "The Blood of Dawnwalker romance guide",
-        "url": "https://www.polygon.com/blood-of-dawnwalker-romance-guide-anca-lacra-crake/",
+        "title": "The 14 Best at Gamescom 2026",
+        "url": "https://www.polygon.com/best-games-gamescom-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Star Wars’ 'New Jedi Order' Era Is Finally Moving Forward After Years of Silence",
-        "url": "https://www.polygon.com/star-wars-films-production-update-new-jedi-order/",
+        "title": "PAX Is Officially Coming to the 'Dork Population' Capital of Texas With New Tabletop Show",
+        "url": "https://www.polygon.com/pax-unplugged-south-new-show-houston-texas-dates-tickets/",
         "source": "Polygon"
       },
       {
-        "title": "All audio log locations in Fortnite Chapter 7 Season 4",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-audio-log-locations-where/",
+        "title": "Steam Users Can Play This Chaotic Among Us-like for Free Until Sept. 7",
+        "url": "https://www.polygon.com/free-on-steam-first-class-trouble-september-2026/",
         "source": "Polygon"
       },
       {
-        "title": "The 'Dragon Ball Super' Remake’s Visual Upgrades Are Shocking Fans",
-        "url": "https://www.polygon.com/dragon-ball-super-beerus-new-anime-remake-goku-comparison/",
+        "title": "What time are the Cheat Master power hours in Fortnite Chapter 7 Season 4?",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-cheat-master-power-hours-what-time/",
+        "source": "Polygon"
+      },
+      {
+        "title": "All match overrides and console locations in Fortnite Chapter 7 Season 4",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-match-overrides-console-locations-c7s4/",
         "source": "Polygon"
       }
     ],
