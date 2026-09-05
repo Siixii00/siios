@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-05T13:42:13.788483",
-    "total_items": 53
+    "last_updated": "2026-09-05T16:35:23.042098",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
+        "title": "How the Tobacco Industry Drove the Rise of Ultra-Processed Foods",
+        "url": "https://vcresearch.berkeley.edu/news/how-tobacco-industry-drove-rise-ultra-processed-foods",
+        "source": "Hacker News",
+        "score": 17
+      },
+      {
+        "title": "The \"$60 Gaming PC\" – AMD BC-250 (2025)",
+        "url": "https://devquasar.com/hardware/the-60-gaming-pc-amd-bc-250/",
+        "source": "Hacker News",
+        "score": 117
+      },
+      {
+        "title": "How the Planet-Altering Disaster of \"Forever Chemicals\" Was Kept Secret",
+        "url": "https://www.propublica.org/podcast/forever-chemicals-pfas-pfos-3m-secret-kris-hansen",
+        "source": "Hacker News",
+        "score": 123
+      },
+      {
         "title": "Actively exploited sandbox RCE in all Chromium versions",
         "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
         "source": "Hacker News",
-        "score": 600
+        "score": 654
       },
       {
         "title": "Discovery of a new OpenAI agent message board",
         "url": "https://collusion.wiki/",
         "source": "Hacker News",
-        "score": 1822
+        "score": 1896
       },
       {
         "title": "Nitter has more working instances than before the takedowns",
         "url": "https://codeberg.org/mv12star/shitter/wiki/Instances",
         "source": "Hacker News",
-        "score": 359
+        "score": 436
       },
       {
-        "title": "Formalizing Fermat's Last Theorem",
-        "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
+        "title": "Git hosting that never leaves Europe",
+        "url": "https://pushin.eu",
         "source": "Hacker News",
-        "score": 657
-      },
-      {
-        "title": "Netherlands pulls gold out of the US for fears of 'geopolitical unrest'",
-        "url": "https://www.abc.net.au/news/2026-09-04/why-the-netherlands-moved-its-gold-from-us-and-canada/107111990",
-        "source": "Hacker News",
-        "score": 126
-      },
-      {
-        "title": "Statichost.eu – European static site hosting",
-        "url": "https://www.statichost.eu/",
-        "source": "Hacker News",
-        "score": 347
-      },
-      {
-        "title": "AI handles incidents, engineers lose touch with their systems",
-        "url": "https://www.sylvainkalache.com/blog/ai-handles-incidents-engineers-lose-touch-with-their-systems",
-        "source": "Hacker News",
-        "score": 224
-      },
-      {
-        "title": "Pentagon rescinds new testosterone screening policy without explanation",
-        "url": "https://arstechnica.com/health/2026/09/pentagon-releases-then-quickly-removes-testosterone-screening-policy/",
-        "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Kale: A Transformation-Safe Spreadsheet System",
-        "url": "https://arxiv.org/abs/2608.26345",
-        "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Can AI design circuit boards yet?",
-        "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
-        "source": "Hacker News",
-        "score": 293
+        "score": 203
       },
       {
         "title": "Terpstra Keyboard",
         "url": "http://terpstrakeyboard.com/",
         "source": "Hacker News",
-        "score": 11
+        "score": 59
       },
       {
-        "title": "GPT-6 Astra on OpenRouter",
-        "url": "https://openrouter.ai/openai/gpt-6-astra",
+        "title": "Formalizing Fermat's Last Theorem",
+        "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
         "source": "Hacker News",
-        "score": 254
+        "score": 695
       },
       {
-        "title": "Portal by Spotify cut my Claude Code token usage by 90%",
-        "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90",
+        "title": "Singapore subway (mrt) information display types",
+        "url": "https://www.sgtrains.com/technology-infosys.html",
         "source": "Hacker News",
-        "score": 175
+        "score": 9
       },
       {
-        "title": "Shutting down our public encrypted DNS",
-        "url": "https://mullvad.net/en/blog/shutting-down-our-public-encrypted-dns-servers-and-sponsoring-quad9-instead",
+        "title": "Netherlands pulls gold out of the US for fears of 'geopolitical unrest'",
+        "url": "https://www.abc.net.au/news/2026-09-04/why-the-netherlands-moved-its-gold-from-us-and-canada/107111990",
+        "source": "Hacker News",
+        "score": 269
+      },
+      {
+        "title": "A Million Falcons Went Missing. Here’s How They Were Found",
+        "url": "https://www.nationalgeographic.com/animals/article/falcons-migration-angola-falcopolis",
+        "source": "Hacker News",
+        "score": 25
+      },
+      {
+        "title": "A bizarre Commodore 64 peripheral, a mime, and some pretty bad ads",
+        "url": "https://buttondown.com/suchbadtechads/archive/spartan-and-the-mime/",
+        "source": "Hacker News",
+        "score": 18
+      },
+      {
+        "title": "Statichost.eu – European static site hosting",
+        "url": "https://www.statichost.eu/",
         "source": "Hacker News",
         "score": 379
       },
       {
-        "title": "Ask HN: Resources to get good at soldering?",
-        "url": "https://news.ycombinator.com/item?id=49533840",
+        "title": "Meet the Ig Nobel Prize Winners",
+        "url": "https://arstechnica.com/science/2026/09/meet-the-2026-ig-nobel-prize-winners/",
         "source": "Hacker News",
-        "score": 162
+        "score": 48
       }
     ],
     "ai": [
@@ -101,67 +101,73 @@
         "title": "Discovery of a new OpenAI agent message board",
         "url": "https://collusion.wiki/",
         "source": "Hacker News AI",
-        "score": 1822
-      },
-      {
-        "title": "AI handles incidents, engineers lose touch with their systems",
-        "url": "https://www.sylvainkalache.com/blog/ai-handles-incidents-engineers-lose-touch-with-their-systems",
-        "source": "Hacker News AI",
-        "score": 224
+        "score": 1896
       },
       {
         "title": "Can AI design circuit boards yet?",
         "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
         "source": "Hacker News AI",
-        "score": 293
+        "score": 309
+      },
+      {
+        "title": "AI handles incidents, engineers lose touch with their systems",
+        "url": "https://www.sylvainkalache.com/blog/ai-handles-incidents-engineers-lose-touch-with-their-systems",
+        "source": "Hacker News AI",
+        "score": 281
       },
       {
         "title": "GPT-6 Astra on OpenRouter",
         "url": "https://openrouter.ai/openai/gpt-6-astra",
         "source": "Hacker News AI",
-        "score": 254
+        "score": 273
       },
       {
         "title": "Portal by Spotify cut my Claude Code token usage by 90%",
         "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90",
         "source": "Hacker News AI",
-        "score": 175
+        "score": 205
       },
       {
-        "title": "Show HN: TERMy – A fast terminal assistant that does not use LLMs",
-        "url": "https://github.com/gioblu/NPC-Forge/blob/main/docs/development.md",
+        "title": "Claude's new system prompt doesn't want to reproduce song lyrics",
+        "url": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
         "source": "Hacker News AI",
-        "score": 156
+        "score": 54
       },
       {
         "title": "GPT-6 Astra",
         "url": "https://openai.com/index/gpt-6-astra/",
         "source": "Hacker News AI",
-        "score": 2195
+        "score": 2206
+      },
+      {
+        "title": "Show HN: TERMy – A fast terminal assistant that does not use LLMs",
+        "url": "https://github.com/gioblu/NPC-Forge/blob/main/docs/development.md",
+        "source": "Hacker News AI",
+        "score": 167
+      },
+      {
+        "title": "AMD unveils Threadripper Halo Station, an AI workstation packing 96 cores",
+        "url": "https://www.tomshardware.com/pc-components/cpus/amd-unveils-threadripper-halo-station-an-ai-workstation-packing-96-cores-and-dual-liquid-cooled-mi350p-accelerators-the-most-powerful-workstation-in-the-world-can-run-trillion-parameter-models-says-amd",
+        "source": "Hacker News AI",
+        "score": 15
       },
       {
         "title": "Government Rails Site Hit Hours After CVE Patch",
         "url": "https://rietta.com/blog/ruby-on-rails-cve-exploited-hours-after-patch/",
         "source": "Hacker News AI",
-        "score": 104
-      },
-      {
-        "title": "GPT-6 Astra in code review: Gains, privacy, and cost",
-        "url": "https://www.coderabbit.ai/blog/gpt-6-astra-code-review-evaluation",
-        "source": "Hacker News AI",
-        "score": 66
+        "score": 106
       },
       {
         "title": "“Next-token predictor” is the wrong mental model for LLMs",
         "url": "https://gmcgoldr.github.io/2026/09/04/llm-next-token-predictors.html",
         "source": "Hacker News AI",
-        "score": 121
+        "score": 132
       }
     ],
     "news": [
       {
-        "title": "Mistrial declared in Lindsay Clancy murder case, after jury deadlocks ",
-        "url": "https://www.bbc.co.uk/news/articles/cpwlrj2je1po?at_medium=RSS&at_campaign=rss",
+        "title": "US hits three Iranian oil tankers after saying its warships were targeted",
+        "url": "https://www.bbc.co.uk/news/articles/cj64rrne643o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -170,13 +176,18 @@
         "source": "BBC World"
       },
       {
-        "title": "Europe targeted by spiralling campaign of sabotage - and Russia is the chief suspect",
-        "url": "https://www.bbc.co.uk/news/articles/c5y4g6meekro?at_medium=RSS&at_campaign=rss",
+        "title": "Mistrial declared in Lindsay Clancy murder case, after jury deadlocks ",
+        "url": "https://www.bbc.co.uk/news/articles/cpwlrj2je1po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Nepal rescuers try to reach dozens trapped in tunnel after two found alive",
-        "url": "https://www.bbc.co.uk/news/articles/c7903j1vpe5o?at_medium=RSS&at_campaign=rss",
+        "title": "At least two dead in blast at Bolivia military barracks",
+        "url": "https://www.bbc.co.uk/news/articles/c3v45xy67g5o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "What different world maps get right - and what they get wrong",
+        "url": "https://www.bbc.co.uk/news/articles/cly5r60v4mro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -185,17 +196,48 @@
         "source": "BBC World"
       },
       {
-        "title": "UN votes to adopt new world map to reflect Africa's true size",
-        "url": "https://www.bbc.co.uk/news/articles/ce30vp55dnlo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Germany's far-right AfD bids for first taste of power in eastern vote",
-        "url": "https://www.bbc.co.uk/news/articles/cvgypkzgy4wo?at_medium=RSS&at_campaign=rss",
+        "title": "Europe targeted by spiralling campaign of sabotage - and Russia is the chief suspect",
+        "url": "https://www.bbc.co.uk/news/articles/c5y4g6meekro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " 7 massive Labor Day laptop deals that are actually good enough for creatives ",
+        "url": "https://www.creativebloq.com/tech/laptops/7-massive-labor-day-laptop-deals-that-are-actually-good-enough-for-creatives",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " I enjoyed grappling with Stranger Than Heaven's unconventional combat, but I'd love to see more of its depiction of early 20th century Japan ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/i-enjoyed-grappling-with-stranger-than-heavens-unconventional-combat-but-i-would-love-to-see-more-of-its-depiction-of-early-20th-century-japan",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " “Korean games and character art played a big part in inspiring me to become a 3D character artist\" ",
+        "url": "https://www.creativebloq.com/3d/3d-art/korean-games-and-character-art-played-a-big-part-in-inspiring-me-to-become-a-3d-character-artist",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " TourBox Lite review: An entry-level console for editors who are tired of keyboard shortcuts ",
+        "url": "https://www.creativebloq.com/tech/tourbox-lite-review-an-entry-level-console-for-editors-who-are-tired-of-keyboard-shortcuts",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " These cute cat ads don't seem to make sense – which is why they're genius ",
+        "url": "https://www.creativebloq.com/design/branding/these-cute-cat-ads-dont-seem-to-make-sense-which-is-why-theyre-genius",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The controversial new Harry Potter logos represent \"the decay of art,\" fans say ",
+        "url": "https://www.creativebloq.com/design/logos-icons/hbos-new-harry-potter-logos-represent-the-decay-of-art-fans-say",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The GTA 6 'romance' controversy is everything that's wrong with the internet ",
+        "url": "https://www.creativebloq.com/design/the-gta-6-romance-controversy-is-everything-thats-wrong-with-the-internet",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "A longer exhale may push your brain toward bolder decisions",
@@ -235,38 +277,38 @@
     ],
     "gaming": [
       {
-        "title": "Amazon Just Canceled The Most Subversive Spider-Man Show Ever Made",
-        "url": "https://www.polygon.com/spider-noir-canceled/",
+        "title": "'We Are Sorry,' Gamescom Apologizes For Lackluster Response To Indie Booth Thefts",
+        "url": "https://www.polygon.com/gamescom-apology-statement-hardware-indie-thefts/",
         "source": "Polygon"
       },
       {
-        "title": "What time does Mastery Monday start in Fortnite Chapter 7 Season 4?",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-mastery-monday-time-what-when/",
+        "title": "2026 Has Been the Best Year for City-Builders in Decades",
+        "url": "https://www.polygon.com/city-builder-games-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Onimusha: Way of the Sword Has the Best Parry in Video Games",
-        "url": "https://www.polygon.com/onimusha-way-of-the-sword-best-parry/",
+        "title": "Exodus Won't Let You Bang the Octopus",
+        "url": "https://www.polygon.com/exodus-romance-options-interview-salt/",
         "source": "Polygon"
       },
       {
-        "title": "Mario Kart 8 Refuses to Let the Switch 2 Rule Nintendo",
-        "url": "https://www.polygon.com/switchboard-mario-kart-8-deluxe-update-4-0/",
+        "title": "7 Games To Play While You Wait For Fire Emblem: Fortune's Weave",
+        "url": "https://www.polygon.com/best-games-like-fire-emblem-fortunes-weave/",
         "source": "Polygon"
       },
       {
-        "title": "Brandon Sanderson’s Latest Sci-Fi Book has a Surprise Cosmere Connection",
-        "url": "https://www.polygon.com/janci-patterson-blightfall-interview-hoid/",
+        "title": "Kingdom Hearts' Highly Anticipated Fortnite Collab Delayed, Rumors Say",
+        "url": "https://www.polygon.com/fortnite-kingdom-hearts-collab-delayed-next-update/",
         "source": "Polygon"
       },
       {
-        "title": "40 Years Ago, Konami Changed the Video Game Industry Forever",
-        "url": "https://www.polygon.com/40-years-konami-changed-industry/",
+        "title": "'Overwatch' Won't Get Its Most Exciting New Feature In Years Until Next Season",
+        "url": "https://www.polygon.com/overwatch-unvaulted-passes-delay/",
         "source": "Polygon"
       },
       {
-        "title": "Samara Weaving's Gritty Action Sleeper Hit Officially Finds a New Home on Streaming",
-        "url": "https://www.polygon.com/samara-weaving-ready-or-not-netflix-streaming/",
+        "title": "Star Trek Actor Reveals His Plan for a Perfect James Bond Crossover",
+        "url": "https://www.polygon.com/after-playing-a-q-on-star-trek-rhys-darby-thinks-hes-ready-to-be-q-in-james-bond/",
         "source": "Polygon"
       }
     ],
