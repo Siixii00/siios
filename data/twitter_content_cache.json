@@ -1,173 +1,161 @@
 {
   "metadata": {
-    "last_updated": "2026-09-05T18:49:36.884629",
-    "total_items": 62
+    "last_updated": "2026-09-05T20:57:42.583029",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "The \"$60 Gaming PC\" – AMD BC-250 (2025)",
-        "url": "https://devquasar.com/hardware/the-60-gaming-pc-amd-bc-250/",
-        "source": "Hacker News",
-        "score": 174
-      },
-      {
-        "title": "Discovery of a new OpenAI agent message board",
-        "url": "https://collusion.wiki/",
-        "source": "Hacker News",
-        "score": 1970
-      },
-      {
-        "title": "Actively exploited sandbox RCE in all Chromium versions",
-        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
-        "source": "Hacker News",
-        "score": 697
-      },
-      {
-        "title": "Nitter has more working instances than before the takedowns",
-        "url": "https://codeberg.org/mv12star/shitter/wiki/Instances",
-        "source": "Hacker News",
-        "score": 515
-      },
-      {
-        "title": "Terpstra Keyboard",
-        "url": "http://terpstrakeyboard.com/",
-        "source": "Hacker News",
-        "score": 79
-      },
-      {
-        "title": "Wikimedia Foundation Workers Overwhelmingly Vote to Form Union with CWA",
-        "url": "https://wikiworkersunited.org/announcements/2026-09-04-us-wikimedia-foundation-workers-overwhelmingly-vote-to-form-union-with-cwa/",
-        "source": "Hacker News",
-        "score": 147
-      },
-      {
-        "title": "Formalizing Fermat's Last Theorem",
-        "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
-        "source": "Hacker News",
-        "score": 710
-      },
-      {
-        "title": "The Luxuries in Life",
+        "title": "The Real Luxuries In Life",
         "url": "https://feld.com/archives/2026/09/the-real-luxuries-in-life/",
         "source": "Hacker News",
-        "score": 3
+        "score": 233
       },
       {
-        "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
-        "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
+        "title": "Finite time blowup for an averaged three-dimensional Navier-Stokes equation",
+        "url": "https://terrytao.wordpress.com/2014/02/04/finite-time-blowup-for-an-averaged-three-dimensional-navier-stokes-equation/",
         "source": "Hacker News",
         "score": 20
       },
       {
-        "title": "Steffen's Polyhedron – Greg Egan",
-        "url": "https://www.gregegan.net/SCIENCE/Steffen/Steffen.html",
+        "title": "Private German rocket makes history, reaches orbit from European soil",
+        "url": "https://www.space.com/space-exploration/launches-spacecraft/isar-aerospace-second-launch-norway-andoya-spaceport-spectrum-rocket",
         "source": "Hacker News",
-        "score": 9
-      },
-      {
-        "title": "Singapore subway (mrt) information display types",
-        "url": "https://www.sgtrains.com/technology-infosys.html",
-        "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Stopping the Unstoppable: When an unstoppable force meets a dashpot snubber",
-        "url": "https://practical.engineering/blog/2026/9/1/stopping-the-unstoppable",
-        "source": "Hacker News",
-        "score": 16
+        "score": 60
       },
       {
         "title": "Learn Programming with OCaml",
         "url": "https://usr.lmf.cnrs.fr/lpo/",
         "source": "Hacker News",
-        "score": 6
+        "score": 98
       },
       {
-        "title": "A bizarre Commodore 64 peripheral, a mime, and some pretty bad ads",
-        "url": "https://buttondown.com/suchbadtechads/archive/spartan-and-the-mime/",
+        "title": "The \"$60 Gaming PC\" – AMD BC-250 (2025)",
+        "url": "https://devquasar.com/hardware/the-60-gaming-pc-amd-bc-250/",
         "source": "Hacker News",
-        "score": 42
+        "score": 215
       },
       {
-        "title": "A Million Falcons Went Missing. Here’s How They Were Found",
-        "url": "https://www.nationalgeographic.com/animals/article/falcons-migration-angola-falcopolis",
+        "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
+        "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
         "source": "Hacker News",
-        "score": 47
+        "score": 80
+      },
+      {
+        "title": "Discovery of a new OpenAI agent message board",
+        "url": "https://collusion.wiki/",
+        "source": "Hacker News",
+        "score": 2025
+      },
+      {
+        "title": "Isar Aerospace launch into orbit [video]",
+        "url": "https://www.youtube.com/watch?v=Ss1DUqLjecc",
+        "source": "Hacker News",
+        "score": 24
+      },
+      {
+        "title": "Actively exploited sandbox RCE in all Chromium versions",
+        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
+        "source": "Hacker News",
+        "score": 720
+      },
+      {
+        "title": "Balrogg: Demonically compacting (up to 15%) lossless Vorbis/Opus recompressor",
+        "url": "https://github.com/iczelia/balrogg",
+        "source": "Hacker News",
+        "score": 21
+      },
+      {
+        "title": "Nitter has more working instances than before the takedowns",
+        "url": "https://codeberg.org/mv12star/shitter/wiki/Instances",
+        "source": "Hacker News",
+        "score": 566
+      },
+      {
+        "title": "LLMs as a Cognitive Virus",
+        "url": "https://arxiv.org/abs/2609.03344",
+        "source": "Hacker News",
+        "score": 3
+      },
+      {
+        "title": "Space industry lacks workers needed to rebuild satellites lost in war: report",
+        "url": "https://www.defensenews.com/industry/techwatch/2026/09/04/space-industry-lacks-workers-needed-to-rebuild-satellites-lost-in-war-report-says/",
+        "source": "Hacker News",
+        "score": 17
+      },
+      {
+        "title": "Steffen's Polyhedron",
+        "url": "https://www.gregegan.net/SCIENCE/Steffen/Steffen.html",
+        "source": "Hacker News",
+        "score": 36
+      },
+      {
+        "title": "Terpstra Keyboard",
+        "url": "http://terpstrakeyboard.com/",
+        "source": "Hacker News",
+        "score": 100
       }
     ],
     "ai": [
       {
-        "title": "Discovery of a new OpenAI agent message board",
-        "url": "https://collusion.wiki/",
+        "title": "Finite time blowup for an averaged three-dimensional Navier-Stokes equation",
+        "url": "https://terrytao.wordpress.com/2014/02/04/finite-time-blowup-for-an-averaged-three-dimensional-navier-stokes-equation/",
         "source": "Hacker News AI",
-        "score": 1970
+        "score": 20
       },
       {
         "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
         "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
         "source": "Hacker News AI",
-        "score": 20
+        "score": 80
       },
       {
-        "title": "Steffen's Polyhedron – Greg Egan",
-        "url": "https://www.gregegan.net/SCIENCE/Steffen/Steffen.html",
+        "title": "Discovery of a new OpenAI agent message board",
+        "url": "https://collusion.wiki/",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 2025
+      },
+      {
+        "title": "LLMs as a Cognitive Virus",
+        "url": "https://arxiv.org/abs/2609.03344",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "Can AI design circuit boards yet?",
         "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
         "source": "Hacker News AI",
-        "score": 329
+        "score": 345
       },
       {
         "title": "AI handles incidents, engineers lose touch with their systems",
         "url": "https://www.sylvainkalache.com/blog/ai-handles-incidents-engineers-lose-touch-with-their-systems",
         "source": "Hacker News AI",
-        "score": 310
-      },
-      {
-        "title": "Portal by Spotify cut my Claude Code token usage by 90%",
-        "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90",
-        "source": "Hacker News AI",
-        "score": 227
+        "score": 342
       },
       {
         "title": "GPT-6 Astra on OpenRouter",
         "url": "https://openrouter.ai/openai/gpt-6-astra",
         "source": "Hacker News AI",
-        "score": 283
+        "score": 295
+      },
+      {
+        "title": "Portal by Spotify cut my Claude Code token usage by 90%",
+        "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90",
+        "source": "Hacker News AI",
+        "score": 239
       },
       {
         "title": "GPT-6 Astra",
         "url": "https://openai.com/index/gpt-6-astra/",
         "source": "Hacker News AI",
-        "score": 2211
+        "score": 2216
       },
       {
         "title": "Show HN: TERMy – A fast terminal assistant that does not use LLMs",
         "url": "https://github.com/gioblu/NPC-Forge/blob/main/docs/development.md",
         "source": "Hacker News AI",
-        "score": 177
-      },
-      {
-        "title": "Government Rails Site Hit Hours After CVE Patch",
-        "url": "https://rietta.com/blog/ruby-on-rails-cve-exploited-hours-after-patch/",
-        "source": "Hacker News AI",
-        "score": 108
-      },
-      {
-        "title": "AMD unveils Threadripper Halo Station, an AI workstation packing 96 cores",
-        "url": "https://www.tomshardware.com/pc-components/cpus/amd-unveils-threadripper-halo-station-an-ai-workstation-packing-96-cores-and-dual-liquid-cooled-mi350p-accelerators-the-most-powerful-workstation-in-the-world-can-run-trillion-parameter-models-says-amd",
-        "source": "Hacker News AI",
-        "score": 23
-      },
-      {
-        "title": "“Next-token predictor” is the wrong mental model for LLMs",
-        "url": "https://gmcgoldr.github.io/2026/09/04/llm-next-token-predictors.html",
-        "source": "Hacker News AI",
-        "score": 134
+        "score": 183
       }
     ],
     "news": [
@@ -283,6 +271,16 @@
     ],
     "gaming": [
       {
+        "title": "'The Gentlemen' Season 3 Confirmed? Potential Release Date, and Everything You Need to Know",
+        "url": "https://www.polygon.com/guy-richie-the-gentlemen-season-3-release-date-plot/",
+        "source": "Polygon"
+      },
+      {
+        "title": "7 R-Rated Action Movies That Are 10/10, No Notes",
+        "url": "https://www.polygon.com/r-rated-action-movies-perfect-no-notes/",
+        "source": "Polygon"
+      },
+      {
         "title": "The 8 Biggest Manhunter Theories in 'Lanterns'",
         "url": "https://www.polygon.com/who-is-the-manhunter-in-lanterns-8-best-theories/",
         "source": "Polygon"
@@ -305,16 +303,6 @@
       {
         "title": "2026 Has Been the Best Year for City-Builders in Decades",
         "url": "https://www.polygon.com/city-builder-games-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Exodus Won't Let You Bang the Octopus",
-        "url": "https://www.polygon.com/exodus-romance-options-interview-salt/",
-        "source": "Polygon"
-      },
-      {
-        "title": "7 Games To Play While You Wait For Fire Emblem: Fortune's Weave",
-        "url": "https://www.polygon.com/best-games-like-fire-emblem-fortunes-weave/",
         "source": "Polygon"
       }
     ],
