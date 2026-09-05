@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-05T16:35:23.042098",
-    "total_items": 61
+    "last_updated": "2026-09-05T18:49:36.884629",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "How the Tobacco Industry Drove the Rise of Ultra-Processed Foods",
-        "url": "https://vcresearch.berkeley.edu/news/how-tobacco-industry-drove-rise-ultra-processed-foods",
-        "source": "Hacker News",
-        "score": 17
-      },
-      {
         "title": "The \"$60 Gaming PC\" – AMD BC-250 (2025)",
         "url": "https://devquasar.com/hardware/the-60-gaming-pc-amd-bc-250/",
         "source": "Hacker News",
-        "score": 117
-      },
-      {
-        "title": "How the Planet-Altering Disaster of \"Forever Chemicals\" Was Kept Secret",
-        "url": "https://www.propublica.org/podcast/forever-chemicals-pfas-pfos-3m-secret-kris-hansen",
-        "source": "Hacker News",
-        "score": 123
-      },
-      {
-        "title": "Actively exploited sandbox RCE in all Chromium versions",
-        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
-        "source": "Hacker News",
-        "score": 654
+        "score": 174
       },
       {
         "title": "Discovery of a new OpenAI agent message board",
         "url": "https://collusion.wiki/",
         "source": "Hacker News",
-        "score": 1896
+        "score": 1970
+      },
+      {
+        "title": "Actively exploited sandbox RCE in all Chromium versions",
+        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
+        "source": "Hacker News",
+        "score": 697
       },
       {
         "title": "Nitter has more working instances than before the takedowns",
         "url": "https://codeberg.org/mv12star/shitter/wiki/Instances",
         "source": "Hacker News",
-        "score": 436
-      },
-      {
-        "title": "Git hosting that never leaves Europe",
-        "url": "https://pushin.eu",
-        "source": "Hacker News",
-        "score": 203
+        "score": 515
       },
       {
         "title": "Terpstra Keyboard",
         "url": "http://terpstrakeyboard.com/",
         "source": "Hacker News",
-        "score": 59
+        "score": 79
+      },
+      {
+        "title": "Wikimedia Foundation Workers Overwhelmingly Vote to Form Union with CWA",
+        "url": "https://wikiworkersunited.org/announcements/2026-09-04-us-wikimedia-foundation-workers-overwhelmingly-vote-to-form-union-with-cwa/",
+        "source": "Hacker News",
+        "score": 147
       },
       {
         "title": "Formalizing Fermat's Last Theorem",
         "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
         "source": "Hacker News",
-        "score": 695
+        "score": 710
+      },
+      {
+        "title": "The Luxuries in Life",
+        "url": "https://feld.com/archives/2026/09/the-real-luxuries-in-life/",
+        "source": "Hacker News",
+        "score": 3
+      },
+      {
+        "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
+        "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
+        "source": "Hacker News",
+        "score": 20
+      },
+      {
+        "title": "Steffen's Polyhedron – Greg Egan",
+        "url": "https://www.gregegan.net/SCIENCE/Steffen/Steffen.html",
+        "source": "Hacker News",
+        "score": 9
       },
       {
         "title": "Singapore subway (mrt) information display types",
         "url": "https://www.sgtrains.com/technology-infosys.html",
         "source": "Hacker News",
-        "score": 9
+        "score": 27
       },
       {
-        "title": "Netherlands pulls gold out of the US for fears of 'geopolitical unrest'",
-        "url": "https://www.abc.net.au/news/2026-09-04/why-the-netherlands-moved-its-gold-from-us-and-canada/107111990",
+        "title": "Stopping the Unstoppable: When an unstoppable force meets a dashpot snubber",
+        "url": "https://practical.engineering/blog/2026/9/1/stopping-the-unstoppable",
         "source": "Hacker News",
-        "score": 269
+        "score": 16
       },
       {
-        "title": "A Million Falcons Went Missing. Here’s How They Were Found",
-        "url": "https://www.nationalgeographic.com/animals/article/falcons-migration-angola-falcopolis",
+        "title": "Learn Programming with OCaml",
+        "url": "https://usr.lmf.cnrs.fr/lpo/",
         "source": "Hacker News",
-        "score": 25
+        "score": 6
       },
       {
         "title": "A bizarre Commodore 64 peripheral, a mime, and some pretty bad ads",
         "url": "https://buttondown.com/suchbadtechads/archive/spartan-and-the-mime/",
         "source": "Hacker News",
-        "score": 18
+        "score": 42
       },
       {
-        "title": "Statichost.eu – European static site hosting",
-        "url": "https://www.statichost.eu/",
+        "title": "A Million Falcons Went Missing. Here’s How They Were Found",
+        "url": "https://www.nationalgeographic.com/animals/article/falcons-migration-angola-falcopolis",
         "source": "Hacker News",
-        "score": 379
-      },
-      {
-        "title": "Meet the Ig Nobel Prize Winners",
-        "url": "https://arstechnica.com/science/2026/09/meet-the-2026-ig-nobel-prize-winners/",
-        "source": "Hacker News",
-        "score": 48
+        "score": 47
       }
     ],
     "ai": [
@@ -101,78 +101,84 @@
         "title": "Discovery of a new OpenAI agent message board",
         "url": "https://collusion.wiki/",
         "source": "Hacker News AI",
-        "score": 1896
+        "score": 1970
+      },
+      {
+        "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
+        "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
+        "source": "Hacker News AI",
+        "score": 20
+      },
+      {
+        "title": "Steffen's Polyhedron – Greg Egan",
+        "url": "https://www.gregegan.net/SCIENCE/Steffen/Steffen.html",
+        "source": "Hacker News AI",
+        "score": 9
       },
       {
         "title": "Can AI design circuit boards yet?",
         "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
         "source": "Hacker News AI",
-        "score": 309
+        "score": 329
       },
       {
         "title": "AI handles incidents, engineers lose touch with their systems",
         "url": "https://www.sylvainkalache.com/blog/ai-handles-incidents-engineers-lose-touch-with-their-systems",
         "source": "Hacker News AI",
-        "score": 281
-      },
-      {
-        "title": "GPT-6 Astra on OpenRouter",
-        "url": "https://openrouter.ai/openai/gpt-6-astra",
-        "source": "Hacker News AI",
-        "score": 273
+        "score": 310
       },
       {
         "title": "Portal by Spotify cut my Claude Code token usage by 90%",
         "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90",
         "source": "Hacker News AI",
-        "score": 205
+        "score": 227
       },
       {
-        "title": "Claude's new system prompt doesn't want to reproduce song lyrics",
-        "url": "https://simonwillison.net/2026/Sep/2/claudes-new-system-prompt/",
+        "title": "GPT-6 Astra on OpenRouter",
+        "url": "https://openrouter.ai/openai/gpt-6-astra",
         "source": "Hacker News AI",
-        "score": 54
+        "score": 283
       },
       {
         "title": "GPT-6 Astra",
         "url": "https://openai.com/index/gpt-6-astra/",
         "source": "Hacker News AI",
-        "score": 2206
+        "score": 2211
       },
       {
         "title": "Show HN: TERMy – A fast terminal assistant that does not use LLMs",
         "url": "https://github.com/gioblu/NPC-Forge/blob/main/docs/development.md",
         "source": "Hacker News AI",
-        "score": 167
-      },
-      {
-        "title": "AMD unveils Threadripper Halo Station, an AI workstation packing 96 cores",
-        "url": "https://www.tomshardware.com/pc-components/cpus/amd-unveils-threadripper-halo-station-an-ai-workstation-packing-96-cores-and-dual-liquid-cooled-mi350p-accelerators-the-most-powerful-workstation-in-the-world-can-run-trillion-parameter-models-says-amd",
-        "source": "Hacker News AI",
-        "score": 15
+        "score": 177
       },
       {
         "title": "Government Rails Site Hit Hours After CVE Patch",
         "url": "https://rietta.com/blog/ruby-on-rails-cve-exploited-hours-after-patch/",
         "source": "Hacker News AI",
-        "score": 106
+        "score": 108
+      },
+      {
+        "title": "AMD unveils Threadripper Halo Station, an AI workstation packing 96 cores",
+        "url": "https://www.tomshardware.com/pc-components/cpus/amd-unveils-threadripper-halo-station-an-ai-workstation-packing-96-cores-and-dual-liquid-cooled-mi350p-accelerators-the-most-powerful-workstation-in-the-world-can-run-trillion-parameter-models-says-amd",
+        "source": "Hacker News AI",
+        "score": 23
       },
       {
         "title": "“Next-token predictor” is the wrong mental model for LLMs",
         "url": "https://gmcgoldr.github.io/2026/09/04/llm-next-token-predictors.html",
         "source": "Hacker News AI",
-        "score": 132
+        "score": 134
       }
     ],
     "news": [
       {
-        "title": "US hits three Iranian oil tankers after saying its warships were targeted",
-        "url": "https://www.bbc.co.uk/news/articles/cj64rrne643o?at_medium=RSS&at_campaign=rss",
+        "title": "US envoys meet Putin in Moscow for Ukraine talks",
+        "url": "https://www.bbc.co.uk/news/articles/cx2zqp46g8eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US envoys arrive in Moscow ahead of Ukraine talks",
-        "url": "https://www.bbc.co.uk/news/articles/cx2zqp46g8eo?at_medium=RSS&at_campaign=rss",
+        "title": "US hits three Iranian oil tankers after saying its warships were targeted",
+        "url": "https://www.bbc.co.uk/news/articles/cj64rrne643o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -277,6 +283,21 @@
     ],
     "gaming": [
       {
+        "title": "The 8 Biggest Manhunter Theories in 'Lanterns'",
+        "url": "https://www.polygon.com/who-is-the-manhunter-in-lanterns-8-best-theories/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The 5 Best Games That Still Aren't Officially Available in the US ",
+        "url": "https://www.polygon.com/5-best-games-not-available-us/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Double Fine reveals its first post-Xbox game as Tim Schafer declares no one will shut the studio down but him",
+        "url": "https://www.polygon.com/double-fine-reveals-thank-you-bus-driver/",
+        "source": "Polygon"
+      },
+      {
         "title": "'We Are Sorry,' Gamescom Apologizes For Lackluster Response To Indie Booth Thefts",
         "url": "https://www.polygon.com/gamescom-apology-statement-hardware-indie-thefts/",
         "source": "Polygon"
@@ -294,21 +315,6 @@
       {
         "title": "7 Games To Play While You Wait For Fire Emblem: Fortune's Weave",
         "url": "https://www.polygon.com/best-games-like-fire-emblem-fortunes-weave/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Kingdom Hearts' Highly Anticipated Fortnite Collab Delayed, Rumors Say",
-        "url": "https://www.polygon.com/fortnite-kingdom-hearts-collab-delayed-next-update/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Overwatch' Won't Get Its Most Exciting New Feature In Years Until Next Season",
-        "url": "https://www.polygon.com/overwatch-unvaulted-passes-delay/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Star Trek Actor Reveals His Plan for a Perfect James Bond Crossover",
-        "url": "https://www.polygon.com/after-playing-a-q-on-star-trek-rhys-darby-thinks-hes-ready-to-be-q-in-james-bond/",
         "source": "Polygon"
       }
     ],
