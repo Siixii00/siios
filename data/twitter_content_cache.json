@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-05T00:39:38.101989",
-    "total_items": 62
+    "last_updated": "2026-09-05T05:19:27.803223",
+    "total_items": 61
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Actively exploited sandbox RCE in all Chromium versions",
         "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
         "source": "Hacker News",
-        "score": 170
+        "score": 370
       },
       {
         "title": "Formalizing Fermat's Last Theorem",
         "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
         "source": "Hacker News",
-        "score": 455
-      },
-      {
-        "title": "Statichost.eu – European static site hosting",
-        "url": "https://www.statichost.eu/",
-        "source": "Hacker News",
-        "score": 160
+        "score": 558
       },
       {
         "title": "Discovery of a new OpenAI agent message board",
         "url": "https://collusion.wiki/",
         "source": "Hacker News",
-        "score": 1444
+        "score": 1580
+      },
+      {
+        "title": "Statichost.eu – European static site hosting",
+        "url": "https://www.statichost.eu/",
+        "source": "Hacker News",
+        "score": 204
       },
       {
         "title": "GPT-6 Astra on OpenRouter",
         "url": "https://openrouter.ai/openai/gpt-6-astra",
         "source": "Hacker News",
-        "score": 100
-      },
-      {
-        "title": "Artificial Analysis Intelligence Index v4.2",
-        "url": "https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-2",
-        "source": "Hacker News",
-        "score": 11
+        "score": 169
       },
       {
         "title": "Can AI design circuit boards yet?",
         "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
         "source": "Hacker News",
-        "score": 147
+        "score": 211
+      },
+      {
+        "title": "Artificial Analysis Intelligence Index v4.2",
+        "url": "https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-2",
+        "source": "Hacker News",
+        "score": 87
+      },
+      {
+        "title": "Git Submodules as a Package Manager",
+        "url": "https://nesbitt.io/2026/09/01/git-submodules-as-a-package-manager.html",
+        "source": "Hacker News",
+        "score": 27
       },
       {
         "title": "Shutting down our public encrypted DNS",
         "url": "https://mullvad.net/en/blog/shutting-down-our-public-encrypted-dns-servers-and-sponsoring-quad9-instead",
         "source": "Hacker News",
-        "score": 236
+        "score": 298
       },
       {
         "title": "Can guitar frets perform multiplication?",
         "url": "https://www.charlespetzold.com/blog/2026/09/Can-Guitar-Frets-Perform-Multiplication.html",
         "source": "Hacker News",
-        "score": 20
+        "score": 48
       },
       {
-        "title": "RSA-260 Factorized",
-        "url": "https://twitter.com/penlume/status/2095372672356212876",
+        "title": "Portal by Spotify cut my Claude Code token usage by 90%",
+        "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90",
         "source": "Hacker News",
-        "score": 50
-      },
-      {
-        "title": "An open DNS recursive service for free security and high privacy",
-        "url": "https://quad9.net/",
-        "source": "Hacker News",
-        "score": 60
+        "score": 69
       },
       {
         "title": "Show HN: Open-Source eInk Bike Computer",
         "url": "https://opentrailpaper.com",
         "source": "Hacker News",
-        "score": 223
+        "score": 262
       },
       {
-        "title": "Government Rails Site Hit Hours After CVE Patch",
-        "url": "https://rietta.com/blog/ruby-on-rails-cve-exploited-hours-after-patch/",
+        "title": "RSA-260 Factorized",
+        "url": "https://twitter.com/penlume/status/2095372672356212876",
         "source": "Hacker News",
-        "score": 68
+        "score": 94
       },
       {
-        "title": "Record-High 89% in U.S. Say Government Corruption Widespread",
-        "url": "https://news.gallup.com/poll/713933/record-high-say-government-corruption-widespread.aspx",
+        "title": "The Highest Point in the Netherlands",
+        "url": "https://ipv6.hanazo.no/posts/anniversary-personal/",
         "source": "Hacker News",
-        "score": 134
+        "score": 10
       },
       {
-        "title": "Fermat's Last Theorem in Lean 4",
-        "url": "https://github.com/anthropics/fermats-last-theorem",
+        "title": "GPT-6 Astra in code review: Gains, privacy, and cost",
+        "url": "https://www.coderabbit.ai/blog/gpt-6-astra-code-review-evaluation",
         "source": "Hacker News",
-        "score": 56
+        "score": 4
       }
     ],
     "ai": [
@@ -101,73 +101,67 @@
         "title": "Discovery of a new OpenAI agent message board",
         "url": "https://collusion.wiki/",
         "source": "Hacker News AI",
-        "score": 1444
+        "score": 1580
       },
       {
         "title": "GPT-6 Astra on OpenRouter",
         "url": "https://openrouter.ai/openai/gpt-6-astra",
         "source": "Hacker News AI",
-        "score": 100
+        "score": 169
       },
       {
         "title": "Can AI design circuit boards yet?",
         "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
         "source": "Hacker News AI",
-        "score": 147
-      },
-      {
-        "title": "Government Rails Site Hit Hours After CVE Patch",
-        "url": "https://rietta.com/blog/ruby-on-rails-cve-exploited-hours-after-patch/",
-        "source": "Hacker News AI",
-        "score": 68
+        "score": 211
       },
       {
         "title": "Portal by Spotify cut my Claude Code token usage by 90%",
         "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90",
         "source": "Hacker News AI",
-        "score": 15
+        "score": 69
       },
       {
-        "title": "Reversing MikroTik's Silent Patch: The RouterOS 7.23.4 Fix They Wouldn't Explain",
-        "url": "https://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/",
+        "title": "GPT-6 Astra in code review: Gains, privacy, and cost",
+        "url": "https://www.coderabbit.ai/blog/gpt-6-astra-code-review-evaluation",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 4
       },
       {
-        "title": "“Next-token predictor” is the wrong mental model for LLMs",
-        "url": "https://gmcgoldr.github.io/2026/09/04/llm-next-token-predictors.html",
+        "title": "Government Rails Site Hit Hours After CVE Patch",
+        "url": "https://rietta.com/blog/ruby-on-rails-cve-exploited-hours-after-patch/",
         "source": "Hacker News AI",
-        "score": 73
+        "score": 82
       },
       {
         "title": "Show HN: TERMy – A fast terminal assistant that does not use LLMs",
         "url": "https://github.com/gioblu/NPC-Forge/blob/main/docs/development.md",
         "source": "Hacker News AI",
-        "score": 89
+        "score": 106
+      },
+      {
+        "title": "“Next-token predictor” is the wrong mental model for LLMs",
+        "url": "https://gmcgoldr.github.io/2026/09/04/llm-next-token-predictors.html",
+        "source": "Hacker News AI",
+        "score": 98
       },
       {
         "title": "GPT-6 Astra",
         "url": "https://openai.com/index/gpt-6-astra/",
         "source": "Hacker News AI",
-        "score": 2150
-      },
-      {
-        "title": "Claude Code skills for advanced context engineering techniques and patterns",
-        "url": "https://github.com/NeoLabHQ/context-engineering-kit",
-        "source": "Hacker News AI",
-        "score": 3
+        "score": 2164
       },
       {
         "title": "Corporate America is getting hooked on open-source AI",
         "url": "https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html",
         "source": "Hacker News AI",
-        "score": 260
+        "score": 282
       },
       {
-        "title": "Google AI Mode shows same products 21.6% more expensive than traditional search",
-        "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products",
+        "title": "Claude Code skills for advanced context engineering techniques and patterns",
+        "url": "https://github.com/NeoLabHQ/context-engineering-kit",
         "source": "Hacker News AI",
-        "score": 364
+        "score": 14
       }
     ],
     "news": [
@@ -177,13 +171,23 @@
         "source": "BBC World"
       },
       {
+        "title": "Trump's peace envoys to visit Moscow and Kyiv over weekend",
+        "url": "https://www.bbc.co.uk/news/articles/c23x0z48x0no?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Europe targeted by spiralling campaign of sabotage - and Russia is the chief suspect",
         "url": "https://www.bbc.co.uk/news/articles/c5y4g6meekro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "'A rare moment of joy': Nepal tunnel rescues bring hope for more flood survivors",
-        "url": "https://www.bbc.co.uk/news/videos/cd79vp91321o?at_medium=RSS&at_campaign=rss",
+        "title": "UN votes to adopt new world map to reflect Africa's true size",
+        "url": "https://www.bbc.co.uk/news/articles/ce30vp55dnlo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "At least two dead in blast at Bolivia military barracks",
+        "url": "https://www.bbc.co.uk/news/articles/c3v45xy67g5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -194,16 +198,6 @@
       {
         "title": "Russia hits Ukrainian security headquarters in drone attack, Zelensky says",
         "url": "https://www.bbc.co.uk/news/articles/c5yep7y48x2o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "UK support for Falkland Islands 'unwavering' after Argentina restates claims, No 10 says",
-        "url": "https://www.bbc.co.uk/news/articles/cn45jg3zlz4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Trump's peace envoys to visit Moscow and Kyiv over weekend",
-        "url": "https://www.bbc.co.uk/news/articles/c23x0z48x0no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -283,6 +277,26 @@
     ],
     "gaming": [
       {
+        "title": "Sega Found a Clever Workaround to Officially Bring Sonic to Fortnite",
+        "url": "https://www.polygon.com/fortnite-sonic-the-hedgehog-android-sega-epic-games/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Netflix's Gritty Horror Sleeper Hit Is Still One of the Decade's Best Zombie Movies",
+        "url": "https://www.polygon.com/alive-zombie-movie-netflix/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Pokémon Go Fest 2026 Mega Finale habitat schedule and event guide",
+        "url": "https://www.polygon.com/pokemon-go-fest-2026-mega-finale-habitat-schedule-bonuses/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Ryan Gosling’s Near-Perfect Sci-fi Movie Officially Becomes an HBO Max Streaming Hit",
+        "url": "https://www.polygon.com/ryan-gosling-blade-runner-2049-streaming-success-hbo-max-september-2026/",
+        "source": "Polygon"
+      },
+      {
         "title": "10 Near-Perfect Switch Games Nobody Played",
         "url": "https://www.polygon.com/10-switch-hidden-gems/",
         "source": "Polygon"
@@ -295,26 +309,6 @@
       {
         "title": "8 New TV Shows to Watch This Weekend on Netflix, Prime Video, and Hulu (September 4-6)",
         "url": "https://www.polygon.com/new-tv-shows-streaming-this-weekend-netflix-september-4-6/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Tetris Maker Officially Responds to White House's Hateful Tetris Clone",
-        "url": "https://www.polygon.com/tetris-white-house-arcade-game-copyright-infringement-trump/",
-        "source": "Polygon"
-      },
-      {
-        "title": "After Conquering Esports, T1 Faker Officially Stuns the TCG Market With a $50K Card",
-        "url": "https://www.polygon.com/riftbound-t1-faker-card-resale-price-ebay-auction/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The 14 Best at Gamescom 2026",
-        "url": "https://www.polygon.com/best-games-gamescom-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "PAX Is Officially Coming to the 'Dork Population' Capital of Texas With New Tabletop Show",
-        "url": "https://www.polygon.com/pax-unplugged-south-new-show-houston-texas-dates-tickets/",
         "source": "Polygon"
       }
     ],
