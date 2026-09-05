@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-04T22:49:24.282366",
-    "total_items": 63
+    "last_updated": "2026-09-05T00:39:38.101989",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
+        "title": "Actively exploited sandbox RCE in all Chromium versions",
+        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
+        "source": "Hacker News",
+        "score": 170
+      },
+      {
         "title": "Formalizing Fermat's Last Theorem",
         "url": "https://www.anthropic.com/research/formalizing-fermats-last-theorem",
         "source": "Hacker News",
-        "score": 390
+        "score": 455
       },
       {
         "title": "Statichost.eu – European static site hosting",
         "url": "https://www.statichost.eu/",
         "source": "Hacker News",
-        "score": 114
-      },
-      {
-        "title": "Actively exploited sandbox RCE in all Chromium versions",
-        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
-        "source": "Hacker News",
-        "score": 44
+        "score": 160
       },
       {
         "title": "Discovery of a new OpenAI agent message board",
         "url": "https://collusion.wiki/",
         "source": "Hacker News",
-        "score": 1395
+        "score": 1444
       },
       {
         "title": "GPT-6 Astra on OpenRouter",
         "url": "https://openrouter.ai/openai/gpt-6-astra",
         "source": "Hacker News",
-        "score": 36
+        "score": 100
+      },
+      {
+        "title": "Artificial Analysis Intelligence Index v4.2",
+        "url": "https://artificialanalysis.ai/articles/artificial-analysis-intelligence-index-v4-2",
+        "source": "Hacker News",
+        "score": 11
       },
       {
         "title": "Can AI design circuit boards yet?",
         "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
         "source": "Hacker News",
-        "score": 106
+        "score": 147
       },
       {
         "title": "Shutting down our public encrypted DNS",
         "url": "https://mullvad.net/en/blog/shutting-down-our-public-encrypted-dns-servers-and-sponsoring-quad9-instead",
         "source": "Hacker News",
-        "score": 194
+        "score": 236
       },
       {
-        "title": "An open DNS recursive service for free security and high privacy",
-        "url": "https://quad9.net/",
+        "title": "Can guitar frets perform multiplication?",
+        "url": "https://www.charlespetzold.com/blog/2026/09/Can-Guitar-Frets-Perform-Multiplication.html",
         "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "Show HN: Open-Source eInk Bike Computer",
-        "url": "https://opentrailpaper.com",
-        "source": "Hacker News",
-        "score": 202
+        "score": 20
       },
       {
         "title": "RSA-260 Factorized",
         "url": "https://twitter.com/penlume/status/2095372672356212876",
         "source": "Hacker News",
-        "score": 30
+        "score": 50
+      },
+      {
+        "title": "An open DNS recursive service for free security and high privacy",
+        "url": "https://quad9.net/",
+        "source": "Hacker News",
+        "score": 60
+      },
+      {
+        "title": "Show HN: Open-Source eInk Bike Computer",
+        "url": "https://opentrailpaper.com",
+        "source": "Hacker News",
+        "score": 223
       },
       {
         "title": "Government Rails Site Hit Hours After CVE Patch",
         "url": "https://rietta.com/blog/ruby-on-rails-cve-exploited-hours-after-patch/",
         "source": "Hacker News",
-        "score": 60
+        "score": 68
+      },
+      {
+        "title": "Record-High 89% in U.S. Say Government Corruption Widespread",
+        "url": "https://news.gallup.com/poll/713933/record-high-say-government-corruption-widespread.aspx",
+        "source": "Hacker News",
+        "score": 134
       },
       {
         "title": "Fermat's Last Theorem in Lean 4",
         "url": "https://github.com/anthropics/fermats-last-theorem",
         "source": "Hacker News",
-        "score": 40
-      },
-      {
-        "title": "The Rust React Compiler is now native in Vite",
-        "url": "https://blog.master.dev/react-now-rusted-all-the-way-out/",
-        "source": "Hacker News",
-        "score": 92
-      },
-      {
-        "title": "Updates on HEIR, the Homomorphic Encryption Compiler Project",
-        "url": "https://www.jeremykun.com/2026/09/04/updates-on-heir-homomorphic-encryption/",
-        "source": "Hacker News",
-        "score": 9
-      },
-      {
-        "title": "Digital Sovereignty Is Written in PHP",
-        "url": "https://thephp.foundation/blog/2026/09/02/digital-sovereignty-is-written-in-php/",
-        "source": "Hacker News",
-        "score": 12
+        "score": 56
       }
     ],
     "ai": [
@@ -101,88 +101,81 @@
         "title": "Discovery of a new OpenAI agent message board",
         "url": "https://collusion.wiki/",
         "source": "Hacker News AI",
-        "score": 1395
+        "score": 1444
       },
       {
         "title": "GPT-6 Astra on OpenRouter",
         "url": "https://openrouter.ai/openai/gpt-6-astra",
         "source": "Hacker News AI",
-        "score": 36
+        "score": 100
       },
       {
         "title": "Can AI design circuit boards yet?",
         "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
         "source": "Hacker News AI",
-        "score": 106
+        "score": 147
       },
       {
         "title": "Government Rails Site Hit Hours After CVE Patch",
         "url": "https://rietta.com/blog/ruby-on-rails-cve-exploited-hours-after-patch/",
         "source": "Hacker News AI",
-        "score": 60
+        "score": 68
       },
       {
-        "title": "\"Next-token predictor\" is the wrong mental model for LLMs",
+        "title": "Portal by Spotify cut my Claude Code token usage by 90%",
+        "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90",
+        "source": "Hacker News AI",
+        "score": 15
+      },
+      {
+        "title": "Reversing MikroTik's Silent Patch: The RouterOS 7.23.4 Fix They Wouldn't Explain",
+        "url": "https://npratley.net/reversing-mikrotiks-silent-patch-the-routeros-7-23-4-fix-they-wouldnt-explain/",
+        "source": "Hacker News AI",
+        "score": 3
+      },
+      {
+        "title": "“Next-token predictor” is the wrong mental model for LLMs",
         "url": "https://gmcgoldr.github.io/2026/09/04/llm-next-token-predictors.html",
         "source": "Hacker News AI",
-        "score": 51
+        "score": 73
       },
       {
         "title": "Show HN: TERMy – A fast terminal assistant that does not use LLMs",
         "url": "https://github.com/gioblu/NPC-Forge/blob/main/docs/development.md",
         "source": "Hacker News AI",
-        "score": 79
-      },
-      {
-        "title": "Corporate America is getting hooked on open-source AI",
-        "url": "https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html",
-        "source": "Hacker News AI",
-        "score": 252
+        "score": 89
       },
       {
         "title": "GPT-6 Astra",
         "url": "https://openai.com/index/gpt-6-astra/",
         "source": "Hacker News AI",
-        "score": 2143
+        "score": 2150
+      },
+      {
+        "title": "Claude Code skills for advanced context engineering techniques and patterns",
+        "url": "https://github.com/NeoLabHQ/context-engineering-kit",
+        "source": "Hacker News AI",
+        "score": 3
+      },
+      {
+        "title": "Corporate America is getting hooked on open-source AI",
+        "url": "https://www.nytimes.com/2026/09/04/technology/open-source-ai-anthropic-openai.html",
+        "source": "Hacker News AI",
+        "score": 260
       },
       {
         "title": "Google AI Mode shows same products 21.6% more expensive than traditional search",
         "url": "https://productrise.app/blog/google-ai-mode-prefers-more-expensive-products",
         "source": "Hacker News AI",
-        "score": 360
-      },
-      {
-        "title": "How Fairphone built the Fairphone Gen 6+",
-        "url": "https://arstechnica.com/gadgets/2026/09/nearly-impossible-how-fairphone-built-the-ethical-repairable-fairphone-gen-6/",
-        "source": "Hacker News AI",
-        "score": 183
-      },
-      {
-        "title": "Leading Theory for How Life on Earth Began Is 'Highly Unlikely'",
-        "url": "https://www.sciencealert.com/leading-theory-for-how-life-on-earth-began-is-highly-unlikely-says-contentious-new-paper",
-        "source": "Hacker News AI",
-        "score": 15
-      },
-      {
-        "title": "Georgi Gerganov on llama.cpp/ggml future after Nvidia acquisition of HuggingFace",
-        "url": "https://twitter.com/ggerganov/status/2095897173376618881",
-        "source": "Hacker News AI",
-        "score": 66
-      },
-      {
-        "title": "Qwen 3.8 27B available on Cerebras at 1500 tokens/s",
-        "url": "https://inference-docs.cerebras.ai/models/overview",
-        "source": "Hacker News AI",
-        "score": 675
-      },
-      {
-        "title": "Which tools do Claude, Codex and Cursor choose? We measured 17k runs to find out",
-        "url": "https://armature.tech/blog/which-tools-coding-agents-install",
-        "source": "Hacker News AI",
-        "score": 287
+        "score": 364
       }
     ],
     "news": [
+      {
+        "title": "Mistrial declared in Lindsay Clancy murder case, after jury deadlocks ",
+        "url": "https://www.bbc.co.uk/news/articles/cpwlrj2je1po?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Europe targeted by spiralling campaign of sabotage - and Russia is the chief suspect",
         "url": "https://www.bbc.co.uk/news/articles/c5y4g6meekro?at_medium=RSS&at_campaign=rss",
@@ -194,8 +187,8 @@
         "source": "BBC World"
       },
       {
-        "title": "UK support for Falkland Islands 'unwavering' after Argentina restates claims, No 10 says",
-        "url": "https://www.bbc.co.uk/news/articles/cn45jg3zlz4o?at_medium=RSS&at_campaign=rss",
+        "title": "Germany's far-right AfD bids for first taste of power in eastern vote",
+        "url": "https://www.bbc.co.uk/news/articles/cvgypkzgy4wo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -204,8 +197,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Steve Irwin's family celebrates 'superhero' dad, 20 years after shock death",
-        "url": "https://www.bbc.co.uk/news/articles/cjrx75ldydwo?at_medium=RSS&at_campaign=rss",
+        "title": "UK support for Falkland Islands 'unwavering' after Argentina restates claims, No 10 says",
+        "url": "https://www.bbc.co.uk/news/articles/cn45jg3zlz4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
