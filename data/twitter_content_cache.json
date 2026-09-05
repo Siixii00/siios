@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-05T20:57:42.583029",
-    "total_items": 60
+    "last_updated": "2026-09-05T22:46:21.460892",
+    "total_items": 62
   },
   "content": {
     "tech": [
@@ -9,141 +9,147 @@
         "title": "The Real Luxuries In Life",
         "url": "https://feld.com/archives/2026/09/the-real-luxuries-in-life/",
         "source": "Hacker News",
-        "score": 233
+        "score": 402
       },
       {
-        "title": "Finite time blowup for an averaged three-dimensional Navier-Stokes equation",
+        "title": "Finite time blowup for an averaged three-dimensional Navier-Stokes equation (2014)",
         "url": "https://terrytao.wordpress.com/2014/02/04/finite-time-blowup-for-an-averaged-three-dimensional-navier-stokes-equation/",
         "source": "Hacker News",
-        "score": 20
+        "score": 42
       },
       {
         "title": "Private German rocket makes history, reaches orbit from European soil",
         "url": "https://www.space.com/space-exploration/launches-spacecraft/isar-aerospace-second-launch-norway-andoya-spaceport-spectrum-rocket",
         "source": "Hacker News",
-        "score": 60
+        "score": 204
+      },
+      {
+        "title": "Show HN: Fly By – retro biplane flying game",
+        "url": "https://michaelteter.com/flyby.html",
+        "source": "Hacker News",
+        "score": 13
       },
       {
         "title": "Learn Programming with OCaml",
         "url": "https://usr.lmf.cnrs.fr/lpo/",
         "source": "Hacker News",
-        "score": 98
+        "score": 135
+      },
+      {
+        "title": "LLMs as a Cognitive Virus",
+        "url": "https://arxiv.org/abs/2609.03344",
+        "source": "Hacker News",
+        "score": 118
       },
       {
         "title": "The \"$60 Gaming PC\" – AMD BC-250 (2025)",
         "url": "https://devquasar.com/hardware/the-60-gaming-pc-amd-bc-250/",
         "source": "Hacker News",
-        "score": 215
+        "score": 239
       },
       {
-        "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
-        "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
+        "title": "How Swiss tables work in Go built-in map",
+        "url": "https://victoriametrics.com/blog/go-swiss-table-map/index.html",
         "source": "Hacker News",
-        "score": 80
-      },
-      {
-        "title": "Discovery of a new OpenAI agent message board",
-        "url": "https://collusion.wiki/",
-        "source": "Hacker News",
-        "score": 2025
-      },
-      {
-        "title": "Isar Aerospace launch into orbit [video]",
-        "url": "https://www.youtube.com/watch?v=Ss1DUqLjecc",
-        "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "Actively exploited sandbox RCE in all Chromium versions",
-        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
-        "source": "Hacker News",
-        "score": 720
+        "score": 15
       },
       {
         "title": "Balrogg: Demonically compacting (up to 15%) lossless Vorbis/Opus recompressor",
         "url": "https://github.com/iczelia/balrogg",
         "source": "Hacker News",
-        "score": 21
+        "score": 46
+      },
+      {
+        "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
+        "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
+        "source": "Hacker News",
+        "score": 105
+      },
+      {
+        "title": "Falsehoods Programmers Believe About LANs",
+        "url": "https://dreamstation.systems/personal/lanfalsehoods.html",
+        "source": "Hacker News",
+        "score": 3
+      },
+      {
+        "title": "Discovery of a new OpenAI agent message board",
+        "url": "https://collusion.wiki/",
+        "source": "Hacker News",
+        "score": 2063
+      },
+      {
+        "title": "Actively exploited sandbox RCE in all Chromium versions",
+        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
+        "source": "Hacker News",
+        "score": 730
       },
       {
         "title": "Nitter has more working instances than before the takedowns",
         "url": "https://codeberg.org/mv12star/shitter/wiki/Instances",
         "source": "Hacker News",
-        "score": 566
+        "score": 590
       },
       {
-        "title": "LLMs as a Cognitive Virus",
-        "url": "https://arxiv.org/abs/2609.03344",
+        "title": "Isar Aerospace launch into orbit [video]",
+        "url": "https://www.youtube.com/watch?v=Ss1DUqLjecc",
         "source": "Hacker News",
-        "score": 3
-      },
-      {
-        "title": "Space industry lacks workers needed to rebuild satellites lost in war: report",
-        "url": "https://www.defensenews.com/industry/techwatch/2026/09/04/space-industry-lacks-workers-needed-to-rebuild-satellites-lost-in-war-report-says/",
-        "source": "Hacker News",
-        "score": 17
-      },
-      {
-        "title": "Steffen's Polyhedron",
-        "url": "https://www.gregegan.net/SCIENCE/Steffen/Steffen.html",
-        "source": "Hacker News",
-        "score": 36
-      },
-      {
-        "title": "Terpstra Keyboard",
-        "url": "http://terpstrakeyboard.com/",
-        "source": "Hacker News",
-        "score": 100
+        "score": 64
       }
     ],
     "ai": [
       {
-        "title": "Finite time blowup for an averaged three-dimensional Navier-Stokes equation",
+        "title": "Finite time blowup for an averaged three-dimensional Navier-Stokes equation (2014)",
         "url": "https://terrytao.wordpress.com/2014/02/04/finite-time-blowup-for-an-averaged-three-dimensional-navier-stokes-equation/",
         "source": "Hacker News AI",
-        "score": 20
+        "score": 42
+      },
+      {
+        "title": "Show HN: Fly By – retro biplane flying game",
+        "url": "https://michaelteter.com/flyby.html",
+        "source": "Hacker News AI",
+        "score": 13
+      },
+      {
+        "title": "LLMs as a Cognitive Virus",
+        "url": "https://arxiv.org/abs/2609.03344",
+        "source": "Hacker News AI",
+        "score": 118
       },
       {
         "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
         "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
         "source": "Hacker News AI",
-        "score": 80
+        "score": 105
       },
       {
         "title": "Discovery of a new OpenAI agent message board",
         "url": "https://collusion.wiki/",
         "source": "Hacker News AI",
-        "score": 2025
+        "score": 2063
       },
       {
-        "title": "LLMs as a Cognitive Virus",
-        "url": "https://arxiv.org/abs/2609.03344",
+        "title": "America's Two Largest School Districts Impose AI Moratoriums",
+        "url": "https://www.techpolicy.press/americas-two-largest-school-districts-impose-ai-moratoriums/",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 18
       },
       {
         "title": "Can AI design circuit boards yet?",
         "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
         "source": "Hacker News AI",
-        "score": 345
+        "score": 360
       },
       {
         "title": "AI handles incidents, engineers lose touch with their systems",
         "url": "https://www.sylvainkalache.com/blog/ai-handles-incidents-engineers-lose-touch-with-their-systems",
         "source": "Hacker News AI",
-        "score": 342
+        "score": 361
       },
       {
         "title": "GPT-6 Astra on OpenRouter",
         "url": "https://openrouter.ai/openai/gpt-6-astra",
         "source": "Hacker News AI",
-        "score": 295
-      },
-      {
-        "title": "Portal by Spotify cut my Claude Code token usage by 90%",
-        "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90",
-        "source": "Hacker News AI",
-        "score": 239
+        "score": 296
       },
       {
         "title": "GPT-6 Astra",
@@ -155,7 +161,13 @@
         "title": "Show HN: TERMy – A fast terminal assistant that does not use LLMs",
         "url": "https://github.com/gioblu/NPC-Forge/blob/main/docs/development.md",
         "source": "Hacker News AI",
-        "score": 183
+        "score": 185
+      },
+      {
+        "title": "Portal by Spotify cut my Claude Code token usage by 90%",
+        "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90",
+        "source": "Hacker News AI",
+        "score": 242
       }
     ],
     "news": [
@@ -165,7 +177,7 @@
         "source": "BBC World"
       },
       {
-        "title": "US hits three Iranian oil tankers after saying its warships were targeted",
+        "title": "US and Iran trade retaliatory attacks on ships as conflict flares",
         "url": "https://www.bbc.co.uk/news/articles/cj64rrne643o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -180,18 +192,18 @@
         "source": "BBC World"
       },
       {
+        "title": "Prince William to attend King Harald's funeral in Norway",
+        "url": "https://www.bbc.co.uk/news/articles/cp301rw6kvro?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "TV presenter among 11 sentenced to death in Egypt drugs case",
+        "url": "https://www.bbc.co.uk/news/articles/c5y7gk9knnlo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "What different world maps get right - and what they get wrong",
         "url": "https://www.bbc.co.uk/news/articles/cly5r60v4mro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Trump signs order to remove endangered species protection for grey wolves",
-        "url": "https://www.bbc.co.uk/news/articles/c62k677d4lzo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Europe targeted by spiralling campaign of sabotage - and Russia is the chief suspect",
-        "url": "https://www.bbc.co.uk/news/articles/c5y4g6meekro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -212,13 +224,13 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " TourBox Lite review: An entry-level console for editors who are tired of keyboard shortcuts ",
-        "url": "https://www.creativebloq.com/tech/tourbox-lite-review-an-entry-level-console-for-editors-who-are-tired-of-keyboard-shortcuts",
+        "title": " These cute cat ads don't seem to make sense – which is why they're genius ",
+        "url": "https://www.creativebloq.com/design/branding/these-cute-cat-ads-dont-seem-to-make-sense-which-is-why-theyre-genius",
         "source": "Creative Bloq"
       },
       {
-        "title": " These cute cat ads don't seem to make sense – which is why they're genius ",
-        "url": "https://www.creativebloq.com/design/branding/these-cute-cat-ads-dont-seem-to-make-sense-which-is-why-theyre-genius",
+        "title": " TourBox Lite review: An entry-level console for editors who are tired of keyboard shortcuts ",
+        "url": "https://www.creativebloq.com/tech/tourbox-lite-review-an-entry-level-console-for-editors-who-are-tired-of-keyboard-shortcuts",
         "source": "Creative Bloq"
       },
       {
@@ -271,6 +283,21 @@
     ],
     "gaming": [
       {
+        "title": "Civilization 7 Officially Gets a Major Sci-Fi Update for 2027",
+        "url": "https://www.polygon.com/civilization-7-earthrise-announcement/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'The Mandalorian and Grogu' Has a Secret Jon Favreau Movie Easter Egg",
+        "url": "https://www.polygon.com/mandalorian-grogu-special-effects-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Huge Reveals To Expect From Nintendo’s Zelda Anniversary Direct",
+        "url": "https://www.polygon.com/zelda-direct-what-to-expect/",
+        "source": "Polygon"
+      },
+      {
         "title": "'The Gentlemen' Season 3 Confirmed? Potential Release Date, and Everything You Need to Know",
         "url": "https://www.polygon.com/guy-richie-the-gentlemen-season-3-release-date-plot/",
         "source": "Polygon"
@@ -288,21 +315,6 @@
       {
         "title": "The 5 Best Games That Still Aren't Officially Available in the US ",
         "url": "https://www.polygon.com/5-best-games-not-available-us/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Double Fine reveals its first post-Xbox game as Tim Schafer declares no one will shut the studio down but him",
-        "url": "https://www.polygon.com/double-fine-reveals-thank-you-bus-driver/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'We Are Sorry,' Gamescom Apologizes For Lackluster Response To Indie Booth Thefts",
-        "url": "https://www.polygon.com/gamescom-apology-statement-hardware-indie-thefts/",
-        "source": "Polygon"
-      },
-      {
-        "title": "2026 Has Been the Best Year for City-Builders in Decades",
-        "url": "https://www.polygon.com/city-builder-games-2026/",
         "source": "Polygon"
       }
     ],
