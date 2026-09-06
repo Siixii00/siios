@@ -1,172 +1,182 @@
 {
   "metadata": {
-    "last_updated": "2026-09-06T13:59:55.186372",
+    "last_updated": "2026-09-06T16:53:57.028245",
     "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "Intellectual Fly Is Open",
+        "title": "QBittorrent breaks out of sandbox to commit crimes",
+        "url": "https://beige.party/@intransitivelie/117057396732763183",
+        "source": "Hacker News",
+        "score": 451
+      },
+      {
+        "title": "Intellectual Fly Is Open (2025)",
         "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
         "source": "Hacker News",
-        "score": 141
+        "score": 287
+      },
+      {
+        "title": "An Alien Mind",
+        "url": "https://openai.com/index/an-alien-mind/",
+        "source": "Hacker News",
+        "score": 10
       },
       {
         "title": "Isar Aerospace reaches orbit and deploys payloads on second flight",
         "url": "https://isaraerospace.com/press/history-for-european-spaceflight-isar-aerospace-reaches-orbit-and-deploys-payloads-on-second-flight",
         "source": "Hacker News",
-        "score": 330
+        "score": 420
       },
       {
         "title": "Doomscrolling Ourselves to Death",
         "url": "https://www.edwest.co.uk/p/doomscrolling-ourselves-to-death",
         "source": "Hacker News",
-        "score": 85
+        "score": 218
       },
       {
-        "title": "M-DISC – DVD/Blu-ray compatible discs that may last up to 1000 years",
-        "url": "https://en.wikipedia.org/wiki/M-DISC",
+        "title": "A/I shuts down – Stay human",
+        "url": "https://keepitfree.ai/announcements/a/i-shuts-down-stay-human/",
         "source": "Hacker News",
-        "score": 75
+        "score": 254
+      },
+      {
+        "title": "NetBSD 9.5 released and EOL for NetBSD-9",
+        "url": "https://blog.netbsd.org/tnf/entry/netbsd_9_5_released_and",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Electronic skin for prosthetics to sense temperature and pressure",
+        "url": "https://news.wsu.edu/press-release/2026/08/20/researchers-develop-electronic-skin-for-prosthetics-to-sense-temperature-and-pressure/",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
+        "title": "Research carried out using NetBSD",
+        "url": "https://www.netbsd.org/gallery/research.html",
+        "source": "Hacker News",
+        "score": 8
       },
       {
         "title": "The many mysteries and lessons of the Bayeux tapestry",
         "url": "https://economist.com/interactive/culture/2026/09/03/the-many-mysteries-and-lessons-of-the-bayeux-tapestry",
         "source": "Hacker News",
-        "score": 4
+        "score": 34
+      },
+      {
+        "title": "M-DISC – DVD/Blu-ray compatible discs that may last up to 1000 years",
+        "url": "https://en.wikipedia.org/wiki/M-DISC",
+        "source": "Hacker News",
+        "score": 131
+      },
+      {
+        "title": "Is There I/O After Death? What Happens to Io_uring When a Process Dies",
+        "url": "https://blog.ydb.tech/is-there-i-o-after-death-what-happens-to-io-uring-when-a-process-dies-92c65354873f?postPublishedType=repub",
+        "source": "Hacker News",
+        "score": 21
+      },
+      {
+        "title": "Asahi Linux Now Officially Supports Apple M3 Macs – With Caveats",
+        "url": "https://www.phoronix.com/news/Asahi-Linux-Official-M3",
+        "source": "Hacker News",
+        "score": 126
+      },
+      {
+        "title": "Show HN: Kadō – open-source habit tracker, with non-binary habit score, for iOS",
+        "url": "https://github.com/scastiel/kado",
+        "source": "Hacker News",
+        "score": 32
       },
       {
         "title": "Cloud in a Bottle: making self-hosting accessible to everyone",
         "url": "https://cloudinabottle.org/blog/launch-post",
         "source": "Hacker News",
-        "score": 493
-      },
-      {
-        "title": "The revolt of the reader",
-        "url": "https://bcantrill.dtrace.org/2026/09/05/the-revolt-of-the-reader/",
-        "source": "Hacker News",
-        "score": 446
-      },
-      {
-        "title": "Music Theory for Programmers",
-        "url": "https://runjs.app/blog/music-theory-for-programmers",
-        "source": "Hacker News",
-        "score": 216
-      },
-      {
-        "title": "I Changed My License",
-        "url": "https://bergie.iki.fi/blog/eupl/",
-        "source": "Hacker News",
-        "score": 104
-      },
-      {
-        "title": "IBM Quantum Nighthawk R2",
-        "url": "https://www.ibm.com/quantum/blog/nighthawk-r2",
-        "source": "Hacker News",
-        "score": 40
-      },
-      {
-        "title": "The pencil case model of creativity",
-        "url": "https://dub.uu.nl/en/column/pencil-case-model-creativity",
-        "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "Household Laser Cuts",
-        "url": "https://cceckman.com/writing/household-laser-cuts/",
-        "source": "Hacker News",
-        "score": 14
-      },
-      {
-        "title": "The ColorChecker, photography's most important 24 squares, turns 50",
-        "url": "https://www.dpreview.com/news/the-colorchecker-photographys-most-important-24-squares-turns-50/",
-        "source": "Hacker News",
-        "score": 97
-      },
-      {
-        "title": "AMD Based FreeBSD Desktop Reloaded",
-        "url": "https://vermaden.wordpress.com/2026/09/06/amd-based-freebsd-desktop-reloaded/",
-        "source": "Hacker News",
-        "score": 80
-      },
-      {
-        "title": "AI, Tools and Transformation",
-        "url": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
-        "source": "Hacker News",
-        "score": 98
+        "score": 544
       }
     ],
     "ai": [
       {
+        "title": "Research acceleration: The view inside OpenAI",
+        "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
+        "title": "I Feel about AI",
+        "url": "https://beza1e1.tuxen.de/ai_feelings.html",
+        "source": "Hacker News AI",
+        "score": 123
+      },
+      {
+        "title": "Ganon's Mysterious Origins (Revisited)",
+        "url": "https://www.thrillingtalesofoldvideogames.com/blog/ganon-name-origin-kamen-rider",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
         "title": "AI, Tools and Transformation",
         "url": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
         "source": "Hacker News AI",
-        "score": 98
+        "score": 127
       },
       {
         "title": "Discovery of a new OpenAI agent message board",
         "url": "https://collusion.wiki/",
         "source": "Hacker News AI",
-        "score": 2220
-      },
-      {
-        "title": "Chrome again exempts Google from user site data settings",
-        "url": "https://lapcatsoftware.com/articles/2026/9/1.html",
-        "source": "Hacker News AI",
-        "score": 481
-      },
-      {
-        "title": "LLMs as a Cognitive Virus",
-        "url": "https://arxiv.org/abs/2609.03344",
-        "source": "Hacker News AI",
-        "score": 318
+        "score": 2242
       },
       {
         "title": "Fileregister: Tagging and reference layer for your files, in plain text",
         "url": "https://github.com/rhsev/fileregister",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 17
+      },
+      {
+        "title": "Alberta (Canada) slaps punitive tax on solar panels",
+        "url": "https://albertapolitics.ca/2026/09/ucp-slaps-punitive-tax-on-solar-panels-opening-new-front-in-its-war-on-renewable-energy/",
+        "source": "Hacker News AI",
+        "score": 41
+      },
+      {
+        "title": "Chrome again exempts Google from user site data settings",
+        "url": "https://lapcatsoftware.com/articles/2026/9/1.html",
+        "source": "Hacker News AI",
+        "score": 524
+      },
+      {
+        "title": "LLMs as a Cognitive Virus",
+        "url": "https://arxiv.org/abs/2609.03344",
+        "source": "Hacker News AI",
+        "score": 349
       },
       {
         "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
         "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
         "source": "Hacker News AI",
-        "score": 188
-      },
-      {
-        "title": "GPT-6 Astra on robot arms",
-        "url": "https://openai.robocurve.org/gpt-6-astra/",
-        "source": "Hacker News AI",
-        "score": 211
-      },
-      {
-        "title": "Don't Use a gmail.com Address",
-        "url": "https://crookedtimber.org/2026/09/03/dont-use-a-gmail-com-address/",
-        "source": "Hacker News AI",
-        "score": 37
-      },
-      {
-        "title": "Finite time blowup for an averaged three-dimensional Navier-Stokes equation (2014)",
-        "url": "https://terrytao.wordpress.com/2014/02/04/finite-time-blowup-for-an-averaged-three-dimensional-navier-stokes-equation/",
-        "source": "Hacker News AI",
-        "score": 71
-      },
-      {
-        "title": "GPT-6 Astra",
-        "url": "https://openai.com/index/gpt-6-astra/",
-        "source": "Hacker News AI",
-        "score": 2239
+        "score": 198
       }
     ],
     "news": [
       {
-        "title": "US envoys meet Zelensky in Ukraine after talks with Putin in Russia",
+        "title": "US envoys hold talks with Zelensky in Kyiv after meeting Putin",
         "url": "https://www.bbc.co.uk/news/articles/c6248nvqy8po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US and Iran trade retaliatory attacks on ships as conflict flares",
-        "url": "https://www.bbc.co.uk/news/articles/cj64rrne643o?at_medium=RSS&at_campaign=rss",
+        "title": "German far-right set for big win in eastern state - exit polls",
+        "url": "https://www.bbc.co.uk/news/articles/cy4zejgz3z9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Volcano eruption leaves 170,000 passengers stranded in Indonesia",
+        "url": "https://www.bbc.co.uk/news/articles/cvgy5k4n07ko?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Dozens feared trapped in collapsed building in Delhi",
+        "url": "https://www.bbc.co.uk/news/articles/c8r6ezx1jmro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -175,27 +185,22 @@
         "source": "BBC World"
       },
       {
-        "title": "Volcano eruption leaves 150,000 passengers stranded in Indonesia",
-        "url": "https://www.bbc.co.uk/news/articles/cvgy5k4n07ko?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Watch: Moment 64-year-old Nepali woman is found alive in mud-buried home",
-        "url": "https://www.bbc.co.uk/news/videos/c4gd24d1d0do?at_medium=RSS&at_campaign=rss",
+        "title": "US and Iran trade retaliatory attacks on ships as conflict flares",
+        "url": "https://www.bbc.co.uk/news/articles/cj64rrne643o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Prince William to attend King Harald's funeral in Norway",
         "url": "https://www.bbc.co.uk/news/articles/cp301rw6kvro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Mistrial declared in Lindsay Clancy murder case, after jury deadlocks ",
-        "url": "https://www.bbc.co.uk/news/articles/cpwlrj2je1po?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The Labor Day Apple deals are terrible this year, but these are the best around ",
+        "url": "https://www.creativebloq.com/professional-development/creative-careers/apple-labor-day-deals-are-terrible-this-year-but-these-are-the-best-around",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Alien: Isolation 2 continues the original 1979 film's aesthetic but takes the horror outside ",
         "url": "https://www.creativebloq.com/entertainment/gaming/alien-isolation-2-continues-the-original-1979-films-aesthetic-but-takes-the-horror-outside",
@@ -207,13 +212,13 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " Animals from wildflowers? This unique illustration style shouldn't work, but it does - and here's why ",
-        "url": "https://www.creativebloq.com/art/illustration/animals-from-wildflowers-this-unique-illustration-style-shouldnt-work-but-it-does-and-heres-why",
+        "title": " This indie tactics game is a tribute to 80s glam metal with some ingenious low-tech solutions ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/this-indie-tactics-game-takes-you-back-to-1990-paying-tribute-to-80s-american-glam-metal",
         "source": "Creative Bloq"
       },
       {
-        "title": " This indie tactics game is a tribute to 80s glam metal with some ingenious low-tech solutions ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/this-indie-tactics-game-takes-you-back-to-1990-paying-tribute-to-80s-american-glam-metal",
+        "title": " Animals from wildflowers? This unique illustration style shouldn't work, but it does - and here's why ",
+        "url": "https://www.creativebloq.com/art/illustration/animals-from-wildflowers-this-unique-illustration-style-shouldnt-work-but-it-does-and-heres-why",
         "source": "Creative Bloq"
       },
       {
@@ -224,11 +229,6 @@
       {
         "title": " The best budget AI laptops under $1,000: Your laptop should make your life easier! ",
         "url": "https://www.creativebloq.com/tech/laptops/the-best-budget-ai-laptops-under-usd1-000-let-your-laptop-make-your-life-easier",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " OpenAI's controversial ChatGPT-6 Astra advert paints a sad vision of the future ",
-        "url": "https://www.creativebloq.com/ai/even-just-the-advert-for-chatgpt-6-astra-is-creating-controversy",
         "source": "Creative Bloq"
       }
     ],
@@ -271,38 +271,38 @@
     ],
     "gaming": [
       {
+        "title": "Sony Can't Hide Forever",
+        "url": "https://www.polygon.com/patch-notes-sony-playstation-state-of-play-no-disc-no-buy/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Final Fantasy 7 Revelation Devs Say Ending Is Best 'Not Explained To You By Someone Else'",
+        "url": "https://www.polygon.com/final-fantasy-7-revelation-ending-pax-west/",
+        "source": "Polygon"
+      },
+      {
+        "title": "51 Years Later, Sylvester Stallone's Gritty Action Sci-Fi Classic Is Officially Free on Streaming",
+        "url": "https://www.polygon.com/death-race-2000-free-tubi/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Persona 4 Revival Finds Its Kanji, And It Isn't Troy Baker Or Matt Mercer",
+        "url": "https://www.polygon.com/persona-4-revival-kanji-tatsumi/",
+        "source": "Polygon"
+      },
+      {
+        "title": "7 Huge Differences Between Christopher Nolan's 'Interstellar' and Steven Spielberg's Original Script",
+        "url": "https://www.polygon.com/steven-spielberg-interstellar-script-differences/",
+        "source": "Polygon"
+      },
+      {
+        "title": "55 Years Later, Stanley Kubrick's Gritty Sci-Fi Masterpiece Is Officially Back on Streaming",
+        "url": "https://www.polygon.com/a-clockwork-orange-streaming-on-hbo-max-september-2026/",
+        "source": "Polygon"
+      },
+      {
         "title": "BG3's Best Evil Playthrough Replacement Is Waiting to Be Rediscovered on Steam",
         "url": "https://www.polygon.com/tyranny-crpg-obsidian-baldurs-gate-3-evil-playthrough/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GOTY 2026 is the Weakest Field in Years",
-        "url": "https://www.polygon.com/goty-2026-game-awards-blood-dawnwalker-onimusha-orbitals/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Most Shocking Anime Deaths Of The 21st Century",
-        "url": "https://www.polygon.com/most-shocking-character-deaths-anime-21st-century/",
-        "source": "Polygon"
-      },
-      {
-        "title": "3 Games Where Your Choices Truly Matter",
-        "url": "https://www.polygon.com/best-games-where-choices-matter/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GTA Cheat Codes Taught a Generation How Much Fun It Is to Break a Video Game",
-        "url": "https://www.polygon.com/gta-ps2-cheat-codes/",
-        "source": "Polygon"
-      },
-      {
-        "title": "8 Years Later, the Most-Near-Perfect Mystery Thriller of the Century is Officially Free on Streaming",
-        "url": "https://www.polygon.com/free-streaming-series-tv-under-the-silver-lake-september-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Netflix's Near-Perfect 9-Part Gothic Thriller Is So Good You'll Finish in One Weekend",
-        "url": "https://www.polygon.com/netflix-haunting-bly-manor-perfect-binge-september-2026/",
         "source": "Polygon"
       }
     ],
