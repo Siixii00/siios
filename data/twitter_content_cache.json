@@ -1,63 +1,87 @@
 {
   "metadata": {
-    "last_updated": "2026-09-06T18:54:15.953614",
-    "total_items": 58
+    "last_updated": "2026-09-06T21:06:45.732223",
+    "total_items": 56
   },
   "content": {
     "tech": [
       {
-        "title": "QBittorrent breaks out of sandbox to commit crimes",
-        "url": "https://beige.party/@intransitivelie/117057396732763183",
+        "title": "Show HN: Mador – Make any DOM reactive with a tiny 80-line Proxy state tuple",
+        "url": "https://github.com/marsbos/mador",
         "source": "Hacker News",
-        "score": 1009
+        "score": 11
       },
       {
-        "title": "An Alien Mind",
-        "url": "https://openai.com/index/an-alien-mind/",
+        "title": "GrapheneOS Overhauled Default Apps and Secure Clipboard",
+        "url": "https://grapheneos.social/@GrapheneOS/117225539756835649",
         "source": "Hacker News",
-        "score": 132
-      },
-      {
-        "title": "Nitter is unarchived and will continue",
-        "url": "https://github.com/zedeus/nitter/commit/1428b4c2b4246f92a7e5b2673438e5fb39fcc4a3",
-        "source": "Hacker News",
-        "score": 30
-      },
-      {
-        "title": "NetBSD 9.5 released and EOL for NetBSD-9",
-        "url": "https://blog.netbsd.org/tnf/entry/netbsd_9_5_released_and",
-        "source": "Hacker News",
-        "score": 71
+        "score": 15
       },
       {
         "title": "Your intellectual fly is open (2025)",
         "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
         "source": "Hacker News",
-        "score": 341
+        "score": 409
+      },
+      {
+        "title": "It took a year to ship WebAssembly in Anubis",
+        "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
+        "source": "Hacker News",
+        "score": 15
+      },
+      {
+        "title": "NetBSD 9.5 released and EOL for NetBSD-9",
+        "url": "https://blog.netbsd.org/tnf/entry/netbsd_9_5_released_and",
+        "source": "Hacker News",
+        "score": 90
       },
       {
         "title": "Isar Aerospace reaches orbit and deploys payloads on second flight",
         "url": "https://isaraerospace.com/press/history-for-european-spaceflight-isar-aerospace-reaches-orbit-and-deploys-payloads-on-second-flight",
         "source": "Hacker News",
-        "score": 461
-      },
-      {
-        "title": "We monitor internal coding agents for misalignment",
-        "url": "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment/",
-        "source": "Hacker News",
-        "score": 40
+        "score": 504
       },
       {
         "title": "Research carried out using NetBSD",
         "url": "https://www.netbsd.org/gallery/research.html",
         "source": "Hacker News",
-        "score": 38
+        "score": 61
       },
       {
-        "title": "A/I shuts down – Stay human",
-        "url": "https://keepitfree.ai/announcements/a/i-shuts-down-stay-human/",
+        "title": "Black Hole of Los Alamos Seller of surplus nuclear research materials",
+        "url": "https://www.atlasobscura.com/places/black-hole-of-los-alamos",
         "source": "Hacker News",
-        "score": 348
+        "score": 8
+      },
+      {
+        "title": "Babylonian Lamb Stew with Beets (1750–1730 BCE)",
+        "url": "https://babylonian-collection.yale.edu/about/babylonian-cooking",
+        "source": "Hacker News",
+        "score": 51
+      },
+      {
+        "title": "An Alien Mind",
+        "url": "https://openai.com/index/an-alien-mind/",
+        "source": "Hacker News",
+        "score": 245
+      },
+      {
+        "title": "Show HN: VODForge – a free local desktop UI for YouTube video/playlist downloads",
+        "url": "https://getvodforge.com/",
+        "source": "Hacker News",
+        "score": 6
+      },
+      {
+        "title": "Doomscrolling Ourselves to Death",
+        "url": "https://www.edwest.co.uk/p/doomscrolling-ourselves-to-death",
+        "source": "Hacker News",
+        "score": 318
+      },
+      {
+        "title": "Show HN: Agentic OS: one Rust Linux binary, one SQLite and sandbox per entity",
+        "url": "https://github.com/mmeyerlein/meclaw",
+        "source": "Hacker News",
+        "score": 4
       },
       {
         "title": "Opalite Health (YC W26) Is Hiring – Founding GTM",
@@ -66,34 +90,10 @@
         "score": 1
       },
       {
-        "title": "Research acceleration: The view inside OpenAI",
-        "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+        "title": "A/I shuts down – Stay human",
+        "url": "https://keepitfree.ai/announcements/a/i-shuts-down-stay-human/",
         "source": "Hacker News",
-        "score": 52
-      },
-      {
-        "title": "Following legal advice, the Nitter project will continue",
-        "url": "https://github.com/zedeus/nitter",
-        "source": "Hacker News",
-        "score": 148
-      },
-      {
-        "title": "Doomscrolling Ourselves to Death",
-        "url": "https://www.edwest.co.uk/p/doomscrolling-ourselves-to-death",
-        "source": "Hacker News",
-        "score": 263
-      },
-      {
-        "title": "Recreating Minecraft Is Not a Benchmark",
-        "url": "https://kuber.studio/blog/Reflections/Recreating-Minecraft-is-Not-a-Benchmark",
-        "source": "Hacker News",
-        "score": 40
-      },
-      {
-        "title": "Electronic skin for prosthetics to sense temperature and pressure",
-        "url": "https://news.wsu.edu/press-release/2026/08/20/researchers-develop-electronic-skin-for-prosthetics-to-sense-temperature-and-pressure/",
-        "source": "Hacker News",
-        "score": 19
+        "score": 423
       }
     ],
     "ai": [
@@ -101,60 +101,53 @@
         "title": "Research acceleration: The view inside OpenAI",
         "url": "https://openai.com/index/research-acceleration-view-inside-openai",
         "source": "Hacker News AI",
-        "score": 52
-      },
-      {
-        "title": "Running a personal AI agent on an old Android phone instead of a server",
-        "url": "https://medium.com/@fsaint/the-best-home-for-your-agent-is-in-your-junk-drawer-3afe0b0976e8",
-        "source": "Hacker News AI",
-        "score": 4
+        "score": 78
       },
       {
         "title": "Ganon's Mysterious Origins (Revisited)",
         "url": "https://www.thrillingtalesofoldvideogames.com/blog/ganon-name-origin-kamen-rider",
         "source": "Hacker News AI",
-        "score": 16
-      },
-      {
-        "title": "Discovery of a new OpenAI agent message board",
-        "url": "https://collusion.wiki/",
-        "source": "Hacker News AI",
-        "score": 2252
+        "score": 25
       },
       {
         "title": "AI, Tools and Transformation",
         "url": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
         "source": "Hacker News AI",
-        "score": 136
+        "score": 137
       },
       {
         "title": "LLMs as a Cognitive Virus",
         "url": "https://arxiv.org/abs/2609.03344",
         "source": "Hacker News AI",
-        "score": 353
+        "score": 366
       },
       {
         "title": "Chrome again exempts Google from user site data settings",
         "url": "https://lapcatsoftware.com/articles/2026/9/1.html",
         "source": "Hacker News AI",
-        "score": 534
+        "score": 546
       },
       {
         "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
         "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
         "source": "Hacker News AI",
-        "score": 203
+        "score": 207
       }
     ],
     "news": [
+      {
+        "title": "German far-right set for big win in eastern state, projections show",
+        "url": "https://www.bbc.co.uk/news/articles/cy4zejgz3z9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Zelensky says he expects war to continue into winter after talks with US envoys",
         "url": "https://www.bbc.co.uk/news/articles/c6248nvqy8po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "German far-right set for big win in eastern state - projections",
-        "url": "https://www.bbc.co.uk/news/articles/cy4zejgz3z9o?at_medium=RSS&at_campaign=rss",
+        "title": "Peace talks rich in symbolism but fundamental differences between Russia and Ukraine remain",
+        "url": "https://www.bbc.co.uk/news/articles/c980j5m8mpro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -176,11 +169,6 @@
         "title": "Iran warns of 'faster, heavier, more painful response' to US attacks",
         "url": "https://www.bbc.co.uk/news/articles/cp8d56w7d9po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Prince William to attend King Harald's funeral in Norway",
-        "url": "https://www.bbc.co.uk/news/articles/cp301rw6kvro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
@@ -200,13 +188,13 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " This indie tactics game is a tribute to 80s glam metal with some ingenious low-tech solutions ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/this-indie-tactics-game-takes-you-back-to-1990-paying-tribute-to-80s-american-glam-metal",
+        "title": " Animals from wildflowers? This unique illustration style shouldn't work, but it does - and here's why ",
+        "url": "https://www.creativebloq.com/art/illustration/animals-from-wildflowers-this-unique-illustration-style-shouldnt-work-but-it-does-and-heres-why",
         "source": "Creative Bloq"
       },
       {
-        "title": " Animals from wildflowers? This unique illustration style shouldn't work, but it does - and here's why ",
-        "url": "https://www.creativebloq.com/art/illustration/animals-from-wildflowers-this-unique-illustration-style-shouldnt-work-but-it-does-and-heres-why",
+        "title": " This indie tactics game is a tribute to 80s glam metal with some ingenious low-tech solutions ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/this-indie-tactics-game-takes-you-back-to-1990-paying-tribute-to-80s-american-glam-metal",
         "source": "Creative Bloq"
       },
       {
@@ -259,6 +247,21 @@
     ],
     "gaming": [
       {
+        "title": "New 85% on Metacritic Fantasy Action Game Just Shot Up to No. 1 on Steam Overnight",
+        "url": "https://www.polygon.com/steam-ominusha-way-of-the-sword-number-1-game/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Most Exciting Thriller Movies of All Time",
+        "url": "https://www.polygon.com/most-exciting-thrillers-all-time-ranked/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Cult Classic Platformer Rain World Is Getting A Definitive Release On Nintendo Switch 2",
+        "url": "https://www.polygon.com/cult-classic-platformer-rain-world-is-getting-a-definitive-release-on-nintendo-switch-2/",
+        "source": "Polygon"
+      },
+      {
         "title": "Official Backrooms 2 Announcement Reportedly Happening Soon, With Kane Parsons Returning",
         "url": "https://www.polygon.com/backrooms-sequel-kane-parsons-director-report/",
         "source": "Polygon"
@@ -276,21 +279,6 @@
       {
         "title": "Final Fantasy 7 Revelation Devs Say Ending Is Best 'Not Explained To You By Someone Else'",
         "url": "https://www.polygon.com/final-fantasy-7-revelation-ending-pax-west/",
-        "source": "Polygon"
-      },
-      {
-        "title": "51 Years Later, Sylvester Stallone's Gritty Action Sci-Fi Classic Is Officially Free on Streaming",
-        "url": "https://www.polygon.com/death-race-2000-free-tubi/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Persona 4 Revival Finds Its Kanji, And It Isn't Troy Baker Or Matt Mercer",
-        "url": "https://www.polygon.com/persona-4-revival-kanji-tatsumi/",
-        "source": "Polygon"
-      },
-      {
-        "title": "7 Huge Differences Between Christopher Nolan's 'Interstellar' and Steven Spielberg's Original Script",
-        "url": "https://www.polygon.com/steven-spielberg-interstellar-script-differences/",
         "source": "Polygon"
       }
     ],
