@@ -1,185 +1,173 @@
 {
   "metadata": {
-    "last_updated": "2026-09-06T05:35:39.768474",
-    "total_items": 64
+    "last_updated": "2026-09-06T10:26:48.204908",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
+        "title": "Isar Aerospace reaches orbit and deploys payloads on second flight",
+        "url": "https://isaraerospace.com/press/history-for-european-spaceflight-isar-aerospace-reaches-orbit-and-deploys-payloads-on-second-flight",
+        "source": "Hacker News",
+        "score": 153
+      },
+      {
         "title": "Cloud in a Bottle: making self-hosting accessible to everyone",
         "url": "https://cloudinabottle.org/blog/launch-post",
         "source": "Hacker News",
-        "score": 270
+        "score": 420
+      },
+      {
+        "title": "Play GTA Vice City in the Browser",
+        "url": "https://quenq.com/apps/vice-city-online/",
+        "source": "Hacker News",
+        "score": 57
+      },
+      {
+        "title": "Music Theory for Programmers",
+        "url": "https://runjs.app/blog/music-theory-for-programmers",
+        "source": "Hacker News",
+        "score": 139
       },
       {
         "title": "The revolt of the reader",
         "url": "https://bcantrill.dtrace.org/2026/09/05/the-revolt-of-the-reader/",
         "source": "Hacker News",
-        "score": 232
+        "score": 363
       },
       {
-        "title": "GPT-6 Astra on robot arms",
-        "url": "https://openai.robocurve.org/gpt-6-astra/",
+        "title": "You Don't Have a Right to Safe Drinking Water, US Court Rules",
+        "url": "https://www.motherjones.com/politics/2026/09/drinking-water-mississippi-lawsuit/",
         "source": "Hacker News",
-        "score": 119
+        "score": 90
       },
       {
-        "title": "OpenBSD Stories: Strange Medieval Devices",
-        "url": "http://miod.online.fr/software/openbsd/stories/smd.html",
+        "title": "IBM Quantum Nighthawk R2",
+        "url": "https://www.ibm.com/quantum/blog/nighthawk-r2",
         "source": "Hacker News",
-        "score": 30
+        "score": 13
       },
       {
         "title": "The ColorChecker, photography's most important 24 squares, turns 50",
         "url": "https://www.dpreview.com/news/the-colorchecker-photographys-most-important-24-squares-turns-50/",
         "source": "Hacker News",
-        "score": 20
+        "score": 64
       },
       {
-        "title": "Chrome again exempts Google from user site data settings",
-        "url": "https://lapcatsoftware.com/articles/2026/9/1.html",
+        "title": "AI, Tools and Transformation",
+        "url": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
         "source": "Hacker News",
-        "score": 228
+        "score": 64
+      },
+      {
+        "title": "OpenBSD Stories: Strange Medieval Devices",
+        "url": "http://miod.online.fr/software/openbsd/stories/smd.html",
+        "source": "Hacker News",
+        "score": 64
+      },
+      {
+        "title": "Watch the 'Eclipse of the Century' Next Year When Spain, Egypt and More Go Dark",
+        "url": "https://www.nytimes.com/2026/08/13/travel/solar-eclipse-2027-morocco-egypt.html",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "AMD Based FreeBSD Desktop Reloaded",
+        "url": "https://vermaden.wordpress.com/2026/09/06/amd-based-freebsd-desktop-reloaded/",
+        "source": "Hacker News",
+        "score": 54
+      },
+      {
+        "title": "Discovery of a new OpenAI agent message board",
+        "url": "https://collusion.wiki/",
+        "source": "Hacker News",
+        "score": 2189
       },
       {
         "title": "Learn Programming with OCaml",
         "url": "https://usr.lmf.cnrs.fr/lpo/",
         "source": "Hacker News",
-        "score": 216
+        "score": 255
       },
       {
-        "title": "Private German rocket makes history, reaches orbit from European soil",
-        "url": "https://www.space.com/space-exploration/launches-spacecraft/isar-aerospace-second-launch-norway-andoya-spaceport-spectrum-rocket",
+        "title": "Chrome again exempts Google from user site data settings",
+        "url": "https://lapcatsoftware.com/articles/2026/9/1.html",
         "source": "Hacker News",
-        "score": 459
-      },
-      {
-        "title": "The \"$60 Gaming PC\" – AMD BC-250 (2025)",
-        "url": "https://devquasar.com/hardware/the-60-gaming-pc-amd-bc-250/",
-        "source": "Hacker News",
-        "score": 322
-      },
-      {
-        "title": "Discovery of a new OpenAI agent message board",
-        "url": "https://collusion.wiki/",
-        "source": "Hacker News",
-        "score": 2154
-      },
-      {
-        "title": "Vancouver strip club's Instagram taken down over sign featuring lake joke",
-        "url": "https://www.vancouverisawesome.com/local-news/vancouver-strip-club-instagram-taken-down-sign-calls-out-trump-12725993",
-        "source": "Hacker News",
-        "score": 62
-      },
-      {
-        "title": "RecurseCenter.return()",
-        "url": "https://mm-dev.rocks/series/recursecenter.return/",
-        "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Actively exploited sandbox RCE in all Chromium versions",
-        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
-        "source": "Hacker News",
-        "score": 762
-      },
-      {
-        "title": "Nitter has more working instances than before the takedowns",
-        "url": "https://codeberg.org/mv12star/shitter/wiki/Instances",
-        "source": "Hacker News",
-        "score": 658
-      },
-      {
-        "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
-        "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
-        "source": "Hacker News",
-        "score": 152
+        "score": 409
       }
     ],
     "ai": [
       {
-        "title": "GPT-6 Astra on robot arms",
-        "url": "https://openai.robocurve.org/gpt-6-astra/",
+        "title": "AI, Tools and Transformation",
+        "url": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
         "source": "Hacker News AI",
-        "score": 119
+        "score": 64
+      },
+      {
+        "title": "Watch the 'Eclipse of the Century' Next Year When Spain, Egypt and More Go Dark",
+        "url": "https://www.nytimes.com/2026/08/13/travel/solar-eclipse-2027-morocco-egypt.html",
+        "source": "Hacker News AI",
+        "score": 27
+      },
+      {
+        "title": "Discovery of a new OpenAI agent message board",
+        "url": "https://collusion.wiki/",
+        "source": "Hacker News AI",
+        "score": 2189
       },
       {
         "title": "Chrome again exempts Google from user site data settings",
         "url": "https://lapcatsoftware.com/articles/2026/9/1.html",
         "source": "Hacker News AI",
-        "score": 228
-      },
-      {
-        "title": "Discovery of a new OpenAI agent message board",
-        "url": "https://collusion.wiki/",
-        "source": "Hacker News AI",
-        "score": 2154
+        "score": 409
       },
       {
         "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
         "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
         "source": "Hacker News AI",
-        "score": 152
+        "score": 175
+      },
+      {
+        "title": "GPT-6 Astra on robot arms",
+        "url": "https://openai.robocurve.org/gpt-6-astra/",
+        "source": "Hacker News AI",
+        "score": 188
       },
       {
         "title": "LLMs as a Cognitive Virus",
         "url": "https://arxiv.org/abs/2609.03344",
         "source": "Hacker News AI",
-        "score": 235
-      },
-      {
-        "title": "Finite time blowup for an averaged three-dimensional Navier-Stokes equation (2014)",
-        "url": "https://terrytao.wordpress.com/2014/02/04/finite-time-blowup-for-an-averaged-three-dimensional-navier-stokes-equation/",
-        "source": "Hacker News AI",
-        "score": 65
-      },
-      {
-        "title": "AI, Tools and Transformation",
-        "url": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
-        "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Show HN: Fly By – retro biplane flying game",
-        "url": "https://michaelteter.com/flyby.html",
-        "source": "Hacker News AI",
-        "score": 67
-      },
-      {
-        "title": "OKF Agent Memory – Git-native persistent memory for AI coding agents",
-        "url": "https://github.com/okf-memory/okf-agent-memory",
-        "source": "Hacker News AI",
-        "score": 54
+        "score": 272
       },
       {
         "title": "Can AI design circuit boards yet?",
         "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
         "source": "Hacker News AI",
-        "score": 399
+        "score": 408
       },
       {
-        "title": "GPT-6 Astra on OpenRouter",
-        "url": "https://openrouter.ai/openai/gpt-6-astra",
+        "title": "Finite time blowup for an averaged three-dimensional Navier-Stokes equation (2014)",
+        "url": "https://terrytao.wordpress.com/2014/02/04/finite-time-blowup-for-an-averaged-three-dimensional-navier-stokes-equation/",
         "source": "Hacker News AI",
-        "score": 307
+        "score": 70
       },
       {
         "title": "GPT-6 Astra",
         "url": "https://openai.com/index/gpt-6-astra/",
         "source": "Hacker News AI",
-        "score": 2224
+        "score": 2234
       },
       {
-        "title": "AI handles incidents, engineers lose touch with their systems",
-        "url": "https://www.sylvainkalache.com/blog/ai-handles-incidents-engineers-lose-touch-with-their-systems",
+        "title": "GPT-6 Astra on OpenRouter",
+        "url": "https://openrouter.ai/openai/gpt-6-astra",
         "source": "Hacker News AI",
-        "score": 372
+        "score": 313
       },
       {
-        "title": "Show HN: TERMy – A fast terminal assistant that does not use LLMs",
-        "url": "https://github.com/gioblu/NPC-Forge/blob/main/docs/development.md",
+        "title": "Show HN: Fly By – retro biplane flying game",
+        "url": "https://michaelteter.com/flyby.html",
         "source": "Hacker News AI",
-        "score": 193
+        "score": 82
       }
     ],
     "news": [
@@ -194,12 +182,12 @@
         "source": "BBC World"
       },
       {
-        "title": "TV presenter among 11 sentenced to death in Egypt drugs case",
+        "title": "TV presenter among 12 sentenced to death in Egypt drugs case",
         "url": "https://www.bbc.co.uk/news/articles/c5y7gk9knnlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Volcano eruption triggers flight suspensions at Indonesia's main airport",
+        "title": "Volcano eruption leaves 150,000 passengers stranded in Indonesia",
         "url": "https://www.bbc.co.uk/news/articles/cvgy5k4n07ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -221,6 +209,31 @@
     ],
     "art": [
       {
+        "title": " Animals from wildflowers? This unique illustration style shouldn't work, but it does - and here's why ",
+        "url": "https://www.creativebloq.com/art/illustration/animals-from-wildflowers-this-unique-illustration-style-shouldnt-work-but-it-does-and-heres-why",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This indie tactics game is a tribute to 80s glam metal with some ingenious low-tech solutions ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/this-indie-tactics-game-takes-you-back-to-1990-paying-tribute-to-80s-american-glam-metal",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Someone's making Doom 3 BFG edition with DLSS 5 ",
+        "url": "https://www.creativebloq.com/3d/someones-making-doom-3-bfg-edition-with-dlss-5",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The best budget AI laptops under $1,000: Your laptop should make your life easier! ",
+        "url": "https://www.creativebloq.com/tech/laptops/the-best-budget-ai-laptops-under-usd1-000-let-your-laptop-make-your-life-easier",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " OpenAI's controversial ChatGPT-6 Astra advert paints a sad vision of the future ",
+        "url": "https://www.creativebloq.com/ai/even-just-the-advert-for-chatgpt-6-astra-is-creating-controversy",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " 7 massive Labor Day laptop deals that are actually good enough for creatives ",
         "url": "https://www.creativebloq.com/tech/laptops/7-massive-labor-day-laptop-deals-that-are-actually-good-enough-for-creatives",
         "source": "Creative Bloq"
@@ -228,31 +241,6 @@
       {
         "title": " I enjoyed grappling with Stranger Than Heaven's unconventional combat, but I'd love to see more of its depiction of early 20th century Japan ",
         "url": "https://www.creativebloq.com/entertainment/gaming/i-enjoyed-grappling-with-stranger-than-heavens-unconventional-combat-but-i-would-love-to-see-more-of-its-depiction-of-early-20th-century-japan",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " “Korean games and character art played a big part in inspiring me to become a 3D character artist\" ",
-        "url": "https://www.creativebloq.com/3d/3d-art/korean-games-and-character-art-played-a-big-part-in-inspiring-me-to-become-a-3d-character-artist",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " TourBox Lite review: An entry-level console for editors who are tired of keyboard shortcuts ",
-        "url": "https://www.creativebloq.com/tech/tourbox-lite-review-an-entry-level-console-for-editors-who-are-tired-of-keyboard-shortcuts",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These cute cat ads don't seem to make sense – which is why they're genius ",
-        "url": "https://www.creativebloq.com/design/branding/these-cute-cat-ads-dont-seem-to-make-sense-which-is-why-theyre-genius",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The controversial new Harry Potter logos represent \"the decay of art,\" fans say ",
-        "url": "https://www.creativebloq.com/design/logos-icons/hbos-new-harry-potter-logos-represent-the-decay-of-art-fans-say",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The GTA 6 'romance' controversy is everything that's wrong with the internet ",
-        "url": "https://www.creativebloq.com/design/the-gta-6-romance-controversy-is-everything-thats-wrong-with-the-internet",
         "source": "Creative Bloq"
       }
     ],
@@ -265,6 +253,11 @@
       {
         "title": "A longer exhale may push your brain toward bolder decisions",
         "url": "https://www.sciencedaily.com/releases/2026/09/260904000320.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Indonesia’s most dangerous fires are burning underground",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260904000318.htm",
         "source": "Science Daily"
       },
       {
@@ -286,14 +279,24 @@
         "title": "Scientists reveal the hidden instructions that build the human brain",
         "url": "https://www.sciencedaily.com/releases/2026/09/260904000308.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "80,000-year-old “arrowheads” rewrite human history",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260903064233.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "3 Games Where Your Choices Truly Matter",
+        "url": "https://www.polygon.com/best-games-where-choices-matter/",
+        "source": "Polygon"
+      },
+      {
+        "title": "GTA Cheat Codes Taught a Generation How Much Fun It Is to Break a Video Game",
+        "url": "https://www.polygon.com/gta-ps2-cheat-codes/",
+        "source": "Polygon"
+      },
+      {
+        "title": "8 Years Later, the Most-Near-Perfect Mystery Thriller of the Century is Officially Free on Streaming",
+        "url": "https://www.polygon.com/free-streaming-series-tv-under-the-silver-lake-september-2026/",
+        "source": "Polygon"
+      },
       {
         "title": "Netflix's Near-Perfect 9-Part Gothic Thriller Is So Good You'll Finish in One Weekend",
         "url": "https://www.polygon.com/netflix-haunting-bly-manor-perfect-binge-september-2026/",
@@ -312,21 +315,6 @@
       {
         "title": "17 Years Ago, Quentin Tarantino's Wildly Audacious WWII Action Classic Broke the Genre's Biggest Rule",
         "url": "https://www.polygon.com/quentin-tarantino-inglourious-basterds-streaming-on-hulu/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Blood of Dawnwalker Fixes the Worst Thing About Open-World Games",
-        "url": "https://www.polygon.com/blood-dawnwalker-open-world-opinion/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Civilization 7 Officially Gets a Major Sci-Fi Update for 2027",
-        "url": "https://www.polygon.com/civilization-7-earthrise-announcement/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'The Mandalorian and Grogu' Has a Secret Jon Favreau Movie Easter Egg",
-        "url": "https://www.polygon.com/mandalorian-grogu-special-effects-interview/",
         "source": "Polygon"
       }
     ],
