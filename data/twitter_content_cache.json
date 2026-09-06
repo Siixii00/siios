@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-05T22:46:21.460892",
-    "total_items": 62
+    "last_updated": "2026-09-06T00:39:15.261751",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
-        "title": "The Real Luxuries In Life",
-        "url": "https://feld.com/archives/2026/09/the-real-luxuries-in-life/",
+        "title": "Cloud in a Bottle: making self-hosting accessible to everyone",
+        "url": "https://cloudinabottle.org/blog/launch-post",
         "source": "Hacker News",
-        "score": 402
-      },
-      {
-        "title": "Finite time blowup for an averaged three-dimensional Navier-Stokes equation (2014)",
-        "url": "https://terrytao.wordpress.com/2014/02/04/finite-time-blowup-for-an-averaged-three-dimensional-navier-stokes-equation/",
-        "source": "Hacker News",
-        "score": 42
+        "score": 29
       },
       {
         "title": "Private German rocket makes history, reaches orbit from European soil",
         "url": "https://www.space.com/space-exploration/launches-spacecraft/isar-aerospace-second-launch-norway-andoya-spaceport-spectrum-rocket",
         "source": "Hacker News",
-        "score": 204
-      },
-      {
-        "title": "Show HN: Fly By – retro biplane flying game",
-        "url": "https://michaelteter.com/flyby.html",
-        "source": "Hacker News",
-        "score": 13
+        "score": 332
       },
       {
         "title": "Learn Programming with OCaml",
         "url": "https://usr.lmf.cnrs.fr/lpo/",
         "source": "Hacker News",
-        "score": 135
+        "score": 164
       },
       {
-        "title": "LLMs as a Cognitive Virus",
-        "url": "https://arxiv.org/abs/2609.03344",
+        "title": "The revolt of the reader",
+        "url": "https://bcantrill.dtrace.org/2026/09/05/the-revolt-of-the-reader/",
         "source": "Hacker News",
-        "score": 118
+        "score": 41
+      },
+      {
+        "title": "Finite time blowup for an averaged three-dimensional Navier-Stokes equation (2014)",
+        "url": "https://terrytao.wordpress.com/2014/02/04/finite-time-blowup-for-an-averaged-three-dimensional-navier-stokes-equation/",
+        "source": "Hacker News",
+        "score": 54
       },
       {
         "title": "The \"$60 Gaming PC\" – AMD BC-250 (2025)",
         "url": "https://devquasar.com/hardware/the-60-gaming-pc-amd-bc-250/",
         "source": "Hacker News",
-        "score": 239
+        "score": 271
       },
       {
         "title": "How Swiss tables work in Go built-in map",
         "url": "https://victoriametrics.com/blog/go-swiss-table-map/index.html",
         "source": "Hacker News",
-        "score": 15
-      },
-      {
-        "title": "Balrogg: Demonically compacting (up to 15%) lossless Vorbis/Opus recompressor",
-        "url": "https://github.com/iczelia/balrogg",
-        "source": "Hacker News",
-        "score": 46
+        "score": 30
       },
       {
         "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
         "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
         "source": "Hacker News",
-        "score": 105
-      },
-      {
-        "title": "Falsehoods Programmers Believe About LANs",
-        "url": "https://dreamstation.systems/personal/lanfalsehoods.html",
-        "source": "Hacker News",
-        "score": 3
+        "score": 125
       },
       {
         "title": "Discovery of a new OpenAI agent message board",
         "url": "https://collusion.wiki/",
         "source": "Hacker News",
-        "score": 2063
+        "score": 2089
+      },
+      {
+        "title": "Balrogg: Demonically compacting (up to 15%) lossless Vorbis/Opus recompressor",
+        "url": "https://github.com/iczelia/balrogg",
+        "source": "Hacker News",
+        "score": 55
       },
       {
         "title": "Actively exploited sandbox RCE in all Chromium versions",
         "url": "https://nvd.nist.gov/vuln/detail/cve-2026-85046",
         "source": "Hacker News",
-        "score": 730
+        "score": 739
       },
       {
         "title": "Nitter has more working instances than before the takedowns",
         "url": "https://codeberg.org/mv12star/shitter/wiki/Instances",
         "source": "Hacker News",
-        "score": 590
+        "score": 617
       },
       {
-        "title": "Isar Aerospace launch into orbit [video]",
-        "url": "https://www.youtube.com/watch?v=Ss1DUqLjecc",
+        "title": "LLMs as a Cognitive Virus",
+        "url": "https://arxiv.org/abs/2609.03344",
         "source": "Hacker News",
-        "score": 64
+        "score": 157
+      },
+      {
+        "title": "OKF Agent Memory – Git-native persistent memory for AI coding agents",
+        "url": "https://github.com/okf-memory/okf-agent-memory",
+        "source": "Hacker News",
+        "score": 20
+      },
+      {
+        "title": "Delidded Intel I9-14900KS CT Scan",
+        "url": "https://www.lttlabs.com/articles/2026/09/02/delidded-intel-i9-14900ks",
+        "source": "Hacker News",
+        "score": 56
       }
     ],
     "ai": [
@@ -101,73 +101,85 @@
         "title": "Finite time blowup for an averaged three-dimensional Navier-Stokes equation (2014)",
         "url": "https://terrytao.wordpress.com/2014/02/04/finite-time-blowup-for-an-averaged-three-dimensional-navier-stokes-equation/",
         "source": "Hacker News AI",
-        "score": 42
-      },
-      {
-        "title": "Show HN: Fly By – retro biplane flying game",
-        "url": "https://michaelteter.com/flyby.html",
-        "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "LLMs as a Cognitive Virus",
-        "url": "https://arxiv.org/abs/2609.03344",
-        "source": "Hacker News AI",
-        "score": 118
+        "score": 54
       },
       {
         "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
         "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
         "source": "Hacker News AI",
-        "score": 105
+        "score": 125
       },
       {
         "title": "Discovery of a new OpenAI agent message board",
         "url": "https://collusion.wiki/",
         "source": "Hacker News AI",
-        "score": 2063
+        "score": 2089
       },
       {
-        "title": "America's Two Largest School Districts Impose AI Moratoriums",
-        "url": "https://www.techpolicy.press/americas-two-largest-school-districts-impose-ai-moratoriums/",
+        "title": "LLMs as a Cognitive Virus",
+        "url": "https://arxiv.org/abs/2609.03344",
         "source": "Hacker News AI",
-        "score": 18
+        "score": 157
+      },
+      {
+        "title": "OKF Agent Memory – Git-native persistent memory for AI coding agents",
+        "url": "https://github.com/okf-memory/okf-agent-memory",
+        "source": "Hacker News AI",
+        "score": 20
+      },
+      {
+        "title": "Show HN: Fly By – retro biplane flying game",
+        "url": "https://michaelteter.com/flyby.html",
+        "source": "Hacker News AI",
+        "score": 33
       },
       {
         "title": "Can AI design circuit boards yet?",
         "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
         "source": "Hacker News AI",
-        "score": 360
+        "score": 376
       },
       {
         "title": "AI handles incidents, engineers lose touch with their systems",
         "url": "https://www.sylvainkalache.com/blog/ai-handles-incidents-engineers-lose-touch-with-their-systems",
         "source": "Hacker News AI",
-        "score": 361
+        "score": 364
+      },
+      {
+        "title": "America's two largest school districts impose AI moratoriums",
+        "url": "https://www.techpolicy.press/americas-two-largest-school-districts-impose-ai-moratoriums/",
+        "source": "Hacker News AI",
+        "score": 49
       },
       {
         "title": "GPT-6 Astra on OpenRouter",
         "url": "https://openrouter.ai/openai/gpt-6-astra",
         "source": "Hacker News AI",
-        "score": 296
+        "score": 300
+      },
+      {
+        "title": "Chrome again exempts Google from user site data settings",
+        "url": "https://lapcatsoftware.com/articles/2026/9/1.html",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "GPT-6 Astra",
         "url": "https://openai.com/index/gpt-6-astra/",
         "source": "Hacker News AI",
-        "score": 2216
+        "score": 2217
       },
       {
         "title": "Show HN: TERMy – A fast terminal assistant that does not use LLMs",
         "url": "https://github.com/gioblu/NPC-Forge/blob/main/docs/development.md",
         "source": "Hacker News AI",
-        "score": 185
+        "score": 187
       },
       {
         "title": "Portal by Spotify cut my Claude Code token usage by 90%",
         "url": "https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90",
         "source": "Hacker News AI",
-        "score": 242
+        "score": 244
       }
     ],
     "news": [
@@ -182,8 +194,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Mistrial declared in Lindsay Clancy murder case, after jury deadlocks ",
-        "url": "https://www.bbc.co.uk/news/articles/cpwlrj2je1po?at_medium=RSS&at_campaign=rss",
+        "title": "TV presenter among 11 sentenced to death in Egypt drugs case",
+        "url": "https://www.bbc.co.uk/news/articles/c5y7gk9knnlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -197,8 +209,8 @@
         "source": "BBC World"
       },
       {
-        "title": "TV presenter among 11 sentenced to death in Egypt drugs case",
-        "url": "https://www.bbc.co.uk/news/articles/c5y7gk9knnlo?at_medium=RSS&at_campaign=rss",
+        "title": "Mistrial declared in Lindsay Clancy murder case, after jury deadlocks ",
+        "url": "https://www.bbc.co.uk/news/articles/cpwlrj2je1po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -283,6 +295,16 @@
     ],
     "gaming": [
       {
+        "title": "17 Years Ago, Quentin Tarantino's Wildly Audacious WWII Action Classic Broke the Genre's Biggest Rule",
+        "url": "https://www.polygon.com/quentin-tarantino-inglourious-basterds-streaming-on-hulu/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Blood of Dawnwalker Fixes the Worst Thing About Open-World Games",
+        "url": "https://www.polygon.com/blood-dawnwalker-open-world-opinion/",
+        "source": "Polygon"
+      },
+      {
         "title": "Civilization 7 Officially Gets a Major Sci-Fi Update for 2027",
         "url": "https://www.polygon.com/civilization-7-earthrise-announcement/",
         "source": "Polygon"
@@ -305,16 +327,6 @@
       {
         "title": "7 R-Rated Action Movies That Are 10/10, No Notes",
         "url": "https://www.polygon.com/r-rated-action-movies-perfect-no-notes/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The 8 Biggest Manhunter Theories in 'Lanterns'",
-        "url": "https://www.polygon.com/who-is-the-manhunter-in-lanterns-8-best-theories/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The 5 Best Games That Still Aren't Officially Available in the US ",
-        "url": "https://www.polygon.com/5-best-games-not-available-us/",
         "source": "Polygon"
       }
     ],
