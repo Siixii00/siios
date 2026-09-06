@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-06T10:26:48.204908",
-    "total_items": 62
+    "last_updated": "2026-09-06T13:59:55.186372",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
+        "title": "Intellectual Fly Is Open",
+        "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
+        "source": "Hacker News",
+        "score": 141
+      },
+      {
         "title": "Isar Aerospace reaches orbit and deploys payloads on second flight",
         "url": "https://isaraerospace.com/press/history-for-european-spaceflight-isar-aerospace-reaches-orbit-and-deploys-payloads-on-second-flight",
         "source": "Hacker News",
-        "score": 153
+        "score": 330
+      },
+      {
+        "title": "Doomscrolling Ourselves to Death",
+        "url": "https://www.edwest.co.uk/p/doomscrolling-ourselves-to-death",
+        "source": "Hacker News",
+        "score": 85
+      },
+      {
+        "title": "M-DISC – DVD/Blu-ray compatible discs that may last up to 1000 years",
+        "url": "https://en.wikipedia.org/wiki/M-DISC",
+        "source": "Hacker News",
+        "score": 75
+      },
+      {
+        "title": "The many mysteries and lessons of the Bayeux tapestry",
+        "url": "https://economist.com/interactive/culture/2026/09/03/the-many-mysteries-and-lessons-of-the-bayeux-tapestry",
+        "source": "Hacker News",
+        "score": 4
       },
       {
         "title": "Cloud in a Bottle: making self-hosting accessible to everyone",
         "url": "https://cloudinabottle.org/blog/launch-post",
         "source": "Hacker News",
-        "score": 420
-      },
-      {
-        "title": "Play GTA Vice City in the Browser",
-        "url": "https://quenq.com/apps/vice-city-online/",
-        "source": "Hacker News",
-        "score": 57
-      },
-      {
-        "title": "Music Theory for Programmers",
-        "url": "https://runjs.app/blog/music-theory-for-programmers",
-        "source": "Hacker News",
-        "score": 139
+        "score": 493
       },
       {
         "title": "The revolt of the reader",
         "url": "https://bcantrill.dtrace.org/2026/09/05/the-revolt-of-the-reader/",
         "source": "Hacker News",
-        "score": 363
+        "score": 446
       },
       {
-        "title": "You Don't Have a Right to Safe Drinking Water, US Court Rules",
-        "url": "https://www.motherjones.com/politics/2026/09/drinking-water-mississippi-lawsuit/",
+        "title": "Music Theory for Programmers",
+        "url": "https://runjs.app/blog/music-theory-for-programmers",
         "source": "Hacker News",
-        "score": 90
+        "score": 216
+      },
+      {
+        "title": "I Changed My License",
+        "url": "https://bergie.iki.fi/blog/eupl/",
+        "source": "Hacker News",
+        "score": 104
       },
       {
         "title": "IBM Quantum Nighthawk R2",
         "url": "https://www.ibm.com/quantum/blog/nighthawk-r2",
         "source": "Hacker News",
-        "score": 13
+        "score": 40
+      },
+      {
+        "title": "The pencil case model of creativity",
+        "url": "https://dub.uu.nl/en/column/pencil-case-model-creativity",
+        "source": "Hacker News",
+        "score": 20
+      },
+      {
+        "title": "Household Laser Cuts",
+        "url": "https://cceckman.com/writing/household-laser-cuts/",
+        "source": "Hacker News",
+        "score": 14
       },
       {
         "title": "The ColorChecker, photography's most important 24 squares, turns 50",
         "url": "https://www.dpreview.com/news/the-colorchecker-photographys-most-important-24-squares-turns-50/",
         "source": "Hacker News",
-        "score": 64
-      },
-      {
-        "title": "AI, Tools and Transformation",
-        "url": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
-        "source": "Hacker News",
-        "score": 64
-      },
-      {
-        "title": "OpenBSD Stories: Strange Medieval Devices",
-        "url": "http://miod.online.fr/software/openbsd/stories/smd.html",
-        "source": "Hacker News",
-        "score": 64
-      },
-      {
-        "title": "Watch the 'Eclipse of the Century' Next Year When Spain, Egypt and More Go Dark",
-        "url": "https://www.nytimes.com/2026/08/13/travel/solar-eclipse-2027-morocco-egypt.html",
-        "source": "Hacker News",
-        "score": 27
+        "score": 97
       },
       {
         "title": "AMD Based FreeBSD Desktop Reloaded",
         "url": "https://vermaden.wordpress.com/2026/09/06/amd-based-freebsd-desktop-reloaded/",
         "source": "Hacker News",
-        "score": 54
+        "score": 80
       },
       {
-        "title": "Discovery of a new OpenAI agent message board",
-        "url": "https://collusion.wiki/",
+        "title": "AI, Tools and Transformation",
+        "url": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
         "source": "Hacker News",
-        "score": 2189
-      },
-      {
-        "title": "Learn Programming with OCaml",
-        "url": "https://usr.lmf.cnrs.fr/lpo/",
-        "source": "Hacker News",
-        "score": 255
-      },
-      {
-        "title": "Chrome again exempts Google from user site data settings",
-        "url": "https://lapcatsoftware.com/articles/2026/9/1.html",
-        "source": "Hacker News",
-        "score": 409
+        "score": 98
       }
     ],
     "ai": [
@@ -101,78 +101,66 @@
         "title": "AI, Tools and Transformation",
         "url": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
         "source": "Hacker News AI",
-        "score": 64
-      },
-      {
-        "title": "Watch the 'Eclipse of the Century' Next Year When Spain, Egypt and More Go Dark",
-        "url": "https://www.nytimes.com/2026/08/13/travel/solar-eclipse-2027-morocco-egypt.html",
-        "source": "Hacker News AI",
-        "score": 27
+        "score": 98
       },
       {
         "title": "Discovery of a new OpenAI agent message board",
         "url": "https://collusion.wiki/",
         "source": "Hacker News AI",
-        "score": 2189
+        "score": 2220
       },
       {
         "title": "Chrome again exempts Google from user site data settings",
         "url": "https://lapcatsoftware.com/articles/2026/9/1.html",
         "source": "Hacker News AI",
-        "score": 409
-      },
-      {
-        "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
-        "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
-        "source": "Hacker News AI",
-        "score": 175
-      },
-      {
-        "title": "GPT-6 Astra on robot arms",
-        "url": "https://openai.robocurve.org/gpt-6-astra/",
-        "source": "Hacker News AI",
-        "score": 188
+        "score": 481
       },
       {
         "title": "LLMs as a Cognitive Virus",
         "url": "https://arxiv.org/abs/2609.03344",
         "source": "Hacker News AI",
-        "score": 272
+        "score": 318
       },
       {
-        "title": "Can AI design circuit boards yet?",
-        "url": "https://eebench.org/blog/can-ai-design-circuit-boards-yet/",
+        "title": "Fileregister: Tagging and reference layer for your files, in plain text",
+        "url": "https://github.com/rhsev/fileregister",
         "source": "Hacker News AI",
-        "score": 408
+        "score": 4
+      },
+      {
+        "title": "Visualizing Rust's Vtables: How dyn Trait Works In Memory",
+        "url": "https://sofiabelen.github.io/projects/visualizing-rusts-vtables-how-dyn-trait-works-in-memory/",
+        "source": "Hacker News AI",
+        "score": 188
+      },
+      {
+        "title": "GPT-6 Astra on robot arms",
+        "url": "https://openai.robocurve.org/gpt-6-astra/",
+        "source": "Hacker News AI",
+        "score": 211
+      },
+      {
+        "title": "Don't Use a gmail.com Address",
+        "url": "https://crookedtimber.org/2026/09/03/dont-use-a-gmail-com-address/",
+        "source": "Hacker News AI",
+        "score": 37
       },
       {
         "title": "Finite time blowup for an averaged three-dimensional Navier-Stokes equation (2014)",
         "url": "https://terrytao.wordpress.com/2014/02/04/finite-time-blowup-for-an-averaged-three-dimensional-navier-stokes-equation/",
         "source": "Hacker News AI",
-        "score": 70
+        "score": 71
       },
       {
         "title": "GPT-6 Astra",
         "url": "https://openai.com/index/gpt-6-astra/",
         "source": "Hacker News AI",
-        "score": 2234
-      },
-      {
-        "title": "GPT-6 Astra on OpenRouter",
-        "url": "https://openrouter.ai/openai/gpt-6-astra",
-        "source": "Hacker News AI",
-        "score": 313
-      },
-      {
-        "title": "Show HN: Fly By – retro biplane flying game",
-        "url": "https://michaelteter.com/flyby.html",
-        "source": "Hacker News AI",
-        "score": 82
+        "score": 2239
       }
     ],
     "news": [
       {
-        "title": "US envoys set for Ukraine talks after meeting Putin in Russia",
+        "title": "US envoys meet Zelensky in Ukraine after talks with Putin in Russia",
         "url": "https://www.bbc.co.uk/news/articles/c6248nvqy8po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -209,6 +197,16 @@
     ],
     "art": [
       {
+        "title": " Alien: Isolation 2 continues the original 1979 film's aesthetic but takes the horror outside ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/alien-isolation-2-continues-the-original-1979-films-aesthetic-but-takes-the-horror-outside",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " TourBox Elite Plus review: Fast, customisable, and it even works with tablets ",
+        "url": "https://www.creativebloq.com/tech/tourbox-elite-plus-review-fast-customisable-and-it-even-works-with-tablets",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Animals from wildflowers? This unique illustration style shouldn't work, but it does - and here's why ",
         "url": "https://www.creativebloq.com/art/illustration/animals-from-wildflowers-this-unique-illustration-style-shouldnt-work-but-it-does-and-heres-why",
         "source": "Creative Bloq"
@@ -231,16 +229,6 @@
       {
         "title": " OpenAI's controversial ChatGPT-6 Astra advert paints a sad vision of the future ",
         "url": "https://www.creativebloq.com/ai/even-just-the-advert-for-chatgpt-6-astra-is-creating-controversy",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " 7 massive Labor Day laptop deals that are actually good enough for creatives ",
-        "url": "https://www.creativebloq.com/tech/laptops/7-massive-labor-day-laptop-deals-that-are-actually-good-enough-for-creatives",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " I enjoyed grappling with Stranger Than Heaven's unconventional combat, but I'd love to see more of its depiction of early 20th century Japan ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/i-enjoyed-grappling-with-stranger-than-heavens-unconventional-combat-but-i-would-love-to-see-more-of-its-depiction-of-early-20th-century-japan",
         "source": "Creative Bloq"
       }
     ],
@@ -283,6 +271,21 @@
     ],
     "gaming": [
       {
+        "title": "BG3's Best Evil Playthrough Replacement Is Waiting to Be Rediscovered on Steam",
+        "url": "https://www.polygon.com/tyranny-crpg-obsidian-baldurs-gate-3-evil-playthrough/",
+        "source": "Polygon"
+      },
+      {
+        "title": "GOTY 2026 is the Weakest Field in Years",
+        "url": "https://www.polygon.com/goty-2026-game-awards-blood-dawnwalker-onimusha-orbitals/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Most Shocking Anime Deaths Of The 21st Century",
+        "url": "https://www.polygon.com/most-shocking-character-deaths-anime-21st-century/",
+        "source": "Polygon"
+      },
+      {
         "title": "3 Games Where Your Choices Truly Matter",
         "url": "https://www.polygon.com/best-games-where-choices-matter/",
         "source": "Polygon"
@@ -300,21 +303,6 @@
       {
         "title": "Netflix's Near-Perfect 9-Part Gothic Thriller Is So Good You'll Finish in One Weekend",
         "url": "https://www.polygon.com/netflix-haunting-bly-manor-perfect-binge-september-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "30 Years Later, The X-Files' Most Terrifying Episode Is Still a Top 5 All-Time Sci-Fi Achievement",
-        "url": "https://www.polygon.com/x-files-scariest-episode-home/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fire Emblem Fortune's Weave Owes Everything to an Overlooked 3DS Masterpiece",
-        "url": "https://www.polygon.com/fire-emblem-echoes-shadow-valentia-retrospective/",
-        "source": "Polygon"
-      },
-      {
-        "title": "17 Years Ago, Quentin Tarantino's Wildly Audacious WWII Action Classic Broke the Genre's Biggest Rule",
-        "url": "https://www.polygon.com/quentin-tarantino-inglourious-basterds-streaming-on-hulu/",
         "source": "Polygon"
       }
     ],
