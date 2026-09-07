@@ -1,137 +1,171 @@
 {
   "metadata": {
-    "last_updated": "2026-09-07T03:23:22.771442",
-    "total_items": 55
+    "last_updated": "2026-09-07T09:01:32.978542",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
+        "title": "Keep Our Servers Running",
+        "url": "https://blog.archive.org/2026/09/01/keep-our-servers-running-your-recurring-donation-goes-3x-this-september/",
+        "source": "Hacker News",
+        "score": 398
+      },
+      {
         "title": "Making a Python interpreter in 1024 bytes",
         "url": "https://austinhenley.com/blog/python1024.html",
         "source": "Hacker News",
-        "score": 127
+        "score": 219
       },
       {
-        "title": "The NX bit is not just about security",
-        "url": "https://purplesyringa.moe/blog/guest/the-nx-bit-is-not-just-about-security/",
+        "title": "Programming is Art",
+        "url": "https://orchidfiles.com/programming-is-art/",
         "source": "Hacker News",
-        "score": 21
+        "score": 9
+      },
+      {
+        "title": "Ask HN: How do you manage skills files?",
+        "url": "https://news.ycombinator.com/item?id=49589914",
+        "source": "Hacker News",
+        "score": 110
       },
       {
         "title": "It took a year to ship WebAssembly in Anubis",
         "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
         "source": "Hacker News",
-        "score": 167
+        "score": 264
       },
       {
-        "title": "Your intellectual fly is open when you use an LLM to author a post (2025)",
-        "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
+        "title": "Ask HN: Fable hacked my piano, can I release the results?",
+        "url": "https://news.ycombinator.com/item?id=49577129",
         "source": "Hacker News",
-        "score": 570
+        "score": 148
       },
       {
-        "title": "Show HN: Mador – Make any DOM reactive with a tiny 80-line Proxy state tuple",
-        "url": "https://github.com/marsbos/mador",
+        "title": "Show HN: Engrim – A universal, local-first SQLite memory engine for AI CLIs",
+        "url": "https://github.com/timgordontg/engrim",
         "source": "Hacker News",
-        "score": 74
+        "score": 31
       },
       {
         "title": "Nitter and XCancel resume service after legal advice",
         "url": "https://github.com/zedeus/nitter/commit/1428b4c2b4246f92a7e5b2673438e5fb39fcc4a3",
         "source": "Hacker News",
-        "score": 518
+        "score": 724
       },
       {
-        "title": "Babylonian Lamb Stew with Beets (1750–1730 BCE)",
-        "url": "https://babylonian-collection.yale.edu/about/babylonian-cooking",
+        "title": "Show HN: GET Together – A social network where you don't need POST to Post",
+        "url": "https://gettogether.dev",
         "source": "Hacker News",
-        "score": 116
-      },
-      {
-        "title": "MathKernel: An evidence-aware multi-engine mathematics kernel and MCP server",
-        "url": "https://github.com/Staatsgeheim/MathKernel",
-        "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "Harnessing the Universal Geometry of Embeddings",
-        "url": "https://arxiv.org/abs/2505.12540",
-        "source": "Hacker News",
-        "score": 50
-      },
-      {
-        "title": "NetBSD 9.5 released and EOL for NetBSD-9",
-        "url": "https://blog.netbsd.org/tnf/entry/netbsd_9_5_released_and",
-        "source": "Hacker News",
-        "score": 117
+        "score": 49
       },
       {
         "title": "GrapheneOS Overhauled Default Apps and Secure Clipboard",
         "url": "https://grapheneos.social/@GrapheneOS/117225539756835649",
         "source": "Hacker News",
-        "score": 215
+        "score": 284
       },
       {
-        "title": "An Alien Mind",
-        "url": "https://openai.com/index/an-alien-mind/",
+        "title": "Has anybody seen my keys? A key-hierarchy strategy for rack-level security",
+        "url": "https://rfd.shared.oxide.computer/rfd/0301",
         "source": "Hacker News",
-        "score": 351
+        "score": 30
       },
       {
-        "title": "Ask HN: Why don't we bring back old school OkCupid?",
-        "url": "https://news.ycombinator.com/item?id=49582431",
+        "title": "Babylonian Lamb Stew with Beets (1750–1730 BCE)",
+        "url": "https://babylonian-collection.yale.edu/about/babylonian-cooking",
         "source": "Hacker News",
-        "score": 4
+        "score": 140
       },
       {
-        "title": "Black Hole of Los Alamos: Seller of surplus nuclear research materials (2011)",
-        "url": "https://www.atlasobscura.com/places/black-hole-of-los-alamos",
+        "title": "Harnessing the Universal Geometry of Embeddings",
+        "url": "https://arxiv.org/abs/2505.12540",
         "source": "Hacker News",
-        "score": 44
+        "score": 74
       },
       {
-        "title": "Asahi Linux on M3",
-        "url": "https://asahilinux.org/2026/09/m2-episode-1/",
+        "title": "TiVo to charge money for skipping commercials in your own recordings",
+        "url": "https://cordcuttersnews.com/tivo-plans-to-end-free-automatic-commercial-skipping-in-november-tests-paid-premium-replacement-service/",
         "source": "Hacker News",
-        "score": 374
+        "score": 61
+      },
+      {
+        "title": "NIXI has killed the \"Dot In\" domain name (2025)",
+        "url": "https://www.naavi.org/wp/nixi-has-killed-the-dot-in-domain-name/",
+        "source": "Hacker News",
+        "score": 7
       }
     ],
     "ai": [
       {
-        "title": "Your intellectual fly is open when you use an LLM to author a post (2025)",
-        "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
+        "title": "Show HN: Engrim – A universal, local-first SQLite memory engine for AI CLIs",
+        "url": "https://github.com/timgordontg/engrim",
         "source": "Hacker News AI",
-        "score": 570
+        "score": 31
       },
       {
         "title": "Harnessing the Universal Geometry of Embeddings",
         "url": "https://arxiv.org/abs/2505.12540",
         "source": "Hacker News AI",
-        "score": 50
+        "score": 74
+      },
+      {
+        "title": "NIXI has killed the \"Dot In\" domain name (2025)",
+        "url": "https://www.naavi.org/wp/nixi-has-killed-the-dot-in-domain-name/",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Research acceleration: The view inside OpenAI",
         "url": "https://openai.com/index/research-acceleration-view-inside-openai",
         "source": "Hacker News AI",
-        "score": 126
+        "score": 170
       },
       {
         "title": "Reverse engineering the storage format for an undocumented database",
         "url": "https://blog.glazer.ee/posts/converting-cronos/",
         "source": "Hacker News AI",
-        "score": 29
+        "score": 52
       },
       {
-        "title": "AI, Tools and Transformation",
-        "url": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
+        "title": "Coop – Isolated VM Environments for Running Claude Code and Codex",
+        "url": "https://github.com/trailofbits/coop",
         "source": "Hacker News AI",
-        "score": 148
+        "score": 20
+      },
+      {
+        "title": "Your intellectual fly is open when you use an LLM to author a post (2025)",
+        "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
+        "source": "Hacker News AI",
+        "score": 643
+      },
+      {
+        "title": "ripwire: ripgrep of AI context (CLI+MCP) giving coding agents a map of any repo",
+        "url": "https://github.com/redhat-et/ripwire",
+        "source": "Hacker News AI",
+        "score": 11
+      },
+      {
+        "title": "US Republicans revolt against Flock AI surveillance as backlash intensifies",
+        "url": "https://www.ft.com/content/b207536e-6def-4080-878f-d0eba61d11e0",
+        "source": "Hacker News AI",
+        "score": 24
       }
     ],
     "news": [
       {
-        "title": "Germany's far-right AfD set for big win in eastern state, just short of majority",
+        "title": "Germany's far-right AfD hails big victory in east, but falls short of majority",
         "url": "https://www.bbc.co.uk/news/articles/cy4zejgz3z9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Israeli strikes in southern Lebanese village kill nine",
+        "url": "https://www.bbc.co.uk/news/articles/c5yl96vz0edo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "New videos of man in 9/11 lawsuit reveal extremist links",
+        "url": "https://www.bbc.co.uk/news/articles/cr4vn1e207go?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -145,18 +179,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Peace talks rich in symbolism but fundamental differences between Russia and Ukraine remain",
-        "url": "https://www.bbc.co.uk/news/articles/c980j5m8mpro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Volcano eruption leaves 170,000 passengers stranded in Indonesia",
-        "url": "https://www.bbc.co.uk/news/articles/cvgy5k4n07ko?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Dozens feared trapped in collapsed building in Delhi",
-        "url": "https://www.bbc.co.uk/news/articles/c8r6ezx1jmro?at_medium=RSS&at_campaign=rss",
+        "title": "Indonesia volcano eruption leaves 270,000 stranded as airports extend closure",
+        "url": "https://www.bbc.co.uk/news/articles/czezydp4l97o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -166,6 +190,21 @@
       }
     ],
     "art": [
+      {
+        "title": " How Unreal Engine 5 allowed Hell Let Loose: Vietnam to capture the density of the jungle with incredible fidelity ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/how-hell-let-loose-vietnam-captures-jungles-and-rice-fields-with-incredible-realism-in-unreal-engine-5",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " TourBox NEO review: Customisable and comprehensive without breaking the bank ",
+        "url": "https://www.creativebloq.com/tech/tourbox-neo-review-customisable-and-comprehensive-without-breaking-the-bank",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " As a longtime fan, I was disappointed with the Crazy Taxi: World Tour Gamescom demo ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/as-a-longtime-fan-i-was-disappointed-with-the-crazy-taxi-world-tour-gamescom-demo",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The Labor Day Apple deals are terrible this year, but these are the best around ",
         "url": "https://www.creativebloq.com/professional-development/creative-careers/apple-labor-day-deals-are-terrible-this-year-but-these-are-the-best-around",
@@ -182,23 +221,8 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " Animals from wildflowers? This unique illustration style shouldn't work, but it does - and here's why ",
-        "url": "https://www.creativebloq.com/art/illustration/animals-from-wildflowers-this-unique-illustration-style-shouldnt-work-but-it-does-and-heres-why",
-        "source": "Creative Bloq"
-      },
-      {
         "title": " This indie tactics game is a tribute to 80s glam metal with some ingenious low-tech solutions ",
         "url": "https://www.creativebloq.com/entertainment/gaming/this-indie-tactics-game-takes-you-back-to-1990-paying-tribute-to-80s-american-glam-metal",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Someone's making Doom 3 BFG edition with DLSS 5 ",
-        "url": "https://www.creativebloq.com/3d/someones-making-doom-3-bfg-edition-with-dlss-5",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The best budget AI laptops under $1,000: Your laptop should make your life easier! ",
-        "url": "https://www.creativebloq.com/tech/laptops/the-best-budget-ai-laptops-under-usd1-000-let-your-laptop-make-your-life-easier",
         "source": "Creative Bloq"
       }
     ],
@@ -241,6 +265,21 @@
     ],
     "gaming": [
       {
+        "title": "The 10 Most Important Movies Coming This Fall",
+        "url": "https://www.polygon.com/top-10-most-anticipated-movies-of-fall-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "15 Biggest New Video Games Releasing This Fall That Will Define 2026",
+        "url": "https://www.polygon.com/new-video-games-fall-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Brandon Sanderson Reveals the Fatal Fantasy Mistake That Derailed Game of Thrones",
+        "url": "https://www.polygon.com/brandon-sanderson-game-of-thrones-fantasy-mistake/",
+        "source": "Polygon"
+      },
+      {
         "title": "How to Watch Nintendo's Zelda 40th Anniversary Direct",
         "url": "https://www.polygon.com/nintendo-zelda-direct-date-time-september-2026/",
         "source": "Polygon"
@@ -258,21 +297,6 @@
       {
         "title": "Lanterns Episode 4 Explained: Who Is Hector Hammond?",
         "url": "https://www.polygon.com/lanterns-hector-hammond-explainer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fans Suspect DC's Official Wonder Woman Replacement Has Been Revealed",
-        "url": "https://www.polygon.com/wonder-woman-dcu-james-gunn-adria-arjona-maxima/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Christopher Nolan's Greatest Sci-Fi Action Masterpiece Is Officially Free to Watch on YouTube",
-        "url": "https://www.polygon.com/christopher-nolan-sci-fi-inception-free-on-youtube/",
-        "source": "Polygon"
-      },
-      {
-        "title": "New 85% on Metacritic Fantasy Action Game Just Shot Up to No. 1 on Steam Overnight",
-        "url": "https://www.polygon.com/steam-ominusha-way-of-the-sword-number-1-game/",
         "source": "Polygon"
       }
     ],
