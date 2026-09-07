@@ -1,149 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-09-07T15:33:45.172317",
-    "total_items": 58
+    "last_updated": "2026-09-07T19:39:00.338385",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "De-Brainrot Vacations",
-        "url": "https://devz.cl/posts/i-spent-my-vacations-de-brainrotting/",
+        "title": "Watch Los Angeles get built, one building at a time (1880–2026)",
+        "url": "https://lax-skyline.parcelscope.net/",
         "source": "Hacker News",
-        "score": 246
+        "score": 44
       },
       {
         "title": "bzip3",
         "url": "https://github.com/iczelia/bzip3",
         "source": "Hacker News",
-        "score": 99
+        "score": 295
       },
       {
         "title": "Keep Our Servers Running",
         "url": "https://blog.archive.org/2026/09/01/keep-our-servers-running-your-recurring-donation-goes-3x-this-september/",
         "source": "Hacker News",
-        "score": 736
-      },
-      {
-        "title": "Caltech Mathathon – first hackathon ever devoted to research level mathematics",
-        "url": "https://mathathonchallenge.com/index.html",
-        "source": "Hacker News",
-        "score": 117
-      },
-      {
-        "title": "Splash-free urinals (2025)",
-        "url": "https://academic.oup.com/pnasnexus/article/4/4/pgaf087/8098745?login=false",
-        "source": "Hacker News",
-        "score": 131
-      },
-      {
-        "title": "Live map of public transport in Belgium",
-        "url": "https://openbaarvervoerbelgie.be/",
-        "source": "Hacker News",
-        "score": 123
+        "score": 871
       },
       {
         "title": "Simple Is Not Small",
         "url": "https://jyn.dev/simple-is-not-the-same-as-small/",
         "source": "Hacker News",
-        "score": 29
+        "score": 124
       },
       {
-        "title": "Smartphone makers don't bother to comply with EU repairability requirements",
-        "url": "https://www.theregister.com/personal-tech/2026/09/07/smartphone-makers-dont-bother-to-comply-with-eu-repairability-requirements/5294532",
+        "title": "PostgreSQL 19 Interactive Tour",
+        "url": "https://victoriametrics.com/blog/postgres-19/index.html",
         "source": "Hacker News",
-        "score": 159
+        "score": 54
       },
       {
-        "title": "Speculative Decoding in vLLM on AMD GPUs",
-        "url": "https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus",
+        "title": "Caltech Mathathon – first hackathon ever devoted to research level mathematics",
+        "url": "https://mathathonchallenge.com/index.html",
         "source": "Hacker News",
-        "score": 76
+        "score": 181
       },
       {
-        "title": "LG smart TVs caught logging audio with screen off and snooping on local devices",
-        "url": "https://www.notebookcheck.net/LG-smart-TVs-caught-logging-audio-with-screen-off-and-snooping-on-local-devices.1391214.0.html",
+        "title": "Decoding the NEC V20 Microcode",
+        "url": "https://martypc.blogspot.com/2026/09/decoding-nec-v20-microcode.html",
         "source": "Hacker News",
-        "score": 696
+        "score": 58
       },
       {
-        "title": "Impedance Matching (2017)",
-        "url": "https://www.edge.org/response-detail/27238",
+        "title": "The Dataflow Model Revisited",
+        "url": "https://www.vldb.org/pvldb/volumes/19/paper/The%20Dataflow%20Model%20Revisited",
         "source": "Hacker News",
-        "score": 51
+        "score": 53
       },
       {
-        "title": "Tiny $70 Xteink X3 e-reader",
-        "url": "https://www.theatlantic.com/technology/2026/09/xteink-e-reader-best-technology-years/688539/",
+        "title": "C Is Not a Low-Level Language (2018)",
+        "url": "https://queue.acm.org/doi/10.1145/3212477.3212479",
         "source": "Hacker News",
-        "score": 127
+        "score": 65
       },
       {
-        "title": "Making a Python interpreter in 1024 bytes",
-        "url": "https://austinhenley.com/blog/python1024.html",
+        "title": "Tesla killing Solar Roof is leaving installers with six-figure losses",
+        "url": "https://electrek.co/2026/09/01/tesla-solar-roof-exit-installers-losses/",
         "source": "Hacker News",
-        "score": 278
+        "score": 20
       },
       {
-        "title": "I Connected My Withings Body+ to Home Assistant with an ESP32",
-        "url": "https://didac.dev/blog/i-made-my-withings-scale-sync-to-home-assistant-without-the-cloud",
+        "title": "No constitutional right to clean water, federal court finds",
+        "url": "https://www.usatoday.com/story/news/nation/2026/09/07/court-constitution-right-clean-water/91649488007/",
         "source": "Hacker News",
-        "score": 42
+        "score": 98
       },
       {
-        "title": "Ask HN: How do you manage skills files?",
-        "url": "https://news.ycombinator.com/item?id=49589914",
+        "title": "Methods for Random Gradients",
+        "url": "https://justinjay.wang/methods-for-random-gradients/",
         "source": "Hacker News",
-        "score": 222
+        "score": 8
+      },
+      {
+        "title": "Show HN: HomeCat – Design your backyard office",
+        "url": "https://myhomecat.com",
+        "source": "Hacker News",
+        "score": 6
+      },
+      {
+        "title": "Live map of public transport in Belgium",
+        "url": "https://openbaarvervoerbelgie.be/",
+        "source": "Hacker News",
+        "score": 162
+      },
+      {
+        "title": "216M Spy TVs – The LG Smart TV Problem [video]",
+        "url": "https://www.youtube.com/watch?v=6IFVTcM28KA",
+        "source": "Hacker News",
+        "score": 184
       }
     ],
     "ai": [
       {
+        "title": "Speculative Decoding in vLLM on AMD GPUs",
+        "url": "https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus",
+        "source": "Hacker News AI",
+        "score": 114
+      },
+      {
         "title": "De-Brainrot Vacations",
         "url": "https://devz.cl/posts/i-spent-my-vacations-de-brainrotting/",
         "source": "Hacker News AI",
-        "score": 246
+        "score": 432
       },
       {
         "title": "Smartphone makers don't bother to comply with EU repairability requirements",
         "url": "https://www.theregister.com/personal-tech/2026/09/07/smartphone-makers-dont-bother-to-comply-with-eu-repairability-requirements/5294532",
         "source": "Hacker News AI",
-        "score": 159
+        "score": 243
       },
       {
-        "title": "Speculative Decoding in vLLM on AMD GPUs",
-        "url": "https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus",
+        "title": "Tell HN: OpenAI brings back 5 hour limit for plus and business standard users",
+        "url": "https://news.ycombinator.com/item?id=49600233",
         "source": "Hacker News AI",
-        "score": 76
+        "score": 106
       },
       {
-        "title": "Show HN: Engrim – A universal, local-first SQLite memory engine for AI CLIs",
-        "url": "https://github.com/timgordontg/engrim",
+        "title": "AI models ran real businesses: They sent $12,431 in fake invoices, lost $3,200",
+        "url": "https://www.bottlenecklabs.com/blog/benchmarking-7-autonomous-businesses",
         "source": "Hacker News AI",
-        "score": 67
+        "score": 88
+      },
+      {
+        "title": "Show HN: Send flowers from your AI agent and make your mum happy",
+        "url": "https://news.ycombinator.com/item?id=49599559",
+        "source": "Hacker News AI",
+        "score": 10
       },
       {
         "title": "Harnessing the Universal Geometry of Embeddings",
         "url": "https://arxiv.org/abs/2505.12540",
         "source": "Hacker News AI",
-        "score": 106
+        "score": 109
       },
       {
         "title": "Research acceleration: The view inside OpenAI",
         "url": "https://openai.com/index/research-acceleration-view-inside-openai",
         "source": "Hacker News AI",
-        "score": 194
+        "score": 201
       },
       {
         "title": "Your intellectual fly is open when you use an LLM to author a post (2025)",
         "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
         "source": "Hacker News AI",
-        "score": 679
-      },
-      {
-        "title": "Reverse engineering the storage format for an undocumented database",
-        "url": "https://blog.glazer.ee/posts/converting-cronos/",
-        "source": "Hacker News AI",
-        "score": 60
+        "score": 698
       }
     ],
     "news": [
@@ -153,23 +159,23 @@
         "source": "BBC World"
       },
       {
+        "title": "Thousands turn out in Serbia for funeral of  'Butcher of Bosnia' Ratko Mladić",
+        "url": "https://www.bbc.co.uk/news/articles/cn5dkk7yw74o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Israeli strikes in southern Lebanese village kill 12",
         "url": "https://www.bbc.co.uk/news/articles/c5yl96vz0edo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "New videos of man in 9/11 lawsuit reveal extremist links",
-        "url": "https://www.bbc.co.uk/news/articles/cr4vn1e207go?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Probe begins into why cargo plane overran Miami runway",
+        "title": "Investigators begin work on why cargo plane overran Miami runway",
         "url": "https://www.bbc.co.uk/news/articles/c0e3p1j7n3ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Kyiv air raid alerts at record high as Russia launches round-the-clock strikes",
-        "url": "https://www.bbc.co.uk/news/articles/cjdvx9pz44ro?at_medium=RSS&at_campaign=rss",
+        "title": "Grindr to pay £26m to settle claims it allegedly shared users' HIV status",
+        "url": "https://www.bbc.co.uk/news/articles/cn8e63qdqwzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -178,12 +184,37 @@
         "source": "BBC World"
       },
       {
-        "title": "Austria's Islamic headscarf ban in force as under-14s go back to school",
-        "url": "https://www.bbc.co.uk/news/articles/cwyz74xn8q8o?at_medium=RSS&at_campaign=rss",
+        "title": "New videos of man in 9/11 lawsuit reveal extremist links",
+        "url": "https://www.bbc.co.uk/news/articles/cr4vn1e207go?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Frame TVs have up to $1,000 off for Labor Day, and the deals end soon ",
+        "url": "https://www.creativebloq.com/tech/frame-tvs-have-up-to-usd1-000-off-for-labor-day-and-the-deals-end-soon",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This gorgeous fountain pen is nearly 50% off for Labor Day ",
+        "url": "https://www.creativebloq.com/design/product-design/this-gorgeous-fountain-pen-is-nearly-50-percent-off-for-labor-day",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The best Labor Day speaker deals starting from $60 ",
+        "url": "https://www.creativebloq.com/tech/the-best-labor-day-speaker-deals-starting-from-usd60",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Can NVIDIA and Adobe work together to get creatives to actually like AI? ",
+        "url": "https://www.creativebloq.com/ai/can-nvidia-and-adobe-work-together-to-get-creatives-to-actually-like-ai",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Hand-picked Labor Day savings to upgrade your desktop for a fresh start ",
+        "url": "https://www.creativebloq.com/tech/peripherals/hand-picked-labor-day-savings-to-upgrade-your-desktop-for-a-fresh-start",
+        "source": "Creative Bloq"
+      },
       {
         "title": " I saw NVIDIA's new AI video tool: why RTX Spark’s half‑frame trick might actually matter... and why creatives are right to be wary ",
         "url": "https://www.creativebloq.com/ai/i-saw-nvidias-new-ai-video-tool-why-rtx-sparks-half-frame-trick-might-actually-matter-and-why-creatives-are-right-to-be-wary",
@@ -192,31 +223,6 @@
       {
         "title": " Maryland University tangled in unlikely logo dispute ",
         "url": "https://www.creativebloq.com/design/logos-icons/maryland-university-tangled-in-unlikely-logo-dispute",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Save up to 52% on creative tech from Creality this Labor Day ",
-        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/save-up-to-52-percent-on-creative-tech-from-creality-this-labor-day",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How two tweets cost Elon Musk the Twitter logo ",
-        "url": "https://www.creativebloq.com/design/logos-icons/how-two-tweets-cost-elon-musk-the-twitter-logo",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Clever and comfortable, the Bose QC Ultra 2 offers custom tuning and has $70 off for Labor Day ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/clever-and-comfortable-the-bose-qc-ultra-2-offers-custom-tuning-and-has-usd70-off-for-labor-day",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The vibrant markers perfect for everyone from pro artists to children are reduced by up to 26% for Labor Day ",
-        "url": "https://www.creativebloq.com/art/art-supplies/the-vibrant-markers-perfect-for-everyone-from-pro-artists-to-children-are-reduced-by-up-to-26-percent-for-labor-day",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Huion's new Kamvas Pad 12 could fix the biggest problem with Android tablets for art ",
-        "url": "https://www.creativebloq.com/art/digital-art/huions-new-kamvas-pad-12-could-fix-the-biggest-problem-with-android-tablets-for-art",
         "source": "Creative Bloq"
       }
     ],
@@ -259,6 +265,26 @@
     ],
     "gaming": [
       {
+        "title": "Lovecraft Horror Meets Snowpiercer in One of 2026’s Biggest Hidden Gems",
+        "url": "https://www.polygon.com/dreadline-express-preview-gamescom-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Best New TV Shows to Watch This Fall 2026",
+        "url": "https://www.polygon.com/new-tv-shows-fall-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Practical Magic 2 First Look: A New Generation of Witches Emerges",
+        "url": "https://www.polygon.com/practical-magic-2-exclusive-image/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Dungeon Crawler Carl meets The Finals in this wild new FPS",
+        "url": "https://www.polygon.com/like-or-die-preview-gamescom-2026/",
+        "source": "Polygon"
+      },
+      {
         "title": "Resident Evil Director Zach Cregger Confirms He Already Has Sequels in Mind",
         "url": "https://www.polygon.com/resident-evil-2026-movie-sequels-zach-cregger/",
         "source": "Polygon"
@@ -271,26 +297,6 @@
       {
         "title": "26 Years Later, the Best 'Dilbert' Quote Remains a Comic Strip Classic Despite Its Controversial Creator",
         "url": "https://www.polygon.com/best-dilbert-comic-strip-quote/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Sexy Fire Emblem-Inspired Game Food Devils Officially Claims November Release",
-        "url": "https://www.polygon.com/food-devils-exclusive-release-date-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Slay the Spire Fans Need to Devour This New Game for Art Alone",
-        "url": "https://www.polygon.com/shroom-gloom-new-deckbuilder-2026-preview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Mr. Jambo's Kyle Gordon Reveals His Terrible Video Game Inspirations",
-        "url": "https://www.polygon.com/mr-jambo-kyle-gordon-shelf-quest/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Dreamworks Unveils Its Dreamiest Animated Character Since Shrek",
-        "url": "https://www.polygon.com/forgotten-island-exclusive-image/",
         "source": "Polygon"
       }
     ],
