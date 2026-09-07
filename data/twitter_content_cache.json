@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-07T19:39:00.338385",
-    "total_items": 59
+    "last_updated": "2026-09-07T22:35:02.855706",
+    "total_items": 57
   },
   "content": {
     "tech": [
@@ -9,150 +9,148 @@
         "title": "Watch Los Angeles get built, one building at a time (1880–2026)",
         "url": "https://lax-skyline.parcelscope.net/",
         "source": "Hacker News",
-        "score": 44
+        "score": 153
       },
       {
-        "title": "bzip3",
-        "url": "https://github.com/iczelia/bzip3",
+        "title": "Trusting-Trust Attack against an Entire Linux Distribution",
+        "url": "https://arxiv.org/abs/2607.24888",
         "source": "Hacker News",
-        "score": 295
+        "score": 94
       },
       {
-        "title": "Keep Our Servers Running",
-        "url": "https://blog.archive.org/2026/09/01/keep-our-servers-running-your-recurring-donation-goes-3x-this-september/",
+        "title": "WeatherNext 3",
+        "url": "https://deepmind.google/science/weathernext/",
         "source": "Hacker News",
-        "score": 871
+        "score": 165
       },
       {
-        "title": "Simple Is Not Small",
-        "url": "https://jyn.dev/simple-is-not-the-same-as-small/",
+        "title": "Finding a bug in Dummit and Foote's Abstract Algebra",
+        "url": "https://kallus.org/blog/dummit_and_foote.html",
         "source": "Hacker News",
-        "score": 124
+        "score": 50
       },
       {
-        "title": "PostgreSQL 19 Interactive Tour",
-        "url": "https://victoriametrics.com/blog/postgres-19/index.html",
+        "title": "Scientists observe Einstein's gravity in the quantum world",
+        "url": "https://www.ox.ac.uk/news/2026-08-28-scientists-observe-einsteins-gravity-in-the-quantum-world",
         "source": "Hacker News",
-        "score": 54
+        "score": 79
       },
       {
-        "title": "Caltech Mathathon – first hackathon ever devoted to research level mathematics",
-        "url": "https://mathathonchallenge.com/index.html",
+        "title": "The smallest edge AI device for local LLMs",
+        "url": "https://tiiny.ai/",
         "source": "Hacker News",
-        "score": 181
+        "score": 17
       },
       {
-        "title": "Decoding the NEC V20 Microcode",
-        "url": "https://martypc.blogspot.com/2026/09/decoding-nec-v20-microcode.html",
+        "title": "Show HN: Interactive Tree of Life",
+        "url": "https://ptree.org/",
         "source": "Hacker News",
-        "score": 58
+        "score": 26
       },
       {
-        "title": "The Dataflow Model Revisited",
-        "url": "https://www.vldb.org/pvldb/volumes/19/paper/The%20Dataflow%20Model%20Revisited",
+        "title": "Macbeth and His Problems",
+        "url": "https://porticoquarterly.com/essay/macbeth-and-his-problems/",
         "source": "Hacker News",
-        "score": 53
+        "score": 22
       },
       {
-        "title": "C Is Not a Low-Level Language (2018)",
-        "url": "https://queue.acm.org/doi/10.1145/3212477.3212479",
-        "source": "Hacker News",
-        "score": 65
-      },
-      {
-        "title": "Tesla killing Solar Roof is leaving installers with six-figure losses",
-        "url": "https://electrek.co/2026/09/01/tesla-solar-roof-exit-installers-losses/",
-        "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "No constitutional right to clean water, federal court finds",
-        "url": "https://www.usatoday.com/story/news/nation/2026/09/07/court-constitution-right-clean-water/91649488007/",
-        "source": "Hacker News",
-        "score": 98
-      },
-      {
-        "title": "Methods for Random Gradients",
+        "title": "Methods for Random Gradients (2024)",
         "url": "https://justinjay.wang/methods-for-random-gradients/",
         "source": "Hacker News",
-        "score": 8
-      },
-      {
-        "title": "Show HN: HomeCat – Design your backyard office",
-        "url": "https://myhomecat.com",
-        "source": "Hacker News",
-        "score": 6
-      },
-      {
-        "title": "Live map of public transport in Belgium",
-        "url": "https://openbaarvervoerbelgie.be/",
-        "source": "Hacker News",
-        "score": 162
+        "score": 40
       },
       {
         "title": "216M Spy TVs – The LG Smart TV Problem [video]",
         "url": "https://www.youtube.com/watch?v=6IFVTcM28KA",
         "source": "Hacker News",
-        "score": 184
+        "score": 387
+      },
+      {
+        "title": "Decoding the NEC V20 Microcode",
+        "url": "https://martypc.blogspot.com/2026/09/decoding-nec-v20-microcode.html",
+        "source": "Hacker News",
+        "score": 100
+      },
+      {
+        "title": "Decapitating a MacBook (2025)",
+        "url": "https://mm-dev.rocks/series/decapitating-macbook-an-odyssey/",
+        "source": "Hacker News",
+        "score": 43
+      },
+      {
+        "title": "Caltech Mathathon – first hackathon ever devoted to research level mathematics",
+        "url": "https://mathathonchallenge.com/index.html",
+        "source": "Hacker News",
+        "score": 209
+      },
+      {
+        "title": "Simple Is Not Small",
+        "url": "https://jyn.dev/simple-is-not-the-same-as-small/",
+        "source": "Hacker News",
+        "score": 166
+      },
+      {
+        "title": "Icy Moons Are Ocean Worlds",
+        "url": "https://mceglowski.substack.com/p/icy-moons-are-ocean-worlds",
+        "source": "Hacker News",
+        "score": 106
       }
     ],
     "ai": [
       {
+        "title": "Trusting-Trust Attack against an Entire Linux Distribution",
+        "url": "https://arxiv.org/abs/2607.24888",
+        "source": "Hacker News AI",
+        "score": 94
+      },
+      {
+        "title": "The smallest edge AI device for local LLMs",
+        "url": "https://tiiny.ai/",
+        "source": "Hacker News AI",
+        "score": 17
+      },
+      {
         "title": "Speculative Decoding in vLLM on AMD GPUs",
         "url": "https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus",
         "source": "Hacker News AI",
-        "score": 114
+        "score": 125
       },
       {
-        "title": "De-Brainrot Vacations",
-        "url": "https://devz.cl/posts/i-spent-my-vacations-de-brainrotting/",
+        "title": "Initial effects of AI technology on employment look positive",
+        "url": "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
         "source": "Hacker News AI",
-        "score": 432
+        "score": 60
       },
       {
         "title": "Smartphone makers don't bother to comply with EU repairability requirements",
         "url": "https://www.theregister.com/personal-tech/2026/09/07/smartphone-makers-dont-bother-to-comply-with-eu-repairability-requirements/5294532",
         "source": "Hacker News AI",
-        "score": 243
+        "score": 266
       },
       {
-        "title": "Tell HN: OpenAI brings back 5 hour limit for plus and business standard users",
-        "url": "https://news.ycombinator.com/item?id=49600233",
+        "title": "De-Brainrot Vacations",
+        "url": "https://devz.cl/posts/i-spent-my-vacations-de-brainrotting/",
         "source": "Hacker News AI",
-        "score": 106
+        "score": 453
       },
       {
-        "title": "AI models ran real businesses: They sent $12,431 in fake invoices, lost $3,200",
-        "url": "https://www.bottlenecklabs.com/blog/benchmarking-7-autonomous-businesses",
+        "title": "El Yayster – a resident LLM that inhabits Emacs",
+        "url": "https://github.com/yayster/yayster.el",
         "source": "Hacker News AI",
-        "score": 88
-      },
-      {
-        "title": "Show HN: Send flowers from your AI agent and make your mum happy",
-        "url": "https://news.ycombinator.com/item?id=49599559",
-        "source": "Hacker News AI",
-        "score": 10
-      },
-      {
-        "title": "Harnessing the Universal Geometry of Embeddings",
-        "url": "https://arxiv.org/abs/2505.12540",
-        "source": "Hacker News AI",
-        "score": 109
-      },
-      {
-        "title": "Research acceleration: The view inside OpenAI",
-        "url": "https://openai.com/index/research-acceleration-view-inside-openai",
-        "source": "Hacker News AI",
-        "score": 201
-      },
-      {
-        "title": "Your intellectual fly is open when you use an LLM to author a post (2025)",
-        "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
-        "source": "Hacker News AI",
-        "score": 698
+        "score": 4
       }
     ],
     "news": [
+      {
+        "title": "Flight recorders recovered from 'devastating' Amazon cargo plane crash",
+        "url": "https://www.bbc.co.uk/news/articles/ce8e32n8epeo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Palestinian parents fear for children's lives at school as settler attacks grow",
+        "url": "https://www.bbc.co.uk/news/articles/c3wj45g73g1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Germany's far-right AfD says 'democracy demands' parties work with them after state election win",
         "url": "https://www.bbc.co.uk/news/articles/cpd0113082eo?at_medium=RSS&at_campaign=rss",
@@ -169,11 +167,6 @@
         "source": "BBC World"
       },
       {
-        "title": "Investigators begin work on why cargo plane overran Miami runway",
-        "url": "https://www.bbc.co.uk/news/articles/c0e3p1j7n3ro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Grindr to pay £26m to settle claims it allegedly shared users' HIV status",
         "url": "https://www.bbc.co.uk/news/articles/cn8e63qdqwzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -182,14 +175,14 @@
         "title": "Nepal observes national day of mourning for victims of flash flood disaster",
         "url": "https://www.bbc.co.uk/news/articles/c2kw1qek7gdo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "New videos of man in 9/11 lawsuit reveal extremist links",
-        "url": "https://www.bbc.co.uk/news/articles/cr4vn1e207go?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The best Labor Day drawing tablet deals include pen displays from just $149 ",
+        "url": "https://www.creativebloq.com/art/digital-art/the-best-labor-day-drawing-tablet-deals-include-pen-displays-from-just-usd149",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Frame TVs have up to $1,000 off for Labor Day, and the deals end soon ",
         "url": "https://www.creativebloq.com/tech/frame-tvs-have-up-to-usd1-000-off-for-labor-day-and-the-deals-end-soon",
@@ -218,11 +211,6 @@
       {
         "title": " I saw NVIDIA's new AI video tool: why RTX Spark’s half‑frame trick might actually matter... and why creatives are right to be wary ",
         "url": "https://www.creativebloq.com/ai/i-saw-nvidias-new-ai-video-tool-why-rtx-sparks-half-frame-trick-might-actually-matter-and-why-creatives-are-right-to-be-wary",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Maryland University tangled in unlikely logo dispute ",
-        "url": "https://www.creativebloq.com/design/logos-icons/maryland-university-tangled-in-unlikely-logo-dispute",
         "source": "Creative Bloq"
       }
     ],
@@ -265,6 +253,16 @@
     ],
     "gaming": [
       {
+        "title": "Where to Play Every Grand Theft Auto Game in 2026",
+        "url": "https://www.polygon.com/gta-games-grand-theft-auto-where-to-play-all-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Cemetery Boys Sequel Reveals a Critical Role Connection New Reveal",
+        "url": "https://www.polygon.com/cemetery-boys-espiritu-excerpt-aiden-thomas/",
+        "source": "Polygon"
+      },
+      {
         "title": "Lovecraft Horror Meets Snowpiercer in One of 2026’s Biggest Hidden Gems",
         "url": "https://www.polygon.com/dreadline-express-preview-gamescom-2026/",
         "source": "Polygon"
@@ -287,16 +285,6 @@
       {
         "title": "Resident Evil Director Zach Cregger Confirms He Already Has Sequels in Mind",
         "url": "https://www.polygon.com/resident-evil-2026-movie-sequels-zach-cregger/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Resident Evil's Zach Cregger: What Being 'Faithful' Really Means",
-        "url": "https://www.polygon.com/zach-cregger-resident-evil-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "26 Years Later, the Best 'Dilbert' Quote Remains a Comic Strip Classic Despite Its Controversial Creator",
-        "url": "https://www.polygon.com/best-dilbert-comic-strip-quote/",
         "source": "Polygon"
       }
     ],
