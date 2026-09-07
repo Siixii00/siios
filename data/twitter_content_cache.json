@@ -1,155 +1,142 @@
 {
   "metadata": {
-    "last_updated": "2026-09-06T23:33:46.205813",
-    "total_items": 58
+    "last_updated": "2026-09-07T03:23:22.771442",
+    "total_items": 55
   },
   "content": {
     "tech": [
       {
-        "title": "GrapheneOS Overhauled Default Apps and Secure Clipboard",
-        "url": "https://grapheneos.social/@GrapheneOS/117225539756835649",
-        "source": "Hacker News",
-        "score": 131
-      },
-      {
         "title": "Making a Python interpreter in 1024 bytes",
         "url": "https://austinhenley.com/blog/python1024.html",
         "source": "Hacker News",
-        "score": 15
+        "score": 127
       },
       {
-        "title": "Show HN: Mador – Make any DOM reactive with a tiny 80-line Proxy state tuple",
-        "url": "https://github.com/marsbos/mador",
+        "title": "The NX bit is not just about security",
+        "url": "https://purplesyringa.moe/blog/guest/the-nx-bit-is-not-just-about-security/",
         "source": "Hacker News",
-        "score": 52
-      },
-      {
-        "title": "Your intellectual fly is open (2025)",
-        "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
-        "source": "Hacker News",
-        "score": 472
-      },
-      {
-        "title": "Isar Aerospace reaches orbit and deploys payloads on second flight",
-        "url": "https://isaraerospace.com/press/history-for-european-spaceflight-isar-aerospace-reaches-orbit-and-deploys-payloads-on-second-flight",
-        "source": "Hacker News",
-        "score": 545
-      },
-      {
-        "title": "Harnessing the Universal Geometry of Embeddings",
-        "url": "https://arxiv.org/abs/2505.12540",
-        "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "Black Hole of Los Alamos Seller of surplus nuclear research materials (2011)",
-        "url": "https://www.atlasobscura.com/places/black-hole-of-los-alamos",
-        "source": "Hacker News",
-        "score": 30
-      },
-      {
-        "title": "NetBSD 9.5 released and EOL for NetBSD-9",
-        "url": "https://blog.netbsd.org/tnf/entry/netbsd_9_5_released_and",
-        "source": "Hacker News",
-        "score": 98
-      },
-      {
-        "title": "Babylonian Lamb Stew with Beets (1750–1730 BCE)",
-        "url": "https://babylonian-collection.yale.edu/about/babylonian-cooking",
-        "source": "Hacker News",
-        "score": 76
-      },
-      {
-        "title": "Political meddling at the Census Bureau damages the US statistical system",
-        "url": "https://www.piie.com/blogs/realtime-economics/2026/political-meddling-census-bureau-damages-entire-us-statistical-system",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Asahi Linux on M3",
-        "url": "https://asahilinux.org/2026/09/m2-episode-1/",
-        "source": "Hacker News",
-        "score": 316
-      },
-      {
-        "title": "Research carried out using NetBSD",
-        "url": "https://www.netbsd.org/gallery/research.html",
-        "source": "Hacker News",
-        "score": 71
-      },
-      {
-        "title": "A/I shuts down – Stay human",
-        "url": "https://keepitfree.ai/announcements/a/i-shuts-down-stay-human/",
-        "source": "Hacker News",
-        "score": 487
+        "score": 21
       },
       {
         "title": "It took a year to ship WebAssembly in Anubis",
         "url": "https://anubis.techaro.lol/blog/2026/anubis-wasm/",
         "source": "Hacker News",
-        "score": 103
+        "score": 167
       },
       {
-        "title": "Hackers have withdrawn ~4k BTC (~$320M) from the Liquid Federation wallet",
-        "url": "https://twitter.com/Liquid_BTC/status/2096696272447218108",
+        "title": "Your intellectual fly is open when you use an LLM to author a post (2025)",
+        "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
         "source": "Hacker News",
-        "score": 12
+        "score": 570
+      },
+      {
+        "title": "Show HN: Mador – Make any DOM reactive with a tiny 80-line Proxy state tuple",
+        "url": "https://github.com/marsbos/mador",
+        "source": "Hacker News",
+        "score": 74
+      },
+      {
+        "title": "Nitter and XCancel resume service after legal advice",
+        "url": "https://github.com/zedeus/nitter/commit/1428b4c2b4246f92a7e5b2673438e5fb39fcc4a3",
+        "source": "Hacker News",
+        "score": 518
+      },
+      {
+        "title": "Babylonian Lamb Stew with Beets (1750–1730 BCE)",
+        "url": "https://babylonian-collection.yale.edu/about/babylonian-cooking",
+        "source": "Hacker News",
+        "score": 116
+      },
+      {
+        "title": "MathKernel: An evidence-aware multi-engine mathematics kernel and MCP server",
+        "url": "https://github.com/Staatsgeheim/MathKernel",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "Harnessing the Universal Geometry of Embeddings",
+        "url": "https://arxiv.org/abs/2505.12540",
+        "source": "Hacker News",
+        "score": 50
+      },
+      {
+        "title": "NetBSD 9.5 released and EOL for NetBSD-9",
+        "url": "https://blog.netbsd.org/tnf/entry/netbsd_9_5_released_and",
+        "source": "Hacker News",
+        "score": 117
+      },
+      {
+        "title": "GrapheneOS Overhauled Default Apps and Secure Clipboard",
+        "url": "https://grapheneos.social/@GrapheneOS/117225539756835649",
+        "source": "Hacker News",
+        "score": 215
+      },
+      {
+        "title": "An Alien Mind",
+        "url": "https://openai.com/index/an-alien-mind/",
+        "source": "Hacker News",
+        "score": 351
+      },
+      {
+        "title": "Ask HN: Why don't we bring back old school OkCupid?",
+        "url": "https://news.ycombinator.com/item?id=49582431",
+        "source": "Hacker News",
+        "score": 4
+      },
+      {
+        "title": "Black Hole of Los Alamos: Seller of surplus nuclear research materials (2011)",
+        "url": "https://www.atlasobscura.com/places/black-hole-of-los-alamos",
+        "source": "Hacker News",
+        "score": 44
+      },
+      {
+        "title": "Asahi Linux on M3",
+        "url": "https://asahilinux.org/2026/09/m2-episode-1/",
+        "source": "Hacker News",
+        "score": 374
       }
     ],
     "ai": [
       {
+        "title": "Your intellectual fly is open when you use an LLM to author a post (2025)",
+        "url": "https://bcantrill.dtrace.org/2025/12/05/your-intellectual-fly-is-open/",
+        "source": "Hacker News AI",
+        "score": 570
+      },
+      {
         "title": "Harnessing the Universal Geometry of Embeddings",
         "url": "https://arxiv.org/abs/2505.12540",
         "source": "Hacker News AI",
-        "score": 26
-      },
-      {
-        "title": "Reverse engineering the storage format for an undocumented database",
-        "url": "https://blog.glazer.ee/posts/converting-cronos/",
-        "source": "Hacker News AI",
-        "score": 8
+        "score": 50
       },
       {
         "title": "Research acceleration: The view inside OpenAI",
         "url": "https://openai.com/index/research-acceleration-view-inside-openai",
         "source": "Hacker News AI",
-        "score": 94
+        "score": 126
       },
       {
-        "title": "GOP issues stark warning to AI companies",
-        "url": "https://www.axios.com/2026/08/19/gop-data-center-memo-ai-election",
+        "title": "Reverse engineering the storage format for an undocumented database",
+        "url": "https://blog.glazer.ee/posts/converting-cronos/",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 29
       },
       {
         "title": "AI, Tools and Transformation",
         "url": "https://www.ben-evans.com/benedictevans/2026/9/3/ai-tools-and-transformation",
         "source": "Hacker News AI",
-        "score": 144
-      },
-      {
-        "title": "Ganon's Mysterious Origins (Revisited)",
-        "url": "https://www.thrillingtalesofoldvideogames.com/blog/ganon-name-origin-kamen-rider",
-        "source": "Hacker News AI",
-        "score": 26
-      },
-      {
-        "title": "LLMs as a Cognitive Virus",
-        "url": "https://arxiv.org/abs/2609.03344",
-        "source": "Hacker News AI",
-        "score": 376
-      },
-      {
-        "title": "Chrome again exempts Google from user site data settings",
-        "url": "https://lapcatsoftware.com/articles/2026/9/1.html",
-        "source": "Hacker News AI",
-        "score": 555
+        "score": 148
       }
     ],
     "news": [
       {
         "title": "Germany's far-right AfD set for big win in eastern state, just short of majority",
         "url": "https://www.bbc.co.uk/news/articles/cy4zejgz3z9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Five dead after Amazon cargo plane crashes at Miami airport",
+        "url": "https://www.bbc.co.uk/news/articles/c0e3p1j7n3ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -173,13 +160,8 @@
         "source": "BBC World"
       },
       {
-        "title": "TV presenter among 12 sentenced to death in Egypt drugs case",
-        "url": "https://www.bbc.co.uk/news/articles/c5y7gk9knnlo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Iran warns of 'faster, heavier, more painful response' to US attacks",
-        "url": "https://www.bbc.co.uk/news/articles/cp8d56w7d9po?at_medium=RSS&at_campaign=rss",
+        "title": "Austria's Islamic headscarf ban in force as under-14s go back to school",
+        "url": "https://www.bbc.co.uk/news/articles/cwyz74xn8q8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -259,6 +241,31 @@
     ],
     "gaming": [
       {
+        "title": "How to Watch Nintendo's Zelda 40th Anniversary Direct",
+        "url": "https://www.polygon.com/nintendo-zelda-direct-date-time-september-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "8 Best Games Like The Witcher 3",
+        "url": "https://www.polygon.com/witcher-3-best-games-like/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Hereditary' Meets 'Parasite' in This Unforgettable Mystery Thriller That’s Free on Streaming",
+        "url": "https://www.polygon.com/hope-is-the-perfect-excuse-to-revisit-na-hong-jins-best-movie/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Lanterns Episode 4 Explained: Who Is Hector Hammond?",
+        "url": "https://www.polygon.com/lanterns-hector-hammond-explainer/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Fans Suspect DC's Official Wonder Woman Replacement Has Been Revealed",
+        "url": "https://www.polygon.com/wonder-woman-dcu-james-gunn-adria-arjona-maxima/",
+        "source": "Polygon"
+      },
+      {
         "title": "Christopher Nolan's Greatest Sci-Fi Action Masterpiece Is Officially Free to Watch on YouTube",
         "url": "https://www.polygon.com/christopher-nolan-sci-fi-inception-free-on-youtube/",
         "source": "Polygon"
@@ -266,31 +273,6 @@
       {
         "title": "New 85% on Metacritic Fantasy Action Game Just Shot Up to No. 1 on Steam Overnight",
         "url": "https://www.polygon.com/steam-ominusha-way-of-the-sword-number-1-game/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Most Exciting Thriller Movies of All Time",
-        "url": "https://www.polygon.com/most-exciting-thrillers-all-time-ranked/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Cult Classic Platformer Rain World Is Getting A Definitive Release On Nintendo Switch 2",
-        "url": "https://www.polygon.com/cult-classic-platformer-rain-world-is-getting-a-definitive-release-on-nintendo-switch-2/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Official Backrooms 2 Announcement Reportedly Happening Soon, With Kane Parsons Returning",
-        "url": "https://www.polygon.com/backrooms-sequel-kane-parsons-director-report/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Farming Sims Are Finally Changing After 10 Years of Stagnation",
-        "url": "https://www.polygon.com/farming-sims-2026-trends/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Sony Can't Hide Forever",
-        "url": "https://www.polygon.com/patch-notes-sony-playstation-state-of-play-no-disc-no-buy/",
         "source": "Polygon"
       }
     ],
