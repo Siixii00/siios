@@ -1,340 +1,334 @@
 {
   "metadata": {
-    "last_updated": "2026-08-20T14:37:12.727671",
-    "total_items": 59
+    "last_updated": "2026-09-08T00:57:54.906383",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "Malicious Rust Crate Arrayref Runs a Build-Time Payload",
-        "url": "https://safedep.io/arrayref-proc-macro1-rust-build-time-malware/",
+        "title": "TALA Is Open-Source",
+        "url": "https://d2lang.com/blog/tala-is-open-source/",
         "source": "Hacker News",
-        "score": 106
+        "score": 40
       },
       {
-        "title": "AliExpress runs silent WebAudio fingerprinting that breaks Bluetooth multipoint",
-        "url": "https://blog.laserphile.com/2026/08/aliexpress-webpage-keeping-multipoint.html",
+        "title": "Show HN: Stuxnet – A reconstructed source code of the infamous cyber-weapon",
+        "url": "https://github.com/Sadpainy/Stuxnet",
         "source": "Hacker News",
-        "score": 349
+        "score": 53
       },
       {
-        "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
-        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
+        "title": "Watch Los Angeles get built, one building at a time (1880–2026)",
+        "url": "https://lax-skyline.parcelscope.net/",
         "source": "Hacker News",
-        "score": 164
+        "score": 205
       },
       {
-        "title": "DiffusionGemma Technical Report",
-        "url": "https://arxiv.org/abs/2608.00146",
+        "title": "Leaving VMware just got harder after Broadcom pulled VDDK downloads",
+        "url": "https://www.virtualizationhowto.com/2026/09/leaving-vmware-just-got-harder-after-broadcom-pulled-vddk-downloads/",
         "source": "Hacker News",
-        "score": 32
+        "score": 76
       },
       {
-        "title": "I Spent Twenty Years Becoming Good at the Wrong Game",
-        "url": "https://savvynormie.com/i-spent-twenty-years-becoming-good-at-the-wrong-game/",
+        "title": "Trusting-Trust Attack against an Entire Linux Distribution",
+        "url": "https://arxiv.org/abs/2607.24888",
         "source": "Hacker News",
-        "score": 22
+        "score": 136
       },
       {
-        "title": "Hacking with Claude on a $27 Smart Watch",
-        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
+        "title": "WeatherNext 3",
+        "url": "https://deepmind.google/science/weathernext/",
         "source": "Hacker News",
-        "score": 11
+        "score": 213
       },
       {
-        "title": "Stwipe Acquires OpenWouter",
-        "url": "https://stwipe.com/",
+        "title": "Working on Economics with Fable 5",
+        "url": "https://wilsoniumite.com/2026/08/03/working-on-economics-with-fable-5/",
         "source": "Hacker News",
-        "score": 21
+        "score": 49
       },
       {
-        "title": "Windows brings out the Rorschach test in everyone (2003)",
-        "url": "https://devblogs.microsoft.com/oldnewthing/20030825-00/?p=42803",
+        "title": "Scientists observe Einstein's gravity in the quantum world",
+        "url": "https://www.ox.ac.uk/news/2026-08-28-scientists-observe-einsteins-gravity-in-the-quantum-world",
         "source": "Hacker News",
-        "score": 284
+        "score": 131
       },
       {
-        "title": "OpenRouter is joining Stripe",
-        "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
+        "title": "Finding a bug in Dummit and Foote's Abstract Algebra",
+        "url": "https://kallus.org/blog/dummit_and_foote.html",
         "source": "Hacker News",
-        "score": 924
+        "score": 61
       },
       {
-        "title": "Proof of Human (YC S23) Is Hiring a Member of Technical Staff",
-        "url": "https://www.ycombinator.com/companies/proof-of-human/jobs/ZTZHEbb-member-of-technical-staff",
+        "title": "WeatherNext 3: Our most advanced global weather AI model",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
         "source": "Hacker News",
-        "score": 1
+        "score": 6
       },
       {
-        "title": "Harvest hikes bills by 1500% after purchased by Bending Spoons",
-        "url": "https://www.bbc.com/news/articles/clyq011414eo",
+        "title": "John Margolies' Photographs of Roadside America",
+        "url": "https://publicdomainreview.org/collection/john-margolies-photographs-of-roadside-america/",
         "source": "Hacker News",
-        "score": 4
+        "score": 6
       },
       {
-        "title": "Seeing beyond BMI: Estimating cardiometabolic risk with smartphone imagery",
-        "url": "https://research.google/blog/seeing-beyond-bmi-estimating-cardiometabolic-risk-with-smartphone-imagery/",
+        "title": "Show HN: I built an aesthetically pleasing puzzle",
+        "url": "https://jigsawhaiku.com/",
         "source": "Hacker News",
-        "score": 31
+        "score": 35
       },
       {
-        "title": "Turns are Better than Radians (2022)",
-        "url": "https://www.computerenhance.com/p/turns-are-better-than-radians",
+        "title": "216M Spy TVs – The LG Smart TV Problem [video]",
+        "url": "https://www.youtube.com/watch?v=6IFVTcM28KA",
         "source": "Hacker News",
-        "score": 287
+        "score": 476
       },
       {
-        "title": "Risk Engineering",
-        "url": "https://risk-engineering.org/",
+        "title": "Show HN: Interactive Tree of Life",
+        "url": "https://ptree.org/",
         "source": "Hacker News",
-        "score": 38
+        "score": 51
+      },
+      {
+        "title": "Secure temporary file sharing for AI agents and humans",
+        "url": "https://github.com/aispace-sh/aispace-client",
+        "source": "Hacker News",
+        "score": 7
       }
     ],
     "ai": [
       {
-        "title": "Show HN: I trained a 125M model to autocomplete piano on-device",
-        "url": "https://simedw.com/2026/08/20/midi-autocomplete/",
+        "title": "Trusting-Trust Attack against an Entire Linux Distribution",
+        "url": "https://arxiv.org/abs/2607.24888",
         "source": "Hacker News AI",
-        "score": 165
+        "score": 136
       },
       {
-        "title": "Hacking with Claude on a $27 Smart Watch",
-        "url": "https://www.mikekasberg.com/blog/2026/08/19/hacking-with-claude-on-a-27-smart-watch.html",
-        "source": "Hacker News AI",
-        "score": 11
-      },
-      {
-        "title": "An American Mosaic (interactive map of ancestry census data)",
-        "url": "https://www.nytimes.com/interactive/2026/07/01/us/america-ancestry-census-data-map.html",
+        "title": "WeatherNext 3: Our most advanced global weather AI model",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
         "source": "Hacker News AI",
         "score": 6
       },
       {
-        "title": "Don't paste the AI, please",
-        "url": "https://dontpastetheai.com/",
+        "title": "Secure temporary file sharing for AI agents and humans",
+        "url": "https://github.com/aispace-sh/aispace-client",
         "source": "Hacker News AI",
-        "score": 874
+        "score": 7
       },
       {
-        "title": "A joke domain purchase turned in geopolitical warfare",
-        "url": "https://sprocketfox.io/xssfox/2026/08/19/sondehub-and-war/",
+        "title": "Speculative Decoding in vLLM on AMD GPUs",
+        "url": "https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus",
         "source": "Hacker News AI",
-        "score": 980
+        "score": 127
       },
       {
-        "title": "Australia passes law to levy tech giants that fail to pay for local news",
-        "url": "https://www.reuters.com/legal/litigation/australia-passes-law-levy-tech-giants-that-fail-pay-local-news-2026-08-20/",
+        "title": "Initial effects of AI technology on employment look positive",
+        "url": "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
         "source": "Hacker News AI",
-        "score": 47
+        "score": 66
       },
       {
-        "title": "Frustrated GP patients hang up as Yorkshire accent baffles AI receptionist",
-        "url": "https://www.theguardian.com/society/2026/aug/20/yorkshire-rotherham-ai-gp-receptionist-cannot-understand-accent",
+        "title": "Smartphone makers don't bother to comply with EU repairability requirements",
+        "url": "https://www.theregister.com/personal-tech/2026/09/07/smartphone-makers-dont-bother-to-comply-with-eu-repairability-requirements/5294532",
         "source": "Hacker News AI",
-        "score": 10
+        "score": 270
       },
       {
-        "title": "Mathematics in the age of AI",
-        "url": "https://arxiv.org/abs/2608.16753",
+        "title": "De-Brainrot Vacations",
+        "url": "https://devz.cl/posts/i-spent-my-vacations-de-brainrotting/",
         "source": "Hacker News AI",
-        "score": 198
+        "score": 463
       },
       {
-        "title": "German court rules: Emails must be end-to-end encrypted",
-        "url": "https://tuta.com/blog/german-court-rules-emails-e2ee",
+        "title": "Coop – Isolated VM Environments for Running Claude Code and Codex",
+        "url": "https://github.com/trailofbits/coop",
         "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Air Theremin – A browser theremin you play by waving at your webcam",
-        "url": "https://theremin.bizibah.com/",
-        "source": "Hacker News AI",
-        "score": 290
+        "score": 51
       }
     ],
     "news": [
       {
-        "title": "At least 15 killed in Kyiv as Ukraine grapples with air defence shortages",
-        "url": "https://www.bbc.co.uk/news/articles/c98vzmden5yo?at_medium=RSS&at_campaign=rss",
+        "title": "Flight recorders recovered from 'devastating' Amazon cargo plane crash",
+        "url": "https://www.bbc.co.uk/news/articles/ce8e32n8epeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump vows tougher economic measures on Iran and supporting countries",
-        "url": "https://www.bbc.co.uk/news/articles/c2k7e83ynj4o?at_medium=RSS&at_campaign=rss",
+        "title": "Palestinian parents fear for children's lives at school as settler attacks grow",
+        "url": "https://www.bbc.co.uk/news/articles/c3wj45g73g1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Founder of collapsed Chinese property giant Evergrande sentenced to life in prison",
-        "url": "https://www.bbc.co.uk/news/articles/cd0x9mjjmgjo?at_medium=RSS&at_campaign=rss",
+        "title": "Germany's far-right AfD says 'democracy demands' parties work with them after state election win",
+        "url": "https://www.bbc.co.uk/news/articles/cpd0113082eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Belgian car salesman becomes prince after royal parentage confirmed",
-        "url": "https://www.bbc.co.uk/news/articles/c4g616gvxr0o?at_medium=RSS&at_campaign=rss",
+        "title": "Eiffel Tower shut by staff protest after female workers moved for religious visit",
+        "url": "https://www.bbc.co.uk/news/articles/clyenxp540vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Assad officer extradited to Syria on war crimes charges for first time",
-        "url": "https://www.bbc.co.uk/news/articles/cvgjdy8q766o?at_medium=RSS&at_campaign=rss",
+        "title": "Trump threatens to stop sale of Canadian Bombardier jets in US",
+        "url": "https://www.bbc.co.uk/news/articles/c4gj8xx5010o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Mushroom killer must stay in jail forever for 'truly dreadful' crime, appeal court told",
-        "url": "https://www.bbc.co.uk/news/articles/ckg3j3yn4exo?at_medium=RSS&at_campaign=rss",
+        "title": "Thousands turn out in Serbia for funeral of  'Butcher of Bosnia' Ratko Mladić",
+        "url": "https://www.bbc.co.uk/news/articles/cn5dkk7yw74o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Giant whales move into Greenland waters as ice disappears",
-        "url": "https://www.bbc.co.uk/news/articles/cq6dn9gj7eno?at_medium=RSS&at_campaign=rss",
+        "title": "Israeli strikes in southern Lebanese village kill 12",
+        "url": "https://www.bbc.co.uk/news/articles/c5yl96vz0edo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " 4 of my top-rated budget earphones are on sale right now! ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/4-of-my-top-rated-budget-earphones-are-on-sale-right-now",
+        "title": " The best Labor Day drawing tablet deals include pen displays from just $149 ",
+        "url": "https://www.creativebloq.com/art/digital-art/the-best-labor-day-drawing-tablet-deals-include-pen-displays-from-just-usd149",
         "source": "Creative Bloq"
       },
       {
-        "title": " Move over Duolingo, there’s a new brand mascot in town ",
-        "url": "https://www.creativebloq.com/design/branding/move-over-duolingo-theres-a-new-brand-mascot-in-town",
+        "title": " Frame TVs have up to $1,000 off for Labor Day, and the deals end soon ",
+        "url": "https://www.creativebloq.com/tech/frame-tvs-have-up-to-usd1-000-off-for-labor-day-and-the-deals-end-soon",
         "source": "Creative Bloq"
       },
       {
-        "title": " A 16-year-old girl's iPhone theme is breaking UI designers' brains ",
-        "url": "https://www.creativebloq.com/web-design/ux-ui/a-16-year-old-girls-iphone-xis-breaking-ui-designers-brains",
+        "title": " This gorgeous fountain pen is nearly 50% off for Labor Day ",
+        "url": "https://www.creativebloq.com/design/product-design/this-gorgeous-fountain-pen-is-nearly-50-percent-off-for-labor-day",
         "source": "Creative Bloq"
       },
       {
-        "title": " Studio Ghibli has no plan, isn't anti-AI after all, and doesn't know what Miyazaki is up to other than that he turns up for work every day ",
-        "url": "https://www.creativebloq.com/art/animation/studio-ghibli-has-no-plan-isnt-anti-ai-after-all-and-doesnt-know-what-miyazaki-is-up-to-other-than-that-he-turns-up-for-work-every-day",
+        "title": " The best Labor Day speaker deals starting from $60 ",
+        "url": "https://www.creativebloq.com/tech/the-best-labor-day-speaker-deals-starting-from-usd60",
         "source": "Creative Bloq"
       },
       {
-        "title": " Help! I'm instantly addicted to my new under desk treadmill ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/help-im-instantly-addicted-to-my-new-under-the-desk-treadmill",
+        "title": " Hand-picked Labor Day savings to upgrade your desktop for a fresh start ",
+        "url": "https://www.creativebloq.com/tech/peripherals/hand-picked-labor-day-savings-to-upgrade-your-desktop-for-a-fresh-start",
         "source": "Creative Bloq"
       },
       {
-        "title": " The new ACOTAR book covers are giving 2016 ",
-        "url": "https://www.creativebloq.com/entertainment/books/the-new-acotar-book-covers-are-giving-2016",
+        "title": " Can NVIDIA and Adobe work together to get creatives to actually like AI? ",
+        "url": "https://www.creativebloq.com/ai/can-nvidia-and-adobe-work-together-to-get-creatives-to-actually-like-ai",
         "source": "Creative Bloq"
       },
       {
-        "title": " Amazon's wanton destruction of rare books is a betrayal of the brand's origins ",
-        "url": "https://www.creativebloq.com/design/branding/amazons-massacre-of-rare-books-is-a-betrayal-of-the-brands-origins",
+        "title": " I saw NVIDIA's new AI video tool: why RTX Spark’s half‑frame trick might actually matter... and why creatives are right to be wary ",
+        "url": "https://www.creativebloq.com/ai/i-saw-nvidias-new-ai-video-tool-why-rtx-sparks-half-frame-trick-might-actually-matter-and-why-creatives-are-right-to-be-wary",
         "source": "Creative Bloq"
       }
     ],
     "science": [
       {
-        "title": "The “Asian water tower” is losing 24 billion tonnes of groundwater every year",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260820002454.htm",
+        "title": "Popular brain supplement linked to shorter lifespan in men",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260904000330.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Schizophrenia’s lost brain connections follow a surprising pattern",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260820002443.htm",
+        "title": "A mysterious signal around Earth could be dark matter",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260904000328.htm",
         "source": "Science Daily"
       },
       {
-        "title": "This total solar eclipse looked strangely golden — here’s why",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260820002432.htm",
+        "title": "Scientists find breast cancer cells hiding behind protective “shields”",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260904000326.htm",
         "source": "Science Daily"
       },
       {
-        "title": "A SpaceX rocket smashed into the Moon — NASA just revealed the crater",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260820002429.htm",
+        "title": "A longer exhale may push your brain toward bolder decisions",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260904000320.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists crushed diamond beyond Neptune-like pressures—and solved a 20-year mystery",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260820002424.htm",
+        "title": "Indonesia’s most dangerous fires are burning underground",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260904000318.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Knee osteoarthritis isn’t inevitable — here’s what you can do",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260820002420.htm",
+        "title": "Giant Greenland iceberg slams into Joe Island and survives",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260904000316.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists say the human family tree may need a major rewrite",
-        "url": "https://www.sciencedaily.com/releases/2026/08/260820002413.htm",
+        "title": "Dark matter detector finds a strange signal scientists can’t yet explain",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260904000313.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Fizz And EB Games Team Up To Create A Special Starter Pack That’s Perfect For Mobile Gamers",
-        "url": "https://www.polygon.com/fizz-eb-games-starter-pack/",
+        "title": "Next Hunger Games Movie 'Sunrise' Confirms Switching Genres in 'Return to Form'",
+        "url": "https://www.polygon.com/hunger-games-sunrise-on-the-reaping-haymitch-new-interview/",
         "source": "Polygon"
       },
       {
-        "title": "The Duskbloods Could Have Been a 'Cute' Nintendo Game",
-        "url": "https://www.polygon.com/the-duskbloods-cute-nintendo-game-early-development/",
+        "title": "Fortnite Officially Bringing Mega Man to the Island with Tournament and Skins",
+        "url": "https://www.polygon.com/fortnite-mega-man-cosmetics-tournament/",
         "source": "Polygon"
       },
       {
-        "title": "Mass Effect’s Future In Doubt: Ex-Manager Says New Game Unlikely Under New EA",
-        "url": "https://www.polygon.com/mass-effect-5-new-game-unlikey-saudi-deal/",
+        "title": "The Legend of Zelda's Best Amiibo Finally Arrives This Month",
+        "url": "https://www.polygon.com/zelda-tears-of-the-kingdom-best-amiibo-september-2026/",
         "source": "Polygon"
       },
       {
-        "title": "'Elden Ring Meets Settlers of Catan' Revealed as Switch 2's Next Multiplayer Swing",
-        "url": "https://www.polygon.com/the-duskbloods-preview-fromsoftware-nintendo-switch-2/",
+        "title": "Where to Play Every Grand Theft Auto Game in 2026",
+        "url": "https://www.polygon.com/gta-games-grand-theft-auto-where-to-play-all-2026/",
         "source": "Polygon"
       },
       {
-        "title": "The Duskbloods' Full Character List Officially Revealed",
-        "url": "https://www.polygon.com/the-duskbloods-characters-starting-classes-official/",
+        "title": "Cemetery Boys Sequel Reveals a Critical Role Connection New Reveal",
+        "url": "https://www.polygon.com/cemetery-boys-espiritu-excerpt-aiden-thomas/",
         "source": "Polygon"
       },
       {
-        "title": "Arc Raiders' Fast Food Promo Skins Let You Wear a Sandwich in the Apocalypse",
-        "url": "https://www.polygon.com/arc-raiders-subway-skins-promotion/",
+        "title": "Lovecraft Horror Meets Snowpiercer in One of 2026’s Biggest Hidden Gems",
+        "url": "https://www.polygon.com/dreadline-express-preview-gamescom-2026/",
         "source": "Polygon"
       },
       {
-        "title": "5 Controversial Star Trek Episodes That Have Aged Like Fine Wine",
-        "url": "https://www.polygon.com/best-star-trek-episodes-most-controversial/",
+        "title": "10 Best New TV Shows to Watch This Fall 2026",
+        "url": "https://www.polygon.com/new-tv-shows-fall-2026/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
       {
-        "title": "GitHub Copilot app for Beginners: Managing your work",
-        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-managing-your-work/",
+        "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
+        "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/",
         "source": "GitHub Blog"
       },
       {
-        "title": "How canvases make agentic workflows visible, steerable, and cost-efficient",
-        "url": "https://github.blog/ai-and-ml/github-copilot/how-canvases-make-agentic-workflows-visible-steerable-and-cost-efficient/",
+        "title": "GitHub Copilot app for Beginners: Run several agents at once",
+        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/",
         "source": "GitHub Blog"
       },
       {
-        "title": "How to bring your software delivery workflow into GitHub with agent apps",
-        "url": "https://github.blog/ai-and-ml/github-copilot/how-to-bring-your-software-delivery-workflow-into-github-with-agent-apps/",
+        "title": "Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!",
+        "url": "https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/",
         "source": "GitHub Blog"
       },
       {
-        "title": "Your guide to GitHub Universe 2026 is here: The schedule just launched!",
-        "url": "https://github.blog/news-insights/company-news/your-guide-to-github-universe-2026-is-here-the-schedule-just-launched/",
+        "title": "How we make AI coding more cost efficient without sacrificing task quality",
+        "url": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/",
         "source": "GitHub Blog"
       },
       {
-        "title": "What 50 open source projects taught us about security in the AI era",
-        "url": "https://github.blog/open-source/maintainers/what-50-open-source-projects-taught-us-about-security-in-the-ai-era/",
+        "title": "OpenClaw went viral. Meet the maintainers building and securing it.",
+        "url": "https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/",
         "source": "GitHub Blog"
       },
       {
-        "title": "GitHub availability report: July 2026",
-        "url": "https://github.blog/news-insights/company-news/github-availability-report-july-2026/",
+        "title": "GitHub Copilot app for Beginners: Automate Dependabot pull request triage",
+        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/",
         "source": "GitHub Blog"
       },
       {
-        "title": "GitHub Copilot app for Beginners: Write your first prompt",
-        "url": "https://github.blog/ai-and-ml/github-copilot/write-your-first-prompt-with-the-github-copilot-app/",
+        "title": "How to evaluate LLMs before production",
+        "url": "https://github.blog/ai-and-ml/llms/how-to-evaluate-llms-before-production/",
         "source": "GitHub Blog"
       }
     ]
