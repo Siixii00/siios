@@ -1,154 +1,154 @@
 {
   "metadata": {
-    "last_updated": "2026-09-08T00:57:54.906383",
+    "last_updated": "2026-09-08T05:49:22.912850",
     "total_items": 58
   },
   "content": {
     "tech": [
       {
+        "title": "We have a year to fix security everywhere",
+        "url": "https://jyn.dev/a-year-to-fix-security/",
+        "source": "Hacker News",
+        "score": 59
+      },
+      {
+        "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
+        "url": "https://mcpherrin.ca/2026/09/07/rsa.html",
+        "source": "Hacker News",
+        "score": 228
+      },
+      {
+        "title": "My Feed, My Way",
+        "url": "https://www.pm.gov.au/media/my-feed-my-way",
+        "source": "Hacker News",
+        "score": 17
+      },
+      {
+        "title": "How well do agents use test/verification techniques?",
+        "url": "https://danluu.com/agentic-testing/",
+        "source": "Hacker News",
+        "score": 41
+      },
+      {
         "title": "TALA Is Open-Source",
         "url": "https://d2lang.com/blog/tala-is-open-source/",
         "source": "Hacker News",
-        "score": 40
+        "score": 161
       },
       {
-        "title": "Show HN: Stuxnet – A reconstructed source code of the infamous cyber-weapon",
-        "url": "https://github.com/Sadpainy/Stuxnet",
+        "title": "I tested 10 model/harness combinations on the same Three.js task",
+        "url": "https://alvins82.github.io/hangar-harness-model-tests/",
         "source": "Hacker News",
-        "score": 53
+        "score": 25
+      },
+      {
+        "title": "Arm Mali G2-Ultra NX GPU: desktop-class mobile gameplay with AI-native graphics",
+        "url": "https://newsroom.arm.com/blog/arm-mali-g2-ultra-nx-ai-native-mobile-graphics",
+        "source": "Hacker News",
+        "score": 17
+      },
+      {
+        "title": "Jellyfin 12.0",
+        "url": "https://jellyfin.org/posts/jellyfin-release-12.0/",
+        "source": "Hacker News",
+        "score": 237
       },
       {
         "title": "Watch Los Angeles get built, one building at a time (1880–2026)",
         "url": "https://lax-skyline.parcelscope.net/",
         "source": "Hacker News",
-        "score": 205
+        "score": 264
+      },
+      {
+        "title": "GamersNexus and LG: Or why rooting your TV is a bad idea",
+        "url": "https://leaflet.pub/p/did:plc:yhgc5rlqhoezrx6fbawajxlh/3muwrqenzfk2n",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
+        "title": "Extinct Tasmanian tiger's 'snap' unlike any living mammal's bite",
+        "url": "https://www.cnn.com/2026/09/02/science/tasmanian-tiger-skull-bite-force",
+        "source": "Hacker News",
+        "score": 18
       },
       {
         "title": "Leaving VMware just got harder after Broadcom pulled VDDK downloads",
         "url": "https://www.virtualizationhowto.com/2026/09/leaving-vmware-just-got-harder-after-broadcom-pulled-vddk-downloads/",
         "source": "Hacker News",
-        "score": 76
+        "score": 158
       },
       {
-        "title": "Trusting-Trust Attack against an Entire Linux Distribution",
-        "url": "https://arxiv.org/abs/2607.24888",
+        "title": "Understanding Computer Memory Architecture and SSD Internals",
+        "url": "https://codingpirate.com/understanding-computer-memory-architecture-ac9320110787",
         "source": "Hacker News",
-        "score": 136
+        "score": 5
+      },
+      {
+        "title": "John Margolies' photographs of roadside America",
+        "url": "https://publicdomainreview.org/collection/john-margolies-photographs-of-roadside-america/",
+        "source": "Hacker News",
+        "score": 61
       },
       {
         "title": "WeatherNext 3",
         "url": "https://deepmind.google/science/weathernext/",
         "source": "Hacker News",
-        "score": 213
-      },
-      {
-        "title": "Working on Economics with Fable 5",
-        "url": "https://wilsoniumite.com/2026/08/03/working-on-economics-with-fable-5/",
-        "source": "Hacker News",
-        "score": 49
-      },
-      {
-        "title": "Scientists observe Einstein's gravity in the quantum world",
-        "url": "https://www.ox.ac.uk/news/2026-08-28-scientists-observe-einsteins-gravity-in-the-quantum-world",
-        "source": "Hacker News",
-        "score": 131
-      },
-      {
-        "title": "Finding a bug in Dummit and Foote's Abstract Algebra",
-        "url": "https://kallus.org/blog/dummit_and_foote.html",
-        "source": "Hacker News",
-        "score": 61
-      },
-      {
-        "title": "WeatherNext 3: Our most advanced global weather AI model",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
-        "source": "Hacker News",
-        "score": 6
-      },
-      {
-        "title": "John Margolies' Photographs of Roadside America",
-        "url": "https://publicdomainreview.org/collection/john-margolies-photographs-of-roadside-america/",
-        "source": "Hacker News",
-        "score": 6
-      },
-      {
-        "title": "Show HN: I built an aesthetically pleasing puzzle",
-        "url": "https://jigsawhaiku.com/",
-        "source": "Hacker News",
-        "score": 35
-      },
-      {
-        "title": "216M Spy TVs – The LG Smart TV Problem [video]",
-        "url": "https://www.youtube.com/watch?v=6IFVTcM28KA",
-        "source": "Hacker News",
-        "score": 476
-      },
-      {
-        "title": "Show HN: Interactive Tree of Life",
-        "url": "https://ptree.org/",
-        "source": "Hacker News",
-        "score": 51
-      },
-      {
-        "title": "Secure temporary file sharing for AI agents and humans",
-        "url": "https://github.com/aispace-sh/aispace-client",
-        "source": "Hacker News",
-        "score": 7
+        "score": 294
       }
     ],
     "ai": [
       {
+        "title": "Arm Mali G2-Ultra NX GPU: desktop-class mobile gameplay with AI-native graphics",
+        "url": "https://newsroom.arm.com/blog/arm-mali-g2-ultra-nx-ai-native-mobile-graphics",
+        "source": "Hacker News AI",
+        "score": 17
+      },
+      {
+        "title": "The VMs Powering Mobile Agents (Instinct, Claude Code)",
+        "url": "https://rohanadwankar.github.io/posts/platforms.html",
+        "source": "Hacker News AI",
+        "score": 8
+      },
+      {
         "title": "Trusting-Trust Attack against an Entire Linux Distribution",
         "url": "https://arxiv.org/abs/2607.24888",
         "source": "Hacker News AI",
-        "score": 136
+        "score": 189
       },
       {
-        "title": "WeatherNext 3: Our most advanced global weather AI model",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/introducing-weathernext-3/",
+        "title": "There's a new \"Google Jail\" for independent wikis",
+        "url": "https://weirdgloop.org/blog/google-jail",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 19
       },
       {
-        "title": "Secure temporary file sharing for AI agents and humans",
-        "url": "https://github.com/aispace-sh/aispace-client",
+        "title": "Show HN: Jigsaw Haiku",
+        "url": "https://jigsawhaiku.com/",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 77
       },
       {
         "title": "Speculative Decoding in vLLM on AMD GPUs",
         "url": "https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus",
         "source": "Hacker News AI",
-        "score": 127
+        "score": 136
       },
       {
         "title": "Initial effects of AI technology on employment look positive",
         "url": "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
         "source": "Hacker News AI",
-        "score": 66
+        "score": 76
       },
       {
-        "title": "Smartphone makers don't bother to comply with EU repairability requirements",
-        "url": "https://www.theregister.com/personal-tech/2026/09/07/smartphone-makers-dont-bother-to-comply-with-eu-repairability-requirements/5294532",
+        "title": "AI cancer cures slowed by chip shortage, says Arm boss",
+        "url": "https://www.bbc.com/news/articles/c0m39g7xzevo",
         "source": "Hacker News AI",
-        "score": 270
-      },
-      {
-        "title": "De-Brainrot Vacations",
-        "url": "https://devz.cl/posts/i-spent-my-vacations-de-brainrotting/",
-        "source": "Hacker News AI",
-        "score": 463
-      },
-      {
-        "title": "Coop – Isolated VM Environments for Running Claude Code and Codex",
-        "url": "https://github.com/trailofbits/coop",
-        "source": "Hacker News AI",
-        "score": 51
+        "score": 9
       }
     ],
     "news": [
       {
-        "title": "Flight recorders recovered from 'devastating' Amazon cargo plane crash",
+        "title": "Flight recorders recovered from Amazon cargo plane crash",
         "url": "https://www.bbc.co.uk/news/articles/ce8e32n8epeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -168,22 +168,27 @@
         "source": "BBC World"
       },
       {
+        "title": "Ukraine's chief prosecutor resigns over call centre corruption scandal",
+        "url": "https://www.bbc.co.uk/news/articles/c780nlgyd79o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "UK government expected to announce restrictions on trade with West Bank settlements",
+        "url": "https://www.bbc.co.uk/news/articles/c4grdjnle22o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Trump threatens to stop sale of Canadian Bombardier jets in US",
         "url": "https://www.bbc.co.uk/news/articles/c4gj8xx5010o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Thousands turn out in Serbia for funeral of  'Butcher of Bosnia' Ratko Mladić",
-        "url": "https://www.bbc.co.uk/news/articles/cn5dkk7yw74o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Israeli strikes in southern Lebanese village kill 12",
-        "url": "https://www.bbc.co.uk/news/articles/c5yl96vz0edo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Some people are worried Apple's folding iPhone design could present a brand new health risk ",
+        "url": "https://www.creativebloq.com/design/product-design/some-people-are-worried-apples-folding-iphone-design-could-present-a-brand-new-health-risk",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The best Labor Day drawing tablet deals include pen displays from just $149 ",
         "url": "https://www.creativebloq.com/art/digital-art/the-best-labor-day-drawing-tablet-deals-include-pen-displays-from-just-usd149",
@@ -205,18 +210,13 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " Hand-picked Labor Day savings to upgrade your desktop for a fresh start ",
-        "url": "https://www.creativebloq.com/tech/peripherals/hand-picked-labor-day-savings-to-upgrade-your-desktop-for-a-fresh-start",
-        "source": "Creative Bloq"
-      },
-      {
         "title": " Can NVIDIA and Adobe work together to get creatives to actually like AI? ",
         "url": "https://www.creativebloq.com/ai/can-nvidia-and-adobe-work-together-to-get-creatives-to-actually-like-ai",
         "source": "Creative Bloq"
       },
       {
-        "title": " I saw NVIDIA's new AI video tool: why RTX Spark’s half‑frame trick might actually matter... and why creatives are right to be wary ",
-        "url": "https://www.creativebloq.com/ai/i-saw-nvidias-new-ai-video-tool-why-rtx-sparks-half-frame-trick-might-actually-matter-and-why-creatives-are-right-to-be-wary",
+        "title": " Hand-picked Labor Day savings to upgrade your desktop for a fresh start ",
+        "url": "https://www.creativebloq.com/tech/peripherals/hand-picked-labor-day-savings-to-upgrade-your-desktop-for-a-fresh-start",
         "source": "Creative Bloq"
       }
     ],
@@ -259,6 +259,16 @@
     ],
     "gaming": [
       {
+        "title": "How Grotesqqque Turns One Creator's Unfiltered Imagination Into an Anime Anthology",
+        "url": "https://www.polygon.com/why-the-director-of-grotesqqque-thinks-the-best-anime-are-a-little-unorganized/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Biggest Most Important Anime Releases of Fall 2026",
+        "url": "https://www.polygon.com/new-anime-shows-fall-2026-releases/",
+        "source": "Polygon"
+      },
+      {
         "title": "Next Hunger Games Movie 'Sunrise' Confirms Switching Genres in 'Return to Form'",
         "url": "https://www.polygon.com/hunger-games-sunrise-on-the-reaping-haymitch-new-interview/",
         "source": "Polygon"
@@ -281,16 +291,6 @@
       {
         "title": "Cemetery Boys Sequel Reveals a Critical Role Connection New Reveal",
         "url": "https://www.polygon.com/cemetery-boys-espiritu-excerpt-aiden-thomas/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Lovecraft Horror Meets Snowpiercer in One of 2026’s Biggest Hidden Gems",
-        "url": "https://www.polygon.com/dreadline-express-preview-gamescom-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 Best New TV Shows to Watch This Fall 2026",
-        "url": "https://www.polygon.com/new-tv-shows-fall-2026/",
         "source": "Polygon"
       }
     ],
