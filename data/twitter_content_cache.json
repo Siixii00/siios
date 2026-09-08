@@ -1,177 +1,176 @@
 {
   "metadata": {
-    "last_updated": "2026-09-08T14:56:52.884857",
-    "total_items": 61
+    "last_updated": "2026-09-08T18:25:32.957015",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
+        "title": "Google DeepMind Releases AlphaGenome Atlas",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
+        "source": "Hacker News",
+        "score": 289
+      },
+      {
         "title": "DaVinci Resolve 21.1",
         "url": "https://www.blackmagicdesign.com/media/release/20260908-03",
         "source": "Hacker News",
-        "score": 97
+        "score": 258
       },
       {
-        "title": "LibreOffice breaks download records after declaring it has no AI features",
-        "url": "https://manualdousuario.net/en/libreoffice-download-record-no-ai/",
+        "title": "On the Navier–Stokes Millennium Prize Problem",
+        "url": "https://openai.com/index/navier-stokes-solution/",
         "source": "Hacker News",
-        "score": 173
+        "score": 405
+      },
+      {
+        "title": "Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses",
+        "url": "https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/",
+        "source": "Hacker News",
+        "score": 110
+      },
+      {
+        "title": "The Helicopter with Radioactive Blades",
+        "url": "https://hackaday.com/2026/09/07/the-helicopter-with-radioactive-blades/",
+        "source": "Hacker News",
+        "score": 80
+      },
+      {
+        "title": "Show HN: LLM Attention Visualization",
+        "url": "https://ishamf.dev/p/llm-attention-visualizer/",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Connecting the Machines",
+        "url": "https://herdr.dev/blog/connecting-the-machines/",
+        "source": "Hacker News",
+        "score": 30
+      },
+      {
+        "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
+        "url": "https://github.com/ayghri/i-have-adhd",
+        "source": "Hacker News",
+        "score": 128
+      },
+      {
+        "title": "OUI-1: world's first model for Generative UI",
+        "url": "https://www.openui.com/blog/oui-1",
+        "source": "Hacker News",
+        "score": 26
+      },
+      {
+        "title": "Y Combinator Early Access Network",
+        "url": "https://events.ycombinator.com/yc-early-access-fall-26",
+        "source": "Hacker News",
+        "score": 32
       },
       {
         "title": "Show HN: Copperhead – Hardware as Fast as Software",
         "url": "https://copperhead.sh/",
         "source": "Hacker News",
-        "score": 74
+        "score": 156
       },
       {
-        "title": "Among European Companies That Use a CDN, Nearly 9 in 10 Use Cloudflare",
-        "url": "https://ciphercue.com/blog/european-cdn-concentration-cloudflare-nine-in-ten",
+        "title": "LG TVs caught spying even when offline or on standby",
+        "url": "https://www.theverge.com/tech/991190/lg-tv-spying-standby-recording-wi-fi-scanning-gamers-nexus",
         "source": "Hacker News",
-        "score": 311
+        "score": 214
       },
       {
-        "title": "Antiquated HTML Snippets and Artefacts",
-        "url": "https://vale.rocks/posts/html-relics",
+        "title": "C*: Unifying Programming and Verification in C",
+        "url": "https://arxiv.org/abs/2504.02246",
         "source": "Hacker News",
-        "score": 148
+        "score": 37
       },
       {
-        "title": "Extracting Steering Vectors from J space",
-        "url": "https://darshanmakwana412.github.io/2026/09/extracting-steering-vectors-from-j-space/",
+        "title": "The two Christian saints who are the Buddha",
+        "url": "https://signoregalilei.com/2026/08/30/the-two-christian-saints-who-are-secretly-the-buddha/",
         "source": "Hacker News",
-        "score": 22
+        "score": 122
       },
       {
-        "title": "We Must Return to the Office to Use AI in Person",
-        "url": "https://www.mcsweeneys.net/articles/why-we-must-return-to-the-office-to-use-ai-in-person",
+        "title": "AlphaGenome Atlas predictive map of every DNA letter change in the human genome",
+        "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
         "source": "Hacker News",
-        "score": 73
-      },
-      {
-        "title": "How Climate Resilient Are the Largest Cities?",
-        "url": "https://alphageo.ai/how-climate-resilient-are-the-worlds-largest-cities/",
-        "source": "Hacker News",
-        "score": 4
-      },
-      {
-        "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
-        "url": "https://mcpherrin.ca/2026/09/07/rsa.html",
-        "source": "Hacker News",
-        "score": 431
-      },
-      {
-        "title": "There's a new \"Google Jail\" for independent wikis",
-        "url": "https://weirdgloop.org/blog/google-jail",
-        "source": "Hacker News",
-        "score": 367
-      },
-      {
-        "title": "PyPI Blog: Incident File Hosting Errors",
-        "url": "https://blog.pypi.org/posts/2026-09-08-file-hosting-errors/",
-        "source": "Hacker News",
-        "score": 4
-      },
-      {
-        "title": "An overview of how our family is prepared",
-        "url": "https://michaelharley.net/posts/2026/08/29/an-overview-of-how-our-family-is-prepared/",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Picolibrary: A Small Press",
-        "url": "https://novalis.org/blog/2026-08-31-picolibrary-a-very-small-press.html",
-        "source": "Hacker News",
-        "score": 30
-      },
-      {
-        "title": "Ask HN: Are others seeing Google's reCAPTCHA rejecting Firefox users?",
-        "url": "https://news.ycombinator.com/item?id=49555592",
-        "source": "Hacker News",
-        "score": 154
-      },
-      {
-        "title": "We built our house for LAN parties (2024)",
-        "url": "https://lanparty.house/",
-        "source": "Hacker News",
-        "score": 300
+        "score": 53
       }
     ],
     "ai": [
       {
-        "title": "LibreOffice breaks download records after declaring it has no AI features",
-        "url": "https://manualdousuario.net/en/libreoffice-download-record-no-ai/",
+        "title": "Show HN: LLM Attention Visualization",
+        "url": "https://ishamf.dev/p/llm-attention-visualizer/",
         "source": "Hacker News AI",
-        "score": 173
+        "score": 27
       },
       {
-        "title": "We Must Return to the Office to Use AI in Person",
-        "url": "https://www.mcsweeneys.net/articles/why-we-must-return-to-the-office-to-use-ai-in-person",
+        "title": "The two Christian saints who are the Buddha",
+        "url": "https://signoregalilei.com/2026/08/30/the-two-christian-saints-who-are-secretly-the-buddha/",
         "source": "Hacker News AI",
-        "score": 73
+        "score": 122
       },
       {
         "title": "There's a new \"Google Jail\" for independent wikis",
         "url": "https://weirdgloop.org/blog/google-jail",
         "source": "Hacker News AI",
-        "score": 367
-      },
-      {
-        "title": "End-to-end infrastructure for training and inferencing open weight models",
-        "url": "https://docs.appliedcompute.com",
-        "source": "Hacker News AI",
-        "score": 47
-      },
-      {
-        "title": "Arm Mali G2-Ultra NX GPU: desktop-class mobile gameplay with AI-native graphics",
-        "url": "https://newsroom.arm.com/blog/arm-mali-g2-ultra-nx-ai-native-mobile-graphics",
-        "source": "Hacker News AI",
-        "score": 72
+        "score": 452
       },
       {
         "title": "Mistral raises €3B",
         "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
         "source": "Hacker News AI",
-        "score": 657
+        "score": 754
+      },
+      {
+        "title": "LibreOffice breaks download records after declaring it has no AI features",
+        "url": "https://manualdousuario.net/en/libreoffice-download-record-no-ai/",
+        "source": "Hacker News AI",
+        "score": 598
+      },
+      {
+        "title": "End-to-end infrastructure for training and inferencing open weight models",
+        "url": "https://docs.appliedcompute.com",
+        "source": "Hacker News AI",
+        "score": 65
+      },
+      {
+        "title": "Arm Mali G2-Ultra NX GPU: desktop-class mobile gameplay with AI-native graphics",
+        "url": "https://newsroom.arm.com/blog/arm-mali-g2-ultra-nx-ai-native-mobile-graphics",
+        "source": "Hacker News AI",
+        "score": 78
+      },
+      {
+        "title": "Do you think it happened? Research stolen from their Codex private chats",
+        "url": "https://www.reddit.com/r/codex/s/psWHRr9864",
+        "source": "Hacker News AI",
+        "score": 30
+      },
+      {
+        "title": "Controversy over OpenAI's Maths Breakthrough",
+        "url": "https://www.scientificamerican.com/article/openai-claims-blockbuster-math-breakthrough-amid-swirl-of-controversy/",
+        "source": "Hacker News AI",
+        "score": 13
       },
       {
         "title": "Multi-Agents LLM Financial Trading Framework",
         "url": "https://github.com/TauricResearch/TradingAgents",
         "source": "Hacker News AI",
-        "score": 100
-      },
-      {
-        "title": "Trusting-Trust Attack against an Entire Linux Distribution",
-        "url": "https://arxiv.org/abs/2607.24888",
-        "source": "Hacker News AI",
-        "score": 230
-      },
-      {
-        "title": "The VMs Powering Mobile Agents (Instinct, Claude Code)",
-        "url": "https://rohanadwankar.github.io/posts/platforms.html",
-        "source": "Hacker News AI",
-        "score": 58
-      },
-      {
-        "title": "Show HN: Jigsaw Haiku",
-        "url": "https://jigsawhaiku.com/",
-        "source": "Hacker News AI",
-        "score": 107
-      },
-      {
-        "title": "AI Giants Work Hand-in-Hand with The Pentagon, Contracts Reveal",
-        "url": "https://theintercept.com/2026/09/08/military-ai-weapons-contracts-openai-anthropic-google/",
-        "source": "Hacker News AI",
-        "score": 3
+        "score": 109
       }
     ],
     "news": [
+      {
+        "title": "UK announces sanctions on West Bank settlements prompting furious Israeli response",
+        "url": "https://www.bbc.co.uk/news/articles/c4g7zen0vveo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Carney says US trade war 'will come at a cost' as Canada strikes back on tariffs",
         "url": "https://www.bbc.co.uk/news/articles/c8jdev0422jo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Four Renoir paintings worth millions stolen in French museum heist",
+        "title": "Renoir paintings worth millions stolen in French museum heist",
         "url": "https://www.bbc.co.uk/news/articles/c70drp0pyw2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -181,27 +180,42 @@
         "source": "BBC World"
       },
       {
-        "title": "At least two people dead after Russian strikes on Kyiv",
+        "title": "Ukrainian TV channel building hit by Russian drone as five killed in Kyiv",
         "url": "https://www.bbc.co.uk/news/articles/cn8m1k7p3v7o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "British widow faces deportation from Sweden after 22 years",
+        "url": "https://www.bbc.co.uk/news/articles/c62k0d4px6ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Saudi Arabia vows to respond after Houthis attack cities and energy facilities",
         "url": "https://www.bbc.co.uk/news/articles/cp849n2nz01o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Highest paid world leader to get salary increase of $1 million",
-        "url": "https://www.bbc.co.uk/news/articles/c5y5kn143d1o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Hungary expels 10 Russian diplomats as relations worsen",
-        "url": "https://www.bbc.co.uk/news/articles/cddvzd1z53lo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " This typography artist is giving away 200 free fonts, but you need to be quick ",
+        "url": "https://www.creativebloq.com/design/fonts-typography/this-typography-artist-is-giving-away-200-free-fonts-but-you-need-to-be-quick",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " These are the best AI laptops for motion design and VFX ",
+        "url": "https://www.creativebloq.com/tech/laptops/best-ai-laptops-for-motion-design-and-vfx",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This is what Nintendo's Zelda: Ocarina of Time remake actually looks like on Switch 2 ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/this-is-what-nintendos-zelda-ocarina-of-time-remake-actually-looks-like-on-switch-2",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This free app could become the Blender of texture painting software ",
+        "url": "https://www.creativebloq.com/3d/3d-software/this-free-app-could-become-the-blender-of-texture-painting-software",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Steal this art trick: paint with fewer colours and bigger brush strokes ",
         "url": "https://www.creativebloq.com/art/digital-art/steal-this-art-trick-paint-with-fewer-colours-and-bigger-brush-strokes",
@@ -215,26 +229,6 @@
       {
         "title": " Viral video tries to prove AI is the death of Hollywood... and fails miserably ",
         "url": "https://www.creativebloq.com/ai/viral-video-tries-to-prove-ai-is-the-death-of-hollywood-and-fails-miserably",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These wireless earphones offer sound quality to rival wired buds, and they're down by 32% ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/these-wireless-earphones-offer-sound-quality-to-rival-wired-buds-and-theyre-down-by-32-percent",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apple iPhone 18 event LIVE: Folding iPhone, new AirPods and more – every announcement as it happens ",
-        "url": "https://www.creativebloq.com/news/live/apple-event-2026",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Sihoo M56C review: A cheap chair that's only good for short sits ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/sihoo-m56c-review-a-cheap-chair-thats-only-good-for-short-sits",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " NVIDIA's RTX Spark showcase at IFA showed me a first-hand example of how DLSS is breaking out of the gaming sphere ",
-        "url": "https://www.creativebloq.com/ai/nvidias-rtx-spark-showcase-at-ifa-showed-me-a-first-hand-example-of-how-dlss-is-breaking-out-of-the-gaming-sphere",
         "source": "Creative Bloq"
       }
     ],
@@ -277,38 +271,33 @@
     ],
     "gaming": [
       {
-        "title": "Zelda Direct: Every Big Ocarina of Time Reveal and Trailer from Nintendo",
-        "url": "https://www.polygon.com/zelda-direct-2026-announcements-reveals-trailers/",
+        "title": "Nintendo Doesn't Care About GTA 6",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-switch-2-release-date-nintendo-gta-6-november/",
         "source": "Polygon"
       },
       {
-        "title": "'Legend of Zelda: Ocarina of Time' Is Getting a New Lego Set",
-        "url": "https://www.polygon.com/legend-of-zelda-ocarina-of-time-lego-set-revealed/",
+        "title": "Original Star Wars Officially Returns in IMAX 70mm for the First Time",
+        "url": "https://www.polygon.com/star-wars-2027-imax-70mm-rerelease-starfighter-dates/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon Go 'Mega Squads' event guide",
-        "url": "https://www.polygon.com/pokemon-go-mega-squads-event-maschiff/",
+        "title": "The ChatGPT Movie Amazon Didn't Want You See Gets First Trailer",
+        "url": "https://www.polygon.com/artificial-openai-chatgpt-movie-trailer/",
         "source": "Polygon"
       },
       {
-        "title": "'Legend of Zelda' Switch 2 and Controllers Officially Revealed by Nintendo",
-        "url": "https://www.polygon.com/nintendo-switch-2-zelda-edition-release-date-pro-controller-price/",
+        "title": "'Zelda: Ocarina of Time' Remake and Switch 2 Console Pre-Orders Will Be a Bloodbath",
+        "url": "https://www.polygon.com/preorder-zelda-ocarina-of-time-switch-2-console-foil-where-how-when/",
         "source": "Polygon"
       },
       {
-        "title": "Nintendo Officially Reveals Zelda: Ocarina of Time Release Date and Gameplay",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-gameplay-release-date/",
+        "title": "Marvel Rivals’ New Character Reveal Explains Why Loki Was Removed From the Game",
+        "url": "https://www.polygon.com/marvel-rivals-season-10-gorr-release-date-revealed-loki-removed/",
         "source": "Polygon"
       },
       {
-        "title": "Nintendo confirms 'The Legend of Zelda' movie’s title",
-        "url": "https://www.polygon.com/legend-of-zelda-trailer-movie-nintendo-direct-april-2027/",
-        "source": "Polygon"
-      },
-      {
-        "title": "James Bond Has Officially Been Recast",
-        "url": "https://www.polygon.com/james-bond-recast-amazon/",
+        "title": "'Magic' Just Revealed 26 New Reality Fracture Cards, Including 5 Overpowered Sphinx Commanders",
+        "url": "https://www.polygon.com/mtg-reality-fracture-new-cards-preview/",
         "source": "Polygon"
       }
     ],
