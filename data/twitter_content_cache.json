@@ -1,165 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-09-08T05:49:22.912850",
+    "last_updated": "2026-09-08T10:46:31.725059",
     "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "We have a year to fix security everywhere",
-        "url": "https://jyn.dev/a-year-to-fix-security/",
+        "title": "Among European Companies That Use a CDN, Nearly 9 in 10 Use Cloudflare",
+        "url": "https://ciphercue.com/blog/european-cdn-concentration-cloudflare-nine-in-ten",
         "source": "Hacker News",
-        "score": 59
+        "score": 111
+      },
+      {
+        "title": "Why getting your hands dirty is good for you",
+        "url": "https://www.bbc.com/future/article/20260904-how-getting-your-hands-dirty-boosts-your-health-within-weeks",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
+        "title": "We built our house for LAN parties",
+        "url": "https://lanparty.house/",
+        "source": "Hacker News",
+        "score": 127
       },
       {
         "title": "I've factored the RSA keys of a Certificate Authority from the 90s",
         "url": "https://mcpherrin.ca/2026/09/07/rsa.html",
         "source": "Hacker News",
-        "score": 228
+        "score": 347
       },
       {
-        "title": "My Feed, My Way",
-        "url": "https://www.pm.gov.au/media/my-feed-my-way",
+        "title": "Antiquated HTML Snippets and Artefacts",
+        "url": "https://vale.rocks/posts/html-relics",
         "source": "Hacker News",
-        "score": 17
+        "score": 13
       },
       {
-        "title": "How well do agents use test/verification techniques?",
-        "url": "https://danluu.com/agentic-testing/",
+        "title": "There's a new \"Google Jail\" for independent wikis",
+        "url": "https://weirdgloop.org/blog/google-jail",
         "source": "Hacker News",
-        "score": 41
+        "score": 183
+      },
+      {
+        "title": "Mistral raises €3B",
+        "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+        "source": "Hacker News",
+        "score": 491
+      },
+      {
+        "title": "Multi-Agents LLM Financial Trading Framework",
+        "url": "https://github.com/TauricResearch/TradingAgents",
+        "source": "Hacker News",
+        "score": 55
       },
       {
         "title": "TALA Is Open-Source",
         "url": "https://d2lang.com/blog/tala-is-open-source/",
         "source": "Hacker News",
-        "score": 161
+        "score": 233
       },
       {
-        "title": "I tested 10 model/harness combinations on the same Three.js task",
-        "url": "https://alvins82.github.io/hangar-harness-model-tests/",
+        "title": "How well do agents use test/verification techniques?",
+        "url": "https://danluu.com/agentic-testing/",
         "source": "Hacker News",
-        "score": 25
+        "score": 90
       },
       {
         "title": "Arm Mali G2-Ultra NX GPU: desktop-class mobile gameplay with AI-native graphics",
         "url": "https://newsroom.arm.com/blog/arm-mali-g2-ultra-nx-ai-native-mobile-graphics",
         "source": "Hacker News",
-        "score": 17
-      },
-      {
-        "title": "Jellyfin 12.0",
-        "url": "https://jellyfin.org/posts/jellyfin-release-12.0/",
-        "source": "Hacker News",
-        "score": 237
+        "score": 47
       },
       {
         "title": "Watch Los Angeles get built, one building at a time (1880–2026)",
         "url": "https://lax-skyline.parcelscope.net/",
         "source": "Hacker News",
-        "score": 264
-      },
-      {
-        "title": "GamersNexus and LG: Or why rooting your TV is a bad idea",
-        "url": "https://leaflet.pub/p/did:plc:yhgc5rlqhoezrx6fbawajxlh/3muwrqenzfk2n",
-        "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "Extinct Tasmanian tiger's 'snap' unlike any living mammal's bite",
-        "url": "https://www.cnn.com/2026/09/02/science/tasmanian-tiger-skull-bite-force",
-        "source": "Hacker News",
-        "score": 18
+        "score": 298
       },
       {
         "title": "Leaving VMware just got harder after Broadcom pulled VDDK downloads",
         "url": "https://www.virtualizationhowto.com/2026/09/leaving-vmware-just-got-harder-after-broadcom-pulled-vddk-downloads/",
         "source": "Hacker News",
-        "score": 158
+        "score": 203
       },
       {
-        "title": "Understanding Computer Memory Architecture and SSD Internals",
-        "url": "https://codingpirate.com/understanding-computer-memory-architecture-ac9320110787",
+        "title": "We have a year to fix security everywhere",
+        "url": "https://jyn.dev/a-year-to-fix-security/",
         "source": "Hacker News",
-        "score": 5
+        "score": 239
       },
       {
-        "title": "John Margolies' photographs of roadside America",
-        "url": "https://publicdomainreview.org/collection/john-margolies-photographs-of-roadside-america/",
+        "title": "Jellyfin 12.0",
+        "url": "https://jellyfin.org/posts/jellyfin-release-12.0/",
         "source": "Hacker News",
-        "score": 61
-      },
-      {
-        "title": "WeatherNext 3",
-        "url": "https://deepmind.google/science/weathernext/",
-        "source": "Hacker News",
-        "score": 294
+        "score": 387
       }
     ],
     "ai": [
       {
+        "title": "There's a new \"Google Jail\" for independent wikis",
+        "url": "https://weirdgloop.org/blog/google-jail",
+        "source": "Hacker News AI",
+        "score": 183
+      },
+      {
+        "title": "Mistral raises €3B",
+        "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+        "source": "Hacker News AI",
+        "score": 491
+      },
+      {
+        "title": "Multi-Agents LLM Financial Trading Framework",
+        "url": "https://github.com/TauricResearch/TradingAgents",
+        "source": "Hacker News AI",
+        "score": 55
+      },
+      {
         "title": "Arm Mali G2-Ultra NX GPU: desktop-class mobile gameplay with AI-native graphics",
         "url": "https://newsroom.arm.com/blog/arm-mali-g2-ultra-nx-ai-native-mobile-graphics",
         "source": "Hacker News AI",
-        "score": 17
+        "score": 47
+      },
+      {
+        "title": "End-to-end infrastructure for training and inferencing open weight models",
+        "url": "https://docs.appliedcompute.com",
+        "source": "Hacker News AI",
+        "score": 9
       },
       {
         "title": "The VMs Powering Mobile Agents (Instinct, Claude Code)",
         "url": "https://rohanadwankar.github.io/posts/platforms.html",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 33
       },
       {
         "title": "Trusting-Trust Attack against an Entire Linux Distribution",
         "url": "https://arxiv.org/abs/2607.24888",
         "source": "Hacker News AI",
-        "score": 189
-      },
-      {
-        "title": "There's a new \"Google Jail\" for independent wikis",
-        "url": "https://weirdgloop.org/blog/google-jail",
-        "source": "Hacker News AI",
-        "score": 19
+        "score": 213
       },
       {
         "title": "Show HN: Jigsaw Haiku",
         "url": "https://jigsawhaiku.com/",
         "source": "Hacker News AI",
-        "score": 77
-      },
-      {
-        "title": "Speculative Decoding in vLLM on AMD GPUs",
-        "url": "https://vllm.ai/blog/2026-08-23-speculative-decoding-amd-gpus",
-        "source": "Hacker News AI",
-        "score": 136
-      },
-      {
-        "title": "Initial effects of AI technology on employment look positive",
-        "url": "https://www.economist.com/finance-and-economics/2026/09/04/the-jobs-apocalypse-is-postponed-an-ai-jobs-boom-is-here",
-        "source": "Hacker News AI",
-        "score": 76
-      },
-      {
-        "title": "AI cancer cures slowed by chip shortage, says Arm boss",
-        "url": "https://www.bbc.com/news/articles/c0m39g7xzevo",
-        "source": "Hacker News AI",
-        "score": 9
+        "score": 98
       }
     ],
     "news": [
       {
-        "title": "Flight recorders recovered from Amazon cargo plane crash",
-        "url": "https://www.bbc.co.uk/news/articles/ce8e32n8epeo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Palestinian parents fear for children's lives at school as settler attacks grow",
-        "url": "https://www.bbc.co.uk/news/articles/c3wj45g73g1o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Germany's far-right AfD says 'democracy demands' parties work with them after state election win",
-        "url": "https://www.bbc.co.uk/news/articles/cpd0113082eo?at_medium=RSS&at_campaign=rss",
+        "title": "Canada braces for prolonged trade war as counter-tariffs on US take effect",
+        "url": "https://www.bbc.co.uk/news/articles/c8jdev0422jo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -168,55 +158,65 @@
         "source": "BBC World"
       },
       {
-        "title": "Ukraine's chief prosecutor resigns over call centre corruption scandal",
-        "url": "https://www.bbc.co.uk/news/articles/c780nlgyd79o?at_medium=RSS&at_campaign=rss",
+        "title": "Trial over alleged murders of Australian surfer brothers starts in Mexico",
+        "url": "https://www.bbc.co.uk/news/articles/crernpv433vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "UK government expected to announce restrictions on trade with West Bank settlements",
-        "url": "https://www.bbc.co.uk/news/articles/c4grdjnle22o?at_medium=RSS&at_campaign=rss",
+        "title": "Highest paid world leader to get salary increase of $1 million",
+        "url": "https://www.bbc.co.uk/news/articles/c5y5kn143d1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump threatens to stop sale of Canadian Bombardier jets in US",
-        "url": "https://www.bbc.co.uk/news/articles/c4gj8xx5010o?at_medium=RSS&at_campaign=rss",
+        "title": "Nepal cracks down on online abuse of flood survivors",
+        "url": "https://www.bbc.co.uk/news/articles/cq5x3n38308o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Five killed in Miami plane crash were in two vehicles on ground, investigators say",
+        "url": "https://www.bbc.co.uk/news/articles/ce8e32n8epeo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "North Korea and Russia open first road bridge linking both countries",
+        "url": "https://www.bbc.co.uk/news/articles/cj9xvg1kz0mo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
+        "title": " Apple iPhone 18 event LIVE: Folding iPhone, new AirPods and more – every announcement as it happens ",
+        "url": "https://www.creativebloq.com/news/live/apple-event-2026",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Sihoo M56C review: A cheap chair that's only good for short sits ",
+        "url": "https://www.creativebloq.com/tech/chairs-desks/sihoo-m56c-review-a-cheap-chair-thats-only-good-for-short-sits",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " NVIDIA's RTX Spark showcase at IFA showed me a first-hand example of how DLSS is breaking out of the gaming sphere ",
+        "url": "https://www.creativebloq.com/ai/nvidias-rtx-spark-showcase-at-ifa-showed-me-a-first-hand-example-of-how-dlss-is-breaking-out-of-the-gaming-sphere",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How I create epic boss battle scenes without the 'fake' 3D look ",
+        "url": "https://www.creativebloq.com/3d/how-i-create-epic-boss-battle-scenes",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Your AI-written brief might wreck your brand's chances of finding the right creatives ",
+        "url": "https://www.creativebloq.com/design/branding/your-ai-written-brief-might-wreck-your-brands-chances-of-finding-the-right-creatives",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This YouTuber spent four years learning 3D animation to make a \"terribly handmade movie\" about a forgotten 1960s superhero ",
+        "url": "https://www.creativebloq.com/art/animation/this-youtuber-spent-four-years-learning-3d-animation-to-make-a-terribly-handmade-movie-that-gives-a-forgotten-1960s-superhero-another-chance",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Some people are worried Apple's folding iPhone design could present a brand new health risk ",
         "url": "https://www.creativebloq.com/design/product-design/some-people-are-worried-apples-folding-iphone-design-could-present-a-brand-new-health-risk",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The best Labor Day drawing tablet deals include pen displays from just $149 ",
-        "url": "https://www.creativebloq.com/art/digital-art/the-best-labor-day-drawing-tablet-deals-include-pen-displays-from-just-usd149",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Frame TVs have up to $1,000 off for Labor Day, and the deals end soon ",
-        "url": "https://www.creativebloq.com/tech/frame-tvs-have-up-to-usd1-000-off-for-labor-day-and-the-deals-end-soon",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This gorgeous fountain pen is nearly 50% off for Labor Day ",
-        "url": "https://www.creativebloq.com/design/product-design/this-gorgeous-fountain-pen-is-nearly-50-percent-off-for-labor-day",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The best Labor Day speaker deals starting from $60 ",
-        "url": "https://www.creativebloq.com/tech/the-best-labor-day-speaker-deals-starting-from-usd60",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Can NVIDIA and Adobe work together to get creatives to actually like AI? ",
-        "url": "https://www.creativebloq.com/ai/can-nvidia-and-adobe-work-together-to-get-creatives-to-actually-like-ai",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Hand-picked Labor Day savings to upgrade your desktop for a fresh start ",
-        "url": "https://www.creativebloq.com/tech/peripherals/hand-picked-labor-day-savings-to-upgrade-your-desktop-for-a-fresh-start",
         "source": "Creative Bloq"
       }
     ],
@@ -259,6 +259,11 @@
     ],
     "gaming": [
       {
+        "title": "Tom Hiddleston's Return to Streaming Has Officially Been Confirmed",
+        "url": "https://www.polygon.com/tom-hiddlestons-return-to-streaming-tenzing/",
+        "source": "Polygon"
+      },
+      {
         "title": "How Grotesqqque Turns One Creator's Unfiltered Imagination Into an Anime Anthology",
         "url": "https://www.polygon.com/why-the-director-of-grotesqqque-thinks-the-best-anime-are-a-little-unorganized/",
         "source": "Polygon"
@@ -286,11 +291,6 @@
       {
         "title": "Where to Play Every Grand Theft Auto Game in 2026",
         "url": "https://www.polygon.com/gta-games-grand-theft-auto-where-to-play-all-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Cemetery Boys Sequel Reveals a Critical Role Connection New Reveal",
-        "url": "https://www.polygon.com/cemetery-boys-espiritu-excerpt-aiden-thomas/",
         "source": "Polygon"
       }
     ],
