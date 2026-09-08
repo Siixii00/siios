@@ -1244,7 +1244,12 @@ ${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道�
         body: JSON.stringify(body)
     });
 
-    if (!response.ok) throw new Error(`AI API error: ${response.status}`);
+    if (!response.ok) {
+        const errBody = await response.text().catch(() => '');
+        const fullUrl = `${aiUrl}/v1/chat/completions`;
+        console.error(`AI API ${response.status} | URL: ${fullUrl} | Model: ${aiModel} | Body: ${errBody.slice(0, 500)}`);
+        throw new Error(`AI API ${response.status} (${aiModel} @ ${fullUrl}): ${errBody.slice(0, 300)}`);
+    }
     const data = await response.json();
     return { content: data.choices[0].message.content };
 }
