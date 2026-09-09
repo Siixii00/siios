@@ -1,161 +1,161 @@
 {
   "metadata": {
-    "last_updated": "2026-09-08T23:53:35.380367",
+    "last_updated": "2026-09-09T03:33:37.520480",
     "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "Large language models develop novel social biases through adaptive exploration",
-        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dpc7fqaOcAH",
+        "title": "Muse – Meta’s personal AI agent",
+        "url": "https://ai.meta.com/muse/",
         "source": "Hacker News",
-        "score": 61
+        "score": 360
       },
       {
-        "title": "AlphaGenome Atlas: a high-resolution map of human DNA",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
+        "title": "Trees use a \"muscle\", tension wood, to correct their posture",
+        "url": "https://phys.org/news/2026-09-trees-muscle-posture-newly-role.html",
         "source": "Hacker News",
-        "score": 475
-      },
-      {
-        "title": "Tao: Open math problems being non-renewably mined by AI",
-        "url": "https://mathstodon.xyz/@tao/117237320796901560",
-        "source": "Hacker News",
-        "score": 63
+        "score": 19
       },
       {
         "title": "How to build a printer",
         "url": "https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/",
         "source": "Hacker News",
-        "score": 71
+        "score": 180
       },
       {
-        "title": "Navier-Stokes – Tristan Buckmaster [pdf]",
-        "url": "https://cims.nyu.edu/~tristanb/statement.pdf",
+        "title": "Large language models develop novel social biases through adaptive exploration",
+        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dpc7fqaOcAH",
         "source": "Hacker News",
-        "score": 1146
+        "score": 114
       },
       {
-        "title": "A Topological Picture Book, Rendered",
-        "url": "https://e-infinity.space/picture-book/",
+        "title": "AlphaGenome Atlas: a high-resolution map of human DNA",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
+        "source": "Hacker News",
+        "score": 507
+      },
+      {
+        "title": "An Accidental Blackboard",
+        "url": "https://martinfowler.com/articles/exploring-gen-ai/an-accidental-blackboard.html",
         "source": "Hacker News",
         "score": 18
       },
       {
-        "title": "On the Navier–Stokes Millennium Prize Problem",
-        "url": "https://openai.com/index/navier-stokes-solution/",
+        "title": "27.5KB language-agnostic WebGPU syntax highlighter",
+        "url": "https://gpu-lexer.vercel.app/",
         "source": "Hacker News",
-        "score": 1051
+        "score": 25
       },
       {
         "title": "DaVinci Resolve 21.1",
         "url": "https://www.blackmagicdesign.com/media/release/20260908-03",
         "source": "Hacker News",
-        "score": 336
+        "score": 366
       },
       {
-        "title": "The Microeconomics of Artificial Intelligence (2025)",
-        "url": "https://direct.mit.edu/books/oa-monograph/6067/The-Microeconomics-of-Artificial-Intelligence",
+        "title": "On the Navier–Stokes Millennium Prize Problem",
+        "url": "https://openai.com/index/navier-stokes-solution/",
         "source": "Hacker News",
-        "score": 15
+        "score": 1165
       },
       {
-        "title": "Kimi K3 (2.8T) at 1 token/s on a MacBook Pro, streamed from four SSDs",
-        "url": "https://github.com/argonautlabsai/deltafin",
+        "title": "Tao: Open math problems being non-renewably mined by AI",
+        "url": "https://mathstodon.xyz/@tao/117237320796901560",
         "source": "Hacker News",
-        "score": 192
+        "score": 207
       },
       {
         "title": "Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses",
         "url": "https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/",
         "source": "Hacker News",
-        "score": 202
-      },
-      {
-        "title": "Animation in Bevy: The Big Picture",
-        "url": "https://glocq.com/en/blog/20260827/",
-        "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "Mercury 2.5",
-        "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5",
-        "source": "Hacker News",
-        "score": 114
+        "score": 222
       },
       {
         "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
         "url": "https://github.com/ayghri/i-have-adhd",
         "source": "Hacker News",
-        "score": 290
+        "score": 340
       },
       {
-        "title": "Show HN: LLM Attention Visualization",
-        "url": "https://ishamf.dev/p/llm-attention-visualizer/",
+        "title": "AI Responsibility – OpenAI and Anthropic",
+        "url": "https://twitter.com/hilbertspaess/status/2097476196791709843",
         "source": "Hacker News",
-        "score": 108
+        "score": 46
+      },
+      {
+        "title": "The Microeconomics of Artificial Intelligence (2025)",
+        "url": "https://direct.mit.edu/books/oa-monograph/6067/The-Microeconomics-of-Artificial-Intelligence",
+        "source": "Hacker News",
+        "score": 36
       }
     ],
     "ai": [
       {
+        "title": "Muse – Meta’s personal AI agent",
+        "url": "https://ai.meta.com/muse/",
+        "source": "Hacker News AI",
+        "score": 360
+      },
+      {
         "title": "Tao: Open math problems being non-renewably mined by AI",
         "url": "https://mathstodon.xyz/@tao/117237320796901560",
         "source": "Hacker News AI",
-        "score": 63
+        "score": 207
+      },
+      {
+        "title": "AI Responsibility – OpenAI and Anthropic",
+        "url": "https://twitter.com/hilbertspaess/status/2097476196791709843",
+        "source": "Hacker News AI",
+        "score": 46
       },
       {
         "title": "The Microeconomics of Artificial Intelligence (2025)",
         "url": "https://direct.mit.edu/books/oa-monograph/6067/The-Microeconomics-of-Artificial-Intelligence",
         "source": "Hacker News AI",
-        "score": 15
+        "score": 36
       },
       {
         "title": "Show HN: LLM Attention Visualization",
         "url": "https://ishamf.dev/p/llm-attention-visualizer/",
         "source": "Hacker News AI",
-        "score": 108
-      },
-      {
-        "title": "Muse: Meta's personal AI agent, features and capabilities",
-        "url": "https://ai.meta.com/muse/",
-        "source": "Hacker News AI",
-        "score": 212
+        "score": 137
       },
       {
         "title": "The two Christian saints who are the Buddha",
         "url": "https://signoregalilei.com/2026/08/30/the-two-christian-saints-who-are-secretly-the-buddha/",
         "source": "Hacker News AI",
-        "score": 205
+        "score": 224
       },
       {
         "title": "GrapheneOS on AI Usage",
         "url": "https://grapheneos.social/@GrapheneOS/117236529351603001",
         "source": "Hacker News AI",
-        "score": 13
+        "score": 28
       },
       {
-        "title": "Cognition (Devin) raises $2B at $48B valuation",
-        "url": "https://cognition.com/blog/series-e",
+        "title": "Iran says it captured US submarine drone in Strait of Hormuz",
+        "url": "https://www.reuters.com/world/middle-east/iran-says-it-captured-us-submarine-drone-strait-hormuz-2026-09-08/",
         "source": "Hacker News AI",
-        "score": 18
+        "score": 26
+      },
+      {
+        "title": "Embedding a bitmap font in your HyperCard stack",
+        "url": "https://www.leadedsolder.com/2026/09/08/hypercard-custom-fonts-in-resources.html",
+        "source": "Hacker News AI",
+        "score": 6
       },
       {
         "title": "Mistral raises €3B",
         "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
         "source": "Hacker News AI",
-        "score": 803
+        "score": 812
       },
       {
-        "title": "ChatGPT Images 2.5",
-        "url": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+        "title": "I resigned from Anthropic today",
+        "url": "https://twitter.com/hilbertspaess/status/2097476196791709843#m",
         "source": "Hacker News AI",
-        "score": 262
-      },
-      {
-        "title": "\"Please Remove All Mannered Prose\" and Other LLM Incantations",
-        "url": "https://matthewritch.com/blog/2026/09/08/Mannered-Prose-Style-Prompts/",
-        "source": "Hacker News AI",
-        "score": 15
+        "score": 145
       }
     ],
     "news": [
@@ -170,7 +170,7 @@
         "source": "BBC World"
       },
       {
-        "title": "US slaps import ban on Canadian alcohol and other goods",
+        "title": "US slaps import ban on Canadian alcohol, motorbikes and other goods",
         "url": "https://www.bbc.co.uk/news/articles/c99dm1000p7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -185,8 +185,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Argentina to file criminal case against oil company operating in Falklands",
-        "url": "https://www.bbc.co.uk/news/articles/c8jd14glvneo?at_medium=RSS&at_campaign=rss",
+        "title": "Meta continues to run ads promoting child sexual abuse material in India - report",
+        "url": "https://www.bbc.co.uk/news/articles/cqxv2vwjjq3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -271,6 +271,16 @@
     ],
     "gaming": [
       {
+        "title": "'Zelda' 40th Anniversary Switch 2 Consoles Sell Out Everywhere, With One Exception",
+        "url": "https://www.polygon.com/zelda-switch-2-preorder-amazon-best-buy-target-ebay-in-stock-ocarina/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Great Movies Brad Bird Says to Watch Before Netflix's 'Ray Gunn'",
+        "url": "https://www.polygon.com/brad-bird-ray-gunn-noir-movies-to-watch/",
+        "source": "Polygon"
+      },
+      {
         "title": "20 best board wipes in Magic: The Gathering",
         "url": "https://www.polygon.com/best-board-wipes-mtg-magic-gathering/",
         "source": "Polygon"
@@ -293,16 +303,6 @@
       {
         "title": "M. Night Shyamalan's 2027 Thriller Looks Like a Return to Form in First Trailer",
         "url": "https://www.polygon.com/remain-m-night-shyamalan-jake-gyllenhaal-trailer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Home Sweet Home' quest walkthrough in The Blood of Dawnwalker",
-        "url": "https://www.polygon.com/blood-of-dawnwalker-home-sweet-quest-walkthrough/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Zelda: Ocarina of Time Remake's Art Style Has Completely Divided Fans. Everyone Is Right",
-        "url": "https://www.polygon.com/legend-zelda-ocarina-time-art-style-debate/",
         "source": "Polygon"
       }
     ],
