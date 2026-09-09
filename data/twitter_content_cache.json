@@ -1,179 +1,202 @@
 {
   "metadata": {
-    "last_updated": "2026-09-09T13:30:05.512150",
-    "total_items": 62
+    "last_updated": "2026-09-09T17:38:44.262399",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
-        "title": "Flock Wants a Closely Surveilled World with No Exit",
-        "url": "https://www.newyorker.com/culture/infinite-scroll/flock-wants-a-closely-surveilled-world-with-no-exit",
+        "title": "Tailwind Labs is joining Shopify",
+        "url": "https://tailwindcss.com/blog/tailwind-is-joining-shopify",
         "source": "Hacker News",
-        "score": 312
+        "score": 556
+      },
+      {
+        "title": "Growing proof that autonomous cars save lives",
+        "url": "https://spectrum.ieee.org/are-self-driving-cars-safe",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
+        "title": "GPT-6 Astra, looped transformers, and hidden reasoning",
+        "url": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
+        "source": "Hacker News",
+        "score": 142
+      },
+      {
+        "title": "GNU Radio in the browser",
+        "url": "https://gnuradioworld.com/",
+        "source": "Hacker News",
+        "score": 63
+      },
+      {
+        "title": "Planet Labs' open satellite feed",
+        "url": "https://tech.marksblogg.com/planet-labs-open-satellite-feed.html",
+        "source": "Hacker News",
+        "score": 49
       },
       {
         "title": "Desert Ant Labs: local, fast models that run on device",
         "url": "https://desertant.com/blog/introducing-desert-ant-labs/",
         "source": "Hacker News",
-        "score": 98
+        "score": 288
       },
       {
-        "title": "I advertise malicious software on Google Ads",
+        "title": "Understanding the recent DDoS attack against Read the Docs",
+        "url": "https://about.readthedocs.com/blog/2026/09/2026-ddos-attack/",
+        "source": "Hacker News",
+        "score": 34
+      },
+      {
+        "title": "How I advertise malicious software on Google Ads",
         "url": "https://xlii.space/eng/malicious-software-on-google-ads/",
         "source": "Hacker News",
-        "score": 117
+        "score": 266
       },
       {
-        "title": "Lotus Notes and the dangers of starting from scratch",
-        "url": "https://buttondown.com/blog/lotus-notes-email",
+        "title": "No Man's Sky Cosmos",
+        "url": "https://www.nomanssky.com/cosmos-update/",
         "source": "Hacker News",
-        "score": 83
+        "score": 129
       },
       {
-        "title": "Claude, change the \"Add to Cart\" button to blue",
-        "url": "https://opusfived.dev/",
+        "title": "The UN challenges five centuries of cartography",
+        "url": "https://www.not-ship.com/united-nations-map/",
         "source": "Hacker News",
-        "score": 102
+        "score": 17
       },
       {
-        "title": "Muse – Meta’s personal AI agent",
-        "url": "https://ai.meta.com/muse/",
-        "source": "Hacker News",
-        "score": 563
-      },
-      {
-        "title": "DeepSeek launching v4.1 flash cheaper and more capable than v4 pro",
-        "url": "https://news.ycombinator.com/item?id=49624603",
-        "source": "Hacker News",
-        "score": 127
-      },
-      {
-        "title": "Coyote v. Acme (1990)",
-        "url": "https://www.newyorker.com/magazine/1990/02/26/coyote-v-acme",
-        "source": "Hacker News",
-        "score": 65
-      },
-      {
-        "title": "Roame (YC S23) Is Hiring Viral Content Editor",
-        "url": "https://www.ycombinator.com/companies/roame/jobs/KuVVqSh-content-systems-builder-editor",
-        "source": "Hacker News",
-        "score": 1
-      },
-      {
-        "title": "Navier-Stokes – Tristan Buckmaster [pdf]",
-        "url": "https://cims.nyu.edu/~tristanb/statement.pdf",
-        "source": "Hacker News",
-        "score": 1817
-      },
-      {
-        "title": "Building a Wall Lamp from Scratch",
-        "url": "https://mbugert.de/posts/2026-09-09-bedroom-lamp-build/",
+        "title": "Rivian's gambit for full autonomy",
+        "url": "https://spectrum.ieee.org/rivian-self-driving",
         "source": "Hacker News",
         "score": 27
       },
       {
-        "title": "Open-source 3D anatomy explorer: 2,234 selectable BodyParts3D meshes",
-        "url": "https://github.com/ashemag/human-atlas",
+        "title": "Qwen 3.8 follows GPT-5.5 Pro reasoning prefills",
+        "url": "https://gist.github.com/wsxiaoys/e0286dc6bb624ff5fdf49e7f4c528ba3",
         "source": "Hacker News",
-        "score": 20
+        "score": 5
       },
       {
-        "title": "Tension wood: A 'muscle' that can both bend and straighten plants",
-        "url": "https://phys.org/news/2026-09-trees-muscle-posture-newly-role.html",
+        "title": "We accidentally built a synthetic cell factory",
+        "url": "https://bnext.bio/post/we-accidentally-built-a-synthetic-cell-factory",
         "source": "Hacker News",
-        "score": 139
+        "score": 30
       },
       {
-        "title": "How An AI math breakthrough ignited a controversy",
-        "url": "https://www.science.org/content/article/how-ai-math-breakthrough-ignited-controversy",
+        "title": "Magic Move for Code Snippets from first principles",
+        "url": "https://rahulrav.com/blog/magic_move.html",
         "source": "Hacker News",
-        "score": 147
+        "score": 7
       },
       {
-        "title": "How to build a printer",
-        "url": "https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/",
+        "title": "Claude, change the \"Add to Cart\" button to blue",
+        "url": "https://opusfived.dev/",
         "source": "Hacker News",
-        "score": 390
+        "score": 704
       }
     ],
     "ai": [
       {
+        "title": "Tailwind Labs is joining Shopify",
+        "url": "https://tailwindcss.com/blog/tailwind-is-joining-shopify",
+        "source": "Hacker News AI",
+        "score": 556
+      },
+      {
+        "title": "GPT-6 Astra, looped transformers, and hidden reasoning",
+        "url": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
+        "source": "Hacker News AI",
+        "score": 142
+      },
+      {
+        "title": "Understanding the recent DDoS attack against Read the Docs",
+        "url": "https://about.readthedocs.com/blog/2026/09/2026-ddos-attack/",
+        "source": "Hacker News AI",
+        "score": 34
+      },
+      {
+        "title": "Qwen 3.8 follows GPT-5.5 Pro reasoning prefills",
+        "url": "https://gist.github.com/wsxiaoys/e0286dc6bb624ff5fdf49e7f4c528ba3",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
         "title": "Claude, change the \"Add to Cart\" button to blue",
         "url": "https://opusfived.dev/",
         "source": "Hacker News AI",
-        "score": 102
+        "score": 704
+      },
+      {
+        "title": "Better AI code comment detector",
+        "url": "https://entropicthoughts.com/better-ai-comment-classifier",
+        "source": "Hacker News AI",
+        "score": 18
       },
       {
         "title": "Muse – Meta’s personal AI agent",
         "url": "https://ai.meta.com/muse/",
         "source": "Hacker News AI",
-        "score": 563
+        "score": 604
       },
       {
-        "title": "Tension wood: A 'muscle' that can both bend and straighten plants",
-        "url": "https://phys.org/news/2026-09-trees-muscle-posture-newly-role.html",
+        "title": "Show HN: Give your AI agent on-screen guides that show users where to click",
+        "url": "https://news.ycombinator.com/item?id=49627872",
         "source": "Hacker News AI",
-        "score": 139
+        "score": 7
       },
       {
-        "title": "How An AI math breakthrough ignited a controversy",
-        "url": "https://www.science.org/content/article/how-ai-math-breakthrough-ignited-controversy",
+        "title": "Show HN: Geiger – See every AI agent on your machine and what it can touch",
+        "url": "https://github.com/Atomburstofficial/geiger",
         "source": "Hacker News AI",
-        "score": 147
+        "score": 32
+      },
+      {
+        "title": "Muse's Social Media Handle Is Stolen by New Meta AI Tool",
+        "url": "https://www.realitytea.com/2026/09/09/muse-band-meta-ai-social-media-handle/",
+        "source": "Hacker News AI",
+        "score": 17
+      },
+      {
+        "title": "Teaching an AI My Taste",
+        "url": "https://lonriesberg.com/posts/teaching-an-ai-my-taste/",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
+        "title": "Microsoft/TracerAI withdraws copyright takedown against Luanti",
+        "url": "https://blog.luanti.org/2026/09/08/dmca-rescinded/",
+        "source": "Hacker News AI",
+        "score": 41
+      },
+      {
+        "title": "Anthropic Is Building a Predictive Surveillance System to Monitor Activists",
+        "url": "https://prospect.org/2026/09/09/anthropic-artificial-intelligence-surveillance-system-monitor-activists/",
+        "source": "Hacker News AI",
+        "score": 220
       },
       {
         "title": "How GPT‑5.6 Sol helps run quantum computing experiments",
         "url": "https://openai.com/index/codex-quantum-computing-experiments/",
         "source": "Hacker News AI",
-        "score": 100
+        "score": 135
       },
       {
-        "title": "“Tweet” and the bird logo apparently enter the public domain",
-        "url": "https://blog.ericgoldman.org/archives/2026/09/tweet-and-the-bird-logo-apparently-enter-the-public-domain-but-x-maintains-its-grip-on-the-twitter-mark-for-now-x-v-project-bluebird.htm",
+        "title": "Tension wood: A 'muscle' that can both bend and straighten plants",
+        "url": "https://phys.org/news/2026-09-trees-muscle-posture-newly-role.html",
         "source": "Hacker News AI",
-        "score": 146
-      },
-      {
-        "title": "Tao: Open math problems being non-renewably mined by AI",
-        "url": "https://mathstodon.xyz/@tao/117237320796901560",
-        "source": "Hacker News AI",
-        "score": 416
-      },
-      {
-        "title": "The Microeconomics of Artificial Intelligence (2025)",
-        "url": "https://direct.mit.edu/books/oa-monograph/6067/The-Microeconomics-of-Artificial-Intelligence",
-        "source": "Hacker News AI",
-        "score": 65
-      },
-      {
-        "title": "ChatGPT Images 2.5",
-        "url": "https://openai.com/index/introducing-chatgpt-images-2-5/",
-        "source": "Hacker News AI",
-        "score": 358
-      },
-      {
-        "title": "I resigned from Anthropic today (Jacob Coxon)",
-        "url": "https://xcancel.com/hilbertspaess/status/2097476196791709843?s=20",
-        "source": "Hacker News AI",
-        "score": 24
-      },
-      {
-        "title": "Ganon's Mysterious Origins (Revisited)",
-        "url": "https://www.thrillingtalesofoldvideogames.com/blog/ganon-name-origin-kamen-rider",
-        "source": "Hacker News AI",
-        "score": 37
-      },
-      {
-        "title": "Show HN: LLM Attention Visualization",
-        "url": "https://ishamf.dev/p/llm-attention-visualizer/",
-        "source": "Hacker News AI",
-        "score": 158
+        "score": 151
       }
     ],
     "news": [
       {
         "title": "Germany's Merz attacks AfD in stormy debate after far-right election win",
         "url": "https://www.bbc.co.uk/news/articles/c98679wr78do?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Google picks Finland for its largest single investment in Europe",
+        "url": "https://www.bbc.co.uk/news/articles/c8r6y4me2g6o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -187,8 +210,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Russia and Ukraine exchange strikes as two killed at Moldova border",
-        "url": "https://www.bbc.co.uk/news/articles/cvgyvpxe3yjo?at_medium=RSS&at_campaign=rss",
+        "title": "Europe's royalty pay respects to King Harald V in Norway",
+        "url": "https://www.bbc.co.uk/news/articles/cd94jgy7e94o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -197,17 +220,22 @@
         "source": "BBC World"
       },
       {
-        "title": "'You're not alone in the darkness': Gambia president urges calm after violent blackout protests",
-        "url": "https://www.bbc.co.uk/news/articles/cgmr22kpd9yo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "White House pulls Tetris-style 'Build The Wall' game after copyright concern",
-        "url": "https://www.bbc.co.uk/news/articles/c9v9djj4m3do?at_medium=RSS&at_campaign=rss",
+        "title": "Uganda pulling out of Prince Harry's Invictus Games, says military chief",
+        "url": "https://www.bbc.co.uk/news/articles/c3d7pzyjzllo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The White House's dodgy Tetris copy seems to have hit a wall ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/the-white-houses-dodgy-tetris-copy-seems-to-have-hit-a-wall",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This $20,000 Master Home Agent would eat Alexa for breakfast ",
+        "url": "https://www.creativebloq.com/tech/this-usd20-000-master-home-agent-would-eat-alexa-for-breakfast",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Don't look at Tom Cruise’s new Digger poster if you're a perfectionist ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/dont-look-at-tom-cruises-new-digger-poster-if-youre-a-perfectionist",
@@ -232,89 +260,79 @@
         "title": " Stop being mean to the new Japanese travel mascots ",
         "url": "https://www.creativebloq.com/design/stop-being-mean-to-the-new-japanese-travel-mascots",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Alien Deathstorm hands-on: a horror FPS that channels Half-Life and Alien, and feels surprisingly grounded ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/alien-deathstorm-hands-on-a-horror-fps-that-channels-half-life-and-alien-and-feels-surprisingly-grounded",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Behind the scenes of Witchspire's spellbinding artistry ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/witchspires-spellbinding-artistry",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
-        "title": "Scientists discover a powerful new antivenom hidden in rattlesnake blood",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260907201605.htm",
+        "title": "Scientists find a bone-building switch that could fight osteoporosis",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260909005305.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Giant new dinosaur discovered beneath construction site in Brazil",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260907201603.htm",
+        "title": "Interstellar comet 3I/ATLAS is bursting with methanol",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260909005217.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Ozempic and Wegovy may have an unexpected mental health benefit",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260907201601.htm",
+        "title": "Have we found alien life? Hundreds of scientists weigh in",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260909005212.htm",
         "source": "Science Daily"
       },
       {
-        "title": "The American “cheetah” wasn’t a cheetah at all",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260907201558.htm",
+        "title": "Ozempic and Wegovy linked to nearly 40% fewer asthma attacks",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260909005155.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Your personality may be more genetic than scientists realized",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260907201554.htm",
+        "title": "Devil’s Arrows: Ancient builders hauled 55,000-pound stones 11 miles for Britain’s tallest stone row",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260909005152.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists observe Einstein’s gravity in the quantum world for the first time",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260907201552.htm",
+        "title": "Chinese scientists find a hidden atomic structure that unlocks methane",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260909005148.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Common dry-cleaning chemical linked to triple the risk of liver scarring",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260906170149.htm",
+        "title": "“Parachute science” is failing the tropics, home to more than 80% of insect species",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260909005145.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "The Legend of Zelda: Ocarina of Time Remake Gets One Thing Absolutely Right",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-switch-2-art-style-hyrule-field/",
+        "title": "Nintendo Reveals Rare Switch 2 Game That Can't Be Played on a TV",
+        "url": "https://www.polygon.com/nintendo-direct-onyx-dark-grip-horror-game-bloober/",
         "source": "Polygon"
       },
       {
-        "title": "No Man's Sky's 10th Anniversary Update is a Massive Overhaul of Space Itself",
-        "url": "https://www.polygon.com/no-mans-sky-cosmos-update-space-overhaul/",
+        "title": "Stephen King's 1974 Horror Classic Returns in First Look at Prime Video's New 8-Episode Series",
+        "url": "https://www.polygon.com/carrie-mike-flanagan-prime-video-trailer/",
         "source": "Polygon"
       },
       {
-        "title": "Avatar’s Creators Officially Reveal When 'Seven Havens' Takes Place After 'Legend Of Korra'",
-        "url": "https://www.polygon.com/avatar-seven-havens-team-reveals-the-sequels-timeline-after-korra-and-much-more/",
+        "title": "What time does Wardogs release in your time zone?",
+        "url": "https://www.polygon.com/wardogs-release-time-edt-pdt-preload/",
         "source": "Polygon"
       },
       {
-        "title": "10 Best New Sci-Fi and Fantasy Books to Read Fall 2026",
-        "url": "https://www.polygon.com/best-sci-fi-fantasy-books-fall-2026/",
+        "title": "Nintendo’s Disappointing September Direct Only Has the Switch 2 To Blame",
+        "url": "https://www.polygon.com/nintendo-direct-september-2026-analysis/",
         "source": "Polygon"
       },
       {
-        "title": "The Division 2's New Echoes of Central Park DLC Isn't Setup for The Division 3",
-        "url": "https://www.polygon.com/division-2-echoes-central-park-interview/",
+        "title": "Forget Yellowstone, Brian Tyree Henry's Western Anime Is Here to Change the Genre",
+        "url": "https://www.polygon.com/brian-tyree-henry-bass-machina-interview/",
         "source": "Polygon"
       },
       {
-        "title": "'VisionQuest' Showrunner Reveals How His Mysterious Sci-Fi Series Connects to the MCU",
-        "url": "https://www.polygon.com/visionquest-showrunner-interview-terry-matalas/",
+        "title": "Two New Persona Games Officially Confirmed for Switch 2 Release",
+        "url": "https://www.polygon.com/persona-6-persona-4-revival-getting-nintendo-switch-2-versions/",
         "source": "Polygon"
       },
       {
-        "title": "Disney's Zootopia 2 Follow-up Wants to Resurrect 70-Year-Old Movie Magic",
-        "url": "https://www.polygon.com/disney-hexed-interview/",
+        "title": "Smash Bros. Fans Just Got Trolled Accidentally By Nintendo's 45 Minute Direct",
+        "url": "https://www.polygon.com/nintendo-direct-smash-bros-kirby-switch-2-leak-rumor/",
         "source": "Polygon"
       }
     ],
