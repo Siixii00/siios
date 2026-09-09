@@ -1,167 +1,191 @@
 {
   "metadata": {
-    "last_updated": "2026-09-09T03:33:37.520480",
-    "total_items": 60
+    "last_updated": "2026-09-09T08:44:54.513868",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
+        "title": "How GPT‑5.6 Sol helps run quantum computing experiments",
+        "url": "https://openai.com/index/codex-quantum-computing-experiments/",
+        "source": "Hacker News",
+        "score": 32
+      },
+      {
         "title": "Muse – Meta’s personal AI agent",
         "url": "https://ai.meta.com/muse/",
         "source": "Hacker News",
-        "score": 360
+        "score": 493
       },
       {
-        "title": "Trees use a \"muscle\", tension wood, to correct their posture",
+        "title": "On Really Trying (2009)",
+        "url": "https://gwern.net/on-really-trying",
+        "source": "Hacker News",
+        "score": 33
+      },
+      {
+        "title": "Tension wood: A 'muscle' that can both bend and straighten plants",
         "url": "https://phys.org/news/2026-09-trees-muscle-posture-newly-role.html",
         "source": "Hacker News",
-        "score": 19
+        "score": 112
+      },
+      {
+        "title": "Navier-Stokes – Tristan Buckmaster [pdf]",
+        "url": "https://cims.nyu.edu/~tristanb/statement.pdf",
+        "source": "Hacker News",
+        "score": 1628
+      },
+      {
+        "title": "Researchers Spot Fake Ancient Pottery Using the Earth's Magnetic Field",
+        "url": "https://www.smithsonianmag.com/smart-news/researchers-determine-how-to-spot-fake-ancient-pottery-using-the-earths-magnetic-field-180989441/",
+        "source": "Hacker News",
+        "score": 37
       },
       {
         "title": "How to build a printer",
         "url": "https://nishantjosh.dev/blogs/how-to-build-a-fking-printer/",
         "source": "Hacker News",
-        "score": 180
+        "score": 309
       },
       {
-        "title": "Large language models develop novel social biases through adaptive exploration",
-        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dpc7fqaOcAH",
+        "title": "A Biography of Lee Holloway, the Architect of Cloudflare's Technology (Part 1)",
+        "url": "https://note.com/masakazu_urabe/n/n7815f5b64fab?hl=en",
         "source": "Hacker News",
-        "score": 114
+        "score": 44
       },
       {
         "title": "AlphaGenome Atlas: a high-resolution map of human DNA",
         "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-atlas/",
         "source": "Hacker News",
-        "score": 507
+        "score": 554
       },
       {
-        "title": "An Accidental Blackboard",
-        "url": "https://martinfowler.com/articles/exploring-gen-ai/an-accidental-blackboard.html",
+        "title": "AI Has a Discovery Problem",
+        "url": "https://mhacevedo.com/posts/the-discovery-problem",
         "source": "Hacker News",
-        "score": 18
+        "score": 45
       },
       {
-        "title": "27.5KB language-agnostic WebGPU syntax highlighter",
-        "url": "https://gpu-lexer.vercel.app/",
+        "title": "Copyright does more harm than good and should be abolished",
+        "url": "https://grapheneos.social/@GrapheneOS/117231186011306184",
         "source": "Hacker News",
-        "score": 25
+        "score": 188
       },
       {
-        "title": "DaVinci Resolve 21.1",
-        "url": "https://www.blackmagicdesign.com/media/release/20260908-03",
+        "title": "“Tweet” and the bird logo apparently enter the public domain",
+        "url": "https://blog.ericgoldman.org/archives/2026/09/tweet-and-the-bird-logo-apparently-enter-the-public-domain-but-x-maintains-its-grip-on-the-twitter-mark-for-now-x-v-project-bluebird.htm",
         "source": "Hacker News",
-        "score": 366
+        "score": 62
       },
       {
-        "title": "On the Navier–Stokes Millennium Prize Problem",
-        "url": "https://openai.com/index/navier-stokes-solution/",
+        "title": "Large language models develop novel social biases through adaptive exploration",
+        "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3Dpc7fqaOcAH",
         "source": "Hacker News",
-        "score": 1165
+        "score": 153
       },
       {
-        "title": "Tao: Open math problems being non-renewably mined by AI",
-        "url": "https://mathstodon.xyz/@tao/117237320796901560",
+        "title": "Mercury 2.5",
+        "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-2-5",
         "source": "Hacker News",
-        "score": 207
+        "score": 190
       },
       {
-        "title": "Benchmarking Qwen3.8 27B quantizations: 4-bit holds up, 1-bit collapses",
-        "url": "https://quesma.com/blog/qwen38-27b-quantizations-benchmarked/",
+        "title": "I resigned from Anthropic today",
+        "url": "https://twitter.com/hilbertspaess/status/2097476196791709843#m",
         "source": "Hacker News",
-        "score": 222
-      },
-      {
-        "title": "I-have-ADHD: A skill to stop coding agents from burying the answer",
-        "url": "https://github.com/ayghri/i-have-adhd",
-        "source": "Hacker News",
-        "score": 340
-      },
-      {
-        "title": "AI Responsibility – OpenAI and Anthropic",
-        "url": "https://twitter.com/hilbertspaess/status/2097476196791709843",
-        "source": "Hacker News",
-        "score": 46
-      },
-      {
-        "title": "The Microeconomics of Artificial Intelligence (2025)",
-        "url": "https://direct.mit.edu/books/oa-monograph/6067/The-Microeconomics-of-Artificial-Intelligence",
-        "source": "Hacker News",
-        "score": 36
+        "score": 544
       }
     ],
     "ai": [
       {
+        "title": "How GPT‑5.6 Sol helps run quantum computing experiments",
+        "url": "https://openai.com/index/codex-quantum-computing-experiments/",
+        "source": "Hacker News AI",
+        "score": 32
+      },
+      {
         "title": "Muse – Meta’s personal AI agent",
         "url": "https://ai.meta.com/muse/",
         "source": "Hacker News AI",
-        "score": 360
+        "score": 493
       },
       {
-        "title": "Tao: Open math problems being non-renewably mined by AI",
-        "url": "https://mathstodon.xyz/@tao/117237320796901560",
+        "title": "Tension wood: A 'muscle' that can both bend and straighten plants",
+        "url": "https://phys.org/news/2026-09-trees-muscle-posture-newly-role.html",
         "source": "Hacker News AI",
-        "score": 207
+        "score": 112
       },
       {
-        "title": "AI Responsibility – OpenAI and Anthropic",
-        "url": "https://twitter.com/hilbertspaess/status/2097476196791709843",
+        "title": "AI Has a Discovery Problem",
+        "url": "https://mhacevedo.com/posts/the-discovery-problem",
         "source": "Hacker News AI",
-        "score": 46
+        "score": 45
       },
       {
-        "title": "The Microeconomics of Artificial Intelligence (2025)",
-        "url": "https://direct.mit.edu/books/oa-monograph/6067/The-Microeconomics-of-Artificial-Intelligence",
+        "title": "“Tweet” and the bird logo apparently enter the public domain",
+        "url": "https://blog.ericgoldman.org/archives/2026/09/tweet-and-the-bird-logo-apparently-enter-the-public-domain-but-x-maintains-its-grip-on-the-twitter-mark-for-now-x-v-project-bluebird.htm",
         "source": "Hacker News AI",
-        "score": 36
-      },
-      {
-        "title": "Show HN: LLM Attention Visualization",
-        "url": "https://ishamf.dev/p/llm-attention-visualizer/",
-        "source": "Hacker News AI",
-        "score": 137
-      },
-      {
-        "title": "The two Christian saints who are the Buddha",
-        "url": "https://signoregalilei.com/2026/08/30/the-two-christian-saints-who-are-secretly-the-buddha/",
-        "source": "Hacker News AI",
-        "score": 224
-      },
-      {
-        "title": "GrapheneOS on AI Usage",
-        "url": "https://grapheneos.social/@GrapheneOS/117236529351603001",
-        "source": "Hacker News AI",
-        "score": 28
-      },
-      {
-        "title": "Iran says it captured US submarine drone in Strait of Hormuz",
-        "url": "https://www.reuters.com/world/middle-east/iran-says-it-captured-us-submarine-drone-strait-hormuz-2026-09-08/",
-        "source": "Hacker News AI",
-        "score": 26
-      },
-      {
-        "title": "Embedding a bitmap font in your HyperCard stack",
-        "url": "https://www.leadedsolder.com/2026/09/08/hypercard-custom-fonts-in-resources.html",
-        "source": "Hacker News AI",
-        "score": 6
-      },
-      {
-        "title": "Mistral raises €3B",
-        "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
-        "source": "Hacker News AI",
-        "score": 812
+        "score": 62
       },
       {
         "title": "I resigned from Anthropic today",
         "url": "https://twitter.com/hilbertspaess/status/2097476196791709843#m",
         "source": "Hacker News AI",
-        "score": 145
+        "score": 544
+      },
+      {
+        "title": "Tao: Open math problems being non-renewably mined by AI",
+        "url": "https://mathstodon.xyz/@tao/117237320796901560",
+        "source": "Hacker News AI",
+        "score": 347
+      },
+      {
+        "title": "Ganon's Mysterious Origins (Revisited)",
+        "url": "https://www.thrillingtalesofoldvideogames.com/blog/ganon-name-origin-kamen-rider",
+        "source": "Hacker News AI",
+        "score": 32
+      },
+      {
+        "title": "The Microeconomics of Artificial Intelligence (2025)",
+        "url": "https://direct.mit.edu/books/oa-monograph/6067/The-Microeconomics-of-Artificial-Intelligence",
+        "source": "Hacker News AI",
+        "score": 53
+      },
+      {
+        "title": "ChatGPT Images 2.5",
+        "url": "https://openai.com/index/introducing-chatgpt-images-2-5/",
+        "source": "Hacker News AI",
+        "score": 337
+      },
+      {
+        "title": "Show HN: LLM Attention Visualization",
+        "url": "https://ishamf.dev/p/llm-attention-visualizer/",
+        "source": "Hacker News AI",
+        "score": 155
+      },
+      {
+        "title": "YouTube cracks down on 'AI ghost creators'",
+        "url": "https://www.semafor.com/article/09/03/2026/youtube-cracks-down-on-ghost-creators",
+        "source": "Hacker News AI",
+        "score": 8
+      },
+      {
+        "title": "The two Christian saints who are the Buddha",
+        "url": "https://signoregalilei.com/2026/08/30/the-two-christian-saints-who-are-secretly-the-buddha/",
+        "source": "Hacker News AI",
+        "score": 238
+      },
+      {
+        "title": "GrapheneOS on AI Usage",
+        "url": "https://grapheneos.social/@GrapheneOS/117236529351603001",
+        "source": "Hacker News AI",
+        "score": 38
       }
     ],
     "news": [
       {
-        "title": "UK announces sanctions on West Bank settlements prompting furious Israeli response",
-        "url": "https://www.bbc.co.uk/news/articles/c4g7zen0vveo?at_medium=RSS&at_campaign=rss",
+        "title": "Oil hits $100 a barrel for first time since July after US strikes",
+        "url": "https://www.bbc.co.uk/news/articles/cyvznqypz0yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -175,13 +199,13 @@
         "source": "BBC World"
       },
       {
-        "title": "'Constantly on my mind' - 9/11 agony goes on for bereaved, 25 years on",
+        "title": "'Constantly on my mind' - 9/11 agony endures for bereaved, 25 years on",
         "url": "https://www.bbc.co.uk/news/articles/clyrjw1yj75o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Renoir paintings worth millions stolen in French museum heist",
-        "url": "https://www.bbc.co.uk/news/articles/c70drp0pyw2o?at_medium=RSS&at_campaign=rss",
+        "title": "South Park creators rename show 'South America' in apparent dig at Trump",
+        "url": "https://www.bbc.co.uk/news/articles/cp9340rg7k8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -190,12 +214,22 @@
         "source": "BBC World"
       },
       {
-        "title": "Ukrainian TV channel building hit by Russian drone as five killed in Kyiv",
-        "url": "https://www.bbc.co.uk/news/articles/cn8m1k7p3v7o?at_medium=RSS&at_campaign=rss",
+        "title": "'You're not alone in the darkness': Gambia president urges calm after violent blackout protests",
+        "url": "https://www.bbc.co.uk/news/articles/cgmr22kpd9yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Behind the scenes of Witchspire's spellbinding artistry ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/witchspires-spellbinding-artistry",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Loewe’s lowkey logo sandals divide fashionistas ",
+        "url": "https://www.creativebloq.com/design/logos-icons/loewes-lowkey-logo-sandals-divide-fashionistas",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The Nintendo Switch 2 Zelda 40th anniversary edition looks like a precious relic from Hyrule ",
         "url": "https://www.creativebloq.com/entertainment/gaming/the-nintendo-switch-2-zelda-40th-anniversary-edition-looks-like-a-precious-relic-from-hyrule",
@@ -219,16 +253,6 @@
       {
         "title": " This free app could become the Blender of texture painting software ",
         "url": "https://www.creativebloq.com/3d/3d-software/this-free-app-could-become-the-blender-of-texture-painting-software",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Get inspired, learn this art trick: paint with fewer colours and bigger brush strokes ",
-        "url": "https://www.creativebloq.com/art/digital-art/steal-this-art-trick-paint-with-fewer-colours-and-bigger-brush-strokes",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " RTX Spark's local AI wants to be your chief of staff, but it’s not ready to run the office yet ",
-        "url": "https://www.creativebloq.com/ai/rtx-sparks-local-ai-wants-to-be-your-chief-of-staff-but-its-not-ready-to-run-the-office-yet",
         "source": "Creative Bloq"
       }
     ],
@@ -271,6 +295,26 @@
     ],
     "gaming": [
       {
+        "title": "'Battlestar Galactica' Meets 'Hunger Games' in 100-Episode Action Thriller That's Free on Streaming",
+        "url": "https://www.polygon.com/the-100-streaming-free-pluto-tv-best-binge/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Marvel Phase 7 and 8 Movie Slate and Release Dates: 'Black Panther 3,' 'Shang-Chi 2' and Beyond",
+        "url": "https://www.polygon.com/marvels-phase-7-movie-slate-is-hiding-in-plain-sight/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Forget 'GTA 6,' The Greatest Miami Action Crime Series Ever Made Is Streaming For Free Right Now",
+        "url": "https://www.polygon.com/miami-crime-drama-series-streaming-free-tubi/",
+        "source": "Polygon"
+      },
+      {
+        "title": "60 Years Later, the Best 'Great Pumpkin, Charlie Brown' Quote Is Still an All-Time 'Peanuts' Classic",
+        "url": "https://www.polygon.com/great-pumpkin-charlie-brown-best-quote-peanuts/",
+        "source": "Polygon"
+      },
+      {
         "title": "'Zelda' 40th Anniversary Switch 2 Consoles Sell Out Everywhere, With One Exception",
         "url": "https://www.polygon.com/zelda-switch-2-preorder-amazon-best-buy-target-ebay-in-stock-ocarina/",
         "source": "Polygon"
@@ -283,26 +327,6 @@
       {
         "title": "20 best board wipes in Magic: The Gathering",
         "url": "https://www.polygon.com/best-board-wipes-mtg-magic-gathering/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Another Big Sequel Launches in Zelda and GTA 6’s November That You Can't Miss",
-        "url": "https://www.polygon.com/escape-academy-2-back-2-school-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Beast locations for Beastmaster's bestiary in FFXIV",
-        "url": "https://www.polygon.com/ffxiv-beastmaster-bst-beast-bestiary-locations-list-skills/",
-        "source": "Polygon"
-      },
-      {
-        "title": "South Park Creators Reveal Official New Name for South Park",
-        "url": "https://www.polygon.com/south-park-america-trey-parker-matt-stone-paramount/",
-        "source": "Polygon"
-      },
-      {
-        "title": "M. Night Shyamalan's 2027 Thriller Looks Like a Return to Form in First Trailer",
-        "url": "https://www.polygon.com/remain-m-night-shyamalan-jake-gyllenhaal-trailer/",
         "source": "Polygon"
       }
     ],
