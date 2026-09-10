@@ -1,155 +1,179 @@
 {
   "metadata": {
-    "last_updated": "2026-09-10T21:28:07.685070",
-    "total_items": 59
+    "last_updated": "2026-09-10T23:48:11.763824",
+    "total_items": 63
   },
   "content": {
     "tech": [
       {
-        "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
-        "url": "https://cognition.com/blog/swe-2",
+        "title": "Shopify is moving from React Native back to Swift and Kotlin",
+        "url": "https://shopify.engineering/back-to-native",
         "source": "Hacker News",
-        "score": 290
+        "score": 696
       },
       {
         "title": "More questions about whether researchers can trust OpenAI with unpublished math",
         "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
         "source": "Hacker News",
-        "score": 449
+        "score": 587
       },
       {
-        "title": "NASA Color Trick Was Meant for Mars. Now It's Unveiling Rock Art on Earth",
-        "url": "https://gizmodo.com/this-nasa-color-trick-was-meant-for-mars-now-its-unveiling-rock-art-on-earth-2000809844",
+        "title": "The Deathray: A simple way for an untrusted site to freeze a Mac",
+        "url": "https://auberon.xyz/blog/posts/deathray/",
         "source": "Hacker News",
-        "score": 206
+        "score": 43
+      },
+      {
+        "title": "OpenAI Agents API",
+        "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+        "source": "Hacker News",
+        "score": 85
+      },
+      {
+        "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+        "url": "https://cognition.com/blog/swe-2",
+        "source": "Hacker News",
+        "score": 339
       },
       {
         "title": "Don't let anyone take away your big box of cables",
         "url": "https://blog.jim-nielsen.com/2026/hands-off-my-cables/",
         "source": "Hacker News",
-        "score": 168
+        "score": 270
       },
       {
-        "title": "Shopify moves back to Native from React Native",
-        "url": "https://shopify.engineering/back-to-native",
+        "title": "Technique for Manipulating Satellite Photos Now Reveals Ancient Images (2025)",
+        "url": "https://spinoff.nasa.gov/Manipulating_Satellite_Photos_Now_Reveals_Ancient_Images",
         "source": "Hacker News",
-        "score": 602
-      },
-      {
-        "title": "Forgejo <=16.0.3 Critical RCE",
-        "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
-        "source": "Hacker News",
-        "score": 113
+        "score": 247
       },
       {
         "title": "Proof of Capture: Apple Reference Image, but open source and using steganography",
         "url": "https://merybenavente.me/blog/proof-of-capture",
         "source": "Hacker News",
-        "score": 18
+        "score": 55
       },
       {
         "title": "Music Theory for the 21st-Century Classroom",
         "url": "https://musictheory.pugetsound.edu/mt21c/MusicTheory.html",
         "source": "Hacker News",
-        "score": 97
+        "score": 139
       },
       {
-        "title": "OpenAI Agents API",
-        "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+        "title": "OpenAI’s Navier-Stokes release included a Lean 4 formal proof",
+        "url": "https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/",
         "source": "Hacker News",
-        "score": 19
+        "score": 121
       },
       {
-        "title": "What happens when a GPU writes memory",
-        "url": "https://blog.doubleword.ai/what-happens-when-a-gpu-writes-memory",
+        "title": "Forgejo <=16.0.3 Critical RCE",
+        "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
         "source": "Hacker News",
-        "score": 19
+        "score": 140
       },
       {
-        "title": "Rust is tier-1 language at Microsoft",
-        "url": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/",
+        "title": "Bodily Oddities",
+        "url": "https://vester.si/bodily-oddities/",
         "source": "Hacker News",
-        "score": 536
+        "score": 40
       },
       {
-        "title": "Show HN: Vertumnus – printable posters of farmers' market produce seasonality",
-        "url": "https://vertumnus.fyi",
+        "title": "Recursion into madness",
+        "url": "https://blog.coredump.cx/p/recursion-into-madness",
         "source": "Hacker News",
-        "score": 6
+        "score": 22
       },
       {
-        "title": "DeepSeek v4.1 Flash",
-        "url": "https://twitter.com/deepseek_ai/status/2097930608790167907",
+        "title": "Neki – Sharded Postgres",
+        "url": "https://planetscale.com/blog/introducing-neki",
         "source": "Hacker News",
-        "score": 909
+        "score": 188
       },
       {
         "title": "Hitachi launches CO2 heat pump water heaters with solar-friendly tariff controls",
         "url": "https://www.pv-magazine.com/2026/09/07/hitachi-launches-co2-heat-pump-water-heaters-with-solar-friendly-tariff-controls/",
         "source": "Hacker News",
-        "score": 259
-      },
-      {
-        "title": "Neki",
-        "url": "https://planetscale.com/blog/introducing-neki",
-        "source": "Hacker News",
-        "score": 167
+        "score": 279
       }
     ],
     "ai": [
       {
-        "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
-        "url": "https://cognition.com/blog/swe-2",
-        "source": "Hacker News AI",
-        "score": 290
-      },
-      {
         "title": "More questions about whether researchers can trust OpenAI with unpublished math",
         "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
         "source": "Hacker News AI",
-        "score": 449
-      },
-      {
-        "title": "Proof of Capture: Apple Reference Image, but open source and using steganography",
-        "url": "https://merybenavente.me/blog/proof-of-capture",
-        "source": "Hacker News AI",
-        "score": 18
+        "score": 587
       },
       {
         "title": "OpenAI Agents API",
         "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 85
       },
       {
-        "title": "Compute-efficient pretraining and scaling to trillion-parameter models",
-        "url": "https://magic.dev/blog/pretraining#",
+        "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+        "url": "https://cognition.com/blog/swe-2",
         "source": "Hacker News AI",
-        "score": 103
+        "score": 339
+      },
+      {
+        "title": "Proof of Capture: Apple Reference Image, but open source and using steganography",
+        "url": "https://merybenavente.me/blog/proof-of-capture",
+        "source": "Hacker News AI",
+        "score": 55
+      },
+      {
+        "title": "OpenAI’s Navier-Stokes release included a Lean 4 formal proof",
+        "url": "https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/",
+        "source": "Hacker News AI",
+        "score": 121
       },
       {
         "title": "Detecting and countering misuse of AI: September 2026",
         "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
         "source": "Hacker News AI",
-        "score": 30
+        "score": 69
       },
       {
-        "title": "On Next-Gen Transformer: Loops Are Not What You Need",
-        "url": "https://zartbot.github.io/blog/model_arch/inception/",
+        "title": "Compute-efficient pretraining and scaling to trillion-parameter models",
+        "url": "https://magic.dev/blog/pretraining#",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 108
       },
       {
         "title": "AI Is Breaking This Thing We Call Trust",
         "url": "https://terriblesoftware.org/2026/09/10/ai-is-breaking-this-thing-we-call-trust/",
         "source": "Hacker News AI",
-        "score": 38
+        "score": 51
       },
       {
-        "title": "Liesegang Rings",
-        "url": "https://chillphysicsenjoyer.substack.com/p/liesegang-rings",
+        "title": "Stop externalizing the cost of your AI use to me",
+        "url": "https://thelastsoftwareengineer.substack.com/p/stop-externalizing-the-cost-of-your",
         "source": "Hacker News AI",
-        "score": 26
+        "score": 5
+      },
+      {
+        "title": "On Next-Gen Transformer: Loops Are Not What You Need",
+        "url": "https://zartbot.github.io/blog/model_arch/inception/",
+        "source": "Hacker News AI",
+        "score": 12
+      },
+      {
+        "title": "1M+ German households have hung solar panels off their balcony railings",
+        "url": "https://spacedaily.com/b-more-than-a-million-german-households-have-hung-solar-panels-off-their-balcony-railings-and-plugged-them-into-a-wall-socket-and-the-law-caps-each-at-800-watts-a-fridge-and-a-laptop/",
+        "source": "Hacker News AI",
+        "score": 21
+      },
+      {
+        "title": "AI researchers leave Anthropic and Google: 'There are no adults in the room'",
+        "url": "https://www.nbcnews.com/tech/security/two-ai-researchers-leave-anthropic-google-safety-concerns-rcna597086",
+        "source": "Hacker News AI",
+        "score": 4
+      },
+      {
+        "title": "AI Is Not Going to Kill My Love of Math",
+        "url": "https://chillphysicsenjoyer.substack.com/p/ai-is-not-going-to-kill-my-love-of",
+        "source": "Hacker News AI",
+        "score": 5
       }
     ],
     "news": [
@@ -265,6 +289,11 @@
     ],
     "gaming": [
       {
+        "title": "The scariest survival thriller of 2026 was filmed on sacred land deep in the Amazon",
+        "url": "https://www.polygon.com/beware-boiuna-director-interview-mike-nelson/",
+        "source": "Polygon"
+      },
+      {
         "title": "What's Free on Steam This Weekend (Sept. 11-14)",
         "url": "https://www.polygon.com/free-on-steam-this-weekend-sept-11-2026-borderlands-4/",
         "source": "Polygon"
@@ -293,15 +322,15 @@
         "title": "Marvel’s X-Men Movie Casts The Boys Star in Major Role",
         "url": "https://www.polygon.com/marvel-x-men-movie-cast-angel-warren-worthington/",
         "source": "Polygon"
-      },
-      {
-        "title": "Final Fantasy 7's Future in Fortnite Is Unclear, but There’s Hope",
-        "url": "https://www.polygon.com/final-fantasy-7-rebirth-interview-fortnite-collab/",
-        "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "GitHub Copilot app for Beginners: Using the diff, terminal, and browser",
+        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "GitHub availability report: August 2026",
         "url": "https://github.blog/news-insights/company-news/github-availability-report-august-2026/",
@@ -330,11 +359,6 @@
       {
         "title": "OpenClaw went viral. Meet the maintainers building and securing it.",
         "url": "https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "GitHub Copilot app for Beginners: Automate Dependabot pull request triage",
-        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-automate-dependabot-pull-request-triage/",
         "source": "GitHub Blog"
       }
     ]
