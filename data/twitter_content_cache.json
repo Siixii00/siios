@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-10T18:11:01.517897",
-    "total_items": 61
+    "last_updated": "2026-09-10T21:28:07.685070",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "Rust is tier-1 language at Microsoft",
-        "url": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/",
-        "source": "Hacker News",
-        "score": 358
-      },
-      {
         "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
         "url": "https://cognition.com/blog/swe-2",
         "source": "Hacker News",
-        "score": 136
+        "score": 290
       },
       {
         "title": "More questions about whether researchers can trust OpenAI with unpublished math",
         "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
         "source": "Hacker News",
-        "score": 221
-      },
-      {
-        "title": "I have a theory that software drives people insane",
-        "url": "https://graybeard.ing/software-drives-people-insane/",
-        "source": "Hacker News",
-        "score": 96
+        "score": 449
       },
       {
         "title": "NASA Color Trick Was Meant for Mars. Now It's Unveiling Rock Art on Earth",
         "url": "https://gizmodo.com/this-nasa-color-trick-was-meant-for-mars-now-its-unveiling-rock-art-on-earth-2000809844",
         "source": "Hacker News",
-        "score": 82
+        "score": 206
+      },
+      {
+        "title": "Don't let anyone take away your big box of cables",
+        "url": "https://blog.jim-nielsen.com/2026/hands-off-my-cables/",
+        "source": "Hacker News",
+        "score": 168
       },
       {
         "title": "Shopify moves back to Native from React Native",
         "url": "https://shopify.engineering/back-to-native",
         "source": "Hacker News",
-        "score": 486
+        "score": 602
       },
       {
         "title": "Forgejo <=16.0.3 Critical RCE",
         "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
         "source": "Hacker News",
-        "score": 41
+        "score": 113
       },
       {
-        "title": "Neki",
-        "url": "https://planetscale.com/blog/introducing-neki",
+        "title": "Proof of Capture: Apple Reference Image, but open source and using steganography",
+        "url": "https://merybenavente.me/blog/proof-of-capture",
         "source": "Hacker News",
-        "score": 87
+        "score": 18
       },
       {
-        "title": "Douglas Hofstadter: Analogy as the Core of Cognition [video]",
-        "url": "https://www.youtube.com/watch?v=n8m7lFQ3njk",
+        "title": "Music Theory for the 21st-Century Classroom",
+        "url": "https://musictheory.pugetsound.edu/mt21c/MusicTheory.html",
         "source": "Hacker News",
-        "score": 41
+        "score": 97
       },
       {
-        "title": "Silicon Valley Is Transforming the Military-Industrial Complex",
-        "url": "https://costsofwar.watson.brown.edu/paper/how-big-tech-and-silicon-valley-are-transforming-military-industrial-complex",
+        "title": "OpenAI Agents API",
+        "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
         "source": "Hacker News",
-        "score": 44
+        "score": 19
       },
       {
-        "title": ">10x More Efficient Pretraining",
-        "url": "https://magic.dev/blog/pretraining#",
+        "title": "What happens when a GPU writes memory",
+        "url": "https://blog.doubleword.ai/what-happens-when-a-gpu-writes-memory",
         "source": "Hacker News",
-        "score": 74
+        "score": 19
       },
       {
-        "title": "Hitachi launches CO2 heat pump water heaters with solar-friendly tariff controls",
-        "url": "https://www.pv-magazine.com/2026/09/07/hitachi-launches-co2-heat-pump-water-heaters-with-solar-friendly-tariff-controls/",
+        "title": "Rust is tier-1 language at Microsoft",
+        "url": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/",
         "source": "Hacker News",
-        "score": 223
+        "score": 536
+      },
+      {
+        "title": "Show HN: Vertumnus – printable posters of farmers' market produce seasonality",
+        "url": "https://vertumnus.fyi",
+        "source": "Hacker News",
+        "score": 6
       },
       {
         "title": "DeepSeek v4.1 Flash",
         "url": "https://twitter.com/deepseek_ai/status/2097930608790167907",
         "source": "Hacker News",
-        "score": 803
+        "score": 909
       },
       {
-        "title": "Cognition's SWE-2 achieves 92.8 on Terminal-Bench 2.1",
-        "url": "https://tokenstead.ai/models/swe-2",
+        "title": "Hitachi launches CO2 heat pump water heaters with solar-friendly tariff controls",
+        "url": "https://www.pv-magazine.com/2026/09/07/hitachi-launches-co2-heat-pump-water-heaters-with-solar-friendly-tariff-controls/",
         "source": "Hacker News",
-        "score": 12
+        "score": 259
       },
       {
-        "title": "Neki is sharded Postgres by PlanetScale",
-        "url": "https://neki.dev/",
+        "title": "Neki",
+        "url": "https://planetscale.com/blog/introducing-neki",
         "source": "Hacker News",
-        "score": 68
+        "score": 167
       }
     ],
     "ai": [
@@ -101,67 +101,55 @@
         "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
         "url": "https://cognition.com/blog/swe-2",
         "source": "Hacker News AI",
-        "score": 136
+        "score": 290
       },
       {
         "title": "More questions about whether researchers can trust OpenAI with unpublished math",
         "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
         "source": "Hacker News AI",
-        "score": 221
+        "score": 449
       },
       {
-        "title": ">10x More Efficient Pretraining",
+        "title": "Proof of Capture: Apple Reference Image, but open source and using steganography",
+        "url": "https://merybenavente.me/blog/proof-of-capture",
+        "source": "Hacker News AI",
+        "score": 18
+      },
+      {
+        "title": "OpenAI Agents API",
+        "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+        "source": "Hacker News AI",
+        "score": 19
+      },
+      {
+        "title": "Compute-efficient pretraining and scaling to trillion-parameter models",
         "url": "https://magic.dev/blog/pretraining#",
         "source": "Hacker News AI",
-        "score": 74
+        "score": 103
       },
       {
-        "title": "Anthropic Says It Blocked Possible Efforts to Build Biological Weapons",
-        "url": "https://www.nytimes.com/2026/09/10/us/politics/anthropic-ai-biological-weapons.html",
+        "title": "Detecting and countering misuse of AI: September 2026",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
         "source": "Hacker News AI",
-        "score": 27
+        "score": 30
       },
       {
-        "title": "AI 2027 (2025)",
-        "url": "https://ai-2027.com",
+        "title": "On Next-Gen Transformer: Loops Are Not What You Need",
+        "url": "https://zartbot.github.io/blog/model_arch/inception/",
         "source": "Hacker News AI",
-        "score": 12
-      },
-      {
-        "title": "Liesegang Rings",
-        "url": "https://chillphysicsenjoyer.substack.com/p/liesegang-rings",
-        "source": "Hacker News AI",
-        "score": 23
-      },
-      {
-        "title": "Alberta First Nation invokes treaty clause to set up gender-affirming care",
-        "url": "https://globalnews.ca/news/12053337/alberta-first-nation-gender-affirming-care-safe-haven/",
-        "source": "Hacker News AI",
-        "score": 6
+        "score": 7
       },
       {
         "title": "AI Is Breaking This Thing We Call Trust",
         "url": "https://terriblesoftware.org/2026/09/10/ai-is-breaking-this-thing-we-call-trust/",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 38
       },
       {
-        "title": "Samsung Debuts zHBM Prototype, Stacking Memory Directly on AI Accelerators",
-        "url": "https://www.thelec.net/news/articleView.html?idxno=12835",
+        "title": "Liesegang Rings",
+        "url": "https://chillphysicsenjoyer.substack.com/p/liesegang-rings",
         "source": "Hacker News AI",
-        "score": 50
-      },
-      {
-        "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
-        "url": "https://news.ycombinator.com/item?id=49643556",
-        "source": "Hacker News AI",
-        "score": 384
-      },
-      {
-        "title": "Shopify acquires Tailwind",
-        "url": "https://tailwindcss.com/blog/tailwind-is-joining-shopify",
-        "source": "Hacker News AI",
-        "score": 1111
+        "score": 26
       }
     ],
     "news": [
@@ -186,22 +174,27 @@
         "source": "BBC World"
       },
       {
-        "title": "Twenty-five dead after fire on cargo ship in eastern China",
-        "url": "https://www.bbc.co.uk/news/articles/cj4jyv7l92eo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "More than 20 children feared dead in DR Congo school fire",
+        "title": "More than 20 children killed in DR Congo school fire",
         "url": "https://www.bbc.co.uk/news/articles/cgjq15j7318o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Royal family rift after popular TV news presenter chosen to succeed Ugandan king",
-        "url": "https://www.bbc.co.uk/news/articles/c8jdpj4ydm2o?at_medium=RSS&at_campaign=rss",
+        "title": "Man jailed after threatening to kill son's teacher in French village",
+        "url": "https://www.bbc.co.uk/news/articles/c62jln7n2vvo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Coach crash kills several people in Swiss Alps",
+        "url": "https://www.bbc.co.uk/news/articles/cx2z70xr0y3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Forget the iPhone Duo, these super cheap dumb phones offer the digital detox you're probably craving ",
+        "url": "https://www.creativebloq.com/tech/phones-tablets/forget-the-iphone-duo-these-super-cheap-dumb-phones-offer-the-digital-detox-youre-probably-craving",
+        "source": "Creative Bloq"
+      },
       {
         "title": " This teeny but powerful MacBook charger looks like it could be perfect for travel, and it costs under $90 ",
         "url": "https://www.creativebloq.com/tech/accessories/this-teeny-but-powerful-macbook-charger-looks-like-it-could-be-perfect-for-travel-and-it-costs-under-usd90",
@@ -230,11 +223,6 @@
       {
         "title": " The brand new Sony ANC headphone... is the old Sony ANC headphone?! ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/the-brand-new-sony-anc-headphone-is-the-old-sony-headphone",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This artist designed a poker deck inspired by the crisp textures and geometric shapes of Cubism and Futurism ",
-        "url": "https://www.creativebloq.com/art/traditional-art/this-artist-designed-a-poker-deck-inspired-by-the-crisp-textures-and-geometric-shapes-of-cubism-and-futurism",
         "source": "Creative Bloq"
       }
     ],
@@ -277,38 +265,38 @@
     ],
     "gaming": [
       {
-        "title": "What time are the Gold and Cheat Master power hours in Fortnite Chapter 7 Season 4?",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-gold-cheat-master-power-hours-what-time/",
+        "title": "What's Free on Steam This Weekend (Sept. 11-14)",
+        "url": "https://www.polygon.com/free-on-steam-this-weekend-sept-11-2026-borderlands-4/",
         "source": "Polygon"
       },
       {
-        "title": "Survival Horror Movie Whalefall Unveils Its Most Chilling Trailer Yet",
-        "url": "https://www.polygon.com/whalefall-new-trailer-austin-abrams-horror-movie/",
+        "title": "PS5 Heist Shooter Fairgames Makes Surprising Return Under New Name",
+        "url": "https://www.polygon.com/sony-fairgames-ps5-project-espresso-playtest-haven-studios/",
         "source": "Polygon"
       },
       {
-        "title": "Netflix’s 'Below' Gets a New Trailer for Its Terrifying Sea Monster Thriller",
-        "url": "https://www.polygon.com/netflix-below-trailer-sea-monster-horror-series/",
+        "title": "Netflix's New 6-Part Thriller Is 'John Carpenter Meets H.P. Lovecraft' With a Canadian Twist ",
+        "url": "https://www.polygon.com/interview-below-netflix/",
         "source": "Polygon"
       },
       {
-        "title": "American Horror Story Season 13 Teases an Avengers-Level Crossover",
-        "url": "https://www.polygon.com/american-horror-story-season-13-trailer/",
+        "title": "Virtue and a Sledgehammer hits different. We asked a neuroscientist to explain why.",
+        "url": "https://www.polygon.com/virtue-sledgehammer-neuroscientist-interview/",
         "source": "Polygon"
       },
       {
-        "title": "'Spider-Noir' Creator Reveals Season 2 Plans After Prime Video Cancellation",
-        "url": "https://www.polygon.com/spider-noir-creator-interview-future-of-series/",
+        "title": "Minecraft Reaches Black Mirror Stage After Fly’s Brain Transplanted Into Game",
+        "url": "https://www.polygon.com/minecraft-fruit-fly-brain-mapped-simulation-scan-google-research/",
         "source": "Polygon"
       },
       {
-        "title": "A Brand-New Early Access FPS Is Topping the Steam Charts",
-        "url": "https://www.polygon.com/wardogs-steam-charts-1-million-copies-sold/",
+        "title": "Marvel’s X-Men Movie Casts The Boys Star in Major Role",
+        "url": "https://www.polygon.com/marvel-x-men-movie-cast-angel-warren-worthington/",
         "source": "Polygon"
       },
       {
-        "title": "Peacock's Friday the 13th Prequel Promises ‘More Than You Think’ From Jason, Showrunner Says",
-        "url": "https://www.polygon.com/crystal-lake-friday-the-13th-preview/",
+        "title": "Final Fantasy 7's Future in Fortnite Is Unclear, but There’s Hope",
+        "url": "https://www.polygon.com/final-fantasy-7-rebirth-interview-fortnite-collab/",
         "source": "Polygon"
       }
     ],
