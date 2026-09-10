@@ -1,193 +1,188 @@
 {
   "metadata": {
-    "last_updated": "2026-09-10T14:54:10.868937",
+    "last_updated": "2026-09-10T18:11:01.517897",
     "total_items": 61
   },
   "content": {
     "tech": [
       {
+        "title": "Rust is tier-1 language at Microsoft",
+        "url": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/",
+        "source": "Hacker News",
+        "score": 358
+      },
+      {
+        "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+        "url": "https://cognition.com/blog/swe-2",
+        "source": "Hacker News",
+        "score": 136
+      },
+      {
+        "title": "More questions about whether researchers can trust OpenAI with unpublished math",
+        "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
+        "source": "Hacker News",
+        "score": 221
+      },
+      {
+        "title": "I have a theory that software drives people insane",
+        "url": "https://graybeard.ing/software-drives-people-insane/",
+        "source": "Hacker News",
+        "score": 96
+      },
+      {
+        "title": "NASA Color Trick Was Meant for Mars. Now It's Unveiling Rock Art on Earth",
+        "url": "https://gizmodo.com/this-nasa-color-trick-was-meant-for-mars-now-its-unveiling-rock-art-on-earth-2000809844",
+        "source": "Hacker News",
+        "score": 82
+      },
+      {
         "title": "Shopify moves back to Native from React Native",
         "url": "https://shopify.engineering/back-to-native",
         "source": "Hacker News",
-        "score": 119
+        "score": 486
       },
       {
-        "title": "Rust Is Tier-1 Language at Microsoft",
-        "url": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/",
+        "title": "Forgejo <=16.0.3 Critical RCE",
+        "url": "https://codeberg.org/forgejo/forgejo/src/branch/forgejo/release-notes-published/16.0.4.md",
         "source": "Hacker News",
-        "score": 100
+        "score": 41
       },
       {
-        "title": "Amazon pilots ad services in ChatGPT",
-        "url": "https://www.marketingdive.com/news/amazon-pilots-ad-services-in-chatgpt-what-marketers-need-to-know/829945/",
+        "title": "Neki",
+        "url": "https://planetscale.com/blog/introducing-neki",
         "source": "Hacker News",
-        "score": 29
+        "score": 87
+      },
+      {
+        "title": "Douglas Hofstadter: Analogy as the Core of Cognition [video]",
+        "url": "https://www.youtube.com/watch?v=n8m7lFQ3njk",
+        "source": "Hacker News",
+        "score": 41
+      },
+      {
+        "title": "Silicon Valley Is Transforming the Military-Industrial Complex",
+        "url": "https://costsofwar.watson.brown.edu/paper/how-big-tech-and-silicon-valley-are-transforming-military-industrial-complex",
+        "source": "Hacker News",
+        "score": 44
+      },
+      {
+        "title": ">10x More Efficient Pretraining",
+        "url": "https://magic.dev/blog/pretraining#",
+        "source": "Hacker News",
+        "score": 74
       },
       {
         "title": "Hitachi launches CO2 heat pump water heaters with solar-friendly tariff controls",
         "url": "https://www.pv-magazine.com/2026/09/07/hitachi-launches-co2-heat-pump-water-heaters-with-solar-friendly-tariff-controls/",
         "source": "Hacker News",
-        "score": 145
-      },
-      {
-        "title": "Bending Spoons buying Miro for $1.355B",
-        "url": "https://investors.bendingspoons.com/newsroom/bending-spoons-agrees-to-acquire-miro",
-        "source": "Hacker News",
-        "score": 38
-      },
-      {
-        "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
-        "url": "https://news.ycombinator.com/item?id=49643556",
-        "source": "Hacker News",
-        "score": 177
-      },
-      {
-        "title": "What algorithm did Windows XP use to choose your initial user picture?",
-        "url": "https://devblogs.microsoft.com/oldnewthing/20260909-00/?p=112683",
-        "source": "Hacker News",
-        "score": 215
-      },
-      {
-        "title": "Who People Talk to When They're Struggling",
-        "url": "https://www.graphsaboutreligion.com/p/who-do-you-talk-to-when-youre-struggling",
-        "source": "Hacker News",
-        "score": 40
-      },
-      {
-        "title": "List of references on Sony websites to players \"owning\" their digital games",
-        "url": "https://consumerrights.wiki/w/Sony_PlayStation_digital_game_ownership_lawsuit",
-        "source": "Hacker News",
-        "score": 132
-      },
-      {
-        "title": "Another researcher says OpenAI trained on conversations, then claimed breakthrou",
-        "url": "https://bsky.app/profile/did:plc:ckaz32jwl6t2cno6fmuw2nhn/post/3mv4mt4ikss2d",
-        "source": "Hacker News",
-        "score": 163
-      },
-      {
-        "title": "Show HN: I couldn't afford interview prep, so I built a free alternative",
-        "url": "https://learningto.co/",
-        "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "iPhone Duo",
-        "url": "https://www.apple.com/iphone-duo/",
-        "source": "Hacker News",
-        "score": 1305
+        "score": 223
       },
       {
         "title": "DeepSeek v4.1 Flash",
         "url": "https://twitter.com/deepseek_ai/status/2097930608790167907",
         "source": "Hacker News",
-        "score": 667
+        "score": 803
       },
       {
-        "title": "To write non-fiction, draw the trunk, then the rest of the tree",
-        "url": "https://devz.cl/posts/how-to-write/",
+        "title": "Cognition's SWE-2 achieves 92.8 on Terminal-Bench 2.1",
+        "url": "https://tokenstead.ai/models/swe-2",
         "source": "Hacker News",
-        "score": 26
+        "score": 12
       },
       {
-        "title": "Stockfish 19",
-        "url": "https://stockfishchess.org/blog/2026/stockfish-19/",
+        "title": "Neki is sharded Postgres by PlanetScale",
+        "url": "https://neki.dev/",
         "source": "Hacker News",
-        "score": 154
+        "score": 68
       }
     ],
     "ai": [
       {
-        "title": "Amazon pilots ad services in ChatGPT",
-        "url": "https://www.marketingdive.com/news/amazon-pilots-ad-services-in-chatgpt-what-marketers-need-to-know/829945/",
+        "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+        "url": "https://cognition.com/blog/swe-2",
         "source": "Hacker News AI",
-        "score": 29
+        "score": 136
       },
       {
-        "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
-        "url": "https://news.ycombinator.com/item?id=49643556",
+        "title": "More questions about whether researchers can trust OpenAI with unpublished math",
+        "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
         "source": "Hacker News AI",
-        "score": 177
+        "score": 221
       },
       {
-        "title": "Another researcher says OpenAI trained on conversations, then claimed breakthrou",
-        "url": "https://bsky.app/profile/did:plc:ckaz32jwl6t2cno6fmuw2nhn/post/3mv4mt4ikss2d",
+        "title": ">10x More Efficient Pretraining",
+        "url": "https://magic.dev/blog/pretraining#",
         "source": "Hacker News AI",
-        "score": 163
+        "score": 74
       },
       {
-        "title": "Shopify acquires Tailwind",
-        "url": "https://tailwindcss.com/blog/tailwind-is-joining-shopify",
+        "title": "Anthropic Says It Blocked Possible Efforts to Build Biological Weapons",
+        "url": "https://www.nytimes.com/2026/09/10/us/politics/anthropic-ai-biological-weapons.html",
         "source": "Hacker News AI",
-        "score": 1097
+        "score": 27
+      },
+      {
+        "title": "AI 2027 (2025)",
+        "url": "https://ai-2027.com",
+        "source": "Hacker News AI",
+        "score": 12
       },
       {
         "title": "Liesegang Rings",
         "url": "https://chillphysicsenjoyer.substack.com/p/liesegang-rings",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 23
       },
       {
-        "title": "GPT-6 Astra, looped transformers, and hidden reasoning",
-        "url": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
+        "title": "Alberta First Nation invokes treaty clause to set up gender-affirming care",
+        "url": "https://globalnews.ca/news/12053337/alberta-first-nation-gender-affirming-care-safe-haven/",
         "source": "Hacker News AI",
-        "score": 481
+        "score": 6
       },
       {
-        "title": "Object storage is all you need",
-        "url": "https://www.tigrisdata.com/blog/object-storage-all-need/",
+        "title": "AI Is Breaking This Thing We Call Trust",
+        "url": "https://terriblesoftware.org/2026/09/10/ai-is-breaking-this-thing-we-call-trust/",
         "source": "Hacker News AI",
-        "score": 53
+        "score": 8
       },
       {
         "title": "Samsung Debuts zHBM Prototype, Stacking Memory Directly on AI Accelerators",
         "url": "https://www.thelec.net/news/articleView.html?idxno=12835",
         "source": "Hacker News AI",
-        "score": 44
+        "score": 50
       },
       {
-        "title": "AirPods 5",
-        "url": "https://www.apple.com/newsroom/2026/09/apple-introduces-airpods-5-with-best-in-class-open-ear-active-noise-cancellation/",
+        "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
+        "url": "https://news.ycombinator.com/item?id=49643556",
         "source": "Hacker News AI",
-        "score": 493
+        "score": 384
       },
       {
-        "title": "Qwen 3.8 follows GPT-5.5 Pro reasoning prefills",
-        "url": "https://gist.github.com/wsxiaoys/e0286dc6bb624ff5fdf49e7f4c528ba3",
+        "title": "Shopify acquires Tailwind",
+        "url": "https://tailwindcss.com/blog/tailwind-is-joining-shopify",
         "source": "Hacker News AI",
-        "score": 229
-      },
-      {
-        "title": "Training a 3.8B LLM to 0.384 CORE for $998",
-        "url": "https://hugovergnes.github.io/little-lm-3-8b/",
-        "source": "Hacker News AI",
-        "score": 103
+        "score": 1111
       }
     ],
     "news": [
       {
-        "title": "Trump says every adult American will get $5,000 if Republicans win midterms",
-        "url": "https://www.bbc.co.uk/news/articles/c62kzr1jg0jo?at_medium=RSS&at_campaign=rss",
+        "title": "Yemen's Houthis reportedly seize strategic Red Sea port of Mokha",
+        "url": "https://www.bbc.co.uk/news/articles/c4g7vr0lngwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Watch: Is Trump's $5,000 election pledge legal?",
-        "url": "https://www.bbc.co.uk/news/videos/czxzwge59w8o?at_medium=RSS&at_campaign=rss",
+        "title": "Can Trump really pay $5,000 to every American adult?",
+        "url": "https://www.bbc.co.uk/news/articles/c8r6vj7r8rko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Iran war won't end until after crucial November elections, says Trump ",
-        "url": "https://www.bbc.co.uk/news/articles/c5ydld0gykpo?at_medium=RSS&at_campaign=rss",
+        "title": "Pilot warned Amazon cargo plane going too fast before deadly crash, data shows ",
+        "url": "https://www.bbc.co.uk/news/articles/cj4jynv59ddo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Five dead and 86 missing as 'heartbreaking' fire breaks out on Philippines ferry",
-        "url": "https://www.bbc.co.uk/news/articles/cy4zd4dn9n9o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Royal family rift after popular TV news presenter chosen to succeed Ugandan king",
-        "url": "https://www.bbc.co.uk/news/articles/c8jdpj4ydm2o?at_medium=RSS&at_campaign=rss",
+        "title": "Israel's Netanyahu to sue newspaper over claim UAE warned him of 7 October attack",
+        "url": "https://www.bbc.co.uk/news/articles/c1kxwm870g1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -196,12 +191,27 @@
         "source": "BBC World"
       },
       {
-        "title": "Apple's new boss starts with big gamble on £1,999 first folding iPhone",
-        "url": "https://www.bbc.co.uk/news/articles/clyjd1jnd03o?at_medium=RSS&at_campaign=rss",
+        "title": "More than 20 children feared dead in DR Congo school fire",
+        "url": "https://www.bbc.co.uk/news/articles/cgjq15j7318o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Royal family rift after popular TV news presenter chosen to succeed Ugandan king",
+        "url": "https://www.bbc.co.uk/news/articles/c8jdpj4ydm2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " This teeny but powerful MacBook charger looks like it could be perfect for travel, and it costs under $90 ",
+        "url": "https://www.creativebloq.com/tech/accessories/this-teeny-but-powerful-macbook-charger-looks-like-it-could-be-perfect-for-travel-and-it-costs-under-usd90",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Metroid Dread sequel takes a surprising horror-esque direction with a shocking new mechanic ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/the-metroid-dread-sequel-takes-a-surprising-horror-esque-direction-with-a-shocking-new-mechanic",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Final Fantasy VII Revelation hands-on: a beautiful game world now looks even more stunning ",
         "url": "https://www.creativebloq.com/entertainment/gaming/final-fantasy-vii-revelation-hands-on-a-beautiful-game-world-now-looks-even-more-stunning",
@@ -225,16 +235,6 @@
       {
         "title": " This artist designed a poker deck inspired by the crisp textures and geometric shapes of Cubism and Futurism ",
         "url": "https://www.creativebloq.com/art/traditional-art/this-artist-designed-a-poker-deck-inspired-by-the-crisp-textures-and-geometric-shapes-of-cubism-and-futurism",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Clive Barker's Hellraiser: Revival is the horror game AAA publishers have been too prudish to make ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/hellraiser-revival-is-the-horror-game-aaa-publishers-have-been-too-prudish-to-make",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Are the controversial new Harry Potter logos actually more historically accurate than the movie designs? ",
-        "url": "https://www.creativebloq.com/design/logos-icons/are-the-controversial-new-harry-potter-logos-actually-more-historically-accurate-than-the-movies",
         "source": "Creative Bloq"
       }
     ],
@@ -277,38 +277,38 @@
     ],
     "gaming": [
       {
-        "title": "GTA 6 PlayStation 5 DualSense Controller Pre-Orders Go Live",
-        "url": "https://www.polygon.com/gta-6-ps5-controller-hardware-preorder-how-to-buy-price-release-date/",
+        "title": "What time are the Gold and Cheat Master power hours in Fortnite Chapter 7 Season 4?",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-gold-cheat-master-power-hours-what-time/",
         "source": "Polygon"
       },
       {
-        "title": "All champions in League of Legends Clasic",
-        "url": "https://www.polygon.com/league-of-legends-classic-champions-all-list/",
+        "title": "Survival Horror Movie Whalefall Unveils Its Most Chilling Trailer Yet",
+        "url": "https://www.polygon.com/whalefall-new-trailer-austin-abrams-horror-movie/",
         "source": "Polygon"
       },
       {
-        "title": "Playstation’s Lego Astro Bot Leaks and There’s Only One Way to Get One",
-        "url": "https://www.polygon.com/lego-astro-bot-leak-lego-playstation/",
+        "title": "Netflix’s 'Below' Gets a New Trailer for Its Terrifying Sea Monster Thriller",
+        "url": "https://www.polygon.com/netflix-below-trailer-sea-monster-horror-series/",
         "source": "Polygon"
       },
       {
-        "title": "All match overrides and console locations in Fortnite Chapter 7 Season 4",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-match-overrides-console-locations-c7s4/",
+        "title": "American Horror Story Season 13 Teases an Avengers-Level Crossover",
+        "url": "https://www.polygon.com/american-horror-story-season-13-trailer/",
         "source": "Polygon"
       },
       {
-        "title": "Street Fighter Movie Reveals Battered Chun-Li, Ryu, and Ken in Exclusive New Photo",
-        "url": "https://www.polygon.com/street-fighter-movie-2026-exclusive-photo/",
+        "title": "'Spider-Noir' Creator Reveals Season 2 Plans After Prime Video Cancellation",
+        "url": "https://www.polygon.com/spider-noir-creator-interview-future-of-series/",
         "source": "Polygon"
       },
       {
-        "title": "'Come Hither' quest walkthrough in The Blood of Dawnwalker",
-        "url": "https://www.polygon.com/blood-of-dawnwalker-come-hither-quest-walkthrough-silk-threads/",
+        "title": "A Brand-New Early Access FPS Is Topping the Steam Charts",
+        "url": "https://www.polygon.com/wardogs-steam-charts-1-million-copies-sold/",
         "source": "Polygon"
       },
       {
-        "title": "'Good Home' quest walkthrough in The Blood of Dawnwalker",
-        "url": "https://www.polygon.com/blood-of-dawnwalker-good-home-quest-walkthrough-shiny-teeth/",
+        "title": "Peacock's Friday the 13th Prequel Promises ‘More Than You Think’ From Jason, Showrunner Says",
+        "url": "https://www.polygon.com/crystal-lake-friday-the-13th-preview/",
         "source": "Polygon"
       }
     ],
