@@ -1,161 +1,167 @@
 {
   "metadata": {
-    "last_updated": "2026-09-10T10:49:52.074571",
-    "total_items": 60
+    "last_updated": "2026-09-10T14:54:10.868937",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
+        "title": "Shopify moves back to Native from React Native",
+        "url": "https://shopify.engineering/back-to-native",
+        "source": "Hacker News",
+        "score": 119
+      },
+      {
+        "title": "Rust Is Tier-1 Language at Microsoft",
+        "url": "https://rustfoundation.org/media/guest-post-rust-is-tier-1-language-at-microsoft/",
+        "source": "Hacker News",
+        "score": 100
+      },
+      {
+        "title": "Amazon pilots ad services in ChatGPT",
+        "url": "https://www.marketingdive.com/news/amazon-pilots-ad-services-in-chatgpt-what-marketers-need-to-know/829945/",
+        "source": "Hacker News",
+        "score": 29
+      },
+      {
+        "title": "Hitachi launches CO2 heat pump water heaters with solar-friendly tariff controls",
+        "url": "https://www.pv-magazine.com/2026/09/07/hitachi-launches-co2-heat-pump-water-heaters-with-solar-friendly-tariff-controls/",
+        "source": "Hacker News",
+        "score": 145
+      },
+      {
+        "title": "Bending Spoons buying Miro for $1.355B",
+        "url": "https://investors.bendingspoons.com/newsroom/bending-spoons-agrees-to-acquire-miro",
+        "source": "Hacker News",
+        "score": 38
+      },
+      {
+        "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
+        "url": "https://news.ycombinator.com/item?id=49643556",
+        "source": "Hacker News",
+        "score": 177
+      },
+      {
         "title": "What algorithm did Windows XP use to choose your initial user picture?",
         "url": "https://devblogs.microsoft.com/oldnewthing/20260909-00/?p=112683",
         "source": "Hacker News",
-        "score": 46
+        "score": 215
       },
       {
-        "title": "DeepSeek v4.1 Flash",
-        "url": "https://twitter.com/deepseek_ai/status/2097930608790167907",
+        "title": "Who People Talk to When They're Struggling",
+        "url": "https://www.graphsaboutreligion.com/p/who-do-you-talk-to-when-youre-struggling",
         "source": "Hacker News",
-        "score": 410
+        "score": 40
+      },
+      {
+        "title": "List of references on Sony websites to players \"owning\" their digital games",
+        "url": "https://consumerrights.wiki/w/Sony_PlayStation_digital_game_ownership_lawsuit",
+        "source": "Hacker News",
+        "score": 132
+      },
+      {
+        "title": "Another researcher says OpenAI trained on conversations, then claimed breakthrou",
+        "url": "https://bsky.app/profile/did:plc:ckaz32jwl6t2cno6fmuw2nhn/post/3mv4mt4ikss2d",
+        "source": "Hacker News",
+        "score": 163
+      },
+      {
+        "title": "Show HN: I couldn't afford interview prep, so I built a free alternative",
+        "url": "https://learningto.co/",
+        "source": "Hacker News",
+        "score": 16
       },
       {
         "title": "iPhone Duo",
         "url": "https://www.apple.com/iphone-duo/",
         "source": "Hacker News",
-        "score": 1221
+        "score": 1305
+      },
+      {
+        "title": "DeepSeek v4.1 Flash",
+        "url": "https://twitter.com/deepseek_ai/status/2097930608790167907",
+        "source": "Hacker News",
+        "score": 667
+      },
+      {
+        "title": "To write non-fiction, draw the trunk, then the rest of the tree",
+        "url": "https://devz.cl/posts/how-to-write/",
+        "source": "Hacker News",
+        "score": 26
       },
       {
         "title": "Stockfish 19",
         "url": "https://stockfishchess.org/blog/2026/stockfish-19/",
         "source": "Hacker News",
-        "score": 51
-      },
-      {
-        "title": "Show HN: What if the speed of light was 5 km/h?",
-        "url": "https://rivendell.dmitrybrant.com/relativity/",
-        "source": "Hacker News",
-        "score": 360
-      },
-      {
-        "title": "Show HN: The same nine streaming subscriptions cost $702/year more than in 2021",
-        "url": "https://honestlyranked.com/guides/streaming-price-increases/",
-        "source": "Hacker News",
-        "score": 4
-      },
-      {
-        "title": "Larger Pacific Striped Octopus",
-        "url": "https://en.wikipedia.org/wiki/Larger_Pacific_striped_octopus",
-        "source": "Hacker News",
-        "score": 68
-      },
-      {
-        "title": "Shopify acquires Tailwind",
-        "url": "https://tailwindcss.com/blog/tailwind-is-joining-shopify",
-        "source": "Hacker News",
-        "score": 1043
-      },
-      {
-        "title": "What do Visa and Mastercard do? An intro to card networks",
-        "url": "https://tautology.town/2026/06/01/card-networks.html",
-        "source": "Hacker News",
-        "score": 544
-      },
-      {
-        "title": "Show HN: Art – draw one stroke, let symmetry complete it",
-        "url": "https://mrdee.in/mandala/",
-        "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "I think I hate the internet",
-        "url": "https://strategictree.bearblog.dev/i-think-i-hate-the-internet/",
-        "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "Growing proof that autonomous cars save lives",
-        "url": "https://spectrum.ieee.org/are-self-driving-cars-safe",
-        "source": "Hacker News",
-        "score": 351
-      },
-      {
-        "title": "Samsung Debuts zHBM Prototype, Stacking Memory Directly on AI Accelerators",
-        "url": "https://www.thelec.net/news/articleView.html?idxno=12835",
-        "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "No Man's Sky Cosmos",
-        "url": "https://www.nomanssky.com/cosmos-update/",
-        "source": "Hacker News",
-        "score": 396
-      },
-      {
-        "title": "GPT-6 Astra, looped transformers, and hidden reasoning",
-        "url": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
-        "source": "Hacker News",
-        "score": 440
+        "score": 154
       }
     ],
     "ai": [
       {
+        "title": "Amazon pilots ad services in ChatGPT",
+        "url": "https://www.marketingdive.com/news/amazon-pilots-ad-services-in-chatgpt-what-marketers-need-to-know/829945/",
+        "source": "Hacker News AI",
+        "score": 29
+      },
+      {
+        "title": "Tell HN: OpenAI keeps re-enabling the 'allow training' setting",
+        "url": "https://news.ycombinator.com/item?id=49643556",
+        "source": "Hacker News AI",
+        "score": 177
+      },
+      {
+        "title": "Another researcher says OpenAI trained on conversations, then claimed breakthrou",
+        "url": "https://bsky.app/profile/did:plc:ckaz32jwl6t2cno6fmuw2nhn/post/3mv4mt4ikss2d",
+        "source": "Hacker News AI",
+        "score": 163
+      },
+      {
         "title": "Shopify acquires Tailwind",
         "url": "https://tailwindcss.com/blog/tailwind-is-joining-shopify",
         "source": "Hacker News AI",
-        "score": 1043
+        "score": 1097
       },
       {
-        "title": "Samsung Debuts zHBM Prototype, Stacking Memory Directly on AI Accelerators",
-        "url": "https://www.thelec.net/news/articleView.html?idxno=12835",
+        "title": "Liesegang Rings",
+        "url": "https://chillphysicsenjoyer.substack.com/p/liesegang-rings",
         "source": "Hacker News AI",
-        "score": 23
+        "score": 16
       },
       {
         "title": "GPT-6 Astra, looped transformers, and hidden reasoning",
         "url": "https://magazine.sebastianraschka.com/p/gpt-6-astra-looped-transformers-and",
         "source": "Hacker News AI",
-        "score": 440
+        "score": 481
+      },
+      {
+        "title": "Object storage is all you need",
+        "url": "https://www.tigrisdata.com/blog/object-storage-all-need/",
+        "source": "Hacker News AI",
+        "score": 53
+      },
+      {
+        "title": "Samsung Debuts zHBM Prototype, Stacking Memory Directly on AI Accelerators",
+        "url": "https://www.thelec.net/news/articleView.html?idxno=12835",
+        "source": "Hacker News AI",
+        "score": 44
       },
       {
         "title": "AirPods 5",
         "url": "https://www.apple.com/newsroom/2026/09/apple-introduces-airpods-5-with-best-in-class-open-ear-active-noise-cancellation/",
         "source": "Hacker News AI",
-        "score": 457
-      },
-      {
-        "title": "Training a 3.8B LLM to 0.384 CORE for $998",
-        "url": "https://hugovergnes.github.io/little-lm-3-8b/",
-        "source": "Hacker News AI",
-        "score": 80
+        "score": 493
       },
       {
         "title": "Qwen 3.8 follows GPT-5.5 Pro reasoning prefills",
         "url": "https://gist.github.com/wsxiaoys/e0286dc6bb624ff5fdf49e7f4c528ba3",
         "source": "Hacker News AI",
-        "score": 217
+        "score": 229
       },
       {
-        "title": "Understanding the recent DDoS attack against Read the Docs",
-        "url": "https://about.readthedocs.com/blog/2026/09/2026-ddos-attack/",
+        "title": "Training a 3.8B LLM to 0.384 CORE for $998",
+        "url": "https://hugovergnes.github.io/little-lm-3-8b/",
         "source": "Hacker News AI",
-        "score": 191
-      },
-      {
-        "title": "Microsoft says email spammers are adopting ASCII smuggling",
-        "url": "https://arstechnica.com/security/2026/09/once-popular-for-attacking-ai-ascii-smuggling-is-embraced-by-spammers/",
-        "source": "Hacker News AI",
-        "score": 60
-      },
-      {
-        "title": "Show HN: Botbin.io – pastebin for AI agent artifacts",
-        "url": "https://botbin.io/?v=next",
-        "source": "Hacker News AI",
-        "score": 4
-      },
-      {
-        "title": "OpenAI might have stolen another major proof",
-        "url": "https://twitter.com/ValerioCapraro/status/2097791836269977996",
-        "source": "Hacker News AI",
-        "score": 237
+        "score": 103
       }
     ],
     "news": [
@@ -185,7 +191,7 @@
         "source": "BBC World"
       },
       {
-        "title": "'Heavy casualties' after fire on cargo ship in eastern China",
+        "title": "Twenty-five dead after fire on cargo ship in eastern China",
         "url": "https://www.bbc.co.uk/news/articles/cj4jyv7l92eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -196,6 +202,21 @@
       }
     ],
     "art": [
+      {
+        "title": " Final Fantasy VII Revelation hands-on: a beautiful game world now looks even more stunning ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/final-fantasy-vii-revelation-hands-on-a-beautiful-game-world-now-looks-even-more-stunning",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Apple just revealed exactly which two products the iPhone Duo is designed to replace ",
+        "url": "https://www.creativebloq.com/design/advertising/apple-just-revealed-exactly-which-two-products-the-iphone-duo-is-designed-to-replace",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The iPhone Duo is perfect for people with uncanny alien fingers ",
+        "url": "https://www.creativebloq.com/tech/the-iphone-duo-is-perfect-for-people-with-uncanny-alien-fingers",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The brand new Sony ANC headphone... is the old Sony ANC headphone?! ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/the-brand-new-sony-anc-headphone-is-the-old-sony-headphone",
@@ -214,21 +235,6 @@
       {
         "title": " Are the controversial new Harry Potter logos actually more historically accurate than the movie designs? ",
         "url": "https://www.creativebloq.com/design/logos-icons/are-the-controversial-new-harry-potter-logos-actually-more-historically-accurate-than-the-movies",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apidya' Special (Switch 2) review: this weird '90s Amiga shooter gets the remaster it deserves ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/apidya-special-switch-2-review-this-weird-90s-amiga-shooter-gets-the-remaster-it-deserves",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Can you spot all the clues that prove this AI 'photo' isn't real? ",
-        "url": "https://www.creativebloq.com/ai/ai-art/can-you-spot-all-the-clues-that-prove-this-ai-photo-isnt-real",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The White House's dodgy Tetris copy seems to have hit a wall ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/the-white-houses-dodgy-tetris-copy-seems-to-have-hit-a-wall",
         "source": "Creative Bloq"
       }
     ],
@@ -271,38 +277,38 @@
     ],
     "gaming": [
       {
-        "title": "Kojima's Physint Dramatically Dropped by PlayStation, Picked Up by Xbox",
-        "url": "https://www.polygon.com/kojima-physint-playstation-xbox-move/",
+        "title": "GTA 6 PlayStation 5 DualSense Controller Pre-Orders Go Live",
+        "url": "https://www.polygon.com/gta-6-ps5-controller-hardware-preorder-how-to-buy-price-release-date/",
         "source": "Polygon"
       },
       {
-        "title": "15 Classic Games That Prove Great Graphics Aren't Everything",
-        "url": "https://www.polygon.com/best-graphics-classic-games/",
+        "title": "All champions in League of Legends Clasic",
+        "url": "https://www.polygon.com/league-of-legends-classic-champions-all-list/",
         "source": "Polygon"
       },
       {
-        "title": "What time does Wardogs release in your time zone?",
-        "url": "https://www.polygon.com/wardogs-release-time-edt-pdt-preload/",
+        "title": "Playstation’s Lego Astro Bot Leaks and There’s Only One Way to Get One",
+        "url": "https://www.polygon.com/lego-astro-bot-leak-lego-playstation/",
         "source": "Polygon"
       },
       {
-        "title": "The 8 Biggest Book-to-Screen Adaptations of Fall 2026",
-        "url": "https://www.polygon.com/biggest-book-adaptations-fall-2026/",
+        "title": "All match overrides and console locations in Fortnite Chapter 7 Season 4",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-match-overrides-console-locations-c7s4/",
         "source": "Polygon"
       },
       {
-        "title": "47 Years Later, Garfield's Best Quote is Still an Iconic Comic Strip Moment",
-        "url": "https://www.polygon.com/garfield-jim-davis-best-quote/",
+        "title": "Street Fighter Movie Reveals Battered Chun-Li, Ryu, and Ken in Exclusive New Photo",
+        "url": "https://www.polygon.com/street-fighter-movie-2026-exclusive-photo/",
         "source": "Polygon"
       },
       {
-        "title": "The 10 Most Anticipated Board Games of Fall 2026",
-        "url": "https://www.polygon.com/most-anticipated-board-games-2026/",
+        "title": "'Come Hither' quest walkthrough in The Blood of Dawnwalker",
+        "url": "https://www.polygon.com/blood-of-dawnwalker-come-hither-quest-walkthrough-silk-threads/",
         "source": "Polygon"
       },
       {
-        "title": "31 Years Later, Matthew Lillard’s Fan-Favorite Techno-Thriller Is Officially Free on Streaming",
-        "url": "https://www.polygon.com/one-of-matthew-lillards-wildest-movies-is-free-right-now-on-pluto-tv/",
+        "title": "'Good Home' quest walkthrough in The Blood of Dawnwalker",
+        "url": "https://www.polygon.com/blood-of-dawnwalker-good-home-quest-walkthrough-shiny-teeth/",
         "source": "Polygon"
       }
     ],
