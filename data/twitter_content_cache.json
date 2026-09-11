@@ -1,182 +1,213 @@
 {
   "metadata": {
-    "last_updated": "2026-09-11T13:20:17.911280",
-    "total_items": 63
+    "last_updated": "2026-09-11T17:36:12.350721",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
-        "title": "The Waymo effect: how AI is quietly making research less collaborative",
-        "url": "https://www.researchagenda.news/articles/the-waymo-effect.html",
+        "title": "Global Glacier Extinction Explorer",
+        "url": "https://glacierextinction.com",
         "source": "Hacker News",
-        "score": 149
+        "score": 88
       },
       {
-        "title": "RTK reports token savings, but our cost benchmarks disagree",
-        "url": "https://quesma.com/blog/does-rtk-make-ai-coding-cheaper/",
+        "title": "Godot and Rust based multiplexer (terminal panes and more)",
+        "url": "https://github.com/godot-pty/gpty",
         "source": "Hacker News",
-        "score": 56
+        "score": 39
       },
       {
-        "title": "Ask HN: Can we please limit the AI news flood?",
-        "url": "https://news.ycombinator.com/item?id=49657850",
+        "title": "Feeling Sad about AI",
+        "url": "https://artificialworlds.net/blog/2026/09/11/feeling-sad-about-ai/",
         "source": "Hacker News",
-        "score": 45
+        "score": 105
       },
       {
-        "title": "Cherenkov Radiation - traveling faster than light",
-        "url": "http://www.iaea.org/newscenter/news/what-is-cherenkov-radiation",
+        "title": "I've operated petabyte-scale ClickHouse clusters for 5 years",
+        "url": "https://www.tinybird.co/blog/what-i-learned-operating-clickhouse",
         "source": "Hacker News",
-        "score": 126
+        "score": 88
+      },
+      {
+        "title": "Logo Programming Language",
+        "url": "https://el.media.mit.edu/logo-foundation/what_is_logo/logo_programming.html",
+        "source": "Hacker News",
+        "score": 128
+      },
+      {
+        "title": "Show HN: Hacker News, Without AI",
+        "url": "https://www.unslop.news/",
+        "source": "Hacker News",
+        "score": 18
+      },
+      {
+        "title": "Zep AI (YC W24) Is Hiring a Head of Forward Deployed Engineering",
+        "url": "https://www.getzep.com/careers/",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "118M Queries per Second on Neki",
+        "url": "https://planetscale.com/blog/118-million-queries-per-second-on-neki",
+        "source": "Hacker News",
+        "score": 21
+      },
+      {
+        "title": "Copying login keychains between Macs fails on Secure Enclave Macs with Tahoe",
+        "url": "https://derflounder.wordpress.com/2026/09/08/manually-copying-login-keychain-files-from-one-mac-to-another-no-longer-works-on-secure-enclave-equipped-macs-running-macos-tahoe/",
+        "source": "Hacker News",
+        "score": 33
       },
       {
         "title": "So you want to use OpenRouter?",
         "url": "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/",
         "source": "Hacker News",
-        "score": 282
+        "score": 537
       },
       {
-        "title": "Shopify is moving from React Native back to Swift and Kotlin",
-        "url": "https://shopify.engineering/back-to-native",
+        "title": "RTK reports token savings, but our cost benchmarks disagree",
+        "url": "https://quesma.com/blog/does-rtk-make-ai-coding-cheaper/",
         "source": "Hacker News",
-        "score": 1135
+        "score": 108
       },
       {
-        "title": "Show HN: Foldelight – the iPhone Duo folding effect the MacBook was owed",
-        "url": "https://lufzle.dev/foldelight/",
+        "title": "Measuring the sloppiness of code",
+        "url": "https://earendil.com/posts/measuring-code-sloppiness/",
         "source": "Hacker News",
-        "score": 10
+        "score": 129
       },
       {
-        "title": "Don't let anyone take away your big box of cables",
-        "url": "https://blog.jim-nielsen.com/2026/hands-off-my-cables/",
+        "title": "HuggingFace: Security.txt",
+        "url": "https://huggingface.co/security.txt",
         "source": "Hacker News",
-        "score": 616
+        "score": 148
       },
       {
-        "title": "Claude is no longer available for minors",
-        "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
-        "source": "Hacker News",
-        "score": 176
-      },
-      {
-        "title": "iPod Classic 6G in QEMU",
-        "url": "https://www.reddit.com/r/emulation/s/VL4Au2HGxq",
-        "source": "Hacker News",
-        "score": 53
-      },
-      {
-        "title": "Remember Hong Kong",
-        "url": "https://www.thenextmove.org/p/remember-hong-kong",
+        "title": "Kenyans Did College Students' Homework for Years. Then A.I. Arrived",
+        "url": "https://www.nytimes.com/2026/09/05/technology/kenya-college-essays-ai.html",
         "source": "Hacker News",
         "score": 20
       },
       {
-        "title": "Working with Git Worktrees in Magit",
-        "url": "https://emacsredux.com/blog/2026/09/02/working-with-git-worktrees-in-magit/",
+        "title": "Stop making swap partitions—use swap files instead",
+        "url": "https://gist.github.com/joshenders/c4960cec9c63a7b7d68ffa9543356c43",
         "source": "Hacker News",
-        "score": 74
-      },
-      {
-        "title": "OpenAI Agents API",
-        "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
-        "source": "Hacker News",
-        "score": 289
-      },
-      {
-        "title": "RISC-V Emulator and Linux System from Scratch",
-        "url": "https://github.com/WerWolv/riscv-emulator",
-        "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "CSS Curiosities of the Past",
-        "url": "https://vale.rocks/posts/css-relics",
-        "source": "Hacker News",
-        "score": 32
+        "score": 44
       }
     ],
     "ai": [
       {
-        "title": "The Waymo effect: how AI is quietly making research less collaborative",
-        "url": "https://www.researchagenda.news/articles/the-waymo-effect.html",
+        "title": "Feeling Sad about AI",
+        "url": "https://artificialworlds.net/blog/2026/09/11/feeling-sad-about-ai/",
         "source": "Hacker News AI",
-        "score": 149
+        "score": 105
       },
       {
-        "title": "Ask HN: Can we please limit the AI news flood?",
-        "url": "https://news.ycombinator.com/item?id=49657850",
+        "title": "Show HN: Hacker News, Without AI",
+        "url": "https://www.unslop.news/",
         "source": "Hacker News AI",
-        "score": 45
+        "score": 18
       },
       {
-        "title": "Claude is no longer available for minors",
+        "title": "Zep AI (YC W24) Is Hiring a Head of Forward Deployed Engineering",
+        "url": "https://www.getzep.com/careers/",
+        "source": "Hacker News AI",
+        "score": 1
+      },
+      {
+        "title": "Copying login keychains between Macs fails on Secure Enclave Macs with Tahoe",
+        "url": "https://derflounder.wordpress.com/2026/09/08/manually-copying-login-keychain-files-from-one-mac-to-another-no-longer-works-on-secure-enclave-equipped-macs-running-macos-tahoe/",
+        "source": "Hacker News AI",
+        "score": 33
+      },
+      {
+        "title": "Claude is only available to people over 18 years",
         "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
         "source": "Hacker News AI",
-        "score": 176
+        "score": 363
+      },
+      {
+        "title": "Show HN: Clawfight.ai MCP-driven agentic game play",
+        "url": "https://clawfight.ai/agents.md",
+        "source": "Hacker News AI",
+        "score": 8
       },
       {
         "title": "OpenAI Agents API",
         "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
         "source": "Hacker News AI",
-        "score": 289
+        "score": 330
       },
       {
-        "title": "Moonshot serves Claude instead of Kimi and collects exchanges for model training",
-        "url": "https://twitter.com/DavidAgranovich/status/2098168522862215449",
+        "title": "Hacker News with reduced priority for AI driven content",
+        "url": "https://sprinklz.io/public/pdwt4dve5uai",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 65
       },
       {
-        "title": "More questions about whether researchers can trust OpenAI with unpublished math",
-        "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
+        "title": "Show HN: Hacker News, without AI",
+        "url": "https://hcker.news/?ai=exclude",
         "source": "Hacker News AI",
-        "score": 832
-      },
-      {
-        "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
-        "url": "https://cognition.com/blog/swe-2",
-        "source": "Hacker News AI",
-        "score": 427
+        "score": 108
       },
       {
         "title": "NTSB issues investigative update on B-767 runway excursion accident in Miami",
         "url": "https://www.ntsb.gov:443/news/press-releases/Pages/NR20260909.aspx",
         "source": "Hacker News AI",
-        "score": 123
+        "score": 137
+      },
+      {
+        "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+        "url": "https://cognition.com/blog/swe-2",
+        "source": "Hacker News AI",
+        "score": 434
+      },
+      {
+        "title": "AI made 16 new viruses",
+        "url": "https://www.morningbrew.com/stories/ai-made-16-brand-new-viruses",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Proof of Capture: Apple Reference Image, but open source and using steganography",
         "url": "https://merybenavente.me/blog/proof-of-capture",
         "source": "Hacker News AI",
-        "score": 119
+        "score": 129
       },
       {
-        "title": "Detecting and countering misuse of AI: September 2026",
-        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+        "title": "Moonshot serves Claude instead of Kimi and collects exchanges for model training",
+        "url": "https://twitter.com/DavidAgranovich/status/2098168522862215449",
         "source": "Hacker News AI",
-        "score": 150
-      },
-      {
-        "title": "Thelio Mira AI Linux Workstation: 192 GB GPU Memory",
-        "url": "https://system76.com/workstations/thelio-mira-ai",
-        "source": "Hacker News AI",
-        "score": 114
-      },
-      {
-        "title": "AI Is Breaking This Thing We Call Trust",
-        "url": "https://terriblesoftware.org/2026/09/10/ai-is-breaking-this-thing-we-call-trust/",
-        "source": "Hacker News AI",
-        "score": 95
-      },
-      {
-        "title": "Astra for Coding: Why Are We Doing This Again?",
-        "url": "https://lucumr.pocoo.org/2026/9/7/astra-why/",
-        "source": "Hacker News AI",
-        "score": 383
+        "score": 48
       }
     ],
     "news": [
+      {
+        "title": "Houthis claim major advance in Yemen and tighten grip on Red Sea shipping lane",
+        "url": "https://www.bbc.co.uk/news/articles/c23x72yx2rvo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Norway's Princess Astrid dies two days after attending brother King Harald's funeral",
+        "url": "https://www.bbc.co.uk/news/articles/cgjq1qy98vjo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Israel says it has destroyed major underground Hezbollah base",
+        "url": "https://www.bbc.co.uk/news/articles/c4gl92lw8vpo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Princess Diana's 'revenge dress' goes up for auction",
+        "url": "https://www.bbc.co.uk/news/articles/c0lrk7d7j0no?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Buddhist monk arrested in suspected $3m embezzlement scandal",
+        "url": "https://www.bbc.co.uk/news/articles/c5yjkxlngjyo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Anthropic blocks possible attempt to use AI to make biological weapons",
         "url": "https://www.bbc.co.uk/news/articles/cx2zrrpkx20o?at_medium=RSS&at_campaign=rss",
@@ -186,34 +217,14 @@
         "title": "Hong Kong's Tiananmen activists sentenced to up to seven years in prison",
         "url": "https://www.bbc.co.uk/news/articles/cvgyvk2djk4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Israel says it has destroyed major underground Hezbollah base",
-        "url": "https://www.bbc.co.uk/news/articles/c4gl92lw8vpo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Buddhist monk arrested in suspected $3m embezzlement scandal",
-        "url": "https://www.bbc.co.uk/news/articles/c5yjkxlngjyo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Princess Diana's 'revenge dress' goes up for auction",
-        "url": "https://www.bbc.co.uk/news/articles/c0lrk7d7j0no?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Philippine rescuers board ferry 40 hours after blaze began ",
-        "url": "https://www.bbc.co.uk/news/articles/c9dwx97pl5no?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Six Nigerians accused of romance scams to be extradited to the US",
-        "url": "https://www.bbc.co.uk/news/articles/cj3dy704l71o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Ad platform sparks brand romance with 100 love letter billboards ",
+        "url": "https://www.creativebloq.com/design/advertising/ad-platform-sparks-brand-romance-with-100-love-letter-billboards",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Fans think Beyoncé’s $1000 empty wooden box is a sign ",
         "url": "https://www.creativebloq.com/entertainment/fans-think-beyonces-usd1000-empty-wooden-box-is-a-sign",
@@ -242,11 +253,6 @@
       {
         "title": " Guinness's new billboard ads are lovely (literally) ",
         "url": "https://www.creativebloq.com/design/advertising/guinnesss-new-billboard-ads-are-lovely-literally",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This artist upcycles vintage artwork to give forgotten paintings a quirky modern twist ",
-        "url": "https://www.creativebloq.com/art/traditional-art/this-artist-upcycles-vintage-artwork-to-give-forgotten-paintings-quirky-modern-twists",
         "source": "Creative Bloq"
       }
     ],
@@ -289,38 +295,38 @@
     ],
     "gaming": [
       {
-        "title": "'Blade Runner 2099' Showrunner Reveals the Sci-Fi Secrets She Learned from Ridley Scott",
-        "url": "https://www.polygon.com/blade-runner-2099-showrunner-interview-preview/",
+        "title": "How to fly helicopters in Wardogs",
+        "url": "https://www.polygon.com/wardogs-fly-helicopters-how-to/",
         "source": "Polygon"
       },
       {
-        "title": "Meet Gears of War's New Monster, the 'Flying Testicle' | Exclusive",
-        "url": "https://www.polygon.com/gears-war-e-day-spore-matron-reveal/",
+        "title": "Star Wars' Andor Prequel Highlights Its Most Relentless Rebel in New Look",
+        "url": "https://www.polygon.com/star-wars-reign-of-the-empire-edge-by-of-the-abyss-excerpt/",
         "source": "Polygon"
       },
       {
-        "title": "Jessica Chastain's Bonkers New Horror Movie Just Keeps Getting Scarier",
-        "url": "https://www.polygon.com/other-mommy-preview-exclusive-image/",
+        "title": "'GTA 6' Fans Are Harassing The IRL Nudist Resort That Inspired The Game",
+        "url": "https://www.polygon.com/gta-6-nudist-resort-cypress-cove-florida-where-is-google-reviews/",
         "source": "Polygon"
       },
       {
-        "title": "13 Horror Movies Coming Out This October",
-        "url": "https://www.polygon.com/13-horror-movies-coming-out-this-october/",
+        "title": "Supergirl Soars to No. 1 on Streaming After Bombing at Box Office",
+        "url": "https://www.polygon.com/supergirl-streaming-hbo-max/",
         "source": "Polygon"
       },
       {
-        "title": "Star Trek's 3 Versions Of Captain James T. Kirk: The Definitive Ranking",
-        "url": "https://www.polygon.com/all-captain-kirks-ranked/",
+        "title": "PlayStation's Shock Cancelation of Kojima's New Game Now Makes Perfect Sense",
+        "url": "https://www.polygon.com/kojima-physint-why-playstation-canceled-budget-concerns-death-stranding/",
         "source": "Polygon"
       },
       {
-        "title": "Gary Larson's 10 Best The Far Side Comics, Ranked",
-        "url": "https://www.polygon.com/10-best-far-side-gary-larson/",
+        "title": "Nintendo's Zelda: Ocarina of Time Remake Gets More Pre-order Bonuses",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-switch-2-edition-preorder-bonus-ebgames/",
         "source": "Polygon"
       },
       {
-        "title": "33 Years Later, the Best Sci-Fi Show of the '90s Is Officially Streaming for Free",
-        "url": "https://www.polygon.com/x-files-streaming-free-pluto-tv/",
+        "title": "How to Watch BlizzCon 2026 and What to Expect",
+        "url": "https://www.polygon.com/blizzcon-2026-schedule-when-live-stream-start-time/",
         "source": "Polygon"
       }
     ],
