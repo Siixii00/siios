@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-11T03:29:15.899251",
-    "total_items": 64
+    "last_updated": "2026-09-11T08:41:24.339249",
+    "total_items": 65
   },
   "content": {
     "tech": [
@@ -9,188 +9,194 @@
         "title": "Shopify is moving from React Native back to Swift and Kotlin",
         "url": "https://shopify.engineering/back-to-native",
         "source": "Hacker News",
-        "score": 844
-      },
-      {
-        "title": "More questions about whether researchers can trust OpenAI with unpublished math",
-        "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
-        "source": "Hacker News",
-        "score": 726
-      },
-      {
-        "title": "OpenAI Agents API",
-        "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
-        "source": "Hacker News",
-        "score": 165
-      },
-      {
-        "title": "Mexican student creates an acoustic fire extinguisher to put out fire in seconds",
-        "url": "https://www.upsocl.com/en/16-year-old-mexican-student-creates-an-acoustic-fire-extinguisher-that-uses-sound-waves-to-put-out-fires-in-seconds/",
-        "source": "Hacker News",
-        "score": 68
-      },
-      {
-        "title": "YuE2 · Frontier Music with Symbolic Planning",
-        "url": "https://map-yue2.github.io/",
-        "source": "Hacker News",
-        "score": 57
-      },
-      {
-        "title": "Thelio Mira AI Linux Workstation: 192 GB GPU Memory",
-        "url": "https://system76.com/workstations/thelio-mira-ai",
-        "source": "Hacker News",
-        "score": 52
+        "score": 1028
       },
       {
         "title": "Don't let anyone take away your big box of cables",
         "url": "https://blog.jim-nielsen.com/2026/hands-off-my-cables/",
         "source": "Hacker News",
-        "score": 355
+        "score": 495
       },
       {
-        "title": "Google will buy half the electricity of a nuclear power plant",
-        "url": "https://www.bbc.com/news/articles/c8r6y4me2g6o",
+        "title": "Working with Git Worktrees in Magit",
+        "url": "https://emacsredux.com/blog/2026/09/02/working-with-git-worktrees-in-magit/",
         "source": "Hacker News",
-        "score": 117
+        "score": 35
       },
       {
-        "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
-        "url": "https://cognition.com/blog/swe-2",
+        "title": "Nine coding harnesses vs. your laptop",
+        "url": "https://nasutton.notion.site/Nine-coding-harnesses-vs-your-laptop-3d139990182b80d59fa3cf500f0450ba?pvs=74",
         "source": "Hacker News",
-        "score": 364
+        "score": 85
+      },
+      {
+        "title": "OpenAI Agents API",
+        "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
+        "source": "Hacker News",
+        "score": 248
       },
       {
         "title": "The Deathray: A simple way for an untrusted site to freeze a Mac",
         "url": "https://auberon.xyz/blog/posts/deathray/",
         "source": "Hacker News",
-        "score": 104
+        "score": 166
+      },
+      {
+        "title": "The Gemini app is now available for Windows",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
+        "source": "Hacker News",
+        "score": 41
       },
       {
         "title": "Technique for Manipulating Satellite Photos Now Reveals Ancient Images (2025)",
         "url": "https://spinoff.nasa.gov/Manipulating_Satellite_Photos_Now_Reveals_Ancient_Images",
         "source": "Hacker News",
-        "score": 284
+        "score": 328
+      },
+      {
+        "title": "Mexican student creates an acoustic fire extinguisher to put out fire in seconds",
+        "url": "https://www.upsocl.com/en/16-year-old-mexican-student-creates-an-acoustic-fire-extinguisher-that-uses-sound-waves-to-put-out-fires-in-seconds/",
+        "source": "Hacker News",
+        "score": 186
+      },
+      {
+        "title": "Stop making swap partitions–use swap files instead",
+        "url": "https://gist.github.com/joshenders/c4960cec9c63a7b7d68ffa9543356c43",
+        "source": "Hacker News",
+        "score": 17
       },
       {
         "title": "NTSB issues investigative update on B-767 runway excursion accident in Miami",
         "url": "https://www.ntsb.gov:443/news/press-releases/Pages/NR20260909.aspx",
         "source": "Hacker News",
-        "score": 69
+        "score": 99
       },
       {
-        "title": "Customizing my Compaq MX-11800 keyboard",
-        "url": "https://blog.webb.page/WM-102",
+        "title": "Thelio Mira AI Linux Workstation: 192 GB GPU Memory",
+        "url": "https://system76.com/workstations/thelio-mira-ai",
         "source": "Hacker News",
-        "score": 17
+        "score": 95
       },
       {
-        "title": "LLM Visualizer – Build a Transformer from Scratch",
-        "url": "https://jayvisaria.github.io/LLM-Visualizer/#/dashboard",
+        "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
+        "url": "https://cognition.com/blog/swe-2",
         "source": "Hacker News",
-        "score": 7
+        "score": 407
       },
       {
-        "title": "Music Theory for the 21st-Century Classroom",
-        "url": "https://musictheory.pugetsound.edu/mt21c/MusicTheory.html",
+        "title": "Astra for Coding: Why Are We Doing This Again?",
+        "url": "https://lucumr.pocoo.org/2026/9/7/astra-why/",
         "source": "Hacker News",
-        "score": 175
+        "score": 283
+      },
+      {
+        "title": "More questions about whether researchers can trust OpenAI with unpublished math",
+        "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
+        "source": "Hacker News",
+        "score": 797
       }
     ],
     "ai": [
       {
-        "title": "More questions about whether researchers can trust OpenAI with unpublished math",
-        "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
-        "source": "Hacker News AI",
-        "score": 726
-      },
-      {
         "title": "OpenAI Agents API",
         "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
         "source": "Hacker News AI",
-        "score": 165
+        "score": 248
+      },
+      {
+        "title": "The Gemini app is now available for Windows",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-app-now-on-windows/",
+        "source": "Hacker News AI",
+        "score": 41
+      },
+      {
+        "title": "NTSB issues investigative update on B-767 runway excursion accident in Miami",
+        "url": "https://www.ntsb.gov:443/news/press-releases/Pages/NR20260909.aspx",
+        "source": "Hacker News AI",
+        "score": 99
       },
       {
         "title": "Thelio Mira AI Linux Workstation: 192 GB GPU Memory",
         "url": "https://system76.com/workstations/thelio-mira-ai",
         "source": "Hacker News AI",
-        "score": 52
+        "score": 95
       },
       {
         "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
         "url": "https://cognition.com/blog/swe-2",
         "source": "Hacker News AI",
-        "score": 364
+        "score": 407
       },
       {
-        "title": "NTSB issues investigative update on B-767 runway excursion accident in Miami",
-        "url": "https://www.ntsb.gov:443/news/press-releases/Pages/NR20260909.aspx",
+        "title": "Astra for Coding: Why Are We Doing This Again?",
+        "url": "https://lucumr.pocoo.org/2026/9/7/astra-why/",
         "source": "Hacker News AI",
-        "score": 69
+        "score": 283
       },
       {
-        "title": "LLM Visualizer – Build a Transformer from Scratch",
-        "url": "https://jayvisaria.github.io/LLM-Visualizer/#/dashboard",
+        "title": "More questions about whether researchers can trust OpenAI with unpublished math",
+        "url": "https://mathstodon.xyz/@andreasthom/117240535270608201",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 797
       },
       {
         "title": "Proof of Capture: Apple Reference Image, but open source and using steganography",
         "url": "https://merybenavente.me/blog/proof-of-capture",
         "source": "Hacker News AI",
-        "score": 74
+        "score": 103
       },
       {
         "title": "Detecting and countering misuse of AI: September 2026",
         "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
         "source": "Hacker News AI",
-        "score": 95
+        "score": 125
       },
       {
-        "title": "YouTube had a bug – I used ChatGPT to investigate",
-        "url": "https://blog.thezilber.com/3-youtube-had-a-bug-chatgpt-helped-me-to-investigate",
+        "title": "GPT‑Live‑1 in the API",
+        "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
         "source": "Hacker News AI",
-        "score": 17
+        "score": 4
       },
       {
-        "title": "Embedding a bitmap font in your HyperCard stack",
-        "url": "https://www.leadedsolder.com/2026/09/08/hypercard-custom-fonts-in-resources.html",
+        "title": "Anthropic blocks 'malicious use' of AI that could develop biological weapons",
+        "url": "https://www.bbc.com/news/articles/cx2zrrpkx20o",
         "source": "Hacker News AI",
-        "score": 26
-      },
-      {
-        "title": "OpenAI’s Navier-Stokes release included a Lean 4 formal proof",
-        "url": "https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/",
-        "source": "Hacker News AI",
-        "score": 148
-      },
-      {
-        "title": "Compute-efficient pretraining and scaling to trillion-parameter models",
-        "url": "https://magic.dev/blog/pretraining#",
-        "source": "Hacker News AI",
-        "score": 111
+        "score": 5
       },
       {
         "title": "AI Is Breaking This Thing We Call Trust",
         "url": "https://terriblesoftware.org/2026/09/10/ai-is-breaking-this-thing-we-call-trust/",
         "source": "Hacker News AI",
-        "score": 67
+        "score": 84
       },
       {
-        "title": "Details.so",
-        "url": "https://www.details.so/inspo",
+        "title": "Compute-efficient pretraining and scaling to trillion-parameter models",
+        "url": "https://magic.dev/blog/pretraining#",
         "source": "Hacker News AI",
-        "score": 18
+        "score": 114
+      },
+      {
+        "title": "Embedding a bitmap font in your HyperCard stack",
+        "url": "https://www.leadedsolder.com/2026/09/08/hypercard-custom-fonts-in-resources.html",
+        "source": "Hacker News AI",
+        "score": 27
+      },
+      {
+        "title": "OpenAI’s Navier-Stokes release included a Lean 4 formal proof",
+        "url": "https://www.johndcook.com/blog/2026/09/09/formal-method-revolution/",
+        "source": "Hacker News AI",
+        "score": 161
       }
     ],
     "news": [
       {
-        "title": "Yemen's Houthis reportedly seize strategic Red Sea port of Mokha",
+        "title": "Yemen's Houthis seize strategic Red Sea port of Mokha",
         "url": "https://www.bbc.co.uk/news/articles/c4g7vr0lngwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Can Trump really pay $5,000 to every American adult?",
-        "url": "https://www.bbc.co.uk/news/articles/c8r6vj7r8rko?at_medium=RSS&at_campaign=rss",
+        "title": "Five killed and 67 injured in Russian strike on shopping centre, Ukraine says",
+        "url": "https://www.bbc.co.uk/news/articles/cpvelrmp1vmo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -204,11 +210,6 @@
         "source": "BBC World"
       },
       {
-        "title": "More than 20 children killed in DR Congo school fire",
-        "url": "https://www.bbc.co.uk/news/articles/cgjq15j7318o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Man jailed after threatening to kill son's teacher in French village",
         "url": "https://www.bbc.co.uk/news/articles/c62jln7n2vvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -217,9 +218,29 @@
         "title": "Coach crash kills several people in Swiss Alps",
         "url": "https://www.bbc.co.uk/news/articles/cx2z70xr0y3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
+      },
+      {
+        "title": "More than 20 children killed in DR Congo school fire",
+        "url": "https://www.bbc.co.uk/news/articles/cgjq15j7318o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Guinness's new billboard ads are lovely (literally) ",
+        "url": "https://www.creativebloq.com/design/advertising/guinnesss-new-billboard-ads-are-lovely-literally",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This artist upcycles vintage artwork to give forgotten paintings a quirky modern twist ",
+        "url": "https://www.creativebloq.com/art/traditional-art/this-artist-upcycles-vintage-artwork-to-give-forgotten-paintings-quirky-modern-twists",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Eizo FlexScan EV3450XC review: a well‑rounded ultrawide with everyday smarts ",
+        "url": "https://www.creativebloq.com/tech/monitors/eizo-flexscan-ev3450xc-review-a-well-rounded-ultrawide-with-everyday-smarts",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Forget the iPhone Duo, these super cheap dumb phones offer the digital detox you're probably craving ",
         "url": "https://www.creativebloq.com/tech/phones-tablets/forget-the-iphone-duo-these-super-cheap-dumb-phones-offer-the-digital-detox-youre-probably-craving",
@@ -238,21 +259,6 @@
       {
         "title": " Final Fantasy VII Revelation hands-on: a beautiful game world now looks even more stunning ",
         "url": "https://www.creativebloq.com/entertainment/gaming/final-fantasy-vii-revelation-hands-on-a-beautiful-game-world-now-looks-even-more-stunning",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apple just revealed exactly which two products the iPhone Duo is designed to replace ",
-        "url": "https://www.creativebloq.com/design/advertising/apple-just-revealed-exactly-which-two-products-the-iphone-duo-is-designed-to-replace",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The iPhone Duo is perfect for people with uncanny alien fingers ",
-        "url": "https://www.creativebloq.com/tech/the-iphone-duo-is-perfect-for-people-with-uncanny-alien-fingers",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The brand new Sony ANC headphone... is the old Sony ANC headphone?! ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/the-brand-new-sony-anc-headphone-is-the-old-sony-headphone",
         "source": "Creative Bloq"
       }
     ],
@@ -295,6 +301,21 @@
     ],
     "gaming": [
       {
+        "title": "Star Trek's 3 Versions Of Captain James T. Kirk: The Definitive Ranking",
+        "url": "https://www.polygon.com/all-captain-kirks-ranked/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Gary Larson's 10 Best The Far Side Comics, Ranked",
+        "url": "https://www.polygon.com/10-best-far-side-gary-larson/",
+        "source": "Polygon"
+      },
+      {
+        "title": "33 Years Later, the Best Sci-Fi Show of the '90s Is Officially Streaming for Free",
+        "url": "https://www.polygon.com/x-files-streaming-free-pluto-tv/",
+        "source": "Polygon"
+      },
+      {
         "title": "24 Years Later, the 220-Episode Action Classic That Defined a Generation Is Free to Stream on YouTube",
         "url": "https://www.polygon.com/naruto-streaming-free-on-youtube/",
         "source": "Polygon"
@@ -312,21 +333,6 @@
       {
         "title": "Steel Ball Run Director Says JoJo’s Bizarre Adventure Is About to Get Even Weirder",
         "url": "https://www.polygon.com/netflix-steel-ball-run-anime-yasuhiro-kimura-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The scariest survival thriller of 2026 was filmed on sacred land deep in the Amazon",
-        "url": "https://www.polygon.com/beware-boiuna-director-interview-mike-nelson/",
-        "source": "Polygon"
-      },
-      {
-        "title": "What's Free on Steam This Weekend (Sept. 11-14)",
-        "url": "https://www.polygon.com/free-on-steam-this-weekend-sept-11-2026-borderlands-4/",
-        "source": "Polygon"
-      },
-      {
-        "title": "PS5 Heist Shooter Fairgames Makes Surprising Return Under New Name",
-        "url": "https://www.polygon.com/sony-fairgames-ps5-project-espresso-playtest-haven-studios/",
         "source": "Polygon"
       }
     ],
