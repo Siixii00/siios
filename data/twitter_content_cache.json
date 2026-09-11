@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-11T20:37:05.856525",
-    "total_items": 63
+    "last_updated": "2026-09-11T23:02:25.682220",
+    "total_items": 61
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "A misalignment of AI in mathematics",
         "url": "https://mathandai.org/",
         "source": "Hacker News",
-        "score": 261
+        "score": 500
+      },
+      {
+        "title": "I spent $220 on Google app ads and 60% of the installs were robots",
+        "url": "https://dayzlegame.com/blog/google-ads-bot-farm/",
+        "source": "Hacker News",
+        "score": 187
       },
       {
         "title": "GrapheneOS' rewritten Messages app is released",
         "url": "https://github.com/GrapheneOS/Messaging/releases/tag/13",
         "source": "Hacker News",
-        "score": 61
+        "score": 157
+      },
+      {
+        "title": "A Design Space Exploration of Async/Await",
+        "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
+        "source": "Hacker News",
+        "score": 81
+      },
+      {
+        "title": "Project Blinkenlights",
+        "url": "https://blinkenlights.de/en/",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "Show HN: ResolveHQ – A Helpdesk Built on Cloudflare Workers, D1, R2 and Queues",
+        "url": "https://github.com/mirza-rizvi/ResolveHQ",
+        "source": "Hacker News",
+        "score": 11
       },
       {
         "title": "Litelm: LiteLLM Without the Bloat",
         "url": "https://github.com/kennethwolters/litelm",
         "source": "Hacker News",
-        "score": 45
-      },
-      {
-        "title": "Claude is only available to people over 18 years",
-        "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
-        "source": "Hacker News",
-        "score": 479
+        "score": 79
       },
       {
         "title": "Λ Snap – An inviting programming language for kids and adults for CS study",
         "url": "https://snap.berkeley.edu/",
         "source": "Hacker News",
-        "score": 67
-      },
-      {
-        "title": "The EPA is planning to scrap public review rules for data center pollution",
-        "url": "https://capitalbnews.org/data-centers-permit-rules-epa/",
-        "source": "Hacker News",
-        "score": 181
-      },
-      {
-        "title": "Mind-altering drugs played key role in rise of Andean civilization",
-        "url": "https://www.science.org/content/article/mind-altering-drugs-played-key-role-rise-andean-civilization",
-        "source": "Hacker News",
-        "score": 40
+        "score": 93
       },
       {
         "title": "AlphaGenome maps 9B DNA variants",
         "url": "https://spectrum.ieee.org/alphagenome-atlas",
         "source": "Hacker News",
-        "score": 26
+        "score": 56
       },
       {
-        "title": "I've operated petabyte-scale ClickHouse clusters for 5 years",
-        "url": "https://www.tinybird.co/blog/what-i-learned-operating-clickhouse",
+        "title": "The EPA is planning to scrap public review rules for data center pollution",
+        "url": "https://capitalbnews.org/data-centers-permit-rules-epa/",
         "source": "Hacker News",
-        "score": 136
+        "score": 279
       },
       {
         "title": "Rune is now open source",
         "url": "https://rune.build/blog/rune-is-now-open-source",
         "source": "Hacker News",
-        "score": 81
+        "score": 118
       },
       {
-        "title": "118M Queries per Second on Neki",
-        "url": "https://planetscale.com/blog/118-million-queries-per-second-on-neki",
+        "title": "I've operated petabyte-scale ClickHouse clusters for 5 years",
+        "url": "https://www.tinybird.co/blog/what-i-learned-operating-clickhouse",
         "source": "Hacker News",
-        "score": 70
+        "score": 163
       },
       {
         "title": "So you want to use OpenRouter?",
         "url": "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/",
         "source": "Hacker News",
-        "score": 625
+        "score": 677
       },
       {
-        "title": "Zep AI (YC W24) Is Hiring a Head of Forward Deployed Engineering",
-        "url": "https://www.getzep.com/careers/",
+        "title": "Mind-altering drugs played key role in rise of Andean civilization",
+        "url": "https://www.science.org/content/article/mind-altering-drugs-played-key-role-rise-andean-civilization",
         "source": "Hacker News",
-        "score": 1
+        "score": 80
       },
       {
-        "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
-        "url": "https://github.com/godot-pty/gpty",
+        "title": "QueryBrew: System-Agnostic SQL-to-SQL Query Optimization [pdf]",
+        "url": "https://www.vldb.org/pvldb/vol19/p4494-schmidt.pdf",
         "source": "Hacker News",
-        "score": 65
-      },
-      {
-        "title": "Logo Programming Language",
-        "url": "https://el.media.mit.edu/logo-foundation/what_is_logo/logo_programming.html",
-        "source": "Hacker News",
-        "score": 181
+        "score": 4
       }
     ],
     "ai": [
@@ -101,19 +101,19 @@
         "title": "A misalignment of AI in mathematics",
         "url": "https://mathandai.org/",
         "source": "Hacker News AI",
-        "score": 261
+        "score": 500
+      },
+      {
+        "title": "A Design Space Exploration of Async/Await",
+        "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
+        "source": "Hacker News AI",
+        "score": 81
       },
       {
         "title": "Litelm: LiteLLM Without the Bloat",
         "url": "https://github.com/kennethwolters/litelm",
         "source": "Hacker News AI",
-        "score": 45
-      },
-      {
-        "title": "Claude is only available to people over 18 years",
-        "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
-        "source": "Hacker News AI",
-        "score": 479
+        "score": 79
       },
       {
         "title": "Zep AI (YC W24) Is Hiring a Head of Forward Deployed Engineering",
@@ -125,55 +125,43 @@
         "title": "CIA Releases President's Daily Briefs in Commemoration of 9/11",
         "url": "https://www.cia.gov/stories/story/cia-releases-presidents-daily-briefs-in-commemoration-of-the-25th-anniversary-of-9-11/",
         "source": "Hacker News AI",
-        "score": 36
+        "score": 79
       },
       {
-        "title": "Copying login keychains between Macs fails on Secure Enclave Macs with Tahoe",
-        "url": "https://derflounder.wordpress.com/2026/09/08/manually-copying-login-keychain-files-from-one-mac-to-another-no-longer-works-on-secure-enclave-equipped-macs-running-macos-tahoe/",
+        "title": "Claude is only available to people over 18 years",
+        "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
         "source": "Hacker News AI",
-        "score": 59
+        "score": 541
       },
       {
         "title": "Show HN: Hacker News, without AI",
         "url": "https://hcker.news/?ai=exclude",
         "source": "Hacker News AI",
-        "score": 133
-      },
-      {
-        "title": "Show HN: Hacker News, Without AI",
-        "url": "https://www.unslop.news/",
-        "source": "Hacker News AI",
-        "score": 147
+        "score": 163
       },
       {
         "title": "Hacker News with reduced priority for AI driven content",
         "url": "https://sprinklz.io/public/pdwt4dve5uai",
         "source": "Hacker News AI",
-        "score": 84
+        "score": 104
       },
       {
-        "title": "The Netherlands, Spain push for EU-wide minimum age on social media",
-        "url": "https://www.euronews.com/my-europe/2026/09/11/the-netherlands-spain-push-for-eu-wide-minimum-age-on-social-media",
+        "title": "Show HN: Hacker News, Without AI",
+        "url": "https://www.unslop.news/",
         "source": "Hacker News AI",
-        "score": 10
+        "score": 166
       },
       {
-        "title": "GPT-6 Astra does 3D camera tracking and VFX in Blender",
-        "url": "https://twitter.com/ryanvogel/status/2098477000843211081",
+        "title": "Copying login keychains between Macs fails on Secure Enclave Macs with Tahoe",
+        "url": "https://derflounder.wordpress.com/2026/09/08/manually-copying-login-keychain-files-from-one-mac-to-another-no-longer-works-on-secure-enclave-equipped-macs-running-macos-tahoe/",
         "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Show HN: Clawfight.ai MCP-driven agentic game play",
-        "url": "https://clawfight.ai/agents.md",
-        "source": "Hacker News AI",
-        "score": 12
+        "score": 68
       },
       {
         "title": "Show HN: Extension to filter LLM written articles",
         "url": "https://hnslop.nilsherzig.com/",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 12
       }
     ],
     "news": [
@@ -215,6 +203,11 @@
     ],
     "art": [
       {
+        "title": " iPhone Duo is coming, but these rival tried-and-tested foldable phones have up to $500 off ",
+        "url": "https://www.creativebloq.com/tech/phones-tablets/iphone-duo-is-coming-but-rival-tried-and-tested-foldable-phones-have-up-to-usd500-off",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Ad platform sparks brand romance with 100 love letter billboards ",
         "url": "https://www.creativebloq.com/design/advertising/ad-platform-sparks-brand-romance-with-100-love-letter-billboards",
         "source": "Creative Bloq"
@@ -242,11 +235,6 @@
       {
         "title": " Nightmare Operator is like Resident Evil 4 and Shin Megami Tensei had a PS1 baby, then taught it fighting-game mechanics ",
         "url": "https://www.creativebloq.com/3d/video-game-design/nightmare-operator-is-like-resident-evil-4-and-shin-megami-tensei-had-a-ps1-baby-then-taught-it-fighting-game-mechanics",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Guinness's new billboard ads are lovely (literally) ",
-        "url": "https://www.creativebloq.com/design/advertising/guinnesss-new-billboard-ads-are-lovely-literally",
         "source": "Creative Bloq"
       }
     ],
@@ -289,6 +277,31 @@
     ],
     "gaming": [
       {
+        "title": "The 17 Best Games of Gamescom 2026",
+        "url": "https://www.polygon.com/best-games-gamescom-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Silksong's New Replacement Is About to Become the Best Action Game of the Year",
+        "url": "https://www.polygon.com/chronoscript-endless-end-demo-preview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "One of Nintendo's Greatest '80s Games Is Still the Perfect Weekend Obsession",
+        "url": "https://www.polygon.com/best-retro-80s-games-nintendo/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 New Movies to Watch This Weekend on Netflix, HBO Max, and Hulu (September 11-13)",
+        "url": "https://www.polygon.com/new-movies-streaming-this-weekend-netflix-september-11-13/",
+        "source": "Polygon"
+      },
+      {
+        "title": "GTA 6 Is About to Take Over Miami IRL",
+        "url": "https://www.polygon.com/gta-6-miami-marketing-campaign-vice-city/",
+        "source": "Polygon"
+      },
+      {
         "title": "8 New TV Shows to Watch This Weekend on Netflix, HBO Max, and Apple TV (September 11-13)",
         "url": "https://www.polygon.com/new-tv-shows-streaming-this-weekend-netflix-september-11-13/",
         "source": "Polygon"
@@ -296,31 +309,6 @@
       {
         "title": "Pokémon TCG Gets Special Mewtwo 30th Anniversary Card With Limited Release",
         "url": "https://www.polygon.com/pokemon-30th-anniversary-cards-release-date-mewtwo-promo-how-to-get/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The 9 Best Games to Play If You Can't Get Enough Silo",
-        "url": "https://www.polygon.com/best-games-like-silo/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Netflix’s Best Genre-Blending Series Finally Gives Fans What They Want in Season 2",
-        "url": "https://www.polygon.com/blue-box-season-2-netflix-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Cyberpunk 2077 Finally Has the Third Person Camera Mod Players Have Been Demanding",
-        "url": "https://www.polygon.com/cyberpunk-2077-third-person-mod/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Witcher 3's New Weapon Was 'Impossible' 11 Years Ago",
-        "url": "https://www.polygon.com/the-witcher-3-wild-hunt-songs-of-the-past-new-chain-weapon/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Upcoming Rust Update Turns the Survival Game Into a Cozy One",
-        "url": "https://www.polygon.com/rust-animal-husbandry-livestock-update-preview/",
         "source": "Polygon"
       }
     ],
