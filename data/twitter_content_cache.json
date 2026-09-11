@@ -1,113 +1,119 @@
 {
   "metadata": {
-    "last_updated": "2026-09-11T17:36:12.350721",
-    "total_items": 64
+    "last_updated": "2026-09-11T20:37:05.856525",
+    "total_items": 63
   },
   "content": {
     "tech": [
       {
-        "title": "Global Glacier Extinction Explorer",
-        "url": "https://glacierextinction.com",
+        "title": "A misalignment of AI in mathematics",
+        "url": "https://mathandai.org/",
         "source": "Hacker News",
-        "score": 88
+        "score": 261
       },
       {
-        "title": "Godot and Rust based multiplexer (terminal panes and more)",
-        "url": "https://github.com/godot-pty/gpty",
+        "title": "GrapheneOS' rewritten Messages app is released",
+        "url": "https://github.com/GrapheneOS/Messaging/releases/tag/13",
         "source": "Hacker News",
-        "score": 39
+        "score": 61
       },
       {
-        "title": "Feeling Sad about AI",
-        "url": "https://artificialworlds.net/blog/2026/09/11/feeling-sad-about-ai/",
+        "title": "Litelm: LiteLLM Without the Bloat",
+        "url": "https://github.com/kennethwolters/litelm",
         "source": "Hacker News",
-        "score": 105
+        "score": 45
+      },
+      {
+        "title": "Claude is only available to people over 18 years",
+        "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
+        "source": "Hacker News",
+        "score": 479
+      },
+      {
+        "title": "Λ Snap – An inviting programming language for kids and adults for CS study",
+        "url": "https://snap.berkeley.edu/",
+        "source": "Hacker News",
+        "score": 67
+      },
+      {
+        "title": "The EPA is planning to scrap public review rules for data center pollution",
+        "url": "https://capitalbnews.org/data-centers-permit-rules-epa/",
+        "source": "Hacker News",
+        "score": 181
+      },
+      {
+        "title": "Mind-altering drugs played key role in rise of Andean civilization",
+        "url": "https://www.science.org/content/article/mind-altering-drugs-played-key-role-rise-andean-civilization",
+        "source": "Hacker News",
+        "score": 40
+      },
+      {
+        "title": "AlphaGenome maps 9B DNA variants",
+        "url": "https://spectrum.ieee.org/alphagenome-atlas",
+        "source": "Hacker News",
+        "score": 26
       },
       {
         "title": "I've operated petabyte-scale ClickHouse clusters for 5 years",
         "url": "https://www.tinybird.co/blog/what-i-learned-operating-clickhouse",
         "source": "Hacker News",
-        "score": 88
+        "score": 136
       },
       {
-        "title": "Logo Programming Language",
-        "url": "https://el.media.mit.edu/logo-foundation/what_is_logo/logo_programming.html",
+        "title": "Rune is now open source",
+        "url": "https://rune.build/blog/rune-is-now-open-source",
         "source": "Hacker News",
-        "score": 128
-      },
-      {
-        "title": "Show HN: Hacker News, Without AI",
-        "url": "https://www.unslop.news/",
-        "source": "Hacker News",
-        "score": 18
-      },
-      {
-        "title": "Zep AI (YC W24) Is Hiring a Head of Forward Deployed Engineering",
-        "url": "https://www.getzep.com/careers/",
-        "source": "Hacker News",
-        "score": 1
+        "score": 81
       },
       {
         "title": "118M Queries per Second on Neki",
         "url": "https://planetscale.com/blog/118-million-queries-per-second-on-neki",
         "source": "Hacker News",
-        "score": 21
-      },
-      {
-        "title": "Copying login keychains between Macs fails on Secure Enclave Macs with Tahoe",
-        "url": "https://derflounder.wordpress.com/2026/09/08/manually-copying-login-keychain-files-from-one-mac-to-another-no-longer-works-on-secure-enclave-equipped-macs-running-macos-tahoe/",
-        "source": "Hacker News",
-        "score": 33
+        "score": 70
       },
       {
         "title": "So you want to use OpenRouter?",
         "url": "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/",
         "source": "Hacker News",
-        "score": 537
+        "score": 625
       },
       {
-        "title": "RTK reports token savings, but our cost benchmarks disagree",
-        "url": "https://quesma.com/blog/does-rtk-make-ai-coding-cheaper/",
+        "title": "Zep AI (YC W24) Is Hiring a Head of Forward Deployed Engineering",
+        "url": "https://www.getzep.com/careers/",
         "source": "Hacker News",
-        "score": 108
+        "score": 1
       },
       {
-        "title": "Measuring the sloppiness of code",
-        "url": "https://earendil.com/posts/measuring-code-sloppiness/",
+        "title": "Show HN: Godot and Rust based multiplexer (terminal panes and more)",
+        "url": "https://github.com/godot-pty/gpty",
         "source": "Hacker News",
-        "score": 129
+        "score": 65
       },
       {
-        "title": "HuggingFace: Security.txt",
-        "url": "https://huggingface.co/security.txt",
+        "title": "Logo Programming Language",
+        "url": "https://el.media.mit.edu/logo-foundation/what_is_logo/logo_programming.html",
         "source": "Hacker News",
-        "score": 148
-      },
-      {
-        "title": "Kenyans Did College Students' Homework for Years. Then A.I. Arrived",
-        "url": "https://www.nytimes.com/2026/09/05/technology/kenya-college-essays-ai.html",
-        "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "Stop making swap partitions—use swap files instead",
-        "url": "https://gist.github.com/joshenders/c4960cec9c63a7b7d68ffa9543356c43",
-        "source": "Hacker News",
-        "score": 44
+        "score": 181
       }
     ],
     "ai": [
       {
-        "title": "Feeling Sad about AI",
-        "url": "https://artificialworlds.net/blog/2026/09/11/feeling-sad-about-ai/",
+        "title": "A misalignment of AI in mathematics",
+        "url": "https://mathandai.org/",
         "source": "Hacker News AI",
-        "score": 105
+        "score": 261
       },
       {
-        "title": "Show HN: Hacker News, Without AI",
-        "url": "https://www.unslop.news/",
+        "title": "Litelm: LiteLLM Without the Bloat",
+        "url": "https://github.com/kennethwolters/litelm",
         "source": "Hacker News AI",
-        "score": 18
+        "score": 45
+      },
+      {
+        "title": "Claude is only available to people over 18 years",
+        "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
+        "source": "Hacker News AI",
+        "score": 479
       },
       {
         "title": "Zep AI (YC W24) Is Hiring a Head of Forward Deployed Engineering",
@@ -116,70 +122,58 @@
         "score": 1
       },
       {
+        "title": "CIA Releases President's Daily Briefs in Commemoration of 9/11",
+        "url": "https://www.cia.gov/stories/story/cia-releases-presidents-daily-briefs-in-commemoration-of-the-25th-anniversary-of-9-11/",
+        "source": "Hacker News AI",
+        "score": 36
+      },
+      {
         "title": "Copying login keychains between Macs fails on Secure Enclave Macs with Tahoe",
         "url": "https://derflounder.wordpress.com/2026/09/08/manually-copying-login-keychain-files-from-one-mac-to-another-no-longer-works-on-secure-enclave-equipped-macs-running-macos-tahoe/",
         "source": "Hacker News AI",
-        "score": 33
-      },
-      {
-        "title": "Claude is only available to people over 18 years",
-        "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
-        "source": "Hacker News AI",
-        "score": 363
-      },
-      {
-        "title": "Show HN: Clawfight.ai MCP-driven agentic game play",
-        "url": "https://clawfight.ai/agents.md",
-        "source": "Hacker News AI",
-        "score": 8
-      },
-      {
-        "title": "OpenAI Agents API",
-        "url": "https://developers.openai.com/api/docs/guides/agents-api/overview",
-        "source": "Hacker News AI",
-        "score": 330
-      },
-      {
-        "title": "Hacker News with reduced priority for AI driven content",
-        "url": "https://sprinklz.io/public/pdwt4dve5uai",
-        "source": "Hacker News AI",
-        "score": 65
+        "score": 59
       },
       {
         "title": "Show HN: Hacker News, without AI",
         "url": "https://hcker.news/?ai=exclude",
         "source": "Hacker News AI",
-        "score": 108
+        "score": 133
       },
       {
-        "title": "NTSB issues investigative update on B-767 runway excursion accident in Miami",
-        "url": "https://www.ntsb.gov:443/news/press-releases/Pages/NR20260909.aspx",
+        "title": "Show HN: Hacker News, Without AI",
+        "url": "https://www.unslop.news/",
         "source": "Hacker News AI",
-        "score": 137
+        "score": 147
       },
       {
-        "title": "Cognition launches new SWE-2 model, Rivaling Fable 5.1 and GPT-Astra",
-        "url": "https://cognition.com/blog/swe-2",
+        "title": "Hacker News with reduced priority for AI driven content",
+        "url": "https://sprinklz.io/public/pdwt4dve5uai",
         "source": "Hacker News AI",
-        "score": 434
+        "score": 84
       },
       {
-        "title": "AI made 16 new viruses",
-        "url": "https://www.morningbrew.com/stories/ai-made-16-brand-new-viruses",
+        "title": "The Netherlands, Spain push for EU-wide minimum age on social media",
+        "url": "https://www.euronews.com/my-europe/2026/09/11/the-netherlands-spain-push-for-eu-wide-minimum-age-on-social-media",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 10
       },
       {
-        "title": "Proof of Capture: Apple Reference Image, but open source and using steganography",
-        "url": "https://merybenavente.me/blog/proof-of-capture",
+        "title": "GPT-6 Astra does 3D camera tracking and VFX in Blender",
+        "url": "https://twitter.com/ryanvogel/status/2098477000843211081",
         "source": "Hacker News AI",
-        "score": 129
+        "score": 13
       },
       {
-        "title": "Moonshot serves Claude instead of Kimi and collects exchanges for model training",
-        "url": "https://twitter.com/DavidAgranovich/status/2098168522862215449",
+        "title": "Show HN: Clawfight.ai MCP-driven agentic game play",
+        "url": "https://clawfight.ai/agents.md",
         "source": "Hacker News AI",
-        "score": 48
+        "score": 12
+      },
+      {
+        "title": "Show HN: Extension to filter LLM written articles",
+        "url": "https://hnslop.nilsherzig.com/",
+        "source": "Hacker News AI",
+        "score": 5
       }
     ],
     "news": [
@@ -295,43 +289,48 @@
     ],
     "gaming": [
       {
-        "title": "How to fly helicopters in Wardogs",
-        "url": "https://www.polygon.com/wardogs-fly-helicopters-how-to/",
+        "title": "8 New TV Shows to Watch This Weekend on Netflix, HBO Max, and Apple TV (September 11-13)",
+        "url": "https://www.polygon.com/new-tv-shows-streaming-this-weekend-netflix-september-11-13/",
         "source": "Polygon"
       },
       {
-        "title": "Star Wars' Andor Prequel Highlights Its Most Relentless Rebel in New Look",
-        "url": "https://www.polygon.com/star-wars-reign-of-the-empire-edge-by-of-the-abyss-excerpt/",
+        "title": "Pokémon TCG Gets Special Mewtwo 30th Anniversary Card With Limited Release",
+        "url": "https://www.polygon.com/pokemon-30th-anniversary-cards-release-date-mewtwo-promo-how-to-get/",
         "source": "Polygon"
       },
       {
-        "title": "'GTA 6' Fans Are Harassing The IRL Nudist Resort That Inspired The Game",
-        "url": "https://www.polygon.com/gta-6-nudist-resort-cypress-cove-florida-where-is-google-reviews/",
+        "title": "The 9 Best Games to Play If You Can't Get Enough Silo",
+        "url": "https://www.polygon.com/best-games-like-silo/",
         "source": "Polygon"
       },
       {
-        "title": "Supergirl Soars to No. 1 on Streaming After Bombing at Box Office",
-        "url": "https://www.polygon.com/supergirl-streaming-hbo-max/",
+        "title": "Netflix’s Best Genre-Blending Series Finally Gives Fans What They Want in Season 2",
+        "url": "https://www.polygon.com/blue-box-season-2-netflix-interview/",
         "source": "Polygon"
       },
       {
-        "title": "PlayStation's Shock Cancelation of Kojima's New Game Now Makes Perfect Sense",
-        "url": "https://www.polygon.com/kojima-physint-why-playstation-canceled-budget-concerns-death-stranding/",
+        "title": "Cyberpunk 2077 Finally Has the Third Person Camera Mod Players Have Been Demanding",
+        "url": "https://www.polygon.com/cyberpunk-2077-third-person-mod/",
         "source": "Polygon"
       },
       {
-        "title": "Nintendo's Zelda: Ocarina of Time Remake Gets More Pre-order Bonuses",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-switch-2-edition-preorder-bonus-ebgames/",
+        "title": "The Witcher 3's New Weapon Was 'Impossible' 11 Years Ago",
+        "url": "https://www.polygon.com/the-witcher-3-wild-hunt-songs-of-the-past-new-chain-weapon/",
         "source": "Polygon"
       },
       {
-        "title": "How to Watch BlizzCon 2026 and What to Expect",
-        "url": "https://www.polygon.com/blizzcon-2026-schedule-when-live-stream-start-time/",
+        "title": "Upcoming Rust Update Turns the Survival Game Into a Cozy One",
+        "url": "https://www.polygon.com/rust-animal-husbandry-livestock-update-preview/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "Marketing ops as code: Automating events from planning to follow-up on GitHub",
+        "url": "https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "GitHub Copilot app for Beginners: Using the diff, terminal, and browser",
         "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-using-the-diff-terminal-and-browser/",
@@ -360,11 +359,6 @@
       {
         "title": "How we make AI coding more cost efficient without sacrificing task quality",
         "url": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "OpenClaw went viral. Meet the maintainers building and securing it.",
-        "url": "https://github.blog/open-source/maintainers/openclaw-went-viral-meet-the-maintainers-building-and-securing-it/",
         "source": "GitHub Blog"
       }
     ]
