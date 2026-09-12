@@ -1,167 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-09-12T12:40:56.255091",
-    "total_items": 57
+    "last_updated": "2026-09-12T16:03:17.063382",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
-        "title": "Fuck it, make it anyway",
-        "url": "https://www.joelotter.com/posts/2026/09/make-it-anyway/",
+        "title": "Nvidia is the central bank of AI",
+        "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
         "source": "Hacker News",
-        "score": 71
+        "score": 56
+      },
+      {
+        "title": "A Mathematical Framework for Transformer Circuits (2021)",
+        "url": "https://transformer-circuits.pub/2021/framework/index.html",
+        "source": "Hacker News",
+        "score": 32
       },
       {
         "title": "IKEA made a mod for Skyrim [video]",
         "url": "https://www.youtube.com/watch?v=iZODN0QUgjI",
         "source": "Hacker News",
-        "score": 274
+        "score": 410
+      },
+      {
+        "title": "Fuck it, make it anyway",
+        "url": "https://www.joelotter.com/posts/2026/09/make-it-anyway/",
+        "source": "Hacker News",
+        "score": 368
       },
       {
         "title": "Retrospectively Reverse-Engineering Apple's Neural Engine",
         "url": "https://eiln.github.io/posts/ane.html",
         "source": "Hacker News",
-        "score": 125
-      },
-      {
-        "title": "The Worst Spam Emails: Inside iLands' AI Agent Hustle",
-        "url": "https://tedium.co/2026/09/11/ilands-agents-email-spam-kaixin-tang/",
-        "source": "Hacker News",
-        "score": 25
+        "score": 171
       },
       {
         "title": "A misalignment of AI in mathematics",
         "url": "https://mathandai.org/",
         "source": "Hacker News",
-        "score": 1013
+        "score": 1097
+      },
+      {
+        "title": "The Worst Spam Emails: Inside iLands' AI Agent Hustle",
+        "url": "https://tedium.co/2026/09/11/ilands-agents-email-spam-kaixin-tang/",
+        "source": "Hacker News",
+        "score": 68
       },
       {
         "title": "I spent $220 on Google app ads and 60% of the installs were robots",
         "url": "https://dayzlegame.com/blog/google-ads-bot-farm/",
         "source": "Hacker News",
-        "score": 590
+        "score": 664
       },
       {
-        "title": "Finding Slow Code with Wrapture",
-        "url": "https://grahamdumpleton.me/posts/2026/09/finding-slow-code-with-wrapture/",
+        "title": "LRU is harder to beat than the KV-cache papers suggest",
+        "url": "https://github.com/gauravapiscean/agentic-kv-cache",
         "source": "Hacker News",
-        "score": 6
+        "score": 44
+      },
+      {
+        "title": "Moby-Dick and the Indefinite Sublime: On facing the white page",
+        "url": "https://yalereview.org/article/tom-mccarthy-indefinite-sublime",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "Performance of WebAssembly Runtimes in 2026",
+        "url": "https://00f.net/2026/06/23/webassembly-runtimes-2026/",
+        "source": "Hacker News",
+        "score": 26
       },
       {
         "title": "A Design Space Exploration of Async/Await",
         "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
         "source": "Hacker News",
-        "score": 324
+        "score": 372
+      },
+      {
+        "title": "LG responds to TV spying allegations",
+        "url": "https://www.theverge.com/tech/994333/lg-responds-to-tv-spying-allegations",
+        "source": "Hacker News",
+        "score": 12
       },
       {
         "title": "Great Lakes sturgeon may be 400 years old:Scientists rethinking how to save them",
         "url": "https://www.cbc.ca/news/canada/ontario-great-lakes-sturgeon-lifespan-study-9.7329250",
         "source": "Hacker News",
-        "score": 84
-      },
-      {
-        "title": "Inverse Kinematics and Foot Locking",
-        "url": "https://theorangeduck.com/page/inverse-kinematics-foot-locking",
-        "source": "Hacker News",
-        "score": 70
+        "score": 116
       },
       {
         "title": "Usenet rewind archive search engine",
         "url": "https://www.usenet-rewind.com/",
         "source": "Hacker News",
-        "score": 81
-      },
-      {
-        "title": "I Fixed a Tractor Using John Deere's Self-Repair Service. Farmers Aren't Sold",
-        "url": "https://www.wired.com/story/i-fixed-a-tractor-john-deere-self-repair-service/",
-        "source": "Hacker News",
-        "score": 5
-      },
-      {
-        "title": "Forgotten Woodlands",
-        "url": "https://storymaps.arcgis.com/stories/9b790daf22ba4e87836f467abb1c7e49",
-        "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "google.com/goto: Google's anti-scraping update",
-        "url": "https://www.autom.dev/blog/google-search-goto-links",
-        "source": "Hacker News",
-        "score": 480
-      },
-      {
-        "title": "Show HN: Bodily Oddities",
-        "url": "https://vester.si/bodily-oddities/",
-        "source": "Hacker News",
-        "score": 276
+        "score": 106
       }
     ],
     "ai": [
       {
+        "title": "Nvidia is the central bank of AI",
+        "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
+        "source": "Hacker News AI",
+        "score": 56
+      },
+      {
+        "title": "A Mathematical Framework for Transformer Circuits (2021)",
+        "url": "https://transformer-circuits.pub/2021/framework/index.html",
+        "source": "Hacker News AI",
+        "score": 32
+      },
+      {
         "title": "Retrospectively Reverse-Engineering Apple's Neural Engine",
         "url": "https://eiln.github.io/posts/ane.html",
         "source": "Hacker News AI",
-        "score": 125
-      },
-      {
-        "title": "The Worst Spam Emails: Inside iLands' AI Agent Hustle",
-        "url": "https://tedium.co/2026/09/11/ilands-agents-email-spam-kaixin-tang/",
-        "source": "Hacker News AI",
-        "score": 25
+        "score": 171
       },
       {
         "title": "A misalignment of AI in mathematics",
         "url": "https://mathandai.org/",
         "source": "Hacker News AI",
-        "score": 1013
+        "score": 1097
+      },
+      {
+        "title": "The Worst Spam Emails: Inside iLands' AI Agent Hustle",
+        "url": "https://tedium.co/2026/09/11/ilands-agents-email-spam-kaixin-tang/",
+        "source": "Hacker News AI",
+        "score": 68
       },
       {
         "title": "A Design Space Exploration of Async/Await",
         "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
         "source": "Hacker News AI",
-        "score": 324
-      },
-      {
-        "title": "I Fixed a Tractor Using John Deere's Self-Repair Service. Farmers Aren't Sold",
-        "url": "https://www.wired.com/story/i-fixed-a-tractor-john-deere-self-repair-service/",
-        "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "Altman tells staff OpenAI is open to slowing AI development",
-        "url": "https://www.reuters.com/business/altman-tells-staff-openai-is-open-slowing-ai-development-bloomberg-news-reports-2026-09-11/",
-        "source": "Hacker News AI",
-        "score": 17
+        "score": 372
       },
       {
         "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
         "url": "https://www.rubyhack.ai/",
         "source": "Hacker News AI",
-        "score": 776
+        "score": 859
+      },
+      {
+        "title": "Is it time for a Luddite Renaissance?",
+        "url": "https://www.npr.org/2026/09/08/nx-s1-5955618/is-it-time-for-a-luddite-renaissance",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Litelm: LiteLLM Without the Bloat",
         "url": "https://github.com/kennethwolters/litelm",
         "source": "Hacker News AI",
-        "score": 152
-      },
-      {
-        "title": "Crypto farm in Mexican mountains puts spotlight on cartel funding",
-        "url": "https://www.reuters.com/world/americas/hidden-crypto-farm-mexican-mountains-puts-spotlight-cartel-funding-2026-09-12/",
-        "source": "Hacker News AI",
-        "score": 11
-      },
-      {
-        "title": "Resistance Training Prescription for Muscle Function, Hypertrophy in Health",
-        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12965823/",
-        "source": "Hacker News AI",
-        "score": 29
-      },
-      {
-        "title": "Claude is only available to people over 18 years",
-        "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
-        "source": "Hacker News AI",
-        "score": 654
+        "score": 163
       },
       {
         "title": "Zep AI (YC W24) Is Hiring a Head of Forward Deployed Engineering",
@@ -170,19 +158,36 @@
         "score": 1
       },
       {
-        "title": "Detailed report on the use of solar geoengineering",
-        "url": "https://www.technologyreview.com/2026/09/10/1143804/this-road-map-could-help-us-decide-whether-to-deploy-solar-geoengineering/",
+        "title": "Claude is only available to people over 18 years",
+        "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
         "source": "Hacker News AI",
-        "score": 15
+        "score": 660
       },
       {
-        "title": "CIA Releases President's Daily Briefs in Commemoration of 9/11",
-        "url": "https://www.cia.gov/stories/story/cia-releases-presidents-daily-briefs-in-commemoration-of-the-25th-anniversary-of-9-11/",
+        "title": "Resistance Training Prescription for Muscle Function, Hypertrophy in Health",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12965823/",
         "source": "Hacker News AI",
-        "score": 142
+        "score": 47
+      },
+      {
+        "title": "Crypto farm in Mexican mountains puts spotlight on cartel funding",
+        "url": "https://www.reuters.com/world/americas/hidden-crypto-farm-mexican-mountains-puts-spotlight-cartel-funding-2026-09-12/",
+        "source": "Hacker News AI",
+        "score": 30
+      },
+      {
+        "title": "LLMs are real, AI is fake",
+        "url": "https://pluralistic.net/2026/09/12/god-in-the-box/",
+        "source": "Hacker News AI",
+        "score": 55
       }
     ],
     "news": [
+      {
+        "title": "Anthropic boss Dario Amodei calls for AI development to slow down",
+        "url": "https://www.bbc.co.uk/news/articles/c14dpgm0rg4o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Saudi Arabia shuts key oil pipeline after drone attack launched from Iraq",
         "url": "https://www.bbc.co.uk/news/articles/c62m933465eo?at_medium=RSS&at_campaign=rss",
@@ -194,18 +199,13 @@
         "source": "BBC World"
       },
       {
+        "title": "French officials investigate if malicious act caused train derailment",
+        "url": "https://www.bbc.co.uk/news/articles/c33kp533nn6o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Ukraine faces 'toughest winter' since Russia's full-scale invasion, UN official tells BBC",
         "url": "https://www.bbc.co.uk/news/articles/cwyz59yyqk4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Tragic death of woman who testified against father in notorious mafia murder of mother",
-        "url": "https://www.bbc.co.uk/news/articles/c39mr81j2j1o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Death toll from Philippines ferry fire climbs to 35, with dozens still missing",
-        "url": "https://www.bbc.co.uk/news/articles/cwyz755yeg9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -214,12 +214,17 @@
         "source": "BBC World"
       },
       {
-        "title": "Arrest made over the death of black woman found hanged from tree in Mississippi",
-        "url": "https://www.bbc.co.uk/news/articles/cqjkejq5750o?at_medium=RSS&at_campaign=rss",
+        "title": "Record heatwaves in France set to make champagne stronger",
+        "url": "https://www.bbc.co.uk/news/articles/cvgydvrlep1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " iPhone 18 Pro preorders are open – here's how to get it for free ",
+        "url": "https://www.creativebloq.com/tech/phones-tablets/iphone-18-pro-preorders-are-open-heres-how-to-get-it-for-free",
+        "source": "Creative Bloq"
+      },
       {
         "title": " How I created a sense of scale, weight and halted motion in this epic serpent scene using Blender ",
         "url": "https://www.creativebloq.com/art/digital-art/how-to-create-scale-with-framing-in-an-epic-serpent-scene-using-blender",
@@ -249,15 +254,66 @@
         "title": " iPhone Duo is coming, but these rival tried-and-tested foldable phones have up to $500 off ",
         "url": "https://www.creativebloq.com/tech/phones-tablets/iphone-duo-is-coming-but-rival-tried-and-tested-foldable-phones-have-up-to-usd500-off",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Ad platform sparks brand romance with 100 love letter billboards ",
-        "url": "https://www.creativebloq.com/design/advertising/ad-platform-sparks-brand-romance-with-100-love-letter-billboards",
-        "source": "Creative Bloq"
       }
     ],
-    "science": [],
+    "science": [
+      {
+        "title": "Who really needs a heart calcium scan?",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260911214254.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Tiny sound waves could help solve a major quantum computing problem",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260911214245.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists find Ozempic may slow aging itself",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260911214238.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Researchers find a Wordle strategy that wins 99% of the time",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260911204910.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Wasps are disappearing this summer, and scientists are worried",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260911003901.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Tiny nanolaser could cut computer energy use in half",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260911003858.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists find a way to break pancreatic cancer’s protective shield",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260911003856.htm",
+        "source": "Science Daily"
+      }
+    ],
     "gaming": [
+      {
+        "title": "Why Na Hong-jin Ditched Slow-Burn Horror for a Breakneck Monster Movie",
+        "url": "https://www.polygon.com/hope-director-interview-na-hong-jin/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The ‘World’s First Soulslike FPS’ Is a Brutally Fun Take On the Apocalypse",
+        "url": "https://www.polygon.com/guns-of-eschaton-preview-gamescom-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Anne Hathaway's Next Movie Might Just Be the Sexiest Thriller of 2026",
+        "url": "https://www.polygon.com/verity-director-interview-preview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Ace Combat 8’s Developers Are on a Mission To Create the Perfect Clouds",
+        "url": "https://www.polygon.com/ace-combat-8-wings-of-theve-cloud-interview/",
+        "source": "Polygon"
+      },
       {
         "title": "Mario Fans Have A New Platforming Hero To Watch This Fall",
         "url": "https://www.polygon.com/croak-video-game-2026-preview/",
@@ -271,26 +327,6 @@
       {
         "title": "Wallace & Gromit's Overlooked Spinoff Is Officially Switching Genres With Its Next Movie",
         "url": "https://www.polygon.com/shaun-the-sheep-beast-of-mossy-bottom-preview-image/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Paramount's Near-Perfect 3-Part Sci-Fi Series Officially Finds a New Streaming Home",
-        "url": "https://www.polygon.com/star-trek-reboot-trilogy-franchise-future/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Netflix’s 'Kpop Demon Hunters' Replacement Reimagines a Classic Disney Princess",
-        "url": "https://www.polygon.com/steps-netflix-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 NES Games That Are Still Worth Playing From Start to Finish",
-        "url": "https://www.polygon.com/best-nintendo-nes-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Stephen King's Next Book is the Long-Awaited Conclusion To A 42-Year-Old Trilogy",
-        "url": "https://www.polygon.com/stephen-king-talisman-3-trilogy/",
         "source": "Polygon"
       }
     ],
