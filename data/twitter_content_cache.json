@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-12T08:26:41.609048",
-    "total_items": 52
+    "last_updated": "2026-09-12T12:40:56.255091",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
+        "title": "Fuck it, make it anyway",
+        "url": "https://www.joelotter.com/posts/2026/09/make-it-anyway/",
+        "source": "Hacker News",
+        "score": 71
+      },
+      {
+        "title": "IKEA made a mod for Skyrim [video]",
+        "url": "https://www.youtube.com/watch?v=iZODN0QUgjI",
+        "source": "Hacker News",
+        "score": 274
+      },
+      {
         "title": "Retrospectively Reverse-Engineering Apple's Neural Engine",
         "url": "https://eiln.github.io/posts/ane.html",
         "source": "Hacker News",
-        "score": 21
+        "score": 125
+      },
+      {
+        "title": "The Worst Spam Emails: Inside iLands' AI Agent Hustle",
+        "url": "https://tedium.co/2026/09/11/ilands-agents-email-spam-kaixin-tang/",
+        "source": "Hacker News",
+        "score": 25
       },
       {
         "title": "A misalignment of AI in mathematics",
         "url": "https://mathandai.org/",
         "source": "Hacker News",
-        "score": 867
-      },
-      {
-        "title": "google.com/goto: Google's anti-scraping update",
-        "url": "https://www.autom.dev/blog/google-search-goto-links",
-        "source": "Hacker News",
-        "score": 379
-      },
-      {
-        "title": "Usenet rewind archive search engine",
-        "url": "https://www.usenet-rewind.com/",
-        "source": "Hacker News",
-        "score": 51
+        "score": 1013
       },
       {
         "title": "I spent $220 on Google app ads and 60% of the installs were robots",
         "url": "https://dayzlegame.com/blog/google-ads-bot-farm/",
         "source": "Hacker News",
-        "score": 493
+        "score": 590
       },
       {
-        "title": "Navier-Stokes Announcement",
-        "url": "https://www.claymath.org/news/navier-stokes-announcement/",
+        "title": "Finding Slow Code with Wrapture",
+        "url": "https://grahamdumpleton.me/posts/2026/09/finding-slow-code-with-wrapture/",
         "source": "Hacker News",
-        "score": 128
+        "score": 6
       },
       {
         "title": "A Design Space Exploration of Async/Await",
         "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
         "source": "Hacker News",
-        "score": 267
+        "score": 324
       },
       {
         "title": "Great Lakes sturgeon may be 400 years old:Scientists rethinking how to save them",
         "url": "https://www.cbc.ca/news/canada/ontario-great-lakes-sturgeon-lifespan-study-9.7329250",
         "source": "Hacker News",
-        "score": 56
+        "score": 84
       },
       {
         "title": "Inverse Kinematics and Foot Locking",
         "url": "https://theorangeduck.com/page/inverse-kinematics-foot-locking",
         "source": "Hacker News",
-        "score": 20
+        "score": 70
+      },
+      {
+        "title": "Usenet rewind archive search engine",
+        "url": "https://www.usenet-rewind.com/",
+        "source": "Hacker News",
+        "score": 81
+      },
+      {
+        "title": "I Fixed a Tractor Using John Deere's Self-Repair Service. Farmers Aren't Sold",
+        "url": "https://www.wired.com/story/i-fixed-a-tractor-john-deere-self-repair-service/",
+        "source": "Hacker News",
+        "score": 5
+      },
+      {
+        "title": "Forgotten Woodlands",
+        "url": "https://storymaps.arcgis.com/stories/9b790daf22ba4e87836f467abb1c7e49",
+        "source": "Hacker News",
+        "score": 7
+      },
+      {
+        "title": "google.com/goto: Google's anti-scraping update",
+        "url": "https://www.autom.dev/blog/google-search-goto-links",
+        "source": "Hacker News",
+        "score": 480
       },
       {
         "title": "Show HN: Bodily Oddities",
         "url": "https://vester.si/bodily-oddities/",
         "source": "Hacker News",
-        "score": 225
-      },
-      {
-        "title": "Designing for Dual Screen and Foldable Devices with CSS (2023)",
-        "url": "https://blog.stephaniestimac.com/posts/2023/05/design-foldable-devices/",
-        "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Logo Programming",
-        "url": "https://el.media.mit.edu/logo-foundation/what_is_logo/logo_programming.html",
-        "source": "Hacker News",
-        "score": 272
-      },
-      {
-        "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
-        "url": "https://www.rubyhack.ai/",
-        "source": "Hacker News",
-        "score": 658
-      },
-      {
-        "title": "WeWorm: Zero-Click WeChat Worm",
-        "url": "https://calif.io/research/weworm",
-        "source": "Hacker News",
-        "score": 14
-      },
-      {
-        "title": "Project Blinkenlights",
-        "url": "https://blinkenlights.de/en/",
-        "source": "Hacker News",
-        "score": 86
+        "score": 276
       }
     ],
     "ai": [
@@ -101,37 +101,67 @@
         "title": "Retrospectively Reverse-Engineering Apple's Neural Engine",
         "url": "https://eiln.github.io/posts/ane.html",
         "source": "Hacker News AI",
-        "score": 21
+        "score": 125
+      },
+      {
+        "title": "The Worst Spam Emails: Inside iLands' AI Agent Hustle",
+        "url": "https://tedium.co/2026/09/11/ilands-agents-email-spam-kaixin-tang/",
+        "source": "Hacker News AI",
+        "score": 25
       },
       {
         "title": "A misalignment of AI in mathematics",
         "url": "https://mathandai.org/",
         "source": "Hacker News AI",
-        "score": 867
+        "score": 1013
       },
       {
         "title": "A Design Space Exploration of Async/Await",
         "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
         "source": "Hacker News AI",
-        "score": 267
+        "score": 324
+      },
+      {
+        "title": "I Fixed a Tractor Using John Deere's Self-Repair Service. Farmers Aren't Sold",
+        "url": "https://www.wired.com/story/i-fixed-a-tractor-john-deere-self-repair-service/",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
+        "title": "Altman tells staff OpenAI is open to slowing AI development",
+        "url": "https://www.reuters.com/business/altman-tells-staff-openai-is-open-slowing-ai-development-bloomberg-news-reports-2026-09-11/",
+        "source": "Hacker News AI",
+        "score": 17
       },
       {
         "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
         "url": "https://www.rubyhack.ai/",
         "source": "Hacker News AI",
-        "score": 658
+        "score": 776
       },
       {
         "title": "Litelm: LiteLLM Without the Bloat",
         "url": "https://github.com/kennethwolters/litelm",
         "source": "Hacker News AI",
-        "score": 130
+        "score": 152
+      },
+      {
+        "title": "Crypto farm in Mexican mountains puts spotlight on cartel funding",
+        "url": "https://www.reuters.com/world/americas/hidden-crypto-farm-mexican-mountains-puts-spotlight-cartel-funding-2026-09-12/",
+        "source": "Hacker News AI",
+        "score": 11
+      },
+      {
+        "title": "Resistance Training Prescription for Muscle Function, Hypertrophy in Health",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12965823/",
+        "source": "Hacker News AI",
+        "score": 29
       },
       {
         "title": "Claude is only available to people over 18 years",
         "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
         "source": "Hacker News AI",
-        "score": 635
+        "score": 654
       },
       {
         "title": "Zep AI (YC W24) Is Hiring a Head of Forward Deployed Engineering",
@@ -140,16 +170,16 @@
         "score": 1
       },
       {
+        "title": "Detailed report on the use of solar geoengineering",
+        "url": "https://www.technologyreview.com/2026/09/10/1143804/this-road-map-could-help-us-decide-whether-to-deploy-solar-geoengineering/",
+        "source": "Hacker News AI",
+        "score": 15
+      },
+      {
         "title": "CIA Releases President's Daily Briefs in Commemoration of 9/11",
         "url": "https://www.cia.gov/stories/story/cia-releases-presidents-daily-briefs-in-commemoration-of-the-25th-anniversary-of-9-11/",
         "source": "Hacker News AI",
-        "score": 136
-      },
-      {
-        "title": "AI researchers debate how close we are to recursive self-improvement",
-        "url": "https://www.dwarkesh.com/p/john-beren-charlie",
-        "source": "Hacker News AI",
-        "score": 100
+        "score": 142
       }
     ],
     "news": [
@@ -159,8 +189,13 @@
         "source": "BBC World"
       },
       {
-        "title": "'Never, ever forget' - America marks 25th anniversary of 9/11 attacks",
-        "url": "https://www.bbc.co.uk/news/articles/clyjqvjzlwno?at_medium=RSS&at_campaign=rss",
+        "title": "A united Ireland would be 'fantastic' says Trump during Irish visit ",
+        "url": "https://www.bbc.co.uk/news/articles/cy0zvx15rywo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ukraine faces 'toughest winter' since Russia's full-scale invasion, UN official tells BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cwyz59yyqk4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -174,22 +209,32 @@
         "source": "BBC World"
       },
       {
-        "title": "Passenger train derails in France leaving at least 44 injured",
-        "url": "https://www.bbc.co.uk/news/articles/c8d37dm8d8mo?at_medium=RSS&at_campaign=rss",
+        "title": "'It's like a dog set loose on us' - fear over Kenya's crackdown on foreign traders",
+        "url": "https://www.bbc.co.uk/news/articles/c4g5kxw4wd7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Arrest made over the death of black woman found hanged from tree in Mississippi",
         "url": "https://www.bbc.co.uk/news/articles/cqjkejq5750o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Grammy-winning US rapper Lil Durk acquitted in murder-for-hire trial",
-        "url": "https://www.bbc.co.uk/news/articles/c1kx0jje18wo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " How I created a sense of scale, weight and halted motion in this epic serpent scene using Blender ",
+        "url": "https://www.creativebloq.com/art/digital-art/how-to-create-scale-with-framing-in-an-epic-serpent-scene-using-blender",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " I hate to say it, but the backlash to this beer company's rebrand is justified ",
+        "url": "https://www.creativebloq.com/design/branding/i-hate-to-say-it-but-the-backlash-to-this-beer-companys-rebrand-is-justified",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Elon Musk's daughter's Tesla-trolling fashion advert is as cinematic as Star Wars ",
+        "url": "https://www.creativebloq.com/ai/elon-musks-daughters-tesla-trolling-fashion-advert-is-as-cinematic-as-star-wars",
+        "source": "Creative Bloq"
+      },
       {
         "title": " This logo just turned 40, but it could have been made yesterday ",
         "url": "https://www.creativebloq.com/design/logos-icons/this-logo-just-turned-40-but-it-could-have-been-made-yesterday",
@@ -209,25 +254,30 @@
         "title": " Ad platform sparks brand romance with 100 love letter billboards ",
         "url": "https://www.creativebloq.com/design/advertising/ad-platform-sparks-brand-romance-with-100-love-letter-billboards",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Fans think Beyoncé’s $1000 empty wooden box is a sign ",
-        "url": "https://www.creativebloq.com/entertainment/fans-think-beyonces-usd1000-empty-wooden-box-is-a-sign",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These are the only budget office chairs we can recommend after six years of testing, and three of them have big discounts today ",
-        "url": "https://www.creativebloq.com/tech/phones-tablets/these-are-the-only-budget-office-chairs-we-can-recommend-after-six-years-of-testing",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Discover Fall cosy craft DIY kits starting at $17 ",
-        "url": "https://www.creativebloq.com/art/art-supplies/discover-fall-cosy-craft-diy-kits-starting-at-usd17",
-        "source": "Creative Bloq"
       }
     ],
     "science": [],
     "gaming": [
+      {
+        "title": "Mario Fans Have A New Platforming Hero To Watch This Fall",
+        "url": "https://www.polygon.com/croak-video-game-2026-preview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Legend of Zelda: Ocarina of Time is Actually A Horror Game",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-horror-game/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Wallace & Gromit's Overlooked Spinoff Is Officially Switching Genres With Its Next Movie",
+        "url": "https://www.polygon.com/shaun-the-sheep-beast-of-mossy-bottom-preview-image/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Paramount's Near-Perfect 3-Part Sci-Fi Series Officially Finds a New Streaming Home",
+        "url": "https://www.polygon.com/star-trek-reboot-trilogy-franchise-future/",
+        "source": "Polygon"
+      },
       {
         "title": "Netflix’s 'Kpop Demon Hunters' Replacement Reimagines a Classic Disney Princess",
         "url": "https://www.polygon.com/steps-netflix-interview/",
@@ -241,26 +291,6 @@
       {
         "title": "Stephen King's Next Book is the Long-Awaited Conclusion To A 42-Year-Old Trilogy",
         "url": "https://www.polygon.com/stephen-king-talisman-3-trilogy/",
-        "source": "Polygon"
-      },
-      {
-        "title": "34 Years Later, the Best 'Calvin and Hobbes’ Quote About the Meaning of Life Is Still Second to None",
-        "url": "https://www.polygon.com/calvin-and-hobbes-best-quote-meaning-of-life/",
-        "source": "Polygon"
-      },
-      {
-        "title": "62 Years Later, Clint Eastwood's Genre-Redefining Western Is Officially Free on Streaming",
-        "url": "https://www.polygon.com/a-fistful-of-dollars-clint-eastwood-free-to-stream/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fallout 5 and Classic Fallout Remasters Coming from Bethesda and Obsidian",
-        "url": "https://www.polygon.com/new-fallout-games-remasters-bethesda-softworks/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Pokémon Go Gible Community Day Classic event guide",
-        "url": "https://www.polygon.com/pokemon-go-gible-community-day-classic-shiny-garchomp-moveset/",
         "source": "Polygon"
       }
     ],
