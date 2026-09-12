@@ -1,131 +1,137 @@
 {
   "metadata": {
-    "last_updated": "2026-09-12T03:34:38.185347",
-    "total_items": 54
+    "last_updated": "2026-09-12T08:26:41.609048",
+    "total_items": 52
   },
   "content": {
     "tech": [
       {
-        "title": "Pandas Should Go Extinct",
-        "url": "https://eddie.codes/posts/pandas-should-go-extinct/",
+        "title": "Retrospectively Reverse-Engineering Apple's Neural Engine",
+        "url": "https://eiln.github.io/posts/ane.html",
         "source": "Hacker News",
-        "score": 33
+        "score": 21
       },
       {
         "title": "A misalignment of AI in mathematics",
         "url": "https://mathandai.org/",
         "source": "Hacker News",
-        "score": 725
+        "score": 867
+      },
+      {
+        "title": "google.com/goto: Google's anti-scraping update",
+        "url": "https://www.autom.dev/blog/google-search-goto-links",
+        "source": "Hacker News",
+        "score": 379
+      },
+      {
+        "title": "Usenet rewind archive search engine",
+        "url": "https://www.usenet-rewind.com/",
+        "source": "Hacker News",
+        "score": 51
       },
       {
         "title": "I spent $220 on Google app ads and 60% of the installs were robots",
         "url": "https://dayzlegame.com/blog/google-ads-bot-farm/",
         "source": "Hacker News",
-        "score": 363
+        "score": 493
       },
       {
-        "title": "Google stole open source code without crediting the authors (Artemis/Minitap)",
-        "url": "https://www.minitap.ai/blog/i-expected-better-from-google",
+        "title": "Navier-Stokes Announcement",
+        "url": "https://www.claymath.org/news/navier-stokes-announcement/",
         "source": "Hacker News",
-        "score": 18
+        "score": 128
       },
       {
         "title": "A Design Space Exploration of Async/Await",
         "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
         "source": "Hacker News",
-        "score": 182
-      },
-      {
-        "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
-        "url": "https://www.rubyhack.ai/",
-        "source": "Hacker News",
-        "score": 434
-      },
-      {
-        "title": "GrapheneOS' rewritten Messages app is released",
-        "url": "https://github.com/GrapheneOS/Messaging/releases/tag/13",
-        "source": "Hacker News",
-        "score": 218
-      },
-      {
-        "title": "Project Blinkenlights",
-        "url": "https://blinkenlights.de/en/",
-        "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "Litelm: LiteLLM Without the Bloat",
-        "url": "https://github.com/kennethwolters/litelm",
-        "source": "Hacker News",
-        "score": 106
-      },
-      {
-        "title": "AI researchers debate how close we are to recursive self-improvement",
-        "url": "https://www.dwarkesh.com/p/john-beren-charlie",
-        "source": "Hacker News",
-        "score": 64
-      },
-      {
-        "title": "Show HN: ResolveHQ – A Helpdesk Built on Cloudflare Workers, D1, R2 and Queues",
-        "url": "https://github.com/mirza-rizvi/ResolveHQ",
-        "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "Mind-altering drugs played key role in rise of Andean civilization",
-        "url": "https://www.science.org/content/article/mind-altering-drugs-played-key-role-rise-andean-civilization",
-        "source": "Hacker News",
-        "score": 114
-      },
-      {
-        "title": "Hepburn Romanization: How to Read Japanese in the Latin Alphabet",
-        "url": "https://www.fink-translate.com/blog/hepburn-romanization.html",
-        "source": "Hacker News",
-        "score": 28
+        "score": 267
       },
       {
         "title": "Great Lakes sturgeon may be 400 years old:Scientists rethinking how to save them",
         "url": "https://www.cbc.ca/news/canada/ontario-great-lakes-sturgeon-lifespan-study-9.7329250",
         "source": "Hacker News",
-        "score": 7
+        "score": 56
       },
       {
-        "title": "Λ Snap – An inviting programming language for kids and adults for CS study",
-        "url": "https://snap.berkeley.edu/",
+        "title": "Inverse Kinematics and Foot Locking",
+        "url": "https://theorangeduck.com/page/inverse-kinematics-foot-locking",
         "source": "Hacker News",
-        "score": 121
+        "score": 20
+      },
+      {
+        "title": "Show HN: Bodily Oddities",
+        "url": "https://vester.si/bodily-oddities/",
+        "source": "Hacker News",
+        "score": 225
+      },
+      {
+        "title": "Designing for Dual Screen and Foldable Devices with CSS (2023)",
+        "url": "https://blog.stephaniestimac.com/posts/2023/05/design-foldable-devices/",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Logo Programming",
+        "url": "https://el.media.mit.edu/logo-foundation/what_is_logo/logo_programming.html",
+        "source": "Hacker News",
+        "score": 272
+      },
+      {
+        "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
+        "url": "https://www.rubyhack.ai/",
+        "source": "Hacker News",
+        "score": 658
+      },
+      {
+        "title": "WeWorm: Zero-Click WeChat Worm",
+        "url": "https://calif.io/research/weworm",
+        "source": "Hacker News",
+        "score": 14
+      },
+      {
+        "title": "Project Blinkenlights",
+        "url": "https://blinkenlights.de/en/",
+        "source": "Hacker News",
+        "score": 86
       }
     ],
     "ai": [
       {
+        "title": "Retrospectively Reverse-Engineering Apple's Neural Engine",
+        "url": "https://eiln.github.io/posts/ane.html",
+        "source": "Hacker News AI",
+        "score": 21
+      },
+      {
         "title": "A misalignment of AI in mathematics",
         "url": "https://mathandai.org/",
         "source": "Hacker News AI",
-        "score": 725
+        "score": 867
       },
       {
         "title": "A Design Space Exploration of Async/Await",
         "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
         "source": "Hacker News AI",
-        "score": 182
+        "score": 267
       },
       {
         "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
         "url": "https://www.rubyhack.ai/",
         "source": "Hacker News AI",
-        "score": 434
+        "score": 658
       },
       {
         "title": "Litelm: LiteLLM Without the Bloat",
         "url": "https://github.com/kennethwolters/litelm",
         "source": "Hacker News AI",
-        "score": 106
+        "score": 130
       },
       {
-        "title": "AI researchers debate how close we are to recursive self-improvement",
-        "url": "https://www.dwarkesh.com/p/john-beren-charlie",
+        "title": "Claude is only available to people over 18 years",
+        "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
         "source": "Hacker News AI",
-        "score": 64
+        "score": 635
       },
       {
         "title": "Zep AI (YC W24) Is Hiring a Head of Forward Deployed Engineering",
@@ -134,40 +140,27 @@
         "score": 1
       },
       {
-        "title": "Claude is only available to people over 18 years",
-        "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
-        "source": "Hacker News AI",
-        "score": 592
-      },
-      {
         "title": "CIA Releases President's Daily Briefs in Commemoration of 9/11",
         "url": "https://www.cia.gov/stories/story/cia-releases-presidents-daily-briefs-in-commemoration-of-the-25th-anniversary-of-9-11/",
         "source": "Hacker News AI",
-        "score": 121
+        "score": 136
       },
       {
-        "title": "Bernie's AI bill proposes to sentence AI developers to 20 years in prison",
-        "url": "https://twitter.com/venturetwins/status/2098456905526211026",
+        "title": "AI researchers debate how close we are to recursive self-improvement",
+        "url": "https://www.dwarkesh.com/p/john-beren-charlie",
         "source": "Hacker News AI",
-        "score": 28
-      },
-      {
-        "title": "Houthis used Anthropic to develop guided weapons",
-        "url": "https://www.washingtonpost.com/technology/2026/09/11/rebels-used-anthropics-ai-bot-develop-guided-weapons-report-says/",
-        "source": "Hacker News AI",
-        "score": 28
-      },
-      {
-        "title": "Show HN: Hacker News, without AI",
-        "url": "https://hcker.news/?ai=exclude",
-        "source": "Hacker News AI",
-        "score": 177
+        "score": 100
       }
     ],
     "news": [
       {
-        "title": "Houthis claim major advance in Yemen and tighten grip on Red Sea shipping lane",
-        "url": "https://www.bbc.co.uk/news/articles/c23x72yx2rvo?at_medium=RSS&at_campaign=rss",
+        "title": "Saudi Arabia shuts key oil pipeline after drone attack launched from Iraq",
+        "url": "https://www.bbc.co.uk/news/articles/c62m933465eo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "'Never, ever forget' - America marks 25th anniversary of 9/11 attacks",
+        "url": "https://www.bbc.co.uk/news/articles/clyjqvjzlwno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -191,17 +184,22 @@
         "source": "BBC World"
       },
       {
-        "title": "Israel says it has destroyed major underground Hezbollah base",
-        "url": "https://www.bbc.co.uk/news/articles/c4gl92lw8vpo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Norway's Princess Astrid dies two days after attending brother King Harald's funeral",
-        "url": "https://www.bbc.co.uk/news/articles/cgjq1qy98vjo?at_medium=RSS&at_campaign=rss",
+        "title": "Grammy-winning US rapper Lil Durk acquitted in murder-for-hire trial",
+        "url": "https://www.bbc.co.uk/news/articles/c1kx0jje18wo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " This logo just turned 40, but it could have been made yesterday ",
+        "url": "https://www.creativebloq.com/design/logos-icons/this-logo-just-turned-40-but-it-could-have-been-made-yesterday",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Geekom IT13 Max review: Max by name, but restricted by nature ",
+        "url": "https://www.creativebloq.com/tech/laptops/geekom-it13-max-review-max-by-name-but-restricted-by-nature",
+        "source": "Creative Bloq"
+      },
       {
         "title": " iPhone Duo is coming, but these rival tried-and-tested foldable phones have up to $500 off ",
         "url": "https://www.creativebloq.com/tech/phones-tablets/iphone-duo-is-coming-but-rival-tried-and-tested-foldable-phones-have-up-to-usd500-off",
@@ -226,20 +224,35 @@
         "title": " Discover Fall cosy craft DIY kits starting at $17 ",
         "url": "https://www.creativebloq.com/art/art-supplies/discover-fall-cosy-craft-diy-kits-starting-at-usd17",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Quote of the Day by Mary Cassatt: \"I hated conventional art – I began to live.\" ",
-        "url": "https://www.creativebloq.com/art/quote-of-the-day-by-mary-cassatt-i-hated-conventional-art-i-began-to-live",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Nightmare Operator is like Resident Evil 4 and Shin Megami Tensei had a PS1 baby, then taught it fighting-game mechanics ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/nightmare-operator-is-like-resident-evil-4-and-shin-megami-tensei-had-a-ps1-baby-then-taught-it-fighting-game-mechanics",
-        "source": "Creative Bloq"
       }
     ],
     "science": [],
     "gaming": [
+      {
+        "title": "Netflix’s 'Kpop Demon Hunters' Replacement Reimagines a Classic Disney Princess",
+        "url": "https://www.polygon.com/steps-netflix-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 NES Games That Are Still Worth Playing From Start to Finish",
+        "url": "https://www.polygon.com/best-nintendo-nes-games/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Stephen King's Next Book is the Long-Awaited Conclusion To A 42-Year-Old Trilogy",
+        "url": "https://www.polygon.com/stephen-king-talisman-3-trilogy/",
+        "source": "Polygon"
+      },
+      {
+        "title": "34 Years Later, the Best 'Calvin and Hobbes’ Quote About the Meaning of Life Is Still Second to None",
+        "url": "https://www.polygon.com/calvin-and-hobbes-best-quote-meaning-of-life/",
+        "source": "Polygon"
+      },
+      {
+        "title": "62 Years Later, Clint Eastwood's Genre-Redefining Western Is Officially Free on Streaming",
+        "url": "https://www.polygon.com/a-fistful-of-dollars-clint-eastwood-free-to-stream/",
+        "source": "Polygon"
+      },
       {
         "title": "Fallout 5 and Classic Fallout Remasters Coming from Bethesda and Obsidian",
         "url": "https://www.polygon.com/new-fallout-games-remasters-bethesda-softworks/",
@@ -248,31 +261,6 @@
       {
         "title": "Pokémon Go Gible Community Day Classic event guide",
         "url": "https://www.polygon.com/pokemon-go-gible-community-day-classic-shiny-garchomp-moveset/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Supergirl Lands Official Streaming Date on HBO Max",
-        "url": "https://www.polygon.com/supergirl-hbo-max-streaming-date-announced/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The 17 Best Games of Gamescom 2026",
-        "url": "https://www.polygon.com/best-games-gamescom-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Silksong's New Replacement Is About to Become the Best Action Game of the Year",
-        "url": "https://www.polygon.com/chronoscript-endless-end-demo-preview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "One of Nintendo's Greatest '80s Games Is Still the Perfect Weekend Obsession",
-        "url": "https://www.polygon.com/best-retro-80s-games-nintendo/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 New Movies to Watch This Weekend on Netflix, HBO Max, and Hulu (September 11-13)",
-        "url": "https://www.polygon.com/new-movies-streaming-this-weekend-netflix-september-11-13/",
         "source": "Polygon"
       }
     ],
