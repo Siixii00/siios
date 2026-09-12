@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-11T23:02:25.682220",
-    "total_items": 61
+    "last_updated": "2026-09-12T03:34:38.185347",
+    "total_items": 54
   },
   "content": {
     "tech": [
       {
+        "title": "Pandas Should Go Extinct",
+        "url": "https://eddie.codes/posts/pandas-should-go-extinct/",
+        "source": "Hacker News",
+        "score": 33
+      },
+      {
         "title": "A misalignment of AI in mathematics",
         "url": "https://mathandai.org/",
         "source": "Hacker News",
-        "score": 500
+        "score": 725
       },
       {
         "title": "I spent $220 on Google app ads and 60% of the installs were robots",
         "url": "https://dayzlegame.com/blog/google-ads-bot-farm/",
         "source": "Hacker News",
-        "score": 187
+        "score": 363
       },
       {
-        "title": "GrapheneOS' rewritten Messages app is released",
-        "url": "https://github.com/GrapheneOS/Messaging/releases/tag/13",
+        "title": "Google stole open source code without crediting the authors (Artemis/Minitap)",
+        "url": "https://www.minitap.ai/blog/i-expected-better-from-google",
         "source": "Hacker News",
-        "score": 157
+        "score": 18
       },
       {
         "title": "A Design Space Exploration of Async/Await",
         "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
         "source": "Hacker News",
-        "score": 81
+        "score": 182
+      },
+      {
+        "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
+        "url": "https://www.rubyhack.ai/",
+        "source": "Hacker News",
+        "score": 434
+      },
+      {
+        "title": "GrapheneOS' rewritten Messages app is released",
+        "url": "https://github.com/GrapheneOS/Messaging/releases/tag/13",
+        "source": "Hacker News",
+        "score": 218
       },
       {
         "title": "Project Blinkenlights",
         "url": "https://blinkenlights.de/en/",
         "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "Show HN: ResolveHQ – A Helpdesk Built on Cloudflare Workers, D1, R2 and Queues",
-        "url": "https://github.com/mirza-rizvi/ResolveHQ",
-        "source": "Hacker News",
-        "score": 11
+        "score": 60
       },
       {
         "title": "Litelm: LiteLLM Without the Bloat",
         "url": "https://github.com/kennethwolters/litelm",
         "source": "Hacker News",
-        "score": 79
+        "score": 106
       },
       {
-        "title": "Λ Snap – An inviting programming language for kids and adults for CS study",
-        "url": "https://snap.berkeley.edu/",
+        "title": "AI researchers debate how close we are to recursive self-improvement",
+        "url": "https://www.dwarkesh.com/p/john-beren-charlie",
         "source": "Hacker News",
-        "score": 93
+        "score": 64
       },
       {
-        "title": "AlphaGenome maps 9B DNA variants",
-        "url": "https://spectrum.ieee.org/alphagenome-atlas",
+        "title": "Show HN: ResolveHQ – A Helpdesk Built on Cloudflare Workers, D1, R2 and Queues",
+        "url": "https://github.com/mirza-rizvi/ResolveHQ",
         "source": "Hacker News",
-        "score": 56
-      },
-      {
-        "title": "The EPA is planning to scrap public review rules for data center pollution",
-        "url": "https://capitalbnews.org/data-centers-permit-rules-epa/",
-        "source": "Hacker News",
-        "score": 279
-      },
-      {
-        "title": "Rune is now open source",
-        "url": "https://rune.build/blog/rune-is-now-open-source",
-        "source": "Hacker News",
-        "score": 118
-      },
-      {
-        "title": "I've operated petabyte-scale ClickHouse clusters for 5 years",
-        "url": "https://www.tinybird.co/blog/what-i-learned-operating-clickhouse",
-        "source": "Hacker News",
-        "score": 163
-      },
-      {
-        "title": "So you want to use OpenRouter?",
-        "url": "https://mmoustafa.com/blog/so-you-want-to-use-openrouter/",
-        "source": "Hacker News",
-        "score": 677
+        "score": 37
       },
       {
         "title": "Mind-altering drugs played key role in rise of Andean civilization",
         "url": "https://www.science.org/content/article/mind-altering-drugs-played-key-role-rise-andean-civilization",
         "source": "Hacker News",
-        "score": 80
+        "score": 114
       },
       {
-        "title": "QueryBrew: System-Agnostic SQL-to-SQL Query Optimization [pdf]",
-        "url": "https://www.vldb.org/pvldb/vol19/p4494-schmidt.pdf",
+        "title": "Hepburn Romanization: How to Read Japanese in the Latin Alphabet",
+        "url": "https://www.fink-translate.com/blog/hepburn-romanization.html",
         "source": "Hacker News",
-        "score": 4
+        "score": 28
+      },
+      {
+        "title": "Great Lakes sturgeon may be 400 years old:Scientists rethinking how to save them",
+        "url": "https://www.cbc.ca/news/canada/ontario-great-lakes-sturgeon-lifespan-study-9.7329250",
+        "source": "Hacker News",
+        "score": 7
+      },
+      {
+        "title": "Λ Snap – An inviting programming language for kids and adults for CS study",
+        "url": "https://snap.berkeley.edu/",
+        "source": "Hacker News",
+        "score": 121
       }
     ],
     "ai": [
@@ -101,19 +101,31 @@
         "title": "A misalignment of AI in mathematics",
         "url": "https://mathandai.org/",
         "source": "Hacker News AI",
-        "score": 500
+        "score": 725
       },
       {
         "title": "A Design Space Exploration of Async/Await",
         "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
         "source": "Hacker News AI",
-        "score": 81
+        "score": 182
+      },
+      {
+        "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
+        "url": "https://www.rubyhack.ai/",
+        "source": "Hacker News AI",
+        "score": 434
       },
       {
         "title": "Litelm: LiteLLM Without the Bloat",
         "url": "https://github.com/kennethwolters/litelm",
         "source": "Hacker News AI",
-        "score": 79
+        "score": 106
+      },
+      {
+        "title": "AI researchers debate how close we are to recursive self-improvement",
+        "url": "https://www.dwarkesh.com/p/john-beren-charlie",
+        "source": "Hacker News AI",
+        "score": 64
       },
       {
         "title": "Zep AI (YC W24) Is Hiring a Head of Forward Deployed Engineering",
@@ -122,46 +134,34 @@
         "score": 1
       },
       {
-        "title": "CIA Releases President's Daily Briefs in Commemoration of 9/11",
-        "url": "https://www.cia.gov/stories/story/cia-releases-presidents-daily-briefs-in-commemoration-of-the-25th-anniversary-of-9-11/",
-        "source": "Hacker News AI",
-        "score": 79
-      },
-      {
         "title": "Claude is only available to people over 18 years",
         "url": "https://support.claude.com/en/articles/15171100-age-assurance-on-claude",
         "source": "Hacker News AI",
-        "score": 541
+        "score": 592
+      },
+      {
+        "title": "CIA Releases President's Daily Briefs in Commemoration of 9/11",
+        "url": "https://www.cia.gov/stories/story/cia-releases-presidents-daily-briefs-in-commemoration-of-the-25th-anniversary-of-9-11/",
+        "source": "Hacker News AI",
+        "score": 121
+      },
+      {
+        "title": "Bernie's AI bill proposes to sentence AI developers to 20 years in prison",
+        "url": "https://twitter.com/venturetwins/status/2098456905526211026",
+        "source": "Hacker News AI",
+        "score": 28
+      },
+      {
+        "title": "Houthis used Anthropic to develop guided weapons",
+        "url": "https://www.washingtonpost.com/technology/2026/09/11/rebels-used-anthropics-ai-bot-develop-guided-weapons-report-says/",
+        "source": "Hacker News AI",
+        "score": 28
       },
       {
         "title": "Show HN: Hacker News, without AI",
         "url": "https://hcker.news/?ai=exclude",
         "source": "Hacker News AI",
-        "score": 163
-      },
-      {
-        "title": "Hacker News with reduced priority for AI driven content",
-        "url": "https://sprinklz.io/public/pdwt4dve5uai",
-        "source": "Hacker News AI",
-        "score": 104
-      },
-      {
-        "title": "Show HN: Hacker News, Without AI",
-        "url": "https://www.unslop.news/",
-        "source": "Hacker News AI",
-        "score": 166
-      },
-      {
-        "title": "Copying login keychains between Macs fails on Secure Enclave Macs with Tahoe",
-        "url": "https://derflounder.wordpress.com/2026/09/08/manually-copying-login-keychain-files-from-one-mac-to-another-no-longer-works-on-secure-enclave-equipped-macs-running-macos-tahoe/",
-        "source": "Hacker News AI",
-        "score": 68
-      },
-      {
-        "title": "Show HN: Extension to filter LLM written articles",
-        "url": "https://hnslop.nilsherzig.com/",
-        "source": "Hacker News AI",
-        "score": 12
+        "score": 177
       }
     ],
     "news": [
@@ -171,8 +171,23 @@
         "source": "BBC World"
       },
       {
-        "title": "Norway's Princess Astrid dies two days after attending brother King Harald's funeral",
-        "url": "https://www.bbc.co.uk/news/articles/cgjq1qy98vjo?at_medium=RSS&at_campaign=rss",
+        "title": "Tragic death of woman who testified against father in notorious mafia murder of mother",
+        "url": "https://www.bbc.co.uk/news/articles/c39mr81j2j1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Death toll from Philippines ferry fire climbs to 35, with dozens still missing",
+        "url": "https://www.bbc.co.uk/news/articles/cwyz755yeg9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Passenger train derails in France leaving at least 44 injured",
+        "url": "https://www.bbc.co.uk/news/articles/c8d37dm8d8mo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Arrest made over the death of black woman found hanged from tree in Mississippi",
+        "url": "https://www.bbc.co.uk/news/articles/cqjkejq5750o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -181,23 +196,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Princess Diana's 'revenge dress' goes up for auction",
-        "url": "https://www.bbc.co.uk/news/articles/c0lrk7d7j0no?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Buddhist monk arrested in suspected $3m embezzlement scandal",
-        "url": "https://www.bbc.co.uk/news/articles/c5yjkxlngjyo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Anthropic blocks possible attempt to use AI to make biological weapons",
-        "url": "https://www.bbc.co.uk/news/articles/cx2zrrpkx20o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Hong Kong's Tiananmen activists sentenced to up to seven years in prison",
-        "url": "https://www.bbc.co.uk/news/articles/cvgyvk2djk4o?at_medium=RSS&at_campaign=rss",
+        "title": "Norway's Princess Astrid dies two days after attending brother King Harald's funeral",
+        "url": "https://www.bbc.co.uk/news/articles/cgjq1qy98vjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -238,44 +238,23 @@
         "source": "Creative Bloq"
       }
     ],
-    "science": [
-      {
-        "title": "Wasps are disappearing this summer, and scientists are worried",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260911003901.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Tiny nanolaser could cut computer energy use in half",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260911003858.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Too much light at night may quietly reshape your heart",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260911003847.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists just made quantum computer operations 1,000 times faster",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260911003845.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Your next prescription could be treating a side effect from the last one",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260911003843.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Study of 1.9 million people finds a striking link between ADHD and gut problems",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260911003840.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Physicists just found a tiny glitch in time itself",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260910225251.htm",
-        "source": "Science Daily"
-      }
-    ],
+    "science": [],
     "gaming": [
+      {
+        "title": "Fallout 5 and Classic Fallout Remasters Coming from Bethesda and Obsidian",
+        "url": "https://www.polygon.com/new-fallout-games-remasters-bethesda-softworks/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Pokémon Go Gible Community Day Classic event guide",
+        "url": "https://www.polygon.com/pokemon-go-gible-community-day-classic-shiny-garchomp-moveset/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Supergirl Lands Official Streaming Date on HBO Max",
+        "url": "https://www.polygon.com/supergirl-hbo-max-streaming-date-announced/",
+        "source": "Polygon"
+      },
       {
         "title": "The 17 Best Games of Gamescom 2026",
         "url": "https://www.polygon.com/best-games-gamescom-2026/",
@@ -294,21 +273,6 @@
       {
         "title": "10 New Movies to Watch This Weekend on Netflix, HBO Max, and Hulu (September 11-13)",
         "url": "https://www.polygon.com/new-movies-streaming-this-weekend-netflix-september-11-13/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GTA 6 Is About to Take Over Miami IRL",
-        "url": "https://www.polygon.com/gta-6-miami-marketing-campaign-vice-city/",
-        "source": "Polygon"
-      },
-      {
-        "title": "8 New TV Shows to Watch This Weekend on Netflix, HBO Max, and Apple TV (September 11-13)",
-        "url": "https://www.polygon.com/new-tv-shows-streaming-this-weekend-netflix-september-11-13/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Pokémon TCG Gets Special Mewtwo 30th Anniversary Card With Limited Release",
-        "url": "https://www.polygon.com/pokemon-30th-anniversary-cards-release-date-mewtwo-promo-how-to-get/",
         "source": "Polygon"
       }
     ],
