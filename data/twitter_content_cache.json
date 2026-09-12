@@ -1,173 +1,179 @@
 {
   "metadata": {
-    "last_updated": "2026-09-12T18:59:37.877685",
-    "total_items": 64
+    "last_updated": "2026-09-12T21:22:47.541773",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
-        "title": "LG denies TV spying claims, says tracking and snooping concerns 'not true'",
-        "url": "https://www.tomshardware.com/tech-industry/big-tech/lg-strongly-denies-tv-security-claims-says-tracking-and-snooping-concerns-not-true-online-investigation-claims-216-000-000-spy-tvs-record-audio",
-        "source": "Hacker News",
-        "score": 128
-      },
-      {
         "title": "Make your first edit to OpenStreetMap",
         "url": "https://high5apps.github.io/josm-plugin-website-wizard/",
         "source": "Hacker News",
-        "score": 106
+        "score": 190
       },
       {
         "title": "Nvidia is the central bank of AI",
         "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
         "source": "Hacker News",
-        "score": 202
+        "score": 279
+      },
+      {
+        "title": "Stabilizing Rust's Never Type",
+        "url": "https://lwn.net/SubscriberLink/1091015/d9e48318ed242b41/",
+        "source": "Hacker News",
+        "score": 76
+      },
+      {
+        "title": "LG denies TV spying claims, says tracking and snooping concerns 'not true'",
+        "url": "https://www.tomshardware.com/tech-industry/big-tech/lg-strongly-denies-tv-security-claims-says-tracking-and-snooping-concerns-not-true-online-investigation-claims-216-000-000-spy-tvs-record-audio",
+        "source": "Hacker News",
+        "score": 307
+      },
+      {
+        "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
+        "url": "https://withspecific.com/benchmarks/real-swe",
+        "source": "Hacker News",
+        "score": 9
       },
       {
         "title": "Will There Be a 7G?",
         "url": "https://arxiv.org/abs/2609.01877",
         "source": "Hacker News",
-        "score": 34
+        "score": 61
       },
       {
-        "title": "IKEA made a mod for Skyrim [video]",
-        "url": "https://www.youtube.com/watch?v=iZODN0QUgjI",
+        "title": "Benchmark: CadQuery vs. OpenSCAD for agentic CAD work",
+        "url": "https://modelrift.com/blog/cadquery-vs-openscad/",
         "source": "Hacker News",
-        "score": 470
-      },
-      {
-        "title": "We must pace the frontier",
-        "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
-        "source": "Hacker News",
-        "score": 283
-      },
-      {
-        "title": "Microcode in Intel's 8087 floating-point chip: the scale instruction",
-        "url": "https://www.righto.com/2026/09/8087-microcode-reverse-engineering-fscale.html",
-        "source": "Hacker News",
-        "score": 45
-      },
-      {
-        "title": "google.com/goto: Google's anti-scraping update",
-        "url": "https://www.autom.dev/blog/google-search-goto-links",
-        "source": "Hacker News",
-        "score": 569
-      },
-      {
-        "title": "A Mathematical Framework for Transformer Circuits (2021)",
-        "url": "https://transformer-circuits.pub/2021/framework/index.html",
-        "source": "Hacker News",
-        "score": 57
+        "score": 10
       },
       {
         "title": "I made a build visualizer to understand Bun's compile times",
         "url": "https://lalitm.com/post/buildprof/",
         "source": "Hacker News",
-        "score": 16
+        "score": 56
       },
       {
-        "title": "My favorite sci-fi books about how we build societies and keep justifying them",
-        "url": "https://bookdna.com/best-books/how-we-build-absurd-societies-and-keep-justifying",
+        "title": "We must pace the frontier",
+        "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
         "source": "Hacker News",
-        "score": 6
+        "score": 421
+      },
+      {
+        "title": "IKEA made a mod for Skyrim [video]",
+        "url": "https://www.youtube.com/watch?v=iZODN0QUgjI",
+        "source": "Hacker News",
+        "score": 508
+      },
+      {
+        "title": "Microcode in Intel's 8087 floating-point chip: the scale instruction",
+        "url": "https://www.righto.com/2026/09/8087-microcode-reverse-engineering-fscale.html",
+        "source": "Hacker News",
+        "score": 62
       },
       {
         "title": "How Trail of Bits helps verify the integrity of Signal chats",
         "url": "https://blog.trailofbits.com/2026/08/11/how-trail-of-bits-helps-verify-the-integrity-of-your-signal-chats/",
         "source": "Hacker News",
-        "score": 10
+        "score": 29
+      },
+      {
+        "title": "A Mathematical Framework for Transformer Circuits (2021)",
+        "url": "https://transformer-circuits.pub/2021/framework/index.html",
+        "source": "Hacker News",
+        "score": 66
       },
       {
         "title": "Retrospectively Reverse-Engineering Apple's Neural Engine",
         "url": "https://eiln.github.io/posts/ane.html",
         "source": "Hacker News",
-        "score": 194
+        "score": 204
       },
       {
-        "title": "A Few Good Ideas in Programming Languages",
-        "url": "https://prydt.xyz/blog/a-few-good-ideas-in-pl/",
+        "title": "I fixed a tractor using John Deere's self-repair service. Farmers aren't sold",
+        "url": "https://www.wired.com/story/i-fixed-a-tractor-john-deere-self-repair-service/",
         "source": "Hacker News",
-        "score": 47
-      },
-      {
-        "title": "LRU is harder to beat than the KV-cache papers suggest",
-        "url": "https://github.com/gauravapiscean/agentic-kv-cache",
-        "source": "Hacker News",
-        "score": 76
+        "score": 79
       }
     ],
     "ai": [
       {
-        "title": "LG denies TV spying claims, says tracking and snooping concerns 'not true'",
-        "url": "https://www.tomshardware.com/tech-industry/big-tech/lg-strongly-denies-tv-security-claims-says-tracking-and-snooping-concerns-not-true-online-investigation-claims-216-000-000-spy-tvs-record-audio",
-        "source": "Hacker News AI",
-        "score": 128
-      },
-      {
         "title": "Nvidia is the central bank of AI",
         "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
         "source": "Hacker News AI",
-        "score": 202
+        "score": 279
+      },
+      {
+        "title": "LG denies TV spying claims, says tracking and snooping concerns 'not true'",
+        "url": "https://www.tomshardware.com/tech-industry/big-tech/lg-strongly-denies-tv-security-claims-says-tracking-and-snooping-concerns-not-true-online-investigation-claims-216-000-000-spy-tvs-record-audio",
+        "source": "Hacker News AI",
+        "score": 307
+      },
+      {
+        "title": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
+        "url": "https://withspecific.com/benchmarks/real-swe",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
+        "title": "How Trail of Bits helps verify the integrity of Signal chats",
+        "url": "https://blog.trailofbits.com/2026/08/11/how-trail-of-bits-helps-verify-the-integrity-of-your-signal-chats/",
+        "source": "Hacker News AI",
+        "score": 29
       },
       {
         "title": "A Mathematical Framework for Transformer Circuits (2021)",
         "url": "https://transformer-circuits.pub/2021/framework/index.html",
         "source": "Hacker News AI",
-        "score": 57
-      },
-      {
-        "title": "How Trail of Bits helps verify the integrity of Signal chats",
-        "url": "https://blog.trailofbits.com/2026/08/11/how-trail-of-bits-helps-verify-the-integrity-of-your-signal-chats/",
-        "source": "Hacker News AI",
-        "score": 10
+        "score": 66
       },
       {
         "title": "Retrospectively Reverse-Engineering Apple's Neural Engine",
         "url": "https://eiln.github.io/posts/ane.html",
         "source": "Hacker News AI",
-        "score": 194
+        "score": 204
       },
       {
         "title": "I fixed a tractor using John Deere's self-repair service. Farmers aren't sold",
         "url": "https://www.wired.com/story/i-fixed-a-tractor-john-deere-self-repair-service/",
         "source": "Hacker News AI",
-        "score": 52
+        "score": 79
       },
       {
         "title": "The worst spam emails: iLands AI agent hustle",
         "url": "https://tedium.co/2026/09/11/ilands-agents-email-spam-kaixin-tang/",
         "source": "Hacker News AI",
-        "score": 80
+        "score": 97
       },
       {
         "title": "A Design Space Exploration of Async/Await",
         "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
         "source": "Hacker News AI",
-        "score": 397
-      },
-      {
-        "title": "Anthropic CEO Says It's Time to Slow AI Model Advances",
-        "url": "https://www.bloomberg.com/news/articles/2026-09-12/anthropic-ceo-says-it-s-time-to-slow-pace-of-improving-ai-models",
-        "source": "Hacker News AI",
-        "score": 18
+        "score": 409
       },
       {
         "title": "A misalignment of AI in mathematics",
         "url": "https://mathandai.org/",
         "source": "Hacker News AI",
-        "score": 1150
+        "score": 1171
+      },
+      {
+        "title": "OpenAI's Sam Altman says it would be 'ill-advised' to go public in 2026",
+        "url": "https://techcrunch.com/2026/09/12/openais-sam-altman-says-it-would-be-ill-advised-to-go-public-in-2026/",
+        "source": "Hacker News AI",
+        "score": 4
+      },
+      {
+        "title": "Void Linux Maintainer Orphans 100 Packages over AI Policy Dispute",
+        "url": "https://www.phoronix.com/news/Void-Linux-AI-Policy-Orphan",
+        "source": "Hacker News AI",
+        "score": 8
       },
       {
         "title": "OpenAI agents carried out an undisclosed attack on RubyGems",
         "url": "https://www.rubyhack.ai/",
         "source": "Hacker News AI",
-        "score": 902
-      },
-      {
-        "title": "Dario Just Said Pump the Brakes on AI",
-        "url": "https://captaincompliance.com/education/dario-just-proposed-slowing-ai-development-on-purpose/",
-        "source": "Hacker News AI",
-        "score": 4
+        "score": 912
       },
       {
         "title": "Litelm: LiteLLM Without the Bloat",
@@ -199,13 +205,13 @@
         "source": "BBC World"
       },
       {
-        "title": "French officials investigate if malicious act caused train derailment",
-        "url": "https://www.bbc.co.uk/news/articles/c33kp533nn6o?at_medium=RSS&at_campaign=rss",
+        "title": "Fire at nursing home in Chile kills 16 residents",
+        "url": "https://www.bbc.co.uk/news/articles/cy4zpp20w77o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ukraine faces 'toughest winter' since Russia's full-scale invasion, UN official tells BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cwyz59yyqk4o?at_medium=RSS&at_campaign=rss",
+        "title": "French officials investigate if malicious act caused train derailment",
+        "url": "https://www.bbc.co.uk/news/articles/c33kp533nn6o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -214,8 +220,8 @@
         "source": "BBC World"
       },
       {
-        "title": "'It's like a dog set loose on us' - fear over Kenya's crackdown on foreign traders",
-        "url": "https://www.bbc.co.uk/news/articles/c4g5kxw4wd7o?at_medium=RSS&at_campaign=rss",
+        "title": "Ukraine faces 'toughest winter' since Russia's full-scale invasion, UN official tells BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cwyz59yyqk4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -295,38 +301,38 @@
     ],
     "gaming": [
       {
+        "title": "50 Years Later, Star Wars Is Officially Remaking the Original Trilogy in a Shocking New Style",
+        "url": "https://www.polygon.com/star-wars-original-trilogy-graphic-novel/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Best Sci-fi Shows You Can Stream Online for Free",
+        "url": "https://www.polygon.com/best-sci-fi-shows-free-online-streaming/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Blizzard Reveals First Look at World of Warcraft's Next Major Expansion",
+        "url": "https://www.polygon.com/wow-last-titan-reveal-worldsoul-saga-blizzcon-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Warcraft 3 Just Got Its First Official New Campaign in 23 years",
+        "url": "https://www.polygon.com/warcraft-3-blizzcon-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Blizzard Officially Reveals 'WoW Classic Plus' as World of Warcraft Forever",
+        "url": "https://www.polygon.com/world-of-warcraft-forever-announced-classic-plus-blizzcon-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Nintendo is One Step Closer to World Domination",
+        "url": "https://www.polygon.com/switchboard-switch-2-nintendo-the-two-directs/",
+        "source": "Polygon"
+      },
+      {
         "title": "Hearthstone's Next Expansion and New Class Officially Revealed at BlizzCon",
         "url": "https://www.polygon.com/hearthstone-update-monk-class-blizzcon-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Diablo 4 Is Officially Bringing Back a Fan-Favorite Class, Blizzard Confirms",
-        "url": "https://www.polygon.com/diablo-4-amazon-class-season-hell-legacy-blizzcon-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Blizzard Officially Announces Diablo 5 at BlizzCon 2026",
-        "url": "https://www.polygon.com/diablo-5-announced-release-date-blizzcon-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Overwatch's Next Hero, Doctrine, Officially Revealed at BlizzCon 2026",
-        "url": "https://www.polygon.com/overwatch-new-hero-54-doctrine-blizzcon-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Overwatch's Most Divisive Heroes Are Getting Game-Changing Reworks",
-        "url": "https://www.polygon.com/overwatch-hero-reworks-roadhog-sombra-blizzcon-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "New Horror Movie Never After Dark Does What The Conjuring Never Could",
-        "url": "https://www.polygon.com/never-after-dark-the-years-best-haunted-house-movie/",
-        "source": "Polygon"
-      },
-      {
-        "title": "StarCraft Officially Returns In 2030, Blizzard Confirms at BlizzCon",
-        "url": "https://www.polygon.com/starcraft-new-shooter-announcement-blizzard-blizzcon-2026/",
         "source": "Polygon"
       }
     ],
