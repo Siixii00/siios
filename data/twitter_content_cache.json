@@ -1,129 +1,147 @@
 {
   "metadata": {
-    "last_updated": "2026-09-13T17:57:27.471587",
-    "total_items": 64
+    "last_updated": "2026-09-13T20:37:40.446313",
+    "total_items": 63
   },
   "content": {
     "tech": [
       {
+        "title": "Why is Google still serving dodgy ads?",
+        "url": "https://www.atomic14.com/2026/09/13/why-is-google-still-serving-dodgy-ads",
+        "source": "Hacker News",
+        "score": 298
+      },
+      {
+        "title": "Mark Zuckerberg: \"Cambridge Analytica\" (2017)",
+        "url": "https://twitter.com/TechEmails/status/2099214399840059428",
+        "source": "Hacker News",
+        "score": 43
+      },
+      {
         "title": "Astra and Fable still hack on simple variants of alignment evals from 2025",
         "url": "https://www.lesswrong.com/posts/munJKF7iWMsWJLAH2/astra-and-fable-still-hack-on-simple-variants-of-alignment",
         "source": "Hacker News",
-        "score": 207
+        "score": 298
+      },
+      {
+        "title": "Global Shortage Has Led to Motor Oil Rationing at Costco",
+        "url": "https://guessingheadlights.com/global-shortage-has-led-to-motor-oil-rationing-at-costco/",
+        "source": "Hacker News",
+        "score": 95
+      },
+      {
+        "title": "There Is No AI (It's Just People) with Jaron Lanier",
+        "url": "https://singjupost.com/startalk-there-is-no-ai-really-its-just-people-w-jaron-lanier-transcript/",
+        "source": "Hacker News",
+        "score": 22
+      },
+      {
+        "title": "Julia 1.13 Highlights",
+        "url": "https://julialang.org/blog/2026/09/julia-1.13-highlights/",
+        "source": "Hacker News",
+        "score": 33
+      },
+      {
+        "title": "Data collected by cars and sold to third parties",
+        "url": "https://www.theverge.com/column/994172/your-car-is-selling-your-data",
+        "source": "Hacker News",
+        "score": 178
       },
       {
         "title": "JetKVM Mini",
         "url": "https://jetkvm.com/blog/introducing-jetkvm-mini",
         "source": "Hacker News",
-        "score": 402
-      },
-      {
-        "title": "CUDA for AMD on Windows",
-        "url": "https://github.com/Speedstu/CUDA-for-AMD-Windows",
-        "source": "Hacker News",
-        "score": 72
+        "score": 462
       },
       {
         "title": "Why is the x86 undefined instruction called ud2? Why 2?",
         "url": "https://devblogs.microsoft.com/oldnewthing/20260910-00/?p=112689",
         "source": "Hacker News",
-        "score": 91
-      },
-      {
-        "title": "Garry Tan wants US open-weight AI labs to 'distill' frontier models, too",
-        "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
-        "source": "Hacker News",
-        "score": 139
-      },
-      {
-        "title": "Making Startups Powerful",
-        "url": "https://paulgraham.com/powerful.html",
-        "source": "Hacker News",
-        "score": 52
+        "score": 146
       },
       {
         "title": "Reverse engineering my e-scooter and rewriting the firmware in Rust",
         "url": "https://bensimms.moe/reverse-engineering-scooter/",
         "source": "Hacker News",
-        "score": 196
+        "score": 277
       },
       {
-        "title": "Cpak – OCI application package format for Linux desktops, servers and devices",
-        "url": "https://cpak.it/",
+        "title": "Making Startups Powerful",
+        "url": "https://paulgraham.com/powerful.html",
         "source": "Hacker News",
-        "score": 21
+        "score": 93
       },
       {
-        "title": "David Sacks: OpenAI and Anthropic Don't Need Regulations to Pace Frontier Models",
-        "url": "https://twitter.com/DavidSacks/status/2098973625252708460",
+        "title": "Sean Carroll explains the biggest ideas in the universe – Full Interview [video]",
+        "url": "https://www.youtube.com/watch?v=_TBNJyztai0",
         "source": "Hacker News",
-        "score": 56
+        "score": 43
       },
       {
-        "title": "Romania soccer introduces black card to 'combat abusive behaviour' from parents",
-        "url": "https://www.nytimes.com/athletic/7586821/2026/09/12/football-black-card-referee/",
+        "title": "Device Drivers lab exercise – COSC562",
+        "url": "https://web.eecs.utk.edu/~smarz1/courses/cosc562/drivers.html",
         "source": "Hacker News",
-        "score": 24
+        "score": 14
       },
       {
-        "title": "Ask HN: What are you working on? (September 2026)",
-        "url": "https://news.ycombinator.com/item?id=49686380",
+        "title": "I'm being cyberattacked by Tesla, Inc",
+        "url": "https://dreamstation.systems/personal/tesla.html",
         "source": "Hacker News",
-        "score": 12
+        "score": 317
       },
       {
-        "title": "Libraries Run Rust Inside Python (With PyO3)",
-        "url": "https://belderbos.dev/blog/how-libraries-run-rust-inside-python/",
+        "title": "CUDA for AMD on Windows",
+        "url": "https://github.com/Speedstu/CUDA-for-AMD-Windows",
         "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "'Fingerprints' inside the Sun could reveal if it once swallowed a planet",
-        "url": "https://ras.ac.uk/news-and-press/research-highlights/fingerprints-inside-sun-could-reveal-if-it-once-swallowed-planet",
-        "source": "Hacker News",
-        "score": 84
-      },
-      {
-        "title": "Alan's Random Insult Generator (1999)",
-        "url": "https://alanbellows.com/experiments/insult/index.html",
-        "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Why are AI agents lying, cheating and coordinating?",
-        "url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
-        "source": "Hacker News",
-        "score": 490
+        "score": 104
       }
     ],
     "ai": [
       {
-        "title": "Garry Tan wants US open-weight AI labs to 'distill' frontier models, too",
-        "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
+        "title": "There Is No AI (It's Just People) with Jaron Lanier",
+        "url": "https://singjupost.com/startalk-there-is-no-ai-really-its-just-people-w-jaron-lanier-transcript/",
         "source": "Hacker News AI",
-        "score": 139
+        "score": 22
       },
       {
-        "title": "David Sacks: OpenAI and Anthropic Don't Need Regulations to Pace Frontier Models",
-        "url": "https://twitter.com/DavidSacks/status/2098973625252708460",
+        "title": "Sean Carroll explains the biggest ideas in the universe – Full Interview [video]",
+        "url": "https://www.youtube.com/watch?v=_TBNJyztai0",
         "source": "Hacker News AI",
-        "score": 56
+        "score": 43
       },
       {
         "title": "Why are AI agents lying, cheating and coordinating?",
         "url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
         "source": "Hacker News AI",
-        "score": 490
+        "score": 536
+      },
+      {
+        "title": "Reverse-Engineering Claude Web's MicroVM: Uncovering Anthropic's Hidden Antspace",
+        "url": "https://aprilnea.me/en/blog/reverse-engineering-claude-code-antspace",
+        "source": "Hacker News AI",
+        "score": 22
+      },
+      {
+        "title": "Garry Tan wants US open-weight AI labs to 'distill' frontier models, too",
+        "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
+        "source": "Hacker News AI",
+        "score": 241
       },
       {
         "title": "TailTalk: A modern async user space AppleTalk stack with Rust and Tokio",
         "url": "https://github.com/FeralFirmware/TailTalk/",
         "source": "Hacker News AI",
-        "score": 51
+        "score": 57
       },
       {
-        "title": "Google illegally retains customer data,and I am taking legal action against them",
-        "url": "https://medium.com/@istokovicsgyorgy79/google-illegally-retains-customer-data-and-i-am-taking-legal-action-against-them-7da0cf95941c",
+        "title": "David Sacks: OpenAI and Anthropic Don't Need Regulations to Pace Frontier Models",
+        "url": "https://twitter.com/DavidSacks/status/2098973625252708460",
+        "source": "Hacker News AI",
+        "score": 163
+      },
+      {
+        "title": "AI recursive self-improvement might not come so quickly after all (August 2026)",
+        "url": "https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/",
         "source": "Hacker News AI",
         "score": 18
       },
@@ -131,55 +149,31 @@
         "title": "A Brief Retrospective on the Sprite Network Operating System",
         "url": "https://github.com/OSPreservProject/sprite/blob/master/sprite.txt",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 16
       },
       {
         "title": "Nvidia is the central bank of AI",
         "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
         "source": "Hacker News AI",
-        "score": 546
+        "score": 551
       },
       {
         "title": "Everyone should slow down AI development except for me",
         "url": "https://xeiaso.net/notes/2026/everyone-slowdown-but-me/",
         "source": "Hacker News AI",
-        "score": 698
-      },
-      {
-        "title": "Getting 50 GB/S Back from the Apple Neural Engine",
-        "url": "https://eiln.github.io/posts/ane-dma.html",
-        "source": "Hacker News AI",
-        "score": 204
+        "score": 717
       },
       {
         "title": "LG denies TV spying claims, says tracking and snooping concerns 'not true'",
         "url": "https://www.tomshardware.com/tech-industry/big-tech/lg-strongly-denies-tv-security-claims-says-tracking-and-snooping-concerns-not-true-online-investigation-claims-216-000-000-spy-tvs-record-audio",
         "source": "Hacker News AI",
-        "score": 606
+        "score": 608
       },
       {
-        "title": "A simple model of AI-aided economic growth",
-        "url": "https://marginalrevolution.com/marginalrevolution/2026/09/a-simple-model-of-ai-aided-economic-growth.html",
+        "title": "Getting 50 GB/S Back from the Apple Neural Engine",
+        "url": "https://eiln.github.io/posts/ane-dma.html",
         "source": "Hacker News AI",
-        "score": 3
-      },
-      {
-        "title": "Houthis used Claude Code to develop missile guidance software: Anthropic",
-        "url": "https://clashreport.com/world/articles/houthis-used-claude-code-to-develop-missile-guidance-software-anthropic-s52mnx4pwpo",
-        "source": "Hacker News AI",
-        "score": 76
-      },
-      {
-        "title": "Liesegang Rings",
-        "url": "https://chillphysicsenjoyer.substack.com/p/liesegang-rings",
-        "source": "Hacker News AI",
-        "score": 48
-      },
-      {
-        "title": "A Design Space Exploration of Async/Await",
-        "url": "https://cel.cs.brown.edu/blog/design-space-async-await/",
-        "source": "Hacker News AI",
-        "score": 450
+        "score": 206
       }
     ],
     "news": [
@@ -189,8 +183,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Trump downplays AI risks after dire expert warnings and calls to slow development down",
+        "title": "Trump downplays warnings of AI risks, citing rivalry with China",
         "url": "https://www.bbc.co.uk/news/articles/c7v48vp31mdo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Questions mount over what an AI 'slowdown' would look like",
+        "url": "https://www.bbc.co.uk/news/articles/cwyzp47py48o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -209,17 +208,17 @@
         "source": "BBC World"
       },
       {
-        "title": "Trump doubles down on united Ireland comments on day two of visit",
+        "title": "Trump says he will remove all Irish whiskey tariffs as he ends two-day visit",
         "url": "https://www.bbc.co.uk/news/articles/cx2z79n0eeno?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Legendary Canadian boxer George Chuvalo dies aged 89",
-        "url": "https://www.bbc.co.uk/news/articles/cy8zv8v1z7zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The huge Nintendo Switch 'tariff refund sale' has begun, and there's 30% off iconic games ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/the-huge-nintendo-switch-tariff-refund-sale-has-begun-and-theres-30-percent-off-iconic-games",
+        "source": "Creative Bloq"
+      },
       {
         "title": " How I created a dramatic fight scene for the cover of a fantasy book in the aesthetic that I grew up with ",
         "url": "https://www.creativebloq.com/3d/how-i-created-a-dramatic-fight-scene-for-the-cover-of-a-fantasy-book-in-the-aesthetic-that-i-grew-up-with",
@@ -248,11 +247,6 @@
       {
         "title": " This beautiful logo shows there's plenty of life in minimalist design yet ",
         "url": "https://www.creativebloq.com/design/logos-icons/this-beautiful-logo-shows-theres-plenty-of-life-in-minimalist-design-yet",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Zoner Studio (2026) review: all-in-one image editing with a splash of video too ",
-        "url": "https://www.creativebloq.com/photography/photo-editing-software/zoner-studio-2026-review-all-in-one-image-editing-with-a-splash-of-video-too",
         "source": "Creative Bloq"
       }
     ],
@@ -295,6 +289,21 @@
     ],
     "gaming": [
       {
+        "title": "Matchbox's Director Drove a Truck Off a 200-Foot Bridge: \"We Did It for Real!\"",
+        "url": "https://www.polygon.com/matchbox-movie-director-interview-sam-hargrave-preview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Greatest Video Game Franchises of the 20th Century, Ranked",
+        "url": "https://www.polygon.com/best-video-game-franchises-20th-century/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Buddy' is Totally Bonkers, But it Will Never Eclipse My Favorite “I Hate Barney” Thriller",
+        "url": "https://www.polygon.com/buddy-vs-death-to-smoochy/",
+        "source": "Polygon"
+      },
+      {
         "title": "Cyberpunk: Edgerunners Is Overwatch's Next Big Anime Collaboration",
         "url": "https://www.polygon.com/cyberpunk-edgerunners-overwatch/",
         "source": "Polygon"
@@ -312,21 +321,6 @@
       {
         "title": "Netflix’s Biggest Cyberpunk Series Is Doing Something Completely Different in Season 2",
         "url": "https://www.polygon.com/cyberpunk-edgerunners-2-new-director-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Sony is the Bad Guy of 2026, but it’s Going to Win Anyway ",
-        "url": "https://www.polygon.com/patch-notes-fall-preview-nintendo-sony-bad-guy/",
-        "source": "Polygon"
-      },
-      {
-        "title": "We Need More Games Like Echo Weaver",
-        "url": "https://www.polygon.com/echo-weaver-preview-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Marvel's Wolverine Set To End Sony's Historic 11-Year GOTY Run",
-        "url": "https://www.polygon.com/marvels-wolverine-sony-goty-run/",
         "source": "Polygon"
       }
     ],
