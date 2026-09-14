@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-14T00:51:03.573706",
-    "total_items": 63
+    "last_updated": "2026-09-14T05:53:16.198685",
+    "total_items": 64
   },
   "content": {
     "tech": [
@@ -9,171 +9,177 @@
         "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
         "url": "https://www.vals.ai/blogs/fable-solves-cyphral-distich",
         "source": "Hacker News",
-        "score": 396
+        "score": 705
       },
       {
         "title": "Why is Google still serving dodgy ads?",
         "url": "https://www.atomic14.com/2026/09/13/why-is-google-still-serving-dodgy-ads",
         "source": "Hacker News",
-        "score": 544
+        "score": 723
+      },
+      {
+        "title": "Spaceships (Reverse Asteroid)",
+        "url": "https://spaceships.treybastian.com/",
+        "source": "Hacker News",
+        "score": 127
       },
       {
         "title": "Registration without a phone number on Signal will use zero-knowledge proofs",
         "url": "https://community.signalusers.org/t/registration-without-a-phone-number/2222?page=10",
         "source": "Hacker News",
-        "score": 49
+        "score": 177
       },
       {
-        "title": "Julia 1.13 highlights",
-        "url": "https://julialang.org/blog/2026/09/julia-1.13-highlights/",
+        "title": "Open-Source AI and Open Models Reading List",
+        "url": "https://www.interconnects.ai/p/open-source-ai-reading-list",
         "source": "Hacker News",
-        "score": 144
+        "score": 73
+      },
+      {
+        "title": "The case against JPEG XL",
+        "url": "https://giannirosato.com/blog/post/case-against-jxl/",
+        "source": "Hacker News",
+        "score": 88
+      },
+      {
+        "title": "Apple's Dimensional Drawings",
+        "url": "https://developer.apple.com/accessories/dimensional-drawings/",
+        "source": "Hacker News",
+        "score": 110
       },
       {
         "title": "Astra and Fable still hack on simple variants of alignment evals from 2025",
         "url": "https://www.lesswrong.com/posts/munJKF7iWMsWJLAH2/astra-and-fable-still-hack-on-simple-variants-of-alignment",
         "source": "Hacker News",
-        "score": 366
+        "score": 413
+      },
+      {
+        "title": "Who Gets to Define the Rules for AI?",
+        "url": "https://cohere.com/blog/who-gets-to-define-the-rules-for-ai",
+        "source": "Hacker News",
+        "score": 8
+      },
+      {
+        "title": "Rope, twine and thread: Invisible technologies of the Stone Age",
+        "url": "https://knowablemagazine.org/content/article/society/2026/prehistory-lost-threads",
+        "source": "Hacker News",
+        "score": 26
+      },
+      {
+        "title": "The Malicious Use of Artificial Intelligence",
+        "url": "https://arxiv.org/abs/1802.07228",
+        "source": "Hacker News",
+        "score": 35
       },
       {
         "title": "Data collected by cars and sold to third parties",
         "url": "https://www.theverge.com/column/994172/your-car-is-selling-your-data",
         "source": "Hacker News",
-        "score": 284
+        "score": 368
       },
       {
-        "title": "Flawed routers flood University of Wisconsin internet time server (2003)",
-        "url": "https://pages.cs.wisc.edu/~plonka/netgear-sntp/",
+        "title": "Julia 1.13 highlights",
+        "url": "https://julialang.org/blog/2026/09/julia-1.13-highlights/",
         "source": "Hacker News",
-        "score": 48
+        "score": 192
+      },
+      {
+        "title": "Writing a better reality: The case for optimistic sci-fi",
+        "url": "https://honisoit.com/2022/03/writing-a-better-reality-the-case-for-optimistic-sci-fi/",
+        "source": "Hacker News",
+        "score": 43
       },
       {
         "title": "Ask HN: What are you working on? (September 2026)",
         "url": "https://news.ycombinator.com/item?id=49686380",
         "source": "Hacker News",
-        "score": 72
-      },
-      {
-        "title": "The GDR and Vietnam: From Fake Coffee to Coffee Empire",
-        "url": "https://www.katjahoyer.uk/p/the-gdr-and-vietnam-from-fake-coffee",
-        "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "JetKVM Mini",
-        "url": "https://jetkvm.com/blog/introducing-jetkvm-mini",
-        "source": "Hacker News",
-        "score": 523
-      },
-      {
-        "title": "The Coming War on General Computation (2011)",
-        "url": "https://en.wikisource.org/wiki/The_Coming_War_on_General_Computation",
-        "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "Mullenweg has returned as CEO after attempted board ouster",
-        "url": "https://techcrunch.com/2026/09/12/automattic-confirms-mullenweg-has-returned-as-ceo-after-attempted-ouster-by-board/",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Making Startups Powerful",
-        "url": "https://paulgraham.com/powerful.html",
-        "source": "Hacker News",
-        "score": 152
-      },
-      {
-        "title": "Reverse engineering my e-scooter and rewriting the firmware in Rust",
-        "url": "https://bensimms.moe/reverse-engineering-scooter/",
-        "source": "Hacker News",
-        "score": 367
-      },
-      {
-        "title": "I added a non-wi-fi Mitsubishi AC to Home Assistant",
-        "url": "https://medium.com/@ivangomezarnedo/how-i-added-a-non-wi-fi-mitsubishi-ac-to-home-assistant-22770661dd77",
-        "source": "Hacker News",
-        "score": 170
+        "score": 124
       }
     ],
     "ai": [
       {
+        "title": "Open-Source AI and Open Models Reading List",
+        "url": "https://www.interconnects.ai/p/open-source-ai-reading-list",
+        "source": "Hacker News AI",
+        "score": 73
+      },
+      {
+        "title": "The case against JPEG XL",
+        "url": "https://giannirosato.com/blog/post/case-against-jxl/",
+        "source": "Hacker News AI",
+        "score": 88
+      },
+      {
+        "title": "Who Gets to Define the Rules for AI?",
+        "url": "https://cohere.com/blog/who-gets-to-define-the-rules-for-ai",
+        "source": "Hacker News AI",
+        "score": 8
+      },
+      {
+        "title": "The Malicious Use of Artificial Intelligence",
+        "url": "https://arxiv.org/abs/1802.07228",
+        "source": "Hacker News AI",
+        "score": 35
+      },
+      {
+        "title": "\"Chilling\" warning or overreaction? AI bioweapons report divides experts",
+        "url": "https://www.science.org/content/article/chilling-warning-or-overreaction-ai-bioweapons-report-divides-experts",
+        "source": "Hacker News AI",
+        "score": 24
+      },
+      {
         "title": "Reverse-Engineering Claude Web's MicroVM: Uncovering Anthropic's Hidden Antspace",
         "url": "https://aprilnea.me/en/blog/reverse-engineering-claude-code-antspace",
         "source": "Hacker News AI",
-        "score": 53
-      },
-      {
-        "title": "I build a mechanical watch face: a real gear train for a watch with no gears",
-        "url": "https://myday24.com/blog/how-a-mechanical-watch-face-is-built/",
-        "source": "Hacker News AI",
-        "score": 8
+        "score": 74
       },
       {
         "title": "Sean Carroll explains the biggest ideas in the universe – Full Interview [video] (2025)",
         "url": "https://www.youtube.com/watch?v=_TBNJyztai0",
         "source": "Hacker News AI",
-        "score": 72
+        "score": 84
+      },
+      {
+        "title": "Airbnb Preventing the Use of BnB",
+        "url": "https://www.theguardian.com/technology/2026/sep/14/portland-bnb-airbnb-silicon-valley-legal-battle-festival",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "Garry Tan wants US open-weight AI labs to 'distill' frontier models, too",
         "url": "https://techcrunch.com/2026/09/11/y-combinators-garry-tan-wants-u-s-open-weight-ai-labs-to-distill-frontier-models-too/",
         "source": "Hacker News AI",
-        "score": 344
+        "score": 379
       },
       {
         "title": "David Sacks: OpenAI and Anthropic Don't Need Regulations to Pace Frontier Models",
         "url": "https://twitter.com/DavidSacks/status/2098973625252708460",
         "source": "Hacker News AI",
-        "score": 232
+        "score": 292
+      },
+      {
+        "title": "Show HN: Dllog – Replay debug logs when an operation fails",
+        "url": "https://github.com/arhuman/dllog",
+        "source": "Hacker News AI",
+        "score": 3
+      },
+      {
+        "title": "AI Robots – When will they be in our homes",
+        "url": "https://spectrum.ieee.org/ai-robots",
+        "source": "Hacker News AI",
+        "score": 18
       },
       {
         "title": "TailTalk: A modern async user space AppleTalk stack with Rust and Tokio",
         "url": "https://github.com/FeralFirmware/TailTalk/",
         "source": "Hacker News AI",
-        "score": 68
-      },
-      {
-        "title": "It's All Fun and Games Until You Give AI Your Credit Card",
-        "url": "https://www.theatlantic.com/technology/2026/09/instinct-ai-personal-assistant-credit-card/688607/",
-        "source": "Hacker News AI",
-        "score": 11
-      },
-      {
-        "title": "Due to concerns about malicious applications, GPT2 will not be released (2019)",
-        "url": "https://openai.com/index/better-language-models/",
-        "source": "Hacker News AI",
-        "score": 52
-      },
-      {
-        "title": "There Is No AI (It's Just People) with Jaron Lanier",
-        "url": "https://singjupost.com/startalk-there-is-no-ai-really-its-just-people-w-jaron-lanier-transcript/",
-        "source": "Hacker News AI",
-        "score": 64
+        "score": 73
       },
       {
         "title": "Why are AI agents lying, cheating and coordinating?",
         "url": "https://yoshuabengio.org/en/publication/why-are-ai-agents-lying-cheating-and-coordinating",
         "source": "Hacker News AI",
-        "score": 591
-      },
-      {
-        "title": "AI recursive self-improvement might not come so quickly after all",
-        "url": "https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/",
-        "source": "Hacker News AI",
-        "score": 61
-      },
-      {
-        "title": "Nvidia is the central bank of AI",
-        "url": "https://www.economist.com/interactive/briefing/2026/09/03/nvidia-is-the-central-bank-of-ai",
-        "source": "Hacker News AI",
-        "score": 560
-      },
-      {
-        "title": "Ask HN: Would a startup for young creatives who reject AI be feasible?",
-        "url": "https://news.ycombinator.com/item?id=49689696",
-        "source": "Hacker News AI",
-        "score": 3
+        "score": 608
       }
     ],
     "news": [
@@ -193,7 +199,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Swedish party blocs tied after Sunday vote, projections say",
+        "title": "Swedish left-wing bloc narrowly ahead with election too close to call",
         "url": "https://www.bbc.co.uk/news/articles/c0qx5d79kdeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -289,38 +295,38 @@
     ],
     "gaming": [
       {
-        "title": "Diablo 5 Has A Surprising Connection To Dragon Age",
-        "url": "https://www.polygon.com/diablo-5-interview-jennifer-hepler-blizzcon-2026/",
+        "title": "Clair Obscur Expedition 33 Director Comments on Sandfall's Next Game",
+        "url": "https://www.polygon.com/clair-obscur-expedition-33-developer-next-game/",
         "source": "Polygon"
       },
       {
-        "title": "Why StarCraft Isn't Coming Back Until 2030",
-        "url": "https://www.polygon.com/starcraft-2030-release-date-dan-hay-blizzcon-2026/",
+        "title": "After 'Reacher' Season 4 Ends, Here Are Alan Ritchson's 10 Best Performances to Watch Next",
+        "url": "https://www.polygon.com/alan-ritchson-best-movies-tv-shows-ranked/",
         "source": "Polygon"
       },
       {
-        "title": "40 Years Later, Transformers Officially Embraces Its Most Heartbreaking Controversy",
-        "url": "https://www.polygon.com/40th-anniversary-transformers-the-movie-hasbro-interview/",
+        "title": "9 Sci-Fi Series on Netflix That Are Perfect from Start to Finish",
+        "url": "https://www.polygon.com/best-sci-fi-shows-netflix-perfect/",
         "source": "Polygon"
       },
       {
-        "title": "2026’s Best Puzzle Game Is an Even Trippier Take On Portal",
-        "url": "https://www.polygon.com/he-who-watches-impressions/",
+        "title": "‘Rick and Morty’ Creator Dan Harmon Reveals the Complex Leprechaun Lore Invented for His New Show",
+        "url": "https://www.polygon.com/president-curtis-dan-harmon-leprechauns-interview/",
         "source": "Polygon"
       },
       {
-        "title": "Matchbox's Director Drove a Truck Off a 200-Foot Bridge: \"We Did It for Real!\"",
-        "url": "https://www.polygon.com/matchbox-movie-director-interview-sam-hargrave-preview/",
+        "title": "14 Years Later, Batman’s Most Overlooked Movie of the Century Is Officially Free on Streaming",
+        "url": "https://www.polygon.com/batman-the-dark-knight-returns-free-on-youtube/",
         "source": "Polygon"
       },
       {
-        "title": "The Greatest Video Game Franchises of the 20th Century, Ranked",
-        "url": "https://www.polygon.com/best-video-game-franchises-20th-century/",
+        "title": "The Cast of HBO's 'Lanterns' Breaks Down That Shocking Villain Twist",
+        "url": "https://www.polygon.com/lanterns-episode-5-manhunter-interview/",
         "source": "Polygon"
       },
       {
-        "title": "'Buddy' is Totally Bonkers, But it Will Never Eclipse My Favorite “I Hate Barney” Thriller",
-        "url": "https://www.polygon.com/buddy-vs-death-to-smoochy/",
+        "title": "World of Warcraft Forever Officially Brings Gamepad Controls Blizzard's MMO",
+        "url": "https://www.polygon.com/world-of-warcraft-forever-gamepad-support-blizzcon-2026/",
         "source": "Polygon"
       }
     ],
