@@ -1,161 +1,173 @@
 {
   "metadata": {
-    "last_updated": "2026-09-14T12:03:46.489979",
-    "total_items": 60
+    "last_updated": "2026-09-14T18:23:12.962476",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "EuroBirdPortal – Live bird movements across Europe",
-        "url": "https://www.eurobirdportal.org/ebp/en/",
+        "title": "iOS 27, iPadOS 27, and macOS 27",
+        "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/",
         "source": "Hacker News",
-        "score": 99
+        "score": 90
       },
       {
-        "title": "Fable 5.1 Solves the Cyphral Distich, a 370-year-old cipher",
-        "url": "https://www.vals.ai/blogs/fable-solves-cyphral-distich",
+        "title": "Distributed Systems Classics (2017)",
+        "url": "https://nvartolomei.com/dist-sys-classics/",
         "source": "Hacker News",
-        "score": 1027
+        "score": 104
       },
       {
-        "title": "A 386 PC for Your RP2350",
-        "url": "https://github.com/rh1tech/frank-386",
+        "title": "Why don't machine learning research agents overfit?",
+        "url": "https://www.amazon.science/blog/why-dont-machine-learning-research-agents-overfit",
         "source": "Hacker News",
-        "score": 75
+        "score": 43
       },
       {
-        "title": "Who Aligns the Aligners?",
-        "url": "https://prestonbyrne.com/2026/09/13/aligners/",
+        "title": "Principles for Fast Tokio Applications",
+        "url": "https://dial9-rs.github.io/blog/principles-for-fast-tokio-applications/",
         "source": "Hacker News",
-        "score": 14
+        "score": 72
       },
       {
-        "title": "An atlas of periodic solutions to the three-body problem",
-        "url": "https://www.threebodyorbits.com/",
+        "title": "Show HN: Neobrutalism.dev – Just added Base UI support and added new color theme",
+        "url": "https://www.neobrutalism.dev/",
         "source": "Hacker News",
-        "score": 63
+        "score": 57
       },
       {
-        "title": "OpenArch – PyTorch implementations of modern LLM architectures",
-        "url": "https://github.com/anuj0456/OpenArch",
+        "title": "Steam Frame starts at $1059",
+        "url": "https://store.steampowered.com/hardware/steamframe",
         "source": "Hacker News",
-        "score": 48
+        "score": 98
       },
       {
-        "title": "Spaceships (Reverse Asteroid)",
-        "url": "https://spaceships.treybastian.com/",
+        "title": "OpenAI bots knew about the RubyGems caching vulnerability",
+        "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
         "source": "Hacker News",
-        "score": 273
+        "score": 198
       },
       {
-        "title": "Registration without a phone number on Signal will use zero-knowledge proofs",
-        "url": "https://community.signalusers.org/t/registration-without-a-phone-number/2222?page=10",
+        "title": "The V8 JavaScript Runtime Undermined My Constant-Time JavaScript Library",
+        "url": "https://soatok.blog/2026/09/12/the-v8-javascript-runtime-undermined-my-constant-time-javascript-library/",
         "source": "Hacker News",
-        "score": 301
+        "score": 12
       },
       {
-        "title": "Watch AI materials-science and bioscience abilities closely",
-        "url": "https://www.lesswrong.com/posts/SCtkSz4nQ9icLZ4uq/watch-ai-materials-science-and-bioscience-abilities-closely",
+        "title": "Cua (YC P25) Is Hiring a Founding Technical GTM Lead",
+        "url": "https://www.ycombinator.com/companies/cua/jobs/1IWEKVH-founding-technical-gtm-lead",
         "source": "Hacker News",
-        "score": 9
+        "score": 1
       },
       {
-        "title": "Apple's Dimensional Drawings",
-        "url": "https://developer.apple.com/accessories/dimensional-drawings/",
+        "title": "A Beginning for Mathematics",
+        "url": "https://www.daniellitt.com/blog/2026/9/13/a-beginning-for-mathematics/",
         "source": "Hacker News",
-        "score": 241
+        "score": 37
       },
       {
-        "title": "The case against JPEG XL",
-        "url": "https://giannirosato.com/blog/post/case-against-jxl/",
+        "title": "Notes on gotchas while migrating 35kb preprompts from Opus to self-hosted Ollama",
+        "url": "https://patrickmccanna.net/notes-on-migrating-large-prompts-away-from-anthropic-openai-to-self-hosted-llms/",
         "source": "Hacker News",
-        "score": 191
+        "score": 86
       },
       {
-        "title": "HP ZGX Fury Is Now Orderable: GB300 Superchip, 748GB Unified Memory",
-        "url": "https://www.storagereview.com/news/hp-zgx-fury-is-now-orderable-gb300-superchip-748gb-unified-memory-and-a-red-hat-ai-factory-plan-for-the-edge",
+        "title": "Pion, an agent designed to run any company autonomously",
+        "url": "https://andonlabs.com/blog/why-we-built-pion",
         "source": "Hacker News",
-        "score": 18
+        "score": 53
       },
       {
-        "title": "Show HN: 1080p is 920px tall – 1k real browser viewports",
-        "url": "https://screensize.net/reports/viewport-stats",
+        "title": "Adversarial Fashion Makes a Statement on AI Panopticon",
+        "url": "https://spectrum.ieee.org/adversarial-fashion",
         "source": "Hacker News",
-        "score": 26
+        "score": 58
       },
       {
-        "title": "Mullenweg has returned as CEO after attempted board ouster",
-        "url": "https://techcrunch.com/2026/09/12/automattic-confirms-mullenweg-has-returned-as-ceo-after-attempted-ouster-by-board/",
+        "title": "Show HN: Nari Qwen3-TTS and Qwen3-ASR – High accuracy, low latency and cost",
+        "url": "https://narilabs.com/blog/nari-labs-leads-coval-voice-ai-benchmarks/",
         "source": "Hacker News",
-        "score": 192
+        "score": 10
       },
       {
-        "title": "Ask HN: What are you working on? (September 2026)",
-        "url": "https://news.ycombinator.com/item?id=49686380",
+        "title": "Cloudflare AKE cuts origin HelloRetryRequests from 52% to 3.7%",
+        "url": "https://blog.cloudflare.com/automatic-key-exchange-for-origins/",
         "source": "Hacker News",
-        "score": 201
+        "score": 12
       }
     ],
     "ai": [
       {
-        "title": "OpenArch – PyTorch implementations of modern LLM architectures",
-        "url": "https://github.com/anuj0456/OpenArch",
+        "title": "Why don't machine learning research agents overfit?",
+        "url": "https://www.amazon.science/blog/why-dont-machine-learning-research-agents-overfit",
         "source": "Hacker News AI",
-        "score": 48
+        "score": 43
       },
       {
-        "title": "Watch AI materials-science and bioscience abilities closely",
-        "url": "https://www.lesswrong.com/posts/SCtkSz4nQ9icLZ4uq/watch-ai-materials-science-and-bioscience-abilities-closely",
+        "title": "OpenAI bots knew about the RubyGems caching vulnerability",
+        "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 198
       },
       {
-        "title": "The case against JPEG XL",
-        "url": "https://giannirosato.com/blog/post/case-against-jxl/",
+        "title": "Adversarial Fashion Makes a Statement on AI Panopticon",
+        "url": "https://spectrum.ieee.org/adversarial-fashion",
         "source": "Hacker News AI",
-        "score": 191
+        "score": 58
       },
       {
-        "title": "Open-source AI and open models reading list",
-        "url": "https://www.interconnects.ai/p/open-source-ai-reading-list",
+        "title": "Show HN: Nari Qwen3-TTS and Qwen3-ASR – High accuracy, low latency and cost",
+        "url": "https://narilabs.com/blog/nari-labs-leads-coval-voice-ai-benchmarks/",
         "source": "Hacker News AI",
-        "score": 122
+        "score": 10
       },
       {
-        "title": "The Malicious Use of Artificial Intelligence",
-        "url": "https://arxiv.org/abs/1802.07228",
+        "title": "When LLM judges agree, should we believe them?",
+        "url": "https://www.amazon.science/blog/when-llm-judges-agree-should-we-believe-them",
         "source": "Hacker News AI",
-        "score": 72
+        "score": 21
       },
       {
-        "title": "Reverse-Engineering Claude Web's MicroVM: Uncovering Anthropic's Hidden Antspace",
-        "url": "https://aprilnea.me/en/blog/reverse-engineering-claude-code-antspace",
+        "title": "Claude is a Contrarian",
+        "url": "https://medium.com/@rdsubhas/claude-is-a-contrarian-dbce4de5cada",
         "source": "Hacker News AI",
-        "score": 99
+        "score": 80
       },
       {
-        "title": "Big AI sets out its terms for regulatory capture",
-        "url": "https://www.theregister.com/ai-and-ml/2026/09/14/big-ai-sets-out-its-terms-for-regulatory-capture-and-calls-it-pace-the-frontier/5296067",
+        "title": "Transitions.dev: UI transitions for AI agents",
+        "url": "https://transitions.dev/",
+        "source": "Hacker News AI",
+        "score": 19
+      },
+      {
+        "title": "Fitting Neural Textures and PBR Material Maps with ES (No Backprop)",
+        "url": "http://richg42.blogspot.com/2026/09/fitting-neural-texture-and-pbr-material.html",
         "source": "Hacker News AI",
         "score": 7
       },
       {
-        "title": "AI Risk: The Approval Nobody Signed Off",
-        "url": "https://sdarchitect.blog/2026/09/06/ai-risk-a-users-guide-part-i-the-approval-nobody-signed/",
+        "title": "Show HN: Kinesis – Control your Mac with the Meta Neural Band",
+        "url": "https://github.com/callbacked/kinesis",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 103
       },
       {
-        "title": "Sean Carroll explains the biggest ideas in the universe – Full Interview [video] (2025)",
-        "url": "https://www.youtube.com/watch?v=_TBNJyztai0",
+        "title": "China's Regulators Take Aim at \"AI Boyfriends\"",
+        "url": "https://spectrum.ieee.org/china-ai-chatbot-regulation",
         "source": "Hacker News AI",
-        "score": 91
+        "score": 48
       },
       {
-        "title": "Who gets to define the rules for AI?",
-        "url": "https://cohere.com/blog/who-gets-to-define-the-rules-for-ai",
+        "title": "Apple's Siri AI Can Be Swapped Out for Claude, ChatGPT, Code Shows",
+        "url": "https://www.macrumors.com/2026/09/14/siri-can-be-swapped-out-for-chatgpt-claude/",
         "source": "Hacker News AI",
-        "score": 44
+        "score": 205
+      },
+      {
+        "title": "OpenArch – PyTorch implementations of modern LLM architectures",
+        "url": "https://github.com/anuj0456/OpenArch",
+        "source": "Hacker News AI",
+        "score": 123
       }
     ],
     "news": [
@@ -170,32 +182,42 @@
         "source": "BBC World"
       },
       {
-        "title": "Thousands demand end to violence in Mexican cartel hotspot ",
-        "url": "https://www.bbc.co.uk/news/articles/cde06rxw5g6o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Swedish left-wing bloc narrowly ahead with election too close to call",
         "url": "https://www.bbc.co.uk/news/articles/c0qx5d79kdeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Six dead, 130 missing after Indonesian ferry capsizes in Java Sea",
-        "url": "https://www.bbc.co.uk/news/articles/cvgykzgljlyo?at_medium=RSS&at_campaign=rss",
+        "title": "Wild dogs record 2,500-mile trek across Zambia in search of a mate",
+        "url": "https://www.bbc.co.uk/news/articles/cy459y5y9yxo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Thousands demand end to violence in Mexican cartel hotspot ",
+        "url": "https://www.bbc.co.uk/news/articles/cde06rxw5g6o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Body of missing runner found in South Africa",
+        "url": "https://www.bbc.co.uk/news/articles/cxyvzggzd5jgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Malaysian boy acquitted for murder of schoolgirl on grounds of insanity",
         "url": "https://www.bbc.co.uk/news/articles/ce87qzrz7p8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Zambians warned not to eat dead wildlife after anthrax kills dozens of animals",
-        "url": "https://www.bbc.co.uk/news/articles/ce8en6v3601o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " These most luxurious Bluetooth headphones we've reviewed have a massive $580 off ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/these-most-luxurious-bluetooth-headphones-weve-reviewed-have-a-massive-usd580-off",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " “A kick in the face to every woman”: Sydney Sweeney torn apart for racy sports ad ",
+        "url": "https://www.creativebloq.com/design/advertising/a-kick-in-the-face-to-every-woman-sydney-sweeney-torn-apart-for-racy-sports-ad",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The best Mac for content creators: These are our 4 tried and tested options for you ",
         "url": "https://www.creativebloq.com/tech/laptops/the-best-mac-for-content-creators-these",
@@ -220,89 +242,79 @@
         "title": " How I created a dramatic fight scene for the cover of a fantasy book in the aesthetic that I grew up with ",
         "url": "https://www.creativebloq.com/3d/how-i-created-a-dramatic-fight-scene-for-the-cover-of-a-fantasy-book-in-the-aesthetic-that-i-grew-up-with",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " These cat animation designs look nothing like what I expected ",
-        "url": "https://www.creativebloq.com/art/animation/these-cat-animation-designs-look-nothing-like-what-i-expected",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " 'I'm conscious of remaining open and curious and uncynical': 5 questions with Tom Murphy ",
-        "url": "https://www.creativebloq.com/professional-development/creative-careers/im-conscious-of-remaining-open-and-curious-and-uncynical-5-questions-with-tom-murphy",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
-        "title": "AI uncovers hidden Ozempic side effects across 400,000 Reddit posts",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260912222856.htm",
+        "title": "Scientists discover strange link between low vitamin D and pain",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260914042053.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists find a new layer of Alzheimer’s hidden in the genome",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260912220051.htm",
+        "title": "Cancer is rising in younger adults. Faster biological aging may help explain why",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260913082200.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Physicists can’t agree on how the Universe works",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260912220041.htm",
+        "title": "Chemistry textbooks have been getting this wrong for nearly 100 years",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260913082157.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists are building a microscope powered by a quantum computer",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260912220038.htm",
+        "title": "Hidden brain wiring may help keep the mind sharp as gray matter shrinks",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260913081921.htm",
         "source": "Science Daily"
       },
       {
-        "title": "NASA-backed scientists turn plastic waste into edible cookies",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260912220033.htm",
+        "title": "This German submarine sank in 1917. It’s still leaking TNT",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260913081919.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Global warming is breaking a 400-year climate link between two oceans",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260912220029.htm",
+        "title": "Scientists find a hidden cause of high blood pressure that routine tests can miss",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260913081916.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Physicists discover a hidden “curveball” in quantum light",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260912220025.htm",
+        "title": "Crocodiles are famous for finding their way home. These ones didn’t",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260913081913.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Fortnite Confirms Kingdom Hearts Collab Release Date, and It's Bigger Than Expected",
-        "url": "https://www.polygon.com/fortnite-kingdom-hearts-collab-skins-release-date/",
+        "title": "Valve's VR Headset Costs $1,000+, and Reservations Are Open Now",
+        "url": "https://www.polygon.com/steam-machine-valve-vr-headset-price-availability-how-to-preorder/",
         "source": "Polygon"
       },
       {
-        "title": "'Marvel’s Wolverine' Voice Actor Reveals Who Inspired His Take on Logan",
-        "url": "https://www.polygon.com/marvels-wolverine-liam-mcintyre-performance-inspirations/",
+        "title": "Sega and Netflix Announce an Official Crazy Taxi Movie",
+        "url": "https://www.polygon.com/crazy-taxi-movie-announced-sega-netflix-sonic-stranger-than-fiction/",
         "source": "Polygon"
       },
       {
-        "title": "Clair Obscur Expedition 33 Director Comments on Sandfall's Next Game",
-        "url": "https://www.polygon.com/clair-obscur-expedition-33-developer-next-game/",
+        "title": "New Walmart promo is the safest way to buy 'Pokémon' 30th anniversary TCG on release day",
+        "url": "https://www.polygon.com/walmart-pokemon-30th-anniversary-tcg-card-release-raffle-drawing-when-what/",
         "source": "Polygon"
       },
       {
-        "title": "After 'Reacher' Season 4 Ends, Here Are Alan Ritchson's 10 Best Performances to Watch Next",
-        "url": "https://www.polygon.com/alan-ritchson-best-movies-tv-shows-ranked/",
+        "title": "Rayman Legends Retold Officially Delayed Less Than a Month Before Release",
+        "url": "https://www.polygon.com/rayman-legends-retold-ubisoft-delay/",
         "source": "Polygon"
       },
       {
-        "title": "9 Sci-Fi Series on Netflix That Are Perfect from Start to Finish",
-        "url": "https://www.polygon.com/best-sci-fi-shows-netflix-perfect/",
+        "title": "Lies of P Leak All but Confirms Where the Series Goes Next",
+        "url": "https://www.polygon.com/lies-of-p-2-sequel-title-leaked/",
         "source": "Polygon"
       },
       {
-        "title": "‘Rick and Morty’ Creator Dan Harmon Reveals the Complex Leprechaun Lore Invented for His New Show",
-        "url": "https://www.polygon.com/president-curtis-dan-harmon-leprechauns-interview/",
+        "title": "Jason Statham's 95-minute Action Thriller Officially Redeems Itself on Streaming",
+        "url": "https://www.polygon.com/jason-statham-mutiny-streaming-hit-amazon-apple-tv-september-2026/",
         "source": "Polygon"
       },
       {
-        "title": "14 Years Later, Batman’s Most Overlooked Movie of the Century Is Officially Free on Streaming",
-        "url": "https://www.polygon.com/batman-the-dark-knight-returns-free-on-youtube/",
+        "title": "Fans Think Mortal Kombat Dev’s DC Fighting Game Is About to Make a Big Comeback",
+        "url": "https://www.polygon.com/injustice-3-dc-fighting-game-announcement-rumor-leak/",
         "source": "Polygon"
       }
     ],
