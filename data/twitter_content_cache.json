@@ -1,51 +1,87 @@
 {
   "metadata": {
-    "last_updated": "2026-09-15T17:59:16.937947",
-    "total_items": 61
+    "last_updated": "2026-09-15T21:13:37.131314",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "Dystopian Surveillance Is Becoming a Reality",
-        "url": "https://dallincrump.com/dystopian-surveillance-is-becoming-a-reality",
+        "title": "Introducing System One Models and Jev",
+        "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
         "source": "Hacker News",
-        "score": 78
+        "score": 319
       },
       {
         "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
         "url": "https://github.com/arnegiacomo/fugleramme",
         "source": "Hacker News",
-        "score": 776
+        "score": 1094
+      },
+      {
+        "title": "An Update on Wayback Machine Access",
+        "url": "https://blog.archive.org/2026/09/15/an-update-on-wayback-machine-access/",
+        "source": "Hacker News",
+        "score": 237
+      },
+      {
+        "title": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
+        "source": "Hacker News",
+        "score": 169
+      },
+      {
+        "title": "We got admin access to Baseten's production GitHub in 25 minutes",
+        "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover",
+        "source": "Hacker News",
+        "score": 144
+      },
+      {
+        "title": "Jean-Pierre Serre is 100 years old today",
+        "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Serre/",
+        "source": "Hacker News",
+        "score": 10
+      },
+      {
+        "title": "WangNet – 1.8 MB, zero-dependency Numberwang adjudication in 11 languages",
+        "url": "https://github.com/GraafHenk/numberwang",
+        "source": "Hacker News",
+        "score": 47
+      },
+      {
+        "title": "Chopping up books when they're physically too big",
+        "url": "https://attainablefelicity.mattkirkland.com/20260915/cut-up-your-books.html",
+        "source": "Hacker News",
+        "score": 55
       },
       {
         "title": "Show HN: Capsule – Single-file web apps that save their data into SQLite",
         "url": "https://withcapsule.app/",
         "source": "Hacker News",
-        "score": 176
-      },
-      {
-        "title": "GEFS on OpenBSD: A Early Preview",
-        "url": "https://marc.info/?l=openbsd-tech&m=178948744271633&w=2",
-        "source": "Hacker News",
-        "score": 20
+        "score": 240
       },
       {
         "title": "I can't stop thinking about Papua New Guinea",
         "url": "https://notnottalmud.substack.com/p/why-i-cant-stop-thinking-about-papua",
         "source": "Hacker News",
-        "score": 781
+        "score": 942
       },
       {
-        "title": "Show HN: Hacking a $20 4G wireless hotspot into a texting device",
-        "url": "https://bkovac.github.io/modem-thing/",
+        "title": "GEFS on OpenBSD: A Early Preview",
+        "url": "https://marc.info/?l=openbsd-tech&m=178948744271633&w=2",
         "source": "Hacker News",
-        "score": 122
+        "score": 77
       },
       {
-        "title": "There's a 100% Chance AI Agents Are Ruining the Internet",
-        "url": "https://www.404media.co/theres-a-100-chance-ai-agents-are-already-ruining-the-internet/",
+        "title": "Building a Linux GPU Driver for the M4 Mac Mini in One Month",
+        "url": "https://codyho.dev/blog/gpu-driver/",
         "source": "Hacker News",
-        "score": 140
+        "score": 17
+      },
+      {
+        "title": "The CSS Zen Garden dream, finally shipped",
+        "url": "https://josprague.com/blog/the-css-zen-garden-dream-finally-shipped/",
+        "source": "Hacker News",
+        "score": 100
       },
       {
         "title": "Jiga (YC W21) Is Hiring Product Engineer (Remote/US)",
@@ -54,114 +90,72 @@
         "score": 1
       },
       {
-        "title": "The CSS Zen Garden dream, finally shipped",
-        "url": "https://josprague.com/blog/the-css-zen-garden-dream-finally-shipped/",
-        "source": "Hacker News",
-        "score": 50
-      },
-      {
         "title": "Cartesian – AI 3D Modeling for Design",
         "url": "https://www.formas.ai/cartesian",
         "source": "Hacker News",
-        "score": 50
-      },
-      {
-        "title": "Let's make quality the norm again",
-        "url": "https://www.forbrukerradet.no/short-life/",
-        "source": "Hacker News",
-        "score": 157
-      },
-      {
-        "title": "The Inference Hardware Revolution of 2026",
-        "url": "https://spectrum.ieee.org/inference-hardware-revolution",
-        "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "Archiving pirate radio station Kool FM",
-        "url": "https://londonist.com/london/music/kool-fm-archives",
-        "source": "Hacker News",
-        "score": 53
-      },
-      {
-        "title": "Closing the IPv6 first-packet gap with GRAND",
-        "url": "https://labs.ripe.net/author/pouria/closing-the-ipv6-first-packet-gap-with-grand/",
-        "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "25 years of mass surveillance is enough",
-        "url": "https://www.schneier.com/blog/archives/2026/09/25-years-of-mass-surveillance-is-enough.html",
-        "source": "Hacker News",
-        "score": 572
+        "score": 72
       }
     ],
     "ai": [
       {
-        "title": "There's a 100% Chance AI Agents Are Ruining the Internet",
-        "url": "https://www.404media.co/theres-a-100-chance-ai-agents-are-already-ruining-the-internet/",
+        "title": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
         "source": "Hacker News AI",
-        "score": 140
+        "score": 169
       },
       {
         "title": "Cartesian – AI 3D Modeling for Design",
         "url": "https://www.formas.ai/cartesian",
         "source": "Hacker News AI",
-        "score": 50
+        "score": 72
       },
       {
         "title": "Let's make quality the norm again",
         "url": "https://www.forbrukerradet.no/short-life/",
         "source": "Hacker News AI",
-        "score": 157
-      },
-      {
-        "title": "A single firm is behind OpenAI, Anthropic, and Meta hacking scandals",
-        "url": "https://www.effort.news/irregular",
-        "source": "Hacker News AI",
-        "score": 154
-      },
-      {
-        "title": "How much of F-Droid is LLM generated?",
-        "url": "https://tintotint.eu/whacky-corner/f-droid_slop/",
-        "source": "Hacker News AI",
-        "score": 92
-      },
-      {
-        "title": "What we have learned at OpenShell applying formal methods to control AI agents",
-        "url": "https://nvidia.github.io/OpenShell-Research/dev-notes/posts/2026-09-10-learning-formal-methods-agent-policy-prover/",
-        "source": "Hacker News AI",
-        "score": 17
-      },
-      {
-        "title": "GRP-Obliteration: Unaligning LLMs with a Single Unlabeled Prompt",
-        "url": "https://arxiv.org/abs/2602.06258",
-        "source": "Hacker News AI",
-        "score": 13
+        "score": 244
       },
       {
         "title": "Suspected sabotage causes major Netherlands rail disruption",
         "url": "https://www.bbc.com/news/articles/c8ly49w9g1edo",
         "source": "Hacker News AI",
-        "score": 357
+        "score": 374
       },
       {
-        "title": "OpenAI buys smartphone camera maker Glass Imaging for $300M",
-        "url": "https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/",
+        "title": "A single firm is behind OpenAI, Anthropic, and Meta hacking scandals",
+        "url": "https://www.effort.news/irregular",
         "source": "Hacker News AI",
-        "score": 111
+        "score": 342
       },
       {
-        "title": "Charges Against Man Who Destroyed 3D-Printed 'Decoy' Flock Camera Reduced",
-        "url": "https://www.404media.co/charges-against-man-who-destroyed-3d-printed-decoy-flock-camera-drastically-reduced-after-state-admits-it-was-not-very-valuable/",
+        "title": "Iran war has cost on average $246M per day in its first five months",
+        "url": "https://www.cnbc.com/2026/09/15/cbo-iran-war-cost-pentagon-weapons.html",
         "source": "Hacker News AI",
         "score": 9
       },
       {
-        "title": "TSMC revealing details about next gen A14 node",
-        "url": "https://iedm26.mapyourshow.com/8_0/sessions/session-details.cfm?scheduleid=331",
+        "title": "Leaving Proton Mail",
+        "url": "https://runarcn.no/leaving-proton-mail/",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 12
+      },
+      {
+        "title": "How much of F-Droid is LLM generated?",
+        "url": "https://tintotint.eu/whacky-corner/f-droid_slop/",
+        "source": "Hacker News AI",
+        "score": 116
+      },
+      {
+        "title": "AI 'kill switch' may need to be mandatory, Anthropic co-founder tells BBC",
+        "url": "https://www.bbc.com/news/articles/cqgk5e2j0gg8o",
+        "source": "Hacker News AI",
+        "score": 32
+      },
+      {
+        "title": "What we have learned at OpenShell applying formal methods to control AI agents",
+        "url": "https://nvidia.github.io/OpenShell-Research/dev-notes/posts/2026-09-10-learning-formal-methods-agent-policy-prover/",
+        "source": "Hacker News AI",
+        "score": 28
       }
     ],
     "news": [
@@ -181,6 +175,11 @@
         "source": "BBC World"
       },
       {
+        "title": "South African president vows justice as more women's bodies found near Johannesburg",
+        "url": "https://www.bbc.co.uk/news/articles/crgqde1nex2vo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Two sailors missing after tanker attacked in Strait of Hormuz, Oman says",
         "url": "https://www.bbc.co.uk/news/articles/c3n07ydqdzlvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -194,14 +193,14 @@
         "title": "Canada is a 'safe harbour' for global finance, Carney says",
         "url": "https://www.bbc.co.uk/news/articles/cmq8jdgel128o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Ed Sheeran says it was 'not my decision' to drop Macklemore from tour",
-        "url": "https://www.bbc.co.uk/news/articles/c3vgyn49y4l7o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Pre-order The Legend of Zelda: Ocarina of Time remake: There's only one downside ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/pre-order-the-legend-of-zelda-ocarina-of-time-remake-theres-only-one-downside",
+        "source": "Creative Bloq"
+      },
       {
         "title": " There's no way this Elon Musk movie poster isn't ironic ",
         "url": "https://www.creativebloq.com/design/poster-design/theres-no-way-this-elon-musk-movie-poster-isnt-ironic",
@@ -228,13 +227,8 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " The Digger poster design strikes graphic design gold ",
+        "title": " The Digger poster strikes graphic design gold ",
         "url": "https://www.creativebloq.com/design/poster-design/the-digger-poster-design-strikes-graphic-design-gold",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Lenovo Yoga Pro 27UD-10 review: an all-in-one monitor that earns its keep ",
-        "url": "https://www.creativebloq.com/tech/monitors/the-lenovo-yoga-pro-27ud-10-review-an-all-in-one-monitor-that-earns-its-keep",
         "source": "Creative Bloq"
       }
     ],
@@ -277,6 +271,31 @@
     ],
     "gaming": [
       {
+        "title": "God of War Laufey Now Has a Lot To Prove After Wolverine’s Messy Launch",
+        "url": "https://www.polygon.com/god-of-war-laufey-marvels-wolverine-analysis/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Say Goodbye to Fallout's Best Replacement Before it Leaves Game Pass Forever",
+        "url": "https://www.polygon.com/atomfall-game-pass-recommendation/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Target Will Be Unusually Strict For Pokémon's 30th Anniversary TCG Set Release",
+        "url": "https://www.polygon.com/target-pokemon-30th-anniversary-tcg-drop-limits-etb-new-rules/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Marvel’s Wolverine’s Cartoon Suits Are a Crime Against Humanity",
+        "url": "https://www.polygon.com/marvels-wolverine-cartoon-suits-crime-against-humanity/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Apex Legends' Is Officially Crossing Over With Fall’s Most-Anticipated Action Movie",
+        "url": "https://www.polygon.com/street-fighter-6-apex-legends-crossover-release-date-skins/",
+        "source": "Polygon"
+      },
+      {
         "title": "What time does Black Ops 7 Season 6 start in your time zone?",
         "url": "https://www.polygon.com/call-of-duty-black-ops-7-bo7-season-6-start-time-edt-pdt/",
         "source": "Polygon"
@@ -284,31 +303,6 @@
       {
         "title": "'Make Some Noise' Officially Bringing Back a Dropout Fan-Favorite",
         "url": "https://www.polygon.com/dropout-make-some-noise-season-5-trailer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Hyped 'Pokémon' 30th Anniversary TCG Release Reaches A Depressing New Low ",
-        "url": "https://www.polygon.com/pokemon-30th-anniversary-dicks-sporting-goods-gamestop-upc-release/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Xbox’s Next Big RPG ‘Sticks the Landing,’ Promises Dev",
-        "url": "https://www.polygon.com/fable-rpg-reboot-xbox-ending/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Next 'Jujutsu Kaisen' Release Officially Hit With Massive Delay",
-        "url": "https://www.polygon.com/jujutsu-kaisen-rumble-survivaton-game-delay-2027/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Critical Role Officially Shakes Up Its Campaign 4 Formula",
-        "url": "https://www.polygon.com/critical-role-campaign-4-schedule-confusion/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Pokémon Officially Wins GOTY During Its 30th Anniversary",
-        "url": "https://www.polygon.com/pokemon-pokopia-goty-game-of-the-year-japan-game-awards-2026/",
         "source": "Polygon"
       }
     ],
