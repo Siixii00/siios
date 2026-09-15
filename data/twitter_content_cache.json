@@ -1,155 +1,137 @@
 {
   "metadata": {
-    "last_updated": "2026-09-15T07:19:38.592677",
-    "total_items": 52
+    "last_updated": "2026-09-15T13:13:25.821037",
+    "total_items": 56
   },
   "content": {
     "tech": [
       {
+        "title": "I can't stop thinking about Papua New Guinea",
+        "url": "https://notnottalmud.substack.com/p/why-i-cant-stop-thinking-about-papua",
+        "source": "Hacker News",
+        "score": 460
+      },
+      {
+        "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
+        "url": "https://github.com/arnegiacomo/fugleramme",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Alternatives to MinIO for single-node local S3",
+        "url": "https://rmoff.net/2026/01/14/alternatives-to-minio-for-single-node-local-s3/",
+        "source": "Hacker News",
+        "score": 94
+      },
+      {
+        "title": "Suspected sabotage causes major Netherlands rail disruption",
+        "url": "https://www.bbc.com/news/articles/c8ly49w9g1edo",
+        "source": "Hacker News",
+        "score": 238
+      },
+      {
+        "title": "CSS-Tricks in Limbo",
+        "url": "https://vale.rocks/micros/20260915-0135",
+        "source": "Hacker News",
+        "score": 105
+      },
+      {
+        "title": "25 Years of Mass Surveillance Is Enough",
+        "url": "https://www.schneier.com/blog/archives/2026/09/25-years-of-mass-surveillance-is-enough.html",
+        "source": "Hacker News",
+        "score": 96
+      },
+      {
         "title": "iOS 27, iPadOS 27, and macOS 27",
         "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/",
         "source": "Hacker News",
-        "score": 548
-      },
-      {
-        "title": "Linux from Scratch",
-        "url": "https://www.linuxfromscratch.org/",
-        "source": "Hacker News",
-        "score": 94
+        "score": 658
       },
       {
         "title": "OpenArm: An open-source 7DOF humanoid arm",
         "url": "https://github.com/enactic/OpenArm",
         "source": "Hacker News",
-        "score": 44
+        "score": 138
+      },
+      {
+        "title": "The k-server conjecture is true",
+        "url": "https://arxiv.org/abs/2609.15979",
+        "source": "Hacker News",
+        "score": 45
+      },
+      {
+        "title": "OpenAI buys smartphone camera maker Glass Imaging for $300M",
+        "url": "https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "A rough guide for going back to the Moon",
+        "url": "https://research.ibm.com/blog/nasa-ibm-lunar-foundation-model",
+        "source": "Hacker News",
+        "score": 21
       },
       {
         "title": "4,400-Year-Old Tomb of Egyptian Judge Found at Saqqara with Colors on Walls",
         "url": "https://arkeonews.net/4400-year-old-tomb-of-an-egyptian-judge-found-at-saqqara-with-colors-still-on-the-walls/",
         "source": "Hacker News",
-        "score": 111
+        "score": 175
       },
       {
         "title": "Pion, an agent designed to run any company autonomously",
         "url": "https://andonlabs.com/blog/why-we-built-pion",
         "source": "Hacker News",
-        "score": 367
+        "score": 438
       },
       {
-        "title": "Charts built for Chat",
-        "url": "https://dbtcharts.com/blog/charts-built-for-chat/",
+        "title": "Linux from Scratch",
+        "url": "https://www.linuxfromscratch.org/",
         "source": "Hacker News",
-        "score": 201
+        "score": 260
       },
       {
-        "title": "Lingo.dev (YC F24) is hiring a senior content engineer (Remote, worldwide)",
-        "url": "https://lingo.dev/en/careers/ff88132a-cb79-4d35-a6a0-a6230de7a013",
+        "title": "When Google Cuts Off Access: Poland and the World",
+        "url": "https://dossier.reasoner.pl/artykul/",
         "source": "Hacker News",
-        "score": 1
-      },
-      {
-        "title": "When code is a maze, smart developers make maps (2025)",
-        "url": "https://medium.com/@simonsmartiom/when-code-is-a-maze-smart-developers-make-maps-fbc452a48c1b",
-        "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "XCancel service is suspended until further notice",
-        "url": "https://xcancel.com/#",
-        "source": "Hacker News",
-        "score": 584
-      },
-      {
-        "title": "Dropping eBPF CPU Cost by About 90% with Memoization (Not AI Gen)",
-        "url": "https://nathannaveen.dev/posts/dropping-ebpf-cpu-cost-by-90/",
-        "source": "Hacker News",
-        "score": 91
-      },
-      {
-        "title": "OpenAI bots knew about the RubyGems caching vulnerability",
-        "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
-        "source": "Hacker News",
-        "score": 431
-      },
-      {
-        "title": "Distributed Systems Classics (2017)",
-        "url": "https://nvartolomei.com/dist-sys-classics/",
-        "source": "Hacker News",
-        "score": 280
-      },
-      {
-        "title": "Compressing a flag to 11 bits",
-        "url": "https://read.vantezzen.io/miniflags",
-        "source": "Hacker News",
-        "score": 120
-      },
-      {
-        "title": "A beginning for mathematics",
-        "url": "https://www.daniellitt.com/blog/2026/9/13/a-beginning-for-mathematics/",
-        "source": "Hacker News",
-        "score": 201
-      },
-      {
-        "title": "Show HN: Macros with a Behringer FCB1010 MIDI Pedalboard in macOS",
-        "url": "https://github.com/JamesRyanATX/fcbnerd",
-        "source": "Hacker News",
-        "score": 56
+        "score": 10
       }
     ],
     "ai": [
       {
-        "title": "Dropping eBPF CPU Cost by About 90% with Memoization (Not AI Gen)",
-        "url": "https://nathannaveen.dev/posts/dropping-ebpf-cpu-cost-by-90/",
+        "title": "Suspected sabotage causes major Netherlands rail disruption",
+        "url": "https://www.bbc.com/news/articles/c8ly49w9g1edo",
         "source": "Hacker News AI",
-        "score": 91
+        "score": 238
+      },
+      {
+        "title": "OpenAI buys smartphone camera maker Glass Imaging for $300M",
+        "url": "https://techcrunch.com/2026/09/14/openai-buys-smartphone-camera-maker-glass-imaging-for-300-million-report-says/",
+        "source": "Hacker News AI",
+        "score": 27
       },
       {
         "title": "OpenAI bots knew about the RubyGems caching vulnerability",
         "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
         "source": "Hacker News AI",
-        "score": 431
+        "score": 487
+      },
+      {
+        "title": "Dropping eBPF CPU Cost by About 90% with Memoization (Not AI Gen)",
+        "url": "https://nathannaveen.dev/posts/dropping-ebpf-cpu-cost-by-90/",
+        "source": "Hacker News AI",
+        "score": 137
+      },
+      {
+        "title": "Let's make quality the norm again",
+        "url": "https://www.forbrukerradet.no/short-life/",
+        "source": "Hacker News AI",
+        "score": 96
       },
       {
         "title": "Ex-FTC boss Khan: break out the handcuffs for AI CEOs, citing 1934 precedent",
         "url": "https://www.theregister.com/ai-and-ml/2026/09/14/ex-ftc-boss-khan-urges-uncle-sam-to-break-out-the-handcuffs-for-ai-ceos-citing-1934-precedent/5296325",
         "source": "Hacker News AI",
-        "score": 145
-      },
-      {
-        "title": "Why don't machine learning research agents overfit?",
-        "url": "https://www.amazon.science/blog/why-dont-machine-learning-research-agents-overfit",
-        "source": "Hacker News AI",
-        "score": 123
-      },
-      {
-        "title": "GPT-5.6 Luna vs. GPT-6 Astra: Is a $1.20 Model Good Enough for Code Review?",
-        "url": "https://entelligence.ai/blogs/gpt-5.6-luna-vs-gpt-6-astra-is-a-1.20-model-good-enough-for-code-review",
-        "source": "Hacker News AI",
-        "score": 142
-      },
-      {
-        "title": "Show HN: Nari Qwen3-TTS and Qwen3-ASR – High accuracy, low latency and cost",
-        "url": "https://narilabs.com/blog/nari-labs-leads-coval-voice-ai-benchmarks/",
-        "source": "Hacker News AI",
-        "score": 79
-      },
-      {
-        "title": "Adversarial Fashion Makes a Statement on AI Panopticon",
-        "url": "https://spectrum.ieee.org/adversarial-fashion",
-        "source": "Hacker News AI",
-        "score": 102
-      },
-      {
-        "title": "Largest known Roman mosaic, beneath Baths of Trajan, opens to the public",
-        "url": "https://www.theartnewspaper.com/2026/09/14/largest-roman-mosaic-opens-to-the-public",
-        "source": "Hacker News AI",
-        "score": 53
-      },
-      {
-        "title": "Anthropic is in regulatory-capture financial loop",
-        "url": "https://twitter.com/kevinnbass/status/2099626156660043891",
-        "source": "Hacker News AI",
-        "score": 57
+        "score": 188
       }
     ],
     "news": [
@@ -159,13 +141,23 @@
         "source": "BBC World"
       },
       {
+        "title": "AI regulation faces political deadlock as calls grow for Congress to act",
+        "url": "https://www.bbc.co.uk/news/articles/ck20989806e9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Denmark says Russian warship fired flares at military helicopter",
+        "url": "https://www.bbc.co.uk/news/articles/cwn8mjl31p5yo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Welsh actor Matthew Rhys makes Emmy Awards history with double win",
         "url": "https://www.bbc.co.uk/news/articles/cqlykdx48xrpo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Nato jets down drone that entered Lithuanian airspace",
-        "url": "https://www.bbc.co.uk/news/articles/cjx2zgk7edlzo?at_medium=RSS&at_campaign=rss",
+        "title": "Suspected sabotage causes major Netherlands rail disruption",
+        "url": "https://www.bbc.co.uk/news/articles/c8ly49w9g1edo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -174,26 +166,67 @@
         "source": "BBC World"
       },
       {
-        "title": "Wild dogs record 2,500-mile trek across Zambia in search of a mate",
-        "url": "https://www.bbc.co.uk/news/articles/cy459y5y9yxo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Legendary costume designer Bob Mackie dies aged 87",
-        "url": "https://www.bbc.co.uk/news/articles/cmpq04wx8l4eo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Donald Trump Jr and Bettina Trump say Putin ally paid for some wedding festivities as a 'gift'",
         "url": "https://www.bbc.co.uk/news/articles/cmqjkg121kr9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " Embrace the Fashion Week flavour with these colourful kitchen accessories ",
+        "url": "https://www.creativebloq.com/creative-inspiration/embrace-the-fashion-week-flavour-with-these-colourful-kitchen-accessories",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Final Fantasy VII inspired this artist to create her own worlds ",
+        "url": "https://www.creativebloq.com/3d/3d-art/final-fantasy-vii-inspired-this-artist-to-create-her-own-worlds",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Digger poster design strikes graphic design gold ",
+        "url": "https://www.creativebloq.com/design/poster-design/the-digger-poster-design-strikes-graphic-design-gold",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Lenovo Yoga Pro 27UD-10 review: an all-in-one monitor that earns its keep ",
+        "url": "https://www.creativebloq.com/tech/monitors/the-lenovo-yoga-pro-27ud-10-review-an-all-in-one-monitor-that-earns-its-keep",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The branding of Apple's rumoured iPhone gaming controllers is kind of weird ",
+        "url": "https://www.creativebloq.com/tech/the-branding-of-apples-rumoured-iphone-gaming-controllers-is-kind-of-weird",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The only budget ergonomic office chair our ecom editor wanted to keep has $30 off ",
+        "url": "https://www.creativebloq.com/tech/chairs-desks/the-only-budget-ergonomic-office-chair-our-ecom-editor-wanted-to-keep-has-usd30-off",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " These most luxurious Bluetooth headphones we've reviewed have a massive $580 off ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/these-most-luxurious-bluetooth-headphones-weve-reviewed-have-a-massive-usd580-off",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
+      {
+        "title": "The U.S. Eradicated this flesh-eating parasite. Now it’s back",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260914102439.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Supermassive black hole winds are 100 times more powerful than scientists thought",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260914102429.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Scientists discover strange link between low vitamin D and pain",
         "url": "https://www.sciencedaily.com/releases/2026/09/260914042053.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Nearly 10,000 patients reveal what works best for knee arthritis pain relief",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260913082208.htm",
         "source": "Science Daily"
       },
       {
@@ -210,57 +243,42 @@
         "title": "Chemistry textbooks have been getting this wrong for nearly 100 years",
         "url": "https://www.sciencedaily.com/releases/2026/09/260913082157.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "A coral reef thought dead for 60 years is teeming with life",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260913081927.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Hidden brain wiring may help keep the mind sharp as gray matter shrinks",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260913081921.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "This German submarine sank in 1917. It’s still leaking TNT",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260913081919.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Walton Goggins's Performance is a Standout in HBO's Overlooked, Near-Perfect Comedy",
-        "url": "https://www.polygon.com/walton-goggins-righteous-gemstones-overlooked/",
+        "title": "'Slow Horses' Head Writer Promises Not to Kill Your Favorite Character, Unless Mick Herron Does First",
+        "url": "https://www.polygon.com/slow-horses-season-6-gaby-chiappe-interview/",
         "source": "Polygon"
       },
       {
-        "title": "Fourth Wing Officially Returns in 2 Weeks — But There's a Catch",
-        "url": "https://www.polygon.com/threshing-day-empyrean-series-comes-out-2-weeks/",
+        "title": "COSMIC COMICS: Sci-Fi, Romance, and Superheroes in Space!",
+        "url": "https://www.polygon.com/video/cosmic-comics-sci-fi-romance-and-superheroes-in-space/",
         "source": "Polygon"
       },
       {
-        "title": "27 Years Later, 1 of the Best Detective Thriller Series of All Time is Officially Free on Streaming",
-        "url": "https://www.polygon.com/angel-streaming-rec-tubi/",
+        "title": "Justice League MOVIE: What Can We Expect?",
+        "url": "https://www.polygon.com/video/justice-league-movie-what-can-we-expect/",
         "source": "Polygon"
       },
       {
-        "title": "All bosses in Marvel's Wolverine",
-        "url": "https://www.polygon.com/marvels-wolverine-bosses-list/",
+        "title": "Why I'll Never Watch GOTHAM",
+        "url": "https://www.polygon.com/video/why-i-ll-never-watch-gotham/",
         "source": "Polygon"
       },
       {
-        "title": "Marvel's Wolverine mission list and length, explained",
-        "url": "https://www.polygon.com/marvels-wolverine-missions-list-length-how-long/",
+        "title": "Godzilla Officially Crosses Over With an Iconic Sega Character [Exclusive]",
+        "url": "https://www.polygon.com/sonic-the-hedgehog-x-godzilla-issue-3-excusive-look/",
         "source": "Polygon"
       },
       {
-        "title": "All whisky bottle locations in Marvel's Wolverine",
-        "url": "https://www.polygon.com/marvels-wolverine-whisky-bottle-locations-collectibles-where-to-find/",
+        "title": "The Problem with Netflix's Iron Fist",
+        "url": "https://www.polygon.com/video/the-problem-with-netflix-s-iron-fist/",
         "source": "Polygon"
       },
       {
-        "title": "All suits in Marvel's Wolverine and how to get them",
-        "url": "https://www.polygon.com/marvels-wolverine-suits-list-all-how-to-get/",
+        "title": "Who is Legion? Who Are the Runaways?",
+        "url": "https://www.polygon.com/video/who-is-legion-who-are-the-runaways/",
         "source": "Polygon"
       }
     ],
