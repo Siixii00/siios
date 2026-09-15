@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-14T22:18:35.911289",
+    "last_updated": "2026-09-15T01:13:43.150458",
     "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "Amazon vs. Perplexity – U.S. Court of Appeals for the Ninth Circuit",
-        "url": "https://law.justia.com/cases/federal/appellate-courts/ca9/26-1444/26-1444-2026-08-04.html",
+        "title": "iOS 27, iPadOS 27, and macOS 27",
+        "url": "https://www.apple.com/newsroom/2026/09/major-updates-for-apples-software-platforms-are-now-available/",
         "source": "Hacker News",
-        "score": 115
-      },
-      {
-        "title": "Distributed Systems Classics (2017)",
-        "url": "https://nvartolomei.com/dist-sys-classics/",
-        "source": "Hacker News",
-        "score": 201
-      },
-      {
-        "title": "A Beginning for Mathematics",
-        "url": "https://www.daniellitt.com/blog/2026/9/13/a-beginning-for-mathematics/",
-        "source": "Hacker News",
-        "score": 145
-      },
-      {
-        "title": "OpenAI bots knew about the RubyGems caching vulnerability",
-        "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
-        "source": "Hacker News",
-        "score": 319
-      },
-      {
-        "title": "How my e-reader lost its stripes",
-        "url": "https://www.serpentine.com/posts/2026/x3-stripes/",
-        "source": "Hacker News",
-        "score": 117
-      },
-      {
-        "title": "Principles for Fast Tokio Applications",
-        "url": "https://dial9-rs.github.io/blog/principles-for-fast-tokio-applications/",
-        "source": "Hacker News",
-        "score": 145
-      },
-      {
-        "title": "XCancel service is suspended until further notice",
-        "url": "https://xcancel.com/#",
-        "source": "Hacker News",
-        "score": 367
-      },
-      {
-        "title": "Why don't machine learning research agents overfit?",
-        "url": "https://www.amazon.science/blog/why-dont-machine-learning-research-agents-overfit",
-        "source": "Hacker News",
-        "score": 89
-      },
-      {
-        "title": "Dario, Please",
-        "url": "https://pop.rdi.sh/dario-please/",
-        "source": "Hacker News",
-        "score": 135
-      },
-      {
-        "title": "GPT-5.6 Luna vs. GPT-6 Astra: Is a $1.20 Model Good Enough for Code Review?",
-        "url": "https://entelligence.ai/blogs/gpt-5.6-luna-vs-gpt-6-astra-is-a-1.20-model-good-enough-for-code-review",
-        "source": "Hacker News",
-        "score": 68
-      },
-      {
-        "title": "Cloudflare AKE cuts origin HelloRetryRequests from 52% to 3.7%",
-        "url": "https://blog.cloudflare.com/automatic-key-exchange-for-origins/",
-        "source": "Hacker News",
-        "score": 66
+        "score": 355
       },
       {
         "title": "Pion, an agent designed to run any company autonomously",
         "url": "https://andonlabs.com/blog/why-we-built-pion",
         "source": "Hacker News",
-        "score": 220
+        "score": 277
       },
       {
-        "title": "Show HN: Neobrutalism.dev – Just added Base UI support and added new color theme",
-        "url": "https://www.neobrutalism.dev/",
+        "title": "Charts built for Chat",
+        "url": "https://dbtcharts.com/blog/charts-built-for-chat/",
         "source": "Hacker News",
-        "score": 117
+        "score": 82
       },
       {
-        "title": "Optimizing a Spin-Lock",
-        "url": "https://david.alvarezrosa.com/posts/optimizing-a-spin-lock/",
+        "title": "Show HN: Macros with a Behringer FCB1010 MIDI Pedalboard in macOS",
+        "url": "https://github.com/JamesRyanATX/fcbnerd",
         "source": "Hacker News",
-        "score": 18
+        "score": 29
       },
       {
         "title": "Compressing a Flag to 11 Bits",
         "url": "https://read.vantezzen.io/miniflags",
         "source": "Hacker News",
-        "score": 5
+        "score": 59
+      },
+      {
+        "title": "Distributed Systems Classics (2017)",
+        "url": "https://nvartolomei.com/dist-sys-classics/",
+        "source": "Hacker News",
+        "score": 231
+      },
+      {
+        "title": "OpenAI bots knew about the RubyGems caching vulnerability",
+        "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
+        "source": "Hacker News",
+        "score": 368
+      },
+      {
+        "title": "XCancel service is suspended until further notice",
+        "url": "https://xcancel.com/#",
+        "source": "Hacker News",
+        "score": 442
+      },
+      {
+        "title": "Dropping eBPF CPU Cost by About 90% with Memoization (Not AI Gen)",
+        "url": "https://nathannaveen.dev/posts/dropping-ebpf-cpu-cost-by-90/",
+        "source": "Hacker News",
+        "score": 20
+      },
+      {
+        "title": "Amazon vs. Perplexity – U.S. Court of Appeals for the Ninth Circuit",
+        "url": "https://law.justia.com/cases/federal/appellate-courts/ca9/26-1444/26-1444-2026-08-04.html",
+        "source": "Hacker News",
+        "score": 166
+      },
+      {
+        "title": "Principles for Fast Tokio Applications",
+        "url": "https://dial9-rs.github.io/blog/principles-for-fast-tokio-applications/",
+        "source": "Hacker News",
+        "score": 159
+      },
+      {
+        "title": "How my e-reader lost its stripes",
+        "url": "https://www.serpentine.com/posts/2026/x3-stripes/",
+        "source": "Hacker News",
+        "score": 149
+      },
+      {
+        "title": "Optimizing a Spin-Lock",
+        "url": "https://david.alvarezrosa.com/posts/optimizing-a-spin-lock/",
+        "source": "Hacker News",
+        "score": 40
+      },
+      {
+        "title": "Steam Frame starts at $1059",
+        "url": "https://store.steampowered.com/hardware/steamframe",
+        "source": "Hacker News",
+        "score": 486
+      },
+      {
+        "title": "Why don't machine learning research agents overfit?",
+        "url": "https://www.amazon.science/blog/why-dont-machine-learning-research-agents-overfit",
+        "source": "Hacker News",
+        "score": 103
       }
     ],
     "ai": [
@@ -101,73 +101,73 @@
         "title": "OpenAI bots knew about the RubyGems caching vulnerability",
         "url": "https://tenderlovemaking.com/2026/09/11/what-a-time-to-be-alive/",
         "source": "Hacker News AI",
-        "score": 319
+        "score": 368
+      },
+      {
+        "title": "Dropping eBPF CPU Cost by About 90% with Memoization (Not AI Gen)",
+        "url": "https://nathannaveen.dev/posts/dropping-ebpf-cpu-cost-by-90/",
+        "source": "Hacker News AI",
+        "score": 20
       },
       {
         "title": "Why don't machine learning research agents overfit?",
         "url": "https://www.amazon.science/blog/why-dont-machine-learning-research-agents-overfit",
         "source": "Hacker News AI",
-        "score": 89
+        "score": 103
+      },
+      {
+        "title": "Largest known Roman mosaic, beneath Baths of Trajan, opens to the public",
+        "url": "https://www.theartnewspaper.com/2026/09/14/largest-roman-mosaic-opens-to-the-public",
+        "source": "Hacker News AI",
+        "score": 46
       },
       {
         "title": "GPT-5.6 Luna vs. GPT-6 Astra: Is a $1.20 Model Good Enough for Code Review?",
         "url": "https://entelligence.ai/blogs/gpt-5.6-luna-vs-gpt-6-astra-is-a-1.20-model-good-enough-for-code-review",
         "source": "Hacker News AI",
-        "score": 68
+        "score": 104
       },
       {
         "title": "Show HN: Nari Qwen3-TTS and Qwen3-ASR – High accuracy, low latency and cost",
         "url": "https://narilabs.com/blog/nari-labs-leads-coval-voice-ai-benchmarks/",
         "source": "Hacker News AI",
-        "score": 50
+        "score": 64
       },
       {
         "title": "Adversarial Fashion Makes a Statement on AI Panopticon",
         "url": "https://spectrum.ieee.org/adversarial-fashion",
         "source": "Hacker News AI",
-        "score": 85
+        "score": 94
       },
       {
-        "title": "Oracle’s 6am layoff emails hit staff amid new wave of cuts",
-        "url": "https://www.techtimes.co.uk/oracle-new-layoffs-restructuring-costs-2-8-billion-1808676",
+        "title": "Anthropic is in regulatory-capture financial loop",
+        "url": "https://twitter.com/kevinnbass/status/2099626156660043891",
         "source": "Hacker News AI",
-        "score": 126
-      },
-      {
-        "title": "Claude is a Contrarian",
-        "url": "https://medium.com/@rdsubhas/claude-is-a-contrarian-dbce4de5cada",
-        "source": "Hacker News AI",
-        "score": 101
+        "score": 17
       },
       {
         "title": "Show HN: Kinesis – Control your Mac with the Meta Neural Band",
         "url": "https://github.com/callbacked/kinesis",
         "source": "Hacker News AI",
-        "score": 106
+        "score": 108
       },
       {
-        "title": "Fitting Neural Textures and PBR Material Maps with ES (No Backprop)",
-        "url": "http://richg42.blogspot.com/2026/09/fitting-neural-texture-and-pbr-material.html",
+        "title": "Ex-FTC boss Khan: break out the handcuffs for AI CEOs, citing 1934 precedent",
+        "url": "https://www.theregister.com/ai-and-ml/2026/09/14/ex-ftc-boss-khan-urges-uncle-sam-to-break-out-the-handcuffs-for-ai-ceos-citing-1934-precedent/5296325",
         "source": "Hacker News AI",
-        "score": 12
+        "score": 8
       },
       {
-        "title": "OpenArch – PyTorch implementations of modern LLM architectures",
-        "url": "https://github.com/anuj0456/OpenArch",
+        "title": "Claude is a Contrarian",
+        "url": "https://medium.com/@rdsubhas/claude-is-a-contrarian-dbce4de5cada",
         "source": "Hacker News AI",
-        "score": 128
-      },
-      {
-        "title": "When LLM judges agree, should we believe them?",
-        "url": "https://www.amazon.science/blog/when-llm-judges-agree-should-we-believe-them",
-        "source": "Hacker News AI",
-        "score": 46
+        "score": 114
       },
       {
         "title": "The case against JPEG XL",
         "url": "https://giannirosato.com/blog/post/case-against-jxl/",
         "source": "Hacker News AI",
-        "score": 255
+        "score": 257
       }
     ],
     "news": [
@@ -283,6 +283,26 @@
     ],
     "gaming": [
       {
+        "title": "10 Near-Perfect Xbox 360 Games Nobody Played",
+        "url": "https://www.polygon.com/most-underrated-xbox-360-games/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Blizzard Explains How Diablo 5 Avoids Diablo 4's Open-World Problem",
+        "url": "https://www.polygon.com/diablo-5-no-open-world-blizzard-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "New Steam Game Is Like Balatro Meets Newgrounds-Era Flash Games",
+        "url": "https://www.polygon.com/kaz-steam-roguelike-impressions/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The 10 Best Marvel Video Games Of All Time",
+        "url": "https://www.polygon.com/best-marvel-video-games-ever/",
+        "source": "Polygon"
+      },
+      {
         "title": "Magic: The Gathering Officially Reveals Jace's New Planeswalker Replacement",
         "url": "https://www.polygon.com/mtg-magic-jace-planeswalker-spark-replacement-tam-new-hero/",
         "source": "Polygon"
@@ -295,26 +315,6 @@
       {
         "title": "'Spider-Man: Brand New Day' Has Been Officially Dethroned at the Box Office",
         "url": "https://www.polygon.com/spider-man-brand-new-day-box-office-domestic-record-practical-magic-2/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Magic’s 10 Best Alchemy Cards, Ranked Worst to Best",
-        "url": "https://www.polygon.com/magic-the-gatherings-10-best-alchemy-cards-ever-ranked/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Nintendo Opens the Zelda: Ocarina of Time Pre-orders Fans Were Waiting For",
-        "url": "https://www.polygon.com/switch-2-zelda-ocarina-of-time-instrument-preorders-price-release-date/",
-        "source": "Polygon"
-      },
-      {
-        "title": "World of Warcraft Forever Will be the Easiest Way into WoW in 20 Years",
-        "url": "https://www.polygon.com/world-of-warcraft-forever-wow-approachable-casual-new-players/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Valve's VR Headset Costs $1,000+, and Reservations Are Open Now",
-        "url": "https://www.polygon.com/steam-machine-valve-vr-headset-price-availability-how-to-preorder/",
         "source": "Polygon"
       }
     ],
