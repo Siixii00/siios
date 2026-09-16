@@ -1,181 +1,103 @@
 {
   "metadata": {
-    "last_updated": "2026-09-16T05:41:29.559994",
-    "total_items": 59
+    "last_updated": "2026-09-16T10:59:44.667005",
+    "total_items": 47
   },
   "content": {
-    "tech": [
-      {
-        "title": "Introducing System One Models and Jev",
-        "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
-        "source": "Hacker News",
-        "score": 1047
-      },
-      {
-        "title": "Apple Reference Image: A New Approach for Verified Photography",
-        "url": "https://security.apple.com/blog/apple-reference-image/",
-        "source": "Hacker News",
-        "score": 122
-      },
-      {
-        "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
-        "url": "https://github.com/arnegiacomo/fugleramme",
-        "source": "Hacker News",
-        "score": 1463
-      },
-      {
-        "title": "Negativland, Culture Jamming, and the Art of Making Something New",
-        "url": "https://blog.archive.org/2026/09/11/negativland-culture-jamming-and-the-art-of-making-something-new/",
-        "source": "Hacker News",
-        "score": 57
-      },
-      {
-        "title": "Show HN: I made a flight simulator, except you're just a passenger",
-        "url": "https://inflightsimulator.com",
-        "source": "Hacker News",
-        "score": 78
-      },
-      {
-        "title": "An update on Wayback Machine access",
-        "url": "https://blog.archive.org/2026/09/15/an-update-on-wayback-machine-access/",
-        "source": "Hacker News",
-        "score": 473
-      },
-      {
-        "title": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
-        "source": "Hacker News",
-        "score": 364
-      },
-      {
-        "title": "Building a Linux GPU Driver for the M4 Mac Mini in One Month",
-        "url": "https://codyho.dev/blog/gpu-driver/",
-        "source": "Hacker News",
-        "score": 229
-      },
-      {
-        "title": "German Rheinmetall open-sources its Battlesuite connected weapon system protcol",
-        "url": "https://rheinmetall.github.io/onboardapi-documentation/9.10.0/index.html",
-        "source": "Hacker News",
-        "score": 173
-      },
-      {
-        "title": "Recreating Voodoo Graphics and a Late-1990s Gaming PC on an FPGA",
-        "url": "https://nand2mario.github.io/posts/2026/zsst-voodoo/",
-        "source": "Hacker News",
-        "score": 82
-      },
-      {
-        "title": "An interactive world map of the stories cultures have told",
-        "url": "https://originmap.sunnyguha.com/",
-        "source": "Hacker News",
-        "score": 19
-      },
-      {
-        "title": "Saving Jet Fuel",
-        "url": "https://tech.marksblogg.com/scikit-decide-openap-optimal-flight-planning.html",
-        "source": "Hacker News",
-        "score": 69
-      },
-      {
-        "title": "Datamimic – don't let your coding agent invent its own test world",
-        "url": "https://github.com/rapiddweller/datamimic",
-        "source": "Hacker News",
-        "score": 5
-      },
-      {
-        "title": "We got admin access to Baseten's production GitHub",
-        "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover",
-        "source": "Hacker News",
-        "score": 257
-      },
-      {
-        "title": "Learning to solve hard problems in RL for LLMs by never giving up",
-        "url": "https://mnoukhov.github.io/posts/ngu/",
-        "source": "Hacker News",
-        "score": 69
-      }
-    ],
+    "tech": [],
     "ai": [
       {
+        "title": "Learning Programming in an Age of LLMs",
+        "url": "https://blog.ploeh.dk/2026/09/16/on-learning-programming-in-an-age-of-llms/",
+        "source": "Hacker News AI",
+        "score": 52
+      },
+      {
+        "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
+        "url": "https://mistral.ai/news/mistral-x-mozilla/",
+        "source": "Hacker News AI",
+        "score": 62
+      },
+      {
         "title": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
         "source": "Hacker News AI",
-        "score": 364
+        "score": 426
       },
       {
-        "title": "Learning to solve hard problems in RL for LLMs by never giving up",
-        "url": "https://mnoukhov.github.io/posts/ngu/",
+        "title": "Intelligence per Watt: Measuring Intelligence Efficiency of Local AI",
+        "url": "https://arxiv.org/abs/2511.07885",
         "source": "Hacker News AI",
-        "score": 69
+        "score": 49
       },
       {
-        "title": "Stay discoverable in search while disallowing AI training",
-        "url": "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/",
+        "title": "Why I'm still bearish on LLMs after Navier-Stokes",
+        "url": "https://dank.systems/posts/2026-09-15-ai-bear.html",
         "source": "Hacker News AI",
-        "score": 44
-      },
-      {
-        "title": "A single firm is behind OpenAI, Anthropic, and Meta hacking scandals",
-        "url": "https://www.effort.news/irregular",
-        "source": "Hacker News AI",
-        "score": 559
+        "score": 244
       },
       {
         "title": "Let's make quality the norm again",
         "url": "https://www.forbrukerradet.no/short-life/",
         "source": "Hacker News AI",
-        "score": 355
+        "score": 401
       },
       {
         "title": "Suspected sabotage causes major Netherlands rail disruption",
         "url": "https://www.bbc.com/news/articles/c8ly49w9g1edo",
         "source": "Hacker News AI",
-        "score": 461
+        "score": 497
+      },
+      {
+        "title": "Learning to solve hard problems in RL for LLMs by never giving up",
+        "url": "https://mnoukhov.github.io/posts/ngu/",
+        "source": "Hacker News AI",
+        "score": 98
+      },
+      {
+        "title": "Stay discoverable in search while disallowing AI training",
+        "url": "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/",
+        "source": "Hacker News AI",
+        "score": 75
       },
       {
         "title": "Show HN: Pizza Bot – An inbox for AI agents that work in the background",
         "url": "https://github.com/pizza-bot-app/pizza-bot",
         "source": "Hacker News AI",
-        "score": 40
+        "score": 48
       },
       {
         "title": "Cartesian – AI 3D Modeling for Design",
         "url": "https://www.formas.ai/cartesian",
         "source": "Hacker News AI",
-        "score": 104
+        "score": 108
       },
       {
-        "title": "How much of F-Droid is LLM generated?",
-        "url": "https://tintotint.eu/whacky-corner/f-droid_slop/",
+        "title": "A single firm is behind OpenAI, Anthropic, and Meta hacking scandals",
+        "url": "https://www.effort.news/irregular",
         "source": "Hacker News AI",
-        "score": 128
+        "score": 622
       }
     ],
     "news": [
+      {
+        "title": "EU chief opens door for Canada to become 'associate member'",
+        "url": "https://www.bbc.co.uk/news/articles/cjwyzrr9d3dko?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "OpenAI boss says world 'right to be afraid' but should trust AI firms",
+        "url": "https://www.bbc.co.uk/news/articles/cqx2zpj4y525o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "All support acts on Ed Sheeran's US tour quit after Macklemore dropped",
         "url": "https://www.bbc.co.uk/news/articles/c3vgyn49y4l7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Denmark says Russian warship fired flares at military helicopter",
-        "url": "https://www.bbc.co.uk/news/articles/cwn8mjl31p5yo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "What weapon could the US have put into space?",
-        "url": "https://www.bbc.co.uk/news/articles/cmy4zqgk97wlo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "South African president vows justice as more women's bodies found near Johannesburg",
-        "url": "https://www.bbc.co.uk/news/articles/crgqde1nex2vo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Two sailors missing after tanker attacked in Strait of Hormuz, Oman says",
-        "url": "https://www.bbc.co.uk/news/articles/c3n07ydqdzlvo?at_medium=RSS&at_campaign=rss",
+        "title": "At least 20 killed after war-damaged Gaza building collapses",
+        "url": "https://www.bbc.co.uk/news/articles/cvp8d00j9gg5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -184,45 +106,50 @@
         "source": "BBC World"
       },
       {
-        "title": "Suspected sabotage causes major Netherlands rail disruption",
-        "url": "https://www.bbc.co.uk/news/articles/c8ly49w9g1edo?at_medium=RSS&at_campaign=rss",
+        "title": "Journalist and pilot among three killed after news helicopter crashes in LA",
+        "url": "https://www.bbc.co.uk/news/articles/cw4gq0j5jg10o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Lost on Mount Fuji off-season? You'll have to pay for your rescue",
+        "url": "https://www.bbc.co.uk/news/articles/cw8r6mvjdvedo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " Autodesk’s AU26 AI pitch: let AI help you make more, not make it for you ",
-        "url": "https://www.creativebloq.com/3d/autodesks-au26-ai-pitch-let-ai-help-you-make-more-not-make-it-for-you",
+        "title": " The budget 3D printer we most recommend for beginners is now half price ",
+        "url": "https://www.creativebloq.com/3d/3d-printing/elegoos-best-budget-friendly-3d-printer-is-now-half-price",
         "source": "Creative Bloq"
       },
       {
-        "title": " AI might kill humanity in 10 years, but Autodesk’s CEO sees a more immediate threat to artists ",
-        "url": "https://www.creativebloq.com/ai/ai-might-kill-humanity-in-10-years-but-autodesks-ceo-sees-a-more-immediate-threat-to-artists",
+        "title": " I thought the Evercade Nexus was too big – then I played Banjo-Kazooie on it ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/i-thought-the-evercade-nexus-was-too-big-then-i-played-banjo-kazooie-on-it",
         "source": "Creative Bloq"
       },
       {
-        "title": " Pre-order The Legend of Zelda: Ocarina of Time remake: There's only one downside ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/pre-order-the-legend-of-zelda-ocarina-of-time-remake-theres-only-one-downside",
+        "title": " Original Prusa MK4S review: the old guard of 3D printing ",
+        "url": "https://www.creativebloq.com/3d/3d-printing/original-prusa-mk4s-review-the-old-guard-of-3d-printing",
         "source": "Creative Bloq"
       },
       {
-        "title": " There's no way this Elon Musk movie poster isn't ironic ",
-        "url": "https://www.creativebloq.com/design/poster-design/theres-no-way-this-elon-musk-movie-poster-isnt-ironic",
+        "title": " Lenovo ThinkTab X11 review: built like a tank, but not really a tablet for the creative crowd ",
+        "url": "https://www.creativebloq.com/tech/phones-tablets/lenovo-thinktab-x11-review-built-like-a-tank-but-not-really-a-tablet-for-the-creative-crowd",
         "source": "Creative Bloq"
       },
       {
-        "title": " The new US Space Force uniforms look like the Star Wars Empire meets the SS ",
-        "url": "https://www.creativebloq.com/design/the-new-us-space-force-uniforms-look-like-the-star-wars-empire-meets-the-ss",
+        "title": " This artist blends traditional Chinese ink aesthetics with digital painting in Photoshop to create dynamic Three Kingdoms characters ",
+        "url": "https://www.creativebloq.com/art/digital-art/this-artist-blends-traditional-chinese-ink-aesthetics-with-digital-painting-in-photoshop-to-create-dynamic-three-kingdoms-characters",
         "source": "Creative Bloq"
       },
       {
-        "title": " Oof! Turns out AI is as annoying in office chairs as it is everywhere else ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/oof-turns-out-ai-is-as-annoying-in-office-chairs-as-it-is-everywhere-else",
+        "title": " This student Oscar-winning film looks like stop motion, but it's actually 3D animation ",
+        "url": "https://www.creativebloq.com/art/animation/this-student-oscar-winning-film-looks-like-stop-motion-but-its-actually-3d-animation",
         "source": "Creative Bloq"
       },
       {
-        "title": " Embrace the Fashion Week flavour with these colourful kitchen accessories ",
-        "url": "https://www.creativebloq.com/creative-inspiration/embrace-the-fashion-week-flavour-with-these-colourful-kitchen-accessories",
+        "title": " Airbnb orders independent guesthouse to change its logo ",
+        "url": "https://www.creativebloq.com/design/logos-icons/airbnb-orders-independent-guesthouse-to-change-its-logo",
         "source": "Creative Bloq"
       }
     ],
@@ -265,6 +192,16 @@
     ],
     "gaming": [
       {
+        "title": "John Lithgow's High Fantasy Masterpiece Is Officially a Global Streaming Sensation",
+        "url": "https://www.polygon.com/shrek-netflix-top-streaming-worldwide/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 BG3 Characters Fans Still Want as Companions",
+        "url": "https://www.polygon.com/bg3-best-non-companion-npcs/",
+        "source": "Polygon"
+      },
+      {
         "title": "5 Best LitRPG Books to Read After 'Dungeon Crawler Carl'",
         "url": "https://www.polygon.com/5-litrpg-books-to-read-after-dungeon-crawler-carl/",
         "source": "Polygon"
@@ -287,16 +224,6 @@
       {
         "title": "Diablo 4 Season 15 release time in your time zone",
         "url": "https://www.polygon.com/diablo-4-d4-season-15-hells-legacy-release-time-edt-pdt/",
-        "source": "Polygon"
-      },
-      {
-        "title": "God of War Laufey Now Has a Lot To Prove After Wolverine’s Messy Launch",
-        "url": "https://www.polygon.com/god-of-war-laufey-marvels-wolverine-analysis/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Say Goodbye to Fallout's Best Replacement Before it Leaves Game Pass Forever",
-        "url": "https://www.polygon.com/atomfall-game-pass-recommendation/",
         "source": "Polygon"
       }
     ],
