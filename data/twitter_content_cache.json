@@ -1,173 +1,173 @@
 {
   "metadata": {
-    "last_updated": "2026-09-16T19:24:25.605823",
+    "last_updated": "2026-09-16T22:41:11.989707",
     "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "Vectorized and performance-portable Quicksort",
-        "url": "https://opensource.googleblog.com/2022/06/Vectorized%20and%20performance%20portable%20Quicksort.html",
+        "title": "Training a 4B model to produce 81% faster query plans than Postgres",
+        "url": "https://rohanbansal.com/qorl",
         "source": "Hacker News",
-        "score": 95
+        "score": 290
+      },
+      {
+        "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
+        "url": "https://arxiv.org/abs/2609.16338",
+        "source": "Hacker News",
+        "score": 76
+      },
+      {
+        "title": "Xiaomi Mimo 2.6 live post-training dashboard",
+        "url": "https://mimo.xiaomi.com/rl/",
+        "source": "Hacker News",
+        "score": 156
+      },
+      {
+        "title": "Nvidia announces native GPU programming in Rust",
+        "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
+        "source": "Hacker News",
+        "score": 32
       },
       {
         "title": "Small programming tricks",
         "url": "https://will-keleher.com/posts/small-programming-tricks-matter/",
         "source": "Hacker News",
-        "score": 199
+        "score": 329
       },
       {
-        "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
-        "url": "https://arxiv.org/abs/2609.14858",
+        "title": "AWS says it can't restore some data from mideast facilities struck by Iran",
+        "url": "https://www.wsj.com/world/middle-east/aws-says-it-cant-restore-some-data-from-mideast-facilities-struck-by-iran-ddcb7e5d",
         "source": "Hacker News",
-        "score": 137
+        "score": 134
+      },
+      {
+        "title": "Reversing Factorio's RNG",
+        "url": "https://gegell.github.io/posts/factorio-rng/",
+        "source": "Hacker News",
+        "score": 84
+      },
+      {
+        "title": "Performance Improvements in .NET 11",
+        "url": "https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-11/",
+        "source": "Hacker News",
+        "score": 100
       },
       {
         "title": "Accurate Models of AMD Matrix Cores",
         "url": "https://arxiv.org/abs/2609.14845",
         "source": "Hacker News",
-        "score": 7
+        "score": 47
+      },
+      {
+        "title": "Japan's book scene is moving from bookstores to libraries",
+        "url": "https://untranslatedjp.substack.com/p/japans-book-scene-is-quietly-moving",
+        "source": "Hacker News",
+        "score": 61
+      },
+      {
+        "title": "How good are frontier models at physics?",
+        "url": "https://arxiv.org/abs/2609.13009",
+        "source": "Hacker News",
+        "score": 51
+      },
+      {
+        "title": "WalShadow: Sub-second Postgres replication to ClickHouse from physical WAL",
+        "url": "https://clickhouse.com/blog/introducing-walshadow",
+        "source": "Hacker News",
+        "score": 29
+      },
+      {
+        "title": "Anatomy of a Texture",
+        "url": "https://agentlien.github.io/texture/",
+        "source": "Hacker News",
+        "score": 62
+      },
+      {
+        "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
+        "url": "https://arxiv.org/abs/2609.14858",
+        "source": "Hacker News",
+        "score": 169
       },
       {
         "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
         "url": "https://mistral.ai/news/mistral-x-mozilla/",
         "source": "Hacker News",
-        "score": 449
-      },
-      {
-        "title": "Tell the speakers that you liked their talks",
-        "url": "https://ohhelloana.blog/tell-the-speakers/",
-        "source": "Hacker News",
-        "score": 193
-      },
-      {
-        "title": "GitHub is having trouble counting things",
-        "url": "https://chuckgreenman.com/2026/09/16/counting-at-github",
-        "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
-        "url": "https://github.com/arnegiacomo/fugleramme",
-        "source": "Hacker News",
-        "score": 1929
-      },
-      {
-        "title": "The Siberian Ice Maiden and the Scythian World",
-        "url": "https://patrickwyman.substack.com/p/the-siberian-ice-maiden-and-the-scythian",
-        "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "Training a 4B model to produce 81% faster query plans than Postgres",
-        "url": "https://rohanbansal.com/qorl",
-        "source": "Hacker News",
-        "score": 5
-      },
-      {
-        "title": "How big are factorials?",
-        "url": "https://eli.thegreenplace.net/2026/how-big-are-factorials/",
-        "source": "Hacker News",
-        "score": 56
-      },
-      {
-        "title": "Learning Programming in an Age of LLMs",
-        "url": "https://blog.ploeh.dk/2026/09/16/on-learning-programming-in-an-age-of-llms/",
-        "source": "Hacker News",
-        "score": 195
-      },
-      {
-        "title": "Claude Cowork and chat are now one Claude",
-        "url": "https://claude.com/blog/cowork-is-now-claude",
-        "source": "Hacker News",
-        "score": 127
-      },
-      {
-        "title": "The DeepMind Institute",
-        "url": "https://institute.deepmind.com/",
-        "source": "Hacker News",
-        "score": 66
-      },
-      {
-        "title": "Hackers Got Inside a Flock Camera",
-        "url": "https://www.wired.com/story/hackers-flock-camera-data-shows-how-system-works/",
-        "source": "Hacker News",
-        "score": 357
+        "score": 506
       }
     ],
     "ai": [
       {
+        "title": "Training a 4B model to produce 81% faster query plans than Postgres",
+        "url": "https://rohanbansal.com/qorl",
+        "source": "Hacker News AI",
+        "score": 290
+      },
+      {
+        "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
+        "url": "https://arxiv.org/abs/2609.16338",
+        "source": "Hacker News AI",
+        "score": 76
+      },
+      {
+        "title": "Xiaomi Mimo 2.6 live post-training dashboard",
+        "url": "https://mimo.xiaomi.com/rl/",
+        "source": "Hacker News AI",
+        "score": 156
+      },
+      {
         "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
         "url": "https://mistral.ai/news/mistral-x-mozilla/",
         "source": "Hacker News AI",
-        "score": 449
+        "score": 506
       },
       {
         "title": "The Siberian Ice Maiden and the Scythian World",
         "url": "https://patrickwyman.substack.com/p/the-siberian-ice-maiden-and-the-scythian",
         "source": "Hacker News AI",
-        "score": 20
+        "score": 44
       },
       {
-        "title": "Training a 4B model to produce 81% faster query plans than Postgres",
-        "url": "https://rohanbansal.com/qorl",
+        "title": "Training Text-to-Image Models 3.6× Faster",
+        "url": "https://www.linum.ai/field-notes/jit-ddt",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 19
       },
       {
-        "title": "Learning Programming in an Age of LLMs",
-        "url": "https://blog.ploeh.dk/2026/09/16/on-learning-programming-in-an-age-of-llms/",
+        "title": "Common Crawl Data Stored on a Hugging Face Bucket",
+        "url": "https://commoncrawl.org/blog/getting-started-with-common-crawl-data-on-hugging-face",
         "source": "Hacker News AI",
-        "score": 195
+        "score": 4
       },
       {
         "title": "Claude Cowork and chat are now one Claude",
         "url": "https://claude.com/blog/cowork-is-now-claude",
         "source": "Hacker News AI",
-        "score": 127
+        "score": 194
       },
       {
         "title": "Show HN: How Stale Is Your AI? Release age and training cutoff for 20 models",
         "url": "https://stale.jock.pl/",
         "source": "Hacker News AI",
-        "score": 55
-      },
-      {
-        "title": "Why I'm still bearish on LLMs after Navier-Stokes",
-        "url": "https://dank.systems/posts/2026-09-15-ai-bear.html",
-        "source": "Hacker News AI",
-        "score": 429
+        "score": 67
       },
       {
         "title": "Intelligence per Watt: Measuring Intelligence Efficiency of Local AI",
         "url": "https://arxiv.org/abs/2511.07885",
         "source": "Hacker News AI",
-        "score": 145
+        "score": 157
       },
       {
-        "title": "Why a fast-growing German AI startup is moving its parent company from the US",
-        "url": "https://www.euronews.com/business/2026/09/16/why-this-fast-growing-german-ai-start-up-is-moving-its-parent-company-from-the-us",
+        "title": "Barndoor acquires Diaphora, creators of open-source workflow runtime Frags",
+        "url": "https://barndoor.ai/barndoor-acquires-diaphora/",
         "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "A coffee shop owner used AI to make a menu poster. Then came the angry DMs",
-        "url": "https://www.businessinsider.com/coffee-shop-owner-ai-menu-backlash-2026-9",
-        "source": "Hacker News AI",
-        "score": 7
-      },
-      {
-        "title": "Ask HN: AI Panic, you buying it?",
-        "url": "https://news.ycombinator.com/item?id=49729849",
-        "source": "Hacker News AI",
-        "score": 17
+        "score": 6
       }
     ],
     "news": [
       {
-        "title": "EU chief backs plan for Canada to become 'associate member'",
-        "url": "https://www.bbc.co.uk/news/articles/cjwyzrr9d3dko?at_medium=RSS&at_campaign=rss",
+        "title": "US interest rates raised for first time in three years",
+        "url": "https://www.bbc.co.uk/news/articles/cw4gmlyvj422o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -176,13 +176,18 @@
         "source": "BBC World"
       },
       {
+        "title": "EU chief backs plan for Canada to become 'associate member'",
+        "url": "https://www.bbc.co.uk/news/articles/cjwyzrr9d3dko?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Eight children among 21 killed after war-damaged Gaza building collapses, rescuers say",
         "url": "https://www.bbc.co.uk/news/articles/cvp8d00j9gg5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US accuses Russia of trying to kill Ukrainian allies overseas",
-        "url": "https://www.bbc.co.uk/news/articles/cjp3077led9qo?at_medium=RSS&at_campaign=rss",
+        "title": "US House votes to hold billionaire Epstein associate Leon Black in contempt",
+        "url": "https://www.bbc.co.uk/news/articles/c62l8g8qlr0ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -193,11 +198,6 @@
       {
         "title": "Eight German state premiers back Merz amid speculation over future",
         "url": "https://www.bbc.co.uk/news/articles/c6dj4nn0n97ro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Saudi Arabia says it shot down Houthi drone south of Mecca",
-        "url": "https://www.bbc.co.uk/news/articles/cr89jqd1w45eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -277,6 +277,26 @@
     ],
     "gaming": [
       {
+        "title": "South Park’s New Season Is Officially the Biggest Sitcom on Streaming After Just 1 Episode",
+        "url": "https://www.polygon.com/south-park-america-tv-season-29-streaming-success/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Magic: The Gathering Officially Reveals the Ur-Dragon's New Commander Replacement",
+        "url": "https://www.polygon.com/mtg-reality-fracture-commander-precon-the-ur-sphinx/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Baldur's Gate 3 Officially Adds 19 Game-Breaking Options for Console Players",
+        "url": "https://www.polygon.com/bg3-new-console-mods-september-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Guy Ritchie’s 128-minute Action Movie Is Officially the Biggest Detective Thriller on Streaming",
+        "url": "https://www.polygon.com/guy-ritchie-sherlock-holmes-streaming-hit-apple-tv-september-2026/",
+        "source": "Polygon"
+      },
+      {
         "title": "Bloodborne Is Officially Back with a New Release — but There's a Catch",
         "url": "https://www.polygon.com/bloodborne-sequel-super-groupies-new-collaboration-umbrella-fashion-merchandise/",
         "source": "Polygon"
@@ -289,26 +309,6 @@
       {
         "title": "Epic X-Men Villain Is Absolutely Terrorizing Marvel’s Wolverine Players",
         "url": "https://www.polygon.com/marvels-wolverine-omega-red-first-boss/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Spider-Man: Brand New Day' Is Officially the Highest Grossing Film in Domestic Box Office History",
-        "url": "https://www.polygon.com/spider-man-brand-new-day-highest-grossing-film-domestic-box-office/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Dragon Quest Celebrates 40th Anniversary by Passing a Huge Milestone",
-        "url": "https://www.polygon.com/dragon-quest-rpg-40th-anniversary-100-million-units-sold/",
-        "source": "Polygon"
-      },
-      {
-        "title": "New Resident Evil Movie Debuts to Near-perfect Rotten Tomatoes Score",
-        "url": "https://www.polygon.com/resident-evil-zach-creggers-rotten-tomatoes-review-roundup/",
-        "source": "Polygon"
-      },
-      {
-        "title": "2025 Best Kart Racer Just Got Even Better, Thanks to This New Free Character",
-        "url": "https://www.polygon.com/sonic-racing-crossworlds-bayonetta-year-two-free-character/",
         "source": "Polygon"
       }
     ],
