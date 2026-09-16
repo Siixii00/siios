@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-15T21:13:37.131314",
-    "total_items": 60
+    "last_updated": "2026-09-16T00:00:30.433788",
+    "total_items": 61
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Introducing System One Models and Jev",
         "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
         "source": "Hacker News",
-        "score": 319
+        "score": 635
       },
       {
         "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
         "url": "https://github.com/arnegiacomo/fugleramme",
         "source": "Hacker News",
-        "score": 1094
+        "score": 1238
+      },
+      {
+        "title": "German Rheinmetall open-sources its Battlesuite connected weapon system protcol",
+        "url": "https://rheinmetall.github.io/onboardapi-documentation/9.10.0/index.html",
+        "source": "Hacker News",
+        "score": 102
       },
       {
         "title": "An Update on Wayback Machine Access",
         "url": "https://blog.archive.org/2026/09/15/an-update-on-wayback-machine-access/",
         "source": "Hacker News",
-        "score": 237
+        "score": 339
       },
       {
         "title": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
         "source": "Hacker News",
-        "score": 169
-      },
-      {
-        "title": "We got admin access to Baseten's production GitHub in 25 minutes",
-        "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover",
-        "source": "Hacker News",
-        "score": 144
+        "score": 261
       },
       {
         "title": "Jean-Pierre Serre is 100 years old today",
         "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Serre/",
         "source": "Hacker News",
-        "score": 10
-      },
-      {
-        "title": "WangNet – 1.8 MB, zero-dependency Numberwang adjudication in 11 languages",
-        "url": "https://github.com/GraafHenk/numberwang",
-        "source": "Hacker News",
-        "score": 47
-      },
-      {
-        "title": "Chopping up books when they're physically too big",
-        "url": "https://attainablefelicity.mattkirkland.com/20260915/cut-up-your-books.html",
-        "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Show HN: Capsule – Single-file web apps that save their data into SQLite",
-        "url": "https://withcapsule.app/",
-        "source": "Hacker News",
-        "score": 240
-      },
-      {
-        "title": "I can't stop thinking about Papua New Guinea",
-        "url": "https://notnottalmud.substack.com/p/why-i-cant-stop-thinking-about-papua",
-        "source": "Hacker News",
-        "score": 942
-      },
-      {
-        "title": "GEFS on OpenBSD: A Early Preview",
-        "url": "https://marc.info/?l=openbsd-tech&m=178948744271633&w=2",
-        "source": "Hacker News",
-        "score": 77
+        "score": 76
       },
       {
         "title": "Building a Linux GPU Driver for the M4 Mac Mini in One Month",
         "url": "https://codyho.dev/blog/gpu-driver/",
         "source": "Hacker News",
-        "score": 17
+        "score": 120
       },
       {
-        "title": "The CSS Zen Garden dream, finally shipped",
-        "url": "https://josprague.com/blog/the-css-zen-garden-dream-finally-shipped/",
+        "title": "We got admin access to Baseten's production GitHub in 25 minutes",
+        "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover",
         "source": "Hacker News",
-        "score": 100
+        "score": 191
       },
       {
-        "title": "Jiga (YC W21) Is Hiring Product Engineer (Remote/US)",
-        "url": "https://jiga.io/about-us/?ashby_jid=0b75d72d-c92b-4dca-8062-09d298ada0bd",
+        "title": "Why I'm still bearish on LLMs after Navier-Stokes",
+        "url": "https://dank.systems/posts/2026-09-15-ai-bear.html",
         "source": "Hacker News",
-        "score": 1
+        "score": 91
       },
       {
-        "title": "Cartesian – AI 3D Modeling for Design",
-        "url": "https://www.formas.ai/cartesian",
+        "title": "Chopping up books when they're physically too big",
+        "url": "https://attainablefelicity.mattkirkland.com/20260915/cut-up-your-books.html",
         "source": "Hacker News",
-        "score": 72
+        "score": 106
+      },
+      {
+        "title": "WangNet – 1.8 MB, zero-dependency Numberwang adjudication in 11 languages",
+        "url": "https://github.com/GraafHenk/numberwang",
+        "source": "Hacker News",
+        "score": 90
+      },
+      {
+        "title": "Learning to solve hard problems in RL for LLMs by never giving up",
+        "url": "https://mnoukhov.github.io/posts/ngu/",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
+        "title": "Show HN: Capsule – Single-file web apps that save their data into SQLite",
+        "url": "https://withcapsule.app/",
+        "source": "Hacker News",
+        "score": 268
+      },
+      {
+        "title": "Saving Jet Fuel",
+        "url": "https://tech.marksblogg.com/scikit-decide-openap-optimal-flight-planning.html",
+        "source": "Hacker News",
+        "score": 4
+      },
+      {
+        "title": "Data races and the limits of ThreadSanitizer in C and Go",
+        "url": "https://theconsensus.dev/p/2026/09/06/data-races-and-the-limits-of-threadsanitizer-in-c-and-go.html",
+        "source": "Hacker News",
+        "score": 20
       }
     ],
     "ai": [
@@ -101,64 +101,75 @@
         "title": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
         "source": "Hacker News AI",
-        "score": 169
+        "score": 261
       },
       {
-        "title": "Cartesian – AI 3D Modeling for Design",
-        "url": "https://www.formas.ai/cartesian",
+        "title": "Why I'm still bearish on LLMs after Navier-Stokes",
+        "url": "https://dank.systems/posts/2026-09-15-ai-bear.html",
         "source": "Hacker News AI",
-        "score": 72
+        "score": 91
+      },
+      {
+        "title": "Learning to solve hard problems in RL for LLMs by never giving up",
+        "url": "https://mnoukhov.github.io/posts/ngu/",
+        "source": "Hacker News AI",
+        "score": 23
       },
       {
         "title": "Let's make quality the norm again",
         "url": "https://www.forbrukerradet.no/short-life/",
         "source": "Hacker News AI",
-        "score": 244
+        "score": 285
       },
       {
         "title": "Suspected sabotage causes major Netherlands rail disruption",
         "url": "https://www.bbc.com/news/articles/c8ly49w9g1edo",
         "source": "Hacker News AI",
-        "score": 374
+        "score": 415
       },
       {
         "title": "A single firm is behind OpenAI, Anthropic, and Meta hacking scandals",
         "url": "https://www.effort.news/irregular",
         "source": "Hacker News AI",
-        "score": 342
+        "score": 425
       },
       {
-        "title": "Iran war has cost on average $246M per day in its first five months",
-        "url": "https://www.cnbc.com/2026/09/15/cbo-iran-war-cost-pentagon-weapons.html",
+        "title": "Show HN: Pizza Bot – An inbox for AI agents that work in the background",
+        "url": "https://github.com/pizza-bot-app/pizza-bot",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 17
+      },
+      {
+        "title": "Cartesian – AI 3D Modeling for Design",
+        "url": "https://www.formas.ai/cartesian",
+        "source": "Hacker News AI",
+        "score": 84
       },
       {
         "title": "Leaving Proton Mail",
         "url": "https://runarcn.no/leaving-proton-mail/",
         "source": "Hacker News AI",
-        "score": 12
+        "score": 23
       },
       {
         "title": "How much of F-Droid is LLM generated?",
         "url": "https://tintotint.eu/whacky-corner/f-droid_slop/",
         "source": "Hacker News AI",
-        "score": 116
+        "score": 121
       },
       {
         "title": "AI 'kill switch' may need to be mandatory, Anthropic co-founder tells BBC",
         "url": "https://www.bbc.com/news/articles/cqgk5e2j0gg8o",
         "source": "Hacker News AI",
-        "score": 32
-      },
-      {
-        "title": "What we have learned at OpenShell applying formal methods to control AI agents",
-        "url": "https://nvidia.github.io/OpenShell-Research/dev-notes/posts/2026-09-10-learning-formal-methods-agent-policy-prover/",
-        "source": "Hacker News AI",
-        "score": 28
+        "score": 41
       }
     ],
     "news": [
+      {
+        "title": "All support acts on Ed Sheeran's US tour quit after Macklemore dropped",
+        "url": "https://www.bbc.co.uk/news/articles/c3vgyn49y4l7o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Denmark says Russian warship fired flares at military helicopter",
         "url": "https://www.bbc.co.uk/news/articles/cwn8mjl31p5yo?at_medium=RSS&at_campaign=rss",
@@ -167,11 +178,6 @@
       {
         "title": "What weapon could the US have put into space?",
         "url": "https://www.bbc.co.uk/news/articles/cmy4zqgk97wlo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Suspected sabotage causes major Netherlands rail disruption",
-        "url": "https://www.bbc.co.uk/news/articles/c8ly49w9g1edo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -190,12 +196,17 @@
         "source": "BBC World"
       },
       {
-        "title": "Canada is a 'safe harbour' for global finance, Carney says",
-        "url": "https://www.bbc.co.uk/news/articles/cmq8jdgel128o?at_medium=RSS&at_campaign=rss",
+        "title": "Suspected sabotage causes major Netherlands rail disruption",
+        "url": "https://www.bbc.co.uk/news/articles/c8ly49w9g1edo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " AI might kill humanity in 10 years, but Autodesk’s CEO sees a more immediate threat to artists ",
+        "url": "https://www.creativebloq.com/ai/ai-might-kill-humanity-in-10-years-but-autodesks-ceo-sees-a-more-immediate-threat-to-artists",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Pre-order The Legend of Zelda: Ocarina of Time remake: There's only one downside ",
         "url": "https://www.creativebloq.com/entertainment/gaming/pre-order-the-legend-of-zelda-ocarina-of-time-remake-theres-only-one-downside",
@@ -224,11 +235,6 @@
       {
         "title": " Final Fantasy VII inspired this artist to create her own worlds ",
         "url": "https://www.creativebloq.com/3d/3d-art/final-fantasy-vii-inspired-this-artist-to-create-her-own-worlds",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Digger poster strikes graphic design gold ",
-        "url": "https://www.creativebloq.com/design/poster-design/the-digger-poster-design-strikes-graphic-design-gold",
         "source": "Creative Bloq"
       }
     ],
@@ -271,6 +277,16 @@
     ],
     "gaming": [
       {
+        "title": "7 Major GTA 6 Questions the Previews Haven't Answered",
+        "url": "https://www.polygon.com/gta-6-major-questions/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Diablo 4 Season 15 release time in your time zone",
+        "url": "https://www.polygon.com/diablo-4-d4-season-15-hells-legacy-release-time-edt-pdt/",
+        "source": "Polygon"
+      },
+      {
         "title": "God of War Laufey Now Has a Lot To Prove After Wolverine’s Messy Launch",
         "url": "https://www.polygon.com/god-of-war-laufey-marvels-wolverine-analysis/",
         "source": "Polygon"
@@ -293,16 +309,6 @@
       {
         "title": "'Apex Legends' Is Officially Crossing Over With Fall’s Most-Anticipated Action Movie",
         "url": "https://www.polygon.com/street-fighter-6-apex-legends-crossover-release-date-skins/",
-        "source": "Polygon"
-      },
-      {
-        "title": "What time does Black Ops 7 Season 6 start in your time zone?",
-        "url": "https://www.polygon.com/call-of-duty-black-ops-7-bo7-season-6-start-time-edt-pdt/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Make Some Noise' Officially Bringing Back a Dropout Fan-Favorite",
-        "url": "https://www.polygon.com/dropout-make-some-noise-season-5-trailer/",
         "source": "Polygon"
       }
     ],
