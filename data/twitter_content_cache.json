@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-16T00:00:30.433788",
-    "total_items": 61
+    "last_updated": "2026-09-16T05:41:29.559994",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Introducing System One Models and Jev",
         "url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev",
         "source": "Hacker News",
-        "score": 635
+        "score": 1047
+      },
+      {
+        "title": "Apple Reference Image: A New Approach for Verified Photography",
+        "url": "https://security.apple.com/blog/apple-reference-image/",
+        "source": "Hacker News",
+        "score": 122
       },
       {
         "title": "Show HN: An e-ink frame that hears birds and draws them as 1800s illustrations",
         "url": "https://github.com/arnegiacomo/fugleramme",
         "source": "Hacker News",
-        "score": 1238
+        "score": 1463
       },
       {
-        "title": "German Rheinmetall open-sources its Battlesuite connected weapon system protcol",
-        "url": "https://rheinmetall.github.io/onboardapi-documentation/9.10.0/index.html",
+        "title": "Negativland, Culture Jamming, and the Art of Making Something New",
+        "url": "https://blog.archive.org/2026/09/11/negativland-culture-jamming-and-the-art-of-making-something-new/",
         "source": "Hacker News",
-        "score": 102
+        "score": 57
       },
       {
-        "title": "An Update on Wayback Machine Access",
+        "title": "Show HN: I made a flight simulator, except you're just a passenger",
+        "url": "https://inflightsimulator.com",
+        "source": "Hacker News",
+        "score": 78
+      },
+      {
+        "title": "An update on Wayback Machine access",
         "url": "https://blog.archive.org/2026/09/15/an-update-on-wayback-machine-access/",
         "source": "Hacker News",
-        "score": 339
+        "score": 473
       },
       {
         "title": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
         "source": "Hacker News",
-        "score": 261
-      },
-      {
-        "title": "Jean-Pierre Serre is 100 years old today",
-        "url": "https://mathshistory.st-andrews.ac.uk/Biographies/Serre/",
-        "source": "Hacker News",
-        "score": 76
+        "score": 364
       },
       {
         "title": "Building a Linux GPU Driver for the M4 Mac Mini in One Month",
         "url": "https://codyho.dev/blog/gpu-driver/",
         "source": "Hacker News",
-        "score": 120
+        "score": 229
       },
       {
-        "title": "We got admin access to Baseten's production GitHub in 25 minutes",
-        "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover",
+        "title": "German Rheinmetall open-sources its Battlesuite connected weapon system protcol",
+        "url": "https://rheinmetall.github.io/onboardapi-documentation/9.10.0/index.html",
         "source": "Hacker News",
-        "score": 191
+        "score": 173
       },
       {
-        "title": "Why I'm still bearish on LLMs after Navier-Stokes",
-        "url": "https://dank.systems/posts/2026-09-15-ai-bear.html",
+        "title": "Recreating Voodoo Graphics and a Late-1990s Gaming PC on an FPGA",
+        "url": "https://nand2mario.github.io/posts/2026/zsst-voodoo/",
         "source": "Hacker News",
-        "score": 91
+        "score": 82
       },
       {
-        "title": "Chopping up books when they're physically too big",
-        "url": "https://attainablefelicity.mattkirkland.com/20260915/cut-up-your-books.html",
+        "title": "An interactive world map of the stories cultures have told",
+        "url": "https://originmap.sunnyguha.com/",
         "source": "Hacker News",
-        "score": 106
-      },
-      {
-        "title": "WangNet – 1.8 MB, zero-dependency Numberwang adjudication in 11 languages",
-        "url": "https://github.com/GraafHenk/numberwang",
-        "source": "Hacker News",
-        "score": 90
-      },
-      {
-        "title": "Learning to solve hard problems in RL for LLMs by never giving up",
-        "url": "https://mnoukhov.github.io/posts/ngu/",
-        "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "Show HN: Capsule – Single-file web apps that save their data into SQLite",
-        "url": "https://withcapsule.app/",
-        "source": "Hacker News",
-        "score": 268
+        "score": 19
       },
       {
         "title": "Saving Jet Fuel",
         "url": "https://tech.marksblogg.com/scikit-decide-openap-optimal-flight-planning.html",
         "source": "Hacker News",
-        "score": 4
+        "score": 69
       },
       {
-        "title": "Data races and the limits of ThreadSanitizer in C and Go",
-        "url": "https://theconsensus.dev/p/2026/09/06/data-races-and-the-limits-of-threadsanitizer-in-c-and-go.html",
+        "title": "Datamimic – don't let your coding agent invent its own test world",
+        "url": "https://github.com/rapiddweller/datamimic",
         "source": "Hacker News",
-        "score": 20
+        "score": 5
+      },
+      {
+        "title": "We got admin access to Baseten's production GitHub",
+        "url": "https://www.strix.ai/blog/baseten-harbor-github-pat-takeover",
+        "source": "Hacker News",
+        "score": 257
+      },
+      {
+        "title": "Learning to solve hard problems in RL for LLMs by never giving up",
+        "url": "https://mnoukhov.github.io/posts/ngu/",
+        "source": "Hacker News",
+        "score": 69
       }
     ],
     "ai": [
@@ -101,67 +101,55 @@
         "title": "Gemini 3.8 Live and 3.8 Live Extended Thinking",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-live-gemini-3-8-live-extended-thinking/",
         "source": "Hacker News AI",
-        "score": 261
-      },
-      {
-        "title": "Why I'm still bearish on LLMs after Navier-Stokes",
-        "url": "https://dank.systems/posts/2026-09-15-ai-bear.html",
-        "source": "Hacker News AI",
-        "score": 91
+        "score": 364
       },
       {
         "title": "Learning to solve hard problems in RL for LLMs by never giving up",
         "url": "https://mnoukhov.github.io/posts/ngu/",
         "source": "Hacker News AI",
-        "score": 23
+        "score": 69
       },
       {
-        "title": "Let's make quality the norm again",
-        "url": "https://www.forbrukerradet.no/short-life/",
+        "title": "Stay discoverable in search while disallowing AI training",
+        "url": "https://blog.cloudflare.com/accountable-mixed-use-ai-crawlers/",
         "source": "Hacker News AI",
-        "score": 285
-      },
-      {
-        "title": "Suspected sabotage causes major Netherlands rail disruption",
-        "url": "https://www.bbc.com/news/articles/c8ly49w9g1edo",
-        "source": "Hacker News AI",
-        "score": 415
+        "score": 44
       },
       {
         "title": "A single firm is behind OpenAI, Anthropic, and Meta hacking scandals",
         "url": "https://www.effort.news/irregular",
         "source": "Hacker News AI",
-        "score": 425
+        "score": 559
+      },
+      {
+        "title": "Let's make quality the norm again",
+        "url": "https://www.forbrukerradet.no/short-life/",
+        "source": "Hacker News AI",
+        "score": 355
+      },
+      {
+        "title": "Suspected sabotage causes major Netherlands rail disruption",
+        "url": "https://www.bbc.com/news/articles/c8ly49w9g1edo",
+        "source": "Hacker News AI",
+        "score": 461
       },
       {
         "title": "Show HN: Pizza Bot – An inbox for AI agents that work in the background",
         "url": "https://github.com/pizza-bot-app/pizza-bot",
         "source": "Hacker News AI",
-        "score": 17
+        "score": 40
       },
       {
         "title": "Cartesian – AI 3D Modeling for Design",
         "url": "https://www.formas.ai/cartesian",
         "source": "Hacker News AI",
-        "score": 84
-      },
-      {
-        "title": "Leaving Proton Mail",
-        "url": "https://runarcn.no/leaving-proton-mail/",
-        "source": "Hacker News AI",
-        "score": 23
+        "score": 104
       },
       {
         "title": "How much of F-Droid is LLM generated?",
         "url": "https://tintotint.eu/whacky-corner/f-droid_slop/",
         "source": "Hacker News AI",
-        "score": 121
-      },
-      {
-        "title": "AI 'kill switch' may need to be mandatory, Anthropic co-founder tells BBC",
-        "url": "https://www.bbc.com/news/articles/cqgk5e2j0gg8o",
-        "source": "Hacker News AI",
-        "score": 41
+        "score": 128
       }
     ],
     "news": [
@@ -203,6 +191,11 @@
     ],
     "art": [
       {
+        "title": " Autodesk’s AU26 AI pitch: let AI help you make more, not make it for you ",
+        "url": "https://www.creativebloq.com/3d/autodesks-au26-ai-pitch-let-ai-help-you-make-more-not-make-it-for-you",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " AI might kill humanity in 10 years, but Autodesk’s CEO sees a more immediate threat to artists ",
         "url": "https://www.creativebloq.com/ai/ai-might-kill-humanity-in-10-years-but-autodesks-ceo-sees-a-more-immediate-threat-to-artists",
         "source": "Creative Bloq"
@@ -231,14 +224,14 @@
         "title": " Embrace the Fashion Week flavour with these colourful kitchen accessories ",
         "url": "https://www.creativebloq.com/creative-inspiration/embrace-the-fashion-week-flavour-with-these-colourful-kitchen-accessories",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Final Fantasy VII inspired this artist to create her own worlds ",
-        "url": "https://www.creativebloq.com/3d/3d-art/final-fantasy-vii-inspired-this-artist-to-create-her-own-worlds",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Scientists reversed biological age in older adults in just 4 weeks",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260915100000.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Scientists stunned as volcano cloud starts destroying methane",
         "url": "https://www.sciencedaily.com/releases/2026/09/260915095750.htm",
@@ -268,14 +261,24 @@
         "title": "UV light reveals possible camouflage on a 125-million-year-old crocodile",
         "url": "https://www.sciencedaily.com/releases/2026/09/260914102436.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "The shape behind the Einstein problem just revealed strange new physics",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260914102432.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "5 Best LitRPG Books to Read After 'Dungeon Crawler Carl'",
+        "url": "https://www.polygon.com/5-litrpg-books-to-read-after-dungeon-crawler-carl/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Darkest 'Calvin and Hobbes' Snowman Jokes That Reveal Bill Watterson's Twisted Genius",
+        "url": "https://www.polygon.com/10-darkest-calvin-and-hobbes-snowman-jokes-that-reveal-bill-wattersons-twisted-genius/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The 25 Best Nintendo Switch 2 Games in 2026",
+        "url": "https://www.polygon.com/best-nintendo-switch-2-games/",
+        "source": "Polygon"
+      },
       {
         "title": "7 Major GTA 6 Questions the Previews Haven't Answered",
         "url": "https://www.polygon.com/gta-6-major-questions/",
@@ -294,21 +297,6 @@
       {
         "title": "Say Goodbye to Fallout's Best Replacement Before it Leaves Game Pass Forever",
         "url": "https://www.polygon.com/atomfall-game-pass-recommendation/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Target Will Be Unusually Strict For Pokémon's 30th Anniversary TCG Set Release",
-        "url": "https://www.polygon.com/target-pokemon-30th-anniversary-tcg-drop-limits-etb-new-rules/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Marvel’s Wolverine’s Cartoon Suits Are a Crime Against Humanity",
-        "url": "https://www.polygon.com/marvels-wolverine-cartoon-suits-crime-against-humanity/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Apex Legends' Is Officially Crossing Over With Fall’s Most-Anticipated Action Movie",
-        "url": "https://www.polygon.com/street-fighter-6-apex-legends-crossover-release-date-skins/",
         "source": "Polygon"
       }
     ],
