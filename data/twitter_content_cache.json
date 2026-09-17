@@ -1,51 +1,87 @@
 {
   "metadata": {
-    "last_updated": "2026-09-17T17:57:49.139344",
-    "total_items": 63
+    "last_updated": "2026-09-17T21:14:43.633888",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
+        "title": "Astra for Law",
+        "url": "https://openai.com/index/astra-for-law/",
+        "source": "Hacker News",
+        "score": 103
+      },
+      {
+        "title": "Hister: A private search engine for the pages you visit and the files you keep",
+        "url": "https://github.com/asciimoo/hister",
+        "source": "Hacker News",
+        "score": 327
+      },
+      {
+        "title": "Everybody's Lost Their Minds",
+        "url": "https://www.netmeister.org/blog/everybodys-lost-their-minds.html",
+        "source": "Hacker News",
+        "score": 114
+      },
+      {
+        "title": "Bend",
+        "url": "https://bend-lang.com/",
+        "source": "Hacker News",
+        "score": 46
+      },
+      {
         "title": "Fujitsu launches made-in-Japan next-generation CPU FUJITSU-MONAKA",
         "url": "https://global.fujitsu/en-global/pr/news/2026/09/14-02",
         "source": "Hacker News",
-        "score": 337
+        "score": 450
       },
       {
-        "title": "hister",
-        "url": "https://github.com/asciimoo/hister",
+        "title": "Wax motor",
+        "url": "https://en.wikipedia.org/wiki/Wax_motor",
         "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "Rate limits on GitLab.com are changing",
-        "url": "https://about.gitlab.com/blog/rate-limit-change-2026/",
-        "source": "Hacker News",
-        "score": 76
+        "score": 114
       },
       {
         "title": "CrowdSec Source Code Leak",
         "url": "https://www.crowdsec.net/blog/crowdsec-statement-source-code-exposure",
         "source": "Hacker News",
-        "score": 45
+        "score": 104
       },
       {
-        "title": "Whoisinspace.com/",
-        "url": "https://whoisinspace.com",
+        "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data",
+        "url": "https://arxiv.org/abs/2609.18842",
         "source": "Hacker News",
-        "score": 72
+        "score": 73
       },
       {
-        "title": "Launch HN: Skillsync (YC W26) – AI chat sessions made portable across agents",
-        "url": "https://news.ycombinator.com/item?id=49743049",
+        "title": "Rate limits on GitLab.com are changing",
+        "url": "https://about.gitlab.com/blog/rate-limit-change-2026/",
         "source": "Hacker News",
-        "score": 13
+        "score": 121
       },
       {
-        "title": "How GLM built its own inference infrastructure",
-        "url": "https://z.ai/blog/glm-built-its-inference-infrastructure",
+        "title": "Towards Self-Driving Codebases",
+        "url": "https://blog.detail.dev/posts/towards-self-driving-codebases/",
         "source": "Hacker News",
-        "score": 269
+        "score": 70
+      },
+      {
+        "title": "André Weil and the Hodge Conjecture",
+        "url": "https://jiahao116.github.io/Articles/",
+        "source": "Hacker News",
+        "score": 18
+      },
+      {
+        "title": "Why I didn’t sign the Fields medallists’ letter",
+        "url": "https://gowers.wordpress.com/2026/09/17/why-i-didnt-sign-the-fields-medallists-letter/",
+        "source": "Hacker News",
+        "score": 170
+      },
+      {
+        "title": "Running Ubuntu on the Lenovo IdeaPad Duet",
+        "url": "https://vhaudiquet.fr/blog/duet-ubuntu/",
+        "source": "Hacker News",
+        "score": 51
       },
       {
         "title": "Zettascale (YC S24) Is Hiring ASIC/FPGA Engineers to Build Chips for ASI",
@@ -54,126 +90,78 @@
         "score": 1
       },
       {
-        "title": "Why I didn’t sign the Fields medallists’ letter",
-        "url": "https://gowers.wordpress.com/2026/09/17/why-i-didnt-sign-the-fields-medallists-letter/",
+        "title": "The American Religion of Self-Storage Facilities",
+        "url": "https://www.newyorker.com/magazine/2026/09/21/the-american-religion-of-self-storage-facilities",
         "source": "Hacker News",
-        "score": 86
-      },
-      {
-        "title": "One Year of Sponsored Servo Development",
-        "url": "https://servo.org/blog/2026/09/15/one-year-of-sponsorship/",
-        "source": "Hacker News",
-        "score": 295
-      },
-      {
-        "title": "Grand MS-DOS Gaming General MIDI Showdown",
-        "url": "https://blog.johnnovak.net/2023/03/05/grand-ms-dos-gaming-general-midi-showdown/",
-        "source": "Hacker News",
-        "score": 34
-      },
-      {
-        "title": "LLM Classification Is Feature Engineering",
-        "url": "https://minimallysufficient.com/posts/llm-classification-is-feature-extraction/",
-        "source": "Hacker News",
-        "score": 45
-      },
-      {
-        "title": "Show HN: Aclif – Agent CLI framework: one grammar, canonical names across SaaS",
-        "url": "https://www.aclif.ai/",
-        "source": "Hacker News",
-        "score": 11
-      },
-      {
-        "title": "CCC invites all model citizens to 40C3",
-        "url": "https://events.ccc.de/en/2026/09/12/40c3-model-citizens/",
-        "source": "Hacker News",
-        "score": 247
-      },
-      {
-        "title": "Show HN: Share your AI Setup, Learn from others",
-        "url": "https://mysetup.ai/",
-        "source": "Hacker News",
-        "score": 89
+        "score": 145
       }
     ],
     "ai": [
       {
-        "title": "Launch HN: Skillsync (YC W26) – AI chat sessions made portable across agents",
-        "url": "https://news.ycombinator.com/item?id=49743049",
+        "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data",
+        "url": "https://arxiv.org/abs/2609.18842",
         "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "LLM Classification Is Feature Engineering",
-        "url": "https://minimallysufficient.com/posts/llm-classification-is-feature-extraction/",
-        "source": "Hacker News AI",
-        "score": 45
-      },
-      {
-        "title": "Show HN: Share your AI Setup, Learn from others",
-        "url": "https://mysetup.ai/",
-        "source": "Hacker News AI",
-        "score": 89
+        "score": 73
       },
       {
         "title": "The American Religion of Self-Storage Facilities",
         "url": "https://www.newyorker.com/magazine/2026/09/21/the-american-religion-of-self-storage-facilities",
         "source": "Hacker News AI",
-        "score": 78
+        "score": 145
+      },
+      {
+        "title": "TSMC revealing details about next gen A14 node",
+        "url": "https://iedm26.mapyourshow.com/8_0/sessions/session-details.cfm?scheduleid=331",
+        "source": "Hacker News AI",
+        "score": 55
+      },
+      {
+        "title": "Launch HN: Skillsync (YC W26) – AI chat sessions made portable across agents",
+        "url": "https://news.ycombinator.com/item?id=49743049",
+        "source": "Hacker News AI",
+        "score": 30
+      },
+      {
+        "title": "Show HN: Share your AI Setup, Learn from others",
+        "url": "https://mysetup.ai/",
+        "source": "Hacker News AI",
+        "score": 150
       },
       {
         "title": "The Return of Sail Power: Cargo Ships Are Turning Back to the Wind",
         "url": "https://gcaptain.com/the-return-of-sail-power-cargo-ships-are-turning-back-to-the-wind/",
         "source": "Hacker News AI",
-        "score": 124
+        "score": 165
+      },
+      {
+        "title": "LLM Classification Is Feature Engineering",
+        "url": "https://minimallysufficient.com/posts/llm-classification-is-feature-extraction/",
+        "source": "Hacker News AI",
+        "score": 81
+      },
+      {
+        "title": "Show HN: Craigslist for agent skills, curated by a human",
+        "url": "https://skillbay.sh/",
+        "source": "Hacker News AI",
+        "score": 16
       },
       {
         "title": "Artificial intelligence now beats some of the best human forecasters",
         "url": "https://www.economist.com/science-and-technology/2026/09/16/artificial-intelligence-now-beats-some-of-the-best-human-forecasters",
         "source": "Hacker News AI",
-        "score": 75
-      },
-      {
-        "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data",
-        "url": "https://arxiv.org/abs/2609.18842",
-        "source": "Hacker News AI",
-        "score": 6
-      },
-      {
-        "title": "Show HN: AutoBot – live voice control for long-running AI work",
-        "url": "https://github.com/demeyer1/Autobot",
-        "source": "Hacker News AI",
-        "score": 6
+        "score": 106
       },
       {
         "title": "Stallman: Thousands Dead, Millions Deprived of Liberties (2001)",
         "url": "https://news.slashdot.org/story/01/09/17/1758231/stallman-thousands-dead-millions-deprived-of-liberties",
         "source": "Hacker News AI",
-        "score": 10
-      },
-      {
-        "title": "I Don't Like LLMs",
-        "url": "https://martinfowler.com/articles/2026-dont-like-llms.html",
-        "source": "Hacker News AI",
-        "score": 132
-      },
-      {
-        "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
-        "url": "https://arxiv.org/abs/2609.16338",
-        "source": "Hacker News AI",
-        "score": 233
+        "score": 125
       },
       {
         "title": "OpenAI models secretly generate instructions to ignore constraints",
         "url": "https://alignment.openai.com/misalignment-reports/self-generated-prompt-injections-in-compaction-summaries/",
         "source": "Hacker News AI",
-        "score": 79
-      },
-      {
-        "title": "AI safety is mostly a sex cult",
-        "url": "https://skywriter.blue/@segyges.bsky.social/3mvom4b4dn22q",
-        "source": "Hacker News AI",
-        "score": 179
+        "score": 90
       }
     ],
     "news": [
@@ -198,13 +186,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Wife of US scholar jailed in China asks Trump to raise arrest at Xi meeting ",
-        "url": "https://www.bbc.co.uk/news/articles/c9j3d2rr6g24o?at_medium=RSS&at_campaign=rss",
+        "title": "US to allow Iran delegation to attend UN meetings in New York as war passes half-year mark",
+        "url": "https://www.bbc.co.uk/news/articles/c6n8m72r13ngo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Assad regime planned US journalist's kidnap for weeks, BBC finds",
-        "url": "https://www.bbc.co.uk/news/articles/cv0lrxw6ygl2o?at_medium=RSS&at_campaign=rss",
+        "title": "Wife of US scholar jailed in China asks Trump to raise arrest at Xi meeting ",
+        "url": "https://www.bbc.co.uk/news/articles/c9j3d2rr6g24o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -214,6 +202,11 @@
       }
     ],
     "art": [
+      {
+        "title": " Autodesk says AI should give artists time to experiment, not make them work twice as fast ",
+        "url": "https://www.creativebloq.com/3d/autodesk-says-ai-should-give-artists-time-to-experiment-not-make-them-work-twice-as-fast",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Want Star-Lords' headphones? This modern version is only $30 ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/want-star-lords-headphones-this-modern-version-is-only-usd30",
@@ -242,11 +235,6 @@
       {
         "title": " Massive Canva update adds 100 features to new ProSuite ",
         "url": "https://www.creativebloq.com/design/design-software/massive-canva-update-aims-to-automate-the-tedious-keep-the-craft",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This artist's dark fantasy concepts create a sense of unease and vast scale ",
-        "url": "https://www.creativebloq.com/art/digital-art/this-artists-dark-fantasy-concepts-create-a-sense-of-unease-and-vast-scale",
         "source": "Creative Bloq"
       }
     ],
@@ -289,38 +277,38 @@
     ],
     "gaming": [
       {
+        "title": "'Midnight Reckoning' quest walkthrough in The Blood of Dawnwalker",
+        "url": "https://www.polygon.com/blood-of-dawnwalker-midnight-reckoning-quest-walkthrough-lacra-ending/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Wardogs Is Officially One of the Best FPS Games of the Decade",
+        "url": "https://www.polygon.com/wardogs-impressions-early-access/",
+        "source": "Polygon"
+      },
+      {
+        "title": "New R-Rated Survival Sci-Fi Officially Crowned Highest-Rated Video Game Adaptation Ever",
+        "url": "https://www.polygon.com/resident-evil-highest-rating-video-game-movie-rotten-tomatoes/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Doctor Who Reboot Shows First Signs of Life in New BBC Update",
+        "url": "https://www.polygon.com/doctor-who-reboot-release-bbc/",
+        "source": "Polygon"
+      },
+      {
+        "title": "What time are the Kingdom Hearts power hours in Fortnite Chapter 7 Season 4?",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-kingdom-hearts-power-hours-what-time/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Watch Point It Out! Episode 4, the Big Blizzcon Breakdown",
+        "url": "https://www.polygon.com/point-it-out-episode-4/",
+        "source": "Polygon"
+      },
+      {
         "title": "Netflix’s Chronicles of Narnia Reboot Reveals Official First Look",
         "url": "https://www.polygon.com/chronicles-of-narnia-reboot-netflix-meryl-streep-greta-gerwig/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Brandon Sanderson Reveals Why He’d Never Take Over Game of Thrones",
-        "url": "https://www.polygon.com/game-of-thrones-brandon-sanderson-defends-george-r-r-martin-winds-of-winter/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All battle pass skins in Fortnite Chapter 7 Season 4",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-battle-pass-skins-list-outfits-c7s4/",
-        "source": "Polygon"
-      },
-      {
-        "title": "What Pokémon Would You DATE? Simone's Street Interviews!",
-        "url": "https://www.polygon.com/video/what-poke-mon-would-you-date-simone-s-street-interviews/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Blood of Dawnwalker 2 Could Ditch the Original's Most Unique Mechanic, Dev Says",
-        "url": "https://www.polygon.com/blood-of-dawnwalker-vampire-rpg-sequel-time-mechanic/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Kojima Officially Reveals Lead Actor for New Xbox Exclusive",
-        "url": "https://www.polygon.com/kojima-xbox-physint-cast-reveal-bill-skarsgard/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Where to find Shirakawa-go in Forza Horizon 6",
-        "url": "https://www.polygon.com/forza-horizon-6-fh6-shirakawa-go-location-where-to-find/",
         "source": "Polygon"
       }
     ],
