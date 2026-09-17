@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-17T21:14:43.633888",
-    "total_items": 61
+    "last_updated": "2026-09-17T23:57:01.790530",
+    "total_items": 56
   },
   "content": {
     "tech": [
@@ -9,159 +9,171 @@
         "title": "Astra for Law",
         "url": "https://openai.com/index/astra-for-law/",
         "source": "Hacker News",
-        "score": 103
+        "score": 242
+      },
+      {
+        "title": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
+        "url": "https://prismml.com/news/bonsai-2-27b",
+        "source": "Hacker News",
+        "score": 142
+      },
+      {
+        "title": "Bend – A language that blocks AI mistakes via proof, on CPU and GPU",
+        "url": "https://bend-lang.com/",
+        "source": "Hacker News",
+        "score": 222
       },
       {
         "title": "Hister: A private search engine for the pages you visit and the files you keep",
         "url": "https://github.com/asciimoo/hister",
         "source": "Hacker News",
-        "score": 327
+        "score": 416
       },
       {
-        "title": "Everybody's Lost Their Minds",
-        "url": "https://www.netmeister.org/blog/everybodys-lost-their-minds.html",
+        "title": "How to Write with an LLM",
+        "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News",
-        "score": 114
-      },
-      {
-        "title": "Bend",
-        "url": "https://bend-lang.com/",
-        "source": "Hacker News",
-        "score": 46
-      },
-      {
-        "title": "Fujitsu launches made-in-Japan next-generation CPU FUJITSU-MONAKA",
-        "url": "https://global.fujitsu/en-global/pr/news/2026/09/14-02",
-        "source": "Hacker News",
-        "score": 450
+        "score": 49
       },
       {
         "title": "Wax motor",
         "url": "https://en.wikipedia.org/wiki/Wax_motor",
         "source": "Hacker News",
-        "score": 114
+        "score": 196
+      },
+      {
+        "title": "Fujitsu launches made-in-Japan next-generation CPU FUJITSU-MONAKA",
+        "url": "https://global.fujitsu/en-global/pr/news/2026/09/14-02",
+        "source": "Hacker News",
+        "score": 482
+      },
+      {
+        "title": "More than 100k people in Japan are now aged 100 or older",
+        "url": "https://www.bbc.com/news/articles/cmzezj5e18xxo",
+        "source": "Hacker News",
+        "score": 45
+      },
+      {
+        "title": "Flet 1.0 – Build cross-platform apps in Python",
+        "url": "https://flet.dev/",
+        "source": "Hacker News",
+        "score": 34
       },
       {
         "title": "CrowdSec Source Code Leak",
         "url": "https://www.crowdsec.net/blog/crowdsec-statement-source-code-exposure",
         "source": "Hacker News",
-        "score": 104
+        "score": 123
+      },
+      {
+        "title": "The most important product decision is what you don't build",
+        "url": "https://liamnugent.me/posts/what-you-dont-build/",
+        "source": "Hacker News",
+        "score": 25
+      },
+      {
+        "title": "Diplodocus, Long Thought Exclusively American, Turns Up in Spain",
+        "url": "https://www.sci.news/paleontology/spanish-diplodocus-15064.html",
+        "source": "Hacker News",
+        "score": 14
       },
       {
         "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data",
         "url": "https://arxiv.org/abs/2609.18842",
         "source": "Hacker News",
-        "score": 73
+        "score": 100
       },
       {
         "title": "Rate limits on GitLab.com are changing",
         "url": "https://about.gitlab.com/blog/rate-limit-change-2026/",
         "source": "Hacker News",
-        "score": 121
-      },
-      {
-        "title": "Towards Self-Driving Codebases",
-        "url": "https://blog.detail.dev/posts/towards-self-driving-codebases/",
-        "source": "Hacker News",
-        "score": 70
-      },
-      {
-        "title": "André Weil and the Hodge Conjecture",
-        "url": "https://jiahao116.github.io/Articles/",
-        "source": "Hacker News",
-        "score": 18
-      },
-      {
-        "title": "Why I didn’t sign the Fields medallists’ letter",
-        "url": "https://gowers.wordpress.com/2026/09/17/why-i-didnt-sign-the-fields-medallists-letter/",
-        "source": "Hacker News",
-        "score": 170
-      },
-      {
-        "title": "Running Ubuntu on the Lenovo IdeaPad Duet",
-        "url": "https://vhaudiquet.fr/blog/duet-ubuntu/",
-        "source": "Hacker News",
-        "score": 51
-      },
-      {
-        "title": "Zettascale (YC S24) Is Hiring ASIC/FPGA Engineers to Build Chips for ASI",
-        "url": "https://zscc.ai/careers?job_id=109821",
-        "source": "Hacker News",
-        "score": 1
-      },
-      {
-        "title": "The American Religion of Self-Storage Facilities",
-        "url": "https://www.newyorker.com/magazine/2026/09/21/the-american-religion-of-self-storage-facilities",
-        "source": "Hacker News",
         "score": 145
+      },
+      {
+        "title": "Landing the Space Shuttle – A Flying Machine and the Thrill of a Lifetime",
+        "url": "https://inspire.eaa.org/2019/05/16/landing-the-space-shuttle-an-incredible-flying-machine-and-the-thrill-of-a-lifetime/",
+        "source": "Hacker News",
+        "score": 8
       }
     ],
     "ai": [
       {
+        "title": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
+        "url": "https://prismml.com/news/bonsai-2-27b",
+        "source": "Hacker News AI",
+        "score": 142
+      },
+      {
+        "title": "Bend – A language that blocks AI mistakes via proof, on CPU and GPU",
+        "url": "https://bend-lang.com/",
+        "source": "Hacker News AI",
+        "score": 222
+      },
+      {
+        "title": "How to Write with an LLM",
+        "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
+        "source": "Hacker News AI",
+        "score": 49
+      },
+      {
+        "title": "Diplodocus, Long Thought Exclusively American, Turns Up in Spain",
+        "url": "https://www.sci.news/paleontology/spanish-diplodocus-15064.html",
+        "source": "Hacker News AI",
+        "score": 14
+      },
+      {
         "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data",
         "url": "https://arxiv.org/abs/2609.18842",
         "source": "Hacker News AI",
-        "score": 73
+        "score": 100
       },
       {
         "title": "The American Religion of Self-Storage Facilities",
         "url": "https://www.newyorker.com/magazine/2026/09/21/the-american-religion-of-self-storage-facilities",
         "source": "Hacker News AI",
-        "score": 145
+        "score": 178
       },
       {
         "title": "TSMC revealing details about next gen A14 node",
         "url": "https://iedm26.mapyourshow.com/8_0/sessions/session-details.cfm?scheduleid=331",
         "source": "Hacker News AI",
-        "score": 55
+        "score": 80
+      },
+      {
+        "title": "How Uber Protects Against Retry Storms",
+        "url": "https://www.uber.com/us/en/blog/protecting-against-retry-storms/",
+        "source": "Hacker News AI",
+        "score": 20
+      },
+      {
+        "title": "Sex, AI, and the Apocalypse",
+        "url": "https://www.iankduncan.com/personal/2026-09-16-sex-ai-and-the-apocalypse/",
+        "source": "Hacker News AI",
+        "score": 105
       },
       {
         "title": "Launch HN: Skillsync (YC W26) – AI chat sessions made portable across agents",
         "url": "https://news.ycombinator.com/item?id=49743049",
         "source": "Hacker News AI",
-        "score": 30
+        "score": 41
       },
       {
         "title": "Show HN: Share your AI Setup, Learn from others",
         "url": "https://mysetup.ai/",
         "source": "Hacker News AI",
-        "score": 150
-      },
-      {
-        "title": "The Return of Sail Power: Cargo Ships Are Turning Back to the Wind",
-        "url": "https://gcaptain.com/the-return-of-sail-power-cargo-ships-are-turning-back-to-the-wind/",
-        "source": "Hacker News AI",
-        "score": 165
+        "score": 168
       },
       {
         "title": "LLM Classification Is Feature Engineering",
         "url": "https://minimallysufficient.com/posts/llm-classification-is-feature-extraction/",
         "source": "Hacker News AI",
-        "score": 81
+        "score": 86
       },
       {
         "title": "Show HN: Craigslist for agent skills, curated by a human",
         "url": "https://skillbay.sh/",
         "source": "Hacker News AI",
-        "score": 16
-      },
-      {
-        "title": "Artificial intelligence now beats some of the best human forecasters",
-        "url": "https://www.economist.com/science-and-technology/2026/09/16/artificial-intelligence-now-beats-some-of-the-best-human-forecasters",
-        "source": "Hacker News AI",
-        "score": 106
-      },
-      {
-        "title": "Stallman: Thousands Dead, Millions Deprived of Liberties (2001)",
-        "url": "https://news.slashdot.org/story/01/09/17/1758231/stallman-thousands-dead-millions-deprived-of-liberties",
-        "source": "Hacker News AI",
-        "score": 125
-      },
-      {
-        "title": "OpenAI models secretly generate instructions to ignore constraints",
-        "url": "https://alignment.openai.com/misalignment-reports/self-generated-prompt-injections-in-compaction-summaries/",
-        "source": "Hacker News AI",
-        "score": 90
+        "score": 20
       }
     ],
     "news": [
@@ -181,11 +193,6 @@
         "source": "BBC World"
       },
       {
-        "title": "Hyrox athlete apologises for continuing race after soiling herself",
-        "url": "https://www.bbc.co.uk/news/articles/ck0e35qyqlx0o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "US to allow Iran delegation to attend UN meetings in New York as war passes half-year mark",
         "url": "https://www.bbc.co.uk/news/articles/c6n8m72r13ngo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -196,48 +203,17 @@
         "source": "BBC World"
       },
       {
+        "title": "Hyrox athlete apologises for continuing race after soiling herself",
+        "url": "https://www.bbc.co.uk/news/articles/ck0e35qyqlx0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Aztec document goes on display in Mexico after 186 years abroad",
         "url": "https://www.bbc.co.uk/news/articles/ck980qyy6d2zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " Autodesk says AI should give artists time to experiment, not make them work twice as fast ",
-        "url": "https://www.creativebloq.com/3d/autodesk-says-ai-should-give-artists-time-to-experiment-not-make-them-work-twice-as-fast",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Want Star-Lords' headphones? This modern version is only $30 ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/want-star-lords-headphones-this-modern-version-is-only-usd30",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " BFI London Film Festival’s new identity is more hand crafted than meets the eye ",
-        "url": "https://www.creativebloq.com/design/bfi-london-film-festivals-new-identity-is-more-hand-crafted-than-meets-the-eye",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Quote of the Day by Peter Max: \"The Beatles captured the music mood of the late '60s and early '70s, I captured the visual.\" ",
-        "url": "https://www.creativebloq.com/art/quote-of-the-day-by-peter-max-the-beatles-captured-the-music-mood-of-the-late-sixties-and-early-seventies-i-captured-the-visual",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The new Hunger Games billboards are absolutely terrifying ",
-        "url": "https://www.creativebloq.com/design/advertising/the-new-hunger-games-billboards-are-absolutely-terrifying",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These 6 digital photo frames look good and offer great value for money ",
-        "url": "https://www.creativebloq.com/design/these-6-digital-photo-frames-look-good-and-offer-great-value-for-money",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Massive Canva update adds 100 features to new ProSuite ",
-        "url": "https://www.creativebloq.com/design/design-software/massive-canva-update-aims-to-automate-the-tedious-keep-the-craft",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "This popular fermented food may help flush nanoplastics from the body",
@@ -277,6 +253,26 @@
     ],
     "gaming": [
       {
+        "title": "'Fourth Wing' Author Officially Reveals Four New Characters from Her Next Book",
+        "url": "https://www.polygon.com/fourth-wing-empyrean-series-threshing-day-characters-revealed/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Near-Perfect PS4 Games Nobody Played",
+        "url": "https://www.polygon.com/underrated-ps4-games/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Resident Evil' Ending Explained: How Zach Cregger Quietly Sets Up a Sequel",
+        "url": "https://www.polygon.com/resident-evils-wild-final-act-explained/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Canon-Shaking Star Wars Reveals From the New 'Andor' Prequel",
+        "url": "https://www.polygon.com/star-wars-andor-reveal-edge-of-the-abyss/",
+        "source": "Polygon"
+      },
+      {
         "title": "'Midnight Reckoning' quest walkthrough in The Blood of Dawnwalker",
         "url": "https://www.polygon.com/blood-of-dawnwalker-midnight-reckoning-quest-walkthrough-lacra-ending/",
         "source": "Polygon"
@@ -289,26 +285,6 @@
       {
         "title": "New R-Rated Survival Sci-Fi Officially Crowned Highest-Rated Video Game Adaptation Ever",
         "url": "https://www.polygon.com/resident-evil-highest-rating-video-game-movie-rotten-tomatoes/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Doctor Who Reboot Shows First Signs of Life in New BBC Update",
-        "url": "https://www.polygon.com/doctor-who-reboot-release-bbc/",
-        "source": "Polygon"
-      },
-      {
-        "title": "What time are the Kingdom Hearts power hours in Fortnite Chapter 7 Season 4?",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-kingdom-hearts-power-hours-what-time/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Watch Point It Out! Episode 4, the Big Blizzcon Breakdown",
-        "url": "https://www.polygon.com/point-it-out-episode-4/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Netflix’s Chronicles of Narnia Reboot Reveals Official First Look",
-        "url": "https://www.polygon.com/chronicles-of-narnia-reboot-netflix-meryl-streep-greta-gerwig/",
         "source": "Polygon"
       }
     ],
