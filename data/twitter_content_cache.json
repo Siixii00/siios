@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-16T22:41:11.989707",
-    "total_items": 61
+    "last_updated": "2026-09-17T01:06:55.285146",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
+        "title": "Nvidia announces native GPU programming in Rust",
+        "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
+        "source": "Hacker News",
+        "score": 222
+      },
+      {
         "title": "Training a 4B model to produce 81% faster query plans than Postgres",
         "url": "https://rohanbansal.com/qorl",
         "source": "Hacker News",
-        "score": 290
+        "score": 384
       },
       {
         "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
         "url": "https://arxiv.org/abs/2609.16338",
         "source": "Hacker News",
-        "score": 76
+        "score": 133
       },
       {
         "title": "Xiaomi Mimo 2.6 live post-training dashboard",
         "url": "https://mimo.xiaomi.com/rl/",
         "source": "Hacker News",
-        "score": 156
+        "score": 236
       },
       {
-        "title": "Nvidia announces native GPU programming in Rust",
-        "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
+        "title": "Backups Aren't Simple",
+        "url": "https://filipovski.net/2026/09/16/backups-arent-simple.html",
         "source": "Hacker News",
-        "score": 32
+        "score": 71
       },
       {
         "title": "Small programming tricks",
         "url": "https://will-keleher.com/posts/small-programming-tricks-matter/",
         "source": "Hacker News",
-        "score": 329
+        "score": 387
       },
       {
-        "title": "AWS says it can't restore some data from mideast facilities struck by Iran",
-        "url": "https://www.wsj.com/world/middle-east/aws-says-it-cant-restore-some-data-from-mideast-facilities-struck-by-iran-ddcb7e5d",
+        "title": "The engineering behind the US Strategic Petroleum Reserve",
+        "url": "https://johnjwang.com/post/2026/09/15/engineering-behind-us-strategic-petroleum-reserve",
         "source": "Hacker News",
-        "score": 134
+        "score": 87
+      },
+      {
+        "title": "OpenSpec – A lightweight and configurable AI spec framework",
+        "url": "https://openspec.dev/",
+        "source": "Hacker News",
+        "score": 52
       },
       {
         "title": "Reversing Factorio's RNG",
         "url": "https://gegell.github.io/posts/factorio-rng/",
         "source": "Hacker News",
-        "score": 84
+        "score": 141
       },
       {
         "title": "Performance Improvements in .NET 11",
         "url": "https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-11/",
         "source": "Hacker News",
-        "score": 100
+        "score": 151
       },
       {
-        "title": "Accurate Models of AMD Matrix Cores",
-        "url": "https://arxiv.org/abs/2609.14845",
+        "title": "HarnessTax: How Much Does the Harness Matter for Coding Agents?",
+        "url": "https://harnesstax.github.io/",
         "source": "Hacker News",
-        "score": 47
+        "score": 22
+      },
+      {
+        "title": "AWS says it can't restore some data from mideast facilities struck by Iran",
+        "url": "https://www.wsj.com/world/middle-east/aws-says-it-cant-restore-some-data-from-mideast-facilities-struck-by-iran-ddcb7e5d",
+        "source": "Hacker News",
+        "score": 219
+      },
+      {
+        "title": "Australia says it could follow Canada in forging deeper ties with EU",
+        "url": "https://www.independent.co.uk/news/world/australasia/canda-eu-membership-australia-us-trade-b3050227.html",
+        "source": "Hacker News",
+        "score": 109
+      },
+      {
+        "title": "Reverse-engineered Jev-like model",
+        "url": "https://github.com/vinnylarouge/jevlike",
+        "source": "Hacker News",
+        "score": 71
       },
       {
         "title": "Japan's book scene is moving from bookstores to libraries",
         "url": "https://untranslatedjp.substack.com/p/japans-book-scene-is-quietly-moving",
         "source": "Hacker News",
-        "score": 61
-      },
-      {
-        "title": "How good are frontier models at physics?",
-        "url": "https://arxiv.org/abs/2609.13009",
-        "source": "Hacker News",
-        "score": 51
-      },
-      {
-        "title": "WalShadow: Sub-second Postgres replication to ClickHouse from physical WAL",
-        "url": "https://clickhouse.com/blog/introducing-walshadow",
-        "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "Anatomy of a Texture",
-        "url": "https://agentlien.github.io/texture/",
-        "source": "Hacker News",
-        "score": 62
-      },
-      {
-        "title": "Dream-RSI: Recursive Self-Improvement through Evolving Worlds",
-        "url": "https://arxiv.org/abs/2609.14858",
-        "source": "Hacker News",
-        "score": 169
-      },
-      {
-        "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
-        "url": "https://mistral.ai/news/mistral-x-mozilla/",
-        "source": "Hacker News",
-        "score": 506
+        "score": 102
       }
     ],
     "ai": [
@@ -101,73 +101,84 @@
         "title": "Training a 4B model to produce 81% faster query plans than Postgres",
         "url": "https://rohanbansal.com/qorl",
         "source": "Hacker News AI",
-        "score": 290
+        "score": 384
       },
       {
         "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
         "url": "https://arxiv.org/abs/2609.16338",
         "source": "Hacker News AI",
-        "score": 76
+        "score": 133
       },
       {
         "title": "Xiaomi Mimo 2.6 live post-training dashboard",
         "url": "https://mimo.xiaomi.com/rl/",
         "source": "Hacker News AI",
-        "score": 156
+        "score": 236
+      },
+      {
+        "title": "OpenSpec – A lightweight and configurable AI spec framework",
+        "url": "https://openspec.dev/",
+        "source": "Hacker News AI",
+        "score": 52
       },
       {
         "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
         "url": "https://mistral.ai/news/mistral-x-mozilla/",
         "source": "Hacker News AI",
-        "score": 506
-      },
-      {
-        "title": "The Siberian Ice Maiden and the Scythian World",
-        "url": "https://patrickwyman.substack.com/p/the-siberian-ice-maiden-and-the-scythian",
-        "source": "Hacker News AI",
-        "score": 44
+        "score": 534
       },
       {
         "title": "Training Text-to-Image Models 3.6× Faster",
         "url": "https://www.linum.ai/field-notes/jit-ddt",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 34
+      },
+      {
+        "title": "The Siberian Ice Maiden and the Scythian World",
+        "url": "https://patrickwyman.substack.com/p/the-siberian-ice-maiden-and-the-scythian",
+        "source": "Hacker News AI",
+        "score": 45
+      },
+      {
+        "title": "OpenAI Discloses Six New Incidents of ‘Concerning’ A.I. Behavior",
+        "url": "https://www.nytimes.com/2026/09/16/technology/openai-model-safety-guardrails.html",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "Common Crawl Data Stored on a Hugging Face Bucket",
         "url": "https://commoncrawl.org/blog/getting-started-with-common-crawl-data-on-hugging-face",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 8
       },
       {
         "title": "Claude Cowork and chat are now one Claude",
         "url": "https://claude.com/blog/cowork-is-now-claude",
         "source": "Hacker News AI",
-        "score": 194
+        "score": 201
+      },
+      {
+        "title": "OpenAI discloses six new AI safety incidents",
+        "url": "https://www.axios.com/2026/09/16/openai-testing-safety-incidents-disclosure",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Show HN: How Stale Is Your AI? Release age and training cutoff for 20 models",
         "url": "https://stale.jock.pl/",
         "source": "Hacker News AI",
-        "score": 67
-      },
-      {
-        "title": "Intelligence per Watt: Measuring Intelligence Efficiency of Local AI",
-        "url": "https://arxiv.org/abs/2511.07885",
-        "source": "Hacker News AI",
-        "score": 157
-      },
-      {
-        "title": "Barndoor acquires Diaphora, creators of open-source workflow runtime Frags",
-        "url": "https://barndoor.ai/barndoor-acquires-diaphora/",
-        "source": "Hacker News AI",
-        "score": 6
+        "score": 70
       }
     ],
     "news": [
       {
         "title": "US interest rates raised for first time in three years",
         "url": "https://www.bbc.co.uk/news/articles/cw4gmlyvj422o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Snapchat 'willing to implement' daily time limits for teens, boss tells BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cr3wjz3edd10o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -181,23 +192,18 @@
         "source": "BBC World"
       },
       {
-        "title": "Eight children among 21 killed after war-damaged Gaza building collapses, rescuers say",
-        "url": "https://www.bbc.co.uk/news/articles/cvp8d00j9gg5o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "US House votes to hold billionaire Epstein associate Leon Black in contempt",
         "url": "https://www.bbc.co.uk/news/articles/c62l8g8qlr0ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "OpenAI boss says world 'right to be afraid' but should trust AI firms",
-        "url": "https://www.bbc.co.uk/news/articles/cqx2zpj4y525o?at_medium=RSS&at_campaign=rss",
+        "title": "Eight children among 21 killed after war-damaged Gaza building collapses, rescuers say",
+        "url": "https://www.bbc.co.uk/news/articles/cvp8d00j9gg5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Eight German state premiers back Merz amid speculation over future",
-        "url": "https://www.bbc.co.uk/news/articles/c6dj4nn0n97ro?at_medium=RSS&at_campaign=rss",
+        "title": "Michelin-starred Seoul restaurant fined for using ants as garnish",
+        "url": "https://www.bbc.co.uk/news/articles/c639m42y43v4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -277,6 +283,16 @@
     ],
     "gaming": [
       {
+        "title": "30 Years Ago, a Japanese Sci-Fi Fantasy Spinoff Quietly Transformed RPGs Forever",
+        "url": "https://www.polygon.com/30-years-ago-a-moody-atlus-spinoff-paved-the-way-for-a-massive-rpg-transformation/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Enter Polygon's Point It Out Giveaway!",
+        "url": "https://www.polygon.com/secretlab-polygon-point-it-out-giveaway-contest/",
+        "source": "Polygon"
+      },
+      {
         "title": "South Park’s New Season Is Officially the Biggest Sitcom on Streaming After Just 1 Episode",
         "url": "https://www.polygon.com/south-park-america-tv-season-29-streaming-success/",
         "source": "Polygon"
@@ -300,20 +316,15 @@
         "title": "Bloodborne Is Officially Back with a New Release — but There's a Catch",
         "url": "https://www.polygon.com/bloodborne-sequel-super-groupies-new-collaboration-umbrella-fashion-merchandise/",
         "source": "Polygon"
-      },
-      {
-        "title": "How a wellness craze inspired Pokemon",
-        "url": "https://www.polygon.com/video/how-a-wellness-craze-inspired-pokemon/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Epic X-Men Villain Is Absolutely Terrorizing Marvel’s Wolverine Players",
-        "url": "https://www.polygon.com/marvels-wolverine-omega-red-first-boss/",
-        "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
+        "url": "https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "Marketing ops as code: Automating events from planning to follow-up on GitHub",
         "url": "https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/",
@@ -342,11 +353,6 @@
       {
         "title": "Decoding the new AI lingo: Loops, harnesses, squads, hill climbing… oh my!",
         "url": "https://github.blog/ai-and-ml/decoding-the-new-ai-lingo-loops-harnesses-squads-hill-climbing-oh-my/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "How we make AI coding more cost efficient without sacrificing task quality",
-        "url": "https://github.blog/ai-and-ml/github-copilot/how-we-make-ai-coding-more-cost-efficient-without-sacrificing-task-quality/",
         "source": "GitHub Blog"
       }
     ]
