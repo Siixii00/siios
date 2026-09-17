@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-17T07:16:39.017506",
-    "total_items": 60
+    "last_updated": "2026-09-17T13:06:40.868847",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "Keys Not Included: recovering the signing keys for US driver's license barcodes",
-        "url": "https://ryan.science/blog/keys-not-included",
+        "title": "How, Exactly, Could A.I. Kill Us?",
+        "url": "https://www.newyorker.com/news/q-and-a/how-exactly-could-ai-kill-us",
         "source": "Hacker News",
-        "score": 132
+        "score": 19
+      },
+      {
+        "title": "One Year of Sponsored Servo Development",
+        "url": "https://servo.org/blog/2026/09/15/one-year-of-sponsorship/",
+        "source": "Hacker News",
+        "score": 171
+      },
+      {
+        "title": "Neovim have a ~$800k Bitcoin donation sitting untouched since 2023",
+        "url": "https://news.ycombinator.com/item?id=49738879",
+        "source": "Hacker News",
+        "score": 184
+      },
+      {
+        "title": "Show HN: I built a new version of my fun spatial 3D online meeting app",
+        "url": "https://flat.social",
+        "source": "Hacker News",
+        "score": 4
       },
       {
         "title": "Nvidia announces native GPU programming in Rust",
         "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
         "source": "Hacker News",
-        "score": 576
+        "score": 775
+      },
+      {
+        "title": "Better Vector Search for Long Documents: Chunking Inside Manticore Search",
+        "url": "https://manticoresearch.com/blog/auto-chunking/",
+        "source": "Hacker News",
+        "score": 31
       },
       {
         "title": "My temporary PHP fix from 2014 has nearly 20M installs. Today I'm deprecating it",
         "url": "https://jakeasmith.com/blog/http-build-url/",
         "source": "Hacker News",
-        "score": 37
+        "score": 182
       },
       {
-        "title": "Comparison of Malloc() Algorithms",
-        "url": "https://egbert.net/blog/articles/comparison-of-arena-architecture-in-malloc.html",
+        "title": "Keys Not Included: recovering the signing keys for US driver's license barcodes",
+        "url": "https://ryan.science/blog/keys-not-included",
         "source": "Hacker News",
-        "score": 40
+        "score": 213
+      },
+      {
+        "title": "The Relation Between Mathematics and Physics by Paul Dirac",
+        "url": "https://www.damtp.cam.ac.uk/events/strings02/dirac/speach.html",
+        "source": "Hacker News",
+        "score": 94
+      },
+      {
+        "title": "GLM Built Its Own Inference Infrastructure",
+        "url": "https://z.ai/blog/glm-built-its-inference-infrastructure",
+        "source": "Hacker News",
+        "score": 150
       },
       {
         "title": "Training a 4B model to produce 81% faster query plans than Postgres",
         "url": "https://rohanbansal.com/qorl",
         "source": "Hacker News",
-        "score": 509
+        "score": 593
+      },
+      {
+        "title": "CCC invites all model citizens to 40C3",
+        "url": "https://events.ccc.de/en/2026/09/12/40c3-model-citizens/",
+        "source": "Hacker News",
+        "score": 57
       },
       {
         "title": "Xiaomi Mimo 2.6 live post-training dashboard",
         "url": "https://mimo.xiaomi.com/rl/",
         "source": "Hacker News",
-        "score": 403
+        "score": 474
       },
       {
-        "title": "Backups Aren't Simple",
-        "url": "https://filipovski.net/2026/09/16/backups-arent-simple.html",
+        "title": "Lucasart's Afterlife",
+        "url": "https://togameforlife.wordpress.com/2023/12/09/on-lucasarts-afterlife/",
         "source": "Hacker News",
-        "score": 199
+        "score": 51
       },
       {
-        "title": "Developing provably correct Rust code with Verus",
-        "url": "https://www.amazon.science/blog/developing-provably-correct-rust-code-with-verus",
+        "title": "Online Z3 Guide",
+        "url": "https://microsoft.github.io/z3guide/",
         "source": "Hacker News",
-        "score": 90
-      },
-      {
-        "title": "A 32-year-old bug walks into a Telnet server",
-        "url": "https://labs.watchtowr.com/a-32-year-old-bug-walks-into-a-telnet-server-gnu-inetutils-telnetd-cve-2026-32746/",
-        "source": "Hacker News",
-        "score": 45
-      },
-      {
-        "title": "Small programming tricks",
-        "url": "https://will-keleher.com/posts/small-programming-tricks-matter/",
-        "source": "Hacker News",
-        "score": 491
-      },
-      {
-        "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
-        "url": "https://arxiv.org/abs/2609.16338",
-        "source": "Hacker News",
-        "score": 190
-      },
-      {
-        "title": "The engineering behind the US Strategic Petroleum Reserve",
-        "url": "https://johnjwang.com/post/2026/09/15/engineering-behind-us-strategic-petroleum-reserve",
-        "source": "Hacker News",
-        "score": 179
-      },
-      {
-        "title": "OpenSpec – A lightweight and configurable AI spec framework",
-        "url": "https://openspec.dev/",
-        "source": "Hacker News",
-        "score": 125
-      },
-      {
-        "title": "The Return of Sail Power: Cargo Ships Are Turning Back to the Wind",
-        "url": "https://gcaptain.com/the-return-of-sail-power-cargo-ships-are-turning-back-to-the-wind/",
-        "source": "Hacker News",
-        "score": 73
-      },
-      {
-        "title": "AWS says it can't restore some data from mideast facilities struck by Iran",
-        "url": "https://www.wsj.com/world/middle-east/aws-says-it-cant-restore-some-data-from-mideast-facilities-struck-by-iran-ddcb7e5d",
-        "source": "Hacker News",
-        "score": 355
+        "score": 28
       }
     ],
     "ai": [
@@ -101,61 +101,49 @@
         "title": "Training a 4B model to produce 81% faster query plans than Postgres",
         "url": "https://rohanbansal.com/qorl",
         "source": "Hacker News AI",
-        "score": 509
+        "score": 593
       },
       {
         "title": "Xiaomi Mimo 2.6 live post-training dashboard",
         "url": "https://mimo.xiaomi.com/rl/",
         "source": "Hacker News AI",
-        "score": 403
+        "score": 474
       },
       {
         "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
         "url": "https://arxiv.org/abs/2609.16338",
         "source": "Hacker News AI",
-        "score": 190
+        "score": 218
       },
       {
         "title": "OpenSpec – A lightweight and configurable AI spec framework",
         "url": "https://openspec.dev/",
         "source": "Hacker News AI",
-        "score": 125
+        "score": 162
+      },
+      {
+        "title": "OpenAI models secretly generate instructions to ignore constraints",
+        "url": "https://alignment.openai.com/misalignment-reports/self-generated-prompt-injections-in-compaction-summaries/",
+        "source": "Hacker News AI",
+        "score": 27
       },
       {
         "title": "The Return of Sail Power: Cargo Ships Are Turning Back to the Wind",
         "url": "https://gcaptain.com/the-return-of-sail-power-cargo-ships-are-turning-back-to-the-wind/",
         "source": "Hacker News AI",
-        "score": 73
+        "score": 113
+      },
+      {
+        "title": "OpenAI Model Misalignment Report",
+        "url": "https://openai.com/index/model-misalignment-reporting-framework/",
+        "source": "Hacker News AI",
+        "score": 84
       },
       {
         "title": "Part-human part-mouse brain developed in science breakthrough",
         "url": "https://www.bbc.com/news/articles/c60m3k28j81mo",
         "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "US interest rates raised for first time in three years",
-        "url": "https://www.bbc.com/news/articles/cw4gmlyvj422o",
-        "source": "Hacker News AI",
-        "score": 21
-      },
-      {
-        "title": "Training Text-to-Image Models 3.6× Faster",
-        "url": "https://www.linum.ai/field-notes/jit-ddt",
-        "source": "Hacker News AI",
-        "score": 49
-      },
-      {
-        "title": "The Siberian Ice Maiden and the Scythian World",
-        "url": "https://patrickwyman.substack.com/p/the-siberian-ice-maiden-and-the-scythian",
-        "source": "Hacker News AI",
-        "score": 48
-      },
-      {
-        "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
-        "url": "https://mistral.ai/news/mistral-x-mozilla/",
-        "source": "Hacker News AI",
-        "score": 561
+        "score": 47
       }
     ],
     "news": [
@@ -165,74 +153,89 @@
         "source": "BBC World"
       },
       {
+        "title": "Uncontrolled AI could lead to 'silicon species' rivalling humans, warns Microsoft",
+        "url": "https://www.bbc.co.uk/news/articles/c6n07ypqz8kzo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ninth woman's body found as South African police investigate string of deaths",
+        "url": "https://www.bbc.co.uk/news/articles/cqx2zgk8k8xvo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Swedish PM Kristersson resigns after election loss",
+        "url": "https://www.bbc.co.uk/news/articles/cxr50l3d762po?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "EU announces plan to restrict social media access for under-15s",
+        "url": "https://www.bbc.co.uk/news/articles/c3j4jz8vpz1xo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Aztec document goes on display in Mexico after 186 years abroad",
+        "url": "https://www.bbc.co.uk/news/articles/ck980qyy6d2zo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "US interest rates raised for first time in three years",
         "url": "https://www.bbc.co.uk/news/articles/cw4gmlyvj422o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Snapchat open to putting time limits on teens, boss tells BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cr3wjz3edd10o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Rosenberg: Russia's elections will have few surprises, but for the Kremlin they matter",
-        "url": "https://www.bbc.co.uk/news/articles/ck62m0r4r1y3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Photos show widespread damage at US sites from Iranian attacks",
-        "url": "https://www.bbc.co.uk/news/articles/c8g49e0gwxeno?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "EU chief backs plan for Canada to become 'associate member'",
-        "url": "https://www.bbc.co.uk/news/articles/cjwyzrr9d3dko?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "International students, 'visa hoppers' and backpackers targeted in Australia migration crackdown",
-        "url": "https://www.bbc.co.uk/news/articles/cm986j81ky55o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
+        "title": " The new Hunger Games billboards are absolutely terrifying ",
+        "url": "https://www.creativebloq.com/design/advertising/the-new-hunger-games-billboards-are-absolutely-terrifying",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " These 6 digital photo frames look good and offer great value for money ",
+        "url": "https://www.creativebloq.com/design/these-6-digital-photo-frames-look-good-and-offer-great-value-for-money",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Massive Canva update adds 100 features to new ProSuite ",
+        "url": "https://www.creativebloq.com/design/design-software/massive-canva-update-aims-to-automate-the-tedious-keep-the-craft",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This artist's dark fantasy concepts create a sense of unease and vast scale ",
+        "url": "https://www.creativebloq.com/art/digital-art/this-artists-dark-fantasy-concepts-create-a-sense-of-unease-and-vast-scale",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Why I'd pre-order the iPhone 18 Pro, even if it's already being written off as a flop ",
+        "url": "https://www.creativebloq.com/tech/phones-tablets/pre-order-iphone-18-pro-and-pro-max-but-theres-an-elephant-in-the-room",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This wholesome Bob the Builder ad just restored my childhood ",
+        "url": "https://www.creativebloq.com/art/animation/this-wholesome-bob-the-builder-ad-just-restored-my-childhood",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Laika's final Wildwood trailer as absolutely stunning, but would you know it's stopmotion animation? ",
         "url": "https://www.creativebloq.com/art/animation/laikas-final-wildwood-trailer-as-absolutely-stunning-but-would-you-know-its-stopmotion-animation",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Why Canva hit the brakes on its huge AI rollout (and what other brands can learn from it) ",
-        "url": "https://www.creativebloq.com/design/design-software/why-canva-hit-the-brakes-on-its-huge-ai-rollout-and-what-other-brands-can-learn-from-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How Trails in the Sky gets it right when it comes to remaking a classic JRPG ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/how-trails-in-the-sky-gets-it-right-when-it-comes-to-remaking-a-classic-jrpg",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These headphones were $3,000 back in 2015 –at $949 today, they're my 'value' high-end cans of choice ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/these-headphones-were-usd3-000-back-in-2015-at-usd949-today-theyre-my-value-high-end-cans-of-choice",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Rihanna’s shady new Savage X Fenty ad towers above the competition ",
-        "url": "https://www.creativebloq.com/design/advertising/rihannas-shady-new-savage-x-fenty-ad-towers-above-the-competition",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The latest Washington Commanders logo controversy has sparked calls for a change in the law ",
-        "url": "https://www.creativebloq.com/design/logos-icons/the-latest-washington-commanders-logo-controversy-has-sparked-calls-for-a-change-in-the-law",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The budget 3D printer we most recommend for beginners is now half price ",
-        "url": "https://www.creativebloq.com/3d/3d-printing/elegoos-best-budget-friendly-3d-printer-is-now-half-price",
         "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Astronomers just found the youngest known planet ever",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260917003712.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "JWST’s mysterious little red dots may be black holes growing at incredible speeds",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260917003703.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists find a natural gut compound that helps heal the intestine",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260916232529.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "NASA’s New Horizons spots signs of liquid nitrogen flowing on Pluto",
         "url": "https://www.sciencedaily.com/releases/2026/09/260916232525.htm",
@@ -244,65 +247,50 @@
         "source": "Science Daily"
       },
       {
+        "title": "Textbooks may have misdrawn this basic brain structure for 100 years",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260915232138.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "New mesothelioma drug turns cancer’s own defenses against it",
         "url": "https://www.sciencedaily.com/releases/2026/09/260915232136.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Hidden “immune organ” in the skull may help fight brain cancer",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260915232134.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists “truly astonished” by discovery that challenges Earth’s origin story",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260915232132.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists find an immune “false alarm” that may drive rapid aging",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260915232130.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A 240-million-year-old fossil just changed the dinosaur timeline",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260915232128.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
+        "title": "34 Years Later, the Most Iconic '90s Series of All Time Officially Free on Streaming",
+        "url": "https://www.polygon.com/sailor-moon-free-to-stream-pluto-tv/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Frankenstein Meets Spielberg in the Most Bonkers Sci-Fi Thriller of 2026",
+        "url": "https://www.polygon.com/shaun-the-sheep-the-beast-of-mossy-bottom-directors-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "New Hunger Games Trailer Reveals This Will Be the Most Brutal Movie in the Series",
+        "url": "https://www.polygon.com/hunger-games-sunrise-on-the-reaping-trailer-september/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Kingdom Hearts and Cyberpunk Edgerunners Officially join Fortnite in Latest Update",
+        "url": "https://www.polygon.com/fortnite-kingdom-hearts-cyberpunk-edgerunners-update/",
+        "source": "Polygon"
+      },
+      {
+        "title": "20 Years Ago, Sega Introduced the World to Its Greatest Hero of All Time",
+        "url": "https://www.polygon.com/yakuza-1-20th-anniversary-north-america/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Konami's Castlevania: Belmont's Curse Plays Like.a Dream",
+        "url": "https://www.polygon.com/castlevania-belmonts-curse-impressions-tgs-2026/",
+        "source": "Polygon"
+      },
+      {
         "title": "60 Years Ago, the Best Charlie Brown Quote Was So Perfect It Made It Into the Movie",
         "url": "https://www.polygon.com/peanuts-best-charlie-brown-quote/",
-        "source": "Polygon"
-      },
-      {
-        "title": "33 Years Ago, 'X-Files' Introduced Its Weirdest Character in the Most Perfect Way Possible",
-        "url": "https://www.polygon.com/x-files-deep-throat-33-years-later/",
-        "source": "Polygon"
-      },
-      {
-        "title": "23 Fire Emblem Fortune's Weave beginner tips to help you defy fate",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-beginner-tips-tricks/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Where to find giants' meat in Fire Emblem Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-giants-meat-how-to-get-location-goliath/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Best Boons of Salvation to unlock early in Fire Emblem Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-boons-of-salvation-unlock-early/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Which character should you pick first in Fire Emblem: Fortune's Weave?",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-which-character-route-first/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How long is Fire Emblem Fortune's Weave and how many chapters are there?",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-chapter-list-how-long-to-beat/",
         "source": "Polygon"
       }
     ],
