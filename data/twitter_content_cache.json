@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-17T01:06:55.285146",
-    "total_items": 62
+    "last_updated": "2026-09-17T07:16:39.017506",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
+        "title": "Keys Not Included: recovering the signing keys for US driver's license barcodes",
+        "url": "https://ryan.science/blog/keys-not-included",
+        "source": "Hacker News",
+        "score": 132
+      },
+      {
         "title": "Nvidia announces native GPU programming in Rust",
         "url": "https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/",
         "source": "Hacker News",
-        "score": 222
+        "score": 576
+      },
+      {
+        "title": "My temporary PHP fix from 2014 has nearly 20M installs. Today I'm deprecating it",
+        "url": "https://jakeasmith.com/blog/http-build-url/",
+        "source": "Hacker News",
+        "score": 37
+      },
+      {
+        "title": "Comparison of Malloc() Algorithms",
+        "url": "https://egbert.net/blog/articles/comparison-of-arena-architecture-in-malloc.html",
+        "source": "Hacker News",
+        "score": 40
       },
       {
         "title": "Training a 4B model to produce 81% faster query plans than Postgres",
         "url": "https://rohanbansal.com/qorl",
         "source": "Hacker News",
-        "score": 384
-      },
-      {
-        "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
-        "url": "https://arxiv.org/abs/2609.16338",
-        "source": "Hacker News",
-        "score": 133
+        "score": 509
       },
       {
         "title": "Xiaomi Mimo 2.6 live post-training dashboard",
         "url": "https://mimo.xiaomi.com/rl/",
         "source": "Hacker News",
-        "score": 236
+        "score": 403
       },
       {
         "title": "Backups Aren't Simple",
         "url": "https://filipovski.net/2026/09/16/backups-arent-simple.html",
         "source": "Hacker News",
-        "score": 71
+        "score": 199
+      },
+      {
+        "title": "Developing provably correct Rust code with Verus",
+        "url": "https://www.amazon.science/blog/developing-provably-correct-rust-code-with-verus",
+        "source": "Hacker News",
+        "score": 90
+      },
+      {
+        "title": "A 32-year-old bug walks into a Telnet server",
+        "url": "https://labs.watchtowr.com/a-32-year-old-bug-walks-into-a-telnet-server-gnu-inetutils-telnetd-cve-2026-32746/",
+        "source": "Hacker News",
+        "score": 45
       },
       {
         "title": "Small programming tricks",
         "url": "https://will-keleher.com/posts/small-programming-tricks-matter/",
         "source": "Hacker News",
-        "score": 387
+        "score": 491
+      },
+      {
+        "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
+        "url": "https://arxiv.org/abs/2609.16338",
+        "source": "Hacker News",
+        "score": 190
       },
       {
         "title": "The engineering behind the US Strategic Petroleum Reserve",
         "url": "https://johnjwang.com/post/2026/09/15/engineering-behind-us-strategic-petroleum-reserve",
         "source": "Hacker News",
-        "score": 87
+        "score": 179
       },
       {
         "title": "OpenSpec – A lightweight and configurable AI spec framework",
         "url": "https://openspec.dev/",
         "source": "Hacker News",
-        "score": 52
+        "score": 125
       },
       {
-        "title": "Reversing Factorio's RNG",
-        "url": "https://gegell.github.io/posts/factorio-rng/",
+        "title": "The Return of Sail Power: Cargo Ships Are Turning Back to the Wind",
+        "url": "https://gcaptain.com/the-return-of-sail-power-cargo-ships-are-turning-back-to-the-wind/",
         "source": "Hacker News",
-        "score": 141
-      },
-      {
-        "title": "Performance Improvements in .NET 11",
-        "url": "https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-11/",
-        "source": "Hacker News",
-        "score": 151
-      },
-      {
-        "title": "HarnessTax: How Much Does the Harness Matter for Coding Agents?",
-        "url": "https://harnesstax.github.io/",
-        "source": "Hacker News",
-        "score": 22
+        "score": 73
       },
       {
         "title": "AWS says it can't restore some data from mideast facilities struck by Iran",
         "url": "https://www.wsj.com/world/middle-east/aws-says-it-cant-restore-some-data-from-mideast-facilities-struck-by-iran-ddcb7e5d",
         "source": "Hacker News",
-        "score": 219
-      },
-      {
-        "title": "Australia says it could follow Canada in forging deeper ties with EU",
-        "url": "https://www.independent.co.uk/news/world/australasia/canda-eu-membership-australia-us-trade-b3050227.html",
-        "source": "Hacker News",
-        "score": 109
-      },
-      {
-        "title": "Reverse-engineered Jev-like model",
-        "url": "https://github.com/vinnylarouge/jevlike",
-        "source": "Hacker News",
-        "score": 71
-      },
-      {
-        "title": "Japan's book scene is moving from bookstores to libraries",
-        "url": "https://untranslatedjp.substack.com/p/japans-book-scene-is-quietly-moving",
-        "source": "Hacker News",
-        "score": 102
+        "score": 355
       }
     ],
     "ai": [
@@ -101,84 +101,82 @@
         "title": "Training a 4B model to produce 81% faster query plans than Postgres",
         "url": "https://rohanbansal.com/qorl",
         "source": "Hacker News AI",
-        "score": 384
-      },
-      {
-        "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
-        "url": "https://arxiv.org/abs/2609.16338",
-        "source": "Hacker News AI",
-        "score": 133
+        "score": 509
       },
       {
         "title": "Xiaomi Mimo 2.6 live post-training dashboard",
         "url": "https://mimo.xiaomi.com/rl/",
         "source": "Hacker News AI",
-        "score": 236
+        "score": 403
+      },
+      {
+        "title": "Breaking the 1.58-bit Barrier for Ternary LLMs",
+        "url": "https://arxiv.org/abs/2609.16338",
+        "source": "Hacker News AI",
+        "score": 190
       },
       {
         "title": "OpenSpec – A lightweight and configurable AI spec framework",
         "url": "https://openspec.dev/",
         "source": "Hacker News AI",
-        "score": 52
+        "score": 125
       },
       {
-        "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
-        "url": "https://mistral.ai/news/mistral-x-mozilla/",
+        "title": "The Return of Sail Power: Cargo Ships Are Turning Back to the Wind",
+        "url": "https://gcaptain.com/the-return-of-sail-power-cargo-ships-are-turning-back-to-the-wind/",
         "source": "Hacker News AI",
-        "score": 534
+        "score": 73
+      },
+      {
+        "title": "Part-human part-mouse brain developed in science breakthrough",
+        "url": "https://www.bbc.com/news/articles/c60m3k28j81mo",
+        "source": "Hacker News AI",
+        "score": 27
+      },
+      {
+        "title": "US interest rates raised for first time in three years",
+        "url": "https://www.bbc.com/news/articles/cw4gmlyvj422o",
+        "source": "Hacker News AI",
+        "score": 21
       },
       {
         "title": "Training Text-to-Image Models 3.6× Faster",
         "url": "https://www.linum.ai/field-notes/jit-ddt",
         "source": "Hacker News AI",
-        "score": 34
+        "score": 49
       },
       {
         "title": "The Siberian Ice Maiden and the Scythian World",
         "url": "https://patrickwyman.substack.com/p/the-siberian-ice-maiden-and-the-scythian",
         "source": "Hacker News AI",
-        "score": 45
+        "score": 48
       },
       {
-        "title": "OpenAI Discloses Six New Incidents of ‘Concerning’ A.I. Behavior",
-        "url": "https://www.nytimes.com/2026/09/16/technology/openai-model-safety-guardrails.html",
+        "title": "Mistral X Mozilla: Private, Multilingual AI Browsing",
+        "url": "https://mistral.ai/news/mistral-x-mozilla/",
         "source": "Hacker News AI",
-        "score": 4
-      },
-      {
-        "title": "Common Crawl Data Stored on a Hugging Face Bucket",
-        "url": "https://commoncrawl.org/blog/getting-started-with-common-crawl-data-on-hugging-face",
-        "source": "Hacker News AI",
-        "score": 8
-      },
-      {
-        "title": "Claude Cowork and chat are now one Claude",
-        "url": "https://claude.com/blog/cowork-is-now-claude",
-        "source": "Hacker News AI",
-        "score": 201
-      },
-      {
-        "title": "OpenAI discloses six new AI safety incidents",
-        "url": "https://www.axios.com/2026/09/16/openai-testing-safety-incidents-disclosure",
-        "source": "Hacker News AI",
-        "score": 7
-      },
-      {
-        "title": "Show HN: How Stale Is Your AI? Release age and training cutoff for 20 models",
-        "url": "https://stale.jock.pl/",
-        "source": "Hacker News AI",
-        "score": 70
+        "score": 561
       }
     ],
     "news": [
+      {
+        "title": "Assad regime planned US journalist's kidnap for weeks, BBC finds",
+        "url": "https://www.bbc.co.uk/news/articles/cv0lrxw6ygl2o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "US interest rates raised for first time in three years",
         "url": "https://www.bbc.co.uk/news/articles/cw4gmlyvj422o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Snapchat 'willing to implement' daily time limits for teens, boss tells BBC",
+        "title": "Snapchat open to putting time limits on teens, boss tells BBC",
         "url": "https://www.bbc.co.uk/news/articles/cr3wjz3edd10o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Rosenberg: Russia's elections will have few surprises, but for the Kremlin they matter",
+        "url": "https://www.bbc.co.uk/news/articles/ck62m0r4r1y3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -192,22 +190,27 @@
         "source": "BBC World"
       },
       {
-        "title": "US House votes to hold billionaire Epstein associate Leon Black in contempt",
-        "url": "https://www.bbc.co.uk/news/articles/c62l8g8qlr0ko?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Eight children among 21 killed after war-damaged Gaza building collapses, rescuers say",
-        "url": "https://www.bbc.co.uk/news/articles/cvp8d00j9gg5o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Michelin-starred Seoul restaurant fined for using ants as garnish",
-        "url": "https://www.bbc.co.uk/news/articles/c639m42y43v4o?at_medium=RSS&at_campaign=rss",
+        "title": "International students, 'visa hoppers' and backpackers targeted in Australia migration crackdown",
+        "url": "https://www.bbc.co.uk/news/articles/cm986j81ky55o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Laika's final Wildwood trailer as absolutely stunning, but would you know it's stopmotion animation? ",
+        "url": "https://www.creativebloq.com/art/animation/laikas-final-wildwood-trailer-as-absolutely-stunning-but-would-you-know-its-stopmotion-animation",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Why Canva hit the brakes on its huge AI rollout (and what other brands can learn from it) ",
+        "url": "https://www.creativebloq.com/design/design-software/why-canva-hit-the-brakes-on-its-huge-ai-rollout-and-what-other-brands-can-learn-from-it",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How Trails in the Sky gets it right when it comes to remaking a classic JRPG ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/how-trails-in-the-sky-gets-it-right-when-it-comes-to-remaking-a-classic-jrpg",
+        "source": "Creative Bloq"
+      },
       {
         "title": " These headphones were $3,000 back in 2015 –at $949 today, they're my 'value' high-end cans of choice ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/these-headphones-were-usd3-000-back-in-2015-at-usd949-today-theyre-my-value-high-end-cans-of-choice",
@@ -227,24 +230,29 @@
         "title": " The budget 3D printer we most recommend for beginners is now half price ",
         "url": "https://www.creativebloq.com/3d/3d-printing/elegoos-best-budget-friendly-3d-printer-is-now-half-price",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " I thought the Evercade Nexus was too big – then I played Banjo-Kazooie on it ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/i-thought-the-evercade-nexus-was-too-big-then-i-played-banjo-kazooie-on-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Original Prusa MK4S review: the old guard of 3D printing ",
-        "url": "https://www.creativebloq.com/3d/3d-printing/original-prusa-mk4s-review-the-old-guard-of-3d-printing",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Lenovo ThinkTab X11 review: built like a tank, but not really a tablet for the creative crowd ",
-        "url": "https://www.creativebloq.com/tech/phones-tablets/lenovo-thinktab-x11-review-built-like-a-tank-but-not-really-a-tablet-for-the-creative-crowd",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "NASA’s New Horizons spots signs of liquid nitrogen flowing on Pluto",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260916232525.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists find a hidden health advantage in black and green rice",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260916232523.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "New mesothelioma drug turns cancer’s own defenses against it",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260915232136.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Hidden “immune organ” in the skull may help fight brain cancer",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260915232134.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Scientists “truly astonished” by discovery that challenges Earth’s origin story",
         "url": "https://www.sciencedaily.com/releases/2026/09/260915232132.htm",
@@ -259,62 +267,42 @@
         "title": "A 240-million-year-old fossil just changed the dinosaur timeline",
         "url": "https://www.sciencedaily.com/releases/2026/09/260915232128.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "Scientists find the whole grain “sweet spot” for better heart health",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260915232126.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "James Webb reveals Chariklo’s mysterious rings are changing faster than expected",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260915232124.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Venus may have swallowed its own moon",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260915232122.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Irrigation’s climate benefit could equal 363 years of its own emissions",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260915232119.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "30 Years Ago, a Japanese Sci-Fi Fantasy Spinoff Quietly Transformed RPGs Forever",
-        "url": "https://www.polygon.com/30-years-ago-a-moody-atlus-spinoff-paved-the-way-for-a-massive-rpg-transformation/",
+        "title": "60 Years Ago, the Best Charlie Brown Quote Was So Perfect It Made It Into the Movie",
+        "url": "https://www.polygon.com/peanuts-best-charlie-brown-quote/",
         "source": "Polygon"
       },
       {
-        "title": "Enter Polygon's Point It Out Giveaway!",
-        "url": "https://www.polygon.com/secretlab-polygon-point-it-out-giveaway-contest/",
+        "title": "33 Years Ago, 'X-Files' Introduced Its Weirdest Character in the Most Perfect Way Possible",
+        "url": "https://www.polygon.com/x-files-deep-throat-33-years-later/",
         "source": "Polygon"
       },
       {
-        "title": "South Park’s New Season Is Officially the Biggest Sitcom on Streaming After Just 1 Episode",
-        "url": "https://www.polygon.com/south-park-america-tv-season-29-streaming-success/",
+        "title": "23 Fire Emblem Fortune's Weave beginner tips to help you defy fate",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-beginner-tips-tricks/",
         "source": "Polygon"
       },
       {
-        "title": "Magic: The Gathering Officially Reveals the Ur-Dragon's New Commander Replacement",
-        "url": "https://www.polygon.com/mtg-reality-fracture-commander-precon-the-ur-sphinx/",
+        "title": "Where to find giants' meat in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-giants-meat-how-to-get-location-goliath/",
         "source": "Polygon"
       },
       {
-        "title": "Baldur's Gate 3 Officially Adds 19 Game-Breaking Options for Console Players",
-        "url": "https://www.polygon.com/bg3-new-console-mods-september-2026/",
+        "title": "Best Boons of Salvation to unlock early in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-boons-of-salvation-unlock-early/",
         "source": "Polygon"
       },
       {
-        "title": "Guy Ritchie’s 128-minute Action Movie Is Officially the Biggest Detective Thriller on Streaming",
-        "url": "https://www.polygon.com/guy-ritchie-sherlock-holmes-streaming-hit-apple-tv-september-2026/",
+        "title": "Which character should you pick first in Fire Emblem: Fortune's Weave?",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-which-character-route-first/",
         "source": "Polygon"
       },
       {
-        "title": "Bloodborne Is Officially Back with a New Release — but There's a Catch",
-        "url": "https://www.polygon.com/bloodborne-sequel-super-groupies-new-collaboration-umbrella-fashion-merchandise/",
+        "title": "How long is Fire Emblem Fortune's Weave and how many chapters are there?",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-chapter-list-how-long-to-beat/",
         "source": "Polygon"
       }
     ],
