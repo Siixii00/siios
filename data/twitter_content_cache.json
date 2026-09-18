@@ -1,173 +1,185 @@
 {
   "metadata": {
-    "last_updated": "2026-09-18T18:06:45.029253",
-    "total_items": 62
+    "last_updated": "2026-09-18T21:27:19.377298",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
-        "title": "There's no point at which turning your brain off will work",
-        "url": "https://danluu.com/brain-off/",
+        "title": "Android 17 is the first since 3.x to add new APIs without releasing to the AOSP",
+        "url": "https://grapheneos.social/@GrapheneOS/117282080803799576",
         "source": "Hacker News",
-        "score": 121
+        "score": 282
+      },
+      {
+        "title": "Claude Code now reads AGENTS.md if there is no Claude.md",
+        "url": "https://code.claude.com/docs/en/changelog",
+        "source": "Hacker News",
+        "score": 49
       },
       {
         "title": "Cloudflare Quick Tunnels",
         "url": "https://try.cloudflare.com/",
         "source": "Hacker News",
-        "score": 266
+        "score": 461
+      },
+      {
+        "title": "Saving another 100TB of RAM",
+        "url": "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/",
+        "source": "Hacker News",
+        "score": 98
+      },
+      {
+        "title": "Xcode 27.1 Beta Release Notes",
+        "url": "https://developer.apple.com/documentation/xcode-release-notes/xcode-27_1-release-notes",
+        "source": "Hacker News",
+        "score": 83
+      },
+      {
+        "title": "Cache-to-Cache: Direct Semantic Communication Between LLMs (2025)",
+        "url": "https://arxiv.org/abs/2510.03215",
+        "source": "Hacker News",
+        "score": 42
       },
       {
         "title": "Photon-Emission-Guided Laser Fault Injection Enables RP2350 Secure Debug",
         "url": "https://donjon.ledger.com/blog/rp2350-secure-debug-laser-fault-injection/",
         "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "North Korean nuclear test sets off years of earthquakes",
-        "url": "https://www.science.org/content/article/north-korean-nuclear-test-sets-years-earthquakes",
-        "source": "Hacker News",
-        "score": 104
-      },
-      {
-        "title": "An Empirical Study of Harness Design for Coding Agents",
-        "url": "https://arxiv.org/abs/2609.20804",
-        "source": "Hacker News",
-        "score": 181
+        "score": 120
       },
       {
         "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
         "url": "https://cactuscompute.com/needle",
         "source": "Hacker News",
-        "score": 64
+        "score": 126
       },
       {
-        "title": "C++26: Trivial infinite loops are no longer undefined behaviour",
-        "url": "https://www.sandordargo.com/blog/2026/09/16/cpp26-trivial-infinite-loops",
+        "title": "How to Write with an LLM",
+        "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News",
-        "score": 74
+        "score": 321
+      },
+      {
+        "title": "The Implications of Linguistic Illegibility for LLM Security",
+        "url": "https://arxiv.org/abs/2609.02852",
+        "source": "Hacker News",
+        "score": 29
       },
       {
         "title": "OpenJev",
         "url": "https://openjev.com/",
         "source": "Hacker News",
-        "score": 408
+        "score": 497
       },
       {
-        "title": "Mathematicians Build Long-Awaited Graph Sandwich",
-        "url": "https://www.quantamagazine.org/mathematicians-build-long-awaited-graph-sandwich-20260918/",
+        "title": "C++26: Trivial infinite loops are no longer undefined behaviour",
+        "url": "https://www.sandordargo.com/blog/2026/09/16/cpp26-trivial-infinite-loops",
         "source": "Hacker News",
-        "score": 34
+        "score": 119
       },
       {
-        "title": "I vibed a proof of Conway's conjecture",
-        "url": "https://overreacted.io/how-i-vibed-a-proof-of-conways-conjecture/",
+        "title": "Our brain evolved from two primitive nervous systems that merged: Study",
+        "url": "https://www.newscientist.com/article/2589739-our-brain-evolved-from-two-primitive-nervous-systems-that-merged/",
         "source": "Hacker News",
-        "score": 122
+        "score": 74
       },
       {
-        "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
-        "url": "https://www.hacktron.ai/blog/hacking-openai",
+        "title": "The first new cat species discovered in 100 years",
+        "url": "https://www.nationalgeographic.com/animals/article/meet-the-first-new-cat-species-discovered-in-100-years",
         "source": "Hacker News",
-        "score": 431
+        "score": 76
       },
       {
-        "title": "I don't like passkeys",
-        "url": "https://hawksley.dev/blog/i-dont-like-passkeys",
+        "title": "Border agents can search cellphones without a warrant or reasonable suspicion",
+        "url": "https://lawandcrime.com/high-profile/the-government-was-entitled-trumps-border-agents-can-now-search-cellphones-without-a-warrant-probable-cause-or-reasonable-suspicion-2nd-circuit-rules/",
         "source": "Hacker News",
-        "score": 564
-      },
-      {
-        "title": "Jemalloc 5.4.0",
-        "url": "https://github.com/jemalloc/jemalloc/releases/tag/5.4.0",
-        "source": "Hacker News",
-        "score": 297
-      },
-      {
-        "title": "GrassLobster: AI Agentic Generation of Parametric Geometry Workflows",
-        "url": "https://www.miro.vision/index.php/2026/09/17/grasslobbster/",
-        "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "NATS publishes preliminary report on technical incident of 8 September",
-        "url": "https://www.nats.aero/news/nats-publishes-preliminary-report-on-technical-incident-of-8-september/",
-        "source": "Hacker News",
-        "score": 36
+        "score": 139
       }
     ],
     "ai": [
       {
-        "title": "There's no point at which turning your brain off will work",
-        "url": "https://danluu.com/brain-off/",
+        "title": "Claude Code now reads AGENTS.md if there is no Claude.md",
+        "url": "https://code.claude.com/docs/en/changelog",
         "source": "Hacker News AI",
-        "score": 121
+        "score": 49
       },
       {
-        "title": "Mathematicians Build Long-Awaited Graph Sandwich",
-        "url": "https://www.quantamagazine.org/mathematicians-build-long-awaited-graph-sandwich-20260918/",
+        "title": "Cache-to-Cache: Direct Semantic Communication Between LLMs (2025)",
+        "url": "https://arxiv.org/abs/2510.03215",
         "source": "Hacker News AI",
-        "score": 34
-      },
-      {
-        "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
-        "url": "https://www.hacktron.ai/blog/hacking-openai",
-        "source": "Hacker News AI",
-        "score": 431
-      },
-      {
-        "title": "GrassLobster: AI Agentic Generation of Parametric Geometry Workflows",
-        "url": "https://www.miro.vision/index.php/2026/09/17/grasslobbster/",
-        "source": "Hacker News AI",
-        "score": 23
-      },
-      {
-        "title": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
-        "url": "https://prismml.com/news/bonsai-2-27b",
-        "source": "Hacker News AI",
-        "score": 549
-      },
-      {
-        "title": "Warren Buffett Steps Down as Berkshire Chairman, Names Son to Replace Him",
-        "url": "https://www.nytimes.com/2026/09/18/business/warren-buffett-berkshire-chairman.html",
-        "source": "Hacker News AI",
-        "score": 240
-      },
-      {
-        "title": "US Military had close call after using AI for hallucinated intelligence report",
-        "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
-        "source": "Hacker News AI",
-        "score": 19
+        "score": 42
       },
       {
         "title": "How to Write with an LLM",
         "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News AI",
-        "score": 284
+        "score": 322
       },
       {
-        "title": "Microsoft exec called AI scraping 'the largest theft of labor in human history'",
-        "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
+        "title": "The Implications of Linguistic Illegibility for LLM Security",
+        "url": "https://arxiv.org/abs/2609.02852",
         "source": "Hacker News AI",
-        "score": 756
+        "score": 29
       },
       {
-        "title": "AI is an elite crime spree",
-        "url": "https://www.thebignewsletter.com/p/ai-is-an-elite-crime-spree",
+        "title": "Our brain evolved from two primitive nervous systems that merged: Study",
+        "url": "https://www.newscientist.com/article/2589739-our-brain-evolved-from-two-primitive-nervous-systems-that-merged/",
         "source": "Hacker News AI",
-        "score": 102
+        "score": 74
       },
       {
-        "title": "Diplodocus, Long Thought Exclusively American, Turns Up in Spain",
-        "url": "https://www.sci.news/paleontology/spanish-diplodocus-15064.html",
+        "title": "Korea raises data breach fines to 10% of revenue",
+        "url": "https://www.koreajoongangdaily.com/business/korea-raises-data-breach-fines-to-10-of-revenue/12869899",
         "source": "Hacker News AI",
-        "score": 92
+        "score": 160
       },
       {
-        "title": "My Thoughts on AI and LLMs",
-        "url": "https://news.ycombinator.com/item?id=49756902",
+        "title": "From Geometry to Algebra and Back Again: 4000 Years of Papers (2023) [video]",
+        "url": "https://www.youtube.com/watch?v=1cRFfYQYGxE",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 8
+      },
+      {
+        "title": "US Military had close call after using AI for hallucinated intelligence report",
+        "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
+        "source": "Hacker News AI",
+        "score": 298
+      },
+      {
+        "title": "Mathematicians Build Long-Awaited Graph Sandwich",
+        "url": "https://www.quantamagazine.org/mathematicians-build-long-awaited-graph-sandwich-20260918/",
+        "source": "Hacker News AI",
+        "score": 56
+      },
+      {
+        "title": "Warren Buffett Steps Down as Berkshire Chairman, Names Son to Replace Him",
+        "url": "https://www.nytimes.com/2026/09/18/business/warren-buffett-berkshire-chairman.html",
+        "source": "Hacker News AI",
+        "score": 275
+      },
+      {
+        "title": "AI chatbots are becoming experts at changing people's minds",
+        "url": "https://www.science.org/content/article/ai-chatbots-are-becoming-experts-changing-people-s-minds-what-s-their-secret",
+        "source": "Hacker News AI",
+        "score": 74
+      },
+      {
+        "title": "GrassLobster: AI Agentic Generation of Parametric Geometry Workflows",
+        "url": "https://www.miro.vision/index.php/2026/09/17/grasslobbster/",
+        "source": "Hacker News AI",
+        "score": 27
+      },
+      {
+        "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
+        "url": "https://www.hacktron.ai/blog/hacking-openai",
+        "source": "Hacker News AI",
+        "score": 458
+      },
+      {
+        "title": "Anthropic finally adds AGENTS.md support to Claude Code",
+        "url": "https://twitter.com/trq212/status/2101009392611278961",
+        "source": "Hacker News AI",
+        "score": 36
       }
     ],
     "news": [
@@ -177,18 +189,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Three dead and eight injured in Philippines school shooting",
-        "url": "https://www.bbc.co.uk/news/articles/c6x2z4dlzyr0o?at_medium=RSS&at_campaign=rss",
+        "title": "Trump says he is banning CNN and Politico from White House",
+        "url": "https://www.bbc.co.uk/news/articles/c6e30580jqjpo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Police begin operation to move migrants from Ceuta beaches",
-        "url": "https://www.bbc.co.uk/news/articles/c6vgy80ge1z7o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Lindsay Clancy holdout juror says he had no doubt she deliberately killed her children",
-        "url": "https://www.bbc.co.uk/news/articles/c54g7jdmw032o?at_medium=RSS&at_campaign=rss",
+        "title": "Is the Kennedy Center losing 'hundreds of millions of dollars'?",
+        "url": "https://www.bbc.co.uk/news/videos/cqy4zw4xr717o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -197,13 +204,18 @@
         "source": "BBC World"
       },
       {
-        "title": "Warren Buffett steps down after six decades at Berkshire - 'Father Time always wins' ",
-        "url": "https://www.bbc.co.uk/news/articles/cvj64dl1w6yno?at_medium=RSS&at_campaign=rss",
+        "title": "Lindsay Clancy holdout juror says he had no doubt she deliberately killed her children",
+        "url": "https://www.bbc.co.uk/news/articles/c54g7jdmw032o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ronaldo named in first Portugal squad since World Cup - at age of 41",
-        "url": "https://www.bbc.co.uk/sport/football/articles/cmeq8v8e3ql7o?at_medium=RSS&at_campaign=rss",
+        "title": "Ryanair boss Michael O'Leary apologises over 'high-fare rapists' remarks",
+        "url": "https://www.bbc.co.uk/news/articles/cm1j4kj57k08o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "North Korean anthem played for South Korea at Asian Games",
+        "url": "https://www.bbc.co.uk/sport/hockey/articles/cmx2zg85gq03o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -239,8 +251,8 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " Quote of the Day by James Gurney: \"Working from imagination and from observation are indispensable to each other\" ",
-        "url": "https://www.creativebloq.com/art/traditional-art/quote-of-the-day-by-james-gurney-working-from-imagination-and-from-observation-are-indispensable-to-each-other",
+        "title": " This artist blends 19th century Japanese styles with Western Art Nouveau, and his process could help you get out of a creative rut ",
+        "url": "https://www.creativebloq.com/art/digital-art/this-artist-blends-19th-century-japanese-styles-with-western-art-nouveau-and-his-process-could-help-you-get-out-of-a-creative-rut",
         "source": "Creative Bloq"
       }
     ],
@@ -283,38 +295,38 @@
     ],
     "gaming": [
       {
-        "title": "Final Fantasy 14 Is Bringing Back a Fan-Favorite Crossover for the First Time in Over Two Years",
-        "url": "https://www.polygon.com/final-fantasy-14-15-crossover-event-nocturne-for-heroes/",
+        "title": "Where to find wonder leaves in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-wonder-leaves-location-where-to-find/",
         "source": "Polygon"
       },
       {
-        "title": "41 Wardogs tips the FPS game doesn't teach you",
-        "url": "https://www.polygon.com/wardogs-tips-tricks-beginners-guide/",
+        "title": "Classes and unlock requirements in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-classes-unlock-secret/",
         "source": "Polygon"
       },
       {
-        "title": "Matthew Mercer Officially Reveals His 8 Greatest Critical Role Moments of All Time",
-        "url": "https://www.polygon.com/matthew-mercer-best-critical-role-moments/",
+        "title": "Fire Emblem: Fortune's Weave Is Way Easier If You Play a Second Route",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-should-you-play-more-than-one-route/",
         "source": "Polygon"
       },
       {
-        "title": "'Wolverine' Is Sony’s Bestselling Game of 2026, Despite Massive Criticism",
-        "url": "https://www.polygon.com/wolverine-sales-2-million-criticism-controversy/",
+        "title": "10 New Movies to Watch This Weekend on Netflix, Prime Video, and VOD (September 18-20)",
+        "url": "https://www.polygon.com/new-movies-streaming-this-weekend-netflix-september-18-20/",
         "source": "Polygon"
       },
       {
-        "title": "9 Years Ago, One Dating Sim Taught Me to Never Trust Dating Sims",
-        "url": "https://www.polygon.com/ddlc-9-years-never-trust-dating-sims/",
+        "title": "The 5 Best Roles From Debra Wilson, the Actress in Every AAA Game These Days",
+        "url": "https://www.polygon.com/debra-wilson-best-video-game-roles/",
         "source": "Polygon"
       },
       {
-        "title": "Netflix’s Narnia Reboot Shows First Official Look at Daniel Craig’s Magician",
-        "url": "https://www.polygon.com/chronicles-of-narnia-reboot-netflix-daniel-craig-greta-gerwig/",
+        "title": "8 New TV Shows to Watch This Weekend on Netflix, HBO Max, and Apple TV (September 18-20)",
+        "url": "https://www.polygon.com/new-tv-shows-streaming-this-weekend-netflix-september-18-20/",
         "source": "Polygon"
       },
       {
-        "title": "35 Pokémon TCG Cards Everyone Wants From 30th Celebration",
-        "url": "https://www.polygon.com/pokemon-tcg-30th-celebration-most-wanted-cards/",
+        "title": "27 years later, EverQuest Legends is just getting started",
+        "url": "https://www.polygon.com/everquest-legends-fall-preview/",
         "source": "Polygon"
       }
     ],
