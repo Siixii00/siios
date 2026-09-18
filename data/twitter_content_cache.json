@@ -1,226 +1,241 @@
 {
   "metadata": {
-    "last_updated": "2026-09-18T09:25:24.122986",
+    "last_updated": "2026-09-18T14:09:17.295863",
     "total_items": 63
   },
   "content": {
     "tech": [
       {
+        "title": "Bend 2 and the Vibe-Coding Trap",
+        "url": "https://blog.liampwll.com/posts/bend_vibe_coding/",
+        "source": "Hacker News",
+        "score": 199
+      },
+      {
+        "title": "An Empirical Study of Harness Design for Coding Agents",
+        "url": "https://arxiv.org/abs/2609.20804",
+        "source": "Hacker News",
+        "score": 32
+      },
+      {
+        "title": "ZCode, the GLM coding agent, silently uploads your Git history",
+        "url": "https://tokenstead.ai/guides/zcode-silent-git-history-upload",
+        "source": "Hacker News",
+        "score": 188
+      },
+      {
+        "title": "OpenJev",
+        "url": "https://openjev.com/",
+        "source": "Hacker News",
+        "score": 273
+      },
+      {
+        "title": "I don't like passkeys",
+        "url": "https://hawksley.dev/blog/i-dont-like-passkeys",
+        "source": "Hacker News",
+        "score": 203
+      },
+      {
+        "title": "AI chatbots becoming experts at changing people's minds. What's their secret?",
+        "url": "https://www.science.org/content/article/ai-chatbots-are-becoming-experts-changing-people-s-minds-what-s-their-secret",
+        "source": "Hacker News",
+        "score": 6
+      },
+      {
+        "title": "The Shadows Lurking in the Equations – Underwater Islands",
+        "url": "https://gods.art/articles/equation_shadows",
+        "source": "Hacker News",
+        "score": 19
+      },
+      {
+        "title": "Subnormal floating-point numbers are expensive on Intel processors",
+        "url": "https://lemire.me/blog/2026/09/15/subnormal-floating-point-numbers-are-expensive-on-intel-processors/",
+        "source": "Hacker News",
+        "score": 41
+      },
+      {
         "title": "Jemalloc 5.4.0",
         "url": "https://github.com/jemalloc/jemalloc/releases/tag/5.4.0",
         "source": "Hacker News",
-        "score": 126
+        "score": 233
+      },
+      {
+        "title": "Cekura (YC F24) Is Hiring",
+        "url": "https://www.ycombinator.com/companies/cekura-ai/jobs/AiWwUxI-forward-deployed-engineer-us",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "Warren Buffett Steps Down as Berkshire Chairman, Names Son to Replace Him",
+        "url": "https://www.nytimes.com/2026/09/18/business/warren-buffett-berkshire-chairman.html",
+        "source": "Hacker News",
+        "score": 120
+      },
+      {
+        "title": "Microsoft exec called AI scraping 'the largest theft of labor in human history'",
+        "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
+        "source": "Hacker News",
+        "score": 480
+      },
+      {
+        "title": "Replacing Pull Requests with Delta",
+        "url": "https://zed.dev/blog/delta-public-beta",
+        "source": "Hacker News",
+        "score": 86
+      },
+      {
+        "title": "If materialism is true, the United States is probably conscious",
+        "url": "https://www.jstor.org/stable/24704177",
+        "source": "Hacker News",
+        "score": 14
       },
       {
         "title": "The scourge of x86 emulation",
         "url": "https://fex-emu.com/Scourge-of-emulation/",
         "source": "Hacker News",
-        "score": 126
-      },
-      {
-        "title": "Astra for Law",
-        "url": "https://openai.com/index/astra-for-law/",
-        "source": "Hacker News",
-        "score": 483
-      },
-      {
-        "title": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
-        "url": "https://prismml.com/news/bonsai-2-27b",
-        "source": "Hacker News",
-        "score": 433
-      },
-      {
-        "title": "Bend – A language that blocks AI mistakes via proof, on CPU and GPU",
-        "url": "https://bend-lang.com/",
-        "source": "Hacker News",
-        "score": 455
-      },
-      {
-        "title": "Qwen 3.8 Omni Flash",
-        "url": "https://qwen.ai/blog?id=qwen3.8-omni-flash",
-        "source": "Hacker News",
-        "score": 207
-      },
-      {
-        "title": "When the fractional part of a float fixes your shader",
-        "url": "https://crocidb.com/post/when-the-fractional-part-of-a-float-fixes-your-shader/",
-        "source": "Hacker News",
-        "score": 21
-      },
-      {
-        "title": "Hister: A private search engine for the pages you visit and the files you keep",
-        "url": "https://github.com/asciimoo/hister",
-        "source": "Hacker News",
-        "score": 602
-      },
-      {
-        "title": "Wax motor",
-        "url": "https://en.wikipedia.org/wiki/Wax_motor",
-        "source": "Hacker News",
-        "score": 396
-      },
-      {
-        "title": "Pre-Greek: The lost language hidden within Ancient Greek",
-        "url": "https://linguisticdiscovery.com/posts/pre-greek/",
-        "source": "Hacker News",
-        "score": 77
-      },
-      {
-        "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
-        "url": "https://www.hacktron.ai/blog/hacking-openai",
-        "source": "Hacker News",
-        "score": 348
-      },
-      {
-        "title": "Fujitsu launches made-in-Japan next-generation CPU FUJITSU-MONAKA",
-        "url": "https://global.fujitsu/en-global/pr/news/2026/09/14-02",
-        "source": "Hacker News",
-        "score": 589
-      },
-      {
-        "title": "Shapelearn Qwen 3.8 27B (13.1 GB VRAM)",
-        "url": "https://byteshape.com/blogs/Qwen3.8-27B/",
-        "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "How to Write with an LLM",
-        "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
-        "source": "Hacker News",
-        "score": 158
-      },
-      {
-        "title": "Ask A Monk – A digital wilderness for thoughts with no immediate answer",
-        "url": "https://askamonk.online",
-        "source": "Hacker News",
-        "score": 39
+        "score": 200
       }
     ],
     "ai": [
       {
+        "title": "AI chatbots becoming experts at changing people's minds. What's their secret?",
+        "url": "https://www.science.org/content/article/ai-chatbots-are-becoming-experts-changing-people-s-minds-what-s-their-secret",
+        "source": "Hacker News AI",
+        "score": 6
+      },
+      {
+        "title": "Warren Buffett Steps Down as Berkshire Chairman, Names Son to Replace Him",
+        "url": "https://www.nytimes.com/2026/09/18/business/warren-buffett-berkshire-chairman.html",
+        "source": "Hacker News AI",
+        "score": 120
+      },
+      {
+        "title": "Microsoft exec called AI scraping 'the largest theft of labor in human history'",
+        "url": "https://techcrunch.com/2026/09/17/microsoft-exec-called-ai-scraping-the-largest-theft-of-labor-in-human-history-new-unredacted-filings-reveal/",
+        "source": "Hacker News AI",
+        "score": 480
+      },
+      {
         "title": "Bonsai 2 27B: Near-Lossless Compression in a 9x Smaller Footprint",
         "url": "https://prismml.com/news/bonsai-2-27b",
         "source": "Hacker News AI",
-        "score": 433
+        "score": 503
       },
       {
         "title": "Bend – A language that blocks AI mistakes via proof, on CPU and GPU",
         "url": "https://bend-lang.com/",
         "source": "Hacker News AI",
-        "score": 455
-      },
-      {
-        "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
-        "url": "https://www.hacktron.ai/blog/hacking-openai",
-        "source": "Hacker News AI",
-        "score": 348
+        "score": 532
       },
       {
         "title": "How to Write with an LLM",
         "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News AI",
-        "score": 158
+        "score": 229
+      },
+      {
+        "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
+        "url": "https://www.hacktron.ai/blog/hacking-openai",
+        "source": "Hacker News AI",
+        "score": 389
       },
       {
         "title": "Diplodocus, Long Thought Exclusively American, Turns Up in Spain",
         "url": "https://www.sci.news/paleontology/spanish-diplodocus-15064.html",
         "source": "Hacker News AI",
-        "score": 66
+        "score": 86
       },
       {
-        "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data",
-        "url": "https://arxiv.org/abs/2609.18842",
+        "title": "What Using AI Therapy Gets Wrong",
+        "url": "https://emilylee293105.substack.com/p/what-ai-therapy-gets-wrong-904",
         "source": "Hacker News AI",
-        "score": 143
-      },
-      {
-        "title": "How Uber Protects Against Retry Storms",
-        "url": "https://www.uber.com/us/en/blog/protecting-against-retry-storms/",
-        "source": "Hacker News AI",
-        "score": 95
+        "score": 7
       },
       {
         "title": "The American Religion of Self-Storage Facilities",
         "url": "https://www.newyorker.com/magazine/2026/09/21/the-american-religion-of-self-storage-facilities",
         "source": "Hacker News AI",
-        "score": 232
+        "score": 240
+      },
+      {
+        "title": "How Uber Protects Against Retry Storms",
+        "url": "https://www.uber.com/us/en/blog/protecting-against-retry-storms/",
+        "source": "Hacker News AI",
+        "score": 106
+      },
+      {
+        "title": "Infinite-Parameter LLMs: Generating and Adapting Weights from Live Data",
+        "url": "https://arxiv.org/abs/2609.18842",
+        "source": "Hacker News AI",
+        "score": 151
       },
       {
         "title": "TSMC revealing details about next gen A14 node",
         "url": "https://iedm26.mapyourshow.com/8_0/sessions/session-details.cfm?scheduleid=331",
         "source": "Hacker News AI",
-        "score": 109
-      },
-      {
-        "title": "Show HN: Share your AI Setup, Learn from others",
-        "url": "https://mysetup.ai/",
-        "source": "Hacker News AI",
-        "score": 213
-      },
-      {
-        "title": "Reflections on Trusting Trust, Revisited: Poisoning Self-Modifying AI Coding",
-        "url": "https://arxiv.org/abs/2609.17817",
-        "source": "Hacker News AI",
-        "score": 8
-      },
-      {
-        "title": "Launch HN: Skillsync (YC W26) – AI chat sessions made portable across agents",
-        "url": "https://news.ycombinator.com/item?id=49743049",
-        "source": "Hacker News AI",
-        "score": 56
-      },
-      {
-        "title": "LLM Classification Is Feature Engineering",
-        "url": "https://minimallysufficient.com/posts/llm-classification-is-feature-extraction/",
-        "source": "Hacker News AI",
-        "score": 101
+        "score": 115
       }
     ],
     "news": [
       {
-        "title": "Three dead, eight injured in Philippines school shooting",
+        "title": "Russian hybrid attacks against Europe intensifying, says Macron",
+        "url": "https://www.bbc.co.uk/news/articles/cm2dw1w9d3yjo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Three dead and eight injured in Philippines school shooting",
         "url": "https://www.bbc.co.uk/news/articles/c6x2z4dlzyr0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Canada welcomes EU proposal to become 'associate member'",
-        "url": "https://www.bbc.co.uk/news/articles/cwly7vkke4jxo?at_medium=RSS&at_campaign=rss",
+        "title": "Police begin operation to move migrants from Ceuta beaches",
+        "url": "https://www.bbc.co.uk/news/articles/c6vgy80ge1z7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ninth woman's body found as South African police investigate string of deaths",
-        "url": "https://www.bbc.co.uk/news/articles/cqx2zgk8k8xvo?at_medium=RSS&at_campaign=rss",
+        "title": "Lindsay Clancy holdout juror says he had no doubt she deliberately killed her children",
+        "url": "https://www.bbc.co.uk/news/articles/c54g7jdmw032o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "UN experts say grounds to believe US committed war crimes in Iran strikes",
-        "url": "https://www.bbc.co.uk/news/articles/cm9w4n5nverdo?at_medium=RSS&at_campaign=rss",
+        "title": "At least 16 killed after vehicle loaded with explosives rams into Pakistan mosque",
+        "url": "https://www.bbc.co.uk/news/articles/ckn9wenz8wjwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "'This is our company': Nigerians show off oil wealth after share-buying frenzy",
-        "url": "https://www.bbc.co.uk/news/articles/cw7v4jr2932ro?at_medium=RSS&at_campaign=rss",
+        "title": "New wild cat species discovered - with only one known living member",
+        "url": "https://www.bbc.co.uk/news/articles/c6x2zgv9rr4ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US to allow Iran delegation to attend UN meetings in New York as war passes half-year mark",
-        "url": "https://www.bbc.co.uk/news/articles/c6n8m72r13ngo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Zara Larsson criticises White House for using her song in deportation video",
-        "url": "https://www.bbc.co.uk/news/articles/cqr7d3l0y2zpo?at_medium=RSS&at_campaign=rss",
+        "title": "Dozens of suspected illegal miners die in Nigerian custody",
+        "url": "https://www.bbc.co.uk/news/articles/cw980qp2n3p4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Control Resonant review: Remedy turns Manhattan into a paranatural nightmare unlike anything I've seen ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/control-resonant-review-step-outside-to-an-apocalyptic-manhattan-as-youve-never-seen",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " \"We can cut production costs by 95%\": the AI tech taking on Hollywood ",
+        "url": "https://www.creativebloq.com/art/animation/we-can-cut-production-costs-by-95-percent-the-ai-tech-taking-on-hollywood",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The 20th anniversary Cricut warehouse sale has some im-press-ive deals ",
+        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/the-20th-anniversary-cricut-warehouse-sale-has-some-im-press-ive-deals",
+        "source": "Creative Bloq"
+      },
       {
         "title": " How Remothered: Red Nun's Legacy puts this indie studio's Sicilian roots front and centre ",
         "url": "https://www.creativebloq.com/3d/video-game-design/how-remothered-red-nuns-legacy-puts-this-indie-studios-sicilian-roots-front-and-centre",
         "source": "Creative Bloq"
       },
       {
-        "title": " Forget iPhone 18, this creative is doing street photography with a Dyson electric toothbrush ",
+        "title": " Forget iPhone 18, this creative is doing street photography with that new Dyson electric toothbrush ",
         "url": "https://www.creativebloq.com/photography/forget-iphone-18-this-creatives-doing-street-photography-with-the-dyson-electric-toothbrush",
         "source": "Creative Bloq"
       },
@@ -233,24 +248,34 @@
         "title": " This artist blends 19th century Japanese styles with Western Art Nouveau, and his process could help you get out of a creative rut ",
         "url": "https://www.creativebloq.com/art/digital-art/this-artist-blends-19th-century-japanese-styles-with-western-art-nouveau-and-his-process-could-help-you-get-out-of-a-creative-rut",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " This city's clever minimalist logo redesign has a hidden meaning ",
-        "url": "https://www.creativebloq.com/design/logos-icons/this-citys-clever-minimalist-new-logo-design-has-a-hidden-meaning",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " New Balance sues rival athletics brand over shoe logo ",
-        "url": "https://www.creativebloq.com/design/logos-icons/new-balance-sues-rival-athletics-brand-over-shoe-logo",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Autodesk says AI should give artists time to experiment, not make them work twice as fast ",
-        "url": "https://www.creativebloq.com/3d/autodesk-says-ai-should-give-artists-time-to-experiment-not-make-them-work-twice-as-fast",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Caltech’s tiny new chip can steer light in 74 quadrillionths of a second",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260918024823.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists just named a new snake after Guns N’ Roses legend Slash",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260918024816.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists are about to test Einstein’s gravity with exotic matter",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260918024808.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "NASA’s Roman Space Telescope could last more than twice as long as planned",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260918024802.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists restore a brain protein and reverse signs of aging in mice",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260918000437.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "This popular fermented food may help flush nanoplastics from the body",
         "url": "https://www.sciencedaily.com/releases/2026/09/260917101058.htm",
@@ -260,67 +285,42 @@
         "title": "Scientists discover a mysterious new frog hiding in the Amazon",
         "url": "https://www.sciencedaily.com/releases/2026/09/260917003737.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "A $100 detector can see invisible particles raining down from space",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260917003725.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Astronomers just found the youngest known planet ever",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260917003712.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "JWST’s mysterious little red dots may be black holes growing at incredible speeds",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260917003703.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists find a natural gut compound that helps heal the intestine",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260916232529.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA’s New Horizons spots signs of liquid nitrogen flowing on Pluto",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260916232525.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
       {
+        "title": "An Oscar-Winning Director and Sam Raimi Are Now Attached to the Roblox Movie",
+        "url": "https://www.polygon.com/99-nights-in-the-forest-movie-sam-raimi-josh-cooley/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Control Resonant Fails At Nearly All of Its Ambitions | Review",
+        "url": "https://www.polygon.com/control-resonant-review/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Giancarlo Esposito Reveals His Dream 'X-Men' Role After Professor X Casting",
+        "url": "https://www.polygon.com/fans-cast-giancarlo-esposito-as-professor-x-but-hed-rather-be-magneto/",
+        "source": "Polygon"
+      },
+      {
+        "title": "GTA 6 Will Get Multiplayer After All, According to Twitch CEO",
+        "url": "https://www.polygon.com/gta-6-multiplayer-online-coming-2027-twitch-ceo/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Every Mainline Resident Evil Game, Ranked From Worst to Best",
+        "url": "https://www.polygon.com/resident-evil-games-ranked/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Solo Leveling's Big 2026 Project Will Explore a Massive Gap in Jinwoo's Life",
+        "url": "https://www.polygon.com/solo-leveling-karma-trailer-story-monarch-war/",
+        "source": "Polygon"
+      },
+      {
         "title": "53 Years Later, The Greatest Closing Line In Sci-Fi History Is Still The Best Book Quote Of The 1970s",
         "url": "https://www.polygon.com/53-years-later-roadside-picnic-still-ends-with-one-of-sci-fis-most-enduring-lines/",
-        "source": "Polygon"
-      },
-      {
-        "title": "15 Years Later, Doctor Who's Darkest Matt Smith Episode Still Has the Greatest Twist",
-        "url": "https://www.polygon.com/doctor-who-the-god-complex-anniversary-matt-smith/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Gundam Rogue Orbit Could Be the Next Great Mech-Action Game",
-        "url": "https://www.polygon.com/gundam-rogue-orbit-impressions-tokyo-game-show-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Lollipop Chainsaw 2 is Officially Bringing Back the Zombie-Slaying Cheerleader Cheesecake Franchise",
-        "url": "https://www.polygon.com/lollipop-chainsaw-2-tokyo-game-show-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Stephen King's 10/10 Sci-Fi Detective Series Is Officially Free to Watch on YouTube",
-        "url": "https://www.polygon.com/stephen-king-procedural-adaptation-streaming-free/",
-        "source": "Polygon"
-      },
-      {
-        "title": "ABC's Legendary 49-Episode Sci-Fi Anthology Series is Officially Free on Streaming",
-        "url": "https://www.polygon.com/the-outer-limits-free-to-stream/",
-        "source": "Polygon"
-      },
-      {
-        "title": "8 Best Social Deception Games Every Traitors Fan Must Play",
-        "url": "https://www.polygon.com/best-games-like-the-traitors/",
         "source": "Polygon"
       }
     ],
