@@ -1,185 +1,191 @@
 {
   "metadata": {
-    "last_updated": "2026-09-19T03:49:40.643517",
-    "total_items": 64
+    "last_updated": "2026-09-19T08:37:51.622482",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Human brain is two separate organs, Stanford Medicine-led research finds",
+        "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html",
+        "source": "Hacker News",
+        "score": 159
+      },
+      {
+        "title": "If math is more than proof, we need to better celebrate the rest of it",
+        "url": "https://terrytao.wordpress.com/2026/09/18/if-math-is-more-than-proof-we-need-to-better-celebrate-the-rest-of-it/",
+        "source": "Hacker News",
+        "score": 55
+      },
+      {
+        "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
+        "url": "https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio",
+        "source": "Hacker News",
+        "score": 73
+      },
+      {
+        "title": "San Francisco Onion Futures Company",
+        "url": "https://onionfutures.com/",
+        "source": "Hacker News",
+        "score": 169
+      },
+      {
         "title": "Android 17 is the first since 3.x to add new APIs without releasing to the AOSP",
         "url": "https://grapheneos.social/@GrapheneOS/117282080803799576",
         "source": "Hacker News",
-        "score": 626
+        "score": 803
+      },
+      {
+        "title": "Typesafe-computer-use drives a Mac toward a goal for 1/50th of a cent per step",
+        "url": "https://github.com/awlevin/typesafe-computer-use",
+        "source": "Hacker News",
+        "score": 72
       },
       {
         "title": "Science Is Open Software",
         "url": "https://jepedersen.dk/blog/202505_research/",
         "source": "Hacker News",
-        "score": 24
+        "score": 81
       },
       {
         "title": "SDCC – Small Device C Compiler",
         "url": "https://sdcc.sourceforge.net/",
         "source": "Hacker News",
-        "score": 17
+        "score": 70
       },
       {
         "title": "Cloudflare Quick Tunnels",
         "url": "https://try.cloudflare.com/",
         "source": "Hacker News",
-        "score": 620
+        "score": 693
+      },
+      {
+        "title": "You can run Git on object storage if you re-make packfiles",
+        "url": "https://www.tigrisdata.com/blog/objgit-packfiles/",
+        "source": "Hacker News",
+        "score": 37
       },
       {
         "title": "Saving another 100TB of RAM",
         "url": "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/",
         "source": "Hacker News",
-        "score": 260
+        "score": 349
       },
       {
         "title": "How to Write with an LLM",
         "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News",
-        "score": 419
+        "score": 482
       },
       {
         "title": "Why building a Rust LSP is hard",
         "url": "https://rust-glancer.github.io/blog/why-lsp-is-hard/",
         "source": "Hacker News",
-        "score": 14
+        "score": 62
       },
       {
-        "title": "How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip",
-        "url": "https://spectrum.ieee.org/llms-for-chip-design",
-        "source": "Hacker News",
-        "score": 70
-      },
-      {
-        "title": "Xcode 27.1 Beta Release Notes",
-        "url": "https://developer.apple.com/documentation/xcode-release-notes/xcode-27_1-release-notes",
-        "source": "Hacker News",
-        "score": 120
-      },
-      {
-        "title": "The Farnese letter",
-        "url": "https://simonklee.dk/farnese-letter",
-        "source": "Hacker News",
-        "score": 32
-      },
-      {
-        "title": "Photon-Emission-Guided Laser Fault Injection Enables RP2350 Secure Debug",
-        "url": "https://donjon.ledger.com/blog/rp2350-secure-debug-laser-fault-injection/",
-        "source": "Hacker News",
-        "score": 166
-      },
-      {
-        "title": "The first new cat species discovered in 100 years",
-        "url": "https://www.nationalgeographic.com/animals/article/meet-the-first-new-cat-species-discovered-in-100-years",
-        "source": "Hacker News",
-        "score": 197
-      },
-      {
-        "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
-        "url": "https://cactuscompute.com/needle",
-        "source": "Hacker News",
-        "score": 173
-      },
-      {
-        "title": "Show HN: LiveWorld – Every 24/7 YouTube live camera on one globe",
-        "url": "https://liveworld.info/",
+        "title": "NASA-IBM Lunar Foundation open-Source Geospatial AI Model",
+        "url": "https://newsroom.usra.edu/usra-contributes-planetary-science-expertise-to-nasa-ibm-lunar-foundation-model/",
         "source": "Hacker News",
         "score": 21
       },
       {
-        "title": "OpenJev",
-        "url": "https://openjev.com/",
+        "title": "How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip",
+        "url": "https://spectrum.ieee.org/llms-for-chip-design",
         "source": "Hacker News",
-        "score": 572
+        "score": 115
       }
     ],
     "ai": [
       {
+        "title": "Human brain is two separate organs, Stanford Medicine-led research finds",
+        "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html",
+        "source": "Hacker News AI",
+        "score": 159
+      },
+      {
+        "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
+        "url": "https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio",
+        "source": "Hacker News AI",
+        "score": 73
+      },
+      {
+        "title": "You can run Git on object storage if you re-make packfiles",
+        "url": "https://www.tigrisdata.com/blog/objgit-packfiles/",
+        "source": "Hacker News AI",
+        "score": 37
+      },
+      {
         "title": "How to Write with an LLM",
         "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News AI",
-        "score": 419
+        "score": 482
+      },
+      {
+        "title": "NASA-IBM Lunar Foundation open-Source Geospatial AI Model",
+        "url": "https://newsroom.usra.edu/usra-contributes-planetary-science-expertise-to-nasa-ibm-lunar-foundation-model/",
+        "source": "Hacker News AI",
+        "score": 21
       },
       {
         "title": "How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip",
         "url": "https://spectrum.ieee.org/llms-for-chip-design",
         "source": "Hacker News AI",
-        "score": 70
+        "score": 115
       },
       {
         "title": "Cache-to-Cache: Direct Semantic Communication Between LLMs (2025)",
         "url": "https://arxiv.org/abs/2510.03215",
         "source": "Hacker News AI",
-        "score": 70
+        "score": 85
+      },
+      {
+        "title": "Stepfun Step 5 Preview (LLM): On AA Pareto frontier",
+        "url": "https://artificialanalysis.ai/models/step-5",
+        "source": "Hacker News AI",
+        "score": 8
+      },
+      {
+        "title": "The Case of Elias Thorne, Imaginary Man AI Chatbots Are Obsessed With",
+        "url": "https://www.vice.com/en/article/the-strange-case-of-elias-thorne-the-imaginary-man-ai-chatbots-are-obsessed-with/",
+        "source": "Hacker News AI",
+        "score": 13
       },
       {
         "title": "Claude Code now reads AGENTS.md if there is no Claude.md",
         "url": "https://code.claude.com/docs/en/changelog",
         "source": "Hacker News AI",
-        "score": 554
-      },
-      {
-        "title": "Gemini hacked three companies in first known breakout by Google's AI",
-        "url": "https://www.reuters.com/business/gemini-hacked-three-companies-first-known-breakout-by-google-ai-wsj-reports-2026-09-18/",
-        "source": "Hacker News AI",
-        "score": 31
-      },
-      {
-        "title": "Alibaba open-sources AI model that can detect cancer and nearly 150 conditions",
-        "url": "https://www.scmp.com/tech/big-tech/article/3368055/alibaba-open-sources-medical-ai-model-can-detect-cancer-and-nearly-150-conditions",
-        "source": "Hacker News AI",
-        "score": 52
+        "score": 648
       },
       {
         "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
         "url": "https://www.newscientist.com/article/2589739-our-brain-evolved-from-two-primitive-nervous-systems-that-merged/",
         "source": "Hacker News AI",
-        "score": 107
+        "score": 115
+      },
+      {
+        "title": "Google's Gemini AI hacked three companies in security test",
+        "url": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo",
+        "source": "Hacker News AI",
+        "score": 15
+      },
+      {
+        "title": "Alibaba open-sources AI model that can detect cancer and nearly 150 conditions",
+        "url": "https://www.scmp.com/tech/big-tech/article/3368055/alibaba-open-sources-medical-ai-model-can-detect-cancer-and-nearly-150-conditions",
+        "source": "Hacker News AI",
+        "score": 117
+      },
+      {
+        "title": "Claude couldn't hack OpenAI. Then Anthropic shipped Opus 5",
+        "url": "https://thenewstack.io/claude-exploits-openai-forum/",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "The Implications of Linguistic Illegibility for LLM Security",
         "url": "https://arxiv.org/abs/2609.02852",
         "source": "Hacker News AI",
-        "score": 56
-      },
-      {
-        "title": "Mathematicians Build Long-Awaited Graph Sandwich",
-        "url": "https://www.quantamagazine.org/mathematicians-build-long-awaited-graph-sandwich-20260918/",
-        "source": "Hacker News AI",
-        "score": 72
-      },
-      {
-        "title": "US Military had close call after using AI for hallucinated intelligence report",
-        "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
-        "source": "Hacker News AI",
-        "score": 417
-      },
-      {
-        "title": "From Geometry to Algebra and Back Again: 4000 Years of Papers (2023) [video]",
-        "url": "https://www.youtube.com/watch?v=1cRFfYQYGxE",
-        "source": "Hacker News AI",
-        "score": 30
-      },
-      {
-        "title": "AI chatbots are becoming experts at changing people's minds",
-        "url": "https://www.science.org/content/article/ai-chatbots-are-becoming-experts-changing-people-s-minds-what-s-their-secret",
-        "source": "Hacker News AI",
-        "score": 91
-      },
-      {
-        "title": "Korea raises data breach fines to 10% of revenue",
-        "url": "https://www.koreajoongangdaily.com/business/korea-raises-data-breach-fines-to-10-of-revenue/12869899",
-        "source": "Hacker News AI",
-        "score": 290
-      },
-      {
-        "title": "Warren Buffett Steps Down as Berkshire Chairman, Names Son to Replace Him",
-        "url": "https://www.nytimes.com/2026/09/18/business/warren-buffett-berkshire-chairman.html",
-        "source": "Hacker News AI",
-        "score": 290
+        "score": 68
       }
     ],
     "news": [
@@ -189,37 +195,47 @@
         "source": "BBC World"
       },
       {
-        "title": "Russian hybrid attacks against Europe intensifying, says Macron",
-        "url": "https://www.bbc.co.uk/news/articles/cm2dw1w9d3yjo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Trump says he is banning CNN and Politico from White House",
         "url": "https://www.bbc.co.uk/news/articles/c6e30580jqjpo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Is the Kennedy Center losing 'hundreds of millions of dollars'?",
-        "url": "https://www.bbc.co.uk/news/videos/cqy4zw4xr717o?at_medium=RSS&at_campaign=rss",
+        "title": "Google's Gemini AI hacked three companies in security test",
+        "url": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Trump signs sweeping Russia sanctions bill ",
+        "url": "https://www.bbc.co.uk/news/articles/cqvgy34ndj4eo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Grim discoveries of murdered women spark fear in South Africa",
+        "url": "https://www.bbc.co.uk/news/articles/cjkg71e67k17o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Saudi Arabia issues first air raid alerts for Riyadh since Houthis escalated attacks",
+        "url": "https://www.bbc.co.uk/news/articles/cmed7el18dxpo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "At least 21 killed after vehicle loaded with explosives rams Pakistan mosque",
         "url": "https://www.bbc.co.uk/news/articles/ckn9wenz8wjwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Lindsay Clancy holdout juror says he had no doubt she deliberately killed her children",
-        "url": "https://www.bbc.co.uk/news/articles/c54g7jdmw032o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Ryanair boss Michael O'Leary apologises over 'high-fare rapists' remarks",
-        "url": "https://www.bbc.co.uk/news/articles/cm1j4kj57k08o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " People are fuming over Netflix's \"satanic\" rewrite of Disney's Cinderella ",
+        "url": "https://www.creativebloq.com/art/animation/people-are-fuming-over-netflixs-rewrite-of-disneys-cinderella",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " An accidental 9/11 reference led this English football club to scrap its new clothing designs ",
+        "url": "https://www.creativebloq.com/design/logos-icons/accidental-9-11-references-caused-this-english-football-club-to-scrap-its-new-clothing-designs",
+        "source": "Creative Bloq"
+      },
       {
         "title": " There's up to $550 off 3D printers in the huge Anycubic anniversary sale ",
         "url": "https://www.creativebloq.com/3d/3d-printing/the-huge-anycubic-anniversary-sale-has-up-to-usd550-off-3d-printer-bundles",
@@ -243,16 +259,6 @@
       {
         "title": " How Remothered: Red Nun's Legacy puts this indie studio's Sicilian roots front and centre ",
         "url": "https://www.creativebloq.com/3d/video-game-design/how-remothered-red-nuns-legacy-puts-this-indie-studios-sicilian-roots-front-and-centre",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Forget iPhone 18, this creative is doing street photography with that new Dyson electric toothbrush ",
-        "url": "https://www.creativebloq.com/photography/forget-iphone-18-this-creatives-doing-street-photography-with-the-dyson-electric-toothbrush",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Quote of the Day by James Gurney: \"Working from imagination and from observation are indispensable to each other\" ",
-        "url": "https://www.creativebloq.com/art/traditional-art/quote-of-the-day-by-james-gurney-working-from-imagination-and-from-observation-are-indispensable-to-each-other",
         "source": "Creative Bloq"
       }
     ],
@@ -295,38 +301,38 @@
     ],
     "gaming": [
       {
-        "title": "5 Near-Perfect Time Travel Movies Where the Science Actually Makes Sense",
-        "url": "https://www.polygon.com/time-travel-movies-that-make-sense/",
+        "title": "The 9 Best Anime You Can Stream on HBO Max",
+        "url": "https://www.polygon.com/best-anime-to-stream-on-hbo-max/",
         "source": "Polygon"
       },
       {
-        "title": "Should you skip the War Arc (Act 2) in Fire Emblem: Fortune's Weave?",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-war-arc-skip-act-2/",
+        "title": "The 5 Best Charlie Brown Football Comic Strips in 'Peanuts' History",
+        "url": "https://www.polygon.com/best-charlie-brown-football-jokes-peanuts-comic-strip/",
         "source": "Polygon"
       },
       {
-        "title": "Where to find wonder leaves in Fire Emblem Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-wonder-leaves-location-where-to-find/",
+        "title": "Dwayne Johnson's Forgotten Box-office Juggernaut is Officially Conquering the Streaming World",
+        "url": "https://www.polygon.com/dwayne-johnson-hercules-netflix-streaming-hit-september-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Classes and unlock requirements in Fire Emblem Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-classes-unlock-secret/",
+        "title": "39 Years Later, the Most Important Sci-Fi Series of the '80s Is Officially Free on Stream",
+        "url": "https://www.polygon.com/star-trek-next-generation-streaming-free/",
         "source": "Polygon"
       },
       {
-        "title": "Fire Emblem: Fortune's Weave Is Way Easier If You Play a Second Route",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-should-you-play-more-than-one-route/",
+        "title": "5 Near-Perfect Psychological Thriller Movies Streaming for Free",
+        "url": "https://www.polygon.com/best-psychological-thriller-movies-free-streaming/",
         "source": "Polygon"
       },
       {
-        "title": "10 New Movies to Watch This Weekend on Netflix, Prime Video, and VOD (September 18-20)",
-        "url": "https://www.polygon.com/new-movies-streaming-this-weekend-netflix-september-18-20/",
+        "title": "31 Years Later, the Final 'Calvin and Hobbes' Comic Strip is Still a Perfect Sendoff",
+        "url": "https://www.polygon.com/calvin-and-hobbes-last-comic-strip-lets-go-exploring/",
         "source": "Polygon"
       },
       {
-        "title": "The 5 Best Roles From Debra Wilson, the Actress in Every AAA Game These Days",
-        "url": "https://www.polygon.com/debra-wilson-best-video-game-roles/",
+        "title": "3 Netflix Shows You Need to Binge This Weekend (Sept. 18-20)",
+        "url": "https://www.polygon.com/netflix-weekend-binge-september-2026-shows/",
         "source": "Polygon"
       }
     ],
