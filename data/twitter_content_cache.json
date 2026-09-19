@@ -1,179 +1,185 @@
 {
   "metadata": {
-    "last_updated": "2026-09-18T23:56:03.123507",
-    "total_items": 63
+    "last_updated": "2026-09-19T03:49:40.643517",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
-        "title": "Claude Code now reads AGENTS.md if there is no Claude.md",
-        "url": "https://code.claude.com/docs/en/changelog",
-        "source": "Hacker News",
-        "score": 413
-      },
-      {
         "title": "Android 17 is the first since 3.x to add new APIs without releasing to the AOSP",
         "url": "https://grapheneos.social/@GrapheneOS/117282080803799576",
         "source": "Hacker News",
-        "score": 430
+        "score": 626
       },
       {
-        "title": "How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip",
-        "url": "https://spectrum.ieee.org/llms-for-chip-design",
+        "title": "Science Is Open Software",
+        "url": "https://jepedersen.dk/blog/202505_research/",
         "source": "Hacker News",
-        "score": 20
+        "score": 24
       },
       {
-        "title": "Saving another 100TB of RAM",
-        "url": "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/",
+        "title": "SDCC – Small Device C Compiler",
+        "url": "https://sdcc.sourceforge.net/",
         "source": "Hacker News",
-        "score": 185
+        "score": 17
       },
       {
         "title": "Cloudflare Quick Tunnels",
         "url": "https://try.cloudflare.com/",
         "source": "Hacker News",
-        "score": 530
+        "score": 620
+      },
+      {
+        "title": "Saving another 100TB of RAM",
+        "url": "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/",
+        "source": "Hacker News",
+        "score": 260
+      },
+      {
+        "title": "How to Write with an LLM",
+        "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
+        "source": "Hacker News",
+        "score": 419
+      },
+      {
+        "title": "Why building a Rust LSP is hard",
+        "url": "https://rust-glancer.github.io/blog/why-lsp-is-hard/",
+        "source": "Hacker News",
+        "score": 14
+      },
+      {
+        "title": "How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip",
+        "url": "https://spectrum.ieee.org/llms-for-chip-design",
+        "source": "Hacker News",
+        "score": 70
       },
       {
         "title": "Xcode 27.1 Beta Release Notes",
         "url": "https://developer.apple.com/documentation/xcode-release-notes/xcode-27_1-release-notes",
         "source": "Hacker News",
-        "score": 108
+        "score": 120
+      },
+      {
+        "title": "The Farnese letter",
+        "url": "https://simonklee.dk/farnese-letter",
+        "source": "Hacker News",
+        "score": 32
       },
       {
         "title": "Photon-Emission-Guided Laser Fault Injection Enables RP2350 Secure Debug",
         "url": "https://donjon.ledger.com/blog/rp2350-secure-debug-laser-fault-injection/",
         "source": "Hacker News",
-        "score": 143
-      },
-      {
-        "title": "Cache-to-Cache: Direct Semantic Communication Between LLMs (2025)",
-        "url": "https://arxiv.org/abs/2510.03215",
-        "source": "Hacker News",
-        "score": 59
-      },
-      {
-        "title": "How to Write with an LLM",
-        "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
-        "source": "Hacker News",
-        "score": 363
-      },
-      {
-        "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
-        "url": "https://cactuscompute.com/needle",
-        "source": "Hacker News",
-        "score": 155
+        "score": 166
       },
       {
         "title": "The first new cat species discovered in 100 years",
         "url": "https://www.nationalgeographic.com/animals/article/meet-the-first-new-cat-species-discovered-in-100-years",
         "source": "Hacker News",
-        "score": 145
+        "score": 197
+      },
+      {
+        "title": "Show HN: Cactus Needle 3: 8-29MB automation models can match DeepSeek V4 Flash",
+        "url": "https://cactuscompute.com/needle",
+        "source": "Hacker News",
+        "score": 173
+      },
+      {
+        "title": "Show HN: LiveWorld – Every 24/7 YouTube live camera on one globe",
+        "url": "https://liveworld.info/",
+        "source": "Hacker News",
+        "score": 21
       },
       {
         "title": "OpenJev",
         "url": "https://openjev.com/",
         "source": "Hacker News",
-        "score": 531
-      },
-      {
-        "title": "A 1542 papal cipher cracked with simulated annealing",
-        "url": "https://simonklee.dk/farnese-letter",
-        "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "Cyclomatic Complexity in C#",
-        "url": "https://blog.ndepend.com/understanding-cyclomatic-complexity/",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
-        "url": "https://www.newscientist.com/article/2589739-our-brain-evolved-from-two-primitive-nervous-systems-that-merged/",
-        "source": "Hacker News",
-        "score": 100
+        "score": 572
       }
     ],
     "ai": [
       {
-        "title": "Claude Code now reads AGENTS.md if there is no Claude.md",
-        "url": "https://code.claude.com/docs/en/changelog",
+        "title": "How to Write with an LLM",
+        "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News AI",
-        "score": 413
+        "score": 419
       },
       {
         "title": "How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip",
         "url": "https://spectrum.ieee.org/llms-for-chip-design",
         "source": "Hacker News AI",
-        "score": 20
+        "score": 70
       },
       {
         "title": "Cache-to-Cache: Direct Semantic Communication Between LLMs (2025)",
         "url": "https://arxiv.org/abs/2510.03215",
         "source": "Hacker News AI",
-        "score": 59
+        "score": 70
       },
       {
-        "title": "How to Write with an LLM",
-        "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
+        "title": "Claude Code now reads AGENTS.md if there is no Claude.md",
+        "url": "https://code.claude.com/docs/en/changelog",
         "source": "Hacker News AI",
-        "score": 363
+        "score": 554
+      },
+      {
+        "title": "Gemini hacked three companies in first known breakout by Google's AI",
+        "url": "https://www.reuters.com/business/gemini-hacked-three-companies-first-known-breakout-by-google-ai-wsj-reports-2026-09-18/",
+        "source": "Hacker News AI",
+        "score": 31
+      },
+      {
+        "title": "Alibaba open-sources AI model that can detect cancer and nearly 150 conditions",
+        "url": "https://www.scmp.com/tech/big-tech/article/3368055/alibaba-open-sources-medical-ai-model-can-detect-cancer-and-nearly-150-conditions",
+        "source": "Hacker News AI",
+        "score": 52
       },
       {
         "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
         "url": "https://www.newscientist.com/article/2589739-our-brain-evolved-from-two-primitive-nervous-systems-that-merged/",
         "source": "Hacker News AI",
-        "score": 100
+        "score": 107
       },
       {
         "title": "The Implications of Linguistic Illegibility for LLM Security",
         "url": "https://arxiv.org/abs/2609.02852",
         "source": "Hacker News AI",
-        "score": 44
-      },
-      {
-        "title": "Korea raises data breach fines to 10% of revenue",
-        "url": "https://www.koreajoongangdaily.com/business/korea-raises-data-breach-fines-to-10-of-revenue/12869899",
-        "source": "Hacker News AI",
-        "score": 251
-      },
-      {
-        "title": "From Geometry to Algebra and Back Again: 4000 Years of Papers (2023) [video]",
-        "url": "https://www.youtube.com/watch?v=1cRFfYQYGxE",
-        "source": "Hacker News AI",
-        "score": 25
+        "score": 56
       },
       {
         "title": "Mathematicians Build Long-Awaited Graph Sandwich",
         "url": "https://www.quantamagazine.org/mathematicians-build-long-awaited-graph-sandwich-20260918/",
         "source": "Hacker News AI",
-        "score": 67
+        "score": 72
       },
       {
         "title": "US Military had close call after using AI for hallucinated intelligence report",
         "url": "https://www.cnn.com/2026/09/18/politics/us-military-ai-false-intelligence-china-ship",
         "source": "Hacker News AI",
-        "score": 364
+        "score": 417
+      },
+      {
+        "title": "From Geometry to Algebra and Back Again: 4000 Years of Papers (2023) [video]",
+        "url": "https://www.youtube.com/watch?v=1cRFfYQYGxE",
+        "source": "Hacker News AI",
+        "score": 30
       },
       {
         "title": "AI chatbots are becoming experts at changing people's minds",
         "url": "https://www.science.org/content/article/ai-chatbots-are-becoming-experts-changing-people-s-minds-what-s-their-secret",
         "source": "Hacker News AI",
-        "score": 81
+        "score": 91
+      },
+      {
+        "title": "Korea raises data breach fines to 10% of revenue",
+        "url": "https://www.koreajoongangdaily.com/business/korea-raises-data-breach-fines-to-10-of-revenue/12869899",
+        "source": "Hacker News AI",
+        "score": 290
       },
       {
         "title": "Warren Buffett Steps Down as Berkshire Chairman, Names Son to Replace Him",
         "url": "https://www.nytimes.com/2026/09/18/business/warren-buffett-berkshire-chairman.html",
         "source": "Hacker News AI",
-        "score": 284
-      },
-      {
-        "title": "A heap overflow and SSO misconfiguration to compromise OpenAI internal repos",
-        "url": "https://www.hacktron.ai/blog/hacking-openai",
-        "source": "Hacker News AI",
-        "score": 465
+        "score": 290
       }
     ],
     "news": [
@@ -289,6 +295,11 @@
     ],
     "gaming": [
       {
+        "title": "5 Near-Perfect Time Travel Movies Where the Science Actually Makes Sense",
+        "url": "https://www.polygon.com/time-travel-movies-that-make-sense/",
+        "source": "Polygon"
+      },
+      {
         "title": "Should you skip the War Arc (Act 2) in Fire Emblem: Fortune's Weave?",
         "url": "https://www.polygon.com/fire-emblem-fortunes-weave-war-arc-skip-act-2/",
         "source": "Polygon"
@@ -316,11 +327,6 @@
       {
         "title": "The 5 Best Roles From Debra Wilson, the Actress in Every AAA Game These Days",
         "url": "https://www.polygon.com/debra-wilson-best-video-game-roles/",
-        "source": "Polygon"
-      },
-      {
-        "title": "8 New TV Shows to Watch This Weekend on Netflix, HBO Max, and Apple TV (September 18-20)",
-        "url": "https://www.polygon.com/new-tv-shows-streaming-this-weekend-netflix-september-18-20/",
         "source": "Polygon"
       }
     ],
