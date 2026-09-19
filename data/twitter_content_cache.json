@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-19T12:56:18.620514",
-    "total_items": 64
+    "last_updated": "2026-09-19T16:18:58.077412",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "AI-generated posters don’t have to be horrible",
-        "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
-        "source": "Hacker News",
-        "score": 356
-      },
-      {
         "title": "Laya the open source version of Jev",
         "url": "https://laya.convaiinnovations.com/",
         "source": "Hacker News",
-        "score": 81
+        "score": 474
+      },
+      {
+        "title": "A graphical desktop for the ZX Spectrum",
+        "url": "https://github.com/mindbox77/zxdesk",
+        "source": "Hacker News",
+        "score": 59
+      },
+      {
+        "title": "Tin: full-text search for Postgres",
+        "url": "https://planetscale.com/blog/introducing-tin",
+        "source": "Hacker News",
+        "score": 68
+      },
+      {
+        "title": "AI-generated posters don’t have to be horrible",
+        "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+        "source": "Hacker News",
+        "score": 698
       },
       {
         "title": "Human brain is two separate organs, Stanford Medicine-led research finds",
         "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html",
         "source": "Hacker News",
-        "score": 338
+        "score": 469
       },
       {
         "title": "“The Secret Life of Circuits” is here",
         "url": "https://blog.coredump.cx/p/the-secret-life-of-circuits-is-here",
         "source": "Hacker News",
-        "score": 102
+        "score": 178
       },
       {
-        "title": "If math is more than proof, we need to better celebrate the rest of it",
-        "url": "https://terrytao.wordpress.com/2026/09/18/if-math-is-more-than-proof-we-need-to-better-celebrate-the-rest-of-it/",
+        "title": "Black Holes or Black Hole Stars? Astronomers Spar over 'Little Red Dots'",
+        "url": "https://www.quantamagazine.org/black-holes-or-black-hole-stars-astronomers-spar-over-webb-telescopes-little-red-dots-20260914/",
         "source": "Hacker News",
-        "score": 163
+        "score": 40
       },
       {
-        "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
-        "url": "https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio",
+        "title": "What Zig felt like, coming from Rust",
+        "url": "https://besok.github.io/posts/what-zig-felt-like-coming-from-rust/",
         "source": "Hacker News",
-        "score": 165
+        "score": 88
+      },
+      {
+        "title": "Asking Authors About Their Own Papers",
+        "url": "https://medium.com/@TmlrOrg/asking-authors-about-their-own-papers-3d2e04e5dee0",
+        "source": "Hacker News",
+        "score": 50
       },
       {
         "title": "Android 17 is the first since 3.x to add new APIs without releasing to the AOSP",
         "url": "https://grapheneos.social/@GrapheneOS/117282080803799576",
         "source": "Hacker News",
-        "score": 889
+        "score": 970
+      },
+      {
+        "title": "I built the fastest PHP webserver in the world",
+        "url": "https://qbixserver.com",
+        "source": "Hacker News",
+        "score": 20
       },
       {
         "title": "San Francisco Onion Futures Company",
         "url": "https://onionfutures.com/",
         "source": "Hacker News",
+        "score": 294
+      },
+      {
+        "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
+        "url": "https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio",
+        "source": "Hacker News",
+        "score": 241
+      },
+      {
+        "title": "If math is more than proof, we need to better celebrate the rest of it",
+        "url": "https://terrytao.wordpress.com/2026/09/18/if-math-is-more-than-proof-we-need-to-better-celebrate-the-rest-of-it/",
+        "source": "Hacker News",
         "score": 230
       },
       {
-        "title": "Show HN: I wrote a custom assembler for CHIP-8 in C++",
-        "url": "https://github.com/Tackx/c8-ass",
+        "title": "Agreement between the USA and Denmark (1951,2004) [pdf]",
+        "url": "https://www.state.gov/wp-content/uploads/2019/02/04-806-Denmark-Defense.done_.pdf",
         "source": "Hacker News",
-        "score": 10
-      },
-      {
-        "title": "Communication by means of modulated Johnson noise",
-        "url": "https://www.pnas.org/doi/10.1073/pnas.2201337119",
-        "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "Cloudflare Quick Tunnels",
-        "url": "https://try.cloudflare.com/",
-        "source": "Hacker News",
-        "score": 739
-      },
-      {
-        "title": "How to Write with an LLM",
-        "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
-        "source": "Hacker News",
-        "score": 520
-      },
-      {
-        "title": "You can run Git on object storage if you re-make packfiles",
-        "url": "https://www.tigrisdata.com/blog/objgit-packfiles/",
-        "source": "Hacker News",
-        "score": 68
-      },
-      {
-        "title": "SDCC – Small Device C Compiler",
-        "url": "https://sdcc.sourceforge.net/",
-        "source": "Hacker News",
-        "score": 100
-      },
-      {
-        "title": "From Stonemasons to Carpenters",
-        "url": "https://thelastsoftwareengineer.substack.com/p/from-stonemasons-to-carpenters",
-        "source": "Hacker News",
-        "score": 15
+        "score": 5
       }
     ],
     "ai": [
@@ -101,90 +101,78 @@
         "title": "AI-generated posters don’t have to be horrible",
         "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
         "source": "Hacker News AI",
-        "score": 356
+        "score": 698
       },
       {
         "title": "Human brain is two separate organs, Stanford Medicine-led research finds",
         "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html",
         "source": "Hacker News AI",
-        "score": 338
+        "score": 469
       },
       {
         "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
         "url": "https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio",
         "source": "Hacker News AI",
-        "score": 165
+        "score": 241
+      },
+      {
+        "title": "Learning Another Language May Be One of the Best Ways to Keep Your Brain Healthy",
+        "url": "https://theconversation.com/learning-another-language-may-be-one-of-the-best-ways-to-keep-your-brain-healthy-as-you-age-291951",
+        "source": "Hacker News AI",
+        "score": 39
       },
       {
         "title": "How to Write with an LLM",
         "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News AI",
-        "score": 520
+        "score": 554
       },
       {
         "title": "You can run Git on object storage if you re-make packfiles",
         "url": "https://www.tigrisdata.com/blog/objgit-packfiles/",
         "source": "Hacker News AI",
-        "score": 68
+        "score": 101
       },
       {
         "title": "How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip",
         "url": "https://spectrum.ieee.org/llms-for-chip-design",
         "source": "Hacker News AI",
-        "score": 146
+        "score": 171
       },
       {
         "title": "NASA-IBM Lunar Foundation open-Source Geospatial AI Model",
         "url": "https://newsroom.usra.edu/usra-contributes-planetary-science-expertise-to-nasa-ibm-lunar-foundation-model/",
         "source": "Hacker News AI",
-        "score": 40
+        "score": 48
       },
       {
         "title": "Cache-to-Cache: Direct Semantic Communication Between LLMs (2025)",
         "url": "https://arxiv.org/abs/2510.03215",
         "source": "Hacker News AI",
-        "score": 95
+        "score": 101
       },
       {
         "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
         "url": "https://www.newscientist.com/article/2589739-our-brain-evolved-from-two-primitive-nervous-systems-that-merged/",
         "source": "Hacker News AI",
-        "score": 120
+        "score": 122
       },
       {
         "title": "Claude Code now reads AGENTS.md if there is no Claude.md",
         "url": "https://code.claude.com/docs/en/changelog",
         "source": "Hacker News AI",
-        "score": 678
+        "score": 696
       },
       {
         "title": "The Implications of Linguistic Illegibility for LLM Security",
         "url": "https://arxiv.org/abs/2609.02852",
         "source": "Hacker News AI",
-        "score": 71
-      },
-      {
-        "title": "Alibaba open-sources AI model that can detect cancer and nearly 150 conditions",
-        "url": "https://www.scmp.com/tech/big-tech/article/3368055/alibaba-open-sources-medical-ai-model-can-detect-cancer-and-nearly-150-conditions",
-        "source": "Hacker News AI",
-        "score": 130
-      },
-      {
-        "title": "Stepfun Step 5 Preview (LLM): On AA Pareto frontier",
-        "url": "https://artificialanalysis.ai/models/step-5",
-        "source": "Hacker News AI",
-        "score": 11
-      },
-      {
-        "title": "AI chatbots are becoming experts at changing people's minds",
-        "url": "https://www.science.org/content/article/ai-chatbots-are-becoming-experts-changing-people-s-minds-what-s-their-secret",
-        "source": "Hacker News AI",
-        "score": 109
+        "score": 74
       }
     ],
     "news": [
       {
-        "title": "US and Denmark reach deal over Greenland after Trump annexation threats",
+        "title": "Nato welcomes Greenland deal as Trump says it will give US 'permanent security control'",
         "url": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -221,6 +209,11 @@
     ],
     "art": [
       {
+        "title": " Blender 5.3 finally gets game-changing native Gaussian splat support ",
+        "url": "https://www.creativebloq.com/3d/blender-5-3-finally-gets-game-changing-native-gaussian-splat-support",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " This fountain pen has been a design icon since 1980, and it has 26% off for a limited time ",
         "url": "https://www.creativebloq.com/design/product-design/this-iconic-fountain-pen-is-perfect-for-journalling-and-it-has-26-percent-off-for-a-limited-time",
         "source": "Creative Bloq"
@@ -241,18 +234,13 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " People are fuming over Netflix's \"satanic\" rewrite of Disney's Cinderella ",
+        "title": " People are calling Netflix's Cinderella rewrite \"satanic\", but Steps follows a long tradition of reimagining classic fairy tales ",
         "url": "https://www.creativebloq.com/art/animation/people-are-fuming-over-netflixs-rewrite-of-disneys-cinderella",
         "source": "Creative Bloq"
       },
       {
         "title": " An accidental 9/11 reference led this English football club to scrap its new clothing designs ",
         "url": "https://www.creativebloq.com/design/logos-icons/accidental-9-11-references-caused-this-english-football-club-to-scrap-its-new-clothing-designs",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " There's up to $550 off 3D printers in the huge Anycubic anniversary sale ",
-        "url": "https://www.creativebloq.com/3d/3d-printing/the-huge-anycubic-anniversary-sale-has-up-to-usd550-off-3d-printer-bundles",
         "source": "Creative Bloq"
       }
     ],
@@ -295,38 +283,38 @@
     ],
     "gaming": [
       {
-        "title": "Batman Producers Reveal Warner Bros. Told Them to Burn a Criminal's Face Off",
-        "url": "https://www.polygon.com/batman-knightfall-producers-interview/",
+        "title": "Star Wars Zero Company Unofficially Gets A Real Endgame",
+        "url": "https://www.polygon.com/star-wars-zero-company-aftermath-dlc-mod-endgame/",
         "source": "Polygon"
       },
       {
-        "title": "Crunchyroll’s Detective Series With a 93% RT Score Is About to Have Its ‘Biggest Year Yet’",
-        "url": "https://www.polygon.com/apothecary-diaries-season-3-movie-producer-interview/",
+        "title": "Nintendo Just Demolished Everyone’s Free Time",
+        "url": "https://www.polygon.com/switchboard-fire-emblem-fortunes-weave-diablo-4/",
         "source": "Polygon"
       },
       {
-        "title": "Every Star Wars Zero Company Hero, Ranked From Worst to Best",
-        "url": "https://www.polygon.com/star-wars-zero-company-characters-ranked/",
+        "title": "Xbox May Finally Get Its Own Version Of PlayStation Platinum Trophies",
+        "url": "https://www.polygon.com/xbox-platinum-trophy-equivalent-mythic-achievement/",
         "source": "Polygon"
       },
       {
-        "title": "The 9 Best Anime You Can Stream on HBO Max",
-        "url": "https://www.polygon.com/best-anime-to-stream-on-hbo-max/",
+        "title": "Lollipop Chainsaw Is Getting An Official Live-Action Movie Prequel",
+        "url": "https://www.polygon.com/lollipop-chainsaw-movie/",
         "source": "Polygon"
       },
       {
-        "title": "The 5 Best Charlie Brown Football Comic Strips in 'Peanuts' History",
-        "url": "https://www.polygon.com/best-charlie-brown-football-jokes-peanuts-comic-strip/",
+        "title": "Paramount's New High Fantasy Epic is Already the Streaming Sleeper Hit of 2026",
+        "url": "https://www.polygon.com/paramount-golden-axe-showrunner-interview-season-2/",
         "source": "Polygon"
       },
       {
-        "title": "Dwayne Johnson's Forgotten Box-office Juggernaut is Officially Conquering the Streaming World",
-        "url": "https://www.polygon.com/dwayne-johnson-hercules-netflix-streaming-hit-september-2026/",
+        "title": "Marvel's Wolverine Update Tones Down Its Most Controversial Feature",
+        "url": "https://www.polygon.com/wolverine-scent-trails-update/",
         "source": "Polygon"
       },
       {
-        "title": "39 Years Later, the Most Important Sci-Fi Series of the '80s Is Officially Free on Stream",
-        "url": "https://www.polygon.com/star-trek-next-generation-streaming-free/",
+        "title": "Forget Your 100-Hour RPGs, Action Games Are Having a Moment",
+        "url": "https://www.polygon.com/action-games-wolverine-pragmata-2026/",
         "source": "Polygon"
       }
     ],
