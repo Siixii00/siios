@@ -1,191 +1,185 @@
 {
   "metadata": {
-    "last_updated": "2026-09-19T08:37:51.622482",
-    "total_items": 65
+    "last_updated": "2026-09-19T12:56:18.620514",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
+        "title": "AI-generated posters don’t have to be horrible",
+        "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+        "source": "Hacker News",
+        "score": 356
+      },
+      {
+        "title": "Laya the open source version of Jev",
+        "url": "https://laya.convaiinnovations.com/",
+        "source": "Hacker News",
+        "score": 81
+      },
+      {
         "title": "Human brain is two separate organs, Stanford Medicine-led research finds",
         "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html",
         "source": "Hacker News",
-        "score": 159
+        "score": 338
+      },
+      {
+        "title": "“The Secret Life of Circuits” is here",
+        "url": "https://blog.coredump.cx/p/the-secret-life-of-circuits-is-here",
+        "source": "Hacker News",
+        "score": 102
       },
       {
         "title": "If math is more than proof, we need to better celebrate the rest of it",
         "url": "https://terrytao.wordpress.com/2026/09/18/if-math-is-more-than-proof-we-need-to-better-celebrate-the-rest-of-it/",
         "source": "Hacker News",
-        "score": 55
+        "score": 163
       },
       {
         "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
         "url": "https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio",
         "source": "Hacker News",
-        "score": 73
-      },
-      {
-        "title": "San Francisco Onion Futures Company",
-        "url": "https://onionfutures.com/",
-        "source": "Hacker News",
-        "score": 169
+        "score": 165
       },
       {
         "title": "Android 17 is the first since 3.x to add new APIs without releasing to the AOSP",
         "url": "https://grapheneos.social/@GrapheneOS/117282080803799576",
         "source": "Hacker News",
-        "score": 803
+        "score": 889
       },
       {
-        "title": "Typesafe-computer-use drives a Mac toward a goal for 1/50th of a cent per step",
-        "url": "https://github.com/awlevin/typesafe-computer-use",
+        "title": "San Francisco Onion Futures Company",
+        "url": "https://onionfutures.com/",
         "source": "Hacker News",
-        "score": 72
+        "score": 230
       },
       {
-        "title": "Science Is Open Software",
-        "url": "https://jepedersen.dk/blog/202505_research/",
+        "title": "Show HN: I wrote a custom assembler for CHIP-8 in C++",
+        "url": "https://github.com/Tackx/c8-ass",
         "source": "Hacker News",
-        "score": 81
+        "score": 10
       },
       {
-        "title": "SDCC – Small Device C Compiler",
-        "url": "https://sdcc.sourceforge.net/",
+        "title": "Communication by means of modulated Johnson noise",
+        "url": "https://www.pnas.org/doi/10.1073/pnas.2201337119",
         "source": "Hacker News",
-        "score": 70
+        "score": 20
       },
       {
         "title": "Cloudflare Quick Tunnels",
         "url": "https://try.cloudflare.com/",
         "source": "Hacker News",
-        "score": 693
-      },
-      {
-        "title": "You can run Git on object storage if you re-make packfiles",
-        "url": "https://www.tigrisdata.com/blog/objgit-packfiles/",
-        "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "Saving another 100TB of RAM",
-        "url": "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/",
-        "source": "Hacker News",
-        "score": 349
+        "score": 739
       },
       {
         "title": "How to Write with an LLM",
         "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News",
-        "score": 482
+        "score": 520
       },
       {
-        "title": "Why building a Rust LSP is hard",
-        "url": "https://rust-glancer.github.io/blog/why-lsp-is-hard/",
+        "title": "You can run Git on object storage if you re-make packfiles",
+        "url": "https://www.tigrisdata.com/blog/objgit-packfiles/",
         "source": "Hacker News",
-        "score": 62
+        "score": 68
       },
       {
-        "title": "NASA-IBM Lunar Foundation open-Source Geospatial AI Model",
-        "url": "https://newsroom.usra.edu/usra-contributes-planetary-science-expertise-to-nasa-ibm-lunar-foundation-model/",
+        "title": "SDCC – Small Device C Compiler",
+        "url": "https://sdcc.sourceforge.net/",
         "source": "Hacker News",
-        "score": 21
+        "score": 100
       },
       {
-        "title": "How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip",
-        "url": "https://spectrum.ieee.org/llms-for-chip-design",
+        "title": "From Stonemasons to Carpenters",
+        "url": "https://thelastsoftwareengineer.substack.com/p/from-stonemasons-to-carpenters",
         "source": "Hacker News",
-        "score": 115
+        "score": 15
       }
     ],
     "ai": [
       {
+        "title": "AI-generated posters don’t have to be horrible",
+        "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+        "source": "Hacker News AI",
+        "score": 356
+      },
+      {
         "title": "Human brain is two separate organs, Stanford Medicine-led research finds",
         "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html",
         "source": "Hacker News AI",
-        "score": 159
+        "score": 338
       },
       {
         "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
         "url": "https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio",
         "source": "Hacker News AI",
-        "score": 73
-      },
-      {
-        "title": "You can run Git on object storage if you re-make packfiles",
-        "url": "https://www.tigrisdata.com/blog/objgit-packfiles/",
-        "source": "Hacker News AI",
-        "score": 37
+        "score": 165
       },
       {
         "title": "How to Write with an LLM",
         "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News AI",
-        "score": 482
+        "score": 520
       },
       {
-        "title": "NASA-IBM Lunar Foundation open-Source Geospatial AI Model",
-        "url": "https://newsroom.usra.edu/usra-contributes-planetary-science-expertise-to-nasa-ibm-lunar-foundation-model/",
+        "title": "You can run Git on object storage if you re-make packfiles",
+        "url": "https://www.tigrisdata.com/blog/objgit-packfiles/",
         "source": "Hacker News AI",
-        "score": 21
+        "score": 68
       },
       {
         "title": "How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip",
         "url": "https://spectrum.ieee.org/llms-for-chip-design",
         "source": "Hacker News AI",
-        "score": 115
+        "score": 146
+      },
+      {
+        "title": "NASA-IBM Lunar Foundation open-Source Geospatial AI Model",
+        "url": "https://newsroom.usra.edu/usra-contributes-planetary-science-expertise-to-nasa-ibm-lunar-foundation-model/",
+        "source": "Hacker News AI",
+        "score": 40
       },
       {
         "title": "Cache-to-Cache: Direct Semantic Communication Between LLMs (2025)",
         "url": "https://arxiv.org/abs/2510.03215",
         "source": "Hacker News AI",
-        "score": 85
-      },
-      {
-        "title": "Stepfun Step 5 Preview (LLM): On AA Pareto frontier",
-        "url": "https://artificialanalysis.ai/models/step-5",
-        "source": "Hacker News AI",
-        "score": 8
-      },
-      {
-        "title": "The Case of Elias Thorne, Imaginary Man AI Chatbots Are Obsessed With",
-        "url": "https://www.vice.com/en/article/the-strange-case-of-elias-thorne-the-imaginary-man-ai-chatbots-are-obsessed-with/",
-        "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Claude Code now reads AGENTS.md if there is no Claude.md",
-        "url": "https://code.claude.com/docs/en/changelog",
-        "source": "Hacker News AI",
-        "score": 648
+        "score": 95
       },
       {
         "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
         "url": "https://www.newscientist.com/article/2589739-our-brain-evolved-from-two-primitive-nervous-systems-that-merged/",
         "source": "Hacker News AI",
-        "score": 115
+        "score": 120
       },
       {
-        "title": "Google's Gemini AI hacked three companies in security test",
-        "url": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo",
+        "title": "Claude Code now reads AGENTS.md if there is no Claude.md",
+        "url": "https://code.claude.com/docs/en/changelog",
         "source": "Hacker News AI",
-        "score": 15
-      },
-      {
-        "title": "Alibaba open-sources AI model that can detect cancer and nearly 150 conditions",
-        "url": "https://www.scmp.com/tech/big-tech/article/3368055/alibaba-open-sources-medical-ai-model-can-detect-cancer-and-nearly-150-conditions",
-        "source": "Hacker News AI",
-        "score": 117
-      },
-      {
-        "title": "Claude couldn't hack OpenAI. Then Anthropic shipped Opus 5",
-        "url": "https://thenewstack.io/claude-exploits-openai-forum/",
-        "source": "Hacker News AI",
-        "score": 7
+        "score": 678
       },
       {
         "title": "The Implications of Linguistic Illegibility for LLM Security",
         "url": "https://arxiv.org/abs/2609.02852",
         "source": "Hacker News AI",
-        "score": 68
+        "score": 71
+      },
+      {
+        "title": "Alibaba open-sources AI model that can detect cancer and nearly 150 conditions",
+        "url": "https://www.scmp.com/tech/big-tech/article/3368055/alibaba-open-sources-medical-ai-model-can-detect-cancer-and-nearly-150-conditions",
+        "source": "Hacker News AI",
+        "score": 130
+      },
+      {
+        "title": "Stepfun Step 5 Preview (LLM): On AA Pareto frontier",
+        "url": "https://artificialanalysis.ai/models/step-5",
+        "source": "Hacker News AI",
+        "score": 11
+      },
+      {
+        "title": "AI chatbots are becoming experts at changing people's minds",
+        "url": "https://www.science.org/content/article/ai-chatbots-are-becoming-experts-changing-people-s-minds-what-s-their-secret",
+        "source": "Hacker News AI",
+        "score": 109
       }
     ],
     "news": [
@@ -215,17 +209,37 @@
         "source": "BBC World"
       },
       {
-        "title": "Saudi Arabia issues first air raid alerts for Riyadh since Houthis escalated attacks",
-        "url": "https://www.bbc.co.uk/news/articles/cmed7el18dxpo?at_medium=RSS&at_campaign=rss",
+        "title": "Shark attack prompts rare kill order in Western Australia as victim named",
+        "url": "https://www.bbc.co.uk/news/articles/cqwyzdnk442lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "At least 21 killed after vehicle loaded with explosives rams Pakistan mosque",
-        "url": "https://www.bbc.co.uk/news/articles/ckn9wenz8wjwo?at_medium=RSS&at_campaign=rss",
+        "title": "Millions without power as Cuba hit by latest major blackout",
+        "url": "https://www.bbc.co.uk/news/articles/c6j9x4387lzxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " This fountain pen has been a design icon since 1980, and it has 26% off for a limited time ",
+        "url": "https://www.creativebloq.com/design/product-design/this-iconic-fountain-pen-is-perfect-for-journalling-and-it-has-26-percent-off-for-a-limited-time",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Is this the worst typography cockup of 2026? ",
+        "url": "https://www.creativebloq.com/design/fonts-typography/is-this-the-worst-typography-cockup-of-2026",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " 7 artists reveal the revelations that took their practice to the next level ",
+        "url": "https://www.creativebloq.com/creative-inspiration/7-artists-reveal-the-revelations-that-took-their-practice-to-the-next-level",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Greta Gerwig’s Narnia logo oozes magical energy ",
+        "url": "https://www.creativebloq.com/design/logos-icons/looks-woke-greta-gerwigs-narnia-logo-divides-fans",
+        "source": "Creative Bloq"
+      },
       {
         "title": " People are fuming over Netflix's \"satanic\" rewrite of Disney's Cinderella ",
         "url": "https://www.creativebloq.com/art/animation/people-are-fuming-over-netflixs-rewrite-of-disneys-cinderella",
@@ -239,26 +253,6 @@
       {
         "title": " There's up to $550 off 3D printers in the huge Anycubic anniversary sale ",
         "url": "https://www.creativebloq.com/3d/3d-printing/the-huge-anycubic-anniversary-sale-has-up-to-usd550-off-3d-printer-bundles",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Control Resonant review: Remedy turns Manhattan into a paranatural nightmare unlike anything I've seen ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/control-resonant-review-step-outside-to-an-apocalyptic-manhattan-as-youve-never-seen",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " \"We can cut production costs by 95%\": the AI tech taking on Hollywood ",
-        "url": "https://www.creativebloq.com/art/animation/we-can-cut-production-costs-by-95-percent-the-ai-tech-taking-on-hollywood",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The 20th anniversary Cricut warehouse sale has some im-press-ive deals ",
-        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/the-20th-anniversary-cricut-warehouse-sale-has-some-im-press-ive-deals",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How Remothered: Red Nun's Legacy puts this indie studio's Sicilian roots front and centre ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/how-remothered-red-nuns-legacy-puts-this-indie-studios-sicilian-roots-front-and-centre",
         "source": "Creative Bloq"
       }
     ],
@@ -301,6 +295,21 @@
     ],
     "gaming": [
       {
+        "title": "Batman Producers Reveal Warner Bros. Told Them to Burn a Criminal's Face Off",
+        "url": "https://www.polygon.com/batman-knightfall-producers-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Crunchyroll’s Detective Series With a 93% RT Score Is About to Have Its ‘Biggest Year Yet’",
+        "url": "https://www.polygon.com/apothecary-diaries-season-3-movie-producer-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Every Star Wars Zero Company Hero, Ranked From Worst to Best",
+        "url": "https://www.polygon.com/star-wars-zero-company-characters-ranked/",
+        "source": "Polygon"
+      },
+      {
         "title": "The 9 Best Anime You Can Stream on HBO Max",
         "url": "https://www.polygon.com/best-anime-to-stream-on-hbo-max/",
         "source": "Polygon"
@@ -318,21 +327,6 @@
       {
         "title": "39 Years Later, the Most Important Sci-Fi Series of the '80s Is Officially Free on Stream",
         "url": "https://www.polygon.com/star-trek-next-generation-streaming-free/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Near-Perfect Psychological Thriller Movies Streaming for Free",
-        "url": "https://www.polygon.com/best-psychological-thriller-movies-free-streaming/",
-        "source": "Polygon"
-      },
-      {
-        "title": "31 Years Later, the Final 'Calvin and Hobbes' Comic Strip is Still a Perfect Sendoff",
-        "url": "https://www.polygon.com/calvin-and-hobbes-last-comic-strip-lets-go-exploring/",
-        "source": "Polygon"
-      },
-      {
-        "title": "3 Netflix Shows You Need to Binge This Weekend (Sept. 18-20)",
-        "url": "https://www.polygon.com/netflix-weekend-binge-september-2026-shows/",
         "source": "Polygon"
       }
     ],
