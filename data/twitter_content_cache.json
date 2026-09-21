@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-21T20:50:08.319901",
-    "total_items": 62
+    "last_updated": "2026-09-21T23:52:46.714273",
+    "total_items": 61
   },
   "content": {
     "tech": [
@@ -9,177 +9,171 @@
         "title": "Xiaomi MiMo v2.6",
         "url": "https://mimo.xiaomi.com/mimo-v2-6",
         "source": "Hacker News",
-        "score": 115
+        "score": 434
       },
       {
-        "title": "The NASA/ESA Mars Sample Return mission has been canceled",
+        "title": "Data Protection Commission fines Google €403M over processing of location data",
+        "url": "https://www.dataprotection.ie/en/news-media/latest-news/data-protection-commission-fines-google-eu403-million-following-inquiry-googles-processing-location",
+        "source": "Hacker News",
+        "score": 48
+      },
+      {
+        "title": "NASA’s Mars Sample Return mission is dead",
         "url": "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead",
         "source": "Hacker News",
-        "score": 141
+        "score": 268
+      },
+      {
+        "title": "Suspension of the de minimis administrative exemption for imports $800 or less",
+        "url": "https://www.personalimportation.org/advocacy",
+        "source": "Hacker News",
+        "score": 109
+      },
+      {
+        "title": "Transformers Explained Visually",
+        "url": "https://poloclub.github.io/transformer-explainer/",
+        "source": "Hacker News",
+        "score": 150
+      },
+      {
+        "title": "I don't want to read what you didn't write",
+        "url": "https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/",
+        "source": "Hacker News",
+        "score": 108
       },
       {
         "title": "What Sun got wrong",
         "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
         "source": "Hacker News",
-        "score": 412
+        "score": 478
       },
       {
         "title": "Attention is all you have",
         "url": "https://alicegg.tech/2026/09/21/attention",
         "source": "Hacker News",
-        "score": 440
+        "score": 547
+      },
+      {
+        "title": "Spymarks, Not Watermarks",
+        "url": "https://brand.io/article/spymarks/",
+        "source": "Hacker News",
+        "score": 17
       },
       {
         "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
         "url": "https://linear.app/now/ci-bottleneck-reworked",
         "source": "Hacker News",
-        "score": 46
-      },
-      {
-        "title": "Why does mathmain need an encrypted loader?",
-        "url": "https://safedep.io/mathmain-encrypted-loader/",
-        "source": "Hacker News",
-        "score": 73
+        "score": 113
       },
       {
         "title": "The Advisory Group on Mathematics and Artificial Intelligence",
         "url": "https://terrytao.wordpress.com/2026/09/21/advisory-group-on-mathematics-and-artificial-intelligence/",
         "source": "Hacker News",
-        "score": 29
+        "score": 71
       },
       {
-        "title": "Turn off and restrict access to Apple Intelligence features on Mac",
-        "url": "https://support.apple.com/guide/mac-help/turn-restrict-access-apple-intelligence-mchlb2e44f94/mac",
+        "title": "Divide by depth for instant 3D",
+        "url": "https://gabrieloc.com/2026/09/15/perspective.html",
         "source": "Hacker News",
-        "score": 164
+        "score": 64
       },
       {
-        "title": "In Search of a Compositional Theory of Self-Stabilization",
-        "url": "http://muratbuffalo.blogspot.com/2026/09/in-search-of-compositional-theory-of.html",
+        "title": "Why does mathmain need an encrypted loader?",
+        "url": "https://safedep.io/mathmain-encrypted-loader/",
         "source": "Hacker News",
-        "score": 28
-      },
-      {
-        "title": "Transformers Explained Visually",
-        "url": "https://poloclub.github.io/transformer-explainer/",
-        "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "Grok 4.7",
-        "url": "https://x.ai/news/grok-4-7",
-        "source": "Hacker News",
-        "score": 397
+        "score": 96
       },
       {
         "title": "Apple Copland D11E4 Booting in the Browser",
         "url": "https://www.pagetable.com/300",
         "source": "Hacker News",
-        "score": 28
+        "score": 81
       },
       {
-        "title": "Divide by Depth for Instant 3D",
-        "url": "https://gabrieloc.com/2026/09/15/perspective.html",
+        "title": "First Shader from Zero in Godot 4",
+        "url": "https://www.gdquest.com/library/first_shader_godot4_portal/",
         "source": "Hacker News",
-        "score": 10
-      },
-      {
-        "title": "US halts flights at busy East Coast airports, says fiber line cut",
-        "url": "https://www.reuters.com/world/us/faa-halts-some-us-east-coast-flights-due-communication-issues-2026-09-21/",
-        "source": "Hacker News",
-        "score": 115
-      },
-      {
-        "title": "A restored PDP-11/83 serving this page on 211BSD Unix",
-        "url": "http://pdp1173.com/",
-        "source": "Hacker News",
-        "score": 74
+        "score": 7
       }
     ],
     "ai": [
       {
+        "title": "Transformers Explained Visually",
+        "url": "https://poloclub.github.io/transformer-explainer/",
+        "source": "Hacker News AI",
+        "score": 150
+      },
+      {
         "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
         "url": "https://linear.app/now/ci-bottleneck-reworked",
         "source": "Hacker News AI",
-        "score": 46
-      },
-      {
-        "title": "Why does mathmain need an encrypted loader?",
-        "url": "https://safedep.io/mathmain-encrypted-loader/",
-        "source": "Hacker News AI",
-        "score": 73
+        "score": 113
       },
       {
         "title": "The Advisory Group on Mathematics and Artificial Intelligence",
         "url": "https://terrytao.wordpress.com/2026/09/21/advisory-group-on-mathematics-and-artificial-intelligence/",
         "source": "Hacker News AI",
-        "score": 29
+        "score": 71
       },
       {
-        "title": "Transformers Explained Visually",
-        "url": "https://poloclub.github.io/transformer-explainer/",
+        "title": "Why does mathmain need an encrypted loader?",
+        "url": "https://safedep.io/mathmain-encrypted-loader/",
         "source": "Hacker News AI",
-        "score": 16
-      },
-      {
-        "title": "US halts flights at busy East Coast airports, says fiber line cut",
-        "url": "https://www.reuters.com/world/us/faa-halts-some-us-east-coast-flights-due-communication-issues-2026-09-21/",
-        "source": "Hacker News AI",
-        "score": 115
-      },
-      {
-        "title": "Python Workers are now generally available",
-        "url": "https://blog.cloudflare.com/python-workers-ga/",
-        "source": "Hacker News AI",
-        "score": 143
+        "score": 96
       },
       {
         "title": "Frontier AI on Your Own Hardware",
         "url": "https://timdettmers.com/2026/09/21/dlab-open-source-week/",
         "source": "Hacker News AI",
-        "score": 22
+        "score": 81
+      },
+      {
+        "title": "Python Workers are now generally available",
+        "url": "https://blog.cloudflare.com/python-workers-ga/",
+        "source": "Hacker News AI",
+        "score": 175
+      },
+      {
+        "title": "US halts flights at busy East Coast airports, says fiber line cut",
+        "url": "https://www.reuters.com/world/us/faa-halts-some-us-east-coast-flights-due-communication-issues-2026-09-21/",
+        "source": "Hacker News AI",
+        "score": 179
       },
       {
         "title": "Avoiding the babbling-idiot failure in a time-triggered communication system",
         "url": "https://ieeexplore.ieee.org/document/689473",
         "source": "Hacker News AI",
-        "score": 17
+        "score": 23
       },
       {
         "title": "macOS 27: Workaround to avoid downloading AI models and save storage",
         "url": "https://www.reddit.com/r/MacOSBeta/comments/1vlnf13/workaround_to_avoid_downloading_ai_models_and/",
         "source": "Hacker News AI",
-        "score": 172
+        "score": 206
       },
       {
         "title": "Show HN: Mini-AGI – Dynamic continual learning model trained on 8GB VRAM",
         "url": "https://github.com/volotat/mini-AGI/",
         "source": "Hacker News AI",
-        "score": 240
+        "score": 248
       },
       {
         "title": "Show HN: Lossless-memory – a personal AI memory that never summarizes",
         "url": "https://github.com/aru-labs/lossless-memory",
         "source": "Hacker News AI",
-        "score": 51
-      },
-      {
-        "title": "Amazon blocks Meta’s new Muse AI agent from shopping on amazon.com",
-        "url": "https://www.forbes.com/sites/jonmarkman/2026/09/21/amazon-blocks-metas-new-muse-ai-agent-from-shopping-on-amazoncom/",
-        "source": "Hacker News AI",
-        "score": 131
+        "score": 55
       },
       {
         "title": "Amiga Unix, Again",
         "url": "https://amigaux.org/",
         "source": "Hacker News AI",
-        "score": 138
+        "score": 141
       },
       {
-        "title": "Big AI to humanity: drop dead",
-        "url": "https://matthewbutterick.com/chron/drop-dead.html",
+        "title": "Do not fear AI. Fear AI companies",
+        "url": "https://df7sc6o35ljoz.cloudfront.net/posts/do-not-fear-ai-rev-2.html",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 18
       }
     ],
     "news": [
@@ -285,6 +279,26 @@
     ],
     "gaming": [
       {
+        "title": "When is the point of no return in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-point-of-no-return-recruitment-cutoff/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Daredevil: Born Again Officially Ending with Season 3",
+        "url": "https://www.polygon.com/daredevil-born-again-season-3-final-season-disney-plus/",
+        "source": "Polygon"
+      },
+      {
+        "title": "YouTuber Logan Paul's Latest Pokémon Scheme Was A Total Flop",
+        "url": "https://www.polygon.com/pokemon-logan-paul-youtube-twitch-shiny-steelix-what-happened/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The Resident Evil Movie Is a Perfect Video Game Adaptation",
+        "url": "https://www.polygon.com/resident-evil-movie-zach-cregger-adaptation/",
+        "source": "Polygon"
+      },
+      {
         "title": "Game of Thrones Actor Addresses Marvel's Midnight Sons Movie Rumors",
         "url": "https://www.polygon.com/marvel-midnight-sons-kit-harington-black-knight/",
         "source": "Polygon"
@@ -297,26 +311,6 @@
       {
         "title": "Fire Emblem Fortune's Weave's Support Conversations Are Terrific, Actually",
         "url": "https://www.polygon.com/fire-emblem-fortunes-weaves-support-conversations/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fire Emblem: Fortune’s Weave Does One Thing Far Better Than Three Houses",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-sex-queerness-romance/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Where to find enrietto in Fire Emblem Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-enrietto-where-to-find-location-energy-nuts/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Persona 4 Revival Is Bringing Back One of the Rpg’s Most Important Actors",
-        "url": "https://www.polygon.com/persona-4-revival-cast-announced-adachi/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Birthday cake slice locations in Fortnite Chapter 7 Season 4",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-slice-birthday-cake-location-where-eat/",
         "source": "Polygon"
       }
     ],
