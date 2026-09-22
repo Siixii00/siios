@@ -1,190 +1,196 @@
 {
   "metadata": {
-    "last_updated": "2026-09-22T09:07:07.987442",
-    "total_items": 63
+    "last_updated": "2026-09-22T14:25:10.049569",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
+        "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+        "source": "Hacker News",
+        "score": 59
+      },
+      {
         "title": "Can gzip be a language model?",
         "url": "https://nathan.rs/posts/gzip-lm/",
         "source": "Hacker News",
-        "score": 105
+        "score": 278
       },
       {
         "title": "MiMo v2.6",
         "url": "https://mimo.xiaomi.com/mimo-v2-6",
         "source": "Hacker News",
-        "score": 888
+        "score": 992
       },
       {
         "title": "Spymarks, Not Watermarks",
         "url": "https://brand.io/article/spymarks/",
         "source": "Hacker News",
-        "score": 413
+        "score": 567
       },
       {
-        "title": "MiMo-v2.6-Pro: Intelligence, Performance and Price Analysis",
-        "url": "https://artificialanalysis.ai/models/mimo-v2-6-pro",
+        "title": "Line Scan Photos from MUNI Heritage Weekend in San Francisco",
+        "url": "https://daniel.lawrence.lu/blog/2026-09-20-muni-heritage-weekend/",
         "source": "Hacker News",
-        "score": 57
+        "score": 61
       },
       {
-        "title": "Transformers Explained Visually",
-        "url": "https://poloclub.github.io/transformer-explainer/",
+        "title": "AI Has No Wisdom and Neither Will You",
+        "url": "https://alexn.org/blog/2026/09/22/ai-has-no-wisdom-and-neither-will-you/",
         "source": "Hacker News",
-        "score": 394
+        "score": 241
+      },
+      {
+        "title": "AMD's random number generator can't generate a 0?",
+        "url": "https://board.flatassembler.net/topic.php?t=24261",
+        "source": "Hacker News",
+        "score": 159
+      },
+      {
+        "title": "I said no and Apple said yes",
+        "url": "https://dbushell.com/2026/09/22/apple-intelligence/",
+        "source": "Hacker News",
+        "score": 505
       },
       {
         "title": "Attention is all you have",
         "url": "https://alicegg.tech/2026/09/21/attention",
         "source": "Hacker News",
-        "score": 791
+        "score": 938
+      },
+      {
+        "title": "Transformers Explained Visually",
+        "url": "https://poloclub.github.io/transformer-explainer/",
+        "source": "Hacker News",
+        "score": 516
       },
       {
         "title": "What Sun got wrong",
         "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
         "source": "Hacker News",
-        "score": 584
+        "score": 635
       },
       {
-        "title": "I don't want to read what you didn't write",
-        "url": "https://blog.colinbreck.com/i-dont-want-to-read-what-you-didnt-write/",
-        "source": "Hacker News",
-        "score": 662
-      },
-      {
-        "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
-        "url": "https://linear.app/now/ci-bottleneck-reworked",
-        "source": "Hacker News",
-        "score": 236
-      },
-      {
-        "title": "I said no and Apple said yes",
-        "url": "https://dbushell.com/2026/09/22/apple-intelligence/",
-        "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "Engineering Memory: On learning to memorize first 100 digits of pi (2024)",
-        "url": "https://gregorygundersen.com/blog/2024/12/21/engineering-memory/",
+        "title": "Stanford R&DE Uses AI to Race Swap Students for Advertising",
+        "url": "https://stanfordreview.org/stanford-r-de-uses-ai-to-race-swap-students-for-advertising/",
         "source": "Hacker News",
         "score": 15
       },
       {
-        "title": "Tell HN: Claude Code just accepted and signed a contract for me. Without asking",
-        "url": "https://news.ycombinator.com/item?id=49798257",
+        "title": "A font that reads what you wrote",
+        "url": "https://rohanadwankar.github.io/posts/semfont.html",
         "source": "Hacker News",
-        "score": 9
+        "score": 53
       },
       {
-        "title": "Looking forward to Git 2.56 – and 3.0",
-        "url": "https://lwn.net/SubscriberLink/1094575/2385e98583715c2b/",
+        "title": "People Training OpenAI's AI Fired for Using AI to Train the AI",
+        "url": "https://www.404media.co/people-training-openais-ai-fired-for-using-ai-to-train-the-ai/",
         "source": "Hacker News",
-        "score": 120
+        "score": 19
       },
       {
-        "title": "NASA’s Mars Sample Return mission is dead",
-        "url": "https://www.science.org/content/article/nasa-s-mars-sample-return-mission-dead",
+        "title": "9 Ads per Minute: FIFA Cup 26 – \"the price of the beautiful game\"",
+        "url": "https://www.bristol.ac.uk/news/2026/september/world-cup-viewers.html",
         "source": "Hacker News",
-        "score": 385
-      },
-      {
-        "title": "World Wide Words",
-        "url": "https://www.worldwidewords.org/genindex.html",
-        "source": "Hacker News",
-        "score": 14
+        "score": 129
       }
     ],
     "ai": [
       {
-        "title": "Transformers Explained Visually",
-        "url": "https://poloclub.github.io/transformer-explainer/",
+        "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
+        "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
         "source": "Hacker News AI",
-        "score": 394
+        "score": 59
       },
       {
-        "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
-        "url": "https://linear.app/now/ci-bottleneck-reworked",
+        "title": "AI Has No Wisdom and Neither Will You",
+        "url": "https://alexn.org/blog/2026/09/22/ai-has-no-wisdom-and-neither-will-you/",
         "source": "Hacker News AI",
-        "score": 236
+        "score": 241
       },
       {
         "title": "I said no and Apple said yes",
         "url": "https://dbushell.com/2026/09/22/apple-intelligence/",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 505
       },
       {
-        "title": "Tell HN: Claude Code just accepted and signed a contract for me. Without asking",
-        "url": "https://news.ycombinator.com/item?id=49798257",
+        "title": "Transformers Explained Visually",
+        "url": "https://poloclub.github.io/transformer-explainer/",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 516
+      },
+      {
+        "title": "Stanford R&DE Uses AI to Race Swap Students for Advertising",
+        "url": "https://stanfordreview.org/stanford-r-de-uses-ai-to-race-swap-students-for-advertising/",
+        "source": "Hacker News AI",
+        "score": 15
+      },
+      {
+        "title": "People Training OpenAI's AI Fired for Using AI to Train the AI",
+        "url": "https://www.404media.co/people-training-openais-ai-fired-for-using-ai-to-train-the-ai/",
+        "source": "Hacker News AI",
+        "score": 19
+      },
+      {
+        "title": "We broke an Over-The-Air update on the ESP32 on purpose",
+        "url": "https://groundrun.io/blog/we-broke-an-over-the-air-update-on-the-esp32-on-purpose/",
+        "source": "Hacker News AI",
+        "score": 3
+      },
+      {
+        "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
+        "url": "https://linear.app/now/ci-bottleneck-reworked",
+        "source": "Hacker News AI",
+        "score": 282
+      },
+      {
+        "title": "Verda (Finland) raises $189M in Series B",
+        "url": "https://verda.com/blog/what-189m-in-funding-unlocks-for-verda-customers",
+        "source": "Hacker News AI",
+        "score": 68
       },
       {
         "title": "Claude Status – Elevated errors for multiple models",
         "url": "https://status.claude.com/incidents/7g1qpkyz5gxh",
         "source": "Hacker News AI",
-        "score": 104
+        "score": 135
       },
       {
         "title": "The Advisory Group on Mathematics and Artificial Intelligence",
         "url": "https://terrytao.wordpress.com/2026/09/21/advisory-group-on-mathematics-and-artificial-intelligence/",
         "source": "Hacker News AI",
-        "score": 133
+        "score": 150
       },
       {
         "title": "Python Workers are now generally available",
         "url": "https://blog.cloudflare.com/python-workers-ga/",
         "source": "Hacker News AI",
-        "score": 226
-      },
-      {
-        "title": "Frontier AI on Your Own Hardware",
-        "url": "https://timdettmers.com/2026/09/21/dlab-open-source-week/",
-        "source": "Hacker News AI",
-        "score": 157
+        "score": 255
       },
       {
         "title": "Why does mathmain need an encrypted loader?",
         "url": "https://safedep.io/mathmain-encrypted-loader/",
         "source": "Hacker News AI",
-        "score": 128
+        "score": 133
       },
       {
-        "title": "US halts flights at busy East Coast airports, says fiber line cut",
-        "url": "https://www.reuters.com/world/us/faa-halts-some-us-east-coast-flights-due-communication-issues-2026-09-21/",
+        "title": "Frontier AI on Your Own Hardware",
+        "url": "https://timdettmers.com/2026/09/21/dlab-open-source-week/",
         "source": "Hacker News AI",
-        "score": 221
-      },
-      {
-        "title": "Jev introduces a new shape of LLM",
-        "url": "https://simonwillison.net/2026/Sep/21/jev/",
-        "source": "Hacker News AI",
-        "score": 29
+        "score": 173
       },
       {
         "title": "Show HN: Mini-AGI – Dynamic continual learning model trained on 8GB VRAM",
         "url": "https://github.com/volotat/mini-AGI/",
         "source": "Hacker News AI",
-        "score": 263
-      },
-      {
-        "title": "Why AI resembles a charismatic religious leader",
-        "url": "https://theconversation.com/why-ai-resembles-a-charismatic-religious-leader-291831",
-        "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "Amiga Unix, Again",
-        "url": "https://amigaux.org/",
-        "source": "Hacker News AI",
-        "score": 142
+        "score": 266
       }
     ],
     "news": [
       {
-        "title": "Major US outlets boycott shared Trump coverage in protest at media ban",
+        "title": "Major US outlets suspend shared Trump coverage in protest at media ban",
         "url": "https://www.bbc.co.uk/news/articles/cje3rezd92y3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -194,32 +200,57 @@
         "source": "BBC World"
       },
       {
+        "title": "Sri Lanka court convicts 15 men over deadly Easter Sunday bombings",
+        "url": "https://www.bbc.co.uk/news/articles/cqy7z275yx65o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Developing El Niño becomes strongest on record weeks before expected peak",
+        "url": "https://www.bbc.co.uk/weather/articles/cmvgy4nv9d62o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Iran must stop arming Houthis in Yemen, G7 says ahead of UN General Assembly",
         "url": "https://www.bbc.co.uk/news/articles/cwm2qpmepmlzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Sri Lankan court to deliver verdict on deadly Easter bombings",
-        "url": "https://www.bbc.co.uk/news/articles/cw8r687nedzgo?at_medium=RSS&at_campaign=rss",
+        "title": "Eleven injured in shooting outside Turkish school",
+        "url": "https://www.bbc.co.uk/news/articles/c6y0z4gv0le4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Yemenis flee across Red Sea as Houthis and Saudi-backed forces escalate war",
-        "url": "https://www.bbc.co.uk/news/articles/cw4gm7l742dmo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Texas ICE shooting leaves Venezuelan DoorDash driver with bullet in his back, says lawyer",
-        "url": "https://www.bbc.co.uk/news/articles/c3y0z25v0zjwo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Four dead after powerful Typhoon Dujuan lashes Japan",
-        "url": "https://www.bbc.co.uk/news/articles/cm3wj2lexl97o?at_medium=RSS&at_campaign=rss",
+        "title": "Outrage in India over viral video of teen molested and her friend beaten",
+        "url": "https://www.bbc.co.uk/news/articles/cmz6z2vx65jeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Noble Vanguard earphones review: The sonic equivalent of a sunburn ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/noble-vanguard-earphones-review-the-sonic-equivalent-of-a-sunburn",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The bold new Apple Music logo signals the end of minimalism ",
+        "url": "https://www.creativebloq.com/design/logos-icons/the-bold-new-apple-music-logo-signals-the-end-of-minimalism",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " McLaren’s new logo looks like a luxury fashion brand ",
+        "url": "https://www.creativebloq.com/design/logos-icons/mclarens-new-logo-looks-like-a-luxury-fashion-brand",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This out-there branding is the bravest design I've seen all year ",
+        "url": "https://www.creativebloq.com/design/branding/this-out-there-branding-is-the-bravest-design-ive-seen-all-year",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This weird Walmart banana hack could save you $20 on Nintendo Switch games like Fire Emblem: Fortune’s Weave, apparently ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/the-weird-walmart-banana-hack-could-save-you-usd20-off-nintendo-switch-games-apparently",
+        "source": "Creative Bloq"
+      },
       {
         "title": " I finally learned to enjoy 3D art with this workflow using 3DCoat, Quixel Mixer, Blender and Photoshop ",
         "url": "https://www.creativebloq.com/design/poster-design/i-finally-learned-to-enjoy-3d-art-with-this-workflow-using-3dcoat-quixel-mixer-blender-and-photoshop",
@@ -229,99 +260,79 @@
         "title": " One of Disney's biggest flops has been reimagined as a beautiful hand-drawn 2D animation, and some fans think it's a big improvement ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/one-of-disneys-biggest-flops-has-been-reimagined-as-a-beautiful-hand-drawn-2d-animation-and-some-fans-think-its-a-big-improvement",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " The Tesla Cybercab has a pretty silly design fail ",
-        "url": "https://www.creativebloq.com/design/product-design/the-tesla-cybercab-has-a-pretty-silly-design-fail",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Art students: save up to 53% on supplies before term starts ",
-        "url": "https://www.creativebloq.com/art/art-supplies/art-students-grab-your-last-minute-supplies-with-up-to-53-percent-off",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The HP Omen Max 16 is everything a student laptop shouldn’t be – so why do I recommend it? ",
-        "url": "https://www.creativebloq.com/tech/laptops/the-hp-omen-max-16-is-everything-a-student-laptop-shouldnt-be-so-why-do-i-recommend-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Forget iPhone 18's Dark Cherry, these gorgeous cases let you play with seasonal colours in a less permanent way ",
-        "url": "https://www.creativebloq.com/tech/accessories/forget-iphone-18s-dark-cherry-these-gorgeous-cases-let-you-play-with-seasonal-colours-in-a-less-permanent-way",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "This emerging treatment could help people avoid knee replacement surgery",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260922052030.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Coffee doesn’t have to keep you awake to disrupt your sleep",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260922005719.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "The end of humanity? What would happen if the Yellowstone supervolcano erupted now",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260922005655.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Stem cells reverse stroke damage and restore movement in mice",
         "url": "https://www.sciencedaily.com/releases/2026/09/260921081116.htm",
         "source": "Science Daily"
       },
       {
-        "title": "NASA just powered up Roman’s massive 300-megapixel camera",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260921081058.htm",
+        "title": "MIT’s tiny flying robot gets 450% faster with AI",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260921081114.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists create a needle-thin brain implant that can do three jobs at once",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260920222416.htm",
+        "title": "This new concrete is stronger and pulls CO2 from the air",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260921081105.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Stopping Ozempic may raise heart attack and stroke risk",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260920222414.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Brain scans reveal a possible cause of long COVID fatigue and brain fog",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260920222412.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover first new penguin species in more than 100 years",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260920222410.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A new process turns plastic waste into gasoline and diesel fuel",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260920222405.htm",
+        "title": "A strange circle on satellite maps turned out to be a 390-million-year-old impact crater",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260921081101.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "23 Years Later, the Most Addictive Sci-Fi Show Ever Made Officially Blasts Onto Free Streaming",
-        "url": "https://www.polygon.com/battlestar-galactica-free-streaming-pluto-tv/",
+        "title": "Xbox Announces Halo Layoffs and More Changes in Big 'Reset'",
+        "url": "https://www.polygon.com/xbox-layoffs-halo-studios-ninja-theory/",
         "source": "Polygon"
       },
       {
-        "title": "Anya Taylor-Joy's Near-Perfect Breakout Folk Thriller Is Officially Leaving Netflix",
-        "url": "https://www.polygon.com/anya-taylor-joy-the-witch-horror-heroine/",
+        "title": "Prime Video's Stargate Reboot Just Got an Exciting Update",
+        "url": "https://www.polygon.com/amazon-stargate-reboot-searching-for-writer/",
         "source": "Polygon"
       },
       {
-        "title": "Stephen King's Most Unhinged Sci-Fi Action Masterpiece Is Officially Free to Watch on YouTube",
-        "url": "https://www.polygon.com/stephen-king-the-running-man-arnold-schwarzenegger-streaming-free-youtube/",
+        "title": "Explosive New Spider-Man Spinoff Will Bridge the Gap After Your Friendly Neighborhood Spider-Man's Finale",
+        "url": "https://www.polygon.com/your-friendly-neighborhood-spider-man-spin-off-comic/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon Winds and Winds Leaks Tease A Pokédex Too Massive To Finish",
-        "url": "https://www.polygon.com/pokemon-winds-waves-big-new-pokedex/",
+        "title": "2026's Best Gaming Soundtrack Is From a Steam Game That Isn't Even Out Yet",
+        "url": "https://www.polygon.com/mr-records-preview/",
         "source": "Polygon"
       },
       {
-        "title": "9 Bonkers Video Game DLCs That Completely Rewrote Expectations",
-        "url": "https://www.polygon.com/best-video-game-dlcs/",
+        "title": "Former Doom Developer Could Be in Trouble as Bethesda Goes After Doom Memecoin",
+        "url": "https://www.polygon.com/doom-memecoin-sandy-petersen-bethesda-legal-action/",
         "source": "Polygon"
       },
       {
-        "title": "When is the point of no return in Fire Emblem Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-point-of-no-return-recruitment-cutoff/",
+        "title": "Star Wars Boss Says Ahsoka Season 2 Will Be 'A Challenge' ",
+        "url": "https://www.polygon.com/star-wars-ahsoka-season-2-mortis-gods-dave-filoni/",
         "source": "Polygon"
       },
       {
-        "title": "Daredevil: Born Again Officially Ending with Season 3",
-        "url": "https://www.polygon.com/daredevil-born-again-season-3-final-season-disney-plus/",
+        "title": " 5 Perfect 'Far Side' Comics from the 1980s That Prove Gary Larson is a Genius",
+        "url": "https://www.polygon.com/5-far-side-comics-genius-gary-larson/",
         "source": "Polygon"
       }
     ],
