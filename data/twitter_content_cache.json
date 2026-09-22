@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-22T18:33:46.647268",
-    "total_items": 64
+    "last_updated": "2026-09-22T21:50:05.435796",
+    "total_items": 62
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "GPT-6 Sol and Luna",
         "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
         "source": "Hacker News",
-        "score": 260
+        "score": 893
       },
       {
         "title": "Claude Opus 5.5",
         "url": "https://www.anthropic.com/claude-opus-5-5",
         "source": "Hacker News",
-        "score": 521
+        "score": 950
+      },
+      {
+        "title": "Microsoft killed FoxPro in 2007. Anyway, here's FoxPro revived",
+        "url": "https://foxscript.org/",
+        "source": "Hacker News",
+        "score": 44
+      },
+      {
+        "title": "'We hacked the FBI:' Hackers say they have data on all FBI employees",
+        "url": "https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/",
+        "source": "Hacker News",
+        "score": 176
       },
       {
         "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
         "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
         "source": "Hacker News",
-        "score": 395
-      },
-      {
-        "title": "WordPress: Unauthenticated path traversal leading to conditional RCE",
-        "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp",
-        "source": "Hacker News",
-        "score": 65
+        "score": 501
       },
       {
         "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
         "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
         "source": "Hacker News",
-        "score": 79
+        "score": 183
+      },
+      {
+        "title": "WordPress: Unauthenticated path traversal leading to conditional RCE",
+        "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp",
+        "source": "Hacker News",
+        "score": 125
+      },
+      {
+        "title": "SAML: A Fractal of Bad Design",
+        "url": "https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/",
+        "source": "Hacker News",
+        "score": 92
+      },
+      {
+        "title": "LLM Ass Bench",
+        "url": "https://www.assbench.com/",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Native apps written in TypeScript and CSS",
+        "url": "https://github.com/geastack/examples",
+        "source": "Hacker News",
+        "score": 47
+      },
+      {
+        "title": "The UV index is not the warm sensation of sunlight on bare skin",
+        "url": "https://blog.asciitweezers.com/the-uv-index-is-not-the-warm-sensation-of-sunlight-on-bare-skin/",
+        "source": "Hacker News",
+        "score": 17
+      },
+      {
+        "title": "Markdown in /src",
+        "url": "https://htmx.org/essays/markdown-in-src/",
+        "source": "Hacker News",
+        "score": 60
+      },
+      {
+        "title": "Show HN: JevBench, a reproducible benchmark for typed decision models",
+        "url": "https://benchmarkheaven.com/jev-models",
+        "source": "Hacker News",
+        "score": 36
       },
       {
         "title": "OpenAI is well positioned to fast-follow Jev",
         "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
         "source": "Hacker News",
-        "score": 175
+        "score": 232
       },
       {
-        "title": "16-bit Intel 8088 chip (c. 1985)",
-        "url": "https://allpoetry.com/16-bit-Intel-8088-chip",
+        "title": "An update on how we confirm your age group on Discord",
+        "url": "https://discord.com/blog/safer-for-teens-same-discord-for-adults",
         "source": "Hacker News",
-        "score": 67
-      },
-      {
-        "title": "There's a high chance of devices being sold with GrapheneOS preinstalled in 2027",
-        "url": "https://grapheneos.social/@GrapheneOS/117299954135808210",
-        "source": "Hacker News",
-        "score": 101
-      },
-      {
-        "title": "Launch HN: Coverage Cat (YC S22) – Umbrella insurance via your personal agent",
-        "url": "https://www.coveragecat.com/",
-        "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "Writing Rust code that's fast by asking agents to make the code faster",
-        "url": "https://minimaxir.com/2026/09/agentic-iteration/",
-        "source": "Hacker News",
-        "score": 59
-      },
-      {
-        "title": "Apple has added persistent 'ads' to iOS, and it's driving users crazy",
-        "url": "https://www.techradar.com/phones/iphone/i-wish-apple-would-just-stop-that-crap-apple-has-added-persistent-ads-to-ios-and-its-driving-users-crazy",
-        "source": "Hacker News",
-        "score": 413
-      },
-      {
-        "title": "Show HN: Drop – A rootless Linux sandbox with gVisor support",
-        "url": "https://droprun.sh/",
-        "source": "Hacker News",
-        "score": 119
-      },
-      {
-        "title": "Solitaire Alone Together",
-        "url": "https://solitairealonetogether.com/",
-        "source": "Hacker News",
-        "score": 87
-      },
-      {
-        "title": "Show HN: AI·rete·RAG – a Rete rule engine decides, RAG explains why",
-        "url": "https://ai-rete-rag.com/",
-        "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "Can gzip be a language model?",
-        "url": "https://nathan.rs/posts/gzip-lm/",
-        "source": "Hacker News",
-        "score": 344
+        "score": 60
       }
     ],
     "ai": [
@@ -101,88 +101,96 @@
         "title": "GPT-6 Sol and Luna",
         "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
         "source": "Hacker News AI",
-        "score": 260
+        "score": 895
       },
       {
         "title": "Claude Opus 5.5",
         "url": "https://www.anthropic.com/claude-opus-5-5",
         "source": "Hacker News AI",
-        "score": 521
+        "score": 954
       },
       {
         "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
         "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
         "source": "Hacker News AI",
-        "score": 395
+        "score": 502
       },
       {
         "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
         "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
         "source": "Hacker News AI",
-        "score": 79
+        "score": 184
+      },
+      {
+        "title": "LLM Ass Bench",
+        "url": "https://www.assbench.com/",
+        "source": "Hacker News AI",
+        "score": 28
       },
       {
         "title": "OpenAI is well positioned to fast-follow Jev",
         "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
         "source": "Hacker News AI",
-        "score": 175
+        "score": 232
+      },
+      {
+        "title": "Did OpenAI solve the wrong Navier-Stokes problem?",
+        "url": "https://www.scientificamerican.com/article/did-openai-solve-the-wrong-navier-stokes-problem/",
+        "source": "Hacker News AI",
+        "score": 60
+      },
+      {
+        "title": "Show HN: Training a model to identify AI web content from structure alone",
+        "url": "https://arxiv.org/abs/2609.15369",
+        "source": "Hacker News AI",
+        "score": 24
+      },
+      {
+        "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school",
+        "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
+        "source": "Hacker News AI",
+        "score": 264
       },
       {
         "title": "Launch HN: Coverage Cat (YC S22) – Umbrella insurance via your personal agent",
         "url": "https://www.coveragecat.com/",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 29
       },
       {
         "title": "Solitaire Alone Together",
         "url": "https://solitairealonetogether.com/",
         "source": "Hacker News AI",
-        "score": 87
+        "score": 125
       },
       {
         "title": "Show HN: AI·rete·RAG – a Rete rule engine decides, RAG explains why",
         "url": "https://ai-rete-rag.com/",
         "source": "Hacker News AI",
-        "score": 20
-      },
-      {
-        "title": "Training a model to identify AI-generated web content from structure alone",
-        "url": "https://arxiv.org/abs/2609.15369",
-        "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "I said no and Apple said yes",
-        "url": "https://dbushell.com/2026/09/22/apple-intelligence/",
-        "source": "Hacker News AI",
-        "score": 710
-      },
-      {
-        "title": "Verda (Finland) raises $189M in Series B",
-        "url": "https://verda.com/blog/what-189m-in-funding-unlocks-for-verda-customers",
-        "source": "Hacker News AI",
-        "score": 81
-      },
-      {
-        "title": "Transformers Explained Visually",
-        "url": "https://poloclub.github.io/transformer-explainer/",
-        "source": "Hacker News AI",
-        "score": 578
-      },
-      {
-        "title": "Americans' Drinking Remains at Record Low: Gallup Poll",
-        "url": "https://news.gallup.com/poll/713534/americans-drinking-remains-record-low.aspx",
-        "source": "Hacker News AI",
-        "score": 18
-      },
-      {
-        "title": "AI Has No Wisdom and Neither Will You",
-        "url": "https://alexn.org/blog/2026/09/22/ai-has-no-wisdom-and-neither-will-you/",
-        "source": "Hacker News AI",
-        "score": 339
+        "score": 32
       }
     ],
     "news": [
+      {
+        "title": "Trump tells UN he has 'big decision' on whether to 'annihilate' Iran or make peace deal",
+        "url": "https://www.bbc.co.uk/news/articles/c52e0ywl9pr7o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Burnham expects to find 'common ground' with Trump in first meeting",
+        "url": "https://www.bbc.co.uk/news/articles/cqevwpmvpekeo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "US to build two military bases in Greenland under new deal with Denmark",
+        "url": "https://www.bbc.co.uk/news/articles/c9dr74g32g8go?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "How Ceuta, football and Israel are shaping Morocco's election",
+        "url": "https://www.bbc.co.uk/news/articles/c8r4v7n6py97o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Sri Lanka court convicts 15 men over deadly Easter Sunday bombings",
         "url": "https://www.bbc.co.uk/news/articles/cqy7z275yx65o?at_medium=RSS&at_campaign=rss",
@@ -194,28 +202,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Eleven injured in shooting outside Turkish school",
-        "url": "https://www.bbc.co.uk/news/articles/c6y0z4gv0le4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Lindsay Clancy's lawyer asks judge to investigate juror and check his phone",
-        "url": "https://www.bbc.co.uk/news/articles/cm4gvyw80dp2o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Top South African policeman charged with sexual offences",
-        "url": "https://www.bbc.co.uk/news/articles/cwjdvgx77n0zo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Autopsy shows Hayden Panettiere died from a drug overdose",
-        "url": "https://www.bbc.co.uk/news/articles/crn45d8dd2wdo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Cyclist who dressed as man to avoid Taliban wins silver medal",
-        "url": "https://www.bbc.co.uk/sport/cycling/articles/c63eqyvdndwdo?at_medium=RSS&at_campaign=rss",
+        "title": "Ukraine anger as EU removes Russian oligarchs from sanctions list",
+        "url": "https://www.bbc.co.uk/news/articles/c6dj4k98107do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -295,38 +283,38 @@
     ],
     "gaming": [
       {
-        "title": "'Coyote vs. Acme' Officially Gets Streaming Release Date",
-        "url": "https://www.polygon.com/coyote-vs-acme-streaming-release-date/",
+        "title": "Game Awards 2026: All Game of the Year Front-Runners and Predictions",
+        "url": "https://www.polygon.com/game-of-the-year-goty-game-awards-2026-frontrunners/",
         "source": "Polygon"
       },
       {
-        "title": "'Lost Temple Cat' quest walkthrough in Fire Emblem Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-lost-temple-cat-quest-walkthrough/",
+        "title": "It's Officially the End of an Era For Halo",
+        "url": "https://www.polygon.com/halo-studios-activision-blizzard-new-games/",
         "source": "Polygon"
       },
       {
-        "title": "Steam Quietly Just Got 2026's Best Silksong Replacement",
-        "url": "https://www.polygon.com/well-dweller-steam-release/",
+        "title": "'The Hunt for Gisco's Treasure' walkthrough in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-hunt-for-giscos-treasure-walkthrough-location/",
         "source": "Polygon"
       },
       {
-        "title": "Unplayable Kingdom Hearts Game Officially Getting an Unexpected Revival",
-        "url": "https://www.polygon.com/kingdom-hearts-union-x-dark-road-fan-port-disney-rpg/",
+        "title": "Two Near-Perfect Lord of the Rings Games Finally Come to Switch 2",
+        "url": "https://www.polygon.com/lord-of-the-rings-shadow-of-mordor-games-switch-2/",
         "source": "Polygon"
       },
       {
-        "title": "Where to find dates in Fire Emblem Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-where-to-find-dates-cai-farming/",
+        "title": "How to make gold in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-how-to-make-gold-money/",
         "source": "Polygon"
       },
       {
-        "title": "Rockstar Issues Major Update Before 'GTA 6' Release",
-        "url": "https://www.polygon.com/gta-6-release-new-mod-guidelines-pc-rdr2/",
+        "title": "'Pokémon' Leak Teases A Totally New Frontier For The Series",
+        "url": "https://www.polygon.com/pokemon-winds-waves-leak-what-is-project-seed-mmo-evolution/",
         "source": "Polygon"
       },
       {
-        "title": "Arc Raiders Is Finally Getting More Endgame Content",
-        "url": "https://www.polygon.com/arc-raiders-interview-aleksander-grondal-endgame-content/",
+        "title": "Pixar’s Best Movie of the 2010s Is Having a Huge Moment",
+        "url": "https://www.polygon.com/pixars-best-movie-2010s-huge-moment/",
         "source": "Polygon"
       }
     ],
