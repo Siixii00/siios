@@ -1,204 +1,188 @@
 {
   "metadata": {
-    "last_updated": "2026-09-22T14:25:10.049569",
-    "total_items": 65
+    "last_updated": "2026-09-22T18:33:46.647268",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
+        "title": "GPT-6 Sol and Luna",
+        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source": "Hacker News",
+        "score": 260
+      },
+      {
+        "title": "Claude Opus 5.5",
+        "url": "https://www.anthropic.com/claude-opus-5-5",
+        "source": "Hacker News",
+        "score": 521
+      },
+      {
         "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
         "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
         "source": "Hacker News",
+        "score": 395
+      },
+      {
+        "title": "WordPress: Unauthenticated path traversal leading to conditional RCE",
+        "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp",
+        "source": "Hacker News",
+        "score": 65
+      },
+      {
+        "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
+        "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
+        "source": "Hacker News",
+        "score": 79
+      },
+      {
+        "title": "OpenAI is well positioned to fast-follow Jev",
+        "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
+        "source": "Hacker News",
+        "score": 175
+      },
+      {
+        "title": "16-bit Intel 8088 chip (c. 1985)",
+        "url": "https://allpoetry.com/16-bit-Intel-8088-chip",
+        "source": "Hacker News",
+        "score": 67
+      },
+      {
+        "title": "There's a high chance of devices being sold with GrapheneOS preinstalled in 2027",
+        "url": "https://grapheneos.social/@GrapheneOS/117299954135808210",
+        "source": "Hacker News",
+        "score": 101
+      },
+      {
+        "title": "Launch HN: Coverage Cat (YC S22) – Umbrella insurance via your personal agent",
+        "url": "https://www.coveragecat.com/",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Writing Rust code that's fast by asking agents to make the code faster",
+        "url": "https://minimaxir.com/2026/09/agentic-iteration/",
+        "source": "Hacker News",
         "score": 59
+      },
+      {
+        "title": "Apple has added persistent 'ads' to iOS, and it's driving users crazy",
+        "url": "https://www.techradar.com/phones/iphone/i-wish-apple-would-just-stop-that-crap-apple-has-added-persistent-ads-to-ios-and-its-driving-users-crazy",
+        "source": "Hacker News",
+        "score": 413
+      },
+      {
+        "title": "Show HN: Drop – A rootless Linux sandbox with gVisor support",
+        "url": "https://droprun.sh/",
+        "source": "Hacker News",
+        "score": 119
+      },
+      {
+        "title": "Solitaire Alone Together",
+        "url": "https://solitairealonetogether.com/",
+        "source": "Hacker News",
+        "score": 87
+      },
+      {
+        "title": "Show HN: AI·rete·RAG – a Rete rule engine decides, RAG explains why",
+        "url": "https://ai-rete-rag.com/",
+        "source": "Hacker News",
+        "score": 20
       },
       {
         "title": "Can gzip be a language model?",
         "url": "https://nathan.rs/posts/gzip-lm/",
         "source": "Hacker News",
-        "score": 278
-      },
-      {
-        "title": "MiMo v2.6",
-        "url": "https://mimo.xiaomi.com/mimo-v2-6",
-        "source": "Hacker News",
-        "score": 992
-      },
-      {
-        "title": "Spymarks, Not Watermarks",
-        "url": "https://brand.io/article/spymarks/",
-        "source": "Hacker News",
-        "score": 567
-      },
-      {
-        "title": "Line Scan Photos from MUNI Heritage Weekend in San Francisco",
-        "url": "https://daniel.lawrence.lu/blog/2026-09-20-muni-heritage-weekend/",
-        "source": "Hacker News",
-        "score": 61
-      },
-      {
-        "title": "AI Has No Wisdom and Neither Will You",
-        "url": "https://alexn.org/blog/2026/09/22/ai-has-no-wisdom-and-neither-will-you/",
-        "source": "Hacker News",
-        "score": 241
-      },
-      {
-        "title": "AMD's random number generator can't generate a 0?",
-        "url": "https://board.flatassembler.net/topic.php?t=24261",
-        "source": "Hacker News",
-        "score": 159
-      },
-      {
-        "title": "I said no and Apple said yes",
-        "url": "https://dbushell.com/2026/09/22/apple-intelligence/",
-        "source": "Hacker News",
-        "score": 505
-      },
-      {
-        "title": "Attention is all you have",
-        "url": "https://alicegg.tech/2026/09/21/attention",
-        "source": "Hacker News",
-        "score": 938
-      },
-      {
-        "title": "Transformers Explained Visually",
-        "url": "https://poloclub.github.io/transformer-explainer/",
-        "source": "Hacker News",
-        "score": 516
-      },
-      {
-        "title": "What Sun got wrong",
-        "url": "https://bcantrill.dtrace.org/2026/09/20/what-sun-got-wrong/",
-        "source": "Hacker News",
-        "score": 635
-      },
-      {
-        "title": "Stanford R&DE Uses AI to Race Swap Students for Advertising",
-        "url": "https://stanfordreview.org/stanford-r-de-uses-ai-to-race-swap-students-for-advertising/",
-        "source": "Hacker News",
-        "score": 15
-      },
-      {
-        "title": "A font that reads what you wrote",
-        "url": "https://rohanadwankar.github.io/posts/semfont.html",
-        "source": "Hacker News",
-        "score": 53
-      },
-      {
-        "title": "People Training OpenAI's AI Fired for Using AI to Train the AI",
-        "url": "https://www.404media.co/people-training-openais-ai-fired-for-using-ai-to-train-the-ai/",
-        "source": "Hacker News",
-        "score": 19
-      },
-      {
-        "title": "9 Ads per Minute: FIFA Cup 26 – \"the price of the beautiful game\"",
-        "url": "https://www.bristol.ac.uk/news/2026/september/world-cup-viewers.html",
-        "source": "Hacker News",
-        "score": 129
+        "score": 344
       }
     ],
     "ai": [
       {
+        "title": "GPT-6 Sol and Luna",
+        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source": "Hacker News AI",
+        "score": 260
+      },
+      {
+        "title": "Claude Opus 5.5",
+        "url": "https://www.anthropic.com/claude-opus-5-5",
+        "source": "Hacker News AI",
+        "score": 521
+      },
+      {
         "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
         "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
         "source": "Hacker News AI",
-        "score": 59
+        "score": 395
       },
       {
-        "title": "AI Has No Wisdom and Neither Will You",
-        "url": "https://alexn.org/blog/2026/09/22/ai-has-no-wisdom-and-neither-will-you/",
+        "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
+        "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
         "source": "Hacker News AI",
-        "score": 241
+        "score": 79
+      },
+      {
+        "title": "OpenAI is well positioned to fast-follow Jev",
+        "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
+        "source": "Hacker News AI",
+        "score": 175
+      },
+      {
+        "title": "Launch HN: Coverage Cat (YC S22) – Umbrella insurance via your personal agent",
+        "url": "https://www.coveragecat.com/",
+        "source": "Hacker News AI",
+        "score": 16
+      },
+      {
+        "title": "Solitaire Alone Together",
+        "url": "https://solitairealonetogether.com/",
+        "source": "Hacker News AI",
+        "score": 87
+      },
+      {
+        "title": "Show HN: AI·rete·RAG – a Rete rule engine decides, RAG explains why",
+        "url": "https://ai-rete-rag.com/",
+        "source": "Hacker News AI",
+        "score": 20
+      },
+      {
+        "title": "Training a model to identify AI-generated web content from structure alone",
+        "url": "https://arxiv.org/abs/2609.15369",
+        "source": "Hacker News AI",
+        "score": 9
       },
       {
         "title": "I said no and Apple said yes",
         "url": "https://dbushell.com/2026/09/22/apple-intelligence/",
         "source": "Hacker News AI",
-        "score": 505
-      },
-      {
-        "title": "Transformers Explained Visually",
-        "url": "https://poloclub.github.io/transformer-explainer/",
-        "source": "Hacker News AI",
-        "score": 516
-      },
-      {
-        "title": "Stanford R&DE Uses AI to Race Swap Students for Advertising",
-        "url": "https://stanfordreview.org/stanford-r-de-uses-ai-to-race-swap-students-for-advertising/",
-        "source": "Hacker News AI",
-        "score": 15
-      },
-      {
-        "title": "People Training OpenAI's AI Fired for Using AI to Train the AI",
-        "url": "https://www.404media.co/people-training-openais-ai-fired-for-using-ai-to-train-the-ai/",
-        "source": "Hacker News AI",
-        "score": 19
-      },
-      {
-        "title": "We broke an Over-The-Air update on the ESP32 on purpose",
-        "url": "https://groundrun.io/blog/we-broke-an-over-the-air-update-on-the-esp32-on-purpose/",
-        "source": "Hacker News AI",
-        "score": 3
-      },
-      {
-        "title": "AI coding has made CI a bottleneck, so we reworked ours to keep up",
-        "url": "https://linear.app/now/ci-bottleneck-reworked",
-        "source": "Hacker News AI",
-        "score": 282
+        "score": 710
       },
       {
         "title": "Verda (Finland) raises $189M in Series B",
         "url": "https://verda.com/blog/what-189m-in-funding-unlocks-for-verda-customers",
         "source": "Hacker News AI",
-        "score": 68
+        "score": 81
       },
       {
-        "title": "Claude Status – Elevated errors for multiple models",
-        "url": "https://status.claude.com/incidents/7g1qpkyz5gxh",
+        "title": "Transformers Explained Visually",
+        "url": "https://poloclub.github.io/transformer-explainer/",
         "source": "Hacker News AI",
-        "score": 135
+        "score": 578
       },
       {
-        "title": "The Advisory Group on Mathematics and Artificial Intelligence",
-        "url": "https://terrytao.wordpress.com/2026/09/21/advisory-group-on-mathematics-and-artificial-intelligence/",
+        "title": "Americans' Drinking Remains at Record Low: Gallup Poll",
+        "url": "https://news.gallup.com/poll/713534/americans-drinking-remains-record-low.aspx",
         "source": "Hacker News AI",
-        "score": 150
+        "score": 18
       },
       {
-        "title": "Python Workers are now generally available",
-        "url": "https://blog.cloudflare.com/python-workers-ga/",
+        "title": "AI Has No Wisdom and Neither Will You",
+        "url": "https://alexn.org/blog/2026/09/22/ai-has-no-wisdom-and-neither-will-you/",
         "source": "Hacker News AI",
-        "score": 255
-      },
-      {
-        "title": "Why does mathmain need an encrypted loader?",
-        "url": "https://safedep.io/mathmain-encrypted-loader/",
-        "source": "Hacker News AI",
-        "score": 133
-      },
-      {
-        "title": "Frontier AI on Your Own Hardware",
-        "url": "https://timdettmers.com/2026/09/21/dlab-open-source-week/",
-        "source": "Hacker News AI",
-        "score": 173
-      },
-      {
-        "title": "Show HN: Mini-AGI – Dynamic continual learning model trained on 8GB VRAM",
-        "url": "https://github.com/volotat/mini-AGI/",
-        "source": "Hacker News AI",
-        "score": 266
+        "score": 339
       }
     ],
     "news": [
-      {
-        "title": "Major US outlets suspend shared Trump coverage in protest at media ban",
-        "url": "https://www.bbc.co.uk/news/articles/cje3rezd92y3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Lithuania ready to 'fight back' but has evacuation plans in face of Russia threats, PM tells BBC",
-        "url": "https://www.bbc.co.uk/news/articles/ck5yw8npxzrlo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
       {
         "title": "Sri Lanka court convicts 15 men over deadly Easter Sunday bombings",
         "url": "https://www.bbc.co.uk/news/articles/cqy7z275yx65o?at_medium=RSS&at_campaign=rss",
@@ -210,24 +194,39 @@
         "source": "BBC World"
       },
       {
-        "title": "Iran must stop arming Houthis in Yemen, G7 says ahead of UN General Assembly",
-        "url": "https://www.bbc.co.uk/news/articles/cwm2qpmepmlzo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Eleven injured in shooting outside Turkish school",
         "url": "https://www.bbc.co.uk/news/articles/c6y0z4gv0le4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Outrage in India over viral video of teen molested and her friend beaten",
-        "url": "https://www.bbc.co.uk/news/articles/cmz6z2vx65jeo?at_medium=RSS&at_campaign=rss",
+        "title": "Lindsay Clancy's lawyer asks judge to investigate juror and check his phone",
+        "url": "https://www.bbc.co.uk/news/articles/cm4gvyw80dp2o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Top South African policeman charged with sexual offences",
+        "url": "https://www.bbc.co.uk/news/articles/cwjdvgx77n0zo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Autopsy shows Hayden Panettiere died from a drug overdose",
+        "url": "https://www.bbc.co.uk/news/articles/crn45d8dd2wdo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Cyclist who dressed as man to avoid Taliban wins silver medal",
+        "url": "https://www.bbc.co.uk/sport/cycling/articles/c63eqyvdndwdo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " Noble Vanguard earphones review: The sonic equivalent of a sunburn ",
+        "title": " First impressions of the beastly new Bambu Lab R1 laser cutter ",
+        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/first-impressions-of-the-beastly-new-bambu-lab-r1-laser-cutter",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " These earphones are the  sonic equivalent of sunburn ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/noble-vanguard-earphones-review-the-sonic-equivalent-of-a-sunburn",
         "source": "Creative Bloq"
       },
@@ -254,11 +253,6 @@
       {
         "title": " I finally learned to enjoy 3D art with this workflow using 3DCoat, Quixel Mixer, Blender and Photoshop ",
         "url": "https://www.creativebloq.com/design/poster-design/i-finally-learned-to-enjoy-3d-art-with-this-workflow-using-3dcoat-quixel-mixer-blender-and-photoshop",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " One of Disney's biggest flops has been reimagined as a beautiful hand-drawn 2D animation, and some fans think it's a big improvement ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/one-of-disneys-biggest-flops-has-been-reimagined-as-a-beautiful-hand-drawn-2d-animation-and-some-fans-think-its-a-big-improvement",
         "source": "Creative Bloq"
       }
     ],
@@ -301,38 +295,38 @@
     ],
     "gaming": [
       {
-        "title": "Xbox Announces Halo Layoffs and More Changes in Big 'Reset'",
-        "url": "https://www.polygon.com/xbox-layoffs-halo-studios-ninja-theory/",
+        "title": "'Coyote vs. Acme' Officially Gets Streaming Release Date",
+        "url": "https://www.polygon.com/coyote-vs-acme-streaming-release-date/",
         "source": "Polygon"
       },
       {
-        "title": "Prime Video's Stargate Reboot Just Got an Exciting Update",
-        "url": "https://www.polygon.com/amazon-stargate-reboot-searching-for-writer/",
+        "title": "'Lost Temple Cat' quest walkthrough in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-lost-temple-cat-quest-walkthrough/",
         "source": "Polygon"
       },
       {
-        "title": "Explosive New Spider-Man Spinoff Will Bridge the Gap After Your Friendly Neighborhood Spider-Man's Finale",
-        "url": "https://www.polygon.com/your-friendly-neighborhood-spider-man-spin-off-comic/",
+        "title": "Steam Quietly Just Got 2026's Best Silksong Replacement",
+        "url": "https://www.polygon.com/well-dweller-steam-release/",
         "source": "Polygon"
       },
       {
-        "title": "2026's Best Gaming Soundtrack Is From a Steam Game That Isn't Even Out Yet",
-        "url": "https://www.polygon.com/mr-records-preview/",
+        "title": "Unplayable Kingdom Hearts Game Officially Getting an Unexpected Revival",
+        "url": "https://www.polygon.com/kingdom-hearts-union-x-dark-road-fan-port-disney-rpg/",
         "source": "Polygon"
       },
       {
-        "title": "Former Doom Developer Could Be in Trouble as Bethesda Goes After Doom Memecoin",
-        "url": "https://www.polygon.com/doom-memecoin-sandy-petersen-bethesda-legal-action/",
+        "title": "Where to find dates in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-where-to-find-dates-cai-farming/",
         "source": "Polygon"
       },
       {
-        "title": "Star Wars Boss Says Ahsoka Season 2 Will Be 'A Challenge' ",
-        "url": "https://www.polygon.com/star-wars-ahsoka-season-2-mortis-gods-dave-filoni/",
+        "title": "Rockstar Issues Major Update Before 'GTA 6' Release",
+        "url": "https://www.polygon.com/gta-6-release-new-mod-guidelines-pc-rdr2/",
         "source": "Polygon"
       },
       {
-        "title": " 5 Perfect 'Far Side' Comics from the 1980s That Prove Gary Larson is a Genius",
-        "url": "https://www.polygon.com/5-far-side-comics-genius-gary-larson/",
+        "title": "Arc Raiders Is Finally Getting More Endgame Content",
+        "url": "https://www.polygon.com/arc-raiders-interview-aleksander-grondal-endgame-content/",
         "source": "Polygon"
       }
     ],
