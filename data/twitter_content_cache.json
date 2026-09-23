@@ -1,191 +1,173 @@
 {
   "metadata": {
-    "last_updated": "2026-09-23T10:57:13.913294",
-    "total_items": 65
+    "last_updated": "2026-09-23T15:23:51.239041",
+    "total_items": 55
   },
   "content": {
     "tech": [
       {
+        "title": "Stripe's Knowledge AI Platform",
+        "url": "https://stripe.dev/blog/meet-stripes-knowledge-ai-platform",
+        "source": "Hacker News",
+        "score": 53
+      },
+      {
+        "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
+        "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+        "source": "Hacker News",
+        "score": 324
+      },
+      {
+        "title": "Strands Harness",
+        "url": "https://strandsagents.com/blog/introducing-strands-harness/",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
         "title": "Jev in 25 Lines of Python",
         "url": "https://www.nobodywho.ai/posts/jev-in-25-lines/",
         "source": "Hacker News",
-        "score": 193
+        "score": 439
+      },
+      {
+        "title": "Fixing the Portobello Police Station Clock",
+        "url": "https://pointinthecloud.com/2026-04-11-211700.html",
+        "source": "Hacker News",
+        "score": 5
+      },
+      {
+        "title": "Z80 REPL (2018)",
+        "url": "https://abagames.github.io/z80-repl/index.html",
+        "source": "Hacker News",
+        "score": 83
       },
       {
         "title": "GPT-6 Sol and Luna",
         "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
         "source": "Hacker News",
-        "score": 1557
+        "score": 1656
+      },
+      {
+        "title": "I don't want the details",
+        "url": "https://michaelheap.com/i-dont-want-the-details/",
+        "source": "Hacker News",
+        "score": 141
+      },
+      {
+        "title": "Jev in practice: typed decisions, scoped authority",
+        "url": "https://tenuo.ai/blog/jev-scoped-authority",
+        "source": "Hacker News",
+        "score": 20
       },
       {
         "title": "Claude Opus 5.5",
         "url": "https://www.anthropic.com/claude-opus-5-5",
         "source": "Hacker News",
-        "score": 1570
+        "score": 1673
       },
       {
-        "title": "Transit rewards",
-        "url": "https://waymo.com/blog/2026/09/transit-rewards/",
+        "title": "Tokens Too Cheap to Meter",
+        "url": "https://jyn.dev/tokens-too-cheap-to-meter/",
         "source": "Hacker News",
-        "score": 148
+        "score": 76
       },
       {
-        "title": "What Is an AI Software Factory? Lessons from 3 Client Deployments",
-        "url": "https://camplight.net/ai/ai-software-factory/",
+        "title": "Montreal adopts bylaw banning insults against police, municipal employees",
+        "url": "https://www.cbc.ca/news/canada/montreal/montreal-city-council-police-9.7352920",
         "source": "Hacker News",
-        "score": 6
+        "score": 40
       },
       {
-        "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
-        "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
+        "title": "QuestDB (YC S20) Is Hiring a Sales Engineer",
+        "url": "https://questdb.com/careers/pre-sales-engineer-north-america/",
         "source": "Hacker News",
-        "score": 667
+        "score": 1
       },
       {
-        "title": "Microsoft killed FoxPro in 2007. Anyway, here's FoxPro revived",
-        "url": "https://foxscript.org/",
+        "title": "Web-based IBM 1620 emulator and IPL-V from 1963",
+        "url": "https://github.com/pkimpel/retro-1620",
         "source": "Hacker News",
-        "score": 335
+        "score": 10
       },
       {
-        "title": "Data-only attacks are easier than you think (2024)",
-        "url": "https://www.usenix.org/publications/loginonline/data-only-attacks-are-easier-you-think",
+        "title": "Samsung accidentally freezes its smart fridges with a software update",
+        "url": "https://www.androidauthority.com/samsung-accidentally-freezes-its-smart-fridges-with-a-software-update-3714472/",
         "source": "Hacker News",
-        "score": 54
-      },
-      {
-        "title": "'We hacked the FBI:' Hackers say they have data on all FBI employees",
-        "url": "https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/",
-        "source": "Hacker News",
-        "score": 627
-      },
-      {
-        "title": "ReBarUEFI: Resizable BAR for almost any UEFI system",
-        "url": "https://github.com/xCuri0/ReBarUEFI",
-        "source": "Hacker News",
-        "score": 161
-      },
-      {
-        "title": "How did AMD Ryzen get 50% faster in two years?",
-        "url": "https://lemire.me/blog/2026/09/18/how-did-amd-ryzen-get-50-faster-in-two-years/",
-        "source": "Hacker News",
-        "score": 351
-      },
-      {
-        "title": "What California is learning from solar panels built over irrigation canals",
-        "url": "https://www.kqed.org/science/2002033/heres-what-california-is-learning-from-solar-panels-built-over-irrigation-canals",
-        "source": "Hacker News",
-        "score": 223
-      },
-      {
-        "title": "SAML: A fractal of bad design",
-        "url": "https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/",
-        "source": "Hacker News",
-        "score": 252
-      },
-      {
-        "title": "Show HN: Npunlock – Run custom C kernels for Intel NPUs",
-        "url": "https://github.com/hsfzxjy/npunlock",
-        "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "WordPress: Unauthenticated path traversal leading to conditional RCE",
-        "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp",
-        "source": "Hacker News",
-        "score": 195
+        "score": 146
       }
     ],
     "ai": [
       {
+        "title": "Stripe's Knowledge AI Platform",
+        "url": "https://stripe.dev/blog/meet-stripes-knowledge-ai-platform",
+        "source": "Hacker News AI",
+        "score": 53
+      },
+      {
+        "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
+        "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+        "source": "Hacker News AI",
+        "score": 324
+      },
+      {
         "title": "GPT-6 Sol and Luna",
         "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
         "source": "Hacker News AI",
-        "score": 1557
+        "score": 1656
+      },
+      {
+        "title": "I don't want the details",
+        "url": "https://michaelheap.com/i-dont-want-the-details/",
+        "source": "Hacker News AI",
+        "score": 141
       },
       {
         "title": "Claude Opus 5.5",
         "url": "https://www.anthropic.com/claude-opus-5-5",
         "source": "Hacker News AI",
-        "score": 1570
+        "score": 1673
       },
       {
-        "title": "What Is an AI Software Factory? Lessons from 3 Client Deployments",
-        "url": "https://camplight.net/ai/ai-software-factory/",
+        "title": "Montreal adopts bylaw banning insults against police, municipal employees",
+        "url": "https://www.cbc.ca/news/canada/montreal/montreal-city-council-police-9.7352920",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 40
       },
       {
         "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
         "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
         "source": "Hacker News AI",
-        "score": 667
+        "score": 705
       },
       {
         "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
         "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
         "source": "Hacker News AI",
-        "score": 293
+        "score": 318
       },
       {
         "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school",
         "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
         "source": "Hacker News AI",
-        "score": 673
+        "score": 787
+      },
+      {
+        "title": "Community condemn Bedminster AI mural as 'insult' to artists",
+        "url": "https://www.bbc.co.uk/news/articles/cmlyq09jp49eo",
+        "source": "Hacker News AI",
+        "score": 8
       },
       {
         "title": "How often do you think about the 1893 World's Fair?",
         "url": "https://www.thebirthofacapital.info/chicago-worlds-fair-tataria-ware-larsen/",
         "source": "Hacker News AI",
-        "score": 23
+        "score": 43
       },
       {
         "title": "OpenAI is well positioned to fast-follow Jev",
         "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
         "source": "Hacker News AI",
-        "score": 295
-      },
-      {
-        "title": "Delta: Highly available, strongly consistent storage using chain replication (2022)",
-        "url": "https://engineering.fb.com/2022/05/04/data-infrastructure/delta/",
-        "source": "Hacker News AI",
-        "score": 26
-      },
-      {
-        "title": "The (AI) Nature of the Firm",
-        "url": "https://camerongordon0.substack.com/p/the-ai-nature-of-the-firm",
-        "source": "Hacker News AI",
-        "score": 3
-      },
-      {
-        "title": "Show HN: Training a model to identify AI web content from structure alone",
-        "url": "https://arxiv.org/abs/2609.15369",
-        "source": "Hacker News AI",
-        "score": 60
-      },
-      {
-        "title": "Did OpenAI solve the wrong Navier-Stokes problem?",
-        "url": "https://www.scientificamerican.com/article/did-openai-solve-the-wrong-navier-stokes-problem/",
-        "source": "Hacker News AI",
-        "score": 108
-      },
-      {
-        "title": "Launch HN: Coverage Cat (YC S22) – Umbrella insurance via your personal agent",
-        "url": "https://www.coveragecat.com/",
-        "source": "Hacker News AI",
-        "score": 48
-      },
-      {
-        "title": "Netherlands bracing for potentially devastating US sanctions against the ICC",
-        "url": "https://apnews.com/article/icc-trump-sanctions-eu-israel-netherlands-2c1cc314732f920c2de59396d3b556f6",
-        "source": "Hacker News AI",
-        "score": 94
-      },
-      {
-        "title": "ShinyHunters claims FBI hack: 'This is NOT financially motivated'",
-        "url": "https://www.theregister.com/security/2026/09/22/shinyhunters-claims-fbi-hack-this-is-not-financially-motivated/5298385",
-        "source": "Hacker News AI",
-        "score": 9
+        "score": 305
       }
     ],
     "news": [
@@ -200,8 +182,18 @@
         "source": "BBC World"
       },
       {
-        "title": "Eleven killed in mass shooting at house in South Africa",
-        "url": "https://www.bbc.co.uk/news/articles/crgjqxzl097eo?at_medium=RSS&at_campaign=rss",
+        "title": "Ethiopia and Tigray accuse each of launching offensives, fuelling fears of new war",
+        "url": "https://www.bbc.co.uk/news/articles/cry8zwwq21pxo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Dramatic eviction of woman aged 87 highlights Spain's housing shortage",
+        "url": "https://www.bbc.co.uk/news/articles/c6vgy55lm8z1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Dolly Parton's manager accuses her nephew of 'threats and intimidation'",
+        "url": "https://www.bbc.co.uk/news/articles/c670lydl5wg5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -210,58 +202,12 @@
         "source": "BBC World"
       },
       {
-        "title": "US to build two military bases in Greenland under new deal with Denmark",
-        "url": "https://www.bbc.co.uk/news/articles/c9dr74g32g8go?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Hurricane Polo intensifies into rare category 5 storm off the coast of Mexico ",
-        "url": "https://www.bbc.co.uk/news/articles/ckddvlrlr5qeo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Playing loud music on the bus? That will cost you hundreds of dollars in Singapore",
-        "url": "https://www.bbc.co.uk/news/articles/c3kg80ve7x0no?at_medium=RSS&at_campaign=rss",
+        "title": "Eleven killed in mass shooting at house in South Africa",
+        "url": "https://www.bbc.co.uk/news/articles/crgjqxzl097eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " How Fusion Studio and expert compositing skills brought the striking animation Danse Macabre to life ",
-        "url": "https://www.creativebloq.com/3d/vfx-cgi/how-fusion-studio-and-expert-compositing-skills-brought-the-striking-animation-danse-macabre-to-life",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apple's perfect iPhone Duo TikToks nail foldable phone marketing ",
-        "url": "https://www.creativebloq.com/design/advertising/apples-perfect-iphone-duo-tiktoks-nail-foldable-phone-marketing",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " First McDonald's, now Disney is dejoying its store designs ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/first-mcdonalds-now-disney-is-dejoying-its-store-designs",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Chromebooks are not for serious creatives, are they? ",
-        "url": "https://www.creativebloq.com/tech/laptops/chromebooks-are-not-for-serious-creatives-are-they",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Coyote Vs Acme's $100m takings show fan campaigns CAN succeed ",
-        "url": "https://www.creativebloq.com/design/advertising/coyote-vs-acmes-usd100m-in-takings-show-that-fan-campaigns-can-succeed",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " First impressions of the beastly new Bambu Lab R1 laser cutter ",
-        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/first-impressions-of-the-beastly-new-bambu-lab-r1-laser-cutter",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These earphones are the  sonic equivalent of sunburn ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/noble-vanguard-earphones-review-the-sonic-equivalent-of-a-sunburn",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "This emerging treatment could help people avoid knee replacement surgery",
@@ -301,43 +247,48 @@
     ],
     "gaming": [
       {
-        "title": "Adidas' New Pokémon Drop Is Here — and Already Selling Out",
-        "url": "https://www.polygon.com/pokemon-adidas-collection-scalpers/",
+        "title": "A24's Wild Documentary You Can See Everything Gets First Bizarre Trailer",
+        "url": "https://www.polygon.com/you-can-see-everything-trailer-reactions-nathan-fielder/",
         "source": "Polygon"
       },
       {
-        "title": "Wardogs’ Honeymoon Period Is Officially Coming to an End",
-        "url": "https://www.polygon.com/wardogs-honeymoon-period-player-complaints/",
+        "title": "Pokémon Go 'Choose Your Path Twilight Trails' Timed Research bonuses and rewards",
+        "url": "https://www.polygon.com/pokemon-go-choose-your-path-twilight-tales-research-bonuses/",
         "source": "Polygon"
       },
       {
-        "title": "21 Years Ago, an Iconic Sci-Fi Series Delivered Its Most Mind-Blowing Cliffhanger",
-        "url": "https://www.polygon.com/battlestar-galactica-pegasus-episode-21-year-anniversary-review/",
+        "title": "Surprise New Conjuring Release Coming to Netflix Next Month",
+        "url": "https://www.polygon.com/conjuring-unspoken-netflix-horror-game-announced/",
         "source": "Polygon"
       },
       {
-        "title": "Avengers: Endgame Encore Leaks Reveal Massive Doomsday Plot Details",
-        "url": "https://www.polygon.com/avengers-endgame-encore-leaks-doomsday-spoilers/",
+        "title": "'Game Changer' Season 8 Episodes, Ranked From Worst to Best",
+        "url": "https://www.polygon.com/game-changer-season-8-best-episodes/",
         "source": "Polygon"
       },
       {
-        "title": "Fortnite Fans Only Have Limited Time to Play the Toy Story 5 Map and Get all the Collectibles",
-        "url": "https://www.polygon.com/fortnite-toy-story-creative-map-codes/",
+        "title": "Next Lord of the Rings Movie's First Set Photos Feature the Return of a Familiar Face",
+        "url": "https://www.polygon.com/lord-of-the-rings-lotr-hunt-for-gollum-first-set-photos-frodo-shire/",
         "source": "Polygon"
       },
       {
-        "title": "5 Perfect 'Peanuts' Comics From 1950s That Prove Charles Schulz Is a Genius",
-        "url": "https://www.polygon.com/5-perfect-peanuts-comics-charles-schulz-genius/",
+        "title": "The Upcoming Godzilla Film Officially Marks a Huge Series First",
+        "url": "https://www.polygon.com/godzilla-minus-zero-r-rating-series-first/",
         "source": "Polygon"
       },
       {
-        "title": "32 Years Ago, a Crucial 'X-Files' Episode Introduced the Show’s Best Monster Ever",
-        "url": "https://www.polygon.com/x-files-the-host-flukeman-best-monter-of-the-week/",
+        "title": "Spider-Man: The Animated Series’ Decades-Old Cliffhanger to Be Officially Resolved in Surprise Sequel",
+        "url": "https://www.polygon.com/spider-man-94-animated-series-cliffhanger-sequel-comic/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "Developers want more efficient software. Here’s what over 1000 GitHub users told us they need.",
+        "url": "https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "Should you read the code, is RAG dead, and did Skills kill MCP?",
         "url": "https://github.blog/ai-and-ml/should-you-read-the-code-is-rag-dead-and-did-skills-kill-mcp/",
@@ -366,11 +317,6 @@
       {
         "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
         "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "GitHub Copilot app for Beginners: Run several agents at once",
-        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-run-several-agents-at-once/",
         "source": "GitHub Blog"
       }
     ]
