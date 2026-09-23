@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-23T00:05:03.687977",
-    "total_items": 62
+    "last_updated": "2026-09-23T05:34:45.659585",
+    "total_items": 63
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "GPT-6 Sol and Luna",
         "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
         "source": "Hacker News",
-        "score": 1085
+        "score": 1369
       },
       {
         "title": "Claude Opus 5.5",
         "url": "https://www.anthropic.com/claude-opus-5-5",
         "source": "Hacker News",
-        "score": 1120
+        "score": 1381
       },
       {
-        "title": "'We hacked the FBI:' Hackers say they have data on all FBI employees",
-        "url": "https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/",
+        "title": "Transit rewards (Waymo pays you to take the train)",
+        "url": "https://waymo.com/blog/2026/09/transit-rewards/",
         "source": "Hacker News",
-        "score": 327
+        "score": 68
+      },
+      {
+        "title": "Data-only attacks are easier than you think (2024)",
+        "url": "https://www.usenix.org/publications/loginonline/data-only-attacks-are-easier-you-think",
+        "source": "Hacker News",
+        "score": 16
       },
       {
         "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
         "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
         "source": "Hacker News",
-        "score": 539
+        "score": 612
+      },
+      {
+        "title": "'We hacked the FBI:' Hackers say they have data on all FBI employees",
+        "url": "https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/",
+        "source": "Hacker News",
+        "score": 514
       },
       {
         "title": "Microsoft killed FoxPro in 2007. Anyway, here's FoxPro revived",
         "url": "https://foxscript.org/",
         "source": "Hacker News",
-        "score": 134
+        "score": 250
       },
       {
         "title": "ReBarUEFI: Resizable BAR for almost any UEFI system",
         "url": "https://github.com/xCuri0/ReBarUEFI",
         "source": "Hacker News",
-        "score": 37
+        "score": 109
+      },
+      {
+        "title": "What California is learning from solar panels built over irrigation canals",
+        "url": "https://www.kqed.org/science/2002033/heres-what-california-is-learning-from-solar-panels-built-over-irrigation-canals",
+        "source": "Hacker News",
+        "score": 170
+      },
+      {
+        "title": "No Easy Fix for Bogus Respondents in Online Opt-In Polls",
+        "url": "https://www.pewresearch.org/methods/2026/08/27/no-easy-fix-for-bogus-respondents-in-online-opt-in-polls/",
+        "source": "Hacker News",
+        "score": 12
       },
       {
         "title": "SAML: A fractal of bad design",
         "url": "https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/",
         "source": "Hacker News",
-        "score": 130
-      },
-      {
-        "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
-        "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
-        "source": "Hacker News",
-        "score": 220
-      },
-      {
-        "title": "Unreal Agent",
-        "url": "https://unreallabs.ai/blog/unreal-agent/",
-        "source": "Hacker News",
-        "score": 115
-      },
-      {
-        "title": "WordPress: Unauthenticated path traversal leading to conditional RCE",
-        "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp",
-        "source": "Hacker News",
-        "score": 147
-      },
-      {
-        "title": "Native apps written in TypeScript and CSS",
-        "url": "https://github.com/geastack/examples",
-        "source": "Hacker News",
-        "score": 70
+        "score": 201
       },
       {
         "title": "How did AMD Ryzen get 50% faster in two years?",
         "url": "https://lemire.me/blog/2026/09/18/how-did-amd-ryzen-get-50-faster-in-two-years/",
         "source": "Hacker News",
-        "score": 183
+        "score": 269
       },
       {
-        "title": "The current balance of power in open models",
-        "url": "https://www.interconnects.ai/p/the-current-balance-of-power-in-open",
+        "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
+        "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
         "source": "Hacker News",
-        "score": 19
+        "score": 265
       },
       {
-        "title": "MUNI Heritage Weekend in San Francisco",
-        "url": "https://daniel.lawrence.lu/blog/2026-09-20-muni-heritage-weekend/",
+        "title": "WordPress: Unauthenticated path traversal leading to conditional RCE",
+        "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp",
         "source": "Hacker News",
-        "score": 149
+        "score": 171
       },
       {
-        "title": "Show HN: JevBench, a reproducible benchmark for typed decision models",
-        "url": "https://benchmarkheaven.com/jev-models",
+        "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school",
+        "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
         "source": "Hacker News",
-        "score": 54
+        "score": 536
       }
     ],
     "ai": [
@@ -101,78 +101,84 @@
         "title": "GPT-6 Sol and Luna",
         "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
         "source": "Hacker News AI",
-        "score": 1087
+        "score": 1369
       },
       {
         "title": "Claude Opus 5.5",
         "url": "https://www.anthropic.com/claude-opus-5-5",
         "source": "Hacker News AI",
-        "score": 1121
+        "score": 1381
+      },
+      {
+        "title": "Transit rewards (Waymo pays you to take the train)",
+        "url": "https://waymo.com/blog/2026/09/transit-rewards/",
+        "source": "Hacker News AI",
+        "score": 68
       },
       {
         "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
         "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
         "source": "Hacker News AI",
-        "score": 539
+        "score": 612
       },
       {
         "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
         "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
         "source": "Hacker News AI",
-        "score": 220
-      },
-      {
-        "title": "OpenAI is well positioned to fast-follow Jev",
-        "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
-        "source": "Hacker News AI",
-        "score": 250
-      },
-      {
-        "title": "Show HN: Training a model to identify AI web content from structure alone",
-        "url": "https://arxiv.org/abs/2609.15369",
-        "source": "Hacker News AI",
-        "score": 37
-      },
-      {
-        "title": "Launch HN: Coverage Cat (YC S22) – Umbrella insurance via your personal agent",
-        "url": "https://www.coveragecat.com/",
-        "source": "Hacker News AI",
-        "score": 41
+        "score": 265
       },
       {
         "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school",
         "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
         "source": "Hacker News AI",
-        "score": 351
+        "score": 536
+      },
+      {
+        "title": "OpenAI is well positioned to fast-follow Jev",
+        "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
+        "source": "Hacker News AI",
+        "score": 277
+      },
+      {
+        "title": "Delta: Highly available, strongly consistent storage using chain replication (2022)",
+        "url": "https://engineering.fb.com/2022/05/04/data-infrastructure/delta/",
+        "source": "Hacker News AI",
+        "score": 12
+      },
+      {
+        "title": "Show HN: Training a model to identify AI web content from structure alone",
+        "url": "https://arxiv.org/abs/2609.15369",
+        "source": "Hacker News AI",
+        "score": 51
+      },
+      {
+        "title": "Launch HN: Coverage Cat (YC S22) – Umbrella insurance via your personal agent",
+        "url": "https://www.coveragecat.com/",
+        "source": "Hacker News AI",
+        "score": 45
       },
       {
         "title": "Did OpenAI solve the wrong Navier-Stokes problem?",
         "url": "https://www.scientificamerican.com/article/did-openai-solve-the-wrong-navier-stokes-problem/",
         "source": "Hacker News AI",
-        "score": 91
+        "score": 102
       },
       {
         "title": "Solitaire Alone Together",
         "url": "https://solitairealonetogether.com/",
         "source": "Hacker News AI",
-        "score": 129
+        "score": 136
       },
       {
-        "title": "Show HN: AI·rete·RAG – a Rete rule engine decides, RAG explains why",
-        "url": "https://ai-rete-rag.com/",
+        "title": "Anthropic classifiers prohibit kernel development",
+        "url": "https://twitter.com/TheAhmadOsman/status/2102535871727857915/photo/1",
         "source": "Hacker News AI",
-        "score": 34
-      },
-      {
-        "title": "GPT-6 Sol (Max) Intelligence, Performance and Price Analysis",
-        "url": "https://artificialanalysis.ai/models/gpt-6-sol",
-        "source": "Hacker News AI",
-        "score": 10
+        "score": 9
       }
     ],
     "news": [
       {
-        "title": "Trump threatens to 'annihilate' Iran in UN speech as officials meet on sidelines",
+        "title": "Trump threatens to 'annihilate' Iran in UN speech as officials from both countries meet on sidelines",
         "url": "https://www.bbc.co.uk/news/articles/c52e0ywl9pr7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -209,6 +215,11 @@
     ],
     "art": [
       {
+        "title": " Coyote Vs Acme's $100m takings show fan campaigns CAN succeed ",
+        "url": "https://www.creativebloq.com/design/advertising/coyote-vs-acmes-usd100m-in-takings-show-that-fan-campaigns-can-succeed",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " First impressions of the beastly new Bambu Lab R1 laser cutter ",
         "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/first-impressions-of-the-beastly-new-bambu-lab-r1-laser-cutter",
         "source": "Creative Bloq"
@@ -237,11 +248,6 @@
         "title": " This weird Walmart banana hack could save you $20 on Nintendo Switch games like Fire Emblem: Fortune’s Weave, apparently ",
         "url": "https://www.creativebloq.com/entertainment/gaming/the-weird-walmart-banana-hack-could-save-you-usd20-off-nintendo-switch-games-apparently",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " I finally learned to enjoy 3D art with this workflow using 3DCoat, Quixel Mixer, Blender and Photoshop ",
-        "url": "https://www.creativebloq.com/design/poster-design/i-finally-learned-to-enjoy-3d-art-with-this-workflow-using-3dcoat-quixel-mixer-blender-and-photoshop",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
@@ -256,8 +262,18 @@
         "source": "Science Daily"
       },
       {
+        "title": "One of America’s largest reservoirs just hit a record low",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260922005701.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "The end of humanity? What would happen if the Yellowstone supervolcano erupted now",
         "url": "https://www.sciencedaily.com/releases/2026/09/260922005655.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "The LHC just ruled out another hiding place for quantum black holes",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260922005649.htm",
         "source": "Science Daily"
       },
       {
@@ -269,19 +285,14 @@
         "title": "MIT’s tiny flying robot gets 450% faster with AI",
         "url": "https://www.sciencedaily.com/releases/2026/09/260921081114.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "This new concrete is stronger and pulls CO2 from the air",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260921081105.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A strange circle on satellite maps turned out to be a 390-million-year-old impact crater",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260921081101.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "32 Years Ago, a Crucial 'X-Files' Episode Introduced the Show’s Best Monster Ever",
+        "url": "https://www.polygon.com/x-files-the-host-flukeman-best-monter-of-the-week/",
+        "source": "Polygon"
+      },
       {
         "title": "Fire Emblem: Fortune’s Weave Is the Cure For a Terrible RPG Habit",
         "url": "https://www.polygon.com/fire-emblem-fortunes-weave-recruit-everyone/",
@@ -310,11 +321,6 @@
       {
         "title": "How to make gold in Fire Emblem Fortune's Weave",
         "url": "https://www.polygon.com/fire-emblem-fortunes-weave-how-to-make-gold-money/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Pokémon' Leak Teases A Totally New Frontier For The Series",
-        "url": "https://www.polygon.com/pokemon-winds-waves-leak-what-is-project-seed-mmo-evolution/",
         "source": "Polygon"
       }
     ],
