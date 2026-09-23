@@ -1,189 +1,207 @@
 {
   "metadata": {
-    "last_updated": "2026-09-23T15:23:51.239041",
-    "total_items": 55
+    "last_updated": "2026-09-23T19:30:54.190417",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
-        "title": "Stripe's Knowledge AI Platform",
-        "url": "https://stripe.dev/blog/meet-stripes-knowledge-ai-platform",
+        "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+        "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
         "source": "Hacker News",
-        "score": 53
-      },
-      {
-        "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
-        "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
-        "source": "Hacker News",
-        "score": 324
-      },
-      {
-        "title": "Strands Harness",
-        "url": "https://strandsagents.com/blog/introducing-strands-harness/",
-        "source": "Hacker News",
-        "score": 9
-      },
-      {
-        "title": "Jev in 25 Lines of Python",
-        "url": "https://www.nobodywho.ai/posts/jev-in-25-lines/",
-        "source": "Hacker News",
-        "score": 439
+        "score": 119
       },
       {
         "title": "Fixing the Portobello Police Station Clock",
         "url": "https://pointinthecloud.com/2026-04-11-211700.html",
         "source": "Hacker News",
-        "score": 5
+        "score": 281
+      },
+      {
+        "title": "A brief history of Windows scroll bar shortcuts",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20260922-00/?p=112719/",
+        "source": "Hacker News",
+        "score": 33
+      },
+      {
+        "title": "Italian parliament votes for return to nuclear energy",
+        "url": "https://apnews.com/article/italy-nuclear-chernobyl-4891b6b7c7791ae84db6b0bf0f7cf567",
+        "source": "Hacker News",
+        "score": 236
+      },
+      {
+        "title": "Cloud Agents Are Inevitable AI Prisons",
+        "url": "https://normanponte.io/19df691f",
+        "source": "Hacker News",
+        "score": 12
+      },
+      {
+        "title": "Gemini 3.8 text-to-speech",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
+        "source": "Hacker News",
+        "score": 166
+      },
+      {
+        "title": "Radicle: Disclosure of Vulnerability in the Network Protocol",
+        "url": "https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol",
+        "source": "Hacker News",
+        "score": 71
+      },
+      {
+        "title": "Jev in 25 Lines of Python",
+        "url": "https://www.nobodywho.ai/posts/jev-in-25-lines/",
+        "source": "Hacker News",
+        "score": 549
+      },
+      {
+        "title": "GPT-6 Sol and Luna",
+        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source": "Hacker News",
+        "score": 1702
+      },
+      {
+        "title": "Claude Opus 5.5",
+        "url": "https://www.anthropic.com/claude-opus-5-5",
+        "source": "Hacker News",
+        "score": 1742
+      },
+      {
+        "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
+        "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+        "source": "Hacker News",
+        "score": 401
+      },
+      {
+        "title": "UK military jamming other nations' satellites to defend itself, BBC told",
+        "url": "https://www.bbc.com/news/articles/c32l8y8kygdvo",
+        "source": "Hacker News",
+        "score": 61
       },
       {
         "title": "Z80 REPL (2018)",
         "url": "https://abagames.github.io/z80-repl/index.html",
         "source": "Hacker News",
-        "score": 83
+        "score": 121
       },
       {
-        "title": "GPT-6 Sol and Luna",
-        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "title": "28% of job postings on company career sites have been open over 90 days",
+        "url": "https://unlisted.careers/ghost-jobs/report/2026-09",
         "source": "Hacker News",
-        "score": 1656
+        "score": 133
       },
       {
         "title": "I don't want the details",
         "url": "https://michaelheap.com/i-dont-want-the-details/",
         "source": "Hacker News",
-        "score": 141
-      },
-      {
-        "title": "Jev in practice: typed decisions, scoped authority",
-        "url": "https://tenuo.ai/blog/jev-scoped-authority",
-        "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "Claude Opus 5.5",
-        "url": "https://www.anthropic.com/claude-opus-5-5",
-        "source": "Hacker News",
-        "score": 1673
-      },
-      {
-        "title": "Tokens Too Cheap to Meter",
-        "url": "https://jyn.dev/tokens-too-cheap-to-meter/",
-        "source": "Hacker News",
-        "score": 76
-      },
-      {
-        "title": "Montreal adopts bylaw banning insults against police, municipal employees",
-        "url": "https://www.cbc.ca/news/canada/montreal/montreal-city-council-police-9.7352920",
-        "source": "Hacker News",
-        "score": 40
-      },
-      {
-        "title": "QuestDB (YC S20) Is Hiring a Sales Engineer",
-        "url": "https://questdb.com/careers/pre-sales-engineer-north-america/",
-        "source": "Hacker News",
-        "score": 1
-      },
-      {
-        "title": "Web-based IBM 1620 emulator and IPL-V from 1963",
-        "url": "https://github.com/pkimpel/retro-1620",
-        "source": "Hacker News",
-        "score": 10
-      },
-      {
-        "title": "Samsung accidentally freezes its smart fridges with a software update",
-        "url": "https://www.androidauthority.com/samsung-accidentally-freezes-its-smart-fridges-with-a-software-update-3714472/",
-        "source": "Hacker News",
-        "score": 146
+        "score": 263
       }
     ],
     "ai": [
       {
-        "title": "Stripe's Knowledge AI Platform",
-        "url": "https://stripe.dev/blog/meet-stripes-knowledge-ai-platform",
+        "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+        "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
         "source": "Hacker News AI",
-        "score": 53
+        "score": 119
+      },
+      {
+        "title": "Cloud Agents Are Inevitable AI Prisons",
+        "url": "https://normanponte.io/19df691f",
+        "source": "Hacker News AI",
+        "score": 12
+      },
+      {
+        "title": "Gemini 3.8 text-to-speech",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
+        "source": "Hacker News AI",
+        "score": 166
+      },
+      {
+        "title": "GPT-6 Sol and Luna",
+        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source": "Hacker News AI",
+        "score": 1702
+      },
+      {
+        "title": "Claude Opus 5.5",
+        "url": "https://www.anthropic.com/claude-opus-5-5",
+        "source": "Hacker News AI",
+        "score": 1742
       },
       {
         "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
         "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
         "source": "Hacker News AI",
-        "score": 324
-      },
-      {
-        "title": "GPT-6 Sol and Luna",
-        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
-        "source": "Hacker News AI",
-        "score": 1656
+        "score": 401
       },
       {
         "title": "I don't want the details",
         "url": "https://michaelheap.com/i-dont-want-the-details/",
         "source": "Hacker News AI",
-        "score": 141
+        "score": 263
       },
       {
-        "title": "Claude Opus 5.5",
-        "url": "https://www.anthropic.com/claude-opus-5-5",
+        "title": "Stripe's Knowledge AI Platform",
+        "url": "https://stripe.dev/blog/meet-stripes-knowledge-ai-platform",
         "source": "Hacker News AI",
-        "score": 1673
-      },
-      {
-        "title": "Montreal adopts bylaw banning insults against police, municipal employees",
-        "url": "https://www.cbc.ca/news/canada/montreal/montreal-city-council-police-9.7352920",
-        "source": "Hacker News AI",
-        "score": 40
+        "score": 136
       },
       {
         "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
         "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
         "source": "Hacker News AI",
-        "score": 705
+        "score": 715
       },
       {
-        "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
-        "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
+        "title": "GPT-6 Astra has gained the ability to drive a car",
+        "url": "https://drivingbench.com/",
         "source": "Hacker News AI",
-        "score": 318
+        "score": 223
       },
       {
         "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school",
         "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
         "source": "Hacker News AI",
-        "score": 787
+        "score": 865
       },
       {
-        "title": "Community condemn Bedminster AI mural as 'insult' to artists",
-        "url": "https://www.bbc.co.uk/news/articles/cmlyq09jp49eo",
+        "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
+        "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 326
       },
       {
         "title": "How often do you think about the 1893 World's Fair?",
         "url": "https://www.thebirthofacapital.info/chicago-worlds-fair-tataria-ware-larsen/",
         "source": "Hacker News AI",
-        "score": 43
+        "score": 48
+      },
+      {
+        "title": "LensVLM: Compressing long context as images, expanding only relevant pages",
+        "url": "https://huggingface.co/apple/LensVLM-9B",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "OpenAI is well positioned to fast-follow Jev",
         "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
         "source": "Hacker News AI",
-        "score": 305
+        "score": 310
       }
     ],
     "news": [
       {
-        "title": "US and Iran hold first talks since June after Trump's 'annihilation' threat",
-        "url": "https://www.bbc.co.uk/news/articles/ck62m1631d7po?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Reports of violence against women in Gaza surge, UN agency finds",
-        "url": "https://www.bbc.co.uk/news/articles/c94gm7dp40y0o?at_medium=RSS&at_campaign=rss",
+        "title": "Iran's president tells Trump it will never 'bend the knee'",
+        "url": "https://www.bbc.co.uk/news/articles/cqvgyjy23ggjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Ethiopia and Tigray accuse each of launching offensives, fuelling fears of new war",
         "url": "https://www.bbc.co.uk/news/articles/cry8zwwq21pxo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "White House rolling out red carpet for historic Xi Jinping visit",
+        "url": "https://www.bbc.co.uk/news/articles/c6n9w410v3vzo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -197,17 +215,53 @@
         "source": "BBC World"
       },
       {
-        "title": "Trump administration accuses banned media outlets of 'falsehoods' ahead of court hearing",
-        "url": "https://www.bbc.co.uk/news/articles/c6790yrgzq25o?at_medium=RSS&at_campaign=rss",
+        "title": "Harvey Weinstein sentenced to 15 years in prison for sexual assault",
+        "url": "https://www.bbc.co.uk/news/articles/cm98626n260yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Eleven killed in mass shooting at house in South Africa",
-        "url": "https://www.bbc.co.uk/news/articles/crgjqxzl097eo?at_medium=RSS&at_campaign=rss",
+        "title": "Poland accuses Russian military helicopter of violating its airspace",
+        "url": "https://www.bbc.co.uk/news/articles/c699d2dn9z0mo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " How to make wooden pumpkins using the Bambu Lab R1 laser ",
+        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/how-to-make-wooden-pumpkins-using-the-bambu-lab-r1-laser",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Amazon's October Prime Day day deals have started! These are the best offers for creatives ",
+        "url": "https://www.creativebloq.com/tech/amazons-october-prime-day-day-deals-have-started-these-are-the-best-offers-for-creatives",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This basic office chair has just raised the standard ",
+        "url": "https://www.creativebloq.com/tech/chairs-desks/this-basic-office-chair-has-just-raised-the-standard",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Improve your mood with the best monitor light bars ",
+        "url": "https://www.creativebloq.com/tech/accessories/improve-your-mood-with-the-best-monitor-light-bars",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " New Taylor Swift Patient 0 cover accused of Photoshop mishap ",
+        "url": "https://www.creativebloq.com/entertainment/new-taylor-swift-patient-0-cover-accused-of-photoshop-mishap",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Brand Impact Award Winners 2026 have been revealed! ",
+        "url": "https://www.creativebloq.com/design/branding/the-brand-impact-award-winners-2026-have-been-revealed",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How Fusion Studio and expert compositing skills brought the striking animation Danse Macabre to life ",
+        "url": "https://www.creativebloq.com/3d/vfx-cgi/how-fusion-studio-and-expert-compositing-skills-brought-the-striking-animation-danse-macabre-to-life",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "This emerging treatment could help people avoid knee replacement surgery",
@@ -247,43 +301,48 @@
     ],
     "gaming": [
       {
-        "title": "A24's Wild Documentary You Can See Everything Gets First Bizarre Trailer",
-        "url": "https://www.polygon.com/you-can-see-everything-trailer-reactions-nathan-fielder/",
+        "title": "Leaked Xbox Memo Reveals Obsidian’s Fate Under Bethesda",
+        "url": "https://www.polygon.com/bethesda-obsidian-studio-reorganization-xbox-layoffs/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon Go 'Choose Your Path Twilight Trails' Timed Research bonuses and rewards",
-        "url": "https://www.polygon.com/pokemon-go-choose-your-path-twilight-tales-research-bonuses/",
+        "title": "Discord's Controversial Age Verification Policy Starts Today",
+        "url": "https://www.polygon.com/discord-controversial-age-verification-starting/",
         "source": "Polygon"
       },
       {
-        "title": "Surprise New Conjuring Release Coming to Netflix Next Month",
-        "url": "https://www.polygon.com/conjuring-unspoken-netflix-horror-game-announced/",
+        "title": "Where to find pepper leaves in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-pepper-leaves-location-where-to-find/",
         "source": "Polygon"
       },
       {
-        "title": "'Game Changer' Season 8 Episodes, Ranked From Worst to Best",
-        "url": "https://www.polygon.com/game-changer-season-8-best-episodes/",
+        "title": "Arc Raiders’ Cheating Epidemic Is Being Dealt With 'Quietly and Continuously'",
+        "url": "https://www.polygon.com/arc-raiders-cheating-epidemic-interview/",
         "source": "Polygon"
       },
       {
-        "title": "Next Lord of the Rings Movie's First Set Photos Feature the Return of a Familiar Face",
-        "url": "https://www.polygon.com/lord-of-the-rings-lotr-hunt-for-gollum-first-set-photos-frodo-shire/",
+        "title": "Acclaimed Pokémon Artist Responds To Heartbreaking TCG Pack Opening",
+        "url": "https://www.polygon.com/pokemon-avery-the-poke-kid-jirachi-30th-tcg-akira-egawa-beard-dad/",
         "source": "Polygon"
       },
       {
-        "title": "The Upcoming Godzilla Film Officially Marks a Huge Series First",
-        "url": "https://www.polygon.com/godzilla-minus-zero-r-rating-series-first/",
+        "title": "Fire Emblem: Fortune’s Weave Basically Has the Same Plot As Twisted Metal",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-twisted-metal/",
         "source": "Polygon"
       },
       {
-        "title": "Spider-Man: The Animated Series’ Decades-Old Cliffhanger to Be Officially Resolved in Surprise Sequel",
-        "url": "https://www.polygon.com/spider-man-94-animated-series-cliffhanger-sequel-comic/",
+        "title": "Some Witcher 3 Fans Aren’t Too Happy With New Remastered Footage",
+        "url": "https://www.polygon.com/witcher-3-remastered-comparison-footage-fan-backlash/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "Rendering huge pull requests in the GitHub Copilot app",
+        "url": "https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "Developers want more efficient software. Here’s what over 1000 GitHub users told us they need.",
         "url": "https://github.blog/news-insights/research/developers-want-more-efficient-software-heres-what-over-1000-github-users-told-us-they-need/",
@@ -312,11 +371,6 @@
       {
         "title": "GitHub availability report: August 2026",
         "url": "https://github.blog/news-insights/company-news/github-availability-report-august-2026/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Project HydraFusion: Frontier quality via multi-model orchestration",
-        "url": "https://github.blog/ai-and-ml/github-copilot/project-hydrafusion-frontier-quality-via-multi-model-orchestration/",
         "source": "GitHub Blog"
       }
     ]
