@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-23T05:34:45.659585",
-    "total_items": 63
+    "last_updated": "2026-09-23T10:57:13.913294",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Jev in 25 Lines of Python",
+        "url": "https://www.nobodywho.ai/posts/jev-in-25-lines/",
+        "source": "Hacker News",
+        "score": 193
+      },
+      {
         "title": "GPT-6 Sol and Luna",
         "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
         "source": "Hacker News",
-        "score": 1369
+        "score": 1557
       },
       {
         "title": "Claude Opus 5.5",
         "url": "https://www.anthropic.com/claude-opus-5-5",
         "source": "Hacker News",
-        "score": 1381
+        "score": 1570
       },
       {
-        "title": "Transit rewards (Waymo pays you to take the train)",
+        "title": "Transit rewards",
         "url": "https://waymo.com/blog/2026/09/transit-rewards/",
         "source": "Hacker News",
-        "score": 68
+        "score": 148
       },
       {
-        "title": "Data-only attacks are easier than you think (2024)",
-        "url": "https://www.usenix.org/publications/loginonline/data-only-attacks-are-easier-you-think",
+        "title": "What Is an AI Software Factory? Lessons from 3 Client Deployments",
+        "url": "https://camplight.net/ai/ai-software-factory/",
         "source": "Hacker News",
-        "score": 16
+        "score": 6
       },
       {
         "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
         "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
         "source": "Hacker News",
-        "score": 612
-      },
-      {
-        "title": "'We hacked the FBI:' Hackers say they have data on all FBI employees",
-        "url": "https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/",
-        "source": "Hacker News",
-        "score": 514
+        "score": 667
       },
       {
         "title": "Microsoft killed FoxPro in 2007. Anyway, here's FoxPro revived",
         "url": "https://foxscript.org/",
         "source": "Hacker News",
-        "score": 250
+        "score": 335
+      },
+      {
+        "title": "Data-only attacks are easier than you think (2024)",
+        "url": "https://www.usenix.org/publications/loginonline/data-only-attacks-are-easier-you-think",
+        "source": "Hacker News",
+        "score": 54
+      },
+      {
+        "title": "'We hacked the FBI:' Hackers say they have data on all FBI employees",
+        "url": "https://www.404media.co/we-hacked-the-fbi-hackers-say-they-have-data-on-all-fbi-employees/",
+        "source": "Hacker News",
+        "score": 627
       },
       {
         "title": "ReBarUEFI: Resizable BAR for almost any UEFI system",
         "url": "https://github.com/xCuri0/ReBarUEFI",
         "source": "Hacker News",
-        "score": 109
-      },
-      {
-        "title": "What California is learning from solar panels built over irrigation canals",
-        "url": "https://www.kqed.org/science/2002033/heres-what-california-is-learning-from-solar-panels-built-over-irrigation-canals",
-        "source": "Hacker News",
-        "score": 170
-      },
-      {
-        "title": "No Easy Fix for Bogus Respondents in Online Opt-In Polls",
-        "url": "https://www.pewresearch.org/methods/2026/08/27/no-easy-fix-for-bogus-respondents-in-online-opt-in-polls/",
-        "source": "Hacker News",
-        "score": 12
-      },
-      {
-        "title": "SAML: A fractal of bad design",
-        "url": "https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/",
-        "source": "Hacker News",
-        "score": 201
+        "score": 161
       },
       {
         "title": "How did AMD Ryzen get 50% faster in two years?",
         "url": "https://lemire.me/blog/2026/09/18/how-did-amd-ryzen-get-50-faster-in-two-years/",
         "source": "Hacker News",
-        "score": 269
+        "score": 351
       },
       {
-        "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
-        "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
+        "title": "What California is learning from solar panels built over irrigation canals",
+        "url": "https://www.kqed.org/science/2002033/heres-what-california-is-learning-from-solar-panels-built-over-irrigation-canals",
         "source": "Hacker News",
-        "score": 265
+        "score": 223
+      },
+      {
+        "title": "SAML: A fractal of bad design",
+        "url": "https://blog.trailofbits.com/2026/09/21/saml-a-fractal-of-bad-design/",
+        "source": "Hacker News",
+        "score": 252
+      },
+      {
+        "title": "Show HN: Npunlock – Run custom C kernels for Intel NPUs",
+        "url": "https://github.com/hsfzxjy/npunlock",
+        "source": "Hacker News",
+        "score": 29
       },
       {
         "title": "WordPress: Unauthenticated path traversal leading to conditional RCE",
         "url": "https://github.com/WordPress/wordpress-develop/security/advisories/GHSA-7hp8-65ch-5whp",
         "source": "Hacker News",
-        "score": 171
-      },
-      {
-        "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school",
-        "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
-        "source": "Hacker News",
-        "score": 536
+        "score": 195
       }
     ],
     "ai": [
@@ -101,90 +101,112 @@
         "title": "GPT-6 Sol and Luna",
         "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
         "source": "Hacker News AI",
-        "score": 1369
+        "score": 1557
       },
       {
         "title": "Claude Opus 5.5",
         "url": "https://www.anthropic.com/claude-opus-5-5",
         "source": "Hacker News AI",
-        "score": 1381
+        "score": 1570
       },
       {
-        "title": "Transit rewards (Waymo pays you to take the train)",
-        "url": "https://waymo.com/blog/2026/09/transit-rewards/",
+        "title": "What Is an AI Software Factory? Lessons from 3 Client Deployments",
+        "url": "https://camplight.net/ai/ai-software-factory/",
         "source": "Hacker News AI",
-        "score": 68
+        "score": 6
       },
       {
         "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
         "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
         "source": "Hacker News AI",
-        "score": 612
+        "score": 667
       },
       {
         "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
         "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
         "source": "Hacker News AI",
-        "score": 265
+        "score": 293
       },
       {
         "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school",
         "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
         "source": "Hacker News AI",
-        "score": 536
+        "score": 673
+      },
+      {
+        "title": "How often do you think about the 1893 World's Fair?",
+        "url": "https://www.thebirthofacapital.info/chicago-worlds-fair-tataria-ware-larsen/",
+        "source": "Hacker News AI",
+        "score": 23
       },
       {
         "title": "OpenAI is well positioned to fast-follow Jev",
         "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
         "source": "Hacker News AI",
-        "score": 277
+        "score": 295
       },
       {
         "title": "Delta: Highly available, strongly consistent storage using chain replication (2022)",
         "url": "https://engineering.fb.com/2022/05/04/data-infrastructure/delta/",
         "source": "Hacker News AI",
-        "score": 12
+        "score": 26
+      },
+      {
+        "title": "The (AI) Nature of the Firm",
+        "url": "https://camerongordon0.substack.com/p/the-ai-nature-of-the-firm",
+        "source": "Hacker News AI",
+        "score": 3
       },
       {
         "title": "Show HN: Training a model to identify AI web content from structure alone",
         "url": "https://arxiv.org/abs/2609.15369",
         "source": "Hacker News AI",
-        "score": 51
-      },
-      {
-        "title": "Launch HN: Coverage Cat (YC S22) – Umbrella insurance via your personal agent",
-        "url": "https://www.coveragecat.com/",
-        "source": "Hacker News AI",
-        "score": 45
+        "score": 60
       },
       {
         "title": "Did OpenAI solve the wrong Navier-Stokes problem?",
         "url": "https://www.scientificamerican.com/article/did-openai-solve-the-wrong-navier-stokes-problem/",
         "source": "Hacker News AI",
-        "score": 102
+        "score": 108
       },
       {
-        "title": "Solitaire Alone Together",
-        "url": "https://solitairealonetogether.com/",
+        "title": "Launch HN: Coverage Cat (YC S22) – Umbrella insurance via your personal agent",
+        "url": "https://www.coveragecat.com/",
         "source": "Hacker News AI",
-        "score": 136
+        "score": 48
       },
       {
-        "title": "Anthropic classifiers prohibit kernel development",
-        "url": "https://twitter.com/TheAhmadOsman/status/2102535871727857915/photo/1",
+        "title": "Netherlands bracing for potentially devastating US sanctions against the ICC",
+        "url": "https://apnews.com/article/icc-trump-sanctions-eu-israel-netherlands-2c1cc314732f920c2de59396d3b556f6",
+        "source": "Hacker News AI",
+        "score": 94
+      },
+      {
+        "title": "ShinyHunters claims FBI hack: 'This is NOT financially motivated'",
+        "url": "https://www.theregister.com/security/2026/09/22/shinyhunters-claims-fbi-hack-this-is-not-financially-motivated/5298385",
         "source": "Hacker News AI",
         "score": 9
       }
     ],
     "news": [
       {
-        "title": "Trump threatens to 'annihilate' Iran in UN speech as officials from both countries meet on sidelines",
-        "url": "https://www.bbc.co.uk/news/articles/c52e0ywl9pr7o?at_medium=RSS&at_campaign=rss",
+        "title": "US and Iran hold first talks since June after Trump's 'annihilation' threat",
+        "url": "https://www.bbc.co.uk/news/articles/ck62m1631d7po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Burnham expects to find 'common ground' with Trump in first meeting",
-        "url": "https://www.bbc.co.uk/news/articles/cqevwpmvpekeo?at_medium=RSS&at_campaign=rss",
+        "title": "Reports of violence against women in Gaza surge, UN agency finds",
+        "url": "https://www.bbc.co.uk/news/articles/c94gm7dp40y0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Eleven killed in mass shooting at house in South Africa",
+        "url": "https://www.bbc.co.uk/news/articles/crgjqxzl097eo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Trump administration accuses banned media outlets of 'falsehoods' ahead of court hearing",
+        "url": "https://www.bbc.co.uk/news/articles/c6790yrgzq25o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -193,27 +215,37 @@
         "source": "BBC World"
       },
       {
-        "title": "How Ceuta, football and Israel are shaping Morocco's election",
-        "url": "https://www.bbc.co.uk/news/articles/c8r4v7n6py97o?at_medium=RSS&at_campaign=rss",
+        "title": "Hurricane Polo intensifies into rare category 5 storm off the coast of Mexico ",
+        "url": "https://www.bbc.co.uk/news/articles/ckddvlrlr5qeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Sri Lanka court convicts 15 men over deadly Easter Sunday bombings",
-        "url": "https://www.bbc.co.uk/news/articles/cqy7z275yx65o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Developing El Niño becomes strongest on record weeks before expected peak",
-        "url": "https://www.bbc.co.uk/weather/articles/cmvgy4nv9d62o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Ukraine anger as EU removes Russian oligarchs from sanctions list",
-        "url": "https://www.bbc.co.uk/news/articles/c6dj4k98107do?at_medium=RSS&at_campaign=rss",
+        "title": "Playing loud music on the bus? That will cost you hundreds of dollars in Singapore",
+        "url": "https://www.bbc.co.uk/news/articles/c3kg80ve7x0no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " How Fusion Studio and expert compositing skills brought the striking animation Danse Macabre to life ",
+        "url": "https://www.creativebloq.com/3d/vfx-cgi/how-fusion-studio-and-expert-compositing-skills-brought-the-striking-animation-danse-macabre-to-life",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Apple's perfect iPhone Duo TikToks nail foldable phone marketing ",
+        "url": "https://www.creativebloq.com/design/advertising/apples-perfect-iphone-duo-tiktoks-nail-foldable-phone-marketing",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " First McDonald's, now Disney is dejoying its store designs ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/first-mcdonalds-now-disney-is-dejoying-its-store-designs",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Chromebooks are not for serious creatives, are they? ",
+        "url": "https://www.creativebloq.com/tech/laptops/chromebooks-are-not-for-serious-creatives-are-they",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Coyote Vs Acme's $100m takings show fan campaigns CAN succeed ",
         "url": "https://www.creativebloq.com/design/advertising/coyote-vs-acmes-usd100m-in-takings-show-that-fan-campaigns-can-succeed",
@@ -227,26 +259,6 @@
       {
         "title": " These earphones are the  sonic equivalent of sunburn ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/noble-vanguard-earphones-review-the-sonic-equivalent-of-a-sunburn",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The bold new Apple Music logo signals the end of minimalism ",
-        "url": "https://www.creativebloq.com/design/logos-icons/the-bold-new-apple-music-logo-signals-the-end-of-minimalism",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " McLaren’s new logo looks like a luxury fashion brand ",
-        "url": "https://www.creativebloq.com/design/logos-icons/mclarens-new-logo-looks-like-a-luxury-fashion-brand",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This out-there branding is the bravest design I've seen all year ",
-        "url": "https://www.creativebloq.com/design/branding/this-out-there-branding-is-the-bravest-design-ive-seen-all-year",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This weird Walmart banana hack could save you $20 on Nintendo Switch games like Fire Emblem: Fortune’s Weave, apparently ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/the-weird-walmart-banana-hack-could-save-you-usd20-off-nintendo-switch-games-apparently",
         "source": "Creative Bloq"
       }
     ],
@@ -289,38 +301,38 @@
     ],
     "gaming": [
       {
+        "title": "Adidas' New Pokémon Drop Is Here — and Already Selling Out",
+        "url": "https://www.polygon.com/pokemon-adidas-collection-scalpers/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Wardogs’ Honeymoon Period Is Officially Coming to an End",
+        "url": "https://www.polygon.com/wardogs-honeymoon-period-player-complaints/",
+        "source": "Polygon"
+      },
+      {
+        "title": "21 Years Ago, an Iconic Sci-Fi Series Delivered Its Most Mind-Blowing Cliffhanger",
+        "url": "https://www.polygon.com/battlestar-galactica-pegasus-episode-21-year-anniversary-review/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Avengers: Endgame Encore Leaks Reveal Massive Doomsday Plot Details",
+        "url": "https://www.polygon.com/avengers-endgame-encore-leaks-doomsday-spoilers/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Fortnite Fans Only Have Limited Time to Play the Toy Story 5 Map and Get all the Collectibles",
+        "url": "https://www.polygon.com/fortnite-toy-story-creative-map-codes/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Perfect 'Peanuts' Comics From 1950s That Prove Charles Schulz Is a Genius",
+        "url": "https://www.polygon.com/5-perfect-peanuts-comics-charles-schulz-genius/",
+        "source": "Polygon"
+      },
+      {
         "title": "32 Years Ago, a Crucial 'X-Files' Episode Introduced the Show’s Best Monster Ever",
         "url": "https://www.polygon.com/x-files-the-host-flukeman-best-monter-of-the-week/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fire Emblem: Fortune’s Weave Is the Cure For a Terrible RPG Habit",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-recruit-everyone/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Game Awards 2026: All Game of the Year Front-Runners and Predictions",
-        "url": "https://www.polygon.com/game-of-the-year-goty-game-awards-2026-frontrunners/",
-        "source": "Polygon"
-      },
-      {
-        "title": "It's Officially the End of an Era For Halo",
-        "url": "https://www.polygon.com/halo-studios-activision-blizzard-new-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'The Hunt for Gisco's Treasure' walkthrough in Fire Emblem Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-hunt-for-giscos-treasure-walkthrough-location/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Two Near-Perfect Lord of the Rings Games Finally Come to Switch 2",
-        "url": "https://www.polygon.com/lord-of-the-rings-shadow-of-mordor-games-switch-2/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How to make gold in Fire Emblem Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-how-to-make-gold-money/",
         "source": "Polygon"
       }
     ],
