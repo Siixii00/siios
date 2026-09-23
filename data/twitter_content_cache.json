@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-09-23T19:30:54.190417",
+    "last_updated": "2026-09-23T22:46:05.744343",
     "total_items": 65
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
         "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
         "source": "Hacker News",
-        "score": 119
+        "score": 384
+      },
+      {
+        "title": "Bulk Orders Surge at Used Bookstores in Japan; 50 Tons Sent to U.S.",
+        "url": "https://news.ntv.co.jp/category/society/e48899c1ab1445f683929740ef2b3aa6",
+        "source": "Hacker News",
+        "score": 16
       },
       {
         "title": "Fixing the Portobello Police Station Clock",
         "url": "https://pointinthecloud.com/2026-04-11-211700.html",
         "source": "Hacker News",
-        "score": 281
+        "score": 353
+      },
+      {
+        "title": "VSCode's SSH Agent Is Bananas",
+        "url": "https://fly.io/blog/vscode-ssh-wtf/",
+        "source": "Hacker News",
+        "score": 60
+      },
+      {
+        "title": "LensVLM: Compressing long context as images, expanding only relevant pages",
+        "url": "https://huggingface.co/apple/LensVLM-9B",
+        "source": "Hacker News",
+        "score": 27
       },
       {
         "title": "A brief history of Windows scroll bar shortcuts",
         "url": "https://devblogs.microsoft.com/oldnewthing/20260922-00/?p=112719/",
         "source": "Hacker News",
-        "score": 33
+        "score": 89
       },
       {
         "title": "Italian parliament votes for return to nuclear energy",
         "url": "https://apnews.com/article/italy-nuclear-chernobyl-4891b6b7c7791ae84db6b0bf0f7cf567",
         "source": "Hacker News",
-        "score": 236
+        "score": 465
       },
       {
-        "title": "Cloud Agents Are Inevitable AI Prisons",
-        "url": "https://normanponte.io/19df691f",
+        "title": "The mystery animal on an ancient god's head",
+        "url": "https://signoregalilei.com/2026/09/13/the-mystery-animal-on-an-ancient-gods-head/",
         "source": "Hacker News",
-        "score": 12
+        "score": 21
+      },
+      {
+        "title": "OpenAI breaches Medicare, Albanese reveals",
+        "url": "https://www.smh.com.au/politics/federal/openai-breaches-medicare-albanese-reveals-20260924-p6100u.html",
+        "source": "Hacker News",
+        "score": 100
       },
       {
         "title": "Gemini 3.8 text-to-speech",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
         "source": "Hacker News",
-        "score": 166
-      },
-      {
-        "title": "Radicle: Disclosure of Vulnerability in the Network Protocol",
-        "url": "https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol",
-        "source": "Hacker News",
-        "score": 71
+        "score": 223
       },
       {
         "title": "Jev in 25 Lines of Python",
         "url": "https://www.nobodywho.ai/posts/jev-in-25-lines/",
         "source": "Hacker News",
-        "score": 549
+        "score": 604
       },
       {
-        "title": "GPT-6 Sol and Luna",
-        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "title": "The Curious Power of Punctuation",
+        "url": "https://www.newyorker.com/magazine/2026/09/28/on-the-mark-louis-menand-book-review",
         "source": "Hacker News",
-        "score": 1702
+        "score": 9
       },
       {
-        "title": "Claude Opus 5.5",
-        "url": "https://www.anthropic.com/claude-opus-5-5",
+        "title": "Radicle: Disclosure of Vulnerability in the Network Protocol",
+        "url": "https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol",
         "source": "Hacker News",
-        "score": 1742
+        "score": 109
       },
       {
-        "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
-        "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+        "title": "Show HN: An atlas of system designs with interactive architecture diagrams",
+        "url": "https://atlas-sysdes.vercel.app/",
         "source": "Hacker News",
-        "score": 401
+        "score": 28
       },
       {
-        "title": "UK military jamming other nations' satellites to defend itself, BBC told",
-        "url": "https://www.bbc.com/news/articles/c32l8y8kygdvo",
+        "title": "Tokens too cheap to meter",
+        "url": "https://jyn.dev/tokens-too-cheap-to-meter/",
         "source": "Hacker News",
-        "score": 61
-      },
-      {
-        "title": "Z80 REPL (2018)",
-        "url": "https://abagames.github.io/z80-repl/index.html",
-        "source": "Hacker News",
-        "score": 121
-      },
-      {
-        "title": "28% of job postings on company career sites have been open over 90 days",
-        "url": "https://unlisted.careers/ghost-jobs/report/2026-09",
-        "source": "Hacker News",
-        "score": 133
-      },
-      {
-        "title": "I don't want the details",
-        "url": "https://michaelheap.com/i-dont-want-the-details/",
-        "source": "Hacker News",
-        "score": 263
+        "score": 211
       }
     ],
     "ai": [
@@ -101,94 +101,99 @@
         "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
         "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
         "source": "Hacker News AI",
-        "score": 119
-      },
-      {
-        "title": "Cloud Agents Are Inevitable AI Prisons",
-        "url": "https://normanponte.io/19df691f",
-        "source": "Hacker News AI",
-        "score": 12
-      },
-      {
-        "title": "Gemini 3.8 text-to-speech",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
-        "source": "Hacker News AI",
-        "score": 166
-      },
-      {
-        "title": "GPT-6 Sol and Luna",
-        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
-        "source": "Hacker News AI",
-        "score": 1702
-      },
-      {
-        "title": "Claude Opus 5.5",
-        "url": "https://www.anthropic.com/claude-opus-5-5",
-        "source": "Hacker News AI",
-        "score": 1742
-      },
-      {
-        "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
-        "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
-        "source": "Hacker News AI",
-        "score": 401
-      },
-      {
-        "title": "I don't want the details",
-        "url": "https://michaelheap.com/i-dont-want-the-details/",
-        "source": "Hacker News AI",
-        "score": 263
-      },
-      {
-        "title": "Stripe's Knowledge AI Platform",
-        "url": "https://stripe.dev/blog/meet-stripes-knowledge-ai-platform",
-        "source": "Hacker News AI",
-        "score": 136
-      },
-      {
-        "title": "OpenAI GPT–6 Astra breaks Enigma message that has resisted solution since 2005",
-        "url": "https://www.cryptocellar.org/bgac/the-mvueh-break.html",
-        "source": "Hacker News AI",
-        "score": 715
-      },
-      {
-        "title": "GPT-6 Astra has gained the ability to drive a car",
-        "url": "https://drivingbench.com/",
-        "source": "Hacker News AI",
-        "score": 223
-      },
-      {
-        "title": "Pentagon says overreliance on AI contributed to missile strike on Iran school",
-        "url": "https://www.bloomberg.com/graphics/2026-iran-school-attack/",
-        "source": "Hacker News AI",
-        "score": 865
-      },
-      {
-        "title": "Claude Opus 5.5 Intelligence, Performance and Price Analysis (Max)",
-        "url": "https://artificialanalysis.ai/models/claude-opus-5-5",
-        "source": "Hacker News AI",
-        "score": 326
-      },
-      {
-        "title": "How often do you think about the 1893 World's Fair?",
-        "url": "https://www.thebirthofacapital.info/chicago-worlds-fair-tataria-ware-larsen/",
-        "source": "Hacker News AI",
-        "score": 48
+        "score": 384
       },
       {
         "title": "LensVLM: Compressing long context as images, expanding only relevant pages",
         "url": "https://huggingface.co/apple/LensVLM-9B",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 27
       },
       {
-        "title": "OpenAI is well positioned to fast-follow Jev",
-        "url": "https://arcturus-labs.com/blog/2026/09/21/will-openai-eat-jevs-lunch/",
+        "title": "OpenAI breaches Medicare, Albanese reveals",
+        "url": "https://www.smh.com.au/politics/federal/openai-breaches-medicare-albanese-reveals-20260924-p6100u.html",
         "source": "Hacker News AI",
-        "score": 310
+        "score": 100
+      },
+      {
+        "title": "Gemini 3.8 text-to-speech",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
+        "source": "Hacker News AI",
+        "score": 223
+      },
+      {
+        "title": "Making Tailscale Faster",
+        "url": "https://tailscale.com/blog/making-tailscale-faster",
+        "source": "Hacker News AI",
+        "score": 27
+      },
+      {
+        "title": "Stripe's Knowledge AI Platform",
+        "url": "https://stripe.dev/blog/meet-stripes-knowledge-ai-platform",
+        "source": "Hacker News AI",
+        "score": 165
+      },
+      {
+        "title": "I don't want the details",
+        "url": "https://michaelheap.com/i-dont-want-the-details/",
+        "source": "Hacker News AI",
+        "score": 324
+      },
+      {
+        "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
+        "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
+        "source": "Hacker News AI",
+        "score": 434
+      },
+      {
+        "title": "Once Claude can measure something, it can make it faster",
+        "url": "https://claude.dev/blog/how-we-made-claude-ai-faster/",
+        "source": "Hacker News AI",
+        "score": 128
+      },
+      {
+        "title": "OpenAI 'agent' hacked Australia's health service",
+        "url": "https://www.ft.com/content/56133ef4-377b-4e35-a939-f199ceb64507",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
+        "title": "GPT-6 Sol and Luna",
+        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+        "source": "Hacker News AI",
+        "score": 1729
+      },
+      {
+        "title": "Claude's Load-Bearing Seams",
+        "url": "https://madradavid.com/claudes-load-bearing-seams/",
+        "source": "Hacker News AI",
+        "score": 87
+      },
+      {
+        "title": "Claude Opus 5.5",
+        "url": "https://www.anthropic.com/claude-opus-5-5",
+        "source": "Hacker News AI",
+        "score": 1766
+      },
+      {
+        "title": "OpenAI agents hacked Australian Medicare system",
+        "url": "https://www.reuters.com/world/asia-pacific/australia-pm-albanese-says-openai-breached-medicare-sydney-morning-herald-2026-09-23/",
+        "source": "Hacker News AI",
+        "score": 8
+      },
+      {
+        "title": "GPT-6 Astra has gained the ability to drive a car",
+        "url": "https://drivingbench.com/",
+        "source": "Hacker News AI",
+        "score": 262
       }
     ],
     "news": [
+      {
+        "title": "AI superpower ambitions take centre stage as Trump and Xi meet",
+        "url": "https://www.bbc.co.uk/news/articles/c6gqdgg8w59xo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Iran's president tells Trump it will never 'bend the knee'",
         "url": "https://www.bbc.co.uk/news/articles/cqvgyjy23ggjo?at_medium=RSS&at_campaign=rss",
@@ -200,8 +205,8 @@
         "source": "BBC World"
       },
       {
-        "title": "White House rolling out red carpet for historic Xi Jinping visit",
-        "url": "https://www.bbc.co.uk/news/articles/c6n9w410v3vzo?at_medium=RSS&at_campaign=rss",
+        "title": "Trump's Board of Peace unveils $2.45bn plan to begin Gaza's reconstruction",
+        "url": "https://www.bbc.co.uk/news/articles/cwlyke0mm0x3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -210,18 +215,13 @@
         "source": "BBC World"
       },
       {
+        "title": "UK survivor of Canadian poison seller says he exploited her despair",
+        "url": "https://www.bbc.co.uk/news/articles/cmvgy4237gq9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Dolly Parton's manager accuses her nephew of 'threats and intimidation'",
         "url": "https://www.bbc.co.uk/news/articles/c670lydl5wg5o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Harvey Weinstein sentenced to 15 years in prison for sexual assault",
-        "url": "https://www.bbc.co.uk/news/articles/cm98626n260yo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Poland accuses Russian military helicopter of violating its airspace",
-        "url": "https://www.bbc.co.uk/news/articles/c699d2dn9z0mo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -301,6 +301,31 @@
     ],
     "gaming": [
       {
+        "title": "All paralogue dates and deadlines in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/all-fire-emblem-fortunes-weave-paralogues-dates/",
+        "source": "Polygon"
+      },
+      {
+        "title": "World of Warcraft Would Never Work on PS5 or Xbox",
+        "url": "https://www.polygon.com/world-of-warcraft-wow-forever-gamepad-console/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Hackers Behind Flopped 'GTA 6' Leak Officially Threatening the FBI Now",
+        "url": "https://www.polygon.com/fbi-hacked-gta-6-leak-shinyhunters-data-agents-jobs/",
+        "source": "Polygon"
+      },
+      {
+        "title": "All classes and unlock requirements in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-classes-unlock-secret/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Enter Polygon's Point It Out x Secretlab Giveaway",
+        "url": "https://www.polygon.com/secretlab-polygon-point-it-out-titan-evo-chair-contest-giveaway/",
+        "source": "Polygon"
+      },
+      {
         "title": "Leaked Xbox Memo Reveals Obsidian’s Fate Under Bethesda",
         "url": "https://www.polygon.com/bethesda-obsidian-studio-reorganization-xbox-layoffs/",
         "source": "Polygon"
@@ -308,31 +333,6 @@
       {
         "title": "Discord's Controversial Age Verification Policy Starts Today",
         "url": "https://www.polygon.com/discord-controversial-age-verification-starting/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Where to find pepper leaves in Fire Emblem Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-pepper-leaves-location-where-to-find/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Arc Raiders’ Cheating Epidemic Is Being Dealt With 'Quietly and Continuously'",
-        "url": "https://www.polygon.com/arc-raiders-cheating-epidemic-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Acclaimed Pokémon Artist Responds To Heartbreaking TCG Pack Opening",
-        "url": "https://www.polygon.com/pokemon-avery-the-poke-kid-jirachi-30th-tcg-akira-egawa-beard-dad/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fire Emblem: Fortune’s Weave Basically Has the Same Plot As Twisted Metal",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-twisted-metal/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Some Witcher 3 Fans Aren’t Too Happy With New Remastered Footage",
-        "url": "https://www.polygon.com/witcher-3-remastered-comparison-footage-fan-backlash/",
         "source": "Polygon"
       }
     ],
