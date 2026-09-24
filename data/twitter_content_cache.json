@@ -1,197 +1,153 @@
 {
   "metadata": {
-    "last_updated": "2026-09-24T13:19:56.762852",
-    "total_items": 65
+    "last_updated": "2026-09-24T18:16:47.428275",
+    "total_items": 55
   },
   "content": {
     "tech": [
       {
-        "title": "Nokia Design Archive (2025)",
-        "url": "https://nokiadesignarchive.aalto.fi/index.html",
+        "title": "F-Droid 2.0",
+        "url": "https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html",
         "source": "Hacker News",
-        "score": 121
+        "score": 428
       },
       {
-        "title": "Two-Tier Encryption in the UK – Identical Apple Devices, Different Protection",
+        "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
+        "url": "https://github.com/devdotfast/whiteboard",
+        "source": "Hacker News",
+        "score": 53
+      },
+      {
+        "title": "Fearless SIMD v1.0",
+        "url": "https://linebender.org/blog/fearless-simd-1-0/",
+        "source": "Hacker News",
+        "score": 19
+      },
+      {
+        "title": "Two-tier encryption in the UK",
         "url": "https://macanorak.com/two-tier-encryption-in-the-uk/",
         "source": "Hacker News",
-        "score": 75
+        "score": 288
       },
       {
-        "title": "Linux support is coming to Snapdragon X2 Series",
-        "url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
+        "title": "Google’s Project Suncatcher to put ML infrastructure in space",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/",
         "source": "Hacker News",
-        "score": 493
+        "score": 22
       },
       {
-        "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
-        "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+        "title": "Why is the liver so weirdly regenerative?",
+        "url": "https://dynomight.substack.com/p/liver",
         "source": "Hacker News",
-        "score": 701
+        "score": 14
       },
       {
-        "title": "Ideas on modernizing the open-source desktop",
-        "url": "https://lwn.net/SubscriberLink/1095425/2d9f411252325784/",
+        "title": "WaveDigger: Dig into wireless signals to discover their physical locations",
+        "url": "https://github.com/christianrowlands/wavedigger",
         "source": "Hacker News",
-        "score": 218
+        "score": 42
       },
       {
-        "title": "Meta takes down a critical video about meta AI Glasses after filming at Meta",
-        "url": "https://www.reddit.com/r/facebook/comments/1wotwrk/meta_takes_down_a_critical_video_about_meta_ai/",
+        "title": "Forging 1024-bit RSA signatures in nearly SNFS time [pdf]",
+        "url": "https://eprint.iacr.org/2026/2131.pdf",
         "source": "Hacker News",
-        "score": 339
+        "score": 7
       },
       {
-        "title": "RAM: the forgotten history (2024)",
-        "url": "https://blog.coredump.cx/p/memory-the-forgotten-history",
+        "title": "The forgotten battle of East Lansing",
+        "url": "https://eastlansinginfo.news/the-forgotten-battle-of-east-lansing/",
         "source": "Hacker News",
-        "score": 57
+        "score": 12
       },
       {
-        "title": "When the Debugger Lies",
-        "url": "https://danielmangum.com/posts/when-the-debugger-lies/",
+        "title": "Nokia Design Archive (2025)",
+        "url": "https://repo.aalto.fi/index.php?name=SO_b66a9391-dcf8-4399-8e87-611f84c3fc4c",
         "source": "Hacker News",
-        "score": 21
+        "score": 179
       },
       {
-        "title": "'That's so AI ' What gen Alpha's biggest insult tells us",
-        "url": "https://www.theguardian.com/society/2026/sep/24/thats-so-ai-what-gen-alphas-biggest-insult-tells-us",
+        "title": "Toyota is taking the Corolla electric",
+        "url": "https://electrek.co/2026/09/23/toyota-best-selling-corolla-electric/",
         "source": "Hacker News",
-        "score": 33
+        "score": 64
       },
       {
-        "title": "The newest ESP32 can run Linux and it's getting close to a Raspberry Pi",
-        "url": "https://www.xda-developers.com/newest-esp32-run-linux-close-to-raspberry-pi/",
+        "title": "Motor Characterization for Small Running Robots (2016)",
+        "url": "https://robot-daycare.com/posts/2016-01-06-motor-characterization-for-small-running-robots/",
         "source": "Hacker News",
-        "score": 61
+        "score": 10
       },
       {
-        "title": "ArXiv receives multiyear commitments to support it as an independent nonprofit",
-        "url": "https://blog.arxiv.org/2026/09/23/arxiv-receives-multiyear-investment/",
+        "title": "Book review: Is parallel programming hard, and, if so, what can you do about it?",
+        "url": "https://ahelwer.ca/post/2026-09-21-concurrency-textbook/",
         "source": "Hacker News",
-        "score": 219
+        "score": 13
       },
       {
-        "title": "OpenAI agent hacked Australian government website, PM says",
-        "url": "https://www.bbc.com/news/live/cvgl73pxgndwt",
+        "title": "GitHub has not removed malicious imitation software after 3 weeks",
+        "url": "https://successfulsoftware.net/2026/09/24/github-has-not-removed-malicious-imitation-software-after-3-weeks/",
         "source": "Hacker News",
-        "score": 139
+        "score": 152
       },
       {
-        "title": "VSCode's SSH Agent Is Bananas (2025)",
-        "url": "https://fly.io/blog/vscode-ssh-wtf/",
+        "title": "B5-BJ2 – Ice Cream Barges – Concrete Ship Constructors (2023)",
+        "url": "https://thecretefleet.com/blog/f/b5-bj2---ice-cream-barges---concrete-ship-constructors",
         "source": "Hacker News",
-        "score": 259
-      },
-      {
-        "title": "Contrastive Language Models",
-        "url": "https://contrastive-lm.notion.site/",
-        "source": "Hacker News",
-        "score": 103
-      },
-      {
-        "title": "The \"Windows XP Box\" (2003)",
-        "url": "https://www.mini-itx.com/projects/windowsxpbox/",
-        "source": "Hacker News",
-        "score": 182
+        "score": 16
       }
     ],
     "ai": [
       {
-        "title": "Linux support is coming to Snapdragon X2 Series",
+        "title": "Linux support is coming to Snapdragon X2 series",
         "url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
         "source": "Hacker News AI",
-        "score": 493
+        "score": 582
       },
       {
-        "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
-        "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+        "title": "Coulomb's law remains tricky to test at home",
+        "url": "https://chillphysicsenjoyer.substack.com/p/coulombs-law-remains-tricky-to-test",
         "source": "Hacker News AI",
-        "score": 701
-      },
-      {
-        "title": "Meta takes down a critical video about meta AI Glasses after filming at Meta",
-        "url": "https://www.reddit.com/r/facebook/comments/1wotwrk/meta_takes_down_a_critical_video_about_meta_ai/",
-        "source": "Hacker News AI",
-        "score": 339
-      },
-      {
-        "title": "'That's so AI ' What gen Alpha's biggest insult tells us",
-        "url": "https://www.theguardian.com/society/2026/sep/24/thats-so-ai-what-gen-alphas-biggest-insult-tells-us",
-        "source": "Hacker News AI",
-        "score": 33
-      },
-      {
-        "title": "OpenAI agent hacked Australian government website, PM says",
-        "url": "https://www.bbc.com/news/live/cvgl73pxgndwt",
-        "source": "Hacker News AI",
-        "score": 139
-      },
-      {
-        "title": "Early rogue AI agent activity and attempts to hack found on urlquery.net",
-        "url": "https://transluce.org/agent-activity",
-        "source": "Hacker News AI",
-        "score": 170
+        "score": 20
       },
       {
         "title": "Hackers influence ChatGPT and Gemini to direct users to scam centers",
         "url": "https://medium.com/@arielsimon/dark-sourcery-how-hackers-manipulate-ai-to-scam-you-88df434d2073",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 126
       },
       {
-        "title": "Mercury 2.5 LLM hits 770 tokens per second",
-        "url": "https://artificialanalysis.ai/models/mercury-2-5",
+        "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+        "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
         "source": "Hacker News AI",
-        "score": 131
+        "score": 748
+      },
+      {
+        "title": "The AI Build-Out Is Becoming the Biggest Economic Bet in U.S. History",
+        "url": "https://www.wsj.com/economy/the-ai-build-out-is-becoming-the-biggest-economic-bet-in-u-s-history-c60716dd",
+        "source": "Hacker News AI",
+        "score": 10
       },
       {
         "title": "Making Tailscale Faster",
         "url": "https://tailscale.com/blog/making-tailscale-faster",
         "source": "Hacker News AI",
-        "score": 193
-      },
-      {
-        "title": "Gemini 3.8 text-to-speech",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
-        "source": "Hacker News AI",
-        "score": 313
-      },
-      {
-        "title": "Nori LLM: Achieving Over 1M tok / s",
-        "url": "https://noriagentic.com/nori-llm.html",
-        "source": "Hacker News AI",
-        "score": 13
-      },
-      {
-        "title": "LensVLM: Compressing long context as images, expanding only relevant pages",
-        "url": "https://huggingface.co/apple/LensVLM-9B",
-        "source": "Hacker News AI",
-        "score": 79
-      },
-      {
-        "title": "GPT-6 Sol and Luna",
-        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
-        "source": "Hacker News AI",
-        "score": 1754
-      },
-      {
-        "title": "Anthropic says it's bio lab has found something big",
-        "url": "https://techcrunch.com/2026/09/23/anthropic-says-its-biology-lab-has-already-found-something-big/",
-        "source": "Hacker News AI",
-        "score": 4
-      },
-      {
-        "title": "Cloud Agents Are Inevitable AI Prisons",
-        "url": "https://normanponte.io/19df691f",
-        "source": "Hacker News AI",
-        "score": 61
+        "score": 227
       }
     ],
     "news": [
       {
+        "title": "White House restores access to media outlets banned by Trump after judge's order",
+        "url": "https://www.bbc.co.uk/news/articles/cqe8ek7608mlo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Rogue OpenAI agent 'infiltrated' Australian government website in world first",
         "url": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Why Australia chose the world's biggest political stage to reveal OpenAI hack",
+        "url": "https://www.bbc.co.uk/news/articles/cr3eqk15ld14o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -200,32 +156,32 @@
         "source": "BBC World"
       },
       {
-        "title": "Judge temporarily overturns Trump's White House media ban",
-        "url": "https://www.bbc.co.uk/news/articles/cqm2mg34x2v7o?at_medium=RSS&at_campaign=rss",
+        "title": "Ethiopia's army says it has repelled attacks in first comment on fresh fighting",
+        "url": "https://www.bbc.co.uk/news/articles/cqevwm09w4xmo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ethiopia and Tigray accuse each of launching offensives, fuelling fears of new war",
-        "url": "https://www.bbc.co.uk/news/articles/cry8zwwq21pxo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Teen rocker Nene Royal becomes first Thai to win America's Got Talent",
-        "url": "https://www.bbc.co.uk/news/articles/cqzjzl3d1409o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Iran's president tells Trump it will never 'bend the knee'",
-        "url": "https://www.bbc.co.uk/news/articles/cqvgyjy23ggjo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Trump's Board of Peace unveils $2.45bn Gaza recovery plan",
-        "url": "https://www.bbc.co.uk/news/articles/cwlyke0mm0x3o?at_medium=RSS&at_campaign=rss",
+        "title": "Greek PM urges UK PM to return Elgin Marbles permanently",
+        "url": "https://www.bbc.co.uk/news/articles/cqm2mgk6mlddo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Amazon's early Prime Day deals include massive discounts on coffee makers of every kind ",
+        "url": "https://www.creativebloq.com/design/product-design/amazons-early-prime-day-deals-include-massive-discounts-on-coffee-makers-of-every-kind",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How a studio created an \"impossible\" animated symphony using Autodesk's AI-driven mocap tech ",
+        "url": "https://www.creativebloq.com/art/animation/how-a-studio-created-an-impossible-animated-symphony-using-autodesks-ai-driven-mocap-tech",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Canva adds 1000+ new Monotype fonts for global creatives ",
+        "url": "https://www.creativebloq.com/design/canva-adds-1000-new-monotype-fonts-for-global-creatives",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The Taylor Swift iPhone colour theory doesn't feel like a joke anymore ",
         "url": "https://www.creativebloq.com/design/branding/the-taylor-swift-iphone-colour-theory-feels-like-its-not-a-joke-anymore",
@@ -245,94 +201,79 @@
         "title": " People think Disney is trying to erase every trace of Hexed's original concept ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/is-disney-really-trying-to-erase-its-original-concept-for-hexed",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " IKEA transforms its iconic blue bag in quirky campaign ",
-        "url": "https://www.creativebloq.com/design/advertising/ikea-transforms-its-iconic-blue-bag-in-quirky-campaign",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " People are treating Apple's MacOS 27 wallpaper 'design fail' like a true crime mystery to be solved ",
-        "url": "https://www.creativebloq.com/design/advertising/people-are-treating-apples-macos-27-wallpaper-design-fail-like-a-true-crime-mystery-to-be-solved",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How to make wooden pumpkins using the Bambu Lab R1 laser ",
-        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/how-to-make-wooden-pumpkins-using-the-bambu-lab-r1-laser",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "ADHD and autism diagnoses have surged. A massive study may help explain why",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260924020353.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "“We just need to go back” – Uranus’ moon Ariel may have hidden a 100-mile-deep ocean",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260923035951.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists find two tiny new snails with shells that close like doors",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260923035936.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Distant time crystals can somehow fall into the same rhythm",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260923035934.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists thought they knew how this 70-year-old leukemia drug worked",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260923035932.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "More REM sleep linked to lower risk of 83 diseases",
         "url": "https://www.sciencedaily.com/releases/2026/09/260923035930.htm",
         "source": "Science Daily"
       },
       {
-        "title": "GLP-1 weight loss and diabetes drugs linked to nutritional deficiencies in nearly 1 in 6 children",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260923035926.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Breakthrough drug reverses skin aging and dramatically speeds healing",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260922223008.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "The “big one” might not come alone: Two major West Coast faults may strike back to back",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260922222730.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists say a critical Atlantic Ocean current is weakening and the effects could be global",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260922222558.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "This emerging treatment could help people avoid knee replacement surgery",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260922052030.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Why Viking museums still can’t escape the warrior myth",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260922005805.htm",
+        "title": "When what you see doesn’t make sense, your brain does something remarkable",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260923035929.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "'Magic: The Gathering's Coolest Planeswalker Is Finally Getting the Backstory He Deserves",
-        "url": "https://www.polygon.com/mtg-mage-of-zhalfir-dark-horse-comics-teferi-preview/",
+        "title": "'Modern Warfare 4' Has Officially Solved Call of Duty’s ‘Clowny Skins’ Problem",
+        "url": "https://www.polygon.com/call-of-duty-modern-warfare-4-skin-toggle/",
         "source": "Polygon"
       },
       {
-        "title": "Smash Bros. owes millions of dollars in OSHA violations | Unraveled",
-        "url": "https://www.polygon.com/video/smash-bros-owes-millions-of-dollars-in-osha-violations-unraveled/",
+        "title": "Magic's New Reality Fracture Mechanic Is So Much Stronger Than It Looks",
+        "url": "https://www.polygon.com/magic-mtg-reality-fracture-limited-guide-empower-jace/",
         "source": "Polygon"
       },
       {
-        "title": "Fire Emblem: Fortune’s Weave Quietly Changed the Series in 4 Essential Ways",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-changes/",
+        "title": "Control Resonant’s Day-One Patch Makes the Game Easier ‘While Still Providing a Challenge’",
+        "url": "https://www.polygon.com/control-resonant-remedy-day-one-patch-combat-difficulty/",
         "source": "Polygon"
       },
       {
-        "title": "I wasted 3 weeks of my life finding Castlevania's hottest monster | Unraveled",
-        "url": "https://www.polygon.com/video/i-wasted-3-weeks-of-my-life-finding-castlevania-s-hottest-monster-unraveled/",
+        "title": "Where to find Arashiyama Bamboo Forest in Forza Horizon 6",
+        "url": "https://www.polygon.com/forza-horizon-6-fh6-arashiyama-bamboo-forest-location-where-to-find/",
         "source": "Polygon"
       },
       {
-        "title": "Ranking all 200+ Mega Man robots | Unraveled",
-        "url": "https://www.polygon.com/video/ranking-all-200-mega-man-robots-unraveled/",
+        "title": "'Madden' Movie’s First Trailer Reveals Barely Recognizable Nic Cage and Christian Bale",
+        "url": "https://www.polygon.com/madden-film-nicolas-cage/",
         "source": "Polygon"
       },
       {
-        "title": "I read all 337 books in Skyrim so you don't have to | Unraveled",
-        "url": "https://www.polygon.com/video/i-read-all-337-books-in-skyrim-so-you-don-t-have-to-unraveled/",
+        "title": "David Tennant’s Doctor Who Returns With New Release for 20th Anniversary",
+        "url": "https://www.polygon.com/david-tennants-doctor-who-movie-a-new-release-for-20th-anniversary/",
         "source": "Polygon"
       },
       {
-        "title": "Solving the Zelda Timeline in 15 Minutes | Unraveled",
-        "url": "https://www.polygon.com/video/solving-the-zelda-timeline-in-15-minutes-unraveled/",
+        "title": "How to solve the Evacuation Zone art gallery secret in Control Resonant",
+        "url": "https://www.polygon.com/control-resonant-echo-art-gallery-secret-puzzle-evacuation-zone-konstig-solution/",
         "source": "Polygon"
       }
     ],
