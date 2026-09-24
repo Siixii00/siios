@@ -1,197 +1,202 @@
 {
   "metadata": {
-    "last_updated": "2026-09-23T22:46:05.744343",
+    "last_updated": "2026-09-24T01:10:26.684161",
     "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Meta VR Glasses",
+        "url": "https://www.meta.com/vr-glasses/",
+        "source": "Hacker News",
+        "score": 161
+      },
+      {
+        "title": "Linux support is coming to Snapdragon X2 Series",
+        "url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
+        "source": "Hacker News",
+        "score": 120
+      },
+      {
         "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
         "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
         "source": "Hacker News",
-        "score": 384
+        "score": 477
       },
       {
-        "title": "Bulk Orders Surge at Used Bookstores in Japan; 50 Tons Sent to U.S.",
-        "url": "https://news.ntv.co.jp/category/society/e48899c1ab1445f683929740ef2b3aa6",
+        "title": "VSCode's SSH Agent Is Bananas (2025)",
+        "url": "https://fly.io/blog/vscode-ssh-wtf/",
         "source": "Hacker News",
-        "score": 16
+        "score": 114
+      },
+      {
+        "title": "ArXiv receives multiyear commitments to support it as an independent nonprofit",
+        "url": "https://blog.arxiv.org/2026/09/23/arxiv-receives-multiyear-investment/",
+        "source": "Hacker News",
+        "score": 45
+      },
+      {
+        "title": "We just shipped support for the ugliest part of HTTP: Vary",
+        "url": "https://blog.cloudflare.com/vary-support/",
+        "source": "Hacker News",
+        "score": 63
+      },
+      {
+        "title": "Mercury 2.5 LLM hits 770 tokens per second",
+        "url": "https://artificialanalysis.ai/models/mercury-2-5",
+        "source": "Hacker News",
+        "score": 39
+      },
+      {
+        "title": "The \"Windows XP Box\" (2003)",
+        "url": "https://www.mini-itx.com/projects/windowsxpbox/",
+        "source": "Hacker News",
+        "score": 32
       },
       {
         "title": "Fixing the Portobello Police Station Clock",
         "url": "https://pointinthecloud.com/2026-04-11-211700.html",
         "source": "Hacker News",
-        "score": 353
-      },
-      {
-        "title": "VSCode's SSH Agent Is Bananas",
-        "url": "https://fly.io/blog/vscode-ssh-wtf/",
-        "source": "Hacker News",
-        "score": 60
+        "score": 378
       },
       {
         "title": "LensVLM: Compressing long context as images, expanding only relevant pages",
         "url": "https://huggingface.co/apple/LensVLM-9B",
         "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "A brief history of Windows scroll bar shortcuts",
-        "url": "https://devblogs.microsoft.com/oldnewthing/20260922-00/?p=112719/",
-        "source": "Hacker News",
-        "score": 89
+        "score": 52
       },
       {
         "title": "Italian parliament votes for return to nuclear energy",
         "url": "https://apnews.com/article/italy-nuclear-chernobyl-4891b6b7c7791ae84db6b0bf0f7cf567",
         "source": "Hacker News",
-        "score": 465
+        "score": 579
       },
       {
         "title": "The mystery animal on an ancient god's head",
         "url": "https://signoregalilei.com/2026/09/13/the-mystery-animal-on-an-ancient-gods-head/",
         "source": "Hacker News",
-        "score": 21
+        "score": 48
       },
       {
-        "title": "OpenAI breaches Medicare, Albanese reveals",
-        "url": "https://www.smh.com.au/politics/federal/openai-breaches-medicare-albanese-reveals-20260924-p6100u.html",
+        "title": "A brief history of Windows scroll bar shortcuts",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20260922-00/?p=112719/",
         "source": "Hacker News",
-        "score": 100
+        "score": 108
+      },
+      {
+        "title": "Making Tailscale Faster",
+        "url": "https://tailscale.com/blog/making-tailscale-faster",
+        "source": "Hacker News",
+        "score": 58
       },
       {
         "title": "Gemini 3.8 text-to-speech",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
         "source": "Hacker News",
-        "score": 223
-      },
-      {
-        "title": "Jev in 25 Lines of Python",
-        "url": "https://www.nobodywho.ai/posts/jev-in-25-lines/",
-        "source": "Hacker News",
-        "score": 604
-      },
-      {
-        "title": "The Curious Power of Punctuation",
-        "url": "https://www.newyorker.com/magazine/2026/09/28/on-the-mark-louis-menand-book-review",
-        "source": "Hacker News",
-        "score": 9
-      },
-      {
-        "title": "Radicle: Disclosure of Vulnerability in the Network Protocol",
-        "url": "https://radicle.dev/2026/09/23/disclosure-of-vulnerability-in-network-protocol",
-        "source": "Hacker News",
-        "score": 109
-      },
-      {
-        "title": "Show HN: An atlas of system designs with interactive architecture diagrams",
-        "url": "https://atlas-sysdes.vercel.app/",
-        "source": "Hacker News",
-        "score": 28
-      },
-      {
-        "title": "Tokens too cheap to meter",
-        "url": "https://jyn.dev/tokens-too-cheap-to-meter/",
-        "source": "Hacker News",
-        "score": 211
+        "score": 249
       }
     ],
     "ai": [
       {
+        "title": "Linux support is coming to Snapdragon X2 Series",
+        "url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
+        "source": "Hacker News AI",
+        "score": 120
+      },
+      {
         "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
         "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
         "source": "Hacker News AI",
-        "score": 384
+        "score": 477
+      },
+      {
+        "title": "Mercury 2.5 LLM hits 770 tokens per second",
+        "url": "https://artificialanalysis.ai/models/mercury-2-5",
+        "source": "Hacker News AI",
+        "score": 39
       },
       {
         "title": "LensVLM: Compressing long context as images, expanding only relevant pages",
         "url": "https://huggingface.co/apple/LensVLM-9B",
         "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "OpenAI breaches Medicare, Albanese reveals",
-        "url": "https://www.smh.com.au/politics/federal/openai-breaches-medicare-albanese-reveals-20260924-p6100u.html",
-        "source": "Hacker News AI",
-        "score": 100
-      },
-      {
-        "title": "Gemini 3.8 text-to-speech",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
-        "source": "Hacker News AI",
-        "score": 223
+        "score": 52
       },
       {
         "title": "Making Tailscale Faster",
         "url": "https://tailscale.com/blog/making-tailscale-faster",
         "source": "Hacker News AI",
-        "score": 27
+        "score": 58
       },
       {
-        "title": "Stripe's Knowledge AI Platform",
-        "url": "https://stripe.dev/blog/meet-stripes-knowledge-ai-platform",
+        "title": "Gemini 3.8 text-to-speech",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
         "source": "Hacker News AI",
-        "score": 165
+        "score": 249
       },
       {
         "title": "I don't want the details",
         "url": "https://michaelheap.com/i-dont-want-the-details/",
         "source": "Hacker News AI",
-        "score": 324
+        "score": 344
       },
       {
         "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
         "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
         "source": "Hacker News AI",
-        "score": 434
+        "score": 448
       },
       {
         "title": "Once Claude can measure something, it can make it faster",
         "url": "https://claude.dev/blog/how-we-made-claude-ai-faster/",
         "source": "Hacker News AI",
-        "score": 128
-      },
-      {
-        "title": "OpenAI 'agent' hacked Australia's health service",
-        "url": "https://www.ft.com/content/56133ef4-377b-4e35-a939-f199ceb64507",
-        "source": "Hacker News AI",
-        "score": 9
+        "score": 161
       },
       {
         "title": "GPT-6 Sol and Luna",
         "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
         "source": "Hacker News AI",
-        "score": 1729
+        "score": 1731
       },
       {
-        "title": "Claude's Load-Bearing Seams",
-        "url": "https://madradavid.com/claudes-load-bearing-seams/",
+        "title": "Stripe's Knowledge AI Platform",
+        "url": "https://stripe.dev/blog/meet-stripes-knowledge-ai-platform",
         "source": "Hacker News AI",
-        "score": 87
+        "score": 173
       },
       {
         "title": "Claude Opus 5.5",
         "url": "https://www.anthropic.com/claude-opus-5-5",
         "source": "Hacker News AI",
-        "score": 1766
+        "score": 1768
+      },
+      {
+        "title": "Stanford violated AI policy after race-swapping students in ad",
+        "url": "https://www.sfchronicle.com/bayarea/article/stanford-ai-policy-student-photo-race-swapping-22444142.php",
+        "source": "Hacker News AI",
+        "score": 14
       },
       {
         "title": "OpenAI agents hacked Australian Medicare system",
         "url": "https://www.reuters.com/world/asia-pacific/australia-pm-albanese-says-openai-breached-medicare-sydney-morning-herald-2026-09-23/",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 30
       },
       {
         "title": "GPT-6 Astra has gained the ability to drive a car",
         "url": "https://drivingbench.com/",
         "source": "Hacker News AI",
-        "score": 262
+        "score": 272
       }
     ],
     "news": [
       {
         "title": "AI superpower ambitions take centre stage as Trump and Xi meet",
         "url": "https://www.bbc.co.uk/news/articles/c6gqdgg8w59xo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "OpenAI agent 'infiltrated' Australian government website, PM says",
+        "url": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -217,11 +222,6 @@
       {
         "title": "UK survivor of Canadian poison seller says he exploited her despair",
         "url": "https://www.bbc.co.uk/news/articles/cmvgy4237gq9o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Dolly Parton's manager accuses her nephew of 'threats and intimidation'",
-        "url": "https://www.bbc.co.uk/news/articles/c670lydl5wg5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
