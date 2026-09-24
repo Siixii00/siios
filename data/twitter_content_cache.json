@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-09-24T01:10:26.684161",
+    "last_updated": "2026-09-24T07:20:03.966897",
     "total_items": 65
   },
   "content": {
     "tech": [
       {
-        "title": "Meta VR Glasses",
-        "url": "https://www.meta.com/vr-glasses/",
-        "source": "Hacker News",
-        "score": 161
-      },
-      {
         "title": "Linux support is coming to Snapdragon X2 Series",
         "url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
         "source": "Hacker News",
-        "score": 120
+        "score": 343
+      },
+      {
+        "title": "Early rogue AI agent activity and attempts to hack found on urlquery.net",
+        "url": "https://transluce.org/agent-activity",
+        "source": "Hacker News",
+        "score": 35
       },
       {
         "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
         "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
         "source": "Hacker News",
-        "score": 477
-      },
-      {
-        "title": "VSCode's SSH Agent Is Bananas (2025)",
-        "url": "https://fly.io/blog/vscode-ssh-wtf/",
-        "source": "Hacker News",
-        "score": 114
+        "score": 615
       },
       {
         "title": "ArXiv receives multiyear commitments to support it as an independent nonprofit",
         "url": "https://blog.arxiv.org/2026/09/23/arxiv-receives-multiyear-investment/",
         "source": "Hacker News",
-        "score": 45
+        "score": 146
       },
       {
-        "title": "We just shipped support for the ugliest part of HTTP: Vary",
-        "url": "https://blog.cloudflare.com/vary-support/",
+        "title": "Contrastive Language Models",
+        "url": "https://contrastive-lm.notion.site/",
         "source": "Hacker News",
-        "score": 63
+        "score": 27
       },
       {
-        "title": "Mercury 2.5 LLM hits 770 tokens per second",
-        "url": "https://artificialanalysis.ai/models/mercury-2-5",
+        "title": "Ideas on modernizing the open-source desktop",
+        "url": "https://lwn.net/SubscriberLink/1095425/2d9f411252325784/",
         "source": "Hacker News",
-        "score": 39
+        "score": 66
+      },
+      {
+        "title": "VSCode's SSH Agent Is Bananas (2025)",
+        "url": "https://fly.io/blog/vscode-ssh-wtf/",
+        "source": "Hacker News",
+        "score": 202
+      },
+      {
+        "title": "Making portable my unportable transputer C compiler",
+        "url": "https://nanochess.org/transputer_c_compiler.html",
+        "source": "Hacker News",
+        "score": 35
+      },
+      {
+        "title": "Lazydraw: Terminal ASCII editor for drawing diagrams and sketches",
+        "url": "https://github.com/mpospirit/lazydraw",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Meta VR Glasses",
+        "url": "https://www.meta.com/vr-glasses/",
+        "source": "Hacker News",
+        "score": 364
+      },
+      {
+        "title": "Virtio-nvgpu: Near-native Nvidia GPU access inside a KVM guest",
+        "url": "https://github.com/nestrilabs/virtio-nvgpu",
+        "source": "Hacker News",
+        "score": 67
       },
       {
         "title": "The \"Windows XP Box\" (2003)",
         "url": "https://www.mini-itx.com/projects/windowsxpbox/",
         "source": "Hacker News",
-        "score": 32
+        "score": 122
+      },
+      {
+        "title": "Feds Target AI Critics as \"Foreign Agents\"",
+        "url": "https://www.kenklippenstein.com/p/feds-think-ai-critics-are-foreign",
+        "source": "Hacker News",
+        "score": 261
+      },
+      {
+        "title": "Can open-source prompt-injection detectors catch realistic AI agent attacks?",
+        "url": "https://github.com/rudratoshs/buried-injections",
+        "source": "Hacker News",
+        "score": 3
       },
       {
         "title": "Fixing the Portobello Police Station Clock",
         "url": "https://pointinthecloud.com/2026-04-11-211700.html",
         "source": "Hacker News",
-        "score": 378
-      },
-      {
-        "title": "LensVLM: Compressing long context as images, expanding only relevant pages",
-        "url": "https://huggingface.co/apple/LensVLM-9B",
-        "source": "Hacker News",
-        "score": 52
-      },
-      {
-        "title": "Italian parliament votes for return to nuclear energy",
-        "url": "https://apnews.com/article/italy-nuclear-chernobyl-4891b6b7c7791ae84db6b0bf0f7cf567",
-        "source": "Hacker News",
-        "score": 579
-      },
-      {
-        "title": "The mystery animal on an ancient god's head",
-        "url": "https://signoregalilei.com/2026/09/13/the-mystery-animal-on-an-ancient-gods-head/",
-        "source": "Hacker News",
-        "score": 48
-      },
-      {
-        "title": "A brief history of Windows scroll bar shortcuts",
-        "url": "https://devblogs.microsoft.com/oldnewthing/20260922-00/?p=112719/",
-        "source": "Hacker News",
-        "score": 108
-      },
-      {
-        "title": "Making Tailscale Faster",
-        "url": "https://tailscale.com/blog/making-tailscale-faster",
-        "source": "Hacker News",
-        "score": 58
-      },
-      {
-        "title": "Gemini 3.8 text-to-speech",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
-        "source": "Hacker News",
-        "score": 249
+        "score": 425
       }
     ],
     "ai": [
@@ -101,102 +101,102 @@
         "title": "Linux support is coming to Snapdragon X2 Series",
         "url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
         "source": "Hacker News AI",
-        "score": 120
+        "score": 343
+      },
+      {
+        "title": "Early rogue AI agent activity and attempts to hack found on urlquery.net",
+        "url": "https://transluce.org/agent-activity",
+        "source": "Hacker News AI",
+        "score": 35
       },
       {
         "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
         "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
         "source": "Hacker News AI",
-        "score": 477
+        "score": 615
+      },
+      {
+        "title": "Feds Target AI Critics as \"Foreign Agents\"",
+        "url": "https://www.kenklippenstein.com/p/feds-think-ai-critics-are-foreign",
+        "source": "Hacker News AI",
+        "score": 261
+      },
+      {
+        "title": "Can open-source prompt-injection detectors catch realistic AI agent attacks?",
+        "url": "https://github.com/rudratoshs/buried-injections",
+        "source": "Hacker News AI",
+        "score": 3
+      },
+      {
+        "title": "OpenAI breaches Medicare, Albanese reveals",
+        "url": "https://www.smh.com.au/politics/federal/openai-breaches-medicare-albanese-reveals-20260924-p6100u.html",
+        "source": "Hacker News AI",
+        "score": 173
       },
       {
         "title": "Mercury 2.5 LLM hits 770 tokens per second",
         "url": "https://artificialanalysis.ai/models/mercury-2-5",
         "source": "Hacker News AI",
-        "score": 39
-      },
-      {
-        "title": "LensVLM: Compressing long context as images, expanding only relevant pages",
-        "url": "https://huggingface.co/apple/LensVLM-9B",
-        "source": "Hacker News AI",
-        "score": 52
+        "score": 92
       },
       {
         "title": "Making Tailscale Faster",
         "url": "https://tailscale.com/blog/making-tailscale-faster",
         "source": "Hacker News AI",
-        "score": 58
+        "score": 149
       },
       {
         "title": "Gemini 3.8 text-to-speech",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-8-text-to-speech/",
         "source": "Hacker News AI",
-        "score": 249
+        "score": 298
+      },
+      {
+        "title": "LensVLM: Compressing long context as images, expanding only relevant pages",
+        "url": "https://huggingface.co/apple/LensVLM-9B",
+        "source": "Hacker News AI",
+        "score": 70
+      },
+      {
+        "title": "OpenAI agent hacked Australian government website, PM says",
+        "url": "https://www.bbc.com/news/live/cvgl73pxgndwt",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "I don't want the details",
         "url": "https://michaelheap.com/i-dont-want-the-details/",
         "source": "Hacker News AI",
-        "score": 344
-      },
-      {
-        "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
-        "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
-        "source": "Hacker News AI",
-        "score": 448
-      },
-      {
-        "title": "Once Claude can measure something, it can make it faster",
-        "url": "https://claude.dev/blog/how-we-made-claude-ai-faster/",
-        "source": "Hacker News AI",
-        "score": 161
+        "score": 399
       },
       {
         "title": "GPT-6 Sol and Luna",
         "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
         "source": "Hacker News AI",
-        "score": 1731
+        "score": 1745
       },
       {
-        "title": "Stripe's Knowledge AI Platform",
-        "url": "https://stripe.dev/blog/meet-stripes-knowledge-ai-platform",
+        "title": "Claude Code reads AGENTS.md only when telemetry is on [fixed]",
+        "url": "https://blog.szypowi.cz/p/claude-code-reads-agents.md-only-when-telemetry-is-on/",
         "source": "Hacker News AI",
-        "score": 173
+        "score": 464
       },
       {
         "title": "Claude Opus 5.5",
         "url": "https://www.anthropic.com/claude-opus-5-5",
         "source": "Hacker News AI",
-        "score": 1768
-      },
-      {
-        "title": "Stanford violated AI policy after race-swapping students in ad",
-        "url": "https://www.sfchronicle.com/bayarea/article/stanford-ai-policy-student-photo-race-swapping-22444142.php",
-        "source": "Hacker News AI",
-        "score": 14
-      },
-      {
-        "title": "OpenAI agents hacked Australian Medicare system",
-        "url": "https://www.reuters.com/world/asia-pacific/australia-pm-albanese-says-openai-breached-medicare-sydney-morning-herald-2026-09-23/",
-        "source": "Hacker News AI",
-        "score": 30
-      },
-      {
-        "title": "GPT-6 Astra has gained the ability to drive a car",
-        "url": "https://drivingbench.com/",
-        "source": "Hacker News AI",
-        "score": 272
+        "score": 1776
       }
     ],
     "news": [
       {
-        "title": "AI superpower ambitions take centre stage as Trump and Xi meet",
-        "url": "https://www.bbc.co.uk/news/articles/c6gqdgg8w59xo?at_medium=RSS&at_campaign=rss",
+        "title": "Rogue OpenAI agent 'infiltrated' Australian government website in world first",
+        "url": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "OpenAI agent 'infiltrated' Australian government website, PM says",
-        "url": "https://www.bbc.co.uk/news/articles/c6vgy0333dppo?at_medium=RSS&at_campaign=rss",
+        "title": "AI superpower ambitions take centre stage as Trump and Xi meet",
+        "url": "https://www.bbc.co.uk/news/articles/c6gqdgg8w59xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -227,6 +227,21 @@
     ],
     "art": [
       {
+        "title": " People think Disney is trying to erase every trace of Hexed's original concept ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/is-disney-really-trying-to-erase-its-original-concept-for-hexed",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " IKEA transforms its iconic blue bag in quirky campaign ",
+        "url": "https://www.creativebloq.com/design/advertising/ikea-transforms-its-iconic-blue-bag-in-quirky-campaign",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " People are treating Apple's MacOS 27 wallpaper 'design fail' like a true crime mystery to be solved ",
+        "url": "https://www.creativebloq.com/design/advertising/people-are-treating-apples-macos-27-wallpaper-design-fail-like-a-true-crime-mystery-to-be-solved",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " How to make wooden pumpkins using the Bambu Lab R1 laser ",
         "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/how-to-make-wooden-pumpkins-using-the-bambu-lab-r1-laser",
         "source": "Creative Bloq"
@@ -245,94 +260,79 @@
         "title": " Improve your mood with the best monitor light bars ",
         "url": "https://www.creativebloq.com/tech/accessories/improve-your-mood-with-the-best-monitor-light-bars",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " New Taylor Swift Patient 0 cover accused of Photoshop mishap ",
-        "url": "https://www.creativebloq.com/entertainment/new-taylor-swift-patient-0-cover-accused-of-photoshop-mishap",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Brand Impact Award Winners 2026 have been revealed! ",
-        "url": "https://www.creativebloq.com/design/branding/the-brand-impact-award-winners-2026-have-been-revealed",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How Fusion Studio and expert compositing skills brought the striking animation Danse Macabre to life ",
-        "url": "https://www.creativebloq.com/3d/vfx-cgi/how-fusion-studio-and-expert-compositing-skills-brought-the-striking-animation-danse-macabre-to-life",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "More REM sleep linked to lower risk of 83 diseases",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260923035930.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "GLP-1 weight loss and diabetes drugs linked to nutritional deficiencies in nearly 1 in 6 children",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260923035926.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Breakthrough drug reverses skin aging and dramatically speeds healing",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260922223008.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "The “big one” might not come alone: Two major West Coast faults may strike back to back",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260922222730.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists say a critical Atlantic Ocean current is weakening and the effects could be global",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260922222558.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "This emerging treatment could help people avoid knee replacement surgery",
         "url": "https://www.sciencedaily.com/releases/2026/09/260922052030.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Coffee doesn’t have to keep you awake to disrupt your sleep",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260922005719.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "One of America’s largest reservoirs just hit a record low",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260922005701.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "The end of humanity? What would happen if the Yellowstone supervolcano erupted now",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260922005655.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "The LHC just ruled out another hiding place for quantum black holes",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260922005649.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Stem cells reverse stroke damage and restore movement in mice",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260921081116.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "MIT’s tiny flying robot gets 450% faster with AI",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260921081114.htm",
+        "title": "Why Viking museums still can’t escape the warrior myth",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260922005805.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "All paralogue dates and deadlines in Fire Emblem Fortune's Weave",
-        "url": "https://www.polygon.com/all-fire-emblem-fortunes-weave-paralogues-dates/",
+        "title": "Magic: The Gathering's 10 Best Counterspells, Ranked",
+        "url": "https://www.polygon.com/mtg-best-counterspells-in-magic-the-gathering/",
         "source": "Polygon"
       },
       {
-        "title": "World of Warcraft Would Never Work on PS5 or Xbox",
-        "url": "https://www.polygon.com/world-of-warcraft-wow-forever-gamepad-console/",
+        "title": "How to solve the blood transfusion puzzle in Silent Hill Townfall",
+        "url": "https://www.polygon.com/silent-hill-townfall-blood-transfusion-door-puzzle-blood-bags/",
         "source": "Polygon"
       },
       {
-        "title": "Hackers Behind Flopped 'GTA 6' Leak Officially Threatening the FBI Now",
-        "url": "https://www.polygon.com/fbi-hacked-gta-6-leak-shinyhunters-data-agents-jobs/",
+        "title": "How to save the patient in Silent Hill Townfall",
+        "url": "https://www.polygon.com/silent-hill-townfall-patient-puzzle-walkthrough-vitals-medicine/",
         "source": "Polygon"
       },
       {
-        "title": "All classes and unlock requirements in Fire Emblem Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-classes-unlock-secret/",
+        "title": "How to unlock the Community Gardens gate in Silent Hill Townfall",
+        "url": "https://www.polygon.com/silent-hill-townfall-unlock-the-community-gardens-gate-door-key-jane/",
         "source": "Polygon"
       },
       {
-        "title": "Enter Polygon's Point It Out x Secretlab Giveaway",
-        "url": "https://www.polygon.com/secretlab-polygon-point-it-out-titan-evo-chair-contest-giveaway/",
+        "title": "How to solve the scales puzzle in Silent Hill Townfall",
+        "url": "https://www.polygon.com/silent-hill-townfall-scales-puzzle-walkthrough-pharmacy-locker-jess/",
         "source": "Polygon"
       },
       {
-        "title": "Leaked Xbox Memo Reveals Obsidian’s Fate Under Bethesda",
-        "url": "https://www.polygon.com/bethesda-obsidian-studio-reorganization-xbox-layoffs/",
+        "title": "Where to find the reception door code in Silent Hill Townfall",
+        "url": "https://www.polygon.com/silent-hill-townfall-reception-door-code-puzzle-clinic/",
         "source": "Polygon"
       },
       {
-        "title": "Discord's Controversial Age Verification Policy Starts Today",
-        "url": "https://www.polygon.com/discord-controversial-age-verification-starting/",
+        "title": "How to open the human organ box in Silent Hill Townfall",
+        "url": "https://www.polygon.com/silent-hill-townfall-human-organ-box-puzzle-walkthrough-restore-power/",
         "source": "Polygon"
       }
     ],
