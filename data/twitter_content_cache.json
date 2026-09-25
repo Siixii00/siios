@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-25T01:12:02.387338",
-    "total_items": 61
+    "last_updated": "2026-09-25T07:14:25.687235",
+    "total_items": 54
   },
   "content": {
     "tech": [
@@ -9,71 +9,59 @@
         "title": "F-Droid 2.0",
         "url": "https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html",
         "source": "Hacker News",
-        "score": 918
+        "score": 1146
       },
       {
         "title": "Show HN: Make cursed fonts like Times New Bastard",
         "url": "https://bastardica.mitpit.com",
         "source": "Hacker News",
-        "score": 464
+        "score": 626
       },
       {
         "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
         "url": "https://github.com/devdotfast/whiteboard",
         "source": "Hacker News",
-        "score": 186
+        "score": 274
       },
       {
         "title": "Why is the liver so weirdly regenerative?",
         "url": "https://dynomight.substack.com/p/liver",
         "source": "Hacker News",
-        "score": 233
-      },
-      {
-        "title": "Fearless SIMD v1.0",
-        "url": "https://linebender.org/blog/fearless-simd-1-0/",
-        "source": "Hacker News",
-        "score": 175
+        "score": 369
       },
       {
         "title": "2DWillNeverDie",
         "url": "https://2dwillneverdie.com/",
         "source": "Hacker News",
-        "score": 96
+        "score": 202
+      },
+      {
+        "title": "Fearless SIMD v1.0",
+        "url": "https://linebender.org/blog/fearless-simd-1-0/",
+        "source": "Hacker News",
+        "score": 243
       },
       {
         "title": "Rails World 2026 Opening Keynote [video]",
         "url": "https://www.youtube.com/watch?v=vDjW_dRyKXY",
         "source": "Hacker News",
-        "score": 222
-      },
-      {
-        "title": "My weird new hobby: Wandering around Tokyo on Google Maps",
-        "url": "https://ahmedhossamdev.com/writing/my-weird-new-hobby-wandering-around-tokyo/",
-        "source": "Hacker News",
-        "score": 216
+        "score": 307
       },
       {
         "title": "Toyota is taking the Corolla electric",
         "url": "https://electrek.co/2026/09/23/toyota-best-selling-corolla-electric/",
         "source": "Hacker News",
-        "score": 207
+        "score": 298
+      },
+      {
+        "title": "My weird new hobby: Wandering around Tokyo on Google Maps",
+        "url": "https://ahmedhossamdev.com/writing/my-weird-new-hobby-wandering-around-tokyo/",
+        "source": "Hacker News",
+        "score": 297
       },
       {
         "title": "Using LLMs to trace alchemical knowledge and decode 17th century letters",
         "url": "https://resobscura.substack.com/p/ai-labs-need-to-start-funding-historical",
-        "source": "Hacker News",
-        "score": 61
-      },
-      {
-        "title": "Back and shoulder surgery is often worse than useless",
-        "url": "https://www.economist.com/leaders/2026/09/24/back-and-shoulder-surgery-is-often-worse-than-useless",
-        "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "Show HN: Koi.rest – watch some fish and regain your balance",
-        "url": "https://koi.rest",
         "source": "Hacker News",
         "score": 119
       },
@@ -81,19 +69,31 @@
         "title": "Google’s Project Suncatcher to put ML infrastructure in space",
         "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/",
         "source": "Hacker News",
-        "score": 95
-      },
-      {
-        "title": "California is chasing wealth that has feet",
-        "url": "https://blog.landeconomics.org/p/california-is-chasing-wealth-that",
-        "source": "Hacker News",
-        "score": 120
+        "score": 168
       },
       {
         "title": "Two-tier encryption in the UK",
         "url": "https://macanorak.com/two-tier-encryption-in-the-uk/",
         "source": "Hacker News",
-        "score": 374
+        "score": 423
+      },
+      {
+        "title": "Goodbye Google",
+        "url": "https://robert.ocallahan.org/2026/09/goodbye-google.html",
+        "source": "Hacker News",
+        "score": 157
+      },
+      {
+        "title": "Writing Parquet files using Haskell",
+        "url": "https://www.datahaskell.org/blog/2026/09/18/writing-parquet-files-using-haskell.html",
+        "source": "Hacker News",
+        "score": 50
+      },
+      {
+        "title": "Opus 5.5 is good at explainer videos",
+        "url": "https://launchvideo.io",
+        "source": "Hacker News",
+        "score": 218
       }
     ],
     "ai": [
@@ -101,70 +101,80 @@
         "title": "Rails World 2026 Opening Keynote [video]",
         "url": "https://www.youtube.com/watch?v=vDjW_dRyKXY",
         "source": "Hacker News AI",
-        "score": 222
+        "score": 307
       },
       {
         "title": "Using LLMs to trace alchemical knowledge and decode 17th century letters",
         "url": "https://resobscura.substack.com/p/ai-labs-need-to-start-funding-historical",
         "source": "Hacker News AI",
-        "score": 61
-      },
-      {
-        "title": "Show HN: Koi.rest – watch some fish and regain your balance",
-        "url": "https://koi.rest",
-        "source": "Hacker News AI",
         "score": 119
-      },
-      {
-        "title": "Security auditing in the age of (good enough) AI",
-        "url": "https://blog.trailofbits.com/2026/09/18/auditing-in-the-age-of-good-enough-ai/",
-        "source": "Hacker News AI",
-        "score": 54
-      },
-      {
-        "title": "Early rogue AI agent activity and attempts to hack found on urlquery.net",
-        "url": "https://transluce.org/agent-activity",
-        "source": "Hacker News AI",
-        "score": 242
-      },
-      {
-        "title": "Tutoring company tells parents to save their money and 'use AI instead'",
-        "url": "https://www.afr.com/policy/health-and-education/tutoring-company-tell-parents-to-save-their-money-and-use-ai-instead-20260923-p60z0r",
-        "source": "Hacker News AI",
-        "score": 73
       },
       {
         "title": "Opus 5.5 is good at explainer videos",
         "url": "https://launchvideo.io",
         "source": "Hacker News AI",
-        "score": 125
+        "score": 218
       },
       {
-        "title": "'That's so AI ' What gen Alpha's biggest insult tells us",
-        "url": "https://www.theguardian.com/society/2026/sep/24/thats-so-ai-what-gen-alphas-biggest-insult-tells-us",
+        "title": "Security auditing in the age of (good enough) AI",
+        "url": "https://blog.trailofbits.com/2026/09/18/auditing-in-the-age-of-good-enough-ai/",
         "source": "Hacker News AI",
-        "score": 115
-      },
-      {
-        "title": "AI safety is mostly a sex cult in Berkeley",
-        "url": "https://www.verysane.ai/p/ai-safety-is-mostly-a-sex-cult-in",
-        "source": "Hacker News AI",
-        "score": 87
+        "score": 84
       },
       {
         "title": "Show HN: Air-gapped file encryption as self-decrypting HTML page",
         "url": "https://cms-sfx-demo.apeleg.com/",
         "source": "Hacker News AI",
-        "score": 32
+        "score": 62
       },
       {
-        "title": "SkillOpt: Training Loop for Agent Skills",
-        "url": "https://microsoft.github.io/SkillOpt/",
+        "title": "Show HN: Koi.rest – watch some fish and regain your balance",
+        "url": "https://koi.rest",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 175
+      },
+      {
+        "title": "Tutoring company tells parents to save their money and 'use AI instead'",
+        "url": "https://www.afr.com/policy/health-and-education/tutoring-company-tell-parents-to-save-their-money-and-use-ai-instead-20260923-p60z0r",
+        "source": "Hacker News AI",
+        "score": 106
+      },
+      {
+        "title": "'That's so AI ' What gen Alpha's biggest insult tells us",
+        "url": "https://www.theguardian.com/society/2026/sep/24/thats-so-ai-what-gen-alphas-biggest-insult-tells-us",
+        "source": "Hacker News AI",
+        "score": 143
+      },
+      {
+        "title": "Early rogue AI agent activity and attempts to hack found on urlquery.net",
+        "url": "https://transluce.org/agent-activity",
+        "source": "Hacker News AI",
+        "score": 256
+      },
+      {
+        "title": "Linux support is coming to Snapdragon X2 series",
+        "url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
+        "source": "Hacker News AI",
+        "score": 596
+      },
+      {
+        "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
+        "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
+        "source": "Hacker News AI",
+        "score": 763
       }
     ],
     "news": [
+      {
+        "title": "US and China must act as responsible powers together, Xi says as Trump toasts friendship at state dinner",
+        "url": "https://www.bbc.co.uk/news/articles/cxq63dqp93n1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Xi got Trump's red carpet welcome - but not everything he wanted",
+        "url": "https://www.bbc.co.uk/news/articles/cr93e4x7kdjjo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Netanyahu defends Israeli military action as delegates walk out before UN speech",
         "url": "https://www.bbc.co.uk/news/articles/c3y0z7kxlegdo?at_medium=RSS&at_campaign=rss",
@@ -189,56 +199,25 @@
         "title": "Four civilians killed in Pakistani strikes in Afghanistan, Taliban says",
         "url": "https://www.bbc.co.uk/news/articles/cm86xn0nnw58o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Priest killed and four injured in knife attack at Polish abbey",
-        "url": "https://www.bbc.co.uk/news/articles/c607lrvm41l3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Italy ministers agree to ban burqa and niqab in school and cap foreigners in class",
-        "url": "https://www.bbc.co.uk/news/articles/cw99d8g48873o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " Amazon's early Prime Day deals include massive discounts on coffee makers of every kind ",
-        "url": "https://www.creativebloq.com/design/product-design/amazons-early-prime-day-deals-include-massive-discounts-on-coffee-makers-of-every-kind",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How a studio created an \"impossible\" animated symphony using Autodesk's AI-driven mocap tech ",
-        "url": "https://www.creativebloq.com/art/animation/how-a-studio-created-an-impossible-animated-symphony-using-autodesks-ai-driven-mocap-tech",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Canva adds 1000+ new Monotype fonts for global creatives ",
-        "url": "https://www.creativebloq.com/design/canva-adds-1000-new-monotype-fonts-for-global-creatives",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Taylor Swift iPhone colour theory doesn't feel like a joke anymore ",
-        "url": "https://www.creativebloq.com/design/branding/the-taylor-swift-iphone-colour-theory-feels-like-its-not-a-joke-anymore",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This tactical RPG channels a classic Sega series while putting its own spin on the retro-modern HD-2D aesthetic ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/this-tactical-rpg-channels-a-classic-sega-series-while-giving-its-own-spin-on-the-retro-modern-hd-2d-aesthetic",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Microsoft's dystopian new advertising idea sounds like a nightmare for gamers ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/microsofts-dystopian-new-advertising-idea-sounds-like-a-nightmare-for-gamers",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " People think Disney is trying to erase every trace of Hexed's original concept ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/is-disney-really-trying-to-erase-its-original-concept-for-hexed",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
+      {
+        "title": "“We found something never seen before” – A dead star is producing a shock wave that shouldn’t exist",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260924020410.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists gave worms magnetic bacteria. They lived 43% longer",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260924020357.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Ancient meteorites reveal a powerful force that helped build the Solar System",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260924020355.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "ADHD and autism diagnoses have surged. A massive study may help explain why",
         "url": "https://www.sciencedaily.com/releases/2026/09/260924020353.htm",
@@ -250,32 +229,27 @@
         "source": "Science Daily"
       },
       {
+        "title": "Scientists discover an “impossible” cellular survival pathway that could help fight cancer",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260923035939.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Scientists find two tiny new snails with shells that close like doors",
         "url": "https://www.sciencedaily.com/releases/2026/09/260923035936.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Distant time crystals can somehow fall into the same rhythm",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260923035934.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists thought they knew how this 70-year-old leukemia drug worked",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260923035932.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "More REM sleep linked to lower risk of 83 diseases",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260923035930.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "When what you see doesn’t make sense, your brain does something remarkable",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260923035929.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "2026’s Most Inventive Sci-Fi Thriller Is Officially Making Its Streaming Debut",
+        "url": "https://www.polygon.com/backrooms-hbo-max-streaming-september-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "One of DC’s Best Superhero Shows Is Now Free to Stream",
+        "url": "https://www.polygon.com/teen-titans-2003-dc-comics-rec/",
+        "source": "Polygon"
+      },
       {
         "title": "8 Best BioWare Games That Aged Like Fine Wine",
         "url": "https://www.polygon.com/best-bioware-games/",
@@ -299,16 +273,6 @@
       {
         "title": "The Division's New Release is Going Up Against Zelda",
         "url": "https://www.polygon.com/the-division-2-echoes-of-central-park-dlc-release-date/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All Xbox rumors, changes, and cancelled games in 2026 (so far)",
-        "url": "https://www.polygon.com/xbox-layoffs-cancellations-studio-closures/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How to solve the projector puzzle in Silent Hill Townfall",
-        "url": "https://www.polygon.com/silent-hill-townfall-projector-puzzle-slides-lens-bulb/",
         "source": "Polygon"
       }
     ],
