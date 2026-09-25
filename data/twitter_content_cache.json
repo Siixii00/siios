@@ -1,164 +1,163 @@
 {
   "metadata": {
-    "last_updated": "2026-09-25T18:16:54.678464",
-    "total_items": 60
+    "last_updated": "2026-09-25T22:01:07.771568",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "Platform-Independent SIMD in Go",
+        "title": "Ollaya – Ollama for open-source, Jev-style decision models",
+        "url": "https://ollaya.dev/",
+        "source": "Hacker News",
+        "score": 214
+      },
+      {
+        "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
+        "url": "https://swarmtraces.org/",
+        "source": "Hacker News",
+        "score": 17
+      },
+      {
+        "title": "Platform-independent SIMD in Go",
         "url": "https://go.dev/blog/simd-experiment",
         "source": "Hacker News",
-        "score": 262
+        "score": 330
       },
       {
         "title": "Git-bug: Distributed, offline-first bug tracker embedded in Git",
         "url": "https://github.com/git-bug/git-bug",
         "source": "Hacker News",
-        "score": 213
+        "score": 272
       },
       {
         "title": "First Principles Thinking",
         "url": "https://sunilsadasivan.com/writing/first-principles-thinking/",
         "source": "Hacker News",
-        "score": 108
+        "score": 189
+      },
+      {
+        "title": "Show HN: Jev Plays Pokémon Red",
+        "url": "https://jev-pokemon.vercel.app/",
+        "source": "Hacker News",
+        "score": 80
+      },
+      {
+        "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+        "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
+        "source": "Hacker News",
+        "score": 317
+      },
+      {
+        "title": "Gravity seems holographic. What does that mean for reality?",
+        "url": "https://www.quantamagazine.org/gravity-seems-holographic-what-does-that-mean-for-reality-20260925/",
+        "source": "Hacker News",
+        "score": 74
+      },
+      {
+        "title": "Remembering Johannes Doerfert",
+        "url": "https://blog.llvm.org/posts/2026-09-24-rememberingjohannesdoerfert/",
+        "source": "Hacker News",
+        "score": 14
+      },
+      {
+        "title": "Alan Kay: Shannon gave us a way of dealing with noisy channels [video]",
+        "url": "https://www.youtube.com/watch?v=Cjntrqhn8pk",
+        "source": "Hacker News",
+        "score": 98
+      },
+      {
+        "title": "Show HN: Make math automatic with Mathy",
+        "url": "https://gmays.com/making-math-automatic-with-mathy/",
+        "source": "Hacker News",
+        "score": 50
       },
       {
         "title": "Pentium II at 600Mhz with Voodoo 3 Emulated on 86Box with M6 Mac Mini",
         "url": "https://nyaa.sh/reviews/mac-mini-m6-emulation",
         "source": "Hacker News",
-        "score": 213
+        "score": 257
       },
       {
-        "title": "Classified Estimates Show the NSA Is Paying Billions to Test AI Models",
-        "url": "https://www.washingtonsun.com/technology/classified-estimates-nsa-paying-billions-to-test-ai-models",
+        "title": "How video games inspire great UX (2019)",
+        "url": "https://jenson.org/games/",
         "source": "Hacker News",
-        "score": 128
+        "score": 70
       },
       {
-        "title": "F-Droid 2.0",
-        "url": "https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html",
+        "title": "Bwbach, My Guardian Goblin",
+        "url": "https://robertmay.photography/journal/bwbach-my-guardian-goblin",
         "source": "Hacker News",
-        "score": 1405
+        "score": 17
       },
       {
-        "title": "Ink and Switch Interactive Homepage",
+        "title": "Ink and Switch interactive homepage",
         "url": "https://www.inkandswitch.com/",
         "source": "Hacker News",
-        "score": 164
-      },
-      {
-        "title": "Dutch governments builds alternative for Microsoft based on NixOS",
-        "url": "https://www.dawo.community/en/",
-        "source": "Hacker News",
-        "score": 848
-      },
-      {
-        "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
-        "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
-        "source": "Hacker News",
-        "score": 207
-      },
-      {
-        "title": "Factorio that you can touch",
-        "url": "https://factorio.com/blog/post/fff-447",
-        "source": "Hacker News",
-        "score": 173
-      },
-      {
-        "title": "Show HN: Make cursed fonts like Times New Bastard",
-        "url": "https://bastardica.mitpit.com",
-        "source": "Hacker News",
-        "score": 830
-      },
-      {
-        "title": "Amiga Screens: A Primer",
-        "url": "https://www.datagubbe.se/amscr/",
-        "source": "Hacker News",
-        "score": 99
-      },
-      {
-        "title": "CVE-2025-13032: Entering and Breaking the Avast Antivirus Sandbox Part 2",
-        "url": "https://www.safateam.com/intelligence-hub/research/technical-articles/cve-2025-13032-entering-and-breaking-the-avast-antivirus-sandbox-part-2",
-        "source": "Hacker News",
-        "score": 99
-      },
-      {
-        "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
-        "url": "https://github.com/devdotfast/whiteboard",
-        "source": "Hacker News",
-        "score": 374
-      },
-      {
-        "title": "What About Rails?",
-        "url": "https://jardo.dev/what-about-rails",
-        "source": "Hacker News",
-        "score": 227
+        "score": 212
       }
     ],
     "ai": [
       {
-        "title": "Classified Estimates Show the NSA Is Paying Billions to Test AI Models",
-        "url": "https://www.washingtonsun.com/technology/classified-estimates-nsa-paying-billions-to-test-ai-models",
+        "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
+        "url": "https://swarmtraces.org/",
         "source": "Hacker News AI",
-        "score": 128
+        "score": 17
       },
       {
         "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
         "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
         "source": "Hacker News AI",
-        "score": 207
+        "score": 317
       },
       {
-        "title": "What About Rails?",
-        "url": "https://jardo.dev/what-about-rails",
+        "title": "Meta's Muse appears to use an OpenAI model labeled muse-special",
+        "url": "https://mouse.dev/blog/muse-special/",
         "source": "Hacker News AI",
-        "score": 227
+        "score": 79
       },
       {
-        "title": "Microsoft Abandons Personal AI Chatbot Race with Copilot Reboot",
-        "url": "https://www.bloomberg.com/news/articles/2026-09-25/microsoft-abandons-personal-ai-chatbot-race-with-copilot-reboot",
+        "title": "Show HN: Doom or Bloom, map your AI worldview",
+        "url": "https://www.doom-or-bloom.com",
         "source": "Hacker News AI",
-        "score": 57
+        "score": 44
       },
       {
-        "title": "Rails World 2026 Opening Keynote [video]",
-        "url": "https://www.youtube.com/watch?v=vDjW_dRyKXY",
+        "title": "Show HN: Jevgpt – reinventing the wheel with another wheel",
+        "url": "https://news.ycombinator.com/item?id=49823332",
         "source": "Hacker News AI",
-        "score": 406
+        "score": 5
       },
       {
-        "title": "Opus 5.5 is good at explainer videos",
-        "url": "https://launchvideo.io",
+        "title": "Too AI; Didn't Read",
+        "url": "https://www.tai-dr.com/",
         "source": "Hacker News AI",
-        "score": 374
+        "score": 86
       },
       {
         "title": "Using LLMs to trace alchemical knowledge and decode 17th century letters",
         "url": "https://resobscura.substack.com/p/ai-labs-need-to-start-funding-historical",
         "source": "Hacker News AI",
-        "score": 160
+        "score": 164
       },
       {
-        "title": "Jevmem – automatic project memory for Claude Code, built on Jev",
-        "url": "https://github.com/Avinash-jetwani/jevmem",
+        "title": "What About Rails?",
+        "url": "https://jardo.dev/what-about-rails",
         "source": "Hacker News AI",
-        "score": 49
+        "score": 291
       },
       {
-        "title": "The cheap new AI model taking aim at OpenAI and Anthropic",
-        "url": "https://www.ft.com/content/456884ea-2558-4648-8036-a77b73733430",
+        "title": "\"Someone just sent me an ad that features an AI version of me. What do I do?\"",
+        "url": "https://bsky.app/profile/lebassett.bsky.social/post/3mwel345jr22s",
         "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "Tutoring company tells parents to save their money and 'use AI instead'",
-        "url": "https://www.afr.com/policy/health-and-education/tutoring-company-tell-parents-to-save-their-money-and-use-ai-instead-20260923-p60z0r",
-        "source": "Hacker News AI",
-        "score": 131
+        "score": 15
       }
     ],
     "news": [
+      {
+        "title": "Russia targeting 'ordinary life' with attacks on Ukraine's data centres, Zelensky says",
+        "url": "https://www.bbc.co.uk/news/articles/c84gkwgk7d06o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Special agents' blood and urine test results stolen in FBI hack",
         "url": "https://www.bbc.co.uk/news/articles/cw62me2vlj07o?at_medium=RSS&at_campaign=rss",
@@ -170,13 +169,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Xi got Trump's red carpet welcome - but not everything he wanted",
-        "url": "https://www.bbc.co.uk/news/articles/cr93e4x7kdjjo?at_medium=RSS&at_campaign=rss",
+        "title": "Supreme Court allows Trump to use controversial database to check voter citizenship",
+        "url": "https://www.bbc.co.uk/news/articles/ck05rrj3jeylo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Supreme Court allows Trump to use controversial database to check voter citizenship",
-        "url": "https://www.bbc.co.uk/news/articles/ck05rrj3jeylo?at_medium=RSS&at_campaign=rss",
+        "title": "Trump's plans for massive arch move ahead",
+        "url": "https://www.bbc.co.uk/news/articles/cq0lrr8kxy0lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -187,11 +186,6 @@
       {
         "title": "Man shot during 2024 Trump campaign rally in Butler dies",
         "url": "https://www.bbc.co.uk/news/articles/c5dj401d88l3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Senior Kazakh officials detained after 14 service members swept out to sea",
-        "url": "https://www.bbc.co.uk/news/articles/cm0reew1591zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -271,38 +265,38 @@
     ],
     "gaming": [
       {
-        "title": "'I Play Rocky' Review: Your Dad's New Favorite Movie Has Officially Arrived",
-        "url": "https://www.polygon.com/i-play-rocky-review/",
+        "title": "Power upgrade point locations in Control Resonant",
+        "url": "https://www.polygon.com/control-resonant-power-upgrade-point-locations/",
         "source": "Polygon"
       },
       {
-        "title": "This 'Overwhelmingly Positive' Steam Cozy Sim Is Officially Outselling Major Game Releases",
-        "url": "https://www.polygon.com/steam-top-sellers-dressmaker-new-releases-cozy-sim-what-is/",
+        "title": "'Power Lines' quest walkthrough in Control Resonant",
+        "url": "https://www.polygon.com/control-resonant-power-lines-quest-walkthrough-tuning-forks/",
         "source": "Polygon"
       },
       {
-        "title": "All key of the Diadem locations in Fire Emblem Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-all-key-of-the-diadem-location-where-to-find/",
+        "title": "GTA 6 and Fire Emblem Have a Weird Connection No One Expected",
+        "url": "https://www.polygon.com/gta-6-fire-emblem-manatees-sea-beast/",
         "source": "Polygon"
       },
       {
-        "title": "Shogun Producer Wants to Turn Mary Poppins Into a ‘Complex’ TV Series?",
-        "url": "https://www.polygon.com/mary-poppins-show-in-development-shogun-disney/",
+        "title": "10 New Movies to Watch This Weekend on Netflix, Prime Video, and HBO Max (September 25-27)",
+        "url": "https://www.polygon.com/new-movies-streaming-this-weekend-netflix-september-25-27/",
         "source": "Polygon"
       },
       {
-        "title": "All fault locations and traversal abilities in Control Resonant",
-        "url": "https://www.polygon.com/control-resonant-fault-traversal-ability-locations/",
+        "title": "Best gifts for each character in Fire Emblem: Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-best-gifts-each-character/",
         "source": "Polygon"
       },
       {
-        "title": "'Evil Dead Burn' Gets Its HBO Max Streaming Date Just in Time for Halloween",
-        "url": "https://www.polygon.com/evil-dead-burn-hbo-max-streaming-date/",
+        "title": "Ridley Scott's Near-Perfect Noir Thriller Is Officially Free to Watch on YouTube",
+        "url": "https://www.polygon.com/ridley-scott-american-gangster-streaming-free-tubi-september-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Critical Role Just Revealed the Dirtiest Dungeon Master Trick of All Time",
-        "url": "https://www.polygon.com/critical-role-dnd-dungeon-master-trick/",
+        "title": "8 New TV Shows to Watch This Weekend on Netflix, FX, and Apple TV (September 25-27)",
+        "url": "https://www.polygon.com/new-tv-shows-streaming-this-weekend-netflix-september-25-27/",
         "source": "Polygon"
       }
     ],
