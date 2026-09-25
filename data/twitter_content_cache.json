@@ -1,178 +1,182 @@
 {
   "metadata": {
-    "last_updated": "2026-09-25T07:14:25.687235",
-    "total_items": 54
+    "last_updated": "2026-09-25T13:20:06.259263",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
+        "title": "Dutch governments builds alternative for Microsoft based on NixOS",
+        "url": "https://www.dawo.community/en/",
+        "source": "Hacker News",
+        "score": 499
+      },
+      {
+        "title": "Platform-Independent SIMD in Go",
+        "url": "https://go.dev/blog/simd-experiment",
+        "source": "Hacker News",
+        "score": 57
+      },
+      {
+        "title": "I'm Tired of Being on the Network",
+        "url": "https://matduggan.com/im-tired-of-being-on-the-network/",
+        "source": "Hacker News",
+        "score": 25
+      },
+      {
+        "title": "Git-bug: Distributed, offline-first bug tracker embedded in Git",
+        "url": "https://github.com/git-bug/git-bug",
+        "source": "Hacker News",
+        "score": 52
+      },
+      {
+        "title": "Pentium II at 600Mhz with Voodoo 3 Emulated on 86Box with M6 Mac Mini",
+        "url": "https://nyaa.sh/reviews/mac-mini-m6-emulation",
+        "source": "Hacker News",
+        "score": 124
+      },
+      {
+        "title": "Ink and Switch Interactive Homepage",
+        "url": "https://www.inkandswitch.com/",
+        "source": "Hacker News",
+        "score": 75
+      },
+      {
         "title": "F-Droid 2.0",
         "url": "https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html",
         "source": "Hacker News",
-        "score": 1146
+        "score": 1312
+      },
+      {
+        "title": "Topcoat is pushing the boundary of server applications with Rust",
+        "url": "https://tokio.rs/blog/2026-09-24-topcoat-server-applications",
+        "source": "Hacker News",
+        "score": 33
+      },
+      {
+        "title": "Nobody Asked for a Crab Chair",
+        "url": "https://newmobility.com/nobody-asked-for-a-crab-chair/",
+        "source": "Hacker News",
+        "score": 3
+      },
+      {
+        "title": "CVE-2025-13032: Entering and Breaking the Avast Antivirus Sandbox Part 2",
+        "url": "https://www.safateam.com/intelligence-hub/research/technical-articles/cve-2025-13032-entering-and-breaking-the-avast-antivirus-sandbox-part-2",
+        "source": "Hacker News",
+        "score": 70
       },
       {
         "title": "Show HN: Make cursed fonts like Times New Bastard",
         "url": "https://bastardica.mitpit.com",
         "source": "Hacker News",
-        "score": 626
+        "score": 755
+      },
+      {
+        "title": "Special Projects (2016)",
+        "url": "https://openai.com/index/special-projects/",
+        "source": "Hacker News",
+        "score": 40
       },
       {
         "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
         "url": "https://github.com/devdotfast/whiteboard",
         "source": "Hacker News",
-        "score": 274
+        "score": 339
       },
       {
-        "title": "Why is the liver so weirdly regenerative?",
-        "url": "https://dynomight.substack.com/p/liver",
+        "title": "Amiga Screens: A Primer",
+        "url": "https://www.datagubbe.se/amscr/",
         "source": "Hacker News",
-        "score": 369
+        "score": 32
       },
       {
-        "title": "2DWillNeverDie",
-        "url": "https://2dwillneverdie.com/",
+        "title": "Boards of Casio",
+        "url": "https://www.ambionix.com/blog/boards-of-casio/",
         "source": "Hacker News",
-        "score": 202
-      },
-      {
-        "title": "Fearless SIMD v1.0",
-        "url": "https://linebender.org/blog/fearless-simd-1-0/",
-        "source": "Hacker News",
-        "score": 243
-      },
-      {
-        "title": "Rails World 2026 Opening Keynote [video]",
-        "url": "https://www.youtube.com/watch?v=vDjW_dRyKXY",
-        "source": "Hacker News",
-        "score": 307
-      },
-      {
-        "title": "Toyota is taking the Corolla electric",
-        "url": "https://electrek.co/2026/09/23/toyota-best-selling-corolla-electric/",
-        "source": "Hacker News",
-        "score": 298
-      },
-      {
-        "title": "My weird new hobby: Wandering around Tokyo on Google Maps",
-        "url": "https://ahmedhossamdev.com/writing/my-weird-new-hobby-wandering-around-tokyo/",
-        "source": "Hacker News",
-        "score": 297
-      },
-      {
-        "title": "Using LLMs to trace alchemical knowledge and decode 17th century letters",
-        "url": "https://resobscura.substack.com/p/ai-labs-need-to-start-funding-historical",
-        "source": "Hacker News",
-        "score": 119
-      },
-      {
-        "title": "Google’s Project Suncatcher to put ML infrastructure in space",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-project-suncatcher-facts/",
-        "source": "Hacker News",
-        "score": 168
-      },
-      {
-        "title": "Two-tier encryption in the UK",
-        "url": "https://macanorak.com/two-tier-encryption-in-the-uk/",
-        "source": "Hacker News",
-        "score": 423
-      },
-      {
-        "title": "Goodbye Google",
-        "url": "https://robert.ocallahan.org/2026/09/goodbye-google.html",
-        "source": "Hacker News",
-        "score": 157
-      },
-      {
-        "title": "Writing Parquet files using Haskell",
-        "url": "https://www.datahaskell.org/blog/2026/09/18/writing-parquet-files-using-haskell.html",
-        "source": "Hacker News",
-        "score": 50
-      },
-      {
-        "title": "Opus 5.5 is good at explainer videos",
-        "url": "https://launchvideo.io",
-        "source": "Hacker News",
-        "score": 218
+        "score": 17
       }
     ],
     "ai": [
       {
+        "title": "Nobody Asked for a Crab Chair",
+        "url": "https://newmobility.com/nobody-asked-for-a-crab-chair/",
+        "source": "Hacker News AI",
+        "score": 3
+      },
+      {
         "title": "Rails World 2026 Opening Keynote [video]",
         "url": "https://www.youtube.com/watch?v=vDjW_dRyKXY",
         "source": "Hacker News AI",
-        "score": 307
+        "score": 363
       },
       {
-        "title": "Using LLMs to trace alchemical knowledge and decode 17th century letters",
-        "url": "https://resobscura.substack.com/p/ai-labs-need-to-start-funding-historical",
+        "title": "What About Rails?",
+        "url": "https://jardo.dev/what-about-rails",
         "source": "Hacker News AI",
-        "score": 119
+        "score": 121
       },
       {
         "title": "Opus 5.5 is good at explainer videos",
         "url": "https://launchvideo.io",
         "source": "Hacker News AI",
-        "score": 218
+        "score": 312
       },
       {
-        "title": "Security auditing in the age of (good enough) AI",
-        "url": "https://blog.trailofbits.com/2026/09/18/auditing-in-the-age-of-good-enough-ai/",
+        "title": "Using LLMs to trace alchemical knowledge and decode 17th century letters",
+        "url": "https://resobscura.substack.com/p/ai-labs-need-to-start-funding-historical",
         "source": "Hacker News AI",
-        "score": 84
-      },
-      {
-        "title": "Show HN: Air-gapped file encryption as self-decrypting HTML page",
-        "url": "https://cms-sfx-demo.apeleg.com/",
-        "source": "Hacker News AI",
-        "score": 62
-      },
-      {
-        "title": "Show HN: Koi.rest – watch some fish and regain your balance",
-        "url": "https://koi.rest",
-        "source": "Hacker News AI",
-        "score": 175
+        "score": 144
       },
       {
         "title": "Tutoring company tells parents to save their money and 'use AI instead'",
         "url": "https://www.afr.com/policy/health-and-education/tutoring-company-tell-parents-to-save-their-money-and-use-ai-instead-20260923-p60z0r",
         "source": "Hacker News AI",
-        "score": 106
+        "score": 122
+      },
+      {
+        "title": "Show HN: Air-gapped file encryption as self-decrypting HTML page",
+        "url": "https://cms-sfx-demo.apeleg.com/",
+        "source": "Hacker News AI",
+        "score": 74
       },
       {
         "title": "'That's so AI ' What gen Alpha's biggest insult tells us",
         "url": "https://www.theguardian.com/society/2026/sep/24/thats-so-ai-what-gen-alphas-biggest-insult-tells-us",
         "source": "Hacker News AI",
-        "score": 143
+        "score": 172
       },
       {
-        "title": "Early rogue AI agent activity and attempts to hack found on urlquery.net",
-        "url": "https://transluce.org/agent-activity",
+        "title": "Security auditing in the age of (good enough) AI",
+        "url": "https://blog.trailofbits.com/2026/09/18/auditing-in-the-age-of-good-enough-ai/",
         "source": "Hacker News AI",
-        "score": 256
+        "score": 93
       },
       {
-        "title": "Linux support is coming to Snapdragon X2 series",
-        "url": "https://www.qualcomm.com/news/onq/2026/09/snapdragon-summit-agentic-ai-pcs-linux",
+        "title": "Show HN: Koi.rest – watch some fish and regain your balance",
+        "url": "https://koi.rest",
         "source": "Hacker News AI",
-        "score": 596
-      },
-      {
-        "title": "Claude discovers a novel enzyme system with CRISPR-like repeats",
-        "url": "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system",
-        "source": "Hacker News AI",
-        "score": 763
+        "score": 195
       }
     ],
     "news": [
       {
-        "title": "US and China must act as responsible powers together, Xi says as Trump toasts friendship at state dinner",
+        "title": "Trump and Xi exchange warm words at state dinner but little progress on key issues",
         "url": "https://www.bbc.co.uk/news/articles/cxq63dqp93n1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Xi got Trump's red carpet welcome - but not everything he wanted",
         "url": "https://www.bbc.co.uk/news/articles/cr93e4x7kdjjo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Pope warns against 'losing humanity' to AI machines",
+        "url": "https://www.bbc.co.uk/news/articles/cmq8j904212po?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Internet restricted after fighting breaks out in Ethiopia's Tigray region",
+        "url": "https://www.bbc.co.uk/news/articles/cqp8dxxg325no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -186,22 +190,48 @@
         "source": "BBC World"
       },
       {
-        "title": "Hundreds of thousands expected in Paris for Pope's visit",
-        "url": "https://www.bbc.co.uk/news/articles/cmq8j904212po?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Why Australia chose the world's biggest political stage to reveal OpenAI hack",
-        "url": "https://www.bbc.co.uk/news/articles/cr3eqk15ld14o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Four civilians killed in Pakistani strikes in Afghanistan, Taliban says",
-        "url": "https://www.bbc.co.uk/news/articles/cm86xn0nnw58o?at_medium=RSS&at_campaign=rss",
+        "title": "Jay-Z rape accuser says her allegation was false",
+        "url": "https://www.bbc.co.uk/news/articles/cm4g53547wygo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " GTA 6's $400 collector's box comes with a plastic crocodile, and it's genius branding ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/gta-6s-usd400-collectors-box-comes-with-a-plastic-crocodile-and-its-genius-branding",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Meta’s new AI avatar is making me feel infantilised ",
+        "url": "https://www.creativebloq.com/ai/metas-new-ai-avatar-is-making-me-feel-infantilised",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Quote of the Day by Es Devlin: \"I’ve learned that I make my most interesting work when I don’t know the rules and I don’t know what I’m doing\" ",
+        "url": "https://www.creativebloq.com/creative-inspiration/quote-of-the-day-by-es-devlin-ive-learned-that-i-make-my-most-interesting-work-when-i-dont-know-the-rules-and-i-dont-know-what-im-doing",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Sticker addicts rejoice! Cricut just released two really cool label and sticker makers ",
+        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/sticker-addicts-rejoice-cricut-just-released-two-really-cool-label-and-sticker-makers",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This digital artist takes inspiration from Old Masters and orientalist paintings ",
+        "url": "https://www.creativebloq.com/art/digital-art/this-digital-artist-takes-inspiration-from-old-masters-and-orientalist-paintings",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " We were robbed of a 2D Ray Gunn movie and Hollywood’s to blame ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/we-were-robbed-of-a-2d-ray-gunn-movie-and-hollywoods-to-blame",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Sony has an idea for turning PlayStation controllers into payment devices, and everyone's saying the same thing ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/sony-has-an-idea-for-turning-playstation-controllers-into-payment-devices-and-everyones-saying-the-same-thing",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "“We found something never seen before” – A dead star is producing a shock wave that shouldn’t exist",
@@ -241,38 +271,38 @@
     ],
     "gaming": [
       {
-        "title": "2026’s Most Inventive Sci-Fi Thriller Is Officially Making Its Streaming Debut",
-        "url": "https://www.polygon.com/backrooms-hbo-max-streaming-september-2026/",
+        "title": "6 New October Games That Should Be on Your Steam Wishlist",
+        "url": "https://www.polygon.com/wishlister-september-25/",
         "source": "Polygon"
       },
       {
-        "title": "One of DC’s Best Superhero Shows Is Now Free to Stream",
-        "url": "https://www.polygon.com/teen-titans-2003-dc-comics-rec/",
+        "title": "New Magic Leak Confirms Fully-Foil Spider-Man Commander Deck",
+        "url": "https://www.polygon.com/magic-mtg-spider-man-commander-deck-christmas/",
         "source": "Polygon"
       },
       {
-        "title": "8 Best BioWare Games That Aged Like Fine Wine",
-        "url": "https://www.polygon.com/best-bioware-games/",
+        "title": "Fire Emblem: Three Houses Fans Must Play Dietrich in Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-play-dietrichs-path/",
         "source": "Polygon"
       },
       {
-        "title": "Over the Hill Is the Perfect Replacement For Forza Horizon",
-        "url": "https://www.polygon.com/over-the-hill-preview-demo-steam/",
+        "title": "Saw Creators Return to the Franchise for New Movie from Wrong Turn Director",
+        "url": "https://www.polygon.com/saw-new-movie-reveal-announcement/",
         "source": "Polygon"
       },
       {
-        "title": "Best weapon and combat ability to choose first in Control Resonant",
-        "url": "https://www.polygon.com/control-resonant-weapon-combat-ability-primary-secondary/",
+        "title": "20 Years Later, the Most Inventive Sci-Fi Superhero Series of the Century is Officially Free on Streaming",
+        "url": "https://www.polygon.com/heroes-series-free-streaming-september-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Sekiro Anime Gets Official Streaming Date and Surprise Format Change",
-        "url": "https://www.polygon.com/sekiro-anime-no-defeat-release-date-crunchyroll/",
+        "title": "PlayStation Wants You to Use Your Controller to Simplify Payments",
+        "url": "https://www.polygon.com/playstation-dualsense-nfc-payments/",
         "source": "Polygon"
       },
       {
-        "title": "The Division's New Release is Going Up Against Zelda",
-        "url": "https://www.polygon.com/the-division-2-echoes-of-central-park-dlc-release-date/",
+        "title": "5 Essential Backrooms Videos to Watch on YouTube After the Movie",
+        "url": "https://www.polygon.com/best-backrooms-videos-to-watch-on-youtube-after-the-movie/",
         "source": "Polygon"
       }
     ],
