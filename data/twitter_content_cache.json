@@ -1,172 +1,167 @@
 {
   "metadata": {
-    "last_updated": "2026-09-25T13:20:06.259263",
+    "last_updated": "2026-09-25T18:16:54.678464",
     "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "Dutch governments builds alternative for Microsoft based on NixOS",
-        "url": "https://www.dawo.community/en/",
-        "source": "Hacker News",
-        "score": 499
-      },
-      {
         "title": "Platform-Independent SIMD in Go",
         "url": "https://go.dev/blog/simd-experiment",
         "source": "Hacker News",
-        "score": 57
-      },
-      {
-        "title": "I'm Tired of Being on the Network",
-        "url": "https://matduggan.com/im-tired-of-being-on-the-network/",
-        "source": "Hacker News",
-        "score": 25
+        "score": 262
       },
       {
         "title": "Git-bug: Distributed, offline-first bug tracker embedded in Git",
         "url": "https://github.com/git-bug/git-bug",
         "source": "Hacker News",
-        "score": 52
+        "score": 213
+      },
+      {
+        "title": "First Principles Thinking",
+        "url": "https://sunilsadasivan.com/writing/first-principles-thinking/",
+        "source": "Hacker News",
+        "score": 108
       },
       {
         "title": "Pentium II at 600Mhz with Voodoo 3 Emulated on 86Box with M6 Mac Mini",
         "url": "https://nyaa.sh/reviews/mac-mini-m6-emulation",
         "source": "Hacker News",
-        "score": 124
+        "score": 213
       },
       {
-        "title": "Ink and Switch Interactive Homepage",
-        "url": "https://www.inkandswitch.com/",
+        "title": "Classified Estimates Show the NSA Is Paying Billions to Test AI Models",
+        "url": "https://www.washingtonsun.com/technology/classified-estimates-nsa-paying-billions-to-test-ai-models",
         "source": "Hacker News",
-        "score": 75
+        "score": 128
       },
       {
         "title": "F-Droid 2.0",
         "url": "https://f-droid.org/2026/09/24/f-droid-2.0-a-new-chapter-for-android-freedom.html",
         "source": "Hacker News",
-        "score": 1312
+        "score": 1405
       },
       {
-        "title": "Topcoat is pushing the boundary of server applications with Rust",
-        "url": "https://tokio.rs/blog/2026-09-24-topcoat-server-applications",
+        "title": "Ink and Switch Interactive Homepage",
+        "url": "https://www.inkandswitch.com/",
         "source": "Hacker News",
-        "score": 33
+        "score": 164
       },
       {
-        "title": "Nobody Asked for a Crab Chair",
-        "url": "https://newmobility.com/nobody-asked-for-a-crab-chair/",
+        "title": "Dutch governments builds alternative for Microsoft based on NixOS",
+        "url": "https://www.dawo.community/en/",
         "source": "Hacker News",
-        "score": 3
+        "score": 848
       },
       {
-        "title": "CVE-2025-13032: Entering and Breaking the Avast Antivirus Sandbox Part 2",
-        "url": "https://www.safateam.com/intelligence-hub/research/technical-articles/cve-2025-13032-entering-and-breaking-the-avast-antivirus-sandbox-part-2",
+        "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+        "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
         "source": "Hacker News",
-        "score": 70
+        "score": 207
+      },
+      {
+        "title": "Factorio that you can touch",
+        "url": "https://factorio.com/blog/post/fff-447",
+        "source": "Hacker News",
+        "score": 173
       },
       {
         "title": "Show HN: Make cursed fonts like Times New Bastard",
         "url": "https://bastardica.mitpit.com",
         "source": "Hacker News",
-        "score": 755
-      },
-      {
-        "title": "Special Projects (2016)",
-        "url": "https://openai.com/index/special-projects/",
-        "source": "Hacker News",
-        "score": 40
-      },
-      {
-        "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
-        "url": "https://github.com/devdotfast/whiteboard",
-        "source": "Hacker News",
-        "score": 339
+        "score": 830
       },
       {
         "title": "Amiga Screens: A Primer",
         "url": "https://www.datagubbe.se/amscr/",
         "source": "Hacker News",
-        "score": 32
+        "score": 99
       },
       {
-        "title": "Boards of Casio",
-        "url": "https://www.ambionix.com/blog/boards-of-casio/",
+        "title": "CVE-2025-13032: Entering and Breaking the Avast Antivirus Sandbox Part 2",
+        "url": "https://www.safateam.com/intelligence-hub/research/technical-articles/cve-2025-13032-entering-and-breaking-the-avast-antivirus-sandbox-part-2",
         "source": "Hacker News",
-        "score": 17
+        "score": 99
+      },
+      {
+        "title": "Show HN: Whiteboard (YC W26) – An open-source IDE for thoughtful software design",
+        "url": "https://github.com/devdotfast/whiteboard",
+        "source": "Hacker News",
+        "score": 374
+      },
+      {
+        "title": "What About Rails?",
+        "url": "https://jardo.dev/what-about-rails",
+        "source": "Hacker News",
+        "score": 227
       }
     ],
     "ai": [
       {
-        "title": "Nobody Asked for a Crab Chair",
-        "url": "https://newmobility.com/nobody-asked-for-a-crab-chair/",
+        "title": "Classified Estimates Show the NSA Is Paying Billions to Test AI Models",
+        "url": "https://www.washingtonsun.com/technology/classified-estimates-nsa-paying-billions-to-test-ai-models",
         "source": "Hacker News AI",
-        "score": 3
+        "score": 128
       },
       {
-        "title": "Rails World 2026 Opening Keynote [video]",
-        "url": "https://www.youtube.com/watch?v=vDjW_dRyKXY",
+        "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+        "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
         "source": "Hacker News AI",
-        "score": 363
+        "score": 207
       },
       {
         "title": "What About Rails?",
         "url": "https://jardo.dev/what-about-rails",
         "source": "Hacker News AI",
-        "score": 121
+        "score": 227
+      },
+      {
+        "title": "Microsoft Abandons Personal AI Chatbot Race with Copilot Reboot",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-25/microsoft-abandons-personal-ai-chatbot-race-with-copilot-reboot",
+        "source": "Hacker News AI",
+        "score": 57
+      },
+      {
+        "title": "Rails World 2026 Opening Keynote [video]",
+        "url": "https://www.youtube.com/watch?v=vDjW_dRyKXY",
+        "source": "Hacker News AI",
+        "score": 406
       },
       {
         "title": "Opus 5.5 is good at explainer videos",
         "url": "https://launchvideo.io",
         "source": "Hacker News AI",
-        "score": 312
+        "score": 374
       },
       {
         "title": "Using LLMs to trace alchemical knowledge and decode 17th century letters",
         "url": "https://resobscura.substack.com/p/ai-labs-need-to-start-funding-historical",
         "source": "Hacker News AI",
-        "score": 144
+        "score": 160
+      },
+      {
+        "title": "Jevmem – automatic project memory for Claude Code, built on Jev",
+        "url": "https://github.com/Avinash-jetwani/jevmem",
+        "source": "Hacker News AI",
+        "score": 49
+      },
+      {
+        "title": "The cheap new AI model taking aim at OpenAI and Anthropic",
+        "url": "https://www.ft.com/content/456884ea-2558-4648-8036-a77b73733430",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "Tutoring company tells parents to save their money and 'use AI instead'",
         "url": "https://www.afr.com/policy/health-and-education/tutoring-company-tell-parents-to-save-their-money-and-use-ai-instead-20260923-p60z0r",
         "source": "Hacker News AI",
-        "score": 122
-      },
-      {
-        "title": "Show HN: Air-gapped file encryption as self-decrypting HTML page",
-        "url": "https://cms-sfx-demo.apeleg.com/",
-        "source": "Hacker News AI",
-        "score": 74
-      },
-      {
-        "title": "'That's so AI ' What gen Alpha's biggest insult tells us",
-        "url": "https://www.theguardian.com/society/2026/sep/24/thats-so-ai-what-gen-alphas-biggest-insult-tells-us",
-        "source": "Hacker News AI",
-        "score": 172
-      },
-      {
-        "title": "Security auditing in the age of (good enough) AI",
-        "url": "https://blog.trailofbits.com/2026/09/18/auditing-in-the-age-of-good-enough-ai/",
-        "source": "Hacker News AI",
-        "score": 93
-      },
-      {
-        "title": "Show HN: Koi.rest – watch some fish and regain your balance",
-        "url": "https://koi.rest",
-        "source": "Hacker News AI",
-        "score": 195
+        "score": 131
       }
     ],
     "news": [
       {
-        "title": "Trump and Xi exchange warm words at state dinner but little progress on key issues",
-        "url": "https://www.bbc.co.uk/news/articles/cxq63dqp93n1o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Xi got Trump's red carpet welcome - but not everything he wanted",
-        "url": "https://www.bbc.co.uk/news/articles/cr93e4x7kdjjo?at_medium=RSS&at_campaign=rss",
+        "title": "Special agents' blood and urine test results stolen in FBI hack",
+        "url": "https://www.bbc.co.uk/news/articles/cw62me2vlj07o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -175,27 +170,42 @@
         "source": "BBC World"
       },
       {
-        "title": "Internet restricted after fighting breaks out in Ethiopia's Tigray region",
-        "url": "https://www.bbc.co.uk/news/articles/cqp8dxxg325no?at_medium=RSS&at_campaign=rss",
+        "title": "Xi got Trump's red carpet welcome - but not everything he wanted",
+        "url": "https://www.bbc.co.uk/news/articles/cr93e4x7kdjjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Netanyahu defends Israeli military action as delegates walk out before UN speech",
-        "url": "https://www.bbc.co.uk/news/articles/c3y0z7kxlegdo?at_medium=RSS&at_campaign=rss",
+        "title": "Supreme Court allows Trump to use controversial database to check voter citizenship",
+        "url": "https://www.bbc.co.uk/news/articles/ck05rrj3jeylo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Media outlets banned by Trump denied access to White House dinner despite judge's order",
-        "url": "https://www.bbc.co.uk/news/articles/cqe8ek7608mlo?at_medium=RSS&at_campaign=rss",
+        "title": "Students strike across Germany in protest against military service",
+        "url": "https://www.bbc.co.uk/news/articles/cxnvlnve52qdo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Jay-Z rape accuser says her allegation was false",
-        "url": "https://www.bbc.co.uk/news/articles/cm4g53547wygo?at_medium=RSS&at_campaign=rss",
+        "title": "Man shot during 2024 Trump campaign rally in Butler dies",
+        "url": "https://www.bbc.co.uk/news/articles/c5dj401d88l3o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Senior Kazakh officials detained after 14 service members swept out to sea",
+        "url": "https://www.bbc.co.uk/news/articles/cm0reew1591zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " This $30 phone charger gives speeds to rival wall plugs, and it's down to $23 ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/this-usd30-phone-charger-gives-speeds-to-rival-wall-plugs-and-its-down-to-usd23",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Ace Combat 8: Wings of Theve review – bigger skies, more drama, same old rhythm, and I'm mostly fine with that ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/ace-combat-8-wings-of-theve-review-bigger-skies-more-drama-same-old-rhythm-and-im-mostly-fine-with-that",
+        "source": "Creative Bloq"
+      },
       {
         "title": " GTA 6's $400 collector's box comes with a plastic crocodile, and it's genius branding ",
         "url": "https://www.creativebloq.com/entertainment/gaming/gta-6s-usd400-collectors-box-comes-with-a-plastic-crocodile-and-its-genius-branding",
@@ -220,94 +230,94 @@
         "title": " This digital artist takes inspiration from Old Masters and orientalist paintings ",
         "url": "https://www.creativebloq.com/art/digital-art/this-digital-artist-takes-inspiration-from-old-masters-and-orientalist-paintings",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " We were robbed of a 2D Ray Gunn movie and Hollywood’s to blame ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/we-were-robbed-of-a-2d-ray-gunn-movie-and-hollywoods-to-blame",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Sony has an idea for turning PlayStation controllers into payment devices, and everyone's saying the same thing ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/sony-has-an-idea-for-turning-playstation-controllers-into-payment-devices-and-everyones-saying-the-same-thing",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "CERN has begun disconnecting the Large Hadron Collider",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260925005430.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Earth is tearing apart beneath the Pacific Northwest",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260924231343.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "“We found something never seen before” – A dead star is producing a shock wave that shouldn’t exist",
         "url": "https://www.sciencedaily.com/releases/2026/09/260924020410.htm",
         "source": "Science Daily"
       },
       {
+        "title": "CRISPR could help doctors attack blood cancer without destroying healthy cells",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260924020408.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "This “rare” autism-linked genetic disorder may be far more common than scientists thought",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260924020405.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Quantum computing’s “dark horse” just proved it can go universal",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260924020403.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Scientists gave worms magnetic bacteria. They lived 43% longer",
         "url": "https://www.sciencedaily.com/releases/2026/09/260924020357.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Ancient meteorites reveal a powerful force that helped build the Solar System",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260924020355.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "ADHD and autism diagnoses have surged. A massive study may help explain why",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260924020353.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "“We just need to go back” – Uranus’ moon Ariel may have hidden a 100-mile-deep ocean",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260923035951.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover an “impossible” cellular survival pathway that could help fight cancer",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260923035939.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists find two tiny new snails with shells that close like doors",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260923035936.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "6 New October Games That Should Be on Your Steam Wishlist",
-        "url": "https://www.polygon.com/wishlister-september-25/",
+        "title": "'I Play Rocky' Review: Your Dad's New Favorite Movie Has Officially Arrived",
+        "url": "https://www.polygon.com/i-play-rocky-review/",
         "source": "Polygon"
       },
       {
-        "title": "New Magic Leak Confirms Fully-Foil Spider-Man Commander Deck",
-        "url": "https://www.polygon.com/magic-mtg-spider-man-commander-deck-christmas/",
+        "title": "This 'Overwhelmingly Positive' Steam Cozy Sim Is Officially Outselling Major Game Releases",
+        "url": "https://www.polygon.com/steam-top-sellers-dressmaker-new-releases-cozy-sim-what-is/",
         "source": "Polygon"
       },
       {
-        "title": "Fire Emblem: Three Houses Fans Must Play Dietrich in Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-play-dietrichs-path/",
+        "title": "All key of the Diadem locations in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-all-key-of-the-diadem-location-where-to-find/",
         "source": "Polygon"
       },
       {
-        "title": "Saw Creators Return to the Franchise for New Movie from Wrong Turn Director",
-        "url": "https://www.polygon.com/saw-new-movie-reveal-announcement/",
+        "title": "Shogun Producer Wants to Turn Mary Poppins Into a ‘Complex’ TV Series?",
+        "url": "https://www.polygon.com/mary-poppins-show-in-development-shogun-disney/",
         "source": "Polygon"
       },
       {
-        "title": "20 Years Later, the Most Inventive Sci-Fi Superhero Series of the Century is Officially Free on Streaming",
-        "url": "https://www.polygon.com/heroes-series-free-streaming-september-2026/",
+        "title": "All fault locations and traversal abilities in Control Resonant",
+        "url": "https://www.polygon.com/control-resonant-fault-traversal-ability-locations/",
         "source": "Polygon"
       },
       {
-        "title": "PlayStation Wants You to Use Your Controller to Simplify Payments",
-        "url": "https://www.polygon.com/playstation-dualsense-nfc-payments/",
+        "title": "'Evil Dead Burn' Gets Its HBO Max Streaming Date Just in Time for Halloween",
+        "url": "https://www.polygon.com/evil-dead-burn-hbo-max-streaming-date/",
         "source": "Polygon"
       },
       {
-        "title": "5 Essential Backrooms Videos to Watch on YouTube After the Movie",
-        "url": "https://www.polygon.com/best-backrooms-videos-to-watch-on-youtube-after-the-movie/",
+        "title": "Critical Role Just Revealed the Dirtiest Dungeon Master Trick of All Time",
+        "url": "https://www.polygon.com/critical-role-dnd-dungeon-master-trick/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "GitHub Copilot app for Beginners: How to build custom workflows with canvases",
+        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "Improving site performance by shipping more CSS",
+        "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "When chat is the wrong UI",
         "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
@@ -331,16 +341,6 @@
       {
         "title": "Should you read the code, is RAG dead, and did Skills kill MCP?",
         "url": "https://github.blog/ai-and-ml/should-you-read-the-code-is-rag-dead-and-did-skills-kill-mcp/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Migrating the GitHub Copilot runtime to Rust, using Copilot",
-        "url": "https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Marketing ops as code: Automating events from planning to follow-up on GitHub",
-        "url": "https://github.blog/ai-and-ml/github-copilot/marketing-ops-as-code-automating-events-from-planning-to-follow-up-on-github/",
         "source": "GitHub Blog"
       }
     ]
