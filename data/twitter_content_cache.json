@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-26T01:14:07.970143",
-    "total_items": 58
+    "last_updated": "2026-09-26T07:09:57.983122",
+    "total_items": 60
   },
   "content": {
     "tech": [
@@ -9,85 +9,91 @@
         "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
         "url": "https://swarmtraces.org/",
         "source": "Hacker News",
-        "score": 189
+        "score": 403
       },
       {
-        "title": "Ollaya – Ollama for open-source, Jev-style decision models",
-        "url": "https://ollaya.dev/",
+        "title": "A single function Jev-like wrapper for LLMs, including vision models",
+        "url": "http://allanrbo.blogspot.com/2026/09/a-jev-like-wrapper-for-llms-including.html",
         "source": "Hacker News",
-        "score": 329
-      },
-      {
-        "title": "Show HN: Jev Plays Pokémon Red",
-        "url": "https://jev-pokemon.vercel.app/",
-        "source": "Hacker News",
-        "score": 146
-      },
-      {
-        "title": "What even is an OS now?",
-        "url": "https://sockpuppet.org/blog/2026/09/25/what-even-is-an-os-now/",
-        "source": "Hacker News",
-        "score": 72
+        "score": 39
       },
       {
         "title": "Plan mode is dead",
         "url": "https://www.aymannadeem.com/artificial/intelligence,/developer/tools/2026/09/24/plan-mode-is-dead.html",
         "source": "Hacker News",
-        "score": 62
+        "score": 255
       },
       {
-        "title": "Platform-independent SIMD in Go",
-        "url": "https://go.dev/blog/simd-experiment",
+        "title": "Ollaya – Ollama for open-source, Jev-style decision models",
+        "url": "https://ollaya.dev/",
         "source": "Hacker News",
-        "score": 359
+        "score": 406
       },
       {
-        "title": "Excel now supports multiple values in a single cell",
-        "url": "https://techcommunity.microsoft.com/blog/microsoft365insiderblog/put-multiple-values-in-one-cell-with-lists-and-arrays-in-excel/4559395",
+        "title": "Show HN: Jev Plays Pokémon Red",
+        "url": "https://jev-pokemon.vercel.app/",
         "source": "Hacker News",
-        "score": 88
+        "score": 186
       },
       {
-        "title": "Git-bug: Distributed, offline-first bug tracker embedded in Git",
-        "url": "https://github.com/git-bug/git-bug",
+        "title": "What even is an OS now?",
+        "url": "https://sockpuppet.org/blog/2026/09/25/what-even-is-an-os-now/",
         "source": "Hacker News",
-        "score": 302
+        "score": 161
       },
       {
-        "title": "Remembering Johannes Doerfert",
-        "url": "https://blog.llvm.org/posts/2026-09-24-rememberingjohannesdoerfert/",
+        "title": "The Murky History of Soviet-Born Tetris",
+        "url": "https://thereader.mitpress.mit.edu/the-bizarre-murky-history-of-soviet-born-tetris/",
         "source": "Hacker News",
-        "score": 51
+        "score": 27
+      },
+      {
+        "title": "Postgres SELECT DISTINCT Does Not Scale",
+        "url": "https://www.dbos.dev/blog/postgres-select-distinct-does-not-scale",
+        "source": "Hacker News",
+        "score": 57
+      },
+      {
+        "title": "Jury finds Facebook liable for deceiving users in Cambridge Analytica case",
+        "url": "https://www.cbsnews.com/news/facebook-liable-deceiving-users-cambridge-analytica/",
+        "source": "Hacker News",
+        "score": 180
+      },
+      {
+        "title": "How I changed teaching after AI managed to do all my homework assignments",
+        "url": "https://thelastsoftwareengineer.substack.com/p/how-i-changed-teaching-after-ai-managed",
+        "source": "Hacker News",
+        "score": 41
+      },
+      {
+        "title": "A new world airport and its baggage",
+        "url": "https://computer.rip/2026-09-20-denver-baggage.html",
+        "source": "Hacker News",
+        "score": 8
       },
       {
         "title": "Gravity seems holographic. What does that mean for reality?",
         "url": "https://www.quantamagazine.org/gravity-seems-holographic-what-does-that-mean-for-reality-20260925/",
         "source": "Hacker News",
-        "score": 119
+        "score": 171
       },
       {
-        "title": "Why didn't anybody tell me about Redis hash slots?",
-        "url": "https://blog.verygoodsoftwarenotvirus.dev/posts/2026/09/23/why-didnt-anybody-tell-me-about-hash-slots/",
+        "title": "Show HN: Hacker Atlas - A map of what Hacker News talks about",
+        "url": "https://hackeratlas.com/",
         "source": "Hacker News",
-        "score": 10
+        "score": 46
       },
       {
-        "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
-        "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
+        "title": "One Piece of Flock Camera Data Put This Innocent Woman in Jail for 13 Days",
+        "url": "https://www.jezebel.com/flock-cameras-data-innocent-woman-arrested-lindsey-isaacs-palm-beach-florida-lawsuit-vehicular-homicide",
         "source": "Hacker News",
-        "score": 377
+        "score": 153
       },
       {
-        "title": "First Principles Thinking",
-        "url": "https://sunilsadasivan.com/writing/first-principles-thinking/",
+        "title": "Fourier Analysis: Drawing Llamas with Circles",
+        "url": "https://adekau.github.io/posts/2020/llamas.html",
         "source": "Hacker News",
-        "score": 212
-      },
-      {
-        "title": "Show HN: Make math automatic with Mathy",
-        "url": "https://gmays.com/making-math-automatic-with-mathy/",
-        "source": "Hacker News",
-        "score": 73
+        "score": 27
       }
     ],
     "ai": [
@@ -95,64 +101,75 @@
         "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
         "url": "https://swarmtraces.org/",
         "source": "Hacker News AI",
-        "score": 189
+        "score": 403
       },
       {
-        "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
-        "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
+        "title": "A single function Jev-like wrapper for LLMs, including vision models",
+        "url": "http://allanrbo.blogspot.com/2026/09/a-jev-like-wrapper-for-llms-including.html",
         "source": "Hacker News AI",
-        "score": 377
+        "score": 39
+      },
+      {
+        "title": "How I changed teaching after AI managed to do all my homework assignments",
+        "url": "https://thelastsoftwareengineer.substack.com/p/how-i-changed-teaching-after-ai-managed",
+        "source": "Hacker News AI",
+        "score": 41
+      },
+      {
+        "title": "A new world airport and its baggage",
+        "url": "https://computer.rip/2026-09-20-denver-baggage.html",
+        "source": "Hacker News AI",
+        "score": 8
+      },
+      {
+        "title": "One Piece of Flock Camera Data Put This Innocent Woman in Jail for 13 Days",
+        "url": "https://www.jezebel.com/flock-cameras-data-innocent-woman-arrested-lindsey-isaacs-palm-beach-florida-lawsuit-vehicular-homicide",
+        "source": "Hacker News AI",
+        "score": 153
       },
       {
         "title": "I wrote a ray tracer in Brainfuck",
         "url": "https://epestr.com/blog/writing-a-ray-tracer-in-brainfuck/",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 62
+      },
+      {
+        "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
+        "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
+        "source": "Hacker News AI",
+        "score": 434
       },
       {
         "title": "Microsoft abandons personal AI chatbot race with Copilot reboot",
         "url": "https://www.bloomberg.com/news/articles/2026-09-25/microsoft-abandons-personal-ai-chatbot-race-with-copilot-reboot",
         "source": "Hacker News AI",
-        "score": 78
-      },
-      {
-        "title": "An airport cooled by natural ventilation",
-        "url": "https://www.theguardian.com/environment/2026/sep/25/didnt-need-air-conditioning-airport-cooled-natural-ventilation-reunion",
-        "source": "Hacker News AI",
-        "score": 46
+        "score": 115
       },
       {
         "title": "Meta's Muse appears to use an OpenAI model labeled muse-special",
         "url": "https://mouse.dev/blog/muse-special/",
         "source": "Hacker News AI",
-        "score": 110
+        "score": 129
       },
       {
-        "title": "Tell HN: Codex Is Down [fixed]",
-        "url": "https://news.ycombinator.com/item?id=49851032",
+        "title": "Using LLMs to trace alchemical knowledge and decode 17th century letters",
+        "url": "https://resobscura.substack.com/p/ai-labs-need-to-start-funding-historical",
         "source": "Hacker News AI",
-        "score": 63
+        "score": 166
       },
       {
         "title": "FTC chair suggests AI developers should be liable for conduct of agents",
         "url": "https://www.reuters.com/business/ftc-chair-pushes-back-treating-ai-agents-independent-actors-2026-09-25/",
         "source": "Hacker News AI",
-        "score": 18
-      },
-      {
-        "title": "Show HN: Jevgpt – reinventing the wheel with another wheel",
-        "url": "https://news.ycombinator.com/item?id=49823332",
-        "source": "Hacker News AI",
-        "score": 14
-      },
-      {
-        "title": "OpenAI’s Systems Went Rogue and Meddled With U.S. Government Websites",
-        "url": "https://www.nytimes.com/2026/09/25/technology/openais-ai-us-government-websites.html",
-        "source": "Hacker News AI",
-        "score": 12
+        "score": 42
       }
     ],
     "news": [
+      {
+        "title": "OpenAI bots meddled with multiple US government agency sites",
+        "url": "https://www.bbc.co.uk/news/articles/cw62jje658dlo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Iran offers US deal to reopen Strait of Hormuz in seven days",
         "url": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss",
@@ -169,22 +186,32 @@
         "source": "BBC World"
       },
       {
-        "title": "OpenAI investigating 'dozens' of instances of agents acting improperly ",
-        "url": "https://www.bbc.co.uk/news/articles/cw62jje658dlo?at_medium=RSS&at_campaign=rss",
+        "title": "White House bars CNN from travelling with Trump on Air Force One",
+        "url": "https://www.bbc.co.uk/news/articles/cxq633770y16o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Black woman found hanging from tree was dead before body was 'staged', police say",
         "url": "https://www.bbc.co.uk/news/articles/cwp933nzpp9ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Pope warns against 'losing humanity' to AI machines",
-        "url": "https://www.bbc.co.uk/news/articles/cmq8j904212po?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " A solo developer not only drew this video game by hand, he also made all the music and sound effects with his own voice ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/a-solo-developer-not-only-drew-this-video-game-by-hand-he-also-made-all-the-music-and-sound-effects-with-his-own-voice",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Bentley Torcal is finally a luxury EV design that people like ",
+        "url": "https://www.creativebloq.com/design/product-design/the-bentley-torcal-is-finally-a-luxury-ev-design-that-people-like",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Nintendo Switch 2 has £65 off in a limited-time UK deal ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/nintendo-switch-2-has-gbp65-off-in-a-limited-time-uk-deal",
+        "source": "Creative Bloq"
+      },
       {
         "title": " This $30 phone charger gives speeds to rival wall plugs, and it's down to $23 ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/this-usd30-phone-charger-gives-speeds-to-rival-wall-plugs-and-its-down-to-usd23",
@@ -203,21 +230,6 @@
       {
         "title": " Meta’s new AI avatar is making me feel infantilised ",
         "url": "https://www.creativebloq.com/ai/metas-new-ai-avatar-is-making-me-feel-infantilised",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Quote of the Day by Es Devlin: \"I’ve learned that I make my most interesting work when I don’t know the rules and I don’t know what I’m doing\" ",
-        "url": "https://www.creativebloq.com/creative-inspiration/quote-of-the-day-by-es-devlin-ive-learned-that-i-make-my-most-interesting-work-when-i-dont-know-the-rules-and-i-dont-know-what-im-doing",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Sticker addicts rejoice! Cricut just released two really cool label and sticker makers ",
-        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/sticker-addicts-rejoice-cricut-just-released-two-really-cool-label-and-sticker-makers",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This digital artist takes inspiration from Old Masters and orientalist paintings ",
-        "url": "https://www.creativebloq.com/art/digital-art/this-digital-artist-takes-inspiration-from-old-masters-and-orientalist-paintings",
         "source": "Creative Bloq"
       }
     ],
@@ -260,6 +272,21 @@
     ],
     "gaming": [
       {
+        "title": "CBS's Legendary 156-Episode Sci-Fi Anthology Series is Officially Free to Watch on Streaming",
+        "url": "https://www.polygon.com/cbs-sci-fi-shows-twilight-zone-free-streaming-september-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Ridley Scott's Near-Perfect Sci-Fi Masterpiece is Officially Streaming on YouTube for Free",
+        "url": "https://www.polygon.com/ridley-scott-blade-runner-final-cut-free-youtube-september-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Apple's Smartest Sci-Fi Series Is No Match For This Canceled Cult Classic With the Same Name",
+        "url": "https://www.polygon.com/dark-matter-2015-canada/",
+        "source": "Polygon"
+      },
+      {
         "title": "10 Free Browser Games That are Actually Fun to Play",
         "url": "https://www.polygon.com/best-free-browser-games/",
         "source": "Polygon"
@@ -277,21 +304,6 @@
       {
         "title": "What time does Honkai Star Rail version 4.6 release in your time zone?",
         "url": "https://www.polygon.com/honkai-star-rail-version-4-6-release-times-maintenance-end/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Power upgrade point locations in Control Resonant",
-        "url": "https://www.polygon.com/control-resonant-power-upgrade-point-locations/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Power Lines' quest walkthrough in Control Resonant",
-        "url": "https://www.polygon.com/control-resonant-power-lines-quest-walkthrough-tuning-forks/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GTA 6 and Fire Emblem Have a Weird Connection No One Expected",
-        "url": "https://www.polygon.com/gta-6-fire-emblem-manatees-sea-beast/",
         "source": "Polygon"
       }
     ],
