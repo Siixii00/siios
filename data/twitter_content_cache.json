@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-09-26T12:43:24.067952",
-    "total_items": 62
+    "last_updated": "2026-09-26T16:54:06.717610",
+    "total_items": 63
   },
   "content": {
     "tech": [
@@ -9,206 +9,223 @@
         "title": "Breaking Up with Google Play: Why Conversations Is Now Free",
         "url": "https://gultsch.de/posts/breaking-up-with-google-play/",
         "source": "Hacker News",
-        "score": 133
+        "score": 436
+      },
+      {
+        "title": "PipePipe: NewPipe hard fork implementing SponsorBlock",
+        "url": "https://github.com/InfinityLoop1308/PipePipe",
+        "source": "Hacker News",
+        "score": 59
       },
       {
         "title": "Fifteen years later, the Apple Cards origin story",
         "url": "https://lexontech.org/fifteen-years-later-the-apple-cards-origin-story",
         "source": "Hacker News",
-        "score": 97
+        "score": 216
       },
       {
-        "title": "One Month Without AI",
-        "url": "https://blog.bustikiller.com/2026/09/25/one-month-without-ai.html",
+        "title": "Show HN: A Claude Code skill to analyze your chess games",
+        "url": "https://github.com/brumar/chess-postmortem-skills",
         "source": "Hacker News",
-        "score": 82
+        "score": 18
+      },
+      {
+        "title": "The Lost Atomic Update on Loongson CPU",
+        "url": "https://jia.je/hardware/2026/09/24/loongson-cpu-erratum-en/",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "Modern Object Pascal Introduction for Programmers – Castle Game Engine",
+        "url": "https://castle-engine.io/modern_pascal",
+        "source": "Hacker News",
+        "score": 64
       },
       {
         "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
         "url": "https://swarmtraces.org/",
         "source": "Hacker News",
-        "score": 532
+        "score": 617
       },
       {
-        "title": "Floci: Locally emulating any cloud service",
-        "url": "https://floci.io",
+        "title": "Reflections on 1,000 Days of Math",
+        "url": "https://gmays.com/reflections-on-1000-days-of-math/",
         "source": "Hacker News",
-        "score": 43
+        "score": 29
+      },
+      {
+        "title": "Automattic has a new board after failed attempt to put CEO on leave",
+        "url": "https://techcrunch.com/2026/09/25/automattic-has-a-new-board-after-failed-attempt-to-put-ceo-on-leave/",
+        "source": "Hacker News",
+        "score": 32
+      },
+      {
+        "title": "Plunging test scores are a slow-moving catastrophe",
+        "url": "https://www.economist.com/leaders/2026/09/10/plunging-test-scores-are-a-slow-moving-catastrophe",
+        "source": "Hacker News",
+        "score": 73
       },
       {
         "title": "We're gonna need a lot more mathematicians",
         "url": "https://terrytao.wordpress.com/2026/09/24/were-gonna-need-a-lot-more-mathematicians/",
         "source": "Hacker News",
-        "score": 181
+        "score": 261
+      },
+      {
+        "title": "Analyzing Frontier Model Progress with My Favourite Game: Prince of Persia",
+        "url": "https://blog.priyan.in/2026/09/analyzing-frontier-model-progress-with.html",
+        "source": "Hacker News",
+        "score": 18
       },
       {
         "title": "Plan mode is dead",
         "url": "https://www.aymannadeem.com/artificial/intelligence,/developer/tools/2026/09/24/plan-mode-is-dead.html",
         "source": "Hacker News",
-        "score": 375
+        "score": 468
       },
       {
-        "title": "A single function Jev-like wrapper for LLMs, including vision models",
-        "url": "http://allanrbo.blogspot.com/2026/09/a-jev-like-wrapper-for-llms-including.html",
+        "title": "Floci: Locally emulating any cloud service",
+        "url": "https://floci.io",
         "source": "Hacker News",
-        "score": 99
+        "score": 105
       },
       {
         "title": "Ollaya – Ollama for open-source, Jev-style decision models",
         "url": "https://ollaya.dev/",
         "source": "Hacker News",
-        "score": 489
-      },
-      {
-        "title": "ASML currently sells no chipmaking machines in Europe, executive says",
-        "url": "https://nltimes.nl/2026/09/22/asml-currently-sells-chipmaking-machines-europe-executive-says",
-        "source": "Hacker News",
-        "score": 18
-      },
-      {
-        "title": "Show HN: Jev Plays Pokémon Red",
-        "url": "https://jev-pokemon.vercel.app/",
-        "source": "Hacker News",
-        "score": 215
-      },
-      {
-        "title": "16GB iPod Nano 3G Upgrade",
-        "url": "https://tuckerosman.com/projects/16gb-ipod-nano",
-        "source": "Hacker News",
-        "score": 50
-      },
-      {
-        "title": "Is your Postgres migration safe or not safe?",
-        "url": "https://safenotsafe.dev/",
-        "source": "Hacker News",
-        "score": 51
-      },
-      {
-        "title": "What even is an OS now?",
-        "url": "https://sockpuppet.org/blog/2026/09/25/what-even-is-an-os-now/",
-        "source": "Hacker News",
-        "score": 215
-      },
-      {
-        "title": "Parsing Expression Grammar vs. Regexes: Building Org Parser in Lisp, Export HTML",
-        "url": "https://jointhefreeworld.org/blog/articles/lisps/parsing-expression-grammar-lisp-org-convert-to-html/index.html",
-        "source": "Hacker News",
-        "score": 42
+        "score": 541
       }
     ],
     "ai": [
       {
-        "title": "One Month Without AI",
-        "url": "https://blog.bustikiller.com/2026/09/25/one-month-without-ai.html",
+        "title": "Show HN: A Claude Code skill to analyze your chess games",
+        "url": "https://github.com/brumar/chess-postmortem-skills",
         "source": "Hacker News AI",
-        "score": 82
+        "score": 18
       },
       {
         "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
         "url": "https://swarmtraces.org/",
         "source": "Hacker News AI",
-        "score": 532
+        "score": 617
+      },
+      {
+        "title": "Automattic has a new board after failed attempt to put CEO on leave",
+        "url": "https://techcrunch.com/2026/09/25/automattic-has-a-new-board-after-failed-attempt-to-put-ceo-on-leave/",
+        "source": "Hacker News AI",
+        "score": 32
       },
       {
         "title": "A single function Jev-like wrapper for LLMs, including vision models",
         "url": "http://allanrbo.blogspot.com/2026/09/a-jev-like-wrapper-for-llms-including.html",
         "source": "Hacker News AI",
-        "score": 99
+        "score": 116
       },
       {
         "title": "Calculating atmospheric drag on satellites for a Cubesat [pdf]",
         "url": "https://www.osti.gov/servlets/purl/1124870",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 26
+      },
+      {
+        "title": "Banks and Credit Unions to Team Up Against Apple Pay Fees",
+        "url": "https://www.macrumors.com/2026/09/25/apple-pay-antitrust-lawsuit-advances/",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "The Copilot+ PC brand is dead",
         "url": "https://www.windowscentral.com/microsoft/windows-11/the-copilot-pc-brand-is-dead-microsoft-and-pc-makers-quietly-pull-back-on-tarnished-windows-11-ai-pc-branding",
         "source": "Hacker News AI",
-        "score": 22
+        "score": 86
       },
       {
         "title": "From Thin Air to Bootable Images: The Tine Build System",
         "url": "https://amutable.com/blog/tine-build-system",
         "source": "Hacker News AI",
-        "score": 21
+        "score": 29
       },
       {
         "title": "A new world airport and its baggage",
         "url": "https://computer.rip/2026-09-20-denver-baggage.html",
         "source": "Hacker News AI",
-        "score": 35
-      },
-      {
-        "title": "I wrote a ray tracer in Brainfuck",
-        "url": "https://epestr.com/blog/writing-a-ray-tracer-in-brainfuck/",
-        "source": "Hacker News AI",
-        "score": 77
+        "score": 56
       },
       {
         "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
         "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
         "source": "Hacker News AI",
-        "score": 457
+        "score": 473
       },
       {
-        "title": "One Piece of Flock Camera Data Put This Innocent Woman in Jail for 13 Days",
-        "url": "https://www.jezebel.com/flock-cameras-data-innocent-woman-arrested-lindsey-isaacs-palm-beach-florida-lawsuit-vehicular-homicide",
+        "title": "I wrote a ray tracer in Brainfuck",
+        "url": "https://epestr.com/blog/writing-a-ray-tracer-in-brainfuck/",
         "source": "Hacker News AI",
-        "score": 203
+        "score": 83
       },
       {
         "title": "Microsoft abandons personal AI chatbot race with Copilot reboot",
         "url": "https://www.bloomberg.com/news/articles/2026-09-25/microsoft-abandons-personal-ai-chatbot-race-with-copilot-reboot",
         "source": "Hacker News AI",
-        "score": 125
+        "score": 134
       },
       {
-        "title": "Alberta's image as world's only rat-free region shattered by discovery of rat",
-        "url": "https://www.theguardian.com/world/2026/sep/25/alberta-canada-rat-patrol",
+        "title": "Understanding the Impact of LLM Watermarking on AI Agent Behavior",
+        "url": "https://www.lasso.security/blog/the-provenance-tax-understanding-the-impact-of-llm-watermarking-on-ai-agent-behavior",
         "source": "Hacker News AI",
-        "score": 33
+        "score": 55
       },
       {
-        "title": "OpenAI Says Its Models Engaged with US Government Websites in New Disclosure",
-        "url": "https://www.securityweek.com/openai-says-its-models-engaged-with-us-government-websites-in-new-model-misbehavior-disclosure/",
+        "title": "One Piece of Flock Camera Data Put This Innocent Woman in Jail for 13 Days",
+        "url": "https://www.jezebel.com/flock-cameras-data-innocent-woman-arrested-lindsey-isaacs-palm-beach-florida-lawsuit-vehicular-homicide",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 224
+      },
+      {
+        "title": "One Month Without AI",
+        "url": "https://blog.bustikiller.com/2026/09/25/one-month-without-ai.html",
+        "source": "Hacker News AI",
+        "score": 154
       }
     ],
     "news": [
       {
-        "title": "Iran offers US deal to reopen Strait of Hormuz in seven days",
+        "title": "Trump rejects Iran deal to reopen Strait of Hormuz in seven days",
         "url": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "OpenAI bots meddled with multiple US government agency sites",
-        "url": "https://www.bbc.co.uk/news/articles/cw62jje658dlo?at_medium=RSS&at_campaign=rss",
+        "title": "Pope praises 'energy and commitment' of young people as huge crowds join open-air Mass in Paris",
+        "url": "https://www.bbc.co.uk/news/articles/cm4gjjwvvlzro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "At least two dead after explosion destroys building close to Acropolis in Athens",
+        "title": "British national among six dead in building explosion close to Acropolis in Athens",
         "url": "https://www.bbc.co.uk/news/articles/c6p3kk78l4l1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Security lapses at Utah campus where Charlie Kirk was killed, review says",
+        "url": "https://www.bbc.co.uk/news/articles/cq4g55r76d9lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Bangkok roads submerged as flood disaster declared",
         "url": "https://www.bbc.co.uk/news/articles/ck1wxx8n2x3zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Black woman found hanging from tree was dead before body was 'staged', police say",
-        "url": "https://www.bbc.co.uk/news/articles/cwp933nzpp9ro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Russia targeting 'ordinary life' with attacks on Ukraine's data centres, Zelensky says",
-        "url": "https://www.bbc.co.uk/news/articles/c84gkwgk7d06o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The chair that puts the 'luxury' in budget ergonomic office chairs has $80 off in Amazon's early Prime Day sale ",
+        "url": "https://www.creativebloq.com/tech/chairs-desks/the-chair-that-puts-the-luxury-in-budget-ergonomic-office-chairs-has-usd80-off-in-amazons-early-prime-day-sale",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The secret to Stuntman: Hollywood’s success is Hollywood itself ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/the-secret-to-stuntman-hollywoods-success-is-hollywood-itself",
+        "source": "Creative Bloq"
+      },
       {
         "title": " This digital typewriter is the distraction-free writing tool I've been searching for ",
         "url": "https://www.creativebloq.com/design/product-design/this-digital-typewriter-is-the-distraction-free-writing-tool-ive-been-searching-for",
@@ -220,102 +237,92 @@
         "source": "Creative Bloq"
       },
       {
-        "title": " Adobe Max 2026's lineup tells us a lot about the company's AI priorities right now ",
-        "url": "https://www.creativebloq.com/design/design-software/adobe-max-2026s-lineup-tells-us-a-lot-about-the-companys-ai-priorities-right-now",
+        "title": " New Tyson Fury vs. Anthony Joshua poster features graphic design fail ",
+        "url": "https://www.creativebloq.com/design/poster-design/new-tyson-fury-vs-anthony-joshua-poster-features-graphic-design-fail",
         "source": "Creative Bloq"
       },
       {
-        "title": " New Tyson Fury vs. Anthony Joshua poster features graphic design fail ",
-        "url": "https://www.creativebloq.com/design/poster-design/new-tyson-fury-vs-anthony-joshua-poster-features-graphic-design-fail",
+        "title": " Adobe Max 2026's lineup tells us a lot about the company's AI priorities right now ",
+        "url": "https://www.creativebloq.com/design/design-software/adobe-max-2026s-lineup-tells-us-a-lot-about-the-companys-ai-priorities-right-now",
         "source": "Creative Bloq"
       },
       {
         "title": " A solo developer not only drew this video game by hand, he also made all the music and sound effects with his own voice ",
         "url": "https://www.creativebloq.com/3d/video-game-design/a-solo-developer-not-only-drew-this-video-game-by-hand-he-also-made-all-the-music-and-sound-effects-with-his-own-voice",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " The Bentley Torcal is finally a luxury EV design that people like ",
-        "url": "https://www.creativebloq.com/design/product-design/the-bentley-torcal-is-finally-a-luxury-ev-design-that-people-like",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Nintendo Switch 2 has £65 off in a limited-time UK deal ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/nintendo-switch-2-has-gbp65-off-in-a-limited-time-uk-deal",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Zepbound and Mounjaro may turn on the body’s calorie-burning brown fat",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260925093210.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "REM sleep paradox: Dreaming may drain the brain’s energy even as fuel supply rises",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260925093206.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists may have misread a 2-billion-year-old clue about Earth",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260925093201.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "That fresh cleaning smell could be filling your home with nanoparticles",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260925093152.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "CERN has begun disconnecting the Large Hadron Collider",
         "url": "https://www.sciencedaily.com/releases/2026/09/260925005430.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Earth is tearing apart beneath the Pacific Northwest",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260924231343.htm",
+        "title": "Two astronauts who flew farther than anyone before are taking new NASA roles",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260925005423.htm",
         "source": "Science Daily"
       },
       {
-        "title": "“We found something never seen before” – A dead star is producing a shock wave that shouldn’t exist",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260924020410.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "CRISPR could help doctors attack blood cancer without destroying healthy cells",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260924020408.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "This “rare” autism-linked genetic disorder may be far more common than scientists thought",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260924020405.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Quantum computing’s “dark horse” just proved it can go universal",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260924020403.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists gave worms magnetic bacteria. They lived 43% longer",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260924020357.htm",
+        "title": "Quantum computer simulates matter “popping into existence”",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260925005416.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "World of Warcraft Forever's Plan to Bring 'Classic Plus' to New and Old Players",
-        "url": "https://www.polygon.com/world-of-warcraft-forever-interview-blizzcon-2026-blizzard/",
+        "title": "Fire Emblem: Fortune's Weave's 5 Weirdest Little Guys, Ranked",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weaves-weird-little-guys-characters-ranked/",
         "source": "Polygon"
       },
       {
-        "title": "Nintendo Should Make More Games About People",
-        "url": "https://www.polygon.com/switchboard-fire-emblem-fortunes-weave/",
+        "title": "The Last of Us Season 3 Casts Abby And Lev's Game Actors In Different Roles",
+        "url": "https://www.polygon.com/the-last-of-us-season-3-casting/",
         "source": "Polygon"
       },
       {
-        "title": "Overwatch Seasonal Hero Releases 'The Right Thing for the Game,' Blizzard Says",
-        "url": "https://www.polygon.com/overwatch-2027-new-heroes-every-season/",
+        "title": "26 years ago, 'Buffy the Vampire Slayer's Worst Season Premiere Redefined a Legendary Villain",
+        "url": "https://www.polygon.com/buffy-the-vampire-slayer-season-five-premiere-retrospective/",
         "source": "Polygon"
       },
       {
-        "title": "3 Perfect Calvin and Hobbes Stories From the 1980S That Prove Bill Watterson Is a Genius",
-        "url": "https://www.polygon.com/calvin-hobbes-best-80s-stories/",
+        "title": "Spider-Man Star Tom Holland's Next Film Adds Sabrina Carpenter To Its Cast",
+        "url": "https://www.polygon.com/tom-holland-sabrina-carpenter-fred-astaire-movie/",
         "source": "Polygon"
       },
       {
-        "title": "'Star Wars' Meets 'Firefly' in this 10/10 Sci-Fi Series That's Free on Streaming Right Now",
-        "url": "https://www.polygon.com/farscape-tubi-free-to-watch-sci-fi-series/",
+        "title": "Magic: The Gathering Meets D&D-Style Dice Battles in the Best New TCG at PAX West 2026",
+        "url": "https://www.polygon.com/world-of-kylia-ascendant-tcg-pax-west-2026-impressions-review/",
         "source": "Polygon"
       },
       {
-        "title": "5 Classic Sci-Fi Books That Are Perfect From Start to Finish",
-        "url": "https://www.polygon.com/classic-sci-fi-perfect-start-finish/",
+        "title": "Control Resonant Violates the Number One Commandment of Video Game Lore",
+        "url": "https://www.polygon.com/control-resonant-lore-logs/",
         "source": "Polygon"
       },
       {
-        "title": "11 anime to watch if you like Frieren",
-        "url": "https://www.polygon.com/best-anime-like-frieren-to-watch-stream-cozy-fantasy/",
+        "title": "Wolverine Now Officially Lets Players Turn Off Its Most-Hated Feature",
+        "url": "https://www.polygon.com/wolverine-turn-off-scent-trails/",
         "source": "Polygon"
       }
     ],
