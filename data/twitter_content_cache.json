@@ -1,202 +1,234 @@
 {
   "metadata": {
-    "last_updated": "2026-09-26T07:09:57.983122",
-    "total_items": 60
+    "last_updated": "2026-09-26T12:43:24.067952",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
+        "title": "Breaking Up with Google Play: Why Conversations Is Now Free",
+        "url": "https://gultsch.de/posts/breaking-up-with-google-play/",
+        "source": "Hacker News",
+        "score": 133
+      },
+      {
+        "title": "Fifteen years later, the Apple Cards origin story",
+        "url": "https://lexontech.org/fifteen-years-later-the-apple-cards-origin-story",
+        "source": "Hacker News",
+        "score": 97
+      },
+      {
+        "title": "One Month Without AI",
+        "url": "https://blog.bustikiller.com/2026/09/25/one-month-without-ai.html",
+        "source": "Hacker News",
+        "score": 82
+      },
+      {
         "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
         "url": "https://swarmtraces.org/",
         "source": "Hacker News",
-        "score": 403
+        "score": 532
       },
       {
-        "title": "A single function Jev-like wrapper for LLMs, including vision models",
-        "url": "http://allanrbo.blogspot.com/2026/09/a-jev-like-wrapper-for-llms-including.html",
+        "title": "Floci: Locally emulating any cloud service",
+        "url": "https://floci.io",
         "source": "Hacker News",
-        "score": 39
+        "score": 43
+      },
+      {
+        "title": "We're gonna need a lot more mathematicians",
+        "url": "https://terrytao.wordpress.com/2026/09/24/were-gonna-need-a-lot-more-mathematicians/",
+        "source": "Hacker News",
+        "score": 181
       },
       {
         "title": "Plan mode is dead",
         "url": "https://www.aymannadeem.com/artificial/intelligence,/developer/tools/2026/09/24/plan-mode-is-dead.html",
         "source": "Hacker News",
-        "score": 255
+        "score": 375
+      },
+      {
+        "title": "A single function Jev-like wrapper for LLMs, including vision models",
+        "url": "http://allanrbo.blogspot.com/2026/09/a-jev-like-wrapper-for-llms-including.html",
+        "source": "Hacker News",
+        "score": 99
       },
       {
         "title": "Ollaya – Ollama for open-source, Jev-style decision models",
         "url": "https://ollaya.dev/",
         "source": "Hacker News",
-        "score": 406
+        "score": 489
+      },
+      {
+        "title": "ASML currently sells no chipmaking machines in Europe, executive says",
+        "url": "https://nltimes.nl/2026/09/22/asml-currently-sells-chipmaking-machines-europe-executive-says",
+        "source": "Hacker News",
+        "score": 18
       },
       {
         "title": "Show HN: Jev Plays Pokémon Red",
         "url": "https://jev-pokemon.vercel.app/",
         "source": "Hacker News",
-        "score": 186
+        "score": 215
+      },
+      {
+        "title": "16GB iPod Nano 3G Upgrade",
+        "url": "https://tuckerosman.com/projects/16gb-ipod-nano",
+        "source": "Hacker News",
+        "score": 50
+      },
+      {
+        "title": "Is your Postgres migration safe or not safe?",
+        "url": "https://safenotsafe.dev/",
+        "source": "Hacker News",
+        "score": 51
       },
       {
         "title": "What even is an OS now?",
         "url": "https://sockpuppet.org/blog/2026/09/25/what-even-is-an-os-now/",
         "source": "Hacker News",
-        "score": 161
+        "score": 215
       },
       {
-        "title": "The Murky History of Soviet-Born Tetris",
-        "url": "https://thereader.mitpress.mit.edu/the-bizarre-murky-history-of-soviet-born-tetris/",
+        "title": "Parsing Expression Grammar vs. Regexes: Building Org Parser in Lisp, Export HTML",
+        "url": "https://jointhefreeworld.org/blog/articles/lisps/parsing-expression-grammar-lisp-org-convert-to-html/index.html",
         "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Postgres SELECT DISTINCT Does Not Scale",
-        "url": "https://www.dbos.dev/blog/postgres-select-distinct-does-not-scale",
-        "source": "Hacker News",
-        "score": 57
-      },
-      {
-        "title": "Jury finds Facebook liable for deceiving users in Cambridge Analytica case",
-        "url": "https://www.cbsnews.com/news/facebook-liable-deceiving-users-cambridge-analytica/",
-        "source": "Hacker News",
-        "score": 180
-      },
-      {
-        "title": "How I changed teaching after AI managed to do all my homework assignments",
-        "url": "https://thelastsoftwareengineer.substack.com/p/how-i-changed-teaching-after-ai-managed",
-        "source": "Hacker News",
-        "score": 41
-      },
-      {
-        "title": "A new world airport and its baggage",
-        "url": "https://computer.rip/2026-09-20-denver-baggage.html",
-        "source": "Hacker News",
-        "score": 8
-      },
-      {
-        "title": "Gravity seems holographic. What does that mean for reality?",
-        "url": "https://www.quantamagazine.org/gravity-seems-holographic-what-does-that-mean-for-reality-20260925/",
-        "source": "Hacker News",
-        "score": 171
-      },
-      {
-        "title": "Show HN: Hacker Atlas - A map of what Hacker News talks about",
-        "url": "https://hackeratlas.com/",
-        "source": "Hacker News",
-        "score": 46
-      },
-      {
-        "title": "One Piece of Flock Camera Data Put This Innocent Woman in Jail for 13 Days",
-        "url": "https://www.jezebel.com/flock-cameras-data-innocent-woman-arrested-lindsey-isaacs-palm-beach-florida-lawsuit-vehicular-homicide",
-        "source": "Hacker News",
-        "score": 153
-      },
-      {
-        "title": "Fourier Analysis: Drawing Llamas with Circles",
-        "url": "https://adekau.github.io/posts/2020/llamas.html",
-        "source": "Hacker News",
-        "score": 27
+        "score": 42
       }
     ],
     "ai": [
       {
+        "title": "One Month Without AI",
+        "url": "https://blog.bustikiller.com/2026/09/25/one-month-without-ai.html",
+        "source": "Hacker News AI",
+        "score": 82
+      },
+      {
         "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
         "url": "https://swarmtraces.org/",
         "source": "Hacker News AI",
-        "score": 403
+        "score": 532
       },
       {
         "title": "A single function Jev-like wrapper for LLMs, including vision models",
         "url": "http://allanrbo.blogspot.com/2026/09/a-jev-like-wrapper-for-llms-including.html",
         "source": "Hacker News AI",
-        "score": 39
+        "score": 99
       },
       {
-        "title": "How I changed teaching after AI managed to do all my homework assignments",
-        "url": "https://thelastsoftwareengineer.substack.com/p/how-i-changed-teaching-after-ai-managed",
+        "title": "Calculating atmospheric drag on satellites for a Cubesat [pdf]",
+        "url": "https://www.osti.gov/servlets/purl/1124870",
         "source": "Hacker News AI",
-        "score": 41
+        "score": 8
+      },
+      {
+        "title": "The Copilot+ PC brand is dead",
+        "url": "https://www.windowscentral.com/microsoft/windows-11/the-copilot-pc-brand-is-dead-microsoft-and-pc-makers-quietly-pull-back-on-tarnished-windows-11-ai-pc-branding",
+        "source": "Hacker News AI",
+        "score": 22
+      },
+      {
+        "title": "From Thin Air to Bootable Images: The Tine Build System",
+        "url": "https://amutable.com/blog/tine-build-system",
+        "source": "Hacker News AI",
+        "score": 21
       },
       {
         "title": "A new world airport and its baggage",
         "url": "https://computer.rip/2026-09-20-denver-baggage.html",
         "source": "Hacker News AI",
-        "score": 8
-      },
-      {
-        "title": "One Piece of Flock Camera Data Put This Innocent Woman in Jail for 13 Days",
-        "url": "https://www.jezebel.com/flock-cameras-data-innocent-woman-arrested-lindsey-isaacs-palm-beach-florida-lawsuit-vehicular-homicide",
-        "source": "Hacker News AI",
-        "score": 153
+        "score": 35
       },
       {
         "title": "I wrote a ray tracer in Brainfuck",
         "url": "https://epestr.com/blog/writing-a-ray-tracer-in-brainfuck/",
         "source": "Hacker News AI",
-        "score": 62
+        "score": 77
       },
       {
         "title": "U.S. appeals court upholds designation of Anthropic as supply chain risk",
         "url": "https://www.cnbc.com/2026/09/25/pentagon-anthropic-ai-risk-appeals-court.html",
         "source": "Hacker News AI",
-        "score": 434
+        "score": 457
+      },
+      {
+        "title": "One Piece of Flock Camera Data Put This Innocent Woman in Jail for 13 Days",
+        "url": "https://www.jezebel.com/flock-cameras-data-innocent-woman-arrested-lindsey-isaacs-palm-beach-florida-lawsuit-vehicular-homicide",
+        "source": "Hacker News AI",
+        "score": 203
       },
       {
         "title": "Microsoft abandons personal AI chatbot race with Copilot reboot",
         "url": "https://www.bloomberg.com/news/articles/2026-09-25/microsoft-abandons-personal-ai-chatbot-race-with-copilot-reboot",
         "source": "Hacker News AI",
-        "score": 115
+        "score": 125
       },
       {
-        "title": "Meta's Muse appears to use an OpenAI model labeled muse-special",
-        "url": "https://mouse.dev/blog/muse-special/",
+        "title": "Alberta's image as world's only rat-free region shattered by discovery of rat",
+        "url": "https://www.theguardian.com/world/2026/sep/25/alberta-canada-rat-patrol",
         "source": "Hacker News AI",
-        "score": 129
+        "score": 33
       },
       {
-        "title": "Using LLMs to trace alchemical knowledge and decode 17th century letters",
-        "url": "https://resobscura.substack.com/p/ai-labs-need-to-start-funding-historical",
+        "title": "OpenAI Says Its Models Engaged with US Government Websites in New Disclosure",
+        "url": "https://www.securityweek.com/openai-says-its-models-engaged-with-us-government-websites-in-new-model-misbehavior-disclosure/",
         "source": "Hacker News AI",
-        "score": 166
-      },
-      {
-        "title": "FTC chair suggests AI developers should be liable for conduct of agents",
-        "url": "https://www.reuters.com/business/ftc-chair-pushes-back-treating-ai-agents-independent-actors-2026-09-25/",
-        "source": "Hacker News AI",
-        "score": 42
+        "score": 7
       }
     ],
     "news": [
-      {
-        "title": "OpenAI bots meddled with multiple US government agency sites",
-        "url": "https://www.bbc.co.uk/news/articles/cw62jje658dlo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
       {
         "title": "Iran offers US deal to reopen Strait of Hormuz in seven days",
         "url": "https://www.bbc.co.uk/news/articles/cqgmrr9ekr7ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Russia targeting 'ordinary life' with attacks on Ukraine's data centres, Zelensky says",
-        "url": "https://www.bbc.co.uk/news/articles/c84gkwgk7d06o?at_medium=RSS&at_campaign=rss",
+        "title": "OpenAI bots meddled with multiple US government agency sites",
+        "url": "https://www.bbc.co.uk/news/articles/cw62jje658dlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Inside the FBI hack: Agents fearful and angry after 'dangerous' data breach",
-        "url": "https://www.bbc.co.uk/news/articles/cm4gjjlgzdjgo?at_medium=RSS&at_campaign=rss",
+        "title": "At least two dead after explosion destroys building close to Acropolis in Athens",
+        "url": "https://www.bbc.co.uk/news/articles/c6p3kk78l4l1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "White House bars CNN from travelling with Trump on Air Force One",
-        "url": "https://www.bbc.co.uk/news/articles/cxq633770y16o?at_medium=RSS&at_campaign=rss",
+        "title": "Bangkok roads submerged as flood disaster declared",
+        "url": "https://www.bbc.co.uk/news/articles/ck1wxx8n2x3zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Black woman found hanging from tree was dead before body was 'staged', police say",
         "url": "https://www.bbc.co.uk/news/articles/cwp933nzpp9ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
+      },
+      {
+        "title": "Russia targeting 'ordinary life' with attacks on Ukraine's data centres, Zelensky says",
+        "url": "https://www.bbc.co.uk/news/articles/c84gkwgk7d06o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " This digital typewriter is the distraction-free writing tool I've been searching for ",
+        "url": "https://www.creativebloq.com/design/product-design/this-digital-typewriter-is-the-distraction-free-writing-tool-ive-been-searching-for",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " “Fan art helps me escape my habits\" – Recreating Distant Lands: Obsidian allowed this artist to explore colours, lighting and subjects beyond his usual repertoire ",
+        "url": "https://www.creativebloq.com/art/digital-art/fan-art-helps-me-escape-my-habits-recreating-distant-lands-obsidian-allowed-this-artist-to-explore-saturated-colours-artificial-lighting-and-subjects-beyond-his-usual-repertoire",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Adobe Max 2026's lineup tells us a lot about the company's AI priorities right now ",
+        "url": "https://www.creativebloq.com/design/design-software/adobe-max-2026s-lineup-tells-us-a-lot-about-the-companys-ai-priorities-right-now",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " New Tyson Fury vs. Anthony Joshua poster features graphic design fail ",
+        "url": "https://www.creativebloq.com/design/poster-design/new-tyson-fury-vs-anthony-joshua-poster-features-graphic-design-fail",
+        "source": "Creative Bloq"
+      },
       {
         "title": " A solo developer not only drew this video game by hand, he also made all the music and sound effects with his own voice ",
         "url": "https://www.creativebloq.com/3d/video-game-design/a-solo-developer-not-only-drew-this-video-game-by-hand-he-also-made-all-the-music-and-sound-effects-with-his-own-voice",
@@ -210,26 +242,6 @@
       {
         "title": " Nintendo Switch 2 has £65 off in a limited-time UK deal ",
         "url": "https://www.creativebloq.com/entertainment/gaming/nintendo-switch-2-has-gbp65-off-in-a-limited-time-uk-deal",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This $30 phone charger gives speeds to rival wall plugs, and it's down to $23 ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/this-usd30-phone-charger-gives-speeds-to-rival-wall-plugs-and-its-down-to-usd23",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Ace Combat 8: Wings of Theve review – bigger skies, more drama, same old rhythm, and I'm mostly fine with that ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/ace-combat-8-wings-of-theve-review-bigger-skies-more-drama-same-old-rhythm-and-im-mostly-fine-with-that",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " GTA 6's $400 collector's box comes with a plastic crocodile, and it's genius branding ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/gta-6s-usd400-collectors-box-comes-with-a-plastic-crocodile-and-its-genius-branding",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Meta’s new AI avatar is making me feel infantilised ",
-        "url": "https://www.creativebloq.com/ai/metas-new-ai-avatar-is-making-me-feel-infantilised",
         "source": "Creative Bloq"
       }
     ],
@@ -272,38 +284,38 @@
     ],
     "gaming": [
       {
-        "title": "CBS's Legendary 156-Episode Sci-Fi Anthology Series is Officially Free to Watch on Streaming",
-        "url": "https://www.polygon.com/cbs-sci-fi-shows-twilight-zone-free-streaming-september-2026/",
+        "title": "World of Warcraft Forever's Plan to Bring 'Classic Plus' to New and Old Players",
+        "url": "https://www.polygon.com/world-of-warcraft-forever-interview-blizzcon-2026-blizzard/",
         "source": "Polygon"
       },
       {
-        "title": "Ridley Scott's Near-Perfect Sci-Fi Masterpiece is Officially Streaming on YouTube for Free",
-        "url": "https://www.polygon.com/ridley-scott-blade-runner-final-cut-free-youtube-september-2026/",
+        "title": "Nintendo Should Make More Games About People",
+        "url": "https://www.polygon.com/switchboard-fire-emblem-fortunes-weave/",
         "source": "Polygon"
       },
       {
-        "title": "Apple's Smartest Sci-Fi Series Is No Match For This Canceled Cult Classic With the Same Name",
-        "url": "https://www.polygon.com/dark-matter-2015-canada/",
+        "title": "Overwatch Seasonal Hero Releases 'The Right Thing for the Game,' Blizzard Says",
+        "url": "https://www.polygon.com/overwatch-2027-new-heroes-every-season/",
         "source": "Polygon"
       },
       {
-        "title": "10 Free Browser Games That are Actually Fun to Play",
-        "url": "https://www.polygon.com/best-free-browser-games/",
+        "title": "3 Perfect Calvin and Hobbes Stories From the 1980S That Prove Bill Watterson Is a Genius",
+        "url": "https://www.polygon.com/calvin-hobbes-best-80s-stories/",
         "source": "Polygon"
       },
       {
-        "title": "Alan Ritchson's 2019 Sports Comedy is Free to Watch on YouTube",
-        "url": "https://www.polygon.com/alan-ritchson-movies-turkey-bowl-free-youtube-watch/",
+        "title": "'Star Wars' Meets 'Firefly' in this 10/10 Sci-Fi Series That's Free on Streaming Right Now",
+        "url": "https://www.polygon.com/farscape-tubi-free-to-watch-sci-fi-series/",
         "source": "Polygon"
       },
       {
-        "title": "Health upgrade point locations in Control Resonant",
-        "url": "https://www.polygon.com/control-resonant-health-upgrade-point-locations/",
+        "title": "5 Classic Sci-Fi Books That Are Perfect From Start to Finish",
+        "url": "https://www.polygon.com/classic-sci-fi-perfect-start-finish/",
         "source": "Polygon"
       },
       {
-        "title": "What time does Honkai Star Rail version 4.6 release in your time zone?",
-        "url": "https://www.polygon.com/honkai-star-rail-version-4-6-release-times-maintenance-end/",
+        "title": "11 anime to watch if you like Frieren",
+        "url": "https://www.polygon.com/best-anime-like-frieren-to-watch-stream-cozy-fantasy/",
         "source": "Polygon"
       }
     ],
