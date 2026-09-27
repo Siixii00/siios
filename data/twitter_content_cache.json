@@ -1,175 +1,204 @@
 {
   "metadata": {
-    "last_updated": "2026-09-27T07:42:11.210142",
-    "total_items": 57
+    "last_updated": "2026-09-27T13:35:18.290123",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
+        "title": "Flip Fluid on Flip Dots",
+        "url": "https://mitxela.com/projects/flipflip",
+        "source": "Hacker News",
+        "score": 177
+      },
+      {
+        "title": "\"As a Language Model\": Chat Template Switches LLM Self-Referential Voice",
+        "url": "https://arxiv.org/abs/2609.25021",
+        "source": "Hacker News",
+        "score": 65
+      },
+      {
+        "title": "OpenAI Feared \"Optics\" of what might appear on Hacker News",
+        "url": "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/",
+        "source": "Hacker News",
+        "score": 381
+      },
+      {
         "title": "Does Georgism work? Five years later",
         "url": "https://www.astralcodexten.com/p/does-georgism-work-five-years-later",
         "source": "Hacker News",
-        "score": 284
+        "score": 402
       },
       {
         "title": "Go Concurrency Distilled",
         "url": "https://antonz.org/go-concurrency-distilled/",
         "source": "Hacker News",
-        "score": 185
-      },
-      {
-        "title": "Flip Fluid on Flip Dots",
-        "url": "https://mitxela.com/projects/flipflip",
-        "source": "Hacker News",
-        "score": 36
+        "score": 275
       },
       {
         "title": "PipePipe: NewPipe hard fork implementing SponsorBlock",
         "url": "https://github.com/InfinityLoop1308/PipePipe",
         "source": "Hacker News",
-        "score": 391
+        "score": 450
       },
       {
         "title": "DeepSeek Elastic Compute (DSec)",
         "url": "https://arxiv.org/abs/2609.22978",
         "source": "Hacker News",
-        "score": 234
-      },
-      {
-        "title": "Improving site performance by shipping more CSS",
-        "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
-        "source": "Hacker News",
-        "score": 28
+        "score": 280
       },
       {
         "title": "Show HN: Reladraw – A diagram language where you decide where to place things",
         "url": "https://github.com/reladraw/reladraw",
         "source": "Hacker News",
-        "score": 281
+        "score": 338
       },
       {
-        "title": "What is the size of Yemen? (2024)",
-        "url": "https://theborys.substack.com/p/what-is-the-size-of-yemen",
+        "title": "Finally, A True Blue Rose Exists",
+        "url": "https://www.sciencenews.org/article/true-blue-rose-pigment-copigment",
         "source": "Hacker News",
-        "score": 129
+        "score": 38
       },
       {
-        "title": "A searchable library of forgotten public-domain film clips from 1915 onward",
-        "url": "https://www.movingimagearchive.com/",
+        "title": "The internet discovers TLA+. Now what?",
+        "url": "https://reasonable.io/blog/tla-tutorial/",
         "source": "Hacker News",
-        "score": 155
+        "score": 45
       },
       {
-        "title": "Biology might not be quantum, but its math is quantumlike",
-        "url": "https://www.quantamagazine.org/biology-might-not-be-quantum-but-its-math-is-quantumlike-20260923/",
+        "title": "Fakecloud: Local AWS cloud emulator for integration tests",
+        "url": "https://fakecloud.dev/",
         "source": "Hacker News",
-        "score": 57
-      },
-      {
-        "title": "Evolving programming languages in the AI era",
-        "url": "https://dashbit.co/blog/evolving-ai-era",
-        "source": "Hacker News",
-        "score": 84
-      },
-      {
-        "title": "Fifteen years later, the Apple Cards origin story",
-        "url": "https://lexontech.org/fifteen-years-later-the-apple-cards-origin-story",
-        "source": "Hacker News",
-        "score": 389
+        "score": 5
       },
       {
         "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
         "url": "https://www.tomshardware.com/tech-industry/semiconductors/asml-says-its-sells-absolutely-nothing-in-europe-calls-on-eu-to-help-create-demand",
         "source": "Hacker News",
-        "score": 243
+        "score": 337
       },
       {
-        "title": "Drawgent: Coding agent on a live Excalidraw canvas",
-        "url": "https://tangled.org/yanndegat.tngl.sh/drawgent",
+        "title": "Biology might not be quantum, but its math is quantumlike",
+        "url": "https://www.quantamagazine.org/biology-might-not-be-quantum-but-its-math-is-quantumlike-20260923/",
         "source": "Hacker News",
-        "score": 142
+        "score": 90
       },
       {
-        "title": "An agent used DNS to reach an external chatbot",
-        "url": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
+        "title": "A searchable library of forgotten public-domain film clips from 1915 onward",
+        "url": "https://www.movingimagearchive.com/",
         "source": "Hacker News",
-        "score": 80
+        "score": 186
+      },
+      {
+        "title": "Fifteen years later, the Apple Cards origin story",
+        "url": "https://lexontech.org/fifteen-years-later-the-apple-cards-origin-story",
+        "source": "Hacker News",
+        "score": 413
       }
     ],
     "ai": [
       {
+        "title": "\"As a Language Model\": Chat Template Switches LLM Self-Referential Voice",
+        "url": "https://arxiv.org/abs/2609.25021",
+        "source": "Hacker News AI",
+        "score": 65
+      },
+      {
+        "title": "OpenAI Feared \"Optics\" of what might appear on Hacker News",
+        "url": "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/",
+        "source": "Hacker News AI",
+        "score": 381
+      },
+      {
         "title": "A searchable library of forgotten public-domain film clips from 1915 onward",
         "url": "https://www.movingimagearchive.com/",
         "source": "Hacker News AI",
-        "score": 155
+        "score": 186
       },
       {
         "title": "Evolving programming languages in the AI era",
         "url": "https://dashbit.co/blog/evolving-ai-era",
         "source": "Hacker News AI",
-        "score": 84
+        "score": 117
       },
       {
         "title": "An agent used DNS to reach an external chatbot",
         "url": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
         "source": "Hacker News AI",
-        "score": 80
+        "score": 117
       },
       {
         "title": "How I changed teaching after AI managed to do all my homework assignments",
         "url": "https://thelastsoftwareengineer.substack.com/p/how-i-changed-teaching-after-ai-managed",
         "source": "Hacker News AI",
-        "score": 187
+        "score": 237
       },
       {
         "title": "How to keep enjoying programming in a world of LLMs",
         "url": "https://discourse.haskell.org/t/how-to-keep-enjoying-programming-in-a-world-of-llms/14705",
         "source": "Hacker News AI",
-        "score": 213
+        "score": 263
+      },
+      {
+        "title": "Meta Blocks President Lula's Facebook Page, Campaign Ads 2 Weeks from Election",
+        "url": "https://www.reddit.com/r/worldnews/comments/1wr3id3/meta_blocks_president_lulas_facebook_page_and/",
+        "source": "Hacker News AI",
+        "score": 279
       },
       {
         "title": "Generate fonts where every LLM token is the same width",
         "url": "https://ampdot.mesh.host/token-space-fonts.html",
         "source": "Hacker News AI",
-        "score": 54
+        "score": 77
       },
       {
         "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
         "url": "https://swarmtraces.org/",
         "source": "Hacker News AI",
-        "score": 712
+        "score": 726
       },
       {
         "title": "A single function Jev-like wrapper for LLMs, including vision models",
         "url": "http://allanrbo.blogspot.com/2026/09/a-jev-like-wrapper-for-llms-including.html",
         "source": "Hacker News AI",
-        "score": 139
+        "score": 145
+      },
+      {
+        "title": "LP Voting and Investor Consent for AIFs",
+        "url": "https://taghash.io/blog/lp-voting-and-investor-consent-for-aifs-a-practical-workflow",
+        "source": "Hacker News AI",
+        "score": 4
       }
     ],
     "news": [
       {
-        "title": "Iran waiting for official US response after Trump rejects Hormuz deal, minister says",
+        "title": "Iranian minister says only negotiation can end conflict after Trump rejects Hormuz deal",
         "url": "https://www.bbc.co.uk/news/articles/cmvgyyw2jeego?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Christa Pike to be first woman executed in Tennessee in 200 years - but her defence say she's a victim too",
+        "title": "'Scourge' of abuse must be rooted out, says Pope, during Lourdes visit",
+        "url": "https://www.bbc.co.uk/news/articles/cm5y5nj8ejj8o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Two mass shootings in South Africa leave 27 dead",
+        "url": "https://www.bbc.co.uk/news/articles/ck5ywnp075d1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Killer Christa Pike is to be executed within days but her defence say she's a victim too",
         "url": "https://www.bbc.co.uk/news/articles/c6pwl9g9ne1lo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ten climbers missing after avalanche hits Himalayan base camp",
+        "url": "https://www.bbc.co.uk/news/articles/cwjdvml9e897o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Four killed in helicopter crash near Montreal",
         "url": "https://www.bbc.co.uk/news/articles/c3grvv7p81lqo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Pope praises young people's 'energy and commitment' at huge open-air Mass in Paris",
-        "url": "https://www.bbc.co.uk/news/articles/cm4gjjwvvlzro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "British national among six dead in building explosion close to Acropolis in Athens",
-        "url": "https://www.bbc.co.uk/news/articles/c6p3kk78l4l1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -180,6 +209,31 @@
     ],
     "art": [
       {
+        "title": " Marvel's Wolverine review: visually spectacular, but frustratingly safe ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/marvels-wolverine-review-visually-spectacular-but-frustratingly-safe",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " We’ve got to talk about laptop battery life because this is getting ridiculous and not in a good way ",
+        "url": "https://www.creativebloq.com/tech/laptops/weve-got-to-talk-about-laptop-battery-life-because-this-is-getting-ridiculous-and-not-in-a-good-way",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Gary A. Lippincott takes us on a tour of his inspiring home art studio ",
+        "url": "https://www.creativebloq.com/professional-development/creative-careers/gary-a-lippincott-offers-a-tour-of-his-warm-and-inspiring-art-studio",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " \"We have the kind of stuff AI wishes it could make\": Why trust is more important than ever for the NASA brand ",
+        "url": "https://www.creativebloq.com/design/we-have-the-kind-of-stuff-ai-wishes-it-could-make-why-trust-is-more-important-than-ever-for-the-nasa-brand",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Forget the Pokémon x Starbucks collab, get up to 60% off merch ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/forget-the-pokemon-x-starbucks-collab-get-up-to-60-percent-off-merch",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " Inca Kola rebrands as the world's other cola war heats up ",
         "url": "https://www.creativebloq.com/design/branding/inca-kola-rebrands-as-the-worlds-other-cola-war-heats-up",
         "source": "Creative Bloq"
@@ -187,31 +241,6 @@
       {
         "title": " The chair that puts the 'luxury' in budget ergonomic office chairs has $80 off in Amazon's early Prime Day sale ",
         "url": "https://www.creativebloq.com/tech/chairs-desks/the-chair-that-puts-the-luxury-in-budget-ergonomic-office-chairs-has-usd80-off-in-amazons-early-prime-day-sale",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The secret to Stuntman: Hollywood’s success is Hollywood itself ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/the-secret-to-stuntman-hollywoods-success-is-hollywood-itself",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This digital typewriter is the distraction-free writing tool I've been searching for ",
-        "url": "https://www.creativebloq.com/design/product-design/this-digital-typewriter-is-the-distraction-free-writing-tool-ive-been-searching-for",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " “Fan art helps me escape my habits\" – Recreating Distant Lands: Obsidian allowed this artist to explore colours, lighting and subjects beyond his usual repertoire ",
-        "url": "https://www.creativebloq.com/art/digital-art/fan-art-helps-me-escape-my-habits-recreating-distant-lands-obsidian-allowed-this-artist-to-explore-saturated-colours-artificial-lighting-and-subjects-beyond-his-usual-repertoire",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " New Tyson Fury vs. Anthony Joshua poster features graphic design fail ",
-        "url": "https://www.creativebloq.com/design/poster-design/new-tyson-fury-vs-anthony-joshua-poster-features-graphic-design-fail",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Adobe Max 2026's lineup tells us a lot about the company's AI priorities right now ",
-        "url": "https://www.creativebloq.com/design/design-software/adobe-max-2026s-lineup-tells-us-a-lot-about-the-companys-ai-priorities-right-now",
         "source": "Creative Bloq"
       }
     ],
@@ -254,38 +283,38 @@
     ],
     "gaming": [
       {
-        "title": "5 Detective Shows to Watch If You Love 'Lanterns'",
-        "url": "https://www.polygon.com/best-detective-shows-like-lanterns/",
+        "title": "Control Resonant Has a Secret Weapon in the GOTY Race",
+        "url": "https://www.polygon.com/control-resonant-goty-game-of-the-year-game-awards/",
         "source": "Polygon"
       },
       {
-        "title": "60 Years Later, the Best 'Peanuts' Quote of All Time Still Doesn't Get the Credit it Deserves",
-        "url": "https://www.polygon.com/charles-schulz-peanuts-best-quote-ever/",
+        "title": "The GTA Series is a Game Preservation Nightmare",
+        "url": "https://www.polygon.com/gta-game-preservation-classic-games-availability/",
         "source": "Polygon"
       },
       {
-        "title": "12 Years Ago, Doctor Who's Most Unhinged Episode Revealed the Doctor at His Worst",
-        "url": "https://www.polygon.com/doctor-who-the-caretaker-peter-capaldi-12th-doctor-anniversary/",
+        "title": "58 Years Ago, Star Trek Officially Switched Genres With an All-Time Classic Episode",
+        "url": "https://www.polygon.com/star-trek-enterprise-incident-espionage/",
         "source": "Polygon"
       },
       {
-        "title": "Tom Holland's 133-Minute Action Movie Masterpiece Is About to Leave Netflix",
-        "url": "https://www.polygon.com/before-it-leaves-netflix-watch-spider-man-homecoming/",
+        "title": "The Witcher 3 Remastered release time in your time zone",
+        "url": "https://www.polygon.com/the-witcher-3-remastered-release-time-when-edt-pdt/",
         "source": "Polygon"
       },
       {
-        "title": "'Godzilla Minus Zero' Review: The Best Godzilla Movie of All Time — Until Takashi Yamazaki's Next Sequel",
-        "url": "https://www.polygon.com/godzilla-minus-zero-review/",
+        "title": "63 Years Later, 'The Twilight Zone’s Most Emotional Episode is Still a Bold Masterpiece",
+        "url": "https://www.polygon.com/the-twilight-zone-in-praise-of-pip/",
         "source": "Polygon"
       },
       {
-        "title": "5 Classic Star Trek Episodes That Have Aged Like Milk",
-        "url": "https://www.polygon.com/star-trek-worst-episodes-that-have-aged-badly/",
+        "title": "3 Must-Play September Games You Missed Between Fire Emblem and Wolverine",
+        "url": "https://www.polygon.com/september-2026-hidden-gems/",
         "source": "Polygon"
       },
       {
-        "title": "Every Star Wars Movie and TV Show Officially in Development",
-        "url": "https://www.polygon.com/star-wars-upcoming-movies-tv-shows-release-dates-2027/",
+        "title": "The 10 Best Fights in 'Jujutsu Kaisen' History, Ranked",
+        "url": "https://www.polygon.com/jujutsu-kaisen-best-fights-episodes/",
         "source": "Polygon"
       }
     ],
