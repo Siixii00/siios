@@ -1,191 +1,143 @@
 {
   "metadata": {
-    "last_updated": "2026-09-27T18:05:02.339813",
-    "total_items": 65
+    "last_updated": "2026-09-27T21:52:23.235632",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
+        "title": "When did Google get so weird?",
+        "url": "https://sancho.bearblog.dev/google-weird/",
+        "source": "Hacker News",
+        "score": 312
+      },
+      {
+        "title": "Ember-1",
+        "url": "https://fireworks.ai/blog/ember-1",
+        "source": "Hacker News",
+        "score": 247
+      },
+      {
+        "title": "Lunar Terminator Paradox",
+        "url": "https://notes.secretsauce.net/notes/2026/09/27_lunar-terminator-paradox.html",
+        "source": "Hacker News",
+        "score": 18
+      },
+      {
+        "title": "Alan Kay's answer to \"Did the ENIAC have a BIOS\"?",
+        "url": "https://www.quora.com/Did-the-ENIAC-have-a-BIOS/answer/Alan-Kay-11",
+        "source": "Hacker News",
+        "score": 42
+      },
+      {
+        "title": "Show HN: Lofi Cities – Pixel-art city nights with browser-generated lofi",
+        "url": "https://loficities.com/",
+        "source": "Hacker News",
+        "score": 103
+      },
+      {
+        "title": "The state of SIMD in Rust in 2026",
+        "url": "https://shnatsel.github.io/state-of-simd-rust-2026/",
+        "source": "Hacker News",
+        "score": 49
+      },
+      {
+        "title": "Imp is a full port of DSPy to the BEAM",
+        "url": "https://github.com/deepfates/imp",
+        "source": "Hacker News",
+        "score": 24
+      },
+      {
+        "title": "There is more to code review than (automatable) detection",
+        "url": "https://www.adaptivecapacitylabs.com/2026/08/24/there-is-more-to-code-review-than-automatable-detection/",
+        "source": "Hacker News",
+        "score": 14
+      },
+      {
         "title": "In an $80 motel room, a discovery to shed light on the origins of life",
         "url": "https://www.nytimes.com/2026/09/26/science/motel-science-discovery.html",
         "source": "Hacker News",
-        "score": 99
+        "score": 179
       },
       {
-        "title": "Calling the AI bluff: Adding \"Do not guess\" cut made-up fields from 71% to 20%",
-        "url": "https://earnanhonestdollar.com/bench",
+        "title": "Oral history of John Chowning, inventor of FM synthesis [video]",
+        "url": "https://www.youtube.com/watch?v=e1Xn3030IvM",
         "source": "Hacker News",
-        "score": 10
+        "score": 30
       },
       {
-        "title": "Writing Efficient C++ Code",
+        "title": "What I did at Recurse Center",
+        "url": "https://thill.me/2026/09/11/what-i-did-at-rc.html",
+        "source": "Hacker News",
+        "score": 26
+      },
+      {
+        "title": "Don't couple your Go code to GitHub",
+        "url": "https://iain.rocks/blog/dont-couple-your-go-code-to-github",
+        "source": "Hacker News",
+        "score": 76
+      },
+      {
+        "title": "Writing Efficient C++ Code (2013)",
         "url": "https://asawicki.info/articles/writing_efficient_cpp_code.php",
         "source": "Hacker News",
-        "score": 80
+        "score": 121
       },
       {
         "title": "Replacing the old battery on rechargeable bike lights",
         "url": "https://jvns.ca/blog/2026/09/27/replacing-the-old-battery-on-rechargeable-bike-lights/",
         "source": "Hacker News",
-        "score": 81
-      },
-      {
-        "title": "The Normalization of Inexplicable Failures",
-        "url": "https://www.ihatethefuture.com/2026/09/the-normalization-of-inexplicable.html",
-        "source": "Hacker News",
-        "score": 152
+        "score": 117
       },
       {
         "title": "Show HN: TinyAIArena watch AI agents battle it out",
         "url": "https://tinyaiarena.com/",
         "source": "Hacker News",
-        "score": 41
-      },
-      {
-        "title": "SNL Weekend Update: Anthropic CEO Dario Amodei on A.I.'S Threat to Humanity [video]",
-        "url": "https://www.youtube.com/watch?v=-Nvne3LzBls",
-        "source": "Hacker News",
-        "score": 36
-      },
-      {
-        "title": "There are no \"rogue\" AI agents",
-        "url": "https://eoinhiggins.substack.com/p/there-are-no-rogue-ai-agents",
-        "source": "Hacker News",
-        "score": 118
-      },
-      {
-        "title": "Walgit: A Git server that is one binary in front of an object store",
-        "url": "https://github.com/rgodha24/walgithub",
-        "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "Flip Fluid on Flip Dots",
-        "url": "https://mitxela.com/projects/flipflip",
-        "source": "Hacker News",
-        "score": 294
-      },
-      {
-        "title": "Fakecloud: Local AWS cloud emulator for integration tests",
-        "url": "https://fakecloud.dev/",
-        "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "Ten lines of code that changed my world",
-        "url": "https://pixelambacht.nl/2026/ten-lines-of-code/",
-        "source": "Hacker News",
-        "score": 79
-      },
-      {
-        "title": "The Cartesian Hand: In-Hand Manipulation with All-Linear Fingers",
-        "url": "https://generalroboticslab.com/cartesian_handv1",
-        "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "Fragment of oldest known peace treaty found in Turkey",
-        "url": "https://www.livescience.com/archaeology/ancient-egyptians/we-have-found-traces-of-peace-thousands-of-years-old-fragment-of-worlds-oldest-known-peace-treaty-found-in-turkey",
-        "source": "Hacker News",
-        "score": 6
-      },
-      {
-        "title": "PostmarketOS is rebranding as Nura",
-        "url": "https://nura.eco/blog/2026/09/27/nura-rename/",
-        "source": "Hacker News",
-        "score": 88
+        "score": 83
       }
     ],
     "ai": [
       {
-        "title": "Calling the AI bluff: Adding \"Do not guess\" cut made-up fields from 71% to 20%",
-        "url": "https://earnanhonestdollar.com/bench",
-        "source": "Hacker News AI",
-        "score": 10
-      },
-      {
-        "title": "The Normalization of Inexplicable Failures",
-        "url": "https://www.ihatethefuture.com/2026/09/the-normalization-of-inexplicable.html",
-        "source": "Hacker News AI",
-        "score": 152
-      },
-      {
         "title": "Show HN: TinyAIArena watch AI agents battle it out",
         "url": "https://tinyaiarena.com/",
         "source": "Hacker News AI",
-        "score": 41
-      },
-      {
-        "title": "SNL Weekend Update: Anthropic CEO Dario Amodei on A.I.'S Threat to Humanity [video]",
-        "url": "https://www.youtube.com/watch?v=-Nvne3LzBls",
-        "source": "Hacker News AI",
-        "score": 36
-      },
-      {
-        "title": "There are no \"rogue\" AI agents",
-        "url": "https://eoinhiggins.substack.com/p/there-are-no-rogue-ai-agents",
-        "source": "Hacker News AI",
-        "score": 118
+        "score": 83
       },
       {
         "title": "Fragment of oldest known peace treaty found in Turkey",
         "url": "https://www.livescience.com/archaeology/ancient-egyptians/we-have-found-traces-of-peace-thousands-of-years-old-fragment-of-worlds-oldest-known-peace-treaty-found-in-turkey",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 40
       },
       {
-        "title": "Show HN: A CC0 museum of retro 3D tricks you can paste into a page",
-        "url": "https://3d-retro.com/",
+        "title": "The Normalization of Inexplicable Failures",
+        "url": "https://www.ihatethefuture.com/2026/09/the-normalization-of-inexplicable.html",
         "source": "Hacker News AI",
-        "score": 51
+        "score": 223
       },
       {
-        "title": "Show HN: Trail – new kind of logic game",
-        "url": "https://trail.franzai.com/",
+        "title": "There are no \"rogue\" AI agents",
+        "url": "https://eoinhiggins.substack.com/p/there-are-no-rogue-ai-agents",
         "source": "Hacker News AI",
-        "score": 6
+        "score": 305
       },
       {
         "title": "Unsealed Briefs in Authors’ Case v. Microsoft/OpenAI",
         "url": "https://authorsguild.org/news/ag-v-openai-top-execs-knew-mass-book-piracy-was-illegal/",
         "source": "Hacker News AI",
-        "score": 567
+        "score": 590
       },
       {
         "title": "A searchable library of forgotten public-domain film clips from 1915 onward",
         "url": "https://www.movingimagearchive.com/",
         "source": "Hacker News AI",
-        "score": 204
+        "score": 205
       },
       {
         "title": "An agent used DNS to reach an external chatbot",
         "url": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
         "source": "Hacker News AI",
-        "score": 151
-      },
-      {
-        "title": "\"As a Language Model\": Chat Template Switches LLM Self-Referential Voice",
-        "url": "https://arxiv.org/abs/2609.25021",
-        "source": "Hacker News AI",
-        "score": 92
-      },
-      {
-        "title": "How to keep enjoying programming in a world of LLMs",
-        "url": "https://discourse.haskell.org/t/how-to-keep-enjoying-programming-in-a-world-of-llms/14705",
-        "source": "Hacker News AI",
-        "score": 307
-      },
-      {
-        "title": "Meta Blocks President Lula's Facebook Page, Campaign Ads 2 Weeks from Election",
-        "url": "https://www.reddit.com/r/worldnews/comments/1wr3id3/meta_blocks_president_lulas_facebook_page_and/",
-        "source": "Hacker News AI",
-        "score": 382
-      },
-      {
-        "title": "Generate fonts where every LLM token is the same width",
-        "url": "https://ampdot.mesh.host/token-space-fonts.html",
-        "source": "Hacker News AI",
-        "score": 84
+        "score": 161
       }
     ],
     "news": [
@@ -200,8 +152,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Killer Christa Pike to be executed within days - but her defence say she's a victim too",
-        "url": "https://www.bbc.co.uk/news/articles/c6pwl9g9ne1lo?at_medium=RSS&at_campaign=rss",
+        "title": "Embattled Serbian president resigns, paving way for early elections",
+        "url": "https://www.bbc.co.uk/news/articles/ckpq0g7z5pjjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -301,6 +253,11 @@
     ],
     "gaming": [
       {
+        "title": "13 Years Ago, One Dark JRPG Proved Atlus Could Still Be Hardcore",
+        "url": "https://www.polygon.com/shin-megami-tensei-4-3ds-jrpg-retrospective/",
+        "source": "Polygon"
+      },
+      {
         "title": "'Forgotten Island's Stars Explain \"Tayo Na!\", the Movie's Biggest Shifting In-Joke",
         "url": "https://www.polygon.com/forgotten-island-tayo-na-explained/",
         "source": "Polygon"
@@ -328,11 +285,6 @@
       {
         "title": "The Real Budget Of Hideo Kojima's Physint Remains A Mystery",
         "url": "https://www.polygon.com/physint-budget-controversy/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Flying a Helicopter Is 2026’s Most Stressful Gaming Experience",
-        "url": "https://www.polygon.com/wardogs-helicopter-flying-most-stressful-gaming-experience/",
         "source": "Polygon"
       }
     ],
