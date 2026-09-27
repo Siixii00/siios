@@ -1,173 +1,173 @@
 {
   "metadata": {
-    "last_updated": "2026-09-26T22:26:06.966001",
+    "last_updated": "2026-09-27T01:07:26.326102",
     "total_items": 61
   },
   "content": {
     "tech": [
       {
+        "title": "Does Georgism work? Five years later",
+        "url": "https://www.astralcodexten.com/p/does-georgism-work-five-years-later",
+        "source": "Hacker News",
+        "score": 81
+      },
+      {
         "title": "DeepSeek Elastic Compute (DSec)",
         "url": "https://arxiv.org/abs/2609.22978",
         "source": "Hacker News",
-        "score": 83
+        "score": 150
       },
       {
         "title": "PipePipe: NewPipe hard fork implementing SponsorBlock",
         "url": "https://github.com/InfinityLoop1308/PipePipe",
         "source": "Hacker News",
-        "score": 272
+        "score": 314
       },
       {
         "title": "Show HN: Reladraw – A diagram language where you decide where to place things",
         "url": "https://github.com/reladraw/reladraw",
         "source": "Hacker News",
-        "score": 114
+        "score": 170
       },
       {
-        "title": "LA Metro has some of the slowest escalators on Earth",
-        "url": "https://basin.la/articles/ninety-feet-a-minute.html",
+        "title": "Evolving programming languages in the AI era",
+        "url": "https://dashbit.co/blog/evolving-ai-era",
         "source": "Hacker News",
-        "score": 39
+        "score": 24
       },
       {
         "title": "A searchable library of forgotten public-domain film clips from 1915 onward",
         "url": "https://www.movingimagearchive.com/",
         "source": "Hacker News",
-        "score": 75
-      },
-      {
-        "title": "Welcome to the Medical Clinic at the Interplanetary Relay Station",
-        "url": "https://www.lightspeedmagazine.com/fiction/welcome-to-the-medical-clinic-at-the-interplanetary-relay-station/",
-        "source": "Hacker News",
-        "score": 21
+        "score": 108
       },
       {
         "title": "Drawgent: Coding agent on a live Excalidraw canvas",
         "url": "https://tangled.org/yanndegat.tngl.sh/drawgent",
         "source": "Hacker News",
-        "score": 86
+        "score": 105
+      },
+      {
+        "title": "Welcome to the Medical Clinic at the Interplanetary Relay Station",
+        "url": "https://www.lightspeedmagazine.com/fiction/welcome-to-the-medical-clinic-at-the-interplanetary-relay-station/",
+        "source": "Hacker News",
+        "score": 41
+      },
+      {
+        "title": "Go Concurrency Distilled",
+        "url": "https://antonz.org/go-concurrency-distilled/",
+        "source": "Hacker News",
+        "score": 19
       },
       {
         "title": "Fifteen years later, the Apple Cards origin story",
         "url": "https://lexontech.org/fifteen-years-later-the-apple-cards-origin-story",
         "source": "Hacker News",
-        "score": 318
+        "score": 338
       },
       {
-        "title": "The Lost Atomic Update on Loongson CPU",
-        "url": "https://jia.je/hardware/2026/09/24/loongson-cpu-erratum-en/",
+        "title": "Reverse-engineering the Intel 8087's tangent algorithm: more than CORDIC",
+        "url": "https://www.righto.com/2026/09/8087-tangent-cordic.html",
         "source": "Hacker News",
-        "score": 95
+        "score": 20
       },
       {
-        "title": "Modern Object Pascal Introduction for Programmers",
-        "url": "https://castle-engine.io/modern_pascal",
+        "title": "How one Twitch chat message became code execution on a streamer’s PC",
+        "url": "https://blog.scrt.ch/2026/09/22/how-one-twitch-chat-message-became-code-execution-on-a-streamers-pc/",
         "source": "Hacker News",
-        "score": 132
+        "score": 24
       },
       {
-        "title": "We're gonna need a lot more mathematicians",
-        "url": "https://terrytao.wordpress.com/2026/09/24/were-gonna-need-a-lot-more-mathematicians/",
+        "title": "Turning GLM-5.3-Flash into a Jev-like decision model",
+        "url": "https://www.privatemode.ai/blog/system-one-from-glm-flash",
         "source": "Hacker News",
-        "score": 350
+        "score": 12
       },
       {
-        "title": "Japan moves to tighten rules for foreigners",
-        "url": "https://www.aljazeera.com/economy/2026/9/25/japan-moves-to-tighten-rules-for-foreigners-throwing-futures-into-doubt",
+        "title": "The Evolution of Vending Machines",
+        "url": "https://www.saturdayeveningpost.com/2026/09/from-holy-water-to-frozen-meals-the-evolution-of-vending-machines/",
         "source": "Hacker News",
-        "score": 64
+        "score": 11
       },
       {
-        "title": "ASML says it sold 'absolutely nothing' in Europe in 2026",
-        "url": "https://www.tomshardware.com/tech-industry/semiconductors/asml-says-its-sells-absolutely-nothing-in-europe-calls-on-eu-to-help-create-demand",
+        "title": "LA Metro has some of the slowest escalators on Earth",
+        "url": "https://basin.la/articles/ninety-feet-a-minute.html",
         "source": "Hacker News",
-        "score": 97
-      },
-      {
-        "title": "The Rise of Audio AR",
-        "url": "https://www.dbreunig.com/2024/04/10/the_rise_of_audio_ar.html",
-        "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "Analyzing Frontier Model Progress with My Favourite Game: Prince of Persia",
-        "url": "https://blog.priyan.in/2026/09/analyzing-frontier-model-progress-with.html",
-        "source": "Hacker News",
-        "score": 48
+        "score": 74
       }
     ],
     "ai": [
       {
+        "title": "Evolving programming languages in the AI era",
+        "url": "https://dashbit.co/blog/evolving-ai-era",
+        "source": "Hacker News AI",
+        "score": 24
+      },
+      {
         "title": "A searchable library of forgotten public-domain film clips from 1915 onward",
         "url": "https://www.movingimagearchive.com/",
         "source": "Hacker News AI",
-        "score": 75
+        "score": 108
       },
       {
-        "title": "How to keep enjoying programming in a world of LLMs",
-        "url": "https://discourse.haskell.org/t/how-to-keep-enjoying-programming-in-a-world-of-llms/14705",
+        "title": "Generate fonts where every LLM token is the same width",
+        "url": "https://ampdot.mesh.host/token-space-fonts.html",
         "source": "Hacker News AI",
-        "score": 124
+        "score": 23
       },
       {
         "title": "How I changed teaching after AI managed to do all my homework assignments",
         "url": "https://thelastsoftwareengineer.substack.com/p/how-i-changed-teaching-after-ai-managed",
         "source": "Hacker News AI",
-        "score": 103
+        "score": 129
+      },
+      {
+        "title": "How to keep enjoying programming in a world of LLMs",
+        "url": "https://discourse.haskell.org/t/how-to-keep-enjoying-programming-in-a-world-of-llms/14705",
+        "source": "Hacker News AI",
+        "score": 152
+      },
+      {
+        "title": "An agent used DNS to reach an external chatbot",
+        "url": "https://alignment.openai.com/misalignment-reports/an-agent-used-dns-to-reach-an-external-chatbot/",
+        "source": "Hacker News AI",
+        "score": 42
       },
       {
         "title": "OpenAI bots meddled with multiple US Government agency sites",
         "url": "https://www.bbc.com/news/articles/cw62jje658dlo",
         "source": "Hacker News AI",
-        "score": 91
-      },
-      {
-        "title": "Automattic has a new board after failed attempt to put CEO on leave",
-        "url": "https://techcrunch.com/2026/09/25/automattic-has-a-new-board-after-failed-attempt-to-put-ceo-on-leave/",
-        "source": "Hacker News AI",
-        "score": 108
-      },
-      {
-        "title": "Probing picosecond depairing currents in type-II superconductors",
-        "url": "https://www.nature.com/articles/s41567-026-03469-z",
-        "source": "Hacker News AI",
-        "score": 4
+        "score": 103
       },
       {
         "title": "Revealing the details of how OpenAI agents hacked Hugging Face",
         "url": "https://swarmtraces.org/",
         "source": "Hacker News AI",
-        "score": 696
+        "score": 701
+      },
+      {
+        "title": "Automattic has a new board after failed attempt to put CEO on leave",
+        "url": "https://techcrunch.com/2026/09/25/automattic-has-a-new-board-after-failed-attempt-to-put-ceo-on-leave/",
+        "source": "Hacker News AI",
+        "score": 122
       },
       {
         "title": "A single function Jev-like wrapper for LLMs, including vision models",
         "url": "http://allanrbo.blogspot.com/2026/09/a-jev-like-wrapper-for-llms-including.html",
         "source": "Hacker News AI",
-        "score": 132
+        "score": 133
       },
       {
-        "title": "Banks and Credit Unions to Team Up Against Apple Pay Fees",
-        "url": "https://www.macrumors.com/2026/09/25/apple-pay-antitrust-lawsuit-advances/",
+        "title": "Allegations of sexual harassment and rape at Bay Area AI party houses",
+        "url": "https://www.kron4.com/news/technology-ai/report-details-allegations-of-wild-parties-sexual-harassment-and-rape-at-bay-area-ai-party-houses/",
         "source": "Hacker News AI",
-        "score": 103
+        "score": 8
       },
       {
-        "title": "Calculating atmospheric drag on satellites for a Cubesat [pdf]",
-        "url": "https://www.osti.gov/servlets/purl/1124870",
+        "title": "An OpenAI agent escaped its sandbox by hiding questions in DNS lookups",
+        "url": "https://madrobot.blog/2026/09/26/openai-agent-escaped-sandbox-dns-external-chatbot-models-paused/",
         "source": "Hacker News AI",
-        "score": 34
-      },
-      {
-        "title": "OpenAI pauses training of its 'most capable models'",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/1001049/openai-training-pause",
-        "source": "Hacker News AI",
-        "score": 11
-      },
-      {
-        "title": "Show HN: A Claude Code skill to analyze your chess games",
-        "url": "https://github.com/brumar/chess-postmortem-skills",
-        "source": "Hacker News AI",
-        "score": 68
+        "score": 4
       }
     ],
     "news": [
@@ -278,6 +278,31 @@
     ],
     "gaming": [
       {
+        "title": "Tom Holland's 133-Minute Action Movie Masterpiece Is About to Leave Netflix",
+        "url": "https://www.polygon.com/before-it-leaves-netflix-watch-spider-man-homecoming/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Godzilla Minus Zero' Review: The Best Godzilla Movie of All Time — Until Takashi Yamazaki's Next Sequel",
+        "url": "https://www.polygon.com/godzilla-minus-zero-review/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Classic Star Trek Episodes That Have Aged Like Milk",
+        "url": "https://www.polygon.com/star-trek-worst-episodes-that-have-aged-badly/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Every Star Wars Movie and TV Show Officially in Development",
+        "url": "https://www.polygon.com/star-wars-upcoming-movies-tv-shows-release-dates-2027/",
+        "source": "Polygon"
+      },
+      {
+        "title": "This 35-Year-Old Video Game Is Somehow More Fun Than Ever",
+        "url": "https://www.polygon.com/zelda-link-to-the-past-snes-35th-anniversary/",
+        "source": "Polygon"
+      },
+      {
         "title": "Former D&D Leads Say Critical Role's Daggerheart Represents a ‘Fundamental Shift’ for TTRPGS",
         "url": "https://www.polygon.com/critical-role-daggerheart-dnd-designers-interview-perkins-crawford/",
         "source": "Polygon"
@@ -285,31 +310,6 @@
       {
         "title": "5 Nintendo Games That Still Need a Switch 2 Edition",
         "url": "https://www.polygon.com/nintendo-games-no-switch-2-edition/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 Years Later, Critical Role’S Most Heartbreaking Quote Still Lives in My Mind Rent-Free",
-        "url": "https://www.polygon.com/critical-role-the-legend-of-vox-machina-best-quote/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Minecraft Is Getting Its First New Dimension Since 2011",
-        "url": "https://www.polygon.com/minecraft-live-news-recap-sift-dimension/",
-        "source": "Polygon"
-      },
-      {
-        "title": "13 Most Influential Video Games of the Past 45 Years",
-        "url": "https://www.polygon.com/most-influential-video-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Sega's '90s'-Era Fire Emblem Replacement Needs To Make A Comeback",
-        "url": "https://www.polygon.com/shining-force-sega-tactics-rpg-comeback/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Larian Officially Ended Baldur's Gate 3 DLC. Modders Missed the Memo",
-        "url": "https://www.polygon.com/bg3-modders-keep-making-dlc-sized-expansions/",
         "source": "Polygon"
       }
     ],
