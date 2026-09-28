@@ -1,143 +1,161 @@
 {
   "metadata": {
-    "last_updated": "2026-09-28T06:23:04.120170",
-    "total_items": 57
+    "last_updated": "2026-09-28T15:01:26.296372",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "Thinking fast and slow in AI: The role of metacognition (2021)",
-        "url": "https://arxiv.org/abs/2110.01834",
+        "title": "Parley: Federated, decentralised chat that speaks plain IRC",
+        "url": "https://git.mills.io/prologic/parley",
         "source": "Hacker News",
-        "score": 53
+        "score": 171
+      },
+      {
+        "title": "Show HN: Hntui – A TUI for Hacker News",
+        "url": "https://github.com/ahmd-sh/hntui",
+        "source": "Hacker News",
+        "score": 70
+      },
+      {
+        "title": "Coding Is Not Solved – Alex Ewerlöf Notes",
+        "url": "https://blog.alexewerlof.com/p/coding-is-not-solved",
+        "source": "Hacker News",
+        "score": 100
+      },
+      {
+        "title": "37,500 border drawings: a map of the world as people remember it",
+        "url": "https://www.habibicode.org/thedrawnworld",
+        "source": "Hacker News",
+        "score": 99
+      },
+      {
+        "title": "Footguns with Postgres \"at time zone 'UTC'\"",
+        "url": "https://bookofrevenue.com/blog/6ab81e9a97a13f0001f7e4e1/postgres-at-time-zone-u-does-not-do-what-you-think-it-does",
+        "source": "Hacker News",
+        "score": 107
+      },
+      {
+        "title": "Show HN: PaperMono, e-ink fridge magnet shopping list with mobile web page",
+        "url": "https://github.com/seamusc/papermono-shopping-list",
+        "source": "Hacker News",
+        "score": 37
       },
       {
         "title": "Owed a billion dollars in Nvidia stock",
         "url": "https://colo.to/nvidia-stock-narrative.html",
         "source": "Hacker News",
-        "score": 407
+        "score": 904
+      },
+      {
+        "title": "Has Violence Against Teachers Become Accepted by Society?",
+        "url": "https://theeducatorsroom.com/has-violence-against-teachers-become-accepted-by-society/",
+        "source": "Hacker News",
+        "score": 85
       },
       {
         "title": "Ember-1",
         "url": "https://fireworks.ai/blog/ember-1",
         "source": "Hacker News",
-        "score": 423
+        "score": 537
       },
       {
         "title": "When did Google get so weird?",
         "url": "https://sancho.bearblog.dev/google-weird/",
         "source": "Hacker News",
-        "score": 1060
+        "score": 1548
       },
       {
-        "title": "Malleable software: Restoring user agency in a world of locked-down apps (2025)",
-        "url": "https://www.inkandswitch.com/essay/malleable-software/",
+        "title": "Nissan's third generation e-POWER powertrain",
+        "url": "https://www.nissan-global.com/EN/INNOVATION/TECHNOLOGY/ARCHIVE/E_POWER_GEN3/",
         "source": "Hacker News",
-        "score": 39
+        "score": 116
       },
       {
-        "title": "Was Silent Reading Unusual During Augustine's Time?",
-        "url": "https://www.historyofinformation.com/detail.php?entryid=4341",
+        "title": "Thinking fast and slow in AI: The role of metacognition (2021)",
+        "url": "https://arxiv.org/abs/2110.01834",
         "source": "Hacker News",
-        "score": 31
-      },
-      {
-        "title": "Alan Kay's answer to “Did the ENIAC have a BIOS”?",
-        "url": "https://www.quora.com/Did-the-ENIAC-have-a-BIOS/answer/Alan-Kay-11",
-        "source": "Hacker News",
-        "score": 104
-      },
-      {
-        "title": "Functional Mechanical Sympathy [video]",
-        "url": "https://www.youtube.com/watch?v=jSHmDnUZCm8",
-        "source": "Hacker News",
-        "score": 3
-      },
-      {
-        "title": "There is more to code review than (automatable) detection",
-        "url": "https://www.adaptivecapacitylabs.com/2026/08/24/there-is-more-to-code-review-than-automatable-detection/",
-        "source": "Hacker News",
-        "score": 113
-      },
-      {
-        "title": "The state of SIMD in Rust in 2026",
-        "url": "https://shnatsel.github.io/state-of-simd-rust-2026/",
-        "source": "Hacker News",
-        "score": 124
+        "score": 146
       },
       {
         "title": "Self-Hosting on the Dark Web",
         "url": "https://david.alvarezrosa.com/posts/self-hosting-on-the-dark-web/",
         "source": "Hacker News",
-        "score": 123
+        "score": 288
       },
       {
-        "title": "TabPFN and TabICL vs. tuned XGBoost: the model that doesn't train won 14/14",
-        "url": "https://efraingaray.com/en/blog/tabpfn-vs-xgboost/",
+        "title": "Malleable software: Restoring user agency in a world of locked-down apps (2025)",
+        "url": "https://www.inkandswitch.com/essay/malleable-software/",
         "source": "Hacker News",
-        "score": 14
+        "score": 130
       },
       {
-        "title": "Don't couple your Go code to GitHub",
-        "url": "https://iain.rocks/blog/dont-couple-your-go-code-to-github",
+        "title": "Show HN: Free alternative to graphics design giants",
+        "url": "https://scissor.studio/",
         "source": "Hacker News",
-        "score": 207
-      },
-      {
-        "title": "Guitar amp and effects pedal built on the Waveshare ESP32-S3-Touch-AMOLED-2.06",
-        "url": "https://github.com/dashersw/coyopedal",
-        "source": "Hacker News",
-        "score": 43
-      },
-      {
-        "title": "Deterministic Concurrency [video]",
-        "url": "https://www.youtube.com/watch?v=25x0UuSCKuU",
-        "source": "Hacker News",
-        "score": 15
+        "score": 18
       }
     ],
     "ai": [
       {
-        "title": "Thinking fast and slow in AI: The role of metacognition (2021)",
-        "url": "https://arxiv.org/abs/2110.01834",
+        "title": "Parley: Federated, decentralised chat that speaks plain IRC",
+        "url": "https://git.mills.io/prologic/parley",
         "source": "Hacker News AI",
-        "score": 53
+        "score": 171
       },
       {
-        "title": "TabPFN and TabICL vs. tuned XGBoost: the model that doesn't train won 14/14",
-        "url": "https://efraingaray.com/en/blog/tabpfn-vs-xgboost/",
+        "title": "Has Violence Against Teachers Become Accepted by Society?",
+        "url": "https://theeducatorsroom.com/has-violence-against-teachers-become-accepted-by-society/",
         "source": "Hacker News AI",
-        "score": 14
-      },
-      {
-        "title": "Fragment of oldest known peace treaty found in Turkey",
-        "url": "https://www.livescience.com/archaeology/ancient-egyptians/we-have-found-traces-of-peace-thousands-of-years-old-fragment-of-worlds-oldest-known-peace-treaty-found-in-turkey",
-        "source": "Hacker News AI",
-        "score": 78
-      },
-      {
-        "title": "Show HN: TinyAIArena watch AI agents battle it out",
-        "url": "https://tinyaiarena.com/",
-        "source": "Hacker News AI",
-        "score": 106
-      },
-      {
-        "title": "The Normalization of Inexplicable Failures",
-        "url": "https://www.ihatethefuture.com/2026/09/the-normalization-of-inexplicable.html",
-        "source": "Hacker News AI",
-        "score": 260
-      },
-      {
-        "title": "Calling the AI bluff: Adding \"Do not guess\" cut made-up claims from 71% to 20%",
-        "url": "https://earnanhonestdollar.com/bench",
-        "source": "Hacker News AI",
-        "score": 39
+        "score": 85
       },
       {
         "title": "Nissan's third generation e-POWER powertrain",
         "url": "https://www.nissan-global.com/EN/INNOVATION/TECHNOLOGY/ARCHIVE/E_POWER_GEN3/",
         "source": "Hacker News AI",
-        "score": 37
+        "score": 116
+      },
+      {
+        "title": "Thinking fast and slow in AI: The role of metacognition (2021)",
+        "url": "https://arxiv.org/abs/2110.01834",
+        "source": "Hacker News AI",
+        "score": 146
+      },
+      {
+        "title": "AI companies in race to demonstrate their model most threatening to humanity",
+        "url": "https://thecivilian.co.nz/2026/09/27/ai-companies-in-fierce-arms-race-to-demonstrate-their-model-is-the-most-existentially-threatening-to-humanity/",
+        "source": "Hacker News AI",
+        "score": 391
+      },
+      {
+        "title": "Prompting Claude Opus 5.5",
+        "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-opus-5-5",
+        "source": "Hacker News AI",
+        "score": 176
+      },
+      {
+        "title": "What Would a Serious AI Product Look Like?",
+        "url": "https://blog.glyph.im/2026/09/serious-ai-product.html",
+        "source": "Hacker News AI",
+        "score": 3
+      },
+      {
+        "title": "Calling the AI bluff: Adding \"Do not guess\" cut made-up claims from 71% to 20%",
+        "url": "https://earnanhonestdollar.com/bench",
+        "source": "Hacker News AI",
+        "score": 68
+      },
+      {
+        "title": "Fragment of oldest known peace treaty found in Turkey",
+        "url": "https://www.livescience.com/archaeology/ancient-egyptians/we-have-found-traces-of-peace-thousands-of-years-old-fragment-of-worlds-oldest-known-peace-treaty-found-in-turkey",
+        "source": "Hacker News AI",
+        "score": 91
+      },
+      {
+        "title": "Big AI's content problem: Take the work, keep the money",
+        "url": "https://www.theregister.com/columnists/2026/09/27/big-ais-content-problem-take-the-work-keep-the-money/5299007",
+        "source": "Hacker News AI",
+        "score": 22
       }
     ],
     "news": [
@@ -147,37 +165,62 @@
         "source": "BBC World"
       },
       {
+        "title": "Trump-Xi summit: What wasn't said might matter the most",
+        "url": "https://www.bbc.co.uk/news/articles/cxp84g2ly1mjo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Mexico's Pacific coast braces for Hurricane Polo",
+        "url": "https://www.bbc.co.uk/news/articles/cw8d3z5y7958o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Plan for controversial Sydney data centre scrapped after push-back",
+        "url": "https://www.bbc.co.uk/news/articles/c6n9wrqpj4yqo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Two mass shootings in South Africa leave 28 dead",
+        "url": "https://www.bbc.co.uk/news/articles/ck5ywnp075d1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Embattled Serbian president resigns, paving way for early elections",
         "url": "https://www.bbc.co.uk/news/articles/ckpq0g7z5pjjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Two bodies found after avalanche hits Himalayan climbing group",
-        "url": "https://www.bbc.co.uk/news/articles/cwjdvml9e897o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Two mass shootings in South Africa leave 27 dead",
-        "url": "https://www.bbc.co.uk/news/articles/ck5ywnp075d1o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Four killed in helicopter crash near Montreal",
-        "url": "https://www.bbc.co.uk/news/articles/c3grvv7p81lqo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Venezuela releases dozens of political prisoners as election calls grow",
-        "url": "https://www.bbc.co.uk/news/articles/c620lrw2xr12o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Switzerland rejects stricter interpretation of its neutrality",
-        "url": "https://www.bbc.co.uk/news/articles/cm750plvwy9vo?at_medium=RSS&at_campaign=rss",
+        "title": "One dead as nor'easter storm pummels New York and New Jersey",
+        "url": "https://www.bbc.co.uk/news/articles/ck1wxxzn5jndo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " CorelDRAW adds Text-to-Vector AI in the September update – is it a good move? ",
+        "url": "https://www.creativebloq.com/design/graphic-design-software/coreldraw-adds-text-to-vector-ai-in-the-september-update-is-it-a-good-move",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Viral AI animation sparks controversy over familiar character design ",
+        "url": "https://www.creativebloq.com/art/animation/viral-ai-animation-sparks-controversy-over-familiar-character-design",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Please stop calling every laptop an \"AI laptop\" ",
+        "url": "https://www.creativebloq.com/tech/laptops/please-stop-calling-every-laptop-an-ai-laptop",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " 2026 is the year of the cancelled ad ",
+        "url": "https://www.creativebloq.com/design/advertising/2026-is-the-year-of-the-cancelled-ad",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " A library of over 10,000 abstract models is the starting point for this artist's compositions ",
+        "url": "https://www.creativebloq.com/design/poster-design/a-library-of-over-10-000-abstract-models-is-the-starting-point-for-this-artists-compositions",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Marvel's Wolverine review: visually spectacular, but frustratingly safe ",
         "url": "https://www.creativebloq.com/entertainment/gaming/marvels-wolverine-review-visually-spectacular-but-frustratingly-safe",
@@ -187,34 +230,29 @@
         "title": " We’ve got to talk about laptop battery life because this is getting ridiculous and not in a good way ",
         "url": "https://www.creativebloq.com/tech/laptops/weve-got-to-talk-about-laptop-battery-life-because-this-is-getting-ridiculous-and-not-in-a-good-way",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Gary A. Lippincott takes us on a tour of his inspiring home art studio ",
-        "url": "https://www.creativebloq.com/professional-development/creative-careers/gary-a-lippincott-offers-a-tour-of-his-warm-and-inspiring-art-studio",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " \"We have the kind of stuff AI wishes it could make\": Why trust is more important than ever for the NASA brand ",
-        "url": "https://www.creativebloq.com/design/we-have-the-kind-of-stuff-ai-wishes-it-could-make-why-trust-is-more-important-than-ever-for-the-nasa-brand",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Forget the Pokémon x Starbucks collab, get up to 60% off merch ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/forget-the-pokemon-x-starbucks-collab-get-up-to-60-percent-off-merch",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Inca Kola rebrands as the world's other cola war heats up ",
-        "url": "https://www.creativebloq.com/design/branding/inca-kola-rebrands-as-the-worlds-other-cola-war-heats-up",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The chair that puts the 'luxury' in budget ergonomic office chairs has $80 off in Amazon's early Prime Day sale ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/the-chair-that-puts-the-luxury-in-budget-ergonomic-office-chairs-has-usd80-off-in-amazons-early-prime-day-sale",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Is the universe infinite? The answer gets weird fast",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260927225041.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Blood tests reveal why astronauts get constipated in space",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260927225030.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Diabetes study finds keeping blood sugar too steady may come at a price",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260927225019.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists just discovered what coffee really does to your gut and brain",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260927034331.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Glucosamine, a popular joint supplement, linked to faster Alzheimer’s progression",
         "url": "https://www.sciencedaily.com/releases/2026/09/260927033754.htm",
@@ -229,62 +267,42 @@
         "title": "Why rheumatoid arthritis pain may persist even when inflammation is under control",
         "url": "https://www.sciencedaily.com/releases/2026/09/260925093208.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "REM sleep paradox: Dreaming may drain the brain’s energy even as fuel supply rises",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260925093206.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists may have misread a 2-billion-year-old clue about Earth",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260925093201.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "That fresh cleaning smell could be filling your home with nanoparticles",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260925093152.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "1.7-billion-year-old fossils reveal a crucial clue to the rise of complex life",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260925005447.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "35 Years Later, the '90s Remake of a Cult Classic Thriller Is Officially Free to Watch on YouTube",
-        "url": "https://www.polygon.com/dark-shadows-revival-free-youtube-september-2026/",
+        "title": "How to activate the construction elevator in Silent Hill Townfall",
+        "url": "https://www.polygon.com/silent-hill-townfall-activate-construction-elevator-power-generator-key/",
         "source": "Polygon"
       },
       {
-        "title": "The Definitive ’90s Sci-Fi Action Blockbuster Is Officially Streaming for Free on YouTube",
-        "url": "https://www.polygon.com/stargate-movie-streaming-free-youtube-september-2026/",
+        "title": "GTA 6 Won't Officially Break Clair Obscur's Big GOTY Record",
+        "url": "https://www.polygon.com/gta-6-goty-golden-joysticks-big-five/",
         "source": "Polygon"
       },
       {
-        "title": "2024's Best RPG Is a Must-Play for Fire Emblem Fans",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-metaphor-refantazio/",
+        "title": "The Mummy 4 Set Photos Show First Look at Rachel Weisz's Return",
+        "url": "https://www.polygon.com/mummy-4-set-photos-rachel-weisz-return/",
         "source": "Polygon"
       },
       {
-        "title": "'Lanterns' Episode 7 Ending Explained: Antaan, Sinestro, and Who Killed Hal Jordan?",
-        "url": "https://www.polygon.com/lanterns-episode-7-ending-explained-what-planet-is-sinestro-on/",
+        "title": "Star Wars' Most Cunning Villain Officially Returns in New Release | Exclusive Preview",
+        "url": "https://www.polygon.com/star-wars-thrawn-manga-preview/",
         "source": "Polygon"
       },
       {
-        "title": "HBO Just Officially Changed a Fundamental Rule of Green Lantern Canon",
-        "url": "https://www.polygon.com/hbo-lanterns-episode-7-john-stewart-powers-green-lantern/",
+        "title": "Blizzard Scrambles to Meet World of Warcraft Forever’s Unexpected Popularity",
+        "url": "https://www.polygon.com/world-of-warcraft-forever-beta-blizzard-population-increase/",
         "source": "Polygon"
       },
       {
-        "title": "9 Classic 'Far Side' Comics About Cats Being the Worst",
-        "url": "https://www.polygon.com/best-far-side-comics-about-cats/",
+        "title": "'God of War Laufey' Footage Officially Reveals New Gameplay, Physical Edition",
+        "url": "https://www.polygon.com/god-of-war-laufey-preorder-release-date-physical-disc/",
         "source": "Polygon"
       },
       {
-        "title": "Jason Statham’s 113-Minute Action Thriller Blasts Back Onto Streaming",
-        "url": "https://www.polygon.com/the-meg-on-hbo-max-jason-statham/",
+        "title": "The Witcher 3 Remastered Is Still An Unfinished Masterpiece",
+        "url": "https://www.polygon.com/the-witcher-3-remastered-review-impressions/",
         "source": "Polygon"
       }
     ],
