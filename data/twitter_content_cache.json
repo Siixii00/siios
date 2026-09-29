@@ -1,158 +1,181 @@
 {
   "metadata": {
-    "last_updated": "2026-09-29T14:48:18.256554",
-    "total_items": 59
+    "last_updated": "2026-09-29T19:49:44.408911",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "How Delhi Cut Electricity Loss from 50 to 5 Percent",
+        "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+        "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
+        "source": "Hacker News",
+        "score": 540
+      },
+      {
+        "title": "Tcl/Tk 9.1 Released",
+        "url": "https://www.tcl-lang.org/software/tcltk/9.1.html",
+        "source": "Hacker News",
+        "score": 131
+      },
+      {
+        "title": "Nicholas Polson has authored 258 academic papers in 2026 (so far)",
+        "url": "https://statmodeling.stat.columbia.edu/2026/08/27/258/",
+        "source": "Hacker News",
+        "score": 22
+      },
+      {
+        "title": "How Delhi cut electricity loss from 50 to 5 percent",
         "url": "https://spectrum.ieee.org/delhi-electricity-loss",
         "source": "Hacker News",
-        "score": 171
+        "score": 364
       },
       {
-        "title": "Claude partial outage",
-        "url": "https://status.claude.com/incidents/4xvtc2gnq73l",
+        "title": "PS5 Relapse Exploit",
+        "url": "https://github.com/ntfargo/Relapse-Exploit",
         "source": "Hacker News",
-        "score": 49
+        "score": 124
       },
       {
-        "title": "AI companies leak data to advertisers [pdf]",
+        "title": "DraftKings Is Using AI to Behaviorally Target Chronic Gamblers",
+        "url": "https://www.eff.org/deeplinks/2026/09/draftkings-using-ai-supercharge-harms-online-behavioral-advertising",
+        "source": "Hacker News",
+        "score": 358
+      },
+      {
+        "title": "Dots: Always-on agents",
+        "url": "https://openai.com/index/introducing-dots/",
+        "source": "Hacker News",
+        "score": 345
+      },
+      {
+        "title": "NAND-16: a computer built from 277,248 NAND gates",
+        "url": "https://somethingbig.ai/computer",
+        "source": "Hacker News",
+        "score": 42
+      },
+      {
+        "title": "A Privacy Analysis of Web and Mobile Conversational AI Agents [pdf]",
         "url": "https://jorgegarciaherrero.com/wp-content/interactivos/20260916-Prompt-like-a-butterfly-sting-like-a-tracker-(clean).pdf",
         "source": "Hacker News",
-        "score": 301
+        "score": 388
       },
       {
-        "title": "Without the Hot Air",
-        "url": "https://www.withouthotair.com/",
+        "title": "Virus Stole a Human Gene and Won't Let Go of It",
+        "url": "https://www.nytimes.com/2026/09/28/science/virus-molluscum-human-gene.html",
         "source": "Hacker News",
-        "score": 49
+        "score": 43
       },
       {
-        "title": "Jeeves. Reasoning improves Jev-like decision models",
-        "url": "https://github.com/PostHog/jeeves",
+        "title": "AI needs $6T in annual revenue to justify data centre boom",
+        "url": "https://www.thenationalnews.com/future/technology/2026/09/29/ai-industry-needs-to-earn-6-trillion-by-2031-to-justify-data-centres/",
         "source": "Hacker News",
-        "score": 123
-      },
-      {
-        "title": "You Are No Longer Invited to Dinner",
-        "url": "https://www.derekthompson.org/p/the-death-of-the-american-host",
-        "source": "Hacker News",
-        "score": 382
-      },
-      {
-        "title": "What makes software development engineering",
-        "url": "https://parksb.github.io/en/article/44.html",
-        "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "500k facial scans at UK stations yield no arrests, 1 false positive",
-        "url": "https://www.theguardian.com/technology/2026/sep/29/trial-live-facial-recognition-cameras-london-stations-false-positive",
-        "source": "Hacker News",
-        "score": 247
-      },
-      {
-        "title": "Using any C++ library in Godot",
-        "url": "https://blog.conan.io/cpp/conan/gamedev/godot/cmake/2026/09/29/Using-Any-Cpp-Library-In-Godot.html",
-        "source": "Hacker News",
-        "score": 109
-      },
-      {
-        "title": "US sanctions force The Netherlands off Microsoft and toward alternative NixOS",
-        "url": "https://www.tomshardware.com/software/the-netherlands-is-rolling-alternative-nixos-based-software-ecosystem-after-u-s-sanctions-on-icc-took-microsoft-off-the-table-trial-programs-running-now-first-release-expected-at-end-of-2027",
-        "source": "Hacker News",
-        "score": 249
-      },
-      {
-        "title": "Unsurprisingly, Meta's new Muse AI agent blatantly ignores users permissions",
-        "url": "https://appleinsider.com/articles/26/09/28/metas-new-ai-agent-blatantly-ignores-users-permissions",
-        "source": "Hacker News",
-        "score": 31
-      },
-      {
-        "title": "Digital Audio on the ZX Spectrum's 1-Bit Beeper",
-        "url": "https://bumbershootsoft.wordpress.com/2026/09/26/digital-audio-on-the-zx-spectrums-1-bit-beeper/",
-        "source": "Hacker News",
-        "score": 17
-      },
-      {
-        "title": "Google ending ChromeOS support two years early",
-        "url": "https://www.theregister.com/os-platforms/2026/09/29/google-ending-chromeos-support-two-years-early/5299674",
-        "source": "Hacker News",
-        "score": 16
+        "score": 30
       },
       {
         "title": "Phyllotaxis: An audio-reactive LED display",
         "url": "https://jagi.studio/posts/phyllotaxis/",
         "source": "Hacker News",
-        "score": 195
+        "score": 233
       },
       {
-        "title": "1 in 8 cancer cases worldwide are caused by infections, study finds",
-        "url": "https://www.cbc.ca/lite/story/9.7361622",
+        "title": "Without the Hot Air",
+        "url": "https://www.withouthotair.com/",
         "source": "Hacker News",
-        "score": 52
+        "score": 109
+      },
+      {
+        "title": "Jeeves. Reasoning improves Jev-like decision models",
+        "url": "https://github.com/PostHog/jeeves",
+        "source": "Hacker News",
+        "score": 205
+      },
+      {
+        "title": "Walking Men",
+        "url": "https://bookofjoe2.blogspot.com/2026/09/walking-men.html",
+        "source": "Hacker News",
+        "score": 63
       }
     ],
     "ai": [
       {
-        "title": "Claude partial outage",
-        "url": "https://status.claude.com/incidents/4xvtc2gnq73l",
+        "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
+        "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
         "source": "Hacker News AI",
-        "score": 49
+        "score": 540
       },
       {
-        "title": "AI companies leak data to advertisers [pdf]",
+        "title": "DraftKings Is Using AI to Behaviorally Target Chronic Gamblers",
+        "url": "https://www.eff.org/deeplinks/2026/09/draftkings-using-ai-supercharge-harms-online-behavioral-advertising",
+        "source": "Hacker News AI",
+        "score": 358
+      },
+      {
+        "title": "A Privacy Analysis of Web and Mobile Conversational AI Agents [pdf]",
         "url": "https://jorgegarciaherrero.com/wp-content/interactivos/20260916-Prompt-like-a-butterfly-sting-like-a-tracker-(clean).pdf",
         "source": "Hacker News AI",
-        "score": 301
+        "score": 388
+      },
+      {
+        "title": "AI needs $6T in annual revenue to justify data centre boom",
+        "url": "https://www.thenationalnews.com/future/technology/2026/09/29/ai-industry-needs-to-earn-6-trillion-by-2031-to-justify-data-centres/",
+        "source": "Hacker News AI",
+        "score": 30
       },
       {
         "title": "Without the Hot Air",
         "url": "https://www.withouthotair.com/",
         "source": "Hacker News AI",
-        "score": 49
+        "score": 109
       },
       {
-        "title": "Unsurprisingly, Meta's new Muse AI agent blatantly ignores users permissions",
-        "url": "https://appleinsider.com/articles/26/09/28/metas-new-ai-agent-blatantly-ignores-users-permissions",
+        "title": "The End of a Fair Price: Dynamic Pricing and the Normalization of Gouging",
+        "url": "https://prospect.org/2026/09/29/oct-2026-battling-an-army-of-price-setters-owens-review/",
         "source": "Hacker News AI",
-        "score": 31
+        "score": 50
+      },
+      {
+        "title": "ChatGPT Pro 500",
+        "url": "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-tiers",
+        "source": "Hacker News AI",
+        "score": 138
+      },
+      {
+        "title": "OpenAI Targets $30B in New Funding at $1.4T Value",
+        "url": "https://www.bloomberg.com/news/articles/2026-09-29/openai-targets-30-billion-in-new-funding-at-1-4-trillion-value",
+        "source": "Hacker News AI",
+        "score": 14
       },
       {
         "title": "MicroLLM Lab – Try 7 tiny LLM's in the browser",
         "url": "https://stateofutopia.com/experiments/microllmlab/",
         "source": "Hacker News AI",
-        "score": 264
+        "score": 272
       },
       {
         "title": "12,000-year-old Göbeklitepe burials explain scattered bones",
         "url": "https://archaeologymag.com/2026/09/gobeklitepe-burials-hundreds-of-scattered-bones/",
         "source": "Hacker News AI",
-        "score": 158
+        "score": 163
       },
       {
         "title": "Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms",
         "url": "https://github.com/firelex/jeff",
         "source": "Hacker News AI",
-        "score": 540
+        "score": 559
       },
       {
         "title": "Nvidia wants to put a watchdog chip next to every AI agent",
         "url": "https://www.cnbc.com/2026/09/28/nvidia-releases.html",
         "source": "Hacker News AI",
-        "score": 208
-      },
-      {
-        "title": "It's Time to Investigate the AI Labs",
-        "url": "https://calnewport.com/its-time-to-investigate-the-ai-labs/",
-        "source": "Hacker News AI",
-        "score": 554
+        "score": 219
       }
     ],
     "news": [
+      {
+        "title": "Spain announces ban on evictions after protests over 87-year-old woman's removal from flat",
+        "url": "https://www.bbc.co.uk/news/articles/cwm2qmjgy93do?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "'I was lured into a trap': Evan Gershkovich on moment that led to 16 months in Russian jail",
         "url": "https://www.bbc.co.uk/news/articles/ck9qr8jy8ynyo?at_medium=RSS&at_campaign=rss",
@@ -164,32 +187,42 @@
         "source": "BBC World"
       },
       {
-        "title": "Estonia blames Russia for arson at defence company supplying Ukraine",
-        "url": "https://www.bbc.co.uk/news/articles/c6m27l4er4jxo?at_medium=RSS&at_campaign=rss",
+        "title": "Dutch police arrest suspected member of group that claimed FBI hack",
+        "url": "https://www.bbc.co.uk/news/articles/cw5ym18znr0ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "OpenAI scraps rollout of new model over safety concerns",
-        "url": "https://www.bbc.co.uk/news/articles/cm5y5nynl75ko?at_medium=RSS&at_campaign=rss",
+        "title": "First female prime minister named in Morocco after winning elections",
+        "url": "https://www.bbc.co.uk/news/articles/c674kkjllw17o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Spain announces new housing measures after protests over 87-year-old woman's eviction",
-        "url": "https://www.bbc.co.uk/news/articles/cwm2qmjgy93do?at_medium=RSS&at_campaign=rss",
+        "title": "Eiffel Tower chief to quit after female staff replaced by men during religious visit",
+        "url": "https://www.bbc.co.uk/news/articles/crn8e069v7p7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "French hard-right leader accuses opponents of 'total war' after claims of antisemitism",
-        "url": "https://www.bbc.co.uk/news/articles/cmn45k85gj34o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Argentina threatens legal action against UK over Falkland Islands oil exploration ",
-        "url": "https://www.bbc.co.uk/news/articles/cq5yj1835y1wo?at_medium=RSS&at_campaign=rss",
+        "title": "Lindsay Clancy appears in court as her lawyer pushes for murder case to be dismissed",
+        "url": "https://www.bbc.co.uk/news/articles/c8046wd93l44o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Bambu Lab’s massive Halloween sale is all treat, with up to 30% of 3D printing  supplies ",
+        "url": "https://www.creativebloq.com/3d/3d-printing/bambu-labs-massive-halloween-sale-is-all-treat-with-up-to-30-percent-of-3d-printing-supplies",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Whimsymaxxing is the latest cure for the autumn blues ",
+        "url": "https://www.creativebloq.com/art/art-supplies/whimsymaxxing-is-the-latest-cure-for-the-autumn-blues",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Rare Nintendo Switch 2 deal alert! Lowest price ever for limited time ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/rare-nintendo-switch-2-deal-alert-lowest-price-ever-for-limited-time",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Two animators reveal the roles, risks and limits of making Don Quixote with AI ",
         "url": "https://www.creativebloq.com/ai/two-animators-reveal-the-roles-risks-and-limits-of-making-don-quixote-with-ai",
@@ -208,21 +241,6 @@
       {
         "title": " RealityScan review: Epic Games' free mobile app has features I love, when it's not glitching ",
         "url": "https://www.creativebloq.com/3d/realityscan-review-epic-games-free-mobile-app-has-features-i-love-when-its-not-glitching",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Lexus just dropped the most twisted car design I've ever seen – literally ",
-        "url": "https://www.creativebloq.com/design/product-design/lexus-just-dropped-the-most-twisted-car-design-ive-ever-seen-literally",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " PS5 or Xbox Series X for GTA 6? This is the one I’d buy ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/ps5-or-xbox-series-x-for-gta-6-this-is-the-one-id-buy",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The best IEMs under $500 will bring you nothing but joy ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/these-best-iems-under-usd500-will-bring-you-nothing-but-joy",
         "source": "Creative Bloq"
       }
     ],
@@ -265,43 +283,48 @@
     ],
     "gaming": [
       {
-        "title": "Avengers: Endgame Writer Reveals Alternate Fate for a Major Character",
-        "url": "https://www.polygon.com/avengers-endgame-black-widow-hawkeye-death/",
+        "title": "Amazon’s Spider-Noir Replacement Will Adapt a Controversial Spider-Man Story",
+        "url": "https://www.polygon.com/spider-man-clone-saga-tv-series-amazon-sony/",
         "source": "Polygon"
       },
       {
-        "title": "The Witcher 3’s Next Big Expansion Just Released a Glimpse Into Its World",
-        "url": "https://www.polygon.com/witcher-3-songs-of-the-past-expansion-soundtrack/",
+        "title": "Magic’s KPop Demon Hunters Secret Lair Is Coming Sooner Than You Think",
+        "url": "https://www.polygon.com/mtg-kpop-demon-hunters-secret-lair-teaser/",
         "source": "Polygon"
       },
       {
-        "title": "The Next Monster Hunter Game Officially Gets a Release Date",
-        "url": "https://www.polygon.com/monster-hunter-outlanders-release-date/",
+        "title": "God of War Laufey Is Quietly a Preview of PlayStation's Future",
+        "url": "https://www.polygon.com/god-of-war-laufey-digital-deluxe-edition/",
         "source": "Polygon"
       },
       {
-        "title": "Naughty Dog Has Two The Last of Us Projects in Development",
-        "url": "https://www.polygon.com/naughty-dog-the-last-of-us-two-new-projects-intergalactic-update-2027/",
+        "title": "'Game of Thrones' Officially Returns in 2029 with First Movie",
+        "url": "https://www.polygon.com/game-of-thrones-movie-2029-release-date-aegons-conquest/",
         "source": "Polygon"
       },
       {
-        "title": "Lego Reveals First Dragon Ball Set with Shenron and Kid Goku",
-        "url": "https://www.polygon.com/lego-dragon-ball-shenron-set-release-date-price-first-photos/",
+        "title": "An NFL Legend Is About to Reveal the Minecraft City He Spent 12 Years Building ",
+        "url": "https://www.polygon.com/nfl-legend-revealing-minecraft-city/",
         "source": "Polygon"
       },
       {
-        "title": "'The Exorcist: Martyrs' Is Mike Flanagan's \"Scariest Thing\" Ever, Cast Member Says",
-        "url": "https://www.polygon.com/exorcist-martyrs-mike-flanagan-scariest-movie-interview/",
+        "title": "Xbox’s Platinum Trophy Equivalent Officially Revealed",
+        "url": "https://www.polygon.com/xbox-mythic-achievement-announced-release-date/",
         "source": "Polygon"
       },
       {
-        "title": "'The Simpsons' Producer Officially Reveals new Treehouse of Horror Plans",
-        "url": "https://www.polygon.com/the-simpsons-producer-mike-price-interview-season-38/",
+        "title": "'GTA 6' Fans Are Hammering the Game Informer App Into Oblivion Right Now",
+        "url": "https://www.polygon.com/gta-6-game-informer-app-article-something-went-wrong-screenshots/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "Developer policy update: Transparency, state policy, and what’s ahead",
+        "url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "How we found 24 Android vulnerabilities using our open source AI security agent",
         "url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
@@ -330,11 +353,6 @@
       {
         "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
         "url": "https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Rendering huge pull requests in the GitHub Copilot app",
-        "url": "https://github.blog/engineering/user-experience/rendering-huge-pull-requests-in-the-github-copilot-app/",
         "source": "GitHub Blog"
       }
     ]
