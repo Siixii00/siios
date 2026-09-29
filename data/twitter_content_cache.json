@@ -1,191 +1,179 @@
 {
   "metadata": {
-    "last_updated": "2026-09-29T01:32:11.870941",
-    "total_items": 65
+    "last_updated": "2026-09-29T07:59:00.475774",
+    "total_items": 56
   },
   "content": {
     "tech": [
       {
-        "title": "Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms",
-        "url": "https://github.com/firelex/jeff",
+        "title": "Phyllotaxis: An audio-reactive LED display",
+        "url": "https://jagi.studio/posts/phyllotaxis/",
         "source": "Hacker News",
-        "score": 252
+        "score": 114
+      },
+      {
+        "title": "The systems that no one will test",
+        "url": "https://blog.christianperone.com/2026/09/the-systems-that-no-one-will-test/",
+        "source": "Hacker News",
+        "score": 28
+      },
+      {
+        "title": "US Forces Exit Iraq",
+        "url": "https://www.reuters.com/world/middle-east/us-forces-exit-iraq-after-two-decades-leaving-opening-iran-2026-09-29/",
+        "source": "Hacker News",
+        "score": 44
       },
       {
         "title": "Pirating the Pirates",
         "url": "https://mubi.com/en/notebook/posts/pirating-the-pirates",
         "source": "Hacker News",
-        "score": 409
-      },
-      {
-        "title": "12,000-year-old Göbeklitepe burials explain scattered bones",
-        "url": "https://archaeologymag.com/2026/09/gobeklitepe-burials-hundreds-of-scattered-bones/",
-        "source": "Hacker News",
-        "score": 74
-      },
-      {
-        "title": "MicroLLM Lab – Try 7 tiny LLM's in the browser",
-        "url": "https://stateofutopia.com/experiments/microllmlab/",
-        "source": "Hacker News",
-        "score": 122
-      },
-      {
-        "title": "1996 chat room simulator connected to Win95 and System 7 web desktops",
-        "url": "https://lolchat.rip/",
-        "source": "Hacker News",
-        "score": 10
-      },
-      {
-        "title": "Sonnet 5.5",
-        "url": "https://www.anthropic.com/claude-sonnet-5-5",
-        "source": "Hacker News",
-        "score": 570
-      },
-      {
-        "title": "Scientists solve 1840s space weather mystery",
-        "url": "https://arstechnica.com/science/2026/09/scientists-solve-1840s-space-weather-mystery/",
-        "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "What is the best shape of a city? Modelling effect of urban form on distance",
-        "url": "https://journals.sagepub.com/doi/10.1177/23998083261458842",
-        "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "World Labs Is Joining AMD",
-        "url": "https://www.worldlabs.ai/blog/amd-announcement",
-        "source": "Hacker News",
-        "score": 178
-      },
-      {
-        "title": "Hijacking the PS5's RTMP stream",
-        "url": "https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/",
-        "source": "Hacker News",
-        "score": 193
-      },
-      {
-        "title": "How to win a beer with high-dimensional statistics",
-        "url": "https://jamiesimon.io/blog/how-to-win-a-beer-with-high-dimensional-statistics/",
-        "source": "Hacker News",
-        "score": 9
+        "score": 543
       },
       {
         "title": "California farmers are struggling to sell grapes as demand for wine drops",
         "url": "https://www.kqed.org/news/12101534/california-farmers-are-struggling-to-sell-grapes-as-demand-for-wine-drops",
         "source": "Hacker News",
-        "score": 41
+        "score": 190
       },
       {
-        "title": "Parley: Federated, decentralised chat that speaks plain IRC",
-        "url": "https://git.mills.io/prologic/parley",
+        "title": "MicroLLM Lab – Try 7 tiny LLM's in the browser",
+        "url": "https://stateofutopia.com/experiments/microllmlab/",
         "source": "Hacker News",
-        "score": 300
+        "score": 221
       },
       {
-        "title": "Kids turned low-traffic NPR Spotify comments into a secret group chat",
-        "url": "https://www.thisamericanlife.org/897/transcript",
+        "title": "Booted up in 1993, this server still runs – but not for much longer (2017)",
+        "url": "https://www.computerworld.com/article/1673071/booted-up-in-1993-this-server-still-runs-but-not-for-much-longer-2.html",
         "source": "Hacker News",
-        "score": 277
+        "score": 7
+      },
+      {
+        "title": "Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms",
+        "url": "https://github.com/firelex/jeff",
+        "source": "Hacker News",
+        "score": 471
       },
       {
         "title": "ESP32S3 cluster running 1.58-bit (BitNet) Language model",
         "url": "https://github.com/Low-Zi-Hong/ESP32s3-LLM-Cluster",
         "source": "Hacker News",
-        "score": 16
+        "score": 88
+      },
+      {
+        "title": "12,000-year-old Göbeklitepe burials explain scattered bones",
+        "url": "https://archaeologymag.com/2026/09/gobeklitepe-burials-hundreds-of-scattered-bones/",
+        "source": "Hacker News",
+        "score": 128
+      },
+      {
+        "title": "Tank Body Problem",
+        "url": "http://www.jimsitu.com",
+        "source": "Hacker News",
+        "score": 82
+      },
+      {
+        "title": "Show HN: Pac-Bench – How well can models one-shot a Pac-Man game?",
+        "url": "https://jonclegg.github.io/pacman-bakeoff/",
+        "source": "Hacker News",
+        "score": 44
+      },
+      {
+        "title": "OpenAI: Tomorrow we are re-opening the Pro $200 subscription",
+        "url": "https://twitter.com/thsottiaux/status/2104823812042940713",
+        "source": "Hacker News",
+        "score": 24
+      },
+      {
+        "title": "Sonnet 5.5",
+        "url": "https://www.anthropic.com/claude-sonnet-5-5",
+        "source": "Hacker News",
+        "score": 747
+      },
+      {
+        "title": "Hijacking the PS5's RTMP stream",
+        "url": "https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/",
+        "source": "Hacker News",
+        "score": 246
       }
     ],
     "ai": [
       {
+        "title": "MicroLLM Lab – Try 7 tiny LLM's in the browser",
+        "url": "https://stateofutopia.com/experiments/microllmlab/",
+        "source": "Hacker News AI",
+        "score": 221
+      },
+      {
         "title": "Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms",
         "url": "https://github.com/firelex/jeff",
         "source": "Hacker News AI",
-        "score": 252
+        "score": 471
       },
       {
         "title": "12,000-year-old Göbeklitepe burials explain scattered bones",
         "url": "https://archaeologymag.com/2026/09/gobeklitepe-burials-hundreds-of-scattered-bones/",
         "source": "Hacker News AI",
-        "score": 74
+        "score": 128
       },
       {
-        "title": "MicroLLM Lab – Try 7 tiny LLM's in the browser",
-        "url": "https://stateofutopia.com/experiments/microllmlab/",
+        "title": "OpenAI: Tomorrow we are re-opening the Pro $200 subscription",
+        "url": "https://twitter.com/thsottiaux/status/2104823812042940713",
         "source": "Hacker News AI",
-        "score": 122
-      },
-      {
-        "title": "Parley: Federated, decentralised chat that speaks plain IRC",
-        "url": "https://git.mills.io/prologic/parley",
-        "source": "Hacker News AI",
-        "score": 300
-      },
-      {
-        "title": "OpenAI Says It Will Not Release Newest A.I. Model Over Safety Concerns",
-        "url": "https://www.nytimes.com/2026/09/28/technology/openai-astra-safety.html",
-        "source": "Hacker News AI",
-        "score": 25
-      },
-      {
-        "title": "It's Time to Investigate the AI Labs",
-        "url": "https://calnewport.com/its-time-to-investigate-the-ai-labs/",
-        "source": "Hacker News AI",
-        "score": 278
+        "score": 24
       },
       {
         "title": "Nvidia wants to put a watchdog chip next to every AI agent",
         "url": "https://www.cnbc.com/2026/09/28/nvidia-releases.html",
         "source": "Hacker News AI",
-        "score": 99
+        "score": 159
       },
       {
-        "title": "First Steps of the PLC Organization – Independent Public Ledger of Credentials",
-        "url": "https://blog.plcred.org/3mwlphq42d227",
+        "title": "Simulating Airband Am Radios",
+        "url": "https://bitbashing.io/am-radio.html",
         "source": "Hacker News AI",
-        "score": 41
+        "score": 28
+      },
+      {
+        "title": "It's Time to Investigate the AI Labs",
+        "url": "https://calnewport.com/its-time-to-investigate-the-ai-labs/",
+        "source": "Hacker News AI",
+        "score": 450
       },
       {
         "title": "What reversing, modernising old games tells us about the economic impact of AI",
         "url": "https://this.os.isfine.org/blog/posts/what-reverse-engineering-and-modernising-an-old-war-game-tells-us-about-the-econ/",
         "source": "Hacker News AI",
-        "score": 64
+        "score": 113
       },
       {
-        "title": "3D necroprinting: Leveraging biotic material as the nozzle for 3D printing",
-        "url": "https://www.science.org/doi/10.1126/sciadv.adw9953",
+        "title": "GPT-6 Astra Is the Best Vision Model We Have Tested",
+        "url": "https://blog.roboflow.com/gpt-6-astra-vision/",
         "source": "Hacker News AI",
-        "score": 19
-      },
-      {
-        "title": "OpenAI scraps release of Astra 6.1 model over safety issues",
-        "url": "https://www.washingtonpost.com/technology/2026/09/28/chatgpt-maker-openai-scraps-release-astra-61-model-over-safety/",
-        "source": "Hacker News AI",
-        "score": 6
+        "score": 12
       },
       {
         "title": "What would a serious AI product look like?",
         "url": "https://blog.glyph.im/2026/09/serious-ai-product.html",
         "source": "Hacker News AI",
-        "score": 131
+        "score": 149
       },
       {
-        "title": "Anthropic's IPO prospectus shows AI vision, surging costs",
-        "url": "https://www.reuters.com/business/finance/anthropics-ipo-prospectus-shows-sweeping-ai-vision-surging-costs-2026-09-28/",
+        "title": "First Steps of the PLC Organization – Independent Public Ledger of Credentials",
+        "url": "https://blog.plcred.org/3mwlphq42d227",
         "source": "Hacker News AI",
-        "score": 65
+        "score": 46
       },
       {
-        "title": "I made a visual workspace for AI Automations",
-        "url": "https://www.biom.dev/",
+        "title": "Parley: Federated, decentralised chat that speaks plain IRC",
+        "url": "https://git.mills.io/prologic/parley",
         "source": "Hacker News AI",
-        "score": 27
+        "score": 314
       },
       {
         "title": "Nissan's third generation e-POWER powertrain",
         "url": "https://www.nissan-global.com/EN/INNOVATION/TECHNOLOGY/ARCHIVE/E_POWER_GEN3/",
         "source": "Hacker News AI",
-        "score": 155
+        "score": 157
       }
     ],
     "news": [
@@ -195,73 +183,37 @@
         "source": "BBC World"
       },
       {
-        "title": "Inside Yemen's front-line city as Houthis battle for control",
-        "url": "https://www.bbc.co.uk/news/articles/cw98005ndz7no?at_medium=RSS&at_campaign=rss",
+        "title": "Evicted Spanish pensioner can move back home, lawyer says ",
+        "url": "https://www.bbc.co.uk/news/articles/cmkg8qgy9d9lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "New York Times executive fatally shot allegedly by elderly in-laws",
+        "title": "Argentina threatens legal action against UK over Falkland Islands oil exploration ",
+        "url": "https://www.bbc.co.uk/news/articles/cq5yj1835y1wo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "New York Times executive fatally shot by elderly in-laws, police say",
         "url": "https://www.bbc.co.uk/news/articles/cred737qdv2no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Seoul summons Ukraine envoy over North Korean prisoner-of-war row",
-        "url": "https://www.bbc.co.uk/news/articles/c8ly40xx0dr0o?at_medium=RSS&at_campaign=rss",
+        "title": "US ban on Canadian alcohol and dairy comes into effect as trade war drags on",
+        "url": "https://www.bbc.co.uk/news/articles/cm1j43y146d2o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Inside Yemen's front-line city as Houthis battle for control",
+        "url": "https://www.bbc.co.uk/news/articles/cw98005ndz7no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "French PM warns against escalation of school protests after 164 arrested",
         "url": "https://www.bbc.co.uk/news/articles/cmqxvnn49rg2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Tennessee governor rejects clemency bid for Christa Pike as execution looms",
-        "url": "https://www.bbc.co.uk/news/articles/ckr50yyddljlo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Twelve women have been killed in one part of South Africa since July. Here's what we know so far",
-        "url": "https://www.bbc.co.uk/news/articles/c6m27dprvzv7o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " These 9 kitchen items are icons of design, and they all have big discounts in Amazon's early Prime Big Deals ",
-        "url": "https://www.creativebloq.com/design/product-design/these-9-kitchen-items-are-icons-of-design-and-they-all-have-big-discounts-in-amazons-early-prime-big-deals",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Wacom Intuos Pro is back to its lowest price ever with $80 off at Amazon ",
-        "url": "https://www.creativebloq.com/art/digital-art/the-wacom-intuos-pro-is-back-to-its-lowest-price-ever-with-usd80-off-at-amazon",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Why are so many brands making disgusting food collabs? ",
-        "url": "https://www.creativebloq.com/design/branding/why-are-so-many-brands-making-disgusting-food-collabs",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " CorelDRAW adds Text-to-Vector AI in the September update – is it a good move? ",
-        "url": "https://www.creativebloq.com/design/graphic-design-software/coreldraw-adds-text-to-vector-ai-in-the-september-update-is-it-a-good-move",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Viral AI animation sparks controversy over familiar character design ",
-        "url": "https://www.creativebloq.com/art/animation/viral-ai-animation-sparks-controversy-over-familiar-character-design",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Please stop calling every laptop an \"AI laptop\" ",
-        "url": "https://www.creativebloq.com/tech/laptops/please-stop-calling-every-laptop-an-ai-laptop",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " 2026 is the year of the cancelled ad ",
-        "url": "https://www.creativebloq.com/design/advertising/2026-is-the-year-of-the-cancelled-ad",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "Is the universe infinite? The answer gets weird fast",
@@ -301,6 +253,21 @@
     ],
     "gaming": [
       {
+        "title": "Fire Emblem Just Completely Shook Up a Tired RPG Villain Twist",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-act-2-villain-twist/",
+        "source": "Polygon"
+      },
+      {
+        "title": "29 Years Ago, 'Buffy' Introduced Its Best Villain. He Was Never Meant to Last.",
+        "url": "https://www.polygon.com/buffy-vampire-slayer-school-hard-retrospective-spike-first-episode/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Essential NES Games Still Missing From Switch Online",
+        "url": "https://www.polygon.com/best-nes-games-missing-nintendo-switch-online/",
+        "source": "Polygon"
+      },
+      {
         "title": "Switch Finally Gets One of 2025’s Best-Reviewed RPGs",
         "url": "https://www.polygon.com/keep-driving-switch-recommendation/",
         "source": "Polygon"
@@ -318,21 +285,6 @@
       {
         "title": "Spider-Man: Brand New Day Getting Official New Version, Report Says",
         "url": "https://www.polygon.com/spider-man-brand-new-day-rerelease-new-footage/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Best new video games of 2026 (so far)",
-        "url": "https://www.polygon.com/best-2026-games-xbox-ps5-switch-pc/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Dressmaker's Chaotic Evil Endings Prove Why it's Dominating Steam Right Now",
-        "url": "https://www.polygon.com/dressmaker-sabotage-revenge-customers/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Pokémon TCG's Next Big Set Available Weeks Before It Officially Releases",
-        "url": "https://www.polygon.com/pokemon-tcg-prerelease-event-delta-reign-where-price-promo-cards/",
         "source": "Polygon"
       }
     ],
