@@ -1,290 +1,302 @@
 {
   "metadata": {
-    "last_updated": "2026-09-29T07:59:00.475774",
-    "total_items": 56
+    "last_updated": "2026-09-29T14:48:18.256554",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
+        "title": "How Delhi Cut Electricity Loss from 50 to 5 Percent",
+        "url": "https://spectrum.ieee.org/delhi-electricity-loss",
+        "source": "Hacker News",
+        "score": 171
+      },
+      {
+        "title": "Claude partial outage",
+        "url": "https://status.claude.com/incidents/4xvtc2gnq73l",
+        "source": "Hacker News",
+        "score": 49
+      },
+      {
+        "title": "AI companies leak data to advertisers [pdf]",
+        "url": "https://jorgegarciaherrero.com/wp-content/interactivos/20260916-Prompt-like-a-butterfly-sting-like-a-tracker-(clean).pdf",
+        "source": "Hacker News",
+        "score": 301
+      },
+      {
+        "title": "Without the Hot Air",
+        "url": "https://www.withouthotair.com/",
+        "source": "Hacker News",
+        "score": 49
+      },
+      {
+        "title": "Jeeves. Reasoning improves Jev-like decision models",
+        "url": "https://github.com/PostHog/jeeves",
+        "source": "Hacker News",
+        "score": 123
+      },
+      {
+        "title": "You Are No Longer Invited to Dinner",
+        "url": "https://www.derekthompson.org/p/the-death-of-the-american-host",
+        "source": "Hacker News",
+        "score": 382
+      },
+      {
+        "title": "What makes software development engineering",
+        "url": "https://parksb.github.io/en/article/44.html",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "500k facial scans at UK stations yield no arrests, 1 false positive",
+        "url": "https://www.theguardian.com/technology/2026/sep/29/trial-live-facial-recognition-cameras-london-stations-false-positive",
+        "source": "Hacker News",
+        "score": 247
+      },
+      {
+        "title": "Using any C++ library in Godot",
+        "url": "https://blog.conan.io/cpp/conan/gamedev/godot/cmake/2026/09/29/Using-Any-Cpp-Library-In-Godot.html",
+        "source": "Hacker News",
+        "score": 109
+      },
+      {
+        "title": "US sanctions force The Netherlands off Microsoft and toward alternative NixOS",
+        "url": "https://www.tomshardware.com/software/the-netherlands-is-rolling-alternative-nixos-based-software-ecosystem-after-u-s-sanctions-on-icc-took-microsoft-off-the-table-trial-programs-running-now-first-release-expected-at-end-of-2027",
+        "source": "Hacker News",
+        "score": 249
+      },
+      {
+        "title": "Unsurprisingly, Meta's new Muse AI agent blatantly ignores users permissions",
+        "url": "https://appleinsider.com/articles/26/09/28/metas-new-ai-agent-blatantly-ignores-users-permissions",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
+        "title": "Digital Audio on the ZX Spectrum's 1-Bit Beeper",
+        "url": "https://bumbershootsoft.wordpress.com/2026/09/26/digital-audio-on-the-zx-spectrums-1-bit-beeper/",
+        "source": "Hacker News",
+        "score": 17
+      },
+      {
+        "title": "Google ending ChromeOS support two years early",
+        "url": "https://www.theregister.com/os-platforms/2026/09/29/google-ending-chromeos-support-two-years-early/5299674",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
         "title": "Phyllotaxis: An audio-reactive LED display",
         "url": "https://jagi.studio/posts/phyllotaxis/",
         "source": "Hacker News",
-        "score": 114
+        "score": 195
       },
       {
-        "title": "The systems that no one will test",
-        "url": "https://blog.christianperone.com/2026/09/the-systems-that-no-one-will-test/",
+        "title": "1 in 8 cancer cases worldwide are caused by infections, study finds",
+        "url": "https://www.cbc.ca/lite/story/9.7361622",
         "source": "Hacker News",
-        "score": 28
-      },
-      {
-        "title": "US Forces Exit Iraq",
-        "url": "https://www.reuters.com/world/middle-east/us-forces-exit-iraq-after-two-decades-leaving-opening-iran-2026-09-29/",
-        "source": "Hacker News",
-        "score": 44
-      },
-      {
-        "title": "Pirating the Pirates",
-        "url": "https://mubi.com/en/notebook/posts/pirating-the-pirates",
-        "source": "Hacker News",
-        "score": 543
-      },
-      {
-        "title": "California farmers are struggling to sell grapes as demand for wine drops",
-        "url": "https://www.kqed.org/news/12101534/california-farmers-are-struggling-to-sell-grapes-as-demand-for-wine-drops",
-        "source": "Hacker News",
-        "score": 190
-      },
-      {
-        "title": "MicroLLM Lab – Try 7 tiny LLM's in the browser",
-        "url": "https://stateofutopia.com/experiments/microllmlab/",
-        "source": "Hacker News",
-        "score": 221
-      },
-      {
-        "title": "Booted up in 1993, this server still runs – but not for much longer (2017)",
-        "url": "https://www.computerworld.com/article/1673071/booted-up-in-1993-this-server-still-runs-but-not-for-much-longer-2.html",
-        "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms",
-        "url": "https://github.com/firelex/jeff",
-        "source": "Hacker News",
-        "score": 471
-      },
-      {
-        "title": "ESP32S3 cluster running 1.58-bit (BitNet) Language model",
-        "url": "https://github.com/Low-Zi-Hong/ESP32s3-LLM-Cluster",
-        "source": "Hacker News",
-        "score": 88
-      },
-      {
-        "title": "12,000-year-old Göbeklitepe burials explain scattered bones",
-        "url": "https://archaeologymag.com/2026/09/gobeklitepe-burials-hundreds-of-scattered-bones/",
-        "source": "Hacker News",
-        "score": 128
-      },
-      {
-        "title": "Tank Body Problem",
-        "url": "http://www.jimsitu.com",
-        "source": "Hacker News",
-        "score": 82
-      },
-      {
-        "title": "Show HN: Pac-Bench – How well can models one-shot a Pac-Man game?",
-        "url": "https://jonclegg.github.io/pacman-bakeoff/",
-        "source": "Hacker News",
-        "score": 44
-      },
-      {
-        "title": "OpenAI: Tomorrow we are re-opening the Pro $200 subscription",
-        "url": "https://twitter.com/thsottiaux/status/2104823812042940713",
-        "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "Sonnet 5.5",
-        "url": "https://www.anthropic.com/claude-sonnet-5-5",
-        "source": "Hacker News",
-        "score": 747
-      },
-      {
-        "title": "Hijacking the PS5's RTMP stream",
-        "url": "https://yashgarg.dev/posts/hijacking-ps5-rtmp-stream/",
-        "source": "Hacker News",
-        "score": 246
+        "score": 52
       }
     ],
     "ai": [
       {
+        "title": "Claude partial outage",
+        "url": "https://status.claude.com/incidents/4xvtc2gnq73l",
+        "source": "Hacker News AI",
+        "score": 49
+      },
+      {
+        "title": "AI companies leak data to advertisers [pdf]",
+        "url": "https://jorgegarciaherrero.com/wp-content/interactivos/20260916-Prompt-like-a-butterfly-sting-like-a-tracker-(clean).pdf",
+        "source": "Hacker News AI",
+        "score": 301
+      },
+      {
+        "title": "Without the Hot Air",
+        "url": "https://www.withouthotair.com/",
+        "source": "Hacker News AI",
+        "score": 49
+      },
+      {
+        "title": "Unsurprisingly, Meta's new Muse AI agent blatantly ignores users permissions",
+        "url": "https://appleinsider.com/articles/26/09/28/metas-new-ai-agent-blatantly-ignores-users-permissions",
+        "source": "Hacker News AI",
+        "score": 31
+      },
+      {
         "title": "MicroLLM Lab – Try 7 tiny LLM's in the browser",
         "url": "https://stateofutopia.com/experiments/microllmlab/",
         "source": "Hacker News AI",
-        "score": 221
-      },
-      {
-        "title": "Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms",
-        "url": "https://github.com/firelex/jeff",
-        "source": "Hacker News AI",
-        "score": 471
+        "score": 264
       },
       {
         "title": "12,000-year-old Göbeklitepe burials explain scattered bones",
         "url": "https://archaeologymag.com/2026/09/gobeklitepe-burials-hundreds-of-scattered-bones/",
         "source": "Hacker News AI",
-        "score": 128
+        "score": 158
       },
       {
-        "title": "OpenAI: Tomorrow we are re-opening the Pro $200 subscription",
-        "url": "https://twitter.com/thsottiaux/status/2104823812042940713",
+        "title": "Jeff – Jev-compatible 0.8B decision models, trained at home, ~30 ms",
+        "url": "https://github.com/firelex/jeff",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 540
       },
       {
         "title": "Nvidia wants to put a watchdog chip next to every AI agent",
         "url": "https://www.cnbc.com/2026/09/28/nvidia-releases.html",
         "source": "Hacker News AI",
-        "score": 159
-      },
-      {
-        "title": "Simulating Airband Am Radios",
-        "url": "https://bitbashing.io/am-radio.html",
-        "source": "Hacker News AI",
-        "score": 28
+        "score": 208
       },
       {
         "title": "It's Time to Investigate the AI Labs",
         "url": "https://calnewport.com/its-time-to-investigate-the-ai-labs/",
         "source": "Hacker News AI",
-        "score": 450
-      },
-      {
-        "title": "What reversing, modernising old games tells us about the economic impact of AI",
-        "url": "https://this.os.isfine.org/blog/posts/what-reverse-engineering-and-modernising-an-old-war-game-tells-us-about-the-econ/",
-        "source": "Hacker News AI",
-        "score": 113
-      },
-      {
-        "title": "GPT-6 Astra Is the Best Vision Model We Have Tested",
-        "url": "https://blog.roboflow.com/gpt-6-astra-vision/",
-        "source": "Hacker News AI",
-        "score": 12
-      },
-      {
-        "title": "What would a serious AI product look like?",
-        "url": "https://blog.glyph.im/2026/09/serious-ai-product.html",
-        "source": "Hacker News AI",
-        "score": 149
-      },
-      {
-        "title": "First Steps of the PLC Organization – Independent Public Ledger of Credentials",
-        "url": "https://blog.plcred.org/3mwlphq42d227",
-        "source": "Hacker News AI",
-        "score": 46
-      },
-      {
-        "title": "Parley: Federated, decentralised chat that speaks plain IRC",
-        "url": "https://git.mills.io/prologic/parley",
-        "source": "Hacker News AI",
-        "score": 314
-      },
-      {
-        "title": "Nissan's third generation e-POWER powertrain",
-        "url": "https://www.nissan-global.com/EN/INNOVATION/TECHNOLOGY/ARCHIVE/E_POWER_GEN3/",
-        "source": "Hacker News AI",
-        "score": 157
+        "score": 554
       }
     ],
     "news": [
+      {
+        "title": "'I was lured into a trap': Evan Gershkovich on moment that led to 16 months in Russian jail",
+        "url": "https://www.bbc.co.uk/news/articles/ck9qr8jy8ynyo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Israeli settlers attack West Bank village and block Palestinian family's return home",
+        "url": "https://www.bbc.co.uk/news/articles/cvlylj41egxgo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Estonia blames Russia for arson at defence company supplying Ukraine",
+        "url": "https://www.bbc.co.uk/news/articles/c6m27l4er4jxo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "OpenAI scraps rollout of new model over safety concerns",
         "url": "https://www.bbc.co.uk/news/articles/cm5y5nynl75ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Evicted Spanish pensioner can move back home, lawyer says ",
-        "url": "https://www.bbc.co.uk/news/articles/cmkg8qgy9d9lo?at_medium=RSS&at_campaign=rss",
+        "title": "Spain announces new housing measures after protests over 87-year-old woman's eviction",
+        "url": "https://www.bbc.co.uk/news/articles/cwm2qmjgy93do?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "French hard-right leader accuses opponents of 'total war' after claims of antisemitism",
+        "url": "https://www.bbc.co.uk/news/articles/cmn45k85gj34o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Argentina threatens legal action against UK over Falkland Islands oil exploration ",
         "url": "https://www.bbc.co.uk/news/articles/cq5yj1835y1wo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "New York Times executive fatally shot by elderly in-laws, police say",
-        "url": "https://www.bbc.co.uk/news/articles/cred737qdv2no?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "US ban on Canadian alcohol and dairy comes into effect as trade war drags on",
-        "url": "https://www.bbc.co.uk/news/articles/cm1j43y146d2o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Inside Yemen's front-line city as Houthis battle for control",
-        "url": "https://www.bbc.co.uk/news/articles/cw98005ndz7no?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "French PM warns against escalation of school protests after 164 arrested",
-        "url": "https://www.bbc.co.uk/news/articles/cmqxvnn49rg2o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " Two animators reveal the roles, risks and limits of making Don Quixote with AI ",
+        "url": "https://www.creativebloq.com/ai/two-animators-reveal-the-roles-risks-and-limits-of-making-don-quixote-with-ai",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " You'll either love or hate the Formula E logo – and that's the whole point ",
+        "url": "https://www.creativebloq.com/design/we-went-for-a-marmite-icon-how-formula-es-new-logo-is-made-to-grow-on-you",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Here's an idea: what if Disney remade its live-action films as animations instead? ",
+        "url": "https://www.creativebloq.com/art/animation/heres-an-idea-what-if-disney-remade-its-live-action-films-as-animations-instead",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " RealityScan review: Epic Games' free mobile app has features I love, when it's not glitching ",
+        "url": "https://www.creativebloq.com/3d/realityscan-review-epic-games-free-mobile-app-has-features-i-love-when-its-not-glitching",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Lexus just dropped the most twisted car design I've ever seen – literally ",
+        "url": "https://www.creativebloq.com/design/product-design/lexus-just-dropped-the-most-twisted-car-design-ive-ever-seen-literally",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " PS5 or Xbox Series X for GTA 6? This is the one I’d buy ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/ps5-or-xbox-series-x-for-gta-6-this-is-the-one-id-buy",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The best IEMs under $500 will bring you nothing but joy ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/these-best-iems-under-usd500-will-bring-you-nothing-but-joy",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
+      {
+        "title": "The ice blasting from Saturn's moon Enceladus is stranger than scientists realized",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260929053528.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Earth’s day isn’t exactly 24 hours. The reason may lie deep inside the planet",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260928100540.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "NASA’s Crew-13 could go from Florida to the ISS in under 9 hours",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260928100534.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Is the universe infinite? The answer gets weird fast",
         "url": "https://www.sciencedaily.com/releases/2026/09/260927225041.htm",
         "source": "Science Daily"
       },
       {
+        "title": "This suitcase-sized spacecraft could hear the universe before stars existed",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260927225034.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists expected these Galápagos sea turtles to wander. They stayed put",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260927225032.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Blood tests reveal why astronauts get constipated in space",
         "url": "https://www.sciencedaily.com/releases/2026/09/260927225030.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Diabetes study finds keeping blood sugar too steady may come at a price",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260927225019.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists just discovered what coffee really does to your gut and brain",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260927034331.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Glucosamine, a popular joint supplement, linked to faster Alzheimer’s progression",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260927033754.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Zepbound and Mounjaro may turn on the body’s calorie-burning brown fat",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260925093210.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Why rheumatoid arthritis pain may persist even when inflammation is under control",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260925093208.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Fire Emblem Just Completely Shook Up a Tired RPG Villain Twist",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-act-2-villain-twist/",
+        "title": "Avengers: Endgame Writer Reveals Alternate Fate for a Major Character",
+        "url": "https://www.polygon.com/avengers-endgame-black-widow-hawkeye-death/",
         "source": "Polygon"
       },
       {
-        "title": "29 Years Ago, 'Buffy' Introduced Its Best Villain. He Was Never Meant to Last.",
-        "url": "https://www.polygon.com/buffy-vampire-slayer-school-hard-retrospective-spike-first-episode/",
+        "title": "The Witcher 3’s Next Big Expansion Just Released a Glimpse Into Its World",
+        "url": "https://www.polygon.com/witcher-3-songs-of-the-past-expansion-soundtrack/",
         "source": "Polygon"
       },
       {
-        "title": "10 Essential NES Games Still Missing From Switch Online",
-        "url": "https://www.polygon.com/best-nes-games-missing-nintendo-switch-online/",
+        "title": "The Next Monster Hunter Game Officially Gets a Release Date",
+        "url": "https://www.polygon.com/monster-hunter-outlanders-release-date/",
         "source": "Polygon"
       },
       {
-        "title": "Switch Finally Gets One of 2025’s Best-Reviewed RPGs",
-        "url": "https://www.polygon.com/keep-driving-switch-recommendation/",
+        "title": "Naughty Dog Has Two The Last of Us Projects in Development",
+        "url": "https://www.polygon.com/naughty-dog-the-last-of-us-two-new-projects-intergalactic-update-2027/",
         "source": "Polygon"
       },
       {
-        "title": "5 MAD Magazine Parodies from the 1990s That Aged Perfectly",
-        "url": "https://www.polygon.com/mad-magazine-parodies-1990s-aged-perfectly/",
+        "title": "Lego Reveals First Dragon Ball Set with Shenron and Kid Goku",
+        "url": "https://www.polygon.com/lego-dragon-ball-shenron-set-release-date-price-first-photos/",
         "source": "Polygon"
       },
       {
-        "title": "GTA 6’s $400 Collector’s Edition Is the Latest Example of a Horrible Trend",
-        "url": "https://www.polygon.com/gta-6-good-time-state-collectors-editions/",
+        "title": "'The Exorcist: Martyrs' Is Mike Flanagan's \"Scariest Thing\" Ever, Cast Member Says",
+        "url": "https://www.polygon.com/exorcist-martyrs-mike-flanagan-scariest-movie-interview/",
         "source": "Polygon"
       },
       {
-        "title": "Spider-Man: Brand New Day Getting Official New Version, Report Says",
-        "url": "https://www.polygon.com/spider-man-brand-new-day-rerelease-new-footage/",
+        "title": "'The Simpsons' Producer Officially Reveals new Treehouse of Horror Plans",
+        "url": "https://www.polygon.com/the-simpsons-producer-mike-price-interview-season-38/",
         "source": "Polygon"
       }
     ],
