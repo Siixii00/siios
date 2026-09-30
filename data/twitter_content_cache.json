@@ -1,166 +1,158 @@
 {
   "metadata": {
-    "last_updated": "2026-09-30T10:57:07.473023",
-    "total_items": 59
+    "last_updated": "2026-09-30T16:45:29.032766",
+    "total_items": 56
   },
   "content": {
     "tech": [
       {
-        "title": "Pi.dev: You Said No MCP",
-        "url": "https://earendil.com/posts/you-said-no-mcp/",
+        "title": "The AI Race Just Got Awkward",
+        "url": "https://insufferable.dev/posts/the-ai-race-just-got-awkward/",
         "source": "Hacker News",
-        "score": 67
+        "score": 219
       },
       {
-        "title": "GPT-6.1 Sol replaces GPT-6 Sol after just 7 days, with near-Astra intelligence",
-        "url": "https://artificialanalysis.ai/articles/gpt-6-1-sol-replaces-gpt-6-sol-after-just-7-days-with-near-astra-intelligence",
+        "title": "You Said No MCP",
+        "url": "https://earendil.com/posts/you-said-no-mcp/",
         "source": "Hacker News",
-        "score": 12
+        "score": 432
+      },
+      {
+        "title": "A Brief History of the Bloomberg Terminal",
+        "url": "https://spectrum.ieee.org/bloomberg-terminal",
+        "source": "Hacker News",
+        "score": 43
+      },
+      {
+        "title": "SDF vs. MSDF vs. Slug: GPU Text Rendering",
+        "url": "https://alphapixeldev.com/sdf-vs-msdf-vs-slug-vs-rive-gpu-text-rendering/",
+        "source": "Hacker News",
+        "score": 62
+      },
+      {
+        "title": "I Could've Accessed 17T Microsoft Records",
+        "url": "https://blog.faav.net/how-i-couldve-accessed-17-trillion-microsoft-records",
+        "source": "Hacker News",
+        "score": 89
+      },
+      {
+        "title": "Reverse-engineering a $35 backup camera display (AMT630A)",
+        "url": "https://github.com/mogrinz/AMT630A",
+        "source": "Hacker News",
+        "score": 17
+      },
+      {
+        "title": "Moist-Electric Wallpaper for Indoor Energy Harvesting and Humidity Management",
+        "url": "https://advanced.onlinelibrary.wiley.com/doi/10.1002/aenm.71603",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
+        "title": "Show HN: JBR-001 – An open-source 3D printable desktop robot",
+        "url": "https://projecthub.arduino.cc/syntheticaidata/jbr-001-a-desktop-companion-robot-powered-by-arduino-uno-q-b11c96",
+        "source": "Hacker News",
+        "score": 97
       },
       {
         "title": "Livenerf: Has Opus 5.5 been nerfed yet?",
         "url": "https://github.com/ninjahawk/livenerf",
         "source": "Hacker News",
-        "score": 654
+        "score": 805
+      },
+      {
+        "title": "Mathematical Origami",
+        "url": "https://mathigon.org/origami",
+        "source": "Hacker News",
+        "score": 70
+      },
+      {
+        "title": "Getting out of the way: my robotics crash course",
+        "url": "https://thisismypersonalblog.com/posts/2026-09-25-getting-out-of-the-way/",
+        "source": "Hacker News",
+        "score": 30
       },
       {
         "title": "Solving Factorio Quality",
         "url": "https://exyr.org/2026/solving-factorio-quality/",
         "source": "Hacker News",
-        "score": 91
-      },
-      {
-        "title": "Built Dental Scope",
-        "url": "https://dental-scope.com/",
-        "source": "Hacker News",
-        "score": 28
-      },
-      {
-        "title": "September 2026: The world today, as seen by one Polish guy",
-        "url": "https://tomwojcik.com/posts/2026-09-21/september-2026-the-world-today/",
-        "source": "Hacker News",
-        "score": 270
+        "score": 207
       },
       {
         "title": "Dots: Always-on agents",
         "url": "https://openai.com/index/introducing-dots/",
         "source": "Hacker News",
-        "score": 635
+        "score": 714
       },
       {
         "title": "Vermont replacing power plants with home batteries",
         "url": "https://www.bbc.com/future/article/20260928-a-virtual-power-plant-hidden-in-vermont-homes-is-keeping-the-lights-on-during-storms",
         "source": "Hacker News",
-        "score": 214
-      },
-      {
-        "title": "U.S. postal inspectors shut down website selling counterfeit postage labels",
-        "url": "https://postalemployeenetwork.com/news/2026/09/26/u-s-postal-inspectors-shut-down-website-selling-millions-of-counterfeit-postage-labels/",
-        "source": "Hacker News",
-        "score": 236
-      },
-      {
-        "title": "America.gov",
-        "url": "https://america.gov/",
-        "source": "Hacker News",
-        "score": 583
+        "score": 319
       },
       {
         "title": "NASA asked several former SR-71A staffers to help secret restart",
         "url": "https://aviationweek.com/defense/aircraft-propulsion/nasa-asked-several-former-sr-71a-staffers-help-secret-restart",
         "source": "Hacker News",
-        "score": 182
-      },
-      {
-        "title": "Testing WebGPU data layouts with Facet",
-        "url": "https://www.mattkeeter.com/blog/2026-08-23-wgpu-facet/",
-        "source": "Hacker News",
-        "score": 51
-      },
-      {
-        "title": "Show HN: Real-time Solar System with 526k asteroids and all tracked satellites",
-        "url": "https://space.bl2.net/",
-        "source": "Hacker News",
-        "score": 266
-      },
-      {
-        "title": "RSS Feeds for Last.fm",
-        "url": "https://lfm.xiffy.nl/",
-        "source": "Hacker News",
-        "score": 81
-      },
-      {
-        "title": "How Delhi cut electricity loss from 50 to 5 percent",
-        "url": "https://spectrum.ieee.org/delhi-electricity-loss",
-        "source": "Hacker News",
-        "score": 530
+        "score": 270
       }
     ],
     "ai": [
       {
-        "title": "Pi.dev: You Said No MCP",
-        "url": "https://earendil.com/posts/you-said-no-mcp/",
+        "title": "The AI Race Just Got Awkward",
+        "url": "https://insufferable.dev/posts/the-ai-race-just-got-awkward/",
         "source": "Hacker News AI",
-        "score": 67
+        "score": 219
       },
       {
-        "title": "GPT-6.1 Sol replaces GPT-6 Sol after just 7 days, with near-Astra intelligence",
-        "url": "https://artificialanalysis.ai/articles/gpt-6-1-sol-replaces-gpt-6-sol-after-just-7-days-with-near-astra-intelligence",
+        "title": "You Said No MCP",
+        "url": "https://earendil.com/posts/you-said-no-mcp/",
         "source": "Hacker News AI",
-        "score": 12
+        "score": 432
       },
       {
         "title": "Floppy Emu Hardware Failure Analysis Results",
         "url": "https://www.bigmessowires.com/2026/09/29/floppy-emu-hardware-failure-analysis-results/",
         "source": "Hacker News AI",
-        "score": 12
+        "score": 40
       },
       {
         "title": "GPT 6.1 Sol: Near-Astra intelligence for a fifth of the price",
         "url": "https://openai.com/index/introducing-gpt-6-1-sol/",
         "source": "Hacker News AI",
-        "score": 959
+        "score": 1032
       },
       {
-        "title": "PSSA: A non-transformer language model written from scratch in Rust",
-        "url": "https://github.com/Sparticle62ops/pssa",
+        "title": "Muse.ai gets me kicked off fb marketplace",
+        "url": "https://news.ycombinator.com/item?id=49907601",
         "source": "Hacker News AI",
-        "score": 78
+        "score": 14
       },
       {
-        "title": "Sustainable energy without the hot air (2008)",
-        "url": "https://www.withouthotair.com/",
+        "title": "Ukraine Can't Stop Russia's Jet-Powered Shahed Drone",
+        "url": "https://spectrum.ieee.org/jet-powered-shahed-drone",
         "source": "Hacker News AI",
-        "score": 143
-      },
-      {
-        "title": "Ballmer Peak",
-        "url": "https://en.wikipedia.org/wiki/Ballmer_Peak",
-        "source": "Hacker News AI",
-        "score": 63
-      },
-      {
-        "title": "A Privacy Analysis of Web and Mobile Conversational AI Agents [pdf]",
-        "url": "https://jorgegarciaherrero.com/wp-content/interactivos/20260916-Prompt-like-a-butterfly-sting-like-a-tracker-(clean).pdf",
-        "source": "Hacker News AI",
-        "score": 418
-      },
-      {
-        "title": "Show HN: TurboGPT: train 22KiB transformer in 13s",
-        "url": "https://github.com/lostmsu/TurboGPT",
-        "source": "Hacker News AI",
-        "score": 50
+        "score": 7
       }
     ],
     "news": [
       {
-        "title": "Chinese AI tool told researchers how to make bioweapons",
-        "url": "https://www.bbc.co.uk/news/articles/cmrergq3j7lgo?at_medium=RSS&at_campaign=rss",
+        "title": "Execution of US murderer Christa Pike halted shortly before it was due to happen",
+        "url": "https://www.bbc.co.uk/news/articles/cw20vxxn876no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Three takeaways from Trump's 'Super Intelligence' summit",
-        "url": "https://www.bbc.co.uk/news/articles/cme30dz5vkzko?at_medium=RSS&at_campaign=rss",
+        "title": "Russia launches largest attack on Ukraine energy infrastructure since spring",
+        "url": "https://www.bbc.co.uk/news/articles/ckjw5jx2l393o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Last UK and US troops leave Iraq as anti-Islamic State mission ends",
+        "url": "https://www.bbc.co.uk/news/articles/c65ym1dyn92mo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ethiopia fighting escalates in Tigray killing 52 civilians, medic tells the BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c6grveejg1e2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -169,27 +161,37 @@
         "source": "BBC World"
       },
       {
-        "title": "South Korea demands apology from Pyongyang for landmine blasts that injured three",
-        "url": "https://www.bbc.co.uk/news/articles/cwj3dkvpm4e7o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Six Flags shuts down X2 rollercoaster after more than 100 allege brain injuries",
-        "url": "https://www.bbc.co.uk/news/articles/cw14d37446d8o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "US actor Chad Lowe 'heartbroken' by death of daughter Fiona aged 13",
         "url": "https://www.bbc.co.uk/news/articles/c3x2z9k1zdn4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Africa's richest man to launch Kenya oil refinery despite land protests",
-        "url": "https://www.bbc.co.uk/news/articles/cmkg8dpwy25po?at_medium=RSS&at_campaign=rss",
+        "title": "Chinese AI tool told researchers how to make bioweapons",
+        "url": "https://www.bbc.co.uk/news/articles/cmrergq3j7lgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " You can now use ChatGPT and Claude to speed up 3D art in Cinema 4D ",
+        "url": "https://www.creativebloq.com/ai/you-can-now-use-chatgpt-and-claude-to-speed-up-3d-art-in-cinema-4d",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The next James Bond actor won't be who you think ",
+        "url": "https://www.creativebloq.com/entertainment/the-next-james-bond-actor-wont-be-who-you-think",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Samsung aims Galaxy Tab S12 Series at creatives with Photoshop preinstalled ",
+        "url": "https://www.creativebloq.com/tech/phones-tablets/samsung-aims-galaxy-tab-s12-series-at-creatives-with-photoshop-preinstalled",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " What the magic of Harry Potter's Hogwarts letter can teach brands ",
+        "url": "https://www.creativebloq.com/design/branding/what-brands-can-learn-from-the-magic-of-harry-potters-hogwarts-letter",
+        "source": "Creative Bloq"
+      },
       {
         "title": " This chair is so comfortable I haven’t got up in 3 days ",
         "url": "https://www.creativebloq.com/tech/chairs-desks/this-chair-is-so-comfortable-i-havent-got-up-in-3-days",
@@ -204,99 +206,79 @@
         "title": " Tested: Is the Asus ROG Zephyrus Duo the year’s most expensive laptop? ",
         "url": "https://www.creativebloq.com/tech/laptops/tested-is-the-asus-rog-zephyrus-duo-the-years-most-expensive-laptop",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Photoshop's controversial new AI tool is dividing opinion ",
-        "url": "https://www.creativebloq.com/design/graphic-design/photoshops-newest-ai-tool-is-immediately-dividing-opinion",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This pixel art game lets you destroy almost any website (including ours) ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/this-pixel-art-game-lets-you-destroy-almost-any-website-including-ours",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Bambu Lab’s massive Halloween sale is all treat, with up to 30% off 3D printing  supplies ",
-        "url": "https://www.creativebloq.com/3d/3d-printing/bambu-labs-massive-halloween-sale-is-all-treat-with-up-to-30-percent-of-3d-printing-supplies",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Whimsymaxxing is the latest cure for the autumn blues ",
-        "url": "https://www.creativebloq.com/art/art-supplies/whimsymaxxing-is-the-latest-cure-for-the-autumn-blues",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
+        "title": "Watch Live: NASA’s Crew-13 could make the fastest U.S. trip to the ISS ever",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260930020312.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Cannabis users were twice as likely to commit violence, review finds",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260930020255.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A record-breaking X-ray flash may reveal the birth of a magnetar",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260930020252.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Quantum teleportation breakthrough: Scientists crack a 25-year entanglement challenge",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260929053550.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Sharks can hear nearly 250 feet away and pinpoint the source",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260929053536.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Bats may have first evolved in Europe 65 million years ago",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260929053531.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "The ice blasting from Saturn's moon Enceladus is stranger than scientists realized",
         "url": "https://www.sciencedaily.com/releases/2026/09/260929053528.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Earth’s day isn’t exactly 24 hours. The reason may lie deep inside the planet",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260928100540.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA’s Crew-13 could go from Florida to the ISS in under 9 hours",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260928100534.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Is the universe infinite? The answer gets weird fast",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260927225041.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "This suitcase-sized spacecraft could hear the universe before stars existed",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260927225034.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists expected these Galápagos sea turtles to wander. They stayed put",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260927225032.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Blood tests reveal why astronauts get constipated in space",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260927225030.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Xbox's Disc-to-Digital Feature Is Officially Out to the Public",
-        "url": "https://www.polygon.com/xbox-disc-to-digital-full-release/",
+        "title": "PlayStation Plus October 2026 Free Games Lineup Officially Revealed",
+        "url": "https://www.polygon.com/playstation-plus-october-2026-games-announced-ps4-ps5-free-essential/",
         "source": "Polygon"
       },
       {
-        "title": "6 PS5 Games Releasing in October You Officially Cannot Miss",
-        "url": "https://www.polygon.com/new-ps5-games-october-2026/",
+        "title": "The Pokémon Center Opens Pre-Orders For Delta Reign, The Next Big TCG Set",
+        "url": "https://www.polygon.com/pokemon-center-delta-reign-preorder-tcg-error-15-17-drawing/",
         "source": "Polygon"
       },
       {
-        "title": "Ready Player One's New Adaptation is Truer to the Book than Spielberg's Movie",
-        "url": "https://www.polygon.com/ready-player-one-graphic-novel-preview/",
+        "title": "Control Resonant Hides Its Best Part 15 Hours Into the Game",
+        "url": "https://www.polygon.com/control-resonant-the-underpass-opinion/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon Pokopia Celebrates Its First Halloween with Themed Event",
-        "url": "https://www.polygon.com/pokemon-pokopia-halloween-event-announced/",
+        "title": "Avatar: Seven Havens Episode Titles Revealed (Exclusive)",
+        "url": "https://www.polygon.com/avatar-seven-havens-episode-titles-exclusive-reveal/",
         "source": "Polygon"
       },
       {
-        "title": "2024's Funniest Movie Is Now Streaming on Dropout",
-        "url": "https://www.polygon.com/dropout-hundreds-of-beavers-streaming-free/",
+        "title": "'GTA 5' Modder Cancels Switch Port After Mocking Rockstar Backfires",
+        "url": "https://www.polygon.com/gta-5-nintendo-switch-mod-m0jso-project-canceled-taunt-rockstar/",
         "source": "Polygon"
       },
       {
-        "title": "14 Years Later, Doctor Who’s Most Heartbreaking Episode a Perfect Love Story",
-        "url": "https://www.polygon.com/doctor-who-the-angels-take-manhattan-14th-anniversary/",
+        "title": "'Reacher' Meets 'The Terminator' in Prime Video's New Christmas Heist Movie",
+        "url": "https://www.polygon.com/the-man-bag-prime-video-teaser-trailer/",
         "source": "Polygon"
       },
       {
-        "title": "The 5 most brilliant sci-fi movie quotes of the decade",
-        "url": "https://www.polygon.com/best-sci-fi-movie-quotes-of-the-decade-2020s/",
+        "title": "Secretlab ATLAS Dune+ Review",
+        "url": "https://www.polygon.com/secretlab-atlas-dune-chair-review/",
         "source": "Polygon"
       }
     ],
