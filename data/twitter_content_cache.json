@@ -1,171 +1,175 @@
 {
   "metadata": {
-    "last_updated": "2026-10-01T16:04:05.326971",
-    "total_items": 59
+    "last_updated": "2026-10-01T21:36:29.916220",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
+        "title": "Pi 1.0",
+        "url": "https://earendil.com/posts/pi-1-0/",
+        "source": "Hacker News",
+        "score": 396
+      },
+      {
+        "title": "Clef: Open-source decision models, and new RL fine-tuning platform",
+        "url": "https://blog.cloudflare.com/clef-decision-models/",
+        "source": "Hacker News",
+        "score": 349
+      },
+      {
+        "title": "Pi Durable",
+        "url": "https://earendil.com/posts/pi-durable/",
+        "source": "Hacker News",
+        "score": 96
+      },
+      {
+        "title": "The death of web development education",
+        "url": "https://molily.de/web-dev-education/",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Car Is a Smartphone on Wheels. Here's Who's Listening",
+        "url": "https://automatictransmission.khoury.northeastern.edu/index.html",
+        "source": "Hacker News",
+        "score": 63
+      },
+      {
+        "title": "Show HN: Janus – Go binary that runs GGUF models via Vulkan on AMD/Intel/Nvidia",
+        "url": "https://github.com/Vibra-Ingenn/Janus",
+        "source": "Hacker News",
+        "score": 12
+      },
+      {
+        "title": "RIP, vector database",
+        "url": "https://turbopuffer.com/blog/rip-vector-database",
+        "source": "Hacker News",
+        "score": 237
+      },
+      {
+        "title": "Oxygen-deprived underwater zones may not be \"dead zones\" but clue to early life",
+        "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026AV002570",
+        "source": "Hacker News",
+        "score": 48
+      },
+      {
         "title": "StreetComplete on iOS is now in public beta",
         "url": "https://github.com/streetcomplete/StreetComplete/issues/5421",
         "source": "Hacker News",
-        "score": 343
+        "score": 480
       },
       {
-        "title": "How to speed up the Rust compiler in September 2026",
-        "url": "https://nnethercote.github.io/2026/09/30/how-to-speed-up-the-rust-compiler-in-september-2026.html",
-        "source": "Hacker News",
-        "score": 128
-      },
-      {
-        "title": "OpenID Foundation: Identity Management for Agentic AI [pdf] (2025)",
-        "url": "https://openid.net/wp-content/uploads/2025/10/Identity-Management-for-Agentic-AI.pdf",
+        "title": "ArXiv's Updated Rate Limit Policy",
+        "url": "https://blog.arxiv.org/2026/10/01/updated-rate-limit-policy/",
         "source": "Hacker News",
         "score": 23
       },
       {
-        "title": "Polyedergarten: Garden of Paper Polyhedron Models",
-        "url": "https://www.polyedergarten.de/e_index.htm",
+        "title": "Bez: Generating a browser engine from specs and tests",
+        "url": "https://tangled.org/burrito.space/bez",
         "source": "Hacker News",
-        "score": 13
+        "score": 71
+      },
+      {
+        "title": "Ask HN: Who is hiring? (October 2026)",
+        "url": "https://news.ycombinator.com/item?id=49922569",
+        "source": "Hacker News",
+        "score": 121
       },
       {
         "title": "RacketCon Is Saturday",
         "url": "https://con.racket-lang.org/",
         "source": "Hacker News",
-        "score": 21
+        "score": 115
       },
       {
-        "title": "Google breaks promise to provide 10 years of updates to Chromebooks",
-        "url": "https://www.osnews.com/story/146052/google-breaks-promise-to-provide-10-years-of-updates-to-chromebooks/",
+        "title": "Various Projects Find Hidden SDR Capabilities in ESP32 Microcontrollers",
+        "url": "https://www.rtl-sdr.com/various-projects-independently-find-hidden-sdr-capabilities-in-esp32-microcontrollers/",
         "source": "Hacker News",
-        "score": 279
+        "score": 131
       },
       {
-        "title": "Cloudflare K2: serverless event streams",
-        "url": "https://blog.cloudflare.com/cloudflare-k2-streams/",
+        "title": "Show HN: Open-source model routing for coding agents at Astra-level performance",
+        "url": "https://news.ycombinator.com/item?id=49911500",
         "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
-        "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
-        "source": "Hacker News",
-        "score": 116
-      },
-      {
-        "title": "OpenDLSS: A Vulkan Reimplementation of Nvidia's DLSS 5 Neural Rendering Network",
-        "url": "https://github.com/maanHimself/OpenDLSS-NR",
-        "source": "Hacker News",
-        "score": 199
-      },
-      {
-        "title": "Meta Uses A.I. Data Centers to Avoid Billions in Federal Taxes",
-        "url": "https://www.nytimes.com/2026/09/30/technology/meta-ai-data-centers-taxes.html",
-        "source": "Hacker News",
-        "score": 185
-      },
-      {
-        "title": "Gemini 4 Argon",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
-        "source": "Hacker News",
-        "score": 1563
-      },
-      {
-        "title": "Figma restricts MCP access to whitelisted clients, excluding Pi",
-        "url": "https://twitter.com/GayaniFigma/status/2105295629941350454",
-        "source": "Hacker News",
-        "score": 41
-      },
-      {
-        "title": "FTC is investigating OpenAI, Anthropic and other AI companies over product risks",
-        "url": "https://www.cnbc.com/2026/09/30/ftc-ai-probe-openai-anthropic.html",
-        "source": "Hacker News",
-        "score": 116
-      },
-      {
-        "title": "Cops Can Bypass iPhone's Automatic Reboot to Get into Locked Phones",
-        "url": "https://www.404media.co/cops-can-bypass-iphone-automatic-inactivity-reboot-graykey/",
-        "source": "Hacker News",
-        "score": 61
-      },
-      {
-        "title": "Red Hat Being Phased Out of Existence (Like Many Other Companies IBM Bought)",
-        "url": "https://techrights.org/n/2026/10/01/Red_Hat_Being_Phased_Out_of_Existence_Like_Many_Other_Companies.shtml",
-        "source": "Hacker News",
-        "score": 20
+        "score": 56
       }
     ],
     "ai": [
       {
-        "title": "OpenID Foundation: Identity Management for Agentic AI [pdf] (2025)",
-        "url": "https://openid.net/wp-content/uploads/2025/10/Identity-Management-for-Agentic-AI.pdf",
+        "title": "Clef: Open-source decision models, and new RL fine-tuning platform",
+        "url": "https://blog.cloudflare.com/clef-decision-models/",
         "source": "Hacker News AI",
-        "score": 23
+        "score": 349
       },
       {
         "title": "GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
         "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
         "source": "Hacker News AI",
-        "score": 116
+        "score": 154
+      },
+      {
+        "title": "Identity Management for Agentic AI [pdf] (2025)",
+        "url": "https://openid.net/wp-content/uploads/2025/10/Identity-Management-for-Agentic-AI.pdf",
+        "source": "Hacker News AI",
+        "score": 64
       },
       {
         "title": "OpenDLSS: A Vulkan Reimplementation of Nvidia's DLSS 5 Neural Rendering Network",
         "url": "https://github.com/maanHimself/OpenDLSS-NR",
         "source": "Hacker News AI",
-        "score": 199
+        "score": 239
+      },
+      {
+        "title": "How to set up SPF, DKIM, and DMARC for your sending domain",
+        "url": "https://mailfully.com/blog/spf-dkim-dmarc-setup",
+        "source": "Hacker News AI",
+        "score": 54
       },
       {
         "title": "Gemini 4 Argon",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
         "source": "Hacker News AI",
-        "score": 1563
+        "score": 1633
       },
       {
         "title": "FTC is investigating OpenAI, Anthropic and other AI companies over product risks",
         "url": "https://www.cnbc.com/2026/09/30/ftc-ai-probe-openai-anthropic.html",
         "source": "Hacker News AI",
-        "score": 116
+        "score": 193
       },
       {
         "title": "Surprisingly complex waves reveal the brain's inner workings",
         "url": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/",
         "source": "Hacker News AI",
-        "score": 231
-      },
-      {
-        "title": "An AI sovereign wealth fund isn't progressive – it's techno-imperialism",
-        "url": "https://www.ft.com/content/bc178357-793b-45d8-ae3b-d5929159c243",
-        "source": "Hacker News AI",
-        "score": 61
-      },
-      {
-        "title": "Doing a Machine Learning PhD While Working in Japan",
-        "url": "https://www.tokyodev.com/articles/doing-a-machine-learning-phd-while-working-in-japan",
-        "source": "Hacker News AI",
-        "score": 126
-      },
-      {
-        "title": "Responsible Release of AI-Generated Mathematics",
-        "url": "https://agmai.org/general-sep29/",
-        "source": "Hacker News AI",
-        "score": 109
+        "score": 247
       }
     ],
     "news": [
       {
-        "title": "US death row inmate survives execution attempt after two lethal injections",
-        "url": "https://www.bbc.co.uk/news/articles/cq8r6rjdvlx6o?at_medium=RSS&at_campaign=rss",
+        "title": "Christa Pike in critical condition after surviving two lethal injections, lawyer says",
+        "url": "https://www.bbc.co.uk/news/articles/cmn4540d4z87o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "What happened in failed execution of Christa Pike - and what next?",
+        "title": "What happened in the failed execution of Christa Pike - and what next?",
         "url": "https://www.bbc.co.uk/news/articles/ckge4eql4q7eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Netanyahu says flight attacker 'underwent Islamist radical indoctrination'",
+        "title": "Netanyahu says Flydubai attacker had 'Islamist radical indoctrination'",
         "url": "https://www.bbc.co.uk/news/articles/crje8edqyej9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Putin warns West that Russia is ready to use every weapon to protect Kaliningrad",
+        "url": "https://www.bbc.co.uk/news/articles/cqg7k7v499jjo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Renee Good: Family of US woman killed by ICE agent sues Trump officials",
+        "url": "https://www.bbc.co.uk/news/articles/cwly7y5gvxlmo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -174,22 +178,17 @@
         "source": "BBC World"
       },
       {
-        "title": "Japan raises permanent residency fee by 20 times",
-        "url": "https://www.bbc.co.uk/news/articles/c6y8z8xeg8j1o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Trump's AI rebrand causes 'unprecedented' demand for Slovenian website names",
         "url": "https://www.bbc.co.uk/news/articles/cqx2z23xj555o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Michael Jordan's 1998 NBA finals jersey sells for more than £9m",
-        "url": "https://www.bbc.co.uk/sport/basketball/articles/cx5yly6p2nyvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " One of Anycubic's best resin 3D printers has $230 off in Amazon's Early Prime Day sale ",
+        "url": "https://www.creativebloq.com/3d/3d-printing/one-of-anycubics-best-resin-3d-printers-has-usd230-off-in-amazons-early-prime-day-sale",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Imagine spending $8.4 million on a Pokemon card ",
         "url": "https://www.creativebloq.com/entertainment/toys-collectibles/imagine-spending-usd8-4-million-on-a-pokemon-card",
@@ -218,11 +217,6 @@
       {
         "title": " \"Most things I taught myself\": Bente Schlick on becoming a successful fantasy illustrator ",
         "url": "https://www.creativebloq.com/3d/video-game-design/most-things-i-taught-myself-bente-schlick-on-becoming-a-successful-fantasy-illustrator",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " \"They weren't planned out\": the messy stories behind retro gaming's golden age ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/they-werent-planned-out-the-messy-stories-behind-retro-gamings-golden-age",
         "source": "Creative Bloq"
       }
     ],
@@ -265,38 +259,38 @@
     ],
     "gaming": [
       {
-        "title": "Ghost of Yōtei’s New DLC Should Have Been in the Game from the Very Start",
-        "url": "https://www.polygon.com/ghost-of-yotei-echoes-of-sekigahara-review-dlc-ps5/",
+        "title": "All active Aniimo codes list",
+        "url": "https://www.polygon.com/aniimo-codes-list-redeem-how-to/",
         "source": "Polygon"
       },
       {
-        "title": "Avatar: Seven Havens Episode Titles Revealed (Exclusive)",
-        "url": "https://www.polygon.com/avatar-seven-havens-episode-titles-exclusive-reveal/",
+        "title": "How Fire Emblem: Fortune's Weave Connects to Three Houses",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-three-houses-connections/",
         "source": "Polygon"
       },
       {
-        "title": "35 years later, humanity is finally melting robots the way 'Terminator 2' taught us",
-        "url": "https://www.polygon.com/terminator-2-reference-figure-ai-robot-decommissioned/",
+        "title": "All secret hideout locations and puzzle solutions in Control Resonant",
+        "url": "https://www.polygon.com/control-resonant-secret-hideout-location-puzzle-solutions/",
         "source": "Polygon"
       },
       {
-        "title": "All audio log locations in Fortnite Chapter 7 Season 4",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-audio-log-locations-where/",
+        "title": "Survival Game Rust's Big Update Adds Raw Milk and Rotten-Meat Fuel",
+        "url": "https://www.polygon.com/rust-livestock-update-force-wipe-october-2026/",
         "source": "Polygon"
       },
       {
-        "title": "X-Men Star Reveals Unexpected Approach to Becoming the MCU’s New Professor X",
-        "url": "https://www.polygon.com/mcu-x-men-reboot-professor-x-charles-abbott-psychic/",
+        "title": "GI Joe Reboot Officially Casts Duke for Danny McBride's New Film",
+        "url": "https://www.polygon.com/gi-joe-movie-bradley-cooper-cast-danny-mcbride/",
         "source": "Polygon"
       },
       {
-        "title": "How to get Jimothy for free in Fortnite",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-jimothy-sidekick-free-how-to-get/",
+        "title": "Magic: The Gathering's Disastrous Zeta Set is Officially Coming Back",
+        "url": "https://www.polygon.com/magic-secret-lair-mschf-zeta-set-preorder-december-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Epic's New Free PC Games Are Now Live, and They Include an All-time Classic",
-        "url": "https://www.polygon.com/epic-games-store-free-games-10-1-2026-download/",
+        "title": "'Pokémon' Will Surprise Fans With the TCG's First Valentine's Day Set",
+        "url": "https://www.polygon.com/pokemon-tcg-valentines-day-set-release-date-what-is-cards/",
         "source": "Polygon"
       }
     ],
