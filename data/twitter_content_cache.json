@@ -1,149 +1,155 @@
 {
   "metadata": {
-    "last_updated": "2026-10-01T08:26:43.799756",
-    "total_items": 58
+    "last_updated": "2026-10-01T16:04:05.326971",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "Gemini 4 Argon",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+        "title": "StreetComplete on iOS is now in public beta",
+        "url": "https://github.com/streetcomplete/StreetComplete/issues/5421",
         "source": "Hacker News",
-        "score": 1339
+        "score": 343
       },
       {
-        "title": "The top secret URSALA, RAQUEL, and FARRAH satellites (2025)",
-        "url": "https://www.thespacereview.com/article/4951/1",
+        "title": "How to speed up the Rust compiler in September 2026",
+        "url": "https://nnethercote.github.io/2026/09/30/how-to-speed-up-the-rust-compiler-in-september-2026.html",
         "source": "Hacker News",
-        "score": 208
+        "score": 128
       },
       {
-        "title": "Why the Bronze Age Collapsed",
-        "url": "https://www.worksinprogress.news/p/why-really-caused-the-bronze-age",
+        "title": "OpenID Foundation: Identity Management for Agentic AI [pdf] (2025)",
+        "url": "https://openid.net/wp-content/uploads/2025/10/Identity-Management-for-Agentic-AI.pdf",
         "source": "Hacker News",
-        "score": 210
+        "score": 23
+      },
+      {
+        "title": "Polyedergarten: Garden of Paper Polyhedron Models",
+        "url": "https://www.polyedergarten.de/e_index.htm",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "RacketCon Is Saturday",
+        "url": "https://con.racket-lang.org/",
+        "source": "Hacker News",
+        "score": 21
+      },
+      {
+        "title": "Google breaks promise to provide 10 years of updates to Chromebooks",
+        "url": "https://www.osnews.com/story/146052/google-breaks-promise-to-provide-10-years-of-updates-to-chromebooks/",
+        "source": "Hacker News",
+        "score": 279
+      },
+      {
+        "title": "Cloudflare K2: serverless event streams",
+        "url": "https://blog.cloudflare.com/cloudflare-k2-streams/",
+        "source": "Hacker News",
+        "score": 26
+      },
+      {
+        "title": "GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
+        "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+        "source": "Hacker News",
+        "score": 116
       },
       {
         "title": "OpenDLSS: A Vulkan Reimplementation of Nvidia's DLSS 5 Neural Rendering Network",
         "url": "https://github.com/maanHimself/OpenDLSS-NR",
         "source": "Hacker News",
-        "score": 7
+        "score": 199
       },
       {
-        "title": "Surprisingly complex waves reveal the brain's inner workings",
-        "url": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/",
+        "title": "Meta Uses A.I. Data Centers to Avoid Billions in Federal Taxes",
+        "url": "https://www.nytimes.com/2026/09/30/technology/meta-ai-data-centers-taxes.html",
         "source": "Hacker News",
-        "score": 176
+        "score": 185
       },
       {
-        "title": "Launch HN: Magnitude (YC S25) – Self-optimizing inference engine for agents",
-        "url": "https://github.com/magnitudedev/magnitude",
+        "title": "Gemini 4 Argon",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
         "source": "Hacker News",
-        "score": 156
+        "score": 1563
       },
       {
-        "title": "Halfspace experimental IDE for solid modeling with distance fields",
-        "url": "https://www.mattkeeter.com/projects/halfspace/",
+        "title": "Figma restricts MCP access to whitelisted clients, excluding Pi",
+        "url": "https://twitter.com/GayaniFigma/status/2105295629941350454",
         "source": "Hacker News",
-        "score": 124
+        "score": 41
       },
       {
-        "title": "Before pixels: Modular industrial dashboards",
-        "url": "https://unsung.aresluna.org/before-pixels-modular-industrial-dashboards/",
+        "title": "FTC is investigating OpenAI, Anthropic and other AI companies over product risks",
+        "url": "https://www.cnbc.com/2026/09/30/ftc-ai-probe-openai-anthropic.html",
         "source": "Hacker News",
-        "score": 125
+        "score": 116
       },
       {
-        "title": "A brief history of the Bloomberg terminal",
-        "url": "https://spectrum.ieee.org/bloomberg-terminal",
+        "title": "Cops Can Bypass iPhone's Automatic Reboot to Get into Locked Phones",
+        "url": "https://www.404media.co/cops-can-bypass-iphone-automatic-inactivity-reboot-graykey/",
         "source": "Hacker News",
-        "score": 272
+        "score": 61
       },
       {
-        "title": "EDG C++ front-end goes public",
-        "url": "https://edgcpp.org/#transition",
+        "title": "Red Hat Being Phased Out of Existence (Like Many Other Companies IBM Bought)",
+        "url": "https://techrights.org/n/2026/10/01/Red_Hat_Being_Phased_Out_of_Existence_Like_Many_Other_Companies.shtml",
         "source": "Hacker News",
-        "score": 210
-      },
-      {
-        "title": "5x faster Edge Functions: V8 isolates to Firecracker MicroVMs",
-        "url": "https://www.netlify.com/blog/edge-functions-firecracker-microvms/",
-        "source": "Hacker News",
-        "score": 165
-      },
-      {
-        "title": "Show HN: Ledge.sh – Runnable Markdown Notes",
-        "url": "https://ledge.sh",
-        "source": "Hacker News",
-        "score": 121
-      },
-      {
-        "title": "CHOMPI portable sampler instrument is now open-source (hardware and software)",
-        "url": "https://www.chompiclub.com/opensource",
-        "source": "Hacker News",
-        "score": 75
-      },
-      {
-        "title": "Singapore govt dating app uses Gale-Shapley stable marriage algorithm",
-        "url": "https://twitter.com/tuakdotsol/status/2105105417760391258",
-        "source": "Hacker News",
-        "score": 363
-      },
-      {
-        "title": "The last time my family was replaced by technology",
-        "url": "https://manuel.darcemont.fr/posts/the-last-time-my-family-was-replaced-by-technology/",
-        "source": "Hacker News",
-        "score": 231
+        "score": 20
       }
     ],
     "ai": [
       {
-        "title": "Gemini 4 Argon",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+        "title": "OpenID Foundation: Identity Management for Agentic AI [pdf] (2025)",
+        "url": "https://openid.net/wp-content/uploads/2025/10/Identity-Management-for-Agentic-AI.pdf",
         "source": "Hacker News AI",
-        "score": 1339
+        "score": 23
+      },
+      {
+        "title": "GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
+        "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+        "source": "Hacker News AI",
+        "score": 116
       },
       {
         "title": "OpenDLSS: A Vulkan Reimplementation of Nvidia's DLSS 5 Neural Rendering Network",
         "url": "https://github.com/maanHimself/OpenDLSS-NR",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 199
+      },
+      {
+        "title": "Gemini 4 Argon",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+        "source": "Hacker News AI",
+        "score": 1563
+      },
+      {
+        "title": "FTC is investigating OpenAI, Anthropic and other AI companies over product risks",
+        "url": "https://www.cnbc.com/2026/09/30/ftc-ai-probe-openai-anthropic.html",
+        "source": "Hacker News AI",
+        "score": 116
       },
       {
         "title": "Surprisingly complex waves reveal the brain's inner workings",
         "url": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/",
         "source": "Hacker News AI",
-        "score": 176
+        "score": 231
+      },
+      {
+        "title": "An AI sovereign wealth fund isn't progressive – it's techno-imperialism",
+        "url": "https://www.ft.com/content/bc178357-793b-45d8-ae3b-d5929159c243",
+        "source": "Hacker News AI",
+        "score": 61
       },
       {
         "title": "Doing a Machine Learning PhD While Working in Japan",
         "url": "https://www.tokyodev.com/articles/doing-a-machine-learning-phd-while-working-in-japan",
         "source": "Hacker News AI",
-        "score": 90
+        "score": 126
       },
       {
         "title": "Responsible Release of AI-Generated Mathematics",
         "url": "https://agmai.org/general-sep29/",
         "source": "Hacker News AI",
-        "score": 93
-      },
-      {
-        "title": "You said no MCP",
-        "url": "https://earendil.com/posts/you-said-no-mcp/",
-        "source": "Hacker News AI",
-        "score": 640
-      },
-      {
-        "title": "Bild AI (YC W25) Is Hiring a Founding Product Engineer",
-        "url": "https://www.ycombinator.com/companies/bild-ai/jobs/dAbC3Gd-founding-product-engineer",
-        "source": "Hacker News AI",
-        "score": 1
-      },
-      {
-        "title": "Show HN: Lathoa, a math app for kids where the AI is wrong on purpose",
-        "url": "https://lathoa.ai/en",
-        "source": "Hacker News AI",
-        "score": 49
+        "score": 109
       }
     ],
     "news": [
@@ -153,149 +159,154 @@
         "source": "BBC World"
       },
       {
-        "title": "Too early to say if Iran involved in Dubai-Tel Aviv flight attack, Israeli PM says",
-        "url": "https://www.bbc.co.uk/news/articles/cqgmrm7xd8wyo?at_medium=RSS&at_campaign=rss",
+        "title": "What happened in failed execution of Christa Pike - and what next?",
+        "url": "https://www.bbc.co.uk/news/articles/ckge4eql4q7eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "What we know about stabbing on Flydubai flight to Israel",
-        "url": "https://www.bbc.co.uk/news/articles/cqjdv7pmj9dno?at_medium=RSS&at_campaign=rss",
+        "title": "Netanyahu says flight attacker 'underwent Islamist radical indoctrination'",
+        "url": "https://www.bbc.co.uk/news/articles/crje8edqyej9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Rosenberg: Putin shows no sign of stopping the war as Russia doubles down on Ukraine",
-        "url": "https://www.bbc.co.uk/news/articles/cqx2ze420kpyo?at_medium=RSS&at_campaign=rss",
+        "title": "Russian dissident Garry Kasparov says US warned him of danger to his life",
+        "url": "https://www.bbc.co.uk/news/articles/c6y8z8kr5mk8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Swiss glaciers suffer 'disastrous' year of ice loss, threatening water supplies",
-        "url": "https://www.bbc.co.uk/news/articles/c6n9w0ypjwl9o?at_medium=RSS&at_campaign=rss",
+        "title": "Japan raises permanent residency fee by 20 times",
+        "url": "https://www.bbc.co.uk/news/articles/c6y8z8xeg8j1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Six smugglers jailed for manslaughter over worst Channel small boats disaster",
-        "url": "https://www.bbc.co.uk/news/articles/c6n8m33pn9djo?at_medium=RSS&at_campaign=rss",
+        "title": "Trump's AI rebrand causes 'unprecedented' demand for Slovenian website names",
+        "url": "https://www.bbc.co.uk/news/articles/cqx2z23xj555o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Tiny image sparks big backlash in Nikon photo contest",
-        "url": "https://www.bbc.co.uk/news/articles/ck4gjn1yzprno?at_medium=RSS&at_campaign=rss",
+        "title": "Michael Jordan's 1998 NBA finals jersey sells for more than £9m",
+        "url": "https://www.bbc.co.uk/sport/basketball/articles/cx5yly6p2nyvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
+        "title": " Imagine spending $8.4 million on a Pokemon card ",
+        "url": "https://www.creativebloq.com/entertainment/toys-collectibles/imagine-spending-usd8-4-million-on-a-pokemon-card",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Vauxhall reveals \"bold and pure\" new logo design ",
+        "url": "https://www.creativebloq.com/design/logos-icons/vauxhall-reveals-bold-and-pure-new-logo-design",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " It's International Coffee Day, and there's up to 50% off coffee makers at Amazon ",
+        "url": "https://www.creativebloq.com/design/product-design/its-international-coffee-day-and-theres-up-to-50-percent-off-coffee-makers-at-amazon",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Design of the Day: The iconic coffee machine that's kept us caffeinated since 1974 ",
+        "url": "https://www.creativebloq.com/design/product-design/design-of-the-day-moccamaster-kbg-select-coffee-maker",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Tutorial: How to draw monstrous milkshakes ",
+        "url": "https://www.creativebloq.com/art/traditional-art/tutorial-how-to-draw-monstrous-milkshakes",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " \"Most things I taught myself\": Bente Schlick on becoming a successful fantasy illustrator ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/most-things-i-taught-myself-bente-schlick-on-becoming-a-successful-fantasy-illustrator",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " \"They weren't planned out\": the messy stories behind retro gaming's golden age ",
         "url": "https://www.creativebloq.com/3d/video-game-design/they-werent-planned-out-the-messy-stories-behind-retro-gamings-golden-age",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Blender for Android could mean iPad is no longer the obvious choice of tablet for creatives ",
-        "url": "https://www.creativebloq.com/3d/blender-for-android-could-mean-ipad-is-no-longer-the-obvious-tablet-choice-for-creatives",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Forget GTA 6, this solo indie dev made a PS2-style '70s Istanbul GTA in Unreal Engine 5 ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/forget-gta-6-this-solo-indie-dev-made-a-ps2-style-70s-istanbul-gta-in-unreal-engine-5",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " You can now use ChatGPT and Claude to speed up 3D art in Cinema 4D ",
-        "url": "https://www.creativebloq.com/ai/you-can-now-use-chatgpt-and-claude-to-speed-up-3d-art-in-cinema-4d",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The next James Bond actor won't be who you think ",
-        "url": "https://www.creativebloq.com/entertainment/the-next-james-bond-actor-wont-be-who-you-think",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Samsung aims Galaxy Tab S12 Series at creatives with Photoshop preinstalled ",
-        "url": "https://www.creativebloq.com/tech/phones-tablets/samsung-aims-galaxy-tab-s12-series-at-creatives-with-photoshop-preinstalled",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " What the magic of Harry Potter's Hogwarts letter can teach brands ",
-        "url": "https://www.creativebloq.com/design/branding/what-brands-can-learn-from-the-magic-of-harry-potters-hogwarts-letter",
         "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "This diet may slow brain aging by 2.5 years",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260930225503.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Alzheimer’s risk gene APOE4 may have a reversible weakness",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260930225450.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Could quitting ultra-processed food boost your mental health?",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260930225448.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "This giant stick insect fooled scientists for decades",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260930020315.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Watch Live: NASA’s Crew-13 could make the fastest U.S. trip to the ISS ever",
         "url": "https://www.sciencedaily.com/releases/2026/09/260930020312.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Cannabis users were twice as likely to commit violence, review finds",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260930020255.htm",
+        "title": "This new qubit could be 100 times less error-prone in superfluid quantum computer breakthrough",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260930020309.htm",
         "source": "Science Daily"
       },
       {
-        "title": "A record-breaking X-ray flash may reveal the birth of a magnetar",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260930020252.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Quantum teleportation breakthrough: Scientists crack a 25-year entanglement challenge",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260929053550.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Sharks can hear nearly 250 feet away and pinpoint the source",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260929053536.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Bats may have first evolved in Europe 65 million years ago",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260929053531.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "The ice blasting from Saturn's moon Enceladus is stranger than scientists realized",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260929053528.htm",
+        "title": "New “plant armor” more than triples strawberry yields",
+        "url": "https://www.sciencedaily.com/releases/2026/09/260930020257.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "60 Years After Her Peanuts Debut, Peppermint Patty Is Still the Best Friend Charlie Brown Ever Had",
-        "url": "https://www.polygon.com/peppermint-patty-best-friend-charlie-brown-peanuts/",
+        "title": "Ghost of Yōtei’s New DLC Should Have Been in the Game from the Very Start",
+        "url": "https://www.polygon.com/ghost-of-yotei-echoes-of-sekigahara-review-dlc-ps5/",
         "source": "Polygon"
       },
       {
-        "title": "6 Switch 2 Games Releasing in October 2026 You Officially Cannot Miss",
-        "url": "https://www.polygon.com/new-switch-2-games-releases-october-2026/",
+        "title": "Avatar: Seven Havens Episode Titles Revealed (Exclusive)",
+        "url": "https://www.polygon.com/avatar-seven-havens-episode-titles-exclusive-reveal/",
         "source": "Polygon"
       },
       {
-        "title": "Lego's Sony PlayStation Set Officially Launches This Week",
-        "url": "https://www.polygon.com/lego-playstation-price-release-date-availability-october-2026/",
+        "title": "35 years later, humanity is finally melting robots the way 'Terminator 2' taught us",
+        "url": "https://www.polygon.com/terminator-2-reference-figure-ai-robot-decommissioned/",
         "source": "Polygon"
       },
       {
-        "title": "5 Xbox Games Releasing In October You Officially Can't Miss",
-        "url": "https://www.polygon.com/new-xbox-games-october-2026/",
+        "title": "All audio log locations in Fortnite Chapter 7 Season 4",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-audio-log-locations-where/",
         "source": "Polygon"
       },
       {
-        "title": "Can Xbox save Halo? | Point It Out!",
-        "url": "https://www.polygon.com/video/can-xbox-save-halo-point-it-out/",
+        "title": "X-Men Star Reveals Unexpected Approach to Becoming the MCU’s New Professor X",
+        "url": "https://www.polygon.com/mcu-x-men-reboot-professor-x-charles-abbott-psychic/",
         "source": "Polygon"
       },
       {
-        "title": "Ace Combat 8’s Stellar Multiplayer Reveals the Terrors of Live-Service Games",
-        "url": "https://www.polygon.com/ace-combat-8-online-impressions/",
+        "title": "How to get Jimothy for free in Fortnite",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-jimothy-sidekick-free-how-to-get/",
         "source": "Polygon"
       },
       {
-        "title": "Nintendo Isn't Afraid to Get Political with Fire Emblem: Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-politics-nintendo/",
+        "title": "Epic's New Free PC Games Are Now Live, and They Include an All-time Classic",
+        "url": "https://www.polygon.com/epic-games-store-free-games-10-1-2026-download/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "10 technical talks I’m excited about at GitHub Universe 2026",
+        "url": "https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "Developer policy update: Transparency, state policy, and what’s ahead",
         "url": "https://github.blog/news-insights/policy-news-and-insights/developer-policy-update-transparency-state-policy-and-whats-ahead/",
@@ -324,11 +335,6 @@
       {
         "title": "When chat is the wrong UI",
         "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "AI-powered fuzzing with the GitHub Security Lab Taskflow Agent",
-        "url": "https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/",
         "source": "GitHub Blog"
       }
     ]
