@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-01T21:36:29.916220",
-    "total_items": 58
+    "last_updated": "2026-10-02T01:20:42.786866",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,141 +9,147 @@
         "title": "Pi 1.0",
         "url": "https://earendil.com/posts/pi-1-0/",
         "source": "Hacker News",
-        "score": 396
+        "score": 730
       },
       {
-        "title": "Clef: Open-source decision models, and new RL fine-tuning platform",
+        "title": "Several vulnerabilities have been discovered in the Linux kernel",
+        "url": "https://lwn.net/Articles/1097401/",
+        "source": "Hacker News",
+        "score": 61
+      },
+      {
+        "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
         "url": "https://blog.cloudflare.com/clef-decision-models/",
         "source": "Hacker News",
-        "score": 349
+        "score": 425
       },
       {
-        "title": "Pi Durable",
-        "url": "https://earendil.com/posts/pi-durable/",
+        "title": "SvelteKit 3",
+        "url": "https://svelte.dev/blog/sveltekit-3-is-here",
         "source": "Hacker News",
-        "score": 96
-      },
-      {
-        "title": "The death of web development education",
-        "url": "https://molily.de/web-dev-education/",
-        "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "Car Is a Smartphone on Wheels. Here's Who's Listening",
-        "url": "https://automatictransmission.khoury.northeastern.edu/index.html",
-        "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "Show HN: Janus – Go binary that runs GGUF models via Vulkan on AMD/Intel/Nvidia",
-        "url": "https://github.com/Vibra-Ingenn/Janus",
-        "source": "Hacker News",
-        "score": 12
-      },
-      {
-        "title": "RIP, vector database",
-        "url": "https://turbopuffer.com/blog/rip-vector-database",
-        "source": "Hacker News",
-        "score": 237
-      },
-      {
-        "title": "Oxygen-deprived underwater zones may not be \"dead zones\" but clue to early life",
-        "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026AV002570",
-        "source": "Hacker News",
-        "score": 48
-      },
-      {
-        "title": "StreetComplete on iOS is now in public beta",
-        "url": "https://github.com/streetcomplete/StreetComplete/issues/5421",
-        "source": "Hacker News",
-        "score": 480
-      },
-      {
-        "title": "ArXiv's Updated Rate Limit Policy",
-        "url": "https://blog.arxiv.org/2026/10/01/updated-rate-limit-policy/",
-        "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "Bez: Generating a browser engine from specs and tests",
-        "url": "https://tangled.org/burrito.space/bez",
-        "source": "Hacker News",
-        "score": 71
+        "score": 110
       },
       {
         "title": "Ask HN: Who is hiring? (October 2026)",
         "url": "https://news.ycombinator.com/item?id=49922569",
         "source": "Hacker News",
-        "score": 121
+        "score": 148
       },
       {
-        "title": "RacketCon Is Saturday",
-        "url": "https://con.racket-lang.org/",
+        "title": "CSS Bed: Classless CSS themes to use as starting points in web development",
+        "url": "https://www.cssbed.com",
         "source": "Hacker News",
-        "score": 115
+        "score": 55
       },
       {
-        "title": "Various Projects Find Hidden SDR Capabilities in ESP32 Microcontrollers",
-        "url": "https://www.rtl-sdr.com/various-projects-independently-find-hidden-sdr-capabilities-in-esp32-microcontrollers/",
+        "title": "Show HN: Janus – Go binary that runs GGUF models via Vulkan on AMD/Intel/Nvidia",
+        "url": "https://github.com/Vibra-Ingenn/Janus",
         "source": "Hacker News",
-        "score": 131
+        "score": 48
       },
       {
-        "title": "Show HN: Open-source model routing for coding agents at Astra-level performance",
-        "url": "https://news.ycombinator.com/item?id=49911500",
+        "title": "Pi Durable",
+        "url": "https://earendil.com/posts/pi-durable/",
         "source": "Hacker News",
-        "score": 56
+        "score": 216
+      },
+      {
+        "title": "StreetComplete on iOS is now in public beta",
+        "url": "https://github.com/streetcomplete/StreetComplete/issues/5421",
+        "source": "Hacker News",
+        "score": 520
+      },
+      {
+        "title": "Using Opus 5.5 to discover a new eyewitness record of the dodo",
+        "url": "https://resobscura.substack.com/p/using-opus-55-to-discover-a-new-eyewitness",
+        "source": "Hacker News",
+        "score": 60
+      },
+      {
+        "title": "RIP, vector database",
+        "url": "https://turbopuffer.com/blog/rip-vector-database",
+        "source": "Hacker News",
+        "score": 271
+      },
+      {
+        "title": "Git 3.0's upcoming SHA-256 default will be a costly mistake",
+        "url": "https://blog.gitbutler.com/git-3-sha-256",
+        "source": "Hacker News",
+        "score": 198
+      },
+      {
+        "title": "ArXiv's Updated Rate Limit Policy",
+        "url": "https://blog.arxiv.org/2026/10/01/updated-rate-limit-policy/",
+        "source": "Hacker News",
+        "score": 65
+      },
+      {
+        "title": "Oxygen-deprived underwater zones may not be “dead zones” but clue to early life",
+        "url": "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2026AV002570",
+        "source": "Hacker News",
+        "score": 78
+      },
+      {
+        "title": "Vote on which of Hacker News' challenges for AI have been met",
+        "url": "https://stoppels.ch/goalposts/",
+        "source": "Hacker News",
+        "score": 86
       }
     ],
     "ai": [
       {
-        "title": "Clef: Open-source decision models, and new RL fine-tuning platform",
+        "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
         "url": "https://blog.cloudflare.com/clef-decision-models/",
         "source": "Hacker News AI",
-        "score": 349
+        "score": 425
+      },
+      {
+        "title": "Vote on which of Hacker News' challenges for AI have been met",
+        "url": "https://stoppels.ch/goalposts/",
+        "source": "Hacker News AI",
+        "score": 86
+      },
+      {
+        "title": "Aweb – Communication for AI Agents",
+        "url": "https://aweb.ai",
+        "source": "Hacker News AI",
+        "score": 18
       },
       {
         "title": "GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
         "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
         "source": "Hacker News AI",
-        "score": 154
+        "score": 166
       },
       {
-        "title": "Identity Management for Agentic AI [pdf] (2025)",
-        "url": "https://openid.net/wp-content/uploads/2025/10/Identity-Management-for-Agentic-AI.pdf",
+        "title": "Your Big Mac might cost more if McDonald's AI thinks people nearby can afford it",
+        "url": "https://neow.in/NGxhb3d6",
         "source": "Hacker News AI",
-        "score": 64
+        "score": 31
       },
       {
         "title": "OpenDLSS: A Vulkan Reimplementation of Nvidia's DLSS 5 Neural Rendering Network",
         "url": "https://github.com/maanHimself/OpenDLSS-NR",
         "source": "Hacker News AI",
-        "score": 239
+        "score": 248
       },
       {
-        "title": "How to set up SPF, DKIM, and DMARC for your sending domain",
-        "url": "https://mailfully.com/blog/spf-dkim-dmarc-setup",
+        "title": "Identity Management for Agentic AI [pdf] (2025)",
+        "url": "https://openid.net/wp-content/uploads/2025/10/Identity-Management-for-Agentic-AI.pdf",
         "source": "Hacker News AI",
-        "score": 54
+        "score": 70
       },
       {
         "title": "Gemini 4 Argon",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
         "source": "Hacker News AI",
-        "score": 1633
+        "score": 1639
       },
       {
-        "title": "FTC is investigating OpenAI, Anthropic and other AI companies over product risks",
-        "url": "https://www.cnbc.com/2026/09/30/ftc-ai-probe-openai-anthropic.html",
+        "title": "OpenAI has a LOT of work to do if they think Luna can compete with Jev",
+        "url": "https://anth.us/blog/openai-decisions-api-preview/",
         "source": "Hacker News AI",
-        "score": 193
-      },
-      {
-        "title": "Surprisingly complex waves reveal the brain's inner workings",
-        "url": "https://www.quantamagazine.org/surprisingly-complex-waves-reveal-the-brains-inner-workings-20260930/",
-        "source": "Hacker News AI",
-        "score": 247
+        "score": 5
       }
     ],
     "news": [
@@ -185,7 +191,7 @@
     ],
     "art": [
       {
-        "title": " One of Anycubic's best resin 3D printers has $230 off in Amazon's Early Prime Day sale ",
+        "title": " One of Anycubic's best resin 3D printers has $230 off in Amazon's early Prime Day sale ",
         "url": "https://www.creativebloq.com/3d/3d-printing/one-of-anycubics-best-resin-3d-printers-has-usd230-off-in-amazons-early-prime-day-sale",
         "source": "Creative Bloq"
       },
@@ -259,6 +265,26 @@
     ],
     "gaming": [
       {
+        "title": "'Digger' Ending Explained: A Spoiler-Filled Breakdown of Tom Cruise's Wild New Movie",
+        "url": "https://www.polygon.com/digger-ending-explained-spoilers/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Verity' Ending Explained: How That Bonkers Final Twist Reshapes the Entire Movie",
+        "url": "https://www.polygon.com/verity-ending-explained-spoilers/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Gears of War: E-Day Is 100x More Fun Playing Co-op",
+        "url": "https://www.polygon.com/gears-war-e-day-co-op-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Classic 'Unfilmable' Books That Should Never Get Adapted Into Movies",
+        "url": "https://www.polygon.com/classic-books-never-get-movie-adaptations/",
+        "source": "Polygon"
+      },
+      {
         "title": "All active Aniimo codes list",
         "url": "https://www.polygon.com/aniimo-codes-list-redeem-how-to/",
         "source": "Polygon"
@@ -271,26 +297,6 @@
       {
         "title": "All secret hideout locations and puzzle solutions in Control Resonant",
         "url": "https://www.polygon.com/control-resonant-secret-hideout-location-puzzle-solutions/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Survival Game Rust's Big Update Adds Raw Milk and Rotten-Meat Fuel",
-        "url": "https://www.polygon.com/rust-livestock-update-force-wipe-october-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GI Joe Reboot Officially Casts Duke for Danny McBride's New Film",
-        "url": "https://www.polygon.com/gi-joe-movie-bradley-cooper-cast-danny-mcbride/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Magic: The Gathering's Disastrous Zeta Set is Officially Coming Back",
-        "url": "https://www.polygon.com/magic-secret-lair-mschf-zeta-set-preorder-december-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Pokémon' Will Surprise Fans With the TCG's First Valentine's Day Set",
-        "url": "https://www.polygon.com/pokemon-tcg-valentines-day-set-release-date-what-is-cards/",
         "source": "Polygon"
       }
     ],
