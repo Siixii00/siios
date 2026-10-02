@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-02T08:02:16.962176",
-    "total_items": 58
+    "last_updated": "2026-10-02T15:27:38.008838",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
+        "title": "The Legend of von Neumann [pdf]",
+        "url": "https://gwern.net/doc/math/1973-halmos.pdf",
+        "source": "Hacker News",
+        "score": 79
+      },
+      {
+        "title": "Big Tech ruined the cloud, so we're renaming ours",
+        "url": "https://www.home-assistant.io/blog/2026/10/02/big-tech-ruined-the-cloud-so-were-renaming-ours/",
+        "source": "Hacker News",
+        "score": 15
+      },
+      {
         "title": "Pi 1.0",
         "url": "https://earendil.com/posts/pi-1-0/",
         "source": "Hacker News",
-        "score": 1179
+        "score": 1561
+      },
+      {
+        "title": "Giving friends custom text buzzes based on Morse code",
+        "url": "https://liquidbrain.net/blog/giving-friends-custom-text-buzzes-based-on-morse-code/",
+        "source": "Hacker News",
+        "score": 9
       },
       {
         "title": "Shimano Bicycle Museum Review",
         "url": "https://inrng.com/2026/10/shimano-bicycle-museum/",
         "source": "Hacker News",
-        "score": 57
-      },
-      {
-        "title": "How Singapore's government-run dating service works",
-        "url": "https://www.singapore-samizdat.com/p/how-singapores-government-run-dating-service-firstdate-works",
-        "source": "Hacker News",
-        "score": 115
-      },
-      {
-        "title": "DeepSeek Harness Desktop for macOS and Windows",
-        "url": "https://www.deepseek.com/en/harness/",
-        "source": "Hacker News",
-        "score": 199
-      },
-      {
-        "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
-        "url": "https://blog.cloudflare.com/clef-decision-models/",
-        "source": "Hacker News",
-        "score": 492
-      },
-      {
-        "title": "SvelteKit 3",
-        "url": "https://svelte.dev/blog/sveltekit-3-is-here",
-        "source": "Hacker News",
-        "score": 246
-      },
-      {
-        "title": "Pi Durable",
-        "url": "https://earendil.com/posts/pi-durable/",
-        "source": "Hacker News",
-        "score": 348
-      },
-      {
-        "title": "Automatic Transmission – a data-privacy study of connected vehicles",
-        "url": "https://automatictransmission.khoury.northeastern.edu/index.html",
-        "source": "Hacker News",
-        "score": 177
+        "score": 232
       },
       {
         "title": "Several vulnerabilities have been discovered in the Linux kernel",
         "url": "https://lwn.net/Articles/1097401/",
         "source": "Hacker News",
-        "score": 256
+        "score": 457
       },
       {
-        "title": "Ask HN: Who is hiring? (October 2026)",
-        "url": "https://news.ycombinator.com/item?id=49922569",
+        "title": "Show HN: Audionaut – an open-source cross-platform multitrack audio editor",
+        "url": "https://github.com/kvoltmer/Audionaut",
         "source": "Hacker News",
-        "score": 193
+        "score": 87
       },
       {
-        "title": "StreetComplete on iOS is now in public beta",
-        "url": "https://github.com/streetcomplete/StreetComplete/issues/5421",
+        "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
+        "url": "https://blog.cloudflare.com/clef-decision-models/",
         "source": "Hacker News",
-        "score": 553
+        "score": 572
       },
       {
-        "title": "Turbo Haskell",
-        "url": "https://comonad.com/reader/2026/turbo-haskell/",
+        "title": "Frog and Toad and the Increasingly Capable Machines",
+        "url": "https://www.frogandtoad.ai/",
         "source": "Hacker News",
-        "score": 77
+        "score": 403
+      },
+      {
+        "title": "SvelteKit 3",
+        "url": "https://svelte.dev/blog/sveltekit-3-is-here",
+        "source": "Hacker News",
+        "score": 357
+      },
+      {
+        "title": "DeepSeek Harness Desktop for macOS and Windows",
+        "url": "https://www.deepseek.com/en/harness/",
+        "source": "Hacker News",
+        "score": 340
+      },
+      {
+        "title": "Pi Durable",
+        "url": "https://earendil.com/posts/pi-durable/",
+        "source": "Hacker News",
+        "score": 451
       },
       {
         "title": "Git 3.0's upcoming SHA-256 default will be a costly mistake",
         "url": "https://blog.gitbutler.com/git-3-sha-256",
         "source": "Hacker News",
-        "score": 340
+        "score": 488
       },
       {
-        "title": "Using Opus 5.5 to discover a new eyewitness record of the dodo",
-        "url": "https://resobscura.substack.com/p/using-opus-55-to-discover-a-new-eyewitness",
+        "title": "Ask HN: Who is hiring? (October 2026)",
+        "url": "https://news.ycombinator.com/item?id=49922569",
         "source": "Hacker News",
-        "score": 127
+        "score": 236
       },
       {
-        "title": "To grieve, or not to grieve?",
-        "url": "https://xenaproject.wordpress.com/2026/10/01/to-grieve-or-not-to-grieve/",
+        "title": "Turbo Haskell",
+        "url": "https://comonad.com/reader/2026/turbo-haskell/",
         "source": "Hacker News",
-        "score": 57
+        "score": 164
       }
     ],
     "ai": [
@@ -101,49 +101,43 @@
         "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
         "url": "https://blog.cloudflare.com/clef-decision-models/",
         "source": "Hacker News AI",
-        "score": 492
+        "score": 572
       },
       {
         "title": "Vote on which of Hacker News' challenges for AI have been met",
         "url": "https://stoppels.ch/goalposts/",
         "source": "Hacker News AI",
-        "score": 136
-      },
-      {
-        "title": "GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
-        "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
-        "source": "Hacker News AI",
-        "score": 177
-      },
-      {
-        "title": "Aweb – Communication for AI Agents",
-        "url": "https://aweb.ai",
-        "source": "Hacker News AI",
-        "score": 34
+        "score": 178
       },
       {
         "title": "Gemini 4 Argon",
         "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
         "source": "Hacker News AI",
-        "score": 1653
+        "score": 1676
+      },
+      {
+        "title": "GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
+        "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+        "source": "Hacker News AI",
+        "score": 186
       },
       {
         "title": "OpenDLSS: A Vulkan Reimplementation of Nvidia's DLSS 5 Neural Rendering Network",
         "url": "https://github.com/maanHimself/OpenDLSS-NR",
         "source": "Hacker News AI",
-        "score": 251
+        "score": 265
       },
       {
-        "title": "Identity Management for Agentic AI [pdf] (2025)",
-        "url": "https://openid.net/wp-content/uploads/2025/10/Identity-Management-for-Agentic-AI.pdf",
+        "title": "Aweb – Communication for AI Agents",
+        "url": "https://aweb.ai",
         "source": "Hacker News AI",
-        "score": 70
+        "score": 38
       },
       {
         "title": "OpenAI has a LOT of work to do if they think Luna can compete with Jev",
         "url": "https://anth.us/blog/openai-decisions-api-preview/",
         "source": "Hacker News AI",
-        "score": 15
+        "score": 24
       }
     ],
     "news": [
@@ -153,18 +147,13 @@
         "source": "BBC World"
       },
       {
-        "title": "US pressures Europe to release diesel reserves as Trump threatens export ban",
-        "url": "https://www.bbc.co.uk/news/articles/c5zjzjgdeneeo?at_medium=RSS&at_campaign=rss",
+        "title": "Cornell students gather to voice anger over alleged gang rape",
+        "url": "https://www.bbc.co.uk/news/articles/cm0e3ed1er1yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Christa Pike in critical condition after surviving two lethal injections, lawyer says",
-        "url": "https://www.bbc.co.uk/news/articles/cmn4540d4z87o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "NY's governor appoints special prosecutor in Cornell frat rape investigation",
-        "url": "https://www.bbc.co.uk/news/articles/cr1585y0y90go?at_medium=RSS&at_campaign=rss",
+        "title": "I've seen nearly 500 executions - but never one like Christa Pike's",
+        "url": "https://www.bbc.co.uk/news/articles/c6d949gq47x9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -178,45 +167,50 @@
         "source": "BBC World"
       },
       {
-        "title": "OpenAI fires workers for mishandling 'sensitive information'",
+        "title": "OpenAI fires workers for 'mishandling sensitive information'",
         "url": "https://www.bbc.co.uk/news/articles/c6y9z9r4ejzwo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Netanyahu says Flydubai attacker had 'Islamist radical indoctrination'",
+        "url": "https://www.bbc.co.uk/news/articles/crje8edqyej9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " \"I don’t have a plan for what I want to create\": Bente Schlick on the feeling and spontaneity in her fantasy illustrations ",
-        "url": "https://www.creativebloq.com/art/illustration/i-dont-have-a-plan-for-what-i-want-to-create-bente-schlick-on-the-feeling-and-spontaneity-in-her-fantasy-illustrations",
+        "title": " Nothing Headphone (1) Pro review: better headphones, but should you upgrade? ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/nothing-headphone-1-pro-review-better-headphones-but-should-you-upgrade",
         "source": "Creative Bloq"
       },
       {
-        "title": " Quote of the Day by Louise Bourgeois: \"I have been to hell and back. And let me tell you, it was wonderful.\" ",
-        "url": "https://www.creativebloq.com/art/quote-of-the-day-by-louise-bourgeois-i-have-been-to-hell-and-back-and-let-me-tell-you-it-was-wonderful",
+        "title": " PS5 AI upscaling just cancelled my PS5 Pro FOMO ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/ps5-ai-upscaling-just-cancelled-my-ps5-pro-fomo",
         "source": "Creative Bloq"
       },
       {
-        "title": " Yes, Ted: The Animated Series looks like Family Guy, but that's perfect ",
-        "url": "https://www.creativebloq.com/art/animation/people-think-ted-the-animated-series-looks-familiar",
+        "title": " Star Wars Galactic Racer review: authentic and original, the best Star Wars racer yet ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/star-wars-galactic-racer-review-authentic-and-original-the-best-star-wars-racer-yet",
         "source": "Creative Bloq"
       },
       {
-        "title": " One of Anycubic's best resin 3D printers has $230 off in Amazon's early Prime Day sale ",
-        "url": "https://www.creativebloq.com/3d/3d-printing/one-of-anycubics-best-resin-3d-printers-has-usd230-off-in-amazons-early-prime-day-sale",
+        "title": " Elon Musk’s Grokipedia gets a scholarly makeover ",
+        "url": "https://www.creativebloq.com/web-design/elon-musks-grokipedia-gets-a-scholarly-makeover",
         "source": "Creative Bloq"
       },
       {
-        "title": " Imagine spending $8.4 million on a Pokemon card ",
-        "url": "https://www.creativebloq.com/entertainment/toys-collectibles/imagine-spending-usd8-4-million-on-a-pokemon-card",
+        "title": " This eerily realistic animation is guaranteed to make your skin crawl ",
+        "url": "https://www.creativebloq.com/art/animation/this-eerily-realistic-animation-is-guaranteed-to-make-your-skin-crawl",
         "source": "Creative Bloq"
       },
       {
-        "title": " Vauxhall reveals \"bold and pure\" new logo design ",
-        "url": "https://www.creativebloq.com/design/logos-icons/vauxhall-reveals-bold-and-pure-new-logo-design",
+        "title": " The Freckle phone is here to save your kids from brainrot ",
+        "url": "https://www.creativebloq.com/tech/phones-tablets/the-freckle-phone-is-here-to-save-your-kids-from-brainrot",
         "source": "Creative Bloq"
       },
       {
-        "title": " It's International Coffee Day, and there's up to 50% off coffee makers at Amazon ",
-        "url": "https://www.creativebloq.com/design/product-design/its-international-coffee-day-and-theres-up-to-50-percent-off-coffee-makers-at-amazon",
+        "title": " How indie game Inkblood's hand-drawn art makes a 2D world feel alive ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/how-indie-game-inkbloods-hand-drawn-art-makes-a-2d-world-feel-alive",
         "source": "Creative Bloq"
       }
     ],
@@ -259,43 +253,48 @@
     ],
     "gaming": [
       {
-        "title": "31 Years Later, the Definitive Sci-Fi Cyberpunk Movie Is Free to Stream on YouTube",
-        "url": "https://www.polygon.com/ghost-in-the-shell-streaming-free-youtube-october-2026/",
+        "title": "GTA 6’s Next Wild Crossover Is With the Miami Heat",
+        "url": "https://www.polygon.com/gta-6-vice-city-miami-heat-nba-collaboration-merch/",
         "source": "Polygon"
       },
       {
-        "title": "Buffy Meets Hannibal In the Cult Classic Detective Series Streaming Free on YouTube",
-        "url": "https://www.polygon.com/izombie-streaming-free-youtube-october-2026/",
+        "title": "Pokémon Go 'Harvest Festival Taken Over' 2026 event guide",
+        "url": "https://www.polygon.com/pokemon-go-harvest-festival-2026-guide-applin-takeover/",
         "source": "Polygon"
       },
       {
-        "title": "'Digger' Ending Explained: A Spoiler-Filled Breakdown of Tom Cruise's Wild New Movie",
-        "url": "https://www.polygon.com/digger-ending-explained-spoilers/",
+        "title": "Critical Role Reveals Why Campaign 4's Biggest Change Is Also a Huge Challenge",
+        "url": "https://www.polygon.com/critical-role-campaign-4-biggest-challenge/",
         "source": "Polygon"
       },
       {
-        "title": "'Verity' Ending Explained: How That Bonkers Final Twist Reshapes the Entire Movie",
-        "url": "https://www.polygon.com/verity-ending-explained-spoilers/",
+        "title": "'Avengers: Secret Wars' Release Date at Risk as Filming Reportedly Delayed",
+        "url": "https://www.polygon.com/avengers-secret-wars-filming-delayed-doomsday-sequel/",
         "source": "Polygon"
       },
       {
-        "title": "Gears of War: E-Day Is 100x More Fun Playing Co-op",
-        "url": "https://www.polygon.com/gears-war-e-day-co-op-interview/",
+        "title": "Fast & Furious Is Officially Getting an Unexpected Release in 2028",
+        "url": "https://www.polygon.com/fast-furious-tv-series-peacock-vin-diesel/",
         "source": "Polygon"
       },
       {
-        "title": "5 Classic 'Unfilmable' Books That Should Never Get Adapted Into Movies",
-        "url": "https://www.polygon.com/classic-books-never-get-movie-adaptations/",
+        "title": "'In the Eternal Fire's Shadow' quest walkthrough in The Witcher 3 Wild Hunt",
+        "url": "https://www.polygon.com/witcher-3-wild-hunt-in-the-eternal-fires-shadow-quest-walkthrough-reinald-priest/",
         "source": "Polygon"
       },
       {
-        "title": "All active Aniimo codes list",
-        "url": "https://www.polygon.com/aniimo-codes-list-redeem-how-to/",
+        "title": "What time are the Bounty Hunter power hours in Fortnite Chapter 7 Season 4?",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-bounty-hunter-power-hours-what-time/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "AI is rewriting the developer career ladder. Here’s how to stand out.",
+        "url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "10 technical talks I’m excited about at GitHub Universe 2026",
         "url": "https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/",
@@ -324,11 +323,6 @@
       {
         "title": "Improving site performance by shipping more CSS",
         "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "When chat is the wrong UI",
-        "url": "https://github.blog/ai-and-ml/github-copilot/when-chat-is-the-wrong-ui/",
         "source": "GitHub Blog"
       }
     ]
