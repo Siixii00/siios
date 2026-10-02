@@ -1,154 +1,194 @@
 {
   "metadata": {
-    "last_updated": "2026-10-02T15:27:38.008838",
-    "total_items": 57
+    "last_updated": "2026-10-02T20:24:40.086070",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "The Legend of von Neumann [pdf]",
-        "url": "https://gwern.net/doc/math/1973-halmos.pdf",
+        "title": "Apple Pass Designer",
+        "url": "https://developer.apple.com/pass-designer/",
         "source": "Hacker News",
-        "score": 79
+        "score": 139
       },
       {
-        "title": "Big Tech ruined the cloud, so we're renaming ours",
-        "url": "https://www.home-assistant.io/blog/2026/10/02/big-tech-ruined-the-cloud-so-were-renaming-ours/",
+        "title": "Court agrees with EFF: Utah's VPN law demands a technical impossibility",
+        "url": "https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility",
         "source": "Hacker News",
-        "score": 15
+        "score": 329
       },
       {
-        "title": "Pi 1.0",
-        "url": "https://earendil.com/posts/pi-1-0/",
+        "title": "With most information hidden, the game Stratego had stumped AI until now",
+        "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
         "source": "Hacker News",
-        "score": 1561
+        "score": 85
       },
       {
-        "title": "Giving friends custom text buzzes based on Morse code",
-        "url": "https://liquidbrain.net/blog/giving-friends-custom-text-buzzes-based-on-morse-code/",
+        "title": "A 12-year sequence of telescope images of a star and four planets orbiting",
+        "url": "https://bsky.app/profile/theplanetaryguy.com/post/3mwucf5ert22f",
         "source": "Hacker News",
-        "score": 9
+        "score": 63
       },
       {
-        "title": "Shimano Bicycle Museum Review",
-        "url": "https://inrng.com/2026/10/shimano-bicycle-museum/",
+        "title": "Updates to Full Disk Access in macOS",
+        "url": "https://developer.apple.com/news/?id=p6zjojqw",
         "source": "Hacker News",
-        "score": 232
+        "score": 33
       },
       {
-        "title": "Several vulnerabilities have been discovered in the Linux kernel",
-        "url": "https://lwn.net/Articles/1097401/",
+        "title": "Show HN: Made an open-source Lego AI generator",
+        "url": "https://github.com/anteloc/ldraw-nova",
         "source": "Hacker News",
-        "score": 457
+        "score": 14
       },
       {
-        "title": "Show HN: Audionaut – an open-source cross-platform multitrack audio editor",
-        "url": "https://github.com/kvoltmer/Audionaut",
+        "title": "Greg Kroah-Hartman – Security in the LLM Age [video]",
+        "url": "https://www.youtube.com/watch?v=NnV_cWeoo5Q",
         "source": "Hacker News",
-        "score": 87
+        "score": 84
       },
       {
-        "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
-        "url": "https://blog.cloudflare.com/clef-decision-models/",
+        "title": "Loss of cell identity drives human aging: Two new papers",
+        "url": "https://erictopol.substack.com/p/loss-of-cell-identity-drives-human",
         "source": "Hacker News",
-        "score": 572
+        "score": 82
       },
       {
-        "title": "Frog and Toad and the Increasingly Capable Machines",
-        "url": "https://www.frogandtoad.ai/",
+        "title": "From the creator of Redis; run LLM locally with ds4",
+        "url": "https://dwarfstar.sh/",
         "source": "Hacker News",
-        "score": 403
+        "score": 37
       },
       {
-        "title": "SvelteKit 3",
-        "url": "https://svelte.dev/blog/sveltekit-3-is-here",
+        "title": "Mike Tomlin spent 12 years building a Minecraft city",
+        "url": "https://www.nytimes.com/athletic/7648198/2026/10/01/mike-tomlin-minecraft-nfl-coach/",
         "source": "Hacker News",
-        "score": 357
+        "score": 84
       },
       {
-        "title": "DeepSeek Harness Desktop for macOS and Windows",
-        "url": "https://www.deepseek.com/en/harness/",
+        "title": "One month coding with GLM 5.3 Flash",
+        "url": "https://wagtail.org/blog/one-month-on-glm-53-flash/",
         "source": "Hacker News",
-        "score": 340
+        "score": 46
       },
       {
-        "title": "Pi Durable",
-        "url": "https://earendil.com/posts/pi-durable/",
+        "title": "Blogging with Gleam, Org-Mode and Pandoc",
+        "url": "https://byzantine-systems.github.io/blogging-with-gleam-org-mode-and-pandoc/",
         "source": "Hacker News",
-        "score": 451
+        "score": 24
       },
       {
-        "title": "Git 3.0's upcoming SHA-256 default will be a costly mistake",
-        "url": "https://blog.gitbutler.com/git-3-sha-256",
+        "title": "How accurately calibrated is Jev?",
+        "url": "https://maximumeffort.substack.com/p/jev-is-poorly-calibrated",
         "source": "Hacker News",
-        "score": 488
+        "score": 27
       },
       {
-        "title": "Ask HN: Who is hiring? (October 2026)",
-        "url": "https://news.ycombinator.com/item?id=49922569",
+        "title": "Sites in ChatGPT",
+        "url": "https://chatgpt.com/features/sites/",
         "source": "Hacker News",
-        "score": 236
+        "score": 133
       },
       {
-        "title": "Turbo Haskell",
-        "url": "https://comonad.com/reader/2026/turbo-haskell/",
+        "title": "Venice’s failed war against Constantinople led to the first bond market",
+        "url": "https://bigthink.com/books/a-fabulous-debt/",
         "source": "Hacker News",
-        "score": 164
+        "score": 28
       }
     ],
     "ai": [
       {
-        "title": "Clef: Open-weight decision models, and new RL fine-tuning platform",
-        "url": "https://blog.cloudflare.com/clef-decision-models/",
+        "title": "With most information hidden, the game Stratego had stumped AI until now",
+        "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
         "source": "Hacker News AI",
-        "score": 572
+        "score": 85
       },
       {
-        "title": "Vote on which of Hacker News' challenges for AI have been met",
-        "url": "https://stoppels.ch/goalposts/",
+        "title": "Show HN: Made an open-source Lego AI generator",
+        "url": "https://github.com/anteloc/ldraw-nova",
         "source": "Hacker News AI",
-        "score": 178
+        "score": 14
       },
       {
-        "title": "Gemini 4 Argon",
-        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+        "title": "Greg Kroah-Hartman – Security in the LLM Age [video]",
+        "url": "https://www.youtube.com/watch?v=NnV_cWeoo5Q",
         "source": "Hacker News AI",
-        "score": 1676
+        "score": 84
       },
       {
-        "title": "GPT-Synopsys: Frontier Intelligence to Revolutionize Chip Design",
-        "url": "https://news.synopsys.com/2026-09-30-OpenAI-and-Synopsys-Announce-GPT-Synopsys-Frontier-Intelligence-to-Revolutionize-Chip-Design",
+        "title": "From the creator of Redis; run LLM locally with ds4",
+        "url": "https://dwarfstar.sh/",
         "source": "Hacker News AI",
-        "score": 186
+        "score": 37
       },
       {
-        "title": "OpenDLSS: A Vulkan Reimplementation of Nvidia's DLSS 5 Neural Rendering Network",
-        "url": "https://github.com/maanHimself/OpenDLSS-NR",
+        "title": "Sites in ChatGPT",
+        "url": "https://chatgpt.com/features/sites/",
         "source": "Hacker News AI",
-        "score": 265
+        "score": 133
       },
       {
-        "title": "Aweb – Communication for AI Agents",
-        "url": "https://aweb.ai",
+        "title": "Venice’s failed war against Constantinople led to the first bond market",
+        "url": "https://bigthink.com/books/a-fabulous-debt/",
         "source": "Hacker News AI",
-        "score": 38
+        "score": 28
       },
       {
-        "title": "OpenAI has a LOT of work to do if they think Luna can compete with Jev",
-        "url": "https://anth.us/blog/openai-decisions-api-preview/",
+        "title": "Show HN: Giving Opus 5.5 a simulated paint canvas",
+        "url": "https://stillwet.art/",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 146
+      },
+      {
+        "title": "Crypto Capture of Foreign Aid",
+        "url": "https://www.nber.org/papers/w35655",
+        "source": "Hacker News AI",
+        "score": 76
+      },
+      {
+        "title": "Show HN: Pyxel – A Python retro game engine with built-in art and sound editors",
+        "url": "https://github.com/kitao/pyxel",
+        "source": "Hacker News AI",
+        "score": 29
+      },
+      {
+        "title": "ExplainDB: A Database System Built for Understandability",
+        "url": "https://github.com/explaindb/explaindb",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
+        "title": "The Philadelphia Inquirer built Scrape, an AI tool to surface hyperlocal news",
+        "url": "https://www.lenfestinstitute.org/solutions-resources/philadelphia-inquirer-scrape-ai-hyperlocal-news/",
+        "source": "Hacker News AI",
+        "score": 7
+      },
+      {
+        "title": "Decision models like Jev don't beat LLM-as-a-judge or traditional classifiers",
+        "url": "https://developers.redhat.com/articles/2026/10/02/benchmarking-ai-decision-models-against-traditional-guardrails",
+        "source": "Hacker News AI",
+        "score": 21
       }
     ],
     "news": [
+      {
+        "title": "Riot police clash with students as education protests rage in France",
+        "url": "https://www.bbc.co.uk/news/articles/ck3r5dxxwqzpo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Woman at centre of Cornell rape inquiry was 'failed' by officials, says New York governor",
+        "url": "https://www.bbc.co.uk/news/articles/cqvg04718lr9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "'I was not going to let others die' - pilot of Flydubai flight describes cockpit attack by co-pilot",
         "url": "https://www.bbc.co.uk/news/articles/c639m98gde00o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Cornell students gather to voice anger over alleged gang rape",
-        "url": "https://www.bbc.co.uk/news/articles/cm0e3ed1er1yo?at_medium=RSS&at_campaign=rss",
+        "title": "Intensified Russian strikes are tearing Kyiv apart, warns mayor",
+        "url": "https://www.bbc.co.uk/news/articles/c6wyv44y4ywjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -160,24 +200,14 @@
         "title": "Seoul warns 'further action' if Ukraine does not apologise over prisoner-of-war row",
         "url": "https://www.bbc.co.uk/news/articles/cm1dld14weero?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Japan's first mayor to take maternity leave lands on TIME100 Next list",
-        "url": "https://www.bbc.co.uk/news/articles/cqj3d3d37nxgo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "OpenAI fires workers for 'mishandling sensitive information'",
-        "url": "https://www.bbc.co.uk/news/articles/c6y9z9r4ejzwo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Netanyahu says Flydubai attacker had 'Islamist radical indoctrination'",
-        "url": "https://www.bbc.co.uk/news/articles/crje8edqyej9o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The best multicolour 3D printer for beginners has $130 off in Amazon's early Prime Day sale ",
+        "url": "https://www.creativebloq.com/3d/3d-printing/the-best-multicolour-3d-printer-for-beginners-has-usd130-off-in-amazons-early-prime-day-sale",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Nothing Headphone (1) Pro review: better headphones, but should you upgrade? ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/nothing-headphone-1-pro-review-better-headphones-but-should-you-upgrade",
@@ -206,11 +236,6 @@
       {
         "title": " The Freckle phone is here to save your kids from brainrot ",
         "url": "https://www.creativebloq.com/tech/phones-tablets/the-freckle-phone-is-here-to-save-your-kids-from-brainrot",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How indie game Inkblood's hand-drawn art makes a 2D world feel alive ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/how-indie-game-inkbloods-hand-drawn-art-makes-a-2d-world-feel-alive",
         "source": "Creative Bloq"
       }
     ],
@@ -253,45 +278,45 @@
     ],
     "gaming": [
       {
-        "title": "GTA 6’s Next Wild Crossover Is With the Miami Heat",
-        "url": "https://www.polygon.com/gta-6-vice-city-miami-heat-nba-collaboration-merch/",
+        "title": "5 TMNT Episodes That Prove the Original Was Better Than 'X-Men: The Animated Series'",
+        "url": "https://www.polygon.com/best-tmnt-episodes-better-than-x-men-the-animated-series/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon Go 'Harvest Festival Taken Over' 2026 event guide",
-        "url": "https://www.polygon.com/pokemon-go-harvest-festival-2026-guide-applin-takeover/",
+        "title": "30 Years Later, Nintendo's Forgotten N64 Racing Game Deserves a Switch 2 Rebirth",
+        "url": "https://www.polygon.com/wave-race-64-nintendo-64-retrospective/",
         "source": "Polygon"
       },
       {
-        "title": "Critical Role Reveals Why Campaign 4's Biggest Change Is Also a Huge Challenge",
-        "url": "https://www.polygon.com/critical-role-campaign-4-biggest-challenge/",
+        "title": "8 New TV Shows To Watch This Weekend on Netflix, HBO, and Disney (October 2-4)",
+        "url": "https://www.polygon.com/new-tv-shows-streaming-this-weekend-netflix-october-2-4/",
         "source": "Polygon"
       },
       {
-        "title": "'Avengers: Secret Wars' Release Date at Risk as Filming Reportedly Delayed",
-        "url": "https://www.polygon.com/avengers-secret-wars-filming-delayed-doomsday-sequel/",
+        "title": "DC Studios' Fate Under Paramount-Warner Bros. Officially Revealed",
+        "url": "https://www.polygon.com/dc-studios-james-gunn-peter-safran-warner-bros-paramount-merger-skydance/",
         "source": "Polygon"
       },
       {
-        "title": "Fast & Furious Is Officially Getting an Unexpected Release in 2028",
-        "url": "https://www.polygon.com/fast-furious-tv-series-peacock-vin-diesel/",
+        "title": "Nintendo Switch 2 Just Got 2 of the Last Decade's Best RPGs",
+        "url": "https://www.polygon.com/dragon-quest-11-switch-2-rpgs/",
         "source": "Polygon"
       },
       {
-        "title": "'In the Eternal Fire's Shadow' quest walkthrough in The Witcher 3 Wild Hunt",
-        "url": "https://www.polygon.com/witcher-3-wild-hunt-in-the-eternal-fires-shadow-quest-walkthrough-reinald-priest/",
+        "title": "12 Replay Ideas That Make Zelda: TOTK Feel Like a Brand-New Game",
+        "url": "https://www.polygon.com/zelda-totk-replay-ideas/",
         "source": "Polygon"
       },
       {
-        "title": "What time are the Bounty Hunter power hours in Fortnite Chapter 7 Season 4?",
-        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-bounty-hunter-power-hours-what-time/",
+        "title": "76 Years Ago, 'Peanuts' Shockingly with a Delightfully Cruel First Comic",
+        "url": "https://www.polygon.com/peanuts-first-comic-strip-76th-anniversary/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
       {
-        "title": "AI is rewriting the developer career ladder. Here’s how to stand out.",
+        "title": "AI is changing developer work. Here are three skills to strengthen.",
         "url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
         "source": "GitHub Blog"
       },
