@@ -1,164 +1,168 @@
 {
   "metadata": {
-    "last_updated": "2026-10-03T06:06:35.020195",
-    "total_items": 59
+    "last_updated": "2026-10-03T12:16:48.071934",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
+        "title": "GitHub's new dashboard experience now the default",
+        "url": "https://github.blog/changelog/2026-10-01-new-dashboard-experience-now-the-default/",
+        "source": "Hacker News",
+        "score": 33
+      },
+      {
         "title": "Newgrounds.com – A community of games, music, and art",
         "url": "https://www.newgrounds.com/",
         "source": "Hacker News",
-        "score": 136
-      },
-      {
-        "title": "The Forgetful CPU (Linux on M4)",
-        "url": "https://yuka.dev/blog-2026-10-02-linux-m4.html",
-        "source": "Hacker News",
-        "score": 177
+        "score": 272
       },
       {
         "title": "Court agrees with EFF: Utah's VPN law demands a technical impossibility",
         "url": "https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility",
         "source": "Hacker News",
-        "score": 580
+        "score": 665
       },
       {
-        "title": "Extra Big Ass Intelligence",
-        "url": "https://www.extrabigassintelligence.com/",
+        "title": "cp: -r or -R?",
+        "url": "https://movq.de/blog/postings/2026-09-30/0/POSTING-en.html",
         "source": "Hacker News",
-        "score": 79
-      },
-      {
-        "title": "Mike Tomlin spent 12 years building a Minecraft city",
-        "url": "https://www.nytimes.com/athletic/7648198/2026/10/01/mike-tomlin-minecraft-nfl-coach/",
-        "source": "Hacker News",
-        "score": 395
+        "score": 33
       },
       {
         "title": "Apple Pass Designer",
         "url": "https://developer.apple.com/pass-designer/",
         "source": "Hacker News",
-        "score": 382
+        "score": 453
+      },
+      {
+        "title": "Great Question (YC W21) Is Hiring Product Engineers in Canada (Remote)",
+        "url": "https://www.ycombinator.com/companies/great-question/jobs/agEqBYD-product-engineer-ai-full-stack",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "Mike Tomlin spent 12 years building a Minecraft city",
+        "url": "https://www.nytimes.com/athletic/7648198/2026/10/01/mike-tomlin-minecraft-nfl-coach/",
+        "source": "Hacker News",
+        "score": 500
       },
       {
         "title": "Cloudflare OHTTP gateway",
         "url": "https://blog.cloudflare.com/announcing-cloudflare-ohttp-gateway/",
         "source": "Hacker News",
-        "score": 37
+        "score": 100
       },
       {
         "title": "A 12-year sequence of telescope images of a star and four planets orbiting",
         "url": "https://bsky.app/profile/theplanetaryguy.com/post/3mwucf5ert22f",
         "source": "Hacker News",
-        "score": 238
+        "score": 307
+      },
+      {
+        "title": "The Forgetful CPU (Linux on M4)",
+        "url": "https://yuka.dev/blog-2026-10-02-linux-m4.html",
+        "source": "Hacker News",
+        "score": 236
       },
       {
         "title": "Loss of cell identity drives human aging: Two new papers",
         "url": "https://erictopol.substack.com/p/loss-of-cell-identity-drives-human",
         "source": "Hacker News",
-        "score": 213
+        "score": 273
       },
       {
-        "title": "With most information hidden, the game Stratego had stumped AI until now",
-        "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
+        "title": "An Update on Orion for Linux and Windows",
+        "url": "https://blog.kagi.com/update-orion-linux-windows",
         "source": "Hacker News",
-        "score": 204
-      },
-      {
-        "title": "Muse Gadgets",
-        "url": "https://gadgets.muse.ai",
-        "source": "Hacker News",
-        "score": 174
+        "score": 75
       },
       {
         "title": "From the creator of Redis; run LLM locally with ds4",
         "url": "https://dwarfstar.sh/",
         "source": "Hacker News",
-        "score": 204
-      },
-      {
-        "title": "Things that apparently cause cancer",
-        "url": "https://www.breakthroughjournal.org/p/things-that-apparently-cause-cancer",
-        "source": "Hacker News",
-        "score": 156
-      },
-      {
-        "title": "What if AI worked at 1.000.000 tokens per seconds?",
-        "url": "https://www.echohive.ai/one-million-tokens-per-second",
-        "source": "Hacker News",
-        "score": 4
+        "score": 270
       },
       {
         "title": "FLUX 3 Image",
         "url": "https://bfl.ai/models/flux-3-image",
         "source": "Hacker News",
-        "score": 305
+        "score": 361
+      },
+      {
+        "title": "Greg Kroah-Hartman – Security in the LLM Age [video]",
+        "url": "https://www.youtube.com/watch?v=NnV_cWeoo5Q",
+        "source": "Hacker News",
+        "score": 256
       }
     ],
     "ai": [
       {
-        "title": "With most information hidden, the game Stratego had stumped AI until now",
-        "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
-        "source": "Hacker News AI",
-        "score": 204
-      },
-      {
         "title": "From the creator of Redis; run LLM locally with ds4",
         "url": "https://dwarfstar.sh/",
         "source": "Hacker News AI",
-        "score": 204
-      },
-      {
-        "title": "What if AI worked at 1.000.000 tokens per seconds?",
-        "url": "https://www.echohive.ai/one-million-tokens-per-second",
-        "source": "Hacker News AI",
-        "score": 4
+        "score": 270
       },
       {
         "title": "Greg Kroah-Hartman – Security in the LLM Age [video]",
         "url": "https://www.youtube.com/watch?v=NnV_cWeoo5Q",
         "source": "Hacker News AI",
-        "score": 214
+        "score": 256
       },
       {
-        "title": "Sites in ChatGPT",
-        "url": "https://chatgpt.com/features/sites/",
+        "title": "With most information hidden, the game Stratego had stumped AI until now",
+        "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
         "source": "Hacker News AI",
-        "score": 247
+        "score": 226
       },
       {
         "title": "Show HN: Giving Opus 5.5 a simulated paint canvas",
         "url": "https://stillwet.art/",
         "source": "Hacker News AI",
-        "score": 243
+        "score": 292
       },
       {
-        "title": "NTSB Preliminary Report: Prime Air 767 Runway Overrun [pdf]",
-        "url": "https://www.ntsb.gov/investigations/Documents/DCA26MA352%20Prelim.pdf",
+        "title": "Sites in ChatGPT",
+        "url": "https://chatgpt.com/features/sites/",
         "source": "Hacker News AI",
-        "score": 33
+        "score": 292
       },
       {
         "title": "Venice’s failed war against Constantinople led to the first bond market",
         "url": "https://bigthink.com/books/a-fabulous-debt/",
         "source": "Hacker News AI",
-        "score": 96
+        "score": 132
+      },
+      {
+        "title": "Gemini ending free use of Flash and Pro models",
+        "url": "https://www.reddit.com/r/GeminiAI/comments/1wwalmc/wtf_google_getting_rid_of_free_gemini_flash_and/",
+        "source": "Hacker News AI",
+        "score": 36
       },
       {
         "title": "Show HN: Made an open-source Lego AI generator",
         "url": "https://github.com/anteloc/ldraw-nova",
         "source": "Hacker News AI",
-        "score": 94
+        "score": 120
       },
       {
         "title": "Show HN: Pyxel – A Python retro game engine with built-in art and sound editors",
         "url": "https://github.com/kitao/pyxel",
         "source": "Hacker News AI",
-        "score": 80
+        "score": 87
       }
     ],
     "news": [
+      {
+        "title": "Flydubai co-pilot attacked captain with axe, UAE official says",
+        "url": "https://www.bbc.co.uk/news/articles/c61wv7lgex13o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Russia hits second major bridge in Ukraine's capital Kyiv",
+        "url": "https://www.bbc.co.uk/news/articles/c83vqxzdg1yko?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "G7 to release millions of barrels of oil and diesel after Trump threat",
         "url": "https://www.bbc.co.uk/news/articles/ck87zg8jnwngo?at_medium=RSS&at_campaign=rss",
@@ -170,27 +174,37 @@
         "source": "BBC World"
       },
       {
-        "title": "Cornell frat house rape accuser 'under siege' online, says lawyer",
-        "url": "https://www.bbc.co.uk/news/articles/c6ly0ljypzrdo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Riot police clash with students as education protests rage in France",
-        "url": "https://www.bbc.co.uk/news/articles/ck3r5dxxwqzpo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "US road rage killer's sentence quashed because AI video of victim was shown in court",
-        "url": "https://www.bbc.co.uk/news/articles/cwgkvygg5nzvo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Women given shorts at Oktoberfest to prevent upskirting",
         "url": "https://www.bbc.co.uk/news/articles/cjwyzyqvx1zxo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Kim wins Asian Games gold to secure military exemption",
+        "url": "https://www.bbc.co.uk/sport/golf/articles/cmy0rn425k4xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " A super realistic take on Disney's Stitch and a stylised Samus helped this 3D artist expand his range ",
+        "url": "https://www.creativebloq.com/3d/3d-art/a-super-realistic-take-on-disneys-stitch-and-a-stylised-samus-helped-this-3d-artist-expand-his-range",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Everyone's making mountain-inspired logos in 2026 - here's what that tells us ",
+        "url": "https://www.creativebloq.com/design/logos-icons/everyones-making-mountain-inspired-logos-in-2026-heres-what-that-tells-us",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Erling Haaland files lawsuit against Norwegian Air for unexpected reason ",
+        "url": "https://www.creativebloq.com/design/branding/erling-haaland-files-lawsuit-against-norwegian-air-for-unexpected-reason",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Warner Bros and Paramount's Skydance rebrand isn't going down well ",
+        "url": "https://www.creativebloq.com/entertainment/warner-bros-and-paramounts-skydance-rebrand-isnt-going-down-well",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The best multicolour 3D printer for beginners has $130 off in Amazon's early Prime Day sale ",
         "url": "https://www.creativebloq.com/3d/3d-printing/the-best-multicolour-3d-printer-for-beginners-has-usd130-off-in-amazons-early-prime-day-sale",
@@ -204,26 +218,6 @@
       {
         "title": " PS5 AI upscaling just cancelled my PS5 Pro FOMO ",
         "url": "https://www.creativebloq.com/entertainment/gaming/ps5-ai-upscaling-just-cancelled-my-ps5-pro-fomo",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Star Wars Galactic Racer review: authentic and original, the best Star Wars racer yet ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/star-wars-galactic-racer-review-authentic-and-original-the-best-star-wars-racer-yet",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Elon Musk’s Grokipedia gets a scholarly makeover ",
-        "url": "https://www.creativebloq.com/web-design/elon-musks-grokipedia-gets-a-scholarly-makeover",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This eerily realistic animation is guaranteed to make your skin crawl ",
-        "url": "https://www.creativebloq.com/art/animation/this-eerily-realistic-animation-is-guaranteed-to-make-your-skin-crawl",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How indie game Inkblood's hand-drawn art makes a 2D world feel alive ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/how-indie-game-inkbloods-hand-drawn-art-makes-a-2d-world-feel-alive",
         "source": "Creative Bloq"
       }
     ],
@@ -266,38 +260,38 @@
     ],
     "gaming": [
       {
+        "title": "NBC's Unbeatable 98-Episode Action Thriller Is Officially Free to Watch on Streaming",
+        "url": "https://www.polygon.com/the-a-team-streaming-free-tubi/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Game of Thrones’ Biggest Villain Is Even More Terrifying in an Upcoming Official Release",
+        "url": "https://www.polygon.com/game-thrones-war-for-westeros-monster-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "45 Years Ago, a Failed Lord of the Rings Movie Became a Film That Transcended Fantasy",
+        "url": "https://www.polygon.com/excalibur-john-boorman-45-years-anniversary/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Sicario 3 is Happening with Taylor Sheridan Returning to Write",
+        "url": "https://www.polygon.com/sicario-3-script-taylor-sheridan-paramount/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Dimension 20 Best Season to Start? 6 Campaigns to Get Into Dropout’s D&D Show",
+        "url": "https://www.polygon.com/dimension-20-best-seasons-episodes-to-start-with/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Steam Horror Game Turns PS1-Era Graphics Into Backrooms-Style Nightmare Fuel",
+        "url": "https://www.polygon.com/steam-horror-game-turns-ps1-era-graphics-into-backrooms-style-nightmare-fuel/",
+        "source": "Polygon"
+      },
+      {
         "title": "12 New Horror Movies to Watch in October on Netflix, HBO, and Hulu",
         "url": "https://www.polygon.com/horror-movies-streaming-october-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Quentin Tarantino's First Movie Sequel Officially Arrives Next Month",
-        "url": "https://www.polygon.com/quentin-tarantino-sequel-once-upon-a-time-in-hollywood-part-2/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fire Emblem Fans Just Cracked Fortune’s Weave’s Biggest Mystery (Maybe)",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-plot-mystery-eshmel-identity/",
-        "source": "Polygon"
-      },
-      {
-        "title": "There’s Literally Never Been a Better Time to Get Into Tactics Games",
-        "url": "https://www.polygon.com/tactics-games-2026-best-year/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 New Movies to Watch this Weekend on Prime Video, HBO Max, and Hulu (October 2-4)",
-        "url": "https://www.polygon.com/new-movies-streaming-this-weekend-prime-video-october-2-4/",
-        "source": "Polygon"
-      },
-      {
-        "title": "New Fast and Furious Release Now Streaming on Peacock",
-        "url": "https://www.polygon.com/fast-and-furious-lego-how-to-train-your-dragon-peacock/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How to Get Pokémon's Special Mewtwo 30th Anniversary Card",
-        "url": "https://www.polygon.com/pokemon-30th-anniversary-cards-release-date-mewtwo-promo-how-to-get/",
         "source": "Polygon"
       }
     ],
