@@ -1,158 +1,163 @@
 {
   "metadata": {
-    "last_updated": "2026-10-03T12:16:48.071934",
+    "last_updated": "2026-10-03T17:01:29.950635",
     "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "GitHub's new dashboard experience now the default",
-        "url": "https://github.blog/changelog/2026-10-01-new-dashboard-experience-now-the-default/",
+        "title": "City building games have a Soul Problem pt.2",
+        "url": "https://www.radical-elements.com/minor-epiphanies/city-building-games-have-a-soul-problem-pt2",
         "source": "Hacker News",
-        "score": 33
+        "score": 29
+      },
+      {
+        "title": "Kolibri is an open-weight LLM from Aleph Alpha for German and English",
+        "url": "https://tej.as/blog/aleph-alpha-kolibri",
+        "source": "Hacker News",
+        "score": 340
+      },
+      {
+        "title": "FTL: A new operating system for clouds",
+        "url": "https://ftl-os.org/",
+        "source": "Hacker News",
+        "score": 37
+      },
+      {
+        "title": "Kolibri Has Landed: A Sovereign Open-Weight Model",
+        "url": "https://aleph-alpha.com/en/blog/kolibri-has-landed-a-sovereign-open-weight-model/",
+        "source": "Hacker News",
+        "score": 222
+      },
+      {
+        "title": "Woking Electrical Control Room (2016)",
+        "url": "http://www.darbiansphotography.com/woking-electrical-control-room-urbex",
+        "source": "Hacker News",
+        "score": 75
+      },
+      {
+        "title": "RetailReady (YC W24) Is Hiring",
+        "url": "https://www.ycombinator.com/companies/retailready/jobs/bFcgIe4-implementations",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "Body Awareness in Goffin's Cockatoos",
+        "url": "https://www.nature.com/articles/s41598-026-57500-7",
+        "source": "Hacker News",
+        "score": 10
+      },
+      {
+        "title": "C++ Insights – See your source code with the eyes of a Compiler",
+        "url": "https://github.com/andreasfertig/cppinsights",
+        "source": "Hacker News",
+        "score": 80
       },
       {
         "title": "Newgrounds.com – A community of games, music, and art",
         "url": "https://www.newgrounds.com/",
         "source": "Hacker News",
-        "score": 272
+        "score": 376
       },
       {
         "title": "Court agrees with EFF: Utah's VPN law demands a technical impossibility",
         "url": "https://www.eff.org/deeplinks/2026/10/court-agrees-eff-utahs-vpn-law-demands-technical-impossibility",
         "source": "Hacker News",
-        "score": 665
-      },
-      {
-        "title": "cp: -r or -R?",
-        "url": "https://movq.de/blog/postings/2026-09-30/0/POSTING-en.html",
-        "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Apple Pass Designer",
-        "url": "https://developer.apple.com/pass-designer/",
-        "source": "Hacker News",
-        "score": 453
-      },
-      {
-        "title": "Great Question (YC W21) Is Hiring Product Engineers in Canada (Remote)",
-        "url": "https://www.ycombinator.com/companies/great-question/jobs/agEqBYD-product-engineer-ai-full-stack",
-        "source": "Hacker News",
-        "score": 1
+        "score": 725
       },
       {
         "title": "Mike Tomlin spent 12 years building a Minecraft city",
         "url": "https://www.nytimes.com/athletic/7648198/2026/10/01/mike-tomlin-minecraft-nfl-coach/",
         "source": "Hacker News",
-        "score": 500
+        "score": 597
+      },
+      {
+        "title": "Apple Pass Designer",
+        "url": "https://developer.apple.com/pass-designer/",
+        "source": "Hacker News",
+        "score": 513
+      },
+      {
+        "title": "Show HN: Offrun – manage every coding agent from one workspace",
+        "url": "https://offrun.dev/",
+        "source": "Hacker News",
+        "score": 56
       },
       {
         "title": "Cloudflare OHTTP gateway",
         "url": "https://blog.cloudflare.com/announcing-cloudflare-ohttp-gateway/",
         "source": "Hacker News",
-        "score": 100
+        "score": 154
       },
       {
         "title": "A 12-year sequence of telescope images of a star and four planets orbiting",
         "url": "https://bsky.app/profile/theplanetaryguy.com/post/3mwucf5ert22f",
         "source": "Hacker News",
-        "score": 307
-      },
-      {
-        "title": "The Forgetful CPU (Linux on M4)",
-        "url": "https://yuka.dev/blog-2026-10-02-linux-m4.html",
-        "source": "Hacker News",
-        "score": 236
-      },
-      {
-        "title": "Loss of cell identity drives human aging: Two new papers",
-        "url": "https://erictopol.substack.com/p/loss-of-cell-identity-drives-human",
-        "source": "Hacker News",
-        "score": 273
-      },
-      {
-        "title": "An Update on Orion for Linux and Windows",
-        "url": "https://blog.kagi.com/update-orion-linux-windows",
-        "source": "Hacker News",
-        "score": 75
-      },
-      {
-        "title": "From the creator of Redis; run LLM locally with ds4",
-        "url": "https://dwarfstar.sh/",
-        "source": "Hacker News",
-        "score": 270
-      },
-      {
-        "title": "FLUX 3 Image",
-        "url": "https://bfl.ai/models/flux-3-image",
-        "source": "Hacker News",
-        "score": 361
-      },
-      {
-        "title": "Greg Kroah-Hartman – Security in the LLM Age [video]",
-        "url": "https://www.youtube.com/watch?v=NnV_cWeoo5Q",
-        "source": "Hacker News",
-        "score": 256
+        "score": 356
       }
     ],
     "ai": [
       {
+        "title": "Kolibri is an open-weight LLM from Aleph Alpha for German and English",
+        "url": "https://tej.as/blog/aleph-alpha-kolibri",
+        "source": "Hacker News AI",
+        "score": 341
+      },
+      {
+        "title": "RetailReady (YC W24) Is Hiring",
+        "url": "https://www.ycombinator.com/companies/retailready/jobs/bFcgIe4-implementations",
+        "source": "Hacker News AI",
+        "score": 1
+      },
+      {
         "title": "From the creator of Redis; run LLM locally with ds4",
         "url": "https://dwarfstar.sh/",
         "source": "Hacker News AI",
-        "score": 270
+        "score": 307
       },
       {
         "title": "Greg Kroah-Hartman – Security in the LLM Age [video]",
         "url": "https://www.youtube.com/watch?v=NnV_cWeoo5Q",
         "source": "Hacker News AI",
-        "score": 256
+        "score": 292
       },
       {
         "title": "With most information hidden, the game Stratego had stumped AI until now",
         "url": "https://arstechnica.com/science/2026/10/ai-finally-beat-the-best-stratego-player-in-history-and-did-it-on-a-budget/",
         "source": "Hacker News AI",
-        "score": 226
-      },
-      {
-        "title": "Show HN: Giving Opus 5.5 a simulated paint canvas",
-        "url": "https://stillwet.art/",
-        "source": "Hacker News AI",
-        "score": 292
+        "score": 259
       },
       {
         "title": "Sites in ChatGPT",
         "url": "https://chatgpt.com/features/sites/",
         "source": "Hacker News AI",
-        "score": 292
+        "score": 328
+      },
+      {
+        "title": "Show HN: Giving Opus 5.5 a simulated paint canvas",
+        "url": "https://stillwet.art/",
+        "source": "Hacker News AI",
+        "score": 341
       },
       {
         "title": "Venice’s failed war against Constantinople led to the first bond market",
         "url": "https://bigthink.com/books/a-fabulous-debt/",
         "source": "Hacker News AI",
-        "score": 132
-      },
-      {
-        "title": "Gemini ending free use of Flash and Pro models",
-        "url": "https://www.reddit.com/r/GeminiAI/comments/1wwalmc/wtf_google_getting_rid_of_free_gemini_flash_and/",
-        "source": "Hacker News AI",
-        "score": 36
+        "score": 157
       },
       {
         "title": "Show HN: Made an open-source Lego AI generator",
         "url": "https://github.com/anteloc/ldraw-nova",
         "source": "Hacker News AI",
-        "score": 120
-      },
-      {
-        "title": "Show HN: Pyxel – A Python retro game engine with built-in art and sound editors",
-        "url": "https://github.com/kitao/pyxel",
-        "source": "Hacker News AI",
-        "score": 87
+        "score": 130
       }
     ],
     "news": [
+      {
+        "title": "Tennessee prison chief to resign after Christa Pike's failed execution, governor says",
+        "url": "https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Flydubai co-pilot attacked captain with axe, UAE official says",
         "url": "https://www.bbc.co.uk/news/articles/c61wv7lgex13o?at_medium=RSS&at_campaign=rss",
@@ -169,35 +174,40 @@
         "source": "BBC World"
       },
       {
-        "title": "US murderer Christa Pike unconscious and on ventilator after failed execution, lawyers say",
-        "url": "https://www.bbc.co.uk/news/articles/c3kgqw7zvz47o?at_medium=RSS&at_campaign=rss",
+        "title": "Medical plane with 6 on board missing off Massachusetts coast",
+        "url": "https://www.bbc.co.uk/news/articles/cme3x85013llo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Women given shorts at Oktoberfest to prevent upskirting",
         "url": "https://www.bbc.co.uk/news/articles/cjwyzyqvx1zxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Kim wins Asian Games gold to secure military exemption",
-        "url": "https://www.bbc.co.uk/sport/golf/articles/cmy0rn425k4xo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Pixar's latest film is a psychedelic hand-made Thelma & Louise with fruit – and a nod to GTA VI ",
+        "url": "https://www.creativebloq.com/art/animation/pixars-latest-film-is-a-psychedelic-hand-made-thelma-and-louise-with-fruit-and-a-nod-to-gta-vi",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How thatgamecompany turned Van Gogh paintings into playable spaces ",
+        "url": "https://www.creativebloq.com/3d/video-game-design/how-thatgamecompany-turned-van-gogh-paintings-into-playable-spaces",
+        "source": "Creative Bloq"
+      },
       {
         "title": " A super realistic take on Disney's Stitch and a stylised Samus helped this 3D artist expand his range ",
         "url": "https://www.creativebloq.com/3d/3d-art/a-super-realistic-take-on-disneys-stitch-and-a-stylised-samus-helped-this-3d-artist-expand-his-range",
         "source": "Creative Bloq"
       },
       {
-        "title": " Everyone's making mountain-inspired logos in 2026 - here's what that tells us ",
-        "url": "https://www.creativebloq.com/design/logos-icons/everyones-making-mountain-inspired-logos-in-2026-heres-what-that-tells-us",
+        "title": " Erling Haaland files lawsuit against Norwegian Air for unexpected reason ",
+        "url": "https://www.creativebloq.com/design/branding/erling-haaland-files-lawsuit-against-norwegian-air-for-unexpected-reason",
         "source": "Creative Bloq"
       },
       {
-        "title": " Erling Haaland files lawsuit against Norwegian Air for unexpected reason ",
-        "url": "https://www.creativebloq.com/design/branding/erling-haaland-files-lawsuit-against-norwegian-air-for-unexpected-reason",
+        "title": " Everyone's making mountain-inspired logos in 2026 - here's what that tells us ",
+        "url": "https://www.creativebloq.com/design/logos-icons/everyones-making-mountain-inspired-logos-in-2026-heres-what-that-tells-us",
         "source": "Creative Bloq"
       },
       {
@@ -209,89 +219,79 @@
         "title": " The best multicolour 3D printer for beginners has $130 off in Amazon's early Prime Day sale ",
         "url": "https://www.creativebloq.com/3d/3d-printing/the-best-multicolour-3d-printer-for-beginners-has-usd130-off-in-amazons-early-prime-day-sale",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Nothing Headphone (1) Pro review: better headphones, but should you upgrade? ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/nothing-headphone-1-pro-review-better-headphones-but-should-you-upgrade",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " PS5 AI upscaling just cancelled my PS5 Pro FOMO ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/ps5-ai-upscaling-just-cancelled-my-ps5-pro-fomo",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
-        "title": "This diet may slow brain aging by 2.5 years",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260930225503.htm",
+        "title": "This protective enzyme could help stop fatty liver disease from getting worse",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261002080020.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Alzheimer’s risk gene APOE4 may have a reversible weakness",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260930225450.htm",
+        "title": "ESA’s Juice just used Earth as a slingshot to Jupiter",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261001214102.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Could quitting ultra-processed food boost your mental health?",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260930225448.htm",
+        "title": "NASA’s Roman telescope just opened its planet-hunting eye",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261001214057.htm",
         "source": "Science Daily"
       },
       {
-        "title": "This giant stick insect fooled scientists for decades",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260930020315.htm",
+        "title": "Chang’e-6 lunar soil contains a surprising magnetic time capsule",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261001214015.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Watch Live: NASA’s Crew-13 could make the fastest U.S. trip to the ISS ever",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260930020312.htm",
+        "title": "Powerful simulations reveal how the first stars changed the universe",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261001214012.htm",
         "source": "Science Daily"
       },
       {
-        "title": "This new qubit could be 100 times less error-prone in superfluid quantum computer breakthrough",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260930020309.htm",
+        "title": "Scientists find an “earthquake gate” as California fault stress hits a 1,000-year high",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261001095521.htm",
         "source": "Science Daily"
       },
       {
-        "title": "New “plant armor” more than triples strawberry yields",
-        "url": "https://www.sciencedaily.com/releases/2026/09/260930020257.htm",
+        "title": "Leucine does more than build muscle. It powers up your cells",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261001095319.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "NBC's Unbeatable 98-Episode Action Thriller Is Officially Free to Watch on Streaming",
-        "url": "https://www.polygon.com/the-a-team-streaming-free-tubi/",
+        "title": "'Game Changer' Season 9 Will Have \"Unexplainable\" Games, Dropout CEO Sam Reich Reveals",
+        "url": "https://www.polygon.com/game-changer-season-9-dropout-ceo-sam-reich-interview/",
         "source": "Polygon"
       },
       {
-        "title": "Game of Thrones’ Biggest Villain Is Even More Terrifying in an Upcoming Official Release",
-        "url": "https://www.polygon.com/game-thrones-war-for-westeros-monster-interview/",
+        "title": "Fire Emblem: Fortune's Weave Doesn't Have to Be a Slog",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-free-time-too-big/",
         "source": "Polygon"
       },
       {
-        "title": "45 Years Ago, a Failed Lord of the Rings Movie Became a Film That Transcended Fantasy",
-        "url": "https://www.polygon.com/excalibur-john-boorman-45-years-anniversary/",
+        "title": "GTA Creator Has Avoided GTA 6 While Making New Open-World Games",
+        "url": "https://www.polygon.com/dan-houser-absured-ventures-open-world-game/",
         "source": "Polygon"
       },
       {
-        "title": "Sicario 3 is Happening with Taylor Sheridan Returning to Write",
-        "url": "https://www.polygon.com/sicario-3-script-taylor-sheridan-paramount/",
+        "title": "'Lanterns' Makes Even More Sense If You Know About DC's Iconic 20-Year-Old Meme",
+        "url": "https://www.polygon.com/green-lantern-head-trauma/",
         "source": "Polygon"
       },
       {
-        "title": "Dimension 20 Best Season to Start? 6 Campaigns to Get Into Dropout’s D&D Show",
-        "url": "https://www.polygon.com/dimension-20-best-seasons-episodes-to-start-with/",
+        "title": "Resident Evil Dev Capcom Plans To Embrace AI In Game Development",
+        "url": "https://www.polygon.com/capcom-ai-re-engine-statement-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Steam Horror Game Turns PS1-Era Graphics Into Backrooms-Style Nightmare Fuel",
-        "url": "https://www.polygon.com/steam-horror-game-turns-ps1-era-graphics-into-backrooms-style-nightmare-fuel/",
+        "title": "Best Buy's Official 'Pokémon' 30th Anniversary TCG Event Details",
+        "url": "https://www.polygon.com/pokemon-30th-anniversary-best-buy-tcg-trade-play-event-promo-card/",
         "source": "Polygon"
       },
       {
-        "title": "12 New Horror Movies to Watch in October on Netflix, HBO, and Hulu",
-        "url": "https://www.polygon.com/horror-movies-streaming-october-2026/",
+        "title": "Is Barney Nelson's Dad? 'The Simpsons' Producer Weighs In On a Persistent Fan Theory",
+        "url": "https://www.polygon.com/the-simpsons-mike-price-internet-questions-interview/",
         "source": "Polygon"
       }
     ],
