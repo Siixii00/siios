@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-04T15:44:12.178681",
-    "total_items": 57
+    "last_updated": "2026-10-04T19:16:18.640526",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
         "url": "https://github.com/Niko1221/Strata",
         "source": "Hacker News",
-        "score": 209
+        "score": 401
       },
       {
-        "title": "Glashütte Trash Clock – A 30-minute pendulum clock made from trash",
+        "title": "A map of every lighthouse",
+        "url": "https://mapped.earth/lighthouses/world",
+        "source": "Hacker News",
+        "score": 96
+      },
+      {
+        "title": "'Neanderthals Among Us' review",
+        "url": "https://www.historytoday.com/archive/review/neanderthals-among-us-peter-sahlins-review",
+        "source": "Hacker News",
+        "score": 12
+      },
+      {
+        "title": "Show HN: Glashütte Trash Clock – A 30-minute pendulum clock made from trash",
         "url": "https://niklasroy.com/gtc/",
         "source": "Hacker News",
-        "score": 69
+        "score": 131
       },
       {
         "title": "Tell HN: Bob Cringely has died",
         "url": "https://news.ycombinator.com/item?id=49949438",
         "source": "Hacker News",
-        "score": 645
+        "score": 738
       },
       {
         "title": "Show HN: AI search for every photo and every frame of video on macOS",
         "url": "https://github.com/allenv0/SCM",
         "source": "Hacker News",
-        "score": 53
+        "score": 96
       },
       {
-        "title": "VGHF Digital Archive passes 5000 magazines. Here's what's next",
-        "url": "https://gamehistory.org/5k-magazines/",
+        "title": "Building a RAG Pipeline for Semantic Code Search",
+        "url": "https://blog.jetbrains.com/ai/2026/09/building-a-rag-pipeline-for-semantic-code-search-a-developer-diary-and-field-notes/",
         "source": "Hacker News",
-        "score": 72
+        "score": 20
+      },
+      {
+        "title": "A parasitic Fibonacci computation inside /usr/bin/top",
+        "url": "https://seriot.ch/computation/terminfo/",
+        "source": "Hacker News",
+        "score": 17
       },
       {
         "title": "Why don't more developers “use the platform”?",
         "url": "https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/",
         "source": "Hacker News",
-        "score": 217
+        "score": 251
+      },
+      {
+        "title": "VGHF Digital Archive passes 5000 magazines. Here's what's next",
+        "url": "https://gamehistory.org/5k-magazines/",
+        "source": "Hacker News",
+        "score": 88
       },
       {
         "title": "The work by Valve's Timur Kristóf on improving old AMD GPUs on Linux",
         "url": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU",
         "source": "Hacker News",
-        "score": 377
+        "score": 424
       },
       {
         "title": "The Heilbronn Problem",
         "url": "https://math.tejstead.com/heilbronn/",
         "source": "Hacker News",
-        "score": 18
+        "score": 49
+      },
+      {
+        "title": "Results from the Jane Street hardware puzzle",
+        "url": "https://blog.janestreet.com/asic-puzzle-results/",
+        "source": "Hacker News",
+        "score": 6
       },
       {
         "title": "Emitting metadata early makes building/checking Rust up to twice as fast",
         "url": "https://github.com/PowderworksCode/headstart",
         "source": "Hacker News",
-        "score": 62
+        "score": 101
       },
       {
         "title": "Agents don't need memory, they need documentation",
         "url": "https://liao.gg/blog/agents-dont-need-memory",
         "source": "Hacker News",
-        "score": 278
-      },
-      {
-        "title": "Treachery in the Rodin Museum 3D scan verdict",
-        "url": "https://cosmowenman.substack.com/p/rodin-museum-3d-scan-verdict",
-        "source": "Hacker News",
-        "score": 257
-      },
-      {
-        "title": "gpuvis: GPU Trace Visualizer",
-        "url": "https://github.com/mikesart/gpuvis",
-        "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Magic Switch: Share Apple Magic keyboard/track-pad/mouse between two Macs",
-        "url": "https://joshua.hu/magic-switch-easily-switch-magic-keyboard-trackpad-mouse-between-mac-macbook-macos",
-        "source": "Hacker News",
-        "score": 36
-      },
-      {
-        "title": "Hole Punch: Sling your spaceship around gravitational fields",
-        "url": "https://notoriousbfg.com/hole-punch/",
-        "source": "Hacker News",
-        "score": 326
-      },
-      {
-        "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
-        "url": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
-        "source": "Hacker News",
-        "score": 253
+        "score": 313
       }
     ],
     "ai": [
@@ -101,31 +101,43 @@
         "title": "Show HN: AI search for every photo and every frame of video on macOS",
         "url": "https://github.com/allenv0/SCM",
         "source": "Hacker News AI",
-        "score": 53
+        "score": 96
+      },
+      {
+        "title": "Building a RAG Pipeline for Semantic Code Search",
+        "url": "https://blog.jetbrains.com/ai/2026/09/building-a-rag-pipeline-for-semantic-code-search-a-developer-diary-and-field-notes/",
+        "source": "Hacker News AI",
+        "score": 20
       },
       {
         "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
         "url": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
         "source": "Hacker News AI",
-        "score": 253
+        "score": 330
       },
       {
-        "title": "What's the Future for Pure Math Research in the Age of AI?",
+        "title": "What's the future for pure math research in the age of AI?",
         "url": "https://writings.stephenwolfram.com/2026/09/whats-the-future-for-pure-math-research-in-the-age-of-ai/",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 46
+      },
+      {
+        "title": "Blindsight (Watts Novel)",
+        "url": "https://en.wikipedia.org/wiki/Blindsight_(Watts_novel)",
+        "source": "Hacker News AI",
+        "score": 52
       },
       {
         "title": "I quit OpenAI because its culture is broken",
         "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/?gift=v5U_UzUTothfWXsPxtvNVAh7esWToMRD6XnbXmc5WgA",
         "source": "Hacker News AI",
-        "score": 350
+        "score": 426
       },
       {
         "title": "Religious scholars met with Anthropic",
         "url": "https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html",
         "source": "Hacker News AI",
-        "score": 137
+        "score": 147
       },
       {
         "title": "RetailReady (YC W24) Is Hiring",
@@ -134,10 +146,10 @@
         "score": 1
       },
       {
-        "title": "Three AI agents, two countries, and one uneven world wide web",
-        "url": "https://royapakzad.substack.com/p/multilingual-ai-agents",
+        "title": "Show HN: Dataviz, ranked daily from GitHub, NPM, PyPI and CRAN",
+        "url": "https://awesomedataviz.com/",
         "source": "Hacker News AI",
-        "score": 38
+        "score": 11
       }
     ],
     "news": [
@@ -152,7 +164,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Yemen announces military campaign to reclaim land from Iran-backed Houthis",
+        "title": "Yemen's government announces all-out war to reclaim land from Houthis",
         "url": "https://www.bbc.co.uk/news/articles/cx8dzj9vpp01o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -162,8 +174,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Australia investigating Flydubai co-pilot's links to country",
-        "url": "https://www.bbc.co.uk/news/articles/cxly4nym57q9o?at_medium=RSS&at_campaign=rss",
+        "title": "Christa Pike's prognosis still unclear after failed execution, lawyer says",
+        "url": "https://www.bbc.co.uk/news/articles/ckgelynyg7d3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -172,8 +184,8 @@
         "source": "BBC World"
       },
       {
-        "title": "What to know about Brazil's election pitting Lula against Flávio Bolsonaro",
-        "url": "https://www.bbc.co.uk/news/articles/c6wyz0r2n0djo?at_medium=RSS&at_campaign=rss",
+        "title": "Indian police accused of sexual harassment against journalists at protest",
+        "url": "https://www.bbc.co.uk/news/articles/c9e8lvm6nrr3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -253,38 +265,38 @@
     ],
     "gaming": [
       {
-        "title": "Man of Tomorrow Passed An Important Post-Production Milestone",
-        "url": "https://www.polygon.com/man-of-tomorrow-assembly-cut/",
+        "title": "25 Years Later, Ridley Scott’s Most Controversial Thriller Is Officially Free on Youtube",
+        "url": "https://www.polygon.com/ridley-scott-hannibal-2001-controversy/",
         "source": "Polygon"
       },
       {
-        "title": "Ghost of Yotei DLC’s Best Boss Fight Stars Giant Murder Bears",
-        "url": "https://www.polygon.com/ghost-of-yotei-echoes-of-sekigahara-best-boss-fight/",
+        "title": "Nintendo's Zelda: Ocarina of Time Remake Gets Official Instrument Support and More",
+        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-new-features-notes-app-nintendo/",
         "source": "Polygon"
       },
       {
-        "title": "A Beloved Critical Role Cast Member Will Officially Miss Campaign 4 for a Long Time",
-        "url": "https://www.polygon.com/critical-role-campaign-4-travis-willingham-return/",
+        "title": "Forget Star Wars Movies, the Franchise’s Future Belongs to Video Games",
+        "url": "https://www.polygon.com/star-wars-video-games-coming-for-movies-lunch/",
         "source": "Polygon"
       },
       {
-        "title": "Avengers: Doomsday Poster Highlights One Of The Film's Biggest Mysteries",
-        "url": "https://www.polygon.com/avengers-doomsday-latverian-witches-poster/",
+        "title": "'Buffy the Vampire Slayer' Would Be Much Better if It Were 2 Seasons Shorter",
+        "url": "https://www.polygon.com/buffy-season-5-hot-take/",
         "source": "Polygon"
       },
       {
-        "title": "61 Years Ago, Star Trek's Greatest Failure Changed the Franchise Forever",
-        "url": "https://www.polygon.com/star-trek-the-cage-rejected-pilot/",
+        "title": "Tom Cruise Just Experienced His Worst Opening Weekend In Nearly 20 Years",
+        "url": "https://www.polygon.com/digger-tom-cruise-box-office/",
         "source": "Polygon"
       },
       {
-        "title": "Xbox Finally Had a Good Week",
-        "url": "https://www.polygon.com/patch-notes-xbox-disc-to-digital/",
+        "title": "Link And GTA 6's Jason Get Into A Heated Debate In Hilarious SNL Weekend Update Bit",
+        "url": "https://www.polygon.com/saturday-night-live-zelda-vs-gta-6/",
         "source": "Polygon"
       },
       {
-        "title": "10 Perfect Hard Sci-Fi Books That I Knew Would Be Masterpieces From the First 10 Pages",
-        "url": "https://www.polygon.com/10-perfect-hard-sci-fi-books-that-are-masterpieces-from-the-first-10-pages/",
+        "title": "Fire Emblem: Fortune's Weave true ending, explained",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weaves-ending-explained/",
         "source": "Polygon"
       }
     ],
