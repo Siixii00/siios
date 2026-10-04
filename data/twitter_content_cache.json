@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-04T19:16:18.640526",
-    "total_items": 59
+    "last_updated": "2026-10-04T22:50:10.971520",
+    "total_items": 58
   },
   "content": {
     "tech": [
@@ -9,147 +9,141 @@
         "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
         "url": "https://github.com/Niko1221/Strata",
         "source": "Hacker News",
-        "score": 401
+        "score": 532
+      },
+      {
+        "title": "Turn off Apple Intelligence on macOS 27 and get its disk space back",
+        "url": "https://github.com/omlahore/RemoveMacAI",
+        "source": "Hacker News",
+        "score": 236
+      },
+      {
+        "title": "Infidel Goes Wild",
+        "url": "https://blog.zarfhome.com/2026/10/infidel-goes-wild",
+        "source": "Hacker News",
+        "score": 21
+      },
+      {
+        "title": "All I wanted was a custom domain email",
+        "url": "https://jacobg.co/emails-at-jacobg-co/",
+        "source": "Hacker News",
+        "score": 37
+      },
+      {
+        "title": "Improper redaction reveals Google Data Center water and electricity usage",
+        "url": "https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/",
+        "source": "Hacker News",
+        "score": 161
+      },
+      {
+        "title": "Homa: The end of TCP for AI clusters [video]",
+        "url": "https://www.youtube.com/watch?v=eZ8WWZzoaR0",
+        "source": "Hacker News",
+        "score": 38
       },
       {
         "title": "A map of every lighthouse",
         "url": "https://mapped.earth/lighthouses/world",
         "source": "Hacker News",
-        "score": 96
+        "score": 150
       },
       {
-        "title": "'Neanderthals Among Us' review",
-        "url": "https://www.historytoday.com/archive/review/neanderthals-among-us-peter-sahlins-review",
+        "title": "Show HN: Build with Python – a beginner course where your code draws",
+        "url": "https://scimigo.com/en/learn/build-with-python/01-draw-with-python",
         "source": "Hacker News",
-        "score": 12
+        "score": 17
       },
       {
-        "title": "Show HN: Glashütte Trash Clock – A 30-minute pendulum clock made from trash",
-        "url": "https://niklasroy.com/gtc/",
+        "title": "Results from the ASIC puzzle",
+        "url": "https://blog.janestreet.com/asic-puzzle-results/",
         "source": "Hacker News",
-        "score": 131
+        "score": 65
+      },
+      {
+        "title": "Page Table Memory Consumption",
+        "url": "https://frn.sh/pagetables/",
+        "source": "Hacker News",
+        "score": 33
+      },
+      {
+        "title": "How to scale intent, quality, and artistry with AI [video]",
+        "url": "https://www.youtube.com/watch?v=GLvFTMtw4Jk",
+        "source": "Hacker News",
+        "score": 37
+      },
+      {
+        "title": "A browser-native classic Visual Basic VB6 IDE",
+        "url": "https://wieslawsoltes.github.io/VB6/",
+        "source": "Hacker News",
+        "score": 19
       },
       {
         "title": "Tell HN: Bob Cringely has died",
         "url": "https://news.ycombinator.com/item?id=49949438",
         "source": "Hacker News",
-        "score": 738
+        "score": 783
       },
       {
-        "title": "Show HN: AI search for every photo and every frame of video on macOS",
-        "url": "https://github.com/allenv0/SCM",
+        "title": "Show HN: Glashütte Trash Clock – A 30-minute pendulum clock made from trash",
+        "url": "https://niklasroy.com/gtc/",
         "source": "Hacker News",
-        "score": 96
+        "score": 154
       },
       {
-        "title": "Building a RAG Pipeline for Semantic Code Search",
-        "url": "https://blog.jetbrains.com/ai/2026/09/building-a-rag-pipeline-for-semantic-code-search-a-developer-diary-and-field-notes/",
+        "title": "Incentives in Academic Research",
+        "url": "https://www.msoos.org/2026/10/incentives-in-academic-research/",
         "source": "Hacker News",
-        "score": 20
-      },
-      {
-        "title": "A parasitic Fibonacci computation inside /usr/bin/top",
-        "url": "https://seriot.ch/computation/terminfo/",
-        "source": "Hacker News",
-        "score": 17
-      },
-      {
-        "title": "Why don't more developers “use the platform”?",
-        "url": "https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/",
-        "source": "Hacker News",
-        "score": 251
-      },
-      {
-        "title": "VGHF Digital Archive passes 5000 magazines. Here's what's next",
-        "url": "https://gamehistory.org/5k-magazines/",
-        "source": "Hacker News",
-        "score": 88
-      },
-      {
-        "title": "The work by Valve's Timur Kristóf on improving old AMD GPUs on Linux",
-        "url": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU",
-        "source": "Hacker News",
-        "score": 424
-      },
-      {
-        "title": "The Heilbronn Problem",
-        "url": "https://math.tejstead.com/heilbronn/",
-        "source": "Hacker News",
-        "score": 49
-      },
-      {
-        "title": "Results from the Jane Street hardware puzzle",
-        "url": "https://blog.janestreet.com/asic-puzzle-results/",
-        "source": "Hacker News",
-        "score": 6
-      },
-      {
-        "title": "Emitting metadata early makes building/checking Rust up to twice as fast",
-        "url": "https://github.com/PowderworksCode/headstart",
-        "source": "Hacker News",
-        "score": 101
-      },
-      {
-        "title": "Agents don't need memory, they need documentation",
-        "url": "https://liao.gg/blog/agents-dont-need-memory",
-        "source": "Hacker News",
-        "score": 313
+        "score": 23
       }
     ],
     "ai": [
       {
+        "title": "All I wanted was a custom domain email",
+        "url": "https://jacobg.co/emails-at-jacobg-co/",
+        "source": "Hacker News AI",
+        "score": 37
+      },
+      {
+        "title": "Homa: The end of TCP for AI clusters [video]",
+        "url": "https://www.youtube.com/watch?v=eZ8WWZzoaR0",
+        "source": "Hacker News AI",
+        "score": 38
+      },
+      {
+        "title": "How to scale intent, quality, and artistry with AI [video]",
+        "url": "https://www.youtube.com/watch?v=GLvFTMtw4Jk",
+        "source": "Hacker News AI",
+        "score": 37
+      },
+      {
         "title": "Show HN: AI search for every photo and every frame of video on macOS",
         "url": "https://github.com/allenv0/SCM",
         "source": "Hacker News AI",
-        "score": 96
+        "score": 132
       },
       {
-        "title": "Building a RAG Pipeline for Semantic Code Search",
-        "url": "https://blog.jetbrains.com/ai/2026/09/building-a-rag-pipeline-for-semantic-code-search-a-developer-diary-and-field-notes/",
+        "title": "Declaring a bird extinct: The median wait is 36 years after the last sighting",
+        "url": "https://birdshistory.com/how-long-to-declare-a-bird-extinct/",
         "source": "Hacker News AI",
-        "score": 20
-      },
-      {
-        "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
-        "url": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
-        "source": "Hacker News AI",
-        "score": 330
+        "score": 13
       },
       {
         "title": "What's the future for pure math research in the age of AI?",
         "url": "https://writings.stephenwolfram.com/2026/09/whats-the-future-for-pure-math-research-in-the-age-of-ai/",
         "source": "Hacker News AI",
-        "score": 46
+        "score": 54
       },
       {
-        "title": "Blindsight (Watts Novel)",
-        "url": "https://en.wikipedia.org/wiki/Blindsight_(Watts_novel)",
+        "title": "AI doesn't need 'superintelligence' or evil intent to start a nuclear war",
+        "url": "https://thebulletin.org/2026/10/ai-doesnt-need-superintelligence-or-evil-intent-to-start-a-nuclear-war/",
         "source": "Hacker News AI",
-        "score": 52
+        "score": 4
       },
       {
-        "title": "I quit OpenAI because its culture is broken",
-        "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/?gift=v5U_UzUTothfWXsPxtvNVAh7esWToMRD6XnbXmc5WgA",
+        "title": "Building a RAG pipeline for semantic code search",
+        "url": "https://blog.jetbrains.com/ai/2026/09/building-a-rag-pipeline-for-semantic-code-search-a-developer-diary-and-field-notes/",
         "source": "Hacker News AI",
-        "score": 426
-      },
-      {
-        "title": "Religious scholars met with Anthropic",
-        "url": "https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html",
-        "source": "Hacker News AI",
-        "score": 147
-      },
-      {
-        "title": "RetailReady (YC W24) Is Hiring",
-        "url": "https://www.ycombinator.com/companies/retailready/jobs/bFcgIe4-implementations",
-        "source": "Hacker News AI",
-        "score": 1
-      },
-      {
-        "title": "Show HN: Dataviz, ranked daily from GitHub, NPM, PyPI and CRAN",
-        "url": "https://awesomedataviz.com/",
-        "source": "Hacker News AI",
-        "score": 11
+        "score": 33
       }
     ],
     "news": [
@@ -169,6 +163,11 @@
         "source": "BBC World"
       },
       {
+        "title": "Polls close in Brazil as Lula and Flávio Bolsonaro remain neck and neck",
+        "url": "https://www.bbc.co.uk/news/articles/ck1l34ed592no?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Ethiopian rebel forces withdraw from Tigray regional capital",
         "url": "https://www.bbc.co.uk/news/articles/cqm249v07j4xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -179,12 +178,7 @@
         "source": "BBC World"
       },
       {
-        "title": "US Marine arrested over murder of woman in Okinawa, Japan",
-        "url": "https://www.bbc.co.uk/news/articles/cme3xw4yy28do?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Indian police accused of sexual harassment against journalists at protest",
+        "title": "Indian police accused of sexually harassing journalists at protest",
         "url": "https://www.bbc.co.uk/news/articles/c9e8lvm6nrr3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
@@ -265,6 +259,11 @@
     ],
     "gaming": [
       {
+        "title": "8 Video Game Villains With Motives You Can't Argue With",
+        "url": "https://www.polygon.com/video-game-villains-who-were-right/",
+        "source": "Polygon"
+      },
+      {
         "title": "25 Years Later, Ridley Scott’s Most Controversial Thriller Is Officially Free on Youtube",
         "url": "https://www.polygon.com/ridley-scott-hannibal-2001-controversy/",
         "source": "Polygon"
@@ -292,11 +291,6 @@
       {
         "title": "Link And GTA 6's Jason Get Into A Heated Debate In Hilarious SNL Weekend Update Bit",
         "url": "https://www.polygon.com/saturday-night-live-zelda-vs-gta-6/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fire Emblem: Fortune's Weave true ending, explained",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weaves-ending-explained/",
         "source": "Polygon"
       }
     ],
