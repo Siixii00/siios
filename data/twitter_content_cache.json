@@ -1,137 +1,143 @@
 {
   "metadata": {
-    "last_updated": "2026-10-04T10:57:59.720932",
-    "total_items": 55
+    "last_updated": "2026-10-04T15:44:12.178681",
+    "total_items": 57
   },
   "content": {
     "tech": [
       {
-        "title": "VGHF Digital Archive passes 5000 magazines. Here's what's next",
-        "url": "https://gamehistory.org/5k-magazines/",
+        "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
+        "url": "https://github.com/Niko1221/Strata",
         "source": "Hacker News",
-        "score": 23
+        "score": 209
+      },
+      {
+        "title": "Glashütte Trash Clock – A 30-minute pendulum clock made from trash",
+        "url": "https://niklasroy.com/gtc/",
+        "source": "Hacker News",
+        "score": 69
       },
       {
         "title": "Tell HN: Bob Cringely has died",
         "url": "https://news.ycombinator.com/item?id=49949438",
         "source": "Hacker News",
-        "score": 482
+        "score": 645
+      },
+      {
+        "title": "Show HN: AI search for every photo and every frame of video on macOS",
+        "url": "https://github.com/allenv0/SCM",
+        "source": "Hacker News",
+        "score": 53
+      },
+      {
+        "title": "VGHF Digital Archive passes 5000 magazines. Here's what's next",
+        "url": "https://gamehistory.org/5k-magazines/",
+        "source": "Hacker News",
+        "score": 72
       },
       {
         "title": "Why don't more developers “use the platform”?",
         "url": "https://nolanlawson.com/2026/10/03/why-dont-more-developers-use-the-platform/",
         "source": "Hacker News",
-        "score": 151
-      },
-      {
-        "title": "So you think you could be an electrician?",
-        "url": "https://asteriskmag.com/issues/15/so-you-think-you-could-be-an-electrician",
-        "source": "Hacker News",
-        "score": 249
+        "score": 217
       },
       {
         "title": "The work by Valve's Timur Kristóf on improving old AMD GPUs on Linux",
         "url": "https://www.phoronix.com/news/XDC-2026-Valve-Timur-AMDGPU",
         "source": "Hacker News",
-        "score": 304
+        "score": 377
       },
       {
-        "title": "Treachery in the Rodin Museum 3D scan verdict",
-        "url": "https://cosmowenman.substack.com/p/rodin-museum-3d-scan-verdict",
+        "title": "The Heilbronn Problem",
+        "url": "https://math.tejstead.com/heilbronn/",
         "source": "Hacker News",
-        "score": 211
+        "score": 18
+      },
+      {
+        "title": "Emitting metadata early makes building/checking Rust up to twice as fast",
+        "url": "https://github.com/PowderworksCode/headstart",
+        "source": "Hacker News",
+        "score": 62
       },
       {
         "title": "Agents don't need memory, they need documentation",
         "url": "https://liao.gg/blog/agents-dont-need-memory",
         "source": "Hacker News",
-        "score": 188
+        "score": 278
       },
       {
-        "title": "Hole Punch: Sling your spaceship around gravitational fields",
-        "url": "https://notoriousbfg.com/hole-punch/",
+        "title": "Treachery in the Rodin Museum 3D scan verdict",
+        "url": "https://cosmowenman.substack.com/p/rodin-museum-3d-scan-verdict",
         "source": "Hacker News",
-        "score": 299
-      },
-      {
-        "title": "We're working on a new RuneScape MMO",
-        "url": "https://play.runescape.com/4",
-        "source": "Hacker News",
-        "score": 73
-      },
-      {
-        "title": "We're going to need default hard budget caps on pretty much everything",
-        "url": "https://simonwillison.net/2026/Oct/3/default-hard-budget-caps/",
-        "source": "Hacker News",
-        "score": 450
-      },
-      {
-        "title": "Celebrating the 100th birthday of the kidney donated to him as a teenager",
-        "url": "https://www.whec.com/top-news/webster-man-celebrating-the-100th-birthday-of-the-kidney-his-mom-donated-to-him-as-a-teenager/",
-        "source": "Hacker News",
-        "score": 198
+        "score": 257
       },
       {
         "title": "gpuvis: GPU Trace Visualizer",
         "url": "https://github.com/mikesart/gpuvis",
         "source": "Hacker News",
-        "score": 7
+        "score": 55
       },
       {
-        "title": "Reasons I didn't become an EMT, ranked",
-        "url": "https://ben.stolovitz.com/posts/reasons-not-emt-ranked/",
+        "title": "Magic Switch: Share Apple Magic keyboard/track-pad/mouse between two Macs",
+        "url": "https://joshua.hu/magic-switch-easily-switch-magic-keyboard-trackpad-mouse-between-mac-macbook-macos",
         "source": "Hacker News",
-        "score": 155
+        "score": 36
+      },
+      {
+        "title": "Hole Punch: Sling your spaceship around gravitational fields",
+        "url": "https://notoriousbfg.com/hole-punch/",
+        "source": "Hacker News",
+        "score": 326
       },
       {
         "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
         "url": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
         "source": "Hacker News",
-        "score": 145
-      },
-      {
-        "title": "In Ukraine, distributed renewables foil Russia's assaults",
-        "url": "https://energytransition.org/2026/09/in-ukraine-distributed-renewables-foil-russias-assaults/",
-        "source": "Hacker News",
-        "score": 82
+        "score": 253
       }
     ],
     "ai": [
       {
+        "title": "Show HN: AI search for every photo and every frame of video on macOS",
+        "url": "https://github.com/allenv0/SCM",
+        "source": "Hacker News AI",
+        "score": 53
+      },
+      {
         "title": "LeCun has \"zero concerns\" about AI wiping out humanity, recent \"rogue\" incidents",
         "url": "https://fortune.com/2026/10/01/ai-godfather-yann-lecun-has-zero-concerns-about-human-extinction-says-anthropic-ceo-dario-amodei-is-deuded/",
         "source": "Hacker News AI",
-        "score": 145
+        "score": 253
       },
       {
-        "title": "In Ukraine, distributed renewables foil Russia's assaults",
-        "url": "https://energytransition.org/2026/09/in-ukraine-distributed-renewables-foil-russias-assaults/",
+        "title": "What's the Future for Pure Math Research in the Age of AI?",
+        "url": "https://writings.stephenwolfram.com/2026/09/whats-the-future-for-pure-math-research-in-the-age-of-ai/",
         "source": "Hacker News AI",
-        "score": 82
-      },
-      {
-        "title": "Religious scholars met with Anthropic",
-        "url": "https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html",
-        "source": "Hacker News AI",
-        "score": 83
+        "score": 19
       },
       {
         "title": "I quit OpenAI because its culture is broken",
         "url": "https://www.theatlantic.com/technology/2026/10/openai-safety-team-resignation/688881/?gift=v5U_UzUTothfWXsPxtvNVAh7esWToMRD6XnbXmc5WgA",
         "source": "Hacker News AI",
-        "score": 244
+        "score": 350
       },
       {
-        "title": "Three AI agents, two countries, and one uneven world wide web",
-        "url": "https://royapakzad.substack.com/p/multilingual-ai-agents",
+        "title": "Religious scholars met with Anthropic",
+        "url": "https://www.nytimes.com/2026/09/29/us/anthropic-claude-morals-ai.html",
         "source": "Hacker News AI",
-        "score": 33
+        "score": 137
       },
       {
         "title": "RetailReady (YC W24) Is Hiring",
         "url": "https://www.ycombinator.com/companies/retailready/jobs/bFcgIe4-implementations",
         "source": "Hacker News AI",
         "score": 1
+      },
+      {
+        "title": "Three AI agents, two countries, and one uneven world wide web",
+        "url": "https://royapakzad.substack.com/p/multilingual-ai-agents",
+        "source": "Hacker News AI",
+        "score": 38
       }
     ],
     "news": [
@@ -141,32 +147,52 @@
         "source": "BBC World"
       },
       {
+        "title": "Watch: What we know about Russian strikes on Kyiv bridges",
+        "url": "https://www.bbc.co.uk/news/videos/cmglwkyl9djyo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Yemen announces military campaign to reclaim land from Iran-backed Houthis",
+        "url": "https://www.bbc.co.uk/news/articles/cx8dzj9vpp01o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ethiopian rebel forces withdraw from Tigray regional capital",
+        "url": "https://www.bbc.co.uk/news/articles/cqm249v07j4xo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Australia investigating Flydubai co-pilot's links to country",
         "url": "https://www.bbc.co.uk/news/articles/cxly4nym57q9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Tennessee prison chief to resign after Christa Pike's failed execution",
-        "url": "https://www.bbc.co.uk/news/articles/c8zxl62yzxzxo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Cornell president says university 'must do better' after frat house rape allegations",
-        "url": "https://www.bbc.co.uk/news/articles/ckly0leelnz4o?at_medium=RSS&at_campaign=rss",
+        "title": "US Marine arrested over murder of woman in Okinawa, Japan",
+        "url": "https://www.bbc.co.uk/news/articles/cme3xw4yy28do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "What to know about Brazil's election pitting Lula against Flávio Bolsonaro",
         "url": "https://www.bbc.co.uk/news/articles/c6wyz0r2n0djo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Debris found from plane that went missing off US coast",
-        "url": "https://www.bbc.co.uk/news/articles/cme3x85013llo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " I visited the Lucas Museum of Narrative Art, and it's not just about Star Wars ",
+        "url": "https://www.creativebloq.com/art/traditional-art/i-visited-the-lucas-museum-of-narrative-art-and-its-not-just-about-star-wars",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " These aesthetically delightful retro vinyl players have up to 50% off at Amazon ",
+        "url": "https://www.creativebloq.com/entertainment/toys-collectibles/these-aesthetically-pleasing-retro-vinyl-players-have-up-to-50-percent-off-at-amazon",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Weird girls, your next shelf collectible is a stack of Robert Pattinsons ",
+        "url": "https://www.creativebloq.com/entertainment/weird-girls-your-next-shelf-collectible-is-a-stack-of-robert-pattinsons",
+        "source": "Creative Bloq"
+      },
       {
         "title": " \"For me, drawing is thinking out loud on canvas\": Simon Pape on his process for creating a fantasy underwater scene ",
         "url": "https://www.creativebloq.com/art/digital-art/for-me-drawing-is-thinking-out-loud-on-canvas-simon-pape-on-his-process-for-creating-a-fantasy-underwater-scene",
@@ -186,94 +212,79 @@
         "title": " Disney's Lionel Messi cartoon looks unlike what anyone expected ",
         "url": "https://www.creativebloq.com/art/animation/disneys-lionel-messi-cartoon-isnt-what-anyone-expected",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Pixar just released a handmade stopmotion Thelma & Louise with fruit – and a nod to GTA VI ",
-        "url": "https://www.creativebloq.com/art/animation/pixars-latest-film-is-a-psychedelic-hand-made-thelma-and-louise-with-fruit-and-a-nod-to-gta-vi",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How thatgamecompany turned Van Gogh paintings into playable spaces ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/how-thatgamecompany-turned-van-gogh-paintings-into-playable-spaces",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " A super realistic take on Disney's Stitch and a stylised Samus helped this 3D artist expand his range ",
-        "url": "https://www.creativebloq.com/3d/3d-art/a-super-realistic-take-on-disneys-stitch-and-a-stylised-samus-helped-this-3d-artist-expand-his-range",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Scientists find a surprising clue to why the universe’s expansion doesn’t add up",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261002080026.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "This protective enzyme could help stop fatty liver disease from getting worse",
         "url": "https://www.sciencedaily.com/releases/2026/10/261002080020.htm",
         "source": "Science Daily"
       },
       {
+        "title": "Diet drinks work as well as water for weight loss, major trial finds",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261002080017.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A meteor hit Oklahoma 100 million years later than scientists thought",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261002080012.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A forgotten 30-year forest experiment just delivered a huge surprise",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261001214120.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Your gut bacteria may reveal how fast your brain is aging",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261001214106.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "ESA’s Juice just used Earth as a slingshot to Jupiter",
         "url": "https://www.sciencedaily.com/releases/2026/10/261001214102.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA’s Roman telescope just opened its planet-hunting eye",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261001214057.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Chang’e-6 lunar soil contains a surprising magnetic time capsule",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261001214015.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Powerful simulations reveal how the first stars changed the universe",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261001214012.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists find an “earthquake gate” as California fault stress hits a 1,000-year high",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261001095521.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Leucine does more than build muscle. It powers up your cells",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261001095319.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "GOTY 2026’s Final Nomination Is a Battleground of 8/10 Games",
-        "url": "https://www.polygon.com/goty-watch-nominations-metacritic-85-club/",
+        "title": "Man of Tomorrow Passed An Important Post-Production Milestone",
+        "url": "https://www.polygon.com/man-of-tomorrow-assembly-cut/",
         "source": "Polygon"
       },
       {
-        "title": "65 Years Ago, The Twilight Zone Aired Its Creepiest Episode",
-        "url": "https://www.polygon.com/twilight-zone-creepiest-episode-monster/",
+        "title": "Ghost of Yotei DLC’s Best Boss Fight Stars Giant Murder Bears",
+        "url": "https://www.polygon.com/ghost-of-yotei-echoes-of-sekigahara-best-boss-fight/",
         "source": "Polygon"
       },
       {
-        "title": "5 Incredible Anime Arcs That Are 10/10, No Notes",
-        "url": "https://www.polygon.com/best-anime-arcs-that-are-perfect/",
+        "title": "A Beloved Critical Role Cast Member Will Officially Miss Campaign 4 for a Long Time",
+        "url": "https://www.polygon.com/critical-role-campaign-4-travis-willingham-return/",
         "source": "Polygon"
       },
       {
-        "title": "5 Mind-Bending Soviet Era Sci-Fi Movies You Can Watch on Streaming",
-        "url": "https://www.polygon.com/best-sci-fi-soviet-russian-streaming/",
+        "title": "Avengers: Doomsday Poster Highlights One Of The Film's Biggest Mysteries",
+        "url": "https://www.polygon.com/avengers-doomsday-latverian-witches-poster/",
         "source": "Polygon"
       },
       {
-        "title": "10 Erotic Thrillers to Watch After Verity",
-        "url": "https://www.polygon.com/best-erotic-thrillers-movies-like-verity/",
+        "title": "61 Years Ago, Star Trek's Greatest Failure Changed the Franchise Forever",
+        "url": "https://www.polygon.com/star-trek-the-cage-rejected-pilot/",
         "source": "Polygon"
       },
       {
-        "title": "31 Years Ago, 'X-Files' Reached Its Zenith with a Near-Perfect 3-Part Thriller",
-        "url": "https://www.polygon.com/the-x-files-anasazi-the-blessing-way-paper-clip/",
+        "title": "Xbox Finally Had a Good Week",
+        "url": "https://www.polygon.com/patch-notes-xbox-disc-to-digital/",
         "source": "Polygon"
       },
       {
-        "title": "Uncharted: The Lost Legacy Is Still the Best Uncharted Game",
-        "url": "https://www.polygon.com/uncharted-lost-legacy-rec-playstation-naughty-dog/",
+        "title": "10 Perfect Hard Sci-Fi Books That I Knew Would Be Masterpieces From the First 10 Pages",
+        "url": "https://www.polygon.com/10-perfect-hard-sci-fi-books-that-are-masterpieces-from-the-first-10-pages/",
         "source": "Polygon"
       }
     ],
