@@ -1,171 +1,205 @@
 {
   "metadata": {
-    "last_updated": "2026-10-05T01:41:14.430237",
-    "total_items": 55
+    "last_updated": "2026-10-05T08:31:40.012664",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
+        "title": "Huawei and Qualcomm Announce Broad Patent License Agreement",
+        "url": "https://www.huawei.com/en/news/2026/10/qualcomm-broad-patent-agreement",
+        "source": "Hacker News",
+        "score": 15
+      },
+      {
         "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
         "url": "https://github.com/Niko1221/Strata",
         "source": "Hacker News",
-        "score": 613
+        "score": 781
       },
       {
-        "title": "Infidel goes wild",
-        "url": "https://blog.zarfhome.com/2026/10/infidel-goes-wild",
-        "source": "Hacker News",
-        "score": 75
-      },
-      {
-        "title": "ArtCraft Apps – open-source Adobe compatible suite written in Rust",
-        "url": "https://getartcraft.com/apps",
-        "source": "Hacker News",
-        "score": 30
-      },
-      {
-        "title": "In the wake of closure, a digital archive of animated materials appears online",
+        "title": "In the wake of Tippett Studios’ closure, a digital archive appears online",
         "url": "https://filmstories.co.uk/news/tippett-studios-in-the-wake-of-its-closure-a-digital-archive-of-animated-materials-appears-online/",
         "source": "Hacker News",
-        "score": 24
+        "score": 126
       },
       {
-        "title": "Turn off Apple Intelligence on macOS 27 and get its disk space back",
-        "url": "https://github.com/omlahore/RemoveMacAI",
+        "title": "We ported the original Doom to SQL",
+        "url": "https://cedardb.com/blog/sqldoom/",
         "source": "Hacker News",
-        "score": 360
+        "score": 85
       },
       {
         "title": "A browser-native classic Visual Basic VB6 IDE",
         "url": "https://wieslawsoltes.github.io/VB6/",
         "source": "Hacker News",
-        "score": 90
+        "score": 203
       },
       {
-        "title": "Self-hosted HTTP tunnels with SSH and Nginx",
-        "url": "https://vincent.bernat.ch/en/blog/2026-http-over-ssh",
+        "title": "Gods in the Classroom: Religion and Education in First Millennium BCE Babylonia",
+        "url": "https://www.cambridge.org/core/journals/iraq/article/gods-in-the-classroom-religion-and-education-in-1st-millennium-bce-babylonia/EB059EE81804DCBC1848CACBD6298E0B",
         "source": "Hacker News",
-        "score": 62
+        "score": 27
       },
       {
-        "title": "Improper redaction reveals Google Data Center water and electricity usage",
-        "url": "https://www.1011now.com/2026/09/30/more-questions-than-answers-about-lincolns-google-data-center-water-electricity-usage/",
-        "source": "Hacker News",
-        "score": 243
-      },
-      {
-        "title": "Homa: The end of TCP for AI clusters [video]",
-        "url": "https://www.youtube.com/watch?v=eZ8WWZzoaR0",
-        "source": "Hacker News",
-        "score": 56
-      },
-      {
-        "title": "Tell HN: Bob Cringely has died",
-        "url": "https://news.ycombinator.com/item?id=49949438",
-        "source": "Hacker News",
-        "score": 816
-      },
-      {
-        "title": "Xray-core concealed a certificate verification bypass vulnerability",
-        "url": "https://github.com/net4people/bbs/issues/672",
+        "title": "Replacement of petroleum based products with plant-based materials (2025)",
+        "url": "https://onlinelibrary.wiley.com/doi/10.1002/eng2.70108",
         "source": "Hacker News",
         "score": 52
-      },
-      {
-        "title": "How to scale intent, quality, and artistry with AI [video]",
-        "url": "https://www.youtube.com/watch?v=GLvFTMtw4Jk",
-        "source": "Hacker News",
-        "score": 50
       },
       {
         "title": "The Tao of Backup",
         "url": "http://www.taobackup.com/index.html",
         "source": "Hacker News",
-        "score": 11
+        "score": 122
       },
       {
-        "title": "Show HN: Glashütte Trash Clock – A 30-minute pendulum clock made from trash",
-        "url": "https://niklasroy.com/gtc/",
+        "title": "Infidel goes wild",
+        "url": "https://blog.zarfhome.com/2026/10/infidel-goes-wild",
         "source": "Hacker News",
-        "score": 165
+        "score": 128
       },
       {
-        "title": "Incentives in Academic Research",
-        "url": "https://www.msoos.org/2026/10/incentives-in-academic-research/",
+        "title": "Sales of sub-€25,000 electric car models set to rise sevenfold",
+        "url": "https://www.transportenvironment.org/articles/wave-of-affordable-electric-cars-is-boosting-consumers-choice-sales-of-sub-eur25-000-models-set-to-rise-sevenfold",
         "source": "Hacker News",
-        "score": 38
+        "score": 7
+      },
+      {
+        "title": "Turn off Apple Intelligence on macOS 27 and get its disk space back",
+        "url": "https://github.com/omlahore/RemoveMacAI",
+        "source": "Hacker News",
+        "score": 550
+      },
+      {
+        "title": "Powerless F1 drivers frustrated by Bahrain F1 software glitch",
+        "url": "https://www.motorsport.com/f1/news/horrible-totally-unacceptable-powerless-f1-drivers-frustrated-by-bahrain-f1-software-glitch/10861968/",
+        "source": "Hacker News",
+        "score": 188
+      },
+      {
+        "title": "Tell HN: Bob Cringely has died",
+        "url": "https://news.ycombinator.com/item?id=49949438",
+        "source": "Hacker News",
+        "score": 864
+      },
+      {
+        "title": "Demystifying Tufte's data-ink ratio",
+        "url": "https://tuftesrazor.scienceux.org/",
+        "source": "Hacker News",
+        "score": 39
+      },
+      {
+        "title": "Decision models like Jev don't beat LLM-as-a-judge or traditional classifiers",
+        "url": "https://developers.redhat.com/articles/2026/10/02/benchmarking-ai-decision-models-against-traditional-guardrails",
+        "source": "Hacker News",
+        "score": 47
       }
     ],
     "ai": [
       {
-        "title": "Homa: The end of TCP for AI clusters [video]",
-        "url": "https://www.youtube.com/watch?v=eZ8WWZzoaR0",
+        "title": "Powerless F1 drivers frustrated by Bahrain F1 software glitch",
+        "url": "https://www.motorsport.com/f1/news/horrible-totally-unacceptable-powerless-f1-drivers-frustrated-by-bahrain-f1-software-glitch/10861968/",
         "source": "Hacker News AI",
-        "score": 56
+        "score": 188
       },
       {
-        "title": "How to scale intent, quality, and artistry with AI [video]",
-        "url": "https://www.youtube.com/watch?v=GLvFTMtw4Jk",
+        "title": "Decision models like Jev don't beat LLM-as-a-judge or traditional classifiers",
+        "url": "https://developers.redhat.com/articles/2026/10/02/benchmarking-ai-decision-models-against-traditional-guardrails",
         "source": "Hacker News AI",
-        "score": 50
-      },
-      {
-        "title": "Show HN: AI search for every photo and every frame of video on macOS",
-        "url": "https://github.com/allenv0/SCM",
-        "source": "Hacker News AI",
-        "score": 139
+        "score": 47
       },
       {
         "title": "Interview with Chicken Scheme Maintainer Sjamaan/Peter Bex",
         "url": "https://alexalejandre.com/interviews/peter-bex/",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 36
       },
       {
-        "title": "Declaring a bird extinct: The median wait is 36 years after the last sighting",
-        "url": "https://birdshistory.com/how-long-to-declare-a-bird-extinct/",
+        "title": "How to scale intent, quality, and artistry with AI [video]",
+        "url": "https://www.youtube.com/watch?v=GLvFTMtw4Jk",
         "source": "Hacker News AI",
-        "score": 21
+        "score": 82
+      },
+      {
+        "title": "Blindsight (Watts Novel)",
+        "url": "https://en.wikipedia.org/wiki/Blindsight_(Watts_novel)",
+        "source": "Hacker News AI",
+        "score": 80
+      },
+      {
+        "title": "Show HN: AI search for every photo and every frame of video on macOS",
+        "url": "https://github.com/allenv0/SCM",
+        "source": "Hacker News AI",
+        "score": 151
+      },
+      {
+        "title": "Homa: The end of TCP for AI clusters [video]",
+        "url": "https://www.youtube.com/watch?v=eZ8WWZzoaR0",
+        "source": "Hacker News AI",
+        "score": 71
+      },
+      {
+        "title": "All I wanted was a custom domain email",
+        "url": "https://jacobg.co/emails-at-jacobg-co/",
+        "source": "Hacker News AI",
+        "score": 71
+      },
+      {
+        "title": "What's the future for pure math research in the age of AI?",
+        "url": "https://writings.stephenwolfram.com/2026/09/whats-the-future-for-pure-math-research-in-the-age-of-ai/",
+        "source": "Hacker News AI",
+        "score": 61
       }
     ],
     "news": [
       {
-        "title": "Kyiv bridge hit in further Russian drone attack as German chancellor makes surprise visit",
-        "url": "https://www.bbc.co.uk/news/articles/ckreyjzzzywqo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Watch: What we know about Russian strikes on Kyiv bridges",
-        "url": "https://www.bbc.co.uk/news/videos/cmglwkyl9djyo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Yemen's government announces all-out war to reclaim land from Houthis",
-        "url": "https://www.bbc.co.uk/news/articles/cx8dzj9vpp01o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Brazil election goes to run-off as right-wing Flávio Bolsonaro wins first round",
+        "title": "Right-wing Flávio Bolsonaro wins first round of Brazil election",
         "url": "https://www.bbc.co.uk/news/articles/ck1l34ed592no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ethiopian rebel forces withdraw from Tigray regional capital",
-        "url": "https://www.bbc.co.uk/news/articles/cqm249v07j4xo?at_medium=RSS&at_campaign=rss",
+        "title": "Watch: How Brazil's dramatic election unfolded",
+        "url": "https://www.bbc.co.uk/news/videos/cwp9g54v9xjlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Christa Pike's prognosis still unclear after failed execution, lawyer says",
-        "url": "https://www.bbc.co.uk/news/articles/ckgelynyg7d3o?at_medium=RSS&at_campaign=rss",
+        "title": "US air force removes all bombers from British military base RAF Fairford",
+        "url": "https://www.bbc.co.uk/news/articles/cmwyve191dlko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Indian police accused of sexually harassing journalists at protest",
-        "url": "https://www.bbc.co.uk/news/articles/c9e8lvm6nrr3o?at_medium=RSS&at_campaign=rss",
+        "title": "Trump unveils 'Super Intelligence Force' to oversee AI policy",
+        "url": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "France closes up to 500 schools Monday over student protests",
+        "url": "https://www.bbc.co.uk/news/articles/cwkg5n7lm3y5o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "All six passengers presumed dead after plane went missing off US coast",
+        "url": "https://www.bbc.co.uk/news/articles/cmze4g8r6nr9o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Supporters of jailed ex-PM Imran Khan march to Pakistan capital",
+        "url": "https://www.bbc.co.uk/news/articles/cmkg79z04w4zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " How to create a heroic indie comic cover ",
+        "url": "https://www.creativebloq.com/art/digital-art/how-to-create-a-heroic-indie-comic-cover",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The new Harry Potter has reopened a hot debate about colour grading ",
+        "url": "https://www.creativebloq.com/design/logos-icons/the-new-harry-potters-reopened-a-hot-debate-about-colour-grading",
+        "source": "Creative Bloq"
+      },
       {
         "title": " I visited the Lucas Museum of Narrative Art, and it's not just about Star Wars ",
         "url": "https://www.creativebloq.com/art/traditional-art/i-visited-the-lucas-museum-of-narrative-art-and-its-not-just-about-star-wars",
@@ -190,22 +224,17 @@
         "title": " Adobe's AI text-to-3D world concept is a glimpse of where Firefly could go next ",
         "url": "https://www.creativebloq.com/design/graphic-design/adobes-ai-text-to-3d-world-concept-is-a-glimpse-of-where-firefly-could-go-next",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Free Premiere on Android is exactly the direction Adobe should be taking ",
-        "url": "https://www.creativebloq.com/photography/video-editing-software/free-premiere-on-android-is-exactly-the-direction-adobe-should-be-taking",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Disney's Lionel Messi cartoon looks unlike what anyone expected ",
-        "url": "https://www.creativebloq.com/art/animation/disneys-lionel-messi-cartoon-isnt-what-anyone-expected",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
         "title": "Scientists find a surprising clue to why the universe’s expansion doesn’t add up",
         "url": "https://www.sciencedaily.com/releases/2026/10/261002080026.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "The “glue” holding your cells together has a surprising second job",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261002080023.htm",
         "source": "Science Daily"
       },
       {
@@ -229,50 +258,45 @@
         "source": "Science Daily"
       },
       {
-        "title": "Your gut bacteria may reveal how fast your brain is aging",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261001214106.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "ESA’s Juice just used Earth as a slingshot to Jupiter",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261001214102.htm",
+        "title": "Easing constipation: A 20-minute walk can get your gut moving almost immediately",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261001214117.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Fire Emblem Fans Need to Play 2017's Stellar Revenge-Saga RPG",
-        "url": "https://www.polygon.com/fire-emblem-tales-of-berseria/",
+        "title": "21 Years Ago, a Brilliant Sci-Fi Series Changed TV Forever With One Last-Minute Change",
+        "url": "https://www.polygon.com/lost-orientation-episode-mystery-box-21st-anniversary/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon's Official Halloween Collection is Live and Full of Incredible Merch",
-        "url": "https://www.polygon.com/pokemon-center-official-halloween-2026-collection-merch/",
+        "title": "5 Crucial Changes 'Legend of Vox Machina' Season 4 Made to Critical Role Campaign 1",
+        "url": "https://www.polygon.com/legend-of-vox-machina-season-4-vs-critical-role-campaign-1-differences/",
         "source": "Polygon"
       },
       {
-        "title": "8 Video Game Villains With Motives You Can't Argue With",
-        "url": "https://www.polygon.com/video-game-villains-who-were-right/",
+        "title": "65 Years Ago, the Most Terrifying Episode of 'The Twilight Zone' Broke All Its Own Rules",
+        "url": "https://www.polygon.com/the-twilight-zone-the-shelter-anniversary/",
         "source": "Polygon"
       },
       {
-        "title": "25 Years Later, Ridley Scott’s Most Controversial Thriller Is Officially Free on Youtube",
-        "url": "https://www.polygon.com/ridley-scott-hannibal-2001-controversy/",
+        "title": "25 Years Later, One of the Greatest Crime Thrillers Ever Made Is Free on Streaming",
+        "url": "https://www.polygon.com/training-day-denzel-washington-free-to-stream-on-roku/",
         "source": "Polygon"
       },
       {
-        "title": "Nintendo's Zelda: Ocarina of Time Remake Gets Official Instrument Support and More",
-        "url": "https://www.polygon.com/zelda-ocarina-of-time-remake-new-features-notes-app-nintendo/",
+        "title": "Zelda: Ocarina of Time's Link and Epona Get Official New Lego Set",
+        "url": "https://www.polygon.com/the-legend-of-zelda-ocarina-of-time-lego-set/",
         "source": "Polygon"
       },
       {
-        "title": "Forget Star Wars Movies, the Franchise’s Future Belongs to Video Games",
-        "url": "https://www.polygon.com/star-wars-video-games-coming-for-movies-lunch/",
+        "title": "10 Near-Perfect Nintendo Switch Games Nobody Played",
+        "url": "https://www.polygon.com/best-nintendo-switch-hidden-gems/",
         "source": "Polygon"
       },
       {
-        "title": "'Buffy the Vampire Slayer' Would Be Much Better if It Were 2 Seasons Shorter",
-        "url": "https://www.polygon.com/buffy-season-5-hot-take/",
+        "title": "‘Lanterns’ Ending Explained: How the Finale Sets Up John Stewart in 'Man of Tomorrow'",
+        "url": "https://www.polygon.com/lanterns-finale-explained-man-of-tomorrow/",
         "source": "Polygon"
       }
     ],
