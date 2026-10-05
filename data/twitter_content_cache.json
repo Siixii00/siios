@@ -1,232 +1,252 @@
 {
   "metadata": {
-    "last_updated": "2026-10-05T08:31:40.012664",
+    "last_updated": "2026-10-05T18:01:34.341849",
     "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "Huawei and Qualcomm Announce Broad Patent License Agreement",
+        "title": "Web Search API",
+        "url": "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
+        "source": "Hacker News",
+        "score": 319
+      },
+      {
+        "title": "The future of independence is interdependence",
+        "url": "https://onlys.ky/independence-is-interdependence/",
+        "source": "Hacker News",
+        "score": 41
+      },
+      {
+        "title": "Making a GTK application in Haskell, part 1",
+        "url": "https://floreal.tech/blog/2026/making-a-gtk-app-in-haskell-part-1/",
+        "source": "Hacker News",
+        "score": 74
+      },
+      {
+        "title": "US closely monitoring case of lab worker who possibly died of plague in Siberia",
+        "url": "https://www.theguardian.com/world/2026/oct/05/russia-lab-worker-possibly-dies-of-plague-siberia-quarantine-measures-irkutsk",
+        "source": "Hacker News",
+        "score": 63
+      },
+      {
+        "title": "Mold Linker Version 3.0.0 Release – Rewritten in Rust",
+        "url": "https://github.com/rui314/mold/releases/tag/v3.0.0",
+        "source": "Hacker News",
+        "score": 142
+      },
+      {
+        "title": "Denmark Data Breach Exposes 8.8M People's Personal Data",
+        "url": "https://www.cpr.dk/cpr-nyt/nyhedsarkiv/2026/okt/omfattende-uautoriseret-adgang-til-borgeres-cpr-oplysninger",
+        "source": "Hacker News",
+        "score": 388
+      },
+      {
+        "title": "The technology to eradicate mosquito-borne disease exists",
+        "url": "https://worksinprogress.co/issue/mosquitoes-are-a-choice/",
+        "source": "Hacker News",
+        "score": 160
+      },
+      {
+        "title": "Huawei and Qualcomm announce broad patent license agreement",
         "url": "https://www.huawei.com/en/news/2026/10/qualcomm-broad-patent-agreement",
         "source": "Hacker News",
-        "score": 15
+        "score": 144
       },
       {
-        "title": "Run Qwen 3.8 Flash Next (125B) on consumer hardware (RTX 4090) at 100T/s",
-        "url": "https://github.com/Niko1221/Strata",
+        "title": "Pixel 11 doesn't yet meet the GrapheneOS security standards and may be skipped",
+        "url": "https://discuss.grapheneos.org/d/41564-pixel-11-doesnt-yet-meet-the-grapheneos-security-standards-and-may-be-skipped",
         "source": "Hacker News",
-        "score": 781
+        "score": 310
       },
       {
-        "title": "In the wake of Tippett Studios’ closure, a digital archive appears online",
-        "url": "https://filmstories.co.uk/news/tippett-studios-in-the-wake-of-its-closure-a-digital-archive-of-animated-materials-appears-online/",
+        "title": "Differences Between `Foldl` and `Foldr`",
+        "url": "https://blog.haskell.org/foldl-and-foldr/",
         "source": "Hacker News",
-        "score": 126
+        "score": 97
       },
       {
-        "title": "We ported the original Doom to SQL",
-        "url": "https://cedardb.com/blog/sqldoom/",
+        "title": "Anthropic reported diary entry to police, woman faces felony charge",
+        "url": "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html",
         "source": "Hacker News",
-        "score": 85
+        "score": 148
       },
       {
-        "title": "A browser-native classic Visual Basic VB6 IDE",
-        "url": "https://wieslawsoltes.github.io/VB6/",
-        "source": "Hacker News",
-        "score": 203
-      },
-      {
-        "title": "Gods in the Classroom: Religion and Education in First Millennium BCE Babylonia",
-        "url": "https://www.cambridge.org/core/journals/iraq/article/gods-in-the-classroom-religion-and-education-in-1st-millennium-bce-babylonia/EB059EE81804DCBC1848CACBD6298E0B",
-        "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Replacement of petroleum based products with plant-based materials (2025)",
-        "url": "https://onlinelibrary.wiley.com/doi/10.1002/eng2.70108",
+        "title": "2026 Nobel Prize in Physiology or Medicine: Deisseroth, Hegemann, Nagel",
+        "url": "https://www.nobelprize.org/prizes/medicine/2026/summary/",
         "source": "Hacker News",
         "score": 52
       },
       {
-        "title": "The Tao of Backup",
-        "url": "http://www.taobackup.com/index.html",
+        "title": "Martian chaos terrain",
+        "url": "https://en.wikipedia.org/wiki/Martian_chaos_terrain",
         "source": "Hacker News",
-        "score": 122
+        "score": 63
       },
       {
-        "title": "Infidel goes wild",
-        "url": "https://blog.zarfhome.com/2026/10/infidel-goes-wild",
+        "title": "Beating the Compiler",
+        "url": "https://www.mattkeeter.com/blog/2024-07-12-interpreter/",
         "source": "Hacker News",
-        "score": 128
+        "score": 30
       },
       {
-        "title": "Sales of sub-€25,000 electric car models set to rise sevenfold",
-        "url": "https://www.transportenvironment.org/articles/wave-of-affordable-electric-cars-is-boosting-consumers-choice-sales-of-sub-eur25-000-models-set-to-rise-sevenfold",
+        "title": "The designer lamps in my house",
+        "url": "https://arslan.io/2026/10/05/the-lamps-in-my-house/",
         "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "Turn off Apple Intelligence on macOS 27 and get its disk space back",
-        "url": "https://github.com/omlahore/RemoveMacAI",
-        "source": "Hacker News",
-        "score": 550
-      },
-      {
-        "title": "Powerless F1 drivers frustrated by Bahrain F1 software glitch",
-        "url": "https://www.motorsport.com/f1/news/horrible-totally-unacceptable-powerless-f1-drivers-frustrated-by-bahrain-f1-software-glitch/10861968/",
-        "source": "Hacker News",
-        "score": 188
-      },
-      {
-        "title": "Tell HN: Bob Cringely has died",
-        "url": "https://news.ycombinator.com/item?id=49949438",
-        "source": "Hacker News",
-        "score": 864
-      },
-      {
-        "title": "Demystifying Tufte's data-ink ratio",
-        "url": "https://tuftesrazor.scienceux.org/",
-        "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Decision models like Jev don't beat LLM-as-a-judge or traditional classifiers",
-        "url": "https://developers.redhat.com/articles/2026/10/02/benchmarking-ai-decision-models-against-traditional-guardrails",
-        "source": "Hacker News",
-        "score": 47
+        "score": 18
       }
     ],
     "ai": [
       {
-        "title": "Powerless F1 drivers frustrated by Bahrain F1 software glitch",
-        "url": "https://www.motorsport.com/f1/news/horrible-totally-unacceptable-powerless-f1-drivers-frustrated-by-bahrain-f1-software-glitch/10861968/",
+        "title": "Anthropic reported diary entry to police, woman faces felony charge",
+        "url": "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html",
         "source": "Hacker News AI",
-        "score": 188
+        "score": 148
+      },
+      {
+        "title": "Martian chaos terrain",
+        "url": "https://en.wikipedia.org/wiki/Martian_chaos_terrain",
+        "source": "Hacker News AI",
+        "score": 63
+      },
+      {
+        "title": "Linux containers in 500 lines of code",
+        "url": "https://blog.lizzie.io/linux-containers-in-500-loc.html",
+        "source": "Hacker News AI",
+        "score": 12
+      },
+      {
+        "title": "ExplainDB: A Database System Built for Understandability",
+        "url": "https://github.com/explaindb/explaindb",
+        "source": "Hacker News AI",
+        "score": 59
+      },
+      {
+        "title": "The Philadelphia Inquirer built Scrape, an AI tool to surface hyperlocal news",
+        "url": "https://www.lenfestinstitute.org/solutions-resources/philadelphia-inquirer-scrape-ai-hyperlocal-news/",
+        "source": "Hacker News AI",
+        "score": 71
       },
       {
         "title": "Decision models like Jev don't beat LLM-as-a-judge or traditional classifiers",
         "url": "https://developers.redhat.com/articles/2026/10/02/benchmarking-ai-decision-models-against-traditional-guardrails",
         "source": "Hacker News AI",
-        "score": 47
+        "score": 148
       },
       {
-        "title": "Interview with Chicken Scheme Maintainer Sjamaan/Peter Bex",
-        "url": "https://alexalejandre.com/interviews/peter-bex/",
+        "title": "GPT-6 Astra cracks 217-year-old Napoleonic code in six hours",
+        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/chatgpt-6-astra-cracks-217-year-old-napoleonic-code-in-just-six-hours-single-prompt-ai-run-solves-24-rows-of-custom-symbols-from-a-single-image-reveals-lost-troop-orders",
         "source": "Hacker News AI",
-        "score": 36
+        "score": 10
       },
       {
-        "title": "How to scale intent, quality, and artistry with AI [video]",
-        "url": "https://www.youtube.com/watch?v=GLvFTMtw4Jk",
+        "title": "Powerless F1 drivers frustrated by Bahrain F1 software glitch",
+        "url": "https://www.motorsport.com/f1/news/horrible-totally-unacceptable-powerless-f1-drivers-frustrated-by-bahrain-f1-software-glitch/10861968/",
         "source": "Hacker News AI",
-        "score": 82
+        "score": 276
       },
       {
         "title": "Blindsight (Watts Novel)",
         "url": "https://en.wikipedia.org/wiki/Blindsight_(Watts_novel)",
         "source": "Hacker News AI",
-        "score": 80
-      },
-      {
-        "title": "Show HN: AI search for every photo and every frame of video on macOS",
-        "url": "https://github.com/allenv0/SCM",
-        "source": "Hacker News AI",
-        "score": 151
-      },
-      {
-        "title": "Homa: The end of TCP for AI clusters [video]",
-        "url": "https://www.youtube.com/watch?v=eZ8WWZzoaR0",
-        "source": "Hacker News AI",
-        "score": 71
-      },
-      {
-        "title": "All I wanted was a custom domain email",
-        "url": "https://jacobg.co/emails-at-jacobg-co/",
-        "source": "Hacker News AI",
-        "score": 71
-      },
-      {
-        "title": "What's the future for pure math research in the age of AI?",
-        "url": "https://writings.stephenwolfram.com/2026/09/whats-the-future-for-pure-math-research-in-the-age-of-ai/",
-        "source": "Hacker News AI",
-        "score": 61
+        "score": 110
       }
     ],
     "news": [
       {
-        "title": "Right-wing Flávio Bolsonaro wins first round of Brazil election",
-        "url": "https://www.bbc.co.uk/news/articles/ck1l34ed592no?at_medium=RSS&at_campaign=rss",
+        "title": "No10 insists UK military base RAF Fairford is safe after US withdraws bombers",
+        "url": "https://www.bbc.co.uk/news/articles/cmy56yvv1kxxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Watch: How Brazil's dramatic election unfolded",
-        "url": "https://www.bbc.co.uk/news/videos/cwp9g54v9xjlo?at_medium=RSS&at_campaign=rss",
+        "title": "Flydubai co-pilot planned to crash plane into Tel Aviv airport or building, reports say",
+        "url": "https://www.bbc.co.uk/news/articles/cm3691y79xp5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US air force removes all bombers from British military base RAF Fairford",
-        "url": "https://www.bbc.co.uk/news/articles/cmwyve191dlko?at_medium=RSS&at_campaign=rss",
+        "title": "Teenager's hand blown off during confrontation between France school protesters and police",
+        "url": "https://www.bbc.co.uk/news/articles/c9zrdmxp4vy6o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump unveils 'Super Intelligence Force' to oversee AI policy",
-        "url": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss",
+        "title": "Zelensky condemns 'horrific' Russian strike on boat carrying corn in Black Sea",
+        "url": "https://www.bbc.co.uk/news/articles/cr0j0w3p8453o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "France closes up to 500 schools Monday over student protests",
-        "url": "https://www.bbc.co.uk/news/articles/cwkg5n7lm3y5o?at_medium=RSS&at_campaign=rss",
+        "title": "Spanish PM Sánchez calls early election after housing protests",
+        "url": "https://www.bbc.co.uk/news/articles/cmdx39k49xw0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "All six passengers presumed dead after plane went missing off US coast",
-        "url": "https://www.bbc.co.uk/news/articles/cmze4g8r6nr9o?at_medium=RSS&at_campaign=rss",
+        "title": "Nobel Prize awarded for revealing inner workings of the brain",
+        "url": "https://www.bbc.co.uk/news/articles/c5ev3ypmzly8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Supporters of jailed ex-PM Imran Khan march to Pakistan capital",
-        "url": "https://www.bbc.co.uk/news/articles/cmkg79z04w4zo?at_medium=RSS&at_campaign=rss",
+        "title": "Pentagon stops using Anthropic AI tools after blacklisting company, BBC told",
+        "url": "https://www.bbc.co.uk/news/articles/c5j9x9pr0240o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
+        "title": " LIVE: October Prime Day 2026 3D printing deals - save up to 50% ",
+        "url": "https://www.creativebloq.com/live/news/october-prime-day-2026-3d-printing-deals",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Woah, Street Fighter's new billboard is almost too convincing ",
+        "url": "https://www.creativebloq.com/design/advertising/woah-street-fighters-new-billboard-is-almost-too-convincing",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Gears of War: E-Day review: a beautifully brutal Unreal Engine 5 showcase ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/gears-of-war-e-day-review-a-bombastic-unreal-engine-5-showcase-that-loosens-the-formula",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Celebrate James Bond Day with these gifts for 007 fans ",
+        "url": "https://www.creativebloq.com/design/product-design/celebrate-james-bond-day-with-these-gifts-for-007-fans",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Brisbane 2032 Olympics logo is hiding a triple design in plain sight ",
+        "url": "https://www.creativebloq.com/design/logos-icons/the-brisbane-2032-olympics-logo-is-hiding-a-triple-design-in-plain-sight",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Brands are performing nostalgia to hook you: here's why ",
+        "url": "https://www.creativebloq.com/design/branding/brands-are-performing-nostalgia-to-hook-you-heres-why",
+        "source": "Creative Bloq"
+      },
+      {
         "title": " How to create a heroic indie comic cover ",
         "url": "https://www.creativebloq.com/art/digital-art/how-to-create-a-heroic-indie-comic-cover",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The new Harry Potter has reopened a hot debate about colour grading ",
-        "url": "https://www.creativebloq.com/design/logos-icons/the-new-harry-potters-reopened-a-hot-debate-about-colour-grading",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " I visited the Lucas Museum of Narrative Art, and it's not just about Star Wars ",
-        "url": "https://www.creativebloq.com/art/traditional-art/i-visited-the-lucas-museum-of-narrative-art-and-its-not-just-about-star-wars",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These aesthetically delightful retro vinyl players have up to 50% off at Amazon ",
-        "url": "https://www.creativebloq.com/entertainment/toys-collectibles/these-aesthetically-pleasing-retro-vinyl-players-have-up-to-50-percent-off-at-amazon",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Weird girls, your next shelf collectible is a stack of Robert Pattinsons ",
-        "url": "https://www.creativebloq.com/entertainment/weird-girls-your-next-shelf-collectible-is-a-stack-of-robert-pattinsons",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " \"For me, drawing is thinking out loud on canvas\": Simon Pape on his process for creating a fantasy underwater scene ",
-        "url": "https://www.creativebloq.com/art/digital-art/for-me-drawing-is-thinking-out-loud-on-canvas-simon-pape-on-his-process-for-creating-a-fantasy-underwater-scene",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Adobe's AI text-to-3D world concept is a glimpse of where Firefly could go next ",
-        "url": "https://www.creativebloq.com/design/graphic-design/adobes-ai-text-to-3d-world-concept-is-a-glimpse-of-where-firefly-could-go-next",
         "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Don't miss: Watch Saturn shine and Halley’s Comet debris streak across the sky",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261005071523.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists reveal what seven days of fasting does to the human body",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261005012444.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "This mysterious hole on the Moon may open into a giant cave",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261003234013.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Vagus Nerve Stimulation Could Help New Skills Stick",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261002080034.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Scientists find a surprising clue to why the universe’s expansion doesn’t add up",
         "url": "https://www.sciencedaily.com/releases/2026/10/261002080026.htm",
@@ -241,67 +261,52 @@
         "title": "This protective enzyme could help stop fatty liver disease from getting worse",
         "url": "https://www.sciencedaily.com/releases/2026/10/261002080020.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "Diet drinks work as well as water for weight loss, major trial finds",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261002080017.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A meteor hit Oklahoma 100 million years later than scientists thought",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261002080012.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A forgotten 30-year forest experiment just delivered a huge surprise",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261001214120.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Easing constipation: A 20-minute walk can get your gut moving almost immediately",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261001214117.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "21 Years Ago, a Brilliant Sci-Fi Series Changed TV Forever With One Last-Minute Change",
-        "url": "https://www.polygon.com/lost-orientation-episode-mystery-box-21st-anniversary/",
+        "title": "BG3 Console Update Officially Brings 300-Option Cheat Menu",
+        "url": "https://www.polygon.com/bg3-console-cheaters-menu-mod/",
         "source": "Polygon"
       },
       {
-        "title": "5 Crucial Changes 'Legend of Vox Machina' Season 4 Made to Critical Role Campaign 1",
-        "url": "https://www.polygon.com/legend-of-vox-machina-season-4-vs-critical-role-campaign-1-differences/",
+        "title": "'Lanterns' Season 2 Confirmed? Potential Release Date, Plot, and Everything You Need to Know",
+        "url": "https://www.polygon.com/lanterns-season-2-release-date-plot/",
         "source": "Polygon"
       },
       {
-        "title": "65 Years Ago, the Most Terrifying Episode of 'The Twilight Zone' Broke All Its Own Rules",
-        "url": "https://www.polygon.com/the-twilight-zone-the-shelter-anniversary/",
+        "title": "'Arc Raiders' and 'The Finals' Are Officially Getting Movie and TV Adaptations",
+        "url": "https://www.polygon.com/arc-raiders-the-finals-movie-tv-adaptations/",
         "source": "Polygon"
       },
       {
-        "title": "25 Years Later, One of the Greatest Crime Thrillers Ever Made Is Free on Streaming",
-        "url": "https://www.polygon.com/training-day-denzel-washington-free-to-stream-on-roku/",
+        "title": "New Pokémon Winds and Waves Leak Teases a Legendary Monster Twist",
+        "url": "https://www.polygon.com/pokemon-winds-wave-intro-leak-legendary/",
         "source": "Polygon"
       },
       {
-        "title": "Zelda: Ocarina of Time's Link and Epona Get Official New Lego Set",
-        "url": "https://www.polygon.com/the-legend-of-zelda-ocarina-of-time-lego-set/",
+        "title": "Dragon Ball Super: Beerus Officially Sets Crunchyroll as Streaming Home",
+        "url": "https://www.polygon.com/dragon-ball-super-beerus-crunchyroll-streaming-premiere/",
         "source": "Polygon"
       },
       {
-        "title": "10 Near-Perfect Nintendo Switch Games Nobody Played",
-        "url": "https://www.polygon.com/best-nintendo-switch-hidden-gems/",
+        "title": "CD Projekt Promises 'The Witcher 3' Remaster Fixes as Some Players Struggle",
+        "url": "https://www.polygon.com/the-witcher-3-remaster-performance-fixes/",
         "source": "Polygon"
       },
       {
-        "title": "‘Lanterns’ Ending Explained: How the Finale Sets Up John Stewart in 'Man of Tomorrow'",
-        "url": "https://www.polygon.com/lanterns-finale-explained-man-of-tomorrow/",
+        "title": "How many acts are in Gears of War E-Day?",
+        "url": "https://www.polygon.com/gears-of-war-eday-how-long-length-missions-acts-chapters-list/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "ReviewBench: An open benchmark for AI code review",
+        "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "AI is changing developer work. Here are three skills to strengthen.",
         "url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
@@ -330,11 +335,6 @@
       {
         "title": "GitHub Copilot app for Beginners: How to build custom workflows with canvases",
         "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Improving site performance by shipping more CSS",
-        "url": "https://github.blog/engineering/architecture-optimization/improving-site-performance-by-shipping-more-css/",
         "source": "GitHub Blog"
       }
     ]
