@@ -1,149 +1,149 @@
 {
   "metadata": {
-    "last_updated": "2026-10-06T00:37:42.436827",
-    "total_items": 50
+    "last_updated": "2026-10-06T07:15:54.244381",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
-        "url": "https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/",
-        "source": "Hacker News",
-        "score": 145
-      },
-      {
         "title": "Beam: Reflection's 501B open-weight model",
         "url": "https://reflection.ai/blog/introducing-beam",
         "source": "Hacker News",
-        "score": 290
+        "score": 410
       },
       {
-        "title": "Example.com Just Launched the Biggest Redesign in Decades",
+        "title": "Example.com just launched the biggest redesign in decades",
         "url": "https://www.debugbear.com/blog/example-dot-com-redesign-history",
         "source": "Hacker News",
-        "score": 50
+        "score": 189
+      },
+      {
+        "title": "Resurrecting iChat Audio and Video Conferencing",
+        "url": "https://blog.pipetogrep.org/2026/09/11/resurrecting-ichat-audio-and-video-conferencing/",
+        "source": "Hacker News",
+        "score": 36
       },
       {
         "title": "Find the flattest route between any two points in SF",
         "url": "https://flattensf.com/",
         "source": "Hacker News",
-        "score": 91
-      },
-      {
-        "title": "Dust: Pretraining Transformers Without Backpropagation",
-        "url": "https://qlabs.sh/research/dust",
-        "source": "Hacker News",
-        "score": 84
-      },
-      {
-        "title": "Ephemeral Testing",
-        "url": "https://lemire.me/blog/2026/10/05/ephemeral-testing/",
-        "source": "Hacker News",
-        "score": 19
+        "score": 172
       },
       {
         "title": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
         "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
         "source": "Hacker News",
-        "score": 188
+        "score": 311
       },
       {
-        "title": "AI Tutoring with Khanmigo in a Two-Year School Experiment",
-        "url": "https://edworkingpapers.com/ai26-1551",
+        "title": "Dust: Pretraining Transformers Without Backpropagation",
+        "url": "https://qlabs.sh/research/dust",
         "source": "Hacker News",
-        "score": 11
+        "score": 154
+      },
+      {
+        "title": "Accountability mechanisms can be joyful",
+        "url": "https://liquidbrain.net/blog/accountability-and-joy/",
+        "source": "Hacker News",
+        "score": 10
+      },
+      {
+        "title": "Why Common Lisp is now the best programming language",
+        "url": "https://www.vivienhenz.com/common-lisp",
+        "source": "Hacker News",
+        "score": 130
       },
       {
         "title": "Friendship ended with Deno, now Node is my best friend",
         "url": "https://dbushell.com/2026/10/03/deno-to-node/",
         "source": "Hacker News",
-        "score": 23
+        "score": 136
       },
       {
-        "title": "Worth Building",
-        "url": "https://armstr.ng/writing/worth-building",
+        "title": "An algorithmic failure beneath the secret ballot",
+        "url": "https://blog.citp.princeton.edu/2026/08/03/an-algorithmic-failure-beneath-the-secret-ballot/",
         "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "Is mathematics over, or just graduating?",
-        "url": "https://docs.google.com/document/d/e/2PACX-1vTSh-pyNP3Gi99WMmsinnLmE9V5CDI0HEm6WGbIPMNt3V5SGlClHF8-BetotKHOImrvQDSXmFdiOw8D/pub",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Using Blu-ray M-Disk as backup of last resort",
-        "url": "https://smyck.net/2026/10/03/holocron-the-backup-of-last-resort/",
-        "source": "Hacker News",
-        "score": 52
+        "score": 69
       },
       {
         "title": "Web Search API",
         "url": "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
         "source": "Hacker News",
-        "score": 476
+        "score": 528
+      },
+      {
+        "title": "Anthropic reported diary entry to police, woman faces felony charge",
+        "url": "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html",
+        "source": "Hacker News",
+        "score": 684
+      },
+      {
+        "title": "Testing 12 different Zigbee temperature/humidity sensors",
+        "url": "https://smarthomescene.com/reviews/best-selling-zigbee-temperature-sensors-tested/",
+        "source": "Hacker News",
+        "score": 96
       },
       {
         "title": "Competitive Programmer's Handbook (2018) [pdf]",
         "url": "https://cses.fi/book/book.pdf",
         "source": "Hacker News",
-        "score": 108
+        "score": 178
       },
       {
-        "title": "DEDA – Tracking Dots Extraction, Decoding and Anonymisation Toolkit",
-        "url": "https://github.com/dfd-tud/deda",
+        "title": "Global Solar Atlas: summary of solar power potential globally",
+        "url": "https://globalsolaratlas.info/",
         "source": "Hacker News",
-        "score": 24
+        "score": 47
       }
     ],
     "ai": [
       {
-        "title": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
-        "url": "https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/",
-        "source": "Hacker News AI",
-        "score": 145
-      },
-      {
         "title": "Dust: Pretraining Transformers Without Backpropagation",
         "url": "https://qlabs.sh/research/dust",
         "source": "Hacker News AI",
-        "score": 84
+        "score": 154
       },
       {
-        "title": "AI Tutoring with Khanmigo in a Two-Year School Experiment",
-        "url": "https://edworkingpapers.com/ai26-1551",
-        "source": "Hacker News AI",
-        "score": 11
-      },
-      {
-        "title": "An Algorithmic Failure Beneath the Secret Ballot",
+        "title": "An algorithmic failure beneath the secret ballot",
         "url": "https://blog.citp.princeton.edu/2026/08/03/an-algorithmic-failure-beneath-the-secret-ballot/",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 69
       },
       {
         "title": "Anthropic reported diary entry to police, woman faces felony charge",
         "url": "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html",
         "source": "Hacker News AI",
-        "score": 510
+        "score": 684
+      },
+      {
+        "title": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
+        "url": "https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/",
+        "source": "Hacker News AI",
+        "score": 391
       },
       {
         "title": "Linux containers in 500 lines of code (2016)",
         "url": "https://blog.lizzie.io/linux-containers-in-500-loc.html",
         "source": "Hacker News AI",
-        "score": 91
+        "score": 120
       },
       {
         "title": "Martian chaos terrain",
         "url": "https://en.wikipedia.org/wiki/Martian_chaos_terrain",
         "source": "Hacker News AI",
-        "score": 98
+        "score": 103
       },
       {
-        "title": "Wikipedia operator says OpenAI's 'rogue' bots may be linked to a May outage",
-        "url": "https://www.theverge.com/news/1004929/wikipedia-openai-rogue-bots-wikimedia-foundation-outage",
+        "title": "AI tutoring with Khanmigo in a two-year school experiment",
+        "url": "https://edworkingpapers.com/ai26-1551",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 61
+      },
+      {
+        "title": "The AI boom is making the cheapest smartphones disappear",
+        "url": "https://restofworld.org/2026/ai-data-center-memory-chip-shortage-cheap-smartphones-digital-divide/",
+        "source": "Hacker News AI",
+        "score": 13
       }
     ],
     "news": [
@@ -158,27 +158,68 @@
         "source": "BBC World"
       },
       {
-        "title": "Flydubai co-pilot planned to crash plane into Tel Aviv airport or building, reports say",
-        "url": "https://www.bbc.co.uk/news/articles/cm3691y79xp5o?at_medium=RSS&at_campaign=rss",
+        "title": "Saudi Arabia urged to spare man sentenced to death over Facebook post",
+        "url": "https://www.bbc.co.uk/news/articles/cq14d438vx24o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Zelensky condemns 'horrific' Russian strike on boat carrying corn in Black Sea",
-        "url": "https://www.bbc.co.uk/news/articles/cr0j0w3p8453o?at_medium=RSS&at_campaign=rss",
+        "title": "Separatist party projected to win Quebec election, adding new test to Canada's unity",
+        "url": "https://www.bbc.co.uk/news/articles/crly09gz7ew4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US 'watching closely' after plague researcher dies in Russia",
-        "url": "https://www.bbc.co.uk/news/articles/cv5yn3nwp5n5o?at_medium=RSS&at_campaign=rss",
+        "title": "Europe is pouring billions into space. Can Glasgow's satellite industry keep up?",
+        "url": "https://www.bbc.co.uk/news/articles/cm2kedyp348lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Pentagon stops using Anthropic AI tools after blacklisting company, BBC told",
-        "url": "https://www.bbc.co.uk/news/articles/c5j9x9pr0240o?at_medium=RSS&at_campaign=rss",
+        "title": "Yemeni military says it has 'secured' Red Sea waterway",
+        "url": "https://www.bbc.co.uk/news/articles/cw8rzd6lp0xpo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Fort Hood shooter to be executed by firing squad - a first for US military since World War Two",
+        "url": "https://www.bbc.co.uk/news/articles/cq8ezkkkrpy1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " This Benq monitor is ideal for creatives who care about colour ",
+        "url": "https://www.creativebloq.com/tech/monitors",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This cuddly toy emits the piercing wail of an AI data centre ",
+        "url": "https://www.creativebloq.com/design/product-design/this-handmade-cuddly-toy-emits-the-piercing-wail-of-an-ai-data-centre",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The $55 GTA VI T-shirt design is actually perfect ",
+        "url": "https://www.creativebloq.com/design/product-design/the-usd55-gta-vi-t-shirt-is-actually-perfect",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Early Prime Day Apple deals just rewound this year's big price hikes with up to $200 off Macs ",
+        "url": "https://www.creativebloq.com/tech/laptops/early-prime-day-apple-deals-just-rewound-this-years-big-price-hikes-with-up-to-usd200-off-macs",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " LIVE: October Prime Day 2026 3D printing deals - save up to 50% ",
+        "url": "https://www.creativebloq.com/live/news/october-prime-day-2026-3d-printing-deals",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Woah, Street Fighter's new billboard is almost too convincing ",
+        "url": "https://www.creativebloq.com/design/advertising/woah-street-fighters-new-billboard-is-almost-too-convincing",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Gears of War: E-Day review: a beautifully brutal Unreal Engine 5 showcase ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/gears-of-war-e-day-review-a-bombastic-unreal-engine-5-showcase-that-loosens-the-formula",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "Don't miss: Watch Saturn shine and Halley’s Comet debris streak across the sky",
@@ -218,6 +259,21 @@
     ],
     "gaming": [
       {
+        "title": "Escape From Tarkov’s New PvE Update Officially Makes the Game Easier for Newbies",
+        "url": "https://www.polygon.com/escape-from-tarkov-pve-update-1-2-0-0-exfil-brothers-prestige/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Stephen King’s New Near-Perfect 8-Part Series Officially Releases on Prime Video This Week",
+        "url": "https://www.polygon.com/stephen-king-carrie-prime-video/",
+        "source": "Polygon"
+      },
+      {
+        "title": "61 Years Later, Clint Eastwood's 132-Minute Legendary Western Sequel Is Free on YouTube",
+        "url": "https://www.polygon.com/for-a-few-dollars-more-clint-eastwood-free-on-youtube-october-2026/",
+        "source": "Polygon"
+      },
+      {
         "title": "GTA 6 Could Finally Fix Gaming's Huge Drug Problem",
         "url": "https://www.polygon.com/gta-6-cocaine-drugs-effects/",
         "source": "Polygon"
@@ -235,21 +291,6 @@
       {
         "title": "The Zelda: Ocarina of Time Controller's Best Replacement Is $30 Cheaper Right Now",
         "url": "https://www.polygon.com/ocarina-of-time-pro-controller-totk/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Sicario 3 Officially Moves Forward, Replacing Taylor Sheridan",
-        "url": "https://www.polygon.com/sicario-3-cast-director-taylor-sheridan-steven-knight/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Multi-Stage Boss Fights Are the Worst Video Game Mechanic of All Time",
-        "url": "https://www.polygon.com/multi-stage-boss-fights-worst-video-game-mechanic/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Overwatch Season 5 skins and Mythics Revealed by Blizzard",
-        "url": "https://www.polygon.com/overwatch-season-5-skins-tech-witches-halloween-battle-pass/",
         "source": "Polygon"
       }
     ],
