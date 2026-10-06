@@ -1,222 +1,235 @@
 {
   "metadata": {
-    "last_updated": "2026-10-06T07:15:54.244381",
-    "total_items": 58
+    "last_updated": "2026-10-06T14:48:35.998081",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
+        "title": "Mistral Large 4",
+        "url": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "source": "Hacker News",
+        "score": 499
+      },
+      {
+        "title": "Mistral Large 4: \"Le Chonk\"",
+        "url": "https://mistral.ai/news/mistral-large-4/",
+        "source": "Hacker News",
+        "score": 231
+      },
+      {
+        "title": "Release of Polars 2.0",
+        "url": "https://pola.rs/posts/release-polars-2/",
+        "source": "Hacker News",
+        "score": 155
+      },
+      {
+        "title": "Nobel Prize in Physics goes to Francis Halzen",
+        "url": "https://www.nobelprize.org/prizes/physics/2026/",
+        "source": "Hacker News",
+        "score": 280
+      },
+      {
+        "title": "Tapo (Rust/Python library) now speaks TP-Link's TPAP protocol",
+        "url": "https://mihai.dinculescu.dev/posts/tapo-speaks-tpap/",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "JetBrains reported a net financial loss first time in its tracked history",
+        "url": "https://www.helgilibrary.com/companies/jetbrains",
+        "source": "Hacker News",
+        "score": 290
+      },
+      {
+        "title": "Benchmark in Milliseconds",
+        "url": "https://matklad.github.io/2026/10/05/benchmark-milliseconds.html",
+        "source": "Hacker News",
+        "score": 15
+      },
+      {
+        "title": "Meta's Muse Is an Adorable Privacy and Security Dumpster Fire",
+        "url": "https://www.techdirt.com/2026/10/06/metas-muse-is-an-adorable-privacy-and-security-dumpster-fire/",
+        "source": "Hacker News",
+        "score": 131
+      },
+      {
+        "title": "Show HN: Parseable, an open observability datalake, handles 100M time-series/min",
+        "url": "https://www.parseable.com",
+        "source": "Hacker News",
+        "score": 13
+      },
+      {
+        "title": "Mathematics of Geothermal Energy",
+        "url": "https://www.ebsco.com/research-starters/power-and-energy/mathematics-geothermal-energy/",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Gleam doesn't compile to Erlang source anymore",
+        "url": "https://gleam.run/news/gleam-doesnt-compile-to-erlang-source-anymore/",
+        "source": "Hacker News",
+        "score": 148
+      },
+      {
+        "title": "Show HN: Jotbus – a shared encrypted scratchpad for coding agents",
+        "url": "https://jotbus.com/",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
+        "title": "Nature's capacity to 'bounce back' when species are lost is vastly overestimated",
+        "url": "https://phys.org/news/2026-10-nature-capacity-species-lost-vastly.html",
+        "source": "Hacker News",
+        "score": 122
+      },
+      {
         "title": "Beam: Reflection's 501B open-weight model",
         "url": "https://reflection.ai/blog/introducing-beam",
         "source": "Hacker News",
-        "score": 410
+        "score": 495
       },
       {
-        "title": "Example.com just launched the biggest redesign in decades",
-        "url": "https://www.debugbear.com/blog/example-dot-com-redesign-history",
+        "title": "World's First enhanced geothermal power plant completed in just 23 months",
+        "url": "https://techcrunch.com/2026/10/01/worlds-first-enhanced-geothermal-power-plant-completed-in-just-23-months/",
         "source": "Hacker News",
-        "score": 189
-      },
-      {
-        "title": "Resurrecting iChat Audio and Video Conferencing",
-        "url": "https://blog.pipetogrep.org/2026/09/11/resurrecting-ichat-audio-and-video-conferencing/",
-        "source": "Hacker News",
-        "score": 36
-      },
-      {
-        "title": "Find the flattest route between any two points in SF",
-        "url": "https://flattensf.com/",
-        "source": "Hacker News",
-        "score": 172
-      },
-      {
-        "title": "Opus 5.5 agents discover two room-temperature magnetic semiconductor candidates",
-        "url": "https://www.vals.ai/blogs/room-temperature-magnetic-semiconductors",
-        "source": "Hacker News",
-        "score": 311
-      },
-      {
-        "title": "Dust: Pretraining Transformers Without Backpropagation",
-        "url": "https://qlabs.sh/research/dust",
-        "source": "Hacker News",
-        "score": 154
-      },
-      {
-        "title": "Accountability mechanisms can be joyful",
-        "url": "https://liquidbrain.net/blog/accountability-and-joy/",
-        "source": "Hacker News",
-        "score": 10
-      },
-      {
-        "title": "Why Common Lisp is now the best programming language",
-        "url": "https://www.vivienhenz.com/common-lisp",
-        "source": "Hacker News",
-        "score": 130
-      },
-      {
-        "title": "Friendship ended with Deno, now Node is my best friend",
-        "url": "https://dbushell.com/2026/10/03/deno-to-node/",
-        "source": "Hacker News",
-        "score": 136
-      },
-      {
-        "title": "An algorithmic failure beneath the secret ballot",
-        "url": "https://blog.citp.princeton.edu/2026/08/03/an-algorithmic-failure-beneath-the-secret-ballot/",
-        "source": "Hacker News",
-        "score": 69
-      },
-      {
-        "title": "Web Search API",
-        "url": "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
-        "source": "Hacker News",
-        "score": 528
-      },
-      {
-        "title": "Anthropic reported diary entry to police, woman faces felony charge",
-        "url": "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html",
-        "source": "Hacker News",
-        "score": 684
-      },
-      {
-        "title": "Testing 12 different Zigbee temperature/humidity sensors",
-        "url": "https://smarthomescene.com/reviews/best-selling-zigbee-temperature-sensors-tested/",
-        "source": "Hacker News",
-        "score": 96
-      },
-      {
-        "title": "Competitive Programmer's Handbook (2018) [pdf]",
-        "url": "https://cses.fi/book/book.pdf",
-        "source": "Hacker News",
-        "score": 178
-      },
-      {
-        "title": "Global Solar Atlas: summary of solar power potential globally",
-        "url": "https://globalsolaratlas.info/",
-        "source": "Hacker News",
-        "score": 47
+        "score": 66
       }
     ],
     "ai": [
       {
+        "title": "Mistral Large 4",
+        "url": "https://docs.mistral.ai/models/mistral-large-4-0",
+        "source": "Hacker News AI",
+        "score": 499
+      },
+      {
+        "title": "Mistral Large 4: \"Le Chonk\"",
+        "url": "https://mistral.ai/news/mistral-large-4/",
+        "source": "Hacker News AI",
+        "score": 231
+      },
+      {
+        "title": "JetBrains reported a net financial loss first time in its tracked history",
+        "url": "https://www.helgilibrary.com/companies/jetbrains",
+        "source": "Hacker News AI",
+        "score": 290
+      },
+      {
         "title": "Dust: Pretraining Transformers Without Backpropagation",
         "url": "https://qlabs.sh/research/dust",
         "source": "Hacker News AI",
-        "score": 154
+        "score": 239
       },
       {
-        "title": "An algorithmic failure beneath the secret ballot",
-        "url": "https://blog.citp.princeton.edu/2026/08/03/an-algorithmic-failure-beneath-the-secret-ballot/",
+        "title": "Mistral Large 4",
+        "url": "https://twitter.com/MistralAI/status/2107456586813730854",
         "source": "Hacker News AI",
-        "score": 69
+        "score": 61
       },
       {
         "title": "Anthropic reported diary entry to police, woman faces felony charge",
         "url": "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html",
         "source": "Hacker News AI",
-        "score": 684
+        "score": 762
+      },
+      {
+        "title": "An algorithmic failure beneath the secret ballot",
+        "url": "https://blog.citp.princeton.edu/2026/08/03/an-algorithmic-failure-beneath-the-secret-ballot/",
+        "source": "Hacker News AI",
+        "score": 99
+      },
+      {
+        "title": "Remote Live vs. Pre-Recorded Exercise Training for Chronic Low Back Pain (RCT)",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13619851/",
+        "source": "Hacker News AI",
+        "score": 7
       },
       {
         "title": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
         "url": "https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/",
         "source": "Hacker News AI",
-        "score": 391
+        "score": 499
       },
       {
         "title": "Linux containers in 500 lines of code (2016)",
         "url": "https://blog.lizzie.io/linux-containers-in-500-loc.html",
         "source": "Hacker News AI",
-        "score": 120
+        "score": 132
       },
       {
-        "title": "Martian chaos terrain",
-        "url": "https://en.wikipedia.org/wiki/Martian_chaos_terrain",
+        "title": "Using A.I. and machine learning to decode communication of sperm whales",
+        "url": "https://blue-continuum.com/the-man-who-listens-to-whales",
         "source": "Hacker News AI",
-        "score": 103
-      },
-      {
-        "title": "AI tutoring with Khanmigo in a two-year school experiment",
-        "url": "https://edworkingpapers.com/ai26-1551",
-        "source": "Hacker News AI",
-        "score": 61
-      },
-      {
-        "title": "The AI boom is making the cheapest smartphones disappear",
-        "url": "https://restofworld.org/2026/ai-data-center-memory-chip-shortage-cheap-smartphones-digital-divide/",
-        "source": "Hacker News AI",
-        "score": 13
+        "score": 57
       }
     ],
     "news": [
       {
-        "title": "Trump says 'threat' led US to pull bombers from RAF Fairford",
-        "url": "https://www.bbc.co.uk/news/articles/cwj3413e5m1lo?at_medium=RSS&at_campaign=rss",
+        "title": "Former German spy chief arrested for espionage and treason",
+        "url": "https://www.bbc.co.uk/news/articles/c58jzyer1kr0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "France braces for national day of school protests after injuries and mass arrests",
-        "url": "https://www.bbc.co.uk/news/articles/cr4g1q1elxnjo?at_medium=RSS&at_campaign=rss",
+        "title": "Ship sinks and crew missing after Black Sea drone attack",
+        "url": "https://www.bbc.co.uk/news/articles/c8ly0v5r602eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Saudi Arabia urged to spare man sentenced to death over Facebook post",
-        "url": "https://www.bbc.co.uk/news/articles/cq14d438vx24o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Separatist party projected to win Quebec election, adding new test to Canada's unity",
-        "url": "https://www.bbc.co.uk/news/articles/crly09gz7ew4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Europe is pouring billions into space. Can Glasgow's satellite industry keep up?",
-        "url": "https://www.bbc.co.uk/news/articles/cm2kedyp348lo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Yemeni military says it has 'secured' Red Sea waterway",
-        "url": "https://www.bbc.co.uk/news/articles/cw8rzd6lp0xpo?at_medium=RSS&at_campaign=rss",
+        "title": "Lawyer for one of Cornell 7 calls for special prosecutor to be removed over previous comments",
+        "url": "https://www.bbc.co.uk/news/articles/c9p8gxygvpg6o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Fort Hood shooter to be executed by firing squad - a first for US military since World War Two",
         "url": "https://www.bbc.co.uk/news/articles/cq8ezkkkrpy1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
+      },
+      {
+        "title": "'Ghost particles' from space telescope wins physics Nobel",
+        "url": "https://www.bbc.co.uk/news/articles/cq203mymlvkeo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Kenya confirms its first Ebola death as outbreak spreads",
+        "url": "https://www.bbc.co.uk/news/articles/cqzrd7v1j163o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Saudi Arabia urged to spare man sentenced to death over Facebook post",
+        "url": "https://www.bbc.co.uk/news/articles/cq14d438vx24o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " This Benq monitor is ideal for creatives who care about colour ",
-        "url": "https://www.creativebloq.com/tech/monitors",
+        "title": " This beautiful wooden pen is less than $10 for Prime Day ",
+        "url": "https://www.creativebloq.com/design/product-design/this-beautiful-wooden-pen-is-less-than-usd10-for-prime-day",
         "source": "Creative Bloq"
       },
       {
-        "title": " This cuddly toy emits the piercing wail of an AI data centre ",
-        "url": "https://www.creativebloq.com/design/product-design/this-handmade-cuddly-toy-emits-the-piercing-wail-of-an-ai-data-centre",
+        "title": " Get up to 43% off top Switch games this Prime Day ",
+        "url": "https://www.creativebloq.com/entertainment/gaming/get-up-to-43-percent-off-top-switch-game-this-prime-day",
         "source": "Creative Bloq"
       },
       {
-        "title": " The $55 GTA VI T-shirt design is actually perfect ",
-        "url": "https://www.creativebloq.com/design/product-design/the-usd55-gta-vi-t-shirt-is-actually-perfect",
+        "title": " This magic notebook digitises your doodles in real time, and it's 30% off right now ",
+        "url": "https://www.creativebloq.com/art/digital-art-software/this-magic-notebook-digitises-your-doodles-in-real-time-and-its-30-percent-off-right-now",
         "source": "Creative Bloq"
       },
       {
-        "title": " Early Prime Day Apple deals just rewound this year's big price hikes with up to $200 off Macs ",
-        "url": "https://www.creativebloq.com/tech/laptops/early-prime-day-apple-deals-just-rewound-this-years-big-price-hikes-with-up-to-usd200-off-macs",
+        "title": " Right now you can get a Microsoft Surface Pro for just £549, down from £799.99 ",
+        "url": "https://www.creativebloq.com/tech/laptops/right-now-you-can-get-a-microsoft-surface-pro-for-just-gbp549-down-from-gbp799-99",
         "source": "Creative Bloq"
       },
       {
-        "title": " LIVE: October Prime Day 2026 3D printing deals - save up to 50% ",
-        "url": "https://www.creativebloq.com/live/news/october-prime-day-2026-3d-printing-deals",
+        "title": " We've never seen a Disney billboard like this before ",
+        "url": "https://www.creativebloq.com/design/print-design-publishing/weve-never-seen-a-disney-billboard-like-this-before",
         "source": "Creative Bloq"
       },
       {
-        "title": " Woah, Street Fighter's new billboard is almost too convincing ",
-        "url": "https://www.creativebloq.com/design/advertising/woah-street-fighters-new-billboard-is-almost-too-convincing",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Gears of War: E-Day review: a beautifully brutal Unreal Engine 5 showcase ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/gears-of-war-e-day-review-a-bombastic-unreal-engine-5-showcase-that-loosens-the-formula",
+        "title": " Testing the iPad Air M4 as a multi-disciplinary artist: does it stack up? ",
+        "url": "https://www.creativebloq.com/tech/phones-tablets/testing-the-ipad-air-m4-as-a-multi-disciplinary-artist-does-it-stack-up",
         "source": "Creative Bloq"
       }
     ],
@@ -232,65 +245,65 @@
         "source": "Science Daily"
       },
       {
-        "title": "This mysterious hole on the Moon may open into a giant cave",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261003234013.htm",
+        "title": "Goodbye joint replacements? Stanford scientists found a way to regrow cartilage and stop arthritis",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261005011249.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Vagus Nerve Stimulation Could Help New Skills Stick",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261002080034.htm",
+        "title": "Physicists just saw quarks make waves in the Big Bang’s primordial soup",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261004002556.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists find a surprising clue to why the universe’s expansion doesn’t add up",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261002080026.htm",
+        "title": "Scientists say this simple habit could strengthen your marriage",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261004001843.htm",
         "source": "Science Daily"
       },
       {
-        "title": "The “glue” holding your cells together has a surprising second job",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261002080023.htm",
+        "title": "Scientists finally see how nature moves energy so efficiently",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261004001841.htm",
         "source": "Science Daily"
       },
       {
-        "title": "This protective enzyme could help stop fatty liver disease from getting worse",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261002080020.htm",
+        "title": "Archaeologists may have finally solved a 100-year-old Florida mystery",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261004001835.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Escape From Tarkov’s New PvE Update Officially Makes the Game Easier for Newbies",
-        "url": "https://www.polygon.com/escape-from-tarkov-pve-update-1-2-0-0-exfil-brothers-prestige/",
+        "title": "The Best Star Wars Game of the Year is Now on Amazon Prime",
+        "url": "https://www.polygon.com/star-wars-galactic-racer-amazon-gaming-luna/",
         "source": "Polygon"
       },
       {
-        "title": "Stephen King’s New Near-Perfect 8-Part Series Officially Releases on Prime Video This Week",
-        "url": "https://www.polygon.com/stephen-king-carrie-prime-video/",
+        "title": "Ghostbusters Franchise Returns With a New Christmas Movie, Report Says",
+        "url": "https://www.polygon.com/ghostbusters-nightmare-on-34th-street/",
         "source": "Polygon"
       },
       {
-        "title": "61 Years Later, Clint Eastwood's 132-Minute Legendary Western Sequel Is Free on YouTube",
-        "url": "https://www.polygon.com/for-a-few-dollars-more-clint-eastwood-free-on-youtube-october-2026/",
+        "title": "Lego Is Officially Teaming up With Hello Kitty in 2027",
+        "url": "https://www.polygon.com/lego-sanrio-hello-kitty-and-friends-line-announced/",
         "source": "Polygon"
       },
       {
-        "title": "GTA 6 Could Finally Fix Gaming's Huge Drug Problem",
-        "url": "https://www.polygon.com/gta-6-cocaine-drugs-effects/",
+        "title": "Final Fantasy 14’s Most Unique Crossover Is Officially Returning This Week",
+        "url": "https://www.polygon.com/final-fantasy-14-fall-guys-crossover-event-dates-rewards/",
         "source": "Polygon"
       },
       {
-        "title": "38 Years Ago, 'Doctor Who' Doubled Down on Its Most Inventive Sci-Fi Concept",
-        "url": "https://www.polygon.com/doctor-who-remembrance-of-the-daleks/",
+        "title": "The Best Xbox Amazon Prime Day Gaming Deals",
+        "url": "https://www.polygon.com/best-xbox-deals-amazon-prime-day-sale-october-2026/",
         "source": "Polygon"
       },
       {
-        "title": "All 'Freeze Frame' camera locations in Control Resonant",
-        "url": "https://www.polygon.com/control-resonant-freeze-frame-camera-instant-photo-locations/",
+        "title": "Nintendo's New Switch Sports Is the Best of Wii Sports, Wave Race, and More",
+        "url": "https://www.polygon.com/nintendo-switch-sports-resort-preview-switch-2/",
         "source": "Polygon"
       },
       {
-        "title": "The Zelda: Ocarina of Time Controller's Best Replacement Is $30 Cheaper Right Now",
-        "url": "https://www.polygon.com/ocarina-of-time-pro-controller-totk/",
+        "title": "Refurbished PS5 Pros Are Now 50% More Expensive than New Ones at GameStop",
+        "url": "https://www.polygon.com/gamestop-playstation-5-ps5-pro-price-change-preowned-refurbished/",
         "source": "Polygon"
       }
     ],
