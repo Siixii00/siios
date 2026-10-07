@@ -1,188 +1,199 @@
 {
   "metadata": {
-    "last_updated": "2026-10-07T06:54:51.630253",
-    "total_items": 64
+    "last_updated": "2026-10-07T14:16:21.356696",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Shipping JPEG XL in Chrome",
+        "url": "https://developer.chrome.com/blog/jpeg-xl-in-chrome",
+        "source": "Hacker News",
+        "score": 201
+      },
+      {
+        "title": "A font recreated from photographs of classic Commodore 64 keycaps",
+        "url": "https://github.com/szabadkai/c64-keyboard-font/",
+        "source": "Hacker News",
+        "score": 206
+      },
+      {
+        "title": "Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai",
+        "url": "https://www.nobelprize.org/prizes/chemistry/2026/press-release/",
+        "source": "Hacker News",
+        "score": 140
+      },
+      {
+        "title": "Google Playground: Create and play custom games",
+        "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
+        "source": "Hacker News",
+        "score": 47
+      },
+      {
+        "title": "Write Like It's 1866: LLMs Relearn Telegraphese",
+        "url": "https://fiveminutesforward.com/post/2026-10-04-telegraph-test/",
+        "source": "Hacker News",
+        "score": 32
+      },
+      {
         "title": "Sharing AI progress in mathematics",
         "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
         "source": "Hacker News",
-        "score": 759
+        "score": 1067
+      },
+      {
+        "title": "Show HN: A walkable 3D art history museum built from Wikipedia",
+        "url": "https://artmuseum.artfrompixels.com/",
+        "source": "Hacker News",
+        "score": 14
+      },
+      {
+        "title": "Rust's derive often implies inline",
+        "url": "https://yossarian.net/til/post/rust-s-derive-often-implies-inline/",
+        "source": "Hacker News",
+        "score": 54
+      },
+      {
+        "title": "Show HN: AstroHelm – Use your phone camera to aim a telescope or telephoto lens",
+        "url": "https://astrohelm.app/",
+        "source": "Hacker News",
+        "score": 45
       },
       {
         "title": "Strands Decider 2B: a small, open-source, decision model",
         "url": "https://strandsagents.com/blog/introducing-strands-decider/",
         "source": "Hacker News",
-        "score": 126
+        "score": 233
+      },
+      {
+        "title": "House with 15m underground tunnels for sale for 300k",
+        "url": "https://www.readingchronicle.co.uk/news/26612080.house-15m-underground-tunnels-sale-300k/",
+        "source": "Hacker News",
+        "score": 57
+      },
+      {
+        "title": "Forever Junior: The Skills AI Can't Develop for You",
+        "url": "https://tech.criteo.com/blog/human-skills-ai-cant-develop-junior-engineers/",
+        "source": "Hacker News",
+        "score": 39
       },
       {
         "title": "Decisions API is in public beta",
         "url": "https://developers.openai.com/api/docs/guides/decisions",
         "source": "Hacker News",
-        "score": 239
-      },
-      {
-        "title": "Shaders, WebGPU Components for React, Vue, Svelte, Solid, JavaScript and Framer",
-        "url": "https://github.com/shader-effects-inc/shaders",
-        "source": "Hacker News",
-        "score": 8
-      },
-      {
-        "title": "La Cueva BBS in Mexico in 1993 (session replay)",
-        "url": "https://nanochess.org/la_cueva_bbs.html",
-        "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "Mistral Large 4",
-        "url": "https://mistral.ai/news/mistral-large-4/\\",
-        "source": "Hacker News",
-        "score": 1718
-      },
-      {
-        "title": "Penguin Mail – open-source Rust email client for Linux with AI",
-        "url": "https://penguin-mail.com/",
-        "source": "Hacker News",
-        "score": 147
-      },
-      {
-        "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
-        "source": "Hacker News",
-        "score": 293
+        "score": 360
       },
       {
         "title": "ESP32-C3 Adblock",
         "url": "https://github.com/M-Abozaid/esp32-c3-adblock",
         "source": "Hacker News",
-        "score": 56
+        "score": 147
       },
       {
-        "title": "What Is Codemode",
-        "url": "https://lucumr.pocoo.org/2026/10/6/codemode/",
+        "title": "Mistral Large 4",
+        "url": "https://mistral.ai/news/mistral-large-4/\\",
         "source": "Hacker News",
-        "score": 56
-      },
-      {
-        "title": "The art of defusing a second world war bomb",
-        "url": "https://www.theguardian.com/news/ng-interactive/2026/oct/06/it-could-knock-a-whole-street-down-the-art-of-defusing-a-second-world-war-bomb",
-        "source": "Hacker News",
-        "score": 21
-      },
-      {
-        "title": "The cost of lies: A Mineserver story",
-        "url": "https://www.jeremyreimer.com/rockets-item.lsp?f=true&p=272",
-        "source": "Hacker News",
-        "score": 73
-      },
-      {
-        "title": "AnyPS5: Port PS5 binaries to PC without emulation (87% system libraries mapped)",
-        "url": "https://github.com/boykopovar/AnyPS5",
-        "source": "Hacker News",
-        "score": 209
-      },
-      {
-        "title": "Claude Code’s suggested message feature: I think the real customer is the model",
-        "url": "https://www.zohaib.cc/blog/smartest-claude-code-feature",
-        "source": "Hacker News",
-        "score": 171
-      },
-      {
-        "title": "Jev-Driven SRE Diagnosis: What Worked and What Failed",
-        "url": "https://www.sregym.com/blog/jev-driven-sre-diagnosis",
-        "source": "Hacker News",
-        "score": 25
+        "score": 1921
       }
     ],
     "ai": [
       {
+        "title": "Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai",
+        "url": "https://www.nobelprize.org/prizes/chemistry/2026/press-release/",
+        "source": "Hacker News AI",
+        "score": 140
+      },
+      {
+        "title": "Write Like It's 1866: LLMs Relearn Telegraphese",
+        "url": "https://fiveminutesforward.com/post/2026-10-04-telegraph-test/",
+        "source": "Hacker News AI",
+        "score": 32
+      },
+      {
         "title": "Sharing AI progress in mathematics",
         "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
         "source": "Hacker News AI",
-        "score": 759
+        "score": 1067
+      },
+      {
+        "title": "Show HN: AstroHelm – Use your phone camera to aim a telescope or telephoto lens",
+        "url": "https://astrohelm.app/",
+        "source": "Hacker News AI",
+        "score": 45
+      },
+      {
+        "title": "Forever Junior: The Skills AI Can't Develop for You",
+        "url": "https://tech.criteo.com/blog/human-skills-ai-cant-develop-junior-engineers/",
+        "source": "Hacker News AI",
+        "score": 39
       },
       {
         "title": "Mistral Large 4",
         "url": "https://mistral.ai/news/mistral-large-4/\\",
         "source": "Hacker News AI",
-        "score": 1718
-      },
-      {
-        "title": "Penguin Mail – open-source Rust email client for Linux with AI",
-        "url": "https://penguin-mail.com/",
-        "source": "Hacker News AI",
-        "score": 147
+        "score": 1921
       },
       {
         "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
         "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
         "source": "Hacker News AI",
-        "score": 293
+        "score": 377
       },
       {
         "title": "Claude Code’s suggested message feature: I think the real customer is the model",
         "url": "https://www.zohaib.cc/blog/smartest-claude-code-feature",
         "source": "Hacker News AI",
-        "score": 171
-      },
-      {
-        "title": "Jev-Driven SRE Diagnosis: What Worked and What Failed",
-        "url": "https://www.sregym.com/blog/jev-driven-sre-diagnosis",
-        "source": "Hacker News AI",
-        "score": 25
-      },
-      {
-        "title": "OpenTPU – An open-source AI accelerator, developed by AI",
-        "url": "https://github.com/FeSens/openTPU",
-        "source": "Hacker News AI",
-        "score": 274
-      },
-      {
-        "title": "Hackers obtain counterfeit TLS certificates for Google and other large services",
-        "url": "https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services/",
-        "source": "Hacker News AI",
-        "score": 32
-      },
-      {
-        "title": "LLMs may have helped my RSI",
-        "url": "https://vaughanhilts.me/2026/10/05/llms-immensely-helped-my-rsi.html",
-        "source": "Hacker News AI",
-        "score": 81
+        "score": 240
       },
       {
         "title": "Show HN: NanoMuse – An open-source AI agent for your phone and computer",
         "url": "https://github.com/nano-muse/nanoMuse",
         "source": "Hacker News AI",
-        "score": 10
+        "score": 42
       },
       {
-        "title": "South Korea says AI agents appear to have been used to hack the country's banks",
-        "url": "https://www.reuters.com/world/south-koreas-lee-says-ai-appears-have-been-used-bank-hacks-2026-10-06/",
+        "title": "OpenTPU – An open-source AI accelerator, developed by AI",
+        "url": "https://github.com/FeSens/openTPU",
         "source": "Hacker News AI",
-        "score": 66
+        "score": 321
       },
       {
-        "title": "UniEvo-VL: Self-Distillation Training for Multimodal Model Self-Improvement",
-        "url": "https://arxiv.org/abs/2609.38721",
+        "title": "Bender: AI's 'Existential' Risk Is 'Fake' [video]",
+        "url": "https://www.youtube.com/watch?v=QuZjcKshf_c",
         "source": "Hacker News AI",
-        "score": 15
+        "score": 6
       },
       {
-        "title": "Erdosproblems.com Succumbs to the AI Onslaught",
-        "url": "https://www.erdosproblems.com/forum/thread/blog:9",
+        "title": "PS5 Jailbreaks Are Escalating at an Unprecedented Pace",
+        "url": "https://www.pushsquare.com/news/2026/10/ps5-jailbreaks-are-escalating-at-an-unprecedented-pace-and-sony-must-be-sweating",
         "source": "Hacker News AI",
-        "score": 99
+        "score": 59
       },
       {
-        "title": "Berthd",
-        "url": "https://berthd.app/",
+        "title": "Penguin Mail – open-source Rust email client for Linux with AI",
+        "url": "https://penguin-mail.com/",
         "source": "Hacker News AI",
-        "score": 56
+        "score": 220
+      },
+      {
+        "title": "Sharded, encrypted storage between friends over Yggdrasil",
+        "url": "https://github.com/peterretief/yggstore",
+        "source": "Hacker News AI",
+        "score": 21
+      },
+      {
+        "title": "Hackers obtain counterfeit TLS certificates for Google and other large services",
+        "url": "https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services/",
+        "source": "Hacker News AI",
+        "score": 120
       }
     ],
     "news": [
+      {
+        "title": "France halts use of stun grenades after boy's hand blown off in student protests",
+        "url": "https://www.bbc.co.uk/news/articles/cqzjx7z2r4gko?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "US death row inmate Christa Pike awake and speaking after failed execution, lawyers say",
         "url": "https://www.bbc.co.uk/news/articles/c8kgezxn54qko?at_medium=RSS&at_campaign=rss",
@@ -194,32 +205,52 @@
         "source": "BBC World"
       },
       {
-        "title": "What is pneumonic plague and how does it spread?",
-        "url": "https://www.bbc.co.uk/news/articles/cxdd8035jzn3o?at_medium=RSS&at_campaign=rss",
+        "title": "Trump to speak to Putin about plague lab worker's death in Russia",
+        "url": "https://www.bbc.co.uk/news/articles/cqgm0vrl3xp7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ex-US spy who stashed gold bars in his home admits to $200m scam",
-        "url": "https://www.bbc.co.uk/news/articles/cr3wvq965dngo?at_medium=RSS&at_campaign=rss",
+        "title": "Zelensky condemns 'vile' large-scale Russian attacks that killed 20",
+        "url": "https://www.bbc.co.uk/news/articles/ckr5ym098vdeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "A beautiful Himalayan bird is changing its voice due to human activity, research shows",
-        "url": "https://www.bbc.co.uk/news/articles/cq9868z88rexo?at_medium=RSS&at_campaign=rss",
+        "title": "Sri Lanka's ex-first lady arrested over alleged misuse of children's hospital donations",
+        "url": "https://www.bbc.co.uk/news/articles/ck0e0n3xzvp4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Former Australian bishop jailed for sexually abusing young men",
-        "url": "https://www.bbc.co.uk/news/articles/cj62ylxqz173o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Tear gas in Paris and Marseille as school protests grow across France",
-        "url": "https://www.bbc.co.uk/news/articles/c8x23706pvz3o?at_medium=RSS&at_campaign=rss",
+        "title": "Chemistry Nobel awarded for solving mystery of life's asymmetry ",
+        "url": "https://www.bbc.co.uk/news/articles/c6ly038jg0d4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Cricut isn’t playing around this Prime Day - save over 40% on top machines ",
+        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/cricut-isnt-playing-around-this-prime-day-save-over-40-percent-on-top-machines",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " These 7 laptops can handle both creative work and gaming, and they have up to $400 off for just a few more hours ",
+        "url": "https://www.creativebloq.com/tech/laptops/these-7-laptops-can-handle-both-creative-work-and-gaming-and-they-have-up-to-usd400-off-for-just-a-few-more-hours",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The new Hunger Games: Sunrise on the Reaping poster feels like beautiful propaganda ",
+        "url": "https://www.creativebloq.com/design/poster-design/the-new-hunger-games-sunrise-on-the-reaping-poster-feels-like-beautiful-propaganda",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Turns out Prime Day is a haven for coffee maker deals ",
+        "url": "https://www.creativebloq.com/design/product-design/turns-out-prime-day-is-a-haven-for-coffee-maker-deals",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " “For this piece, I challenged myself to work with a limited, high-key palette. I wanted to preserve depth while using mostly light colours where I could” ",
+        "url": "https://www.creativebloq.com/art/digital-art/for-this-piece-i-challenged-myself-to-work-with-a-limited-high-key-palette-i-wanted-to-preserve-depth-while-using-mostly-light-colours-where-i-could",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Jaguar's controversial rebrand finally makes sense with the unveiling of the bold Type 01 ",
         "url": "https://www.creativebloq.com/design/product-design/jaguars-dramatic-type-01-finally-makes-sense-of-the-controversial-rebrand",
@@ -229,104 +260,79 @@
         "title": " One of the most impressive sub-$200 earphones of 2026 just got reduced by 20% to $152 ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/one-of-the-most-impressive-sub-usd200-earphones-of-2026-just-got-reduced-by-20-percent-to-usd152",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Get those extra ports you need with up to 25% off these versatile docks ",
-        "url": "https://www.creativebloq.com/tech/peripherals/get-those-extra-ports-you-need-with-up-to-25-percent-off-these-versatile-docks",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Protect your spine and make big savings, with these Prime Day office chair deals ",
-        "url": "https://www.creativebloq.com/tech/chairs-desks/protect-your-spine-and-make-big-savings-with-these-prime-day-office-chair-deals",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " These cut-price Apple Pencil alts do the job from just $15 (with a couple of caveats) ",
-        "url": "https://www.creativebloq.com/art/digital-art-software/these-cut-price-apple-pencil-alts-do-the-job-from-just-usd15-with-a-couple-of-caveats",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apple's best ever AirPods Pro are a massive $70 off for Prime Day ",
-        "url": "https://www.creativebloq.com/design/product-design/apples-best-ever-airpods-pro-are-a-massive-usd70-off-for-prime-day",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Free Star Wars Galactic Racer on Amazon Luna could mark a massive step change for video game releases ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/free-star-wars-galactic-racer-on-amazon-luna-could-mark-a-massive-step-change-for-video-game-releases",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "NASA’s Webb finds signs of Mars-sized worlds smashing together",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261007042108.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Taking antibiotics? Sugar may be making the damage worse",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261007042059.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists changed how zoo lions eat. Their wild side came out",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261005071535.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists reprogram immune cells inside the body to fight cancer",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261005071532.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Humans may not be as hardwired for violence as we thought",
         "url": "https://www.sciencedaily.com/releases/2026/10/261005071529.htm",
         "source": "Science Daily"
       },
       {
+        "title": "Webb finds a surprising atmosphere on a scorching lava world",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261005071526.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Don't miss: Watch Saturn shine and Halley’s Comet debris streak across the sky",
         "url": "https://www.sciencedaily.com/releases/2026/10/261005071523.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists reveal what seven days of fasting does to the human body",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261005012444.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A new way to fight gum disease without wiping out good bacteria",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261005012230.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Goodbye joint replacements? Stanford scientists found a way to regrow cartilage and stop arthritis",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261005011249.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Physicists just saw quarks make waves in the Big Bang’s primordial soup",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261004002556.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists say this simple habit could strengthen your marriage",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261004001843.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "The 10 Greatest Sci-Fi Cyberpunk Movies of All Time, Ranked",
-        "url": "https://www.polygon.com/best-sci-fi-cyberpunk-movies-ranked/",
+        "title": "PlayStation Bringing Back Ape Escape With Ex-Sonic Devs, Report Says",
+        "url": "https://www.polygon.com/ape-escape-new-game-sonic-mania/",
         "source": "Polygon"
       },
       {
-        "title": "10 Essential GBA Games Still Missing From Switch Online",
-        "url": "https://www.polygon.com/best-gba-games-missing-nintendo-switch-online/",
+        "title": "Annapurna’s New Game Is the Most Annapurna Game of All Time",
+        "url": "https://www.polygon.com/forever-ago-review/",
         "source": "Polygon"
       },
       {
-        "title": "20 Years Later, Battlestar Galactica’s Most Intense Episode Is Still an All-Time Classic",
-        "url": "https://www.polygon.com/battlestar-galactica-occupation-20-years-anniversary/",
+        "title": "The Best Amazon Prime Day Gaming Deals Right Now",
+        "url": "https://www.polygon.com/best-amazon-prime-day-gaming-deals-october-2026/",
         "source": "Polygon"
       },
       {
-        "title": "8 Most Unhinged Dark Urge Lines in BG3",
-        "url": "https://www.polygon.com/best-dark-urge-lines-baldurs-gate-3/",
+        "title": "'500-hour' Order of the Sinking Star Is As Complex and Exhausting As It Sounds",
+        "url": "https://www.polygon.com/order-of-the-sinking-star-impressions/",
         "source": "Polygon"
       },
       {
-        "title": "5 Sci-Fi Series To Watch If You Love Lanterns",
-        "url": "https://www.polygon.com/5-sci-fi-series-like-lanterns/",
+        "title": "All active Escape From Tarkov codes and rewards",
+        "url": "https://www.polygon.com/escape-from-tarkov-promo-codes-list-active-expired/",
         "source": "Polygon"
       },
       {
-        "title": "Critical Role's Best Member Just Officially Raised the Bar for D&D Players Everywhere",
-        "url": "https://www.polygon.com/critical-role-wicander-halovar-sam-riegel/",
+        "title": "Disney's Legendary 218-Episode Sci-Fi Series Is the Perfect Anti-'Lanterns' Binge ",
+        "url": "https://www.polygon.com/x-files-is-perfect-anti-lanterns-binge/",
         "source": "Polygon"
       },
       {
-        "title": "The 12 Best Video Game Series of the 1980s and '90s, Ranked",
-        "url": "https://www.polygon.com/best-video-game-series-1980s-90s/",
+        "title": "Netflix and Until Dawn Creators are Launching an Interactive Horror Game Based on The Conjuring",
+        "url": "https://www.polygon.com/the-conjuring-netflix-supermassive-games-interactive-horror/",
         "source": "Polygon"
       }
     ],
