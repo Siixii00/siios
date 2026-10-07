@@ -1,158 +1,193 @@
 {
   "metadata": {
-    "last_updated": "2026-10-06T20:00:56.992834",
-    "total_items": 59
+    "last_updated": "2026-10-07T00:24:24.106841",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
+        "title": "Sharing AI progress in mathematics",
+        "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+        "source": "Hacker News",
+        "score": 280
+      },
+      {
         "title": "Mistral Large 4",
         "url": "https://mistral.ai/news/mistral-large-4/\\",
         "source": "Hacker News",
-        "score": 1253
+        "score": 1555
+      },
+      {
+        "title": "Decisions API is in public beta",
+        "url": "https://developers.openai.com/api/docs/guides/decisions",
+        "source": "Hacker News",
+        "score": 109
+      },
+      {
+        "title": "Integer multiplication below n log n",
+        "url": "https://github.com/openai/math/tree/main/preprints/Integer-multiplication-below-n-log-n-September-23-2026",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
+        "title": "Penguin Mail – open-source Rust email client for Linux with AI",
+        "url": "https://penguin-mail.com/",
+        "source": "Hacker News",
+        "score": 29
+      },
+      {
+        "title": "AnyPS5: Port PS5 binaries to PC without emulation (87% system libraries mapped)",
+        "url": "https://github.com/boykopovar/AnyPS5",
+        "source": "Hacker News",
+        "score": 8
+      },
+      {
+        "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+        "source": "Hacker News",
+        "score": 198
+      },
+      {
+        "title": "Vibecoding Photoshop: Time and pressure",
+        "url": "https://andreklein.net/vibecoding-photoshop-time-and-pressure/",
+        "source": "Hacker News",
+        "score": 42
       },
       {
         "title": "Nobel Prize in Physics 2026: Francis Halzen",
         "url": "https://www.nobelprize.org/prizes/physics/2026/",
         "source": "Hacker News",
-        "score": 442
+        "score": 514
       },
       {
-        "title": "Tapo (Rust/Python library) now speaks TP-Link's TPAP protocol",
-        "url": "https://mihai.dinculescu.dev/posts/tapo-speaks-tpap/",
+        "title": "OpenTPU – An open-source AI accelerator, developed by AI",
+        "url": "https://github.com/FeSens/openTPU",
         "source": "Hacker News",
-        "score": 107
+        "score": 212
       },
       {
-        "title": "Berthd",
-        "url": "https://berthd.app/",
+        "title": "Claude Code’s suggested message feature: I think the real customer is the model",
+        "url": "https://www.zohaib.cc/blog/smartest-claude-code-feature",
         "source": "Hacker News",
-        "score": 5
+        "score": 75
       },
       {
-        "title": "Benchmark in Milliseconds",
-        "url": "https://matklad.github.io/2026/10/05/benchmark-milliseconds.html",
+        "title": "When random is not actually random enough",
+        "url": "https://ersc.io/blog/when-random-isnt-random-enough",
         "source": "Hacker News",
-        "score": 98
+        "score": 18
       },
       {
-        "title": "Gleam doesn't compile to Erlang source anymore",
-        "url": "https://gleam.run/news/gleam-doesnt-compile-to-erlang-source-anymore/",
+        "title": "Paramount Skydance has completed its $111B merger with Warner Bros. Discovery",
+        "url": "https://arstechnica.com/tech-policy/2026/10/paramount-completes-111b-warner-merger-creating-skydance-behemoth/",
         "source": "Hacker News",
-        "score": 250
+        "score": 157
       },
       {
-        "title": "Mathematics of Geothermal Energy",
-        "url": "https://www.ebsco.com/research-starters/power-and-energy/mathematics-geothermal-energy/",
+        "title": "LLMs may have helped my RSI",
+        "url": "https://vaughanhilts.me/2026/10/05/llms-immensely-helped-my-rsi.html",
         "source": "Hacker News",
-        "score": 55
+        "score": 23
       },
       {
-        "title": "Show HN: I turned my iPhone and a $20 smart plug into an f-stop timer",
-        "url": "https://peterszentkiralyi.eu/darkplug/",
+        "title": "The Query Transformation Pipeline",
+        "url": "https://readyset.io/blog/how-readyset-rewrites-your-sql-inside-the-query-transformation-pipeline",
         "source": "Hacker News",
-        "score": 42
-      },
-      {
-        "title": "The Early History of Smalltalk (1993)",
-        "url": "https://worrydream.com/EarlyHistoryOfSmalltalk/",
-        "source": "Hacker News",
-        "score": 74
-      },
-      {
-        "title": "Subquadratic 3SUM and Subcubic APSP",
-        "url": "https://arxiv.org/abs/2610.06783",
-        "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "Polars 2.0",
-        "url": "https://pola.rs/posts/release-polars-2/",
-        "source": "Hacker News",
-        "score": 353
-      },
-      {
-        "title": "Nature's capacity to 'bounce back' when species are lost is overestimated: study",
-        "url": "https://phys.org/news/2026-10-nature-capacity-species-lost-vastly.html",
-        "source": "Hacker News",
-        "score": 263
-      },
-      {
-        "title": "Beam: Reflection's 501B open-weight model",
-        "url": "https://reflection.ai/blog/introducing-beam",
-        "source": "Hacker News",
-        "score": 526
-      },
-      {
-        "title": "Example.com just launched the biggest redesign in decades",
-        "url": "https://www.debugbear.com/blog/example-dot-com-redesign-history",
-        "source": "Hacker News",
-        "score": 318
-      },
-      {
-        "title": "Show HN: Parseable, an open observability datalake, handles 100M time-series/min",
-        "url": "https://www.parseable.com",
-        "source": "Hacker News",
-        "score": 59
+        "score": 8
       }
     ],
     "ai": [
       {
+        "title": "Sharing AI progress in mathematics",
+        "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
+        "source": "Hacker News AI",
+        "score": 280
+      },
+      {
         "title": "Mistral Large 4",
         "url": "https://mistral.ai/news/mistral-large-4/\\",
         "source": "Hacker News AI",
-        "score": 1253
+        "score": 1555
+      },
+      {
+        "title": "Penguin Mail – open-source Rust email client for Linux with AI",
+        "url": "https://penguin-mail.com/",
+        "source": "Hacker News AI",
+        "score": 29
+      },
+      {
+        "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
+        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+        "source": "Hacker News AI",
+        "score": 198
+      },
+      {
+        "title": "OpenTPU – An open-source AI accelerator, developed by AI",
+        "url": "https://github.com/FeSens/openTPU",
+        "source": "Hacker News AI",
+        "score": 212
+      },
+      {
+        "title": "Claude Code’s suggested message feature: I think the real customer is the model",
+        "url": "https://www.zohaib.cc/blog/smartest-claude-code-feature",
+        "source": "Hacker News AI",
+        "score": 75
+      },
+      {
+        "title": "LLMs may have helped my RSI",
+        "url": "https://vaughanhilts.me/2026/10/05/llms-immensely-helped-my-rsi.html",
+        "source": "Hacker News AI",
+        "score": 23
+      },
+      {
+        "title": "Ask HN: Are there AI models for generating sounds based on a text and reference?",
+        "url": "https://news.ycombinator.com/item?id=49972125",
+        "source": "Hacker News AI",
+        "score": 15
+      },
+      {
+        "title": "Utah to let AI examine patients and prescribe medication without human oversight",
+        "url": "https://www.techspot.com/news/114111-utah-become-first-state-ai-examine-patients-prescribe.html",
+        "source": "Hacker News AI",
+        "score": 54
+      },
+      {
+        "title": "UniEvo-VL: Self-Distillation Training for Multimodal Model Self-Improvement",
+        "url": "https://arxiv.org/abs/2609.38721",
+        "source": "Hacker News AI",
+        "score": 5
       },
       {
         "title": "Berthd",
         "url": "https://berthd.app/",
         "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "AI is now capable of developing its own inference hardware",
-        "url": "https://github.com/FeSens/openTPU",
-        "source": "Hacker News AI",
-        "score": 157
-      },
-      {
-        "title": "Dust: Pretraining Transformers Without Backpropagation",
-        "url": "https://qlabs.sh/research/dust",
-        "source": "Hacker News AI",
-        "score": 257
+        "score": 41
       },
       {
         "title": "Erdosproblems.com Succumbs to the AI Onslaught",
         "url": "https://www.erdosproblems.com/forum/thread/blog:9",
         "source": "Hacker News AI",
-        "score": 29
+        "score": 90
       },
       {
-        "title": "Anthropic reported diary entry to police, woman faces felony charge",
-        "url": "https://www.techspot.com/news/114091-florida-woman-used-claude-diary-anthropic-reported-shoot.html",
+        "title": "South Korea says AI agents appear to have been used to hack the country's banks",
+        "url": "https://www.reuters.com/world/south-koreas-lee-says-ai-appears-have-been-used-bank-hacks-2026-10-06/",
         "source": "Hacker News AI",
-        "score": 794
+        "score": 7
       },
       {
-        "title": "Linux containers in 500 lines of code (2016)",
-        "url": "https://blog.lizzie.io/linux-containers-in-500-loc.html",
+        "title": "Dust: Pretraining Transformers Without Backpropagation",
+        "url": "https://qlabs.sh/research/dust",
         "source": "Hacker News AI",
-        "score": 137
-      },
-      {
-        "title": "ChatGPT is adding real cartoonists' signatures to fake New Yorker cartoons",
-        "url": "https://www.niemanlab.org/2026/10/chatgpt-is-adding-real-cartoonists-signatures-to-fake-new-yorker-cartoons/",
-        "source": "Hacker News AI",
-        "score": 533
-      },
-      {
-        "title": "An algorithmic failure beneath the secret ballot",
-        "url": "https://blog.citp.princeton.edu/2026/08/03/an-algorithmic-failure-beneath-the-secret-ballot/",
-        "source": "Hacker News AI",
-        "score": 103
+        "score": 272
       }
     ],
     "news": [
+      {
+        "title": "US death row inmate Christa Pike awake and speaking after failed execution, lawyers say",
+        "url": "https://www.bbc.co.uk/news/articles/c8kgezxn54qko?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Tear gas in Paris and Marseille as school protests grow across France",
         "url": "https://www.bbc.co.uk/news/articles/c8x23706pvz3o?at_medium=RSS&at_campaign=rss",
@@ -164,13 +199,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Ship sinks and crew missing after Black Sea drone attack",
-        "url": "https://www.bbc.co.uk/news/articles/c8ly0v5r602eo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "White House defends Trump comment to let Iran 'take out' LA and San Diego",
-        "url": "https://www.bbc.co.uk/news/articles/c6r7yn8pknyxo?at_medium=RSS&at_campaign=rss",
+        "title": "A beautiful Himalayan bird is changing its voice due to human activity, research shows",
+        "url": "https://www.bbc.co.uk/news/articles/cq9868z88rexo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -190,6 +220,11 @@
       }
     ],
     "art": [
+      {
+        "title": " One of the most impressive sub-$200 earphones of 2026 just got reduced by 20% to $152 ",
+        "url": "https://www.creativebloq.com/tech/headphones-earbuds/one-of-the-most-impressive-sub-usd200-earphones-of-2026-just-got-reduced-by-20-percent-to-usd152",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Get those extra ports you need with up to 25% off these versatile docks ",
         "url": "https://www.creativebloq.com/tech/peripherals/get-those-extra-ports-you-need-with-up-to-25-percent-off-these-versatile-docks",
@@ -218,11 +253,6 @@
       {
         "title": " Run, don't walk - the Snapmaker U1 hits its lowest price ever for Prime Day ",
         "url": "https://www.creativebloq.com/3d/3d-printing/run-dont-walk-the-snapmaker-u1-hits-its-lowest-price-ever-for-prime-day",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Nothing’s Prime Day deals put Apple to shame ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/nothings-prime-day-deals-put-apple-to-shame",
         "source": "Creative Bloq"
       }
     ],
@@ -265,43 +295,48 @@
     ],
     "gaming": [
       {
-        "title": "Nintendo's New Zelda Switch 2 Hardware Officially Arrives This Month",
-        "url": "https://www.polygon.com/legend-of-zelda-ocarina-remake-new-nintendo-switch-2-hardware/",
+        "title": "5 Sci-Fi Series To Watch If You Love Lanterns",
+        "url": "https://www.polygon.com/5-sci-fi-series-like-lanterns/",
         "source": "Polygon"
       },
       {
-        "title": "Something Is Killing the Children is Getting a Game",
-        "url": "https://www.polygon.com/something-is-killing-the-children-is-getting-a-game/",
+        "title": "Critical Role's Best Member Just Officially Raised the Bar for D&D Players Everywhere",
+        "url": "https://www.polygon.com/critical-role-wicander-halovar-sam-riegel/",
         "source": "Polygon"
       },
       {
-        "title": "Best remastered builds in The Witcher 3 Wild Hunt",
-        "url": "https://www.polygon.com/witcher-3-wild-hunt-best-remastered-builds-cat-griffin/",
+        "title": "The 12 Best Video Game Series of the 1980s and '90s, Ranked",
+        "url": "https://www.polygon.com/best-video-game-series-1980s-90s/",
         "source": "Polygon"
       },
       {
-        "title": "Hell Is Officially Breaking Loose For The Gaming Industry Thanks To AI",
-        "url": "https://www.polygon.com/ps5-jailbreak-emulator-minecraft-elden-ring-claude-opus-5-ai-games/",
+        "title": "12 Biggest GTA 6 Questions the Previews Haven't Answered Yet",
+        "url": "https://www.polygon.com/gta-6-major-questions/",
         "source": "Polygon"
       },
       {
-        "title": "30th Celebration Hype Sends 23-Year-Old Pokémon Card To Staggering $360,000 Record",
-        "url": "https://www.polygon.com/pokemon-aquapolis-lugia-360000-auction-record/",
+        "title": "EA Teases Official Return to Dead Space in New Battlefield Trailer",
+        "url": "https://www.polygon.com/battlefield-6-dead-space-teaser-game-mode/",
         "source": "Polygon"
       },
       {
-        "title": "Marvel Unlimited is Officially Shutting Down in 2026",
-        "url": "https://www.polygon.com/marvel-unlimited-shutting-down-webtoon-digital-comics-app/",
+        "title": "Amazon Prime Members Can Officially Claim 10 Games for Free in October",
+        "url": "https://www.polygon.com/amazon-gaming-luna-october-2026-doom-10-free-games/",
         "source": "Polygon"
       },
       {
-        "title": "'Nier: Automata's 2B Officially Returns in Release Available Today",
-        "url": "https://www.polygon.com/dead-by-daylight-nier-automata-crossover-2b-a2-emil/",
+        "title": "All 'Unsupervised Science' FBC testing facility locations in Control Resonant",
+        "url": "https://www.polygon.com/control-resonant-unsupervised-science-fbc-testing-facility-locations-puzzle/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "Building Git infrastructure for agent-scale development",
+        "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "ReviewBench: An open benchmark for AI code review",
         "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
@@ -330,11 +365,6 @@
       {
         "title": "Highlights from Git 2.56",
         "url": "https://github.blog/open-source/git/highlights-from-git-2-56/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "GitHub Copilot app for Beginners: How to build custom workflows with canvases",
-        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-build-custom-workflows-with-canvases/",
         "source": "GitHub Blog"
       }
     ]
