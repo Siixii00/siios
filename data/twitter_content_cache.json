@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "last_updated": "2026-10-07T00:24:24.106841",
+    "last_updated": "2026-10-07T06:54:51.630253",
     "total_items": 64
   },
   "content": {
@@ -9,91 +9,91 @@
         "title": "Sharing AI progress in mathematics",
         "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
         "source": "Hacker News",
-        "score": 280
+        "score": 759
       },
       {
-        "title": "Mistral Large 4",
-        "url": "https://mistral.ai/news/mistral-large-4/\\",
+        "title": "Strands Decider 2B: a small, open-source, decision model",
+        "url": "https://strandsagents.com/blog/introducing-strands-decider/",
         "source": "Hacker News",
-        "score": 1555
+        "score": 126
       },
       {
         "title": "Decisions API is in public beta",
         "url": "https://developers.openai.com/api/docs/guides/decisions",
         "source": "Hacker News",
-        "score": 109
+        "score": 239
       },
       {
-        "title": "Integer multiplication below n log n",
-        "url": "https://github.com/openai/math/tree/main/preprints/Integer-multiplication-below-n-log-n-September-23-2026",
+        "title": "Shaders, WebGPU Components for React, Vue, Svelte, Solid, JavaScript and Framer",
+        "url": "https://github.com/shader-effects-inc/shaders",
         "source": "Hacker News",
-        "score": 23
+        "score": 8
+      },
+      {
+        "title": "La Cueva BBS in Mexico in 1993 (session replay)",
+        "url": "https://nanochess.org/la_cueva_bbs.html",
+        "source": "Hacker News",
+        "score": 37
+      },
+      {
+        "title": "Mistral Large 4",
+        "url": "https://mistral.ai/news/mistral-large-4/\\",
+        "source": "Hacker News",
+        "score": 1718
       },
       {
         "title": "Penguin Mail – open-source Rust email client for Linux with AI",
         "url": "https://penguin-mail.com/",
         "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "AnyPS5: Port PS5 binaries to PC without emulation (87% system libraries mapped)",
-        "url": "https://github.com/boykopovar/AnyPS5",
-        "source": "Hacker News",
-        "score": 8
+        "score": 147
       },
       {
         "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
         "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
         "source": "Hacker News",
-        "score": 198
+        "score": 293
       },
       {
-        "title": "Vibecoding Photoshop: Time and pressure",
-        "url": "https://andreklein.net/vibecoding-photoshop-time-and-pressure/",
+        "title": "ESP32-C3 Adblock",
+        "url": "https://github.com/M-Abozaid/esp32-c3-adblock",
         "source": "Hacker News",
-        "score": 42
+        "score": 56
       },
       {
-        "title": "Nobel Prize in Physics 2026: Francis Halzen",
-        "url": "https://www.nobelprize.org/prizes/physics/2026/",
+        "title": "What Is Codemode",
+        "url": "https://lucumr.pocoo.org/2026/10/6/codemode/",
         "source": "Hacker News",
-        "score": 514
+        "score": 56
       },
       {
-        "title": "OpenTPU – An open-source AI accelerator, developed by AI",
-        "url": "https://github.com/FeSens/openTPU",
+        "title": "The art of defusing a second world war bomb",
+        "url": "https://www.theguardian.com/news/ng-interactive/2026/oct/06/it-could-knock-a-whole-street-down-the-art-of-defusing-a-second-world-war-bomb",
         "source": "Hacker News",
-        "score": 212
+        "score": 21
+      },
+      {
+        "title": "The cost of lies: A Mineserver story",
+        "url": "https://www.jeremyreimer.com/rockets-item.lsp?f=true&p=272",
+        "source": "Hacker News",
+        "score": 73
+      },
+      {
+        "title": "AnyPS5: Port PS5 binaries to PC without emulation (87% system libraries mapped)",
+        "url": "https://github.com/boykopovar/AnyPS5",
+        "source": "Hacker News",
+        "score": 209
       },
       {
         "title": "Claude Code’s suggested message feature: I think the real customer is the model",
         "url": "https://www.zohaib.cc/blog/smartest-claude-code-feature",
         "source": "Hacker News",
-        "score": 75
+        "score": 171
       },
       {
-        "title": "When random is not actually random enough",
-        "url": "https://ersc.io/blog/when-random-isnt-random-enough",
+        "title": "Jev-Driven SRE Diagnosis: What Worked and What Failed",
+        "url": "https://www.sregym.com/blog/jev-driven-sre-diagnosis",
         "source": "Hacker News",
-        "score": 18
-      },
-      {
-        "title": "Paramount Skydance has completed its $111B merger with Warner Bros. Discovery",
-        "url": "https://arstechnica.com/tech-policy/2026/10/paramount-completes-111b-warner-merger-creating-skydance-behemoth/",
-        "source": "Hacker News",
-        "score": 157
-      },
-      {
-        "title": "LLMs may have helped my RSI",
-        "url": "https://vaughanhilts.me/2026/10/05/llms-immensely-helped-my-rsi.html",
-        "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "The Query Transformation Pipeline",
-        "url": "https://readyset.io/blog/how-readyset-rewrites-your-sql-inside-the-query-transformation-pipeline",
-        "source": "Hacker News",
-        "score": 8
+        "score": 25
       }
     ],
     "ai": [
@@ -101,85 +101,85 @@
         "title": "Sharing AI progress in mathematics",
         "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
         "source": "Hacker News AI",
-        "score": 280
+        "score": 759
       },
       {
         "title": "Mistral Large 4",
         "url": "https://mistral.ai/news/mistral-large-4/\\",
         "source": "Hacker News AI",
-        "score": 1555
+        "score": 1718
       },
       {
         "title": "Penguin Mail – open-source Rust email client for Linux with AI",
         "url": "https://penguin-mail.com/",
         "source": "Hacker News AI",
-        "score": 29
+        "score": 147
       },
       {
         "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
         "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
         "source": "Hacker News AI",
-        "score": 198
-      },
-      {
-        "title": "OpenTPU – An open-source AI accelerator, developed by AI",
-        "url": "https://github.com/FeSens/openTPU",
-        "source": "Hacker News AI",
-        "score": 212
+        "score": 293
       },
       {
         "title": "Claude Code’s suggested message feature: I think the real customer is the model",
         "url": "https://www.zohaib.cc/blog/smartest-claude-code-feature",
         "source": "Hacker News AI",
-        "score": 75
+        "score": 171
+      },
+      {
+        "title": "Jev-Driven SRE Diagnosis: What Worked and What Failed",
+        "url": "https://www.sregym.com/blog/jev-driven-sre-diagnosis",
+        "source": "Hacker News AI",
+        "score": 25
+      },
+      {
+        "title": "OpenTPU – An open-source AI accelerator, developed by AI",
+        "url": "https://github.com/FeSens/openTPU",
+        "source": "Hacker News AI",
+        "score": 274
+      },
+      {
+        "title": "Hackers obtain counterfeit TLS certificates for Google and other large services",
+        "url": "https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services/",
+        "source": "Hacker News AI",
+        "score": 32
       },
       {
         "title": "LLMs may have helped my RSI",
         "url": "https://vaughanhilts.me/2026/10/05/llms-immensely-helped-my-rsi.html",
         "source": "Hacker News AI",
-        "score": 23
+        "score": 81
       },
       {
-        "title": "Ask HN: Are there AI models for generating sounds based on a text and reference?",
-        "url": "https://news.ycombinator.com/item?id=49972125",
+        "title": "Show HN: NanoMuse – An open-source AI agent for your phone and computer",
+        "url": "https://github.com/nano-muse/nanoMuse",
         "source": "Hacker News AI",
-        "score": 15
-      },
-      {
-        "title": "Utah to let AI examine patients and prescribe medication without human oversight",
-        "url": "https://www.techspot.com/news/114111-utah-become-first-state-ai-examine-patients-prescribe.html",
-        "source": "Hacker News AI",
-        "score": 54
-      },
-      {
-        "title": "UniEvo-VL: Self-Distillation Training for Multimodal Model Self-Improvement",
-        "url": "https://arxiv.org/abs/2609.38721",
-        "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "Berthd",
-        "url": "https://berthd.app/",
-        "source": "Hacker News AI",
-        "score": 41
-      },
-      {
-        "title": "Erdosproblems.com Succumbs to the AI Onslaught",
-        "url": "https://www.erdosproblems.com/forum/thread/blog:9",
-        "source": "Hacker News AI",
-        "score": 90
+        "score": 10
       },
       {
         "title": "South Korea says AI agents appear to have been used to hack the country's banks",
         "url": "https://www.reuters.com/world/south-koreas-lee-says-ai-appears-have-been-used-bank-hacks-2026-10-06/",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 66
       },
       {
-        "title": "Dust: Pretraining Transformers Without Backpropagation",
-        "url": "https://qlabs.sh/research/dust",
+        "title": "UniEvo-VL: Self-Distillation Training for Multimodal Model Self-Improvement",
+        "url": "https://arxiv.org/abs/2609.38721",
         "source": "Hacker News AI",
-        "score": 272
+        "score": 15
+      },
+      {
+        "title": "Erdosproblems.com Succumbs to the AI Onslaught",
+        "url": "https://www.erdosproblems.com/forum/thread/blog:9",
+        "source": "Hacker News AI",
+        "score": 99
+      },
+      {
+        "title": "Berthd",
+        "url": "https://berthd.app/",
+        "source": "Hacker News AI",
+        "score": 56
       }
     ],
     "news": [
@@ -189,13 +189,18 @@
         "source": "BBC World"
       },
       {
-        "title": "Tear gas in Paris and Marseille as school protests grow across France",
-        "url": "https://www.bbc.co.uk/news/articles/c8x23706pvz3o?at_medium=RSS&at_campaign=rss",
+        "title": "Residents of kibbutz destroyed in 7 October Hamas-led attacks grapple with how to rebuild",
+        "url": "https://www.bbc.co.uk/news/articles/cqrmyz4mdn94o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Former German spy chief arrested for espionage and treason",
-        "url": "https://www.bbc.co.uk/news/articles/c58jzyer1kr0o?at_medium=RSS&at_campaign=rss",
+        "title": "What is pneumonic plague and how does it spread?",
+        "url": "https://www.bbc.co.uk/news/articles/cxdd8035jzn3o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ex-US spy who stashed gold bars in his home admits to $200m scam",
+        "url": "https://www.bbc.co.uk/news/articles/cr3wvq965dngo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -204,22 +209,22 @@
         "source": "BBC World"
       },
       {
-        "title": "Lawyer for one of Cornell 7 calls for special prosecutor to be removed over previous comments",
-        "url": "https://www.bbc.co.uk/news/articles/c9p8gxygvpg6o?at_medium=RSS&at_campaign=rss",
+        "title": "Former Australian bishop jailed for sexually abusing young men",
+        "url": "https://www.bbc.co.uk/news/articles/cj62ylxqz173o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Finland orders halt to work on two Google data centres",
-        "url": "https://www.bbc.co.uk/news/articles/cvj6jkx6g1r0o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Kenya confirms its first Ebola death as outbreak spreads",
-        "url": "https://www.bbc.co.uk/news/articles/cqzrd7v1j163o?at_medium=RSS&at_campaign=rss",
+        "title": "Tear gas in Paris and Marseille as school protests grow across France",
+        "url": "https://www.bbc.co.uk/news/articles/c8x23706pvz3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Jaguar's controversial rebrand finally makes sense with the unveiling of the bold Type 01 ",
+        "url": "https://www.creativebloq.com/design/product-design/jaguars-dramatic-type-01-finally-makes-sense-of-the-controversial-rebrand",
+        "source": "Creative Bloq"
+      },
       {
         "title": " One of the most impressive sub-$200 earphones of 2026 just got reduced by 20% to $152 ",
         "url": "https://www.creativebloq.com/tech/headphones-earbuds/one-of-the-most-impressive-sub-usd200-earphones-of-2026-just-got-reduced-by-20-percent-to-usd152",
@@ -249,14 +254,14 @@
         "title": " Free Star Wars Galactic Racer on Amazon Luna could mark a massive step change for video game releases ",
         "url": "https://www.creativebloq.com/entertainment/gaming/free-star-wars-galactic-racer-on-amazon-luna-could-mark-a-massive-step-change-for-video-game-releases",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Run, don't walk - the Snapmaker U1 hits its lowest price ever for Prime Day ",
-        "url": "https://www.creativebloq.com/3d/3d-printing/run-dont-walk-the-snapmaker-u1-hits-its-lowest-price-ever-for-prime-day",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Humans may not be as hardwired for violence as we thought",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261005071529.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Don't miss: Watch Saturn shine and Halley’s Comet debris streak across the sky",
         "url": "https://www.sciencedaily.com/releases/2026/10/261005071523.htm",
@@ -265,6 +270,11 @@
       {
         "title": "Scientists reveal what seven days of fasting does to the human body",
         "url": "https://www.sciencedaily.com/releases/2026/10/261005012444.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A new way to fight gum disease without wiping out good bacteria",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261005012230.htm",
         "source": "Science Daily"
       },
       {
@@ -281,19 +291,29 @@
         "title": "Scientists say this simple habit could strengthen your marriage",
         "url": "https://www.sciencedaily.com/releases/2026/10/261004001843.htm",
         "source": "Science Daily"
-      },
-      {
-        "title": "Scientists finally see how nature moves energy so efficiently",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261004001841.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Archaeologists may have finally solved a 100-year-old Florida mystery",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261004001835.htm",
-        "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "The 10 Greatest Sci-Fi Cyberpunk Movies of All Time, Ranked",
+        "url": "https://www.polygon.com/best-sci-fi-cyberpunk-movies-ranked/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Essential GBA Games Still Missing From Switch Online",
+        "url": "https://www.polygon.com/best-gba-games-missing-nintendo-switch-online/",
+        "source": "Polygon"
+      },
+      {
+        "title": "20 Years Later, Battlestar Galactica’s Most Intense Episode Is Still an All-Time Classic",
+        "url": "https://www.polygon.com/battlestar-galactica-occupation-20-years-anniversary/",
+        "source": "Polygon"
+      },
+      {
+        "title": "8 Most Unhinged Dark Urge Lines in BG3",
+        "url": "https://www.polygon.com/best-dark-urge-lines-baldurs-gate-3/",
+        "source": "Polygon"
+      },
       {
         "title": "5 Sci-Fi Series To Watch If You Love Lanterns",
         "url": "https://www.polygon.com/5-sci-fi-series-like-lanterns/",
@@ -307,26 +327,6 @@
       {
         "title": "The 12 Best Video Game Series of the 1980s and '90s, Ranked",
         "url": "https://www.polygon.com/best-video-game-series-1980s-90s/",
-        "source": "Polygon"
-      },
-      {
-        "title": "12 Biggest GTA 6 Questions the Previews Haven't Answered Yet",
-        "url": "https://www.polygon.com/gta-6-major-questions/",
-        "source": "Polygon"
-      },
-      {
-        "title": "EA Teases Official Return to Dead Space in New Battlefield Trailer",
-        "url": "https://www.polygon.com/battlefield-6-dead-space-teaser-game-mode/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Amazon Prime Members Can Officially Claim 10 Games for Free in October",
-        "url": "https://www.polygon.com/amazon-gaming-luna-october-2026-doom-10-free-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All 'Unsupervised Science' FBC testing facility locations in Control Resonant",
-        "url": "https://www.polygon.com/control-resonant-unsupervised-science-fbc-testing-facility-locations-puzzle/",
         "source": "Polygon"
       }
     ],
