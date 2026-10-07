@@ -1,191 +1,191 @@
 {
   "metadata": {
-    "last_updated": "2026-10-07T14:16:21.356696",
+    "last_updated": "2026-10-07T20:26:03.170561",
     "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "Claude Haiku 5.5",
+        "url": "https://www.anthropic.com/claude-haiku-5-5",
+        "source": "Hacker News",
+        "score": 396
+      },
+      {
+        "title": "GPT‑6 and Intelligent UI for everyone",
+        "url": "https://openai.com/index/gpt-6-for-everyone/",
+        "source": "Hacker News",
+        "score": 286
+      },
+      {
+        "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
+        "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
+        "source": "Hacker News",
+        "score": 89
+      },
+      {
+        "title": "Visa, Mastercard, Major Banks Facing New Litigation over 'Anticompetitive' Fees",
+        "url": "https://www.classaction.org/news/visa-mastercard-major-banks-facing-new-litigation-over-anticompetitive-merchant-credit-card-transaction-fees",
+        "source": "Hacker News",
+        "score": 372
+      },
+      {
+        "title": "Docker Agent",
+        "url": "https://github.com/docker/docker-agent",
+        "source": "Hacker News",
+        "score": 85
+      },
+      {
+        "title": "The Mathocalypse",
+        "url": "https://scottaaronson.blog/?p=10169",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Push Ifs Up and Fors Down: The Idiom, Its Algebra, and Its Limits",
+        "url": "https://debasishg.github.io/blog/push-ifs-up-fors-down/",
+        "source": "Hacker News",
+        "score": 30
+      },
+      {
+        "title": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
+        "url": "https://bigwords.page/",
+        "source": "Hacker News",
+        "score": 199
+      },
+      {
         "title": "Shipping JPEG XL in Chrome",
         "url": "https://developer.chrome.com/blog/jpeg-xl-in-chrome",
         "source": "Hacker News",
-        "score": 201
+        "score": 417
+      },
+      {
+        "title": "Navier–Stokes Lost in Translation",
+        "url": "https://arxiv.org/abs/2610.08144",
+        "source": "Hacker News",
+        "score": 161
+      },
+      {
+        "title": "How machines learned precision",
+        "url": "https://glinscott.github.io/how-machines-learned-precision/",
+        "source": "Hacker News",
+        "score": 33
+      },
+      {
+        "title": "Animated ASCII Art for Web Pages",
+        "url": "https://ascii.rest/",
+        "source": "Hacker News",
+        "score": 202
       },
       {
         "title": "A font recreated from photographs of classic Commodore 64 keycaps",
         "url": "https://github.com/szabadkai/c64-keyboard-font/",
         "source": "Hacker News",
-        "score": 206
+        "score": 350
       },
       {
-        "title": "Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai",
-        "url": "https://www.nobelprize.org/prizes/chemistry/2026/press-release/",
-        "source": "Hacker News",
-        "score": 140
-      },
-      {
-        "title": "Google Playground: Create and play custom games",
-        "url": "https://blog.google/innovation-and-ai/technology/ai/playground-experimental-gaming-platform/",
-        "source": "Hacker News",
-        "score": 47
-      },
-      {
-        "title": "Write Like It's 1866: LLMs Relearn Telegraphese",
-        "url": "https://fiveminutesforward.com/post/2026-10-04-telegraph-test/",
-        "source": "Hacker News",
-        "score": 32
-      },
-      {
-        "title": "Sharing AI progress in mathematics",
-        "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
-        "source": "Hacker News",
-        "score": 1067
-      },
-      {
-        "title": "Show HN: A walkable 3D art history museum built from Wikipedia",
-        "url": "https://artmuseum.artfrompixels.com/",
+        "title": "ICANN Reveals 2026 Round Applications for New Generic Top-Level Domains",
+        "url": "https://www.icann.org/en/announcements/details/icann-reveals-2026-round-applications-for-new-generic-top-level-domains-07-10-2026-en",
         "source": "Hacker News",
         "score": 14
       },
       {
-        "title": "Rust's derive often implies inline",
-        "url": "https://yossarian.net/til/post/rust-s-derive-often-implies-inline/",
+        "title": "Show HN: gtlds.fyi – All the proposed new gTLDs",
+        "url": "https://gtlds.fyi/",
         "source": "Hacker News",
-        "score": 54
-      },
-      {
-        "title": "Show HN: AstroHelm – Use your phone camera to aim a telescope or telephoto lens",
-        "url": "https://astrohelm.app/",
-        "source": "Hacker News",
-        "score": 45
-      },
-      {
-        "title": "Strands Decider 2B: a small, open-source, decision model",
-        "url": "https://strandsagents.com/blog/introducing-strands-decider/",
-        "source": "Hacker News",
-        "score": 233
-      },
-      {
-        "title": "House with 15m underground tunnels for sale for 300k",
-        "url": "https://www.readingchronicle.co.uk/news/26612080.house-15m-underground-tunnels-sale-300k/",
-        "source": "Hacker News",
-        "score": 57
-      },
-      {
-        "title": "Forever Junior: The Skills AI Can't Develop for You",
-        "url": "https://tech.criteo.com/blog/human-skills-ai-cant-develop-junior-engineers/",
-        "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Decisions API is in public beta",
-        "url": "https://developers.openai.com/api/docs/guides/decisions",
-        "source": "Hacker News",
-        "score": 360
-      },
-      {
-        "title": "ESP32-C3 Adblock",
-        "url": "https://github.com/M-Abozaid/esp32-c3-adblock",
-        "source": "Hacker News",
-        "score": 147
-      },
-      {
-        "title": "Mistral Large 4",
-        "url": "https://mistral.ai/news/mistral-large-4/\\",
-        "source": "Hacker News",
-        "score": 1921
+        "score": 7
       }
     ],
     "ai": [
       {
+        "title": "Claude Haiku 5.5",
+        "url": "https://www.anthropic.com/claude-haiku-5-5",
+        "source": "Hacker News AI",
+        "score": 396
+      },
+      {
+        "title": "GPT‑6 and Intelligent UI for everyone",
+        "url": "https://openai.com/index/gpt-6-for-everyone/",
+        "source": "Hacker News AI",
+        "score": 286
+      },
+      {
+        "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
+        "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
+        "source": "Hacker News AI",
+        "score": 89
+      },
+      {
+        "title": "ICANN Reveals 2026 Round Applications for New Generic Top-Level Domains",
+        "url": "https://www.icann.org/en/announcements/details/icann-reveals-2026-round-applications-for-new-generic-top-level-domains-07-10-2026-en",
+        "source": "Hacker News AI",
+        "score": 14
+      },
+      {
+        "title": "Show HN: Agent.reviews – Where AI agents read and write reviews on tools",
+        "url": "https://agent.reviews/",
+        "source": "Hacker News AI",
+        "score": 16
+      },
+      {
         "title": "Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai",
         "url": "https://www.nobelprize.org/prizes/chemistry/2026/press-release/",
         "source": "Hacker News AI",
-        "score": 140
+        "score": 267
       },
       {
-        "title": "Write Like It's 1866: LLMs Relearn Telegraphese",
-        "url": "https://fiveminutesforward.com/post/2026-10-04-telegraph-test/",
+        "title": "AI-assisted proof of optimal packing for 11 squares",
+        "url": "https://github.com/Queuingtheorydotcom/11SquaresFormalized",
         "source": "Hacker News AI",
-        "score": 32
+        "score": 90
       },
       {
         "title": "Sharing AI progress in mathematics",
         "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
         "source": "Hacker News AI",
-        "score": 1067
+        "score": 1191
+      },
+      {
+        "title": "Write Like It's 1866: LLMs Relearn Telegraphese",
+        "url": "https://fiveminutesforward.com/post/2026-10-04-telegraph-test/",
+        "source": "Hacker News AI",
+        "score": 78
+      },
+      {
+        "title": "AI Model Groupthink",
+        "url": "https://magicnumbers.io/2026/10/06/ai-model-groupthink/",
+        "source": "Hacker News AI",
+        "score": 16
+      },
+      {
+        "title": "Study: Claude, ChatGPT Offer Different Shopping Prices Based on Wealth",
+        "url": "https://www.bloomberg.com/news/newsletters/2026-10-07/study-claude-chatgpt-ai-bots-offer-different-shopping-prices-based-on-wealth",
+        "source": "Hacker News AI",
+        "score": 83
+      },
+      {
+        "title": "Show HN: Pinrail – A desktop inbox where coding agents wait for your review",
+        "url": "https://github.com/forgeplane/pinrail",
+        "source": "Hacker News AI",
+        "score": 9
       },
       {
         "title": "Show HN: AstroHelm – Use your phone camera to aim a telescope or telephoto lens",
         "url": "https://astrohelm.app/",
         "source": "Hacker News AI",
-        "score": 45
-      },
-      {
-        "title": "Forever Junior: The Skills AI Can't Develop for You",
-        "url": "https://tech.criteo.com/blog/human-skills-ai-cant-develop-junior-engineers/",
-        "source": "Hacker News AI",
-        "score": 39
+        "score": 86
       },
       {
         "title": "Mistral Large 4",
         "url": "https://mistral.ai/news/mistral-large-4/\\",
         "source": "Hacker News AI",
-        "score": 1921
+        "score": 1981
       },
       {
-        "title": "EmbeddingGemma 2: An open, lightweight multimodal embedding model",
-        "url": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+        "title": "Show HN: Terse, a Claude Code plugin that halves reply length by cutting filler",
+        "url": "https://github.com/lowenbjer/claude-terse",
         "source": "Hacker News AI",
-        "score": 377
-      },
-      {
-        "title": "Claude Code’s suggested message feature: I think the real customer is the model",
-        "url": "https://www.zohaib.cc/blog/smartest-claude-code-feature",
-        "source": "Hacker News AI",
-        "score": 240
-      },
-      {
-        "title": "Show HN: NanoMuse – An open-source AI agent for your phone and computer",
-        "url": "https://github.com/nano-muse/nanoMuse",
-        "source": "Hacker News AI",
-        "score": 42
-      },
-      {
-        "title": "OpenTPU – An open-source AI accelerator, developed by AI",
-        "url": "https://github.com/FeSens/openTPU",
-        "source": "Hacker News AI",
-        "score": 321
-      },
-      {
-        "title": "Bender: AI's 'Existential' Risk Is 'Fake' [video]",
-        "url": "https://www.youtube.com/watch?v=QuZjcKshf_c",
-        "source": "Hacker News AI",
-        "score": 6
-      },
-      {
-        "title": "PS5 Jailbreaks Are Escalating at an Unprecedented Pace",
-        "url": "https://www.pushsquare.com/news/2026/10/ps5-jailbreaks-are-escalating-at-an-unprecedented-pace-and-sony-must-be-sweating",
-        "source": "Hacker News AI",
-        "score": 59
-      },
-      {
-        "title": "Penguin Mail – open-source Rust email client for Linux with AI",
-        "url": "https://penguin-mail.com/",
-        "source": "Hacker News AI",
-        "score": 220
-      },
-      {
-        "title": "Sharded, encrypted storage between friends over Yggdrasil",
-        "url": "https://github.com/peterretief/yggstore",
-        "source": "Hacker News AI",
-        "score": 21
-      },
-      {
-        "title": "Hackers obtain counterfeit TLS certificates for Google and other large services",
-        "url": "https://arstechnica.com/security/2026/10/hackers-obtain-counterfeit-tls-certificates-for-google-and-other-large-services/",
-        "source": "Hacker News AI",
-        "score": 120
+        "score": 9
       }
     ],
     "news": [
@@ -195,13 +195,13 @@
         "source": "BBC World"
       },
       {
-        "title": "US death row inmate Christa Pike awake and speaking after failed execution, lawyers say",
-        "url": "https://www.bbc.co.uk/news/articles/c8kgezxn54qko?at_medium=RSS&at_campaign=rss",
+        "title": "Israelis demand accountability over 7 October failures three years after attacks",
+        "url": "https://www.bbc.co.uk/news/articles/c5zjx7xx3487o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Residents of kibbutz destroyed in 7 October Hamas-led attacks grapple with how to rebuild",
-        "url": "https://www.bbc.co.uk/news/articles/cqrmyz4mdn94o?at_medium=RSS&at_campaign=rss",
+        "title": "Canada suspends plans to expand assisted dying to people with mental illness ",
+        "url": "https://www.bbc.co.uk/news/articles/cqd09g0gj50ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -210,7 +210,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Zelensky condemns 'vile' large-scale Russian attacks that killed 20",
+        "title": "Children killed while they slept as Russian missile kills 19 in block of flats",
         "url": "https://www.bbc.co.uk/news/articles/ckr5ym098vdeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -227,38 +227,38 @@
     ],
     "art": [
       {
-        "title": " Cricut isn’t playing around this Prime Day - save over 40% on top machines ",
-        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/cricut-isnt-playing-around-this-prime-day-save-over-40-percent-on-top-machines",
+        "title": " The new Microsoft Surface Ultra is literally built for multi-disciplinary creatives ",
+        "url": "https://www.creativebloq.com/tech/laptops/the-new-microsoft-surface-ultra-is-literally-built-for-multi-disciplinary-creatives",
         "source": "Creative Bloq"
       },
       {
-        "title": " These 7 laptops can handle both creative work and gaming, and they have up to $400 off for just a few more hours ",
-        "url": "https://www.creativebloq.com/tech/laptops/these-7-laptops-can-handle-both-creative-work-and-gaming-and-they-have-up-to-usd400-off-for-just-a-few-more-hours",
+        "title": " Mics, cameras, discounts: these DJI Prime Day deals are a must for creatives ",
+        "url": "https://www.creativebloq.com/photography/cameras-accessories/mics-cameras-discounts-these-dji-prime-day-deals-are-a-must-for-creatives",
         "source": "Creative Bloq"
       },
       {
-        "title": " The new Hunger Games: Sunrise on the Reaping poster feels like beautiful propaganda ",
-        "url": "https://www.creativebloq.com/design/poster-design/the-new-hunger-games-sunrise-on-the-reaping-poster-feels-like-beautiful-propaganda",
+        "title": " This modern day iPod could be a dream come true for nostalgic MP3 player fans ",
+        "url": "https://www.creativebloq.com/design/product-design/this-modern-day-ipod-could-be-a-dream-come-true-for-nostalgic-mp3-player-fans",
         "source": "Creative Bloq"
       },
       {
-        "title": " Turns out Prime Day is a haven for coffee maker deals ",
-        "url": "https://www.creativebloq.com/design/product-design/turns-out-prime-day-is-a-haven-for-coffee-maker-deals",
+        "title": " Get audiophile sound at rock-bottom prices, with the best IEM deals for Prime Day ",
+        "url": "https://www.creativebloq.com/tech/chairs-desks/get-audiophile-sound-at-rock-bottom-prices-with-the-best-iem-deals-for-prime-day",
         "source": "Creative Bloq"
       },
       {
-        "title": " “For this piece, I challenged myself to work with a limited, high-key palette. I wanted to preserve depth while using mostly light colours where I could” ",
-        "url": "https://www.creativebloq.com/art/digital-art/for-this-piece-i-challenged-myself-to-work-with-a-limited-high-key-palette-i-wanted-to-preserve-depth-while-using-mostly-light-colours-where-i-could",
+        "title": " Pen tablet or pen display? Our top-rated picks of each both have 20% off ",
+        "url": "https://www.creativebloq.com/art/digital-art/pen-tablet-or-pen-display-our-top-rated-picks-of-each-both-have-20-percent-off",
         "source": "Creative Bloq"
       },
       {
-        "title": " Jaguar's controversial rebrand finally makes sense with the unveiling of the bold Type 01 ",
-        "url": "https://www.creativebloq.com/design/product-design/jaguars-dramatic-type-01-finally-makes-sense-of-the-controversial-rebrand",
+        "title": " This it girl CD player is under $75 this Prime Day ",
+        "url": "https://www.creativebloq.com/tech/this-it-girl-cd-player-is-under-usd75-this-prime-day",
         "source": "Creative Bloq"
       },
       {
-        "title": " One of the most impressive sub-$200 earphones of 2026 just got reduced by 20% to $152 ",
-        "url": "https://www.creativebloq.com/tech/headphones-earbuds/one-of-the-most-impressive-sub-usd200-earphones-of-2026-just-got-reduced-by-20-percent-to-usd152",
+        "title": " xTool's fancy inkjet colour laser is 37% off for Prime Day ",
+        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/xtools-fancy-inkjet-colour-laser-is-37-percent-off-for-prime-day",
         "source": "Creative Bloq"
       }
     ],
@@ -301,43 +301,48 @@
     ],
     "gaming": [
       {
-        "title": "PlayStation Bringing Back Ape Escape With Ex-Sonic Devs, Report Says",
-        "url": "https://www.polygon.com/ape-escape-new-game-sonic-mania/",
+        "title": "KPop Demon Hunters Gets An Official New Format Release Next Month",
+        "url": "https://www.polygon.com/kpop-demon-hunters-official-screen-comic-boxed-set-netflix/",
         "source": "Polygon"
       },
       {
-        "title": "Annapurna’s New Game Is the Most Annapurna Game of All Time",
-        "url": "https://www.polygon.com/forever-ago-review/",
+        "title": "FF7 Revelation Sets Up a Rude Awakening for Cloud",
+        "url": "https://www.polygon.com/ff7-revelation-preview-impressions-cloud/",
         "source": "Polygon"
       },
       {
-        "title": "The Best Amazon Prime Day Gaming Deals Right Now",
-        "url": "https://www.polygon.com/best-amazon-prime-day-gaming-deals-october-2026/",
+        "title": "'Obsession' Officially Returning to Theaters As It's Never Been Seen Before",
+        "url": "https://www.polygon.com/obsession-rerelease-october-2026-4dx-theaters-halloween/",
         "source": "Polygon"
       },
       {
-        "title": "'500-hour' Order of the Sinking Star Is As Complex and Exhausting As It Sounds",
-        "url": "https://www.polygon.com/order-of-the-sinking-star-impressions/",
+        "title": "10 Star Wars Galactic Racer tips to help you beat Kestar Bool",
+        "url": "https://www.polygon.com/star-wars-galactic-racer-tips-beginners-guide/",
         "source": "Polygon"
       },
       {
-        "title": "All active Escape From Tarkov codes and rewards",
-        "url": "https://www.polygon.com/escape-from-tarkov-promo-codes-list-active-expired/",
+        "title": "Overwatch’s Huge New Sombra Rework Is 10x Better Than Expected",
+        "url": "https://www.polygon.com/overwatch-sombra-rework-support/",
         "source": "Polygon"
       },
       {
-        "title": "Disney's Legendary 218-Episode Sci-Fi Series Is the Perfect Anti-'Lanterns' Binge ",
-        "url": "https://www.polygon.com/x-files-is-perfect-anti-lanterns-binge/",
+        "title": "Say Goodbye To The Best RPG On Xbox Game Pass",
+        "url": "https://www.polygon.com/xbox-game-pass-clair-obscur-games-new-and-leaving/",
         "source": "Polygon"
       },
       {
-        "title": "Netflix and Until Dawn Creators are Launching an Interactive Horror Game Based on The Conjuring",
-        "url": "https://www.polygon.com/the-conjuring-netflix-supermassive-games-interactive-horror/",
+        "title": "Carrie ending explained: how Amazon changes Stephen king’s book and sets up season 2",
+        "url": "https://www.polygon.com/carrie-ending-explained-book-changes/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "Secret protection must scale with software",
+        "url": "https://github.blog/ai-and-ml/github-copilot/secret-protection-must-scale-with-software/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "Building Git infrastructure for agent-scale development",
         "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/",
@@ -366,11 +371,6 @@
       {
         "title": "How we found 24 Android vulnerabilities using our open source AI security agent",
         "url": "https://github.blog/security/how-we-found-24-android-vulnerabilities-using-our-open-source-ai-security-agent/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Highlights from Git 2.56",
-        "url": "https://github.blog/open-source/git/highlights-from-git-2-56/",
         "source": "GitHub Blog"
       }
     ]
