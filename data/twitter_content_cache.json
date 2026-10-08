@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-07T20:26:03.170561",
-    "total_items": 65
+    "last_updated": "2026-10-08T00:44:56.757480",
+    "total_items": 63
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Claude Haiku 5.5",
         "url": "https://www.anthropic.com/claude-haiku-5-5",
         "source": "Hacker News",
-        "score": 396
+        "score": 644
+      },
+      {
+        "title": "Margaret Hamilton has died",
+        "url": "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007",
+        "source": "Hacker News",
+        "score": 556
+      },
+      {
+        "title": "'Jonathan' is the oldest land animal on Earth",
+        "url": "https://www.404media.co/oldest-living-land-animal-jonathan-the-tortoise/",
+        "source": "Hacker News",
+        "score": 35
       },
       {
         "title": "GPT‑6 and Intelligent UI for everyone",
         "url": "https://openai.com/index/gpt-6-for-everyone/",
         "source": "Hacker News",
-        "score": 286
+        "score": 476
       },
       {
-        "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
-        "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
+        "title": "How did Rosalind Franklin miss the helix in her iconic DNA image? She didn't",
+        "url": "https://www.science.org/content/article/how-did-rosalind-franklin-miss-helix-her-iconic-dna-image-she-didn-t",
         "source": "Hacker News",
-        "score": 89
+        "score": 46
       },
       {
-        "title": "Visa, Mastercard, Major Banks Facing New Litigation over 'Anticompetitive' Fees",
-        "url": "https://www.classaction.org/news/visa-mastercard-major-banks-facing-new-litigation-over-anticompetitive-merchant-credit-card-transaction-fees",
+        "title": "In Vienna and Beijing, the first (thorium) nuclear clocks begin to tick",
+        "url": "https://www.nytimes.com/2026/10/07/science/first-nuclear-clocks-thorium-229.html",
         "source": "Hacker News",
-        "score": 372
-      },
-      {
-        "title": "Docker Agent",
-        "url": "https://github.com/docker/docker-agent",
-        "source": "Hacker News",
-        "score": 85
-      },
-      {
-        "title": "The Mathocalypse",
-        "url": "https://scottaaronson.blog/?p=10169",
-        "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Push Ifs Up and Fors Down: The Idiom, Its Algebra, and Its Limits",
-        "url": "https://debasishg.github.io/blog/push-ifs-up-fors-down/",
-        "source": "Hacker News",
-        "score": 30
+        "score": 18
       },
       {
         "title": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
         "url": "https://bigwords.page/",
         "source": "Hacker News",
-        "score": 199
+        "score": 337
+      },
+      {
+        "title": "Docker Agent",
+        "url": "https://github.com/docker/docker-agent",
+        "source": "Hacker News",
+        "score": 170
+      },
+      {
+        "title": "Push ifs up and fors down: The idiom, its algebra, and its limits",
+        "url": "https://debasishg.github.io/blog/push-ifs-up-fors-down/",
+        "source": "Hacker News",
+        "score": 98
       },
       {
         "title": "Shipping JPEG XL in Chrome",
         "url": "https://developer.chrome.com/blog/jpeg-xl-in-chrome",
         "source": "Hacker News",
-        "score": 417
+        "score": 475
       },
       {
-        "title": "Navier–Stokes Lost in Translation",
-        "url": "https://arxiv.org/abs/2610.08144",
+        "title": "If somebody tries to hot-patch an already-hot-patched function",
+        "url": "https://devblogs.microsoft.com/oldnewthing/20261005-00/?p=112755/",
         "source": "Hacker News",
-        "score": 161
-      },
-      {
-        "title": "How machines learned precision",
-        "url": "https://glinscott.github.io/how-machines-learned-precision/",
-        "source": "Hacker News",
-        "score": 33
+        "score": 35
       },
       {
         "title": "Animated ASCII Art for Web Pages",
         "url": "https://ascii.rest/",
         "source": "Hacker News",
-        "score": 202
+        "score": 282
       },
       {
-        "title": "A font recreated from photographs of classic Commodore 64 keycaps",
-        "url": "https://github.com/szabadkai/c64-keyboard-font/",
+        "title": "A new write and space optimized storage engine for MySQL is here",
+        "url": "https://tidesdb.com/articles/tidesdb-now-available-for-mysql/",
         "source": "Hacker News",
-        "score": 350
+        "score": 24
       },
       {
-        "title": "ICANN Reveals 2026 Round Applications for New Generic Top-Level Domains",
-        "url": "https://www.icann.org/en/announcements/details/icann-reveals-2026-round-applications-for-new-generic-top-level-domains-07-10-2026-en",
+        "title": "A minimal kernel in Swift, running in QEMU",
+        "url": "https://carette.xyz/posts/minimal_swift_kernel_on_qemu/",
         "source": "Hacker News",
-        "score": 14
+        "score": 6
       },
       {
-        "title": "Show HN: gtlds.fyi – All the proposed new gTLDs",
-        "url": "https://gtlds.fyi/",
+        "title": "How machines learned precision",
+        "url": "https://glinscott.github.io/how-machines-learned-precision/",
         "source": "Hacker News",
-        "score": 7
+        "score": 96
       }
     ],
     "ai": [
@@ -101,102 +101,100 @@
         "title": "Claude Haiku 5.5",
         "url": "https://www.anthropic.com/claude-haiku-5-5",
         "source": "Hacker News AI",
-        "score": 396
+        "score": 644
       },
       {
         "title": "GPT‑6 and Intelligent UI for everyone",
         "url": "https://openai.com/index/gpt-6-for-everyone/",
         "source": "Hacker News AI",
-        "score": 286
+        "score": 476
       },
       {
-        "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
-        "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
+        "title": "A new write and space optimized storage engine for MySQL is here",
+        "url": "https://tidesdb.com/articles/tidesdb-now-available-for-mysql/",
         "source": "Hacker News AI",
-        "score": 89
-      },
-      {
-        "title": "ICANN Reveals 2026 Round Applications for New Generic Top-Level Domains",
-        "url": "https://www.icann.org/en/announcements/details/icann-reveals-2026-round-applications-for-new-generic-top-level-domains-07-10-2026-en",
-        "source": "Hacker News AI",
-        "score": 14
-      },
-      {
-        "title": "Show HN: Agent.reviews – Where AI agents read and write reviews on tools",
-        "url": "https://agent.reviews/",
-        "source": "Hacker News AI",
-        "score": 16
-      },
-      {
-        "title": "Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai",
-        "url": "https://www.nobelprize.org/prizes/chemistry/2026/press-release/",
-        "source": "Hacker News AI",
-        "score": 267
-      },
-      {
-        "title": "AI-assisted proof of optimal packing for 11 squares",
-        "url": "https://github.com/Queuingtheorydotcom/11SquaresFormalized",
-        "source": "Hacker News AI",
-        "score": 90
+        "score": 24
       },
       {
         "title": "Sharing AI progress in mathematics",
         "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
         "source": "Hacker News AI",
-        "score": 1191
+        "score": 1222
+      },
+      {
+        "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
+        "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
+        "source": "Hacker News AI",
+        "score": 258
+      },
+      {
+        "title": "Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai",
+        "url": "https://www.nobelprize.org/prizes/chemistry/2026/press-release/",
+        "source": "Hacker News AI",
+        "score": 289
+      },
+      {
+        "title": "Show HN: Agent.reviews – Where AI agents read and write reviews on tools",
+        "url": "https://agent.reviews/",
+        "source": "Hacker News AI",
+        "score": 37
+      },
+      {
+        "title": "AI-assisted proof of optimal packing for 11 squares",
+        "url": "https://github.com/Queuingtheorydotcom/11SquaresFormalized",
+        "source": "Hacker News AI",
+        "score": 108
       },
       {
         "title": "Write Like It's 1866: LLMs Relearn Telegraphese",
         "url": "https://fiveminutesforward.com/post/2026-10-04-telegraph-test/",
         "source": "Hacker News AI",
-        "score": 78
+        "score": 84
       },
       {
-        "title": "AI Model Groupthink",
-        "url": "https://magicnumbers.io/2026/10/06/ai-model-groupthink/",
+        "title": "100 days later: Microsoft still steers Windows and Copilot users to Edge",
+        "url": "https://blog.mozilla.org/en/mozilla/over-the-edge-2-100-days-later/",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 7
       },
       {
-        "title": "Study: Claude, ChatGPT Offer Different Shopping Prices Based on Wealth",
-        "url": "https://www.bloomberg.com/news/newsletters/2026-10-07/study-claude-chatgpt-ai-bots-offer-different-shopping-prices-based-on-wealth",
+        "title": "What is the actual percentage of people For and Against AI?",
+        "url": "https://news.ycombinator.com/item?id=50000356",
         "source": "Hacker News AI",
-        "score": 83
-      },
-      {
-        "title": "Show HN: Pinrail – A desktop inbox where coding agents wait for your review",
-        "url": "https://github.com/forgeplane/pinrail",
-        "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "Show HN: AstroHelm – Use your phone camera to aim a telescope or telephoto lens",
-        "url": "https://astrohelm.app/",
-        "source": "Hacker News AI",
-        "score": 86
+        "score": 5
       },
       {
         "title": "Mistral Large 4",
         "url": "https://mistral.ai/news/mistral-large-4/\\",
         "source": "Hacker News AI",
-        "score": 1981
+        "score": 1994
       },
       {
-        "title": "Show HN: Terse, a Claude Code plugin that halves reply length by cutting filler",
-        "url": "https://github.com/lowenbjer/claude-terse",
+        "title": "AI Model Groupthink",
+        "url": "https://magicnumbers.io/2026/10/06/ai-model-groupthink/",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 21
       }
     ],
     "news": [
       {
-        "title": "France halts use of stun grenades after boy's hand blown off in student protests",
-        "url": "https://www.bbc.co.uk/news/articles/cqzjx7z2r4gko?at_medium=RSS&at_campaign=rss",
+        "title": "Spanish pensioner whose eviction sparked nationwide protests dies, union says",
+        "url": "https://www.bbc.co.uk/news/articles/c6e3x21ev9wwo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Israelis mourn 7 October attack victims three years after deadly Hamas raid",
+        "url": "https://www.bbc.co.uk/news/articles/cwkgj0g30m5jo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Israelis demand accountability over 7 October failures three years after attacks",
         "url": "https://www.bbc.co.uk/news/articles/c5zjx7xx3487o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "France halts use of stun grenades after boy's hand blown off in student protests",
+        "url": "https://www.bbc.co.uk/news/articles/cqzjx7z2r4gko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -213,19 +211,14 @@
         "title": "Children killed while they slept as Russian missile kills 19 in block of flats",
         "url": "https://www.bbc.co.uk/news/articles/ckr5ym098vdeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Sri Lanka's ex-first lady arrested over alleged misuse of children's hospital donations",
-        "url": "https://www.bbc.co.uk/news/articles/ck0e0n3xzvp4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Chemistry Nobel awarded for solving mystery of life's asymmetry ",
-        "url": "https://www.bbc.co.uk/news/articles/c6ly038jg0d4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Love huge 3D prints? Get 50% off the Anycubic Kobra 3 Max ",
+        "url": "https://www.creativebloq.com/3d/3d-printing/love-huge-3d-prints-get-50-percent-off-the-anycubic-kobra-3-max",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The new Microsoft Surface Ultra is literally built for multi-disciplinary creatives ",
         "url": "https://www.creativebloq.com/tech/laptops/the-new-microsoft-surface-ultra-is-literally-built-for-multi-disciplinary-creatives",
@@ -254,11 +247,6 @@
       {
         "title": " This it girl CD player is under $75 this Prime Day ",
         "url": "https://www.creativebloq.com/tech/this-it-girl-cd-player-is-under-usd75-this-prime-day",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " xTool's fancy inkjet colour laser is 37% off for Prime Day ",
-        "url": "https://www.creativebloq.com/creative-inspiration/digital-crafting/xtools-fancy-inkjet-colour-laser-is-37-percent-off-for-prime-day",
         "source": "Creative Bloq"
       }
     ],
@@ -301,6 +289,11 @@
     ],
     "gaming": [
       {
+        "title": "3 Stunning 25-Year-Old Pokémon Promo Cards Fetch Nearly $1.2 Million at Auction",
+        "url": "https://www.polygon.com/pokemon-southern-islands-mew-togepi-marill-auction/",
+        "source": "Polygon"
+      },
+      {
         "title": "KPop Demon Hunters Gets An Official New Format Release Next Month",
         "url": "https://www.polygon.com/kpop-demon-hunters-official-screen-comic-boxed-set-netflix/",
         "source": "Polygon"
@@ -328,11 +321,6 @@
       {
         "title": "Say Goodbye To The Best RPG On Xbox Game Pass",
         "url": "https://www.polygon.com/xbox-game-pass-clair-obscur-games-new-and-leaving/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Carrie ending explained: how Amazon changes Stephen king’s book and sets up season 2",
-        "url": "https://www.polygon.com/carrie-ending-explained-book-changes/",
         "source": "Polygon"
       }
     ],
