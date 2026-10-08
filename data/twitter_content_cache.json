@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-08T00:44:56.757480",
-    "total_items": 63
+    "last_updated": "2026-10-08T07:02:45.235267",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
+        "title": "“Math 2.0” will need to value mathematical progress more holistically",
+        "url": "https://mathstodon.xyz/@tao/117395269325940185",
+        "source": "Hacker News",
+        "score": 176
+      },
+      {
         "title": "Claude Haiku 5.5",
         "url": "https://www.anthropic.com/claude-haiku-5-5",
         "source": "Hacker News",
-        "score": 644
+        "score": 817
+      },
+      {
+        "title": "Living off-grid: Hundred Rabbits",
+        "url": "https://100r.ca/site/home.html",
+        "source": "Hacker News",
+        "score": 144
+      },
+      {
+        "title": "A 100x faster* alternative to homebrew",
+        "url": "https://github.com/zerobrewhq/zerobrew",
+        "source": "Hacker News",
+        "score": 59
+      },
+      {
+        "title": "People Holding Up the Internet",
+        "url": "https://sheets.works/data-viz/holding-up-the-internet",
+        "source": "Hacker News",
+        "score": 11
       },
       {
         "title": "Margaret Hamilton has died",
         "url": "https://news.mit.edu/2026/margaret-hamilton-computing-pioneer-dies-1007",
         "source": "Hacker News",
-        "score": 556
-      },
-      {
-        "title": "'Jonathan' is the oldest land animal on Earth",
-        "url": "https://www.404media.co/oldest-living-land-animal-jonathan-the-tortoise/",
-        "source": "Hacker News",
-        "score": 35
-      },
-      {
-        "title": "GPT‑6 and Intelligent UI for everyone",
-        "url": "https://openai.com/index/gpt-6-for-everyone/",
-        "source": "Hacker News",
-        "score": 476
+        "score": 1261
       },
       {
         "title": "How did Rosalind Franklin miss the helix in her iconic DNA image? She didn't",
         "url": "https://www.science.org/content/article/how-did-rosalind-franklin-miss-helix-her-iconic-dna-image-she-didn-t",
         "source": "Hacker News",
-        "score": 46
+        "score": 144
       },
       {
-        "title": "In Vienna and Beijing, the first (thorium) nuclear clocks begin to tick",
-        "url": "https://www.nytimes.com/2026/10/07/science/first-nuclear-clocks-thorium-229.html",
+        "title": "Cleo (Mathematician)",
+        "url": "https://en.wikipedia.org/wiki/Cleo_(mathematician)",
         "source": "Hacker News",
-        "score": 18
+        "score": 121
       },
       {
-        "title": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
-        "url": "https://bigwords.page/",
+        "title": "The 15-year search for a band that charted once and vanished",
+        "url": "https://shahidhussain.com/writing/search-for-salvage/",
         "source": "Hacker News",
-        "score": 337
+        "score": 38
       },
       {
-        "title": "Docker Agent",
-        "url": "https://github.com/docker/docker-agent",
+        "title": "'Jonathan' is the oldest land animal on Earth",
+        "url": "https://www.404media.co/oldest-living-land-animal-jonathan-the-tortoise/",
         "source": "Hacker News",
-        "score": 170
+        "score": 128
       },
       {
-        "title": "Push ifs up and fors down: The idiom, its algebra, and its limits",
-        "url": "https://debasishg.github.io/blog/push-ifs-up-fors-down/",
+        "title": "Analog Computer Simulator in the Browser",
+        "url": "https://pavel-krivanek.github.io/The-Analog-Thing-Simulator/public/",
         "source": "Hacker News",
-        "score": 98
+        "score": 9
+      },
+      {
+        "title": "GPT‑6 and Intelligent UI for everyone",
+        "url": "https://openai.com/index/gpt-6-for-everyone/",
+        "source": "Hacker News",
+        "score": 590
       },
       {
         "title": "Shipping JPEG XL in Chrome",
         "url": "https://developer.chrome.com/blog/jpeg-xl-in-chrome",
         "source": "Hacker News",
-        "score": 475
+        "score": 533
       },
       {
-        "title": "If somebody tries to hot-patch an already-hot-patched function",
-        "url": "https://devblogs.microsoft.com/oldnewthing/20261005-00/?p=112755/",
+        "title": "Show HN: Bigwords.page – Turn any screen into a sign. The URL is the app",
+        "url": "https://bigwords.page/",
         "source": "Hacker News",
-        "score": 35
+        "score": 462
       },
       {
-        "title": "Animated ASCII Art for Web Pages",
-        "url": "https://ascii.rest/",
+        "title": "In Vienna and Beijing, the first (thorium) nuclear clocks begin to tick",
+        "url": "https://www.nytimes.com/2026/10/07/science/first-nuclear-clocks-thorium-229.html",
         "source": "Hacker News",
-        "score": 282
-      },
-      {
-        "title": "A new write and space optimized storage engine for MySQL is here",
-        "url": "https://tidesdb.com/articles/tidesdb-now-available-for-mysql/",
-        "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "A minimal kernel in Swift, running in QEMU",
-        "url": "https://carette.xyz/posts/minimal_swift_kernel_on_qemu/",
-        "source": "Hacker News",
-        "score": 6
-      },
-      {
-        "title": "How machines learned precision",
-        "url": "https://glinscott.github.io/how-machines-learned-precision/",
-        "source": "Hacker News",
-        "score": 96
+        "score": 82
       }
     ],
     "ai": [
@@ -101,119 +101,100 @@
         "title": "Claude Haiku 5.5",
         "url": "https://www.anthropic.com/claude-haiku-5-5",
         "source": "Hacker News AI",
-        "score": 644
+        "score": 817
       },
       {
         "title": "GPT‑6 and Intelligent UI for everyone",
         "url": "https://openai.com/index/gpt-6-for-everyone/",
         "source": "Hacker News AI",
-        "score": 476
-      },
-      {
-        "title": "A new write and space optimized storage engine for MySQL is here",
-        "url": "https://tidesdb.com/articles/tidesdb-now-available-for-mysql/",
-        "source": "Hacker News AI",
-        "score": 24
+        "score": 590
       },
       {
         "title": "Sharing AI progress in mathematics",
         "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
         "source": "Hacker News AI",
-        "score": 1222
+        "score": 1272
+      },
+      {
+        "title": "A new write and space optimized storage engine for MySQL is here",
+        "url": "https://tidesdb.com/articles/tidesdb-now-available-for-mysql/",
+        "source": "Hacker News AI",
+        "score": 55
       },
       {
         "title": "Meta and Microsoft take steps to reduce employee usage of Claude AI",
         "url": "https://www.rswebsols.com/news/meta-and-microsoft-take-steps-to-reduce-employee-usage-of-claude-ai/",
         "source": "Hacker News AI",
-        "score": 258
-      },
-      {
-        "title": "Nobel Prize in Chemistry 2026 to Henri B. Kagan and Kenso Soai",
-        "url": "https://www.nobelprize.org/prizes/chemistry/2026/press-release/",
-        "source": "Hacker News AI",
-        "score": 289
-      },
-      {
-        "title": "Show HN: Agent.reviews – Where AI agents read and write reviews on tools",
-        "url": "https://agent.reviews/",
-        "source": "Hacker News AI",
-        "score": 37
+        "score": 334
       },
       {
         "title": "AI-assisted proof of optimal packing for 11 squares",
         "url": "https://github.com/Queuingtheorydotcom/11SquaresFormalized",
         "source": "Hacker News AI",
-        "score": 108
+        "score": 115
+      },
+      {
+        "title": "Show HN: Pacer – will your AI coding subscription last until the reset?",
+        "url": "https://github.com/dkremsa/claude-pacer",
+        "source": "Hacker News AI",
+        "score": 6
       },
       {
         "title": "Write Like It's 1866: LLMs Relearn Telegraphese",
         "url": "https://fiveminutesforward.com/post/2026-10-04-telegraph-test/",
         "source": "Hacker News AI",
-        "score": 84
-      },
-      {
-        "title": "100 days later: Microsoft still steers Windows and Copilot users to Edge",
-        "url": "https://blog.mozilla.org/en/mozilla/over-the-edge-2-100-days-later/",
-        "source": "Hacker News AI",
-        "score": 7
-      },
-      {
-        "title": "What is the actual percentage of people For and Against AI?",
-        "url": "https://news.ycombinator.com/item?id=50000356",
-        "source": "Hacker News AI",
-        "score": 5
+        "score": 89
       },
       {
         "title": "Mistral Large 4",
         "url": "https://mistral.ai/news/mistral-large-4/\\",
         "source": "Hacker News AI",
-        "score": 1994
-      },
-      {
-        "title": "AI Model Groupthink",
-        "url": "https://magicnumbers.io/2026/10/06/ai-model-groupthink/",
-        "source": "Hacker News AI",
-        "score": 21
+        "score": 2011
       }
     ],
     "news": [
       {
-        "title": "Spanish pensioner whose eviction sparked nationwide protests dies, union says",
+        "title": "US and Lebanon protecting wanted Syrian general, BBC finds",
+        "url": "https://www.bbc.co.uk/news/articles/c81dldewl5gwo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Most UK diplomats to leave East Jerusalem consulate as Miliband says 'mission' to remain",
+        "url": "https://www.bbc.co.uk/news/articles/cw33xd6vegnno?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Texas carries out first US execution since Christa Pike's botched lethal injections",
+        "url": "https://www.bbc.co.uk/news/articles/cw4g1j2z5zvzo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Spanish pensioner whose eviction sparked nationwide protests dies",
         "url": "https://www.bbc.co.uk/news/articles/c6e3x21ev9wwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Israelis mourn 7 October attack victims three years after deadly Hamas raid",
-        "url": "https://www.bbc.co.uk/news/articles/cwkgj0g30m5jo?at_medium=RSS&at_campaign=rss",
+        "title": "Margaret Hamilton, whose software helped land Apollo 11 on the Moon, dies at 90",
+        "url": "https://www.bbc.co.uk/news/articles/cx5yn46j41zpo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Israelis demand accountability over 7 October failures three years after attacks",
-        "url": "https://www.bbc.co.uk/news/articles/c5zjx7xx3487o?at_medium=RSS&at_campaign=rss",
+        "title": "France's school protests: What lies behind the anger",
+        "url": "https://www.bbc.co.uk/news/articles/c6n9rgg80z94o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "France halts use of stun grenades after boy's hand blown off in student protests",
-        "url": "https://www.bbc.co.uk/news/articles/cqzjx7z2r4gko?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Canada suspends plans to expand assisted dying to people with mental illness ",
-        "url": "https://www.bbc.co.uk/news/articles/cqd09g0gj50ko?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Trump to speak to Putin about plague lab worker's death in Russia",
-        "url": "https://www.bbc.co.uk/news/articles/cqgm0vrl3xp7o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Children killed while they slept as Russian missile kills 19 in block of flats",
-        "url": "https://www.bbc.co.uk/news/articles/ckr5ym098vdeo?at_medium=RSS&at_campaign=rss",
+        "title": "New York court hears arguments in ongoing 9/11 families' lawsuit against Saudi Arabia",
+        "url": "https://www.bbc.co.uk/news/articles/cwvgrxlylj72o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The daleks in the new animated Doctor Who do kind of look of familiar... ",
+        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/the-daleks-in-the-new-animated-doctor-who-do-kind-of-look-of-familiar",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Love huge 3D prints? Get 50% off the Anycubic Kobra 3 Max ",
         "url": "https://www.creativebloq.com/3d/3d-printing/love-huge-3d-prints-get-50-percent-off-the-anycubic-kobra-3-max",
@@ -243,14 +224,14 @@
         "title": " Pen tablet or pen display? Our top-rated picks of each both have 20% off ",
         "url": "https://www.creativebloq.com/art/digital-art/pen-tablet-or-pen-display-our-top-rated-picks-of-each-both-have-20-percent-off",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " This it girl CD player is under $75 this Prime Day ",
-        "url": "https://www.creativebloq.com/tech/this-it-girl-cd-player-is-under-usd75-this-prime-day",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Scientists warn a popular vitamin D supplement may have a hidden downside",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261007232940.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "NASA’s Webb finds signs of Mars-sized worlds smashing together",
         "url": "https://www.sciencedaily.com/releases/2026/10/261007042108.htm",
@@ -262,32 +243,47 @@
         "source": "Science Daily"
       },
       {
+        "title": "Not all trans fats are bad, major review finds",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261006234505.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Dads are dying after their kids are born, and almost no one is tracking it",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261005071537.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "Scientists changed how zoo lions eat. Their wild side came out",
         "url": "https://www.sciencedaily.com/releases/2026/10/261005071535.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists reprogram immune cells inside the body to fight cancer",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261005071532.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Humans may not be as hardwired for violence as we thought",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261005071529.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Webb finds a surprising atmosphere on a scorching lava world",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261005071526.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Don't miss: Watch Saturn shine and Halley’s Comet debris streak across the sky",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261005071523.htm",
+        "title": "Stanford scientists turn a cancer driver into a kill switch",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261005071533.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "Netflix Is About to Lose The Most Inventive Sci-Fi Thriller of the Decade",
+        "url": "https://www.polygon.com/a-quiet-place-part-ii-leaving-netflix-october-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Ahead of Your Halloween Rewatch, Ranking All 7 Seasons of Buffy the Vampire Slayer",
+        "url": "https://www.polygon.com/buffy-seasons-ranked/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Beloved Action-RPG Muramasa: The Demon Blade Returns in 2027 With Stunning Remake",
+        "url": "https://www.polygon.com/muramasa-revenant-blades-2027-remake-remaster-vanillaware-marvelous/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Disney's 10-Part Detective Thriller Series Is So Freaking Good You'll Finish It in One Weekend",
+        "url": "https://www.polygon.com/fargo-season-2-streaming-october-2026/",
+        "source": "Polygon"
+      },
       {
         "title": "3 Stunning 25-Year-Old Pokémon Promo Cards Fetch Nearly $1.2 Million at Auction",
         "url": "https://www.polygon.com/pokemon-southern-islands-mew-togepi-marill-auction/",
@@ -301,26 +297,6 @@
       {
         "title": "FF7 Revelation Sets Up a Rude Awakening for Cloud",
         "url": "https://www.polygon.com/ff7-revelation-preview-impressions-cloud/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Obsession' Officially Returning to Theaters As It's Never Been Seen Before",
-        "url": "https://www.polygon.com/obsession-rerelease-october-2026-4dx-theaters-halloween/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 Star Wars Galactic Racer tips to help you beat Kestar Bool",
-        "url": "https://www.polygon.com/star-wars-galactic-racer-tips-beginners-guide/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Overwatch’s Huge New Sombra Rework Is 10x Better Than Expected",
-        "url": "https://www.polygon.com/overwatch-sombra-rework-support/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Say Goodbye To The Best RPG On Xbox Game Pass",
-        "url": "https://www.polygon.com/xbox-game-pass-clair-obscur-games-new-and-leaving/",
         "source": "Polygon"
       }
     ],
