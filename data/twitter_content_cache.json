@@ -1,173 +1,199 @@
 {
   "metadata": {
-    "last_updated": "2026-10-09T08:34:17.952888",
-    "total_items": 60
+    "last_updated": "2026-10-09T15:52:05.488043",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "OTel-Native by Design – Building Products That Export to Any Observability Stack",
-        "url": "https://opentelemetry.io/blog/2026/otel-native-by-design/",
+        "title": "Deno Is Joining Cloudflare",
+        "url": "https://deno.com/blog/cloudflare",
         "source": "Hacker News",
-        "score": 31
+        "score": 499
+      },
+      {
+        "title": "Our $445M Series D",
+        "url": "https://oxide.computer/blog/our-445m-series-d",
+        "source": "Hacker News",
+        "score": 273
+      },
+      {
+        "title": "Let your AI agents paint big arrows, boxes and text on your screen",
+        "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+        "source": "Hacker News",
+        "score": 234
+      },
+      {
+        "title": "I'm in a Meeting",
+        "url": "https://iminafleeting.com/",
+        "source": "Hacker News",
+        "score": 333
+      },
+      {
+        "title": "Nobel Peace Prize for 2026 to Navanethem \"NAVI\" Pillay",
+        "url": "https://www.nobelprize.org/prizes/peace/2026/press-release/",
+        "source": "Hacker News",
+        "score": 256
+      },
+      {
+        "title": "US imposes sanctions on ICC hours after former judge wins Nobel Peace Prize",
+        "url": "https://www.reuters.com/world/us-imposes-sanctions-international-criminal-court-hours-after-former-judge-wins-2026-10-09/",
+        "source": "Hacker News",
+        "score": 175
       },
       {
         "title": "Why isn't the industry freaking out about DeepSeek 4.1 Flash?",
         "url": "https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/",
         "source": "Hacker News",
-        "score": 698
+        "score": 939
+      },
+      {
+        "title": "Imposing Sanctions on the International Criminal Court",
+        "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/10/imposing-sanctions-on-the-international-criminal-court/",
+        "source": "Hacker News",
+        "score": 82
+      },
+      {
+        "title": "Yandex Takes a Second Data Center Hit in 48 Hours",
+        "url": "https://united24media.com/war-in-ukraine/yandex-takes-a-second-data-center-hit-in-48-hours-now-its-biggest-russian-site-is-damaged-23277",
+        "source": "Hacker News",
+        "score": 119
+      },
+      {
+        "title": "Germany turning abandoned coal mines into 23 lakes, becoming artificial wetland",
+        "url": "https://timesofindia.indiatimes.com/world/europe/germany-is-turning-abandoned-coal-mines-into-23-lakes-the-former-mining-landscape-is-becoming-europes-largest-artificial-wetland/articleshow/134725669.cms",
+        "source": "Hacker News",
+        "score": 21
       },
       {
         "title": "Whistle: Speech to Text in 16.9 MB",
         "url": "https://cactuscompute.com/blog/whistle",
         "source": "Hacker News",
-        "score": 740
+        "score": 843
       },
       {
-        "title": "Keyboard differences between Windows and Macs",
-        "url": "https://unsung.aresluna.org/deeper-dive-keyboard-differences-between-windows-and-macs/",
+        "title": "Python 3.15.0",
+        "url": "https://www.python.org/downloads/release/python-3150/",
         "source": "Hacker News",
-        "score": 116
+        "score": 61
+      },
+      {
+        "title": "Once: Cache CLI Commands",
+        "url": "https://github.com/alex0ptr/once",
+        "source": "Hacker News",
+        "score": 52
       },
       {
         "title": "Man discovers his parents' coffee machine used 1TB of data in 10 days",
         "url": "https://www.dexerto.com/entertainment/man-discovers-his-parents-coffee-machine-used-1tb-of-data-in-10-days-3416399/",
         "source": "Hacker News",
-        "score": 661
+        "score": 835
       },
       {
         "title": "MXC - a sandboxed code execution system",
         "url": "https://github.com/microsoft/mxc",
         "source": "Hacker News",
-        "score": 15
-      },
-      {
-        "title": "Theranos.world",
-        "url": "https://www.theranos.world/",
-        "source": "Hacker News",
-        "score": 428
-      },
-      {
-        "title": "I hired an illustrator to draw my house. Now it's my Home Assistant dashboard",
-        "url": "https://antonfrolov.substack.com/p/i-hired-an-illustrator-to-draw-my",
-        "source": "Hacker News",
-        "score": 595
-      },
-      {
-        "title": "Yes, and",
-        "url": "https://htmx.org/essays/yes-and/",
-        "source": "Hacker News",
-        "score": 394
-      },
-      {
-        "title": "Show HN: Quake ported to safe Rust, playable in browser",
-        "url": "https://quake-srp.pages.dev/",
-        "source": "Hacker News",
-        "score": 142
-      },
-      {
-        "title": "Programming Isn't Special",
-        "url": "https://blog.glyph.im/2026/10/programming-isnt-special.html",
-        "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "OpenAI, the Partition Principle, and Mathematics",
-        "url": "https://karagila.org/2026/openai-pp/",
-        "source": "Hacker News",
         "score": 110
-      },
-      {
-        "title": "The value of not getting to the point (2015)",
-        "url": "https://ken.arneson.name/2015/11/the-value-of-not-getting-to-the-point/",
-        "source": "Hacker News",
-        "score": 160
-      },
-      {
-        "title": "Show HN: OldRoll, a free vintage photo editor for the browser",
-        "url": "https://www.oldroll.io/",
-        "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "AI-ready biological data: $1.8B global commitment",
-        "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
-        "source": "Hacker News",
-        "score": 119
       }
     ],
     "ai": [
       {
+        "title": "Let your AI agents paint big arrows, boxes and text on your screen",
+        "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+        "source": "Hacker News AI",
+        "score": 234
+      },
+      {
         "title": "Whistle: Speech to Text in 16.9 MB",
         "url": "https://cactuscompute.com/blog/whistle",
         "source": "Hacker News AI",
-        "score": 740
+        "score": 843
+      },
+      {
+        "title": "Iranian campaign planted fake articles in real U.S. publications using ChatGPT",
+        "url": "https://www.washingtonpost.com/technology/2026/10/09/chatgpt-users-iran-planted-ai-generated-articles-us-news-media/",
+        "source": "Hacker News AI",
+        "score": 118
+      },
+      {
+        "title": "OpenAI fires three safety researchers for \"mishandling research information\"",
+        "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
+        "source": "Hacker News AI",
+        "score": 159
+      },
+      {
+        "title": "The super intelligence shit is a humiliation ritual for OpenAI",
+        "url": "https://bsky.app/profile/opinionhaver.bsky.social/post/3mxfo2mdjqs2z",
+        "source": "Hacker News AI",
+        "score": 10
       },
       {
         "title": "OpenAI, the Partition Principle, and Mathematics",
         "url": "https://karagila.org/2026/openai-pp/",
         "source": "Hacker News AI",
-        "score": 110
-      },
-      {
-        "title": "AI-ready biological data: $1.8B global commitment",
-        "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
-        "source": "Hacker News AI",
-        "score": 119
+        "score": 164
       },
       {
         "title": "OpenAI withdraws three mathematical results",
         "url": "https://twitter.com/danintheory/status/2108065033070789090",
         "source": "Hacker News AI",
-        "score": 302
+        "score": 361
+      },
+      {
+        "title": "AI-ready biological data: $1.8B global commitment",
+        "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
+        "source": "Hacker News AI",
+        "score": 139
       },
       {
         "title": "I think I found a planet nobody knew existed. I used Claude Code to find it",
         "url": "https://www.reddit.com/r/ClaudeAI/s/mbe5IY2LF9",
         "source": "Hacker News AI",
-        "score": 165
+        "score": 243
       },
       {
-        "title": "Show HN: Jevman – AI decision models play Pac-Man",
-        "url": "https://opper.ai/jevman-benchmark/",
+        "title": "ChatGPT for Teens is not necessarily 'safer than the previous version,'",
+        "url": "https://www.cnbc.com/make-it/2026/10/09/chatgpt-for-teens-safety-common-sense-media.html",
         "source": "Hacker News AI",
-        "score": 61
+        "score": 3
+      },
+      {
+        "title": "Court throws out killer's sentence after judge said he loved AI video of victim",
+        "url": "https://www.nbcnews.com/news/us-news/sentence-vacated-ai-video-dead-victim-rcna601457",
+        "source": "Hacker News AI",
+        "score": 56
       },
       {
         "title": "Sharing AI progress in mathematics",
         "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
         "source": "Hacker News AI",
-        "score": 1326
-      },
-      {
-        "title": "OpenAI annualised revenues $20B less than previously signalled",
-        "url": "https://www.cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html",
-        "source": "Hacker News AI",
-        "score": 389
-      },
-      {
-        "title": "Show HN: TerrainSR – fast, realistic heightmap upscaling model",
-        "url": "https://huggingface.co/joe-gibbs/terrainsr",
-        "source": "Hacker News AI",
-        "score": 35
-      },
-      {
-        "title": "Show HN: Edi Life OS – self-hosted life dashboard with an MCP server for AI",
-        "url": "https://github.com/edrisranjbar/lifeos",
-        "source": "Hacker News AI",
-        "score": 35
-      },
-      {
-        "title": "Sub-1-Bit LLM Compression via Latent Factorization",
-        "url": "https://github.com/SamsungLabs/LittleBit",
-        "source": "Hacker News AI",
-        "score": 84
+        "score": 1332
       }
     ],
     "news": [
       {
+        "title": "Navi Pillay, former UN human rights chief, wins Nobel Peace Prize",
+        "url": "https://www.bbc.co.uk/news/articles/cm9wz5kng0x1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Firing squad execution to be livestreamed, Pentagon says",
         "url": "https://www.bbc.co.uk/news/articles/cmy0r96xygx6o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Fort Hood survivor supports gunman's execution by firing squad but questions livestream",
+        "url": "https://www.bbc.co.uk/news/articles/ck1wvqw4lzdvo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "France promises 3,000 extra teachers in first step to calm student protests",
+        "url": "https://www.bbc.co.uk/news/articles/c6vg98lw017po?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ethiopia and Eritrea accuse each other of starting conflict after troops cross border",
+        "url": "https://www.bbc.co.uk/news/articles/c65ynvw250y1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -176,27 +202,37 @@
         "source": "BBC World"
       },
       {
-        "title": "ICE agent shoots man in New York City",
-        "url": "https://www.bbc.co.uk/news/articles/c59vzk9yypn3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Russian strike on buses kills at least 30, say officials, as deadly attacks on Ukraine surge",
-        "url": "https://www.bbc.co.uk/news/articles/c875pwq134l3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Cars torched and shops looted as anti-migrant violence erupts in South Africa",
-        "url": "https://www.bbc.co.uk/news/articles/cwm24v45p4jgo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Russian strikes and approaching winter force many in Kyiv to pack bags and flee",
-        "url": "https://www.bbc.co.uk/news/articles/c6zjx7jexz1do?at_medium=RSS&at_campaign=rss",
+        "title": "Thieves steal 30,000 bottles of wine worth €5m in Italy, reports say",
+        "url": "https://www.bbc.co.uk/news/articles/cme3xl8ln2vko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Wait, the best multicolour 3D printer for beginners is now even cheaper than it was in Amazon's Prime Day sale earlier this week! ",
+        "url": "https://www.creativebloq.com/deals/wait-the-best-multicolour-3d-printer-for-beginners-is-now-even-cheaper-than-it-was-in-amazons-prime-day-sale-earlier-this-week",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Adidas sues White Fox in battle of the stripes ",
+        "url": "https://www.creativebloq.com/news/adidas-sues-white-fox-in-battle-of-the-stripes",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Cricut Joy 2 vs Cricut Joy: which compact cutting machine should you buy? ",
+        "url": "https://www.creativebloq.com/advice/cricut-joy-2-vs-cricut-joy-which-compact-cutting-machine-should-you-buy",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Other Mommy's crying billboard gets creepier over time ",
+        "url": "https://www.creativebloq.com/design/advertising/the-other-mommys-crying-billboard-gets-creepier-over-time",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " “This began as a portrait study from reference before evolving into freeform exploration. I pushed the image even further with fantastical elements” ",
+        "url": "https://www.creativebloq.com/inspiration/this-began-as-a-portrait-study-from-reference-before-evolving-into-freeform-exploration-i-pushed-the-image-even-further-with-fantastical-elements",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Amazon's 'About You' section is quietly roasting users, and people love it ",
         "url": "https://www.creativebloq.com/news/amazons-about-you-section-is-quietly-roasting-users-and-people-love-it",
@@ -206,37 +242,27 @@
         "title": " While we wait for GTA 6, the demo that inspired the original Grand Theft Auto's vehicle physics is now playable online ",
         "url": "https://www.creativebloq.com/news/while-we-wait-for-gta-6-the-demo-that-inspired-the-original-grand-theft-autos-vehicle-physics-is-now-playable-online",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Phantom Blade Zero's dark wuxia world feels like a playable kung fu movie ",
-        "url": "https://www.creativebloq.com/features/phantom-blade-zero-is-an-unreal-engine-5-game-that-feels-like-a-playable-kung-fu-movie",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " KeyShot 2026 review: fast, easy 3D rendering and with AI tools you might actually use ",
-        "url": "https://www.creativebloq.com/3d/keyshot-2026-review-fast-easy-3d-rendering-and-with-ai-tools-you-might-actually-use",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Someone just rebuilt Adobe Creative Cloud with AI – then gave it away for free ",
-        "url": "https://www.creativebloq.com/design/design-software/someone-just-rebuilt-adobe-creative-cloud-with-ai-then-gave-it-away-for-free",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Clive Barker's Hellraiser: Revival review: visually inventive, risky and authentic, but has its limitations ",
-        "url": "https://www.creativebloq.com/entertainment/gaming/clive-barkers-hellraiser-revival-review-borrows-from-bioshock-for-a-horror-thats-more-pleasure-than-pain",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The You Can See Everything poster will haunt my nightmares forever ",
-        "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/the-you-can-see-everything-poster-will-haunt-my-nightmares-forever",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
+        "title": "NASA astronauts splash down after 100 million miles in space",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261008232629.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "October’s night sky is full of cosmic tricks and treats",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261008102704.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "NASA is searching for hidden caves to build its first Moon base",
         "url": "https://www.sciencedaily.com/releases/2026/10/261008005247.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Only one workout helped older adults lose fat and keep muscle",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261007233348.htm",
         "source": "Science Daily"
       },
       {
@@ -250,60 +276,45 @@
         "source": "Science Daily"
       },
       {
-        "title": "This “golden tree” coral was too strange for any known family",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261007042116.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists found Homo erectus 200,000 years earlier than expected",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261007042113.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA’s Webb finds signs of Mars-sized worlds smashing together",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261007042108.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Taking antibiotics? Sugar may be making the damage worse",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261007042059.htm",
+        "title": "Scientists find hidden materials that could improve batteries and solar fuels",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261007042118.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "24 Years Later, the Spy Thriller Series That Changed Hollywood Forever Is Streaming on Netflix",
-        "url": "https://www.polygon.com/the-bourne-trilogy-is-streaming-on-netflix/",
+        "title": "What time are the Fortnitemares power hours in Fortnite Chapter 7 Season 4?",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-power-hours-what-time/",
         "source": "Polygon"
       },
       {
-        "title": "Avatar: Seven Havens Review: A Near-Perfect Followup to a Fantasy Masterpiece",
-        "url": "https://www.polygon.com/avatar-seven-havens-review/",
+        "title": "Expedition 33 Star Charlie Cox Officially Confirms Role in Unannounced Sega Game",
+        "url": "https://www.polygon.com/clair-obscur-expedition-33-charlie-cox-next-unannounced-sega-game/",
         "source": "Polygon"
       },
       {
-        "title": "CBS's Sleeper Hit Sitcom of the Decade Is Officially Free on Streaming",
-        "url": "https://www.polygon.com/ghosts-cbs-free-streaming-pluto-tv-october-2026/",
+        "title": "How to build the outpost in Arc Raiders",
+        "url": "https://www.polygon.com/arc-raiders-outpost-how-to-build-materials-farmland-house-photo/",
         "source": "Polygon"
       },
       {
-        "title": "Sydney Sweeney's Extremely R-Rated 131-Minute Thriller Officially Finds a New Streaming Home",
-        "url": "https://www.polygon.com/sydney-sweeney-erotic-thriller-hbo-max/",
+        "title": "Final Fantasy 7 Revelation Officially Adds Another Critical Role Member to the Cast",
+        "url": "https://www.polygon.com/final-fantasy-7-revelation-critical-role-marisha-ray-role-revealed-new-york-comic-con/",
         "source": "Polygon"
       },
       {
-        "title": "After 4 Hours, Phantom Blade Zero Just Became My Most-Anticipated Action Game",
-        "url": "https://www.polygon.com/phantom-blade-zero-hands-on-gameplay-preview/",
+        "title": "'Tracks of the Beast' quest walkthrough in Arc Raiders",
+        "url": "https://www.polygon.com/arc-raiders-tracks-of-the-beast-quest-walkthrough-destroyed-station-northern-tracks/",
         "source": "Polygon"
       },
       {
-        "title": "9 Legend of Zelda Side Quests Scarier than Any Horror Game",
-        "url": "https://www.polygon.com/legend-zelda-scariest-side-quests/",
+        "title": "All recruitable characters in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-recruitable-characters-all-support-level/",
         "source": "Polygon"
       },
       {
-        "title": "Marvel Officially Announces New Disney Plus Series 'Zodiac'",
-        "url": "https://www.polygon.com/marvel-zodiac-tv-series-disney-plus/",
+        "title": "FULL SONG: The Perfect PokéRap | Unraveled BONUS",
+        "url": "https://www.polygon.com/video/full-song-the-perfect-pokrap-unraveled-bonus/",
         "source": "Polygon"
       }
     ],
