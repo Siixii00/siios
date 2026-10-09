@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-09T01:46:32.244481",
-    "total_items": 61
+    "last_updated": "2026-10-09T08:34:17.952888",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "Whistle: Speech to Text in 16.9 MB",
-        "url": "https://cactuscompute.com/blog/whistle",
+        "title": "OTel-Native by Design – Building Products That Export to Any Observability Stack",
+        "url": "https://opentelemetry.io/blog/2026/otel-native-by-design/",
         "source": "Hacker News",
-        "score": 534
-      },
-      {
-        "title": "Theranos.world",
-        "url": "https://www.theranos.world/",
-        "source": "Hacker News",
-        "score": 275
+        "score": 31
       },
       {
         "title": "Why isn't the industry freaking out about DeepSeek 4.1 Flash?",
         "url": "https://www.dgt.is/blog/2026-10-07-deepseek-freek-out/",
         "source": "Hacker News",
-        "score": 421
+        "score": 698
+      },
+      {
+        "title": "Whistle: Speech to Text in 16.9 MB",
+        "url": "https://cactuscompute.com/blog/whistle",
+        "source": "Hacker News",
+        "score": 740
+      },
+      {
+        "title": "Keyboard differences between Windows and Macs",
+        "url": "https://unsung.aresluna.org/deeper-dive-keyboard-differences-between-windows-and-macs/",
+        "source": "Hacker News",
+        "score": 116
       },
       {
         "title": "Man discovers his parents' coffee machine used 1TB of data in 10 days",
         "url": "https://www.dexerto.com/entertainment/man-discovers-his-parents-coffee-machine-used-1tb-of-data-in-10-days-3416399/",
         "source": "Hacker News",
-        "score": 399
+        "score": 661
+      },
+      {
+        "title": "MXC - a sandboxed code execution system",
+        "url": "https://github.com/microsoft/mxc",
+        "source": "Hacker News",
+        "score": 15
+      },
+      {
+        "title": "Theranos.world",
+        "url": "https://www.theranos.world/",
+        "source": "Hacker News",
+        "score": 428
       },
       {
         "title": "I hired an illustrator to draw my house. Now it's my Home Assistant dashboard",
         "url": "https://antonfrolov.substack.com/p/i-hired-an-illustrator-to-draw-my",
         "source": "Hacker News",
-        "score": 390
-      },
-      {
-        "title": "The value of not getting to the point (2015)",
-        "url": "https://ken.arneson.name/2015/11/the-value-of-not-getting-to-the-point/",
-        "source": "Hacker News",
-        "score": 117
-      },
-      {
-        "title": "Show HN: SVG Spark – 10 client-side SVG design and dev tools",
-        "url": "https://svg-spark.vercel.app/",
-        "source": "Hacker News",
-        "score": 25
-      },
-      {
-        "title": "AI-ready biological data: $1.8B global commitment",
-        "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
-        "source": "Hacker News",
-        "score": 69
+        "score": 595
       },
       {
         "title": "Yes, and",
         "url": "https://htmx.org/essays/yes-and/",
         "source": "Hacker News",
-        "score": 172
+        "score": 394
       },
       {
-        "title": "Show HN: Edi Life OS – self-hosted life dashboard with an MCP server for AI",
-        "url": "https://github.com/edrisranjbar/lifeos",
+        "title": "Show HN: Quake ported to safe Rust, playable in browser",
+        "url": "https://quake-srp.pages.dev/",
         "source": "Hacker News",
-        "score": 15
+        "score": 142
       },
       {
-        "title": "Beauty in DVD Menus",
-        "url": "https://vale.rocks/posts/dvd-menus",
+        "title": "Programming Isn't Special",
+        "url": "https://blog.glyph.im/2026/10/programming-isnt-special.html",
         "source": "Hacker News",
-        "score": 261
+        "score": 7
       },
       {
-        "title": "A Terminal Protocol for Program Status (OSC 7501)",
-        "url": "https://mitchellh.com/writing/program-status-osc7501",
+        "title": "OpenAI, the Partition Principle, and Mathematics",
+        "url": "https://karagila.org/2026/openai-pp/",
         "source": "Hacker News",
-        "score": 100
+        "score": 110
       },
       {
-        "title": "Step 5 Preview, a 1M-context MoE from StepFun, shows up on OpenRouter",
-        "url": "https://openrouter.ai/stepfun/step-5-preview",
+        "title": "The value of not getting to the point (2015)",
+        "url": "https://ken.arneson.name/2015/11/the-value-of-not-getting-to-the-point/",
         "source": "Hacker News",
-        "score": 95
+        "score": 160
       },
       {
-        "title": "ETH-68: Ethernet Audio Interface for Linux",
-        "url": "https://naturalsystems.io/eth68",
+        "title": "Show HN: OldRoll, a free vintage photo editor for the browser",
+        "url": "https://www.oldroll.io/",
         "source": "Hacker News",
-        "score": 88
+        "score": 7
       },
       {
-        "title": "A 5.3M-year-old deep-sea whale necropolis in the Diamantina Zone",
-        "url": "https://www.nature.com/articles/s41586-026-10546-z",
+        "title": "AI-ready biological data: $1.8B global commitment",
+        "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
         "source": "Hacker News",
-        "score": 83
+        "score": 119
       }
     ],
     "ai": [
@@ -101,84 +101,83 @@
         "title": "Whistle: Speech to Text in 16.9 MB",
         "url": "https://cactuscompute.com/blog/whistle",
         "source": "Hacker News AI",
-        "score": 534
-      },
-      {
-        "title": "AI-ready biological data: $1.8B global commitment",
-        "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
-        "source": "Hacker News AI",
-        "score": 69
-      },
-      {
-        "title": "Show HN: Edi Life OS – self-hosted life dashboard with an MCP server for AI",
-        "url": "https://github.com/edrisranjbar/lifeos",
-        "source": "Hacker News AI",
-        "score": 15
-      },
-      {
-        "title": "Show HN: Jevman – AI decision models play Pac-Man",
-        "url": "https://opper.ai/jevman-benchmark/",
-        "source": "Hacker News AI",
-        "score": 29
-      },
-      {
-        "title": "Show HN: TerrainSR – fast, realistic heightmap upscaling model",
-        "url": "https://huggingface.co/joe-gibbs/terrainsr",
-        "source": "Hacker News AI",
-        "score": 30
-      },
-      {
-        "title": "OpenAI withdraws three mathematical results",
-        "url": "https://twitter.com/danintheory/status/2108065033070789090",
-        "source": "Hacker News AI",
-        "score": 248
+        "score": 740
       },
       {
         "title": "OpenAI, the Partition Principle, and Mathematics",
         "url": "https://karagila.org/2026/openai-pp/",
         "source": "Hacker News AI",
-        "score": 85
+        "score": 110
+      },
+      {
+        "title": "AI-ready biological data: $1.8B global commitment",
+        "url": "https://biohub.org/news/virtual-biology-initiative-expansion/",
+        "source": "Hacker News AI",
+        "score": 119
+      },
+      {
+        "title": "OpenAI withdraws three mathematical results",
+        "url": "https://twitter.com/danintheory/status/2108065033070789090",
+        "source": "Hacker News AI",
+        "score": 302
       },
       {
         "title": "I think I found a planet nobody knew existed. I used Claude Code to find it",
         "url": "https://www.reddit.com/r/ClaudeAI/s/mbe5IY2LF9",
         "source": "Hacker News AI",
-        "score": 108
+        "score": 165
       },
       {
-        "title": "We have LLMs now. Why are the docs still wrong?",
-        "url": "https://amendary.com/blog/keeping-docs-in-sync-with-code",
+        "title": "Show HN: Jevman – AI decision models play Pac-Man",
+        "url": "https://opper.ai/jevman-benchmark/",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 61
       },
       {
-        "title": "4-hour battery storage is cheaper to install than gas turbines all across globe",
-        "url": "https://www.solarpowerworldonline.com/2026/10/4-hour-battery-storage-is-cheaper-to-install-than-gas-turbines-all-across-globe/",
+        "title": "Sharing AI progress in mathematics",
+        "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
         "source": "Hacker News AI",
-        "score": 223
-      },
-      {
-        "title": "Sub-1-Bit LLM Compression via Latent Factorization",
-        "url": "https://github.com/SamsungLabs/LittleBit",
-        "source": "Hacker News AI",
-        "score": 77
+        "score": 1326
       },
       {
         "title": "OpenAI annualised revenues $20B less than previously signalled",
         "url": "https://www.cnbc.com/2026/10/08/open-ai-revenue-nvidia-oracle-coreweave.html",
         "source": "Hacker News AI",
-        "score": 351
+        "score": 389
+      },
+      {
+        "title": "Show HN: TerrainSR – fast, realistic heightmap upscaling model",
+        "url": "https://huggingface.co/joe-gibbs/terrainsr",
+        "source": "Hacker News AI",
+        "score": 35
+      },
+      {
+        "title": "Show HN: Edi Life OS – self-hosted life dashboard with an MCP server for AI",
+        "url": "https://github.com/edrisranjbar/lifeos",
+        "source": "Hacker News AI",
+        "score": 35
+      },
+      {
+        "title": "Sub-1-Bit LLM Compression via Latent Factorization",
+        "url": "https://github.com/SamsungLabs/LittleBit",
+        "source": "Hacker News AI",
+        "score": 84
       }
     ],
     "news": [
       {
-        "title": "Suspect linked to Monaco bomb attack on millionaire breaks silence to BBC",
+        "title": "Firing squad execution to be livestreamed, Pentagon says",
+        "url": "https://www.bbc.co.uk/news/articles/cmy0r96xygx6o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Suspect linked to Monaco bomb attack on millionaire speaks to BBC",
         "url": "https://www.bbc.co.uk/news/articles/ckgel9044vqeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Fort Hood attacker's execution by firing squad will be livestreamed, Pentagon says",
-        "url": "https://www.bbc.co.uk/news/articles/cmy0r96xygx6o?at_medium=RSS&at_campaign=rss",
+        "title": "ICE agent shoots man in New York City",
+        "url": "https://www.bbc.co.uk/news/articles/c59vzk9yypn3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -187,22 +186,27 @@
         "source": "BBC World"
       },
       {
-        "title": "Christa Pike now walking after failed US execution, lawyer tells BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c60rln74yzvxo?at_medium=RSS&at_campaign=rss",
+        "title": "Cars torched and shops looted as anti-migrant violence erupts in South Africa",
+        "url": "https://www.bbc.co.uk/news/articles/cwm24v45p4jgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Adidas sues Australian label White Fox over four stripes design",
-        "url": "https://www.bbc.co.uk/news/articles/c9e8ld448km8o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "'Bold and inventive' Canadian poet Anne Carson wins Nobel Literature Prize",
-        "url": "https://www.bbc.co.uk/news/articles/cq4g1j54nepyo?at_medium=RSS&at_campaign=rss",
+        "title": "Russian strikes and approaching winter force many in Kyiv to pack bags and flee",
+        "url": "https://www.bbc.co.uk/news/articles/c6zjx7jexz1do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Amazon's 'About You' section is quietly roasting users, and people love it ",
+        "url": "https://www.creativebloq.com/news/amazons-about-you-section-is-quietly-roasting-users-and-people-love-it",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " While we wait for GTA 6, the demo that inspired the original Grand Theft Auto's vehicle physics is now playable online ",
+        "url": "https://www.creativebloq.com/news/while-we-wait-for-gta-6-the-demo-that-inspired-the-original-grand-theft-autos-vehicle-physics-is-now-playable-online",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Phantom Blade Zero's dark wuxia world feels like a playable kung fu movie ",
         "url": "https://www.creativebloq.com/features/phantom-blade-zero-is-an-unreal-engine-5-game-that-feels-like-a-playable-kung-fu-movie",
@@ -226,16 +230,6 @@
       {
         "title": " The You Can See Everything poster will haunt my nightmares forever ",
         "url": "https://www.creativebloq.com/entertainment/movies-tv-shows/the-you-can-see-everything-poster-will-haunt-my-nightmares-forever",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This indie game about AI doesn't use gen-AI but features a lot of content from real people and creators ",
-        "url": "https://www.creativebloq.com/3d/video-game-design/this-indie-game-about-ai-doesnt-use-gen-ai-but-features-a-lot-of-content-from-real-people-and-creators",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Fanta's AI slop Halloween advert is a real horror show ",
-        "url": "https://www.creativebloq.com/ai/fantas-ai-slop-halloween-advert-is-a-real-horror-show",
         "source": "Creative Bloq"
       }
     ],
@@ -278,6 +272,26 @@
     ],
     "gaming": [
       {
+        "title": "24 Years Later, the Spy Thriller Series That Changed Hollywood Forever Is Streaming on Netflix",
+        "url": "https://www.polygon.com/the-bourne-trilogy-is-streaming-on-netflix/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Avatar: Seven Havens Review: A Near-Perfect Followup to a Fantasy Masterpiece",
+        "url": "https://www.polygon.com/avatar-seven-havens-review/",
+        "source": "Polygon"
+      },
+      {
+        "title": "CBS's Sleeper Hit Sitcom of the Decade Is Officially Free on Streaming",
+        "url": "https://www.polygon.com/ghosts-cbs-free-streaming-pluto-tv-october-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Sydney Sweeney's Extremely R-Rated 131-Minute Thriller Officially Finds a New Streaming Home",
+        "url": "https://www.polygon.com/sydney-sweeney-erotic-thriller-hbo-max/",
+        "source": "Polygon"
+      },
+      {
         "title": "After 4 Hours, Phantom Blade Zero Just Became My Most-Anticipated Action Game",
         "url": "https://www.polygon.com/phantom-blade-zero-hands-on-gameplay-preview/",
         "source": "Polygon"
@@ -290,26 +304,6 @@
       {
         "title": "Marvel Officially Announces New Disney Plus Series 'Zodiac'",
         "url": "https://www.polygon.com/marvel-zodiac-tv-series-disney-plus/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Cyberpunk 2077 Live-Action Movie Officially Announced",
-        "url": "https://www.polygon.com/cyberpunk-2077-movie-paramount-pictures/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All health upgrade point locations in Control Resonant",
-        "url": "https://www.polygon.com/control-resonant-health-upgrade-point-locations/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Ubisoft's Shutting Down Rainbow Six Game It Officially Launched in 2026",
-        "url": "https://www.polygon.com/rainbow-six-mobile-shutting-down-2027-android-ios/",
-        "source": "Polygon"
-      },
-      {
-        "title": "All power upgrade point locations in Control Resonant",
-        "url": "https://www.polygon.com/control-resonant-power-upgrade-point-locations/",
         "source": "Polygon"
       }
     ],
