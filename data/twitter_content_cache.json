@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-10T00:31:07.551681",
-    "total_items": 64
+    "last_updated": "2026-10-10T06:44:06.631076",
+    "total_items": 51
   },
   "content": {
     "tech": [
       {
+        "title": "REA Reverse – Engineer Anything",
+        "url": "https://rea.tools/",
+        "source": "Hacker News",
+        "score": 293
+      },
+      {
         "title": "Cloudflare acquires Deno",
         "url": "https://deno.com/blog/cloudflare",
         "source": "Hacker News",
-        "score": 1035
+        "score": 1159
+      },
+      {
+        "title": "Telegram Desktop vulnerability allowed any user's file to be stolen",
+        "url": "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/",
+        "source": "Hacker News",
+        "score": 67
       },
       {
         "title": "Triple-A Minesweeper",
         "url": "https://minesweeper.mikelacher.com/",
         "source": "Hacker News",
-        "score": 573
+        "score": 852
       },
       {
-        "title": "Our $445M Series D",
-        "url": "https://oxide.computer/blog/our-445m-series-d",
+        "title": "Eye of Sauron: Long-Range Hidden Spy Camera Detection",
+        "url": "https://www.usenix.org/conference/usenixsecurity24/presentation/zhang-qibo",
         "source": "Hacker News",
-        "score": 572
-      },
-      {
-        "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded",
-        "url": "https://carrierexplode.com/",
-        "source": "Hacker News",
-        "score": 198
-      },
-      {
-        "title": "Japan's Most Famous Tuna Buyer Says He Turned Somali Pirates into Fishermen",
-        "url": "https://www.japaninsides.com/the-sushi-king-who-went-to-somalia-how-japans-most-famous-tuna-buyer-says-he-turned-pirates-into-fishermen-55344",
-        "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "YouTuber Says Cops Visited Him After He Built a Flock-Style Camera to Track Cops",
-        "url": "https://gizmodo.com/youtuber-says-cops-paid-him-a-visit-after-he-built-flock-style-camera-to-track-cops-2000824306",
-        "source": "Hacker News",
-        "score": 365
-      },
-      {
-        "title": "Sorry, I'm in a meeting",
-        "url": "https://iminafleeting.com/",
-        "source": "Hacker News",
-        "score": 739
+        "score": 94
       },
       {
         "title": "Typesafe AI raises $870M at $7.5B",
         "url": "https://typesafe.ai/blog/series-ai",
         "source": "Hacker News",
-        "score": 241
+        "score": 337
+      },
+      {
+        "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded",
+        "url": "https://carrierexplode.com/",
+        "source": "Hacker News",
+        "score": 275
+      },
+      {
+        "title": "How to head into VR without wearing a headset",
+        "url": "https://www.kyushu-u.ac.jp/en/researches/view/414/",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "Can you use autoregressive diffusion to generate market data?",
+        "url": "https://blog.janestreet.com/can-you-use-autoregressive-diffusion-to-generate-market-data/",
+        "source": "Hacker News",
+        "score": 58
+      },
+      {
+        "title": "Compiling Rust to readable C with Eurydice",
+        "url": "https://lwn.net/Articles/1055211/",
+        "source": "Hacker News",
+        "score": 58
       },
       {
         "title": "Pointing AI at archives found a forgotten meteorite, lost rhinos, and more",
         "url": "https://jessewaites.com/blog/post/i-pointed-ai-at-400-years-of-archives/",
         "source": "Hacker News",
-        "score": 98
+        "score": 134
       },
       {
-        "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen",
-        "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+        "title": "Clinical trial of a prion disease drug candidate begins enrolling participants",
+        "url": "https://www.broadinstitute.org/news/clinical-trial-prion-disease-drug-candidate-begins-enrolling-participants",
         "source": "Hacker News",
-        "score": 368
+        "score": 36
       },
       {
-        "title": "Rewriting Prime Agent in Rust",
-        "url": "https://www.primeintellect.ai/blog/prime-agent-rust",
+        "title": "Show HN: A simple to-do app for iPhone, Mac, and your agent",
+        "url": "https://ilia.page/writing/introducing-nagare",
         "source": "Hacker News",
-        "score": 6
+        "score": 5
       },
       {
-        "title": "11 of 23 Core Open Source Projects Run on 1 or 2 People",
-        "url": "https://linuxstans.com/11-of-23-core-open-source-projects-run-on-1-or-2-people/",
+        "title": "Next.js 16.4",
+        "url": "https://nextjs.org/blog/next-16-4",
         "source": "Hacker News",
-        "score": 4
+        "score": 15
       },
       {
         "title": "Show HN: Proton Drive for Linux",
         "url": "https://oss.lsantos.dev/proton-drive-linux-fs/",
         "source": "Hacker News",
-        "score": 28
-      },
-      {
-        "title": "Nobel Peace Prize for 2026 to Navanethem Pillay",
-        "url": "https://www.nobelprize.org/prizes/peace/2026/press-release/",
-        "source": "Hacker News",
-        "score": 436
-      },
-      {
-        "title": "HostMath – Airbnb profit calculator with break-even occupancy and payback",
-        "url": "https://hosttmath.ctonew.app/?src=hn",
-        "source": "Hacker News",
-        "score": 3
+        "score": 62
       }
     ],
     "ai": [
@@ -101,85 +101,55 @@
         "title": "Typesafe AI raises $870M at $7.5B",
         "url": "https://typesafe.ai/blog/series-ai",
         "source": "Hacker News AI",
-        "score": 241
+        "score": 337
       },
       {
         "title": "Pointing AI at archives found a forgotten meteorite, lost rhinos, and more",
         "url": "https://jessewaites.com/blog/post/i-pointed-ai-at-400-years-of-archives/",
         "source": "Hacker News AI",
-        "score": 98
+        "score": 134
       },
       {
-        "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen",
-        "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+        "title": "Anthropic AI model submits false tip on unsolved Philly murder",
+        "url": "https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/",
         "source": "Hacker News AI",
-        "score": 368
-      },
-      {
-        "title": "HostMath – Airbnb profit calculator with break-even occupancy and payback",
-        "url": "https://hosttmath.ctonew.app/?src=hn",
-        "source": "Hacker News AI",
-        "score": 3
-      },
-      {
-        "title": "OpenAI mistranslated mathematics into code for its Navier-Stokes proof",
-        "url": "https://www.newscientist.com/article/2592824-openai-mistranslated-mathematics-into-code-for-its-navier-stokes-proof/",
-        "source": "Hacker News AI",
-        "score": 42
-      },
-      {
-        "title": "Training Text-to-Image Models Without a VAE",
-        "url": "https://www.linum.ai/field-notes/pyramid-jit",
-        "source": "Hacker News AI",
-        "score": 48
-      },
-      {
-        "title": "Can AI automate AI R&D yet?",
-        "url": "https://epoch.ai/publications/innovationeval",
-        "source": "Hacker News AI",
-        "score": 4
+        "score": 143
       },
       {
         "title": "What mathematicians should know about the Lean Theorem Prover: reliability & AI",
         "url": "https://terrytao.wordpress.com/2026/10/09/what-mathematicians-should-know-about-the-lean-theorem-proverquestions-of-reliability-and-ai/",
         "source": "Hacker News AI",
-        "score": 21
+        "score": 84
+      },
+      {
+        "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen",
+        "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+        "source": "Hacker News AI",
+        "score": 392
+      },
+      {
+        "title": "Anthropic Agents Tried to Fill Out Visa Forms on State Dept. Website",
+        "url": "https://www.nytimes.com/2026/10/09/technology/anthropic-rogue-ai-agents.html",
+        "source": "Hacker News AI",
+        "score": 20
       },
       {
         "title": "OpenAI fires three safety researchers for \"mishandling research information\"",
         "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
         "source": "Hacker News AI",
-        "score": 309
+        "score": 327
       },
       {
-        "title": "Tanker attacks in Strait of Hormuz surge to wartime high, Iran tries choking oil",
-        "url": "https://www.cnbc.com/2026/10/09/iran-war-strait-hormuz-tanker-attack-oil.html",
+        "title": "Training Text-to-Image Models Without a VAE",
+        "url": "https://www.linum.ai/field-notes/pyramid-jit",
         "source": "Hacker News AI",
-        "score": 22
-      },
-      {
-        "title": "Anthropic's AI gave Philadelphia police a fake tip about an unsolved homicide",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/1009090/anthropic-fake-homicide-information-philadelphia-pd-tip",
-        "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "Clef-Omni: full multimodality, a faster Clef and a cheaper Clef-flash",
-        "url": "https://blog.cloudflare.com/clef-faster-cheaper-multimodal/",
-        "source": "Hacker News AI",
-        "score": 8
+        "score": 49
       },
       {
         "title": "Whistle: Speech to Text in 16.9 MB",
         "url": "https://cactuscompute.com/blog/whistle",
         "source": "Hacker News AI",
-        "score": 917
-      },
-      {
-        "title": "OpenAI, the Partition Principle, and Mathematics",
-        "url": "https://karagila.org/2026/openai-pp/",
-        "source": "Hacker News AI",
-        "score": 196
+        "score": 926
       }
     ],
     "news": [
@@ -194,28 +164,23 @@
         "source": "BBC World"
       },
       {
-        "title": "US unveils sanctions on ICC in move court condemns as 'assault on rule of law'",
-        "url": "https://www.bbc.co.uk/news/articles/cj20vkkx3rdvo?at_medium=RSS&at_campaign=rss",
+        "title": "Three men found guilty of murdering Australian brothers and US friend in Mexico",
+        "url": "https://www.bbc.co.uk/news/articles/cj5ynwnye009o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Thousands of security personnel deployed as Delhi braces for ‘cockroach’ protest",
-        "url": "https://www.bbc.co.uk/news/articles/cm2d6xd2g4w2o?at_medium=RSS&at_campaign=rss",
+        "title": "Life-threatening Hurricane Isaias makes landfall in Florida",
+        "url": "https://www.bbc.co.uk/news/articles/c3vgx4450v2lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "JD Vance casts doubt on firing squad execution and says he will not watch it",
-        "url": "https://www.bbc.co.uk/news/articles/ck20r39nl3qzo?at_medium=RSS&at_campaign=rss",
+        "title": "US country music star Ella Langley cancels show due to 'security threat'",
+        "url": "https://www.bbc.co.uk/news/articles/cm79pdlywqd4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Powerful magnitude 7.7 earthquake hits Panama, damaging buildings",
         "url": "https://www.bbc.co.uk/news/articles/c620r39zdp9wo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Navi Pillay, former UN human rights chief, wins Nobel Peace Prize",
-        "url": "https://www.bbc.co.uk/news/articles/cm9wz5kng0x1o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -293,43 +258,7 @@
         "source": "Science Daily"
       }
     ],
-    "gaming": [
-      {
-        "title": "MTG Officially Reveals 4 Epic New Marvel Commander Decks Coming in 2027",
-        "url": "https://www.polygon.com/magic-the-gathering-marvel-darkhold-destiny-commander-decks/",
-        "source": "Polygon"
-      },
-      {
-        "title": "It’s Officially the Dawn of a New Era for 'Magic the Gathering' Universes Beyond",
-        "url": "https://www.polygon.com/mtg-darkhold-destinies-spoilers-marvel-universes-beyond/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Common Side Effects' Officially Break Their Silence on Season 2 Plans",
-        "url": "https://www.polygon.com/common-side-effects-season-2-release-date-creators-interview/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Hilarious 'Calvin and Hobbes' Comic Strips About Hating School",
-        "url": "https://www.polygon.com/calvin-hobbes-vs-school-best-comic-stripes/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Square Enix's Forgotten Loot-Shooter Was Years Ahead of Its Time",
-        "url": "https://www.polygon.com/outridrers-retrospective-review-square-enix/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Marathon Is the Scariest Horror Game of 2026",
-        "url": "https://www.polygon.com/marathon-scariest-horror-game/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GTA 6's Nudity Sure Sounds Hopelessly Outdated",
-        "url": "https://www.polygon.com/gta-6-nudity-jason-lucia-sounds-hopelessly-outdated/",
-        "source": "Polygon"
-      }
-    ],
+    "gaming": [],
     "steam": [],
     "github": [
       {
