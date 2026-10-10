@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-10T13:19:54.515566",
-    "total_items": 62
+    "last_updated": "2026-10-10T18:15:04.956279",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "`123456' password used in Danish CPR data breach",
-        "url": "https://cphpost.dk/2026-10-10/news/round-up/123456-password-used-in-massive-danish-cpr-data-breach/",
+        "title": "Knuth Reward Check",
+        "url": "https://www.thomas-huehn.com/knuth-reward-check",
         "source": "Hacker News",
-        "score": 192
+        "score": 48
       },
       {
         "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
         "url": "https://github.com/rociiu/talorys",
         "source": "Hacker News",
-        "score": 60
+        "score": 165
       },
       {
-        "title": "Apple/macOS silently removed from official Unix registry",
-        "url": "https://www.opengroup.org//openbrand/register/",
+        "title": "Rampart: Browser native on-device PII radaction",
+        "url": "https://ndstudio.gov/posts/say-hello-to-rampart",
         "source": "Hacker News",
-        "score": 71
+        "score": 44
+      },
+      {
+        "title": "Bitwarden Dual License Model",
+        "url": "https://community.bitwarden.com/t/published-version-update-in-app-stores/102750",
+        "source": "Hacker News",
+        "score": 217
+      },
+      {
+        "title": "Mxc: Microsoft Execution Containers version 1.0.0",
+        "url": "https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/",
+        "source": "Hacker News",
+        "score": 81
+      },
+      {
+        "title": "Grieving the Loss of Details",
+        "url": "https://purplesyringa.moe/blog/grieving-the-loss-of-details/",
+        "source": "Hacker News",
+        "score": 131
+      },
+      {
+        "title": "OpenSCAD the Programmers Solid 3D CAD Modeller",
+        "url": "https://openscad.org/",
+        "source": "Hacker News",
+        "score": 14
       },
       {
         "title": "REA Reverse – Engineer Anything",
         "url": "https://rea.tools/",
         "source": "Hacker News",
-        "score": 503
-      },
-      {
-        "title": "Cloudflare acquires Deno",
-        "url": "https://deno.com/blog/cloudflare",
-        "source": "Hacker News",
-        "score": 1270
+        "score": 611
       },
       {
         "title": "Telegram Desktop vulnerability allowed any user's file to be stolen",
         "url": "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/",
         "source": "Hacker News",
-        "score": 233
+        "score": 338
       },
       {
-        "title": "C for Rust Programmers",
-        "url": "https://bd103.dev/blog/2026-10-07-c-for-rust-programmers/",
+        "title": "I would like the value of my home to rise, while my property taxes fall",
+        "url": "https://conversableeconomist.com/2026/09/28/i-would-like-the-value-of-my-home-to-rise-while-my-property-taxes-fall/",
         "source": "Hacker News",
-        "score": 32
+        "score": 116
       },
       {
         "title": "Triple-A Minesweeper",
         "url": "https://minesweeper.mikelacher.com/",
         "source": "Hacker News",
-        "score": 1092
+        "score": 1256
+      },
+      {
+        "title": "`123456' password used in Danish CPR data breach",
+        "url": "https://cphpost.dk/2026-10-10/news/round-up/123456-password-used-in-massive-danish-cpr-data-breach/",
+        "source": "Hacker News",
+        "score": 328
       },
       {
         "title": "Eye of Sauron: Long-Range Hidden Spy Camera Detection (2024)",
         "url": "https://www.usenix.org/conference/usenixsecurity24/presentation/zhang-qibo",
         "source": "Hacker News",
-        "score": 198
+        "score": 260
       },
       {
-        "title": "LLMs Aren't Inevitable",
-        "url": "https://deadsimpletech.com/blog/llms-arent-inevitable",
+        "title": "Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years",
+        "url": "https://phys.org/news/2026-10-chernobyl-particles-reveal-unexpectedly-stable.html",
         "source": "Hacker News",
-        "score": 25
+        "score": 92
       },
       {
-        "title": "Noto means \"no tofu\": fixing dotted circles in Myanmar text",
-        "url": "https://www.datocms.com/blog/handling-less-common-scripts",
+        "title": "PVX-001: open-source Covid-19 vaccine starts Phase 1 trial",
+        "url": "https://chronicles.popvax.com/p/popvax-goes-clinical",
         "source": "Hacker News",
-        "score": 19
-      },
-      {
-        "title": "Can you use autoregressive diffusion to generate market data?",
-        "url": "https://blog.janestreet.com/can-you-use-autoregressive-diffusion-to-generate-market-data/",
-        "source": "Hacker News",
-        "score": 119
-      },
-      {
-        "title": "WSL3 Performance is about 5-60% faster than WSL2 depending on the workload",
-        "url": "https://tonym.us/wsl2-vs-wsl3-benchmarks.html",
-        "source": "Hacker News",
-        "score": 98
-      },
-      {
-        "title": "Show HN: Carrier-Explode: iPhone, Pixel and Galaxy carrier settings decoded",
-        "url": "https://carrierexplode.com/",
-        "source": "Hacker News",
-        "score": 347
-      },
-      {
-        "title": "Compiling Rust to readable C with Eurydice",
-        "url": "https://lwn.net/Articles/1055211/",
-        "source": "Hacker News",
-        "score": 100
+        "score": 52
       }
     ],
     "ai": [
@@ -101,79 +101,61 @@
         "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
         "url": "https://github.com/rociiu/talorys",
         "source": "Hacker News AI",
-        "score": 60
+        "score": 165
       },
       {
-        "title": "LLMs Aren't Inevitable",
-        "url": "https://deadsimpletech.com/blog/llms-arent-inevitable",
+        "title": "Mxc: Microsoft Execution Containers version 1.0.0",
+        "url": "https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/",
+        "source": "Hacker News AI",
+        "score": 81
+      },
+      {
+        "title": "Grieving the Loss of Details",
+        "url": "https://purplesyringa.moe/blog/grieving-the-loss-of-details/",
+        "source": "Hacker News AI",
+        "score": 131
+      },
+      {
+        "title": "AI Is Throwing a Roadside Picnic",
+        "url": "https://metedata.substack.com/p/ai-is-throwing-a-roadside-picnic",
         "source": "Hacker News AI",
         "score": 25
-      },
-      {
-        "title": "Pointing AI at archives found a forgotten meteorite, lost rhinos, and more",
-        "url": "https://jessewaites.com/blog/post/i-pointed-ai-at-400-years-of-archives/",
-        "source": "Hacker News AI",
-        "score": 160
-      },
-      {
-        "title": "Typesafe AI raises $870M at $7.5B",
-        "url": "https://typesafe.ai/blog/series-ai",
-        "source": "Hacker News AI",
-        "score": 389
       },
       {
         "title": "What mathematicians should know about the Lean Theorem Prover: reliability & AI",
         "url": "https://terrytao.wordpress.com/2026/10/09/what-mathematicians-should-know-about-the-lean-theorem-proverquestions-of-reliability-and-ai/",
         "source": "Hacker News AI",
-        "score": 141
+        "score": 177
+      },
+      {
+        "title": "Typesafe AI raises $870M at $7.5B",
+        "url": "https://typesafe.ai/blog/series-ai",
+        "source": "Hacker News AI",
+        "score": 422
+      },
+      {
+        "title": "Pointing AI at archives found a forgotten meteorite, lost rhinos, and more",
+        "url": "https://jessewaites.com/blog/post/i-pointed-ai-at-400-years-of-archives/",
+        "source": "Hacker News AI",
+        "score": 175
       },
       {
         "title": "Food processing influences metabolism and brain activity",
         "url": "https://news.vt.edu/articles/2026/10/research_fralinbiomed_upfhutelin.html",
         "source": "Hacker News AI",
-        "score": 66
+        "score": 82
       },
       {
-        "title": "Show HN: Let your AI agents paint big arrows, boxes and text on your screen",
-        "url": "https://github.com/franzenzenhofer/big-arrow-on-the-screen",
+        "title": "AI Data Centers Not Paying Their Costs, Will Keep Using NDAs and Seek Tax Breaks",
+        "url": "https://www.warren.senate.gov/newsroom/press-releases/ai-data-center-companies-reveal-to-warren-blumenthal-van-hollen-they-are-not-paying-their-full-costs-will-continue-using-ndas-and-seeking-tax-breaks/",
         "source": "Hacker News AI",
-        "score": 400
-      },
-      {
-        "title": "Anthropic AI model submits false tip on unsolved Philly murder, police say",
-        "url": "https://www.nbcphiladelphia.com/news/local/anthropic-ai-model-submits-false-tip-on-unsolved-philly-murder-police-say/4477051/",
-        "source": "Hacker News AI",
-        "score": 179
-      },
-      {
-        "title": "Whistle: Speech to Text in 16.9 MB",
-        "url": "https://cactuscompute.com/blog/whistle",
-        "source": "Hacker News AI",
-        "score": 935
-      },
-      {
-        "title": "OpenAI fires three safety researchers for \"mishandling research information\"",
-        "url": "https://techcrunch.com/2026/10/08/fired-openai-safety-researchers-dispute-misconduct-claims-warn-of-chilling-effect/",
-        "source": "Hacker News AI",
-        "score": 343
-      },
-      {
-        "title": "Sharing AI progress in mathematics",
-        "url": "https://openai.com/index/sharing-ai-progress-in-mathematics/",
-        "source": "Hacker News AI",
-        "score": 1346
-      },
-      {
-        "title": "I think I found a planet nobody knew existed. I used Claude Code to find it",
-        "url": "https://www.reddit.com/r/ClaudeAI/s/mbe5IY2LF9",
-        "source": "Hacker News AI",
-        "score": 280
+        "score": 36
       }
     ],
     "news": [
       {
-        "title": "'Cockroach' group leaders among hundreds detained in Delhi protest",
-        "url": "https://www.bbc.co.uk/news/articles/c65yn7xvde7vo?at_medium=RSS&at_campaign=rss",
+        "title": "'Time for Ukraine to get new president,' says Trump after Zelensky condemns diesel deal",
+        "url": "https://www.bbc.co.uk/news/articles/cqe8r5l7n92jo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -182,32 +164,37 @@
         "source": "BBC World"
       },
       {
-        "title": "Trump announces deal for Russian diesel as Zelensky calls it a gift to Putin",
-        "url": "https://www.bbc.co.uk/news/articles/cm1dwgr666wno?at_medium=RSS&at_campaign=rss",
+        "title": "Several injured in attack on airport in Saudi capital Riyadh",
+        "url": "https://www.bbc.co.uk/news/articles/cw33x4y8k82no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Analysis: Trump's shock Russia deal highlights mounting pressure to curb fuel prices",
-        "url": "https://www.bbc.co.uk/news/articles/c5lye9z4xw4yo?at_medium=RSS&at_campaign=rss",
+        "title": "US murderer Christa Pike discharged from hospital 10 days after failed execution",
+        "url": "https://www.bbc.co.uk/news/articles/cmlyle97pqd7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Rogue Anthropic AI agent gave police fake tip in unsolved murder case",
-        "url": "https://www.bbc.co.uk/news/articles/cqkg50j1yd5lo?at_medium=RSS&at_campaign=rss",
+        "title": "'Cockroach' group leaders among hundreds detained in Delhi protest",
+        "url": "https://www.bbc.co.uk/news/articles/c65yn7xvde7vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Headmaster detained after BBC investigation into alleged sexual abuse of students",
-        "url": "https://www.bbc.co.uk/news/articles/cwy8lx1r2vrro?at_medium=RSS&at_campaign=rss",
+        "title": "Woman injures three people in third Poland school knife attack in a week",
+        "url": "https://www.bbc.co.uk/news/articles/cv8ezd246z1wo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Hurricane Isaias downgraded after making landfall in Florida",
-        "url": "https://www.bbc.co.uk/news/articles/c3vgx4450v2lo?at_medium=RSS&at_campaign=rss",
+        "title": "Nobel peace laureate says US sanctions on ICC 'unacceptable'",
+        "url": "https://www.bbc.co.uk/news/articles/cqkgjrpmr47vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " The pen that went viral with those anti-AI ads has 30% off right now ",
+        "url": "https://www.creativebloq.com/deals/the-pen-that-went-viral-with-those-anti-ai-ads-has-27-percent-off-right-now",
+        "source": "Creative Bloq"
+      },
       {
         "title": " New Balance’s Steve Jobs homage is so subtle you might have missed it ",
         "url": "https://www.creativebloq.com/news/new-balances-steve-jobs-homage-is-so-subtle-you-might-have-missed-it",
@@ -236,11 +223,6 @@
       {
         "title": " Tested: The Mac Studio M5 Max claims its crown as the best of all Apple computers ",
         "url": "https://www.creativebloq.com/reviews/tested-the-mac-studio-m5-max-claims-its-crown-as-the-best-of-all-apple-computers",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Wait, the best multicolour 3D printer for beginners is now even cheaper than it was in Amazon's Prime Day sale earlier this week! ",
-        "url": "https://www.creativebloq.com/deals/wait-the-best-multicolour-3d-printer-for-beginners-is-now-even-cheaper-than-it-was-in-amazons-prime-day-sale-earlier-this-week",
         "source": "Creative Bloq"
       }
     ],
@@ -283,38 +265,38 @@
     ],
     "gaming": [
       {
-        "title": "Hunting for New Games? Polygon’s Wishlister Wants To Help",
-        "url": "https://www.polygon.com/polygon-wishlister-sign-up/",
+        "title": "10 Essential GameCube Games Still Missing From Switch Online",
+        "url": "https://www.polygon.com/best-gamecube-games-missing-nintendo-switch-online/",
         "source": "Polygon"
       },
       {
-        "title": "There Has Never Been a Better Time To Get Into Star Wars",
-        "url": "https://www.polygon.com/star-wars-zero-company-galactic-racer-newcomers/",
+        "title": "Disney World and Disneyland Official Price Surge Concerns Attendees",
+        "url": "https://www.polygon.com/disney-world-disneyland-price-surge-october-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Persona’s Horrifying Dong Monster Will Haunt My Nightmares Forever",
-        "url": "https://www.polygon.com/persona-atlus-scariest-mara/",
+        "title": "Black Clover is Officially Crunchyroll's Most-Liked Anime Of The Year",
+        "url": "https://www.polygon.com/black-clover-season-2-premiere-most-liked-crunchyroll/",
         "source": "Polygon"
       },
       {
-        "title": "Halo officially returns in 2 weeks with new release",
-        "url": "https://www.polygon.com/halo-novel-release-date/",
+        "title": "59 Years Later, Star Trek's Definitive Time-Travel Episode is Getting a Major Update",
+        "url": "https://www.polygon.com/star-trek-city-on-the-edge-of-forever/",
         "source": "Polygon"
       },
       {
-        "title": "Avatar: Seven Havens's Biggest Plot Twist May Be Hiding in Plain Sight",
-        "url": "https://www.polygon.com/avatar-seven-havens-seven-chakras/",
+        "title": "7 Final Fantasy Games That Deserved Better",
+        "url": "https://www.polygon.com/ff-final-fantasy-games-underrated-overlooked/",
         "source": "Polygon"
       },
       {
-        "title": "5 Brilliant Anime That Don’t Waste a Single Episode",
-        "url": "https://www.polygon.com/brilliant-anime-with-no-bad-episodes/",
+        "title": "7 Switch 2 Characters Nintendo Should Add to the Next Super Smash Bros.",
+        "url": "https://www.polygon.com/switch-2-super-smash-bros-character-predictions/",
         "source": "Polygon"
       },
       {
-        "title": "5 Sci-Fi Books That Are Better Than Their Movie Adaptations",
-        "url": "https://www.polygon.com/sci-fi-books-better-movie-adaptations/",
+        "title": "WandaVision Creator Set To Develop New Stargate Series",
+        "url": "https://www.polygon.com/stargate-new-amazon-mgm-series-jac-schaeffer/",
         "source": "Polygon"
       }
     ],
