@@ -1,155 +1,161 @@
 {
   "metadata": {
-    "last_updated": "2026-10-10T18:15:04.956279",
-    "total_items": 59
+    "last_updated": "2026-10-10T22:16:04.292124",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "Knuth Reward Check",
-        "url": "https://www.thomas-huehn.com/knuth-reward-check",
+        "title": "2D Vehicles",
+        "url": "https://patkerr.co.uk/2d-vehicles/",
         "source": "Hacker News",
-        "score": 48
+        "score": 260
+      },
+      {
+        "title": "A city-building game in which the city would prefer you didn't",
+        "url": "https://housing.over.pizza/",
+        "source": "Hacker News",
+        "score": 39
+      },
+      {
+        "title": "Why DuckDB 2.0 is faster",
+        "url": "https://motherduck.com/blog/why-duckdb-20-is-faster/",
+        "source": "Hacker News",
+        "score": 92
+      },
+      {
+        "title": "Knuth reward check",
+        "url": "https://www.thomas-huehn.com/knuth-reward-check/",
+        "source": "Hacker News",
+        "score": 116
+      },
+      {
+        "title": "Nix wrote half of my debugger",
+        "url": "https://fzakaria.com/2026/10/07/nix-wrote-half-of-my-debugger",
+        "source": "Hacker News",
+        "score": 65
+      },
+      {
+        "title": "The Lightbulb Computer",
+        "url": "https://lightbulbcomputer.com/",
+        "source": "Hacker News",
+        "score": 123
+      },
+      {
+        "title": "Recent AI models struggled to match a human algorithmic innovation",
+        "url": "https://epoch.ai/publications/innovationeval",
+        "source": "Hacker News",
+        "score": 53
       },
       {
         "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
         "url": "https://github.com/rociiu/talorys",
         "source": "Hacker News",
-        "score": 165
-      },
-      {
-        "title": "Rampart: Browser native on-device PII radaction",
-        "url": "https://ndstudio.gov/posts/say-hello-to-rampart",
-        "source": "Hacker News",
-        "score": 44
-      },
-      {
-        "title": "Bitwarden Dual License Model",
-        "url": "https://community.bitwarden.com/t/published-version-update-in-app-stores/102750",
-        "source": "Hacker News",
-        "score": 217
+        "score": 221
       },
       {
         "title": "Mxc: Microsoft Execution Containers version 1.0.0",
         "url": "https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/",
         "source": "Hacker News",
-        "score": 81
+        "score": 140
       },
       {
-        "title": "Grieving the Loss of Details",
-        "url": "https://purplesyringa.moe/blog/grieving-the-loss-of-details/",
+        "title": "Nvidia in talks to acquire US 'open' model startup Reflection AI",
+        "url": "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a",
         "source": "Hacker News",
-        "score": 131
+        "score": 87
       },
       {
-        "title": "OpenSCAD the Programmers Solid 3D CAD Modeller",
-        "url": "https://openscad.org/",
+        "title": "Apple/macOS removed from official Unix registry",
+        "url": "https://www.opengroup.org//openbrand/register/",
         "source": "Hacker News",
-        "score": 14
+        "score": 222
       },
       {
         "title": "REA Reverse – Engineer Anything",
         "url": "https://rea.tools/",
         "source": "Hacker News",
-        "score": 611
+        "score": 661
       },
       {
-        "title": "Telegram Desktop vulnerability allowed any user's file to be stolen",
-        "url": "https://beaksec.github.io/posts/telegram-desktop-one-click-account-takeover/",
+        "title": "Grieving the loss of details",
+        "url": "https://purplesyringa.moe/blog/grieving-the-loss-of-details/",
         "source": "Hacker News",
-        "score": 338
+        "score": 287
       },
       {
-        "title": "I would like the value of my home to rise, while my property taxes fall",
-        "url": "https://conversableeconomist.com/2026/09/28/i-would-like-the-value-of-my-home-to-rise-while-my-property-taxes-fall/",
+        "title": "OpenSCAD the Programmers Solid 3D CAD Modeller",
+        "url": "https://openscad.org/",
         "source": "Hacker News",
-        "score": 116
+        "score": 75
       },
       {
-        "title": "Triple-A Minesweeper",
-        "url": "https://minesweeper.mikelacher.com/",
+        "title": "Rampart: Browser native on-device PII radaction",
+        "url": "https://ndstudio.gov/posts/say-hello-to-rampart",
         "source": "Hacker News",
-        "score": 1256
-      },
-      {
-        "title": "`123456' password used in Danish CPR data breach",
-        "url": "https://cphpost.dk/2026-10-10/news/round-up/123456-password-used-in-massive-danish-cpr-data-breach/",
-        "source": "Hacker News",
-        "score": 328
-      },
-      {
-        "title": "Eye of Sauron: Long-Range Hidden Spy Camera Detection (2024)",
-        "url": "https://www.usenix.org/conference/usenixsecurity24/presentation/zhang-qibo",
-        "source": "Hacker News",
-        "score": 260
-      },
-      {
-        "title": "Chernobyl particles reveal unexpectedly stable nuclear fuel after 40 years",
-        "url": "https://phys.org/news/2026-10-chernobyl-particles-reveal-unexpectedly-stable.html",
-        "source": "Hacker News",
-        "score": 92
-      },
-      {
-        "title": "PVX-001: open-source Covid-19 vaccine starts Phase 1 trial",
-        "url": "https://chronicles.popvax.com/p/popvax-goes-clinical",
-        "source": "Hacker News",
-        "score": 52
+        "score": 58
       }
     ],
     "ai": [
       {
+        "title": "Recent AI models struggled to match a human algorithmic innovation",
+        "url": "https://epoch.ai/publications/innovationeval",
+        "source": "Hacker News AI",
+        "score": 53
+      },
+      {
         "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
         "url": "https://github.com/rociiu/talorys",
         "source": "Hacker News AI",
-        "score": 165
+        "score": 221
       },
       {
         "title": "Mxc: Microsoft Execution Containers version 1.0.0",
         "url": "https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/",
         "source": "Hacker News AI",
-        "score": 81
+        "score": 140
       },
       {
-        "title": "Grieving the Loss of Details",
+        "title": "Nvidia in talks to acquire US 'open' model startup Reflection AI",
+        "url": "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a",
+        "source": "Hacker News AI",
+        "score": 87
+      },
+      {
+        "title": "Grieving the loss of details",
         "url": "https://purplesyringa.moe/blog/grieving-the-loss-of-details/",
         "source": "Hacker News AI",
-        "score": 131
+        "score": 287
       },
       {
-        "title": "AI Is Throwing a Roadside Picnic",
-        "url": "https://metedata.substack.com/p/ai-is-throwing-a-roadside-picnic",
+        "title": "Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks",
+        "url": "https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-bing-redirects-to-push-claude-clickfix-attacks/",
         "source": "Hacker News AI",
-        "score": 25
+        "score": 13
       },
       {
         "title": "What mathematicians should know about the Lean Theorem Prover: reliability & AI",
         "url": "https://terrytao.wordpress.com/2026/10/09/what-mathematicians-should-know-about-the-lean-theorem-proverquestions-of-reliability-and-ai/",
         "source": "Hacker News AI",
-        "score": 177
+        "score": 189
       },
       {
         "title": "Typesafe AI raises $870M at $7.5B",
         "url": "https://typesafe.ai/blog/series-ai",
         "source": "Hacker News AI",
-        "score": 422
+        "score": 425
+      },
+      {
+        "title": "A new look at brains transformed by psychedelics",
+        "url": "https://arstechnica.com/science/2026/10/the-psychedelic-brain-looks-like-chaos-underneath-theres-order/",
+        "source": "Hacker News AI",
+        "score": 11
       },
       {
         "title": "Pointing AI at archives found a forgotten meteorite, lost rhinos, and more",
         "url": "https://jessewaites.com/blog/post/i-pointed-ai-at-400-years-of-archives/",
         "source": "Hacker News AI",
-        "score": 175
-      },
-      {
-        "title": "Food processing influences metabolism and brain activity",
-        "url": "https://news.vt.edu/articles/2026/10/research_fralinbiomed_upfhutelin.html",
-        "source": "Hacker News AI",
-        "score": 82
-      },
-      {
-        "title": "AI Data Centers Not Paying Their Costs, Will Keep Using NDAs and Seek Tax Breaks",
-        "url": "https://www.warren.senate.gov/newsroom/press-releases/ai-data-center-companies-reveal-to-warren-blumenthal-van-hollen-they-are-not-paying-their-full-costs-will-continue-using-ndas-and-seeking-tax-breaks/",
-        "source": "Hacker News AI",
-        "score": 36
+        "score": 179
       }
     ],
     "news": [
@@ -159,7 +165,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Russian glide bomb attack on Zaporizhzhia kills at least 15 people",
+        "title": "Russian glide bomb attack on Zaporizhzhia kills at least 20 people",
         "url": "https://www.bbc.co.uk/news/articles/cwvgdpv642g5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -174,18 +180,18 @@
         "source": "BBC World"
       },
       {
-        "title": "'Cockroach' group leaders among hundreds detained in Delhi protest",
-        "url": "https://www.bbc.co.uk/news/articles/c65yn7xvde7vo?at_medium=RSS&at_campaign=rss",
+        "title": "Four dead and thousands without power after Hurricane Isaias lashes US",
+        "url": "https://www.bbc.co.uk/news/articles/cmje5x80yg70o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Expedition hopes to find aviator Amelia Earhart's plane on remote island",
+        "url": "https://www.bbc.co.uk/news/articles/c3y0e871rk4vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Woman injures three people in third Poland school knife attack in a week",
         "url": "https://www.bbc.co.uk/news/articles/cv8ezd246z1wo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Nobel peace laureate says US sanctions on ICC 'unacceptable'",
-        "url": "https://www.bbc.co.uk/news/articles/cqkgjrpmr47vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -238,32 +244,57 @@
         "source": "Science Daily"
       },
       {
+        "title": "Scientists discover 5 hidden brain patterns behind depression",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261008005251.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "NASA is searching for hidden caves to build its first Moon base",
         "url": "https://www.sciencedaily.com/releases/2026/10/261008005247.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Only one workout helped older adults lose fat and keep muscle",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261007233348.htm",
+        "title": "Scientists may have found a shortcut to fusion energy",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261008005242.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists accidentally discover a genetic code that breaks the rules of life",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261007233136.htm",
+        "title": "MIT astronomers catch a star in a feast that could last billions of years",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261008005240.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists warn a popular vitamin D supplement may have a hidden downside",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261007232940.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists find hidden materials that could improve batteries and solar fuels",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261007042118.htm",
+        "title": "Scientists create a lightsaber-like laser antenna that transmits radio waves",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261008005239.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "Warner Bros. 41-Year-Old Fantasy Classic Reboot is Officially Happening",
+        "url": "https://www.polygon.com/thundercats-movie-update/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Henry Cavill's New Sci-fi Streaming Series Sets Carrie Reboot Creator to Direct",
+        "url": "https://www.polygon.com/warhammer-40k-tv-series-henry-cavill-mike-flanagan/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Star Trek: Starfleet Academy Returns For Its Final Season Early Next Year",
+        "url": "https://www.polygon.com/star-trek-starfleet-academy-season-2-release-window/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Stephen King Movie Adaptations That Are Better Than The Books",
+        "url": "https://www.polygon.com/stephen-king-books-better-adaptations/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Russell Crowe’s New Crime Netflix Thriller Is Officially a Streaming Hit",
+        "url": "https://www.polygon.com/russell-crowe-unabomber-netflix-streaming-success-september-2026/",
+        "source": "Polygon"
+      },
       {
         "title": "10 Essential GameCube Games Still Missing From Switch Online",
         "url": "https://www.polygon.com/best-gamecube-games-missing-nintendo-switch-online/",
@@ -272,31 +303,6 @@
       {
         "title": "Disney World and Disneyland Official Price Surge Concerns Attendees",
         "url": "https://www.polygon.com/disney-world-disneyland-price-surge-october-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Black Clover is Officially Crunchyroll's Most-Liked Anime Of The Year",
-        "url": "https://www.polygon.com/black-clover-season-2-premiere-most-liked-crunchyroll/",
-        "source": "Polygon"
-      },
-      {
-        "title": "59 Years Later, Star Trek's Definitive Time-Travel Episode is Getting a Major Update",
-        "url": "https://www.polygon.com/star-trek-city-on-the-edge-of-forever/",
-        "source": "Polygon"
-      },
-      {
-        "title": "7 Final Fantasy Games That Deserved Better",
-        "url": "https://www.polygon.com/ff-final-fantasy-games-underrated-overlooked/",
-        "source": "Polygon"
-      },
-      {
-        "title": "7 Switch 2 Characters Nintendo Should Add to the Next Super Smash Bros.",
-        "url": "https://www.polygon.com/switch-2-super-smash-bros-character-predictions/",
-        "source": "Polygon"
-      },
-      {
-        "title": "WandaVision Creator Set To Develop New Stargate Series",
-        "url": "https://www.polygon.com/stargate-new-amazon-mgm-series-jac-schaeffer/",
         "source": "Polygon"
       }
     ],
