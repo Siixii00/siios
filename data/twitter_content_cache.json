@@ -1,183 +1,183 @@
 {
   "metadata": {
-    "last_updated": "2026-10-11T08:23:33.221965",
+    "last_updated": "2026-10-11T15:22:21.120665",
     "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "3rd Yandex Cloud Data Center Was Hit",
-        "url": "https://status.yandex.cloud/en/incidents/2136",
+        "title": "Internal files add to evidence of an ExxonMobil climate deception campaign",
+        "url": "https://insideclimatenews.org/news/07102026/exxonmobil-climate-deception-new-evidence/",
         "source": "Hacker News",
-        "score": 61
+        "score": 116
       },
       {
-        "title": "Build your own decision model",
-        "url": "https://nishtahir.com/build-your-own-decision-model/",
+        "title": "I paid people to try and follow my README",
+        "url": "https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/",
         "source": "Hacker News",
-        "score": 269
+        "score": 172
+      },
+      {
+        "title": "LineageOS 24.0",
+        "url": "https://lineageos.org/Changelog-32/",
+        "source": "Hacker News",
+        "score": 256
+      },
+      {
+        "title": "Valen's Memory Safety: A New Kind of Borrow Checking",
+        "url": "https://verdagon.dev/blog/valen-group-borrowing",
+        "source": "Hacker News",
+        "score": 46
+      },
+      {
+        "title": "The tilde in your PATH may not be your HOME",
+        "url": "https://disconnect3d.pl//2026/10/02/dont-put-tilde-in-your-path/",
+        "source": "Hacker News",
+        "score": 72
+      },
+      {
+        "title": "Nitter: Update Oct 10th seeking funding and legal help",
+        "url": "https://nitter.net",
+        "source": "Hacker News",
+        "score": 260
+      },
+      {
+        "title": "Terence Tao: Math 2.0 [pdf]",
+        "url": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf",
+        "source": "Hacker News",
+        "score": 83
+      },
+      {
+        "title": "Plumbers, chains, and famous painters: The history of the pipe operator in R",
+        "url": "http://adolfoalvarez.cl/blog/2021-09-16-plumbers-chains-and-famous-painters-the-history-of-the-pipe-operator-in-r/",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
+        "title": "IRCv3",
+        "url": "https://ircv3.net/",
+        "source": "Hacker News",
+        "score": 191
       },
       {
         "title": "2D Vehicles",
         "url": "https://patkerr.co.uk/2d-vehicles/",
         "source": "Hacker News",
-        "score": 449
+        "score": 555
       },
       {
-        "title": "Decade-old RAM is making a comeback",
+        "title": "Build your own decision model",
+        "url": "https://nishtahir.com/build-your-own-decision-model/",
+        "source": "Hacker News",
+        "score": 398
+      },
+      {
+        "title": "Weave (YC W25) is hiring ML, AI, product, & design engineers",
+        "url": "https://jobs.ashbyhq.com/weave-os",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "Rolling the Root Key",
+        "url": "https://blog.apnic.net/2026/10/09/rolling-the-root-key-2/",
+        "source": "Hacker News",
+        "score": 7
+      },
+      {
+        "title": "The RAM shortage is bringing back DDR4",
         "url": "https://www.theverge.com/games/1009140/ram-shortage-intel-amd-ddr4-comeback",
         "source": "Hacker News",
-        "score": 46
+        "score": 127
       },
       {
-        "title": "A city-building game in which the city would prefer you didn't",
-        "url": "https://housing.over.pizza/",
-        "source": "Hacker News",
-        "score": 324
-      },
-      {
-        "title": "How big is a Git commit?",
-        "url": "https://ratfactor.com/cards/git-commit-size",
-        "source": "Hacker News",
-        "score": 23
-      },
-      {
-        "title": "PSPi 6 – Raspberry Pi in a PSP",
-        "url": "https://github.com/othermod/PSPi-Version-6",
-        "source": "Hacker News",
-        "score": 76
-      },
-      {
-        "title": "The Lightbulb Computer",
-        "url": "https://lightbulbcomputer.com/",
-        "source": "Hacker News",
-        "score": 382
-      },
-      {
-        "title": "Retrofitting language models to operate over bytes",
-        "url": "https://www.nature.com/articles/s41586-026-11111-4",
-        "source": "Hacker News",
-        "score": 52
-      },
-      {
-        "title": "Nix wrote half of my debugger",
-        "url": "https://fzakaria.com/2026/10/07/nix-wrote-half-of-my-debugger",
-        "source": "Hacker News",
-        "score": 190
-      },
-      {
-        "title": "Show HN: Happy Hangul Day! An RNN for Generating Korean Handwriting Strokes",
-        "url": "https://hangul.ink/blog/hangul-day",
-        "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Knuth reward check",
-        "url": "https://www.thomas-huehn.com/knuth-reward-check/",
-        "source": "Hacker News",
-        "score": 189
-      },
-      {
-        "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
-        "url": "https://github.com/rociiu/talorys",
-        "source": "Hacker News",
-        "score": 287
-      },
-      {
-        "title": "Mxc: Microsoft Execution Containers version 1.0.0",
-        "url": "https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/",
-        "source": "Hacker News",
-        "score": 184
-      },
-      {
-        "title": "Deterministic Simulation Testing in Celld",
-        "url": "https://celld.dev/docs/engineering/deterministic-simulation-testing/",
+        "title": "Show HN: BetterWispr – Free, open-source dictation for Mac",
+        "url": "https://betterwispr.com/",
         "source": "Hacker News",
         "score": 18
       }
     ],
     "ai": [
       {
+        "title": "Internal files add to evidence of an ExxonMobil climate deception campaign",
+        "url": "https://insideclimatenews.org/news/07102026/exxonmobil-climate-deception-new-evidence/",
+        "source": "Hacker News AI",
+        "score": 116
+      },
+      {
+        "title": "I paid people to try and follow my README",
+        "url": "https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/",
+        "source": "Hacker News AI",
+        "score": 172
+      },
+      {
+        "title": "Plumbers, chains, and famous painters: The history of the pipe operator in R",
+        "url": "http://adolfoalvarez.cl/blog/2021-09-16-plumbers-chains-and-famous-painters-the-history-of-the-pipe-operator-in-r/",
+        "source": "Hacker News AI",
+        "score": 23
+      },
+      {
+        "title": "Weave (YC W25) is hiring ML, AI, product, & design engineers",
+        "url": "https://jobs.ashbyhq.com/weave-os",
+        "source": "Hacker News AI",
+        "score": 1
+      },
+      {
         "title": "Retrofitting language models to operate over bytes",
         "url": "https://www.nature.com/articles/s41586-026-11111-4",
         "source": "Hacker News AI",
-        "score": 52
+        "score": 89
       },
       {
         "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
         "url": "https://github.com/rociiu/talorys",
         "source": "Hacker News AI",
-        "score": 287
+        "score": 309
       },
       {
         "title": "Mxc: Microsoft Execution Containers version 1.0.0",
         "url": "https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/",
         "source": "Hacker News AI",
-        "score": 184
+        "score": 213
       },
       {
         "title": "Food processing influences metabolism and brain activity",
         "url": "https://news.vt.edu/articles/2026/10/research_fralinbiomed_upfhutelin.html",
         "source": "Hacker News AI",
-        "score": 144
+        "score": 171
+      },
+      {
+        "title": "Nicolas Cage says he won't work with Amazon again over AI dispute",
+        "url": "https://www.latimes.com/entertainment-arts/business/story/2026-10-10/nicolas-cage-says-he-wont-work-with-amazon-again-over-ai-dispute",
+        "source": "Hacker News AI",
+        "score": 25
       },
       {
         "title": "Grieving the loss of details",
         "url": "https://purplesyringa.moe/blog/grieving-the-loss-of-details/",
         "source": "Hacker News AI",
-        "score": 431
+        "score": 468
       },
       {
         "title": "500B Tokens Later: Letting AI Agents Decompile a First-Person Shooter",
         "url": "https://momo5502.com/posts/2026-10-09-game-decompilation/",
         "source": "Hacker News AI",
-        "score": 84
-      },
-      {
-        "title": "Nvidia in talks to acquire US 'open' model startup Reflection AI",
-        "url": "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a",
-        "source": "Hacker News AI",
-        "score": 162
-      },
-      {
-        "title": "AI agents in a stand-up call",
-        "url": "https://atoll92.github.io/agent-standup/",
-        "source": "Hacker News AI",
-        "score": 39
-      },
-      {
-        "title": "Recent AI models struggled to match a human algorithmic innovation",
-        "url": "https://epoch.ai/publications/innovationeval",
-        "source": "Hacker News AI",
-        "score": 87
-      },
-      {
-        "title": "Typesafe AI raises $870M at $7.5B",
-        "url": "https://typesafe.ai/blog/series-ai",
-        "source": "Hacker News AI",
-        "score": 437
-      },
-      {
-        "title": "Pointing AI at archives found a forgotten meteorite, lost rhinos, and more",
-        "url": "https://jessewaites.com/blog/post/i-pointed-ai-at-400-years-of-archives/",
-        "source": "Hacker News AI",
-        "score": 181
+        "score": 118
       }
     ],
     "news": [
       {
-        "title": "'Time for Ukraine to get new president,' says Trump after Zelensky condemns diesel deal",
-        "url": "https://www.bbc.co.uk/news/articles/cqe8r5l7n92jo?at_medium=RSS&at_campaign=rss",
+        "title": "Ukraine strikes Yandex data centre in third attack on Russian tech giant",
+        "url": "https://www.bbc.co.uk/news/articles/cw0k0g57mk3zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Young men live in fear of being snatched off the streets and sold to Myanmar's army",
-        "url": "https://www.bbc.co.uk/news/articles/c680zlny0gk4o?at_medium=RSS&at_campaign=rss",
+        "title": "Pope Leo to have surgery after lump found on lung",
+        "url": "https://www.bbc.co.uk/news/articles/c6m2dnngvw8xo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Delhi braces for more protests as 'cockroach' group's leaders released",
-        "url": "https://www.bbc.co.uk/news/articles/c84g179n2393o?at_medium=RSS&at_campaign=rss",
+        "title": "Homes and bridges swept away as fresh floods hit Nepal",
+        "url": "https://www.bbc.co.uk/news/articles/ck86zppejjw3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -186,8 +186,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Four dead and thousands without power after Hurricane Isaias lashes US",
-        "url": "https://www.bbc.co.uk/news/articles/cmje5x80yg70o?at_medium=RSS&at_campaign=rss",
+        "title": "Children among 109 dead after boat capsizes off Djibouti, UN says",
+        "url": "https://www.bbc.co.uk/news/articles/cwy7lxx60dg5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -202,6 +202,21 @@
       }
     ],
     "art": [
+      {
+        "title": " \"Creativity isn’t a job you clock out of\": 5 questions with Chloé Templeman ",
+        "url": "https://www.creativebloq.com/features/creativity-isnt-a-job-you-clock-out-of-5-questions-with-chloe-templeman",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Frozen 3, Incredibles 3, Coco 2 and another live-action remake ",
+        "url": "https://www.creativebloq.com/news/disneys-announcements-at-d23-tell-you-everything-thats-wrong-with-disney-right-now",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Coca-Cola rebrand is still causing confusion three months on ",
+        "url": "https://www.creativebloq.com/news/the-coca-cola-rebrand-is-still-causing-confusion-three-months-on",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Electric cars are killing the joy of driving, but sonic design is here to save it ",
         "url": "https://www.creativebloq.com/features/electric-cars-are-killing-the-cinematic-experience-of-driving-but-sonic-design-is-here-to-help",
@@ -220,21 +235,6 @@
       {
         "title": " New Balance’s Steve Jobs homage is so subtle you might have missed it ",
         "url": "https://www.creativebloq.com/news/new-balances-steve-jobs-homage-is-so-subtle-you-might-have-missed-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Did a book from 1973 predict the logo designs of some of today's biggest companies? ",
-        "url": "https://www.creativebloq.com/news/did-a-book-from-1973-predict-the-logo-designs-of-some-of-todays-biggest-companies",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The iPhone 18 Pro just ended my affair with the iPhone Air ",
-        "url": "https://www.creativebloq.com/design/product-design/the-iphone-18-pro-just-ended-my-affair-with-the-iphone-air",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Why ‘boring’ AI is Hollywood’s best bet ",
-        "url": "https://www.creativebloq.com/features/why-boring-ai-is-hollywoods-best-bet",
         "source": "Creative Bloq"
       }
     ],
@@ -277,38 +277,38 @@
     ],
     "gaming": [
       {
-        "title": "5 Perfect Animated Movies on Netflix Better Than 'KPop Demon Hunters'",
-        "url": "https://www.polygon.com/netflix-animated-movies-like-kpop-demon-hunters-better/",
+        "title": "Godzilla Minus Zero's Latest Trailer Continues Teasing A New Monstrous Threat",
+        "url": "https://www.polygon.com/godzilla-minus-zero-second-trailer/",
         "source": "Polygon"
       },
       {
-        "title": "Gary Larson's 10 Greatest 'Far Side' Comics, Ranked",
-        "url": "https://www.polygon.com/gary-larson-best-far-side-comics-ranked/",
+        "title": "Halo Already Delivered the Perfect Master Chief Origin Story, 25 Years Ago",
+        "url": "https://www.polygon.com/halo-activision-master-chief-origin-story-fall-of-reach/",
         "source": "Polygon"
       },
       {
-        "title": "Forget a 'Halloween' Rewatch, Dan Stevens' Best Horror Movie Is a Slasher Surprise",
-        "url": "https://www.polygon.com/the-guest-halloween-countdown-2026/",
+        "title": "Marvel Tokon: Fighting Souls Officially Adding Thor, Venom, and Jubilee Next Year",
+        "url": "https://www.polygon.com/marvel-tokon-fighting-souls-year-1-dlc-characters/",
         "source": "Polygon"
       },
       {
-        "title": "13 Years Later, Little Finger's Best 'Game of Thrones' Quote is Still a All-Time Great HBO Line",
-        "url": "https://www.polygon.com/game-of-thrones-best-littlefinger-quote/",
+        "title": "The 5 Best Games to Play if You Loved Fire Emblem: Fortune’s Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-best-games-replacements/",
         "source": "Polygon"
       },
       {
-        "title": "26 Years Ago, 'Buffy's Worst Character Got the Replacement He Desperately Needed",
-        "url": "https://www.polygon.com/buffy-the-vampire-slayer-episode-xander/",
+        "title": "‘Avengers: Doomsday’ Has An Exclusive Magic Card — But There’s a Catch",
+        "url": "https://www.polygon.com/avengers-doomsday-magic-the-gathering-exclusive-doctor-doom-card/",
         "source": "Polygon"
       },
       {
-        "title": "Blade Runner 2099's New York Comic Con Trailer Teases A New Replicant Conspiracy",
-        "url": "https://www.polygon.com/blade-runner-2099-new-york-comic-con/",
+        "title": "'GTA 6' Leaker Posts Nude Lucia Video With Threats of Releasing Game Early",
+        "url": "https://www.polygon.com/gta-6-unmoderated-lucia-naked-video-cyberleek-website-reddit-rockstar/",
         "source": "Polygon"
       },
       {
-        "title": "2024's Most Inventive Slasher Movie Officially Sets Sequel Release Date",
-        "url": "https://www.polygon.com/in-a-violent-nature-2-horror-movie-release-date-shudder/",
+        "title": "GTA 6 Leaker Threatens To Release Full Game Build Before November Launch",
+        "url": "https://www.polygon.com/grand-theft-auto-6-gta-cyberleek-full-build-release-threat/",
         "source": "Polygon"
       }
     ],
