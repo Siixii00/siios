@@ -1,155 +1,167 @@
 {
   "metadata": {
-    "last_updated": "2026-10-11T01:35:58.842763",
-    "total_items": 59
+    "last_updated": "2026-10-11T08:23:33.221965",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "WallHop – 12ft.io is gone, so I built a replacement",
-        "url": "https://wallhop.io/",
+        "title": "3rd Yandex Cloud Data Center Was Hit",
+        "url": "https://status.yandex.cloud/en/incidents/2136",
         "source": "Hacker News",
-        "score": 52
+        "score": 61
       },
       {
         "title": "Build your own decision model",
         "url": "https://nishtahir.com/build-your-own-decision-model/",
         "source": "Hacker News",
-        "score": 107
+        "score": 269
       },
       {
         "title": "2D Vehicles",
         "url": "https://patkerr.co.uk/2d-vehicles/",
         "source": "Hacker News",
-        "score": 358
+        "score": 449
+      },
+      {
+        "title": "Decade-old RAM is making a comeback",
+        "url": "https://www.theverge.com/games/1009140/ram-shortage-intel-amd-ddr4-comeback",
+        "source": "Hacker News",
+        "score": 46
       },
       {
         "title": "A city-building game in which the city would prefer you didn't",
         "url": "https://housing.over.pizza/",
         "source": "Hacker News",
-        "score": 165
+        "score": 324
+      },
+      {
+        "title": "How big is a Git commit?",
+        "url": "https://ratfactor.com/cards/git-commit-size",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
+        "title": "PSPi 6 – Raspberry Pi in a PSP",
+        "url": "https://github.com/othermod/PSPi-Version-6",
+        "source": "Hacker News",
+        "score": 76
       },
       {
         "title": "The Lightbulb Computer",
         "url": "https://lightbulbcomputer.com/",
         "source": "Hacker News",
-        "score": 239
+        "score": 382
+      },
+      {
+        "title": "Retrofitting language models to operate over bytes",
+        "url": "https://www.nature.com/articles/s41586-026-11111-4",
+        "source": "Hacker News",
+        "score": 52
       },
       {
         "title": "Nix wrote half of my debugger",
         "url": "https://fzakaria.com/2026/10/07/nix-wrote-half-of-my-debugger",
         "source": "Hacker News",
-        "score": 128
+        "score": 190
+      },
+      {
+        "title": "Show HN: Happy Hangul Day! An RNN for Generating Korean Handwriting Strokes",
+        "url": "https://hangul.ink/blog/hangul-day",
+        "source": "Hacker News",
+        "score": 39
       },
       {
         "title": "Knuth reward check",
         "url": "https://www.thomas-huehn.com/knuth-reward-check/",
         "source": "Hacker News",
-        "score": 147
-      },
-      {
-        "title": "Why DuckDB 2.0 is faster",
-        "url": "https://motherduck.com/blog/why-duckdb-20-is-faster/",
-        "source": "Hacker News",
-        "score": 141
-      },
-      {
-        "title": "Five months treating bugs like patients and coding agents like a medical team",
-        "url": "https://www.cockroachlabs.com/blog/experiment-running-hospital-code/",
-        "source": "Hacker News",
-        "score": 56
+        "score": 189
       },
       {
         "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
         "url": "https://github.com/rociiu/talorys",
         "source": "Hacker News",
-        "score": 247
+        "score": 287
       },
       {
         "title": "Mxc: Microsoft Execution Containers version 1.0.0",
         "url": "https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/",
         "source": "Hacker News",
-        "score": 159
+        "score": 184
       },
       {
-        "title": "REA Reverse – Engineer Anything",
-        "url": "https://rea.tools/",
+        "title": "Deterministic Simulation Testing in Celld",
+        "url": "https://celld.dev/docs/engineering/deterministic-simulation-testing/",
         "source": "Hacker News",
-        "score": 706
-      },
-      {
-        "title": "Unikernels were hard. key word: were",
-        "url": "https://ghuntley.com/unikernels/",
-        "source": "Hacker News",
-        "score": 98
-      },
-      {
-        "title": "OpenSCAD the Programmers Solid 3D CAD Modeller",
-        "url": "https://openscad.org/",
-        "source": "Hacker News",
-        "score": 103
-      },
-      {
-        "title": "Getting old Macromedia Director Games to run on modern Hardware",
-        "url": "https://werwolv.net/posts/macromedia_copy_protection/",
-        "source": "Hacker News",
-        "score": 37
+        "score": 18
       }
     ],
     "ai": [
       {
+        "title": "Retrofitting language models to operate over bytes",
+        "url": "https://www.nature.com/articles/s41586-026-11111-4",
+        "source": "Hacker News AI",
+        "score": 52
+      },
+      {
         "title": "Talorys – A self-hosted personal AI agent on Cloudflare's free tier",
         "url": "https://github.com/rociiu/talorys",
         "source": "Hacker News AI",
-        "score": 247
+        "score": 287
       },
       {
         "title": "Mxc: Microsoft Execution Containers version 1.0.0",
         "url": "https://blogs.windows.com/windowsdeveloper/2026/10/07/microsoft-execution-containers-policy-driven-containment-for-ai-agents/",
         "source": "Hacker News AI",
-        "score": 159
-      },
-      {
-        "title": "Recent AI models struggled to match a human algorithmic innovation",
-        "url": "https://epoch.ai/publications/innovationeval",
-        "source": "Hacker News AI",
-        "score": 75
-      },
-      {
-        "title": "Grieving the loss of details",
-        "url": "https://purplesyringa.moe/blog/grieving-the-loss-of-details/",
-        "source": "Hacker News AI",
-        "score": 346
-      },
-      {
-        "title": "Nvidia in talks to acquire US 'open' model startup Reflection AI",
-        "url": "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a",
-        "source": "Hacker News AI",
-        "score": 119
+        "score": 184
       },
       {
         "title": "Food processing influences metabolism and brain activity",
         "url": "https://news.vt.edu/articles/2026/10/research_fralinbiomed_upfhutelin.html",
         "source": "Hacker News AI",
-        "score": 107
+        "score": 144
       },
       {
-        "title": "What mathematicians should know about the Lean Theorem Prover: reliability & AI",
-        "url": "https://terrytao.wordpress.com/2026/10/09/what-mathematicians-should-know-about-the-lean-theorem-proverquestions-of-reliability-and-ai/",
+        "title": "Grieving the loss of details",
+        "url": "https://purplesyringa.moe/blog/grieving-the-loss-of-details/",
         "source": "Hacker News AI",
-        "score": 194
+        "score": 431
       },
       {
-        "title": "Hackers abuse Google Ads, Bing redirects to push Claude ClickFix attacks",
-        "url": "https://www.bleepingcomputer.com/news/security/hackers-abuse-google-ads-bing-redirects-to-push-claude-clickfix-attacks/",
+        "title": "500B Tokens Later: Letting AI Agents Decompile a First-Person Shooter",
+        "url": "https://momo5502.com/posts/2026-10-09-game-decompilation/",
         "source": "Hacker News AI",
-        "score": 27
+        "score": 84
+      },
+      {
+        "title": "Nvidia in talks to acquire US 'open' model startup Reflection AI",
+        "url": "https://www.ft.com/content/052610c5-22b4-4dd4-932e-b7f9f0628b6a",
+        "source": "Hacker News AI",
+        "score": 162
+      },
+      {
+        "title": "AI agents in a stand-up call",
+        "url": "https://atoll92.github.io/agent-standup/",
+        "source": "Hacker News AI",
+        "score": 39
+      },
+      {
+        "title": "Recent AI models struggled to match a human algorithmic innovation",
+        "url": "https://epoch.ai/publications/innovationeval",
+        "source": "Hacker News AI",
+        "score": 87
       },
       {
         "title": "Typesafe AI raises $870M at $7.5B",
         "url": "https://typesafe.ai/blog/series-ai",
         "source": "Hacker News AI",
-        "score": 431
+        "score": 437
+      },
+      {
+        "title": "Pointing AI at archives found a forgotten meteorite, lost rhinos, and more",
+        "url": "https://jessewaites.com/blog/post/i-pointed-ai-at-400-years-of-archives/",
+        "source": "Hacker News AI",
+        "score": 181
       }
     ],
     "news": [
@@ -159,23 +171,18 @@
         "source": "BBC World"
       },
       {
-        "title": "Twelve killed in attack on airport in Saudi capital Riyadh",
-        "url": "https://www.bbc.co.uk/news/articles/cw33x4y8k82no?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Young men live in fear of being snatched off the streets and sold to Myanmar's army",
         "url": "https://www.bbc.co.uk/news/articles/c680zlny0gk4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Russian glide bomb attack on Zaporizhzhia kills at least 20 people",
-        "url": "https://www.bbc.co.uk/news/articles/cwvgdpv642g5o?at_medium=RSS&at_campaign=rss",
+        "title": "Delhi braces for more protests as 'cockroach' group's leaders released",
+        "url": "https://www.bbc.co.uk/news/articles/c84g179n2393o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US murderer Christa Pike discharged from hospital 10 days after failed execution",
-        "url": "https://www.bbc.co.uk/news/articles/cmlyle97pqd7o?at_medium=RSS&at_campaign=rss",
+        "title": "US justice department investigates TV networks over Trump pool coverage",
+        "url": "https://www.bbc.co.uk/news/articles/c9vgregzk6gro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -187,9 +194,24 @@
         "title": "Expedition hopes to find aviator Amelia Earhart's plane on remote island",
         "url": "https://www.bbc.co.uk/news/articles/c3y0e871rk4vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
+      },
+      {
+        "title": "US murderer Christa Pike discharged from hospital 10 days after failed execution",
+        "url": "https://www.bbc.co.uk/news/articles/cmlyle97pqd7o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Electric cars are killing the joy of driving, but sonic design is here to save it ",
+        "url": "https://www.creativebloq.com/features/electric-cars-are-killing-the-cinematic-experience-of-driving-but-sonic-design-is-here-to-help",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Its embroidered logo invite shows Apple understands something other tech brands don't ",
+        "url": "https://www.creativebloq.com/news/an-embroidered-logo-shows-apples-understands-something-that-other-tech-brands-dont",
+        "source": "Creative Bloq"
+      },
       {
         "title": " The pen that went viral with those anti-AI ads has 30% off right now ",
         "url": "https://www.creativebloq.com/deals/the-pen-that-went-viral-with-those-anti-ai-ads-has-27-percent-off-right-now",
@@ -214,22 +236,22 @@
         "title": " Why ‘boring’ AI is Hollywood’s best bet ",
         "url": "https://www.creativebloq.com/features/why-boring-ai-is-hollywoods-best-bet",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " The Carrie remake is getting roasted over its changes to one of the most iconic scenes in horror ",
-        "url": "https://www.creativebloq.com/news/the-carrie-remake-is-getting-roasted-over-its-version-of-one-of-the-most-iconic-scenes-in-horror",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Tested: The Mac Studio M5 Max claims its crown as the best of all Apple computers ",
-        "url": "https://www.creativebloq.com/reviews/tested-the-mac-studio-m5-max-claims-its-crown-as-the-best-of-all-apple-computers",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
+        "title": "A surprisingly simple way to relieve knee arthritis pain without pills or surgery",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261009025434.htm",
+        "source": "Science Daily"
+      },
+      {
         "title": "NASA astronauts splash down after 100 million miles in space",
         "url": "https://www.sciencedaily.com/releases/2026/10/261008232629.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A plastic once thought harmless may be fueling fatty liver disease",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261008102718.htm",
         "source": "Science Daily"
       },
       {
@@ -238,32 +260,42 @@
         "source": "Science Daily"
       },
       {
-        "title": "Scientists discover 5 hidden brain patterns behind depression",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261008005251.htm",
+        "title": "Scientists build a nuclear clock that could make atomic clocks obsolete",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261008102701.htm",
         "source": "Science Daily"
       },
       {
-        "title": "NASA is searching for hidden caves to build its first Moon base",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261008005247.htm",
+        "title": "Eating olive oil before carbs has a surprising effect on blood sugar",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261008102700.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists may have found a shortcut to fusion energy",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261008005242.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "MIT astronomers catch a star in a feast that could last billions of years",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261008005240.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists create a lightsaber-like laser antenna that transmits radio waves",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261008005239.htm",
+        "title": "Neanderthals may have used prehistoric glue as an ancient antibiotic",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261008005256.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "5 Perfect Animated Movies on Netflix Better Than 'KPop Demon Hunters'",
+        "url": "https://www.polygon.com/netflix-animated-movies-like-kpop-demon-hunters-better/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Gary Larson's 10 Greatest 'Far Side' Comics, Ranked",
+        "url": "https://www.polygon.com/gary-larson-best-far-side-comics-ranked/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Forget a 'Halloween' Rewatch, Dan Stevens' Best Horror Movie Is a Slasher Surprise",
+        "url": "https://www.polygon.com/the-guest-halloween-countdown-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "13 Years Later, Little Finger's Best 'Game of Thrones' Quote is Still a All-Time Great HBO Line",
+        "url": "https://www.polygon.com/game-of-thrones-best-littlefinger-quote/",
+        "source": "Polygon"
+      },
       {
         "title": "26 Years Ago, 'Buffy's Worst Character Got the Replacement He Desperately Needed",
         "url": "https://www.polygon.com/buffy-the-vampire-slayer-episode-xander/",
@@ -277,26 +309,6 @@
       {
         "title": "2024's Most Inventive Slasher Movie Officially Sets Sequel Release Date",
         "url": "https://www.polygon.com/in-a-violent-nature-2-horror-movie-release-date-shudder/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Forget John Wick, the Ultimate Action Thriller of the Century Is Officially Streaming on Netflix",
-        "url": "https://www.polygon.com/the-equalizer-is-streaming-on-netflix/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Naruto To Get New Manga, Crossover Anime, And More Before The End Of The Decade",
-        "url": "https://www.polygon.com/naruto-roadmap-project-rasengan/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Warner Bros. 41-Year-Old Fantasy Classic Reboot is Officially Happening",
-        "url": "https://www.polygon.com/thundercats-movie-update/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Henry Cavill's New Sci-fi Streaming Series Sets Carrie Reboot Creator to Direct",
-        "url": "https://www.polygon.com/warhammer-40k-tv-series-henry-cavill-mike-flanagan/",
         "source": "Polygon"
       }
     ],
