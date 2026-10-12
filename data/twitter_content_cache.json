@@ -1,148 +1,171 @@
 {
   "metadata": {
-    "last_updated": "2026-10-12T12:50:21.987259",
-    "total_items": 56
+    "last_updated": "2026-10-12T21:36:00.301223",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "QGIS bans AI assisted contributions",
-        "url": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
+        "title": "GLM-Legal",
+        "url": "https://z.ai/blog/glm-legal",
         "source": "Hacker News",
-        "score": 119
+        "score": 353
       },
       {
-        "title": "Deloitte falsified documents to evade tax on Abramovich's wealth",
-        "url": "https://www.bbc.com/news/articles/c64g1l5389kvo",
+        "title": "A Modern Web App in C",
+        "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
         "source": "Hacker News",
-        "score": 310
+        "score": 299
+      },
+      {
+        "title": "Writing a Demoscene Intro for the ZX Spectrum",
+        "url": "https://www.markround.com/blog/2026/zx-spectrum-intro",
+        "source": "Hacker News",
+        "score": 33
+      },
+      {
+        "title": "Codex CLI installs a persistent, self-updating background daemon by default",
+        "url": "https://github.com/openai/codex/issues/48195",
+        "source": "Hacker News",
+        "score": 352
+      },
+      {
+        "title": "Hackers activate automatic defrosting in supermarket fridges across Europe",
+        "url": "https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident",
+        "source": "Hacker News",
+        "score": 297
+      },
+      {
+        "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
+        "url": "https://news.ycombinator.com/item?id=50059096",
+        "source": "Hacker News",
+        "score": 68
+      },
+      {
+        "title": "Turn a WiFi 7 Router into a 320Msps Software Defined Radio Receiver",
+        "url": "https://github.com/h0m3us3r/w1700k-sdr",
+        "source": "Hacker News",
+        "score": 207
+      },
+      {
+        "title": "Citroen revives the 2CV for an electric age",
+        "url": "https://www.bbc.com/news/articles/c620r33plgppo",
+        "source": "Hacker News",
+        "score": 223
+      },
+      {
+        "title": "Muse Wonder",
+        "url": "https://research.meta.ai/blog/muse-wonder",
+        "source": "Hacker News",
+        "score": 442
+      },
+      {
+        "title": "OpenFatigue™ – Open is the new closed",
+        "url": "https://openfatigue.ai/",
+        "source": "Hacker News",
+        "score": 158
       },
       {
         "title": "The Making Of Super Mario 64 – full Giles Goddard interview (2001)",
         "url": "https://pixelatron.com/blog/the-making-of-super-mario-64-full-giles-goddard-interview-ngc/",
         "source": "Hacker News",
-        "score": 31
+        "score": 197
+      },
+      {
+        "title": "AI coding agents generate more code, but not more software",
+        "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
+        "source": "Hacker News",
+        "score": 246
       },
       {
         "title": "Secret of Orange Cats Revealed After 60-Year Search",
         "url": "https://www.sciencealert.com/secret-of-orange-cats-finally-revealed-after-60-year-search",
         "source": "Hacker News",
-        "score": 47
+        "score": 206
       },
       {
-        "title": "Type-safe HTML templating in Zig",
-        "url": "https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html",
+        "title": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
+        "url": "https://taylor.town/kk-ai-2026",
         "source": "Hacker News",
-        "score": 149
+        "score": 98
       },
       {
-        "title": "Fingerprints are the new cookies",
-        "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
+        "title": "Thinking will become a hobby",
+        "url": "https://www.spinellis.gr/blog/20261008/?li261008",
         "source": "Hacker News",
-        "score": 465
-      },
-      {
-        "title": "Hackers activate automatic defrosting accross European supermarket fridges",
-        "url": "https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident",
-        "source": "Hacker News",
-        "score": 40
-      },
-      {
-        "title": "Total Annihilation, rebuilt for modern computers",
-        "url": "https://nanolathe.gg",
-        "source": "Hacker News",
-        "score": 559
-      },
-      {
-        "title": "Calculus with Julia",
-        "url": "https://jverzani.github.io/CalculusWithJuliaNotes.jl/",
-        "source": "Hacker News",
-        "score": 162
-      },
-      {
-        "title": "Running the unmodified Linux amdgpu driver on an iPad",
-        "url": "https://github.com/Geramy/LemonSeed-Studio",
-        "source": "Hacker News",
-        "score": 46
-      },
-      {
-        "title": "Show HN: PS2 games statically recompiled to WebAssembly",
-        "url": "https://github.com/snuri00/ps2-web-recomp",
-        "source": "Hacker News",
-        "score": 90
-      },
-      {
-        "title": "Citroen revives the 2CV for an electric age",
-        "url": "https://www.bbc.co.uk/news/articles/c620r33plgppo",
-        "source": "Hacker News",
-        "score": 17
-      },
-      {
-        "title": "Cartographers of North Korea (2019)",
-        "url": "https://cartographers-nk.wonyoung.so/",
-        "source": "Hacker News",
-        "score": 281
-      },
-      {
-        "title": "Terence Tao: Math 2.0 [pdf]",
-        "url": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf",
-        "source": "Hacker News",
-        "score": 434
-      },
-      {
-        "title": "Bag of Decisions Reranker",
-        "url": "https://softwaredoug.com/blog/2026/10/08/bag-of-decisions.html",
-        "source": "Hacker News",
-        "score": 15
+        "score": 164
       }
     ],
     "ai": [
       {
-        "title": "QGIS bans AI assisted contributions",
-        "url": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
+        "title": "Codex CLI installs a persistent, self-updating background daemon by default",
+        "url": "https://github.com/openai/codex/issues/48195",
         "source": "Hacker News AI",
-        "score": 120
+        "score": 352
       },
       {
-        "title": "Research Firm Calls Anthropic's IPO 'Unprecedented Test of Investor Gullibity'",
-        "url": "https://www.cnbc.com/2026/10/07/anthropic-will-be-most-ridiculous-ipo-of-year-analyst-says.html",
+        "title": "AI coding agents generate more code, but not more software",
+        "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
         "source": "Hacker News AI",
-        "score": 150
+        "score": 246
+      },
+      {
+        "title": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
+        "url": "https://taylor.town/kk-ai-2026",
+        "source": "Hacker News AI",
+        "score": 98
+      },
+      {
+        "title": "Epic Games tells employees to use AI to get Disney game done",
+        "url": "https://www.avclub.com/epic-games-disney-ai-delay",
+        "source": "Hacker News AI",
+        "score": 43
+      },
+      {
+        "title": "'AI' Is Not a Tool by Rich Hickey",
+        "url": "https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e",
+        "source": "Hacker News AI",
+        "score": 88
+      },
+      {
+        "title": "QGIS enacts moratorium on AI contributions",
+        "url": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
+        "source": "Hacker News AI",
+        "score": 352
       },
       {
         "title": "The gap in shared understanding of LLM capability is widening",
         "url": "https://twitter.com/karpathy/status/2109361546505966046",
         "source": "Hacker News AI",
-        "score": 516
+        "score": 669
       },
       {
-        "title": "Postgres isn't slow, your storage is",
-        "url": "https://clickhouse.com/blog/posette-talk-recap-postgres-isnt-slow-your-storage-is",
+        "title": "Obituary: Robert X. Cringley",
+        "url": "https://www.facebook.com/story.php?story_fbid=pfbid0YbCLrAJfBirAWuPBy4a7pauaQ6gHkAPUwtbzyg2wAjeMcruFC7dWUZKQJKkNChP9l&id=536506060&_rdr",
         "source": "Hacker News AI",
-        "score": 127
+        "score": 10
       },
       {
-        "title": "Ledger confirms hidden chip in crypto wallet amid $92M theft claims",
-        "url": "https://crypto.news/ledger-confirms-hidden-chip-in-crypto-wallet-amid-92m/",
+        "title": "EC users should be afraid of a US kill switch – not some new software",
+        "url": "https://www.theregister.com/columnists/2026/10/10/ec-users-should-be-afraid-of-a-us-kill-switch-not-some-new-software/5301875",
         "source": "Hacker News AI",
-        "score": 66
-      },
-      {
-        "title": "Weave (YC W25) is hiring ML, AI, product, & design engineers",
-        "url": "https://jobs.ashbyhq.com/weave-os",
-        "source": "Hacker News AI",
-        "score": 1
+        "score": 11
       }
     ],
     "news": [
       {
-        "title": "Documents falsified to evade tax on Abramovich's wealth, BBC finds",
-        "url": "https://www.bbc.co.uk/news/articles/c64g1l5389kvo?at_medium=RSS&at_campaign=rss",
+        "title": "Six Ukrainian energy sites hit by Russia since Trump announced ceasefire, Zelensky says",
+        "url": "https://www.bbc.co.uk/news/articles/cvlyd4pdlwkxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump faces growing backlash over plans to import diesel from Russia",
-        "url": "https://www.bbc.co.uk/news/articles/cjn5v21py07vo?at_medium=RSS&at_campaign=rss",
+        "title": "Why Moscow is staying tight-lipped on Trump's energy ceasefire",
+        "url": "https://www.bbc.co.uk/news/articles/cjx2359qekrdo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Documents falsified to evade tax on Abramovich's wealth, BBC finds",
+        "url": "https://www.bbc.co.uk/news/articles/c64g1l5389kvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -151,23 +174,18 @@
         "source": "BBC World"
       },
       {
-        "title": "Indian opposition leaders march to top court to demand election chief resign",
-        "url": "https://www.bbc.co.uk/news/articles/cwr5y2lgr4gdo?at_medium=RSS&at_campaign=rss",
+        "title": "South Africa's deputy police chief resigns after being charged with sexual offences",
+        "url": "https://www.bbc.co.uk/news/articles/c8wy9d940pyko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Pupil arrested after two teachers shot at French school",
-        "url": "https://www.bbc.co.uk/news/articles/cm2keg7910gvo?at_medium=RSS&at_campaign=rss",
+        "title": "Immigration agents search Congresswoman Ilhan Omar's home",
+        "url": "https://www.bbc.co.uk/news/articles/cvp8glg97393o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Tom Cruise film Digger could lose $245m at box office",
-        "url": "https://www.bbc.co.uk/news/articles/cke8re5v1pgmo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Mourners killed by Kenya police at ex-PM's national farewell not part of violence, BBC finds",
-        "url": "https://www.bbc.co.uk/news/articles/c962y4ld1d7do?at_medium=RSS&at_campaign=rss",
+        "title": "Fridges in French supermarkets hit by cyber attack",
+        "url": "https://www.bbc.co.uk/news/articles/crq5nzxv9q4yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -247,43 +265,48 @@
     ],
     "gaming": [
       {
-        "title": "Ben Affleck's New Netflix Thriller is a Massive Global Streaming Hit",
-        "url": "https://www.polygon.com/ben-affleck-animals-netflix-streaming-hit/",
+        "title": "New 90% Positive Steam Roguelike Is a Faithful PSP-Era Comeback",
+        "url": "https://www.polygon.com/ratatan-switch-2-impressions/",
         "source": "Polygon"
       },
       {
-        "title": "A New KPop Demon Hunters Limited Edition Collection Just Dropped",
-        "url": "https://www.polygon.com/kpop-demon-hunters-limited-edition-collection/",
+        "title": "Epic Games Delays Marvel and Star Wars Crossover Game Amid Generative AI Push",
+        "url": "https://www.polygon.com/epic-games-marvel-star-wars-game-delay-generative-ai-development/",
         "source": "Polygon"
       },
       {
-        "title": "'Dungeon Crawler Carl' Author Officially Settles a Raging Debate About the Audiobooks",
-        "url": "https://www.polygon.com/matt-dinniman-nycc-interview-dungeon-crawler-carl/",
+        "title": "Classic YA Survival Novel Officially Getting a Netflix Film Adaptation",
+        "url": "https://www.polygon.com/hatchet-movie-adaptation-announced-netflix/",
         "source": "Polygon"
       },
       {
-        "title": "Josh Brolin Teases a Thanos vs. Doctor Doom Showdown in 'Avengers: Secret Wars'",
-        "url": "https://www.polygon.com/nycc-josh-brolin-thanos-vs-doom/",
+        "title": "Netflix Reveals New Look at Greta Gerwig's 2027 Fantasy Film",
+        "url": "https://www.polygon.com/greta-gerwig-narnia-movie-magicians-nephw-netflix-poster-trailer/",
         "source": "Polygon"
       },
       {
-        "title": "'Carrie' Showrunner Confirms the Biggest Changes to the Book Were Stephen King's Idea",
-        "url": "https://www.polygon.com/carrie-2026-changes-mike-flanagan-stephen-king-interview/",
+        "title": "'Avater: Seven Haven' Showrunners Officially Reinforce a Major Fan Theory",
+        "url": "https://www.polygon.com/avatar-seven-havens-creators-interview-map-theory/",
         "source": "Polygon"
       },
       {
-        "title": "33 Years Later, Tom Cruise's Near-Perfect Legal Thriller Is Officially on Streaming",
-        "url": "https://www.polygon.com/the-firm-tom-cruise-streaming-paramount-plus-october-2026/",
+        "title": "Ben Affleck Names Justice League His Career ‘Low Point’",
+        "url": "https://www.polygon.com/ben-affleck-justice-league-negative-experience-batman-zack-snyder/",
         "source": "Polygon"
       },
       {
-        "title": "66 Years Later, Alfred Hitchcock’s Most Perfect Thriller is Officially Streaming on Netflix",
-        "url": "https://www.polygon.com/alfred-hitchcock-psycho-on-netflix/",
+        "title": "Final Fantasy Meets Dragon Quest in Square Enix’s Latest ’90s Remake",
+        "url": "https://www.polygon.com/romancing-saga-3-preview-nycc/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
+        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "Hack the World: Why hackathons are still the best place to learn to build",
         "url": "https://github.blog/developer-skills/career-growth/hack-the-world-why-hackathons-are-still-the-best-place-to-learn-to-build/",
@@ -312,11 +335,6 @@
       {
         "title": "AI is changing developer work. Here are three skills to strengthen.",
         "url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "10 technical talks I’m excited about at GitHub Universe 2026",
-        "url": "https://github.blog/news-insights/company-news/10-technical-talks-im-excited-about-at-github-universe-2026/",
         "source": "GitHub Blog"
       }
     ]
