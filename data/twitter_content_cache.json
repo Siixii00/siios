@@ -1,143 +1,143 @@
 {
   "metadata": {
-    "last_updated": "2026-10-12T04:47:44.179686",
+    "last_updated": "2026-10-12T12:50:21.987259",
     "total_items": 56
   },
   "content": {
     "tech": [
       {
+        "title": "QGIS bans AI assisted contributions",
+        "url": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
+        "source": "Hacker News",
+        "score": 119
+      },
+      {
+        "title": "Deloitte falsified documents to evade tax on Abramovich's wealth",
+        "url": "https://www.bbc.com/news/articles/c64g1l5389kvo",
+        "source": "Hacker News",
+        "score": 310
+      },
+      {
+        "title": "The Making Of Super Mario 64 – full Giles Goddard interview (2001)",
+        "url": "https://pixelatron.com/blog/the-making-of-super-mario-64-full-giles-goddard-interview-ngc/",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
+        "title": "Secret of Orange Cats Revealed After 60-Year Search",
+        "url": "https://www.sciencealert.com/secret-of-orange-cats-finally-revealed-after-60-year-search",
+        "source": "Hacker News",
+        "score": 47
+      },
+      {
+        "title": "Type-safe HTML templating in Zig",
+        "url": "https://lalinsky.com/2026/10/11/type-safe-html-templating-in-zig.html",
+        "source": "Hacker News",
+        "score": 149
+      },
+      {
         "title": "Fingerprints are the new cookies",
         "url": "https://royfish.dev/fingerprints-are-the-new-cookies",
         "source": "Hacker News",
-        "score": 188
+        "score": 465
+      },
+      {
+        "title": "Hackers activate automatic defrosting accross European supermarket fridges",
+        "url": "https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident",
+        "source": "Hacker News",
+        "score": 40
       },
       {
         "title": "Total Annihilation, rebuilt for modern computers",
         "url": "https://nanolathe.gg",
         "source": "Hacker News",
-        "score": 422
-      },
-      {
-        "title": "Whatever became of holography? (2011)",
-        "url": "https://www.americanscientist.org/article/whatever-became-of-holography",
-        "source": "Hacker News",
-        "score": 99
+        "score": 559
       },
       {
         "title": "Calculus with Julia",
         "url": "https://jverzani.github.io/CalculusWithJuliaNotes.jl/",
         "source": "Hacker News",
-        "score": 42
+        "score": 162
+      },
+      {
+        "title": "Running the unmodified Linux amdgpu driver on an iPad",
+        "url": "https://github.com/Geramy/LemonSeed-Studio",
+        "source": "Hacker News",
+        "score": 46
+      },
+      {
+        "title": "Show HN: PS2 games statically recompiled to WebAssembly",
+        "url": "https://github.com/snuri00/ps2-web-recomp",
+        "source": "Hacker News",
+        "score": 90
+      },
+      {
+        "title": "Citroen revives the 2CV for an electric age",
+        "url": "https://www.bbc.co.uk/news/articles/c620r33plgppo",
+        "source": "Hacker News",
+        "score": 17
       },
       {
         "title": "Cartographers of North Korea (2019)",
         "url": "https://cartographers-nk.wonyoung.so/",
         "source": "Hacker News",
-        "score": 214
-      },
-      {
-        "title": "Doory – Open-Source Canva",
-        "url": "https://github.com/shaongitbd/doory",
-        "source": "Hacker News",
-        "score": 41
-      },
-      {
-        "title": "No portable way to detect string-to-float conversion errors in standard C",
-        "url": "https://sebsite.pw/w/20261009-strtod.html",
-        "source": "Hacker News",
-        "score": 14
-      },
-      {
-        "title": "The gap in shared understanding of LLM capability is widening",
-        "url": "https://twitter.com/karpathy/status/2109361546505966046",
-        "source": "Hacker News",
-        "score": 335
-      },
-      {
-        "title": "Tattoos you can turn on and off",
-        "url": "https://www.livescience.com/technology/cool-chemistry-trick-allows-new-tattoos-to-turn-on-and-off",
-        "source": "Hacker News",
-        "score": 39
+        "score": 281
       },
       {
         "title": "Terence Tao: Math 2.0 [pdf]",
         "url": "https://teorth.github.io/tao-web/slides/math-2-0-caltech-2026.pdf",
         "source": "Hacker News",
-        "score": 350
+        "score": 434
       },
       {
-        "title": "Illustration Beyond Proof",
-        "url": "https://terrytao.wordpress.com/2026/10/11/illustration-beyond-proof/",
+        "title": "Bag of Decisions Reranker",
+        "url": "https://softwaredoug.com/blog/2026/10/08/bag-of-decisions.html",
         "source": "Hacker News",
-        "score": 47
-      },
-      {
-        "title": "Google is illegaly cutting forest to build data centers",
-        "url": "https://www.theguardian.com/technology/2026/oct/06/google-datacentres-finland-temporary-halt-environmental-impact-assessment",
-        "source": "Hacker News",
-        "score": 271
-      },
-      {
-        "title": "Vectorized CLZ and CTZ",
-        "url": "https://purplesyringa.moe/blog/vectorized-clz-and-ctz/",
-        "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Local Indexing to reduce tool calling and token usage",
-        "url": "https://tedhaley.ca/pensieve/",
-        "source": "Hacker News",
-        "score": 44
-      },
-      {
-        "title": "Passkeys are a trap",
-        "url": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
-        "source": "Hacker News",
-        "score": 404
+        "score": 15
       }
     ],
     "ai": [
       {
+        "title": "QGIS bans AI assisted contributions",
+        "url": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
+        "source": "Hacker News AI",
+        "score": 120
+      },
+      {
+        "title": "Research Firm Calls Anthropic's IPO 'Unprecedented Test of Investor Gullibity'",
+        "url": "https://www.cnbc.com/2026/10/07/anthropic-will-be-most-ridiculous-ipo-of-year-analyst-says.html",
+        "source": "Hacker News AI",
+        "score": 150
+      },
+      {
         "title": "The gap in shared understanding of LLM capability is widening",
         "url": "https://twitter.com/karpathy/status/2109361546505966046",
         "source": "Hacker News AI",
-        "score": 335
+        "score": 516
       },
       {
-        "title": "500B tokens later: Letting AI agents decompile a first-person shooter",
-        "url": "https://momo5502.com/posts/2026-10-09-game-decompilation/",
+        "title": "Postgres isn't slow, your storage is",
+        "url": "https://clickhouse.com/blog/posette-talk-recap-postgres-isnt-slow-your-storage-is",
         "source": "Hacker News AI",
-        "score": 186
+        "score": 127
+      },
+      {
+        "title": "Ledger confirms hidden chip in crypto wallet amid $92M theft claims",
+        "url": "https://crypto.news/ledger-confirms-hidden-chip-in-crypto-wallet-amid-92m/",
+        "source": "Hacker News AI",
+        "score": 66
       },
       {
         "title": "Weave (YC W25) is hiring ML, AI, product, & design engineers",
         "url": "https://jobs.ashbyhq.com/weave-os",
         "source": "Hacker News AI",
         "score": 1
-      },
-      {
-        "title": "Show HN: BraiNOTES, handwritten notes on your lecture PDFs in a browser tab",
-        "url": "https://github.com/swimmingbrain/brainotes",
-        "source": "Hacker News AI",
-        "score": 21
-      },
-      {
-        "title": "I paid people to try and follow my README",
-        "url": "https://shkspr.mobi/blog/2026/10/i-paid-people-to-try-and-follow-my-readme/",
-        "source": "Hacker News AI",
-        "score": 379
-      },
-      {
-        "title": "Show HN: Plimsoll, a self-hosted sandbox for code your AI agent writes",
-        "url": "https://github.com/plimsollmark/plimsoll",
-        "source": "Hacker News AI",
-        "score": 13
       }
     ],
     "news": [
       {
-        "title": "Trump's 'energy ceasefire' claim welcomed by Zelensky but Russia silent",
-        "url": "https://www.bbc.co.uk/news/articles/c6pvg4jyz1m0o?at_medium=RSS&at_campaign=rss",
+        "title": "Documents falsified to evade tax on Abramovich's wealth, BBC finds",
+        "url": "https://www.bbc.co.uk/news/articles/c64g1l5389kvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -146,69 +146,89 @@
         "source": "BBC World"
       },
       {
-        "title": "One killed, 11 injured in second Houthi strike on Riyadh airport in two days",
-        "url": "https://www.bbc.co.uk/news/articles/cr93znyk44e1o?at_medium=RSS&at_campaign=rss",
+        "title": "Saudi minister vows 'serious response' to Houthi attacks on airports",
+        "url": "https://www.bbc.co.uk/news/articles/cjly0zqq27e4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Poland detains man suspected of planning assassination of PM Tusk",
-        "url": "https://www.bbc.co.uk/news/articles/c6n9rvynl5p5o?at_medium=RSS&at_campaign=rss",
+        "title": "Indian opposition leaders march to top court to demand election chief resign",
+        "url": "https://www.bbc.co.uk/news/articles/cwr5y2lgr4gdo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Dozens of gold prospectors killed in strikes on Egypt-Sudan border, rights group says",
-        "url": "https://www.bbc.co.uk/news/articles/cqy43vrk8wv8o?at_medium=RSS&at_campaign=rss",
+        "title": "Pupil arrested after two teachers shot at French school",
+        "url": "https://www.bbc.co.uk/news/articles/cm2keg7910gvo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Watch: Endangered orangutans released back into the wild after Borneo fires",
-        "url": "https://www.bbc.co.uk/news/videos/c6073z5rvrk3o?at_medium=RSS&at_campaign=rss",
+        "title": "Tom Cruise film Digger could lose $245m at box office",
+        "url": "https://www.bbc.co.uk/news/articles/cke8re5v1pgmo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Homes and bridges swept away as fresh floods hit Nepal",
-        "url": "https://www.bbc.co.uk/news/articles/ck86zppejjw3o?at_medium=RSS&at_campaign=rss",
+        "title": "Mourners killed by Kenya police at ex-PM's national farewell not part of violence, BBC finds",
+        "url": "https://www.bbc.co.uk/news/articles/c962y4ld1d7do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " \"Creativity isn’t a job you clock out of\": 5 questions with Chloé Templeman ",
-        "url": "https://www.creativebloq.com/features/creativity-isnt-a-job-you-clock-out-of-5-questions-with-chloe-templeman",
+        "title": " All streaming platforms will eventually run ads, and here’s why ",
+        "url": "https://www.creativebloq.com/news/all-streaming-platforms-will-eventually-run-ads-and-heres-why",
         "source": "Creative Bloq"
       },
       {
-        "title": " Frozen 3, Incredibles 3, Coco 2 and another live-action remake ",
-        "url": "https://www.creativebloq.com/news/disneys-announcements-at-d23-tell-you-everything-thats-wrong-with-disney-right-now",
+        "title": " New Sour Patch Kids billboard destroys Oreo (literally) ",
+        "url": "https://www.creativebloq.com/news/new-sour-patch-kids-billboard-destroys-oreo-literally",
         "source": "Creative Bloq"
       },
       {
-        "title": " The Coca-Cola rebrand is still causing confusion three months on ",
-        "url": "https://www.creativebloq.com/news/the-coca-cola-rebrand-is-still-causing-confusion-three-months-on",
+        "title": " I'm a creative professional, and the Xiaomi 17T Pro is one of the best camera phones ever made ",
+        "url": "https://www.creativebloq.com/reviews/im-a-creative-professional-and-the-xiaomi-17t-pro-is-one-of-the-best-camera-phones-ever-made",
         "source": "Creative Bloq"
       },
       {
-        "title": " Electric cars are killing the joy of driving, but sonic design is here to save it ",
-        "url": "https://www.creativebloq.com/features/electric-cars-are-killing-the-cinematic-experience-of-driving-but-sonic-design-is-here-to-help",
+        "title": " Now AI isn't just faking art, it's faking artists' signatures as well ",
+        "url": "https://www.creativebloq.com/news/now-ai-isnt-just-faking-art-its-faking-artists-signatures-as-well",
         "source": "Creative Bloq"
       },
       {
-        "title": " Its embroidered logo invite shows Apple understands something other tech brands don't ",
-        "url": "https://www.creativebloq.com/news/an-embroidered-logo-shows-apples-understands-something-that-other-tech-brands-dont",
+        "title": " This viral packaging plays on a meme the brand ignored for decades ",
+        "url": "https://www.creativebloq.com/news/this-ingenious-packaging-design-went-viral-simply-by-recognising-how-people-were-already-using-it",
         "source": "Creative Bloq"
       },
       {
-        "title": " The pen that went viral with those anti-AI ads has 30% off right now ",
-        "url": "https://www.creativebloq.com/deals/the-pen-that-went-viral-with-those-anti-ai-ads-has-27-percent-off-right-now",
+        "title": " Silver Pines review: this inky horror debut is one of the year’s most original games ",
+        "url": "https://www.creativebloq.com/reviews/silver-pines-review-this-inky-horror-debut-is-one-of-the-years-most-original-games",
         "source": "Creative Bloq"
       },
       {
-        "title": " New Balance’s Steve Jobs homage is so subtle you might have missed it ",
-        "url": "https://www.creativebloq.com/news/new-balances-steve-jobs-homage-is-so-subtle-you-might-have-missed-it",
+        "title": " 3 steps to fix an unnatural joint rotation in your 3D model ",
+        "url": "https://www.creativebloq.com/how-to/3-steps-to-fix-an-unnatural-joint-rotation-in-your-3d-model",
         "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "Popular weight loss drugs linked to a surprising fingernail problem",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261011211604.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists discover vanilla’s hidden healing potential",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261011211550.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists find hidden driver of aging and a simple amino acid that fights memory loss in mice",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261009025708.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists make stunning discovery that could help explain why life exists",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261009025602.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "A surprisingly simple way to relieve knee arthritis pain without pills or surgery",
         "url": "https://www.sciencedaily.com/releases/2026/10/261009025434.htm",
@@ -220,65 +240,45 @@
         "source": "Science Daily"
       },
       {
-        "title": "A plastic once thought harmless may be fueling fatty liver disease",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261008102718.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "October’s night sky is full of cosmic tricks and treats",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261008102704.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists build a nuclear clock that could make atomic clocks obsolete",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261008102701.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Eating olive oil before carbs has a surprising effect on blood sugar",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261008102700.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Neanderthals may have used prehistoric glue as an ancient antibiotic",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261008005256.htm",
+        "title": "Just 10 minutes of daily exercise could unlock deeper sleep",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261008102721.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
+        "title": "Ben Affleck's New Netflix Thriller is a Massive Global Streaming Hit",
+        "url": "https://www.polygon.com/ben-affleck-animals-netflix-streaming-hit/",
+        "source": "Polygon"
+      },
+      {
+        "title": "A New KPop Demon Hunters Limited Edition Collection Just Dropped",
+        "url": "https://www.polygon.com/kpop-demon-hunters-limited-edition-collection/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Dungeon Crawler Carl' Author Officially Settles a Raging Debate About the Audiobooks",
+        "url": "https://www.polygon.com/matt-dinniman-nycc-interview-dungeon-crawler-carl/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Josh Brolin Teases a Thanos vs. Doctor Doom Showdown in 'Avengers: Secret Wars'",
+        "url": "https://www.polygon.com/nycc-josh-brolin-thanos-vs-doom/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Carrie' Showrunner Confirms the Biggest Changes to the Book Were Stephen King's Idea",
+        "url": "https://www.polygon.com/carrie-2026-changes-mike-flanagan-stephen-king-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "33 Years Later, Tom Cruise's Near-Perfect Legal Thriller Is Officially on Streaming",
+        "url": "https://www.polygon.com/the-firm-tom-cruise-streaming-paramount-plus-october-2026/",
+        "source": "Polygon"
+      },
+      {
         "title": "66 Years Later, Alfred Hitchcock’s Most Perfect Thriller is Officially Streaming on Netflix",
         "url": "https://www.polygon.com/alfred-hitchcock-psycho-on-netflix/",
-        "source": "Polygon"
-      },
-      {
-        "title": "5 Exciting Games Stuck In Development For More Than 10 Years",
-        "url": "https://www.polygon.com/games-development-hell-2026/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Steven Spielberg's Polarizing Fantasy Film Gets Official New Release",
-        "url": "https://www.polygon.com/steven-spielberg-hook-4k-anniversary-rerelease/",
-        "source": "Polygon"
-      },
-      {
-        "title": "8 Best Cyberpunk 2077 Replacement Games",
-        "url": "https://www.polygon.com/best-games-like-cyberpunk-2077/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Nintendo Should Add Wii to Switch Online Just For These 12 Classic Games",
-        "url": "https://www.polygon.com/nintendo-switch-online-missing-wii-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "11 Replay Ideas to Make Stardew Valley Feel New Again",
-        "url": "https://www.polygon.com/stardew-valley-challenge-runs-replay-ideas/",
-        "source": "Polygon"
-      },
-      {
-        "title": "One Actor Perfectly Explains Why Jason Statham Is the Action Movie King",
-        "url": "https://www.polygon.com/jason-statham-action-thriller-movie-roles-explained/",
         "source": "Polygon"
       }
     ],
