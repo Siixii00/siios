@@ -1,167 +1,191 @@
 {
   "metadata": {
-    "last_updated": "2026-10-13T10:13:21.362583",
-    "total_items": 61
+    "last_updated": "2026-10-13T17:59:33.433599",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
-        "title": "The baffling intelligence of a single cell (2024)",
-        "url": "https://jsomers.net/e-coli-chemotaxis/",
+        "title": "Gemini 4 Argon",
+        "url": "https://deepmind.google/models/gemini/",
         "source": "Hacker News",
-        "score": 286
+        "score": 429
       },
       {
-        "title": "GLM-Legal",
-        "url": "https://z.ai/blog/glm-legal",
+        "title": "Apple HomeView",
+        "url": "https://www.apple.com/apple-homeview/",
         "source": "Hacker News",
-        "score": 565
+        "score": 464
       },
       {
-        "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
-        "url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",
+        "title": "Cyberattack halts construction of tunnel between Denmark and Germany",
+        "url": "https://ua.news/en/world/kiberataka-zupinila-budivnitstvo-tuneliu-mizh-daniieiu-ta-nimechchinoiu-rmf24",
         "source": "Hacker News",
-        "score": 210
+        "score": 60
       },
       {
-        "title": "Hackers activate automatic defrosting in supermarket fridges across Europe",
-        "url": "https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident",
+        "title": "Thunderbird for iOS",
+        "url": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
         "source": "Hacker News",
-        "score": 703
+        "score": 153
       },
       {
-        "title": "A Modern Web App in C",
-        "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
+        "title": "11 year old unsoundness bugs found in Rust borrow checker",
+        "url": "https://github.com/rust-lang/rust/issues/164250",
         "source": "Hacker News",
-        "score": 566
+        "score": 556
       },
       {
-        "title": "Hittite royal archive found in Turkey",
-        "url": "https://www.thehistoryblog.com/archives/77107",
+        "title": "Gemini 4 Argon for Robotics",
+        "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
         "source": "Hacker News",
-        "score": 22
+        "score": 28
       },
       {
-        "title": "DishwasherBench – Can Frontier Models Stack a Dishwasher?",
-        "url": "https://github.com/composo-ai/DishwasherBench",
+        "title": "Firefox Enterprise",
+        "url": "https://www.firefox.com/en-US/enterprise/",
         "source": "Hacker News",
-        "score": 45
+        "score": 398
       },
       {
-        "title": "Who is vfmaddrnd231pd?",
-        "url": "https://purplesyringa.moe/blog/who-is-vfmaddrnd231pd/",
+        "title": "Coris (YC S22) Is Hiring Back End Engineer",
+        "url": "https://www.ycombinator.com/companies/coris/jobs/h0nDly8-backend-engineer-ai-native-risk-infrastructure-integrations",
         "source": "Hacker News",
-        "score": 207
+        "score": 1
       },
       {
-        "title": "Janas: Run LLMs larger than RAM by streaming experts from SSD",
-        "url": "https://github.com/prabanta-dev/janas",
+        "title": "We turned EmbeddingGemma 2 into a speech-to-text model",
+        "url": "https://eg2.haku.sh/",
         "source": "Hacker News",
-        "score": 143
+        "score": 310
       },
       {
-        "title": "Document Review with Unsiloed and TypeSafe Jev",
-        "url": "https://www.unsiloed.ai/blog/document-review-unsiloed-typesafe-jev",
+        "title": "I posted to HN, and then my website was flooded with AI bot traffic",
+        "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
         "source": "Hacker News",
-        "score": 8
+        "score": 106
       },
       {
-        "title": "Making big downloads resumable in Firefox",
-        "url": "https://lunarwatcher.codeberg.page/til/firefox/resumable-big-downloads.html",
+        "title": "A Dynamic and Distributed Virtual GPU Cloud Built on Idle Apple Silicon Devices",
+        "url": "https://machinelearning.apple.com/research/distributed-gpu-cloud",
         "source": "Hacker News",
-        "score": 210
+        "score": 178
       },
       {
-        "title": "Were Software Engineers blue-collar workers all along?",
-        "url": "https://ptrbrynt.com/posts/were-we-blue-collar-workers-all-along",
+        "title": "New Apple TV 4K",
+        "url": "https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/",
         "source": "Hacker News",
-        "score": 65
+        "score": 160
       },
       {
-        "title": "Turn a WiFi 7 Router into a 320Msps Software Defined Radio Receiver",
-        "url": "https://github.com/h0m3us3r/w1700k-sdr",
+        "title": "MIT class project turns into an FDA-cleared treatment for tremors",
+        "url": "https://news.mit.edu/2026/mit-class-project-turns-into-fda-cleared-treatment-for-tremors-1002",
         "source": "Hacker News",
-        "score": 350
+        "score": 31
       },
       {
-        "title": "AI is a tool and using it well takes skill",
-        "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
+        "title": "Show HN: How Random Are You?",
+        "url": "https://lab.specr.net/rigged-draw/",
         "source": "Hacker News",
-        "score": 421
+        "score": 7
       },
       {
-        "title": "Citroen revives the 2CV for an electric age",
-        "url": "https://www.bbc.com/news/articles/c620r33plgppo",
+        "title": "Launch HN: Consus (YC F24) – LLM gateway for companies handling sensitive data",
+        "url": "https://news.ycombinator.com/item?id=50073471",
         "source": "Hacker News",
-        "score": 340
+        "score": 16
       }
     ],
     "ai": [
       {
-        "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
-        "url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",
+        "title": "Gemini 4 Argon",
+        "url": "https://deepmind.google/models/gemini/",
         "source": "Hacker News AI",
-        "score": 210
+        "score": 429
       },
       {
-        "title": "Janas: Run LLMs larger than RAM by streaming experts from SSD",
-        "url": "https://github.com/prabanta-dev/janas",
+        "title": "Gemini 4 Argon for Robotics",
+        "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
         "source": "Hacker News AI",
-        "score": 143
+        "score": 28
+      },
+      {
+        "title": "We turned EmbeddingGemma 2 into a speech-to-text model",
+        "url": "https://eg2.haku.sh/",
+        "source": "Hacker News AI",
+        "score": 310
+      },
+      {
+        "title": "I posted to HN, and then my website was flooded with AI bot traffic",
+        "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
+        "source": "Hacker News AI",
+        "score": 106
+      },
+      {
+        "title": "Launch HN: Consus (YC F24) – LLM gateway for companies handling sensitive data",
+        "url": "https://news.ycombinator.com/item?id=50073471",
+        "source": "Hacker News AI",
+        "score": 16
+      },
+      {
+        "title": "How to engineer an AI harness for game development",
+        "url": "https://kylekukshtel.com/ai-harness-engineering-game-development-claude-code",
+        "source": "Hacker News AI",
+        "score": 35
+      },
+      {
+        "title": "Show HN: Use your OpenAI subscription to create audiobooks",
+        "url": "https://pdftomp3.com/connect-ai/",
+        "source": "Hacker News AI",
+        "score": 136
+      },
+      {
+        "title": "Character.ai has initiated voluntary Chapter 11 bankruptcy",
+        "url": "https://blog.character.ai/an-update-on-character-ai/",
+        "source": "Hacker News AI",
+        "score": 179
       },
       {
         "title": "AI is a tool and using it well takes skill",
         "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
         "source": "Hacker News AI",
-        "score": 421
+        "score": 586
+      },
+      {
+        "title": "Redesigning Source Control at Anthropic",
+        "url": "https://www.anthropic.com/engineering/redesigning-source-control",
+        "source": "Hacker News AI",
+        "score": 94
+      },
+      {
+        "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
+        "url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",
+        "source": "Hacker News AI",
+        "score": 293
+      },
+      {
+        "title": "Scientists wonder: Is my AI stealing my ideas?",
+        "url": "https://www.scientificamerican.com/article/scientists-worry-ai-is-stealing-their-ideas/",
+        "source": "Hacker News AI",
+        "score": 16
+      },
+      {
+        "title": "Janas: Run LLMs larger than RAM by streaming experts from SSD",
+        "url": "https://github.com/prabanta-dev/janas",
+        "source": "Hacker News AI",
+        "score": 208
       },
       {
         "title": "A look at the math that OpenAI claims computes faster Fourier transforms",
         "url": "https://www.argmin.net/p/faster-fourier-transforms",
         "source": "Hacker News AI",
-        "score": 136
+        "score": 230
       },
       {
-        "title": "AI models can provably hide arbitrary capabilities",
-        "url": "https://arxiv.org/abs/2610.13928",
+        "title": "Ukraine Is Successfully Bombing the Heart of Russia's Disinformation Machine",
+        "url": "https://cmarmitage.substack.com/p/ukraine-is-successfully-bombing-the",
         "source": "Hacker News AI",
-        "score": 211
-      },
-      {
-        "title": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
-        "url": "https://taylor.town/kk-ai-2026",
-        "source": "Hacker News AI",
-        "score": 189
-      },
-      {
-        "title": "Codex CLI installs a persistent, self-updating background daemon by default",
-        "url": "https://github.com/openai/codex/issues/48195",
-        "source": "Hacker News AI",
-        "score": 566
-      },
-      {
-        "title": "Show HN: Atticus – Hold-to-talk voice assistant for macOS that runs on Claude -p",
-        "url": "https://github.com/SaarthurR/atticus-mac",
-        "source": "Hacker News AI",
-        "score": 105
-      },
-      {
-        "title": "QGIS enacts moratorium on AI contributions",
-        "url": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
-        "source": "Hacker News AI",
-        "score": 375
-      },
-      {
-        "title": "'AI' Is Not a Tool by Rich Hickey",
-        "url": "https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e",
-        "source": "Hacker News AI",
-        "score": 276
-      },
-      {
-        "title": "AI coding agents generate more code, but not more software",
-        "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
-        "source": "Hacker News AI",
-        "score": 335
+        "score": 34
       }
     ],
     "news": [
@@ -171,37 +195,47 @@
         "source": "BBC World"
       },
       {
+        "title": "Horrified witnesses recount fatal rollercoaster incident at Six Flags",
+        "url": "https://www.bbc.co.uk/news/articles/c6n4ejx8x1z7o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Breaking Bad actor RJ Mitte dies aged 34",
         "url": "https://www.bbc.co.uk/news/articles/cmn045en7d88o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "One dead and several hurt after rollercoaster incident at Six Flags",
-        "url": "https://www.bbc.co.uk/news/articles/c6n4ejx8x1z7o?at_medium=RSS&at_campaign=rss",
+        "title": "Watch: Emergency calls from botched Christa Pike execution released",
+        "url": "https://www.bbc.co.uk/news/videos/cqpvgrkp0xpyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US emergency call records reveal confusion after failed execution of Christa Pike",
-        "url": "https://www.bbc.co.uk/news/articles/ck1exg6qjdz3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Ship sinks in new drone attack off Bulgaria, PM summons Russian ambassador",
+        "title": "Bulgaria summons Russian ambassador after ship sinks in Black Sea drone attack",
         "url": "https://www.bbc.co.uk/news/articles/cmn06w5x9g25o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Six Ukrainian energy sites hit by Russia since Trump announced ceasefire, Zelensky says",
-        "url": "https://www.bbc.co.uk/news/articles/cvlyd4pdlwkxo?at_medium=RSS&at_campaign=rss",
+        "title": "Pope admitted to hospital for surgery to remove lump on his lung",
+        "url": "https://www.bbc.co.uk/news/articles/ck1wvd9dvv22o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "India 'cockroach' leaders detained after entering barricaded protest site",
-        "url": "https://www.bbc.co.uk/news/articles/cqz0v11n2vj5o?at_medium=RSS&at_campaign=rss",
+        "title": "BBC FM radio transmissions suspended in Afghanistan",
+        "url": "https://www.bbc.co.uk/news/articles/cm8ezp4g7p6po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Dragon Quest's creator made a game with AI in 30 minutes, and it’s a bit of a wake-up call ",
+        "url": "https://www.creativebloq.com/news/dragon-quests-creator-made-a-game-with-ai-in-30-minutes-and-its-a-bit-of-a-wake-up-call",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Everyone's saying the same thing about Epic’s AI-first Disney game – and it's not good ",
+        "url": "https://www.creativebloq.com/news/everyones-saying-the-same-thing-about-epics-ai-first-disney-game-and-its-not-good",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Huion Kamvas Pad 12 review: a budget Android drawing tablet that gets the small things right ",
         "url": "https://www.creativebloq.com/reviews/huion-kamvas-pad-12-review-a-budget-android-drawing-tablet-that-gets-the-small-things-right",
@@ -226,94 +260,89 @@
         "title": " The new Citroen 2CV is reminding people of a very different (but equally iconic) car design ",
         "url": "https://www.creativebloq.com/news/the-new-citroen-2cv-is-reminding-people-of-a-very-different-but-equally-iconic-car-design",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " All streaming platforms will eventually run ads, and here’s why ",
-        "url": "https://www.creativebloq.com/news/all-streaming-platforms-will-eventually-run-ads-and-heres-why",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " New Sour Patch Kids billboard destroys Oreo (literally) ",
-        "url": "https://www.creativebloq.com/news/new-sour-patch-kids-billboard-destroys-oreo-literally",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
-        "title": "Popular weight loss drugs linked to a surprising fingernail problem",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261011211604.htm",
+        "title": "The secret to handling stress better may start at breakfast",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261012185023.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists discover vanilla’s hidden healing potential",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261011211550.htm",
+        "title": "James Webb reveals a massive cosmic structure that challenges our understanding of the Universe",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261012185021.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists find hidden driver of aging and a simple amino acid that fights memory loss in mice",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261009025708.htm",
+        "title": "Scientists uncover a hidden map of the brain with 539 distinct regions",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261012185011.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists make stunning discovery that could help explain why life exists",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261009025602.htm",
+        "title": "Scientists discover a surprising paradox in how our cells age",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261012185009.htm",
         "source": "Science Daily"
       },
       {
-        "title": "A surprisingly simple way to relieve knee arthritis pain without pills or surgery",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261009025434.htm",
+        "title": "Scientists just gave the powerhouses of our cells a high-tech upgrade",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261012185008.htm",
         "source": "Science Daily"
       },
       {
-        "title": "NASA astronauts splash down after 100 million miles in space",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261008232629.htm",
+        "title": "This tiny jurassic predator helped pave the way for the human brain",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261012185005.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Just 10 minutes of daily exercise could unlock deeper sleep",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261008102721.htm",
+        "title": "Physicists discover “astonishing” property of light that defies expectations",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261011211615.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Doctor Who Is Getting a Christmas Special After All",
-        "url": "https://www.polygon.com/doctor-who-christmas-special-2026-christopher-eccleston/",
+        "title": "'Baywatch' Reboot Trailer Has All the Slo-Mo You Could Ever Want",
+        "url": "https://www.polygon.com/baywatch-reboot-trailer-fox-stephen-amell/",
         "source": "Polygon"
       },
       {
-        "title": "13 Years Ago, 'Rick and Morty’s Most Horrifying Episode Changed the Series Forever Forever",
-        "url": "https://www.polygon.com/rick-and-mortion-halloween-countdown-2026/",
+        "title": "'An Unheard Farewell' quest walkthrough in Valor Mortis",
+        "url": "https://www.polygon.com/valor-mortis-an-unheard-farewell-quest-walkthrough/",
         "source": "Polygon"
       },
       {
-        "title": "'The X-Files' Creator is Officially Releasing an Ambitious New Time-Travel Movie",
-        "url": "https://www.polygon.com/the-x-files-creator-chris-carter-queens-for-a-day/",
+        "title": "How to beat The Iron Marshall in Valor Mortis",
+        "url": "https://www.polygon.com/valor-mortis-iron-marshall-boss-how-to-beat/",
         "source": "Polygon"
       },
       {
-        "title": "Critical Role's New Canon Campaign Will Feature VTuber Stars",
-        "url": "https://www.polygon.com/critical-role-shattered-legends-vtubers-hololive-daggerheart/",
+        "title": "How to beat General Lothaire, the Eagle-Bearer, in Valor Mortis",
+        "url": "https://www.polygon.com/valor-mortis-general-lothaire-boss-how-to-beat/",
         "source": "Polygon"
       },
       {
-        "title": "Prime Video's Epic New Game of Thrones Replacement Is Officially 3 Months Away",
-        "url": "https://www.polygon.com/bloodaxe-episode-1-prime-video/",
+        "title": "How to unlock fast travel in Valor Mortis",
+        "url": "https://www.polygon.com/valor-mortis-fast-travel-how-to-unlock/",
         "source": "Polygon"
       },
       {
-        "title": "Castlevania: Belmont’s Curse Is a Near-Perfect Metroidvania",
-        "url": "https://www.polygon.com/castlevania-belmonts-curse-review/",
+        "title": "10 Valor Mortis beginner's tips to help you survive the Crimson Plague",
+        "url": "https://www.polygon.com/valor-mortis-beginners-tips-tricks-guide/",
         "source": "Polygon"
       },
       {
-        "title": "Scarlett Johansson's Irresistible R-Rated Sci-Fi Thriller Is Now Free to Watch on Streaming",
-        "url": "https://www.polygon.com/under-the-skin-free-streaming-tubi-october-2026/",
+        "title": "'Boarding The Frigate' quest walkthrough in Arc Raiders",
+        "url": "https://www.polygon.com/arc-raiders-boarding-the-frigate-quest-walkthrough/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "GitHub’s model for secret detection: Finding more secrets with less noise",
+        "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
         "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
@@ -342,11 +371,6 @@
       {
         "title": "ReviewBench: An open benchmark for AI code review",
         "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "AI is changing developer work. Here are three skills to strengthen.",
-        "url": "https://github.blog/ai-and-ml/ai-is-rewriting-the-developer-career-ladder-heres-how-to-stand-out/",
         "source": "GitHub Blog"
       }
     ]
