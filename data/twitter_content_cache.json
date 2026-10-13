@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-13T02:52:21.050297",
-    "total_items": 62
+    "last_updated": "2026-10-13T10:13:21.362583",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "Leaving Tech",
-        "url": "https://ryanbigg.com/2026/10/leaving-tech",
+        "title": "The baffling intelligence of a single cell (2024)",
+        "url": "https://jsomers.net/e-coli-chemotaxis/",
         "source": "Hacker News",
-        "score": 31
+        "score": 286
       },
       {
         "title": "GLM-Legal",
         "url": "https://z.ai/blog/glm-legal",
         "source": "Hacker News",
-        "score": 458
-      },
-      {
-        "title": "The baffling intelligence of a single cell (2024)",
-        "url": "https://jsomers.net/e-coli-chemotaxis/",
-        "source": "Hacker News",
-        "score": 76
-      },
-      {
-        "title": "Who is vfmaddrnd231pd?",
-        "url": "https://purplesyringa.moe/blog/who-is-vfmaddrnd231pd/",
-        "source": "Hacker News",
-        "score": 132
-      },
-      {
-        "title": "A Modern Web App in C",
-        "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
-        "source": "Hacker News",
-        "score": 418
+        "score": 565
       },
       {
         "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
         "url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",
         "source": "Hacker News",
-        "score": 89
+        "score": 210
       },
       {
         "title": "Hackers activate automatic defrosting in supermarket fridges across Europe",
         "url": "https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident",
         "source": "Hacker News",
-        "score": 475
+        "score": 703
       },
       {
-        "title": "Auto Research: Integer multiplication below n log n",
-        "url": "https://app.getsupers.com/auto-research",
+        "title": "A Modern Web App in C",
+        "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
         "source": "Hacker News",
-        "score": 23
+        "score": 566
+      },
+      {
+        "title": "Hittite royal archive found in Turkey",
+        "url": "https://www.thehistoryblog.com/archives/77107",
+        "source": "Hacker News",
+        "score": 22
+      },
+      {
+        "title": "DishwasherBench – Can Frontier Models Stack a Dishwasher?",
+        "url": "https://github.com/composo-ai/DishwasherBench",
+        "source": "Hacker News",
+        "score": 45
+      },
+      {
+        "title": "Who is vfmaddrnd231pd?",
+        "url": "https://purplesyringa.moe/blog/who-is-vfmaddrnd231pd/",
+        "source": "Hacker News",
+        "score": 207
       },
       {
         "title": "Janas: Run LLMs larger than RAM by streaming experts from SSD",
         "url": "https://github.com/prabanta-dev/janas",
         "source": "Hacker News",
-        "score": 47
+        "score": 143
+      },
+      {
+        "title": "Document Review with Unsiloed and TypeSafe Jev",
+        "url": "https://www.unsiloed.ai/blog/document-review-unsiloed-typesafe-jev",
+        "source": "Hacker News",
+        "score": 8
       },
       {
         "title": "Making big downloads resumable in Firefox",
         "url": "https://lunarwatcher.codeberg.page/til/firefox/resumable-big-downloads.html",
         "source": "Hacker News",
-        "score": 108
+        "score": 210
       },
       {
-        "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
-        "url": "https://news.ycombinator.com/item?id=50059096",
+        "title": "Were Software Engineers blue-collar workers all along?",
+        "url": "https://ptrbrynt.com/posts/were-we-blue-collar-workers-all-along",
         "source": "Hacker News",
-        "score": 112
-      },
-      {
-        "title": "Phreak.ing – Internet Phone Switch",
-        "url": "https://phreak.ing/",
-        "source": "Hacker News",
-        "score": 84
+        "score": 65
       },
       {
         "title": "Turn a WiFi 7 Router into a 320Msps Software Defined Radio Receiver",
         "url": "https://github.com/h0m3us3r/w1700k-sdr",
         "source": "Hacker News",
-        "score": 273
+        "score": 350
       },
       {
-        "title": "Writing a Demoscene Intro for the ZX Spectrum",
-        "url": "https://www.markround.com/blog/2026/zx-spectrum-intro",
+        "title": "AI is a tool and using it well takes skill",
+        "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
         "source": "Hacker News",
-        "score": 84
+        "score": 421
       },
       {
-        "title": "Blood cells from 80-year-old donor become stem cells with molecular age under 20",
-        "url": "https://doi.org/10.1111/acel.70751",
+        "title": "Citroen revives the 2CV for an electric age",
+        "url": "https://www.bbc.com/news/articles/c620r33plgppo",
         "source": "Hacker News",
-        "score": 109
+        "score": 340
       }
     ],
     "ai": [
@@ -101,94 +101,73 @@
         "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
         "url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",
         "source": "Hacker News AI",
-        "score": 89
+        "score": 210
       },
       {
         "title": "Janas: Run LLMs larger than RAM by streaming experts from SSD",
         "url": "https://github.com/prabanta-dev/janas",
         "source": "Hacker News AI",
-        "score": 47
-      },
-      {
-        "title": "Strengthening our defenses against distillation attacks",
-        "url": "https://www.anthropic.com/research/distillation-defenses",
-        "source": "Hacker News AI",
-        "score": 6
-      },
-      {
-        "title": "Codex CLI installs a persistent, self-updating background daemon by default",
-        "url": "https://github.com/openai/codex/issues/48195",
-        "source": "Hacker News AI",
-        "score": 482
-      },
-      {
-        "title": "Show HN: Brickbrag – A multiplayer brick-building world in the browser",
-        "url": "https://brickbrag.com/",
-        "source": "Hacker News AI",
-        "score": 38
-      },
-      {
-        "title": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
-        "url": "https://taylor.town/kk-ai-2026",
-        "source": "Hacker News AI",
-        "score": 147
+        "score": 143
       },
       {
         "title": "AI is a tool and using it well takes skill",
         "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
         "source": "Hacker News AI",
-        "score": 250
+        "score": 421
       },
       {
-        "title": "I turned my unused Kindle into a photo frame with GPT-6 Astra",
-        "url": "https://nirajrajgor.com/blog/kindle-photo-frame-with-ai",
+        "title": "A look at the math that OpenAI claims computes faster Fourier transforms",
+        "url": "https://www.argmin.net/p/faster-fourier-transforms",
         "source": "Hacker News AI",
-        "score": 129
+        "score": 136
+      },
+      {
+        "title": "AI models can provably hide arbitrary capabilities",
+        "url": "https://arxiv.org/abs/2610.13928",
+        "source": "Hacker News AI",
+        "score": 211
+      },
+      {
+        "title": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
+        "url": "https://taylor.town/kk-ai-2026",
+        "source": "Hacker News AI",
+        "score": 189
+      },
+      {
+        "title": "Codex CLI installs a persistent, self-updating background daemon by default",
+        "url": "https://github.com/openai/codex/issues/48195",
+        "source": "Hacker News AI",
+        "score": 566
       },
       {
         "title": "Show HN: Atticus – Hold-to-talk voice assistant for macOS that runs on Claude -p",
         "url": "https://github.com/SaarthurR/atticus-mac",
         "source": "Hacker News AI",
-        "score": 77
-      },
-      {
-        "title": "'AI' Is Not a Tool by Rich Hickey",
-        "url": "https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e",
-        "source": "Hacker News AI",
-        "score": 232
+        "score": 105
       },
       {
         "title": "QGIS enacts moratorium on AI contributions",
         "url": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
         "source": "Hacker News AI",
-        "score": 367
+        "score": 375
+      },
+      {
+        "title": "'AI' Is Not a Tool by Rich Hickey",
+        "url": "https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e",
+        "source": "Hacker News AI",
+        "score": 276
       },
       {
         "title": "AI coding agents generate more code, but not more software",
         "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
         "source": "Hacker News AI",
-        "score": 314
+        "score": 335
       }
     ],
     "news": [
       {
-        "title": "Six Ukrainian energy sites hit by Russia since Trump announced ceasefire, Zelensky says",
-        "url": "https://www.bbc.co.uk/news/articles/cvlyd4pdlwkxo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Why Moscow is staying tight-lipped on Trump's energy ceasefire",
-        "url": "https://www.bbc.co.uk/news/articles/cjx2359qekrdo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Documents falsified to evade tax on Abramovich's wealth, BBC finds",
-        "url": "https://www.bbc.co.uk/news/articles/c64g1l5389kvo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Saudi minister vows 'serious response' to Houthi attacks on airports",
-        "url": "https://www.bbc.co.uk/news/articles/cjly0zqq27e4o?at_medium=RSS&at_campaign=rss",
+        "title": "Russia's offensive ability is broken, Kyiv's former top general tells BBC",
+        "url": "https://www.bbc.co.uk/news/articles/c9y7lgg2vdggo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -197,17 +176,57 @@
         "source": "BBC World"
       },
       {
-        "title": "South Africa's deputy police chief resigns after being charged with sexual offences",
-        "url": "https://www.bbc.co.uk/news/articles/c8wy9d940pyko?at_medium=RSS&at_campaign=rss",
+        "title": "One dead and several hurt after rollercoaster incident at Six Flags",
+        "url": "https://www.bbc.co.uk/news/articles/c6n4ejx8x1z7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Immigration agents search congresswoman Ilhan Omar's home",
-        "url": "https://www.bbc.co.uk/news/articles/cvp8glg97393o?at_medium=RSS&at_campaign=rss",
+        "title": "US emergency call records reveal confusion after failed execution of Christa Pike",
+        "url": "https://www.bbc.co.uk/news/articles/ck1exg6qjdz3o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ship sinks in new drone attack off Bulgaria, PM summons Russian ambassador",
+        "url": "https://www.bbc.co.uk/news/articles/cmn06w5x9g25o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Six Ukrainian energy sites hit by Russia since Trump announced ceasefire, Zelensky says",
+        "url": "https://www.bbc.co.uk/news/articles/cvlyd4pdlwkxo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "India 'cockroach' leaders detained after entering barricaded protest site",
+        "url": "https://www.bbc.co.uk/news/articles/cqz0v11n2vj5o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Huion Kamvas Pad 12 review: a budget Android drawing tablet that gets the small things right ",
+        "url": "https://www.creativebloq.com/reviews/huion-kamvas-pad-12-review-a-budget-android-drawing-tablet-that-gets-the-small-things-right",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How Michelangelo’s handwriting became a Microsoft font ",
+        "url": "https://www.creativebloq.com/news/how-michelangelos-handwriting-became-its-own-microsoft-font",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " I tried those free AI-coded Adobe Creative Cloud clones, and they have some big problems ",
+        "url": "https://www.creativebloq.com/news/i-tried-those-free-ai-coded-adobe-creative-cloud-clones-and-they-have-some-big-problems",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Castlevania: Belmont's Curse review: a gorgeous return that plays it safe ",
+        "url": "https://www.creativebloq.com/reviews/castlevania-belmonts-curse-review-a-new-adventure-with-a-new-generation-of-belmont-in-the-shadow-of-modern-metroidvanias",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The new Citroen 2CV is reminding people of a very different (but equally iconic) car design ",
+        "url": "https://www.creativebloq.com/news/the-new-citroen-2cv-is-reminding-people-of-a-very-different-but-equally-iconic-car-design",
+        "source": "Creative Bloq"
+      },
       {
         "title": " All streaming platforms will eventually run ads, and here’s why ",
         "url": "https://www.creativebloq.com/news/all-streaming-platforms-will-eventually-run-ads-and-heres-why",
@@ -216,31 +235,6 @@
       {
         "title": " New Sour Patch Kids billboard destroys Oreo (literally) ",
         "url": "https://www.creativebloq.com/news/new-sour-patch-kids-billboard-destroys-oreo-literally",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " I'm a creative professional, and the Xiaomi 17T Pro is one of the best camera phones ever made ",
-        "url": "https://www.creativebloq.com/reviews/im-a-creative-professional-and-the-xiaomi-17t-pro-is-one-of-the-best-camera-phones-ever-made",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Now AI isn't just faking art, it's faking artists' signatures as well ",
-        "url": "https://www.creativebloq.com/news/now-ai-isnt-just-faking-art-its-faking-artists-signatures-as-well",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This viral packaging plays on a meme the brand ignored for decades ",
-        "url": "https://www.creativebloq.com/news/this-ingenious-packaging-design-went-viral-simply-by-recognising-how-people-were-already-using-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Silver Pines review: this inky horror debut is one of the year’s most original games ",
-        "url": "https://www.creativebloq.com/reviews/silver-pines-review-this-inky-horror-debut-is-one-of-the-years-most-original-games",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " 3 steps to fix an unnatural joint rotation in your 3D model ",
-        "url": "https://www.creativebloq.com/how-to/3-steps-to-fix-an-unnatural-joint-rotation-in-your-3d-model",
         "source": "Creative Bloq"
       }
     ],
@@ -283,38 +277,38 @@
     ],
     "gaming": [
       {
-        "title": "6 darkly funny Far Side comics starring the devil",
-        "url": "https://www.polygon.com/6-best-far-side-comics-about-the-devil-hell/",
+        "title": "Doctor Who Is Getting a Christmas Special After All",
+        "url": "https://www.polygon.com/doctor-who-christmas-special-2026-christopher-eccleston/",
         "source": "Polygon"
       },
       {
-        "title": "One of 2026’s Goriest Horror Movies Is Dominating HBO Max",
-        "url": "https://www.polygon.com/evil-dead-burn-streaming-success-hbo-max-october-2026/",
+        "title": "13 Years Ago, 'Rick and Morty’s Most Horrifying Episode Changed the Series Forever Forever",
+        "url": "https://www.polygon.com/rick-and-mortion-halloween-countdown-2026/",
         "source": "Polygon"
       },
       {
-        "title": "John Cena’s Latest Nostalgia-Fueled Action Movie Is a Hit on Apple TV",
-        "url": "https://www.polygon.com/john-cena-matchbox-movie-streaming-success-apple-tv-october-2026/",
+        "title": "'The X-Files' Creator is Officially Releasing an Ambitious New Time-Travel Movie",
+        "url": "https://www.polygon.com/the-x-files-creator-chris-carter-queens-for-a-day/",
         "source": "Polygon"
       },
       {
-        "title": "All classes and unlock requirements in Fire Emblem Fortune's Weave",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-classes-unlock-secret/",
+        "title": "Critical Role's New Canon Campaign Will Feature VTuber Stars",
+        "url": "https://www.polygon.com/critical-role-shattered-legends-vtubers-hololive-daggerheart/",
         "source": "Polygon"
       },
       {
-        "title": "New 90% Positive Steam Roguelike Is a Faithful PSP-Era Comeback",
-        "url": "https://www.polygon.com/ratatan-switch-2-impressions/",
+        "title": "Prime Video's Epic New Game of Thrones Replacement Is Officially 3 Months Away",
+        "url": "https://www.polygon.com/bloodaxe-episode-1-prime-video/",
         "source": "Polygon"
       },
       {
-        "title": "Epic Games Delays Marvel and Star Wars Crossover Game Amid Generative AI Push",
-        "url": "https://www.polygon.com/epic-games-marvel-star-wars-game-delay-generative-ai-development/",
+        "title": "Castlevania: Belmont’s Curse Is a Near-Perfect Metroidvania",
+        "url": "https://www.polygon.com/castlevania-belmonts-curse-review/",
         "source": "Polygon"
       },
       {
-        "title": "Classic YA Survival Novel Officially Getting a Netflix Film Adaptation",
-        "url": "https://www.polygon.com/hatchet-movie-adaptation-announced-netflix/",
+        "title": "Scarlett Johansson's Irresistible R-Rated Sci-Fi Thriller Is Now Free to Watch on Streaming",
+        "url": "https://www.polygon.com/under-the-skin-free-streaming-tubi-october-2026/",
         "source": "Polygon"
       }
     ],
