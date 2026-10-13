@@ -1,155 +1,173 @@
 {
   "metadata": {
-    "last_updated": "2026-10-12T21:36:00.301223",
-    "total_items": 59
+    "last_updated": "2026-10-13T02:52:21.050297",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
+        "title": "Leaving Tech",
+        "url": "https://ryanbigg.com/2026/10/leaving-tech",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
         "title": "GLM-Legal",
         "url": "https://z.ai/blog/glm-legal",
         "source": "Hacker News",
-        "score": 353
+        "score": 458
+      },
+      {
+        "title": "The baffling intelligence of a single cell (2024)",
+        "url": "https://jsomers.net/e-coli-chemotaxis/",
+        "source": "Hacker News",
+        "score": 76
+      },
+      {
+        "title": "Who is vfmaddrnd231pd?",
+        "url": "https://purplesyringa.moe/blog/who-is-vfmaddrnd231pd/",
+        "source": "Hacker News",
+        "score": 132
       },
       {
         "title": "A Modern Web App in C",
         "url": "https://prophitt.me/writing/a-modern-web-app-in-c",
         "source": "Hacker News",
-        "score": 299
+        "score": 418
       },
       {
-        "title": "Writing a Demoscene Intro for the ZX Spectrum",
-        "url": "https://www.markround.com/blog/2026/zx-spectrum-intro",
+        "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
+        "url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",
         "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Codex CLI installs a persistent, self-updating background daemon by default",
-        "url": "https://github.com/openai/codex/issues/48195",
-        "source": "Hacker News",
-        "score": 352
+        "score": 89
       },
       {
         "title": "Hackers activate automatic defrosting in supermarket fridges across Europe",
         "url": "https://www.tomshardware.com/tech-industry/cyber-security/unprecedented-cyberattack-cripples-supermarket-fridges-across-europe-as-hackers-activate-automatic-defrosting-delivery-and-store-prices-also-impacted-by-incident",
         "source": "Hacker News",
-        "score": 297
+        "score": 475
+      },
+      {
+        "title": "Auto Research: Integer multiplication below n log n",
+        "url": "https://app.getsupers.com/auto-research",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
+        "title": "Janas: Run LLMs larger than RAM by streaming experts from SSD",
+        "url": "https://github.com/prabanta-dev/janas",
+        "source": "Hacker News",
+        "score": 47
+      },
+      {
+        "title": "Making big downloads resumable in Firefox",
+        "url": "https://lunarwatcher.codeberg.page/til/firefox/resumable-big-downloads.html",
+        "source": "Hacker News",
+        "score": 108
       },
       {
         "title": "Launch HN: Agent37 (YC F26) – Low-cost agent sandboxes for running agents",
         "url": "https://news.ycombinator.com/item?id=50059096",
         "source": "Hacker News",
-        "score": 68
+        "score": 112
+      },
+      {
+        "title": "Phreak.ing – Internet Phone Switch",
+        "url": "https://phreak.ing/",
+        "source": "Hacker News",
+        "score": 84
       },
       {
         "title": "Turn a WiFi 7 Router into a 320Msps Software Defined Radio Receiver",
         "url": "https://github.com/h0m3us3r/w1700k-sdr",
         "source": "Hacker News",
-        "score": 207
+        "score": 273
       },
       {
-        "title": "Citroen revives the 2CV for an electric age",
-        "url": "https://www.bbc.com/news/articles/c620r33plgppo",
+        "title": "Writing a Demoscene Intro for the ZX Spectrum",
+        "url": "https://www.markround.com/blog/2026/zx-spectrum-intro",
         "source": "Hacker News",
-        "score": 223
+        "score": 84
       },
       {
-        "title": "Muse Wonder",
-        "url": "https://research.meta.ai/blog/muse-wonder",
+        "title": "Blood cells from 80-year-old donor become stem cells with molecular age under 20",
+        "url": "https://doi.org/10.1111/acel.70751",
         "source": "Hacker News",
-        "score": 442
-      },
-      {
-        "title": "OpenFatigue™ – Open is the new closed",
-        "url": "https://openfatigue.ai/",
-        "source": "Hacker News",
-        "score": 158
-      },
-      {
-        "title": "The Making Of Super Mario 64 – full Giles Goddard interview (2001)",
-        "url": "https://pixelatron.com/blog/the-making-of-super-mario-64-full-giles-goddard-interview-ngc/",
-        "source": "Hacker News",
-        "score": 197
-      },
-      {
-        "title": "AI coding agents generate more code, but not more software",
-        "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
-        "source": "Hacker News",
-        "score": 246
-      },
-      {
-        "title": "Secret of Orange Cats Revealed After 60-Year Search",
-        "url": "https://www.sciencealert.com/secret-of-orange-cats-finally-revealed-after-60-year-search",
-        "source": "Hacker News",
-        "score": 206
-      },
-      {
-        "title": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
-        "url": "https://taylor.town/kk-ai-2026",
-        "source": "Hacker News",
-        "score": 98
-      },
-      {
-        "title": "Thinking will become a hobby",
-        "url": "https://www.spinellis.gr/blog/20261008/?li261008",
-        "source": "Hacker News",
-        "score": 164
+        "score": 109
       }
     ],
     "ai": [
       {
+        "title": "Intel D270 GPU AI Accelerator–Up to 480 GB LPDDR5X",
+        "url": "https://www.intel.com/content/www/us/en/products/details/discrete-gpus/data-center-gpu/d-series.html",
+        "source": "Hacker News AI",
+        "score": 89
+      },
+      {
+        "title": "Janas: Run LLMs larger than RAM by streaming experts from SSD",
+        "url": "https://github.com/prabanta-dev/janas",
+        "source": "Hacker News AI",
+        "score": 47
+      },
+      {
+        "title": "Strengthening our defenses against distillation attacks",
+        "url": "https://www.anthropic.com/research/distillation-defenses",
+        "source": "Hacker News AI",
+        "score": 6
+      },
+      {
         "title": "Codex CLI installs a persistent, self-updating background daemon by default",
         "url": "https://github.com/openai/codex/issues/48195",
         "source": "Hacker News AI",
-        "score": 352
+        "score": 482
       },
       {
-        "title": "AI coding agents generate more code, but not more software",
-        "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
+        "title": "Show HN: Brickbrag – A multiplayer brick-building world in the browser",
+        "url": "https://brickbrag.com/",
         "source": "Hacker News AI",
-        "score": 246
+        "score": 38
       },
       {
         "title": "Kevin Kelly's 2016 AI Predictions, 10 Years Later",
         "url": "https://taylor.town/kk-ai-2026",
         "source": "Hacker News AI",
-        "score": 98
+        "score": 147
       },
       {
-        "title": "Epic Games tells employees to use AI to get Disney game done",
-        "url": "https://www.avclub.com/epic-games-disney-ai-delay",
+        "title": "AI is a tool and using it well takes skill",
+        "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
         "source": "Hacker News AI",
-        "score": 43
+        "score": 250
+      },
+      {
+        "title": "I turned my unused Kindle into a photo frame with GPT-6 Astra",
+        "url": "https://nirajrajgor.com/blog/kindle-photo-frame-with-ai",
+        "source": "Hacker News AI",
+        "score": 129
+      },
+      {
+        "title": "Show HN: Atticus – Hold-to-talk voice assistant for macOS that runs on Claude -p",
+        "url": "https://github.com/SaarthurR/atticus-mac",
+        "source": "Hacker News AI",
+        "score": 77
       },
       {
         "title": "'AI' Is Not a Tool by Rich Hickey",
         "url": "https://www.linkedin.com/pulse/ai-tool-rich-hickey-kjl8e",
         "source": "Hacker News AI",
-        "score": 88
+        "score": 232
       },
       {
         "title": "QGIS enacts moratorium on AI contributions",
         "url": "https://github.com/qgis/QGIS-Enhancement-Proposals/pull/387",
         "source": "Hacker News AI",
-        "score": 352
+        "score": 367
       },
       {
-        "title": "The gap in shared understanding of LLM capability is widening",
-        "url": "https://twitter.com/karpathy/status/2109361546505966046",
+        "title": "AI coding agents generate more code, but not more software",
+        "url": "https://arstechnica.com/ai/2026/10/ai-coding-agents-generate-more-code-but-not-more-software/",
         "source": "Hacker News AI",
-        "score": 669
-      },
-      {
-        "title": "Obituary: Robert X. Cringley",
-        "url": "https://www.facebook.com/story.php?story_fbid=pfbid0YbCLrAJfBirAWuPBy4a7pauaQ6gHkAPUwtbzyg2wAjeMcruFC7dWUZKQJKkNChP9l&id=536506060&_rdr",
-        "source": "Hacker News AI",
-        "score": 10
-      },
-      {
-        "title": "EC users should be afraid of a US kill switch – not some new software",
-        "url": "https://www.theregister.com/columnists/2026/10/10/ec-users-should-be-afraid-of-a-us-kill-switch-not-some-new-software/5301875",
-        "source": "Hacker News AI",
-        "score": 11
+        "score": 314
       }
     ],
     "news": [
@@ -174,18 +192,18 @@
         "source": "BBC World"
       },
       {
+        "title": "Breaking Bad actor RJ Mitte dies aged 34",
+        "url": "https://www.bbc.co.uk/news/articles/cmn045en7d88o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "South Africa's deputy police chief resigns after being charged with sexual offences",
         "url": "https://www.bbc.co.uk/news/articles/c8wy9d940pyko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Immigration agents search Congresswoman Ilhan Omar's home",
+        "title": "Immigration agents search congresswoman Ilhan Omar's home",
         "url": "https://www.bbc.co.uk/news/articles/cvp8glg97393o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Fridges in French supermarkets hit by cyber attack",
-        "url": "https://www.bbc.co.uk/news/articles/crq5nzxv9q4yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -265,6 +283,26 @@
     ],
     "gaming": [
       {
+        "title": "6 darkly funny Far Side comics starring the devil",
+        "url": "https://www.polygon.com/6-best-far-side-comics-about-the-devil-hell/",
+        "source": "Polygon"
+      },
+      {
+        "title": "One of 2026’s Goriest Horror Movies Is Dominating HBO Max",
+        "url": "https://www.polygon.com/evil-dead-burn-streaming-success-hbo-max-october-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "John Cena’s Latest Nostalgia-Fueled Action Movie Is a Hit on Apple TV",
+        "url": "https://www.polygon.com/john-cena-matchbox-movie-streaming-success-apple-tv-october-2026/",
+        "source": "Polygon"
+      },
+      {
+        "title": "All classes and unlock requirements in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-classes-unlock-secret/",
+        "source": "Polygon"
+      },
+      {
         "title": "New 90% Positive Steam Roguelike Is a Faithful PSP-Era Comeback",
         "url": "https://www.polygon.com/ratatan-switch-2-impressions/",
         "source": "Polygon"
@@ -277,26 +315,6 @@
       {
         "title": "Classic YA Survival Novel Officially Getting a Netflix Film Adaptation",
         "url": "https://www.polygon.com/hatchet-movie-adaptation-announced-netflix/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Netflix Reveals New Look at Greta Gerwig's 2027 Fantasy Film",
-        "url": "https://www.polygon.com/greta-gerwig-narnia-movie-magicians-nephw-netflix-poster-trailer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Avater: Seven Haven' Showrunners Officially Reinforce a Major Fan Theory",
-        "url": "https://www.polygon.com/avatar-seven-havens-creators-interview-map-theory/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Ben Affleck Names Justice League His Career ‘Low Point’",
-        "url": "https://www.polygon.com/ben-affleck-justice-league-negative-experience-batman-zack-snyder/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Final Fantasy Meets Dragon Quest in Square Enix’s Latest ’90s Remake",
-        "url": "https://www.polygon.com/romancing-saga-3-preview-nycc/",
         "source": "Polygon"
       }
     ],
