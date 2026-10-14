@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-14T01:39:47.862601",
-    "total_items": 58
+    "last_updated": "2026-10-14T07:12:56.431624",
+    "total_items": 65
   },
   "content": {
     "tech": [
       {
+        "title": "AOSP Source Releases Are So Late Developers Disassemble Libraries to Report Bugs",
+        "url": "https://github.com/android/ndk/issues/2260",
+        "source": "Hacker News",
+        "score": 68
+      },
+      {
+        "title": "Felix Rieseberg Homepage",
+        "url": "https://felixrieseberg.com/",
+        "source": "Hacker News",
+        "score": 141
+      },
+      {
         "title": "Gemini 4 Argon",
         "url": "https://deepmind.google/models/gemini/",
         "source": "Hacker News",
-        "score": 987
+        "score": 1215
       },
       {
-        "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
-        "url": "https://guitoro.com/",
+        "title": "Sound – Bartosz Ciechanowski (2022)",
+        "url": "https://ciechanow.ski/sound/",
         "source": "Hacker News",
-        "score": 264
+        "score": 81
       },
       {
         "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
         "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
         "source": "Hacker News",
-        "score": 435
+        "score": 624
       },
       {
-        "title": "Show HN: Pulse Local, a Mac budgeting app whose AI models run on your machine",
-        "url": "https://pulseos.finance",
+        "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
+        "url": "https://guitoro.com/",
         "source": "Hacker News",
-        "score": 47
+        "score": 394
       },
       {
         "title": "Redesigning source control at Anthropic",
         "url": "https://www.anthropic.com/engineering/redesigning-source-control",
         "source": "Hacker News",
-        "score": 546
+        "score": 712
       },
       {
-        "title": "Apple HomeView",
-        "url": "https://www.apple.com/apple-homeview/",
+        "title": "Grace Hopper Celebration Cancelled",
+        "url": "https://anitab.org/press-release",
         "source": "Hacker News",
-        "score": 664
+        "score": 128
       },
       {
         "title": "900-Page Pre-Pantone Guide to Color from 1692 (With Complete High-Res Scan)",
         "url": "https://www.openculture.com/2026/10/a-900-page-pre-pantone-guide-to-color-from-1692.html",
         "source": "Hacker News",
-        "score": 41
+        "score": 133
       },
       {
         "title": "Thunderbird for iOS",
         "url": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
         "source": "Hacker News",
-        "score": 340
-      },
-      {
-        "title": "11 year old unsoundness bugs found in Rust borrow checker",
-        "url": "https://github.com/rust-lang/rust/issues/164250",
-        "source": "Hacker News",
-        "score": 677
+        "score": 420
       },
       {
         "title": "Recreational Programming",
         "url": "https://www.cphiri.dev/presentations/recreational-programming",
         "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Firefox Enterprise",
-        "url": "https://www.firefox.com/en-US/enterprise/",
-        "source": "Hacker News",
-        "score": 646
-      },
-      {
-        "title": "AlphaNIST",
-        "url": "https://alpha-nist.github.io/",
-        "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "I posted to HN, and then my website was flooded with AI bot traffic",
-        "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
-        "source": "Hacker News",
-        "score": 248
+        "score": 146
       },
       {
         "title": "The United Kingdom generates less electricity per person than in the 1970s",
         "url": "https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak",
         "source": "Hacker News",
-        "score": 204
+        "score": 274
       },
       {
-        "title": "PostEra (YC W20) Is Hiring AI Researchers for Drug Discovery",
-        "url": "https://jobs.lever.co/postera/c7d50a36-db0a-4574-bfe4-8700b74a22c0",
+        "title": "I built a tool to track what AI leaders say and how their views change on video",
+        "url": "https://blumify.io/people",
         "source": "Hacker News",
-        "score": 1
+        "score": 78
+      },
+      {
+        "title": "Show HN: How random are you?",
+        "url": "https://lab.specr.net/rigged-draw/",
+        "source": "Hacker News",
+        "score": 134
+      },
+      {
+        "title": "Maybe a better way to track the release history of a Git repo",
+        "url": "https://blog.plover.com/prog/git/history-proposal.html",
+        "source": "Hacker News",
+        "score": 33
       }
     ],
     "ai": [
@@ -101,25 +101,37 @@
         "title": "Gemini 4 Argon",
         "url": "https://deepmind.google/models/gemini/",
         "source": "Hacker News AI",
-        "score": 987
-      },
-      {
-        "title": "Show HN: Pulse Local, a Mac budgeting app whose AI models run on your machine",
-        "url": "https://pulseos.finance",
-        "source": "Hacker News AI",
-        "score": 47
+        "score": 1215
       },
       {
         "title": "Redesigning source control at Anthropic",
         "url": "https://www.anthropic.com/engineering/redesigning-source-control",
         "source": "Hacker News AI",
-        "score": 546
+        "score": 712
       },
       {
-        "title": "I posted to HN, and then my website was flooded with AI bot traffic",
-        "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
+        "title": "I built a tool to track what AI leaders say and how their views change on video",
+        "url": "https://blumify.io/people",
         "source": "Hacker News AI",
-        "score": 248
+        "score": 78
+      },
+      {
+        "title": "Apple's new 'Switch to Safari' campaign details why you should ditch Chrome",
+        "url": "https://9to5mac.com/2026/10/12/apples-new-switch-to-safari-campaign-details-why-you-should-ditch-chrome/",
+        "source": "Hacker News AI",
+        "score": 252
+      },
+      {
+        "title": "OpenAI engineer arrested in bugging of executive conference room",
+        "url": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
+        "source": "Hacker News AI",
+        "score": 535
+      },
+      {
+        "title": "Show HN: Pulse Local, a Mac budgeting app whose AI models run on your machine",
+        "url": "https://pulseos.finance",
+        "source": "Hacker News AI",
+        "score": 101
       },
       {
         "title": "PostEra (YC W20) Is Hiring AI Researchers for Drug Discovery",
@@ -128,70 +140,68 @@
         "score": 1
       },
       {
-        "title": "OpenAI engineer arrested in bugging of executive conference room",
-        "url": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
+        "title": "AI is a tool and using it well takes skill",
+        "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
         "source": "Hacker News AI",
-        "score": 403
-      },
-      {
-        "title": "We turned EmbeddingGemma 2 into a speech-to-text model",
-        "url": "https://eg2.haku.sh/",
-        "source": "Hacker News AI",
-        "score": 397
-      },
-      {
-        "title": "Apple's new 'Switch to Safari' campaign details why you should ditch Chrome",
-        "url": "https://9to5mac.com/2026/10/12/apples-new-switch-to-safari-campaign-details-why-you-should-ditch-chrome/",
-        "source": "Hacker News AI",
-        "score": 185
-      },
-      {
-        "title": "Show HN: Parsimony – an open-source benchmark for how much code AI models add",
-        "url": "https://parsimony.lasu.dev/",
-        "source": "Hacker News AI",
-        "score": 48
-      },
-      {
-        "title": "Gemini 4 Argon for Robotics",
-        "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
-        "source": "Hacker News AI",
-        "score": 201
-      },
-      {
-        "title": "Character.ai has initiated voluntary Chapter 11 bankruptcy",
-        "url": "https://blog.character.ai/an-update-on-character-ai/",
-        "source": "Hacker News AI",
-        "score": 290
+        "score": 662
       },
       {
         "title": "How to engineer an AI harness for game development",
         "url": "https://kylekukshtel.com/ai-harness-engineering-game-development-claude-code",
         "source": "Hacker News AI",
-        "score": 132
+        "score": 146
       },
       {
-        "title": "AI is a tool and using it well takes skill",
-        "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
+        "title": "Show HN: Parsimony – an open-source benchmark for how much code AI models add",
+        "url": "https://parsimony.lasu.dev/",
         "source": "Hacker News AI",
-        "score": 649
+        "score": 65
       },
       {
-        "title": "U.S. Treasury Announces Record Enforcement Actions Against Bank of America",
-        "url": "https://home.treasury.gov/news/press-releases/sb0657",
+        "title": "Gemini 4 Argon for Robotics",
+        "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
         "source": "Hacker News AI",
-        "score": 12
+        "score": 210
       },
       {
-        "title": "Launch HN: Consus (YC F24) – LLM gateway for companies handling sensitive data",
-        "url": "https://news.ycombinator.com/item?id=50073471",
+        "title": "I posted to HN, and then my website was flooded with AI bot traffic",
+        "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
         "source": "Hacker News AI",
-        "score": 33
+        "score": 316
+      },
+      {
+        "title": "We turned EmbeddingGemma 2 into a speech-to-text model",
+        "url": "https://eg2.haku.sh/",
+        "source": "Hacker News AI",
+        "score": 411
+      },
+      {
+        "title": "Show HN: Use your OpenAI subscription to create audiobooks",
+        "url": "https://pdftomp3.com/connect-ai/",
+        "source": "Hacker News AI",
+        "score": 161
+      },
+      {
+        "title": "NetBSD may have found a new role: The AI-free FOSS OS",
+        "url": "https://www.theregister.com/os-platforms/2026/10/13/netbsd-may-have-found-a-new-role-the-ai-free-foss-os/5302818",
+        "source": "Hacker News AI",
+        "score": 6
       }
     ],
     "news": [
       {
         "title": "Pope diagnosed with lung cancer but had successful surgery, Vatican says",
         "url": "https://www.bbc.co.uk/news/articles/ck1wvd9dvv22o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Russian strikes hit key power plant in Kyiv, Zelensky says",
+        "url": "https://www.bbc.co.uk/news/articles/ck20r9qpw505o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Turkey police raid opposition TV station, halting live broadcasts",
+        "url": "https://www.bbc.co.uk/news/articles/crx23y3d970vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -213,20 +223,61 @@
         "title": "Missiles intercepted near Riyadh after Saudi coalition hits Yemen fuel depot",
         "url": "https://www.bbc.co.uk/news/articles/crx2d60y1py3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Ex-gang boss sentenced to 40 years for orchestrating Tupac Shakur's murder",
-        "url": "https://www.bbc.co.uk/news/articles/c60rln2jvv2zo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Trump ousts Kimberly Guilfoyle as US ambassador to Greece after corruption allegations",
-        "url": "https://www.bbc.co.uk/news/articles/cr5ynplvpg7lo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " Apple's HomeView advert is stressing people out ",
+        "url": "https://www.creativebloq.com/news/apples-homeview-advert-is-stressing-people-out",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This tiny portable SSD that transforms iPhone videography has $150 off ",
+        "url": "https://www.creativebloq.com/deals/this-tiny-portable-ssd-that-transforms-iphone-videography-has-usd150-off",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Dragon Quest's creator made a game with AI in 30 minutes, and it’s a bit of a wake-up call ",
+        "url": "https://www.creativebloq.com/news/dragon-quests-creator-made-a-game-with-ai-in-30-minutes-and-its-a-bit-of-a-wake-up-call",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Everyone's saying the same thing about Epic’s AI-first Disney game – and it's not good ",
+        "url": "https://www.creativebloq.com/news/everyones-saying-the-same-thing-about-epics-ai-first-disney-game-and-its-not-good",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Huion Kamvas Pad 12 review: a budget Android drawing tablet that gets the small things right ",
+        "url": "https://www.creativebloq.com/reviews/huion-kamvas-pad-12-review-a-budget-android-drawing-tablet-that-gets-the-small-things-right",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How Michelangelo’s handwriting became a Microsoft font ",
+        "url": "https://www.creativebloq.com/news/how-michelangelos-handwriting-became-its-own-microsoft-font",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " I tried those free AI-coded Adobe Creative Cloud clones, and they have some big problems ",
+        "url": "https://www.creativebloq.com/news/i-tried-those-free-ai-coded-adobe-creative-cloud-clones-and-they-have-some-big-problems",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
+      {
+        "title": "Gigantic prehistoric snake discovered in India may have been one of the largest ever",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261014001406.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "New knee arthritis treatment delivers lasting pain relief without surgery",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261013234801.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "AI reveals a hidden chemical shortcut that could turn CO2 into fuel",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261013015758.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "The secret to handling stress better may start at breakfast",
         "url": "https://www.sciencedaily.com/releases/2026/10/261012185023.htm",
@@ -238,32 +289,27 @@
         "source": "Science Daily"
       },
       {
-        "title": "Scientists uncover a hidden map of the brain with 539 distinct regions",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261012185011.htm",
+        "title": "AI can act exactly like a human, but we still don't think it's conscious",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261012185017.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists discover a surprising paradox in how our cells age",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261012185009.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists just gave the powerhouses of our cells a high-tech upgrade",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261012185008.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "This tiny jurassic predator helped pave the way for the human brain",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261012185005.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Physicists discover “astonishing” property of light that defies expectations",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261011211615.htm",
+        "title": "A planet 320 light-years away confirms what scientists long suspected",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261012185015.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
+      {
+        "title": "10 Sci-Fi Books You Need to Read Before You Die",
+        "url": "https://www.polygon.com/essential-sci-fi-books-you-need-to-read-at-least-once-in-your-life/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'VisionQuest' Officially Makes the MCU's Most Overlooked Show Essential Viewing",
+        "url": "https://www.polygon.com/visionquest-tommy-explainer-how-is-he-alive-agatha-all-along-spoilers/",
+        "source": "Polygon"
+      },
       {
         "title": "'VisionQuest' Just Officially Fixed a Huge Problem With MCU Canon",
         "url": "https://www.polygon.com/adamantium-marvel-mcu-visionquest/",
@@ -287,16 +333,6 @@
       {
         "title": "Resident Evil 4 Remake On Switch 2 Is Capcom’s First Disappointment This Year",
         "url": "https://www.polygon.com/resident-evil-4-remake-switch-2-impressions/",
-        "source": "Polygon"
-      },
-      {
-        "title": "63 Years Later, the Best 'Peanuts' Sally Line Is Still an Iconic Comic Strip Quote",
-        "url": "https://www.polygon.com/sally-brown-best-quotes-peanuts/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Dropout Announces New Scripted Series that Spoofs MTV",
-        "url": "https://www.polygon.com/dropout-mp3-new-series-announced-jeremy-culhane-paul-f-tompkins/",
         "source": "Polygon"
       }
     ],
