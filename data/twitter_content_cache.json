@@ -1,191 +1,160 @@
 {
   "metadata": {
-    "last_updated": "2026-10-14T18:21:34.491073",
-    "total_items": 64
+    "last_updated": "2026-10-14T22:05:50.853124",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "AI agents aren't 'going rogue.' Frontier labs are skipping security basics",
-        "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
+        "title": "Things to know when you get cancer – 2026 Edition",
+        "url": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/",
         "source": "Hacker News",
-        "score": 105
+        "score": 451
       },
       {
-        "title": "Better HTTP/1 connection reuse in Go 1.27",
-        "url": "https://go.dev/blog/http-connection-reuse",
+        "title": "OpenCode 2.0",
+        "url": "https://anoma.ly/notes/opencode-2-0/",
         "source": "Hacker News",
-        "score": 72
+        "score": 100
       },
       {
-        "title": "Submarine cable resilience",
-        "url": "https://blog.apnic.net/2026/10/14/submarine-cable-resilience/",
+        "title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
+        "url": "https://typesafe.ai/blog/jev-1-14",
         "source": "Hacker News",
-        "score": 76
+        "score": 57
       },
       {
-        "title": "Iosevka is an open-source, sans-serif and slab-serif monospace font",
-        "url": "https://typeof.net/Iosevka/",
+        "title": "Passkeys are not a trap",
+        "url": "https://scotthelme.co.uk/passkeys-are-not-a-trap/",
         "source": "Hacker News",
-        "score": 589
-      },
-      {
-        "title": "ICE Planning $100M 'Nightmare' Domestic Spy Program",
-        "url": "https://prospect.org/2026/10/14/ice-planning-nightmare-domestic-spy-program-ero-one/",
-        "source": "Hacker News",
-        "score": 218
-      },
-      {
-        "title": "Pg_vectorsearch: An index that is faster than pgvector's IVFFlat and HNSW",
-        "url": "https://github.com/timescale/pg_vectorsearch",
-        "source": "Hacker News",
-        "score": 150
+        "score": 344
       },
       {
         "title": "Do dentists know what they're doing?",
         "url": "https://mapwriting.substack.com/p/dentists",
         "source": "Hacker News",
-        "score": 30
+        "score": 236
       },
       {
-        "title": "Neckbeard – a DevOps/platform/SRE plugin for your agent",
-        "url": "https://github.com/bealesh/neckbeard",
+        "title": "Containment and monitoring failures are to blame for AI hacking reports: experts",
+        "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
         "source": "Hacker News",
-        "score": 5
+        "score": 778
       },
       {
-        "title": "LittleJS is 2D and 3D now",
-        "url": "https://frankforce.com/littlejs-is-2d-and-3d-now/",
+        "title": "Better HTTP/1 connection reuse in Go 1.27",
+        "url": "https://go.dev/blog/http-connection-reuse",
         "source": "Hacker News",
-        "score": 28
+        "score": 170
       },
       {
-        "title": "Show HN: Graphicle, a Rust port of Graphify with memory for coding agents",
-        "url": "https://github.com/graphicle-ai/graphicle",
+        "title": "Anthropic's Scion is heavily inspired by Mononoke",
+        "url": "https://sunshowers.io/posts/anthropic-mononoke/",
         "source": "Hacker News",
-        "score": 27
+        "score": 154
       },
       {
-        "title": "Amazon pushes up prices across the Internet",
-        "url": "https://www.not-ship.com/how-amazon-pushes-up-prices-all-across-the-internet/",
+        "title": "Fancy Curl Sites",
+        "url": "https://nytpu.com/gemlog/2026-03-18",
         "source": "Hacker News",
-        "score": 555
+        "score": 42
       },
       {
-        "title": "Google is silently linking your phone number across all signed-in accounts",
-        "url": "https://www.androidauthority.com/google-auto-phone-number-verification-android-3723117/",
+        "title": "Fire at Starlink site in Bulgaria after suspected sabotage in Poland",
+        "url": "https://dpa-international.com/politics/urn:newsml:dpa.com:20090101:261014-930-839530/",
+        "source": "Hacker News",
+        "score": 235
+      },
+      {
+        "title": "Show HN: Petal, open-source CoScreen/ScreenHero finally free",
+        "url": "https://petal.live/",
         "source": "Hacker News",
         "score": 81
       },
       {
-        "title": "Running Windows desktop tests from Linux with disposable VMs",
-        "url": "https://www.qawolf.com/blog/how-we-solved-windows-desktop-automation",
+        "title": "Iosevka is an open-source, sans-serif and slab-serif monospace font",
+        "url": "https://typeof.net/Iosevka/",
         "source": "Hacker News",
-        "score": 53
+        "score": 673
       },
       {
-        "title": "Linus Torvalds's first LLM-assisted patch series",
-        "url": "https://lwn.net/Articles/1100449/",
+        "title": "Yandex outage: data shows that instead of going dark, malicious bots moved",
+        "url": "https://blog.cloudflare.com/yandex-outage/",
         "source": "Hacker News",
-        "score": 64
+        "score": 131
       },
       {
-        "title": "Tesla's Robotaxis Blow Through School Zones, NHTSA Petition Alleges",
-        "url": "https://www.extremetech.com/cars/teslas-robotaxis-blow-through-school-zones-nhtsa-petition-alleges",
+        "title": "Marshall Islands Stick Chart",
+        "url": "https://en.wikipedia.org/wiki/Marshall_Islands_stick_chart",
         "source": "Hacker News",
-        "score": 33
+        "score": 19
+      },
+      {
+        "title": "Phloem: Git history grown like a slime mold",
+        "url": "https://phloem.stemdeck.app/",
+        "source": "Hacker News",
+        "score": 63
       }
     ],
     "ai": [
       {
-        "title": "AI agents aren't 'going rogue.' Frontier labs are skipping security basics",
+        "title": "Containment and monitoring failures are to blame for AI hacking reports: experts",
         "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
         "source": "Hacker News AI",
-        "score": 105
+        "score": 778
       },
       {
-        "title": "Linus Torvalds's first LLM-assisted patch series",
-        "url": "https://lwn.net/Articles/1100449/",
+        "title": "Anthropic's Scion is heavily inspired by Mononoke",
+        "url": "https://sunshowers.io/posts/anthropic-mononoke/",
         "source": "Hacker News AI",
-        "score": 64
+        "score": 154
       },
       {
-        "title": "US report details extent of 'devastating' dating-app scams",
-        "url": "https://www.theguardian.com/us-news/2026/oct/14/dating-app-scams-us-congress",
+        "title": "Banks are now trying to offload the AI data center debt they just underwrote",
+        "url": "https://startupfortune.com/banks-are-now-trying-to-offload-the-ai-data-center-debt-they-just-underwrote/",
         "source": "Hacker News AI",
-        "score": 26
+        "score": 218
       },
       {
-        "title": "Has AI Tells",
+        "title": "Has AI tells",
         "url": "https://theconsensus.dev/blog/2026/10/14/has-ai-tells.html?focus=1",
         "source": "Hacker News AI",
-        "score": 38
-      },
-      {
-        "title": "TV4 postpones show after AI agent erases edited material",
-        "url": "https://swedenherald.com/article/tv4-postpones-the-challenge-until-2027-after-technical-failure-erases-edited-footage",
-        "source": "Hacker News AI",
-        "score": 113
-      },
-      {
-        "title": "OpenAI claims employee sent secret device information to Apple",
-        "url": "https://www.ft.com/content/18b65495-9e2a-45d6-be85-7641442ab61a",
-        "source": "Hacker News AI",
-        "score": 12
+        "score": 55
       },
       {
         "title": "Show HN: I wrote an email app that accepts only one sender per inbox",
         "url": "https://clova.email/",
         "source": "Hacker News AI",
-        "score": 9
+        "score": 56
       },
       {
-        "title": "Why do LLM pelicans look like this?",
-        "url": "https://arcfu.com/post/the-emperor-pelican-has-no-clothes/",
+        "title": "TV4 postpones show after AI agent erases edited material",
+        "url": "https://swedenherald.com/article/tv4-postpones-the-challenge-until-2027-after-technical-failure-erases-edited-footage",
         "source": "Hacker News AI",
-        "score": 126
-      },
-      {
-        "title": "ASML's strong orders ease fears AI spending boom is running out of steam",
-        "url": "https://www.reuters.com/business/asml-forecasts-q4-sales-above-expectations-ai-chip-demand-2026-10-14/",
-        "source": "Hacker News AI",
-        "score": 147
+        "score": 136
       },
       {
         "title": "Gemini 4 Argon",
         "url": "https://deepmind.google/models/gemini/",
         "source": "Hacker News AI",
-        "score": 1419
+        "score": 1429
       },
       {
-        "title": "PostEra (YC W20) Is Hiring AI Researchers for Drug Discovery",
-        "url": "https://jobs.lever.co/postera/c7d50a36-db0a-4574-bfe4-8700b74a22c0",
+        "title": "I let an AI run my startup for a week",
+        "url": "https://daily.tinyprojects.dev/221",
         "source": "Hacker News AI",
-        "score": 1
-      },
-      {
-        "title": "I Deleted 168,000 Lines of Comments. My AI Agent Didn't Notice",
-        "url": "https://openstation.blog/2026/10/13/i-deleted-168000-lines-of-comments-my-ai-agent-didnt-notice/",
-        "source": "Hacker News AI",
-        "score": 29
-      },
-      {
-        "title": "OpenAI: Employee who left for Apple took files about unreleased device",
-        "url": "https://www.reuters.com/business/retail-consumer/openai-employee-who-left-apple-took-files-about-unreleased-device-openai-alleges-2026-10-14/",
-        "source": "Hacker News AI",
-        "score": 15
-      },
-      {
-        "title": "AI is a tool and using it well takes skill",
-        "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
-        "source": "Hacker News AI",
-        "score": 752
+        "score": 51
       }
     ],
     "news": [
       {
-        "title": "Starlink restrictions in Ukraine war linked to political situation, Zelensky aide says",
-        "url": "https://www.bbc.co.uk/news/articles/cm2d6e62p49do?at_medium=RSS&at_campaign=rss",
+        "title": "Musk says any limits on Ukraine's Starlink access down to US, not his firm",
+        "url": "https://www.bbc.co.uk/news/articles/c8wy9veedgygo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Student protesters attack government buildings in Tirana",
+        "url": "https://www.bbc.co.uk/news/articles/cq80zk5k2ep4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -206,11 +175,6 @@
       {
         "title": "Australia's first-ever Michelin stars go to 11 restaurants in one state",
         "url": "https://www.bbc.co.uk/news/articles/crje5we583qwo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Netflix to shed 1,000 jobs in steepest cuts since 2022",
-        "url": "https://www.bbc.co.uk/news/articles/c6zxj0gzk4x4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -295,7 +259,22 @@
     ],
     "gaming": [
       {
-        "title": "Xbox Officially Announces New Nano Controller",
+        "title": "2026 GOTY Contender Officially Sets Nintendo Switch 2 Release Date",
+        "url": "https://www.polygon.com/007-first-light-nintendo-switch-2-release-date-price-confirmed-preorder/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Total War Fans Blast New Remaster Over Bugs, AI Accusations",
+        "url": "https://www.polygon.com/total-war-shogun-2-complete-edition/",
+        "source": "Polygon"
+      },
+      {
+        "title": "GTA 6 Leaks, Epic's AI Woes, No Man's Sky Mobile and the Best AAA of the Year...",
+        "url": "https://www.polygon.com/video/gta-6-leaks-epic-s-ai-woes-no-man-s-sky-mobile-and-the-best-aaa-of-the-year/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Xbox Officially Announces New Xbox Nano Controller",
         "url": "https://www.polygon.com/xbox-nano-controller-portable-price-reveal/",
         "source": "Polygon"
       },
@@ -313,25 +292,20 @@
         "title": "Magic: The Gathering Is Officially Reprinting a Powerful $18 Card for the First Time in 20 Years",
         "url": "https://www.polygon.com/magic-the-gathering-soul-spike-secret-lair-reprint-reality-fracture/",
         "source": "Polygon"
-      },
-      {
-        "title": "'Yellowjackets' Season 4 Gets Grisly First Trailer",
-        "url": "https://www.polygon.com/yellowjackets-season-4-trailer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "PS Plus October 2026 Lineup Confirmed, Includes Newest Mafia Game",
-        "url": "https://www.polygon.com/ps-plus-game-catalog-october-2026-update/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Epic Brags That Its New 'Vibe Coded' Store Launcher Is Faster Than Steam",
-        "url": "https://www.polygon.com/epic-game-store-launcher-vibe-coded/",
-        "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "GitHub availability report: September 2026",
+        "url": "https://github.blog/news-insights/company-news/github-availability-report-september-2026/",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "From 2,500 requests to 24: Rebuilding star history without the stargazers",
+        "url": "https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "GitHub’s model for secret detection: Finding more secrets with less noise",
         "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/",
@@ -355,16 +329,6 @@
       {
         "title": "Secret protection must scale with software",
         "url": "https://github.blog/ai-and-ml/github-copilot/secret-protection-must-scale-with-software/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Building Git infrastructure for agent-scale development",
-        "url": "https://github.blog/engineering/architecture-optimization/building-git-infrastructure-for-agent-scale-development/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "ReviewBench: An open benchmark for AI code review",
-        "url": "https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/",
         "source": "GitHub Blog"
       }
     ]
