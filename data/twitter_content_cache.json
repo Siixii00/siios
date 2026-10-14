@@ -1,119 +1,125 @@
 {
   "metadata": {
-    "last_updated": "2026-10-13T22:36:43.587121",
-    "total_items": 65
+    "last_updated": "2026-10-14T01:39:47.862601",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "OpenAI engineer arrested in bugging of executive conference room",
-        "url": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
-        "source": "Hacker News",
-        "score": 199
-      },
-      {
         "title": "Gemini 4 Argon",
         "url": "https://deepmind.google/models/gemini/",
         "source": "Hacker News",
-        "score": 853
+        "score": 987
       },
       {
         "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
         "url": "https://guitoro.com/",
         "source": "Hacker News",
-        "score": 161
+        "score": 264
       },
       {
         "title": "Ledger confirms spy chip implant behind wallet crypto thefts",
         "url": "https://www.bleepingcomputer.com/news/security/ledger-confirms-hardware-wallet-spy-implant-behind-crypto-thefts/",
         "source": "Hacker News",
-        "score": 317
+        "score": 435
+      },
+      {
+        "title": "Show HN: Pulse Local, a Mac budgeting app whose AI models run on your machine",
+        "url": "https://pulseos.finance",
+        "source": "Hacker News",
+        "score": 47
       },
       {
         "title": "Redesigning source control at Anthropic",
         "url": "https://www.anthropic.com/engineering/redesigning-source-control",
         "source": "Hacker News",
-        "score": 433
+        "score": 546
       },
       {
         "title": "Apple HomeView",
         "url": "https://www.apple.com/apple-homeview/",
         "source": "Hacker News",
-        "score": 610
+        "score": 664
+      },
+      {
+        "title": "900-Page Pre-Pantone Guide to Color from 1692 (With Complete High-Res Scan)",
+        "url": "https://www.openculture.com/2026/10/a-900-page-pre-pantone-guide-to-color-from-1692.html",
+        "source": "Hacker News",
+        "score": 41
       },
       {
         "title": "Thunderbird for iOS",
         "url": "https://blog.thunderbird.net/2026/10/thunderbird-for-ios-a-first-look-at-the-native-iphone-email-app-in-development/",
         "source": "Hacker News",
-        "score": 287
+        "score": 340
       },
       {
         "title": "11 year old unsoundness bugs found in Rust borrow checker",
         "url": "https://github.com/rust-lang/rust/issues/164250",
         "source": "Hacker News",
-        "score": 637
+        "score": 677
       },
       {
-        "title": "PostEra (YC W20) Is Hiring AI Researchers for Drug Discovery",
-        "url": "https://jobs.lever.co/postera/c7d50a36-db0a-4574-bfe4-8700b74a22c0",
+        "title": "Recreational Programming",
+        "url": "https://www.cphiri.dev/presentations/recreational-programming",
         "source": "Hacker News",
-        "score": 1
-      },
-      {
-        "title": "I posted to HN, and then my website was flooded with AI bot traffic",
-        "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
-        "source": "Hacker News",
-        "score": 213
+        "score": 55
       },
       {
         "title": "Firefox Enterprise",
         "url": "https://www.firefox.com/en-US/enterprise/",
         "source": "Hacker News",
-        "score": 585
+        "score": 646
       },
       {
-        "title": "Apple's new 'Switch to Safari' campaign details why you should ditch Chrome",
-        "url": "https://9to5mac.com/2026/10/12/apples-new-switch-to-safari-campaign-details-why-you-should-ditch-chrome/",
+        "title": "AlphaNIST",
+        "url": "https://alpha-nist.github.io/",
         "source": "Hacker News",
-        "score": 146
+        "score": 39
+      },
+      {
+        "title": "I posted to HN, and then my website was flooded with AI bot traffic",
+        "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
+        "source": "Hacker News",
+        "score": 248
       },
       {
         "title": "The United Kingdom generates less electricity per person than in the 1970s",
         "url": "https://ourworldindata.org/data-insights/electricity-generation-per-person-in-the-united-kingdom-has-fallen-by-a-third-from-its-early-2000s-peak",
         "source": "Hacker News",
-        "score": 152
+        "score": 204
       },
       {
-        "title": "New Apple TV 4K",
-        "url": "https://www.apple.com/newsroom/2026/10/apple-unveils-the-new-apple-tv-4k/",
+        "title": "PostEra (YC W20) Is Hiring AI Researchers for Drug Discovery",
+        "url": "https://jobs.lever.co/postera/c7d50a36-db0a-4574-bfe4-8700b74a22c0",
         "source": "Hacker News",
-        "score": 255
-      },
-      {
-        "title": "We turned EmbeddingGemma 2 into a speech-to-text model",
-        "url": "https://eg2.haku.sh/",
-        "source": "Hacker News",
-        "score": 371
+        "score": 1
       }
     ],
     "ai": [
       {
-        "title": "OpenAI engineer arrested in bugging of executive conference room",
-        "url": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
-        "source": "Hacker News AI",
-        "score": 199
-      },
-      {
         "title": "Gemini 4 Argon",
         "url": "https://deepmind.google/models/gemini/",
         "source": "Hacker News AI",
-        "score": 853
+        "score": 987
+      },
+      {
+        "title": "Show HN: Pulse Local, a Mac budgeting app whose AI models run on your machine",
+        "url": "https://pulseos.finance",
+        "source": "Hacker News AI",
+        "score": 47
       },
       {
         "title": "Redesigning source control at Anthropic",
         "url": "https://www.anthropic.com/engineering/redesigning-source-control",
         "source": "Hacker News AI",
-        "score": 433
+        "score": 546
+      },
+      {
+        "title": "I posted to HN, and then my website was flooded with AI bot traffic",
+        "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
+        "source": "Hacker News AI",
+        "score": 248
       },
       {
         "title": "PostEra (YC W20) Is Hiring AI Researchers for Drug Discovery",
@@ -122,70 +128,64 @@
         "score": 1
       },
       {
-        "title": "I posted to HN, and then my website was flooded with AI bot traffic",
-        "url": "https://www.sammystraus.com/#i-posted-to-hn-and-then-my-website-was-flooded-with-ai-bot-traffic",
+        "title": "OpenAI engineer arrested in bugging of executive conference room",
+        "url": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
         "source": "Hacker News AI",
-        "score": 213
-      },
-      {
-        "title": "Apple's new 'Switch to Safari' campaign details why you should ditch Chrome",
-        "url": "https://9to5mac.com/2026/10/12/apples-new-switch-to-safari-campaign-details-why-you-should-ditch-chrome/",
-        "source": "Hacker News AI",
-        "score": 146
+        "score": 403
       },
       {
         "title": "We turned EmbeddingGemma 2 into a speech-to-text model",
         "url": "https://eg2.haku.sh/",
         "source": "Hacker News AI",
-        "score": 371
+        "score": 397
+      },
+      {
+        "title": "Apple's new 'Switch to Safari' campaign details why you should ditch Chrome",
+        "url": "https://9to5mac.com/2026/10/12/apples-new-switch-to-safari-campaign-details-why-you-should-ditch-chrome/",
+        "source": "Hacker News AI",
+        "score": 185
       },
       {
         "title": "Show HN: Parsimony – an open-source benchmark for how much code AI models add",
         "url": "https://parsimony.lasu.dev/",
         "source": "Hacker News AI",
-        "score": 21
+        "score": 48
       },
       {
         "title": "Gemini 4 Argon for Robotics",
         "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
         "source": "Hacker News AI",
-        "score": 164
-      },
-      {
-        "title": "How to engineer an AI harness for game development",
-        "url": "https://kylekukshtel.com/ai-harness-engineering-game-development-claude-code",
-        "source": "Hacker News AI",
-        "score": 108
+        "score": 201
       },
       {
         "title": "Character.ai has initiated voluntary Chapter 11 bankruptcy",
         "url": "https://blog.character.ai/an-update-on-character-ai/",
         "source": "Hacker News AI",
-        "score": 259
+        "score": 290
       },
       {
-        "title": "Launch HN: Consus (YC F24) – LLM gateway for companies handling sensitive data",
-        "url": "https://news.ycombinator.com/item?id=50073471",
+        "title": "How to engineer an AI harness for game development",
+        "url": "https://kylekukshtel.com/ai-harness-engineering-game-development-claude-code",
         "source": "Hacker News AI",
-        "score": 32
+        "score": 132
       },
       {
         "title": "AI is a tool and using it well takes skill",
         "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
         "source": "Hacker News AI",
-        "score": 637
+        "score": 649
       },
       {
-        "title": "Zero to Calc in Six Days: Inside XBOW's Chrome Full Chain",
-        "url": "https://xbow.com/labs/research/zero-to-calc-in-six-days-inside-xbow-chrome-full-chain",
+        "title": "U.S. Treasury Announces Record Enforcement Actions Against Bank of America",
+        "url": "https://home.treasury.gov/news/press-releases/sb0657",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 12
       },
       {
-        "title": "Show HN: Use your OpenAI subscription to create audiobooks",
-        "url": "https://pdftomp3.com/connect-ai/",
+        "title": "Launch HN: Consus (YC F24) – LLM gateway for companies handling sensitive data",
+        "url": "https://news.ycombinator.com/item?id=50073471",
         "source": "Hacker News AI",
-        "score": 157
+        "score": 33
       }
     ],
     "news": [
@@ -197,6 +197,11 @@
       {
         "title": "Saudi man charged with planting 'sophisticated' recording device in OpenAI office",
         "url": "https://www.bbc.co.uk/news/articles/cwg5jq4vlddzo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Germany puts Ukrainian on trial accused of blowing up Nord Stream pipelines",
+        "url": "https://www.bbc.co.uk/news/articles/cw99zpmnxzmjo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -215,53 +220,12 @@
         "source": "BBC World"
       },
       {
-        "title": "Cornell bans all fraternity parties over gang sex assault allegations",
-        "url": "https://www.bbc.co.uk/news/articles/cw8dzg094zd9o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Trump ousts Kimberly Guilfoyle as US ambassador to Greece after corruption allegations",
         "url": "https://www.bbc.co.uk/news/articles/cr5ynplvpg7lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " This tiny portable SSD that transforms iPhone videography has $150 off ",
-        "url": "https://www.creativebloq.com/deals/this-tiny-portable-ssd-that-transforms-iphone-videography-has-usd150-off",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Dragon Quest's creator made a game with AI in 30 minutes, and it’s a bit of a wake-up call ",
-        "url": "https://www.creativebloq.com/news/dragon-quests-creator-made-a-game-with-ai-in-30-minutes-and-its-a-bit-of-a-wake-up-call",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Everyone's saying the same thing about Epic’s AI-first Disney game – and it's not good ",
-        "url": "https://www.creativebloq.com/news/everyones-saying-the-same-thing-about-epics-ai-first-disney-game-and-its-not-good",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Huion Kamvas Pad 12 review: a budget Android drawing tablet that gets the small things right ",
-        "url": "https://www.creativebloq.com/reviews/huion-kamvas-pad-12-review-a-budget-android-drawing-tablet-that-gets-the-small-things-right",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How Michelangelo’s handwriting became a Microsoft font ",
-        "url": "https://www.creativebloq.com/news/how-michelangelos-handwriting-became-its-own-microsoft-font",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " I tried those free AI-coded Adobe Creative Cloud clones, and they have some big problems ",
-        "url": "https://www.creativebloq.com/news/i-tried-those-free-ai-coded-adobe-creative-cloud-clones-and-they-have-some-big-problems",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Castlevania: Belmont's Curse review: a gorgeous return that plays it safe ",
-        "url": "https://www.creativebloq.com/reviews/castlevania-belmonts-curse-review-a-new-adventure-with-a-new-generation-of-belmont-in-the-shadow-of-modern-metroidvanias",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "The secret to handling stress better may start at breakfast",
@@ -301,6 +265,21 @@
     ],
     "gaming": [
       {
+        "title": "'VisionQuest' Just Officially Fixed a Huge Problem With MCU Canon",
+        "url": "https://www.polygon.com/adamantium-marvel-mcu-visionquest/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Forgotten Square Enix RPGs That Deserve a Comeback",
+        "url": "https://www.polygon.com/forgotten-square-enix-rpgs/",
+        "source": "Polygon"
+      },
+      {
+        "title": "11 Magic: The Gathering Marvel Cards That Perfectly Capture Their Characters",
+        "url": "https://www.polygon.com/mtg-best-marvel-card-designs-magic-the-gathering-super-heroes/",
+        "source": "Polygon"
+      },
+      {
         "title": "New Xbox Labs Team Officially Announced",
         "url": "https://www.polygon.com/xbox-labs-asha-sharma-ai-vibe-coding/",
         "source": "Polygon"
@@ -318,21 +297,6 @@
       {
         "title": "Dropout Announces New Scripted Series that Spoofs MTV",
         "url": "https://www.polygon.com/dropout-mp3-new-series-announced-jeremy-culhane-paul-f-tompkins/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Netflix Releases Official First Trailer for Greta Gerwig's Narnia Movie",
-        "url": "https://www.polygon.com/narnia-the-magicians-nephew-trailer-greta-gerwig-netflix/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Xbox Is Experimenting with a Controversial Social Media Feature",
-        "url": "https://www.polygon.com/xbox-streak-feature-social-media-controversy/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Baywatch' Reboot Trailer Has All the Slo-Mo You Could Ever Want",
-        "url": "https://www.polygon.com/baywatch-reboot-trailer-fox-stephen-amell/",
         "source": "Polygon"
       }
     ],
