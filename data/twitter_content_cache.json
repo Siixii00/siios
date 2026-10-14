@@ -1,137 +1,161 @@
 {
   "metadata": {
-    "last_updated": "2026-10-14T13:23:24.584182",
-    "total_items": 61
+    "last_updated": "2026-10-14T18:21:34.491073",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
-        "title": "Iosevka is an open-source, sans-serif and slab-serif, monospace font",
+        "title": "AI agents aren't 'going rogue.' Frontier labs are skipping security basics",
+        "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
+        "source": "Hacker News",
+        "score": 105
+      },
+      {
+        "title": "Better HTTP/1 connection reuse in Go 1.27",
+        "url": "https://go.dev/blog/http-connection-reuse",
+        "source": "Hacker News",
+        "score": 72
+      },
+      {
+        "title": "Submarine cable resilience",
+        "url": "https://blog.apnic.net/2026/10/14/submarine-cable-resilience/",
+        "source": "Hacker News",
+        "score": 76
+      },
+      {
+        "title": "Iosevka is an open-source, sans-serif and slab-serif monospace font",
         "url": "https://typeof.net/Iosevka/",
         "source": "Hacker News",
-        "score": 283
+        "score": 589
+      },
+      {
+        "title": "ICE Planning $100M 'Nightmare' Domestic Spy Program",
+        "url": "https://prospect.org/2026/10/14/ice-planning-nightmare-domestic-spy-program-ero-one/",
+        "source": "Hacker News",
+        "score": 218
       },
       {
         "title": "Pg_vectorsearch: An index that is faster than pgvector's IVFFlat and HNSW",
         "url": "https://github.com/timescale/pg_vectorsearch",
         "source": "Hacker News",
-        "score": 43
+        "score": 150
       },
       {
-        "title": "Meta is meddling with Brazilian democracy",
-        "url": "https://paydayreport.com/meta-censors-over-1-080-pro-lula-accounts-during-brazilian-presidential-election/",
+        "title": "Do dentists know what they're doing?",
+        "url": "https://mapwriting.substack.com/p/dentists",
         "source": "Hacker News",
-        "score": 7
+        "score": 30
       },
       {
-        "title": "RIP Eric Binnion",
-        "url": "https://ma.tt/2026/10/rip-eric/",
+        "title": "Neckbeard – a DevOps/platform/SRE plugin for your agent",
+        "url": "https://github.com/bealesh/neckbeard",
         "source": "Hacker News",
-        "score": 7
+        "score": 5
       },
       {
-        "title": "Switzerland proposes banning profiling-based ads to minors",
-        "url": "https://www.admin.ch/en/newnsb/NMn5s24l8NjQ",
+        "title": "LittleJS is 2D and 3D now",
+        "url": "https://frankforce.com/littlejs-is-2d-and-3d-now/",
         "source": "Hacker News",
-        "score": 4
+        "score": 28
       },
       {
-        "title": "Pulsar at ESUG 2026 (new Smalltalk IDE)",
-        "url": "https://blog.lorenzano.eu/pulsar-at-esug-2026/",
+        "title": "Show HN: Graphicle, a Rust port of Graphify with memory for coding agents",
+        "url": "https://github.com/graphicle-ai/graphicle",
         "source": "Hacker News",
-        "score": 37
-      },
-      {
-        "title": "TV4 postpones show after AI agent erases edited material",
-        "url": "https://swedenherald.com/article/tv4-postpones-the-challenge-until-2027-after-technical-failure-erases-edited-footage",
-        "source": "Hacker News",
-        "score": 38
-      },
-      {
-        "title": "Sound – Bartosz Ciechanowski (2022)",
-        "url": "https://ciechanow.ski/sound/",
-        "source": "Hacker News",
-        "score": 171
-      },
-      {
-        "title": "The Aaronson Oracle",
-        "url": "https://aaronsonoracle.com/",
-        "source": "Hacker News",
-        "score": 14
+        "score": 27
       },
       {
         "title": "Amazon pushes up prices across the Internet",
         "url": "https://www.not-ship.com/how-amazon-pushes-up-prices-all-across-the-internet/",
         "source": "Hacker News",
-        "score": 177
+        "score": 555
       },
       {
-        "title": "Show HN: Guitoro, a virtual guitar you strum with your keyboard",
-        "url": "https://guitoro.com/",
+        "title": "Google is silently linking your phone number across all signed-in accounts",
+        "url": "https://www.androidauthority.com/google-auto-phone-number-verification-android-3723117/",
         "source": "Hacker News",
-        "score": 487
+        "score": 81
       },
       {
-        "title": "Show HN: A guided 3D Leonardo da Vinci museum, built in code",
-        "url": "https://museumofages.org/w/vinci",
+        "title": "Running Windows desktop tests from Linux with disposable VMs",
+        "url": "https://www.qawolf.com/blog/how-we-solved-windows-desktop-automation",
         "source": "Hacker News",
-        "score": 26
+        "score": 53
       },
       {
-        "title": "Same Job, Two Engines: InnoDB and Iceberg Internals",
-        "url": "https://marcpaul.io/logs/same-job-two-engines-innodb-and-iceberg-internals/",
+        "title": "Linus Torvalds's first LLM-assisted patch series",
+        "url": "https://lwn.net/Articles/1100449/",
         "source": "Hacker News",
-        "score": 35
+        "score": 64
       },
       {
-        "title": "900-Page Pre-Pantone Guide to Color from 1692 (With Complete High-Res Scan)",
-        "url": "https://www.openculture.com/2026/10/a-900-page-pre-pantone-guide-to-color-from-1692.html",
+        "title": "Tesla's Robotaxis Blow Through School Zones, NHTSA Petition Alleges",
+        "url": "https://www.extremetech.com/cars/teslas-robotaxis-blow-through-school-zones-nhtsa-petition-alleges",
         "source": "Hacker News",
-        "score": 197
-      },
-      {
-        "title": "AOSP Source Releases Are So Late Developers Disassemble Libraries to Report Bugs",
-        "url": "https://github.com/android/ndk/issues/2260",
-        "source": "Hacker News",
-        "score": 354
+        "score": 33
       }
     ],
     "ai": [
       {
+        "title": "AI agents aren't 'going rogue.' Frontier labs are skipping security basics",
+        "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
+        "source": "Hacker News AI",
+        "score": 105
+      },
+      {
+        "title": "Linus Torvalds's first LLM-assisted patch series",
+        "url": "https://lwn.net/Articles/1100449/",
+        "source": "Hacker News AI",
+        "score": 64
+      },
+      {
+        "title": "US report details extent of 'devastating' dating-app scams",
+        "url": "https://www.theguardian.com/us-news/2026/oct/14/dating-app-scams-us-congress",
+        "source": "Hacker News AI",
+        "score": 26
+      },
+      {
+        "title": "Has AI Tells",
+        "url": "https://theconsensus.dev/blog/2026/10/14/has-ai-tells.html?focus=1",
+        "source": "Hacker News AI",
+        "score": 38
+      },
+      {
         "title": "TV4 postpones show after AI agent erases edited material",
         "url": "https://swedenherald.com/article/tv4-postpones-the-challenge-until-2027-after-technical-failure-erases-edited-footage",
         "source": "Hacker News AI",
-        "score": 38
+        "score": 113
+      },
+      {
+        "title": "OpenAI claims employee sent secret device information to Apple",
+        "url": "https://www.ft.com/content/18b65495-9e2a-45d6-be85-7641442ab61a",
+        "source": "Hacker News AI",
+        "score": 12
+      },
+      {
+        "title": "Show HN: I wrote an email app that accepts only one sender per inbox",
+        "url": "https://clova.email/",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
+        "title": "Why do LLM pelicans look like this?",
+        "url": "https://arcfu.com/post/the-emperor-pelican-has-no-clothes/",
+        "source": "Hacker News AI",
+        "score": 126
+      },
+      {
+        "title": "ASML's strong orders ease fears AI spending boom is running out of steam",
+        "url": "https://www.reuters.com/business/asml-forecasts-q4-sales-above-expectations-ai-chip-demand-2026-10-14/",
+        "source": "Hacker News AI",
+        "score": 147
       },
       {
         "title": "Gemini 4 Argon",
         "url": "https://deepmind.google/models/gemini/",
         "source": "Hacker News AI",
-        "score": 1357
-      },
-      {
-        "title": "AI Laser Locking for Quantum Computers: How QuEra Automates It",
-        "url": "https://www.quera.com/blog-posts/holding-the-light-teaching-an-ai-to-lock-and-tune-our-quantum-computers-lasers",
-        "source": "Hacker News AI",
-        "score": 15
-      },
-      {
-        "title": "Redesigning source control at Anthropic",
-        "url": "https://www.anthropic.com/engineering/redesigning-source-control",
-        "source": "Hacker News AI",
-        "score": 817
-      },
-      {
-        "title": "AI is a tool and using it well takes skill",
-        "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
-        "source": "Hacker News AI",
-        "score": 727
-      },
-      {
-        "title": "Ask HN: Why do people say \"I built it\" when we should say \"Claude built it\"?",
-        "url": "https://news.ycombinator.com/item?id=50085114",
-        "source": "Hacker News AI",
-        "score": 19
+        "score": 1419
       },
       {
         "title": "PostEra (YC W20) Is Hiring AI Researchers for Drug Discovery",
@@ -140,39 +164,38 @@
         "score": 1
       },
       {
-        "title": "OpenAI engineer arrested in bugging of executive conference room",
-        "url": "https://sfstandard.com/2026/10/13/openai-engineer-arrested-alleged-bugging-executive-conference-room/",
+        "title": "I Deleted 168,000 Lines of Comments. My AI Agent Didn't Notice",
+        "url": "https://openstation.blog/2026/10/13/i-deleted-168000-lines-of-comments-my-ai-agent-didnt-notice/",
         "source": "Hacker News AI",
-        "score": 607
+        "score": 29
       },
       {
-        "title": "How to engineer an AI harness for game development",
-        "url": "https://kylekukshtel.com/ai-harness-engineering-game-development-claude-code",
+        "title": "OpenAI: Employee who left for Apple took files about unreleased device",
+        "url": "https://www.reuters.com/business/retail-consumer/openai-employee-who-left-apple-took-files-about-unreleased-device-openai-alleges-2026-10-14/",
         "source": "Hacker News AI",
-        "score": 158
+        "score": 15
       },
       {
-        "title": "Show HN: Parsimony – an open-source benchmark for how much code AI models add",
-        "url": "https://parsimony.lasu.dev/",
+        "title": "AI is a tool and using it well takes skill",
+        "url": "https://yyhh.org/blog/2026/10/ai-is-a-tool/",
         "source": "Hacker News AI",
-        "score": 71
-      },
-      {
-        "title": "Gemini 4 Argon for Robotics",
-        "url": "https://developers.googleblog.com/gemini-4-argon-for-robotics/",
-        "source": "Hacker News AI",
-        "score": 225
+        "score": 752
       }
     ],
     "news": [
       {
-        "title": "Starlink restrictions affecting Ukraine's front line operations, Kyiv says",
+        "title": "Starlink restrictions in Ukraine war linked to political situation, Zelensky aide says",
         "url": "https://www.bbc.co.uk/news/articles/cm2d6e62p49do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Pope diagnosed with lung cancer but had successful surgery, Vatican says",
-        "url": "https://www.bbc.co.uk/news/articles/ck1wvd9dvv22o?at_medium=RSS&at_campaign=rss",
+        "title": "Pope walking and recovering 'as expected' after surgery, doctors say",
+        "url": "https://www.bbc.co.uk/news/articles/cwx28r0zvm6lo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "US inflation rises more than expected - here's what is happening with prices",
+        "url": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -181,27 +204,27 @@
         "source": "BBC World"
       },
       {
-        "title": "Saudi employee charged with planting recording device in OpenAI office",
-        "url": "https://www.bbc.co.uk/news/articles/cwg5jq4vlddzo?at_medium=RSS&at_campaign=rss",
+        "title": "Australia's first-ever Michelin stars go to 11 restaurants in one state",
+        "url": "https://www.bbc.co.uk/news/articles/crje5we583qwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Turkish police raid opposition TV station, halting live broadcasts",
-        "url": "https://www.bbc.co.uk/news/articles/crx23y3d970vo?at_medium=RSS&at_campaign=rss",
+        "title": "Netflix to shed 1,000 jobs in steepest cuts since 2022",
+        "url": "https://www.bbc.co.uk/news/articles/c6zxj0gzk4x4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Mauritius reels from worst riots in decades after woman shot by police",
-        "url": "https://www.bbc.co.uk/news/articles/cm4g1rnj5qweo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "World's oldest shipwreck found off coast of Turkey",
-        "url": "https://www.bbc.co.uk/news/articles/c6gr80rk1yyko?at_medium=RSS&at_campaign=rss",
+        "title": "Kenya confirms second Ebola case - a relative of the first victim",
+        "url": "https://www.bbc.co.uk/news/articles/cw5yn8rn04ljo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " GTA 3’s original cover was axed after 9/11, and its artist disputes the story ",
+        "url": "https://www.creativebloq.com/news/gta-3s-original-cover-was-axed-after-9-11-and-its-artist-disputes-the-story",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Toy Story: Retro Roundup! + Toy Story 3 Complete Edition review: a wonderfully playful collection with a point to prove ",
         "url": "https://www.creativebloq.com/reviews/toy-story-retro-roundup-toy-story-3-complete-edition-review-why-you-need-to-buy-the-bundle",
@@ -230,11 +253,6 @@
       {
         "title": " This artist uses pencils and watercolours to capture whimsical fantasies inspired by the magic and wonder he found in books and nature as a child ",
         "url": "https://www.creativebloq.com/inspiration/this-artist-uses-pencils-and-watercolours-to-capture-whimsical-fantasies-inspired-by-the-magic-and-wonder-he-found-in-books-and-nature-as-a-child",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apple's chaotic HomeView advert is stressing people out ",
-        "url": "https://www.creativebloq.com/news/apples-homeview-advert-is-stressing-people-out",
         "source": "Creative Bloq"
       }
     ],
@@ -277,38 +295,38 @@
     ],
     "gaming": [
       {
-        "title": "The Legend of Zelda: Ocarina of Time Remake Preview",
-        "url": "https://www.polygon.com/legend-of-zelda-ocarina-of-time-remake-preview-switch-2/",
+        "title": "Xbox Officially Announces New Nano Controller",
+        "url": "https://www.polygon.com/xbox-nano-controller-portable-price-reveal/",
         "source": "Polygon"
       },
       {
-        "title": "Nintendo Switch Online Additions Include Perfectly Timed GBA Classics",
-        "url": "https://www.polygon.com/nintendo-switch-online-game-boy-advance-october-2026/",
+        "title": "Soulslikes Don't Work in First-Person — Yet",
+        "url": "https://www.polygon.com/valor-mortis-soulslike-first-person-pov/",
         "source": "Polygon"
       },
       {
-        "title": "10 Years Ago, PlayStation Almost Changed Gaming Forever",
-        "url": "https://www.polygon.com/playstation-vr-10-year-retrospective/",
+        "title": "‘Obsession’ Could Get a Sequel, and Its Breakout Star Is All In",
+        "url": "https://www.polygon.com/obsession-2-sequel-inde-navarrette-comments/",
         "source": "Polygon"
       },
       {
-        "title": "20 Years Ago, Lord of the Rings Paved the Way for New Zealand's Weirdest Zombie Movie",
-        "url": "https://www.polygon.com/the-lord-of-the-rings-black-sheep/",
+        "title": "Magic: The Gathering Is Officially Reprinting a Powerful $18 Card for the First Time in 20 Years",
+        "url": "https://www.polygon.com/magic-the-gathering-soul-spike-secret-lair-reprint-reality-fracture/",
         "source": "Polygon"
       },
       {
-        "title": "The Witcher 3 Remastered Switch 2 Patch Is Officially 'On the Way'",
-        "url": "https://www.polygon.com/the-witcher-3-remastered-nintendo-switch-2-patch-update/",
+        "title": "'Yellowjackets' Season 4 Gets Grisly First Trailer",
+        "url": "https://www.polygon.com/yellowjackets-season-4-trailer/",
         "source": "Polygon"
       },
       {
-        "title": "Netflix's One Piece Season 4 Could Be Coming Much Sooner than Expected",
-        "url": "https://www.polygon.com/netflixs-one-piece-season-4-release-2027/",
+        "title": "PS Plus October 2026 Lineup Confirmed, Includes Newest Mafia Game",
+        "url": "https://www.polygon.com/ps-plus-game-catalog-october-2026-update/",
         "source": "Polygon"
       },
       {
-        "title": "28 Years Ago, 'Buffy's Darkest Villain Got a Perfect Introduction",
-        "url": "https://www.polygon.com/buffy-the-vampire-slayer-season-3-episode-3-retrospective/",
+        "title": "Epic Brags That Its New 'Vibe Coded' Store Launcher Is Faster Than Steam",
+        "url": "https://www.polygon.com/epic-game-store-launcher-vibe-coded/",
         "source": "Polygon"
       }
     ],
