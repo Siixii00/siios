@@ -1859,6 +1859,18 @@ async function startGatewayConnection(env, ctx) {
         return Promise.resolve();
     }
 
+    // 若已有開啟的連線，先關閉以避免重複連線導致大量心跳請求
+    if (gatewayWs && gatewayWs.readyState === WebSocket.OPEN) {
+        try {
+            gatewayWs.close();
+        } catch (_) {}
+        gatewayWs = null;
+    }
+    // 清除可能存在的計時器
+    if (gatewayHeartbeatTimer) {
+        clearInterval(gatewayHeartbeatTimer);
+        gatewayHeartbeatTimer = null;
+    }
     if (gatewayReconnectTimer) {
         clearTimeout(gatewayReconnectTimer);
         gatewayReconnectTimer = null;
@@ -1913,12 +1925,12 @@ async function startGatewayConnection(env, ctx) {
                         break;
 
                     case 0: // Dispatch
-                        if (t === 'MESSAGE_CREATE') {
-                            handleMessage(d, env, ctx).catch(err => {
-                                console.error('Gateway handleMessage error:', err);
-                            });
-                        }
-                        break;
+                    if (t === 'MESSAGE_CREATE') {
+                        handleMessage(d, env, ctx).catch(err => {
+                            console.error('Gateway handleMessage error:', err);
+                        });
+                    }
+                    break;
 
                     case 7: // Reconnect
                         try { ws.close(1000); } catch (_) {}
