@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-15T01:16:01.906079",
-    "total_items": 54
+    "last_updated": "2026-10-15T07:04:40.517838",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "Things to know when you get cancer – 2026 Edition",
+        "title": "Things to know when you get cancer",
         "url": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/",
         "source": "Hacker News",
-        "score": 735
+        "score": 1173
       },
       {
         "title": "OpenCode 2.0",
         "url": "https://anoma.ly/notes/opencode-2-0/",
         "source": "Hacker News",
-        "score": 282
-      },
-      {
-        "title": "LFM2.5-24B-A2B: Built for fast on-device agents",
-        "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b",
-        "source": "Hacker News",
-        "score": 54
-      },
-      {
-        "title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
-        "url": "https://typesafe.ai/blog/jev-1-14",
-        "source": "Hacker News",
-        "score": 176
+        "score": 520
       },
       {
         "title": "Tiny Little Office",
         "url": "https://tinylittleoffice.com/",
         "source": "Hacker News",
-        "score": 123
+        "score": 328
       },
       {
-        "title": "Passkeys are not a trap",
-        "url": "https://scotthelme.co.uk/passkeys-are-not-a-trap/",
+        "title": "LFM2.5-24B-A2B: Built for fast on-device agents",
+        "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b",
         "source": "Hacker News",
-        "score": 471
+        "score": 167
       },
       {
         "title": "Do dentists know what they're doing?",
         "url": "https://mapwriting.substack.com/p/dentists",
         "source": "Hacker News",
-        "score": 396
+        "score": 612
+      },
+      {
+        "title": "Donaldson Futuro House in Idyllwild, California, USA",
+        "url": "https://www.wowhaus.co.uk/2026/10/12/donaldson-futuro-house-in-idyllwild-california-usa/",
+        "source": "Hacker News",
+        "score": 36
       },
       {
         "title": "Americans' social activity has steeply declined in the past 30 years",
         "url": "https://www.dataforprogress.org/blog/2026/9/29/americans-social-activity-has-steeply-declined-in-the-past-30-years",
         "source": "Hacker News",
-        "score": 207
+        "score": 347
+      },
+      {
+        "title": "Catch a Bird – I made it for my own sanity",
+        "url": "https://catchabird.com",
+        "source": "Hacker News",
+        "score": 109
+      },
+      {
+        "title": "The Double Headed Stack Allocator",
+        "url": "https://blog.demofox.org/2026/10/03/the-double-headed-stack-allocator/",
+        "source": "Hacker News",
+        "score": 51
+      },
+      {
+        "title": "Show HN: Flipflop, iroh-powered persistent tunnels for filesharing",
+        "url": "https://github.com/andunieee/flipflop",
+        "source": "Hacker News",
+        "score": 22
+      },
+      {
+        "title": "The Toftwood Male Voice Choir: A Mystery Pressed in Vinyl",
+        "url": "https://ei3lh.eu/2026/10/11/the-toftwood-male-voice-choir-a-mystery-pressed-in-vinyl/",
+        "source": "Hacker News",
+        "score": 22
+      },
+      {
+        "title": "It took me nine years to hack my Xbox 360",
+        "url": "https://kennedn.com/blog/posts/glitching/",
+        "source": "Hacker News",
+        "score": 59
       },
       {
         "title": "Better HTTP/1 connection reuse in Go 1.27",
         "url": "https://go.dev/blog/http-connection-reuse",
         "source": "Hacker News",
-        "score": 194
+        "score": 236
+      },
+      {
+        "title": "We’re releasing Jev 1.14.0 along with experimental features for dreamers",
+        "url": "https://typesafe.ai/blog/jev-1-14",
+        "source": "Hacker News",
+        "score": 267
       },
       {
         "title": "Containment and monitoring failures are to blame for AI hacking reports: experts",
         "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
         "source": "Hacker News",
-        "score": 833
-      },
-      {
-        "title": "Fancy Curl Sites",
-        "url": "https://nytpu.com/gemlog/2026-03-18",
-        "source": "Hacker News",
-        "score": 78
-      },
-      {
-        "title": "Ask HN: CAD for wood working with LLM support?",
-        "url": "https://news.ycombinator.com/item?id=50067325",
-        "source": "Hacker News",
-        "score": 21
-      },
-      {
-        "title": "your C is not standard C",
-        "url": "https://sebsite.pw/w/20261012-notstdc.html",
-        "source": "Hacker News",
-        "score": 15
-      },
-      {
-        "title": "Show HN: Petal, open-source CoScreen/ScreenHero finally free",
-        "url": "https://petal.live/",
-        "source": "Hacker News",
-        "score": 111
-      },
-      {
-        "title": "Anthropic's Scion is heavily inspired by Mononoke",
-        "url": "https://sunshowers.io/posts/anthropic-mononoke/",
-        "source": "Hacker News",
-        "score": 244
+        "score": 874
       }
     ],
     "ai": [
@@ -101,67 +101,49 @@
         "title": "Containment and monitoring failures are to blame for AI hacking reports: experts",
         "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
         "source": "Hacker News AI",
-        "score": 833
+        "score": 874
       },
       {
         "title": "Ask HN: CAD for wood working with LLM support?",
         "url": "https://news.ycombinator.com/item?id=50067325",
         "source": "Hacker News AI",
-        "score": 21
-      },
-      {
-        "title": "Anthropic's Scion is heavily inspired by Mononoke",
-        "url": "https://sunshowers.io/posts/anthropic-mononoke/",
-        "source": "Hacker News AI",
-        "score": 244
-      },
-      {
-        "title": "Banks are now trying to offload the AI data center debt they just underwrote",
-        "url": "https://startupfortune.com/banks-are-now-trying-to-offload-the-ai-data-center-debt-they-just-underwrote/",
-        "source": "Hacker News AI",
-        "score": 275
+        "score": 62
       },
       {
         "title": "Has AI tells",
         "url": "https://theconsensus.dev/blog/2026/10/14/has-ai-tells.html?focus=1",
         "source": "Hacker News AI",
-        "score": 74
+        "score": 112
+      },
+      {
+        "title": "Anthropic's Scion is heavily inspired by Mononoke",
+        "url": "https://sunshowers.io/posts/anthropic-mononoke/",
+        "source": "Hacker News AI",
+        "score": 350
       },
       {
         "title": "Show HN: I wrote an email app that accepts only one sender per inbox",
         "url": "https://clova.email/",
         "source": "Hacker News AI",
-        "score": 79
-      },
-      {
-        "title": "How I manage persistent Claude Code loops: Spool",
-        "url": "https://github.com/enes-alatas/spool",
-        "source": "Hacker News AI",
-        "score": 10
-      },
-      {
-        "title": "ICE Wants to Use AI to Monitor Detainee Calls and Movements",
-        "url": "https://www.washingtonsun.com/immigration/ice-ai-monitor-detainees",
-        "source": "Hacker News AI",
-        "score": 16
-      },
-      {
-        "title": "TV4 postpones show after AI agent erases edited material",
-        "url": "https://swedenherald.com/article/tv4-postpones-the-challenge-until-2027-after-technical-failure-erases-edited-footage",
-        "source": "Hacker News AI",
-        "score": 139
+        "score": 98
       },
       {
         "title": "Gemini 4 Argon",
         "url": "https://deepmind.google/models/gemini/",
         "source": "Hacker News AI",
-        "score": 1433
+        "score": 1446
       },
       {
-        "title": "Chaos ensues when AI interviewer meets AI interviewee",
-        "url": "https://www.theregister.com/offbeat/2026/10/14/chaos-ensues-when-ai-interviewer-meets-ai-interviewee/5303144",
+        "title": "TV4 postpones show after AI agent erases edited material",
+        "url": "https://swedenherald.com/article/tv4-postpones-the-challenge-until-2027-after-technical-failure-erases-edited-footage",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 145
+      },
+      {
+        "title": "How I manage persistent Claude Code loops: Spool",
+        "url": "https://github.com/enes-alatas/spool",
+        "source": "Hacker News AI",
+        "score": 18
       }
     ],
     "news": [
@@ -176,36 +158,87 @@
         "source": "BBC World"
       },
       {
-        "title": "Pope walking and recovering 'as expected' after surgery, doctors say",
-        "url": "https://www.bbc.co.uk/news/articles/cwx28r0zvm6lo?at_medium=RSS&at_campaign=rss",
+        "title": "Retired US generals call on Pentagon to cancel 'barbaric' execution livestream",
+        "url": "https://www.bbc.co.uk/news/articles/cmp3gnngv3e9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US inflation rises more than expected - here's what is happening with prices",
-        "url": "https://www.bbc.co.uk/news/articles/cwy8lx3pg4k2o?at_medium=RSS&at_campaign=rss",
+        "title": "White House defends new press secretary amid questions about her legal credentials",
+        "url": "https://www.bbc.co.uk/news/articles/ckqxne2evqreo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Germany puts Ukrainian on trial accused of blowing up Nord Stream pipelines",
-        "url": "https://www.bbc.co.uk/news/articles/cw99zpmnxzmjo?at_medium=RSS&at_campaign=rss",
+        "title": "'Nowhere to escape' - Indonesians share footage of orange haze blanketing towns",
+        "url": "https://www.bbc.co.uk/news/videos/c63dj4p4k5dlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Australia's first-ever Michelin stars go to 11 restaurants in one state",
-        "url": "https://www.bbc.co.uk/news/articles/crje5we583qwo?at_medium=RSS&at_campaign=rss",
+        "title": "Inside Brooklyn novelty shop at centre of 'surreal' row with Kelly Clarkson over mechanical bird",
+        "url": "https://www.bbc.co.uk/news/articles/cxvgdneplgzeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Kenya confirms second Ebola case - a relative of the first victim",
-        "url": "https://www.bbc.co.uk/news/articles/cw5yn8rn04ljo?at_medium=RSS&at_campaign=rss",
+        "title": "Sally Rooney books withdrawn in UK over Palestine Action support",
+        "url": "https://www.bbc.co.uk/news/articles/cmx23q4g307vo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " The $20,000 MrBeast logo auction isn't as ridiculous as it seems ",
+        "url": "https://www.creativebloq.com/news/the-usd20-000-mrbeast-logo-auction-isnt-as-ridiculous-as-it-seems",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Figma finally answers the question of what design feels like – using dance ",
+        "url": "https://www.creativebloq.com/news/figma-finally-answers-the-question-of-what-design-feels-like-using-dance",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " GTA 3’s original cover was axed after 9/11, and its artist disputes the story ",
+        "url": "https://www.creativebloq.com/news/gta-3s-original-cover-was-axed-after-9-11-and-its-artist-disputes-the-story",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Toy Story: Retro Roundup! + Toy Story 3 Complete Edition review: a wonderfully playful collection with a point to prove ",
+        "url": "https://www.creativebloq.com/reviews/toy-story-retro-roundup-toy-story-3-complete-edition-review-why-you-need-to-buy-the-bundle",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Xbox Labs will port games to Mac, run them in the browser and back modders ",
+        "url": "https://www.creativebloq.com/news/xbox-labs-will-port-games-to-mac-run-them-in-the-browser-and-back-modders",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " I’m shocked! The first Narnia: The Magician’s Nephew poster is winning me over to this controversial reboot ",
+        "url": "https://www.creativebloq.com/news/im-shocked-the-first-narnia-magicians-nephew-poster-is-winning-me-over-to-this-controversial-reboot",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " HomeView shows Apple still designs hardware better than anyone ",
+        "url": "https://www.creativebloq.com/news/homeview-shows-apple-still-designs-hardware-better-than-anyone",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
+      {
+        "title": "Ozempic and Wegovy linked to rare risk of sudden vision loss",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261014015521.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A forgotten fossil reveals a fearsome dinosaur with giant claws",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261014015457.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Gigantic prehistoric snake discovered in India may have been one of the largest ever",
         "url": "https://www.sciencedaily.com/releases/2026/10/261014001406.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "A 47-year study reveals the age when your body starts losing strength",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261014000912.htm",
         "source": "Science Daily"
       },
       {
@@ -219,60 +252,45 @@
         "source": "Science Daily"
       },
       {
-        "title": "The secret to easier exercise as an adult may start in childhood",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261013015811.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists reveal why some workout recovery tricks can backfire",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261013015805.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Cornell scientists identify rare human genetic disorder in two unusually long-legged cats",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261013015801.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover how harmful “zombie cells” hide from the immune system",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261013015800.htm",
+        "title": "Cancer is rising in younger adults, and scientists can't fully explain why",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261013015837.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
+        "title": "How to defeat Medusa in Castlevania Belmont's Curse",
+        "url": "https://www.polygon.com/castlevania-belmonts-curse-medusa-how-to-defeat-prophetess-location/",
+        "source": "Polygon"
+      },
+      {
+        "title": "How to kill enemies with a whip attack in Castlevania Belmont's Curse",
+        "url": "https://www.polygon.com/castlevania-belmonts-curse-whip-attack-how-to-work-of-mercy/",
+        "source": "Polygon"
+      },
+      {
+        "title": "How to get to the top of the Prison Tower in Castlevania Belmont's Curse",
+        "url": "https://www.polygon.com/castlevania-belmonts-curse-prison-tower-location-warrior-carpenters-crane/",
+        "source": "Polygon"
+      },
+      {
+        "title": "8 Best Science Fantasy Books of the 21st Century",
+        "url": "https://www.polygon.com/best-science-fantasy-books-21st-century/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'Garry’s Mod' Creator Issues Dire Update on Spiritual Sequel: ‘It Hasn’t Been Going Well’",
+        "url": "https://www.polygon.com/garrys-mod-creator-sbox-spiritual-sequel-dire-update/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The 10 Most Underrated RPGs of the Last Decade, Ranked",
+        "url": "https://www.polygon.com/best-rpgs-underrated-last-decade/",
+        "source": "Polygon"
+      },
+      {
         "title": "Xbox Considers Making Fallout, Elder Scrolls, and Minecraft Exclusive",
         "url": "https://www.polygon.com/xbox-exclusive-minecraft-fallout-elder-scrolls/",
-        "source": "Polygon"
-      },
-      {
-        "title": "2026 GOTY Contender Officially Sets Nintendo Switch 2 Release Date",
-        "url": "https://www.polygon.com/007-first-light-nintendo-switch-2-release-date-price-confirmed-preorder/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Total War Fans Blast New Remaster Over Bugs, AI Accusations",
-        "url": "https://www.polygon.com/total-war-shogun-2-complete-edition/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GTA 6 Leaks, Epic's AI Woes, No Man's Sky Mobile and the Best AAA of the Year...",
-        "url": "https://www.polygon.com/video/gta-6-leaks-epic-s-ai-woes-no-man-s-sky-mobile-and-the-best-aaa-of-the-year/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Xbox Officially Announces New Xbox Nano Controller",
-        "url": "https://www.polygon.com/xbox-nano-controller-portable-price-reveal/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Soulslikes Don't Work in First-Person — Yet",
-        "url": "https://www.polygon.com/valor-mortis-soulslike-first-person-pov/",
-        "source": "Polygon"
-      },
-      {
-        "title": "‘Obsession’ Could Get a Sequel, and Its Breakout Star Is All In",
-        "url": "https://www.polygon.com/obsession-2-sequel-inde-navarrette-comments/",
         "source": "Polygon"
       }
     ],
