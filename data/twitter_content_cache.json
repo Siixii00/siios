@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-15T18:03:50.535622",
-    "total_items": 56
+    "last_updated": "2026-10-15T21:59:00.259454",
+    "total_items": 55
   },
   "content": {
     "tech": [
@@ -9,132 +9,131 @@
         "title": "Muse Spark Open",
         "url": "https://research.meta.ai/blog/muse-spark-open",
         "source": "Hacker News",
-        "score": 48
+        "score": 495
       },
       {
-        "title": "Neural Networks Are Already Clean",
+        "title": "What I Self-Host",
+        "url": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
+        "source": "Hacker News",
+        "score": 63
+      },
+      {
+        "title": "Neural networks are clean",
         "url": "https://already-clean.goodfire.com/",
         "source": "Hacker News",
-        "score": 122
+        "score": 396
+      },
+      {
+        "title": "New Withings Users Must Pay $99/Year for Apple Health Syncing",
+        "url": "https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts",
+        "source": "Hacker News",
+        "score": 89
       },
       {
         "title": "Wayland desktop for Linux with skeuomorphic design",
         "url": "https://github.com/fyzugx/DEsk",
         "source": "Hacker News",
-        "score": 301
+        "score": 438
       },
       {
-        "title": "Krea 3 – Frontier Image Model 4× faster than Nano Banana Pro",
+        "title": "E Ink Kaleido 4",
+        "url": "https://www.eink.com/news/detail/EInk-Launches-Latest-Version-of-Color-ePaper-Platform-E-Ink-Kaleido-4",
+        "source": "Hacker News",
+        "score": 89
+      },
+      {
+        "title": "Krea 3 – An image model built for editing at scale",
         "url": "https://www.krea.ai/krea-3",
         "source": "Hacker News",
-        "score": 93
+        "score": 213
       },
       {
-        "title": "More on Anthropic's Scion ripping off Mononoke",
-        "url": "https://sunshowers.io/posts/anthropic-mononoke-2/",
+        "title": "AdFection: Targeted ads turned into a pipeline for zero-click mercenary spyware",
+        "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
         "source": "Hacker News",
-        "score": 62
+        "score": 330
       },
       {
-        "title": "I Know Why the Mathematicians Weep",
-        "url": "https://www.derekthompson.org/p/i-know-why-the-mathematicians-weep",
+        "title": "Someone on Torrent Sites Kept Fucking with My Sonarr",
+        "url": "https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup",
         "source": "Hacker News",
-        "score": 229
+        "score": 100
       },
       {
-        "title": "Libreboot 26.10 \"Ominous Olive\" released with UEFI, Chromebook support",
-        "url": "https://libreboot.org/news/libreboot2610.html",
+        "title": "Jev meets the Trolley Problem",
+        "url": "https://zachlandes.com/trolley-problem/",
         "source": "Hacker News",
-        "score": 187
+        "score": 200
       },
       {
         "title": "Celebrating 70 Years of Fortran",
         "url": "https://fortran-lang.org/news/2026/09-15-Fortran-birthday/",
         "source": "Hacker News",
-        "score": 102
+        "score": 187
       },
       {
-        "title": "Simons Foundation launches $15M effort to help mathematicians navigate AI era",
-        "url": "https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/",
+        "title": "Why I Wrote PGP (1991, revised 1999)",
+        "url": "https://philzimmermann.com/EN/essays/WhyIWrotePGP.html",
         "source": "Hacker News",
-        "score": 164
+        "score": 73
       },
       {
-        "title": "Zero-Click Spyware Delivered via Targeted Ads: AdFection",
-        "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
-        "source": "Hacker News",
-        "score": 194
-      },
-      {
-        "title": "Show HN: Unfenced – Land for sale that borders public land",
-        "url": "https://unfenced.land/",
-        "source": "Hacker News",
-        "score": 183
-      },
-      {
-        "title": "The technical actions needed to ensure the continuity of UTC",
-        "url": "https://www.bipm.org/en/cgpm-2026/resolution-5",
-        "source": "Hacker News",
-        "score": 38
-      },
-      {
-        "title": "Steam Client Is Now Faster Than Epic's New Vibe Coded Launcher",
-        "url": "https://respawnfirst.com/steam-client-is-now-faster-than-epics-new-vibe-coded-launcher/",
-        "source": "Hacker News",
-        "score": 144
-      },
-      {
-        "title": "Biscoff Cookies Were Supposed to Be Temporary. Then Passengers Fell in Love",
+        "title": "Delta’s Biscoff cookies were supposed to be temporary",
         "url": "https://www.seriouseats.com/biscoff-history-12168161",
         "source": "Hacker News",
-        "score": 52
+        "score": 139
       },
       {
-        "title": "Show HN: Proa – a Rust web framework with fast SSR and multi-target rendering",
-        "url": "https://proa.so/",
+        "title": "Libreboot 26.10 \"Ominous Olive\" released with UEFI, Chromebook support",
+        "url": "https://libreboot.org/news/libreboot2610.html",
         "source": "Hacker News",
-        "score": 27
+        "score": 235
+      },
+      {
+        "title": "The engineering that allows articulated buses to bend",
+        "url": "https://www.theautopian.com/you-wont-believe-the-incredible-engineering-that-allows-articulated-buses-to-bend/",
+        "source": "Hacker News",
+        "score": 46
       }
     ],
     "ai": [
       {
-        "title": "Neural Networks Are Already Clean",
+        "title": "Neural networks are clean",
         "url": "https://already-clean.goodfire.com/",
         "source": "Hacker News AI",
-        "score": 122
+        "score": 396
+      },
+      {
+        "title": "Using AI to reverse engineer hardware",
+        "url": "https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/",
+        "source": "Hacker News AI",
+        "score": 64
+      },
+      {
+        "title": "Simons Foundation launches $15M effort to help mathematicians navigate AI era",
+        "url": "https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/",
+        "source": "Hacker News AI",
+        "score": 206
       },
       {
         "title": "More on Anthropic's Scion ripping off Mononoke",
         "url": "https://sunshowers.io/posts/anthropic-mononoke-2/",
         "source": "Hacker News AI",
-        "score": 62
+        "score": 210
       },
       {
-        "title": "Simons Foundation launches $15M effort to help mathematicians navigate AI era",
-        "url": "https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/",
+        "title": "Frontier Pre-Training at Microsoft AI",
+        "url": "https://microsoft.ai/news/frontier-pre-training-at-microsoft-ai/",
         "source": "Hacker News AI",
-        "score": 164
-      },
-      {
-        "title": "Anthropic Update on Independent Evaluators",
-        "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
-        "source": "Hacker News AI",
-        "score": 11
-      },
-      {
-        "title": "Market selloff, rising rates test AI data centre deal boom",
-        "url": "https://www.reuters.com/business/finance/market-selloff-rising-rates-test-ai-data-centre-deal-boom-2026-10-15/",
-        "source": "Hacker News AI",
-        "score": 51
-      },
-      {
-        "title": "Show HN: BlastLoop, a structure-first coding method for AI agents",
-        "url": "https://github.com/rlshaw-ml/BlastLoop",
-        "source": "Hacker News AI",
-        "score": 6
+        "score": 27
       }
     ],
     "news": [
+      {
+        "title": "Bus hits train stopped on French side of  Channel Tunnel, with 19 injured   ",
+        "url": "https://www.bbc.co.uk/news/articles/c6wyrnmgzn01o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Trump calls off livestream of Fort Hood attacker's execution by firing squad",
         "url": "https://www.bbc.co.uk/news/articles/crx23qlnj27qo?at_medium=RSS&at_campaign=rss",
@@ -146,28 +145,23 @@
         "source": "BBC World"
       },
       {
+        "title": "Maduro pleads not guilty to new torture-related charges in New York",
+        "url": "https://www.bbc.co.uk/news/articles/cqwyrn1l74zro?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "At least 33 pupils and teacher killed after school roof collapses in Pakistan ",
         "url": "https://www.bbc.co.uk/news/articles/cked326llddgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Two dead in Istanbul after heaviest rainfall in 84 years, governor says",
-        "url": "https://www.bbc.co.uk/news/articles/cq398x7j1lrwo?at_medium=RSS&at_campaign=rss",
+        "title": "Houthi missile attack on Yemeni presidential palace kills two, minister says",
+        "url": "https://www.bbc.co.uk/news/articles/cm62y6lp73zdo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Seven crew missing after drone attack leaves tanker ablaze off Romania's coast",
-        "url": "https://www.bbc.co.uk/news/articles/c60qkgpp592yo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "White House defends new press secretary over her legal credentials",
-        "url": "https://www.bbc.co.uk/news/articles/ckqxne2evqreo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "School headscarf ban sparks rare protests in Azerbaijan and row with Turkey",
-        "url": "https://www.bbc.co.uk/news/articles/cwly0g2r4k3po?at_medium=RSS&at_campaign=rss",
+        "title": "Was Neanderthal life violent? This wound suggests lethal fighting was more common",
+        "url": "https://www.bbc.co.uk/news/articles/c6jrwn3y3xe9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -247,6 +241,31 @@
     ],
     "gaming": [
       {
+        "title": "The Mummy Officially Returns in 1 Year — Now With a New Cryptic Title",
+        "url": "https://www.polygon.com/the-mummy-4-release-date-title-revealed/",
+        "source": "Polygon"
+      },
+      {
+        "title": "How to unlock fast travel in Castlevania: Belmont's Curse",
+        "url": "https://www.polygon.com/castlevania-belmonts-curse-fast-travel/",
+        "source": "Polygon"
+      },
+      {
+        "title": "6 Fire Emblem Fortune's Weave Characters Who Need to Be in the Next Smash Bros Game",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-characters-next-smash-bros/",
+        "source": "Polygon"
+      },
+      {
+        "title": "2026's Bloodiest Game Just Got a Release Date",
+        "url": "https://www.polygon.com/acts-of-blood-steam-release-date-console-launch-announced/",
+        "source": "Polygon"
+      },
+      {
+        "title": "David Dastmalchian wants a Street Fighter Commander Deck! | Shelf Quest",
+        "url": "https://www.polygon.com/video/david-dastmalchian-wants-a-street-fighter-commander-deck-shelf-quest/",
+        "source": "Polygon"
+      },
+      {
         "title": "What time are the Fortnitemares power hours in Fortnite Chapter 7 Season 4?",
         "url": "https://www.polygon.com/fortnite-chapter-7-season-4-power-hours-what-time/",
         "source": "Polygon"
@@ -255,35 +274,20 @@
         "title": "The 9 Biggest RPG Jerk Companions, Ranked From Worst to Even Worse",
         "url": "https://www.polygon.com/best-jerk-rpg-companions/",
         "source": "Polygon"
-      },
-      {
-        "title": "Diablo 5 Officially Passes a Major Production Milestone",
-        "url": "https://www.polygon.com/diablo-5-blizzard-rpg-cinematic-shooting-begins/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Obsession 'Director’s Next Film Is 'Even Better' Than Last, Says Seth Rogen",
-        "url": "https://www.polygon.com/obsession-director-curry-barker-next-film-anything-but-ghosts/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Pokémon Center Trolls Fans With Worst 30th Anniversary TCG Drop Yet",
-        "url": "https://www.polygon.com/pokemon-center-drop-today-what-is-30th-anniversary-tcg-tins-error/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How to beat Sphinx, Devourer of the Unworthy, in Valor Mortis",
-        "url": "https://www.polygon.com/valor-mortis-sphinx-boss-how-to-beat/",
-        "source": "Polygon"
-      },
-      {
-        "title": "9 Fallout: New Vegas Challenge Runs That Make the Game Feel Brand New",
-        "url": "https://www.polygon.com/fallout-new-vegas-challenge-runs/",
-        "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "The next developer interface is ambient intelligence",
+        "url": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
+        "source": "GitHub Blog"
+      },
+      {
+        "title": "Staying Evergreen: How we automated secure access and repo hygiene in a shared org",
+        "url": "https://github.blog/engineering/platform-security/staying-evergreen-how-we-automated-secure-access-and-repo-hygiene-in-a-shared-org/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "GitHub availability report: September 2026",
         "url": "https://github.blog/news-insights/company-news/github-availability-report-september-2026/",
@@ -307,16 +311,6 @@
       {
         "title": "Hack the World: Why hackathons are still the best place to learn to build",
         "url": "https://github.blog/developer-skills/career-growth/hack-the-world-why-hackathons-are-still-the-best-place-to-learn-to-build/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "How one bug bounty researcher chooses the features they investigate",
-        "url": "https://github.blog/security/how-one-bug-bounty-researcher-chooses-the-features-they-investigate/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Secret protection must scale with software",
-        "url": "https://github.blog/ai-and-ml/github-copilot/secret-protection-must-scale-with-software/",
         "source": "GitHub Blog"
       }
     ]
