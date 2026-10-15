@@ -1,152 +1,145 @@
 {
   "metadata": {
-    "last_updated": "2026-10-15T13:08:46.286949",
-    "total_items": 57
+    "last_updated": "2026-10-15T18:03:50.535622",
+    "total_items": 56
   },
   "content": {
     "tech": [
       {
+        "title": "Muse Spark Open",
+        "url": "https://research.meta.ai/blog/muse-spark-open",
+        "source": "Hacker News",
+        "score": 48
+      },
+      {
+        "title": "Neural Networks Are Already Clean",
+        "url": "https://already-clean.goodfire.com/",
+        "source": "Hacker News",
+        "score": 122
+      },
+      {
+        "title": "Wayland desktop for Linux with skeuomorphic design",
+        "url": "https://github.com/fyzugx/DEsk",
+        "source": "Hacker News",
+        "score": 301
+      },
+      {
+        "title": "Krea 3 – Frontier Image Model 4× faster than Nano Banana Pro",
+        "url": "https://www.krea.ai/krea-3",
+        "source": "Hacker News",
+        "score": 93
+      },
+      {
+        "title": "More on Anthropic's Scion ripping off Mononoke",
+        "url": "https://sunshowers.io/posts/anthropic-mononoke-2/",
+        "source": "Hacker News",
+        "score": 62
+      },
+      {
+        "title": "I Know Why the Mathematicians Weep",
+        "url": "https://www.derekthompson.org/p/i-know-why-the-mathematicians-weep",
+        "source": "Hacker News",
+        "score": 229
+      },
+      {
         "title": "Libreboot 26.10 \"Ominous Olive\" released with UEFI, Chromebook support",
         "url": "https://libreboot.org/news/libreboot2610.html",
         "source": "Hacker News",
-        "score": 14
+        "score": 187
       },
       {
-        "title": "Things to know when you get cancer",
-        "url": "https://jjmaxwell4.com/writing/things-to-know-when-you-get-cancer/",
+        "title": "Celebrating 70 Years of Fortran",
+        "url": "https://fortran-lang.org/news/2026/09-15-Fortran-birthday/",
         "source": "Hacker News",
-        "score": 1594
+        "score": 102
+      },
+      {
+        "title": "Simons Foundation launches $15M effort to help mathematicians navigate AI era",
+        "url": "https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/",
+        "source": "Hacker News",
+        "score": 164
+      },
+      {
+        "title": "Zero-Click Spyware Delivered via Targeted Ads: AdFection",
+        "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+        "source": "Hacker News",
+        "score": 194
       },
       {
         "title": "Show HN: Unfenced – Land for sale that borders public land",
         "url": "https://unfenced.land/",
         "source": "Hacker News",
-        "score": 40
+        "score": 183
       },
       {
-        "title": "Wanted to download an ISO, ended up writing a kernel exploit",
-        "url": "https://blog.dfb.sh/blog/eap770-root-for-two-zeros/",
+        "title": "The technical actions needed to ensure the continuity of UTC",
+        "url": "https://www.bipm.org/en/cgpm-2026/resolution-5",
         "source": "Hacker News",
-        "score": 196
+        "score": 38
       },
       {
-        "title": "OpenCode 2.0",
-        "url": "https://anoma.ly/notes/opencode-2-0/",
+        "title": "Steam Client Is Now Faster Than Epic's New Vibe Coded Launcher",
+        "url": "https://respawnfirst.com/steam-client-is-now-faster-than-epics-new-vibe-coded-launcher/",
         "source": "Hacker News",
-        "score": 708
+        "score": 144
       },
       {
-        "title": "The First Social Network: In rural Argentina residents send messages w AM radio",
-        "url": "https://www.newyorker.com/magazine/2026/10/19/the-first-social-network",
+        "title": "Biscoff Cookies Were Supposed to Be Temporary. Then Passengers Fell in Love",
+        "url": "https://www.seriouseats.com/biscoff-history-12168161",
         "source": "Hacker News",
-        "score": 64
+        "score": 52
       },
       {
-        "title": "Tiny Little Office",
-        "url": "https://tinylittleoffice.com/",
+        "title": "Show HN: Proa – a Rust web framework with fast SSR and multi-target rendering",
+        "url": "https://proa.so/",
         "source": "Hacker News",
-        "score": 514
-      },
-      {
-        "title": "X purges 13,000 accounts linked to suspected meddling ahead of US midterms",
-        "url": "https://www.theregister.com/security/2026/10/15/x-purges-13000-accounts-linked-to-suspected-meddling-ahead-of-us-midterms/5303234",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Show HN: Indigene – Native plants for where you stand",
-        "url": "https://indigene.app/",
-        "source": "Hacker News",
-        "score": 60
-      },
-      {
-        "title": "Israeli firm's digital ads enabling installation of 'zero-click' spyware",
-        "url": "https://www.theguardian.com/technology/2026/oct/15/israeli-firm-digital-ads-enabling-installation-of-zero-click-spyware-researchers-say",
-        "source": "Hacker News",
-        "score": 10
-      },
-      {
-        "title": "Do dentists know what they're doing?",
-        "url": "https://mapwriting.substack.com/p/dentists",
-        "source": "Hacker News",
-        "score": 795
-      },
-      {
-        "title": "Catch a Bird – I made it for my own sanity",
-        "url": "https://catchabird.com",
-        "source": "Hacker News",
-        "score": 259
-      },
-      {
-        "title": "LFM2.5-24B-A2B: Built for fast on-device agents",
-        "url": "https://www.liquid.ai/blog/lfm2-5-24b-a2b",
-        "source": "Hacker News",
-        "score": 249
-      },
-      {
-        "title": "Americans' social activity has steeply declined in the past 30 years",
-        "url": "https://www.dataforprogress.org/blog/2026/9/29/americans-social-activity-has-steeply-declined-in-the-past-30-years",
-        "source": "Hacker News",
-        "score": 466
-      },
-      {
-        "title": "Ubuntu 26.10 (Stonking Stingray) released",
-        "url": "https://lists.ubuntu.com/archives/ubuntu-announce/2026-October/000330.html",
-        "source": "Hacker News",
-        "score": 20
+        "score": 27
       }
     ],
     "ai": [
       {
-        "title": "Ask HN: CAD for wood working with LLM support?",
-        "url": "https://news.ycombinator.com/item?id=50067325",
+        "title": "Neural Networks Are Already Clean",
+        "url": "https://already-clean.goodfire.com/",
         "source": "Hacker News AI",
-        "score": 95
+        "score": 122
       },
       {
-        "title": "Containment and monitoring failures are to blame for AI hacking reports: experts",
-        "url": "https://www.csoonline.com/article/4234854/ai-agents-arent-going-rogue-frontier-labs-are-skipping-security-basics.html",
+        "title": "More on Anthropic's Scion ripping off Mononoke",
+        "url": "https://sunshowers.io/posts/anthropic-mononoke-2/",
         "source": "Hacker News AI",
-        "score": 923
+        "score": 62
       },
       {
-        "title": "Aidlc: Adaptive workflow steering rules for AI coding agents",
-        "url": "https://github.com/awslabs/aidlc-workflows",
+        "title": "Simons Foundation launches $15M effort to help mathematicians navigate AI era",
+        "url": "https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/",
         "source": "Hacker News AI",
-        "score": 17
+        "score": 164
       },
       {
-        "title": "Has AI tells",
-        "url": "https://theconsensus.dev/blog/2026/10/14/has-ai-tells.html?focus=1",
+        "title": "Anthropic Update on Independent Evaluators",
+        "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
         "source": "Hacker News AI",
-        "score": 127
+        "score": 11
       },
       {
-        "title": "Anthropic's Scion is heavily inspired by Mononoke",
-        "url": "https://sunshowers.io/posts/anthropic-mononoke/",
+        "title": "Market selloff, rising rates test AI data centre deal boom",
+        "url": "https://www.reuters.com/business/finance/market-selloff-rising-rates-test-ai-data-centre-deal-boom-2026-10-15/",
         "source": "Hacker News AI",
-        "score": 383
+        "score": 51
       },
       {
-        "title": "Claude Code Desktop Vulnerability: Preview Pane Data Exfiltration",
-        "url": "https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data",
+        "title": "Show HN: BlastLoop, a structure-first coding method for AI agents",
+        "url": "https://github.com/rlshaw-ml/BlastLoop",
         "source": "Hacker News AI",
-        "score": 12
-      },
-      {
-        "title": "Show HN: I wrote an email app that accepts only one sender per inbox",
-        "url": "https://clova.email/",
-        "source": "Hacker News AI",
-        "score": 102
-      },
-      {
-        "title": "Gemini 4 Argon",
-        "url": "https://deepmind.google/models/gemini/",
-        "source": "Hacker News AI",
-        "score": 1451
+        "score": 6
       }
     ],
     "news": [
+      {
+        "title": "Trump calls off livestream of Fort Hood attacker's execution by firing squad",
+        "url": "https://www.bbc.co.uk/news/articles/crx23qlnj27qo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Russia accuses Ukraine of attacking oil refinery after Zelensky says strikes to resume",
         "url": "https://www.bbc.co.uk/news/articles/cqwyrnwd9dw1o?at_medium=RSS&at_campaign=rss",
@@ -163,60 +156,55 @@
         "source": "BBC World"
       },
       {
-        "title": "Eight crew missing after drone attack leaves tanker ablaze off Romania's coast",
+        "title": "Seven crew missing after drone attack leaves tanker ablaze off Romania's coast",
         "url": "https://www.bbc.co.uk/news/articles/c60qkgpp592yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "White House defends new press secretary amid questions about her legal credentials",
+        "title": "White House defends new press secretary over her legal credentials",
         "url": "https://www.bbc.co.uk/news/articles/ckqxne2evqreo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Brazil's Congress approves shorter working week in win for Lula",
-        "url": "https://www.bbc.co.uk/news/articles/cmwy43pp08elo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Obama says drift towards extremism 'not inevitable'",
-        "url": "https://www.bbc.co.uk/news/articles/crwyd7vq3xw1o?at_medium=RSS&at_campaign=rss",
+        "title": "School headscarf ban sparks rare protests in Azerbaijan and row with Turkey",
+        "url": "https://www.bbc.co.uk/news/articles/cwly0g2r4k3po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " With $150 off, this 27in 4K monitor just became a great buy for creative work at home ",
+        "url": "https://www.creativebloq.com/news/with-usd150-off-this-27in-4k-monitor-just-became-a-great-buy-for-creative-work-at-home",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The new GTA VI trailer looks too good to be real, but graphics aren't even its biggest achievement ",
+        "url": "https://www.creativebloq.com/news/the-new-gta-vi-trailer-looks-too-good-to-be-real-but-graphics-arent-its-biggest-achievement",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Cinema 4D finally gets one of the most-requested features in new 2027 release ",
+        "url": "https://www.creativebloq.com/news/cinema-4d-finally-gets-one-of-the-most-requested-features-in-new-2027-release",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " How Unreal Engine 5's Chaos physics was modified for this indie game about tearing down your hometown with a sledgehammer ",
+        "url": "https://www.creativebloq.com/features/how-unreal-5s-chaos-physics-was-modified-for-this-indie-game-about-tearing-down-your-hometown-with-a-sledgehammer",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Legend of Zelda: Ocarina of Time on Switch 2: 10 things the hands-on previews have told us ",
+        "url": "https://www.creativebloq.com/news/the-legend-of-zelda-ocarina-of-time-on-switch-2-10-things-the-hands-on-previews-have-told-us",
+        "source": "Creative Bloq"
+      },
       {
         "title": " People have a lot of big feelings about Aslan's character design ",
         "url": "https://www.creativebloq.com/news/people-have-a-lot-of-big-feelings-about-aslans-character-design",
         "source": "Creative Bloq"
       },
       {
-        "title": " I asked Nvidia Spark's AI agent to run Blender for me – here's what happened ",
+        "title": " I used Nvidia RTX Spark's AI agent to run Blender – here's what happened ",
         "url": "https://www.creativebloq.com/features/i-asked-nvidia-sparks-ai-agent-to-run-blender-for-me-heres-what-happened",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " NVIDIA RTX Spark: All creatives need to know ",
-        "url": "https://www.creativebloq.com/features/nvidia-rtx-spark-all-you-need-to-know-as-a-creative",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Resident Evil 2, 3 and 4 are great on Switch 2, but Capcom has missed a trick ",
-        "url": "https://www.creativebloq.com/features/resident-evil-2-3-and-4-are-great-on-switch-2-but-capcom-has-missed-a-trick",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " No amount of renaming can fix AI's growing reputation problem. ",
-        "url": "https://www.creativebloq.com/news/elon-musks-attempts-to-rebrand-ai-slop-are-hilarious-but-they-betray-a-deeper-truth",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This artist's epic pencil art has made him a rising star in indie comics ",
-        "url": "https://www.creativebloq.com/inspiration/this-artists-epic-pencil-art-has-made-him-a-rising-star-in-indie-comics",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The $20,000 MrBeast logo auction isn't as ridiculous as it seems ",
-        "url": "https://www.creativebloq.com/news/the-usd20-000-mrbeast-logo-auction-isnt-as-ridiculous-as-it-seems",
         "source": "Creative Bloq"
       }
     ],
@@ -259,33 +247,38 @@
     ],
     "gaming": [
       {
-        "title": "2023’s Best Shooter Gets a Killer Sequel — And You Can Play Right Now",
-        "url": "https://www.polygon.com/el-paso-elsewhere-2-preview/",
+        "title": "What time are the Fortnitemares power hours in Fortnite Chapter 7 Season 4?",
+        "url": "https://www.polygon.com/fortnite-chapter-7-season-4-power-hours-what-time/",
         "source": "Polygon"
       },
       {
-        "title": "Steam’s Best Way To Play New Games Officially Comes Back in 4 Days",
-        "url": "https://www.polygon.com/steam-next-fest-october-edition-fyi/",
+        "title": "The 9 Biggest RPG Jerk Companions, Ranked From Worst to Even Worse",
+        "url": "https://www.polygon.com/best-jerk-rpg-companions/",
         "source": "Polygon"
       },
       {
-        "title": "'Avatar' Seven Havens' Finally Fixes 'The Last Airbender's Biggest Mistake",
-        "url": "https://www.polygon.com/avatar-seven-havens-creators-interview-aang/",
+        "title": "Diablo 5 Officially Passes a Major Production Milestone",
+        "url": "https://www.polygon.com/diablo-5-blizzard-rpg-cinematic-shooting-begins/",
         "source": "Polygon"
       },
       {
-        "title": "Big Walk Is Skipping Xbox as Part of the Pro-Palestinian BDS Boycott",
-        "url": "https://www.polygon.com/big-walk-skipping-xbox-palestinian-bds-boycott/",
+        "title": "'Obsession 'Director’s Next Film Is 'Even Better' Than Last, Says Seth Rogen",
+        "url": "https://www.polygon.com/obsession-director-curry-barker-next-film-anything-but-ghosts/",
         "source": "Polygon"
       },
       {
-        "title": "Fire Emblem: Fortune’s Weave DLC Officially Fixes Its Most Controversial Change",
-        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-dlc-new-routes/",
+        "title": "Pokémon Center Trolls Fans With Worst 30th Anniversary TCG Drop Yet",
+        "url": "https://www.polygon.com/pokemon-center-drop-today-what-is-30th-anniversary-tcg-tins-error/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon Celebrates the Holidays Early with a Festive Merch Collection",
-        "url": "https://www.polygon.com/pokemon-seasonal-merch-holiday-2026/",
+        "title": "How to beat Sphinx, Devourer of the Unworthy, in Valor Mortis",
+        "url": "https://www.polygon.com/valor-mortis-sphinx-boss-how-to-beat/",
+        "source": "Polygon"
+      },
+      {
+        "title": "9 Fallout: New Vegas Challenge Runs That Make the Game Feel Brand New",
+        "url": "https://www.polygon.com/fallout-new-vegas-challenge-runs/",
         "source": "Polygon"
       }
     ],
