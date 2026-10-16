@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-15T21:59:00.259454",
-    "total_items": 55
+    "last_updated": "2026-10-16T00:15:48.378364",
+    "total_items": 57
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "Muse Spark Open",
         "url": "https://research.meta.ai/blog/muse-spark-open",
         "source": "Hacker News",
-        "score": 495
+        "score": 581
       },
       {
         "title": "What I Self-Host",
         "url": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
         "source": "Hacker News",
-        "score": 63
+        "score": 208
       },
       {
         "title": "Neural networks are clean",
         "url": "https://already-clean.goodfire.com/",
         "source": "Hacker News",
-        "score": 396
-      },
-      {
-        "title": "New Withings Users Must Pay $99/Year for Apple Health Syncing",
-        "url": "https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts",
-        "source": "Hacker News",
-        "score": 89
-      },
-      {
-        "title": "Wayland desktop for Linux with skeuomorphic design",
-        "url": "https://github.com/fyzugx/DEsk",
-        "source": "Hacker News",
-        "score": 438
-      },
-      {
-        "title": "E Ink Kaleido 4",
-        "url": "https://www.eink.com/news/detail/EInk-Launches-Latest-Version-of-Color-ePaper-Platform-E-Ink-Kaleido-4",
-        "source": "Hacker News",
-        "score": 89
-      },
-      {
-        "title": "Krea 3 – An image model built for editing at scale",
-        "url": "https://www.krea.ai/krea-3",
-        "source": "Hacker News",
-        "score": 213
-      },
-      {
-        "title": "AdFection: Targeted ads turned into a pipeline for zero-click mercenary spyware",
-        "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
-        "source": "Hacker News",
-        "score": 330
+        "score": 469
       },
       {
         "title": "Someone on Torrent Sites Kept Fucking with My Sonarr",
         "url": "https://thereallo.dev/blog/someone-on-torrent-sites-kept-fucking-with-my-sonarr-setup",
         "source": "Hacker News",
-        "score": 100
+        "score": 196
+      },
+      {
+        "title": "Wayland desktop for Linux with skeuomorphic design",
+        "url": "https://github.com/fyzugx/DEsk",
+        "source": "Hacker News",
+        "score": 476
       },
       {
         "title": "Jev meets the Trolley Problem",
         "url": "https://zachlandes.com/trolley-problem/",
         "source": "Hacker News",
-        "score": 200
+        "score": 266
+      },
+      {
+        "title": "AdFection: Targeted ads turned into a pipeline for zero-click mercenary spyware",
+        "url": "https://citizenlab.ca/research/how-discover-tech-turned-targeted-ads-into-a-pipeline-for-spyware/",
+        "source": "Hacker News",
+        "score": 374
+      },
+      {
+        "title": "New Withings Users Must Pay $99/Year for Apple Health Syncing",
+        "url": "https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts",
+        "source": "Hacker News",
+        "score": 142
+      },
+      {
+        "title": "Krea 3 – An image model built for editing at scale",
+        "url": "https://www.krea.ai/krea-3",
+        "source": "Hacker News",
+        "score": 232
+      },
+      {
+        "title": "The 8-mile hole in a Hawaii national park that no one can explain",
+        "url": "https://www.sfgate.com/national-parks/article/hawaii-volcanoes-park-great-crack-22358849.php",
+        "source": "Hacker News",
+        "score": 33
       },
       {
         "title": "Celebrating 70 Years of Fortran",
         "url": "https://fortran-lang.org/news/2026/09-15-Fortran-birthday/",
         "source": "Hacker News",
-        "score": 187
+        "score": 207
+      },
+      {
+        "title": "E Ink Kaleido 4",
+        "url": "https://www.eink.com/news/detail/EInk-Launches-Latest-Version-of-Color-ePaper-Platform-E-Ink-Kaleido-4",
+        "source": "Hacker News",
+        "score": 117
+      },
+      {
+        "title": "Major ICQ security hole (1998)",
+        "url": "https://opennet.ru/base/maillist/169.txt.html",
+        "source": "Hacker News",
+        "score": 21
       },
       {
         "title": "Why I Wrote PGP (1991, revised 1999)",
         "url": "https://philzimmermann.com/EN/essays/WhyIWrotePGP.html",
         "source": "Hacker News",
-        "score": 73
+        "score": 99
       },
       {
         "title": "Delta’s Biscoff cookies were supposed to be temporary",
         "url": "https://www.seriouseats.com/biscoff-history-12168161",
         "source": "Hacker News",
-        "score": 139
-      },
-      {
-        "title": "Libreboot 26.10 \"Ominous Olive\" released with UEFI, Chromebook support",
-        "url": "https://libreboot.org/news/libreboot2610.html",
-        "source": "Hacker News",
-        "score": 235
-      },
-      {
-        "title": "The engineering that allows articulated buses to bend",
-        "url": "https://www.theautopian.com/you-wont-believe-the-incredible-engineering-that-allows-articulated-buses-to-bend/",
-        "source": "Hacker News",
-        "score": 46
+        "score": 171
       }
     ],
     "ai": [
@@ -101,39 +101,46 @@
         "title": "Neural networks are clean",
         "url": "https://already-clean.goodfire.com/",
         "source": "Hacker News AI",
-        "score": 396
+        "score": 469
+      },
+      {
+        "title": "The 8-mile hole in a Hawaii national park that no one can explain",
+        "url": "https://www.sfgate.com/national-parks/article/hawaii-volcanoes-park-great-crack-22358849.php",
+        "source": "Hacker News AI",
+        "score": 33
+      },
+      {
+        "title": "BeBox is a Haiku application that emulates Be Inc.'s BeBox",
+        "url": "https://github.com/johnrash/bebox",
+        "source": "Hacker News AI",
+        "score": 6
       },
       {
         "title": "Using AI to reverse engineer hardware",
         "url": "https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/",
         "source": "Hacker News AI",
-        "score": 64
+        "score": 92
       },
       {
         "title": "Simons Foundation launches $15M effort to help mathematicians navigate AI era",
         "url": "https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/",
         "source": "Hacker News AI",
-        "score": 206
+        "score": 224
       },
       {
         "title": "More on Anthropic's Scion ripping off Mononoke",
         "url": "https://sunshowers.io/posts/anthropic-mononoke-2/",
         "source": "Hacker News AI",
-        "score": 210
+        "score": 216
       },
       {
         "title": "Frontier Pre-Training at Microsoft AI",
         "url": "https://microsoft.ai/news/frontier-pre-training-at-microsoft-ai/",
         "source": "Hacker News AI",
-        "score": 27
+        "score": 31
       }
     ],
     "news": [
-      {
-        "title": "Bus hits train stopped on French side of  Channel Tunnel, with 19 injured   ",
-        "url": "https://www.bbc.co.uk/news/articles/c6wyrnmgzn01o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
       {
         "title": "Trump calls off livestream of Fort Hood attacker's execution by firing squad",
         "url": "https://www.bbc.co.uk/news/articles/crx23qlnj27qo?at_medium=RSS&at_campaign=rss",
@@ -142,6 +149,11 @@
       {
         "title": "Russia accuses Ukraine of attacking oil refinery after Zelensky says strikes to resume",
         "url": "https://www.bbc.co.uk/news/articles/cqwyrnwd9dw1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Bus hits train stopped on French side of Channel Tunnel, with 19 injured   ",
+        "url": "https://www.bbc.co.uk/news/articles/c6wyrnmgzn01o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -155,13 +167,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Houthi missile attack on Yemeni presidential palace kills two, minister says",
-        "url": "https://www.bbc.co.uk/news/articles/cm62y6lp73zdo?at_medium=RSS&at_campaign=rss",
+        "title": "Was Neanderthal life violent? This wound suggests lethal fighting was more common",
+        "url": "https://www.bbc.co.uk/news/articles/c6jrwn3y3xe9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Was Neanderthal life violent? This wound suggests lethal fighting was more common",
-        "url": "https://www.bbc.co.uk/news/articles/c6jrwn3y3xe9o?at_medium=RSS&at_campaign=rss",
+        "title": "Tip-off foiled US teen suspect's plot to attack Hindu temple, police say",
+        "url": "https://www.bbc.co.uk/news/articles/cqgm0j4kjvevo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
