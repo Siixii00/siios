@@ -1,155 +1,197 @@
 {
   "metadata": {
-    "last_updated": "2026-10-16T15:16:20.044630",
-    "total_items": 57
+    "last_updated": "2026-10-16T19:23:46.443940",
+    "total_items": 64
   },
   "content": {
     "tech": [
       {
-        "title": "Hello Toronto – Waymo Is En Route",
-        "url": "https://waymo.com/blog/2026/10/waymo-in-toronto/",
+        "title": "Claude reveals ECDSA curve origins",
+        "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
         "source": "Hacker News",
-        "score": 54
+        "score": 102
       },
       {
-        "title": "I Love Software Rendering",
-        "url": "https://www.jamesfmackenzie.com/2026/10/13/i-love-software-rendering/",
+        "title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
+        "url": "https://www.arrl.org/arrlletterissue?issue=2026-10-15#eBay-Restricts-Listings-of-Radio-Equipment_-But-Exempts-Ham-Band-Only-Gear",
         "source": "Hacker News",
-        "score": 141
+        "score": 67
       },
       {
-        "title": "Big Fish: Exploiting a 37-Year-Old Kernel Bug in OpenBSD",
-        "url": "https://calif.io/research/big-fish",
+        "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
+        "url": "https://github.com/cobanov/PS5LM",
         "source": "Hacker News",
-        "score": 24
+        "score": 36
       },
       {
-        "title": "Redesigning Source Control at Anthropic",
-        "url": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/",
+        "title": "JPEG XL vs. AVIF for web use-cases",
+        "url": "https://jakearchibald.com/2026/jpeg-xl-vs-avif/",
         "source": "Hacker News",
-        "score": 19
+        "score": 109
       },
       {
-        "title": "Gyroscopes Got So Small [video]",
-        "url": "https://www.youtube.com/watch?v=0Zc_6xB5W3Y",
+        "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
+        "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
         "source": "Hacker News",
-        "score": 31
+        "score": 217
+      },
+      {
+        "title": "Claude writes about 90% of Claude Code's code",
+        "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+        "source": "Hacker News",
+        "score": 10
       },
       {
         "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
         "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
         "source": "Hacker News",
-        "score": 20
+        "score": 203
       },
       {
-        "title": "Is Liquid Metal Killing Our PCs? Scientific Analysis and a 2-Year Test [video]",
-        "url": "https://www.youtube.com/watch?v=eF6bMSjPepM",
+        "title": "Designing more efficient quantum circuits with Claude",
+        "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
         "source": "Hacker News",
+        "score": 29
+      },
+      {
+        "title": "Piramidal (YC W24) Is Hiring",
+        "url": "https://job-boards.greenhouse.io/piramidalinc/jobs/4443102009",
+        "source": "Hacker News",
+        "score": 1
+      },
+      {
+        "title": "Show HN: Gemini 4 Argon plays StarCraft",
+        "url": "https://starskirmish.com/bench/v0-2/",
+        "source": "Hacker News",
+        "score": 139
+      },
+      {
+        "title": "Big Fish: Exploiting a 37-Year-Old Kernel Bug in OpenBSD",
+        "url": "https://calif.io/research/big-fish",
+        "source": "Hacker News",
+        "score": 130
+      },
+      {
+        "title": "What on Earth Is Dekton?",
+        "url": "https://www.worksinprogress.news/p/porcelain",
+        "source": "Hacker News",
+        "score": 96
+      },
+      {
+        "title": "/dev/null: social network for developers",
+        "url": "https://dev-null.sh",
+        "source": "Hacker News",
+        "score": 49
+      },
+      {
+        "title": "Stolen Renoir paintings found hidden, and damaged, behind cinder block wall",
+        "url": "https://www.cbsnews.com/news/stolen-renoir-paintings-found-behind-wall-france/",
+        "source": "Hacker News",
+        "score": 77
+      },
+      {
+        "title": "I Love Software Rendering",
+        "url": "https://www.jamesfmackenzie.com/2026/10/13/i-love-software-rendering/",
+        "source": "Hacker News",
+        "score": 244
+      }
+    ],
+    "ai": [
+      {
+        "title": "Claude reveals ECDSA curve origins",
+        "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+        "source": "Hacker News AI",
+        "score": 102
+      },
+      {
+        "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
+        "url": "https://github.com/cobanov/PS5LM",
+        "source": "Hacker News AI",
+        "score": 36
+      },
+      {
+        "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
+        "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
+        "source": "Hacker News AI",
+        "score": 217
+      },
+      {
+        "title": "Claude writes about 90% of Claude Code's code",
+        "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+        "source": "Hacker News AI",
+        "score": 10
+      },
+      {
+        "title": "Designing more efficient quantum circuits with Claude",
+        "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
+        "source": "Hacker News AI",
         "score": 29
       },
       {
         "title": "Show HN: Gemini 4 Argon plays StarCraft",
         "url": "https://starskirmish.com/bench/v0-2/",
-        "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "Yet another way to invoke functions without parentheses",
-        "url": "https://blog.ikaes.de/yet-another-way-to-invoke-functions-without-parentheses/",
-        "source": "Hacker News",
-        "score": 186
-      },
-      {
-        "title": "How to Formalize All of Mathematics",
-        "url": "https://xenaproject.wordpress.com/2026/10/16/how-to-formalize-all-of-mathematics/",
-        "source": "Hacker News",
-        "score": 12
-      },
-      {
-        "title": "Woman who rescued injured crow keeps getting 'thank-you gifts' from birds [video]",
-        "url": "https://www.youtube.com/watch?v=sjNpfz4UzqU",
-        "source": "Hacker News",
-        "score": 633
-      },
-      {
-        "title": "RFC8950: Announce IPv4 with an IPv6 next-hop",
-        "url": "https://anuragbhatia.com/post/2026/06/rfc8950-announce-ipv4-with-ipv6-next-hop/",
-        "source": "Hacker News",
-        "score": 13
-      },
-      {
-        "title": "The Economic Complexity of the Western Roman Empire",
-        "url": "https://www.michelecoscia.com/?p=2613",
-        "source": "Hacker News",
-        "score": 101
-      },
-      {
-        "title": "Meta’s new commercial terms will allow the scraping of news sites: experts",
-        "url": "https://www.niemanlab.org/2026/10/metas-new-commercial-terms-will-allow-the-scraping-of-news-sites-legal-experts-say/",
-        "source": "Hacker News",
-        "score": 416
-      },
-      {
-        "title": "Muse Spark Open",
-        "url": "https://research.meta.ai/blog/muse-spark-open",
-        "source": "Hacker News",
-        "score": 881
-      }
-    ],
-    "ai": [
-      {
-        "title": "Redesigning Source Control at Anthropic",
-        "url": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/",
         "source": "Hacker News AI",
-        "score": 19
+        "score": 139
       },
       {
-        "title": "Show HN: Gemini 4 Argon plays StarCraft",
-        "url": "https://starskirmish.com/bench/v0-2/",
+        "title": "Stolen Renoir paintings found hidden, and damaged, behind cinder block wall",
+        "url": "https://www.cbsnews.com/news/stolen-renoir-paintings-found-behind-wall-france/",
         "source": "Hacker News AI",
-        "score": 16
+        "score": 77
       },
       {
-        "title": "AI-assisted PCB design for KiCad 10",
-        "url": "https://github.com/mixelpixx/Konnect",
+        "title": "Anthropic assigned highest junk credit rating in June",
+        "url": "https://www.ft.com/content/5a310aee-f555-4266-874c-b1b4db20186d",
         "source": "Hacker News AI",
-        "score": 68
+        "score": 57
       },
       {
-        "title": "MS Paint Adds Freeform Rotation (2026)",
-        "url": "https://blogs.windows.com/windows-insider/2026/02/20/announcing-windows-11-insider-preview-build-28020-1619-canary-channel/",
+        "title": "The NIST Elliptic Curves Seeds Bounty Has Been Claimed",
+        "url": "https://words.filippo.io/seeds-solved/",
         "source": "Hacker News AI",
-        "score": 23
+        "score": 3
+      },
+      {
+        "title": "Inside Polymarket's paid quote-retweet esports program",
+        "url": "https://www.readergrev.com/p/polymarket-paid-quote-retweet-esports-investigation",
+        "source": "Hacker News AI",
+        "score": 80
       },
       {
         "title": "How to make System 1 LLMs show System 2 competencies?",
         "url": "https://onlinelibrary.wiley.com/doi/epdf/10.1002/aaai.70113",
         "source": "Hacker News AI",
-        "score": 5
+        "score": 35
       },
       {
-        "title": "Neural networks are clean",
-        "url": "https://already-clean.goodfire.com/",
+        "title": "Postgres 19 delayed after AI reviewers find more bugs than humans can fix",
+        "url": "https://www.theregister.com/databases/2026/10/16/postgres-19-delayed-after-ai-reviewers-find-more-bugs-than-humans-can-fix/5303471",
         "source": "Hacker News AI",
-        "score": 764
+        "score": 133
       },
       {
-        "title": "Using AI to reverse engineer hardware",
-        "url": "https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/",
+        "title": "Show HN: rStation – A shared research lab for your AI agents",
+        "url": "https://rstation.ai/",
         "source": "Hacker News AI",
-        "score": 231
+        "score": 39
       },
       {
-        "title": "BeBox is a Haiku application that emulates Be Inc.'s BeBox",
-        "url": "https://github.com/johnrash/bebox",
+        "title": "Anthropic Console overcharged my card 100x due to internationalization input bug",
+        "url": "https://news.ycombinator.com/item?id=50121562",
         "source": "Hacker News AI",
-        "score": 81
+        "score": 41
+      },
+      {
+        "title": "AI-assisted PCB design for KiCad 10",
+        "url": "https://github.com/mixelpixx/Konnect",
+        "source": "Hacker News AI",
+        "score": 120
       }
     ],
     "news": [
       {
-        "title": "Zelensky says Ukraine has right to defend itself after Trump calls latest strikes a 'disgrace'",
-        "url": "https://www.bbc.co.uk/news/articles/c58jz174w89ro?at_medium=RSS&at_campaign=rss",
+        "title": "Inside Ukrainian offensive pushing Russia back - with Starlink playing a key role",
+        "url": "https://www.bbc.co.uk/news/articles/cvx284w16z1po?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -158,13 +200,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Pope pictured for first time since surgery and cancer diagnosis",
-        "url": "https://www.bbc.co.uk/news/articles/cw146ej00yn7o?at_medium=RSS&at_campaign=rss",
+        "title": "Zelensky says Ukraine has right to defend itself after Trump calls latest strikes a 'disgrace'",
+        "url": "https://www.bbc.co.uk/news/articles/c58jz174w89ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Dad fined after son, 2, died in Cyprus hotel fall",
-        "url": "https://www.bbc.co.uk/news/articles/cvj6j1klez88o?at_medium=RSS&at_campaign=rss",
+        "title": "Pope pictured for first time since surgery and cancer diagnosis",
+        "url": "https://www.bbc.co.uk/news/articles/cw146ej00yn7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -178,8 +220,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Ship attack reports near Hormuz reach record high as oil exports slow",
-        "url": "https://www.bbc.co.uk/news/articles/cmde8dpg8g0no?at_medium=RSS&at_campaign=rss",
+        "title": "Dad fined after son, 2, died in Cyprus hotel fall",
+        "url": "https://www.bbc.co.uk/news/articles/cvj6j1klez88o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -254,38 +296,38 @@
     ],
     "gaming": [
       {
-        "title": "'Pokémon TCG Pocket' Announces Big Update to Address Player Concerns",
-        "url": "https://www.polygon.com/pokemon-tcg-pocket-fewer-set-releases/",
+        "title": "Every DC Studios Movie and TV Show in Coming Through 2028 (and Beyond)",
+        "url": "https://www.polygon.com/dc-movies-tv-shows-dcu-release-calendar-james-gunn/",
         "source": "Polygon"
       },
       {
-        "title": "6 Newly Announced Games You Need to Add to Your Steam Wishlist",
-        "url": "https://www.polygon.com/wishlister-october-16/",
+        "title": "How to get the DLC weapons in Fire Emblem Fortune's Weave",
+        "url": "https://www.polygon.com/fire-emblem-fortunes-weave-dlc-weapons-how-to-get/",
         "source": "Polygon"
       },
       {
-        "title": "New Zelda: Ocarina of Time Trailer Reveal Dark Link",
-        "url": "https://www.polygon.com/legend-of-zelda-ocarina-of-time-new-trailers-dark-link/",
+        "title": "GTA 6 Recaptures What Made GTA’s Best DLC So Great",
+        "url": "https://www.polygon.com/gta-6-ballad-of-gay-tony/",
         "source": "Polygon"
       },
       {
-        "title": "'Divided' quest walkthrough in Arc Raiders",
-        "url": "https://www.polygon.com/arc-raiders-divided-quest-walkthrough-nomad-recordings/",
+        "title": "Street Fighter’s Best Live-Action Movie Yet Is Free on Streaming",
+        "url": "https://www.polygon.com/street-fighter-1994-streaming-free-tubi-pluto-tv/",
         "source": "Polygon"
       },
       {
-        "title": "Control Resonant Just Became Remedy’s Fastest-Selling Game of All Time",
-        "url": "https://www.polygon.com/control-resonant-just-1-million-copies-sold-remedy-fastest-selling-game/",
+        "title": "Laura Bailey's Favorite Critical Role Romance Changed Campaign 3 Forever",
+        "url": "https://www.polygon.com/critical-role-best-romance-laura-bailey-imodna/",
         "source": "Polygon"
       },
       {
-        "title": "'Cyberpunk 2077' Movie First Details Officially Confirmed, Won’t Adapt Game 1:1",
-        "url": "https://www.polygon.com/cyberpunk-2077-movie-first-details-confirmed/",
+        "title": "Game Freak Announces End of Beast of Reincarnation’s Post-Launch Updates",
+        "url": "https://www.polygon.com/beast-of-reincarnation-game-freak-pokemon-updates-ending/",
         "source": "Polygon"
       },
       {
-        "title": "One of the Most Intriguing RPGs of 2027 Plays With Time Brilliantly",
-        "url": "https://www.polygon.com/eternal-anima-rpg-preview-ps5-switch-2-pc-xbox/",
+        "title": "Battlefield 6 Is Free on Steam, but Not for Long",
+        "url": "https://www.polygon.com/battlefield-6-free-to-play-steam-october-2026/",
         "source": "Polygon"
       }
     ],
