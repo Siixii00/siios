@@ -1,169 +1,165 @@
 {
   "metadata": {
-    "last_updated": "2026-10-16T10:53:58.868892",
+    "last_updated": "2026-10-16T15:16:20.044630",
     "total_items": 57
   },
   "content": {
     "tech": [
       {
+        "title": "Hello Toronto – Waymo Is En Route",
+        "url": "https://waymo.com/blog/2026/10/waymo-in-toronto/",
+        "source": "Hacker News",
+        "score": 54
+      },
+      {
+        "title": "I Love Software Rendering",
+        "url": "https://www.jamesfmackenzie.com/2026/10/13/i-love-software-rendering/",
+        "source": "Hacker News",
+        "score": 141
+      },
+      {
+        "title": "Big Fish: Exploiting a 37-Year-Old Kernel Bug in OpenBSD",
+        "url": "https://calif.io/research/big-fish",
+        "source": "Hacker News",
+        "score": 24
+      },
+      {
+        "title": "Redesigning Source Control at Anthropic",
+        "url": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/",
+        "source": "Hacker News",
+        "score": 19
+      },
+      {
+        "title": "Gyroscopes Got So Small [video]",
+        "url": "https://www.youtube.com/watch?v=0Zc_6xB5W3Y",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
+        "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
+        "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
+        "source": "Hacker News",
+        "score": 20
+      },
+      {
+        "title": "Is Liquid Metal Killing Our PCs? Scientific Analysis and a 2-Year Test [video]",
+        "url": "https://www.youtube.com/watch?v=eF6bMSjPepM",
+        "source": "Hacker News",
+        "score": 29
+      },
+      {
+        "title": "Show HN: Gemini 4 Argon plays StarCraft",
+        "url": "https://starskirmish.com/bench/v0-2/",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
         "title": "Yet another way to invoke functions without parentheses",
         "url": "https://blog.ikaes.de/yet-another-way-to-invoke-functions-without-parentheses/",
         "source": "Hacker News",
-        "score": 25
+        "score": 186
       },
       {
-        "title": "Meta’s new commercial terms will allow the scraping of news sites: experts",
-        "url": "https://www.niemanlab.org/2026/10/metas-new-commercial-terms-will-allow-the-scraping-of-news-sites-legal-experts-say/",
+        "title": "How to Formalize All of Mathematics",
+        "url": "https://xenaproject.wordpress.com/2026/10/16/how-to-formalize-all-of-mathematics/",
         "source": "Hacker News",
-        "score": 318
+        "score": 12
       },
       {
         "title": "Woman who rescued injured crow keeps getting 'thank-you gifts' from birds [video]",
         "url": "https://www.youtube.com/watch?v=sjNpfz4UzqU",
         "source": "Hacker News",
-        "score": 353
+        "score": 633
       },
       {
-        "title": "Muse Spark Open",
-        "url": "https://research.meta.ai/blog/muse-spark-open",
+        "title": "RFC8950: Announce IPv4 with an IPv6 next-hop",
+        "url": "https://anuragbhatia.com/post/2026/06/rfc8950-announce-ipv4-with-ipv6-next-hop/",
         "source": "Hacker News",
-        "score": 825
+        "score": 13
       },
       {
         "title": "The Economic Complexity of the Western Roman Empire",
         "url": "https://www.michelecoscia.com/?p=2613",
         "source": "Hacker News",
-        "score": 23
+        "score": 101
       },
       {
-        "title": "Two-Stack Sliding-Window Aggregation",
-        "url": "https://orlp.net/blog/two-stack-sliding-window-aggregation/",
+        "title": "Meta’s new commercial terms will allow the scraping of news sites: experts",
+        "url": "https://www.niemanlab.org/2026/10/metas-new-commercial-terms-will-allow-the-scraping-of-news-sites-legal-experts-say/",
         "source": "Hacker News",
-        "score": 30
+        "score": 416
       },
       {
-        "title": "The insider trading you're allowed to do",
-        "url": "https://coached.com/essays/the-insider-trading-youre-allowed-to-do/",
+        "title": "Muse Spark Open",
+        "url": "https://research.meta.ai/blog/muse-spark-open",
         "source": "Hacker News",
-        "score": 48
-      },
-      {
-        "title": "RPKI now protects 70% of internet routes",
-        "url": "https://ipinfo.io/blog/rpki-protects-70-internet-routes",
-        "source": "Hacker News",
-        "score": 167
-      },
-      {
-        "title": "Neural networks are clean",
-        "url": "https://already-clean.goodfire.com/",
-        "source": "Hacker News",
-        "score": 702
-      },
-      {
-        "title": "The Folders Programming Language",
-        "url": "https://danieltemkin.com/esolangs/folders",
-        "source": "Hacker News",
-        "score": 81
-      },
-      {
-        "title": "What I self-host",
-        "url": "https://viceconsole.fyi/blog/2026/10/10/what-i-self-host/",
-        "source": "Hacker News",
-        "score": 505
-      },
-      {
-        "title": "Wayland desktop for Linux with skeuomorphic design",
-        "url": "https://github.com/fyzugx/DEsk",
-        "source": "Hacker News",
-        "score": 618
-      },
-      {
-        "title": "New Withings Users Must Pay $99/Year for Apple Health Syncing",
-        "url": "https://support.withings.com/hc/en-us/community/posts/51887047154577-Unacceptable-Apple-Health-Sync-is-now-behind-a-99-year-paywall-for-new-accounts",
-        "source": "Hacker News",
-        "score": 306
-      },
-      {
-        "title": "Apple routed a graphite pipe through the iPhone Duo's hinge to dissipate heat",
-        "url": "https://www.pcmag.com/news/apple-routed-a-graphite-pipe-through-the-iphone-duos-hinge",
-        "source": "Hacker News",
-        "score": 144
-      },
-      {
-        "title": "Jev meets the Trolley Problem",
-        "url": "https://zachlandes.com/trolley-problem/",
-        "source": "Hacker News",
-        "score": 477
+        "score": 881
       }
     ],
     "ai": [
       {
+        "title": "Redesigning Source Control at Anthropic",
+        "url": "https://simonwillison.net/2026/Oct/13/redesigning-source-control-at-anthropic/",
+        "source": "Hacker News AI",
+        "score": 19
+      },
+      {
+        "title": "Show HN: Gemini 4 Argon plays StarCraft",
+        "url": "https://starskirmish.com/bench/v0-2/",
+        "source": "Hacker News AI",
+        "score": 16
+      },
+      {
+        "title": "AI-assisted PCB design for KiCad 10",
+        "url": "https://github.com/mixelpixx/Konnect",
+        "source": "Hacker News AI",
+        "score": 68
+      },
+      {
+        "title": "MS Paint Adds Freeform Rotation (2026)",
+        "url": "https://blogs.windows.com/windows-insider/2026/02/20/announcing-windows-11-insider-preview-build-28020-1619-canary-channel/",
+        "source": "Hacker News AI",
+        "score": 23
+      },
+      {
+        "title": "How to make System 1 LLMs show System 2 competencies?",
+        "url": "https://onlinelibrary.wiley.com/doi/epdf/10.1002/aaai.70113",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
         "title": "Neural networks are clean",
         "url": "https://already-clean.goodfire.com/",
         "source": "Hacker News AI",
-        "score": 702
+        "score": 764
       },
       {
         "title": "Using AI to reverse engineer hardware",
         "url": "https://blogs.gnome.org/uraeus/2026/10/15/aiandreverseengineerhardware/",
         "source": "Hacker News AI",
-        "score": 201
+        "score": 231
       },
       {
         "title": "BeBox is a Haiku application that emulates Be Inc.'s BeBox",
         "url": "https://github.com/johnrash/bebox",
         "source": "Hacker News AI",
-        "score": 65
-      },
-      {
-        "title": "The 8-mile hole in a Hawaii national park that no one can explain",
-        "url": "https://www.sfgate.com/national-parks/article/hawaii-volcanoes-park-great-crack-22358849.php",
-        "source": "Hacker News AI",
-        "score": 71
-      },
-      {
-        "title": "Aidlc: Adaptive workflow steering rules for AI coding agents",
-        "url": "https://github.com/awslabs/aidlc-workflows",
-        "source": "Hacker News AI",
-        "score": 25
-      },
-      {
-        "title": "Simons Foundation launches $15M effort to help mathematicians navigate AI era",
-        "url": "https://www.simonsfoundation.org/news/simons-foundation-launches-15m-effort-to-help-mathematicians-navigate-ai-era/",
-        "source": "Hacker News AI",
-        "score": 240
-      },
-      {
-        "title": "The Thinking Leakage in Reinforcement Learning for LLMs",
-        "url": "https://arxiv.org/abs/2610.14270",
-        "source": "Hacker News AI",
-        "score": 7
+        "score": 81
       }
     ],
     "news": [
       {
-        "title": "Children aged 5, 8 and 11 killed in US school shooting before suspect shot by bystander",
-        "url": "https://www.bbc.co.uk/news/articles/cm89zp48k4kzo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "'It's really hard to believe' - How Oregon primary school shooting unfolded",
-        "url": "https://www.bbc.co.uk/news/videos/cwe8r29mjd05o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Ship attack reports near Hormuz reach record high as oil exports slow",
-        "url": "https://www.bbc.co.uk/news/articles/cmde8dpg8g0no?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Zelensky rallies EU support as Trump says Ukraine leader 'more difficult to deal with than Putin'",
+        "title": "Zelensky says Ukraine has right to defend itself after Trump calls latest strikes a 'disgrace'",
         "url": "https://www.bbc.co.uk/news/articles/c58jz174w89ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "China tells Israel to stop 'forced establishment' of West Bank settlements",
-        "url": "https://www.bbc.co.uk/news/articles/cq1j3wdxy48ro?at_medium=RSS&at_campaign=rss",
+        "title": "Palestinians and US journalist injured by Israeli settlers in West Bank harvest attack",
+        "url": "https://www.bbc.co.uk/news/articles/c65ynk7212vqo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Pope pictured for first time since surgery and cancer diagnosis",
+        "url": "https://www.bbc.co.uk/news/articles/cw146ej00yn7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -172,12 +168,37 @@
         "source": "BBC World"
       },
       {
-        "title": "Bus hits train stopped on French side of Channel Tunnel, with 19 injured   ",
-        "url": "https://www.bbc.co.uk/news/articles/c6wyrnmgzn01o?at_medium=RSS&at_campaign=rss",
+        "title": "India's 'cockroach' party founder detained ahead of protest",
+        "url": "https://www.bbc.co.uk/news/articles/cmx237n1y9lzo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "US senators call for investigation into Ukraine's Starlink restrictions",
+        "url": "https://www.bbc.co.uk/news/articles/cq398zl8jmvdo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ship attack reports near Hormuz reach record high as oil exports slow",
+        "url": "https://www.bbc.co.uk/news/articles/cmde8dpg8g0no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Tesla's 'flying car' is as convincing as the Cybertruck being a boat ",
+        "url": "https://www.creativebloq.com/news/teslas-flying-car-is-as-convincing-as-the-cybertruck-being-a-boat",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Are you triggered by GTA 6's giant Paris advert? ",
+        "url": "https://www.creativebloq.com/news/are-you-triggered-by-the-design-problem-with-gta-6s-giant-paris-advert",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Sydney Sweeney’s racy ad sparked a Gen Z culture war – and Powerade just piled in ",
+        "url": "https://www.creativebloq.com/news/sydney-sweeneys-racy-ad-sparked-a-gen-z-culture-war-and-powerade-just-piled-in",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Designers are cringing at Tate McRae’s new single cover ",
         "url": "https://www.creativebloq.com/news/designers-are-cringing-at-tate-mcraes-new-single-cover",
@@ -197,94 +218,74 @@
         "title": " Quote of the Day by LAIKA’s Nelson Lowry: \"When the challenges are that raw, you just make mistakes, and you learn from them\" ",
         "url": "https://www.creativebloq.com/inspiration/quote-of-the-day-by-laikas-nelson-lowry-when-the-challenges-are-that-raw-you-just-make-mistakes-and-you-learn-from-them",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Disney's latest Hexed announcement is causing even more controversy ",
-        "url": "https://www.creativebloq.com/news/disneys-latest-hexed-announcement-is-causing-even-more-controversy",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Narnia: The Magician's Nephew trailer has a tiny Easter egg that's sparked big controversy ",
-        "url": "https://www.creativebloq.com/news/the-narnia-the-magicians-nephew-trailer-has-a-tiny-easter-eggs-thats-caused-a-big-controversy",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " With $150 off, this 27in 4K monitor just became a great buy for creative work at home ",
-        "url": "https://www.creativebloq.com/news/with-usd150-off-this-27in-4k-monitor-just-became-a-great-buy-for-creative-work-at-home",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
+      {
+        "title": "“Crawzilla” was huge. Then scientists found an even bigger crayfish",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261015073220.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Arctic sea ice hits another troubling low in 2026",
         "url": "https://www.sciencedaily.com/releases/2026/10/261015073212.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Mysterious brain activity under anesthesia challenges what we know about consciousness",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261015003440.htm",
+        "title": "Antarctica’s sea ice has undergone a stunning reversal",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261015073210.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Ozempic and Wegovy linked to rare risk of sudden vision loss",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261014015521.htm",
+        "title": "NASA captures strange waves high above Hurricane Simon",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261015073207.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Eating late at night linked to up to 30% higher risk of liver disease",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261014015503.htm",
+        "title": "A protein that fuels cancer could also be the key to fighting it",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261015073203.htm",
         "source": "Science Daily"
       },
       {
-        "title": "A fungus is threatening the world’s food supply. Scientists just found a new defense",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261014015501.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Strokes have nearly doubled among younger adults, and scientists aren't sure why",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261014015459.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "A forgotten fossil reveals a fearsome dinosaur with giant claws",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261014015457.htm",
+        "title": "USC scientists discover how to create a never-ending supply of cancer-fighting cells",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261015003803.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Amazon Casts Leads in Fourth Wing TV Series",
-        "url": "https://www.polygon.com/fourth-wing-cast-violet-sorrengail-xaden-riorson/",
+        "title": "'Pokémon TCG Pocket' Announces Big Update to Address Player Concerns",
+        "url": "https://www.polygon.com/pokemon-tcg-pocket-fewer-set-releases/",
         "source": "Polygon"
       },
       {
-        "title": "10 Games With Permadeath That Are 10/10 Masterpieces",
-        "url": "https://www.polygon.com/10-best-games-with-permadeath/",
+        "title": "6 Newly Announced Games You Need to Add to Your Steam Wishlist",
+        "url": "https://www.polygon.com/wishlister-october-16/",
         "source": "Polygon"
       },
       {
-        "title": "'Interview With a Vampire' Meets 'Bridgerton' in this 2025 Horror Masterpiece",
-        "url": "https://www.polygon.com/bury-our-bones-in-midnight-soil-horror-books-to-read/",
+        "title": "New Zelda: Ocarina of Time Trailer Reveal Dark Link",
+        "url": "https://www.polygon.com/legend-of-zelda-ocarina-of-time-new-trailers-dark-link/",
         "source": "Polygon"
       },
       {
-        "title": "Steven Spielberg and Stanley Kubrick's Near-Perfect Sci-Fi Fairytale Is Officially Back on Streaming",
-        "url": "https://www.polygon.com/steven-spielberg-sci-fi-pinocchio-streaming-peacock-october-2026/",
+        "title": "'Divided' quest walkthrough in Arc Raiders",
+        "url": "https://www.polygon.com/arc-raiders-divided-quest-walkthrough-nomad-recordings/",
         "source": "Polygon"
       },
       {
-        "title": "'Avatar: Seven Havens' Episode 6 Ending Explained: What the Anomaly Reveals About Pavi and Nisha",
-        "url": "https://www.polygon.com/avatar-seven-havens-episode-6-ending-explained-pavi-nisha-anomaly-afflicted/",
+        "title": "Control Resonant Just Became Remedy’s Fastest-Selling Game of All Time",
+        "url": "https://www.polygon.com/control-resonant-just-1-million-copies-sold-remedy-fastest-selling-game/",
         "source": "Polygon"
       },
       {
-        "title": "The 10 Best Low Fantasy Books",
-        "url": "https://www.polygon.com/best-low-fantasy-books/",
+        "title": "'Cyberpunk 2077' Movie First Details Officially Confirmed, Won’t Adapt Game 1:1",
+        "url": "https://www.polygon.com/cyberpunk-2077-movie-first-details-confirmed/",
         "source": "Polygon"
       },
       {
-        "title": "34 Years Later, the Best-Ever 'Far Side' Quote Will Still Leave You Speechless",
-        "url": "https://www.polygon.com/best-far-side-quote-ever/",
+        "title": "One of the Most Intriguing RPGs of 2027 Plays With Time Brilliantly",
+        "url": "https://www.polygon.com/eternal-anima-rpg-preview-ps5-switch-2-pc-xbox/",
         "source": "Polygon"
       }
     ],
