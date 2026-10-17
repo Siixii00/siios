@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-17T11:26:43.544137",
-    "total_items": 63
+    "last_updated": "2026-10-17T15:08:06.492972",
+    "total_items": 61
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "DeepSeek: DeepSeek v4.1 Flash 1017",
         "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
         "source": "Hacker News",
-        "score": 197
+        "score": 431
+      },
+      {
+        "title": "Making Chicken Transparent Using Dorito Dust",
+        "url": "https://chillphysicsenjoyer.substack.com/p/making-chicken-transparent-using",
+        "source": "Hacker News",
+        "score": 37
+      },
+      {
+        "title": "Solar surpasses nuclear power globally for first time – pv magazine Global",
+        "url": "https://www.pv-magazine.com/2026/09/29/solar-surpasses-nuclear-power-globally-for-first-time/",
+        "source": "Hacker News",
+        "score": 95
+      },
+      {
+        "title": "Rendering pretty sky in Around The World game",
+        "url": "https://frozenfractal.com/blog/2026/10/12/around-the-world-34-a-pretty-sky/",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "The First Candid",
+        "url": "https://www.newyorker.com/magazine/2026/10/19/the-first-candid",
+        "source": "Hacker News",
+        "score": 15
       },
       {
         "title": "Ultramarine 1 Flash",
         "url": "https://www.paperinstruments.com/ultramarine",
         "source": "Hacker News",
-        "score": 263
+        "score": 320
       },
       {
         "title": "Tesla Roadster",
         "url": "https://www.tesla.com/roadster",
         "source": "Hacker News",
-        "score": 1456
+        "score": 1527
       },
       {
         "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
         "url": "https://llmspeed.dev/",
         "source": "Hacker News",
-        "score": 95
+        "score": 167
       },
       {
         "title": "DeepSeek-v4.1-Flash-1017",
         "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
         "source": "Hacker News",
-        "score": 200
+        "score": 310
       },
       {
-        "title": "We Still Use Paper",
-        "url": "https://humanpro.co/articles/we-still-use-paper/",
+        "title": "A Tudor Life in the Time of Plague",
+        "url": "https://www.historytoday.com/archive/history-matters/tudor-life-time-plague",
         "source": "Hacker News",
-        "score": 10
-      },
-      {
-        "title": "Tell HN: Remember to migrate away from .name domain",
-        "url": "https://news.ycombinator.com/item?id=50089577",
-        "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Intuitive concurrent programming in any language",
-        "url": "https://www.lf-lang.org/",
-        "source": "Hacker News",
-        "score": 55
+        "score": 3
       },
       {
         "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
         "url": "https://github.com/cobanov/PS5LM",
         "source": "Hacker News",
-        "score": 299
+        "score": 329
       },
       {
         "title": "You could have invented transformers from memory",
         "url": "https://alexwang.ai/posts/associative-memory/",
         "source": "Hacker News",
-        "score": 317
+        "score": 383
+      },
+      {
+        "title": "MapQuest will now show you where Flock cameras are in your neighborhood",
+        "url": "https://www.engadget.com/2288729/mapquest-will-now-show-you-where-flock-cameras-are-in-your-neighborhood/",
+        "source": "Hacker News",
+        "score": 44
       },
       {
         "title": "Claude reveals ECDSA curve origins",
         "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
         "source": "Hacker News",
-        "score": 891
+        "score": 951
       },
       {
-        "title": "Recipes Are Moving from Maven Central to the Code Genome Project",
-        "url": "https://docs.openrewrite.org/reference/latest-versions-of-every-openrewrite-module",
+        "title": "Intuitive concurrent programming in any language",
+        "url": "https://www.lf-lang.org/",
         "source": "Hacker News",
-        "score": 12
-      },
-      {
-        "title": "FLUX 3 Image Klein",
-        "url": "https://bfl.ai/blog/flux-3-image-klein",
-        "source": "Hacker News",
-        "score": 174
-      },
-      {
-        "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
-        "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
-        "source": "Hacker News",
-        "score": 324
-      },
-      {
-        "title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
-        "url": "https://www.arrl.org/arrlletterissue?issue=2026-10-15#eBay-Restricts-Listings-of-Radio-Equipment_-But-Exempts-Ham-Band-Only-Gear",
-        "source": "Hacker News",
-        "score": 229
+        "score": 90
       }
     ],
     "ai": [
@@ -101,85 +101,67 @@
         "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
         "url": "https://llmspeed.dev/",
         "source": "Hacker News AI",
-        "score": 95
-      },
-      {
-        "title": "Tell HN: Remember to migrate away from .name domain",
-        "url": "https://news.ycombinator.com/item?id=50089577",
-        "source": "Hacker News AI",
-        "score": 55
+        "score": 167
       },
       {
         "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
         "url": "https://github.com/cobanov/PS5LM",
         "source": "Hacker News AI",
-        "score": 299
+        "score": 329
       },
       {
         "title": "You could have invented transformers from memory",
         "url": "https://alexwang.ai/posts/associative-memory/",
         "source": "Hacker News AI",
-        "score": 317
+        "score": 383
       },
       {
         "title": "Claude reveals ECDSA curve origins",
         "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
         "source": "Hacker News AI",
-        "score": 891
+        "score": 951
       },
       {
         "title": "Designing more efficient quantum circuits with Claude",
         "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
         "source": "Hacker News AI",
-        "score": 147
-      },
-      {
-        "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
-        "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
-        "source": "Hacker News AI",
-        "score": 512
+        "score": 158
       },
       {
         "title": "Nine-Inch Snails",
         "url": "https://www.theatlantic.com/science/2026/10/giant-african-snails-florida-invasion/688850/",
         "source": "Hacker News AI",
-        "score": 74
+        "score": 98
+      },
+      {
+        "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
+        "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
+        "source": "Hacker News AI",
+        "score": 555
       },
       {
         "title": "How the Claude Code team does code review",
         "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
         "source": "Hacker News AI",
-        "score": 361
+        "score": 416
       },
       {
         "title": "Show HN: Gemini 4 Argon plays StarCraft",
         "url": "https://starskirmish.com/bench/v0-2/",
         "source": "Hacker News AI",
-        "score": 226
+        "score": 232
       },
       {
         "title": "Stolen Renoir paintings found hidden, and damaged, behind cinder block wall",
         "url": "https://www.cbsnews.com/news/stolen-renoir-paintings-found-behind-wall-france/",
         "source": "Hacker News AI",
-        "score": 128
+        "score": 133
       },
       {
         "title": "Show HN: Wonderhop – A daily game: guess what most people say, or what none do",
         "url": "https://wonderhop.io/en/",
         "source": "Hacker News AI",
-        "score": 98
-      },
-      {
-        "title": "Anthropic assigned highest junk credit rating in June",
-        "url": "https://www.ft.com/content/5a310aee-f555-4266-874c-b1b4db20186d",
-        "source": "Hacker News AI",
-        "score": 261
-      },
-      {
-        "title": "AI-assisted PCB design for KiCad 10",
-        "url": "https://github.com/mixelpixx/Konnect",
-        "source": "Hacker News AI",
-        "score": 131
+        "score": 102
       }
     ],
     "news": [
@@ -189,7 +171,7 @@
         "source": "BBC World"
       },
       {
-        "title": "Oregon teacher fought school attacker before armed dad shot suspect 'multiple times'",
+        "title": "Teacher fought US school attacker before armed dad shot suspect 'multiple times'",
         "url": "https://www.bbc.co.uk/news/articles/cv98zw1k8kp3o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -204,8 +186,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Katie Zacharia leaving White House role less than five days into job",
-        "url": "https://www.bbc.co.uk/news/articles/c32l4ekpvzl8o?at_medium=RSS&at_campaign=rss",
+        "title": "Nursery owner in China jailed for life after hundreds of children poisoned",
+        "url": "https://www.bbc.co.uk/news/articles/cqe9lx54g7x9o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -214,12 +196,27 @@
         "source": "BBC World"
       },
       {
-        "title": "Actress Selma Blair says she 'did not intend to harm anyone' in plane altercation",
-        "url": "https://www.bbc.co.uk/news/articles/cwly3zd1r45ro?at_medium=RSS&at_campaign=rss",
+        "title": "Pope discharged from hospital days after lung cancer surgery",
+        "url": "https://www.bbc.co.uk/news/articles/c5x2vkddrkrko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " With over $400 off, there's finally a decent deal on the 2026 M5 Pro MacBook Pro ",
+        "url": "https://www.creativebloq.com/deals/with-over-usd400-off-theres-finally-a-decent-deal-on-the-2026-m5-pro-macbook-pro",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This mechanical keyboard is astonishingly thin, and you can reserve one for $1 ",
+        "url": "https://www.creativebloq.com/news/this-mechanical-keyboard-is-astonishingly-thin-and-you-can-reserve-one-for-usd1",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " I think we’re getting a touchscreen Mac, and here’s why that excites me ",
+        "url": "https://www.creativebloq.com/news/i-think-were-getting-a-touchscreen-mac-and-heres-why-that-excites-me",
+        "source": "Creative Bloq"
+      },
       {
         "title": " A fake Mia Goth selfie fooled the internet, and AI slop is the least of it ",
         "url": "https://www.creativebloq.com/news/a-fake-mia-goth-selfie-fooled-the-internet-and-ai-slop-is-the-least-of-it",
@@ -239,89 +236,79 @@
         "title": " Olivia Rodrigo’s expectations music video hit with AI allegations ",
         "url": "https://www.creativebloq.com/news/olivia-rodrigos-expectations-music-video-hit-with-ai-allegations",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Angry Birds just flapped its way into the Kelly Clarkson feud with a cheeky animated poster design ",
-        "url": "https://www.creativebloq.com/news/angry-birds-just-flapped-its-way-into-the-kelly-clarkson-feud-in-a-cheeky-animated-poster-design",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Tesla's 'flying car' is as convincing as the Cybertruck being a boat ",
-        "url": "https://www.creativebloq.com/news/teslas-flying-car-is-as-convincing-as-the-cybertruck-being-a-boat",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Are you triggered by GTA 6's giant Paris advert? ",
-        "url": "https://www.creativebloq.com/news/are-you-triggered-by-the-design-problem-with-gta-6s-giant-paris-advert",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
-        "title": "“Crawzilla” was huge. Then scientists found an even bigger crayfish",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261015073220.htm",
+        "title": "Scientists discover how deep sleep builds muscle, burns fat, and boosts the brain",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261016081140.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Arctic sea ice hits another troubling low in 2026",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261015073212.htm",
+        "title": "New drug reverses severe fatty liver disease by repairing the gut",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261016080912.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Antarctica’s sea ice has undergone a stunning reversal",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261015073210.htm",
+        "title": "Scientists predicted doomsday for November 13, 2026. Should we be worried?",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261016070639.htm",
         "source": "Science Daily"
       },
       {
-        "title": "NASA captures strange waves high above Hurricane Simon",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261015073207.htm",
+        "title": "NASA’s Roman Space Telescope exceeds expectations by nearly 30%",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261016070630.htm",
         "source": "Science Daily"
       },
       {
-        "title": "A protein that fuels cancer could also be the key to fighting it",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261015073203.htm",
+        "title": "SpaceX just delivered some very strange cargo to the International Space Station",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261016070628.htm",
         "source": "Science Daily"
       },
       {
-        "title": "USC scientists discover how to create a never-ending supply of cancer-fighting cells",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261015003803.htm",
+        "title": "This bird flies thousands of miles, but its wings have a catch",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261016070624.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Stanford’s new microscope reveals living cells like never before",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261015073231.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Stephen King Meets 'The Backrooms' in Syfy's Underrated 6-Part Anthology Series",
-        "url": "https://www.polygon.com/horror-anthology-creepypasta-halloween-countdown/",
+        "title": "22 Years Ago, One Perfect Twist Changed TV's Greatest Sci-Fi Series Forever",
+        "url": "https://www.polygon.com/lost-walkabout-locke-twist-22-anniversary/",
         "source": "Polygon"
       },
       {
-        "title": "37 Years Ago, 'Garfield' Suddenly Changed Genres With a Mind-Blowing Comic Strip",
-        "url": "https://www.polygon.com/garfield-alone/",
+        "title": "Star Wars Zero Company Finally Makes Starting A New Campaign Worth It",
+        "url": "https://www.polygon.com/star-wars-zero-company-second-patch-reaction/",
         "source": "Polygon"
       },
       {
-        "title": "26 Years Ago, 'Buffy the Vampire Slayer' Officially Launched Its Most Controversial Couple",
-        "url": "https://www.polygon.com/buffy-the-vampire-slayer-season-5-episode-4-retrospective/",
+        "title": "Analogue Brings Back Its Perfect SNES And Sega Genesis Replacements",
+        "url": "https://www.polygon.com/analogue-super-nt-mega-sg-return/",
         "source": "Polygon"
       },
       {
-        "title": "Event Habitat Dex and Pokédex list in Pokémon Pokopia",
-        "url": "https://www.polygon.com/pokemon-pokopia-event-habitat-dex-pokedex-list-requirements-unlock/",
+        "title": "2026 Has Been a Surprisingly Excellent Year for Shooters",
+        "url": "https://www.polygon.com/2026-year-in-shooters/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon Pokopia event schedule",
-        "url": "https://www.polygon.com/pokemon-pokopia-event-schedule-holiday-dates/",
+        "title": "Whalefall Isn't Really About a Whale, Says Josh Brolin",
+        "url": "https://www.polygon.com/whalefall-interview-josh-brolin-austin-abrams-brian-duffield-daniel-krause/",
         "source": "Polygon"
       },
       {
-        "title": "Pokémon Pokopia 'Pumpkaboo's Sweet Surprises' event guide",
-        "url": "https://www.polygon.com/pokemon-pokopia-pumpkaboos-sweet-surprises-gourgeist-habitats-items/",
+        "title": "The Best Transformers Movie That No One Watched Finds New Life on Streaming",
+        "url": "https://www.polygon.com/best-transformers-movie-now-streaming-netflix/",
         "source": "Polygon"
       },
       {
-        "title": "10 Perfect Detective Thrillers That Get More Intense With Every Episode",
-        "url": "https://www.polygon.com/best-mystery-tv-shows-worth-solving/",
+        "title": "Early Modern Warfare 4 Consensus Unanimous That It Features On Of The Best COD Campaigns Ever",
+        "url": "https://www.polygon.com/modern-warfare-4-campaign-early-reactions/",
         "source": "Polygon"
       }
     ],
