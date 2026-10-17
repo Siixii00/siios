@@ -1,187 +1,188 @@
 {
   "metadata": {
-    "last_updated": "2026-10-17T06:40:28.622895",
-    "total_items": 62
+    "last_updated": "2026-10-17T11:26:43.544137",
+    "total_items": 63
   },
   "content": {
     "tech": [
       {
+        "title": "DeepSeek: DeepSeek v4.1 Flash 1017",
+        "url": "https://openrouter.ai/deepseek/deepseek-v4.1-flash-1017",
+        "source": "Hacker News",
+        "score": 197
+      },
+      {
         "title": "Ultramarine 1 Flash",
         "url": "https://www.paperinstruments.com/ultramarine",
         "source": "Hacker News",
-        "score": 154
+        "score": 263
       },
       {
         "title": "Tesla Roadster",
         "url": "https://www.tesla.com/roadster",
         "source": "Hacker News",
-        "score": 1342
-      },
-      {
-        "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
-        "url": "https://github.com/cobanov/PS5LM",
-        "source": "Hacker News",
-        "score": 261
+        "score": 1456
       },
       {
         "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
         "url": "https://llmspeed.dev/",
         "source": "Hacker News",
-        "score": 13
+        "score": 95
       },
       {
-        "title": "Claude reveals ECDSA curve origins",
-        "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+        "title": "DeepSeek-v4.1-Flash-1017",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
         "source": "Hacker News",
-        "score": 811
+        "score": 200
+      },
+      {
+        "title": "We Still Use Paper",
+        "url": "https://humanpro.co/articles/we-still-use-paper/",
+        "source": "Hacker News",
+        "score": 10
+      },
+      {
+        "title": "Tell HN: Remember to migrate away from .name domain",
+        "url": "https://news.ycombinator.com/item?id=50089577",
+        "source": "Hacker News",
+        "score": 55
+      },
+      {
+        "title": "Intuitive concurrent programming in any language",
+        "url": "https://www.lf-lang.org/",
+        "source": "Hacker News",
+        "score": 55
+      },
+      {
+        "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
+        "url": "https://github.com/cobanov/PS5LM",
+        "source": "Hacker News",
+        "score": 299
       },
       {
         "title": "You could have invented transformers from memory",
         "url": "https://alexwang.ai/posts/associative-memory/",
         "source": "Hacker News",
-        "score": 238
+        "score": 317
       },
       {
-        "title": "California is building a $400M shield for Yosemite's most dangerous highway",
-        "url": "https://www.sfchronicle.com/california/article/yosemite-national-park-highway-140-22463847.php",
+        "title": "Claude reveals ECDSA curve origins",
+        "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
         "source": "Hacker News",
-        "score": 30
+        "score": 891
+      },
+      {
+        "title": "Recipes Are Moving from Maven Central to the Code Genome Project",
+        "url": "https://docs.openrewrite.org/reference/latest-versions-of-every-openrewrite-module",
+        "source": "Hacker News",
+        "score": 12
       },
       {
         "title": "FLUX 3 Image Klein",
         "url": "https://bfl.ai/blog/flux-3-image-klein",
         "source": "Hacker News",
-        "score": 150
-      },
-      {
-        "title": "0/1 Knapsack Problem in PyTorch",
-        "url": "https://jedrzej.maczan.pl/2025_11_21_dp_knapsack_sliding_hirschberg",
-        "source": "Hacker News",
-        "score": 6
+        "score": 174
       },
       {
         "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
         "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
         "source": "Hacker News",
-        "score": 300
+        "score": 324
       },
       {
         "title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
         "url": "https://www.arrl.org/arrlletterissue?issue=2026-10-15#eBay-Restricts-Listings-of-Radio-Equipment_-But-Exempts-Ham-Band-Only-Gear",
         "source": "Hacker News",
-        "score": 210
-      },
-      {
-        "title": "Butlerian Jihad",
-        "url": "https://dune.fandom.com/wiki/Butlerian_Jihad",
-        "source": "Hacker News",
-        "score": 170
-      },
-      {
-        "title": "JPEG XL vs. AVIF for web use-cases",
-        "url": "https://jakearchibald.com/2026/jpeg-xl-vs-avif/",
-        "source": "Hacker News",
-        "score": 236
-      },
-      {
-        "title": "Designing more efficient quantum circuits with Claude",
-        "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
-        "source": "Hacker News",
-        "score": 127
-      },
-      {
-        "title": "A story of WiFi secrets, UART lockdowns and a damaged flash memory chip",
-        "url": "https://adepts.of0x.cc/eufy-homestation2-firmware/",
-        "source": "Hacker News",
-        "score": 36
+        "score": 229
       }
     ],
     "ai": [
       {
-        "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
-        "url": "https://github.com/cobanov/PS5LM",
-        "source": "Hacker News AI",
-        "score": 261
-      },
-      {
         "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
         "url": "https://llmspeed.dev/",
         "source": "Hacker News AI",
-        "score": 13
+        "score": 95
       },
       {
-        "title": "Claude reveals ECDSA curve origins",
-        "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+        "title": "Tell HN: Remember to migrate away from .name domain",
+        "url": "https://news.ycombinator.com/item?id=50089577",
         "source": "Hacker News AI",
-        "score": 811
+        "score": 55
+      },
+      {
+        "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
+        "url": "https://github.com/cobanov/PS5LM",
+        "source": "Hacker News AI",
+        "score": 299
       },
       {
         "title": "You could have invented transformers from memory",
         "url": "https://alexwang.ai/posts/associative-memory/",
         "source": "Hacker News AI",
-        "score": 238
+        "score": 317
+      },
+      {
+        "title": "Claude reveals ECDSA curve origins",
+        "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
+        "source": "Hacker News AI",
+        "score": 891
       },
       {
         "title": "Designing more efficient quantum circuits with Claude",
         "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
         "source": "Hacker News AI",
-        "score": 127
+        "score": 147
       },
       {
         "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
         "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
         "source": "Hacker News AI",
-        "score": 464
-      },
-      {
-        "title": "How the Claude Code team does code review",
-        "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
-        "source": "Hacker News AI",
-        "score": 310
-      },
-      {
-        "title": "Show HN: Gemini 4 Argon plays StarCraft",
-        "url": "https://starskirmish.com/bench/v0-2/",
-        "source": "Hacker News AI",
-        "score": 211
+        "score": 512
       },
       {
         "title": "Nine-Inch Snails",
         "url": "https://www.theatlantic.com/science/2026/10/giant-african-snails-florida-invasion/688850/",
         "source": "Hacker News AI",
-        "score": 49
+        "score": 74
+      },
+      {
+        "title": "How the Claude Code team does code review",
+        "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+        "source": "Hacker News AI",
+        "score": 361
+      },
+      {
+        "title": "Show HN: Gemini 4 Argon plays StarCraft",
+        "url": "https://starskirmish.com/bench/v0-2/",
+        "source": "Hacker News AI",
+        "score": 226
       },
       {
         "title": "Stolen Renoir paintings found hidden, and damaged, behind cinder block wall",
         "url": "https://www.cbsnews.com/news/stolen-renoir-paintings-found-behind-wall-france/",
         "source": "Hacker News AI",
-        "score": 118
+        "score": 128
       },
       {
         "title": "Show HN: Wonderhop – A daily game: guess what most people say, or what none do",
         "url": "https://wonderhop.io/en/",
         "source": "Hacker News AI",
-        "score": 86
-      },
-      {
-        "title": "Coconuts in Medieval Britain (2015)",
-        "url": "https://www.themarysue.com/monty-python-holy-grail-coconuts/",
-        "source": "Hacker News AI",
-        "score": 16
+        "score": 98
       },
       {
         "title": "Anthropic assigned highest junk credit rating in June",
         "url": "https://www.ft.com/content/5a310aee-f555-4266-874c-b1b4db20186d",
         "source": "Hacker News AI",
-        "score": 242
+        "score": 261
+      },
+      {
+        "title": "AI-assisted PCB design for KiCad 10",
+        "url": "https://github.com/mixelpixx/Konnect",
+        "source": "Hacker News AI",
+        "score": 131
       }
     ],
     "news": [
-      {
-        "title": "Brazil sees record fall in Amazon deforestation as key election looms",
-        "url": "https://www.bbc.co.uk/news/articles/cqe8rzg6zl00o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
       {
         "title": "Trump waives several Russia sanctions as row with Zelensky intensifies",
         "url": "https://www.bbc.co.uk/news/articles/cxr5yvzv7rp0o?at_medium=RSS&at_campaign=rss",
@@ -198,22 +199,52 @@
         "source": "BBC World"
       },
       {
-        "title": "Inside Ukrainian offensive pushing Russia back - with Starlink playing a key role",
-        "url": "https://www.bbc.co.uk/news/articles/cvx284w16z1po?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Palestinians and US journalist injured by Israeli settlers in West Bank harvest attack",
-        "url": "https://www.bbc.co.uk/news/articles/c65ynk7212vqo?at_medium=RSS&at_campaign=rss",
+        "title": "Brazil sees record fall in Amazon deforestation as key election looms",
+        "url": "https://www.bbc.co.uk/news/articles/cqe8rzg6zl00o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Katie Zacharia leaving White House role less than five days into job",
         "url": "https://www.bbc.co.uk/news/articles/c32l4ekpvzl8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
+      },
+      {
+        "title": "Rare pink diamond goes on display in France 100 years after amateur heist",
+        "url": "https://www.bbc.co.uk/news/articles/c61m4zkx47vlo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Actress Selma Blair says she 'did not intend to harm anyone' in plane altercation",
+        "url": "https://www.bbc.co.uk/news/articles/cwly3zd1r45ro?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " A fake Mia Goth selfie fooled the internet, and AI slop is the least of it ",
+        "url": "https://www.creativebloq.com/news/a-fake-mia-goth-selfie-fooled-the-internet-and-ai-slop-is-the-least-of-it",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Ikea throws shade at Tesla with \"safe and affordable\" flying car ",
+        "url": "https://www.creativebloq.com/news/ikea-throws-shade-at-tesla-with-safe-and-affordable-flying-car",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Wired headphones are suddenly all the rage, and the best we've tested has £40 off ",
+        "url": "https://www.creativebloq.com/deals/wired-headphones-are-suddenly-all-the-rage-and-the-best-weve-tested-has-gbp40-off",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Olivia Rodrigo’s expectations music video hit with AI allegations ",
+        "url": "https://www.creativebloq.com/news/olivia-rodrigos-expectations-music-video-hit-with-ai-allegations",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Angry Birds just flapped its way into the Kelly Clarkson feud with a cheeky animated poster design ",
+        "url": "https://www.creativebloq.com/news/angry-birds-just-flapped-its-way-into-the-kelly-clarkson-feud-in-a-cheeky-animated-poster-design",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Tesla's 'flying car' is as convincing as the Cybertruck being a boat ",
         "url": "https://www.creativebloq.com/news/teslas-flying-car-is-as-convincing-as-the-cybertruck-being-a-boat",
@@ -222,31 +253,6 @@
       {
         "title": " Are you triggered by GTA 6's giant Paris advert? ",
         "url": "https://www.creativebloq.com/news/are-you-triggered-by-the-design-problem-with-gta-6s-giant-paris-advert",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Sydney Sweeney’s racy ad sparked a Gen Z culture war – and Powerade just piled in ",
-        "url": "https://www.creativebloq.com/news/sydney-sweeneys-racy-ad-sparked-a-gen-z-culture-war-and-powerade-just-piled-in",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Designers are cringing at Tate McRae’s new single cover ",
-        "url": "https://www.creativebloq.com/news/designers-are-cringing-at-tate-mcraes-new-single-cover",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This 3D artist explores fractured identities in a striking ZBrush sculpt ",
-        "url": "https://www.creativebloq.com/inspiration/this-3d-artist-explores-fractured-identities-in-a-striking-zbrush-sculpt",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apple Music’s ‘miserable’ new logo is giving mixed messages ",
-        "url": "https://www.creativebloq.com/news/apple-musics-miserable-new-logo-is-giving-mixed-messages",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Quote of the Day by LAIKA’s Nelson Lowry: \"When the challenges are that raw, you just make mistakes, and you learn from them\" ",
-        "url": "https://www.creativebloq.com/inspiration/quote-of-the-day-by-laikas-nelson-lowry-when-the-challenges-are-that-raw-you-just-make-mistakes-and-you-learn-from-them",
         "source": "Creative Bloq"
       }
     ],
@@ -284,6 +290,21 @@
     ],
     "gaming": [
       {
+        "title": "Stephen King Meets 'The Backrooms' in Syfy's Underrated 6-Part Anthology Series",
+        "url": "https://www.polygon.com/horror-anthology-creepypasta-halloween-countdown/",
+        "source": "Polygon"
+      },
+      {
+        "title": "37 Years Ago, 'Garfield' Suddenly Changed Genres With a Mind-Blowing Comic Strip",
+        "url": "https://www.polygon.com/garfield-alone/",
+        "source": "Polygon"
+      },
+      {
+        "title": "26 Years Ago, 'Buffy the Vampire Slayer' Officially Launched Its Most Controversial Couple",
+        "url": "https://www.polygon.com/buffy-the-vampire-slayer-season-5-episode-4-retrospective/",
+        "source": "Polygon"
+      },
+      {
         "title": "Event Habitat Dex and Pokédex list in Pokémon Pokopia",
         "url": "https://www.polygon.com/pokemon-pokopia-event-habitat-dex-pokedex-list-requirements-unlock/",
         "source": "Polygon"
@@ -301,21 +322,6 @@
       {
         "title": "10 Perfect Detective Thrillers That Get More Intense With Every Episode",
         "url": "https://www.polygon.com/best-mystery-tv-shows-worth-solving/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Beloved Fantasy Novel Series Redwall Sets Return After 16 Years",
-        "url": "https://www.polygon.com/redwall-fantasy-book-series-2027-release-orphans-of-mossflower/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Rockstar Officially Comments on GTA 6's Approach to Trump & COVID-19",
-        "url": "https://www.polygon.com/gta-6-trump-rockstar-games/",
-        "source": "Polygon"
-      },
-      {
-        "title": "8 Call of Duty Games Still Missing from Game Pass",
-        "url": "https://www.polygon.com/best-call-of-duty-games-missing-from-game-pass/",
         "source": "Polygon"
       }
     ],
