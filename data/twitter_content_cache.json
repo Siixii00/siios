@@ -1,51 +1,87 @@
 {
   "metadata": {
-    "last_updated": "2026-10-17T18:14:08.182335",
-    "total_items": 65
+    "last_updated": "2026-10-17T21:17:49.766651",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "Development statistics for the 7.2 kernel",
-        "url": "https://lwn.net/Articles/1088776/",
+        "title": "Bleached corals thrive within days when touching healthy neighbour",
+        "url": "https://www.nature.com/articles/d41586-026-03266-x",
         "source": "Hacker News",
-        "score": 42
+        "score": 170
       },
       {
-        "title": "Making chicken transparent using Dorito dust",
-        "url": "https://chillphysicsenjoyer.substack.com/p/making-chicken-transparent-using",
+        "title": "Chrome and Edge are removing XSLT: what breaks and what does not",
+        "url": "https://doctor-seo.net/en/blog/news/chrome-edge-removing-xslt/",
         "source": "Hacker News",
-        "score": 157
-      },
-      {
-        "title": "Furifont, a Japanese font that shows furigana",
-        "url": "https://furifont.antfu.me/",
-        "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "DeepSeek-v4.1-Flash-1017",
-        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-        "source": "Hacker News",
-        "score": 471
+        "score": 29
       },
       {
         "title": "The Commodore 64 hardware simulator: break chips and pins, see the results",
         "url": "https://github.com/antirez/c64-hw-simulator",
         "source": "Hacker News",
-        "score": 16
+        "score": 92
       },
       {
-        "title": "Solar surpasses nuclear power globally for first time",
-        "url": "https://www.pv-magazine.com/2026/09/29/solar-surpasses-nuclear-power-globally-for-first-time/",
+        "title": "Furifont, a Japanese font that shows furigana",
+        "url": "https://furifont.antfu.me/",
         "source": "Hacker News",
-        "score": 282
+        "score": 184
       },
       {
-        "title": "Rendering pretty sky in Around The World game",
-        "url": "https://frozenfractal.com/blog/2026/10/12/around-the-world-34-a-pretty-sky/",
+        "title": "Dam removals are bringing fish back across the northeastern United States",
+        "url": "https://www.smithsonianmag.com/science-nature/dam-removals-are-bringing-fish-back-across-the-northeastern-united-states-striking-down-one-tiny-barrier-at-a-time-180989679/",
         "source": "Hacker News",
-        "score": 85
+        "score": 79
+      },
+      {
+        "title": "Making chicken transparent using Dorito dust",
+        "url": "https://chillphysicsenjoyer.substack.com/p/making-chicken-transparent-using",
+        "source": "Hacker News",
+        "score": 216
+      },
+      {
+        "title": "DeepSeek-v4.1-Flash-1017",
+        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+        "source": "Hacker News",
+        "score": 587
+      },
+      {
+        "title": "Pele – Mermaid diagrams as themeable SVG",
+        "url": "https://pele.run/",
+        "source": "Hacker News",
+        "score": 106
+      },
+      {
+        "title": "Microsoft and CMU Team Up to Train Early Career Software Engineers",
+        "url": "https://www.cs.cmu.edu/news/2026/microsoft-cmu-praise",
+        "source": "Hacker News",
+        "score": 24
+      },
+      {
+        "title": "Pattern Matching Beats Narrative Reasoning",
+        "url": "https://blog.scottstevenson.net/p/pattern-matching-beats-narrative",
+        "source": "Hacker News",
+        "score": 23
+      },
+      {
+        "title": "Gold is now the top U.S. export",
+        "url": "https://www.numismaticnews.net/gold-now-top-u-s-export",
+        "source": "Hacker News",
+        "score": 127
+      },
+      {
+        "title": "Laser Fault Injection on a Budget: RP2350 Edition",
+        "url": "https://courk.cc/rp2350-challenge-laser",
+        "source": "Hacker News",
+        "score": 21
+      },
+      {
+        "title": "Source code of the Estonian online voting system",
+        "url": "https://github.com/valimised/ivxv",
+        "source": "Hacker News",
+        "score": 100
       },
       {
         "title": "Artie (YC S23) Is Hiring Enterprise AES and Senior Engineers",
@@ -54,46 +90,10 @@
         "score": 1
       },
       {
-        "title": "OpenAI discloses four more rogue incidents",
-        "url": "https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/",
+        "title": "Solar surpasses nuclear power globally for first time",
+        "url": "https://www.pv-magazine.com/2026/09/29/solar-surpasses-nuclear-power-globally-for-first-time/",
         "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "A Tudor life in the time of plague (2020)",
-        "url": "https://www.historytoday.com/archive/history-matters/tudor-life-time-plague",
-        "source": "Hacker News",
-        "score": 29
-      },
-      {
-        "title": "You could have invented transformers from memory",
-        "url": "https://alexwang.ai/posts/associative-memory/",
-        "source": "Hacker News",
-        "score": 425
-      },
-      {
-        "title": "Ultramarine 1 Flash",
-        "url": "https://www.paperinstruments.com/ultramarine",
-        "source": "Hacker News",
-        "score": 356
-      },
-      {
-        "title": "Show HN: High-quality duck audio synthesizer",
-        "url": "https://celphase.github.io/duck-pond/",
-        "source": "Hacker News",
-        "score": 12
-      },
-      {
-        "title": "The First Candid",
-        "url": "https://www.newyorker.com/magazine/2026/10/19/the-first-candid",
-        "source": "Hacker News",
-        "score": 35
-      },
-      {
-        "title": "Show HN: Esp32sim – Run ESP32 firmware in the browser",
-        "url": "https://github.com/mikroverk/esp32sim",
-        "source": "Hacker News",
-        "score": 52
+        "score": 399
       }
     ],
     "ai": [
@@ -101,97 +101,81 @@
         "title": "Furifont, a Japanese font that shows furigana",
         "url": "https://furifont.antfu.me/",
         "source": "Hacker News AI",
-        "score": 63
-      },
-      {
-        "title": "OpenAI discloses four more rogue incidents",
-        "url": "https://fortune.com/2026/10/16/openai-discloses-four-more-rogue-incidents-involving-financial-medical-and-government-data/",
-        "source": "Hacker News AI",
-        "score": 63
-      },
-      {
-        "title": "You could have invented transformers from memory",
-        "url": "https://alexwang.ai/posts/associative-memory/",
-        "source": "Hacker News AI",
-        "score": 425
-      },
-      {
-        "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
-        "url": "https://llmspeed.dev/",
-        "source": "Hacker News AI",
-        "score": 204
+        "score": 184
       },
       {
         "title": "Pele – Mermaid diagrams as themeable SVG",
         "url": "https://pele.run/",
         "source": "Hacker News AI",
-        "score": 10
+        "score": 106
       },
       {
-        "title": "Tell HN: Remember to migrate away from .name domain",
-        "url": "https://news.ycombinator.com/item?id=50089577",
+        "title": "Microsoft and CMU Team Up to Train Early Career Software Engineers",
+        "url": "https://www.cs.cmu.edu/news/2026/microsoft-cmu-praise",
         "source": "Hacker News AI",
-        "score": 106
+        "score": 24
+      },
+      {
+        "title": "You could have invented transformers from memory",
+        "url": "https://alexwang.ai/posts/associative-memory/",
+        "source": "Hacker News AI",
+        "score": 458
+      },
+      {
+        "title": "Codex is EATING my Mac's disk space",
+        "url": "https://github.com/openai/codex/issues/25921",
+        "source": "Hacker News AI",
+        "score": 14
+      },
+      {
+        "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
+        "url": "https://llmspeed.dev/",
+        "source": "Hacker News AI",
+        "score": 223
       },
       {
         "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
         "url": "https://github.com/cobanov/PS5LM",
         "source": "Hacker News AI",
-        "score": 352
+        "score": 364
       },
       {
-        "title": "Amazon uses AI to monitor union risk in UK warehouses",
-        "url": "https://www.opendemocracy.net/amazon-ai-surveillance-monitor-union-activity-uk-warehouses-birmingham-coventry-atlas-sutton-coldfield/",
+        "title": "Tell HN: Remember to migrate away from .name domain",
+        "url": "https://news.ycombinator.com/item?id=50089577",
         "source": "Hacker News AI",
-        "score": 94
+        "score": 119
       },
       {
         "title": "Claude reveals ECDSA curve origins",
         "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
         "source": "Hacker News AI",
-        "score": 989
-      },
-      {
-        "title": "Designing more efficient quantum circuits with Claude",
-        "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
-        "source": "Hacker News AI",
-        "score": 165
-      },
-      {
-        "title": "Nine-Inch Snails",
-        "url": "https://www.theatlantic.com/science/2026/10/giant-african-snails-florida-invasion/688850/",
-        "source": "Hacker News AI",
-        "score": 107
-      },
-      {
-        "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
-        "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
-        "source": "Hacker News AI",
-        "score": 572
-      },
-      {
-        "title": "How the Claude Code team does code review",
-        "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
-        "source": "Hacker News AI",
-        "score": 444
-      },
-      {
-        "title": "Stolen Renoir paintings found hidden, and damaged, behind cinder block wall",
-        "url": "https://www.cbsnews.com/news/stolen-renoir-paintings-found-behind-wall-france/",
-        "source": "Hacker News AI",
-        "score": 138
-      },
-      {
-        "title": "JetBrains Junie Local: An agent you own, not one you rent",
-        "url": "https://junie.jetbrains.com/",
-        "source": "Hacker News AI",
-        "score": 5
+        "score": 1009
       }
     ],
     "news": [
       {
+        "title": "Violent clashes, looting and buildings ablaze as hundreds arrested after France protests",
+        "url": "https://www.bbc.co.uk/news/articles/c6d937wedj7jo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Trump waives several Russia sanctions as row with Zelensky intensifies",
         "url": "https://www.bbc.co.uk/news/articles/cxr5yvzv7rp0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "European diplomats attacked by Israeli settlers in West Bank",
+        "url": "https://www.bbc.co.uk/news/articles/c962ydpmjm3zo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Anti-government protesters battle with police in Albania ",
+        "url": "https://www.bbc.co.uk/news/articles/crwydey50xeno?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "At least 17 dead in crush at Hindu festival event in India",
+        "url": "https://www.bbc.co.uk/news/articles/c820vwq7qg2ko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -202,26 +186,6 @@
       {
         "title": "Three men jailed for 158 years each for murdering Australian and US surfers in Mexico",
         "url": "https://www.bbc.co.uk/news/articles/c3kgqjkzw29wo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Brazil sees record fall in Amazon deforestation as key election looms",
-        "url": "https://www.bbc.co.uk/news/articles/cqe8rzg6zl00o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Nursery owner in China jailed for life after hundreds of children poisoned",
-        "url": "https://www.bbc.co.uk/news/articles/cqe9lx54g7x9o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Rare pink diamond goes on display in France 100 years after amateur heist",
-        "url": "https://www.bbc.co.uk/news/articles/c61m4zkx47vlo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Pope discharged from hospital days after lung cancer surgery",
-        "url": "https://www.bbc.co.uk/news/articles/c5x2vkddrkrko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -301,6 +265,21 @@
     ],
     "gaming": [
       {
+        "title": "Pokémon Go Minior Shower schedule",
+        "url": "https://www.polygon.com/pokemon-go-minior-shower-schedule-how-to-find-shiny/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Years Later, One Game’s Blood Sacrifice Mechanic Still Haunts Me",
+        "url": "https://www.polygon.com/inscryption-retrospective-blood-sacrifice/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Tim Burton's 77-Minute Stop-Motion Masterpiece Is Officially Back on Streaming",
+        "url": "https://www.polygon.com/forget-wildwood-tim-burton-corpse-bride/",
+        "source": "Polygon"
+      },
+      {
         "title": "The Zelda: Ocarina of Time Remake Sounds Meaningfully Better Than the Original",
         "url": "https://www.polygon.com/switchboard-zelda-ocarina-of-time-previews/",
         "source": "Polygon"
@@ -318,21 +297,6 @@
       {
         "title": "True Detective Season 5 to feature the best starring duo since Matthew McConaughey and Woody Harrelson",
         "url": "https://www.polygon.com/true-detective-season-5-casting/",
-        "source": "Polygon"
-      },
-      {
-        "title": "US Representative Introduces Plan To Preserve Digital Game Ownership",
-        "url": "https://www.polygon.com/power-to-the-players-act-ritchie-torres/",
-        "source": "Polygon"
-      },
-      {
-        "title": "22 Years Ago, One Perfect Twist Changed TV's Greatest Sci-Fi Series Forever",
-        "url": "https://www.polygon.com/lost-walkabout-locke-twist-22-anniversary/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Star Wars Zero Company Finally Makes Starting A New Campaign Worth It",
-        "url": "https://www.polygon.com/star-wars-zero-company-second-patch-reaction/",
         "source": "Polygon"
       }
     ],
