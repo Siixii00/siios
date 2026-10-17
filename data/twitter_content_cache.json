@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-17T01:07:53.329801",
-    "total_items": 63
+    "last_updated": "2026-10-17T06:40:28.622895",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
+        "title": "Ultramarine 1 Flash",
+        "url": "https://www.paperinstruments.com/ultramarine",
+        "source": "Hacker News",
+        "score": 154
+      },
+      {
         "title": "Tesla Roadster",
         "url": "https://www.tesla.com/roadster",
         "source": "Hacker News",
-        "score": 1165
+        "score": 1342
       },
       {
         "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
         "url": "https://github.com/cobanov/PS5LM",
         "source": "Hacker News",
-        "score": 185
+        "score": 261
+      },
+      {
+        "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
+        "url": "https://llmspeed.dev/",
+        "source": "Hacker News",
+        "score": 13
       },
       {
         "title": "Claude reveals ECDSA curve origins",
         "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
         "source": "Hacker News",
-        "score": 654
-      },
-      {
-        "title": "FLUX 3 Image Klein",
-        "url": "https://bfl.ai/blog/flux-3-image-klein",
-        "source": "Hacker News",
-        "score": 105
-      },
-      {
-        "title": "Waymo in Toronto",
-        "url": "https://waymo.com/blog/2026/10/waymo-in-toronto/",
-        "source": "Hacker News",
-        "score": 263
-      },
-      {
-        "title": "Flexport Is Hiring a Biz Ops Leader in Office of CEO",
-        "url": "https://www.flexport.com/company/careers/",
-        "source": "Hacker News",
-        "score": 1
+        "score": 811
       },
       {
         "title": "You could have invented transformers from memory",
         "url": "https://alexwang.ai/posts/associative-memory/",
         "source": "Hacker News",
-        "score": 127
+        "score": 238
       },
       {
-        "title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
-        "url": "https://www.arrl.org/arrlletterissue?issue=2026-10-15#eBay-Restricts-Listings-of-Radio-Equipment_-But-Exempts-Ham-Band-Only-Gear",
+        "title": "California is building a $400M shield for Yosemite's most dangerous highway",
+        "url": "https://www.sfchronicle.com/california/article/yosemite-national-park-highway-140-22463847.php",
         "source": "Hacker News",
-        "score": 163
+        "score": 30
       },
       {
-        "title": "Wireless magnetic millirobots that deliver medicine inside the beating heart",
-        "url": "https://hub.jhu.edu/2026/10/12/magnetic-millirobots-cardiac-treatment/",
+        "title": "FLUX 3 Image Klein",
+        "url": "https://bfl.ai/blog/flux-3-image-klein",
         "source": "Hacker News",
-        "score": 64
+        "score": 150
       },
       {
-        "title": "Designing more efficient quantum circuits with Claude",
-        "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
+        "title": "0/1 Knapsack Problem in PyTorch",
+        "url": "https://jedrzej.maczan.pl/2025_11_21_dp_knapsack_sliding_hirschberg",
         "source": "Hacker News",
-        "score": 96
+        "score": 6
       },
       {
         "title": "Apple ML Research: Muse Spark Open with MLX on Mac Studio",
         "url": "https://machinelearning.apple.com/research/mlx-distributed-inference",
         "source": "Hacker News",
-        "score": 263
+        "score": 300
+      },
+      {
+        "title": "eBay Restricts Listings of Radio Equipment, but Exempts Ham-Band-Only Gear",
+        "url": "https://www.arrl.org/arrlletterissue?issue=2026-10-15#eBay-Restricts-Listings-of-Radio-Equipment_-But-Exempts-Ham-Band-Only-Gear",
+        "source": "Hacker News",
+        "score": 210
+      },
+      {
+        "title": "Butlerian Jihad",
+        "url": "https://dune.fandom.com/wiki/Butlerian_Jihad",
+        "source": "Hacker News",
+        "score": 170
       },
       {
         "title": "JPEG XL vs. AVIF for web use-cases",
         "url": "https://jakearchibald.com/2026/jpeg-xl-vs-avif/",
         "source": "Hacker News",
-        "score": 195
+        "score": 236
       },
       {
-        "title": "C++26: The New Debugging Header",
-        "url": "https://www.sandordargo.com/blog/2026/09/30/cpp26-debugging",
+        "title": "Designing more efficient quantum circuits with Claude",
+        "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
         "source": "Hacker News",
-        "score": 63
+        "score": 127
       },
       {
-        "title": "Nine-Inch Snails",
-        "url": "https://www.theatlantic.com/science/2026/10/giant-african-snails-florida-invasion/688850/",
+        "title": "A story of WiFi secrets, UART lockdowns and a damaged flash memory chip",
+        "url": "https://adepts.of0x.cc/eufy-homestation2-firmware/",
         "source": "Hacker News",
-        "score": 19
-      },
-      {
-        "title": "How the Claude Code team does code review",
-        "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
-        "source": "Hacker News",
-        "score": 227
+        "score": 36
       }
     ],
     "ai": [
@@ -101,91 +101,90 @@
         "title": "Llama.cpp on a jailbroken PS5: run any GGUF model natively on the console",
         "url": "https://github.com/cobanov/PS5LM",
         "source": "Hacker News AI",
-        "score": 185
+        "score": 261
+      },
+      {
+        "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
+        "url": "https://llmspeed.dev/",
+        "source": "Hacker News AI",
+        "score": 13
       },
       {
         "title": "Claude reveals ECDSA curve origins",
         "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
         "source": "Hacker News AI",
-        "score": 654
+        "score": 811
       },
       {
         "title": "You could have invented transformers from memory",
         "url": "https://alexwang.ai/posts/associative-memory/",
         "source": "Hacker News AI",
-        "score": 127
+        "score": 238
       },
       {
         "title": "Designing more efficient quantum circuits with Claude",
         "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits",
         "source": "Hacker News AI",
-        "score": 96
-      },
-      {
-        "title": "Nine-Inch Snails",
-        "url": "https://www.theatlantic.com/science/2026/10/giant-african-snails-florida-invasion/688850/",
-        "source": "Hacker News AI",
-        "score": 19
-      },
-      {
-        "title": "How the Claude Code team does code review",
-        "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
-        "source": "Hacker News AI",
-        "score": 227
+        "score": 127
       },
       {
         "title": "90% of US working hours are spent on tasks not covered well by AI benchmarks",
         "url": "https://www.mercor.com/research/labor-index/benchmark-map/",
         "source": "Hacker News AI",
-        "score": 391
+        "score": 464
+      },
+      {
+        "title": "How the Claude Code team does code review",
+        "url": "https://claude.dev/blog/solving-code-review-at-anthropic/",
+        "source": "Hacker News AI",
+        "score": 310
       },
       {
         "title": "Show HN: Gemini 4 Argon plays StarCraft",
         "url": "https://starskirmish.com/bench/v0-2/",
         "source": "Hacker News AI",
-        "score": 184
+        "score": 211
+      },
+      {
+        "title": "Nine-Inch Snails",
+        "url": "https://www.theatlantic.com/science/2026/10/giant-african-snails-florida-invasion/688850/",
+        "source": "Hacker News AI",
+        "score": 49
       },
       {
         "title": "Stolen Renoir paintings found hidden, and damaged, behind cinder block wall",
         "url": "https://www.cbsnews.com/news/stolen-renoir-paintings-found-behind-wall-france/",
         "source": "Hacker News AI",
-        "score": 102
+        "score": 118
       },
       {
         "title": "Show HN: Wonderhop – A daily game: guess what most people say, or what none do",
         "url": "https://wonderhop.io/en/",
         "source": "Hacker News AI",
-        "score": 59
+        "score": 86
+      },
+      {
+        "title": "Coconuts in Medieval Britain (2015)",
+        "url": "https://www.themarysue.com/monty-python-holy-grail-coconuts/",
+        "source": "Hacker News AI",
+        "score": 16
       },
       {
         "title": "Anthropic assigned highest junk credit rating in June",
         "url": "https://www.ft.com/content/5a310aee-f555-4266-874c-b1b4db20186d",
         "source": "Hacker News AI",
-        "score": 208
-      },
-      {
-        "title": "How to make System 1 LLMs show System 2 competencies?",
-        "url": "https://onlinelibrary.wiley.com/doi/epdf/10.1002/aaai.70113",
-        "source": "Hacker News AI",
-        "score": 48
-      },
-      {
-        "title": "AI-assisted PCB design for KiCad 10",
-        "url": "https://github.com/mixelpixx/Konnect",
-        "source": "Hacker News AI",
-        "score": 127
-      },
-      {
-        "title": "Show HN: rStation – A shared research lab for your AI agents",
-        "url": "https://rstation.ai/",
-        "source": "Hacker News AI",
-        "score": 50
+        "score": 242
       }
     ],
     "news": [
       {
-        "title": "Inside Ukrainian offensive pushing Russia back - with Starlink playing a key role",
-        "url": "https://www.bbc.co.uk/news/articles/cvx284w16z1po?at_medium=RSS&at_campaign=rss",
+        "title": "Brazil sees record fall in Amazon deforestation as key election looms",
+        "url": "https://www.bbc.co.uk/news/articles/cqe8rzg6zl00o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Trump waives several Russia sanctions as row with Zelensky intensifies",
+        "url": "https://www.bbc.co.uk/news/articles/cxr5yvzv7rp0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -194,28 +193,23 @@
         "source": "BBC World"
       },
       {
+        "title": "Three men jailed for 158 years each for murdering Australian and US surfers in Mexico",
+        "url": "https://www.bbc.co.uk/news/articles/c3kgqjkzw29wo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Inside Ukrainian offensive pushing Russia back - with Starlink playing a key role",
+        "url": "https://www.bbc.co.uk/news/articles/cvx284w16z1po?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Palestinians and US journalist injured by Israeli settlers in West Bank harvest attack",
         "url": "https://www.bbc.co.uk/news/articles/c65ynk7212vqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Katie Zacharia leaving her White House role less than five days on the job",
+        "title": "Katie Zacharia leaving White House role less than five days into job",
         "url": "https://www.bbc.co.uk/news/articles/c32l4ekpvzl8o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Trump 'completely wrong' to restrict support for Ukraine, Italian minister tells BBC",
-        "url": "https://www.bbc.co.uk/news/articles/c64g18ljjd8do?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Trial of German steakhouse heiress that sparked a huge spy scandal",
-        "url": "https://www.bbc.co.uk/news/articles/cwvgdn3d656vo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Pope pictured for first time since surgery and cancer diagnosis",
-        "url": "https://www.bbc.co.uk/news/articles/cw146ej00yn7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -290,6 +284,31 @@
     ],
     "gaming": [
       {
+        "title": "Event Habitat Dex and Pokédex list in Pokémon Pokopia",
+        "url": "https://www.polygon.com/pokemon-pokopia-event-habitat-dex-pokedex-list-requirements-unlock/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Pokémon Pokopia event schedule",
+        "url": "https://www.polygon.com/pokemon-pokopia-event-schedule-holiday-dates/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Pokémon Pokopia 'Pumpkaboo's Sweet Surprises' event guide",
+        "url": "https://www.polygon.com/pokemon-pokopia-pumpkaboos-sweet-surprises-gourgeist-habitats-items/",
+        "source": "Polygon"
+      },
+      {
+        "title": "10 Perfect Detective Thrillers That Get More Intense With Every Episode",
+        "url": "https://www.polygon.com/best-mystery-tv-shows-worth-solving/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Beloved Fantasy Novel Series Redwall Sets Return After 16 Years",
+        "url": "https://www.polygon.com/redwall-fantasy-book-series-2027-release-orphans-of-mossflower/",
+        "source": "Polygon"
+      },
+      {
         "title": "Rockstar Officially Comments on GTA 6's Approach to Trump & COVID-19",
         "url": "https://www.polygon.com/gta-6-trump-rockstar-games/",
         "source": "Polygon"
@@ -297,31 +316,6 @@
       {
         "title": "8 Call of Duty Games Still Missing from Game Pass",
         "url": "https://www.polygon.com/best-call-of-duty-games-missing-from-game-pass/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Resident Evil 2 on Switch 2 Is My New Favorite Way to Play Capcom's Horror Masterpiece",
-        "url": "https://www.polygon.com/resident-evil-2-switch-2-impressions/",
-        "source": "Polygon"
-      },
-      {
-        "title": "9 Most Perfect Single-Player Zelda Clones Nobody Plays, Ranked ",
-        "url": "https://www.polygon.com/best-zelda-likes-nobody-plays-ranked/",
-        "source": "Polygon"
-      },
-      {
-        "title": "10 New Movies to Watch This Weekend on Netflix, Prime Video, and HBO Max (October 16-18)",
-        "url": "https://www.polygon.com/new-movies-streaming-this-weekend-netflix-october-16-18/",
-        "source": "Polygon"
-      },
-      {
-        "title": "8 New TV Shows to Watch This Weekend on Netflix, Disney, and Hulu (October 16-18)",
-        "url": "https://www.polygon.com/new-tv-shows-streaming-this-weekend-netflix-october-16-18/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Every DC Studios Movie and TV Show in Coming Through 2028 (and Beyond)",
-        "url": "https://www.polygon.com/dc-movies-tv-shows-dcu-release-calendar-james-gunn/",
         "source": "Polygon"
       }
     ],
