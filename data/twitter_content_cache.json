@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-18T08:38:14.843734",
-    "total_items": 57
+    "last_updated": "2026-10-18T13:01:49.502858",
+    "total_items": 59
   },
   "content": {
     "tech": [
@@ -9,91 +9,91 @@
         "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
         "url": "https://api-docs.deepseek.com/guides/search/",
         "source": "Hacker News",
-        "score": 117
+        "score": 295
       },
       {
-        "title": "Show HN: Sphinx – A hook that quizzes you on your AI's code before shipping",
-        "url": "https://sphinx-six-theta.vercel.app/",
+        "title": "Legal experts warn Meta's new terms still grant broad scraping permissions",
+        "url": "https://www.niemanlab.org/2026/10/legal-experts-warn-metas-new-terms-still-grant-broad-scraping-permissions-despite-language-changes/",
         "source": "Hacker News",
-        "score": 103
+        "score": 32
+      },
+      {
+        "title": "Open MicroManipulator – A sub-micrometer 3D motion control plattform",
+        "url": "https://github.com/0x23/MicroManipulatorStepper",
+        "source": "Hacker News",
+        "score": 22
+      },
+      {
+        "title": "Parser Combinators",
+        "url": "https://t3.at/blog/2026-10-17-parser-combinators/",
+        "source": "Hacker News",
+        "score": 67
       },
       {
         "title": "How the Elizabeth Holmes documentary “You Can See Everything” is deceiving",
         "url": "https://www.readtheprofile.com/p/elizabeth-holmes-documentary-you-can-see-everything",
         "source": "Hacker News",
-        "score": 115
+        "score": 193
+      },
+      {
+        "title": "Show HN: Sphinx – A hook that quizzes you on your AI's code before shipping",
+        "url": "https://sphinx-six-theta.vercel.app/",
+        "source": "Hacker News",
+        "score": 168
       },
       {
         "title": "Bleached corals thrive within days when touching healthy neighbour",
         "url": "https://www.nature.com/articles/d41586-026-03266-x",
         "source": "Hacker News",
-        "score": 434
+        "score": 484
+      },
+      {
+        "title": "Teal – A statically-typed dialect of Lua",
+        "url": "https://teal-language.org/",
+        "source": "Hacker News",
+        "score": 64
+      },
+      {
+        "title": "Regex visualized as 3D marble run",
+        "url": "https://www.regexmarblerun.com/",
+        "source": "Hacker News",
+        "score": 26
       },
       {
         "title": "Lean now ships with verified kernels",
         "url": "https://leodemoura.github.io/blog/2026-10-15-lean-now-ships-with-verified-kernels/",
         "source": "Hacker News",
-        "score": 123
-      },
-      {
-        "title": "Dam removals are bringing fish back across the northeastern United States",
-        "url": "https://www.smithsonianmag.com/science-nature/dam-removals-are-bringing-fish-back-across-the-northeastern-united-states-striking-down-one-tiny-barrier-at-a-time-180989679/",
-        "source": "Hacker News",
-        "score": 266
-      },
-      {
-        "title": "Matthew Prince on why Cloudflare offers a free version and always will (2016)",
-        "url": "https://webmasters.stackexchange.com/questions/88659/how-can-cloudflare-offer-a-free-cdn-with-unlimited-bandwidth/88685#88685",
-        "source": "Hacker News",
-        "score": 80
+        "score": 160
       },
       {
         "title": "DeepSeek-v4.1-Flash-1017",
         "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
         "source": "Hacker News",
-        "score": 844
+        "score": 893
       },
       {
         "title": "Pele – Mermaid diagrams as themeable SVG",
         "url": "https://pele.run/",
         "source": "Hacker News",
-        "score": 411
+        "score": 479
       },
       {
-        "title": "Fun Extending the C Preprocessor",
-        "url": "https://www.davidpriver.com/Fun-Extending-the-C-Preprocessor.html",
+        "title": "Dam removals are bringing fish back across the northeastern United States",
+        "url": "https://www.smithsonianmag.com/science-nature/dam-removals-are-bringing-fish-back-across-the-northeastern-united-states-striking-down-one-tiny-barrier-at-a-time-180989679/",
         "source": "Hacker News",
-        "score": 19
+        "score": 298
       },
       {
         "title": "Furifont, a Japanese font that shows furigana",
         "url": "https://furifont.antfu.me/",
         "source": "Hacker News",
-        "score": 336
-      },
-      {
-        "title": "Notes on the Complex Roots of Unity",
-        "url": "https://eli.thegreenplace.net/2026/notes-on-the-complex-roots-of-unity/",
-        "source": "Hacker News",
-        "score": 17
+        "score": 363
       },
       {
         "title": "Southern ground hornbill gets 3D printed beak prostheses at Artis Zoo",
         "url": "https://nltimes.nl/2026/10/15/world-first-southern-ground-hornbill-gets-3d-printed-beak-prostheses-artis-zoo",
         "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Interactive Linear Programming in the Browser",
-        "url": "https://lpviz.net/",
-        "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "Making chicken transparent using Dorito dust",
-        "url": "https://chillphysicsenjoyer.substack.com/p/making-chicken-transparent-using",
-        "source": "Hacker News",
-        "score": 300
+        "score": 45
       }
     ],
     "ai": [
@@ -101,60 +101,72 @@
         "title": "Show HN: Sphinx – A hook that quizzes you on your AI's code before shipping",
         "url": "https://sphinx-six-theta.vercel.app/",
         "source": "Hacker News AI",
-        "score": 103
+        "score": 168
       },
       {
         "title": "Pele – Mermaid diagrams as themeable SVG",
         "url": "https://pele.run/",
         "source": "Hacker News AI",
-        "score": 411
+        "score": 479
       },
       {
         "title": "Furifont, a Japanese font that shows furigana",
         "url": "https://furifont.antfu.me/",
         "source": "Hacker News AI",
-        "score": 336
+        "score": 363
+      },
+      {
+        "title": "Lorenz and Little: How Much Does Your Tail Cost?",
+        "url": "https://brooker.co.za/blog/2026/07/29/lorenz-and-little.html",
+        "source": "Hacker News AI",
+        "score": 6
       },
       {
         "title": "You could have invented transformers from memory",
         "url": "https://alexwang.ai/posts/associative-memory/",
         "source": "Hacker News AI",
-        "score": 555
+        "score": 581
+      },
+      {
+        "title": "A History of Curves and Surfaces in Computer Aided Geometric Design [pdf]",
+        "url": "https://math.pku.edu.cn/teachers/jiangm/courses/CG/Lectures/spline-history.pdf",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "Codex Desktop continuously generates Crashpad pending dumps",
         "url": "https://github.com/openai/codex/issues/25921",
         "source": "Hacker News AI",
-        "score": 127
+        "score": 143
       },
       {
         "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
         "url": "https://llmspeed.dev/",
         "source": "Hacker News AI",
-        "score": 286
-      },
-      {
-        "title": "Tell HN: Remember to migrate away from .name domain",
-        "url": "https://news.ycombinator.com/item?id=50089577",
-        "source": "Hacker News AI",
-        "score": 151
+        "score": 308
       },
       {
         "title": "Claude reveals ECDSA curve origins",
         "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
         "source": "Hacker News AI",
-        "score": 1034
+        "score": 1041
+      },
+      {
+        "title": "Tell HN: Remember to migrate away from .name domain",
+        "url": "https://news.ycombinator.com/item?id=50089577",
+        "source": "Hacker News AI",
+        "score": 155
       }
     ],
     "news": [
       {
-        "title": "Violent clashes, looting and buildings ablaze in France as more than 1,200 arrested after protests",
-        "url": "https://www.bbc.co.uk/news/articles/c6d937wedj7jo?at_medium=RSS&at_campaign=rss",
+        "title": "Burnt out cars and shattered glass on Paris streets after protests turn to riots and looting",
+        "url": "https://www.bbc.co.uk/news/articles/c574pdzl0k4no?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Photos show luxury boat with 50m pool and water slides near Kim Jong Un's summer retreat",
-        "url": "https://www.bbc.co.uk/news/articles/cmy4xnyyg1lyo?at_medium=RSS&at_campaign=rss",
+        "title": "Oil facilities hit in deadly overnight attack on St Petersburg",
+        "url": "https://www.bbc.co.uk/news/articles/c3eweygrjzd7o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -173,12 +185,27 @@
         "source": "BBC World"
       },
       {
-        "title": "Anti-government protesters battle with police in Albania ",
+        "title": "Anti-government protesters battle with police in Albania",
         "url": "https://www.bbc.co.uk/news/articles/crwydey50xeno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Lily Allen’s provocative poster is a massive middle finger to the Grammys ",
+        "url": "https://www.creativebloq.com/news/lily-allens-provocative-poster-is-a-massive-middle-finger-to-the-grammys",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This weird legal case could change how we think of copyright forever ",
+        "url": "https://www.creativebloq.com/news/this-weird-legal-case-could-change-how-we-think-of-copyright-forever",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " \"I think of brushstrokes as having a rhythm\" – Isabella Nalin Fais on her career in concept art ",
+        "url": "https://www.creativebloq.com/features/i-think-of-brushstrokes-as-having-a-rhythm-isabella-nalin-fais-on-her-career-in-concept-art",
+        "source": "Creative Bloq"
+      },
       {
         "title": " With over $400 off, there's finally a decent deal on the 2026 M5 Pro MacBook Pro ",
         "url": "https://www.creativebloq.com/deals/with-over-usd400-off-theres-finally-a-decent-deal-on-the-2026-m5-pro-macbook-pro",
@@ -197,21 +224,6 @@
       {
         "title": " A fake Mia Goth selfie fooled the internet, and AI slop is the least of it ",
         "url": "https://www.creativebloq.com/news/a-fake-mia-goth-selfie-fooled-the-internet-and-ai-slop-is-the-least-of-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Ikea throws shade at Tesla with \"safe and affordable\" flying car ",
-        "url": "https://www.creativebloq.com/news/ikea-throws-shade-at-tesla-with-safe-and-affordable-flying-car",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Wired headphones are suddenly all the rage, and the best we've tested has £40 off ",
-        "url": "https://www.creativebloq.com/deals/wired-headphones-are-suddenly-all-the-rage-and-the-best-weve-tested-has-gbp40-off",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Olivia Rodrigo’s expectations music video hit with AI allegations ",
-        "url": "https://www.creativebloq.com/news/olivia-rodrigos-expectations-music-video-hit-with-ai-allegations",
         "source": "Creative Bloq"
       }
     ],
@@ -254,6 +266,31 @@
     ],
     "gaming": [
       {
+        "title": "Jessica Rothe Officially Confirms Return Plans for Hit Time-Loop Thriller Trilogy",
+        "url": "https://www.polygon.com/happy-death-day-3-jessica-rothe-scream-queen/",
+        "source": "Polygon"
+      },
+      {
+        "title": "America's Dominance in The Game Awards Is Officially Over",
+        "url": "https://www.polygon.com/the-game-awards-goty-jury-usa/",
+        "source": "Polygon"
+      },
+      {
+        "title": "13 Years Ago, Rockstar Suffered a Leak Worse Than GTA 6",
+        "url": "https://www.polygon.com/gta-5-leak-gta-6-reddit-vine-reactions-ban-sony-rockstar-response/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Before Dark Souls, FromSoftware’s Forgotten PS1 Horror Game Was a Haunting Exercise in Empathy",
+        "url": "https://www.polygon.com/fromsoftware-echo-night-ps1/",
+        "source": "Polygon"
+      },
+      {
+        "title": "The 10 Best Horror Books of All Time According to Goodreads, Ranked",
+        "url": "https://www.polygon.com/10-best-horror-books-ranked-goodreads/",
+        "source": "Polygon"
+      },
+      {
         "title": "Stephen King and Stanley Kubrick's Near-Perfect Psychological Thriller Is Officially Back on Streaming",
         "url": "https://www.polygon.com/stephen-king-the-shining-on-hbo-max/",
         "source": "Polygon"
@@ -261,31 +298,6 @@
       {
         "title": "60 Years Ago, the Best Charlie Brown Quote Was So Perfect It Made It Into the Movie",
         "url": "https://www.polygon.com/peanuts-best-charlie-brown-quote-ever/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Every Major Game Releasing in November That Isn’t GTA 6",
-        "url": "https://www.polygon.com/november-2026-game-releases/",
-        "source": "Polygon"
-      },
-      {
-        "title": "42 Years Later, the Definitive Sci-Fi Action Thriller is Free to Watch on YouTube",
-        "url": "https://www.polygon.com/the-terminator-1984-free-on-youtube/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GTA: San Andreas’ Bigfoot myth is a classic urban legend",
-        "url": "https://www.polygon.com/gta-san-andreas-bigfoot-myth/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Game of Thrones Prequel The Mad King Officially Returns in 2027",
-        "url": "https://www.polygon.com/game-of-thrones-the-mad-king-prequel-2027-return/",
-        "source": "Polygon"
-      },
-      {
-        "title": "44 Years Later, Steven Spielberg's Scariest Movie of All Time Is Officially Back on Streaming",
-        "url": "https://www.polygon.com/poltergeist-tobe-hooper-steven-spielberg-on-hbo-max/",
         "source": "Polygon"
       }
     ],
