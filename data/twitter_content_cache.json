@@ -1,161 +1,173 @@
 {
   "metadata": {
-    "last_updated": "2026-10-18T13:01:49.502858",
-    "total_items": 59
+    "last_updated": "2026-10-18T17:06:55.731763",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
-        "url": "https://api-docs.deepseek.com/guides/search/",
+        "title": "RepRapMicron",
+        "url": "https://github.com/VikOlliver/RepRapMicron/wiki",
         "source": "Hacker News",
-        "score": 295
+        "score": 187
+      },
+      {
+        "title": "macOS 15.8.2 Breaks OpenGL",
+        "url": "https://developer.apple.com/forums/verify-human/verify.html?next=/forums/thread/850550",
+        "source": "Hacker News",
+        "score": 135
+      },
+      {
+        "title": "Someone Behind the Software",
+        "url": "https://karrisaarinen.com/posts/someone-behind-the-software/",
+        "source": "Hacker News",
+        "score": 17
+      },
+      {
+        "title": "Sigsaly: Churchill's top secret hotline to the President",
+        "url": "https://www.iwm.org.uk/history/iwm/cwr/telephone",
+        "source": "Hacker News",
+        "score": 24
+      },
+      {
+        "title": "Java sealed classes and exhaustive pattern matching",
+        "url": "https://neilmadden.blog/2026/04/24/java-sealed-classes-and-exhaustive-pattern-matching/",
+        "source": "Hacker News",
+        "score": 38
       },
       {
         "title": "Legal experts warn Meta's new terms still grant broad scraping permissions",
         "url": "https://www.niemanlab.org/2026/10/legal-experts-warn-metas-new-terms-still-grant-broad-scraping-permissions-despite-language-changes/",
         "source": "Hacker News",
-        "score": 32
+        "score": 160
+      },
+      {
+        "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
+        "url": "https://api-docs.deepseek.com/guides/search/",
+        "source": "Hacker News",
+        "score": 418
+      },
+      {
+        "title": "Show HN: The Zelda timeline to catch up before the Ocarina of Time remake",
+        "url": "https://legendofhyrule.com/",
+        "source": "Hacker News",
+        "score": 80
       },
       {
         "title": "Open MicroManipulator – A sub-micrometer 3D motion control plattform",
         "url": "https://github.com/0x23/MicroManipulatorStepper",
         "source": "Hacker News",
-        "score": 22
+        "score": 120
+      },
+      {
+        "title": "The Intel 8087 chip: floating-point addition and subtraction",
+        "url": "https://www.righto.com/2026/10/8087-addition-subtraction-microcode.html",
+        "source": "Hacker News",
+        "score": 9
+      },
+      {
+        "title": "How Far Will AI Assistants Go for a Refund They Can't Get?",
+        "url": "https://www.vals.ai/blogs/impossible-refund",
+        "source": "Hacker News",
+        "score": 43
       },
       {
         "title": "Parser Combinators",
         "url": "https://t3.at/blog/2026-10-17-parser-combinators/",
         "source": "Hacker News",
-        "score": 67
+        "score": 153
+      },
+      {
+        "title": "The Electronic Disturbance Theater and Electronic Civil Disobedience",
+        "url": "https://www.thing.net/~rdom/ecd/EDTECD.html",
+        "source": "Hacker News",
+        "score": 20
       },
       {
         "title": "How the Elizabeth Holmes documentary “You Can See Everything” is deceiving",
         "url": "https://www.readtheprofile.com/p/elizabeth-holmes-documentary-you-can-see-everything",
         "source": "Hacker News",
-        "score": 193
-      },
-      {
-        "title": "Show HN: Sphinx – A hook that quizzes you on your AI's code before shipping",
-        "url": "https://sphinx-six-theta.vercel.app/",
-        "source": "Hacker News",
-        "score": 168
+        "score": 267
       },
       {
         "title": "Bleached corals thrive within days when touching healthy neighbour",
         "url": "https://www.nature.com/articles/d41586-026-03266-x",
         "source": "Hacker News",
-        "score": 484
-      },
-      {
-        "title": "Teal – A statically-typed dialect of Lua",
-        "url": "https://teal-language.org/",
-        "source": "Hacker News",
-        "score": 64
-      },
-      {
-        "title": "Regex visualized as 3D marble run",
-        "url": "https://www.regexmarblerun.com/",
-        "source": "Hacker News",
-        "score": 26
-      },
-      {
-        "title": "Lean now ships with verified kernels",
-        "url": "https://leodemoura.github.io/blog/2026-10-15-lean-now-ships-with-verified-kernels/",
-        "source": "Hacker News",
-        "score": 160
-      },
-      {
-        "title": "DeepSeek-v4.1-Flash-1017",
-        "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
-        "source": "Hacker News",
-        "score": 893
-      },
-      {
-        "title": "Pele – Mermaid diagrams as themeable SVG",
-        "url": "https://pele.run/",
-        "source": "Hacker News",
-        "score": 479
-      },
-      {
-        "title": "Dam removals are bringing fish back across the northeastern United States",
-        "url": "https://www.smithsonianmag.com/science-nature/dam-removals-are-bringing-fish-back-across-the-northeastern-united-states-striking-down-one-tiny-barrier-at-a-time-180989679/",
-        "source": "Hacker News",
-        "score": 298
-      },
-      {
-        "title": "Furifont, a Japanese font that shows furigana",
-        "url": "https://furifont.antfu.me/",
-        "source": "Hacker News",
-        "score": 363
-      },
-      {
-        "title": "Southern ground hornbill gets 3D printed beak prostheses at Artis Zoo",
-        "url": "https://nltimes.nl/2026/10/15/world-first-southern-ground-hornbill-gets-3d-printed-beak-prostheses-artis-zoo",
-        "source": "Hacker News",
-        "score": 45
+        "score": 525
       }
     ],
     "ai": [
       {
+        "title": "How Far Will AI Assistants Go for a Refund They Can't Get?",
+        "url": "https://www.vals.ai/blogs/impossible-refund",
+        "source": "Hacker News AI",
+        "score": 43
+      },
+      {
         "title": "Show HN: Sphinx – A hook that quizzes you on your AI's code before shipping",
         "url": "https://sphinx-six-theta.vercel.app/",
         "source": "Hacker News AI",
-        "score": 168
+        "score": 210
+      },
+      {
+        "title": "Websites are closing their doors to AI agents",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+        "source": "Hacker News AI",
+        "score": 97
+      },
+      {
+        "title": "The Brain Sandwich",
+        "url": "https://terriblesoftware.org/2026/10/02/the-brain-sandwich/",
+        "source": "Hacker News AI",
+        "score": 38
       },
       {
         "title": "Pele – Mermaid diagrams as themeable SVG",
         "url": "https://pele.run/",
         "source": "Hacker News AI",
-        "score": 479
-      },
-      {
-        "title": "Furifont, a Japanese font that shows furigana",
-        "url": "https://furifont.antfu.me/",
-        "source": "Hacker News AI",
-        "score": 363
-      },
-      {
-        "title": "Lorenz and Little: How Much Does Your Tail Cost?",
-        "url": "https://brooker.co.za/blog/2026/07/29/lorenz-and-little.html",
-        "source": "Hacker News AI",
-        "score": 6
-      },
-      {
-        "title": "You could have invented transformers from memory",
-        "url": "https://alexwang.ai/posts/associative-memory/",
-        "source": "Hacker News AI",
-        "score": 581
+        "score": 534
       },
       {
         "title": "A History of Curves and Surfaces in Computer Aided Geometric Design [pdf]",
         "url": "https://math.pku.edu.cn/teachers/jiangm/courses/CG/Lectures/spline-history.pdf",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 27
+      },
+      {
+        "title": "Anthropic's proposed AI safety bill only kicks in if 50 deaths or $1B in damages",
+        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-proposed-ai-safety-bill-only-kicks-in-if-50-deaths-or-usd1-billion-in-damages-are-on-the-line-proposal-would-effectively-make-the-commerce-department-the-only-agency-capable-of-stopping-an-ai-model",
+        "source": "Hacker News AI",
+        "score": 106
+      },
+      {
+        "title": "Furifont, a Japanese font that shows furigana",
+        "url": "https://furifont.antfu.me/",
+        "source": "Hacker News AI",
+        "score": 388
+      },
+      {
+        "title": "Lorenz and Little: How Much Does Your Tail Cost?",
+        "url": "https://brooker.co.za/blog/2026/07/29/lorenz-and-little.html",
+        "source": "Hacker News AI",
+        "score": 26
+      },
+      {
+        "title": "You could have invented transformers from memory",
+        "url": "https://alexwang.ai/posts/associative-memory/",
+        "source": "Hacker News AI",
+        "score": 611
+      },
+      {
+        "title": "Hyper Optimizing Kimi K3 in vLLM",
+        "url": "https://vllm.ai/blog/2026-10-16-kimi-k3-megakernel",
+        "source": "Hacker News AI",
+        "score": 6
       },
       {
         "title": "Codex Desktop continuously generates Crashpad pending dumps",
         "url": "https://github.com/openai/codex/issues/25921",
         "source": "Hacker News AI",
-        "score": 143
-      },
-      {
-        "title": "Show HN: Llmspeed – feel how fast a local LLM runs before you buy the hardware",
-        "url": "https://llmspeed.dev/",
-        "source": "Hacker News AI",
-        "score": 308
-      },
-      {
-        "title": "Claude reveals ECDSA curve origins",
-        "url": "https://www.anthropic.com/research/ecdsa-curve-origins",
-        "source": "Hacker News AI",
-        "score": 1041
-      },
-      {
-        "title": "Tell HN: Remember to migrate away from .name domain",
-        "url": "https://news.ycombinator.com/item?id=50089577",
-        "source": "Hacker News AI",
-        "score": 155
+        "score": 160
       }
     ],
     "news": [
@@ -175,11 +187,6 @@
         "source": "BBC World"
       },
       {
-        "title": "Several dead or injured in major fire at Canada military base",
-        "url": "https://www.bbc.co.uk/news/articles/cr86z0w4lxdxo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Trump waives several Russia sanctions as row with Zelensky intensifies",
         "url": "https://www.bbc.co.uk/news/articles/cxr5yvzv7rp0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -187,6 +194,11 @@
       {
         "title": "Anti-government protesters battle with police in Albania",
         "url": "https://www.bbc.co.uk/news/articles/crwydey50xeno?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Search for Amelia Earhart's plane resumes after stormy weather",
+        "url": "https://www.bbc.co.uk/news/articles/cv70pxe5j90eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -229,75 +241,75 @@
     ],
     "science": [
       {
-        "title": "Scientists discover how deep sleep builds muscle, burns fat, and boosts the brain",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261016081140.htm",
+        "title": "Physicists create a bizarre new quantum state called a fractional fermi sea",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261018084644.htm",
         "source": "Science Daily"
       },
       {
-        "title": "New drug reverses severe fatty liver disease by repairing the gut",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261016080912.htm",
+        "title": "Magic mushroom ingredient takes the fight out of aggressive fish",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261017230036.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists predicted doomsday for November 13, 2026. Should we be worried?",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261016070639.htm",
+        "title": "Scientists who discovered a third form of magnetism win major physics prize",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261017230035.htm",
         "source": "Science Daily"
       },
       {
-        "title": "NASA’s Roman Space Telescope exceeds expectations by nearly 30%",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261016070630.htm",
+        "title": "Scientists discover a natural compound that could protect the brain from too much salt",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261017230032.htm",
         "source": "Science Daily"
       },
       {
-        "title": "SpaceX just delivered some very strange cargo to the International Space Station",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261016070628.htm",
+        "title": "Scientists link a strange sugar in red meat to a 63% higher diabetes risk",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261017230031.htm",
         "source": "Science Daily"
       },
       {
-        "title": "This bird flies thousands of miles, but its wings have a catch",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261016070624.htm",
+        "title": "Eating blueberries every day may have a surprising effect on your mood",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261017230028.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Stanford’s new microscope reveals living cells like never before",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261015073231.htm",
+        "title": "Scientists discover a surprising twist in Japan's 7,300-year-old volcanic apocalypse",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261017230023.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Jessica Rothe Officially Confirms Return Plans for Hit Time-Loop Thriller Trilogy",
-        "url": "https://www.polygon.com/happy-death-day-3-jessica-rothe-scream-queen/",
+        "title": "8 Mass Effect Replay Ideas That Make the Trilogy Feel Brand-New",
+        "url": "https://www.polygon.com/mass-effect-challenge-runs/",
         "source": "Polygon"
       },
       {
-        "title": "America's Dominance in The Game Awards Is Officially Over",
-        "url": "https://www.polygon.com/the-game-awards-goty-jury-usa/",
+        "title": "Drunken Goddess Reflux Devs Cancel Steam Next Fest Demo Over AI Clone Concerns",
+        "url": "https://www.polygon.com/drunken-goddess-reflux-demo-canceled/",
         "source": "Polygon"
       },
       {
-        "title": "13 Years Ago, Rockstar Suffered a Leak Worse Than GTA 6",
-        "url": "https://www.polygon.com/gta-5-leak-gta-6-reddit-vine-reactions-ban-sony-rockstar-response/",
+        "title": "Street Fighter Fails To Match Resident Evil's Opening Weekend Box Office Success",
+        "url": "https://www.polygon.com/street-fighter-opening-weekend-box-office/",
         "source": "Polygon"
       },
       {
-        "title": "Before Dark Souls, FromSoftware’s Forgotten PS1 Horror Game Was a Haunting Exercise in Empathy",
-        "url": "https://www.polygon.com/fromsoftware-echo-night-ps1/",
+        "title": "13 Years Ago, 'The Legend of Korra' Finally Answered the Biggest Avatar Mystery",
+        "url": "https://www.polygon.com/avatar-legend-of-korra-beginnings-origin-story/",
         "source": "Polygon"
       },
       {
-        "title": "The 10 Best Horror Books of All Time According to Goodreads, Ranked",
-        "url": "https://www.polygon.com/10-best-horror-books-ranked-goodreads/",
+        "title": "Epic Games CEO Believes A 'Golden Age Of Gaming' Is Imminent Because of AI",
+        "url": "https://www.polygon.com/epic-games-tim-sweeney-gold-age-of-gaming-ai-development/",
         "source": "Polygon"
       },
       {
-        "title": "Stephen King and Stanley Kubrick's Near-Perfect Psychological Thriller Is Officially Back on Streaming",
-        "url": "https://www.polygon.com/stephen-king-the-shining-on-hbo-max/",
+        "title": "Deathstroke Actor Reveals Scrapped Batman Film Would've Featured Batgirl And A Shocking Death",
+        "url": "https://www.polygon.com/ben-affleck-batman-movie-plot-details/",
         "source": "Polygon"
       },
       {
-        "title": "60 Years Ago, the Best Charlie Brown Quote Was So Perfect It Made It Into the Movie",
-        "url": "https://www.polygon.com/peanuts-best-charlie-brown-quote-ever/",
+        "title": "D&D's New Arcana Unleashed Feats Are Breaking the Game, but There's an Easy Fix",
+        "url": "https://www.polygon.com/dnd-arcana-unleashed-adept-feats-broken-fix-dungeons-dragons/",
         "source": "Polygon"
       }
     ],
