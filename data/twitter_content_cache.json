@@ -1,149 +1,143 @@
 {
   "metadata": {
-    "last_updated": "2026-10-18T17:06:55.731763",
-    "total_items": 61
+    "last_updated": "2026-10-18T20:13:41.309897",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
+        "title": "Someone behind the software",
+        "url": "https://karrisaarinen.com/posts/someone-behind-the-software/",
+        "source": "Hacker News",
+        "score": 163
+      },
+      {
         "title": "RepRapMicron",
         "url": "https://github.com/VikOlliver/RepRapMicron/wiki",
         "source": "Hacker News",
-        "score": 187
+        "score": 279
       },
       {
-        "title": "macOS 15.8.2 Breaks OpenGL",
-        "url": "https://developer.apple.com/forums/verify-human/verify.html?next=/forums/thread/850550",
+        "title": "Free Pascal compiler now supports dynamic packages",
+        "url": "https://www.getlazarus.org/dynamic/",
         "source": "Hacker News",
-        "score": 135
+        "score": 30
       },
       {
-        "title": "Someone Behind the Software",
-        "url": "https://karrisaarinen.com/posts/someone-behind-the-software/",
+        "title": "PalmOS Lemmings",
+        "url": "https://github.com/ardiri/palmos-lemmings",
         "source": "Hacker News",
-        "score": 17
-      },
-      {
-        "title": "Sigsaly: Churchill's top secret hotline to the President",
-        "url": "https://www.iwm.org.uk/history/iwm/cwr/telephone",
-        "source": "Hacker News",
-        "score": 24
-      },
-      {
-        "title": "Java sealed classes and exhaustive pattern matching",
-        "url": "https://neilmadden.blog/2026/04/24/java-sealed-classes-and-exhaustive-pattern-matching/",
-        "source": "Hacker News",
-        "score": 38
-      },
-      {
-        "title": "Legal experts warn Meta's new terms still grant broad scraping permissions",
-        "url": "https://www.niemanlab.org/2026/10/legal-experts-warn-metas-new-terms-still-grant-broad-scraping-permissions-despite-language-changes/",
-        "source": "Hacker News",
-        "score": 160
-      },
-      {
-        "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
-        "url": "https://api-docs.deepseek.com/guides/search/",
-        "source": "Hacker News",
-        "score": 418
-      },
-      {
-        "title": "Show HN: The Zelda timeline to catch up before the Ocarina of Time remake",
-        "url": "https://legendofhyrule.com/",
-        "source": "Hacker News",
-        "score": 80
-      },
-      {
-        "title": "Open MicroManipulator – A sub-micrometer 3D motion control plattform",
-        "url": "https://github.com/0x23/MicroManipulatorStepper",
-        "source": "Hacker News",
-        "score": 120
+        "score": 34
       },
       {
         "title": "The Intel 8087 chip: floating-point addition and subtraction",
         "url": "https://www.righto.com/2026/10/8087-addition-subtraction-microcode.html",
         "source": "Hacker News",
-        "score": 9
+        "score": 62
       },
       {
-        "title": "How Far Will AI Assistants Go for a Refund They Can't Get?",
-        "url": "https://www.vals.ai/blogs/impossible-refund",
+        "title": "Java sealed classes and exhaustive pattern matching",
+        "url": "https://neilmadden.blog/2026/04/24/java-sealed-classes-and-exhaustive-pattern-matching/",
         "source": "Hacker News",
-        "score": 43
+        "score": 102
       },
       {
-        "title": "Parser Combinators",
-        "url": "https://t3.at/blog/2026-10-17-parser-combinators/",
+        "title": "DeepSeek search and fetch – $0.75 per 1000 successful requests",
+        "url": "https://api-docs.deepseek.com/guides/search/",
         "source": "Hacker News",
-        "score": 153
+        "score": 483
       },
       {
-        "title": "The Electronic Disturbance Theater and Electronic Civil Disobedience",
-        "url": "https://www.thing.net/~rdom/ecd/EDTECD.html",
+        "title": "SIGSALY: Churchill's top secret hotline to the president",
+        "url": "https://www.iwm.org.uk/history/iwm/cwr/telephone",
         "source": "Hacker News",
-        "score": 20
+        "score": 74
+      },
+      {
+        "title": "Show HN: The Zelda timeline to catch up before the Ocarina of Time remake",
+        "url": "https://legendofhyrule.com/",
+        "source": "Hacker News",
+        "score": 126
+      },
+      {
+        "title": "US threatens Europe over Starlink restrictions",
+        "url": "https://www.ft.com/content/d1e28d93-8574-4a46-946a-b261c401d6fa",
+        "source": "Hacker News",
+        "score": 33
+      },
+      {
+        "title": "Open MicroManipulator – A sub-micrometer 3D motion control plattform",
+        "url": "https://github.com/0x23/MicroManipulatorStepper",
+        "source": "Hacker News",
+        "score": 149
+      },
+      {
+        "title": "Beyond Tetris: The other games of Alexey Pajitnov [video]",
+        "url": "https://www.youtube.com/watch?v=QH_LPimUJMs",
+        "source": "Hacker News",
+        "score": 31
+      },
+      {
+        "title": "I electrified my push scooter with a power drill",
+        "url": "https://eddieabbondanz.io/post/shop/drill-powered-scooter/",
+        "source": "Hacker News",
+        "score": 58
       },
       {
         "title": "How the Elizabeth Holmes documentary “You Can See Everything” is deceiving",
         "url": "https://www.readtheprofile.com/p/elizabeth-holmes-documentary-you-can-see-everything",
         "source": "Hacker News",
-        "score": 267
-      },
-      {
-        "title": "Bleached corals thrive within days when touching healthy neighbour",
-        "url": "https://www.nature.com/articles/d41586-026-03266-x",
-        "source": "Hacker News",
-        "score": 525
+        "score": 324
       }
     ],
     "ai": [
       {
-        "title": "How Far Will AI Assistants Go for a Refund They Can't Get?",
-        "url": "https://www.vals.ai/blogs/impossible-refund",
+        "title": "Namecheap just seized and disabled all my domains",
+        "url": "https://www.reddit.com/r/sysadmin/comments/1x8cycd/namecheap_just_seized_and_disabled_all_my_domains/",
         "source": "Hacker News AI",
-        "score": 43
+        "score": 167
       },
       {
         "title": "Show HN: Sphinx – A hook that quizzes you on your AI's code before shipping",
         "url": "https://sphinx-six-theta.vercel.app/",
         "source": "Hacker News AI",
-        "score": 210
-      },
-      {
-        "title": "Websites are closing their doors to AI agents",
-        "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
-        "source": "Hacker News AI",
-        "score": 97
+        "score": 225
       },
       {
         "title": "The Brain Sandwich",
         "url": "https://terriblesoftware.org/2026/10/02/the-brain-sandwich/",
         "source": "Hacker News AI",
-        "score": 38
+        "score": 56
       },
       {
-        "title": "Pele – Mermaid diagrams as themeable SVG",
-        "url": "https://pele.run/",
+        "title": "You could have invented transformers from memory",
+        "url": "https://alexwang.ai/posts/associative-memory/",
         "source": "Hacker News AI",
-        "score": 534
+        "score": 616
+      },
+      {
+        "title": "How Far Will AI Assistants Go for a Refund They Can't Get?",
+        "url": "https://www.vals.ai/blogs/impossible-refund",
+        "source": "Hacker News AI",
+        "score": 70
       },
       {
         "title": "A History of Curves and Surfaces in Computer Aided Geometric Design [pdf]",
         "url": "https://math.pku.edu.cn/teachers/jiangm/courses/CG/Lectures/spline-history.pdf",
         "source": "Hacker News AI",
-        "score": 27
+        "score": 29
       },
       {
-        "title": "Anthropic's proposed AI safety bill only kicks in if 50 deaths or $1B in damages",
-        "url": "https://www.tomshardware.com/tech-industry/artificial-intelligence/anthropics-proposed-ai-safety-bill-only-kicks-in-if-50-deaths-or-usd1-billion-in-damages-are-on-the-line-proposal-would-effectively-make-the-commerce-department-the-only-agency-capable-of-stopping-an-ai-model",
+        "title": "Hyper Optimizing Kimi K3 in vLLM",
+        "url": "https://vllm.ai/blog/2026-10-16-kimi-k3-megakernel",
         "source": "Hacker News AI",
-        "score": 106
+        "score": 15
       },
       {
-        "title": "Furifont, a Japanese font that shows furigana",
-        "url": "https://furifont.antfu.me/",
+        "title": "How the Fed Is Quietly Inflating the AI Bubble While Hiking Your Electric Bill",
+        "url": "https://www.thebignewsletter.com/p/how-the-federal-reserve-secretly",
         "source": "Hacker News AI",
-        "score": 388
+        "score": 20
       },
       {
         "title": "Lorenz and Little: How Much Does Your Tail Cost?",
@@ -152,28 +146,26 @@
         "score": 26
       },
       {
-        "title": "You could have invented transformers from memory",
-        "url": "https://alexwang.ai/posts/associative-memory/",
-        "source": "Hacker News AI",
-        "score": 611
-      },
-      {
-        "title": "Hyper Optimizing Kimi K3 in vLLM",
-        "url": "https://vllm.ai/blog/2026-10-16-kimi-k3-megakernel",
-        "source": "Hacker News AI",
-        "score": 6
-      },
-      {
         "title": "Codex Desktop continuously generates Crashpad pending dumps",
         "url": "https://github.com/openai/codex/issues/25921",
         "source": "Hacker News AI",
-        "score": 160
+        "score": 166
       }
     ],
     "news": [
       {
         "title": "Burnt out cars and shattered glass on Paris streets after protests turn to riots and looting",
         "url": "https://www.bbc.co.uk/news/articles/c574pdzl0k4no?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Macron calls for calm in France and warns rioting must not escalate",
+        "url": "https://www.bbc.co.uk/news/articles/cw240zl08dm5o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "What we know so far about deadly fire at Canadian military base",
+        "url": "https://www.bbc.co.uk/news/articles/cmgelrq8x92do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -189,16 +181,6 @@
       {
         "title": "Trump waives several Russia sanctions as row with Zelensky intensifies",
         "url": "https://www.bbc.co.uk/news/articles/cxr5yvzv7rp0o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Anti-government protesters battle with police in Albania",
-        "url": "https://www.bbc.co.uk/news/articles/crwydey50xeno?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Search for Amelia Earhart's plane resumes after stormy weather",
-        "url": "https://www.bbc.co.uk/news/articles/cv70pxe5j90eo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -278,6 +260,21 @@
     ],
     "gaming": [
       {
+        "title": "New Steam Game is Basically Kiki’s Delivery Service in Video Game Form",
+        "url": "https://www.polygon.com/the-witchs-bakery-recommendation-steam-switch-ps5-xbox/",
+        "source": "Polygon"
+      },
+      {
+        "title": "CBS's Definitive '80s Action Thriller Series Is Officially Free to Watch on Streaming",
+        "url": "https://www.polygon.com/airwolf-coolest-helicopter-80s-tv/",
+        "source": "Polygon"
+      },
+      {
+        "title": "36 Years Later, Robert De Niro's Greatest Gangster Movie Quote Is Still One of a Kind",
+        "url": "https://www.polygon.com/robert-de-niro-best-gangster-movie-quote-goodfellas/",
+        "source": "Polygon"
+      },
+      {
         "title": "8 Mass Effect Replay Ideas That Make the Trilogy Feel Brand-New",
         "url": "https://www.polygon.com/mass-effect-challenge-runs/",
         "source": "Polygon"
@@ -295,21 +292,6 @@
       {
         "title": "13 Years Ago, 'The Legend of Korra' Finally Answered the Biggest Avatar Mystery",
         "url": "https://www.polygon.com/avatar-legend-of-korra-beginnings-origin-story/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Epic Games CEO Believes A 'Golden Age Of Gaming' Is Imminent Because of AI",
-        "url": "https://www.polygon.com/epic-games-tim-sweeney-gold-age-of-gaming-ai-development/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Deathstroke Actor Reveals Scrapped Batman Film Would've Featured Batgirl And A Shocking Death",
-        "url": "https://www.polygon.com/ben-affleck-batman-movie-plot-details/",
-        "source": "Polygon"
-      },
-      {
-        "title": "D&D's New Arcana Unleashed Feats Are Breaking the Game, but There's an Easy Fix",
-        "url": "https://www.polygon.com/dnd-arcana-unleashed-adept-feats-broken-fix-dungeons-dragons/",
         "source": "Polygon"
       }
     ],
