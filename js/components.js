@@ -318,6 +318,18 @@ function createBubbleBody(content, type, meta) {
     if (type === 'image' && meta.src) {
         return { el: createElement('img', 'kakao-bubble-image', { src: meta.src, alt: content || '圖片' }), framed: false };
     }
+    if (type === 'gift') {
+        const card = createElement('div', 'kakao-bubble-card');
+        card.appendChild(createElement('div', 'kakao-bubble-gift-icon', { textContent: meta.icon || '🎁' }));
+        card.appendChild(createElement('div', 'kakao-bubble-card-title', { textContent: '送出禮物：' + (meta.name || content) }));
+        return { el: card, framed: true };
+    }
+    if (type === 'transfer') {
+        const card = createElement('div', 'kakao-bubble-card');
+        card.appendChild(createElement('div', 'kakao-bubble-card-title', { textContent: '💸 轉帳 $' + Number(meta.amount || 0).toLocaleString() }));
+        if (meta.note) card.appendChild(createElement('div', 'kakao-bubble-card-desc', { textContent: meta.note }));
+        return { el: card, framed: true };
+    }
     if (type === 'icon' && meta.src) {
         return { el: createElement('img', 'kakao-bubble-icon', { src: meta.src, alt: meta.name || content || '圖示' }), framed: false };
     }

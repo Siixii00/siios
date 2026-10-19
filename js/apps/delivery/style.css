@@ -17,3 +17,12 @@
 .item-price { color: var(--delivery-muted); margin-right: 12px; }
 .add-btn { width: 32px; height: 32px; background: var(--delivery-accent); color: white; border: none; border-radius: 50%; font-size: 18px; cursor: pointer; }
 .cart-summary { padding: 16px; background: var(--delivery-card); display: flex; justify-content: space-between; font-weight: 600; }
+.dl-tabs { display: flex; background: #fff; border-bottom: 1px solid #eee; }
+.dl-tabs button { flex: 1; padding: 12px 0; background: none; border: none; border-bottom: 2px solid transparent; font-size: 14px; color: #666; cursor: pointer; }
+.dl-tabs button.active { color: var(--delivery-accent); border-bottom-color: var(--delivery-accent); font-weight: 600; }
+.dl-empty { text-align: center; color: #999; padding: 40px 0; }
+.dl-items { font-size: 13px; color: var(--delivery-text); margin: 6px 0; }
+.dl-status { color: var(--delivery-accent); font-weight: 600; }
+.dl-balance { font-size: 12px; font-weight: 400; color: #999; }
+.dl-pay:disabled { opacity: 0.4; cursor: not-allowed; }
+.menu-item .add-btn { flex-shrink: 0; margin-left: 6px; }

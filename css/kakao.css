@@ -798,3 +798,8 @@ body.desktop-mode .kakao-bottom-nav {
     height: 72px;
     object-fit: contain;
 }
+
+.kakao-bubble-gift-icon {
+    font-size: 48px;
+    line-height: 1.1;
+}

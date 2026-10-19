@@ -1,11 +1,14 @@
 ﻿import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBubble, createToast, createKakaoBottomSheet, createKakaoSideMenu, createGroupTypingIndicator } from '../../components.js';
 import { ChatsDB, MessagesDB, SettingsDB, MemoryDB, CharactersDB, UsersDB } from '../../db.js';
-import APIClient from '../../api.js';
+import APIClient, { describeMessageForAI } from '../../api.js';
 import { EMOJIS as STICKERS } from './shop.js';
 import { THEMES as CHAT_THEMES } from './chat-settings.js';
 import { pickFile, prepareImage, prepareVideo, prepareFile, getLocationMessage, openRecorderSheet, openAlbumPicker } from './chat-media.js';
 import { openImageGenerator, openVideoChoice, openMusicChoice, synthesizeSpeechForMessage } from './chat-synth.js';
+import { askForm } from '../../core/dialogs.js';
+import { getBalance, charge, credit, formatMoney, WalletError } from '../../core/wallet.js';
+import { GIFTS, getInventoryCounts, consumeGift, addGift } from '../../core/gifts.js';
 import { openIconPicker, openSharePrompt, openPlaceSearch } from './chat-extras.js';
 import { getThought, getInnerVoice, generateSummary, openResultSheet, openDailyLogSheet } from './chat-ai-tools.js';
 
@@ -23,6 +26,11 @@ const MODE_OPTIONS = [
     { id: 'dialogue_multi', label: '對話模式（多句回應）', desc: '用多句話自然回應' },
     { id: 'custom', label: '自定義模式', desc: '自行輸入想要的回應方式' }
 ];
+
+// 記憶系統只收文字：把貼圖、位置、轉帳等訊息換成可讀的描述（例如「[轉帳：$250，備註：…]」），不要把座標或 emoji 原文當成記憶
+function forMemory(msgs) {
+    return msgs.map(m => (m.type && m.type !== 'text' ? { ...m, content: describeMessageForAI(m) } : m));
+}
 
 function getModeLabel(mode) {
     const found = MODE_OPTIONS.find(o => o.id === mode);
@@ -301,6 +309,80 @@ async function renderChat(params) {
         }
     }
     
+    // 轉帳：先扣款再送出訊息；訊息送不出去就退款，避免錢扣了角色卻沒收到
+    async function openTransfer() {
+        if (activeResponseCount > 0) {
+            createToast('角色正在回應中，請稍後再試');
+            return;
+        }
+        const target = currentChat.is_group ? '群組' : (currentChat.character_name || '角色');
+        const form = await askForm({
+            title: '轉帳給 ' + target,
+            hint: '目前餘額 ' + formatMoney(await getBalance()),
+            fields: [
+                { key: 'amount', label: '金額', type: 'number', required: true, placeholder: '輸入金額' },
+                { key: 'note', label: '備註（選填）', placeholder: '例如：請你喝杯咖啡' }
+            ],
+            submitLabel: '轉帳'
+        });
+        if (!form) return;
+        try {
+            await charge(form.amount, '轉帳給 ' + target, { category: 'transfer', ref: chatId });
+        } catch (e) {
+            createToast(e instanceof WalletError ? e.message : '轉帳失敗', 'error');
+            return;
+        }
+        try {
+            await sendRich({ type: 'transfer', content: '轉帳 ' + formatMoney(form.amount), meta: { amount: form.amount, note: form.note || '' } });
+        } catch (e) {
+            await credit(form.amount, '轉帳失敗退款', { category: 'transfer', ref: chatId });
+            createToast('轉帳失敗，已退款', 'error');
+        }
+    }
+
+    async function openGiftPicker() {
+        const counts = await getInventoryCounts();
+        const owned = GIFTS.filter(g => counts[g.id] > 0);
+        const content = createElement('div', 'p-4 flex flex-col gap-3');
+        let sheet;
+        if (owned.length === 0) {
+            content.appendChild(createElement('div', 'text-sm text-gray-500', { textContent: '你還沒有禮物，先到禮物商店買一些吧' }));
+            const shopBtn = createElement('button', 'px-3 py-2 rounded-lg bg-kakao-yellow text-kakao-brown text-sm font-medium', { textContent: '前往禮物商店' });
+            shopBtn.onclick = () => { sheet.close(); Router.navigate('/gift-shop'); };
+            content.appendChild(shopBtn);
+        } else {
+            const grid = createElement('div', 'grid grid-cols-3 gap-3');
+            owned.forEach(g => {
+                const cell = createElement('button', 'text-center');
+                cell.style.cssText = 'background:transparent;border:1px solid #eee;border-radius:10px;cursor:pointer;padding:8px;';
+                const icon = createElement('div', '', { textContent: g.icon });
+                icon.style.fontSize = '36px';
+                cell.append(icon, createElement('div', 'text-xs', { textContent: g.name + ' ×' + counts[g.id] }));
+                cell.onclick = async () => {
+                    sheet.close();
+                    if (activeResponseCount > 0) {
+                        createToast('角色正在回應中，請稍後再試');
+                        return;
+                    }
+                    if (!(await consumeGift(g.id))) {
+                        createToast('這個禮物已經沒有庫存了', 'error');
+                        return;
+                    }
+                    try {
+                        await sendRich({ type: 'gift', content: g.name, meta: { id: g.id, name: g.name, icon: g.icon } });
+                    } catch (e) {
+                        await addGift(g.id);
+                        createToast('送出失敗，禮物已退回', 'error');
+                    }
+                };
+                grid.appendChild(cell);
+            });
+            content.appendChild(grid);
+        }
+        sheet = createKakaoBottomSheet([], { title: '送禮物', customContent: content });
+        sheet.open();
+    }
+
     // 思維鏈／心聲：針對指定訊息（未指定時取最新一則 AI 回應）事後推想，結果快取在訊息上
     async function showRecall(kind, messageId) {
         const all = await MessagesDB.getByChatId(chatId);
@@ -461,7 +543,7 @@ async function renderChat(params) {
             }
             const last10 = msgs.slice(-10);
             const primaryCharId = currentChat.is_group ? ((currentChat.member_ids && currentChat.member_ids[0]) || null) : currentChat.character_id;
-            await window.App.memorySystem.processBatch(last10, chatId, primaryCharId);
+            await window.App.memorySystem.processBatch(forMemory(last10), chatId, primaryCharId);
             createToast('Memory summary generated');
         } catch (e) {
             createToast('Failed to generate summary: ' + e.message, 'error');
@@ -797,7 +879,8 @@ async function renderChat(params) {
         { icon: 'share', label: '分享', onSelect: () => openSharePrompt(sendRich) },
         { icon: 'location_on', label: '位置', onSelect: () => sendPrepared(getLocationMessage) },
         { icon: 'schedule', label: '日程', onSelect: () => Router.navigate('/timetree') },
-        { icon: 'payments', label: '轉帳', onSelect: () => Router.navigate('/kakaopay') },
+        { icon: 'payments', label: '轉帳', onSelect: () => openTransfer() },
+        { icon: 'card_giftcard', label: '禮物', onSelect: () => openGiftPicker() },
         { icon: 'shopping_bag', label: '購物', onSelect: () => Router.navigate('/taobao') },
         { icon: 'restaurant', label: '外送', onSelect: () => Router.navigate('/delivery') },
         { icon: 'wb_sunny', label: '天氣', onSelect: () => Router.navigate('/weather') },
@@ -915,7 +998,7 @@ async function renderChat(params) {
                             const recentMessages = await MessagesDB.getByChatId(chatId);
                             const last10 = recentMessages.slice(-10);
                             const primaryCharId = (currentChat.member_ids && currentChat.member_ids[0]) || currentChat.character_id;
-                            window.App.memorySystem.processBatch(last10, chatId, primaryCharId)
+                            window.App.memorySystem.processBatch(forMemory(last10), chatId, primaryCharId)
                                 .catch((e) => { console.error('[Chat] 記憶處理失敗:', e); createToast('記憶處理失敗：' + (e?.message || e), 'error'); })
                                 .finally(() => { batchProcessing = false; });
                         }
@@ -1038,7 +1121,7 @@ async function renderChat(params) {
                             batchProcessing = true;
                             const recentMessages = await MessagesDB.getByChatId(chatId);
                             const last10 = recentMessages.slice(-10);
-                            window.App.memorySystem.processBatch(last10, chatId, currentChat.character_id)
+                            window.App.memorySystem.processBatch(forMemory(last10), chatId, currentChat.character_id)
                                 .catch((e) => { console.error('[Chat] 記憶處理失敗:', e); createToast('記憶處理失敗：' + (e?.message || e), 'error'); })
                                 .finally(() => { batchProcessing = false; });
                         }

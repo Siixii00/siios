@@ -11,4 +11,4 @@
 .shop-section { background: var(--farm-card); border-radius: 12px; padding: 16px; }
 .shop-section h3 { font-size: 14px; color: var(--farm-text); margin-bottom: 12px; }
 .crop-list { display: flex; gap: 8px; flex-wrap: wrap; }
-.crop-btn { padding: 8px 12px; background: var(--farm-accent); color: white; border: none; border-radius: 8px; font-size: 12px; cursor: pointer; }
+.crop-btn { padding: 8px 12px; background: var(--farm-accent); color: white; border: none; border-radius: 8px; font-size: 12px; cursor: pointer; }.farm-hint { font-size: 12px; color: #888; margin: 0 0 10px; }

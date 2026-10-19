@@ -1,6 +1,7 @@
 import Router from '../../router.js';
-import { createElement } from '../../components.js';
+import { createElement, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
+import { getBalance, charge, formatMoney, WalletError } from '../../core/wallet.js';
 
 const EMOJIS = [
   { id: 'e1', name: '笑臉', emoji: '😊', price: 0 },
@@ -12,6 +13,7 @@ const EMOJIS = [
 ];
 
 let owned = [];
+let purchasing = false;
 
 async function loadOwned() {
   const saved = await SettingsDB.get('emoji_owned');
@@ -36,7 +38,7 @@ async function renderEmojiShop(params) {
           <div class="emoji-item ${owned.includes(e.id) ? 'owned' : ''}" data-id="${e.id}">
             <span class="emoji-icon">${e.emoji}</span>
             <span class="emoji-name">${e.name}</span>
-            <span class="${owned.includes(e.id) ? 'owned' : 'price'}">${owned.includes(e.id) ? '已擁有' : (e.price === 0 ? '免費' : e.price + ' 幣')}</span>
+            <span class="${owned.includes(e.id) ? 'owned' : 'price'}">${owned.includes(e.id) ? '已擁有' : (e.price === 0 ? '免費' : formatMoney(e.price))}</span>
           </div>
         `).join('')}
       </div>
@@ -46,10 +48,22 @@ async function renderEmojiShop(params) {
   container.querySelectorAll('.emoji-item:not(.owned)').forEach(item => {
     item.onclick = async () => {
       const emoji = EMOJIS.find(e => e.id === item.dataset.id);
-      if (emoji.price === 0 || confirm(`購買「${emoji.name}」表情？`)) {
-        owned.push(emoji.id);
+      if (purchasing) return;
+      purchasing = true;
+      try {
+        if (emoji.price > 0) {
+          const bal = await getBalance();
+          if (!confirm(`購買「${emoji.name}」表情？價格 ${formatMoney(emoji.price)}，餘額 ${formatMoney(bal)}`)) return;
+          await charge(emoji.price, `購買表情「${emoji.name}」`, { category: 'sticker' });
+        }
+        if (!owned.includes(emoji.id)) owned.push(emoji.id);
         await saveOwned();
-        renderEmojiShop(params);
+        createToast(emoji.price > 0 ? `已購買「${emoji.name}」` : `已領取「${emoji.name}」`);
+        Router.handleRoute();
+      } catch (e) {
+        createToast(e instanceof WalletError ? e.message : '購買失敗', 'error');
+      } finally {
+        purchasing = false;
       }
     };
   });

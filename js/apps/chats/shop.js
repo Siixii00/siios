@@ -1,6 +1,8 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBottomNav, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
+import { getBalance, charge, formatMoney, WalletError } from '../../core/wallet.js';
+import { setWallpaperTheme } from '../../core/wallpapers.js';
 import { CHATS_TABS } from './chats-nav.js';
 
 const THEMES = [
@@ -65,7 +67,7 @@ async function renderShop() {
             textContent: tabLabel,
             onClick: () => {
                 activeTab = i;
-                Router.navigate('/chats/shop');
+                Router.handleRoute();
             }
         });
         tabContainer.appendChild(tab);
@@ -88,23 +90,29 @@ async function renderShop() {
             if (isOwned) {
                 item.appendChild(createElement('div', 'text-xs text-green-600 mt-1', { textContent: '已擁有' }));
             } else {
-                item.appendChild(createElement('div', 'text-xs text-gray-500 mt-1', { textContent: t.price === 0 ? '免費' : t.price + ' 幣' }));
+                item.appendChild(createElement('div', 'text-xs text-gray-500 mt-1', { textContent: t.price === 0 ? '免費' : formatMoney(t.price) }));
             }
 
             item.onclick = async () => {
                 if (purchasing) return;
-                if (ownedThemes.has(t.id)) {
-                    createToast('已擁有此主題');
-                    return;
-                }
                 purchasing = true;
                 try {
-                    if (t.price === 0 || confirm('購買「' + t.name + '」主題？')) {
-                        ownedThemes.add(t.id);
-                        await saveOwnedThemes();
-                        createToast('已購買主題：' + t.name);
-                        Router.navigate('/chats/shop');
+                    if (ownedThemes.has(t.id)) {
+                        await setWallpaperTheme(t.id);
+                        createToast('已套用「' + t.name + '」桌布');
+                        return;
                     }
+                    if (t.price > 0) {
+                        const bal = await getBalance();
+                        if (!confirm('購買「' + t.name + '」主題？價格 ' + formatMoney(t.price) + '，餘額 ' + formatMoney(bal))) return;
+                        await charge(t.price, '購買主題「' + t.name + '」', { category: 'theme' });
+                    }
+                    ownedThemes.add(t.id);
+                    await saveOwnedThemes();
+                    createToast(t.price > 0 ? '已購買主題：' + t.name : '已領取主題：' + t.name);
+                    Router.handleRoute();
+                } catch (e) {
+                    createToast(e instanceof WalletError ? e.message : '操作失敗', 'error');
                 } finally {
                     purchasing = false;
                 }
@@ -127,7 +135,7 @@ async function renderShop() {
             if (isOwned) {
                 item.appendChild(createElement('div', 'text-xs text-green-600 mt-1', { textContent: '已擁有' }));
             } else {
-                item.appendChild(createElement('div', 'text-xs text-gray-500 mt-1', { textContent: e.price === 0 ? '免費' : e.price + ' 幣' }));
+                item.appendChild(createElement('div', 'text-xs text-gray-500 mt-1', { textContent: e.price === 0 ? '免費' : formatMoney(e.price) }));
             }
 
             item.onclick = async () => {
@@ -138,12 +146,17 @@ async function renderShop() {
                 }
                 purchasing = true;
                 try {
-                    if (e.price === 0 || confirm('購買「' + e.name + '」貼圖？')) {
-                        ownedEmojis.add(e.id);
-                        await saveOwnedEmojis();
-                        createToast('已購買貼圖：' + e.name);
-                        Router.navigate('/chats/shop');
+                    if (e.price > 0) {
+                        const bal = await getBalance();
+                        if (!confirm('購買「' + e.name + '」貼圖？價格 ' + formatMoney(e.price) + '，餘額 ' + formatMoney(bal))) return;
+                        await charge(e.price, '購買貼圖「' + e.name + '」', { category: 'sticker' });
                     }
+                    ownedEmojis.add(e.id);
+                    await saveOwnedEmojis();
+                    createToast(e.price > 0 ? '已購買貼圖：' + e.name : '已領取貼圖：' + e.name);
+                    Router.handleRoute();
+                } catch (err) {
+                    createToast(err instanceof WalletError ? err.message : '購買失敗', 'error');
                 } finally {
                     purchasing = false;
                 }

@@ -14,3 +14,5 @@
 .tx-item.send .tx-amount { color: #e03131; }
 .tx-item.receive .tx-amount { color: #2f9e44; }
 .empty-tx { text-align: center; color: var(--pay-muted); padding: 20px; }
+.tx-scroll { max-height: 50vh; overflow-y: auto; }
+.tx-desc small { color: #999; font-size: 11px; }

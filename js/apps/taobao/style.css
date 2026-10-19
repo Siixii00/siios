@@ -8,3 +8,20 @@
 .product-name { font-size: 13px; color: var(--taobao-text); margin-bottom: 4px; }
 .product-price { font-size: 16px; font-weight: 700; color: var(--taobao-accent); margin-bottom: 8px; }
 .add-cart-btn { width: 100%; padding: 8px; background: var(--taobao-accent); color: white; border: none; border-radius: 6px; font-size: 12px; cursor: pointer; }
+.tb-tabs { display: flex; background: #fff; border-bottom: 1px solid #eee; }
+.tb-tabs button { flex: 1; padding: 12px 0; background: none; border: none; border-bottom: 2px solid transparent; font-size: 14px; color: #666; cursor: pointer; }
+.tb-tabs button.active { color: var(--taobao-accent); border-bottom-color: var(--taobao-accent); font-weight: 600; }
+.tb-empty { text-align: center; color: #999; padding: 40px 0; }
+.tb-row { display: flex; align-items: center; gap: 12px; background: var(--taobao-card); border-radius: 12px; padding: 12px; margin-bottom: 10px; }
+.tb-icon { font-size: 36px; }
+.tb-info { flex: 1; font-size: 14px; color: var(--taobao-text); }
+.tb-qty { display: flex; align-items: center; gap: 10px; }
+.tb-qty button { width: 28px; height: 28px; border-radius: 50%; border: 1px solid #ddd; background: #fff; font-size: 16px; cursor: pointer; }
+.tb-checkout { position: sticky; bottom: 0; display: flex; justify-content: space-between; align-items: center; gap: 12px; background: var(--taobao-card); border-radius: 12px; padding: 12px 16px; margin-top: 12px; box-shadow: 0 -2px 8px rgba(0,0,0,0.06); }
+.tb-checkout .add-cart-btn { width: auto; padding: 10px 24px; font-size: 14px; }
+.tb-total { font-weight: 700; color: var(--taobao-accent); }
+.tb-balance { font-size: 12px; color: #999; }
+.tb-order { background: var(--taobao-card); border-radius: 12px; padding: 12px; margin-bottom: 10px; }
+.tb-order-head { display: flex; justify-content: space-between; font-size: 12px; color: #999; margin-bottom: 6px; }
+.tb-status { color: var(--taobao-accent); font-weight: 600; }
+.tb-order-items { font-size: 13px; color: var(--taobao-text); margin-bottom: 6px; }

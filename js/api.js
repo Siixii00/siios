@@ -14,6 +14,8 @@ export function describeMessageForAI(m) {
         case 'sticker': return `[貼圖：${meta.name || m.content}]`;
         case 'image': return `[圖片：${m.content || '一張圖片'}]`;
         case 'card': return `[卡片：${meta.title || m.content}${meta.desc ? '，' + meta.desc : ''}]`;
+        case 'gift': return `[禮物：${meta.name || m.content}]`;
+        case 'transfer': return `[轉帳：$${Number(meta.amount || 0).toLocaleString()}${meta.note ? '，備註：' + meta.note : ''}]`;
         case 'icon': return `[圖示：${meta.name || m.content}]`;
         case 'video': return `[影片：${meta.name || m.content}]`;
         case 'audio':
@@ -251,8 +253,9 @@ const APIClient = {
         let memoryContext = null;
         if (settings.memory_enabled && window.App?.memorySystem) {
             try {
+                // 只取這個角色自己的記憶，避免其他角色的對話內容混進來
                 memoryContext = await window.App.memorySystem.retrieveMemories(
-                    userMessage, chatId, 5
+                    userMessage, chatId, 5, characterData?.id ? { character_id: characterData.id } : {}
                 );
             } catch {
                 memoryContext = null;

@@ -1,24 +1,20 @@
 import Router from '../../router.js';
-import { createElement } from '../../components.js';
-import { SettingsDB } from '../../db.js';
+import { createElement, createToast } from '../../components.js';
+import { getBalance, getTransactions, charge, credit, formatMoney, WalletError } from '../../core/wallet.js';
+import { askForm } from '../../core/dialogs.js';
 
-let balance = 10000;
-let transactions = [];
+const CATEGORY_LABELS = {
+  shopping: '購物', delivery: '外送', gift: '禮物', theme: '主題', sticker: '貼圖',
+  transfer: '轉帳', farm: '農場'
+};
 
-async function loadData() {
-  const savedBal = await SettingsDB.get('kakaopay_balance');
-  if (savedBal) balance = savedBal;
-  const savedTx = await SettingsDB.get('kakaopay_transactions');
-  if (savedTx) transactions = savedTx;
-}
-
-async function saveData() {
-  await SettingsDB.set('kakaopay_balance', balance);
-  await SettingsDB.set('kakaopay_transactions', transactions);
+function fmtDate(ts) {
+  const d = new Date(ts);
+  return (d.getMonth() + 1) + '/' + d.getDate() + ' ' + String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
 }
 
 async function renderKakaopay(params) {
-  await loadData();
+  const [balance, transactions] = await Promise.all([getBalance(), getTransactions(50)]);
   const container = createElement('div', 'app-container pay-app');
   container.innerHTML = `
     <header class="ios-header">
@@ -28,7 +24,7 @@ async function renderKakaopay(params) {
     <div class="page">
       <div class="balance-card">
         <span class="balance-label">餘額</span>
-        <span class="balance-amount">$${balance.toLocaleString()}</span>
+        <span class="balance-amount">${formatMoney(balance)}</span>
       </div>
       <div class="action-buttons">
         <button class="action-btn send"><i class="fas fa-paper-plane"></i> 轉帳</button>
@@ -36,37 +32,49 @@ async function renderKakaopay(params) {
       </div>
       <div class="transaction-list">
         <h3>交易紀錄</h3>
-        ${transactions.length > 0 
-          ? transactions.slice(-5).reverse().map(t => `
-              <div class="tx-item ${t.type}">
-                <span class="tx-desc">${t.desc}</span>
-                <span class="tx-amount">${t.type === 'send' ? '-' : '+'}$${t.amount}</span>
-              </div>
-            `).join('')
-          : '<div class="empty-tx">尚無交易紀錄</div>'
-        }
+        <div class="tx-scroll"></div>
       </div>
     </div>
   `;
+  const list = container.querySelector('.tx-scroll');
+  if (transactions.length === 0) {
+    list.appendChild(createElement('div', 'empty-tx', { textContent: '尚無交易紀錄' }));
+  } else {
+    transactions.forEach(t => {
+      const row = createElement('div', 'tx-item ' + t.type);
+      const desc = createElement('span', 'tx-desc');
+      desc.textContent = t.desc + (CATEGORY_LABELS[t.category] ? '（' + CATEGORY_LABELS[t.category] + '）' : '');
+      desc.appendChild(createElement('small', '', { textContent: ' ' + fmtDate(t.date) }));
+      row.appendChild(desc);
+      row.appendChild(createElement('span', 'tx-amount', { textContent: (t.type === 'send' ? '-' : '+') + formatMoney(t.amount) }));
+      list.appendChild(row);
+    });
+  }
   container.querySelector('.ios-back-btn').onclick = () => Router.back();
-  container.querySelector('.action-btn.send').onclick = async () => {
-    const amount = prompt('轉帳金額：');
-    if (amount && !isNaN(amount) && parseInt(amount) > 0 && parseInt(amount) <= balance) {
-      balance -= parseInt(amount);
-      transactions.push({ type: 'send', amount: parseInt(amount), desc: '轉帳支出', date: Date.now() });
-      await saveData();
-      renderKakaopay(params);
+
+  async function run(kind) {
+    const isSend = kind === 'send';
+    const form = await askForm({
+      title: isSend ? '轉帳' : '收款',
+      hint: '目前餘額 ' + formatMoney(balance),
+      fields: [
+        { key: 'amount', label: '金額', type: 'number', required: true, placeholder: '輸入金額' },
+        { key: 'note', label: '備註（選填）', placeholder: isSend ? '轉帳支出' : '收款入帳' }
+      ],
+      submitLabel: isSend ? '轉帳' : '收款'
+    });
+    if (!form) return;
+    try {
+      const desc = form.note || (isSend ? '轉帳支出' : '收款入帳');
+      await (isSend ? charge : credit)(form.amount, desc, { category: 'transfer' });
+      createToast(isSend ? '已轉出 ' + formatMoney(form.amount) : '已收款 ' + formatMoney(form.amount));
+      Router.handleRoute();
+    } catch (e) {
+      createToast(e instanceof WalletError ? e.message : '操作失敗', 'error');
     }
-  };
-  container.querySelector('.action-btn.receive').onclick = async () => {
-    const amount = prompt('收款金額：');
-    if (amount && !isNaN(amount) && parseInt(amount) > 0) {
-      balance += parseInt(amount);
-      transactions.push({ type: 'receive', amount: parseInt(amount), desc: '收款入帳', date: Date.now() });
-      await saveData();
-      renderKakaopay(params);
-    }
-  };
+  }
+  container.querySelector('.action-btn.send').onclick = () => run('send');
+  container.querySelector('.action-btn.receive').onclick = () => run('receive');
   return { element: container, cleanup: null };
 }
 
