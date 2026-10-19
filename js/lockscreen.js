@@ -1,4 +1,5 @@
 ﻿import { createElement, createIcon } from './components.js';
+import { applyWallpaper } from './core/wallpapers.js';
 
 const LockScreen = {
     element: null,
@@ -14,6 +15,7 @@ const LockScreen = {
         
         const wallpaper = createElement('div', 'lock-wallpaper');
         container.appendChild(wallpaper);
+        applyWallpaper(wallpaper, 'lock');
         
         const content = createElement('div', 'lock-content');
         

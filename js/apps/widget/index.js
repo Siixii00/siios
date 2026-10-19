@@ -1,29 +1,11 @@
 import Router from '../../router.js';
-import { createElement } from '../../components.js';
-import { SettingsDB } from '../../db.js';
+import { createElement, createToast } from '../../components.js';
+import { WIDGETS, getActiveWidgetIds, setActiveWidgetIds, createWidgetElement } from '../../core/widgets.js';
 
-const WIDGETS = [
-  { id: 'w1', name: '天氣', icon: '☁️', size: 'small' },
-  { id: 'w2', name: '時鐘', icon: '🕐', size: 'small' },
-  { id: 'w3', name: '行事曆', icon: '📅', size: 'medium' },
-  { id: 'w4', name: '音樂', icon: '🎵', size: 'medium' },
-  { id: 'w5', name: '備忘錄', icon: '📝', size: 'small' },
-  { id: 'w6', name: '健康', icon: '❤️', size: 'large' }
-];
+const SIZE_LABELS = { small: '小', medium: '中', large: '大' };
 
-let activeWidgets = [];
-
-async function loadWidgets() {
-  const saved = await SettingsDB.get('widget_active');
-  if (saved) activeWidgets = saved;
-}
-
-async function saveWidgets() {
-  await SettingsDB.set('widget_active', activeWidgets);
-}
-
-async function renderWidget(params) {
-  await loadWidgets();
+async function renderWidget() {
+  const active = await getActiveWidgetIds();
   const container = createElement('div', 'app-container widget-app');
   container.innerHTML = `
     <header class="ios-header">
@@ -31,37 +13,36 @@ async function renderWidget(params) {
       <h1 class="menu-title">小工具</h1>
     </header>
     <div class="page">
-      <div class="widget-preview">
-        ${activeWidgets.map(wid => {
-          const w = WIDGETS.find(x => x.id === wid);
-          if (!w) return '';
-          return `<div class="widget-card ${w.size}"><span class="w-icon">${w.icon}</span><span class="w-name">${w.name}</span></div>`;
-        }).join('') || '<div class="empty-preview">點擊下方小工具加入</div>'}
-      </div>
-      <h3 class="section-title">可用小工具</h3>
-      <div class="widget-list">
-        ${WIDGETS.map(w => `
-          <div class="widget-item ${activeWidgets.includes(w.id) ? 'active' : ''}" data-id="${w.id}">
-            <span class="w-icon">${w.icon}</span>
-            <span class="w-name">${w.name}</span>
-            <span class="w-size">${w.size}</span>
-          </div>
-        `).join('')}
-      </div>
-    </div>
-  `;
+      <h3 class="section-title">主畫面預覽</h3>
+      <div class="widget-preview home-widgets"></div>
+      <h3 class="section-title">可用小工具（點擊加入或移除）</h3>
+      <div class="widget-list"></div>
+    </div>`;
   container.querySelector('.ios-back-btn').onclick = () => Router.back();
-  container.querySelectorAll('.widget-item').forEach(item => {
+
+  const preview = container.querySelector('.widget-preview');
+  if (active.length === 0) {
+    preview.appendChild(createElement('div', 'empty-preview', { textContent: '還沒有小工具，點擊下方加入，回到主畫面就會看到' }));
+  } else {
+    for (const id of active) {
+      const el = await createWidgetElement(id);
+      if (el) { el.style.pointerEvents = 'none'; preview.appendChild(el); }
+    }
+  }
+
+  const list = container.querySelector('.widget-list');
+  WIDGETS.forEach(w => {
+    const item = createElement('div', 'widget-item' + (active.includes(w.id) ? ' active' : ''));
+    item.dataset.id = w.id;
+    item.innerHTML = `<span class="w-icon">${w.icon}</span><span class="w-name">${w.name}</span><span class="w-size">${SIZE_LABELS[w.size]}</span>`;
     item.onclick = async () => {
-      const id = item.dataset.id;
-      if (activeWidgets.includes(id)) {
-        activeWidgets = activeWidgets.filter(x => x !== id);
-      } else {
-        activeWidgets.push(id);
-      }
-      await saveWidgets();
-      renderWidget(params);
+      const current = await getActiveWidgetIds();
+      const next = current.includes(w.id) ? current.filter(x => x !== w.id) : [...current, w.id];
+      await setActiveWidgetIds(next);
+      createToast(next.includes(w.id) ? '已加入「' + w.name + '」' : '已移除「' + w.name + '」');
+      Router.handleRoute();
     };
+    list.appendChild(item);
   });
   return { element: container, cleanup: null };
 }

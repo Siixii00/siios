@@ -1,20 +1,10 @@
 import Router from '../../router.js';
-import { createElement, createToast } from '../../components.js';
+import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
+import { setAssistiveTouch, ACTIONS } from '../../core/assistive-touch.js';
 
-let enabled = false;
-
-async function loadState() {
-  const saved = await SettingsDB.get('touch_enabled');
-  enabled = saved === true;
-}
-
-async function saveState() {
-  await SettingsDB.set('touch_enabled', enabled);
-}
-
-async function renderTouch(params) {
-  await loadState();
+async function renderTouch() {
+  const enabled = (await SettingsDB.get('touch_enabled')) === true;
   const container = createElement('div', 'app-container touch-app');
   container.innerHTML = `
     <header class="ios-header">
@@ -30,31 +20,23 @@ async function renderTouch(params) {
         </label>
       </div>
       <div class="preview-area">
-        <div class="touch-ball ${enabled ? '' : 'hidden'}">
-          <i class="fas fa-touch_app"></i>
-        </div>
-        <p class="hint">浮動按鈕將顯示在畫面上，方便快速操作。</p>
+        <p class="hint">開啟後，畫面上會出現可拖曳的浮動按鈕（鎖定畫面不顯示）。點它會展開快捷選單，拖到畫面左右邊會自動吸附。</p>
       </div>
-      <div class="actions">
-        <button class="action-btn"><i class="fas fa-home"></i> 主畫面</button>
-        <button class="action-btn"><i class="fas fa-volume-up"></i> 音量</button>
-        <button class="action-btn"><i class="fas fa-lock"></i> 鎖定</button>
-        <button class="action-btn"><i class="fas fa-camera"></i> 截圖</button>
-      </div>
-    </div>
-  `;
+      <h3 class="section-title" style="margin:16px 0 8px;color:#888;font-size:13px">快捷動作（也可以直接在這裡試）</h3>
+      <div class="actions"></div>
+    </div>`;
   container.querySelector('.ios-back-btn').onclick = () => Router.back();
+
   const checkbox = container.querySelector('input[type="checkbox"]');
-  checkbox.onchange = async () => {
-    enabled = checkbox.checked;
-    await saveState();
-    container.querySelector('.touch-ball').classList.toggle('hidden', !enabled);
-  };
-  const actionBtns = container.querySelectorAll('.action-btn');
-  actionBtns[0].onclick = () => Router.navigate('/home');
-  actionBtns[1].onclick = () => { const v = window._touchVolume || 50; window._touchVolume = v >= 100 ? 0 : v + 25; createToast(`音量: ${window._touchVolume}%`); };
-  actionBtns[2].onclick = () => { window.App?.lock(); };
-  actionBtns[3].onclick = () => createToast('截圖功能尚未實作');
+  checkbox.onchange = () => setAssistiveTouch(checkbox.checked);
+
+  const actions = container.querySelector('.actions');
+  ACTIONS.forEach(a => {
+    const btn = createElement('button', 'action-btn');
+    btn.innerHTML = '<span class="material-symbols-outlined">' + a.icon + '</span> ' + a.label;
+    btn.onclick = () => a.run();
+    actions.appendChild(btn);
+  });
   return { element: container, cleanup: null };
 }
 

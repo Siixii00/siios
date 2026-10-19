@@ -8,6 +8,7 @@ import { MemorySystem } from './core/memory-system/index.js';
 import { initActivityAPI } from './activity-interceptor.js';
 import { ziweiLazyLoader } from './core/ziwei-lazy-loader.js';
 import { backupManager } from './core/backup-manager.js';
+import { initAssistiveTouch } from './core/assistive-touch.js';
 
 window.showError = function(errorInfo) {
     const info = typeof errorInfo === 'string' 
@@ -188,6 +189,8 @@ const App = {
             });
             
             Router.start(true);
+            
+            initAssistiveTouch().catch(e => console.warn('[App] 輔助觸控初始化失敗:', e));
             
             console.log('[App] 初始化活動 API...');
             initActivityAPI();

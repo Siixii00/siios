@@ -1,6 +1,8 @@
 ﻿import Router from './router.js';
 import { createElement, createIcon } from './components.js';
 import { getNavItems } from './apps/registry.js';
+import { applyWallpaper } from './core/wallpapers.js';
+import { createWidgetsSection } from './core/widgets.js';
 
 const APPS_PER_PAGE = 8;
 
@@ -23,8 +25,12 @@ const HomeScreen = {
 
         const wallpaper = createElement('div', 'home-wallpaper');
         container.appendChild(wallpaper);
+        await applyWallpaper(wallpaper, 'home');
 
         const content = createElement('div', 'home-content');
+
+        const widgets = await createWidgetsSection();
+        if (widgets) content.appendChild(widgets);
 
         const pagesWrapper = createElement('div', 'home-pages-wrapper');
         this.pagesContainer = createElement('div', 'home-pages');
