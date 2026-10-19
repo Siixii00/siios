@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-19T19:05:13.056152",
-    "total_items": 58
+    "last_updated": "2026-10-19T23:23:40.529085",
+    "total_items": 56
   },
   "content": {
     "tech": [
@@ -9,189 +9,177 @@
         "title": "MiniMax M3.1 Flash",
         "url": "https://www.minimax.io/blog/minimax-m31f",
         "source": "Hacker News",
-        "score": 160
-      },
-      {
-        "title": "Wine ported to OpenBSD",
-        "url": "https://marc.info/?l=openbsd-ports&m=179236125692175",
-        "source": "Hacker News",
-        "score": 366
-      },
-      {
-        "title": "Android apps running native on macOS",
-        "url": "https://github.com/kksimp/Mac.apk",
-        "source": "Hacker News",
-        "score": 91
-      },
-      {
-        "title": "RuneScape Bench: MMOs for Agents [video]",
-        "url": "https://www.youtube.com/watch?v=cNm4zyUtWj0",
-        "source": "Hacker News",
-        "score": 59
-      },
-      {
-        "title": "It's still ok to enjoy programming",
-        "url": "https://chriskiehl.com/article/it-is-still-ok-to-enjoy-programming",
-        "source": "Hacker News",
-        "score": 223
-      },
-      {
-        "title": "The obscure trust looming over Anthropic's IPO",
-        "url": "https://www.wsj.com/tech/ai/anthropic-ipo-private-trust-188f41f7?st=RtdGHg&reflink=desktopwebshare_permalink",
-        "source": "Hacker News",
-        "score": 55
-      },
-      {
-        "title": "Timestral: Mistral's time-series foundation models",
-        "url": "https://mistral.ai/news/timestral/",
-        "source": "Hacker News",
-        "score": 431
-      },
-      {
-        "title": "Mercury 3: Diffusion at scale",
-        "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
-        "source": "Hacker News",
-        "score": 122
-      },
-      {
-        "title": "Evidence (YC S21) Is Hiring Software Engineers",
-        "url": "https://evidence.dev/jobs",
-        "source": "Hacker News",
-        "score": 1
+        "score": 332
       },
       {
         "title": "I built a drone with only one motor [video]",
         "url": "https://www.youtube.com/watch?v=Ndftcft6XhU",
         "source": "Hacker News",
-        "score": 24
+        "score": 310
+      },
+      {
+        "title": "Wine ported to OpenBSD",
+        "url": "https://marc.info/?l=openbsd-ports&m=179236125692175",
+        "source": "Hacker News",
+        "score": 477
+      },
+      {
+        "title": "OpenBSD 8.0 release will have inteldrm/radeondrm/amdgpu drivers from Linux 6.18",
+        "url": "https://bsd.network/@brynet/117407035545900963",
+        "source": "Hacker News",
+        "score": 49
+      },
+      {
+        "title": "Putting Linux on my RTX Spark laptop because I don't have a Microsoft account",
+        "url": "https://josie.lol/blog/linux-rtx-spark",
+        "source": "Hacker News",
+        "score": 141
+      },
+      {
+        "title": "RuneScape Bench: MMOs for Agents [video]",
+        "url": "https://www.youtube.com/watch?v=cNm4zyUtWj0",
+        "source": "Hacker News",
+        "score": 131
+      },
+      {
+        "title": "Android apps running native on macOS",
+        "url": "https://github.com/kksimp/Mac.apk",
+        "source": "Hacker News",
+        "score": 231
+      },
+      {
+        "title": "It's still ok to enjoy programming",
+        "url": "https://chriskiehl.com/article/it-is-still-ok-to-enjoy-programming",
+        "source": "Hacker News",
+        "score": 386
+      },
+      {
+        "title": "One Hash Bloom Filters",
+        "url": "https://calabro.io/ohbf",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Timestral: Mistral's time-series foundation models",
+        "url": "https://mistral.ai/news/timestral/",
+        "source": "Hacker News",
+        "score": 524
+      },
+      {
+        "title": "Starcraft: Ashfall",
+        "url": "https://starcraft-shooter-2026.pages.dev/",
+        "source": "Hacker News",
+        "score": 261
+      },
+      {
+        "title": "The fire retardant in the seafood chain",
+        "url": "https://insideclimatenews.org/news/14102026/ethoxyquin-fire-retardant-in-seafood-chain/",
+        "source": "Hacker News",
+        "score": 94
       },
       {
         "title": "Alternatives to animal testing are finally taking off",
         "url": "https://spectrum.ieee.org/alternatives-to-animal-testing",
         "source": "Hacker News",
-        "score": 243
+        "score": 305
       },
       {
-        "title": "Galois Finite Fields and the Advanced Encryption Standard (AES)",
-        "url": "https://www.cs.uaf.edu/2015/spring/cs463/lecture/03_23_AES.html",
+        "title": "Agentic Monitoring",
+        "url": "https://benjamincongdon.me/blog/2026/10/19/Agentic-Monitoring/",
         "source": "Hacker News",
-        "score": 47
+        "score": 17
       },
       {
-        "title": "Launch HN: Laminar (YC S24) – We trained a model to catch silent agent failures",
-        "url": "https://news.ycombinator.com/item?id=50154029",
+        "title": "The End of Rationing",
+        "url": "https://sanketsaurav.com/writing/end-of-rationing",
         "source": "Hacker News",
-        "score": 27
-      },
-      {
-        "title": "Ask HN: How to deal with shipping AI-written code you don't understand?",
-        "url": "https://news.ycombinator.com/item?id=50151036",
-        "source": "Hacker News",
-        "score": 35
-      },
-      {
-        "title": "The fire retardant in the seafood chain",
-        "url": "https://insideclimatenews.org/news/14102026/ethoxyquin-fire-retardant-in-seafood-chain/",
-        "source": "Hacker News",
-        "score": 15
+        "score": 20
       }
     ],
     "ai": [
       {
-        "title": "The obscure trust looming over Anthropic's IPO",
-        "url": "https://www.wsj.com/tech/ai/anthropic-ipo-private-trust-188f41f7?st=RtdGHg&reflink=desktopwebshare_permalink",
-        "source": "Hacker News AI",
-        "score": 55
-      },
-      {
         "title": "Timestral: Mistral's time-series foundation models",
         "url": "https://mistral.ai/news/timestral/",
         "source": "Hacker News AI",
-        "score": 431
-      },
-      {
-        "title": "Launch HN: Laminar (YC S24) – We trained a model to catch silent agent failures",
-        "url": "https://news.ycombinator.com/item?id=50154029",
-        "source": "Hacker News AI",
-        "score": 27
-      },
-      {
-        "title": "Ask HN: How to deal with shipping AI-written code you don't understand?",
-        "url": "https://news.ycombinator.com/item?id=50151036",
-        "source": "Hacker News AI",
-        "score": 35
+        "score": 524
       },
       {
         "title": "The fire retardant in the seafood chain",
         "url": "https://insideclimatenews.org/news/14102026/ethoxyquin-fire-retardant-in-seafood-chain/",
         "source": "Hacker News AI",
-        "score": 15
+        "score": 94
       },
       {
-        "title": "Let's Encrypt is adding two additional remote perspectives for domain validation",
-        "url": "https://community.letsencrypt.org/t/lets-encrypt-is-adding-two-additional-remote-perspectives-for-domain-validation/252166",
+        "title": "Ask HN: How to deal with shipping AI-written code you don't understand?",
+        "url": "https://news.ycombinator.com/item?id=50151036",
         "source": "Hacker News AI",
-        "score": 199
+        "score": 210
+      },
+      {
+        "title": "Launch HN: Laminar (YC S24) – RL-trained model that finds errors in agent traces",
+        "url": "https://news.ycombinator.com/item?id=50154029",
+        "source": "Hacker News AI",
+        "score": 44
       },
       {
         "title": "Chicago O'Hare digs up 50-ton boulder under airfield, asks public for name ideas",
         "url": "https://simpleflying.com/chicago-ohare-digs-up-50-ton-boulder-public-names/",
         "source": "Hacker News AI",
-        "score": 23
+        "score": 92
+      },
+      {
+        "title": "Let's Encrypt is adding two additional remote perspectives for domain validation",
+        "url": "https://community.letsencrypt.org/t/lets-encrypt-is-adding-two-additional-remote-perspectives-for-domain-validation/252166",
+        "source": "Hacker News AI",
+        "score": 237
       },
       {
         "title": "CERN and Mistral sign a statement of intent to establish a strategic partnership",
         "url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
         "source": "Hacker News AI",
-        "score": 225
+        "score": 303
+      },
+      {
+        "title": "Coconuts in Medieval Britain (2015)",
+        "url": "https://www.themarysue.com/monty-python-holy-grail-coconuts/",
+        "source": "Hacker News AI",
+        "score": 26
+      },
+      {
+        "title": "Ukraine claims first drone evacuation of wounded soldier",
+        "url": "https://www.nbcnews.com/world/ukraine/ukraine-first-drone-evacuation-wounded-soldier-frontlines-hexacopter-rcna604310",
+        "source": "Hacker News AI",
+        "score": 42
+      },
+      {
+        "title": "The obscure trust looming over Anthropic's IPO",
+        "url": "https://www.wsj.com/tech/ai/anthropic-ipo-private-trust-188f41f7?st=RtdGHg&reflink=desktopwebshare_permalink",
+        "source": "Hacker News AI",
+        "score": 126
       },
       {
         "title": "Cairn: Open windows into AI-driven cyber operations",
         "url": "https://norforge.com/blog/inside_cairn",
         "source": "Hacker News AI",
-        "score": 10
+        "score": 26
       },
       {
-        "title": "Ukraine carries out aerial drone evacuation of a wounded soldier",
-        "url": "https://www.dailymail.com/news/article-16220441/Ukraine-carries-aerial-drone-evacuation-wounded-soldier-frontline.html",
+        "title": "Introducing Clairic, a new System One class of extraction models",
+        "url": "https://blog.cloudflare.com/clairic-extraction-model/",
         "source": "Hacker News AI",
-        "score": 75
-      },
-      {
-        "title": "Degraded availability for GitHub Actions, GitHub Pages and Webhooks",
-        "url": "https://www.githubstatus.com/incidents/8tzbpcnl75jp",
-        "source": "Hacker News AI",
-        "score": 138
-      },
-      {
-        "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
-        "url": "https://arxiv.org/abs/2610.18861",
-        "source": "Hacker News AI",
-        "score": 499
-      },
-      {
-        "title": "Show HN: Qwen3-4B with the AI writing tics trained out",
-        "url": "https://100toolkit.com/blog/deslop-model/",
-        "source": "Hacker News AI",
-        "score": 135
+        "score": 38
       },
       {
         "title": "If you don't run your own LLM proxy, how do you know whats going on?",
         "url": "https://jrdsgl.com/if-you-dont-run-your-own-llm-proxy-how-the-fuck-do-you-even-know-whats-going-on/",
         "source": "Hacker News AI",
-        "score": 284
-      },
-      {
-        "title": "Tmux and Claude Code: Sessions, Send-Keys, and the Ceiling",
-        "url": "https://crystl.dev/guides/tmux-for-ai-agents/",
-        "source": "Hacker News AI",
-        "score": 139
+        "score": 292
       }
     ],
     "news": [
       {
-        "title": "Australian MP critically injured after being hit by car in apparent attack",
-        "url": "https://www.bbc.co.uk/news/articles/cwp9g43g2p07o?at_medium=RSS&at_campaign=rss",
+        "title": "Curfew imposed in parts of central Paris and other cities after rioting across France",
+        "url": "https://www.bbc.co.uk/news/articles/cx30ez03djyqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -205,27 +193,37 @@
         "source": "BBC World"
       },
       {
-        "title": "Ex-OpenAI worker accused of planting device had Saudi support says court filing",
-        "url": "https://www.bbc.co.uk/news/articles/c6gel2dlyxvyo?at_medium=RSS&at_campaign=rss",
+        "title": "Tennis star Svitolina says emotional toll of Ukraine war led to Monfils separation",
+        "url": "https://www.bbc.co.uk/news/articles/ckd7qy12j148o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Alberta heads to polls to decide whether to hold vote on separation from Canada",
-        "url": "https://www.bbc.co.uk/news/articles/cxvgd0ymgzgyo?at_medium=RSS&at_campaign=rss",
+        "title": "Five ways El Niño is affecting the weather around the world",
+        "url": "https://www.bbc.co.uk/weather/articles/c6dx07dznpyyo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ex-OpenAI worker accused of planting device had Saudi support, says court filing",
+        "url": "https://www.bbc.co.uk/news/articles/c6gel2dlyxvyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Exiled critic of Rwandan president found beheaded",
         "url": "https://www.bbc.co.uk/news/articles/c3lylj78777do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
-      },
-      {
-        "title": "Houthi missile strike on Yemen camp kills 50 security recruits, local authorities say",
-        "url": "https://www.bbc.co.uk/news/articles/cv0ld6lrr2zeo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Sketchbook special! Issue 272 of ImagineFX ",
+        "url": "https://www.creativebloq.com/news/sketchbook-special-issue-272-of-imaginefx-clone",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Stupid Never Dies review: the Spider-Verse visual blast can't hide the grind ",
+        "url": "https://www.creativebloq.com/reviews/stupid-never-dies-review-smashes-anime-pop-art-and-punk-into-one-fine-mess",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Logistics fiasco or clever marketing? Apple's iPhone Duo sellout might not be such a big blunder ",
         "url": "https://www.creativebloq.com/news/logistics-fiasco-or-clever-marketing-apples-iphone-duo-sellout-might-not-be-such-a-mistake",
@@ -250,53 +248,43 @@
         "title": " Warhammer 40,000: Boltgun 2's lead artist reveals how they made pixel art feel authentically retro ",
         "url": "https://www.creativebloq.com/3d/video-game-design/warhammer-40-000-boltgun-2s-lead-artist-reveals-how-they-made-pixel-art-feel-authentically-retro",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " The Kiwibank sheep went viral for all the wrong reasons, and there's something every brand can learn from it ",
-        "url": "https://www.creativebloq.com/news/the-kiwibank-sheep-controversy-suggests-brands-should-give-up-trying-to-control-ai-mascots",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " I pushed Nvidia’s RTX Spark to its limits in our favourite creative laptop ",
-        "url": "https://www.creativebloq.com/reviews/i-pushed-nvidias-rtx-spark-to-its-limits-in-our-favourite-creative-laptop",
-        "source": "Creative Bloq"
       }
     ],
     "science": [],
     "gaming": [
       {
-        "title": "AI Cloning Could Become the Biggest Threat to Video Game Playtests",
-        "url": "https://www.polygon.com/revamp-playtest-limited-ai-cloning-fears/",
+        "title": "'Red Dead Redemption' 2 Mod Is 'Shadow of Mordor' Meets the Wild West",
+        "url": "https://www.polygon.com/red-dead-redemption-2-nemesis-system-mod-shadow-of-mordor/",
         "source": "Polygon"
       },
       {
-        "title": "It's the End of An Era for Netflix Movies",
-        "url": "https://www.polygon.com/netflix-movies-tv-creative-overhaul-dan-lin-bela-bajaria-peter-rice/",
+        "title": "8 Classic PlayStation Adventure Games that are Barely Playable Today",
+        "url": "https://www.polygon.com/classic-playstation-adventure-games-unplayable-today/",
         "source": "Polygon"
       },
       {
-        "title": "DC Studios Reveals First Details on New TV Series",
-        "url": "https://www.polygon.com/mister-miracle-first-details-confirmed/",
+        "title": "Modern Warfare 4 Is Legitimately a Top-5 Call of Duty Campaign",
+        "url": "https://www.polygon.com/mw4-modern-warfare-4-call-duty-campaign-review/",
         "source": "Polygon"
       },
       {
-        "title": "The 10 Best Steam Next Fest Demos to Play Right Now",
-        "url": "https://www.polygon.com/steam-next-fest-demos-best-october-2026/",
+        "title": "Stupid Never Dies Is Easily the Worst Game of 2026",
+        "url": "https://www.polygon.com/stupid-never-dies-review/",
         "source": "Polygon"
       },
       {
-        "title": "Sounds Like GTA 6 Will Be Full of Details Like Red Dead's Infamous Horse Balls",
-        "url": "https://www.polygon.com/gta-6-rdr2-horse-balls-confirmed-rockstar/",
+        "title": "Street Fighter Officially Sets a New Franchise Box Office Record",
+        "url": "https://www.polygon.com/street-fighter-movie-2026-box-office-success/",
         "source": "Polygon"
       },
       {
-        "title": "How to make goo in Enshrouded",
-        "url": "https://www.polygon.com/enshrouded-goo-crafting-recipe-how-to-make/",
+        "title": "New Pokémon Release Finally Lets You Play As Team Rocket",
+        "url": "https://www.polygon.com/new-pokemon-game-team-rocket-evolved-what-is-trailer-release/",
         "source": "Polygon"
       },
       {
-        "title": "Resident Evil 7 Dev Reveals the Game’s Last of Us Inspiration and Troubled Development",
-        "url": "https://www.polygon.com/resident-evil-7-capcom-development-last-of-us/",
+        "title": "Star Wars Battlefront 3: Bungie Rumored as New Developer",
+        "url": "https://www.polygon.com/star-wars-battlefront-3-rumor-bungie-dice-disney/",
         "source": "Polygon"
       }
     ],
