@@ -470,7 +470,7 @@
 }
 
 .wiki-block-toggle::before {
-  content: '?';
+  content: 'â–¶';
 }
 
 .wiki-block.collapsed .wiki-block-toggle {
@@ -528,15 +528,24 @@
 }
 
 .wiki-block-content[data-type="bulleted-list"]::before {
-  content: '??;
+  content: 'â€¢';
   position: absolute;
-  left: 4px;
+  left: 6px;
   color: var(--nt-ink-secondary);
 }
 
 .wiki-block-content[data-type="numbered-list"] {
-  padding-left: var(--nt-s-md);
+  padding-left: 28px;
   position: relative;
+}
+
+.wiki-block-content[data-type="numbered-list"]::before {
+  content: attr(data-number) '.';
+  position: absolute;
+  left: 0;
+  min-width: 22px;
+  text-align: right;
+  color: var(--nt-ink-secondary);
 }
 
 .wiki-block-content[data-type="todo"] {
@@ -569,7 +578,7 @@
 }
 
 .wiki-todo-checkbox.checked::after {
-  content: '?';
+  content: 'âœ“';
   color: var(--nt-on-primary);
   font-size: 12px;
   font-weight: 700;
@@ -1386,7 +1395,7 @@ left: 0 !important;
 .wiki-blocks {
     padding-bottom: 80px !important;
 }
-/* ²Î¤@°Ï¶ô¼Ë¦¡ - Notion ­·®æ¥d¤ù */
+/* ï¿½Î¤@ï¿½Ï¶ï¿½ï¿½Ë¦ï¿½ - Notion ï¿½ï¿½ï¿½ï¿½dï¿½ï¿½ */
 .wiki-backlinks-area,
 .wiki-ziwei-area {
     padding: 0 var(--nt-s-md) !important;
@@ -1533,7 +1542,7 @@ left: 0 !important;
 }
 
 .wiki-ziwei-card-title::before {
-    content: '?';
+    content: 'â–¶';
     font-size: 10px;
     color: var(--nt-ink-faint);
     transition: transform 0.2s ease;

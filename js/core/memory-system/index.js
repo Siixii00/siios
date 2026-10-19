@@ -133,9 +133,10 @@ export class MemorySystem {
         let filteredMemories = allMemories;
 
         // Filter by character_id if provided
+        // 早期版本存下的記憶沒有 character_id：只在它原本所屬的聊天室裡保留，避免憑空消失
         if (filters.character_id) {
-            filteredMemories = filteredMemories.filter(m => 
-                m.character_id === filters.character_id
+            filteredMemories = filteredMemories.filter(m =>
+                m.character_id === filters.character_id || (!m.character_id && chatId && m.chat_id === chatId)
             );
         }
 
@@ -155,7 +156,7 @@ export class MemorySystem {
         // Filter by source_app
         if (filters.selected_sources && filters.selected_sources.length > 0) {
             filteredMemories = filteredMemories.filter(m => 
-                filters.selected_sources.includes(m.source_app) || m.source_app === 'chat'
+                filters.selected_sources.includes(m.source_app) || (m.source_app || 'chat') === 'chat'
             );
         }
 
@@ -186,6 +187,9 @@ export class MemorySystem {
                         seen.set(m.id, { ...m, similarity: bestSim });
                     }
                 }
+                // 各 app 寫入的互動記憶沒有 embedding，用關鍵字比對補進來，否則啟用向量檢索後它們永遠找不到
+                const withoutEmbedding = filteredMemories.filter(m => !m.embedding && !m.embeddingMeaning && !seen.has(m.id));
+                for (const m of this._keywordSearchFiltered(query, withoutEmbedding)) seen.set(m.id, m);
                 memories = Array.from(seen.values());
             } catch {
                 memories = this._keywordSearchFiltered(query, filteredMemories);
@@ -238,12 +242,31 @@ export class MemorySystem {
         return results;
     }
 
+    // 以相鄰兩字（中英文皆適用）的重疊程度比對，而不是要求整句查詢完整出現在記憶裡
+    _bigrams(text) {
+        const t = String(text || '').toLowerCase().replace(/[\s\p{P}\p{S}]+/gu, '');
+        const grams = new Set();
+        for (let i = 0; i < t.length - 1; i++) grams.add(t.slice(i, i + 2));
+        if (t.length === 1) grams.add(t);
+        return grams;
+    }
+
     _keywordSearchFiltered(query, memories) {
-        const lowerQuery = query.toLowerCase();
-        return memories.filter(m =>
-            (m.content && m.content.toLowerCase().includes(lowerQuery)) ||
-            (m.meta_content && m.meta_content.toLowerCase().includes(lowerQuery))
-        );
+        const q = this._bigrams(query);
+        if (q.size === 0) return [];
+        const out = [];
+        for (const m of memories) {
+            const b = this._bigrams((m.content || '') + ' ' + (m.meta_content || ''));
+            if (b.size === 0) continue;
+            let shared = 0;
+            for (const g of q) if (b.has(g)) shared++;
+            const score = shared / Math.min(q.size, b.size);
+            // 至少共有兩組相鄰字且佔較短文字的三成以上，避免只因一兩個常見字就命中
+            if ((shared >= 2 || (q.size === 1 && shared === 1)) && score >= 0.3) {
+                out.push({ ...m, similarity: Math.min(0.9, 0.4 + score * 0.5) });
+            }
+        }
+        return out;
     }
 
     async _keywordSearch(query, chatId) {

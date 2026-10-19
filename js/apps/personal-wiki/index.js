@@ -328,7 +328,8 @@ function renderEditor(container) {
     const coverImg = editorArea.querySelector('.wiki-cover');
     if (coverImg) coverImg.onclick = () => uploadCoverImage(record, container);
 
-        if (emojiBtn) {
+    const emojiBtn = editorArea.querySelector('[data-action="change-icon"]');
+    if (emojiBtn) {
         emojiBtn.onclick = async () => {
             const current = record.icon || '📄';
             const idx = PAGE_ICONS.indexOf(current);
@@ -345,9 +346,9 @@ function renderEditor(container) {
     loadBacklinks(container, record.id);
     loadZiweiFortune(container, record.id);
     
-    requestAnimationFrame(() => {
-        updateAllNumberedLists();
-    });
+    // 區塊已經在 DOM 裡，直接編號；用這個頁面的資料，不依賴全域的 activePageId（開啟頁面時它可能還沒更新）
+    const numberedBlocksEl = editorArea.querySelector('.wiki-blocks');
+    if (numberedBlocksEl) updateNumberedListNumbers(record, numberedBlocksEl);
 }
 
 function renderBlocks(blocks, recordId) {
@@ -437,8 +438,22 @@ function bindBlockEvents(container, record) {
 
             if (e.key === 'Enter' && !e.shiftKey) {
                 e.preventDefault();
+                const continuesList = ['bulleted-list', 'numbered-list', 'todo'].includes(block.type);
+                // 空的清單項目再按 Enter：結束清單，變回一般文字
+                if (continuesList && isBlockEmpty(el)) {
+                    saveStateForUndo(record, '結束清單');
+                    block.type = 'text';
+                    block.content = '';
+                    block.checked = false;
+                    record.updated_at = Date.now();
+                    WikiRecordsDB.update(record.id, { blocks: record.blocks });
+                    renderEditor(container);
+                    requestAnimationFrame(() => blocksEl.querySelector(`[data-block-id="${block.id}"]`)?.focus());
+                    return;
+                }
                 saveStateForUndo(record, '新增區塊');
-                const newBlock = createBlock('text', '');
+                // 在清單項目裡按 Enter：延續同一種清單（編號會自動接續）
+                const newBlock = createBlock(continuesList ? block.type : 'text', '');
                 const idx = record.blocks.findIndex(b => b.id === blockId);
                 record.blocks.splice(idx + 1, 0, newBlock);
                 record.updated_at = Date.now();
@@ -775,15 +790,6 @@ function updateNumberedListNumbers(record, blocksEl) {
             counter = 1;
         }
     });
-}
-
-function updateAllNumberedLists() {
-    const blocksEl = document.querySelector('.wiki-blocks');
-    const record = getRecord(activePageId);
-    
-    if (blocksEl && record) {
-        updateNumberedListNumbers(record, blocksEl);
-    }
 }
 
 function showSlashMenu(container, blockId, triggerEl) {

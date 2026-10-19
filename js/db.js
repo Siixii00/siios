@@ -511,6 +511,13 @@ const MemoryDB = {
             timestamp: data.timestamp || now,
             created_at: now
         };
+        // 各 app 寫入記憶時附帶的歸屬資訊（角色、來源 app、劇場、是否虛構）。
+        // 檢索時的角色／劇場／來源／虛構篩選都依賴這些欄位，不能丟掉；只在有提供時才寫入，舊格式的記憶不受影響
+        const attribution = ['character_id', 'characterId', 'user_id', 'source_app', 'source_type', 'source_subtype',
+            'memory_level', 'meta_content', 'full_content', 'theater_ids', 'is_fiction', 'fiction_context'];
+        for (const key of attribution) {
+            if (data[key] !== undefined && data[key] !== null && data[key] !== '') memory[key] = data[key];
+        }
         await database.put('memories', memory);
         return memory;
     },

@@ -96,8 +96,15 @@ async function renderHealth(params) {
         createToast('Health memory saved');
     };
     
-    container.querySelector('#add-period').onclick = () => showAddPeriodDialog(container);
-    container.querySelector('#add-medication').onclick = () => showAddMedicationDialog(container);
+    const requireUser = fn => () => {
+        if (!currentUser) {
+            createToast('Please create a user mask first', 'error');
+            return;
+        }
+        fn(container);
+    };
+    container.querySelector('#add-period').onclick = requireUser(showAddPeriodDialog);
+    container.querySelector('#add-medication').onclick = requireUser(showAddMedicationDialog);
     
     return { element: container, cleanup: null };
 }
@@ -193,6 +200,29 @@ async function renderPeriodCalendar(container) {
     }
     
     calendarEl.innerHTML = html;
+
+    if (periods.length > 0) {
+        const fmt = ts => new Date(ts).toLocaleDateString();
+        const list = createElement('div', 'period-list');
+        periods.forEach(p => {
+            const row = createElement('div', 'medication-item');
+            const info = createElement('div', 'med-info');
+            info.append(
+                createElement('span', 'med-name', { textContent: fmt(p.start_date) + (p.end_date ? ' – ' + fmt(p.end_date) : '') }),
+                createElement('span', 'med-dosage', { textContent: p.notes || '' })
+            );
+            const del = createElement('button', 'delete-btn', { textContent: 'Delete' });
+            del.onclick = async () => {
+                if (!confirm('Delete this period record?')) return;
+                await HealthDB.delete(p.id);
+                renderPeriodCalendar(container);
+                createToast('Period record deleted');
+            };
+            row.append(info, del);
+            list.appendChild(row);
+        });
+        calendarEl.appendChild(list);
+    }
 }
 
 async function renderMedicationList(container) {
@@ -209,22 +239,20 @@ async function renderMedicationList(container) {
         return;
     }
     
-    listEl.innerHTML = medications.map(med => `
-        <div class="medication-item">
-            <div class="med-info">
-                <span class="med-name">${med.medication_name}</span>
-                <span class="med-dosage">${med.dosage}</span>
-            </div>
-            <button class="delete-btn" data-id="${med.id}">Delete</button>
-        </div>
-    `).join('');
-    
-    listEl.querySelectorAll('.delete-btn').forEach(btn => {
-        btn.onclick = async () => {
-            await HealthDB.delete(btn.dataset.id);
+    // 以 DOM 建立，避免把使用者輸入的藥名當成 HTML
+    listEl.innerHTML = '';
+    medications.forEach(med => {
+        const row = createElement('div', 'medication-item');
+        const info = createElement('div', 'med-info');
+        info.append(createElement('span', 'med-name', { textContent: med.medication_name }), createElement('span', 'med-dosage', { textContent: med.dosage || '' }));
+        const del = createElement('button', 'delete-btn', { textContent: 'Delete' });
+        del.onclick = async () => {
+            await HealthDB.delete(med.id);
             renderMedicationList(container);
             createToast('Medication deleted');
         };
+        row.append(info, del);
+        listEl.appendChild(row);
     });
 }
 
@@ -260,6 +288,10 @@ function showAddPeriodDialog(container) {
         
         if (!start) {
             createToast('Please select start date', 'error');
+            return;
+        }
+        if (end && new Date(end) < new Date(start)) {
+            createToast('End date cannot be before start date', 'error');
             return;
         }
         
