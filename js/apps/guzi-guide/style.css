@@ -12,3 +12,9 @@
 .item-cat { font-size: 12px; color: var(--guzi-muted); }
 .empty-items { text-align: center; color: var(--guzi-muted); padding: 20px; }
 .add-btn { width: 100%; padding: 14px; background: var(--guzi-accent); color: white; border: none; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer; }
+.stat-card { border: 2px solid transparent; cursor: pointer; }
+.stat-card.active { border-color: var(--guzi-accent); }
+.item-row { align-items: center; gap: 10px; }
+.item-row .item-name { flex: 1; }
+.item-del { background: none; border: none; color: #d33; font-size: 12px; cursor: pointer; }
+.empty-items { text-align: center; color: var(--guzi-muted); padding: 16px; }

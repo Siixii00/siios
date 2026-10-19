@@ -64,14 +64,14 @@ async function renderAppearance(params) {
     card.onclick = async () => {
       currentTheme = card.dataset.id;
       await saveTheme();
-      renderAppearance(params);
+      Router.handleRoute();
     };
   });
   container.querySelectorAll('.font-btn').forEach(btn => {
     btn.onclick = async () => {
       currentFontSize = btn.classList.contains('small') ? 'small' : btn.classList.contains('large') ? 'large' : 'medium';
       await saveFontSize();
-      renderAppearance(params);
+      Router.handleRoute();
     };
   });
   return { element: container, cleanup: null };

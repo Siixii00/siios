@@ -10,3 +10,14 @@
 .ingredient-list li { padding: 6px 0; color: var(--recipe-text); border-bottom: 1px solid #ffe0b2; }
 .step-list { padding-left: 20px; }
 .step-list li { padding: 8px 0; color: var(--recipe-text); line-height: 1.5; }
+.recipe-app .page { flex-direction: column; align-items: center; gap: 12px; }
+.recipe-actions { display: flex; gap: 8px; width: 100%; max-width: 400px; }
+.r-btn { flex: 1; padding: 12px 8px; background: var(--recipe-card); border: 1px solid #ffccbc; border-radius: 10px; color: var(--recipe-text); font-size: 13px; cursor: pointer; }
+.r-ai { background: var(--recipe-accent); color: #fff; border-color: var(--recipe-accent); }
+.r-btn:disabled { opacity: 0.6; cursor: wait; }
+.recipe-favs { width: 100%; max-width: 400px; background: var(--recipe-card); border-radius: 12px; padding: 14px; }
+.recipe-favs h3 { font-size: 14px; color: var(--recipe-accent); margin: 0 0 8px; }
+.empty-fav { color: var(--recipe-muted); font-size: 13px; padding: 8px 0; }
+.fav-row { display: flex; align-items: center; gap: 8px; padding: 6px 0; border-bottom: 1px solid #ffe0b2; }
+.fav-open { flex: 1; text-align: left; background: none; border: none; color: var(--recipe-text); font-size: 14px; cursor: pointer; }
+.fav-del { background: none; border: none; color: #d33; font-size: 12px; cursor: pointer; }

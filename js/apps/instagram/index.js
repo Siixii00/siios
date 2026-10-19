@@ -4,13 +4,16 @@ import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
+import { getBalance, charge, formatMoney, WalletError } from '../../core/wallet.js';
+import { addOrder, newOrderId } from '../../core/orders.js';
 
 const STORAGE_KEYS = {
     stories: 'instagram_stories',
     posts: 'instagram_posts',
     userPosts: 'instagram_user_posts',
     saved: 'instagram_saved',
-    memories: 'instagram_memories'
+    memories: 'instagram_memories',
+    reels: 'instagram_reels'
 };
 
 let storiesData = [
@@ -28,6 +31,7 @@ let postsData = [
 
 let isGeneratingPosts = false;
 let isGeneratingStories = false;
+let isGeneratingReels = false;
 
 async function getFromSettings(key, fallback = null) {
     const value = await SettingsDB.get(key);
@@ -430,8 +434,10 @@ async function renderTabContent(container, tab) {
             await renderProfile(feed);
             break;
         case 'reels':
+            await renderReels(container, feed);
+            break;
         case 'shop':
-            renderComingSoon(feed, tab);
+            await renderShop(feed);
             break;
     }
 }
@@ -490,15 +496,143 @@ async function renderProfile(container) {
     `;
 }
 
-function renderComingSoon(container, tab) {
-    const names = { reels: 'Reels', shop: '商店' };
-    container.innerHTML = `
-        <div class="coming-soon">
-            <i class="fa-solid fa-hourglass-half"></i>
-            <p>${names[tab]} 功能開發中</p>
-            <span>敬請期待下一版本更新</span>
-        </div>
-    `;
+// ===== Reels =====
+const REEL_GRADIENTS = [
+    'linear-gradient(160deg, #833ab4, #fd1d1d 60%, #fcb045)',
+    'linear-gradient(160deg, #0f2027, #203a43 55%, #2c5364)',
+    'linear-gradient(160deg, #ff9a9e, #fad0c4)',
+    'linear-gradient(160deg, #1d976c, #93f9b9)',
+    'linear-gradient(160deg, #373b44, #4286f4)'
+];
+const MAX_REELS = 30;
+
+async function getReels() {
+    const list = await getFromSettings(STORAGE_KEYS.reels, []);
+    return Array.isArray(list) ? list : [];
+}
+
+async function generateAIReels(container, feed) {
+    if (isGeneratingReels) { createToast('正在生成中，請稍候...'); return; }
+    isGeneratingReels = true;
+    const btn = feed.querySelector('.reels-generate');
+    if (btn) { btn.disabled = true; btn.textContent = '生成中...'; }
+    try {
+        const characterId = getSelectedCharacterId(container);
+        const context = await buildAppContext({ characterId });
+        const systemPrompt = context.systemPrompt || '你是社群媒體短影音創作者。請使用繁體中文。';
+        const prompt = `${context.systemPrompt || ''}\n\n請生成 3 則 Instagram Reels 短影音的文案，要求：\n1. 符合角色性格與使用者設定\n2. caption 20-60 字，可含表情符號與標籤\n3. music 為虛構的配樂名稱\n\n只輸出 JSON：{"reels":[{"user":"帳號","caption":"文案","music":"配樂","likes":數字,"comments":數字}]}`;
+        const result = await callAPIWithMessages(systemPrompt, prompt, 0.9);
+        let parsed = null;
+        try { parsed = JSON.parse(result); } catch (e) { const match = result.match(/\{[\s\S]*\}/); if (match) parsed = JSON.parse(match[0]); }
+        const fresh = (Array.isArray(parsed && parsed.reels) ? parsed.reels : []).filter(r => r && r.caption).map((r, i) => ({
+            id: `reel-${Date.now()}-${i}`,
+            user: String(r.user || 'creator').slice(0, 30),
+            caption: String(r.caption).slice(0, 200),
+            music: String(r.music || '原創音樂').slice(0, 60),
+            likes: Math.max(0, parseInt(r.likes, 10) || Math.floor(Math.random() * 9000)),
+            comments: Math.max(0, parseInt(r.comments, 10) || Math.floor(Math.random() * 300)),
+            liked: false
+        }));
+        if (fresh.length === 0) throw new Error('模型沒有產生可用的內容，請再試一次');
+        await setToSettings(STORAGE_KEYS.reels, fresh.concat(await getReels()).slice(0, MAX_REELS));
+        await renderReels(container, feed);
+    } catch (err) {
+        createToast(`生成失敗: ${err.message}`);
+        if (btn) { btn.disabled = false; btn.textContent = 'AI 生成 Reels'; }
+    } finally {
+        isGeneratingReels = false;
+    }
+}
+
+async function renderReels(container, feed) {
+    const reels = await getReels();
+    feed.innerHTML = '';
+    const wrap = createElement('div', 'reels-wrap');
+    const bar = createElement('div', 'reels-bar');
+    const gen = createElement('button', 'reels-generate', { textContent: 'AI 生成 Reels' });
+    gen.onclick = () => generateAIReels(container, feed);
+    bar.appendChild(gen);
+    wrap.appendChild(bar);
+    if (reels.length === 0) {
+        wrap.appendChild(createElement('div', 'reels-empty', { textContent: '還沒有 Reels，點上方按鈕讓 AI 為你生成' }));
+    }
+    const list = createElement('div', 'reels-list');
+    reels.forEach((reel, i) => {
+        const card = createElement('div', 'reel');
+        card.style.background = REEL_GRADIENTS[i % REEL_GRADIENTS.length];
+        card.innerHTML = '<div class="reel-info"><strong class="reel-user"></strong><p class="reel-caption"></p><span class="reel-music"></span></div><div class="reel-side"></div>';
+        card.querySelector('.reel-user').textContent = '@' + reel.user;
+        card.querySelector('.reel-caption').textContent = reel.caption;
+        card.querySelector('.reel-music').textContent = '🎵 ' + reel.music;
+        const side = card.querySelector('.reel-side');
+        const like = createElement('button', 'reel-like' + (reel.liked ? ' liked' : ''));
+        like.setAttribute('aria-label', '按讚');
+        const likeLabel = () => (reel.liked ? '♥ ' : '♡ ') + formatLikes(reel.likes);
+        like.textContent = likeLabel();
+        like.onclick = async () => {
+            reel.liked = !reel.liked;
+            reel.likes += reel.liked ? 1 : -1;
+            like.classList.toggle('liked', reel.liked);
+            like.textContent = likeLabel();
+            const all = await getReels();
+            const target = all.find(r => r.id === reel.id);
+            if (target) { target.liked = reel.liked; target.likes = reel.likes; await setToSettings(STORAGE_KEYS.reels, all); }
+        };
+        side.append(like, createElement('span', 'reel-comments', { textContent: '💬 ' + formatLikes(reel.comments) }));
+        const del = createElement('button', 'reel-del', { textContent: '刪除' });
+        del.onclick = async () => {
+            await setToSettings(STORAGE_KEYS.reels, (await getReels()).filter(r => r.id !== reel.id));
+            await renderReels(container, feed);
+        };
+        side.appendChild(del);
+        list.appendChild(card);
+    });
+    wrap.appendChild(list);
+    feed.appendChild(wrap);
+}
+
+// ===== 商店：用「支付」餘額購買，訂單會出現在「購物」app =====
+const SHOP_ITEMS = [
+    { id: 'ig-s1', name: '手工陶瓷杯', price: 380, image: '☕', seller: 'clay.studio' },
+    { id: 'ig-s2', name: '復古底片相機', price: 1450, image: '📷', seller: 'filmroom' },
+    { id: 'ig-s3', name: '香氛蠟燭', price: 520, image: '🕯️', seller: 'lumi.home' },
+    { id: 'ig-s4', name: '帆布托特包', price: 690, image: '👜', seller: 'canvas.co' },
+    { id: 'ig-s5', name: '手繪明信片組', price: 180, image: '💌', seller: 'paper.mood' },
+    { id: 'ig-s6', name: '小型盆栽', price: 260, image: '🪴', seller: 'green.corner' }
+];
+
+async function buyShopItem(item) {
+    const balance = await getBalance();
+    if (!confirm(`購買「${item.name}」？價格 ${formatMoney(item.price)}，餘額 ${formatMoney(balance)}`)) return;
+    try {
+        await charge(item.price, `Instagram 商店：${item.name}`, { category: 'shopping' });
+        await addOrder('taobao_orders', { id: newOrderId(), date: Date.now(), total: item.price, items: [{ id: item.id, name: item.name, image: item.image, price: item.price, qty: 1 }] });
+        createToast(`已購買「${item.name}」，可到「購物」查看訂單`);
+    } catch (e) {
+        createToast(e instanceof WalletError ? e.message : '購買失敗', 'error');
+    }
+}
+
+async function renderShop(feed) {
+    feed.innerHTML = '';
+    const wrap = createElement('div', 'shop-wrap');
+    wrap.appendChild(createElement('div', 'shop-balance', { textContent: '餘額 ' + formatMoney(await getBalance()) }));
+    const grid = createElement('div', 'shop-grid');
+    SHOP_ITEMS.forEach(item => {
+        const card = createElement('div', 'shop-item');
+        card.append(
+            createElement('div', 'shop-image', { textContent: item.image }),
+            createElement('div', 'shop-name', { textContent: item.name }),
+            createElement('div', 'shop-seller', { textContent: '@' + item.seller }),
+            createElement('div', 'shop-price', { textContent: formatMoney(item.price) })
+        );
+        const btn = createElement('button', 'shop-buy', { textContent: '購買' });
+        btn.onclick = async () => { btn.disabled = true; await buyShopItem(item); renderShop(feed); };
+        card.appendChild(btn);
+        grid.appendChild(card);
+    });
+    wrap.appendChild(grid);
+    feed.appendChild(wrap);
 }
 
 async function renderInstagram(params) {

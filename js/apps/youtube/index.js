@@ -4,6 +4,7 @@ import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
+import { synthesize, getSynthConfig } from '../../core/synth-client.js';
 
 const thumbnailColors = [
     ['#ff6b6b', '#feca57'],
@@ -1032,6 +1033,57 @@ function closeAIVideoGenModal(container) {
     resetAIVideoGenModal(container);
 }
 
+const MAX_STORED_VIDEO_BYTES = 4 * 1024 * 1024;   // 影片庫資料存在本機設定中，太大的影片只供下載、不存進影片庫
+
+async function startRealYTVideoGeneration(container, prompt) {
+    aiVideoGenState.isGenerating = true;
+    aiVideoGenState.generatedPrompt = prompt;
+    aiVideoGenState.generatedVideoUrl = null;
+    const startBtn = container.querySelector('#yt-start-video-gen-btn');
+    if (startBtn) {
+        startBtn.disabled = true;
+        startBtn.innerHTML = '<span class="material-symbols-outlined">progress_activity</span> 生成中...';
+    }
+    container.querySelector('.yt-ai-video-gen-status')?.removeAttribute('hidden');
+    container.querySelector('.yt-ai-video-gen-form')?.setAttribute('hidden', '');
+    const message = container.querySelector('.yt-ai-video-gen-message');
+    if (message) message.textContent = '正在向合成服務請求影片（可能需要一到兩分鐘）…';
+    try {
+        const result = await synthesize('video', { prompt });
+        aiVideoGenState.generatedVideoUrl = result.dataUrl;
+        container.querySelector('.yt-ai-video-gen-status')?.setAttribute('hidden', '');
+        const player = container.querySelector('#yt-ai-video-preview-player');
+        if (player) player.src = result.dataUrl;
+        container.querySelector('.yt-ai-video-gen-preview')?.removeAttribute('hidden');
+        createToast('影片已生成', 'success');
+    } catch (err) {
+        container.querySelector('.yt-ai-video-gen-status')?.setAttribute('hidden', '');
+        container.querySelector('.yt-ai-video-gen-form')?.removeAttribute('hidden');
+        createToast(err.message || '影片生成失敗', 'error');
+    } finally {
+        aiVideoGenState.isGenerating = false;
+        if (startBtn) {
+            startBtn.disabled = false;
+            startBtn.innerHTML = '<span class="material-symbols-outlined">auto_awesome</span> 開始生成';
+        }
+    }
+}
+
+function downloadGeneratedVideo() {
+    const url = aiVideoGenState.generatedVideoUrl;
+    if (!url) {
+        createToast('目前沒有可下載的影片（需要先在「設定 → 合成服務」設定好才能生成真實影片）', 'error');
+        return;
+    }
+    const ext = (/^data:video\/([a-z0-9]+)/i.exec(url) || [])[1] || 'mp4';
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = (aiVideoGenState.generatedPrompt || 'ai-video').replace(/[\\/:*?"<>|]/g, '').slice(0, 30) + '.' + ext;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+}
+
 async function startYTAIVideoGeneration(container) {
     const promptInput = container.querySelector('#yt-ai-video-prompt');
     const prompt = promptInput?.value?.trim();
@@ -1042,6 +1094,12 @@ async function startYTAIVideoGeneration(container) {
     }
     
     if (aiVideoGenState.isGenerating) return;
+    
+    const synthCfg = await getSynthConfig();
+    if (synthCfg.url && synthCfg.token) {
+        await startRealYTVideoGeneration(container, prompt);
+        return;
+    }
     
     aiVideoGenState.isGenerating = true;
     aiVideoGenState.generatedPrompt = prompt;
@@ -1083,7 +1141,7 @@ async function startYTAIVideoGeneration(container) {
     renderFeed(container);
     saveAllData();
     closeAIVideoGenModal(container);
-    createToast('影片已生成並加入影片庫', 'success');
+    createToast('影片已加入影片庫（模擬內容，沒有實際影片；到「設定 → 合成服務」設定後可生成真實影片）', 'success');
 }
 
 function addYTGeneratedVideoToFeed(container) {
@@ -1100,7 +1158,7 @@ function addYTGeneratedVideoToFeed(container) {
         time: '剛剛',
         duration: '0:02',
         tag: currentChip || 'all',
-        url: '',
+        url: aiVideoGenState.generatedVideoUrl && aiVideoGenState.generatedVideoUrl.length * 0.75 <= MAX_STORED_VIDEO_BYTES ? aiVideoGenState.generatedVideoUrl : '',
         thumb: '',
         thumbGradient: generateThumbnail(),
         isAIGenerated: true,
@@ -1638,7 +1696,7 @@ async function renderYouTube(params) {
                 await startYTAIVideoGeneration(container);
                 break;
             case 'download-video':
-                createToast('影片下載功能即將推出', 'info');
+                downloadGeneratedVideo();
                 break;
             case 'add-to-feed':
                 addYTGeneratedVideoToFeed(container);

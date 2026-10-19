@@ -1,6 +1,7 @@
 import Router from '../../router.js';
-import { createElement } from '../../components.js';
+import { createElement, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
+import { pickFile, compressImage } from '../chats/chat-media.js';
 
 const FILTERS = [
   { id: 'normal', name: '原圖', filter: 'none' },
@@ -11,20 +12,45 @@ const FILTERS = [
   { id: 'drama', name: '戲劇', filter: 'contrast(1.3) brightness(0.9)' }
 ];
 
-let photos = [];
+const ALBUM_KEY = 'sx_album_images';
+const MAX_DIM = 1280;
+
 let activeFilter = 'normal';
+let sourceUrl = null;    // 目前編輯中的原圖（data URL）
 
-async function loadPhotos() {
-  const saved = await SettingsDB.get('painter_photos');
-  if (saved) photos = saved;
+const filterCss = () => FILTERS.find(f => f.id === activeFilter).filter;
+
+async function loadPainterPhotos() {
+  const list = await SettingsDB.get(ALBUM_KEY);
+  return Array.isArray(list) ? list.filter(p => p.source === 'painter') : [];
 }
 
-async function savePhotos() {
-  await SettingsDB.set('painter_photos', photos);
+async function addToAlbum(url) {
+  const list = (await SettingsDB.get(ALBUM_KEY)) || [];
+  list.unshift({ id: 'img_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6), url, source: 'painter', createdAt: new Date().toISOString() });
+  await SettingsDB.set(ALBUM_KEY, list.slice(0, 200));
 }
 
-async function renderSmartPainter(params) {
-  await loadPhotos();
+// 真的把濾鏡畫進圖片後輸出；瀏覽器不支援 canvas filter 時退回原圖並告知
+async function renderFiltered(url) {
+  const img = await new Promise((resolve, reject) => {
+    const el = new Image();
+    el.onload = () => resolve(el);
+    el.onerror = () => reject(new Error('無法讀取圖片'));
+    el.src = url;
+  });
+  const canvas = document.createElement('canvas');
+  canvas.width = img.naturalWidth;
+  canvas.height = img.naturalHeight;
+  const ctx = canvas.getContext('2d');
+  const supported = typeof ctx.filter === 'string';
+  if (supported) ctx.filter = filterCss();
+  ctx.drawImage(img, 0, 0);
+  return { dataUrl: canvas.toDataURL('image/jpeg', 0.9), filtered: supported || activeFilter === 'normal' };
+}
+
+async function renderSmartPainter() {
+  const photos = await loadPainterPhotos();
   const container = createElement('div', 'app-container painter-app');
   container.innerHTML = `
     <header class="ios-header">
@@ -38,51 +64,77 @@ async function renderSmartPainter(params) {
           <p>選擇照片開始編輯</p>
         </div>
       </div>
-      <div class="filter-bar">
-        ${FILTERS.map(f => `
-          <button class="filter-btn ${f.id === activeFilter ? 'active' : ''}" data-filter="${f.filter}" data-id="${f.id}">
-            ${f.name}
-          </button>
-        `).join('')}
-      </div>
+      <div class="filter-bar"></div>
       <div class="action-row">
-        <button class="upload-btn"><i class="fas fa-upload"></i> 上傳照片</button>
-        <button class="save-btn"><i class="fas fa-download"></i> 儲存</button>
+        <button class="upload-btn"><i class="fas fa-upload"></i> 選擇照片</button>
+        <button class="save-btn"><i class="fas fa-download"></i> 儲存到相簿</button>
       </div>
       <div class="gallery">
-        <h3>相簿 (${photos.length})</h3>
-        <div class="photo-grid">
-          ${photos.slice(-6).map(p => `<div class="photo-thumb" style="background-image: url('${p.url}')"></div>`).join('') || '<div class="empty-gallery">尚無照片</div>'}
-        </div>
+        <h3>我的作品 (${photos.length})</h3>
+        <div class="photo-grid"></div>
       </div>
-    </div>
-  `;
+    </div>`;
   container.querySelector('.ios-back-btn').onclick = () => Router.back();
-  container.querySelectorAll('.filter-btn').forEach(btn => {
+  const preview = container.querySelector('#preview');
+  const bar = container.querySelector('.filter-bar');
+
+  function showImage(url) {
+    sourceUrl = url;
+    preview.innerHTML = '';
+    const img = createElement('img', '', { src: url, alt: '預覽' });
+    img.style.cssText = 'width:100%;height:100%;object-fit:contain;max-height:360px;filter:' + filterCss() + ';';
+    preview.appendChild(img);
+  }
+
+  FILTERS.forEach(f => {
+    const btn = createElement('button', 'filter-btn' + (f.id === activeFilter ? ' active' : ''), { textContent: f.name });
     btn.onclick = () => {
-      activeFilter = btn.dataset.id;
-      const preview = container.querySelector('#preview');
-      if (preview && preview.tagName !== 'IMG') return;
-      if (preview) preview.style.filter = btn.dataset.filter;
-      container.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
+      activeFilter = f.id;
+      bar.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b === btn));
+      const img = preview.querySelector('img');
+      if (img) img.style.filter = f.filter;
     };
+    bar.appendChild(btn);
   });
-  container.querySelector('.upload-btn').onclick = () => {
-    const url = prompt('輸入圖片 URL：');
-    if (url) {
-      const preview = container.querySelector('#preview');
-      preview.innerHTML = `<img src="${url}" style="width: 100%; height: 100%; object-fit: contain; filter: ${FILTERS.find(f => f.id === activeFilter).filter};">`;
+
+  container.querySelector('.upload-btn').onclick = async () => {
+    const file = await pickFile({ accept: 'image/*' });
+    if (!file) return;
+    try {
+      showImage(await compressImage(file, MAX_DIM));
+    } catch (e) {
+      createToast(e.message || '無法讀取這張圖片', 'error');
     }
   };
-  container.querySelector('.save-btn').onclick = async () => {
-    const img = container.querySelector('#preview img');
-    if (img) {
-      photos.push({ url: img.src, filter: activeFilter, date: Date.now() });
-      await savePhotos();
-      renderSmartPainter(params);
+
+  const saveBtn = container.querySelector('.save-btn');
+  saveBtn.onclick = async () => {
+    if (!sourceUrl) {
+      createToast('請先選擇一張照片');
+      return;
+    }
+    saveBtn.disabled = true;
+    try {
+      const { dataUrl, filtered } = await renderFiltered(sourceUrl);
+      await addToAlbum(dataUrl);
+      createToast(filtered ? '已儲存到相簿' : '此瀏覽器不支援儲存濾鏡效果，已儲存原圖', filtered ? undefined : 'error');
+      Router.handleRoute();
+    } catch (e) {
+      createToast('儲存失敗：' + (e.message || e), 'error');
+      saveBtn.disabled = false;
     }
   };
+
+  const grid = container.querySelector('.photo-grid');
+  if (photos.length === 0) grid.appendChild(createElement('div', 'empty-gallery', { textContent: '尚無作品' }));
+  photos.slice(0, 6).forEach(p => {
+    const thumb = createElement('button', 'photo-thumb', { 'aria-label': '載入這張作品' });
+    thumb.style.backgroundImage = 'url("' + p.url.replace(/"/g, '%22') + '")';
+    thumb.onclick = () => showImage(p.url);
+    grid.appendChild(thumb);
+  });
+
+  if (sourceUrl) showImage(sourceUrl);
   return { element: container, cleanup: null };
 }
 

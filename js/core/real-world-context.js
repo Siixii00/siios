@@ -1,4 +1,5 @@
 ﻿import { SettingsDB } from '../db.js';
+import { loadEvents, describeUpcoming } from './calendar.js';
 
 const CITY_NAME_MAP = {
     '台北': 'Taipei', '臺北': 'Taipei', '新北': 'New Taipei', '桃園': 'Taoyuan',
@@ -148,7 +149,13 @@ async function buildRealWorldContext(chat) {
         }
     }
     
-    const context = `[Current Reality]\nTime: ${timeStr} (${dayOfWeek})${weatherStr}\n[/Current Reality]`;
+    let scheduleStr = '';
+    try {
+        const upcoming = describeUpcoming(await loadEvents(), 7, now);
+        if (upcoming) scheduleStr = `\nUser's upcoming schedule (next 7 days):\n${upcoming}`;
+    } catch { /* 行事曆讀取失敗不影響其他資訊 */ }
+
+    const context = `[Current Reality]\nTime: ${timeStr} (${dayOfWeek})${weatherStr}${scheduleStr}\n[/Current Reality]`;
     return context;
 }
 

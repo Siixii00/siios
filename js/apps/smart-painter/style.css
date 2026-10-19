@@ -13,4 +13,4 @@
 .gallery h3 { font-size: 14px; color: var(--painter-muted); margin-bottom: 12px; }
 .photo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
 .photo-thumb { aspect-ratio: 1; background-size: cover; background-position: center; border-radius: 8px; }
-.empty-gallery { text-align: center; color: var(--painter-muted); padding: 20px; grid-column: 1 / -1; }
+.empty-gallery { text-align: center; color: var(--painter-muted); padding: 20px; grid-column: 1 / -1; }.photo-thumb { border: none; cursor: pointer; padding: 0; }

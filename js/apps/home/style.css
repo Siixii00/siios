@@ -10,3 +10,7 @@
 .activity-icon { font-size: 32px; }
 .activity-name { font-size: 12px; color: var(--home-text); }
 .status-msg { text-align: center; padding: 16px; font-size: 14px; color: var(--home-muted); }
+.home-history { background: var(--home-card); border-radius: 12px; padding: 14px; }
+.home-history h3 { font-size: 14px; color: var(--home-muted); margin: 0 0 8px; }
+.history-row { padding: 6px 0; font-size: 13px; color: var(--home-text); border-bottom: 1px solid #f8bbd9; }
+.empty-history { color: var(--home-muted); font-size: 13px; padding: 8px 0; }

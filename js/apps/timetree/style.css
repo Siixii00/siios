@@ -1,11 +1,23 @@
 .timetree-app { --tree-bg: #e8f5e9; --tree-card: #fff; --tree-text: #2e7d32; --tree-muted: #666; --tree-accent: #4caf50; }
 .timetree-app .page { background: var(--tree-bg); min-height: calc(100vh - 96px); padding: 16px; }
-.calendar-header { font-size: 18px; font-weight: 700; color: var(--tree-text); text-align: center; margin-bottom: 16px; }
+.calendar-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+.calendar-nav button { background: none; border: none; color: var(--tree-text); font-size: 24px; width: 40px; cursor: pointer; }
+.calendar-header { font-size: 18px; font-weight: 700; color: var(--tree-text); text-align: center; }
 .calendar-grid { background: var(--tree-card); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
 .calendar-weekdays { display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; font-size: 12px; color: var(--tree-muted); margin-bottom: 8px; }
 .calendar-days { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
-.day { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--tree-text); border-radius: 8px; }
+.day { position: relative; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; font-size: 14px; color: var(--tree-text); border-radius: 8px; background: transparent; border: 2px solid transparent; cursor: pointer; }
 .day.empty { visibility: hidden; }
 .day.today { background: var(--tree-accent); color: white; font-weight: 700; }
-.day.has-event::after { content: ''; position: absolute; bottom: 2px; width: 6px; height: 6px; background: var(--tree-accent); border-radius: 50%; }
+.day.selected { border-color: var(--tree-accent); }
+.day.has-event::after { content: ''; position: absolute; bottom: 3px; width: 6px; height: 6px; background: #ff8f00; border-radius: 50%; }
+.day.today.has-event::after { background: #fff; }
+.day-events { background: var(--tree-card); border-radius: 12px; padding: 14px; margin-bottom: 16px; }
+.day-events-title { font-size: 14px; color: var(--tree-text); margin: 0 0 10px; }
+.no-events { color: var(--tree-muted); font-size: 13px; padding: 8px 0; }
+.event-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #eee; }
+.event-time { font-size: 12px; color: var(--tree-muted); min-width: 42px; }
+.event-title { flex: 1; font-size: 14px; color: #333; }
+.event-btn { background: none; border: 1px solid #ccc; border-radius: 6px; padding: 4px 8px; font-size: 12px; cursor: pointer; color: #555; }
+.event-btn.danger { color: #d33; border-color: #e5b5b5; }
 .add-event-btn { width: 100%; padding: 14px; background: var(--tree-accent); color: white; border: none; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer; }

@@ -255,7 +255,7 @@ async function renderBubbles(params) {
         state.artistAvatar = selectedChar.avatar || '';
       }
       await saveState();
-      renderBubbles(params);
+      Router.handleRoute();
     };
   }
   
@@ -263,7 +263,7 @@ async function renderBubbles(params) {
     btn.onclick = async () => {
       state.mode = btn.dataset.mode;
       await saveState();
-      renderBubbles(params);
+      Router.handleRoute();
     };
   });
   
