@@ -1,5 +1,7 @@
 # Karpathy Guidelines — Behavioral Standards for Code Generation
 
+**Mandatory gate:** Before modifying any file, read `.kilo/skills/karpathy-guidelines/SKILL.md` in full and state in your reply that you did. When working through `docs/COMPLETION_WORKFLOW.md`, repeat this at the start of every stage.
+
 These guidelines bias toward caution over speed. For trivial tasks, use judgment.
 
 ## 1. Think Before Coding
