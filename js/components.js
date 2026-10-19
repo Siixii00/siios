@@ -309,12 +309,35 @@ function formatTime(timestamp) {
     return `${date.getMonth() + 1}/${date.getDate()}`;
 }
 
-function createKakaoBubble(role, content, avatar, name, characterId = null) {
+// 依訊息型別建立氣泡內容。回傳 { el, framed }：framed=false 表示不套用氣泡底色（貼圖、圖片）
+function createBubbleBody(content, type, meta) {
+    meta = meta || {};
+    if (type === 'sticker') {
+        return { el: createElement('span', 'kakao-bubble-sticker', { textContent: meta.icon || content }), framed: false };
+    }
+    if (type === 'image' && meta.src) {
+        return { el: createElement('img', 'kakao-bubble-image', { src: meta.src, alt: content || '圖片' }), framed: false };
+    }
+    if (type === 'card') {
+        const card = createElement('div', 'kakao-bubble-card');
+        card.appendChild(createElement('div', 'kakao-bubble-card-title', { textContent: meta.title || content }));
+        if (meta.desc) card.appendChild(createElement('div', 'kakao-bubble-card-desc', { textContent: meta.desc }));
+        if (meta.url && /^https?:\/\//i.test(meta.url)) {
+            card.appendChild(createElement('a', 'kakao-bubble-card-link', { textContent: meta.url, href: meta.url, target: '_blank', rel: 'noopener noreferrer' }));
+        }
+        return { el: card, framed: true };
+    }
+    return { el: createElement('span', 'kakao-bubble-text', { textContent: content }), framed: true };
+}
+
+function createKakaoBubble(role, content, avatar, name, characterId = null, type = 'text', meta = null) {
     const row = createElement('div', `kakao-message-row ${role}`);
+    row.dataset.messageType = type || 'text';
     if (characterId) {
         row.dataset.characterId = characterId;
     }
-    
+    const body = createBubbleBody(content, type, meta);
+
     if (role === 'ai' || role === 'assistant') {
         if (avatar) {
             const avatarEl = createElement('img', 'kakao-message-avatar', {
@@ -329,16 +352,16 @@ function createKakaoBubble(role, content, avatar, name, characterId = null) {
             messageContent.appendChild(createElement('span', 'kakao-message-name has-name', { textContent: name }));
         }
         
-        const bubble = createElement('div', 'kakao-bubble-left');
-        bubble.appendChild(createElement('span', 'kakao-bubble-text', { textContent: content }));
+        const bubble = createElement('div', body.framed ? 'kakao-bubble-left' : 'kakao-media-wrap');
+        bubble.appendChild(body.el);
         messageContent.appendChild(bubble);
         row.appendChild(messageContent);
     } else {
-        const bubble = createElement('div', 'kakao-bubble-right');
-        bubble.appendChild(createElement('span', 'kakao-bubble-text', { textContent: content }));
+        const bubble = createElement('div', body.framed ? 'kakao-bubble-right' : 'kakao-media-wrap');
+        bubble.appendChild(body.el);
         row.appendChild(bubble);
     }
-    
+
     return row;
 }
 

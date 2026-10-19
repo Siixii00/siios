@@ -7,6 +7,17 @@ import { PeriodCalculator } from './core/period-calculator.js';
 import { createErrorModal } from './components.js';
 import { mcpManager } from './core/mcp-client.js';
 
+// 非文字訊息轉成文字描述，讓角色知道使用者傳了什麼（文字訊息原樣回傳）
+export function describeMessageForAI(m) {
+    const meta = m.meta || {};
+    switch (m.type) {
+        case 'sticker': return `[貼圖：${meta.name || m.content}]`;
+        case 'image': return `[圖片：${m.content || '一張圖片'}]`;
+        case 'card': return `[卡片：${meta.title || m.content}${meta.desc ? '，' + meta.desc : ''}]`;
+        default: return m.content;
+    }
+}
+
 const APIClient = {
     showError(errorInfo) {
         const info = typeof errorInfo === 'string' 
@@ -175,7 +186,7 @@ const APIClient = {
         
         const conversationMessages = messages.map(m => ({
             role: m.role,
-            content: m.content
+            content: describeMessageForAI(m)
         }));
         
         const backMessages = backEntries.map(entry => ({

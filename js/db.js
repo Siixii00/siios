@@ -301,7 +301,8 @@ const MessagesDB = {
         return updated;
     },
 
-    async create(chatId, role, content, speakerCharacterId = null) {
+    // extra: 選填 { type, meta }；未提供時訊息格式與舊版完全相同（type 視為 'text'）
+    async create(chatId, role, content, speakerCharacterId = null, extra = {}) {
         const database = await initDB();
         const id = generateId();
         const message = {
@@ -312,6 +313,8 @@ const MessagesDB = {
             speaker_character_id: speakerCharacterId,
             timestamp: Date.now()
         };
+        if (extra.type && extra.type !== 'text') message.type = extra.type;
+        if (extra.meta) message.meta = extra.meta;
         await database.put('messages', message);
         return message;
     },

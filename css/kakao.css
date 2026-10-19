@@ -275,6 +275,47 @@ body.desktop-mode .kakao-bottom-nav {
     font-family: var(--font-kakao);
 }
 
+.kakao-media-wrap {
+    max-width: 70%;
+}
+
+.kakao-bubble-sticker {
+    display: block;
+    font-size: 64px;
+    line-height: 1.1;
+}
+
+.kakao-bubble-image {
+    display: block;
+    max-width: 100%;
+    max-height: 260px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.kakao-bubble-card {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-family: var(--font-kakao);
+}
+
+.kakao-bubble-card-title {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.kakao-bubble-card-desc {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.kakao-bubble-card-link {
+    font-size: 12px;
+    text-decoration: underline;
+    word-break: break-all;
+}
+
 .kakao-chat-input-area {
     position: fixed;
     bottom: 0;

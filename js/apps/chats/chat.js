@@ -241,11 +241,15 @@ async function renderChat(params) {
     
     function showBubbleMenu(messageId, bubbleEl, role) {
         const content = bubbleEl.querySelector('.kakao-bubble-text')?.textContent || '';
-        const sheet = createKakaoBottomSheet([
-            { icon: 'edit', label: '編輯該句聊天', onSelect: () => editMessage(messageId, content, bubbleEl) },
-            { icon: 'delete', label: '刪除該句聊天', onSelect: () => deleteMessage(messageId, bubbleEl) },
-            { icon: 'star', label: '設定為重要記憶', onSelect: () => saveAsImportantMemory(content, role) }
-        ], { title: '訊息操作' });
+        const isText = (bubbleEl.dataset.messageType || 'text') === 'text';
+        const items = [
+            { icon: 'delete', label: '刪除該句聊天', onSelect: () => deleteMessage(messageId, bubbleEl) }
+        ];
+        if (isText) {
+            items.unshift({ icon: 'edit', label: '編輯該句聊天', onSelect: () => editMessage(messageId, content, bubbleEl) });
+            items.push({ icon: 'star', label: '設定為重要記憶', onSelect: () => saveAsImportantMemory(content, role) });
+        }
+        const sheet = createKakaoBottomSheet(items, { title: '訊息操作' });
         sheet.open();
     }
     
@@ -589,7 +593,9 @@ async function renderChat(params) {
             msg.content,
             avatar,
             name,
-            msg.speaker_character_id || undefined
+            msg.speaker_character_id || undefined,
+            msg.type || 'text',
+            msg.meta || null
         );
         setupBubbleLongPress(bubble, msg.id, msg.role);
         main.appendChild(bubble);
@@ -624,8 +630,7 @@ async function renderChat(params) {
         { icon: 'shopping_bag', label: '購物', onSelect: () => createToast('購物功能開發中') },
         { icon: 'restaurant', label: '外送', onSelect: () => createToast('外送功能開發中') },
         { icon: 'map', label: '地圖', onSelect: () => createToast('地圖功能開發中') },
-        { icon: 'music_note', label: '音樂', onSelect: () => createToast('音樂功能開發中') },
-        { icon: '', label: '', onSelect: null }
+        { icon: 'music_note', label: '音樂', onSelect: () => createToast('音樂功能開發中') }
     ], { title: '功能選單' });
     
     addBtn.onclick = () => plusMenu.open();
