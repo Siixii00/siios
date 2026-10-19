@@ -1,195 +1,241 @@
 {
   "metadata": {
-    "last_updated": "2026-10-19T12:24:51.864136",
-    "total_items": 59
+    "last_updated": "2026-10-19T19:05:13.056152",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "Documents: Police officer gave her Flock login to her ICE agent husband",
-        "url": "https://www.wjcl.com/article/savannah-police-officer-ice-agent-flock-access/74135816",
+        "title": "MiniMax M3.1 Flash",
+        "url": "https://www.minimax.io/blog/minimax-m31f",
         "source": "Hacker News",
-        "score": 107
+        "score": 160
       },
       {
-        "title": "Linux 7.3 Released",
-        "url": "https://lwn.net/Articles/1101143/",
+        "title": "Wine ported to OpenBSD",
+        "url": "https://marc.info/?l=openbsd-ports&m=179236125692175",
         "source": "Hacker News",
-        "score": 305
+        "score": 366
       },
       {
-        "title": "Timestral: Mistral release time-series foundation models",
+        "title": "Android apps running native on macOS",
+        "url": "https://github.com/kksimp/Mac.apk",
+        "source": "Hacker News",
+        "score": 91
+      },
+      {
+        "title": "RuneScape Bench: MMOs for Agents [video]",
+        "url": "https://www.youtube.com/watch?v=cNm4zyUtWj0",
+        "source": "Hacker News",
+        "score": 59
+      },
+      {
+        "title": "It's still ok to enjoy programming",
+        "url": "https://chriskiehl.com/article/it-is-still-ok-to-enjoy-programming",
+        "source": "Hacker News",
+        "score": 223
+      },
+      {
+        "title": "The obscure trust looming over Anthropic's IPO",
+        "url": "https://www.wsj.com/tech/ai/anthropic-ipo-private-trust-188f41f7?st=RtdGHg&reflink=desktopwebshare_permalink",
+        "source": "Hacker News",
+        "score": 55
+      },
+      {
+        "title": "Timestral: Mistral's time-series foundation models",
         "url": "https://mistral.ai/news/timestral/",
         "source": "Hacker News",
-        "score": 86
+        "score": 431
       },
       {
-        "title": "Let's Encrypt is adding two additional remote perspectives for domain validation",
-        "url": "https://community.letsencrypt.org/t/lets-encrypt-is-adding-two-additional-remote-perspectives-for-domain-validation/252166",
+        "title": "Mercury 3: Diffusion at scale",
+        "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-3",
         "source": "Hacker News",
-        "score": 36
+        "score": 122
       },
       {
-        "title": "Harness Engineering 101: The LLM is the brain, the harness is the body",
-        "url": "https://github.com/IsuruMaduranga/harness-engineering-101",
+        "title": "Evidence (YC S21) Is Hiring Software Engineers",
+        "url": "https://evidence.dev/jobs",
         "source": "Hacker News",
-        "score": 8
+        "score": 1
       },
       {
-        "title": "Gdynia and the Dream of a Maritime Poland",
-        "url": "https://engelsbergideas.com/notebook/gdynia-and-the-dream-of-a-maritime-poland/",
+        "title": "I built a drone with only one motor [video]",
+        "url": "https://www.youtube.com/watch?v=Ndftcft6XhU",
         "source": "Hacker News",
-        "score": 21
+        "score": 24
       },
       {
-        "title": "ESA's Hera Will View Asteroid Scars from DART's Strike",
-        "url": "https://spectrum.ieee.org/esa-hera-dimorphos-rendezvous",
-        "source": "Hacker News",
-        "score": 10
-      },
-      {
-        "title": "Alternatives to Animal Testing Are Finally Taking Off",
+        "title": "Alternatives to animal testing are finally taking off",
         "url": "https://spectrum.ieee.org/alternatives-to-animal-testing",
         "source": "Hacker News",
-        "score": 11
+        "score": 243
       },
       {
-        "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
-        "url": "https://arxiv.org/abs/2610.18861",
+        "title": "Galois Finite Fields and the Advanced Encryption Standard (AES)",
+        "url": "https://www.cs.uaf.edu/2015/spring/cs463/lecture/03_23_AES.html",
         "source": "Hacker News",
-        "score": 434
+        "score": 47
       },
       {
-        "title": "How to Train Your Robot",
-        "url": "https://www.construction-physics.com/p/how-to-train-your-robot",
+        "title": "Launch HN: Laminar (YC S24) – We trained a model to catch silent agent failures",
+        "url": "https://news.ycombinator.com/item?id=50154029",
         "source": "Hacker News",
-        "score": 65
+        "score": 27
       },
       {
-        "title": "Tmux and Claude Code: Sessions, Send-Keys, and the Ceiling",
-        "url": "https://crystl.dev/guides/tmux-for-ai-agents/",
+        "title": "Ask HN: How to deal with shipping AI-written code you don't understand?",
+        "url": "https://news.ycombinator.com/item?id=50151036",
         "source": "Hacker News",
-        "score": 67
+        "score": 35
       },
       {
-        "title": "William Gibson and the trademarking of cyberspace",
-        "url": "https://colo.to/cyberspace.html",
+        "title": "The fire retardant in the seafood chain",
+        "url": "https://insideclimatenews.org/news/14102026/ethoxyquin-fire-retardant-in-seafood-chain/",
         "source": "Hacker News",
-        "score": 204
-      },
-      {
-        "title": "There's never been a better time to go into math (by: 3blue1brown) [video]",
-        "url": "https://www.youtube.com/watch?v=LKrwhjOI8Nc",
-        "source": "Hacker News",
-        "score": 408
-      },
-      {
-        "title": "Rabbits were a medieval royal luxury in England until the Black Death",
-        "url": "https://phys.org/news/2026-10-rabbits-medieval-royal-luxury-england.html",
-        "source": "Hacker News",
-        "score": 101
-      },
-      {
-        "title": "If you don't run your own LLM proxy, how do you know whats going on?",
-        "url": "https://jrdsgl.com/if-you-dont-run-your-own-llm-proxy-how-the-fuck-do-you-even-know-whats-going-on/",
-        "source": "Hacker News",
-        "score": 206
+        "score": 15
       }
     ],
     "ai": [
       {
-        "title": "Timestral: Mistral release time-series foundation models",
+        "title": "The obscure trust looming over Anthropic's IPO",
+        "url": "https://www.wsj.com/tech/ai/anthropic-ipo-private-trust-188f41f7?st=RtdGHg&reflink=desktopwebshare_permalink",
+        "source": "Hacker News AI",
+        "score": 55
+      },
+      {
+        "title": "Timestral: Mistral's time-series foundation models",
         "url": "https://mistral.ai/news/timestral/",
         "source": "Hacker News AI",
-        "score": 86
+        "score": 431
+      },
+      {
+        "title": "Launch HN: Laminar (YC S24) – We trained a model to catch silent agent failures",
+        "url": "https://news.ycombinator.com/item?id=50154029",
+        "source": "Hacker News AI",
+        "score": 27
+      },
+      {
+        "title": "Ask HN: How to deal with shipping AI-written code you don't understand?",
+        "url": "https://news.ycombinator.com/item?id=50151036",
+        "source": "Hacker News AI",
+        "score": 35
+      },
+      {
+        "title": "The fire retardant in the seafood chain",
+        "url": "https://insideclimatenews.org/news/14102026/ethoxyquin-fire-retardant-in-seafood-chain/",
+        "source": "Hacker News AI",
+        "score": 15
       },
       {
         "title": "Let's Encrypt is adding two additional remote perspectives for domain validation",
         "url": "https://community.letsencrypt.org/t/lets-encrypt-is-adding-two-additional-remote-perspectives-for-domain-validation/252166",
         "source": "Hacker News AI",
-        "score": 36
+        "score": 199
       },
       {
-        "title": "Harness Engineering 101: The LLM is the brain, the harness is the body",
-        "url": "https://github.com/IsuruMaduranga/harness-engineering-101",
+        "title": "Chicago O'Hare digs up 50-ton boulder under airfield, asks public for name ideas",
+        "url": "https://simpleflying.com/chicago-ohare-digs-up-50-ton-boulder-public-names/",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 23
+      },
+      {
+        "title": "CERN and Mistral sign a statement of intent to establish a strategic partnership",
+        "url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
+        "source": "Hacker News AI",
+        "score": 225
+      },
+      {
+        "title": "Cairn: Open windows into AI-driven cyber operations",
+        "url": "https://norforge.com/blog/inside_cairn",
+        "source": "Hacker News AI",
+        "score": 10
+      },
+      {
+        "title": "Ukraine carries out aerial drone evacuation of a wounded soldier",
+        "url": "https://www.dailymail.com/news/article-16220441/Ukraine-carries-aerial-drone-evacuation-wounded-soldier-frontline.html",
+        "source": "Hacker News AI",
+        "score": 75
+      },
+      {
+        "title": "Degraded availability for GitHub Actions, GitHub Pages and Webhooks",
+        "url": "https://www.githubstatus.com/incidents/8tzbpcnl75jp",
+        "source": "Hacker News AI",
+        "score": 138
       },
       {
         "title": "Hybrid Reasoning Agents: LLM agents that think in latent space, act through text",
         "url": "https://arxiv.org/abs/2610.18861",
         "source": "Hacker News AI",
-        "score": 434
+        "score": 499
       },
       {
-        "title": "How to Train Your Robot",
-        "url": "https://www.construction-physics.com/p/how-to-train-your-robot",
+        "title": "Show HN: Qwen3-4B with the AI writing tics trained out",
+        "url": "https://100toolkit.com/blog/deslop-model/",
         "source": "Hacker News AI",
-        "score": 65
-      },
-      {
-        "title": "Tmux and Claude Code: Sessions, Send-Keys, and the Ceiling",
-        "url": "https://crystl.dev/guides/tmux-for-ai-agents/",
-        "source": "Hacker News AI",
-        "score": 67
+        "score": 135
       },
       {
         "title": "If you don't run your own LLM proxy, how do you know whats going on?",
         "url": "https://jrdsgl.com/if-you-dont-run-your-own-llm-proxy-how-the-fuck-do-you-even-know-whats-going-on/",
         "source": "Hacker News AI",
-        "score": 206
+        "score": 284
       },
       {
-        "title": "I built a programming language that LLMs can't use",
-        "url": "https://blog.picheta.me/post/killswitch-lang/",
+        "title": "Tmux and Claude Code: Sessions, Send-Keys, and the Ceiling",
+        "url": "https://crystl.dev/guides/tmux-for-ai-agents/",
         "source": "Hacker News AI",
-        "score": 215
-      },
-      {
-        "title": "Namecheap just seized and disabled all my domains",
-        "url": "https://www.reddit.com/r/sysadmin/comments/1x8cycd/namecheap_just_seized_and_disabled_all_my_domains/",
-        "source": "Hacker News AI",
-        "score": 596
+        "score": 139
       }
     ],
     "news": [
+      {
+        "title": "Australian MP critically injured after being hit by car in apparent attack",
+        "url": "https://www.bbc.co.uk/news/articles/cwp9g43g2p07o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ukrainians dying because US restricting intelligence sharing, Zelensky adviser tells BBC",
+        "url": "https://www.bbc.co.uk/news/articles/cmj47yx572z5o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Kenya cult leader who told parents to starve children guilty of 191 murders",
+        "url": "https://www.bbc.co.uk/news/articles/ckd6d2l3dz4xo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Ex-OpenAI worker accused of planting device had Saudi support says court filing",
+        "url": "https://www.bbc.co.uk/news/articles/c6gel2dlyxvyo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
       {
         "title": "Alberta heads to polls to decide whether to hold vote on separation from Canada",
         "url": "https://www.bbc.co.uk/news/articles/cxvgd0ymgzgyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Kenya pastor accused of ordering parents to starve their children to death faces verdict",
-        "url": "https://www.bbc.co.uk/news/articles/ckd6d2l3dz4xo?at_medium=RSS&at_campaign=rss",
+        "title": "Exiled critic of Rwandan president found beheaded",
+        "url": "https://www.bbc.co.uk/news/articles/c3lylj78777do?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Funding shortages force World Food Programme to cut aid to Gaza",
-        "url": "https://www.bbc.co.uk/news/articles/cm79plrvpl4vo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Trump says suspension of Russia sanctions is to keep peace negotiations going",
-        "url": "https://www.bbc.co.uk/news/articles/c9p8gz7zx4peo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Personal attacks fire up debate before Brazil's run-off vote",
-        "url": "https://www.bbc.co.uk/news/articles/ck98zlzyqle3o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Italian PM Meloni to hold emergency meeting after weekend of violent clashes",
-        "url": "https://www.bbc.co.uk/news/articles/c6j9kwxxmxydo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Bangladesh says it was not informed of its citizens' execution by Saudi Arabia",
-        "url": "https://www.bbc.co.uk/news/articles/cmde83w13p00o?at_medium=RSS&at_campaign=rss",
+        "title": "Houthi missile strike on Yemen camp kills 50 security recruits, local authorities say",
+        "url": "https://www.bbc.co.uk/news/articles/cv0ld6lrr2zeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Logistics fiasco or clever marketing? Apple's iPhone Duo sellout might not be such a big blunder ",
+        "url": "https://www.creativebloq.com/news/logistics-fiasco-or-clever-marketing-apples-iphone-duo-sellout-might-not-be-such-a-mistake",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Tested: The Googlebook tries to put Android on the desktop, but is it successful? ",
+        "url": "https://www.creativebloq.com/reviews/tested-the-googlebook-tries-to-put-android-on-the-desktop-but-is-it-successful",
+        "source": "Creative Bloq"
+      },
       {
         "title": " CMF Speaker S review: this little milk carton sounds better than it has any right to ",
         "url": "https://www.creativebloq.com/reviews/cmf-speaker-s-review-this-little-milk-carton-sounds-better-than-it-has-any-right-to",
@@ -214,94 +260,53 @@
         "title": " I pushed Nvidia’s RTX Spark to its limits in our favourite creative laptop ",
         "url": "https://www.creativebloq.com/reviews/i-pushed-nvidias-rtx-spark-to-its-limits-in-our-favourite-creative-laptop",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Lily Allen’s provocative poster is a massive middle finger to the Grammys ",
-        "url": "https://www.creativebloq.com/news/lily-allens-provocative-poster-is-a-massive-middle-finger-to-the-grammys",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This weird legal case could change how we think of copyright forever ",
-        "url": "https://www.creativebloq.com/news/this-weird-legal-case-could-change-how-we-think-of-copyright-forever",
-        "source": "Creative Bloq"
       }
     ],
-    "science": [
-      {
-        "title": "Physicists create a bizarre new quantum state called a fractional fermi sea",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261018084644.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Magic mushroom ingredient takes the fight out of aggressive fish",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261017230036.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists who discovered a third form of magnetism win major physics prize",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261017230035.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover a natural compound that could protect the brain from too much salt",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261017230032.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists link a strange sugar in red meat to a 63% higher diabetes risk",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261017230031.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Eating blueberries every day may have a surprising effect on your mood",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261017230028.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover a surprising twist in Japan's 7,300-year-old volcanic apocalypse",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261017230023.htm",
-        "source": "Science Daily"
-      }
-    ],
+    "science": [],
     "gaming": [
       {
-        "title": "Final Fantasy 7 Revelation Director Makes Announces Big Changes to Hard Mode",
-        "url": "https://www.polygon.com/final-fantasy-7-revelation-hard-difficulty-changes-dynamic-mode/",
+        "title": "AI Cloning Could Become the Biggest Threat to Video Game Playtests",
+        "url": "https://www.polygon.com/revamp-playtest-limited-ai-cloning-fears/",
         "source": "Polygon"
       },
       {
-        "title": "5 Essential Horror Books You Need To Read At Least Once In Your Life",
-        "url": "https://www.polygon.com/essential-horror-books-read-at-least-once/",
+        "title": "It's the End of An Era for Netflix Movies",
+        "url": "https://www.polygon.com/netflix-movies-tv-creative-overhaul-dan-lin-bela-bajaria-peter-rice/",
         "source": "Polygon"
       },
       {
-        "title": "The 7 Best Daily Pokémon Games, Ranked",
-        "url": "https://www.polygon.com/pokemon-games-best-daily-ranked-browser/",
+        "title": "DC Studios Reveals First Details on New TV Series",
+        "url": "https://www.polygon.com/mister-miracle-first-details-confirmed/",
         "source": "Polygon"
       },
       {
-        "title": "One of 2026's Best Horror Movies Is Officially Headed to Netflix Soon",
-        "url": "https://www.polygon.com/obsession-netflix-streaming-release-date/",
+        "title": "The 10 Best Steam Next Fest Demos to Play Right Now",
+        "url": "https://www.polygon.com/steam-next-fest-demos-best-october-2026/",
         "source": "Polygon"
       },
       {
-        "title": "28 Years Ago, a Near-Perfect Zombie Thriller Resurrected a Beloved Franchise From the Dead",
-        "url": "https://www.polygon.com/scooby-doo-zombie-thriller-halloween/",
+        "title": "Sounds Like GTA 6 Will Be Full of Details Like Red Dead's Infamous Horse Balls",
+        "url": "https://www.polygon.com/gta-6-rdr2-horse-balls-confirmed-rockstar/",
         "source": "Polygon"
       },
       {
-        "title": "9 Years Later, The Simpsons' Controversial Character Officially Returns",
-        "url": "https://www.polygon.com/the-simpsons-apu-returns-sunil-malhotra-hank-azaria/",
+        "title": "How to make goo in Enshrouded",
+        "url": "https://www.polygon.com/enshrouded-goo-crafting-recipe-how-to-make/",
         "source": "Polygon"
       },
       {
-        "title": "Tom Cruise's 10/10 War Action Epic Is About to Say Goodbye to HBO Max",
-        "url": "https://www.polygon.com/tom-cruise-the-last-samurai-leaving-hbo-max-october-2026/",
+        "title": "Resident Evil 7 Dev Reveals the Game’s Last of Us Inspiration and Troubled Development",
+        "url": "https://www.polygon.com/resident-evil-7-capcom-development-last-of-us/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "How to continue a GitHub Copilot app session in VS Code",
+        "url": "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "The next developer interface is ambient intelligence",
         "url": "https://github.blog/news-insights/company-news/the-next-developer-interface-is-ambient-intelligence/",
@@ -330,11 +335,6 @@
       {
         "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
         "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "Hack the World: Why hackathons are still the best place to learn to build",
-        "url": "https://github.blog/developer-skills/career-growth/hack-the-world-why-hackathons-are-still-the-best-place-to-learn-to-build/",
         "source": "GitHub Blog"
       }
     ]
