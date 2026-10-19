@@ -1,0 +1,11 @@
+name = "siios-synth-worker"
+main = "src/index.js"
+compatibility_date = "2024-09-01"
+
+# Workers AI（免費額度：每天 10,000 neurons，用完會直接失敗不扣費）
+[ai]
+binding = "AI"
+
+# 部署前請設定密鑰：
+#   npx wrangler secret put SYNTH_TOKEN      ← 必填，自訂一組長亂數，PWA 設定中填同一組
+#   npx wrangler secret put HF_TOKEN         ← 選填，Hugging Face token（也可由 PWA 逐次帶入）

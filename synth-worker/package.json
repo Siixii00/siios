@@ -1,0 +1,10 @@
+{
+  "name": "siios-synth-worker",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test test/worker.test.mjs",
+    "deploy": "wrangler deploy"
+  }
+}
