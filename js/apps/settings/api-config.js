@@ -203,6 +203,7 @@ async function renderApiConfig() {
         checked: settings.memory_enabled || false
     });
     memToggle.style.cssText = 'width:48px;height:28px;accent-color:var(--ios-blue);';
+    memToggle.checked = !!settings.memory_enabled;
     memToggle.oninput = (e) => settings.memory_enabled = e.target.checked;
     memToggleCell.appendChild(memToggle);
     memoryGroup.appendChild(memToggleCell);
@@ -234,13 +235,30 @@ async function renderApiConfig() {
     main.appendChild(memorySection);
     main.appendChild(memoryGroup);
 
+    const visionSection = createElement('div', 'mb-2 ml-8 mt-6');
+    visionSection.appendChild(createElement('p', 'ios-section-header', { textContent: '圖片理解' }));
+    const visionGroup = createElement('div', 'ios-grouped-list mx-4');
+    const visionCell = createElement('div', 'ios-list-cell ios-list-cell-full');
+    visionCell.appendChild(createElement('span', 'flex-1', { textContent: '模型支援圖片輸入（視覺）' }));
+    const visionToggle = createElement('input', '', { type: 'checkbox' });
+    visionToggle.checked = !!settings.vision_enabled;
+    visionToggle.style.cssText = 'width:48px;height:28px;accent-color:var(--ios-blue);';
+    visionToggle.oninput = (e) => settings.vision_enabled = e.target.checked;
+    visionCell.appendChild(visionToggle);
+    visionGroup.appendChild(visionCell);
+    visionGroup.appendChild(createElement('p', 'text-xs text-ios-muted p-4', {
+        textContent: '開啟後，聊天中傳的圖片（最近 3 張）會真的送給模型看。只有你使用的模型支援圖片時才開啟，否則會出錯。關閉時，角色只會收到「[圖片]」標記。'
+    }));
+    main.appendChild(visionSection);
+    main.appendChild(visionGroup);
+
     const saveSection = createElement('div', 'mx-4 mt-6 mb-8');
     const saveBtn = createElement('button', 'ios-btn ios-btn-primary w-full py-3', { textContent: '儲存設定' });
     saveBtn.onclick = async () => {
         const keys = [
             'api_url', 'api_key', 'model',
             'embedding_url', 'embedding_model', 'embedding_dimensions', 'embedding_api_key',
-            'memory_enabled', 'memory_decay_rate', 'memory_threshold'
+            'memory_enabled', 'memory_decay_rate', 'memory_threshold', 'vision_enabled'
         ];
         for (const key of keys) {
             await SettingsDB.set(key, settings[key]);

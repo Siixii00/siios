@@ -70,6 +70,13 @@ async function renderSettings() {
             path: '/api-config'
         },
         {
+            icon: 'graphic_eq',
+            iconBg: 'bg-pink-500',
+            title: '合成服務',
+            desc: '語音、圖片、影片、音樂合成（免費優先）',
+            path: '/settings/synth'
+        },
+        {
             icon: 'extension',
             iconBg: 'bg-green-500',
             title: 'MCP 工具整合',

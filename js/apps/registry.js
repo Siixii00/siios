@@ -37,6 +37,7 @@ async function loadApps() {
         import('./settings/char-settings.js'),
         import('./settings/user-mask-settings.js'),
         import('./settings/memory-settings.js'),
+        import('./settings/synth-settings.js'),
         import('./memory/index.js'),
         import('./album/index.js'),
         import('./weather/index.js'),
