@@ -12,7 +12,7 @@ const THEMES = [
     { id: 't6', name: '櫻花', icon: '🌸', price: 80 }
 ];
 
-const EMOJIS = [
+export const EMOJIS = [
     { id: 'e1', name: '笑臉', icon: '😊', price: 0 },
     { id: 'e2', name: '愛心', icon: '❤️', price: 20 },
     { id: 'e3', name: '星星', icon: '⭐', price: 20 },

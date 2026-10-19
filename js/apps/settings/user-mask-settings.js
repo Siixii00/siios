@@ -83,7 +83,17 @@ async function renderUserList() {
     return { element: container, cleanup: null };
 }
 
+let returnToChat = null;
+
 async function renderUserEdit(params) {
+    // 從聊天室進入時，返回鍵回到該聊天室；存檔後重新載入本頁時保留記錄
+    const origin = Router.history[Router.history.length - 1] || '';
+    if (/^\/chat\//.test(origin)) {
+        returnToChat = origin;
+    } else if (!/^\/settings\/user\/[^/]+$/.test(origin)) {
+        returnToChat = null;
+    }
+
     const user = await UsersDB.getById(params.id);
     if (!user) {
         createToast('面具不存在');
@@ -97,7 +107,7 @@ async function renderUserEdit(params) {
 
     const header = createIOSNavBar({
         title: user.name || '面具設定',
-        backPath: '/settings/user'
+        backPath: returnToChat || '/settings/user'
     });
     container.appendChild(header);
 

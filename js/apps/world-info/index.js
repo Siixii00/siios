@@ -3,7 +3,17 @@ import { createElement, createIcon } from '../../components.js';
 import builtinWorldbooks from './builtin-worldbooks.js';
 
 
+let returnToChat = null;
+
 async function renderWorldInfo() {
+    // 從聊天室進入時，返回鍵回到該聊天室；從 app 內部頁面回來時保留記錄
+    const origin = Router.history[Router.history.length - 1] || '';
+    if (/^\/chat\//.test(origin)) {
+        returnToChat = origin;
+    } else if (!/^\/(world-info|builtin-worldbooks|global-|theater-settings|keyword-settings)/.test(origin)) {
+        returnToChat = null;
+    }
+
     const container = createElement('div', 'app-container bg-ios-bg');
     
     const header = createElement('header', 'ios-nav-bar');
@@ -21,7 +31,7 @@ async function renderWorldInfo() {
     inner.style.alignItems = 'center';
     
     const backBtn = createElement('button', 'ios-btn', {
-        onClick: () => Router.navigate('/home')
+        onClick: () => Router.navigate(returnToChat || '/home')
     });
     backBtn.style.background = 'transparent';
     backBtn.style.border = 'none';

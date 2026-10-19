@@ -2,6 +2,7 @@
 import { createElement, createIcon, createKakaoBubble, createToast, createKakaoBottomSheet, createKakaoSideMenu, createGroupTypingIndicator } from '../../components.js';
 import { ChatsDB, MessagesDB, SettingsDB, MemoryDB, CharactersDB, UsersDB } from '../../db.js';
 import APIClient from '../../api.js';
+import { EMOJIS as STICKERS } from './shop.js';
 
 let currentChat = null;
 let messages = [];
@@ -488,8 +489,8 @@ async function renderChat(params) {
             label: '角色資訊',
             onClick: () => currentChat.is_group ? createToast('群組聊天') : Router.navigate('/characters/' + currentChat.character_id)
         },
-        { icon: 'account_circle', label: '使用者形象', onClick: () => createToast('使用者形象功能開發中') },
-        { icon: 'public', label: '世界觀設定', onClick: () => createToast('世界觀設定功能開發中') }
+        { icon: 'account_circle', label: '使用者形象', onClick: () => Router.navigate(currentChat.bound_user_id ? '/settings/user/' + currentChat.bound_user_id : '/settings/user') },
+        { icon: 'public', label: '世界觀設定', onClick: () => Router.navigate('/world-info') }
     ];
     
     if (currentChat.is_group) {
@@ -611,26 +612,71 @@ async function renderChat(params) {
     addBtn.style.cssText = 'background:transparent;border:none;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center;width:24px;height:28px;';
     addBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" viewBox="0 0 25 28" fill="none"><path d="M11.0378 14.9722H5.20447V13.0278H11.0378V7.19443H12.9822V13.0278H18.8156V14.9722H12.9822V20.8055H11.0378V14.9722Z" fill="#6B6B6B"/></svg>';
     
+    async function sendSticker(sticker) {
+        if (activeResponseCount > 0) return;
+        const meta = { id: sticker.id, icon: sticker.icon, name: sticker.name };
+        const msg = await MessagesDB.create(chatId, 'user', sticker.icon, null, { type: 'sticker', meta });
+
+        const bubble = createKakaoBubble('user', sticker.icon, undefined, undefined, null, 'sticker', meta);
+        setupBubbleLongPress(bubble, msg.id, 'user');
+        main.appendChild(bubble);
+        requestAnimationFrame(() => { main.scrollTop = main.scrollHeight; });
+
+        messages = await MessagesDB.getByChatId(chatId);
+        messageCount = messages.length;
+        awaitingResponse = true;
+        updateInputDisabled();
+    }
+
+    async function openStickerPicker() {
+        const owned = new Set(await SettingsDB.get('emoji_owned') || []);
+        const mine = STICKERS.filter(s => owned.has(s.id));
+
+        const content = createElement('div', 'p-4');
+        let sheet;
+        if (mine.length === 0) {
+            content.appendChild(createElement('div', 'text-sm text-gray-500 mb-3', { textContent: '還沒有任何貼圖，先到商店領取或購買吧' }));
+            const shopBtn = createElement('button', 'px-3 py-2 rounded-lg bg-kakao-yellow text-kakao-brown text-sm font-medium', { textContent: '前往貼圖商店' });
+            shopBtn.onclick = () => { sheet.close(); Router.navigate('/chats/shop'); };
+            content.appendChild(shopBtn);
+        } else {
+            const grid = createElement('div', 'grid grid-cols-4 gap-3');
+            mine.forEach(s => {
+                const cell = createElement('button', 'text-center');
+                cell.style.cssText = 'background:transparent;border:none;cursor:pointer;padding:4px;';
+                cell.appendChild(createElement('div', '', { textContent: s.icon }));
+                cell.firstChild.style.fontSize = '36px';
+                cell.appendChild(createElement('div', 'text-xs text-gray-500', { textContent: s.name }));
+                cell.onclick = () => { sheet.close(); sendSticker(s); };
+                grid.appendChild(cell);
+            });
+            content.appendChild(grid);
+        }
+        sheet = createKakaoBottomSheet([], { title: '貼圖', customContent: content });
+        sheet.open();
+    }
+
     const plusMenu = createKakaoBottomSheet([
         { icon: 'psychology', label: '思維鏈', onSelect: () => createToast('思維鏈功能開發中') },
         { icon: 'favorite', label: '心聲', onSelect: () => createToast('心聲功能開發中') },
         { icon: 'summarize', label: '生成總結', onSelect: () => createToast('生成總結功能開發中') },
-        { icon: 'import_contacts', label: 'Wiki', onSelect: () => createToast('Wiki功能開發中') },
-        { icon: 'photo_library', label: '相簿', onSelect: () => createToast('相簿功能開發中') },
+        { icon: 'import_contacts', label: 'Wiki', onSelect: () => Router.navigate('/personal-wiki') },
+        { icon: 'photo_library', label: '相簿', onSelect: () => Router.navigate('/album') },
         { icon: 'photo_camera', label: '拍照', onSelect: () => createToast('拍照功能開發中') },
         { icon: 'videocam', label: '影片', onSelect: () => createToast('影片功能開發中') },
         { icon: 'mic', label: '語音', onSelect: () => createToast('語音功能開發中') },
         { icon: 'attach_file', label: '檔案', onSelect: () => createToast('檔案功能開發中') },
-        { icon: 'emoji_emotions', label: '表情', onSelect: () => createToast('表情功能開發中') },
+        { icon: 'emoji_emotions', label: '表情', onSelect: openStickerPicker },
         { icon: 'redeem', label: 'Icon', onSelect: () => createToast('Icon功能開發中') },
         { icon: 'share', label: '分享', onSelect: () => createToast('分享功能開發中') },
         { icon: 'location_on', label: '位置', onSelect: () => createToast('位置功能開發中') },
-        { icon: 'schedule', label: '日程', onSelect: () => createToast('日程功能開發中') },
-        { icon: 'payments', label: '轉帳', onSelect: () => createToast('轉帳功能開發中') },
-        { icon: 'shopping_bag', label: '購物', onSelect: () => createToast('購物功能開發中') },
-        { icon: 'restaurant', label: '外送', onSelect: () => createToast('外送功能開發中') },
+        { icon: 'schedule', label: '日程', onSelect: () => Router.navigate('/timetree') },
+        { icon: 'payments', label: '轉帳', onSelect: () => Router.navigate('/kakaopay') },
+        { icon: 'shopping_bag', label: '購物', onSelect: () => Router.navigate('/taobao') },
+        { icon: 'restaurant', label: '外送', onSelect: () => Router.navigate('/delivery') },
+        { icon: 'wb_sunny', label: '天氣', onSelect: () => Router.navigate('/weather') },
         { icon: 'map', label: '地圖', onSelect: () => createToast('地圖功能開發中') },
-        { icon: 'music_note', label: '音樂', onSelect: () => createToast('音樂功能開發中') }
+        { icon: 'music_note', label: '音樂', onSelect: () => Router.navigate('/music') }
     ], { title: '功能選單' });
     
     addBtn.onclick = () => plusMenu.open();
