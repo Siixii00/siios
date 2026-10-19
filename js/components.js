@@ -318,6 +318,43 @@ function createBubbleBody(content, type, meta) {
     if (type === 'image' && meta.src) {
         return { el: createElement('img', 'kakao-bubble-image', { src: meta.src, alt: content || '圖片' }), framed: false };
     }
+    if (type === 'icon' && meta.src) {
+        return { el: createElement('img', 'kakao-bubble-icon', { src: meta.src, alt: meta.name || content || '圖示' }), framed: false };
+    }
+    if (type === 'video' && meta.src) {
+        const video = createElement('video', 'kakao-bubble-video', { src: meta.src, preload: 'metadata' });
+        video.controls = true;
+        video.playsInline = true;
+        return { el: video, framed: false };
+    }
+    if (type === 'audio' && meta.src) {
+        const wrap = createElement('div', 'kakao-bubble-audio');
+        const audio = createElement('audio', '', { src: meta.src, preload: 'metadata' });
+        audio.controls = true;
+        wrap.appendChild(audio);
+        const caption = meta.transcript || meta.caption;
+        if (caption) wrap.appendChild(createElement('div', 'kakao-bubble-audio-text', { textContent: caption }));
+        return { el: wrap, framed: true };
+    }
+    if (type === 'file' && meta.src && /^(data|blob):/i.test(meta.src)) {
+        const card = createElement('div', 'kakao-bubble-card');
+        card.appendChild(createElement('div', 'kakao-bubble-card-title', { textContent: meta.name || content }));
+        if (meta.size) card.appendChild(createElement('div', 'kakao-bubble-card-desc', { textContent: (meta.size / 1024 < 1024 ? (meta.size / 1024).toFixed(1) + ' KB' : (meta.size / 1024 / 1024).toFixed(1) + ' MB') }));
+        card.appendChild(createElement('a', 'kakao-bubble-card-link', { textContent: '下載', href: meta.src, download: meta.name || 'file' }));
+        return { el: card, framed: true };
+    }
+    if (type === 'location' && typeof meta.lat === 'number' && typeof meta.lng === 'number') {
+        const card = createElement('div', 'kakao-bubble-card');
+        card.appendChild(createElement('div', 'kakao-bubble-card-title', { textContent: '📍 ' + (meta.label || '位置') }));
+        card.appendChild(createElement('div', 'kakao-bubble-card-desc', { textContent: meta.lat.toFixed(5) + ', ' + meta.lng.toFixed(5) }));
+        card.appendChild(createElement('a', 'kakao-bubble-card-link', {
+            textContent: '在地圖上查看',
+            href: 'https://www.openstreetmap.org/?mlat=' + meta.lat + '&mlon=' + meta.lng + '#map=16/' + meta.lat + '/' + meta.lng,
+            target: '_blank',
+            rel: 'noopener noreferrer'
+        }));
+        return { el: card, framed: true };
+    }
     if (type === 'card') {
         const card = createElement('div', 'kakao-bubble-card');
         card.appendChild(createElement('div', 'kakao-bubble-card-title', { textContent: meta.title || content }));
@@ -327,7 +364,15 @@ function createBubbleBody(content, type, meta) {
         }
         return { el: card, framed: true };
     }
-    return { el: createElement('span', 'kakao-bubble-text', { textContent: content }), framed: true };
+    const text = createElement('span', 'kakao-bubble-text', { textContent: content });
+    if (meta.tts_src && String(meta.tts_src).toLowerCase().startsWith('data:audio/')) {
+        const wrap = createElement('div', 'kakao-bubble-audio');
+        const audio = createElement('audio', '', { src: meta.tts_src, preload: 'metadata' });
+        audio.controls = true;
+        wrap.append(text, audio);
+        return { el: wrap, framed: true };
+    }
+    return { el: text, framed: true };
 }
 
 function createKakaoBubble(role, content, avatar, name, characterId = null, type = 'text', meta = null) {

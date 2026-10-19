@@ -14,6 +14,13 @@ export function describeMessageForAI(m) {
         case 'sticker': return `[貼圖：${meta.name || m.content}]`;
         case 'image': return `[圖片：${m.content || '一張圖片'}]`;
         case 'card': return `[卡片：${meta.title || m.content}${meta.desc ? '，' + meta.desc : ''}]`;
+        case 'icon': return `[圖示：${meta.name || m.content}]`;
+        case 'video': return `[影片：${meta.name || m.content}]`;
+        case 'audio':
+            if (meta.kind === 'music') return `[音樂：${meta.caption || m.content}]`;
+            return meta.transcript ? `[語音訊息，內容：${meta.transcript}]` : '[語音訊息，無法辨識內容]';
+        case 'file': return `[檔案：${meta.name || m.content}]`;
+        case 'location': return `[位置：${meta.label || '位置'}（${Number(meta.lat).toFixed(4)}, ${Number(meta.lng).toFixed(4)}）]`;
         default: return m.content;
     }
 }
@@ -184,9 +191,18 @@ const APIClient = {
             });
         }
         
+        // 模型支援視覺時，把最近 3 張圖片真的送給模型；其餘退回文字標記
+        const visionIds = new Set(settings.vision_enabled
+            ? messages.filter(m => m.type === 'image' && m.meta?.src).slice(-3).map(m => m.id)
+            : []);
         const conversationMessages = messages.map(m => ({
             role: m.role,
-            content: describeMessageForAI(m)
+            content: visionIds.has(m.id)
+                ? [
+                    { type: 'text', text: m.content || '圖片' },
+                    { type: 'image_url', image_url: { url: m.meta.src } }
+                ]
+                : describeMessageForAI(m)
         }));
         
         const backMessages = backEntries.map(entry => ({
@@ -293,6 +309,36 @@ const APIClient = {
         }
     },
     
+    // 非串流的單次補全，供總結、思維鏈、日記等輔助功能使用；失敗時丟出 Error
+    async complete(messages, options = {}) {
+        const settings = await this.getSettings();
+        if (!settings.api_url || !settings.api_key) {
+            throw new Error('API URL 或 API Key 未設定。請前往設定頁面進行配置。');
+        }
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${settings.api_key}`
+            },
+            body: JSON.stringify({
+                model: settings.model || 'gpt-3.5-turbo',
+                messages,
+                temperature: options.temperature ?? settings.temperature ?? 0.7,
+                max_tokens: options.maxTokens || 1024,
+                stream: false
+            })
+        });
+        if (!response.ok) {
+            const errorData = await response.json().catch(() => ({}));
+            throw new Error(errorData.error?.message || `API 錯誤: ${response.status}`);
+        }
+        const data = await response.json();
+        const text = data.choices?.[0]?.message?.content?.trim();
+        if (!text) throw new Error('模型沒有回傳內容');
+        return text;
+    },
+
     async processStreamWithTools(response, apiMessages, settings, characterData, onChunk, onComplete, onError, options = {}) {
         const reader = response.body.getReader();
         const decoder = new TextDecoder();

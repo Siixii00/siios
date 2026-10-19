@@ -3,7 +3,7 @@ import { createElement, createIcon, createKakaoBottomNav, createIOSGroupedList, 
 import { SettingsDB, ChatsDB, TheaterSettingsDB, CharactersDB, MCPConfigDB } from '../../db.js';
 import { CHATS_TABS } from './chats-nav.js';
 
-const THEMES = [
+export const THEMES = [
     { id: 'light', name: '淺色', vars: { chatBg: '#FAF9F6', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#000000', bubbleRightBg: '#FEE500', bubbleRightText: '#625B71', inputBg: '#F5F5F5', inputText: '#000000' } },
     { id: 'dark', name: '深色', vars: { chatBg: '#1C1C1E', bubbleLeftBg: '#2C2C2E', bubbleLeftText: '#FFFFFF', bubbleRightBg: '#3A3A3C', bubbleRightText: '#FFFFFF', inputBg: '#2C2C2E', inputText: '#FFFFFF' } },
     { id: 'pink', name: '粉色', vars: { chatBg: '#FFF0F5', bubbleLeftBg: '#FFFFFF', bubbleLeftText: '#333333', bubbleRightBg: '#FFB6C1', bubbleRightText: '#8B0A50', inputBg: '#FFE4E9', inputText: '#333333' } },
@@ -203,7 +203,7 @@ async function renderChatSettings() {
         createToast('已切換到自定義主題', 'success');
         
         // 重新載入以顯示顏色選擇器
-        Router.navigate('/chats/settings');
+        Router.handleRoute();
     };
 
     themeGrid.appendChild(customCard);
@@ -299,7 +299,8 @@ async function renderChatSettings() {
             onClick: async () => {
                 currentFontSize = size;
                 await SettingsDB.set('appearance_font_size', currentFontSize);
-                Router.navigate('/chats/settings');
+                document.documentElement.style.setProperty('--kakao-bubble-font-size', { small: '13px', medium: '15px', large: '18px' }[size]);
+                Router.handleRoute();
             }
         });
         fontControl.appendChild(btn);
@@ -494,7 +495,7 @@ async function renderPerChatSettings(params) {
                         label: '角色',
                         value: chat.character_name,
                         chevron: true,
-                        onClick: () => Router.navigate('/characters/' + chat.character_id)
+                        onClick: () => Router.navigate('/settings/char/' + chat.character_id)
                     }
                 ]
             }

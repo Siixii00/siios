@@ -3,6 +3,11 @@ import { createElement, createIcon, createKakaoBubble, createToast, createKakaoB
 import { ChatsDB, MessagesDB, SettingsDB, MemoryDB, CharactersDB, UsersDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { EMOJIS as STICKERS } from './shop.js';
+import { THEMES as CHAT_THEMES } from './chat-settings.js';
+import { pickFile, prepareImage, prepareVideo, prepareFile, getLocationMessage, openRecorderSheet, openAlbumPicker } from './chat-media.js';
+import { openImageGenerator, openVideoChoice, openMusicChoice, synthesizeSpeechForMessage } from './chat-synth.js';
+import { openIconPicker, openSharePrompt, openPlaceSearch } from './chat-extras.js';
+import { getThought, getInnerVoice, generateSummary, openResultSheet, openDailyLogSheet } from './chat-ai-tools.js';
 
 let currentChat = null;
 let messages = [];
@@ -24,11 +29,17 @@ function getModeLabel(mode) {
     return found ? found.label : '對話模式（多句回應）';
 }
 
+const FONT_SIZES = { small: '13px', medium: '15px', large: '18px' };
+
 async function applyCustomTheme() {
-    const theme = await SettingsDB.get('chat_custom_theme');
+    const savedFont = await SettingsDB.get('appearance_font_size');
+    document.documentElement.style.setProperty('--kakao-bubble-font-size', FONT_SIZES[savedFont] || FONT_SIZES.medium);
     const savedTheme = await SettingsDB.get('appearance_theme');
-    
-    if (savedTheme === 'custom' && theme) {
+    const theme = savedTheme === 'custom'
+        ? await SettingsDB.get('chat_custom_theme')
+        : CHAT_THEMES.find(t => t.id === savedTheme)?.vars;
+
+    if (theme) {
         const root = document.documentElement;
         root.style.setProperty('--kakao-chat-bg', theme.chatBg);
         root.style.setProperty('--kakao-bubble-left-bg', theme.bubbleLeftBg);
@@ -223,6 +234,7 @@ async function renderChat(params) {
     }
     
     function setupBubbleLongPress(bubbleEl, messageId, role) {
+        bubbleEl.dataset.messageId = messageId;
         let longPressTimer = null;
         const clear = () => { if (longPressTimer) { clearTimeout(longPressTimer); longPressTimer = null; } };
         bubbleEl.addEventListener('touchstart', (e) => {
@@ -250,10 +262,89 @@ async function renderChat(params) {
             items.unshift({ icon: 'edit', label: '編輯該句聊天', onSelect: () => editMessage(messageId, content, bubbleEl) });
             items.push({ icon: 'star', label: '設定為重要記憶', onSelect: () => saveAsImportantMemory(content, role) });
         }
+        const rows = [...bubbleEl.parentElement.querySelectorAll('.kakao-message-row')];
+        const hasUserAfter = rows.slice(rows.indexOf(bubbleEl) + 1).some(r => r.classList.contains('user'));
+        if (role === 'assistant' && isText && content) {
+            items.unshift({ icon: 'record_voice_over', label: bubbleEl.querySelector('audio') ? '重新合成語音' : '轉成語音', onSelect: () => speakMessage(messageId, content, bubbleEl) });
+        }
+        if (role === 'assistant') {
+            items.unshift({ icon: 'psychology', label: '查看思維鏈', onSelect: () => showRecall('thought', messageId) });
+        }
+        if (role === 'assistant' && !hasUserAfter) {
+            items.unshift({ icon: 'refresh', label: '重新生成', onSelect: regenerateLast });
+        }
         const sheet = createKakaoBottomSheet(items, { title: '訊息操作' });
         sheet.open();
     }
+
+    async function speakMessage(messageId, text, bubbleEl) {
+        createToast('語音合成中…');
+        try {
+            const src = await synthesizeSpeechForMessage(messageId, text);
+            bubbleEl.querySelector('.kakao-bubble-audio audio')?.remove();
+            const audio = document.createElement('audio');
+            audio.controls = true;
+            audio.src = src;
+            let wrap = bubbleEl.querySelector('.kakao-bubble-audio');
+            if (!wrap) {
+                const textEl = bubbleEl.querySelector('.kakao-bubble-text');
+                wrap = document.createElement('div');
+                wrap.className = 'kakao-bubble-audio';
+                textEl.replaceWith(wrap);
+                wrap.appendChild(textEl);
+            }
+            wrap.appendChild(audio);
+            audio.play().catch(() => {});
+            createToast('語音已生成');
+        } catch (e) {
+            createToast(e.message || '語音合成失敗', 'error');
+        }
+    }
     
+    // 思維鏈／心聲：針對指定訊息（未指定時取最新一則 AI 回應）事後推想，結果快取在訊息上
+    async function showRecall(kind, messageId) {
+        const all = await MessagesDB.getByChatId(chatId);
+        const target = messageId
+            ? all.find(m => m.id === messageId)
+            : [...all].reverse().find(m => m.role === 'assistant');
+        if (!target) {
+            createToast('還沒有角色的回應');
+            return;
+        }
+        const isThought = kind === 'thought';
+        const speaker = target.speaker_character_id ? (await CharactersDB.getById(target.speaker_character_id))?.name : null;
+        openResultSheet({
+            title: (speaker || currentChat.character_name || '角色') + (isThought ? ' 的思維鏈' : ' 的心聲'),
+            note: '由 AI 針對這則回覆事後推想，並非模型當下真實的內部思考，僅供參考',
+            load: force => (isThought ? getThought : getInnerVoice)(currentChat, target, { force })
+        });
+    }
+
+    // 刪除最後一則使用者訊息之後的所有 AI 回應，並重新生成
+    async function regenerateLast() {
+        if (activeResponseCount > 0) return;
+        const blockedLeft = blockedMinutesLeft();
+        if (blockedLeft > 0) {
+            createToast('角色封鎖中，還剩約 ' + blockedLeft + ' 分鐘（側邊選單可解除）');
+            return;
+        }
+        const msgs = await MessagesDB.getByChatId(chatId);
+        const trailing = [];
+        for (let i = msgs.length - 1; i >= 0 && msgs[i].role === 'assistant'; i--) trailing.push(msgs[i]);
+        if (trailing.length === 0 || trailing.length === msgs.length) {
+            createToast('找不到可重新生成的回應');
+            return;
+        }
+        for (const m of trailing) {
+            await MessagesDB.delete(m.id);
+            main.querySelector('.kakao-message-row[data-message-id="' + m.id + '"]')?.remove();
+        }
+        messages = await MessagesDB.getByChatId(chatId);
+        messageCount = messages.length;
+        awaitingResponse = true;
+        await generateResponse();
+    }
+
     async function deleteMessage(messageId, bubbleEl) {
         await MessagesDB.delete(messageId);
         bubbleEl.remove();
@@ -407,23 +498,38 @@ async function renderChat(params) {
         createToast('Daily backup created');
     }
     
-    async function blockCharacter() {
-        const hours = 1;
-        const blockedUntil = Date.now() + hours * 60 * 60 * 1000;
-        await ChatsDB.update(chatId, { blocked_until: blockedUntil });
-        createToast(`Character blocked for ${hours} hour(s)`);
+    function blockedMinutesLeft() {
+        const until = currentChat.blocked_until || 0;
+        return until > Date.now() ? Math.ceil((until - Date.now()) / 60000) : 0;
     }
-    
+
+    async function blockCharacter() {
+        const left = blockedMinutesLeft();
+        if (left > 0) {
+            if (!confirm('角色目前被封鎖中（還剩約 ' + left + ' 分鐘），要解除封鎖嗎？')) return;
+            await ChatsDB.update(chatId, { blocked_until: null });
+            currentChat = await ChatsDB.getById(chatId);
+            createToast('已解除封鎖');
+            return;
+        }
+        const hours = 1;
+        if (!confirm('封鎖角色 ' + hours + ' 小時？封鎖期間角色不會回應。')) return;
+        await ChatsDB.update(chatId, { blocked_until: Date.now() + hours * 60 * 60 * 1000 });
+        currentChat = await ChatsDB.getById(chatId);
+        createToast('已封鎖角色 ' + hours + ' 小時');
+    }
+
     async function clearMemory() {
         const memories = await MemoryDB.getByChatId(chatId);
         if (memories.length === 0) {
-            createToast('No memories to clear');
+            createToast('沒有可清除的記憶');
             return;
         }
+        if (!confirm('確定要清除這個聊天室的 ' + memories.length + ' 則記憶？此操作無法復原。')) return;
         for (const m of memories) {
             await MemoryDB.delete(m.id);
         }
-        createToast('Memory cleared');
+        createToast('已清除記憶');
     }
     
     async function openGroupMemberSheet() {
@@ -487,7 +593,7 @@ async function renderChat(params) {
         {
             icon: 'person',
             label: '角色資訊',
-            onClick: () => currentChat.is_group ? createToast('群組聊天') : Router.navigate('/characters/' + currentChat.character_id)
+            onClick: () => currentChat.is_group ? openGroupMemberSheet() : Router.navigate('/settings/char/' + currentChat.character_id)
         },
         { icon: 'account_circle', label: '使用者形象', onClick: () => Router.navigate(currentChat.bound_user_id ? '/settings/user/' + currentChat.bound_user_id : '/settings/user') },
         { icon: 'public', label: '世界觀設定', onClick: () => Router.navigate('/world-info') }
@@ -540,7 +646,7 @@ async function renderChat(params) {
                 title: '每日',
                 items: [
                     { icon: 'backup', label: '每日備份', onClick: createDailyBackup },
-                    { icon: 'history_edu', label: '每日紀錄', onClick: () => createToast('每日紀錄功能開發中') }
+                    { icon: 'history_edu', label: '每日紀錄', onClick: () => openDailyLogSheet(chatId) }
                 ]
             },
             {
@@ -549,6 +655,7 @@ async function renderChat(params) {
                     { divider: true },
                     { icon: 'block', label: '封鎖角色', danger: true, onClick: blockCharacter },
                     { icon: 'delete', label: '清空聊天', danger: true, onClick: async () => {
+                        if (!confirm('確定要清空這個聊天室的所有訊息？此操作無法復原。')) return;
                         await MessagesDB.clearByChatId(chatId);
                         createToast('聊天記錄已清空');
                         Router.navigate('/chats');
@@ -612,12 +719,12 @@ async function renderChat(params) {
     addBtn.style.cssText = 'background:transparent;border:none;cursor:pointer;padding:0;display:flex;align-items:center;justify-content:center;width:24px;height:28px;';
     addBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="25" height="28" viewBox="0 0 25 28" fill="none"><path d="M11.0378 14.9722H5.20447V13.0278H11.0378V7.19443H12.9822V13.0278H18.8156V14.9722H12.9822V20.8055H11.0378V14.9722Z" fill="#6B6B6B"/></svg>';
     
-    async function sendSticker(sticker) {
+    // 傳送一則使用者的非文字訊息（貼圖、圖片、影片、語音、檔案、位置…）
+    async function sendRich({ type, content, meta }) {
         if (activeResponseCount > 0) return;
-        const meta = { id: sticker.id, icon: sticker.icon, name: sticker.name };
-        const msg = await MessagesDB.create(chatId, 'user', sticker.icon, null, { type: 'sticker', meta });
+        const msg = await MessagesDB.create(chatId, 'user', content, null, { type, meta });
 
-        const bubble = createKakaoBubble('user', sticker.icon, undefined, undefined, null, 'sticker', meta);
+        const bubble = createKakaoBubble('user', content, undefined, undefined, null, type, meta);
         setupBubbleLongPress(bubble, msg.id, 'user');
         main.appendChild(bubble);
         requestAnimationFrame(() => { main.scrollTop = main.scrollHeight; });
@@ -626,6 +733,25 @@ async function renderChat(params) {
         messageCount = messages.length;
         awaitingResponse = true;
         updateInputDisabled();
+    }
+
+    function sendSticker(sticker) {
+        return sendRich({ type: 'sticker', content: sticker.icon, meta: { id: sticker.id, icon: sticker.icon, name: sticker.name } });
+    }
+
+    // 準備媒體（壓縮、讀檔…）並傳送；任何失敗都以 toast 告知，不會卡住輸入
+    async function sendPrepared(prepare) {
+        try {
+            const payload = await prepare();
+            if (payload) await sendRich(payload);
+        } catch (e) {
+            createToast(e.message || '傳送失敗', 'error');
+        }
+    }
+
+    async function pickAndSend({ accept, capture, prepare }) {
+        const file = await pickFile({ accept, capture });
+        if (file) await sendPrepared(() => prepare(file));
     }
 
     async function openStickerPicker() {
@@ -657,26 +783,26 @@ async function renderChat(params) {
     }
 
     const plusMenu = createKakaoBottomSheet([
-        { icon: 'psychology', label: '思維鏈', onSelect: () => createToast('思維鏈功能開發中') },
-        { icon: 'favorite', label: '心聲', onSelect: () => createToast('心聲功能開發中') },
-        { icon: 'summarize', label: '生成總結', onSelect: () => createToast('生成總結功能開發中') },
+        { icon: 'psychology', label: '思維鏈', onSelect: () => showRecall('thought') },
+        { icon: 'favorite', label: '心聲', onSelect: () => showRecall('inner_voice') },
+        { icon: 'summarize', label: '生成總結', onSelect: () => openResultSheet({ title: '對話總結', note: '由 AI 整理，僅供閱覽，不會自動寫入記憶', load: () => generateSummary(currentChat) }) },
         { icon: 'import_contacts', label: 'Wiki', onSelect: () => Router.navigate('/personal-wiki') },
-        { icon: 'photo_library', label: '相簿', onSelect: () => Router.navigate('/album') },
-        { icon: 'photo_camera', label: '拍照', onSelect: () => createToast('拍照功能開發中') },
-        { icon: 'videocam', label: '影片', onSelect: () => createToast('影片功能開發中') },
-        { icon: 'mic', label: '語音', onSelect: () => createToast('語音功能開發中') },
-        { icon: 'attach_file', label: '檔案', onSelect: () => createToast('檔案功能開發中') },
+        { icon: 'photo_library', label: '相簿', onSelect: () => openAlbumPicker(src => sendPrepared(() => prepareImage(src, '相簿圖片')), { onGenerate: () => openImageGenerator(sendRich) }) },
+        { icon: 'photo_camera', label: '拍照', onSelect: () => pickAndSend({ accept: 'image/*', capture: 'environment', prepare: f => prepareImage(f, '照片') }) },
+        { icon: 'videocam', label: '影片', onSelect: () => openVideoChoice(sendRich, sendPrepared) },
+        { icon: 'mic', label: '語音', onSelect: () => openRecorderSheet(sendRich) },
+        { icon: 'attach_file', label: '檔案', onSelect: () => pickAndSend({ accept: '*/*', prepare: prepareFile }) },
         { icon: 'emoji_emotions', label: '表情', onSelect: openStickerPicker },
-        { icon: 'redeem', label: 'Icon', onSelect: () => createToast('Icon功能開發中') },
-        { icon: 'share', label: '分享', onSelect: () => createToast('分享功能開發中') },
-        { icon: 'location_on', label: '位置', onSelect: () => createToast('位置功能開發中') },
+        { icon: 'redeem', label: 'Icon', onSelect: () => openIconPicker(sendRich) },
+        { icon: 'share', label: '分享', onSelect: () => openSharePrompt(sendRich) },
+        { icon: 'location_on', label: '位置', onSelect: () => sendPrepared(getLocationMessage) },
         { icon: 'schedule', label: '日程', onSelect: () => Router.navigate('/timetree') },
         { icon: 'payments', label: '轉帳', onSelect: () => Router.navigate('/kakaopay') },
         { icon: 'shopping_bag', label: '購物', onSelect: () => Router.navigate('/taobao') },
         { icon: 'restaurant', label: '外送', onSelect: () => Router.navigate('/delivery') },
         { icon: 'wb_sunny', label: '天氣', onSelect: () => Router.navigate('/weather') },
-        { icon: 'map', label: '地圖', onSelect: () => createToast('地圖功能開發中') },
-        { icon: 'music_note', label: '音樂', onSelect: () => Router.navigate('/music') }
+        { icon: 'map', label: '地圖', onSelect: () => openPlaceSearch(sendRich) },
+        { icon: 'music_note', label: '音樂', onSelect: () => openMusicChoice(sendRich) }
     ], { title: '功能選單' });
     
     addBtn.onclick = () => plusMenu.open();
@@ -790,7 +916,7 @@ async function renderChat(params) {
                             const last10 = recentMessages.slice(-10);
                             const primaryCharId = (currentChat.member_ids && currentChat.member_ids[0]) || currentChat.character_id;
                             window.App.memorySystem.processBatch(last10, chatId, primaryCharId)
-                                .catch(() => {})
+                                .catch((e) => { console.error('[Chat] 記憶處理失敗:', e); createToast('記憶處理失敗：' + (e?.message || e), 'error'); })
                                 .finally(() => { batchProcessing = false; });
                         }
                     }
@@ -835,7 +961,12 @@ async function renderChat(params) {
     
     const generateResponse = async () => {
         if (activeResponseCount > 0) return;
-        
+        const blockedLeft = blockedMinutesLeft();
+        if (blockedLeft > 0) {
+            createToast('角色封鎖中，還剩約 ' + blockedLeft + ' 分鐘（側邊選單可解除）');
+            return;
+        }
+
         const msgs = await MessagesDB.getByChatId(chatId);
         const lastUser = [...msgs].reverse().find(m => m.role === 'user');
         if (!lastUser) {
@@ -908,7 +1039,7 @@ async function renderChat(params) {
                             const recentMessages = await MessagesDB.getByChatId(chatId);
                             const last10 = recentMessages.slice(-10);
                             window.App.memorySystem.processBatch(last10, chatId, currentChat.character_id)
-                                .catch(() => {})
+                                .catch((e) => { console.error('[Chat] 記憶處理失敗:', e); createToast('記憶處理失敗：' + (e?.message || e), 'error'); })
                                 .finally(() => { batchProcessing = false; });
                         }
                     }
