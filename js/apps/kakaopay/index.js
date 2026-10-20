@@ -5,7 +5,7 @@ import { askForm } from '../../core/dialogs.js';
 
 const CATEGORY_LABELS = {
   shopping: '購物', delivery: '外送', gift: '禮物', theme: '主題', sticker: '貼圖',
-  transfer: '轉帳', farm: '農場', topup: '儲值', adjust: '調整'
+  transfer: '轉帳', farm: '農場', topup: '儲值', adjust: '調整', pub: '酒館', invest: '投資'
 };
 
 function fmtDate(ts) {

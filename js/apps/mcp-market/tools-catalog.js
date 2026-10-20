@@ -397,25 +397,6 @@ export const TOOLS_CATALOG = [
         }
     },
     {
-        id: 'finance_stock',
-        category: '金融理財',
-        categoryIcon: 'trending_up',
-        name: 'check_stock',
-        displayName: '股價查詢',
-        description: '查詢即時股價資訊',
-        useCase: '「台積電今天漲了 2%」',
-        difficulty: 'easy',
-        requires: ['股市 API（如 Yahoo Finance、Alpha Vantage）'],
-        parameters: {
-            type: 'object',
-            properties: {
-                symbol: { type: 'string', description: '股票代碼（如：2330.TW）' },
-                market: { type: 'string', enum: ['tw', 'us', 'jp'], default: 'tw' }
-            },
-            required: ['symbol']
-        }
-    },
-    {
         id: 'finance_expense',
         category: '金融理財',
         categoryIcon: 'trending_up',

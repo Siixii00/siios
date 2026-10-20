@@ -29,8 +29,7 @@ const WORKER_TOOLS = {
     work_translate: { keyless: true },
     entertainment_music_search: { keyless: false },
     smart_music: { keyless: false },
-    work_notion: { keyless: false },
-    finance_stock: { keyless: false }
+    work_notion: { keyless: false }
 };
 const LOCAL_TOOL_IDS = new Set(['daily_reminder', 'social_calendar', 'health_period_log', 'health_mood_track', 'health_medication']);
 
@@ -522,31 +521,6 @@ try {
                 return { success: true, pageId: notionData.id, url: notionData.url };
             } catch (error) {
                 return { success: false, error: error.message || 'Notion 服務暫時無法使用' };
-            }`;
-
-        case 'finance_stock':
-            return `// 需要 ALPHA_VANTAGE_API_KEY 或 Yahoo Finance
-            if (!env.ALPHA_VANTAGE_API_KEY) {
-                return { success: false, error: '尚未設定 ALPHA_VANTAGE_API_KEY' };
-            }
-            try {
-                const stockRes = await fetch(
-                    \`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=\${args.symbol}&apikey=\${env.ALPHA_VANTAGE_API_KEY}\`
-                );
-                const stockData = await stockRes.json();
-                const quote = stockData['Global Quote'];
-                if (!stockRes.ok || !quote) {
-                    return { success: false, error: stockData.message || '股票查詢失敗' };
-                }
-                return {
-                    success: true,
-                    symbol: args.symbol,
-                    price: parseFloat(quote['05. price'] || '0'),
-                    change: quote['09. change'],
-                    changePercent: quote['10. change percent']
-                };
-            } catch (error) {
-                return { success: false, error: error.message || '股票查詢服務暂时無法使用' };
             }`;
 
         default:
