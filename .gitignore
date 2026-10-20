@@ -1,3 +1,6 @@
 andrej-karpathy-skills/
 node_modules/
 .playwright-mcp/
+
+# wrangler 本機快取（含 Cloudflare 帳號資訊）
+.wrangler/
