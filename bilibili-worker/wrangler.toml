@@ -1,6 +1,9 @@
-{
-  "name": "siios-bilibili-worker",
-  "version": "1.0.0",
-  "main": "src/index.js",
-  "compatibility_date": "2024-01-01"
-}
+name = "siios-bilibili-worker"
+main = "src/index.js"
+compatibility_date = "2024-09-01"
+
+# 儲存每位使用者（以 GitHub 帳號識別）的 Bilibili 登入 Cookie。
+# 已建立（npx wrangler kv namespace create BILIBILI_KV），id 如下
+[[kv_namespaces]]
+binding = "BILIBILI_KV"
+id = "ccd17d32598c4c42983efe7336dc423f"

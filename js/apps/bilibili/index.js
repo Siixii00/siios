@@ -1,4 +1,4 @@
-﻿import Router from '../../router.js';
+﻿﻿﻿import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
@@ -1410,14 +1410,10 @@ async function renderPlayer(params) {
     const embedBtn = createElement('button', 'bili-option-btn');
     embedBtn.innerHTML = '<span class="material-icons">play_circle</span> 在 PWA 內播放';
     embedBtn.onclick = async () => {
-        const isLoggedIn = await checkBilibiliLogin();
-        if (isLoggedIn) {
-            const charSelect = container.querySelector('#char-select');
-            const charId = (isWatchWithChar && charSelect) ? charSelect.value : null;
-            await playEmbed(title, url, container, charId);
-        } else {
-            showLoginPrompt();
-        }
+        // 官方嵌入播放器不需要登入；登入（Cookie）只是選用，所以不再擋住播放
+        const charSelect = container.querySelector('#char-select');
+        const charId = (isWatchWithChar && charSelect) ? charSelect.value : null;
+        await playEmbed(title, url, container, charId);
     };
     optionsCard.appendChild(embedBtn);
     
@@ -1433,39 +1429,20 @@ async function playEmbed(title, url, container, characterId) {
         return;
     }
     
-    const token = await SettingsDB.get('github_token');
-    
     createToast('正在載入影片...');
-    
+
+    // 播放用的是官方嵌入播放器，只需要 bvid。影片資訊（cid、簡介）只用來抓字幕與產生角色評論，
+    // 取不到（例如 Bilibili 擋下 Worker 的請求）就退回卡片上的標題，不影響播放。
+    let info = { title, cid: null, desc: '' };
     try {
-        const infoRes = await fetch(`${BILI_API}/api/bilibili/video/info?bvid=${bvid}`);
-        const info = await infoRes.json();
-        
-        if (info.error) {
-            throw new Error(info.error);
-        }
-        
-        if (!info.cid) {
-            throw new Error('無法獲取影片 CID');
-        }
-        
-        const playRes = await fetch(`${BILI_API}/api/bilibili/video/playurl?bvid=${bvid}&cid=${info.cid}`);
-        const playData = await playRes.json();
-        
-        if (playData.error) {
-            if (playData.error === 'Not logged in') {
-                throw new Error('登入已過期');
-            }
-            throw new Error(playData.error);
-        }
-        
-        showNativePlayer(container, info, playData, characterId, bvid, title);
+        const infoRes = await fetch(BILI_API + '/api/bilibili/video/info?bvid=' + bvid);
+        const fetched = await infoRes.json();
+        if (!fetched.error && fetched.cid) info = { ...info, ...fetched };
     } catch (error) {
-        createToast(error.message || '無法載入影片');
-        if (error.message === '登入已過期') {
-            startQRLogin();
-        }
+        console.warn('[Bilibili] 取得影片資訊失敗，直接播放：', error);
     }
+
+    showNativePlayer(container, info, null, characterId, bvid, title);
 }
 
 async function showNativePlayer(container, info, playData, characterId, bvid, title) {
@@ -1497,7 +1474,7 @@ async function showNativePlayer(container, info, playData, characterId, bvid, ti
     
     const playerInfo = createElement('div', 'bili-player-info');
     
-    const titleEl = createElement('div', 'font-bold', { textContent: info.title });
+    const titleEl = createElement('div', 'font-bold', { textContent: info.title || title });
     playerInfo.appendChild(titleEl);
     
     const actions = createElement('div', 'bili-player-actions');
@@ -1513,7 +1490,7 @@ async function showNativePlayer(container, info, playData, characterId, bvid, ti
         charCommentsSection.innerHTML = '<div style="padding: 16px; text-align: center;">正在為角色準備評論...</div>';
         container.appendChild(charCommentsSection);
         
-        fetchVideoSubtitles(bvid, info.cid).then(async subtitles => {
+        (info.cid ? fetchVideoSubtitles(bvid, info.cid) : Promise.resolve(null)).then(async subtitles => {
             if (subtitles && subtitles.length > 0) {
                 await generateCharacterComments(characterId, title, subtitles, bvid);
             } else {

@@ -39,8 +39,8 @@
 > 🔒 開工前：先通過〈開工關卡〉（讀 karpathy-guidelines、宣告假設與驗證方式）。
 - [x] 刪除殘留備份：`js/apps/bilibili/index.js.bak`、`js/apps/youtube/index.js.bak`、`js/apps/twitter/index.js.backup`、`js/apps/twitter/index.js.new`、`scripts/discord-bot-worker.js.backup`（已完成，已 git rm）
 - [x] 確認後刪除 `scripts/temp/*`（6 個一次性改檔腳本）、空檔 `Continue`（已完成）
-- [ ] 判斷 `bilibili-worker/src/index-final.js`、`index-search.js` 哪個是正式版（對照 `wrangler.toml`），移除另一個
-- [ ] `.kilo/plans/` 已完成的計畫標註或歸檔（目前 21 份，多數沒有勾選狀態）
+- [x] `bilibili-worker/src/` 正式版是 `index.js`（超集），其餘 8 個舊版檔案已移除（2026-10-21）
+- [x] `.kilo/plans/` 已完成的計畫已歸檔到 `.kilo/plans/archive/`（2026-10-21）；仍有未驗證項目的紫微與 Bilibili 計畫留在原處
 驗證：`git status` 乾淨、app 可正常載入。
 
 ## 階段 1：確定未實作的功能 🔴

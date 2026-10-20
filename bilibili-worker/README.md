@@ -20,7 +20,7 @@ Cloudflare Workers 發出的請求會被識別為機器人，返回 412 錯誤�
 3. 如果失敗（被 ban）→ 顯示手動輸入提示
 
 **部署步驟：**
-1. 複製 `bilibili-worker/src/index-oauth.js` 內容
+1. 複製 `bilibili-worker/src/index.js` 內容（也可以直接在 `bilibili-worker/` 目錄執行 `npx wrangler deploy`）
 2. 替換 Cloudflare Worker 代碼
 3. 部署
 4. 測試
@@ -89,7 +89,7 @@ Cloudflare Workers 發出的請求會被識別為機器人，返回 412 錯誤�
 
 ## 下一步
 
-1. 部署 Worker (`index-oauth.js`)
+1. 部署 Worker (`src/index.js`)
 2. 測試 QR Code 登入
 3. 如果被 ban，使用手動輸入
 4. 享受真實的 Bilibili 推薦內容！
