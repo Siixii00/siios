@@ -1,4 +1,4 @@
-﻿﻿﻿﻿import { minorSafetyPrompt } from './core/age-gate.js';
+﻿﻿﻿﻿﻿import { minorSafetyPrompt } from './core/age-gate.js';
 import Router from './router.js';
 import { SettingsDB, ChatsDB, CharactersDB, UsersDB, HealthDB, ZiweiCacheDB } from './db.js';
 import { loadWorldInfoContext } from './core/world-info-loader.js';
@@ -637,6 +637,9 @@ const APIClient = {
         let context = '[今日命理提示]\n';
         context += `流日命宮：${liu_ri_temple}\n`;
         context += `整體運勢：${fortune_summary.daily || '暫無資料'}\n`;
+        // 命盤本身與流年焦點（由真實排盤產生；舊版快取沒有這兩欄就略過）
+        if (fortune_summary.base) context += `命盤：${fortune_summary.base}\n`;
+        if (fortune_summary.yearly) context += `流年：${fortune_summary.yearly}\n`;
         
         if (sihua) {
             const sihuaParts = [];
@@ -656,8 +659,8 @@ const APIClient = {
             }
         }
         
-        context += '\n請根據這些命理資訊，自然地融入角色的日常對話中。';
-        context += '例如：如果運勢提到「精力充沛」，角色可能會主動提議外出或運動。';
+        context += '\n這些是命盤上的客觀資訊（各宮位代表的關注面向），不是吉凶預言。請根據它們，自然地融入角色的日常對話中，不要斷言會發生什麼事。';
+        context += '例如：流日命宮在財帛宮時，角色可能隨口聊到買東西或理財的小事；在疾厄宮時，可能關心作息與身體。';
         
         return context;
     }

@@ -14,8 +14,8 @@ app.use('*', cors({
 app.get('/', (c) => {
   return c.json({
     name: 'ziwei-mcp-server',
-    version: '1.0.0',
-    description: '紫微斗數 MCP Server',
+    version: '2.0.0',
+    description: '紫微斗數 MCP Server（真實排盤：命宮、五行局、十四主星、輔星、四化、大限、流年月日）',
     endpoints: {
       '/tools': 'GET - 列出可用工具',
       '/tools/call': 'POST - 調用工具'

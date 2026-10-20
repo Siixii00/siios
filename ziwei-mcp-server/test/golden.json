@@ -1,0 +1,5982 @@
+{
+ "generated_by": "iztro (zh-TW)",
+ "note": "只收錄與 iztro 一致的案例；晚子時（23 點）與閏月月底的邊界案例刻意排除",
+ "cases": [
+  {
+   "input": {
+    "birth_date": "2009-06-11",
+    "birth_time": "03:26",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2025-01-14T02:00:00.000Z",
+   "expected": {
+    "ming_branch": "辰",
+    "element": "木三局",
+    "palaces": {
+     "寅": {
+      "stem": "丙",
+      "major": [
+       "廉貞"
+      ],
+      "aux": [],
+      "decade_from": 103
+     },
+     "卯": {
+      "stem": "丁",
+      "major": [],
+      "aux": [],
+      "decade_from": 113
+     },
+     "辰": {
+      "stem": "戊",
+      "major": [
+       "破軍"
+      ],
+      "aux": [],
+      "decade_from": 3
+     },
+     "巳": {
+      "stem": "己",
+      "major": [
+       "天同"
+      ],
+      "aux": [
+       "火星",
+       "陀羅"
+      ],
+      "decade_from": 13
+     },
+     "午": {
+      "stem": "庚",
+      "major": [
+       "天府",
+       "武曲"
+      ],
+      "aux": [
+       "右弼",
+       "文曲",
+       "祿存"
+      ],
+      "decade_from": 23
+     },
+     "未": {
+      "stem": "辛",
+      "major": [
+       "太陰",
+       "太陽"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 33
+     },
+     "申": {
+      "stem": "壬",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [
+       "天鉞",
+       "左輔",
+       "文昌"
+      ],
+      "decade_from": 43
+     },
+     "酉": {
+      "stem": "癸",
+      "major": [
+       "天機",
+       "巨門"
+      ],
+      "aux": [
+       "地空"
+      ],
+      "decade_from": 53
+     },
+     "戌": {
+      "stem": "甲",
+      "major": [
+       "天相",
+       "紫微"
+      ],
+      "aux": [],
+      "decade_from": 63
+     },
+     "亥": {
+      "stem": "乙",
+      "major": [
+       "天梁"
+      ],
+      "aux": [],
+      "decade_from": 73
+     },
+     "子": {
+      "stem": "丙",
+      "major": [
+       "七殺"
+      ],
+      "aux": [
+       "天魁",
+       "鈴星"
+      ],
+      "decade_from": 83
+     },
+     "丑": {
+      "stem": "丁",
+      "major": [],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 93
+     }
+    },
+    "sihua": {
+     "祿": "武曲",
+     "忌": "文曲",
+     "權": "貪狼",
+     "科": "天梁"
+    },
+    "runtime": {
+     "year_branch": "辰",
+     "month_branch": "丑",
+     "day_branch": "卯",
+     "year_sihua": [
+      "廉貞",
+      "破軍",
+      "武曲",
+      "太陽"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1968-04-19",
+    "birth_time": "17:01",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2026-04-26T06:00:00.000Z",
+   "expected": {
+    "ming_branch": "未",
+    "element": "火六局",
+    "palaces": {
+     "寅": {
+      "stem": "甲",
+      "major": [
+       "天同",
+       "天梁"
+      ],
+      "aux": [
+       "地空"
+      ],
+      "decade_from": 76
+     },
+     "卯": {
+      "stem": "乙",
+      "major": [
+       "七殺",
+       "武曲"
+      ],
+      "aux": [],
+      "decade_from": 86
+     },
+     "辰": {
+      "stem": "丙",
+      "major": [
+       "太陽"
+      ],
+      "aux": [
+       "陀羅"
+      ],
+      "decade_from": 96
+     },
+     "巳": {
+      "stem": "丁",
+      "major": [],
+      "aux": [
+       "祿存"
+      ],
+      "decade_from": 106
+     },
+     "午": {
+      "stem": "戊",
+      "major": [
+       "天機"
+      ],
+      "aux": [
+       "左輔",
+       "擎羊"
+      ],
+      "decade_from": 116
+     },
+     "未": {
+      "stem": "己",
+      "major": [
+       "破軍",
+       "紫微"
+      ],
+      "aux": [
+       "天鉞",
+       "鈴星"
+      ],
+      "decade_from": 6
+     },
+     "申": {
+      "stem": "庚",
+      "major": [],
+      "aux": [
+       "右弼",
+       "地劫"
+      ],
+      "decade_from": 16
+     },
+     "酉": {
+      "stem": "辛",
+      "major": [
+       "天府"
+      ],
+      "aux": [],
+      "decade_from": 26
+     },
+     "戌": {
+      "stem": "壬",
+      "major": [
+       "太陰"
+      ],
+      "aux": [],
+      "decade_from": 36
+     },
+     "亥": {
+      "stem": "癸",
+      "major": [
+       "廉貞",
+       "貪狼"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 46
+     },
+     "子": {
+      "stem": "甲",
+      "major": [
+       "巨門"
+      ],
+      "aux": [],
+      "decade_from": 56
+     },
+     "丑": {
+      "stem": "乙",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "天魁",
+       "文昌",
+       "文曲"
+      ],
+      "decade_from": 66
+     }
+    },
+    "sihua": {
+     "忌": "天機",
+     "科": "右弼",
+     "權": "太陰",
+     "祿": "貪狼"
+    },
+    "runtime": {
+     "year_branch": "午",
+     "month_branch": "卯",
+     "day_branch": "子",
+     "year_sihua": [
+      "天同",
+      "天機",
+      "文昌",
+      "廉貞"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1971-02-22",
+    "birth_time": "04:35",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2027-03-03T06:00:00.000Z",
+   "expected": {
+    "ming_branch": "子",
+    "element": "土五局",
+    "palaces": {
+     "寅": {
+      "stem": "庚",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 25
+     },
+     "卯": {
+      "stem": "辛",
+      "major": [
+       "天機",
+       "巨門"
+      ],
+      "aux": [],
+      "decade_from": 35
+     },
+     "辰": {
+      "stem": "壬",
+      "major": [
+       "天相",
+       "紫微"
+      ],
+      "aux": [
+       "左輔"
+      ],
+      "decade_from": 45
+     },
+     "巳": {
+      "stem": "癸",
+      "major": [
+       "天梁"
+      ],
+      "aux": [],
+      "decade_from": 55
+     },
+     "午": {
+      "stem": "甲",
+      "major": [
+       "七殺"
+      ],
+      "aux": [
+       "天魁",
+       "文曲"
+      ],
+      "decade_from": 65
+     },
+     "未": {
+      "stem": "乙",
+      "major": [],
+      "aux": [],
+      "decade_from": 75
+     },
+     "申": {
+      "stem": "丙",
+      "major": [
+       "廉貞"
+      ],
+      "aux": [
+       "文昌",
+       "陀羅"
+      ],
+      "decade_from": 85
+     },
+     "酉": {
+      "stem": "丁",
+      "major": [],
+      "aux": [
+       "地空",
+       "祿存"
+      ],
+      "decade_from": 95
+     },
+     "戌": {
+      "stem": "戊",
+      "major": [
+       "破軍"
+      ],
+      "aux": [
+       "右弼",
+       "擎羊"
+      ],
+      "decade_from": 105
+     },
+     "亥": {
+      "stem": "己",
+      "major": [
+       "天同"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 115
+     },
+     "子": {
+      "stem": "庚",
+      "major": [
+       "天府",
+       "武曲"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 5
+     },
+     "丑": {
+      "stem": "辛",
+      "major": [
+       "太陰",
+       "太陽"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 15
+     }
+    },
+    "sihua": {
+     "祿": "巨門",
+     "科": "文曲",
+     "忌": "文昌",
+     "權": "太陽"
+    },
+    "runtime": {
+     "year_branch": "未",
+     "month_branch": "酉",
+     "day_branch": "戌",
+     "year_sihua": [
+      "太陰",
+      "天同",
+      "天機",
+      "巨門"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "2001-05-27",
+    "birth_time": "10:24",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2025-05-18T00:00:00.000Z",
+   "expected": {
+    "ming_branch": "子",
+    "element": "土五局",
+    "palaces": {
+     "寅": {
+      "stem": "庚",
+      "major": [
+       "天府",
+       "紫微"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 25
+     },
+     "卯": {
+      "stem": "辛",
+      "major": [
+       "太陰"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 35
+     },
+     "辰": {
+      "stem": "壬",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 45
+     },
+     "巳": {
+      "stem": "癸",
+      "major": [
+       "巨門"
+      ],
+      "aux": [
+       "文昌"
+      ],
+      "decade_from": 55
+     },
+     "午": {
+      "stem": "甲",
+      "major": [
+       "天相",
+       "廉貞"
+      ],
+      "aux": [
+       "地空",
+       "天魁"
+      ],
+      "decade_from": 65
+     },
+     "未": {
+      "stem": "乙",
+      "major": [
+       "天梁"
+      ],
+      "aux": [
+       "右弼",
+       "左輔"
+      ],
+      "decade_from": 75
+     },
+     "申": {
+      "stem": "丙",
+      "major": [
+       "七殺"
+      ],
+      "aux": [
+       "火星",
+       "陀羅"
+      ],
+      "decade_from": 85
+     },
+     "酉": {
+      "stem": "丁",
+      "major": [
+       "天同"
+      ],
+      "aux": [
+       "文曲",
+       "祿存"
+      ],
+      "decade_from": 95
+     },
+     "戌": {
+      "stem": "戊",
+      "major": [
+       "武曲"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 105
+     },
+     "亥": {
+      "stem": "己",
+      "major": [
+       "太陽"
+      ],
+      "aux": [],
+      "decade_from": 115
+     },
+     "子": {
+      "stem": "庚",
+      "major": [
+       "破軍"
+      ],
+      "aux": [],
+      "decade_from": 5
+     },
+     "丑": {
+      "stem": "辛",
+      "major": [
+       "天機"
+      ],
+      "aux": [],
+      "decade_from": 15
+     }
+    },
+    "sihua": {
+     "祿": "巨門",
+     "忌": "文昌",
+     "科": "文曲",
+     "權": "太陽"
+    },
+    "runtime": {
+     "year_branch": "巳",
+     "month_branch": "戌",
+     "day_branch": "午",
+     "year_sihua": [
+      "天機",
+      "天梁",
+      "紫微",
+      "太陰"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "2004-07-25",
+    "birth_time": "03:23",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2028-06-04T14:00:00.000Z",
+   "expected": {
+    "ming_branch": "巳",
+    "element": "木三局",
+    "palaces": {
+     "寅": {
+      "stem": "丙",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [
+       "祿存"
+      ],
+      "decade_from": 33
+     },
+     "卯": {
+      "stem": "丁",
+      "major": [
+       "天機",
+       "巨門"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 23
+     },
+     "辰": {
+      "stem": "戊",
+      "major": [
+       "天相",
+       "紫微"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 13
+     },
+     "巳": {
+      "stem": "己",
+      "major": [
+       "天梁"
+      ],
+      "aux": [
+       "右弼"
+      ],
+      "decade_from": 3
+     },
+     "午": {
+      "stem": "庚",
+      "major": [
+       "七殺"
+      ],
+      "aux": [
+       "文曲"
+      ],
+      "decade_from": 113
+     },
+     "未": {
+      "stem": "辛",
+      "major": [],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 103
+     },
+     "申": {
+      "stem": "壬",
+      "major": [
+       "廉貞"
+      ],
+      "aux": [
+       "文昌"
+      ],
+      "decade_from": 93
+     },
+     "酉": {
+      "stem": "癸",
+      "major": [],
+      "aux": [
+       "地空",
+       "左輔"
+      ],
+      "decade_from": 83
+     },
+     "戌": {
+      "stem": "甲",
+      "major": [
+       "破軍"
+      ],
+      "aux": [],
+      "decade_from": 73
+     },
+     "亥": {
+      "stem": "乙",
+      "major": [
+       "天同"
+      ],
+      "aux": [],
+      "decade_from": 63
+     },
+     "子": {
+      "stem": "丙",
+      "major": [
+       "天府",
+       "武曲"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 53
+     },
+     "丑": {
+      "stem": "丁",
+      "major": [
+       "太陰",
+       "太陽"
+      ],
+      "aux": [
+       "地劫",
+       "天魁",
+       "陀羅"
+      ],
+      "decade_from": 43
+     }
+    },
+    "sihua": {
+     "祿": "廉貞",
+     "權": "破軍",
+     "科": "武曲",
+     "忌": "太陽"
+    },
+    "runtime": {
+     "year_branch": "申",
+     "month_branch": "酉",
+     "day_branch": "申",
+     "year_sihua": [
+      "貪狼",
+      "太陰",
+      "右弼",
+      "天機"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1958-08-06",
+    "birth_time": "18:55",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2025-09-14T09:00:00.000Z",
+   "expected": {
+    "ming_branch": "戌",
+    "element": "水二局",
+    "palaces": {
+     "寅": {
+      "stem": "甲",
+      "major": [],
+      "aux": [
+       "地空"
+      ],
+      "decade_from": 82
+     },
+     "卯": {
+      "stem": "乙",
+      "major": [
+       "廉貞",
+       "破軍"
+      ],
+      "aux": [],
+      "decade_from": 72
+     },
+     "辰": {
+      "stem": "丙",
+      "major": [],
+      "aux": [
+       "陀羅"
+      ],
+      "decade_from": 62
+     },
+     "巳": {
+      "stem": "丁",
+      "major": [
+       "天府"
+      ],
+      "aux": [
+       "右弼",
+       "祿存"
+      ],
+      "decade_from": 52
+     },
+     "午": {
+      "stem": "戊",
+      "major": [
+       "天同",
+       "太陰"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 42
+     },
+     "未": {
+      "stem": "己",
+      "major": [
+       "武曲",
+       "貪狼"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 32
+     },
+     "申": {
+      "stem": "庚",
+      "major": [
+       "太陽",
+       "巨門"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 22
+     },
+     "酉": {
+      "stem": "辛",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "左輔"
+      ],
+      "decade_from": 12
+     },
+     "戌": {
+      "stem": "壬",
+      "major": [
+       "天梁",
+       "天機"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 2
+     },
+     "亥": {
+      "stem": "癸",
+      "major": [
+       "七殺",
+       "紫微"
+      ],
+      "aux": [],
+      "decade_from": 112
+     },
+     "子": {
+      "stem": "甲",
+      "major": [],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 102
+     },
+     "丑": {
+      "stem": "乙",
+      "major": [],
+      "aux": [
+       "天魁",
+       "文昌",
+       "文曲"
+      ],
+      "decade_from": 92
+     }
+    },
+    "sihua": {
+     "科": "右弼",
+     "權": "太陰",
+     "祿": "貪狼",
+     "忌": "天機"
+    },
+    "runtime": {
+     "year_branch": "巳",
+     "month_branch": "卯",
+     "day_branch": "丑",
+     "year_sihua": [
+      "天機",
+      "天梁",
+      "紫微",
+      "太陰"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "2009-04-19",
+    "birth_time": "09:52",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2026-01-10T08:00:00.000Z",
+   "expected": {
+    "ming_branch": "亥",
+    "element": "火六局",
+    "palaces": {
+     "寅": {
+      "stem": "丙",
+      "major": [
+       "太陽",
+       "巨門"
+      ],
+      "aux": [],
+      "decade_from": 96
+     },
+     "卯": {
+      "stem": "丁",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 86
+     },
+     "辰": {
+      "stem": "戊",
+      "major": [
+       "天梁",
+       "天機"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 76
+     },
+     "巳": {
+      "stem": "己",
+      "major": [
+       "七殺",
+       "紫微"
+      ],
+      "aux": [
+       "文昌",
+       "陀羅"
+      ],
+      "decade_from": 66
+     },
+     "午": {
+      "stem": "庚",
+      "major": [],
+      "aux": [
+       "地空",
+       "左輔",
+       "祿存"
+      ],
+      "decade_from": 56
+     },
+     "未": {
+      "stem": "辛",
+      "major": [],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 46
+     },
+     "申": {
+      "stem": "壬",
+      "major": [],
+      "aux": [
+       "右弼",
+       "天鉞",
+       "火星"
+      ],
+      "decade_from": 36
+     },
+     "酉": {
+      "stem": "癸",
+      "major": [
+       "廉貞",
+       "破軍"
+      ],
+      "aux": [
+       "文曲"
+      ],
+      "decade_from": 26
+     },
+     "戌": {
+      "stem": "甲",
+      "major": [],
+      "aux": [],
+      "decade_from": 16
+     },
+     "亥": {
+      "stem": "乙",
+      "major": [
+       "天府"
+      ],
+      "aux": [],
+      "decade_from": 6
+     },
+     "子": {
+      "stem": "丙",
+      "major": [
+       "天同",
+       "太陰"
+      ],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 116
+     },
+     "丑": {
+      "stem": "丁",
+      "major": [
+       "武曲",
+       "貪狼"
+      ],
+      "aux": [],
+      "decade_from": 106
+     }
+    },
+    "sihua": {
+     "科": "天梁",
+     "忌": "文曲",
+     "祿": "武曲",
+     "權": "貪狼"
+    },
+    "runtime": {
+     "year_branch": "巳",
+     "month_branch": "午",
+     "day_branch": "卯",
+     "year_sihua": [
+      "天機",
+      "天梁",
+      "紫微",
+      "太陰"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1966-03-10",
+    "birth_time": "04:18",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2027-09-19T12:00:00.000Z",
+   "expected": {
+    "ming_branch": "丑",
+    "element": "土五局",
+    "palaces": {
+     "寅": {
+      "stem": "庚",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [],
+      "decade_from": 15
+     },
+     "卯": {
+      "stem": "辛",
+      "major": [
+       "天機",
+       "巨門"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 25
+     },
+     "辰": {
+      "stem": "壬",
+      "major": [
+       "天相",
+       "紫微"
+      ],
+      "aux": [
+       "陀羅"
+      ],
+      "decade_from": 35
+     },
+     "巳": {
+      "stem": "癸",
+      "major": [
+       "天梁"
+      ],
+      "aux": [
+       "左輔",
+       "祿存",
+       "鈴星"
+      ],
+      "decade_from": 45
+     },
+     "午": {
+      "stem": "甲",
+      "major": [
+       "七殺"
+      ],
+      "aux": [
+       "擎羊",
+       "文曲"
+      ],
+      "decade_from": 55
+     },
+     "未": {
+      "stem": "乙",
+      "major": [],
+      "aux": [],
+      "decade_from": 65
+     },
+     "申": {
+      "stem": "丙",
+      "major": [
+       "廉貞"
+      ],
+      "aux": [
+       "文昌"
+      ],
+      "decade_from": 75
+     },
+     "酉": {
+      "stem": "丁",
+      "major": [],
+      "aux": [
+       "右弼",
+       "地空",
+       "天鉞"
+      ],
+      "decade_from": 85
+     },
+     "戌": {
+      "stem": "戊",
+      "major": [
+       "破軍"
+      ],
+      "aux": [],
+      "decade_from": 95
+     },
+     "亥": {
+      "stem": "己",
+      "major": [
+       "天同"
+      ],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 105
+     },
+     "子": {
+      "stem": "庚",
+      "major": [
+       "天府",
+       "武曲"
+      ],
+      "aux": [],
+      "decade_from": 115
+     },
+     "丑": {
+      "stem": "辛",
+      "major": [
+       "太陰",
+       "太陽"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 5
+     }
+    },
+    "sihua": {
+     "權": "天機",
+     "忌": "廉貞",
+     "科": "文昌",
+     "祿": "天同"
+    },
+    "runtime": {
+     "year_branch": "未",
+     "month_branch": "卯",
+     "day_branch": "酉",
+     "year_sihua": [
+      "太陰",
+      "天同",
+      "天機",
+      "巨門"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1943-12-20",
+    "birth_time": "08:45",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2028-10-23T13:00:00.000Z",
+   "expected": {
+    "ming_branch": "申",
+    "element": "木三局",
+    "palaces": {
+     "寅": {
+      "stem": "甲",
+      "major": [],
+      "aux": [
+       "左輔",
+       "鈴星"
+      ],
+      "decade_from": 63
+     },
+     "卯": {
+      "stem": "乙",
+      "major": [],
+      "aux": [
+       "地劫",
+       "天魁"
+      ],
+      "decade_from": 73
+     },
+     "辰": {
+      "stem": "丙",
+      "major": [
+       "天同"
+      ],
+      "aux": [],
+      "decade_from": 83
+     },
+     "巳": {
+      "stem": "丁",
+      "major": [
+       "武曲",
+       "破軍"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 93
+     },
+     "午": {
+      "stem": "戊",
+      "major": [
+       "太陽"
+      ],
+      "aux": [
+       "文昌"
+      ],
+      "decade_from": 103
+     },
+     "未": {
+      "stem": "己",
+      "major": [
+       "天府"
+      ],
+      "aux": [
+       "地空"
+      ],
+      "decade_from": 113
+     },
+     "申": {
+      "stem": "庚",
+      "major": [
+       "天機",
+       "太陰"
+      ],
+      "aux": [
+       "文曲"
+      ],
+      "decade_from": 3
+     },
+     "酉": {
+      "stem": "辛",
+      "major": [
+       "紫微",
+       "貪狼"
+      ],
+      "aux": [],
+      "decade_from": 13
+     },
+     "戌": {
+      "stem": "壬",
+      "major": [
+       "巨門"
+      ],
+      "aux": [],
+      "decade_from": 23
+     },
+     "亥": {
+      "stem": "癸",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "陀羅"
+      ],
+      "decade_from": 33
+     },
+     "子": {
+      "stem": "甲",
+      "major": [
+       "天梁"
+      ],
+      "aux": [
+       "右弼",
+       "祿存"
+      ],
+      "decade_from": 43
+     },
+     "丑": {
+      "stem": "乙",
+      "major": [
+       "七殺",
+       "廉貞"
+      ],
+      "aux": [
+       "擎羊",
+       "火星"
+      ],
+      "decade_from": 53
+     }
+    },
+    "sihua": {
+     "祿": "破軍",
+     "科": "太陰",
+     "忌": "貪狼",
+     "權": "巨門"
+    },
+    "runtime": {
+     "year_branch": "申",
+     "month_branch": "戌",
+     "day_branch": "卯",
+     "year_sihua": [
+      "貪狼",
+      "太陰",
+      "右弼",
+      "天機"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "2005-05-05",
+    "birth_time": "05:10",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2028-04-04T10:00:00.000Z",
+   "expected": {
+    "ming_branch": "丑",
+    "element": "火六局",
+    "palaces": {
+     "寅": {
+      "stem": "戊",
+      "major": [
+       "天機",
+       "太陰"
+      ],
+      "aux": [
+       "地劫",
+       "陀羅"
+      ],
+      "decade_from": 16
+     },
+     "卯": {
+      "stem": "己",
+      "major": [
+       "紫微",
+       "貪狼"
+      ],
+      "aux": [
+       "祿存"
+      ],
+      "decade_from": 26
+     },
+     "辰": {
+      "stem": "庚",
+      "major": [
+       "巨門"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 36
+     },
+     "巳": {
+      "stem": "辛",
+      "major": [
+       "天相"
+      ],
+      "aux": [],
+      "decade_from": 46
+     },
+     "午": {
+      "stem": "壬",
+      "major": [
+       "天梁"
+      ],
+      "aux": [
+       "左輔",
+       "火星"
+      ],
+      "decade_from": 56
+     },
+     "未": {
+      "stem": "癸",
+      "major": [
+       "七殺",
+       "廉貞"
+      ],
+      "aux": [
+       "文昌",
+       "文曲"
+      ],
+      "decade_from": 66
+     },
+     "申": {
+      "stem": "甲",
+      "major": [],
+      "aux": [
+       "右弼",
+       "地空",
+       "天鉞"
+      ],
+      "decade_from": 76
+     },
+     "酉": {
+      "stem": "乙",
+      "major": [],
+      "aux": [],
+      "decade_from": 86
+     },
+     "戌": {
+      "stem": "丙",
+      "major": [
+       "天同"
+      ],
+      "aux": [],
+      "decade_from": 96
+     },
+     "亥": {
+      "stem": "丁",
+      "major": [
+       "武曲",
+       "破軍"
+      ],
+      "aux": [],
+      "decade_from": 106
+     },
+     "子": {
+      "stem": "戊",
+      "major": [
+       "太陽"
+      ],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 116
+     },
+     "丑": {
+      "stem": "己",
+      "major": [
+       "天府"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 6
+     }
+    },
+    "sihua": {
+     "祿": "天機",
+     "忌": "太陰",
+     "科": "紫微",
+     "權": "天梁"
+    },
+    "runtime": {
+     "year_branch": "申",
+     "month_branch": "亥",
+     "day_branch": "申",
+     "year_sihua": [
+      "貪狼",
+      "太陰",
+      "右弼",
+      "天機"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1980-10-27",
+    "birth_time": "14:20",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2027-10-22T04:00:00.000Z",
+   "expected": {
+    "ming_branch": "卯",
+    "element": "土五局",
+    "palaces": {
+     "寅": {
+      "stem": "戊",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [
+       "右弼"
+      ],
+      "decade_from": 15
+     },
+     "卯": {
+      "stem": "己",
+      "major": [
+       "天機",
+       "巨門"
+      ],
+      "aux": [
+       "文昌"
+      ],
+      "decade_from": 5
+     },
+     "辰": {
+      "stem": "庚",
+      "major": [
+       "天相",
+       "紫微"
+      ],
+      "aux": [
+       "地空"
+      ],
+      "decade_from": 115
+     },
+     "巳": {
+      "stem": "辛",
+      "major": [
+       "天梁"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 105
+     },
+     "午": {
+      "stem": "壬",
+      "major": [
+       "七殺"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 95
+     },
+     "未": {
+      "stem": "癸",
+      "major": [],
+      "aux": [
+       "天鉞",
+       "陀羅"
+      ],
+      "decade_from": 85
+     },
+     "申": {
+      "stem": "甲",
+      "major": [
+       "廉貞"
+      ],
+      "aux": [
+       "祿存"
+      ],
+      "decade_from": 75
+     },
+     "酉": {
+      "stem": "乙",
+      "major": [],
+      "aux": [
+       "擎羊",
+       "火星"
+      ],
+      "decade_from": 65
+     },
+     "戌": {
+      "stem": "丙",
+      "major": [
+       "破軍"
+      ],
+      "aux": [],
+      "decade_from": 55
+     },
+     "亥": {
+      "stem": "丁",
+      "major": [
+       "天同"
+      ],
+      "aux": [
+       "文曲"
+      ],
+      "decade_from": 45
+     },
+     "子": {
+      "stem": "戊",
+      "major": [
+       "天府",
+       "武曲"
+      ],
+      "aux": [
+       "左輔"
+      ],
+      "decade_from": 35
+     },
+     "丑": {
+      "stem": "己",
+      "major": [
+       "太陰",
+       "太陽"
+      ],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 25
+     }
+    },
+    "sihua": {
+     "忌": "天同",
+     "權": "武曲",
+     "祿": "太陽",
+     "科": "太陰"
+    },
+    "runtime": {
+     "year_branch": "未",
+     "month_branch": "寅",
+     "day_branch": "子",
+     "year_sihua": [
+      "太陰",
+      "天同",
+      "天機",
+      "巨門"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1963-03-01",
+    "birth_time": "22:25",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2025-02-25T03:00:00.000Z",
+   "expected": {
+    "ming_branch": "辰",
+    "element": "土五局",
+    "palaces": {
+     "寅": {
+      "stem": "甲",
+      "major": [
+       "天同",
+       "天梁"
+      ],
+      "aux": [],
+      "decade_from": 25
+     },
+     "卯": {
+      "stem": "乙",
+      "major": [
+       "七殺",
+       "武曲"
+      ],
+      "aux": [
+       "天魁",
+       "文曲"
+      ],
+      "decade_from": 15
+     },
+     "辰": {
+      "stem": "丙",
+      "major": [
+       "太陽"
+      ],
+      "aux": [],
+      "decade_from": 5
+     },
+     "巳": {
+      "stem": "丁",
+      "major": [],
+      "aux": [
+       "天鉞",
+       "左輔"
+      ],
+      "decade_from": 115
+     },
+     "午": {
+      "stem": "戊",
+      "major": [
+       "天機"
+      ],
+      "aux": [],
+      "decade_from": 105
+     },
+     "未": {
+      "stem": "己",
+      "major": [
+       "破軍",
+       "紫微"
+      ],
+      "aux": [],
+      "decade_from": 95
+     },
+     "申": {
+      "stem": "庚",
+      "major": [],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 85
+     },
+     "酉": {
+      "stem": "辛",
+      "major": [
+       "天府"
+      ],
+      "aux": [
+       "右弼",
+       "鈴星"
+      ],
+      "decade_from": 75
+     },
+     "戌": {
+      "stem": "壬",
+      "major": [
+       "太陰"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 65
+     },
+     "亥": {
+      "stem": "癸",
+      "major": [
+       "廉貞",
+       "貪狼"
+      ],
+      "aux": [
+       "文昌",
+       "陀羅"
+      ],
+      "decade_from": 55
+     },
+     "子": {
+      "stem": "甲",
+      "major": [
+       "巨門"
+      ],
+      "aux": [
+       "地空",
+       "祿存"
+      ],
+      "decade_from": 45
+     },
+     "丑": {
+      "stem": "乙",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 35
+     }
+    },
+    "sihua": {
+     "祿": "破軍",
+     "科": "太陰",
+     "忌": "貪狼",
+     "權": "巨門"
+    },
+    "runtime": {
+     "year_branch": "巳",
+     "month_branch": "卯",
+     "day_branch": "午",
+     "year_sihua": [
+      "天機",
+      "天梁",
+      "紫微",
+      "太陰"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1994-01-07",
+    "birth_time": "02:55",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2025-11-17T14:00:00.000Z",
+   "expected": {
+    "ming_branch": "亥",
+    "element": "水二局",
+    "palaces": {
+     "寅": {
+      "stem": "甲",
+      "major": [
+       "天府",
+       "紫微"
+      ],
+      "aux": [
+       "左輔"
+      ],
+      "decade_from": 92
+     },
+     "卯": {
+      "stem": "乙",
+      "major": [
+       "太陰"
+      ],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 82
+     },
+     "辰": {
+      "stem": "丙",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 72
+     },
+     "巳": {
+      "stem": "丁",
+      "major": [
+       "巨門"
+      ],
+      "aux": [
+       "天鉞",
+       "文曲"
+      ],
+      "decade_from": 62
+     },
+     "午": {
+      "stem": "戊",
+      "major": [
+       "天相",
+       "廉貞"
+      ],
+      "aux": [],
+      "decade_from": 52
+     },
+     "未": {
+      "stem": "己",
+      "major": [
+       "天梁"
+      ],
+      "aux": [],
+      "decade_from": 42
+     },
+     "申": {
+      "stem": "庚",
+      "major": [
+       "七殺"
+      ],
+      "aux": [],
+      "decade_from": 32
+     },
+     "酉": {
+      "stem": "辛",
+      "major": [
+       "天同"
+      ],
+      "aux": [
+       "文昌"
+      ],
+      "decade_from": 22
+     },
+     "戌": {
+      "stem": "壬",
+      "major": [
+       "武曲"
+      ],
+      "aux": [
+       "地空"
+      ],
+      "decade_from": 12
+     },
+     "亥": {
+      "stem": "癸",
+      "major": [
+       "太陽"
+      ],
+      "aux": [
+       "鈴星",
+       "陀羅"
+      ],
+      "decade_from": 2
+     },
+     "子": {
+      "stem": "甲",
+      "major": [
+       "破軍"
+      ],
+      "aux": [
+       "右弼",
+       "地劫",
+       "祿存"
+      ],
+      "decade_from": 112
+     },
+     "丑": {
+      "stem": "乙",
+      "major": [
+       "天機"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 102
+     }
+    },
+    "sihua": {
+     "科": "太陰",
+     "忌": "貪狼",
+     "權": "巨門",
+     "祿": "破軍"
+    },
+    "runtime": {
+     "year_branch": "巳",
+     "month_branch": "辰",
+     "day_branch": "未",
+     "year_sihua": [
+      "天機",
+      "天梁",
+      "紫微",
+      "太陰"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1949-12-17",
+    "birth_time": "09:32",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2028-11-23T15:00:00.000Z",
+   "expected": {
+    "ming_branch": "午",
+    "element": "土五局",
+    "palaces": {
+     "寅": {
+      "stem": "丙",
+      "major": [],
+      "aux": [],
+      "decade_from": 45
+     },
+     "卯": {
+      "stem": "丁",
+      "major": [],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 35
+     },
+     "辰": {
+      "stem": "戊",
+      "major": [
+       "天同"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 25
+     },
+     "巳": {
+      "stem": "己",
+      "major": [
+       "武曲",
+       "破軍"
+      ],
+      "aux": [
+       "文昌",
+       "陀羅"
+      ],
+      "decade_from": 15
+     },
+     "午": {
+      "stem": "庚",
+      "major": [
+       "太陽"
+      ],
+      "aux": [
+       "地空",
+       "祿存"
+      ],
+      "decade_from": 5
+     },
+     "未": {
+      "stem": "辛",
+      "major": [
+       "天府"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 115
+     },
+     "申": {
+      "stem": "壬",
+      "major": [
+       "天機",
+       "太陰"
+      ],
+      "aux": [
+       "天鉞",
+       "火星"
+      ],
+      "decade_from": 105
+     },
+     "酉": {
+      "stem": "癸",
+      "major": [
+       "紫微",
+       "貪狼"
+      ],
+      "aux": [
+       "文曲"
+      ],
+      "decade_from": 95
+     },
+     "戌": {
+      "stem": "甲",
+      "major": [
+       "巨門"
+      ],
+      "aux": [],
+      "decade_from": 85
+     },
+     "亥": {
+      "stem": "乙",
+      "major": [
+       "天相"
+      ],
+      "aux": [],
+      "decade_from": 75
+     },
+     "子": {
+      "stem": "丙",
+      "major": [
+       "天梁"
+      ],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 65
+     },
+     "丑": {
+      "stem": "丁",
+      "major": [
+       "七殺",
+       "廉貞"
+      ],
+      "aux": [
+       "右弼",
+       "左輔"
+      ],
+      "decade_from": 55
+     }
+    },
+    "sihua": {
+     "祿": "武曲",
+     "權": "貪狼",
+     "忌": "文曲",
+     "科": "天梁"
+    },
+    "runtime": {
+     "year_branch": "申",
+     "month_branch": "丑",
+     "day_branch": "申",
+     "year_sihua": [
+      "貪狼",
+      "太陰",
+      "右弼",
+      "天機"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1958-09-10",
+    "birth_time": "11:50",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2028-05-23T04:00:00.000Z",
+   "expected": {
+    "ming_branch": "寅",
+    "element": "水二局",
+    "palaces": {
+     "寅": {
+      "stem": "甲",
+      "major": [
+       "天府",
+       "紫微"
+      ],
+      "aux": [],
+      "decade_from": 2
+     },
+     "卯": {
+      "stem": "乙",
+      "major": [
+       "太陰"
+      ],
+      "aux": [],
+      "decade_from": 112
+     },
+     "辰": {
+      "stem": "丙",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [
+       "右弼",
+       "文昌",
+       "陀羅"
+      ],
+      "decade_from": 102
+     },
+     "巳": {
+      "stem": "丁",
+      "major": [
+       "巨門"
+      ],
+      "aux": [
+       "地劫",
+       "地空",
+       "祿存"
+      ],
+      "decade_from": 92
+     },
+     "午": {
+      "stem": "戊",
+      "major": [
+       "天相",
+       "廉貞"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 82
+     },
+     "未": {
+      "stem": "己",
+      "major": [
+       "天梁"
+      ],
+      "aux": [
+       "天鉞",
+       "火星"
+      ],
+      "decade_from": 72
+     },
+     "申": {
+      "stem": "庚",
+      "major": [
+       "七殺"
+      ],
+      "aux": [],
+      "decade_from": 62
+     },
+     "酉": {
+      "stem": "辛",
+      "major": [
+       "天同"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 52
+     },
+     "戌": {
+      "stem": "壬",
+      "major": [
+       "武曲"
+      ],
+      "aux": [
+       "左輔",
+       "文曲"
+      ],
+      "decade_from": 42
+     },
+     "亥": {
+      "stem": "癸",
+      "major": [
+       "太陽"
+      ],
+      "aux": [],
+      "decade_from": 32
+     },
+     "子": {
+      "stem": "甲",
+      "major": [
+       "破軍"
+      ],
+      "aux": [],
+      "decade_from": 22
+     },
+     "丑": {
+      "stem": "乙",
+      "major": [
+       "天機"
+      ],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 12
+     }
+    },
+    "sihua": {
+     "權": "太陰",
+     "祿": "貪狼",
+     "科": "右弼",
+     "忌": "天機"
+    },
+    "runtime": {
+     "year_branch": "申",
+     "month_branch": "亥",
+     "day_branch": "卯",
+     "year_sihua": [
+      "貪狼",
+      "太陰",
+      "右弼",
+      "天機"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "2011-03-13",
+    "birth_time": "21:25",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2027-03-18T06:00:00.000Z",
+   "expected": {
+    "ming_branch": "辰",
+    "element": "水二局",
+    "palaces": {
+     "寅": {
+      "stem": "庚",
+      "major": [
+       "太陽",
+       "巨門"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 102
+     },
+     "卯": {
+      "stem": "辛",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "文曲"
+      ],
+      "decade_from": 112
+     },
+     "辰": {
+      "stem": "壬",
+      "major": [
+       "天梁",
+       "天機"
+      ],
+      "aux": [],
+      "decade_from": 2
+     },
+     "巳": {
+      "stem": "癸",
+      "major": [
+       "七殺",
+       "紫微"
+      ],
+      "aux": [
+       "左輔"
+      ],
+      "decade_from": 12
+     },
+     "午": {
+      "stem": "甲",
+      "major": [],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 22
+     },
+     "未": {
+      "stem": "乙",
+      "major": [],
+      "aux": [],
+      "decade_from": 32
+     },
+     "申": {
+      "stem": "丙",
+      "major": [],
+      "aux": [
+       "火星",
+       "陀羅"
+      ],
+      "decade_from": 42
+     },
+     "酉": {
+      "stem": "丁",
+      "major": [
+       "廉貞",
+       "破軍"
+      ],
+      "aux": [
+       "右弼",
+       "祿存",
+       "鈴星"
+      ],
+      "decade_from": 52
+     },
+     "戌": {
+      "stem": "戊",
+      "major": [],
+      "aux": [
+       "地劫",
+       "擎羊"
+      ],
+      "decade_from": 62
+     },
+     "亥": {
+      "stem": "己",
+      "major": [
+       "天府"
+      ],
+      "aux": [
+       "文昌"
+      ],
+      "decade_from": 72
+     },
+     "子": {
+      "stem": "庚",
+      "major": [
+       "天同",
+       "太陰"
+      ],
+      "aux": [
+       "地空"
+      ],
+      "decade_from": 82
+     },
+     "丑": {
+      "stem": "辛",
+      "major": [
+       "武曲",
+       "貪狼"
+      ],
+      "aux": [],
+      "decade_from": 92
+     }
+    },
+    "sihua": {
+     "權": "太陽",
+     "祿": "巨門",
+     "科": "文曲",
+     "忌": "文昌"
+    },
+    "runtime": {
+     "year_branch": "未",
+     "month_branch": "午",
+     "day_branch": "辰",
+     "year_sihua": [
+      "太陰",
+      "天同",
+      "天機",
+      "巨門"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1989-04-15",
+    "birth_time": "22:31",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2027-04-04T09:00:00.000Z",
+   "expected": {
+    "ming_branch": "巳",
+    "element": "木三局",
+    "palaces": {
+     "寅": {
+      "stem": "丙",
+      "major": [
+       "天同",
+       "天梁"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 33
+     },
+     "卯": {
+      "stem": "丁",
+      "major": [
+       "七殺",
+       "武曲"
+      ],
+      "aux": [
+       "文曲"
+      ],
+      "decade_from": 23
+     },
+     "辰": {
+      "stem": "戊",
+      "major": [
+       "太陽"
+      ],
+      "aux": [],
+      "decade_from": 13
+     },
+     "巳": {
+      "stem": "己",
+      "major": [],
+      "aux": [
+       "陀羅"
+      ],
+      "decade_from": 3
+     },
+     "午": {
+      "stem": "庚",
+      "major": [
+       "天機"
+      ],
+      "aux": [
+       "左輔",
+       "祿存"
+      ],
+      "decade_from": 113
+     },
+     "未": {
+      "stem": "辛",
+      "major": [
+       "破軍",
+       "紫微"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 103
+     },
+     "申": {
+      "stem": "壬",
+      "major": [],
+      "aux": [
+       "右弼",
+       "天鉞"
+      ],
+      "decade_from": 93
+     },
+     "酉": {
+      "stem": "癸",
+      "major": [
+       "天府"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 83
+     },
+     "戌": {
+      "stem": "甲",
+      "major": [
+       "太陰"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 73
+     },
+     "亥": {
+      "stem": "乙",
+      "major": [
+       "廉貞",
+       "貪狼"
+      ],
+      "aux": [
+       "文昌"
+      ],
+      "decade_from": 63
+     },
+     "子": {
+      "stem": "丙",
+      "major": [
+       "巨門"
+      ],
+      "aux": [
+       "地空",
+       "天魁"
+      ],
+      "decade_from": 53
+     },
+     "丑": {
+      "stem": "丁",
+      "major": [
+       "天相"
+      ],
+      "aux": [],
+      "decade_from": 43
+     }
+    },
+    "sihua": {
+     "科": "天梁",
+     "祿": "武曲",
+     "忌": "文曲",
+     "權": "貪狼"
+    },
+    "runtime": {
+     "year_branch": "未",
+     "month_branch": "巳",
+     "day_branch": "申",
+     "year_sihua": [
+      "太陰",
+      "天同",
+      "天機",
+      "巨門"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "2002-11-03",
+    "birth_time": "20:30",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2028-09-02T01:00:00.000Z",
+   "expected": {
+    "ming_branch": "子",
+    "element": "木三局",
+    "palaces": {
+     "寅": {
+      "stem": "壬",
+      "major": [
+       "廉貞"
+      ],
+      "aux": [
+       "右弼",
+       "文曲"
+      ],
+      "decade_from": 103
+     },
+     "卯": {
+      "stem": "癸",
+      "major": [],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 93
+     },
+     "辰": {
+      "stem": "甲",
+      "major": [
+       "破軍"
+      ],
+      "aux": [],
+      "decade_from": 83
+     },
+     "巳": {
+      "stem": "乙",
+      "major": [
+       "天同"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 73
+     },
+     "午": {
+      "stem": "丙",
+      "major": [
+       "天府",
+       "武曲"
+      ],
+      "aux": [],
+      "decade_from": 63
+     },
+     "未": {
+      "stem": "丁",
+      "major": [
+       "太陰",
+       "太陽"
+      ],
+      "aux": [],
+      "decade_from": 53
+     },
+     "申": {
+      "stem": "戊",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [],
+      "decade_from": 43
+     },
+     "酉": {
+      "stem": "己",
+      "major": [
+       "天機",
+       "巨門"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 33
+     },
+     "戌": {
+      "stem": "庚",
+      "major": [
+       "天相",
+       "紫微"
+      ],
+      "aux": [
+       "陀羅"
+      ],
+      "decade_from": 23
+     },
+     "亥": {
+      "stem": "辛",
+      "major": [
+       "天梁"
+      ],
+      "aux": [
+       "火星",
+       "祿存"
+      ],
+      "decade_from": 13
+     },
+     "子": {
+      "stem": "壬",
+      "major": [
+       "七殺"
+      ],
+      "aux": [
+       "左輔",
+       "擎羊",
+       "文昌"
+      ],
+      "decade_from": 3
+     },
+     "丑": {
+      "stem": "癸",
+      "major": [],
+      "aux": [
+       "地空",
+       "鈴星"
+      ],
+      "decade_from": 113
+     }
+    },
+    "sihua": {
+     "忌": "武曲",
+     "權": "紫微",
+     "祿": "天梁",
+     "科": "左輔"
+    },
+    "runtime": {
+     "year_branch": "申",
+     "month_branch": "辰",
+     "day_branch": "巳",
+     "year_sihua": [
+      "貪狼",
+      "太陰",
+      "右弼",
+      "天機"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1961-05-26",
+    "birth_time": "05:55",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2025-04-11T15:00:00.000Z",
+   "expected": {
+    "ming_branch": "寅",
+    "element": "木三局",
+    "palaces": {
+     "寅": {
+      "stem": "庚",
+      "major": [
+       "太陽",
+       "巨門"
+      ],
+      "aux": [
+       "地劫",
+       "天鉞"
+      ],
+      "decade_from": 3
+     },
+     "卯": {
+      "stem": "辛",
+      "major": [
+       "天相"
+      ],
+      "aux": [],
+      "decade_from": 13
+     },
+     "辰": {
+      "stem": "壬",
+      "major": [
+       "天梁",
+       "天機"
+      ],
+      "aux": [],
+      "decade_from": 23
+     },
+     "巳": {
+      "stem": "癸",
+      "major": [
+       "七殺",
+       "紫微"
+      ],
+      "aux": [],
+      "decade_from": 33
+     },
+     "午": {
+      "stem": "甲",
+      "major": [],
+      "aux": [
+       "天魁",
+       "火星"
+      ],
+      "decade_from": 43
+     },
+     "未": {
+      "stem": "乙",
+      "major": [],
+      "aux": [
+       "右弼",
+       "左輔",
+       "文昌",
+       "文曲"
+      ],
+      "decade_from": 53
+     },
+     "申": {
+      "stem": "丙",
+      "major": [],
+      "aux": [
+       "地空",
+       "陀羅"
+      ],
+      "decade_from": 63
+     },
+     "酉": {
+      "stem": "丁",
+      "major": [
+       "廉貞",
+       "破軍"
+      ],
+      "aux": [
+       "祿存"
+      ],
+      "decade_from": 73
+     },
+     "戌": {
+      "stem": "戊",
+      "major": [],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 83
+     },
+     "亥": {
+      "stem": "己",
+      "major": [
+       "天府"
+      ],
+      "aux": [],
+      "decade_from": 93
+     },
+     "子": {
+      "stem": "庚",
+      "major": [
+       "天同",
+       "太陰"
+      ],
+      "aux": [],
+      "decade_from": 103
+     },
+     "丑": {
+      "stem": "辛",
+      "major": [
+       "武曲",
+       "貪狼"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 113
+     }
+    },
+    "sihua": {
+     "權": "太陽",
+     "祿": "巨門",
+     "忌": "文昌",
+     "科": "文曲"
+    },
+    "runtime": {
+     "year_branch": "巳",
+     "month_branch": "未",
+     "day_branch": "申",
+     "year_sihua": [
+      "天機",
+      "天梁",
+      "紫微",
+      "太陰"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1950-03-09",
+    "birth_time": "11:00",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2026-11-05T02:00:00.000Z",
+   "expected": {
+    "ming_branch": "申",
+    "element": "水二局",
+    "palaces": {
+     "寅": {
+      "stem": "戊",
+      "major": [],
+      "aux": [],
+      "decade_from": 62
+     },
+     "卯": {
+      "stem": "己",
+      "major": [
+       "廉貞",
+       "破軍"
+      ],
+      "aux": [],
+      "decade_from": 72
+     },
+     "辰": {
+      "stem": "庚",
+      "major": [],
+      "aux": [
+       "左輔",
+       "文昌"
+      ],
+      "decade_from": 82
+     },
+     "巳": {
+      "stem": "辛",
+      "major": [
+       "天府"
+      ],
+      "aux": [
+       "地劫",
+       "地空"
+      ],
+      "decade_from": 92
+     },
+     "午": {
+      "stem": "壬",
+      "major": [
+       "天同",
+       "太陰"
+      ],
+      "aux": [],
+      "decade_from": 102
+     },
+     "未": {
+      "stem": "癸",
+      "major": [
+       "武曲",
+       "貪狼"
+      ],
+      "aux": [
+       "天鉞",
+       "火星",
+       "陀羅"
+      ],
+      "decade_from": 112
+     },
+     "申": {
+      "stem": "甲",
+      "major": [
+       "太陽",
+       "巨門"
+      ],
+      "aux": [
+       "祿存"
+      ],
+      "decade_from": 2
+     },
+     "酉": {
+      "stem": "乙",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "擎羊",
+       "鈴星"
+      ],
+      "decade_from": 12
+     },
+     "戌": {
+      "stem": "丙",
+      "major": [
+       "天梁",
+       "天機"
+      ],
+      "aux": [
+       "右弼",
+       "文曲"
+      ],
+      "decade_from": 22
+     },
+     "亥": {
+      "stem": "丁",
+      "major": [
+       "七殺",
+       "紫微"
+      ],
+      "aux": [],
+      "decade_from": 32
+     },
+     "子": {
+      "stem": "戊",
+      "major": [],
+      "aux": [],
+      "decade_from": 42
+     },
+     "丑": {
+      "stem": "己",
+      "major": [],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 52
+     }
+    },
+    "sihua": {
+     "忌": "天同",
+     "科": "太陰",
+     "權": "武曲",
+     "祿": "太陽"
+    },
+    "runtime": {
+     "year_branch": "午",
+     "month_branch": "申",
+     "day_branch": "戌",
+     "year_sihua": [
+      "天同",
+      "天機",
+      "文昌",
+      "廉貞"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "2012-02-16",
+    "birth_time": "16:09",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2026-12-18T00:00:00.000Z",
+   "expected": {
+    "ming_branch": "午",
+    "element": "水二局",
+    "palaces": {
+     "寅": {
+      "stem": "壬",
+      "major": [],
+      "aux": [
+       "文昌"
+      ],
+      "decade_from": 82
+     },
+     "卯": {
+      "stem": "癸",
+      "major": [
+       "天府"
+      ],
+      "aux": [
+       "地空",
+       "天魁"
+      ],
+      "decade_from": 92
+     },
+     "辰": {
+      "stem": "甲",
+      "major": [
+       "太陰"
+      ],
+      "aux": [
+       "左輔"
+      ],
+      "decade_from": 102
+     },
+     "巳": {
+      "stem": "乙",
+      "major": [
+       "廉貞",
+       "貪狼"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 112
+     },
+     "午": {
+      "stem": "丙",
+      "major": [
+       "巨門"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 2
+     },
+     "未": {
+      "stem": "丁",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 12
+     },
+     "申": {
+      "stem": "戊",
+      "major": [
+       "天同",
+       "天梁"
+      ],
+      "aux": [],
+      "decade_from": 22
+     },
+     "酉": {
+      "stem": "己",
+      "major": [
+       "七殺",
+       "武曲"
+      ],
+      "aux": [],
+      "decade_from": 32
+     },
+     "戌": {
+      "stem": "庚",
+      "major": [
+       "太陽"
+      ],
+      "aux": [
+       "右弼",
+       "火星",
+       "陀羅"
+      ],
+      "decade_from": 42
+     },
+     "亥": {
+      "stem": "辛",
+      "major": [],
+      "aux": [
+       "祿存"
+      ],
+      "decade_from": 52
+     },
+     "子": {
+      "stem": "壬",
+      "major": [
+       "天機"
+      ],
+      "aux": [
+       "擎羊",
+       "文曲"
+      ],
+      "decade_from": 62
+     },
+     "丑": {
+      "stem": "癸",
+      "major": [
+       "破軍",
+       "紫微"
+      ],
+      "aux": [],
+      "decade_from": 72
+     }
+    },
+    "sihua": {
+     "科": "左輔",
+     "祿": "天梁",
+     "忌": "武曲",
+     "權": "紫微"
+    },
+    "runtime": {
+     "year_branch": "午",
+     "month_branch": "子",
+     "day_branch": "酉",
+     "year_sihua": [
+      "天同",
+      "天機",
+      "文昌",
+      "廉貞"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1942-04-21",
+    "birth_time": "12:53",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2027-05-25T15:00:00.000Z",
+   "expected": {
+    "ming_branch": "戌",
+    "element": "金四局",
+    "palaces": {
+     "寅": {
+      "stem": "壬",
+      "major": [
+       "天府",
+       "紫微"
+      ],
+      "aux": [],
+      "decade_from": 44
+     },
+     "卯": {
+      "stem": "癸",
+      "major": [
+       "太陰"
+      ],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 54
+     },
+     "辰": {
+      "stem": "甲",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [
+       "文昌"
+      ],
+      "decade_from": 64
+     },
+     "巳": {
+      "stem": "乙",
+      "major": [
+       "巨門"
+      ],
+      "aux": [
+       "地劫",
+       "地空",
+       "天鉞"
+      ],
+      "decade_from": 74
+     },
+     "午": {
+      "stem": "丙",
+      "major": [
+       "天相",
+       "廉貞"
+      ],
+      "aux": [
+       "左輔"
+      ],
+      "decade_from": 84
+     },
+     "未": {
+      "stem": "丁",
+      "major": [
+       "天梁"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 94
+     },
+     "申": {
+      "stem": "戊",
+      "major": [
+       "七殺"
+      ],
+      "aux": [
+       "右弼"
+      ],
+      "decade_from": 104
+     },
+     "酉": {
+      "stem": "己",
+      "major": [
+       "天同"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 114
+     },
+     "戌": {
+      "stem": "庚",
+      "major": [
+       "武曲"
+      ],
+      "aux": [
+       "文曲",
+       "陀羅"
+      ],
+      "decade_from": 4
+     },
+     "亥": {
+      "stem": "辛",
+      "major": [
+       "太陽"
+      ],
+      "aux": [
+       "祿存"
+      ],
+      "decade_from": 14
+     },
+     "子": {
+      "stem": "壬",
+      "major": [
+       "破軍"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 24
+     },
+     "丑": {
+      "stem": "癸",
+      "major": [
+       "天機"
+      ],
+      "aux": [],
+      "decade_from": 34
+     }
+    },
+    "sihua": {
+     "權": "紫微",
+     "科": "左輔",
+     "祿": "天梁",
+     "忌": "武曲"
+    },
+    "runtime": {
+     "year_branch": "未",
+     "month_branch": "寅",
+     "day_branch": "酉",
+     "year_sihua": [
+      "太陰",
+      "天同",
+      "天機",
+      "巨門"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1965-08-22",
+    "birth_time": "06:05",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2027-08-13T06:00:00.000Z",
+   "expected": {
+    "ming_branch": "巳",
+    "element": "金四局",
+    "palaces": {
+     "寅": {
+      "stem": "戊",
+      "major": [
+       "廉貞"
+      ],
+      "aux": [
+       "地劫",
+       "陀羅"
+      ],
+      "decade_from": 94
+     },
+     "卯": {
+      "stem": "己",
+      "major": [],
+      "aux": [
+       "祿存"
+      ],
+      "decade_from": 104
+     },
+     "辰": {
+      "stem": "庚",
+      "major": [
+       "破軍"
+      ],
+      "aux": [
+       "右弼",
+       "擎羊"
+      ],
+      "decade_from": 114
+     },
+     "巳": {
+      "stem": "辛",
+      "major": [
+       "天同"
+      ],
+      "aux": [],
+      "decade_from": 4
+     },
+     "午": {
+      "stem": "壬",
+      "major": [
+       "天府",
+       "武曲"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 14
+     },
+     "未": {
+      "stem": "癸",
+      "major": [
+       "太陰",
+       "太陽"
+      ],
+      "aux": [
+       "文昌",
+       "文曲"
+      ],
+      "decade_from": 24
+     },
+     "申": {
+      "stem": "甲",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [
+       "地空",
+       "天鉞"
+      ],
+      "decade_from": 34
+     },
+     "酉": {
+      "stem": "乙",
+      "major": [
+       "天機",
+       "巨門"
+      ],
+      "aux": [],
+      "decade_from": 44
+     },
+     "戌": {
+      "stem": "丙",
+      "major": [
+       "天相",
+       "紫微"
+      ],
+      "aux": [
+       "左輔"
+      ],
+      "decade_from": 54
+     },
+     "亥": {
+      "stem": "丁",
+      "major": [
+       "天梁"
+      ],
+      "aux": [],
+      "decade_from": 64
+     },
+     "子": {
+      "stem": "戊",
+      "major": [
+       "七殺"
+      ],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 74
+     },
+     "丑": {
+      "stem": "己",
+      "major": [],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 84
+     }
+    },
+    "sihua": {
+     "忌": "太陰",
+     "祿": "天機",
+     "科": "紫微",
+     "權": "天梁"
+    },
+    "runtime": {
+     "year_branch": "未",
+     "month_branch": "戌",
+     "day_branch": "酉",
+     "year_sihua": [
+      "太陰",
+      "天同",
+      "天機",
+      "巨門"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1972-07-12",
+    "birth_time": "05:07",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2026-07-15T10:00:00.000Z",
+   "expected": {
+    "ming_branch": "辰",
+    "element": "火六局",
+    "palaces": {
+     "寅": {
+      "stem": "壬",
+      "major": [
+       "天相",
+       "武曲"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 106
+     },
+     "卯": {
+      "stem": "癸",
+      "major": [
+       "天梁",
+       "太陽"
+      ],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 116
+     },
+     "辰": {
+      "stem": "甲",
+      "major": [
+       "七殺"
+      ],
+      "aux": [],
+      "decade_from": 6
+     },
+     "巳": {
+      "stem": "乙",
+      "major": [
+       "天機"
+      ],
+      "aux": [
+       "右弼",
+       "天鉞",
+       "火星"
+      ],
+      "decade_from": 16
+     },
+     "午": {
+      "stem": "丙",
+      "major": [
+       "紫微"
+      ],
+      "aux": [],
+      "decade_from": 26
+     },
+     "未": {
+      "stem": "丁",
+      "major": [],
+      "aux": [
+       "文昌",
+       "文曲"
+      ],
+      "decade_from": 36
+     },
+     "申": {
+      "stem": "戊",
+      "major": [
+       "破軍"
+      ],
+      "aux": [
+       "地空"
+      ],
+      "decade_from": 46
+     },
+     "酉": {
+      "stem": "己",
+      "major": [],
+      "aux": [
+       "左輔"
+      ],
+      "decade_from": 56
+     },
+     "戌": {
+      "stem": "庚",
+      "major": [
+       "天府",
+       "廉貞"
+      ],
+      "aux": [
+       "陀羅"
+      ],
+      "decade_from": 66
+     },
+     "亥": {
+      "stem": "辛",
+      "major": [
+       "太陰"
+      ],
+      "aux": [
+       "祿存"
+      ],
+      "decade_from": 76
+     },
+     "子": {
+      "stem": "壬",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 86
+     },
+     "丑": {
+      "stem": "癸",
+      "major": [
+       "天同",
+       "巨門"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 96
+     }
+    },
+    "sihua": {
+     "忌": "武曲",
+     "祿": "天梁",
+     "權": "紫微",
+     "科": "左輔"
+    },
+    "runtime": {
+     "year_branch": "午",
+     "month_branch": "酉",
+     "day_branch": "戌",
+     "year_sihua": [
+      "天同",
+      "天機",
+      "文昌",
+      "廉貞"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1990-09-26",
+    "birth_time": "08:37",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2025-01-08T06:00:00.000Z",
+   "expected": {
+    "ming_branch": "巳",
+    "element": "金四局",
+    "palaces": {
+     "寅": {
+      "stem": "戊",
+      "major": [
+       "天機",
+       "太陰"
+      ],
+      "aux": [],
+      "decade_from": 94
+     },
+     "卯": {
+      "stem": "己",
+      "major": [
+       "紫微",
+       "貪狼"
+      ],
+      "aux": [
+       "右弼",
+       "地劫"
+      ],
+      "decade_from": 104
+     },
+     "辰": {
+      "stem": "庚",
+      "major": [
+       "巨門"
+      ],
+      "aux": [],
+      "decade_from": 114
+     },
+     "巳": {
+      "stem": "辛",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 4
+     },
+     "午": {
+      "stem": "壬",
+      "major": [
+       "天梁"
+      ],
+      "aux": [
+       "文昌"
+      ],
+      "decade_from": 14
+     },
+     "未": {
+      "stem": "癸",
+      "major": [
+       "七殺",
+       "廉貞"
+      ],
+      "aux": [
+       "地空",
+       "天鉞",
+       "鈴星",
+       "陀羅"
+      ],
+      "decade_from": 24
+     },
+     "申": {
+      "stem": "甲",
+      "major": [],
+      "aux": [
+       "文曲",
+       "祿存"
+      ],
+      "decade_from": 34
+     },
+     "酉": {
+      "stem": "乙",
+      "major": [],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 44
+     },
+     "戌": {
+      "stem": "丙",
+      "major": [
+       "天同"
+      ],
+      "aux": [],
+      "decade_from": 54
+     },
+     "亥": {
+      "stem": "丁",
+      "major": [
+       "武曲",
+       "破軍"
+      ],
+      "aux": [
+       "左輔"
+      ],
+      "decade_from": 64
+     },
+     "子": {
+      "stem": "戊",
+      "major": [
+       "太陽"
+      ],
+      "aux": [],
+      "decade_from": 74
+     },
+     "丑": {
+      "stem": "己",
+      "major": [
+       "天府"
+      ],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 84
+     }
+    },
+    "sihua": {
+     "科": "太陰",
+     "忌": "天同",
+     "權": "武曲",
+     "祿": "太陽"
+    },
+    "runtime": {
+     "year_branch": "辰",
+     "month_branch": "子",
+     "day_branch": "申",
+     "year_sihua": [
+      "廉貞",
+      "破軍",
+      "武曲",
+      "太陽"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1955-01-25",
+    "birth_time": "16:01",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2027-03-20T06:00:00.000Z",
+   "expected": {
+    "ming_branch": "午",
+    "element": "木三局",
+    "palaces": {
+     "寅": {
+      "stem": "戊",
+      "major": [],
+      "aux": [
+       "文昌",
+       "陀羅"
+      ],
+      "decade_from": 83
+     },
+     "卯": {
+      "stem": "己",
+      "major": [
+       "天府"
+      ],
+      "aux": [
+       "地空",
+       "祿存"
+      ],
+      "decade_from": 93
+     },
+     "辰": {
+      "stem": "庚",
+      "major": [
+       "太陰"
+      ],
+      "aux": [
+       "左輔",
+       "擎羊"
+      ],
+      "decade_from": 103
+     },
+     "巳": {
+      "stem": "辛",
+      "major": [
+       "廉貞",
+       "貪狼"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 113
+     },
+     "午": {
+      "stem": "壬",
+      "major": [
+       "巨門"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 3
+     },
+     "未": {
+      "stem": "癸",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 13
+     },
+     "申": {
+      "stem": "甲",
+      "major": [
+       "天同",
+       "天梁"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 23
+     },
+     "酉": {
+      "stem": "乙",
+      "major": [
+       "七殺",
+       "武曲"
+      ],
+      "aux": [],
+      "decade_from": 33
+     },
+     "戌": {
+      "stem": "丙",
+      "major": [
+       "太陽"
+      ],
+      "aux": [
+       "右弼"
+      ],
+      "decade_from": 43
+     },
+     "亥": {
+      "stem": "丁",
+      "major": [],
+      "aux": [],
+      "decade_from": 53
+     },
+     "子": {
+      "stem": "戊",
+      "major": [
+       "天機"
+      ],
+      "aux": [
+       "天魁",
+       "文曲"
+      ],
+      "decade_from": 63
+     },
+     "丑": {
+      "stem": "己",
+      "major": [
+       "破軍",
+       "紫微"
+      ],
+      "aux": [],
+      "decade_from": 73
+     }
+    },
+    "sihua": {
+     "忌": "太陰",
+     "權": "天梁",
+     "祿": "天機",
+     "科": "紫微"
+    },
+    "runtime": {
+     "year_branch": "未",
+     "month_branch": "辰",
+     "day_branch": "辰",
+     "year_sihua": [
+      "太陰",
+      "天同",
+      "天機",
+      "巨門"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1994-11-26",
+    "birth_time": "18:39",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2028-10-23T02:00:00.000Z",
+   "expected": {
+    "ming_branch": "寅",
+    "element": "火六局",
+    "palaces": {
+     "寅": {
+      "stem": "丙",
+      "major": [
+       "太陽",
+       "巨門"
+      ],
+      "aux": [
+       "地空",
+       "祿存"
+      ],
+      "decade_from": 6
+     },
+     "卯": {
+      "stem": "丁",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 16
+     },
+     "辰": {
+      "stem": "戊",
+      "major": [
+       "天梁",
+       "天機"
+      ],
+      "aux": [],
+      "decade_from": 26
+     },
+     "巳": {
+      "stem": "己",
+      "major": [
+       "七殺",
+       "紫微"
+      ],
+      "aux": [],
+      "decade_from": 36
+     },
+     "午": {
+      "stem": "庚",
+      "major": [],
+      "aux": [],
+      "decade_from": 46
+     },
+     "未": {
+      "stem": "辛",
+      "major": [],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 56
+     },
+     "申": {
+      "stem": "壬",
+      "major": [],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 66
+     },
+     "酉": {
+      "stem": "癸",
+      "major": [
+       "廉貞",
+       "破軍"
+      ],
+      "aux": [],
+      "decade_from": 76
+     },
+     "戌": {
+      "stem": "甲",
+      "major": [],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 86
+     },
+     "亥": {
+      "stem": "乙",
+      "major": [
+       "天府"
+      ],
+      "aux": [],
+      "decade_from": 96
+     },
+     "子": {
+      "stem": "丙",
+      "major": [
+       "天同",
+       "太陰"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 106
+     },
+     "丑": {
+      "stem": "丁",
+      "major": [
+       "武曲",
+       "貪狼"
+      ],
+      "aux": [
+       "右弼",
+       "天魁",
+       "左輔",
+       "文昌",
+       "文曲",
+       "陀羅"
+      ],
+      "decade_from": 116
+     }
+    },
+    "sihua": {
+     "忌": "太陽",
+     "祿": "廉貞",
+     "權": "破軍",
+     "科": "武曲"
+    },
+    "runtime": {
+     "year_branch": "申",
+     "month_branch": "辰",
+     "day_branch": "酉",
+     "year_sihua": [
+      "貪狼",
+      "太陰",
+      "右弼",
+      "天機"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1984-01-05",
+    "birth_time": "06:42",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2025-01-25T06:00:00.000Z",
+   "expected": {
+    "ming_branch": "戌",
+    "element": "水二局",
+    "palaces": {
+     "寅": {
+      "stem": "甲",
+      "major": [
+       "天府",
+       "紫微"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 82
+     },
+     "卯": {
+      "stem": "乙",
+      "major": [
+       "太陰"
+      ],
+      "aux": [
+       "天魁",
+       "左輔"
+      ],
+      "decade_from": 72
+     },
+     "辰": {
+      "stem": "丙",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [],
+      "decade_from": 62
+     },
+     "巳": {
+      "stem": "丁",
+      "major": [
+       "巨門"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 52
+     },
+     "午": {
+      "stem": "戊",
+      "major": [
+       "天相",
+       "廉貞"
+      ],
+      "aux": [],
+      "decade_from": 42
+     },
+     "未": {
+      "stem": "己",
+      "major": [
+       "天梁"
+      ],
+      "aux": [
+       "文昌",
+       "文曲"
+      ],
+      "decade_from": 32
+     },
+     "申": {
+      "stem": "庚",
+      "major": [
+       "七殺"
+      ],
+      "aux": [
+       "地空"
+      ],
+      "decade_from": 22
+     },
+     "酉": {
+      "stem": "辛",
+      "major": [
+       "天同"
+      ],
+      "aux": [],
+      "decade_from": 12
+     },
+     "戌": {
+      "stem": "壬",
+      "major": [
+       "武曲"
+      ],
+      "aux": [],
+      "decade_from": 2
+     },
+     "亥": {
+      "stem": "癸",
+      "major": [
+       "太陽"
+      ],
+      "aux": [
+       "右弼",
+       "陀羅"
+      ],
+      "decade_from": 112
+     },
+     "子": {
+      "stem": "甲",
+      "major": [
+       "破軍"
+      ],
+      "aux": [
+       "火星",
+       "祿存"
+      ],
+      "decade_from": 102
+     },
+     "丑": {
+      "stem": "乙",
+      "major": [
+       "天機"
+      ],
+      "aux": [
+       "擎羊",
+       "鈴星"
+      ],
+      "decade_from": 92
+     }
+    },
+    "sihua": {
+     "科": "太陰",
+     "忌": "貪狼",
+     "權": "巨門",
+     "祿": "破軍"
+    },
+    "runtime": {
+     "year_branch": "辰",
+     "month_branch": "未",
+     "day_branch": "申",
+     "year_sihua": [
+      "廉貞",
+      "破軍",
+      "武曲",
+      "太陽"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1975-03-27",
+    "birth_time": "16:20",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2027-07-04T06:00:00.000Z",
+   "expected": {
+    "ming_branch": "未",
+    "element": "木三局",
+    "palaces": {
+     "寅": {
+      "stem": "戊",
+      "major": [
+       "天相",
+       "武曲"
+      ],
+      "aux": [
+       "文昌",
+       "陀羅"
+      ],
+      "decade_from": 73
+     },
+     "卯": {
+      "stem": "己",
+      "major": [
+       "天梁",
+       "太陽"
+      ],
+      "aux": [
+       "地空",
+       "祿存"
+      ],
+      "decade_from": 83
+     },
+     "辰": {
+      "stem": "庚",
+      "major": [
+       "七殺"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 93
+     },
+     "巳": {
+      "stem": "辛",
+      "major": [
+       "天機"
+      ],
+      "aux": [
+       "左輔",
+       "火星"
+      ],
+      "decade_from": 103
+     },
+     "午": {
+      "stem": "壬",
+      "major": [
+       "紫微"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 113
+     },
+     "未": {
+      "stem": "癸",
+      "major": [],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 3
+     },
+     "申": {
+      "stem": "甲",
+      "major": [
+       "破軍"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 13
+     },
+     "酉": {
+      "stem": "乙",
+      "major": [],
+      "aux": [
+       "右弼"
+      ],
+      "decade_from": 23
+     },
+     "戌": {
+      "stem": "丙",
+      "major": [
+       "天府",
+       "廉貞"
+      ],
+      "aux": [],
+      "decade_from": 33
+     },
+     "亥": {
+      "stem": "丁",
+      "major": [
+       "太陰"
+      ],
+      "aux": [],
+      "decade_from": 43
+     },
+     "子": {
+      "stem": "戊",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [
+       "天魁",
+       "文曲"
+      ],
+      "decade_from": 53
+     },
+     "丑": {
+      "stem": "己",
+      "major": [
+       "天同",
+       "巨門"
+      ],
+      "aux": [],
+      "decade_from": 63
+     }
+    },
+    "sihua": {
+     "權": "天梁",
+     "祿": "天機",
+     "科": "紫微",
+     "忌": "太陰"
+    },
+    "runtime": {
+     "year_branch": "未",
+     "month_branch": "未",
+     "day_branch": "未",
+     "year_sihua": [
+      "太陰",
+      "天同",
+      "天機",
+      "巨門"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1956-03-08",
+    "birth_time": "00:22",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2028-05-02T15:00:00.000Z",
+   "expected": {
+    "ming_branch": "寅",
+    "element": "木三局",
+    "palaces": {
+     "寅": {
+      "stem": "庚",
+      "major": [],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 3
+     },
+     "卯": {
+      "stem": "辛",
+      "major": [],
+      "aux": [],
+      "decade_from": 113
+     },
+     "辰": {
+      "stem": "壬",
+      "major": [
+       "天同"
+      ],
+      "aux": [
+       "左輔",
+       "文曲",
+       "陀羅"
+      ],
+      "decade_from": 103
+     },
+     "巳": {
+      "stem": "癸",
+      "major": [
+       "武曲",
+       "破軍"
+      ],
+      "aux": [
+       "祿存"
+      ],
+      "decade_from": 93
+     },
+     "午": {
+      "stem": "甲",
+      "major": [
+       "太陽"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 83
+     },
+     "未": {
+      "stem": "乙",
+      "major": [
+       "天府"
+      ],
+      "aux": [],
+      "decade_from": 73
+     },
+     "申": {
+      "stem": "丙",
+      "major": [
+       "天機",
+       "太陰"
+      ],
+      "aux": [],
+      "decade_from": 63
+     },
+     "酉": {
+      "stem": "丁",
+      "major": [
+       "紫微",
+       "貪狼"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 53
+     },
+     "戌": {
+      "stem": "戊",
+      "major": [
+       "巨門"
+      ],
+      "aux": [
+       "右弼",
+       "文昌",
+       "鈴星"
+      ],
+      "decade_from": 43
+     },
+     "亥": {
+      "stem": "己",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "地劫",
+       "地空",
+       "天魁"
+      ],
+      "decade_from": 33
+     },
+     "子": {
+      "stem": "庚",
+      "major": [
+       "天梁"
+      ],
+      "aux": [],
+      "decade_from": 23
+     },
+     "丑": {
+      "stem": "辛",
+      "major": [
+       "七殺",
+       "廉貞"
+      ],
+      "aux": [],
+      "decade_from": 13
+     }
+    },
+    "sihua": {
+     "祿": "天同",
+     "權": "天機",
+     "科": "文昌",
+     "忌": "廉貞"
+    },
+    "runtime": {
+     "year_branch": "申",
+     "month_branch": "亥",
+     "day_branch": "午",
+     "year_sihua": [
+      "貪狼",
+      "太陰",
+      "右弼",
+      "天機"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "2013-12-10",
+    "birth_time": "11:01",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2026-07-06T13:00:00.000Z",
+   "expected": {
+    "ming_branch": "午",
+    "element": "火六局",
+    "palaces": {
+     "寅": {
+      "stem": "甲",
+      "major": [
+       "天同",
+       "天梁"
+      ],
+      "aux": [
+       "左輔"
+      ],
+      "decade_from": 86
+     },
+     "卯": {
+      "stem": "乙",
+      "major": [
+       "七殺",
+       "武曲"
+      ],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 96
+     },
+     "辰": {
+      "stem": "丙",
+      "major": [
+       "太陽"
+      ],
+      "aux": [
+       "文昌",
+       "鈴星"
+      ],
+      "decade_from": 106
+     },
+     "巳": {
+      "stem": "丁",
+      "major": [],
+      "aux": [
+       "地劫",
+       "地空",
+       "天鉞"
+      ],
+      "decade_from": 116
+     },
+     "午": {
+      "stem": "戊",
+      "major": [
+       "天機"
+      ],
+      "aux": [],
+      "decade_from": 6
+     },
+     "未": {
+      "stem": "己",
+      "major": [
+       "破軍",
+       "紫微"
+      ],
+      "aux": [],
+      "decade_from": 16
+     },
+     "申": {
+      "stem": "庚",
+      "major": [],
+      "aux": [],
+      "decade_from": 26
+     },
+     "酉": {
+      "stem": "辛",
+      "major": [
+       "天府"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 36
+     },
+     "戌": {
+      "stem": "壬",
+      "major": [
+       "太陰"
+      ],
+      "aux": [
+       "文曲"
+      ],
+      "decade_from": 46
+     },
+     "亥": {
+      "stem": "癸",
+      "major": [
+       "廉貞",
+       "貪狼"
+      ],
+      "aux": [
+       "陀羅"
+      ],
+      "decade_from": 56
+     },
+     "子": {
+      "stem": "甲",
+      "major": [
+       "巨門"
+      ],
+      "aux": [
+       "右弼",
+       "祿存"
+      ],
+      "decade_from": 66
+     },
+     "丑": {
+      "stem": "乙",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 76
+     }
+    },
+    "sihua": {
+     "祿": "破軍",
+     "科": "太陰",
+     "忌": "貪狼",
+     "權": "巨門"
+    },
+    "runtime": {
+     "year_branch": "午",
+     "month_branch": "午",
+     "day_branch": "卯",
+     "year_sihua": [
+      "天同",
+      "天機",
+      "文昌",
+      "廉貞"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1998-02-01",
+    "birth_time": "01:00",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2026-01-18T12:00:00.000Z",
+   "expected": {
+    "ming_branch": "丑",
+    "element": "金四局",
+    "palaces": {
+     "寅": {
+      "stem": "甲",
+      "major": [
+       "破軍"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 14
+     },
+     "卯": {
+      "stem": "乙",
+      "major": [],
+      "aux": [],
+      "decade_from": 24
+     },
+     "辰": {
+      "stem": "丙",
+      "major": [
+       "天府",
+       "廉貞"
+      ],
+      "aux": [
+       "左輔",
+       "鈴星",
+       "陀羅"
+      ],
+      "decade_from": 34
+     },
+     "巳": {
+      "stem": "丁",
+      "major": [
+       "太陰"
+      ],
+      "aux": [
+       "文曲",
+       "祿存"
+      ],
+      "decade_from": 44
+     },
+     "午": {
+      "stem": "戊",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 54
+     },
+     "未": {
+      "stem": "己",
+      "major": [
+       "天同",
+       "巨門"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 64
+     },
+     "申": {
+      "stem": "庚",
+      "major": [
+       "天相",
+       "武曲"
+      ],
+      "aux": [],
+      "decade_from": 74
+     },
+     "酉": {
+      "stem": "辛",
+      "major": [
+       "天梁",
+       "太陽"
+      ],
+      "aux": [
+       "文昌"
+      ],
+      "decade_from": 84
+     },
+     "戌": {
+      "stem": "壬",
+      "major": [
+       "七殺"
+      ],
+      "aux": [
+       "右弼",
+       "地空"
+      ],
+      "decade_from": 94
+     },
+     "亥": {
+      "stem": "癸",
+      "major": [
+       "天機"
+      ],
+      "aux": [],
+      "decade_from": 104
+     },
+     "子": {
+      "stem": "甲",
+      "major": [
+       "紫微"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 114
+     },
+     "丑": {
+      "stem": "乙",
+      "major": [],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 4
+     }
+    },
+    "sihua": {
+     "權": "太陰",
+     "祿": "貪狼",
+     "科": "右弼",
+     "忌": "天機"
+    },
+    "runtime": {
+     "year_branch": "巳",
+     "month_branch": "辰",
+     "day_branch": "酉",
+     "year_sihua": [
+      "天機",
+      "天梁",
+      "紫微",
+      "太陰"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1984-11-24",
+    "birth_time": "03:05",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2027-05-18T03:00:00.000Z",
+   "expected": {
+    "ming_branch": "酉",
+    "element": "金四局",
+    "palaces": {
+     "寅": {
+      "stem": "丙",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [
+       "祿存"
+      ],
+      "decade_from": 54
+     },
+     "卯": {
+      "stem": "丁",
+      "major": [
+       "天機",
+       "巨門"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 64
+     },
+     "辰": {
+      "stem": "戊",
+      "major": [
+       "天相",
+       "紫微"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 74
+     },
+     "巳": {
+      "stem": "己",
+      "major": [
+       "天梁"
+      ],
+      "aux": [],
+      "decade_from": 84
+     },
+     "午": {
+      "stem": "庚",
+      "major": [
+       "七殺"
+      ],
+      "aux": [
+       "文曲"
+      ],
+      "decade_from": 94
+     },
+     "未": {
+      "stem": "辛",
+      "major": [],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 104
+     },
+     "申": {
+      "stem": "壬",
+      "major": [
+       "廉貞"
+      ],
+      "aux": [
+       "文昌"
+      ],
+      "decade_from": 114
+     },
+     "酉": {
+      "stem": "癸",
+      "major": [],
+      "aux": [
+       "地空"
+      ],
+      "decade_from": 4
+     },
+     "戌": {
+      "stem": "甲",
+      "major": [
+       "破軍"
+      ],
+      "aux": [],
+      "decade_from": 14
+     },
+     "亥": {
+      "stem": "乙",
+      "major": [
+       "天同"
+      ],
+      "aux": [],
+      "decade_from": 24
+     },
+     "子": {
+      "stem": "丙",
+      "major": [
+       "天府",
+       "武曲"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 34
+     },
+     "丑": {
+      "stem": "丁",
+      "major": [
+       "太陰",
+       "太陽"
+      ],
+      "aux": [
+       "右弼",
+       "地劫",
+       "天魁",
+       "左輔",
+       "陀羅"
+      ],
+      "decade_from": 44
+     }
+    },
+    "sihua": {
+     "祿": "廉貞",
+     "權": "破軍",
+     "科": "武曲",
+     "忌": "太陽"
+    },
+    "runtime": {
+     "year_branch": "未",
+     "month_branch": "卯",
+     "day_branch": "卯",
+     "year_sihua": [
+      "太陰",
+      "天同",
+      "天機",
+      "巨門"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1962-08-23",
+    "birth_time": "13:00",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2025-10-07T04:00:00.000Z",
+   "expected": {
+    "ming_branch": "丑",
+    "element": "木三局",
+    "palaces": {
+     "寅": {
+      "stem": "壬",
+      "major": [],
+      "aux": [],
+      "decade_from": 13
+     },
+     "卯": {
+      "stem": "癸",
+      "major": [],
+      "aux": [
+       "天魁",
+       "文昌"
+      ],
+      "decade_from": 23
+     },
+     "辰": {
+      "stem": "甲",
+      "major": [
+       "天同"
+      ],
+      "aux": [
+       "右弼",
+       "地空"
+      ],
+      "decade_from": 33
+     },
+     "巳": {
+      "stem": "乙",
+      "major": [
+       "武曲",
+       "破軍"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 43
+     },
+     "午": {
+      "stem": "丙",
+      "major": [
+       "太陽"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 53
+     },
+     "未": {
+      "stem": "丁",
+      "major": [
+       "天府"
+      ],
+      "aux": [],
+      "decade_from": 63
+     },
+     "申": {
+      "stem": "戊",
+      "major": [
+       "天機",
+       "太陰"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 73
+     },
+     "酉": {
+      "stem": "己",
+      "major": [
+       "紫微",
+       "貪狼"
+      ],
+      "aux": [],
+      "decade_from": 83
+     },
+     "戌": {
+      "stem": "庚",
+      "major": [
+       "巨門"
+      ],
+      "aux": [
+       "左輔",
+       "鈴星",
+       "陀羅"
+      ],
+      "decade_from": 93
+     },
+     "亥": {
+      "stem": "辛",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "文曲",
+       "祿存"
+      ],
+      "decade_from": 103
+     },
+     "子": {
+      "stem": "壬",
+      "major": [
+       "天梁"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 113
+     },
+     "丑": {
+      "stem": "癸",
+      "major": [
+       "七殺",
+       "廉貞"
+      ],
+      "aux": [],
+      "decade_from": 3
+     }
+    },
+    "sihua": {
+     "忌": "武曲",
+     "權": "紫微",
+     "科": "左輔",
+     "祿": "天梁"
+    },
+    "runtime": {
+     "year_branch": "巳",
+     "month_branch": "丑",
+     "day_branch": "辰",
+     "year_sihua": [
+      "天機",
+      "天梁",
+      "紫微",
+      "太陰"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "2014-10-21",
+    "birth_time": "19:40",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2027-12-22T06:00:00.000Z",
+   "expected": {
+    "ming_branch": "子",
+    "element": "水二局",
+    "palaces": {
+     "寅": {
+      "stem": "丙",
+      "major": [
+       "天機",
+       "太陰"
+      ],
+      "aux": [
+       "右弼",
+       "文曲",
+       "祿存"
+      ],
+      "decade_from": 102
+     },
+     "卯": {
+      "stem": "丁",
+      "major": [
+       "紫微",
+       "貪狼"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 92
+     },
+     "辰": {
+      "stem": "戊",
+      "major": [
+       "巨門"
+      ],
+      "aux": [],
+      "decade_from": 82
+     },
+     "巳": {
+      "stem": "己",
+      "major": [
+       "天相"
+      ],
+      "aux": [],
+      "decade_from": 72
+     },
+     "午": {
+      "stem": "庚",
+      "major": [
+       "天梁"
+      ],
+      "aux": [],
+      "decade_from": 62
+     },
+     "未": {
+      "stem": "辛",
+      "major": [
+       "七殺",
+       "廉貞"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 52
+     },
+     "申": {
+      "stem": "壬",
+      "major": [],
+      "aux": [],
+      "decade_from": 42
+     },
+     "酉": {
+      "stem": "癸",
+      "major": [],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 32
+     },
+     "戌": {
+      "stem": "甲",
+      "major": [
+       "天同"
+      ],
+      "aux": [],
+      "decade_from": 22
+     },
+     "亥": {
+      "stem": "乙",
+      "major": [
+       "武曲",
+       "破軍"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 12
+     },
+     "子": {
+      "stem": "丙",
+      "major": [
+       "太陽"
+      ],
+      "aux": [
+       "左輔",
+       "文昌"
+      ],
+      "decade_from": 2
+     },
+     "丑": {
+      "stem": "丁",
+      "major": [
+       "天府"
+      ],
+      "aux": [
+       "地空",
+       "天魁",
+       "鈴星",
+       "陀羅"
+      ],
+      "decade_from": 112
+     }
+    },
+    "sihua": {
+     "祿": "廉貞",
+     "科": "武曲",
+     "權": "破軍",
+     "忌": "太陽"
+    },
+    "runtime": {
+     "year_branch": "未",
+     "month_branch": "未",
+     "day_branch": "未",
+     "year_sihua": [
+      "太陰",
+      "天同",
+      "天機",
+      "巨門"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1964-06-02",
+    "birth_time": "06:54",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2025-10-26T08:00:00.000Z",
+   "expected": {
+    "ming_branch": "寅",
+    "element": "火六局",
+    "palaces": {
+     "寅": {
+      "stem": "丙",
+      "major": [
+       "天同",
+       "天梁"
+      ],
+      "aux": [
+       "地劫",
+       "祿存"
+      ],
+      "decade_from": 6
+     },
+     "卯": {
+      "stem": "丁",
+      "major": [
+       "七殺",
+       "武曲"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 16
+     },
+     "辰": {
+      "stem": "戊",
+      "major": [
+       "太陽"
+      ],
+      "aux": [],
+      "decade_from": 26
+     },
+     "巳": {
+      "stem": "己",
+      "major": [],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 36
+     },
+     "午": {
+      "stem": "庚",
+      "major": [
+       "天機"
+      ],
+      "aux": [],
+      "decade_from": 46
+     },
+     "未": {
+      "stem": "辛",
+      "major": [
+       "破軍",
+       "紫微"
+      ],
+      "aux": [
+       "右弼",
+       "天鉞",
+       "左輔",
+       "文昌",
+       "文曲"
+      ],
+      "decade_from": 56
+     },
+     "申": {
+      "stem": "壬",
+      "major": [],
+      "aux": [
+       "地空"
+      ],
+      "decade_from": 66
+     },
+     "酉": {
+      "stem": "癸",
+      "major": [
+       "天府"
+      ],
+      "aux": [],
+      "decade_from": 76
+     },
+     "戌": {
+      "stem": "甲",
+      "major": [
+       "太陰"
+      ],
+      "aux": [],
+      "decade_from": 86
+     },
+     "亥": {
+      "stem": "乙",
+      "major": [
+       "廉貞",
+       "貪狼"
+      ],
+      "aux": [],
+      "decade_from": 96
+     },
+     "子": {
+      "stem": "丙",
+      "major": [
+       "巨門"
+      ],
+      "aux": [],
+      "decade_from": 106
+     },
+     "丑": {
+      "stem": "丁",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "天魁",
+       "鈴星",
+       "陀羅"
+      ],
+      "decade_from": 116
+     }
+    },
+    "sihua": {
+     "科": "武曲",
+     "忌": "太陽",
+     "權": "破軍",
+     "祿": "廉貞"
+    },
+    "runtime": {
+     "year_branch": "巳",
+     "month_branch": "丑",
+     "day_branch": "午",
+     "year_sihua": [
+      "天機",
+      "天梁",
+      "紫微",
+      "太陰"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "2004-12-08",
+    "birth_time": "21:22",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2026-10-06T06:00:00.000Z",
+   "expected": {
+    "ming_branch": "子",
+    "element": "水二局",
+    "palaces": {
+     "寅": {
+      "stem": "丙",
+      "major": [
+       "天府",
+       "紫微"
+      ],
+      "aux": [
+       "祿存"
+      ],
+      "decade_from": 22
+     },
+     "卯": {
+      "stem": "丁",
+      "major": [
+       "太陰"
+      ],
+      "aux": [
+       "擎羊",
+       "文曲"
+      ],
+      "decade_from": 32
+     },
+     "辰": {
+      "stem": "戊",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [],
+      "decade_from": 42
+     },
+     "巳": {
+      "stem": "己",
+      "major": [
+       "巨門"
+      ],
+      "aux": [],
+      "decade_from": 52
+     },
+     "午": {
+      "stem": "庚",
+      "major": [
+       "天相",
+       "廉貞"
+      ],
+      "aux": [],
+      "decade_from": 62
+     },
+     "未": {
+      "stem": "辛",
+      "major": [
+       "天梁"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 72
+     },
+     "申": {
+      "stem": "壬",
+      "major": [
+       "七殺"
+      ],
+      "aux": [],
+      "decade_from": 82
+     },
+     "酉": {
+      "stem": "癸",
+      "major": [
+       "天同"
+      ],
+      "aux": [
+       "鈴星"
+      ],
+      "decade_from": 92
+     },
+     "戌": {
+      "stem": "甲",
+      "major": [
+       "武曲"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 102
+     },
+     "亥": {
+      "stem": "乙",
+      "major": [
+       "太陽"
+      ],
+      "aux": [
+       "文昌"
+      ],
+      "decade_from": 112
+     },
+     "子": {
+      "stem": "丙",
+      "major": [
+       "破軍"
+      ],
+      "aux": [
+       "地空"
+      ],
+      "decade_from": 2
+     },
+     "丑": {
+      "stem": "丁",
+      "major": [
+       "天機"
+      ],
+      "aux": [
+       "右弼",
+       "天魁",
+       "左輔",
+       "火星",
+       "陀羅"
+      ],
+      "decade_from": 12
+     }
+    },
+    "sihua": {
+     "祿": "廉貞",
+     "科": "武曲",
+     "忌": "太陽",
+     "權": "破軍"
+    },
+    "runtime": {
+     "year_branch": "午",
+     "month_branch": "卯",
+     "day_branch": "辰",
+     "year_sihua": [
+      "天同",
+      "天機",
+      "文昌",
+      "廉貞"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "2006-08-07",
+    "birth_time": "06:32",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2027-09-04T15:00:00.000Z",
+   "expected": {
+    "ming_branch": "巳",
+    "element": "水二局",
+    "palaces": {
+     "寅": {
+      "stem": "庚",
+      "major": [
+       "七殺"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 32
+     },
+     "卯": {
+      "stem": "辛",
+      "major": [
+       "天同"
+      ],
+      "aux": [],
+      "decade_from": 22
+     },
+     "辰": {
+      "stem": "壬",
+      "major": [
+       "武曲"
+      ],
+      "aux": [
+       "右弼",
+       "火星",
+       "陀羅"
+      ],
+      "decade_from": 12
+     },
+     "巳": {
+      "stem": "癸",
+      "major": [
+       "太陽"
+      ],
+      "aux": [
+       "祿存"
+      ],
+      "decade_from": 2
+     },
+     "午": {
+      "stem": "甲",
+      "major": [
+       "破軍"
+      ],
+      "aux": [
+       "擎羊",
+       "鈴星"
+      ],
+      "decade_from": 112
+     },
+     "未": {
+      "stem": "乙",
+      "major": [
+       "天機"
+      ],
+      "aux": [
+       "文昌",
+       "文曲"
+      ],
+      "decade_from": 102
+     },
+     "申": {
+      "stem": "丙",
+      "major": [
+       "天府",
+       "紫微"
+      ],
+      "aux": [
+       "地空"
+      ],
+      "decade_from": 92
+     },
+     "酉": {
+      "stem": "丁",
+      "major": [
+       "太陰"
+      ],
+      "aux": [
+       "天鉞"
+      ],
+      "decade_from": 82
+     },
+     "戌": {
+      "stem": "戊",
+      "major": [
+       "貪狼"
+      ],
+      "aux": [
+       "左輔"
+      ],
+      "decade_from": 72
+     },
+     "亥": {
+      "stem": "己",
+      "major": [
+       "巨門"
+      ],
+      "aux": [
+       "天魁"
+      ],
+      "decade_from": 62
+     },
+     "子": {
+      "stem": "庚",
+      "major": [
+       "天相",
+       "廉貞"
+      ],
+      "aux": [],
+      "decade_from": 52
+     },
+     "丑": {
+      "stem": "辛",
+      "major": [
+       "天梁"
+      ],
+      "aux": [],
+      "decade_from": 42
+     }
+    },
+    "sihua": {
+     "祿": "天同",
+     "權": "天機",
+     "科": "文昌",
+     "忌": "廉貞"
+    },
+    "runtime": {
+     "year_branch": "未",
+     "month_branch": "亥",
+     "day_branch": "寅",
+     "year_sihua": [
+      "太陰",
+      "天同",
+      "天機",
+      "巨門"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "1960-08-06",
+    "birth_time": "05:06",
+    "calendar_type": "solar",
+    "gender": "female"
+   },
+   "now": "2025-03-10T11:00:00.000Z",
+   "expected": {
+    "ming_branch": "辰",
+    "element": "金四局",
+    "palaces": {
+     "寅": {
+      "stem": "戊",
+      "major": [
+       "天同",
+       "天梁"
+      ],
+      "aux": [
+       "地劫"
+      ],
+      "decade_from": 24
+     },
+     "卯": {
+      "stem": "己",
+      "major": [
+       "七殺",
+       "武曲"
+      ],
+      "aux": [],
+      "decade_from": 14
+     },
+     "辰": {
+      "stem": "庚",
+      "major": [
+       "太陽"
+      ],
+      "aux": [],
+      "decade_from": 4
+     },
+     "巳": {
+      "stem": "辛",
+      "major": [],
+      "aux": [
+       "右弼",
+       "火星"
+      ],
+      "decade_from": 114
+     },
+     "午": {
+      "stem": "壬",
+      "major": [
+       "天機"
+      ],
+      "aux": [],
+      "decade_from": 104
+     },
+     "未": {
+      "stem": "癸",
+      "major": [
+       "破軍",
+       "紫微"
+      ],
+      "aux": [
+       "天鉞",
+       "文昌",
+       "文曲",
+       "陀羅"
+      ],
+      "decade_from": 94
+     },
+     "申": {
+      "stem": "甲",
+      "major": [],
+      "aux": [
+       "地空",
+       "祿存"
+      ],
+      "decade_from": 84
+     },
+     "酉": {
+      "stem": "乙",
+      "major": [
+       "天府"
+      ],
+      "aux": [
+       "左輔",
+       "擎羊"
+      ],
+      "decade_from": 74
+     },
+     "戌": {
+      "stem": "丙",
+      "major": [
+       "太陰"
+      ],
+      "aux": [],
+      "decade_from": 64
+     },
+     "亥": {
+      "stem": "丁",
+      "major": [
+       "廉貞",
+       "貪狼"
+      ],
+      "aux": [],
+      "decade_from": 54
+     },
+     "子": {
+      "stem": "戊",
+      "major": [
+       "巨門"
+      ],
+      "aux": [],
+      "decade_from": 44
+     },
+     "丑": {
+      "stem": "己",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "天魁",
+       "鈴星"
+      ],
+      "decade_from": 34
+     }
+    },
+    "sihua": {
+     "忌": "天同",
+     "權": "武曲",
+     "祿": "太陽",
+     "科": "太陰"
+    },
+    "runtime": {
+     "year_branch": "巳",
+     "month_branch": "辰",
+     "day_branch": "寅",
+     "year_sihua": [
+      "天機",
+      "天梁",
+      "紫微",
+      "太陰"
+     ]
+    }
+   }
+  },
+  {
+   "input": {
+    "birth_date": "2013-09-16",
+    "birth_time": "02:12",
+    "calendar_type": "solar",
+    "gender": "male"
+   },
+   "now": "2028-04-16T02:00:00.000Z",
+   "expected": {
+    "ming_branch": "申",
+    "element": "木三局",
+    "palaces": {
+     "寅": {
+      "stem": "甲",
+      "major": [
+       "太陽",
+       "巨門"
+      ],
+      "aux": [],
+      "decade_from": 63
+     },
+     "卯": {
+      "stem": "乙",
+      "major": [
+       "天相"
+      ],
+      "aux": [
+       "右弼",
+       "天魁"
+      ],
+      "decade_from": 53
+     },
+     "辰": {
+      "stem": "丙",
+      "major": [
+       "天梁",
+       "天機"
+      ],
+      "aux": [
+       "火星"
+      ],
+      "decade_from": 43
+     },
+     "巳": {
+      "stem": "丁",
+      "major": [
+       "七殺",
+       "紫微"
+      ],
+      "aux": [
+       "天鉞",
+       "文曲"
+      ],
+      "decade_from": 33
+     },
+     "午": {
+      "stem": "戊",
+      "major": [],
+      "aux": [],
+      "decade_from": 23
+     },
+     "未": {
+      "stem": "己",
+      "major": [],
+      "aux": [],
+      "decade_from": 13
+     },
+     "申": {
+      "stem": "庚",
+      "major": [],
+      "aux": [],
+      "decade_from": 3
+     },
+     "酉": {
+      "stem": "辛",
+      "major": [
+       "廉貞",
+       "破軍"
+      ],
+      "aux": [
+       "文昌"
+      ],
+      "decade_from": 113
+     },
+     "戌": {
+      "stem": "壬",
+      "major": [],
+      "aux": [
+       "地空"
+      ],
+      "decade_from": 103
+     },
+     "亥": {
+      "stem": "癸",
+      "major": [
+       "天府"
+      ],
+      "aux": [
+       "左輔",
+       "鈴星",
+       "陀羅"
+      ],
+      "decade_from": 93
+     },
+     "子": {
+      "stem": "甲",
+      "major": [
+       "天同",
+       "太陰"
+      ],
+      "aux": [
+       "地劫",
+       "祿存"
+      ],
+      "decade_from": 83
+     },
+     "丑": {
+      "stem": "乙",
+      "major": [
+       "武曲",
+       "貪狼"
+      ],
+      "aux": [
+       "擎羊"
+      ],
+      "decade_from": 73
+     }
+    },
+    "sihua": {
+     "權": "巨門",
+     "祿": "破軍",
+     "科": "太陰",
+     "忌": "貪狼"
+    },
+    "runtime": {
+     "year_branch": "申",
+     "month_branch": "辰",
+     "day_branch": "丑",
+     "year_sihua": [
+      "貪狼",
+      "太陰",
+      "右弼",
+      "天機"
+     ]
+    }
+   }
+  }
+ ]
+}

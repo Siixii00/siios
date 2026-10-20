@@ -9,34 +9,45 @@ export interface BirthData {
 export interface ZiweiChart {
   twelve_palaces: Palace[];
   major_stars: Star[];
-  sihua: Sihua;
+  // 本命四化：key 是「祿權科忌」，value 是化出的星名（前端的 buildZiweiContext 就是讀這個格式）
+  sihua: Record<string, string>;
+  sihua_palaces?: Record<string, string>;
   element: string;
+  ming_gong?: { branch: string; stem: string };
+  shen_gong?: { branch: string; palace: string };
+  lunar_birth?: { year: number; month: number; day: number; year_ganzhi: string };
 }
 
 export interface Palace {
   name: string;
   position: number;
+  branch?: string;
+  stem?: string;
   stars: string[];
-  sihua?: string;
+  minor_stars?: string[];
+  sihua?: string[];
+  decade?: { from: number; to: number };
 }
 
 export interface Star {
   name: string;
   palace: string;
-  brightness: number;
+  branch?: string;
 }
 
-export interface Sihua {
-  lu: string;
-  quan: string;
-  ke: string;
-  ji: string;
+// 前端的快取與 Wiki 卡片讀 daily / monthly / yearly
+export interface FortuneSummary {
+  base: string;
+  yearly: string;
+  monthly: string;
+  daily: string;
 }
 
 export interface FortuneResult {
   chart: ZiweiChart;
   runtime: RuntimeContext;
-  fortune_summary: string;
+  fortune_summary: FortuneSummary;
+  events: unknown[];
 }
 
 export interface RuntimeContext {
@@ -51,7 +62,7 @@ export interface RuntimeContext {
 export interface MCPTool {
   name: string;
   description: string;
-  inputSchema: any;
+  inputSchema: Record<string, unknown>;
 }
 
 export interface MCPToolCall {
