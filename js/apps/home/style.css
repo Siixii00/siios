@@ -1,4 +1,4 @@
-.home-app { --home-bg: #fce4ec; --home-card: #fff; --home-text: #880e4f; --home-muted: #ad1457; --home-accent: #ec407a; }
+.home-app { position: relative; --home-bg: #fce4ec; --home-card: #fff; --home-text: #880e4f; --home-muted: #ad1457; --home-accent: #ec407a; }
 .home-app .page { background: var(--home-bg); min-height: calc(100vh - 96px); padding: 16px; }
 .energy-bar { background: var(--home-card); border-radius: 12px; padding: 16px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
 .energy-label { font-size: 14px; font-weight: 600; color: var(--home-text); }
@@ -32,7 +32,7 @@
 .visit-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; background: var(--home-card); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; }
 .v-name { display: flex; flex-direction: column; font-weight: 600; color: var(--home-text); } .v-name small, .visit-row > small { font-size: 11px; color: #a0506f; font-weight: 400; }
 .h-btn { padding: 8px 14px; border: none; border-radius: 100px; background: var(--home-accent); color: #fff; font-weight: 700; font-size: 12px; cursor: pointer; } .h-btn:disabled { opacity: .4; }
-.h-sheet-bg { position: fixed; inset: 0; background: rgba(0,0,0,.45); display: flex; align-items: flex-end; z-index: 50; }
+.h-sheet-bg { position: absolute; inset: 0; background: rgba(0,0,0,.45); display: flex; align-items: flex-end; z-index: 50; }
 .h-sheet { width: 100%; max-height: 80%; overflow-y: auto; background: #fff0f5; border-radius: 24px 24px 0 0; padding: 18px 16px calc(18px + env(safe-area-inset-bottom)); }
 .h-sheet h3 { margin: 0 0 10px; color: var(--home-text); }
 .h-sheet .shop-row { display: flex; align-items: center; justify-content: space-between; width: 100%; background: #fff; border: none; border-radius: 12px; padding: 12px; margin-bottom: 8px; cursor: pointer; font: inherit; color: var(--home-text); text-align: left; }
