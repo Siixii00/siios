@@ -1,5 +1,5 @@
 // MCP Worker - 由神秘門生成
-// 包含 7 個工具：天氣查詢、食譜搜尋、動漫搜尋、遊戲價格查詢、翻譯、維基查詢、幣價查詢
+// 包含 6 個工具：天氣查詢、食譜搜尋、動漫搜尋、遊戲價格查詢、翻譯、維基查詢
 
 export default {
     async fetch(request, env, ctx) {
@@ -203,26 +203,6 @@ function getTools() {
                       },
                       "required": [
                                 "query"
-                      ]
-            }
-        },
-        {
-            name: 'check_crypto',
-            description: '查詢加密貨幣價格',
-            parameters: {
-                      "type": "object",
-                      "properties": {
-                                "coin": {
-                                          "type": "string",
-                                          "description": "幣種（如：bitcoin, ethereum）"
-                                },
-                                "currency": {
-                                          "type": "string",
-                                          "default": "twd"
-                                }
-                      },
-                      "required": [
-                                "coin"
                       ]
             }
         }
@@ -490,38 +470,6 @@ try {
             } catch (error) {
                 return { success: false, error: error.message || '維基百科查詢暫時無法使用' };
             }
-        case 'check_crypto':
-            // 先用 CoinGecko；雲端共用 IP 容易被限流，失敗時改用 Coinbase 的公開報價（只支援常見幣種與幣別）。皆免金鑰
-const coin = String(args.coin || '').toLowerCase().trim();
-const currency = String(args.currency || 'twd').toLowerCase().trim();
-if (!coin) return { success: false, error: '請提供幣種，例如 bitcoin' };
-let geckoError = '';
-try {
-    const cryptoRes = await fetch(`https://api.coingecko.com/api/v3/simple/price?ids=${encodeURIComponent(coin)}&vs_currencies=${encodeURIComponent(currency)}`, {
-        headers: { 'User-Agent': 'siios-mcp-worker/1.0 (https://github.com/Siixii00/siios)' }
-    });
-    const cryptoData = await cryptoRes.json();
-    if (cryptoRes.ok) {
-        const price = cryptoData && cryptoData[coin] && cryptoData[coin][currency];
-        if (typeof price === 'number') return { success: true, source: 'CoinGecko', coin, currency, price };
-        return { success: false, error: `找不到幣種或幣別：${coin} / ${currency}` };
-    }
-    geckoError = '服務回傳錯誤（可能是請求太頻繁）';
-} catch (error) {
-    geckoError = error.message || 'CoinGecko 無法連線';
-}
-const SYMBOLS = { bitcoin: 'BTC', ethereum: 'ETH', solana: 'SOL', dogecoin: 'DOGE', ripple: 'XRP', litecoin: 'LTC', cardano: 'ADA', polkadot: 'DOT', 'bitcoin-cash': 'BCH', chainlink: 'LINK', stellar: 'XLM', tether: 'USDT', 'usd-coin': 'USDC' };
-const symbol = SYMBOLS[coin];
-if (!symbol) return { success: false, error: `CoinGecko：${geckoError}；備援來源不支援幣種 ${coin}` };
-try {
-    const cbRes = await fetch(`https://api.coinbase.com/v2/prices/${symbol}-${currency.toUpperCase()}/spot`, { headers: { 'User-Agent': 'siios-mcp-worker/1.0' } });
-    const cbData = await cbRes.json();
-    const amount = parseFloat(cbData?.data?.amount);
-    if (!cbRes.ok || Number.isNaN(amount)) return { success: false, error: `CoinGecko：${geckoError}；Coinbase：不支援 ${symbol}/${currency.toUpperCase()}` };
-    return { success: true, source: 'Coinbase', coin, currency, price: amount };
-} catch (error) {
-    return { success: false, error: `CoinGecko：${geckoError}；Coinbase：${error.message}` };
-}
         default:
             throw new Error(`Unknown tool: ${name}`);
     }

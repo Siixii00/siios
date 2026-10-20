@@ -416,25 +416,6 @@ export const TOOLS_CATALOG = [
         }
     },
     {
-        id: 'finance_crypto',
-        category: '金融理財',
-        categoryIcon: 'trending_up',
-        name: 'check_crypto',
-        displayName: '幣價查詢',
-        description: '查詢加密貨幣價格',
-        useCase: '「比特幣現在是...」',
-        difficulty: 'easy',
-        requires: ['CoinGecko API（免費）或 Binance API'],
-        parameters: {
-            type: 'object',
-            properties: {
-                coin: { type: 'string', description: '幣種（如：bitcoin, ethereum）' },
-                currency: { type: 'string', default: 'twd' }
-            },
-            required: ['coin']
-        }
-    },
-    {
         id: 'finance_expense',
         category: '金融理財',
         categoryIcon: 'trending_up',

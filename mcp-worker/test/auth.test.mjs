@@ -30,13 +30,13 @@ test('預檢請求不需要金鑰', async () => {
 test('工具清單只包含免金鑰、可運作的工具，並且結構正確', async () => {
     const tools = await (await worker.fetch(req('/tools'), { MCP_API_KEY: KEY }, {})).json();
     const names = tools.map(t => t.name).sort();
-    assert.deepEqual(names, ['check_crypto', 'check_game_price', 'get_weather', 'search_anime', 'search_recipe', 'search_wiki', 'translate']);
+    assert.deepEqual(names, ['check_game_price', 'get_weather', 'search_anime', 'search_recipe', 'search_wiki', 'translate']);
     assert.ok(tools.every(t => t.description && t.parameters?.type === 'object'));
 });
 
 test('/health 與未知工具、壞 JSON', async () => {
     const env = { MCP_API_KEY: KEY };
-    assert.deepEqual(await (await worker.fetch(req('/health'), env, {})).json(), { ok: true, tools: 7 });
+    assert.deepEqual(await (await worker.fetch(req('/health'), env, {})).json(), { ok: true, tools: 6 });
     assert.equal((await worker.fetch(req('/tools/call', { method: 'POST', body: { name: 'nope', arguments: {} } }), env, {})).status, 400);
     const bad = new Request('https://w.example/tools/call', { method: 'POST', headers: { Authorization: 'Bearer ' + KEY }, body: '{oops' });
     assert.equal((await worker.fetch(bad, env, {})).status, 400);

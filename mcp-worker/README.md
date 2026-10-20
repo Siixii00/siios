@@ -1,6 +1,6 @@
 # Siios MCP Worker
 
-這個 Worker 提供 7 個工具給 Siios PWA 使用。
+這個 Worker 提供 6 個工具給 Siios PWA 使用。
 
 ## 包含的工具
 
@@ -10,7 +10,6 @@
 - **遊戲價格查詢** (check_game_price): 查詢 Steam、Switch 等平台的遊戲價格
 - **翻譯** (translate): 翻譯文字到指定語言
 - **維基查詢** (search_wiki): 搜尋維基百科資訊
-- **幣價查詢** (check_crypto): 查詢加密貨幣價格
 
 ## 部署步驟
 
