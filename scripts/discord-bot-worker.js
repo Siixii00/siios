@@ -1558,6 +1558,8 @@ function stripReasoning(text) {
     if (closing) t = t.slice(closing.index + closing[0].length);
     const opening = new RegExp('<(' + REASONING_TAGS + ')>', 'i').exec(t);
     if (opening) t = t.slice(0, opening.index);
+    const comment = t.indexOf('<!--');
+    if (comment >= 0) t = t.slice(0, comment);
     return t.trim();
 }
 

@@ -1,14 +1,20 @@
-﻿﻿﻿﻿﻿﻿import { minorSafetyPrompt } from './core/age-gate.js';
+﻿﻿﻿﻿﻿﻿﻿import { minorSafetyPrompt } from './core/age-gate.js';
 import Router from './router.js';
 import { SettingsDB, ChatsDB, CharactersDB, UsersDB, HealthDB, ZiweiCacheDB } from './db.js';
 import { loadWorldInfoContext } from './core/world-info-loader.js';
 import { generateRPPrompt, buildResponseModePrompt, getResponseMode, withResponseReminder } from './constants/rp-system-prompt.js';
+import { stripReasoning } from './core/reasoning-filter.js';
 import { buildRealWorldContext } from './core/real-world-context.js';
 import { PeriodCalculator } from './core/period-calculator.js';
 import { createErrorModal } from './components.js';
 import { mcpManager } from './core/mcp-client.js';
 
 // 非文字訊息轉成文字描述，讓角色知道使用者傳了什麼（文字訊息原樣回傳）
+// 歷史裡舊的回覆如果帶著思考過程，模型會照著繼續輸出；送給模型前先去掉（去完是空的就保留原文）
+function cleanAssistantText(text) {
+    return typeof text === 'string' ? (stripReasoning(text) || text) : text;
+}
+
 export function describeMessageForAI(m) {
     const meta = m.meta || {};
     switch (m.type) {
@@ -223,7 +229,7 @@ const APIClient = {
                     { type: 'text', text: m.content || '圖片' },
                     { type: 'image_url', image_url: { url: m.meta.src } }
                 ]
-                : describeMessageForAI(m)
+                : (m.role === 'assistant' ? cleanAssistantText(describeMessageForAI(m)) : describeMessageForAI(m))
         }));
         
         const backMessages = backEntries.map(entry => ({
@@ -362,7 +368,7 @@ const APIClient = {
             throw new Error(errorData.error?.message || `API 錯誤: ${response.status}`);
         }
         const data = await response.json();
-        const text = data.choices?.[0]?.message?.content?.trim();
+        const text = stripReasoning(data.choices?.[0]?.message?.content);
         if (!text) throw new Error('模型沒有回傳內容');
         return text;
     },
@@ -371,6 +377,7 @@ const APIClient = {
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
         let fullContent = '';
+        let lastVisible = '';
         let toolCalls = [];
         let currentToolCall = null;
         let buffer = '';
@@ -387,7 +394,10 @@ const APIClient = {
                 
                 if (delta?.content) {
                     fullContent += delta.content;
-                    onChunk(delta.content, fullContent);
+                    const visible = stripReasoning(fullContent, { streaming: true });
+                    const piece = visible.startsWith(lastVisible) ? visible.slice(lastVisible.length) : '';
+                    lastVisible = visible;
+                    onChunk(piece, visible);
                 }
                 
                 if (delta?.tool_calls) {
@@ -441,10 +451,13 @@ const APIClient = {
         if (toolCalls.length > 0) {
             await this.handleToolCalls(toolCalls, apiMessages, settings, characterData, onChunk, onComplete, onError);
         } else if (fullContent) {
-            if (options.skipVerify) {
-                onComplete(fullContent);
+            const finalContent = stripReasoning(fullContent);
+            if (!finalContent) {
+                onError('模型只輸出了思考過程、沒有正式回覆，請重新生成');
+            } else if (options.skipVerify) {
+                onComplete(finalContent);
             } else {
-                await this.verifyReply(apiMessages, fullContent, settings, characterData, onChunk, onComplete, onError);
+                await this.verifyReply(apiMessages, finalContent, settings, characterData, onChunk, onComplete, onError);
             }
         } else {
             onComplete('');
