@@ -10,6 +10,8 @@ const SOURCE_LABELS = {
     'chat': '對話',
     'youtube': 'YouTube',
     'instagram': 'Instagram',
+    'facebook': 'Facebook',
+    'pub': '酒館',
     'chrome': 'Chrome',
     'dating': '約會',
     'bubbles': 'Bubbles',

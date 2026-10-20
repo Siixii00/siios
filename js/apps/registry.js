@@ -46,6 +46,8 @@ async function loadApps() {
         import('./phone/index.js'),
         import('./chrome/index.js'),
         import('./instagram/index.js'),
+        import('./facebook/index.js'),
+        import('./pub/index.js'),
         import('./twitter/index.js'),
         import('./youtube/index.js'),
         import('./bilibili/index.js?v=20260803b'),

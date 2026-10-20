@@ -59,7 +59,7 @@ async function buildAppContext(options = {}) {
                 character_id: characterId,
                 include_main_memories: options.includeMainMemories !== false,
                 include_fiction: options.includeFiction || false,
-                selected_sources: options.selectedSources || ['chat', 'youtube', 'instagram', 'chrome', 'dating', 'bubbles', 'weverse'],
+                selected_sources: options.selectedSources || ['chat', 'youtube', 'instagram', 'chrome', 'dating', 'bubbles', 'weverse', 'facebook', 'pub'],
                 memory_level: options.memoryLevel || 'meta'
             };
 

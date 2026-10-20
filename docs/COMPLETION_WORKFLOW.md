@@ -124,6 +124,6 @@
 - 重新產生 `mcp-worker/` 會覆蓋 `package.json`（遺失 `"type":"module"` 與 test 腳本），重產後必須還原。
 
 ### 仍待使用者決定（未動）
-1. `facebook`、`pub` 兩個 app：遷移計畫列了但專案裡不存在（各是一整個新 app）。
+1. ~~`facebook`、`pub` 兩個 app~~ → 已於 2026-10-20 實作並實測：Facebook（發文／圖片／表情／留言／朋友 AI 發文與留言回覆／朋友開關／記憶）、酒館（選角色同桌、錢包付費點酒、醉意影響對話、離開存記憶）。
 2. 宅家（Stay）精力值是否要影響角色對話。
 3. 階段 0 殘留：`bilibili-worker/src/` 下 `index-android/final/fixed/oauth/search/simple/simple-v2` 與 `test-direct.js` 共 8 個非正式版檔案（`wrangler.toml` 的 main 是 `src/index.js`）；`.kilo/plans/` 21 份計畫是否歸檔。屬刪除／搬移操作，需你確認後才動。

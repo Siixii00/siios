@@ -6,6 +6,8 @@ const MEMORY_SOURCES = [
     { id: 'chat', name: '對話', icon: 'chat' },
     { id: 'youtube', name: 'YouTube', icon: 'play_circle' },
     { id: 'instagram', name: 'Instagram', icon: 'camera_alt' },
+    { id: 'facebook', name: 'Facebook', icon: 'thumb_up' },
+    { id: 'pub', name: '酒館', icon: 'local_bar' },
     { id: 'chrome', name: 'Chrome', icon: 'language' },
     { id: 'dating', name: '約會', icon: 'favorite' },
     { id: 'bubbles', name: 'Bubbles', icon: 'bubble' },
@@ -16,7 +18,7 @@ const MEMORY_SOURCES = [
 ];
 
 let memorySettings = {
-    selected_sources: ['chat', 'youtube', 'instagram', 'chrome', 'dating', 'bubbles', 'weverse'],
+    selected_sources: ['chat', 'youtube', 'instagram', 'chrome', 'dating', 'bubbles', 'weverse', 'facebook', 'pub'],
     memory_level: 'meta',
     include_fiction: false,
     bound_theater_id: null

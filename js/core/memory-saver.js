@@ -83,6 +83,8 @@ function generateMetaContent(sourceApp, sourceSubtype, content) {
         'youtube': 'YouTube',
         'chrome': 'Chrome',
         'instagram': 'Instagram',
+        'facebook': 'Facebook',
+        'pub': '酒館',
         'dating': '約會',
         'bubbles': 'Bubbles',
         'weverse': 'Weverse',
@@ -119,7 +121,7 @@ function getDefaultMemorySettings() {
     return {
         include_main_memories: true,
         include_fiction: false,
-        selected_sources: ['chat', 'youtube', 'instagram', 'chrome', 'dating', 'bubbles', 'weverse'],
+        selected_sources: ['chat', 'youtube', 'instagram', 'chrome', 'dating', 'bubbles', 'weverse', 'facebook', 'pub'],
         memory_level: 'meta'
     };
 }
