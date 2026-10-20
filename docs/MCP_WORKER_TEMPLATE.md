@@ -375,3 +375,18 @@ const value = await env.MY_KV.get('key');
 - [Cloudflare Workers 文件](https://developers.cloudflare.com/workers/)
 - [Wrangler CLI 文件](https://developers.cloudflare.com/workers/wrangler/)
 - [JSON Schema 規範](https://json-schema.org/)
+---
+
+## 2026-10 更新：「神秘門」的現況與正確用法
+
+**工具分三類**（市集卡片上有標籤）：
+
+| 標籤 | 意義 | 要部署嗎 |
+|---|---|---|
+| 免費・免金鑰 / 需要金鑰 | 呼叫外部服務，放在 Cloudflare Worker | 要 |
+| App 內建 | 需要 App 內的資料（行事曆、健康、記憶），直接在 App 內執行 | **不用**，到「設定 → MCP 工具整合 → App 內建工具」啟用 |
+| 尚未支援 | 目前沒有實作，不會放進生成的 Worker | — |
+
+**驗證：** 生成的 Worker 必須設定 `MCP_API_KEY`（`wrangler secret put MCP_API_KEY`），沒設定時一律回 503；App 的 MCP 設定中把同一組金鑰填進「API Key」欄位。以前生成的 Worker **沒有驗證**，任何人知道網址都能呼叫，建議重新生成並部署。
+
+**已部署版本的程式碼**在 `mcp-worker/`（免費、免金鑰的 7 個工具），離線測試：`cd mcp-worker && npm test`。

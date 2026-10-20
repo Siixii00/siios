@@ -1,0 +1,15 @@
+{
+  "name": "siios-mcp-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "tail": "wrangler tail",
+    "test": "node --test test/auth.test.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

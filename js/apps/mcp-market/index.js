@@ -1,7 +1,7 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { TOOLS_CATALOG, CATEGORIES } from './tools-catalog.js';
-import { generateZipContent } from './code-templates.js';
+import { generateZipContent, getToolSupport } from './code-templates.js';
 import { initDB } from '../../db.js';
 
 let selectedTools = new Set();
@@ -344,6 +344,17 @@ function createToolCard(tool) {
     const diffBadge = createElement('span', `mcp-badge ${tool.difficulty}`);
     diffBadge.textContent = tool.difficulty === 'easy' ? '簡單' : tool.difficulty === 'medium' ? '中等' : '進階';
     header.appendChild(diffBadge);
+    const support = getToolSupport(tool.id);
+    const supportLabel = support.mode === 'local' ? 'App 內建' : support.mode === 'unsupported' ? '尚未支援' : support.keyless ? '免費・免金鑰' : support.custom ? '' : '需要金鑰';
+    if (supportLabel) {
+        const sb = createElement('span', 'text-xs rounded px-1.5 py-0.5', { textContent: supportLabel });
+        sb.style.cssText = support.mode === 'worker' && support.keyless ? 'background:#e6f4ea;color:#1e7e34;'
+            : support.mode === 'local' ? 'background:#e8f0fe;color:#1a56c4;'
+            : support.mode === 'unsupported' ? 'background:#eee;color:#777;'
+            : 'background:#fff4e5;color:#b25e00;';
+        header.appendChild(sb);
+    }
+    if (support.mode !== 'worker') card.style.opacity = '0.65';
     content.appendChild(header);
 
     content.appendChild(createElement('p', 'text-sm text-gray-600 mt-1 line-clamp-2', { textContent: tool.description }));
@@ -358,6 +369,15 @@ function createToolCard(tool) {
 }
 
 function toggleTool(toolId) {
+    const support = getToolSupport(toolId);
+    if (support.mode === 'local' && !selectedTools.has(toolId)) {
+        createToast('這個工具已內建在 App 裡，不需要部署。到「設定 → MCP 工具整合 → App 內建工具」啟用即可', 'info');
+        return;
+    }
+    if (support.mode === 'unsupported' && !selectedTools.has(toolId)) {
+        createToast('這個工具目前還沒有實作，所以不會放進生成的 Worker', 'info');
+        return;
+    }
     if (selectedTools.has(toolId)) {
         selectedTools.delete(toolId);
     } else {

@@ -16,14 +16,42 @@ async function getCustomTools() {
     }
 }
 
+// 每個工具實際能在哪裡運作：
+//   worker  — 呼叫外部服務，放在 Cloudflare Worker（keyless: 不需要任何金鑰）
+//   local   — 需要 App 內的資料（行事曆、健康紀錄、記憶），已內建在 App，不需要 Worker
+//   unsupported — 目前沒有實作，不會被放進生成的 Worker
+const WORKER_TOOLS = {
+    daily_weather: { keyless: true },
+    daily_recipe: { keyless: true },
+    entertainment_anime: { keyless: true },
+    entertainment_game_price: { keyless: true },
+    work_wiki: { keyless: true },
+    work_translate: { keyless: true },
+    finance_crypto: { keyless: true },
+    entertainment_music_search: { keyless: false },
+    smart_music: { keyless: false },
+    work_notion: { keyless: false },
+    finance_stock: { keyless: false }
+};
+const LOCAL_TOOL_IDS = new Set(['daily_reminder', 'social_calendar', 'health_period_log', 'health_mood_track', 'health_medication']);
+
+export function getToolSupport(id) {
+    if (String(id).startsWith('custom-')) return { mode: 'worker', keyless: false, custom: true };
+    if (WORKER_TOOLS[id]) return { mode: 'worker', keyless: WORKER_TOOLS[id].keyless };
+    if (LOCAL_TOOL_IDS.has(id)) return { mode: 'local' };
+    return { mode: 'unsupported' };
+}
+
 export async function generateWorkerCode(selectedTools) {
     const customTools = await getCustomTools();
-    const tools = selectedTools.map(id => {
+    const picked = selectedTools.map(id => {
         if (id.startsWith('custom-')) {
             return customTools.find(t => t.id === id);
         }
         return TOOLS_CATALOG.find(t => t.id === id);
     }).filter(Boolean);
+    // 只放進真的能在 Worker 上運作的工具，避免 AI 呼叫到只會回傳「尚未實作」的工具
+    const tools = picked.filter(t => getToolSupport(t.id).mode === 'worker');
 
     const toolDefinitions = tools.map(t => generateToolDefinition(t)).join(',\n');
     const executeCases = tools.map(t => generateExecuteCase(t)).join('\n');
@@ -43,6 +71,22 @@ export default {
 
         if (request.method === 'OPTIONS') {
             return new Response(null, { headers: corsHeaders });
+        }
+
+        // 驗證：所有端點都需要 Authorization: Bearer <MCP_API_KEY>（在 App 的 MCP 設定中填入同一組金鑰）
+        if (!env.MCP_API_KEY) {
+            return Response.json(
+                { error: 'Worker 尚未設定 MCP_API_KEY（請執行 wrangler secret put MCP_API_KEY）' },
+                { status: 503, headers: corsHeaders }
+            );
+        }
+        const given = (request.headers.get('Authorization') || '').replace(/^Bearer\\s+/i, '');
+        if (!safeEqual(given, env.MCP_API_KEY)) {
+            return Response.json({ error: 'Unauthorized' }, { status: 401, headers: corsHeaders });
+        }
+
+        if (url.pathname === '/health' && request.method === 'GET') {
+            return Response.json({ ok: true, tools: getTools().length }, { headers: corsHeaders });
         }
 
         // 工具列表端點
@@ -67,6 +111,15 @@ export default {
         return Response.json({ error: 'Not found' }, { status: 404, headers: corsHeaders });
     }
 };
+
+function safeEqual(a, b) {
+    const enc = new TextEncoder();
+    const x = enc.encode(a);
+    const y = enc.encode(b);
+    let diff = x.length ^ y.length;
+    for (let i = 0; i < Math.max(x.length, y.length); i++) diff |= (x[i] || 0) ^ (y[i] || 0);
+    return diff === 0;
+}
 
 function getTools() {
     return [
@@ -106,61 +159,90 @@ function generateCaseBody(tool) {
     
     switch (tool.id) {
         case 'daily_weather':
-            return `// 需要設定 OPENWEATHER_API_KEY
-            if (!env.OPENWEATHER_API_KEY) {
-                return { success: false, error: '尚未設定 OPENWEATHER_API_KEY' };
-            }
-            try {
-                const weatherRes = await fetch(
-                    \`https://api.openweathermap.org/data/2.5/weather?q=\${encodeURIComponent(args.city)}&appid=\${env.OPENWEATHER_API_KEY}&units=metric\`
-                );
-                const weatherData = await weatherRes.json();
-                if (!weatherRes.ok || weatherData.cod && weatherData.cod !== 200) {
-                    return { success: false, error: weatherData.message || '無法取得天氣資料' };
-                }
-                return {
-                    success: true,
-                    city: weatherData.name,
-                    temp: weatherData.main.temp,
-                    feels_like: weatherData.main.feels_like,
-                    humidity: weatherData.main.humidity,
-                    description: weatherData.weather?.[0]?.description || '',
-                    icon: weatherData.weather?.[0]?.icon || ''
-                };
-            } catch (error) {
-                return { success: false, error: error.message || '天氣服務暫時無法使用' };
-            }`;
-
-        case 'daily_reminder':
-            return `return {
-                success: false,
-                error: '提醒功能尚未實作，需要串接推播服務',
-                message: args.message,
-                time: args.time,
-                repeat: args.repeat || false
-            };`;
+            return `// 有設定 OPENWEATHER_API_KEY 時使用 OpenWeatherMap；沒有時使用免費、免金鑰的 Open-Meteo
+const unit = args.unit === 'fahrenheit' ? 'fahrenheit' : 'celsius';
+const city = String(args.city || '').trim();
+if (!city) return { success: false, error: '請提供城市名稱' };
+try {
+    if (env.OPENWEATHER_API_KEY) {
+        const weatherRes = await fetch(
+            \`https://api.openweathermap.org/data/2.5/weather?q=\${encodeURIComponent(city)}&appid=\${env.OPENWEATHER_API_KEY}&units=\${unit === 'fahrenheit' ? 'imperial' : 'metric'}\`
+        );
+        const weatherData = await weatherRes.json();
+        if (!weatherRes.ok || (weatherData.cod && Number(weatherData.cod) !== 200)) {
+            return { success: false, error: weatherData.message || '無法取得天氣資料' };
+        }
+        return {
+            success: true,
+            city: weatherData.name,
+            temp: weatherData.main.temp,
+            feels_like: weatherData.main.feels_like,
+            humidity: weatherData.main.humidity,
+            description: weatherData.weather?.[0]?.description || '',
+            unit
+        };
+    }
+    const WEATHER_CODES = { 0: '晴朗', 1: '大致晴朗', 2: '局部多雲', 3: '陰天', 45: '霧', 48: '霧凇', 51: '毛毛雨', 53: '毛毛雨', 55: '毛毛雨', 61: '小雨', 63: '中雨', 65: '大雨', 71: '小雪', 73: '中雪', 75: '大雪', 80: '陣雨', 81: '陣雨', 82: '強陣雨', 95: '雷雨', 96: '雷雨夾冰雹', 99: '強雷雨夾冰雹' };
+    let place = null;
+    for (const name of [city, city + '市', city + '縣']) {
+        const geoRes = await fetch(\`https://geocoding-api.open-meteo.com/v1/search?name=\${encodeURIComponent(name)}&count=1&language=zh\`);
+        const geo = await geoRes.json();
+        place = geo.results && geo.results[0];
+        if (place) break;
+    }
+    if (!place) return { success: false, error: \`找不到城市：\${city}\` };
+    const wxRes = await fetch(\`https://api.open-meteo.com/v1/forecast?latitude=\${place.latitude}&longitude=\${place.longitude}&current=temperature_2m,apparent_temperature,relative_humidity_2m,weather_code&temperature_unit=\${unit}&timezone=auto\`);
+    const wx = await wxRes.json();
+    if (!wxRes.ok || !wx.current) return { success: false, error: '無法取得天氣資料' };
+    return {
+        success: true,
+        city: place.name,
+        country: place.country || '',
+        temp: wx.current.temperature_2m,
+        feels_like: wx.current.apparent_temperature,
+        humidity: wx.current.relative_humidity_2m,
+        description: WEATHER_CODES[wx.current.weather_code] || '未知',
+        unit
+    };
+} catch (error) {
+    return { success: false, error: error.message || '天氣服務暫時無法使用' };
+}`;
 
         case 'daily_recipe':
-            return `// 需要設定 SPOONACULAR_API_KEY
-            if (!env.SPOONACULAR_API_KEY) {
-                return { success: false, error: '尚未設定 SPOONACULAR_API_KEY' };
-            }
-            try {
-                const recipeRes = await fetch(
-                    \`https://api.spoonacular.com/recipes/complexSearch?query=\${encodeURIComponent(args.query)}&number=\${args.limit || 5}&apiKey=\${env.SPOONACULAR_API_KEY}\`
-                );
-                const recipeData = await recipeRes.json();
-                return {
-                    success: true,
-                    results: (recipeData.results || []).map(r => ({
-                        id: r.id,
-                        title: r.title,
-                        image: r.image
-                    }))
-                };
-            } catch (error) {
-                return { success: false, error: error.message || '食譜服務暫時無法使用' };
-            }`;
+            return `// 有設定 SPOONACULAR_API_KEY 時使用 Spoonacular；沒有時使用免費的 TheMealDB（只支援英文料理名稱）
+const limit = Math.min(Math.max(parseInt(args.limit, 10) || 5, 1), 10);
+try {
+    if (env.SPOONACULAR_API_KEY) {
+        const recipeRes = await fetch(
+            \`https://api.spoonacular.com/recipes/complexSearch?query=\${encodeURIComponent(args.query)}&number=\${limit}&apiKey=\${env.SPOONACULAR_API_KEY}\`
+        );
+        const recipeData = await recipeRes.json();
+        if (!recipeRes.ok) return { success: false, error: recipeData.message || '食譜查詢失敗' };
+        return {
+            success: true,
+            source: 'Spoonacular',
+            results: (recipeData.results || []).map(r => ({ id: r.id, title: r.title, image: r.image }))
+        };
+    }
+    const mealRes = await fetch(\`https://www.themealdb.com/api/json/v1/1/search.php?s=\${encodeURIComponent(args.query)}\`);
+    const mealData = await mealRes.json();
+    const meals = (mealData.meals || []).slice(0, limit);
+    return {
+        success: true,
+        source: 'TheMealDB',
+        ...(meals.length === 0 ? { note: '沒有找到結果。免費來源只支援英文料理名稱，例如 chicken、pasta' } : {}),
+        results: meals.map(m => ({
+            id: m.idMeal,
+            title: m.strMeal,
+            category: m.strCategory,
+            area: m.strArea,
+            image: m.strMealThumb,
+            instructions: (m.strInstructions || '').slice(0, 600)
+        }))
+    };
+} catch (error) {
+    return { success: false, error: error.message || '食譜服務暫時無法使用' };
+}`;
 
         case 'shop_sanitary_pads':
             return `return {
@@ -175,12 +257,15 @@ function generateCaseBody(tool) {
         case 'health_period_log':
         case 'health_mood_track':
         case 'health_medication':
-            return `// 整合 Siios HealthDB
-            // 儲存到 IndexedDB
-            return {
-                logged: true,
-                timestamp: new Date().toISOString(),
-                data: args
+        case 'finance_expense':
+        case 'memory_save':
+        case 'memory_retrieve':
+        case 'daily_reminder':
+        case 'social_calendar':
+            return `return {
+                success: false,
+                error: '這個工具需要存取 App 內的資料，已改為在 App 內直接執行。請到 App 的「設定 → MCP 工具整合 → App 內建工具」啟用，不需要部署 Worker。',
+                tool: '${tool.name}'
             };`;
 
         case 'smart_light':
@@ -232,86 +317,169 @@ function generateCaseBody(tool) {
             }`;
 
         case 'entertainment_anime':
-            return `// AniList GraphQL API（免費）
-            try {
-                const query = \`
-                    query ($search: String, $season: String) {
-                        Page {
-                            media(search: $search, season: $season, type: ANIME) {
-                                title { romaji native english }
-                                episodes
-                                status
-                                averageScore
-                                genres
-                            }
-                        }
-                    }
-                \`;
-                const animeRes = await fetch('https://graphql.anilist.co', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ query, variables: { search: args.query, season: args.season } })
-                });
-                const animeData = await animeRes.json();
-                if (!animeRes.ok || animeData.errors) {
-                    return {
-                        success: false,
-                        error: animeData.errors?.map(err => err.message).join(',') || '動漫查詢失敗'
-                    };
+            return `// 先用 AniList（GraphQL）；AniList 會封鎖部分雲端 IP，失敗時依序改用 Jikan（MyAnimeList 非官方 API）與 Kitsu。皆免費、免金鑰
+const STATUS = { airing: 'RELEASING', finished: 'FINISHED', upcoming: 'NOT_YET_RELEASED' };
+const JIKAN_STATUS = { airing: 'airing', finished: 'complete', upcoming: 'upcoming' };
+const seasonMatch = /^(\\d{4})-(winter|spring|summer|fall)$/i.exec(String(args.season || ''));
+let anilistError = '';
+try {
+    // 沒有值的條件要整個省略（送 null 會被 AniList 當成「欄位必須是空的」）
+    const variables = {};
+    if (args.query) variables.search = args.query;
+    if (seasonMatch) { variables.season = seasonMatch[2].toUpperCase(); variables.seasonYear = parseInt(seasonMatch[1], 10); }
+    if (STATUS[args.status]) variables.status = STATUS[args.status];
+    const query = \`
+        query ($search: String, $season: MediaSeason, $seasonYear: Int, $status: MediaStatus) {
+            Page(perPage: 5) {
+                media(search: $search, season: $season, seasonYear: $seasonYear, status: $status, type: ANIME, sort: POPULARITY_DESC) {
+                    title { romaji native english }
+                    episodes
+                    status
+                    averageScore
+                    genres
                 }
-                return {
-                    success: true,
-                    results: (animeData.data?.Page?.media || []).map(m => ({
-                        title: m.title?.romaji || m.title?.native || '',
-                        episodes: m.episodes,
-                        status: m.status,
-                        averageScore: m.averageScore,
-                        genres: m.genres || []
-                    }))
-                };
-            } catch (error) {
-                return { success: false, error: error.message || '動漫服務暫時無法使用' };
-            }`;
+            }
+        }
+    \`;
+    const animeRes = await fetch('https://graphql.anilist.co', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'User-Agent': 'siios-mcp-worker/1.0 (https://github.com/Siixii00/siios)' },
+        body: JSON.stringify({ query, variables })
+    });
+    const animeData = await animeRes.json();
+    if (animeRes.ok && !animeData.errors) {
+        return {
+            success: true,
+            source: 'AniList',
+            results: (animeData.data?.Page?.media || []).map(m => ({
+                title: m.title?.native || m.title?.romaji || m.title?.english || '',
+                romaji: m.title?.romaji || '',
+                episodes: m.episodes,
+                status: m.status,
+                averageScore: m.averageScore,
+                genres: m.genres || []
+            }))
+        };
+    }
+    anilistError = (animeData.errors || []).map(err => err.message).join(',') || \`HTTP \${animeRes.status}\`;
+} catch (error) {
+    anilistError = error.message || 'AniList 無法連線';
+}
+let jikanError = '';
+try {
+    const jikanUrl = seasonMatch
+        ? \`https://api.jikan.moe/v4/seasons/\${seasonMatch[1]}/\${seasonMatch[2].toLowerCase()}?limit=5\`
+        : \`https://api.jikan.moe/v4/anime?q=\${encodeURIComponent(args.query || '')}&limit=5&order_by=popularity\${JIKAN_STATUS[args.status] ? '&status=' + JIKAN_STATUS[args.status] : ''}\`;
+    const jikanRes = await fetch(jikanUrl, { headers: { 'User-Agent': 'siios-mcp-worker/1.0 (https://github.com/Siixii00/siios)' } });
+    const jikanData = await jikanRes.json();
+    if (jikanRes.ok && Array.isArray(jikanData.data)) {
+        return {
+            success: true,
+            source: 'Jikan',
+            results: jikanData.data.slice(0, 5).map(m => ({
+                title: m.title_japanese || m.title || '',
+                romaji: m.title || '',
+                episodes: m.episodes,
+                status: m.status,
+                averageScore: m.score,
+                genres: (m.genres || []).map(g => g.name)
+            }))
+        };
+    }
+    jikanError = jikanData.message || ('HTTP ' + jikanRes.status);
+} catch (error) {
+    jikanError = error.message || 'Jikan 無法連線';
+}
+// 最後備援：Kitsu（免費、免金鑰）
+try {
+    const KITSU_STATUS = { airing: 'current', finished: 'finished', upcoming: 'upcoming' };
+    const kitsuParams = new URLSearchParams({ 'page[limit]': '5', sort: '-userCount' });
+    if (args.query) kitsuParams.set('filter[text]', args.query);
+    if (seasonMatch) { kitsuParams.set('filter[season]', seasonMatch[2].toLowerCase()); kitsuParams.set('filter[seasonYear]', seasonMatch[1]); }
+    if (KITSU_STATUS[args.status]) kitsuParams.set('filter[status]', KITSU_STATUS[args.status]);
+    const kitsuRes = await fetch('https://kitsu.io/api/edge/anime?' + kitsuParams, { headers: { Accept: 'application/vnd.api+json', 'User-Agent': 'siios-mcp-worker/1.0 (https://github.com/Siixii00/siios)' } });
+    const kitsuData = await kitsuRes.json();
+    if (!kitsuRes.ok || !Array.isArray(kitsuData.data)) {
+        return { success: false, error: \`動漫查詢失敗（AniList：\${anilistError}；Jikan：\${jikanError}；Kitsu：HTTP \${kitsuRes.status}）\` };
+    }
+    return {
+        success: true,
+        source: 'Kitsu',
+        results: kitsuData.data.map(({ attributes: m }) => ({
+            title: m.titles?.ja_jp || m.canonicalTitle || '',
+            romaji: m.titles?.en_jp || m.canonicalTitle || '',
+            episodes: m.episodeCount,
+            status: m.status,
+            averageScore: m.averageRating ? Math.round(parseFloat(m.averageRating)) : null,
+            genres: []
+        }))
+    };
+} catch (error) {
+    return { success: false, error: \`動漫查詢失敗（AniList：\${anilistError}；Jikan：\${jikanError}；Kitsu：\${error.message}）\` };
+}`;
 
         case 'entertainment_game_price':
-            return `// CheapShark API（免費）
-            try {
-                const gameRes = await fetch(
-                    \`https://www.cheapshark.com/api/1.0/games?title=\${encodeURIComponent(args.game)}\`
-                );
-                const gameData = await gameRes.json();
-                if (!Array.isArray(gameData)) {
-                    return { success: false, error: '遊戲價格格式異常' };
-                }
-                return {
-                    success: true,
-                    results: gameData.slice(0, 5).map(g => ({
-                        title: g.external,
-                        cheapestPrice: g.cheapest / 100,
-                        cheapestStore: g.cheapestDealID
-                    }))
-                };
-            } catch (error) {
-                return { success: false, error: error.message || '遊戲價格查詢暫時無法使用' };
-            }`;
+            return `// CheapShark API（免費、免金鑰，涵蓋 PC 商店；價格為美元）
+try {
+    const gameRes = await fetch(\`https://www.cheapshark.com/api/1.0/games?title=\${encodeURIComponent(args.game)}&limit=5\`, {
+        headers: { 'User-Agent': 'siios-mcp-worker/1.0 (https://github.com/Siixii00/siios)' }
+    });
+    const gameData = await gameRes.json();
+    if (!gameRes.ok || !Array.isArray(gameData)) {
+        return { success: false, error: '遊戲價格服務回傳了非預期的內容' };
+    }
+    return {
+        success: true,
+        currency: 'USD',
+        ...(args.platform && args.platform !== 'steam' ? { note: '這個免費來源只涵蓋 PC 商店，不支援 ' + args.platform } : {}),
+        results: gameData.slice(0, 5).map(g => ({
+            title: g.external,
+            cheapestPrice: Number(g.cheapest),
+            dealLink: \`https://www.cheapshark.com/redirect?dealID=\${g.cheapestDealID}\`
+        }))
+    };
+} catch (error) {
+    return { success: false, error: error.message || '遊戲價格查詢暫時無法使用' };
+}`;
 
         case 'work_translate':
-            return `// 需要設定 GOOGLE_TRANSLATE_API_KEY 或 DEEPL_API_KEY
-            if (!env.GOOGLE_TRANSLATE_API_KEY && !env.DEEPL_API_KEY) {
-                return { success: false, error: '尚未設定翻譯 API Key' };
-            }
-            return {
-                success: false,
-                error: '翻譯工具已預留接口，請在本機 MCP 環境執行',
-                original: args.text,
-                targetLang: args.targetLang
-            };`;
+            return `// 優先使用 Cloudflare Workers AI（免費額度、不依賴外部服務）；沒有綁定 AI 或失敗時改用 MyMemory（免費但有共用的每日額度）
+const text = String(args.text || '');
+const target = String(args.targetLang || '').trim();
+if (!text.trim() || !target) return { success: false, error: '請提供要翻譯的文字與目標語言' };
+if (text.length > 450) return { success: false, error: '文字太長，請分段翻譯（每段 450 字元以內）' };
+const LANG_NAMES = { en: 'english', zh: 'chinese', 'zh-tw': 'chinese', 'zh-cn': 'chinese', ja: 'japanese', ko: 'korean', fr: 'french', de: 'german', es: 'spanish', it: 'italian', pt: 'portuguese', ru: 'russian', th: 'thai', vi: 'vietnamese', id: 'indonesian', ar: 'arabic' };
+const targetName = LANG_NAMES[target.toLowerCase()];
+let aiError = '';
+if (env.AI && targetName) {
+    try {
+        const sourceName = /[぀-ヿ]/.test(text) ? 'japanese' : /[가-힯]/.test(text) ? 'korean' : /[一-鿿]/.test(text) ? 'chinese' : 'english';
+        if (sourceName === targetName) return { success: true, original: text, translated: text, targetLang: target, source: '（來源與目標語言相同）' };
+        const aiRes = await env.AI.run('@cf/meta/m2m100-1.2b', { text, source_lang: sourceName, target_lang: targetName });
+        const translated = aiRes && (aiRes.translated_text || aiRes.translation || aiRes.text);
+        if (translated) return { success: true, original: text, translated, targetLang: target, source: 'Cloudflare Workers AI' };
+        aiError = '模型沒有回傳翻譯';
+    } catch (error) {
+        aiError = error.message || 'Workers AI 失敗';
+    }
+}
+try {
+    const trRes = await fetch(\`https://api.mymemory.translated.net/get?q=\${encodeURIComponent(text)}&langpair=\${encodeURIComponent('Autodetect|' + target)}\`);
+    const trData = await trRes.json();
+    if (!trRes.ok || (trData.responseStatus && Number(trData.responseStatus) !== 200)) {
+        return { success: false, error: \`\${trData.responseDetails || '翻譯失敗'}\${aiError ? '（Workers AI：' + aiError + '）' : ''}\` };
+    }
+    return { success: true, original: text, translated: trData.responseData?.translatedText || '', targetLang: target, source: 'MyMemory' };
+} catch (error) {
+    return { success: false, error: error.message || '翻譯服務暫時無法使用' };
+}`;
 
         case 'work_wiki':
             return `// MediaWiki API（免費）
             try {
                 const wikiRes = await fetch(
-                    \`https://\${args.lang || 'zh'}.wikipedia.org/w/api.php?action=query&list=search&srsearch=\${encodeURIComponent(args.query)}&format=json&origin=*\`
+                    \`https://\${args.lang || 'zh'}.wikipedia.org/w/api.php?action=query&list=search&srsearch=\${encodeURIComponent(args.query)}&format=json&origin=*\`,
+                    { headers: { 'User-Agent': 'siios-mcp-worker/1.0 (https://github.com/Siixii00/siios)' } }
                 );
                 const wikiData = await wikiRes.json();
                 const results = Array.isArray(wikiData.query?.search) ? wikiData.query.search : [];
@@ -383,37 +551,37 @@ function generateCaseBody(tool) {
             }`;
 
         case 'finance_crypto':
-            return `// CoinGecko API（免費）
-            const cryptoRes = await fetch(
-                \`https://api.coingecko.com/api/v3/simple/price?ids=\${args.coin}&vs_currencies=\${args.currency || 'twd'}\`
-            );
-            const cryptoData = await cryptoRes.json();
-            return {
-                coin: args.coin,
-                price: cryptoData[args.coin][args.currency || 'twd'],
-                currency: args.currency || 'twd'
-            };`;
-
-        case 'finance_expense':
-            return `// 本地記帳或串接記帳服務
-            return {
-                logged: true,
-                amount: args.amount,
-                category: args.category,
-                note: args.note || '',
-                timestamp: new Date().toISOString()
-            };`;
-
-        case 'memory_save':
-        case 'memory_retrieve':
-            return `// 整合 Siios MemoryDB
-            // 透過 Worker API 儲存/檢索記憶
-            return {
-                success: true,
-                content: args.content,
-                category: args.category,
-                timestamp: new Date().toISOString()
-            };`;
+            return `// 先用 CoinGecko；雲端共用 IP 容易被限流，失敗時改用 Coinbase 的公開報價（只支援常見幣種與幣別）。皆免金鑰
+const coin = String(args.coin || '').toLowerCase().trim();
+const currency = String(args.currency || 'twd').toLowerCase().trim();
+if (!coin) return { success: false, error: '請提供幣種，例如 bitcoin' };
+let geckoError = '';
+try {
+    const cryptoRes = await fetch(\`https://api.coingecko.com/api/v3/simple/price?ids=\${encodeURIComponent(coin)}&vs_currencies=\${encodeURIComponent(currency)}\`, {
+        headers: { 'User-Agent': 'siios-mcp-worker/1.0 (https://github.com/Siixii00/siios)' }
+    });
+    const cryptoData = await cryptoRes.json();
+    if (cryptoRes.ok) {
+        const price = cryptoData && cryptoData[coin] && cryptoData[coin][currency];
+        if (typeof price === 'number') return { success: true, source: 'CoinGecko', coin, currency, price };
+        return { success: false, error: \`找不到幣種或幣別：\${coin} / \${currency}\` };
+    }
+    geckoError = '服務回傳錯誤（可能是請求太頻繁）';
+} catch (error) {
+    geckoError = error.message || 'CoinGecko 無法連線';
+}
+const SYMBOLS = { bitcoin: 'BTC', ethereum: 'ETH', solana: 'SOL', dogecoin: 'DOGE', ripple: 'XRP', litecoin: 'LTC', cardano: 'ADA', polkadot: 'DOT', 'bitcoin-cash': 'BCH', chainlink: 'LINK', stellar: 'XLM', tether: 'USDT', 'usd-coin': 'USDC' };
+const symbol = SYMBOLS[coin];
+if (!symbol) return { success: false, error: \`CoinGecko：\${geckoError}；備援來源不支援幣種 \${coin}\` };
+try {
+    const cbRes = await fetch(\`https://api.coinbase.com/v2/prices/\${symbol}-\${currency.toUpperCase()}/spot\`, { headers: { 'User-Agent': 'siios-mcp-worker/1.0' } });
+    const cbData = await cbRes.json();
+    const amount = parseFloat(cbData?.data?.amount);
+    if (!cbRes.ok || Number.isNaN(amount)) return { success: false, error: \`CoinGecko：\${geckoError}；Coinbase：不支援 \${symbol}/\${currency.toUpperCase()}\` };
+    return { success: true, source: 'Coinbase', coin, currency, price: amount };
+} catch (error) {
+    return { success: false, error: \`CoinGecko：\${geckoError}；Coinbase：\${error.message}\` };
+}`;
 
         default:
             return `// 尚未支援於 Worker 環境: ${tool.name}
@@ -440,11 +608,23 @@ compatibility_date = "2024-01-01"
 enabled = true
 `;
 
+    // 翻譯工具優先使用 Cloudflare Workers AI（免費額度），需要綁定 AI
+    if (selectedTools.includes('work_translate')) {
+        config += `
+[ai]
+binding = "AI"
+`;
+    }
+
+    config += `
+# 必填：存取金鑰（App 的 MCP 設定要填同一組）。沒設定時 Worker 會拒絕所有請求
+#   wrangler secret put MCP_API_KEY
+`;
     if (needsApiKey) {
         config += `
-# 如果需要 API Key，使用 Secrets 管理：
-# wrangler secret put OPENWEATHER_API_KEY
-# wrangler secret put SPOTIFY_API_KEY
+# 需要金鑰的工具，使用 Secrets 管理：
+# wrangler secret put SPOTIFY_ACCESS_TOKEN
+# wrangler secret put NOTION_API_KEY
 # ...等
 `;
     }
@@ -469,7 +649,7 @@ export function generatePackageJson() {
 }
 
 export function generateReadme(selectedTools) {
-    const tools = selectedTools.map(id => TOOLS_CATALOG.find(t => t.id === id)).filter(Boolean);
+    const tools = selectedTools.map(id => TOOLS_CATALOG.find(t => t.id === id)).filter(t => t && getToolSupport(t.id).mode === 'worker');
 
     return `# Siios MCP Worker
 
@@ -493,14 +673,15 @@ npm install
 wrangler login
 \`\`\`
 
-### 3. 設定 Secrets（如果需要）
+### 3. 設定 Secrets
 
-${tools.filter(t => t.requires?.length > 0).map(t => `# ${t.displayName} 需要：${t.requires.join(', ')}`).join('\n') || '無需設定 Secrets'}
+**必填：** \`MCP_API_KEY\` — 自己產生一組長亂數。沒有設定時 Worker 會拒絕所有請求，避免任何人知道網址就能呼叫你的工具。
 
 \`\`\`bash
-# 例如：
-wrangler secret put OPENWEATHER_API_KEY
+wrangler secret put MCP_API_KEY
 \`\`\`
+
+${tools.filter(t => !getToolSupport(t.id).keyless && t.requires?.length > 0).map(t => `- ${t.displayName} 需要：${t.requires.join(', ')}`).join('\n') || '其餘工具都使用免費、免金鑰的服務，不需要其他設定。'}
 
 ### 4. 部署
 
@@ -512,7 +693,7 @@ npm run deploy
 
 1. 開啟「設定」→「MCP 工具整合」
 2. 新增 MCP 伺服器
-3. 輸入 Worker URL
+3. 輸入 Worker URL，以及上一步設定的 \`MCP_API_KEY\`（填在 API Key 欄位）
 
 ## 本地測試
 

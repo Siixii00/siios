@@ -1,0 +1,18 @@
+name = "siios-mcp-worker"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# 啟用日誌
+[observability.logs]
+enabled = true
+
+[ai]
+binding = "AI"
+
+# 必填：存取金鑰（App 的 MCP 設定要填同一組）。沒設定時 Worker 會拒絕所有請求
+#   wrangler secret put MCP_API_KEY
+
+# 需要金鑰的工具，使用 Secrets 管理：
+# wrangler secret put SPOTIFY_ACCESS_TOKEN
+# wrangler secret put NOTION_API_KEY
+# ...等
