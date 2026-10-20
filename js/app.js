@@ -1,7 +1,8 @@
-﻿import Router from './router.js';
+﻿﻿import Router from './router.js';
 import { SettingsDB, initDB, GlobalForbiddenDB } from './db.js';
 import { createElement, createIcon, createToast, createErrorModal } from './components.js';
 import LockScreen from './lockscreen.js';
+import { loadBirthdate, hasBirthdate, showAgeGate } from './core/age-gate.js';
 import HomeScreen from './homescreen.js';
 import { registerRoutes } from './apps/registry.js';
 import { MemorySystem } from './core/memory-system/index.js';
@@ -87,6 +88,9 @@ const App = {
             console.log('[App] 開始初始化數據庫...');
             await initDB();
             console.log('[App] 數據庫初始化成功');
+
+            await loadBirthdate();
+            if (!hasBirthdate()) await showAgeGate();
             
             console.log('[App] 檢查並注入默認禁止詞...');
             const existingForbidden = await GlobalForbiddenDB.getAll();

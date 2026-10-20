@@ -1,6 +1,9 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar } from '../../components.js';
 import { SettingsDB } from '../../db.js';
+import { isAdult, ageOf, getBirthdate, unlockDate, fmtDate, toBirthString, saveBirthdate } from '../../core/age-gate.js';
+import { createToast } from '../../components.js';
+import { askForm } from '../../core/dialogs.js';
 
 async function renderSettings() {
     const githubUser = await SettingsDB.get('github_user') || null;
@@ -113,11 +116,30 @@ async function renderSettings() {
         }
     ];
 
+    cards.push({
+        icon: 'cake',
+        iconBg: 'bg-rose-500',
+        title: '年齡與內容限制',
+        desc: isAdult() ? '已確認滿 18 歲（' + ageOf() + ' 歲）' : '未滿 18 歲：部分內容鎖定至 ' + fmtDate(unlockDate()),
+        action: async () => {
+            if (!isAdult()) { createToast('未滿 18 歲時無法修改生日；將於 ' + fmtDate(unlockDate()) + ' 自動解鎖', 'info'); return; }
+            const form = await askForm({ title: '更正生日', hint: '目前：' + getBirthdate(), fields: [{ key: 'date', label: '出生日期（YYYY-MM-DD）', value: getBirthdate(), required: true }], submitLabel: '儲存' });
+            if (!form) return;
+            try {
+                const m = /^(\d{4})-(\d{1,2})-(\d{1,2})$/.exec(form.date);
+                if (!m) throw new Error('格式要像 2008-05-20');
+                await saveBirthdate(toBirthString(+m[1], +m[2], +m[3]));
+                createToast('已更新', 'success');
+                Router.handleRoute();
+            } catch (e) { createToast(e.message, 'error'); }
+        }
+    });
+
     const group = createElement('div', 'ios-grouped-list mx-4');
 
     cards.forEach(card => {
         const cell = createElement('div', 'ios-list-cell cursor-pointer', {
-            onClick: () => Router.navigate(card.path)
+            onClick: () => (card.action ? card.action() : Router.navigate(card.path))
         });
 
         const badge = createElement('div', `ios-icon-badge ${card.iconBg}`);

@@ -1,4 +1,5 @@
-﻿import Router from '../router.js';
+﻿﻿import Router from '../router.js';
+import { isRestricted, lockedPageElement } from '../core/age-gate.js';
 
 const apps = [];
 let initialized = false;
@@ -127,7 +128,10 @@ async function registerRoutes() {
                             await loadStyle(app.stylesPath);
                         }
 
-                        const result = await route.render(params);
+                        // 未成年鎖定的內容：顯示鎖定頁，滿 18 歲後自動開放
+                        const result = isRestricted(app.id)
+                            ? { element: lockedPageElement(app.name), cleanup: null }
+                            : await route.render(params);
                         appContainer.innerHTML = '';
                         appContainer.appendChild(result.element);
 

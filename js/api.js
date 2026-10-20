@@ -1,4 +1,5 @@
-﻿import Router from './router.js';
+﻿﻿﻿import { minorSafetyPrompt } from './core/age-gate.js';
+import Router from './router.js';
 import { SettingsDB, ChatsDB, CharactersDB, UsersDB, HealthDB, ZiweiCacheDB } from './db.js';
 import { loadWorldInfoContext } from './core/world-info-loader.js';
 import { generateRPPrompt, buildResponseModePrompt } from './constants/rp-system-prompt.js';
@@ -111,6 +112,11 @@ const APIClient = {
             }
         }
         
+        const minorPrompt = minorSafetyPrompt();
+        if (minorPrompt) {
+            systemMessages.push({ role: 'system', content: minorPrompt });
+        }
+
         const charName = characterData?.name || 'AI';
         const rpPrompt = generateRPPrompt(charName);
         systemMessages.push({

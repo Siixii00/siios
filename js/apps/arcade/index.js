@@ -1,5 +1,6 @@
 import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
+import { isRestricted } from '../../core/age-gate.js';
 import { SettingsDB } from '../../db.js';
 import { getBalance, charge, formatMoney, WalletError } from '../../core/wallet.js';
 
@@ -298,7 +299,13 @@ async function renderArcade(params) {
     container.querySelectorAll('.arcade-nav-btn').forEach(b => b.classList.toggle('active', b.dataset.game === id));
     content.innerHTML = '';
     SettingsDB.set('arcade_last_game', id);
-    if (id === 'gacha') return renderGachaGame(content);
+    if (id === 'gacha') {
+      if (isRestricted('gacha')) {
+        content.innerHTML = '<div class="ag-wrap"><div style="font-size:48px">🔒</div><p class="ag-msg">抽卡模擬僅限 18 歲以上，滿 18 歲後會自動開放。</p></div>';
+        return;
+      }
+      return renderGachaGame(content);
+    }
     const mod = await import('./games/' + (id === 'g2048' ? 'g2048' : id) + '.js');
     const stop = await mod.mount(content);
     if (mine !== token) stop?.(); else stopGame = stop;

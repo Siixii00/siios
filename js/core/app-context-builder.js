@@ -1,4 +1,5 @@
-﻿import { CharactersDB, UsersDB, SettingsDB, GlobalSettingsDB, GlobalForbiddenDB } from '../db.js';
+﻿﻿﻿import { minorSafetyPrompt } from './age-gate.js';
+import { CharactersDB, UsersDB, SettingsDB, GlobalSettingsDB, GlobalForbiddenDB } from '../db.js';
 
 async function buildAppContext(options = {}) {
     const {
@@ -81,6 +82,8 @@ async function buildAppContext(options = {}) {
     }
 
     context.systemPrompt = buildSystemPrompt(context);
+    const minorPrompt = minorSafetyPrompt();
+    if (minorPrompt) context.systemPrompt += '\n\n' + minorPrompt;
 
     return context;
 }
