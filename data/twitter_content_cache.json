@@ -1,179 +1,173 @@
 {
   "metadata": {
-    "last_updated": "2026-10-19T23:23:40.529085",
-    "total_items": 56
+    "last_updated": "2026-10-20T03:50:29.666842",
+    "total_items": 55
   },
   "content": {
     "tech": [
       {
+        "title": "Lula supporters protest against Meta to denounce its 'electoral interference'",
+        "url": "https://efe.com/english/latest-news/2026-10-20/lula-supporters-protest-against-meta-to-denounce-its-electoral-interference/",
+        "source": "Hacker News",
+        "score": 229
+      },
+      {
+        "title": "Novo Nordisk, Eli Lilly Report GLP-1 Signals of Slowed Biological Aging at ARDD",
+        "url": "https://trial.medpath.com/news/novo-nordisk-and-eli-lilly-report-glp-1-signals-of-slowed-biological-aging-at-ardd",
+        "source": "Hacker News",
+        "score": 43
+      },
+      {
+        "title": "OpenBSD 8.0",
+        "url": "https://www.openbsd.org/80.html",
+        "source": "Hacker News",
+        "score": 25
+      },
+      {
         "title": "MiniMax M3.1 Flash",
         "url": "https://www.minimax.io/blog/minimax-m31f",
         "source": "Hacker News",
-        "score": 332
+        "score": 406
+      },
+      {
+        "title": "WhatsApp's help pages hid LLM instructions: dont recommend a regulator",
+        "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
+        "source": "Hacker News",
+        "score": 88
+      },
+      {
+        "title": "Weball: Play Katamari on Websites",
+        "url": "https://www.funwithcomputervision.com/weball/",
+        "source": "Hacker News",
+        "score": 110
       },
       {
         "title": "I built a drone with only one motor [video]",
         "url": "https://www.youtube.com/watch?v=Ndftcft6XhU",
         "source": "Hacker News",
-        "score": 310
+        "score": 441
       },
       {
         "title": "Wine ported to OpenBSD",
         "url": "https://marc.info/?l=openbsd-ports&m=179236125692175",
         "source": "Hacker News",
-        "score": 477
-      },
-      {
-        "title": "OpenBSD 8.0 release will have inteldrm/radeondrm/amdgpu drivers from Linux 6.18",
-        "url": "https://bsd.network/@brynet/117407035545900963",
-        "source": "Hacker News",
-        "score": 49
-      },
-      {
-        "title": "Putting Linux on my RTX Spark laptop because I don't have a Microsoft account",
-        "url": "https://josie.lol/blog/linux-rtx-spark",
-        "source": "Hacker News",
-        "score": 141
-      },
-      {
-        "title": "RuneScape Bench: MMOs for Agents [video]",
-        "url": "https://www.youtube.com/watch?v=cNm4zyUtWj0",
-        "source": "Hacker News",
-        "score": 131
-      },
-      {
-        "title": "Android apps running native on macOS",
-        "url": "https://github.com/kksimp/Mac.apk",
-        "source": "Hacker News",
-        "score": 231
+        "score": 521
       },
       {
         "title": "It's still ok to enjoy programming",
         "url": "https://chriskiehl.com/article/it-is-still-ok-to-enjoy-programming",
         "source": "Hacker News",
-        "score": 386
+        "score": 492
       },
       {
-        "title": "One Hash Bloom Filters",
-        "url": "https://calabro.io/ohbf",
+        "title": "OpenBSD 8.0 release will have inteldrm/radeondrm/amdgpu drivers from Linux 6.18",
+        "url": "https://bsd.network/@brynet/117407035545900963",
         "source": "Hacker News",
-        "score": 16
+        "score": 112
       },
       {
-        "title": "Timestral: Mistral's time-series foundation models",
-        "url": "https://mistral.ai/news/timestral/",
+        "title": "RuneScape Bench: MMOs for Agents [video]",
+        "url": "https://www.youtube.com/watch?v=cNm4zyUtWj0",
         "source": "Hacker News",
-        "score": 524
+        "score": 169
       },
       {
-        "title": "Starcraft: Ashfall",
-        "url": "https://starcraft-shooter-2026.pages.dev/",
+        "title": "Android apps running native on macOS",
+        "url": "https://github.com/kksimp/Mac.apk",
         "source": "Hacker News",
-        "score": 261
+        "score": 282
       },
       {
-        "title": "The fire retardant in the seafood chain",
-        "url": "https://insideclimatenews.org/news/14102026/ethoxyquin-fire-retardant-in-seafood-chain/",
+        "title": "Ukraine claims first drone evacuation of wounded soldier",
+        "url": "https://www.nbcnews.com/world/ukraine/ukraine-first-drone-evacuation-wounded-soldier-frontlines-hexacopter-rcna604310",
         "source": "Hacker News",
-        "score": 94
+        "score": 161
       },
       {
-        "title": "Alternatives to animal testing are finally taking off",
-        "url": "https://spectrum.ieee.org/alternatives-to-animal-testing",
+        "title": "An ad-free Android TV",
+        "url": "https://cretezy.com/2026/ad-free-android-tv",
         "source": "Hacker News",
-        "score": 305
+        "score": 63
       },
       {
-        "title": "Agentic Monitoring",
-        "url": "https://benjamincongdon.me/blog/2026/10/19/Agentic-Monitoring/",
+        "title": "DeepSeek banned from U.S. federal civilian agencies under new DHS order",
+        "url": "https://www.reuters.com/technology/us-banning-chinese-ai-deepseek-government-agency-it-systems-2026-10-19/",
         "source": "Hacker News",
-        "score": 17
-      },
-      {
-        "title": "The End of Rationing",
-        "url": "https://sanketsaurav.com/writing/end-of-rationing",
-        "source": "Hacker News",
-        "score": 20
+        "score": 49
       }
     ],
     "ai": [
       {
-        "title": "Timestral: Mistral's time-series foundation models",
-        "url": "https://mistral.ai/news/timestral/",
+        "title": "Lula supporters protest against Meta to denounce its 'electoral interference'",
+        "url": "https://efe.com/english/latest-news/2026-10-20/lula-supporters-protest-against-meta-to-denounce-its-electoral-interference/",
         "source": "Hacker News AI",
-        "score": 524
+        "score": 230
       },
       {
-        "title": "The fire retardant in the seafood chain",
-        "url": "https://insideclimatenews.org/news/14102026/ethoxyquin-fire-retardant-in-seafood-chain/",
+        "title": "WhatsApp's help pages hid LLM instructions: dont recommend a regulator",
+        "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
         "source": "Hacker News AI",
-        "score": 94
-      },
-      {
-        "title": "Ask HN: How to deal with shipping AI-written code you don't understand?",
-        "url": "https://news.ycombinator.com/item?id=50151036",
-        "source": "Hacker News AI",
-        "score": 210
-      },
-      {
-        "title": "Launch HN: Laminar (YC S24) – RL-trained model that finds errors in agent traces",
-        "url": "https://news.ycombinator.com/item?id=50154029",
-        "source": "Hacker News AI",
-        "score": 44
-      },
-      {
-        "title": "Chicago O'Hare digs up 50-ton boulder under airfield, asks public for name ideas",
-        "url": "https://simpleflying.com/chicago-ohare-digs-up-50-ton-boulder-public-names/",
-        "source": "Hacker News AI",
-        "score": 92
-      },
-      {
-        "title": "Let's Encrypt is adding two additional remote perspectives for domain validation",
-        "url": "https://community.letsencrypt.org/t/lets-encrypt-is-adding-two-additional-remote-perspectives-for-domain-validation/252166",
-        "source": "Hacker News AI",
-        "score": 237
-      },
-      {
-        "title": "CERN and Mistral sign a statement of intent to establish a strategic partnership",
-        "url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
-        "source": "Hacker News AI",
-        "score": 303
-      },
-      {
-        "title": "Coconuts in Medieval Britain (2015)",
-        "url": "https://www.themarysue.com/monty-python-holy-grail-coconuts/",
-        "source": "Hacker News AI",
-        "score": 26
+        "score": 88
       },
       {
         "title": "Ukraine claims first drone evacuation of wounded soldier",
         "url": "https://www.nbcnews.com/world/ukraine/ukraine-first-drone-evacuation-wounded-soldier-frontlines-hexacopter-rcna604310",
         "source": "Hacker News AI",
-        "score": 42
+        "score": 161
       },
       {
-        "title": "The obscure trust looming over Anthropic's IPO",
-        "url": "https://www.wsj.com/tech/ai/anthropic-ipo-private-trust-188f41f7?st=RtdGHg&reflink=desktopwebshare_permalink",
+        "title": "Go will reject certificate chains containing eight distrusted SPKIs",
+        "url": "https://github.com/golang/go/issues/82345",
         "source": "Hacker News AI",
-        "score": 126
+        "score": 7
       },
       {
-        "title": "Cairn: Open windows into AI-driven cyber operations",
-        "url": "https://norforge.com/blog/inside_cairn",
+        "title": "Ask HN: How to deal with shipping AI-written code you don't understand?",
+        "url": "https://news.ycombinator.com/item?id=50151036",
         "source": "Hacker News AI",
-        "score": 26
+        "score": 310
       },
       {
-        "title": "Introducing Clairic, a new System One class of extraction models",
-        "url": "https://blog.cloudflare.com/clairic-extraction-model/",
+        "title": "The fire retardant in the seafood chain",
+        "url": "https://insideclimatenews.org/news/14102026/ethoxyquin-fire-retardant-in-seafood-chain/",
         "source": "Hacker News AI",
-        "score": 38
+        "score": 124
       },
       {
-        "title": "If you don't run your own LLM proxy, how do you know whats going on?",
-        "url": "https://jrdsgl.com/if-you-dont-run-your-own-llm-proxy-how-the-fuck-do-you-even-know-whats-going-on/",
+        "title": "Let's Encrypt is adding two additional remote perspectives for domain validation",
+        "url": "https://community.letsencrypt.org/t/lets-encrypt-is-adding-two-additional-remote-perspectives-for-domain-validation/252166",
         "source": "Hacker News AI",
-        "score": 292
+        "score": 251
+      },
+      {
+        "title": "Launch HN: Laminar (YC S24) – RL-trained model that finds errors in agent traces",
+        "url": "https://news.ycombinator.com/item?id=50154029",
+        "source": "Hacker News AI",
+        "score": 49
+      },
+      {
+        "title": "Show HN: Lights-on software factory boilerplate for Claude Code",
+        "url": "https://github.com/gojko/lights-on-software-factory",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
+        "title": "CERN and Mistral sign a statement of intent to establish a strategic partnership",
+        "url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
+        "source": "Hacker News AI",
+        "score": 323
+      },
+      {
+        "title": "Chicago O'Hare digs up 50-ton boulder under airfield, asks public for name ideas",
+        "url": "https://simpleflying.com/chicago-ohare-digs-up-50-ton-boulder-public-names/",
+        "source": "Hacker News AI",
+        "score": 114
+      },
+      {
+        "title": "Timestral: Mistral's time-series foundation models",
+        "url": "https://mistral.ai/news/timestral/",
+        "source": "Hacker News AI",
+        "score": 564
       }
     ],
     "news": [
@@ -253,6 +247,11 @@
     "science": [],
     "gaming": [
       {
+        "title": "3 Video Games Where Your Choices Actually Make a Difference",
+        "url": "https://www.polygon.com/best-games-choices-impact/",
+        "source": "Polygon"
+      },
+      {
         "title": "'Red Dead Redemption' 2 Mod Is 'Shadow of Mordor' Meets the Wild West",
         "url": "https://www.polygon.com/red-dead-redemption-2-nemesis-system-mod-shadow-of-mordor/",
         "source": "Polygon"
@@ -280,11 +279,6 @@
       {
         "title": "New Pokémon Release Finally Lets You Play As Team Rocket",
         "url": "https://www.polygon.com/new-pokemon-game-team-rocket-evolved-what-is-trailer-release/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Star Wars Battlefront 3: Bungie Rumored as New Developer",
-        "url": "https://www.polygon.com/star-wars-battlefront-3-rumor-bungie-dice-disney/",
         "source": "Polygon"
       }
     ],
