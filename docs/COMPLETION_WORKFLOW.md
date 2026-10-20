@@ -156,3 +156,4 @@ Code review（`340bf4c~1..HEAD`）找到並修正：
 - **Notion 同步（個人 Wiki）**：用 Notion 的真實 API 確認原本的寫法有 bug——更新頁面與附加區塊必須是 `PATCH`，原本送 `POST` 會得到 `400 invalid_request_url`，所以「新增頁面能成功、內容區塊寫不進去、既有頁面更新不了」。已修正，並補上：單次最多 100 區塊與單一文字最多 2000 字的分批、標題欄位名稱不是 `Name` 時的處理、缺少 `WikiId` 欄位時自動建立、拉取的區塊分頁、較清楚的錯誤訊息（Token 無效、沒把 Integration 加入資料庫），以及區塊太多時改成封存重建（逐一刪除受限於每秒約 3 次請求）。沒有真實 Notion 帳號可用，所以是用一個照 Notion 規則嚴格把關的模擬伺服器驗證（新增、更新、429 重試、拉取含分頁、區塊型別與待辦勾選），錯誤訊息則用真實 API 驗證；**尚未用真實帳號跑過**。
 - **GitHub Actions**：`data/` 內的 Bilibili 與 Twitter 快取每天都有「自動更新」commit，運作正常。
 - **Discord 整合**：需要你自己的 Bot Token、Application ID 與 D1 資料庫，無法代為驗證；`scripts/discord-bot-worker.js` 沒有對應的 `wrangler.toml`，目前只能手動貼到 Cloudflare。
+- **合成服務 Worker（`synth-worker/`）**：先前只用模擬伺服器測過、從未部署。已部署到 `https://siios-synth-worker.yaninlin.workers.dev`（`SYNTH_TOKEN` 用隨機金鑰，存在 Cloudflare secret，沒有寫進 repo）。實測：未帶或帶錯 Token 回 401、`/health` 回報 Workers AI 已綁定。**實際生成（圖片、語音）尚未驗證**——當天的 Workers AI 免費額度已被產生農場素材用完（回 `quota`，Worker 的錯誤處理正確），UTC 午夜（台灣早上 8 點）重置後再測。
