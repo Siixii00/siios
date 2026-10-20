@@ -1,74 +1,87 @@
 import { SettingsDB } from '../../../db.js';
+import { N, LEVELS, move, spawn, canMove, newBoard, maxTile } from './g2048-core.js';
+import { loadProgress, completeLevel, levelGridHtml, starText, totalStars } from './levels.js';
 
-const KEY = 'arcade_2048';
-const N = 4;
-
-// 把一行往前推並合併相同數字，回傳新的一行與得分
-function slide(line) {
-    const nums = line.filter(Boolean);
-    const out = [];
-    let gained = 0;
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] === nums[i + 1]) { out.push(nums[i] * 2); gained += nums[i] * 2; i++; } else out.push(nums[i]);
-    }
-    while (out.length < N) out.push(0);
-    return { line: out, gained };
-}
+const GAME = '2048';
+const CLASSIC_KEY = 'arcade_2048';
+const UNDOS = 3;
 
 export async function mount(root) {
-    const saved = (await SettingsDB.get(KEY)) || {};
-    let board = Array.isArray(saved.board) && saved.board.length === N * N ? saved.board.slice() : null;
-    let score = saved.score || 0;
-    let best = saved.best || 0;
-    let won = !!saved.won;
-    let over = false;
+    let progress = await loadProgress(GAME);
+    const saved = (await SettingsDB.get(CLASSIC_KEY)) || {};
+    let classicBest = saved.best || 0;
+    let mode = 'menu'; // menu | level | classic
+    let level = 0, board, score, moves, undos, history, over, won, stars;
 
-    const empty = () => board.map((v, i) => (v ? -1 : i)).filter(i => i >= 0);
-    function spawn() {
-        const e = empty();
-        if (!e.length) return;
-        board[e[Math.floor(Math.random() * e.length)]] = Math.random() < 0.9 ? 2 : 4;
-    }
-    function newGame() { board = Array(N * N).fill(0); score = 0; won = false; over = false; spawn(); spawn(); persist(); draw(); }
-    const persist = () => SettingsDB.set(KEY, { board, score, best, won });
-    function canMove() {
-        if (empty().length) return true;
-        for (let r = 0; r < N; r++) for (let c = 0; c < N; c++) {
-            const v = board[r * N + c];
-            if ((c < N - 1 && v === board[r * N + c + 1]) || (r < N - 1 && v === board[(r + 1) * N + c])) return true;
-        }
-        return false;
+    const tilesHtml = b => b.map(v => `<div class="t2048 v${v > 2048 ? 'big' : v}">${v || ''}</div>`).join('');
+
+    function showMenu() {
+        mode = 'menu';
+        root.innerHTML = `<div class="ag-wrap">
+            <p class="lv-summary">累計 ★ ${totalStars(progress)} / ${LEVELS.length * 3}</p>
+            ${levelGridHtml(progress, LEVELS.length, n => '合成 ' + LEVELS[n - 1].target)}
+            <button class="ag-btn" data-act="classic">無盡模式（最高 ${classicBest}）</button>
+        </div>`;
     }
 
-    function move(dir) {
-        if (over) return;
-        const before = board.join();
-        let gained = 0;
-        for (let k = 0; k < N; k++) {
-            // 取出一條線（依方向決定順序），推完再放回去
-            const idx = [];
-            for (let j = 0; j < N; j++) idx.push(dir === 'left' ? k * N + j : dir === 'right' ? k * N + (N - 1 - j) : dir === 'up' ? j * N + k : (N - 1 - j) * N + k);
-            const res = slide(idx.map(i => board[i]));
-            gained += res.gained;
-            idx.forEach((i, j) => { board[i] = res.line[j]; });
-        }
-        if (board.join() === before) return;
-        score += gained;
-        if (score > best) best = score;
-        spawn();
-        if (!won && board.includes(2048)) won = true;
-        if (!canMove()) over = true;
-        persist();
+    function startLevel(n) {
+        mode = 'level'; level = n;
+        board = newBoard(); score = 0; moves = LEVELS[n - 1].moves; undos = UNDOS; history = []; over = false; won = false; stars = 0;
+        draw();
+    }
+
+    function startClassic() {
+        mode = 'classic';
+        board = Array.isArray(saved.board) && saved.board.length === N * N ? saved.board.slice() : newBoard();
+        score = saved.score || 0; history = []; undos = UNDOS; over = !canMove(board); won = false;
         draw();
     }
 
     function draw() {
+        const lv = mode === 'level' ? LEVELS[level - 1] : null;
+        const overlay = lv && (won || over) ? `<div class="m3-overlay"><div class="m3-card"><h2>${won ? '🎉 過關！' : '😢 沒能完成'}</h2>${won ? `<p class="m3-stars">${starText(stars)}</p>` : `<p>${moves <= 0 ? '步數用完了' : '沒有可以移動的方塊了'}</p>`}
+            <div class="m3-btns">${won && level < LEVELS.length ? '<button data-act="next">下一關</button>' : ''}<button data-act="again">${won ? '再玩一次' : '再試一次'}</button><button data-act="menu">選關</button></div></div></div>` : '';
         root.innerHTML = `
-        <div class="ag-wrap">
-            <div class="ag-bar"><div><span>分數</span><strong>${score}</strong></div><div><span>最高</span><strong>${best}</strong></div><button class="ag-btn" data-act="new">新遊戲</button></div>
-            <div class="ag-board g2048" style="touch-action:none">${board.map(v => `<div class="t2048 v${v > 2048 ? 'big' : v}">${v || ''}</div>`).join('')}</div>
-            ${over ? '<p class="ag-msg lose">沒有可以移動的格子了！</p>' : won ? '<p class="ag-msg win">🎉 合成 2048！可以繼續挑戰更高分</p>' : '<p class="ag-hint">滑動畫面或用方向鍵移動方塊</p>'}
+        <div class="ag-wrap" style="position:relative">
+            <div class="lv-bar"><button class="ag-btn" data-act="menu">‹ 選關</button>${lv ? `<span>第 ${level} 關 · 合成 ${lv.target}</span>` : '<span>無盡模式</span>'}</div>
+            <div class="ag-bar"><div><span>分數</span><strong>${score}</strong></div>${lv ? `<div><span>剩餘步數</span><strong>${moves}</strong></div><div><span>最大方塊</span><strong>${maxTile(board)}</strong></div>` : `<div><span>最高</span><strong>${classicBest}</strong></div>`}<button class="ag-btn" data-act="undo" ${undos && history.length && !over ? '' : 'disabled'}>悔棋 ${undos}</button></div>
+            <div class="ag-board g2048" style="touch-action:none">${tilesHtml(board)}</div>
+            <p class="ag-hint">滑動畫面或用方向鍵移動方塊；悔棋每局 ${UNDOS} 次</p>
+            ${!lv ? '<button class="ag-btn" data-act="restart">重新開始</button>' : ''}
+            ${overlay}
         </div>`;
+    }
+
+    async function doMove(dir) {
+        if (mode === 'menu' || over || won) return;
+        const r = move(board, dir);
+        if (!r.moved) return;
+        history.push({ board, score, moves });
+        if (history.length > UNDOS + 1) history.shift();
+        board = spawn(r.board); score += r.gained;
+        if (mode === 'level') {
+            moves--;
+            const lv = LEVELS[level - 1];
+            if (maxTile(board) >= lv.target) {
+                won = true;
+                const left = moves / lv.moves;
+                stars = left >= 0.35 ? 3 : left >= 0.15 ? 2 : 1;
+                progress = await completeLevel(GAME, level, stars, LEVELS.length);
+            } else if (moves <= 0 || !canMove(board)) over = true;
+        } else {
+            if (score > classicBest) classicBest = score;
+            if (!canMove(board)) over = true;
+            await SettingsDB.set(CLASSIC_KEY, { board, score, best: classicBest });
+        }
+        draw();
+    }
+
+    function undo() {
+        if (!undos || !history.length || over) return;
+        const h = history.pop();
+        board = h.board; score = h.score; moves = h.moves; undos--;
+        if (mode === 'classic') SettingsDB.set(CLASSIC_KEY, { board, score, best: classicBest });
+        draw();
     }
 
     let start = null;
@@ -78,17 +91,25 @@ export async function mount(root) {
         const dx = e.clientX - start.x, dy = e.clientY - start.y;
         start = null;
         if (Math.max(Math.abs(dx), Math.abs(dy)) < 24) return;
-        move(Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? 'right' : 'left') : (dy > 0 ? 'down' : 'up'));
+        doMove(Math.abs(dx) > Math.abs(dy) ? (dx > 0 ? 'right' : 'left') : (dy > 0 ? 'down' : 'up'));
     };
     const onKey = e => {
         const map = { ArrowLeft: 'left', ArrowRight: 'right', ArrowUp: 'up', ArrowDown: 'down' };
-        if (map[e.key]) { e.preventDefault(); move(map[e.key]); }
+        if (map[e.key] && mode !== 'menu') { e.preventDefault(); doMove(map[e.key]); }
     };
     root.addEventListener('pointerdown', onDown);
     root.addEventListener('pointerup', onUp);
-    root.addEventListener('click', e => { if (e.target.closest('[data-act=new]')) newGame(); });
+    root.addEventListener('click', e => {
+        const lv = e.target.closest('.lv-btn'), act = e.target.closest('[data-act]')?.dataset.act;
+        if (lv && !lv.disabled) return startLevel(+lv.dataset.lv);
+        if (act === 'menu') showMenu();
+        else if (act === 'classic') startClassic();
+        else if (act === 'again') startLevel(level);
+        else if (act === 'next') startLevel(level + 1);
+        else if (act === 'undo') undo();
+        else if (act === 'restart') { saved.board = null; saved.score = 0; startClassic(); }
+    });
     window.addEventListener('keydown', onKey);
-
-    if (!board) newGame(); else { over = !canMove(); draw(); }
+    showMenu();
     return () => window.removeEventListener('keydown', onKey);
 }

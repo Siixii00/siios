@@ -1,232 +1,145 @@
 import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
-import { SettingsDB } from '../../db.js';
+import { SIZE, FRUITS, LEVEL_COUNT, levelConfig, makeBoard, findMatches, adjacent, validMoves, clearMatches, applyGravity, reshuffle, starsFor } from './engine.js';
+import { loadProgress, completeLevel, levelGridHtml, starText, totalStars } from '../arcade/games/levels.js';
 
-const BOARD_SIZE = 7;
-const FRUITS = ['🍎', '🍌', '🍇', '🍓', '🍊', '🍐'];
+const GAME = 'match3';
+const STEP_MS = 260;
+const wait = ms => new Promise(r => setTimeout(r, ms));
 
-let board = [];
-let score = 0;
-let moves = 20;
-let target = 800;
-let selectedIndex = null;
-let isAnimating = false;
-
-async function loadGameState() {
-  const saved = await SettingsDB.get('match3_state');
-  if (saved) {
-    score = saved.score || 0;
-    moves = saved.moves || 20;
-  }
-}
-
-async function saveGameState() {
-  await SettingsDB.set('match3_state', { score, moves });
-}
-
-function getRandomFruit() {
-  return FRUITS[Math.floor(Math.random() * FRUITS.length)];
-}
-
-function createBoard() {
-  board = [];
-  for (let i = 0; i < BOARD_SIZE * BOARD_SIZE; i++) {
-    board.push({ fruit: getRandomFruit() });
-  }
-}
-
-function getMatches() {
-  const matches = new Set();
-  
-  for (let row = 0; row < BOARD_SIZE; row++) {
-    for (let col = 0; col < BOARD_SIZE - 2; col++) {
-      const idx = row * BOARD_SIZE + col;
-      const fruit = board[idx].fruit;
-      if (fruit === board[idx + 1].fruit && fruit === board[idx + 2].fruit) {
-        matches.add(idx);
-        matches.add(idx + 1);
-        matches.add(idx + 2);
-      }
-    }
-  }
-  
-  for (let col = 0; col < BOARD_SIZE; col++) {
-    for (let row = 0; row < BOARD_SIZE - 2; row++) {
-      const idx = row * BOARD_SIZE + col;
-      const fruit = board[idx].fruit;
-      if (fruit === board[(row + 1) * BOARD_SIZE + col].fruit && 
-          fruit === board[(row + 2) * BOARD_SIZE + col].fruit) {
-        matches.add(idx);
-        matches.add((row + 1) * BOARD_SIZE + col);
-        matches.add((row + 2) * BOARD_SIZE + col);
-      }
-    }
-  }
-  
-  return Array.from(matches);
-}
-
-function areAdjacent(a, b) {
-  const rowA = Math.floor(a / BOARD_SIZE);
-  const colA = a % BOARD_SIZE;
-  const rowB = Math.floor(b / BOARD_SIZE);
-  const colB = b % BOARD_SIZE;
-  return Math.abs(rowA - rowB) + Math.abs(colA - colB) === 1;
-}
-
-function resolveMatches() {
-  let matches = getMatches();
-  
-  while (matches.length > 0) {
-    score += matches.length * 30;
-    
-    matches.forEach(idx => {
-      board[idx].fruit = null;
-    });
-    
-    for (let col = 0; col < BOARD_SIZE; col++) {
-      const column = [];
-      for (let row = BOARD_SIZE - 1; row >= 0; row--) {
-        const idx = row * BOARD_SIZE + col;
-        if (board[idx].fruit) {
-          column.push(board[idx].fruit);
-        }
-      }
-      
-      for (let row = BOARD_SIZE - 1; row >= 0; row--) {
-        const idx = row * BOARD_SIZE + col;
-        board[idx].fruit = column[BOARD_SIZE - 1 - row] || getRandomFruit();
-      }
-    }
-    
-    matches = getMatches();
-  }
-}
-
-function renderBoard(container) {
-  const boardEl = container.querySelector('.match-board');
-  if (!boardEl) return;
-  
-  boardEl.innerHTML = board.map((cell, idx) => `
-    <button class="tile ${selectedIndex === idx ? 'selected' : ''}" data-idx="${idx}">
-      ${cell.fruit || ''}
-    </button>
-  `).join('');
-  
-  boardEl.querySelectorAll('.tile').forEach(tile => {
-    tile.onclick = () => handleTileClick(container, parseInt(tile.dataset.idx));
-  });
-  
-  const scoreEl = container.querySelector('.score-value');
-  const movesEl = container.querySelector('.moves-value');
-  const targetEl = container.querySelector('.target-value');
-  
-  if (scoreEl) scoreEl.textContent = score;
-  if (movesEl) movesEl.textContent = moves;
-  if (targetEl) targetEl.textContent = target;
-}
-
-function handleTileClick(container, idx) {
-  if (isAnimating || moves <= 0) return;
-  
-  if (selectedIndex === null) {
-    selectedIndex = idx;
-    renderBoard(container);
-    return;
-  }
-  
-  if (selectedIndex === idx) {
-    selectedIndex = null;
-    renderBoard(container);
-    return;
-  }
-  
-  if (!areAdjacent(selectedIndex, idx)) {
-    selectedIndex = idx;
-    renderBoard(container);
-    return;
-  }
-  
-  const temp = board[selectedIndex];
-  board[selectedIndex] = board[idx];
-  board[idx] = temp;
-  
-  const matches = getMatches();
-  if (matches.length === 0) {
-    board[idx] = board[selectedIndex];
-    board[selectedIndex] = temp;
-    selectedIndex = null;
-    renderBoard(container);
-    return;
-  }
-  
-  isAnimating = true;
-  moves--;
-  selectedIndex = null;
-  resolveMatches();
-  isAnimating = false;
-  
-  renderBoard(container);
-  saveGameState();
-  
-  if (score >= target) {
-    createToast('🎉 達成目標！', 'success');
-  } else if (moves <= 0) {
-    createToast('😢 步數用盡！按「重新開始」再挑戰', 'error');
-  }
-}
-
-async function renderMatch3(params) {
-  await loadGameState();
-  createBoard();
-  
+async function renderMatch3() {
   const container = createElement('div', 'app-container match3-app');
-  
-  container.innerHTML = `
-    <header class="ios-header">
-      <button class="ios-back-btn">
-        <i class="fas fa-chevron-left"></i> 返回
-      </button>
-      <h1 class="menu-title">消消樂</h1>
-    </header>
-    
-    <div class="page">
+  let alive = true;
+  let progress = await loadProgress(GAME);
+  let cfg = null, board = [], score = 0, collected = 0, moves = 0;
+  let selected = null, busy = false, hintPair = null, clearing = new Set(), result = null;
+
+  const progressValue = () => (cfg.collect ? collected : score);
+
+  function frame(inner, title) {
+    container.innerHTML = `
+      <header class="ios-header">
+        <button class="ios-back-btn"><i class="fas fa-chevron-left"></i> 返回</button>
+        <h1 class="menu-title">${title}</h1>
+      </header>
+      <div class="page">${inner}</div>`;
+    container.querySelector('.ios-back-btn').onclick = () => (cfg ? showLevels() : Router.back());
+  }
+
+  function showLevels() {
+    cfg = null; result = null;
+    frame(`
+      <p class="lv-summary">累計 ★ ${totalStars(progress)} / ${LEVEL_COUNT * 3}　·　已解鎖 ${progress.unlocked} / ${LEVEL_COUNT} 關</p>
+      ${levelGridHtml(progress, LEVEL_COUNT, n => { const c = levelConfig(n); return c.collect ? '蒐集' + FRUITS[c.fruit] : '得分'; })}`, '消消樂');
+    container.querySelectorAll('.lv-btn').forEach(b => { b.onclick = () => startLevel(+b.dataset.lv); });
+  }
+
+  function startLevel(n) {
+    cfg = levelConfig(n);
+    board = makeBoard(cfg.types);
+    score = 0; collected = 0; moves = cfg.moves;
+    selected = null; busy = false; hintPair = null; clearing = new Set(); result = null;
+    draw();
+  }
+
+  function goalHtml() {
+    const done = Math.min(progressValue(), cfg.goal);
+    const label = cfg.collect ? `蒐集 ${FRUITS[cfg.fruit]} × ${cfg.goal}` : `得分 ${cfg.goal}`;
+    return `<div class="goal"><span>${label}</span><div class="goal-bar"><i style="width:${done / cfg.goal * 100}%"></i></div><span>${done}/${cfg.goal}</span></div>`;
+  }
+
+  function draw() {
+    frame(`
       <div class="game-info">
-        <div class="info-item">
-          <span class="info-label">分數</span>
-          <span class="info-value score-value">${score}</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">目標</span>
-          <span class="info-value target-value">${target}</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">步數</span>
-          <span class="info-value moves-value">${moves}</span>
-        </div>
+        <div class="info-item"><span class="info-label">關卡</span><span class="info-value">${cfg.level}</span></div>
+        <div class="info-item"><span class="info-label">分數</span><span class="info-value">${score}</span></div>
+        <div class="info-item"><span class="info-label">步數</span><span class="info-value moves-value">${moves}</span></div>
       </div>
-      
-      <div class="match-board" style="grid-template-columns: repeat(${BOARD_SIZE}, 1fr);"></div>
-      
-      <button class="restart-btn">重新開始</button>
-    </div>
-  `;
-  
-  const backBtn = container.querySelector('.ios-back-btn');
-  backBtn.onclick = () => Router.back();
-  
-  const restartBtn = container.querySelector('.restart-btn');
-  restartBtn.onclick = () => {
-    score = 0;
-    moves = 20;
-    createBoard();
-    renderBoard(container);
-    saveGameState();
-  };
-  
-  renderBoard(container);
-  
-  return { element: container, cleanup: null };
+      ${goalHtml()}
+      <div class="match-board" style="grid-template-columns: repeat(${SIZE}, 1fr);">${board.map((f, i) => `
+        <button class="tile ${selected === i ? 'selected' : ''} ${hintPair && hintPair.includes(i) ? 'hint' : ''} ${clearing.has(i) ? 'clearing' : ''}" data-idx="${i}">${f >= 0 ? FRUITS[f] : ''}</button>`).join('')}</div>
+      <div class="m3-actions"><button class="restart-btn" data-act="hint">💡 提示</button><button class="restart-btn" data-act="restart">重新開始</button></div>
+      ${result ? overlayHtml() : ''}`, '第 ' + cfg.level + ' 關');
+    container.querySelectorAll('.tile').forEach(t => { t.onclick = () => onTile(+t.dataset.idx); });
+    container.querySelector('[data-act=hint]').onclick = showHint;
+    container.querySelector('[data-act=restart]').onclick = () => startLevel(cfg.level);
+    container.querySelectorAll('[data-ov]').forEach(b => { b.onclick = () => overlayAction(b.dataset.ov); });
+  }
+
+  function overlayHtml() {
+    if (result.won) {
+      return `<div class="m3-overlay"><div class="m3-card"><h2>🎉 過關！</h2><p class="m3-stars">${starText(result.stars)}</p><p>得分 ${score}${cfg.collect ? '，蒐集 ' + collected : ''}，剩 ${moves} 步</p>
+        <div class="m3-btns">${cfg.level < LEVEL_COUNT ? '<button data-ov="next">下一關</button>' : ''}<button data-ov="again">再玩一次</button><button data-ov="levels">選關</button></div></div></div>`;
+    }
+    return `<div class="m3-overlay"><div class="m3-card"><h2>😢 步數用完了</h2><p>還差 ${cfg.goal - progressValue()} ${cfg.collect ? '個' + FRUITS[cfg.fruit] : '分'}</p>
+      <div class="m3-btns"><button data-ov="again">再試一次</button><button data-ov="levels">選關</button></div></div></div>`;
+  }
+
+  function overlayAction(a) {
+    if (a === 'next') startLevel(cfg.level + 1);
+    else if (a === 'again') startLevel(cfg.level);
+    else showLevels();
+  }
+
+  function showHint() {
+    if (busy || result) return;
+    const list = validMoves(board).sort((x, y) => y.size - x.size);
+    if (!list.length) return;
+    hintPair = [list[0].a, list[0].b];
+    draw();
+    setTimeout(() => { hintPair = null; if (alive && cfg && !result) draw(); }, 1500);
+  }
+
+  async function onTile(i) {
+    if (busy || result) return;
+    hintPair = null;
+    if (selected === null) { selected = i; return draw(); }
+    if (selected === i) { selected = null; return draw(); }
+    if (!adjacent(selected, i)) { selected = i; return draw(); }
+    const a = selected;
+    selected = null;
+    busy = true;
+    [board[a], board[i]] = [board[i], board[a]];
+    if (!findMatches(board).size) { // 沒有形成消除：換過去、再換回來
+      draw(); await wait(180);
+      [board[a], board[i]] = [board[i], board[a]];
+      busy = false;
+      if (alive) draw();
+      return;
+    }
+    moves--;
+    let chain = 0;
+    for (;;) {
+      const m = findMatches(board);
+      if (!m.size) break;
+      chain++;
+      score += m.size * 10 * chain;
+      clearing = new Set(m);
+      draw(); await wait(STEP_MS);
+      if (!alive) return;
+      const counts = clearMatches(board, m);
+      collected += counts[cfg.fruit] || 0;
+      clearing = new Set();
+      applyGravity(board, cfg.types);
+      draw(); await wait(STEP_MS);
+      if (!alive) return;
+    }
+    if (progressValue() >= cfg.goal) {
+      const stars = starsFor(cfg, progressValue());
+      progress = await completeLevel(GAME, cfg.level, Math.max(1, stars), LEVEL_COUNT);
+      result = { won: true, stars: Math.max(1, stars) };
+    } else if (moves <= 0) {
+      result = { won: false };
+    } else if (!validMoves(board).length) {
+      reshuffle(board, cfg.types);
+      createToast('沒有可以移動的方塊了，已重新洗牌');
+    }
+    busy = false;
+    if (alive) draw();
+  }
+
+  showLevels();
+  return { element: container, cleanup: () => { alive = false; } };
 }
 
 export default {

@@ -1,39 +1,55 @@
-import { SettingsDB } from '../../../db.js';
+import { loadProgress, completeLevel, levelGridHtml, starText, totalStars } from './levels.js';
 
-const KEY = 'arcade_memory_best';
+const GAME = 'memory';
 const EMOJI = ['🍎', '🍋', '🍇', '🍓', '🍒', '🥝', '🍑', '🍍', '🥥', '🍉', '🌶️', '🥕'];
-const LEVELS = { easy: { name: '簡單', pairs: 6, cols: 4 }, normal: { name: '普通', pairs: 8, cols: 4 }, hard: { name: '困難', pairs: 12, cols: 6 } };
+// 每關的對數與步數上限：越後面對數越多、上限越緊
+const LEVELS = [3, 4, 5, 6, 6, 8, 8, 10, 10, 12, 12, 12].map((pairs, i) => ({ pairs, limit: Math.ceil(pairs * (i < 8 ? 2.8 : i < 10 ? 2.4 : 2.1)) }));
+const cols = pairs => (pairs * 2 <= 12 ? 4 : pairs * 2 <= 20 ? 5 : 6);
 
 export async function mount(root) {
-    const best = (await SettingsDB.get(KEY)) || {};
-    let level = 'normal';
-    let cards, flipped, moves, matched, locked, startedAt, timerId, elapsed, finished;
+    let progress = await loadProgress(GAME);
+    let level = 0, cards, flipped, moves, matched, locked, startedAt, timerId, elapsed, finished, failed, stars;
 
-    function newGame() {
+    function showMenu() {
         clearInterval(timerId);
-        const pairs = LEVELS[level].pairs;
-        const faces = EMOJI.slice(0, pairs);
+        root.innerHTML = `<div class="ag-wrap">
+            <p class="lv-summary">累計 ★ ${totalStars(progress)} / ${LEVELS.length * 3}</p>
+            ${levelGridHtml(progress, LEVELS.length, n => LEVELS[n - 1].pairs + ' 對')}
+            <p class="ag-hint">在步數上限內翻完所有牌；步數越少星星越多</p>
+        </div>`;
+        level = 0;
+    }
+
+    function startLevel(n) {
+        clearInterval(timerId);
+        level = n;
+        const lv = LEVELS[n - 1];
+        const faces = EMOJI.slice(0, lv.pairs);
         cards = [...faces, ...faces].map((face, i) => ({ id: i, face })).sort(() => Math.random() - 0.5);
-        flipped = []; moves = 0; matched = new Set(); locked = false; startedAt = 0; elapsed = 0; finished = false;
+        flipped = []; moves = 0; matched = new Set(); locked = false; startedAt = 0; elapsed = 0; finished = false; failed = false; stars = 0;
         draw();
     }
 
     function draw() {
-        const lv = LEVELS[level];
+        const lv = LEVELS[level - 1];
+        const overlay = finished || failed ? `<div class="m3-overlay"><div class="m3-card"><h2>${finished ? '🎉 完成！' : '😢 步數用完了'}</h2>${finished ? `<p class="m3-stars">${starText(stars)}</p><p>${moves} 步、${elapsed} 秒</p>` : '<p>再專心記一下位置吧</p>'}
+            <div class="m3-btns">${finished && level < LEVELS.length ? '<button data-act="next">下一關</button>' : ''}<button data-act="again">${finished ? '再玩一次' : '再試一次'}</button><button data-act="menu">選關</button></div></div></div>` : '';
         root.innerHTML = `
-        <div class="ag-wrap">
-            <div class="ag-levels">${Object.entries(LEVELS).map(([k, v]) => `<button class="ag-chip ${k === level ? 'on' : ''}" data-level="${k}">${v.name}</button>`).join('')}</div>
-            <div class="ag-bar"><div><span>步數</span><strong>${moves}</strong></div><div><span>時間</span><strong id="mm-time">${elapsed}s</strong></div><div><span>最佳</span><strong>${best[level] ? best[level] + ' 步' : '—'}</strong></div><button class="ag-btn" data-act="new">重來</button></div>
-            <div class="ag-board memory" style="grid-template-columns:repeat(${lv.cols},1fr)">${cards.map((c, i) => {
+        <div class="ag-wrap" style="position:relative">
+            <div class="lv-bar"><button class="ag-btn" data-act="menu">‹ 選關</button><span>第 ${level} 關 · ${lv.pairs} 對</span></div>
+            <div class="ag-bar"><div><span>步數</span><strong>${moves}/${lv.limit}</strong></div><div><span>時間</span><strong id="mm-time">${elapsed}s</strong></div></div>
+            <div class="ag-board memory" style="grid-template-columns:repeat(${cols(lv.pairs)},1fr)">${cards.map((c, i) => {
                 const open = flipped.includes(i) || matched.has(i);
                 return `<button class="mm-card ${open ? 'open' : ''} ${matched.has(i) ? 'done' : ''}" data-i="${i}">${open ? c.face : '❓'}</button>`;
             }).join('')}</div>
-            ${finished ? `<p class="ag-msg win">🎉 完成！${moves} 步、${elapsed} 秒${best[level] === moves ? '（新紀錄）' : ''}</p>` : '<p class="ag-hint">翻開兩張相同的牌就能消除</p>'}
+            <p class="ag-hint">翻開兩張相同的牌就能消除</p>
+            ${overlay}
         </div>`;
     }
 
     async function flip(i) {
-        if (locked || finished || flipped.includes(i) || matched.has(i)) return;
+        if (locked || finished || failed || flipped.includes(i) || matched.has(i)) return;
+        const lv = LEVELS[level - 1];
         if (!startedAt) {
             startedAt = Date.now();
             timerId = setInterval(() => { elapsed = Math.floor((Date.now() - startedAt) / 1000); const t = root.querySelector('#mm-time'); if (t) t.textContent = elapsed + 's'; }, 500);
@@ -46,20 +62,25 @@ export async function mount(root) {
             matched.add(a); matched.add(b); flipped = [];
             if (matched.size === cards.length) {
                 finished = true; clearInterval(timerId); elapsed = Math.floor((Date.now() - startedAt) / 1000);
-                if (!best[level] || moves < best[level]) { best[level] = moves; await SettingsDB.set(KEY, best); }
-            }
+                stars = moves <= lv.pairs * 1.6 ? 3 : moves <= lv.pairs * 2.1 ? 2 : 1;
+                progress = await completeLevel(GAME, level, stars, LEVELS.length);
+            } else if (moves >= lv.limit) { failed = true; clearInterval(timerId); }
             return draw();
         }
-        locked = true; draw();
-        setTimeout(() => { flipped = []; locked = false; draw(); }, 700);
+        locked = true;
+        if (moves >= lv.limit) { failed = true; clearInterval(timerId); }
+        draw();
+        setTimeout(() => { flipped = []; locked = false; if (level) draw(); }, 700);
     }
 
     root.addEventListener('click', e => {
-        const card = e.target.closest('.mm-card'), lvl = e.target.closest('[data-level]');
+        const card = e.target.closest('.mm-card'), lv = e.target.closest('.lv-btn'), act = e.target.closest('[data-act]')?.dataset.act;
         if (card) flip(+card.dataset.i);
-        else if (lvl) { level = lvl.dataset.level; newGame(); }
-        else if (e.target.closest('[data-act=new]')) newGame();
+        else if (lv && !lv.disabled) startLevel(+lv.dataset.lv);
+        else if (act === 'menu') showMenu();
+        else if (act === 'again') startLevel(level);
+        else if (act === 'next') startLevel(level + 1);
     });
-    newGame();
+    showMenu();
     return () => clearInterval(timerId);
 }

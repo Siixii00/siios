@@ -85,3 +85,26 @@
 .restart-btn:hover {
   background: #c50812;
 }
+/* 關卡制 */
+.match3-app { --lv-card: #16213e; --lv-line: #2c3a63; --lv-text: #e5e5e5; --lv-muted: #888; }
+.match3-app .page { position: relative; }
+.goal { display: flex; align-items: center; gap: 8px; width: 100%; max-width: 350px; color: var(--match-text); font-size: 13px; }
+.goal-bar { flex: 1; height: 10px; background: var(--match-card); border-radius: 100px; overflow: hidden; }
+.goal-bar i { display: block; height: 100%; background: linear-gradient(90deg, #f8b040, #e50914); transition: width .25s; }
+.tile.hint { animation: m3pulse .6s infinite alternate; background: #2e8b57; }
+.tile.clearing { transform: scale(.4); opacity: .2; transition: all .2s; }
+@keyframes m3pulse { to { transform: scale(1.12); } }
+.m3-actions { display: flex; gap: 12px; }
+.m3-overlay { position: absolute; inset: 0; background: rgba(0,0,0,.65); display: flex; align-items: center; justify-content: center; z-index: 5; }
+.m3-card { background: var(--match-card); color: var(--match-text); padding: 24px; border-radius: 20px; text-align: center; min-width: 240px; }
+.m3-card h2 { margin: 0 0 8px; } .m3-stars { font-size: 28px; color: #f8b040; margin: 4px 0; letter-spacing: 4px; }
+.m3-btns { display: flex; gap: 8px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+.m3-btns button { padding: 10px 16px; border: none; border-radius: 10px; background: var(--match-accent); color: #fff; font-weight: 700; cursor: pointer; }
+.lv-summary { margin: 0; color: var(--lv-muted); font-size: 13px; text-align: center; }
+.lv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); gap: 10px; width: 100%; max-width: 380px; }
+.lv-btn { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 4px; border: 2px solid var(--lv-line); background: var(--lv-card); color: var(--lv-text); cursor: pointer; border-radius: 12px; font: inherit; }
+.lv-btn strong { font-size: 20px; }
+.lv-btn .lv-stars { font-size: 12px; color: #f8b040; letter-spacing: 1px; }
+.lv-btn small { font-size: 10px; color: var(--lv-muted); min-height: 12px; }
+.lv-btn.done { border-color: #f8b040; }
+.lv-btn.locked { opacity: .4; cursor: default; }

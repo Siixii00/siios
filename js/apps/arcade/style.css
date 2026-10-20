@@ -268,3 +268,23 @@
 .mn-cell.open { background: #d9d9d9; border-color: #bbb; } .mn-cell.boom { background: #ff7a7a; }
 .mn-cell.n1 { color: #1976d2; } .mn-cell.n2 { color: #388e3c; } .mn-cell.n3 { color: #d32f2f; } .mn-cell.n4 { color: #512da8; }
 .mn-cell.n5 { color: #8d3b00; } .mn-cell.n6 { color: #00838f; } .mn-cell.n7, .mn-cell.n8 { color: #000; }
+
+/* 關卡選單（各遊戲共用） */
+.arcade-app { --lv-card: #303030; --lv-line: #484848; --lv-text: #f8f8f8; --lv-muted: #909090; }
+.lv-summary { margin: 0; color: var(--lv-muted); font-size: 13px; text-align: center; }
+.lv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); gap: 10px; width: 100%; max-width: 380px; }
+.lv-btn { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 4px; border: 2px solid var(--lv-line); background: var(--lv-card); color: var(--lv-text); cursor: pointer; border-radius: 12px; font: inherit; }
+.lv-btn strong { font-size: 20px; }
+.lv-btn .lv-stars { font-size: 12px; color: #f8b040; letter-spacing: 1px; }
+.lv-btn small { font-size: 10px; color: var(--lv-muted); min-height: 12px; }
+.lv-btn.done { border-color: #f8b040; }
+.lv-btn.locked { opacity: .4; cursor: default; }
+.lv-bar { display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 360px; }
+.lv-bar .ag-btn { padding: 8px 14px; }
+.arcade-app .lv-bar span { color: var(--arcade-text); font-weight: 700; }
+.arcade-app .m3-overlay { position: absolute; inset: -8px; background: rgba(0,0,0,.7); display: flex; align-items: center; justify-content: center; z-index: 5; }
+.arcade-app .m3-card { background: var(--arcade-card); border: 2px solid var(--arcade-accent); color: var(--arcade-text); padding: 24px; text-align: center; min-width: 240px; }
+.arcade-app .m3-card h2 { margin: 0 0 8px; } .arcade-app .m3-stars { font-size: 28px; color: var(--arcade-accent); margin: 4px 0; letter-spacing: 4px; }
+.arcade-app .m3-btns { display: flex; gap: 8px; justify-content: center; margin-top: 16px; flex-wrap: wrap; }
+.arcade-app .m3-btns button { padding: 10px 16px; border: none; background: var(--arcade-accent); color: #000; font-weight: 800; cursor: pointer; }
+.ag-btn:disabled { opacity: .4; }
