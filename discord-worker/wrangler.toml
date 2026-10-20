@@ -1,0 +1,12 @@
+name = "siios-discord-bot"
+main = "../scripts/discord-bot-worker.js"
+compatibility_date = "2024-09-01"
+
+# 刻意沒有寫 [triggers] crons 與 [vars]：既有的排程與環境變數維持 Cloudflare 上目前的設定。
+# 部署請用：npx wrangler deploy --keep-vars
+# 密鑰（DISCORD_BOT_TOKEN 等）存在 Cloudflare secret，部署不會動到。
+
+[[d1_databases]]
+binding = "DB"
+database_name = "siios-discord-db"
+database_id = "4decb0c1-d4df-4dfb-8176-00b74fc8a8a7"
