@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-20T14:45:20.502528",
-    "total_items": 59
+    "last_updated": "2026-10-20T18:59:14.300193",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
-        "title": "DeepSeek just open-sourced its inference engine",
+        "title": "Voxtral 3",
+        "url": "https://mistral.ai/news/voxtral-3/",
+        "source": "Hacker News",
+        "score": 294
+      },
+      {
+        "title": "DeepInfer: High-performance inference framework for DeepSeek models",
         "url": "https://github.com/deepseek-ai/DeepInfer",
         "source": "Hacker News",
-        "score": 1261
+        "score": 1920
       },
       {
-        "title": "Apple broke an essential presentation feature of iPads",
-        "url": "https://teddysvoronos.com/2026-10-19-apple-broke-an-essential-presentation-feature-of-ipads/",
+        "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
+        "url": "https://github.com/google-pytorch/torch_tpu",
         "source": "Hacker News",
-        "score": 147
-      },
-      {
-        "title": "Publish fake stats, get cited in LLMs",
-        "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web",
-        "source": "Hacker News",
-        "score": 83
-      },
-      {
-        "title": "NixOS is making me less afraid",
-        "url": "https://entropicthoughts.com/nixos-is-making-me-less-afraid",
-        "source": "Hacker News",
-        "score": 79
+        "score": 110
       },
       {
         "title": "EMudhra Intermediate CA Compromise",
         "url": "https://emudhra.we-have-a-problem.com/",
         "source": "Hacker News",
-        "score": 19
+        "score": 336
       },
       {
-        "title": "MicroG: Free-libre re-implementation of Google's proprietary Android user space",
-        "url": "https://github.com/microg/GmsCore/wiki",
+        "title": "Ofcom concedes defeat in 4chan case",
+        "url": "https://prestonbyrne.com/2026/10/20/ofcom-concedes-defeat/",
         "source": "Hacker News",
-        "score": 232
+        "score": 180
       },
       {
-        "title": "Nordwand Mono – A monospace font for coders and adventurers",
-        "url": "https://github.com/tywr/Nordwand-Mono",
+        "title": "Advanced coding in low-resource programming languages",
+        "url": "https://openai.com/index/low-resource-programming-languages/",
         "source": "Hacker News",
-        "score": 434
+        "score": 27
+      },
+      {
+        "title": "SimCity, but with Permits",
+        "url": "https://permit.petercai.com/",
+        "source": "Hacker News",
+        "score": 12
+      },
+      {
+        "title": "Apple broke an essential presentation feature of iPads",
+        "url": "https://teddysvoronos.com/2026-10-19-apple-broke-an-essential-presentation-feature-of-ipads/",
+        "source": "Hacker News",
+        "score": 351
+      },
+      {
+        "title": "SlopCodeBench 10/2026 – Opus 5.5, Astra wins overall, xhigh considered harmful",
+        "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-new-models-on-slop-code-bench.md",
+        "source": "Hacker News",
+        "score": 13
       },
       {
         "title": "Tsrs: A Port of TypeScript to Rust",
         "url": "https://blog.cloudflare.com/typescript-rust-port/",
         "source": "Hacker News",
-        "score": 40
+        "score": 215
+      },
+      {
+        "title": "Publish fake stats, get cited in LLMs",
+        "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web",
+        "source": "Hacker News",
+        "score": 258
       },
       {
         "title": "How I got over 300 Tor exit nodes removed",
         "url": "https://kaba.cx/posts/20261020_Tor/",
         "source": "Hacker News",
-        "score": 19
+        "score": 214
       },
       {
-        "title": "OpenBSD 8.0",
-        "url": "https://www.openbsd.org/80.html",
+        "title": "Facebook Pages require paid subscription to post more than two links per month",
+        "url": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
         "source": "Hacker News",
-        "score": 402
+        "score": 338
       },
       {
-        "title": "Hazel (YC W24) Is Hiring",
-        "url": "https://www.ycombinator.com/companies/hazel-2/jobs/PpNKYBS-full-stack-engineer-ts-sci",
+        "title": "IKEA – 3D Guide",
+        "url": "https://sael.net/flatpack/",
         "source": "Hacker News",
-        "score": 1
+        "score": 62
       },
       {
-        "title": "My Friend Bob Cringely",
-        "url": "https://tyma.com/my-cringe-story/",
+        "title": "Triplet of 'ghostly' galaxies hints at what dark matter is and isn't",
+        "url": "https://www.quantamagazine.org/triplet-of-ghostly-galaxies-hints-at-what-dark-matter-is-and-isnt-20261014/",
         "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "WhatsApp's help pages hid LLM instructions: dont recommend a regulator",
-        "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
-        "source": "Hacker News",
-        "score": 632
-      },
-      {
-        "title": "DeepSeek banned from U.S. federal civilian agencies under new DHS order",
-        "url": "https://www.reuters.com/technology/us-banning-chinese-ai-deepseek-government-agency-it-systems-2026-10-19/",
-        "source": "Hacker News",
-        "score": 432
-      },
-      {
-        "title": "Capturing 400 American Girls and Their Most Meaningful Objects",
-        "url": "https://petapixel.com/2026/10/17/photographer-spends-six-years-capturing-400-american-girls-and-their-most-meaningful-objects/",
-        "source": "Hacker News",
-        "score": 13
+        "score": 71
       }
     ],
     "ai": [
@@ -101,63 +101,64 @@
         "title": "Publish fake stats, get cited in LLMs",
         "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web",
         "source": "Hacker News AI",
-        "score": 83
+        "score": 258
+      },
+      {
+        "title": "Facebook Pages require paid subscription to post more than two links per month",
+        "url": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
+        "source": "Hacker News AI",
+        "score": 338
       },
       {
         "title": "NixOS is making me less afraid",
         "url": "https://entropicthoughts.com/nixos-is-making-me-less-afraid",
         "source": "Hacker News AI",
-        "score": 79
+        "score": 131
       },
       {
-        "title": "WhatsApp's help pages hid LLM instructions: dont recommend a regulator",
-        "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
+        "title": "Launch HN: Respan (YC W24) – Open-source Rust AI gateway built around plugins",
+        "url": "https://news.ycombinator.com/item?id=50167583",
         "source": "Hacker News AI",
-        "score": 632
+        "score": 28
+      },
+      {
+        "title": "Show HN: Penmentor – Claude marks up your handwritten math like a teacher",
+        "url": "https://github.com/AbdullahAlhariri/penmentor",
+        "source": "Hacker News AI",
+        "score": 38
+      },
+      {
+        "title": "Benchmarking Bot Detection Systems Against Modern AI Agents in 2026",
+        "url": "https://research.poh.org/bot-benchmarking-2026/",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "One Manhattan power room took down FAA air traffic control in 1991",
         "url": "https://matthorn.io/posts/2026-10-18-33-thomas-street/",
         "source": "Hacker News AI",
+        "score": 42
+      },
+      {
+        "title": "Claude designed protein binders against scorpion neurotoxins",
+        "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+        "source": "Hacker News AI",
         "score": 4
       },
       {
-        "title": "Ukraine claims first drone evacuation of wounded soldier",
-        "url": "https://www.nbcnews.com/world/ukraine/ukraine-first-drone-evacuation-wounded-soldier-frontlines-hexacopter-rcna604310",
+        "title": "Steam Users Beg for \"No AI\" Filter as Vibecoders Flood Next Fest",
+        "url": "https://www.ign.com/articles/steam-fans-are-begging-for-a-no-ai-filter-as-steam-next-fest-is-filled-with-slop",
         "source": "Hacker News AI",
-        "score": 380
+        "score": 130
       },
       {
-        "title": "Ask HN: How to deal with shipping AI-written code you don't understand?",
-        "url": "https://news.ycombinator.com/item?id=50151036",
+        "title": "WhatsApp's help pages hid LLM instructions: dont recommend a regulator",
+        "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
         "source": "Hacker News AI",
-        "score": 546
-      },
-      {
-        "title": "Go will reject certificate chains containing eight distrusted SPKIs",
-        "url": "https://github.com/golang/go/issues/82345",
-        "source": "Hacker News AI",
-        "score": 127
-      },
-      {
-        "title": "The fire retardant in the seafood chain",
-        "url": "https://insideclimatenews.org/news/14102026/ethoxyquin-fire-retardant-in-seafood-chain/",
-        "source": "Hacker News AI",
-        "score": 150
-      },
-      {
-        "title": "Launch HN: Laminar (YC S24) – RL-trained model that finds errors in agent traces",
-        "url": "https://news.ycombinator.com/item?id=50154029",
-        "source": "Hacker News AI",
-        "score": 58
+        "score": 696
       }
     ],
     "news": [
-      {
-        "title": "Zelensky and US envoys to hold Oslo talks as Rubio denies withholding intelligence",
-        "url": "https://www.bbc.co.uk/news/articles/ck9qzn193lrlo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
       {
         "title": "Marseille braces for more unrest after protests give way to 'apocalyptic' disorder",
         "url": "https://www.bbc.co.uk/news/articles/cm5ynkk570pno?at_medium=RSS&at_campaign=rss",
@@ -169,8 +170,13 @@
         "source": "BBC World"
       },
       {
-        "title": "Sudan army drones hit mourners and fuel market killing more than 200 people, sources say",
+        "title": "Sudan army drones hit mourners and fuel market killing more than 300 people, sources say",
         "url": "https://www.bbc.co.uk/news/articles/cr3el70jz1nqo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "'Great result for Canada', says Carney as Alberta votes to reject separatism ",
+        "url": "https://www.bbc.co.uk/news/articles/cxr5yqqd7nlpo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -184,12 +190,17 @@
         "source": "BBC World"
       },
       {
-        "title": "Kenya cult leader's children still being starved weeks before trial, son says",
-        "url": "https://www.bbc.co.uk/news/articles/c6d7q2rxqxgxo?at_medium=RSS&at_campaign=rss",
+        "title": "Swimmer, 65, killed in shark attack off South Africa's east coast",
+        "url": "https://www.bbc.co.uk/news/articles/cqx297pxg1djo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " DaVinci Resolve Studio just got a very rare 20% discount ",
+        "url": "https://www.creativebloq.com/deals/davinci-resolve-studio-just-got-a-super-rare-20-percent-discount",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Cricut StickerPix Print + Cut review: a playful, professional printer with a hidden cost ",
         "url": "https://www.creativebloq.com/reviews/cricut-stickerpix-print-cut-review-a-playful-and-purposeful-printer-with-a-costly-catch",
@@ -218,11 +229,6 @@
       {
         "title": " Google Meet's appearance filters just sent me into an existential spiral ",
         "url": "https://www.creativebloq.com/features/google-meets-appearance-filters-just-sent-me-into-an-existential-spiral",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Magical new Narnia cover art is a notch above the usual movie tie-ins ",
-        "url": "https://www.creativebloq.com/news/magical-new-narnia-cover-art-is-a-notch-above-the-usual-movie-tie-ins",
         "source": "Creative Bloq"
       }
     ],
@@ -265,43 +271,48 @@
     ],
     "gaming": [
       {
-        "title": "Final Fantasy Resonance Reviews Beat Square Enix's Previous HD-2D RPG",
-        "url": "https://www.polygon.com/final-fantasy-resonance-review-roundup/",
+        "title": "New Cheaper PS5 Officially Available for Pre-Order Now",
+        "url": "https://www.polygon.com/ps5-midnight-edition-preorders-open-now-japan/",
         "source": "Polygon"
       },
       {
-        "title": "Nintendo Switch Sports Resort Reviews Prove the Series Isn't Winning Any Awards",
-        "url": "https://www.polygon.com/nintendo-switch-sports-resort-review-roundup/",
+        "title": "Marvel Rivals Officially Brings Avengers: Endgame's Final Fight to Life",
+        "url": "https://www.polygon.com/marvel-rivals-50-player-pve-avengers-endgame/",
         "source": "Polygon"
       },
       {
-        "title": "PS6 price update is bad news for millions of gamers",
-        "url": "https://www.polygon.com/ps6-price-update/",
+        "title": "Magic: The Gathering Star Trek Shakes Up Commander With 2 Bold New Mechanics",
+        "url": "https://www.polygon.com/magic-star-trek-commander-mechanics/",
         "source": "Polygon"
       },
       {
-        "title": "James Gunn Officially Comments on the Status of DCU’s Batman and Flash",
-        "url": "https://www.polygon.com/james-gunn-dc-universe-batman-wally-west-canon-answers/",
+        "title": "Magic: The Gathering Star Trek Officially Adds a New Way to Lose the Game",
+        "url": "https://www.polygon.com/kobayashi-maru-magic-star-trek/",
         "source": "Polygon"
       },
       {
-        "title": "Mike Flanagan Officially Confirms His Plan for The Dark Tower TV Series Adaptation",
-        "url": "https://www.polygon.com/dark-tower-tv-series-update-mike-flanagan-faithful-books/",
+        "title": "'Final Fantasy 7 Remake' Leads New Wave of Xbox Game Pass Additions",
+        "url": "https://www.polygon.com/xbox-game-pass-new-games-october-2026-final-fantasy-7-remake/",
         "source": "Polygon"
       },
       {
-        "title": "James Gunn Officially Shuts Down Milly Alcock Supergirl Rumors",
-        "url": "https://www.polygon.com/supergirl-rumors-james-gunn-shuts-down-milly-alcock/",
+        "title": "Zelda: Ocarina of Time Remake File Size Officially Confirmed",
+        "url": "https://www.polygon.com/legend-of-zelda-ocarina-of-time-remake-nintendo-switch-2-file-size/",
         "source": "Polygon"
       },
       {
-        "title": "Cyberpunk 2077 Is Getting a Big Update This Week",
-        "url": "https://www.polygon.com/cyberpunk-2077-edgerunners-2-update-netflix/",
+        "title": "Star Wars Is Throwing Its Own Super Bowl, with an Original Cast Member Returning",
+        "url": "https://www.polygon.com/disney-star-wars-super-bowl-2027-animated/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "How 3 Java Champions are using GitHub Copilot for increased productivity",
+        "url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "How to continue a GitHub Copilot app session in VS Code",
         "url": "https://github.blog/ai-and-ml/github-copilot/how-to-continue-a-github-copilot-app-session-in-vs-code/",
@@ -330,11 +341,6 @@
       {
         "title": "GitHub’s model for secret detection: Finding more secrets with less noise",
         "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "GitHub Copilot app for Beginners: How to teach Copilot about your codebase",
-        "url": "https://github.blog/ai-and-ml/github-copilot/github-copilot-app-for-beginners-how-to-teach-copilot-about-your-codebase/",
         "source": "GitHub Blog"
       }
     ]
