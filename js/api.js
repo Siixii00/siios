@@ -1,8 +1,8 @@
-﻿﻿﻿﻿﻿import { minorSafetyPrompt } from './core/age-gate.js';
+﻿﻿﻿﻿﻿﻿import { minorSafetyPrompt } from './core/age-gate.js';
 import Router from './router.js';
 import { SettingsDB, ChatsDB, CharactersDB, UsersDB, HealthDB, ZiweiCacheDB } from './db.js';
 import { loadWorldInfoContext } from './core/world-info-loader.js';
-import { generateRPPrompt, buildResponseModePrompt } from './constants/rp-system-prompt.js';
+import { generateRPPrompt, buildResponseModePrompt, getResponseMode, withResponseReminder } from './constants/rp-system-prompt.js';
 import { buildRealWorldContext } from './core/real-world-context.js';
 import { PeriodCalculator } from './core/period-calculator.js';
 import { createErrorModal } from './components.js';
@@ -234,11 +234,16 @@ const APIClient = {
         return [
             ...systemMessages,
             ...conversationMessages,
-            { role: 'user', content: userMessage },
+            { role: 'user', content: withResponseReminder(userMessage, chat?.response_mode, chat?.custom_response_prompt) },
             ...backMessages
         ];
     },
     
+    // 輸出的 token 上限：預設看上下文大小；回應模式（例如單句）有自己的上限時以它為準
+    outputLimit(settings) {
+        return Math.min(4096, settings.output_max_tokens || settings.context_size || 4096);
+    },
+
     async stream(chatId, userMessage, onChunk, onComplete, onError, options = {}) {
         const settings = await this.getSettings();
         
@@ -253,6 +258,7 @@ const APIClient = {
         const messages = await MessagesDB.getByChatId(chatId);
         
         const chat = await ChatsDB.getById(chatId);
+        settings.output_max_tokens = getResponseMode(chat?.response_mode, chat?.custom_response_prompt).maxTokens || undefined;
         const enabledMcpIds = chat?.enabled_mcp_ids || null;
         
         let characterData = null;
@@ -295,7 +301,7 @@ const APIClient = {
                 top_p: settings.top_p || 1.0,
                 frequency_penalty: settings.frequency_penalty || 0,
                 presence_penalty: settings.presence_penalty || 0,
-                max_tokens: Math.min(4096, settings.context_size || 4096),
+                max_tokens: this.outputLimit(settings),
                 stream: true
             };
             
@@ -451,7 +457,7 @@ const APIClient = {
             { role: 'assistant', content: draftContent },
             {
                 role: 'user',
-                content: '請檢查你剛才的那則回覆：句子是否完整、語氣是否符合角色、是否使用自然口語（避免文言文或書面語）。如果沒有問題，就直接原樣重複一次；如果有問題，修正後重新輸出完整回覆。只輸出回覆內容本身，不要解釋或說明。'
+                content: '請檢查你剛才的那則回覆：句子是否完整、語氣是否符合角色、是否使用自然口語（避免文言文或書面語）。同時確認回覆的格式與長度符合上面最後一則使用者訊息結尾的「回應格式」要求。如果沒有問題，就直接原樣重複一次；如果有問題，修正後重新輸出完整回覆。只輸出回覆內容本身，不要解釋或說明。'
             }
         ];
         
@@ -469,7 +475,7 @@ const APIClient = {
                     top_p: settings.top_p || 1.0,
                     frequency_penalty: settings.frequency_penalty || 0,
                     presence_penalty: settings.presence_penalty || 0,
-                    max_tokens: Math.min(4096, settings.context_size || 4096),
+                    max_tokens: this.outputLimit(settings),
                     stream: true
                 })
             });
@@ -559,7 +565,7 @@ const APIClient = {
                     top_p: settings.top_p || 1.0,
                     frequency_penalty: settings.frequency_penalty || 0,
                     presence_penalty: settings.presence_penalty || 0,
-                    max_tokens: Math.min(4096, settings.context_size || 4096),
+                    max_tokens: this.outputLimit(settings),
                     stream: true
                 })
             });

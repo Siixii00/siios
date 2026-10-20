@@ -1,4 +1,4 @@
-﻿const RP_SYSTEM_PROMPT_TEMPLATE = `# 角色扮演引擎
+﻿﻿const RP_SYSTEM_PROMPT_TEMPLATE = `# 角色扮演引擎
 
 ## 一、身分設定
 你是 **{{char_name}}**，有獨立意識和記憶能力。
@@ -58,17 +58,52 @@ function generateRPPrompt(charName) {
     return RP_SYSTEM_PROMPT_TEMPLATE.replace(/\{\{char_name\}\}/g, charName);
 }
 
-const RESPONSE_MODE_PROMPTS = {
-    full: '本次回覆使用【完整模式】：請完整描述角色的動作、場景、肢體語言與對話內容，讓畫面生動立體。回覆內容不少於 400 字。',
-    dialogue_single: '本次回覆使用【對話模式（單句回應）】：只用一句話回應使用者，簡短自然，不要包含動作或場景描述。',
-    dialogue_multi: '本次回覆使用【對話模式（多句回應）】：用流暢的幾句話回應使用者，以對話為主，不需要過多動作或場景描述。'
+// 回應模式：prompt 放在系統提示詞裡；reminder 附在「最後一則使用者訊息」的結尾（離輸出最近，才壓得過對話歷史裡
+// 舊格式的影響）；maxTokens 是輸出長度的安全上限，null 表示不另外限制。
+const DEFAULT_RESPONSE_MODE = 'dialogue_multi';
+
+const RESPONSE_MODES = {
+    full: {
+        prompt: '本次回覆使用【完整模式】：請完整描述角色的動作、場景、肢體語言與對話內容，讓畫面生動立體。回覆內容不少於 400 字。',
+        reminder: '【回應格式：完整模式】完整描述角色的動作、場景、肢體語言與對話內容，回覆不少於 400 字。',
+        maxTokens: null
+    },
+    dialogue_single: {
+        prompt: '本次回覆使用【對話模式（單句回應）】：只用一句話回應使用者，簡短自然，不要包含動作或場景描述。',
+        reminder: '【回應格式：單句回應】只用一句話回應，簡短自然，不要包含動作或場景描述。',
+        maxTokens: 400
+    },
+    dialogue_multi: {
+        prompt: '本次回覆使用【對話模式（多句回應）】：用流暢的幾句話回應使用者，以對話為主，不需要過多動作或場景描述。',
+        reminder: '【回應格式：多句對話】用流暢的幾句話回應，以對話為主，不需要過多動作或場景描述。',
+        maxTokens: 1200
+    }
 };
 
-function buildResponseModePrompt(mode, customPrompt) {
+const RESPONSE_REMINDER_NOTE = '（從這一輪起以此格式為準，即使前面的回覆用了不同的格式或長度。）';
+
+function getResponseMode(mode, customPrompt) {
     if (mode === 'custom') {
-        return '本次回覆請依以下自訂方式回應：\n' + (customPrompt || '');
+        const text = (customPrompt || '').trim();
+        return {
+            id: 'custom',
+            prompt: '本次回覆請依以下自訂方式回應：\n' + (customPrompt || ''),
+            reminder: text ? '【回應格式：自訂】' + text : '',
+            maxTokens: null
+        };
     }
-    return RESPONSE_MODE_PROMPTS[mode] || null;
+    const id = RESPONSE_MODES[mode] ? mode : DEFAULT_RESPONSE_MODE; // 沒選過時，和介面顯示的預設一致
+    return { id, ...RESPONSE_MODES[id] };
 }
 
-export { RP_SYSTEM_PROMPT_TEMPLATE, generateRPPrompt, buildResponseModePrompt };
+function buildResponseModePrompt(mode, customPrompt) {
+    return getResponseMode(mode, customPrompt).prompt;
+}
+
+// 把格式提醒接在使用者訊息後面
+function withResponseReminder(content, mode, customPrompt) {
+    const { reminder } = getResponseMode(mode, customPrompt);
+    return reminder ? String(content ?? '') + '\n\n' + reminder + RESPONSE_REMINDER_NOTE : content;
+}
+
+export { RP_SYSTEM_PROMPT_TEMPLATE, generateRPPrompt, buildResponseModePrompt, getResponseMode, withResponseReminder, DEFAULT_RESPONSE_MODE, RESPONSE_MODES };

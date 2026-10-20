@@ -157,3 +157,11 @@ Code review（`340bf4c~1..HEAD`）找到並修正：
 - **GitHub Actions**：`data/` 內的 Bilibili 與 Twitter 快取每天都有「自動更新」commit，運作正常。
 - **Discord 整合**：需要你自己的 Bot Token、Application ID 與 D1 資料庫，無法代為驗證；`scripts/discord-bot-worker.js` 沒有對應的 `wrangler.toml`，目前只能手動貼到 Cloudflare。
 - **合成服務 Worker（`synth-worker/`）**：先前只用模擬伺服器測過、從未部署。已部署到 `https://siios-synth-worker.yaninlin.workers.dev`（`SYNTH_TOKEN` 用隨機金鑰，存在 Cloudflare secret，沒有寫進 repo）。實測：未帶或帶錯 Token 回 401、`/health` 回報 Workers AI 已綁定。**實際生成（圖片、語音）尚未驗證**——當天的 Workers AI 免費額度已被產生農場素材用完（回 `quota`，Worker 的錯誤處理正確），UTC 午夜（台灣早上 8 點）重置後再測。
+
+### 2026-10-21 回應格式／字數切換沒有跟著變
+- **聊天室原因**：（1）格式指示只放在系統提示詞最前面，離輸出很遠，對話歷史裡舊格式的回覆影響更大，模型就沿用舊格式；（2）沒選過模式時，介面顯示「多句」但實際沒有任何格式提示（預設不一致）；（3）輸出長度上限只看上下文大小，與模式無關；（4）自我檢查沒看格式與長度。
+- **修正**：模式設定集中在 `js/constants/rp-system-prompt.js`（提示詞、結尾提醒、輸出上限）；格式提醒附在最後一則使用者訊息結尾，單句 400／多句 1200 token 上限，完整模式不限；預設與介面一致（多句）；自我檢查納入格式與長度。
+- **Discord 原因**：提示詞寫死「語句簡短」且完全沒有回應模式設定；`max_tokens` 固定 2000；超過 2000 字的回覆被 Discord API 拒絕整則消失。
+- **Discord 修正**：新增 `/configure RESPONSE_MODE`（full／dialogue_single／dialogue_multi／custom，也接受中文別名）與 `CUSTOM_RESPONSE_PROMPT`，`/config` 會顯示目前模式；提示詞與提醒和 PWA 相同；超過 2000 字自動切段送出，重新生成會刪掉全部切段（舊資料沒有記錄時只刪最後一則）。預設為多句對話。
+- **部署**：Discord Worker 要把新的 `scripts/discord-bot-worker.js` 重新貼到 Cloudflare，再開一次 `/discord/register-commands`（或 `/setup`）讓新的 `/configure` 選項出現。
+- 測試：`tests/unit/response-mode.test.mjs`（PWA 與 Discord 純函式；Discord 版從 Worker 檔案取出標記區塊測試）。

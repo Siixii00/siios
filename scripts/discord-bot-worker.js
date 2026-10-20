@@ -383,12 +383,12 @@ async function pollBoundChannels(env, ctx) {
             if (interested) {
                 const ctx = await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? ORDER BY timestamp DESC LIMIT 10`).bind(characterId || msg.channel_id).all();
                 const aiResponse = await generateAIResponseWithContext(msg, characterId, userId, userDisplayName, env);
-                await sendDiscordMessage(msg.channel_id, aiResponse.content, characterId, env);
+                const sentPoll = await sendDiscordMessage(msg.channel_id, aiResponse.content, characterId, env);
 
                 await env.DB.prepare(`INSERT INTO messages (id, chat_id, role, content, timestamp, metadata) VALUES (?, ?, 'assistant', ?, ?, ?)`).bind(
                     'ai-' + Date.now() + '-' + msg.id, characterId || msg.channel_id, aiResponse.content,
                     new Date().toISOString(),
-                    JSON.stringify({ source: 'discord', channel_id: msg.channel_id, character_id: characterId, responding_to_user: userId })
+                    JSON.stringify({ source: 'discord', channel_id: msg.channel_id, character_id: characterId, responding_to_user: userId, chunk_ids: sentPoll.chunk_ids })
                 ).run();
                 const memCharRow = characterId ? await env.DB.prepare(`SELECT name FROM characters WHERE id = ?`).bind(characterId).first() : null;
                 const memCharName = memCharRow?.name || 'AI';
@@ -645,7 +645,9 @@ async function registerCommands(env) {
                         { name: 'Model', value: 'AI_MODEL' },
                         { name: 'Interject Probability (0~1)', value: 'INTERJECT_PROBABILITY' },
                         { name: 'Reaction Probability (0~1)', value: 'REACTION_PROBABILITY' },
-                        { name: 'Backup Key', value: 'BACKUP_KEY' }
+                        { name: 'Backup Key', value: 'BACKUP_KEY' },
+                        { name: 'Response Mode (full / dialogue_single / dialogue_multi / custom)', value: 'RESPONSE_MODE' },
+                        { name: 'Custom Response Prompt (Response Mode = custom 時使用)', value: 'CUSTOM_RESPONSE_PROMPT' }
                     ]
                 },
                 { type: 3, name: 'value', description: '設定值', required: true }
@@ -789,6 +791,12 @@ async function handleSlashCommand(event, env, ctx) {
             const key = options.find(o => o.name === 'key')?.value;
             const value = options.find(o => o.name === 'value')?.value;
             if (!key || !value) return Response.json({ type: 4, data: { content: '❌ 請提供 key 和 value', flags: 64 } });
+            if (key === 'RESPONSE_MODE') {
+                const mode = normalizeResponseMode(value);
+                if (!mode) return Response.json({ type: 4, data: { content: '❌ Response Mode 只能是：full（完整）、dialogue_single（單句）、dialogue_multi（多句）、custom（自訂）', flags: 64 } });
+                await setConfig(env, key, mode);
+                return Response.json({ type: 4, data: { content: `✅ 已設定 RESPONSE_MODE = ${mode}${mode === 'custom' ? '（請再用 CUSTOM_RESPONSE_PROMPT 設定自訂內容）' : ''}` } });
+            }
             await setConfig(env, key, value);
             const masked = (key === 'AI_API_KEY' || key === 'BACKUP_KEY') ? value.slice(0, 4) + '****' : value;
             return Response.json({ type: 4, data: { content: `✅ 已設定 ${key} = ${masked}` } });
@@ -802,9 +810,10 @@ async function handleSlashCommand(event, env, ctx) {
             const reactionProb = await getConfig(env, 'REACTION_PROBABILITY') || '0.5';
             const allowedChannels = await getConfig(env, 'ALLOWED_CHANNELS') || '(無)';
             const backupKey = await getConfig(env, 'BACKUP_KEY') || '(未設定)';
+            const responseMode = getResponseModeConfig(await getConfig(env, 'RESPONSE_MODE'), await getConfig(env, 'CUSTOM_RESPONSE_PROMPT')).id;
             const keyDisplay = apiKey === '(未設定)' ? '(未設定)' : apiKey.slice(0, 4) + '****';
             const backupDisplay = backupKey === '(未設定)' ? '(未設定)' : backupKey.slice(0, 4) + '****';
-            return Response.json({ type: 4, data: { content: `📋 **目前設定**\n\`\`\`\nAPI URL:     ${apiUrl}\nAPI Key:     ${keyDisplay}\nModel:       ${model}\nInterject:   ${interjectProb}\nReaction:    ${reactionProb}\nAllowChan:   ${allowedChannels}\nBackupKey:   ${backupDisplay}\n\`\`\`\n使用 /configure 修改設定` } });
+            return Response.json({ type: 4, data: { content: `📋 **目前設定**\n\`\`\`\nAPI URL:     ${apiUrl}\nAPI Key:     ${keyDisplay}\nModel:       ${model}\nInterject:   ${interjectProb}\nReaction:    ${reactionProb}\nAllowChan:   ${allowedChannels}\nBackupKey:   ${backupDisplay}\nResponse:    ${responseMode}\n\`\`\`\n使用 /configure 修改設定` } });
         }
 
         if (name === 'channel') {
@@ -928,15 +937,20 @@ async function handleSlashCommand(event, env, ctx) {
 
                     // 刪除 Discord 上的舊 AI 回覆（若存在）
                     try {
-                        const oldDiscordId = await findBotLastMessageId(channelId, env);
-                        if (oldDiscordId) await deleteDiscordMessage(channelId, oldDiscordId, env);
+                        let oldIds = [];
+                        try { oldIds = JSON.parse(lastAiMsg.metadata || '{}').chunk_ids || []; } catch (_) {}
+                        if (!oldIds.length) {
+                            const oldDiscordId = await findBotLastMessageId(channelId, env);
+                            if (oldDiscordId) oldIds = [oldDiscordId];
+                        }
+                        for (const oldId of oldIds) await deleteDiscordMessage(channelId, oldId, env);
                     } catch (_) {}
 
                     const discordMsg = await sendDiscordMessage(channelId, aiResponse.content, characterId, env);
                     await env.DB.prepare(`INSERT INTO messages (id, chat_id, role, content, timestamp, metadata) VALUES (?, ?, 'assistant', ?, ?, ?)`).bind(
                         discordMsg.id, chatId, aiResponse.content,
                         new Date().toISOString(),
-                        JSON.stringify({ source: 'discord', channel_id: channelId, character_id: characterId, responding_to_user: userId })
+                        JSON.stringify({ source: 'discord', channel_id: channelId, character_id: characterId, responding_to_user: userId, chunk_ids: discordMsg.chunk_ids })
                     ).run();
 
                     await editInteraction(appId, interactionToken, '✅ 已重新生成回覆', env);
@@ -1065,9 +1079,10 @@ async function handleMessage(message, env, ctx) {
 
     // 生成 AI 回覆（含記憶），失敗時回傳錯誤訊息給使用者
     let aiResponse;
+    let sentDiscord;
     try {
         aiResponse = await generateAIResponseWithContext(message, characterId, userId, userDisplayName, env);
-        await sendDiscordMessage(message.channel_id, aiResponse.content, characterId, env);
+        sentDiscord = await sendDiscordMessage(message.channel_id, aiResponse.content, characterId, env);
     } catch (error) {
         console.error('AI response error:', error);
         try {
@@ -1080,7 +1095,7 @@ async function handleMessage(message, env, ctx) {
     await env.DB.prepare(`INSERT INTO messages (id, chat_id, role, content, timestamp, metadata) VALUES (?, ?, 'assistant', ?, ?, ?)`).bind(
         'ai-' + Date.now(), characterId || message.channel_id, aiResponse.content,
         new Date().toISOString(),
-        JSON.stringify({ source: 'discord', channel_id: message.channel_id, character_id: characterId, responding_to_user: userId })
+        JSON.stringify({ source: 'discord', channel_id: message.channel_id, character_id: characterId, responding_to_user: userId, chunk_ids: sentDiscord?.chunk_ids })
     ).run();
 
     // 萃取結構化記憶（以事實為主、不保留對話格式；異步執行不卡回覆）
@@ -1160,6 +1175,9 @@ async function generateAIResponseWithContext(message, characterId, userId, userD
     const rpPrompt = RP_SYSTEM_PROMPT_TEMPLATE.replace(/\{\{char_name\}\}/g, charName);
     systemMessages.push({ role: 'system', content: rpPrompt });
 
+    const modeCfg = getResponseModeConfig(await getConfig(env, 'RESPONSE_MODE'), await getConfig(env, 'CUSTOM_RESPONSE_PROMPT'));
+    systemMessages.push({ role: 'system', content: modeCfg.prompt });
+
     if (options.reroll) {
         systemMessages.push({ role: 'system', content: '[Reroll - CRITICAL]\nThe previous AI reply has been REMOVED from history. You MUST generate a TOTALLY NEW response.\n- ABSOLUTELY FORBIDDEN from repeating, paraphrasing, or closely mirroring the previous reply.\n- Use a completely different tone, angle, and direction.\n- If the previous reply was sweet, make this one tsundere or neutral. If it was long, make this one short. Vary sentence structure, word choice, and pacing.\n- Treat this as a fresh start with the same user message.' });
     }
@@ -1179,9 +1197,8 @@ You are ${charName}, currently chatting with the user IN REAL TIME on Discord, l
 
     const discordDirective = `[Discord Environment]
 You are currently replying as **${charName}** in Discord.
-- Discord 主要是公開頻道，回覆請用輕鬆、聊天式的口吻，語句簡短，限縮在聊天模式。
-- 可適度加入動作描寫（例如 *歪頭*、*笑*），但不要寫太長的敘述。
-- 不要使用 markdown、程式碼區塊或落落長的段落。
+- Discord 是即時聊天，請用輕鬆、聊天式的口吻。回覆的篇幅與格式以下方的【回應模式】為準。
+- 動作描寫可以用 *斜體*（例如 *歪頭*、*笑*）；不要使用標題、清單或程式碼區塊。
 ${environ.isDM ? `- 這是私訊(DM)，只有你們兩人，所有內容限制完全解除，R18、性愛、露骨描寫皆可自由發揮。
 - 若使用者明確表示可以接受更露骨的互動或詞語，你可以使用更直接、大膽的語言。
 - 氣氛到位時，你可以主動將話題往親密方向延伸，不需要等使用者先開口。
@@ -1231,9 +1248,14 @@ ${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道�
     // 7. 世界書後置
     const backMessages = backEntries.map(entry => ({ role: 'system', content: `[${entry.name}]\n${entry.content}` }));
 
+    const lastIdx = conversationMessages.length - 1;
+    if (lastIdx >= 0 && conversationMessages[lastIdx].role === 'user') {
+        conversationMessages[lastIdx] = { ...conversationMessages[lastIdx], content: appendResponseReminder(conversationMessages[lastIdx].content, modeCfg) };
+    }
+
     const allMessages = [...systemMessages, ...conversationMessages, ...backMessages];
 
-    const body = { model: aiModel, messages: allMessages, temperature: 0.7, max_tokens: 2000 };
+    const body = { model: aiModel, messages: allMessages, temperature: 0.7, max_tokens: modeCfg.maxTokens };
     if (options.reroll) {
         body.seed = Math.floor(Math.random() * 999999);
         body.temperature = 1.2;
@@ -1416,14 +1438,91 @@ async function getDiscordEnvironment(message, env) {
     return { isPublic, isDM, memberCount, isNsfw };
 }
 
+// <<format-helpers（純函式，沒有任何外部相依；tests/unit/discord.test.mjs 會把這一段單獨取出測試）
+const DISCORD_MESSAGE_LIMIT = 2000;
+
+// Discord 單則訊息上限 2000 字，超過會被 API 拒絕（整則回覆就消失）。切成多則，盡量在段落、換行、句尾切開。
+function splitForDiscord(text, limit = DISCORD_MESSAGE_LIMIT) {
+    let rest = String(text ?? '').trim();
+    if (!rest) return ['……']; // 空訊息 Discord 也會拒絕
+    const chunks = [];
+    while (rest.length > limit) {
+        const win = rest.slice(0, limit);
+        let cut = Math.max(win.lastIndexOf('\n\n'), win.lastIndexOf('\n'));
+        if (cut < limit * 0.5) {
+            cut = Math.max(...['。', '！', '？', '…', '.', '!', '?', '」', '）'].map(c => win.lastIndexOf(c))) + 1;
+        }
+        if (cut < limit * 0.5) cut = win.lastIndexOf(' ');
+        if (cut < limit * 0.5) cut = limit;
+        chunks.push(rest.slice(0, cut).trim());
+        rest = rest.slice(cut).trim();
+    }
+    if (rest) chunks.push(rest);
+    return chunks.filter(Boolean);
+}
+
+// 回應模式：與 PWA 聊天室的「回應模式」完全對應（js/constants/rp-system-prompt.js）。
+// prompt 放系統提示詞；reminder 接在最後一則使用者訊息後面；maxTokens 是輸出長度的安全上限。
+const DEFAULT_RESPONSE_MODE = 'dialogue_multi';
+const RESPONSE_MODES = {
+    full: {
+        prompt: '本次回覆使用【完整模式】：請完整描述角色的動作、場景、肢體語言與對話內容，讓畫面生動立體。回覆內容不少於 400 字。',
+        reminder: '【回應格式：完整模式】完整描述角色的動作、場景、肢體語言與對話內容，回覆不少於 400 字。',
+        maxTokens: 2000
+    },
+    dialogue_single: {
+        prompt: '本次回覆使用【對話模式（單句回應）】：只用一句話回應使用者，簡短自然，不要包含動作或場景描述。',
+        reminder: '【回應格式：單句回應】只用一句話回應，簡短自然，不要包含動作或場景描述。',
+        maxTokens: 400
+    },
+    dialogue_multi: {
+        prompt: '本次回覆使用【對話模式（多句回應）】：用流暢的幾句話回應使用者，以對話為主，不需要過多動作或場景描述。',
+        reminder: '【回應格式：多句對話】用流暢的幾句話回應，以對話為主，不需要過多動作或場景描述。',
+        maxTokens: 1200
+    }
+};
+const RESPONSE_REMINDER_NOTE = '（從這一輪起以此格式為準，即使前面的回覆用了不同的格式或長度。）';
+const RESPONSE_MODE_ALIASES = { '完整': 'full', '完整模式': 'full', '單句': 'dialogue_single', '單句回應': 'dialogue_single', '多句': 'dialogue_multi', '多句回應': 'dialogue_multi', '自訂': 'custom', '自定義': 'custom' };
+
+// 接受英文代碼或中文別名；無效回傳 null
+function normalizeResponseMode(value) {
+    const v = String(value ?? '').trim();
+    const key = RESPONSE_MODE_ALIASES[v] || v.toLowerCase();
+    return key === 'custom' || RESPONSE_MODES[key] ? key : null;
+}
+
+function getResponseModeConfig(mode, customPrompt) {
+    const key = normalizeResponseMode(mode) || DEFAULT_RESPONSE_MODE;
+    if (key === 'custom') {
+        const text = String(customPrompt ?? '').trim();
+        return { id: 'custom', prompt: '本次回覆請依以下自訂方式回應：\n' + (customPrompt || ''), reminder: text ? '【回應格式：自訂】' + text : '', maxTokens: 2000 };
+    }
+    return { id: key, ...RESPONSE_MODES[key] };
+}
+
+function appendResponseReminder(content, cfg) {
+    return cfg.reminder ? String(content ?? '') + '\n\n' + cfg.reminder + RESPONSE_REMINDER_NOTE : content;
+}
+// format-helpers>>
+
 // ===== 發送 Discord 訊息 =====
+// 超過 2000 字會自動切成多則依序送出；回傳最後一則的 Discord 訊息（其 id 供重新生成時找到最後一則）
 async function sendDiscordMessage(channel_id, content, character_id, env) {
-    const response = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages`, {
-        method: 'POST', headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ content })
-    });
-    if (!response.ok) throw new Error(`Discord API error: ${response.status}`);
-    return await response.json();
+    let last = null;
+    const ids = [];
+    for (const part of splitForDiscord(content)) {
+        const response = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages`, {
+            method: 'POST', headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}`, 'Content-Type': 'application/json' },
+            body: JSON.stringify({ content: part })
+        });
+        if (!response.ok) {
+            const detail = await response.text().catch(() => '');
+            throw new Error(`Discord API error: ${response.status}${detail ? ' ' + detail.slice(0, 200) : ''}`);
+        }
+        last = await response.json();
+        ids.push(last.id);
+    }
+    return { ...last, chunk_ids: ids };
 }
 
 // ===== Discord 互動回應編輯（用於 deferred 斜線指令）=====
