@@ -1,201 +1,220 @@
 {
   "metadata": {
-    "last_updated": "2026-10-20T09:13:51.244976",
-    "total_items": 53
+    "last_updated": "2026-10-20T14:45:20.502528",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
+        "title": "DeepSeek just open-sourced its inference engine",
+        "url": "https://github.com/deepseek-ai/DeepInfer",
+        "source": "Hacker News",
+        "score": 1261
+      },
+      {
+        "title": "Apple broke an essential presentation feature of iPads",
+        "url": "https://teddysvoronos.com/2026-10-19-apple-broke-an-essential-presentation-feature-of-ipads/",
+        "source": "Hacker News",
+        "score": 147
+      },
+      {
+        "title": "Publish fake stats, get cited in LLMs",
+        "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web",
+        "source": "Hacker News",
+        "score": 83
+      },
+      {
+        "title": "NixOS is making me less afraid",
+        "url": "https://entropicthoughts.com/nixos-is-making-me-less-afraid",
+        "source": "Hacker News",
+        "score": 79
+      },
+      {
+        "title": "EMudhra Intermediate CA Compromise",
+        "url": "https://emudhra.we-have-a-problem.com/",
+        "source": "Hacker News",
+        "score": 19
+      },
+      {
+        "title": "MicroG: Free-libre re-implementation of Google's proprietary Android user space",
+        "url": "https://github.com/microg/GmsCore/wiki",
+        "source": "Hacker News",
+        "score": 232
+      },
+      {
         "title": "Nordwand Mono – A monospace font for coders and adventurers",
         "url": "https://github.com/tywr/Nordwand-Mono",
         "source": "Hacker News",
-        "score": 215
+        "score": 434
+      },
+      {
+        "title": "Tsrs: A Port of TypeScript to Rust",
+        "url": "https://blog.cloudflare.com/typescript-rust-port/",
+        "source": "Hacker News",
+        "score": 40
+      },
+      {
+        "title": "How I got over 300 Tor exit nodes removed",
+        "url": "https://kaba.cx/posts/20261020_Tor/",
+        "source": "Hacker News",
+        "score": 19
       },
       {
         "title": "OpenBSD 8.0",
         "url": "https://www.openbsd.org/80.html",
         "source": "Hacker News",
-        "score": 274
+        "score": 402
       },
       {
-        "title": "Restoration of Retinal Regenerative Potential",
-        "url": "https://www.nature.com/articles/s41467-025-58290-8",
+        "title": "Hazel (YC W24) Is Hiring",
+        "url": "https://www.ycombinator.com/companies/hazel-2/jobs/PpNKYBS-full-stack-engineer-ts-sci",
         "source": "Hacker News",
-        "score": 51
+        "score": 1
+      },
+      {
+        "title": "My Friend Bob Cringely",
+        "url": "https://tyma.com/my-cringe-story/",
+        "source": "Hacker News",
+        "score": 16
       },
       {
         "title": "WhatsApp's help pages hid LLM instructions: dont recommend a regulator",
         "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
         "source": "Hacker News",
-        "score": 413
+        "score": 632
       },
       {
         "title": "DeepSeek banned from U.S. federal civilian agencies under new DHS order",
         "url": "https://www.reuters.com/technology/us-banning-chinese-ai-deepseek-government-agency-it-systems-2026-10-19/",
         "source": "Hacker News",
-        "score": 233
+        "score": 432
       },
       {
-        "title": "MiniMax M3.1 Flash",
-        "url": "https://www.minimax.io/blog/minimax-m31f",
+        "title": "Capturing 400 American Girls and Their Most Meaningful Objects",
+        "url": "https://petapixel.com/2026/10/17/photographer-spends-six-years-capturing-400-american-girls-and-their-most-meaningful-objects/",
         "source": "Hacker News",
-        "score": 463
-      },
-      {
-        "title": "France's supermarket fridges were vulnerable online for months",
-        "url": "https://ipinfo.io/blog/france-fridges-hack",
-        "source": "Hacker News",
-        "score": 165
-      },
-      {
-        "title": "Weball: Play Katamari on Websites",
-        "url": "https://www.funwithcomputervision.com/weball/",
-        "source": "Hacker News",
-        "score": 198
-      },
-      {
-        "title": "Making a 88x31 button book using ImageMagick",
-        "url": "https://k.sosnierz.me/08-11-24/",
-        "source": "Hacker News",
-        "score": 9
-      },
-      {
-        "title": "Go will reject certificate chains containing eight distrusted SPKIs",
-        "url": "https://github.com/golang/go/issues/82345",
-        "source": "Hacker News",
-        "score": 89
-      },
-      {
-        "title": "An ad-free Android TV",
-        "url": "https://cretezy.com/2026/ad-free-android-tv",
-        "source": "Hacker News",
-        "score": 203
-      },
-      {
-        "title": "I built a drone with only one motor [video]",
-        "url": "https://www.youtube.com/watch?v=Ndftcft6XhU",
-        "source": "Hacker News",
-        "score": 537
-      },
-      {
-        "title": "Wine ported to OpenBSD",
-        "url": "https://marc.info/?l=openbsd-ports&m=179236125692175",
-        "source": "Hacker News",
-        "score": 563
-      },
-      {
-        "title": "It's still ok to enjoy programming",
-        "url": "https://chriskiehl.com/article/it-is-still-ok-to-enjoy-programming",
-        "source": "Hacker News",
-        "score": 591
-      },
-      {
-        "title": "Ukraine claims first drone evacuation of wounded soldier",
-        "url": "https://www.nbcnews.com/world/ukraine/ukraine-first-drone-evacuation-wounded-soldier-frontlines-hexacopter-rcna604310",
-        "source": "Hacker News",
-        "score": 279
+        "score": 13
       }
     ],
     "ai": [
       {
+        "title": "Publish fake stats, get cited in LLMs",
+        "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web",
+        "source": "Hacker News AI",
+        "score": 83
+      },
+      {
+        "title": "NixOS is making me less afraid",
+        "url": "https://entropicthoughts.com/nixos-is-making-me-less-afraid",
+        "source": "Hacker News AI",
+        "score": 79
+      },
+      {
         "title": "WhatsApp's help pages hid LLM instructions: dont recommend a regulator",
         "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
         "source": "Hacker News AI",
-        "score": 413
+        "score": 632
       },
       {
-        "title": "Go will reject certificate chains containing eight distrusted SPKIs",
-        "url": "https://github.com/golang/go/issues/82345",
+        "title": "One Manhattan power room took down FAA air traffic control in 1991",
+        "url": "https://matthorn.io/posts/2026-10-18-33-thomas-street/",
         "source": "Hacker News AI",
-        "score": 89
+        "score": 4
       },
       {
         "title": "Ukraine claims first drone evacuation of wounded soldier",
         "url": "https://www.nbcnews.com/world/ukraine/ukraine-first-drone-evacuation-wounded-soldier-frontlines-hexacopter-rcna604310",
         "source": "Hacker News AI",
-        "score": 279
+        "score": 380
       },
       {
         "title": "Ask HN: How to deal with shipping AI-written code you don't understand?",
         "url": "https://news.ycombinator.com/item?id=50151036",
         "source": "Hacker News AI",
-        "score": 436
+        "score": 546
+      },
+      {
+        "title": "Go will reject certificate chains containing eight distrusted SPKIs",
+        "url": "https://github.com/golang/go/issues/82345",
+        "source": "Hacker News AI",
+        "score": 127
       },
       {
         "title": "The fire retardant in the seafood chain",
         "url": "https://insideclimatenews.org/news/14102026/ethoxyquin-fire-retardant-in-seafood-chain/",
         "source": "Hacker News AI",
-        "score": 141
+        "score": 150
       },
       {
         "title": "Launch HN: Laminar (YC S24) – RL-trained model that finds errors in agent traces",
         "url": "https://news.ycombinator.com/item?id=50154029",
         "source": "Hacker News AI",
         "score": 58
-      },
-      {
-        "title": "Timestral: Mistral's time-series foundation models",
-        "url": "https://mistral.ai/news/timestral/",
-        "source": "Hacker News AI",
-        "score": 585
-      },
-      {
-        "title": "CERN and Mistral sign a statement of intent to establish a strategic partnership",
-        "url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/",
-        "source": "Hacker News AI",
-        "score": 339
-      },
-      {
-        "title": "The obscure trust looming over Anthropic's IPO",
-        "url": "https://www.wsj.com/tech/ai/anthropic-ipo-private-trust-188f41f7?st=RtdGHg&reflink=desktopwebshare_permalink",
-        "source": "Hacker News AI",
-        "score": 143
-      },
-      {
-        "title": "Chicago O'Hare digs up 50-ton boulder under airfield, asks public for name ideas",
-        "url": "https://simpleflying.com/chicago-ohare-digs-up-50-ton-boulder-public-names/",
-        "source": "Hacker News AI",
-        "score": 121
       }
     ],
     "news": [
       {
-        "title": "Suspect arrested after historic town hall set alight during disorder - French media",
-        "url": "https://www.bbc.co.uk/news/articles/cw5yn5e8mezvo?at_medium=RSS&at_campaign=rss",
+        "title": "Zelensky and US envoys to hold Oslo talks as Rubio denies withholding intelligence",
+        "url": "https://www.bbc.co.uk/news/articles/ck9qzn193lrlo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Ukrainians dying because US restricting intelligence sharing, Zelensky adviser tells BBC",
-        "url": "https://www.bbc.co.uk/news/articles/cmj47yx572z5o?at_medium=RSS&at_campaign=rss",
+        "title": "Marseille braces for more unrest after protests give way to 'apocalyptic' disorder",
+        "url": "https://www.bbc.co.uk/news/articles/cm5ynkk570pno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Seventh day of violent clashes between Albanian protesters and police",
-        "url": "https://www.bbc.co.uk/news/articles/cmy4xjlpqgd3o?at_medium=RSS&at_campaign=rss",
+        "title": "Man charged with attack on Australian MP as suspect's father says she is family friend",
+        "url": "https://www.bbc.co.uk/news/articles/c678pnn9mpgno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Canadian tourist found guilty of animal cruelty after stealing Las Vegas flamingo from enclosure",
-        "url": "https://www.bbc.co.uk/news/articles/cq398rjewd1jo?at_medium=RSS&at_campaign=rss",
+        "title": "Sudan army drones hit mourners and fuel market killing more than 200 people, sources say",
+        "url": "https://www.bbc.co.uk/news/articles/cr3el70jz1nqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Mission blasts off for Mars to grab a piece of its moon",
-        "url": "https://www.bbc.co.uk/news/articles/cmvgxvkv54w1o?at_medium=RSS&at_campaign=rss",
+        "title": "North Korea publishes photos of Kim Jong Un - why do rumours of his death keep coming back?",
+        "url": "https://www.bbc.co.uk/news/articles/cmvg6qv1jdydo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Kenya cult leader who told parents to starve children guilty of 191 murders",
-        "url": "https://www.bbc.co.uk/news/articles/ckd6d2l3dz4xo?at_medium=RSS&at_campaign=rss",
+        "title": "Why Israeli Gen Z voters are drawn to the far right",
+        "url": "https://www.bbc.co.uk/news/articles/cmvg632xgndeo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Tennis star Svitolina says emotional toll of Ukraine war led to Monfils separation",
-        "url": "https://www.bbc.co.uk/news/articles/ckd7qy12j148o?at_medium=RSS&at_campaign=rss",
+        "title": "Kenya cult leader's children still being starved weeks before trial, son says",
+        "url": "https://www.bbc.co.uk/news/articles/c6d7q2rxqxgxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Cricut StickerPix Print + Cut review: a playful, professional printer with a hidden cost ",
+        "url": "https://www.creativebloq.com/reviews/cricut-stickerpix-print-cut-review-a-playful-and-purposeful-printer-with-a-costly-catch",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Final Fantasy Resonance (Switch 2) review: modern-retro at its finest ",
+        "url": "https://www.creativebloq.com/reviews/final-fantasy-resonance-switch-2-review-modern-retro-at-its-finest",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Apple desperately needed a new 'iPhone moment'. The iPhone Duo might just be it ",
+        "url": "https://www.creativebloq.com/news/apple-desperately-needed-a-new-iphone-moment-the-iphone-duo-might-just-be-it",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The new Clayface poster is skin crawlingly creepy ",
+        "url": "https://www.creativebloq.com/news/the-new-clayface-poster-is-skin-crawlingly-creepy",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Every part of a fantasy world must follow its own clear rules and logic ",
+        "url": "https://www.creativebloq.com/how-to/every-part-of-a-fantasy-world-must-follow-its-own-clear-rules-and-logic",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Google Meet's appearance filters just sent me into an existential spiral ",
         "url": "https://www.creativebloq.com/features/google-meets-appearance-filters-just-sent-me-into-an-existential-spiral",
@@ -205,68 +224,79 @@
         "title": " Magical new Narnia cover art is a notch above the usual movie tie-ins ",
         "url": "https://www.creativebloq.com/news/magical-new-narnia-cover-art-is-a-notch-above-the-usual-movie-tie-ins",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " \"Is this what designers need to do to find work in 2026?\" a viral high-production video has sparked debate ",
-        "url": "https://www.creativebloq.com/news/is-this-what-designers-need-to-do-to-get-work-in-2026-a-viral-high-production-video-has-sparked-debate",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Tested: Apple's $3,000 Studio Display XDR is bright, beautiful – and almost perfect ",
-        "url": "https://www.creativebloq.com/reviews/apple-studio-display-xdr-review",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Sketchbook special! Issue 272 of ImagineFX ",
-        "url": "https://www.creativebloq.com/news/sketchbook-special-issue-272-of-imaginefx-clone",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Stupid Never Dies review: the Spider-Verse visual blast can't hide the grind ",
-        "url": "https://www.creativebloq.com/reviews/stupid-never-dies-review-smashes-anime-pop-art-and-punk-into-one-fine-mess",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Logistics fiasco or clever marketing? Apple's iPhone Duo sellout might not be such a big blunder ",
-        "url": "https://www.creativebloq.com/news/logistics-fiasco-or-clever-marketing-apples-iphone-duo-sellout-might-not-be-such-a-mistake",
-        "source": "Creative Bloq"
       }
     ],
-    "science": [],
+    "science": [
+      {
+        "title": "Scientists finally uncover why statins can cause muscle pain",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261019093447.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Hurricane warning maps are improving, but a dangerous problem remains",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261019093443.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Astronomers uncover new secrets of the Universe’s first five minutes",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261019093442.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists discover a surprising link between vitamin C and cancer survival",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261019093437.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists discover a bizarre Jurassic “squid” unlike anything ever seen",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261019093434.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Your aging brain may be trading memory for something more valuable",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261019093357.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Scientists find a way to fight Alzheimer’s brain damage without removing toxic tau",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261019093355.htm",
+        "source": "Science Daily"
+      }
+    ],
     "gaming": [
       {
-        "title": "5 Best Halloween 'Peanuts' Comics That Don't Involve the Great Pumpkin",
-        "url": "https://www.polygon.com/peanuts-charlie-brown-best-halloween-strips/",
+        "title": "Final Fantasy Resonance Reviews Beat Square Enix's Previous HD-2D RPG",
+        "url": "https://www.polygon.com/final-fantasy-resonance-review-roundup/",
         "source": "Polygon"
       },
       {
-        "title": "3 Video Games Where Your Choices Actually Make a Difference",
-        "url": "https://www.polygon.com/best-games-choices-impact/",
+        "title": "Nintendo Switch Sports Resort Reviews Prove the Series Isn't Winning Any Awards",
+        "url": "https://www.polygon.com/nintendo-switch-sports-resort-review-roundup/",
         "source": "Polygon"
       },
       {
-        "title": "'Red Dead Redemption' 2 Mod Is 'Shadow of Mordor' Meets the Wild West",
-        "url": "https://www.polygon.com/red-dead-redemption-2-nemesis-system-mod-shadow-of-mordor/",
+        "title": "PS6 price update is bad news for millions of gamers",
+        "url": "https://www.polygon.com/ps6-price-update/",
         "source": "Polygon"
       },
       {
-        "title": "8 Classic PlayStation Adventure Games that are Barely Playable Today",
-        "url": "https://www.polygon.com/classic-playstation-adventure-games-unplayable-today/",
+        "title": "James Gunn Officially Comments on the Status of DCU’s Batman and Flash",
+        "url": "https://www.polygon.com/james-gunn-dc-universe-batman-wally-west-canon-answers/",
         "source": "Polygon"
       },
       {
-        "title": "Modern Warfare 4 Is Legitimately a Top-5 Call of Duty Campaign",
-        "url": "https://www.polygon.com/mw4-modern-warfare-4-call-duty-campaign-review/",
+        "title": "Mike Flanagan Officially Confirms His Plan for The Dark Tower TV Series Adaptation",
+        "url": "https://www.polygon.com/dark-tower-tv-series-update-mike-flanagan-faithful-books/",
         "source": "Polygon"
       },
       {
-        "title": "Stupid Never Dies Is Easily the Worst Game of 2026",
-        "url": "https://www.polygon.com/stupid-never-dies-review/",
+        "title": "James Gunn Officially Shuts Down Milly Alcock Supergirl Rumors",
+        "url": "https://www.polygon.com/supergirl-rumors-james-gunn-shuts-down-milly-alcock/",
         "source": "Polygon"
       },
       {
-        "title": "Street Fighter Officially Sets a New Franchise Box Office Record",
-        "url": "https://www.polygon.com/street-fighter-movie-2026-box-office-success/",
+        "title": "Cyberpunk 2077 Is Getting a Big Update This Week",
+        "url": "https://www.polygon.com/cyberpunk-2077-edgerunners-2-update-netflix/",
         "source": "Polygon"
       }
     ],
