@@ -165,3 +165,9 @@ Code review（`340bf4c~1..HEAD`）找到並修正：
 - **Discord 修正**：新增 `/configure RESPONSE_MODE`（full／dialogue_single／dialogue_multi／custom，也接受中文別名）與 `CUSTOM_RESPONSE_PROMPT`，`/config` 會顯示目前模式；提示詞與提醒和 PWA 相同；超過 2000 字自動切段送出，重新生成會刪掉全部切段（舊資料沒有記錄時只刪最後一則）。預設為多句對話。
 - **部署**：Discord Worker 要把新的 `scripts/discord-bot-worker.js` 重新貼到 Cloudflare，再開一次 `/discord/register-commands`（或 `/setup`）讓新的 `/configure` 選項出現。
 - 測試：`tests/unit/response-mode.test.mjs`（PWA 與 Discord 純函式；Discord 版從 Worker 檔案取出標記區塊測試）。
+
+### 2026-10-21 Discord：清除、截斷、思考過程
+- **清除沒清到記憶**：`/clear` 一直有兩種模式（只清對話／全部清除）。原本的順序是先逐則刪 Discord 訊息（每則等 200ms），最後才清資料庫；Worker 背景執行有時間上限，常常在刪完訊息前被中斷，所以看起來「只清了聊天、記憶沒清」。改成先清資料庫、最後才刪訊息，14 天內的訊息用批次刪除。「全部清除」也改成用 `chat_id` 或 `character_id` 比對（Siios 同步來的記憶只有 `character_id` 對得上），並重置摘要進度。`mode` 改為必選，避免沒選到而預設只清對話。
+- **回覆被截斷**：前一版加的輸出上限太小（中文一字約 1~2 token），改為單句 800／多句 2000／完整與自訂 3000（PWA 同步調整單句、多句）；回覆因上限被截斷時收在最後一個完整句子。
+- **思考過程（COT）**：Worker 沒有任何處理，模型把 `<think>…</think>` 一起吐出來就原樣送上 Discord。現在程式碼會去掉各種思考標籤（含只有結尾標籤、思考到一半被截斷的情況），提示詞也明確禁止；若整段都是思考則回報錯誤而不是送出空訊息。
+- 重新部署後需再開一次 `/discord/register-commands`，`/clear` 的選項才會更新。
