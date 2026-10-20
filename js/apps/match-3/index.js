@@ -1,5 +1,5 @@
 import Router from '../../router.js';
-import { createElement } from '../../components.js';
+import { createElement, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 
 const BOARD_SIZE = 7;
@@ -170,9 +170,9 @@ function handleTileClick(container, idx) {
   saveGameState();
   
   if (score >= target) {
-    alert('🎉 達成目標！');
+    createToast('🎉 達成目標！', 'success');
   } else if (moves <= 0) {
-    alert('😢 步數用盡！');
+    createToast('😢 步數用盡！按「重新開始」再挑戰', 'error');
   }
 }
 

@@ -1,6 +1,7 @@
 import Router from '../../router.js';
-import { createElement } from '../../components.js';
+import { createElement, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
+import { getBalance, charge, formatMoney, WalletError } from '../../core/wallet.js';
 
 const GACHA_CONFIGS = {
   genshin: {
@@ -49,8 +50,14 @@ let gachaState = {
   currency: 16000,
   totalSpent: 0,
   stats: { total: 0, rarity5: 0, rarity4: 0, rarity3: 0 },
-  history: []
+  history: [],
+  lastCheckin: ''
 };
+
+let lastPulls = [];
+const EXCHANGE = { cost: 100, gems: 160 }; // $100 虛擬錢包 = 160 貨幣
+const DAILY_GEMS = 1600;
+const todayStr = () => new Date().toDateString();
 
 async function loadGachaState() {
   const saved = await SettingsDB.get('arcade_gacha');
@@ -140,6 +147,23 @@ function renderGachaGame(container) {
         </button>
       </div>
       
+      ${lastPulls.length ? `
+      <div class="gacha-result">
+        <h3>本次結果</h3>
+        <div class="result-grid">${lastPulls.map(p => `<div class="result-item rarity-${p.rarity}"><span class="history-rarity">${p.rarity}★</span><span class="history-name">${p.name}</span></div>`).join('')}</div>
+      </div>` : ''}
+
+      <div class="gacha-refill">
+        <button class="gacha-btn" data-refill="daily" ${gachaState.lastCheckin === todayStr() ? 'disabled' : ''}>
+          <span class="btn-label">每日簽到</span>
+          <span class="btn-cost">${gachaState.lastCheckin === todayStr() ? '今天已領取' : '+' + DAILY_GEMS + ' ' + config.currency}</span>
+        </button>
+        <button class="gacha-btn" data-refill="exchange">
+          <span class="btn-label">錢包兌換</span>
+          <span class="btn-cost">${formatMoney(EXCHANGE.cost)} → ${EXCHANGE.gems} ${config.currency}</span>
+        </button>
+      </div>
+
       <div class="gacha-stats">
         <div class="stat-item">
           <span class="stat-label">總抽數</span>
@@ -169,6 +193,8 @@ function renderGachaGame(container) {
     </div>
   `;
   
+  bindRefill(container);
+
   container.querySelectorAll('.game-tab').forEach(tab => {
     tab.onclick = async () => {
       gachaState.currentGame = tab.dataset.game;
@@ -179,30 +205,65 @@ function renderGachaGame(container) {
     };
   });
   
-  container.querySelectorAll('.gacha-btn').forEach(btn => {
+  container.querySelectorAll('.gacha-btn[data-count]').forEach(btn => {
     btn.onclick = async () => {
       const count = parseInt(btn.dataset.count);
       const config = GACHA_CONFIGS[gachaState.currentGame];
       const cost = config.pullCost * count;
       
       if (gachaState.currency < cost) {
-        alert('貨幣不足！');
+        createToast('貨幣不足！可以每日簽到，或用錢包兌換', 'error');
         return;
       }
       
       gachaState.currency -= cost;
       gachaState.totalSpent += cost;
       
+      lastPulls = [];
       for (let i = 0; i < count; i++) {
         const result = pull(config);
         gachaState.history.push(result);
+        lastPulls.push(result);
       }
+      lastPulls.sort((a, b) => b.rarity - a.rarity);
       
       await saveGachaState();
       renderGachaGame(container);
     };
   });
 }
+
+function bindRefill(container) {
+  container.querySelectorAll('[data-refill]').forEach(btn => {
+    btn.onclick = async () => {
+      if (btn.dataset.refill === 'daily') {
+        if (gachaState.lastCheckin === todayStr()) return;
+        gachaState.currency += DAILY_GEMS;
+        gachaState.lastCheckin = todayStr();
+        createToast('簽到成功，+' + DAILY_GEMS, 'success');
+      } else {
+        try {
+          await charge(EXCHANGE.cost, '街機廳：兌換貨幣', { category: 'arcade' });
+        } catch (e) {
+          createToast(e instanceof WalletError ? e.message : '兌換失敗', 'error');
+          return;
+        }
+        gachaState.currency += EXCHANGE.gems;
+        createToast('已兌換 ' + EXCHANGE.gems, 'success');
+      }
+      await saveGachaState();
+      renderGachaGame(container);
+    };
+  });
+}
+
+const GAMES = [
+  { id: 'gacha', name: '抽卡模擬' },
+  { id: 'g2048', name: '2048' },
+  { id: 'snake', name: '貪吃蛇' },
+  { id: 'memory', name: '翻牌配對' },
+  { id: 'mines', name: '踩地雷' }
+];
 
 async function renderArcade(params) {
   await loadGachaState();
@@ -218,6 +279,7 @@ async function renderArcade(params) {
     </header>
     
     <div class="page">
+      <nav class="arcade-nav">${GAMES.map(g => `<button class="arcade-nav-btn" data-game="${g.id}">${g.name}</button>`).join('')}</nav>
       <div id="arcade-content"></div>
     </div>
   `;
@@ -226,9 +288,26 @@ async function renderArcade(params) {
   backBtn.onclick = () => Router.back();
   
   const content = container.querySelector('#arcade-content');
-  renderGachaGame(content);
-  
-  return { element: container, cleanup: null };
+  let stopGame = null;
+  let token = 0;
+  const lastGame = (await SettingsDB.get('arcade_last_game')) || 'gacha';
+
+  async function show(id) {
+    const mine = ++token;
+    if (stopGame) { stopGame(); stopGame = null; }
+    container.querySelectorAll('.arcade-nav-btn').forEach(b => b.classList.toggle('active', b.dataset.game === id));
+    content.innerHTML = '';
+    SettingsDB.set('arcade_last_game', id);
+    if (id === 'gacha') return renderGachaGame(content);
+    const mod = await import('./games/' + (id === 'g2048' ? 'g2048' : id) + '.js');
+    const stop = await mod.mount(content);
+    if (mine !== token) stop?.(); else stopGame = stop;
+  }
+
+  container.querySelectorAll('.arcade-nav-btn').forEach(b => { b.onclick = () => show(b.dataset.game); });
+  show(GAMES.some(g => g.id === lastGame) ? lastGame : 'gacha');
+
+  return { element: container, cleanup: () => { token++; if (stopGame) stopGame(); } };
 }
 
 export default {

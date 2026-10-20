@@ -41,3 +41,22 @@
 .iv-report { margin-top: 12px; padding: 14px; background: var(--iv-card); border: 1px solid var(--iv-line); border-radius: 16px; line-height: 1.6; white-space: pre-wrap; font-size: 14px; }
 .iv-log { display: flex; justify-content: space-between; gap: 8px; padding: 10px 2px; border-bottom: 1px solid var(--iv-line); font-size: 14px; }
 .iv-note { margin: 0; padding: 8px 14px calc(8px + env(safe-area-inset-bottom)); font-size: 11px; color: var(--iv-muted); text-align: center; background: var(--iv-card); border-top: 1px solid var(--iv-line); }
+.iv-banner { display: block; width: 100%; padding: 10px 14px; margin-bottom: 10px; border: none; border-radius: 12px; background: #e8f0ff; color: var(--iv-accent); font-weight: 700; font-size: 13px; text-align: left; cursor: pointer; }
+.iv-tag { font-style: normal; font-size: 11px; margin-left: 4px; }
+.iv-tag.up { color: var(--iv-up); } .iv-tag.down { color: var(--iv-down); }
+.iv-worldhead { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px; }
+.iv-worldhead > div { display: flex; flex-direction: column; }
+.iv-worldhead .iv-link { padding: 0; white-space: nowrap; }
+.iv-tip { margin: 0 0 10px; padding: 10px 12px; font-size: 12px; line-height: 1.5; background: #fff8e1; border-radius: 12px; color: #6b5300; }
+.iv-overview { margin-bottom: 12px; padding: 12px; background: var(--iv-card); border: 1px solid var(--iv-line); border-radius: 16px; font-size: 14px; }
+.iv-chips { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 0; }
+.iv-chip { padding: 3px 10px; border-radius: 100px; font-size: 12px; font-weight: 700; background: var(--iv-bg); }
+.iv-chip.up { color: var(--iv-up); background: #fdecec; } .iv-chip.down { color: var(--iv-down); background: #e6f6ee; }
+.iv-event { margin-bottom: 10px; padding: 14px; background: var(--iv-card); border: 1px solid var(--iv-line); border-radius: 16px; }
+.iv-event h3 { margin: 0; font-size: 15px; line-height: 1.4; }
+.iv-why { margin: 8px 0 0; font-size: 13px; line-height: 1.5; color: var(--iv-ink); }
+.iv-event details { margin-top: 8px; font-size: 12px; color: var(--iv-muted); }
+.iv-event summary { cursor: pointer; }
+.iv-en { margin: 6px 0; line-height: 1.5; }
+.iv-event a { color: var(--iv-accent); font-weight: 700; }
+.iv-related { margin: 12px 0; } .iv-related > strong { display: block; margin-bottom: 8px; }
