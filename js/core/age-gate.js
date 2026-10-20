@@ -1,9 +1,11 @@
 import { SettingsDB } from '../db.js';
+import { ageOf as ageOfBirth, isAdultOn, unlockDateOf, fmtDate, toBirthString } from './age-core.js';
+
+export { fmtDate, toBirthString };
 
 // 年齡確認：第一次開啟時詢問生日（只存在這台裝置）。未滿 18 歲時鎖住不適合的內容，
 // 判斷是用「今天的日期」即時計算，所以滿 18 歲當天會自動解鎖。
 const KEY = 'user_birthdate';
-const ADULT_AGE = 18;
 
 // app id → 顯示名稱；'gacha' 是街機廳裡的抽卡模擬
 export const RESTRICTED = { pub: '酒館', ao3: 'AO3', lofter: 'Lofter', dating: '約會', gacha: '抽卡模擬' };
@@ -18,32 +20,10 @@ export async function loadBirthdate() {
 export const hasBirthdate = () => !!birth;
 export const getBirthdate = () => birth;
 
-const parse = s => { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
-
-export function ageOf(b = birth, now = new Date()) {
-    if (!b) return 0;
-    const d = parse(b);
-    let age = now.getFullYear() - d.getFullYear();
-    if (now.getMonth() < d.getMonth() || (now.getMonth() === d.getMonth() && now.getDate() < d.getDate())) age--;
-    return age;
-}
-// 還沒有生日資料時一律當成未成年（啟動時會強制先填）
-export const isAdult = (now = new Date()) => !!birth && ageOf(birth, now) >= ADULT_AGE;
-export function unlockDate() {
-    if (!birth) return null;
-    const d = parse(birth);
-    return new Date(d.getFullYear() + ADULT_AGE, d.getMonth(), d.getDate());
-}
-export const fmtDate = d => d.getFullYear() + '/' + (d.getMonth() + 1) + '/' + d.getDate();
+export const ageOf = (b = birth, now = new Date()) => ageOfBirth(b, now);
+export const isAdult = (now = new Date()) => isAdultOn(birth, now);
+export const unlockDate = () => unlockDateOf(birth);
 export const isRestricted = id => id in RESTRICTED && !isAdult();
-
-export function toBirthString(y, m, d, now = new Date()) {
-    const date = new Date(y, m - 1, d);
-    if (date.getFullYear() !== y || date.getMonth() !== m - 1 || date.getDate() !== d) throw new Error('這一天不存在，請重新選擇');
-    if (date > now) throw new Error('生日不能是未來的日期');
-    if (y < 1900) throw new Error('請輸入正確的出生年份');
-    return y + '-' + String(m).padStart(2, '0') + '-' + String(d).padStart(2, '0');
-}
 
 // 未滿 18 歲不能自己改生日（否則鎖就形同虛設）；成年後可以更正
 export async function saveBirthdate(str) {

@@ -1,4 +1,5 @@
-import APIClient from '../../api.js';
+// api.js 會連到瀏覽器專用的資料庫，只在真的需要 AI 時才載入（也讓純邏輯能在 Node 裡測試）
+const getAPI = async () => (await import('../../api.js')).default;
 
 // 每日真實世界事件：從 Wikipedia 的「Portal:Current events」取得當天新聞（免費、免金鑰、允許跨網域），
 // 有設定 AI 就由 AI 翻成中文並判斷對各板塊的影響；沒有 AI 時用關鍵字規則。
@@ -93,7 +94,7 @@ export function analyzeByRules(items) {
 
 // ───────── AI 分析 ─────────
 export async function aiReady() {
-    const s = await APIClient.getSettings();
+    const s = await (await getAPI()).getSettings();
     return !!(s.api_url && s.api_key);
 }
 
@@ -108,7 +109,7 @@ export async function analyzeByAI(items) {
     const list = items.slice(0, 25);
     const system = `你是財經分析師，要把今天的世界新聞對應到一個「虛構市場」的產業板塊，供使用者從遊戲中學習真實世界的連動。板塊只能是：${SECTORS.join('、')}（「大盤」代表整體市場情緒）。只挑選 4~8 則對市場最有意義的新聞，其餘忽略。`;
     const user = `今天的新聞標題（英文）：\n${list.map((it, i) => `${i + 1}. [${it.category}] ${it.text.slice(0, 220)}`).join('\n')}\n\n請只輸出 JSON：{"events":[{"i":新聞編號,"zh":"繁體中文一句話事件摘要","why":"一句話說明為什麼會影響這些板塊（讓人學到產業連動）","impacts":[{"sector":"板塊","dir":1或-1,"strength":1到3}]}]}`;
-    const text = await APIClient.complete([{ role: 'system', content: system }, { role: 'user', content: user }], { temperature: 0.3, maxTokens: 2200 });
+    const text = await (await getAPI()).complete([{ role: 'system', content: system }, { role: 'user', content: user }], { temperature: 0.3, maxTokens: 2200 });
     const parsed = extractJson(text);
     const events = [];
     for (const e of Array.isArray(parsed.events) ? parsed.events : []) {
