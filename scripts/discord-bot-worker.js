@@ -1174,8 +1174,8 @@ async function generateAIResponseWithContext(message, characterId, userId, userD
     // 世界書
     const worldInfoEntries = await loadWorldInfoContext(chatId, message.content, characterId, userId, env);
 
-    // 對話歷史
-    const history = await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? ORDER BY timestamp DESC LIMIT 100`).bind(chatId).all();
+    // 對話歷史（Discord 頻道上的實際對話為主）
+    const historyMessages = await buildConversationHistory(message, chatId, env);
 
     // 記憶
     let memories = [];
@@ -1275,7 +1275,7 @@ ${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道�
     }
 
     // 6. 對話歷史
-    const conversationMessages = (history.results || []).reverse().map(m => ({ role: m.role, content: m.role === 'assistant' ? (stripReasoning(m.content) || m.content) : m.content }));
+    const conversationMessages = historyMessages.map(m => ({ role: m.role, content: m.role === 'assistant' ? (stripReasoning(m.content) || m.content) : m.content }));
 
     // 7. 世界書後置
     const backMessages = backEntries.map(entry => ({ role: 'system', content: `[${entry.name}]\n${entry.content}` }));
@@ -1725,6 +1725,68 @@ async function getDiscordHistory(channel_id, limit, env) {
 // 清除分兩種：mode 'chat' 只清對話歷史（與對話日誌型記憶）；'all' 連所有記憶、摘要進度一起清。
 // 先處理資料庫、最後才刪 Discord 訊息：刪訊息要逐則等待、很慢，Worker 在背景執行有時間上限，
 // 資料庫的清除如果排在後面，常常還沒執行到就被中斷（看起來就是「只清了聊天、記憶還在」）。
+// ===== 對話上下文：以 Discord 頻道上實際的對話為準 =====
+const CONTEXT_FETCH_LIMIT = 60;
+const snowflakeFromTime = ms => String((BigInt(ms) - 1420070400000n) << 22n);
+
+// 讀取頻道上「這則訊息之前」的最近對話（含這則）。機器人自己的是 assistant，其他人是 user；
+// 空訊息（只有圖片）、其他機器人、罐頭／錯誤訊息略過；/clear 之後留下的游標（ctx_cutoff_）之前的不讀。
+async function fetchDiscordContext(message, env) {
+    const botUserId = await getBotUserId(env);
+    const cutoffRow = await env.DB.prepare(`SELECT cursor FROM botState WHERE key = ?`).bind('ctx_cutoff_' + message.channel_id).first();
+    const cutoff = cutoffRow?.cursor ? BigInt(cutoffRow.cursor) : 0n;
+    const upTo = BigInt(message.id) + 1n; // before 不含邊界，+1 才會包含這則訊息本身
+    const resp = await fetch(`https://discord.com/api/v10/channels/${message.channel_id}/messages?limit=${CONTEXT_FETCH_LIMIT}&before=${upTo}`, {
+        headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
+    });
+    if (!resp.ok) throw new Error('Discord history ' + resp.status);
+    const list = await resp.json();
+    if (!Array.isArray(list)) return [];
+    const kept = list.filter(m => {
+        const text = String(m.content ?? '').trim();
+        if (!text || BigInt(m.id) <= cutoff) return false;
+        if (m.author?.id !== botUserId && m.author?.bot) return false;
+        return !(looksLikeRefusal(text) || text.startsWith('⚠️ AI 回覆時發生錯誤'));
+    }).reverse(); // 由舊到新
+    const humans = new Set(kept.filter(m => m.author?.id !== botUserId).map(m => m.author?.id));
+    return kept.map(m => {
+        const isBot = m.author?.id === botUserId;
+        const who = m.author?.global_name || m.author?.username || '';
+        return { role: isBot ? 'assistant' : 'user', content: !isBot && humans.size > 1 && who ? `${who}: ${m.content}` : m.content, ts: m.timestamp };
+    });
+}
+
+// 上下文：優先讀 Discord 頻道歷史；讀不到（沒權限、被限流、頻道是空的）就退回資料庫裡存的歷史。
+// 資料庫裡來自 Siios（pwa）的訊息不在 Discord 上，依時間穿插進去。相鄰同角色的訊息（切段的回覆）合併成一則。
+async function buildConversationHistory(message, chatId, env) {
+    const rows = ((await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? ORDER BY timestamp DESC LIMIT 100`).bind(chatId).all()).results || []).reverse();
+    const fromDb = () => rows.map(m => ({ role: m.role, content: m.content }));
+    let items = null;
+    try {
+        const discord = await fetchDiscordContext(message, env);
+        if (discord.length) {
+            const first = new Date(discord[0].ts).getTime();
+            const pwa = rows.filter(r => {
+                try { return JSON.parse(r.metadata || '{}').source === 'pwa'; } catch (_) { return false; }
+            }).filter(r => new Date(r.timestamp).getTime() >= first).map(r => ({ role: r.role, content: r.content, ts: r.timestamp }));
+            items = [...discord, ...pwa].sort((a, b) => new Date(a.ts) - new Date(b.ts));
+        }
+    } catch (error) {
+        console.error('Discord context fallback to DB:', error.message);
+    }
+    if (!items) return fromDb();
+    const merged = [];
+    for (const it of items) {
+        const last = merged[merged.length - 1];
+        if (last && last.role === it.role) last.content += '\n\n' + it.content;
+        else merged.push({ role: it.role, content: it.content });
+    }
+    // 目前這則使用者訊息一定要在最後（Discord 偶爾還沒回傳新訊息、或資料來源是重新生成時的舊訊息）
+    const tail = merged[merged.length - 1];
+    if (message.content && !(tail && tail.role === 'user' && tail.content.includes(message.content))) merged.push({ role: 'user', content: message.content });
+    return merged;
+}
+
 async function clearChannelHistory(channel_id, env, mode = 'chat', count = 1) {
     if (mode === 'canned' || mode === 'last') return clearBotRepliesPartially(channel_id, env, mode, count);
     const botUserId = await getBotUserId(env);
@@ -1733,6 +1795,9 @@ async function clearChannelHistory(channel_id, env, mode = 'chat', count = 1) {
     const characterId = await resolveChannelCharacter(channel_id, env);
     const chatIds = [channel_id];
     if (characterId && characterId !== channel_id) chatIds.push(characterId);
+
+    // 使用者自己的訊息不會被刪，所以另外記下「這個時間點之前的 Discord 訊息不再當上下文」
+    await env.DB.prepare(`INSERT INTO botState (key, cursor) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET cursor = excluded.cursor`).bind('ctx_cutoff_' + channel_id, snowflakeFromTime(Date.now())).run();
 
     for (const cid of chatIds) {
         await env.DB.prepare(`DELETE FROM messages WHERE chat_id = ?`).bind(cid).run();

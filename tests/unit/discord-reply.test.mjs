@@ -60,8 +60,9 @@ function makeEnv() {
     return { db, env: { DB: { prepare: wrap }, DISCORD_BOT_TOKEN: 't', DISCORD_APPLICATION_ID: '1' } };
 }
 
-async function runPoll(userMessages, aiReplies) {
+async function runPoll(userMessages, aiReplies, discordHistory = [], setup = () => {}) {
     const { db, env } = makeEnv();
+    setup(db);
     const sent = [], aiCalls = [];
     let reply = 0;
     const realFetch = globalThis.fetch;
@@ -74,6 +75,7 @@ async function runPoll(userMessages, aiReplies) {
             const r = aiReplies[Math.min(reply++, aiReplies.length - 1)];
             return Response.json({ choices: [{ message: { content: r }, finish_reason: 'stop' }] });
         }
+        if (u.includes('/channels/chan1/messages?limit=60')) return Response.json(discordHistory); // 讀上下文
         if (u.includes('/channels/chan1/messages') && (init.method || 'GET') === 'GET') {
             return Response.json(userMessages.map((content, i) => ({ id: String(2000 + i), content, channel_id: 'chan1', author: { id: 'U1', username: 'u', bot: false }, timestamp: new Date(Date.now() - 60000 + i * 1000).toISOString(), mentions: [{ id: 'BOT' }] })).reverse());
         }
@@ -235,4 +237,49 @@ test('輪詢：新訊息照常回覆，同一批裡太舊的跳過', async () =>
     assert.equal(r.aiCalls.length, 1);
     assert.equal(r.sent.length, 1);
     assert.equal(r.stored, 2); // 一則使用者訊息 + 一則機器人回覆
+});
+
+// ───── 上下文讀 Discord 頻道歷史 ─────
+const dm = (id, content, who = 'U1', extra = {}) => ({ id: String(id), content, author: { id: who, username: who === 'BOT' ? 'bot' : who }, timestamp: new Date(Date.now() - 600000 + Number(id) * 1000).toISOString(), ...extra });
+const chatOf = body => body.messages.filter(m => m.role === 'user' || m.role === 'assistant').map(m => `${m.role}:${m.content.split('\n\n【回應格式')[0]}`);
+
+test('上下文：讀 Discord 頻道上的歷史（由舊到新），機器人的是 assistant，切段的回覆合併，罐頭／錯誤／空訊息略過', async () => {
+    const hist = [ // Discord 由新到舊
+        dm(2000, '現在這則', 'U1'),
+        dm(1008, '', 'U1'), // 只有圖片
+        dm(1007, '⚠️ AI 回覆時發生錯誤：AI API 500', 'BOT'),
+        dm(1006, REFUSAL, 'BOT'),
+        dm(1005, '第二段', 'BOT'),
+        dm(1004, '第一段', 'BOT'),
+        dm(1003, '我昨天去了海邊', 'U1'),
+        dm(1002, '別的機器人說的話', 'OTHERBOT', { author: { id: 'OTHERBOT', username: 'x', bot: true } })
+    ];
+    const r = await runPoll(['現在這則'], ['好'], hist);
+    assert.deepEqual(chatOf(r.aiCalls[0]).slice(-3), ['user:我昨天去了海邊', 'assistant:第一段\n\n第二段', 'user:現在這則']);
+    assert.ok(!JSON.stringify(r.aiCalls[0].messages).includes('舊的回覆'), '有 Discord 歷史時不該再用資料庫的舊歷史');
+    assert.ok(!JSON.stringify(r.aiCalls[0].messages).includes('別的機器人'));
+});
+
+test('上下文：讀不到 Discord 歷史（空的）就退回資料庫歷史', async () => {
+    const r = await runPoll(['你好'], ['好'], []);
+    assert.ok(JSON.stringify(r.aiCalls[0].messages).includes('舊的回覆'));
+});
+
+test('上下文：/clear 之後的游標之前的 Discord 訊息不再讀', async () => {
+    const hist = [dm(2000, '現在這則'), dm(1500, '清除之後說的'), dm(500, '清除之前說的')];
+    const cutoff = String(1000n); // 比 500 大、比 1500 小
+    const r = await runPoll(['現在這則'], ['好'], hist, db => db.prepare(`INSERT INTO botState (key, cursor) VALUES ('ctx_cutoff_chan1', ?)`).run(cutoff));
+    const text = JSON.stringify(r.aiCalls[0].messages);
+    assert.ok(text.includes('清除之後說的'));
+    assert.ok(!text.includes('清除之前說的'));
+});
+
+test('上下文：頻道裡有多位使用者時，使用者訊息前面標上名字', async () => {
+    const hist = [dm(2000, '現在這則', 'U1'), dm(1003, '我也想說', 'U2'), dm(1002, '大家好', 'U1')];
+    const r = await runPoll(['現在這則'], ['好'], hist);
+    // 相鄰的使用者訊息合併成一則
+    assert.deepEqual(chatOf(r.aiCalls[0]).slice(-1), ['user:U1: 大家好\n\nU2: 我也想說\n\nU1: 現在這則']);
+    const text = JSON.stringify(r.aiCalls[0].messages);
+    assert.ok(text.includes('U1: 大家好'));
+    assert.ok(text.includes('U2: 我也想說'));
 });
