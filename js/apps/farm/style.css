@@ -12,3 +12,34 @@
 .shop-section h3 { font-size: 14px; color: var(--farm-text); margin-bottom: 12px; }
 .crop-list { display: flex; gap: 8px; flex-wrap: wrap; }
 .crop-btn { padding: 8px 12px; background: var(--farm-accent); color: white; border: none; border-radius: 8px; font-size: 12px; cursor: pointer; }.farm-hint { font-size: 12px; color: #888; margin: 0 0 10px; }
+
+/* 農場擴充：等級、分頁、倉庫、訂單、動物、面板 */
+.farm-app .fm-page { display: flex; flex-direction: column; gap: 12px; }
+.fm-level { display: flex; align-items: center; gap: 10px; background: var(--farm-card); border-radius: 12px; padding: 10px 14px; font-size: 13px; color: var(--farm-text); }
+.fm-xp { flex: 1; height: 10px; background: #dcedc8; border-radius: 100px; overflow: hidden; } .fm-xp i { display: block; height: 100%; background: var(--farm-accent); }
+.fm-tabs { display: flex; gap: 6px; }
+.fm-tabs button { flex: 1; padding: 9px 0; border: none; border-radius: 100px; background: var(--farm-card); color: var(--farm-muted); font-weight: 700; font-size: 13px; cursor: pointer; }
+.fm-tabs button.on { background: var(--farm-accent); color: #fff; }
+.farm-app .plot { border: none; padding: 0; overflow: hidden; }
+.farm-app .plot.empty { border: 2px dashed var(--farm-muted); }
+.farm-app .plot.ready { box-shadow: 0 0 0 3px #ff8f00 inset; }
+.farm-app .plot.lock { background: #e8e8e8; color: #777; gap: 2px; } .farm-app .plot.lock small { font-size: 10px; }
+.crop-icon.dim { opacity: .55; filter: grayscale(.4); }
+.grow-bar { position: absolute; left: 0; bottom: 0; height: 4px; background: var(--farm-accent); }
+.farm-app .plot em { position: absolute; top: 4px; left: 6px; font-style: normal; font-size: 12px; } .farm-app .plot em.f { left: auto; right: 6px; }
+.fm-btn { padding: 8px 14px; border: none; border-radius: 100px; background: var(--farm-accent); color: #fff; font-weight: 700; font-size: 12px; cursor: pointer; white-space: nowrap; }
+.fm-btn.alt { background: #ffb74d; } .fm-btn:disabled { opacity: .4; }
+.fm-primary { width: 100%; padding: 12px; border: none; border-radius: 100px; background: var(--farm-accent); color: #fff; font-weight: 800; cursor: pointer; margin-top: 10px; }
+.fm-primary.alt { background: #cfd8dc; color: #37474f; }
+.fm-muted { color: #888; font-size: 12px; } .fm-muted.center { text-align: center; padding: 20px 0; }
+.fm-h { font-size: 14px; color: var(--farm-text); margin: 16px 0 8px; }
+.animal, .stock-row, .order, .shop-row { display: flex; align-items: center; gap: 10px; background: var(--farm-card); border-radius: 12px; padding: 12px; margin-bottom: 8px; }
+.an-icon { font-size: 32px; } .an-info { flex: 1; display: flex; flex-direction: column; } .an-info small, .shop-row small, .order small { color: #888; font-size: 11px; }
+.stock-row .st-name { flex: 1; font-weight: 600; } .st-price { font-size: 12px; font-weight: 700; } .st-price.up { color: #2e7d32; } .st-price.down { color: #c62828; }
+.order { justify-content: space-between; } .order > div { display: flex; flex-direction: column; } .order.done { opacity: .5; }
+.shop-row { width: 100%; border: none; justify-content: space-between; text-align: left; cursor: pointer; font: inherit; color: var(--farm-text); }
+.shop-row > span { display: flex; flex-direction: column; } .shop-row b { color: #ef6c00; } .shop-row:disabled { opacity: .45; cursor: default; } .shop-row.danger { color: #c62828; }
+.fm-sheet-bg { position: fixed; inset: 0; background: rgba(0,0,0,.45); display: flex; align-items: flex-end; z-index: 50; }
+.fm-sheet { width: 100%; max-height: 80%; overflow-y: auto; background: #f1f8e9; border-radius: 24px 24px 0 0; padding: 18px 16px calc(18px + env(safe-area-inset-bottom)); }
+.fm-sheet h3 { margin: 0 0 10px; color: var(--farm-text); }
+.farm-hint { font-size: 12px; color: #888; margin: 8px 0; }

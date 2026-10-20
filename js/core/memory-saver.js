@@ -86,6 +86,8 @@ function generateMetaContent(sourceApp, sourceSubtype, content) {
         'facebook': 'Facebook',
         'pub': '酒館',
         'invest': '投資模擬器',
+        'farm': '農場',
+        'home': '宅家',
         'dating': '約會',
         'bubbles': 'Bubbles',
         'weverse': 'Weverse',
@@ -122,7 +124,7 @@ function getDefaultMemorySettings() {
     return {
         include_main_memories: true,
         include_fiction: false,
-        selected_sources: ['chat', 'youtube', 'instagram', 'chrome', 'dating', 'bubbles', 'weverse', 'facebook', 'pub', 'invest'],
+        selected_sources: ['chat', 'youtube', 'instagram', 'chrome', 'dating', 'bubbles', 'weverse', 'facebook', 'pub', 'invest', 'farm', 'home'],
         memory_level: 'meta'
     };
 }

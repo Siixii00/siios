@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sxios-v57';
+const CACHE_NAME = 'sxios-v59';
 
 const STATIC_ASSETS = [
   '/siios/',

@@ -13,6 +13,8 @@ const SOURCE_LABELS = {
     'facebook': 'Facebook',
     'pub': '酒館',
     'invest': '投資模擬器',
+    'farm': '農場',
+    'home': '宅家',
     'chrome': 'Chrome',
     'dating': '約會',
     'bubbles': 'Bubbles',

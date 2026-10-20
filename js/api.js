@@ -112,6 +112,14 @@ const APIClient = {
             }
         }
         
+        // 宅家的精力值偏低時，讓角色知道使用者的狀態（只有低精力才提示，避免每句都被干擾）
+        try {
+            const home = await SettingsDB.get('home_state');
+            if (home && typeof home.energy === 'number' && home.energy <= 30) {
+                systemMessages.push({ role: 'system', content: '【使用者近況】使用者在「宅家」裡的精力值偏低（' + home.energy + '%），看起來有點疲憊。可以自然地關心他，必要時提醒他休息，但不要每句話都提。' });
+            }
+        } catch (e) { /* 讀不到就略過 */ }
+
         const minorPrompt = minorSafetyPrompt();
         if (minorPrompt) {
             systemMessages.push({ role: 'system', content: minorPrompt });
