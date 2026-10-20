@@ -1,24 +1,5 @@
 ﻿import { GlobalSettingsDB, KeywordSettingsDB, TheaterSettingsDB, SettingsDB } from '../db.js';
-
-const CATEGORY_PRIORITY_MAP = {
-    'sx_worldbook_cot': 'front',
-    'sx_worldbook_style': 'front',
-    'sx_worldbook_global': 'front',
-    'sx_worldbook_keywords': 'middle',
-    'sx_worldbook_backend': 'back',
-    'sx_worldbook_core': 'front',
-    'sx_worldbook_theater': 'middle'
-};
-
-const CATEGORY_TARGET_DB = {
-    'sx_worldbook_cot': 'global',
-    'sx_worldbook_style': 'global',
-    'sx_worldbook_global': 'global',
-    'sx_worldbook_keywords': 'keyword',
-    'sx_worldbook_backend': 'global',
-    'sx_worldbook_core': 'global',
-    'sx_worldbook_theater': 'theater'
-};
+import { CATEGORY_PRIORITY_MAP, getCategoryEntries } from './worldbook-parser.js';
 
 function extractWorldbookId(filename) {
     const match = filename.match(/^(.+?)_worldbook\.json$/);
@@ -56,18 +37,7 @@ class WorldbookInstaller {
     }
     
     _getCategoryEntries(worldbook) {
-        const result = [];
-        for (const [category, value] of Object.entries(worldbook)) {
-            if (category.startsWith('sx_worldbook_') && Array.isArray(value)) {
-                const targetDB = CATEGORY_TARGET_DB[category];
-                if (targetDB) {
-                    result.push({ category, entries: value, targetDB });
-                }
-            } else if (value && typeof value === 'object' && !Array.isArray(value) && Array.isArray(value.entries)) {
-                result.push({ category, entries: value.entries, targetDB: 'keyword' });
-            }
-        }
-        return result;
+        return getCategoryEntries(worldbook);
     }
 
     async checkDuplicates(worldbookId) {
@@ -191,6 +161,37 @@ class WorldbookInstaller {
         return { imported, skipped };
     }
     
+    // 匯入使用者提供的條目（worldbook-parser 解析出來的格式）。mode：'skip' 略過同名、'overwrite' 覆蓋同名。
+    async findEntryDuplicates(entries) {
+        const stores = { global: GlobalSettingsDB, keyword: KeywordSettingsDB, theater: TheaterSettingsDB };
+        const existing = {};
+        for (const [type, db] of Object.entries(stores)) existing[type] = await db.getAll();
+        return entries.filter(e => existing[e.target].some(x => x.name === e.name));
+    }
+
+    async importEntries(entries, mode = 'skip') {
+        const stores = { global: GlobalSettingsDB, keyword: KeywordSettingsDB, theater: TheaterSettingsDB };
+        const existing = {};
+        for (const [type, db] of Object.entries(stores)) existing[type] = await db.getAll();
+        let created = 0, overwritten = 0, skipped = 0;
+        for (const e of entries) {
+            const data = { name: e.name, content: e.content, priority: e.priority, enabled: e.enabled !== false };
+            if (e.target === 'keyword') data.keywords = e.keywords || [];
+            const found = existing[e.target].find(x => x.name === e.name);
+            if (found) {
+                if (mode !== 'overwrite') { skipped++; continue; }
+                const { name, ...patch } = data;
+                await stores[e.target].update(found.id, patch);
+                overwritten++;
+            } else {
+                const row = await stores[e.target].create(data);
+                existing[e.target].push(row || { name: e.name });
+                created++;
+            }
+        }
+        return { created, overwritten, skipped };
+    }
+
     async importWorldbookWithPrompt(worldbookId, onProgress) {
         const { worldbook, duplicates } = await this.checkDuplicates(worldbookId);
         

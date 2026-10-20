@@ -1,6 +1,7 @@
 ﻿import Router from '../../router.js';
 import { createElement, createIcon } from '../../components.js';
 import builtinWorldbooks from './builtin-worldbooks.js';
+import importWorldbook from './import-worldbook.js';
 
 
 let returnToChat = null;
@@ -137,6 +138,11 @@ async function renderWorldInfo() {
             onClick: () => Router.navigate('/builtin-worldbooks')
         },
         {
+            title: '匯入世界書',
+            description: '從 JSON、TXT 檔案或貼上文字匯入',
+            onClick: () => Router.navigate('/import-worldbook')
+        },
+        {
             title: '全局設定',
             description: '管理全局設定項目',
             onClick: () => Router.navigate('/global-settings')
@@ -224,7 +230,8 @@ export default {
     icon: 'menu_book',
     routes: [
         { path: '/world-info', render: renderWorldInfo },
-        ...builtinWorldbooks.routes
+        ...builtinWorldbooks.routes,
+        ...importWorldbook.routes
     ],
     navItem: {
         label: 'World Info',

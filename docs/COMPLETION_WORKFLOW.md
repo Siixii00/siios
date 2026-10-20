@@ -173,3 +173,7 @@ Code review（`340bf4c~1..HEAD`）找到並修正：
 - 重新部署後需再開一次 `/discord/register-commands`，`/clear` 的選項才會更新。
 
 - 2026-10-21 已用 wrangler 把最新版部署到 `siios-discord-bot`（https://siios-discord-bot.yaninlin.workers.dev），並重新註冊斜線指令；`/discord/ping`、`/keepalive` 正常。
+
+### 2026-10-21 備份相容性與世界書匯入
+- **備份相容性檢查**：這輪改動沒有動到備份格式（只有還原時略過 `user_birthdate`）。新功能（Facebook、農場、投資、酒吧、宅家）的資料都存在 `settings`，會自然隨備份匯出與還原。實測：匯出含新鍵的備份、還原「舊格式、沒有任何新鍵」的備份、還原剛匯出的完整備份，都沒有錯誤，生日也沒被覆蓋。順手修掉 `backup-manager.js` 檔首被我重複加上的 BOM。
+- **世界書匯入**：World Info 新增「匯入世界書」頁（`/import-worldbook`）。支援選檔（JSON／TXT／Markdown，可多選）與貼上文字；JSON 認得 SXIOS 世界書、SillyTavern 等 Lorebook（含角色卡的 `character_book`）、條目陣列、「名稱:內容」物件、文字陣列；純文字依 `# 標題`／`【標題】`／`=== 標題 ===` 分段，標題下方第一行寫「關鍵字：甲, 乙」會成為關鍵字觸發條目，沒有標題就整段一個條目。匯入前有預覽與勾選，可指定全部放到全域／關鍵字／劇場，同名條目可選略過或覆蓋。解析邏輯在 `js/core/worldbook-parser.js`（內建 38 本世界書都能解析，條目數與檔案一致），內建世界書的匯入改用同一份對照表。
