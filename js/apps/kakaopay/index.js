@@ -1,11 +1,11 @@
 import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
-import { getBalance, getTransactions, charge, credit, formatMoney, WalletError } from '../../core/wallet.js';
+import { getBalance, getTransactions, charge, credit, setBalance, formatMoney, WalletError } from '../../core/wallet.js';
 import { askForm } from '../../core/dialogs.js';
 
 const CATEGORY_LABELS = {
   shopping: '購物', delivery: '外送', gift: '禮物', theme: '主題', sticker: '貼圖',
-  transfer: '轉帳', farm: '農場'
+  transfer: '轉帳', farm: '農場', topup: '儲值', adjust: '調整'
 };
 
 function fmtDate(ts) {
@@ -29,6 +29,8 @@ async function renderKakaopay(params) {
       <div class="action-buttons">
         <button class="action-btn send"><i class="fas fa-paper-plane"></i> 轉帳</button>
         <button class="action-btn receive"><i class="fas fa-qrcode"></i> 收款</button>
+        <button class="action-btn topup"><i class="fas fa-plus-circle"></i> 儲值</button>
+        <button class="action-btn adjust"><i class="fas fa-sliders-h"></i> 設定餘額</button>
       </div>
       <div class="transaction-list">
         <h3>交易紀錄</h3>
@@ -73,6 +75,40 @@ async function renderKakaopay(params) {
       createToast(e instanceof WalletError ? e.message : '操作失敗', 'error');
     }
   }
+  async function topup() {
+    const form = await askForm({
+      title: '儲值',
+      hint: '虛擬錢包，自己填多少就加多少（沒有真實金流）。目前餘額 ' + formatMoney(balance),
+      fields: [{ key: 'amount', label: '儲值金額', type: 'number', required: true, placeholder: '例如 5000' }],
+      submitLabel: '儲值'
+    });
+    if (!form) return;
+    try {
+      await credit(form.amount, '儲值', { category: 'topup' });
+      createToast('已儲值 ' + formatMoney(form.amount));
+      Router.handleRoute();
+    } catch (e) {
+      createToast(e instanceof WalletError ? e.message : '儲值失敗', 'error');
+    }
+  }
+  async function adjust() {
+    const form = await askForm({
+      title: '設定餘額',
+      hint: '直接把餘額改成指定數字，可以是 0。目前餘額 ' + formatMoney(balance),
+      fields: [{ key: 'amount', label: '新的餘額', type: 'text', required: true, value: balance }],
+      submitLabel: '設定'
+    });
+    if (!form) return;
+    try {
+      await setBalance(form.amount);
+      createToast('餘額已設為 ' + formatMoney(Number(form.amount)));
+      Router.handleRoute();
+    } catch (e) {
+      createToast(e instanceof WalletError ? e.message : '設定失敗', 'error');
+    }
+  }
+  container.querySelector('.action-btn.topup').onclick = topup;
+  container.querySelector('.action-btn.adjust').onclick = adjust;
   container.querySelector('.action-btn.send').onclick = () => run('send');
   container.querySelector('.action-btn.receive').onclick = () => run('receive');
   return { element: container, cleanup: null };

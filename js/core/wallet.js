@@ -44,7 +44,7 @@ function apply(delta, desc, meta) {
     return serial(async () => {
         const balance = await getBalance();
         if (balance + delta < 0) {
-            throw new WalletError('餘額不足（需要 ' + formatMoney(-delta) + '，目前 ' + formatMoney(balance) + '）', 'insufficient', balance);
+            throw new WalletError('餘額不足（需要 ' + formatMoney(-delta) + '，目前 ' + formatMoney(balance) + '）。可到「支付」app 儲值', 'insufficient', balance);
         }
         const next = balance + delta;
         const list = (await SettingsDB.get(TX_KEY)) || [];
@@ -62,4 +62,21 @@ export function charge(amount, desc, meta = {}) {
 
 export function credit(amount, desc, meta = {}) {
     return apply(validateAmount(amount), desc, meta);
+}
+
+// 虛擬錢包：使用者可以自己把餘額調整成任何數字（不涉及真實金流），差額會留下一筆交易紀錄
+export function setBalance(amount, desc = '手動調整餘額') {
+    const target = Math.round(Number(amount));
+    if (!Number.isFinite(target) || target < 0) return Promise.reject(new WalletError('餘額必須是 0 或以上的數字', 'invalid_amount'));
+    return serial(async () => {
+        const balance = await getBalance();
+        const delta = target - balance;
+        if (delta !== 0) {
+            const list = (await SettingsDB.get(TX_KEY)) || [];
+            list.push({ type: delta < 0 ? 'send' : 'receive', amount: Math.abs(delta), desc, date: Date.now(), category: 'adjust' });
+            await SettingsDB.set(TX_KEY, list.slice(-MAX_TRANSACTIONS));
+        }
+        await SettingsDB.set(BALANCE_KEY, target);
+        return { balance: target };
+    });
 }
