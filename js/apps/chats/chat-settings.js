@@ -506,7 +506,8 @@ async function renderPerChatSettings(params) {
         const mcpSection = createElement('div', 'mt-6');
         mcpSection.appendChild(createElement('p', 'ios-section-header', { textContent: 'MCP 工具' }));
         
-        const mcpEnabled = chat.enabled_mcp_ids && chat.enabled_mcp_ids.length > 0;
+        // 沒設定過視為全部開啟（與實際行為一致）；明確關閉才會存 mcp_enabled: false
+        const mcpEnabled = chat.mcp_enabled !== false;
         
         const mcpToggleBox = createElement('div', 'bg-white rounded-xl shadow-sm mt-2');
         const mcpToggleRow = createElement('div', 'flex items-center justify-between p-4');
@@ -520,8 +521,8 @@ async function renderPerChatSettings(params) {
         mcpToggleRow.appendChild(toggle);
         mcpToggleBox.appendChild(mcpToggleRow);
         
-        const mcpConfigs = await MCPConfigDB.getAll();
-        
+        const mcpConfigs = [{ id: 'local', name: 'App 內建工具（提醒、行程、用藥、心情）' }, ...(await MCPConfigDB.getAll())];
+
         if (mcpEnabled) {
             const divider = createElement('div', 'h-px bg-gray-200 mx-4');
             mcpToggleBox.appendChild(divider);
@@ -530,8 +531,9 @@ async function renderPerChatSettings(params) {
             mcpListTitle.appendChild(createElement('span', 'text-sm text-gray-500', { textContent: '選擇要啟用的 MCP 伺服器' }));
             mcpToggleBox.appendChild(mcpListTitle);
             
-            const enabledIds = chat.enabled_mcp_ids || [];
-            
+            // 沒有明確選擇過時，代表全部啟用
+            const enabledIds = chat.enabled_mcp_ids && chat.enabled_mcp_ids.length > 0 ? chat.enabled_mcp_ids : mcpConfigs.map(c => c.id);
+
             for (const config of mcpConfigs) {
                 const mcpRow = createElement('div', 'flex items-center justify-between px-4 py-3');
                 mcpRow.appendChild(createElement('span', 'text-base', { textContent: config.name || '未命名' }));
@@ -549,9 +551,12 @@ async function renderPerChatSettings(params) {
                         newEnabledIds = [...enabledIds, config.id];
                     }
                     
-                    await ChatsDB.update(chatId, { enabled_mcp_ids: newEnabledIds });
+                    // 全部取消勾選等於停用，避免空清單被當成「全部啟用」
+                    await ChatsDB.update(chatId, newEnabledIds.length === 0
+                        ? { enabled_mcp_ids: [], mcp_enabled: false }
+                        : { enabled_mcp_ids: newEnabledIds });
                     createToast('已更新', 'success');
-                    Router.navigate('/chats/settings/' + chatId);
+                    Router.handleRoute();
                 };
                 
                 mcpRow.appendChild(checkbox);
@@ -561,13 +566,13 @@ async function renderPerChatSettings(params) {
         
         toggle.onclick = async () => {
             if (mcpEnabled) {
-                await ChatsDB.update(chatId, { enabled_mcp_ids: [] });
+                await ChatsDB.update(chatId, { mcp_enabled: false });
                 createToast('已停用 MCP 工具', 'success');
             } else {
-                await ChatsDB.update(chatId, { enabled_mcp_ids: mcpConfigs.map(c => c.id) });
+                await ChatsDB.update(chatId, { mcp_enabled: true, enabled_mcp_ids: mcpConfigs.map(c => c.id) });
                 createToast('已啟用 MCP 工具', 'success');
             }
-            Router.navigate('/chats/settings/' + chatId);
+            Router.handleRoute();
         };
         
         mcpSection.appendChild(mcpToggleBox);

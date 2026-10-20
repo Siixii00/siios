@@ -2,6 +2,7 @@ import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast, createKakaoBottomSheet } from '../../components.js';
 import { MCPConfigDB, CharactersDB } from '../../db.js';
 import { MCPClient } from '../../core/mcp-client.js';
+import { LOCAL_TOOLS, isLocalToolsEnabled, setLocalToolsEnabled } from '../../core/local-tools.js';
 
 async function renderMCPSettings() {
     const container = createElement('div', 'app-container bg-ios-bg');
@@ -32,6 +33,32 @@ async function renderMCPSettings() {
     main.appendChild(infoSection);
 
     const configs = await MCPConfigDB.getAll();
+
+    // App 內建工具：資料在這台裝置上，不需要架設 Worker
+    const localEnabled = await isLocalToolsEnabled();
+    const localSection = createElement('div', 'ios-grouped-list mx-4 mt-4');
+    const localCard = createElement('div', 'p-4 bg-white rounded-xl');
+    const localHead = createElement('div', 'flex items-center justify-between mb-2');
+    localHead.appendChild(createElement('h3', 'font-semibold', { textContent: 'App 內建工具' }));
+    const localToggle = createElement('input', '', { type: 'checkbox' });
+    localToggle.checked = localEnabled;
+    localToggle.setAttribute('aria-label', '啟用 App 內建工具');
+    localToggle.style.cssText = 'width:44px;height:26px;accent-color:var(--ios-blue);';
+    localToggle.onchange = async () => {
+        await setLocalToolsEnabled(localToggle.checked);
+        createToast(localToggle.checked ? '已啟用內建工具' : '已停用內建工具', 'success');
+    };
+    localHead.appendChild(localToggle);
+    localCard.appendChild(localHead);
+    localCard.appendChild(createElement('p', 'text-xs text-ios-muted mb-2', { textContent: '直接在 App 內執行，不用架設 Worker，也不會把資料送到外面。' }));
+    LOCAL_TOOLS.forEach(t => {
+        const row = createElement('div', 'text-sm py-1');
+        row.appendChild(createElement('span', 'font-mono text-xs bg-gray-100 rounded px-1', { textContent: t.name }));
+        row.appendChild(createElement('span', 'text-ios-muted ml-2', { textContent: t.description.split('。')[0] }));
+        localCard.appendChild(row);
+    });
+    localSection.appendChild(localCard);
+    main.appendChild(localSection);
 
     const listSection = createElement('div', 'ios-grouped-list mx-4 mt-4');
     listSection.id = 'mcp-config-list';

@@ -1,4 +1,5 @@
 import { MCPConfigDB } from '../db.js';
+import { LOCAL_TOOLS, LOCAL_MCP_ID, isLocalToolsEnabled, runLocalTool } from './local-tools.js';
 
 class MCPClient {
     constructor(config) {
@@ -214,6 +215,19 @@ class MCPManager {
         this.allTools = [];
         this.configs = configs;
 
+        if (await isLocalToolsEnabled()) {
+            for (const tool of LOCAL_TOOLS) {
+                this.allTools.push({
+                    name: tool.name,
+                    description: tool.description,
+                    parameters: tool.parameters,
+                    mcpId: LOCAL_MCP_ID,
+                    mcpName: 'App 內建工具',
+                    boundCharacterId: undefined
+                });
+            }
+        }
+
         for (const config of configs) {
             const client = new MCPClient(config);
             this.clients.set(config.id, client);
@@ -281,6 +295,7 @@ class MCPManager {
     }
 
     async callTool(mcpId, toolName, args, context = {}) {
+        if (mcpId === LOCAL_MCP_ID) return runLocalTool(toolName, args, context);
         const client = this.clients.get(mcpId);
         if (!client) {
             return { success: false, error: 'MCP client not found' };

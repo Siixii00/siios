@@ -264,7 +264,7 @@ const APIClient = {
 
         await mcpManager.loadConfigs();
         const characterId = characterData?.id || null;
-        const mcpTools = mcpManager.getToolsForLLM(characterId, enabledMcpIds);
+        const mcpTools = chat?.mcp_enabled === false ? [] : mcpManager.getToolsForLLM(characterId, enabledMcpIds);
         
         const apiMessages = await this.buildMessages(chatId, userMessage, settings, messages, memoryContext, characterData, userData);
         
