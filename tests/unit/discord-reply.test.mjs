@@ -124,3 +124,69 @@ test('輪詢：連續拒絕時回報錯誤訊息，不存拒絕內容，而且�
     assert.ok(!r.stored.some(m => m.role === 'assistant' && /语言模型/.test(m.content)));
     assert.equal(r.body.replied, 1);
 });
+
+// ───── /clear 細項：只刪罐頭／錯誤訊息、只刪最近幾則 ─────
+const REFUSAL = '我只是一个语言模型，理解不了这个问题，因此没法帮上忙。';
+async function runClear(mode, count, { dbRows, discordMsgs }) {
+    const { db, env } = makeEnv();
+    for (const r of dbRows) db.prepare(`INSERT INTO messages (id, chat_id, role, content, timestamp, metadata) VALUES (?, 'char1', 'assistant', ?, ?, ?)`).run(r.id, r.content, r.ts, JSON.stringify(r.chunk_ids ? { chunk_ids: r.chunk_ids } : {}));
+    const deleted = [];
+    const realFetch = globalThis.fetch;
+    globalThis.fetch = async (url, init = {}) => {
+        const u = String(url);
+        if (u.includes('/messages?limit=100')) return Response.json(discordMsgs.map(m => ({ ...m, author: { id: m.bot === false ? 'U1' : 'BOT' } })));
+        if (u.endsWith('/bulk-delete')) { deleted.push(...JSON.parse(init.body).messages); return new Response(null, { status: 204 }); }
+        if (init.method === 'DELETE') { deleted.push(u.split('/').pop()); return new Response(null, { status: 204 }); }
+        return Response.json({});
+    };
+    try {
+        const res = await worker.fetch(new Request('https://w.test/discord/clear', { method: 'POST', body: JSON.stringify({ channel_id: 'chan1', mode, count }) }), env, { waitUntil() {} });
+        const body = await res.json();
+        return { body, deleted: deleted.sort(), left: db.prepare(`SELECT id FROM messages WHERE id != 'h1' ORDER BY timestamp`).all().map(r => r.id) };
+    } finally { globalThis.fetch = realFetch; }
+}
+const snow = ms => String((BigInt(ms - 1420070400000) << 22n) + 1n);
+const t0 = Date.now() - 3600 * 1000;
+
+test('/clear canned：只刪罐頭與錯誤訊息，正常回覆與使用者訊息都留著', async () => {
+    const [a, b, c, d, e] = [0, 1, 2, 3, 4].map(i => snow(t0 + i * 1000));
+    const r = await runClear('canned', undefined, {
+        dbRows: [{ id: 'x1', content: REFUSAL, ts: '2026-10-20T01:00:00Z' }, { id: 'x2', content: '*抬頭* 嗯？', ts: '2026-10-20T01:01:00Z' }],
+        discordMsgs: [{ id: e, content: '*抬頭* 嗯？' }, { id: d, content: '⚠️ AI 回覆時發生錯誤：AI API 500' }, { id: c, content: '戳戳', bot: false }, { id: b, content: REFUSAL }, { id: a, content: '你好' }]
+    });
+    assert.ok(r.body.success, JSON.stringify(r.body));
+    assert.deepEqual(r.deleted, [b, d].sort());
+    assert.deepEqual(r.left, ['x2']);
+    assert.match(r.body.result, /罐頭／錯誤/);
+});
+
+test('/clear canned：沒有罐頭訊息時不刪任何東西', async () => {
+    const r = await runClear('canned', undefined, { dbRows: [{ id: 'x1', content: '正常', ts: '2026-10-20T01:00:00Z' }], discordMsgs: [{ id: snow(t0), content: '正常' }] });
+    assert.deepEqual(r.deleted, []);
+    assert.deepEqual(r.left, ['x1']);
+    assert.match(r.body.result, /沒有找到/);
+});
+
+test('/clear last：只刪最近 N 則機器人回覆（含切段與沒有記錄 id 的舊資料）', async () => {
+    const [a, b, c, d] = [0, 1, 2, 3].map(i => snow(t0 + i * 1000));
+    const r = await runClear('last', 2, {
+        dbRows: [
+            { id: 'old', content: '最舊的回覆', ts: '2026-10-20T01:00:00Z', chunk_ids: [a] },
+            { id: 'mid', content: '舊資料沒有 id', ts: '2026-10-20T01:01:00Z' },
+            { id: 'new', content: '最新的第一段第二段', ts: '2026-10-20T01:02:00Z', chunk_ids: [c, d] }
+        ],
+        discordMsgs: [{ id: d, content: '第二段' }, { id: c, content: '最新的第一段' }, { id: b, content: '舊資料沒有 id' }, { id: a, content: '最舊的回覆' }]
+    });
+    assert.deepEqual(r.deleted, [b, c, d].sort());
+    assert.deepEqual(r.left, ['old']);
+});
+
+test('/clear last：不給數量預設只刪一則', async () => {
+    const [a, b] = [0, 1].map(i => snow(t0 + i * 1000));
+    const r = await runClear('last', undefined, {
+        dbRows: [{ id: 'old', content: '舊', ts: '2026-10-20T01:00:00Z', chunk_ids: [a] }, { id: 'new', content: '新', ts: '2026-10-20T01:01:00Z', chunk_ids: [b] }],
+        discordMsgs: [{ id: b, content: '新' }, { id: a, content: '舊' }]
+    });
+    assert.deepEqual(r.deleted, [b]);
+    assert.deepEqual(r.left, ['old']);
+});

@@ -148,9 +148,9 @@ export default {
         // 一鍵清空當前頻道訊息（Discord + 內部歷史）
         if (url.pathname === '/discord/clear' && request.method === 'POST') {
             try {
-                const { channel_id, mode } = await request.json();
+                const { channel_id, mode, count } = await request.json();
                 if (!channel_id) return Response.json({ success: false, error: '缺少 channel_id' }, { status: 400, headers: corsHeaders });
-                const result = await clearChannelHistory(channel_id, env, mode || 'chat');
+                const result = await clearChannelHistory(channel_id, env, mode || 'chat', count);
                 return Response.json({ success: true, result }, { headers: corsHeaders });
             } catch (error) {
                 return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
@@ -697,14 +697,19 @@ async function registerCommands(env) {
         },
         {
             name: 'clear',
-            description: '清除當前頻道的訊息歷史（可選是否連記憶一起清除）',
+            description: '清除當前頻道的訊息：整個歷史、連記憶一起清、只刪罐頭／錯誤訊息、或只刪最近幾則回覆',
             options: [{
                 type: 3, name: 'mode', description: '清除模式（必選，避免誤判）',
                 required: true,
                 choices: [
                     { name: '只清除對話（保留記憶）', value: 'chat' },
-                    { name: '全部清除（含記憶）', value: 'all' }
+                    { name: '全部清除（含記憶）', value: 'all' },
+                    { name: '只刪罐頭／錯誤訊息', value: 'canned' },
+                    { name: '只刪最近幾則機器人回覆（用 count 指定）', value: 'last' }
                 ]
+            }, {
+                type: 4, name: 'count', description: '「只刪最近幾則」要刪幾則（預設 1，最多 50）',
+                required: false, min_value: 1, max_value: 50
             }]
         },
         {
@@ -981,9 +986,10 @@ async function handleSlashCommand(event, env, ctx) {
 
         if (name === 'clear') {
             const mode = options.find(o => o.name === 'mode')?.value || 'chat';
+            const count = options.find(o => o.name === 'count')?.value || 1;
             ctx.waitUntil((async () => {
                 try {
-                    const result = await clearChannelHistory(channelId, env, mode);
+                    const result = await clearChannelHistory(channelId, env, mode, count);
                     await editInteraction(appId, interactionToken, result, env);
                 } catch (error) {
                     console.error('clear error:', error);
@@ -1708,7 +1714,8 @@ async function getDiscordHistory(channel_id, limit, env) {
 // 清除分兩種：mode 'chat' 只清對話歷史（與對話日誌型記憶）；'all' 連所有記憶、摘要進度一起清。
 // 先處理資料庫、最後才刪 Discord 訊息：刪訊息要逐則等待、很慢，Worker 在背景執行有時間上限，
 // 資料庫的清除如果排在後面，常常還沒執行到就被中斷（看起來就是「只清了聊天、記憶還在」）。
-async function clearChannelHistory(channel_id, env, mode = 'chat') {
+async function clearChannelHistory(channel_id, env, mode = 'chat', count = 1) {
+    if (mode === 'canned' || mode === 'last') return clearBotRepliesPartially(channel_id, env, mode, count);
     const botUserId = await getBotUserId(env);
     if (!botUserId) return '❌ 無法取得 Bot 用戶 ID';
 
@@ -1752,18 +1759,26 @@ async function clearChannelHistory(channel_id, env, mode = 'chat') {
         if (hasMore) await new Promise(r => setTimeout(r, 300));
     }
 
-    // 14 天內的訊息可以批次刪除（一次最多 100 則）；更舊的只能逐則刪
+    const totalDeleted = await deleteBotMessages(channel_id, botMessageIds, env);
+
+    return mode === 'all'
+        ? `✅ 已刪除 ${totalDeleted} 則機器人訊息、清除對話歷史，並清除相關記憶`
+        : `✅ 已刪除 ${totalDeleted} 則機器人訊息、清除對話歷史與對話日誌（事實記憶保留）`;
+}
+
+// 刪除指定的 Discord 訊息：14 天內的可以批次刪除（一次最多 100 則）；更舊的只能逐則刪。回傳實際刪除的數量。
+async function deleteBotMessages(channel_id, ids, env) {
     const DISCORD_EPOCH = 1420070400000n;
     const bulkCutoff = Date.now() - 13 * 24 * 3600 * 1000;
     const isRecent = id => Number((BigInt(id) >> 22n) + DISCORD_EPOCH) > bulkCutoff;
-    const recent = botMessageIds.filter(isRecent);
-    const old = botMessageIds.filter(id => !isRecent(id));
+    const recent = ids.filter(isRecent);
+    const old = ids.filter(id => !isRecent(id));
     const headers = { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}`, 'Content-Type': 'application/json' };
-    let totalDeleted = 0;
+    let deleted = 0;
     const deleteOne = async id => {
         try {
             const r = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages/${id}`, { method: 'DELETE', headers });
-            if (r.ok || r.status === 404) totalDeleted++;
+            if (r.ok || r.status === 404) deleted++;
         } catch (_) {}
         await new Promise(r => setTimeout(r, 200));
     };
@@ -1775,15 +1790,56 @@ async function clearChannelHistory(channel_id, env, mode = 'chat') {
             const r = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages/bulk-delete`, { method: 'POST', headers, body: JSON.stringify({ messages: batch }) });
             ok = r.ok;
         } catch (_) {}
-        if (ok) totalDeleted += batch.length;
+        if (ok) deleted += batch.length;
         else for (const id of batch) await deleteOne(id);
         await new Promise(r => setTimeout(r, 500));
     }
     for (const id of old) await deleteOne(id);
+    return deleted;
+}
 
-    return mode === 'all'
-        ? `✅ 已刪除 ${totalDeleted} 則機器人訊息、清除對話歷史，並清除相關記憶`
-        : `✅ 已刪除 ${totalDeleted} 則機器人訊息、清除對話歷史與對話日誌（事實記憶保留）`;
+// 細項清除（不動使用者訊息與記憶）：
+//   canned：只刪「罐頭／錯誤訊息」——模型的拒絕罐頭話、機器人回報的「⚠️ AI 回覆時發生錯誤」
+//   last：只刪最近 count 則機器人回覆（含 Discord 上切成多段的每一段）
+async function clearBotRepliesPartially(channel_id, env, mode, count = 1) {
+    const botUserId = await getBotUserId(env);
+    if (!botUserId) return '❌ 無法取得 Bot 用戶 ID';
+    const characterId = await resolveChannelCharacter(channel_id, env);
+    const chatId = characterId || channel_id;
+    const isCanned = text => looksLikeRefusal(text) || String(text ?? '').trim().startsWith('⚠️ AI 回覆時發生錯誤');
+
+    // Discord 上最近 100 則裡機器人發的（由新到舊）
+    const resp = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages?limit=100`, { headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` } });
+    if (!resp.ok) return `❌ 讀取頻道訊息失敗（${resp.status}）`;
+    const discordBot = (await resp.json()).filter(m => m.author?.id === botUserId);
+
+    const rows = (await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? AND role = 'assistant' ORDER BY timestamp DESC LIMIT 100`).bind(chatId).all()).results || [];
+    const discordIds = new Set();
+    const dbIds = [];
+
+    if (mode === 'canned') {
+        discordBot.filter(m => isCanned(m.content)).forEach(m => discordIds.add(m.id));
+        rows.filter(r => isCanned(r.content)).forEach(r => dbIds.push(r.id));
+    } else {
+        const n = Math.max(1, Math.min(50, parseInt(count, 10) || 1));
+        for (const r of rows.slice(0, n)) {
+            dbIds.push(r.id);
+            let ids = [];
+            try { ids = JSON.parse(r.metadata || '{}').chunk_ids || []; } catch (_) {}
+            if (!ids.length) { // 舊資料沒有記錄 Discord 訊息 id：用內容比對
+                const body = String(r.content ?? '').trim();
+                const hit = discordBot.find(m => !discordIds.has(m.id) && body.startsWith(String(m.content ?? '').trim()) && m.content);
+                if (hit) ids = [hit.id];
+            }
+            ids.forEach(id => discordIds.add(id));
+        }
+    }
+
+    for (const id of dbIds) await env.DB.prepare(`DELETE FROM messages WHERE id = ?`).bind(id).run();
+    const deleted = await deleteBotMessages(channel_id, [...discordIds], env);
+    const label = mode === 'canned' ? '罐頭／錯誤訊息' : '機器人回覆';
+    if (!deleted && !dbIds.length) return mode === 'canned' ? '✅ 沒有找到罐頭／錯誤訊息' : '❌ 沒有找到可以刪除的機器人回覆';
+    return `✅ 已刪除 ${deleted} 則 Discord ${label}、${dbIds.length} 筆歷史紀錄（使用者訊息與記憶保留）`;
 }
 
 // ===== 同步角色 =====

@@ -187,3 +187,7 @@ Code review（`340bf4c~1..HEAD`）找到並修正：
   5. **Gateway 心跳計時器**在建立它的請求結束後觸發，碰到舊連線物件會丟「Cannot perform I/O on behalf of a different request」；改用閉包內的連線並 try/catch。
 - 測試：`tests/unit/discord-reply.test.mjs`（用記憶體 SQLite 模擬 D1、假 fetch 模擬 Discord 與 AI，涵蓋金鑰不外洩、思考過程去除、拒絕重試、連續失敗不中斷輪詢）。
 - 已重新部署並重新註冊斜線指令。
+
+### 2026-10-21 Discord `/clear` 細項
+- `/clear` 的 `mode` 新增兩項：**只刪罐頭／錯誤訊息**（`canned`：模型的拒絕罐頭話與機器人回報的「⚠️ AI 回覆時發生錯誤」，Discord 與歷史紀錄一起刪）、**只刪最近幾則機器人回覆**（`last`，搭配新的 `count` 選項，預設 1、最多 50，Discord 上切成多段的回覆會整則刪掉）。兩者都不動使用者訊息與記憶；原本的「只清對話」「全部清除」不變。
+- 刪訊息的程式抽成 `deleteBotMessages`（14 天內批次刪除），整頁清除與細項清除共用。
