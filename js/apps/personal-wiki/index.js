@@ -1347,12 +1347,14 @@ const notionRateLimiter = {
     }
 };
 
-async function notionRequest(endpoint, body, retryCount = 0) {
+// method 預設：有 body 用 POST，沒有用 GET。更新頁面、附加區塊、修改資料庫在 Notion 都必須是 PATCH，刪除區塊是 DELETE。
+async function notionRequest(endpoint, body, retryCount = 0, method) {
     await notionRateLimiter.waitForRateLimit();
-    
+    const verb = method || (body ? 'POST' : 'GET');
+
     try {
         const response = await fetch(`https://api.notion.com/v1${endpoint}`, {
-            method: body ? 'POST' : 'GET',
+            method: verb,
             headers: {
                 'Authorization': `Bearer ${notionConfig.token}`,
                 'Content-Type': 'application/json',
@@ -1364,55 +1366,118 @@ async function notionRequest(endpoint, body, retryCount = 0) {
         if (response.status === 429) {
             const retryAfter = parseInt(response.headers.get('Retry-After') || '60');
             console.warn(`[Notion] Rate limit exceeded, retrying after ${retryAfter}s`);
-            
+
             if (retryCount < 3) {
                 await notionRateLimiter.sleep(retryAfter * 1000);
-                return notionRequest(endpoint, body, retryCount + 1);
-            } else {
-                throw new Error('Notion API rate limit exceeded, max retries reached');
+                return notionRequest(endpoint, body, retryCount + 1, method);
             }
+            throw new Error('Notion API rate limit exceeded, max retries reached');
         }
 
         if (!response.ok) {
             const error = await response.json().catch(() => ({}));
-            throw new Error(error.message || `HTTP ${response.status}`);
+            throw new Error(notionErrorMessage(response.status, error));
         }
 
         return response.json();
     } catch (error) {
-        if (retryCount < 3 && error.message.includes('fetch')) {
+        if (retryCount < 3 && /fetch|network/i.test(error.message)) {
             console.warn(`[Notion] Network error, retrying (${retryCount + 1}/3)`);
             await notionRateLimiter.sleep(1000 * Math.pow(2, retryCount));
-            return notionRequest(endpoint, body, retryCount + 1);
+            return notionRequest(endpoint, body, retryCount + 1, method);
         }
         throw error;
     }
 }
 
+// 把 Notion 的錯誤翻成使用者看得懂的話
+function notionErrorMessage(status, error) {
+    if (status === 401) return 'Notion Token 無效，請重新複製 Integration 的 Token';
+    if (status === 404 || error.code === 'object_not_found') return '找不到這個資料庫：請確認 Database ID 正確，並且已在該資料庫右上角「⋯ → 連結」中把你的 Integration 加進去';
+    if (status === 403) return '這個 Integration 沒有權限，請到資料庫的「連結」加入它，並確認有「讀取／更新／插入內容」權限';
+    return error.message || `HTTP ${status}`;
+}
+
+// Notion 限制：單一文字物件最多 2000 字、一次附加最多 100 個區塊
+const NOTION_TEXT_LIMIT = 2000;
+const NOTION_CHILDREN_LIMIT = 100;
+
+function toRichText(html) {
+    const text = stripHtml(html || '');
+    if (!text) return [{ text: { content: '' } }];
+    const parts = [];
+    for (let i = 0; i < text.length; i += NOTION_TEXT_LIMIT) parts.push({ text: { content: text.slice(i, i + NOTION_TEXT_LIMIT) } });
+    return parts;
+}
+
+// 確認資料庫有可用的標題欄位與「WikiId」文字欄位（沒有就自動建立）。標題欄位的名稱依 Notion 語言可能不是 Name。
+async function ensureNotionSchema() {
+    const db = await notionRequest(`/databases/${notionConfig.databaseId}`);
+    const props = db.properties || {};
+    const titleKey = Object.keys(props).find(k => props[k].type === 'title') || 'Name';
+    if (!props.WikiId) {
+        await notionRequest(`/databases/${notionConfig.databaseId}`, { properties: { WikiId: { rich_text: {} } } }, 0, 'PATCH');
+    } else if (props.WikiId.type !== 'rich_text') {
+        throw new Error('資料庫的「WikiId」欄位必須是「文字」類型');
+    }
+    return { titleKey };
+}
+
+async function appendNotionChildren(pageId, children) {
+    for (let i = 0; i < children.length; i += NOTION_CHILDREN_LIMIT) {
+        await notionRequest(`/blocks/${pageId}/children`, { children: children.slice(i, i + NOTION_CHILDREN_LIMIT) }, 0, 'PATCH');
+    }
+}
+
+// 列出一個區塊底下所有子區塊（處理分頁）
+async function listNotionChildren(blockId) {
+    const all = [];
+    let cursor;
+    do {
+        const query = '?page_size=100' + (cursor ? `&start_cursor=${encodeURIComponent(cursor)}` : '');
+        const result = await notionRequest(`/blocks/${blockId}/children${query}`);
+        all.push(...result.results);
+        cursor = result.has_more ? result.next_cursor : null;
+    } while (cursor);
+    return all;
+}
+
+// 舊頁面的區塊多到逐一刪除太慢時（Notion 限制每秒約 3 次請求），改成封存舊頁面、重建一份
+const NOTION_REPLACE_IN_PLACE_MAX = 40;
+
+async function createNotionPage(record, properties, children) {
+    const newPage = await notionRequest('/pages', {
+        parent: { database_id: notionConfig.databaseId },
+        properties: {
+            ...properties,
+            WikiId: { rich_text: [{ text: { content: record.id } }] }
+        }
+    });
+    await appendNotionChildren(newPage.id, children);
+}
+
 async function syncToNotion(container) {
+    const { titleKey } = await ensureNotionSchema();
     for (const record of records) {
         const properties = {
-            Name: { title: [{ text: { content: record.title || 'Untitled' } }] }
+            [titleKey]: { title: toRichText(record.title || 'Untitled') }
         };
         const children = record.blocks.map(block => blockToNotionBlock(block)).filter(Boolean);
-        
+
         const existingPage = await findNotionPage(record.id);
-        if (existingPage) {
-            await notionRequest(`/pages/${existingPage.id}`, {
-                properties,
-                archived: false
-            });
+        if (!existingPage) {
+            await createNotionPage(record, properties, children);
+            continue;
+        }
+
+        const oldBlocks = await listNotionChildren(existingPage.id);
+        if (oldBlocks.length > NOTION_REPLACE_IN_PLACE_MAX) {
+            await notionRequest(`/pages/${existingPage.id}`, { archived: true }, 0, 'PATCH');
+            await createNotionPage(record, properties, children);
         } else {
-            const newPage = await notionRequest('/pages', {
-                parent: { database_id: notionConfig.databaseId },
-                properties: {
-                    ...properties,
-                    WikiId: { rich_text: [{ text: { content: record.id } }] }
-                }
-            });
-            if (children.length > 0) {
-                await notionRequest(`/blocks/${newPage.id}/children`, { children });
-            }
+            await notionRequest(`/pages/${existingPage.id}`, { properties, archived: false }, 0, 'PATCH');
+            for (const old of oldBlocks) await notionRequest(`/blocks/${old.id}`, undefined, 0, 'DELETE');
+            await appendNotionChildren(existingPage.id, children);
         }
     }
 }
@@ -1421,19 +1486,19 @@ async function pullFromNotion(container) {
     let hasMore = true;
     let startCursor = undefined;
     const notionRecords = [];
-    
+
     while (hasMore) {
         const result = await notionRequest(`/databases/${notionConfig.databaseId}/query`, {
             start_cursor: startCursor
         });
-        
+
         for (const page of result.results) {
             const wikiId = page.properties.WikiId?.rich_text?.[0]?.text?.content || generateId('page');
-            const title = page.properties.Name?.title?.[0]?.text?.content || 'Untitled';
-            
-            const blocksResult = await notionRequest(`/blocks/${page.id}/children`);
-            const blocks = blocksResult.results.map(notionBlockToBlock).filter(Boolean);
-            
+            const titleProp = Object.values(page.properties).find(p => p.type === 'title' || Array.isArray(p.title));
+            const title = titleProp?.title?.map(t => t.plain_text ?? t.text?.content ?? '').join('') || 'Untitled';
+
+            const blocks = (await listNotionChildren(page.id)).map(notionBlockToBlock).filter(Boolean);
+
             notionRecords.push({
                 id: wikiId,
                 title,
@@ -1446,11 +1511,11 @@ async function pullFromNotion(container) {
                 updated_at: page.last_edited_time ? new Date(page.last_edited_time).getTime() : Date.now()
             });
         }
-        
+
         hasMore = result.has_more;
         startCursor = result.next_cursor;
     }
-    
+
     const localOnlyRecords = records.filter(r => !r.notionPageId);
     const existingNotionIds = new Set(notionRecords.map(r => r.id));
     for (const local of records) {
@@ -1459,7 +1524,7 @@ async function pullFromNotion(container) {
             if (idx !== -1) notionRecords[idx] = { ...notionRecords[idx], ...local, blocks: notionRecords[idx].blocks };
         }
     }
-    
+
     records = [...localOnlyRecords, ...notionRecords];
     await WikiRecordsDB.bulkCreate(records);
     renderSidebar(container);
@@ -1475,30 +1540,30 @@ async function findNotionPage(wikiId) {
             rich_text: { equals: wikiId }
         }
     });
-    return result.results[0] || null;
+    return result.results.find(p => !p.archived) || null;
 }
 
 function blockToNotionBlock(block) {
     switch (block.type) {
         case 'text':
         case 'paragraph':
-            return { object: 'block', type: 'paragraph', paragraph: { rich_text: [{ text: { content: stripHtml(block.content || '') } }] } };
+            return { object: 'block', type: 'paragraph', paragraph: { rich_text: toRichText(block.content) } };
         case 'heading1':
-            return { object: 'block', type: 'heading_1', heading_1: { rich_text: [{ text: { content: stripHtml(block.content || '') } }] } };
+            return { object: 'block', type: 'heading_1', heading_1: { rich_text: toRichText(block.content) } };
         case 'heading2':
-            return { object: 'block', type: 'heading_2', heading_2: { rich_text: [{ text: { content: stripHtml(block.content || '') } }] } };
+            return { object: 'block', type: 'heading_2', heading_2: { rich_text: toRichText(block.content) } };
         case 'heading3':
-            return { object: 'block', type: 'heading_3', heading_3: { rich_text: [{ text: { content: stripHtml(block.content || '') } }] } };
+            return { object: 'block', type: 'heading_3', heading_3: { rich_text: toRichText(block.content) } };
         case 'bulleted-list':
-            return { object: 'block', type: 'bulleted_list_item', bulleted_list_item: { rich_text: [{ text: { content: stripHtml(block.content || '') } }] } };
+            return { object: 'block', type: 'bulleted_list_item', bulleted_list_item: { rich_text: toRichText(block.content) } };
         case 'numbered-list':
-            return { object: 'block', type: 'numbered_list_item', numbered_list_item: { rich_text: [{ text: { content: stripHtml(block.content || '') } }] } };
+            return { object: 'block', type: 'numbered_list_item', numbered_list_item: { rich_text: toRichText(block.content) } };
         case 'todo':
-            return { object: 'block', type: 'to_do', to_do: { rich_text: [{ text: { content: stripHtml(block.content || '') } }], checked: block.checked || false } };
+            return { object: 'block', type: 'to_do', to_do: { rich_text: toRichText(block.content), checked: block.checked || false } };
         case 'divider':
             return { object: 'block', type: 'divider', divider: {} };
         case 'quote':
-            return { object: 'block', type: 'quote', quote: { rich_text: [{ text: { content: stripHtml(block.content || '') } }] } };
+            return { object: 'block', type: 'quote', quote: { rich_text: toRichText(block.content) } };
         default:
             return null;
     }
