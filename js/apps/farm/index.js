@@ -318,8 +318,8 @@ async function renderFarm() {
 export default {
   id: 'farm',
   name: '農場',
-  icon: 'seedling',
+  icon: 'agriculture',
   routes: [{ path: '/farm', render: renderFarm }],
-  navItem: { label: '農場', icon: 'seedling', path: '/farm', showInNav: true, order: 127 },
+  navItem: { label: '農場', icon: 'agriculture', path: '/farm', showInNav: true, order: 127 },
   stylesPath: 'js/apps/farm/style.css'
 };

@@ -471,8 +471,8 @@ function hideTypingIndicator(container) {
 export default {
   id: 'dating',
   name: '約會',
-  icon: 'heart',
+  icon: 'heart_plus',
   routes: [{ path: '/dating', render: renderDating }],
-  navItem: { label: '約會', icon: 'heart', path: '/dating', showInNav: true, order: 110 },
+  navItem: { label: '約會', icon: 'heart_plus', path: '/dating', showInNav: true, order: 110 },
   stylesPath: 'js/apps/dating/style.css'
 };

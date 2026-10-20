@@ -233,8 +233,8 @@ async function renderHome() {
 export default {
   id: 'stay',
   name: '宅家',
-  icon: 'couch',
+  icon: 'weekend',
   routes: [{ path: '/stay', render: renderHome }],
-  navItem: { label: '宅家', icon: 'couch', path: '/stay', showInNav: true, order: 126 },
+  navItem: { label: '宅家', icon: 'weekend', path: '/stay', showInNav: true, order: 126 },
   stylesPath: 'js/apps/home/style.css'
 };
