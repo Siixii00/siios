@@ -48,6 +48,7 @@ function makeEnv() {
     db.prepare(`INSERT INTO channel_bindings (channel_id, character_id) VALUES ('chan1', 'char1')`).run();
     db.prepare(`INSERT INTO botState (key, cursor) VALUES ('bot_user_id', 'BOT')`).run();
     db.prepare(`INSERT INTO botState (key, cursor) VALUES ('commands_registered', '1')`).run();
+    db.prepare(`INSERT INTO botState (key, cursor) VALUES ('last_msg_chan1', '1')`).run();
     const cfg = { AI_API_URL: 'https://ai.test', AI_API_KEY: SECRET_KEY, AI_MODEL: 'm', REACTION_PROBABILITY: '0', INTERJECT_PROBABILITY: '0' };
     for (const [k, v] of Object.entries(cfg)) db.prepare(`INSERT INTO globalSettings (id, name, content, keys, priority, enabled) VALUES (?, ?, ?, '', 'middle', 1)`).run('cfg-' + k, 'bot_config_' + k, v);
     // 歷史裡有一則帶思考過程的舊回覆
@@ -74,7 +75,7 @@ async function runPoll(userMessages, aiReplies) {
             return Response.json({ choices: [{ message: { content: r }, finish_reason: 'stop' }] });
         }
         if (u.includes('/channels/chan1/messages') && (init.method || 'GET') === 'GET') {
-            return Response.json(userMessages.map((content, i) => ({ id: String(2000 + i), content, channel_id: 'chan1', author: { id: 'U1', username: 'u', bot: false }, timestamp: new Date(2026, 9, 20, 0, 0, i).toISOString(), mentions: [{ id: 'BOT' }] })).reverse());
+            return Response.json(userMessages.map((content, i) => ({ id: String(2000 + i), content, channel_id: 'chan1', author: { id: 'U1', username: 'u', bot: false }, timestamp: new Date(Date.now() - 60000 + i * 1000).toISOString(), mentions: [{ id: 'BOT' }] })).reverse());
         }
         if (u.includes('/channels/chan1/messages') && init.method === 'POST') {
             const content = JSON.parse(init.body).content;
@@ -189,4 +190,49 @@ test('/clear last：不給數量預設只刪一則', async () => {
     });
     assert.deepEqual(r.deleted, [b]);
     assert.deepEqual(r.left, ['old']);
+});
+
+// ───── 輪詢不回溯歷史 ─────
+async function runPollWith(setup, messages) {
+    const { db, env } = makeEnv();
+    setup(db);
+    const aiCalls = [], sent = [];
+    const realFetch = globalThis.fetch;
+    globalThis.fetch = async (url, init = {}) => {
+        const u = String(url);
+        if (u.includes('/v1/chat/completions')) { const b = JSON.parse(init.body); if (b.messages.length > 3) aiCalls.push(b); return Response.json({ choices: [{ message: { content: '好' }, finish_reason: 'stop' }] }); }
+        if (u.includes('/channels/chan1/messages') && (init.method || 'GET') === 'GET') return Response.json(messages);
+        if (u.includes('/channels/chan1/messages') && init.method === 'POST') { sent.push(1); return Response.json({ id: 'm1' }); }
+        return Response.json({});
+    };
+    try {
+        const pending = [];
+        await worker.fetch(new Request('https://w.test/poll'), env, { waitUntil: p => pending.push(p) });
+        await Promise.allSettled(pending);
+        return { aiCalls, sent, cursor: db.prepare(`SELECT cursor FROM botState WHERE key = 'last_msg_chan1'`).get()?.cursor, stored: db.prepare(`SELECT id FROM messages WHERE id != 'h1'`).all().length };
+    } finally { globalThis.fetch = realFetch; }
+}
+const userMsg = (id, ageMs) => ({ id, content: '嗨', channel_id: 'chan1', author: { id: 'U1', username: 'u', bot: false }, timestamp: new Date(Date.now() - ageMs).toISOString(), mentions: [{ id: 'BOT' }] });
+
+test('輪詢：第一次看到的頻道（沒有游標）只記下位置，不回覆也不儲存舊訊息', async () => {
+    const r = await runPollWith(db => db.prepare(`DELETE FROM botState WHERE key = 'last_msg_chan1'`).run(), [userMsg('3002', 1000), userMsg('3001', 60000)]);
+    assert.equal(r.aiCalls.length, 0);
+    assert.equal(r.sent.length, 0);
+    assert.equal(r.stored, 0);
+    assert.equal(r.cursor, '3002');
+});
+
+test('輪詢：游標落後很多時，超過 15 分鐘的舊訊息不回覆、不儲存，游標仍往前推', async () => {
+    const day = 24 * 3600 * 1000;
+    const r = await runPollWith(() => {}, [userMsg('3003', 2 * day), userMsg('3002', 3 * day), userMsg('3001', 4 * day)]);
+    assert.equal(r.aiCalls.length, 0);
+    assert.equal(r.stored, 0);
+    assert.equal(r.cursor, '3003');
+});
+
+test('輪詢：新訊息照常回覆，同一批裡太舊的跳過', async () => {
+    const r = await runPollWith(() => {}, [userMsg('3002', 30 * 1000), userMsg('3001', 2 * 24 * 3600 * 1000)]);
+    assert.equal(r.aiCalls.length, 1);
+    assert.equal(r.sent.length, 1);
+    assert.equal(r.stored, 2); // 一則使用者訊息 + 一則機器人回覆
 });

@@ -316,6 +316,9 @@ export default {
     }
 };
 
+// 輪詢只處理最近這段時間內的新訊息
+const POLL_MAX_AGE_MS = 15 * 60 * 1000;
+
 // ===== 掃描已綁定頻道，處理新訊息（供 cron 與手動觸發）=====
 async function pollBoundChannels(env, ctx) {
     // 從兩種綁定來源收集頻道：channel_bindings（/channel bind）與 discord_channel_mappings（PWA 設定）
@@ -343,10 +346,18 @@ async function pollBoundChannels(env, ctx) {
         const messages = await resp.json();
         if (!Array.isArray(messages) || messages.length === 0) continue;
 
+        // 第一次看到這個頻道（沒有游標）：只記下目前位置，不回溯歷史。否則會把頻道裡最近 20 則舊訊息全當成新訊息回覆
+        if (!state?.cursor) {
+            await env.DB.prepare(`INSERT INTO botState (key, cursor) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET cursor = excluded.cursor`).bind('last_msg_' + channelId, messages[0].id).run();
+            continue;
+        }
+
         // 由舊到新處理
         const newMessages = messages.filter(m => !m.author.bot).reverse();
 
         for (const msg of newMessages) {
+            // 太舊的訊息（機器人停擺一陣子、或游標落後很多）不回溯，游標照樣往前推
+            if (Date.now() - new Date(msg.timestamp).getTime() > POLL_MAX_AGE_MS) continue;
             // 檢查是否已處理過（避免重複）
             const exists = await env.DB.prepare(`SELECT id FROM messages WHERE id = ?`).bind(msg.id).first();
             if (exists) continue;
