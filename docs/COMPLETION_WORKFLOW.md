@@ -96,3 +96,34 @@
 
 ## 發現（執行中遇到、不在範圍內、先記錄不處理）
 - （空）
+
+---
+
+## 2026-10-20 狀態更新（對照實際程式碼與瀏覽器實測）
+
+上方階段清單多數寫於 10-19 之前，已過時。實際狀態：
+
+| 項目 | 狀態 | 依據 |
+|---|---|---|
+| 階段 1：截圖 | ✅ 已做 | 輔助觸控以螢幕擷取 API 實作 |
+| 階段 1：mcp-market 4 個「尚未實作」模板 | ✅ 已處理 | 提醒改為 App 內建工具；購物、智慧燈光、智慧空調標示「尚未支援」且不可選取、不會被產生進 Worker |
+| 階段 1：聊天主題客製化 | ✅ 已做 | `chat-settings.js` 有預設主題與自訂色彩，`chat.js` 載入時套用 |
+| 階段 2：Wiki | ✅ 已驗證 | 見 `APPS_COMPLETION_CHECKLIST.md` A5（Notion 同步需真實帳號，未驗證） |
+| 階段 3：記憶系統 3a/3b | ✅ 已驗證 | 用模擬 embedding 端點；3c Turso 同步：`js/` 內沒有任何對應用戶端，屬未實作且未列入需求 |
+| 階段 4：群聊 | ✅ 實測 | 2 個角色的群組：按「生成回應」後兩人各自回覆、名稱正確（`Promise.allSettled`，單一失敗不影響其他） |
+| 階段 4：聊天選單／健康 | ✅ 已驗證 | 用藥、經期、心情已接上 App 內建工具與健康 app |
+| 階段 5：MCP Worker 部署 | ✅ 已部署並實測 | `https://siios-mcp-worker.yaninlin.workers.dev`，17 項真實網址測試全過 |
+| 階段 5：Bilibili 播放、紫微 MCP、Discord | ⏸ 未驗證 | 需要外部帳號／服務 |
+| 階段 6：刷新保護 | ✅ 實測 | 10-19 逐一載入 78 條無參數路由，皆能渲染、無主控台錯誤 |
+| 階段 6：自動化測試 | 🟡 部分 | 僅 `mcp-worker/test`（`npm test`，5 項離線測試）；其餘仍是手動 HTML 頁面 |
+
+### 10-20 變更 review 結果
+範圍：本機工具、MCP 客戶端、聊天 MCP 開關、錢包。無需修正的缺陷；記錄於下：
+- `set_reminder` / `create_event` 對只有日期的字串（如 `2026-10-20`）以 UTC 解析，位於 UTC 以西時區可能差一天；台灣時區（UTC+8）不受影響，未改。
+- 錢包先寫餘額再寫交易紀錄，兩次寫入之間關閉頁面會有餘額變動但無紀錄的極小機率；已用序列化佇列防止重複扣款，未改。
+- 重新產生 `mcp-worker/` 會覆蓋 `package.json`（遺失 `"type":"module"` 與 test 腳本），重產後必須還原。
+
+### 仍待使用者決定（未動）
+1. `facebook`、`pub` 兩個 app：遷移計畫列了但專案裡不存在（各是一整個新 app）。
+2. 宅家（Stay）精力值是否要影響角色對話。
+3. 階段 0 殘留：`bilibili-worker/src/` 下 `index-android/final/fixed/oauth/search/simple/simple-v2` 與 `test-direct.js` 共 8 個非正式版檔案（`wrangler.toml` 的 main 是 `src/index.js`）；`.kilo/plans/` 21 份計畫是否歸檔。屬刪除／搬移操作，需你確認後才動。
