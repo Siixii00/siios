@@ -9,6 +9,8 @@ import { getBalance, charge, credit, formatMoney, WalletError } from '../../core
 // 農場：場景式畫面（天空隨真實時間變化、斜角農田、作物分階段生長、牧場動物會走動）。
 // 規則：種植、澆水施肥、倉庫、每日行情與訂單、動物、等級與經驗；收益與開銷都走「支付」錢包。
 const FARM_KEY = 'farm_state';
+const art = name => new URL('../../../assets/farm/' + name + '.webp', import.meta.url).href;
+const img = (name, cls = '') => `<img class="${cls}" src="${art(name)}" alt="" draggable="false">`;
 const MIN = 60;
 
 // lvl：農場等級需求；time：成熟秒數；seed：種子價；sell：基礎賣價；xp：收成經驗
@@ -29,9 +31,9 @@ const CROPS = [
 
 // buy：購入價；interval：餵食後多久產出（秒）；feed：每次餵食費用
 const ANIMALS = [
-  { id: 'a1', name: '母雞', icon: '🐔', lvl: 2, buy: 150, feed: 5, interval: 4 * MIN, product: { id: 'p1', name: '雞蛋', icon: '🥚', sell: 40, xp: 4 } },
-  { id: 'a2', name: '乳牛', icon: '🐄', lvl: 4, buy: 450, feed: 14, interval: 8 * MIN, product: { id: 'p2', name: '牛奶', icon: '🥛', sell: 130, xp: 8 } },
-  { id: 'a3', name: '綿羊', icon: '🐑', lvl: 6, buy: 900, feed: 28, interval: 12 * MIN, product: { id: 'p3', name: '羊毛', icon: '🧶', sell: 260, xp: 14 } }
+  { id: 'a1', art: 'hen', name: '母雞', icon: '🐔', lvl: 2, buy: 150, feed: 5, interval: 4 * MIN, product: { id: 'p1', name: '雞蛋', icon: '🥚', sell: 40, xp: 4 } },
+  { id: 'a2', art: 'cow', name: '乳牛', icon: '🐄', lvl: 4, buy: 450, feed: 14, interval: 8 * MIN, product: { id: 'p2', name: '牛奶', icon: '🥛', sell: 130, xp: 8 } },
+  { id: 'a3', art: 'sheep', name: '綿羊', icon: '🐑', lvl: 6, buy: 900, feed: 28, interval: 12 * MIN, product: { id: 'p3', name: '羊毛', icon: '🧶', sell: 260, xp: 14 } }
 ];
 const ANIMAL_CAP = 4;
 
@@ -98,13 +100,13 @@ const SCENE = `
   <div class="fm-celestial"></div>
   <span class="fm-cloud c1">☁️</span><span class="fm-cloud c2">☁️</span><span class="fm-cloud c3">☁️</span>
   <svg class="fm-hills" viewBox="0 0 400 120" preserveAspectRatio="none"><path d="M0 120 L0 70 Q60 20 130 62 T260 58 T400 48 L400 120Z" fill="#7cc576"/><path d="M0 120 L0 92 Q80 50 170 88 T400 80 L400 120Z" fill="#5fae5a"/></svg>
-  <svg class="fm-barn" viewBox="0 0 90 80"><rect x="8" y="30" width="74" height="46" fill="#c0392b"/><polygon points="2,32 45,4 88,32" fill="#8e2a20"/><rect x="34" y="46" width="22" height="30" fill="#f5e6c8"/><path d="M34 46 L56 76 M56 46 L34 76" stroke="#8e2a20" stroke-width="2"/><circle cx="45" cy="24" r="5" fill="#f5e6c8"/></svg>
-  <svg class="fm-house" viewBox="0 0 70 70"><rect x="8" y="30" width="54" height="36" fill="#f3d9a4"/><polygon points="2,32 35,6 68,32" fill="#9c5b3b"/><rect x="28" y="44" width="14" height="22" fill="#7a4a24"/><rect x="12" y="38" width="12" height="10" fill="#9fd8ff"/><rect x="46" y="38" width="12" height="10" fill="#9fd8ff"/><rect x="46" y="10" width="8" height="16" fill="#8b4a30"/></svg>
-  <svg class="fm-windmill" viewBox="0 0 60 90"><polygon points="20,88 40,88 35,34 25,34" fill="#e8d9b5"/><g class="blades"><path d="M30 34 L30 6 M30 34 L58 34 M30 34 L30 62 M30 34 L2 34" stroke="#8b5a2b" stroke-width="4" stroke-linecap="round"/><path d="M30 34 L38 6 L30 6Z M30 34 L58 42 L58 34Z M30 34 L22 62 L30 62Z M30 34 L2 26 L2 34Z" fill="#fff" opacity=".9"/></g><circle cx="30" cy="34" r="4" fill="#5a3417"/></svg>
-  <span class="fm-tree t1">🌳</span><span class="fm-tree t2">🌲</span><span class="fm-tree t3">🌳</span><span class="fm-tree t4">🌲</span>
+  ${img('barn', 'fm-barn')}
+  ${img('house', 'fm-house')}
+  ${img('windmill', 'fm-windmill')}
+  ${img('tree', 'fm-tree t1')}${img('pine', 'fm-tree t2')}${img('tree', 'fm-tree t3')}${img('pine', 'fm-tree t4')}
   <div class="fm-ground"></div>
   <div class="fm-fieldwrap"><div class="fm-field"></div></div>
-  <span class="fm-farmer">🧑‍🌾</span>
+  ${img('farmer', 'fm-farmer')}
   <div class="fm-pen"><span class="fm-pen-sign">牧場</span><div class="fm-animals"></div></div>
   <div class="fm-rain"></div>
   <div class="fm-night"></div>
@@ -170,10 +172,10 @@ async function renderFarm() {
 
   function cropHtml(p) {
     const c = CROPS.find(x => x.id === p.cropId), prog = Math.min(1, elapsed(p) / growSec(p));
-    if (prog >= 1) return `<span class="cr ready">${c.icon}</span><i class="spark">✨</i>`;
-    if (prog < 0.25) return '<span class="cr s0">🌱</span>';
-    if (prog < 0.55) return '<span class="cr s1">🌿</span>';
-    return `<span class="cr s2" style="--sc:${(0.55 + prog * 0.3).toFixed(2)}">${c.icon}</span>`;
+    if (prog >= 1) return `${img('crop_' + c.id, 'cr ready')}<i class="spark">✨</i>`;
+    if (prog < 0.2) return img('stage0', 'cr s0');
+    if (prog < 0.5) return img('stage1', 'cr s1');
+    return `${img('stage2', 'cr s2')}`;
   }
 
   function syncField() {
@@ -196,8 +198,9 @@ async function renderFarm() {
       const t = ANIMALS.find(x => x.id === a.type);
       const left = a.fedAt ? t.interval - (Date.now() - a.fedAt) / 1000 : null;
       const state = !a.fedAt ? 'hungry' : left <= 0 ? 'ready' : 'busy';
-      const x = 6 + ((i * 37) % 80), y = 20 + ((i * 53) % 50);
-      return `<div class="animal ${state}" data-act="animal" data-i="${i}" style="left:${x}%;top:${y}%;--d:${(4 + i % 4)}s;--dl:${-(i * 1.3)}s"><span class="bubble">${state === 'hungry' ? '🥣' : state === 'ready' ? t.product.icon : '💤'}</span><span class="an">${t.icon}</span></div>`;
+      // 平均分散在圍欄裡，前後兩排交錯，避免互相重疊
+      const n = st.animals.length, x = n > 1 ? 4 + i * (74 / (n - 1)) : 40, y = i % 2 ? 34 : 6;
+      return `<div class="animal ${state}" data-act="animal" data-i="${i}" style="left:${x}%;top:${y}%;--d:${(4 + i % 4)}s;--dl:${-(i * 1.3)}s"><span class="bubble">${state === 'hungry' ? '🥣' : state === 'ready' ? t.product.icon : '💤'}</span>${img(t.art, 'an')}</div>`;
     }).join('');
     setHtml(animalsEl, 'animals', list || '<span class="pen-empty">還沒有動物，點下方「牧場商店」買一隻吧</span>');
   }
@@ -229,7 +232,7 @@ async function renderFarm() {
     hint.textContent = mode === 'plant' ? `點空地種下 ${crop.icon}${crop.name}（${formatMoney(crop.seed)}）；成熟後點一下收成${rainy ? '；雨天新種下的作物自動澆水' : ''}` : mode === 'water' ? '點生長中的作物澆水（縮短 25%，免費）' : `點生長中的作物施肥（縮短 50%，${formatMoney(FERT_PRICE)}）；澆水加施肥收成加倍`;
     const bar = $('.fm-seedbar');
     bar.style.display = mode === 'plant' ? '' : 'none';
-    setHtml(bar, 'seeds', CROPS.map(c => `<button class="seed ${c.id === selectedCrop ? 'on' : ''} ${st.level < c.lvl ? 'locked' : ''}" data-act="seed" data-id="${c.id}"><span>${st.level < c.lvl ? '🔒' : c.icon}</span><small>${st.level < c.lvl ? 'Lv.' + c.lvl : formatMoney(c.seed)}</small></button>`).join(''));
+    setHtml(bar, 'seeds', CROPS.map(c => `<button class="seed ${c.id === selectedCrop ? 'on' : ''} ${st.level < c.lvl ? 'locked' : ''}" data-act="seed" data-id="${c.id}"><span>${st.level < c.lvl ? '🔒' : img('crop_' + c.id, 'seed-img')}</span><small>${st.level < c.lvl ? 'Lv.' + c.lvl : formatMoney(c.seed)}</small></button>`).join(''));
   }
 
   function sync() { syncField(); syncAnimals(); syncHud(); }
