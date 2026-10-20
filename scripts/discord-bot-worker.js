@@ -382,8 +382,15 @@ async function pollBoundChannels(env, ctx) {
 
             if (interested) {
                 const ctx = await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? ORDER BY timestamp DESC LIMIT 10`).bind(characterId || msg.channel_id).all();
-                const aiResponse = await generateAIResponseWithContext(msg, characterId, userId, userDisplayName, env);
-                const sentPoll = await sendDiscordMessage(msg.channel_id, aiResponse.content, characterId, env);
+                let aiResponse, sentPoll;
+                try {
+                    aiResponse = await generateAIResponseWithContext(msg, characterId, userId, userDisplayName, env);
+                    sentPoll = await sendDiscordMessage(msg.channel_id, aiResponse.content, characterId, env);
+                } catch (error) {
+                    console.error('AI response error (poll):', error);
+                    try { await sendDiscordMessage(msg.channel_id, `⚠️ AI 回覆時發生錯誤：${error.message}`, characterId, env); } catch (_) {}
+                    continue;
+                }
 
                 await env.DB.prepare(`INSERT INTO messages (id, chat_id, role, content, timestamp, metadata) VALUES (?, ?, 'assistant', ?, ?, ?)`).bind(
                     'ai-' + Date.now() + '-' + msg.id, characterId || msg.channel_id, aiResponse.content,
@@ -1244,7 +1251,7 @@ ${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道�
     }
 
     // 6. 對話歷史
-    const conversationMessages = (history.results || []).reverse().map(m => ({ role: m.role, content: m.content }));
+    const conversationMessages = (history.results || []).reverse().map(m => ({ role: m.role, content: m.role === 'assistant' ? (stripReasoning(m.content) || m.content) : m.content }));
 
     // 7. 世界書後置
     const backMessages = backEntries.map(entry => ({ role: 'system', content: `[${entry.name}]\n${entry.content}` }));
@@ -1262,23 +1269,30 @@ ${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道�
         body.temperature = 1.2;
         body.top_p = 0.95;
     }
-    const response = await fetch(`${aiUrl}/v1/chat/completions`, {
-        method: 'POST', headers: { 'Authorization': `Bearer ${aiKey}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify(body)
-    });
+    // 偶爾會拿到空內容、全是思考過程、或上游的拒絕罐頭回覆：換個亂數種子重試，最多三次
+    let lastProblem = '';
+    for (let attempt = 0; attempt < 3; attempt++) {
+        const attemptBody = attempt === 0 ? body : { ...body, seed: Math.floor(Math.random() * 999999), temperature: Math.max(body.temperature || 0.7, 1.0) };
+        const response = await fetch(`${aiUrl}/v1/chat/completions`, {
+            method: 'POST', headers: { 'Authorization': `Bearer ${aiKey}`, 'Content-Type': 'application/json' },
+            body: JSON.stringify(attemptBody)
+        });
 
-    if (!response.ok) {
-        const errBody = await response.text().catch(() => '');
-        const fullUrl = `${aiUrl}/v1/chat/completions`;
-        console.error(`AI API ${response.status} | URL: ${fullUrl} | Model: ${aiModel} | Body: ${errBody.slice(0, 500)}`);
-        throw new Error(`AI API ${response.status} (${aiModel} @ ${fullUrl}): ${errBody.slice(0, 300)}`);
+        if (!response.ok) {
+            const errBody = await response.text().catch(() => '');
+            const fullUrl = `${aiUrl}/v1/chat/completions`;
+            console.error(`AI API ${response.status} | URL: ${fullUrl} | Model: ${aiModel} | Body: ${errBody.slice(0, 500)}`);
+            throw new Error(`AI API ${response.status} (${aiModel} @ ${fullUrl}): ${errBody.slice(0, 300)}`);
+        }
+        const data = await response.json();
+        const choice = data.choices?.[0];
+        let content = stripReasoning(choice?.message?.content);
+        if (choice?.finish_reason === 'length') content = trimToLastSentence(content);
+        if (!content) { lastProblem = '沒有產生可用的內容（可能全是思考過程或被輸出上限截斷）'; console.error('AI empty reply, attempt', attempt + 1); continue; }
+        if (looksLikeRefusal(content)) { lastProblem = '模型拒絕回覆（' + content.slice(0, 40) + '）'; console.error('AI refusal, attempt', attempt + 1, content.slice(0, 60)); continue; }
+        return { content };
     }
-    const data = await response.json();
-    const choice = data.choices?.[0];
-    let content = stripReasoning(choice?.message?.content);
-    if (choice?.finish_reason === 'length') content = trimToLastSentence(content);
-    if (!content) throw new Error('AI 沒有產生可用的回覆內容（可能全是思考過程或被輸出上限截斷）');
-    return { content };
+    throw new Error('AI ' + lastProblem + '，已重試 3 次');
 }
 
 const RP_SYSTEM_PROMPT_TEMPLATE = `# [SYSTEM DIRECTIVE - ROLEPLAY ENGINE v1.0]
@@ -1364,6 +1378,7 @@ async function loadWorldInfoContext(chatId, userMessage, characterId, userId, en
     try {
         const globalSettings = await env.DB.prepare(`SELECT * FROM globalSettings WHERE enabled = 1 ORDER BY priority DESC`).all();
         globalSettings.results.forEach(entry => {
+            if (String(entry.name || '').startsWith('bot_config_')) return;
             if (!entry.keys || entry.priority === 'front' || entry.keys.split(',').some(key => userMessage.toLowerCase().includes(key.trim().toLowerCase()))) {
                 const e = { name: entry.name, content: entry.content, priority: entry.priority || 'middle', isForbidden: false };
                 if (detectForbidden(e.content)) e.isForbidden = true;
@@ -1513,6 +1528,7 @@ function appendResponseReminder(content, cfg) {
 const REASONING_TAGS = 'think|thinking|thought|thoughts|reasoning|analysis|scratchpad|reflection|思考|思考過程|推理';
 function stripReasoning(text) {
     let t = String(text ?? '');
+    t = t.replace(/<!--[\s\S]*?-->/g, ''); // 世界書的 ECoT 預設會用 <!-- Start the ECoT --> 之類的註解包住思考與自我檢查
     t = t.replace(new RegExp('<(' + REASONING_TAGS + ')>[\\s\\S]*?</\\1>', 'gi'), '');
     const closing = new RegExp('</(' + REASONING_TAGS + ')>', 'i').exec(t);
     if (closing) t = t.slice(closing.index + closing[0].length);
@@ -1526,6 +1542,17 @@ function trimToLastSentence(text) {
     const t = String(text ?? '').trimEnd();
     const cut = Math.max(...['。', '！', '？', '…', '.', '!', '?', '」', '）', '*', '\n'].map(c => t.lastIndexOf(c)));
     return cut >= t.length * 0.5 ? t.slice(0, cut + 1).trimEnd() : t;
+}
+// 上游模型被安全機制擋下時，會回一句固定的罐頭話（例如「我只是一个语言模型，理解不了这个问题」）。
+// 這種回覆不該被當成角色的發言送出、更不能存進歷史（會讓之後的回覆跟著拒絕）。
+const REFUSAL_PATTERNS = [
+    /我只是一?个?(?:语言|語言)模型/, /我是一?个?(?:语言|語言)模型/, /(?:没法|沒法|无法|無法)帮上忙/, /(?:没法|沒法|无法|無法)(?:协助|協助|回答|提供)/,
+    /作为(?:一个)?(?:AI|人工智能|语言模型)/, /作為(?:一個)?(?:AI|人工智慧|語言模型)/,
+    /I(?:'m| am) (?:just )?(?:a|an) (?:language model|AI)/i, /I (?:can(?:no|')t|cannot|am unable to) (?:help|assist|comply)/i
+];
+function looksLikeRefusal(text) {
+    const t = String(text ?? '').trim();
+    return t.length > 0 && t.length <= 150 && REFUSAL_PATTERNS.some(re => re.test(t));
 }
 // format-helpers>>
 
@@ -2001,10 +2028,10 @@ async function startGatewayConnection(env, ctx) {
     }
 
     // 若已有開啟的連線，先關閉以避免重複連線導致大量心跳請求
-    if (gatewayWs && gatewayWs.readyState === WebSocket.OPEN) {
+    if (gatewayWs) {
         try {
-            gatewayWs.close();
-        } catch (_) {}
+            if (gatewayWs.readyState === WebSocket.OPEN) gatewayWs.close();
+        } catch (_) {} // 上一個請求建立的連線物件在這個請求裡不能操作，直接丟掉重連
         gatewayWs = null;
     }
     // 清除可能存在的計時器
@@ -2050,8 +2077,12 @@ async function startGatewayConnection(env, ctx) {
                     case 10: // Hello
                         if (gatewayHeartbeatTimer) clearInterval(gatewayHeartbeatTimer);
                         gatewayHeartbeatTimer = setInterval(() => {
-                            if (gatewayWs && gatewayWs.readyState === WebSocket.OPEN) {
-                                gatewayWs.send(JSON.stringify({ op: 1, d: gatewaySeq }));
+                            // 計時器可能在建立它的請求結束後才觸發，此時連線物件不能再操作（會丟 different request 例外）→ 放棄這次心跳
+                            try {
+                                if (ws.readyState === WebSocket.OPEN) ws.send(JSON.stringify({ op: 1, d: gatewaySeq }));
+                            } catch (_) {
+                                clearInterval(gatewayHeartbeatTimer);
+                                gatewayHeartbeatTimer = null;
                             }
                         }, d.heartbeat_interval);
 

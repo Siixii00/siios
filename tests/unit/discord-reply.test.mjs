@@ -1,0 +1,126 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import vm from 'node:vm';
+import { DatabaseSync } from 'node:sqlite';
+
+const workerUrl = new URL('../../scripts/discord-bot-worker.js', import.meta.url);
+const worker = (await import(workerUrl.href)).default;
+const src = readFileSync(workerUrl, 'utf8');
+const H = vm.runInNewContext(src.slice(src.indexOf('// <<format-helpers'), src.indexOf('// format-helpers>>')) + '\n({ stripReasoning, looksLikeRefusal })');
+
+// ───── 純函式 ─────
+test('stripReasoning：世界書 ECoT 的 HTML 註解與 <thinking> 一起去掉', () => {
+    const raw = '<!-- Start the ECoT -->\n<thinking>\n[輸入解構] ...\n</thinking>\n<!-- End of The ECoT -->\n\n<!-- 禁詞風險15: 無 -->\n\n*手掌輕輕放在她的頭頂*\n\n好。';
+    assert.equal(H.stripReasoning(raw), '*手掌輕輕放在她的頭頂*\n\n好。');
+});
+
+test('looksLikeRefusal：認得上游的罐頭拒絕，不誤判正常的角色發言', () => {
+    assert.ok(H.looksLikeRefusal('我只是一个语言模型，理解不了这个问题，因此没法帮上忙。'));
+    assert.ok(H.looksLikeRefusal("I'm just a language model, I can't help with that."));
+    assert.ok(H.looksLikeRefusal('作為一個AI，我無法協助這個請求'));
+    assert.ok(!H.looksLikeRefusal('*低頭看著她* 我只是想抱著妳，不行嗎？'));
+    assert.ok(!H.looksLikeRefusal('我是你的語言老師。'.repeat(1) + '好'.repeat(200)));
+    assert.ok(!H.looksLikeRefusal(''));
+});
+
+// ───── 輪詢流程：用記憶體 SQLite 模擬 D1，用假的 fetch 模擬 Discord 與 AI ─────
+const SCHEMA = `
+CREATE TABLE messages (id TEXT PRIMARY KEY, chat_id TEXT, role TEXT, content TEXT, timestamp TEXT, metadata TEXT);
+CREATE TABLE characters (id TEXT PRIMARY KEY, name TEXT, personality TEXT, scenario TEXT, nicknames TEXT);
+CREATE TABLE users (id TEXT PRIMARY KEY, name TEXT, mask TEXT, personality TEXT DEFAULT '', speech_style TEXT DEFAULT '', taboos TEXT DEFAULT '[]');
+CREATE TABLE worldInfo (id TEXT PRIMARY KEY, name TEXT, content TEXT, keys TEXT, priority TEXT, enabled INTEGER DEFAULT 1, user_id TEXT, character_id TEXT);
+CREATE TABLE globalSettings (id TEXT PRIMARY KEY, name TEXT, content TEXT, keys TEXT, priority TEXT, enabled INTEGER DEFAULT 1);
+CREATE TABLE globalForbidden (id TEXT PRIMARY KEY, name TEXT, content TEXT, enabled INTEGER DEFAULT 1);
+CREATE TABLE discordUserBindings (discord_user_id TEXT PRIMARY KEY, user_id TEXT, character_id TEXT, user_display_name TEXT, discord_username TEXT);
+CREATE TABLE discord_channel_mappings (channel_id TEXT PRIMARY KEY, character_id TEXT);
+CREATE TABLE memories (id TEXT PRIMARY KEY, chat_id TEXT, character_id TEXT, content TEXT, memory_type TEXT DEFAULT 'dynamic', importance REAL DEFAULT 0.5, timestamp TEXT, metadata TEXT);
+CREATE TABLE channel_bindings (channel_id TEXT PRIMARY KEY, character_id TEXT, guild_id TEXT, updated_at TEXT);
+CREATE TABLE botState (key TEXT PRIMARY KEY, cursor TEXT);
+`;
+
+const SECRET_KEY = 'sk-test-SECRET-1234';
+
+function makeEnv() {
+    const db = new DatabaseSync(':memory:');
+    db.exec(SCHEMA);
+    db.prepare(`INSERT INTO characters (id, name, personality) VALUES ('char1', '艾爾', '沉穩')`).run();
+    db.prepare(`INSERT INTO channel_bindings (channel_id, character_id) VALUES ('chan1', 'char1')`).run();
+    db.prepare(`INSERT INTO botState (key, cursor) VALUES ('bot_user_id', 'BOT')`).run();
+    db.prepare(`INSERT INTO botState (key, cursor) VALUES ('commands_registered', '1')`).run();
+    const cfg = { AI_API_URL: 'https://ai.test', AI_API_KEY: SECRET_KEY, AI_MODEL: 'm', REACTION_PROBABILITY: '0', INTERJECT_PROBABILITY: '0' };
+    for (const [k, v] of Object.entries(cfg)) db.prepare(`INSERT INTO globalSettings (id, name, content, keys, priority, enabled) VALUES (?, ?, ?, '', 'middle', 1)`).run('cfg-' + k, 'bot_config_' + k, v);
+    // 歷史裡有一則帶思考過程的舊回覆
+    db.prepare(`INSERT INTO messages (id, chat_id, role, content, timestamp) VALUES ('h1', 'char1', 'assistant', ?, '2026-01-01T00:00:00.000Z')`).run('<!-- Start the ECoT -->\n<thinking>舊的思考</thinking>\n<!-- End of The ECoT -->\n\n舊的回覆');
+    const wrap = sql => ({
+        bind: (...a) => ({ first: async () => db.prepare(sql).get(...a) ?? null, all: async () => ({ results: db.prepare(sql).all(...a) }), run: async () => { db.prepare(sql).run(...a); return {}; } }),
+        first: async () => db.prepare(sql).get() ?? null, all: async () => ({ results: db.prepare(sql).all() }), run: async () => ({})
+    });
+    return { db, env: { DB: { prepare: wrap }, DISCORD_BOT_TOKEN: 't', DISCORD_APPLICATION_ID: '1' } };
+}
+
+async function runPoll(userMessages, aiReplies) {
+    const { db, env } = makeEnv();
+    const sent = [], aiCalls = [];
+    let reply = 0;
+    const realFetch = globalThis.fetch;
+    globalThis.fetch = async (url, init = {}) => {
+        const u = String(url);
+        if (u.includes('/v1/chat/completions')) {
+            const body = JSON.parse(init.body);
+            if (body.messages.length <= 3) return Response.json({ choices: [{ message: { content: '' } }] }); // 記憶萃取、摘要等小呼叫
+            aiCalls.push(body);
+            const r = aiReplies[Math.min(reply++, aiReplies.length - 1)];
+            return Response.json({ choices: [{ message: { content: r }, finish_reason: 'stop' }] });
+        }
+        if (u.includes('/channels/chan1/messages') && (init.method || 'GET') === 'GET') {
+            return Response.json(userMessages.map((content, i) => ({ id: String(2000 + i), content, channel_id: 'chan1', author: { id: 'U1', username: 'u', bot: false }, timestamp: new Date(2026, 9, 20, 0, 0, i).toISOString(), mentions: [{ id: 'BOT' }] })).reverse());
+        }
+        if (u.includes('/channels/chan1/messages') && init.method === 'POST') {
+            const content = JSON.parse(init.body).content;
+            sent.push(content);
+            return Response.json({ id: 'm' + sent.length, content });
+        }
+        return Response.json({});
+    };
+    try {
+        const pending = [];
+        const res = await worker.fetch(new Request('https://w.test/poll'), env, { waitUntil: p => pending.push(p) });
+        await Promise.allSettled(pending);
+        return { body: await res.json(), sent, aiCalls, stored: db.prepare(`SELECT role, content FROM messages WHERE id != 'h1' ORDER BY timestamp`).all() };
+    } finally { globalThis.fetch = realFetch; }
+}
+
+test('輪詢：提示詞不含 bot_config_ 設定列（API 金鑰不能送給模型），舊回覆的思考過程已去掉', async () => {
+    const r = await runPoll(['你好'], ['*抬頭* 嗯？']);
+    assert.equal(r.aiCalls.length, 1);
+    const all = JSON.stringify(r.aiCalls[0].messages);
+    assert.ok(!all.includes(SECRET_KEY), 'API 金鑰出現在提示詞裡');
+    assert.ok(!all.includes('bot_config_'));
+    assert.ok(!all.includes('舊的思考') && !all.includes('ECoT'), '歷史裡舊的思考過程沒去掉');
+    assert.ok(all.includes('舊的回覆'));
+    assert.deepEqual(r.sent, ['*抬頭* 嗯？']);
+});
+
+test('輪詢：回覆裡的 ECoT／thinking 會在送出前去掉，存進歷史的也是乾淨版', async () => {
+    const r = await runPoll(['你好'], ['<!-- Start the ECoT -->\n<thinking>想一想</thinking>\n<!-- End of The ECoT -->\n\n好。']);
+    assert.deepEqual(r.sent, ['好。']);
+    assert.equal(r.stored.find(m => m.role === 'assistant').content, '好。');
+});
+
+test('輪詢：模型回拒絕罐頭話時自動重試，只送出重試成功的那一則', async () => {
+    const r = await runPoll(['戳戳。'], ['我只是一个语言模型，理解不了这个问题，因此没法帮上忙。', '我只是一个语言模型，理解不了这个问题，因此没法帮上忙。', '*低頭看她* 還不睡？']);
+    assert.equal(r.aiCalls.length, 3);
+    assert.deepEqual(r.sent, ['*低頭看她* 還不睡？']);
+    assert.ok(!r.stored.some(m => /语言模型/.test(m.content)));
+});
+
+test('輪詢：連續拒絕時回報錯誤訊息，不存拒絕內容，而且同一輪的下一則訊息照常處理', async () => {
+    const refuse = '我只是一个语言模型，理解不了这个问题，因此没法帮上忙。';
+    const r = await runPoll(['第一則', '第二則'], [refuse, refuse, refuse, '第二則的回覆']);
+    assert.equal(r.aiCalls.length, 4);
+    assert.match(r.sent[0], /⚠️ AI 回覆時發生錯誤.*拒絕/);
+    assert.equal(r.sent[1], '第二則的回覆');
+    assert.ok(!r.stored.some(m => m.role === 'assistant' && /语言模型/.test(m.content)));
+    assert.equal(r.body.replied, 1);
+});
