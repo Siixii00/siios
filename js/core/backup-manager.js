@@ -1,4 +1,4 @@
-﻿/**
+﻿﻿/**
  * SXIOS 備份管理器
  * 支援：本地 JSON、GitHub、Google Drive 三重備份
  */
@@ -94,6 +94,7 @@ class BackupManager {
             // 匯入設定
             if (backupData.data.settings) {
                 for (const [key, value] of Object.entries(backupData.data.settings)) {
+                    if (key === 'user_birthdate') continue; // 年齡確認以這台裝置填的為準，還原備份不能覆蓋
                     try {
                         await SettingsDB.set(key, value);
                         report.imported.settings = (report.imported.settings || 0) + 1;

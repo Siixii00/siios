@@ -1,4 +1,4 @@
-﻿﻿﻿import { minorSafetyPrompt } from './core/age-gate.js';
+﻿﻿﻿﻿import { minorSafetyPrompt } from './core/age-gate.js';
 import Router from './router.js';
 import { SettingsDB, ChatsDB, CharactersDB, UsersDB, HealthDB, ZiweiCacheDB } from './db.js';
 import { loadWorldInfoContext } from './core/world-info-loader.js';
@@ -115,8 +115,13 @@ const APIClient = {
         // 宅家的精力值偏低時，讓角色知道使用者的狀態（只有低精力才提示，避免每句都被干擾）
         try {
             const home = await SettingsDB.get('home_state');
-            if (home && typeof home.energy === 'number' && home.energy <= 30) {
-                systemMessages.push({ role: 'system', content: '【使用者近況】使用者在「宅家」裡的精力值偏低（' + home.energy + '%），看起來有點疲憊。可以自然地關心他，必要時提醒他休息，但不要每句話都提。' });
+            if (home && typeof home.energy === 'number') {
+                // 精力只在開啟宅家時才會結算自然恢復，這裡用基本速度（每 6 分鐘 +1，不含家具加成）估算現在的值
+                const regen = Math.max(0, Math.floor((Date.now() - (home.energyTs || Date.now())) / (6 * 60000)));
+                const energy = Math.min(100, home.energy + regen);
+                if (energy <= 30) {
+                    systemMessages.push({ role: 'system', content: '【使用者近況】使用者在「宅家」裡的精力值偏低（' + energy + '%），看起來有點疲憊。可以自然地關心他，必要時提醒他休息，但不要每句話都提。' });
+                }
             }
         } catch (e) { /* 讀不到就略過 */ }
 

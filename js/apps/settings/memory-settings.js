@@ -27,10 +27,22 @@ let memorySettings = {
     bound_theater_id: null
 };
 
+// 這些是「known_sources」功能加入之前就存在的來源；用來判斷哪些來源是之後才新增的
+const LEGACY_SOURCE_IDS = ['chat', 'youtube', 'instagram', 'chrome', 'dating', 'bubbles', 'weverse', 'bilibili', 'twitch', 'twitter'];
+
 async function loadMemorySettings() {
     const saved = await SettingsDB.get('chat_memory_settings');
+    const allIds = MEMORY_SOURCES.map(s => s.id);
     if (saved) {
         memorySettings = { ...memorySettings, ...saved };
+        // 之後新增的來源，對已經存過設定的使用者預設啟用一次；之後他關掉就尊重他的選擇
+        const known = new Set(saved.known_sources || LEGACY_SOURCE_IDS);
+        const fresh = allIds.filter(id => !known.has(id));
+        memorySettings.selected_sources = [...new Set([...(memorySettings.selected_sources || []), ...fresh])];
+        memorySettings.known_sources = allIds;
+        if (fresh.length) await saveMemorySettings();
+    } else {
+        memorySettings.known_sources = allIds;
     }
 }
 

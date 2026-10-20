@@ -10,6 +10,8 @@ const POSTS_KEY = 'facebook_posts';
 const PREFS_KEY = 'facebook_prefs';
 const PROFILE_KEY = 'facebook_profile';
 const MAX_POSTS = 200;
+// 圖片（base64）另外一張存一個鍵；貼文清單只留旗標，才不會因為圖片讓每次互動都整包重寫數 MB
+const IMG_PREFIX = 'facebook_img_';
 const REACTIONS = { like: '👍', love: '❤️', haha: '😆', wow: '😮', sad: '😢', angry: '😡' };
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -131,7 +133,7 @@ function postHtml(post, ctx) {
             ${mine ? `<button class="fb-icon-btn" data-action="del-post" data-post="${post.id}" title="刪除貼文">✕</button>` : ''}
         </header>
         ${post.text ? `<p class="fb-text">${esc(post.text)}</p>` : ''}
-        ${post.image ? `<img class="fb-post-img" src="${esc(post.image)}" alt="">` : ''}
+        ${(ctx.images[post.id] || post.image) ? `<img class="fb-post-img" src="${esc(ctx.images[post.id] || post.image)}" alt="">` : ''}
         <div class="fb-counts"><span>${reactionSummary(post)}</span><span>${(post.comments || []).length ? (post.comments.length + ' 則留言') : ''}</span></div>
         <div class="fb-actions">
             <button data-action="like" data-post="${post.id}" class="${my ? 'on' : ''}">${my ? REACTIONS[my] : '👍'} ${my ? '' : '讚'}</button>
@@ -152,10 +154,18 @@ async function renderFacebook() {
     let alive = true;
     let tab = 'feed';
     let composerImage = '';
-    const ctx = { pending: new Set(), generating: false };
+    const ctx = { pending: new Set(), generating: false, images: {} };
 
     const [characters, profile, prefs] = await Promise.all([CharactersDB.getAll(), loadProfile(), loadPrefs()]);
     let posts = await loadPosts();
+    // 載入圖片；舊版直接嵌在貼文裡的圖片一次性搬到獨立的鍵
+    await Promise.all(posts.filter(p => p.imageKey).map(async p => { ctx.images[p.id] = await SettingsDB.get(IMG_PREFIX + p.id); }));
+    const legacy = posts.filter(p => typeof p.image === 'string' && p.image.startsWith('data:'));
+    if (legacy.length) {
+        for (const p of legacy) { await SettingsDB.set(IMG_PREFIX + p.id, p.image); ctx.images[p.id] = p.image; }
+        const ids = new Set(legacy.map(p => p.id));
+        posts = await updatePosts(list => list.forEach(p => { if (ids.has(p.id)) { p.image = ''; p.imageKey = true; } }));
+    }
     const friends = () => characters.filter(c => !prefs.disabledIds.includes(c.id));
 
     const apply = fn => updatePosts(fn).then(p => { posts = p; if (alive) draw(); return p; });
@@ -292,7 +302,8 @@ async function renderFacebook() {
     async function publish() {
         const text = container.querySelector('#fb-draft').value.trim();
         if (!text && !composerImage) return createToast('請輸入內容或選擇照片', 'error');
-        const post = { id: uid(), authorType: 'user', characterId: '', authorName: profile.name, authorAvatar: profile.avatar, text, image: composerImage, createdAt: Date.now(), userReaction: null, charReactions: {}, comments: [] };
+        const post = { id: uid(), authorType: 'user', characterId: '', authorName: profile.name, authorAvatar: profile.avatar, text, image: '', imageKey: !!composerImage, createdAt: Date.now(), userReaction: null, charReactions: {}, comments: [] };
+        if (composerImage) { await SettingsDB.set(IMG_PREFIX + post.id, composerImage); ctx.images[post.id] = composerImage; }
         composerImage = '';
         container.querySelector('#fb-draft').value = '';
         await apply(list => list.push(post));
@@ -317,6 +328,8 @@ async function renderFacebook() {
         }
         if (action === 'del-post') {
             if (!confirm('刪除這則貼文？')) return;
+            delete ctx.images[postId];
+            SettingsDB.set(IMG_PREFIX + postId, null); // 一併釋放圖片
             return apply(list => { const i = list.findIndex(x => x.id === postId); if (i >= 0) list.splice(i, 1); });
         }
         if (action === 'del-comment') return apply(list => { const p = list.find(x => x.id === postId); if (p) p.comments = p.comments.filter(c => c.id !== btn.dataset.comment); });

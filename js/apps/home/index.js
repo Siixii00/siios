@@ -89,6 +89,7 @@ async function renderHome() {
   let balance = await getBalance();
   const s = await loadState();
   applyRegen(s);
+  if (s.energy < 60) s.tasks.lowSeen = true; // 「恢復到 60 以上」要先低於 60 才算
   const save = () => SettingsDB.set(STATE_KEY, s);
   await save();
   const available = a => !a.need || !!s.placed[a.need];
@@ -156,7 +157,7 @@ async function renderHome() {
   async function run(fn) {
     if (busy) return;
     busy = true;
-    try { await fn(); applyRegen(s); if (s.energy >= 60) s.tasks.progress.t3 = 1; await save(); }
+    try { await fn(); applyRegen(s); if (s.energy < 60) s.tasks.lowSeen = true; else if (s.tasks.lowSeen) s.tasks.progress.t3 = 1; await save(); }
     catch (e) { createToast(e instanceof WalletError ? e.message : (e.message || '操作失敗'), 'error'); }
     finally { busy = false; balance = await getBalance(); if (alive) draw(); }
   }
@@ -226,7 +227,15 @@ async function renderHome() {
   chars = await CharactersDB.getAll();
   container.addEventListener('click', onClick);
   draw();
-  const timer = setInterval(() => { if (!sheet && !busy) { applyRegen(s); draw(); } }, 5000);
+  const timer = setInterval(() => {
+    if (sheet || busy) return;
+    applyRegen(s);
+    if (s.tasks.date !== today()) { // 跨過午夜：換新的一天的任務
+      s.tasks = { date: today(), progress: {}, claimed: {}, lowSeen: s.energy < 60 };
+      save();
+    }
+    draw();
+  }, 5000);
   return { element: container, cleanup: () => { alive = false; clearInterval(timer); } };
 }
 

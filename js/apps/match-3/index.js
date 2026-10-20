@@ -26,7 +26,11 @@ async function renderMatch3() {
     container.querySelector('.ios-back-btn').onclick = () => (cfg ? showLevels() : Router.back());
   }
 
+  // 每次換關／回選單就加一；進行中的連鎖動畫醒來後發現局號變了就直接放棄，不去碰新的棋盤
+  let gen = 0;
+
   function showLevels() {
+    gen++;
     cfg = null; result = null;
     frame(`
       <p class="lv-summary">累計 ★ ${totalStars(progress)} / ${LEVEL_COUNT * 3}　·　已解鎖 ${progress.unlocked} / ${LEVEL_COUNT} 關</p>
@@ -35,6 +39,7 @@ async function renderMatch3() {
   }
 
   function startLevel(n) {
+    gen++;
     cfg = levelConfig(n);
     board = makeBoard(cfg.types);
     score = 0; collected = 0; moves = cfg.moves;
@@ -99,9 +104,11 @@ async function renderMatch3() {
     const a = selected;
     selected = null;
     busy = true;
+    const mine = gen;
     [board[a], board[i]] = [board[i], board[a]];
     if (!findMatches(board).size) { // 沒有形成消除：換過去、再換回來
       draw(); await wait(180);
+      if (!alive || mine !== gen) return;
       [board[a], board[i]] = [board[i], board[a]];
       busy = false;
       if (alive) draw();
@@ -116,17 +123,20 @@ async function renderMatch3() {
       score += m.size * 10 * chain;
       clearing = new Set(m);
       draw(); await wait(STEP_MS);
-      if (!alive) return;
+      if (!alive || mine !== gen) return;
       const counts = clearMatches(board, m);
       collected += counts[cfg.fruit] || 0;
       clearing = new Set();
       applyGravity(board, cfg.types);
       draw(); await wait(STEP_MS);
-      if (!alive) return;
+      if (!alive || mine !== gen) return;
     }
     if (progressValue() >= cfg.goal) {
       const stars = starsFor(cfg, progressValue());
-      progress = await completeLevel(GAME, cfg.level, Math.max(1, stars), LEVEL_COUNT);
+      const level = cfg.level;
+      const updated = await completeLevel(GAME, level, Math.max(1, stars), LEVEL_COUNT); // 過關進度照樣記下來，即使畫面已切走
+      if (!alive || mine !== gen) { progress = updated; return; }
+      progress = updated;
       result = { won: true, stars: Math.max(1, stars) };
     } else if (moves <= 0) {
       result = { won: false };

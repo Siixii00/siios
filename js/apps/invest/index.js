@@ -6,7 +6,7 @@ import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { getBalance, charge, credit, formatMoney, WalletError } from '../../core/wallet.js';
 import { askForm } from '../../core/dialogs.js';
-import { fetchHeadlines, analyze, sectorBias, localDate, startOfDay, aiReady } from './world-events.js';
+import { fetchHeadlines, analyze, sectorBias, localDate, startOfDay } from './world-events.js';
 
 // 投資模擬器：全部是虛構的標的與模擬行情，買賣直接用「支付」錢包的虛擬餘額，沒有任何真實金流或真實股價。
 const MARKET_KEY = 'invest_market';

@@ -119,7 +119,7 @@ async function renderFarm() {
   let busy = false;
   let mode = 'plant'; // plant | water | fert
   let selectedCrop = 'c1';
-  const rainy = isRainy();
+  let rainy = isRainy();
   const st = await loadState();
   if (st.orders.date !== today()) st.orders = { date: today(), list: makeOrders(st.level) };
   let balance = await getBalance();
@@ -439,7 +439,16 @@ async function renderFarm() {
 
   container.addEventListener('click', onClick);
   sync();
-  const timer = setInterval(() => { if (!busy) sync(); }, 1000);
+  const timer = setInterval(() => {
+    if (busy) return;
+    if (st.orders.date !== today()) { // 跨過午夜：換新的一天的訂單與天氣
+      st.orders = { date: today(), list: makeOrders(st.level) };
+      rainy = isRainy();
+      world.classList.toggle('rainy', rainy);
+      save();
+    }
+    sync();
+  }, 1000);
   return { element: container, cleanup: () => { alive = false; clearInterval(timer); } };
 }
 

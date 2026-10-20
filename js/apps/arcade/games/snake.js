@@ -1,4 +1,4 @@
-import { LEVEL_COUNT, levelConfig, createState, setDir, step, N, DIRS } from './snake-core.js';
+import { LEVEL_COUNT, levelConfig, createState, setDir, step, N } from './snake-core.js';
 import { loadProgress, completeLevel, levelGridHtml, starText, totalStars } from './levels.js';
 
 const GAME = 'snake';

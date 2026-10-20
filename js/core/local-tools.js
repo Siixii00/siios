@@ -8,7 +8,9 @@ import { saveInteractionMemory } from './memory-saver.js';
 const pad = n => String(n).padStart(2, '0');
 
 function parseDateTime(value) {
-    const d = new Date(value);
+    // 只有日期（2026-10-20）時 new Date() 會當成 UTC 零點，西半球會差一天；改成本地日期
+    const dateOnly = /^(\d{4})-(\d{2})-(\d{2})$/.exec(String(value).trim());
+    const d = dateOnly ? new Date(+dateOnly[1], +dateOnly[2] - 1, +dateOnly[3]) : new Date(value);
     if (Number.isNaN(d.getTime())) return null;
     return {
         dateStr: d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()),
