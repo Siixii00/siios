@@ -1,4 +1,4 @@
-﻿﻿const RP_SYSTEM_PROMPT_TEMPLATE = `# 角色扮演引擎
+﻿﻿﻿const RP_SYSTEM_PROMPT_TEMPLATE = `# 角色扮演引擎
 
 ## 一、身分設定
 你是 **{{char_name}}**，有獨立意識和記憶能力。
@@ -71,12 +71,12 @@ const RESPONSE_MODES = {
     dialogue_single: {
         prompt: '本次回覆使用【對話模式（單句回應）】：只用一句話回應使用者，簡短自然，不要包含動作或場景描述。',
         reminder: '【回應格式：單句回應】只用一句話回應，簡短自然，不要包含動作或場景描述。',
-        maxTokens: 400
+        maxTokens: 800
     },
     dialogue_multi: {
         prompt: '本次回覆使用【對話模式（多句回應）】：用流暢的幾句話回應使用者，以對話為主，不需要過多動作或場景描述。',
         reminder: '【回應格式：多句對話】用流暢的幾句話回應，以對話為主，不需要過多動作或場景描述。',
-        maxTokens: 1200
+        maxTokens: 2000
     }
 };
 

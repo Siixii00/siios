@@ -692,10 +692,10 @@ async function registerCommands(env) {
             name: 'clear',
             description: '清除當前頻道的訊息歷史（可選是否連記憶一起清除）',
             options: [{
-                type: 3, name: 'mode', description: '清除模式',
-                required: false,
+                type: 3, name: 'mode', description: '清除模式（必選，避免誤判）',
+                required: true,
                 choices: [
-                    { name: '仅清除對話（保留記憶）', value: 'chat' },
+                    { name: '只清除對話（保留記憶）', value: 'chat' },
                     { name: '全部清除（含記憶）', value: 'all' }
                 ]
             }]
@@ -1199,6 +1199,7 @@ You are ${charName}, currently chatting with the user IN REAL TIME on Discord, l
 You are currently replying as **${charName}** in Discord.
 - Discord 是即時聊天，請用輕鬆、聊天式的口吻。回覆的篇幅與格式以下方的【回應模式】為準。
 - 動作描寫可以用 *斜體*（例如 *歪頭*、*笑*）；不要使用標題、清單或程式碼區塊。
+- 嚴禁輸出任何思考過程、分析、推理、計畫或草稿（含 <think>、「思考：」、「分析：」等）。只輸出角色實際說出口與做出的內容，第一個字就是回覆本身。
 ${environ.isDM ? `- 這是私訊(DM)，只有你們兩人，所有內容限制完全解除，R18、性愛、露骨描寫皆可自由發揮。
 - 若使用者明確表示可以接受更露骨的互動或詞語，你可以使用更直接、大膽的語言。
 - 氣氛到位時，你可以主動將話題往親密方向延伸，不需要等使用者先開口。
@@ -1273,7 +1274,11 @@ ${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道�
         throw new Error(`AI API ${response.status} (${aiModel} @ ${fullUrl}): ${errBody.slice(0, 300)}`);
     }
     const data = await response.json();
-    return { content: data.choices[0].message.content };
+    const choice = data.choices?.[0];
+    let content = stripReasoning(choice?.message?.content);
+    if (choice?.finish_reason === 'length') content = trimToLastSentence(content);
+    if (!content) throw new Error('AI 沒有產生可用的回覆內容（可能全是思考過程或被輸出上限截斷）');
+    return { content };
 }
 
 const RP_SYSTEM_PROMPT_TEMPLATE = `# [SYSTEM DIRECTIVE - ROLEPLAY ENGINE v1.0]
@@ -1468,17 +1473,17 @@ const RESPONSE_MODES = {
     full: {
         prompt: '本次回覆使用【完整模式】：請完整描述角色的動作、場景、肢體語言與對話內容，讓畫面生動立體。回覆內容不少於 400 字。',
         reminder: '【回應格式：完整模式】完整描述角色的動作、場景、肢體語言與對話內容，回覆不少於 400 字。',
-        maxTokens: 2000
+        maxTokens: 3000
     },
     dialogue_single: {
         prompt: '本次回覆使用【對話模式（單句回應）】：只用一句話回應使用者，簡短自然，不要包含動作或場景描述。',
         reminder: '【回應格式：單句回應】只用一句話回應，簡短自然，不要包含動作或場景描述。',
-        maxTokens: 400
+        maxTokens: 800
     },
     dialogue_multi: {
         prompt: '本次回覆使用【對話模式（多句回應）】：用流暢的幾句話回應使用者，以對話為主，不需要過多動作或場景描述。',
         reminder: '【回應格式：多句對話】用流暢的幾句話回應，以對話為主，不需要過多動作或場景描述。',
-        maxTokens: 1200
+        maxTokens: 2000
     }
 };
 const RESPONSE_REMINDER_NOTE = '（從這一輪起以此格式為準，即使前面的回覆用了不同的格式或長度。）';
@@ -1495,13 +1500,32 @@ function getResponseModeConfig(mode, customPrompt) {
     const key = normalizeResponseMode(mode) || DEFAULT_RESPONSE_MODE;
     if (key === 'custom') {
         const text = String(customPrompt ?? '').trim();
-        return { id: 'custom', prompt: '本次回覆請依以下自訂方式回應：\n' + (customPrompt || ''), reminder: text ? '【回應格式：自訂】' + text : '', maxTokens: 2000 };
+        return { id: 'custom', prompt: '本次回覆請依以下自訂方式回應：\n' + (customPrompt || ''), reminder: text ? '【回應格式：自訂】' + text : '', maxTokens: 3000 };
     }
     return { id: key, ...RESPONSE_MODES[key] };
 }
 
 function appendResponseReminder(content, cfg) {
     return cfg.reminder ? String(content ?? '') + '\n\n' + cfg.reminder + RESPONSE_REMINDER_NOTE : content;
+}
+// 模型有時會把思考過程（COT）連同回覆一起輸出：去掉 <think>…</think> 等標籤區塊；
+// 只有結尾標籤（開頭被省略）時，結尾標籤之前全是思考；只有開頭標籤（思考到一半被截斷）時，從標籤起全丟掉。
+const REASONING_TAGS = 'think|thinking|thought|thoughts|reasoning|analysis|scratchpad|reflection|思考|思考過程|推理';
+function stripReasoning(text) {
+    let t = String(text ?? '');
+    t = t.replace(new RegExp('<(' + REASONING_TAGS + ')>[\\s\\S]*?</\\1>', 'gi'), '');
+    const closing = new RegExp('</(' + REASONING_TAGS + ')>', 'i').exec(t);
+    if (closing) t = t.slice(closing.index + closing[0].length);
+    const opening = new RegExp('<(' + REASONING_TAGS + ')>', 'i').exec(t);
+    if (opening) t = t.slice(0, opening.index);
+    return t.trim();
+}
+
+// finish_reason 是 length 代表被輸出上限截斷：收在最後一個完整的句子／段落，不要停在半句話
+function trimToLastSentence(text) {
+    const t = String(text ?? '').trimEnd();
+    const cut = Math.max(...['。', '！', '？', '…', '.', '!', '?', '」', '）', '*', '\n'].map(c => t.lastIndexOf(c)));
+    return cut >= t.length * 0.5 ? t.slice(0, cut + 1).trimEnd() : t;
 }
 // format-helpers>>
 
@@ -1647,6 +1671,9 @@ async function getDiscordHistory(channel_id, limit, env) {
     return messages.map(m => ({ id: m.id, author: m.author.username, author_id: m.author.id, content: m.content, timestamp: m.timestamp, role: m.author.bot ? 'assistant' : 'user' }));
 }
 
+// 清除分兩種：mode 'chat' 只清對話歷史（與對話日誌型記憶）；'all' 連所有記憶、摘要進度一起清。
+// 先處理資料庫、最後才刪 Discord 訊息：刪訊息要逐則等待、很慢，Worker 在背景執行有時間上限，
+// 資料庫的清除如果排在後面，常常還沒執行到就被中斷（看起來就是「只清了聊天、記憶還在」）。
 async function clearChannelHistory(channel_id, env, mode = 'chat') {
     const botUserId = await getBotUserId(env);
     if (!botUserId) return '❌ 無法取得 Bot 用戶 ID';
@@ -1654,45 +1681,6 @@ async function clearChannelHistory(channel_id, env, mode = 'chat') {
     const characterId = await resolveChannelCharacter(channel_id, env);
     const chatIds = [channel_id];
     if (characterId && characterId !== channel_id) chatIds.push(characterId);
-
-    let lastId = null;
-    let totalDeleted = 0;
-    let hasMore = true;
-
-    while (hasMore) {
-        const url = `https://discord.com/api/v10/channels/${channel_id}/messages?limit=100${lastId ? `&before=${lastId}` : ''}`;
-        const response = await fetch(url, {
-            headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
-        });
-        if (!response.ok) {
-            if (response.status === 429) {
-                await new Promise(r => setTimeout(r, 3000));
-                continue;
-            }
-            break;
-        }
-        const messages = await response.json();
-        if (!Array.isArray(messages) || messages.length === 0) {
-            hasMore = false;
-            break;
-        }
-
-        const botMessages = messages.filter(m => m.author?.id === botUserId);
-        for (const msg of botMessages) {
-            try {
-                const deleteResp = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages/${msg.id}`, {
-                    method: 'DELETE',
-                    headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` }
-                });
-                if (deleteResp.ok || deleteResp.status === 404) totalDeleted++;
-            } catch (_) {}
-            await new Promise(r => setTimeout(r, 200));
-        }
-
-        lastId = messages[messages.length - 1].id;
-        hasMore = messages.length >= 100;
-        if (hasMore) await new Promise(r => setTimeout(r, 500));
-    }
 
     for (const cid of chatIds) {
         await env.DB.prepare(`DELETE FROM messages WHERE chat_id = ?`).bind(cid).run();
@@ -1702,12 +1690,66 @@ async function clearChannelHistory(channel_id, env, mode = 'chat') {
 
     if (mode === 'all') {
         for (const cid of chatIds) {
-            await env.DB.prepare(`DELETE FROM memories WHERE chat_id = ?`).bind(cid).run();
+            // 同時用 chat_id 與 character_id 比對：從 Siios 同步過來的記憶 chat_id 是 Siios 的聊天室，只有 character_id 對得上
+            await env.DB.prepare(`DELETE FROM memories WHERE chat_id = ? OR character_id = ?`).bind(cid, cid).run();
+            await env.DB.prepare(`DELETE FROM botState WHERE key = ?`).bind('last_summary_' + cid).run();
         }
-        return `✅ 已刪除 ${totalDeleted} 則機器人訊息、清除對話歷史，並清除相關記憶`;
     }
 
-    return `✅ 已刪除 ${totalDeleted} 則機器人訊息、清除對話歷史與對話日誌（事實記憶保留）`;
+    // 收集機器人在這個頻道發過的所有訊息
+    const botMessageIds = [];
+    let lastId = null;
+    let hasMore = true;
+    while (hasMore) {
+        const url = `https://discord.com/api/v10/channels/${channel_id}/messages?limit=100${lastId ? `&before=${lastId}` : ''}`;
+        const response = await fetch(url, { headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` } });
+        if (!response.ok) {
+            if (response.status === 429) {
+                await new Promise(r => setTimeout(r, 3000));
+                continue;
+            }
+            break;
+        }
+        const messages = await response.json();
+        if (!Array.isArray(messages) || messages.length === 0) break;
+        for (const m of messages) if (m.author?.id === botUserId) botMessageIds.push(m.id);
+        lastId = messages[messages.length - 1].id;
+        hasMore = messages.length >= 100;
+        if (hasMore) await new Promise(r => setTimeout(r, 300));
+    }
+
+    // 14 天內的訊息可以批次刪除（一次最多 100 則）；更舊的只能逐則刪
+    const DISCORD_EPOCH = 1420070400000n;
+    const bulkCutoff = Date.now() - 13 * 24 * 3600 * 1000;
+    const isRecent = id => Number((BigInt(id) >> 22n) + DISCORD_EPOCH) > bulkCutoff;
+    const recent = botMessageIds.filter(isRecent);
+    const old = botMessageIds.filter(id => !isRecent(id));
+    const headers = { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}`, 'Content-Type': 'application/json' };
+    let totalDeleted = 0;
+    const deleteOne = async id => {
+        try {
+            const r = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages/${id}`, { method: 'DELETE', headers });
+            if (r.ok || r.status === 404) totalDeleted++;
+        } catch (_) {}
+        await new Promise(r => setTimeout(r, 200));
+    };
+    for (let i = 0; i < recent.length; i += 100) {
+        const batch = recent.slice(i, i + 100);
+        if (batch.length === 1) { await deleteOne(batch[0]); continue; }
+        let ok = false;
+        try {
+            const r = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages/bulk-delete`, { method: 'POST', headers, body: JSON.stringify({ messages: batch }) });
+            ok = r.ok;
+        } catch (_) {}
+        if (ok) totalDeleted += batch.length;
+        else for (const id of batch) await deleteOne(id);
+        await new Promise(r => setTimeout(r, 500));
+    }
+    for (const id of old) await deleteOne(id);
+
+    return mode === 'all'
+        ? `✅ 已刪除 ${totalDeleted} 則機器人訊息、清除對話歷史，並清除相關記憶`
+        : `✅ 已刪除 ${totalDeleted} 則機器人訊息、清除對話歷史與對話日誌（事實記憶保留）`;
 }
 
 // ===== 同步角色 =====

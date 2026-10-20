@@ -27,8 +27,8 @@ test('PWA：每個模式都有提示詞、結尾提醒與（單句／多句的�
         assert.ok(m.prompt.includes('本次回覆使用'), id);
         assert.ok(m.reminder.startsWith('【回應格式：'), id);
     }
-    assert.equal(getResponseMode('dialogue_single').maxTokens, 400);
-    assert.equal(getResponseMode('dialogue_multi').maxTokens, 1200);
+    assert.equal(getResponseMode('dialogue_single').maxTokens, 800);
+    assert.equal(getResponseMode('dialogue_multi').maxTokens, 2000);
     assert.equal(getResponseMode('full').maxTokens, null); // 完整模式不另外限制長度
     assert.match(getResponseMode('full').prompt, /不少於 400 字/);
 });
