@@ -940,7 +940,14 @@ async function handleSlashCommand(event, env, ctx) {
                     } catch (_) {}
 
                     const fakeMessage = { content: lastUserMsg.content, channel_id: channelId, id: lastUserMsg.id };
-                    const aiResponse = await generateAIResponseWithContext(fakeMessage, characterId, userId, userDisplayName, env, { reroll: true });
+                    let aiResponse;
+                    try {
+                        aiResponse = await generateAIResponseWithContext(fakeMessage, characterId, userId, userDisplayName, env, { reroll: true });
+                    } catch (genError) {
+                        // 生成失敗：把剛刪掉的舊回覆放回去（Discord 上的舊訊息還在，資料庫不能少一則）
+                        await env.DB.prepare(`INSERT INTO messages (id, chat_id, role, content, timestamp, metadata) VALUES (?, ?, 'assistant', ?, ?, ?)`).bind(lastAiMsg.id, lastAiMsg.chat_id, lastAiMsg.content, lastAiMsg.timestamp, lastAiMsg.metadata).run();
+                        throw genError;
+                    }
 
                     // 刪除 Discord 上的舊 AI 回覆（若存在）
                     try {
