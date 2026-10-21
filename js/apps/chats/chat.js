@@ -370,7 +370,9 @@ async function renderChat(params) {
                         return;
                     }
                     try {
-                        await sendRich({ type: 'gift', content: g.name, meta: { id: g.id, name: g.name, icon: g.icon } });
+                        await sendRich({ type: 'gift', content: g.name, meta: { id: g.id, name: g.name, icon: g.icon, price: g.price } });
+                        // 留紀錄、存成角色的記憶、可能排一份之後的回禮（不增加好感度）
+                        import('../../core/gift-log.js').then(m => m.recordGiftGiven({ characterId: currentChat?.character_id, charName: currentChat?.character_name, gift: g })).catch(() => {});
                     } catch (e) {
                         await addGift(g.id);
                         createToast('送出失敗，禮物已退回', 'error');

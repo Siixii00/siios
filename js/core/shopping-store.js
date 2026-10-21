@@ -8,7 +8,7 @@ import { loadBirthdate, getBirthdate } from './age-gate.js';
 import { loadEvents } from './calendar.js';
 import { loadDislikes } from './dislikes.js';
 import { resolvePrefs, shopLinks } from './real-shops.js';
-import { buildIdeaMessages, parseIdeas, filterIdeas, planProposals, pruneProposals, OCCASIONS, formatPriceRange } from './gift-ideas.js';
+import { buildIdeaMessages, parseIdeas, filterIdeas, planProposals, pruneProposals, planReturnGift, isShown, OCCASIONS, formatPriceRange } from './gift-ideas.js';
 
 const K = { prefs: 'shop_prefs', wishlist: 'shop_wishlist', records: 'shop_records', proposals: 'gift_proposals', char: 'shop_selected_char' };
 export const DEFAULT_BUDGET = { min: 100, max: 1500 };
@@ -80,6 +80,16 @@ export function updateProposal(id, patch) {
     return serial(async () => { const list = (await loadProposals()).map(p => (p.id === id ? { ...p, ...patch } : p)); await saveProposals(list); return list.find(p => p.id === id); });
 }
 
+// 你送了角色禮物之後，排一份之後的回禮（過 1～6 天，有機率；不是立刻）
+export function scheduleReturnGift({ characterId, giftName, price }) {
+    return serial(async () => {
+        const list = await loadProposals();
+        const p = planReturnGift({ characterId, giftName, price, existing: list });
+        if (p) await saveProposals([...list, p]);
+        return p;
+    });
+}
+
 // 檢查有沒有新的重要日子，建立待處理的提議卡片（只建立卡片，不呼叫 AI；使用者點開才生成）。回傳目前未處理的數量
 export function refreshProposals(now = new Date()) {
     return serial(async () => {
@@ -95,7 +105,7 @@ export function refreshProposals(now = new Date()) {
         });
         const all = [...existing, ...fresh];
         if (fresh.length || all.length !== existing.length) await saveProposals(all);
-        return all.filter(p => ['pending', 'ready'].includes(p.status)).length;
+        return all.filter(p => isShown(p, now.getTime())).length;
     });
 }
 
@@ -118,4 +128,4 @@ export async function generateIdeas({ characterId, occasion = 'request', label =
     throw new Error('這次沒有挑到合適的，再試一次看看');
 }
 
-export { shopLinks };
+export { shopLinks, isShown };

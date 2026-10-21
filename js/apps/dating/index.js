@@ -6,6 +6,7 @@ import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { askConfirm } from '../../core/dialogs.js';
 import { learnDislikesFromText } from '../../core/dislikes.js';
+import { recordGiftGiven } from '../../core/gift-log.js';
 import { GIFTS, getInventoryCounts, consumeGift } from '../../core/gifts.js';
 import { charge, formatMoney } from '../../core/wallet.js';
 import {
@@ -387,7 +388,8 @@ async function openGifts(container) {
             const g = GIFTS.find(x => x.id === b.dataset.gift);
             sheet.closest('.dt-overlay').remove();
             if (!g || !(await consumeGift(g.id))) return createToast('這份禮物已經沒有了', 'error');
-            await act(container, { display: `（把${g.icon}${g.name}遞給對方）`, api: `（把${g.name}送給對方）`, base: 3, kind: 'action', gift: g });
+            recordGiftGiven({ characterId: st.character.id, charName: st.character.name, gift: g });
+            await act(container, { display: `（把${g.icon}${g.name}遞給對方）`, api: `（把${g.name}送給對方）`, base: 0, kind: 'action', gift: g });
         };
     });
 }
@@ -468,9 +470,10 @@ async function reply(container, { base = 1, gift = null, opening = false }) {
     if (mood) st.mood = mood;
 
     // 好感度：以角色這一輪的感受為準；模型沒給就用動作的基本值（開場不變動）
-    const raw = opening ? 0 : (delta ?? clampDelta(base));
+    // 送禮只是一種往來：這一輪不算好感度的增減（反應與記憶照常）
+    const raw = opening || gift ? 0 : (delta ?? clampDelta(base));
     const before = relOf(c.id);
-    const res = applyAffection(before, gift ? Math.max(raw, 1) : raw);
+    const res = applyAffection(before, raw);
     await saveRelation(c.id, res.relation);
     const stageBefore = relationStage(before), stageAfter = relationStage(res.relation);
     if (stageAfter.id !== stageBefore.id && res.applied > 0) st.messages.push({ role: 'narration', local: true, content: `💞 你們的關係進展到了「${stageAfter.name}」` });

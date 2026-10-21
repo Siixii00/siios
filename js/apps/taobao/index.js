@@ -7,8 +7,9 @@ import { SHOPS, KINDS, isShopUrl, shopLinks } from '../../core/real-shops.js';
 import { OCCASIONS, FREQUENCIES, formatPriceRange } from '../../core/gift-ideas.js';
 import {
     loadPrefs, savePrefs, loadSelectedChar, saveSelectedChar, loadWishlist, addWish, removeWish, loadRecords, addRecord, saveDecisionMemory,
-    loadProposals, updateProposal, refreshProposals, generateIdeas, NoApiError, DEFAULT_BUDGET
+    loadProposals, updateProposal, refreshProposals, generateIdeas, NoApiError, DEFAULT_BUDGET, isShown
 } from '../../core/shopping-store.js';
+import { loadGiftLog } from '../../core/gift-log.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 const MANUAL_OCCASIONS = ['request', 'cheer', 'thanks', 'celebrate'];
@@ -66,7 +67,7 @@ async function renderShopping() {
         const name = charOf(charId)?.name || '角色';
 
         // 他想送你東西（重要日子的提議）
-        const props = (await loadProposals()).filter(p => ['pending', 'ready'].includes(p.status));
+        const props = (await loadProposals()).filter(p => isShown(p));
         if (props.length) {
             const box = createElement('div', 'tb-card tb-props');
             box.appendChild(createElement('div', 'tb-label', { textContent: '💝 他想送你東西' }));
@@ -74,7 +75,7 @@ async function renderShopping() {
                 const c = charOf(p.characterId);
                 if (!c) return;
                 const row = createElement('div', 'tb-prop');
-                row.innerHTML = `<div><strong>${esc(c.name)}</strong> 想為「${esc(p.label)}」送你一份禮物<small>${new Date(p.dueAt).toLocaleDateString('zh-TW', { month: 'numeric', day: 'numeric' })}</small></div>`;
+                row.innerHTML = `<div><strong>${esc(c.name)}</strong> ${p.type === 'return' ? '想回送你一份禮物' : `想為「${esc(p.label)}」送你一份禮物`}<small>${new Date(p.dueAt).toLocaleDateString('zh-TW', { month: 'numeric', day: 'numeric' })}</small></div>`;
                 const btn = createElement('button', 'tb-btn', { textContent: p.status === 'ready' ? '看看他挑了什麼' : '請他挑' });
                 btn.onclick = () => openProposal(p);
                 row.appendChild(btn);
@@ -131,7 +132,7 @@ async function renderShopping() {
         ideas = []; decided = {}; reactions = {};
         if (p.status === 'ready' && Array.isArray(p.ideas) && p.ideas.length) { ideas = p.ideas; ideasMeta = { occasion: p.occasion, label: p.label, proposalId: p.id, characterId: charId }; await draw(); return; }
         await draw();
-        await pick({ occasion: p.occasion, label: p.label, proposalId: p.id, extra: `今天是「${p.label}」` });
+        await pick({ occasion: p.occasion, label: p.label, proposalId: p.id, extra: p.extra || `今天是「${p.label}」` });
     }
 
     function drawIdeas(host) {
@@ -246,7 +247,13 @@ async function renderShopping() {
     // ───── 紀錄 ─────
     async function drawLog() {
         const records = (await loadRecords()).slice().reverse();
-        if (!records.length) { page.innerHTML = '<div class="tb-empty">還沒有紀錄。請他挑一次禮物，你的決定會記在這裡。</div>'; return; }
+        const given = (await loadGiftLog()).slice().reverse();
+        if (!records.length && !given.length) { page.innerHTML = '<div class="tb-empty">還沒有紀錄。請他挑一次禮物，你的決定會記在這裡。</div>'; return; }
+        given.forEach(r => {
+            const row = createElement('div', 'tb-card tb-record');
+            row.innerHTML = `<div class="tb-idea-head"><strong>🎁 ${esc(r.name)}</strong>${r.price ? `<span class="tb-price">$${Number(r.price).toLocaleString()}</span>` : ''}</div><small class="tb-muted">你送給 ${esc(charOf(r.characterId)?.name || '')} · ${new Date(r.at).toLocaleDateString('zh-TW')}</small>`;
+            page.appendChild(row);
+        });
         records.forEach(r => {
             const row = createElement('div', 'tb-card tb-record');
             row.innerHTML = `<div class="tb-idea-head"><strong>${esc(r.name)}</strong><span class="tb-price">${esc(formatPriceRange(r))}</span></div>

@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { SHOPS, SHOP_IDS, KINDS, normalizeKind, resolvePrefs, queryFor, isShopUrl, shopLinks, shopById } from '../../js/core/real-shops.js';
-import { buildIdeaMessages, parseIdeas, filterIdeas, formatPriceRange, detectOccasions, planProposals, pruneProposals, describeRecentShopping, FESTIVALS, OCCASIONS } from '../../js/core/gift-ideas.js';
+import { buildIdeaMessages, parseIdeas, filterIdeas, formatPriceRange, detectOccasions, planProposals, pruneProposals, describeRecentShopping, FESTIVALS, OCCASIONS, describeGiftMessage, GIFT_REPLY_HINT, giftImportance, giftMemoryText, planReturnGift, isShown } from '../../js/core/gift-ideas.js';
 
 // ───── 平台與連結 ─────
 test('平台：使用者要的 10 個都在，每個都是 https 的搜尋連結，關鍵字被正確編碼（不會破壞網址）', () => {
@@ -206,4 +206,60 @@ test('給 AI 的近況：只有最近 3 天、這個角色、已經決定的事�
 
 test('主動提議：還沒聊過的角色（沒有第一次聊天的時間）不會突然送禮', () => {
     assert.deepEqual(planProposals({ now: D(2026, 2, 13), characters: [{ id: 'new', frequency: 'many' }], userBirthday: '1990-02-15' }), []);
+});
+
+// ───── 你送給角色的禮物 ─────
+test('送禮：給 AI 的描述帶價值與「花錢買的」；沒價格就只有名稱；提示不誇張、不要立刻說回禮', () => {
+    assert.equal(describeGiftMessage({ name: '玫瑰花', price: 50 }), '[禮物：玫瑰花（價值 $50，是用戶花錢買來送你的）]');
+    assert.equal(describeGiftMessage({ name: '戒指', price: 1200 }), '[禮物：戒指（價值 $1,200，是用戶花錢買來送你的）]');
+    assert.equal(describeGiftMessage({}, '蛋糕'), '[禮物：蛋糕]');
+    assert.equal(describeGiftMessage({ name: '舊禮物' }), '[禮物：舊禮物]');
+    assert.match(GIFT_REPLY_HINT, /不要過度誇張/);
+    assert.match(GIFT_REPLY_HINT, /不要在這時說「我也要回禮」/);
+});
+
+test('送禮：記憶的重要度隨價格增加但有上下限；記憶文字帶角色名與禮物名', () => {
+    assert.equal(giftImportance(0), 0.35);
+    assert.ok(giftImportance(100) > giftImportance(10));
+    assert.equal(giftImportance(100000), 0.75);
+    assert.equal(giftImportance(undefined), 0.35);
+    assert.equal(giftMemoryText('小雪', '玫瑰花', 50), '用戶送了小雪禮物「玫瑰花」（價值 $50）。');
+    assert.equal(giftMemoryText('小雪', '信件', 0), '用戶送了小雪禮物「信件」。');
+});
+
+test('回禮：不是立刻（1～6 天後才出現）；機率隨價值提高；已經有一份在等就不再排；同樣的亂數結果一樣', () => {
+    const now = new Date(2026, 5, 1, 10).getTime(), DAYMS = 86400000;
+    const rate = price => { let n = 0; for (let k = 0; k < 400; k++) { let i = 0; const seq = [Math.random(), Math.random()]; if (planReturnGift({ now, characterId: 'c', giftName: 'x', price, rng: () => seq[i++ % 2] })) n++; } return n / 400; };
+    const lo = rate(10), mid = rate(50), hi = rate(200);
+    assert.ok(lo < mid && mid < hi, `機率應該遞增：${lo} ${mid} ${hi}`);
+    assert.ok(lo > 0.2 && lo < 0.45 && hi > 0.8, `${lo} ${hi}`);
+    const days = new Set();
+    for (let k = 0; k < 300; k++) {
+        const p = planReturnGift({ now, characterId: 'c', giftName: '玫瑰花', price: 300, rng: Math.random });
+        if (!p) continue;
+        const d = Math.round((p.dueAt - now) / DAYMS);
+        days.add(d);
+        assert.ok(d >= 1 && d <= 6, '回禮要過 1～6 天：' + d);
+        assert.equal(p.type, 'return');
+        assert.equal(p.showAt, p.dueAt);
+        assert.equal(isShown(p, now), false, '送完當下不會出現');
+        assert.equal(isShown(p, p.dueAt), true);
+        assert.match(p.extra, /用戶前幾天送了你「玫瑰花」/);
+    }
+    assert.ok(days.size >= 4, '天數有變化');
+    const waiting = [{ characterId: 'c', type: 'return', status: 'pending' }];
+    assert.equal(planReturnGift({ now, characterId: 'c', giftName: 'x', price: 500, existing: waiting, rng: () => 0 }), null);
+    assert.ok(planReturnGift({ now, characterId: 'other', giftName: 'x', price: 500, existing: waiting, rng: () => 0 }), '別的角色不受影響');
+    assert.ok(planReturnGift({ now, characterId: 'c', giftName: 'x', price: 500, existing: [{ characterId: 'c', type: 'return', status: 'resolved' }], rng: () => 0 }), '之前的處理完了就可以再排');
+    const seq = () => { let i = 0; const v = [0.1, 0.5]; return () => v[i++ % 2]; };
+    assert.deepEqual(planReturnGift({ now, characterId: 'c', giftName: 'x', price: 100, rng: seq() }), planReturnGift({ now, characterId: 'c', giftName: 'x', price: 100, rng: seq() }));
+});
+
+test('提議何時顯示：重要日子建立就看得到；回禮到時間才出現；處理過的不顯示', () => {
+    const now = Date.now();
+    assert.equal(isShown({ status: 'pending', showAt: now - 1 }, now), true);
+    assert.equal(isShown({ status: 'ready', showAt: now }, now), true);
+    assert.equal(isShown({ status: 'pending', showAt: now + 1000 }, now), false);
+    assert.equal(isShown({ status: 'resolved', showAt: 0 }, now), false);
+    assert.equal(isShown({ status: 'pending', dueAt: now - 5 }, now), true, '舊資料沒有 showAt 就看 dueAt');
 });

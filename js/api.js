@@ -9,7 +9,7 @@ import { loadActivityContext } from './core/activity-context.js';
 import { MEMORY_SOURCES } from './core/memory-sources.js';
 import { buildRealWorldContext } from './core/real-world-context.js';
 import { getDislikePrompt } from './core/dislikes.js';
-import { describeRecentShopping } from './core/gift-ideas.js';
+import { describeRecentShopping, describeGiftMessage, GIFT_REPLY_HINT } from './core/gift-ideas.js';
 import { PeriodCalculator } from './core/period-calculator.js';
 import { createErrorModal } from './components.js';
 import { mcpManager } from './core/mcp-client.js';
@@ -26,7 +26,7 @@ export function describeMessageForAI(m) {
         case 'sticker': return `[貼圖：${meta.name || m.content}]`;
         case 'image': return `[圖片：${m.content || '一張圖片'}]`;
         case 'card': return `[卡片：${meta.title || m.content}${meta.desc ? '，' + meta.desc : ''}]`;
-        case 'gift': return `[禮物：${meta.name || m.content}]`;
+        case 'gift': return describeGiftMessage(meta, m.content);
         case 'transfer': return `[轉帳：$${Number(meta.amount || 0).toLocaleString()}${meta.note ? '，備註：' + meta.note : ''}]`;
         case 'icon': return `[圖示：${meta.name || m.content}]`;
         case 'video': return `[影片：${meta.name || m.content}]`;
@@ -251,6 +251,8 @@ const APIClient = {
             role: 'system',
             content: `[${entry.name}]\n${entry.content}`
         }));
+        // 用戶剛送了禮物的那一輪：提醒要自然反應（不誇張、不立刻回禮）
+        if (lastStored?.type === 'gift' && lastStored.role === 'user') backMessages.push({ role: 'system', content: GIFT_REPLY_HINT });
         // 最近在購物 App 的事（收下、真的買了、不需要的禮物）：讓角色可以自然地帶到
         if (characterData?.id) {
             const shopText = describeRecentShopping(await SettingsDB.get('shop_records'), characterData.id);

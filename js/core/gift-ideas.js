@@ -160,14 +160,14 @@ export function planProposals({ now = new Date(), characters = [], userBirthday 
             if (!allowed.has(o.type) || o.diff < -1) continue; // 過了兩天以上就不補了
             const id = `${c.id}:${o.key}`;
             if (have.has(id) || added >= 2) continue;
-            out.push({ id, characterId: c.id, key: o.key, type: o.type, occasion: o.occasion, label: o.label, dueAt: o.date, createdAt: now.getTime(), status: 'pending', ideas: null });
+            out.push({ id, characterId: c.id, key: o.key, type: o.type, occasion: o.occasion, label: o.label, dueAt: o.date, showAt: now.getTime(), createdAt: now.getTime(), status: 'pending', ideas: null });
             have.add(id); added++;
         }
         if (CARE_PERCENT[freq] && added < 2) {
             const key = `care-${isoWeekKey(now)}`, id = `${c.id}:${key}`;
             const lastCare = existing.filter(p => p.characterId === c.id && p.type === 'care').reduce((m, p) => Math.max(m, p.createdAt || 0), 0);
             if (!have.has(id) && now.getTime() - lastCare > 10 * DAY && hashString(id) % 100 < CARE_PERCENT[freq]) {
-                out.push({ id, characterId: c.id, key, type: 'care', occasion: 'care', label: '想送你一份心意', dueAt: startOfDay(now), createdAt: now.getTime(), status: 'pending', ideas: null });
+                out.push({ id, characterId: c.id, key, type: 'care', occasion: 'care', label: '想送你一份心意', dueAt: startOfDay(now), showAt: now.getTime(), createdAt: now.getTime(), status: 'pending', ideas: null });
                 have.add(id);
             }
         }
@@ -194,4 +194,39 @@ export function describeRecentShopping(records, characterId, now = Date.now()) {
     }).filter(Boolean);
     if (!lines.length) return '';
     return ['# 最近在購物 App 的事（背景資訊，自然帶到就好，不用特地提起）', ...lines].join('\n');
+}
+
+// 還沒處理、而且已經到時間的提議（重要日子：建立就看得到；回禮：要等到過幾天才出現）
+export const isShown = (p, now = Date.now()) => ['pending', 'ready'].includes(p.status) && (p.showAt ?? p.dueAt ?? 0) <= now;
+
+// ───── 你送給角色的禮物（虛擬禮物）─────
+// 送禮是一種互相往來的行為：角色會有反應、存成記憶，之後可能回禮，但不會增加好感度
+export function describeGiftMessage(meta = {}, content = '') {
+    const name = meta.name || content || '禮物';
+    const price = Number(meta.price);
+    return price > 0 ? `[禮物：${name}（價值 $${price.toLocaleString()}，是用戶花錢買來送你的）]` : `[禮物：${name}]`;
+}
+
+// 用戶剛送禮物的那一輪，附在提示詞最後的提醒（只用一次）
+export const GIFT_REPLY_HINT = '用戶剛剛送了你一份禮物。依你的個性自然地反應就好：不要過度誇張、不要每次都用同樣的句型、不必逐項感謝；也不要在這時說「我也要回禮」——要回禮的話，之後自然會找機會。';
+
+// 記憶的重要度：價格越高、越用心越重要（0.35～0.75）
+export const giftImportance = price => Math.min(0.75, 0.35 + Math.max(0, Number(price) || 0) / 600);
+
+export function giftMemoryText(charName, giftName, price) {
+    return `用戶送了${charName}禮物「${giftName}」${price > 0 ? `（價值 $${Number(price).toLocaleString()}）` : ''}。`;
+}
+
+// 回禮：不是立刻，而是過 1～6 天，機率隨禮物價值提高（$10 約 33%、$50 約 47%、$200 約 90%）；
+// 同一個角色已經有一份等著的回禮時不再排。回傳要新增的提議，或 null
+export function planReturnGift({ now = Date.now(), characterId, giftName, price = 0, existing = [], rng = Math.random }) {
+    if (existing.some(p => p.characterId === characterId && p.type === 'return' && ['pending', 'ready'].includes(p.status))) return null;
+    const chance = Math.min(0.9, 0.3 + Math.max(0, Number(price) || 0) / 300);
+    if (rng() >= chance) return null;
+    const days = 1 + Math.floor(rng() * 6);
+    const dueAt = now + days * DAY;
+    return {
+        id: `${characterId}:return-${now.toString(36)}`, characterId, key: `return-${now}`, type: 'return', occasion: 'return', label: '回禮',
+        dueAt, showAt: dueAt, createdAt: now, status: 'pending', ideas: null, extra: `用戶前幾天送了你「${clip(giftName, 20)}」，你想回一份心意（不用比對方的貴，重點是心意）。`
+    };
 }
