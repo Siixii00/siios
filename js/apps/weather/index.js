@@ -417,6 +417,7 @@ async function refreshWeather(locationName, container) {
         const weatherData = await fetchWeatherData(place.lat, place.lon, place.timezone || 'Asia/Taipei');
         const payload = { placeName: place.name, data: weatherData };
         await cacheWeatherData(locationName, payload);
+        import('../../core/activity-memory.js').then(m => m.rememberActivity({ sourceApp: 'weather', content: `用戶查看了${payload.placeName}的天氣（目前 ${payload.data?.current?.temperature_2m ?? '--'}°C）`, importance: 0.2, dedupeMs: 6 * 60 * 60 * 1000 })).catch(() => {});
         renderCurrent(payload.placeName, payload.data, container);
         renderDailyForecast(payload.data, container);
         renderWeeklyForecast(payload.data, container);

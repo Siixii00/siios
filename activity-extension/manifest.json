@@ -5,10 +5,12 @@
   "manifest_version": 3,
   "permissions": [
     "storage",
+    "alarms",
     "activeTab",
     "tabs"
   ],
   "host_permissions": [
+    "https://api.github.com/*",
     "https://twitter.com/*",
     "https://x.com/*",
     "https://www.instagram.com/*",

@@ -1,6 +1,6 @@
 import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
-import { askForm } from '../../core/dialogs.js';
+import {askForm, askConfirm } from '../../core/dialogs.js';
 import { loadEvents, addEvent, updateEvent, deleteEvent, eventsOn, dateKey } from '../../core/calendar.js';
 
 const WEEKDAYS = ['日', '一', '二', '三', '四', '五', '六'];
@@ -74,7 +74,7 @@ async function renderTimetree() {
       edit.onclick = () => openForm(e);
       const del = createElement('button', 'event-btn danger', { textContent: '刪除' });
       del.onclick = async () => {
-        if (!confirm('刪除「' + e.title + '」？')) return;
+        if (!await askConfirm('刪除「' + e.title + '」？')) return;
         await deleteEvent(e.id);
         createToast('已刪除');
         draw();

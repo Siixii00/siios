@@ -1,6 +1,7 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { ActivityDB, ActivitySourcesDB, ActivitySettingsDB } from '../../db.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 const PLATFORMS = [
     { id: 'line', name: 'LINE', icon: 'chat', color: '#00B900' },
@@ -46,7 +47,7 @@ async function renderActivitySync() {
             {
                 icon: 'delete',
                 onClick: async () => {
-                    if (confirm('確定要清除所有活動記錄？')) {
+                    if (await askConfirm('確定要清除所有活動記錄？')) {
                         await ActivityDB.clear();
                         createToast('已清除所有活動記錄', 'success');
                         Router.navigate('/activity');

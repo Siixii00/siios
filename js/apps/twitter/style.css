@@ -40,7 +40,7 @@
     color: var(--twitter-accent);
 }
 
-.icon-btn {
+:where(body[data-app="twitter"]) .icon-btn {
     background: transparent;
     border: none;
     color: var(--twitter-text);
@@ -55,11 +55,11 @@
     transition: background 0.15s ease;
 }
 
-.icon-btn:hover {
+:where(body[data-app="twitter"]) .icon-btn:hover {
     background: rgba(29, 155, 240, 0.12);
 }
 
-.icon-btn:active {
+:where(body[data-app="twitter"]) .icon-btn:active {
     transform: scale(0.95);
 }
 
@@ -79,7 +79,7 @@
     display: none;
 }
 
-.card {
+:where(body[data-app="twitter"]) .card {
     background: var(--twitter-card);
     border: 1px solid var(--twitter-border);
     border-radius: 16px;
@@ -92,7 +92,7 @@
     gap: 6px;
 }
 
-.tab {
+:where(body[data-app="twitter"]) .tab {
     background: transparent;
     border: 1px solid var(--twitter-border);
     color: var(--twitter-text);
@@ -103,13 +103,13 @@
     transition: all 0.15s ease;
 }
 
-.tab.active {
+:where(body[data-app="twitter"]) .tab.active {
     background: rgba(29, 155, 240, 0.15);
     border-color: rgba(29, 155, 240, 0.5);
     color: #fff;
 }
 
-.feed {
+:where(body[data-app="twitter"]) .feed {
     display: flex;
     flex-direction: column;
     gap: 12px;
@@ -417,7 +417,7 @@
     color: var(--twitter-muted);
 }
 
-.primary-btn {
+:where(body[data-app="twitter"]) .primary-btn {
     background: var(--twitter-accent);
     color: #fff;
     border: none;
@@ -428,18 +428,18 @@
     transition: background 0.15s ease;
 }
 
-.primary-btn:hover:not(:disabled) {
+:where(body[data-app="twitter"]) .primary-btn:hover:not(:disabled) {
     background: var(--twitter-accent-strong);
 }
 
-.primary-btn:disabled {
+:where(body[data-app="twitter"]) .primary-btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
 
 .loading-state,
 .error-state,
-.empty-state {
+:where(body[data-app="twitter"]) .empty-state {
     text-align: center;
     color: var(--twitter-muted);
     padding: 40px 20px;
@@ -449,7 +449,7 @@
     margin-top: 12px;
 }
 
-.empty-state {
+:where(body[data-app="twitter"]) .empty-state {
     padding: 60px 20px;
 }
 
@@ -477,7 +477,7 @@
     gap: 12px;
 }
 
-.feed {
+:where(body[data-app="twitter"]) .feed {
     display: flex;
     flex-direction: column;
     gap: 12px;

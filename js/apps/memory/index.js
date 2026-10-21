@@ -1,6 +1,7 @@
 ﻿import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { MemoryDB, WikiRecordsDB, SettingsDB } from '../../db.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 const TYPE_TABS = ['全部', '動態', '永久', '情感', '計畫', '書信', '自我', '備份'];
 const TYPE_MAP = { 1: 'dynamic', 2: 'permanent', 3: 'feel', 4: 'plan', 5: 'letter', 6: 'i', 7: 'archive' };
@@ -84,6 +85,7 @@ async function renderMemoryList() {
             SettingsDB.set('memory_search', e.target.value);
         }
     });
+    searchInput.style.minWidth = '0'; // flex 子項預設不會縮到比內容小，沒設的話輸入框會把按鈕擠成直排的字
     searchBox.appendChild(searchInput);
     const searchBtn = createElement('button', 'px-3 py-1 bg-claude-primary text-white rounded text-sm', {
         textContent: '搜尋',
@@ -92,6 +94,7 @@ async function renderMemoryList() {
             Router.navigate('/memory');
         }
     });
+    searchBtn.style.cssText = 'white-space:nowrap;flex-shrink:0;margin-left:8px;';
     searchBox.appendChild(searchBtn);
     searchContainer.appendChild(searchBox);
     main.appendChild(searchContainer);
@@ -675,8 +678,8 @@ async function renderMemoryDetail(params) {
     
     const deleteBtn = createElement('button', 'bg-claude-danger text-white rounded-lg py-2.5 text-sm font-medium', {
         textContent: '刪除',
-        onClick: () => {
-            if (confirm('確定要刪除此記憶？此操作無法復原。')) {
+        onClick: async () => {
+            if (await askConfirm('確定要刪除此記憶？此操作無法復原。')) {
                 MemoryDB.delete(id);
                 createToast('記憶已刪除');
                 Router.navigate('/memory');

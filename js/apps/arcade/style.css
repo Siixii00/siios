@@ -10,7 +10,7 @@
   --rarity-3: #4080c0;
 }
 
-.arcade-app .page {
+:where(body[data-app="arcade"]) .arcade-app .page {
   background: var(--arcade-bg);
   min-height: calc(100vh - 96px);
 }
@@ -137,22 +137,22 @@
   gap: 4px;
 }
 
-.stat-label {
+:where(body[data-app="arcade"]) .stat-label {
   font-size: 12px;
   color: var(--arcade-muted);
 }
 
-.stat-value {
+:where(body[data-app="arcade"]) .stat-value {
   font-size: 20px;
   font-weight: 700;
   color: var(--arcade-text);
 }
 
-.stat-item.rarity-5 .stat-value {
+:where(body[data-app="arcade"]) .stat-item.rarity-5 .stat-value {
   color: var(--rarity-5);
 }
 
-.stat-item.rarity-4 .stat-value {
+:where(body[data-app="arcade"]) .stat-item.rarity-4 .stat-value {
   color: var(--rarity-4);
 }
 
@@ -168,7 +168,7 @@
   margin-bottom: 12px;
 }
 
-.history-list {
+:where(body[data-app="arcade"]) .history-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -176,7 +176,7 @@
   overflow-y: auto;
 }
 
-.history-item {
+:where(body[data-app="arcade"]) .history-item {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -184,17 +184,17 @@
   background: var(--arcade-bg);
 }
 
-.history-item.rarity-5 {
+:where(body[data-app="arcade"]) .history-item.rarity-5 {
   background: #383018;
   border-left: 3px solid var(--rarity-5);
 }
 
-.history-item.rarity-4 {
+:where(body[data-app="arcade"]) .history-item.rarity-4 {
   background: #302838;
   border-left: 3px solid var(--rarity-4);
 }
 
-.history-item.rarity-3 {
+:where(body[data-app="arcade"]) .history-item.rarity-3 {
   background: #182838;
   border-left: 3px solid var(--rarity-3);
 }
@@ -204,15 +204,15 @@
   font-weight: 700;
 }
 
-.history-item.rarity-5 .history-rarity {
+:where(body[data-app="arcade"]) .history-item.rarity-5 .history-rarity {
   color: var(--rarity-5);
 }
 
-.history-item.rarity-4 .history-rarity {
+:where(body[data-app="arcade"]) .history-item.rarity-4 .history-rarity {
   color: var(--rarity-4);
 }
 
-.history-item.rarity-3 .history-rarity {
+:where(body[data-app="arcade"]) .history-item.rarity-3 .history-rarity {
   color: var(--rarity-3);
 }
 
@@ -221,7 +221,7 @@
   color: var(--arcade-text);
 }
 
-.empty-history {
+:where(body[data-app="arcade"]) .empty-history {
   text-align: center;
   color: var(--arcade-muted);
   padding: 20px;
@@ -271,14 +271,14 @@
 
 /* 關卡選單（各遊戲共用） */
 .arcade-app { --lv-card: #303030; --lv-line: #484848; --lv-text: #f8f8f8; --lv-muted: #909090; }
-.lv-summary { margin: 0; color: var(--lv-muted); font-size: 13px; text-align: center; }
-.lv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); gap: 10px; width: 100%; max-width: 380px; }
-.lv-btn { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 4px; border: 2px solid var(--lv-line); background: var(--lv-card); color: var(--lv-text); cursor: pointer; border-radius: 12px; font: inherit; }
-.lv-btn strong { font-size: 20px; }
-.lv-btn .lv-stars { font-size: 12px; color: #f8b040; letter-spacing: 1px; }
-.lv-btn small { font-size: 10px; color: var(--lv-muted); min-height: 12px; }
-.lv-btn.done { border-color: #f8b040; }
-.lv-btn.locked { opacity: .4; cursor: default; }
+:where(body[data-app="arcade"]) .lv-summary { margin: 0; color: var(--lv-muted); font-size: 13px; text-align: center; }
+:where(body[data-app="arcade"]) .lv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(78px, 1fr)); gap: 10px; width: 100%; max-width: 380px; }
+:where(body[data-app="arcade"]) .lv-btn { display: flex; flex-direction: column; align-items: center; gap: 2px; padding: 10px 4px; border: 2px solid var(--lv-line); background: var(--lv-card); color: var(--lv-text); cursor: pointer; border-radius: 12px; font: inherit; }
+:where(body[data-app="arcade"]) .lv-btn strong { font-size: 20px; }
+:where(body[data-app="arcade"]) .lv-btn .lv-stars { font-size: 12px; color: #f8b040; letter-spacing: 1px; }
+:where(body[data-app="arcade"]) .lv-btn small { font-size: 10px; color: var(--lv-muted); min-height: 12px; }
+:where(body[data-app="arcade"]) .lv-btn.done { border-color: #f8b040; }
+:where(body[data-app="arcade"]) .lv-btn.locked { opacity: .4; cursor: default; }
 .lv-bar { display: flex; align-items: center; justify-content: space-between; width: 100%; max-width: 360px; }
 .lv-bar .ag-btn { padding: 8px 14px; }
 .arcade-app .lv-bar span { color: var(--arcade-text); font-weight: 700; }

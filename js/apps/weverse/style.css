@@ -30,7 +30,7 @@
     backdrop-filter: blur(14px);
 }
 
-.brand {
+:where(body[data-app="weverse"]) .brand {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -52,12 +52,12 @@
     letter-spacing: 0.2px;
 }
 
-.header-actions {
+:where(body[data-app="weverse"]) .header-actions {
     display: inline-flex;
     gap: 8px;
 }
 
-.icon-btn {
+:where(body[data-app="weverse"]) .icon-btn {
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -70,21 +70,21 @@
     cursor: pointer;
 }
 
-.icon-btn i {
+:where(body[data-app="weverse"]) .icon-btn i {
     color: var(--wv-text) !important;
     font-size: 14px;
 }
 
-.icon-btn:hover {
+:where(body[data-app="weverse"]) .icon-btn:hover {
     background: var(--wv-card);
     border-color: var(--wv-accent);
 }
 
-.icon-btn:hover i {
+:where(body[data-app="weverse"]) .icon-btn:hover i {
     color: var(--wv-accent) !important;
 }
 
-.icon-btn:active {
+:where(body[data-app="weverse"]) .icon-btn:active {
     opacity: 0.8;
 }
 
@@ -101,7 +101,7 @@
 
 .wv-main::-webkit-scrollbar { display: none; }
 
-.card {
+:where(body[data-app="weverse"]) .card {
     border: 1px solid var(--wv-border);
     background: var(--wv-card);
     border-radius: 14px;
@@ -109,7 +109,7 @@
     box-shadow: var(--wv-shadow);
 }
 
-.card h2 { font-size: 15px; margin-bottom: 10px; color: var(--wv-text); }
+:where(body[data-app="weverse"]) .card h2 { font-size: 15px; margin-bottom: 10px; color: var(--wv-text); }
 
 .group-list { display: flex; flex-wrap: wrap; gap: 8px; }
 
@@ -236,7 +236,7 @@
     text-align: center;
 }
 
-.feed {
+:where(body[data-app="weverse"]) .feed {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -245,9 +245,9 @@
     margin-bottom: 10px;
 }
 
-.feed::-webkit-scrollbar { display: none; }
+:where(body[data-app="weverse"]) .feed::-webkit-scrollbar { display: none; }
 
-.post {
+:where(body[data-app="weverse"]) .post {
     border: 1px solid var(--wv-border);
     border-radius: 12px;
     background: var(--wv-card);
@@ -267,7 +267,7 @@
 
 .post-text { color: var(--wv-text); }
 
-.post-actions {
+:where(body[data-app="weverse"]) .post-actions {
     margin-top: 8px;
     display: flex;
     gap: 10px;
@@ -496,7 +496,7 @@
 .create-group-modal .modal-actions { display: flex; gap: 10px; margin-top: 16px; }
 .create-group-modal .modal-actions button { flex: 1; }
 
-.primary-btn { width: 100%; border: none; border-radius: 10px; height: 38px; background: var(--wv-accent); color: var(--wv-surface); font-weight: 700; cursor: pointer; }
+:where(body[data-app="weverse"]) .primary-btn { width: 100%; border: none; border-radius: 10px; height: 38px; background: var(--wv-accent); color: var(--wv-surface); font-weight: 700; cursor: pointer; }
 .secondary-btn { border: 1px solid var(--wv-border); border-radius: 10px; height: 38px; background: var(--wv-surface); color: var(--wv-text); font-weight: 700; padding: 0 14px; cursor: pointer; }
 
 .settings-header { display: grid; grid-template-columns: 36px 1fr; align-items: center; gap: 10px; padding: 48px 14px 12px; border-bottom: 1px solid var(--wv-border); background: var(--wv-surface); }

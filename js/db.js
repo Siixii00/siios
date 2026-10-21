@@ -514,7 +514,7 @@ const MemoryDB = {
         // 各 app 寫入記憶時附帶的歸屬資訊（角色、來源 app、劇場、是否虛構）。
         // 檢索時的角色／劇場／來源／虛構篩選都依賴這些欄位，不能丟掉；只在有提供時才寫入，舊格式的記憶不受影響
         const attribution = ['character_id', 'characterId', 'user_id', 'source_app', 'source_type', 'source_subtype',
-            'memory_level', 'meta_content', 'full_content', 'theater_ids', 'is_fiction', 'fiction_context'];
+            'memory_level', 'meta_content', 'full_content', 'theater_ids', 'is_fiction', 'fiction_context', 'shared'];
         for (const key of attribution) {
             if (data[key] !== undefined && data[key] !== null && data[key] !== '') memory[key] = data[key];
         }
@@ -756,6 +756,12 @@ const SettingsDB = {
     async set(key, value) {
         const database = await initDB();
         await database.put('settings', { key, value });
+    },
+
+    // 跨裝置同步停用時要用（原本呼叫了這個不存在的方法，停用到一半就丟錯）
+    async delete(key) {
+        const database = await initDB();
+        await database.delete('settings', key);
     }
 };
 
@@ -1179,13 +1185,14 @@ const HealthDB = {
             id,
             user_id: data.user_id,
             type: 'period_settings',
-            default_cycle_length: data.default_cycle_length || 28,
-            default_period_length: data.default_period_length || 5,
-            reminder_days_before: data.reminder_days_before || 3,
-            reminder_in_chat: data.reminder_in_chat || true,
-            reminder_notification: data.reminder_notification || false,
+            // 沒給的欄位沿用原本的設定（原本寫成 "|| true"，讓提醒永遠無法關閉，且預測更新會把其他設定重設回預設值）
+            default_cycle_length: data.default_cycle_length ?? existing?.default_cycle_length ?? 28,
+            default_period_length: data.default_period_length ?? existing?.default_period_length ?? 5,
+            reminder_days_before: data.reminder_days_before ?? existing?.reminder_days_before ?? 3,
+            reminder_in_chat: data.reminder_in_chat ?? existing?.reminder_in_chat ?? true,
+            reminder_notification: data.reminder_notification ?? existing?.reminder_notification ?? false,
             last_period_date: data.last_period_date || existing?.last_period_date || null,
-            predicted_next_date: data.predicted_next_date || null,
+            predicted_next_date: data.predicted_next_date ?? existing?.predicted_next_date ?? null,
             created_at: existing?.created_at || now,
             updated_at: now
         };
@@ -1345,7 +1352,8 @@ const ActivityDB = {
 
     async create(data = {}) {
         const database = await initDB();
-        const id = 'act_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        // 從其他裝置／瀏覽器擴充功能同步來的活動帶有自己的 id，要保留，不然每次同步都會多出一份重複的
+        const id = data.id || ('act_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9));
         const activity = {
             id,
             user_id: data.user_id || null,

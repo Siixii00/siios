@@ -5,6 +5,7 @@ import { loadWorldInfoContext } from './core/world-info-loader.js';
 import { generateRPPrompt, buildResponseModePrompt, getResponseMode, withResponseReminder } from './constants/rp-system-prompt.js';
 import { stripReasoning } from './core/reasoning-filter.js';
 import { buildMemoryFilters } from './core/memory-prefs.js';
+import { loadActivityContext } from './core/activity-context.js';
 import { MEMORY_SOURCES } from './core/memory-sources.js';
 import { buildRealWorldContext } from './core/real-world-context.js';
 import { PeriodCalculator } from './core/period-calculator.js';
@@ -102,6 +103,9 @@ const APIClient = {
             }
         }
         
+        const activityContext = await loadActivityContext();
+        if (activityContext) systemMessages.push({ role: 'system', content: activityContext });
+
         if (characterData?.ziwei_cache_id) {
             try {
                 const ziweiCache = await ZiweiCacheDB.getById(characterData.ziwei_cache_id);

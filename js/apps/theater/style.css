@@ -6,7 +6,7 @@
   --theater-accent: #e50914;
 }
 
-.theater-app .page {
+:where(body[data-app="theater"]) .theater-app .page {
   background: var(--theater-bg);
   min-height: calc(100vh - 96px);
   padding: 16px;
@@ -55,7 +55,7 @@
   color: var(--theater-text);
 }
 
-.add-btn {
+:where(body[data-app="theater"]) .add-btn {
   position: fixed;
   bottom: 100px;
   right: 20px;
@@ -73,7 +73,7 @@
   box-shadow: 0 4px 20px rgba(229, 9, 20, 0.4);
 }
 
-.add-btn:hover {
+:where(body[data-app="theater"]) .add-btn:hover {
   background: #c50812;
 }
 
@@ -139,7 +139,7 @@
   padding: 16px;
 }
 
-.empty-state {
+:where(body[data-app="theater"]) .empty-state {
   grid-column: 1 / -1;
   text-align: center;
   padding: 60px 20px;

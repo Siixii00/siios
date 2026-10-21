@@ -1,8 +1,11 @@
-﻿import { CharactersDB, ZiweiCacheDB } from '../db.js';
+﻿import { CharactersDB, ZiweiCacheDB, SettingsDB } from '../db.js';
+
+// 預設使用公用的紫微斗數服務（只做排盤計算，不存任何資料）；想用自己部署的，到「設定 → MCP 工具整合」填網址
+export const DEFAULT_ZIWEI_ENDPOINT = 'https://ziwei-mcp-server.yaninlin.workers.dev';
 
 class ZiweiMCPClient {
     constructor() {
-        this.endpoint = 'https://ziwei-mcp-server.yaninlin.workers.dev';
+        this.endpoint = DEFAULT_ZIWEI_ENDPOINT;
         this.timeout = 10000;
     }
     
@@ -21,6 +24,9 @@ class ZiweiMCPClient {
             throw new Error('缺少性別資訊');
         }
         
+        const custom = String((await SettingsDB.get('ziwei_endpoint')) || '').trim().replace(/\/+$/, '');
+        if (custom) this.endpoint = custom;
+
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), this.timeout);
         

@@ -1,5 +1,5 @@
 import Router from '../../router.js';
-import { createElement } from '../../components.js';
+import { createElement, createToast } from '../../components.js';
 import { SettingsDB, WikiRecordsDB, ZiweiCacheDB, CharactersDB } from '../../db.js';
 import { compressImage } from '../../utils/image.js';
 import { escapeHtml, stripHtml, debounce } from '../../utils/html.js';
@@ -9,6 +9,7 @@ import { parseLinks, getBacklinks, renderLinksInContent, showLinkPicker, updateL
 import { createBlock, createNotePage, createTopicPage } from './templates.js';
 import { HistoryManager } from './history-manager.js';
 import { SaveManager } from './operation-queue.js';
+import { askConfirm, askForm } from '../../core/dialogs.js';
 
 const BLOCK_TYPES = [
   { type: 'text', label: 'Text', icon: 'T', desc: 'Plain text' },
@@ -1033,7 +1034,8 @@ function showContextMenu(container, recordId, x, y) {
             const action = item.dataset.ctx;
 
             if (action === 'rename') {
-                const newName = prompt('頁面名稱', record.title);
+                const form = await askForm({ title: '重新命名', fields: [{ key: 'name', label: '頁面名稱', value: record.title, required: true }] });
+                const newName = form ? form.name : null;
                 if (newName !== null) {
                     saveStateForUndo(record, '重新命名');
                     record.title = newName;
@@ -1052,7 +1054,7 @@ function showContextMenu(container, recordId, x, y) {
                 renderSidebar(container);
                 navigateToPage(container, child.id);
             } else if (action === 'delete') {
-                if (confirm('確定刪除此頁面？')) {
+                if (await askConfirm('確定刪除此頁面？')) {
                     await deletePage(recordId);
                     renderSidebar(container);
                     renderEditor(container);
@@ -1166,7 +1168,7 @@ async function handleSync(container) {
         if (activePageId) renderEditor(container);
     } catch (err) {
         console.error('[Wiki] Sync failed:', err);
-        alert('同步失敗: ' + err.message);
+        createToast('同步失敗: ' + err.message);
     } finally {
         isSyncing = false;
         if (syncBtn) {
@@ -1243,7 +1245,7 @@ function openSettingsModal(container) {
         notionConfig.databaseId = extractDatabaseId(databaseInput.value.trim());
         notionConfig.mcpUrl = mcpInput.value.trim();
         await SettingsDB.set('wiki_notion_config', notionConfig);
-        alert('設定已儲存');
+        createToast('設定已儲存');
         modal.remove();
         openSettingsModal(container);
     };
@@ -1252,16 +1254,16 @@ function openSettingsModal(container) {
     if (syncBtn) {
         syncBtn.onclick = async () => {
             if (!notionConfig.token || !notionConfig.databaseId) {
-                alert('請先設定 Notion Token 和 Database ID');
+                createToast('請先設定 Notion Token 和 Database ID');
                 return;
             }
             syncBtn.textContent = '同步中...';
             syncBtn.disabled = true;
             try {
                 await syncToNotion(container);
-                alert('同步完成');
+                createToast('同步完成');
             } catch (err) {
-                alert('同步失敗: ' + err.message);
+                createToast('同步失敗: ' + err.message);
             }
             syncBtn.textContent = '同步到 Notion';
             syncBtn.disabled = false;
@@ -1272,16 +1274,16 @@ function openSettingsModal(container) {
     if (pullBtn) {
         pullBtn.onclick = async () => {
             if (!notionConfig.token || !notionConfig.databaseId) {
-                alert('請先設定 Notion Token 和 Database ID');
+                createToast('請先設定 Notion Token 和 Database ID');
                 return;
             }
             pullBtn.textContent = '拉取中...';
             pullBtn.disabled = true;
             try {
                 await pullFromNotion(container);
-                alert('拉取完成');
+                createToast('拉取完成');
             } catch (err) {
-                alert('拉取失敗: ' + err.message);
+                createToast('拉取失敗: ' + err.message);
             }
             pullBtn.textContent = '從 Notion 拉取';
             pullBtn.disabled = false;
@@ -1292,10 +1294,10 @@ function openSettingsModal(container) {
         notionConfig.mcpUrl = mcpInput.value.trim();
         await SettingsDB.set('wiki_notion_config', notionConfig);
         if (!notionConfig.mcpUrl) {
-            alert('MCP URL 已清除');
+            createToast('MCP URL 已清除');
             return;
         }
-        alert('MCP 設定已儲存。未來將支援直接透過 MCP 與 Notion 互動。');
+        createToast('MCP 設定已儲存。未來將支援直接透過 MCP 與 Notion 互動。');
     };
 
     modal.querySelector('.wiki-settings-close').onclick = () => modal.remove();
@@ -1640,7 +1642,7 @@ function openFabMenu(container) {
             } else if (action === 'sync') {
                 await handleSync(container);
             } else if (action === 'delete' && activePageId) {
-                if (confirm('確定刪除此頁面？')) {
+                if (await askConfirm('確定刪除此頁面？')) {
                     await deletePage(activePageId);
                     renderSidebar(container);
                     renderEditor(container);

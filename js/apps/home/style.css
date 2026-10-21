@@ -1,5 +1,5 @@
 .home-app { position: relative; --home-bg: #fce4ec; --home-card: #fff; --home-text: #880e4f; --home-muted: #ad1457; --home-accent: #ec407a; }
-.home-app .page { background: var(--home-bg); min-height: calc(100vh - 96px); padding: 16px; }
+:where(body[data-app="stay"]) .home-app .page { background: var(--home-bg); min-height: calc(100vh - 96px); padding: 16px; }
 .energy-bar { background: var(--home-card); border-radius: 12px; padding: 16px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
 .energy-label { font-size: 14px; font-weight: 600; color: var(--home-text); }
 .energy-track { flex: 1; height: 12px; background: #f8bbd9; border-radius: 6px; overflow: hidden; }
@@ -13,7 +13,7 @@
 .home-history { background: var(--home-card); border-radius: 12px; padding: 14px; }
 .home-history h3 { font-size: 14px; color: var(--home-muted); margin: 0 0 8px; }
 .history-row { padding: 6px 0; font-size: 13px; color: var(--home-text); border-bottom: 1px solid #f8bbd9; }
-.empty-history { color: var(--home-muted); font-size: 13px; padding: 8px 0; }
+:where(body[data-app="stay"]) .empty-history { color: var(--home-muted); font-size: 13px; padding: 8px 0; }
 
 /* 宅家擴充：房間、分頁、朋友、任務、面板 */
 .h-wallet { font-size: 13px; font-weight: 700; color: var(--home-text); }
@@ -26,7 +26,7 @@
 .slot { aspect-ratio: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; border: 2px dashed #f4a9c0; border-radius: 14px; background: rgba(255,255,255,.7); cursor: pointer; padding: 0; }
 .slot:not(.empty) { border-style: solid; border-color: #f8bbd9; background: #fff; }
 .slot-icon { font-size: 30px; } .slot-name { font-size: 11px; color: var(--home-text); }
-.hint { font-size: 12px; color: #a0506f; margin: 10px 0 0; }
+:where(body[data-app="stay"]) .hint { font-size: 12px; color: #a0506f; margin: 10px 0 0; }
 .activity-btn.locked { opacity: .5; } .activity-btn:disabled { opacity: .5; cursor: default; }
 .activity-btn small { font-size: 10px; color: #a0506f; }
 .visit-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; background: var(--home-card); border-radius: 12px; padding: 12px 14px; margin-bottom: 8px; }
@@ -38,4 +38,4 @@
 .h-sheet .shop-row { display: flex; align-items: center; justify-content: space-between; width: 100%; background: #fff; border: none; border-radius: 12px; padding: 12px; margin-bottom: 8px; cursor: pointer; font: inherit; color: var(--home-text); text-align: left; }
 .h-sheet .shop-row > span { display: flex; flex-direction: column; } .h-sheet .shop-row small { font-size: 11px; color: #a0506f; } .h-sheet .shop-row b { color: #d81b60; } .h-sheet .shop-row:disabled { opacity: .5; }
 .h-wide { width: 100%; padding: 12px; border: none; border-radius: 100px; background: #f8bbd9; color: var(--home-text); font-weight: 800; cursor: pointer; margin-top: 6px; }
-.story { line-height: 1.7; font-size: 14px; color: var(--home-text); white-space: pre-wrap; }
+:where(body[data-app="stay"]) .story { line-height: 1.7; font-size: 14px; color: var(--home-text); white-space: pre-wrap; }

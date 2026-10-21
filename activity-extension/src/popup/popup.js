@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       statusTitle.textContent = '已啟用';
       statusDesc.textContent = '活動正在記錄中';
       statusText.textContent = '活動同步已啟用';
-      syncBtn.disabled = !settings.pwa_url;
+      syncBtn.disabled = !(settings.github_token && settings.gist_id && settings.encryption_key);
     } else {
       toggle.classList.remove('active');
       statusCard.classList.remove('enabled');

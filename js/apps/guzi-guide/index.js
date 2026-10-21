@@ -1,7 +1,7 @@
 import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
-import { askForm } from '../../core/dialogs.js';
+import {askForm, askConfirm } from '../../core/dialogs.js';
 
 const CATEGORIES = ['徽章', '立牌', '海報', '吊卡', '其他'];
 const ITEMS_KEY = 'guzi_items';
@@ -50,7 +50,7 @@ async function renderGuziGuide() {
     row.append(createElement('span', 'item-name', { textContent: item.name }), createElement('span', 'item-cat', { textContent: item.category }));
     const del = createElement('button', 'item-del', { textContent: '刪除', 'aria-label': '刪除：' + item.name });
     del.onclick = async () => {
-      if (!confirm('刪除「' + item.name + '」？')) return;
+      if (!await askConfirm('刪除「' + item.name + '」？')) return;
       await saveItems((await loadItems()).filter(x => x.id !== item.id));
       createToast('已刪除');
       Router.handleRoute();
@@ -72,6 +72,7 @@ async function renderGuziGuide() {
     const all = await loadItems();
     all.push({ name: form.name, category: form.category, id: Date.now(), addedAt: new Date().toISOString() });
     await saveItems(all);
+    import('../../core/activity-memory.js').then(m => m.rememberActivity({ sourceApp: 'guzi-guide', content: `用戶在谷子圖鑑新增了收藏「${form.name}」（${form.category}）`, importance: 0.4 })).catch(() => {});
     createToast('已新增「' + form.name + '」');
     Router.handleRoute();
   };

@@ -1,6 +1,7 @@
 ﻿import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { ActivitySettingsDB } from '../../db.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 const PRIVACY_LEVELS = [
     { 
@@ -265,7 +266,7 @@ async function renderActivityPrivacySettings() {
         platformHeader.appendChild(leftInfo);
         
         const toggle = createElement('label', 'relative inline-flex items-center cursor-pointer');
-        const platformEnabled = savedSettings.platforms[platform.id]?.enabled ?? true;
+        const platformEnabled = savedSettings.platforms?.[platform.id]?.enabled ?? true; // 活動 App 存的設定可能沒有 platforms
         toggle.innerHTML = `
             <input type="checkbox" class="sr-only peer platform-toggle" data-platform="${platform.id}" ${platformEnabled ? 'checked' : ''}>
             <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-green-500"></div>
@@ -312,7 +313,7 @@ async function renderActivityPrivacySettings() {
     const deleteBtn = createElement('button', 'w-full text-red-600 font-semibold text-sm');
     deleteBtn.textContent = '清除所有活動記錄';
     deleteBtn.onclick = async () => {
-        if (confirm('確定要清除所有活動記錄？此操作無法復原。')) {
+        if (await askConfirm('確定要清除所有活動記錄？此操作無法復原。')) {
             const { ActivityDB } = await import('../../db.js');
             await ActivityDB.clear();
             createToast('已清除所有活動記錄', 'success');

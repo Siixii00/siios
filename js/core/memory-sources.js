@@ -20,6 +20,20 @@ export const MEMORY_SOURCES = [
     { id: 'bilibili', name: 'Bilibili', icon: 'smart_display' },
     { id: 'twitch', name: 'Twitch', icon: 'videocam' },
     { id: 'twitter', name: 'Twitter', icon: 'tag' },
+    { id: 'album', name: '相簿', icon: 'photo_library' },
+    { id: 'exchange-diary', name: '交換日記', icon: 'menu_book' },
+    { id: 'phone', name: '電話', icon: 'call' },
+    { id: 'timetree', name: '時間樹', icon: 'calendar_month' },
+    { id: 'taobao', name: '購物', icon: 'shopping_bag' },
+    { id: 'delivery', name: '外送', icon: 'delivery_dining' },
+    { id: 'gift-shop', name: '禮物商店', icon: 'redeem' },
+    { id: 'emoji-shop', name: '貼圖商店', icon: 'emoji_emotions' },
+    { id: 'theme-shop', name: '主題商店', icon: 'palette' },
+    { id: 'arcade', name: '街機廳', icon: 'sports_esports' },
+    { id: 'match-3', name: '消消樂', icon: 'extension' },
+    { id: 'smart-painter', name: '照相館', icon: 'photo_camera' },
+    { id: 'daily-recipe', name: '每日食譜', icon: 'restaurant' },
+    { id: 'guzi-guide', name: '谷子圖鑑', icon: 'collections_bookmark' },
     { id: 'drift-bottle', name: '漂流瓶', icon: 'sailing' },
     { id: 'health', name: '健康', icon: 'monitor_heart' },
     { id: 'mcp', name: '工具（MCP）', icon: 'extension' },
@@ -46,3 +60,13 @@ export function resolveMemoryPrefs(saved) {
     }
     return prefs;
 }
+
+// 不同的 App 可能用不同的分類名稱，統一對應到記憶來源 id
+export const SPEND_CATEGORY_TO_SOURCE = {
+    delivery: 'delivery',
+    gift: 'gift-shop',
+    theme: 'theme-shop',
+    sticker: 'emoji-shop',
+    shopping: 'taobao',
+    arcade: 'arcade'
+};

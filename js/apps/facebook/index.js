@@ -4,7 +4,7 @@ import { SettingsDB, CharactersDB, UsersDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
-import { askForm } from '../../core/dialogs.js';
+import {askForm, askConfirm } from '../../core/dialogs.js';
 
 const POSTS_KEY = 'facebook_posts';
 const PREFS_KEY = 'facebook_prefs';
@@ -327,7 +327,7 @@ async function renderFacebook() {
             return apply(list => { const p = list.find(x => x.id === postId); if (p) p.userReaction = (action === 'like' && p.userReaction) || p.userReaction === kind ? null : kind; });
         }
         if (action === 'del-post') {
-            if (!confirm('刪除這則貼文？')) return;
+            if (!await askConfirm('刪除這則貼文？')) return;
             delete ctx.images[postId];
             SettingsDB.set(IMG_PREFIX + postId, null); // 一併釋放圖片
             return apply(list => { const i = list.findIndex(x => x.id === postId); if (i >= 0) list.splice(i, 1); });

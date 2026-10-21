@@ -8,7 +8,9 @@ const PLATFORMS = [
 ];
 
 document.addEventListener('DOMContentLoaded', async () => {
-  const pwaUrlInput = document.getElementById('pwa-url');
+  const tokenInput = document.getElementById('github-token');
+  const gistInput = document.getElementById('gist-id');
+  const keyInput = document.getElementById('encryption-key');
   const syncIntervalSelect = document.getElementById('sync-interval');
   const privacyLevelSelect = document.getElementById('privacy-level');
   const retentionDaysSelect = document.getElementById('retention-days');
@@ -52,9 +54,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   });
 
   // Populate current settings
-  if (settings.pwa_url) {
-    pwaUrlInput.value = settings.pwa_url;
-  }
+  if (settings.github_token) tokenInput.value = settings.github_token;
+  if (settings.gist_id) gistInput.value = settings.gist_id;
+  if (settings.encryption_key) keyInput.value = settings.encryption_key;
   if (settings.sync_interval) {
     syncIntervalSelect.value = settings.sync_interval;
   }
@@ -67,10 +69,12 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Save button
   saveBtn.addEventListener('click', async () => {
-    const pwaUrl = pwaUrlInput.value.trim();
+    const githubToken = tokenInput.value.trim();
+    const gistId = gistInput.value.trim().replace(/^.*\//, ''); // 允許貼整個 gist 網址
+    const encryptionKey = keyInput.value.trim();
 
-    if (!pwaUrl) {
-      alert('請輸入 PWA URL');
+    if (!githubToken || !gistId || !encryptionKey) {
+      alert('請填寫 GitHub Token、Gist ID 與加密金鑰');
       return;
     }
 
@@ -83,7 +87,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const newSettings = {
       enabled: settings.enabled || false,
-      pwa_url: pwaUrl,
+      github_token: githubToken,
+      gist_id: gistId,
+      encryption_key: encryptionKey,
       sync_interval: parseInt(syncIntervalSelect.value),
       privacy_level: privacyLevelSelect.value,
       retention_days: parseInt(retentionDaysSelect.value),

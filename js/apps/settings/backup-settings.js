@@ -2,6 +2,7 @@ import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 import { backupManager } from '../../core/backup-manager.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 const GOOGLE_CLIENT_ID = 'YOUR_GOOGLE_CLIENT_ID.apps.googleusercontent.com';
 
@@ -176,7 +177,7 @@ async function renderBackupSettings() {
             </div>
         `;
         githubRestoreBtn.onclick = async () => {
-            if (!confirm('確定要從 GitHub 還原嗎？現有資料將會合併。')) return;
+            if (!await askConfirm('確定要從 GitHub 還原嗎？現有資料將會合併。')) return;
             createToast('正在從 GitHub 下載...', 'info');
             try {
                 const result = await backupManager.pullFromGitHub();
@@ -263,7 +264,7 @@ async function renderBackupSettings() {
             </div>
         `;
         googleRestoreBtn.onclick = async () => {
-            if (!confirm('確定要從 Google Drive 還原嗎？現有資料將會合併。')) return;
+            if (!await askConfirm('確定要從 Google Drive 還原嗎？現有資料將會合併。')) return;
             createToast('正在從 Google Drive 下載...', 'info');
             try {
                 const result = await backupManager.downloadFromGoogleDrive();

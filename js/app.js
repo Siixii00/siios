@@ -5,15 +5,15 @@ import LockScreen from './lockscreen.js';
 import { loadBirthdate, hasBirthdate, showAgeGate } from './core/age-gate.js';
 import HomeScreen from './homescreen.js';
 import { registerRoutes } from './apps/registry.js';
-import { MemorySystem } from './core/memory-system/index.js';
+import { MemorySystem, memorySettingsFrom } from './core/memory-system/index.js';
 import { initActivityAPI } from './activity-interceptor.js';
 import { ziweiLazyLoader } from './core/ziwei-lazy-loader.js';
 import { backupManager } from './core/backup-manager.js';
 import { initAssistiveTouch } from './core/assistive-touch.js';
 
 window.showError = function(errorInfo) {
-    const info = typeof errorInfo === 'string' 
-        ? { message: errorInfo } 
+    const info = typeof errorInfo === 'string'
+        ? { message: errorInfo }
         : errorInfo;
     console.error('[App Error]', info);
     createErrorModal({
@@ -59,39 +59,39 @@ const App = {
     isLocked: true,
     lockScreenEl: null,
     homeScreenEl: null,
-    
+
     async init() {
         try {
             // 檢測 Safari PWA
             const isSafariPWA = window.navigator.standalone === true;
             const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-            
+
             console.log('[App] 環境檢測:', {
                 isSafariPWA,
                 isSafari,
                 userAgent: navigator.userAgent,
                 timestamp: new Date().toISOString()
             });
-            
+
             // 如果是 Safari PWA，添加特殊處理
             if (isSafariPWA) {
                 console.log('[App] Safari PWA 模式，啟用兼容性處理');
             }
-            
+
             this.isMobile = isMobileDevice();
             console.log('[App] 設備類型:', this.isMobile ? '移動設備' : '桌面設備');
-            
+
             if (!this.isMobile) {
                 this.createPhoneFrame();
             }
-            
+
             console.log('[App] 開始初始化數據庫...');
             await initDB();
             console.log('[App] 數據庫初始化成功');
 
             await loadBirthdate();
             if (!hasBirthdate()) await showAgeGate();
-            
+
             console.log('[App] 檢查並注入默認禁止詞...');
             const existingForbidden = await GlobalForbiddenDB.getAll();
             const existingNames = new Set((existingForbidden || []).map(f => f.name));
@@ -131,30 +131,15 @@ const App = {
             if (addedCount > 0) {
                 console.log(`[App] 已注入 ${addedCount} 條新的默認禁止詞`);
             }
-            
+
             console.log('[App] 載入設定...');
             const allSettings = await SettingsDB.getAll();
             const defaults = SettingsDB.getDefaults();
             const mergedSettings = { ...defaults, ...allSettings };
             console.log('[App] 設定載入完成');
-            
+
             console.log('[App] 初始化記憶系統...');
-            const memorySystem = new MemorySystem({
-                decayRate: mergedSettings.memory_decay_rate,
-                embedding: {
-                    embedding_url: mergedSettings.embedding_url,
-                    api_url: mergedSettings.api_url,
-                    embedding_model: mergedSettings.embedding_model,
-                    embedding_dimensions: mergedSettings.embedding_dimensions,
-                    embedding_api_key: mergedSettings.embedding_api_key,
-                    api_key: mergedSettings.api_key
-                },
-                classifier: {
-                    api_url: mergedSettings.api_url,
-                    api_key: mergedSettings.api_key,
-                    model: mergedSettings.model
-                }
-            });
+            const memorySystem = new MemorySystem(memorySettingsFrom(mergedSettings));
             this.memorySystem = memorySystem;
             if (mergedSettings.memory_enabled) {
                 console.log('[App] 啟動記憶系統...');
@@ -163,17 +148,19 @@ const App = {
             console.log('[App] 記憶系統初始化完成');
             // 與 Discord 機器人的記憶同步（每 30 分鐘最多一次，沒設定 Worker 網址就略過），不阻塞啟動
             setTimeout(() => import('./core/discord-memory-sync.js').then(m => m.autoSyncMemories()).catch(() => {}), 8000);
-            
+            // 跨裝置活動紀錄：已啟用的話啟動後同步一次，並依設定定時同步（之前只有打開設定頁才會連線）
+            setTimeout(() => import('./core/cross-device/sync-manager.js').then(m => m.startBackgroundSync()).catch(() => {}), 6000);
+
             console.log('[App] 註冊路由...');
             await registerRoutes();
             console.log('[App] 路由註冊完成');
-            
+
             this.showLockScreen();
-            
+
             Router.on('/', async () => {
                 Router.navigate('/home');
             });
-            
+
             Router.on('/home', async () => {
                 if (!this.isLocked) {
                     const app = this.getAppContainer();
@@ -193,25 +180,25 @@ const App = {
                     }
                 }
             });
-            
+
             Router.start(true);
-            
+
             initAssistiveTouch().catch(e => console.warn('[App] 輔助觸控初始化失敗:', e));
-            
+
             console.log('[App] 初始化活動 API...');
             initActivityAPI();
-            
+
             console.log('[App] 啟動紫微斗數懶加載器...');
             ziweiLazyLoader.startDayChangeDetection();
-            
+
             console.log('[App] 檢查自動備份...');
             backupManager.checkAndAutoBackup().catch(e => {
                 console.warn('[App] 自動備份檢查失敗:', e);
             });
-            
+
             this.registerServiceWorker();
             this.setupInstallPrompt();
-            
+
             console.log('[App] 應用初始化完成');
         } catch (error) {
             console.error('[App] 初始化失敗:', error);
@@ -222,32 +209,32 @@ const App = {
             });
         }
     },
-    
+
     getAppContainer() {
         return this.appContainer || document.getElementById('app');
     },
-    
+
     showLockScreen() {
         const app = this.getAppContainer();
         app.innerHTML = '';
-        
+
         this.lockScreenEl = LockScreen.create({
             onUnlock: () => this.unlock()
         });
         app.appendChild(this.lockScreenEl);
         this.isLocked = true;
     },
-    
+
     async unlock() {
         if (this.lockScreenEl) {
             LockScreen.destroy();
         }
-        
+
         this.isLocked = false;
-        
+
         const app = this.getAppContainer();
         app.innerHTML = '';
-        
+
         try {
             this.homeScreenEl = await HomeScreen.create();
             if (this.homeScreenEl) {
@@ -256,53 +243,53 @@ const App = {
         } catch (err) {
             console.error('Failed to create home screen:', err);
         }
-        
+
         window.location.hash = '/home';
     },
-    
+
     lock() {
         if (this.currentPageCleanup) {
             this.currentPageCleanup();
             this.currentPageCleanup = null;
         }
-        
+
         Router.navigate('/home');
         this.showLockScreen();
     },
-    
+
     createPhoneFrame() {
         document.body.classList.add('desktop-mode');
-        
+
         const frame = createElement('div', 'phone-frame');
-        
+
         const notch = createElement('div', 'phone-notch');
         notch.appendChild(createElement('div', 'phone-notch-speaker'));
         notch.appendChild(createElement('div', 'phone-notch-camera'));
         frame.appendChild(notch);
-        
+
         const screen = createElement('div', 'phone-screen');
-        
+
         const appContainer = createElement('div', '');
         appContainer.id = 'app';
         screen.appendChild(appContainer);
-        
+
         frame.appendChild(screen);
-        
+
         const homeIndicator = createElement('div', 'phone-home-indicator');
         frame.appendChild(homeIndicator);
-        
+
         document.body.appendChild(frame);
-        
+
         const existingApp = document.getElementById('app');
         if (existingApp && existingApp !== appContainer) {
             existingApp.removeAttribute('id');
             existingApp.remove();
         }
-        
+
         this.appContainer = appContainer;
         this.phoneFrame = frame;
     },
-    
+
     async registerServiceWorker() {
         if ('serviceWorker' in navigator) {
             try {
@@ -340,14 +327,14 @@ const App = {
             });
         }
     },
-    
+
     setupInstallPrompt() {
         let deferredPrompt;
-        
+
         window.addEventListener('beforeinstallprompt', (e) => {
             e.preventDefault();
             deferredPrompt = e;
-            
+
             const installBtn = document.createElement('button');
             installBtn.className = 'ios-btn ios-btn-primary fixed bottom-24 left-1/2 -translate-x-1/2 z-50 shadow-lg';
             installBtn.innerHTML = '<span class="material-symbols-outlined mr-1">install_mobile</span> 安裝 App';
@@ -361,15 +348,15 @@ const App = {
             document.body.appendChild(installBtn);
         });
     },
-    
+
     async handleRoute() {
         await Router.handleRoute();
     },
-    
+
     navigate(path) {
         Router.navigate(path);
     },
-    
+
     back() {
         Router.back();
     }

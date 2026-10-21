@@ -1,6 +1,7 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast, createKakaoBottomSheet } from '../../components.js';
 import { DiscordUserBindingDB, UsersDB, SettingsDB } from '../../db.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 async function renderDiscordUserBinding() {
     const container = createElement('div', 'app-container bg-ios-bg');
@@ -119,7 +120,7 @@ async function renderDiscordUserBinding() {
             const deleteBtn = createElement('button', 'text-red-500 text-sm');
             deleteBtn.textContent = '解除';
             deleteBtn.onclick = async () => {
-                if (confirm('確定要解除綁定嗎？')) {
+                if (await askConfirm('確定要解除綁定嗎？')) {
                     await DiscordUserBindingDB.delete(binding.discord_user_id);
                     createToast('已解除綁定');
                     Router.navigate('/settings/discord/bindings');

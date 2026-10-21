@@ -70,6 +70,16 @@ class GitHubSync {
     return data;
   }
 
+  // 讀 gist 裡的某個檔案內容；檔案太大時 API 只回傳截斷的內容，要另外抓完整的 raw_url
+  async readFile(gist, name) {
+    const file = gist?.files?.[name];
+    if (!file) return null;
+    if (!file.truncated || !file.raw_url) return file.content;
+    const response = await fetch(file.raw_url, { headers: { 'Authorization': `token ${this.token}` } });
+    if (!response.ok) throw new Error(`GitHub 檔案讀取失敗：${response.status}`);
+    return response.text();
+  }
+
   async deleteGist(gistId) {
     const response = await fetch(`${this.baseUrl}/gists/${gistId}`, {
       method: 'DELETE',

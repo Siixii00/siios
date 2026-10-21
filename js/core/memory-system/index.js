@@ -7,6 +7,22 @@ import { MemoryClassifier } from './memory-classifier.js';
 import { MemoryDB, hashContent, cosineSimilarity, initDB } from '../../db.js';
 import { createEmbeddingClient } from '../embedding/index.js';
 
+// 由「設定」的原始值組出記憶系統需要的設定（App 啟動與設定頁儲存後都用這個）
+export function memorySettingsFrom(s = {}) {
+    return {
+        decayRate: s.memory_decay_rate,
+        embedding: {
+            embedding_url: s.embedding_url,
+            api_url: s.api_url,
+            embedding_model: s.embedding_model,
+            embedding_dimensions: s.embedding_dimensions,
+            embedding_api_key: s.embedding_api_key,
+            api_key: s.api_key
+        },
+        classifier: { api_url: s.api_url, api_key: s.api_key, model: s.model }
+    };
+}
+
 export class MemorySystem {
     constructor(settings = {}) {
         this.settings = settings;
@@ -24,6 +40,18 @@ export class MemorySystem {
         this._batchProcessing = false;
 
         this.sleepEngine.onSleep(() => this.runSleepCycle());
+    }
+
+    // 設定頁儲存之後立刻生效（不用重開 App）：換新的嵌入客戶端、分類器與衰減率
+    reconfigure(settings = {}) {
+        this.settings = settings;
+        this.decayEngine = new DecayEngine(settings.decayRate);
+        this.embeddingClient = settings.embedding ? createEmbeddingClient(settings.embedding) : null;
+        this.classifier = new MemoryClassifier(
+            settings.classifier?.api_url || settings.api_url || '',
+            settings.classifier?.api_key || settings.api_key || '',
+            settings.classifier?.model || settings.model || ''
+        );
     }
 
     async processMessage(message, chatId, characterId) {
@@ -113,7 +141,7 @@ export class MemorySystem {
             const results = [];
             for (const msg of messages) {
                 const content = msg.content || msg;
-                if (typeof content !== 'string' || content.trim().length === 0) continue;
+                if (typeof content !== 'string' || content.trim().length < 4) continue; // 「好」「嗯」這類太短的訊息不值得存成記憶（也省一次分類呼叫）
                 try {
                     const memory = await this.processMessage(content, chatId, characterId);
                     results.push(memory);
@@ -140,7 +168,7 @@ export class MemorySystem {
         // 早期版本存下的記憶沒有 character_id：只在它原本所屬的聊天室裡保留，避免憑空消失
         if (filters.character_id) {
             filteredMemories = filteredMemories.filter(m =>
-                (m.character_id || m.characterId) === filters.character_id || (!m.character_id && !m.characterId && chatId && m.chat_id === chatId)
+                (m.character_id || m.characterId) === filters.character_id || m.shared === true || (!m.character_id && !m.characterId && chatId && m.chat_id === chatId)
             );
         }
 
@@ -175,6 +203,8 @@ export class MemorySystem {
         if (this.embeddingClient) {
             try {
                 const queryEmbedding = await this.embeddingClient.getEmbedding(query);
+                // 查詢句的向量拿不到（連線失敗、暫停中）：全部退回關鍵字搜尋，不然已經有向量的記憶會整批找不到
+                if (!queryEmbedding) throw new Error('no query embedding');
 
                 const seen = new Map();
                 for (const m of filteredMemories) {
@@ -211,8 +241,7 @@ export class MemorySystem {
         }
 
         const scored = memories.map(memory => {
-            const ageInDays = (Date.now() - (memory.timestamp || memory.created_at)) / (1000 * 60 * 60 * 24);
-            const decayedFactor = this.decayEngine.decay(memory.decayFactor, ageInDays, memory.importance);
+            const decayedFactor = this.decayEngine.effectiveFactor(memory);
             const similarity = memory.similarity || 0.5;
             const relevance = similarity * decayedFactor * (memory.importance || 0.5);
             
@@ -299,20 +328,23 @@ export class MemorySystem {
         const reinforced = [];
 
         for (const memory of decayed) {
-            if (this.decayEngine.shouldForget(memory.decayFactor)) {
+            if (this.decayEngine.shouldForget(memory.decayFactor) && !this.decayEngine.isProtected(memory, now)) {
                 await MemoryDB.delete(memory.id);
                 forgotten.push(memory.id);
             } else {
-                await MemoryDB.update(memory.id, {
-                    decayFactor: memory.decayFactor,
-                    decayStage: memory.decayStage
-                });
-
-                if (memory.accessCount > 3) {
-                    const newDecayFactor = this.decayEngine.reinforce(memory.decayFactor);
-                    await MemoryDB.update(memory.id, { decayFactor: newDecayFactor });
+                let decayFactor = memory.decayFactor;
+                // 常被想起的記憶在睡眠時被強化（強化後把計數歸零，才不會每晚都強化一次）
+                const frequentlyRecalled = memory.accessCount > 3;
+                if (frequentlyRecalled) {
+                    decayFactor = this.decayEngine.reinforce(decayFactor);
                     reinforced.push(memory.id);
                 }
+                await MemoryDB.update(memory.id, {
+                    decayFactor,
+                    decayStage: this.decayEngine.getDecayStage(decayFactor),
+                    lastDecayed: now,
+                    ...(frequentlyRecalled ? { accessCount: 0 } : {})
+                });
             }
         }
 

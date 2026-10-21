@@ -4,6 +4,7 @@ import { SettingsDB } from '../../db.js';
 import { getBalance, charge, formatMoney, WalletError } from '../../core/wallet.js';
 import { setWallpaperTheme } from '../../core/wallpapers.js';
 import { CHATS_TABS } from './chats-nav.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 const THEMES = [
     { id: 't1', name: '星空', icon: '🌌', price: 0 },
@@ -104,7 +105,7 @@ async function renderShop() {
                     }
                     if (t.price > 0) {
                         const bal = await getBalance();
-                        if (!confirm('購買「' + t.name + '」主題？價格 ' + formatMoney(t.price) + '，餘額 ' + formatMoney(bal))) return;
+                        if (!await askConfirm('購買「' + t.name + '」主題？價格 ' + formatMoney(t.price) + '，餘額 ' + formatMoney(bal))) return;
                         await charge(t.price, '購買主題「' + t.name + '」', { category: 'theme' });
                     }
                     ownedThemes.add(t.id);
@@ -148,7 +149,7 @@ async function renderShop() {
                 try {
                     if (e.price > 0) {
                         const bal = await getBalance();
-                        if (!confirm('購買「' + e.name + '」貼圖？價格 ' + formatMoney(e.price) + '，餘額 ' + formatMoney(bal))) return;
+                        if (!await askConfirm('購買「' + e.name + '」貼圖？價格 ' + formatMoney(e.price) + '，餘額 ' + formatMoney(bal))) return;
                         await charge(e.price, '購買貼圖「' + e.name + '」', { category: 'sticker' });
                     }
                     ownedEmojis.add(e.id);

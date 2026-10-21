@@ -61,7 +61,7 @@
     z-index: 1;
 }
 
-.album-app .header-actions {
+:where(body[data-app="album"]) .album-app .header-actions {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -187,7 +187,7 @@
     font-size: 9px;
 }
 
-.album-app .empty-state {
+:where(body[data-app="album"]) .album-app .empty-state {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,15 +198,15 @@
     background: var(--zapier-canvas-soft);
 }
 
-.album-app .empty-state.hidden { display: none; }
+:where(body[data-app="album"]) .album-app .empty-state.hidden { display: none; }
 
-.album-app .empty-state i {
+:where(body[data-app="album"]) .album-app .empty-state i {
     font-size: 48px;
     margin-bottom: 16px;
     color: var(--zapier-mute);
 }
 
-.album-app .empty-state p {
+:where(body[data-app="album"]) .album-app .empty-state p {
     font-size: 17px;
     margin-bottom: 4px;
     color: var(--zapier-body-mid);

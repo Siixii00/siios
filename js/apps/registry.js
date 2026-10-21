@@ -124,6 +124,9 @@ async function registerRoutes() {
                         window.App.currentPageCleanup = null;
                     }
 
+                    // 讓各 App 樣式表裡以 :where(body[data-app="…"]) 限定的規則只在自己的頁面生效（不同 App 常用同樣的 class 名稱）
+                    document.body.dataset.app = app.id;
+
                     try {
                         if (app.stylesPath) {
                             await loadStyle(app.stylesPath);

@@ -1,16 +1,41 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
-import { CrossDeviceSync } from '../../core/cross-device/sync-manager.js';
+import { getSyncManager } from '../../core/cross-device/sync-manager.js';
 import { GitHubSync } from '../../core/cross-device/github-sync.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 let syncManager = null;
 
-async function renderCrossDeviceSettings() {
-    if (!syncManager) {
-        syncManager = new CrossDeviceSync();
-        await syncManager.initialize();
+async function copyToClipboard(text, label) {
+    try {
+        await navigator.clipboard.writeText(text);
+        createToast(label + '已複製', 'success');
+    } catch {
+        createToast('無法自動複製，請手動選取', 'error');
     }
+}
+
+// 要在另一台裝置或瀏覽器擴充功能填的三樣東西：GitHub Token（自己的）、Gist ID、加密金鑰
+function connectionInfoCard(info, { highlight = false } = {}) {
+    const card = createElement('div', 'mt-4 p-4 rounded-lg border ' + (highlight ? 'bg-yellow-50 border-yellow-200' : 'bg-white border-gray-200'));
+    card.appendChild(createElement('p', 'font-semibold text-sm mb-2', { textContent: '🔐 在另一台裝置或瀏覽器擴充功能加入同步' }));
+    card.appendChild(createElement('p', 'text-xs text-gray-600 mb-3', { textContent: '在另一台裝置選「加入既有的同步」，填入你的 GitHub Token、下面的 Gist ID 與加密金鑰。加密金鑰遺失就無法解開活動記錄，請備份，也不要分享給別人。' }));
+    for (const [label, value] of [['Gist ID', info.gistId], ['加密金鑰', info.encryptionKey]]) {
+        const row = createElement('div', 'mb-2');
+        row.appendChild(createElement('div', 'text-xs text-gray-500 mb-1', { textContent: label }));
+        const line = createElement('div', 'flex gap-2 items-center');
+        line.appendChild(createElement('div', 'flex-1 bg-white p-2 rounded border text-xs font-mono break-all', { textContent: value || '（找不到，可能是在別的瀏覽器設定的）' }));
+        if (value) line.appendChild(createElement('button', 'text-xs text-blue-500 underline', { textContent: '複製', onClick: () => copyToClipboard(value, label) }));
+        row.appendChild(line);
+        card.appendChild(row);
+    }
+    return card;
+}
+
+async function renderCrossDeviceSettings() {
+    // 和背景同步共用同一個管理器（不然會有兩組計時器各同步一次）
+    if (!syncManager) syncManager = await getSyncManager();
 
     const container = createElement('div', 'app-container bg-ios-bg');
     
@@ -118,16 +143,11 @@ async function renderCrossDeviceSettings() {
                 
                 createToast('跨裝置同步已啟用', 'success');
                 
-                const keyDisplay = createElement('div', 'mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg');
-                keyDisplay.innerHTML = `
-                    <p class="font-semibold text-sm mb-2">🔐 重要：請備份加密金鑰</p>
-                    <p class="text-xs text-gray-600 mb-2">此金鑰用於解密您的活動記錄，遺失將無法復原！</p>
-                    <div class="bg-white p-2 rounded border text-xs font-mono break-all">${result.encryptionKey}</div>
-                    <button class="mt-2 text-xs text-blue-500 underline" onclick="navigator.clipboard.writeText('${result.encryptionKey}').then(() => alert('已複製'))">複製金鑰</button>
-                `;
-                tokenCard.appendChild(keyDisplay);
+                tokenCard.appendChild(connectionInfoCard({ gistId: result.gistId, encryptionKey: result.encryptionKey }, { highlight: true }));
+                createToast('跨裝置同步已啟用，請先備份下面的加密金鑰', 'success');
+                const doneBtn = createElement('button', 'w-full ios-btn ios-btn-primary mt-3', { textContent: '我已備份，完成', onClick: () => Router.navigate('/settings/cross-device') });
+                tokenCard.appendChild(doneBtn);
                 
-                setTimeout(() => Router.navigate('/settings/cross-device'), 2000);
             } catch (error) {
                 createToast(`設定失敗：${error.message}`, 'error');
             }
@@ -138,7 +158,32 @@ async function renderCrossDeviceSettings() {
         tokenCard.appendChild(setupBtn);
         
         setupSection.appendChild(tokenCard);
+
+        const joinCard = createElement('div', 'bg-white rounded-xl p-4 shadow-sm mt-4');
+        joinCard.appendChild(createElement('p', 'font-semibold text-sm mb-1', { textContent: '已經在另一台裝置啟用過了？加入既有的同步' }));
+        joinCard.appendChild(createElement('p', 'text-xs text-gray-500 mb-3', { textContent: '在第一台裝置的「跨裝置同步」頁面可以複製 Gist ID 與加密金鑰；Token 用同一個 GitHub 帳號建立即可。' }));
+        const joinToken = createElement('input', 'w-full p-3 border rounded-lg text-sm mb-2', { type: 'password', placeholder: 'GitHub Token（ghp_…）' });
+        const joinGist = createElement('input', 'w-full p-3 border rounded-lg text-sm mb-2', { type: 'text', placeholder: 'Gist ID（或整個 gist 網址）' });
+        const joinKey = createElement('input', 'w-full p-3 border rounded-lg text-sm mb-3', { type: 'password', placeholder: '加密金鑰' });
+        const joinBtn = createElement('button', 'w-full ios-btn ios-btn-primary', { textContent: '加入並同步' });
+        joinBtn.onclick = async () => {
+            joinBtn.disabled = true;
+            joinBtn.textContent = '驗證中...';
+            try {
+                await syncManager.joinExisting({ token: joinToken.value, gistId: joinGist.value, encryptionKey: joinKey.value });
+                const r = await syncManager.sync();
+                createToast(`已加入同步：下載 ${r.downloaded} 筆、合併後 ${r.merged} 筆活動`, 'success');
+                Router.navigate('/settings/cross-device');
+            } catch (error) {
+                createToast(error.message, 'error');
+                joinBtn.disabled = false;
+                joinBtn.textContent = '加入並同步';
+            }
+        };
+        joinCard.append(joinToken, joinGist, joinKey, joinBtn);
+
         main.appendChild(setupSection);
+        setupSection.appendChild(joinCard);
     } else {
         const statusSection = createElement('div', 'mx-4 mb-4');
         
@@ -174,6 +219,8 @@ async function renderCrossDeviceSettings() {
         `;
         deviceCard.appendChild(deviceInfo);
         statusSection.appendChild(deviceCard);
+        const connInfo = await syncManager.getConnectionInfo();
+        if (connInfo) statusSection.appendChild(connectionInfoCard(connInfo));
         
         main.appendChild(statusSection);
         
@@ -278,7 +325,8 @@ async function renderCrossDeviceSettings() {
         const disconnectBtn = createElement('button', 'w-full text-red-600 font-semibold text-sm mb-2');
         disconnectBtn.textContent = '停用跨裝置同步';
         disconnectBtn.onclick = async () => {
-            if (confirm('確定要停用跨裝置同步？這將刪除所有雲端資料。')) {
+            const joined = !!(await syncManager.getConnectionInfo())?.joined;
+            if (await askConfirm(joined ? '確定要停用這台裝置的跨裝置同步？雲端資料會保留給其他裝置繼續使用。' : '確定要停用跨裝置同步？這將刪除所有雲端資料（其他已加入的裝置也會失去同步）。')) {
                 await syncManager.disconnect();
                 createToast('已停用跨裝置同步', 'success');
                 Router.navigate('/settings/cross-device');
@@ -287,7 +335,7 @@ async function renderCrossDeviceSettings() {
         dangerCard.appendChild(disconnectBtn);
         
         const warning = createElement('p', 'text-xs text-red-600');
-        warning.textContent = '停用後將刪除 GitHub Gist 上的所有同步資料';
+        warning.textContent = '如果這台是第一台（建立同步的裝置），停用後會刪除 GitHub Gist 上的同步資料；加入既有同步的裝置停用時只會解除自己的連線';
         dangerCard.appendChild(warning);
         
         dangerSection.appendChild(dangerCard);

@@ -48,6 +48,21 @@ export class DecayEngine {
         return Math.max(0.1, retention);
     }
     
+    // 從「上一次衰減的時間點」到現在經過的衰減（不是從建立時間算起，否則每次睡眠週期都會把整段時間重複算一次，
+    // 記憶會以時間平方的速度消失，約一個月就全部被遺忘）
+    effectiveFactor(memory, now = Date.now()) {
+        const since = new Date(memory.lastDecayed || memory.timestamp || memory.created_at || now).getTime();
+        const days = Math.max(0, (now - (Number.isNaN(since) ? now : since)) / (1000 * 60 * 60 * 24));
+        return this.decay(memory.decayFactor ?? 1.0, days, memory.importance ?? 0.5);
+    }
+
+    // 永久記憶與重要的記憶不會被遺忘，剛建立不到 7 天的也不會
+    isProtected(memory, now = Date.now()) {
+        if (memory.memory_type === 'permanent' || (memory.importance ?? 0) >= 0.8) return true;
+        const created = new Date(memory.created_at || memory.timestamp || now).getTime();
+        return !Number.isNaN(created) && now - created < 7 * 24 * 60 * 60 * 1000;
+    }
+
     shouldForget(decayFactor, threshold = 0.1) {
         return decayFactor < threshold;
     }
@@ -113,19 +128,15 @@ export class DecayEngine {
     
     batchDecay(memories, currentTimestamp = Date.now()) {
         return memories.map(memory => {
-            const memoryTime = new Date(memory.timestamp).getTime();
+            const memoryTime = new Date(memory.timestamp || memory.created_at || currentTimestamp).getTime();
             const ageInDays = (currentTimestamp - memoryTime) / (1000 * 60 * 60 * 24);
-            
-            const newDecayFactor = this.decay(
-                memory.decayFactor,
-                ageInDays,
-                memory.importance
-            );
-            
+            const newDecayFactor = this.effectiveFactor(memory, currentTimestamp);
+
             return {
                 ...memory,
                 decayFactor: newDecayFactor,
                 decayStage: this.getDecayStage(newDecayFactor),
+                lastDecayed: currentTimestamp,
                 age: ageInDays
             };
         });

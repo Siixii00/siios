@@ -109,7 +109,16 @@ class CloudSync {
     }
 
     const gist = await response.json();
-    const content = JSON.parse(gist.files['activities.json'].content);
+    const file = gist.files['activities.json'];
+    if (!file) return { activities: [] };
+    // 檔案超過 1MB 時 API 只回傳截斷的內容，要改抓完整的 raw_url
+    let text = file.content;
+    if (file.truncated && file.raw_url) {
+      const raw = await fetch(file.raw_url, { headers: { 'Authorization': `token ${token}` } });
+      if (!raw.ok) throw new Error(`GitHub API error: ${raw.status}`);
+      text = await raw.text();
+    }
+    const content = JSON.parse(text);
 
     if (!content.encrypted) {
       return { activities: content.activities || [] };

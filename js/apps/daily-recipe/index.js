@@ -138,8 +138,10 @@ async function renderDailyRecipe() {
   container.querySelector('.r-next').onclick = () => { offset++; showTodayRotation(); };
   favBtn.onclick = async () => {
     if (!current) return;
+    const adding = !isFav(current);
     favorites = isFav(current) ? favorites.filter(f => f.name !== current.name) : [...favorites, current];
     await SettingsDB.set(FAVORITES_KEY, favorites);
+    if (adding) import('../../core/activity-memory.js').then(m => m.rememberActivity({ sourceApp: 'daily-recipe', content: `用戶收藏了食譜「${current.name}」`, importance: 0.3 })).catch(() => {});
     favBtn.textContent = isFav(current) ? '★ 已收藏' : '☆ 收藏';
     drawFavs();
   };

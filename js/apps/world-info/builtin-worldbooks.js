@@ -1,6 +1,7 @@
 import Router from '../../router.js';
-import { createElement, createIcon, createIOSNavBar } from '../../components.js';
+import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import worldbookInstaller from '../../core/worldbook-installer.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 async function renderBuiltinWorldbooks() {
     const container = createElement('div', 'app-container bg-ios-bg');
@@ -51,20 +52,20 @@ async function renderBuiltinWorldbooks() {
                         const result = await worldbookInstaller.importWorldbookWithPrompt(wb.id);
                         
                         if (result.needPrompt) {
-                            const confirmed = confirm(`發現 ${result.duplicates.length} 個同名條目已存在。\n\n是否覆蓋這些條目？\n\n選擇「確定」覆蓋\n選擇「取消」跳過重複項目`);
+                            const confirmed = await askConfirm(`發現 ${result.duplicates.length} 個同名條目已存在，要覆蓋這些條目嗎？`, { title: '同名條目', confirmLabel: '覆蓋', cancelLabel: '跳過重複' });
                             
                             if (confirmed) {
                                 const importResult = await worldbookInstaller.importWorldbook(wb.id, 'overwrite');
-                                alert(`匯入完成\n覆蓋: ${importResult.imported} 個條目\n跳過: ${importResult.skipped} 個條目`);
+                                createToast(`匯入完成\n覆蓋: ${importResult.imported} 個條目\n跳過: ${importResult.skipped} 個條目`);
                             } else {
                                 const importResult = await worldbookInstaller.importWorldbook(wb.id, 'skip');
-                                alert(`匯入完成\n新增: ${importResult.imported} 個條目\n跳過: ${importResult.skipped} 個重複條目`);
+                                createToast(`匯入完成\n新增: ${importResult.imported} 個條目\n跳過: ${importResult.skipped} 個重複條目`);
                             }
                         } else {
-                            alert(`匯入完成\n新增: ${result.imported} 個條目`);
+                            createToast(`匯入完成\n新增: ${result.imported} 個條目`);
                         }
                     } catch (err) {
-                        alert('匯入失敗: ' + err.message);
+                        createToast('匯入失敗: ' + err.message);
                     }
                     
                     cell.style.pointerEvents = '';

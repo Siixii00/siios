@@ -6,6 +6,7 @@ import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { getBalance, charge, formatMoney, WalletError } from '../../core/wallet.js';
 import { addOrder, newOrderId } from '../../core/orders.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 const STORAGE_KEYS = {
     stories: 'instagram_stories',
@@ -603,7 +604,7 @@ const SHOP_ITEMS = [
 
 async function buyShopItem(item) {
     const balance = await getBalance();
-    if (!confirm(`購買「${item.name}」？價格 ${formatMoney(item.price)}，餘額 ${formatMoney(balance)}`)) return;
+    if (!await askConfirm(`購買「${item.name}」？價格 ${formatMoney(item.price)}，餘額 ${formatMoney(balance)}`)) return;
     try {
         await charge(item.price, `Instagram 商店：${item.name}`, { category: 'shopping' });
         await addOrder('taobao_orders', { id: newOrderId(), date: Date.now(), total: item.price, items: [{ id: item.id, name: item.name, image: item.image, price: item.price, qty: 1 }] });

@@ -1,5 +1,5 @@
 ﻿import Router from '../../router.js';
-import { createElement } from '../../components.js';
+import { createElement, createToast } from '../../components.js';
 import APIClient from '../../api.js';
 import { CharactersDB, SettingsDB } from '../../db.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
@@ -235,7 +235,7 @@ async function renderTheater(params) {
     addBtn.onclick = async () => {
       const characters = await CharactersDB.getAll();
       if (!characters || characters.length === 0) {
-        alert('請先在聊天室創建角色');
+        createToast('請先在聊天室創建角色');
         return;
       }
       
@@ -287,7 +287,7 @@ async function renderTheater(params) {
             details: error.stack || ''
           });
         } else {
-          alert('生成失敗: ' + error.message);
+          createToast('生成失敗: ' + error.message);
         }
       } finally {
         addBtn.disabled = false;

@@ -2,6 +2,7 @@ import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
 import { getBalance, charge, formatMoney, WalletError } from '../../core/wallet.js';
 import { GIFTS, getInventoryCounts, addGift } from '../../core/gifts.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 let purchasing = false;
 
@@ -36,7 +37,7 @@ async function renderGiftShop() {
       purchasing = true;
       try {
         const bal = await getBalance();
-        if (!confirm('購買「' + g.name + '」？價格 ' + formatMoney(g.price) + '，餘額 ' + formatMoney(bal))) return;
+        if (!await askConfirm('購買「' + g.name + '」？價格 ' + formatMoney(g.price) + '，餘額 ' + formatMoney(bal))) return;
         await charge(g.price, '購買禮物「' + g.name + '」', { category: 'gift' });
         await addGift(g.id);
         createToast('已購買「' + g.name + '」');

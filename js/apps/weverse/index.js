@@ -4,6 +4,7 @@ import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 const aiPostStarters = ['今天練習結束了', '剛剛彩排回來', '想來打個招呼', '晚安前留個訊息'];
 const aiPostClosers = ['你們今天也辛苦了', '等等見', '記得吃飯', '我會再來'];
@@ -422,7 +423,7 @@ async function renderWeverse(params) {
         else { container.classList.remove('artist-mode'); header.querySelector('#user-settings-btn').classList.remove('hidden'); header.querySelector('#artist-settings-btn').classList.add('hidden'); activeGroupId = joinedGroupIds.length > 0 ? joinedGroupIds[0] : ''; }
         renderUI();
     };
-    container.onclick = (e) => {
+    container.onclick = async (e) => {
         const exploreBtn = e.target.closest('[data-action="explore"]');
         if (exploreBtn) { const explorePage = renderExploreGroupsPage(() => { container.classList.remove('show-explore'); explorePage.remove(); }); container.appendChild(explorePage); container.classList.add('show-explore'); return; }
         const backBtn = e.target.closest('[data-action="back-to-cards"]');
@@ -438,7 +439,7 @@ async function renderWeverse(params) {
         const createGroupBtn = e.target.closest('#create-artist-group-btn');
         if (createGroupBtn) { container.appendChild(createCreateGroupModal((newGroup) => { activeGroupId = newGroup.id; renderUI(); })); return; }
         const deleteGroupBtn = e.target.closest('.delete-group-btn');
-        if (deleteGroupBtn && confirm('確定要刪除此團體嗎？')) { deleteArtistGroup(deleteGroupBtn.dataset.groupId); renderUI(); }
+        if (deleteGroupBtn && await askConfirm('確定要刪除此團體嗎？')) { deleteArtistGroup(deleteGroupBtn.dataset.groupId); renderUI(); }
     };
     const addPost = async () => {
         const input = container.querySelector('#post-input');

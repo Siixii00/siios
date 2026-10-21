@@ -33,7 +33,9 @@ class ActivityStorage {
     const result = await chrome.storage.local.get(SETTINGS_KEY);
     return result[SETTINGS_KEY] || {
       enabled: false,
-      pwa_url: '',
+      github_token: '',
+      gist_id: '',
+      encryption_key: '',
       sync_interval: 300000, // 5 minutes
       platforms: {},
       privacy_level: 'basic',

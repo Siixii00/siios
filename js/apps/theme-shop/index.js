@@ -3,6 +3,7 @@ import { createElement, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 import { getBalance, charge, formatMoney, WalletError } from '../../core/wallet.js';
 import { SHOP_THEMES, setWallpaperTheme, resetWallpaper, currentWallpaperTheme } from '../../core/wallpapers.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 const OWNED_KEY = 'theme_owned';
 let purchasing = false;
@@ -48,7 +49,7 @@ async function renderThemeShop() {
         if (!list.includes(t.id)) {
           if (t.price > 0) {
             const bal = await getBalance();
-            if (!confirm('購買「' + t.name + '」主題？價格 ' + formatMoney(t.price) + '，餘額 ' + formatMoney(bal))) return;
+            if (!await askConfirm('購買「' + t.name + '」主題？價格 ' + formatMoney(t.price) + '，餘額 ' + formatMoney(bal))) return;
             await charge(t.price, '購買主題「' + t.name + '」', { category: 'theme' });
           }
           list.push(t.id);
@@ -69,7 +70,7 @@ async function renderThemeShop() {
   });
 
   container.querySelector('.reset-wallpaper-btn').onclick = async () => {
-    if (!confirm('恢復成預設桌布？（會一併清除相簿設定的桌布與鎖屏圖片）')) return;
+    if (!await askConfirm('恢復成預設桌布？（會一併清除相簿設定的桌布與鎖屏圖片）')) return;
     await resetWallpaper();
     createToast('已恢復預設桌布');
     Router.handleRoute();

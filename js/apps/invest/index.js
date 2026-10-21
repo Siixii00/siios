@@ -5,7 +5,7 @@ import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { getBalance, charge, credit, formatMoney, WalletError } from '../../core/wallet.js';
-import { askForm } from '../../core/dialogs.js';
+import {askForm, askConfirm } from '../../core/dialogs.js';
 import { fetchHeadlines, analyze, sectorBias, localDate, startOfDay } from './world-events.js';
 
 // 投資模擬器：全部是虛構的標的與模擬行情，買賣直接用「支付」錢包的虛擬餘額，沒有任何真實金流或真實股價。
@@ -336,7 +336,7 @@ async function renderInvest() {
         if (a === 'review') return review();
         if (a === 'refresh-world') return loadWorld(true);
         if (a === 'reset') {
-            if (!confirm('重置行情、持倉與交易紀錄？（錢包餘額不會變動，持股也不會換回現金）')) return;
+            if (!await askConfirm('重置行情、持倉與交易紀錄？（錢包餘額不會變動，持股也不會換回現金）')) return;
             market = newMarket(); applyGap(localDate()); holdings = {}; trades = []; stats = { realized: 0 }; report = ''; detail = null;
             await Promise.all([SettingsDB.set(MARKET_KEY, market), SettingsDB.set(HOLD_KEY, holdings), SettingsDB.set(TRADES_KEY, trades), SettingsDB.set(STATS_KEY, stats)]);
             draw();

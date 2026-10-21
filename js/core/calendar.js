@@ -34,6 +34,7 @@ export function addEvent({ title, dateStr, time }) {
         const event = { id: Date.now() + Math.floor(Math.random() * 1000), title: title.trim(), date: noonISO(dateStr), ...(time ? { time } : {}) };
         list.push(event);
         await saveEvents(list);
+        import('./activity-memory.js').then(m => m.rememberActivity({ sourceApp: 'timetree', content: `用戶在時間樹新增了行程「${event.title}」（${event.date.slice(0, 10)}${event.time ? ' ' + event.time : ''}）`, importance: 0.4 })).catch(() => {});
         return event;
     });
 }

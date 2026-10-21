@@ -3,6 +3,7 @@ import { createElement, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 import { getBalance, charge, formatMoney, WalletError } from '../../core/wallet.js';
 import { loadOrders, addOrder, statusAt, newOrderId } from '../../core/orders.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 const RESTAURANTS = [
   { id: 'r1', name: '美味軒', cuisine: '中式', rating: 4.8, time: '25-35', menu: [
@@ -147,7 +148,7 @@ async function renderDelivery() {
     const change = async (name, delta) => {
       if (cart.restaurantId && cart.restaurantId !== rid && cartCount(cart) > 0) {
         const other = RESTAURANTS.find(x => x.id === cart.restaurantId);
-        if (!confirm('購物車內有「' + other.name + '」的餐點，一次只能訂一家餐廳。要清空並改訂「' + r.name + '」嗎？')) return;
+        if (!await askConfirm('購物車內有「' + other.name + '」的餐點，一次只能訂一家餐廳。要清空並改訂「' + r.name + '」嗎？')) return;
         cart = { restaurantId: rid, items: [] };
       }
       if (cart.restaurantId !== rid) cart = { restaurantId: rid, items: [] };

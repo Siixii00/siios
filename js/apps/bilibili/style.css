@@ -282,7 +282,7 @@
     color: var(--bili-pink);
 }
 
-.bili-nav-btn.post {
+:where(body[data-app="bilibili"]) .bili-nav-btn.post {
     width: 44px;
     height: 44px;
     background: var(--bili-pink);

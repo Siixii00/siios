@@ -1,6 +1,7 @@
 import { createElement, createToast, createKakaoBottomSheet } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 import { pickFile, compressImage } from './chat-media.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 const ICONS_KEY = 'chat_custom_icons';
 const MAX_ICONS = 60;
@@ -57,7 +58,7 @@ export async function openIconPicker(onSend) {
             const del = createElement('button', '', { textContent: '✕', 'aria-label': '刪除圖示' });
             del.style.cssText = 'position:absolute;top:-6px;right:-6px;width:22px;height:22px;border-radius:50%;border:none;background:#888;color:#fff;font-size:12px;cursor:pointer;';
             del.onclick = async () => {
-                if (!confirm('刪除圖示「' + ic.name + '」？')) return;
+                if (!await askConfirm('刪除圖示「' + ic.name + '」？')) return;
                 icons = icons.filter(x => x.id !== ic.id);
                 await SettingsDB.set(ICONS_KEY, icons);
                 render();

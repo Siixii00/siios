@@ -434,6 +434,7 @@ function openEditor(container, dateStr, replyTo = null) {
 
     entries.push(entry);
     await saveEntries();
+    import('../../core/activity-memory.js').then(m => m.rememberActivity({ sourceApp: 'exchange-diary', content: `用戶在交換日記寫了一篇日記：${String(entry.content).replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 80)}`, importance: 0.5 })).catch(() => {});
     overlay.remove();
     if (replyTo) replyToId = null;
     refreshView(container);

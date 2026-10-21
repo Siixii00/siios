@@ -6,7 +6,7 @@
   --drift-accent: #64b5f6;
 }
 
-.drift-app .page {
+:where(body[data-app="drift-bottle"]) .drift-app .page {
   background: linear-gradient(180deg, #0d47a1 0%, #1565c0 50%, #1976d2 100%);
   min-height: calc(100vh - 96px);
   display: flex;

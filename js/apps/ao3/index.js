@@ -4,6 +4,7 @@ import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 const ratingMap = {
     G: 'General Audiences',
@@ -929,8 +930,8 @@ ${charInfo ? `\n角色設定:\n${charInfo}` : ''}
         input.click();
     }
 
-    function clearForm() {
-        if (confirm('確定要清空所有欄位嗎？')) {
+    async function clearForm() {
+        if (await askConfirm('確定要清空所有欄位嗎？')) {
             const titleEl = container.querySelector('#work-title');
             const summaryEl = container.querySelector('#work-summary');
             const notesEl = container.querySelector('#work-notes');
@@ -951,7 +952,7 @@ ${charInfo ? `\n角色設定:\n${charInfo}` : ''}
     }
 
     function showHelp() {
-        alert(`AO3 行動寫作工作室使用說明：
+        askConfirm(`AO3 行動寫作工作室使用說明：
 
 1. 填寫作品標題、分級和語言
 2. 使用標籤欄位加入 Fandom、CP、角色等
@@ -963,7 +964,7 @@ ${charInfo ? `\n角色設定:\n${charInfo}` : ''}
 快捷鍵：
 - Ctrl/Cmd + S：儲存草稿
 - Ctrl/Cmd + B：粗體
-- Ctrl/Cmd + I：斜體`);
+- Ctrl/Cmd + I：斜體`, { title: "使用說明", confirmLabel: "知道了", cancelLabel: "關閉" });
         toggleMenuDropdown();
     }
 

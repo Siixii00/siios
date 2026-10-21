@@ -56,7 +56,7 @@
     color: #1D1B20;
 }
 
-.save-btn, .add-btn {
+:where(body[data-app="health"]) .save-btn, :where(body[data-app="health"]) .add-btn {
     width: 100%;
     padding: 14px;
     background: #FEE500;
@@ -69,7 +69,7 @@
     margin-top: 12px;
 }
 
-.add-btn {
+:where(body[data-app="health"]) .add-btn {
     background: #F5F5F5;
     color: #1D1B20;
 }
@@ -81,14 +81,14 @@
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.calendar-header {
+:where(body[data-app="health"]) .calendar-header {
     text-align: center;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 12px;
 }
 
-.calendar-grid {
+:where(body[data-app="health"]) .calendar-grid {
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -200,7 +200,7 @@
     cursor: pointer;
 }
 
-.empty-msg {
+:where(body[data-app="health"]) .empty-msg {
     text-align: center;
     color: #8E8E93;
     padding: 24px;

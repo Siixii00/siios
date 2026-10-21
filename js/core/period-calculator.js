@@ -63,13 +63,14 @@ class PeriodCalculator {
     }
     
     static async shouldRemind(userId) {
+        // 還沒存過提醒設定時用預設（開啟、提前 3 天）；原本沒有設定就永遠不提醒，而設定頁又沒有入口可以建立
         const settings = await HealthDB.getPeriodSettings(userId);
-        if (!settings || !settings.reminder_in_chat) return null;
+        if (settings && settings.reminder_in_chat === false) return null;
         
         const prediction = await this.calculateNextPeriod(userId);
         if (!prediction) return null;
         
-        const daysBefore = settings.reminder_days_before || 3;
+        const daysBefore = settings?.reminder_days_before || 3;
         
         if (prediction.days_until <= daysBefore && prediction.days_until >= 0) {
             return prediction;

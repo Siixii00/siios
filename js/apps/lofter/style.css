@@ -21,7 +21,7 @@
     border-bottom: 1px solid #2c3440;
 }
 
-.icon-btn {
+:where(body[data-app="lofter"]) .icon-btn {
     border: 1px solid #2c3440;
     width: 38px;
     height: 38px;
@@ -33,7 +33,7 @@
     justify-content: center;
 }
 
-.brand {
+:where(body[data-app="lofter"]) .brand {
     justify-self: start;
     display: inline-flex;
     align-items: center;
@@ -85,13 +85,13 @@
     display: none;
 }
 
-.page {
+:where(body[data-app="lofter"]) .page {
     display: none;
     flex-direction: column;
     gap: 12px;
 }
 
-.page.is-active {
+:where(body[data-app="lofter"]) .page.is-active {
     display: flex;
 }
 
@@ -143,14 +143,14 @@
     white-space: nowrap;
 }
 
-.feed {
+:where(body[data-app="lofter"]) .feed {
     display: flex;
     flex-direction: column;
     gap: 12px;
     padding-bottom: 8px;
 }
 
-.feed.waterfall {
+:where(body[data-app="lofter"]) .feed.waterfall {
     column-count: 2;
     column-gap: 12px;
     display: block;
@@ -231,7 +231,7 @@
     padding: 5px 8px;
 }
 
-.post-actions {
+:where(body[data-app="lofter"]) .post-actions {
     border-top: 1px solid #2c3440;
     padding-top: 10px;
     display: grid;
@@ -551,7 +551,7 @@
     margin-top: 2px;
 }
 
-.bottom-nav {
+:where(body[data-app="lofter"]) .bottom-nav {
     border-top: 1px solid #2c3440;
     background: rgba(18, 22, 30, 0.96);
     backdrop-filter: blur(10px);
@@ -581,7 +581,7 @@
     color: #8db8ff;
 }
 
-.empty-state {
+:where(body[data-app="lofter"]) .empty-state {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -591,14 +591,14 @@
     text-align: center;
 }
 
-.empty-state .material-symbols-outlined {
+:where(body[data-app="lofter"]) .empty-state .material-symbols-outlined {
     font-size: 48px;
     margin-bottom: 16px;
     opacity: 0.5;
 }
 
 @media (max-width: 359px) {
-    .feed.waterfall {
+    :where(body[data-app="lofter"]) .feed.waterfall {
         column-count: 1;
     }
     
@@ -621,7 +621,7 @@
         gap: 14px;
     }
     
-    .feed.waterfall {
+    :where(body[data-app="lofter"]) .feed.waterfall {
         column-count: 2;
         column-gap: 14px;
     }
@@ -643,13 +643,13 @@
         gap: 16px;
     }
     
-    .feed:not(.waterfall) {
+    :where(body[data-app="lofter"]) .feed:not(.waterfall) {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
     }
     
-    .feed.waterfall {
+    :where(body[data-app="lofter"]) .feed.waterfall {
         column-count: 3;
         column-gap: 14px;
     }

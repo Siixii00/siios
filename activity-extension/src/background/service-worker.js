@@ -14,6 +14,12 @@ chrome.runtime.onInstalled.addListener(async () => {
   }
 });
 
+// 瀏覽器重新啟動時 onInstalled 不會觸發：啟動時也要依設定恢復自動同步
+chrome.runtime.onStartup.addListener(async () => {
+  const settings = await ActivityStorage.getSettings();
+  if (settings.enabled) startAutoSync(settings.sync_interval);
+});
+
 chrome.storage.onChanged.addListener(async (changes, areaName) => {
   if (areaName === 'local' && changes.siios_settings) {
     const newSettings = changes.siios_settings.newValue;
@@ -64,19 +70,25 @@ async function handleActivityDetected(activityData, tab) {
   chrome.action.setBadgeBackgroundColor({ color: '#10B981' });
 }
 
+const SYNC_ALARM = 'siios-auto-sync';
+
+// MV3 的 service worker 閒置約 30 秒就會被關掉，setInterval 的計時器跟著消失，自動同步幾乎不會發生；
+// 改用 chrome.alarms（到時間會喚醒 service worker）。alarms 最短 1 分鐘；interval 是毫秒
 function startAutoSync(interval) {
   stopAutoSync();
-  
-  syncInterval = setInterval(async () => {
-    const result = await ActivitySync.sync();
-    
-    if (result.success && result.synced > 0) {
-      chrome.action.setBadgeText({ text: '' });
-    }
-  }, interval);
+  chrome.alarms.create(SYNC_ALARM, { periodInMinutes: Math.max(1, Math.round((interval || 300000) / 60000)) });
 }
 
+chrome.alarms.onAlarm.addListener(async (alarm) => {
+  if (alarm.name !== SYNC_ALARM) return;
+  const result = await ActivitySync.sync();
+  if (result.success && result.synced > 0) {
+    chrome.action.setBadgeText({ text: '' });
+  }
+});
+
 function stopAutoSync() {
+  chrome.alarms.clear(SYNC_ALARM);
   if (syncInterval) {
     clearInterval(syncInterval);
     syncInterval = null;

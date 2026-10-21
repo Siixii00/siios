@@ -6,7 +6,7 @@ import { EMOJIS as STICKERS } from './shop.js';
 import { THEMES as CHAT_THEMES } from './chat-settings.js';
 import { pickFile, prepareImage, prepareVideo, prepareFile, getLocationMessage, openRecorderSheet, openAlbumPicker } from './chat-media.js';
 import { openImageGenerator, openVideoChoice, openMusicChoice, synthesizeSpeechForMessage } from './chat-synth.js';
-import { askForm } from '../../core/dialogs.js';
+import {askForm, askConfirm } from '../../core/dialogs.js';
 import { getBalance, charge, credit, formatMoney, WalletError } from '../../core/wallet.js';
 import { GIFTS, getInventoryCounts, consumeGift, addGift } from '../../core/gifts.js';
 import { openIconPicker, openSharePrompt, openPlaceSearch } from './chat-extras.js';
@@ -597,14 +597,14 @@ async function renderChat(params) {
     async function blockCharacter() {
         const left = blockedMinutesLeft();
         if (left > 0) {
-            if (!confirm('角色目前被封鎖中（還剩約 ' + left + ' 分鐘），要解除封鎖嗎？')) return;
+            if (!await askConfirm('角色目前被封鎖中（還剩約 ' + left + ' 分鐘），要解除封鎖嗎？')) return;
             await ChatsDB.update(chatId, { blocked_until: null });
             currentChat = await ChatsDB.getById(chatId);
             createToast('已解除封鎖');
             return;
         }
         const hours = 1;
-        if (!confirm('封鎖角色 ' + hours + ' 小時？封鎖期間角色不會回應。')) return;
+        if (!await askConfirm('封鎖角色 ' + hours + ' 小時？封鎖期間角色不會回應。')) return;
         await ChatsDB.update(chatId, { blocked_until: Date.now() + hours * 60 * 60 * 1000 });
         currentChat = await ChatsDB.getById(chatId);
         createToast('已封鎖角色 ' + hours + ' 小時');
@@ -616,7 +616,7 @@ async function renderChat(params) {
             createToast('沒有可清除的記憶');
             return;
         }
-        if (!confirm('確定要清除這個聊天室的 ' + memories.length + ' 則記憶？此操作無法復原。')) return;
+        if (!await askConfirm('確定要清除這個聊天室的 ' + memories.length + ' 則記憶？此操作無法復原。')) return;
         for (const m of memories) {
             await MemoryDB.delete(m.id);
         }
@@ -746,7 +746,7 @@ async function renderChat(params) {
                     { divider: true },
                     { icon: 'block', label: '封鎖角色', danger: true, onClick: blockCharacter },
                     { icon: 'delete', label: '清空聊天', danger: true, onClick: async () => {
-                        if (!confirm('確定要清空這個聊天室的所有訊息？此操作無法復原。')) return;
+                        if (!await askConfirm('確定要清空這個聊天室的所有訊息？此操作無法復原。')) return;
                         await MessagesDB.clearByChatId(chatId);
                         createToast('聊天記錄已清空');
                         Router.navigate('/chats');

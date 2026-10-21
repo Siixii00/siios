@@ -32,7 +32,7 @@
     letter-spacing: 0.2px;
 }
 
-.icon-btn {
+:where(body[data-app="music"]) .icon-btn {
     border: 1px solid var(--music-border);
     border-radius: 50%;
     width: 36px;
@@ -57,7 +57,7 @@
     display: none;
 }
 
-.card {
+:where(body[data-app="music"]) .card {
     flex-shrink: 0;
     width: 100%;
     max-width: 100%;
@@ -70,12 +70,12 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
 }
 
-.card h2 {
+:where(body[data-app="music"]) .card h2 {
     font-size: 15px;
     margin-bottom: 8px;
 }
 
-.hint {
+:where(body[data-app="music"]) .hint {
     color: var(--music-muted);
     font-size: 12px;
     margin-bottom: 10px;
@@ -124,7 +124,7 @@
     font-size: 12px;
 }
 
-.char-desc {
+:where(body[data-app="music"]) .char-desc {
     color: #b5c4dc;
     font-size: 13px;
     margin-bottom: 8px;
@@ -371,7 +371,7 @@
     font-size: 11px;
 }
 
-.ai-btn {
+:where(body[data-app="music"]) .ai-btn {
     width: 100%;
     border: none;
     border-radius: 8px;
@@ -384,7 +384,7 @@
     transition: transform 0.15s, box-shadow 0.15s;
 }
 
-.ai-btn:hover {
+:where(body[data-app="music"]) .ai-btn:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
 }

@@ -89,7 +89,7 @@
     color: #7de7ff;
 }
 
-.icon-btn {
+:where(body[data-app="phone"]) .icon-btn {
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: rgba(255, 255, 255, 0.05);
     color: inherit;
@@ -100,17 +100,17 @@
     transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.icon-btn[aria-pressed="true"] {
+:where(body[data-app="phone"]) .icon-btn[aria-pressed="true"] {
     border-color: rgba(255, 99, 132, 0.6);
     color: #ff8fb3;
 }
 
-.icon-btn:hover {
+:where(body[data-app="phone"]) .icon-btn:hover {
     border-color: rgba(255, 255, 255, 0.5);
     transform: translateY(-1px);
 }
 
-.ghost-btn {
+:where(body[data-app="phone"]) .ghost-btn {
     border: 1px solid rgba(255, 255, 255, 0.14);
     background: transparent;
     color: inherit;
@@ -258,7 +258,7 @@
     font-size: 13px;
 }
 
-.history-list {
+:where(body[data-app="phone"]) .history-list {
     list-style: none;
     padding: 0;
     margin: 18px 0 0;
@@ -271,7 +271,7 @@
     scrollbar-width: none;
 }
 
-.history-list::-webkit-scrollbar {
+:where(body[data-app="phone"]) .history-list::-webkit-scrollbar {
     display: none;
 }
 
@@ -283,7 +283,7 @@
     opacity: 0.6;
 }
 
-.history-item {
+:where(body[data-app="phone"]) .history-item {
     border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     padding: 12px 14px;

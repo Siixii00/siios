@@ -1,5 +1,5 @@
 .gift-shop-app { --gift-bg: #fce4ec; --gift-card: #fff; --gift-text: #880e4f; --gift-muted: #ad1457; --gift-accent: #ec407a; }
-.gift-shop-app .page { background: var(--gift-bg); min-height: calc(100vh - 96px); padding: 16px; }
+:where(body[data-app="gift-shop"]) .gift-shop-app .page { background: var(--gift-bg); min-height: calc(100vh - 96px); padding: 16px; }
 .shop-section, .inventory-section { margin-bottom: 20px; }
 .shop-section h2, .inventory-section h2 { font-size: 16px; color: var(--gift-text); margin-bottom: 12px; }
 .gift-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }

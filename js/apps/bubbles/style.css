@@ -7,7 +7,7 @@
   --bubble-accent: #7f73ff;
 }
 
-.bubbles-app .page {
+:where(body[data-app="bubbles"]) .bubbles-app .page {
   background: var(--bubble-bg);
   min-height: calc(100vh - 96px);
   display: flex;
@@ -120,7 +120,7 @@
   margin-bottom: 4px;
 }
 
-.empty-msg {
+:where(body[data-app="bubbles"]) .empty-msg {
   text-align: center;
   color: var(--bubble-muted);
   padding: 40px 20px;
@@ -148,7 +148,7 @@
   outline: none;
 }
 
-.send-btn {
+:where(body[data-app="bubbles"]) .send-btn {
   width: 44px;
   height: 44px;
   background: var(--bubble-primary);
@@ -162,6 +162,6 @@
   justify-content: center;
 }
 
-.send-btn:hover {
+:where(body[data-app="bubbles"]) .send-btn:hover {
   background: var(--bubble-accent);
 }

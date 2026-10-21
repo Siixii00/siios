@@ -31,10 +31,12 @@ async function saveInteractionMemory(options) {
         theaterIds = [],
         isFiction = false,
         fictionContext = null,
-        importance = 0.5
+        importance = 0.5,
+        shared = false
     } = options;
 
-    if (!characterId) {
+    // shared：使用者自己做的事，所有角色都看得到（沒有特定角色）
+    if (!characterId && !shared) {
         console.warn('[MemorySaver] No characterId provided, skipping memory save');
         return null;
     }
@@ -63,6 +65,7 @@ async function saveInteractionMemory(options) {
             theater_ids: theaterIds,
             is_fiction: isFiction,
             fiction_context: fictionContext,
+            ...(shared ? { shared: true } : {}),
             // Importance
             importance: importance,
             memory_type: 'dynamic'

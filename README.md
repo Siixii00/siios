@@ -1,305 +1,264 @@
-# Siios - AI 角色互動 PWA 平台
+# Siios — AI 角色互動 PWA
 
-一個以 AI 角色互動為核心的漸進式網頁應用（PWA），整合記憶系統、世界觀管理、跨裝置同步等多種功能。
+一個以 **AI 角色** 為核心的手機風格網頁應用（PWA）：跟角色聊天、一起玩遊戲與逛各種「虛擬 App」，角色會記得你們做過的事。
 
-## 核心功能
+資料全部存在你自己的瀏覽器（IndexedDB）。需要伺服器的功能（工具、語音／圖片生成、Discord 機器人…）都是**跑在你自己的 Cloudflare 帳號**，大多可以用免費額度。
 
-### AI 聊天系統
-- **角色對話**：支援單人與群組對話（2-4 角色）
-- **記憶系統**：AI 角色具備持久記憶，支援語意搜尋、記憶衰減與強化
-- **世界觀（World Info）**：角色知識庫系統，為角色扮演提供上下文
-- **MCP 整合**：支援 Model Context Protocol 工具調用
-
-### 活動同步系統
-- **瀏覽器擴充功能**：自動監聯 Twitter、Instagram、YouTube、Facebook 活動
-- **隱私控制**：可調整隱私等級，用戶完全掌控
-- **跨裝置同步**：透過 GitHub Gist 實現電腦與手機間的加密同步
-
-### 其他功能模組
-
-| 模組 | 說明 |
-|------|------|
-| Bilibili | B 站影片瀏覽與播放 |
-| Twitter/X | Twitter 模擬介面 |
-| Lofter | Lofter 社群瀏覽 |
-| Weverse | Weverse 粉絲社群 |
-| Instagram | Instagram 介面 |
-| AO3 | Archive of Our Own 瀏覽 |
-| Theater | 劇場模式 - 故事創作與管理 |
-| Dating | 約會模擬 |
-| Drift Bottle | 漂流瓶功能 |
-| Bubbles | 氣泡對話 |
-| Health | 健康追蹤（生理週期、用藥提醒） |
+> 目錄：[功能](#功能) · [快速開始](#快速開始) · [第一次設定](#第一次設定) · [記憶系統](#記憶系統) · [部署各項服務](#部署各項服務) · [跨裝置活動同步](#跨裝置活動同步與瀏覽器擴充功能) · [備份](#備份與還原) · [隱私與安全](#隱私與安全) · [疑難排解](#疑難排解) · [開發](#開發)
 
 ---
 
-## 技術棧
+## 功能
 
-| 層級 | 技術 |
-|------|------|
-| 前端 | 純 JavaScript (ES6+)，無框架 |
-| 樣式 | Tailwind CSS (CDN)、自訂主題 |
-| 資料儲存 | IndexedDB (idb v8) |
-| 離線支援 | Service Worker (v36) |
-| 後端服務 | Cloudflare Workers |
-| 雲端儲存 | GitHub Gist (AES-256-GCM 加密) |
-| 圖示 | Material Symbols、Font Awesome 6.5.1 |
+**聊天與角色**
+- 單人／群組聊天（串流回應）、角色與使用者面具、世界書（World Info）、回應模式（完整／單句／多句／自訂）
+- 傳送貼圖、圖片、影片、語音、檔案、位置、禮物、轉帳；語音辨識、文字轉語音、圖片／影片／音樂生成
+- 思維鏈與心聲（事後推想）、聊天總結、每日紀錄、匯出聊天記錄
 
----
+**記憶**：角色有持久記憶（感官、情緒、時空標記、遺忘曲線、語意搜尋）。你在各個 App 做的事也會被記住。見 [記憶系統](#記憶系統)。
 
-## 專案結構
+**App（約 50 個）**
 
-```
-siios/
-├── index.html              # 主入口
-├── manifest.json           # PWA manifest
-├── sw.js                   # Service Worker
-│
-├── js/
-│   ├── app.js              # 主應用初始化
-│   ├── router.js           # Hash 路由系統
-│   ├── api.js              # LLM 串流 API 客戶端
-│   ├── db.js               # IndexedDB 封裝
-│   ├── components.js       # UI 元件庫
-│   ├── lockscreen.js       # 鎖定畫面
-│   ├── homescreen.js       # 主畫面
-│   │
-│   ├── apps/               # 功能模組 (45+)
-│   │   ├── chats/          # AI 聊天系統
-│   │   ├── bilibili/       # B 站模組
-│   │   ├── twitter/        # Twitter 模組
-│   │   ├── theater/        # 劇場模式
-│   │   ├── settings/       # 設定模組
-│   │   ├── health/         # 健康追蹤
-│   │   └── ...             # 其他模組
-│   │
-│   └── core/
-│       ├── memory-system/  # 記憶管理系統
-│       ├── embedding/      # 向量嵌入客戶端
-│       ├── cross-device/   # 跨裝置同步
-│       └── mcp-intelligence/  # MCP 工具整合
-│
-├── css/
-│   ├── shared.css          # 共用樣式
-│   ├── ios.css             # iOS 風格
-│   ├── kakao.css           # KakaoTalk 主題
-│   └── notion-tokens.css   # Notion 風格
-│
-├── worldbook/              # 角色知識庫 (40+ JSON)
-│
-├── bilibili-worker/        # Cloudflare Worker
-│   ├── package.json
-│   └── src/index.js
-│
-├── activity-extension/     # 瀏覽器擴充功能
-│   ├── manifest.json
-│   └── src/
-│       ├── background/     # 背景服務
-│       ├── detectors/      # 平台檢測器
-│       └── popup/          # 彈出視窗
-│
-└── data/                   # 靜態資料
-    ├── bilibili_videos.json
-    └── bilibili_live.json
-```
+| 類型 | App |
+|---|---|
+| 生活 | 相簿、天氣、音樂、番茄鐘、時間樹、交換日記、電話、健康（經期紀錄與關心）、每日食譜、照相館 |
+| 遊戲 | 街機廳（2048、貪吃蛇、記憶翻牌、踩地雷，皆有關卡）、消消樂、農場、宅家、酒館、投資模擬器（每天依真實世界事件波動）、約會、劇場 |
+| 社群 | Instagram、Facebook、Twitter、YouTube、Bilibili、Twitch、Weverse、Lofter、AO3、漂流瓶、Bubble |
+| 購物與支付 | 購物、外送、禮物／表情／主題商店、虛擬錢包（餘額自己調整，不涉及真實金流） |
+| 工具 | 角色 Wiki（可同步 Notion）、MCP 工具、輔助觸控、小工具、外觀設定、谷子圖鑑、Passkey、付款碼 |
+
+**其他**：未成年鎖定（出生日期未滿 18 歲時，部分內容鎖起來，滿 18 歲當天自動開放）、離線可用（Service Worker）、本機／GitHub／Google Drive 備份、跨裝置活動同步、Discord 機器人。
 
 ---
 
 ## 快速開始
 
-### 本地運行
+### 直接使用
+開啟部署好的網址（GitHub Pages）。手機瀏覽器選「加入主畫面」就是 App。
+
+### 自己部署 PWA（GitHub Pages）
+1. Fork 這個 repo，**repo 名稱保持 `siios`**（程式裡的資源路徑是 `/siios/…`）。
+2. Settings → Pages → Branch 選 `main` / root。
+3. 網址會是 `https://<你的帳號>.github.io/siios/`。
+4. （選用）Actions 頁籤啟用 workflow，會每小時更新 Bilibili 與 Twitter 的內容快取（`data/`）。
+
+### 本機執行
+資源路徑固定是 `/siios/`，所以要從**上一層**資料夾提供服務：
 
 ```bash
-npx serve .
-# 或
-python -m http.server 8000
+# repo 放在名為 siios 的資料夾裡
+cd ..                      # 回到 siios 的上一層
+npx serve .                # 然後開 http://localhost:3000/siios/
 ```
 
-### 設定 API
+---
 
-1. 開啟應用程式
-2. 前往「設定」→「API 設定」
-3. 輸入：
-   - API URL（OpenAI 相容端點）
-   - API Key
-   - 模型名稱
+## 第一次設定
+
+1. **設定 → 聊天 API 串接**：填 API 網址（OpenAI 相容服務的網址，例如 `https://api.openai.com`，**不用加 `/v1`**）、API Key、模型名稱。
+2. **角色**：設定 → Char 設定 → 新增角色（也可以在聊天室新增）。
+3. **（建議）使用者面具**：設定 → User 面具設定；角色會依面具稱呼你。
+4. **（建議）啟用記憶系統**與**嵌入模型**：見下面。
+5. 出生日期（第一次開啟時會問）只存在這台裝置上。
+
+### 嵌入模型（讓記憶有「語意搜尋」）
+
+沒設定嵌入模型也能用，記憶會改用**關鍵字**比對。設定後，角色可以想起「換個說法」的往事（例如你說「看大海」，它想起「去海灘看日出」）。
+
+**設定 → 聊天 API 串接 → 嵌入模型設定**，選一個免費服務捷徑（會自動填網址與模型），貼上 API Key，按「測試嵌入模型」確認成功，再按「儲存設定」。
+
+| 服務 | 說明 | API Key 從哪取得 |
+|---|---|---|
+| **Cloudflare Workers AI（用你自己的 Worker，最推薦）** | 多語言（含中文）效果好，免費額度每天 10,000 neurons，不需信用卡。需先部署 [合成服務 Worker](#合成服務-synth-worker) | 該 Worker 的 `SYNTH_TOKEN` |
+| Google Gemini | 有免費額度（有每分鐘／每日限制），多語言 | [Google AI Studio](https://aistudio.google.com/apikey) |
+| Jina AI | 註冊即有免費額度，中文好 | [jina.ai/embeddings](https://jina.ai/embeddings/) |
+| SiliconFlow | `BAAI/bge-m3` 為免費模型 | [siliconflow.com](https://siliconflow.com/) |
+| Mistral | 免費 Experiment 方案，有速率限制 | [console.mistral.ai](https://console.mistral.ai/api-keys) |
+| Voyage AI | 新帳號有大量免費 token | [dashboard.voyageai.com](https://dashboard.voyageai.com/) |
+| Ollama（本機） | 完全免費，要在自己電腦跑；手機不能用 | `ollama pull bge-m3`，並設定環境變數 `OLLAMA_ORIGINS=*` |
+
+> 免費額度與限制以各服務官方目前的方案為準。以上服務都已確認允許瀏覽器直接呼叫（CORS）。
+> 嵌入網址可填服務根網址、`…/v1`，或完整的 `…/embeddings`。連續失敗 3 次會暫停 5 分鐘並退回關鍵字搜尋，不會影響聊天。
+> 換嵌入模型後，舊記憶的向量維度不同、不會被語意搜尋用到（仍可用關鍵字找到），新記憶會用新模型。
 
 ---
 
 ## 記憶系統
 
-AI 角色的記憶系統具備以下功能：
+**寫進記憶的來源**
+- **聊天**：每累積 10 則訊息，把最近 10 則（太短的不算）整理成記憶：分類（類型、領域、重要性）、感官／情緒／時空標記、向量。重複的內容不會重複存。
+- **各個 App**：Facebook、Instagram、酒館、農場、宅家、投資、約會、劇場、YouTube…都會記下你和角色一起做的事。
+- **你自己做的事（所有 App）**：買東西、外送、送禮、玩遊戲過關、新增行程、寫交換日記、相簿新增照片、打電話、收藏食譜與谷子…會記成「共用記憶」，**每個角色都看得到**。
+- **Discord**：機器人整理出來的事實，會同步回 PWA；PWA 的記憶也會同步給機器人（見 [Discord 機器人](#discord-機器人)）。
+- 最近的**網路活動**（來自瀏覽器擴充功能／其他裝置）只有在「設定 → 活動同步」開啟、並打開「允許 AI 角色存取」時，才會依隱私等級以摘要形式提供給角色，角色只會在自然的時候提起。
 
-| 功能 | 說明 |
-|------|------|
-| 感官提取 | 提取視覺、聽覺、嗅覺、觸覺、味覺細節 |
-| 情緒標記 | 價值/喚醒度評分 |
-| 時空標記 | 地點、環境、上下文 |
-| 衰減引擎 | 基於時間的記憶淡化 |
-| 睡眠引擎 | 閒置時的記憶整合 |
-| 向量搜尋 | 透過嵌入進行語意檢索 |
+**怎麼想起來**：每次回覆前，用你這句話去找最相關的 5 筆記憶（有嵌入模型就用語意搜尋，沒有就用相鄰兩字的關鍵字比對，兩者可並用），依「相似度 × 衰減 × 重要性」排序，放進提示詞，並標示來源（例如「（YouTube）…」）。
 
-記憶類型：動態、情節、語意、程序
+**設定 → 記憶設定**：選擇哪些來源的記憶可以被想起、是否包含虛構內容（劇場、同人）、綁定劇場。聊天室與所有 App 都遵守這份設定。
 
----
-
-## 世界觀（World Info）
-
-為角色扮演提供背景知識：
-
-- 優先級插入（前/中/後）
-- 關鍵字與語意匹配
-- 角色專屬過濾
-- 禁止內容處理
+**遺忘**：記憶隨時間淡化（衰減率在 API 設定頁），重要性越高越慢；每晚的「睡眠週期」（或在聊天室手動執行）會整理記憶，淡到很低的才會被刪除。**永久記憶、重要性 ≥ 0.8、建立不到 7 天的記憶不會被遺忘**。常被想起的記憶會被強化。
 
 ---
 
-## 活動同步設定
+## 部署各項服務
 
-### 1. 啟用活動同步
-
-1. 前往「設定」→「活動同步」
-2. 開啟「活動同步」
-3. 選擇隱私等級：
-   - **基本統計**：僅記錄平台、活動類型、時間
-   - **包含摘要**：額外記錄活動對象、標題
-   - **詳細資訊**：包含通知內容摘要
-4. 設定資料保留期限（7-90 天）
-
-### 2. 安裝瀏覽器擴充功能
-
-**Chrome / Edge**
-1. 開啟 `chrome://extensions/` 或 `edge://extensions/`
-2. 開啟「開發人員模式」
-3. 點擊「載入已解壓縮的擴充功能」
-4. 選擇 `activity-extension` 資料夾
-
-### 3. 跨裝置同步
-
-使用 GitHub Gist 實現加密同步：
-
-1. 建立 GitHub Token（僅需 `gist` 權限）
-2. 在電腦端設定並備份加密金鑰
-3. 在手機端輸入相同的 Token 與金鑰
-
-**安全機制**：AES-256-GCM 端對端加密，金鑰永不上傳
-
----
-
-## B 站影片播放
-
-### 架構
-
-```
-PWA 前端 → Cloudflare Worker → B 站 API
-         (QR 登入、Cookie 儲存)
-```
-
-### 部署 Worker
+所有服務都跑在**你自己的 Cloudflare 帳號**（免費方案即可）。共同的準備：
 
 ```bash
-# 安裝 Wrangler
-npm install -g wrangler
-
-# 登入
-wrangler login
-
-# 建立 KV Namespace（名稱：BILIBILI_KV）
-# 在 Cloudflare Dashboard 操作
-
-# 更新 wrangler.toml 中的 KV ID
-
-# 部署
-cd bilibili-worker
-wrangler deploy
+npm install -g wrangler        # 或之後都用 npx wrangler
+npx wrangler login
 ```
 
-### API 端點
+| 服務 | 資料夾 | 用途 | 需要 |
+|---|---|---|---|
+| MCP 工具 Worker | `mcp-worker/` | 天氣、食譜、動漫、遊戲價格、翻譯、維基 | `MCP_API_KEY` |
+| 紫微斗數 MCP | `ziwei-mcp-server/` | 紫微斗數排盤 | 無（可直接用公用服務） |
+| 合成服務 | `synth-worker/` | 語音、圖片、語音辨識、**免費嵌入模型**（影片／音樂需付費服務） | `SYNTH_TOKEN` |
+| Discord 機器人 | `discord-worker/` | 讓角色在 Discord 上說話 | Discord Bot Token、D1 資料庫 |
+| Bilibili Worker（選用） | `bilibili-worker/` | 掃碼登入、影片資訊（Bilibili 會擋 Cloudflare，只是輔助；播放不需要它） | KV |
 
-| 端點 | 方法 | 說明 |
-|------|------|------|
-| `/api/bilibili/auth/login` | POST | 生成 QR code |
-| `/api/bilibili/auth/poll` | GET | 輪詢登入狀態 |
-| `/api/bilibili/auth/status` | GET | 檢查登入狀態 |
-| `/api/bilibili/video/info` | GET | 獲取影片資訊 |
-| `/api/bilibili/video/playurl` | GET | 獲取播放地址 |
-
----
-
-## 活動同步 API
-
-| 端點 | 方法 | 說明 |
-|------|------|------|
-| `/api/activities/sync` | POST | 同步活動記錄 |
-| `/api/activities/sync` | GET | 獲取活動列表 |
-| `/api/activities/sources` | GET/POST | 裝置來源管理 |
-| `/api/activities/settings` | GET/POST | 隱私設定 |
-| `/api/activities/stats` | GET | 統計資訊 |
-
----
-
-## MCP 整合
-
-### Worker vs MCP 選擇
-
-| 需求 | 推薦方案 |
-|------|---------|
-| 網頁前端調用 API | Cloudflare Worker |
-| AI 助手查詢資料 | MCP |
-| 持久化儲存 | Worker + KV |
-| 定時任務 | Worker + Cron Triggers |
-
-### 配置 MCP
-
-在 `.kilo/kilo.json` 中加入：
-
-```json
-{
-  "mcps": {
-    "filesystem": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path"]
-    },
-    "github": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-github"],
-      "env": { "GITHUB_TOKEN": "ghp_xxx" }
-    }
-  }
-}
-```
-
----
-
-## 測試
-
-專案使用手動測試，測試檔案：
-
-- `tests/test-scroll.html`
-- `tests/test-bilibili-api.html`
-- `tests/test-cors.html`
-- `tests/test-error.html`
-- `tests/test-mcp-workers.html`
-
----
-
-## 開發指令
+### MCP 工具 Worker
+MCP（Model Context Protocol）讓角色在聊天時呼叫外部工具（查天氣、翻譯…）。
 
 ```bash
-# 本地運行
-npx serve .
-
-# 測試 Worker
-cd bilibili-worker && wrangler dev
-
-# 查看 Worker 日誌
-wrangler tail
-
-# 部署 Worker
-cd bilibili-worker && wrangler deploy
+cd mcp-worker
+npm install
+npx wrangler secret put MCP_API_KEY     # 必填：自己產生一組長亂數
+npm run deploy
 ```
+部署後會得到 `https://siios-mcp-worker.<你的子網域>.workers.dev`。到 PWA：**設定 → MCP 工具整合 → 新增 MCP 伺服器**，填 Worker 網址與 `MCP_API_KEY`（填在 API Key 欄位），再到角色設定裡啟用想用的工具。
+
+沒設定 `MCP_API_KEY` 時 Worker 會拒絕所有請求（避免別人知道網址就能用）。想要更多／自訂的工具：**神秘門**（MCP 市集）可以勾選工具並產生 Worker 程式碼，部署方式相同。
+
+### 紫微斗數 MCP
+PWA 預設使用公用的紫微斗數服務（只做排盤計算，不儲存資料）。想自己部署：
+
+```bash
+cd ziwei-mcp-server
+npm install
+npm run deploy                 # 得到 https://ziwei-mcp-server.<子網域>.workers.dev
+```
+到 PWA：**設定 → MCP 工具整合 → 紫微斗數服務網址** 填入你的網址。（排盤引擎以 iztro 交叉驗證，`npm test` 可執行測試。）
+
+### 合成服務 (synth-worker)
+語音合成（TTS）、圖片生成、語音辨識，以及**OpenAI 相容的 `/v1/embeddings`（免費嵌入模型，預設 `bge-m3`）**。
+
+```bash
+cd synth-worker
+npx wrangler secret put SYNTH_TOKEN     # 必填：自己產生一組長亂數
+npx wrangler secret put HF_TOKEN        # 選填：Hugging Face token
+npx wrangler deploy
+```
+然後：
+- **設定 → 合成服務**：填 Worker 網址與 `SYNTH_TOKEN`。
+- 嵌入模型：**設定 → 聊天 API 串接 → 嵌入模型設定**，選「Cloudflare Workers AI（用你自己的 Worker）」，會自動帶入網址與 Token。
+
+Workers AI 免費額度每天 10,000 neurons（UTC 午夜重置），用完請求會失敗、不會扣費。影片、音樂生成沒有免費路徑，可在合成服務設定改用付費服務（填你自己的金鑰）。詳見 `synth-worker/README.md`。
+
+### Discord 機器人
+讓角色在 Discord 的頻道與私訊裡說話，對話與記憶會和 PWA 同步。**完整的圖文步驟在 PWA 裡：設定 → Discord 整合 → 「第一次使用？Worker 部署教學」**（可一鍵複製 Worker 程式碼，全程網頁操作、不用裝任何東西）。
+
+用 wrangler 部署（進階）：
+
+```bash
+npx wrangler d1 create siios-discord-db           # 記下 database_id
+```
+編輯 `discord-worker/wrangler.toml`：`database_id` 換成你的，並加上排程：
+
+```toml
+[triggers]
+crons = ["*/2 * * * *"]
+```
+```bash
+cd discord-worker
+npx wrangler secret put DISCORD_BOT_TOKEN
+npx wrangler secret put DISCORD_APPLICATION_ID
+npx wrangler deploy --keep-vars
+```
+Cloudflare 後台 → Worker → Settings → Variables 新增文字變數 `DISCORD_PUBLIC_KEY`。然後：
+1. 開啟 `https://<你的worker>/setup` 註冊斜線指令。
+2. Discord Developer Portal → **Interactions Endpoint URL** 填 `https://<你的worker>/discord/webhook`；Bot 頁開啟 **MESSAGE CONTENT INTENT**。
+3. 在 Discord 用 `/configure` 設定 `API URL`、`API Key`、`Model`（也可設定回應模式 `Response Mode`）。
+4. 把頻道綁定到角色：PWA 角色設定啟用 Discord 並填頻道 ID，再到 **設定 → Discord 整合** 按「同步角色資料到 Worker」；或在 Discord 用 `/channel bind`。
+
+資料表會在第一次請求時**自動建立**。更新 Worker 時重新貼上／部署最新的 `scripts/discord-bot-worker.js`，「測試連接」會提醒你版本是否過舊。
+
+常用指令（只有伺服器管理員看得到）：`/configure`、`/config`（含最近被模型拒絕的紀錄）、`/channel`、`/reroll`、`/clear`（只清對話／全部清除／只刪罐頭與錯誤訊息／只刪最近幾則回覆）、`/backup`。
+
+**回應模式**（`/configure key:Response Mode`）：`discord`（預設，輕鬆聊天、短句）、`full`（完整描寫）、`dialogue_single`、`dialogue_multi`、`custom`（用 `Custom Response Prompt` 自訂）。
+
+### Bilibili（選用）
+影片用官方嵌入播放器播放，**不需要**登入或 Worker。Worker 只用在選用的影片資訊與 QR 登入；Bilibili 對 Cloudflare 的 IP 一律回 412，所以這部分效果有限。推薦／熱門清單來自 GitHub Actions 產生的 `data/bilibili_*.json`。部署（選用）見 `bilibili-worker/README.md`。
 
 ---
+
+## 跨裝置活動同步與瀏覽器擴充功能
+
+把電腦與手機瀏覽器上的活動（YouTube、Twitter、Instagram、Facebook…）同步到 PWA，讓角色「知道你最近在看什麼」。資料先**端對端加密**（AES-256-GCM）再放進你自己 GitHub 帳號的私人 Gist，金鑰不會上傳。
+
+**第一台裝置（建立）**
+1. 建立 GitHub Token：<https://github.com/settings/tokens/new>（classic，只勾 **gist**）。
+2. PWA：**設定 → 跨裝置同步 → 啟用**，貼上 Token。
+3. 馬上**備份「加密金鑰」**，並到同一頁複製 **Gist ID**（之後也隨時看得到）。
+
+**另一台裝置（加入）**：同一頁選「已經在另一台裝置啟用過了？加入既有的同步」，填 Token（同一個 GitHub 帳號）、Gist ID、加密金鑰。加入後停用只會解除自己這台，不會刪掉雲端資料。
+
+**打開 PWA 時會自動同步**（啟動後同步一次；自動同步間隔可在該頁設定）。
+
+**瀏覽器擴充功能（Chrome／Edge）**
+1. `chrome://extensions/` → 開啟「開發人員模式」→「載入未封裝項目」→ 選 `activity-extension/`。
+2. 擴充功能「設定」填入：GitHub Token、Gist ID、加密金鑰（和 PWA 相同），選隱私等級與要記錄的平台。
+3. 啟用後，擴充功能會把活動合併進同一個 Gist；PWA 同步時就會收到。
+
+**隱私等級**（**設定 → 活動同步**）：基本（只有平台與次數）、摘要（加上標題）、詳細（再加內容片段）。角色看到的內容不會超過你選的等級，也只包含你沒有關掉的平台；要打開同一頁的「允許 AI 角色存取」，角色才看得到這些活動。
+
+---
+
+## 備份與還原
+
+**設定 → 資料備份與還原**：
+- 本機：匯出／匯入 JSON 檔。
+- GitHub：自動建立私人 repo `siios-backup`，存成 `siios-backup.json`（需要有 `repo` 權限的 Token）。
+- Google Drive。
+- 可設定自動備份間隔。
+
+備份包含聊天、角色、記憶、設定等；**備份檔內含你的 API 金鑰與各種 Token**，請妥善保管。還原是「合併」不是覆蓋；出生日期以這台裝置填的為準（還原不會改它，避免繞過年齡確認）。
+
+---
+
+## 隱私與安全
+
+- 聊天、記憶、設定都存在你的瀏覽器裡；只有你設定的 AI 服務、Worker 與（選用的）GitHub／Google 會收到相關資料。
+- 各 Worker 的金鑰（`MCP_API_KEY`、`SYNTH_TOKEN`、Discord Token）存在 Cloudflare 的 Secrets，不要放進程式碼或貼到公開地方。
+- **請不要公開 Discord Worker 的網址**：PWA 與 Worker 之間的同步介面靠網址不被知道，沒有額外驗證。
+- 年齡確認只存在本機；未滿 18 歲時，成人內容會鎖起來。
+
+---
+
+## 疑難排解
+
+| 狀況 | 處理 |
+|---|---|
+| 圖示變成一串英文字 | 圖示字型沒載入：確認網路後重新整理。已使用過的 App 之後離線也能顯示（Service Worker 會快取字型與程式碼） |
+| 更新後畫面沒變 | 重新整理一次；PWA 用 Service Worker，新版會在下次開啟時生效 |
+| 角色沒有想起舊的事 | 設定 → 記憶設定確認來源有勾；沒設嵌入模型時只有關鍵字比對（相鄰兩字要有重疊） |
+| 嵌入測試失敗 | 看測試顯示的原因：網址／模型名稱／金鑰；Gemini 要填完整的 `…/openai/embeddings` 網址 |
+| Discord 機器人不回覆 | 見 PWA 內 Discord 教學的「常見問題」：Cron、MESSAGE CONTENT INTENT、頻道綁定 |
+| 模型常常拒絕回覆 | 多半是 AI 服務自己的內容過濾，`/config` 可看最近被拒絕的紀錄；機器人會自動換亂數種子並精簡上下文重試 |
+
+---
+
+## 開發
+
+```bash
+npm test                              # Node 22.5 以上（單元測試用到 node:sqlite）
+node scripts/update-sw-assets.mjs     # 新增／移除 js、css 檔案後，更新離線快取清單
+```
+
+- 純 JavaScript（ES modules），沒有建置步驟；IndexedDB（idb）、Material Symbols、Font Awesome 從 CDN 載入並由 Service Worker 快取。
+- 修改 `sw.js` 或任何會被快取的檔案後，請把 `sw.js` 的 `CACHE_NAME` 版本加一。
+- `scripts/discord-bot-worker.js` 是單一檔案（貼到 Cloudflare 用）；裡面的 `WORKER_VERSION` 要和 `js/apps/settings/discord-guide-data.js` 的 `EXPECTED_WORKER_VERSION` 一致（測試會檢查）。
+- 專案結構：`js/apps/*` 各 App、`js/core/*` 共用核心（記憶系統、同步、錢包…）、`worldbook/` 內建世界書、`*-worker/` 各 Worker、`activity-extension/` 瀏覽器擴充功能、`tests/unit/` 單元測試、`docs/` 設計與流程文件。
 
 ## 授權
 

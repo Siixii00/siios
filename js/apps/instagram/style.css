@@ -60,7 +60,7 @@
     transform: translateX(-50%);
 }
 
-.icon-btn {
+:where(body[data-app="instagram"]) .icon-btn {
     width: 36px;
     height: 36px;
     border-radius: 50%;
@@ -73,11 +73,11 @@
     position: relative;
 }
 
-.icon-btn:active {
+:where(body[data-app="instagram"]) .icon-btn:active {
     transform: scale(0.96);
 }
 
-.header-actions {
+:where(body[data-app="instagram"]) .header-actions {
     display: flex;
     gap: 8px;
     align-items: center;
@@ -102,7 +102,7 @@
     padding-right: 16px;
 }
 
-.story {
+:where(body[data-app="instagram"]) .story {
     border: none;
     background: transparent;
     display: flex;
@@ -113,7 +113,7 @@
     cursor: pointer;
 }
 
-.story .avatar {
+:where(body[data-app="instagram"]) .story .avatar {
     width: 62px;
     height: 62px;
     border-radius: 50%;
@@ -124,8 +124,8 @@
     justify-content: center;
 }
 
-.story .avatar img,
-.story .avatar div {
+:where(body[data-app="instagram"]) .story .avatar img,
+:where(body[data-app="instagram"]) .story .avatar div {
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -137,21 +137,21 @@
     color: var(--accent);
 }
 
-.story span {
+:where(body[data-app="instagram"]) .story span {
     font-size: 12px;
     color: rgba(255, 255, 255, 0.78);
 }
 
-.story.camera .avatar {
+:where(body[data-app="instagram"]) .story.camera .avatar {
     background: rgba(0, 0, 0, 0.08);
     padding: 0;
 }
 
-.feed {
+:where(body[data-app="instagram"]) .feed {
     padding: 10px 0 80px;
 }
 
-.post {
+:where(body[data-app="instagram"]) .post {
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 16px;
@@ -233,14 +233,14 @@
     100% { opacity: 0; transform: translate(-50%, -50%) scale(1.6); }
 }
 
-.post-actions {
+:where(body[data-app="instagram"]) .post-actions {
     display: flex;
     justify-content: space-between;
     padding: 10px 16px;
     font-size: 20px;
 }
 
-.post-actions button {
+:where(body[data-app="instagram"]) .post-actions button {
     border: none;
     background: transparent;
     font-size: 22px;
@@ -267,7 +267,7 @@
     color: rgba(255, 255, 255, 0.58);
 }
 
-.bottom-nav {
+:where(body[data-app="instagram"]) .bottom-nav {
     border-top: 1px solid var(--ig-border);
     display: flex;
     justify-content: space-around;
@@ -281,7 +281,7 @@
     margin: 0 auto;
 }
 
-.nav-btn {
+:where(body[data-app="instagram"]) .nav-btn {
     border: none;
     background: transparent;
     padding: 10px 0;
@@ -290,11 +290,11 @@
     position: relative;
 }
 
-.nav-btn.active {
+:where(body[data-app="instagram"]) .nav-btn.active {
     color: var(--ig-primary);
 }
 
-.nav-btn.active::after {
+:where(body[data-app="instagram"]) .nav-btn.active::after {
     content: '';
     position: absolute;
     bottom: 4px;
@@ -315,11 +315,11 @@
     display: inline-block;
 }
 
-.story.seen .avatar {
+:where(body[data-app="instagram"]) .story.seen .avatar {
     background: rgba(255, 255, 255, 0.3);
 }
 
-.story.seen span {
+:where(body[data-app="instagram"]) .story.seen span {
     color: rgba(255, 255, 255, 0.5);
 }
 
@@ -328,7 +328,7 @@
         gap: 8px;
     }
 
-    .post {
+    :where(body[data-app="instagram"]) .post {
         margin: 0 10px 16px;
     }
 }
@@ -350,7 +350,7 @@
 
 /* 商店 */
 .shop-wrap { padding: 12px; }
-.shop-balance { text-align: right; font-size: 12px; color: var(--ig-text-secondary); margin-bottom: 10px; }
+:where(body[data-app="instagram"]) .shop-balance { text-align: right; font-size: 12px; color: var(--ig-text-secondary); margin-bottom: 10px; }
 .shop-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 .shop-item { background: var(--ig-surface); border: 1px solid var(--ig-border); border-radius: 14px; padding: 14px; text-align: center; }
 .shop-image { font-size: 48px; margin-bottom: 8px; }

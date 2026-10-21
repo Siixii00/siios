@@ -1,6 +1,7 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 const HISTORY_KEY = 'phone_history';
 const RECORDINGS_KEY = 'voice_call_recordings';
@@ -165,6 +166,7 @@ async function simulateCall(container, options = {}) {
     };
     historyEntries = [entry, ...historyEntries].slice(0, 30);
     await saveHistory(historyEntries);
+    import('../../core/activity-memory.js').then(m => m.rememberActivity({ sourceApp: 'phone', content: `用戶打了一通 ${duration} 秒的電話給${contact?.name || '一位聯絡人'}`, importance: 0.3 })).catch(() => {});
     await addRecording({
         id: `rec-${Date.now()}`,
         charName: contact?.name || label,
@@ -198,6 +200,7 @@ async function simulateIncomingCall(container, caller) {
     };
     historyEntries = [entry, ...historyEntries].slice(0, 30);
     await saveHistory(historyEntries);
+    import('../../core/activity-memory.js').then(m => m.rememberActivity({ sourceApp: 'phone', content: `用戶接了${contact?.name || '一位聯絡人'}的來電，通話 ${duration} 秒`, importance: 0.3 })).catch(() => {});
     await addRecording({
         id: `rec-${Date.now()}`,
         charName: contact?.name || label,
@@ -427,7 +430,7 @@ async function renderRecordings(container) {
         deleteBtn.className = 'recording-delete';
         deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
         deleteBtn.addEventListener('click', async () => {
-            if (confirm('確定刪除此錄音？')) {
+            if (await askConfirm('確定刪除此錄音？')) {
                 await deleteRecording(rec.id);
                 renderRecordings(container);
             }
@@ -529,7 +532,7 @@ function bindEvents(container) {
         tab.addEventListener('click', () => switchTab(tab.dataset.tab, container));
     });
     container.querySelector('#clear-recordings')?.addEventListener('click', async () => {
-        if (confirm('確定清除所有錄音？此操作無法復原。')) {
+        if (await askConfirm('確定清除所有錄音？此操作無法復原。')) {
             await clearAllRecordings();
             renderRecordings(container);
             setStatus('已清除所有錄音', container);

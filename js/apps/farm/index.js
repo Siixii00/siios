@@ -5,6 +5,7 @@ import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { getBalance, charge, credit, formatMoney, WalletError } from '../../core/wallet.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 // 農場：場景式畫面（天空隨真實時間變化、斜角農田、作物分階段生長、牧場動物會走動）。
 // 規則：種植、澆水施肥、倉庫、每日行情與訂單、動物、等級與經驗；收益與開銷都走「支付」錢包。
@@ -364,7 +365,7 @@ async function renderFarm() {
       if (p && !p.fert) { await spend(FERT_PRICE, '購買肥料'); p.fert = true; p.cut = (p.cut || 0) + CROPS.find(c => c.id === p.cropId).time * FERT_CUT; }
       sheet = null;
     });
-    if (act === 'remove') return run(async () => { if (confirm('確定鏟除？')) { st.plots[sheet.idx] = null; sheet = null; } });
+    if (act === 'remove') return run(async () => { if (await askConfirm('確定鏟除？')) { st.plots[sheet.idx] = null; sheet = null; } });
     if (act === 'harvestall') return run(async () => {
       let n = 0;
       st.plots.forEach((p, k) => { if (harvestPlot(k, field.querySelector(`[data-i="${k}"]`))) n++; });
@@ -372,7 +373,7 @@ async function renderFarm() {
     });
     if (act === 'buyplot') return run(async () => {
       const price = plotPrice(st.plots.length + 1);
-      if (!confirm('花 ' + formatMoney(price) + ' 擴建一塊農地？')) return;
+      if (!await askConfirm('花 ' + formatMoney(price) + ' 擴建一塊農地？')) return;
       await spend(price, '擴建農地');
       st.plots.push(null);
     });

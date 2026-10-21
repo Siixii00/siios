@@ -1,6 +1,7 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 const ALBUM_KEY = 'sx_album_images';
 
@@ -43,6 +44,7 @@ async function addImage(dataUrl, source) {
     };
     allImages.unshift(record);
     await saveImages(allImages);
+    import('../../core/activity-memory.js').then(m => m.rememberActivity({ sourceApp: 'album', content: `用戶在相簿新增了一張照片（來源：${record.source}）`, importance: 0.3, dedupeMs: 60 * 1000 })).catch(() => {});
     return record;
 }
 
@@ -136,7 +138,7 @@ async function setAsLockscreen() {
 async function deleteCurrentImage(container) {
     const img = getCurrentViewerImage();
     if (!img) return;
-    if (!confirm('確定要刪除這張照片嗎？')) return;
+    if (!await askConfirm('確定要刪除這張照片嗎？')) return;
     await deleteImage(img.id);
     closeViewer(container);
     renderGallery(container);

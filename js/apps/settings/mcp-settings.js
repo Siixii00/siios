@@ -1,6 +1,7 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast, createKakaoBottomSheet } from '../../components.js';
-import { MCPConfigDB, CharactersDB } from '../../db.js';
+import { MCPConfigDB, CharactersDB, SettingsDB } from '../../db.js';
+import { DEFAULT_ZIWEI_ENDPOINT } from '../../core/ziwei-mcp-client.js';
 import { MCPClient } from '../../core/mcp-client.js';
 import { LOCAL_TOOLS, isLocalToolsEnabled, setLocalToolsEnabled } from '../../core/local-tools.js';
 
@@ -59,6 +60,22 @@ async function renderMCPSettings() {
     });
     localSection.appendChild(localCard);
     main.appendChild(localSection);
+
+    // 紫微斗數服務網址：預設用公用服務，想自己部署的人可以改成自己的 Worker
+    const ziweiSection = createElement('div', 'ios-grouped-list mx-4 mt-4');
+    const ziweiCard = createElement('div', 'p-4 bg-white rounded-xl');
+    ziweiCard.appendChild(createElement('div', 'font-semibold text-sm mb-1', { textContent: '紫微斗數服務網址' }));
+    ziweiCard.appendChild(createElement('div', 'text-xs text-ios-muted mb-2', { textContent: '留空就使用公用服務（只做排盤計算，不儲存資料）。要自己部署的話，見 README 的「紫微斗數 MCP」。' }));
+    const ziweiInput = createElement('input', 'ios-input', { type: 'url', placeholder: DEFAULT_ZIWEI_ENDPOINT });
+    ziweiInput.value = (await SettingsDB.get('ziwei_endpoint')) || '';
+    const ziweiSave = createElement('button', 'ios-btn mt-2 w-full', { textContent: '儲存' });
+    ziweiSave.onclick = async () => {
+        await SettingsDB.set('ziwei_endpoint', ziweiInput.value.trim());
+        createToast(ziweiInput.value.trim() ? '已改用你的紫微斗數服務' : '已改回公用服務');
+    };
+    ziweiCard.append(ziweiInput, ziweiSave);
+    ziweiSection.appendChild(ziweiCard);
+    main.appendChild(ziweiSection);
 
     const listSection = createElement('div', 'ios-grouped-list mx-4 mt-4');
     listSection.id = 'mcp-config-list';

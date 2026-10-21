@@ -1191,7 +1191,7 @@
     backdrop-filter: blur(12px);
 }
 
-.tab {
+:where(body[data-app="youtube"]) .tab {
     background: transparent;
     border: none;
     color: var(--yt-muted);
@@ -1203,7 +1203,7 @@
     cursor: pointer;
 }
 
-.tab.active {
+:where(body[data-app="youtube"]) .tab.active {
     color: #fff;
 }
 

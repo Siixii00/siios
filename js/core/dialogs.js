@@ -54,3 +54,28 @@ export function askForm({ title, fields, submitLabel = '確定', hint }) {
         Object.values(inputs)[0]?.input.focus();
     });
 }
+
+// 取代瀏覽器的 confirm()：底部面板確認，回傳 true／false（點外面或取消都是 false）。
+// 瀏覽器原生的確認框在手機殼裡很突兀，在某些瀏覽器的 PWA 模式下還會被擋掉。
+export function askConfirm(message, { title = '請確認', confirmLabel = '確定', cancelLabel = '取消' } = {}) {
+    return new Promise(resolve => {
+        const content = createElement('div', 'p-4 flex flex-col gap-4');
+        content.appendChild(createElement('div', 'text-sm', { textContent: message, style: 'white-space:pre-line;line-height:1.6;color:#374151' }));
+        const row = createElement('div', 'flex gap-3');
+        const cancel = createElement('button', 'flex-1 px-4 py-2 rounded-lg', { textContent: cancelLabel });
+        cancel.style.cssText = 'background:#F3F4F6;color:#374151;';
+        const ok = createElement('button', 'flex-1 px-4 py-2 rounded-lg bg-kakao-yellow text-kakao-brown font-medium', { textContent: confirmLabel });
+        row.append(cancel, ok);
+        content.appendChild(row);
+
+        let done = false;
+        const finish = value => { if (!done) { done = true; resolve(value); } };
+        const sheet = createKakaoBottomSheet([], { title, customContent: content });
+        const origClose = sheet.close;
+        sheet.close = () => { finish(false); origClose(); };
+        sheet.overlay.addEventListener('click', () => finish(false));
+        cancel.onclick = () => { finish(false); origClose(); };
+        ok.onclick = () => { finish(true); origClose(); };
+        sheet.open();
+    });
+}

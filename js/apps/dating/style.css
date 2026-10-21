@@ -7,7 +7,7 @@
   --dating-secondary: #f8bbd9;
 }
 
-.dating-app .page {
+:where(body[data-app="dating"]) .dating-app .page {
   background: var(--dating-bg);
   min-height: calc(100vh - 96px);
 }
@@ -252,14 +252,14 @@
   border-top: 1px solid rgba(136, 14, 79, 0.1);
 }
 
-.action-buttons {
+:where(body[data-app="dating"]) .action-buttons {
   display: flex;
   gap: 8px;
   margin-bottom: 12px;
   justify-content: center;
 }
 
-.action-btn {
+:where(body[data-app="dating"]) .action-btn {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -271,7 +271,7 @@
   transition: all 0.2s;
 }
 
-.action-btn:hover {
+:where(body[data-app="dating"]) .action-btn:hover {
   background: var(--dating-primary);
   color: #fff;
   transform: scale(1.1);

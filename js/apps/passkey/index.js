@@ -1,7 +1,7 @@
 import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
-import { askForm } from '../../core/dialogs.js';
+import {askForm, askConfirm } from '../../core/dialogs.js';
 
 const KEYS_KEY = 'passkey_keys';
 
@@ -50,7 +50,7 @@ async function renderPasskey() {
     };
     const del = createElement('button', 'key-btn danger', { textContent: '刪除', 'aria-label': '刪除：' + k.name });
     del.onclick = async () => {
-      if (!confirm('刪除「' + k.name + '」？刪除後無法復原。')) return;
+      if (!await askConfirm('刪除「' + k.name + '」？刪除後無法復原。')) return;
       await SettingsDB.set(KEYS_KEY, (await loadKeys()).filter(x => x.key !== k.key));
       createToast('已刪除');
       Router.handleRoute();

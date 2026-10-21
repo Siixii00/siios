@@ -250,6 +250,41 @@ async function runReplicate(kind, model, body, request) {
     return { bytes: new Uint8Array(await file.arrayBuffer()), mime: file.headers.get('content-type') || 'application/octet-stream' };
 }
 
+// OpenAI 相容的 /v1/embeddings：用 Workers AI 的免費嵌入模型（預設 bge-m3，多語言、1024 維，中文效果好）。
+// PWA 的「嵌入模型設定」把 Embedding URL 填 Worker 網址、API Key 填 SYNTH_TOKEN 就能用。
+const EMBEDDING_MODELS = {
+    '@cf/baai/bge-m3': 1024,
+    '@cf/baai/bge-large-en-v1.5': 1024,
+    '@cf/baai/bge-base-en-v1.5': 768,
+    '@cf/baai/bge-small-en-v1.5': 384
+};
+export async function handleEmbeddings(body, env) {
+    if (!env.AI) throw new SynthError(501, 'Worker 尚未綁定 Workers AI（wrangler.toml 的 [ai] 設定）', 'not_configured');
+    const inputs = Array.isArray(body.input) ? body.input : [body.input];
+    if (!inputs.length || inputs.some(t => typeof t !== 'string' || !t.trim())) throw new SynthError(400, 'input 必須是非空字串或字串陣列', 'bad_request');
+    if (inputs.length > 100) throw new SynthError(400, '一次最多 100 段文字', 'too_many');
+    if (inputs.some(t => t.length > 8000)) throw new SynthError(400, '單段文字太長（上限 8000 字）', 'too_long');
+    // 使用者在 PWA 填的模型名稱如果不是 Workers AI 的嵌入模型（例如預設的 text-embedding-3-small），就用預設
+    const model = EMBEDDING_MODELS[body.model] ? body.model : '@cf/baai/bge-m3';
+    let result;
+    try {
+        result = await env.AI.run(model, { text: inputs });
+    } catch (e) {
+        const msg = String(e?.message || e);
+        if (/quota|limit|neurons|capacity/i.test(msg)) throw new SynthError(429, 'Cloudflare Workers AI 今日免費額度已用完（UTC 午夜重置），或請求太頻繁', 'quota');
+        throw new SynthError(502, 'Cloudflare Workers AI 失敗：' + msg, 'upstream_error');
+    }
+    const vectors = result?.data;
+    if (!Array.isArray(vectors) || vectors.length !== inputs.length) throw new SynthError(502, '嵌入模型沒有回傳預期的向量', 'bad_upstream');
+    const tokens = inputs.reduce((n, t) => n + Math.ceil(t.length / 2), 0);
+    return {
+        object: 'list',
+        model,
+        data: vectors.map((embedding, index) => ({ object: 'embedding', index, embedding })),
+        usage: { prompt_tokens: tokens, total_tokens: tokens }
+    };
+}
+
 export async function handleSynth(kind, body, request, env) {
     const provider = body.provider || 'cloudflare';
     const table = PROVIDERS[provider];
@@ -288,8 +323,13 @@ export default {
                     ok: true,
                     workersAi: !!env.AI,
                     huggingFaceToken: !!env.HF_TOKEN,
-                    free: { tts: !!env.AI, image: !!env.AI, stt: !!env.AI, video: false, music: false }
+                    free: { tts: !!env.AI, image: !!env.AI, stt: !!env.AI, embeddings: !!env.AI, video: false, music: false }
                 });
+            }
+            if (request.method === 'POST' && url.pathname === '/v1/embeddings') {
+                let body;
+                try { body = await request.json(); } catch { throw new SynthError(400, '請求內容不是有效的 JSON', 'bad_request'); }
+                return json(200, await handleEmbeddings(body, env));
             }
             const m = /^\/synth\/(\w+)$/.exec(url.pathname);
             if (request.method === 'POST' && m) {

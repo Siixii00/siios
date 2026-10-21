@@ -2,6 +2,10 @@
 import { createElement, createIcon, createIOSSlider, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 import APIClient from '../../api.js';
+import { createEmbeddingClient } from '../../core/embedding/index.js';
+import { EMBEDDING_PRESETS, findPreset } from '../../core/embedding/presets.js';
+import { getSynthConfig } from '../../core/synth-client.js';
+import { memorySettingsFrom } from '../../core/memory-system/index.js';
 
 let settings = {};
 
@@ -187,7 +191,54 @@ async function renderApiConfig() {
     embKeyInput.oninput = (e) => settings.embedding_api_key = e.target.value;
     embKeyCell.appendChild(embKeyInput);
     embeddingGroup.appendChild(embKeyCell);
-    
+
+    // 免費服務捷徑：選了就把網址、模型填好（API Key 要自己申請）
+    const presetCell = createElement('div', 'p-4');
+    presetCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-2 block', { textContent: '免費嵌入服務捷徑' }));
+    const presetSelect = createElement('select', 'ios-input');
+    presetSelect.appendChild(createElement('option', '', { value: '', textContent: '— 選擇一個服務，自動填入網址與模型 —' }));
+    EMBEDDING_PRESETS.forEach(p => presetSelect.appendChild(createElement('option', '', { value: p.id, textContent: p.name })));
+    const presetNote = createElement('div', 'text-xs text-ios-muted mt-2');
+    presetSelect.onchange = async () => {
+        const p = findPreset(presetSelect.value);
+        if (!p) { presetNote.textContent = ''; return; }
+        let url = p.url;
+        let key = null;
+        if (p.id === 'siios-worker') {
+            const synth = await getSynthConfig();
+            url = synth.url;
+            key = synth.token;
+            if (!url) createToast('先到「合成服務」填入 Worker 網址與 Token，這裡才能自動帶入', 'warning');
+        }
+        embUrlInput.value = url; settings.embedding_url = url;
+        embModelInput.value = p.model; settings.embedding_model = p.model;
+        if (p.dimensions) { embDimInput.value = p.dimensions; settings.embedding_dimensions = p.dimensions; }
+        if (key) { embKeyInput.value = key; settings.embedding_api_key = key; }
+        presetNote.innerHTML = '';
+        presetNote.append(p.note + ' ', p.keyHint + '。 ');
+        const a = createElement('a', 'text-blue-500 underline', { href: p.link, target: '_blank', textContent: '前往官網' });
+        presetNote.appendChild(a);
+    };
+    presetCell.append(presetSelect, presetNote);
+    embeddingGroup.appendChild(presetCell);
+
+    const embTestCell = createElement('div', 'p-4');
+    const embTestBtn = createElement('button', 'ios-btn w-full py-2', { textContent: '測試嵌入模型' });
+    const embTestResult = createElement('div', 'text-xs mt-2');
+    embTestBtn.onclick = async () => {
+        // 用畫面上目前填的值測試（還沒按「儲存設定」也可以）
+        embTestBtn.disabled = true;
+        embTestBtn.textContent = '測試中…';
+        const result = await createEmbeddingClient(settings).testConnection();
+        embTestResult.textContent = result.message;
+        embTestResult.style.color = result.success ? '#15803d' : '#b91c1c';
+        embTestBtn.disabled = false;
+        embTestBtn.textContent = '測試嵌入模型';
+    };
+    embTestCell.append(embTestBtn, embTestResult);
+    embTestCell.appendChild(createElement('p', 'text-xs text-ios-muted mt-2', { textContent: 'Embedding URL 留空時，會使用上面的聊天 API 網址。網址填到服務根網址即可（例如 https://api.openai.com），不用加 /v1。測試通過後，新的記憶會有語意搜尋；舊記憶維持關鍵字搜尋。' }));
+    embeddingGroup.appendChild(embTestCell);
+
     main.appendChild(embeddingSection);
     main.appendChild(embeddingGroup);
 
@@ -262,6 +313,12 @@ async function renderApiConfig() {
         ];
         for (const key of keys) {
             await SettingsDB.set(key, settings[key]);
+        }
+        // 立即套用到執行中的記憶系統（原本要重開 App 才會生效）
+        const memory = window.App?.memorySystem;
+        if (memory) {
+            memory.reconfigure(memorySettingsFrom(settings));
+            if (settings.memory_enabled) memory.start(); else memory.stop();
         }
         createToast('設定已儲存');
     };

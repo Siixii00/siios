@@ -46,7 +46,7 @@ test('/health 回報可用能力', async () => {
     const res = await worker.fetch(req('/health', { method: 'GET' }), envWithAi(() => ({})));
     const data = await res.json();
     assert.equal(data.ok, true);
-    assert.deepEqual(data.free, { tts: true, image: true, stt: true, video: false, music: false });
+    assert.deepEqual(data.free, { tts: true, image: true, stt: true, embeddings: true, video: false, music: false });
 });
 
 test('Cloudflare 圖片：base64 欄位轉成 JPEG 位元組', async () => {
@@ -197,4 +197,31 @@ test('網路無法連線 → 502，不會讓 Worker 崩潰', async () => {
         assert.equal(res.status, 502);
         assert.equal((await res.json()).code, 'upstream_unreachable');
     });
+});
+
+test('/v1/embeddings：OpenAI 相容格式，預設 bge-m3，一次多段文字', async () => {
+    const env = envWithAi((model, input) => ({ data: input.text.map((t, i) => [i, t.length]), shape: [input.text.length, 2] }));
+    const res = await worker.fetch(req('/v1/embeddings', { body: { model: 'text-embedding-3-small', input: ['你好', '海邊日出'] } }), env);
+    assert.equal(res.status, 200);
+    const data = await res.json();
+    assert.equal(data.object, 'list');
+    assert.equal(data.model, '@cf/baai/bge-m3'); // 不是 Workers AI 的模型名稱就用預設
+    assert.deepEqual(data.data.map(d => [d.index, d.embedding]), [[0, [0, 2]], [1, [1, 4]]]);
+    assert.deepEqual(env.calls[0], { model: '@cf/baai/bge-m3', input: { text: ['你好', '海邊日出'] } });
+    // 單一字串、指定其他 Workers AI 模型
+    const one = await worker.fetch(req('/v1/embeddings', { body: { model: '@cf/baai/bge-small-en-v1.5', input: 'hello' } }), env);
+    assert.equal((await one.json()).data.length, 1);
+    assert.equal(env.calls[1].model, '@cf/baai/bge-small-en-v1.5');
+});
+
+test('/v1/embeddings：需要 token；輸入驗證；額度用完回 429', async () => {
+    const env = envWithAi(() => ({ data: [[1]] }));
+    assert.equal((await worker.fetch(req('/v1/embeddings', { body: { input: 'x' }, token: 'wrong' }), env)).status, 401);
+    assert.equal((await worker.fetch(req('/v1/embeddings', { body: { input: '' } }), env)).status, 400);
+    assert.equal((await worker.fetch(req('/v1/embeddings', { body: { input: Array(101).fill('a') } }), env)).status, 400);
+    assert.equal((await worker.fetch(req('/v1/embeddings', { body: {} }), env)).status, 400);
+    const quota = { SYNTH_TOKEN: TOKEN, AI: { run: async () => { throw new Error('daily neurons quota exceeded'); } } };
+    const res = await worker.fetch(req('/v1/embeddings', { body: { input: 'x' } }), quota);
+    assert.equal(res.status, 429);
+    assert.equal((await res.json()).code, 'quota');
 });

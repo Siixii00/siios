@@ -202,10 +202,25 @@
 
     <div class="form-group">
       <label>
-        PWA URL <span class="badge badge-required">必填</span>
+        GitHub Token <span class="badge badge-required">必填</span>
       </label>
-      <input type="url" id="pwa-url" placeholder="https://your-siios-app.com">
-      <p class="help-text">您部署的 Siios PWA 網址</p>
+      <input type="password" id="github-token" placeholder="ghp_xxxxxxxxxxxx">
+      <p class="help-text">需要有 gist 權限，並且和 Siios PWA 使用同一個 GitHub 帳號</p>
+    </div>
+
+    <div class="form-group">
+      <label>
+        Gist ID <span class="badge badge-required">必填</span>
+      </label>
+      <input type="text" id="gist-id" placeholder="在 Siios「設定 → 跨裝置同步」複製">
+    </div>
+
+    <div class="form-group">
+      <label>
+        加密金鑰 <span class="badge badge-required">必填</span>
+      </label>
+      <input type="password" id="encryption-key" placeholder="在 Siios「設定 → 跨裝置同步」複製">
+      <p class="help-text">活動記錄會先用這把金鑰加密才上傳，金鑰只存在這個瀏覽器裡</p>
     </div>
 
     <div class="form-group">

@@ -29,6 +29,7 @@ async function addToAlbum(url) {
   const list = (await SettingsDB.get(ALBUM_KEY)) || [];
   list.unshift({ id: 'img_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6), url, source: 'painter', createdAt: new Date().toISOString() });
   await SettingsDB.set(ALBUM_KEY, list.slice(0, 200));
+  import('../../core/activity-memory.js').then(m => m.rememberActivity({ sourceApp: 'smart-painter', content: '用戶用照相館修了一張照片，存到相簿', importance: 0.3, dedupeMs: 60 * 1000 })).catch(() => {});
 }
 
 // 真的把濾鏡畫進圖片後輸出；瀏覽器不支援 canvas filter 時退回原圖並告知

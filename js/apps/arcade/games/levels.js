@@ -2,6 +2,7 @@ import { SettingsDB } from '../../../db.js';
 
 // 各遊戲共用的關卡進度：依序解鎖，每關最多 3 星
 const key = game => 'lv_' + game;
+const GAME_NAMES = { match3: '消消樂', '2048': '2048', snake: '貪吃蛇', memory: '記憶翻牌', mines: '踩地雷' };
 
 export async function loadProgress(game) {
     const v = (await SettingsDB.get(key(game))) || {};
@@ -11,9 +12,14 @@ export async function loadProgress(game) {
 // 過關後記錄星數並解鎖下一關，回傳更新後的進度
 export async function completeLevel(game, level, stars, total) {
     const p = await loadProgress(game);
-    p.stars[level] = Math.max(p.stars[level] || 0, stars);
+    const before = p.stars[level] || 0;
+    p.stars[level] = Math.max(before, stars);
     if (level >= p.unlocked && level < total) p.unlocked = level + 1;
     await SettingsDB.set(key(game), p);
+    // 只在第一次過這一關、或星數進步時記一筆
+    if (stars > before) {
+        import('../../../core/activity-memory.js').then(m => m.rememberActivity({ sourceApp: game === 'match3' ? 'match-3' : 'arcade', content: `用戶在${GAME_NAMES[game] || game}通過了第 ${level} 關（${stars} 星）`, importance: 0.3 })).catch(() => {});
+    }
     return p;
 }
 

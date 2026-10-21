@@ -47,7 +47,7 @@
     gap: 2px;
 }
 
-.nav-btn {
+:where(body[data-app="twitch"]) .nav-btn {
     width: 36px;
     height: 36px;
     border: none;
@@ -61,7 +61,7 @@
     transition: background 0.2s ease;
 }
 
-.nav-btn:hover {
+:where(body[data-app="twitch"]) .nav-btn:hover {
     background: var(--bg-elevated);
 }
 
@@ -373,7 +373,7 @@
     margin-bottom: 16px;
 }
 
-.section-title {
+:where(body[data-app="twitch"]) .section-title {
     font-size: 18px;
     font-weight: 600;
 }
@@ -610,7 +610,7 @@
     margin-bottom: 12px;
 }
 
-.history-list,
+:where(body[data-app="twitch"]) .history-list,
 .trending-list {
     display: flex;
     flex-direction: column;
@@ -618,7 +618,7 @@
     margin-bottom: 24px;
 }
 
-.history-item,
+:where(body[data-app="twitch"]) .history-item,
 .trending-item {
     display: flex;
     align-items: center;
@@ -630,12 +630,12 @@
     transition: background 0.2s ease;
 }
 
-.history-item:hover,
+:where(body[data-app="twitch"]) .history-item:hover,
 .trending-item:hover {
     background: var(--bg-tertiary);
 }
 
-.history-item span,
+:where(body[data-app="twitch"]) .history-item span,
 .trending-item span {
     font-size: 14px;
 }
@@ -846,7 +846,7 @@
     background: var(--bg-elevated);
 }
 
-.send-btn {
+:where(body[data-app="twitch"]) .send-btn {
     width: 36px;
     height: 36px;
     border: none;

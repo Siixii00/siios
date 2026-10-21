@@ -2,6 +2,7 @@ import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
 import { getBalance, charge, formatMoney, WalletError } from '../../core/wallet.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 const EMOJIS = [
   { id: 'e1', name: '笑臉', emoji: '😊', price: 0 },
@@ -53,7 +54,7 @@ async function renderEmojiShop(params) {
       try {
         if (emoji.price > 0) {
           const bal = await getBalance();
-          if (!confirm(`購買「${emoji.name}」表情？價格 ${formatMoney(emoji.price)}，餘額 ${formatMoney(bal)}`)) return;
+          if (!await askConfirm(`購買「${emoji.name}」表情？價格 ${formatMoney(emoji.price)}，餘額 ${formatMoney(bal)}`)) return;
           await charge(emoji.price, `購買表情「${emoji.name}」`, { category: 'sticker' });
         }
         if (!owned.includes(emoji.id)) owned.push(emoji.id);

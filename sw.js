@@ -1,11 +1,11 @@
-const CACHE_NAME = 'sxios-v80';
+const CACHE_NAME = 'sxios-v84';
 
 // 外部資源（資料庫函式庫、圖示與字型）也要進快取：離線時沒有它們，App 連啟動都不行（idb 是 db.js 的 ES 模組），圖示也會變成一串英文字。
 const CDN_HOSTS = ['cdn.jsdelivr.net', 'cdnjs.cloudflare.com', 'fonts.googleapis.com', 'fonts.gstatic.com'];
 const CDN_PRECACHE = [
   'https://cdn.jsdelivr.net/npm/idb@8/+esm',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
-  'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap',
+  'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=block',
   'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap'
 ];
 
@@ -167,6 +167,9 @@ const APP_ASSETS = [
   '/siios/js/apps/youtube/style.css',
   '/siios/js/components.js',
   '/siios/js/constants/rp-system-prompt.js',
+  '/siios/js/core/activity-context.js',
+  '/siios/js/core/activity-format.js',
+  '/siios/js/core/activity-memory.js',
   '/siios/js/core/age-core.js',
   '/siios/js/core/age-gate.js',
   '/siios/js/core/app-context-builder.js',
@@ -180,6 +183,7 @@ const APP_ASSETS = [
   '/siios/js/core/dialogs.js',
   '/siios/js/core/discord-memory-sync.js',
   '/siios/js/core/embedding/index.js',
+  '/siios/js/core/embedding/presets.js',
   '/siios/js/core/gifts.js',
   '/siios/js/core/local-tools.js',
   '/siios/js/core/mcp-client.js',

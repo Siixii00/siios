@@ -22,11 +22,11 @@ class CrossDeviceSync {
 
   async initialize() {
     const settings = await SettingsDB.get('cross_device_sync');
-    
+
     if (settings?.enabled) {
       this.github = new GitHubSync(settings.github_token);
       this.gistId = settings.gist_id;
-      
+
       const encryptedKey = localStorage.getItem('siios_encryption_key');
       if (encryptedKey) {
         this.encryptionKey = encryptedKey;
@@ -44,13 +44,13 @@ class CrossDeviceSync {
 
   async setupGitHubSync(token) {
     const validation = await GitHubSync.validateToken(token);
-    
+
     if (!validation.success) {
       throw new Error(`Token validation failed: ${validation.error}`);
     }
 
     this.github = new GitHubSync(token);
-    
+
     const encryptionKey = await Encryption.generateKey();
     this.encryptionKey = encryptionKey;
     localStorage.setItem('siios_encryption_key', encryptionKey);
@@ -91,6 +91,53 @@ class CrossDeviceSync {
       encryptionKey: encryptionKey,
       user: validation.user
     };
+  }
+
+  // 加入另一台裝置（或瀏覽器擴充功能）已經建立的同步：需要同一組 Token、Gist ID 與加密金鑰
+  async joinExisting({ token, gistId, encryptionKey }) {
+    token = String(token || '').trim();
+    gistId = String(gistId || '').trim().replace(/^.*\//, ''); // 允許貼整個 gist 網址
+    encryptionKey = String(encryptionKey || '').trim();
+    if (!token || !gistId || !encryptionKey) throw new Error('請填寫 Token、Gist ID 與加密金鑰');
+
+    const validation = await GitHubSync.validateToken(token);
+    if (!validation.success) throw new Error(`Token 驗證失敗：${validation.error}`);
+
+    const github = new GitHubSync(token);
+    const gist = await github.getGist(gistId);
+    if (!gist) throw new Error('找不到這個 Gist（確認 Gist ID，且 Token 是建立它的同一個 GitHub 帳號）');
+    const content = await github.readFile(gist, 'activities.json');
+    if (!content) throw new Error('這個 Gist 不是 Siios 的同步資料（沒有 activities.json）');
+    const data = JSON.parse(content);
+    if (data.encrypted) {
+      try {
+        await Encryption.decrypt(data, encryptionKey);
+      } catch {
+        throw new Error('加密金鑰不正確，無法解開這個 Gist 的資料');
+      }
+    }
+
+    this.github = github;
+    this.gistId = gist.id;
+    this.encryptionKey = encryptionKey;
+    localStorage.setItem('siios_encryption_key', encryptionKey);
+
+    await SettingsDB.set('cross_device_sync', {
+      enabled: true,
+      github_token: token,
+      gist_id: gist.id,
+      user_login: validation.user.login,
+      joined: true, // 這個 Gist 是別的裝置建立的，停用時不能刪掉它
+      created_at: Date.now()
+    });
+    return { gistId: gist.id, user: validation.user };
+  }
+
+  // 給使用者抄到另一台裝置／瀏覽器擴充功能用的連線資訊
+  async getConnectionInfo() {
+    const settings = await SettingsDB.get('cross_device_sync');
+    if (!settings?.enabled) return null;
+    return { gistId: settings.gist_id, encryptionKey: localStorage.getItem('siios_encryption_key') || '', user: settings.user_login, joined: !!settings.joined };
   }
 
   async uploadActivities(activities) {
@@ -141,27 +188,27 @@ class CrossDeviceSync {
     }
 
     const gist = await this.github.getGist(this.gistId);
-    
+
     if (!gist) {
       throw new Error('Gist not found');
     }
 
-    const activitiesFile = gist.files['activities.json'];
-    
-    if (!activitiesFile) {
+    const activitiesContent = await this.github.readFile(gist, 'activities.json');
+
+    if (!activitiesContent) {
       return { activities: [], devices: [] };
     }
 
-    const encryptedData = JSON.parse(activitiesFile.content);
-    
+    const encryptedData = JSON.parse(activitiesContent);
+
     if (!encryptedData.encrypted) {
       return { activities: encryptedData.activities || [], devices: [] };
     }
 
     const decrypted = await Encryption.decrypt(encryptedData, this.encryptionKey);
-    
-    const metadataFile = gist.files['metadata.json'];
-    const metadata = metadataFile ? JSON.parse(metadataFile.content) : { devices: [] };
+
+    const metadataContent = await this.github.readFile(gist, 'metadata.json');
+    const metadata = metadataContent ? JSON.parse(metadataContent) : { devices: [] };
 
     return {
       activities: decrypted.activities || [],
@@ -171,7 +218,7 @@ class CrossDeviceSync {
 
   async sync() {
     const localActivities = await ActivityDB.getAll(1000);
-    
+
     const remote = await this.downloadActivities();
     const remoteActivities = remote.activities;
 
@@ -209,7 +256,7 @@ class CrossDeviceSync {
       }
     });
 
-    return Array.from(merged.values());
+    return Array.from(merged.values()).sort((a, b) => b.timestamp - a.timestamp).slice(0, 1000);
   }
 
   async getMetadata() {
@@ -218,16 +265,19 @@ class CrossDeviceSync {
     }
 
     const gist = await this.github.getGist(this.gistId);
-    
-    if (!gist || !gist.files['metadata.json']) {
+
+    const content = gist ? await this.github.readFile(gist, 'metadata.json') : null;
+    if (!content) {
       return { devices: [], version: 1 };
     }
 
-    return JSON.parse(gist.files['metadata.json'].content);
+    return JSON.parse(content);
   }
 
   async disconnect() {
-    if (this.gistId && this.github) {
+    const saved = await SettingsDB.get('cross_device_sync');
+    // 加入別台裝置建立的同步時，只解除這台的連線，雲端資料留給其他裝置繼續用
+    if (this.gistId && this.github && !saved?.joined) {
       try {
         await this.github.deleteGist(this.gistId);
       } catch (error) {
@@ -238,7 +288,7 @@ class CrossDeviceSync {
     await SettingsDB.delete('cross_device_sync');
     await SettingsDB.set('auto_sync_enabled', false);
     localStorage.removeItem('siios_encryption_key');
-    
+
     if (this.autoSyncTimer) {
       clearInterval(this.autoSyncTimer);
       this.autoSyncTimer = null;
@@ -292,26 +342,26 @@ class CrossDeviceSync {
   getDeviceName() {
     const ua = navigator.userAgent;
     const platform = navigator.platform;
-    
+
     if (/Windows/.test(platform)) return 'Windows PC';
     if (/Mac/.test(platform)) return 'Mac';
     if (/Linux/.test(platform)) return 'Linux PC';
     if (/iPhone|iPad/.test(ua)) return 'iOS Device';
     if (/Android/.test(ua)) return 'Android Device';
-    
+
     return 'Unknown Device';
   }
 
   getDeviceType() {
     const ua = navigator.userAgent;
-    
+
     if (/Mobile|Android|iPhone|iPad/.test(ua)) return 'mobile';
     return 'desktop';
   }
 
   async getStatus() {
     const settings = await SettingsDB.get('cross_device_sync');
-    
+
     if (!settings?.enabled) {
       return {
         enabled: false,
@@ -321,7 +371,7 @@ class CrossDeviceSync {
 
     const validation = await GitHubSync.validateToken(settings.github_token);
     const autoSync = await this.isAutoSyncEnabled();
-    
+
     return {
       enabled: true,
       connected: validation.success,
@@ -334,3 +384,27 @@ class CrossDeviceSync {
 }
 
 export { CrossDeviceSync };
+// ───── 全 App 共用的同步管理器：啟動時自動連線並（依設定）定時同步 ─────
+let shared = null;
+export async function getSyncManager() {
+  if (!shared) {
+    shared = new CrossDeviceSync();
+    await shared.initialize();
+  }
+  return shared;
+}
+
+// App 啟動後呼叫：已啟用跨裝置同步的話，馬上同步一次（10 分鐘內不重複），並依設定啟動定時同步。失敗一律靜默。
+export async function startBackgroundSync() {
+  try {
+    const manager = await getSyncManager();
+    if (!manager.github || !manager.encryptionKey || !manager.gistId) return null;
+    const last = (await SettingsDB.get('cross_device_last_sync')) || 0;
+    if (Date.now() - last < 10 * 60 * 1000) return null;
+    await SettingsDB.set('cross_device_last_sync', Date.now());
+    return await manager.sync();
+  } catch (error) {
+    console.warn('[CrossDeviceSync] 啟動同步失敗：', error.message);
+    return null;
+  }
+}

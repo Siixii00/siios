@@ -57,7 +57,11 @@ function apply(delta, desc, meta) {
 
 // meta：{ category, ref } 之類的附註，會一併記在交易紀錄
 export function charge(amount, desc, meta = {}) {
-    return apply(-validateAmount(amount), desc, meta);
+    return apply(-validateAmount(amount), desc, meta).then(async result => {
+        // 購物、外送、禮物等還沒有自己記憶邏輯的消費，替角色記一筆（失敗不影響扣款）
+        import('./activity-memory.js').then(m => m.rememberSpending(amount, desc, meta)).catch(() => {});
+        return result;
+    });
 }
 
 export function credit(amount, desc, meta = {}) {

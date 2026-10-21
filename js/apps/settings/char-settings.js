@@ -1,6 +1,7 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { CharactersDB, SettingsDB, UsersDB } from '../../db.js';
+import { askConfirm } from '../../core/dialogs.js';
 
 async function renderCharList() {
     const characters = await CharactersDB.getAll();
@@ -415,7 +416,7 @@ async function renderCharEdit(params) {
     const deleteSection = createElement('div', 'mx-4 mt-4 mb-4');
     const deleteBtn = createElement('button', 'ios-btn w-full py-3 text-red-500', { textContent: '刪除此角色' });
     deleteBtn.onclick = async () => {
-        if (confirm('確定要刪除「' + (char.name || '此角色') + '」？此操作無法復原。')) {
+        if (await askConfirm('確定要刪除「' + (char.name || '此角色') + '」？此操作無法復原。')) {
             await CharactersDB.delete(params.id);
             createToast('已刪除角色');
             Router.navigate('/settings/char');

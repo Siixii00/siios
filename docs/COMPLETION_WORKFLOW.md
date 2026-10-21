@@ -226,3 +226,26 @@ Code review（`340bf4c~1..HEAD`）找到並修正：
 - **PWA**：Discord 整合頁新增「📘 第一次使用？Worker 部署教學」卡片，進入 `/settings/discord/guide`：10 個步驟（建立 Discord 機器人與 MESSAGE CONTENT INTENT、用 Application ID 產生邀請連結、在 Cloudflare 建 Worker 並一鍵複製／下載程式碼、建 D1 並綁定變數名 `DB`、三個變數、Cron `*/2 * * * *`、`/setup` 與 Interactions Endpoint URL、`/configure` 設定 AI、綁定角色、回 PWA 同步），每步有複製按鈕，網址會代入使用者填的 Worker URL；另有常見問題與安全提醒。內容與純函式在 `discord-guide-data.js`，畫面在 `discord-guide.js`。
 - **Worker**：新使用者不必再手動建表——`ensureSchema` 在第一次請求／排程時用 `CREATE TABLE IF NOT EXISTS` 建好全部 11 張表（既有資料庫不受影響）；`/discord/ping` 回報 `version`。PWA「測試連接」會和 `EXPECTED_WORKER_VERSION` 比對，Worker 過舊就提醒重新貼上程式碼（改 Worker 行為時，兩個版本常數要一起更新，測試會檢查一致）。
 - **已知風險（未處理）**：Worker 的 PWA 端介面（`/sync/*`、`/discord/send`、`/discord/clear`、`/discord/history`、`/gateway/start`）沒有驗證，只靠網址不被知道；教學裡已提醒不要公開網址。若要正式開放，建議加一組存取密鑰（Worker 變數 + PWA 帶標頭）。
+
+### 2026-10-21 全面檢查：記憶、嵌入、跨裝置活動、外觀（PWA 整體 review）
+**外觀與圖示**
+- 無效的 Material 圖示名稱：`discord`（設定、神秘門）、`follow`（Twitch）改成 `forum`／`person_add`。圖示字型改 `display=block`，載入前不再閃出一串英文字；Service Worker 現在也快取 CDN（idb、Font Awesome、Material Symbols、字型檔）與**全部** App 的 js／css（`scripts/update-sw-assets.mjs` 產生清單，測試會檢查是最新的），離線時每個 App 都開得起來。
+- **全域 CSS 外洩**：Lofter 的 `.page { display:none }` 把約 20 個用 `.page` 當容器的 App（街機、約會、外送、購物、支付、時間樹、谷子圖鑑…）在「先開過 Lofter」之後整頁變空白；另有 19 組 class 名稱（`.icon-btn`、`.feed`、`.add-btn`…）被多個 App 樣式表重複定義互相覆蓋。改成 38 份樣式表中相關規則加上 `:where(body[data-app="…"])` 限定（優先權不變），路由切換時設定 `body[data-app]`。
+- 健康 App 全英文 → 繁體中文（舊的英文標籤自動對應，已勾選的不會消失）；順手修掉經期提醒的三個問題：沒存過提醒設定就永遠不提醒、提醒無法關閉（`|| true`）、預測更新會把其他設定重設；新增「聊天室提醒」設定區。記憶頁搜尋按鈕被擠成直排。
+- 原生 `confirm()`／`alert()`／`prompt()` 全部換成 App 風格的對話框／提示（`askConfirm`、toast、`askForm`）。
+**記憶系統**
+- 聊天室與各 App 取記憶都套用「記憶設定」（來源、虛構內容）；來源清單集中（`memory-sources.js`），補上原本缺的 ao3／lofter／theater／drift-bottle／health／mcp 與新增的 discord、music、pomodoro、weather 等。
+- 遺忘曲線 bug：睡眠週期每晚把「從建立到現在」的衰減再算一次，記憶以時間平方的速度消失（約一個月全部被刪）。改為從上次衰減時間算起；永久記憶／重要性 ≥ 0.8／7 天內的記憶不會被遺忘；常被想起的記憶強化後歸零計數。
+- 聊天記憶寫入時沒有 `character_id`（只有 `characterId`），跨聊天室、跨 App 找不到；已修並相容舊資料。重複內容不重複處理；太短的訊息不處理。提示詞標示記憶來源。
+- 設定儲存後記憶系統立即套用（原本要重開 App）。
+- **所有 App 都有記憶**：新增 `activity-memory.js`（共用記憶，每個角色都看得到）；錢包扣款（購物、外送、禮物、主題、貼圖、街機）、時間樹行程、遊戲過關、相簿、交換日記、照相館、食譜收藏、谷子圖鑑、電話、天氣、音樂（陪聽、AI 感想）、番茄鐘（完成專注）都會記。不接記憶的：輔助觸控、小工具、外觀設定、Passkey、付款碼（沒有生活內容或屬敏感資料）；健康另有自己的提示詞機制。
+**嵌入（embedding）**
+- 網址規則（根網址／`/v1`／完整 `/embeddings`）、`dimensions` 只在 text-embedding-3 系列才送（其他服務會回 400）、檢查回應內容、連續失敗暫停；查詢向量拿不到時整批退回關鍵字搜尋（原本已有向量的記憶會整批消失）；設定頁加「測試嵌入模型」與免費服務捷徑。
+- synth-worker 新增 OpenAI 相容 `/v1/embeddings`（Workers AI `bge-m3`，免費），已部署。當天 Workers AI 免費額度已用完，真實的 bge-m3 呼叫**尚未驗證**（回應格式依官方文件）；用概念式假服務驗證了整條流程（存向量、語意檢索找到沒有共同字的記憶、服務掛掉時退回關鍵字）。
+**跨裝置活動紀錄**（原本是壞的）
+- 瀏覽器擴充功能把活動 POST 到 PWA 網址的 `/api/activities/sync`，但 PWA 是靜態網站，那個「API」只存在頁面裡、擴充功能打不到；擴充功能裡寫好的加密 Gist 上傳程式從來沒被用到。改為擴充功能與 PWA 共用同一個加密 Gist（設定 Token／Gist ID／金鑰）。
+- PWA：新增「加入既有的同步」（原本第二台裝置只能建立一個新的 Gist，永遠不會和第一台互通）；顯示／複製 Gist ID 與金鑰（原本金鑰只顯示 2 秒就跳頁）；加入者停用不會刪共享的 Gist；啟動時自動同步（原本只有打開設定頁才會連線）；超過 1MB 的 Gist 檔案改抓 raw_url。
+- `ActivityDB.create` 忽略傳入的 id → 每次同步都把遠端活動重新新增一份（重複越滾越多）；`SettingsDB.delete` 不存在 → 停用同步到一半丟錯。皆已修。
+- 同步進來的活動從來沒有送給 AI；現在依隱私等級（基本／摘要／詳細）整理成一小段提示詞給聊天室。
+**文件**：README 重寫（功能、第一次設定、免費嵌入服務、記憶系統、每個 Worker／MCP／Discord／擴充功能的部署步驟、備份、隱私、疑難排解、開發）；擴充功能 README 更新；紫微斗數服務網址可在 MCP 設定頁自訂。
+- 活動紀錄給 AI 看之前必須同時開啟「活動同步」與「允許 AI 角色存取」（這個開關原本存了卻從來沒被檢查），並排除被關掉的平台。活動隱私設定頁在設定不含 platforms 時會當掉，已修。擴充功能的自動同步改用 chrome.alarms（MV3 service worker 閒置會被關掉，setInterval 幾乎不會觸發），瀏覽器重啟時也會恢復。
