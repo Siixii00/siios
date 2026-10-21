@@ -292,3 +292,23 @@ test('pickProduct：挑價格在估價附近、連結正常的商品；沒有就
     assert.match(formatPriceRange({ ...idea, real: p }), /實際約 \$480（某商店）/);
     assert.match(formatPriceRange(idea), /約 \$300～\$600/);
 });
+
+test('年齡限制商品：酒、菸、成人用品會被辨識，酒杯、酒精之類不會', async () => {
+    const { isAgeRestricted, ideaIsRestricted } = await import('../../js/core/age-restricted.js');
+    for (const t of ['精釀啤酒禮盒', '日本威士忌', '電子菸', '古巴雪茄', '情趣用品', 'single malt whisky', 'craft beer set', 'vape pen']) assert.equal(isAgeRestricted(t), true, t);
+    for (const t of ['玻璃酒杯', '開瓶器', '酒精濕巾', '保溫杯', '煙燻鮭魚', '煙火', '酒窩貼紙', '料理酒', '馬克杯', 'wine glass set']) assert.equal(isAgeRestricted(t), false, t);
+    assert.equal(ideaIsRestricted({ name: '禮盒', queries: { zh: '清酒 禮盒' } }), true);
+    assert.equal(ideaIsRestricted({ name: '馬克杯', queries: { zh: '馬克杯' } }), false);
+});
+
+test('filterIdeas / buildIdeaMessages：未成年擋掉限制商品，成年留著；提示詞依年齡不同', async () => {
+    const ideas = [{ name: '單一麥芽威士忌', priceMin: 800, priceMax: 1200, queries: {} }, { name: '保溫杯', priceMin: 300, priceMax: 600, queries: {} }];
+    assert.deepEqual(filterIdeas(ideas, { adult: false }).map(i => i.name), ['保溫杯']);
+    assert.equal(filterIdeas(ideas, { adult: true }).length, 2);
+    assert.equal(filterIdeas(ideas).length, 2);
+    const minor = buildIdeaMessages({ adult: false })[0].content;
+    const adult = buildIdeaMessages({ adult: true })[0].content;
+    assert.match(minor, /用戶未成年/);
+    assert.match(adult, /用戶已成年/);
+    assert.match(buildIdeaMessages({})[0].content, /用戶未成年/); // 沒傳就當未成年（保守）
+});

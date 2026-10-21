@@ -3,6 +3,7 @@ import { KIND_IDS, normalizeKind } from './real-shops.js';
 import { stripReasoning } from './reasoning-filter.js';
 import { sameThing } from './dislikes.js';
 import { hashString } from './seeded.js';
+import { ideaIsRestricted, AGE_RULE_ADULT, AGE_RULE_MINOR } from './age-restricted.js';
 
 export const OCCASIONS = {
     request: { label: '隨便逛逛', hint: '沒有特別的日子，只是想到你。' },
@@ -21,7 +22,7 @@ const clip = (s, n) => String(s ?? '').replace(/\s+/g, ' ').trim().slice(0, n);
 const num = v => { const n = Math.round(Number(v)); return Number.isFinite(n) && n >= 0 ? n : null; };
 
 // ───── 提示詞 ─────
-export function buildIdeaMessages({ systemPrompt = '', charName = '角色', userName = '對方', occasion = 'request', label = '', budget = { min: 100, max: 1500 }, kinds = [], wishlist = [], past = [], extra = '' }) {
+export function buildIdeaMessages({ adult = false, systemPrompt = '', charName = '角色', userName = '對方', occasion = 'request', label = '', budget = { min: 100, max: 1500 }, kinds = [], wishlist = [], past = [], extra = '' }) {
     const oc = OCCASIONS[occasion] || OCCASIONS.request;
     const rules = [
         `# 挑禮物`,
@@ -38,6 +39,7 @@ export function buildIdeaMessages({ systemPrompt = '', charName = '角色', user
         '- 都是常見、買得到的商品類型；不要編造品牌型號或確切價格，價格給一個合理的區間。',
         '- 3 個點子要不同種類、價格有高有低，都在預算內；絕對避開「用戶討厭的事」。',
         '- reason：用你的口吻說一句為什麼選這個（20～40 字）；可以提到你們之間發生過的事，但不要編造不存在的共同經歷。message：送出時說的一句話（25 字內）。',
+        adult ? AGE_RULE_ADULT : AGE_RULE_MINOR,
         `- kind 只能是：${KIND_IDS.join('、')}。`,
         '',
         '## 輸出格式（只輸出 JSON 陣列，不要其他文字）',
@@ -81,8 +83,9 @@ export function parseIdeas(text, { limit = 3 } = {}) {
 }
 
 // 過濾：超出預算太多的、和用戶討厭的事有關的、重複的，都拿掉。全部被拿掉時，回傳空陣列（呼叫端可以決定要不要重試）
-export function filterIdeas(ideas, { budget = null, dislikes = [], past = [] } = {}) {
+export function filterIdeas(ideas, { budget = null, dislikes = [], past = [], adult = true } = {}) {
     return (ideas || []).filter(i => {
+        if (!adult && ideaIsRestricted(i)) return false; // 未成年（或沒填生日）不提議有年齡限制的商品
         if (budget && i.priceMin !== null && i.priceMin > budget.max * 1.25) return false;
         const text = [i.name, i.queries?.zh].filter(Boolean).join(' ');
         if ((dislikes || []).some(d => d?.text && (sameThing(d.text, i.name) || text.includes(String(d.text).replace(/^(?:不吃|不碰|不看|不聽)/, ''))) && String(d.text).length >= 2)) return false;

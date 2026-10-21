@@ -5,6 +5,7 @@ import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { SHOPS, KINDS, isShopUrl, shopLinks } from '../../core/real-shops.js';
 import { OCCASIONS, FREQUENCIES, formatPriceRange } from '../../core/gift-ideas.js';
+import { ideaIsRestricted, AGE_NOTE } from '../../core/age-restricted.js';
 import {
     loadPrefs, savePrefs, loadSelectedChar, saveSelectedChar, loadWishlist, addWish, removeWish, loadRecords, addRecord, saveDecisionMemory,
     loadProposals, updateProposal, refreshProposals, generateIdeas, NoApiError, DEFAULT_BUDGET, isShown
@@ -172,6 +173,7 @@ async function renderShopping() {
           <div class="tb-idea-head"><span class="tb-kind">${esc(KINDS.find(k => k.id === idea.kind)?.name || '')}</span><strong>${esc(idea.name)}</strong><span class="tb-price">${esc(formatPriceRange(idea))}</span></div>
           ${idea.reason ? `<p class="tb-reason">${esc(idea.reason)}</p>` : ''}
           ${idea.message ? `<p class="tb-say">「${esc(idea.message)}」<small>— ${esc(c?.name || '')}</small></p>` : ''}
+          ${ideaIsRestricted(idea) ? `<p class="tb-age">🔞 ${AGE_NOTE}</p>` : ''}
           <small class="tb-muted">${idea.real ? '價格是剛剛查到的標價，可能隨時變動；' : '價格是估計，請以商店為準；'}不會自動購買，要不要買由你決定。</small>`;
         card.appendChild(linkButtons(idea));
         const actions = createElement('div', 'tb-actions');

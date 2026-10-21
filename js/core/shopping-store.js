@@ -4,7 +4,7 @@ import { SettingsDB, CharactersDB, ChatsDB } from '../db.js';
 import APIClient from '../api.js';
 import { buildAppContext } from './app-context-builder.js';
 import { saveInteractionMemory } from './memory-saver.js';
-import { loadBirthdate, getBirthdate } from './age-gate.js';
+import { loadBirthdate, getBirthdate, isAdult } from './age-gate.js';
 import { loadEvents } from './calendar.js';
 import { loadDislikes } from './dislikes.js';
 import { resolvePrefs, shopLinks } from './real-shops.js';
@@ -117,12 +117,14 @@ export async function generateIdeas({ characterId, occasion = 'request', label =
     if (!settings.api_url || !settings.api_key) throw new NoApiError();
     const [char, wishlist, records, dislikes] = [await CharactersDB.getById(characterId), await loadWishlist(), await loadRecords(), await loadDislikes()];
     if (!char) throw new Error('找不到角色');
+    await loadBirthdate();
+    const adult = isAdult();
     const ctx = await buildAppContext({ characterId, userMessage: label || OCCASIONS[occasion]?.label || '禮物' });
     const past = records.filter(r => r.characterId === characterId).slice(-30).map(r => r.name);
-    const messages = buildIdeaMessages({ systemPrompt: ctx.systemPrompt, charName: char.name, userName: ctx.user?.name || '你', occasion, label, budget, kinds, wishlist, past, extra });
+    const messages = buildIdeaMessages({ adult, systemPrompt: ctx.systemPrompt, charName: char.name, userName: ctx.user?.name || '你', occasion, label, budget, kinds, wishlist, past, extra });
     for (let attempt = 0; attempt < 2; attempt++) {
         const text = await APIClient.complete(messages, { temperature: 0.9, maxTokens: 1100 });
-        const ideas = filterIdeas(parseIdeas(text, { limit: 3 }), { budget, dislikes, past });
+        const ideas = filterIdeas(parseIdeas(text, { limit: 3 }), { budget, dislikes, past, adult });
         if (ideas.length) return attachRealPrices(ideas);
     }
     throw new Error('這次沒有挑到合適的，再試一次看看');
