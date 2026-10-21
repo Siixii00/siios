@@ -206,3 +206,7 @@ Code review（`340bf4c~1..HEAD`）找到並修正：
 - **原因**：世界書的 ECoT 預設會要求模型輸出 `<thinking>…</thinking>` 並用 `<!-- Start the ECoT -->` 之類的 HTML 註解包住思考與自我檢查；PWA 把模型輸出原樣顯示、存檔，歷史裡的舊思考還會教模型繼續輸出。
 - **修正**：新增 `js/core/reasoning-filter.js`（`stripReasoning`）。串流時畫面只顯示去掉思考後的文字（標籤寫到一半先不顯示，不會閃一下）；完成時存檔與自我檢查用的是乾淨版；`APIClient.complete`（各 App 共用的非串流呼叫）也一併處理；送給模型的歷史裡舊回覆的思考過程先去掉。整段都是思考時回報錯誤，提示重新生成。Discord Worker 的 `stripReasoning` 是同一套規則（補上沒收尾的 `<!--`），測試會比對兩邊結果一致。
 - 已存進資料庫的舊訊息不會被改寫；只是顯示用的歷史（送給模型的）會去掉，畫面上舊訊息裡的思考過程仍在。
+
+### 2026-10-21 找回 Discord 專用輸出模式
+- 加入回應模式（1d19e42）時，我把 Discord Worker 提示詞裡一直寫死的三行（「Discord 主要是公開頻道，回覆請用輕鬆、聊天式的口吻，語句簡短，限縮在聊天模式。／可適度加入動作描寫…／不要使用 markdown…」）拿掉了，所以機器人的語氣、長度都變了。git 歷史裡這就是 Discord 唯一的專用提示詞（最早出現在 9caa15f，沒有更早的「可選模式」；若你記得的是 Cloudflare 上更早的手動貼上版本，那個版本無法從 Cloudflare 取回）。
+- 現在把原文放回來，成為可選的 **`discord` 模式（Discord 聊天模式）**，並且是 Discord 的**預設**（跟加入回應模式之前的行為一致）。`/configure RESPONSE_MODE` 可選 discord／full／dialogue_single／dialogue_multi／custom，別名 `dc`、`dc模式`、`聊天` 等；提醒也會附在最後一則使用者訊息後面。PWA 聊天室沒有這個模式，預設仍是多句。

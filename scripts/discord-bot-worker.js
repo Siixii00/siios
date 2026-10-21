@@ -664,7 +664,7 @@ async function registerCommands(env) {
                         { name: 'Interject Probability (0~1)', value: 'INTERJECT_PROBABILITY' },
                         { name: 'Reaction Probability (0~1)', value: 'REACTION_PROBABILITY' },
                         { name: 'Backup Key', value: 'BACKUP_KEY' },
-                        { name: 'Response Mode (full / dialogue_single / dialogue_multi / custom)', value: 'RESPONSE_MODE' },
+                        { name: 'Response Mode (discord / full / dialogue_single / dialogue_multi / custom)', value: 'RESPONSE_MODE' },
                         { name: 'Custom Response Prompt (Response Mode = custom 時使用)', value: 'CUSTOM_RESPONSE_PROMPT' }
                     ]
                 },
@@ -816,7 +816,7 @@ async function handleSlashCommand(event, env, ctx) {
             if (!key || !value) return Response.json({ type: 4, data: { content: '❌ 請提供 key 和 value', flags: 64 } });
             if (key === 'RESPONSE_MODE') {
                 const mode = normalizeResponseMode(value);
-                if (!mode) return Response.json({ type: 4, data: { content: '❌ Response Mode 只能是：full（完整）、dialogue_single（單句）、dialogue_multi（多句）、custom（自訂）', flags: 64 } });
+                if (!mode) return Response.json({ type: 4, data: { content: '❌ Response Mode 只能是：discord（Discord 聊天，預設）、full（完整）、dialogue_single（單句）、dialogue_multi（多句）、custom（自訂）', flags: 64 } });
                 await setConfig(env, key, mode);
                 return Response.json({ type: 4, data: { content: `✅ 已設定 RESPONSE_MODE = ${mode}${mode === 'custom' ? '（請再用 CUSTOM_RESPONSE_PROMPT 設定自訂內容）' : ''}` } });
             }
@@ -1507,8 +1507,14 @@ function splitForDiscord(text, limit = DISCORD_MESSAGE_LIMIT) {
 
 // 回應模式：與 PWA 聊天室的「回應模式」完全對應（js/constants/rp-system-prompt.js）。
 // prompt 放系統提示詞；reminder 接在最後一則使用者訊息後面；maxTokens 是輸出長度的安全上限。
-const DEFAULT_RESPONSE_MODE = 'dialogue_multi';
+// Discord 預設用 discord 模式（也就是改成回應模式之前一直寫死在提示詞裡的那三行），PWA 聊天室沒有這個模式
+const DEFAULT_RESPONSE_MODE = 'discord';
 const RESPONSE_MODES = {
+    discord: {
+        prompt: '本次回覆使用【Discord 聊天模式】：\n- Discord 主要是公開頻道，回覆請用輕鬆、聊天式的口吻，語句簡短，限縮在聊天模式。\n- 可適度加入動作描寫（例如 *歪頭*、*笑*），但不要寫太長的敘述。\n- 不要使用 markdown、程式碼區塊或落落長的段落。',
+        reminder: '【回應格式：Discord 聊天模式】輕鬆聊天口吻、語句簡短；可適度加入動作描寫（*歪頭*），但不要寫太長的敘述；不要使用 markdown、程式碼區塊或落落長的段落。',
+        maxTokens: 1500
+    },
     full: {
         prompt: '本次回覆使用【完整模式】：請完整描述角色的動作、場景、肢體語言與對話內容，讓畫面生動立體。回覆內容不少於 400 字。',
         reminder: '【回應格式：完整模式】完整描述角色的動作、場景、肢體語言與對話內容，回覆不少於 400 字。',
@@ -1526,12 +1532,12 @@ const RESPONSE_MODES = {
     }
 };
 const RESPONSE_REMINDER_NOTE = '（從這一輪起以此格式為準，即使前面的回覆用了不同的格式或長度。）';
-const RESPONSE_MODE_ALIASES = { '完整': 'full', '完整模式': 'full', '單句': 'dialogue_single', '單句回應': 'dialogue_single', '多句': 'dialogue_multi', '多句回應': 'dialogue_multi', '自訂': 'custom', '自定義': 'custom' };
+const RESPONSE_MODE_ALIASES = { 'dc': 'discord', 'dc模式': 'discord', 'discord模式': 'discord', 'discord聊天模式': 'discord', '聊天': 'discord', '聊天模式': 'discord', '完整': 'full', '完整模式': 'full', '單句': 'dialogue_single', '單句回應': 'dialogue_single', '多句': 'dialogue_multi', '多句回應': 'dialogue_multi', '自訂': 'custom', '自定義': 'custom' };
 
 // 接受英文代碼或中文別名；無效回傳 null
 function normalizeResponseMode(value) {
     const v = String(value ?? '').trim();
-    const key = RESPONSE_MODE_ALIASES[v] || v.toLowerCase();
+    const key = RESPONSE_MODE_ALIASES[v.toLowerCase()] || v.toLowerCase();
     return key === 'custom' || RESPONSE_MODES[key] ? key : null;
 }
 

@@ -56,8 +56,10 @@ test('Discord：回應模式的提示詞與提醒和 PWA 完全一致（兩邊�
         assert.equal(dc.reminder, pwa.reminder, id + ' reminder');
         if (pwa.maxTokens) assert.equal(dc.maxTokens, pwa.maxTokens, id + ' maxTokens');
     }
-    assert.equal(D.DEFAULT_RESPONSE_MODE, DEFAULT_RESPONSE_MODE);
-    assert.equal(D.getResponseModeConfig(null).id, 'dialogue_multi');
+    // Discord 預設是 discord 模式（回應模式功能加入之前一直寫死的那段提示詞）；PWA 沒有這個模式，預設仍是多句
+    assert.equal(D.DEFAULT_RESPONSE_MODE, 'discord');
+    assert.equal(D.getResponseModeConfig(null).id, 'discord');
+    assert.equal(DEFAULT_RESPONSE_MODE, 'dialogue_multi');
 });
 
 test('Discord：模式名稱接受英文代碼與中文別名，無效回傳 null', () => {
@@ -103,4 +105,15 @@ test('Discord：優先在段落、換行、句尾切開，不會把句子攔腰�
     // 完全沒有標點與空白也能切（硬切），並且不會無限迴圈
     const noBreak = split('字'.repeat(5000));
     assert.deepEqual(noBreak.map(p => p.length), [2000, 2000, 1000]);
+});
+
+test('Discord 聊天模式：原本寫死的三行提示詞原文放回來，可用英文代碼或中文別名選', () => {
+    const dc = D.getResponseModeConfig('discord');
+    assert.equal(dc.id, 'discord');
+    for (const line of ['Discord 主要是公開頻道，回覆請用輕鬆、聊天式的口吻，語句簡短，限縮在聊天模式。', '可適度加入動作描寫（例如 *歪頭*、*笑*），但不要寫太長的敘述。', '不要使用 markdown、程式碼區塊或落落長的段落。']) {
+        assert.ok(dc.prompt.includes(line), line);
+    }
+    assert.match(dc.reminder, /^【回應格式：Discord 聊天模式】/);
+    for (const v of ['discord', 'DC', 'Discord', 'dc模式', '聊天']) assert.equal(D.normalizeResponseMode(v), 'discord', v);
+    assert.equal(D.getResponseModeConfig('full').id, 'full'); // 其他模式不受影響
 });
