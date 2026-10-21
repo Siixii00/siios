@@ -25,7 +25,7 @@ export function createCoWatch({ characterId, platform, getVideo, getPlayerTime, 
         busy = true; onBusy?.(true);
         try {
             const video = getVideo() || {};
-            const ctx = await buildAppContext({ characterId });
+            const ctx = await buildAppContext({ characterId, userMessage: [video.title, userSaid].filter(Boolean).join(' ') });
             const playerSec = getPlayerTime?.();
             const hasPlayer = typeof playerSec === 'number' && playerSec >= 0;
             const messages = buildCoWatchMessages({

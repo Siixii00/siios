@@ -6,11 +6,13 @@ import { SleepEngine } from './sleep-engine.js';
 import { MemoryClassifier } from './memory-classifier.js';
 import { MemoryDB, hashContent, cosineSimilarity, initDB } from '../../db.js';
 import { createEmbeddingClient } from '../embedding/index.js';
+import { pickPending, buildDigestMessages, parseDigestResponse, digestUpdate, DIGEST_BATCH_SIZE } from './digest.js';
 
 // 由「設定」的原始值組出記憶系統需要的設定（App 啟動與設定頁儲存後都用這個）
 export function memorySettingsFrom(s = {}) {
     return {
         decayRate: s.memory_decay_rate,
+        forgetThreshold: s.memory_threshold,
         embedding: {
             embedding_url: s.embedding_url,
             api_url: s.api_url,
@@ -19,8 +21,25 @@ export function memorySettingsFrom(s = {}) {
             embedding_api_key: s.embedding_api_key,
             api_key: s.api_key
         },
-        classifier: { api_url: s.api_url, api_key: s.api_key, model: s.model }
+        // 記憶消化專用 API（選填，OpenAI 相容）：整理摘要、分類、學到了什麼都用它，可以選便宜的模型。留空就用主要的 API
+        digest: {
+            api_url: s.memory_api_url || s.api_url,
+            api_key: s.memory_api_key || s.api_key,
+            model: s.memory_model || s.model,
+            dedicated: !!(s.memory_api_url && s.memory_api_key)
+        },
+        classifier: {
+            api_url: s.memory_api_url || s.api_url,
+            api_key: s.memory_api_key || s.api_key,
+            model: s.memory_model || s.model
+        }
     };
+}
+
+// 沒有專用的摘要時，用訊息開頭當「簡短版」：記憶層級選 meta 時才有資訊可看
+export function summarizeForMeta(text, max = 40) {
+    const t = String(text || '').replace(/\s+/g, ' ').trim();
+    return t.length > max ? t.slice(0, max) + '…' : t;
 }
 
 export class MemorySystem {
@@ -40,6 +59,57 @@ export class MemorySystem {
         this._batchProcessing = false;
 
         this.sleepEngine.onSleep(() => this.runSleepCycle());
+    }
+
+    // 把還沒消化的記憶分批交給消化 API，寫回摘要、學到的事、重要度、類型、標籤，有嵌入服務就順便補向量。
+    // API 本身出錯（額度、金鑰、連線）就停下來，不算在記憶頭上；回覆解析不出來的才累計失敗次數，超過上限就不再送。
+    async digestPending({ limit = 24 } = {}) {
+        const d = this.settings.digest || {};
+        if (!d.api_url || !d.api_key) return { digested: 0, skipped: 'no_api' };
+        const url = String(d.api_url).replace(/\/+$/, '') + '/v1/chat/completions';
+        const pending = pickPending(await MemoryDB.getAll(), { limit });
+        let digested = 0;
+        for (let i = 0; i < pending.length; i += DIGEST_BATCH_SIZE) {
+            const batch = pending.slice(i, i + DIGEST_BATCH_SIZE);
+            let text = '';
+            try {
+                const res = await fetch(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${d.api_key}` },
+                    body: JSON.stringify({ model: d.model || 'gpt-3.5-turbo', messages: buildDigestMessages(batch), temperature: 0.2, max_tokens: 1500 })
+                });
+                if (!res.ok) return { digested, error: `消化 API 回應 ${res.status}` };
+                text = (await res.json()).choices?.[0]?.message?.content || '';
+            } catch (e) {
+                return { digested, error: '消化 API 連線失敗：' + (e?.message || e) };
+            }
+            const results = parseDigestResponse(text, batch.length);
+            for (let j = 0; j < batch.length; j++) {
+                const m = batch[j];
+                const r = results.get(j);
+                if (!r) { await MemoryDB.update(m.id, { digest_attempts: (m.digest_attempts || 0) + 1 }); continue; }
+                const patch = digestUpdate(m, r);
+                if (this.embeddingClient) {
+                    try {
+                        if (!m.embedding) patch.embedding = await this.embeddingClient.getEmbedding(m.full_content || m.content);
+                        if (r.learned) patch.embeddingMeaning = await this.embeddingClient.getEmbedding(r.learned);
+                    } catch (_) { /* 向量補不到不影響消化結果 */ }
+                }
+                await MemoryDB.update(m.id, patch);
+                digested++;
+            }
+        }
+        return { digested };
+    }
+
+    async getDigestStats() {
+        const all = await MemoryDB.getAll();
+        return {
+            total: all.length,
+            digested: all.filter(m => m.digested === true).length,
+            pending: pickPending(all, { limit: Infinity }).length,
+            dedicated: !!this.settings.digest?.dedicated
+        };
     }
 
     // 設定頁儲存之後立刻生效（不用重開 App）：換新的嵌入客戶端、分類器與衰減率
@@ -110,7 +180,7 @@ export class MemorySystem {
             source_subtype: 'chat',
             // Memory levels
             memory_level: 'full',
-            meta_content: `在對話中交換了訊息`,
+            meta_content: summarizeForMeta(message),
             full_content: message,
             // Theater binding (will be updated by chat settings)
             theater_ids: [],
@@ -200,7 +270,11 @@ export class MemorySystem {
         }
 
         // Now apply semantic or keyword search
-        if (this.embeddingClient) {
+        // 沒有查詢句（多數 App 呼叫時沒有使用者訊息）：不比對內容，交給下面的「相似度 0.5 × 遺忘係數 × 重要度」
+        // 排序，也就是取這個角色近期、重要的記憶。否則這些 App 永遠讀不到任何記憶。
+        if (!String(query || '').trim()) {
+            memories = filteredMemories.map(m => ({ ...m, similarity: 0.5 }));
+        } else if (this.embeddingClient) {
             try {
                 const queryEmbedding = await this.embeddingClient.getEmbedding(query);
                 // 查詢句的向量拿不到（連線失敗、暫停中）：全部退回關鍵字搜尋，不然已經有向量的記憶會整批找不到
@@ -328,7 +402,7 @@ export class MemorySystem {
         const reinforced = [];
 
         for (const memory of decayed) {
-            if (this.decayEngine.shouldForget(memory.decayFactor) && !this.decayEngine.isProtected(memory, now)) {
+            if (this.decayEngine.shouldForget(memory.decayFactor, this.settings.forgetThreshold || 0.1) && !this.decayEngine.isProtected(memory, now)) {
                 await MemoryDB.delete(memory.id);
                 forgotten.push(memory.id);
             } else {
@@ -348,7 +422,17 @@ export class MemorySystem {
             }
         }
 
+        this.lastSleepRun = now;
+        try { await this.onSleepCycleDone?.(now); } catch (_) {}
         return { forgotten, reinforced, totalProcessed: decayed.length };
+    }
+
+    // 睡眠週期原本只在「App 開著而且是 02:00–06:00」才會跑，手機 PWA 幾乎碰不到；
+    // 啟動時補跑：距離上次超過 24 小時（或從沒跑過）就整理一次
+    async runSleepCycleIfDue({ lastRun = null, now = Date.now(), minIntervalMs = 24 * 60 * 60 * 1000 } = {}) {
+        const last = Number(lastRun ?? this.lastSleepRun) || 0;
+        if (last && now - last < minIntervalMs) return null;
+        return this.runSleepCycle();
     }
 
     async getStats() {

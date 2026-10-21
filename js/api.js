@@ -199,7 +199,7 @@ const APIClient = {
             let usedChars = 0;
             const memoryLines = [];
             for (const m of memoryContext) {
-                const sanitized = (m.content || '').replace(/[\r\n]/g, ' ').replace(/\[.*?\]/g, '');
+                const sanitized = (m.displayContent || m.content || '').replace(/[\r\n]/g, ' ').replace(/\[.*?\]/g, '');
                 const source = m.source_app && m.source_app !== 'chat' ? MEMORY_SOURCES.find(s => s.id === m.source_app)?.name : '';
                 const line = `- ${source ? '（' + source + '）' : ''}${sanitized}`;
                 if (usedChars + line.length > maxChars) break;

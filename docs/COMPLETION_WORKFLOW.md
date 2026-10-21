@@ -265,3 +265,10 @@ Code review（`340bf4c~1..HEAD`）找到並修正：
 - **新增測試**：`discord-auth.test.mjs`（密鑰閘門、/auth、鎖定、升級、webhook 簽章）、`co-watch.test.mjs`、`ziwei-market.test.mjs`、`imports-resolve.test.mjs`（所有相對 import 都存在——抓到 `mcp-intelligence/index.js` 的 db 路徑錯誤並修正）。
 - **未驗證**：真實 YouTube／Bilibili 嵌入播放與 postMessage 時間（瀏覽器窗格無外網播放驗證，邏輯用單元測試與假 API 驗過）；Workers AI 嵌入額度用完，bge-m3 實際呼叫仍未驗。
 - **發現但未動**：`js/activity-router.js` 引用不存在的 `api/` 資料夾且無人使用（死碼）；Bilibili 的 `syncBilibiliCookieToGitHub` 仍寫死 `Siixii00/siios` 倉庫（登入入口已停用，建議整段刪掉）。
+
+### 2026-10-21 記憶系統：跨 App 檢索、衰退、消化 API
+- **查出的問題**：約 22 個 App 呼叫 `buildAppContext` 時沒有查詢句，而空查詢的結果是空的，所以大部分 App 其實讀不到任何記憶；約會把角色物件當選項傳（讀不到 characterId）；「記憶層級」設定沒有作用（提示詞一律用完整內容）；聊天記憶的摘要固定是同一句；睡眠週期只在凌晨 2–6 點 App 開著時才跑，手機幾乎碰不到（遺忘與強化等於沒運作）；「遺忘閾值」設定沒人讀；DecayEngine 預設 0.1 與設定頁預設 0.01 不一致；Discord 來的記憶被遺忘後下次同步會復活。
+- **修正**：沒有查詢句時取該角色近期、重要的記憶（仍遵守來源／虛構設定）；提示詞改用 `displayContent`；聊天記憶的摘要取訊息前 40 字；睡眠週期啟動時補跑（`runSleepCycleIfDue`，24 小時內不重複，時間記在 `memory_last_sleep`）；遺忘閾值生效（`<=`，因為係數下限是 0.01）；預設衰減率統一 0.01；`MemoryDB.delete` 對 Discord 來源的記憶記下 `forgotten_memory_ids`（上限 3000），`importMany` 略過；約會與共同觀看改用正確的呼叫（共同觀看用影片標題當查詢句）。
+- **記憶消化 API**：`core/memory-system/digest.js`（純函式：挑待消化、組提示詞、解析、套用結果）＋ `MemorySystem.digestPending/getDigestStats`。設定 `memory_api_url/key/model`（留空用聊天 API；分類器也走這組）。每批 8 則，寫回摘要、學到的事、重要度（與原值 4:6 混合）、類型、領域、標籤，補向量；API 本身出錯（額度／金鑰）就停止，不累計記憶的失敗次數，只有解析不出來才累計（上限 3）。只有填了專用 API 才自動做（啟動 30 秒後、每 15 分鐘、畫面開著），避免悄悄花掉聊天 API 的額度；設定頁有「立即消化記憶」與待消化數量。
+- **測試**：`memory-retrieval.test.mjs`、`memory-digest.test.mjs`（用 `_memory-harness.mjs` 把 db.js 換成記憶體假資料庫）；瀏覽器用真的 IndexedDB 驗過消化、無查詢句檢索、墓碑與設定頁。
+- **沒做**：`saveInteractionMemory` 仍不檢查記憶總開關（關掉時照寫、不會被讀）；每次檢索仍讀整張記憶表（記憶很多時會慢）。

@@ -8,7 +8,7 @@
  */
 
 export class DecayEngine {
-    constructor(decayRate = 0.1) {
+    constructor(decayRate = 0.01) { // 和設定頁的預設值（memory_decay_rate）一致
         this.decayRate = decayRate;
         
         this.ebbinghausRetention = {
@@ -64,7 +64,7 @@ export class DecayEngine {
     }
 
     shouldForget(decayFactor, threshold = 0.1) {
-        return decayFactor < threshold;
+        return decayFactor <= threshold; // 係數有下限 0.01，門檻設成 0.01 時要能碰到
     }
     
     getDecayStage(decayFactor) {

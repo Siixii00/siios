@@ -283,6 +283,42 @@ async function renderApiConfig() {
     memThreshCell.appendChild(memThreshInput);
     memoryGroup.appendChild(memThreshCell);
 
+    // 記憶消化專用 API：各 App 隨手寫入的記憶，交給它整理成摘要、學到的事、重要度與標籤（可選便宜的模型；留空就用上面的聊天 API）
+    const digestCell = createElement('div', 'p-4 mt-2');
+    digestCell.appendChild(createElement('label', 'text-sm font-medium block mb-1', { textContent: '記憶消化 API（選填）' }));
+    digestCell.appendChild(createElement('p', 'text-xs text-ios-muted mb-2', { textContent: '角色的記憶需要「消化」：把各個 App 留下的片段整理成一句話摘要、記住用戶的喜好與關係變化、判斷重要度。這組 API 專門做這件事，可以用便宜的小模型，不影響聊天。要自動消化，網址與金鑰都要填；留空時只能手動按下面的按鈕，並使用上面的聊天 API。記憶內容會送到這組 API。' }));
+    const digestUrl = createElement('input', 'ios-input', { type: 'url', placeholder: 'https://api.openai.com（不要加 /v1）', value: settings.memory_api_url || '' });
+    digestUrl.oninput = (e) => settings.memory_api_url = e.target.value.trim();
+    const digestKey = createElement('input', 'ios-input mt-2', { type: 'password', placeholder: 'API Key', value: settings.memory_api_key || '' });
+    digestKey.oninput = (e) => settings.memory_api_key = e.target.value.trim();
+    const digestModel = createElement('input', 'ios-input mt-2', { type: 'text', placeholder: '模型名稱，例如 gpt-4o-mini', value: settings.memory_model || '' });
+    digestModel.oninput = (e) => settings.memory_model = e.target.value.trim();
+    const digestStatus = createElement('p', 'text-xs text-ios-muted mt-2', { textContent: '' });
+    const digestBtn = createElement('button', 'ios-btn mt-2', { textContent: '立即消化記憶' });
+    const refreshDigestStatus = async () => {
+        const memory = window.App?.memorySystem;
+        if (!memory) return;
+        const s = await memory.getDigestStats();
+        digestStatus.textContent = `共 ${s.total} 則記憶，已消化 ${s.digested}，待消化 ${s.pending}${s.dedicated ? '（啟動後每 15 分鐘自動消化）' : '（沒有專用 API，不會自動消化）'}`;
+    };
+    digestBtn.onclick = async () => {
+        const memory = window.App?.memorySystem;
+        if (!memory) { createToast('記憶系統尚未啟動', 'error'); return; }
+        digestBtn.disabled = true; digestBtn.textContent = '消化中…';
+        try {
+            memory.reconfigure(memorySettingsFrom(settings)); // 用畫面上目前填的設定（還沒按儲存也能試）
+            const res = await memory.digestPending({ limit: 48 });
+            if (res.skipped === 'no_api') createToast('還沒有可用的 API：請填上面的聊天 API，或這裡的消化 API', 'error');
+            else if (res.error) createToast(res.error + '（已消化 ' + res.digested + ' 則）', 'error');
+            else createToast('已消化 ' + res.digested + ' 則記憶');
+        } catch (e) { createToast('消化失敗：' + (e?.message || e), 'error'); }
+        digestBtn.disabled = false; digestBtn.textContent = '立即消化記憶';
+        refreshDigestStatus();
+    };
+    digestCell.append(digestUrl, digestKey, digestModel, digestBtn, digestStatus);
+    memoryGroup.appendChild(digestCell);
+    refreshDigestStatus();
+
     main.appendChild(memorySection);
     main.appendChild(memoryGroup);
 
@@ -309,7 +345,7 @@ async function renderApiConfig() {
         const keys = [
             'api_url', 'api_key', 'model',
             'embedding_url', 'embedding_model', 'embedding_dimensions', 'embedding_api_key',
-            'memory_enabled', 'memory_decay_rate', 'memory_threshold', 'vision_enabled'
+            'memory_enabled', 'memory_decay_rate', 'memory_threshold', 'memory_api_url', 'memory_api_key', 'memory_model', 'vision_enabled'
         ];
         for (const key of keys) {
             await SettingsDB.set(key, settings[key]);

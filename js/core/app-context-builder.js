@@ -144,7 +144,7 @@ ${entry.content}
         prompt += `以下是與當前對話相關的過往記憶：
 `;
         for (const memory of context.memories) {
-            const sanitized = (memory.content || '').replace(/[\r\n]/g, ' ').replace(/\[.*?\]/g, '');
+            const sanitized = (memory.displayContent || memory.content || '').replace(/[\r\n]/g, ' ').replace(/\[.*?\]/g, '');
             prompt += `- ${sanitized}
 `;
         }

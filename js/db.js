@@ -574,6 +574,12 @@ const MemoryDB = {
 
     async delete(id) {
         const database = await initDB();
+        // 從 Discord 拉下來的記憶被遺忘或刪除時，記下 id，之後同步不再把它拉回來（否則一同步就「復活」）
+        const old = await database.get('memories', id);
+        if (old && (old.origin === 'discord' || old.source_app === 'discord')) {
+            const list = (await SettingsDB.get('forgotten_memory_ids')) || [];
+            if (!list.includes(id)) await SettingsDB.set('forgotten_memory_ids', [...list, id].slice(-3000));
+        }
         await database.delete('memories', id);
     },
 
@@ -581,11 +587,13 @@ const MemoryDB = {
     // 本機已經有的（同 id）不覆蓋：Worker 回傳的是精簡版，蓋上去會把 PWA 原生記憶的向量與感官欄位弄丟；
     // 機器人的對話原文日誌（「[Discord 聊天]」）不是記憶，不匯入。回傳實際新增的筆數。
     async importMany(memories) {
+        const forgotten = new Set((await SettingsDB.get('forgotten_memory_ids')) || []);
         const database = await initDB();
         const tx = database.transaction('memories', 'readwrite');
         let added = 0;
         for (const mem of memories) {
             if (!mem?.id || mem.memory_type === 'raw' || String(mem.content || '').startsWith('[Discord 聊天]')) continue;
+            if (forgotten.has(mem.id)) continue;
             if (await tx.store.get(mem.id)) continue;
             const fromSiios = String(mem.content || '').startsWith('[Siios 聊天]'); // 備份還原時可能帶回自己推上去的，去掉標記
             added++;

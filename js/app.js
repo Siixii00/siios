@@ -144,6 +144,20 @@ const App = {
             if (mergedSettings.memory_enabled) {
                 console.log('[App] 啟動記憶系統...');
                 memorySystem.start();
+                // 遺忘／強化整理：手機 PWA 凌晨不會開著，所以啟動時補跑（24 小時內不重複）
+                memorySystem.onSleepCycleDone = ts => SettingsDB.set('memory_last_sleep', ts);
+                setTimeout(async () => {
+                    try { await memorySystem.runSleepCycleIfDue({ lastRun: await SettingsDB.get('memory_last_sleep') }); }
+                    catch (e) { console.warn('[App] 記憶整理失敗：', e); }
+                }, 20000);
+                // 記憶消化：有設定專用 API 才自動做（避免悄悄花掉聊天 API 的額度）；啟動後 30 秒一次，之後每 15 分鐘，只在畫面開著時
+                const digestTick = async () => {
+                    const ms = window.App?.memorySystem;
+                    if (document.hidden || !ms?.settings?.digest?.dedicated) return;
+                    try { await ms.digestPending(); } catch (e) { console.warn('[App] 記憶消化失敗：', e); }
+                };
+                setTimeout(digestTick, 30000);
+                setInterval(digestTick, 15 * 60 * 1000);
             }
             console.log('[App] 記憶系統初始化完成');
             // 與 Discord 機器人的記憶同步（每 30 分鐘最多一次，沒設定 Worker 網址就略過），不阻塞啟動

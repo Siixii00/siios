@@ -7,3 +7,6 @@ node_modules/
 
 # 維護者自己的 Worker 設定（含資料庫 ID）
 discord-worker/wrangler.local.toml
+
+# 測試時產生的暫存檔
+tests/.gen-memory/

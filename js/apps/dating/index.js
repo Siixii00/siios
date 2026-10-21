@@ -228,7 +228,7 @@ async function startDating(container, scene) {
 
 async function generateSystemMessage(scene) {
   const char = datingState.character;
-  const context = await buildAppContext(char, { scene });
+  const context = await buildAppContext({ characterId: char.id });
   
   let systemMessage = `你是${char.name}，正在與使用者進行約會。
 場景：${scene.name} - ${scene.desc}
@@ -350,7 +350,7 @@ async function generateResponse(container, userMessage, isAction = false) {
       .filter(m => m.role !== 'system')
       .map(m => ({ role: m.role, content: m.content }));
     
-    const context = await buildAppContext(datingState.character, { scene: datingState.scene });
+    const context = await buildAppContext({ characterId: datingState.character.id });
     const systemPrompt = context.systemPrompt 
       ? `${await generateSystemMessage(datingState.scene)}\n\n${context.systemPrompt}`
       : await generateSystemMessage(datingState.scene);
