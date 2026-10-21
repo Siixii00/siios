@@ -1,31 +1,35 @@
-import { loadProgress, completeLevel, levelGridHtml, starText, totalStars } from './levels.js';
+import { loadProgress, completeLevel, levelGridHtml, starText, totalStars, loadDaily, completeDaily, dailyButtonHtml, dailyOverlayNote } from './levels.js';
+import { dailySeed, dailyLevel, seededRng } from './daily.js';
 import { LEVELS, press, isOff, puzzle, minPresses, starsFor } from './lights-core.js';
 
 const GAME = 'lights';
 
 export async function mount(root) {
     let progress = await loadProgress(GAME);
+    let todayInfo = await loadDaily(GAME), daily = false, dailyResult = null;
     let level = 0, n = 3, board, initial, par = 0, moves = 0, finished = false, stars = 0;
 
     function showMenu() {
         level = 0;
         root.innerHTML = `<div class="ag-wrap">
             <p class="lv-summary">累計 ★ ${totalStars(progress)} / ${LEVELS.length * 3}</p>
+            ${dailyButtonHtml(todayInfo, dailyLevel(GAME, LEVELS.length))}
             ${levelGridHtml(progress, LEVELS.length, i => LEVELS[i - 1].n + '×' + LEVELS[i - 1].n)}
             <p class="ag-hint">按一格，它和上下左右的燈會一起切換；把所有燈關掉。步數越接近最少步數星星越多</p>
         </div>`;
     }
 
-    function startLevel(lv, same = false) {
+    function startLevel(lv, isDaily = false, same = false) {
+        daily = isDaily; dailyResult = null;
         level = lv; n = LEVELS[lv - 1].n;
-        if (!same || !initial) { initial = puzzle(n, LEVELS[lv - 1].presses).board; par = minPresses(initial, n); }
+        if (!same || !initial) { initial = puzzle(n, LEVELS[lv - 1].presses, isDaily ? seededRng(dailySeed(GAME)) : Math.random).board; par = minPresses(initial, n); }
         board = initial.slice(); moves = 0; finished = false; stars = 0;
         draw();
     }
 
     function draw() {
         const overlay = finished ? `<div class="m3-overlay"><div class="m3-card"><h2>💡 全部關掉了！</h2><p class="m3-stars">${starText(stars)}</p><p>${moves} 步（最少 ${par} 步）</p>
-            <div class="m3-btns">${level < LEVELS.length ? '<button data-act="next">下一關</button>' : ''}<button data-act="again">換一題</button><button data-act="menu">選關</button></div></div></div>` : '';
+            ${dailyOverlayNote(dailyResult)}<div class="m3-btns">${!daily && level < LEVELS.length ? '<button data-act="next">下一關</button>' : ''}<button data-act="again">換一題</button><button data-act="menu">選關</button></div></div></div>` : '';
         root.innerHTML = `
         <div class="ag-wrap" style="position:relative">
             <div class="lv-bar"><button class="ag-btn" data-act="menu">‹ 選關</button><span>第 ${level} 關 · ${n}×${n}</span></div>
@@ -43,7 +47,7 @@ export async function mount(root) {
         if (isOff(board)) {
             finished = true; stars = starsFor(moves, par);
             draw();
-            progress = await completeLevel(GAME, level, stars, LEVELS.length);
+            if (daily) { dailyResult = await completeDaily(GAME, stars); todayInfo = await loadDaily(GAME); draw(); } else progress = await completeLevel(GAME, level, stars, LEVELS.length);
             return;
         }
         draw();
@@ -54,8 +58,9 @@ export async function mount(root) {
         if (lamp) tap(+lamp.dataset.i);
         else if (lv && !lv.disabled) startLevel(+lv.dataset.lv);
         else if (act === 'menu') showMenu();
-        else if (act === 'again') startLevel(level);
-        else if (act === 'reset') startLevel(level, true);
+        else if (act === 'again') startLevel(level, daily);
+        else if (act === 'daily') startLevel(dailyLevel(GAME, LEVELS.length), true);
+        else if (act === 'reset') startLevel(level, daily, true);
         else if (act === 'next') startLevel(level + 1);
     });
     showMenu();

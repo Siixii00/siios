@@ -1,4 +1,5 @@
-import { loadProgress, completeLevel, levelGridHtml, starText, totalStars } from './levels.js';
+import { loadProgress, completeLevel, levelGridHtml, starText, totalStars, loadDaily, completeDaily, dailyButtonHtml, dailyOverlayNote } from './levels.js';
+import { dailySeed, dailyLevel, seededRng } from './daily.js';
 import { LEVELS, SIZES, generate, starsFor, geometry } from './sudoku-core.js';
 
 const GAME = 'sudoku';
@@ -6,6 +7,7 @@ const HINTS = 3;
 
 export async function mount(root) {
     let progress = await loadProgress(GAME);
+    let todayInfo = await loadDaily(GAME), daily = false, dailyResult = null;
     let level = 0, size = 9, puzzle, solution, grid, notes, selected = -1, noteMode = false, mistakes = 0, hints = 0;
     let startedAt = 0, elapsed = 0, timerId = null, finished = false, stars = 0, wrong = new Set();
 
@@ -16,15 +18,24 @@ export async function mount(root) {
         level = 0;
         root.innerHTML = `<div class="ag-wrap">
             <p class="lv-summary">累計 ★ ${totalStars(progress)} / ${LEVELS.length * 3}</p>
+            ${dailyButtonHtml(todayInfo, dailyLevel(GAME, LEVELS.length))}
             ${levelGridHtml(progress, LEVELS.length, n => { const l = LEVELS[n - 1]; return l.size + '×' + l.size + '·' + l.clues + '格'; })}
             <p class="ag-hint">每一盤都只有一個答案，不必猜；提示越少、錯得越少星星越多</p>
         </div>`;
     }
 
-    function startLevel(n) {
+    function startLevel(n, isDaily = false) {
         clearInterval(timerId);
+        daily = isDaily; dailyResult = null;
         level = n; size = LEVELS[n - 1].size;
-        const g = generate(n);
+        // 後面的關卡要多出幾題挑難的，可能要一兩秒：先顯示「出題中」再開始算，畫面才不會像當掉
+        root.innerHTML = '<div class="ag-wrap"><p class="ag-hint">出題中…</p></div>';
+        setTimeout(() => begin(n, isDaily), 30);
+    }
+
+    function begin(n, isDaily) {
+        if (level !== n) return; // 出題期間已經離開
+        const g = generate(n, isDaily ? seededRng(dailySeed(GAME)) : Math.random);
         puzzle = g.puzzle; solution = g.solution; grid = puzzle.slice();
         notes = new Map(); selected = -1; noteMode = false; mistakes = 0; hints = 0; finished = false; stars = 0; wrong = new Set();
         startedAt = Date.now(); elapsed = 0;
@@ -51,7 +62,7 @@ export async function mount(root) {
 
     function draw() {
         const overlay = finished ? `<div class="m3-overlay"><div class="m3-card"><h2>🎉 解開了！</h2><p class="m3-stars">${starText(stars)}</p><p>用時 ${fmt(elapsed)} · 錯誤 ${mistakes} · 提示 ${hints}</p>
-            <div class="m3-btns">${level < LEVELS.length ? '<button data-act="next">下一關</button>' : ''}<button data-act="again">再玩一盤</button><button data-act="menu">選關</button></div></div></div>` : '';
+            ${dailyOverlayNote(dailyResult)}<div class="m3-btns">${!daily && level < LEVELS.length ? '<button data-act="next">下一關</button>' : ''}<button data-act="again">再玩一盤</button><button data-act="menu">選關</button></div></div></div>` : '';
         root.innerHTML = `
         <div class="ag-wrap" style="position:relative">
             <div class="lv-bar"><button class="ag-btn" data-act="menu">‹ 選關</button><span>第 ${level} 關 · ${size}×${size}</span></div>
@@ -89,7 +100,7 @@ export async function mount(root) {
         if (finished || !grid.every((v, i) => v === solution[i])) return false;
         finished = true; clearInterval(timerId); elapsed = Math.floor((Date.now() - startedAt) / 1000);
         stars = starsFor(hints, mistakes);
-        progress = await completeLevel(GAME, level, stars, LEVELS.length);
+        if (daily) { dailyResult = await completeDaily(GAME, stars); todayInfo = await loadDaily(GAME); } else progress = await completeLevel(GAME, level, stars, LEVELS.length);
         return true;
     }
 
@@ -117,7 +128,8 @@ export async function mount(root) {
         else if (num) place(+num.dataset.n);
         else if (lv && !lv.disabled) startLevel(+lv.dataset.lv);
         else if (act === 'menu') showMenu();
-        else if (act === 'again') startLevel(level);
+        else if (act === 'again') startLevel(level, daily);
+        else if (act === 'daily') startLevel(dailyLevel(GAME, LEVELS.length), true);
         else if (act === 'next') startLevel(level + 1);
         else if (act === 'erase') erase();
         else if (act === 'notes') { noteMode = !noteMode; draw(); }

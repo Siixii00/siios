@@ -328,3 +328,7 @@
 .bl-pad { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; width: 100%; max-width: 300px; }
 .bl-pad button { height: 44px; border: 2px solid var(--arcade-border); background: var(--arcade-card); color: var(--arcade-text); font-size: 18px; font-weight: 700; cursor: pointer; }
 .bl-pad button:disabled { opacity: .3; }
+
+/* 每日挑戰 */
+.daily-btn { width: 100%; max-width: 360px; background: linear-gradient(90deg, #f8b040, #ff7a59); }
+.arcade-app .daily-note { margin: 6px 0 0; font-size: 13px; color: #7bdc7b; }

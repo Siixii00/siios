@@ -7,6 +7,8 @@ import * as SL from '../../js/apps/arcade/games/slide-core.js';
 import * as LI from '../../js/apps/arcade/games/lights-core.js';
 import * as BU from '../../js/apps/arcade/games/bulls-core.js';
 import * as SN from '../../js/apps/arcade/games/snake-core.js';
+import * as DY from '../../js/apps/arcade/games/daily.js';
+import * as G2 from '../../js/apps/arcade/games/g2048-core.js';
 import { mulberry } from './_arcade-bots.mjs';
 
 // ───── 翻牌 ─────
@@ -22,7 +24,8 @@ test('翻牌：牌組每種圖案剛好兩張、不會用到不存在的圖案�
     assert.ok(MM.EMOJI.length >= Math.max(...MM.LEVELS.map(l => l.pairs)));
     const pairs = MM.LEVELS.map(l => l.pairs);
     assert.deepEqual(pairs, [...pairs].sort((a, b) => a - b));
-    assert.deepEqual([MM.cols(3), MM.cols(8), MM.cols(16)], [4, 5, 6]);
+    assert.deepEqual([MM.cols(3), MM.cols(8), MM.cols(14), MM.cols(20)], [4, 5, 6, 8]);
+    assert.ok(MM.LEVELS.length >= 25);
 });
 
 test('翻牌：星數門檻（步數越少越多星）', () => {
@@ -65,9 +68,9 @@ test('踩地雷：每一關都能產生「不用猜」的盤面（只靠單點�
         for (let k = 0; k < 6; k++) {
             const rng = mulberry(500 + lv * 10 + k), cells = MN.newCells(w, h), first = Math.floor(rng() * w * h);
             const t0 = Date.now();
-            const r = MN.plantFair(cells, w, h, mines, first, rng, 400);
+            const r = MN.plantFair(cells, w, h, mines, first, rng);
             assert.ok(Date.now() - t0 < 1500, `第 ${lv} 關出題太慢`);
-            assert.equal(r.fair, true, `第 ${lv} 關 400 次內找不到不用猜的盤面`);
+            assert.equal(r.fair, true, `第 ${lv} 關找不到不用猜的盤面`);
             assert.equal(MN.canSolveWithoutGuess(cells, w, h, first), true);
             assert.equal(cells.filter(c => c.mine).length, mines);
             assert.ok(!cells[first].mine && MN.neighbors(w, h, first).every(j => !cells[j].mine));
@@ -91,7 +94,8 @@ test('踩地雷：canSolveWithoutGuess 對真的要猜的盤面回 false（經�
 test('踩地雷：關卡密度逐步提高、星數門檻', () => {
     const dens = MN.LEVELS.map(l => l.mines / (l.w * l.h));
     assert.ok(dens.every((d, i) => i === 0 || d >= dens[i - 1] - 0.015), '密度大致遞增');
-    assert.ok(dens[0] < 0.13 && dens.at(-1) > 0.2 && dens.at(-1) < 0.23);
+    assert.ok(dens[0] < 0.13 && dens.at(-1) > 0.22 && dens.at(-1) < 0.24);
+    assert.ok(MN.LEVELS.length >= 25 && MN.LEVELS.every(l => l.w <= 14), '寬度最多 14 格，手機上才點得到');
     assert.equal(MN.starsFor(30, 100), 3);
     assert.equal(MN.starsFor(120, 100), 2);
     assert.equal(MN.starsFor(400, 100), 1);
@@ -134,13 +138,14 @@ test('數獨：解題器能解出合法的答案、算得出解的個數', () =>
 
 test('數獨：每一關的題目都是唯一解、只靠基本推理就能解開、提示數接近目標', () => {
     SU.LEVELS.forEach((lv, i) => {
-        for (let k = 0; k < 3; k++) {
+        for (let k = 0; k < (lv.minHidden ? 1 : 3); k++) {
             const g = SU.generate(lv, mulberry(40 + i * 7 + k));
             assert.equal(g.puzzle.filter(Boolean).length, g.clues);
             assert.ok(g.clues <= lv.clues + 2, `第 ${i + 1} 關提示數 ${g.clues}，目標 ${lv.clues}`);
             assert.equal(SU.countSolutions(g.puzzle, lv.size, 2), 1, `第 ${i + 1} 關不是唯一解`);
             const r = SU.solveBySingles(g.puzzle, lv.size);
             assert.equal(r.solved, true, `第 ${i + 1} 關需要基本推理以外的方法`);
+            if (lv.minHidden) assert.ok(r.hidden >= lv.minHidden - 5, `第 ${i + 1} 關「唯一位置」推理只有 ${r.hidden} 次，目標 ${lv.minHidden}`);
             assert.deepEqual(r.grid, g.solution);
             assert.deepEqual(SU.solve(g.puzzle, lv.size), g.solution);
             g.puzzle.forEach((v, j) => { if (v) assert.equal(v, g.solution[j]); });
@@ -158,6 +163,8 @@ test('數獨：越後面的關卡提示越少、需要「唯一位置」推理�
     const hidden = lv => { let t = 0; for (let k = 0; k < 8; k++) t += SU.solveBySingles(SU.generate(lv, mulberry(900 + k)).puzzle, lv.size).hidden; return t / 8; };
     assert.ok(hidden(SU.LEVELS[4]) < hidden(SU.LEVELS[8]));
     assert.ok(hidden(SU.LEVELS[8]) < hidden(SU.LEVELS[11]));
+    assert.ok(hidden(SU.LEVELS[11]) < hidden(SU.LEVELS[23]), '進階關卡要用到更多唯一位置推理');
+    assert.ok(SU.LEVELS.length >= 24);
 });
 
 test('數獨：衝突偵測與星數門檻', () => {
@@ -200,7 +207,12 @@ test('華容道：3×3 的最佳步數（IDA*）不超過打亂步數，而且�
 });
 
 test('華容道：星數門檻', () => {
-    assert.deepEqual([SL.starsFor(20, 10), SL.starsFor(21, 10), SL.starsFor(35, 10), SL.starsFor(36, 10)], [3, 2, 2, 1]);
+    assert.deepEqual([SL.starsFor(25, 10), SL.starsFor(26, 10), SL.starsFor(40, 10), SL.starsFor(41, 10)], [3, 2, 2, 1]);
+    // par 是最佳解大約的步數：打亂再多也不會超過隨機排列的典型值
+    assert.equal(SL.parFor(3, 10), 10);
+    assert.equal(SL.parFor(3, 40), 22);
+    assert.equal(SL.parFor(4, 200), 53);
+    assert.ok(SL.LEVELS.length >= 20 && SL.LEVELS.every(l => l.n <= 6));
 });
 
 // ───── 關燈 ─────
@@ -237,6 +249,7 @@ test('關燈：minPresses 的結果真的可行（用代數解出來的最少按
 
 test('關燈：星數門檻', () => {
     assert.deepEqual([LI.starsFor(4, 4), LI.starsFor(5, 4), LI.starsFor(8, 4), LI.starsFor(11, 4)], [3, 3, 2, 1]);
+    assert.ok(LI.LEVELS.length >= 20 && LI.LEVELS.every(l => l.n <= 8));
 });
 
 // ───── 猜數字 ─────
@@ -262,8 +275,73 @@ test('猜數字：所有可能的答案個數、答案不重複、一致的候�
 });
 
 test('猜數字：關卡（位數遞增、次數足夠）與星數門檻', () => {
-    const lens = BU.LEVELS.map(l => l.len);
-    assert.deepEqual(lens, [...lens].sort((a, b) => a - b));
+    // 前 12 關是不重複的 3、4、5 位數（位數遞增）；之後是可重複的 4、5 位數與 6 位數
+    const first = BU.LEVELS.slice(0, 12).map(l => l.len);
+    assert.deepEqual(first, [...first].sort((a, b) => a - b));
+    assert.ok(BU.LEVELS.slice(0, 12).every(l => !l.repeat) && BU.LEVELS.slice(12).some(l => l.repeat) && BU.LEVELS.some(l => l.len === 6));
+    assert.ok(BU.LEVELS.length >= 24);
     for (const l of BU.LEVELS) assert.ok(l.tries >= 5 && l.tries <= 12);
     assert.deepEqual([BU.starsFor(6, 10), BU.starsFor(7, 10), BU.starsFor(9, 10), BU.starsFor(10, 10)], [3, 2, 2, 1]);
+});
+
+test('猜數字：數字可以重複時 A、B 照標準算法（每個數字最多算它在答案裡出現的次數）', () => {
+    assert.deepEqual(BU.score([1, 1, 2, 3], [1, 2, 1, 1]), { a: 1, b: 2 });
+    assert.deepEqual(BU.score([1, 1, 1, 1], [1, 1, 2, 2]), { a: 2, b: 0 });
+    assert.deepEqual(BU.score([1, 2, 3, 4], [1, 1, 1, 1]), { a: 1, b: 0 });
+    assert.deepEqual(BU.score([5, 5, 6, 7], [5, 6, 5, 5]), { a: 1, b: 2 });
+    assert.equal(BU.allCodes(2, true).length, 100);
+    assert.equal(BU.allCodes(2, false).length, 90);
+    let dup = 0;
+    for (let k = 0; k < 200; k++) { const s = BU.randomSecret(4, mulberry(k), true); if (new Set(s).size < 4) dup++; }
+    assert.ok(dup > 50, '可重複的答案常常真的有重複');
+    for (let k = 0; k < 50; k++) assert.equal(new Set(BU.randomSecret(5, mulberry(k), false)).size, 5);
+});
+
+// ───── 每日挑戰 ─────
+test('每日挑戰：同一天同一個遊戲永遠同一題、不同天（大多）不同題、不同遊戲不同題', () => {
+    assert.equal(DY.dailySeed('sudoku', '2026-10-21'), DY.dailySeed('sudoku', '2026-10-21'));
+    assert.notEqual(DY.dailySeed('sudoku', '2026-10-21'), DY.dailySeed('sudoku', '2026-10-22'));
+    assert.notEqual(DY.dailySeed('sudoku', '2026-10-21'), DY.dailySeed('lights', '2026-10-21'));
+    const a = DY.seededRng(DY.dailySeed('x', '2026-01-01')), b = DY.seededRng(DY.dailySeed('x', '2026-01-01'));
+    for (let i = 0; i < 20; i++) assert.equal(a(), b());
+    // 真的是同一題：用日期種子出的題目一模一樣
+    const s1 = SU.generate(5, DY.seededRng(DY.dailySeed('sudoku', '2026-03-05'))), s2 = SU.generate(5, DY.seededRng(DY.dailySeed('sudoku', '2026-03-05')));
+    assert.deepEqual(s1.puzzle, s2.puzzle);
+    assert.deepEqual(LI.puzzle(6, 14, DY.seededRng(7)).board, LI.puzzle(6, 14, DY.seededRng(7)).board);
+    assert.deepEqual(SL.scramble(4, 40, DY.seededRng(9)), SL.scramble(4, 40, DY.seededRng(9)));
+    assert.deepEqual(MM.makeDeck(8, DY.seededRng(3)), MM.makeDeck(8, DY.seededRng(3)));
+    assert.deepEqual(BU.randomSecret(5, DY.seededRng(11), true), BU.randomSecret(5, DY.seededRng(11), true));
+});
+
+test('每日挑戰：難度落在全部關卡的 40%～100%，每天不同；日期格式', () => {
+    const seen = new Set();
+    for (let d = 1; d <= 60; d++) {
+        const stamp = '2026-04-' + String((d % 28) + 1).padStart(2, '0') + '-' + d;
+        const lv = DY.dailyLevel('sudoku', 24, stamp);
+        assert.ok(lv >= 9 && lv <= 24, String(lv));
+        seen.add(lv);
+    }
+    assert.ok(seen.size >= 8, '難度有變化');
+    assert.equal(DY.dayStamp(new Date(2026, 0, 5)), '2026-01-05');
+    assert.equal(DY.dailyLevel('x', 1, '2026-01-01'), 1);
+});
+
+test('每日挑戰：連續天數（昨天有玩就 +1、斷了重算、同一天不重複算）與獎勵（連續越久越多、最多算 7 天）', () => {
+    assert.deepEqual(DY.nextStreak(null, '2026-05-01'), { last: '2026-05-01', count: 1 });
+    assert.deepEqual(DY.nextStreak({ last: '2026-05-01', count: 3 }, '2026-05-02'), { last: '2026-05-02', count: 4 });
+    assert.deepEqual(DY.nextStreak({ last: '2026-05-01', count: 3 }, '2026-05-01'), { last: '2026-05-01', count: 3 });
+    assert.deepEqual(DY.nextStreak({ last: '2026-05-01', count: 3 }, '2026-05-04'), { last: '2026-05-04', count: 1 });
+    assert.deepEqual(DY.nextStreak({ last: '2026-02-28', count: 2 }, '2026-03-01'), { last: '2026-03-01', count: 3 }, '跨月');
+    assert.deepEqual(DY.nextStreak({ last: '2026-12-31', count: 5 }, '2027-01-01'), { last: '2027-01-01', count: 6 }, '跨年');
+    assert.equal(DY.dailyReward(1), 40);
+    assert.equal(DY.dailyReward(2), 45);
+    assert.equal(DY.dailyReward(7), 70);
+    assert.equal(DY.dailyReward(30), 70);
+    assert.equal(DY.dailyReward(0), 40);
+});
+
+test('2048：新增的關卡（更緊的 1024、最後 3 關 2048）', () => {
+    assert.ok(G2.LEVELS.length >= 22);
+    assert.equal(G2.LEVELS.at(-1).target, 2048);
+    for (const lv of G2.LEVELS) assert.ok(lv.moves > lv.target / 2.2, `目標 ${lv.target} 的步數 ${lv.moves} 不夠`);
 });

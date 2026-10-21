@@ -1,10 +1,12 @@
-import { loadProgress, completeLevel, levelGridHtml, starText, totalStars } from './levels.js';
+import { loadProgress, completeLevel, levelGridHtml, starText, totalStars, loadDaily, completeDaily, dailyButtonHtml, dailyOverlayNote } from './levels.js';
+import { dailySeed, dailyLevel, seededRng } from './daily.js';
 import { LEVELS, neighbors as nb, newCells, plantFair, openCell as openFrom, isWon, starsFor } from './mines-core.js';
 
 const GAME = 'mines';
 
 export async function mount(root) {
     let progress = await loadProgress(GAME);
+    let todayInfo = await loadDaily(GAME), daily = false, dailyResult = null;
     let level = 0, cells, state, flagMode, timerId, startedAt, elapsed, stars;
 
     const lv = () => LEVELS[level - 1];
@@ -15,13 +17,15 @@ export async function mount(root) {
         level = 0;
         root.innerHTML = `<div class="ag-wrap">
             <p class="lv-summary">累計 ★ ${totalStars(progress)} / ${LEVELS.length * 3}</p>
+            ${dailyButtonHtml(todayInfo, dailyLevel(GAME, LEVELS.length))}
             ${levelGridHtml(progress, LEVELS.length, n => LEVELS[n - 1].w + '×' + LEVELS[n - 1].h + '·' + LEVELS[n - 1].mines + '雷')}
             <p class="ag-hint">第一下一定安全，而且每一盤都能靠推理解開、不用猜；越快完成星星越多</p>
         </div>`;
     }
 
-    function startLevel(n) {
+    function startLevel(n, isDaily = false) {
         clearInterval(timerId);
+        daily = isDaily; dailyResult = null;
         level = n;
         cells = newCells(lv().w, lv().h);
         state = 'ready'; flagMode = false; startedAt = 0; elapsed = 0; stars = 0;
@@ -30,7 +34,8 @@ export async function mount(root) {
 
     // 第一下一定安全：在第一次點擊後才佈雷，避開點到的格子與它周圍
     function plant(safe) {
-        plantFair(cells, lv().w, lv().h, lv().mines, safe);
+        // 每日挑戰：盤面由「日期＋第一下點的位置」決定（第一下之後才佈雷，所以同一天、同一個第一下，盤面一樣）
+        plantFair(cells, lv().w, lv().h, lv().mines, safe, daily ? seededRng(dailySeed(GAME) + safe) : Math.random);
         state = 'playing'; startedAt = Date.now();
         timerId = setInterval(() => { elapsed = Math.floor((Date.now() - startedAt) / 1000); const t = root.querySelector('#mn-time'); if (t) t.textContent = elapsed; }, 500);
     }
@@ -57,7 +62,7 @@ export async function mount(root) {
         else if (isWon(cells)) {
             state = 'won'; clearInterval(timerId); elapsed = Math.floor((Date.now() - startedAt) / 1000);
             stars = starsFor(elapsed, cells.length);
-            progress = await completeLevel(GAME, level, stars, LEVELS.length);
+            if (daily) { dailyResult = await completeDaily(GAME, stars); todayInfo = await loadDaily(GAME); } else progress = await completeLevel(GAME, level, stars, LEVELS.length);
         }
         draw();
     }
@@ -67,7 +72,7 @@ export async function mount(root) {
         const flags = cells.filter(c => c.flag).length;
         const over = state === 'won' || state === 'lost';
         const overlay = over ? `<div class="m3-overlay"><div class="m3-card"><h2>${state === 'won' ? '🎉 掃雷成功！' : '💥 踩到地雷了'}</h2>${state === 'won' ? `<p class="m3-stars">${starText(stars)}</p><p>${elapsed} 秒</p>` : '<p>再試一次吧</p>'}
-            <div class="m3-btns">${state === 'won' && level < LEVELS.length ? '<button data-act="next">下一關</button>' : ''}<button data-act="again">${state === 'won' ? '再玩一次' : '再試一次'}</button><button data-act="menu">選關</button></div></div></div>` : '';
+            ${dailyOverlayNote(dailyResult)}<div class="m3-btns">${state === 'won' && !daily && level < LEVELS.length ? '<button data-act="next">下一關</button>' : ''}<button data-act="again">${state === 'won' ? '再玩一次' : '再試一次'}</button><button data-act="menu">選關</button></div></div></div>` : '';
         root.innerHTML = `
         <div class="ag-wrap" style="position:relative">
             <div class="lv-bar"><button class="ag-btn" data-act="menu">‹ 選關</button><span>第 ${level} 關</span></div>
@@ -95,7 +100,8 @@ export async function mount(root) {
         if (cell) { const wasLong = press?.long; press = null; if (!wasLong) act(+cell.dataset.i, false); }
         else if (lvBtn && !lvBtn.disabled) startLevel(+lvBtn.dataset.lv);
         else if (a === 'menu') showMenu();
-        else if (a === 'again') startLevel(level);
+        else if (a === 'again') startLevel(level, daily);
+        else if (a === 'daily') startLevel(dailyLevel(GAME, LEVELS.length), true);
         else if (a === 'next') startLevel(level + 1);
         else if (a === 'mode') { flagMode = !flagMode; draw(); }
     });

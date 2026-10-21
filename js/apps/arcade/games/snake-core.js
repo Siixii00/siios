@@ -1,11 +1,14 @@
 // 貪吃蛇的純邏輯（不碰畫面），方便機器人驗證關卡
 export const N = 16;
-export const LEVEL_COUNT = 15;
+export const LEVEL_COUNT = 40;
 export const DIRS = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0] };
 
 // 第 n 關：要吃的食物數、速度（每格幾毫秒）、障礙物數量（第 3 關起有障礙）。第 11 關起是高手挑戰：速度逼近每秒 12 格
 export function levelConfig(n) {
-    return { level: n, foods: Math.min(24, 4 + n * 2), speed: Math.max(80, 170 - n * 6), walls: n < 3 ? 0 : (n - 2) * 2 };
+    if (n <= 15) return { level: n, foods: Math.min(24, 4 + n * 2), speed: Math.max(80, 170 - n * 6), walls: n < 3 ? 0 : (n - 2) * 2 };
+    // 第 16 關起是「大師挑戰」：每 5 關一輪，一輪裡速度越來越快（92→76 毫秒），下一輪整體再快一點、障礙物更多、食物更多
+    const step = (n - 16) % 5, tier = Math.floor((n - 16) / 5);
+    return { level: n, foods: Math.min(30, 24 + Math.floor((n - 15) / 4)), speed: Math.max(66, 92 - step * 4 - tier * 3), walls: Math.min(40, 26 + (n - 15)) };
 }
 
 // 無盡模式：沒有過關，吃越多越快（每 3 顆加快一點，最快每格 70 毫秒），分數就是吃到的顆數

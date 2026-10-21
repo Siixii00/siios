@@ -3,7 +3,7 @@ import { createElement, createToast } from '../../components.js';
 import { isRestricted } from '../../core/age-gate.js';
 import { SettingsDB } from '../../db.js';
 import { getBalance, charge, formatMoney, WalletError } from '../../core/wallet.js';
-import { loadProgress, totalStars, GEMS_PER_STAR } from './games/levels.js';
+import { loadProgress, totalStars, GEMS_PER_STAR, loadStreak } from './games/levels.js';
 import { LEVELS as L2048 } from './games/g2048-core.js';
 import { LEVEL_COUNT as LSNAKE } from './games/snake-core.js';
 import { LEVELS as LMEMORY } from './games/memory-core.js';
@@ -322,7 +322,8 @@ async function renderArcade(params) {
   async function refreshSummary() {
     const { got, all } = await starSummary();
     const el = container.querySelector('#arcade-summary');
-    if (el) el.textContent = `累計 ★ ${got} / ${all} · 每拿到一顆新的星星，抽卡貨幣 +${GEMS_PER_STAR}`;
+    const streak = await loadStreak();
+    if (el) el.textContent = `累計 ★ ${got} / ${all} · 每拿到一顆新的星星，抽卡貨幣 +${GEMS_PER_STAR}${streak ? ` · 📅 每日挑戰連續 ${streak} 天` : ''}`;
   }
 
   async function show(id) {

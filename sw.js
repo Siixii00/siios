@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sxios-v98';
+const CACHE_NAME = 'sxios-v100';
 
 // 外部資源（資料庫函式庫、圖示與字型）也要進快取：離線時沒有它們，App 連啟動都不行（idb 是 db.js 的 ES 模組），圖示也會變成一串英文字。
 const CDN_HOSTS = ['cdn.jsdelivr.net', 'cdnjs.cloudflare.com', 'fonts.googleapis.com', 'fonts.gstatic.com'];
@@ -26,6 +26,7 @@ const APP_ASSETS = [
   '/siios/js/apps/appearance/style.css',
   '/siios/js/apps/arcade/games/bulls-core.js',
   '/siios/js/apps/arcade/games/bulls.js',
+  '/siios/js/apps/arcade/games/daily.js',
   '/siios/js/apps/arcade/games/g2048-core.js',
   '/siios/js/apps/arcade/games/g2048.js',
   '/siios/js/apps/arcade/games/levels.js',

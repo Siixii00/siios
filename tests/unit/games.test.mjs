@@ -175,12 +175,17 @@ test('snake：不能直接回頭、吃到食物會變長並計數、撞牆或撞
     S.step(g); assert.equal(g.won, true);
 });
 
-test('snake：關卡設定逐步變難且在合理範圍', () => {
+test('snake：關卡設定逐步變難且在合理範圍（前 15 關單調；第 16 關起是大師挑戰，每 5 關一輪，速度在一輪內變快、障礙物與食物不減）', () => {
     let prev = null;
     for (let n = 1; n <= S.LEVEL_COUNT; n++) {
         const c = S.levelConfig(n);
-        assert.ok(c.speed >= 80 && c.foods <= 24 && c.walls >= 0);
-        if (prev) { assert.ok(c.speed <= prev.speed && c.walls >= prev.walls && c.foods >= prev.foods); }
+        assert.ok(c.speed >= 66 && c.foods <= 30 && c.walls >= 0 && c.walls <= 40);
+        if (prev) {
+            assert.ok(c.walls >= prev.walls && c.foods >= prev.foods, `第 ${n} 關障礙物或食物變少`);
+            if (n <= 15) assert.ok(c.speed <= prev.speed);
+            else if ((n - 16) % 5 !== 0) assert.ok(c.speed < prev.speed, `第 ${n} 關在同一輪裡應該更快`);
+        }
         prev = c;
     }
+    assert.ok(S.levelConfig(40).speed < S.levelConfig(16).speed, '最後一關比第 16 關快');
 });

@@ -3,8 +3,15 @@
 export const LEVELS = [
     { n: 3, depth: 10 }, { n: 3, depth: 16 }, { n: 3, depth: 24 }, { n: 3, depth: 40 },
     { n: 4, depth: 14 }, { n: 4, depth: 24 }, { n: 4, depth: 40 }, { n: 4, depth: 70 },
-    { n: 5, depth: 30 }, { n: 5, depth: 60 }
+    { n: 5, depth: 30 }, { n: 5, depth: 60 },
+    // 第 11 關起：打亂到幾乎是亂數排列（最佳解步數不再增加，但要自己找出路越來越難），最大 6×6
+    { n: 4, depth: 100 }, { n: 4, depth: 150 }, { n: 5, depth: 90 }, { n: 5, depth: 130 }, { n: 5, depth: 180 },
+    { n: 6, depth: 40 }, { n: 6, depth: 70 }, { n: 6, depth: 100 }, { n: 6, depth: 150 }, { n: 6, depth: 200 }
 ];
+
+// 隨機排列的最佳解步數大約是這個值（3×3 約 22、15 數字 約 53、24 數字 約 105、35 數字 約 170），打亂步數再多也不會超過它
+const TYPICAL_OPTIMAL = { 3: 22, 4: 53, 5: 105, 6: 170 };
+export const parFor = (n, depth) => Math.min(depth, TYPICAL_OPTIMAL[n] || depth);
 
 export const solvedBoard = n => Array.from({ length: n * n }, (_, i) => (i === n * n - 1 ? 0 : i + 1));
 export const isSolved = board => board.every((v, i) => v === (i === board.length - 1 ? 0 : i + 1));
@@ -93,7 +100,7 @@ export function optimalMoves(board, n, limit = 40) {
     return -1;
 }
 
-// 星數：步數相對於打亂步數（par）。一般玩家通常是 par 的 2～3 倍
-export function starsFor(moves, depth) {
-    return moves <= depth * 2 ? 3 : moves <= depth * 3.5 ? 2 : 1;
+// 星數：步數相對於 par（最佳解大約的步數）。一般玩家通常是 par 的 2～4 倍
+export function starsFor(moves, par) {
+    return moves <= par * 2.5 ? 3 : moves <= par * 4 ? 2 : 1;
 }

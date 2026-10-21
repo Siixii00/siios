@@ -4,7 +4,10 @@
 export const LEVELS = [
     { n: 3, presses: 2 }, { n: 3, presses: 4 }, { n: 4, presses: 3 }, { n: 4, presses: 6 },
     { n: 5, presses: 4 }, { n: 5, presses: 7 }, { n: 5, presses: 10 }, { n: 5, presses: 14 },
-    { n: 6, presses: 8 }, { n: 6, presses: 14 }
+    { n: 6, presses: 8 }, { n: 6, presses: 14 },
+    // 第 11 關起：更大的棋盤（最大 8×8）
+    { n: 6, presses: 18 }, { n: 6, presses: 22 }, { n: 7, presses: 12 }, { n: 7, presses: 18 }, { n: 7, presses: 24 }, { n: 7, presses: 30 },
+    { n: 8, presses: 16 }, { n: 8, presses: 22 }, { n: 8, presses: 28 }, { n: 8, presses: 34 }, { n: 8, presses: 40 }
 ];
 
 export function press(board, n, i) {

@@ -1,4 +1,5 @@
 import { SettingsDB } from '../../../db.js';
+import { dayStamp, nextStreak, dailyReward } from './daily.js';
 
 // 各遊戲共用的關卡進度：依序解鎖，每關最多 3 星
 const key = game => 'lv_' + game;
@@ -47,3 +48,39 @@ export function levelGridHtml(progress, total, label = () => '') {
 }
 
 export const totalStars = progress => Object.values(progress.stars).reduce((a, b) => a + b, 0);
+
+// ───── 每日挑戰 ─────
+// 每個遊戲一天一題（題目由日期決定，見 daily.js）；當天第一次完成給抽卡貨幣，連續天數越多越多。重複玩不會重複給
+const dailyKey = game => 'daily_' + game;
+export async function loadDaily(game) {
+    const v = await SettingsDB.get(dailyKey(game));
+    return v && v.date === dayStamp() ? v : null; // 只看今天的紀錄
+}
+export async function loadStreak() {
+    const v = await SettingsDB.get('arcade_daily_streak');
+    if (!v?.last) return 0;
+    const today = dayStamp(), yesterday = dayStamp(new Date(Date.now() - 86400000));
+    return v.last === today || v.last === yesterday ? v.count : 0; // 昨天之前就斷了
+}
+// 回傳 { first, gems, streak }：first 為當天第一次完成這個遊戲的挑戰
+export async function completeDaily(game, stars) {
+    const today = dayStamp(), prev = await loadDaily(game);
+    if (prev) {
+        if (stars > prev.stars) await SettingsDB.set(dailyKey(game), { date: today, stars });
+        return { first: false, gems: 0, streak: await loadStreak() };
+    }
+    await SettingsDB.set(dailyKey(game), { date: today, stars });
+    const streak = nextStreak(await SettingsDB.get('arcade_daily_streak'), today);
+    await SettingsDB.set('arcade_daily_streak', streak);
+    const gems = dailyReward(streak.count);
+    await awardGems(gems);
+    import('../../../core/activity-memory.js').then(m => m.rememberActivity({ sourceApp: 'arcade', content: `用戶完成了今天的${GAME_NAMES[game] || game}每日挑戰（${stars} 星，連續 ${streak.count} 天）`, importance: 0.3 })).catch(() => {});
+    return { first: true, gems, streak: streak.count };
+}
+
+// 選單上的每日挑戰按鈕
+export function dailyButtonHtml(daily, level) {
+    return `<button class="ag-btn daily-btn" data-act="daily">📅 今日挑戰（難度同第 ${level} 關）${daily ? ' · 已完成 ' + starText(daily.stars) : ''}</button>`;
+}
+
+export const dailyOverlayNote = r => (r && r.first ? `<p class="daily-note">📅 每日挑戰完成！抽卡貨幣 +${r.gems}（連續 ${r.streak} 天）</p>` : '');

@@ -1,9 +1,12 @@
 // 踩地雷的純邏輯（不碰畫面），方便用機器人驗證每一關的難度
-// 每關的棋盤大小與地雷數（密度由 11% 一路到 22%）。每一盤都保證「不用猜」就能靠推理解開（見 plantFair），所以難度來自盤面大小與地雷密度，不靠運氣
+// 每關的棋盤大小與地雷數（密度由 11% 一路到 23%）。每一盤都保證「不用猜」就能靠推理解開（見 plantFair），所以難度來自盤面大小與地雷密度，不靠運氣
 export const LEVELS = [
     { w: 6, h: 6, mines: 4 }, { w: 7, h: 7, mines: 6 }, { w: 8, h: 8, mines: 8 }, { w: 9, h: 9, mines: 10 }, { w: 9, h: 9, mines: 12 },
     { w: 9, h: 11, mines: 16 }, { w: 10, h: 12, mines: 20 }, { w: 10, h: 14, mines: 26 }, { w: 12, h: 12, mines: 28 }, { w: 12, h: 14, mines: 33 },
-    { w: 12, h: 15, mines: 36 }, { w: 12, h: 16, mines: 39 }, { w: 12, h: 16, mines: 41 }, { w: 13, h: 16, mines: 44 }, { w: 14, h: 16, mines: 50 }
+    { w: 12, h: 15, mines: 36 }, { w: 12, h: 16, mines: 39 }, { w: 12, h: 16, mines: 41 }, { w: 13, h: 16, mines: 44 }, { w: 14, h: 16, mines: 50 },
+    // 第 16 關起是高手挑戰：寬度最多 14 格（手機上再寬就不好點了），密度 21%～23%
+    { w: 14, h: 16, mines: 47 }, { w: 14, h: 17, mines: 50 }, { w: 14, h: 17, mines: 52 }, { w: 14, h: 18, mines: 54 }, { w: 14, h: 18, mines: 56 },
+    { w: 14, h: 19, mines: 58 }, { w: 14, h: 19, mines: 60 }, { w: 14, h: 20, mines: 62 }, { w: 14, h: 20, mines: 64 }, { w: 14, h: 20, mines: 65 }
 ];
 
 export function neighbors(w, h, i) {
@@ -77,7 +80,7 @@ export function canSolveWithoutGuess(cells, w, h, first) {
 }
 
 // 第一下之後佈雷：重複佈到「不用猜就能解開」為止（最多 maxTries 次，都不行就用最後一次的盤面）。回傳 { fair, tries }
-export function plantFair(cells, w, h, mines, safe, rng = Math.random, maxTries = 200) {
+export function plantFair(cells, w, h, mines, safe, rng = Math.random, maxTries = 600) {
     let tries = 0;
     while (tries < maxTries) {
         tries++;

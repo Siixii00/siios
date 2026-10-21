@@ -7,7 +7,10 @@ export const LEVELS = [
     { target: 64, moves: 70 }, { target: 128, moves: 150 }, { target: 128, moves: 120 },
     { target: 256, moves: 280 }, { target: 256, moves: 240 }, { target: 256, moves: 210 },
     { target: 512, moves: 560 }, { target: 512, moves: 500 }, { target: 512, moves: 450 }, { target: 512, moves: 400 },
-    { target: 1024, moves: 1100 }, { target: 1024, moves: 1000 }, { target: 1024, moves: 900 }, { target: 1024, moves: 800 }
+    { target: 1024, moves: 1100 }, { target: 1024, moves: 1000 }, { target: 1024, moves: 900 }, { target: 1024, moves: 800 },
+    // 第 15 關起：步數更緊的 1024，最後 3 關要合出 2048（高手的搜尋大約也只有一半能過，要善用悔棋）
+    { target: 1024, moves: 760 }, { target: 1024, moves: 720 }, { target: 1024, moves: 680 }, { target: 1024, moves: 640 }, { target: 1024, moves: 600 },
+    { target: 2048, moves: 3000 }, { target: 2048, moves: 2500 }, { target: 2048, moves: 2100 }
 ];
 
 export function slideLine(line) {

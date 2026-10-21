@@ -6,7 +6,9 @@ export const LEVELS = [
     { size: 4, clues: 10 }, { size: 4, clues: 8 },
     { size: 6, clues: 20 }, { size: 6, clues: 16 },
     { size: 9, clues: 44 }, { size: 9, clues: 40 }, { size: 9, clues: 36 }, { size: 9, clues: 33 },
-    { size: 9, clues: 31 }, { size: 9, clues: 29 }, { size: 9, clues: 27 }, { size: 9, clues: 25 }
+    { size: 9, clues: 31 }, { size: 9, clues: 29 }, { size: 9, clues: 27 }, { size: 9, clues: 25 },
+    // 第 13 關起提示數固定在 25 左右，改用 minHidden 拉高難度：要用到「唯一位置」推理（比唯一候選數更需要觀察）至少這麼多次
+    ...[22, 24, 26, 28, 30, 31, 32, 33, 34, 35, 36, 37].map(minHidden => ({ size: 9, clues: 25, minHidden }))
 ];
 
 const geo = size => {
@@ -107,9 +109,23 @@ export function generateFull(size, rng = Math.random) {
 }
 
 // 出題：從完整盤面逐格拿掉，每拿一格都確認「還是唯一解」而且「還是只靠基本推理就能解開」。
-// 回傳 { puzzle, solution, clues }；clues 可能比目標多（拿不掉更多了）
-export function generate(level, rng = Math.random) {
-    const { size, clues: target } = typeof level === 'number' ? LEVELS[level - 1] : level;
+// 回傳 { puzzle, solution, clues }；clues 可能比目標多（拿不掉更多了）。
+// 有 minHidden 的關卡會多出幾題挑「需要的唯一位置推理次數」夠多的（最多試 maxCandidates 題，沒有達標就用最難的那題）
+export function generate(level, rng = Math.random, maxCandidates = 80) {
+    const cfg = typeof level === 'number' ? LEVELS[level - 1] : level;
+    if (!cfg.minHidden) return generateOne(cfg, rng);
+    let best = null;
+    for (let k = 0; k < maxCandidates; k++) {
+        const g = generateOne(cfg, rng);
+        g.hidden = solveBySingles(g.puzzle, cfg.size).hidden;
+        if (!best || g.hidden > best.hidden) best = g;
+        if (g.hidden >= cfg.minHidden) break;
+    }
+    return best;
+}
+
+function generateOne(level, rng) {
+    const { size, clues: target } = level;
     const total = size * size;
     const solution = generateFull(size, rng);
     const puzzle = solution.slice();
