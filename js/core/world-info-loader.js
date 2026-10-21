@@ -129,7 +129,7 @@ async function loadWorldInfoContext(chatId, userMessage, options = {}) {
             if (userData.personality) userContent += `用戶個性: ${userData.personality}\n`;
             if (userData.speech_style) userContent += `用戶說話風格: ${userData.speech_style}\n`;
             if (userData.taboos && userData.taboos.length > 0) {
-                userContent += `用戶禁忌: ${userData.taboos.join(', ')}\n`;
+                userContent += `用戶禁忌（避開即可，不要提到它們，也不要說明你避開了什麼）: ${userData.taboos.join(', ')}\n`;
             }
             if (userContent) {
                 results.push({

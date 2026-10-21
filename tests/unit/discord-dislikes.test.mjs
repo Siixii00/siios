@@ -5,12 +5,12 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
 import { DatabaseSync } from 'node:sqlite';
-import { extractDislikes, recordDislikes, formatDislikePrompt, mergeDislikeLists, sameThing } from '../../js/core/dislikes.js';
+import { extractDislikes, recordDislikes, formatDislikePrompt, mergeDislikeLists, sameThing, findDislikeLeaks } from '../../js/core/dislikes.js';
 
 const workerUrl = new URL('../../scripts/discord-bot-worker.js', import.meta.url);
 const worker = (await import(workerUrl.href)).default;
 const src = readFileSync(workerUrl, 'utf8');
-const W = vm.runInNewContext(src.slice(src.indexOf('// <<format-helpers'), src.indexOf('// format-helpers>>')) + '\n({ extractDislikes, recordDislikes, formatDislikePrompt, mergeDislikeLists, sameThing })');
+const W = vm.runInNewContext(src.slice(src.indexOf('// <<format-helpers'), src.indexOf('// format-helpers>>')) + '\n({ extractDislikes, recordDislikes, formatDislikePrompt, mergeDislikeLists, sameThing, findDislikeLeaks })');
 
 const SCHEMA = `
 CREATE TABLE messages (id TEXT PRIMARY KEY, chat_id TEXT, role TEXT, content TEXT, timestamp TEXT, metadata TEXT);
@@ -56,9 +56,12 @@ const pwaMem = (id, content, importance = 0.5, character_id = 'char1') => ({ id,
 const pwaDislikes = (items, character_id = 'char1') => ({ id: 'dislikes-' + character_id, chat_id: '', character_id, content: formatDislikePrompt(items), memory_type: 'permanent', importance: 1, timestamp: Date.now(), metadata: { source: 'siios', platform: 'siios', kind: 'dislikes', items } });
 const item = (text, count, lastAt = 1000) => ({ id: 'x' + text, text, count, firstAt: lastAt, lastAt, sources: ['chat'] });
 
-// Discord 使用者說話 → 輪詢 → 機器人回覆；回傳機器人實際送給 AI 的內容
+// Discord 使用者說話 → 輪詢 → 機器人回覆；回傳機器人實際送給 AI 的內容。scriptedReplies：依序回給機器人的 AI 回覆
+let scriptedReplies = null;
+let sentToDiscord = [];
 async function userSays(env, ...userMessages) {
     const aiCalls = [];
+    sentToDiscord = [];
     const real = globalThis.fetch;
     globalThis.fetch = async (url, init = {}) => {
         const u = String(url);
@@ -66,13 +69,13 @@ async function userSays(env, ...userMessages) {
             const body = JSON.parse(init.body);
             if (body.messages.length <= 3) return Response.json({ choices: [{ message: { content: '' } }] });
             aiCalls.push(body);
-            return Response.json({ choices: [{ message: { content: '好的，我知道了。' }, finish_reason: 'stop' }] });
+            return Response.json({ choices: [{ message: { content: scriptedReplies?.length ? scriptedReplies.shift() : '好的，我知道了。' }, finish_reason: 'stop' }] });
         }
         if (u.includes('/channels/chan1/messages?limit=60')) return Response.json([]);
         if (u.includes('/channels/chan1/messages') && (init.method || 'GET') === 'GET') {
             return Response.json(userMessages.map((content, i) => ({ id: String(Date.now() + i), content, channel_id: 'chan1', author: { id: 'U1', username: 'u', bot: false }, timestamp: new Date(Date.now() - 60000 + i * 1000).toISOString(), mentions: [{ id: 'BOT' }] })).reverse());
         }
-        if (u.includes('/channels/chan1/messages') && init.method === 'POST') return Response.json({ id: 'm1', content: JSON.parse(init.body).content });
+        if (u.includes('/channels/chan1/messages') && init.method === 'POST') { const content = JSON.parse(init.body).content; sentToDiscord.push(content); return Response.json({ id: 'm1', content }); }
         return Response.json({});
     };
     try {
@@ -108,8 +111,8 @@ test('PWA 推上去的一般記憶：機器人會讀到（依重要度）；「�
     // 討厭的事：固定在最後一則，保留換行與「反覆強調」
     const last = msgs[msgs.length - 1];
     assert.equal(last.role, 'system');
-    assert.match(last.content, /務必遵守/);
-    assert.match(last.content, /- 香菜（用戶反覆強調過 3 次，絕對不可以碰）/);
+    assert.match(last.content, /務必在回覆與行動中避開/);
+    assert.match(last.content, /- 香菜（特別在意）/);
     assert.match(last.content, /- 被打斷\n/);
     assert.ok(last.content.split('\n').length >= 5, '沒有被壓成一行');
 });
@@ -148,7 +151,7 @@ test('反覆強調：同一件事再說一次次數增加；「說過很多次�
     assert.deepEqual(itemsOf(db).map(x => [x.text, x.count]), [['香菜', 1]]);
     const [call] = await userSays(env, '我說過很多次了，我受不了香菜');
     assert.equal(itemsOf(db)[0].count, 3);
-    assert.match(call.messages.at(-1).content, /香菜（用戶反覆強調過 3 次/);
+    assert.match(call.messages.at(-1).content, /- 香菜（特別在意）/);
 });
 
 test('沒通過驗證的人說的話不會被學進去', async () => {
@@ -204,4 +207,51 @@ test('Worker 裡的抽取、記錄、提示詞，和 PWA 的 js/core/dislikes.js
     assert.equal(W.formatDislikePrompt(b), formatDislikePrompt(a));
     assert.ok(W.sameThing('被忽略', '被人忽略') && sameThing('被忽略', '被人忽略'));
     assert.equal(W.mergeDislikeLists([item('a1', 1)], [item('a1', 3)])[0].count, 3);
+});
+
+// ───── 5. 不要一直提到討厭的事 ─────
+test('模型沒人問卻說「我幫你挑掉了香菜」：機器人會要求重寫一次，用戶看到的是重寫後的回覆', async () => {
+    const { env } = makeEnv();
+    await pwaPush(env, [pwaDislikes([item('香菜', 3)])]);
+    scriptedReplies = ['好喔，我特地幫你挑掉了香菜，放心吃吧。', '嗯，那就吃碗熱湯麵吧，天氣有點涼。'];
+    try {
+        const calls = await userSays(env, '今天吃什麼好呢');
+        assert.equal(calls.length, 2, '重寫了一次');
+        const note = calls[1].messages.at(-1);
+        assert.equal(note.role, 'system');
+        assert.match(note.content, /不自然地提到了用戶不喜歡的「香菜」/);
+        assert.match(note.content, /完全不要提到它們，也不要說明你避開了什麼/);
+        assert.deepEqual(sentToDiscord.filter(t => !/^⚠/.test(t)), ['嗯，那就吃碗熱湯麵吧，天氣有點涼。']);
+    } finally { scriptedReplies = null; }
+});
+
+test('用戶自己提到香菜時，機器人正常回應，不會被當成不自然的提及而重寫', async () => {
+    const { env } = makeEnv();
+    await pwaPush(env, [pwaDislikes([item('香菜', 3)])]);
+    scriptedReplies = ['香菜喔……我也不太敢吃，你不喜歡就不要勉強。'];
+    try {
+        const calls = await userSays(env, '你覺得香菜好吃嗎');
+        assert.equal(calls.length, 1);
+        assert.ok(sentToDiscord.some(t => t.includes('香菜喔')));
+    } finally { scriptedReplies = null; }
+});
+
+test('連續兩次都不自然地提到：第三次就直接用，不會無限重試', async () => {
+    const { env } = makeEnv();
+    await pwaPush(env, [pwaDislikes([item('香菜', 3)])]);
+    scriptedReplies = ['我幫你挑掉香菜了。', '香菜我都拿掉了喔。', '香菜真的沒放，放心。'];
+    try {
+        const calls = await userSays(env, '今天吃什麼好呢');
+        assert.equal(calls.length, 3);
+        assert.ok(sentToDiscord.some(t => t.includes('香菜真的沒放')));
+    } finally { scriptedReplies = null; }
+});
+
+test('用戶禁忌（設定裡寫的不喜歡）也帶著「避開即可、不要說明」的提醒', async () => {
+    const { db, env } = makeEnv();
+    db.prepare(`INSERT INTO users (id, name, taboos) VALUES ('u1', '阿明', ?)`).run(JSON.stringify(['香菜']));
+    db.prepare(`INSERT INTO discordUserBindings (discord_user_id, user_id, character_id, user_display_name) VALUES ('U1', 'u1', 'char1', '阿明')`).run();
+    const [call] = await userSays(env, '你好');
+    const all = call.messages.map(m => m.content).join('\n');
+    assert.match(all, /用戶禁忌（避開即可，不要提到它們，也不要說明你避開了什麼）: 香菜/);
 });

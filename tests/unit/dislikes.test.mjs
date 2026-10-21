@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { extractDislikes, sameThing, recordDislikes, formatDislikePrompt, STRONG_COUNT } from '../../js/core/dislikes.js';
+import { extractDislikes, sameThing, recordDislikes, formatDislikePrompt, findDislikeLeaks, STRONG_COUNT } from '../../js/core/dislikes.js';
 
 const ex = t => extractDislikes(t).phrases;
 
@@ -62,10 +62,31 @@ test('提示詞：沒有就空；次數多的在前並標註反覆強調；有�
     assert.equal(formatDislikePrompt(null), '');
     const p = formatDislikePrompt([{ text: '香菜', count: 1, lastAt: 1 }, { text: '被打斷', count: STRONG_COUNT + 1, lastAt: 2 }]);
     assert.ok(p.indexOf('被打斷') < p.indexOf('香菜'));
-    assert.match(p, /被打斷（用戶反覆強調過 3 次，絕對不可以碰）/);
-    assert.ok(!/香菜（用戶反覆/.test(p));
-    assert.match(p, /務必遵守/);
-    assert.match(p, /不要主動提起/);
+    assert.match(p, /- 被打斷（特別在意）/);
+    assert.match(p, /- 香菜\n/);
+    assert.match(p, /務必在回覆與行動中避開/);
     const lots = formatDislikePrompt(Array.from({ length: 30 }, (_, i) => ({ text: '東西' + i, count: 1, lastAt: i })));
-    assert.equal(lots.split('\n').filter(l => l.startsWith('- ')).length, 15);
+    assert.equal(lots.split('\n').filter(l => /^- 東西/.test(l)).length, 15);
+});
+
+test('提示詞是「安靜地做到」：明講是背景資訊、不要說明避開了什麼、不要邀功、不要刻意繞著說；不是嚴厲的禁令', () => {
+    const p = formatDislikePrompt([{ text: '香菜', count: 3, lastAt: 1 }]);
+    assert.match(p, /背景資訊，不是話題/);
+    assert.match(p, /不要主動提到它們/);
+    assert.match(p, /我特地幫你避開／挑掉／沒放/);
+    assert.match(p, /不必讓對方知道你記得，也不必邀功/);
+    assert.match(p, /不要為了表現體貼而刻意繞著它們說話/);
+    assert.match(p, /不要因為這份清單讓整段回覆變得小心翼翼/);
+    assert.ok(!p.includes('絕對不可以碰'), '嚴厲的字眼會讓模型一直提到它');
+});
+
+test('偵測不自然的提及：沒人問卻提到討厭的事算；用戶自己提起的不算；不相干的不算', () => {
+    const items = [{ text: '香菜' }, { text: '不吃蔥' }, { text: '被打斷' }, { text: '嗯' }];
+    assert.deepEqual(findDislikeLeaks('好喔，我特地幫你挑掉了香菜，放心吃吧。', '今天吃什麼', items), ['香菜']);
+    assert.deepEqual(findDislikeLeaks('記得你不吃蔥，所以沒有放。', '午餐做好了嗎', items), ['不吃蔥'], '「不吃蔥」用蔥比對');
+    assert.deepEqual(findDislikeLeaks('香菜的味道確實很特別呢。', '你喜歡香菜嗎', items), [], '用戶自己提起的，回應是自然的');
+    assert.deepEqual(findDislikeLeaks('今天的湯很好喝，來一碗吧。', '今天吃什麼', items), []);
+    assert.deepEqual(findDislikeLeaks('嗯嗯，我知道了。', '好', items), [], '太短的項目不比對');
+    assert.deepEqual(findDislikeLeaks('', '', items), []);
+    assert.deepEqual(findDislikeLeaks('香菜', '', null), []);
 });

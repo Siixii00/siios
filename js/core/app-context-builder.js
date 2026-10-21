@@ -131,7 +131,7 @@ function buildSystemPrompt(context) {
 `;
         }
         if (context.user.taboos && context.user.taboos.length > 0) {
-            prompt += `禁忌: ${context.user.taboos.join(', ')}
+            prompt += `禁忌（避開即可，不要提到它們，也不要說明你避開了什麼）: ${context.user.taboos.join(', ')}
 `;
         }
     }

@@ -1,7 +1,7 @@
 // Discord Bot Worker - 支援角色綁定、記憶同步、斜線指令、插嘴 (Interject)
 // Worker 版本：PWA「Discord 整合」頁會拿它和自己期待的版本比對（js/apps/settings/discord-guide-data.js 的 EXPECTED_WORKER_VERSION），
 // 不一致就提醒使用者重新貼上最新程式碼。改了 Worker 行為時一起更新兩邊。
-const WORKER_VERSION = '2026.10.23';
+const WORKER_VERSION = '2026.10.24';
 
 // 資料表（全部 IF NOT EXISTS，可重複執行；既有資料庫不受影響）。新使用者不用手動建表。
 const SCHEMA_STATEMENTS = [
@@ -571,13 +571,6 @@ async function saveDislikeItems(env, characterId, items) {
     const metadata = JSON.stringify({ source: 'discord', platform: 'discord', kind: 'dislikes', items });
     await env.DB.prepare(`INSERT INTO memories (id, chat_id, character_id, content, memory_type, importance, timestamp, metadata) VALUES (?, ?, ?, ?, 'permanent', 1, ?, ?) ON CONFLICT(id) DO UPDATE SET content = excluded.content, metadata = excluded.metadata, timestamp = excluded.timestamp`)
         .bind('dislikes-' + characterId, characterId, characterId, formatDislikePrompt(items), new Date().toISOString(), metadata).run();
-}
-
-async function loadDislikeText(env, characterId) {
-    try {
-        const { items } = await loadDislikeRow(env, characterId);
-        return formatDislikePrompt(items);
-    } catch (_) { return ''; }
 }
 
 // 使用者在 Discord 說的話：抽出討厭的事並記下（失敗不影響回覆）
@@ -1447,8 +1440,10 @@ ${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道�
     // 7. 世界書後置
     const backMessages = backEntries.map(entry => ({ role: 'system', content: `[${entry.name}]\n${entry.content}` }));
     // 用戶討厭的事：不靠挑選，每次都帶，放在最後（離使用者的訊息最近，最不容易被忽略）
-    const dislikeText = await loadDislikeText(env, characterId);
+    const dislikeRow = await loadDislikeRow(env, characterId).catch(() => ({ items: [] }));
+    const dislikeText = formatDislikePrompt(dislikeRow.items);
     if (dislikeText) backMessages.push({ role: 'system', content: dislikeText });
+    let leakNote = null; // 偵測到不自然地提到用戶討厭的事時，重寫那一次附上的提醒
 
     const lastIdx = conversationMessages.length - 1;
     if (lastIdx >= 0 && conversationMessages[lastIdx].role === 'user') {
@@ -1471,7 +1466,7 @@ ${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道�
         const keep = RETRY_KEEP[attempt];
         const attemptBody = attempt === 0 ? body : {
             ...body,
-            messages: [...systemMessages, ...trimConversation(conversationMessages, keep), ...backMessages],
+            messages: [...systemMessages, ...trimConversation(conversationMessages, keep), ...backMessages, ...(leakNote ? [leakNote] : [])],
             seed: Math.floor(Math.random() * 999999),
             temperature: Math.max(body.temperature || 0.7, 1.0)
         };
@@ -1495,6 +1490,13 @@ ${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道�
             lastProblem = '模型拒絕回覆（' + content.slice(0, 40) + '）';
             console.error('AI refusal, attempt', attempt + 1, content.slice(0, 60));
             refusals.push({ attempt: attempt + 1, kept: attempt === 0 ? conversationMessages.length : Math.min(keep, conversationMessages.length), reply: content.slice(0, 30) });
+            continue;
+        }
+        // 沒人問卻特地提到用戶討厭的事（「我幫你挑掉了香菜」）：重寫一次，最後一次就直接用
+        const leaks = findDislikeLeaks(content, message.content, dislikeRow.items);
+        if (leaks.length && attempt < 2) {
+            leakNote = { role: 'system', content: `你上一版回覆不自然地提到了用戶不喜歡的「${leaks.join('、')}」。請重寫：完全不要提到它們，也不要說明你避開了什麼，像平常一樣自然地回覆。` };
+            console.error('dislike leak, retry', leaks.join(','));
             continue;
         }
         if (refusals.length) await logRefusal(env, { model: aiModel, channel: message.channel_id, user: message.content, refusals, recoveredAtAttempt: attempt + 1 });
@@ -1631,7 +1633,7 @@ async function loadWorldInfoContext(chatId, userMessage, characterId, userId, en
                     let taboos = [];
                     try { taboos = typeof userData.taboos === 'string' ? JSON.parse(userData.taboos || '[]') : (userData.taboos || []); } catch (_) {}
                     if (taboos.length > 0) {
-                        userContent += `用戶禁忌: ${taboos.join(', ')}\n`;
+                        userContent += `用戶禁忌（避開即可，不要提到它們，也不要說明你避開了什麼）: ${taboos.join(', ')}\n`;
                     }
                     if (userContent) {
                         entries.push({ name: '用戶設定', content: userContent, priority: 'front', isForbidden: false });
@@ -1901,17 +1903,39 @@ function mergeDislikeLists(a, b) {
     return out.slice(0, MAX_ITEMS);
 }
 
-// 放進系統提示詞的段落；沒有就回空字串。次數多的在前面
+// 放進系統提示詞的段落；沒有就回空字串。次數多的在前面。
+// 重點是「安靜地做到」：如果把清單寫成嚴厲的禁令，模型反而會一直提到它們（「我特地幫你挑掉了香菜」），
+// 所以明講這是背景資訊、不是話題，做到就好，不要說明、不要邀功。
 function formatDislikePrompt(list) {
     const items = [...(list || [])].filter(x => x?.text).sort((a, b) => (b.count || 1) - (a.count || 1) || (b.lastAt || 0) - (a.lastAt || 0)).slice(0, MAX_PROMPT_ITEMS);
     if (!items.length) return '';
-    const lines = items.map(x => `- ${x.text}${(x.count || 1) >= STRONG_COUNT ? `（用戶反覆強調過 ${x.count} 次，絕對不可以碰）` : ''}`);
+    const lines = items.map(x => `- ${x.text}${(x.count || 1) >= STRONG_COUNT ? '（特別在意）' : ''}`);
     return [
-        '# 用戶明確討厭／不能碰的事（務必遵守）',
-        '以下是用戶親口說過討厭、受不了或不能接受的事。這比一般的喜好與劇情設定更重要：',
+        '# 關於用戶的雷點（背景資訊，不是話題）',
+        '用戶親口說過不喜歡下面這些事，務必在回覆與行動中避開：',
         ...lines,
-        '要求：不要主動提起、不要建議、不要拿來開玩笑、不要為了劇情或氣氛而違背；遇到相關話題要自然地迴避或換個方式。如果用戶自己提起，表示理解與尊重，不要辯解、不要再追問。'
+        '這些只是你心裡有數的事，不是要拿來說的話題：',
+        '- 不要主動提到它們，連「我知道你討厭…」「記得你不吃…」「我特地幫你避開／挑掉／沒放…」這類說明也不要說——做到就好，不必讓對方知道你記得，也不必邀功。',
+        '- 不要為了表現體貼而刻意繞著它們說話；只有用戶自己提起，或不處理會讓對方不舒服時，才自然地帶一句，而且不要每次都提。',
+        '- 不要拿它們開玩笑、不要用在劇情裡製造衝突、不要建議、不要追問。',
+        '- 其他內容照常寫，不要因為這份清單讓整段回覆變得小心翼翼。'
     ].join('\n');
+}
+
+// 檢查回覆有沒有「沒人問卻提到」用戶討厭的事（模型常常會刻意說「我幫你挑掉了」）。
+// 用戶這句話自己提到的不算；回傳被不自然提到的那幾項（文字），沒有就是空陣列
+function findDislikeLeaks(reply, userText, items) {
+    const r = clean(reply), u = clean(userText);
+    const out = [];
+    for (const it of items || []) {
+        const raw = String(it?.text || '');
+        const stripped = raw.replace(/^(?:不吃|不碰|不看|不聽|被|吃|看|聽)/, '');
+        const core = clean(stripped) || clean(raw);
+        // 一個字的核心（例如「不吃蔥」的「蔥」）只有在原本帶著動詞、意思明確時才比對，否則太容易誤判
+        if (core.length < 2 && !(stripped !== raw && core.length === 1)) continue;
+        if (r.includes(core) && !u.includes(core)) out.push(it.text);
+    }
+    return out;
 }
 
 // 世界書與角色設定也寫了「討厭」的話（角色自己的雷點）不在這裡處理——這份清單只屬於「用戶」

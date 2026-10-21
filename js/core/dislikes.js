@@ -102,17 +102,39 @@ export function mergeDislikeLists(a, b) {
     return out.slice(0, MAX_ITEMS);
 }
 
-// 放進系統提示詞的段落；沒有就回空字串。次數多的在前面
+// 放進系統提示詞的段落；沒有就回空字串。次數多的在前面。
+// 重點是「安靜地做到」：如果把清單寫成嚴厲的禁令，模型反而會一直提到它們（「我特地幫你挑掉了香菜」），
+// 所以明講這是背景資訊、不是話題，做到就好，不要說明、不要邀功。
 export function formatDislikePrompt(list) {
     const items = [...(list || [])].filter(x => x?.text).sort((a, b) => (b.count || 1) - (a.count || 1) || (b.lastAt || 0) - (a.lastAt || 0)).slice(0, MAX_PROMPT_ITEMS);
     if (!items.length) return '';
-    const lines = items.map(x => `- ${x.text}${(x.count || 1) >= STRONG_COUNT ? `（用戶反覆強調過 ${x.count} 次，絕對不可以碰）` : ''}`);
+    const lines = items.map(x => `- ${x.text}${(x.count || 1) >= STRONG_COUNT ? '（特別在意）' : ''}`);
     return [
-        '# 用戶明確討厭／不能碰的事（務必遵守）',
-        '以下是用戶親口說過討厭、受不了或不能接受的事。這比一般的喜好與劇情設定更重要：',
+        '# 關於用戶的雷點（背景資訊，不是話題）',
+        '用戶親口說過不喜歡下面這些事，務必在回覆與行動中避開：',
         ...lines,
-        '要求：不要主動提起、不要建議、不要拿來開玩笑、不要為了劇情或氣氛而違背；遇到相關話題要自然地迴避或換個方式。如果用戶自己提起，表示理解與尊重，不要辯解、不要再追問。'
+        '這些只是你心裡有數的事，不是要拿來說的話題：',
+        '- 不要主動提到它們，連「我知道你討厭…」「記得你不吃…」「我特地幫你避開／挑掉／沒放…」這類說明也不要說——做到就好，不必讓對方知道你記得，也不必邀功。',
+        '- 不要為了表現體貼而刻意繞著它們說話；只有用戶自己提起，或不處理會讓對方不舒服時，才自然地帶一句，而且不要每次都提。',
+        '- 不要拿它們開玩笑、不要用在劇情裡製造衝突、不要建議、不要追問。',
+        '- 其他內容照常寫，不要因為這份清單讓整段回覆變得小心翼翼。'
     ].join('\n');
+}
+
+// 檢查回覆有沒有「沒人問卻提到」用戶討厭的事（模型常常會刻意說「我幫你挑掉了」）。
+// 用戶這句話自己提到的不算；回傳被不自然提到的那幾項（文字），沒有就是空陣列
+export function findDislikeLeaks(reply, userText, items) {
+    const r = clean(reply), u = clean(userText);
+    const out = [];
+    for (const it of items || []) {
+        const raw = String(it?.text || '');
+        const stripped = raw.replace(/^(?:不吃|不碰|不看|不聽|被|吃|看|聽)/, '');
+        const core = clean(stripped) || clean(raw);
+        // 一個字的核心（例如「不吃蔥」的「蔥」）只有在原本帶著動詞、意思明確時才比對，否則太容易誤判
+        if (core.length < 2 && !(stripped !== raw && core.length === 1)) continue;
+        if (r.includes(core) && !u.includes(core)) out.push(it.text);
+    }
+    return out;
 }
 
 // 世界書與角色設定也寫了「討厭」的話（角色自己的雷點）不在這裡處理——這份清單只屬於「用戶」
