@@ -1,13 +1,26 @@
-.appearance-app { --app-bg: #f5f5f5; --app-card: #fff; --app-text: #333; --app-muted: #666; --app-accent: #6200ea; }
+.appearance-app { --app-bg: #f5f5f5; --app-card: #fff; --app-text: #333; --app-muted: #666; --app-accent: #16a34a; }
 :where(body[data-app="appearance"]) .appearance-app .page { background: var(--app-bg); min-height: calc(var(--app-h, 100vh) - 96px); padding: 16px; }
 :where(body[data-app="appearance"]) .section-title { font-size: 14px; font-weight: 600; color: var(--app-muted); margin: 16px 0 12px; }
-:where(body[data-app="appearance"]) .theme-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.theme-card { padding: 20px; border-radius: 12px; text-align: center; cursor: pointer; border: 2px solid transparent; position: relative; }
-.theme-card.active { border-color: var(--app-accent); }
-:where(body[data-app="appearance"]) .theme-name { font-size: 14px; font-weight: 600; }
-.theme-card i { position: absolute; top: 8px; right: 8px; font-size: 12px; }
-.font-size-control { display: flex; gap: 12px; }
-.font-btn { flex: 1; padding: 12px; background: var(--app-card); border: 2px solid transparent; border-radius: 8px; color: var(--app-text); cursor: pointer; }
-.font-btn.active { border-color: var(--app-accent); color: var(--app-accent); }
-.preview-box { padding: 20px; border-radius: 12px; margin-top: 8px; }
-.preview-box p { margin-bottom: 8px; }
+.ap-hint { font-size: 12px; color: var(--app-muted); margin: 8px 0 0; line-height: 1.5; }
+.ap-seg { display: flex; gap: 8px; }
+.ap-seg button, .ap-fonts button { flex: 1; padding: 12px 8px; background: var(--app-card); border: 2px solid transparent; border-radius: 10px; color: var(--app-text); cursor: pointer; font-size: 14px; }
+.ap-seg button.active, .ap-fonts button.active { border-color: var(--app-accent); color: var(--app-accent); font-weight: 600; }
+.ap-fonts { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.ap-fonts button { display: flex; flex-direction: column; gap: 4px; align-items: center; }
+.ap-fonts small { font-size: 12px; color: var(--app-muted); }
+.ap-swatches { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.ap-swatch { width: 38px; height: 38px; border-radius: 50%; border: 3px solid transparent; box-shadow: 0 0 0 1px rgba(0,0,0,.15); cursor: pointer; padding: 0; position: relative; }
+.ap-swatch.active { border-color: #fff; box-shadow: 0 0 0 2px var(--app-accent); }
+.ap-custom { display: inline-flex; align-items: center; justify-content: center; background: conic-gradient(#f44, #fd4, #4f4, #4df, #44f, #f4f, #f44); font-size: 0; }
+.ap-custom input { position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+.ap-row { display: flex; align-items: center; gap: 10px; margin-top: 14px; font-size: 14px; color: var(--app-text); }
+.ap-range { flex: 1; }
+.ap-val { min-width: 40px; color: var(--app-muted); }
+.ap-preview { background: var(--app-card); border-radius: 12px; padding: 16px; color: var(--app-text); }
+.ap-prev-head { font-weight: 700; margin-bottom: 8px; }
+.ap-preview p { margin-bottom: 10px; font-size: 14px; }
+.ap-prev-row { display: flex; gap: 8px; margin-bottom: 10px; }
+.ap-chip { padding: 4px 12px; border-radius: 999px; background: #e5e7eb; font-size: 13px; }
+.ap-chip-on { background: #16a34a; color: #fff; }
+.ap-prev-img { height: 44px; border-radius: 8px; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; }
+.ap-reset { width: 100%; margin-top: 20px; padding: 12px; background: var(--app-card); border: 1px solid #ddd; border-radius: 10px; color: var(--app-text); cursor: pointer; }

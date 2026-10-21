@@ -89,6 +89,9 @@ const App = {
             await initDB();
             console.log('[App] 數據庫初始化成功');
 
+            // 外觀（深色模式、主題色、字體、介面大小）
+            import('./core/appearance-dom.js').then(m => m.initAppearance()).catch(e => console.warn('[App] 外觀初始化失敗：', e));
+
             await loadBirthdate();
             if (!hasBirthdate()) await showAgeGate();
 

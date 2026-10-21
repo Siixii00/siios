@@ -1,0 +1,98 @@
+// 外觀的瀏覽器部分：讀寫設定、把 CSS 放進頁面、偵測 App 本來是不是深色底。純函式在 appearance.js。
+import { SettingsDB } from '../db.js';
+import { normalize, migrateLegacy, buildCss, themeColorMeta, effectiveDark, isDarkBackground } from './appearance.js';
+
+const KEY = 'appearance';
+const LS_KEY = 'sx_appearance'; // 同一份設定放一份在 localStorage，下次開啟時可以在資料庫讀完之前先套用，避免閃一下淺色
+let current = normalize(null);
+let mq = null;
+let observer = null;
+let timer = null;
+
+const systemDark = () => !!mq?.matches;
+
+function readLocal() {
+    try { return JSON.parse(localStorage.getItem(LS_KEY) || 'null'); } catch (_) { return null; }
+}
+
+export async function loadAppearance() {
+    let v = await SettingsDB.get(KEY);
+    if (!v) v = migrateLegacy(await SettingsDB.get('appearance_theme'), await SettingsDB.get('appearance_font_size'));
+    return normalize(v);
+}
+
+export const currentAppearance = () => current;
+
+export function applyAppearance(settings) {
+    current = normalize(settings);
+    let el = document.getElementById('sx-appearance');
+    if (!el) { el = document.createElement('style'); el.id = 'sx-appearance'; document.head.appendChild(el); }
+    el.textContent = buildCss(current, systemDark());
+    document.documentElement.dataset.sxDark = effectiveDark(current, systemDark()) ? '1' : '0';
+    let meta = document.querySelector('meta[name="theme-color"]');
+    if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
+    meta.content = themeColorMeta(current, systemDark());
+    try { localStorage.setItem(LS_KEY, JSON.stringify(current)); } catch (_) { /* 沒有 localStorage 也沒關係 */ }
+    scheduleNativeCheck();
+}
+
+export async function saveAppearance(settings) {
+    const s = normalize(settings);
+    await SettingsDB.set(KEY, s);
+    applyAppearance(s);
+    return s;
+}
+
+// ───── 本來就是深色底的 App：不要再反相 ─────
+function sampleBackgrounds(app) {
+    const r = app.getBoundingClientRect();
+    if (!r.width || !r.height) return [];
+    const out = [];
+    for (const [fx, fy] of [[0.5, 0.55], [0.5, 0.8], [0.2, 0.4]]) {
+        const stack = document.elementsFromPoint(r.left + r.width * fx, r.top + r.height * fy);
+        for (const el of stack) {
+            if (!app.contains(el) && el !== app) continue;
+            const cs = getComputedStyle(el);
+            const bg = cs.backgroundColor;
+            if (/rgba?\(/.test(bg) && !/rgba?\(\s*0,\s*0,\s*0,\s*0\)|transparent/.test(bg)) { out.push(bg); break; }
+            // 漸層底色（例如 radial-gradient）：取裡面的顏色
+            const grad = /gradient/.test(cs.backgroundImage) ? cs.backgroundImage.match(/rgba?\([^)]*\)/g) : null;
+            if (grad?.length) { out.push(...grad); break; }
+        }
+    }
+    return out;
+}
+
+function checkNative() {
+    const app = document.getElementById('app');
+    if (!app) return;
+    const h = location.hash.replace(/^#\/?/, '');
+    const home = h === '' || h === 'home';
+    // 主畫面是桌布，維持原樣（反相會讓桌布上的白字變黑字）
+    if (home) app.setAttribute('data-sx-wallpaper', ''); else app.removeAttribute('data-sx-wallpaper');
+    if (document.documentElement.dataset.sxDark !== '1') { app.removeAttribute('data-sx-native-dark'); return; }
+    // 先把濾鏡拿掉再取樣，不影響計算出的顏色（getComputedStyle 本來就不受濾鏡影響），只是保險
+    if (isDarkBackground(sampleBackgrounds(app))) app.setAttribute('data-sx-native-dark', '');
+    else app.removeAttribute('data-sx-native-dark');
+}
+
+function scheduleNativeCheck() {
+    clearTimeout(timer);
+    timer = setTimeout(checkNative, 180);
+}
+
+export async function initAppearance() {
+    mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+    const local = readLocal();
+    if (local) applyAppearance(local);
+    try { applyAppearance(await loadAppearance()); } catch (e) { console.warn('[Appearance] 載入失敗：', e); }
+    const onSystem = () => applyAppearance(current);
+    if (mq?.addEventListener) mq.addEventListener('change', onSystem);
+    else mq?.addListener?.(onSystem); // 舊版 Safari
+    window.addEventListener('hashchange', scheduleNativeCheck);
+    const app = document.getElementById('app');
+    if (app && typeof MutationObserver === 'function' && !observer) {
+        observer = new MutationObserver(scheduleNativeCheck);
+        observer.observe(app, { childList: true, subtree: true });
+    }
+}
