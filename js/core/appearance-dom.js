@@ -45,6 +45,7 @@ export function applyAppearance(settings) {
     el.textContent = buildCss(current, systemDark());
     document.documentElement.dataset.sxDark = effectiveDark(current, systemDark()) ? '1' : '0';
     document.documentElement.dataset.sxUi = current.ui;
+    import('./android-chrome.js').then(m => m.setAndroidChrome(current.ui === 'android')).catch(e => console.warn('[Appearance] Android 介面失敗：', e));
     let meta = document.querySelector('meta[name="theme-color"]');
     if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
     meta.content = themeColorMeta(current, systemDark());

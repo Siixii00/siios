@@ -99,3 +99,67 @@ html[data-sx-ui="android"] .ios-header .ios-back-btn { order: 0; font-size: 0 !i
 html[data-sx-ui="android"] .ios-header .ios-back-btn i,
 html[data-sx-ui="android"] .ios-header .ios-back-btn svg { font-size: 20px; }
 html[data-sx-ui="android"] .ios-header .header-actions { order: 2; }
+
+/* ───── 系統介面：狀態列、導覽列、通知面板、最近使用（由 js/core/android-chrome.js 產生）───── */
+body.sx-android .phone-home-indicator { display: none; }
+body.sx-android .phone-screen { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+
+.sx-navbar { display: flex; justify-content: space-around; align-items: center; height: 46px; flex: none; background: #000; z-index: 80; }
+.phone-frame > .sx-navbar { border-radius: 0 0 22px 22px; }
+body > .sx-navbar { position: fixed; left: 0; right: 0; bottom: 0; }
+.sx-nav-btn { flex: 1; height: 100%; border: none; background: transparent; color: rgba(255, 255, 255, 0.92); cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.sx-nav-btn .material-symbols-outlined { font-size: 22px; }
+.sx-nav-btn:active { background: rgba(255, 255, 255, 0.12); }
+
+/* 沒有手機外框（真的手機）時：App 區域是「整個螢幕扣掉導覽列」，裡面的 fixed 元素也以這個區域為準 */
+body.sx-android:not(.desktop-mode) { --app-h: calc(100dvh - 46px); }
+body.sx-android:not(.desktop-mode) #app { position: fixed; inset: 0 0 46px 0; contain: layout; overflow: hidden; }
+
+.sx-statusbar { position: fixed; top: 0; left: 0; right: 0; height: 26px; z-index: 110; display: flex; justify-content: space-between; align-items: center; padding: 4px 18px 0; font-size: 12px; font-weight: 500; color: #202124; cursor: pointer; user-select: none; }
+html[data-sx-dark="1"] .sx-statusbar { color: #fff; }
+.sx-statusbar.on-wallpaper { color: #fff; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45); }
+.sx-sb-icons { display: flex; gap: 4px; align-items: center; }
+.sx-sb-icons .material-symbols-outlined { font-size: 15px; }
+
+.sx-shade { position: fixed; top: 0; left: 0; right: 0; z-index: 120; max-height: 80%; overflow-y: auto; padding: 38px 16px 28px; background: rgba(32, 33, 36, 0.98); color: #fff; border-radius: 0 0 28px 28px; transform: translateY(-105%); transition: transform 0.25s ease; }
+.sx-shade.open { transform: translateY(0); }
+.sx-shade-time { font-size: 44px; font-weight: 300; line-height: 1.1; }
+.sx-shade-date { font-size: 14px; opacity: 0.8; margin-bottom: 14px; }
+.sx-tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.sx-tile { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 14px 6px; border: none; border-radius: 22px; background: #3c4043; color: #fff; font-size: 12px; cursor: pointer; }
+.sx-tile.on { background: #8ab4f8; color: #1f1f1f; }
+.sx-tile .material-symbols-outlined { font-size: 24px; }
+.sx-notes { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+.sx-notes-title { font-size: 13px; opacity: 0.7; }
+.sx-note { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border: none; border-radius: 18px; background: #303134; color: #fff; font-size: 14px; text-align: left; cursor: pointer; }
+.sx-shade-close { display: block; width: 44px; height: 5px; margin: 16px auto 0; border: none; border-radius: 3px; background: #9aa0a6; padding: 0; cursor: pointer; }
+
+.sx-recents { position: fixed; inset: 0; z-index: 115; display: flex; flex-direction: column; justify-content: center; gap: 18px; padding: 60px 0 20px; background: rgba(0, 0, 0, 0.62); }
+.sx-recents-row { display: flex; gap: 14px; overflow-x: auto; padding: 0 24px; scroll-snap-type: x mandatory; }
+.sx-recent-card { flex: none; width: 140px; height: 200px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; border: none; border-radius: 22px; background: #fff; color: #202124; font-size: 14px; scroll-snap-align: center; cursor: pointer; }
+.sx-recent-card .material-symbols-outlined { font-size: 44px; color: #5f6368; }
+.sx-recents-empty { color: #fff; margin: auto; font-size: 15px; }
+.sx-recents-clear { align-self: center; padding: 10px 26px; border: none; border-radius: 999px; background: rgba(255, 255, 255, 0.9); color: #202124; font-size: 14px; cursor: pointer; }
+
+.sx-ripple-host { position: fixed; overflow: hidden; pointer-events: none; z-index: 105; }
+.sx-ripple { position: absolute; border-radius: 50%; background: rgba(0, 0, 0, 0.16); transform: scale(0); animation: sx-ripple 0.55s ease-out forwards; }
+html[data-sx-dark="1"] .sx-ripple { background: rgba(255, 255, 255, 0.22); }
+@keyframes sx-ripple { to { transform: scale(1); opacity: 0; } }
+
+/* ───── 鎖定畫面：Android 的時鐘靠左、細字 ───── */
+html[data-sx-ui="android"] .lock-content { align-items: flex-start; padding: 84px 30px 56px; }
+html[data-sx-ui="android"] .lock-time-container { align-items: flex-start; gap: 2px; }
+html[data-sx-ui="android"] .lock-time { font-family: "Roboto", "Noto Sans TC", system-ui, sans-serif; font-size: 92px; font-weight: 300; letter-spacing: -3px; line-height: 1.05; text-align: left; }
+html[data-sx-ui="android"] .lock-date { font-family: "Roboto", "Noto Sans TC", system-ui, sans-serif; font-size: 16px; font-weight: 400; text-align: left; opacity: 0.92; }
+html[data-sx-ui="android"] .lock-unlock-hint { align-self: center; }
+
+/* ───── App 底部的分頁列：Material 3（淺灰底、選到的有膠囊底色）───── */
+html[data-sx-ui="android"] .kakao-bottom-nav,
+html[data-sx-ui="android"] .ios-bottom-nav { height: 68px; border-top: none; background: #f1f3f4; align-items: center; padding-top: 0; box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.08); }
+html[data-sx-ui="android"] .kakao-bottom-nav-item,
+html[data-sx-ui="android"] .ios-bottom-nav-item { height: 68px; justify-content: center; gap: 2px; }
+html[data-sx-ui="android"] .kakao-bottom-nav-item.active,
+html[data-sx-ui="android"] .ios-bottom-nav-item.active { color: #1a73e8; }
+html[data-sx-ui="android"] .kakao-bottom-nav-item.active .material-symbols-outlined,
+html[data-sx-ui="android"] .ios-bottom-nav-item.active > *:first-child { background: #d3e3fd; border-radius: 16px; padding: 4px 20px; }
+html[data-sx-ui="android"] .ios-bottom-nav-item .label { font-size: 11px; }

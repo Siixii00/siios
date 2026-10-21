@@ -42,8 +42,9 @@ class ScrollHandler {
         if (!appContainer) return;
         
         // 確保 app-container 有正確的高度和 overflow 設置
-        appContainer.style.height = '100vh';
-        appContainer.style.height = '100dvh';
+        // --app-h：Android 風格有導覽列時，App 區域要扣掉它（沒設定就是整個螢幕）
+        appContainer.style.height = 'var(--app-h, 100vh)';
+        appContainer.style.height = 'var(--app-h, 100dvh)';
         // 容器自己負責捲動的 App（例如電話）不要強制隱藏溢出
         if (!/(auto|scroll)/.test(getComputedStyle(appContainer).overflowY)) appContainer.style.overflow = 'hidden';
         appContainer.style.display = 'flex';

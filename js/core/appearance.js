@@ -21,6 +21,8 @@ export const FONTS = [
     { id: 'rounded', name: '圓體', css: '"Varela Round", "Hiragino Maru Gothic ProN", "Microsoft JhengHei", ui-rounded, sans-serif' },
     { id: 'mono', name: '等寬', css: '"JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace' }
 ];
+// Android 風格預設用 Roboto（沒有就用系統的無襯線字體）
+const ANDROID_FONT = '"Roboto", "Noto Sans TC", system-ui, sans-serif';
 export const SIZES = [{ id: 'small', name: '小', zoom: 0.92 }, { id: 'medium', name: '中', zoom: 1 }, { id: 'large', name: '大', zoom: 1.1 }];
 
 // 桌面風格：iOS（目前的樣子）或 Android（圓形圖示、搜尋列、App 抽屜、手勢列）
@@ -110,6 +112,9 @@ export function buildCss(settings, systemDark = false) {
         // 掛在 body 底下的彈窗、面板（不在 #app 裡）也要一起變深色
         rules.push(`body > :is(${OVERLAYS.join(', ')}) { filter: ${full.join(' ')}; }`);
         rules.push(`body > :is(${OVERLAYS.join(', ')}) :is(${MEDIA.join(', ')}) { filter: ${fullInv.join(' ')}; }`);
+    }
+    if (s.font === 'system' && s.ui === 'android') {
+        rules.push(`#app :where(*:not(i):not(.material-icons):not(.material-symbols-outlined):not([class^="fa"]):not([class*=" fa-"])) { font-family: ${ANDROID_FONT} !important; }`);
     }
     if (s.font !== 'system') {
         rules.push(`#app :where(*:not(i):not(.material-icons):not(.material-symbols-outlined):not([class^="fa"]):not([class*=" fa-"])) { font-family: ${font.css} !important; }`);
