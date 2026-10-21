@@ -293,6 +293,12 @@ async function renderApiConfig() {
     digestKey.oninput = (e) => settings.memory_api_key = e.target.value.trim();
     const digestModel = createElement('input', 'ios-input mt-2', { type: 'text', placeholder: '模型名稱，例如 gpt-4o-mini', value: settings.memory_model || '' });
     digestModel.oninput = (e) => settings.memory_model = e.target.value.trim();
+    const digestPrompt = createElement('textarea', 'ios-input mt-2', { placeholder: '消化提示詞（選填）：想讓整理更貼近你的需求時，寫在這裡。例如：「用角色的第一人稱口吻寫摘要」「特別留意用戶的飲食、作息與心情」「工作上的瑣事重要度給低一點」', value: settings.memory_digest_prompt || '' });
+    digestPrompt.rows = 4;
+    digestPrompt.value = settings.memory_digest_prompt || '';
+    digestPrompt.maxLength = 1000;
+    digestPrompt.oninput = (e) => settings.memory_digest_prompt = e.target.value;
+    const digestPromptHint = createElement('p', 'text-xs text-ios-muted mt-1', { textContent: '內建的整理規則（保留具體資訊、只記能長期使用的事、不編造）一直都在，這裡寫的是額外要求，會接在後面，不能改變輸出格式。最多 1000 字。' });
     const digestStatus = createElement('p', 'text-xs text-ios-muted mt-2', { textContent: '' });
     const digestBtn = createElement('button', 'ios-btn mt-2', { textContent: '立即消化記憶' });
     const refreshDigestStatus = async () => {
@@ -315,7 +321,7 @@ async function renderApiConfig() {
         digestBtn.disabled = false; digestBtn.textContent = '立即消化記憶';
         refreshDigestStatus();
     };
-    digestCell.append(digestUrl, digestKey, digestModel, digestBtn, digestStatus);
+    digestCell.append(digestUrl, digestKey, digestModel, digestPrompt, digestPromptHint, digestBtn, digestStatus);
     memoryGroup.appendChild(digestCell);
     refreshDigestStatus();
 
@@ -345,7 +351,7 @@ async function renderApiConfig() {
         const keys = [
             'api_url', 'api_key', 'model',
             'embedding_url', 'embedding_model', 'embedding_dimensions', 'embedding_api_key',
-            'memory_enabled', 'memory_decay_rate', 'memory_threshold', 'memory_api_url', 'memory_api_key', 'memory_model', 'vision_enabled'
+            'memory_enabled', 'memory_decay_rate', 'memory_threshold', 'memory_api_url', 'memory_api_key', 'memory_model', 'memory_digest_prompt', 'vision_enabled'
         ];
         for (const key of keys) {
             await SettingsDB.set(key, settings[key]);

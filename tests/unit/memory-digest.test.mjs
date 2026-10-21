@@ -129,3 +129,23 @@ test('digestPending：沒有任何 API 設定就略過；有嵌入服務時順�
     assert.deepEqual(m.embeddingMeaning, [1, 0, 0]);
     assert.deepEqual(embedded, ['收成了三顆番茄', '學到0']);
 });
+
+test('消化提示詞：內建規則一直在；使用者的額外要求接在後面並限制長度，且不能改輸出格式', () => {
+    const base = buildDigestMessages([mem()]);
+    assert.match(base[0].content, /保留具體資訊/);
+    assert.match(base[0].content, /不編造/);
+    assert.ok(!base[0].content.includes('額外要求'));
+    const custom = buildDigestMessages([mem()], { extra: '用角色的口吻摘要'.repeat(300) });
+    assert.match(custom[0].content, /保留具體資訊/);
+    assert.match(custom[0].content, /【使用者的額外要求】\n用角色的口吻摘要/);
+    assert.match(custom[0].content, /仍必須是下面指定的 JSON/);
+    assert.ok(custom[0].content.length < base[0].content.length + 1200, '額外要求被截到 1000 字內');
+    assert.equal(buildDigestMessages([mem()], { extra: '   ' })[0].content, base[0].content);
+});
+
+test('digestPending 會把設定的消化提示詞送給消化 API', async () => {
+    const { db, ms } = await setup({ digest: { api_url: 'http://api.test', api_key: 'k', model: 'm', dedicated: true, prompt: '特別留意用戶的作息' } });
+    await db.MemoryDB.create({ character_id: 'c1', source_app: 'health', content: '用戶今天凌晨三點才睡', importance: 0.3 });
+    const api = mockApi(echo);
+    try { await ms.digestPending(); assert.match(api.calls[0].body.messages[0].content, /特別留意用戶的作息/); } finally { api.restore(); }
+});

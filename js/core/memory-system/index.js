@@ -26,7 +26,8 @@ export function memorySettingsFrom(s = {}) {
             api_url: s.memory_api_url || s.api_url,
             api_key: s.memory_api_key || s.api_key,
             model: s.memory_model || s.model,
-            dedicated: !!(s.memory_api_url && s.memory_api_key)
+            dedicated: !!(s.memory_api_url && s.memory_api_key),
+            prompt: s.memory_digest_prompt || ''
         },
         classifier: {
             api_url: s.memory_api_url || s.api_url,
@@ -76,7 +77,7 @@ export class MemorySystem {
                 const res = await fetch(url, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${d.api_key}` },
-                    body: JSON.stringify({ model: d.model || 'gpt-3.5-turbo', messages: buildDigestMessages(batch), temperature: 0.2, max_tokens: 1500 })
+                    body: JSON.stringify({ model: d.model || 'gpt-3.5-turbo', messages: buildDigestMessages(batch, { extra: d.prompt }), temperature: 0.2, max_tokens: 1500 })
                 });
                 if (!res.ok) return { digested, error: `消化 API 回應 ${res.status}` };
                 text = (await res.json()).choices?.[0]?.message?.content || '';
