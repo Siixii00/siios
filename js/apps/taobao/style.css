@@ -2,7 +2,7 @@
 @media (prefers-color-scheme: dark) {
   .taobao-app { --tb-bg: #1c1917; --tb-card: #292524; --tb-text: #f3ede6; --tb-muted: #a8a29e; --tb-accent: #ff8a4c; --tb-soft: #44342a; --tb-line: rgba(255, 255, 255, 0.1); }
 }
-:where(body[data-app="taobao"]) .taobao-app .page { background: var(--tb-bg); min-height: calc(100vh - 96px); padding: 12px 14px 40px; color: var(--tb-text); }
+:where(body[data-app="taobao"]) .taobao-app .page { background: var(--tb-bg); min-height: calc(var(--app-h, 100vh) - 96px); padding: 12px 14px 40px; color: var(--tb-text); }
 .tb-tabs { display: flex; background: var(--tb-card); border-bottom: 1px solid var(--tb-line); }
 .tb-tabs button { flex: 1; padding: 12px 0; background: none; border: none; border-bottom: 2px solid transparent; font-size: 14px; color: var(--tb-muted); cursor: pointer; }
 .tb-tabs button.active { color: var(--tb-accent); border-bottom-color: var(--tb-accent); font-weight: 600; }

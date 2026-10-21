@@ -9,7 +9,7 @@
 
 :where(body[data-app="bubbles"]) .bubbles-app .page {
   background: var(--bubble-bg);
-  min-height: calc(100vh - 96px);
+  min-height: calc(var(--app-h, 100vh) - 96px);
   display: flex;
   flex-direction: column;
   padding: 16px;

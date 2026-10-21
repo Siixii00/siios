@@ -1,5 +1,5 @@
 .painter-app { --painter-bg: #1a1a2e; --painter-card: #16213e; --painter-text: #e5e5e5; --painter-muted: #888; --painter-accent: #e94560; }
-:where(body[data-app="smart-painter"]) .painter-app .page { background: var(--painter-bg); min-height: calc(100vh - 96px); padding: 16px; display: flex; flex-direction: column; gap: 16px; }
+:where(body[data-app="smart-painter"]) .painter-app .page { background: var(--painter-bg); min-height: calc(var(--app-h, 100vh) - 96px); padding: 16px; display: flex; flex-direction: column; gap: 16px; }
 :where(body[data-app="smart-painter"]) .preview-area { flex: 1; background: var(--painter-card); border-radius: 12px; display: flex; align-items: center; justify-content: center; min-height: 200px; }
 .preview-placeholder { text-align: center; color: var(--painter-muted); }
 .preview-placeholder i { font-size: 48px; margin-bottom: 12px; opacity: 0.5; }

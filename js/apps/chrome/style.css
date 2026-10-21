@@ -14,7 +14,7 @@
     --incognito-muted: #9ca0a8;
     max-width: 430px;
     margin: 0 auto;
-    height: 100vh;
+    height: var(--app-h, 100vh);
     display: flex;
     flex-direction: column;
     background: var(--chrome-bg) !important;
@@ -588,7 +588,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: var(--app-h, 100vh);
     width: min(78vw, 320px);
     background: var(--chrome-card) !important;
     border-left: 1px solid var(--chrome-border);
@@ -922,3 +922,15 @@
     }
     .chrome-mobile .panel { -webkit-overflow-scrolling: touch; }
 }
+
+/* 桌面外框 */
+/* 桌面的手機外框裡視窗很寬，上面的 max-width 手機版面不會套用，這裡用 body.desktop-mode 再套一次 */
+body.desktop-mode .chrome-mobile { max-width: 100%; }
+body.desktop-mode .chrome-mobile .quick-grid { grid-template-columns: repeat(4, minmax(70px, 1fr)); }
+body.desktop-mode .chrome-mobile .view-toggle button { min-height: 48px; padding: 12px 6px; font-size: 13px; }
+body.desktop-mode .chrome-mobile .top-left { gap: 6px; }
+body.desktop-mode[data-app="chrome"] .chrome-mobile .top-left .ghost-btn { min-width: 40px; min-height: 44px; padding: 8px; }
+body.desktop-mode[data-app="chrome"] .chrome-mobile .history-item,
+body.desktop-mode .chrome-mobile .bookmark-item { min-height: 60px; padding: 16px 12px; }
+body.desktop-mode .chrome-mobile .panel-title { font-size: 18px; }
+body.desktop-mode .chrome-mobile .google-mark { font-size: 26px; }

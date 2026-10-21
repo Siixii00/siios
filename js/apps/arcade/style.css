@@ -12,7 +12,7 @@
 
 :where(body[data-app="arcade"]) .arcade-app .page {
   background: var(--arcade-bg);
-  min-height: calc(100vh - 96px);
+  min-height: calc(var(--app-h, 100vh) - 96px);
 }
 
 .gacha-container {

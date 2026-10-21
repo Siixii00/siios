@@ -1,5 +1,5 @@
 .music-app {
-    height: 100vh;
+    height: var(--app-h, 100vh);
     display: grid;
     grid-template-rows: auto 1fr;
     --music-bg: #090d13;
@@ -447,25 +447,14 @@
     }
 }
 
-@media (min-width: 980px) {
-    .music-app {
-        max-width: 980px;
-        margin: 0 auto;
-        border-left: 1px solid var(--music-border);
-        border-right: 1px solid var(--music-border);
+/* 桌面外框 */
+/* 桌面的手機外框裡視窗很寬，上面的 max-width 手機版面不會套用，這裡用 body.desktop-mode 再套一次 */
+body.desktop-mode .import-row {
+        grid-template-columns: 1fr;
     }
-
-    .music-main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-content: start;
+body.desktop-mode .companion-grid {
+        grid-template-columns: 1fr;
     }
-
-    .player-card,
-    .queue-card,
-    .import-card,
-    .companion-card,
-    .ai-lab-card {
-        grid-column: span 1;
+body.desktop-mode .ai-tools-grid {
+        grid-template-columns: 1fr;
     }
-}

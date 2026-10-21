@@ -20,7 +20,7 @@
 .twitch-app {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: var(--app-h, 100vh);
     overflow: hidden;
     background: var(--bg-primary);
     color: var(--text-primary);
@@ -94,7 +94,7 @@
     top: calc(50px + env(safe-area-inset-top));
     left: -240px;
     width: 240px;
-    height: calc(100vh - 50px - env(safe-area-inset-top) - 60px);
+    height: calc(var(--app-h, 100vh) - 50px - env(safe-area-inset-top) - 60px);
     background: var(--bg-secondary);
     border-right: 1px solid var(--border-color);
     overflow-y: auto;
@@ -599,7 +599,7 @@
 .search-results {
     padding: 16px;
     overflow-y: auto;
-    height: calc(100vh - 60px - env(safe-area-inset-top));
+    height: calc(var(--app-h, 100vh) - 60px - env(safe-area-inset-top));
 }
 
 .search-history h3,
@@ -911,35 +911,6 @@
 @keyframes pulse {
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.7; transform: scale(1.1); }
-}
-
-@media (min-width: 768px) {
-    .twitch-sidebar {
-        left: 0;
-        width: 240px;
-    }
-
-    .twitch-main {
-        margin-left: 240px;
-    }
-
-    .twitch-bottom-nav {
-        display: none;
-    }
-
-    .streams-grid {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    }
-}
-
-@media (min-width: 1024px) {
-    .streams-grid {
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    }
-
-    .categories-grid {
-        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    }
 }
 
 .twitch-char-selector {

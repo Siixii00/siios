@@ -1,5 +1,5 @@
 .theme-shop-app { --shop-bg: #1a1a2e; --shop-card: #16213e; --shop-text: #e5e5e5; --shop-muted: #888; --shop-accent: #e94560; }
-:where(body[data-app="theme-shop"]) .theme-shop-app .page { background: var(--shop-bg); min-height: calc(100vh - 96px); padding: 16px; }
+:where(body[data-app="theme-shop"]) .theme-shop-app .page { background: var(--shop-bg); min-height: calc(var(--app-h, 100vh) - 96px); padding: 16px; }
 :where(body[data-app="theme-shop"]) .theme-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 .theme-item { background: var(--shop-card); border-radius: 12px; padding: 16px; text-align: center; cursor: pointer; }
 .theme-icon { font-size: 48px; margin-bottom: 8px; }

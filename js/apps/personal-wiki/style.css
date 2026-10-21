@@ -1581,3 +1581,9 @@ left: 0 !important;
         grid-template-columns: 1fr !important;
     }
 }
+
+/* 桌面外框 */
+/* 桌面的手機外框裡視窗很寬，上面的 max-width 手機版面不會套用，這裡用 body.desktop-mode 再套一次 */
+body.desktop-mode .wiki-ziwei-cards {
+        grid-template-columns: 1fr !important;
+    }

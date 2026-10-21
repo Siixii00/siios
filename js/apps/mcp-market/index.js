@@ -255,7 +255,7 @@ async function renderMCPMarket() {
 
     container.appendChild(main);
 
-    const bottomBar = createElement('div', 'sticky bottom-0 bg-white/95 backdrop-blur border-t border-gray-200 p-4 -mx-4');
+    const bottomBar = createElement('div', 'sticky bottom-0 bg-white/95 backdrop-blur border-t border-gray-200 p-4');
     bottomBar.id = 'mcp-bottom-bar';
 
     const selectedInfo = createElement('div', 'flex items-center justify-between');

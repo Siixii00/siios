@@ -22,7 +22,7 @@
 .ig-app {
     max-width: 480px;
     margin: 0 auto;
-    min-height: 100vh;
+    height: var(--app-h, 100vh);
     padding-bottom: 70px;
     overflow-y: auto;
     -ms-overflow-style: none;
@@ -359,3 +359,12 @@
 .shop-price { font-size: 15px; font-weight: 700; color: var(--ig-primary); margin-bottom: 8px; }
 .shop-buy { width: 100%; padding: 8px; background: var(--ig-primary); color: #fff; border: none; border-radius: 8px; font-size: 13px; cursor: pointer; }
 .shop-buy:disabled { opacity: 0.6; }
+
+/* 桌面外框 */
+/* 桌面的手機外框裡視窗很寬，上面的 max-width 手機版面不會套用，這裡用 body.desktop-mode 再套一次 */
+body.desktop-mode .stories-track {
+        gap: 8px;
+    }
+body.desktop-mode[data-app="instagram"] .post {
+        margin: 0 10px 16px;
+    }

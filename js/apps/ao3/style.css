@@ -1,5 +1,5 @@
 .ao3-app {
-    height: 100vh;
+    height: var(--app-h, 100vh);
     display: grid;
     grid-template-rows: auto 1fr;
     --ao3-wine: #9b2c2c;
@@ -729,26 +729,17 @@
     }
 }
 
-@media (min-width: 980px) {
-    .ao3-app {
-        max-width: 980px;
-        margin: 0 auto;
-        border-left: 1px solid var(--ao3-border);
-        border-right: 1px solid var(--ao3-border);
+/* 桌面外框 */
+/* 桌面的手機外框裡視窗很寬，上面的 max-width 手機版面不會套用，這裡用 body.desktop-mode 再套一次 */
+body.desktop-mode .generator-controls {
+        flex-direction: column;
+        align-items: flex-start;
     }
-
-    .ao3-main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-content: start;
+body.desktop-mode .trope-item,
+body.desktop-mode .char-item,
+body.desktop-mode .worldsetting-item {
+        width: 100%;
     }
-
-    .form-card,
-    .tag-card,
-    .inspiration-card,
-    .editor-card,
-    .preview-card,
-    .draft-card {
-        grid-column: span 1;
+body.desktop-mode .field-grid {
+        grid-template-columns: 1fr;
     }
-}

@@ -126,8 +126,8 @@ body {
 .app-container {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    min-height: 100dvh;
+    min-height: var(--app-h, 100vh);
+    min-height: var(--app-h, 100dvh);
     position: relative;
     overflow: hidden;
 }
@@ -135,8 +135,8 @@ body {
 /* 手機端滑動優化 */
 @media (max-width: 767px) {
     .app-container {
-        height: 100vh;
-        height: 100dvh;
+        height: var(--app-h, 100vh);
+        height: var(--app-h, 100dvh);
     }
     
     .app-container main {
@@ -573,6 +573,8 @@ body.desktop-mode #app {
     overflow: hidden;
     position: relative;
     z-index: 1;
+    /* 桌面的手機外框：讓 position: fixed 的元素（浮動按鈕、彈窗、底部分頁列）以外框為準，不會跑到整個視窗的邊緣 */
+    contain: layout;
 }
 
 .phone-home-indicator {
@@ -588,9 +590,17 @@ body.desktop-mode #app {
 }
 
 @media (max-width: 420px) {
+    /* 手機：不要外框，整個畫面都給 App（不留桌面模式的四周邊距） */
+    body.desktop-mode {
+        padding: 0;
+        min-height: 100vh;
+        min-height: 100dvh;
+    }
+
     .phone-frame {
         width: 100%;
         height: 100vh;
+        height: 100dvh;
         max-height: none;
         border-radius: 0;
         padding: 0;
@@ -926,3 +936,13 @@ body.desktop-mode #app {
 }
 
 .assistive-menu-item:active { background: rgba(255, 255, 255, 0.15); }
+
+/* 提示訊息：不要比手機外框／螢幕還寬，太長就換行 */
+#toast-container {
+    width: max-content;
+    max-width: min(340px, calc(100vw - 24px));
+}
+
+#toast-container .toast {
+    overflow-wrap: anywhere;
+}

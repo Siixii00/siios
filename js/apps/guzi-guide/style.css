@@ -1,5 +1,5 @@
 .guzi-app { --guzi-bg: #fff3e0; --guzi-card: #fff; --guzi-text: #e65100; --guzi-muted: #bf360c; --guzi-accent: #ff6d00; }
-:where(body[data-app="guzi-guide"]) .guzi-app .page { background: var(--guzi-bg); min-height: calc(100vh - 96px); padding: 16px; }
+:where(body[data-app="guzi-guide"]) .guzi-app .page { background: var(--guzi-bg); min-height: calc(var(--app-h, 100vh) - 96px); padding: 16px; }
 .stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 16px; }
 .stat-card { background: var(--guzi-card); padding: 12px 8px; border-radius: 8px; text-align: center; }
 :where(body[data-app="guzi-guide"]) .stat-label { display: block; font-size: 11px; color: var(--guzi-muted); margin-bottom: 4px; }

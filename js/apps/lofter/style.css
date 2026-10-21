@@ -1,5 +1,5 @@
 .lofter-app {
-    height: 100vh;
+    height: var(--app-h, 100vh);
     display: flex;
     flex-direction: column;
     background: radial-gradient(120% 120% at 0% 0%, #1a1f2b, #0f1216);
@@ -607,50 +607,11 @@
     }
 }
 
-@media (min-width: 768px) {
-    .lofter-app {
-        max-width: 900px;
-        margin: 0 auto;
-        border-left: 1px solid #2c3440;
-        border-right: 1px solid #2c3440;
-        background: #0f1216;
+/* 桌面外框 */
+/* 桌面的手機外框裡視窗很寬，上面的 max-width 手機版面不會套用，這裡用 body.desktop-mode 再套一次 */
+body.desktop-mode[data-app="lofter"] .feed.waterfall {
+        column-count: 1;
     }
-    
-    .lofter-content {
-        padding: 16px 18px 20px;
-        gap: 14px;
+body.desktop-mode .idea-grid {
+        grid-template-columns: 1fr;
     }
-    
-    :where(body[data-app="lofter"]) .feed.waterfall {
-        column-count: 2;
-        column-gap: 14px;
-    }
-}
-
-@media (min-width: 1100px) {
-    .lofter-app {
-        max-width: 1220px;
-    }
-    
-    .lofter-topbar,
-    .tab-strip {
-        padding-left: 22px;
-        padding-right: 22px;
-    }
-    
-    .lofter-content {
-        padding: 18px 22px 24px;
-        gap: 16px;
-    }
-    
-    :where(body[data-app="lofter"]) .feed:not(.waterfall) {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-    }
-    
-    :where(body[data-app="lofter"]) .feed.waterfall {
-        column-count: 3;
-        column-gap: 14px;
-    }
-}

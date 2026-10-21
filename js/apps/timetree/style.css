@@ -1,5 +1,5 @@
 .timetree-app { --tree-bg: #e8f5e9; --tree-card: #fff; --tree-text: #2e7d32; --tree-muted: #666; --tree-accent: #4caf50; }
-:where(body[data-app="timetree"]) .timetree-app .page { background: var(--tree-bg); min-height: calc(100vh - 96px); padding: 16px; }
+:where(body[data-app="timetree"]) .timetree-app .page { background: var(--tree-bg); min-height: calc(var(--app-h, 100vh) - 96px); padding: 16px; }
 .calendar-nav { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
 .calendar-nav button { background: none; border: none; color: var(--tree-text); font-size: 24px; width: 40px; cursor: pointer; }
 :where(body[data-app="timetree"]) .calendar-header { font-size: 18px; font-weight: 700; color: var(--tree-text); text-align: center; }

@@ -1,5 +1,5 @@
 .appearance-app { --app-bg: #f5f5f5; --app-card: #fff; --app-text: #333; --app-muted: #666; --app-accent: #6200ea; }
-:where(body[data-app="appearance"]) .appearance-app .page { background: var(--app-bg); min-height: calc(100vh - 96px); padding: 16px; }
+:where(body[data-app="appearance"]) .appearance-app .page { background: var(--app-bg); min-height: calc(var(--app-h, 100vh) - 96px); padding: 16px; }
 :where(body[data-app="appearance"]) .section-title { font-size: 14px; font-weight: 600; color: var(--app-muted); margin: 16px 0 12px; }
 :where(body[data-app="appearance"]) .theme-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .theme-card { padding: 20px; border-radius: 12px; text-align: center; cursor: pointer; border: 2px solid transparent; position: relative; }

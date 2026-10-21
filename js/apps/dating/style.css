@@ -23,7 +23,7 @@
 
 :where(body[data-app="dating"]) .dating-app .dt-page {
   background: var(--dt-bg);
-  min-height: calc(100vh - 96px);
+  min-height: calc(var(--app-h, 100vh) - 96px);
   color: var(--dt-body);
 }
 
@@ -88,7 +88,7 @@
 .dt-memory-big { text-align: left; margin: 16px 0; }
 
 /* 約會進行中 */
-.dt-date { display: flex; flex-direction: column; height: calc(100vh - 96px); position: relative; }
+.dt-date { display: flex; flex-direction: column; height: calc(var(--app-h, 100vh) - 96px); position: relative; }
 .dt-head { display: flex; align-items: center; gap: 10px; background: var(--dt-card); padding: 10px 14px; border-bottom: 1px solid var(--dt-line); flex-wrap: wrap; }
 .dt-head-info { flex: 1; min-width: 140px; }
 .dt-head-info h3 { font-size: 15px; color: var(--dt-text); margin: 0; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }

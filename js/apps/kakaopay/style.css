@@ -1,5 +1,5 @@
 .pay-app { --pay-bg: #ffd43b; --pay-card: #fff; --pay-text: #333; --pay-muted: #666; --pay-accent: #fab005; }
-:where(body[data-app="kakaopay"]) .pay-app .page { background: var(--pay-bg); min-height: calc(100vh - 96px); padding: 16px; }
+:where(body[data-app="kakaopay"]) .pay-app .page { background: var(--pay-bg); min-height: calc(var(--app-h, 100vh) - 96px); padding: 16px; }
 .balance-card { background: var(--pay-card); border-radius: 16px; padding: 24px; text-align: center; margin-bottom: 16px; }
 .balance-label { display: block; font-size: 14px; color: var(--pay-muted); margin-bottom: 8px; }
 .balance-amount { font-size: 32px; font-weight: 700; color: var(--pay-text); }

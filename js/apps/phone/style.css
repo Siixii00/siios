@@ -1,5 +1,5 @@
 .phone-app {
-    min-height: 100vh;
+    min-height: var(--app-h, 100vh);
     padding: 28px clamp(18px, 5vw, 48px) 40px;
     display: flex;
     flex-direction: column;
@@ -580,3 +580,25 @@
         align-items: flex-start;
     }
 }
+
+/* 桌面外框 */
+/* 桌面的手機外框裡視窗很寬，上面的 max-width 手機版面不會套用，這裡用 body.desktop-mode 再套一次 */
+body.desktop-mode .favorite-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+body.desktop-mode .key {
+        min-height: 56px;
+    }
+
+body.desktop-mode .phone-app {
+        padding: 20px 16px 30px;
+    }
+body.desktop-mode .call-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+body.desktop-mode .favorite-header,
+body.desktop-mode .history-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }

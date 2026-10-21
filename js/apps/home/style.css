@@ -1,5 +1,5 @@
 .home-app { position: relative; --home-bg: #fce4ec; --home-card: #fff; --home-text: #880e4f; --home-muted: #ad1457; --home-accent: #ec407a; }
-:where(body[data-app="stay"]) .home-app .page { background: var(--home-bg); min-height: calc(100vh - 96px); padding: 16px; }
+:where(body[data-app="stay"]) .home-app .page { background: var(--home-bg); min-height: calc(var(--app-h, 100vh) - 96px); padding: 16px; }
 .energy-bar { background: var(--home-card); border-radius: 12px; padding: 16px; margin-bottom: 16px; display: flex; align-items: center; gap: 12px; }
 .energy-label { font-size: 14px; font-weight: 600; color: var(--home-text); }
 .energy-track { flex: 1; height: 12px; background: #f8bbd9; border-radius: 6px; overflow: hidden; }

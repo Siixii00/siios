@@ -1,5 +1,5 @@
 .emoji-shop-app { --emoji-bg: #fff8e1; --emoji-card: #fff; --emoji-text: #5d4037; --emoji-muted: #8d6e63; --emoji-accent: #ff7043; }
-:where(body[data-app="emoji-shop"]) .emoji-shop-app .page { background: var(--emoji-bg); min-height: calc(100vh - 96px); padding: 16px; }
+:where(body[data-app="emoji-shop"]) .emoji-shop-app .page { background: var(--emoji-bg); min-height: calc(var(--app-h, 100vh) - 96px); padding: 16px; }
 .emoji-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
 .emoji-item { background: var(--emoji-card); border-radius: 12px; padding: 16px; text-align: center; cursor: pointer; }
 .emoji-icon { font-size: 36px; display: block; margin-bottom: 8px; }

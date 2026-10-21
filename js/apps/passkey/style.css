@@ -1,5 +1,5 @@
 .passkey-app { --pass-bg: #e3f2fd; --pass-card: #fff; --pass-text: #0d47a1; --pass-muted: #1565c0; --pass-accent: #1976d2; }
-:where(body[data-app="passkey"]) .passkey-app .page { background: var(--pass-bg); min-height: calc(100vh - 96px); padding: 16px; }
+:where(body[data-app="passkey"]) .passkey-app .page { background: var(--pass-bg); min-height: calc(var(--app-h, 100vh) - 96px); padding: 16px; }
 .info-card { background: var(--pass-card); border-radius: 12px; padding: 24px; text-align: center; margin-bottom: 16px; }
 .info-card i { font-size: 48px; color: var(--pass-accent); margin-bottom: 16px; }
 .info-card p { color: var(--pass-muted); font-size: 14px; line-height: 1.5; }
