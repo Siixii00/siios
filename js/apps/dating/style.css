@@ -156,3 +156,9 @@
 .dt-up { color: #2e9e5b; }
 .dt-down { color: #d64545; }
 .dt-stage-up { margin-top: 12px; padding: 10px; border-radius: 12px; background: var(--dt-soft); color: var(--dt-text); font-size: 14px; }
+
+.dt-note { margin: 8px 0 0; padding: 8px 12px; border-radius: 12px; background: var(--dt-soft); color: var(--dt-text); font-size: 13px; line-height: 1.5; }
+.dt-link { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; padding: 6px 10px; border: none; background: transparent; color: var(--dt-muted); font-size: 13px; cursor: pointer; }
+.dt-lock-hint { font-size: 11px; color: var(--dt-muted); margin: 2px 0 4px; }
+.dt-lock-hint:empty { display: none; }
+.dt-sheet select { width: 100%; box-sizing: border-box; padding: 10px 12px; border: 1px solid var(--dt-line); border-radius: 12px; background: var(--dt-bg); color: var(--dt-body); font-size: 14px; }

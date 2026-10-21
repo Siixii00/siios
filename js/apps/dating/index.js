@@ -1,6 +1,6 @@
 ﻿import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
-import { CharactersDB, SettingsDB, UsersDB } from '../../db.js';
+import { CharactersDB, SettingsDB, UsersDB, ChatsDB, MessagesDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
@@ -8,7 +8,8 @@ import { askConfirm } from '../../core/dialogs.js';
 import { GIFTS, getInventoryCounts, consumeGift } from '../../core/gifts.js';
 import { charge, formatMoney } from '../../core/wallet.js';
 import {
-    STAGES, stageFor, timeSlot, SCENES, sceneById, customScene, INTERACTIONS, buildDatePrompt, parseReply, renderNarration, esc,
+    STAGES, relationStage, effAffection, checkUnlock, interactionUnlock, chatStatsFromMessages, applyChatEstimate, setRelationship,
+    timeSlot, SCENES, sceneById, customScene, INTERACTIONS, buildDatePrompt, parseReply, renderNarration, esc,
     emptyRelation, applyAffection, finishDate, localSummary, clampDelta, clampAffection
 } from './dating-data.js';
 
@@ -31,6 +32,26 @@ const relOf = id => ({ ...emptyRelation(), ...(relations[id] || {}) });
 async function saveRelation(id, rel) {
     relations[id] = rel;
     await SettingsDB.set(RELATIONS_KEY, relations);
+}
+
+// 用聊天室判斷好感：統計這個角色的聊天（含 Discord 同步進來的），好感度只會被往上拉到評估值。
+// 評估結果記在關係紀錄裡，6 小時內不重算（聊天室很長時避免每次都全部讀一遍）
+const CHAT_REFRESH_MS = 6 * 60 * 60 * 1000;
+async function refreshFromChats(charId, force = false) {
+    const rel = relOf(charId);
+    if (!force && rel.chat && Date.now() - rel.chat.at < CHAT_REFRESH_MS) return rel;
+    try {
+        const chats = (await ChatsDB.getAll()).filter(c => !c.is_group && (c.character_id === charId || (c.member_ids || []).includes(charId)));
+        const ids = [...new Set([...chats.map(c => c.id), charId])]; // charId：Discord 同步的訊息以角色 id 當聊天室
+        const msgs = [];
+        for (const id of ids) msgs.push(...await MessagesDB.getByChatId(id));
+        const next = applyChatEstimate(rel, chatStatsFromMessages(msgs));
+        await saveRelation(charId, next);
+        return next;
+    } catch (e) {
+        console.warn('[Dating] 讀取聊天紀錄失敗：', e);
+        return rel;
+    }
 }
 
 // ───── 畫面入口 ─────
@@ -98,7 +119,7 @@ function viewSelect(characters) {
     return `<div class="dt-wrap">
       <h2 class="dt-title">今天想和誰見面？</h2>
       <div class="dt-list">${characters.map(c => {
-          const r = relOf(c.id), stage = stageFor(r.affection);
+          const r = relOf(c.id), stage = relationStage(r);
           return `<button class="dt-card" data-char="${esc(c.id)}">
             ${avatarHtml(c)}
             <div class="dt-card-info">
@@ -111,8 +132,9 @@ function viewSelect(characters) {
 }
 
 function viewHub() {
-    const c = st.character, r = relOf(c.id), stage = stageFor(r.affection);
-    const next = STAGES.find(s => s.min > r.affection);
+    const c = st.character, r = relOf(c.id), stage = relationStage(r);
+    const next = STAGES.find(s => !s.manual && s.min > r.affection && STAGES.indexOf(s) > STAGES.indexOf(stage));
+    const chat = r.chat;
     const hist = r.history.slice(0, 5);
     return `<div class="dt-wrap">
       <div class="dt-hub">
@@ -122,7 +144,10 @@ function viewHub() {
         ${affectionBar(r.affection)}
         <p class="dt-muted">好感度 ${r.affection}/100${next ? ` · 再 ${next.min - r.affection} 到「${next.name}」` : ' · 已是最親密的關係'}</p>
         <p class="dt-muted">約會 ${r.dates} 次 · 上次：${ago(r.lastDate)}</p>
+        ${r.note ? `<p class="dt-note">${esc(r.note)}</p>` : ''}
+        ${chat && chat.userMsgs ? `<p class="dt-muted">聊天紀錄評估：約 ${chat.estimate}（你說了 ${chat.userMsgs} 句、聊過 ${chat.activeDays} 天${r.autoChat === false ? '，目前為手動指定' : ''}）</p>` : ''}
         <button class="dt-primary" data-act="to-scenes"><i class="fas fa-heart"></i> 開始約會</button>
+        <button class="dt-link" data-act="relation"><i class="fas fa-sliders-h"></i> 關係設定</button>
       </div>
       <h3 class="dt-sub">約會回憶</h3>
       ${hist.length ? hist.map(h => `<div class="dt-memory">
@@ -137,13 +162,13 @@ function viewScenes() {
       <h2 class="dt-title">要去哪裡？</h2>
       <p class="dt-muted dt-center">現在是${now.name}，標有「適合現在」的地方氣氛最好</p>
       <div class="dt-list">${SCENES.map(s => {
-          const locked = r.affection < s.unlock;
+          const lock = checkUnlock(s.unlock, r), locked = !lock.ok;
           return `<button class="dt-card dt-scene${locked ? ' dt-locked' : ''}" data-scene="${s.id}">
             <div class="dt-scene-icon"><i class="fas ${locked ? 'fa-lock' : s.icon}"></i></div>
             <div class="dt-card-info">
               <h3>${esc(s.name)}${s.best.includes(now.id) && !locked ? '<span class="dt-chip dt-chip-hot">適合現在</span>' : ''}</h3>
               <p>${esc(s.desc)}</p>
-              <small>${locked ? `好感度 ${s.unlock} 解鎖` : s.cost ? `預計花費 ${formatMoney(s.cost)}` : '免費'}</small>
+              <small>${locked ? `解鎖條件：${lock.missing.join('、')}` : s.cost ? `預計花費 ${formatMoney(s.cost)}` : '免費'}</small>
             </div></button>`;
       }).join('')}
         <button class="dt-card dt-scene" data-scene="custom">
@@ -154,7 +179,7 @@ function viewScenes() {
 }
 
 function headerHtml() {
-    const c = st.character, r = relOf(c.id), stage = stageFor(r.affection);
+    const c = st.character, r = relOf(c.id), stage = relationStage(r);
     return `<div class="dt-head">
       ${avatarHtml(c)}
       <div class="dt-head-info">
@@ -174,14 +199,18 @@ function messageHtml(m) {
 }
 
 function panelHtml() {
-    const aff = relOf(st.character.id).affection;
+    const rel = relOf(st.character.id);
     return `<div class="dt-panel" id="dt-panel"${st.panel ? '' : ' hidden'}>
       <div class="dt-panel-title">這裡可以做的事</div>
       <div class="dt-chips">${st.scene.activities.map(a => `<button class="dt-act-btn" data-activity="${a.id}"><i class="fas ${esc(a.icon)}"></i> ${esc(a.name)}</button>`).join('')}</div>
       <div class="dt-panel-title">互動</div>
-      <div class="dt-chips">${INTERACTIONS.map(i => i.min <= aff
-          ? `<button class="dt-act-btn" data-interaction="${i.id}"><i class="fas ${i.icon}"></i> ${i.name}</button>`
-          : `<button class="dt-act-btn dt-locked" disabled title="好感度 ${i.min} 解鎖"><i class="fas fa-lock"></i> ${i.name} ${i.min}</button>`).join('')}</div>
+      <div class="dt-chips">${INTERACTIONS.map(i => {
+          const lock = checkUnlock(interactionUnlock(i), rel);
+          return lock.ok
+              ? `<button class="dt-act-btn" data-interaction="${i.id}"><i class="fas ${i.icon}"></i> ${i.name}</button>`
+              : `<button class="dt-act-btn dt-locked" disabled title="${esc(lock.missing.join('、'))}"><i class="fas fa-lock"></i> ${i.name}</button>`;
+      }).join('')}</div>
+      <div class="dt-lock-hint">${(() => { const n = INTERACTIONS.find(i => !checkUnlock(interactionUnlock(i), rel).ok); return n ? `下一個互動「${esc(n.name)}」：${esc(checkUnlock(interactionUnlock(n), rel).missing.join('、'))}` : ''; })()}</div>
       <div class="dt-panel-title">其他</div>
       <div class="dt-chips">
         <button class="dt-act-btn" data-act="gift"><i class="fas fa-gift"></i> 送禮</button>
@@ -223,8 +252,10 @@ function bind(container, characters, go) {
         const c = characters.find(x => x.id === el.dataset.char) || await CharactersDB.getById(el.dataset.char);
         if (!c) return;
         st.character = c;
+        await refreshFromChats(c.id);
         go('hub');
     });
+    on('[data-act="relation"]', () => openRelationSheet(container, go));
     on('[data-act="to-scenes"]', () => go('scenes'));
     on('[data-act="to-hub"]', () => go('hub'));
 
@@ -232,8 +263,8 @@ function bind(container, characters, go) {
         if (el.dataset.scene === 'custom') return askCustomScene(container, scene => startDate(container, go, scene));
         const scene = sceneById(el.dataset.scene);
         if (!scene) return;
-        const aff = relOf(st.character.id).affection;
-        if (aff < scene.unlock) return createToast(`和${st.character.name}的好感度到 ${scene.unlock} 才能去這裡`, 'info');
+        const lock = checkUnlock(scene.unlock, relOf(st.character.id));
+        if (!lock.ok) return createToast(`還不能去這裡：${lock.missing.join('、')}`, 'info');
         await startDate(container, go, scene);
     });
 
@@ -269,6 +300,35 @@ function bind(container, characters, go) {
     };
     on('[data-act="send"]', send);
     if (input) input.onkeydown = e => { if (e.key === 'Enter' && !e.isComposing) send(); };
+}
+
+// 關係設定：自動（依聊天紀錄）或直接指定目前的關係，並補充一段說明給角色參考
+function openRelationSheet(container, go) {
+    const c = st.character, r = relOf(c.id);
+    const current = r.autoChat === false || r.stageFloor ? (r.stageFloor || relationStage(r).id) : 'auto';
+    const sheet = openSheet(container, `
+      <h3 class="dt-sub">和${esc(c.name)}的關係</h3>
+      <p class="dt-muted">選「自動」會依你們的聊天紀錄判斷（只會往上調）。如果你們在聊天室裡已經是別的關係，可以直接指定，例如交往中或已婚；指定後會解鎖該階段的場景與互動。</p>
+      <select id="dt-rel-stage">
+        <option value="auto"${current === 'auto' ? ' selected' : ''}>自動（依聊天紀錄）</option>
+        ${STAGES.map(s => `<option value="${s.id}"${current === s.id ? ' selected' : ''}>${esc(s.name)}</option>`).join('')}
+      </select>
+      <textarea id="dt-rel-note" rows="3" maxlength="300" placeholder="補充說明（選填），例如：從小一起長大的青梅竹馬，已經同居兩年">${esc(r.note || '')}</textarea>
+      <button class="dt-primary" id="dt-rel-save">儲存</button>`);
+    sheet.querySelector('#dt-rel-save').onclick = async () => {
+        const stageId = sheet.querySelector('#dt-rel-stage').value;
+        const note = sheet.querySelector('#dt-rel-note').value;
+        let stats = null;
+        if (stageId === 'auto') {
+            await refreshFromChats(c.id, true);
+            const cached = relOf(c.id).chat;
+            stats = cached ? { userMsgs: cached.userMsgs, activeDays: cached.activeDays, lastAt: Date.now() } : null;
+        }
+        await saveRelation(c.id, setRelationship(relOf(c.id), { stageId, note }, stats));
+        sheet.closest('.dt-overlay').remove();
+        createToast('關係設定已儲存');
+        go('hub');
+    };
 }
 
 function askCustomScene(container, onPick) {
@@ -373,7 +433,7 @@ async function reply(container, { base = 1, gift = null, opening = false }) {
         if (!settings.api_url || !settings.api_key) throw new Error('NO_API');
         const last = st.messages[st.messages.length - 1];
         const ctx = await buildAppContext({ characterId: c.id, userMessage: (last.content || last.api || '').replace(/[（）]/g, '') });
-        const system = [ctx.systemPrompt, buildDatePrompt({ charName: c.name, userName: st.userName, scene: st.scene, slot: st.slot, affection: relOf(c.id).affection, mood: st.mood, turns: opening ? 0 : st.turns, gift })].filter(Boolean).join('\n\n');
+        const system = [ctx.systemPrompt, buildDatePrompt({ charName: c.name, userName: st.userName, scene: st.scene, slot: st.slot, affection: effAffection(relOf(c.id)), stage: relationStage(relOf(c.id)), note: relOf(c.id).note, mood: st.mood, turns: opening ? 0 : st.turns, gift })].filter(Boolean).join('\n\n');
         const raw = await APIClient.complete([{ role: 'system', content: system }, ...apiHistory()], { temperature: 0.9, maxTokens: 800 });
         ({ text, delta, mood } = parseReply(raw));
     } catch (e) {
@@ -390,7 +450,7 @@ async function reply(container, { base = 1, gift = null, opening = false }) {
     const before = relOf(c.id);
     const res = applyAffection(before, gift ? Math.max(raw, 1) : raw);
     await saveRelation(c.id, res.relation);
-    const stageBefore = stageFor(before.affection), stageAfter = stageFor(res.relation.affection);
+    const stageBefore = relationStage(before), stageAfter = relationStage(res.relation);
     if (stageAfter.id !== stageBefore.id && res.applied > 0) st.messages.push({ role: 'narration', local: true, content: `💞 你們的關係進展到了「${stageAfter.name}」` });
     if (res.capped && !st.notedCap) { st.notedCap = true; st.messages.push({ role: 'narration', local: true, content: '今天已經相處得很開心了，好感度明天再繼續累積吧。' }); }
 
@@ -411,14 +471,14 @@ function rebindPanel(container) {
 }
 
 function fallbackLine(opening, base) {
-    const c = st.character, stage = stageFor(relOf(c.id).affection);
+    const c = st.character, stage = relationStage(relOf(c.id));
     if (opening) return `（${c.name}早一步到了，看見你便微微揚起嘴角）「來了啊。${st.scene.name}的氣氛還不錯，我們慢慢逛吧。」`;
     const pool = {
         stranger: [`（${c.name}禮貌地點點頭）「嗯，我明白你的意思。」`, `（${c.name}看向周圍，輕輕笑了笑）「這裡的感覺不錯呢。」`],
         friend: [`（${c.name}笑著看你）「哈哈，你這個人真有趣。」`, `（${c.name}放鬆地靠近了一點）「跟你在一起很自在。」`],
         close: [`（${c.name}別開視線，耳根有些泛紅）「……你這樣說，我會不好意思的。」`, `（${c.name}偷偷看了你一眼）「我也很喜歡今天。」`],
         lover: [`（${c.name}自然地靠近你）「有你在身邊，我就很安心。」`, `（${c.name}握緊了你的手）「今天真的很幸福。」`]
-    }[stage.id];
+    }[stage.id] || ['（對方笑了笑）「嗯。」'];
     return pool[Math.floor(Math.random() * pool.length)];
 }
 
@@ -427,7 +487,7 @@ async function endDate(container, go, { offline = false } = {}) {
     if (!c || !scene) { if (go) go('hub'); return; }
     const rel0 = relOf(c.id);
     const before = st.startAffection, after = rel0.affection;
-    const stageUp = stageFor(after).id !== stageFor(before).id && after > before ? stageFor(after).name : '';
+    const stageUp = relationStage({ ...rel0, affection: after }).id !== relationStage({ ...rel0, affection: before }).id && after > before ? relationStage(rel0).name : '';
     let summary = localSummary({ scene, slot, turns, before, after });
 
     if (turns > 0 && !offline) {

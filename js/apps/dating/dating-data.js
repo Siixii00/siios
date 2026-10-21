@@ -3,15 +3,50 @@
 
 // ───── 關係階段（由好感度決定，影響角色的態度與可以做的互動）─────
 export const STAGES = [
-    { id: 'stranger', name: '初識', min: 0, hint: '你們還不太熟：禮貌、帶點好奇與距離感，不會有肢體接觸。' },
-    { id: 'friend', name: '朋友', min: 25, hint: '你們是熟悉的朋友：輕鬆自在、會開玩笑；偶爾自然的小接觸（碰一下手臂、遞東西）可以。' },
-    { id: 'close', name: '曖昧', min: 50, hint: '彼此有明顯的好感：會害羞、試探、在意對方的反應；牽手、靠近都可以，但仍然含蓄。' },
-    { id: 'lover', name: '戀人', min: 75, hint: '你們是親密的戀人：自然、溫柔、願意直接表達愛意；擁抱、依偎、牽手都很自然。' }
+    { id: 'stranger', name: '初識', min: 0, start: 5, hint: '你們還不太熟：禮貌、帶點好奇與距離感，不會有肢體接觸。' },
+    { id: 'friend', name: '朋友', min: 25, start: 30, hint: '你們是熟悉的朋友：輕鬆自在、會開玩笑；偶爾自然的小接觸（碰一下手臂、遞東西）可以。' },
+    { id: 'close', name: '曖昧', min: 50, start: 55, hint: '彼此有明顯的好感：會害羞、試探、在意對方的反應；牽手、靠近都可以，但仍然含蓄。' },
+    { id: 'lover', name: '交往中', min: 75, start: 82, hint: '你們是親密的戀人：自然、溫柔、願意直接表達愛意；擁抱、依偎、牽手都很自然。' },
+    // 訂婚、已婚是人生的決定，不會因為好感度高就自動發生，只能在「關係設定」手動指定
+    { id: 'engaged', name: '訂婚', min: 88, start: 90, manual: true, hint: '你們已經訂婚，正在一起準備共同的未來：互相信任、會談到婚禮、新家與以後的生活，默契與承諾感都很強。' },
+    { id: 'married', name: '已婚', min: 95, start: 97, manual: true, hint: '你們是結了婚的夫妻：生活在一起，有共同的家與日常；親密、踏實、互相照顧，像老夫老妻般自然，也會有日常的小摩擦與玩笑。' }
 ];
 
+const stageIndex = id => Math.max(0, STAGES.findIndex(s => s.id === id));
+
+// 只看好感度（不含手動指定的階段）
 export function stageFor(affection) {
     const a = Number(affection) || 0;
-    return [...STAGES].reverse().find(s => a >= s.min) || STAGES[0];
+    return [...STAGES].reverse().find(s => !s.manual && a >= s.min) || STAGES[0];
+}
+
+// 關係紀錄實際的階段：好感度算出的階段，和使用者手動指定的階段（stageFloor）取較高者。
+// 手動指定的是「關係狀態」，不會因為某一輪好感下降就消失（結了婚不會因為吵架就變成朋友）
+export function relationStage(rel) {
+    const auto = stageFor(rel?.affection);
+    const floor = STAGES.find(s => s.id === rel?.stageFloor);
+    return floor && stageIndex(floor.id) > stageIndex(auto.id) ? floor : auto;
+}
+
+// 解鎖與提示詞用的好感度：手動指定的階段至少視為達到該階段的門檻
+export function effAffection(rel) {
+    const floor = STAGES.find(s => s.id === rel?.stageFloor);
+    return Math.max(Number(rel?.affection) || 0, floor ? floor.min : 0);
+}
+
+// 解鎖條件：數字＝好感度門檻；物件可以同時要求好感度、約會次數、關係階段。回傳 { ok, missing: ['好感度 45', ...] }
+export function unlockReq(u) {
+    if (typeof u === 'number') return { affection: u };
+    return { affection: 0, ...(u || {}) };
+}
+export function checkUnlock(u, rel) {
+    const req = unlockReq(u), missing = [];
+    if (effAffection(rel) < (req.affection || 0)) missing.push(`好感度 ${req.affection}`);
+    // 使用者手動指定了曖昧以上的關係，代表這段關係本來就存在，不必再補約會次數
+    const given = rel?.stageFloor && stageIndex(rel.stageFloor) >= stageIndex('close');
+    if (!given && (rel?.dates || 0) < (req.dates || 0)) missing.push(`約會 ${req.dates} 次`);
+    if (req.stage && stageIndex(relationStage(rel).id) < stageIndex(req.stage)) missing.push(`關係達到「${STAGES[stageIndex(req.stage)].name}」`);
+    return { ok: missing.length === 0, missing };
 }
 
 // ───── 時段（用真實時間，場景有適合的時段）─────
@@ -68,7 +103,7 @@ export const SCENES = [
         events: ['一個大浪突然打上來，把兩個人的褲腳都弄濕了。', '遠處的海面有一艘小漁船亮起了燈。', '你們發現沙灘上有一排小螃蟹的腳印。']
     },
     {
-        id: 'restaurant', name: '餐廳', icon: 'fa-utensils', desc: '燭光與好吃的料理', unlock: 15, cost: 800, best: ['noon', 'evening', 'night'],
+        id: 'restaurant', name: '餐廳', icon: 'fa-utensils', desc: '燭光與好吃的料理', unlock: { affection: 15, dates: 1 }, cost: 800, best: ['noon', 'evening', 'night'],
         atmosphere: '一間氣氛安靜的餐廳，桌上有小蠟燭與花，燈光偏暗，餐具輕輕碰撞，服務生動作很輕。',
         activities: [
             { id: 'order', name: '一起點餐', icon: 'fa-clipboard-list', text: '一邊看菜單，一邊問對方想吃什麼', delta: 1 },
@@ -123,7 +158,7 @@ export const SCENES = [
         events: ['你們同時伸手去拿同一本書。', '書店的貓咪跳上桌子，坐在翻開的書上。', '店員說這個角落有一本絕版的書。']
     },
     {
-        id: 'stars', name: '山頂看星星', icon: 'fa-star', desc: '遠離城市的夜空', unlock: 45, cost: 0, best: ['night', 'late'],
+        id: 'stars', name: '山頂看星星', icon: 'fa-star', desc: '遠離城市的夜空', unlock: { affection: 45, dates: 2 }, cost: 0, best: ['night', 'late'],
         atmosphere: '一座沒有燈光的山頂，夜風有點涼，頭頂是滿天的星星，遠處是城市小小的燈海，四周很安靜。',
         activities: [
             { id: 'constellation', name: '找星座', icon: 'fa-star', text: '仰起頭，指著天空找找看認得的星座', delta: 2 },
@@ -134,7 +169,7 @@ export const SCENES = [
         events: ['一顆流星劃過了天空。', '夜風變大，對方輕輕縮了縮肩膀。', '遠處的城市燈火一盞盞熄滅，星星變得更亮了。']
     },
     {
-        id: 'home', name: '家中', icon: 'fa-home', desc: '放鬆的沙發、電影與宵夜', unlock: 60, cost: 0, best: ['evening', 'night', 'late'],
+        id: 'home', name: '家中', icon: 'fa-home', desc: '放鬆的沙發、電影與宵夜', unlock: { affection: 60, dates: 3, stage: 'close' }, cost: 0, best: ['evening', 'night', 'late'],
         atmosphere: '一個溫暖舒適的家，柔和的燈光、軟軟的沙發，空氣裡有淡淡的香氣，安靜、放鬆、不用在意別人的眼光。',
         activities: [
             { id: 'cook', name: '一起下廚', icon: 'fa-utensils', text: '捲起袖子，一起在廚房做一道簡單的料理', delta: 3 },
@@ -145,6 +180,31 @@ export const SCENES = [
         events: ['停電了，屋裡一下子暗下來，只剩窗外的月光。', '燉鍋裡的湯溢了出來，兩個人手忙腳亂。', '對方靠在沙發上睡著了。']
     }
 ];
+
+SCENES.push(
+    {
+        id: 'bridal', name: '婚紗店', icon: 'fa-ring', desc: '白紗、西裝與試穿的笑聲', unlock: { affection: 75, dates: 5, stage: 'lover' }, cost: 0, best: ['morning', 'noon', 'afternoon'],
+        atmosphere: '一間明亮的婚紗店，長長的鏡子、整排的白紗與西裝，店員輕聲細語地介紹款式，空氣裡有淡淡的花香。',
+        activities: [
+            { id: 'try', name: '試穿', icon: 'fa-tshirt', text: '拿起一件禮服，請對方看看適不適合自己', delta: 3 },
+            { id: 'mirror', name: '站在鏡前', icon: 'fa-user-friends', text: '兩人並肩站在大鏡子前，看著鏡中的彼此', delta: 3 },
+            { id: 'plan', name: '聊婚禮', icon: 'fa-calendar-alt', text: '一邊看樣品冊，一邊聊著心中理想的婚禮', delta: 3 },
+            { id: 'photo', name: '拍試穿照', icon: 'fa-camera', text: '請店員幫忙拍一張兩人的試穿紀念照', delta: 3 }
+        ],
+        events: ['店員驚呼說你們站在一起特別登對。', '試衣間的簾子拉開，對方看起來讓人移不開眼。', '店員遞來一束捧花，說可以試著拿拿看。']
+    },
+    {
+        id: 'newhome', name: '我們的家', icon: 'fa-house-user', desc: '婚後的日常與餐桌', unlock: { affection: 90, stage: 'married' }, cost: 0, best: ['morning', 'evening', 'night', 'late'],
+        atmosphere: '屬於你們兩個人的家：餐桌上有兩個杯子，玄關有成對的拖鞋，牆上掛著合照，處處是一起生活的痕跡。',
+        activities: [
+            { id: 'breakfast', name: '一起做早餐', icon: 'fa-bread-slice', text: '一早起來，並肩在廚房準備早餐', delta: 2 },
+            { id: 'chores', name: '分工家務', icon: 'fa-broom', text: '商量今天的家務該怎麼分', delta: 1 },
+            { id: 'future', name: '聊未來', icon: 'fa-seedling', text: '坐在沙發上，聊聊接下來想一起完成的事', delta: 3 },
+            { id: 'rest', name: '一起發懶', icon: 'fa-couch', text: '什麼都不做，窩在一起度過安靜的假日', delta: 2 }
+        ],
+        events: ['你們發現冰箱裡剛好少了一樣料理的食材。', '窗外下起了雨，兩個人決定哪裡也不去。', '翻出一本舊相簿，裡面是你們剛認識時的照片。']
+    }
+);
 
 export const sceneById = id => SCENES.find(s => s.id === id) || null;
 
@@ -168,10 +228,15 @@ export const INTERACTIONS = [
     { id: 'highfive', name: '擊掌', icon: 'fa-hands', min: 0, text: '笑著舉起手，想和對方擊個掌', delta: 1 },
     { id: 'walk', name: '並肩走', icon: 'fa-walking', min: 10, text: '放慢腳步，和對方並肩走著', delta: 1 },
     { id: 'pat', name: '摸摸頭', icon: 'fa-hand-sparkles', min: 30, text: '伸手輕輕拍了拍對方的頭', delta: 2 },
-    { id: 'hand', name: '牽手', icon: 'fa-hand-holding-heart', min: 45, text: '猶豫了一下，伸手輕輕牽起對方的手', delta: 3 },
-    { id: 'hug', name: '擁抱', icon: 'fa-people-arrows', min: 60, text: '張開手臂，給了對方一個擁抱', delta: 3 },
-    { id: 'lean', name: '依偎', icon: 'fa-heart', min: 70, text: '輕輕靠在對方的肩上', delta: 3 }
+    { id: 'hand', name: '牽手', icon: 'fa-hand-holding-heart', min: 45, dates: 1, text: '猶豫了一下，伸手輕輕牽起對方的手', delta: 3 },
+    { id: 'dance', name: '邀舞', icon: 'fa-music', min: 55, dates: 1, text: '伸出手，邀請對方隨著音樂跳一小段舞', delta: 3 },
+    { id: 'hug', name: '擁抱', icon: 'fa-people-arrows', min: 60, dates: 2, text: '張開手臂，給了對方一個擁抱', delta: 3 },
+    { id: 'lean', name: '依偎', icon: 'fa-heart', min: 70, dates: 2, text: '輕輕靠在對方的肩上', delta: 3 },
+    { id: 'forehead', name: '輕吻額頭', icon: 'fa-kiss-wink-heart', min: 80, stage: 'lover', text: '靠近一點，輕輕在對方的額頭上落下一吻', delta: 3 },
+    { id: 'ring', name: '看戒指', icon: 'fa-ring', min: 88, stage: 'engaged', text: '握著對方的手，一起看著無名指上的戒指', delta: 3 }
 ];
+
+export const interactionUnlock = i => ({ affection: i.min, dates: i.dates || 0, ...(i.stage ? { stage: i.stage } : {}) });
 
 // ───── 好感度規則 ─────
 export const AFFECTION_MIN_DELTA = -5;
@@ -183,8 +248,8 @@ export const clampAffection = n => Math.max(0, Math.min(100, Math.round(Number(n
 export const dayKey = (d = new Date()) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 
 // ───── 提示詞 ─────
-export function buildDatePrompt({ charName, userName, scene, slot, affection, mood = '', turns = 0, gift = null }) {
-    const stage = stageFor(affection);
+export function buildDatePrompt({ charName, userName, scene, slot, affection, stage: stageIn = null, note = '', mood = '', turns = 0, gift = null }) {
+    const stage = stageIn || stageFor(affection);
     const lines = [
         '# 約會（虛擬見面）',
         `你是「${charName}」，現在和「${userName || '對方'}」在一個虛擬的空間裡面對面見面約會。這是一場實際發生的見面，不是聊天室：你們在同一個場景裡，你能看到、聽到、碰到身邊的一切。`,
@@ -192,6 +257,7 @@ export function buildDatePrompt({ charName, userName, scene, slot, affection, mo
         `環境：${scene.atmosphere}`,
         `現在的時間：${slot.name}。依這個時段描寫光線、人潮與氣氛。`,
         `關係：${stage.name}（好感度 ${affection}/100）。${stage.hint}`,
+        note ? `使用者對你們關係的補充說明：${String(note).slice(0, 300)}（以此為準，不要和它矛盾）` : '',
         mood ? `你目前的心情：${mood}。` : '',
         turns === 0 ? '這是見面的開場：描寫你抵達或見到對方的瞬間與第一句話。' : '',
         gift ? `對方剛送了你禮物「${gift.name}」${gift.price ? `（價值 $${gift.price}）` : ''}：依你的個性與目前的關係自然地反應。` : '',
@@ -236,7 +302,60 @@ export function renderNarration(text) {
 }
 
 // ───── 關係紀錄（每個角色一筆，存在 SettingsDB 的 dating_relations）─────
-export const emptyRelation = () => ({ affection: 20, dates: 0, lastDate: null, daily: { day: '', gained: 0 }, history: [] });
+export const emptyRelation = () => ({ affection: 10, dates: 0, lastDate: null, daily: { day: '', gained: 0 }, history: [], stageFloor: null, note: '', autoChat: true, chat: null });
+
+// ───── 用聊天室判斷好感度 ─────
+// 從聊天訊息（含 Discord 同步進來的）統計：使用者說了幾句、有幾天聊過、最後一次聊天的時間
+export function chatStatsFromMessages(msgs) {
+    const seen = new Set(), days = new Set();
+    let userMsgs = 0, charMsgs = 0, firstAt = 0, lastAt = 0;
+    for (const m of msgs || []) {
+        if (!m || (m.id && seen.has(m.id)) || (m.role !== 'user' && m.role !== 'assistant')) continue;
+        if (m.id) seen.add(m.id);
+        if (String(m.content || '').trim().length < 2) continue;
+        m.role === 'user' ? userMsgs++ : charMsgs++;
+        const t = Number(m.timestamp) || 0;
+        if (t) { days.add(dayKey(new Date(t))); firstAt = firstAt ? Math.min(firstAt, t) : t; lastAt = Math.max(lastAt, t); }
+    }
+    return { userMsgs, charMsgs, activeDays: days.size, firstAt, lastAt };
+}
+
+// 由聊天統計估計好感度（0–55）：聊得多、聊得久（不同天數）加分，很久沒聊會扣一點。
+// 只靠聊天最高到「曖昧」的程度——要更進一步，要靠約會與關係設定。
+export const CHAT_AFFINITY_CAP = 55;
+export function estimateAffinity(stats, now = Date.now()) {
+    if (!stats || stats.userMsgs < 5) return 0;
+    const volume = 40 * (1 - Math.exp(-stats.userMsgs / 120));
+    const span = 15 * (1 - Math.exp(-stats.activeDays / 15));
+    const idleDays = stats.lastAt ? Math.max(0, (now - stats.lastAt) / 86400000) : 0;
+    const penalty = idleDays > 30 ? Math.min(12, (idleDays - 30) / 10) : 0;
+    return Math.max(0, Math.min(CHAT_AFFINITY_CAP, Math.round(volume + span - penalty)));
+}
+
+// 把聊天評估套到關係紀錄：只會把好感度往上拉到評估值，不會往下扣；手動指定關係（autoChat 關閉）時不動
+export function applyChatEstimate(relation, stats, now = Date.now()) {
+    const rel = { ...emptyRelation(), ...relation };
+    const estimate = estimateAffinity(stats, now);
+    rel.chat = { at: now, estimate, userMsgs: stats?.userMsgs || 0, activeDays: stats?.activeDays || 0 };
+    if (rel.autoChat !== false && estimate > rel.affection) rel.affection = estimate;
+    return rel;
+}
+
+// 關係設定：stageId 為 'auto' 就依聊天紀錄；否則指定階段（好感度設成該階段的起點，並成為最低階段）
+export function setRelationship(relation, { stageId = 'auto', note = '' } = {}, stats = null, now = Date.now()) {
+    let rel = { ...emptyRelation(), ...relation, note: String(note || '').slice(0, 300) };
+    if (stageId === 'auto') {
+        rel.stageFloor = null;
+        rel.autoChat = true;
+        return applyChatEstimate(rel, stats, now);
+    }
+    const stage = STAGES.find(s => s.id === stageId);
+    if (!stage) return rel;
+    rel.autoChat = false;
+    rel.stageFloor = stage.id === 'stranger' ? null : stage.id;
+    rel.affection = clampAffection(stage.start); // 每個階段有自己的起點，指定後該階段的互動大多已解鎖
+    return rel;
+}
 
 // 套用一輪的好感變化：正的受每日上限限制；回傳 { relation, applied, capped }
 export function applyAffection(relation, delta, now = new Date()) {
