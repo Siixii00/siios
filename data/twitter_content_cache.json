@@ -1,165 +1,141 @@
 {
   "metadata": {
-    "last_updated": "2026-10-21T07:11:31.215452",
-    "total_items": 52
+    "last_updated": "2026-10-21T13:31:53.757728",
+    "total_items": 48
   },
   "content": {
     "tech": [
       {
+        "title": "Dutch National Cyber Security Center is Offline because it uses PHP",
+        "url": "https://www.ncsc.nl/actueel",
+        "source": "Hacker News",
+        "score": 144
+      },
+      {
+        "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
+        "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
+        "source": "Hacker News",
+        "score": 389
+      },
+      {
+        "title": "Qwen3-Coder writes less secure code when told it's for a US persona",
+        "url": "https://www.hirundo.io/blog/qwen3-coder-vulnerabilities",
+        "source": "Hacker News",
+        "score": 68
+      },
+      {
+        "title": "Most advice is right for the person giving it",
+        "url": "https://coached.com/essays/most-advice-is-right-for-the-person-giving-it/",
+        "source": "Hacker News",
+        "score": 10
+      },
+      {
+        "title": "LayerFS: The filesystem for AI coding agents",
+        "url": "https://layerfs.ai/",
+        "source": "Hacker News",
+        "score": 11
+      },
+      {
+        "title": "Whatever Happened to Fire Escapes",
+        "url": "https://practical.engineering/blog/2026/10/20/whatever-happened-to-fire-escapes",
+        "source": "Hacker News",
+        "score": 78
+      },
+      {
         "title": "The Future of CSS",
         "url": "https://www.joshwcomeau.com/css/interop-2027/",
         "source": "Hacker News",
-        "score": 243
-      },
-      {
-        "title": "Show HN: SimCity, but with Permits",
-        "url": "https://permit.petercai.com/",
-        "source": "Hacker News",
-        "score": 725
-      },
-      {
-        "title": "Feds suspect ransom negotiator ran ShinyHunters extortion site",
-        "url": "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/",
-        "source": "Hacker News",
-        "score": 177
-      },
-      {
-        "title": "Muse exposes users' personal and business secrets when they share conversations",
-        "url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
-        "source": "Hacker News",
-        "score": 96
-      },
-      {
-        "title": "In Hilbert space, all things are quantumly possible",
-        "url": "https://www.quantamagazine.org/in-hilbert-space-all-things-are-quantumly-possible-20260826/",
-        "source": "Hacker News",
-        "score": 69
-      },
-      {
-        "title": "Voxtral 3",
-        "url": "https://mistral.ai/news/voxtral-3/",
-        "source": "Hacker News",
-        "score": 613
-      },
-      {
-        "title": "eMudhra intermediate CA compromise",
-        "url": "https://emudhra.we-have-a-problem.com/",
-        "source": "Hacker News",
-        "score": 848
+        "score": 464
       },
       {
         "title": "Upcoming critical PHP security release (CVE-2026-109618 / -109619)",
         "url": "https://news-web.php.net/php.announce/509",
         "source": "Hacker News",
-        "score": 493
+        "score": 1282
       },
       {
-        "title": "Good type against all odds",
-        "url": "https://unsung.aresluna.org/good-type-against-all-odds/",
+        "title": "9 Mothers (YC P26) Is Hiring in Austin, TX",
+        "url": "https://9mothers.com/careers",
         "source": "Hacker News",
-        "score": 90
+        "score": 1
       },
       {
-        "title": "Battlezone Online: BZFlag in the Browser",
-        "url": "https://github.com/timriker/bzo",
+        "title": "Way to Play Super Mario 64: On Apple Vision Pro",
+        "url": "https://www.pagetable.com/303",
         "source": "Hacker News",
-        "score": 20
+        "score": 74
       },
       {
-        "title": "Ship Your Interpreter",
-        "url": "https://www.basis.ai/blog/ship-your-interpreters/",
+        "title": "The 1.5°C goal of the Paris Agreement is no longer viable",
+        "url": "https://unric.org/en/unep-emissions-gap-report-2026-1-5-degree-overshoot/",
         "source": "Hacker News",
-        "score": 15
+        "score": 510
       },
       {
-        "title": "Four Years with Decker",
-        "url": "https://beyondloom.com/blog/fouryearsdecker.html",
+        "title": "Show HN: SimCity, but with Permits",
+        "url": "https://permit.petercai.com/",
         "source": "Hacker News",
-        "score": 22
+        "score": 848
       },
       {
-        "title": "The Other Epidemic: Trying to get off benzodiazepines",
-        "url": "https://www.thebeliever.net/the-other-epidemic/",
+        "title": "Muse exposes users' personal and business secrets when they share conversations",
+        "url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
         "source": "Hacker News",
-        "score": 156
+        "score": 248
       },
       {
-        "title": "Pillowfort Is Closing",
-        "url": "https://www.pillowfort.social/posts/8413273",
+        "title": "eMudhra intermediate CA compromise",
+        "url": "https://emudhra.we-have-a-problem.com/",
         "source": "Hacker News",
-        "score": 27
+        "score": 1072
       },
       {
-        "title": "Borrow Checking Zero-Cost Cyclic Mutability",
-        "url": "https://antelang.org/blog/safe_cyclic_mutability/",
+        "title": "The Decoherence Trap",
+        "url": "https://maevyn.codes/decoherence",
         "source": "Hacker News",
-        "score": 26
+        "score": 83
       }
     ],
     "ai": [
       {
-        "title": "In Hilbert space, all things are quantumly possible",
-        "url": "https://www.quantamagazine.org/in-hilbert-space-all-things-are-quantumly-possible-20260826/",
+        "title": "LayerFS: The filesystem for AI coding agents",
+        "url": "https://layerfs.ai/",
         "source": "Hacker News AI",
-        "score": 69
+        "score": 11
       },
       {
         "title": "Good type against all odds",
         "url": "https://unsung.aresluna.org/good-type-against-all-odds/",
         "source": "Hacker News AI",
-        "score": 90
+        "score": 153
+      },
+      {
+        "title": "In Hilbert space, all things are quantumly possible",
+        "url": "https://www.quantamagazine.org/in-hilbert-space-all-things-are-quantumly-possible-20260826/",
+        "source": "Hacker News AI",
+        "score": 114
       },
       {
         "title": "Using Claude to reduce the attack surface of code",
         "url": "https://www.anthropic.com/research/attack-surface-reduction",
         "source": "Hacker News AI",
-        "score": 12
+        "score": 86
       },
       {
-        "title": "Nexus-CLI – Pure Go Bridge to DeepSeek R1/V3 with Claude Code and Ollama Support",
-        "url": "https://github.com/xamrayev/nexus-cli",
+        "title": "Does Ruby on Rails still make sense?",
+        "url": "https://tech.dirkjonker.nl/does-ruby-on-rails-make-sense/",
         "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "Benchmarking Bot Detection Systems Against Modern AI Agents in 2026",
-        "url": "https://research.poh.org/bot-benchmarking-2026/",
-        "source": "Hacker News AI",
-        "score": 41
-      },
-      {
-        "title": "Launch HN: Respan (YC W24) – Open-source Rust AI gateway built around plugins",
-        "url": "https://news.ycombinator.com/item?id=50167583",
-        "source": "Hacker News AI",
-        "score": 48
-      },
-      {
-        "title": "Facebook Pages require paid subscription to post more than two links per month",
-        "url": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
-        "source": "Hacker News AI",
-        "score": 434
-      },
-      {
-        "title": "Publish fake stats, get cited in LLMs",
-        "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web",
-        "source": "Hacker News AI",
-        "score": 337
-      },
-      {
-        "title": "NixOS is making me less afraid",
-        "url": "https://entropicthoughts.com/nixos-is-making-me-less-afraid",
-        "source": "Hacker News AI",
-        "score": 177
+        "score": 65
       }
     ],
     "news": [
       {
-        "title": "US envoy arrives in Russia ahead of meeting with Putin as Zelensky says intelligence sharing 'works now'",
-        "url": "https://www.bbc.co.uk/news/articles/cq5ynkx3xy11o?at_medium=RSS&at_campaign=rss",
+        "title": "US citizen Stephen Hubbard freed by Russia as Trump envoy meets Putin",
+        "url": "https://www.bbc.co.uk/news/articles/c6m24l9v3745o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump and Zelensky appear at loggerheads despite Oslo optimism",
+        "title": "Trump and Zelensky at loggerheads despite new optimism",
         "url": "https://www.bbc.co.uk/news/articles/ckrey51jrgnro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
@@ -169,98 +145,98 @@
         "source": "BBC World"
       },
       {
-        "title": "Elon Musk confirms talks to merge Tesla and SpaceX ",
+        "title": "Australian MP loses both legs after alleged car attack, husband says",
+        "url": "https://www.bbc.co.uk/news/articles/ckwyqdqxw6d0o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Elon Musk confirms he is considering merging Tesla and SpaceX",
         "url": "https://www.bbc.co.uk/news/articles/cmlyl09xjke4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Pakistan arrests man hunted by US over $126m postage fraud case",
+        "title": "Pakistan arrests man wanted by US over $126m postage fraud case",
         "url": "https://www.bbc.co.uk/news/articles/ckdd8m1z1z3yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Sudan army drones hit mourners and fuel market killing more than 300 people, sources say",
-        "url": "https://www.bbc.co.uk/news/articles/cr3el70jz1nqo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Alberta's decisive decision to stay in Canada gives Carney backing to take on Trump",
-        "url": "https://www.bbc.co.uk/news/articles/cr62ylj832vxo?at_medium=RSS&at_campaign=rss",
+        "title": "Gambia to pay victims of Yahya Jammeh's rule from proceeds of his seized US mansion",
+        "url": "https://www.bbc.co.uk/news/articles/cmn8wx75l2n8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [],
     "science": [
       {
-        "title": "Scientists finally uncover why statins can cause muscle pain",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261019093447.htm",
+        "title": "A massive asteroid slammed into the North Sea and unleashed a 330-foot tsunami",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261020085727.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Hurricane warning maps are improving, but a dangerous problem remains",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261019093443.htm",
+        "title": "Just 4 minutes a day can dramatically improve strength after 65",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261020085025.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Astronomers uncover new secrets of the Universe’s first five minutes",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261019093442.htm",
+        "title": "Too much RNA can starve cells of energy, scientists discover",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261020085023.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists discover a surprising link between vitamin C and cancer survival",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261019093437.htm",
+        "title": "A train was delayed by a solar storm. But something didn't add up.",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261020085021.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists discover a bizarre Jurassic “squid” unlike anything ever seen",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261019093434.htm",
+        "title": "Astronauts’ hearts just passed a surprising test for Mars",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261020085016.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Your aging brain may be trading memory for something more valuable",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261019093357.htm",
+        "title": "Massive study of 460,000 people challenges ultra-processed food cancer fears",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261020085014.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists find a way to fight Alzheimer’s brain damage without removing toxic tau",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261019093355.htm",
+        "title": "Rejuvenation breakthrough: Scientists reverse 60 years of aging in human cells",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261020085013.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "Marvel Officially Made the Saddest Death in MCU History More Tragic With Just 1 Sentence",
-        "url": "https://www.polygon.com/visionquest-episode-3-explained-friday-avengers-endgame-tony-stark-death/",
+        "title": "Konami Has Staged the Biggest Unlikely Gaming Comeback of 2026",
+        "url": "https://www.polygon.com/konami-comeback-2026/",
         "source": "Polygon"
       },
       {
-        "title": "Phineas Horton? Disney Just Officially Made a Forgotten Marvel Legend Into MCU Canon",
-        "url": "https://www.polygon.com/visionquest-original-human-torch-phineas-horton-explainer/",
+        "title": "Magic: The Gathering Is Officially Hasbro's Biggest Profit-Maker",
+        "url": "https://www.polygon.com/magic-mtg-hasbro-profits-90-percent-organized-play/",
         "source": "Polygon"
       },
       {
-        "title": "'VisionQuest' Episode 4 Ending Explained: Who Is Jocasta?",
-        "url": "https://www.polygon.com/visionquest-jocasta-explained-marvel-comics/",
+        "title": "Obsession Fans Are Not Happy with Nikki Freeman's Fortnite Skin",
+        "url": "https://www.polygon.com/fortnite-obsession-nikki-freeman-skin-controversy/",
         "source": "Polygon"
       },
       {
-        "title": "Forget ‘Carrie,’ Mike Flanagan’s Best Netflix Miniseries Is a Masterpiece From Start to Finish",
-        "url": "https://www.polygon.com/midnight-mass-vs-carrie-mike-mike-flanagan/",
+        "title": "Forget Ravenloft: The Best Horror TTRPG Makes a Party Game Terrifying",
+        "url": "https://www.polygon.com/dread-ttrpg-halloween-countdown/",
         "source": "Polygon"
       },
       {
-        "title": "Red Rising Is Officially Returning In 2027",
-        "url": "https://www.polygon.com/red-rising-digital-edition-2027-release/",
+        "title": "Dawn of War 4 Has the Potential to Be the Best Warhammer 40,000 Game Ever",
+        "url": "https://www.polygon.com/dawn-of-war-4-preview/",
         "source": "Polygon"
       },
       {
-        "title": "Shrek 2 Remastered Officially Announced With Must-See GTA 6-inspired Trailer",
-        "url": "https://www.polygon.com/shrek-2-remastered-release-date-trailer-online-co-op/",
+        "title": "'Cyberpunk: Edgerunners' Season 3 Confirmed? Potential Release Date, Characters, and Everything You Need to Know",
+        "url": "https://www.polygon.com/cyberpunk-edgerunners-season-3-confirmed-release-date-story-characters/",
         "source": "Polygon"
       },
       {
-        "title": "Henry Cavill’s Upcoming Sci-Fi Space Opera Series Writer Admits It's Been ‘Brutally Difficult’",
-        "url": "https://www.polygon.com/mike-flanagan-henry-cavill-warhammer-40k-tv-show/",
+        "title": "Critical Role Is Heading to Middle-earth With a Big Lord of the Rings Collaboration",
+        "url": "https://www.polygon.com/critical-role-lord-of-the-rings-crossover-twitch-con/",
         "source": "Polygon"
       }
     ],
