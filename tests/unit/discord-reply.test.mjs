@@ -283,3 +283,16 @@ test('上下文：頻道裡有多位使用者時，使用者訊息前面標上�
     assert.ok(text.includes('U1: 大家好'));
     assert.ok(text.includes('U2: 我也想說'));
 });
+
+test('上下文：斜線指令的回應（interaction 訊息）不算對話', async () => {
+    const hist = [dm(2000, '現在這則'), dm(1003, '✅ 已設定 RESPONSE_MODE = full', 'BOT', { interaction: { id: '1', name: 'configure' } }), dm(1002, '正常的回覆', 'BOT')];
+    const r = await runPoll(['現在這則'], ['好'], hist);
+    assert.ok(!JSON.stringify(r.aiCalls[0].messages).includes('已設定 RESPONSE_MODE'));
+    assert.ok(JSON.stringify(r.aiCalls[0].messages).includes('正常的回覆'));
+});
+
+test('looksLikeRefusal：角色在劇情裡說「我無法回答你」不算罐頭拒絕', () => {
+    assert.ok(!H.looksLikeRefusal('*別過臉* 這個問題，我無法回答你。'));
+    assert.ok(!H.looksLikeRefusal('我無法提供更多資訊，抱歉。'));
+    assert.ok(H.looksLikeRefusal('作為一個AI語言模型，我無法協助這個請求。'));
+});

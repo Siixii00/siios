@@ -498,7 +498,8 @@ const APIClient = {
                 throw new Error(errorData.error?.message || `API 錯誤: ${response.status}`);
             }
             
-            await this.processStreamWithTools(response, verifyMessages, settings, characterData, onChunk, onComplete, onError, { skipVerify: true });
+            // 檢查那一輪若只回了思考過程（沒有正式內容），沿用原本的草稿，不要當成錯誤
+            await this.processStreamWithTools(response, verifyMessages, settings, characterData, onChunk, onComplete, () => onComplete(draftContent), { skipVerify: true });
             
         } catch (error) {
             console.error('[API] Reply verification failed, using draft:', error);

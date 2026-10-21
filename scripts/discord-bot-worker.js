@@ -392,7 +392,6 @@ async function pollBoundChannels(env, ctx) {
             }
 
             if (interested) {
-                const ctx = await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? ORDER BY timestamp DESC LIMIT 10`).bind(characterId || msg.channel_id).all();
                 let aiResponse, sentPoll;
                 try {
                     aiResponse = await generateAIResponseWithContext(msg, characterId, userId, userDisplayName, env);
@@ -1578,7 +1577,7 @@ function trimToLastSentence(text) {
 // 上游模型被安全機制擋下時，會回一句固定的罐頭話（例如「我只是一个语言模型，理解不了这个问题」）。
 // 這種回覆不該被當成角色的發言送出、更不能存進歷史（會讓之後的回覆跟著拒絕）。
 const REFUSAL_PATTERNS = [
-    /我只是一?个?(?:语言|語言)模型/, /我是一?个?(?:语言|語言)模型/, /(?:没法|沒法|无法|無法)帮上忙/, /(?:没法|沒法|无法|無法)(?:协助|協助|回答|提供)/,
+    /我只是一?个?(?:语言|語言)模型/, /我是一?个?(?:语言|語言)模型/, /(?:没法|沒法|无法|無法)帮上忙/, /(?:语言模型|語言模型|AI).{0,20}(?:没法|沒法|无法|無法)(?:协助|協助|回答|提供)/,
     /作为(?:一个)?(?:AI|人工智能|语言模型)/, /作為(?:一個)?(?:AI|人工智慧|語言模型)/,
     /I(?:'m| am) (?:just )?(?:a|an) (?:language model|AI)/i, /I (?:can(?:no|')t|cannot|am unable to) (?:help|assist|comply)/i
 ];
@@ -1754,6 +1753,7 @@ async function fetchDiscordContext(message, env) {
         const text = String(m.content ?? '').trim();
         if (!text || BigInt(m.id) <= cutoff) return false;
         if (m.author?.id !== botUserId && m.author?.bot) return false;
+        if (m.interaction || m.interaction_metadata || m.type === 20) return false; // 斜線指令的回應（例如 /config 的結果）不是對話
         return !(looksLikeRefusal(text) || text.startsWith('⚠️ AI 回覆時發生錯誤'));
     }).reverse(); // 由舊到新
     const humans = new Set(kept.filter(m => m.author?.id !== botUserId).map(m => m.author?.id));
