@@ -3,6 +3,7 @@ import { createElement, createIcon, createToast, createKakaoBottomSheet } from '
 import { SettingsDB, CharactersDB, UsersDB, MemoryDB, WorldInfoDB, GlobalSettingsDB, GlobalForbiddenDB, MessagesDB, ChatsDB, DiscordUserBindingDB, initDB, parseWorkerTimestamp } from '../../db.js';
 import { pushMemories, pullDiscordMemories } from '../../core/discord-memory-sync.js';
 import { EXPECTED_WORKER_VERSION } from './discord-guide-data.js';
+import { workerFetch, testWorkerAccess } from '../../core/discord-worker-client.js';
 
 async function renderDiscordSettings() {
     const container = createElement('div', 'app-container bg-ios-bg');
@@ -94,6 +95,24 @@ async function renderDiscordSettings() {
     
     workerSection.appendChild(workerCard);
     main.appendChild(workerSection);
+
+    // 存取密鑰：PWA 呼叫 Worker 都要帶，和 Worker 的 ACCESS_KEY 相同；Discord 端另外用 /auth 驗證
+    const accessSection = createElement('div', 'mx-4 mb-4');
+    const accessCard = createElement('div', 'bg-white rounded-xl p-4');
+    const accessLabel = createElement('label', 'block text-sm font-medium text-gray-700 mb-2');
+    accessLabel.textContent = '存取密鑰（Access Key）';
+    accessCard.appendChild(accessLabel);
+    const accessInput = createElement('input', 'w-full p-3 border rounded-lg text-sm');
+    accessInput.type = 'password';
+    accessInput.placeholder = '和 Worker 的 ACCESS_KEY 相同';
+    accessInput.id = 'discord-worker-key';
+    accessInput.value = (await SettingsDB.get('discord_worker_key')) || '';
+    accessCard.appendChild(accessInput);
+    const accessHint = createElement('p', 'text-xs text-gray-500 mt-2');
+    accessHint.innerHTML = '沒有這組密鑰的人無法使用你的 Worker。在 Discord 裡也要先輸入 <code>/auth</code> 並填同一組密鑰，機器人才會回應你。';
+    accessCard.appendChild(accessHint);
+    accessSection.appendChild(accessCard);
+    main.appendChild(accessSection);
     
     // Backup Key 設定（用於從 Worker 拉取完整備份）
     const backupSection = createElement('div', 'mx-4 mb-4');
@@ -166,6 +185,7 @@ async function renderDiscordSettings() {
             await SettingsDB.set('discord_bot_token', tokenInput.value);
             await SettingsDB.set('discord_worker_url', workerInput.value);
             await SettingsDB.set('discord_backup_key', backupInput.value);
+            await SettingsDB.set('discord_worker_key', accessInput.value.trim());
             
             // 收集頻道映射
             const mappings = [];
@@ -199,8 +219,13 @@ async function renderDiscordSettings() {
                 return;
             }
             
-            const response = await fetch(`${workerUrl}/discord/ping`);
-            const data = await response.json();
+            await SettingsDB.set('discord_worker_key', accessInput.value.trim());
+            const access = await testWorkerAccess(workerUrl);
+            if (!access.ok) {
+                createToast(access.message, 'error');
+                return;
+            }
+            const data = access.ping;
             
             if (data.success) {
                 // 版本比對：Worker 是使用者自己部署的，過舊（或太舊沒有版本欄位）就提醒更新
@@ -238,7 +263,7 @@ async function renderDiscordSettings() {
             syncBtn.disabled = true;
             syncBtn.textContent = '同步中...';
 
-            const response = await fetch(`${workerUrl}/sync/characters`, {
+            const response = await workerFetch(`${workerUrl}/sync/characters`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ characters })
@@ -282,7 +307,7 @@ async function renderDiscordSettings() {
             userSyncBtn.disabled = true;
             userSyncBtn.textContent = '同步中...';
 
-            const response = await fetch(`${workerUrl}/sync/users`, {
+            const response = await workerFetch(`${workerUrl}/sync/users`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ users })
@@ -360,7 +385,7 @@ async function renderDiscordSettings() {
             wiSyncBtn.disabled = true;
             wiSyncBtn.textContent = '同步中...';
 
-            const response = await fetch(`${workerUrl}/sync/world-info`, {
+            const response = await workerFetch(`${workerUrl}/sync/world-info`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ globalSettings, globalForbidden, worldInfo })
@@ -407,7 +432,7 @@ main.appendChild(wiSyncBtn);
             backupBtn.disabled = true;
             backupBtn.textContent = '備份中...';
 
-            const response = await fetch(`${workerUrl}/backup?key=${encodeURIComponent(backupKey)}`);
+            const response = await workerFetch(`${workerUrl}/backup?key=${encodeURIComponent(backupKey)}`);
             if (!response.ok) {
                 const err = await response.json().catch(() => ({}));
                 throw new Error(err.error || `HTTP ${response.status}`);
@@ -458,7 +483,7 @@ main.appendChild(wiSyncBtn);
             const syncedNames = [];
 
             for (const char of bound) {
-                const response = await fetch(`${workerUrl}/sync/chat?character_id=${encodeURIComponent(char.id)}`);
+                const response = await workerFetch(`${workerUrl}/sync/chat?character_id=${encodeURIComponent(char.id)}`);
                 if (!response.ok) continue;
                 const data = await response.json();
                 if (!data.success || (data.messages.length === 0 && data.memories.length === 0)) continue;
@@ -517,7 +542,7 @@ main.appendChild(wiSyncBtn);
                 const workerUrl = workerInput.value.replace(/\/+$/, '');
                 let workerResult = null;
                 if (workerUrl) {
-                    const res = await fetch(`${workerUrl}/sync/restore`, {
+                    const res = await workerFetch(`${workerUrl}/sync/restore`, {
                         method: 'POST', headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(data)
                     });

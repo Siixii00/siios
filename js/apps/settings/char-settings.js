@@ -2,6 +2,7 @@ import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { CharactersDB, SettingsDB, UsersDB } from '../../db.js';
 import { askConfirm } from '../../core/dialogs.js';
+import { workerFetch } from '../../core/discord-worker-client.js';
 
 async function renderCharList() {
     const characters = await CharactersDB.getAll();
@@ -393,7 +394,7 @@ async function renderCharEdit(params) {
             const workerUrl = await SettingsDB.get('discord_worker_url');
             if (workerUrl) {
                 try {
-                    await fetch(`${workerUrl}/sync/channel-bind`, {
+                    await workerFetch(`${workerUrl}/sync/channel-bind`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify({

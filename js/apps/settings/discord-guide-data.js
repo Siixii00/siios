@@ -1,6 +1,6 @@
 // Discord Worker 部署教學的內容與純函式（不依賴瀏覽器，方便測試）；畫面在 discord-guide.js
 // 與 scripts/discord-bot-worker.js 的 WORKER_VERSION 必須一致（tests/unit/discord-guide.test.mjs 會檢查）
-export const EXPECTED_WORKER_VERSION = '2026.10.21';
+export const EXPECTED_WORKER_VERSION = '2026.10.22';
 export const WORKER_CODE_PATH = 'scripts/discord-bot-worker.js';
 // 權限：查看頻道、傳送訊息、管理訊息（批次刪除用，沒有也能運作）、讀取訊息歷史、新增反應
 export const INVITE_PERMISSIONS = 1024 + 2048 + 8192 + 65536 + 64;
@@ -58,11 +58,13 @@ export const GUIDE_STEPS = [
     {
         title: '5. 設定密鑰與變數',
         html: [
-            'Worker → <b>Settings</b> → <b>Variables and Secrets</b> → <b>Add</b>，新增下面三個（前兩個 Type 選 <b>Secret</b>，Public Key 選 Text 即可）：',
-            '<code>DISCORD_BOT_TOKEN</code> = 步驟 1 的 Token<br><code>DISCORD_APPLICATION_ID</code> = 步驟 1 的 Application ID<br><code>DISCORD_PUBLIC_KEY</code> = 步驟 1 的 Public Key',
+            'Worker → <b>Settings</b> → <b>Variables and Secrets</b> → <b>Add</b>，新增下面四個（Token 與 ACCESS_KEY 的 Type 選 <b>Secret</b>，其餘選 Text 即可）：',
+            '<code>DISCORD_BOT_TOKEN</code> = 步驟 1 的 Token<br><code>DISCORD_APPLICATION_ID</code> = 步驟 1 的 Application ID<br><code>DISCORD_PUBLIC_KEY</code> = 步驟 1 的 Public Key<br><code>ACCESS_KEY</code> = <b>存取密鑰</b>（用下面的按鈕產生一組隨機的）',
+            '<b>存取密鑰</b>是你自己的通行證：沒有它，別人就算知道你的 Worker 網址也不能呼叫；PWA 和 Discord 都要輸入它才能使用（PWA 在「設定 → Discord 整合」的存取密鑰欄，Discord 用 <code>/auth</code>）。按「產生密鑰」會順便存進這支 PWA，你只要把它貼到 Cloudflare 的 ACCESS_KEY。',
             '儲存後如果 Cloudflare 提示要重新部署，按 <b>Deploy</b>。AI 的網址與金鑰<b>不用</b>放這裡，之後在 Discord 裡用指令設定。'
         ],
-        copy: [{ label: 'DISCORD_BOT_TOKEN', text: 'DISCORD_BOT_TOKEN' }, { label: 'DISCORD_APPLICATION_ID', text: 'DISCORD_APPLICATION_ID' }, { label: 'DISCORD_PUBLIC_KEY', text: 'DISCORD_PUBLIC_KEY' }]
+        copy: [{ label: 'DISCORD_BOT_TOKEN', text: 'DISCORD_BOT_TOKEN' }, { label: 'DISCORD_APPLICATION_ID', text: 'DISCORD_APPLICATION_ID' }, { label: 'DISCORD_PUBLIC_KEY', text: 'DISCORD_PUBLIC_KEY' }, { label: 'ACCESS_KEY', text: 'ACCESS_KEY' }],
+        accessKey: true
     },
     {
         title: '6. 加上排程（Cron）',
@@ -75,15 +77,16 @@ export const GUIDE_STEPS = [
     {
         title: '7. 啟動並註冊斜線指令',
         html: [
-            '在瀏覽器打開：<code>{{WORKER}}/setup</code>，看到「斜線指令已註冊」就成功。',
+            '在瀏覽器打開：<code>{{WORKER}}/setup?key=你的存取密鑰</code>，看到「斜線指令已註冊」就成功（沒帶密鑰會顯示 401）。',
             '到 Developer Portal → <b>General Information</b> → <b>Interactions Endpoint URL</b>，填入下面的網址並儲存（Discord 會驗證，失敗代表步驟 5 的 Public Key 填錯）。'
         ],
-        copy: [{ label: 'Interactions Endpoint URL', text: '{{WORKER}}/discord/webhook' }, { label: '註冊指令', text: '{{WORKER}}/setup' }]
+        copy: [{ label: 'Interactions Endpoint URL', text: '{{WORKER}}/discord/webhook' }, { label: '註冊指令（要補上 ?key=密鑰）', text: '{{WORKER}}/setup?key=' }]
     },
     {
-        title: '8. 在 Discord 設定 AI',
+        title: '8. 在 Discord 驗證並設定 AI',
         html: [
-            '到伺服器任一頻道輸入斜線指令（只有伺服器管理員看得到這些指令）：',
+            '先在 Discord 輸入 <code>/auth key:你的存取密鑰</code>（只有你看得到回覆）。沒通過驗證的人，機器人不會理他，私訊也只會提示一次。連續輸入錯誤 5 次會鎖 15 分鐘。朋友要一起用的話，把密鑰給他讓他自己 <code>/auth</code>。',
+            '之後在伺服器任一頻道輸入斜線指令（只有伺服器管理員看得到這些指令）：',
             '<code>/configure key:API URL value:https://你的AI網址</code>（<b>不要</b>加 /v1 與後面的路徑）<br><code>/configure key:API Key value:你的金鑰</code><br><code>/configure key:Model value:模型名稱</code>',
             '用 <code>/config</code> 確認設定（金鑰只會顯示前 4 碼）。輸出的長短與格式可用 <code>/configure key:Response Mode</code> 選 discord／full／dialogue_single／dialogue_multi／custom。'
         ]
@@ -99,7 +102,7 @@ export const GUIDE_STEPS = [
     {
         title: '10. 回到 PWA 完成串接',
         html: [
-            '回上一頁，把 Worker 網址填進「Worker URL」，按「測試連接」（會顯示版本，過舊會提醒你更新）。',
+            '回上一頁，把 Worker 網址填進「Worker URL」、存取密鑰填進「存取密鑰」，按「測試連接」（會檢查連線、密鑰與版本，過舊會提醒你更新）。',
             '依需要按下面的按鈕：同步角色、同步用戶面具、同步世界書、🧠 同步記憶（雙向）。之後記憶每 30 分鐘會自動同步。',
             '在已綁定的頻道或私訊傳一句話，約 2 分鐘內機器人就會回覆（即時連線有啟動時更快）。'
         ]
@@ -108,6 +111,8 @@ export const GUIDE_STEPS = [
 
 export const TROUBLESHOOTING = [
     ['機器人完全不回', '確認：① 步驟 6 的 Cron 有加；② 步驟 1 的 MESSAGE CONTENT INTENT 有開；③ 該頻道已綁定角色，或用 /channel allow 加入允許清單（私訊頻道也一樣）；④ 開 <code>{{WORKER}}/discord/ping</code> 應該看到 success。'],
+    ['PWA 顯示 401／存取密鑰不正確', 'PWA 的「存取密鑰」要和 Cloudflare Worker 的 <code>ACCESS_KEY</code> 完全相同（不要有空白）。改了 Worker 的密鑰要重新 Deploy；Discord 那邊其他人也要重新驗證（你自己先 <code>/auth</code>，再用 <code>/auth-reset</code> 清掉舊的）。'],
+    ['機器人說「請先用 /auth」', '在 Discord 輸入 <code>/auth key:存取密鑰</code>。如果說 Worker 還沒設定 ACCESS_KEY，回到步驟 5 新增。'],
     ['斜線指令沒出現', '重新打開 <code>{{WORKER}}/setup</code>；Discord 客戶端按 Ctrl/Cmd+R 重新整理。指令只有伺服器管理員看得到。'],
     ['Interactions Endpoint URL 儲存失敗', '步驟 5 的 DISCORD_PUBLIC_KEY 要和 Developer Portal 的 Public Key 完全一致（沒有多餘空白），且 Worker 已重新部署。'],
     ['回覆「資料庫尚未綁定」', '步驟 4 的 D1 綁定 Variable name 必須是大寫的 <code>DB</code>。'],
@@ -116,7 +121,7 @@ export const TROUBLESHOOTING = [
 ];
 
 export const SECURITY_NOTES = [
-    '<b>請不要公開你的 Worker 網址。</b>PWA 與 Worker 之間的同步是靠網址本身；知道網址的人可以呼叫同步類的介面。',
+    '<b>存取密鑰（ACCESS_KEY）是第一道鎖：</b>PWA 呼叫 Worker 要帶它，Discord 使用者要先 <code>/auth</code>。請用夠長的隨機字串（教學的產生鈕就是），不要和其他密碼共用，也不要貼到公開地方。懷疑外洩：在 Cloudflare 換掉 ACCESS_KEY、重新 Deploy、PWA 改成新密鑰，並在 Discord 執行 <code>/auth-reset</code>。',
     'Token、AI 金鑰只存在你自己的 Cloudflare 與 Worker 資料庫；<b>請勿貼到公開頻道、截圖或分享</b>。懷疑外洩就到 Developer Portal 重設 Token，並在 Discord 重新 /configure。',
     'Cloudflare 免費方案通常夠個人使用（Worker 與 D1 都有免費額度）；用量大時請留意額度。'
 ];

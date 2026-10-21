@@ -2,6 +2,7 @@ import Router from '../../router.js';
 import { createElement, createIcon, createToast, createKakaoBottomSheet } from '../../components.js';
 import { DiscordUserBindingDB, UsersDB, SettingsDB } from '../../db.js';
 import { askConfirm } from '../../core/dialogs.js';
+import { workerFetch } from '../../core/discord-worker-client.js';
 
 async function renderDiscordUserBinding() {
     const container = createElement('div', 'app-container bg-ios-bg');
@@ -66,7 +67,7 @@ async function renderDiscordUserBinding() {
             }
             syncBtn.disabled = true;
             syncBtn.textContent = '同步中...';
-            const response = await fetch(`${workerUrl.replace(/\/+$/, '')}/sync/user-bindings`, {
+            const response = await workerFetch(`${workerUrl.replace(/\/+$/, '')}/sync/user-bindings`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ bindings })

@@ -40,7 +40,7 @@ function emptyEnv() {
         bind: (...a) => ({ first: async () => db.prepare(sql).get(...a) ?? null, all: async () => ({ results: db.prepare(sql).all(...a) }), run: async () => { db.prepare(sql).run(...a); return {}; } }),
         first: async () => db.prepare(sql).get() ?? null, all: async () => ({ results: db.prepare(sql).all() }), run: async () => { db.prepare(sql).run(); return {}; }
     });
-    return { db, env: { DB: { prepare: wrap }, DISCORD_BOT_TOKEN: 't', DISCORD_APPLICATION_ID: '1' } };
+    return { db, env: { DB: { prepare: wrap }, DISCORD_BOT_TOKEN: 't', DISCORD_APPLICATION_ID: '1', ACCESS_KEY: 'test-key' } };
 }
 
 test('空資料庫：/discord/ping 會自動建立資料表並回報版本', async () => {
@@ -62,12 +62,12 @@ test('空資料庫：/discord/ping 會自動建立資料表並回報版本', asy
 
 test('空資料庫：同步角色後可以正常寫入與讀回（表結構與程式碼相符）', async () => {
     const { env } = emptyEnv();
-    const post = (path, body) => worker.fetch(new Request('https://w.test' + path, { method: 'POST', body: JSON.stringify(body) }), env, { waitUntil() {} });
+    const post = (path, body) => worker.fetch(new Request('https://w.test' + path, { method: 'POST', headers: { Authorization: 'Bearer test-key' }, body: JSON.stringify(body) }), env, { waitUntil() {} });
     const chars = await (await post('/sync/characters', { characters: [{ id: 'c1', name: '艾爾', personality: '沉穩', scenario: '圖書館' }] })).json();
     assert.equal(chars.success, true, JSON.stringify(chars));
     const mem = await (await post('/sync/memories', { memories: [{ id: 'm1', chat_id: 'chat', character_id: 'c1', content: '她喜歡草莓', memory_type: 'permanent', importance: 0.9, timestamp: Date.now() }] })).json();
     assert.equal(mem.success, true, JSON.stringify(mem));
-    const got = await (await worker.fetch(new Request('https://w.test/sync/memories?character_id=c1'), env, { waitUntil() {} })).json();
+    const got = await (await worker.fetch(new Request('https://w.test/sync/memories?character_id=c1', { headers: { Authorization: 'Bearer test-key' } }), env, { waitUntil() {} })).json();
     assert.equal(got.memories.length, 1);
 });
 

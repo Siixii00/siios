@@ -1,6 +1,7 @@
 import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
 import { SettingsDB } from '../../db.js';
+import { generateAccessKey } from '../../core/discord-worker-client.js';
 import { EXPECTED_WORKER_VERSION, WORKER_CODE_PATH, buildInviteUrl, GUIDE_STEPS, TROUBLESHOOTING, SECURITY_NOTES } from './discord-guide-data.js';
 
 function applyWorker(text, worker) {
@@ -49,7 +50,7 @@ async function renderDiscordGuide() {
     const btnStyle = 'padding:8px 12px;border-radius:8px;background:#5865F2;color:#fff;font-size:13px;border:none;cursor:pointer;margin:4px 6px 0 0;';
     const lightBtn = 'padding:6px 10px;border-radius:8px;background:#EEF0FF;color:#3b46c4;font-size:12px;border:none;cursor:pointer;margin:4px 6px 0 0;';
 
-    GUIDE_STEPS.forEach(step => {
+    for (const step of GUIDE_STEPS) {
         const card = createElement('div', 'mx-4 mb-3 bg-white rounded-xl p-4');
         card.appendChild(createElement('div', 'font-semibold text-sm mb-2', { textContent: step.title }));
         const body = createElement('div', 'text-xs text-gray-700 space-y-2');
@@ -93,6 +94,25 @@ async function renderDiscordGuide() {
             card.appendChild(row);
             card.appendChild(createElement('div', 'text-xs text-gray-400 mt-1', { textContent: `程式碼版本 ${EXPECTED_WORKER_VERSION}` }));
         }
+        if (step.accessKey) {
+            const keyRow = createElement('div', '');
+            const keyBox = createElement('input', 'w-full p-2 border rounded text-xs', { type: 'text', readOnly: true, placeholder: '按下方按鈕產生密鑰' });
+            keyBox.style.marginTop = '8px';
+            keyBox.value = (await SettingsDB.get('discord_worker_key')) || '';
+            const genBtn = createElement('button', '', { textContent: '🔑 產生密鑰（並存進這支 PWA）' });
+            genBtn.style.cssText = btnStyle;
+            genBtn.onclick = async () => {
+                if (keyBox.value && !confirm('已經有一組密鑰了，重新產生會讓舊的失效（Worker 要一起換）。確定嗎？')) return;
+                keyBox.value = generateAccessKey();
+                await SettingsDB.set('discord_worker_key', keyBox.value);
+                createToast('已產生並存進 PWA，請貼到 Cloudflare 的 ACCESS_KEY');
+            };
+            const cpBtn = createElement('button', '', { textContent: '複製密鑰' });
+            cpBtn.style.cssText = lightBtn;
+            cpBtn.onclick = () => keyBox.value ? copyText(keyBox.value, '已複製密鑰') : createToast('請先產生密鑰', 'error');
+            keyRow.append(genBtn, cpBtn);
+            card.append(keyBox, keyRow);
+        }
         if (step.copy) {
             const row = createElement('div', '');
             step.copy.forEach(c => {
@@ -105,7 +125,7 @@ async function renderDiscordGuide() {
             card.appendChild(row);
         }
         main.appendChild(card);
-    });
+    }
 
     const trouble = createElement('div', 'mx-4 mb-3 bg-white rounded-xl p-4');
     trouble.appendChild(createElement('div', 'font-semibold text-sm mb-2', { textContent: '🛠 常見問題' }));

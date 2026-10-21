@@ -10,7 +10,7 @@ const worker = (await import(workerUrl.href)).default;
 async function runClear(mode, { recentIds = [], oldIds = [] } = {}) {
     const events = [];
     const env = {
-        DISCORD_BOT_TOKEN: 'x',
+        DISCORD_BOT_TOKEN: 'x', ACCESS_KEY: 'test-key',
         DB: {
             prepare(sql) {
                 return {
@@ -50,7 +50,7 @@ async function runClear(mode, { recentIds = [], oldIds = [] } = {}) {
         return new Response(null, { status: 204 });
     };
     try {
-        const res = await worker.fetch(new Request('https://w.test/discord/clear', { method: 'POST', body: JSON.stringify({ channel_id: 'chan1', mode }) }), env, { waitUntil() {} });
+        const res = await worker.fetch(new Request('https://w.test/discord/clear', { method: 'POST', headers: { Authorization: 'Bearer test-key' }, body: JSON.stringify({ channel_id: 'chan1', mode }) }), env, { waitUntil() {} });
         return { body: await res.json(), events };
     } finally { globalThis.fetch = realFetch; }
 }

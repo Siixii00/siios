@@ -37,6 +37,7 @@ CREATE TABLE discord_channel_mappings (channel_id TEXT PRIMARY KEY, character_id
 CREATE TABLE memories (id TEXT PRIMARY KEY, chat_id TEXT, character_id TEXT, content TEXT, memory_type TEXT DEFAULT 'dynamic', importance REAL DEFAULT 0.5, timestamp TEXT, metadata TEXT);
 CREATE TABLE channel_bindings (channel_id TEXT PRIMARY KEY, character_id TEXT, guild_id TEXT, updated_at TEXT);
 CREATE TABLE botState (key TEXT PRIMARY KEY, cursor TEXT);
+CREATE TABLE authorizedUsers (discord_user_id TEXT PRIMARY KEY, authorized_at TEXT);
 `;
 
 const SECRET_KEY = 'sk-test-SECRET-1234';
@@ -47,6 +48,7 @@ function makeEnv() {
     db.prepare(`INSERT INTO characters (id, name, personality) VALUES ('char1', '艾爾', '沉穩')`).run();
     db.prepare(`INSERT INTO channel_bindings (channel_id, character_id) VALUES ('chan1', 'char1')`).run();
     db.prepare(`INSERT INTO botState (key, cursor) VALUES ('bot_user_id', 'BOT')`).run();
+    db.prepare(`INSERT INTO authorizedUsers (discord_user_id, authorized_at) VALUES ('U1', '2026-01-01')`).run(); // 通過驗證的使用者
     db.prepare(`INSERT INTO botState (key, cursor) VALUES ('commands_registered', '1')`).run();
     db.prepare(`INSERT INTO botState (key, cursor) VALUES ('last_msg_chan1', '1')`).run();
     const cfg = { AI_API_URL: 'https://ai.test', AI_API_KEY: SECRET_KEY, AI_MODEL: 'm', REACTION_PROBABILITY: '0', INTERJECT_PROBABILITY: '0' };
@@ -57,7 +59,7 @@ function makeEnv() {
         bind: (...a) => ({ first: async () => db.prepare(sql).get(...a) ?? null, all: async () => ({ results: db.prepare(sql).all(...a) }), run: async () => { db.prepare(sql).run(...a); return {}; } }),
         first: async () => db.prepare(sql).get() ?? null, all: async () => ({ results: db.prepare(sql).all() }), run: async () => ({})
     });
-    return { db, env: { DB: { prepare: wrap }, DISCORD_BOT_TOKEN: 't', DISCORD_APPLICATION_ID: '1' } };
+    return { db, env: { DB: { prepare: wrap }, DISCORD_BOT_TOKEN: 't', DISCORD_APPLICATION_ID: '1', ACCESS_KEY: 'test-key' } };
 }
 
 async function runPoll(userMessages, aiReplies, discordHistory = [], setup = () => {}) {
@@ -88,7 +90,7 @@ async function runPoll(userMessages, aiReplies, discordHistory = [], setup = () 
     };
     try {
         const pending = [];
-        const res = await worker.fetch(new Request('https://w.test/poll'), env, { waitUntil: p => pending.push(p) });
+        const res = await worker.fetch(new Request('https://w.test/poll?key=test-key'), env, { waitUntil: p => pending.push(p) });
         await Promise.allSettled(pending);
         return { body: await res.json(), sent, aiCalls, refusalLog: JSON.parse(db.prepare(`SELECT cursor FROM botState WHERE key = 'refusal_log'`).get()?.cursor || '[]'), stored: db.prepare(`SELECT role, content FROM messages WHERE id != 'h1' ORDER BY timestamp`).all() };
     } finally { globalThis.fetch = realFetch; }
@@ -143,7 +145,7 @@ async function runClear(mode, count, { dbRows, discordMsgs }) {
         return Response.json({});
     };
     try {
-        const res = await worker.fetch(new Request('https://w.test/discord/clear', { method: 'POST', body: JSON.stringify({ channel_id: 'chan1', mode, count }) }), env, { waitUntil() {} });
+        const res = await worker.fetch(new Request('https://w.test/discord/clear', { method: 'POST', headers: { Authorization: 'Bearer test-key' }, body: JSON.stringify({ channel_id: 'chan1', mode, count }) }), env, { waitUntil() {} });
         const body = await res.json();
         return { body, deleted: deleted.sort(), left: db.prepare(`SELECT id FROM messages WHERE id != 'h1' ORDER BY timestamp`).all().map(r => r.id) };
     } finally { globalThis.fetch = realFetch; }
@@ -209,7 +211,7 @@ async function runPollWith(setup, messages) {
     };
     try {
         const pending = [];
-        await worker.fetch(new Request('https://w.test/poll'), env, { waitUntil: p => pending.push(p) });
+        await worker.fetch(new Request('https://w.test/poll?key=test-key'), env, { waitUntil: p => pending.push(p) });
         await Promise.allSettled(pending);
         return { aiCalls, sent, cursor: db.prepare(`SELECT cursor FROM botState WHERE key = 'last_msg_chan1'`).get()?.cursor, stored: db.prepare(`SELECT id FROM messages WHERE id != 'h1'`).all().length };
     } finally { globalThis.fetch = realFetch; }
@@ -354,7 +356,7 @@ test('/sync/chat?memories_only=1：只回記憶，不含對話日誌與原本來
     ins.run('a', 'char1', 'char1', '機器人整理的事實');
     ins.run('b', 'char1', 'char1', '[Discord 聊天] 原文日誌');
     ins.run('c', 'pwa', 'char1', '[Siios 聊天] 從 PWA 推上去的');
-    const res = await worker.fetch(new Request('https://w.test/sync/chat?character_id=char1&memories_only=1'), env, { waitUntil() {} });
+    const res = await worker.fetch(new Request('https://w.test/sync/chat?character_id=char1&memories_only=1', { headers: { Authorization: 'Bearer test-key' } }), env, { waitUntil() {} });
     const body = await res.json();
     assert.deepEqual(body.memories.map(m => m.id), ['a']);
     assert.deepEqual(body.messages, []);

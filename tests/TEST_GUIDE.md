@@ -77,7 +77,7 @@ npm start
 **檢查**：
 ```bash
 # 手動測試 endpoint
-curl https://ziwei-mcp-server.yaninlin.workers.dev/tools
+curl https://<你的紫微斗數 Worker 網址>/tools
 ```
 
 **可能原因**：

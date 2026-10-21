@@ -3,6 +3,7 @@
 //   拉：Worker 上機器人累積的記憶 → PWA（不含對話日誌、也不含本來就是從 PWA 推上去的）
 // 只送精簡欄位（不帶向量與感官等大欄位），並用 pushed_at 做增量，避免每次整包上傳。
 import { MemoryDB, SettingsDB, CharactersDB, ChatsDB } from '../db.js';
+import { workerFetch } from './discord-worker-client.js';
 
 const PUSH_BATCH = 40; // Worker 每筆記憶一次 D1 寫入，批次小一點才不會碰到單次請求的子請求上限
 const AUTO_INTERVAL_MS = 30 * 60 * 1000;
@@ -50,7 +51,7 @@ export async function pushMemories(workerUrl, { all = false } = {}) {
     }
     let count = 0;
     for (let i = 0; i < out.length; i += PUSH_BATCH) {
-        const res = await fetch(`${workerUrl}/sync/memories`, {
+        const res = await workerFetch(`${workerUrl}/sync/memories`, {
             method: 'POST', headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ memories: out.slice(i, i + PUSH_BATCH) })
         });
@@ -65,7 +66,7 @@ export async function pushMemories(workerUrl, { all = false } = {}) {
 export async function pullDiscordMemories(workerUrl) {
     let count = 0;
     for (const char of await discordCharacters()) {
-        const res = await fetch(`${workerUrl}/sync/chat?character_id=${encodeURIComponent(char.id)}&memories_only=1`);
+        const res = await workerFetch(`${workerUrl}/sync/chat?character_id=${encodeURIComponent(char.id)}&memories_only=1`);
         if (!res.ok) continue;
         const data = await res.json().catch(() => ({}));
         if (!data.success || !Array.isArray(data.memories) || !data.memories.length) continue;

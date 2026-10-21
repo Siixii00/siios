@@ -1,7 +1,7 @@
 // Discord Bot Worker - 支援角色綁定、記憶同步、斜線指令、插嘴 (Interject)
 // Worker 版本：PWA「Discord 整合」頁會拿它和自己期待的版本比對（js/apps/settings/discord-guide-data.js 的 EXPECTED_WORKER_VERSION），
 // 不一致就提醒使用者重新貼上最新程式碼。改了 Worker 行為時一起更新兩邊。
-const WORKER_VERSION = '2026.10.21';
+const WORKER_VERSION = '2026.10.22';
 
 // 資料表（全部 IF NOT EXISTS，可重複執行；既有資料庫不受影響）。新使用者不用手動建表。
 const SCHEMA_STATEMENTS = [
@@ -16,12 +16,17 @@ const SCHEMA_STATEMENTS = [
     `CREATE TABLE IF NOT EXISTS discord_channel_mappings (channel_id TEXT PRIMARY KEY, character_id TEXT)`,
     `CREATE TABLE IF NOT EXISTS memories (id TEXT PRIMARY KEY, chat_id TEXT, character_id TEXT, content TEXT, memory_type TEXT DEFAULT 'dynamic', importance REAL DEFAULT 0.5, timestamp TEXT, metadata TEXT)`,
     `CREATE TABLE IF NOT EXISTS channel_bindings (channel_id TEXT PRIMARY KEY, character_id TEXT, guild_id TEXT, updated_at TEXT)`,
-    `CREATE TABLE IF NOT EXISTS botState (key TEXT PRIMARY KEY, cursor TEXT)`
+    `CREATE TABLE IF NOT EXISTS botState (key TEXT PRIMARY KEY, cursor TEXT)`,
+    `CREATE TABLE IF NOT EXISTS authorizedUsers (discord_user_id TEXT PRIMARY KEY, authorized_at TEXT)`
 ];
 const schemaChecked = new WeakSet();
 async function ensureSchema(env) {
     if (!env?.DB || schemaChecked.has(env.DB)) return;
     for (const sql of SCHEMA_STATEMENTS) await env.DB.prepare(sql).run();
+    // 有設定存取密鑰時，已經綁定過的使用者視為已驗證（升級前就在用的人不會突然被擋下）；之後的新使用者要用 /auth 驗證
+    if (env.ACCESS_KEY) {
+        await env.DB.prepare(`INSERT OR IGNORE INTO authorizedUsers (discord_user_id, authorized_at) SELECT discord_user_id, ? FROM discordUserBindings WHERE discord_user_id IS NOT NULL AND discord_user_id != ''`).bind(new Date().toISOString()).run();
+    }
     schemaChecked.add(env.DB);
 }
 
@@ -31,7 +36,7 @@ export default {
         const corsHeaders = {
             'Access-Control-Allow-Origin': '*',
             'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-            'Access-Control-Allow-Headers': 'Content-Type, Authorization'
+            'Access-Control-Allow-Headers': 'Content-Type, Authorization, X-Siios-Key'
         };
 
         if (request.method === 'OPTIONS') {
@@ -43,6 +48,15 @@ export default {
         } catch (error) {
             console.error('ensureSchema error:', error);
             return Response.json({ success: false, error: '資料庫尚未綁定或無法使用：請確認 Worker 的 D1 綁定變數名稱是 DB（' + error.message + '）' }, { status: 500, headers: corsHeaders });
+        }
+
+        if (!isPublicRoute(url.pathname)) {
+            if (!env.ACCESS_KEY) {
+                return Response.json({ success: false, code: 'access_key_not_set', error: 'Worker 尚未設定存取密鑰 ACCESS_KEY（在 Cloudflare 的 Secrets 新增 ACCESS_KEY，PWA 填同一組）' }, { status: 503, headers: corsHeaders });
+            }
+            if (!safeEqual(extractAccessKey(request, url), env.ACCESS_KEY)) {
+                return Response.json({ success: false, code: 'unauthorized', error: '存取密鑰不正確或沒填（PWA「設定 → Discord 整合」的存取密鑰要和 Worker 的 ACCESS_KEY 相同）' }, { status: 401, headers: corsHeaders });
+            }
         }
 
         // 自動遷移：確保 characters 表有 nicknames 欄位
@@ -72,7 +86,12 @@ export default {
 
         // 健康檢查（PWA 測試連接用）
         if (url.pathname === '/discord/ping' && request.method === 'GET') {
-            return Response.json({ success: true, worker: 'siios-discord-bot', version: WORKER_VERSION }, { headers: corsHeaders });
+            return Response.json({ success: true, worker: 'siios-discord-bot', version: WORKER_VERSION, access_key_configured: !!env.ACCESS_KEY }, { headers: corsHeaders });
+        }
+
+        // PWA 用來確認存取密鑰正確（能走到這裡代表上面的檢查已通過）
+        if (url.pathname === '/discord/auth-check' && request.method === 'GET') {
+            return Response.json({ success: true, authorized: true }, { headers: corsHeaders });
         }
 
         // Keep-alive（cron 觸發，保持 Worker 暖機）
@@ -391,6 +410,8 @@ async function pollBoundChannels(env, ctx) {
         const newMessages = messages.filter(m => !m.author.bot).reverse();
 
         for (const msg of newMessages) {
+            // 沒通過 /auth 驗證的人說的話，機器人不理（也不存進歷史）
+            if (!(await isAuthorizedUser(env, msg.author.id))) continue;
             // 太舊的訊息（機器人停擺一陣子、或游標落後很多）不回溯，游標照樣往前推
             if (Date.now() - new Date(msg.timestamp).getTime() > POLL_MAX_AGE_MS) continue;
             // 檢查是否已處理過（避免重複）
@@ -737,6 +758,17 @@ async function registerCommands(env) {
             }]
         },
         {
+            // 所有人都能用（不然沒驗證的人無法驗證）；回應只有自己看得到
+            name: 'auth',
+            description: '輸入存取密鑰，驗證後才能使用這個機器人',
+            options: [{ type: 3, name: 'key', description: '存取密鑰（ACCESS_KEY）', required: true }]
+        },
+        {
+            name: 'auth-reset',
+            description: '清除其他人的驗證，只保留你（更換存取密鑰之後使用）',
+            default_member_permissions: '0'
+        },
+        {
             name: 'reroll',
             description: '重新生成 AI 對上一則使用者訊息的回覆'
         },
@@ -778,7 +810,7 @@ async function registerCommands(env) {
 async function verifyDiscordRequest(request, env, rawBody) {
     try {
         const publicKey = env.DISCORD_PUBLIC_KEY;
-        if (!publicKey || publicKey === 'your_discord_public_key_here') return true; // 未設定公鑰時不阻擋（向後相容）
+        if (!publicKey || publicKey === 'your_discord_public_key_here') return false; // 沒有公鑰就無法驗證簽章，一律拒絕（否則任何人都能偽造事件）
 
         const signature = request.headers.get('X-Signature-Ed25519');
         const timestamp = request.headers.get('X-Signature-Timestamp');
@@ -838,11 +870,65 @@ async function handleDiscordEvent(event, env, ctx) {
 }
 
 // ===== 斜線指令處理 =====
+// ===== Discord 端驗證：使用者要先用 /auth 輸入存取密鑰，機器人才會理他（私訊、頻道訊息、指令都一樣）=====
+async function isAuthorizedUser(env, userId) {
+    if (!env.ACCESS_KEY || !userId) return false;
+    const row = await env.DB.prepare(`SELECT 1 AS ok FROM authorizedUsers WHERE discord_user_id = ?`).bind(String(userId)).first();
+    return !!row;
+}
+
+const AUTH_MAX_FAILS = 5;
+const AUTH_LOCK_MS = 15 * 60 * 1000;
+
+async function handleAuthCommand(event, env) {
+    const userId = event.member?.user?.id || event.user?.id;
+    const reply = content => Response.json({ type: 4, data: { content, flags: 64 } });
+    if (!env.ACCESS_KEY) return reply('❌ 這個機器人還沒有設定存取密鑰（Worker 的 ACCESS_KEY），請管理員先設定');
+    if (!userId) return reply('❌ 無法辨識你的 Discord 帳號');
+    const failKey = 'authfail_' + userId;
+    let state = { n: 0, until: 0 };
+    try { state = JSON.parse((await env.DB.prepare(`SELECT cursor FROM botState WHERE key = ?`).bind(failKey).first())?.cursor || '{}') || state; } catch (_) {}
+    if (state.until && Date.now() < state.until) return reply('⏳ 輸入錯誤次數太多，請 15 分鐘後再試');
+    const given = event.data?.options?.find(o => o.name === 'key')?.value;
+    if (!safeEqual(given, env.ACCESS_KEY)) {
+        const n = (state.n || 0) + 1;
+        const next = n >= AUTH_MAX_FAILS ? { n: 0, until: Date.now() + AUTH_LOCK_MS } : { n, until: 0 };
+        await env.DB.prepare(`INSERT INTO botState (key, cursor) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET cursor = excluded.cursor`).bind(failKey, JSON.stringify(next)).run();
+        return reply(n >= AUTH_MAX_FAILS ? '⏳ 輸入錯誤次數太多，請 15 分鐘後再試' : '❌ 存取密鑰不正確');
+    }
+    await env.DB.prepare(`INSERT OR REPLACE INTO authorizedUsers (discord_user_id, authorized_at) VALUES (?, ?)`).bind(String(userId), new Date().toISOString()).run();
+    await env.DB.prepare(`DELETE FROM botState WHERE key = ?`).bind(failKey).run();
+    return reply('✅ 驗證成功，現在可以使用這個機器人了');
+}
+
+// 私訊裡還沒驗證的人傳訊息：提示一次（每小時最多一次），頻道裡完全不回應
+async function maybeSendAuthHint(message, env) {
+    if (message.guild_id) return;
+    const key = 'authhint_' + message.author.id;
+    const last = Number((await env.DB.prepare(`SELECT cursor FROM botState WHERE key = ?`).bind(key).first())?.cursor || 0);
+    if (Date.now() - last < 60 * 60 * 1000) return;
+    await env.DB.prepare(`INSERT INTO botState (key, cursor) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET cursor = excluded.cursor`).bind(key, String(Date.now())).run();
+    try {
+        await sendDiscordMessage(message.channel_id, env.ACCESS_KEY ? '🔒 請先輸入 `/auth` 並填入存取密鑰，驗證後才能和我聊天。' : '🔒 這個機器人還沒有完成設定（管理員需要先設定存取密鑰）。', null, env);
+    } catch (_) {}
+}
+
 async function handleSlashCommand(event, env, ctx) {
     try {
         const { name, options } = event.data;
         const channelId = event.channel_id;
         const guildId = event.guild_id;
+
+        if (name === 'auth') return await handleAuthCommand(event, env);
+        if (!(await isAuthorizedUser(env, event.member?.user?.id || event.user?.id))) {
+            return Response.json({ type: 4, data: { content: env.ACCESS_KEY ? '🔒 請先用 `/auth` 輸入存取密鑰' : '🔒 這個機器人還沒有設定存取密鑰（Worker 的 ACCESS_KEY）', flags: 64 } });
+        }
+
+        if (name === 'auth-reset') {
+            const me = String(event.member?.user?.id || event.user?.id);
+            await env.DB.prepare(`DELETE FROM authorizedUsers WHERE discord_user_id != ?`).bind(me).run();
+            return Response.json({ type: 4, data: { content: '✅ 已清除其他人的驗證，只保留你（換了存取密鑰之後用）', flags: 64 } });
+        }
 
         if (name === 'configure') {
             const key = options.find(o => o.name === 'key')?.value;
@@ -875,7 +961,7 @@ async function handleSlashCommand(event, env, ctx) {
             } catch (_) {}
             const keyDisplay = apiKey === '(未設定)' ? '(未設定)' : apiKey.slice(0, 4) + '****';
             const backupDisplay = backupKey === '(未設定)' ? '(未設定)' : backupKey.slice(0, 4) + '****';
-            return Response.json({ type: 4, data: { content: `📋 **目前設定**\n\`\`\`\nAPI URL:     ${apiUrl}\nAPI Key:     ${keyDisplay}\nModel:       ${model}\nInterject:   ${interjectProb}\nReaction:    ${reactionProb}\nAllowChan:   ${allowedChannels}\nBackupKey:   ${backupDisplay}\nResponse:    ${responseMode}\n\`\`\`\n最近被拒絕（最多 5 筆）：\n\`\`\`\n${refusalLines}\n\`\`\`\n使用 /configure 修改設定`, flags: 64 } });
+            return Response.json({ type: 4, data: { content: `📋 **目前設定**\n\`\`\`\nAPI URL:     ${apiUrl}\nAPI Key:     ${keyDisplay}\nModel:       ${model}\nInterject:   ${interjectProb}\nReaction:    ${reactionProb}\nAllowChan:   ${allowedChannels}\nBackupKey:   ${backupDisplay}\nResponse:    ${responseMode}\nAccessKey:   ${env.ACCESS_KEY ? '已設定' : '⚠ 未設定'}\n\`\`\`\n最近被拒絕（最多 5 筆）：\n\`\`\`\n${refusalLines}\n\`\`\`\n使用 /configure 修改設定`, flags: 64 } });
         }
 
         if (name === 'channel') {
@@ -1080,6 +1166,11 @@ async function isChannelAllowed(characterId, channelId, env) {
 // ===== 處理訊息 =====
 async function handleMessage(message, env, ctx) {
     if (message.author.bot) return Response.json({ status: 'ignored' });
+
+    if (!(await isAuthorizedUser(env, message.author.id))) {
+        await maybeSendAuthHint(message, env);
+        return Response.json({ status: 'unauthorized' });
+    }
 
     const exists = await env.DB.prepare(`SELECT id FROM messages WHERE id = ?`).bind(message.id).first();
     if (exists) return Response.json({ status: 'duplicate' });
@@ -1647,6 +1738,34 @@ function trimConversation(messages, keep) {
     let out = messages.slice(-Math.max(1, keep));
     while (out.length > 1 && out[0].role !== 'user') out = out.slice(1);
     return out;
+}
+// ───── 存取密鑰（ACCESS_KEY）─────
+// PWA → Worker 的所有介面都要帶密鑰（Authorization: Bearer、X-Siios-Key；在瀏覽器直接開的幾個 GET 網址可用 ?key=）。
+// 公開的只有：狀態頁、/discord/ping（只回版本）、/keepalive、/discord/webhook（Discord 自己用簽章驗證）。
+const PUBLIC_ROUTES = new Set(['/', '', '/discord/ping', '/keepalive', '/discord/webhook']);
+const QUERY_KEY_ROUTES = new Set(['/setup', '/discord/register-commands', '/poll', '/gateway/start']);
+
+function isPublicRoute(pathname) {
+    return PUBLIC_ROUTES.has(pathname);
+}
+
+// 常數時間比較，避免從回應時間猜出密鑰
+function safeEqual(a, b) {
+    const enc = new TextEncoder();
+    const x = enc.encode(String(a ?? ''));
+    const y = enc.encode(String(b ?? ''));
+    let diff = x.length ^ y.length;
+    for (let i = 0; i < Math.max(x.length, y.length); i++) diff |= (x[i] || 0) ^ (y[i] || 0);
+    return diff === 0;
+}
+
+function extractAccessKey(request, url) {
+    const bearer = (request.headers.get('Authorization') || '').replace(/^Bearer\s+/i, '');
+    if (bearer) return bearer;
+    const header = request.headers.get('X-Siios-Key');
+    if (header) return header;
+    if (request.method === 'GET' && QUERY_KEY_ROUTES.has(url.pathname)) return url.searchParams.get('key') || '';
+    return '';
 }
 // format-helpers>>
 
