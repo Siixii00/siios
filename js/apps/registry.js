@@ -1,4 +1,4 @@
-﻿﻿import Router from '../router.js';
+﻿﻿﻿import Router from '../router.js';
 import { isRestricted, lockedPageElement } from '../core/age-gate.js';
 
 const apps = [];
@@ -89,6 +89,7 @@ async function loadApps() {
         import('./settings/backup-settings.js'),
         import('./settings/discord-settings.js'),
         import('./settings/discord-user-binding.js'),
+        import('./settings/discord-guide.js'),
         import('./settings/activity-privacy-settings.js'),
         import('./settings/cross-device-settings.js')
     ];

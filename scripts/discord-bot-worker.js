@@ -1,4 +1,30 @@
 // Discord Bot Worker - 支援角色綁定、記憶同步、斜線指令、插嘴 (Interject)
+// Worker 版本：PWA「Discord 整合」頁會拿它和自己期待的版本比對（js/apps/settings/discord-guide-data.js 的 EXPECTED_WORKER_VERSION），
+// 不一致就提醒使用者重新貼上最新程式碼。改了 Worker 行為時一起更新兩邊。
+const WORKER_VERSION = '2026.10.21';
+
+// 資料表（全部 IF NOT EXISTS，可重複執行；既有資料庫不受影響）。新使用者不用手動建表。
+const SCHEMA_STATEMENTS = [
+    `CREATE TABLE IF NOT EXISTS messages (id TEXT PRIMARY KEY, chat_id TEXT, role TEXT, content TEXT, timestamp TEXT, metadata TEXT)`,
+    `CREATE INDEX IF NOT EXISTS idx_messages_chat ON messages (chat_id, timestamp)`,
+    `CREATE TABLE IF NOT EXISTS characters (id TEXT PRIMARY KEY, name TEXT, personality TEXT, scenario TEXT, nicknames TEXT)`,
+    `CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY, name TEXT, mask TEXT, personality TEXT DEFAULT '', speech_style TEXT DEFAULT '', taboos TEXT DEFAULT '[]')`,
+    `CREATE TABLE IF NOT EXISTS worldInfo (id TEXT PRIMARY KEY, name TEXT, content TEXT, keys TEXT, priority TEXT, enabled INTEGER DEFAULT 1, user_id TEXT, character_id TEXT)`,
+    `CREATE TABLE IF NOT EXISTS globalSettings (id TEXT PRIMARY KEY, name TEXT, content TEXT, keys TEXT, priority TEXT, enabled INTEGER DEFAULT 1)`,
+    `CREATE TABLE IF NOT EXISTS globalForbidden (id TEXT PRIMARY KEY, name TEXT, content TEXT, enabled INTEGER DEFAULT 1)`,
+    `CREATE TABLE IF NOT EXISTS discordUserBindings (discord_user_id TEXT PRIMARY KEY, user_id TEXT, character_id TEXT, user_display_name TEXT, discord_username TEXT)`,
+    `CREATE TABLE IF NOT EXISTS discord_channel_mappings (channel_id TEXT PRIMARY KEY, character_id TEXT)`,
+    `CREATE TABLE IF NOT EXISTS memories (id TEXT PRIMARY KEY, chat_id TEXT, character_id TEXT, content TEXT, memory_type TEXT DEFAULT 'dynamic', importance REAL DEFAULT 0.5, timestamp TEXT, metadata TEXT)`,
+    `CREATE TABLE IF NOT EXISTS channel_bindings (channel_id TEXT PRIMARY KEY, character_id TEXT, guild_id TEXT, updated_at TEXT)`,
+    `CREATE TABLE IF NOT EXISTS botState (key TEXT PRIMARY KEY, cursor TEXT)`
+];
+const schemaChecked = new WeakSet();
+async function ensureSchema(env) {
+    if (!env?.DB || schemaChecked.has(env.DB)) return;
+    for (const sql of SCHEMA_STATEMENTS) await env.DB.prepare(sql).run();
+    schemaChecked.add(env.DB);
+}
+
 export default {
     async fetch(request, env, ctx) {
         const url = new URL(request.url);
@@ -10,6 +36,13 @@ export default {
 
         if (request.method === 'OPTIONS') {
             return new Response(null, { headers: corsHeaders });
+        }
+
+        try {
+            await ensureSchema(env);
+        } catch (error) {
+            console.error('ensureSchema error:', error);
+            return Response.json({ success: false, error: '資料庫尚未綁定或無法使用：請確認 Worker 的 D1 綁定變數名稱是 DB（' + error.message + '）' }, { status: 500, headers: corsHeaders });
         }
 
         // 自動遷移：確保 characters 表有 nicknames 欄位
@@ -39,7 +72,7 @@ export default {
 
         // 健康檢查（PWA 測試連接用）
         if (url.pathname === '/discord/ping' && request.method === 'GET') {
-            return Response.json({ success: true, worker: 'siios-discord-bot' }, { headers: corsHeaders });
+            return Response.json({ success: true, worker: 'siios-discord-bot', version: WORKER_VERSION }, { headers: corsHeaders });
         }
 
         // Keep-alive（cron 觸發，保持 Worker 暖機）
@@ -296,6 +329,7 @@ export default {
     // ===== Cron 觸發：保持暖機 + 掃描頻道新訊息並讓 AI 決定是否插嘴 =====
     async scheduled(event, env, ctx) {
         try {
+            await ensureSchema(env);
             await pollBoundChannels(env, ctx);
 
             // 首次啟動時自動註冊斜線指令

@@ -221,3 +221,8 @@ Code review（`340bf4c~1..HEAD`）找到並修正：
 - **記憶串不起來的原因**：（1）機器人讀記憶只用 `chat_id = 角色 ID`，PWA 推上去的記憶 `chat_id` 是 Siios 的聊天室 ID，永遠讀不到；（2）機器人把每則訊息的原文日誌也存成記憶，最近 50 筆幾乎都是日誌，真正的記憶被擠掉；（3）拉回 PWA 時用 `put` 覆蓋，會把 PWA 原生記憶（向量、感官…）換成缺欄位的精簡版，還會把對話日誌和自己推上去的記憶又拉回來。
 - **修正**：機器人用 `chat_id` 或 `character_id` 比對，SQL 就排除日誌，重要性高的優先（最多 60 筆）；PWA 的 `MemoryDB.importMany` 不覆蓋本機已有的、不匯入日誌；新增 `js/core/discord-memory-sync.js`（推：只送精簡欄位、分批 40 筆、增量；拉：`/sync/chat?memories_only=1`，不含日誌與 Siios 來源）。App 啟動 8 秒後背景自動同步（每 30 分鐘最多一次，沒設 Worker 網址就略過；自動同步只處理「已啟用 Discord 的角色」）。設定頁的按鈕改為「🧠 同步記憶（雙向）」，手動會推所有有歸屬角色的記憶。
 - 沒有歸屬角色的記憶（既沒有 `character_id`、聊天室也找不到角色）不會同步。
+
+### 2026-10-21 Discord Worker 部署教學（開放給多數使用者）
+- **PWA**：Discord 整合頁新增「📘 第一次使用？Worker 部署教學」卡片，進入 `/settings/discord/guide`：10 個步驟（建立 Discord 機器人與 MESSAGE CONTENT INTENT、用 Application ID 產生邀請連結、在 Cloudflare 建 Worker 並一鍵複製／下載程式碼、建 D1 並綁定變數名 `DB`、三個變數、Cron `*/2 * * * *`、`/setup` 與 Interactions Endpoint URL、`/configure` 設定 AI、綁定角色、回 PWA 同步），每步有複製按鈕，網址會代入使用者填的 Worker URL；另有常見問題與安全提醒。內容與純函式在 `discord-guide-data.js`，畫面在 `discord-guide.js`。
+- **Worker**：新使用者不必再手動建表——`ensureSchema` 在第一次請求／排程時用 `CREATE TABLE IF NOT EXISTS` 建好全部 11 張表（既有資料庫不受影響）；`/discord/ping` 回報 `version`。PWA「測試連接」會和 `EXPECTED_WORKER_VERSION` 比對，Worker 過舊就提醒重新貼上程式碼（改 Worker 行為時，兩個版本常數要一起更新，測試會檢查一致）。
+- **已知風險（未處理）**：Worker 的 PWA 端介面（`/sync/*`、`/discord/send`、`/discord/clear`、`/discord/history`、`/gateway/start`）沒有驗證，只靠網址不被知道；教學裡已提醒不要公開網址。若要正式開放，建議加一組存取密鑰（Worker 變數 + PWA 帶標頭）。

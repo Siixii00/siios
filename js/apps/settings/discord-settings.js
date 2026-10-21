@@ -2,6 +2,7 @@ import Router from '../../router.js';
 import { createElement, createIcon, createToast, createKakaoBottomSheet } from '../../components.js';
 import { SettingsDB, CharactersDB, UsersDB, MemoryDB, WorldInfoDB, GlobalSettingsDB, GlobalForbiddenDB, MessagesDB, ChatsDB, DiscordUserBindingDB, initDB, parseWorkerTimestamp } from '../../db.js';
 import { pushMemories, pullDiscordMemories } from '../../core/discord-memory-sync.js';
+import { EXPECTED_WORKER_VERSION } from './discord-guide-data.js';
 
 async function renderDiscordSettings() {
     const container = createElement('div', 'app-container bg-ios-bg');
@@ -202,7 +203,9 @@ async function renderDiscordSettings() {
             const data = await response.json();
             
             if (data.success) {
-                createToast('連接成功！');
+                // 版本比對：Worker 是使用者自己部署的，過舊（或太舊沒有版本欄位）就提醒更新
+                if (data.version === EXPECTED_WORKER_VERSION) createToast('連接成功！Worker 版本 ' + data.version);
+                else createToast('連接成功，但 Worker 程式碼' + (data.version ? '版本 ' + data.version : '版本過舊') + '，最新是 ' + EXPECTED_WORKER_VERSION + '。請依「部署教學」步驟 3 重新貼上程式碼並 Deploy。', 'warning');
             } else {
                 createToast('連接失敗：' + (data.error || '未知錯誤'), 'error');
             }
@@ -546,6 +549,12 @@ main.appendChild(wiSyncBtn);
     };
     main.appendChild(restoreBtn);
 
+    // 部署教學
+    const guideLink = createElement('div', 'mx-4 mt-6 mb-4 rounded-xl p-4 cursor-pointer text-white', { onClick: () => Router.navigate('/settings/discord/guide') });
+    guideLink.style.background = 'linear-gradient(135deg,#5865F2,#7983F5)';
+    guideLink.innerHTML = '<div class="flex items-center justify-between"><div><div class="font-semibold text-sm">📘 第一次使用？Worker 部署教學</div><div class="text-xs opacity-90" style="margin-top:2px">10 個步驟，把 AI 角色帶到你自己的 Discord 機器人</div></div><span class="material-symbols-outlined">chevron_right</span></div>';
+    main.appendChild(guideLink);
+
     // 用戶綁定管理
     const bindingSection = createElement('div', 'mx-4 mt-6 mb-4');
     const bindingCard = createElement('div', 'bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-4 border border-blue-200 cursor-pointer', {
@@ -579,9 +588,9 @@ main.appendChild(wiSyncBtn);
         <ol class="text-xs text-gray-600 space-y-2">
             <li>1. 在 Discord Developer Portal 創建 Bot 應用</li>
             <li>2. 獲取 Bot Token 並粘貼到上方</li>
-            <li>3. 在神秘門生成 Discord Bot Worker 代碼</li>
-            <li>4. 部署 Worker 到 Cloudflare</li>
-            <li>5. 將 Worker URL 填入上方</li>
+            <li>3. 依上方「Worker 部署教學」把 Worker 部署到你自己的 Cloudflare</li>
+            <li>4. 將 Worker URL 填入上方並按「測試連接」</li>
+            <li>5. 同步角色、用戶面具與世界書</li>
             <li>6. 配置用戶身份綁定（可選）</li>
             <li>7. 在 Discord 伺服器中邀請 Bot</li>
             <li>8. 開始在頻道中與 AI 角色對話！</li>
