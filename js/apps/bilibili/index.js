@@ -4,6 +4,7 @@ import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
+import { mountCoWatchPanel } from '../../core/co-watch.js';
 
 const thumbnailColors = [
     ['#ffd5e5', '#ff8fb1'],
@@ -151,7 +152,10 @@ function openInBilibili(url) {
     }, 500);
 }
 
-const BILI_API = 'https://siios-bilibili-worker.yaninlin.workers.dev';
+// Bilibili 不需要登入也不需要 Worker：播放用官方嵌入播放器。只有想自己查影片資訊／登入的人才需要在 SettingsDB 設定
+// bilibili_worker_url（自己部署的 Worker）；沒設定就完全不連外部服務。
+let BILI_API = '';
+SettingsDB.get('bilibili_worker_url').then(v => { BILI_API = String(v || '').replace(/\/+$/, ''); }).catch(() => {});
 
 async function checkBilibiliLogin() {
     const isLoggedIn = await SettingsDB.get('bilibili_logged_in');
@@ -227,6 +231,7 @@ async function setBilibiliLoginStatus(status) {
 }
 
 async function startQRLogin() {
+    if (!BILI_API) { createToast('不需要登入，直接播放即可（登入只在你有自己的 Bilibili Worker 時才有用）'); return; }
     try {
         createToast('正在生成登入二維碼...');
         
@@ -1079,18 +1084,6 @@ async function createCharacterSelector(selectedId, onChange) {
 async function renderHome() {
     const container = createElement('div', 'bili-app');
     
-    await loadBilibiliCookieFromGitHub();
-    
-    const isLoggedIn = await checkBilibiliLogin();
-    const hasPrompted = await SettingsDB.get('bilibili_login_prompted');
-    
-    if (!isLoggedIn && !hasPrompted) {
-        setTimeout(() => {
-            showLoginPrompt();
-        }, 500);
-        await SettingsDB.set('bilibili_login_prompted', true);
-    }
-    
     if (!appState.sample[appState.currentTab] || appState.sample[appState.currentTab].length === 0) {
         const savedVideos = await SettingsDB.get(`bilibili_${appState.currentTab}_videos`);
         if (savedVideos && savedVideos.length > 0) {
@@ -1434,7 +1427,7 @@ async function playEmbed(title, url, container, characterId) {
     // 播放用的是官方嵌入播放器，只需要 bvid。影片資訊（cid、簡介）只用來抓字幕與產生角色評論，
     // 取不到（例如 Bilibili 擋下 Worker 的請求）就退回卡片上的標題，不影響播放。
     let info = { title, cid: null, desc: '' };
-    try {
+    if (BILI_API) try {
         const infoRes = await fetch(BILI_API + '/api/bilibili/video/info?bvid=' + bvid);
         const fetched = await infoRes.json();
         if (!fetched.error && fetched.cid) info = { ...info, ...fetched };
@@ -1485,164 +1478,16 @@ async function showNativePlayer(container, info, playData, characterId, bvid, ti
     
     container.appendChild(playerInfo);
     
-    if (characterId) {
-        const charCommentsSection = createElement('div', 'bili-char-comments');
-        charCommentsSection.innerHTML = '<div style="padding: 16px; text-align: center;">正在為角色準備評論...</div>';
-        container.appendChild(charCommentsSection);
-        
-        (info.cid ? fetchVideoSubtitles(bvid, info.cid) : Promise.resolve(null)).then(async subtitles => {
-            if (subtitles && subtitles.length > 0) {
-                await generateCharacterComments(characterId, title, subtitles, bvid);
-            } else {
-                await generateCharacterComments(characterId, title, info.desc || '', bvid);
-            }
-        }).catch(async (err) => {
-            console.error('獲取字幕失敗:', err);
-            await generateCharacterComments(characterId, title, info.desc || '', bvid);
-        });
-    } else {
-        const comments = createElement('div', 'bili-comments');
-        comments.appendChild(createElement('div', 'font-bold mb-3', { textContent: '熱門留言' }));
-        container.appendChild(comments);
-    }
+    // 共同觀看：Bilibili 的嵌入播放器讀不到播放時間與內容，角色靠標題、你貼的內容與你說的話來回應
+    const coWatchHost = createElement('div', '');
+    container.appendChild(coWatchHost);
+    mountCoWatchPanel(coWatchHost, {
+        platform: 'bilibili',
+        getVideo: () => ({ title: info.title || title, author: info.owner || '' , notes: info.desc || '' }),
+        getPlayerTime: () => null,
+        initialCharacterId: characterId || ''
+    });
 }
-
-async function fetchVideoSubtitles(bvid, cid) {
-    try {
-        const response = await fetch(`${BILI_API}/api/bilibili/video/subtitle?bvid=${bvid}&cid=${cid}`);
-        const data = await response.json();
-        
-        if (data.subtitles && data.subtitles.length > 0) {
-            const subtitleUrl = data.subtitles[0].subtitle_url;
-            const subRes = await fetch(subtitleUrl);
-            const subData = await subRes.json();
-            
-            return subData.body || [];
-        }
-    } catch (e) {
-        console.error('Failed to fetch subtitles:', e);
-    }
-    return null;
-}
-
-async function generateCharacterComments(characterId, videoTitle, content, bvid) {
-    const settings = await SettingsDB.getAll();
-    
-    if (!settings.api_url || !settings.api_key) {
-        console.log('沒有配置 API，無法生成評論');
-        return;
-    }
-    
-    const context = await buildAppContext({ characterId });
-    const character = await CharactersDB.getById(characterId);
-    
-    if (!character) {
-        console.log('找不到角色');
-        return;
-    }
-    
-    const systemPrompt = context.systemPrompt + `
-
-你是一個正在和用戶一起觀看影片的角色。你剛剛剛「閱讀」了這個影片的字幕或描述內容。
-
-請根據以下資訊，發表你對這個影片的看法和評論：
-1. 你的角色性格和設定
-2. 你的喜好和價值觀
-3. 影片的內容
-4. 你覺得用戶可能感興趣的部分
-
-請生成 3-5 條評論，每條評論應該：
-- 符合你的角色性格
-- 有個人觀點和情感
-- 可能提問或分享感受
-- 像真實的觀影體驗
-
-返回 JSON 格式：
-[{"time":"時間點","comment":"評論內容","emotion":"情感"}]
-
-不要使用模板，要根據你的角色設定和影片內容生成獨特的評論。`;
-
-    const userPrompt = `影片標題：${videoTitle}
-
-影片內容摘要：
-${typeof content === 'string' ? content : JSON.stringify(content).substring(0, 2000)}
-
-請根據你的角色設定，發表對這個影片的看法。`;
-
-    try {
-        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${settings.api_key}`
-            },
-            body: JSON.stringify({
-                model: settings.model || 'gpt-3.5-turbo',
-                messages: [
-                    { role: 'system', content: systemPrompt },
-                    { role: 'user', content: userPrompt }
-                ],
-                temperature: 0.9,
-                max_tokens: 1000
-            })
-        });
-
-        if (!response.ok) return;
-
-        const data = await response.json();
-        const responseContent = data.choices?.[0]?.message?.content;
-        
-        if (!responseContent) return;
-        
-        const jsonMatch = responseContent.match(/\[[\s\S]*\]/);
-        if (!jsonMatch) return;
-        
-        const comments = JSON.parse(jsonMatch[0]);
-        
-        await saveInteractionMemory({
-            characterId: characterId,
-            sourceApp: 'bilibili',
-            sourceType: 'interaction',
-            sourceSubtype: 'viewing',
-            content: `觀看了影片「${videoTitle}」並發表了 ${comments.length} 條評論`,
-            metaContent: `在 Bilibili 與用戶一起觀看了「${videoTitle}」`,
-            importance: 0.7
-        });
-        
-        const charCommentsSection = document.querySelector('.bili-char-comments');
-        if (charCommentsSection) {
-            charCommentsSection.innerHTML = '';
-            
-            const header = createElement('div', 'font-bold mb-3');
-            header.innerHTML = `<span class="material-icons" style="vertical-align: middle;">people</span> ${character.name} 的觀影評論`;
-            charCommentsSection.appendChild(header);
-            
-            const commentsList = createElement('div', 'bili-comments-list');
-            comments.forEach(c => {
-                const comment = createElement('div', 'bili-comment');
-                comment.style.borderLeft = '3px solid #fb7299';
-                comment.style.paddingLeft = '12px';
-                comment.style.marginBottom = '12px';
-                
-                if (c.time) {
-                    comment.appendChild(createElement('div', 'text-xs text-ios-muted', { textContent: c.time }));
-                }
-                comment.appendChild(createElement('div', 'text-sm', { textContent: c.comment }));
-                if (c.emotion) {
-                    comment.appendChild(createElement('div', 'text-xs text-ios-muted mt-1', { textContent: `[${c.emotion}]` }));
-                }
-                
-                commentsList.appendChild(comment);
-            });
-            
-            charCommentsSection.appendChild(commentsList);
-        }
-        
-    } catch (e) {
-        console.error('生成評論失敗:', e);
-    }
-}
-
 
 async function renderMessages() {
     const container = createElement('div', 'bili-app');

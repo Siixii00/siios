@@ -5,6 +5,7 @@ import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { synthesize, getSynthConfig } from '../../core/synth-client.js';
+import { mountCoWatchPanel, parseVideoUrl, fetchYouTubeMeta, trackYouTubePlayer } from '../../core/co-watch.js';
 
 const thumbnailColors = [
     ['#ff6b6b', '#feca57'],
@@ -36,8 +37,9 @@ let charWatchHistory = [];
 let currentChip = 'all';
 let pendingVideoData = null;
 let currentWatchingChar = null;
-let charCommentTimer = null;
-let charCommentInterval = 8000;
+let coWatchPanel = null;
+let coWatchMeta = {};
+let ytTracker = null;
 let adTimer = null;
 let adCountdown = 0;
 let adShowing = false;
@@ -300,39 +302,6 @@ async function generateCharReaction(container, char, video) {
     return fallbacks[Math.floor(Math.random() * fallbacks.length)];
 }
 
-async function generateCharLiveComment(container, char, video) {
-    if (!char || !video) {
-        return '這個影片不錯呢。';
-    }
-    
-    const personality = (char?.personality || '').trim();
-    const background = (char?.background || '').trim();
-    
-    if (!personality && !background) {
-        return '這個影片不錯呢。';
-    }
-    
-    const videoKeywords = ['畫面', '內容', '音樂', '劇情', '節奏', '風格', '氛圍', '主題', '解說', '呈現'];
-    const randomKeyword = videoKeywords[Math.floor(Math.random() * videoKeywords.length)];
-    
-    const prompt = `你是角色「${char.name}」，個性：${personality}
-背景：${background}
-
-你正在觀看影片「${video.title}」。
-針對影片的「${randomKeyword}」，用一句話（10-20字）發表即時評論，要符合你的個性。
-只輸出評論文字。`;
-
-    const comment = await generateLLMContent(prompt, 2, char.id);
-    
-    if (comment) {
-        return comment;
-    }
-    
-    const reactions = ['不錯', '有趣', '特別', '精彩', '吸引人', '有意思', '很棒'];
-    const randomReaction = reactions[Math.floor(Math.random() * reactions.length)];
-    return `這${randomKeyword}${randomReaction}呢。`;
-}
-
 async function generateVideoTitle(char, tag) {
     if (!char) {
         return `AI 生成影片 #${Date.now() % 10000}`;
@@ -448,26 +417,6 @@ POPUP: JSON內容`;
     };
 }
 
-function calculateCommentInterval(char) {
-    const personality = (char?.personality || '').toLowerCase();
-    let baseInterval = 12000;
-    
-    if (personality.includes('活潑') || personality.includes('調皮') || personality.includes('開朗') || personality.includes('熱情')) {
-        baseInterval = 8000;
-    } else if (personality.includes('高冷') || personality.includes('冷淡') || personality.includes('酷') || personality.includes('冷靜')) {
-        baseInterval = 20000;
-    } else if (personality.includes('病嬌') || personality.includes('佔有') || personality.includes('嫉妒') || personality.includes('腹黑')) {
-        baseInterval = 10000;
-    } else if (personality.includes('溫柔') || personality.includes('體貼') || personality.includes('善良')) {
-        baseInterval = 12000;
-    } else if (personality.includes('激動') || personality.includes('熱血')) {
-        baseInterval = 7000;
-    }
-    
-    const variance = baseInterval * 0.25;
-    return baseInterval + (Math.random() * variance * 2 - variance);
-}
-
 function showCharCommentBubble(container, text) {
     const bubble = container.querySelector('.yt-char-comment-bubble');
     const textEl = container.querySelector('.yt-char-comment-text');
@@ -500,22 +449,7 @@ function startCharCompanion(container, char, video) {
     if (nameEl) nameEl.textContent = char.name || '角色';
     
     companion.removeAttribute('hidden');
-    
-    if (charCommentTimer) clearInterval(charCommentTimer);
-    
-    charCommentInterval = calculateCommentInterval(char);
-    
-    setTimeout(async () => {
-        const initialComment = await generateCharLiveComment(container, char, video);
-        showCharCommentBubble(container, initialComment);
-    }, 2500);
-    
-    charCommentTimer = setInterval(async () => {
-        if (!pendingVideoData) return;
-        const comment = await generateCharLiveComment(container, char, pendingVideoData);
-        showCharCommentBubble(container, comment);
-        charCommentInterval = calculateCommentInterval(char);
-    }, charCommentInterval);
+    coWatchPanel?.setCharacter(char.id);
 }
 
 function stopCharCompanion(container) {
@@ -525,10 +459,6 @@ function stopCharCompanion(container) {
     companion?.setAttribute('hidden', '');
     bubble?.setAttribute('hidden', '');
     
-    if (charCommentTimer) {
-        clearInterval(charCommentTimer);
-        charCommentTimer = null;
-    }
 }
 
 async function showAd(container, char = null) {
@@ -728,7 +658,33 @@ async function openPlayerPage(container, video) {
     if (playerDesc) playerDesc.textContent = video.title;
     
     if (playerFrame && video.url) {
-        playerFrame.src = video.url;
+        const parsed = parseVideoUrl(video.url);
+        playerFrame.src = parsed?.platform === 'youtube' ? parsed.embedUrl : video.url;
+        ytTracker?.destroy();
+        ytTracker = parsed?.platform === 'youtube' ? trackYouTubePlayer(playerFrame) : null;
+        if (parsed?.platform === 'youtube') {
+            fetchYouTubeMeta(parsed.watchUrl).then(meta => { if (pendingVideoData === video) coWatchMeta = meta; });
+        }
+    }
+    coWatchMeta = {};
+    coWatchPanel?.destroy();
+    coWatchPanel = null;
+    const coWatchHost = container.querySelector('.yt-cowatch-host');
+    if (coWatchHost) {
+        coWatchHost.textContent = '';
+        coWatchPanel = await mountCoWatchPanel(coWatchHost, {
+            platform: 'youtube',
+            getVideo: () => ({ title: coWatchMeta.title || video.title, author: coWatchMeta.author || video.channel }),
+            getPlayerTime: () => ytTracker?.getTime() ?? null,
+            onCharacterChange: id => {
+                const char = characters.find(c => c.id === id);
+                currentWatchingChar = id || null;
+                const sel = container.querySelector('#yt-char-watch-select');
+                if (sel) sel.value = id || '';
+                updateCharWatchUI(container, char || null, video);
+            },
+            onComment: ({ text, byUser }) => { if (!byUser) showCharCommentBubble(container, text); }
+        });
     }
     
     const likeBtn = container.querySelector('[data-action="like-video"]');
@@ -744,7 +700,7 @@ async function openPlayerPage(container, video) {
     
     stopCharCompanion(container);
     currentWatchingChar = null;
-    
+
     if (Math.random() < 0.8) {
         const chars = await loadCharacters();
         const char = chars.length > 0 ? chars[0] : null;
@@ -757,6 +713,10 @@ function closePlayerPage(container) {
     container.querySelector('.yt-main')?.removeAttribute('hidden');
     const playerFrame = container.querySelector('#yt-player-video iframe');
     if (playerFrame) playerFrame.src = '';
+    coWatchPanel?.destroy();
+    coWatchPanel = null;
+    ytTracker?.destroy();
+    ytTracker = null;
     stopCharCompanion(container);
     currentWatchingChar = null;
     
@@ -1323,6 +1283,7 @@ async function renderYouTube(params) {
                     </button>
                 </div>
             </div>
+            <div class="yt-cowatch-host"></div>
             <div class="yt-char-watch-section">
                 <div class="yt-char-watch-header">
                     <div class="yt-char-watch-avatar"></div>

@@ -253,4 +253,15 @@ Code review（`340bf4c~1..HEAD`）找到並修正：
 ### 2026-10-21 Discord Worker：每個人用自己的
 - 確認 PWA 與 Worker 程式碼裡沒有寫死任何 workers.dev 網址或維護者的資源（`tests/unit/discord-self-hosted.test.mjs` 持續檢查）；Worker 網址欄位預設是空的，各人填自己的。
 - 版控裡的 `discord-worker/wrangler.toml` 原本帶著維護者的 D1 資料庫 ID，改成佔位文字的範本（並附上排程）；維護者自己的設定放在被 `.gitignore` 忽略的 `wrangler.local.toml`，部署用 `npx wrangler deploy --config wrangler.local.toml --keep-vars`。
-- 仍預設指到維護者 Worker 的兩處（不是 Discord）：紫微斗數（可在 MCP 設定頁改成自己的）、Bilibili Worker（`js/apps/bilibili/index.js` 的 `BILI_API`，尚不能設定）。
+- （已處理）紫微斗數與 Bilibili 不再預設指向維護者的 Worker，見下一節。
+
+### 2026-10-21 Discord 存取密鑰、共同觀看、紫微斗數自建
+- **Discord Worker 存取密鑰（`ACCESS_KEY`）**：PWA 呼叫的所有介面都要帶密鑰（`Authorization: Bearer`／`X-Siios-Key`；瀏覽器直接開的 `/setup`、`/poll` 等 GET 可用 `?key=`；`/backup` 的 `?key` 仍是 BACKUP_KEY）。公開的只有狀態頁、`/discord/ping`（回版本與 `access_key_configured`）、`/keepalive`、`/discord/webhook`（Discord 簽章）。沒設 `ACCESS_KEY` 回 503、密鑰錯誤回 401、常數時間比較。`DISCORD_PUBLIC_KEY` 沒設時不再放行（之前會讓任何人偽造 Discord 事件）。
+- **Discord 端驗證**：新表 `authorizedUsers`；`/auth key:<密鑰>` 通過才能用機器人（指令、私訊、頻道訊息、輪詢都一樣，沒通過的人不回、不存歷史，私訊每小時提示一次）；連錯 5 次鎖 15 分鐘；`/auth-reset` 只留自己。升級時已綁定過的使用者自動視為已驗證。
+- **PWA**：`js/core/discord-worker-client.js`（`workerFetch` 自動帶密鑰、`testWorkerAccess`、`generateAccessKey`）；設定頁新增「存取密鑰」欄，「測試連接」會依序檢查連線、密鑰、版本；所有同步呼叫（角色／用戶／世界書／備份／對話／還原／綁定／記憶）改用 `workerFetch`。教學步驟 5 有「產生密鑰」鈕（並存進 PWA）、步驟 7 `/setup?key=`、步驟 8 `/auth`，另加常見問題與安全提醒。`WORKER_VERSION`／`EXPECTED_WORKER_VERSION` 為 2026.10.22。
+- **共同觀看**：`js/core/co-watch.js`（面板、計時、API 呼叫、結束時存記憶）與 `co-watch-prompt.js`（網址解析、提示詞，純函式）。YouTube／Bilibili 共用；頻率可選（只在我說話時／30 秒／1／2／5 分鐘）；YouTube 用 `enablejsapi=1` 讀播放時間；內容來源是標題／頻道（YouTube oEmbed）、使用者貼的字幕或簡介、對話。角色看不到畫面與聲音，提示詞要求不編造。舊的「隨機關鍵字」即時留言與 Bilibili 一次性評論移除。
+- **Bilibili**：改為只嵌入播放器，預設不連任何 Worker（`BILI_API` 預設空，要在設定鍵 `bilibili_worker_url` 填自己的才會用）；首頁不再跳登入提示，也不再從維護者的 GitHub 倉庫載入 Cookie。
+- **紫微斗數**：加入神秘門（工具 `fortune_ziwei`，排盤引擎由 `scripts/build-ziwei-template.mjs` 產生 `ziwei-engine-template.js`，產生的 Worker 帶 `src/ziwei-engine.js` 與 `lunar-javascript` 依賴）；PWA 預設端點改為空，設定頁可填網址與 `MCP_API_KEY`；沒設定時給明確提示。維護者的 `ziwei-mcp-server` 實測可用，但 PWA 不再預設連它。
+- **新增測試**：`discord-auth.test.mjs`（密鑰閘門、/auth、鎖定、升級、webhook 簽章）、`co-watch.test.mjs`、`ziwei-market.test.mjs`、`imports-resolve.test.mjs`（所有相對 import 都存在——抓到 `mcp-intelligence/index.js` 的 db 路徑錯誤並修正）。
+- **未驗證**：真實 YouTube／Bilibili 嵌入播放與 postMessage 時間（瀏覽器窗格無外網播放驗證，邏輯用單元測試與假 API 驗過）；Workers AI 嵌入額度用完，bge-m3 實際呼叫仍未驗。
+- **發現但未動**：`js/activity-router.js` 引用不存在的 `api/` 資料夾且無人使用（死碼）；Bilibili 的 `syncBilibiliCookieToGitHub` 仍寫死 `Siixii00/siios` 倉庫（登入入口已停用，建議整段刪掉）。

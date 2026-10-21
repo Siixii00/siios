@@ -112,10 +112,10 @@ npx wrangler login
 | 服務 | 資料夾 | 用途 | 需要 |
 |---|---|---|---|
 | MCP 工具 Worker | `mcp-worker/` | 天氣、食譜、動漫、遊戲價格、翻譯、維基 | `MCP_API_KEY` |
-| 紫微斗數 MCP | `ziwei-mcp-server/` | 紫微斗數排盤 | 無（可直接用公用服務） |
+| 紫微斗數 MCP | 神秘門產生，或 `ziwei-mcp-server/` | 紫微斗數排盤 | 自己部署，沒有公用服務；`MCP_API_KEY`（神秘門版） |
 | 合成服務 | `synth-worker/` | 語音、圖片、語音辨識、**免費嵌入模型**（影片／音樂需付費服務） | `SYNTH_TOKEN` |
-| Discord 機器人 | `discord-worker/` | 讓角色在 Discord 上說話 | Discord Bot Token、D1 資料庫 |
-| Bilibili Worker（選用） | `bilibili-worker/` | 掃碼登入、影片資訊（Bilibili 會擋 Cloudflare，只是輔助；播放不需要它） | KV |
+| Discord 機器人 | `discord-worker/` | 讓角色在 Discord 上說話 | Discord Bot Token、D1 資料庫、`ACCESS_KEY`（存取密鑰） |
+| Bilibili Worker（選用，多半用不到） | `bilibili-worker/` | 掃碼登入、影片資訊（Bilibili 會擋 Cloudflare；播放不需要它，PWA 預設完全不連它） | KV |
 
 ### MCP 工具 Worker
 MCP（Model Context Protocol）讓角色在聊天時呼叫外部工具（查天氣、翻譯…）。
@@ -131,14 +131,13 @@ npm run deploy
 沒設定 `MCP_API_KEY` 時 Worker 會拒絕所有請求（避免別人知道網址就能用）。想要更多／自訂的工具：**神秘門**（MCP 市集）可以勾選工具並產生 Worker 程式碼，部署方式相同。
 
 ### 紫微斗數 MCP
-PWA 預設使用公用的紫微斗數服務（只做排盤計算，不儲存資料）。想自己部署：
+角色的紫微斗數命盤需要**你自己部署的服務**（沒有公用服務，也不會用到別人的）。最簡單的做法是用**神秘門**：
 
-```bash
-cd ziwei-mcp-server
-npm install
-npm run deploy                 # 得到 https://ziwei-mcp-server.<子網域>.workers.dev
-```
-到 PWA：**設定 → MCP 工具整合 → 紫微斗數服務網址** 填入你的網址。（排盤引擎以 iztro 交叉驗證，`npm test` 可執行測試。）
+1. 開啟 **神秘門**（MCP 市集）→ 勾選「紫微斗數排盤」（可再勾其他工具）→ 生成程式碼。
+2. 照畫面說明建立 `package.json`、貼上程式碼（會帶一個 `src/ziwei-engine.js` 排盤引擎檔）、`npm install`、`npx wrangler secret put MCP_API_KEY`、`npm run deploy`。
+3. 到 PWA：**設定 → MCP 工具整合 → 紫微斗數服務**，填 Worker 網址與 `MCP_API_KEY`。
+
+沒設定時，角色頁會提示尚未設定，不會連到任何預設網址。也可以改用倉庫裡的 `ziwei-mcp-server/`（`npm run deploy`；排盤引擎以 iztro 交叉驗證，`npm test` 可執行測試）。
 
 ### 合成服務 (synth-worker)
 語音合成（TTS）、圖片生成、語音辨識，以及**OpenAI 相容的 `/v1/embeddings`（免費嵌入模型，預設 `bge-m3`）**。
@@ -171,20 +170,30 @@ npx wrangler secret put DISCORD_BOT_TOKEN
 npx wrangler secret put DISCORD_APPLICATION_ID
 npx wrangler deploy --keep-vars
 ```
+```bash
+npx wrangler secret put ACCESS_KEY            # 存取密鑰：自己產生一組長亂數（PWA 教學頁有產生鈕）
+```
 Cloudflare 後台 → Worker → Settings → Variables 新增文字變數 `DISCORD_PUBLIC_KEY`。然後：
-1. 開啟 `https://<你的worker>/setup` 註冊斜線指令。
+1. 開啟 `https://<你的worker>/setup?key=<你的ACCESS_KEY>` 註冊斜線指令。
 2. Discord Developer Portal → **Interactions Endpoint URL** 填 `https://<你的worker>/discord/webhook`；Bot 頁開啟 **MESSAGE CONTENT INTENT**。
 3. 在 Discord 用 `/configure` 設定 `API URL`、`API Key`、`Model`（也可設定回應模式 `Response Mode`）。
 4. 把頻道綁定到角色：PWA 角色設定啟用 Discord 並填頻道 ID，再到 **設定 → Discord 整合** 按「同步角色資料到 Worker」；或在 Discord 用 `/channel bind`。
 
+**存取密鑰（雙邊驗證）**：PWA 的「設定 → Discord 整合 → 存取密鑰」要填和 Worker 的 `ACCESS_KEY` 一樣的值，否則 Worker 對所有同步介面回 401（沒設 `ACCESS_KEY` 則回 503）；Discord 端的人要先 `/auth key:<密鑰>`，機器人才會理他（連錯 5 次鎖 15 分鐘；`/auth-reset` 可清掉其他人的驗證）。升級前就綁定過的使用者會自動視為已驗證。
+
 資料表會在第一次請求時**自動建立**。更新 Worker 時重新貼上／部署最新的 `scripts/discord-bot-worker.js`，「測試連接」會提醒你版本是否過舊。
 
-常用指令（只有伺服器管理員看得到）：`/configure`、`/config`（含最近被模型拒絕的紀錄）、`/channel`、`/reroll`、`/clear`（只清對話／全部清除／只刪罐頭與錯誤訊息／只刪最近幾則回覆）、`/backup`。
+常用指令（`/auth` 所有人都能用；其餘只有伺服器管理員看得到）：`/auth`、`/auth-reset`、`/configure`、`/config`（含最近被模型拒絕的紀錄）、`/channel`、`/reroll`、`/clear`（只清對話／全部清除／只刪罐頭與錯誤訊息／只刪最近幾則回覆）、`/backup`。
 
 **回應模式**（`/configure key:Response Mode`）：`discord`（預設，輕鬆聊天、短句）、`full`（完整描寫）、`dialogue_single`、`dialogue_multi`、`custom`（用 `Custom Response Prompt` 自訂）。
 
 ### Bilibili（選用）
-影片用官方嵌入播放器播放，**不需要**登入或 Worker。Worker 只用在選用的影片資訊與 QR 登入；Bilibili 對 Cloudflare 的 IP 一律回 412，所以這部分效果有限。推薦／熱門清單來自 GitHub Actions 產生的 `data/bilibili_*.json`。部署（選用）見 `bilibili-worker/README.md`。
+影片用官方嵌入播放器播放，**不需要**登入，也**預設不連任何 Worker**。只有你自己部署了 Bilibili Worker 並在設定裡填入網址（設定鍵 `bilibili_worker_url`）才會用到影片資訊與 QR 登入；Bilibili 對 Cloudflare 的 IP 一律回 412，所以效果有限。推薦／熱門清單來自 GitHub Actions 產生的 `data/bilibili_*.json`。部署（選用）見 `bilibili-worker/README.md`。
+
+### 共同觀看（YouTube／Bilibili）
+播放頁下方的「👀 一起看」：選一個角色、選留言頻率（只在我說話時／30 秒／1 分鐘／2 分鐘／5 分鐘），按「開始一起看」。角色會依自己的個性（和設定的記憶）用你設定的 AI 即時說話，你也可以直接對他說話；結束時會存一則「一起看了什麼」的記憶。
+
+角色**看不到畫面也聽不到聲音**（嵌入播放器是跨網域的，網頁讀不到）。他的資訊來源是：標題與頻道（YouTube 會自動抓）、你貼在「影片內容」欄的字幕／簡介／重點、播放時間（YouTube 讀得到；Bilibili 只知道一起看了多久）、以及你說的話；提示詞要求他不要編造沒看到的劇情。
 
 ---
 
@@ -226,7 +235,7 @@ Cloudflare 後台 → Worker → Settings → Variables 新增文字變數 `DISC
 
 - 聊天、記憶、設定都存在你的瀏覽器裡；只有你設定的 AI 服務、Worker 與（選用的）GitHub／Google 會收到相關資料。
 - 各 Worker 的金鑰（`MCP_API_KEY`、`SYNTH_TOKEN`、Discord Token）存在 Cloudflare 的 Secrets，不要放進程式碼或貼到公開地方。
-- **請不要公開 Discord Worker 的網址**：PWA 與 Worker 之間的同步介面靠網址不被知道，沒有額外驗證。
+- Discord Worker 有**存取密鑰**（`ACCESS_KEY`）：PWA 要帶密鑰、Discord 使用者要先 `/auth`。密鑰請用長亂數，不要公開；懷疑外洩就換掉 `ACCESS_KEY`、重新部署並在 Discord 執行 `/auth-reset`。
 - 年齡確認只存在本機；未滿 18 歲時，成人內容會鎖起來。
 
 ---

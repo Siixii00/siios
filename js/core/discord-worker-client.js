@@ -1,5 +1,5 @@
 // 呼叫自己的 Discord Worker：自動帶上存取密鑰（設定 → Discord 整合 → 存取密鑰，要和 Worker 的 ACCESS_KEY 相同）
-import { SettingsDB } from './db.js';
+import { SettingsDB } from '../db.js';
 
 export async function workerFetch(url, init = {}) {
     const key = String((await SettingsDB.get('discord_worker_key')) || '').trim();
