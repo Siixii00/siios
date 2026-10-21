@@ -1,4 +1,4 @@
-﻿import Router from '../../router.js';
+﻿﻿import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBubble, createToast, createKakaoBottomSheet, createKakaoSideMenu, createGroupTypingIndicator } from '../../components.js';
 import { ChatsDB, MessagesDB, SettingsDB, MemoryDB, CharactersDB, UsersDB } from '../../db.js';
 import APIClient, { describeMessageForAI } from '../../api.js';
@@ -11,6 +11,7 @@ import { getBalance, charge, credit, formatMoney, WalletError } from '../../core
 import { GIFTS, getInventoryCounts, consumeGift, addGift } from '../../core/gifts.js';
 import { openIconPicker, openSharePrompt, openPlaceSearch } from './chat-extras.js';
 import { getThought, getInnerVoice, generateSummary, openResultSheet, openDailyLogSheet } from './chat-ai-tools.js';
+import { stripReasoning } from '../../core/reasoning-filter.js';
 
 let currentChat = null;
 let messages = [];
@@ -496,11 +497,19 @@ async function renderChat(params) {
     async function exportChatToHTML() {
         const msgs = await MessagesDB.getByChatId(chatId);
         const char = currentChat;
+        // 訊息內容與角色名稱都要跳脫：內容裡的 <、& 會破壞網頁（例如「<3」、被貼進來的標籤）
+        const esc = t => String(t ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        // 圖片直接嵌入；貼圖、位置、語音等非文字訊息用和 AI 看到的相同的文字描述；回覆裡的思考過程不匯出
+        const bodyOf = m => {
+            if (m.type === 'image' && /^data:image\//.test(m.meta?.src || '')) return `<img src="${esc(m.meta.src)}" style="max-width:100%;border-radius:8px" alt="${esc(m.content || '圖片')}">`;
+            const text = describeMessageForAI(m);
+            return esc(m.role === 'assistant' ? (stripReasoning(text) || text) : text).replace(/\n/g, '<br>');
+        };
         const html = `<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Chat with ${char.character_name}</title>
+    <title>Chat with ${esc(char.character_name)}</title>
     <style>
         body { font-family: -apple-system, BlinkMacSystemFont, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background: #f5f5f5; }
         .msg { padding: 12px; margin: 8px 0; border-radius: 16px; max-width: 80%; }
@@ -513,10 +522,10 @@ async function renderChat(params) {
 </head>
 <body>
     <div class="header">
-        <img class="avatar" src="${char.character_avatar || ''}" alt="${char.character_name}">
-        <h1>${char.character_name}</h1>
+        <img class="avatar" src="${esc(char.character_avatar || '')}" alt="${esc(char.character_name)}">
+        <h1>${esc(char.character_name)}</h1>
     </div>
-    ${msgs.map(m => `<div class="msg ${m.role}">${m.content}<div class="time">${new Date(m.timestamp).toLocaleString()}</div></div>`).join('')}
+    ${msgs.map(m => `<div class="msg ${m.role === 'user' ? 'user' : 'ai'}">${bodyOf(m)}<div class="time">${new Date(m.timestamp).toLocaleString()}</div></div>`).join('')}
 </body>
 </html>`;
         const blob = new Blob([html], { type: 'text/html' });

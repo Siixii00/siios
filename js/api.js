@@ -219,10 +219,16 @@ const APIClient = {
         }
         
         // 模型支援視覺時，把最近 3 張圖片真的送給模型；其餘退回文字標記
+        // 最後一則使用者文字訊息已經存在資料庫裡（傳送時就存了），下面會再把它（附上回應格式提醒）接在最後，
+        // 所以這裡先從歷史拿掉，避免同一句話在提示詞裡出現兩次
+        const lastStored = messages[messages.length - 1];
+        const historyMessages = (lastStored && lastStored.role === 'user' && (!lastStored.type || lastStored.type === 'text') && lastStored.content === userMessage)
+            ? messages.slice(0, -1)
+            : messages;
         const visionIds = new Set(settings.vision_enabled
-            ? messages.filter(m => m.type === 'image' && m.meta?.src).slice(-3).map(m => m.id)
+            ? historyMessages.filter(m => m.type === 'image' && m.meta?.src).slice(-3).map(m => m.id)
             : []);
-        const conversationMessages = messages.map(m => ({
+        const conversationMessages = historyMessages.map(m => ({
             role: m.role,
             content: visionIds.has(m.id)
                 ? [

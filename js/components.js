@@ -1,4 +1,5 @@
 ﻿import Router from './router.js';
+import { stripReasoning } from './core/reasoning-filter.js';
 
 function createElement(tag, className, attrs = {}) {
     const el = document.createElement(tag);
@@ -393,7 +394,9 @@ function createKakaoBubble(role, content, avatar, name, characterId = null, type
     if (characterId) {
         row.dataset.characterId = characterId;
     }
-    const body = createBubbleBody(content, type, meta);
+    // 以前存下來的 AI 回覆可能還帶著思考過程（<thinking>、ECoT 註解），顯示時去掉；資料庫裡的原文不動
+    const isAiText = (role === 'ai' || role === 'assistant') && (!type || type === 'text');
+    const body = createBubbleBody(isAiText ? (stripReasoning(content) || content) : content, type, meta);
 
     if (role === 'ai' || role === 'assistant') {
         if (avatar) {
