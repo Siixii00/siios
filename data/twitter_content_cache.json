@@ -1,147 +1,189 @@
 {
   "metadata": {
-    "last_updated": "2026-10-21T13:31:53.757728",
-    "total_items": 48
+    "last_updated": "2026-10-21T18:26:56.086103",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "Dutch National Cyber Security Center is Offline because it uses PHP",
-        "url": "https://www.ncsc.nl/actueel",
+        "title": "PHP 8.2.35",
+        "url": "https://github.com/php/php-src/releases/tag/php-8.2.35",
         "source": "Hacker News",
-        "score": 144
+        "score": 814
+      },
+      {
+        "title": "Today's PHP security release, and how we're strengthening security",
+        "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
+        "source": "Hacker News",
+        "score": 272
+      },
+      {
+        "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+        "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+        "source": "Hacker News",
+        "score": 218
       },
       {
         "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
         "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
         "source": "Hacker News",
-        "score": 389
+        "score": 676
       },
       {
-        "title": "Qwen3-Coder writes less secure code when told it's for a US persona",
-        "url": "https://www.hirundo.io/blog/qwen3-coder-vulnerabilities",
+        "title": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
+        "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
         "source": "Hacker News",
-        "score": 68
+        "score": 252
       },
       {
-        "title": "Most advice is right for the person giving it",
-        "url": "https://coached.com/essays/most-advice-is-right-for-the-person-giving-it/",
+        "title": "Patch the Planet: global response coordination as agents uncover vulnerabilities",
+        "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
         "source": "Hacker News",
-        "score": 10
+        "score": 168
       },
       {
-        "title": "LayerFS: The filesystem for AI coding agents",
-        "url": "https://layerfs.ai/",
+        "title": "Tiny possum and glider thought extinct for 6000 years found in remote West Papua",
+        "url": "https://www.bbc.com/news/articles/cp814l80pw2o",
         "source": "Hacker News",
-        "score": 11
+        "score": 65
       },
       {
-        "title": "Whatever Happened to Fire Escapes",
-        "url": "https://practical.engineering/blog/2026/10/20/whatever-happened-to-fire-escapes",
+        "title": "EA is shutting down BioWare",
+        "url": "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware",
         "source": "Hacker News",
-        "score": 78
+        "score": 87
       },
       {
-        "title": "The Future of CSS",
-        "url": "https://www.joshwcomeau.com/css/interop-2027/",
+        "title": "OpenAI models are coming to Google Cloud",
+        "url": "https://openai.com/index/openai-models-google-cloud/",
         "source": "Hacker News",
-        "score": 464
+        "score": 103
       },
       {
-        "title": "Upcoming critical PHP security release (CVE-2026-109618 / -109619)",
-        "url": "https://news-web.php.net/php.announce/509",
+        "title": "Using thousands of AI agents to uncover new leads in biological data",
+        "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
         "source": "Hacker News",
-        "score": 1282
+        "score": 86
       },
       {
-        "title": "9 Mothers (YC P26) Is Hiring in Austin, TX",
-        "url": "https://9mothers.com/careers",
+        "title": "New plastic pollution discovered: 'Plasticorals' coral rubble fused with plastic",
+        "url": "https://www.oist.jp/news-center/news/2026/9/18/new-form-plastic-pollution-discovered-shores-vulnerable-coral-reefs",
         "source": "Hacker News",
-        "score": 1
+        "score": 22
       },
       {
-        "title": "Way to Play Super Mario 64: On Apple Vision Pro",
-        "url": "https://www.pagetable.com/303",
+        "title": "Oregon lawmakers approve money to buy an iconic waterfall listed on Redfin",
+        "url": "https://apnews.com/article/oregon-waterfall-for-sale-lawmakers-996de63462d49ec3ad9bee1629fb9488",
         "source": "Hacker News",
-        "score": 74
+        "score": 95
       },
       {
-        "title": "The 1.5°C goal of the Paris Agreement is no longer viable",
-        "url": "https://unric.org/en/unep-emissions-gap-report-2026-1-5-degree-overshoot/",
+        "title": "What I learned from six months of being stupid on purpose",
+        "url": "https://wvez.org/blog/learning-to-be-stupid/",
         "source": "Hacker News",
-        "score": 510
+        "score": 62
       },
       {
-        "title": "Show HN: SimCity, but with Permits",
-        "url": "https://permit.petercai.com/",
+        "title": "Drupal is now light-years ahead of its reputation",
+        "url": "https://dri.es/state-of-drupal-presentation-september-2026",
         "source": "Hacker News",
-        "score": 848
+        "score": 66
       },
       {
-        "title": "Muse exposes users' personal and business secrets when they share conversations",
-        "url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
+        "title": "Rust off Rails: The opinionated web stack for the AI era",
+        "url": "https://rustoffrails.org/",
         "source": "Hacker News",
-        "score": 248
-      },
-      {
-        "title": "eMudhra intermediate CA compromise",
-        "url": "https://emudhra.we-have-a-problem.com/",
-        "source": "Hacker News",
-        "score": 1072
-      },
-      {
-        "title": "The Decoherence Trap",
-        "url": "https://maevyn.codes/decoherence",
-        "source": "Hacker News",
-        "score": 83
+        "score": 55
       }
     ],
     "ai": [
       {
-        "title": "LayerFS: The filesystem for AI coding agents",
-        "url": "https://layerfs.ai/",
+        "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+        "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 218
+      },
+      {
+        "title": "OpenAI models are coming to Google Cloud",
+        "url": "https://openai.com/index/openai-models-google-cloud/",
+        "source": "Hacker News AI",
+        "score": 103
+      },
+      {
+        "title": "Using thousands of AI agents to uncover new leads in biological data",
+        "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
+        "source": "Hacker News AI",
+        "score": 86
+      },
+      {
+        "title": "Rust off Rails: The opinionated web stack for the AI era",
+        "url": "https://rustoffrails.org/",
+        "source": "Hacker News AI",
+        "score": 55
+      },
+      {
+        "title": "A train simulator game for console hackers",
+        "url": "https://github.com/antoniovazquezaraujo/LeTrain",
+        "source": "Hacker News AI",
+        "score": 4
+      },
+      {
+        "title": "PHP2Shell: AI uncovers critical RCE in PHP",
+        "url": "https://www.wiz.io/blog/php2shell-php-rce",
+        "source": "Hacker News AI",
+        "score": 398
+      },
+      {
+        "title": "Texas data center boom could erase decades of progress on air quality",
+        "url": "https://www.texastribune.org/2026/10/20/data-centers-texas-air-quality-report-pollution-health-risks/",
+        "source": "Hacker News AI",
+        "score": 10
       },
       {
         "title": "Good type against all odds",
         "url": "https://unsung.aresluna.org/good-type-against-all-odds/",
         "source": "Hacker News AI",
-        "score": 153
+        "score": 190
       },
       {
         "title": "In Hilbert space, all things are quantumly possible",
         "url": "https://www.quantamagazine.org/in-hilbert-space-all-things-are-quantumly-possible-20260826/",
         "source": "Hacker News AI",
-        "score": 114
+        "score": 135
       },
       {
         "title": "Using Claude to reduce the attack surface of code",
         "url": "https://www.anthropic.com/research/attack-surface-reduction",
         "source": "Hacker News AI",
-        "score": 86
+        "score": 118
       },
       {
-        "title": "Does Ruby on Rails still make sense?",
-        "url": "https://tech.dirkjonker.nl/does-ruby-on-rails-make-sense/",
+        "title": "AI agent fixed the bug, but what else did it change?",
+        "url": "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/",
         "source": "Hacker News AI",
-        "score": 65
+        "score": 29
+      },
+      {
+        "title": "LayerFS: The filesystem for AI coding agents",
+        "url": "https://layerfs.ai/",
+        "source": "Hacker News AI",
+        "score": 66
       }
     ],
     "news": [
       {
-        "title": "US citizen Stephen Hubbard freed by Russia as Trump envoy meets Putin",
-        "url": "https://www.bbc.co.uk/news/articles/c6m24l9v3745o?at_medium=RSS&at_campaign=rss",
+        "title": "Russia says it is ready to resume talks with Ukraine and US to end war",
+        "url": "https://www.bbc.co.uk/news/articles/cq3djn5nxx12o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump and Zelensky at loggerheads despite new optimism",
-        "url": "https://www.bbc.co.uk/news/articles/ckrey51jrgnro?at_medium=RSS&at_campaign=rss",
+        "title": "Macron accuses foreign leaders of exploiting French riots   ",
+        "url": "https://www.bbc.co.uk/news/articles/ckjrw044ggxgo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Katya Adler: France divided over who to blame for riots and what to learn from them",
-        "url": "https://www.bbc.co.uk/news/articles/cq0me4g9p970o?at_medium=RSS&at_campaign=rss",
+        "title": "'Targeted' attack on much-loved MP leaves Australian town heartbroken",
+        "url": "https://www.bbc.co.uk/news/articles/cmgr8q88r5eqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -160,12 +202,48 @@
         "source": "BBC World"
       },
       {
-        "title": "Gambia to pay victims of Yahya Jammeh's rule from proceeds of his seized US mansion",
-        "url": "https://www.bbc.co.uk/news/articles/cmn8wx75l2n8o?at_medium=RSS&at_campaign=rss",
+        "title": "Family of prison officer killed by IRA receives state apology",
+        "url": "https://www.bbc.co.uk/news/articles/ck20rver1j31o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [],
+    "art": [
+      {
+        "title": " This Pac-Man snow blower makes me want a robot I don't need ",
+        "url": "https://www.creativebloq.com/news/this-pac-man-snow-blower-makes-me-want-a-robot-i-dont-need",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Autodesk reveals how The Cat in the Hat was made in the new Made to Make series ",
+        "url": "https://www.creativebloq.com/news/how-netflixs-new-cat-in-the-hat-animated-movie-was-made-in-just-two-years",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The massive Creality Halloween sale slashes 3D printer prices by up to 42%, with options for beginners and pros ",
+        "url": "https://www.creativebloq.com/deals/the-massive-creality-halloween-sale-slashes-3d-printer-prices-by-up-to-42-percent-with-options-for-beginners-and-pros",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Make a DIY boo basket with up to 60% off Halloween goodies ",
+        "url": "https://www.creativebloq.com/deals/make-a-diy-boo-basket-with-up-to-60-percent-off-halloween-goodies",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Someone turned Draco Malfoy into a girl with AI, and now I need to know what happens next ",
+        "url": "https://www.creativebloq.com/news/someone-turned-draco-malfoy-into-a-girl-with-ai-and-now-i-need-to-know-what-happens-next",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " The Creality Sermoon P1S is one of the most affordable hybrid scanners around, but don't throw your scanning spray away just yet ",
+        "url": "https://www.creativebloq.com/reviews/the-creality-sermoon-p1s-is-one-of-the-most-affordable-hybrid-scanners-around-but-dont-throw-your-scanning-spray-away-just-yet",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " GTA 6 unleashes saucy ads on the streets of Miami ",
+        "url": "https://www.creativebloq.com/news/gta-6-unleashes-saucy-ads-on-the-streets-of-miami",
+        "source": "Creative Bloq"
+      }
+    ],
     "science": [
       {
         "title": "A massive asteroid slammed into the North Sea and unleashed a 330-foot tsunami",
@@ -205,43 +283,48 @@
     ],
     "gaming": [
       {
-        "title": "Konami Has Staged the Biggest Unlikely Gaming Comeback of 2026",
-        "url": "https://www.polygon.com/konami-comeback-2026/",
+        "title": "Life Is Strange Creator Officially Comments on State of Upcoming TV Adaptation",
+        "url": "https://www.polygon.com/life-is-strange-game-creator-praises-amazon-tv-show/",
         "source": "Polygon"
       },
       {
-        "title": "Magic: The Gathering Is Officially Hasbro's Biggest Profit-Maker",
-        "url": "https://www.polygon.com/magic-mtg-hasbro-profits-90-percent-organized-play/",
+        "title": "BioWare Officially Shutting Down and New Mass Effect Canceled",
+        "url": "https://www.polygon.com/ea-bioware-closure-mass-efffect-5-canceled/",
         "source": "Polygon"
       },
       {
-        "title": "Obsession Fans Are Not Happy with Nikki Freeman's Fortnite Skin",
-        "url": "https://www.polygon.com/fortnite-obsession-nikki-freeman-skin-controversy/",
+        "title": "Hunger Games: Sunrise on the Reaping’s New Haymitch Reveals Woody Harrelson’s Advice",
+        "url": "https://www.polygon.com/hunger-games-sunrise-on-the-reaping-haymitch-woody-harrelson-advice/",
         "source": "Polygon"
       },
       {
-        "title": "Forget Ravenloft: The Best Horror TTRPG Makes a Party Game Terrifying",
-        "url": "https://www.polygon.com/dread-ttrpg-halloween-countdown/",
+        "title": "PC gamers can finally play a beloved 2010 PS3 masterpiece",
+        "url": "https://www.polygon.com/god-of-war-3-fan-pc-port/",
         "source": "Polygon"
       },
       {
-        "title": "Dawn of War 4 Has the Potential to Be the Best Warhammer 40,000 Game Ever",
-        "url": "https://www.polygon.com/dawn-of-war-4-preview/",
+        "title": "The 15 Best Steam Next Fest Demos to Play Right Now",
+        "url": "https://www.polygon.com/steam-next-fest-demos-best-october-2026/",
         "source": "Polygon"
       },
       {
-        "title": "'Cyberpunk: Edgerunners' Season 3 Confirmed? Potential Release Date, Characters, and Everything You Need to Know",
-        "url": "https://www.polygon.com/cyberpunk-edgerunners-season-3-confirmed-release-date-story-characters/",
+        "title": "'Cyberpunk 2077' is getting a huge new co-op mod",
+        "url": "https://www.polygon.com/cyberpunk-2077-co-op-mod-nightcoop/",
         "source": "Polygon"
       },
       {
-        "title": "Critical Role Is Heading to Middle-earth With a Big Lord of the Rings Collaboration",
-        "url": "https://www.polygon.com/critical-role-lord-of-the-rings-crossover-twitch-con/",
+        "title": "Middle-earth Goes to War in The Rings of Power Season 3 Explosive Trailer",
+        "url": "https://www.polygon.com/lotr-rings-of-power-season-3-trailer-release-date/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "The bridge to agent-scale Git infrastructure",
+        "url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "How 3 Java Champions are using GitHub Copilot for increased productivity",
         "url": "https://github.blog/ai-and-ml/github-copilot/how-3-java-champions-are-using-github-copilot-for-increased-productivity/",
@@ -270,11 +353,6 @@
       {
         "title": "From 2,500 requests to 24: Rebuilding star history without the stargazers",
         "url": "https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "GitHub’s model for secret detection: Finding more secrets with less noise",
-        "url": "https://github.blog/ai-and-ml/githubs-model-for-secret-detection-finding-more-secrets-with-less-noise/",
         "source": "GitHub Blog"
       }
     ]
