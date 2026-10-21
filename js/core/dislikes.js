@@ -82,6 +82,26 @@ export function recordDislikes(list, phrases, { weight = 1, source = 'chat', now
     return out;
 }
 
+// 兩份清單合併（PWA 與 Discord 各自學到的）：同一件事次數取較大、時間取較新（取較大而不是相加，重複同步才不會把次數灌水）
+export function mergeDislikeLists(a, b) {
+    const out = (a || []).map(x => ({ ...x, sources: [...(x.sources || [])] }));
+    for (const y of b || []) {
+        if (!y?.text) continue;
+        const hit = out.find(x => sameThing(x.text, y.text));
+        if (hit) {
+            hit.count = Math.max(hit.count || 1, y.count || 1);
+            hit.lastAt = Math.max(hit.lastAt || 0, y.lastAt || 0);
+            hit.sources = [...new Set([...hit.sources, ...(y.sources || [])])].slice(-5);
+            if (y.text.length > hit.text.length && !hit.manual) hit.text = y.text;
+            if (y.manual) hit.manual = true;
+        } else {
+            out.push({ id: y.id || 'dl' + (y.lastAt || 0).toString(36) + Math.random().toString(36).slice(2, 6), text: String(y.text).slice(0, 40), count: y.count || 1, firstAt: y.firstAt || y.lastAt || 0, lastAt: y.lastAt || 0, sources: [...(y.sources || [])], manual: !!y.manual });
+        }
+    }
+    out.sort((p, q) => Number(!!q.manual) - Number(!!p.manual) || (q.count || 1) - (p.count || 1) || (q.lastAt || 0) - (p.lastAt || 0));
+    return out.slice(0, MAX_ITEMS);
+}
+
 // 放進系統提示詞的段落；沒有就回空字串。次數多的在前面
 export function formatDislikePrompt(list) {
     const items = [...(list || [])].filter(x => x?.text).sort((a, b) => (b.count || 1) - (a.count || 1) || (b.lastAt || 0) - (a.lastAt || 0)).slice(0, MAX_PROMPT_ITEMS);
@@ -131,6 +151,17 @@ export async function learnDislikesFromText(text, source = 'chat') {
 
 export function removeDislike(id) {
     return serial(async () => { const list = (await loadDislikes()).filter(x => x.id !== id); await saveDislikes(list); return list; });
+}
+
+// 從 Discord Worker 拉下來的清單合併進本機（回傳是否有變動）
+export function mergeRemoteDislikes(items) {
+    return serial(async () => {
+        const before = await loadDislikes();
+        const after = mergeDislikeLists(before, items);
+        const changed = JSON.stringify(before) !== JSON.stringify(after);
+        if (changed) await saveDislikes(after);
+        return changed;
+    });
 }
 
 export async function getDislikePrompt() { return formatDislikePrompt(await loadDislikes()); }

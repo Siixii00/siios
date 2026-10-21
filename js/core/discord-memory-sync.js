@@ -4,7 +4,7 @@
 // 只送精簡欄位（不帶向量與感官等大欄位），並用 pushed_at 做增量，避免每次整包上傳。
 import { MemoryDB, SettingsDB, CharactersDB, ChatsDB } from '../db.js';
 import { workerFetch } from './discord-worker-client.js';
-import { loadDislikes, formatDislikePrompt } from './dislikes.js';
+import { loadDislikes, formatDislikePrompt, mergeRemoteDislikes } from './dislikes.js';
 
 const PUSH_BATCH = 40; // Worker 每筆記憶一次 D1 寫入，批次小一點才不會碰到單次請求的子請求上限
 const AUTO_INTERVAL_MS = 30 * 60 * 1000;
@@ -51,10 +51,11 @@ export async function pushMemories(workerUrl, { all = false } = {}) {
         out.push(toWorkerMemory(m, characterId));
     }
     // 用戶討厭的事：每次同步都推一則固定 id 的永久記憶（重要度 1），內容更新就覆蓋，機器人回覆時最優先讀到
-    const dislikeText = formatDislikePrompt(await loadDislikes());
+    const dislikes = await loadDislikes();
+    const dislikeText = formatDislikePrompt(dislikes);
     if (dislikeText) {
         const targets = all ? (await CharactersDB.getAll()).map(c => c.id) : [...allowed];
-        for (const id of targets) out.push({ id: 'dislikes-' + id, chat_id: '', character_id: id, content: dislikeText.replace(/^# /, '【') .replace(/\n/, '】\n'), memory_type: 'permanent', importance: 1, timestamp: Date.now(), metadata: { source: 'siios', platform: 'siios', kind: 'dislikes' } });
+        for (const id of targets) out.push({ id: 'dislikes-' + id, chat_id: '', character_id: id, content: dislikeText, memory_type: 'permanent', importance: 1, timestamp: Date.now(), metadata: { source: 'siios', platform: 'siios', kind: 'dislikes', items: dislikes } });
     }
     let count = 0;
     for (let i = 0; i < out.length; i += PUSH_BATCH) {
@@ -77,7 +78,12 @@ export async function pullDiscordMemories(workerUrl) {
         if (!res.ok) continue;
         const data = await res.json().catch(() => ({}));
         if (!data.success || !Array.isArray(data.memories) || !data.memories.length) continue;
-        count += await MemoryDB.importMany(data.memories);
+        // Discord 學到的「用戶討厭的事」併進本機清單，不當一般記憶匯入
+        const isDislikes = m => String(m.id || '').startsWith('dislikes-');
+        for (const m of data.memories.filter(isDislikes)) {
+            try { await mergeRemoteDislikes(JSON.parse(m.metadata || '{}').items || []); } catch (_) {}
+        }
+        count += await MemoryDB.importMany(data.memories.filter(m => !isDislikes(m)));
     }
     return count;
 }
@@ -90,8 +96,9 @@ export async function autoSyncMemories() {
         const lastRun = (await SettingsDB.get('discord_memory_synced_at')) || 0;
         if (Date.now() - lastRun < AUTO_INTERVAL_MS) return null;
         await SettingsDB.set('discord_memory_synced_at', Date.now());
-        const pushed = await pushMemories(workerUrl);
+        // 先拉再推：先把 Discord 學到的討厭的事併進本機，再把合併後的清單推回去，兩邊才不會互相覆蓋
         const pulled = await pullDiscordMemories(workerUrl);
+        const pushed = await pushMemories(workerUrl);
         return { pushed, pulled };
     } catch (error) {
         console.warn('[DiscordMemorySync] 自動同步失敗：', error.message);

@@ -300,3 +300,13 @@ Code review（`340bf4c~1..HEAD`）找到並修正：
 - **固定帶入**：聊天室放在提示詞最後（`backMessages`）；`buildAppContext` 放在系統提示詞最後（所有 App 與約會）；Discord：每次記憶同步，為每個啟用的角色推一則固定 id（`dislikes-<角色id>`）的永久記憶（重要度 1）。
 - **測試**：`dislikes.test.mjs`（抽取、否定與問句、同一件事、累計、提示詞）、`memory-digest.test.mjs`；瀏覽器驗過：聊天室送「我最討厭香菜了」「我說過很多次了，我討厭香菜，別再提我的前任」→ 清單香菜 3 次、提我的前任 2 次，「你不要走」「我不討厭你」沒被記；聊天室與 App 的提示詞最後都有這段；設定頁可新增。
 - **沒驗證**：Discord 機器人實際有沒有優先讀到那則永久記憶（要看 Worker 的記憶挑選，需你在 Discord 實測）；文字比對抓不到的說法（例如沒用到上面那些詞）要靠消化 API 或手動新增。
+
+### 2026-10-21 Discord 記憶實測：怎麼運作、修了什麼
+- **Discord 記憶實際怎麼運作**（用 Worker 真正的程式碼＋記憶體 SQLite＋假 Discord/AI 驗證，`tests/unit/discord-dislikes.test.mjs`，再對線上 Worker 做讀寫驗證）：
+  - **PWA → Worker**：`/sync/memories` 把有歸屬角色的記憶推上去，Worker 加上 `[Siios 聊天]` 標籤存進 `memories`（同 id 覆蓋內容與重要度）。
+  - **機器人回覆時**：`SELECT … WHERE (chat_id = 角色 OR character_id = 角色) AND 不是日誌 ORDER BY importance DESC, timestamp DESC LIMIT 60`，再用 2000 字的額度逐筆放進「[Related Memories]」，每筆壓成一行並去掉所有 `[…]`。**不看使用者這句話，只看重要度**（沒有查詢句比對，也沒有衰減）。
+  - **Worker → PWA**：`/sync/chat?memories_only=1` 回傳 Discord 上整理出的記憶，**排除** `[Siios 聊天]` 開頭的（避免推上去又拉回來）。
+- **我上一輪做的「討厭的事」同步有三個問題**，實測才發現：(1) 被當一般記憶壓成一行、與其他記憶共用 2000 字額度、`[…]` 被去掉，不是「必須遵守」的形式；(2) 只有 PWA 說的話會學，Discord 上說的完全沒學到；(3) PWA 每次推會整列覆蓋，之後若 Discord 也學就會互相蓋掉。
+- **修正**：每個角色一列固定 id `dislikes-<角色id>`（永久、重要度 1），清單放在 `metadata.items`；回覆時**從一般記憶排除**，另外固定放在送給 AI 的訊息最後（不佔字數額度、保留換行與「反覆強調」）；Worker 的 `format-helpers` 區塊新增和 PWA `js/core/dislikes.js` 同一套的抽取／記錄／合併／提示詞（測試比對兩邊結果一致）；使用者在 Discord 說的話（輪詢與即時訊息兩條路，已驗證的使用者）當場學習，所以同一輪的回覆就已經帶著；PWA 推上去的清單與 Worker 上的**合併**（次數取較大，重複同步不會灌水）；PWA 同步改成**先拉再推**，拉下來的清單併進本機（`mergeRemoteDislikes`），不當一般記憶匯入。
+- **版本**：`WORKER_VERSION` 與 `EXPECTED_WORKER_VERSION` 為 2026.10.23；已部署到維護者自己的 Worker 並用測試角色 id 驗證推送、合併、拉取（測試資料已刪除，剩 0 列）。
+- **沒做／要知道**：Discord 的一般記憶仍然只依重要度挑選、不看使用者這句話（和 PWA 的檢索不同）；沒有在真實 Discord 頻道實際發訊息測試（會真的發訊息到你的頻道）。

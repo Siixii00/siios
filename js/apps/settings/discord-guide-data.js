@@ -1,6 +1,6 @@
 // Discord Worker 部署教學的內容與純函式（不依賴瀏覽器，方便測試）；畫面在 discord-guide.js
 // 與 scripts/discord-bot-worker.js 的 WORKER_VERSION 必須一致（tests/unit/discord-guide.test.mjs 會檢查）
-export const EXPECTED_WORKER_VERSION = '2026.10.22';
+export const EXPECTED_WORKER_VERSION = '2026.10.23';
 export const WORKER_CODE_PATH = 'scripts/discord-bot-worker.js';
 // 權限：查看頻道、傳送訊息、管理訊息（批次刪除用，沒有也能運作）、讀取訊息歷史、新增反應
 export const INVITE_PERMISSIONS = 1024 + 2048 + 8192 + 65536 + 64;

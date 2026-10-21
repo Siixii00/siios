@@ -1,7 +1,7 @@
 // Discord Bot Worker - 支援角色綁定、記憶同步、斜線指令、插嘴 (Interject)
 // Worker 版本：PWA「Discord 整合」頁會拿它和自己期待的版本比對（js/apps/settings/discord-guide-data.js 的 EXPECTED_WORKER_VERSION），
 // 不一致就提醒使用者重新貼上最新程式碼。改了 Worker 行為時一起更新兩邊。
-const WORKER_VERSION = '2026.10.22';
+const WORKER_VERSION = '2026.10.23';
 
 // 資料表（全部 IF NOT EXISTS，可重複執行；既有資料庫不受影響）。新使用者不用手動建表。
 const SCHEMA_STATEMENTS = [
@@ -433,6 +433,7 @@ async function pollBoundChannels(env, ctx) {
             // 自動存簡易記憶
             const pollChatId = characterId || msg.channel_id;
             await saveDiscordMemory(env, characterId, pollChatId, userId, userDisplayName, msg.content);
+            await learnDislikes(env, characterId, msg.content);
 
             // 獨立於插嘴的表情反應
             await maybeAddReaction(msg, env);
@@ -557,6 +558,39 @@ async function isCharacterNameMentioned(content, characterId, env) {
 }
 
 // 存 Discord 訊息為簡易記憶
+// ===== 用戶討厭的事：每個角色一列固定 id 的永久記憶（dislikes-<角色id>），清單放在 metadata.items =====
+async function loadDislikeRow(env, characterId) {
+    if (!characterId) return { items: [] };
+    const row = await env.DB.prepare(`SELECT content, metadata FROM memories WHERE id = ?`).bind('dislikes-' + characterId).first();
+    let items = [];
+    try { const meta = JSON.parse(row?.metadata || '{}'); if (Array.isArray(meta.items)) items = meta.items; } catch (_) {}
+    return { items, content: row?.content || '' };
+}
+
+async function saveDislikeItems(env, characterId, items) {
+    const metadata = JSON.stringify({ source: 'discord', platform: 'discord', kind: 'dislikes', items });
+    await env.DB.prepare(`INSERT INTO memories (id, chat_id, character_id, content, memory_type, importance, timestamp, metadata) VALUES (?, ?, ?, ?, 'permanent', 1, ?, ?) ON CONFLICT(id) DO UPDATE SET content = excluded.content, metadata = excluded.metadata, timestamp = excluded.timestamp`)
+        .bind('dislikes-' + characterId, characterId, characterId, formatDislikePrompt(items), new Date().toISOString(), metadata).run();
+}
+
+async function loadDislikeText(env, characterId) {
+    try {
+        const { items } = await loadDislikeRow(env, characterId);
+        return formatDislikePrompt(items);
+    } catch (_) { return ''; }
+}
+
+// 使用者在 Discord 說的話：抽出討厭的事並記下（失敗不影響回覆）
+async function learnDislikes(env, characterId, text) {
+    try {
+        if (!characterId) return;
+        const { phrases, weight } = extractDislikes(text);
+        if (!phrases.length) return;
+        const { items } = await loadDislikeRow(env, characterId);
+        await saveDislikeItems(env, characterId, recordDislikes(items, phrases, { weight, source: 'discord' }));
+    } catch (e) { console.error('learnDislikes failed', e?.message); }
+}
+
 async function saveDiscordMemory(env, characterId, chatId, userId, userDisplayName, content) {
     const nowIso = new Date().toISOString();
     const charRow = characterId ? await env.DB.prepare(`SELECT name FROM characters WHERE id = ?`).bind(characterId).first() : null;
@@ -1234,6 +1268,7 @@ async function handleMessage(message, env, ctx) {
         new Date(message.timestamp).toISOString(),
         JSON.stringify({ source: 'discord', author: message.author.username, author_id: message.author.id, channel_id: message.channel_id, bound_user_id: userId, user_display_name: userDisplayName })
     ).run();
+    await learnDislikes(env, characterId, message.content);
 
     // 對所有允許的訊息加隨機表情反應（即時回饋，獨立於插嘴）
     await maybeAddReaction(message, env);
@@ -1312,7 +1347,7 @@ async function generateAIResponseWithContext(message, characterId, userId, userD
     const memoryChatId = characterId || chatId;
     // 同時用 chat_id 與 character_id 比對：從 Siios 同步來的記憶 chat_id 是 Siios 的聊天室，只有 character_id 對得上。
     // 對話原文日誌（每則訊息都會存一筆）在 SQL 就排除，否則最近的 50 筆幾乎都是日誌；重要的記憶優先。
-    const memoryRows = await env.DB.prepare(`SELECT * FROM memories WHERE (chat_id = ? OR character_id = ?) AND memory_type != 'raw' AND content NOT LIKE '[Discord 聊天]%' ORDER BY importance DESC, timestamp DESC LIMIT 60`).bind(memoryChatId, memoryChatId).all();
+    const memoryRows = await env.DB.prepare(`SELECT * FROM memories WHERE (chat_id = ? OR character_id = ?) AND memory_type != 'raw' AND content NOT LIKE '[Discord 聊天]%' AND id NOT LIKE 'dislikes-%' ORDER BY importance DESC, timestamp DESC LIMIT 60`).bind(memoryChatId, memoryChatId).all();
     memories = memoryRows.results || [];
 
     const charName = characterData?.name || 'AI';
@@ -1411,6 +1446,9 @@ ${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道�
 
     // 7. 世界書後置
     const backMessages = backEntries.map(entry => ({ role: 'system', content: `[${entry.name}]\n${entry.content}` }));
+    // 用戶討厭的事：不靠挑選，每次都帶，放在最後（離使用者的訊息最近，最不容易被忽略）
+    const dislikeText = await loadDislikeText(env, characterId);
+    if (dislikeText) backMessages.push({ role: 'system', content: dislikeText });
 
     const lastIdx = conversationMessages.length - 1;
     if (lastIdx >= 0 && conversationMessages[lastIdx].role === 'user') {
@@ -1767,6 +1805,116 @@ function extractAccessKey(request, url) {
     if (request.method === 'GET' && QUERY_KEY_ROUTES.has(url.pathname)) return url.searchParams.get('key') || '';
     return '';
 }
+// ───── 用戶討厭的事（和 PWA 的 js/core/dislikes.js 是同一套規則；tests/unit/discord-dislikes.test.mjs 會比對兩邊結果一致）─────
+const MAX_ITEMS = 40;
+const MAX_PROMPT_ITEMS = 15;
+const STRONG_COUNT = 2;
+
+// 明確表達厭惡、不能接受的說法。刻意不放單獨的「不要」——「你不要走」「不要這樣說」是一般的請求，不是討厭的東西
+const TRIGGER = '(?:最討厭|超討厭|很討厭|真的討厭|非常討厭|討厭|厭惡|不喜歡|不愛|受不了|無法接受|不能接受|不可以接受|最怕|很怕|超怕|害怕|反感|噁心|雷點|地雷|不吃|不碰|不看|不聽|千萬不要|絕對不要|別再|不准|不許)';
+const EMPHASIS = /再說一次|說過很多次|說過好幾次|說過了|我說過|都說了|不是說過|再強調|一定要記住|一定要記得|千萬|務必|絕對|記住|別忘了|不要再/;
+const SKIP_BEFORE = /(?:不|沒|沒有|並不|不是|並非|你|妳|他|她|它|別人|有人|如果|假如|要是|是不是)$/;
+const STOP_AFTER = /[，,。！？!?；;、\n（(「『"]/;
+
+// 從一段使用者的話取出討厭的事，回傳 { phrases: [...], weight }。weight 是這句話的強調程度（1 或 2）
+function extractDislikes(text) {
+    const src = String(text ?? '').replace(/\r/g, '');
+    const phrases = [];
+    const re = new RegExp(TRIGGER, 'g');
+    let m;
+    while ((m = re.exec(src))) {
+        const before = src.slice(Math.max(0, m.index - 3), m.index);
+        if (SKIP_BEFORE.test(before)) continue; // 「不討厭」「你討厭…」「如果討厭」
+        const after = src.slice(m.index + m[0].length).replace(/^[：:\s是的就]+/, '');
+        const end = after.search(STOP_AFTER);
+        let phrase = (end === -1 ? after : after.slice(0, end)).trim();
+        // 「討厭…嗎」「討厭什麼？」是在問，不是在說自己的感受（只看這一小句，後面另一句的問號不算）
+        const clause = src.slice(m.index).match(/^[^，,。！？!?\n]*[！？!?]?/)[0];
+        if (/[嗎麼?？]/.test(clause)) continue;
+        phrase = phrase.replace(/(?:這件事|的感覺|而已|啦|喔|哦|啊|呢|了)$/, '').trim();
+        if (/^不(?:吃|碰|看|聽)$/.test(m[0])) phrase = m[0] + phrase; // 保留動詞：「不吃香菜」
+        if (phrase.length < 1 || phrase.length > 20) continue;
+        if (/^(?:你|妳|我|他|她|它)$/.test(phrase)) continue;
+        phrases.push(phrase);
+    }
+    return { phrases: [...new Set(phrases)], weight: phrases.length && EMPHASIS.test(src) ? 2 : 1 };
+}
+
+const clean = s => String(s ?? '').toLowerCase().replace(/[\s\p{P}\p{S}]+/gu, '').replace(/[的了這那一個]/g, '');
+const grams = s => { const g = new Set(); for (let i = 0; i < s.length - 1; i++) g.add(s.slice(i, i + 2)); if (s.length === 1) g.add(s); return g; };
+
+// 兩個說法是不是同一件事：一個包含另一個，或相鄰兩字重疊夠多
+function sameThing(a, b) {
+    const x = clean(a), y = clean(b);
+    if (!x || !y) return false;
+    if (x === y || (Math.min(x.length, y.length) >= 2 && (x.includes(y) || y.includes(x)))) return true;
+    // 較短的那句（至少 3 字）依序出現在較長的那句裡：「被忽略」＝「被人忽略」
+    const [short, long] = x.length <= y.length ? [x, y] : [y, x];
+    if (short.length >= 3) { let i = 0; for (const ch of long) if (ch === short[i]) i++; if (i === short.length) return true; }
+    const gx = grams(x), gy = grams(y);
+    let shared = 0;
+    for (const g of gx) if (gy.has(g)) shared++;
+    return shared >= 2 && shared / Math.min(gx.size, gy.size) >= 0.6;
+}
+
+// 把新抽到的說法記進清單（純函式，回傳新清單）。同一件事累加次數；強調的語氣一次算 2
+function recordDislikes(list, phrases, { weight = 1, source = 'chat', now = Date.now() } = {}) {
+    const out = (list || []).map(x => ({ ...x }));
+    for (const raw of phrases || []) {
+        const text = String(raw ?? '').trim().slice(0, 40);
+        if (!text) continue;
+        const hit = out.find(x => sameThing(x.text, text));
+        if (hit) {
+            hit.count = (hit.count || 1) + weight;
+            hit.lastAt = now;
+            if (text.length > hit.text.length && !hit.manual) hit.text = text; // 留下說得比較完整的那個
+            if (source && !hit.sources.includes(source)) hit.sources = [...hit.sources, source].slice(-5);
+        } else {
+            out.push({ id: 'dl' + now.toString(36) + Math.random().toString(36).slice(2, 6), text, count: weight, firstAt: now, lastAt: now, sources: source ? [source] : [], manual: source === 'manual' });
+        }
+    }
+    // 太多時，丟掉最不重要的（次數少、很久沒提）；手動新增的不丟
+    if (out.length > MAX_ITEMS) {
+        out.sort((a, b) => Number(!!b.manual) - Number(!!a.manual) || (b.count - a.count) || (b.lastAt - a.lastAt));
+        out.length = MAX_ITEMS;
+    }
+    return out;
+}
+
+// 兩份清單合併（PWA 與 Discord 各自學到的）：同一件事次數取較大、時間取較新（取較大而不是相加，重複同步才不會把次數灌水）
+function mergeDislikeLists(a, b) {
+    const out = (a || []).map(x => ({ ...x, sources: [...(x.sources || [])] }));
+    for (const y of b || []) {
+        if (!y?.text) continue;
+        const hit = out.find(x => sameThing(x.text, y.text));
+        if (hit) {
+            hit.count = Math.max(hit.count || 1, y.count || 1);
+            hit.lastAt = Math.max(hit.lastAt || 0, y.lastAt || 0);
+            hit.sources = [...new Set([...hit.sources, ...(y.sources || [])])].slice(-5);
+            if (y.text.length > hit.text.length && !hit.manual) hit.text = y.text;
+            if (y.manual) hit.manual = true;
+        } else {
+            out.push({ id: y.id || 'dl' + (y.lastAt || 0).toString(36) + Math.random().toString(36).slice(2, 6), text: String(y.text).slice(0, 40), count: y.count || 1, firstAt: y.firstAt || y.lastAt || 0, lastAt: y.lastAt || 0, sources: [...(y.sources || [])], manual: !!y.manual });
+        }
+    }
+    out.sort((p, q) => Number(!!q.manual) - Number(!!p.manual) || (q.count || 1) - (p.count || 1) || (q.lastAt || 0) - (p.lastAt || 0));
+    return out.slice(0, MAX_ITEMS);
+}
+
+// 放進系統提示詞的段落；沒有就回空字串。次數多的在前面
+function formatDislikePrompt(list) {
+    const items = [...(list || [])].filter(x => x?.text).sort((a, b) => (b.count || 1) - (a.count || 1) || (b.lastAt || 0) - (a.lastAt || 0)).slice(0, MAX_PROMPT_ITEMS);
+    if (!items.length) return '';
+    const lines = items.map(x => `- ${x.text}${(x.count || 1) >= STRONG_COUNT ? `（用戶反覆強調過 ${x.count} 次，絕對不可以碰）` : ''}`);
+    return [
+        '# 用戶明確討厭／不能碰的事（務必遵守）',
+        '以下是用戶親口說過討厭、受不了或不能接受的事。這比一般的喜好與劇情設定更重要：',
+        ...lines,
+        '要求：不要主動提起、不要建議、不要拿來開玩笑、不要為了劇情或氣氛而違背；遇到相關話題要自然地迴避或換個方式。如果用戶自己提起，表示理解與尊重，不要辯解、不要再追問。'
+    ].join('\n');
+}
+
+// 世界書與角色設定也寫了「討厭」的話（角色自己的雷點）不在這裡處理——這份清單只屬於「用戶」
 // format-helpers>>
 
 // ===== 發送 Discord 訊息 =====
@@ -2154,6 +2302,12 @@ async function syncMemories(memories, env) {
     let count = 0;
     for (const mem of memories) {
         if (!mem || !mem.id) continue;
+        if (mem.metadata?.kind === 'dislikes' && mem.character_id) {
+            const { items } = await loadDislikeRow(env, mem.character_id);
+            await saveDislikeItems(env, mem.character_id, mergeDislikeLists(items, Array.isArray(mem.metadata.items) ? mem.metadata.items : []));
+            count++;
+            continue;
+        }
         let content = mem.content || '';
         // 標記平台：siios 推送的記憶加上 [Siios 聊天]，已標記過的不重複加
         if (content && !content.startsWith('[Discord 聊天]') && !content.startsWith('[Siios 聊天]')) {
