@@ -3,7 +3,7 @@
 const RESTRICTED = [
     /啤酒|紅酒|白酒|葡萄酒|威士忌|伏特加|琴酒|龍舌蘭|清酒|燒酒|燒[酎]|米酒|高粱|紹興|調酒|雞尾酒|香檳|氣泡酒|梅酒|水果酒|烈酒|精釀|酒類|酒禮盒|洋酒|養樂多酒|whisk(?:e)?y|vodka|\bgin\b|\brum\b|tequila|\bsake\b|\bbeer\b|\bwine\b|champagne|cocktail|liquor|bourbon|cognac/i,
     /香菸|香烟|捲菸|卷烟|雪茄|菸草|烟草|菸斗|電子菸|电子烟|加熱菸|加热烟|煙彈|烟弹|尼古丁|cigar|cigarette|\bvape\b|\be-?cig|nicotine|tobacco/i,
-    /成人用品|情趣|成人玩具|性愛|性爱|保險套|安全套|潤滑液|按摩棒|跳蛋|18禁|r-?18|adult toy|sex toy|condom|lubricant/i
+    /成人用品|情趣|成人玩具|性愛|性爱|保險套|安全套|潤滑液|按摩棒|跳蛋|18禁|\br-?18\b|adult toy|sex toy|condom|lubricant/i
 ];
 // 酒杯、酒精、料理酒之類不是酒類商品本身，不擋
 const SAFE_CONTEXT = /酒杯|酒瓶|酒架|開瓶器|酒櫃|酒精|酒窩|料理酒|酒釀|酒粕|酒香|酒盒擺飾|wine glass|bottle opener|rubbing alcohol/i;

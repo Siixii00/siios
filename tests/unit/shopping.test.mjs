@@ -312,3 +312,11 @@ test('filterIdeas / buildIdeaMessages：未成年擋掉限制商品，成年留�
     assert.match(adult, /用戶已成年/);
     assert.match(buildIdeaMessages({})[0].content, /用戶未成年/); // 沒傳就當未成年（保守）
 });
+
+test('年齡限制：R-18 要整個詞才算，不會誤擋型號', async () => {
+    const { isAgeRestricted } = await import('../../js/core/age-restricted.js');
+    assert.equal(isAgeRestricted('R18 同人誌'), true);
+    assert.equal(isAgeRestricted('R-18'), true);
+    assert.equal(isAgeRestricted('Nikon R180 相機'), false);
+    assert.equal(isAgeRestricted('star18 玩具'), false);
+});

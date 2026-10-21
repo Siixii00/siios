@@ -946,3 +946,13 @@ body.desktop-mode #app {
 #toast-container .toast {
     overflow-wrap: anywhere;
 }
+
+/* 用 .page 當內容區的 App：內容比畫面長時要能上下滑動（原本沒有任何地方負責捲動） */
+body .app-container > .page {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+}

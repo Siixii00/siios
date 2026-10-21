@@ -286,3 +286,11 @@
     background: #FEE500;
     color: #1D1B20;
 }
+/* 內容比畫面長時要能上下滑動（外層 .app-container 是 overflow: hidden） */
+.app-container > .health-content {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+}

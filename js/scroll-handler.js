@@ -1,4 +1,15 @@
 ﻿// 手機端滑動邏輯優化
+// 往上找第一個真的可以捲動的祖先（overflow 為 auto/scroll 且內容比外框大）。
+// 只靠 class 名稱判斷的話，用 .page 等其他結構的 App 在手機上就滑不動
+function findScroller(el) {
+    for (let p = el; p && p !== document.body; p = p.parentElement) {
+        const cs = getComputedStyle(p);
+        if (/(auto|scroll)/.test(cs.overflowY) && p.scrollHeight > p.clientHeight + 1) return p;
+        if (/(auto|scroll)/.test(cs.overflowX) && p.scrollWidth > p.clientWidth + 1) return p;
+    }
+    return null;
+}
+
 class ScrollHandler {
     constructor() {
         this.init();
@@ -33,7 +44,8 @@ class ScrollHandler {
         // 確保 app-container 有正確的高度和 overflow 設置
         appContainer.style.height = '100vh';
         appContainer.style.height = '100dvh';
-        appContainer.style.overflow = 'hidden';
+        // 容器自己負責捲動的 App（例如電話）不要強制隱藏溢出
+        if (!/(auto|scroll)/.test(getComputedStyle(appContainer).overflowY)) appContainer.style.overflow = 'hidden';
         appContainer.style.display = 'flex';
         appContainer.style.flexDirection = 'column';
         
@@ -81,8 +93,8 @@ class ScrollHandler {
         // 修復 Safari 的滑動問題
         document.body.addEventListener('touchmove', function(e) {
             // 允許滑動的元素
-            const scrollable = e.target.closest('.overflow-y-auto, .overflow-auto, main, .page-content');
-            
+            const scrollable = e.target.closest('.overflow-y-auto, .overflow-auto, main, .page-content') || findScroller(e.target);
+
             if (!scrollable) {
                 // 如果點擊的不是可滑動區域，阻止默認行為（防止整頁滾動）
                 if (e.target.closest('.app-container')) {

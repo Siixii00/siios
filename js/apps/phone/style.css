@@ -602,3 +602,9 @@ body.desktop-mode .history-header {
         flex-direction: column;
         align-items: flex-start;
     }
+
+/* 桌面的手機外框裡 .app-container 會被限制高度並隱藏溢出，這裡讓電話 App 自己可以上下滑動 */
+body .app-container.phone-app {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
