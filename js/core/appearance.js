@@ -1,17 +1,16 @@
-// 外觀：深色模式、主題色（色調）、字體、介面大小。
-// 各個 App 的顏色大多是寫死在自己的 CSS 裡，所以不是改「變數」，而是在 #app 外面套濾鏡：
-//   深色 = 反相 + 色相轉 180°（圖片、影片、畫布再反一次還原）；主題色 = 整體色相偏移
+// 外觀：深色模式、主題色（換成指定顏色）、字體、介面大小、自訂 CSS。
+// 深色 = 在 #app 外面套濾鏡（反相 + 色相轉 180°，圖片影片再反一次還原），因為各個 App 的顏色多半寫死在自己的 CSS 裡。
+// 主題色 = 掃描樣式表把飽和的顏色換掉（appearance-colors.js）；自訂 CSS 見 appearance-css.js。
 // 本來就是深色底的 App（街機廳、YouTube…）和主畫面（有桌布）不反相，由 isDarkBackground 判斷。
 // 這個檔案只有純函式（可在 node 測試）；套用到頁面的部分在 appearance-dom.js。
-export const BASE_HUE = 142; // 預設配色的主色（綠色 #16A34A）的色相
 
 export const PRESETS = [
-    { id: 'default', name: '預設', hue: BASE_HUE, color: '#16A34A' },
-    { id: 'pink', name: '粉色', hue: 335, color: '#EC4899' },
-    { id: 'blue', name: '藍色', hue: 215, color: '#3B82F6' },
-    { id: 'purple', name: '紫色', hue: 270, color: '#8B5CF6' },
-    { id: 'orange', name: '橘色', hue: 25, color: '#F97316' },
-    { id: 'red', name: '紅色', hue: 355, color: '#EF4444' }
+    { id: 'default', name: '預設', color: '#16A34A' },
+    { id: 'pink', name: '粉色', color: '#EC4899' },
+    { id: 'blue', name: '藍色', color: '#3B82F6' },
+    { id: 'purple', name: '紫色', color: '#8B5CF6' },
+    { id: 'orange', name: '橘色', color: '#F97316' },
+    { id: 'red', name: '紅色', color: '#EF4444' }
 ];
 export const MODES = [{ id: 'light', name: '淺色' }, { id: 'dark', name: '深色' }, { id: 'auto', name: '跟隨系統' }];
 export const FONTS = [
@@ -22,7 +21,8 @@ export const FONTS = [
 ];
 export const SIZES = [{ id: 'small', name: '小', zoom: 0.92 }, { id: 'medium', name: '中', zoom: 1 }, { id: 'large', name: '大', zoom: 1.1 }];
 
-export const DEFAULTS = { mode: 'light', color: '#16A34A', font: 'system', size: 'medium', saturation: 100 };
+export const DEFAULT_COLOR = '#16A34A'; // 預設配色的主色：選這個就是不換色
+export const DEFAULTS = { mode: 'light', color: DEFAULT_COLOR, keepDanger: true, font: 'system', size: 'medium', saturation: 100, customCss: '', appCss: {} };
 
 const HEX = /^#[0-9a-fA-F]{6}$/;
 const clamp = (n, a, b) => Math.min(b, Math.max(a, n));
@@ -44,23 +44,13 @@ export function normalize(s) {
     if (!FONTS.some(f => f.id === o.font)) o.font = DEFAULTS.font;
     if (!SIZES.some(z => z.id === o.size)) o.size = DEFAULTS.size;
     o.saturation = clamp(Math.round(Number(o.saturation)) || 100, 50, 160);
+    o.keepDanger = o.keepDanger !== false;
+    o.customCss = typeof o.customCss === 'string' ? o.customCss.slice(0, 50000) : '';
+    const apps = {};
+    for (const [k, v] of Object.entries(o.appCss && typeof o.appCss === 'object' ? o.appCss : {})) if (/^[a-z0-9-]+$/i.test(k) && typeof v === 'string' && v.trim()) apps[k] = v.slice(0, 50000);
+    o.appCss = apps;
+    // 主題色：選預設的綠色就是不換色
     return o;
-}
-
-export function hueOf(hex) {
-    if (!HEX.test(hex)) return BASE_HUE;
-    const [r, g, b] = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255);
-    const max = Math.max(r, g, b), min = Math.min(r, g, b), d = max - min;
-    if (d < 0.001) return BASE_HUE; // 灰色沒有色相：不偏移
-    let h = max === r ? ((g - b) / d) % 6 : max === g ? (b - r) / d + 2 : (r - g) / d + 4;
-    h = Math.round(h * 60);
-    return (h + 360) % 360;
-}
-
-// 要把預設配色的主色轉到選的顏色，需要偏移幾度（-180～180）
-export function hueShiftFor(hex) {
-    const d = (hueOf(hex) - BASE_HUE + 540) % 360 - 180;
-    return Math.abs(d) < 2 ? 0 : d;
 }
 
 export const effectiveDark = (s, systemDark) => s.mode === 'dark' || (s.mode === 'auto' && !!systemDark);
@@ -69,22 +59,21 @@ const num = n => String(Math.round(n * 1000) / 1000);
 const DARK_CONTRAST = 0.9;
 
 // 濾鏡串：先主題色（色相偏移、飽和度），再深色（反相、色相轉回、降對比讓黑色不要死黑）
+// 目前只有深色和飽和度會用到濾鏡
 export function filterChain(s, { dark }) {
-    const shift = hueShiftFor(s.color), sat = s.saturation / 100;
+    const sat = s.saturation / 100;
     const parts = [];
-    if (shift) parts.push(`hue-rotate(${num(shift)}deg)`);
-    if (sat !== 1) parts.push(`saturate(${num(sat)})`);
-    if (dark) parts.push('invert(1)', 'hue-rotate(180deg)', `contrast(${DARK_CONTRAST})`);
+    if (sat !== 1) parts.push('saturate(' + num(sat) + ')');
+    if (dark) parts.push('invert(1)', 'hue-rotate(180deg)', 'contrast(' + DARK_CONTRAST + ')');
     return parts;
 }
 
 // 圖片等不該被濾鏡影響的元素：套上「反向」濾鏡（順序相反）還原
 export function inverseChain(s, { dark }) {
-    const shift = hueShiftFor(s.color), sat = s.saturation / 100;
+    const sat = s.saturation / 100;
     const parts = [];
-    if (dark) parts.push(`contrast(${num(1 / DARK_CONTRAST)})`, 'hue-rotate(-180deg)', 'invert(1)');
-    if (sat !== 1) parts.push(`saturate(${num(1 / sat)})`);
-    if (shift) parts.push(`hue-rotate(${num(-shift)}deg)`);
+    if (dark) parts.push('contrast(' + num(1 / DARK_CONTRAST) + ')', 'hue-rotate(-180deg)', 'invert(1)');
+    if (sat !== 1) parts.push('saturate(' + num(1 / sat) + ')');
     return parts;
 }
 
@@ -134,3 +123,6 @@ export function isDarkBackground(colors) {
 }
 
 export const themeColorMeta = (s, systemDark) => (effectiveDark(normalize(s), systemDark) ? '#141414' : '#FAF9F6');
+
+// 要換成哪個顏色：選預設的綠色就是不換（回傳 null）
+export const colorTarget = s => (s.color.toUpperCase() === DEFAULT_COLOR ? null : s.color);

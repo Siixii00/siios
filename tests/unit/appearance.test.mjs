@@ -1,8 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import {
-    normalize, migrateLegacy, hueOf, hueShiftFor, effectiveDark, filterChain, inverseChain, buildCss,
-    parseRgb, luminance, isDarkBackground, themeColorMeta, BASE_HUE, DEFAULTS, PRESETS
+    normalize, migrateLegacy, colorTarget, effectiveDark, filterChain, inverseChain, buildCss,
+    parseRgb, luminance, isDarkBackground, themeColorMeta, DEFAULTS, PRESETS
 } from '../../js/core/appearance.js';
 
 test('normalize：壞值回到預設，飽和度限制在範圍內', () => {
@@ -21,17 +21,6 @@ test('migrateLegacy：舊的主題設定轉成新設定', () => {
     assert.deepEqual(migrateLegacy(undefined, undefined), DEFAULTS);
 });
 
-test('hueOf / hueShiftFor：預設綠色不偏移，其他顏色偏移到該色相，灰色不偏移', () => {
-    assert.equal(hueOf('#FF0000'), 0); assert.equal(hueOf('#00FF00'), 120); assert.equal(hueOf('#0000FF'), 240);
-    assert.equal(hueOf('#888888'), BASE_HUE);
-    assert.equal(hueShiftFor('#16A34A'), 0);
-    assert.equal(hueShiftFor('#888888'), 0);
-    for (const p of PRESETS) { const d = hueShiftFor(p.color); assert.ok(d >= -180 && d <= 180, p.id); }
-    // 偏移後的主色色相要接近選的顏色
-    const shift = hueShiftFor('#3B82F6');
-    assert.ok(Math.abs(((BASE_HUE + shift - hueOf('#3B82F6') + 540) % 360) - 180) < 3);
-});
-
 test('effectiveDark：自動模式跟著系統', () => {
     assert.equal(effectiveDark({ mode: 'dark' }, false), true);
     assert.equal(effectiveDark({ mode: 'light' }, true), false);
@@ -39,15 +28,15 @@ test('effectiveDark：自動模式跟著系統', () => {
     assert.equal(effectiveDark({ mode: 'auto' }, false), false);
 });
 
-test('濾鏡串：預設淺色沒有任何濾鏡；深色有反相；反向濾鏡的順序相反', () => {
+test('濾鏡串：預設沒有任何濾鏡；深色有反相；反向濾鏡的順序相反', () => {
     const base = normalize(null);
     assert.deepEqual(filterChain(base, { dark: false }), []);
     assert.deepEqual(inverseChain(base, { dark: false }), []);
-    const s = normalize({ color: '#3B82F6', saturation: 120 });
+    const s = normalize({ saturation: 120 });
     const f = filterChain(s, { dark: true }), inv = inverseChain(s, { dark: true });
-    assert.match(f[0], /^hue-rotate\(/); assert.equal(f[1], 'saturate(1.2)'); assert.equal(f[2], 'invert(1)');
-    assert.match(inv.at(-1), /^hue-rotate\(-/);
+    assert.equal(f[0], 'saturate(1.2)'); assert.equal(f[1], 'invert(1)');
     assert.equal(inv[0].startsWith('contrast('), true);
+    assert.equal(inv.at(-1), 'saturate(0.833)');
     assert.equal(inv.length, f.length);
 });
 
@@ -62,7 +51,8 @@ test('buildCss：預設什麼都不改；深色、字體、大小各自產生規
     assert.match(buildCss({ font: 'serif' }), /font-family: "Noto Serif TC"/);
     assert.doesNotMatch(buildCss({ font: 'system' }), /font-family/);
     assert.match(buildCss({ size: 'large' }), /zoom: 1\.1/);
-    assert.match(buildCss({ color: '#EC4899' }), /#app \{ filter: hue-rotate\(/);
+    assert.equal(buildCss({ color: '#EC4899' }), ''); // 主題色不是濾鏡，由樣式表掃描處理
+    assert.match(buildCss({ saturation: 120 }), /#app \{ filter: saturate\(1\.2\)/);
 });
 
 test('isDarkBackground：多數底色偏暗才算本來就是深色', () => {
@@ -77,4 +67,13 @@ test('isDarkBackground：多數底色偏暗才算本來就是深色', () => {
 test('themeColorMeta', () => {
     assert.equal(themeColorMeta({ mode: 'dark' }, false), '#141414');
     assert.equal(themeColorMeta({ mode: 'light' }, true), '#FAF9F6');
+});
+
+test('colorTarget：預設綠色不換，其他顏色回傳目標；normalize 保留自訂 CSS 並清掉壞的 App 名稱', () => {
+    assert.equal(colorTarget(normalize(null)), null);
+    assert.equal(colorTarget(normalize({ color: '#16a34a' })), null);
+    assert.equal(colorTarget(normalize({ color: '#EC4899' })), '#EC4899');
+    const s = normalize({ customCss: 'a{b:c}', appCss: { arcade: '.x{}', 'bad name!': 'y{}', empty: '  ' } });
+    assert.equal(s.customCss, 'a{b:c}'); assert.deepEqual(Object.keys(s.appCss), ['arcade']);
+    assert.equal(s.keepDanger, true); assert.equal(normalize({ keepDanger: false }).keepDanger, false);
 });

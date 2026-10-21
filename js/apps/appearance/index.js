@@ -1,7 +1,9 @@
 import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
 import { MODES, PRESETS, FONTS, SIZES, DEFAULTS, normalize } from '../../core/appearance.js';
-import { loadAppearance, saveAppearance } from '../../core/appearance-dom.js';
+import { loadAppearance, saveAppearance, customCssErrors } from '../../core/appearance-dom.js';
+import { SNIPPETS } from '../../core/appearance-css.js';
+import { getAllApps } from '../registry.js';
 
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -28,7 +30,8 @@ async function renderAppearance() {
       <label class="ap-row">飽和度 <span class="ap-val" data-for="saturation"></span>
         <input type="range" class="ap-range" data-key="saturation" min="50" max="160" step="5" value="${s.saturation}">
       </label>
-      <p class="ap-hint">把預設的綠色換成你選的顏色，整個 App 的色調會一起偏移（灰色、黑白不受影響）。各個 App 原本的主色不同，所以結果會略有差異；下面的預覽可以看效果。</p>
+      <label class="ap-check"><input type="checkbox" class="ap-danger"> 保留警示用的紅色（刪除、錯誤）</label>
+      <p class="ap-hint">會把各個 App 裡飽和的顏色（主色、按鈕、選取狀態）換成你選的顏色，並保留原本的深淺。選預設的綠色就是不換色。灰色、黑白和圖片不受影響；程式動態寫在畫面上的顏色可能不會被換到。</p>
 
       <h2 class="section-title">字體</h2>
       <div class="ap-fonts" data-group="font">
@@ -38,6 +41,16 @@ async function renderAppearance() {
       <h2 class="section-title">介面大小</h2>
       <div class="ap-seg" data-group="size">
         ${SIZES.map(z => `<button data-v="${z.id}">${z.name}</button>`).join('')}
+      </div>
+
+      <h2 class="section-title">自訂 CSS（進階）</h2>
+      <div class="ap-css">
+        <select class="ap-scope"></select>
+        <textarea class="ap-editor" spellcheck="false" placeholder="/* 在這裡寫 CSS，會即時套用 */"></textarea>
+        <div class="ap-css-err" hidden></div>
+        <div class="ap-snips">${SNIPPETS.map((n, i) => `<button data-snip="${i}">＋${esc(n.name)}</button>`).join('')}</div>
+        <div class="ap-css-actions"><button class="ap-go">前往這個 App</button><button class="ap-clear">清除這個範圍</button></div>
+        <p class="ap-hint">選「全域」會套用到所有頁面；選某個 App 只會套用在那個 App（會自動加上 <code>body[data-app="…"]</code>）。想知道某個元素叫什麼 class，可以用瀏覽器的開發者工具檢查。不允許 @import 和外部腳本。</p>
       </div>
 
       <h2 class="section-title">預覽</h2>
@@ -59,6 +72,7 @@ async function renderAppearance() {
     custom.style.background = custom.classList.contains('active') ? s.color : '';
     container.querySelector('.ap-color').value = s.color;
     container.querySelector('.ap-range').value = s.saturation;
+    container.querySelector('.ap-danger').checked = s.keepDanger;
     container.querySelector('[data-for="saturation"]').textContent = s.saturation + '%';
   };
   // 即時套用並儲存（儲存失敗只提示，畫面仍然已經改了）
@@ -74,9 +88,48 @@ async function renderAppearance() {
   container.querySelectorAll('.ap-swatch[data-color]').forEach(b => { b.onclick = () => change({ color: b.dataset.color }); });
   const color = container.querySelector('.ap-color');
   color.oninput = () => change({ color: color.value });
+  container.querySelector('.ap-danger').onchange = e => change({ keepDanger: e.target.checked });
   const range = container.querySelector('.ap-range');
   range.oninput = () => change({ saturation: Number(range.value) });
-  container.querySelector('.ap-reset').onclick = () => { change({ ...DEFAULTS }); createToast('已恢復預設外觀'); };
+  container.querySelector('.ap-reset').onclick = () => { change({ ...DEFAULTS, customCss: s.customCss, appCss: s.appCss }); createToast('已恢復預設外觀（自訂 CSS 保留）'); };
+
+  // ── 自訂 CSS 編輯器 ──
+  const apps = getAllApps().filter(a => a.id && a.routes?.length);
+  const scope = container.querySelector('.ap-scope');
+  scope.innerHTML = '<option value="global">全域（所有頁面）</option>' + apps.map(a => `<option value="${esc(a.id)}">${esc(a.name || a.id)}</option>`).join('');
+  const editor = container.querySelector('.ap-editor');
+  const errBox = container.querySelector('.ap-css-err');
+  const cssOf = key => (key === 'global' ? s.customCss : s.appCss[key]) || '';
+  const showErr = () => {
+    const msg = customCssErrors()[scope.value];
+    errBox.hidden = !msg;
+    errBox.textContent = msg ? '⚠ ' + msg + (/移除/.test(msg) ? '' : '（這段 CSS 暫時不會套用）') : '';
+  };
+  const setCss = (key, css) => change(key === 'global' ? { customCss: css } : { appCss: { ...s.appCss, [key]: css } });
+  const loadEditor = () => {
+    editor.value = cssOf(scope.value);
+    showErr();
+    container.querySelector('.ap-go').style.display = scope.value === 'global' ? 'none' : '';
+  };
+  let typing = null;
+  editor.oninput = () => {
+    clearTimeout(typing);
+    typing = setTimeout(async () => { setCss(scope.value, editor.value); await saving; showErr(); }, 400);
+  };
+  scope.onchange = loadEditor;
+  container.querySelectorAll('[data-snip]').forEach(b => {
+    b.onclick = () => {
+      editor.value = (editor.value.trim() ? editor.value.replace(/\s*$/, '\n\n') : '') + SNIPPETS[b.dataset.snip].css + '\n';
+      editor.oninput();
+    };
+  });
+  container.querySelector('.ap-clear').onclick = () => { editor.value = ''; setCss(scope.value, ''); showErr(); };
+  container.querySelector('.ap-go').onclick = () => {
+    const a = apps.find(x => x.id === scope.value);
+    const p = a?.navItem?.path || a?.routes?.[0]?.path;
+    if (p) Router.navigate(p);
+  };
+  loadEditor();
 
   sync();
   return { element: container, cleanup: null };

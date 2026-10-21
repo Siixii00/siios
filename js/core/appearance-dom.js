@@ -1,6 +1,8 @@
 // 外觀的瀏覽器部分：讀寫設定、把 CSS 放進頁面、偵測 App 本來是不是深色底。純函式在 appearance.js。
 import { SettingsDB } from '../db.js';
-import { normalize, migrateLegacy, buildCss, themeColorMeta, effectiveDark, isDarkBackground } from './appearance.js';
+import { normalize, migrateLegacy, buildCss, themeColorMeta, effectiveDark, isDarkBackground, colorTarget } from './appearance.js';
+import { replaceInValue } from './appearance-colors.js';
+import { buildCustomCss } from './appearance-css.js';
 
 const KEY = 'appearance';
 const LS_KEY = 'sx_appearance'; // 同一份設定放一份在 localStorage，下次開啟時可以在資料庫讀完之前先套用，避免閃一下淺色
@@ -8,6 +10,9 @@ let current = normalize(null);
 let mq = null;
 let observer = null;
 let timer = null;
+let cssTimer = null;
+let customErrors = {};
+const OWN_IDS = ['sx-appearance', 'sx-color-map', 'sx-custom-css'];
 
 const systemDark = () => !!mq?.matches;
 
@@ -22,6 +27,7 @@ export async function loadAppearance() {
 }
 
 export const currentAppearance = () => current;
+export const customCssErrors = () => customErrors;
 
 export function applyAppearance(settings) {
     current = normalize(settings);
@@ -34,6 +40,9 @@ export function applyAppearance(settings) {
     meta.content = themeColorMeta(current, systemDark());
     try { localStorage.setItem(LS_KEY, JSON.stringify(current)); } catch (_) { /* 沒有 localStorage 也沒關係 */ }
     scheduleNativeCheck();
+    // 馬上套用（編輯器要立刻拿到 CSS 有沒有錯）；後來才載入的樣式表由 scheduleStyles 再補一次
+    clearTimeout(cssTimer);
+    try { applyStyles(); } catch (e) { console.warn('[Appearance] 套用樣式失敗：', e); }
 }
 
 export async function saveAppearance(settings) {
@@ -81,6 +90,77 @@ function scheduleNativeCheck() {
     timer = setTimeout(checkNative, 180);
 }
 
+// ───── 換成指定顏色：掃描所有樣式表，把飽和的顏色換掉，產生一份覆蓋用的 CSS ─────
+const COLOR_PROPS = /color|background|border|outline|fill|stroke|shadow|^--/;
+const sheetCache = new WeakMap(); // sheet → { key, text }
+const nodeIsOwn = n => n && OWN_IDS.includes(n.id);
+
+function overridesFor(rules, target, opts) {
+    const out = [];
+    for (const rule of rules) {
+        if (rule.type === 1) { // 一般規則
+            const decls = [];
+            for (let i = 0; i < rule.style.length; i++) {
+                const prop = rule.style[i];
+                if (!COLOR_PROPS.test(prop)) continue;
+                const val = rule.style.getPropertyValue(prop);
+                const next = val && replaceInValue(val, target, opts);
+                if (next) decls.push(prop + ': ' + next + ' !important');
+            }
+            if (decls.length) out.push(rule.selectorText + ' { ' + decls.join('; ') + ' }');
+        } else if (rule.type === 4 || rule.type === 12) { // @media、@supports
+            const inner = overridesFor(rule.cssRules, target, opts);
+            if (inner.length) out.push('@' + (rule.type === 4 ? 'media ' : 'supports ') + (rule.conditionText || rule.media?.mediaText || '') + ' {\n' + inner.join('\n') + '\n}');
+        }
+    }
+    return out;
+}
+
+function colorMapText(s) {
+    const target = colorTarget(s);
+    if (!target) return '';
+    const opts = { keepDanger: s.keepDanger };
+    const key = target + '|' + s.keepDanger;
+    const parts = [];
+    for (const sheet of document.styleSheets) {
+        if (nodeIsOwn(sheet.ownerNode)) continue;
+        let rules;
+        try { rules = sheet.cssRules; } catch (_) { continue; } // 跨網域的樣式表（例如字型）讀不到，略過
+        if (!rules) continue;
+        // Tailwind CDN 會一直往同一張樣式表加規則：規則數變了就重掃
+        const sheetKey = key + '|' + rules.length;
+        const hit = sheetCache.get(sheet);
+        if (hit && hit.key === sheetKey) { parts.push(hit.text); continue; }
+        const text = overridesFor(rules, target, opts).join('\n');
+        sheetCache.set(sheet, { key: sheetKey, text });
+        parts.push(text);
+    }
+    return parts.join('\n');
+}
+
+function styleTag(id) {
+    let el = document.getElementById(id);
+    if (!el) { el = document.createElement('style'); el.id = id; }
+    return el;
+}
+
+// 套用「換色」與「自訂 CSS」。兩個 <style> 永遠放在 <head> 最後面，後來才載入的 App 樣式不會蓋過它們
+function applyStyles() {
+    const colors = styleTag('sx-color-map');
+    const next = colorMapText(current);
+    if (colors.textContent !== next) colors.textContent = next;
+    const built = buildCustomCss(current);
+    customErrors = built.errors;
+    const custom = styleTag('sx-custom-css');
+    if (custom.textContent !== built.css) custom.textContent = built.css;
+    for (const el of [colors, custom]) if (el.parentNode !== document.head || el.nextElementSibling) document.head.appendChild(el);
+}
+
+function scheduleStyles(delay = 150) {
+    clearTimeout(cssTimer);
+    cssTimer = setTimeout(() => { try { applyStyles(); } catch (e) { console.warn('[Appearance] 套用樣式失敗：', e); } }, delay);
+}
+
 export async function initAppearance() {
     mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
     const local = readLocal();
@@ -89,7 +169,17 @@ export async function initAppearance() {
     const onSystem = () => applyAppearance(current);
     if (mq?.addEventListener) mq.addEventListener('change', onSystem);
     else mq?.addListener?.(onSystem); // 舊版 Safari
-    window.addEventListener('hashchange', scheduleNativeCheck);
+    window.addEventListener('hashchange', () => { scheduleNativeCheck(); scheduleStyles(300); scheduleStyles(1200); });
+    // 各 App 的樣式是進到該 App 才載入的：有新的樣式表加進來就重掃一次
+    if (typeof MutationObserver === 'function') {
+        new MutationObserver(list => {
+            const added = list.flatMap(m => [...m.addedNodes]).filter(n => (n.tagName === 'LINK' || n.tagName === 'STYLE') && !nodeIsOwn(n));
+            added.forEach(n => n.tagName === 'LINK' && n.addEventListener('load', () => scheduleStyles(50), { once: true }));
+            // 既有 <style> 的內容被改掉（Tailwind CDN 會這樣加規則）也要重掃；自己的兩個 <style> 不算
+            const edited = list.some(m => m.type === 'childList' && m.target.tagName === 'STYLE' && !nodeIsOwn(m.target));
+            if (added.length || edited) scheduleStyles(300);
+        }).observe(document.head, { childList: true, subtree: true });
+    }
     const app = document.getElementById('app');
     if (app && typeof MutationObserver === 'function' && !observer) {
         observer = new MutationObserver(scheduleNativeCheck);
