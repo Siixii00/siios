@@ -179,7 +179,7 @@ test('snake：關卡設定逐步變難且在合理範圍', () => {
     let prev = null;
     for (let n = 1; n <= S.LEVEL_COUNT; n++) {
         const c = S.levelConfig(n);
-        assert.ok(c.speed >= 110 && c.foods <= 20 && c.walls >= 0);
+        assert.ok(c.speed >= 80 && c.foods <= 24 && c.walls >= 0);
         if (prev) { assert.ok(c.speed <= prev.speed && c.walls >= prev.walls && c.foods >= prev.foods); }
         prev = c;
     }

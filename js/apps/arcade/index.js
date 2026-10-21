@@ -3,6 +3,15 @@ import { createElement, createToast } from '../../components.js';
 import { isRestricted } from '../../core/age-gate.js';
 import { SettingsDB } from '../../db.js';
 import { getBalance, charge, formatMoney, WalletError } from '../../core/wallet.js';
+import { loadProgress, totalStars, GEMS_PER_STAR } from './games/levels.js';
+import { LEVELS as L2048 } from './games/g2048-core.js';
+import { LEVEL_COUNT as LSNAKE } from './games/snake-core.js';
+import { LEVELS as LMEMORY } from './games/memory-core.js';
+import { LEVELS as LMINES } from './games/mines-core.js';
+import { LEVELS as LSUDOKU } from './games/sudoku-core.js';
+import { LEVELS as LSLIDE } from './games/slide-core.js';
+import { LEVELS as LLIGHTS } from './games/lights-core.js';
+import { LEVELS as LBULLS } from './games/bulls-core.js';
 
 const GACHA_CONFIGS = {
   genshin: {
@@ -258,13 +267,29 @@ function bindRefill(container) {
   });
 }
 
+// total：關卡數（累計星數的分母）；store：關卡進度存在 SettingsDB 的哪個鍵（見 games/levels.js 的 key）
 const GAMES = [
   { id: 'gacha', name: '抽卡模擬' },
-  { id: 'g2048', name: '2048' },
-  { id: 'snake', name: '貪吃蛇' },
-  { id: 'memory', name: '翻牌配對' },
-  { id: 'mines', name: '踩地雷' }
+  { id: 'g2048', name: '2048', store: '2048', total: L2048.length },
+  { id: 'snake', name: '貪吃蛇', store: 'snake', total: LSNAKE },
+  { id: 'memory', name: '翻牌配對', store: 'memory', total: LMEMORY.length },
+  { id: 'mines', name: '踩地雷', store: 'mines', total: LMINES.length },
+  { id: 'sudoku', name: '數獨', store: 'sudoku', total: LSUDOKU.length },
+  { id: 'slide', name: '華容道', store: 'slide', total: LSLIDE.length },
+  { id: 'lights', name: '關燈', store: 'lights', total: LLIGHTS.length },
+  { id: 'bulls', name: '猜數字', store: 'bulls', total: LBULLS.length }
 ];
+
+// 各遊戲累計的星星（不含消消樂，它有自己的 App）
+async function starSummary() {
+  let got = 0, all = 0;
+  for (const g of GAMES) {
+    if (!g.store) continue;
+    got += totalStars(await loadProgress(g.store));
+    all += g.total * 3;
+  }
+  return { got, all };
+}
 
 async function renderArcade(params) {
   await loadGachaState();
@@ -280,6 +305,7 @@ async function renderArcade(params) {
     </header>
     
     <div class="page">
+      <p class="arcade-summary" id="arcade-summary"></p>
       <nav class="arcade-nav">${GAMES.map(g => `<button class="arcade-nav-btn" data-game="${g.id}">${g.name}</button>`).join('')}</nav>
       <div id="arcade-content"></div>
     </div>
@@ -288,26 +314,40 @@ async function renderArcade(params) {
   const backBtn = container.querySelector('.ios-back-btn');
   backBtn.onclick = () => Router.back();
   
-  const content = container.querySelector('#arcade-content');
+  let content = container.querySelector('#arcade-content');
   let stopGame = null;
   let token = 0;
   const lastGame = (await SettingsDB.get('arcade_last_game')) || 'gacha';
 
+  async function refreshSummary() {
+    const { got, all } = await starSummary();
+    const el = container.querySelector('#arcade-summary');
+    if (el) el.textContent = `累計 ★ ${got} / ${all} · 每拿到一顆新的星星，抽卡貨幣 +${GEMS_PER_STAR}`;
+  }
+
   async function show(id) {
     const mine = ++token;
+    refreshSummary();
     if (stopGame) { stopGame(); stopGame = null; }
     container.querySelectorAll('.arcade-nav-btn').forEach(b => b.classList.toggle('active', b.dataset.game === id));
-    content.innerHTML = '';
+    // 每個遊戲用全新的容器：各遊戲會在容器上綁點擊事件，換遊戲時舊的事件如果還在，會和新遊戲互相干擾（例如貪吃蛇的方向按鈕會被別的遊戲的 data-d 觸發）
+    const fresh = document.createElement('div');
+    fresh.id = 'arcade-content';
+    content.replaceWith(fresh);
+    content = fresh;
+    const target = fresh; // 之後有 await，使用者可能已經切到別的遊戲，所以不能再讀 content
     SettingsDB.set('arcade_last_game', id);
     if (id === 'gacha') {
       if (isRestricted('gacha')) {
-        content.innerHTML = '<div class="ag-wrap"><div style="font-size:48px">🔒</div><p class="ag-msg">抽卡模擬僅限 18 歲以上，滿 18 歲後會自動開放。</p></div>';
+        target.innerHTML = '<div class="ag-wrap"><div style="font-size:48px">🔒</div><p class="ag-msg">抽卡模擬僅限 18 歲以上，滿 18 歲後會自動開放。</p></div>';
         return;
       }
-      return renderGachaGame(content);
+      await loadGachaState(); // 玩小遊戲拿到的獎勵貨幣寫在資料庫裡，回來抽卡前要重新讀
+      if (mine !== token) return;
+      return renderGachaGame(target);
     }
     const mod = await import('./games/' + (id === 'g2048' ? 'g2048' : id) + '.js');
-    const stop = await mod.mount(content);
+    const stop = await mod.mount(target);
     if (mine !== token) stop?.(); else stopGame = stop;
   }
 

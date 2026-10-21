@@ -1,11 +1,13 @@
 // 2048 的純邏輯（不碰畫面），方便機器人驗證關卡
 export const N = 4;
 
-// 關卡：在步數內合出目標方塊
+// 關卡：在步數內合出目標方塊。步數是用機器人實測訂的（tests/unit/arcade-difficulty.test.mjs）：
+// 高手（往後看兩步的搜尋）每一關都能過、後期約 8 成；只會貪心的玩法到 512 以上就很吃力
 export const LEVELS = [
-    { target: 64, moves: 70 }, { target: 128, moves: 130 }, { target: 128, moves: 110 },
-    { target: 256, moves: 230 }, { target: 256, moves: 200 }, { target: 512, moves: 450 },
-    { target: 512, moves: 400 }, { target: 512, moves: 360 }, { target: 1024, moves: 900 }, { target: 1024, moves: 800 }
+    { target: 64, moves: 70 }, { target: 128, moves: 150 }, { target: 128, moves: 120 },
+    { target: 256, moves: 280 }, { target: 256, moves: 240 }, { target: 256, moves: 210 },
+    { target: 512, moves: 560 }, { target: 512, moves: 500 }, { target: 512, moves: 450 }, { target: 512, moves: 400 },
+    { target: 1024, moves: 1100 }, { target: 1024, moves: 1000 }, { target: 1024, moves: 900 }, { target: 1024, moves: 800 }
 ];
 
 export function slideLine(line) {

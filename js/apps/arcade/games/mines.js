@@ -1,25 +1,14 @@
 import { loadProgress, completeLevel, levelGridHtml, starText, totalStars } from './levels.js';
+import { LEVELS, neighbors as nb, newCells, plantFair, openCell as openFrom, isWon, starsFor } from './mines-core.js';
 
 const GAME = 'mines';
-// 每關的棋盤大小與地雷數，地雷密度都控制在 20% 以下
-const LEVELS = [
-    { w: 6, h: 6, mines: 4 }, { w: 7, h: 7, mines: 6 }, { w: 8, h: 8, mines: 8 }, { w: 9, h: 9, mines: 10 }, { w: 9, h: 9, mines: 12 },
-    { w: 9, h: 11, mines: 16 }, { w: 10, h: 12, mines: 20 }, { w: 10, h: 14, mines: 26 }, { w: 12, h: 12, mines: 28 }, { w: 12, h: 14, mines: 33 }
-];
 
 export async function mount(root) {
     let progress = await loadProgress(GAME);
     let level = 0, cells, state, flagMode, timerId, startedAt, elapsed, stars;
 
     const lv = () => LEVELS[level - 1];
-    const neighbors = i => {
-        const { w, h } = lv(), x = i % w, y = Math.floor(i / w), out = [];
-        for (let dy = -1; dy <= 1; dy++) for (let dx = -1; dx <= 1; dx++) {
-            const nx = x + dx, ny = y + dy;
-            if ((dx || dy) && nx >= 0 && ny >= 0 && nx < w && ny < h) out.push(ny * w + nx);
-        }
-        return out;
-    };
+    const neighbors = i => nb(lv().w, lv().h, i);
 
     function showMenu() {
         clearInterval(timerId);
@@ -27,37 +16,26 @@ export async function mount(root) {
         root.innerHTML = `<div class="ag-wrap">
             <p class="lv-summary">累計 ★ ${totalStars(progress)} / ${LEVELS.length * 3}</p>
             ${levelGridHtml(progress, LEVELS.length, n => LEVELS[n - 1].w + '×' + LEVELS[n - 1].h + '·' + LEVELS[n - 1].mines + '雷')}
-            <p class="ag-hint">第一下一定安全；越快完成星星越多</p>
+            <p class="ag-hint">第一下一定安全，而且每一盤都能靠推理解開、不用猜；越快完成星星越多</p>
         </div>`;
     }
 
     function startLevel(n) {
         clearInterval(timerId);
         level = n;
-        cells = Array.from({ length: lv().w * lv().h }, () => ({ mine: false, open: false, flag: false, n: 0 }));
+        cells = newCells(lv().w, lv().h);
         state = 'ready'; flagMode = false; startedAt = 0; elapsed = 0; stars = 0;
         draw();
     }
 
     // 第一下一定安全：在第一次點擊後才佈雷，避開點到的格子與它周圍
     function plant(safe) {
-        const banned = new Set([safe, ...neighbors(safe)]);
-        const pool = cells.map((_, i) => i).filter(i => !banned.has(i)).sort(() => Math.random() - 0.5);
-        pool.slice(0, lv().mines).forEach(i => { cells[i].mine = true; });
-        cells.forEach((c, i) => { c.n = neighbors(i).filter(j => cells[j].mine).length; });
+        plantFair(cells, lv().w, lv().h, lv().mines, safe);
         state = 'playing'; startedAt = Date.now();
         timerId = setInterval(() => { elapsed = Math.floor((Date.now() - startedAt) / 1000); const t = root.querySelector('#mn-time'); if (t) t.textContent = elapsed; }, 500);
     }
 
-    function openCell(i) {
-        const stack = [i];
-        while (stack.length) {
-            const j = stack.pop(), c = cells[j];
-            if (c.open || c.flag) continue;
-            c.open = true;
-            if (c.n === 0 && !c.mine) stack.push(...neighbors(j));
-        }
-    }
+    const openCell = i => openFrom(cells, lv().w, lv().h, i);
 
     async function act(i, asFlag) {
         if (state === 'won' || state === 'lost') return;
@@ -76,10 +54,9 @@ export async function mount(root) {
             if (c.mine) { c.open = true; state = 'lost'; } else openCell(i);
         }
         if (state === 'lost') { clearInterval(timerId); cells.forEach(x => { if (x.mine) x.open = true; }); }
-        else if (cells.every(x => x.mine || x.open)) {
+        else if (isWon(cells)) {
             state = 'won'; clearInterval(timerId); elapsed = Math.floor((Date.now() - startedAt) / 1000);
-            const par = cells.length * 1.6; // 參考時間
-            stars = elapsed <= par * 0.6 ? 3 : elapsed <= par ? 2 : 1;
+            stars = starsFor(elapsed, cells.length);
             progress = await completeLevel(GAME, level, stars, LEVELS.length);
         }
         draw();

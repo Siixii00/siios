@@ -4,14 +4,15 @@ export const FRUITS = ['🍎', '🍌', '🍇', '🍓', '🍊', '🍐'];
 export const LEVEL_COUNT = 30;
 
 // 第 n 關的設定：水果種類越多越難；每 3 關有一關是「蒐集指定水果」。
-// 目標是依機器人實測的平均表現乘上逐關上升的比例訂出來的（每步平均得分／蒐集量依水果種類而不同）
-const SCORE_PER_MOVE = { 4: 220, 5: 92, 6: 66 };
-const COLLECT_PER_MOVE = { 4: 2.3, 5: 1.1, 6: 0.75 };
+// 目標＝「一般玩家平均每步的表現」× 步數 × 逐關上升的比例。一般玩家介於「隨機走」與「每步挑最高分」的機器人之間
+// （tests/unit/arcade-difficulty.test.mjs 會用兩種機器人實測通關率，避免日後調參把關卡調得太簡單或打不過）
+const SCORE_PER_MOVE = { 4: 340, 5: 143, 6: 84 };
+const COLLECT_PER_MOVE = { 4: 3.1, 5: 1.5, 6: 0.89 };
 export function levelConfig(n) {
     const types = n <= 4 ? 4 : n <= 14 ? 5 : 6;
     const moves = Math.max(15, 25 - Math.floor(n / 3));
     const collect = n % 3 === 0;
-    const ratio = (collect ? 0.5 : 0.4) + n * 0.022;
+    const ratio = (collect ? 0.48 : 0.5) + n * 0.02;
     return {
         level: n,
         types,

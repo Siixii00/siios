@@ -1,11 +1,14 @@
-import { LEVEL_COUNT, levelConfig, createState, setDir, step, N } from './snake-core.js';
+import { SettingsDB } from '../../../db.js';
+import { LEVEL_COUNT, levelConfig, createState, setDir, step, N, ENDLESS, endlessSpeed } from './snake-core.js';
 import { loadProgress, completeLevel, levelGridHtml, starText, totalStars } from './levels.js';
 
 const GAME = 'snake';
 const CELL = 20;
+const BEST_KEY = 'arcade_snake_best';
 
 export async function mount(root) {
     let progress = await loadProgress(GAME);
+    let best = Number(await SettingsDB.get(BEST_KEY)) || 0;
     let state = null, timer = null, level = 0, attempt = 0, status = 'menu', ctx = null, canvas = null;
 
     function showMenu() {
@@ -14,7 +17,8 @@ export async function mount(root) {
         root.innerHTML = `<div class="ag-wrap">
             <p class="lv-summary">累計 ★ ${totalStars(progress)} / ${LEVEL_COUNT * 3}</p>
             ${levelGridHtml(progress, LEVEL_COUNT, n => { const c = levelConfig(n); return c.foods + ' 顆' + (c.walls ? '·障礙' : ''); })}
-            <p class="ag-hint">一次過關 3 星，第二次 2 星，之後 1 星</p>
+            <button class="ag-btn" data-act="endless">無盡模式（最高 ${best} 顆）</button>
+            <p class="ag-hint">一次過關 3 星，第二次 2 星，之後 1 星；無盡模式沒有終點，吃越多越快</p>
         </div>`;
     }
 
@@ -23,12 +27,13 @@ export async function mount(root) {
         if (!keepAttempts) attempt = 0;
         attempt++;
         level = n;
-        state = createState(levelConfig(n));
+        const endless = n === 'endless';
+        state = createState(endless ? ENDLESS : levelConfig(n));
         status = 'ready';
         root.innerHTML = `
         <div class="ag-wrap" style="position:relative">
-            <div class="lv-bar"><button class="ag-btn" data-act="menu">‹ 選關</button><span>第 ${n} 關</span></div>
-            <div class="ag-bar"><div><span>食物</span><strong id="sn-eaten">0/${state.cfg.foods}</strong></div><div><span>嘗試</span><strong>${attempt}</strong></div><button class="ag-btn" id="sn-start">開始</button></div>
+            <div class="lv-bar"><button class="ag-btn" data-act="menu">‹ 選關</button><span>${endless ? '無盡模式' : '第 ' + n + ' 關'}</span></div>
+            <div class="ag-bar"><div><span>食物</span><strong id="sn-eaten">${endless ? '0' : '0/' + state.cfg.foods}</strong></div><div><span>${endless ? '最高' : '嘗試'}</span><strong>${endless ? best : attempt}</strong></div><button class="ag-btn" id="sn-start">開始</button></div>
             <canvas id="sn-canvas" width="${N * CELL}" height="${N * CELL}" class="ag-canvas" style="touch-action:none"></canvas>
             <p class="ag-msg" id="sn-msg"></p>
             <div class="ag-dpad"><button data-d="up">▲</button><div><button data-d="left">◀</button><button data-d="down">▼</button><button data-d="right">▶</button></div></div>
@@ -58,7 +63,9 @@ export async function mount(root) {
     async function tick() {
         const before = state.eaten;
         step(state);
-        if (state.eaten !== before) { const el = root.querySelector('#sn-eaten'); if (el) el.textContent = state.eaten + '/' + state.cfg.foods; }
+        if (state.eaten !== before) { const el = root.querySelector('#sn-eaten'); if (el) el.textContent = state.cfg.foods === Infinity ? String(state.eaten) : state.eaten + '/' + state.cfg.foods; }
+        // 無盡模式：吃越多越快（速度變了才重設計時器）
+        if (state.cfg.foods === Infinity && state.eaten !== before && endlessSpeed(state.eaten) !== endlessSpeed(before) && !state.dead) { clearInterval(timer); timer = setInterval(tick, endlessSpeed(state.eaten)); }
         paint();
         if (state.dead) return finish(false);
         if (state.won) return finish(true);
@@ -75,7 +82,9 @@ export async function mount(root) {
                 <div class="m3-btns">${level < LEVEL_COUNT ? '<button data-act="next">下一關</button>' : ''}<button data-act="again">再玩一次</button><button data-act="menu">選關</button></div></div></div>`);
         } else {
             root.querySelector('#sn-msg').className = 'ag-msg lose';
-            root.querySelector('#sn-msg').textContent = '撞到了！吃了 ' + state.eaten + ' 顆';
+            let note = '';
+            if (state.cfg.foods === Infinity && state.eaten > best) { best = state.eaten; note = ' 🏆 新紀錄'; await SettingsDB.set(BEST_KEY, best); }
+            root.querySelector('#sn-msg').textContent = '撞到了！吃了 ' + state.eaten + ' 顆' + note;
             startBtn.textContent = '重試';
         }
     }
@@ -97,6 +106,7 @@ export async function mount(root) {
         if (d && state) return setDir(state, d);
         if (e.target.closest('#sn-start')) return begin();
         if (act === 'menu') showMenu();
+        else if (act === 'endless') startLevel('endless');
         else if (act === 'again') startLevel(level);
         else if (act === 'next') startLevel(level + 1);
     });

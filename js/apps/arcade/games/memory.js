@@ -1,10 +1,7 @@
 import { loadProgress, completeLevel, levelGridHtml, starText, totalStars } from './levels.js';
+import { LEVELS, cols, makeDeck, starsFor } from './memory-core.js';
 
 const GAME = 'memory';
-const EMOJI = ['🍎', '🍋', '🍇', '🍓', '🍒', '🥝', '🍑', '🍍', '🥥', '🍉', '🌶️', '🥕'];
-// 每關的對數與步數上限：越後面對數越多、上限越緊
-const LEVELS = [3, 4, 5, 6, 6, 8, 8, 10, 10, 12, 12, 12].map((pairs, i) => ({ pairs, limit: Math.ceil(pairs * (i < 8 ? 2.8 : i < 10 ? 2.4 : 2.1)) }));
-const cols = pairs => (pairs * 2 <= 12 ? 4 : pairs * 2 <= 20 ? 5 : 6);
 
 export async function mount(root) {
     let progress = await loadProgress(GAME);
@@ -24,8 +21,7 @@ export async function mount(root) {
         clearInterval(timerId);
         level = n;
         const lv = LEVELS[n - 1];
-        const faces = EMOJI.slice(0, lv.pairs);
-        cards = [...faces, ...faces].map((face, i) => ({ id: i, face })).sort(() => Math.random() - 0.5);
+        cards = makeDeck(lv.pairs);
         flipped = []; moves = 0; matched = new Set(); locked = false; startedAt = 0; elapsed = 0; finished = false; failed = false; stars = 0;
         draw();
     }
@@ -62,7 +58,7 @@ export async function mount(root) {
             matched.add(a); matched.add(b); flipped = [];
             if (matched.size === cards.length) {
                 finished = true; clearInterval(timerId); elapsed = Math.floor((Date.now() - startedAt) / 1000);
-                stars = moves <= lv.pairs * 1.6 ? 3 : moves <= lv.pairs * 2.1 ? 2 : 1;
+                stars = starsFor(lv.pairs, moves);
                 progress = await completeLevel(GAME, level, stars, LEVELS.length);
             } else if (moves >= lv.limit) { failed = true; clearInterval(timerId); }
             return draw();

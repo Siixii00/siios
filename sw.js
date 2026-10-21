@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sxios-v95';
+const CACHE_NAME = 'sxios-v98';
 
 // 外部資源（資料庫函式庫、圖示與字型）也要進快取：離線時沒有它們，App 連啟動都不行（idb 是 db.js 的 ES 模組），圖示也會變成一串英文字。
 const CDN_HOSTS = ['cdn.jsdelivr.net', 'cdnjs.cloudflare.com', 'fonts.googleapis.com', 'fonts.gstatic.com'];
@@ -24,13 +24,23 @@ const APP_ASSETS = [
   '/siios/js/apps/ao3/style.css',
   '/siios/js/apps/appearance/index.js',
   '/siios/js/apps/appearance/style.css',
+  '/siios/js/apps/arcade/games/bulls-core.js',
+  '/siios/js/apps/arcade/games/bulls.js',
   '/siios/js/apps/arcade/games/g2048-core.js',
   '/siios/js/apps/arcade/games/g2048.js',
   '/siios/js/apps/arcade/games/levels.js',
+  '/siios/js/apps/arcade/games/lights-core.js',
+  '/siios/js/apps/arcade/games/lights.js',
+  '/siios/js/apps/arcade/games/memory-core.js',
   '/siios/js/apps/arcade/games/memory.js',
+  '/siios/js/apps/arcade/games/mines-core.js',
   '/siios/js/apps/arcade/games/mines.js',
+  '/siios/js/apps/arcade/games/slide-core.js',
+  '/siios/js/apps/arcade/games/slide.js',
   '/siios/js/apps/arcade/games/snake-core.js',
   '/siios/js/apps/arcade/games/snake.js',
+  '/siios/js/apps/arcade/games/sudoku-core.js',
+  '/siios/js/apps/arcade/games/sudoku.js',
   '/siios/js/apps/arcade/index.js',
   '/siios/js/apps/arcade/style.css',
   '/siios/js/apps/bilibili/index.js',

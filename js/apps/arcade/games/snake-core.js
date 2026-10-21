@@ -1,16 +1,20 @@
 // 貪吃蛇的純邏輯（不碰畫面），方便機器人驗證關卡
 export const N = 16;
-export const LEVEL_COUNT = 10;
+export const LEVEL_COUNT = 15;
 export const DIRS = { up: [0, -1], down: [0, 1], left: [-1, 0], right: [1, 0] };
 
-// 第 n 關：要吃的食物數、速度、障礙物數量（第 3 關起有障礙）
+// 第 n 關：要吃的食物數、速度（每格幾毫秒）、障礙物數量（第 3 關起有障礙）。第 11 關起是高手挑戰：速度逼近每秒 12 格
 export function levelConfig(n) {
-    return { level: n, foods: Math.min(20, 4 + n * 2), speed: Math.max(110, 170 - n * 6), walls: n < 3 ? 0 : (n - 2) * 2 };
+    return { level: n, foods: Math.min(24, 4 + n * 2), speed: Math.max(80, 170 - n * 6), walls: n < 3 ? 0 : (n - 2) * 2 };
 }
+
+// 無盡模式：沒有過關，吃越多越快（每 3 顆加快一點，最快每格 70 毫秒），分數就是吃到的顆數
+export const ENDLESS = { level: 'endless', foods: Infinity, speed: 150, walls: 0 };
+export const endlessSpeed = eaten => Math.max(70, ENDLESS.speed - Math.floor(eaten / 3) * 4);
 
 const key = (x, y) => y * N + x;
 
-// 障礙物不能擋住起點周圍，也不能把場地切成互相到不了的區塊
+// 障礙物不能擋住起點周圍，不能把場地切成互相到不了的區塊，也不能圍出死胡同
 function connected(blocked) {
     const free = []; for (let i = 0; i < N * N; i++) if (!blocked.has(i)) free.push(i);
     const seen = new Set([free[0]]), stack = [free[0]];
@@ -26,6 +30,20 @@ function connected(blocked) {
     return seen.size === free.length;
 }
 
+// 不能有「死胡同」：每個空格至少要有兩個可以走的鄰格，否則蛇一鑽進去就只能撞死（蛇越長越容易被困）
+export function hasNoDeadEnds(blocked) {
+    for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+        if (blocked.has(key(x, y))) continue;
+        let open = 0;
+        for (const [dx, dy] of Object.values(DIRS)) {
+            const nx = x + dx, ny = y + dy;
+            if (nx >= 0 && ny >= 0 && nx < N && ny < N && !blocked.has(key(nx, ny))) open++;
+        }
+        if (open < 2) return false;
+    }
+    return true;
+}
+
 export function createState(cfg) {
     const snake = [{ x: 8, y: 8 }, { x: 7, y: 8 }, { x: 6, y: 8 }];
     const walls = new Set();
@@ -36,7 +54,7 @@ export function createState(cfg) {
         const k = key(x, y);
         if (walls.has(k)) continue;
         walls.add(k);
-        if (!connected(walls)) walls.delete(k);
+        if (!connected(walls) || !hasNoDeadEnds(walls)) walls.delete(k);
     }
     const s = { cfg, snake, walls, dir: 'right', eaten: 0, steps: 0, food: null, dead: false, won: false };
     placeFood(s);
