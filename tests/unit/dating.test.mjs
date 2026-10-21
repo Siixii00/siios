@@ -2,7 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { STAGES, stageFor, timeSlot, SCENES, INTERACTIONS, customScene, buildDatePrompt, parseReply, renderNarration,
     emptyRelation, applyAffection, finishDate, localSummary, clampDelta, DAILY_GAIN_CAP,
-    relationStage, effAffection, checkUnlock, unlockReq, interactionUnlock, chatStatsFromMessages, estimateAffinity, applyChatEstimate, setRelationship, CHAT_AFFINITY_CAP } from '../../js/apps/dating/dating-data.js';
+    detectRelationHint, formatWorldFacts, relationStage, effAffection, checkUnlock, unlockReq, interactionUnlock, chatStatsFromMessages, estimateAffinity, applyChatEstimate, setRelationship, CHAT_AFFINITY_CAP } from '../../js/apps/dating/dating-data.js';
 
 test('關係階段由好感度決定，邊界正確', () => {
     assert.equal(stageFor(0).id, 'stranger');
@@ -209,4 +209,59 @@ test('提示詞：使用者指定的階段與補充說明會帶進去（以補�
     const p = buildDatePrompt({ charName: '小雪', userName: '阿明', scene, slot, affection: 60, stage: married, note: '從小一起長大，婚後同居', turns: 2 });
     assert.ok(p.includes('已婚') && p.includes('夫妻') && p.includes('從小一起長大，婚後同居') && p.includes('以此為準'));
     assert.ok(!buildDatePrompt({ charName: '小雪', scene, slot, affection: 60, turns: 2 }).includes('補充說明'));
+});
+
+// ───── 世界書 ─────
+const world = (name, text) => ({ kind: 'world', name, text });
+const card = text => ({ kind: 'card', name: '角色設定', text });
+
+test('從世界書判斷關係：提到這個角色的句子才算；{{char}} 也算；取最高的階段', () => {
+    const h = detectRelationHint({ charName: '小雪', sources: [world('關係', '小雪與使用者已經結婚三年，住在同一個家。\n另一個角色阿明是使用者的朋友。')] });
+    assert.deepEqual([h.stageId, h.source], ['married', '關係']);
+    assert.equal(detectRelationHint({ charName: '小雪', sources: [world('設定', '{{char}}是{{user}}的男朋友，兩人交往中。')] }).stageId, 'lover');
+    assert.equal(detectRelationHint({ charName: '小雪', sources: [world('設定', '小雪和使用者訂婚了。小雪也有曖昧的過去。')] }).stageId, 'engaged');
+    assert.equal(detectRelationHint({ charName: '小雪', sources: [world('設定', '兩人互有好感，阿明很在意對方。')] }), null, '沒提到角色名的句子不算（可能是別的角色）');
+});
+
+test('世界書判斷：別的角色的關係、前任、離婚、過世、假設與願望都不算', () => {
+    const none = text => detectRelationHint({ charName: '小雪', sources: [world('設定', text)] });
+    assert.equal(none('阿明和他的老婆住在隔壁。'), null);
+    assert.equal(none('小雪是使用者的前女友。'), null);
+    assert.equal(none('小雪的丈夫三年前過世了。'), null);
+    assert.equal(none('小雪已經離婚，現在一個人住。'), null);
+    assert.equal(none('小雪希望有一天能和使用者結婚。'), null);
+    assert.equal(none('如果小雪和使用者交往中，她會很害羞。'), null);
+    assert.equal(none('小雪不是使用者的女朋友。'), null);
+});
+
+test('角色卡自己的句子不必提到名字；條目名稱含角色名時整條都算', () => {
+    assert.equal(detectRelationHint({ charName: '小雪', sources: [card('與使用者是夫妻關係，個性溫柔。')] }).stageId, 'married');
+    assert.equal(detectRelationHint({ charName: '小雪', sources: [world('小雪的設定', '與使用者正在交往中。')] }).stageId, 'lover');
+    assert.equal(detectRelationHint({ charName: '小雪', sources: [world('世界觀', '與使用者正在交往中。')] }), null);
+});
+
+test('世界書判斷的階段是自動模式的最低階段；手動指定後就不採用；取手動與世界書中較高者', () => {
+    const rel = { ...emptyRelation(), affection: 20, hint: { stageId: 'married', source: '關係', snippet: 'x' } };
+    assert.equal(relationStage(rel).id, 'married');
+    assert.equal(effAffection(rel), 95);
+    assert.equal(checkUnlock({ affection: 60, dates: 3 }, rel).ok, true, '世界書寫已婚時，不必再補約會次數');
+    const manual = { ...rel, autoChat: false, stageFloor: 'friend' };
+    assert.equal(relationStage(manual).id, 'friend', '手動指定了，世界書不再算');
+    assert.equal(relationStage({ ...rel, stageFloor: 'engaged' }).id, 'married', '自動模式下取較高的');
+});
+
+test('世界設定整理：有名稱、有長度上限、略過空的', () => {
+    const txt = formatWorldFacts([{ name: '關係', content: '小雪與使用者已婚' }, { name: '空', content: '  ' }, { content: '沒有名稱的設定' }]);
+    assert.equal(txt, '[關係] 小雪與使用者已婚\n沒有名稱的設定');
+    const long = formatWorldFacts([{ name: 'a', content: 'x'.repeat(2000) }, { name: 'b', content: 'y'.repeat(2000) }], 2500);
+    assert.ok(long.length <= 2600 && long.includes('…'));
+    assert.equal(formatWorldFacts(null), '');
+});
+
+test('提示詞：世界書與角色設定會重申，並說明以世界書為準；沒有就不出現', () => {
+    const scene = SCENES[0], slot = timeSlot(new Date(2026, 0, 1, 10));
+    const p = buildDatePrompt({ charName: '小雪', scene, slot, affection: 50, turns: 2, worldFacts: '[關係] 小雪與使用者已婚', cardFacts: '性格：傲嬌' });
+    for (const need of ['必須遵守的世界設定', '[關係] 小雪與使用者已婚', '以它為準', '你的角色設定（重申）', '性格：傲嬌']) assert.ok(p.includes(need), need);
+    const bare = buildDatePrompt({ charName: '小雪', scene, slot, affection: 50, turns: 2 });
+    assert.ok(!bare.includes('世界書') && !bare.includes('重申'));
 });

@@ -14,6 +14,15 @@ export const STAGES = [
 
 const stageIndex = id => Math.max(0, STAGES.findIndex(s => s.id === id));
 
+// 最低階段：使用者手動指定的（stageFloor），加上自動模式下從世界書／角色設定讀到的（hint）；兩者取較高。
+// 手動指定關係（autoChat 關閉）時，不再採用世界書的判斷——使用者說了算
+function floorOf(rel) {
+    const manual = STAGES.find(s => s.id === rel?.stageFloor) || null;
+    const hinted = rel?.autoChat === false ? null : STAGES.find(s => s.id === rel?.hint?.stageId) || null;
+    if (manual && hinted) return stageIndex(manual.id) >= stageIndex(hinted.id) ? manual : hinted;
+    return manual || hinted;
+}
+
 // 只看好感度（不含手動指定的階段）
 export function stageFor(affection) {
     const a = Number(affection) || 0;
@@ -24,13 +33,13 @@ export function stageFor(affection) {
 // 手動指定的是「關係狀態」，不會因為某一輪好感下降就消失（結了婚不會因為吵架就變成朋友）
 export function relationStage(rel) {
     const auto = stageFor(rel?.affection);
-    const floor = STAGES.find(s => s.id === rel?.stageFloor);
+    const floor = floorOf(rel);
     return floor && stageIndex(floor.id) > stageIndex(auto.id) ? floor : auto;
 }
 
 // 解鎖與提示詞用的好感度：手動指定的階段至少視為達到該階段的門檻
 export function effAffection(rel) {
-    const floor = STAGES.find(s => s.id === rel?.stageFloor);
+    const floor = floorOf(rel);
     return Math.max(Number(rel?.affection) || 0, floor ? floor.min : 0);
 }
 
@@ -43,7 +52,7 @@ export function checkUnlock(u, rel) {
     const req = unlockReq(u), missing = [];
     if (effAffection(rel) < (req.affection || 0)) missing.push(`好感度 ${req.affection}`);
     // 使用者手動指定了曖昧以上的關係，代表這段關係本來就存在，不必再補約會次數
-    const given = rel?.stageFloor && stageIndex(rel.stageFloor) >= stageIndex('close');
+    const given = floorOf(rel) && stageIndex(floorOf(rel).id) >= stageIndex('close');
     if (!given && (rel?.dates || 0) < (req.dates || 0)) missing.push(`約會 ${req.dates} 次`);
     if (req.stage && stageIndex(relationStage(rel).id) < stageIndex(req.stage)) missing.push(`關係達到「${STAGES[stageIndex(req.stage)].name}」`);
     return { ok: missing.length === 0, missing };
@@ -248,7 +257,7 @@ export const clampAffection = n => Math.max(0, Math.min(100, Math.round(Number(n
 export const dayKey = (d = new Date()) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 
 // ───── 提示詞 ─────
-export function buildDatePrompt({ charName, userName, scene, slot, affection, stage: stageIn = null, note = '', mood = '', turns = 0, gift = null }) {
+export function buildDatePrompt({ charName, userName, scene, slot, affection, stage: stageIn = null, note = '', worldFacts = '', cardFacts = '', mood = '', turns = 0, gift = null }) {
     const stage = stageIn || stageFor(affection);
     const lines = [
         '# 約會（虛擬見面）',
@@ -259,6 +268,8 @@ export function buildDatePrompt({ charName, userName, scene, slot, affection, st
         `關係：${stage.name}（好感度 ${affection}/100）。${stage.hint}`,
         note ? `使用者對你們關係的補充說明：${String(note).slice(0, 300)}（以此為準，不要和它矛盾）` : '',
         mood ? `你目前的心情：${mood}。` : '',
+        worldFacts ? `\n## 必須遵守的世界設定（世界書）\n以下是這個世界的事實，約會中不能違背；與上面的場景規則或你的臆測衝突時，以它為準（例如你們的關係、身分、稱呼、各自的背景）。\n${worldFacts}` : '',
+        cardFacts ? `\n## 你的角色設定（重申）\n${cardFacts}\n這是你的本質：說話方式、價值觀與底線都要符合，不要因為場景輕鬆就偏離。` : '',
         turns === 0 ? '這是見面的開場：描寫你抵達或見到對方的瞬間與第一句話。' : '',
         gift ? `對方剛送了你禮物「${gift.name}」${gift.price ? `（價值 $${gift.price}）` : ''}：依你的個性與目前的關係自然地反應。` : '',
         '',
@@ -302,7 +313,55 @@ export function renderNarration(text) {
 }
 
 // ───── 關係紀錄（每個角色一筆，存在 SettingsDB 的 dating_relations）─────
-export const emptyRelation = () => ({ affection: 10, dates: 0, lastDate: null, daily: { day: '', gained: 0 }, history: [], stageFloor: null, note: '', autoChat: true, chat: null });
+export const emptyRelation = () => ({ affection: 10, dates: 0, lastDate: null, daily: { day: '', gained: 0 }, history: [], stageFloor: null, note: '', autoChat: true, chat: null, hint: null });
+
+// ───── 從世界書與角色設定讀關係 ─────
+// 有人把關係寫在世界書（因為角色設定常常不被好好遵守），所以也要讀。這是文字比對，不是理解：
+// 只看提到這個角色（名字或 {{char}}）的句子，或角色卡自己的句子；「前女友」「已經離婚」「曾經」「過世」這類句子略過。
+const HINT_PATTERNS = [
+    { stageId: 'married', re: /已婚|結婚|夫妻|老公|老婆|丈夫|妻子|配偶|新婚|婚後/ },
+    { stageId: 'engaged', re: /訂婚|未婚夫|未婚妻|婚約/ },
+    { stageId: 'lover', re: /交往中|男朋友|女朋友|男友|女友|戀人|情侶|熱戀|情人/ },
+    { stageId: 'close', re: /曖昧|暗戀|互有好感|互相喜歡/ }
+];
+const HINT_SKIP = /前(?:男|女)?(?:友|任|夫|妻)|離婚|離異|分手|過世|去世|逝世|不是|沒有|並非|尚未|還沒|未曾|曾經|以前|過去|如果|假如|想要|希望|夢想|幻想|假裝/;
+
+// sources：[{ kind: 'card' | 'world', name, text }]；回傳 { stageId, source, snippet } 或 null
+export function detectRelationHint({ charName = '', sources = [] } = {}) {
+    const mentions = s => /\{\{\s*char\s*\}\}|<char>|<bot>/i.test(s) || (charName && s.includes(charName));
+    let best = null;
+    for (const src of sources) {
+        const wholeEntry = src.kind === 'card' || (src.name && charName && String(src.name).includes(charName));
+        for (const raw of String(src.text || '').split(/[。！？!?\n]/)) {
+            const sentence = raw.trim();
+            if (!sentence || HINT_SKIP.test(sentence)) continue;
+            if (!wholeEntry && !mentions(sentence)) continue;
+            for (const p of HINT_PATTERNS) {
+                if (!p.re.test(sentence)) continue;
+                if (!best || stageIndex(p.stageId) > stageIndex(best.stageId)) {
+                    best = { stageId: p.stageId, source: src.name || (src.kind === 'card' ? '角色設定' : '世界書'), snippet: sentence.slice(0, 40) };
+                }
+                break;
+            }
+        }
+    }
+    return best;
+}
+
+// 約會提示詞用：把必須遵守的世界設定整理成一段文字（總長有上限，避免佔掉整個上下文）
+export function formatWorldFacts(entries, maxChars = 2500) {
+    const out = [];
+    let used = 0;
+    for (const e of entries || []) {
+        const content = String(e?.content || '').trim();
+        if (!content) continue;
+        const block = e.name ? `[${e.name}] ${content}` : content;
+        if (used + block.length > maxChars) { const room = maxChars - used; if (room > 80) out.push(block.slice(0, room) + '…'); break; }
+        out.push(block);
+        used += block.length;
+    }
+    return out.join('\n');
+}
 
 // ───── 用聊天室判斷好感度 ─────
 // 從聊天訊息（含 Discord 同步進來的）統計：使用者說了幾句、有幾天聊過、最後一次聊天的時間

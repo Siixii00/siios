@@ -1,5 +1,5 @@
 ﻿import { minorSafetyPrompt } from './age-gate.js';
-import { CharactersDB, UsersDB, SettingsDB, GlobalSettingsDB, GlobalForbiddenDB } from '../db.js';
+import { CharactersDB, UsersDB, SettingsDB, GlobalSettingsDB, GlobalForbiddenDB, KeywordSettingsDB } from '../db.js';
 import { buildMemoryFilters } from './memory-prefs.js';
 
 async function buildAppContext(options = {}) {
@@ -7,7 +7,8 @@ async function buildAppContext(options = {}) {
         characterId = null,
         userId = null,
         userMessage = '',
-        chatId = null
+        chatId = null,
+        keywordText = '' // 額外拿來比對世界書關鍵字的文字（例如場景、最近的對話），不當作記憶的查詢句
     } = options;
 
     const context = {
@@ -50,6 +51,16 @@ async function buildAppContext(options = {}) {
                 content: entry.content
             });
         }
+    }
+
+    // 世界書的「關鍵字」條目：訊息或額外文字裡出現關鍵字才會帶入（聊天室一直是這樣，各個 App 之前沒有讀）
+    const triggerText = [userMessage, keywordText].filter(Boolean).join('\n');
+    if (triggerText) {
+        try {
+            for (const entry of await KeywordSettingsDB.matchKeywords(triggerText)) {
+                if (entry.content) context.worldInfo.push({ id: entry.id, name: entry.name, content: entry.content, priority: entry.priority || 'middle' });
+            }
+        } catch { /* 世界書讀取失敗不影響其他內容 */ }
     }
 
     // Retrieve memories if memory system is enabled

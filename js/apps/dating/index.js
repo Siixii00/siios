@@ -1,6 +1,6 @@
 ﻿import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
-import { CharactersDB, SettingsDB, UsersDB, ChatsDB, MessagesDB } from '../../db.js';
+import { CharactersDB, SettingsDB, UsersDB, ChatsDB, MessagesDB, GlobalSettingsDB, KeywordSettingsDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
@@ -8,7 +8,7 @@ import { askConfirm } from '../../core/dialogs.js';
 import { GIFTS, getInventoryCounts, consumeGift } from '../../core/gifts.js';
 import { charge, formatMoney } from '../../core/wallet.js';
 import {
-    STAGES, relationStage, effAffection, checkUnlock, interactionUnlock, chatStatsFromMessages, applyChatEstimate, setRelationship,
+    STAGES, relationStage, effAffection, checkUnlock, interactionUnlock, chatStatsFromMessages, applyChatEstimate, setRelationship, detectRelationHint, formatWorldFacts,
     timeSlot, SCENES, sceneById, customScene, INTERACTIONS, buildDatePrompt, parseReply, renderNarration, esc,
     emptyRelation, applyAffection, finishDate, localSummary, clampDelta, clampAffection
 } from './dating-data.js';
@@ -37,8 +37,26 @@ async function saveRelation(id, rel) {
 // 用聊天室判斷好感：統計這個角色的聊天（含 Discord 同步進來的），好感度只會被往上拉到評估值。
 // 評估結果記在關係紀錄裡，6 小時內不重算（聊天室很長時避免每次都全部讀一遍）
 const CHAT_REFRESH_MS = 6 * 60 * 60 * 1000;
+async function readRelationHint(charId) {
+    try {
+        const c = await CharactersDB.getById(charId);
+        if (!c) return null;
+        const sources = [{ kind: 'card', name: '角色設定', text: [c.personality, c.scenario, c.description].filter(Boolean).join('\n') }];
+        for (const e of [...await GlobalSettingsDB.getAll(), ...await KeywordSettingsDB.getAll()]) {
+            if (e.enabled && e.content) sources.push({ kind: 'world', name: e.name, text: e.content });
+        }
+        return detectRelationHint({ charName: c.name, sources });
+    } catch (e) {
+        console.warn('[Dating] 讀取世界書失敗：', e);
+        return null;
+    }
+}
+
 async function refreshFromChats(charId, force = false) {
-    const rel = relOf(charId);
+    let rel = relOf(charId);
+    // 世界書／角色設定可能隨時被改，每次進關係頁都重新判斷（只是讀文字，很快）
+    const hint = await readRelationHint(charId);
+    if (JSON.stringify(hint) !== JSON.stringify(rel.hint || null)) { rel = { ...rel, hint }; await saveRelation(charId, rel); }
     if (!force && rel.chat && Date.now() - rel.chat.at < CHAT_REFRESH_MS) return rel;
     try {
         const chats = (await ChatsDB.getAll()).filter(c => !c.is_group && (c.character_id === charId || (c.member_ids || []).includes(charId)));
@@ -145,6 +163,7 @@ function viewHub() {
         <p class="dt-muted">好感度 ${r.affection}/100${next ? ` · 再 ${next.min - r.affection} 到「${next.name}」` : ' · 已是最親密的關係'}</p>
         <p class="dt-muted">約會 ${r.dates} 次 · 上次：${ago(r.lastDate)}</p>
         ${r.note ? `<p class="dt-note">${esc(r.note)}</p>` : ''}
+        ${r.hint && r.autoChat !== false ? `<p class="dt-muted">📖 依「${esc(r.hint.source)}」判斷為「${esc(STAGES.find(s => s.id === r.hint.stageId)?.name || '')}」（${esc(r.hint.snippet)}…）。不對的話到「關係設定」手動指定。</p>` : ''}
         ${chat && chat.userMsgs ? `<p class="dt-muted">聊天紀錄評估：約 ${chat.estimate}（你說了 ${chat.userMsgs} 句、聊過 ${chat.activeDays} 天${r.autoChat === false ? '，目前為手動指定' : ''}）</p>` : ''}
         <button class="dt-primary" data-act="to-scenes"><i class="fas fa-heart"></i> 開始約會</button>
         <button class="dt-link" data-act="relation"><i class="fas fa-sliders-h"></i> 關係設定</button>
@@ -308,7 +327,7 @@ function openRelationSheet(container, go) {
     const current = r.autoChat === false || r.stageFloor ? (r.stageFloor || relationStage(r).id) : 'auto';
     const sheet = openSheet(container, `
       <h3 class="dt-sub">和${esc(c.name)}的關係</h3>
-      <p class="dt-muted">選「自動」會依你們的聊天紀錄判斷（只會往上調）。如果你們在聊天室裡已經是別的關係，可以直接指定，例如交往中或已婚；指定後會解鎖該階段的場景與互動。</p>
+      <p class="dt-muted">選「自動」會依你們的聊天紀錄判斷好感度（只會往上調），也會讀世界書與角色設定裡寫的關係（例如「已婚」）。如果判斷得不對，或你們已經是別的關係，可以直接指定，例如交往中或已婚；指定後會解鎖該階段的場景與互動，並且不再採用世界書的判斷。</p>
       <select id="dt-rel-stage">
         <option value="auto"${current === 'auto' ? ' selected' : ''}>自動（依聊天紀錄）</option>
         ${STAGES.map(s => `<option value="${s.id}"${current === s.id ? ' selected' : ''}>${esc(s.name)}</option>`).join('')}
@@ -432,8 +451,9 @@ async function reply(container, { base = 1, gift = null, opening = false }) {
         const settings = await SettingsDB.getAll();
         if (!settings.api_url || !settings.api_key) throw new Error('NO_API');
         const last = st.messages[st.messages.length - 1];
-        const ctx = await buildAppContext({ characterId: c.id, userMessage: (last.content || last.api || '').replace(/[（）]/g, '') });
-        const system = [ctx.systemPrompt, buildDatePrompt({ charName: c.name, userName: st.userName, scene: st.scene, slot: st.slot, affection: effAffection(relOf(c.id)), stage: relationStage(relOf(c.id)), note: relOf(c.id).note, mood: st.mood, turns: opening ? 0 : st.turns, gift })].filter(Boolean).join('\n\n');
+        const recentText = st.messages.filter(m => !m.local).slice(-4).map(m => m.api || m.content).join('\n');
+        const ctx = await buildAppContext({ characterId: c.id, userMessage: (last.content || last.api || '').replace(/[（）]/g, ''), keywordText: [recentText, st.scene.name, st.scene.desc, relOf(c.id).note].join('\n') });
+        const system = [ctx.systemPrompt, buildDatePrompt({ charName: c.name, userName: st.userName, scene: st.scene, slot: st.slot, affection: effAffection(relOf(c.id)), stage: relationStage(relOf(c.id)), note: relOf(c.id).note, worldFacts: formatWorldFacts(ctx.worldInfo), cardFacts: [c.personality && `性格：${String(c.personality).slice(0, 600)}`, c.scenario && `背景：${String(c.scenario).slice(0, 600)}`].filter(Boolean).join('\n'), mood: st.mood, turns: opening ? 0 : st.turns, gift })].filter(Boolean).join('\n\n');
         const raw = await APIClient.complete([{ role: 'system', content: system }, ...apiHistory()], { temperature: 0.9, maxTokens: 800 });
         ({ text, delta, mood } = parseReply(raw));
     } catch (e) {
