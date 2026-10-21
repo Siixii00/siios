@@ -34,3 +34,12 @@
 .ap-css-actions { display: flex; gap: 8px; }
 .ap-css-actions button { flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 8px; background: #fff; color: var(--app-text); cursor: pointer; font-size: 13px; }
 .ap-css code { font-family: ui-monospace, Consolas, monospace; background: #f1f1f1; padding: 0 4px; border-radius: 4px; }
+.ap-visual { background: var(--app-card); border-radius: 12px; padding: 12px; display: flex; flex-direction: column; gap: 10px; margin-bottom: 8px; }
+.ap-vscope { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; background: #fff; color: var(--app-text); }
+.ap-vstart { padding: 12px; border: none; border-radius: 10px; background: var(--app-accent); color: #fff; font-weight: 600; cursor: pointer; }
+.ap-lib-head { font-size: 13px; font-weight: 600; color: var(--app-muted); }
+.ap-lib { display: flex; flex-wrap: wrap; gap: 8px; }
+.ap-lib-item { width: 56px; height: 56px; border: 1px solid #ddd; border-radius: 10px; background: #f2f2f2 center/cover no-repeat; cursor: pointer; padding: 0; color: var(--app-text); font-size: 12px; }
+.ap-lib-add { background: #fff; }
+.ap-changed-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 6px 0; font-size: 13px; color: var(--app-text); }
+.ap-mini { padding: 4px 10px; border: 1px solid #ddd; border-radius: 8px; background: #fff; color: var(--app-text); cursor: pointer; font-size: 12px; }

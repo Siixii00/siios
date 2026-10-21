@@ -4,6 +4,10 @@ import { MODES, PRESETS, FONTS, SIZES, DEFAULTS, normalize } from '../../core/ap
 import { loadAppearance, saveAppearance, customCssErrors } from '../../core/appearance-dom.js';
 import { SNIPPETS } from '../../core/appearance-css.js';
 import { getAllApps } from '../registry.js';
+import { askConfirm } from '../../core/dialogs.js';
+import { startEditing } from '../../core/appearance-editor.js';
+import { getImages, addImageFile, removeImage } from '../../core/appearance-media.js';
+import { MAX_IMAGES } from '../../core/appearance-rules.js';
 
 const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -41,6 +45,16 @@ async function renderAppearance() {
       <h2 class="section-title">介面大小</h2>
       <div class="ap-seg" data-group="size">
         ${SIZES.map(z => `<button data-v="${z.id}">${z.name}</button>`).join('')}
+      </div>
+
+      <h2 class="section-title">視覺編輯（不用寫程式）</h2>
+      <div class="ap-visual">
+        <p class="ap-hint">選一個 App，直接在畫面上點選要改的地方（文字、按鈕、卡片、背景），用面板改顏色、大小、圓角、背景圖片；也可以放上圖片貼紙、用手指拖到喜歡的位置。</p>
+        <select class="ap-vscope"></select>
+        <button class="ap-vstart">開始編輯這個 App</button>
+        <div class="ap-lib-head">圖片庫 <small class="ap-lib-count"></small></div>
+        <div class="ap-lib"></div>
+        <div class="ap-changed"></div>
       </div>
 
       <h2 class="section-title">自訂 CSS（進階）</h2>
@@ -130,6 +144,71 @@ async function renderAppearance() {
     if (p) Router.navigate(p);
   };
   loadEditor();
+
+  // ── 視覺編輯：選 App、圖片庫、已修改的項目 ──
+  const vscope = container.querySelector('.ap-vscope');
+  vscope.innerHTML = apps.map(a => `<option value="${esc(a.id)}">${esc(a.name || a.id)}</option>`).join('');
+  container.querySelector('.ap-vstart').onclick = () => {
+    const a = apps.find(x => x.id === vscope.value);
+    const p = a?.navItem?.path || a?.routes?.[0]?.path;
+    if (!p) return;
+    Router.navigate(p);
+    setTimeout(() => startEditing({ onDone: () => Router.navigate('/appearance') }), 700);
+  };
+  const lib = container.querySelector('.ap-lib');
+  const changed = container.querySelector('.ap-changed');
+  const drawVisual = () => {
+    const imgs = getImages();
+    container.querySelector('.ap-lib-count').textContent = `${Object.keys(imgs).length} / ${MAX_IMAGES}`;
+    lib.innerHTML = '';
+    for (const [id, url] of Object.entries(imgs)) {
+      const b = createElement('button', 'ap-lib-item');
+      b.style.backgroundImage = `url("${url}")`;
+      b.title = '點一下刪除這張圖片';
+      b.onclick = async () => {
+        if (!await askConfirm('刪除這張圖片？用到它的貼紙也會一起移除，背景圖片會失效。', { title: '刪除圖片' })) return;
+        await removeImage(id);
+        change({ stickers: s.stickers.filter(x => x.img !== id) });
+        drawVisual();
+      };
+      lib.appendChild(b);
+    }
+    const file = createElement('input'); file.type = 'file'; file.accept = 'image/png,image/jpeg,image/webp,image/gif'; file.multiple = true; file.style.display = 'none';
+    const add = createElement('button', 'ap-lib-item ap-lib-add', { textContent: '＋上傳' });
+    add.onclick = () => file.click();
+    file.onchange = async () => {
+      for (const f of file.files) {
+        try { await addImageFile(f); } catch (e) { createToast(e.message || '上傳失敗', 'error'); break; }
+      }
+      drawVisual();
+    };
+    lib.append(add, file);
+    // 各 App 已經改過的東西：可以整個重設
+    const names = Object.fromEntries(apps.map(a => [a.id, a.name || a.id]));
+    const ids = [...new Set([...Object.keys(s.appRules), ...s.stickers.map(x => x.app).filter(x => x !== '*')])];
+    changed.innerHTML = ids.length || s.stickers.some(x => x.app === '*') ? '<div class="ap-lib-head">已經修改的地方</div>' : '';
+    for (const id of ids) {
+      const n = (s.appRules[id] || []).length, st = s.stickers.filter(x => x.app === id).length;
+      const row = createElement('div', 'ap-changed-row');
+      row.append(createElement('span', '', { textContent: `${names[id] || id}：${n} 處修改、${st} 個貼紙` }));
+      const btn = createElement('button', 'ap-mini', { textContent: '重設' });
+      btn.onclick = async () => {
+        if (!await askConfirm(`把「${names[id] || id}」改過的地方全部還原？`, { title: '重設' })) return;
+        const { [id]: _drop, ...rest } = s.appRules;
+        change({ appRules: rest, stickers: s.stickers.filter(x => x.app !== id) });
+        drawVisual();
+      };
+      row.append(btn); changed.appendChild(row);
+    }
+    if (s.stickers.some(x => x.app === '*')) {
+      const row = createElement('div', 'ap-changed-row');
+      row.append(createElement('span', '', { textContent: `所有頁面的貼紙：${s.stickers.filter(x => x.app === '*').length} 個` }));
+      const btn = createElement('button', 'ap-mini', { textContent: '移除' });
+      btn.onclick = () => { change({ stickers: s.stickers.filter(x => x.app !== '*') }); drawVisual(); };
+      row.append(btn); changed.appendChild(row);
+    }
+  };
+  drawVisual();
 
   sync();
   return { element: container, cleanup: null };

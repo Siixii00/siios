@@ -3,6 +3,8 @@ import { SettingsDB } from '../db.js';
 import { normalize, migrateLegacy, buildCss, themeColorMeta, effectiveDark, isDarkBackground, colorTarget } from './appearance.js';
 import { replaceInValue } from './appearance-colors.js';
 import { buildCustomCss } from './appearance-css.js';
+import { compileRules } from './appearance-rules.js';
+import { loadImages, getImages, renderStickers } from './appearance-media.js';
 
 const KEY = 'appearance';
 const LS_KEY = 'sx_appearance'; // 同一份設定放一份在 localStorage，下次開啟時可以在資料庫讀完之前先套用，避免閃一下淺色
@@ -12,6 +14,7 @@ let observer = null;
 let timer = null;
 let cssTimer = null;
 let customErrors = {};
+let editing = null; // 視覺編輯模式開著時：{ selectedId, onMove, onSelect }（貼紙可以拖曳）
 const OWN_IDS = ['sx-appearance', 'sx-color-map', 'sx-custom-css'];
 
 const systemDark = () => !!mq?.matches;
@@ -28,6 +31,12 @@ export async function loadAppearance() {
 
 export const currentAppearance = () => current;
 export const customCssErrors = () => customErrors;
+
+// 目前這個 App 的貼紙：重新畫一次。視覺編輯模式會傳 opts 讓貼紙可以拖曳
+export function refreshStickers(opts) {
+    if (opts !== undefined) editing = opts;
+    try { renderStickers(current, document.body.dataset.app || '', editing ? { ...editing, editing: true } : {}); } catch (e) { console.warn('[Appearance] 貼紙顯示失敗：', e); }
+}
 
 export function applyAppearance(settings) {
     current = normalize(settings);
@@ -151,8 +160,11 @@ function applyStyles() {
     if (colors.textContent !== next) colors.textContent = next;
     const built = buildCustomCss(current);
     customErrors = built.errors;
+    // 視覺編輯的規則先、手寫的 CSS 後（手寫的可以蓋過）
+    const css = [compileRules(current.appRules, getImages()), built.css].filter(Boolean).join('\n\n');
     const custom = styleTag('sx-custom-css');
-    if (custom.textContent !== built.css) custom.textContent = built.css;
+    if (custom.textContent !== css) custom.textContent = css;
+    refreshStickers();
     for (const el of [colors, custom]) if (el.parentNode !== document.head || el.nextElementSibling) document.head.appendChild(el);
 }
 
@@ -165,11 +177,16 @@ export async function initAppearance() {
     mq = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
     const local = readLocal();
     if (local) applyAppearance(local);
+    try { await loadImages(); } catch (e) { console.warn('[Appearance] 圖片庫載入失敗：', e); }
     try { applyAppearance(await loadAppearance()); } catch (e) { console.warn('[Appearance] 載入失敗：', e); }
     const onSystem = () => applyAppearance(current);
     if (mq?.addEventListener) mq.addEventListener('change', onSystem);
     else mq?.addListener?.(onSystem); // 舊版 Safari
-    window.addEventListener('hashchange', () => { scheduleNativeCheck(); scheduleStyles(300); scheduleStyles(1200); });
+    window.addEventListener('hashchange', () => {
+        scheduleNativeCheck();
+        // 進到新的 App 後，它的樣式表與 body[data-app] 要一下子才會就緒：早一次、晚一次各補套用（scheduleStyles 會互相取消，所以直接用 setTimeout）
+        for (const ms of [300, 1200]) setTimeout(() => { try { applyStyles(); } catch (_) { /* 下次再試 */ } }, ms);
+    });
     // 各 App 的樣式是進到該 App 才載入的：有新的樣式表加進來就重掃一次
     if (typeof MutationObserver === 'function') {
         new MutationObserver(list => {
