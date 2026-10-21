@@ -8,7 +8,7 @@ import { currentAppearance, saveAppearance } from './appearance-dom.js';
 const RECENTS_KEY = 'sx_recents';
 const MAX_RECENTS = 8;
 let active = false;
-let statusBar = null, navBar = null, shade = null, recentsEl = null, clockTimer = null, toneTimer = null, rippleHandler = null, hashHandler = null;
+let statusBar = null, navBar = null, shade = null, recentsEl = null, clockTimer = null, toneTimer = null, dotTimer = null, rippleHandler = null, hashHandler = null;
 
 const frame = () => document.querySelector('.phone-frame');
 const screen = () => document.querySelector('.phone-screen');
@@ -34,15 +34,37 @@ function trackRecents() {
     saveRecents(list);
 }
 
+// ───── 真實的通知：購物 App 的送禮提議、今天的行事曆行程 ─────
+async function gatherNotes() {
+    const notes = [];
+    try {
+        const { loadProposals, isShown } = await import('./shopping-store.js');
+        const shown = (await loadProposals()).filter(p => isShown(p));
+        if (shown.length) notes.push({ icon: 'redeem', text: shown.length === 1 ? (shown[0].type === 'return' ? '有人想回送你一份禮物' : '有人想送你一份禮物：' + shown[0].label) : `有 ${shown.length} 位角色想送你禮物`, path: '/taobao' });
+    } catch (_) { /* 沒有就算了 */ }
+    try {
+        const { loadEvents, dateKey } = await import('./calendar.js');
+        const today = dateKey(new Date());
+        (await loadEvents()).filter(e => dateKey(e.date) === today).slice(0, 3).forEach(e => notes.push({ icon: 'event', text: '今天：' + e.title + (e.time ? '（' + e.time + '）' : ''), path: '/timetree' }));
+    } catch (_) { /* 同上 */ }
+    return notes;
+}
+
+async function refreshDot() {
+    const dot = statusBar?.querySelector('.sx-sb-dot');
+    if (dot) dot.hidden = !(await gatherNotes()).length;
+}
+
 // ───── 狀態列 ─────
 function clockText() { const d = new Date(); return String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0'); }
 
 function buildStatusBar() {
     const bar = createElement('div', 'sx-statusbar');
     const time = createElement('span', 'sx-sb-time', { textContent: clockText() });
+    const dot = createElement('span', 'material-symbols-outlined sx-sb-dot', { textContent: 'notifications', hidden: true });
     const icons = createElement('span', 'sx-sb-icons');
     icons.innerHTML = '<span class="material-symbols-outlined">signal_cellular_alt</span><span class="material-symbols-outlined">wifi</span><span class="material-symbols-outlined sx-sb-battery">battery_full</span>';
-    bar.append(time, icons);
+    bar.append(time, dot, icons);
     bar.title = '往下拉打開通知';
     // 點一下或往下拉：打開通知面板
     let y0 = null;
@@ -82,7 +104,7 @@ function buildShade() {
     return el;
 }
 
-function refreshShade() {
+async function refreshShade() {
     const now = new Date();
     shade.querySelector('.sx-shade-time').textContent = clockText();
     shade.querySelector('.sx-shade-date').textContent = now.toLocaleDateString('zh-TW', { month: 'long', day: 'numeric', weekday: 'long' });
@@ -104,9 +126,19 @@ function refreshShade() {
         box.appendChild(b);
     }
     const notes = shade.querySelector('.sx-notes');
+    const items = await gatherNotes();
+    if (!shade) return; // 等待期間已經被關掉（切回 iOS）
     notes.replaceChildren();
     const rec = loadRecents();
-    notes.append(createElement('div', 'sx-notes-title', { textContent: rec.length ? '最近使用' : '沒有新通知' }));
+    notes.append(createElement('div', 'sx-notes-title', { textContent: items.length ? '通知' : '沒有新通知' }));
+    items.forEach(n => {
+        const row = createElement('button', 'sx-note');
+        row.innerHTML = `<span class="material-symbols-outlined">${n.icon}</span><span></span>`;
+        row.lastChild.textContent = n.text;
+        row.onclick = () => { toggleShade(false); Router.navigate(n.path); };
+        notes.appendChild(row);
+    });
+    if (rec.length) notes.append(createElement('div', 'sx-notes-title', { textContent: '最近使用' }));
     rec.slice(0, 3).forEach(r => {
         const row = createElement('button', 'sx-note');
         row.innerHTML = `<span class="material-symbols-outlined">${r.icon || 'apps'}</span><span>${String(r.label).replace(/[<>&]/g, '')}</span>`;
@@ -197,9 +229,10 @@ export function setAndroidChrome(on) {
         hashHandler = () => { trackRecents(); tone(); closeRecents(); toggleShade(false); setTimeout(tone, 400); };
         window.addEventListener('hashchange', hashHandler);
         trackRecents(); tone(); setTimeout(tone, 800);
+        refreshDot(); dotTimer = setInterval(refreshDot, 60000);
         toneTimer = setInterval(tone, 1000); // 鎖定畫面／解鎖不會換網址，用定時檢查狀態列要用淺色還是深色
     } else {
-        clearInterval(clockTimer); clearInterval(toneTimer);
+        clearInterval(clockTimer); clearInterval(toneTimer); clearInterval(dotTimer);
         statusBar?.remove(); navBar?.remove(); shade?.remove(); closeRecents();
         statusBar = navBar = shade = null;
         document.removeEventListener('pointerdown', rippleHandler, true);

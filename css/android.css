@@ -163,3 +163,50 @@ html[data-sx-ui="android"] .ios-bottom-nav-item.active { color: #1a73e8; }
 html[data-sx-ui="android"] .kakao-bottom-nav-item.active .material-symbols-outlined,
 html[data-sx-ui="android"] .ios-bottom-nav-item.active > *:first-child { background: #d3e3fd; border-radius: 16px; padding: 4px 20px; }
 html[data-sx-ui="android"] .ios-bottom-nav-item .label { font-size: 11px; }
+
+/* ───── 狀態列的通知小點 ───── */
+.sx-sb-dot { font-size: 14px; margin-right: auto; margin-left: 6px; }
+.sx-sb-dot[hidden] { display: none; }
+
+/* ───── 控制項：Material 3（開關、清單、輸入框、按鈕、滑桿）───── */
+html[data-sx-ui="android"] { color-scheme: light; }
+html[data-sx-ui="android"] input[type="range"], html[data-sx-ui="android"] input[type="checkbox"], html[data-sx-ui="android"] input[type="radio"] { accent-color: #1a73e8; }
+
+/* 開關 */
+html[data-sx-ui="android"] .ios-toggle { width: 52px; height: 32px; border-radius: 16px; background-color: #e3e3e3; box-shadow: inset 0 0 0 2px #79747e; transition: background-color 0.2s, box-shadow 0.2s; }
+html[data-sx-ui="android"] .ios-toggle::after { top: 8px; left: 8px; width: 16px; height: 16px; border-radius: 50%; background-color: #79747e; transition: transform 0.2s, width 0.2s, height 0.2s, top 0.2s, left 0.2s, background-color 0.2s; }
+html[data-sx-ui="android"] .ios-toggle.active { background-color: #1a73e8; box-shadow: none; }
+html[data-sx-ui="android"] .ios-toggle.active::after { top: 4px; left: 4px; width: 24px; height: 24px; background-color: #fff; transform: translateX(20px); }
+
+/* 清單：圓角卡片、每列高一點、分隔線縮短 */
+html[data-sx-ui="android"] .ios-grouped-list { border-radius: 24px; margin-bottom: 18px; }
+html[data-sx-ui="android"] .ios-list-cell { min-height: 56px; padding: 12px 20px; }
+html[data-sx-ui="android"] .ios-list-cell:active { background-color: rgba(26, 115, 232, 0.1); }
+html[data-sx-ui="android"] .ios-list-cell:not(:last-child)::after { left: 20px; right: 20px; }
+html[data-sx-ui="android"] .ios-section-header { font-size: 13px; font-weight: 500; color: #1a73e8; letter-spacing: 0.3px; text-transform: none; }
+
+/* 輸入框：描邊圓角，選取時變藍 */
+html[data-sx-ui="android"] .ios-input, html[data-sx-ui="android"] .ios-textarea { border-radius: 12px; border: 1px solid #79747e; font-size: 16px; }
+html[data-sx-ui="android"] .ios-input:focus, html[data-sx-ui="android"] .ios-textarea:focus { border-color: #1a73e8; box-shadow: 0 0 0 1px #1a73e8; }
+html[data-sx-ui="android"] select { border-radius: 12px; }
+
+/* 按鈕：藥丸形 */
+html[data-sx-ui="android"] .ios-btn, html[data-sx-ui="android"] .ios-btn-primary { border-radius: 999px; padding: 10px 24px; font-weight: 500; }
+html[data-sx-ui="android"] .ios-btn-primary { background: #1a73e8; color: #fff; }
+
+/* 分段選擇、滑桿 */
+html[data-sx-ui="android"] .ios-segment-control, html[data-sx-ui="android"] .ios-segmented { border-radius: 999px; overflow: hidden; }
+html[data-sx-ui="android"] .ios-segment.active { background-color: #d3e3fd; color: #041e49; }
+html[data-sx-ui="android"] .ios-slider { height: 6px; border-radius: 3px; }
+
+/* 捲軸：細、不佔位 */
+html[data-sx-ui="android"] * { scrollbar-width: thin; }
+
+/* 設定頁等用 .ios-nav-bar 的標題列：同樣是靠左標題、只留返回箭頭 */
+html[data-sx-ui="android"] .ios-nav-bar { border-bottom: none; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); }
+html[data-sx-ui="android"] .ios-nav-bar-inner { justify-content: flex-start; gap: 6px; padding: 0 8px; }
+html[data-sx-ui="android"] .ios-nav-bar-inner .ios-btn:first-child { font-size: 0 !important; padding: 6px; order: 0; }
+html[data-sx-ui="android"] .ios-nav-bar-inner .ios-btn:first-child .material-symbols-outlined,
+html[data-sx-ui="android"] .ios-nav-bar-inner .ios-btn:first-child i { font-size: 24px; }
+html[data-sx-ui="android"] .ios-nav-bar-inner .ios-inline-title { position: static; transform: none; order: 1; margin-right: auto; font-size: 20px; font-weight: 500; pointer-events: auto; }
+html[data-sx-ui="android"] .ios-nav-bar-inner > *:last-child:not(.ios-inline-title):not(:first-child) { order: 2; }
