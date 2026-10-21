@@ -151,6 +151,15 @@ const App = {
                 } catch (e) { console.warn('[App] 檢查重要日子失敗：', e); }
             }, 12000);
 
+            // 角色每週存錢進共同基金（只有建立過基金的角色；很久沒開 App 最多補 4 週）
+            setTimeout(async () => {
+                try {
+                    const { tickCharContributions } = await import('./core/fund-store.js');
+                    const n = await tickCharContributions();
+                    if (n > 0) createToast('🐷 共同基金有新的存款');
+                } catch (e) { console.warn('[App] 共同基金更新失敗：', e); }
+            }, 14000);
+
             console.log('[App] 初始化記憶系統...');
             const memorySystem = new MemorySystem(memorySettingsFrom(mergedSettings));
             this.memorySystem = memorySystem;

@@ -27,6 +27,7 @@ export const MEMORY_SOURCES = [
     { id: 'taobao', name: '購物', icon: 'shopping_bag' },
     { id: 'delivery', name: '外送', icon: 'delivery_dining' },
     { id: 'gift-shop', name: '禮物商店', icon: 'redeem' },
+    { id: 'fund', name: '共同基金', icon: 'savings' },
     { id: 'emoji-shop', name: '貼圖商店', icon: 'emoji_emotions' },
     { id: 'theme-shop', name: '主題商店', icon: 'palette' },
     { id: 'arcade', name: '街機廳', icon: 'sports_esports' },

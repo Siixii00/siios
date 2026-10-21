@@ -1,5 +1,8 @@
 import { SettingsDB } from '../../../db.js';
 import { dayStamp, nextStreak, dailyReward } from './daily.js';
+import { createToast } from '../../../components.js';
+import { credit } from '../../../core/wallet.js';
+import { incomeFor, applyCap } from '../../../core/arcade-income.js';
 
 // 各遊戲共用的關卡進度：依序解鎖，每關最多 3 星
 const key = game => 'lv_' + game;
@@ -7,6 +10,21 @@ const GAME_NAMES = { match3: '消消樂', '2048': '2048', snake: '貪吃蛇', me
 
 // 通關獎勵：每多拿到一顆新的星星，抽卡貨幣 +20（只有星數進步才給，重複過關不會刷）
 export const GEMS_PER_STAR = 20;
+
+// 街機廳也會賺錢包的錢：新的星星、每日挑戰（有每日上限，見 core/arcade-income.js）。回傳實際給的金額
+let payQueue = Promise.resolve();
+export function payArcade(amount, desc) {
+    const run = payQueue.then(async () => {
+        if (!(amount > 0)) return 0;
+        const { granted, state } = applyCap(await SettingsDB.get('arcade_income'), amount, dayStamp());
+        if (!granted) return 0;
+        await SettingsDB.set('arcade_income', state);
+        await credit(granted, desc, { category: 'arcade' });
+        return granted;
+    });
+    payQueue = run.catch(() => {});
+    return run;
+}
 export async function awardGems(n) {
     const saved = (await SettingsDB.get('arcade_gacha')) || {};
     saved.currency = (saved.currency ?? 16000) + n;
@@ -27,7 +45,11 @@ export async function completeLevel(game, level, stars, total) {
     await SettingsDB.set(key(game), p);
     // 只在第一次過這一關、或星數進步時記一筆
     if (stars > before) {
-        awardGems((stars - before) * GEMS_PER_STAR).catch(() => {});
+        const gems = (stars - before) * GEMS_PER_STAR;
+        awardGems(gems).catch(() => {});
+        payArcade(incomeFor({ newStars: stars - before }), `街機廳：${GAME_NAMES[game] || game} 第 ${level} 關`)
+            .then(money => createToast(`★ 新的星星！抽卡貨幣 +${gems}${money ? `，錢包 +$${money}` : ''}`))
+            .catch(() => createToast(`★ 新的星星！抽卡貨幣 +${gems}`));
         import('../../../core/activity-memory.js').then(m => m.rememberActivity({ sourceApp: game === 'match3' ? 'match-3' : 'arcade', content: `用戶在${GAME_NAMES[game] || game}通過了第 ${level} 關（${stars} 星）`, importance: 0.3 })).catch(() => {});
     }
     return p;
@@ -74,8 +96,9 @@ export async function completeDaily(game, stars) {
     await SettingsDB.set('arcade_daily_streak', streak);
     const gems = dailyReward(streak.count);
     await awardGems(gems);
+    const money = await payArcade(incomeFor({ daily: { first: true, streak: streak.count } }), `街機廳：${GAME_NAMES[game] || game} 每日挑戰`).catch(() => 0);
     import('../../../core/activity-memory.js').then(m => m.rememberActivity({ sourceApp: 'arcade', content: `用戶完成了今天的${GAME_NAMES[game] || game}每日挑戰（${stars} 星，連續 ${streak.count} 天）`, importance: 0.3 })).catch(() => {});
-    return { first: true, gems, streak: streak.count };
+    return { first: true, gems, money, streak: streak.count };
 }
 
 // 選單上的每日挑戰按鈕
@@ -83,4 +106,4 @@ export function dailyButtonHtml(daily, level) {
     return `<button class="ag-btn daily-btn" data-act="daily">📅 今日挑戰（難度同第 ${level} 關）${daily ? ' · 已完成 ' + starText(daily.stars) : ''}</button>`;
 }
 
-export const dailyOverlayNote = r => (r && r.first ? `<p class="daily-note">📅 每日挑戰完成！抽卡貨幣 +${r.gems}（連續 ${r.streak} 天）</p>` : '');
+export const dailyOverlayNote = r => (r && r.first ? `<p class="daily-note">📅 每日挑戰完成！抽卡貨幣 +${r.gems}${r.money ? `、錢包 +$${r.money}` : ''}（連續 ${r.streak} 天）</p>` : '');

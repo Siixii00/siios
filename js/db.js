@@ -678,6 +678,7 @@ const CharactersDB = {
             birth_location: data.birth_location || null,
             birth_calendar_type: data.birth_calendar_type || 'solar',
             anniversary_date: data.anniversary_date || null,
+            fund_weekly: data.fund_weekly ?? null,
             gender: data.gender || null,
             ziwei_cache_id: data.ziwei_cache_id || null,
             description: data.description || '',

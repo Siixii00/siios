@@ -244,6 +244,17 @@ async function renderCharEdit(params) {
     main.appendChild(annivSection);
     main.appendChild(annivGroup);
 
+    const fundSection = createElement('div', 'mb-2 ml-8 mt-4');
+    fundSection.appendChild(createElement('p', 'ios-section-header', { textContent: '共同基金' }));
+    const fundGroup = createElement('div', 'ios-grouped-list mx-4');
+    const fundCell = createElement('div', 'p-4');
+    fundCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '他每週自己存多少錢進你們的共同基金（0 = 不存，空白 = 預設 $100；要先在「支付」建立過基金才會開始）' }));
+    const fundInput = createElement('input', 'ios-input w-full', { type: 'number', min: '0', step: '10', value: char.fund_weekly ?? '', placeholder: '100' });
+    fundCell.appendChild(fundInput);
+    fundGroup.appendChild(fundCell);
+    main.appendChild(fundSection);
+    main.appendChild(fundGroup);
+
     const birthSection = createElement('div', 'mb-2 ml-8 mt-4');
     birthSection.appendChild(createElement('p', 'ios-section-header', { textContent: '出生資訊（紫微斗數分析）' }));
     const birthGroup = createElement('div', 'ios-grouped-list mx-4');
@@ -393,6 +404,7 @@ async function renderCharEdit(params) {
             sleep_end: sleepEndInput.value,
             bound_user_id: boundUserId,
             anniversary_date: annivInput.value || null,
+            fund_weekly: fundInput.value === '' ? null : Math.max(0, Math.round(Number(fundInput.value)) || 0),
             birth_date: birthDateInput.value || null,
             birth_time: birthTimeInput.value || null,
             birth_location: birthLocationInput.value.trim() || null,

@@ -2,10 +2,11 @@ import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
 import { getBalance, getTransactions, charge, credit, setBalance, formatMoney, WalletError } from '../../core/wallet.js';
 import { askForm } from '../../core/dialogs.js';
+import { renderFundSection } from './fund-ui.js';
 
 const CATEGORY_LABELS = {
   shopping: '購物', delivery: '外送', gift: '禮物', theme: '主題', sticker: '貼圖',
-  transfer: '轉帳', farm: '農場', topup: '儲值', adjust: '調整', pub: '酒館', invest: '投資'
+  transfer: '轉帳', farm: '農場', topup: '儲值', adjust: '調整', pub: '酒館', invest: '投資', arcade: '街機', fund: '共同基金', home: '宅家', dating: '約會'
 };
 
 function fmtDate(ts) {
@@ -32,6 +33,7 @@ async function renderKakaopay(params) {
         <button class="action-btn topup"><i class="fas fa-plus-circle"></i> 儲值</button>
         <button class="action-btn adjust"><i class="fas fa-sliders-h"></i> 設定餘額</button>
       </div>
+      <div class="fund-slot"></div>
       <div class="transaction-list">
         <h3>交易紀錄</h3>
         <div class="tx-scroll"></div>
@@ -53,6 +55,9 @@ async function renderKakaopay(params) {
     });
   }
   container.querySelector('.ios-back-btn').onclick = () => Router.back();
+  renderFundSection(async () => {
+    container.querySelector('.balance-amount').textContent = formatMoney(await getBalance());
+  }).then(el => container.querySelector('.fund-slot').appendChild(el)).catch(() => {});
 
   async function run(kind) {
     const isSend = kind === 'send';

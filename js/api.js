@@ -10,6 +10,7 @@ import { MEMORY_SOURCES } from './core/memory-sources.js';
 import { buildRealWorldContext } from './core/real-world-context.js';
 import { getDislikePrompt } from './core/dislikes.js';
 import { describeRecentShopping, describeGiftMessage, GIFT_REPLY_HINT } from './core/gift-ideas.js';
+import { fundPromptFor } from './core/fund.js';
 import { PeriodCalculator } from './core/period-calculator.js';
 import { createErrorModal } from './components.js';
 import { mcpManager } from './core/mcp-client.js';
@@ -257,6 +258,8 @@ const APIClient = {
         if (characterData?.id) {
             const shopText = describeRecentShopping(await SettingsDB.get('shop_records'), characterData.id);
             if (shopText) backMessages.push({ role: 'system', content: shopText });
+            const fundText = fundPromptFor(await SettingsDB.get('shared_funds'), characterData);
+            if (fundText) backMessages.push({ role: 'system', content: fundText });
         }
         // 用戶討厭的事：不靠檢索，每次都帶，放在最後
         const dislikeText = await getDislikePrompt();

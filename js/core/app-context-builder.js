@@ -3,6 +3,7 @@ import { CharactersDB, UsersDB, SettingsDB, GlobalSettingsDB, GlobalForbiddenDB,
 import { buildMemoryFilters } from './memory-prefs.js';
 import { getDislikePrompt } from './dislikes.js';
 import { describeRecentShopping } from './gift-ideas.js';
+import { fundPromptFor } from './fund.js';
 
 async function buildAppContext(options = {}) {
     const {
@@ -90,6 +91,8 @@ async function buildAppContext(options = {}) {
     if (characterId) {
         const shopText = describeRecentShopping(await SettingsDB.get('shop_records'), characterId);
         if (shopText) context.systemPrompt += '\n\n' + shopText;
+        const fundText = fundPromptFor(await SettingsDB.get('shared_funds'), context.character);
+        if (fundText) context.systemPrompt += '\n\n' + fundText;
     }
     // 用戶討厭的事：不靠檢索，每次都帶，放在最後
     const dislikeText = await getDislikePrompt();

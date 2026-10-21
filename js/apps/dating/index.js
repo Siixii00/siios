@@ -398,9 +398,16 @@ async function openGifts(container) {
 async function startDate(container, go, scene) {
     const c = st.character;
     if (scene.cost > 0) {
-        if (!(await askConfirm(`在${scene.name}約會預計花費 ${formatMoney(scene.cost)}（從錢包扣款）。\n要出發嗎？`, { title: '出發', confirmLabel: '出發' }))) return;
-        try { await charge(scene.cost, `約會：${scene.name}`, { category: 'dating' }); }
-        catch (e) { return createToast(e?.message || '扣款失敗', 'error'); }
+        // 共同基金夠付的話，先問要不要用基金付（選「從錢包付」就走原本的扣款）
+        const { getFund, spendFromFund } = await import('../../core/fund-store.js');
+        const fund = await getFund(c.id).catch(() => null);
+        const byFund = fund && fund.balance >= scene.cost
+            && await askConfirm(`你們的共同基金有 ${formatMoney(fund.balance)}，約會預計花 ${formatMoney(scene.cost)}。\n要用共同基金付嗎？`, { title: '付款方式', confirmLabel: '用共同基金', cancelLabel: '從錢包付' });
+        if (!byFund && !(await askConfirm(`在${scene.name}約會預計花費 ${formatMoney(scene.cost)}（從錢包扣款）。\n要出發嗎？`, { title: '出發', confirmLabel: '出發' }))) return;
+        try {
+            if (byFund) await spendFromFund(c.id, scene.cost, `約會：${scene.name}`);
+            else await charge(scene.cost, `約會：${scene.name}`, { category: 'dating' });
+        } catch (e) { return createToast(e?.message || '扣款失敗', 'error'); }
     }
     const user = c.bound_user_id ? await UsersDB.getById(c.bound_user_id).catch(() => null) : null;
     const rel = relOf(c.id);
