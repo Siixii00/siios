@@ -26,6 +26,7 @@ const WORKER_TOOLS = {
     daily_recipe: { keyless: true },
     entertainment_anime: { keyless: true },
     entertainment_game_price: { keyless: true },
+    shopping_product_search: { keyless: false },
     work_wiki: { keyless: true },
     work_translate: { keyless: true },
     entertainment_music_search: { keyless: false },
@@ -419,6 +420,32 @@ try {
     };
 } catch (error) {
     return { success: false, error: \`動漫查詢失敗（AniList：\${anilistError}；Jikan：\${jikanError}；Kitsu：\${error.message}）\` };
+}`;
+
+        case 'shopping_product_search':
+            return `// SerpAPI 的 Google 購物（台灣）。需要設定 SERPAPI_KEY；價格是商店當下的標價（新台幣）
+if (!env.SERPAPI_KEY) {
+    return { success: false, error: '尚未設定 SERPAPI_KEY' };
+}
+try {
+    const shopRes = await fetch(\`https://serpapi.com/search.json?engine=google_shopping&gl=tw&hl=zh-tw&q=\${encodeURIComponent(args.query)}&api_key=\${env.SERPAPI_KEY}\`);
+    const shopData = await shopRes.json();
+    if (!shopRes.ok || shopData.error) {
+        return { success: false, error: shopData.error || '商品搜尋失敗' };
+    }
+    return {
+        success: true,
+        currency: 'TWD',
+        results: (shopData.shopping_results || []).slice(0, Math.min(Number(args.limit) || 8, 20)).map(r => ({
+            title: r.title,
+            price: r.extracted_price,
+            source: r.source,
+            link: r.product_link || r.link,
+            thumbnail: r.thumbnail
+        }))
+    };
+} catch (error) {
+    return { success: false, error: error.message || '商品搜尋暫時無法使用' };
 }`;
 
         case 'entertainment_game_price':

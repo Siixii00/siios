@@ -8,7 +8,7 @@ import { loadBirthdate, getBirthdate } from './age-gate.js';
 import { loadEvents } from './calendar.js';
 import { loadDislikes } from './dislikes.js';
 import { resolvePrefs, shopLinks } from './real-shops.js';
-import { buildIdeaMessages, parseIdeas, filterIdeas, planProposals, pruneProposals, planReturnGift, isShown, OCCASIONS, formatPriceRange } from './gift-ideas.js';
+import { buildIdeaMessages, parseIdeas, filterIdeas, planProposals, pruneProposals, planReturnGift, isShown, pickProduct, OCCASIONS, formatPriceRange } from './gift-ideas.js';
 
 const K = { prefs: 'shop_prefs', wishlist: 'shop_wishlist', records: 'shop_records', proposals: 'gift_proposals', char: 'shop_selected_char' };
 export const DEFAULT_BUDGET = { min: 100, max: 1500 };
@@ -123,9 +123,27 @@ export async function generateIdeas({ characterId, occasion = 'request', label =
     for (let attempt = 0; attempt < 2; attempt++) {
         const text = await APIClient.complete(messages, { temperature: 0.9, maxTokens: 1100 });
         const ideas = filterIdeas(parseIdeas(text, { limit: 3 }), { budget, dislikes, past });
-        if (ideas.length) return ideas;
+        if (ideas.length) return attachRealPrices(ideas);
     }
     throw new Error('這次沒有挑到合適的，再試一次看看');
+}
+
+// 有接「商品搜尋」工具（神秘門）才會查；查不到、逾時、出錯都沿用 AI 估價，不影響挑禮物
+export async function attachRealPrices(ideas, { timeoutMs = 8000 } = {}) {
+    try {
+        const { mcpManager } = await import('./mcp-client.js');
+        await mcpManager.loadConfigs();
+        const tool = mcpManager.findToolByName('search_products');
+        if (!tool || tool.mcpId === 'local') return ideas;
+        const timeout = new Promise(res => setTimeout(() => res(null), timeoutMs));
+        await Promise.all(ideas.map(async idea => {
+            const q = idea.queries?.zh || idea.name;
+            const res = await Promise.race([mcpManager.callTool(tool.mcpId, 'search_products', { query: q, limit: 8 }), timeout]).catch(() => null);
+            const real = res?.success ? pickProduct(res.results, idea) : null;
+            if (real) idea.real = real;
+        }));
+    } catch (e) { console.warn('[shopping] 查真實價格失敗：', e); }
+    return ideas;
 }
 
 export { shopLinks, isShown };

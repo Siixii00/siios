@@ -263,3 +263,32 @@ test('提議何時顯示：重要日子建立就看得到；回禮到時間才�
     assert.equal(isShown({ status: 'resolved', showAt: 0 }, now), false);
     assert.equal(isShown({ status: 'pending', dueAt: now - 5 }, now), true, '舊資料沒有 showAt 就看 dueAt');
 });
+
+test('parsePrice：各種價格字串轉數字，不合理的是 null', async () => {
+    const { parsePrice } = await import('../../js/core/gift-ideas.js');
+    assert.equal(parsePrice('NT$1,280'), 1280);
+    assert.equal(parsePrice(450.4), 450);
+    assert.equal(parsePrice('$ 99.9'), 100);
+    assert.equal(parsePrice('免費'), null);
+    assert.equal(parsePrice(0), null);
+    assert.equal(parsePrice(null), null);
+});
+
+test('pickProduct：挑價格在估價附近、連結正常的商品；沒有就回 null，估價維持不變', async () => {
+    const { pickProduct, formatPriceRange } = await import('../../js/core/gift-ideas.js');
+    const idea = { name: '馬克杯', priceMin: 300, priceMax: 600 };
+    const results = [
+        { title: '太便宜', price: 20, link: 'https://a.example/1' },
+        { title: '連結怪怪', price: 400, link: 'javascript:alert(1)' },
+        { title: '太貴', price: 5000, link: 'https://a.example/2' },
+        { title: '剛好的杯子', price: 'NT$480', source: '某商店', link: 'https://shop.example/3' }
+    ];
+    const p = pickProduct(results, idea);
+    assert.equal(p.title, '剛好的杯子');
+    assert.equal(p.price, 480);
+    assert.equal(p.source, '某商店');
+    assert.equal(pickProduct(results.slice(0, 3), idea), null);
+    assert.equal(pickProduct(null, idea), null);
+    assert.match(formatPriceRange({ ...idea, real: p }), /實際約 \$480（某商店）/);
+    assert.match(formatPriceRange(idea), /約 \$300～\$600/);
+});

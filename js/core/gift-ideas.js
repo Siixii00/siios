@@ -91,7 +91,29 @@ export function filterIdeas(ideas, { budget = null, dislikes = [], past = [] } =
     });
 }
 
+// 真實價格（商品搜尋工具回傳）："NT$1,280"、1280、"$ 1 280" 都轉成數字；不合理的回傳 null
+export function parsePrice(v) {
+    if (typeof v === 'number') return Number.isFinite(v) && v > 0 ? Math.round(v) : null;
+    const n = Number(String(v ?? '').replace(/[^\d.]/g, ''));
+    return Number.isFinite(n) && n > 0 ? Math.round(n) : null;
+}
+
+// 從搜尋結果挑一個最像的：有價格、連結是 http(s)、價格落在 AI 估的區間附近（0.5～1.5 倍）。挑不到就回傳 null（沿用 AI 估價）
+export function pickProduct(results, idea) {
+    const lo = idea?.priceMin ?? null, hi = idea?.priceMax ?? null;
+    for (const r of Array.isArray(results) ? results : []) {
+        const price = parsePrice(r?.price ?? r?.extracted_price);
+        const link = String(r?.link || r?.url || '');
+        if (!price || !/^https?:\/\//i.test(link) || !r?.title) continue;
+        if (lo !== null && price < lo * 0.5) continue;
+        if (hi !== null && price > hi * 1.5) continue;
+        return { title: String(r.title).slice(0, 80), price, source: String(r.source || r.store || '').slice(0, 30), link, at: Date.now() };
+    }
+    return null;
+}
+
 export function formatPriceRange(i) {
+    if (i.real?.price) return `實際約 $${i.real.price.toLocaleString()}${i.real.source ? `（${i.real.source}）` : ''}`;
     if (i.priceMin === null || i.priceMax === null) return '價格請以商店為準';
     return i.priceMin === i.priceMax ? `約 $${i.priceMin.toLocaleString()}` : `約 $${i.priceMin.toLocaleString()}～$${i.priceMax.toLocaleString()}`;
 }

@@ -320,6 +320,25 @@ export const TOOLS_CATALOG = [
         }
     },
     {
+        id: 'shopping_product_search',
+        category: '日常生活',
+        categoryIcon: 'wb_sunny',
+        name: 'search_products',
+        displayName: '商品搜尋（真實價格）',
+        description: '用商品名稱查真實的商店與價格；購物 App 挑禮物時會自動用它補上實際價格',
+        useCase: '「這個杯子現在大約 $480，在這家店」',
+        difficulty: 'medium',
+        requires: ['SerpAPI 金鑰（SERPAPI_KEY，有免費額度）'],
+        parameters: {
+            type: 'object',
+            properties: {
+                query: { type: 'string', description: '商品名稱或關鍵字' },
+                limit: { type: 'number', default: 8 }
+            },
+            required: ['query']
+        }
+    },
+    {
         id: 'entertainment_game_price',
         category: '娛樂興趣',
         categoryIcon: 'music_note',

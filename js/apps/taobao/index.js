@@ -146,6 +146,11 @@ async function renderShopping() {
     function linkButtons(idea) {
         const links = shopLinks(idea, prefs.shops).filter(l => isShopUrl(l.url));
         const wrap = createElement('div', 'tb-links');
+        if (/^https?:\/\//i.test(idea.real?.link || '')) {
+            const a = createElement('a', 'tb-link', { textContent: `查到的商品：${idea.real.source || '商店'} ↗` });
+            a.href = idea.real.link; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.title = idea.real.title;
+            wrap.appendChild(a);
+        }
         links.forEach((l, i) => {
             const a = createElement('a', 'tb-link' + (i >= 4 ? ' more' : ''), { textContent: l.name });
             a.href = l.url; a.target = '_blank'; a.rel = 'noopener noreferrer'; a.title = `在「${l.name}」搜尋：${l.query}`;
@@ -167,7 +172,7 @@ async function renderShopping() {
           <div class="tb-idea-head"><span class="tb-kind">${esc(KINDS.find(k => k.id === idea.kind)?.name || '')}</span><strong>${esc(idea.name)}</strong><span class="tb-price">${esc(formatPriceRange(idea))}</span></div>
           ${idea.reason ? `<p class="tb-reason">${esc(idea.reason)}</p>` : ''}
           ${idea.message ? `<p class="tb-say">「${esc(idea.message)}」<small>— ${esc(c?.name || '')}</small></p>` : ''}
-          <small class="tb-muted">價格是估計，請以商店為準；不會自動購買，要不要買由你決定。</small>`;
+          <small class="tb-muted">${idea.real ? '價格是剛剛查到的標價，可能隨時變動；' : '價格是估計，請以商店為準；'}不會自動購買，要不要買由你決定。</small>`;
         card.appendChild(linkButtons(idea));
         const actions = createElement('div', 'tb-actions');
         if (state) {
