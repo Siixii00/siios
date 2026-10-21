@@ -1,7 +1,8 @@
 ﻿import { CharactersDB, ZiweiCacheDB, SettingsDB } from '../db.js';
 
-// 預設使用公用的紫微斗數服務（只做排盤計算，不存任何資料）；想用自己部署的，到「設定 → MCP 工具整合」填網址
-export const DEFAULT_ZIWEI_ENDPOINT = 'https://ziwei-mcp-server.yaninlin.workers.dev';
+// 紫微斗數服務：每位使用者部署自己的（神秘門勾選「紫微斗數排盤」產生 Worker），到「設定 → MCP 工具整合」填網址與金鑰。沒有預設的公用服務。
+export const DEFAULT_ZIWEI_ENDPOINT = '';
+export const ZIWEI_NOT_CONFIGURED = '尚未設定紫微斗數服務：到「神秘門」勾選「紫微斗數排盤」產生並部署自己的 Worker，再到「設定 → MCP 工具整合」填入網址與金鑰';
 
 class ZiweiMCPClient {
     constructor() {
@@ -26,6 +27,8 @@ class ZiweiMCPClient {
         
         const custom = String((await SettingsDB.get('ziwei_endpoint')) || '').trim().replace(/\/+$/, '');
         if (custom) this.endpoint = custom;
+        if (!this.endpoint) throw new Error(ZIWEI_NOT_CONFIGURED);
+        const apiKey = String((await SettingsDB.get('ziwei_api_key')) || '').trim();
 
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), this.timeout);
@@ -33,7 +36,7 @@ class ZiweiMCPClient {
         try {
             const response = await fetch(`${this.endpoint}/tools/call`, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 'Content-Type': 'application/json', ...(apiKey ? { 'Authorization': `Bearer ${apiKey}` } : {}) },
                 body: JSON.stringify({
                     name: 'ziwei_analyze_birth',
                     arguments: {
@@ -50,7 +53,7 @@ class ZiweiMCPClient {
             clearTimeout(timeoutId);
             
             if (!response.ok) {
-                throw new Error(`MCP 調用失敗: ${response.status}`);
+                throw new Error(response.status === 401 ? '紫微斗數服務拒絕存取：金鑰（MCP_API_KEY）不正確或沒填' : `MCP 調用失敗: ${response.status}`);
             }
             
             const result = await response.json();

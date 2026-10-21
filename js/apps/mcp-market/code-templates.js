@@ -1,5 +1,6 @@
 import { TOOLS_CATALOG } from './tools-catalog.js';
 import { initDB } from '../../db.js';
+import { ZIWEI_ENGINE_JS } from './ziwei-engine-template.js';
 
 const CUSTOM_TOOLS_STORE = 'customMCPTools';
 
@@ -29,7 +30,9 @@ const WORKER_TOOLS = {
     work_translate: { keyless: true },
     entertainment_music_search: { keyless: false },
     smart_music: { keyless: false },
-    work_notion: { keyless: false }
+    work_notion: { keyless: false },
+    // 紫微斗數：排盤引擎隨 Worker 一起產生（src/ziwei-engine.js），需要 npm 套件 lunar-javascript
+    fortune_ziwei: { keyless: true, dependencies: { 'lunar-javascript': '^1.7.7' }, files: { 'src/ziwei-engine.js': ZIWEI_ENGINE_JS } }
 };
 const LOCAL_TOOL_IDS = new Set(['daily_reminder', 'social_calendar', 'health_period_log', 'health_mood_track', 'health_medication']);
 
@@ -54,9 +57,11 @@ export async function generateWorkerCode(selectedTools) {
     const toolDefinitions = tools.map(t => generateToolDefinition(t)).join(',\n');
     const executeCases = tools.map(t => generateExecuteCase(t)).join('\n');
 
+    const imports = tools.some(t => t.id === 'fortune_ziwei') ? "import { analyzeBirth } from './ziwei-engine.js';\n\n" : '';
+
     return `// MCP Worker - 由神秘門生成
 // 包含 ${tools.length} 個工具：${tools.map(t => t.displayName).join('、')}
-
+${imports}
 export default {
     async fetch(request, env, ctx) {
         const url = new URL(request.url);
@@ -523,6 +528,16 @@ try {
                 return { success: false, error: error.message || 'Notion 服務暫時無法使用' };
             }`;
 
+        case 'fortune_ziwei':
+            return `// 排盤引擎在 src/ziwei-engine.js（以 iztro 交叉驗證過的真實計算，沒有任何假資料）
+                return await analyzeBirth({
+                    birth_date: args.birth_date,
+                    birth_time: args.birth_time,
+                    birth_location: args.birth_location,
+                    calendar_type: args.calendar_type || 'solar',
+                    gender: args.gender
+                });`;
+
         default:
             return `// 尚未支援於 Worker 環境: ${tool.name}
             return {
@@ -572,20 +587,18 @@ binding = "AI"
     return config;
 }
 
-export function generatePackageJson() {
-    return `{
-  "name": "siios-mcp-worker",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": {
-    "deploy": "wrangler deploy",
-    "dev": "wrangler dev",
-    "tail": "wrangler tail"
-  },
-  "devDependencies": {
-    "wrangler": "^3.0.0"
-  }
-}`;
+export function generatePackageJson(selectedTools = []) {
+    const dependencies = {};
+    for (const id of selectedTools) Object.assign(dependencies, WORKER_TOOLS[id]?.dependencies || {});
+    const pkg = {
+        name: 'siios-mcp-worker',
+        version: '1.0.0',
+        private: true,
+        scripts: { deploy: 'wrangler deploy', dev: 'wrangler dev', tail: 'wrangler tail' },
+        ...(Object.keys(dependencies).length ? { dependencies } : {}),
+        devDependencies: { wrangler: '^3.0.0' }
+    };
+    return JSON.stringify(pkg, null, 2);
 }
 
 export function generateReadme(selectedTools) {
@@ -653,7 +666,8 @@ npm run tail
 
 \`\`\`
 ├── src/
-│   └── index.js      # Worker 主程式
+│   ├── index.js      # Worker 主程式
+│   └── ziwei-engine.js  # （有選紫微斗數才有）排盤引擎
 ├── wrangler.toml     # Cloudflare 設定
 └── package.json
 \`\`\`
@@ -664,7 +678,9 @@ export async function generateZipContent(selectedTools) {
     return {
         'src/index.js': await generateWorkerCode(selectedTools),
         'wrangler.toml': generateWranglerConfig(selectedTools),
-        'package.json': generatePackageJson(),
-        'README.md': generateReadme(selectedTools)
+        'package.json': generatePackageJson(selectedTools),
+        'README.md': generateReadme(selectedTools),
+        // 工具附帶的程式檔（例如紫微斗數的排盤引擎）
+        ...Object.fromEntries(selectedTools.flatMap(id => Object.entries(WORKER_TOOLS[id]?.files || {})))
     };
 }

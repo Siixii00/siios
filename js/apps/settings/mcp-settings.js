@@ -1,7 +1,6 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast, createKakaoBottomSheet } from '../../components.js';
 import { MCPConfigDB, CharactersDB, SettingsDB } from '../../db.js';
-import { DEFAULT_ZIWEI_ENDPOINT } from '../../core/ziwei-mcp-client.js';
 import { MCPClient } from '../../core/mcp-client.js';
 import { LOCAL_TOOLS, isLocalToolsEnabled, setLocalToolsEnabled } from '../../core/local-tools.js';
 
@@ -65,15 +64,18 @@ async function renderMCPSettings() {
     const ziweiSection = createElement('div', 'ios-grouped-list mx-4 mt-4');
     const ziweiCard = createElement('div', 'p-4 bg-white rounded-xl');
     ziweiCard.appendChild(createElement('div', 'font-semibold text-sm mb-1', { textContent: '紫微斗數服務網址' }));
-    ziweiCard.appendChild(createElement('div', 'text-xs text-ios-muted mb-2', { textContent: '留空就使用公用服務（只做排盤計算，不儲存資料）。要自己部署的話，見 README 的「紫微斗數 MCP」。' }));
-    const ziweiInput = createElement('input', 'ios-input', { type: 'url', placeholder: DEFAULT_ZIWEI_ENDPOINT });
+    ziweiCard.appendChild(createElement('div', 'text-xs text-ios-muted mb-2', { textContent: '角色的紫微斗數命盤需要自己的服務：到「神秘門」勾選「紫微斗數排盤」→ 生成程式碼 → 部署到你的 Cloudflare，再把 Worker 網址與 MCP_API_KEY 填在這裡。' }));
+    const ziweiInput = createElement('input', 'ios-input', { type: 'url', placeholder: 'https://siios-mcp-worker.你的帳號.workers.dev' });
     ziweiInput.value = (await SettingsDB.get('ziwei_endpoint')) || '';
+    const ziweiKey = createElement('input', 'ios-input mt-2', { type: 'password', placeholder: 'MCP_API_KEY' });
+    ziweiKey.value = (await SettingsDB.get('ziwei_api_key')) || '';
     const ziweiSave = createElement('button', 'ios-btn mt-2 w-full', { textContent: '儲存' });
     ziweiSave.onclick = async () => {
         await SettingsDB.set('ziwei_endpoint', ziweiInput.value.trim());
-        createToast(ziweiInput.value.trim() ? '已改用你的紫微斗數服務' : '已改回公用服務');
+        await SettingsDB.set('ziwei_api_key', ziweiKey.value.trim());
+        createToast(ziweiInput.value.trim() ? '紫微斗數服務已儲存' : '已清除紫微斗數服務設定');
     };
-    ziweiCard.append(ziweiInput, ziweiSave);
+    ziweiCard.append(ziweiInput, ziweiKey, ziweiSave);
     ziweiSection.appendChild(ziweiCard);
     main.appendChild(ziweiSection);
 

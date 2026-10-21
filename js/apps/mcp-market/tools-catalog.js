@@ -859,11 +859,34 @@ export const TOOLS_CATALOG = [
             },
             required: ['guild_id']
         }
+    },
+    {
+        id: 'fortune_ziwei',
+        category: '命理占卜',
+        categoryIcon: 'auto_awesome',
+        name: 'ziwei_analyze_birth',
+        displayName: '紫微斗數排盤',
+        description: '根據出生年月日時間進行紫微斗數排盤分析',
+        useCase: '角色依命盤個性與流年運勢，自然地聊到你的近況',
+        difficulty: 'easy',
+        requires: [],
+        parameters: {
+            type: 'object',
+            properties: {
+                birth_date: { type: 'string', description: '出生日期 YYYY-MM-DD' },
+                birth_time: { type: 'string', description: '出生時間 HH:mm' },
+                birth_location: { type: 'string', description: '出生地城市名' },
+                calendar_type: { type: 'string', enum: ['solar', 'lunar'], description: '國曆或農曆' },
+                gender: { type: 'string', enum: ['male', 'female'], description: '性別' }
+            },
+            required: ['birth_date', 'birth_time', 'gender']
+        }
     }
 ];
 
 export const CATEGORIES = [
     { id: '日常生活', icon: 'wb_sunny', color: '#FF9500' },
+    { id: '命理占卜', icon: 'auto_awesome', color: '#8B5CF6' },
     { id: '購物消費', icon: 'shopping_cart', color: '#FF3B30' },
     { id: '健康管理', icon: 'favorite', color: '#FF2D55' },
     { id: '社交通訊', icon: 'event', color: '#5856D6' },
