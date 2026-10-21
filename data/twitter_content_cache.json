@@ -1,170 +1,161 @@
 {
   "metadata": {
-    "last_updated": "2026-10-21T01:21:26.905478",
-    "total_items": 58
+    "last_updated": "2026-10-21T07:11:31.215452",
+    "total_items": 52
   },
   "content": {
     "tech": [
       {
-        "title": "SimCity, but with Permits",
+        "title": "The Future of CSS",
+        "url": "https://www.joshwcomeau.com/css/interop-2027/",
+        "source": "Hacker News",
+        "score": 243
+      },
+      {
+        "title": "Show HN: SimCity, but with Permits",
         "url": "https://permit.petercai.com/",
         "source": "Hacker News",
-        "score": 541
+        "score": 725
       },
       {
         "title": "Feds suspect ransom negotiator ran ShinyHunters extortion site",
         "url": "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/",
         "source": "Hacker News",
-        "score": 84
+        "score": 177
       },
       {
-        "title": "DeepInfer: High-performance inference framework for DeepSeek models",
-        "url": "https://github.com/deepseek-ai/DeepInfer",
+        "title": "Muse exposes users' personal and business secrets when they share conversations",
+        "url": "https://arstechnica.com/security/2026/10/meta-muse-exposes-users-personal-and-business-secrets-when-they-share-conversations/",
         "source": "Hacker News",
-        "score": 2132
+        "score": 96
+      },
+      {
+        "title": "In Hilbert space, all things are quantumly possible",
+        "url": "https://www.quantamagazine.org/in-hilbert-space-all-things-are-quantumly-possible-20260826/",
+        "source": "Hacker News",
+        "score": 69
       },
       {
         "title": "Voxtral 3",
         "url": "https://mistral.ai/news/voxtral-3/",
         "source": "Hacker News",
-        "score": 522
+        "score": 613
+      },
+      {
+        "title": "eMudhra intermediate CA compromise",
+        "url": "https://emudhra.we-have-a-problem.com/",
+        "source": "Hacker News",
+        "score": 848
+      },
+      {
+        "title": "Upcoming critical PHP security release (CVE-2026-109618 / -109619)",
+        "url": "https://news-web.php.net/php.announce/509",
+        "source": "Hacker News",
+        "score": 493
+      },
+      {
+        "title": "Good type against all odds",
+        "url": "https://unsung.aresluna.org/good-type-against-all-odds/",
+        "source": "Hacker News",
+        "score": 90
+      },
+      {
+        "title": "Battlezone Online: BZFlag in the Browser",
+        "url": "https://github.com/timriker/bzo",
+        "source": "Hacker News",
+        "score": 20
+      },
+      {
+        "title": "Ship Your Interpreter",
+        "url": "https://www.basis.ai/blog/ship-your-interpreters/",
+        "source": "Hacker News",
+        "score": 15
+      },
+      {
+        "title": "Four Years with Decker",
+        "url": "https://beyondloom.com/blog/fouryearsdecker.html",
+        "source": "Hacker News",
+        "score": 22
       },
       {
         "title": "The Other Epidemic: Trying to get off benzodiazepines",
         "url": "https://www.thebeliever.net/the-other-epidemic/",
         "source": "Hacker News",
-        "score": 54
+        "score": 156
       },
       {
-        "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
-        "url": "https://github.com/google-pytorch/torch_tpu",
+        "title": "Pillowfort Is Closing",
+        "url": "https://www.pillowfort.social/posts/8413273",
         "source": "Hacker News",
-        "score": 257
+        "score": 27
       },
       {
-        "title": "What shall I teach my son?",
-        "url": "https://stevekrouse.com/ends",
+        "title": "Borrow Checking Zero-Cost Cyclic Mutability",
+        "url": "https://antelang.org/blog/safe_cyclic_mutability/",
         "source": "Hacker News",
-        "score": 256
-      },
-      {
-        "title": "SlopCodeBench 10/2026 – Opus 5.5, Astra wins overall, xhigh considered harmful",
-        "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-new-models-on-slop-code-bench.md",
-        "source": "Hacker News",
-        "score": 162
-      },
-      {
-        "title": "Academics have a duty to defend open knowledge systems like Wikipedia",
-        "url": "https://blogs.lse.ac.uk/impactofsocialsciences/2026/10/19/academics-have-a-duty-to-defend-open-knowledge-systems-like-wikipedia/",
-        "source": "Hacker News",
-        "score": 119
-      },
-      {
-        "title": "Apple broke an essential presentation feature of iPads",
-        "url": "https://teddysvoronos.com/2026-10-19-apple-broke-an-essential-presentation-feature-of-ipads/",
-        "source": "Hacker News",
-        "score": 488
-      },
-      {
-        "title": "Sixteen Years After Deepwater Horizon, Deep Sea Life Shows Few Signs of Recovery",
-        "url": "https://e360.yale.edu/digest/deepwater-horizon-deep-sea-recovery",
-        "source": "Hacker News",
-        "score": 185
-      },
-      {
-        "title": "Ofcom concedes defeat in 4chan case",
-        "url": "https://prestonbyrne.com/2026/10/20/ofcom-concedes-defeat/",
-        "source": "Hacker News",
-        "score": 329
-      },
-      {
-        "title": "EMudhra Intermediate CA Compromise",
-        "url": "https://emudhra.we-have-a-problem.com/",
-        "source": "Hacker News",
-        "score": 623
-      },
-      {
-        "title": "Microagi: Accelerating Embodied AGI",
-        "url": "https://www.microagi.ai/",
-        "source": "Hacker News",
-        "score": 6
-      },
-      {
-        "title": "Benchmarking Bot Detection Systems Against Modern AI Agents in 2026",
-        "url": "https://research.poh.org/bot-benchmarking-2026/",
-        "source": "Hacker News",
-        "score": 24
+        "score": 26
       }
     ],
     "ai": [
       {
+        "title": "In Hilbert space, all things are quantumly possible",
+        "url": "https://www.quantamagazine.org/in-hilbert-space-all-things-are-quantumly-possible-20260826/",
+        "source": "Hacker News AI",
+        "score": 69
+      },
+      {
+        "title": "Good type against all odds",
+        "url": "https://unsung.aresluna.org/good-type-against-all-odds/",
+        "source": "Hacker News AI",
+        "score": 90
+      },
+      {
+        "title": "Using Claude to reduce the attack surface of code",
+        "url": "https://www.anthropic.com/research/attack-surface-reduction",
+        "source": "Hacker News AI",
+        "score": 12
+      },
+      {
+        "title": "Nexus-CLI – Pure Go Bridge to DeepSeek R1/V3 with Claude Code and Ollama Support",
+        "url": "https://github.com/xamrayev/nexus-cli",
+        "source": "Hacker News AI",
+        "score": 9
+      },
+      {
         "title": "Benchmarking Bot Detection Systems Against Modern AI Agents in 2026",
         "url": "https://research.poh.org/bot-benchmarking-2026/",
         "source": "Hacker News AI",
-        "score": 24
+        "score": 41
       },
       {
         "title": "Launch HN: Respan (YC W24) – Open-source Rust AI gateway built around plugins",
         "url": "https://news.ycombinator.com/item?id=50167583",
         "source": "Hacker News AI",
-        "score": 44
+        "score": 48
       },
       {
         "title": "Facebook Pages require paid subscription to post more than two links per month",
         "url": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
         "source": "Hacker News AI",
-        "score": 414
+        "score": 434
       },
       {
         "title": "Publish fake stats, get cited in LLMs",
         "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web",
         "source": "Hacker News AI",
-        "score": 322
-      },
-      {
-        "title": "Claude designed protein binders against scorpion neurotoxins",
-        "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
-        "source": "Hacker News AI",
-        "score": 89
+        "score": 337
       },
       {
         "title": "NixOS is making me less afraid",
         "url": "https://entropicthoughts.com/nixos-is-making-me-less-afraid",
         "source": "Hacker News AI",
-        "score": 166
-      },
-      {
-        "title": "Anthropic logged net loss of over $80B in first half of 2026",
-        "url": "https://www.reuters.com/business/anthropic-recorded-net-loss-over-80-billion-first-half-this-year-wsj-reports-2026-10-20/",
-        "source": "Hacker News AI",
-        "score": 105
-      },
-      {
-        "title": "Secret trigger words could make AI-powered robots dangerous",
-        "url": "https://www.binghamton.edu/news/story/6544/secret-trigger-words-could-make-ai-powered-robots-dangerous-and-these-researchers-developed-a-defense",
-        "source": "Hacker News AI",
-        "score": 5
+        "score": 177
       }
     ],
     "news": [
       {
-        "title": "Zelensky says US intelligence sharing 'works now' after talks with Trump envoy in Oslo",
+        "title": "US envoy arrives in Russia ahead of meeting with Putin as Zelensky says intelligence sharing 'works now'",
         "url": "https://www.bbc.co.uk/news/articles/cq5ynkx3xy11o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Marseille braces for more unrest after protests give way to 'apocalyptic' disorder",
-        "url": "https://www.bbc.co.uk/news/articles/cm5ynkk570pno?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Elon Musk says Tesla-SpaceX merger being considered",
-        "url": "https://www.bbc.co.uk/news/articles/cmlyl09xjke4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Man charged with attack on Australia MP to face court",
-        "url": "https://www.bbc.co.uk/news/articles/c678pnn9mpgno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -173,53 +164,32 @@
         "source": "BBC World"
       },
       {
-        "title": "Alberta's decisive decision to stay in Canada gives Carney backing to take on Trump",
-        "url": "https://www.bbc.co.uk/news/articles/cr62ylj832vxo?at_medium=RSS&at_campaign=rss",
+        "title": "Katya Adler: France divided over who to blame for riots and what to learn from them",
+        "url": "https://www.bbc.co.uk/news/articles/cq0me4g9p970o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Elon Musk confirms talks to merge Tesla and SpaceX ",
+        "url": "https://www.bbc.co.uk/news/articles/cmlyl09xjke4o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Pakistan arrests man hunted by US over $126m postage fraud case",
+        "url": "https://www.bbc.co.uk/news/articles/ckdd8m1z1z3yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Sudan army drones hit mourners and fuel market killing more than 300 people, sources say",
         "url": "https://www.bbc.co.uk/news/articles/cr3el70jz1nqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
+      },
+      {
+        "title": "Alberta's decisive decision to stay in Canada gives Carney backing to take on Trump",
+        "url": "https://www.bbc.co.uk/news/articles/cr62ylj832vxo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " DaVinci Resolve Studio just got a very rare 20% discount ",
-        "url": "https://www.creativebloq.com/deals/davinci-resolve-studio-just-got-a-super-rare-20-percent-discount",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Cricut StickerPix Print + Cut review: a playful, professional printer with a hidden cost ",
-        "url": "https://www.creativebloq.com/reviews/cricut-stickerpix-print-cut-review-a-playful-and-purposeful-printer-with-a-costly-catch",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Final Fantasy Resonance (Switch 2) review: modern-retro at its finest ",
-        "url": "https://www.creativebloq.com/reviews/final-fantasy-resonance-switch-2-review-modern-retro-at-its-finest",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apple desperately needed a new 'iPhone moment'. The iPhone Duo might just be it ",
-        "url": "https://www.creativebloq.com/news/apple-desperately-needed-a-new-iphone-moment-the-iphone-duo-might-just-be-it",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The new Clayface poster is skin crawlingly creepy ",
-        "url": "https://www.creativebloq.com/news/the-new-clayface-poster-is-skin-crawlingly-creepy",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Every part of a fantasy world must follow its own clear rules and logic ",
-        "url": "https://www.creativebloq.com/how-to/every-part-of-a-fantasy-world-must-follow-its-own-clear-rules-and-logic",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Google Meet's appearance filters just sent me into an existential spiral ",
-        "url": "https://www.creativebloq.com/features/google-meets-appearance-filters-just-sent-me-into-an-existential-spiral",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
       {
         "title": "Scientists finally uncover why statins can cause muscle pain",
@@ -259,6 +229,26 @@
     ],
     "gaming": [
       {
+        "title": "Marvel Officially Made the Saddest Death in MCU History More Tragic With Just 1 Sentence",
+        "url": "https://www.polygon.com/visionquest-episode-3-explained-friday-avengers-endgame-tony-stark-death/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Phineas Horton? Disney Just Officially Made a Forgotten Marvel Legend Into MCU Canon",
+        "url": "https://www.polygon.com/visionquest-original-human-torch-phineas-horton-explainer/",
+        "source": "Polygon"
+      },
+      {
+        "title": "'VisionQuest' Episode 4 Ending Explained: Who Is Jocasta?",
+        "url": "https://www.polygon.com/visionquest-jocasta-explained-marvel-comics/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Forget ‘Carrie,’ Mike Flanagan’s Best Netflix Miniseries Is a Masterpiece From Start to Finish",
+        "url": "https://www.polygon.com/midnight-mass-vs-carrie-mike-mike-flanagan/",
+        "source": "Polygon"
+      },
+      {
         "title": "Red Rising Is Officially Returning In 2027",
         "url": "https://www.polygon.com/red-rising-digital-edition-2027-release/",
         "source": "Polygon"
@@ -271,26 +261,6 @@
       {
         "title": "Henry Cavill’s Upcoming Sci-Fi Space Opera Series Writer Admits It's Been ‘Brutally Difficult’",
         "url": "https://www.polygon.com/mike-flanagan-henry-cavill-warhammer-40k-tv-show/",
-        "source": "Polygon"
-      },
-      {
-        "title": "20 Best Board Wipes in Magic: The Gathering",
-        "url": "https://www.polygon.com/best-board-wipes-magic-gathering-mtg/",
-        "source": "Polygon"
-      },
-      {
-        "title": "How Dare They Put This Many Parries in a Call of Duty Game",
-        "url": "https://www.polygon.com/mw4-modern-warfare-4-parries-call-duty/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Next-gen Xbox Could Cost Up to $1,800, New Report Says",
-        "url": "https://www.polygon.com/next-gen-xbox-project-helix-price-release-date-2028/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Fallout 4: FEVer Dreams Gets Official Surprise Release",
-        "url": "https://www.polygon.com/fallout-4-fever-dreams-what-is-bethesda-rpg-release/",
         "source": "Polygon"
       }
     ],
