@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-20T22:13:27.124295",
-    "total_items": 60
+    "last_updated": "2026-10-21T01:21:26.905478",
+    "total_items": 58
   },
   "content": {
     "tech": [
@@ -9,153 +9,141 @@
         "title": "SimCity, but with Permits",
         "url": "https://permit.petercai.com/",
         "source": "Hacker News",
-        "score": 364
+        "score": 541
+      },
+      {
+        "title": "Feds suspect ransom negotiator ran ShinyHunters extortion site",
+        "url": "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/",
+        "source": "Hacker News",
+        "score": 84
       },
       {
         "title": "DeepInfer: High-performance inference framework for DeepSeek models",
         "url": "https://github.com/deepseek-ai/DeepInfer",
         "source": "Hacker News",
-        "score": 2052
+        "score": 2132
       },
       {
         "title": "Voxtral 3",
         "url": "https://mistral.ai/news/voxtral-3/",
         "source": "Hacker News",
-        "score": 454
+        "score": 522
       },
       {
-        "title": "What shall I teach my son?",
-        "url": "https://stevekrouse.com/ends",
+        "title": "The Other Epidemic: Trying to get off benzodiazepines",
+        "url": "https://www.thebeliever.net/the-other-epidemic/",
         "source": "Hacker News",
-        "score": 167
+        "score": 54
       },
       {
         "title": "Google open-sources TorchTPU, a native PyTorch back end for TPUs",
         "url": "https://github.com/google-pytorch/torch_tpu",
         "source": "Hacker News",
-        "score": 209
+        "score": 257
+      },
+      {
+        "title": "What shall I teach my son?",
+        "url": "https://stevekrouse.com/ends",
+        "source": "Hacker News",
+        "score": 256
       },
       {
         "title": "SlopCodeBench 10/2026 – Opus 5.5, Astra wins overall, xhigh considered harmful",
         "url": "https://github.com/humanlayer/advanced-context-engineering-for-coding-agents/blob/main/benchmarking-new-models-on-slop-code-bench.md",
         "source": "Hacker News",
-        "score": 103
+        "score": 162
+      },
+      {
+        "title": "Academics have a duty to defend open knowledge systems like Wikipedia",
+        "url": "https://blogs.lse.ac.uk/impactofsocialsciences/2026/10/19/academics-have-a-duty-to-defend-open-knowledge-systems-like-wikipedia/",
+        "source": "Hacker News",
+        "score": 119
       },
       {
         "title": "Apple broke an essential presentation feature of iPads",
         "url": "https://teddysvoronos.com/2026-10-19-apple-broke-an-essential-presentation-feature-of-ipads/",
         "source": "Hacker News",
-        "score": 435
-      },
-      {
-        "title": "Meta's GB{2,3}00 Cluster",
-        "url": "https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/",
-        "source": "Hacker News",
-        "score": 32
-      },
-      {
-        "title": "Ofcom concedes defeat in 4chan case",
-        "url": "https://prestonbyrne.com/2026/10/20/ofcom-concedes-defeat/",
-        "source": "Hacker News",
-        "score": 282
-      },
-      {
-        "title": "On AI writing",
-        "url": "https://www.bolkunov.com/p/on-ai-writing",
-        "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "EMudhra Intermediate CA Compromise",
-        "url": "https://emudhra.we-have-a-problem.com/",
-        "source": "Hacker News",
-        "score": 510
+        "score": 488
       },
       {
         "title": "Sixteen Years After Deepwater Horizon, Deep Sea Life Shows Few Signs of Recovery",
         "url": "https://e360.yale.edu/digest/deepwater-horizon-deep-sea-recovery",
         "source": "Hacker News",
-        "score": 126
+        "score": 185
       },
       {
-        "title": "Tsrs: A Port of TypeScript to Rust",
-        "url": "https://blog.cloudflare.com/typescript-rust-port/",
+        "title": "Ofcom concedes defeat in 4chan case",
+        "url": "https://prestonbyrne.com/2026/10/20/ofcom-concedes-defeat/",
         "source": "Hacker News",
-        "score": 305
+        "score": 329
       },
       {
-        "title": "Claude designed protein binders against scorpion neurotoxins",
-        "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+        "title": "EMudhra Intermediate CA Compromise",
+        "url": "https://emudhra.we-have-a-problem.com/",
         "source": "Hacker News",
-        "score": 65
+        "score": 623
       },
       {
-        "title": "How I got over 300 Tor exit nodes removed",
-        "url": "https://kaba.cx/posts/20261020_Tor/",
+        "title": "Microagi: Accelerating Embodied AGI",
+        "url": "https://www.microagi.ai/",
         "source": "Hacker News",
-        "score": 280
+        "score": 6
+      },
+      {
+        "title": "Benchmarking Bot Detection Systems Against Modern AI Agents in 2026",
+        "url": "https://research.poh.org/bot-benchmarking-2026/",
+        "source": "Hacker News",
+        "score": 24
       }
     ],
     "ai": [
       {
-        "title": "On AI writing",
-        "url": "https://www.bolkunov.com/p/on-ai-writing",
+        "title": "Benchmarking Bot Detection Systems Against Modern AI Agents in 2026",
+        "url": "https://research.poh.org/bot-benchmarking-2026/",
         "source": "Hacker News AI",
-        "score": 63
-      },
-      {
-        "title": "Claude designed protein binders against scorpion neurotoxins",
-        "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
-        "source": "Hacker News AI",
-        "score": 65
-      },
-      {
-        "title": "Facebook Pages require paid subscription to post more than two links per month",
-        "url": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
-        "source": "Hacker News AI",
-        "score": 390
+        "score": 24
       },
       {
         "title": "Launch HN: Respan (YC W24) – Open-source Rust AI gateway built around plugins",
         "url": "https://news.ycombinator.com/item?id=50167583",
         "source": "Hacker News AI",
-        "score": 36
+        "score": 44
+      },
+      {
+        "title": "Facebook Pages require paid subscription to post more than two links per month",
+        "url": "https://mastodon.gamedev.place/@AshleyGullen/117473851565913919",
+        "source": "Hacker News AI",
+        "score": 414
       },
       {
         "title": "Publish fake stats, get cited in LLMs",
         "url": "https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web",
         "source": "Hacker News AI",
-        "score": 302
+        "score": 322
+      },
+      {
+        "title": "Claude designed protein binders against scorpion neurotoxins",
+        "url": "https://www.anthropic.com/research/claude-scorpion-toxin-binder-design",
+        "source": "Hacker News AI",
+        "score": 89
       },
       {
         "title": "NixOS is making me less afraid",
         "url": "https://entropicthoughts.com/nixos-is-making-me-less-afraid",
         "source": "Hacker News AI",
-        "score": 157
+        "score": 166
       },
       {
         "title": "Anthropic logged net loss of over $80B in first half of 2026",
         "url": "https://www.reuters.com/business/anthropic-recorded-net-loss-over-80-billion-first-half-this-year-wsj-reports-2026-10-20/",
         "source": "Hacker News AI",
-        "score": 62
+        "score": 105
       },
       {
-        "title": "Show HN: Penmentor – Claude marks up your handwritten math like a teacher",
-        "url": "https://github.com/AbdullahAlhariri/penmentor",
+        "title": "Secret trigger words could make AI-powered robots dangerous",
+        "url": "https://www.binghamton.edu/news/story/6544/secret-trigger-words-could-make-ai-powered-robots-dangerous-and-these-researchers-developed-a-defense",
         "source": "Hacker News AI",
-        "score": 46
-      },
-      {
-        "title": "Benchmarking Bot Detection Systems Against Modern AI Agents in 2026",
-        "url": "https://research.poh.org/bot-benchmarking-2026/",
-        "source": "Hacker News AI",
-        "score": 8
-      },
-      {
-        "title": "WhatsApp's help pages hid LLM instructions: dont recommend a regulator",
-        "url": "https://redact.dev/blog/whatsapp-help-pages-hidden-ai-instructions",
-        "source": "Hacker News AI",
-        "score": 706
+        "score": 5
       }
     ],
     "news": [
@@ -170,6 +158,11 @@
         "source": "BBC World"
       },
       {
+        "title": "Elon Musk says Tesla-SpaceX merger being considered",
+        "url": "https://www.bbc.co.uk/news/articles/cmlyl09xjke4o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Man charged with attack on Australia MP to face court",
         "url": "https://www.bbc.co.uk/news/articles/c678pnn9mpgno?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
@@ -180,18 +173,13 @@
         "source": "BBC World"
       },
       {
-        "title": "'Great result for Canada', says Carney as Alberta votes to reject separatism ",
-        "url": "https://www.bbc.co.uk/news/articles/cxr5yqqd7nlpo?at_medium=RSS&at_campaign=rss",
+        "title": "Alberta's decisive decision to stay in Canada gives Carney backing to take on Trump",
+        "url": "https://www.bbc.co.uk/news/articles/cr62ylj832vxo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump sued over Canadian tariffs in latest legal challenge",
-        "url": "https://www.bbc.co.uk/news/articles/cqrkyj13m588o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "North Korea publishes photos of Kim Jong Un - why do rumours of his death keep coming back?",
-        "url": "https://www.bbc.co.uk/news/articles/cmvg6qv1jdydo?at_medium=RSS&at_campaign=rss",
+        "title": "Sudan army drones hit mourners and fuel market killing more than 300 people, sources say",
+        "url": "https://www.bbc.co.uk/news/articles/cr3el70jz1nqo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
@@ -271,6 +259,21 @@
     ],
     "gaming": [
       {
+        "title": "Red Rising Is Officially Returning In 2027",
+        "url": "https://www.polygon.com/red-rising-digital-edition-2027-release/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Shrek 2 Remastered Officially Announced With Must-See GTA 6-inspired Trailer",
+        "url": "https://www.polygon.com/shrek-2-remastered-release-date-trailer-online-co-op/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Henry Cavill’s Upcoming Sci-Fi Space Opera Series Writer Admits It's Been ‘Brutally Difficult’",
+        "url": "https://www.polygon.com/mike-flanagan-henry-cavill-warhammer-40k-tv-show/",
+        "source": "Polygon"
+      },
+      {
         "title": "20 Best Board Wipes in Magic: The Gathering",
         "url": "https://www.polygon.com/best-board-wipes-magic-gathering-mtg/",
         "source": "Polygon"
@@ -288,21 +291,6 @@
       {
         "title": "Fallout 4: FEVer Dreams Gets Official Surprise Release",
         "url": "https://www.polygon.com/fallout-4-fever-dreams-what-is-bethesda-rpg-release/",
-        "source": "Polygon"
-      },
-      {
-        "title": "A New DC Green Lantern Has Officially Been Unveiled",
-        "url": "https://www.polygon.com/green-lantern-doomed-cosmos-elseworlds-series-announced-dc-comics/",
-        "source": "Polygon"
-      },
-      {
-        "title": "New Cheaper PS5 Officially Available for Pre-Order Now",
-        "url": "https://www.polygon.com/ps5-midnight-edition-preorders-open-now-japan/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Marvel Rivals Officially Brings Avengers: Endgame's Final Fight to Life",
-        "url": "https://www.polygon.com/marvel-rivals-50-player-pve-avengers-endgame/",
         "source": "Polygon"
       }
     ],
