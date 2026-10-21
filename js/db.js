@@ -1,4 +1,4 @@
-﻿import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
+﻿﻿import { openDB, deleteDB } from 'https://cdn.jsdelivr.net/npm/idb@8/+esm';
 
 const DB_NAME = 'sxios';
 const DB_VERSION = 14;
@@ -578,15 +578,24 @@ const MemoryDB = {
     },
 
     // 從 Worker 匯入多條記憶（跨裝置同步用）
+    // 本機已經有的（同 id）不覆蓋：Worker 回傳的是精簡版，蓋上去會把 PWA 原生記憶的向量與感官欄位弄丟；
+    // 機器人的對話原文日誌（「[Discord 聊天]」）不是記憶，不匯入。回傳實際新增的筆數。
     async importMany(memories) {
         const database = await initDB();
         const tx = database.transaction('memories', 'readwrite');
+        let added = 0;
         for (const mem of memories) {
+            if (!mem?.id || mem.memory_type === 'raw' || String(mem.content || '').startsWith('[Discord 聊天]')) continue;
+            if (await tx.store.get(mem.id)) continue;
+            const fromSiios = String(mem.content || '').startsWith('[Siios 聊天]'); // 備份還原時可能帶回自己推上去的，去掉標記
+            added++;
             await tx.store.put({
                 id: mem.id,
                 chat_id: mem.chat_id || mem.character_id,
                 character_id: mem.character_id,
-                content: mem.content,
+                origin: fromSiios ? 'siios' : 'discord',
+                source_app: fromSiios ? undefined : 'discord',
+                content: fromSiios ? String(mem.content).replace(/^\[Siios 聊天\]\s*/, '') : mem.content,
                 memory_type: mem.memory_type || 'dynamic',
                 importance: mem.importance || 0.5,
                 timestamp: parseWorkerTimestamp(mem.timestamp),
@@ -599,6 +608,8 @@ const MemoryDB = {
                 reinforcementCount: 0, lastReinforced: null, lastAccessed: Date.now()
             });
         }
+        await tx.done;
+        return added;
     },
 
     async searchByVector(queryVector, threshold = 0.7) {

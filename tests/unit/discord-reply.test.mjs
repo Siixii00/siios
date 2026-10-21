@@ -7,7 +7,7 @@ import { DatabaseSync } from 'node:sqlite';
 const workerUrl = new URL('../../scripts/discord-bot-worker.js', import.meta.url);
 const worker = (await import(workerUrl.href)).default;
 const src = readFileSync(workerUrl, 'utf8');
-const H = vm.runInNewContext(src.slice(src.indexOf('// <<format-helpers'), src.indexOf('// format-helpers>>')) + '\n({ stripReasoning, looksLikeRefusal })');
+const H = vm.runInNewContext(src.slice(src.indexOf('// <<format-helpers'), src.indexOf('// format-helpers>>')) + '\n({ stripReasoning, looksLikeRefusal, trimConversation })');
 
 // ───── 純函式 ─────
 test('stripReasoning：世界書 ECoT 的 HTML 註解與 <thinking> 一起去掉', () => {
@@ -90,7 +90,7 @@ async function runPoll(userMessages, aiReplies, discordHistory = [], setup = () 
         const pending = [];
         const res = await worker.fetch(new Request('https://w.test/poll'), env, { waitUntil: p => pending.push(p) });
         await Promise.allSettled(pending);
-        return { body: await res.json(), sent, aiCalls, stored: db.prepare(`SELECT role, content FROM messages WHERE id != 'h1' ORDER BY timestamp`).all() };
+        return { body: await res.json(), sent, aiCalls, refusalLog: JSON.parse(db.prepare(`SELECT cursor FROM botState WHERE key = 'refusal_log'`).get()?.cursor || '[]'), stored: db.prepare(`SELECT role, content FROM messages WHERE id != 'h1' ORDER BY timestamp`).all() };
     } finally { globalThis.fetch = realFetch; }
 }
 
@@ -295,4 +295,67 @@ test('looksLikeRefusal：角色在劇情裡說「我無法回答你」不算罐�
     assert.ok(!H.looksLikeRefusal('*別過臉* 這個問題，我無法回答你。'));
     assert.ok(!H.looksLikeRefusal('我無法提供更多資訊，抱歉。'));
     assert.ok(H.looksLikeRefusal('作為一個AI語言模型，我無法協助這個請求。'));
+});
+
+// ───── 被拒絕時精簡上下文重試、記錄拒絕 ─────
+test('trimConversation：只留最後 N 則，且不從 assistant 開頭', () => {
+    const msgs = Array.from({ length: 10 }, (_, i) => ({ role: i % 2 ? 'assistant' : 'user', content: String(i) }));
+    assert.deepEqual(Array.from(H.trimConversation(msgs, 4)).map(m => m.content), ['6', '7', '8', '9']);
+    // 最後 3 則是 7(assistant),8,9 → 開頭是 assistant 就丟掉
+    assert.deepEqual(Array.from(H.trimConversation(msgs, 3)).map(m => m.content), ['8', '9']);
+    assert.deepEqual(Array.from(H.trimConversation([{ role: 'user', content: 'x' }], 0)).map(m => m.content), ['x']);
+});
+
+test('被拒絕後重試時上下文越來越精簡，並寫進拒絕紀錄', async () => {
+    const hist = [dm(2000, '現在這則')];
+    for (let i = 0; i < 20; i++) hist.push(dm(1000 + i * 2, i % 2 ? '機器人說的' + i : '使用者說的' + i, i % 2 ? 'BOT' : 'U1'));
+    // 把歷史改成交錯（Discord 由新到舊）
+    const alt = [hist[0], ...Array.from({ length: 20 }, (_, i) => dm(1100 - i * 2, (i % 2 ? '使用者' : '機器人') + i, i % 2 ? 'U1' : 'BOT'))];
+    const r = await runPoll(['現在這則'], [REFUSAL, REFUSAL, '*抬頭* 嗯？'], alt);
+    assert.equal(r.aiCalls.length, 3);
+    const n = body => body.messages.filter(m => m.role === 'user' || m.role === 'assistant').length;
+    assert.ok(n(r.aiCalls[1]) <= 12 && n(r.aiCalls[1]) < n(r.aiCalls[0]), '第二次應精簡到最近 12 則');
+    assert.ok(n(r.aiCalls[2]) <= 4, '第三次只留最近 4 則');
+    assert.equal(chatOf(r.aiCalls[2]).at(-1), 'user:現在這則'); // 目前這則一定在
+    assert.deepEqual(r.sent, ['*抬頭* 嗯？']);
+    assert.equal(r.refusalLog.length, 1);
+    assert.equal(r.refusalLog[0].recoveredAtAttempt, 3);
+    assert.equal(r.refusalLog[0].refusals.length, 2);
+    assert.equal(r.refusalLog[0].user, '現在這則'.slice(0, 20));
+});
+
+test('連續被拒絕放棄時也有紀錄（recoveredAtAttempt 為 null）', async () => {
+    const r = await runPoll(['戳戳。'], [REFUSAL]);
+    assert.equal(r.refusalLog.length, 1);
+    assert.equal(r.refusalLog[0].recoveredAtAttempt, null);
+    assert.equal(r.refusalLog[0].refusals.length, 3);
+});
+
+// ───── 記憶：機器人讀得到 PWA 同步來的記憶 ─────
+test('記憶：機器人讀得到 chat_id 不同、但 character_id 相同的記憶（PWA 同步來的），且對話日誌不會擠掉真正的記憶', async () => {
+    const setup = db => {
+        const ins = db.prepare(`INSERT INTO memories (id, chat_id, character_id, content, memory_type, importance, timestamp) VALUES (?, ?, ?, ?, ?, ?, ?)`);
+        ins.run('p1', 'pwa-chat-1', 'char1', '[Siios 聊天] 她最喜歡草莓蛋糕', 'permanent', 0.9, '2026-01-01T00:00:00Z');
+        ins.run('d1', 'char1', 'char1', '她在須彌城和我同居', 'dynamic', 0.6, '2026-02-01T00:00:00Z');
+        ins.run('o1', 'other-chat', 'someone-else', '別的角色的記憶', 'dynamic', 0.9, '2026-02-01T00:00:00Z');
+        for (let i = 0; i < 80; i++) ins.run('raw' + i, 'char1', 'char1', `[Discord 聊天] 2026-10-20 User: 日誌${i}`, 'dynamic', 0.5, `2026-10-${String(1 + (i % 20)).padStart(2, '0')}T00:00:00Z`);
+    };
+    const r = await runPoll(['你好'], ['好'], [], setup);
+    const text = JSON.stringify(r.aiCalls[0].messages);
+    assert.ok(text.includes('她最喜歡草莓蛋糕'), 'PWA 同步來的記憶沒讀到');
+    assert.ok(text.includes('她在須彌城和我同居'));
+    assert.ok(!text.includes('別的角色的記憶'));
+    assert.ok(!text.includes('日誌'));
+});
+
+test('/sync/chat?memories_only=1：只回記憶，不含對話日誌與原本來自 Siios 的記憶', async () => {
+    const { db, env } = makeEnv();
+    const ins = db.prepare(`INSERT INTO memories (id, chat_id, character_id, content, memory_type, importance, timestamp) VALUES (?, ?, ?, ?, 'dynamic', 0.5, '2026-01-01')`);
+    ins.run('a', 'char1', 'char1', '機器人整理的事實');
+    ins.run('b', 'char1', 'char1', '[Discord 聊天] 原文日誌');
+    ins.run('c', 'pwa', 'char1', '[Siios 聊天] 從 PWA 推上去的');
+    const res = await worker.fetch(new Request('https://w.test/sync/chat?character_id=char1&memories_only=1'), env, { waitUntil() {} });
+    const body = await res.json();
+    assert.deepEqual(body.memories.map(m => m.id), ['a']);
+    assert.deepEqual(body.messages, []);
 });

@@ -244,8 +244,9 @@ export default {
                 if (!character_id) {
                     return Response.json({ success: false, error: '缺少 character_id' }, { status: 400, headers: corsHeaders });
                 }
-                const messages = await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? ORDER BY timestamp ASC`).bind(character_id).all();
-                const memories = await env.DB.prepare(`SELECT * FROM memories WHERE character_id = ? ORDER BY timestamp DESC`).bind(character_id).all();
+                const memoriesOnly = url.searchParams.get('memories_only') === '1';
+                const messages = memoriesOnly ? { results: [] } : await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? ORDER BY timestamp ASC`).bind(character_id).all();
+                const memories = await env.DB.prepare(`SELECT * FROM memories WHERE character_id = ? AND memory_type != 'raw' AND content NOT LIKE '[Discord 聊天]%' AND content NOT LIKE '[Siios 聊天]%' ORDER BY timestamp DESC`).bind(character_id).all();
                 return Response.json({ success: true, messages: messages.results || [], memories: memories.results || [] }, { headers: corsHeaders });
             } catch (error) {
                 return Response.json({ success: false, error: error.message }, { status: 400, headers: corsHeaders });
@@ -833,9 +834,14 @@ async function handleSlashCommand(event, env, ctx) {
             const allowedChannels = await getConfig(env, 'ALLOWED_CHANNELS') || '(無)';
             const backupKey = await getConfig(env, 'BACKUP_KEY') || '(未設定)';
             const responseMode = getResponseModeConfig(await getConfig(env, 'RESPONSE_MODE'), await getConfig(env, 'CUSTOM_RESPONSE_PROMPT')).id;
+            let refusalLines = '（無）';
+            try {
+                const log = JSON.parse((await env.DB.prepare(`SELECT cursor FROM botState WHERE key = 'refusal_log'`).first())?.cursor || '[]');
+                if (log.length) refusalLines = log.slice(-5).map(r => `${r.t.slice(5, 16).replace('T', ' ')} ${String(r.model).slice(0, 24)} 拒${r.refusals.length}次${r.recoveredAtAttempt ? `→第${r.recoveredAtAttempt}次成功` : '→放棄'}「${r.user}」`).join('\n');
+            } catch (_) {}
             const keyDisplay = apiKey === '(未設定)' ? '(未設定)' : apiKey.slice(0, 4) + '****';
             const backupDisplay = backupKey === '(未設定)' ? '(未設定)' : backupKey.slice(0, 4) + '****';
-            return Response.json({ type: 4, data: { content: `📋 **目前設定**\n\`\`\`\nAPI URL:     ${apiUrl}\nAPI Key:     ${keyDisplay}\nModel:       ${model}\nInterject:   ${interjectProb}\nReaction:    ${reactionProb}\nAllowChan:   ${allowedChannels}\nBackupKey:   ${backupDisplay}\nResponse:    ${responseMode}\n\`\`\`\n使用 /configure 修改設定` } });
+            return Response.json({ type: 4, data: { content: `📋 **目前設定**\n\`\`\`\nAPI URL:     ${apiUrl}\nAPI Key:     ${keyDisplay}\nModel:       ${model}\nInterject:   ${interjectProb}\nReaction:    ${reactionProb}\nAllowChan:   ${allowedChannels}\nBackupKey:   ${backupDisplay}\nResponse:    ${responseMode}\n\`\`\`\n最近被拒絕（最多 5 筆）：\n\`\`\`\n${refusalLines}\n\`\`\`\n使用 /configure 修改設定`, flags: 64 } });
         }
 
         if (name === 'channel') {
@@ -1179,7 +1185,9 @@ async function generateAIResponseWithContext(message, characterId, userId, userD
     // 記憶
     let memories = [];
     const memoryChatId = characterId || chatId;
-    const memoryRows = await env.DB.prepare(`SELECT * FROM memories WHERE chat_id = ? ORDER BY timestamp DESC LIMIT 50`).bind(memoryChatId).all();
+    // 同時用 chat_id 與 character_id 比對：從 Siios 同步來的記憶 chat_id 是 Siios 的聊天室，只有 character_id 對得上。
+    // 對話原文日誌（每則訊息都會存一筆）在 SQL 就排除，否則最近的 50 筆幾乎都是日誌；重要的記憶優先。
+    const memoryRows = await env.DB.prepare(`SELECT * FROM memories WHERE (chat_id = ? OR character_id = ?) AND memory_type != 'raw' AND content NOT LIKE '[Discord 聊天]%' ORDER BY importance DESC, timestamp DESC LIMIT 60`).bind(memoryChatId, memoryChatId).all();
     memories = memoryRows.results || [];
 
     const charName = characterData?.name || 'AI';
@@ -1294,8 +1302,16 @@ ${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道�
     }
     // 偶爾會拿到空內容、全是思考過程、或上游的拒絕罐頭回覆：換個亂數種子重試，最多三次
     let lastProblem = '';
+    const refusals = []; // 這次生成過程中被拒絕的紀錄（寫進 refusal_log）
+    const RETRY_KEEP = [null, 12, 4];
     for (let attempt = 0; attempt < 3; attempt++) {
-        const attemptBody = attempt === 0 ? body : { ...body, seed: Math.floor(Math.random() * 999999), temperature: Math.max(body.temperature || 0.7, 1.0) };
+        const keep = RETRY_KEEP[attempt];
+        const attemptBody = attempt === 0 ? body : {
+            ...body,
+            messages: [...systemMessages, ...trimConversation(conversationMessages, keep), ...backMessages],
+            seed: Math.floor(Math.random() * 999999),
+            temperature: Math.max(body.temperature || 0.7, 1.0)
+        };
         const response = await fetch(`${aiUrl}/v1/chat/completions`, {
             method: 'POST', headers: { 'Authorization': `Bearer ${aiKey}`, 'Content-Type': 'application/json' },
             body: JSON.stringify(attemptBody)
@@ -1312,9 +1328,16 @@ ${!environ.isDM && environ.isNsfw ? '- 此頻道已標記為成人(NSFW)頻道�
         let content = stripReasoning(choice?.message?.content);
         if (choice?.finish_reason === 'length') content = trimToLastSentence(content);
         if (!content) { lastProblem = '沒有產生可用的內容（可能全是思考過程或被輸出上限截斷）'; console.error('AI empty reply, attempt', attempt + 1); continue; }
-        if (looksLikeRefusal(content)) { lastProblem = '模型拒絕回覆（' + content.slice(0, 40) + '）'; console.error('AI refusal, attempt', attempt + 1, content.slice(0, 60)); continue; }
+        if (looksLikeRefusal(content)) {
+            lastProblem = '模型拒絕回覆（' + content.slice(0, 40) + '）';
+            console.error('AI refusal, attempt', attempt + 1, content.slice(0, 60));
+            refusals.push({ attempt: attempt + 1, kept: attempt === 0 ? conversationMessages.length : Math.min(keep, conversationMessages.length), reply: content.slice(0, 30) });
+            continue;
+        }
+        if (refusals.length) await logRefusal(env, { model: aiModel, channel: message.channel_id, user: message.content, refusals, recoveredAtAttempt: attempt + 1 });
         return { content };
     }
+    if (refusals.length) await logRefusal(env, { model: aiModel, channel: message.channel_id, user: message.content, refusals, recoveredAtAttempt: null });
     throw new Error('AI ' + lastProblem + '，已重試 3 次');
 }
 
@@ -1584,6 +1607,12 @@ const REFUSAL_PATTERNS = [
 function looksLikeRefusal(text) {
     const t = String(text ?? '').trim();
     return t.length > 0 && t.length <= 150 && REFUSAL_PATTERNS.some(re => re.test(t));
+}
+// 被拒絕後重試時精簡上下文：只留最後 keep 則，且不從 assistant 開頭（單次請求裡累積的內容越少，越不容易被過濾器擋）
+function trimConversation(messages, keep) {
+    let out = messages.slice(-Math.max(1, keep));
+    while (out.length > 1 && out[0].role !== 'user') out = out.slice(1);
+    return out;
 }
 // format-helpers>>
 
@@ -1990,6 +2019,19 @@ async function syncMemories(memories, env) {
 async function getMemories(character_id, env) {
     const result = await env.DB.prepare(`SELECT * FROM memories WHERE character_id = ? ORDER BY timestamp DESC LIMIT 100`).bind(character_id).all();
     return result.results || [];
+}
+
+// 記下被拒絕的情況，之後才看得出是特定訊息、特定模型，還是精簡上下文就能解決。只存訊息開頭 20 字。
+async function logRefusal(env, { model, channel, user, refusals, recoveredAtAttempt }) {
+    try {
+        const row = await env.DB.prepare(`SELECT cursor FROM botState WHERE key = 'refusal_log'`).first();
+        let log = [];
+        try { log = JSON.parse(row?.cursor || '[]'); } catch (_) {}
+        log.push({ t: new Date().toISOString(), model, channel, user: String(user ?? '').slice(0, 20), refusals, recoveredAtAttempt });
+        await env.DB.prepare(`INSERT INTO botState (key, cursor) VALUES ('refusal_log', ?) ON CONFLICT(key) DO UPDATE SET cursor = excluded.cursor`).bind(JSON.stringify(log.slice(-20))).run();
+    } catch (error) {
+        console.error('logRefusal error:', error);
+    }
 }
 
 // ===== 同步 Discord 用戶綁定 =====

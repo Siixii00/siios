@@ -1,4 +1,4 @@
-﻿﻿import Router from './router.js';
+﻿﻿﻿import Router from './router.js';
 import { SettingsDB, initDB, GlobalForbiddenDB } from './db.js';
 import { createElement, createIcon, createToast, createErrorModal } from './components.js';
 import LockScreen from './lockscreen.js';
@@ -161,6 +161,8 @@ const App = {
                 memorySystem.start();
             }
             console.log('[App] 記憶系統初始化完成');
+            // 與 Discord 機器人的記憶同步（每 30 分鐘最多一次，沒設定 Worker 網址就略過），不阻塞啟動
+            setTimeout(() => import('./core/discord-memory-sync.js').then(m => m.autoSyncMemories()).catch(() => {}), 8000);
             
             console.log('[App] 註冊路由...');
             await registerRoutes();

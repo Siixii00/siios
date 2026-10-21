@@ -1,6 +1,7 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast, createKakaoBottomSheet } from '../../components.js';
 import { SettingsDB, CharactersDB, UsersDB, MemoryDB, WorldInfoDB, GlobalSettingsDB, GlobalForbiddenDB, MessagesDB, ChatsDB, DiscordUserBindingDB, initDB, parseWorkerTimestamp } from '../../db.js';
+import { pushMemories, pullDiscordMemories } from '../../core/discord-memory-sync.js';
 
 async function renderDiscordSettings() {
     const container = createElement('div', 'app-container bg-ios-bg');
@@ -304,7 +305,7 @@ async function renderDiscordSettings() {
     memSyncBtn.style.maxWidth = 'calc(100% - 32px)';
     memSyncBtn.style.background = '#10B981';
     memSyncBtn.style.color = '#fff';
-    memSyncBtn.textContent = '🧠 同步記憶到 Worker';
+    memSyncBtn.textContent = '🧠 同步記憶（雙向）';
     memSyncBtn.onclick = async () => {
         try {
             const workerUrl = workerInput.value.replace(/\/+$/, '');
@@ -313,32 +314,17 @@ async function renderDiscordSettings() {
                 return;
             }
 
-            const memories = await MemoryDB.getAll();
-            if (memories.length === 0) {
-                createToast('沒有記憶資料可同步', 'warning');
-                return;
-            }
-
             memSyncBtn.disabled = true;
             memSyncBtn.textContent = '同步中...';
 
-            const response = await fetch(`${workerUrl}/sync/memories`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ memories })
-            });
-
-            const data = await response.json();
-            if (data.success) {
-                createToast(`已同步 ${data.count} 條記憶到 Worker`, 'success');
-            } else {
-                createToast('同步失敗：' + data.error, 'error');
-            }
+            const pushed = await pushMemories(workerUrl, { all: true });
+            const pulled = await pullDiscordMemories(workerUrl);
+            createToast(pushed || pulled ? `已推送 ${pushed} 條記憶到 Worker，並從 Discord 取回 ${pulled} 條新記憶` : '沒有需要同步的記憶（只會同步有歸屬角色的記憶；取回的是已啟用 Discord 的角色）', pushed || pulled ? 'success' : 'warning');
         } catch (error) {
             createToast('同步失敗：' + error.message, 'error');
         } finally {
             memSyncBtn.disabled = false;
-            memSyncBtn.textContent = '🧠 同步記憶到 Worker';
+            memSyncBtn.textContent = '🧠 同步記憶（雙向）';
         }
     };
     main.appendChild(memSyncBtn);
