@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-21T18:26:56.086103",
-    "total_items": 62
+    "last_updated": "2026-10-21T22:09:54.858313",
+    "total_items": 61
   },
   "content": {
     "tech": [
       {
-        "title": "PHP 8.2.35",
-        "url": "https://github.com/php/php-src/releases/tag/php-8.2.35",
-        "source": "Hacker News",
-        "score": 814
-      },
-      {
         "title": "Today's PHP security release, and how we're strengthening security",
         "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
         "source": "Hacker News",
-        "score": 272
+        "score": 557
+      },
+      {
+        "title": "GitLab Critical Patch Release",
+        "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
+        "source": "Hacker News",
+        "score": 155
+      },
+      {
+        "title": "No More Icons in Every Menu by Default",
+        "url": "https://blog.jim-nielsen.com/2026/icons-in-every-menu/",
+        "source": "Hacker News",
+        "score": 49
+      },
+      {
+        "title": "AWS rates PHP RCE as Important so Amazon Linux 2023 patch may take 20 days",
+        "url": "https://github.com/amazonlinux/amazon-linux-2023/issues/1148",
+        "source": "Hacker News",
+        "score": 49
       },
       {
         "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
         "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
         "source": "Hacker News",
-        "score": 218
+        "score": 366
       },
       {
-        "title": "Eight Bits of Trust; eMudhra's CA keys cracked in milliseconds",
+        "title": "Why Windows 11 still ships with Windows 95's memory manager hidden inside it",
+        "url": "https://www.windowslatest.com/2026/10/19/why-windows-11-still-ships-with-windows-95s-memory-manager-hidden-inside-it/",
+        "source": "Hacker News",
+        "score": 95
+      },
+      {
+        "title": "Eight Bits of Trust: eMudhra's CA keys cracked in milliseconds",
         "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
         "source": "Hacker News",
-        "score": 676
+        "score": 778
+      },
+      {
+        "title": "Google's Rust Style Guide",
+        "url": "https://google.github.io/styleguide/rustguide.html",
+        "source": "Hacker News",
+        "score": 114
+      },
+      {
+        "title": "Claude Duet",
+        "url": "https://claude.com/product/claude-duet",
+        "source": "Hacker News",
+        "score": 221
+      },
+      {
+        "title": "Meta ordered to pay $25B penalty in New Mexico Cambridge Analytica case",
+        "url": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
+        "source": "Hacker News",
+        "score": 235
       },
       {
         "title": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
         "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
         "source": "Hacker News",
-        "score": 252
+        "score": 332
       },
       {
         "title": "Patch the Planet: global response coordination as agents uncover vulnerabilities",
         "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
         "source": "Hacker News",
-        "score": 168
-      },
-      {
-        "title": "Tiny possum and glider thought extinct for 6000 years found in remote West Papua",
-        "url": "https://www.bbc.com/news/articles/cp814l80pw2o",
-        "source": "Hacker News",
-        "score": 65
+        "score": 210
       },
       {
         "title": "EA is shutting down BioWare",
         "url": "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware",
         "source": "Hacker News",
-        "score": 87
+        "score": 415
+      },
+      {
+        "title": "Tiny possum and glider thought extinct for 6000 years found in remote West Papua",
+        "url": "https://www.bbc.com/news/articles/cp814l80pw2o",
+        "source": "Hacker News",
+        "score": 126
       },
       {
         "title": "OpenAI models are coming to Google Cloud",
         "url": "https://openai.com/index/openai-models-google-cloud/",
         "source": "Hacker News",
-        "score": 103
-      },
-      {
-        "title": "Using thousands of AI agents to uncover new leads in biological data",
-        "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
-        "source": "Hacker News",
-        "score": 86
-      },
-      {
-        "title": "New plastic pollution discovered: 'Plasticorals' coral rubble fused with plastic",
-        "url": "https://www.oist.jp/news-center/news/2026/9/18/new-form-plastic-pollution-discovered-shores-vulnerable-coral-reefs",
-        "source": "Hacker News",
-        "score": 22
-      },
-      {
-        "title": "Oregon lawmakers approve money to buy an iconic waterfall listed on Redfin",
-        "url": "https://apnews.com/article/oregon-waterfall-for-sale-lawmakers-996de63462d49ec3ad9bee1629fb9488",
-        "source": "Hacker News",
-        "score": 95
-      },
-      {
-        "title": "What I learned from six months of being stupid on purpose",
-        "url": "https://wvez.org/blog/learning-to-be-stupid/",
-        "source": "Hacker News",
-        "score": 62
-      },
-      {
-        "title": "Drupal is now light-years ahead of its reputation",
-        "url": "https://dri.es/state-of-drupal-presentation-september-2026",
-        "source": "Hacker News",
-        "score": 66
-      },
-      {
-        "title": "Rust off Rails: The opinionated web stack for the AI era",
-        "url": "https://rustoffrails.org/",
-        "source": "Hacker News",
-        "score": 55
+        "score": 192
       }
     ],
     "ai": [
@@ -101,79 +101,78 @@
         "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
         "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
         "source": "Hacker News AI",
-        "score": 218
+        "score": 366
+      },
+      {
+        "title": "Claude Duet",
+        "url": "https://claude.com/product/claude-duet",
+        "source": "Hacker News AI",
+        "score": 221
       },
       {
         "title": "OpenAI models are coming to Google Cloud",
         "url": "https://openai.com/index/openai-models-google-cloud/",
         "source": "Hacker News AI",
-        "score": 103
+        "score": 192
       },
       {
         "title": "Using thousands of AI agents to uncover new leads in biological data",
         "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
         "source": "Hacker News AI",
-        "score": 86
+        "score": 119
       },
       {
-        "title": "Rust off Rails: The opinionated web stack for the AI era",
-        "url": "https://rustoffrails.org/",
+        "title": "Google staff resign in backlash over its AI contracts with military",
+        "url": "https://www.bbc.com/news/articles/cmreyvepnv0po",
         "source": "Hacker News AI",
-        "score": 55
+        "score": 75
       },
       {
-        "title": "A train simulator game for console hackers",
-        "url": "https://github.com/antoniovazquezaraujo/LeTrain",
+        "title": "Claude Duet",
+        "url": "https://claude.com/resources/articles/claude-duet",
         "source": "Hacker News AI",
-        "score": 4
+        "score": 26
       },
       {
-        "title": "PHP2Shell: AI uncovers critical RCE in PHP",
-        "url": "https://www.wiz.io/blog/php2shell-php-rce",
+        "title": "Plex laid off the whole player team",
+        "url": "https://forums.plex.tv/t/2026-20-0-beta-ios-and-tvos-4k-dovi-hdr10-won-t-play-infinite-spinning-circle/943966?page=5",
         "source": "Hacker News AI",
-        "score": 398
-      },
-      {
-        "title": "Texas data center boom could erase decades of progress on air quality",
-        "url": "https://www.texastribune.org/2026/10/20/data-centers-texas-air-quality-report-pollution-health-risks/",
-        "source": "Hacker News AI",
-        "score": 10
+        "score": 100
       },
       {
         "title": "Good type against all odds",
         "url": "https://unsung.aresluna.org/good-type-against-all-odds/",
         "source": "Hacker News AI",
-        "score": 190
-      },
-      {
-        "title": "In Hilbert space, all things are quantumly possible",
-        "url": "https://www.quantamagazine.org/in-hilbert-space-all-things-are-quantumly-possible-20260826/",
-        "source": "Hacker News AI",
-        "score": 135
-      },
-      {
-        "title": "Using Claude to reduce the attack surface of code",
-        "url": "https://www.anthropic.com/research/attack-surface-reduction",
-        "source": "Hacker News AI",
-        "score": 118
+        "score": 194
       },
       {
         "title": "AI agent fixed the bug, but what else did it change?",
         "url": "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/",
         "source": "Hacker News AI",
-        "score": 29
+        "score": 43
       },
       {
-        "title": "LayerFS: The filesystem for AI coding agents",
-        "url": "https://layerfs.ai/",
+        "title": "Toyota Releases Video of Wheelchair-Alternative Mobility Concepts in Action",
+        "url": "https://news.ycombinator.com/item?id=50187813",
         "source": "Hacker News AI",
-        "score": 66
+        "score": 4
+      },
+      {
+        "title": "In Hilbert space, all things are quantumly possible",
+        "url": "https://www.quantamagazine.org/in-hilbert-space-all-things-are-quantumly-possible-20260826/",
+        "source": "Hacker News AI",
+        "score": 140
       }
     ],
     "news": [
       {
-        "title": "Russia says it is ready to resume talks with Ukraine and US to end war",
+        "title": "Missiles hit Kyiv after Russia agrees to US call to resume Ukraine peace talks",
         "url": "https://www.bbc.co.uk/news/articles/cq3djn5nxx12o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Rosenberg: US diplomatic push offers little hope for imminent Ukraine peace",
+        "url": "https://www.bbc.co.uk/news/articles/cm98zn5j89kdo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -182,40 +181,35 @@
         "source": "BBC World"
       },
       {
+        "title": "Pope does not need further treatment after lung cancer surgery",
+        "url": "https://www.bbc.co.uk/news/articles/cqrly2dg5xzzo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "'Targeted' attack on much-loved MP leaves Australian town heartbroken",
         "url": "https://www.bbc.co.uk/news/articles/cmgr8q88r5eqo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Australian MP loses both legs after alleged car attack, husband says",
-        "url": "https://www.bbc.co.uk/news/articles/ckwyqdqxw6d0o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Elon Musk confirms he is considering merging Tesla and SpaceX",
-        "url": "https://www.bbc.co.uk/news/articles/cmlyl09xjke4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Pakistan arrests man wanted by US over $126m postage fraud case",
-        "url": "https://www.bbc.co.uk/news/articles/ckdd8m1z1z3yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Family of prison officer killed by IRA receives state apology",
         "url": "https://www.bbc.co.uk/news/articles/ck20rver1j31o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
+      },
+      {
+        "title": "Ex-prosecutor charged with treason in Mexico over US drug raid",
+        "url": "https://www.bbc.co.uk/news/articles/ckx2qpw4rjd7o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
       }
     ],
     "art": [
       {
-        "title": " This Pac-Man snow blower makes me want a robot I don't need ",
-        "url": "https://www.creativebloq.com/news/this-pac-man-snow-blower-makes-me-want-a-robot-i-dont-need",
+        "title": " Autodesk reveals how The Cat in the Hat was made in the new Made to Make series ",
+        "url": "https://www.creativebloq.com/news/autodesk-reveals-how-the-cat-in-the-hat-was-made-in-the-new-made-to-make-series-",
         "source": "Creative Bloq"
       },
       {
-        "title": " Autodesk reveals how The Cat in the Hat was made in the new Made to Make series ",
-        "url": "https://www.creativebloq.com/news/how-netflixs-new-cat-in-the-hat-animated-movie-was-made-in-just-two-years",
+        "title": " This Pac-Man snow blower makes me want a robot I don't need ",
+        "url": "https://www.creativebloq.com/news/this-pac-man-snow-blower-makes-me-want-a-robot-i-dont-need",
         "source": "Creative Bloq"
       },
       {
@@ -283,38 +277,38 @@
     ],
     "gaming": [
       {
-        "title": "Life Is Strange Creator Officially Comments on State of Upcoming TV Adaptation",
-        "url": "https://www.polygon.com/life-is-strange-game-creator-praises-amazon-tv-show/",
+        "title": "Baldur’s Gate 3 Returns With New Official Sequel Series",
+        "url": "https://www.polygon.com/baldurs-gate-3-sequel-series-hbo-streaming/",
         "source": "Polygon"
       },
       {
-        "title": "BioWare Officially Shutting Down and New Mass Effect Canceled",
-        "url": "https://www.polygon.com/ea-bioware-closure-mass-efffect-5-canceled/",
+        "title": "Demon Slayer: Infinity Castle 2 Rumored Release Date Discovered",
+        "url": "https://www.polygon.com/demon-slayer-infinity-castle-2-movie-release-date-2027/",
         "source": "Polygon"
       },
       {
-        "title": "Hunger Games: Sunrise on the Reaping’s New Haymitch Reveals Woody Harrelson’s Advice",
-        "url": "https://www.polygon.com/hunger-games-sunrise-on-the-reaping-haymitch-woody-harrelson-advice/",
+        "title": "HBO Poison Ivy Show Reportedly Coming From 'The Penguin' Producer",
+        "url": "https://www.polygon.com/hbo-dc-poison-ivy-tv-series-penguin-batman-dcu/",
         "source": "Polygon"
       },
       {
-        "title": "PC gamers can finally play a beloved 2010 PS3 masterpiece",
-        "url": "https://www.polygon.com/god-of-war-3-fan-pc-port/",
+        "title": "Major Skyrim Update Officially Comes to 'Elder Scrolls Online'",
+        "url": "https://www.polygon.com/elder-scrolls-online-skyrim-update-free-dlc/",
         "source": "Polygon"
       },
       {
-        "title": "The 15 Best Steam Next Fest Demos to Play Right Now",
-        "url": "https://www.polygon.com/steam-next-fest-demos-best-october-2026/",
+        "title": "8 Fallout 4 Replay Ideas to Make the Commonwealth Feel Brand New",
+        "url": "https://www.polygon.com/fallout-4-replay-ideas/",
         "source": "Polygon"
       },
       {
-        "title": "'Cyberpunk 2077' is getting a huge new co-op mod",
-        "url": "https://www.polygon.com/cyberpunk-2077-co-op-mod-nightcoop/",
+        "title": "Does 'Clayface' Have a Post-Credits Scene? Here's Your Spoiler Free Answer",
+        "url": "https://www.polygon.com/clayface-post-credits-scene-no-spoilers-guide/",
         "source": "Polygon"
       },
       {
-        "title": "Middle-earth Goes to War in The Rings of Power Season 3 Explosive Trailer",
-        "url": "https://www.polygon.com/lotr-rings-of-power-season-3-trailer-release-date/",
+        "title": "'Fallout 4' Is Officially Making A Comeback A Decade After Release",
+        "url": "https://www.polygon.com/fallout-4-dlc-expansion-fever-dreams-fathomless-command-overdrive-what-are/",
         "source": "Polygon"
       }
     ],
