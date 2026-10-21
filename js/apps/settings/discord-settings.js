@@ -654,7 +654,7 @@ function createChannelMappingRow(mapping = {}) {
 export default {
     id: 'discord-settings',
     name: 'Discord 整合',
-    icon: 'discord',
+    icon: 'forum',
     routes: [
         { path: '/settings/discord', render: renderDiscordSettings }
     ],

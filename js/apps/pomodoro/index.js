@@ -2,6 +2,7 @@ import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
+import { saveInteractionMemory } from '../../core/memory-saver.js';
 
 const CONFIG_KEY = 'pomodoro_config';
 const COMPLETED_KEY = 'pomodoro_completed';
@@ -433,6 +434,12 @@ async function renderPomodoro() {
         if (mode === 'focus') {
             completed += 1;
             saveCompleted(completed);
+            if (currentCompanion?.id && currentCompanion.id !== 'default') {
+                saveInteractionMemory({
+                    characterId: currentCompanion.id, sourceApp: 'pomodoro', sourceType: 'interaction', sourceSubtype: 'companion',
+                    content: `陪用戶完成了一個 ${config.focus} 分鐘的專注時段（番茄鐘，累計第 ${completed} 個）`, importance: 0.35
+                }).catch(() => {});
+            }
             if (completed % config.longGap === 0) {
                 mode = 'long';
                 cycle = 1;

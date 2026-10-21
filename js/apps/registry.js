@@ -1,4 +1,4 @@
-﻿﻿﻿import Router from '../router.js';
+﻿import Router from '../router.js';
 import { isRestricted, lockedPageElement } from '../core/age-gate.js';
 
 const apps = [];

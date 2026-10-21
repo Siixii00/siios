@@ -1,9 +1,11 @@
-﻿﻿﻿﻿﻿﻿﻿import { minorSafetyPrompt } from './core/age-gate.js';
+﻿import { minorSafetyPrompt } from './core/age-gate.js';
 import Router from './router.js';
 import { SettingsDB, ChatsDB, CharactersDB, UsersDB, HealthDB, ZiweiCacheDB } from './db.js';
 import { loadWorldInfoContext } from './core/world-info-loader.js';
 import { generateRPPrompt, buildResponseModePrompt, getResponseMode, withResponseReminder } from './constants/rp-system-prompt.js';
 import { stripReasoning } from './core/reasoning-filter.js';
+import { buildMemoryFilters } from './core/memory-prefs.js';
+import { MEMORY_SOURCES } from './core/memory-sources.js';
 import { buildRealWorldContext } from './core/real-world-context.js';
 import { PeriodCalculator } from './core/period-calculator.js';
 import { createErrorModal } from './components.js';
@@ -194,7 +196,8 @@ const APIClient = {
             const memoryLines = [];
             for (const m of memoryContext) {
                 const sanitized = (m.content || '').replace(/[\r\n]/g, ' ').replace(/\[.*?\]/g, '');
-                const line = `- ${sanitized}`;
+                const source = m.source_app && m.source_app !== 'chat' ? MEMORY_SOURCES.find(s => s.id === m.source_app)?.name : '';
+                const line = `- ${source ? '（' + source + '）' : ''}${sanitized}`;
                 if (usedChars + line.length > maxChars) break;
                 memoryLines.push(line);
                 usedChars += line.length;
@@ -291,8 +294,9 @@ const APIClient = {
         if (settings.memory_enabled && window.App?.memorySystem) {
             try {
                 // 只取這個角色自己的記憶，避免其他角色的對話內容混進來
+                // 套用「記憶設定」的來源／虛構內容偏好；其他 App 寫入的記憶會標示來源
                 memoryContext = await window.App.memorySystem.retrieveMemories(
-                    userMessage, chatId, 5, characterData?.id ? { character_id: characterData.id } : {}
+                    userMessage, chatId, 5, await buildMemoryFilters({ characterId: characterData?.id })
                 );
             } catch {
                 memoryContext = null;

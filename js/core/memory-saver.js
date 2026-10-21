@@ -1,4 +1,5 @@
 ﻿import { MemoryDB } from '../db.js';
+import { MEMORY_SOURCE_IDS } from './memory-sources.js';
 
 /**
  * Save interaction memory from various apps
@@ -88,6 +89,10 @@ function generateMetaContent(sourceApp, sourceSubtype, content) {
         'invest': '投資模擬器',
         'farm': '農場',
         'home': '宅家',
+        'music': '音樂',
+        'pomodoro': '番茄鐘',
+        'weather': '天氣',
+        'discord': 'Discord',
         'dating': '約會',
         'bubbles': 'Bubbles',
         'weverse': 'Weverse',
@@ -103,6 +108,8 @@ function generateMetaContent(sourceApp, sourceSubtype, content) {
         'browsing': '一起瀏覽了網站',
         'dating': '進行了約會互動',
         'social': '進行了社交互動',
+        'listening': '一起聽了音樂',
+        'companion': '陪伴與互動',
         'ao3': '閱讀了同人創作',
         'lofter': '閱讀了同人內容',
         'theater': '進行了劇場演出'
@@ -124,7 +131,7 @@ function getDefaultMemorySettings() {
     return {
         include_main_memories: true,
         include_fiction: false,
-        selected_sources: ['chat', 'youtube', 'instagram', 'chrome', 'dating', 'bubbles', 'weverse', 'facebook', 'pub', 'invest', 'farm', 'home'],
+        selected_sources: MEMORY_SOURCE_IDS,
         memory_level: 'meta'
     };
 }

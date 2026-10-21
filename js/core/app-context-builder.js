@@ -1,5 +1,6 @@
-﻿﻿﻿import { minorSafetyPrompt } from './age-gate.js';
+﻿import { minorSafetyPrompt } from './age-gate.js';
 import { CharactersDB, UsersDB, SettingsDB, GlobalSettingsDB, GlobalForbiddenDB } from '../db.js';
+import { buildMemoryFilters } from './memory-prefs.js';
 
 async function buildAppContext(options = {}) {
     const {
@@ -56,18 +57,8 @@ async function buildAppContext(options = {}) {
     if (settings.memory_enabled && window.App?.memorySystem) {
         try {
             // Build memory filters based on chat settings
-            const memoryFilters = {
-                character_id: characterId,
-                include_main_memories: options.includeMainMemories !== false,
-                include_fiction: options.includeFiction || false,
-                selected_sources: options.selectedSources || ['chat', 'youtube', 'instagram', 'chrome', 'dating', 'bubbles', 'weverse', 'facebook', 'pub', 'invest', 'farm', 'home'],
-                memory_level: options.memoryLevel || 'meta'
-            };
-
-            // Add theater filter if specified
-            if (options.theaterId) {
-                memoryFilters.theater_id = options.theaterId;
-            }
+            // 以使用者的「記憶設定」為底，呼叫端（例如劇場）可以覆蓋個別項目
+            const memoryFilters = await buildMemoryFilters({ characterId, options });
 
             const memories = await window.App.memorySystem.retrieveMemories(
                 userMessage || '', 

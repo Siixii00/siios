@@ -302,7 +302,7 @@ function createTwitchBottomNav() {
     const items = [
         { icon: 'home', label: '首頁', path: '/twitch' },
         { icon: 'explore', label: '探索', path: '/twitch/explore' },
-        { icon: 'follow', label: '追隨', path: '/twitch/following' },
+        { icon: 'person_add', label: '追隨', path: '/twitch/following' },
         { icon: 'person', label: '我的', path: '/twitch/profile' }
     ];
     

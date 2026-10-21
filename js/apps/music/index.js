@@ -1,6 +1,21 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
+import APIClient from '../../api.js';
+import { buildAppContext } from '../../core/app-context-builder.js';
+import { saveInteractionMemory } from '../../core/memory-saver.js';
+
+// 這次開啟音樂 App 期間已經記過的（角色＋歌曲），避免重複存記憶
+const listenedKeys = new Set();
+
+async function generateTrackComment(characterId, track) {
+    const context = await buildAppContext({ characterId, userMessage: track.title });
+    const text = await APIClient.complete([
+        { role: 'system', content: (context.systemPrompt || '') + '\n\n你正在陪使用者一起聽音樂。用第一人稱、符合角色性格，用一句 25 字內的口語說說對這首歌的感想，不要提到自己是 AI，只輸出那一句話。' },
+        { role: 'user', content: `現在播放：《${track.title}》— ${track.artist}` }
+    ], { temperature: 0.9, maxTokens: 80 });
+    return text.replace(/^["「『]+|["」』]+$/g, '').trim();
+}
 
 const SCALES = {
     major: [0, 2, 4, 5, 7, 9, 11],
@@ -332,6 +347,17 @@ async function renderMusic(params) {
         const charSelect = container.querySelector('#char-select');
         const charName = charSelect?.options[charSelect.selectedIndex]?.text || 'AI';
         pushDanmaku(danmakuLayer, `${charName}：這首歌不錯呢！`);
+        const charId = charSelect?.value;
+        const track = playlist[currentIndex];
+        const key = charId + '|' + (track?.title || '');
+        if (charId && track && !listenedKeys.has(key)) {
+            listenedKeys.add(key);
+            saveInteractionMemory({
+                characterId: charId, sourceApp: 'music', sourceType: 'interaction', sourceSubtype: 'listening',
+                content: `和用戶一起聽了《${track.title}》（${track.artist}）`, importance: 0.35
+            }).catch(() => {});
+            generateTrackComment(charId, track).then(t => { if (t && isPlaying) pushDanmaku(danmakuLayer, `${charName}：${t}`); }).catch(() => {});
+        }
         danmakuTimer = setInterval(() => {
             if (!isPlaying) return;
             const comments = ['旋律很棒', '節奏感很好', '喜歡這種風格', '讓人放鬆'];

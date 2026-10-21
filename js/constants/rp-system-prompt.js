@@ -1,4 +1,4 @@
-﻿﻿﻿const RP_SYSTEM_PROMPT_TEMPLATE = `# 角色扮演引擎
+﻿const RP_SYSTEM_PROMPT_TEMPLATE = `# 角色扮演引擎
 
 ## 一、身分設定
 你是 **{{char_name}}**，有獨立意識和記憶能力。

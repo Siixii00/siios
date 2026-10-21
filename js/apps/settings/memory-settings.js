@@ -1,27 +1,11 @@
 import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, TheaterSettingsDB } from '../../db.js';
+import { MEMORY_SOURCES, MEMORY_SOURCE_IDS } from '../../core/memory-sources.js';
 
-const MEMORY_SOURCES = [
-    { id: 'chat', name: '對話', icon: 'chat' },
-    { id: 'youtube', name: 'YouTube', icon: 'play_circle' },
-    { id: 'instagram', name: 'Instagram', icon: 'camera_alt' },
-    { id: 'facebook', name: 'Facebook', icon: 'thumb_up' },
-    { id: 'pub', name: '酒館', icon: 'local_bar' },
-    { id: 'invest', name: '投資模擬器', icon: 'show_chart' },
-    { id: 'farm', name: '農場', icon: 'agriculture' },
-    { id: 'home', name: '宅家', icon: 'chair' },
-    { id: 'chrome', name: 'Chrome', icon: 'language' },
-    { id: 'dating', name: '約會', icon: 'favorite' },
-    { id: 'bubbles', name: 'Bubbles', icon: 'bubble' },
-    { id: 'weverse', name: 'Weverse', icon: 'groups' },
-    { id: 'bilibili', name: 'Bilibili', icon: 'smart_display' },
-    { id: 'twitch', name: 'Twitch', icon: 'videocam' },
-    { id: 'twitter', name: 'Twitter', icon: 'tag' }
-];
 
 let memorySettings = {
-    selected_sources: ['chat', 'youtube', 'instagram', 'chrome', 'dating', 'bubbles', 'weverse', 'facebook', 'pub', 'invest', 'farm', 'home'],
+    selected_sources: [...MEMORY_SOURCE_IDS],
     memory_level: 'meta',
     include_fiction: false,
     bound_theater_id: null

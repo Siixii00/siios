@@ -1,4 +1,4 @@
-﻿﻿import Router from '../../router.js';
+﻿import Router from '../../router.js';
 import { createElement, createIcon, createKakaoBubble, createToast, createKakaoBottomSheet, createKakaoSideMenu, createGroupTypingIndicator } from '../../components.js';
 import { ChatsDB, MessagesDB, SettingsDB, MemoryDB, CharactersDB, UsersDB } from '../../db.js';
 import APIClient, { describeMessageForAI } from '../../api.js';

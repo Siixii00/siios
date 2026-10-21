@@ -27,6 +27,10 @@ export class MemorySystem {
     }
 
     async processMessage(message, chatId, characterId) {
+        // 同一個聊天室裡已經有完全相同內容的記憶就不重複處理（也省下分類與向量的 API 呼叫）
+        const duplicate = (await MemoryDB.getByChatId(chatId)).find(m => m.content === message && (m.character_id || m.characterId || characterId) === characterId);
+        if (duplicate) return duplicate;
+
         const sensoryData = this.sensoryExtractor.extract(message);
         const emotionalData = this.emotionTagger.tag(message);
         const spatiotemporalData = this.spatiotemporalTagger.tag(message);
@@ -136,7 +140,7 @@ export class MemorySystem {
         // 早期版本存下的記憶沒有 character_id：只在它原本所屬的聊天室裡保留，避免憑空消失
         if (filters.character_id) {
             filteredMemories = filteredMemories.filter(m =>
-                m.character_id === filters.character_id || (!m.character_id && chatId && m.chat_id === chatId)
+                (m.character_id || m.characterId) === filters.character_id || (!m.character_id && !m.characterId && chatId && m.chat_id === chatId)
             );
         }
 

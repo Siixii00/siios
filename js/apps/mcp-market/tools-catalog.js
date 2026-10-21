@@ -779,7 +779,7 @@ export const TOOLS_CATALOG = [
     {
         id: 'discord_send_message',
         category: 'Discord 整合',
-        categoryIcon: 'discord',
+        categoryIcon: 'forum',
         name: 'send_discord_message',
         displayName: '發送 Discord 訊息',
         description: '向指定的 Discord 頻道發送訊息，實現跨平台通訊',
@@ -807,7 +807,7 @@ export const TOOLS_CATALOG = [
     {
         id: 'discord_get_history',
         category: 'Discord 整合',
-        categoryIcon: 'discord',
+        categoryIcon: 'forum',
         name: 'get_discord_history',
         displayName: '獲取 Discord 對話歷史',
         description: '獲取指定 Discord 頻道的對話歷史記錄',
@@ -827,7 +827,7 @@ export const TOOLS_CATALOG = [
     {
         id: 'discord_get_user_info',
         category: 'Discord 整合',
-        categoryIcon: 'discord',
+        categoryIcon: 'forum',
         name: 'get_discord_user',
         displayName: '獲取 Discord 用戶資訊',
         description: '獲取 Discord 用戶的基本資訊',
@@ -845,7 +845,7 @@ export const TOOLS_CATALOG = [
     {
         id: 'discord_list_channels',
         category: 'Discord 整合',
-        categoryIcon: 'discord',
+        categoryIcon: 'forum',
         name: 'list_discord_channels',
         displayName: '列出 Discord 頻道',
         description: '列出 Bot 所在伺服器的所有頻道',
@@ -874,5 +874,5 @@ export const CATEGORIES = [
     { id: '虛擬形象', icon: 'android', color: '#AF52DE' },
     { id: '桌寵', icon: 'pets', color: '#FF9500' },
     { id: '活動同步', icon: 'sync', color: '#5856D6' },
-    { id: 'Discord 整合', icon: 'discord', color: '#5865F2' }
+    { id: 'Discord 整合', icon: 'forum', color: '#5865F2' }
 ];

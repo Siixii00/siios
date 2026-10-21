@@ -1,4 +1,4 @@
-﻿﻿﻿import Router from './router.js';
+﻿import Router from './router.js';
 import { SettingsDB, initDB, GlobalForbiddenDB } from './db.js';
 import { createElement, createIcon, createToast, createErrorModal } from './components.js';
 import LockScreen from './lockscreen.js';
