@@ -4,3 +4,6 @@ node_modules/
 
 # wrangler 本機快取（含 Cloudflare 帳號資訊）
 .wrangler/
+
+# 維護者自己的 Worker 設定（含資料庫 ID）
+discord-worker/wrangler.local.toml

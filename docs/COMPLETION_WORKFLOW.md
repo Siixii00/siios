@@ -249,3 +249,8 @@ Code review（`340bf4c~1..HEAD`）找到並修正：
 - 同步進來的活動從來沒有送給 AI；現在依隱私等級（基本／摘要／詳細）整理成一小段提示詞給聊天室。
 **文件**：README 重寫（功能、第一次設定、免費嵌入服務、記憶系統、每個 Worker／MCP／Discord／擴充功能的部署步驟、備份、隱私、疑難排解、開發）；擴充功能 README 更新；紫微斗數服務網址可在 MCP 設定頁自訂。
 - 活動紀錄給 AI 看之前必須同時開啟「活動同步」與「允許 AI 角色存取」（這個開關原本存了卻從來沒被檢查），並排除被關掉的平台。活動隱私設定頁在設定不含 platforms 時會當掉，已修。擴充功能的自動同步改用 chrome.alarms（MV3 service worker 閒置會被關掉，setInterval 幾乎不會觸發），瀏覽器重啟時也會恢復。
+
+### 2026-10-21 Discord Worker：每個人用自己的
+- 確認 PWA 與 Worker 程式碼裡沒有寫死任何 workers.dev 網址或維護者的資源（`tests/unit/discord-self-hosted.test.mjs` 持續檢查）；Worker 網址欄位預設是空的，各人填自己的。
+- 版控裡的 `discord-worker/wrangler.toml` 原本帶著維護者的 D1 資料庫 ID，改成佔位文字的範本（並附上排程）；維護者自己的設定放在被 `.gitignore` 忽略的 `wrangler.local.toml`，部署用 `npx wrangler deploy --config wrangler.local.toml --keep-vars`。
+- 仍預設指到維護者 Worker 的兩處（不是 Discord）：紫微斗數（可在 MCP 設定頁改成自己的）、Bilibili Worker（`js/apps/bilibili/index.js` 的 `BILI_API`，尚不能設定）。

@@ -158,17 +158,13 @@ Workers AI 免費額度每天 10,000 neurons（UTC 午夜重置），用完請�
 ### Discord 機器人
 讓角色在 Discord 的頻道與私訊裡說話，對話與記憶會和 PWA 同步。**完整的圖文步驟在 PWA 裡：設定 → Discord 整合 → 「第一次使用？Worker 部署教學」**（可一鍵複製 Worker 程式碼，全程網頁操作、不用裝任何東西）。
 
-用 wrangler 部署（進階）：
+用 wrangler 部署（進階）。**每個人都部署在自己的 Cloudflare 帳號、用自己的資料庫，不會用到別人的 Worker**：
 
 ```bash
-npx wrangler d1 create siios-discord-db           # 記下 database_id
+npx wrangler d1 create siios-discord-db           # 記下輸出的 database_id
 ```
-編輯 `discord-worker/wrangler.toml`：`database_id` 換成你的，並加上排程：
+編輯 `discord-worker/wrangler.toml`，把 `database_id` 的佔位文字換成你的（排程 `*/2 * * * *` 已經寫好）。
 
-```toml
-[triggers]
-crons = ["*/2 * * * *"]
-```
 ```bash
 cd discord-worker
 npx wrangler secret put DISCORD_BOT_TOKEN
