@@ -890,7 +890,8 @@ async function renderChat(params) {
         { icon: 'schedule', label: '日程', onSelect: () => Router.navigate('/timetree') },
         { icon: 'payments', label: '轉帳', onSelect: () => openTransfer() },
         { icon: 'card_giftcard', label: '禮物', onSelect: () => openGiftPicker() },
-        { icon: 'shopping_bag', label: '購物', onSelect: () => Router.navigate('/taobao') },
+        // 從聊天室進購物：預選目前聊天的角色，請他幫你挑禮物
+        { icon: 'shopping_bag', label: '購物', onSelect: async () => { try { const m = await import('../../core/shopping-store.js'); if (currentChat?.character_id) await m.saveSelectedChar(currentChat.character_id); } catch (_) {} Router.navigate('/taobao'); } },
         { icon: 'restaurant', label: '外送', onSelect: () => Router.navigate('/delivery') },
         { icon: 'wb_sunny', label: '天氣', onSelect: () => Router.navigate('/weather') },
         { icon: 'map', label: '地圖', onSelect: () => openPlaceSearch(sendRich) },

@@ -232,6 +232,18 @@ async function renderCharEdit(params) {
     main.appendChild(sleepSection);
     main.appendChild(sleepGroup);
 
+    // 紀念日：重要的日子角色會主動送禮（購物 App）。沒填就用第一次聊天的日子
+    const annivSection = createElement('div', 'mb-2 ml-8 mt-4');
+    annivSection.appendChild(createElement('p', 'ios-section-header', { textContent: '紀念日（選填）' }));
+    const annivGroup = createElement('div', 'ios-grouped-list mx-4');
+    const annivCell = createElement('div', 'p-4');
+    annivCell.appendChild(createElement('label', 'text-sm text-ios-muted mb-1 block', { textContent: '你們認識／在一起的日子（沒填就用第一次聊天的日子）' }));
+    const annivInput = createElement('input', 'ios-input w-full', { type: 'date', value: char.anniversary_date || '' });
+    annivCell.appendChild(annivInput);
+    annivGroup.appendChild(annivCell);
+    main.appendChild(annivSection);
+    main.appendChild(annivGroup);
+
     const birthSection = createElement('div', 'mb-2 ml-8 mt-4');
     birthSection.appendChild(createElement('p', 'ios-section-header', { textContent: '出生資訊（紫微斗數分析）' }));
     const birthGroup = createElement('div', 'ios-grouped-list mx-4');
@@ -380,6 +392,7 @@ async function renderCharEdit(params) {
             sleep_start: sleepStartInput.value,
             sleep_end: sleepEndInput.value,
             bound_user_id: boundUserId,
+            anniversary_date: annivInput.value || null,
             birth_date: birthDateInput.value || null,
             birth_time: birthTimeInput.value || null,
             birth_location: birthLocationInput.value.trim() || null,

@@ -9,6 +9,7 @@ import { loadActivityContext } from './core/activity-context.js';
 import { MEMORY_SOURCES } from './core/memory-sources.js';
 import { buildRealWorldContext } from './core/real-world-context.js';
 import { getDislikePrompt } from './core/dislikes.js';
+import { describeRecentShopping } from './core/gift-ideas.js';
 import { PeriodCalculator } from './core/period-calculator.js';
 import { createErrorModal } from './components.js';
 import { mcpManager } from './core/mcp-client.js';
@@ -250,6 +251,11 @@ const APIClient = {
             role: 'system',
             content: `[${entry.name}]\n${entry.content}`
         }));
+        // 最近在購物 App 的事（收下、真的買了、不需要的禮物）：讓角色可以自然地帶到
+        if (characterData?.id) {
+            const shopText = describeRecentShopping(await SettingsDB.get('shop_records'), characterData.id);
+            if (shopText) backMessages.push({ role: 'system', content: shopText });
+        }
         // 用戶討厭的事：不靠檢索，每次都帶，放在最後
         const dislikeText = await getDislikePrompt();
         if (dislikeText) backMessages.push({ role: 'system', content: dislikeText });

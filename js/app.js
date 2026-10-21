@@ -138,6 +138,19 @@ const App = {
             const mergedSettings = { ...defaults, ...allSettings };
             console.log('[App] 設定載入完成');
 
+            // 重要日子（生日、紀念日、節日）：建立「他想送你東西」的卡片，只建立卡片，不呼叫 AI；每天最多提醒一次
+            setTimeout(async () => {
+                try {
+                    const { refreshProposals } = await import('./core/shopping-store.js');
+                    const n = await refreshProposals();
+                    const today = new Date().toDateString();
+                    if (n > 0 && (await SettingsDB.get('shop_notified_day')) !== today) {
+                        await SettingsDB.set('shop_notified_day', today);
+                        createToast('💝 有人想送你東西，到「購物」看看');
+                    }
+                } catch (e) { console.warn('[App] 檢查重要日子失敗：', e); }
+            }, 12000);
+
             console.log('[App] 初始化記憶系統...');
             const memorySystem = new MemorySystem(memorySettingsFrom(mergedSettings));
             this.memorySystem = memorySystem;
