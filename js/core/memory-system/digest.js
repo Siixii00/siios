@@ -27,7 +27,8 @@ export const DIGEST_SYSTEM_PROMPT = [
     '2. 摘要保留具體資訊：人名、地點、數字、日期、作品名、用戶說過的原話重點，不要只寫「聊了天」「很開心」這種空話。',
     '3. 「學到的事」只寫能長期使用的資訊：用戶的喜好與厭惡、習慣與作息、重要的人與事、承諾與計畫、關係的變化；單純的流水帳或一次性的小事留空。',
     '4. 重要度要有區分：不要全部給同一個分數。',
-    '5. 只輸出 JSON。'
+    '5. 用戶明確表示討厭、受不了、不能接受的事，一定要放進 dislikes（簡短的名詞或動作，例如「香菜」「被打斷」）；只有用戶親口說的才算，角色的喜好或劇情裡的人物不算；沒有就給空陣列。',
+    '6. 只輸出 JSON。'
 ].join('\n');
 
 const clip = (s, n) => { s = String(s || '').replace(/\s+/g, ' ').trim(); return s.length > n ? s.slice(0, n) + '…' : s; };
@@ -47,7 +48,7 @@ export function buildDigestMessages(items, { extra = '' } = {}) {
 ${list}
 
 請輸出 JSON 陣列，每則一個物件，依序對應編號：
-[{"i":0,"summary":"一句話摘要（25 字內，保留人名、地點、數字等關鍵資訊）","learned":"從這件事能長期記住的事（例如用戶的喜好、習慣、關係變化；沒有就留空字串，不要編造）","importance":1-10 的整數,"type":"dynamic|permanent|feel|plan|letter|i","domain":"日常|人際|成長|身心|興趣|數字|事務|內心","tags":["最多 4 個關鍵字"]}]
+[{"i":0,"summary":"一句話摘要（25 字內，保留人名、地點、數字等關鍵資訊）","learned":"從這件事能長期記住的事（例如用戶的喜好、習慣、關係變化；沒有就留空字串，不要編造）","importance":1-10 的整數,"type":"dynamic|permanent|feel|plan|letter|i","domain":"日常|人際|成長|身心|興趣|數字|事務|內心","tags":["最多 4 個關鍵字"],"dislikes":["用戶明確討厭的事，沒有就空陣列"]}]
 
 type 規則：permanent＝核心事實或身份；feel＝情緒體驗；plan＝計畫待辦；i＝關於用戶自己的偏好或習慣；letter＝書信；其餘 dynamic。
 importance：瑣碎的紀錄 1-3，一般事件 4-6，對關係或用戶生活有影響 7-10。`
@@ -75,7 +76,8 @@ export function parseDigestResponse(text, count) {
             importance: Math.max(1, Math.min(10, parseInt(r.importance) || 5)) / 10,
             type: VALID_TYPES.includes(r.type) ? r.type : 'dynamic',
             domain: VALID_DOMAINS.includes(r.domain) ? r.domain : '日常',
-            tags: Array.isArray(r.tags) ? r.tags.map(t => clip(t, 12)).filter(Boolean).slice(0, 4) : []
+            tags: Array.isArray(r.tags) ? r.tags.map(t => clip(t, 12)).filter(Boolean).slice(0, 4) : [],
+            dislikes: Array.isArray(r.dislikes) ? r.dislikes.map(t => clip(t, 20)).filter(Boolean).slice(0, 5) : []
         });
     }
     return out;

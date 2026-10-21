@@ -34,7 +34,7 @@ test('parseDigestResponse：容忍前後文字、思考標籤；欄位不合格�
     ]`;
     const r = parseDigestResponse(text, 3);
     assert.deepEqual([...r.keys()], [0, 2]);
-    assert.deepEqual(r.get(0), { summary: '看了貓咪影片', learned: '用戶喜歡貓', importance: 0.7, type: 'i', domain: '興趣', tags: ['貓', '影片', 'a', 'b'] });
+    assert.deepEqual(r.get(0), { summary: '看了貓咪影片', learned: '用戶喜歡貓', importance: 0.7, type: 'i', domain: '興趣', tags: ['貓', '影片', 'a', 'b'], dislikes: [] });
     assert.equal(r.get(2).importance, 1);
     assert.equal(r.get(2).type, 'dynamic');
     assert.equal(r.get(2).domain, '日常');
@@ -148,4 +148,14 @@ test('digestPending 會把設定的消化提示詞送給消化 API', async () =>
     await db.MemoryDB.create({ character_id: 'c1', source_app: 'health', content: '用戶今天凌晨三點才睡', importance: 0.3 });
     const api = mockApi(echo);
     try { await ms.digestPending(); assert.match(api.calls[0].body.messages[0].content, /特別留意用戶的作息/); } finally { api.restore(); }
+});
+
+test('消化：提示詞要求找出用戶明確討厭的事；解析出 dislikes（去空白、最多 5 個、限制長度）', () => {
+    const msgs = buildDigestMessages([mem()]);
+    assert.match(msgs[0].content, /dislikes/);
+    assert.match(msgs[1].content, /"dislikes"/);
+    assert.match(msgs[0].content, /只有用戶親口說的才算/);
+    const r = parseDigestResponse('[{"i":0,"summary":"用戶說受不了香菜","dislikes":["香菜","  ","被打斷","a","b","c","d"]}]', 1);
+    assert.deepEqual(r.get(0).dislikes, ['香菜', '被打斷', 'a', 'b', 'c']);
+    assert.deepEqual(parseDigestResponse('[{"i":0,"summary":"x","dislikes":"不是陣列"}]', 1).get(0).dislikes, []);
 });

@@ -2,6 +2,7 @@ import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, TheaterSettingsDB } from '../../db.js';
 import { MEMORY_SOURCES, MEMORY_SOURCE_IDS } from '../../core/memory-sources.js';
+import { loadDislikes, addDislikes, removeDislike, STRONG_COUNT } from '../../core/dislikes.js';
 
 
 let memorySettings = {
@@ -177,6 +178,44 @@ async function renderMemorySettings() {
     fictionSection.appendChild(fictionToggle);
     main.appendChild(fictionSection);
     
+    // 用戶討厭的事：固定放進每一次的提示詞，不靠檢索
+    const dislikeSection = createElement('div', 'px-4 mt-6');
+    dislikeSection.appendChild(createElement('p', 'ios-section-header', { textContent: '我討厭的事（一定會記住）' }));
+    dislikeSection.appendChild(createElement('p', 'text-sm text-ios-muted mb-2', { textContent: '你說「我討厭…」「受不了…」「不吃…」「別再…」時會自動記下來；被反覆提到（或用「說過很多次」「千萬」強調）的會標成「反覆強調」。這份清單每次回覆都會固定帶給所有角色，不會因為時間久了淡忘。你也可以自己新增或刪除。' }));
+    const dislikeList = createElement('div', 'flex flex-col gap-2 mb-2');
+    const renderDislikes = async () => {
+        const list = (await loadDislikes()).sort((a, b) => (b.count || 1) - (a.count || 1) || (b.lastAt || 0) - (a.lastAt || 0));
+        dislikeList.innerHTML = '';
+        if (!list.length) dislikeList.appendChild(createElement('p', 'text-sm text-ios-muted', { textContent: '目前沒有。' }));
+        for (const item of list) {
+            const row = createElement('div', 'flex items-center justify-between p-3 bg-ios-surface rounded-lg border border-ios-border');
+            const left = createElement('div', 'flex-1 min-w-0');
+            left.appendChild(createElement('div', 'text-ios-text', { textContent: item.text }));
+            const strong = (item.count || 1) >= STRONG_COUNT;
+            left.appendChild(createElement('div', 'text-xs text-ios-muted', { textContent: (strong ? '反覆強調 ' + item.count + ' 次' : '提過 1 次') + (item.manual ? ' · 手動新增' : '') }));
+            const del = createElement('button', 'text-sm', { textContent: '刪除', onClick: async () => { await removeDislike(item.id); renderDislikes(); } });
+            del.style.cssText = 'background:transparent;border:none;color:#ef4444;cursor:pointer;padding:4px 8px;';
+            row.append(left, del);
+            dislikeList.appendChild(row);
+        }
+    };
+    renderDislikes();
+    const addRow = createElement('div', 'flex gap-2');
+    const addInput = createElement('input', 'ios-input flex-1', { type: 'text', placeholder: '例如：香菜、被打斷、一直道歉', maxLength: 40 });
+    const addBtn = createElement('button', 'ios-btn', { textContent: '新增' });
+    const doAdd = async () => {
+        const t = addInput.value.trim();
+        if (!t) return;
+        await addDislikes([t], { weight: STRONG_COUNT, source: 'manual' }); // 自己新增的視為已經強調過
+        addInput.value = '';
+        renderDislikes();
+    };
+    addBtn.onclick = doAdd;
+    addInput.onkeydown = e => { if (e.key === 'Enter' && !e.isComposing) doAdd(); };
+    addRow.append(addInput, addBtn);
+    dislikeSection.append(dislikeList, addRow);
+    main.appendChild(dislikeSection);
+
     // Info Section
     const infoSection = createElement('div', 'px-4 mt-6 mb-4');
     infoSection.appendChild(createElement('p', 'ios-section-header', { textContent: '說明' }));

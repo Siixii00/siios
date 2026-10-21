@@ -4,6 +4,7 @@
 // 只送精簡欄位（不帶向量與感官等大欄位），並用 pushed_at 做增量，避免每次整包上傳。
 import { MemoryDB, SettingsDB, CharactersDB, ChatsDB } from '../db.js';
 import { workerFetch } from './discord-worker-client.js';
+import { loadDislikes, formatDislikePrompt } from './dislikes.js';
 
 const PUSH_BATCH = 40; // Worker 每筆記憶一次 D1 寫入，批次小一點才不會碰到單次請求的子請求上限
 const AUTO_INTERVAL_MS = 30 * 60 * 1000;
@@ -48,6 +49,12 @@ export async function pushMemories(workerUrl, { all = false } = {}) {
         const characterId = await owner(m);
         if (!characterId || (allowed && !allowed.has(characterId))) continue;
         out.push(toWorkerMemory(m, characterId));
+    }
+    // 用戶討厭的事：每次同步都推一則固定 id 的永久記憶（重要度 1），內容更新就覆蓋，機器人回覆時最優先讀到
+    const dislikeText = formatDislikePrompt(await loadDislikes());
+    if (dislikeText) {
+        const targets = all ? (await CharactersDB.getAll()).map(c => c.id) : [...allowed];
+        for (const id of targets) out.push({ id: 'dislikes-' + id, chat_id: '', character_id: id, content: dislikeText.replace(/^# /, '【') .replace(/\n/, '】\n'), memory_type: 'permanent', importance: 1, timestamp: Date.now(), metadata: { source: 'siios', platform: 'siios', kind: 'dislikes' } });
     }
     let count = 0;
     for (let i = 0; i < out.length; i += PUSH_BATCH) {

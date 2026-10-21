@@ -5,6 +5,7 @@ import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { askConfirm } from '../../core/dialogs.js';
+import { learnDislikesFromText } from '../../core/dislikes.js';
 import { GIFTS, getInventoryCounts, consumeGift } from '../../core/gifts.js';
 import { charge, formatMoney } from '../../core/wallet.js';
 import {
@@ -315,6 +316,7 @@ function bind(container, characters, go) {
         const text = input.value.trim();
         if (!text || st.busy) return;
         input.value = '';
+        learnDislikesFromText(text, 'dating');
         await act(container, { display: text, api: text, base: 1, kind: 'talk' });
     };
     on('[data-act="send"]', send);

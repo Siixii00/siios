@@ -8,6 +8,7 @@ import { buildMemoryFilters } from './core/memory-prefs.js';
 import { loadActivityContext } from './core/activity-context.js';
 import { MEMORY_SOURCES } from './core/memory-sources.js';
 import { buildRealWorldContext } from './core/real-world-context.js';
+import { getDislikePrompt } from './core/dislikes.js';
 import { PeriodCalculator } from './core/period-calculator.js';
 import { createErrorModal } from './components.js';
 import { mcpManager } from './core/mcp-client.js';
@@ -249,6 +250,9 @@ const APIClient = {
             role: 'system',
             content: `[${entry.name}]\n${entry.content}`
         }));
+        // 用戶討厭的事：不靠檢索，每次都帶，放在最後
+        const dislikeText = await getDislikePrompt();
+        if (dislikeText) backMessages.push({ role: 'system', content: dislikeText });
         
         return [
             ...systemMessages,

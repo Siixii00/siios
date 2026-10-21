@@ -316,6 +316,10 @@ const MessagesDB = {
         if (extra.type && extra.type !== 'text') message.type = extra.type;
         if (extra.meta) message.meta = extra.meta;
         await database.put('messages', message);
+        // 使用者說了討厭的事就記下來（不阻塞、失敗不影響送出）
+        if (role === 'user' && (!extra.type || extra.type === 'text')) {
+            import('./core/dislikes.js').then(m => m.learnDislikesFromText(content, 'chat')).catch(() => {});
+        }
         return message;
     },
 

@@ -9,6 +9,7 @@ import { SettingsDB, CharactersDB } from '../db.js';
 import APIClient from '../api.js';
 import { buildAppContext } from './app-context-builder.js';
 import { saveInteractionMemory } from './memory-saver.js';
+import { learnDislikesFromText } from './dislikes.js';
 import { COWATCH_INTERVALS, parseVideoUrl, formatClock, buildCoWatchMessages, trimTo } from './co-watch-prompt.js';
 
 export { COWATCH_INTERVALS, parseVideoUrl, formatClock, buildCoWatchMessages };
@@ -51,7 +52,7 @@ export function createCoWatch({ characterId, platform, getVideo, getPlayerTime, 
     schedule();
 
     return {
-        say: userText => speak(String(userText || '').trim()),
+        say: userText => { const t = String(userText || '').trim(); learnDislikesFromText(t, platform); return speak(t); },
         comment: () => speak(''),
         setIntervalSec(sec) { interval = Number(sec) || 0; schedule(); },
         async stop() {

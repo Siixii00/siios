@@ -70,6 +70,9 @@ export class MemorySystem {
         const url = String(d.api_url).replace(/\/+$/, '') + '/v1/chat/completions';
         const pending = pickPending(await MemoryDB.getAll(), { limit });
         let digested = 0;
+        const newDislikes = [];
+        // 整理出來的「用戶討厭的事」記進討厭清單（固定放進提示詞，不靠檢索）；中途出錯回傳時也要記
+        const flush = async () => { if (newDislikes.length) { try { await (await import('../dislikes.js')).addDislikes(newDislikes, { source: 'digest' }); } catch (_) {} newDislikes.length = 0; } };
         for (let i = 0; i < pending.length; i += DIGEST_BATCH_SIZE) {
             const batch = pending.slice(i, i + DIGEST_BATCH_SIZE);
             let text = '';
@@ -79,9 +82,10 @@ export class MemorySystem {
                     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${d.api_key}` },
                     body: JSON.stringify({ model: d.model || 'gpt-3.5-turbo', messages: buildDigestMessages(batch, { extra: d.prompt }), temperature: 0.2, max_tokens: 1500 })
                 });
-                if (!res.ok) return { digested, error: `消化 API 回應 ${res.status}` };
+                if (!res.ok) { await flush(); return { digested, error: `消化 API 回應 ${res.status}` }; }
                 text = (await res.json()).choices?.[0]?.message?.content || '';
             } catch (e) {
+                await flush();
                 return { digested, error: '消化 API 連線失敗：' + (e?.message || e) };
             }
             const results = parseDigestResponse(text, batch.length);
@@ -98,8 +102,10 @@ export class MemorySystem {
                 }
                 await MemoryDB.update(m.id, patch);
                 digested++;
+                if (r.dislikes?.length) newDislikes.push(...r.dislikes);
             }
         }
+        await flush();
         return { digested };
     }
 
