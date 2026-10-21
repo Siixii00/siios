@@ -77,3 +77,9 @@ test('colorTarget：預設綠色不換，其他顏色回傳目標；normalize �
     assert.equal(s.customCss, 'a{b:c}'); assert.deepEqual(Object.keys(s.appCss), ['arcade']);
     assert.equal(s.keepDanger, true); assert.equal(normalize({ keepDanger: false }).keepDanger, false);
 });
+
+test('桌面風格：只有 ios / android，壞值回到 ios', () => {
+    assert.equal(normalize(null).ui, 'ios');
+    assert.equal(normalize({ ui: 'android' }).ui, 'android');
+    assert.equal(normalize({ ui: 'windows' }).ui, 'ios');
+});

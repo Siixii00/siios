@@ -27,14 +27,20 @@ const HomeScreen = {
     trayEl: null,
     container: null,
     drag: null,
+    android: false,
+    drawer: null,
+    touchStartY: 0,
+    touchCurrentY: 0,
 
     async create() {
         this.apps = (await getNavItems()).map(a => ({ ...a, id: a.label.toLowerCase().replace(/\s+/g, '-') }));
         try { this.layout = normalizeLayout(await SettingsDB.get(LAYOUT_KEY)); } catch (_) { this.layout = normalizeLayout(null); }
         this.currentPage = 0;
         this.editing = false;
+        this.drawer = null;
+        this.android = document.documentElement.dataset.sxUi === 'android';
 
-        const container = createElement('div', 'home-screen');
+        const container = createElement('div', 'home-screen' + (this.android ? ' android' : ''));
         this.container = container;
 
         const wallpaper = createElement('div', 'home-wallpaper');
@@ -42,6 +48,8 @@ const HomeScreen = {
         await applyWallpaper(wallpaper, 'home');
 
         const content = createElement('div', 'home-content');
+
+        if (this.android) content.appendChild(this.createGlance());
 
         const widgets = await createWidgetsSection();
         if (widgets) content.appendChild(widgets);
@@ -59,6 +67,14 @@ const HomeScreen = {
         this.trayEl = createElement('div', 'home-tray');
         content.appendChild(this.trayEl);
 
+        // Android：Dock 上面有一條搜尋列，點下去（或在桌面往上滑）打開 App 抽屜
+        if (this.android) {
+            const search = createElement('button', 'home-search');
+            search.append(createIcon('search', 'home-search-icon', true), createElement('span', '', { textContent: '搜尋 App' }));
+            search.onclick = () => this.openDrawer(true);
+            content.appendChild(search);
+        }
+
         this.dockEl = createElement('div', 'home-dock');
         content.appendChild(this.dockEl);
 
@@ -73,7 +89,57 @@ const HomeScreen = {
     },
 
     // ───── 畫面 ─────
-    arranged() { return arrange(this.apps, this.layout); },
+    arranged() { return arrange(this.apps, this.layout, this.android ? 4 : 3); },
+
+    // Android 桌面最上面的日期（Pixel 的「一覽」）
+    createGlance() {
+        const now = new Date();
+        const box = createElement('div', 'home-glance');
+        box.appendChild(createElement('div', 'home-glance-date', { textContent: now.toLocaleDateString('zh-TW', { month: 'long', day: 'numeric', weekday: 'long' }) }));
+        return box;
+    },
+
+    // ───── Android 的 App 抽屜：所有 App（包含主畫面隱藏的）依名稱排序，可搜尋 ─────
+    openDrawer(focusSearch = false) {
+        if (this.drawer || this.editing) return;
+        const drawer = createElement('div', 'home-drawer');
+        const handle = createElement('button', 'home-drawer-handle', { title: '收起' });
+        handle.onclick = () => this.closeDrawer();
+        const input = createElement('input', 'home-drawer-search', { type: 'search', placeholder: '搜尋 App' });
+        const list = createElement('div', 'home-drawer-grid');
+        const sorted = [...this.apps].sort((a, b) => String(a.label).localeCompare(String(b.label), 'zh-Hant'));
+        const draw = () => {
+            const q = input.value.trim().toLowerCase();
+            list.replaceChildren();
+            sorted.filter(a => !q || String(a.label).toLowerCase().includes(q)).forEach(app => {
+                const item = createElement('div', 'home-app-icon');
+                const bg = createElement('div', 'home-app-icon-bg');
+                bg.appendChild(createIcon(app.icon, 'text-white text-3xl', true));
+                item.append(bg, createElement('span', 'home-app-label', { textContent: app.label }));
+                item.onclick = () => { this.closeDrawer(); Router.navigate(app.path); };
+                list.appendChild(item);
+            });
+            if (!list.children.length) list.appendChild(createElement('div', 'home-drawer-empty', { textContent: '沒有符合的 App' }));
+        };
+        input.oninput = draw;
+        // 往下拉（在清單最上面時）收起
+        let y0 = null;
+        list.addEventListener('touchstart', e => { y0 = list.scrollTop <= 0 ? e.touches[0].clientY : null; }, { passive: true });
+        list.addEventListener('touchend', e => { if (y0 !== null && e.changedTouches[0].clientY - y0 > 90) this.closeDrawer(); y0 = null; });
+        drawer.append(handle, input, list);
+        this.container.appendChild(drawer);
+        this.drawer = drawer;
+        draw();
+        setTimeout(() => drawer.classList.add('open'), 20); // 下一個 tick 再加，才會有滑上來的動畫
+        if (focusSearch) setTimeout(() => input.focus(), 250);
+    },
+
+    closeDrawer() {
+        const d = this.drawer; if (!d) return;
+        this.drawer = null;
+        d.classList.remove('open');
+        setTimeout(() => d.remove(), 250);
+    },
 
     renderAll() {
         const { grid, hidden, dock } = this.arranged();
@@ -146,17 +212,20 @@ const HomeScreen = {
 
     // ───── 換頁（滑動）─────
     setupSwipe(wrapper) {
-        const handleStart = (x) => {
+        const handleStart = (x, y) => {
             if (this.editing) return;
             this.isDragging = true;
             this.touchStartX = x;
             this.touchCurrentX = x;
+            this.touchStartY = y;
+            this.touchCurrentY = y;
             this.pagesContainer.style.transition = 'none';
         };
 
-        const handleMove = (x) => {
+        const handleMove = (x, y) => {
             if (!this.isDragging) return;
             this.touchCurrentX = x;
+            this.touchCurrentY = y;
             const diff = this.touchCurrentX - this.touchStartX;
             const offset = -this.currentPage * 100;
             const pxToPercent = (diff / wrapper.offsetWidth) * 100;
@@ -170,6 +239,9 @@ const HomeScreen = {
 
             const diff = this.touchCurrentX - this.touchStartX;
             const threshold = wrapper.offsetWidth * 0.2;
+            // Android：明顯往上滑（直的比橫的多）打開 App 抽屜
+            const dy = this.touchStartY - this.touchCurrentY;
+            if (this.android && dy > 70 && dy > Math.abs(diff)) { this.goToPage(this.currentPage); this.openDrawer(); return; }
 
             if (diff < -threshold && this.currentPage < this.totalPages - 1) {
                 this.goToPage(this.currentPage + 1);
@@ -181,21 +253,21 @@ const HomeScreen = {
         };
 
         wrapper.addEventListener('touchstart', (e) => {
-            handleStart(e.touches[0].clientX);
+            handleStart(e.touches[0].clientX, e.touches[0].clientY);
         }, { passive: true });
 
         wrapper.addEventListener('touchmove', (e) => {
-            handleMove(e.touches[0].clientX);
+            handleMove(e.touches[0].clientX, e.touches[0].clientY);
         }, { passive: true });
 
         wrapper.addEventListener('touchend', handleEnd);
 
         wrapper.addEventListener('mousedown', (e) => {
-            handleStart(e.clientX);
+            handleStart(e.clientX, e.clientY);
         });
 
         wrapper.addEventListener('mousemove', (e) => {
-            if (this.isDragging) handleMove(e.clientX);
+            if (this.isDragging) handleMove(e.clientX, e.clientY);
         });
 
         wrapper.addEventListener('mouseup', handleEnd);

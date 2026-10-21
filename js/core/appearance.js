@@ -23,8 +23,11 @@ export const FONTS = [
 ];
 export const SIZES = [{ id: 'small', name: '小', zoom: 0.92 }, { id: 'medium', name: '中', zoom: 1 }, { id: 'large', name: '大', zoom: 1.1 }];
 
+// 桌面風格：iOS（目前的樣子）或 Android（圓形圖示、搜尋列、App 抽屜、手勢列）
+export const UIS = [{ id: 'ios', name: 'iOS' }, { id: 'android', name: 'Android' }];
+
 export const DEFAULT_COLOR = '#16A34A'; // 預設配色的主色：選這個就是不換色
-export const DEFAULTS = { mode: 'light', color: DEFAULT_COLOR, keepDanger: true, font: 'system', size: 'medium', saturation: 100, customCss: '', appCss: {}, appRules: {}, appOrders: {}, stickers: [] };
+export const DEFAULTS = { ui: 'ios', mode: 'light', color: DEFAULT_COLOR, keepDanger: true, font: 'system', size: 'medium', saturation: 100, customCss: '', appCss: {}, appRules: {}, appOrders: {}, stickers: [] };
 
 const HEX = /^#[0-9a-fA-F]{6}$/;
 const clamp = (n, a, b) => Math.min(b, Math.max(a, n));
@@ -42,6 +45,7 @@ export function migrateLegacy(theme, font) {
 export function normalize(s) {
     const o = { ...DEFAULTS, ...(s && typeof s === 'object' ? s : {}) };
     if (!MODES.some(m => m.id === o.mode)) o.mode = DEFAULTS.mode;
+    if (!UIS.some(u => u.id === o.ui)) o.ui = DEFAULTS.ui;
     if (!HEX.test(o.color)) o.color = DEFAULTS.color;
     if (!FONTS.some(f => f.id === o.font)) o.font = DEFAULTS.font;
     if (!SIZES.some(z => z.id === o.size)) o.size = DEFAULTS.size;

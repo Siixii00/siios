@@ -1,6 +1,6 @@
 import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
-import { MODES, PRESETS, FONTS, SIZES, DEFAULTS, normalize } from '../../core/appearance.js';
+import { MODES, UIS, PRESETS, FONTS, SIZES, DEFAULTS, normalize } from '../../core/appearance.js';
 import { loadAppearance, saveAppearance, customCssErrors } from '../../core/appearance-dom.js';
 import { SNIPPETS } from '../../core/appearance-css.js';
 import { getAllApps } from '../registry.js';
@@ -20,6 +20,12 @@ async function renderAppearance() {
       <h1 class="menu-title">外觀設定</h1>
     </header>
     <div class="page">
+      <h2 class="section-title">桌面風格</h2>
+      <div class="ap-seg" data-group="ui">
+        ${UIS.map(u => `<button data-v="${u.id}">${u.name}</button>`).join('')}
+      </div>
+      <p class="ap-hint">iOS：玻璃質感圖示、置中標題。Android：圓形圖示、日期與搜尋列、往上滑打開 App 抽屜（所有 App 依名稱排序，主畫面隱藏的也找得到）、靠左的標題列。切換後回到主畫面就會看到。</p>
+
       <h2 class="section-title">模式</h2>
       <div class="ap-seg" data-group="mode">
         ${MODES.map(m => `<button data-v="${m.id}">${m.name}</button>`).join('')}

@@ -12,7 +12,7 @@ export function normalizeLayout(raw) {
 }
 
 // items：[{ path, ... }]（registry 給的 App 清單）。回傳 { grid, hidden, dock }
-export function arrange(items, rawLayout) {
+export function arrange(items, rawLayout, defaultDock = DEFAULT_DOCK) {
     const layout = normalizeLayout(rawLayout);
     const byPath = new Map(items.map(i => [i.path, i]));
     const ordered = [];
@@ -22,7 +22,7 @@ export function arrange(items, rawLayout) {
     const grid = ordered.filter(i => !hiddenSet.has(i.path));
     const hidden = ordered.filter(i => hiddenSet.has(i.path));
     // dock 沒設定過：沿用原本的行為（前 3 個）；設定過就照設定（不見的 App 略過）
-    const dock = layout.dock === null ? grid.slice(0, DEFAULT_DOCK) : layout.dock.map(p => byPath.get(p)).filter(Boolean);
+    const dock = layout.dock === null ? grid.slice(0, defaultDock) : layout.dock.map(p => byPath.get(p)).filter(Boolean);
     return { grid, hidden, dock };
 }
 

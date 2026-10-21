@@ -44,6 +44,7 @@ export function applyAppearance(settings) {
     if (!el) { el = document.createElement('style'); el.id = 'sx-appearance'; document.head.appendChild(el); }
     el.textContent = buildCss(current, systemDark());
     document.documentElement.dataset.sxDark = effectiveDark(current, systemDark()) ? '1' : '0';
+    document.documentElement.dataset.sxUi = current.ui;
     let meta = document.querySelector('meta[name="theme-color"]');
     if (!meta) { meta = document.createElement('meta'); meta.name = 'theme-color'; document.head.appendChild(meta); }
     meta.content = themeColorMeta(current, systemDark());

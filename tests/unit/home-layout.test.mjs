@@ -63,3 +63,9 @@ test('pageCount / isCustomized', () => {
     assert.equal(pageCount(0, 8), 1); assert.equal(pageCount(8, 8), 1); assert.equal(pageCount(9, 8), 2);
     assert.equal(isCustomized(null), false); assert.equal(isCustomized({ hidden: ['/a'] }), true);
 });
+
+test('arrange：沒設定 Dock 時可以指定預設數量（Android 是 4 個）', () => {
+    assert.equal(arrange(items, null, 4).dock.length, 4);
+    assert.equal(paths(arrange(items, null, 4).dock), 'abcd');
+    assert.equal(paths(arrange(items, { dock: ['/e'] }, 4).dock), 'e');
+});
