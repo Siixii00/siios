@@ -3,7 +3,7 @@ import { SettingsDB } from '../db.js';
 import { normalize, migrateLegacy, buildCss, themeColorMeta, effectiveDark, isDarkBackground, colorTarget } from './appearance.js';
 import { replaceInValue } from './appearance-colors.js';
 import { buildCustomCss } from './appearance-css.js';
-import { compileRules } from './appearance-rules.js';
+import { compileRules, keysFor, reorderKeys } from './appearance-rules.js';
 import { loadImages, getImages, renderStickers } from './appearance-media.js';
 
 const KEY = 'appearance';
@@ -61,6 +61,35 @@ export async function saveAppearance(settings) {
     return s;
 }
 
+// ───── 移動順序：把存下來的順序套到畫面上 ─────
+const STATE_CLASS = /^(active|selected|open|opened|current|show|hidden|disabled|loading|is-|has-|hover|focus|sx-)/;
+// 容器底下每個子元素的代號（編輯器和套用要用同一套）
+export function childKeys(container) {
+    const kids = [...container.children];
+    const keys = keysFor(kids.map(k => ({
+        tag: k.tagName.toLowerCase(),
+        cls: [...k.classList].find(c => /^[a-zA-Z][\w-]*$/.test(c) && !STATE_CLASS.test(c)) || '',
+        text: k.textContent
+    })));
+    return { kids, keys };
+}
+
+export function applyOrders() {
+    const app = document.getElementById('app');
+    const orders = current.appOrders[document.body.dataset.app || ''];
+    if (!app || !orders) return;
+    for (const o of orders) {
+        let box = null;
+        try { box = app.querySelector(o.sel); } catch (_) { continue; }
+        if (!box) continue;
+        const { kids, keys } = childKeys(box);
+        const want = reorderKeys(keys, o.keys);
+        if (want.every((k, i) => k === keys[i])) continue; // 已經是這個順序：不動（避免一直觸發 MutationObserver）
+        const byKey = new Map(keys.map((k, i) => [k, kids[i]]));
+        want.forEach(k => box.appendChild(byKey.get(k)));
+    }
+}
+
 // ───── 本來就是深色底的 App：不要再反相 ─────
 function sampleBackgrounds(app) {
     const r = app.getBoundingClientRect();
@@ -84,6 +113,7 @@ function sampleBackgrounds(app) {
 function checkNative() {
     const app = document.getElementById('app');
     if (!app) return;
+    try { applyOrders(); } catch (e) { console.warn('[Appearance] 套用順序失敗：', e); }
     const h = location.hash.replace(/^#\/?/, '');
     const home = h === '' || h === 'home';
     // 主畫面是桌布，維持原樣（反相會讓桌布上的白字變黑字）

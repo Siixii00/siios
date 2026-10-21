@@ -185,17 +185,18 @@ async function renderAppearance() {
     lib.append(add, file);
     // 各 App 已經改過的東西：可以整個重設
     const names = Object.fromEntries(apps.map(a => [a.id, a.name || a.id]));
-    const ids = [...new Set([...Object.keys(s.appRules), ...s.stickers.map(x => x.app).filter(x => x !== '*')])];
+    const ids = [...new Set([...Object.keys(s.appRules), ...Object.keys(s.appOrders), ...s.stickers.map(x => x.app).filter(x => x !== '*')])];
     changed.innerHTML = ids.length || s.stickers.some(x => x.app === '*') ? '<div class="ap-lib-head">已經修改的地方</div>' : '';
     for (const id of ids) {
       const n = (s.appRules[id] || []).length, st = s.stickers.filter(x => x.app === id).length;
       const row = createElement('div', 'ap-changed-row');
-      row.append(createElement('span', '', { textContent: `${names[id] || id}：${n} 處修改、${st} 個貼紙` }));
+      row.append(createElement('span', '', { textContent: `${names[id] || id}：${n} 處修改、${(s.appOrders[id] || []).length} 處順序、${st} 個貼紙` }));
       const btn = createElement('button', 'ap-mini', { textContent: '重設' });
       btn.onclick = async () => {
         if (!await askConfirm(`把「${names[id] || id}」改過的地方全部還原？`, { title: '重設' })) return;
         const { [id]: _drop, ...rest } = s.appRules;
-        change({ appRules: rest, stickers: s.stickers.filter(x => x.app !== id) });
+        const { [id]: _dropOrder, ...restOrders } = s.appOrders;
+        change({ appRules: rest, appOrders: restOrders, stickers: s.stickers.filter(x => x.app !== id) });
         drawVisual();
       };
       row.append(btn); changed.appendChild(row);

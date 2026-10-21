@@ -72,3 +72,20 @@ test('sanitizeImages：只收 data:image，代號要合法', () => {
     const out = sanitizeImages({ ok: PNG, svg: 'data:image/svg+xml;base64,AAAA', http: 'https://x/y.png', 'bad id': PNG, js: 'javascript:alert(1)' });
     assert.deepEqual(Object.keys(out), ['ok']);
 });
+
+test('移動順序：代號、重排、移動、清理、覆蓋', async () => {
+    const { keysFor, reorderKeys, moveKey, sanitizeOrders, upsertOrder } = await import('../../js/core/appearance-rules.js');
+    const k = keysFor([{ tag: 'div', cls: 'card', text: ' 餘額  $1,200 ' }, { tag: 'div', cls: 'card', text: '' }, { tag: 'div', cls: 'card', text: '' }, { tag: 'p', cls: '', text: 'hi' }]);
+    assert.deepEqual(k, ['div.card', 'div.card#2', 'div.card#3', 'p|hi']);
+    assert.deepEqual(reorderKeys(['a', 'b', 'c', 'd'], ['c', 'x', 'a']), ['c', 'a', 'b', 'd']);
+    assert.deepEqual(reorderKeys(['a', 'b'], null), ['a', 'b']);
+    assert.deepEqual(moveKey(['a', 'b', 'c'], 'c', -1), ['a', 'c', 'b']);
+    assert.deepEqual(moveKey(['a', 'b', 'c'], 'a', -1), ['a', 'b', 'c']); // 已經在最前面
+    assert.deepEqual(moveKey(['a', 'b', 'c'], 'x', 1), ['a', 'b', 'c']);
+    const clean = sanitizeOrders({ arcade: [{ sel: '.list', keys: ['a', 'b'] }, { sel: '.bad{}', keys: ['a', 'b'] }, { sel: '.one', keys: ['a'] }], 'bad app': [{ sel: '.x', keys: ['a', 'b'] }] });
+    assert.deepEqual(Object.keys(clean), ['arcade']); assert.equal(clean.arcade.length, 1);
+    let o = upsertOrder([], '.list', ['a', 'b']);
+    o = upsertOrder(o, '.list', ['b', 'a']);
+    assert.equal(o.length, 1); assert.deepEqual(o[0].keys, ['b', 'a']);
+    assert.deepEqual(upsertOrder(o, '.list', []), []);
+});

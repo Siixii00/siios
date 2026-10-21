@@ -113,3 +113,58 @@ export function sanitizeImages(map) {
     }
     return Object.fromEntries(Object.entries(out).slice(0, MAX_IMAGES));
 }
+
+// ───── 移動順序（同一層的元素前移／後移）─────
+// 每個子元素用「標籤.class」（沒有 class 時用「標籤|文字前幾個字」）當作代號（重複的加 #2、#3），存的是某個容器底下子元素的代號順序。
+export const MAX_ORDERS_PER_APP = 30;
+export const MAX_ORDER_KEYS = 80;
+
+export function keysFor(descs) {
+    const seen = {};
+    return descs.map(d => {
+        // 有 class 就只用 class（文字常常會變，例如餘額、時間）；沒有 class 才用文字前幾個字
+        const base = d.cls ? `${d.tag}.${d.cls}` : `${d.tag}|${String(d.text || '').replace(/\s+/g, ' ').trim().slice(0, 12)}`;
+        seen[base] = (seen[base] || 0) + 1;
+        return seen[base] > 1 ? `${base}#${seen[base]}` : base;
+    });
+}
+
+// 目前的順序 current 依照存下來的 saved 重排：saved 裡找不到的（新出現的元素）維持原本相對順序、放在最後
+export function reorderKeys(current, saved) {
+    const have = new Set(current);
+    const first = (saved || []).filter(k => have.has(k));
+    const rest = current.filter(k => !first.includes(k));
+    return [...first, ...rest];
+}
+
+export function moveKey(keys, key, delta) {
+    const i = keys.indexOf(key);
+    if (i < 0) return keys;
+    const j = Math.max(0, Math.min(keys.length - 1, i + delta));
+    if (j === i) return keys;
+    const out = [...keys];
+    out.splice(i, 1);
+    out.splice(j, 0, key);
+    return out;
+}
+
+export function sanitizeOrders(map) {
+    const out = {};
+    for (const [app, list] of Object.entries(map && typeof map === 'object' ? map : {})) {
+        if (!/^[a-z0-9-]+$/i.test(app) || !Array.isArray(list)) continue;
+        const orders = list
+            .filter(o => o && isSafeSelector(o.sel) && Array.isArray(o.keys))
+            .map(o => ({ sel: o.sel.trim(), keys: o.keys.filter(k => typeof k === 'string' && k.length > 0 && k.length < 80).slice(0, MAX_ORDER_KEYS) }))
+            .filter(o => o.keys.length > 1)
+            .slice(0, MAX_ORDERS_PER_APP);
+        if (orders.length) out[app] = orders;
+    }
+    return out;
+}
+
+// 同一個容器再改一次就覆蓋；回到原本順序（keys 全空）就拿掉
+export function upsertOrder(orders, sel, keys) {
+    const list = (orders || []).filter(o => o.sel !== sel);
+    if (keys && keys.length > 1) list.push({ sel, keys });
+    return list.slice(-MAX_ORDERS_PER_APP);
+}

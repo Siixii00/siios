@@ -3,25 +3,39 @@ import { createElement, createIcon } from './components.js';
 import { getNavItems } from './apps/registry.js';
 import { applyWallpaper } from './core/wallpapers.js';
 import { createWidgetsSection } from './core/widgets.js';
+import { SettingsDB } from './db.js';
+import { arrange, moveTo, setHidden, setDock, pageCount, normalizeLayout, MAX_DOCK } from './core/home-layout.js';
 
 const APPS_PER_PAGE = 8;
+const LAYOUT_KEY = 'home_layout';
+const LONG_PRESS_MS = 550;
+const DRAG_THRESHOLD = 6;
 
 const HomeScreen = {
     apps: [],
+    layout: normalizeLayout(null),
     currentPage: 0,
     totalPages: 1,
     touchStartX: 0,
     touchCurrentX: 0,
     isDragging: false,
+    editing: false,
     pagesContainer: null,
+    pagesWrapper: null,
     dotsContainer: null,
+    dockEl: null,
+    trayEl: null,
+    container: null,
+    drag: null,
 
     async create() {
-        this.apps = await getNavItems();
-        this.totalPages = Math.ceil(this.apps.length / APPS_PER_PAGE) || 1;
+        this.apps = (await getNavItems()).map(a => ({ ...a, id: a.label.toLowerCase().replace(/\s+/g, '-') }));
+        try { this.layout = normalizeLayout(await SettingsDB.get(LAYOUT_KEY)); } catch (_) { this.layout = normalizeLayout(null); }
         this.currentPage = 0;
+        this.editing = false;
 
         const container = createElement('div', 'home-screen');
+        this.container = container;
 
         const wallpaper = createElement('div', 'home-wallpaper');
         container.appendChild(wallpaper);
@@ -33,56 +47,64 @@ const HomeScreen = {
         if (widgets) content.appendChild(widgets);
 
         const pagesWrapper = createElement('div', 'home-pages-wrapper');
+        this.pagesWrapper = pagesWrapper;
         this.pagesContainer = createElement('div', 'home-pages');
-
-        for (let p = 0; p < this.totalPages; p++) {
-            const page = createElement('div', 'home-page');
-            const grid = createElement('div', 'home-app-grid');
-            const start = p * APPS_PER_PAGE;
-            const pageApps = this.apps.slice(start, start + APPS_PER_PAGE);
-
-            pageApps.forEach(app => {
-                const appIcon = this.createAppIcon({
-                    id: app.label.toLowerCase().replace(/\s+/g, '-'),
-                    name: app.label,
-                    icon: app.icon,
-                    color: this.getColorForApp(app.label),
-                    path: app.path
-                });
-                grid.appendChild(appIcon);
-            });
-
-            page.appendChild(grid);
-            this.pagesContainer.appendChild(page);
-        }
-
         pagesWrapper.appendChild(this.pagesContainer);
         content.appendChild(pagesWrapper);
 
         this.dotsContainer = createElement('div', 'home-page-dots');
-        this.renderDots();
         content.appendChild(this.dotsContainer);
 
-        const dock = createElement('div', 'home-dock');
-        const dockColors = ['#34C759', '#5856D6', '#8E8E93'];
-        const dockApps = this.apps.slice(0, 3);
-        dockApps.forEach((app, i) => {
-            const appIcon = this.createDockIcon({
-                id: app.label.toLowerCase().replace(/\s+/g, '-'),
-                name: app.label,
-                icon: app.icon,
-                color: dockColors[i] || this.getColorForApp(app.label),
-                path: app.path
-            });
-            dock.appendChild(appIcon);
-        });
-        content.appendChild(dock);
+        // 編輯模式才會出現：隱藏的 App 放在這裡，點一下就放回主畫面
+        this.trayEl = createElement('div', 'home-tray');
+        content.appendChild(this.trayEl);
+
+        this.dockEl = createElement('div', 'home-dock');
+        content.appendChild(this.dockEl);
+
+        const done = createElement('button', 'home-edit-done', { textContent: '完成' });
+        done.onclick = () => this.exitEdit();
+        container.appendChild(done);
 
         container.appendChild(content);
-
+        this.renderAll();
         this.setupSwipe(pagesWrapper);
-
         return container;
+    },
+
+    // ───── 畫面 ─────
+    arranged() { return arrange(this.apps, this.layout); },
+
+    renderAll() {
+        const { grid, hidden, dock } = this.arranged();
+        this.totalPages = pageCount(grid.length, APPS_PER_PAGE);
+        if (this.currentPage >= this.totalPages) this.currentPage = this.totalPages - 1;
+
+        this.pagesContainer.replaceChildren();
+        for (let p = 0; p < this.totalPages; p++) {
+            const page = createElement('div', 'home-page');
+            const gridEl = createElement('div', 'home-app-grid');
+            grid.slice(p * APPS_PER_PAGE, (p + 1) * APPS_PER_PAGE).forEach(app => gridEl.appendChild(this.createAppIcon(app)));
+            page.appendChild(gridEl);
+            this.pagesContainer.appendChild(page);
+        }
+        this.pagesContainer.style.transition = 'none';
+        this.pagesContainer.style.transform = `translateX(-${this.currentPage * 100}%)`;
+        this.renderDots();
+
+        this.dockEl.replaceChildren();
+        dock.forEach(app => this.dockEl.appendChild(this.createDockIcon(app)));
+
+        this.trayEl.replaceChildren();
+        if (this.editing) {
+            this.trayEl.appendChild(createElement('span', 'home-tray-label', { textContent: hidden.length ? '已隱藏（點一下放回）' : '長按拖曳可以換位置；點 ✕ 可以隱藏' }));
+            hidden.forEach(app => {
+                const chip = createElement('button', 'home-tray-chip', { textContent: '＋ ' + app.label });
+                chip.onclick = () => this.update(l => setHidden(this.apps, l, app.path, false));
+                this.trayEl.appendChild(chip);
+            });
+        }
+        this.container.classList.toggle('editing', this.editing);
     },
 
     renderDots() {
@@ -96,12 +118,36 @@ const HomeScreen = {
     goToPage(index) {
         if (index < 0 || index >= this.totalPages) return;
         this.currentPage = index;
+        this.pagesContainer.style.transition = 'transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
         this.pagesContainer.style.transform = `translateX(-${index * 100}%)`;
         this.renderDots();
     },
 
+    // 改排列：存起來再重畫
+    async update(fn) {
+        this.layout = fn(this.layout);
+        this.renderAll();
+        try { await SettingsDB.set(LAYOUT_KEY, this.layout); } catch (e) { console.warn('[Home] 儲存排列失敗：', e); }
+    },
+
+    enterEdit() {
+        if (this.editing) return;
+        this.editing = true;
+        // Dock 沒設定過時是「網格的前 3 個」：開始編輯就先固定下來，不然拖動網格順序時 Dock 會跟著變
+        if (this.layout.dock === null) this.layout = { ...this.layout, dock: this.arranged().dock.map(a => a.path) };
+        this.renderAll();
+    },
+
+    exitEdit() {
+        this.editing = false;
+        this.endDrag(false);
+        this.renderAll();
+    },
+
+    // ───── 換頁（滑動）─────
     setupSwipe(wrapper) {
         const handleStart = (x) => {
+            if (this.editing) return;
             this.isDragging = true;
             this.touchStartX = x;
             this.touchCurrentX = x;
@@ -172,36 +218,153 @@ const HomeScreen = {
         return colors[name] || '#007AFF';
     },
 
+    // ───── 圖示：點一下開啟；長按進入編輯；編輯時可以拖曳 ─────
     createAppIcon(app) {
         const iconContainer = createElement('div', 'home-app-icon');
+        iconContainer.dataset.path = app.path;
 
         const iconBg = createElement('div', 'home-app-icon-bg');
         iconBg.appendChild(createIcon(app.icon, 'text-white text-3xl', true));
         iconContainer.appendChild(iconBg);
 
-        const label = createElement('span', 'home-app-label', { textContent: app.name });
+        const label = createElement('span', 'home-app-label', { textContent: app.label });
         iconContainer.appendChild(label);
 
-        iconContainer.addEventListener('click', () => {
-            Router.navigate(app.path);
-        });
+        const x = createElement('button', 'home-icon-x', { textContent: '✕', title: '隱藏' });
+        x.addEventListener('pointerdown', e => e.stopPropagation());
+        x.onclick = e => { e.stopPropagation(); this.update(l => setHidden(this.apps, l, app.path, true)); };
+        iconContainer.appendChild(x);
 
+        this.wireIcon(iconContainer, app, 'grid');
         return iconContainer;
     },
 
     createDockIcon(app) {
         const iconContainer = createElement('div', 'home-dock-icon');
+        iconContainer.dataset.path = app.path;
 
         const iconBg = createElement('div', 'home-dock-icon-bg');
         iconBg.appendChild(createIcon(app.icon, 'text-white text-2xl', true));
         iconContainer.appendChild(iconBg);
 
-        iconContainer.addEventListener('click', () => {
+        this.wireIcon(iconContainer, app, 'dock');
+        return iconContainer;
+    },
+
+    wireIcon(el, app, from) {
+        let pressTimer = null, sx = 0, sy = 0, pressed = false;
+        const cancel = () => { clearTimeout(pressTimer); pressTimer = null; };
+        el.addEventListener('click', e => {
+            if (this.editing || this.justDragged) { e.preventDefault(); return; }
             Router.navigate(app.path);
         });
+        el.addEventListener('pointerdown', e => {
+            if (e.button !== undefined && e.button > 0) return;
+            sx = e.clientX; sy = e.clientY; pressed = true;
+            if (this.editing) return; // 編輯中：移動超過門檻才開始拖（見下面 move）
+            pressTimer = setTimeout(() => {
+                pressTimer = null;
+                if (!pressed) return;
+                this.enterEdit();
+                // 手指還按著：直接開始拖那個圖示
+                const fresh = this.container.querySelector(`[data-path="${CSS.escape(app.path)}"].${from === 'dock' ? 'home-dock-icon' : 'home-app-icon'}`);
+                if (fresh) this.beginDrag(fresh, app, from, sx, sy, e.pointerId);
+            }, LONG_PRESS_MS);
+        });
+        el.addEventListener('pointermove', e => {
+            if (!pressed) return;
+            const dist = Math.hypot(e.clientX - sx, e.clientY - sy);
+            if (!this.editing) { if (dist > DRAG_THRESHOLD) cancel(); return; }
+            if (!this.drag && dist > DRAG_THRESHOLD) this.beginDrag(el, app, from, sx, sy, e.pointerId);
+        });
+        const release = () => { pressed = false; cancel(); };
+        el.addEventListener('pointerup', release);
+        el.addEventListener('pointercancel', release);
+        el.addEventListener('contextmenu', e => { if (this.editing || pressTimer !== null) e.preventDefault(); });
+    },
 
-        return iconContainer;
+    // ───── 拖曳 ─────
+    beginDrag(el, app, from, x, y, pointerId) {
+        if (this.drag) return;
+        const rect = el.getBoundingClientRect();
+        const ghost = el.cloneNode(true);
+        ghost.classList.add('home-ghost');
+        Object.assign(ghost.style, { position: 'fixed', left: rect.left + 'px', top: rect.top + 'px', width: rect.width + 'px', margin: 0, zIndex: 50, pointerEvents: 'none' });
+        (this.container.parentElement || document.body).appendChild(ghost);
+        el.classList.add('home-dragging');
+        this.drag = { app, from, ghost, el, offX: x - rect.left, offY: y - rect.top, target: null, edgeTimer: null, pointerId };
+        try { el.setPointerCapture?.(pointerId); } catch (_) { /* 沒有也沒關係 */ }
+        this.onMove = e => this.moveDrag(e);
+        this.onUp = e => this.endDrag(true, e);
+        window.addEventListener('pointermove', this.onMove);
+        window.addEventListener('pointerup', this.onUp);
+        window.addEventListener('pointercancel', this.onUp);
+    },
+
+    moveDrag(e) {
+        const d = this.drag; if (!d) return;
+        d.ghost.style.left = (e.clientX - d.offX) + 'px';
+        d.ghost.style.top = (e.clientY - d.offY) + 'px';
+        const dockRect = this.dockEl.getBoundingClientRect();
+        const wrapRect = this.pagesWrapper.getBoundingClientRect();
+        // 靠近左右邊緣：停一下就換頁
+        const edge = e.clientX < wrapRect.left + 28 ? -1 : e.clientX > wrapRect.right - 28 ? 1 : 0;
+        if (edge && !d.edgeTimer) d.edgeTimer = setTimeout(() => { d.edgeTimer = null; this.goToPage(this.currentPage + edge); }, 650);
+        if (!edge && d.edgeTimer) { clearTimeout(d.edgeTimer); d.edgeTimer = null; }
+
+        this.container.querySelectorAll('.home-drop').forEach(n => n.classList.remove('home-drop'));
+        if (e.clientY >= dockRect.top - 10 && e.clientY <= dockRect.bottom + 10 && e.clientX >= dockRect.left && e.clientX <= dockRect.right) {
+            const icons = [...this.dockEl.querySelectorAll('.home-dock-icon')].filter(n => n !== d.el);
+            let idx = icons.findIndex(n => { const r = n.getBoundingClientRect(); return e.clientX < r.left + r.width / 2; });
+            if (idx < 0) idx = icons.length;
+            d.target = { kind: 'dock', index: idx };
+            this.dockEl.classList.add('home-drop');
+            return;
+        }
+        if (e.clientY >= wrapRect.top && e.clientY <= wrapRect.bottom) {
+            const icons = [...this.pagesContainer.children[this.currentPage]?.querySelectorAll('.home-app-icon') || []].filter(n => n !== d.el);
+            let best = null, bd = Infinity;
+            for (const n of icons) { const r = n.getBoundingClientRect(); const dist = Math.hypot(e.clientX - (r.left + r.width / 2), e.clientY - (r.top + r.height / 2)); if (dist < bd) { bd = dist; best = n; } }
+            const grid = this.arranged().grid;
+            if (best) {
+                const to = grid.findIndex(a => a.path === best.dataset.path);
+                const r = best.getBoundingClientRect();
+                d.target = { kind: 'grid', index: to + (e.clientX > r.left + r.width / 2 ? 1 : 0), ref: best.dataset.path };
+                best.classList.add('home-drop');
+            } else d.target = { kind: 'grid', index: Math.min(grid.length, (this.currentPage + 1) * APPS_PER_PAGE) };
+            return;
+        }
+        d.target = null;
+    },
+
+    endDrag(commit, e) {
+        const d = this.drag; if (!d) return;
+        window.removeEventListener('pointermove', this.onMove);
+        window.removeEventListener('pointerup', this.onUp);
+        window.removeEventListener('pointercancel', this.onUp);
+        clearTimeout(d.edgeTimer);
+        d.ghost.remove(); d.el.classList.remove('home-dragging');
+        this.dockEl?.classList.remove('home-drop');
+        this.drag = null;
+        // 拖完那一下的 click 不要當成開啟 App
+        this.justDragged = true; setTimeout(() => { this.justDragged = false; }, 250);
+        if (!commit || !d.target) return;
+        const t = d.target, path = d.app.path;
+        if (t.kind === 'dock') {
+            this.update(l => setDock(this.apps, l, path, true, t.index));
+        } else {
+            // 從 Dock 拖出來放到網格：只是離開 Dock（網格裡本來就有）
+            if (d.from === 'dock') this.update(l => setDock(this.apps, l, path, false));
+            else {
+                // 目標位置是「放在它前面」；自己原本在前面時，移走之後後面的會往前補一格
+                const grid = this.arranged().grid;
+                const from = grid.findIndex(a => a.path === path);
+                const to = t.index - (from >= 0 && from < t.index ? 1 : 0);
+                this.update(l => moveTo(this.apps, l, path, to));
+            }
+        }
     }
 };
 
+export { MAX_DOCK };
 export default HomeScreen;

@@ -4,7 +4,7 @@
 // 本來就是深色底的 App（街機廳、YouTube…）和主畫面（有桌布）不反相，由 isDarkBackground 判斷。
 // 這個檔案只有純函式（可在 node 測試）；套用到頁面的部分在 appearance-dom.js。
 
-import { sanitizeAppRules, sanitizeStickers } from './appearance-rules.js';
+import { sanitizeAppRules, sanitizeStickers, sanitizeOrders } from './appearance-rules.js';
 
 export const PRESETS = [
     { id: 'default', name: '預設', color: '#16A34A' },
@@ -24,7 +24,7 @@ export const FONTS = [
 export const SIZES = [{ id: 'small', name: '小', zoom: 0.92 }, { id: 'medium', name: '中', zoom: 1 }, { id: 'large', name: '大', zoom: 1.1 }];
 
 export const DEFAULT_COLOR = '#16A34A'; // 預設配色的主色：選這個就是不換色
-export const DEFAULTS = { mode: 'light', color: DEFAULT_COLOR, keepDanger: true, font: 'system', size: 'medium', saturation: 100, customCss: '', appCss: {}, appRules: {}, stickers: [] };
+export const DEFAULTS = { mode: 'light', color: DEFAULT_COLOR, keepDanger: true, font: 'system', size: 'medium', saturation: 100, customCss: '', appCss: {}, appRules: {}, appOrders: {}, stickers: [] };
 
 const HEX = /^#[0-9a-fA-F]{6}$/;
 const clamp = (n, a, b) => Math.min(b, Math.max(a, n));
@@ -53,6 +53,7 @@ export function normalize(s) {
     o.appCss = apps;
     o.appRules = sanitizeAppRules(o.appRules);
     o.stickers = sanitizeStickers(o.stickers);
+    o.appOrders = sanitizeOrders(o.appOrders);
     // 主題色：選預設的綠色就是不換色
     return o;
 }

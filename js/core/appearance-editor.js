@@ -1,8 +1,8 @@
 // 視覺編輯模式（不用寫程式）：在任何一個 App 的畫面上直接點選元素，用面板改顏色／大小／圖片，
 // 也可以放上可以拖曳的圖片貼紙。改的東西存成「規則」（appearance-rules.js），重新開啟仍然有效。
-import { currentAppearance, applyAppearance, saveAppearance, refreshStickers } from './appearance-dom.js';
+import { currentAppearance, applyAppearance, saveAppearance, refreshStickers, childKeys, applyOrders } from './appearance-dom.js';
 import { getImages, addImageFile } from './appearance-media.js';
-import { upsertRule, sanitizeSticker, MAX_STICKERS } from './appearance-rules.js';
+import { upsertRule, sanitizeSticker, MAX_STICKERS, moveKey, upsertOrder } from './appearance-rules.js';
 
 let on = false;
 let mode = 'select'; // select：點選元素；use：照一般方式操作（可以切換頁面）
@@ -89,6 +89,35 @@ function setSticker(id, patch) {
     const cur = currentAppearance();
     commit({ ...cur, stickers: cur.stickers.map(s => (s.id === id ? sanitizeSticker({ ...s, ...patch }) || s : s)) });
     redrawStickers();
+}
+// 同一層的元素往前／往後移一格（delta：-1 往前、1 往後）；回到原本順序請用「還原這一層的順序」
+function moveSelected(delta) {
+    const parent = selEl?.parentElement;
+    const app = document.getElementById('app');
+    if (!parent || parent === app) { window.alert?.('這個元素在最外層，不能調整順序'); return; }
+    const { kids, keys } = childKeys(parent);
+    if (kids.length < 2) { window.alert?.('這一層只有它自己，沒有可以換的位置'); return; }
+    const next = moveKey(keys, keys[kids.indexOf(selEl)], delta);
+    if (next === keys) return;
+    const sel = selectorFor(parent, false);
+    const cur = currentAppearance();
+    const list = upsertOrder(cur.appOrders[appId()], sel, next);
+    const appOrders = { ...cur.appOrders, [appId()]: list };
+    if (!list.length) delete appOrders[appId()];
+    commit({ ...cur, appOrders });
+    applyOrders();
+    selInfo = { ...selInfo, sel: selectorFor(selEl, selInfo.similar) }; // 位置變了，單一元素的選擇器要重算
+    moveHighlight();
+}
+function resetOrder() {
+    const parent = selEl?.parentElement; if (!parent) return;
+    const sel = selectorFor(parent, false);
+    const cur = currentAppearance();
+    const list = upsertOrder(cur.appOrders[appId()], sel, []);
+    const appOrders = { ...cur.appOrders, [appId()]: list };
+    if (!list.length) delete appOrders[appId()];
+    commit({ ...cur, appOrders });
+    window.alert?.('已清除這一層的順序設定；重新進入這個頁面就會回到原本的順序。');
 }
 function redrawStickers() {
     refreshStickers({ selectedId: selSticker, onMove: (id, pos) => { setSticker(id, pos); }, onSelect: id => { selSticker = id; selEl = null; selInfo = null; moveHighlight(); buildPanel(); redrawStickers(); } });
@@ -197,6 +226,7 @@ function elementSection() {
         rangeRow('邊框粗細', 'borderWidth', cur, 0, 12, 'px', 0),
         rangeRow('透明度', 'opacity', cur, 0, 100, '%', 100),
         checkRow('隱藏這個元素', 'hide', cur),
+        row('位置', el('span', { class: 'sxe-move' }, el('button', { class: 'sxe-mini', text: '↑ 往前', onclick: () => moveSelected(-1) }), el('button', { class: 'sxe-mini', text: '↓ 往後', onclick: () => moveSelected(1) }), el('button', { class: 'sxe-mini', text: '還原這一層', onclick: resetOrder }))),
         el('button', { class: 'sxe-btn', text: '還原這個元素', onclick: () => { const k = Object.keys(cur?.props || {}); setProps(Object.fromEntries(k.map(x => [x, null]))); buildPanel(); } })
     );
     return box;
@@ -292,6 +322,7 @@ const PANEL_CSS = `
 .sxe-images{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
 .sxe-thumb{width:46px;height:46px;border:1px solid #ccc;border-radius:8px;background:#f2f2f2 center/cover no-repeat;cursor:pointer;padding:0;font-size:11px;color:#444}
 .sxe-add{background:#fff}
+.sxe-move{display:flex;gap:6px;flex-wrap:wrap}
 .sxe-change{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:4px 0}
 #sx-hl{position:fixed;pointer-events:none;z-index:8;outline:2px solid #3b82f6;outline-offset:1px;background:rgba(59,130,246,.12);display:none}
 `;

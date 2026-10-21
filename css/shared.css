@@ -956,3 +956,22 @@ body .app-container > .page {
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-y: contain;
 }
+
+/* 主畫面編輯模式：長按圖示進入；拖曳換位置、點 ✕ 隱藏、拖到 Dock 加入 */
+.home-app-icon, .home-dock-icon { position: relative; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+.home-icon-x { display: none; position: absolute; top: -6px; left: calc(50% - 38px); width: 22px; height: 22px; border-radius: 50%; border: none; background: rgba(0, 0, 0, 0.65); color: #fff; font-size: 12px; line-height: 22px; padding: 0; cursor: pointer; z-index: 2; }
+.home-screen.editing .home-icon-x { display: block; }
+.home-screen.editing .home-app-icon, .home-screen.editing .home-dock-icon { touch-action: none; animation: home-wiggle 0.28s ease-in-out infinite alternate; }
+.home-screen.editing .home-app-icon:nth-child(even), .home-screen.editing .home-dock-icon:nth-child(even) { animation-delay: -0.14s; }
+@keyframes home-wiggle { from { transform: rotate(-1.6deg); } to { transform: rotate(1.6deg); } }
+.home-dragging { opacity: 0.25; animation: none !important; }
+.home-ghost { opacity: 0.95; transform: scale(1.12); animation: none !important; filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.4)); }
+.home-ghost .home-icon-x { display: none; }
+.home-app-icon.home-drop .home-app-icon-bg { outline: 2px solid rgba(255, 255, 255, 0.9); outline-offset: 3px; }
+.home-dock.home-drop { outline: 2px dashed rgba(255, 255, 255, 0.85); outline-offset: 2px; }
+.home-tray { display: none; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 8px; color: #fff; font-size: 12px; }
+.home-screen.editing .home-tray { display: flex; }
+.home-tray-label { width: 100%; text-align: center; opacity: 0.85; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35); }
+.home-tray-chip { border: 1px solid rgba(255, 255, 255, 0.6); background: rgba(255, 255, 255, 0.2); color: #fff; border-radius: 999px; padding: 4px 10px; font-size: 12px; cursor: pointer; }
+.home-edit-done { display: none; position: absolute; top: 46px; right: 14px; z-index: 12; border: none; border-radius: 999px; padding: 6px 16px; background: rgba(255, 255, 255, 0.9); color: #111; font-weight: 600; font-size: 13px; cursor: pointer; }
+.home-screen.editing .home-edit-done { display: block; }
