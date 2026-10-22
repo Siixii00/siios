@@ -1,6 +1,7 @@
 import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { QUICK_START, CATEGORIES, ENTRIES, FAQ, searchHelp } from './help-data.js';
+import { DEPLOY_QUIZ, findQuizAnswer } from './deploy-quiz.js';
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 
@@ -27,10 +28,20 @@ async function renderHelp() {
       ${e.path ? `<button class="hp-open" data-path="${esc(e.path)}">開啟 ${esc(e.name)}</button>` : ''}
     </details>`;
 
+  let quizPick = '';
+  const quizHtml = () => {
+    const ans = findQuizAnswer(quizPick);
+    return `<h2 class="hp-h">我該部署哪個？</h2><div class="hp-card hp-quiz"><strong>${esc(DEPLOY_QUIZ.question)}</strong>` +
+      DEPLOY_QUIZ.options.map(o => `<button class="hp-quiz-opt${o.id === quizPick ? ' on' : ''}" data-id="${esc(o.id)}">${esc(o.label)}</button>`).join('') +
+      (ans ? `<div class="hp-quiz-ans"><b>${esc(ans.need)}</b><ol>${ans.steps.map(t => `<li>${esc(t)}</li>`).join('')}</ol>${ans.open ? `<button class="hp-open" data-path="${esc(ans.open.path)}">${esc(ans.open.label)}</button>` : ''}</div>` : '') +
+      '</div>';
+  };
+
   const draw = () => {
     const q = input.value.trim();
     const r = searchHelp(q);
     const parts = [];
+    if (!q) parts.push(quizHtml());
     if (r.quick.length) parts.push(`<h2 class="hp-h">快速開始</h2>` + r.quick.map(s => `<div class="hp-card"><strong>${esc(s.title)}</strong><p>${esc(s.body)}</p></div>`).join(''));
     for (const c of CATEGORIES) {
       const list = r.entries.filter(e => e.cat === c.id);
@@ -41,6 +52,7 @@ async function renderHelp() {
     // 搜尋時直接展開，比較好找
     if (q) body.querySelectorAll('details').forEach(d => { d.open = true; });
     body.querySelectorAll('.hp-open').forEach(b => { b.onclick = () => Router.navigate(b.dataset.path); });
+    body.querySelectorAll('.hp-quiz-opt').forEach(b => { b.onclick = () => { quizPick = quizPick === b.dataset.id ? '' : b.dataset.id; draw(); }; });
   };
   input.oninput = draw;
   draw();

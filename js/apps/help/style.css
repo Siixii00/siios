@@ -15,3 +15,9 @@
 .hp-a { margin: 0 0 12px; font-size: 13px; line-height: 1.7; color: #333; }
 .hp-open { margin: 8px 0 12px; padding: 9px 16px; border: none; border-radius: 10px; background: var(--app-accent); color: #fff; font-size: 13px; font-weight: 600; cursor: pointer; }
 .hp-empty { text-align: center; color: var(--app-muted); padding: 40px 0; font-size: 14px; }
+
+.hp-quiz { display: flex; flex-direction: column; gap: 8px; }
+.hp-quiz-opt { text-align: left; padding: 10px 12px; border: 1px solid #d1d5db; border-radius: 10px; background: #fff; color: var(--app-text); font-size: 13px; line-height: 1.5; cursor: pointer; }
+.hp-quiz-opt.on { border-color: var(--app-accent); background: #e0f2fe; }
+.hp-quiz-ans { background: #f0f9ff; border-radius: 10px; padding: 10px 12px; font-size: 13px; line-height: 1.7; color: #0c4a6e; }
+.hp-quiz-ans ol { margin: 6px 0 0; padding-left: 18px; }

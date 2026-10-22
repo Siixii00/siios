@@ -231,6 +231,33 @@ Cloudflare 後台 → Worker → Settings → Variables 新增文字變數 `DISC
 
 ---
 
+## 常見問答：我該部署哪個？
+
+App 裡也有互動版：**設定 → 使用說明 →「我該部署哪個？」**，選你要的功能就會告訴你步驟。
+
+| 我想要… | 要部署嗎？ | 做法 |
+|---|---|---|
+| 只想聊天、玩各個 App | 不用 | 設定 → 聊天 API 串接，填網址、金鑰、模型 |
+| 角色查天氣、食譜、動漫、翻譯、商品價格 | MCP 工具 Worker | 神秘門勾工具 → 三步驟上線精靈（只要瀏覽器） |
+| 角色的紫微斗數命盤 | 紫微斗數 MCP | 神秘門勾「紫微斗數排盤」，照精靈的 ZIP／指令步驟 |
+| 語音、生圖、語音辨識、免費嵌入模型 | 合成服務 Worker | `synth-worker/` 部署，設定 → 合成服務填網址與 `SYNTH_TOKEN` |
+| 角色在 Discord 上說話 | Discord 機器人 Worker | 設定 → Discord 整合 → Worker 部署教學 |
+| Bilibili 掃碼登入 | 通常不用 | 影片用官方嵌入播放器；只有要登入才需要自己部署 `bilibili-worker/` |
+
+**Q：一定要自己部署嗎？可以用別人（作者）的伺服器嗎？**
+A：沒有公用伺服器。每個人用自己的 Cloudflare 帳號和自己的金鑰，資料不會經過別人的 Worker。
+
+**Q：會花錢嗎？**
+A：Cloudflare Workers 免費額度一般用得夠；有些外部服務（例如商品搜尋的 SerpAPI）有各自的免費額度。
+
+**Q：貼上網址後顯示「連不到這個網址」？**
+A：確認網址沒打錯；剛部署完請等 10 秒再試；Worker 要已設定 `MCP_API_KEY`，沒設金鑰會拒絕所有請求。
+
+**Q：金鑰弄丟了／懷疑外洩？**
+A：到 Cloudflare 該 Worker 的 Variables and Secrets 換一組新的，再回 PWA 更新同一個欄位。
+
+---
+
 ## 跨裝置活動同步與瀏覽器擴充功能
 
 把電腦與手機瀏覽器上的活動（YouTube、Twitter、Instagram、Facebook…）同步到 PWA，讓角色「知道你最近在看什麼」。資料先**端對端加密**（AES-256-GCM）再放進你自己 GitHub 帳號的私人 Gist，金鑰不會上傳。
@@ -295,6 +322,7 @@ node scripts/update-sw-assets.mjs     # 新增／移除 js、css 檔案後，更
 ```
 
 - 純 JavaScript（ES modules），沒有建置步驟；IndexedDB（idb）、Material Symbols、Font Awesome 從 CDN 載入並由 Service Worker 快取。
+- **安全更新**：在自己電腦跑測試／wrangler 的 Node.js 請用已修補的版本（2026-10-21 的安全更新：22.23.4、24.22.1、26.12.1 以上）。PWA 本身跑在瀏覽器、Worker 跑在 Cloudflare，不受本機 Node 版本影響；專案沒有用到 PHP 或 Go。
 - 修改 `sw.js` 或任何會被快取的檔案後，請把 `sw.js` 的 `CACHE_NAME` 版本加一。
 - `scripts/discord-bot-worker.js` 是單一檔案（貼到 Cloudflare 用）；裡面的 `WORKER_VERSION` 要和 `js/apps/settings/discord-guide-data.js` 的 `EXPECTED_WORKER_VERSION` 一致（測試會檢查）。
 - 專案結構：`js/apps/*` 各 App、`js/core/*` 共用核心（記憶系統、同步、錢包…）、`worldbook/` 內建世界書、`*-worker/` 各 Worker、`activity-extension/` 瀏覽器擴充功能、`tests/unit/` 單元測試、`docs/` 設計與流程文件。
