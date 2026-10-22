@@ -2261,29 +2261,36 @@ async function clearBotRepliesPartially(channel_id, env, mode, count = 1) {
         rows.filter(r => isCanned(r.content)).forEach(r => dbIds.push(r.id));
     } else {
         const n = Math.max(1, Math.min(50, parseInt(count, 10) || 1));
-        // 以 Discord 上「實際看得到的最後 n 則回覆」為準（連續的機器人訊息算同一則回覆，因為長回覆會切成多段）。
-        // 不能只看資料庫：模型的拒絕罐頭、錯誤訊息不會存進資料庫，若只看資料庫，刪掉的會是它前面那則正常回覆，
-        // 而使用者看到的最後一則（罐頭／警告）還留在頻道裡。
-        const groups = [];
-        let open = false;
-        for (const m of discordAll) {
-            if (m.author?.id === botUserId) {
-                if (!open) { groups.push([]); open = true; }
-                groups[groups.length - 1].push(m);
-            } else open = false;
-        }
-        const picked = groups.slice(0, n).flat();
-        picked.forEach(m => discordIds.add(m.id));
-        // 對應的資料庫紀錄（有存的才刪）：用 chunk_ids 或內容比對
+        // 以 Discord 頻道裡「實際看得到的最後 n 則回覆」為準，而不是只看資料庫：
+        // 模型的拒絕罐頭、錯誤訊息（例如英文的 "I'm sorry, but I can't…"）不會存進資料庫，若只看資料庫，
+        // 刪掉的會是它前面那則正常回覆，使用者看到的最後一則（罐頭／警告）反而還留在頻道裡。
+        // 一則「回覆」＝資料庫的一筆紀錄（含它切成多段的每一段）；沒有對應紀錄的機器人訊息各自算一則。
+        const rowOf = new Map(); // Discord 訊息 id → 資料庫紀錄
         for (const r of rows) {
             let ids = [];
             try { ids = JSON.parse(r.metadata || '{}').chunk_ids || []; } catch (_) {}
-            const body = String(r.content ?? '').trim();
-            const match = ids.some(id => discordIds.has(id)) || picked.some(m => m.content && body && body.startsWith(String(m.content).trim()));
-            if (match) dbIds.push(r.id);
+            ids.forEach(id => rowOf.set(id, r));
         }
-        // Discord 讀不到（例如沒有權限）時，退回舊做法：刪資料庫最新的 n 筆
-        if (!picked.length) {
+        const taken = new Set();
+        const units = []; // 由新到舊：{ ids: [Discord id], row }
+        const byRow = new Map();
+        for (const m of discordBot) {
+            let row = rowOf.get(m.id);
+            if (!row && m.content) { // 舊資料沒有記錄 Discord 訊息 id：用內容比對
+                row = rows.find(r => !taken.has(r.id) && !(JSON.parse(r.metadata || '{}').chunk_ids || []).length && String(r.content ?? '').trim().startsWith(String(m.content).trim()));
+                if (row) taken.add(row.id);
+            }
+            if (row) {
+                if (!byRow.has(row.id)) { const u = { ids: [], row }; byRow.set(row.id, u); units.push(u); }
+                byRow.get(row.id).ids.push(m.id);
+            } else units.push({ ids: [m.id], row: null });
+        }
+        for (const u of units.slice(0, n)) {
+            u.ids.forEach(id => discordIds.add(id));
+            if (u.row) dbIds.push(u.row.id);
+        }
+        // Discord 讀不到機器人訊息（例如訊息太舊、不在最近 100 則裡）時，退回舊做法：刪資料庫最新的 n 筆
+        if (!units.length) {
             for (const r of rows.slice(0, n)) {
                 dbIds.push(r.id);
                 let ids = [];

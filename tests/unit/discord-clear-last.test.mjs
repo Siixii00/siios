@@ -9,7 +9,10 @@ const snow = (ms, n = 1) => String((BigInt(ms - 1420070400000) << 22n) + BigInt(
 async function run(channel, count = 1) {
     const now = Date.now();
     const messages = channel.map((m, i) => ({ id: snow(now - (i + 1) * 60000), content: m.content, author: { id: m.who === 'bot' ? 'BOT' : 'USER' }, saved: m.saved }));
-    const rows = messages.filter(m => m.author.id === 'BOT' && m.saved).map((m, i) => ({ id: 'row' + i, content: m.content, metadata: JSON.stringify({ chunk_ids: [m.id] }) }));
+    // saved 是字串時，同一個字串的訊息是同一筆紀錄（切成多段的長回覆）
+    const groups = new Map();
+    messages.filter(m => m.author.id === 'BOT' && m.saved).forEach(m => { const k = typeof m.saved === 'string' ? m.saved : m.id; groups.set(k, [...(groups.get(k) || []), m]); });
+    const rows = [...groups.values()].map((ms, i) => ({ id: 'row' + i, content: ms.map(m => m.content).reverse().join(''), metadata: JSON.stringify({ chunk_ids: ms.map(m => m.id) }) }));
     const deleted = [], dbDeleted = [];
     const env = {
         DISCORD_BOT_TOKEN: 'x', ACCESS_KEY: 'k',
@@ -62,15 +65,25 @@ test('刪最後一則：有存進資料庫的正常回覆，Discord 與資料庫
     assert.deepEqual(dbDeleted, ['row0']);
 });
 
-test('刪最後一則：切成多段的長回覆算同一則（連續的機器人訊息一起刪），前面的不動', async () => {
-    const { deleted, messages } = await run([
-        { who: 'bot', content: '第三段', saved: false },
-        { who: 'bot', content: '第二段', saved: false },
-        { who: 'bot', content: '第一段', saved: false },
+test('刪最後一則：有存進資料庫、切成多段的長回覆算同一則（每一段一起刪），前面的不動', async () => {
+    const { deleted, dbDeleted, messages } = await run([
+        { who: 'bot', content: '第三段', saved: 'long' },
+        { who: 'bot', content: '第二段', saved: 'long' },
+        { who: 'bot', content: '第一段', saved: 'long' },
         { who: 'user', content: '說個故事' },
         { who: 'bot', content: '更早的回覆', saved: true }
     ]);
     assert.deepEqual(deleted.sort(), [messages[0].id, messages[1].id, messages[2].id].sort());
+    assert.equal(dbDeleted.length, 1);
+});
+
+test('刪最後一則：沒有資料庫紀錄的連續機器人訊息各自算一則（只刪最新那一則）', async () => {
+    const { deleted, messages } = await run([
+        { who: 'bot', content: 'Warning B', saved: false },
+        { who: 'bot', content: 'Warning A', saved: false },
+        { who: 'user', content: 'hi' }
+    ]);
+    assert.deepEqual(deleted, [messages[0].id]);
 });
 
 test('刪最近 2 則：往前數兩則回覆（以使用者訊息分隔）', async () => {
