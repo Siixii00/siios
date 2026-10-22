@@ -2,6 +2,7 @@
 import { createElement, createIcon, createToast, createEmptyState, createKakaoSideMenu } from '../../components.js';
 import { SettingsDB, CharactersDB, UsersDB, ChatsDB, MemoryDB } from '../../db.js';
 import APIClient from '../../api.js';
+import { extractArray } from '../../core/json-extract.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 
@@ -359,15 +360,9 @@ ${memoryText}
     const data = await response.json();
     let following;
     
-    try {
-        following = JSON.parse(data.choices?.[0]?.message?.content || '[]');
-        if (!Array.isArray(following)) {
-            following = [];
-        }
-    } catch (e) {
-        console.warn('[Twitter] Failed to parse following:', e);
-        following = character?.assigned_chars || [];
-    }
+    // 模型常用 ``` 圍起來或前後加說明：用寬鬆的方式取出陣列；取不到就用角色原本設定的追蹤對象
+    following = extractArray(data.choices?.[0]?.message?.content);
+    if (!following.length) following = character?.assigned_chars || [];
     
     followingCache.set(selectedCharacterId, { 
         following, 
@@ -494,13 +489,7 @@ ${contentDesc}
         
         const data = await response.json();
         
-        try {
-            const tweets = JSON.parse(data.choices?.[0]?.message?.content || '[]');
-            return Array.isArray(tweets) ? tweets : [];
-        } catch (e) {
-            console.warn('[Twitter] Failed to parse tweets:', e);
-            return [];
-        }
+        return extractArray(data.choices?.[0]?.message?.content);
     } catch (error) {
         console.error('[Twitter] Real content conversion failed:', error);
         return [];
@@ -547,13 +536,7 @@ async function generateAIOnlyTweets(character) {
         
         const data = await response.json();
         
-        try {
-            const tweets = JSON.parse(data.choices?.[0]?.message?.content || '[]');
-            return Array.isArray(tweets) ? tweets : [];
-        } catch (e) {
-            console.warn('[Twitter] Failed to parse tweets:', e);
-            return [];
-        }
+        return extractArray(data.choices?.[0]?.message?.content);
     } catch (error) {
         console.error('[Twitter] AI generation failed:', error);
         return [];
@@ -1353,6 +1336,7 @@ async function renderTwitterHome() {
     tabs.innerHTML = `
         <button class="tab ${activeTab === 'forYou' ? 'active' : ''}" data-tab="forYou">為你推薦</button>
         <button class="tab ${activeTab === 'following' ? 'active' : ''}" data-tab="following">正在追蹤</button>
+        <button class="refresh-btn" aria-label="更新推薦" title="更新推薦（也可以在最上面往下拉）"><i class="fas fa-rotate"></i></button>
     `;
     
     tabs.querySelectorAll('.tab').forEach(tab => {
@@ -1368,6 +1352,11 @@ async function renderTwitterHome() {
     });
     
     main.appendChild(tabs);
+    // 不用手勢也能更新：沒選角色就先打開角色選單，選好了就產生推薦
+    tabs.querySelector('.refresh-btn').onclick = async () => {
+        if (!selectedCharacterId) { await openCharacterMenu(); return; }
+        await refreshFeed(main, pullIndicator);
+    };
     
     const feedContainer = createElement('div', 'feed-container');
     await renderFeed(feedContainer);
@@ -1378,7 +1367,7 @@ async function renderTwitterHome() {
         hint.innerHTML = `
             <div style="text-align: center; padding: 20px;">
                 <i class="fas fa-user-circle" style="font-size: 32px; color: var(--twitter-accent); margin-bottom: 12px;"></i>
-                <p style="color: var(--twitter-text); font-weight: 600; margin-bottom: 8px;">下拉刷新以選擇角色</p>
+                <p style="color: var(--twitter-text); font-weight: 600; margin-bottom: 8px;">按右上角「選單」選角色，再按上面的 ↻（或往下拉）更新推薦</p>
                 <p style="color: var(--twitter-muted); font-size: 13px;">選擇角色後，將根據聊天記憶推薦個人化推文</p>
             </div>
         `;

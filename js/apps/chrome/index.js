@@ -1,9 +1,10 @@
 ﻿import Router from '../../router.js';
 import { createElement, createIcon, createToast } from '../../components.js';
-import { SettingsDB, CharactersDB } from '../../db.js';
+import { SettingsDB, CharactersDB, UsersDB } from '../../db.js';
 import APIClient from '../../api.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
+import { isAdult } from '../../core/age-gate.js';
 
 const BOOKMARKS_KEY = 'chrome_bookmarks';
 const HISTORY_KEY = 'chrome_history';
@@ -51,7 +52,9 @@ async function loadChromeData() {
         ]);
         bookmarks = Array.isArray(bmkData) ? bmkData : [];
         historyEntries = Array.isArray(histData) ? histData : [];
-        chromeUserProfiles = userProfile || [];
+        // 用戶面具在 UsersDB；USER_PROFILE_KEY 是舊版的資料，只在讀不到面具時沿用
+        const masks = await UsersDB.getAll().catch(() => []);
+        chromeUserProfiles = masks.length ? masks : (Array.isArray(userProfile) ? userProfile : []);
         chromeWorldbookMounts = Array.isArray(worldbooks) ? worldbooks : [];
     } catch {
         bookmarks = [];
@@ -70,13 +73,14 @@ async function saveChromeData() {
             SettingsDB.set(WORLDBOOKS_KEY, chromeWorldbookMounts)
         ]);
     } catch (e) {
-        console.error('靽?Chrome?豢?憭望?:', e);
+        console.error('保存Chrome數據失敗:', e);
     }
 }
 
 async function loadCharProfiles() {
     try {
-        const chars = await SettingsDB.get('characters');
+        // 角色在 CharactersDB（舊版曾存在 SettingsDB 的 characters，現在沒有人寫入，讀那裡會永遠是空的）
+        const chars = await CharactersDB.getAll();
         charProfiles = Array.isArray(chars) ? chars : [];
     } catch {
         charProfiles = [];
@@ -105,6 +109,10 @@ async function getApiConfig() {
 }
 
 async function getUserConfig() {
+    // 優先用目前選的用戶面具（沒選就用第一個）；沒有面具才退回舊版設定
+    const picked = document.getElementById('chrome-user-select')?.value;
+    const mask = chromeUserProfiles.find(u => u?.name && u.name === picked) || chromeUserProfiles[0];
+    if (mask) return { name: mask.name || 'User', personality: mask.personality || '', background: mask.description || mask.background || '' };
     const settings = await APIClient.getSettings();
     return {
         name: settings.sx_user_name || 'User',
@@ -136,7 +144,7 @@ function renderBookmarks(container) {
     );
 
     if (filtered.length === 0) {
-        list.innerHTML = '<div class="chrome-wb-empty">撠?啣??貊惜</div>';
+        list.innerHTML = '<div class="chrome-wb-empty">尚未新增書籤</div>';
         return;
     }
 
@@ -147,10 +155,10 @@ function renderBookmarks(container) {
                 <span>${escapeHTML(b.name)}</span>
             </div>
             <div class="bookmark-actions">
-                <button class="icon-btn sm bookmark-open" data-url="${escapeHTML(b.url)}" title="??">
+                <button class="icon-btn sm bookmark-open" data-url="${escapeHTML(b.url)}" title="開啟">
                     <i class="fas fa-external-link-alt"></i>
                 </button>
-                <button class="icon-btn sm bookmark-delete" data-index="${i}" title="?芷">
+                <button class="icon-btn sm bookmark-delete" data-index="${i}" title="刪除">
                     <i class="fas fa-trash"></i>
                 </button>
             </div>
@@ -199,7 +207,7 @@ function saveBookmark(container) {
     const url = urlInput?.value?.trim();
 
     if (!name || !url) {
-        createToast('隢撓?亦雯蝡?蝔勗?蝬脣?', 'error');
+        createToast('請輸入網站名稱和網址', 'error');
         return;
     }
 
@@ -259,7 +267,7 @@ function openHistoryDetail(entry, container) {
         contentEl.innerHTML = `
             <div class="page-loading">
                 <div class="loading-spinner"></div>
-                <span>甇?頛?...</span>
+                <span>正在載入頁面...</span>
             </div>
         `;
     }
@@ -574,7 +582,7 @@ async function openIncognitoSite(site, container) {
 
     const char = charProfiles[currentCharIndex] || {};
     const charName = char.name || '角色';
-    const charId = char?.id || null;
+    const charId = char.id || null; // 少了這行時下面會 ReferenceError，畫面就一直停在「正在載入內容...」
 
     switchView('history', container);
     const historyList = container.querySelector('#history-list');
@@ -620,7 +628,7 @@ async function openIncognitoSite(site, container) {
         });
 
         const data = await response.json();
-        const content = data?.choices?.[0]?.message?.content || '無法載入內容';
+        const content = data?.choices?.[0]?.message?.content || '生成內容失敗';
 
         if (historyList) {
             historyList.innerHTML = `
@@ -676,9 +684,12 @@ function switchView(view, container) {
 
 function toggleMode(container) {
     const next = currentMode === 'normal' ? 'incognito' : 'normal';
+    // 無痕模式的內容是成人向：和酒館、約會等一樣，未滿 18 歲不開放
+    if (next === 'incognito' && !isAdult()) { createToast('無痕模式的內容僅限 18 歲以上', 'info'); return; }
     currentMode = next;
 
-    const appEl = container.querySelector('.chrome-mobile');
+    // container 本身就是 .chrome-mobile（用 querySelector 往下找會找不到，無痕模式的樣式就套不上）
+    const appEl = container.classList.contains('chrome-mobile') ? container : container.querySelector('.chrome-mobile');
     const modeBtn = container.querySelector('#mode-btn');
     const statusText = container.querySelector('#status-text');
     const hero = container.querySelector('#incognito-hero');
@@ -686,9 +697,9 @@ function toggleMode(container) {
     const incognitoGrid = container.querySelector('#incognito-quick-grid');
 
     if (appEl) appEl.dataset.mode = next;
-    if (modeBtn) modeBtn.textContent = next === 'incognito' ? '無痕' : '普通';
+    if (modeBtn) modeBtn.textContent = next === 'incognito' ? '一般' : '無痕';
     if (statusText) {
-        statusText.textContent = next === 'incognito' ? '' : '一般模式，已關閉無痕模式';
+        statusText.textContent = next === 'incognito' ? '' : '一般模式 • 已連線';
         statusText.hidden = next === 'incognito';
     }
     if (hero) hero.hidden = next !== 'incognito';
@@ -793,12 +804,12 @@ function bindEvents(container) {
     historyManualSave?.addEventListener('click', async () => {
         const query = historyManualQuery?.value.trim();
         if (!query) return;
-        const summary = historyManualSummary?.value.trim() || `搜尋關於 ${query} 的內容`;
+        const summary = historyManualSummary?.value.trim() || `搜尋了「${query}」相關資訊。`;
         const entry = {
             id: `history_${Date.now()}_${historyEntries.length}`,
-            title: `${query} ?臭?暻潘?`,
+            title: `${query} 是什麼？`,
             query,
-            time: '??',
+            time: '剛剛',
             summary,
             incognito: false,
             adultLevel: 'none'
@@ -879,17 +890,17 @@ async function renderChrome(params) {
     container.innerHTML = `
         <header class="topbar">
             <div class="top-left">
-                <button class="ghost-btn" id="home-back" title="餈?">
+                <button class="ghost-btn" id="home-back" title="返回">
                     <i class="fas fa-chevron-left"></i>
                 </button>
                 <div class="view-toggle" id="view-toggle">
-                    <button class="active" data-view="home">擐?</button>
-                    <button data-view="bookmarks">?貊惜</button>
+                    <button class="active" data-view="home">首頁</button>
+                    <button data-view="bookmarks">書籤</button>
                     <button data-view="history">歷史</button>
                 </div>
             </div>
             <div class="top-actions">
-                <button class="ghost-btn" id="mode-btn">?∠?</button>
+                <button class="ghost-btn" id="mode-btn">無痕</button>
                 <button class="avatar" id="profile-trigger"></button>
             </div>
         </header>
@@ -903,7 +914,7 @@ async function renderChrome(params) {
                 <div class="incognito-badge">
                     <i class="fas fa-user-secret"></i>
                 </div>
-                <div class="incognito-title">?∠?璅∪?</div>
+                <div class="incognito-title">無痕模式</div>
             </div>
 
             <div class="search-card">
@@ -935,14 +946,14 @@ async function renderChrome(params) {
 
         <div class="panel bookmarks-panel" data-panel="bookmarks" hidden>
             <div class="panel-header">
-                <h2 class="panel-title">?貊惜</h2>
+                <h2 class="panel-title">書籤</h2>
                 <button class="ghost-btn" id="add-bookmark-btn">
-                    <i class="fas fa-plus"></i> ?啣?
+                    <i class="fas fa-plus"></i> 新增
                 </button>
             </div>
             <div class="search-row">
                 <i class="fas fa-search"></i>
-                <input type="text" placeholder="???貊惜" id="bookmark-search">
+                <input type="text" placeholder="搜尋書籤" id="bookmark-search">
             </div>
             <div class="bookmark-list" id="bookmark-list"></div>
         </div>
@@ -952,11 +963,11 @@ async function renderChrome(params) {
                 <h2 class="panel-title">瀏覽歷史</h2>
             </div>
             <div class="history-controls">
-                <label>閫嚗?/label>
+                <label>角色：</label>
                 <select id="char-select">
                     ${charProfiles.map((char, i) => `
-                        <option value="${i}">${char.name || `閫 ${i + 1}`}</option>
-                    `).join('') || '<option value="">撠撱箇?閫</option>'}
+                        <option value="${i}">${char.name || `角色 ${i + 1}`}</option>
+                    `).join('') || '<option value="">尚未建立角色</option>'}
                 </select>
                 <button class="ghost-btn" id="history-refresh">
                     <i class="fas fa-sync-alt"></i>
@@ -968,7 +979,7 @@ async function renderChrome(params) {
         <div class="panel history-detail-panel" data-panel="history-detail" hidden>
             <div class="detail-nav">
                 <button class="back-btn" id="history-detail-back">
-                    <i class="fas fa-chevron-left"></i> 餈?
+                    <i class="fas fa-chevron-left"></i> 返回
                 </button>
             </div>
             <div class="detail-search-card">
@@ -996,21 +1007,21 @@ async function renderChrome(params) {
             <div class="history-modal-backdrop"></div>
             <div class="history-modal-card">
                 <div class="history-modal-header">
-                    <div class="history-modal-title">?啣???</div>
+                    <div class="history-modal-title">新增分頁</div>
                     <button class="icon-btn" id="history-modal-close">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
                 <div class="history-modal-actions">
-                    <button class="ghost-btn" id="history-generate-btn">AI ??</button>
-                    <button class="ghost-btn" id="history-manual-btn">??頛詨</button>
+                    <button class="ghost-btn" id="history-generate-btn">AI 生成</button>
+                    <button class="ghost-btn" id="history-manual-btn">手動輸入</button>
                 </div>
                 <div class="history-manual" id="history-manual" hidden>
-                    <label>???摮?/label>
-                    <input type="text" id="history-manual-query" placeholder="頛詨???摮?>
-                    <label>??隤芣?</label>
-                    <textarea id="history-manual-summary" rows="2" placeholder="蝪∠?膩"></textarea>
-                    <button class="ghost-btn primary" id="history-manual-save">?脣?</button>
+                    <label>搜尋關鍵字</label>
+                    <input type="text" id="history-manual-query" placeholder="輸入搜尋關鍵字">
+                    <label>摘要說明</label>
+                    <textarea id="history-manual-summary" rows="2" placeholder="簡短描述"></textarea>
+                    <button class="ghost-btn primary" id="history-manual-save">儲存</button>
                 </div>
             </div>
         </div>
@@ -1019,17 +1030,17 @@ async function renderChrome(params) {
             <div class="history-modal-backdrop"></div>
             <div class="history-modal-card">
                 <div class="history-modal-header">
-                    <div class="history-modal-title">?啣??貊惜</div>
+                    <div class="history-modal-title">新增書籤</div>
                     <button class="icon-btn" id="bookmark-modal-close">
                         <i class="fas fa-times"></i>
                     </button>
                 </div>
                 <div class="history-manual">
-                    <label>蝬脩??迂</label>
-                    <input type="text" id="bookmark-name" placeholder="蝬脩??迂">
-                    <label>蝬脣?</label>
+                    <label>網站名稱</label>
+                    <input type="text" id="bookmark-name" placeholder="網站名稱">
+                    <label>網址</label>
                     <input type="text" id="bookmark-url" placeholder="https://example.com">
-                    <button class="ghost-btn primary" id="bookmark-save">?脣?</button>
+                    <button class="ghost-btn primary" id="bookmark-save">儲存</button>
                 </div>
             </div>
         </div>
@@ -1037,38 +1048,38 @@ async function renderChrome(params) {
         <div class="profile-backdrop" id="profile-backdrop" hidden></div>
         <div class="profile-drawer" id="profile-drawer">
             <div class="profile-drawer-header">
-                <div class="profile-drawer-title">?犖閮剖?</div>
+                <div class="profile-drawer-title">個人設定</div>
                 <button class="icon-btn" id="profile-close">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             <div class="profile-drawer-body">
                 <div class="drawer-section">
-                    <div class="drawer-label">?豢??冽</div>
+                    <div class="drawer-label">選擇用戶</div>
                     <select class="drawer-select" id="chrome-user-select">
                         ${chromeUserProfiles.map((user, i) => `
                             <option value="${user?.name || `User ${i + 1}`}">${user?.name || `User ${i + 1}`}</option>
-                        `).join('') || '<option value="">撠撱箇??冽</option>'}
+                        `).join('') || '<option value="">尚未建立用戶</option>'}
                     </select>
                 </div>
                 <div class="drawer-section">
-                    <div class="drawer-label">銝??豢?頛?/div>
+                    <div class="drawer-label">世界書掛載</div>
                     <div class="chrome-wb-dropdown">
                         <button class="chrome-wb-toggle">
-                            <span>?豢?銝???/span>
+                            <span>選擇世界書</span>
                             <i class="fas fa-chevron-down"></i>
                         </button>
                         <div class="chrome-wb-menu" id="chrome-worldbook-list">
                             ${chromeWorldbookMounts.map((wb, i) => `
                                 <div class="chrome-wb-item">
-                                    <input type="checkbox" value="${wb?.name || `銝???${i + 1}`}">
-                                    <span>${wb?.name || `銝???${i + 1}`}</span>
+                                    <input type="checkbox" value="${wb?.name || `世界書 ${i + 1}`}">
+                                    <span>${wb?.name || `世界書 ${i + 1}`}</span>
                                 </div>
-                            `).join('') || '<div class="chrome-wb-empty">撠?舀?頛?銝???/div>'}
+                            `).join('') || '<div class="chrome-wb-empty">尚無可掛載的世界書</div>'}
                         </div>
                     </div>
                 </div>
-                <button class="ghost-btn primary" id="profile-apply">憟閮剖?</button>
+                <button class="ghost-btn primary" id="profile-apply">套用設定</button>
             </div>
         </div>
     `;

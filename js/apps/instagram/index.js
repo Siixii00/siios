@@ -220,7 +220,7 @@ async function generateAIPosts(container) {
         const characterId = getSelectedCharacterId(container);
         const context = await buildAppContext({ characterId });
         const systemPrompt = context.systemPrompt || '你是一位專業的社群媒體內容創作者，擅長根據角色設定和使用者背景創作符合人物性格的 Instagram 貼文。請使用繁體中文撰寫。輸出格式為 JSON: {"posts": [{"user": "用戶名", "location": "地點", "caption": "貼文說明", "likes": 隨機讚數}]}';
-        const prompt = `${context.systemPrompt}\n\n請生成 3 則 Instagram 貼文，要求：\n1. 符合角色性格和使用者設定\n2. 每則貼文說明 30-100 字\n3. 可以包含適當的表情符號和標標籤\n\n輸出 JSON 格式。`;
+        const prompt = `${context.systemPrompt}\n\n請生成 3 則 Instagram 貼文，要求：\n1. 符合角色性格和使用者設定\n2. 每則貼文說明 30-100 字\n3. 可以包含適當的表情符號和標籤\n\n只輸出 JSON：{"posts":[{"user":"帳號","location":"地點","caption":"貼文說明","likes":數字}]}`;
         const result = await callAPIWithMessages(systemPrompt, prompt, 0.85);
         let parsed = null;
         try { parsed = JSON.parse(result); } catch (e) { const match = result.match(/\{[\s\S]*\}/); if (match) parsed = JSON.parse(match[0]); }
@@ -263,7 +263,7 @@ async function generateAIStories(container) {
         const characters = await CharactersDB.getAll();
         const authors = ['User'].concat(characters.slice(0, 1).map(c => c.name));
         const systemPrompt = context.systemPrompt || '你是一位專業的社群媒體內容創作者，擅長創作 Instagram 限時動態。請使用繁體中文撰寫。輸出格式為 JSON: {"stories": [{"author": "作者名", "content": "限動內容"}]}';
-        const prompt = `${context.systemPrompt}\n\n請為以下作者各生成 1 則限時動態：${authors.join('、')}\n\n要求：\n1. 符合各角色性格和設定\n2. 簡短有趣、生活化\n3. 20-50 字\n\n輸出 JSON 格式。`;
+        const prompt = `${context.systemPrompt}\n\n請為以下作者各生成 1 則限時動態：${authors.join('、')}\n\n要求：\n1. 符合各角色性格和設定\n2. 簡短有趣、生活化\n3. 20-50 字\n\n只輸出 JSON：{"stories":[{"author":"作者名","content":"限動內容"}]}（author 要用上面列的名字）`;
         const result = await callAPIWithMessages(systemPrompt, prompt, 0.85);
         let parsed = null;
         try { parsed = JSON.parse(result); } catch (e) { const match = result.match(/\{[\s\S]*\}/); if (match) parsed = JSON.parse(match[0]); }
