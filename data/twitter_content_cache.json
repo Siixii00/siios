@@ -1,167 +1,167 @@
 {
   "metadata": {
-    "last_updated": "2026-10-21T22:09:54.858313",
+    "last_updated": "2026-10-22T01:18:30.548047",
     "total_items": 61
   },
   "content": {
     "tech": [
       {
+        "title": "mitmproxy adds --emudhra option",
+        "url": "https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b",
+        "source": "Hacker News",
+        "score": 127
+      },
+      {
+        "title": "Railway Security Disclosure",
+        "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+        "source": "Hacker News",
+        "score": 291
+      },
+      {
+        "title": "There isn't an easy exploit for this PHP vulnerability",
+        "url": "https://eliastaylor.com/noexploit/",
+        "source": "Hacker News",
+        "score": 118
+      },
+      {
         "title": "Today's PHP security release, and how we're strengthening security",
         "url": "https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/",
         "source": "Hacker News",
-        "score": 557
+        "score": 673
       },
       {
         "title": "GitLab Critical Patch Release",
         "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
         "source": "Hacker News",
-        "score": 155
-      },
-      {
-        "title": "No More Icons in Every Menu by Default",
-        "url": "https://blog.jim-nielsen.com/2026/icons-in-every-menu/",
-        "source": "Hacker News",
-        "score": 49
-      },
-      {
-        "title": "AWS rates PHP RCE as Important so Amazon Linux 2023 patch may take 20 days",
-        "url": "https://github.com/amazonlinux/amazon-linux-2023/issues/1148",
-        "source": "Hacker News",
-        "score": 49
-      },
-      {
-        "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
-        "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
-        "source": "Hacker News",
-        "score": 366
-      },
-      {
-        "title": "Why Windows 11 still ships with Windows 95's memory manager hidden inside it",
-        "url": "https://www.windowslatest.com/2026/10/19/why-windows-11-still-ships-with-windows-95s-memory-manager-hidden-inside-it/",
-        "source": "Hacker News",
-        "score": 95
-      },
-      {
-        "title": "Eight Bits of Trust: eMudhra's CA keys cracked in milliseconds",
-        "url": "https://scotthelme.co.uk/eight-bits-of-trust-emudhras-ca-keys-cracked-in-milliseconds/",
-        "source": "Hacker News",
-        "score": 778
+        "score": 242
       },
       {
         "title": "Google's Rust Style Guide",
         "url": "https://google.github.io/styleguide/rustguide.html",
         "source": "Hacker News",
-        "score": 114
+        "score": 197
       },
       {
-        "title": "Claude Duet",
-        "url": "https://claude.com/product/claude-duet",
+        "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+        "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
         "source": "Hacker News",
-        "score": 221
+        "score": 433
       },
       {
         "title": "Meta ordered to pay $25B penalty in New Mexico Cambridge Analytica case",
         "url": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
         "source": "Hacker News",
-        "score": 235
+        "score": 359
       },
       {
-        "title": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
-        "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
+        "title": "No More Icons in Every Menu by Default",
+        "url": "https://blog.jim-nielsen.com/2026/icons-in-every-menu/",
         "source": "Hacker News",
-        "score": 332
-      },
-      {
-        "title": "Patch the Planet: global response coordination as agents uncover vulnerabilities",
-        "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
-        "source": "Hacker News",
-        "score": 210
-      },
-      {
-        "title": "EA is shutting down BioWare",
-        "url": "https://www.theverge.com/games/1015647/ea-is-shutting-down-bioware",
-        "source": "Hacker News",
-        "score": 415
+        "score": 164
       },
       {
         "title": "Tiny possum and glider thought extinct for 6000 years found in remote West Papua",
         "url": "https://www.bbc.com/news/articles/cp814l80pw2o",
         "source": "Hacker News",
-        "score": 126
+        "score": 153
+      },
+      {
+        "title": "Why Windows 11 still ships with Windows 95's memory manager hidden inside it",
+        "url": "https://www.windowslatest.com/2026/10/19/why-windows-11-still-ships-with-windows-95s-memory-manager-hidden-inside-it/",
+        "source": "Hacker News",
+        "score": 130
+      },
+      {
+        "title": "Chain of Thought for Humans",
+        "url": "https://www.boristhebrave.com/2026/10/18/chain-of-thought-for-humans/",
+        "source": "Hacker News",
+        "score": 19
+      },
+      {
+        "title": "DuckDB 2.0.0 LTS “Cinnamon Teal”",
+        "url": "https://duckdb.org/2026/10/21/announcing-duckdb-200",
+        "source": "Hacker News",
+        "score": 359
       },
       {
         "title": "OpenAI models are coming to Google Cloud",
         "url": "https://openai.com/index/openai-models-google-cloud/",
         "source": "Hacker News",
-        "score": 192
+        "score": 234
+      },
+      {
+        "title": "Patch the Planet: global response coordination as agents uncover vulnerabilities",
+        "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities/",
+        "source": "Hacker News",
+        "score": 232
       }
     ],
     "ai": [
       {
+        "title": "Railway Security Disclosure",
+        "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
+        "source": "Hacker News AI",
+        "score": 291
+      },
+      {
         "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
         "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
         "source": "Hacker News AI",
-        "score": 366
+        "score": 433
       },
       {
-        "title": "Claude Duet",
-        "url": "https://claude.com/product/claude-duet",
+        "title": "Chain of Thought for Humans",
+        "url": "https://www.boristhebrave.com/2026/10/18/chain-of-thought-for-humans/",
         "source": "Hacker News AI",
-        "score": 221
+        "score": 19
       },
       {
         "title": "OpenAI models are coming to Google Cloud",
         "url": "https://openai.com/index/openai-models-google-cloud/",
         "source": "Hacker News AI",
-        "score": 192
+        "score": 234
+      },
+      {
+        "title": "Airbnb bans making guests do dishes and take out the trash",
+        "url": "https://www.theverge.com/tech/1015844/airbnb-chores-house-rules-update",
+        "source": "Hacker News AI",
+        "score": 59
+      },
+      {
+        "title": "Claude Duet",
+        "url": "https://claude.com/product/claude-duet",
+        "source": "Hacker News AI",
+        "score": 310
+      },
+      {
+        "title": "Qpack amplification attacks against HTTP/3 servers",
+        "url": "https://foxio.io/blog/header-accordions-qpack-amplification-attacks-against-http-3-servers",
+        "source": "Hacker News AI",
+        "score": 15
       },
       {
         "title": "Using thousands of AI agents to uncover new leads in biological data",
         "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
         "source": "Hacker News AI",
-        "score": 119
-      },
-      {
-        "title": "Google staff resign in backlash over its AI contracts with military",
-        "url": "https://www.bbc.com/news/articles/cmreyvepnv0po",
-        "source": "Hacker News AI",
-        "score": 75
+        "score": 133
       },
       {
         "title": "Claude Duet",
         "url": "https://claude.com/resources/articles/claude-duet",
         "source": "Hacker News AI",
-        "score": 26
+        "score": 58
       },
       {
-        "title": "Plex laid off the whole player team",
-        "url": "https://forums.plex.tv/t/2026-20-0-beta-ios-and-tvos-4k-dovi-hdr10-won-t-play-infinite-spinning-circle/943966?page=5",
+        "title": "Rails Is a JIT Compiler",
+        "url": "https://railsatscale.com/2026-10-21-rails-is-a-jit-compiler/",
         "source": "Hacker News AI",
-        "score": 100
+        "score": 7
       },
       {
-        "title": "Good type against all odds",
-        "url": "https://unsung.aresluna.org/good-type-against-all-odds/",
+        "title": "Show HN: Omnara – Open-Source Alternative to Claude Managed Agents",
+        "url": "https://github.com/omnara-ai/omnara",
         "source": "Hacker News AI",
-        "score": 194
-      },
-      {
-        "title": "AI agent fixed the bug, but what else did it change?",
-        "url": "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/",
-        "source": "Hacker News AI",
-        "score": 43
-      },
-      {
-        "title": "Toyota Releases Video of Wheelchair-Alternative Mobility Concepts in Action",
-        "url": "https://news.ycombinator.com/item?id=50187813",
-        "source": "Hacker News AI",
-        "score": 4
-      },
-      {
-        "title": "In Hilbert space, all things are quantumly possible",
-        "url": "https://www.quantamagazine.org/in-hilbert-space-all-things-are-quantumly-possible-20260826/",
-        "source": "Hacker News AI",
-        "score": 140
+        "score": 20
       }
     ],
     "news": [
@@ -277,6 +277,11 @@
     ],
     "gaming": [
       {
+        "title": "The 10 best alchemy cards in Magic: The Gathering, ranked",
+        "url": "https://www.polygon.com/best-alchemy-cards-magic-gathering-mgt/",
+        "source": "Polygon"
+      },
+      {
         "title": "Baldur’s Gate 3 Returns With New Official Sequel Series",
         "url": "https://www.polygon.com/baldurs-gate-3-sequel-series-hbo-streaming/",
         "source": "Polygon"
@@ -304,11 +309,6 @@
       {
         "title": "Does 'Clayface' Have a Post-Credits Scene? Here's Your Spoiler Free Answer",
         "url": "https://www.polygon.com/clayface-post-credits-scene-no-spoilers-guide/",
-        "source": "Polygon"
-      },
-      {
-        "title": "'Fallout 4' Is Officially Making A Comeback A Decade After Release",
-        "url": "https://www.polygon.com/fallout-4-dlc-expansion-fever-dreams-fathomless-command-overdrive-what-are/",
         "source": "Polygon"
       }
     ],
