@@ -1,4 +1,4 @@
-:host {
+.twitch-app {
     --twitch-purple: #9146ff;
     --twitch-purple-dark: #772ce8;
     --twitch-purple-light: #bf94ff;
@@ -21,6 +21,8 @@
     display: flex;
     flex-direction: column;
     height: var(--app-h, 100vh);
+    padding-top: calc(45px + env(safe-area-inset-top, 0px));
+    box-sizing: border-box;
     overflow: hidden;
     background: var(--bg-primary);
     color: var(--text-primary);
@@ -196,8 +198,7 @@
     overflow-y: auto;
     position: relative;
     z-index: 1;
-    padding-bottom: 60px;
-    margin-top: calc(44px + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(72px + env(safe-area-inset-bottom, 0px));
     padding-top: 16px;
 }
 
@@ -1436,5 +1437,15 @@
 }
 
 .twitch-nav-btn:hover {
+    color: var(--text-primary);
+}
+/* 頂部導覽列：深色底（預設的 iOS 導覽列是淺色，標題會看不見） */
+.twitch-header {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+.twitch-header .ios-btn,
+.twitch-header .ios-inline-title {
     color: var(--text-primary);
 }

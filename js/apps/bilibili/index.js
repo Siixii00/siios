@@ -1347,6 +1347,7 @@ async function renderPlayer(params) {
             { icon: 'more_horiz', onClick: () => {} }
         ]
     });
+    header.classList.add('bili-header');
     container.appendChild(header);
     
     const previewCard = createElement('div', 'bili-video-preview');
@@ -1499,6 +1500,7 @@ async function renderMessages() {
             }}
         ]
     });
+    header.classList.add('bili-header');
     container.appendChild(header);
     
     const tabsBar = createElement('nav', 'bili-tabs');
@@ -1603,6 +1605,7 @@ async function renderChat(params) {
         title: chatName,
         backPath: '/bilibili/messages/chats'
     });
+    header.classList.add('bili-header');
     container.appendChild(header);
     
     const messages = createElement('div', 'bili-chat-messages');
@@ -1687,6 +1690,7 @@ async function renderProfile() {
             { icon: 'settings', onClick: () => Router.navigate('/settings') }
         ]
     });
+    header.classList.add('bili-header');
     container.appendChild(header);
     
     const profile = createElement('div', 'bili-profile');

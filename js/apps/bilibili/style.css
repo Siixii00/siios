@@ -866,3 +866,11 @@
 body.desktop-mode .bili-video-list {
         grid-template-columns: repeat(2, minmax(140px, 1fr));
     }
+
+/* 下拉選單（角色選擇等）：沿用深色，不要出現白底 */
+.bili-app select {
+    background-color: var(--bili-card);
+    color: var(--bili-text);
+    border: 1px solid var(--bili-border) !important;
+    color-scheme: dark;
+}

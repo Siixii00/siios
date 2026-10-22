@@ -237,6 +237,7 @@ function createCharacterSelector() {
 
 function createStreamCard(stream, onClick) {
     const card = createElement('article', 'twitch-stream-card');
+    card.dataset.streamId = stream.id;
     
     const thumb = createElement('div', 'twitch-stream-thumb');
     thumb.style.background = stream.thumbGradient || generateThumbnail();
@@ -319,7 +320,6 @@ function createTwitchBottomNav() {
 
 async function generateLivestreams(count = 8) {
     const streams = [];
-    let aiTitled = false;
     const games = ['Just Chatting', 'League of Legends', 'Valorant', 'Minecraft', 'Apex Legends', 'Genshin Impact', 'Fortnite', 'GTA V'];
     
     for (let i = 0; i < count; i++) {
@@ -327,11 +327,6 @@ async function generateLivestreams(count = 8) {
         
         let title = char?.name ? `${char.name}的直播時間！` : `精彩直播 ${i + 1}`;
         
-        if (char && state.currentCharacterId === char.id && !aiTitled) {
-            aiTitled = true;
-            const aiTitle = await generateStreamTitle(char);
-            if (aiTitle) title = aiTitle;
-        }
         
         streams.push({
             id: `stream_${Date.now()}_${i}`,
@@ -345,6 +340,18 @@ async function generateLivestreams(count = 8) {
         });
     }
     
+    // AI 標題改成背景產生：先顯示預設標題，頁面不用等 API
+    const cur = state.characters.find(c => c.id === state.currentCharacterId);
+    if (cur && streams.length) {
+        const first = streams.find(st => st.characterId === cur.id) || streams[0];
+        generateStreamTitle(cur).then(t => {
+            if (!t) return;
+            first.title = t;
+            document.querySelectorAll('.twitch-stream-card').forEach(card => {
+                if (card.dataset.streamId === first.id) card.querySelector('.twitch-stream-title').textContent = t;
+            });
+        }).catch(() => {});
+    }
     return streams;
 }
 
@@ -422,6 +429,7 @@ async function renderStream(params) {
             { icon: 'more_horiz', onClick: () => {} }
         ]
     });
+    header.classList.add('twitch-header');
     container.appendChild(header);
     
     const player = createElement('div', 'twitch-player');
@@ -560,6 +568,7 @@ async function renderExplore() {
         title: '探索',
         backPath: '/twitch'
     });
+    header.classList.add('twitch-header');
     container.appendChild(header);
     
     const search = createElement('div', 'twitch-search-row');
@@ -601,6 +610,7 @@ async function renderFollowing() {
         title: '追隨',
         backPath: '/twitch'
     });
+    header.classList.add('twitch-header');
     container.appendChild(header);
     
     const main = createElement('main', 'twitch-main');
@@ -659,6 +669,7 @@ async function renderProfile() {
             { icon: 'settings', onClick: () => Router.navigate('/settings') }
         ]
     });
+    header.classList.add('twitch-header');
     container.appendChild(header);
     
     const profile = createElement('div', 'twitch-profile');
@@ -696,6 +707,7 @@ async function renderNotifications() {
         title: '通知',
         backPath: '/twitch'
     });
+    header.classList.add('twitch-header');
     container.appendChild(header);
     
     const main = createElement('main', 'twitch-main');

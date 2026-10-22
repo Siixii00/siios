@@ -79,6 +79,11 @@
     z-index: 1;
 }
 
+/* 標題置中時，右側有兩個以上按鈕也要靠右排在一起（否則第一個會被 space-between 推到中間，蓋住標題） */
+html:not([data-sx-ui="android"]) .ios-nav-bar-inner > .ios-inline-title + .ios-btn {
+    margin-left: auto;
+}
+
 .ios-inline-title {
     position: absolute;
     left: 50%;
