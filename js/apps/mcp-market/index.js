@@ -2,6 +2,7 @@ import Router from '../../router.js';
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { TOOLS_CATALOG, CATEGORIES } from './tools-catalog.js';
 import { generateZipContent, getToolSupport } from './code-templates.js';
+import { openDeployWizard } from './deploy-wizard.js';
 import { initDB } from '../../db.js';
 
 let selectedTools = new Set();
@@ -53,13 +54,6 @@ async function ensureCustomToolsStore() {
     }
 }
 
-function isMobileDevice() {
-    const ua = navigator.userAgent.toLowerCase();
-    const isMobileUA = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(ua);
-    const isSmallScreen = window.innerWidth < 768;
-    return isMobileUA || isSmallScreen;
-}
-
 async function renderMCPMarket() {
     const container = createElement('div', 'app-container bg-ios-bg');
 
@@ -104,25 +98,25 @@ async function renderMCPMarket() {
                 <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center">
                     <span class="text-xs font-medium text-gray-600">1</span>
                 </div>
-                <p class="text-xs text-gray-600 flex-1">選擇需要的工具，點擊「生成程式碼」</p>
+                <p class="text-xs text-gray-600 flex-1">選擇需要的工具，點「生成程式碼」</p>
             </div>
             <div class="flex items-start gap-2">
                 <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center">
                     <span class="text-xs font-medium text-gray-600">2</span>
                 </div>
-                <p class="text-xs text-gray-600 flex-1">下載生成的 Worker 程式碼</p>
+                <p class="text-xs text-gray-600 flex-1">依照畫面上的「三步驟」：複製程式碼、貼到 Cloudflare 網頁（免費）、貼上網址</p>
             </div>
             <div class="flex items-start gap-2">
                 <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center">
                     <span class="text-xs font-medium text-gray-600">3</span>
                 </div>
-                <p class="text-xs text-gray-600 flex-1">部署到 Cloudflare Workers（免費方案）</p>
+                <p class="text-xs text-gray-600 flex-1">按「測試並加入」，會自動連線並加進 MCP 設定</p>
             </div>
             <div class="flex items-start gap-2">
                 <div class="flex-shrink-0 w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center">
                     <span class="text-xs font-medium text-gray-600">4</span>
                 </div>
-                <p class="text-xs text-gray-600 flex-1">在設定中配置 Worker URL</p>
+                <p class="text-xs text-gray-600 flex-1">完成。角色在聊天時就會自己決定要不要用這些工具（全程不用寫程式、不用終端機）</p>
             </div>
         </div>
     `;
@@ -527,111 +521,16 @@ async function showGenerateDialog(container) {
     }
 
     const files = await generateZipContent(Array.from(selectedTools));
-    
-    if (isMobileDevice()) {
-        const overlay = createElement('div', 'fixed inset-0 bg-black/50 z-50 flex items-end');
-        const sheet = createElement('div', 'bg-ios-bg w-full rounded-t-lg');
-        
-        const header = createElement('div', 'flex items-center justify-between p-4 border-b border-gray-200');
-        header.appendChild(createElement('h2', 'text-lg font-bold', { textContent: '生成 Worker 程式碼' }));
-        const closeBtn = createElement('button', 'text-gray-500');
-        closeBtn.appendChild(createIcon('close'));
-        closeBtn.onclick = () => overlay.remove();
-        header.appendChild(closeBtn);
-        sheet.appendChild(header);
-        
-        const content = createElement('div', 'p-4 space-y-4');
-        
-        const summary = createElement('div', 'bg-purple-50 p-3 rounded-lg');
-        summary.innerHTML = `
-            <p class="text-sm text-purple-800 font-medium">已選擇 ${selectedTools.size} 個工具</p>
-            <p class="text-xs text-purple-600 mt-1">${Array.from(selectedTools).map(id => {
-                const tool = TOOLS_CATALOG.find(t => t.id === id);
-                return tool?.displayName;
-            }).join('、')}</p>
-        `;
-        content.appendChild(summary);
-        
-        const downloadBtn = createElement('button', 'ios-btn ios-btn-primary w-full');
-        downloadBtn.textContent = '下載 ZIP 檔案';
-        downloadBtn.onclick = () => {
-            downloadAllFiles(files);
-            overlay.remove();
-        };
-        content.appendChild(downloadBtn);
-        
-        const info = createElement('div', 'text-xs text-gray-500 text-center');
-        info.textContent = '下載後請在電腦上解壓縮並部署到 Cloudflare Workers';
-        content.appendChild(info);
-        
-        sheet.appendChild(content);
-        overlay.appendChild(sheet);
-        document.querySelector('.app-container').appendChild(overlay);
-    } else {
-        const overlay = createElement('div', 'fixed inset-0 bg-black/50 z-50 flex items-end');
-        const sheet = createElement('div', 'bg-ios-bg w-full rounded-t-lg max-h-[90vh] overflow-y-auto');
-        
-        const header = createElement('div', 'sticky top-0 bg-ios-bg p-4 border-b flex items-center justify-between z-10');
-        header.appendChild(createElement('h2', 'text-lg font-bold', { textContent: '生成 Worker 程式碼' }));
-        const closeBtn = createElement('button', 'text-gray-500');
-        closeBtn.appendChild(createIcon('close'));
-        closeBtn.onclick = () => overlay.remove();
-        header.appendChild(closeBtn);
-        sheet.appendChild(header);
-        
-        const content = createElement('div', 'p-4 space-y-4');
-        
-        const summary = createElement('div', 'bg-purple-50 p-3 rounded-lg');
-        summary.innerHTML = `
-            <p class="text-sm text-purple-800 font-medium">已選擇 ${selectedTools.size} 個工具</p>
-            <p class="text-xs text-purple-600 mt-1">${Array.from(selectedTools).map(id => {
-                const tool = TOOLS_CATALOG.find(t => t.id === id);
-                return tool?.displayName;
-            }).join('、')}</p>
-        `;
-        content.appendChild(summary);
-        
-        for (const [filename, code] of Object.entries(files)) {
-            const fileSection = createElement('div');
-            fileSection.appendChild(createElement('h3', 'font-semibold mb-2', { textContent: filename }));
-            
-            const codeBlock = createElement('pre', 'text-xs bg-gray-900 text-green-400 p-3 rounded-lg overflow-x-auto max-h-48');
-            codeBlock.textContent = code;
-            fileSection.appendChild(codeBlock);
-            
-            const copyBtn = createElement('button', 'text-xs text-purple-600 mt-1');
-            copyBtn.textContent = '複製程式碼';
-            copyBtn.onclick = () => {
-                navigator.clipboard.writeText(code);
-                createToast('已複製到剪貼簿', 'success');
-            };
-            fileSection.appendChild(copyBtn);
-            
-            content.appendChild(fileSection);
-        }
-        
-        const downloadBtn = createElement('button', 'ios-btn ios-btn-primary w-full mt-4');
-        downloadBtn.textContent = '下載所有檔案';
-        downloadBtn.onclick = () => downloadAllFiles(files);
-        content.appendChild(downloadBtn);
-        
-        const guideSection = createElement('div', 'bg-blue-50 p-3 rounded-lg mt-4');
-        guideSection.innerHTML = `
-            <h3 class="font-semibold text-blue-800 mb-2">部署步驟</h3>
-            <ol class="text-sm text-blue-700 space-y-1 list-decimal list-inside">
-                <li>解壓縮下載的 ZIP 檔</li>
-                <li>在終端機切換到該目錄：<code class="bg-blue-100 px-1">cd siios-mcp-worker</code></li>
-                <li>安裝依賴：<code class="bg-blue-100 px-1">npm install</code></li>
-                <li>登入 Cloudflare：<code class="bg-blue-100 px-1">wrangler login</code></li>
-                <li>部署：<code class="bg-blue-100 px-1">wrangler deploy</code></li>
-            </ol>
-        `;
-        content.appendChild(guideSection);
-        
-        sheet.appendChild(content);
-        overlay.appendChild(sheet);
-        document.querySelector('.app-container').appendChild(overlay);
-    }
+    const picked = Array.from(selectedTools).map(id => TOOLS_CATALOG.find(t => t.id === id)).filter(Boolean);
+    // 需要自己金鑰的工具：告訴使用者要在 Cloudflare 多新增哪些項目
+    const requires = picked.filter(t => !getToolSupport(t.id).keyless && t.requires?.length).map(t => `${t.displayName}：${t.requires.join('、')}`);
+    openDeployWizard({
+        files,
+        toolNames: picked.map(t => t.displayName),
+        requires,
+        parent: document.querySelector('.app-container'),
+        downloadZip: () => downloadAllFiles(files)
+    });
 }
 
 function downloadAllFiles(files) {
