@@ -101,7 +101,7 @@ export async function fetchYouTubeMeta(watchUrl) {
 
 const STYLE_ID = 'cw-style';
 const CSS = `
-.cw-panel{margin:12px 16px;padding:12px;border-radius:12px;background:var(--ios-card,#fff);border:1px solid rgba(128,128,128,.25);font-size:13px;color:inherit}
+.cw-panel{margin:12px 16px;padding:12px;border-radius:12px;background:rgba(128,128,128,.14);border:1px solid rgba(128,128,128,.25);font-size:13px;color:inherit}
 .cw-panel h4{margin:0 0 8px;font-size:14px;font-weight:600}
 .cw-row{display:flex;gap:8px;margin-bottom:8px;align-items:center}
 .cw-row>*{flex:1;min-width:0}
