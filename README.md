@@ -122,7 +122,21 @@ npx serve .                # 然後開 http://localhost:3000/siios/
 
 ## 部署各項服務
 
-所有服務都跑在**你自己的 Cloudflare 帳號**（免費方案即可）。共同的準備：
+所有服務都是**私人的：每個使用者部署自己的 Worker、用自己的金鑰**。程式碼裡沒有預設或共用的公用伺服器，沒填網址就不會連線；每個 Worker 都要金鑰才能呼叫（`MCP_API_KEY`、`SYNTH_TOKEN`、`ACCESS_KEY`），沒設金鑰時一律拒絕。PWA 的資料也不會送到作者的任何伺服器。
+
+**部署後要填在哪裡**
+
+| Worker | 填入位置 | 填什麼 |
+|---|---|---|
+| MCP 工具 | 設定 → MCP 工具整合（或神秘門精靈自動加入） | Worker 網址 + `MCP_API_KEY` |
+| 紫微斗數 | 設定 → MCP 工具整合 → 紫微斗數服務 | Worker 網址 + `MCP_API_KEY` |
+| 合成服務 | 設定 → 合成服務 | Worker 網址 + `SYNTH_TOKEN` |
+| Discord 機器人 | 設定 → Discord 整合 | Worker 網址 + 存取密鑰（`ACCESS_KEY`） |
+| Bilibili（選用） | 設定鍵 `bilibili_worker_url` | Worker 網址 |
+
+不想用指令的話，MCP 工具可以用神秘門的三步驟精靈（只需要瀏覽器）；Discord 在設定 → Discord 整合有圖文教學。
+
+共同的準備（用指令部署時）：
 
 ```bash
 npm install -g wrangler        # 或之後都用 npx wrangler

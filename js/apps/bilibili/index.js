@@ -163,70 +163,6 @@ async function checkBilibiliLogin() {
     return isLoggedIn === true;
 }
 
-async function syncBilibiliCookieToGitHub(cookie) {
-    try {
-        const token = await SettingsDB.get('github_token');
-        if (!token) {
-            console.log('沒有 GitHub token，跳過同步');
-            return false;
-        }
-        
-        const response = await fetch('https://api.github.com/repos/Siixii00/siios/contents/data/bilibili_cookie.json', {
-            method: 'PUT',
-            headers: {
-                'Authorization': `token ${token}`,
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                message: '更新 Bilibili Cookie',
-                content: btoa(JSON.stringify({
-                    cookie: cookie,
-                    updated_at: new Date().toISOString()
-                })),
-                branch: 'main'
-            })
-        });
-        
-        if (response.ok) {
-            console.log('✓ Cookie 已同步到 GitHub');
-            return true;
-        } else {
-            console.log('✗ 同步失敗:', response.status);
-        }
-    } catch (e) {
-        console.error('同步 Cookie 失敗:', e);
-    }
-    return false;
-}
-
-async function loadBilibiliCookieFromGitHub() {
-    try {
-        const token = await SettingsDB.get('github_token');
-        if (!token) return null;
-        
-        const response = await fetch('https://api.github.com/repos/Siixii00/siios/contents/data/bilibili_cookie.json', {
-            headers: {
-                'Authorization': `token ${token}`,
-            }
-        });
-        
-        if (response.ok) {
-            const data = await response.json();
-            const content = JSON.parse(atob(data.content));
-            
-            if (content.cookie) {
-                await SettingsDB.set('bilibili_cookie', content.cookie);
-                await setBilibiliLoginStatus(true);
-                console.log('✓ 已從 GitHub 載入 Cookie');
-                return content.cookie;
-            }
-        }
-    } catch (e) {
-        console.log('從 GitHub 載入 Cookie 失敗:', e);
-    }
-    return null;
-}
-
 async function setBilibiliLoginStatus(status) {
     await SettingsDB.set('bilibili_logged_in', status);
 }
@@ -299,8 +235,6 @@ function showManualCookieInput(instructions) {
         await SettingsDB.set('bilibili_cookie', cookie);
         await setBilibiliLoginStatus(true);
         
-        await syncBilibiliCookieToGitHub(cookie);
-        
         modal.remove();
         createToast('✓ 已保存 Cookie');
         
@@ -338,8 +272,6 @@ function showQRCodeModal(qrUrl, qrcodeKey) {
                 // 保存 Cookie
                 await SettingsDB.set('bilibili_cookie', data.cookie);
                 await setBilibiliLoginStatus(true);
-                
-                await syncBilibiliCookieToGitHub(data.cookie);
                 
                 modal.remove();
                 createToast('✓ 登入成功！正在獲取推薦內容...');
@@ -499,8 +431,6 @@ function showLoginPrompt() {
             
             await SettingsDB.set('bilibili_cookie', cookie);
             await setBilibiliLoginStatus(true);
-            
-            await syncBilibiliCookieToGitHub(cookie);
             
             modal.remove();
             createToast('✓ 已保存 Cookie');
