@@ -5,7 +5,7 @@ compatibility_date = "2024-01-01"
 [[d1_databases]]
 binding = "DB"
 database_name = "siios-discord-db"
-database_id = "4decb0c1-d4df-4dfb-8176-00b74fc8a8a7"
+database_id = "<你的 D1 database_id>"
 
 [vars]
 AI_API_URL = "https://api.openai.com"

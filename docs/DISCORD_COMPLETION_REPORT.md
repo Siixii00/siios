@@ -141,7 +141,7 @@ PWA → 查看同步的對話歷史
 ## 文件結構
 
 ```
-E:\new\siios\
+siios/
 ├── js\apps\
 │   ├── mcp-market\
 │   │   ├── tools-catalog.js      ✅ 添加 Discord 工具

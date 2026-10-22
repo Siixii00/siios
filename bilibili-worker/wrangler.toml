@@ -6,4 +6,4 @@ compatibility_date = "2024-09-01"
 # 已建立（npx wrangler kv namespace create BILIBILI_KV），id 如下
 [[kv_namespaces]]
 binding = "BILIBILI_KV"
-id = "ccd17d32598c4c42983efe7336dc423f"
+id = "<你的 KV namespace id>"

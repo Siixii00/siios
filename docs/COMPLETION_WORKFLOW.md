@@ -112,7 +112,7 @@
 | 階段 3：記憶系統 3a/3b | ✅ 已驗證 | 用模擬 embedding 端點；3c Turso 同步：`js/` 內沒有任何對應用戶端，屬未實作且未列入需求 |
 | 階段 4：群聊 | ✅ 實測 | 2 個角色的群組：按「生成回應」後兩人各自回覆、名稱正確（`Promise.allSettled`，單一失敗不影響其他） |
 | 階段 4：聊天選單／健康 | ✅ 已驗證 | 用藥、經期、心情已接上 App 內建工具與健康 app |
-| 階段 5：MCP Worker 部署 | ✅ 已部署並實測 | `https://siios-mcp-worker.yaninlin.workers.dev`，17 項真實網址測試全過 |
+| 階段 5：MCP Worker 部署 | ✅ 已部署並實測 | `https://siios-mcp-worker.<你的子網域>.workers.dev`，17 項真實網址測試全過 |
 | 階段 5：Bilibili 播放、紫微 MCP、Discord | ⏸ 未驗證 | 需要外部帳號／服務 |
 | 階段 6：刷新保護 | ✅ 實測 | 10-19 逐一載入 78 條無參數路由，皆能渲染、無主控台錯誤 |
 | 階段 6：自動化測試 | 🟡 部分 | 僅 `mcp-worker/test`（`npm test`，5 項離線測試）；其餘仍是手動 HTML 頁面 |
@@ -156,7 +156,7 @@ Code review（`340bf4c~1..HEAD`）找到並修正：
 - **Notion 同步（個人 Wiki）**：用 Notion 的真實 API 確認原本的寫法有 bug——更新頁面與附加區塊必須是 `PATCH`，原本送 `POST` 會得到 `400 invalid_request_url`，所以「新增頁面能成功、內容區塊寫不進去、既有頁面更新不了」。已修正，並補上：單次最多 100 區塊與單一文字最多 2000 字的分批、標題欄位名稱不是 `Name` 時的處理、缺少 `WikiId` 欄位時自動建立、拉取的區塊分頁、較清楚的錯誤訊息（Token 無效、沒把 Integration 加入資料庫），以及區塊太多時改成封存重建（逐一刪除受限於每秒約 3 次請求）。沒有真實 Notion 帳號可用，所以是用一個照 Notion 規則嚴格把關的模擬伺服器驗證（新增、更新、429 重試、拉取含分頁、區塊型別與待辦勾選），錯誤訊息則用真實 API 驗證；**尚未用真實帳號跑過**。
 - **GitHub Actions**：`data/` 內的 Bilibili 與 Twitter 快取每天都有「自動更新」commit，運作正常。
 - **Discord 整合**：需要你自己的 Bot Token、Application ID 與 D1 資料庫，無法代為驗證；已新增 `discord-worker/wrangler.toml`（指向 `scripts/discord-bot-worker.js`），之後在該資料夾執行 `npx wrangler deploy --keep-vars` 即可部署，不必再手動貼上；排程與環境變數維持 Cloudflare 上既有的設定。
-- **合成服務 Worker（`synth-worker/`）**：先前只用模擬伺服器測過、從未部署。已部署到 `https://siios-synth-worker.yaninlin.workers.dev`（`SYNTH_TOKEN` 用隨機金鑰，存在 Cloudflare secret，沒有寫進 repo）。實測：未帶或帶錯 Token 回 401、`/health` 回報 Workers AI 已綁定。**實際生成（圖片、語音）尚未驗證**——當天的 Workers AI 免費額度已被產生農場素材用完（回 `quota`，Worker 的錯誤處理正確），UTC 午夜（台灣早上 8 點）重置後再測。
+- **合成服務 Worker（`synth-worker/`）**：先前只用模擬伺服器測過、從未部署。已部署到 `https://siios-synth-worker.<你的子網域>.workers.dev`（`SYNTH_TOKEN` 用隨機金鑰，存在 Cloudflare secret，沒有寫進 repo）。實測：未帶或帶錯 Token 回 401、`/health` 回報 Workers AI 已綁定。**實際生成（圖片、語音）尚未驗證**——當天的 Workers AI 免費額度已被產生農場素材用完（回 `quota`，Worker 的錯誤處理正確），UTC 午夜（台灣早上 8 點）重置後再測。
 
 ### 2026-10-21 回應格式／字數切換沒有跟著變
 - **聊天室原因**：（1）格式指示只放在系統提示詞最前面，離輸出很遠，對話歷史裡舊格式的回覆影響更大，模型就沿用舊格式；（2）沒選過模式時，介面顯示「多句」但實際沒有任何格式提示（預設不一致）；（3）輸出長度上限只看上下文大小，與模式無關；（4）自我檢查沒看格式與長度。
@@ -172,7 +172,7 @@ Code review（`340bf4c~1..HEAD`）找到並修正：
 - **思考過程（COT）**：Worker 沒有任何處理，模型把 `<think>…</think>` 一起吐出來就原樣送上 Discord。現在程式碼會去掉各種思考標籤（含只有結尾標籤、思考到一半被截斷的情況），提示詞也明確禁止；若整段都是思考則回報錯誤而不是送出空訊息。
 - 重新部署後需再開一次 `/discord/register-commands`，`/clear` 的選項才會更新。
 
-- 2026-10-21 已用 wrangler 把最新版部署到 `siios-discord-bot`（https://siios-discord-bot.yaninlin.workers.dev），並重新註冊斜線指令；`/discord/ping`、`/keepalive` 正常。
+- 2026-10-21 已用 wrangler 把最新版部署到 `siios-discord-bot`（https://siios-discord-bot.<你的子網域>.workers.dev），並重新註冊斜線指令；`/discord/ping`、`/keepalive` 正常。
 
 ### 2026-10-21 備份相容性與世界書匯入
 - **備份相容性檢查**：這輪改動沒有動到備份格式（只有還原時略過 `user_birthdate`）。新功能（Facebook、農場、投資、酒吧、宅家）的資料都存在 `settings`，會自然隨備份匯出與還原。實測：匯出含新鍵的備份、還原「舊格式、沒有任何新鍵」的備份、還原剛匯出的完整備份，都沒有錯誤，生日也沒被覆蓋。順手修掉 `backup-manager.js` 檔首被我重複加上的 BOM。

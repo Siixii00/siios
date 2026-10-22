@@ -105,7 +105,7 @@ pip install requests
 
 **或直接運行 Python:**
 ```bash
-cd C:\Users\新崛江商旅\Desktop\家蓁\siios
+cd <專案資料夾>
 python scripts\update_bilibili.py
 ```
 
@@ -135,7 +135,7 @@ data/bilibili_videos.json
 4. 操作：啟動程序
    - 程序：`python.exe`
    - 參數：`scripts\update_bilibili.py`
-   - 起始位置：`C:\Users\新崛江商旅\Desktop\家蓁\siios`
+   - 起始位置：`<專案資料夾>`
 
 ### Linux/Mac crontab
 
