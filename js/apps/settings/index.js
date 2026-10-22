@@ -52,6 +52,13 @@ async function renderSettings() {
 
     const cards = [
         {
+            icon: 'help',
+            iconBg: 'bg-sky-500',
+            title: '使用說明',
+            desc: '快速開始、每個 App 的用法、常見問題',
+            path: '/help'
+        },
+        {
             icon: 'smart_toy',
             iconBg: 'bg-purple-500',
             title: 'Char 設定',
