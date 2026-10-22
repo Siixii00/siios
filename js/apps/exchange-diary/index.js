@@ -1,6 +1,7 @@
 import Router from '../../router.js';
 import { createElement } from '../../components.js';
 import { SettingsDB } from '../../db.js';
+import APIClient from '../../api.js';
 import { compressImage } from '../../utils/image.js';
 import { escapeHtml, debounce } from '../../utils/html.js';
 
@@ -363,6 +364,7 @@ function openEditor(container, dateStr, replyTo = null) {
         <button class="diary-toolbar-btn" data-format="italic" title="斜體"><i>I</i></button>
         <button class="diary-toolbar-btn" data-format="strike" title="刪除線"><s>S</s></button>
         <button class="diary-toolbar-btn" data-format="image" title="圖片">🖼</button>
+        <button class="diary-toolbar-btn" data-format="ai" title="AI 代筆">✨</button>
       </div>
     </div>
   `;
@@ -399,6 +401,17 @@ function openEditor(container, dateStr, replyTo = null) {
           }
         };
         input.click();
+      } else if (fmt === 'ai') {
+        btn.disabled = true;
+        btn.textContent = '…';
+        const mood = MOOD_OPTIONS.find(m => m.id === activeMood)?.label || '';
+        const prompt = `你是交換日記裡名叫「${writer.name}」的作者。請以第一人稱寫一篇約 100～200 字的日記，心情：${mood}。` +
+          (replyEntry ? `這篇是回覆對方寫的日記：「${String(replyEntry.content).replace(/<[^>]+>/g, '').slice(0, 300)}」。` : '') +
+          '只輸出日記內文，不要標題或說明。';
+        APIClient.complete([{ role: 'user', content: prompt }], { temperature: 0.9, maxTokens: 600 })
+          .then(text => { textarea.value = (textarea.value ? textarea.value + '\n' : '') + text.trim(); })
+          .catch(err => alert('AI 代筆失敗：' + err.message))
+          .finally(() => { btn.disabled = false; btn.textContent = '✨'; });
       } else {
         const start = textarea.selectionStart;
         const end = textarea.selectionEnd;
