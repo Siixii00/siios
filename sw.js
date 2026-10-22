@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sxios-v146';
+const CACHE_NAME = 'sxios-v147';
 
 // 外部資源（資料庫函式庫、圖示與字型）也要進快取：離線時沒有它們，App 連啟動都不行（idb 是 db.js 的 ES 模組），圖示也會變成一串英文字。
 const CDN_HOSTS = ['cdn.jsdelivr.net', 'cdnjs.cloudflare.com', 'fonts.googleapis.com', 'fonts.gstatic.com'];
@@ -13,7 +13,6 @@ const CDN_PRECACHE = [
 const APP_ASSETS = [
   '/siios/js/activity-api-handler.js',
   '/siios/js/activity-interceptor.js',
-  '/siios/js/activity-router.js',
   '/siios/js/api/activity-sync.js',
   '/siios/js/api.js',
   '/siios/js/app.js',
@@ -60,7 +59,6 @@ const APP_ASSETS = [
   '/siios/js/apps/chats/shop.js',
   '/siios/js/apps/chats/style.css',
   '/siios/js/apps/chrome/index.js',
-  '/siios/js/apps/chrome/index_new.js',
   '/siios/js/apps/chrome/style.css',
   '/siios/js/apps/daily-recipe/index.js',
   '/siios/js/apps/daily-recipe/style.css',
@@ -114,7 +112,6 @@ const APP_ASSETS = [
   '/siios/js/apps/memory/index.js',
   '/siios/js/apps/memory/style.css',
   '/siios/js/apps/music/index.js',
-  '/siios/js/apps/music/index_new.js',
   '/siios/js/apps/music/style.css',
   '/siios/js/apps/passkey/index.js',
   '/siios/js/apps/passkey/style.css',
@@ -292,7 +289,6 @@ const STATIC_ASSETS = [
   '/siios/js/debug-logger.js',
   '/siios/js/scroll-handler.js',
   '/siios/js/activity-interceptor.js',
-  '/siios/js/activity-router.js',
   '/siios/js/apps/registry.js',
   '/siios/js/apps/chats/index.js',
   '/siios/js/apps/chats/chat.js',

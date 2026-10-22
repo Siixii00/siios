@@ -192,25 +192,6 @@ function getSelectedCharacterId(container) {
     return selector ? selector.value : null;
 }
 
-async function generateCommentReply(container, post, commentText) {
-    const characterId = getSelectedCharacterId(container);
-    const context = await buildAppContext({ characterId });
-    const systemPrompt = context.systemPrompt || '你是一位專業的社群媒體使用者，擅長撰寫評論回覆。請使用繁體中文撰寫。輸出格式為 JSON: {"reply": "回覆內容"}';
-    const prompt = `${context.systemPrompt}\n\n針對以下貼文和評論生成一則回覆：\n\n貼文: ${post.caption}\n評論: ${commentText}\n\n要求：\n1. 符合角色性格\n2. 簡短自然、口語化\n3. 10-30 字\n\n輸出 JSON 格式。`;
-    // 在生成回覆範例時寫入記憶
-    if (typeof saveInteractionMemory === 'function') {
-        try {
-            const reply = parsed?.reply || '';
-            saveInteractionMemory({ type: 'commentReply', postId: post.id, reply, timestamp: Date.now() });
-        } catch (e) {
-            console.warn('[Instagram] 互動寫入失敗', e);
-        }
-    }
-    let parsed = null;
-    try { parsed = JSON.parse(result); } catch (e) { const match = result.match(/\{[\s\S]*\}/); if (match) parsed = JSON.parse(match[0]); }
-    return parsed?.reply || '';
-}
-
 async function generateAIPosts(container) {
     if (isGeneratingPosts) { createToast('正在生成中，請稍候...'); return; }
     isGeneratingPosts = true;

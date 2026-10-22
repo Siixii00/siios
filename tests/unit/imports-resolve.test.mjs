@@ -5,8 +5,7 @@ import { join, dirname, resolve } from 'node:path';
 
 const root = resolve(new URL('../../js', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'));
 
-// activity-router.js 沒有任何地方引用，且指向不存在的 api/ 資料夾（既有的死碼，另案處理）
-const KNOWN_DEAD = new Set(['activity-router.js']);
+const KNOWN_DEAD = new Set();
 
 function walk(dir) {
     return readdirSync(dir).flatMap(n => {
