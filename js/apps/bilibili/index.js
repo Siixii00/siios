@@ -2,6 +2,7 @@
 import { createElement, createIcon, createIOSNavBar, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
+import { extractArray } from '../../core/json-extract.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { mountCoWatchPanel } from '../../core/co-watch.js';
@@ -862,6 +863,72 @@ async function generateVideoRecommendations(tab, characterId = null) {
     return getPresetVideos();
 }
 
+// 搜尋影片：先找本地的影片資料（五個分類的 JSON，都是真實的影片），找不到再請 AI 依關鍵字生成幾部
+async function searchBilibiliVideos(keyword) {
+    const q = String(keyword || '').trim().toLowerCase();
+    if (!q) return [];
+    const files = ['bilibili_videos.json', 'bilibili_anime.json', 'bilibili_live.json', 'bilibili_hot.json', 'bilibili_games.json'];
+    const seen = new Set();
+    const found = [];
+    for (const f of files) {
+        try {
+            const res = await fetch(`/siios/data/${f}`);
+            if (!res.ok) continue;
+            const data = await res.json();
+            for (const v of data.videos || []) {
+                const hay = [v.title, v.tag, v.owner?.name || v.owner].filter(Boolean).join(' ').toLowerCase();
+                const key = v.bvid || v.title;
+                if (hay.includes(q) && !seen.has(key)) {
+                    seen.add(key);
+                    found.push({
+                        id: v.bvid || `video_${Date.now()}_${found.length}`,
+                        title: v.title || '未命名影片',
+                        tag: v.tag || '影片',
+                        views: formatViewCount(v.views),
+                        danmu: formatDanmuCount(v.danmu),
+                        thumbGradient: v.cover ? `url(${v.cover})` : generateThumbnail(),
+                        url: v.bvid ? `https://www.bilibili.com/video/${v.bvid}` : '',
+                        owner: v.owner,
+                        duration: v.duration,
+                        cover: v.cover
+                    });
+                }
+            }
+        } catch (_) { /* 這個分類讀不到就略過 */ }
+    }
+    if (found.length) return found.slice(0, 20);
+
+    // 本地沒有：請 AI 依關鍵字編幾部（沒有網址，只能看不能播）
+    const settings = await SettingsDB.getAll();
+    if (!settings.api_url || !settings.api_key) return [];
+    try {
+        const response = await fetch(`${settings.api_url}/v1/chat/completions`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${settings.api_key}` },
+            body: JSON.stringify({
+                model: settings.model || 'gpt-3.5-turbo',
+                messages: [
+                    { role: 'system', content: '你是影片搜尋系統。請依關鍵字編出 6 部相關的影片資料，使用繁體中文。只輸出 JSON 陣列，不要其他文字：[{"title":"影片標題","tag":"分類標籤","views":"播放量","danmu":"彈幕數"}]' },
+                    { role: 'user', content: `搜尋關鍵字：${keyword}` }
+                ],
+                temperature: 0.8,
+                max_tokens: 800
+            })
+        });
+        if (!response.ok) return [];
+        const data = await response.json();
+        return extractArray(data.choices?.[0]?.message?.content).filter(v => v && v.title).map((v, i) => ({
+            id: `video_${Date.now()}_${i}`,
+            title: v.title,
+            tag: v.tag || '影片',
+            views: v.views || randomViews(),
+            danmu: v.danmu || randomDanmu(),
+            thumbGradient: generateThumbnail(),
+            url: ''
+        }));
+    } catch (_) { return []; }
+}
+
 async function fetchWithLogin() {
     try {
         const savedCookie = await SettingsDB.get('bilibili_cookie');
@@ -1531,7 +1598,7 @@ async function renderMessages() {
             items = messagesData.notifications || generateNotifications(8);
             break;
         case 'chats':
-            items = messagesData.chats || generateChatUsers(6);
+            items = messagesData.chats || [];
             break;
         case 'system':
             items = messagesData.system || generateSystemNotifications(5);

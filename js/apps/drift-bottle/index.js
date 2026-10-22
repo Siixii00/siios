@@ -2,6 +2,7 @@
 import { createElement } from '../../components.js';
 import { CharactersDB, SettingsDB } from '../../db.js';
 import APIClient from '../../api.js';
+import { extractJson } from '../../core/json-extract.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
 
@@ -78,7 +79,8 @@ async function generateDivinationReading(cardName, isUpright, characterId) {
     const content = data.choices?.[0]?.message?.content;
     
     if (content) {
-      const parsed = JSON.parse(content);
+      // 模型常用 ``` 包起來或前後加說明，用寬鬆的方式取出 JSON；取不到就當作整段文字是建議
+      const parsed = extractJson(content) || { advice: content.trim().slice(0, 200) };
       return {
         meaning: parsed.meaning || (isUpright ? '能量順暢' : '能量受阻'),
         advice: parsed.advice || (isUpright ? '順勢而為。' : '反思內在障礙。')

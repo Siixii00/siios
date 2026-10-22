@@ -94,6 +94,14 @@ async function getUserConfig() {
     return { name, personality };
 }
 
+// App 的 API 位址是不含 /v1 的網址（其他地方都接 /v1/chat/completions）。
+// 這裡原本少了 /v1，請求會打到不存在的路徑，番茄鐘的鼓勵與聊天就永遠只能用預設的罐頭話
+function chatEndpoint(url) {
+    const u = String(url).replace(/\/+$/, '');
+    if (u.endsWith('/chat/completions')) return u;
+    return u.endsWith('/v1') ? u + '/chat/completions' : u + '/v1/chat/completions';
+}
+
 async function getApiConfig() {
     const apiUrl = await SettingsDB.get('api_url');
     const apiKey = await SettingsDB.get('api_key');
@@ -179,9 +187,7 @@ async function generateAIEncouragement(charConfig, userConfig, phase, elapsedMin
     }
 
     try {
-        const endpoint = apiConfig.url.endsWith('/chat/completions')
-            ? apiConfig.url
-            : `${apiConfig.url.replace(/\/$/, '')}/chat/completions`;
+        const endpoint = chatEndpoint(apiConfig.url);
 
         const headers = { 'Content-Type': 'application/json' };
         if (apiConfig.key) {
@@ -580,9 +586,7 @@ async function renderPomodoro() {
 輸出 JSON: {"message": "回應內容"}`;
 
         try {
-            const endpoint = apiConfig.url.endsWith('/chat/completions')
-                ? apiConfig.url
-                : `${apiConfig.url.replace(/\/$/, '')}/chat/completions`;
+            const endpoint = chatEndpoint(apiConfig.url);
 
             const headers = { 'Content-Type': 'application/json' };
             if (apiConfig.key) headers.Authorization = `Bearer ${apiConfig.key}`;

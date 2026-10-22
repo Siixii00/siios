@@ -82,9 +82,11 @@ function getRecordsByType(type) {
 }
 
 function getRecordsByCharacter(charId) {
+    // 角色本人的頁面排最前面，聊天紀錄依序號排（原本寫成 r 而不是 a／b，records 超過一筆就會丟 ReferenceError）
     return records.filter(r => r.character_id === charId).sort((a, b) => {
-        if (r.page_type === 'character') return -1;
-        if (r.page_type === 'chat-log') return (a.chat_log_index || 0) - (b.chat_log_index || 0);
+        const ac = a.page_type === 'character', bc = b.page_type === 'character';
+        if (ac !== bc) return ac ? -1 : 1;
+        if (a.page_type === 'chat-log' && b.page_type === 'chat-log') return (a.chat_log_index || 0) - (b.chat_log_index || 0);
         return 0;
     });
 }

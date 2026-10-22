@@ -4,6 +4,7 @@ import { saveInteractionMemory } from '../../core/memory-saver.js';
 import { createElement, createIcon, createToast } from '../../components.js';
 import { SettingsDB, CharactersDB } from '../../db.js';
 import APIClient from '../../api.js';
+import { extractJson } from '../../core/json-extract.js';
 import { askConfirm } from '../../core/dialogs.js';
 
 const ratingMap = {
@@ -1099,12 +1100,10 @@ ${charInfo ? `【角色詳細設定】\n${charInfo}\n` : ''}
             const data = await response.json();
             const result = data.choices?.[0]?.message?.content || '';
 
-            let parsed = null;
-            try {
-                parsed = JSON.parse(result);
-            } catch {
-                const match = result.match(/\{[\s\S]*\}/);
-                if (match) parsed = JSON.parse(match[0]);
+            // 用寬鬆的方式取 JSON（``` 圍欄、前後說明）；模型沒照格式、直接寫了一篇文章時，整段當作正文，不要整篇丟掉
+            let parsed = extractJson(result);
+            if ((!parsed || typeof parsed !== 'object' || !parsed.content) && result.trim().length > 200) {
+                parsed = { content: result.replace(/```[a-z]*\n?|```/g, '').trim() };
             }
 
             if (parsed && parsed.content) {

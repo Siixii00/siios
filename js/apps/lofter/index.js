@@ -460,7 +460,7 @@ async function renderFeed(feed) {
     
     if (posts.length === 0) {
         feed.innerHTML = '';
-        const empty = createEmptyState('article', '尚無文章', '開始探索同人文創作');
+        const empty = createEmptyState('article', '尚無文章', '點右上角「發佈」，選好 CP 後按「生成同人文」，文章就會出現在這裡');
         feed.appendChild(empty);
         return;
     }

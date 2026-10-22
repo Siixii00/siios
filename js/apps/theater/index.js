@@ -1,6 +1,7 @@
 ﻿import Router from '../../router.js';
 import { createElement, createToast } from '../../components.js';
 import APIClient from '../../api.js';
+import { extractJson } from '../../core/json-extract.js';
 import { CharactersDB, SettingsDB } from '../../db.js';
 import { buildAppContext } from '../../core/app-context-builder.js';
 import { saveInteractionMemory } from '../../core/memory-saver.js';
@@ -106,12 +107,11 @@ async function generateScript(character) {
       throw new Error('API 未返回內容');
     }
     
-    const jsonMatch = content.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) {
+    // 劇本的 html 裡常有引號與大括號：用能處理字串的方式取出 JSON，而不是貪婪比對第一個到最後一個大括號
+    const result = extractJson(content);
+    if (!result || typeof result !== 'object' || Array.isArray(result)) {
       throw new Error('無法解析生成內容');
     }
-    
-    const result = JSON.parse(jsonMatch[0]);
     return {
       title: result.title || '未命名劇目',
       desc: result.desc || '暫無描述',

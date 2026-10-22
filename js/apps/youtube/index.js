@@ -642,6 +642,7 @@ function renderCharWatchHistory(container) {
 }
 
 async function openPlayerPage(container, video) {
+    const characters = await loadCharacters(); // 下面「換角色」的回呼要用（原本沒有宣告，一換角色就丟 ReferenceError）
     pendingVideoData = video;
     container.querySelector('.yt-main')?.setAttribute('hidden', '');
     container.querySelector('.yt-player-page')?.removeAttribute('hidden');
