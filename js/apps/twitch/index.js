@@ -319,6 +319,7 @@ function createTwitchBottomNav() {
 
 async function generateLivestreams(count = 8) {
     const streams = [];
+    let aiTitled = false;
     const games = ['Just Chatting', 'League of Legends', 'Valorant', 'Minecraft', 'Apex Legends', 'Genshin Impact', 'Fortnite', 'GTA V'];
     
     for (let i = 0; i < count; i++) {
@@ -326,7 +327,8 @@ async function generateLivestreams(count = 8) {
         
         let title = char?.name ? `${char.name}的直播時間！` : `精彩直播 ${i + 1}`;
         
-        if (char && state.currentCharacterId === char.id) {
+        if (char && state.currentCharacterId === char.id && !aiTitled) {
+            aiTitled = true;
             const aiTitle = await generateStreamTitle(char);
             if (aiTitle) title = aiTitle;
         }
@@ -347,6 +349,7 @@ async function generateLivestreams(count = 8) {
 }
 
 async function renderHome() {
+    await loadCharacters();
     const container = createElement('div', 'twitch-app');
     
     const header = createIOSNavBar({
@@ -711,11 +714,6 @@ export default {
     id: 'twitch',
     name: 'Twitch',
     icon: 'videocam',
-    
-    async init() {
-        await loadCharacters();
-        state.liveStreams = await generateLivestreams(8);
-    },
     
     routes: [
         { path: '/twitch', render: renderHome },
