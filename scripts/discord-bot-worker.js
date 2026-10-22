@@ -2249,7 +2249,8 @@ async function clearBotRepliesPartially(channel_id, env, mode, count = 1) {
     // Discord 上最近 100 則裡機器人發的（由新到舊）
     const resp = await fetch(`https://discord.com/api/v10/channels/${channel_id}/messages?limit=100`, { headers: { 'Authorization': `Bot ${env.DISCORD_BOT_TOKEN}` } });
     if (!resp.ok) return `❌ 讀取頻道訊息失敗（${resp.status}）`;
-    const discordBot = (await resp.json()).filter(m => m.author?.id === botUserId);
+    const discordAll = await resp.json(); // 由新到舊，含使用者與機器人
+    const discordBot = discordAll.filter(m => m.author?.id === botUserId);
 
     const rows = (await env.DB.prepare(`SELECT * FROM messages WHERE chat_id = ? AND role = 'assistant' ORDER BY timestamp DESC LIMIT 100`).bind(chatId).all()).results || [];
     const discordIds = new Set();
@@ -2260,16 +2261,35 @@ async function clearBotRepliesPartially(channel_id, env, mode, count = 1) {
         rows.filter(r => isCanned(r.content)).forEach(r => dbIds.push(r.id));
     } else {
         const n = Math.max(1, Math.min(50, parseInt(count, 10) || 1));
-        for (const r of rows.slice(0, n)) {
-            dbIds.push(r.id);
+        // 以 Discord 上「實際看得到的最後 n 則回覆」為準（連續的機器人訊息算同一則回覆，因為長回覆會切成多段）。
+        // 不能只看資料庫：模型的拒絕罐頭、錯誤訊息不會存進資料庫，若只看資料庫，刪掉的會是它前面那則正常回覆，
+        // 而使用者看到的最後一則（罐頭／警告）還留在頻道裡。
+        const groups = [];
+        let open = false;
+        for (const m of discordAll) {
+            if (m.author?.id === botUserId) {
+                if (!open) { groups.push([]); open = true; }
+                groups[groups.length - 1].push(m);
+            } else open = false;
+        }
+        const picked = groups.slice(0, n).flat();
+        picked.forEach(m => discordIds.add(m.id));
+        // 對應的資料庫紀錄（有存的才刪）：用 chunk_ids 或內容比對
+        for (const r of rows) {
             let ids = [];
             try { ids = JSON.parse(r.metadata || '{}').chunk_ids || []; } catch (_) {}
-            if (!ids.length) { // 舊資料沒有記錄 Discord 訊息 id：用內容比對
-                const body = String(r.content ?? '').trim();
-                const hit = discordBot.find(m => !discordIds.has(m.id) && body.startsWith(String(m.content ?? '').trim()) && m.content);
-                if (hit) ids = [hit.id];
+            const body = String(r.content ?? '').trim();
+            const match = ids.some(id => discordIds.has(id)) || picked.some(m => m.content && body && body.startsWith(String(m.content).trim()));
+            if (match) dbIds.push(r.id);
+        }
+        // Discord 讀不到（例如沒有權限）時，退回舊做法：刪資料庫最新的 n 筆
+        if (!picked.length) {
+            for (const r of rows.slice(0, n)) {
+                dbIds.push(r.id);
+                let ids = [];
+                try { ids = JSON.parse(r.metadata || '{}').chunk_ids || []; } catch (_) {}
+                ids.forEach(id => discordIds.add(id));
             }
-            ids.forEach(id => discordIds.add(id));
         }
     }
 
