@@ -1,225 +1,228 @@
 {
   "metadata": {
-    "last_updated": "2026-10-22T07:13:32.977270",
-    "total_items": 64
+    "last_updated": "2026-10-22T13:32:51.469234",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "The recently proposed o(n log n) integer multiplication algorithm [pdf]",
-        "url": "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf",
+        "title": "CVE-2026-111943: Compromised Intermediate Certificate Authority",
+        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-111943",
         "source": "Hacker News",
-        "score": 150
+        "score": 268
       },
       {
-        "title": "OpenAI CLI",
-        "url": "https://github.com/openai/openai-cli",
+        "title": "Jailbreaking the Switch 2",
+        "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
         "source": "Hacker News",
-        "score": 34
+        "score": 255
       },
       {
-        "title": "There isn't an easy exploit for this PHP vulnerability",
-        "url": "https://eliastaylor.com/noexploit/",
+        "title": "What Is Gridifcation",
+        "url": "https://musicalform.substack.com/p/what-is-gridifcation",
         "source": "Hacker News",
-        "score": 449
+        "score": 74
+      },
+      {
+        "title": "Faster than earcut: triangulating 3.7M map polygons in 489 ms",
+        "url": "https://globus.software/blog/2026/10/16/cutting-map-polygons/",
+        "source": "Hacker News",
+        "score": 102
       },
       {
         "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
         "url": "https://simedw.com/2026/10/21/world-model-terminal/",
         "source": "Hacker News",
-        "score": 81
+        "score": 337
       },
       {
-        "title": "GitLab critical patch release",
-        "url": "https://docs.gitlab.com/releases/patches/patch-release-gitlab-19-5-1-released/",
+        "title": "Several Linux kernel vulnerabilities accidentally posted to public mailing list",
+        "url": "https://www.phoronix.com/news/LKML-New-Trend-Vulnerabilities",
         "source": "Hacker News",
-        "score": 319
+        "score": 114
       },
       {
-        "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
-        "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+        "title": "Startup taps underwater volcano as energy source in \"proof point\" test",
+        "url": "https://arstechnica.com/science/2026/10/startup-taps-underwater-volcano-as-energy-source-in-proof-point-test/",
         "source": "Hacker News",
-        "score": 483
+        "score": 43
       },
       {
-        "title": "Rust Style Guide",
-        "url": "https://google.github.io/styleguide/rustguide.html",
+        "title": "The recently proposed o(n log n) integer multiplication algorithm [pdf]",
+        "url": "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf",
         "source": "Hacker News",
-        "score": 276
+        "score": 240
+      },
+      {
+        "title": "Amazon identifies Oct 17 PHP2Shell exploitation prior to public disclosure",
+        "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
+        "source": "Hacker News",
+        "score": 76
       },
       {
         "title": "Security Disclosure",
         "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
         "source": "Hacker News",
-        "score": 418
+        "score": 520
       },
       {
-        "title": "Using LLM for confidence scoring is a bad idea",
-        "url": "https://rumple.github.io/blog/2026/10/20/asking-llm-for-confidence.html",
+        "title": "Woman faces six years in prison over Cash App account she never opened",
+        "url": "https://www.techspot.com/news/114296-woman-spends-three-nights-jail-faces-six-years.html",
         "source": "Hacker News",
-        "score": 54
+        "score": 18
+      },
+      {
+        "title": "Claude Duet",
+        "url": "https://claude.com/product/claude-duet",
+        "source": "Hacker News",
+        "score": 455
       },
       {
         "title": "No more icons in every menu by default",
         "url": "https://blog.jim-nielsen.com/2026/icons-in-every-menu/",
         "source": "Hacker News",
-        "score": 269
+        "score": 383
       },
       {
-        "title": "mitmproxy adds --emudhra option",
-        "url": "https://github.com/mitmproxy/mitmproxy/commit/169234499088fc2c414644a67efaed3d64ae2e3b",
+        "title": "The painter behind Manhattan’s Gilded Age interiors",
+        "url": "https://engelsbergideas.com/notebook/the-unknown-painter-behind-manhattans-gilded-age-interiors/",
         "source": "Hacker News",
-        "score": 403
+        "score": 7
       },
       {
-        "title": "Meta ordered to pay $25B penalty in New Mexico Cambridge Analytica case",
-        "url": "https://www.cnbc.com/2026/10/21/meta-new-mexico-cambridge-analytica-penalty.html",
+        "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+        "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
         "source": "Hacker News",
-        "score": 502
-      },
-      {
-        "title": "PingCap TiDB Leaks",
-        "url": "https://fulcrumsec.vg/pingcap/",
-        "source": "Hacker News",
-        "score": 300
-      },
-      {
-        "title": "Chain of Thought for Humans",
-        "url": "https://www.boristhebrave.com/2026/10/18/chain-of-thought-for-humans/",
-        "source": "Hacker News",
-        "score": 84
-      },
-      {
-        "title": "Tiny possum and glider thought extinct for 6000 years found in remote West Papua",
-        "url": "https://www.bbc.com/news/articles/cp814l80pw2o",
-        "source": "Hacker News",
-        "score": 193
+        "score": 553
       }
     ],
     "ai": [
       {
-        "title": "OpenAI CLI",
-        "url": "https://github.com/openai/openai-cli",
+        "title": "Jailbreaking the Switch 2",
+        "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
         "source": "Hacker News AI",
-        "score": 34
+        "score": 255
       },
       {
         "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
         "url": "https://simedw.com/2026/10/21/world-model-terminal/",
         "source": "Hacker News AI",
-        "score": 81
+        "score": 337
       },
       {
-        "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
-        "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
+        "title": "Several Linux kernel vulnerabilities accidentally posted to public mailing list",
+        "url": "https://www.phoronix.com/news/LKML-New-Trend-Vulnerabilities",
         "source": "Hacker News AI",
-        "score": 483
-      },
-      {
-        "title": "Using LLM for confidence scoring is a bad idea",
-        "url": "https://rumple.github.io/blog/2026/10/20/asking-llm-for-confidence.html",
-        "source": "Hacker News AI",
-        "score": 54
-      },
-      {
-        "title": "Chain of Thought for Humans",
-        "url": "https://www.boristhebrave.com/2026/10/18/chain-of-thought-for-humans/",
-        "source": "Hacker News AI",
-        "score": 84
-      },
-      {
-        "title": "Show HN: Omnara – Open-source alternative to Claude Managed Agents",
-        "url": "https://github.com/omnara-ai/omnara",
-        "source": "Hacker News AI",
-        "score": 66
-      },
-      {
-        "title": "OpenAI models are coming to Google Cloud",
-        "url": "https://openai.com/index/openai-models-google-cloud/",
-        "source": "Hacker News AI",
-        "score": 279
-      },
-      {
-        "title": "Clockwork Mechanics, Maintenance, and Metaphors in the Late Middle Ages",
-        "url": "https://www.jhiblog.org/2026/10/19/clockwork-metaphors/",
-        "source": "Hacker News AI",
-        "score": 10
-      },
-      {
-        "title": "Claude Now Works with Google Docs, Sheets, and Slides",
-        "url": "https://claude.com/resources/articles/claude-now-works-in-google-docs-sheets-and-slides",
-        "source": "Hacker News AI",
-        "score": 17
-      },
-      {
-        "title": "Using thousands of AI agents to uncover new leads in biological data",
-        "url": "https://openai.com/index/scaling-ai-research-for-complex-biological-data/",
-        "source": "Hacker News AI",
-        "score": 141
-      },
-      {
-        "title": "Cloudflare deploys protections against php2shell vulnerability",
-        "url": "https://blog.cloudflare.com/php-vulnerabilities-waf-protection/",
-        "source": "Hacker News AI",
-        "score": 106
+        "score": 114
       },
       {
         "title": "Claude Duet",
         "url": "https://claude.com/product/claude-duet",
         "source": "Hacker News AI",
-        "score": 348
+        "score": 455
       },
       {
-        "title": "Claude Duet",
-        "url": "https://claude.com/resources/articles/claude-duet",
+        "title": "The painter behind Manhattan’s Gilded Age interiors",
+        "url": "https://engelsbergideas.com/notebook/the-unknown-painter-behind-manhattans-gilded-age-interiors/",
         "source": "Hacker News AI",
-        "score": 73
+        "score": 7
       },
       {
-        "title": "Show HN: AI-built browser games, collected in one place",
-        "url": "https://playgroundarcade.com/",
+        "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
+        "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
         "source": "Hacker News AI",
-        "score": 26
+        "score": 553
+      },
+      {
+        "title": "Using LLM for confidence scoring is a bad idea",
+        "url": "https://rumple.github.io/blog/2026/10/20/asking-llm-for-confidence.html",
+        "source": "Hacker News AI",
+        "score": 129
+      },
+      {
+        "title": "OpenAI CLI",
+        "url": "https://github.com/openai/openai-cli",
+        "source": "Hacker News AI",
+        "score": 169
+      },
+      {
+        "title": "OpenAI models are coming to Google Cloud",
+        "url": "https://openai.com/index/openai-models-google-cloud/",
+        "source": "Hacker News AI",
+        "score": 307
+      },
+      {
+        "title": "Show HN: Omnara – Open-source alternative to Claude Managed Agents",
+        "url": "https://github.com/omnara-ai/omnara",
+        "source": "Hacker News AI",
+        "score": 93
+      },
+      {
+        "title": "Chain of Thought for Humans",
+        "url": "https://www.boristhebrave.com/2026/10/18/chain-of-thought-for-humans/",
+        "source": "Hacker News AI",
+        "score": 123
+      },
+      {
+        "title": "Claude Now Works with Google Docs, Sheets, and Slides",
+        "url": "https://claude.com/resources/articles/claude-now-works-in-google-docs-sheets-and-slides",
+        "source": "Hacker News AI",
+        "score": 58
       }
     ],
     "news": [
       {
-        "title": "What is PHP and why did it spark a global cyber-security scramble?",
-        "url": "https://www.bbc.co.uk/news/articles/c3qjnwye0ep5o?at_medium=RSS&at_campaign=rss",
+        "title": "Police investigate Married at First Sight Australia after 'inappropriate' allegations",
+        "url": "https://www.bbc.co.uk/news/articles/cry83vyw3y4lo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "How Arab parties could hold critical balance of power in Israeli election",
-        "url": "https://www.bbc.co.uk/news/articles/cx8dzrp768j8o?at_medium=RSS&at_campaign=rss",
+        "title": "At least four dead after storm brings flooding to southern France",
+        "url": "https://www.bbc.co.uk/news/articles/cm5ynl4v4wgwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Missiles hit Kyiv after Russia agrees to US call to resume Ukraine peace talks",
-        "url": "https://www.bbc.co.uk/news/articles/cq3djn5nxx12o?at_medium=RSS&at_campaign=rss",
+        "title": "El Salvador's president threatens Haitian gangs over military hostages",
+        "url": "https://www.bbc.co.uk/news/articles/cq33xpjekve4o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Rosenberg: Russia agrees to Ukraine talks but sees little to talk about in new peace push",
-        "url": "https://www.bbc.co.uk/news/articles/cm98zn5j89kdo?at_medium=RSS&at_campaign=rss",
+        "title": "Two European women held captive for more than a year in Niger freed in Libya ",
+        "url": "https://www.bbc.co.uk/news/articles/cq62y0v7434yo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Meta fined $25bn for 'lies' over user data privacy",
-        "url": "https://www.bbc.co.uk/news/articles/cqdr8zxrr3dxo?at_medium=RSS&at_campaign=rss",
+        "title": "Celebrity shark guided out of South Korea canal refuses to swim out to sea",
+        "url": "https://www.bbc.co.uk/news/articles/cr3wv99614deo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "US orders some diplomats to leave Saudi Arabia as Houthi attacks escalate",
-        "url": "https://www.bbc.co.uk/news/articles/c6x2vpk93770o?at_medium=RSS&at_campaign=rss",
+        "title": "Two killed in attack on airport in eastern Saudi Arabia, authorities say",
+        "url": "https://www.bbc.co.uk/news/articles/cqwy71ww156ro?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Macron accuses foreign leaders of exploiting French riots   ",
-        "url": "https://www.bbc.co.uk/news/articles/ckjrw044ggxgo?at_medium=RSS&at_campaign=rss",
+        "title": "Grandparent hugging consent ad pulled after criticism",
+        "url": "https://www.bbc.co.uk/news/articles/c83vqn6zwrx0o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " Disney's Hexed features a hilarious blooper that made it into the final movie ",
+        "url": "https://www.creativebloq.com/news/disneys-hexed-features-a-hilarious-blooper-that-made-it-into-the-final-movie",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Hunter’s Moon takes Bloodborne on a 17th-century stop-motion witch hunt ",
+        "url": "https://www.creativebloq.com/features/this-ps5-folk-horror-game-takes-bloodborne-to-a-17th-century-witch-hunt",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " This underused Photoshop layer is key for adding atmosphere to fantasy art ",
+        "url": "https://www.creativebloq.com/how-to/this-underused-photoshop-layer-is-key-for-adding-atmosphere-to-fantasy-art",
+        "source": "Creative Bloq"
+      },
       {
         "title": " From Burger King to Shrek, GTA VI trendjacking is going too far ",
         "url": "https://www.creativebloq.com/news/from-burger-king-to-shrek-gta-vi-trend-jacking-is-out-of-control",
@@ -239,94 +242,79 @@
         "title": " The massive Creality Halloween sale slashes 3D printer prices by up to 42%, with options for beginners and pros ",
         "url": "https://www.creativebloq.com/deals/the-massive-creality-halloween-sale-slashes-3d-printer-prices-by-up-to-42-percent-with-options-for-beginners-and-pros",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " Make a DIY boo basket with up to 60% off Halloween goodies ",
-        "url": "https://www.creativebloq.com/deals/make-a-diy-boo-basket-with-up-to-60-percent-off-halloween-goodies",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Someone turned Draco Malfoy into a girl with AI, and now I need to know what happens next ",
-        "url": "https://www.creativebloq.com/news/someone-turned-draco-malfoy-into-a-girl-with-ai-and-now-i-need-to-know-what-happens-next",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The Creality Sermoon P1S is one of the most affordable hybrid scanners around, but don't throw your scanning spray away just yet ",
-        "url": "https://www.creativebloq.com/reviews/the-creality-sermoon-p1s-is-one-of-the-most-affordable-hybrid-scanners-around-but-dont-throw-your-scanning-spray-away-just-yet",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
-        "title": "A massive asteroid slammed into the North Sea and unleashed a 330-foot tsunami",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261020085727.htm",
+        "title": "Birds are more afraid of women than men. Scientists have no idea why",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261021231250.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Just 4 minutes a day can dramatically improve strength after 65",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261020085025.htm",
+        "title": "Oxford scientists discover how viruses build themselves without a blueprint",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261021231248.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Too much RNA can starve cells of energy, scientists discover",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261020085023.htm",
+        "title": "NASA’s Curiosity rover reveals a spectacular new view of Mars with a mystery on the horizon",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261021231238.htm",
         "source": "Science Daily"
       },
       {
-        "title": "A train was delayed by a solar storm. But something didn't add up.",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261020085021.htm",
+        "title": "Scientists discover a surprising secret behind the human brain’s wrinkles",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261021231235.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Astronauts’ hearts just passed a surprising test for Mars",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261020085016.htm",
+        "title": "A revolutionary new microscope could reveal the hidden machinery of life",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261021231230.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Massive study of 460,000 people challenges ultra-processed food cancer fears",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261020085014.htm",
+        "title": "Honey bees are bullying other bees, scientists discover",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261021231227.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Rejuvenation breakthrough: Scientists reverse 60 years of aging in human cells",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261020085013.htm",
+        "title": "Coffee calories have jumped nearly 40%. Sugar isn't the biggest culprit",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261021231224.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "All party members in Final Fantasy Resonance",
-        "url": "https://www.polygon.com/final-fantasy-resonance-party-members-location-how-to-unlock/",
+        "title": "Xbox Officially Confirms Cloud Gaming’s New Pay-As-You-Go Prices",
+        "url": "https://www.polygon.com/xbox-cloud-gaming-playtime-pack-prices/",
         "source": "Polygon"
       },
       {
-        "title": "All unlockable Visions in Final Fantasy Resonance",
-        "url": "https://www.polygon.com/final-fantasy-resonance-visions-locations-how-to-unlock/",
+        "title": "15 Final Fantasy Resonance beginner's tips to help you protect the crystals",
+        "url": "https://www.polygon.com/final-fantasy-resonance-beginners-tips-tricks/",
         "source": "Polygon"
       },
       {
-        "title": "Where to find all ancient equipment in Final Fantasy Resonance",
-        "url": "https://www.polygon.com/final-fantasy-resonance-ancient-equipment-upgrade-locations/",
+        "title": "4 Years Ago, Matthew Mercer Almost Killed Off an Entire Critical Role Party",
+        "url": "https://www.polygon.com/critical-role-campaign-3-matt-mercer-tpk/",
         "source": "Polygon"
       },
       {
-        "title": "How to find Mysidia in Final Fantasy Resonance",
-        "url": "https://www.polygon.com/final-fantasy-resonance-mysidia-location-how-to-find/",
+        "title": "Star Wars Battlefront 3 Is Real, EA Officially Confirms",
+        "url": "https://www.polygon.com/ea-layoffs-star-wars-battlefront-3-is-alive/",
         "source": "Polygon"
       },
       {
-        "title": "Where to find and use Adamantite in Final Fantasy Resonance",
-        "url": "https://www.polygon.com/final-fantasy-resonance-adamantite-use-locations-weapons/",
+        "title": "Amazon Confirms Fate of Mass Effect TV Series After BioWare Closure",
+        "url": "https://www.polygon.com/mass-effect-tv-show-amazon-bioware-closure-october-2026/",
         "source": "Polygon"
       },
       {
-        "title": "How to get Sephiroth's Vision in Final Fantasy Resonance",
-        "url": "https://www.polygon.com/final-fantasy-resonance-sephiroth-vision-where-to-find-boss-fight/",
+        "title": "The Nintendo Switch 2’s Open-World Era Is Officially Here, and It Rules",
+        "url": "https://www.polygon.com/nintendo-switch-2-open-world-era/",
         "source": "Polygon"
       },
       {
-        "title": "The 10 best alchemy cards in Magic: The Gathering, ranked",
-        "url": "https://www.polygon.com/best-alchemy-cards-magic-gathering-mgt/",
+        "title": "Anime's Most Devastating Horror Story Is a Tragedy About Being Human",
+        "url": "https://www.polygon.com/devilman-crybaby-horror-anime-halloween-countdown/",
         "source": "Polygon"
       }
     ],
