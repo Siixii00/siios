@@ -465,7 +465,18 @@ class BackupManager {
         }
 
         const fileData = await fileRes.json();
-        const content = decodeURIComponent(escape(atob(fileData.content)));
+        let content;
+        if (fileData.content && fileData.encoding !== 'none') {
+            content = decodeURIComponent(escape(atob(fileData.content)));
+        } else {
+            // 檔案超過 1MB 時，contents API 不會回傳內容（有照片的備份很容易超過），要改用 raw 格式取回
+            const rawRes = await fetch(
+                `https://api.github.com/repos/${this.githubUser.login}/${GITHUB_REPO_NAME}/contents/${BACKUP_FILENAME}`,
+                { headers: { 'Authorization': `token ${this.githubToken}`, 'Accept': 'application/vnd.github.raw+json' } }
+            );
+            if (!rawRes.ok) throw new Error('下載備份檔案失敗');
+            content = await rawRes.text();
+        }
         const backupData = JSON.parse(content);
 
         // 匯入資料
