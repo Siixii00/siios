@@ -179,7 +179,7 @@ async function renderSettings() {
     devPanel.style.maxHeight = '0';
     devPanel.style.opacity = '0';
     const devContent = createElement('div', 'p-4 text-sm text-ios-muted space-y-2');
-    devContent.appendChild(createElement('p', '', { textContent: '版本：v1.0.0' }));
+    devContent.appendChild(createElement('p', '', { textContent: '版本：v1.0.0 公測版' }));
     devContent.appendChild(createElement('p', '', { textContent: '待補充資訊' }));
     devPanel.appendChild(devContent);
     devSection.appendChild(devPanel);
