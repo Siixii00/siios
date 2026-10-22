@@ -1,99 +1,99 @@
 {
   "metadata": {
-    "last_updated": "2026-10-22T13:32:51.469234",
+    "last_updated": "2026-10-22T18:22:06.008520",
     "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "CVE-2026-111943: Compromised Intermediate Certificate Authority",
-        "url": "https://nvd.nist.gov/vuln/detail/cve-2026-111943",
+        "title": "Quad9 (DNS Resolver) to Exit France",
+        "url": "https://quad9.net/news/blog/au-revoir-france/",
         "source": "Hacker News",
-        "score": 268
+        "score": 452
       },
       {
-        "title": "Jailbreaking the Switch 2",
-        "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
+        "title": "eMudhra to exit global SSL/TLS certificate business",
+        "url": "https://emudhra.com/en/press-release/emudhra-to-exit-global-ssl-tls-certificate-business",
         "source": "Hacker News",
-        "score": 255
+        "score": 648
+      },
+      {
+        "title": "Show HN: Run full iOS 16.5 firmware on Android Devices",
+        "url": "https://github.com/oosexgang/hackios-xnu-kernel",
+        "source": "Hacker News",
+        "score": 136
+      },
+      {
+        "title": "Getting ready to operate GNU Taler in Germany",
+        "url": "https://www.taler.net/en/news/2026-13.html",
+        "source": "Hacker News",
+        "score": 70
+      },
+      {
+        "title": "What's Getting Pwned",
+        "url": "https://pwn.watch/",
+        "source": "Hacker News",
+        "score": 219
+      },
+      {
+        "title": "Nvidia OpenShell",
+        "url": "https://github.com/NVIDIA/OpenShell",
+        "source": "Hacker News",
+        "score": 22
       },
       {
         "title": "What Is Gridifcation",
         "url": "https://musicalform.substack.com/p/what-is-gridifcation",
         "source": "Hacker News",
-        "score": 74
+        "score": 279
+      },
+      {
+        "title": "Jailbreaking the Switch 2",
+        "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
+        "source": "Hacker News",
+        "score": 546
+      },
+      {
+        "title": "Show HN: agent-usage-guard – a Claude Code mod to protect your usage window",
+        "url": "https://github.com/rbartoli/agent-usage-guard",
+        "source": "Hacker News",
+        "score": 6
+      },
+      {
+        "title": "Dungeon Generation in the Gnomish Mines of NetHack",
+        "url": "https://www.boristhebrave.com/2026/10/18/dungeon-generation-in-the-gnomish-mines-of-nethack/",
+        "source": "Hacker News",
+        "score": 57
+      },
+      {
+        "title": "Google cleared 300 hectares of Finnish forest",
+        "url": "https://www.techspot.com/news/114100-google-cleared-300-hectares-finnish-forest-data-center.html",
+        "source": "Hacker News",
+        "score": 205
       },
       {
         "title": "Faster than earcut: triangulating 3.7M map polygons in 489 ms",
         "url": "https://globus.software/blog/2026/10/16/cutting-map-polygons/",
         "source": "Hacker News",
-        "score": 102
+        "score": 168
       },
       {
-        "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
-        "url": "https://simedw.com/2026/10/21/world-model-terminal/",
+        "title": "A farewell to Arc browser",
+        "url": "https://arc.net/",
         "source": "Hacker News",
-        "score": 337
+        "score": 100
       },
       {
-        "title": "Several Linux kernel vulnerabilities accidentally posted to public mailing list",
-        "url": "https://www.phoronix.com/news/LKML-New-Trend-Vulnerabilities",
+        "title": "MPs moving to restrict gambling ads in Canada",
+        "url": "https://www.cbc.ca/news/investigates/gambling-ads-restrictions-canada-9.7388888",
         "source": "Hacker News",
-        "score": 114
+        "score": 123
       },
       {
-        "title": "Startup taps underwater volcano as energy source in \"proof point\" test",
-        "url": "https://arstechnica.com/science/2026/10/startup-taps-underwater-volcano-as-energy-source-in-proof-point-test/",
+        "title": "The Last Museum: Semantic search across 5.8M artworks from major museums",
+        "url": "https://lastmuseum.com/",
         "source": "Hacker News",
-        "score": 43
-      },
-      {
-        "title": "The recently proposed o(n log n) integer multiplication algorithm [pdf]",
-        "url": "https://web.maths.unsw.edu.au/~davidharvey/research/subnlogn.pdf",
-        "source": "Hacker News",
-        "score": 240
-      },
-      {
-        "title": "Amazon identifies Oct 17 PHP2Shell exploitation prior to public disclosure",
-        "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-identifies-php2shell-exploitation-prior-to-public-disclosure-in-madpot/",
-        "source": "Hacker News",
-        "score": 76
-      },
-      {
-        "title": "Security Disclosure",
-        "url": "https://blog.railway.com/p/security-disclosure-wednesday-october-21st",
-        "source": "Hacker News",
-        "score": 520
-      },
-      {
-        "title": "Woman faces six years in prison over Cash App account she never opened",
-        "url": "https://www.techspot.com/news/114296-woman-spends-three-nights-jail-faces-six-years.html",
-        "source": "Hacker News",
-        "score": 18
-      },
-      {
-        "title": "Claude Duet",
-        "url": "https://claude.com/product/claude-duet",
-        "source": "Hacker News",
-        "score": 455
-      },
-      {
-        "title": "No more icons in every menu by default",
-        "url": "https://blog.jim-nielsen.com/2026/icons-in-every-menu/",
-        "source": "Hacker News",
-        "score": 383
-      },
-      {
-        "title": "The painter behind Manhattan’s Gilded Age interiors",
-        "url": "https://engelsbergideas.com/notebook/the-unknown-painter-behind-manhattans-gilded-age-interiors/",
-        "source": "Hacker News",
-        "score": 7
-      },
-      {
-        "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
-        "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
-        "source": "Hacker News",
-        "score": 553
+        "score": 64
       }
     ],
     "ai": [
@@ -101,79 +101,100 @@
         "title": "Jailbreaking the Switch 2",
         "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
         "source": "Hacker News AI",
-        "score": 255
+        "score": 546
+      },
+      {
+        "title": "Show HN: agent-usage-guard – a Claude Code mod to protect your usage window",
+        "url": "https://github.com/rbartoli/agent-usage-guard",
+        "source": "Hacker News AI",
+        "score": 6
       },
       {
         "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
         "url": "https://simedw.com/2026/10/21/world-model-terminal/",
         "source": "Hacker News AI",
-        "score": 337
+        "score": 442
       },
       {
-        "title": "Several Linux kernel vulnerabilities accidentally posted to public mailing list",
-        "url": "https://www.phoronix.com/news/LKML-New-Trend-Vulnerabilities",
+        "title": "AI analysis of CT scans finds 42.9% of patients have coronary inflammation",
+        "url": "https://www.biograph.com/newsroom/biograph-completes-first-u.s.-study-with-caristo-diagnostics%E2%80%99-ai-powered-coronary-inflammation-detection-finding-risk-in-over-42-of-asymptomatic-patients",
         "source": "Hacker News AI",
-        "score": 114
+        "score": 9
       },
       {
         "title": "Claude Duet",
         "url": "https://claude.com/product/claude-duet",
         "source": "Hacker News AI",
-        "score": 455
+        "score": 525
       },
       {
-        "title": "The painter behind Manhattan’s Gilded Age interiors",
-        "url": "https://engelsbergideas.com/notebook/the-unknown-painter-behind-manhattans-gilded-age-interiors/",
+        "title": "Mini brain organoids 'reading' Braille key step towards biohybrid computing",
+        "url": "https://www.frontiersin.org/news/2026/10/16/mini-brain-organoids-reading-braille-biohybrid-computing-frontiers-artificial-intelligence",
         "source": "Hacker News AI",
-        "score": 7
+        "score": 4
+      },
+      {
+        "title": "Several Linux kernel vulnerabilities accidentally posted to public mailing list",
+        "url": "https://www.phoronix.com/news/LKML-New-Trend-Vulnerabilities",
+        "source": "Hacker News AI",
+        "score": 224
       },
       {
         "title": "Compromised LiteLLM 1.107.0 on PyPI Installs a Credential Stealer and Backdoor",
         "url": "https://safedep.io/litellm-pypi-compromise-credential-stealer-backdoor/",
         "source": "Hacker News AI",
-        "score": 553
+        "score": 582
+      },
+      {
+        "title": "The painter behind Manhattan’s Gilded Age interiors",
+        "url": "https://engelsbergideas.com/notebook/the-unknown-painter-behind-manhattans-gilded-age-interiors/",
+        "source": "Hacker News AI",
+        "score": 46
       },
       {
         "title": "Using LLM for confidence scoring is a bad idea",
         "url": "https://rumple.github.io/blog/2026/10/20/asking-llm-for-confidence.html",
         "source": "Hacker News AI",
-        "score": 129
+        "score": 191
       },
       {
         "title": "OpenAI CLI",
         "url": "https://github.com/openai/openai-cli",
         "source": "Hacker News AI",
-        "score": 169
+        "score": 216
       },
       {
         "title": "OpenAI models are coming to Google Cloud",
         "url": "https://openai.com/index/openai-models-google-cloud/",
         "source": "Hacker News AI",
-        "score": 307
+        "score": 318
       },
       {
-        "title": "Show HN: Omnara – Open-source alternative to Claude Managed Agents",
-        "url": "https://github.com/omnara-ai/omnara",
+        "title": "Important updates to AI use on Etsy",
+        "url": "https://www.etsy.com/seller-handbook/article/1522733284810",
         "source": "Hacker News AI",
-        "score": 93
-      },
-      {
-        "title": "Chain of Thought for Humans",
-        "url": "https://www.boristhebrave.com/2026/10/18/chain-of-thought-for-humans/",
-        "source": "Hacker News AI",
-        "score": 123
-      },
-      {
-        "title": "Claude Now Works with Google Docs, Sheets, and Slides",
-        "url": "https://claude.com/resources/articles/claude-now-works-in-google-docs-sheets-and-slides",
-        "source": "Hacker News AI",
-        "score": 58
+        "score": 23
       }
     ],
     "news": [
       {
-        "title": "Police investigate Married at First Sight Australia after 'inappropriate' allegations",
-        "url": "https://www.bbc.co.uk/news/articles/cry83vyw3y4lo?at_medium=RSS&at_campaign=rss",
+        "title": "Race to update services' computer systems after cyber-security flaw found",
+        "url": "https://www.bbc.co.uk/news/articles/c9j34zgmkxx1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Trump ordered to answer questions under oath in BBC lawsuit ",
+        "url": "https://www.bbc.co.uk/news/articles/cmy0ryjx7741o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Crowd of 50 beats foreigner to death in South Africa",
+        "url": "https://www.bbc.co.uk/news/articles/ck5yn9z3vnego?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Germany target of 'intensive' espionage, Merz says after suspected Russian spy arrest",
+        "url": "https://www.bbc.co.uk/news/articles/cmx28y5e04ggo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -182,32 +203,27 @@
         "source": "BBC World"
       },
       {
-        "title": "El Salvador's president threatens Haitian gangs over military hostages",
-        "url": "https://www.bbc.co.uk/news/articles/cq33xpjekve4o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Two European women held captive for more than a year in Niger freed in Libya ",
-        "url": "https://www.bbc.co.uk/news/articles/cq62y0v7434yo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Celebrity shark guided out of South Korea canal refuses to swim out to sea",
-        "url": "https://www.bbc.co.uk/news/articles/cr3wv99614deo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Two killed in attack on airport in eastern Saudi Arabia, authorities say",
-        "url": "https://www.bbc.co.uk/news/articles/cqwy71ww156ro?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Grandparent hugging consent ad pulled after criticism",
-        "url": "https://www.bbc.co.uk/news/articles/c83vqn6zwrx0o?at_medium=RSS&at_campaign=rss",
+        "title": "Lula says rival should be disqualified over alleged Meta interference ahead of Brazil vote",
+        "url": "https://www.bbc.co.uk/news/articles/c6pwgve2lk5go?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " There's suddenly $1,000 off this absolute beast of a creative laptop cut out for heavy video editing and 3D rendering ",
+        "url": "https://www.creativebloq.com/deals/theres-suddenly-usd1-000-off-this-absolute-beast-of-a-creative-laptop-cut-out-for-heavy-video-editing-and-3d-rendering",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Dispatch's new Deluxe Edition lets you play the whole game as storyboard animatics ",
+        "url": "https://www.creativebloq.com/news/dispatchs-new-deluxe-edition-lets-you-play-the-whole-game-as-storyboard-animatics",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " Apple Music's splashy new logo is gorgeous – so why isn't the new app icon? ",
+        "url": "https://www.creativebloq.com/news/apple-musics-splashy-new-logo-is-gorgeous-so-why-isnt-the-app-icon",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Disney's Hexed features a hilarious blooper that made it into the final movie ",
         "url": "https://www.creativebloq.com/news/disneys-hexed-features-a-hilarious-blooper-that-made-it-into-the-final-movie",
@@ -226,21 +242,6 @@
       {
         "title": " From Burger King to Shrek, GTA VI trendjacking is going too far ",
         "url": "https://www.creativebloq.com/news/from-burger-king-to-shrek-gta-vi-trend-jacking-is-out-of-control",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Autodesk reveals how The Cat in the Hat was made in the new Made to Make series ",
-        "url": "https://www.creativebloq.com/news/autodesk-reveals-how-the-cat-in-the-hat-was-made-in-the-new-made-to-make-series-",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " This Pac-Man snow blower makes me want a robot I don't need ",
-        "url": "https://www.creativebloq.com/news/this-pac-man-snow-blower-makes-me-want-a-robot-i-dont-need",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The massive Creality Halloween sale slashes 3D printer prices by up to 42%, with options for beginners and pros ",
-        "url": "https://www.creativebloq.com/deals/the-massive-creality-halloween-sale-slashes-3d-printer-prices-by-up-to-42-percent-with-options-for-beginners-and-pros",
         "source": "Creative Bloq"
       }
     ],
@@ -283,43 +284,48 @@
     ],
     "gaming": [
       {
-        "title": "Xbox Officially Confirms Cloud Gaming’s New Pay-As-You-Go Prices",
-        "url": "https://www.polygon.com/xbox-cloud-gaming-playtime-pack-prices/",
+        "title": "Forgotten Pokémon Card Collection Goes for $2 Million",
+        "url": "https://www.polygon.com/pokemon-card-forgotten-collection-millionaire-auction/",
         "source": "Polygon"
       },
       {
-        "title": "15 Final Fantasy Resonance beginner's tips to help you protect the crystals",
-        "url": "https://www.polygon.com/final-fantasy-resonance-beginners-tips-tricks/",
+        "title": "Blood of Dawnwalker’s Massive Update Is Finally Here and the Full List of Changes Is Wild",
+        "url": "https://www.polygon.com/blood-of-dawnwalker-update-1-1-released-patch-notes/",
         "source": "Polygon"
       },
       {
-        "title": "4 Years Ago, Matthew Mercer Almost Killed Off an Entire Critical Role Party",
-        "url": "https://www.polygon.com/critical-role-campaign-3-matt-mercer-tpk/",
+        "title": "'The Walking Dead' Star’s Resident Evil Fan Film Sets a Surprising Record",
+        "url": "https://www.polygon.com/resident-evil-biohazard-fan-film-walking-dead/",
         "source": "Polygon"
       },
       {
-        "title": "Star Wars Battlefront 3 Is Real, EA Officially Confirms",
-        "url": "https://www.polygon.com/ea-layoffs-star-wars-battlefront-3-is-alive/",
+        "title": "'Marvel’s Wolverine' Soars on PS5 Sales Charts Despite Negative Buzz",
+        "url": "https://www.polygon.com/marvel-wolverine-best-selling-game-september-us/",
         "source": "Polygon"
       },
       {
-        "title": "Amazon Confirms Fate of Mass Effect TV Series After BioWare Closure",
-        "url": "https://www.polygon.com/mass-effect-tv-show-amazon-bioware-closure-october-2026/",
+        "title": "Can We Finally Agree That Dragon Age: The Veilguard Was Actually Terrific?",
+        "url": "https://www.polygon.com/dragon-age-the-veilguard-bioware-rpg-retrospective/",
         "source": "Polygon"
       },
       {
-        "title": "The Nintendo Switch 2’s Open-World Era Is Officially Here, and It Rules",
-        "url": "https://www.polygon.com/nintendo-switch-2-open-world-era/",
+        "title": "Video Game Industry Responds to BioWare Shutting Down",
+        "url": "https://www.polygon.com/bioware-shut-down-reactions-mass-effect-baldurs-gate-ea-games/",
         "source": "Polygon"
       },
       {
-        "title": "Anime's Most Devastating Horror Story Is a Tragedy About Being Human",
-        "url": "https://www.polygon.com/devilman-crybaby-horror-anime-halloween-countdown/",
+        "title": "Award-Winning Sci-Fi Author Reveals Role on Canceled Mass Effect",
+        "url": "https://www.polygon.com/mass-effect-5-story-authors-who-was-working-on-it-bioware/",
         "source": "Polygon"
       }
     ],
     "steam": [],
     "github": [
+      {
+        "title": "How bug bounty sharpens one researcher’s security skills",
+        "url": "https://github.blog/security/how-bug-bounty-sharpens-one-researchers-security-skills/",
+        "source": "GitHub Blog"
+      },
       {
         "title": "The bridge to agent-scale Git infrastructure",
         "url": "https://github.blog/engineering/architecture-optimization/the-bridge-to-agent-scale-git-infrastructure/",
@@ -348,11 +354,6 @@
       {
         "title": "GitHub availability report: September 2026",
         "url": "https://github.blog/news-insights/company-news/github-availability-report-september-2026/",
-        "source": "GitHub Blog"
-      },
-      {
-        "title": "From 2,500 requests to 24: Rebuilding star history without the stargazers",
-        "url": "https://github.blog/engineering/architecture-optimization/from-2500-requests-to-24-rebuilding-star-history-without-the-stargazers/",
         "source": "GitHub Blog"
       }
     ]
