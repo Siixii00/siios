@@ -27,7 +27,7 @@
   color: var(--dt-body);
 }
 
-.dt-wrap { padding: 20px 16px 32px; }
+.dt-wrap { box-sizing: border-box; max-width: 480px; margin: 0 auto; padding: 20px 24px 32px; }
 .dt-center { text-align: center; }
 .dt-muted { color: var(--dt-muted); font-size: 13px; margin: 4px 0; }
 .dt-title { font-size: 20px; color: var(--dt-text); text-align: center; margin: 0 0 12px; }
