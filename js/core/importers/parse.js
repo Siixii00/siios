@@ -14,11 +14,12 @@ export const FORMAT_LABELS = {
     chatgpt: 'ChatGPT 匯出的對話',
     claude: 'Claude 匯出的對話',
     transcript: '純文字對話（「名字：內容」）',
+    'st-settings': 'SillyTavern 設定檔（使用者人設）',
     ours: 'SXIOS 備份檔',
     unknown: '無法辨識的格式'
 };
 
-const empty = (format, warnings = []) => ({ format, formatLabel: FORMAT_LABELS[format], characters: [], chats: [], warnings });
+const empty = (format, warnings = []) => ({ format, formatLabel: FORMAT_LABELS[format], characters: [], chats: [], personas: [], warnings });
 const str = v => (typeof v === 'string' ? v : v == null ? '' : String(v));
 const stripBom = s => str(s).replace(/^﻿/, '');
 
@@ -86,6 +87,26 @@ export function isTavernCard(json) {
     return typeof d.name === 'string' && ['description', 'personality', 'scenario', 'first_mes'].some(k => typeof d[k] === 'string');
 }
 
+// ───── 角色卡風險偵測 ─────
+// SillyTavern 角色卡可能來自任何人：除了角色設定，還可能夾帶「系統提示／後置指令」，
+// 有些是要求 AI 無視規則、解除限制的破限提示詞。這裡只做偵測與標示，讓使用者看過再決定。
+const RISK_PATTERNS = [
+    { id: 'ignore-rules', label: '要求 AI 忽略先前的指令或規則', re: /ignore (all |any )?(the )?(previous|prior|above|earlier|system) (instructions|rules|prompts?)|disregard (all |any |the )?(previous |prior )?(rules|guidelines|instructions)|forget (all |your )?(previous |prior )?(instructions|rules)|忽略(之前|以上|先前|所有|任何)的?(指令|規則|設定|提示)|無視(所有|任何)?(規則|限制|設定|指令)/i },
+    { id: 'jailbreak', label: '疑似破限／解除限制的提示詞', re: /jailbreak|\bDAN\b|developer mode|(no|without|bypass|override|remove)\s+(any\s+)?(restrictions?|limitations?|filters?|censorship|safety|guardrails?)|you have no (restrictions|limits|rules)|越獄|破限|解除(限制|審查|過濾)|不受(任何)?(限制|規範|規則)/i },
+    { id: 'no-refuse', label: '要求 AI 不得拒絕', re: /(never|do not|don't|must not)\s+(refuse|decline|reject)|不得?拒絕|不要拒絕|絕對不能拒絕/i },
+    { id: 'not-ai', label: '要求 AI 否認自己是 AI', re: /you are not an? (ai|language model|assistant)|never (say|mention|reveal) (that )?you are an? (ai|bot)|你不是\s*(ai|人工智慧|語言模型)/i },
+    { id: 'script', label: '含 SillyTavern 專用的腳本巨集（這個 App 不支援，會原樣留在文字裡）', re: /\{\{\s*(setvar|getvar|addvar|incvar|random|roll|pick|reverse|idle_duration|lastmessage)\b|<\|im_(start|end)\|>|\[\s*system\s*(note|prompt)?\s*:/i },
+    { id: 'adult', label: '含成人內容的標記', re: /\bnsfw\b|\bexplicit\b|\br-?18\b|18\+|成人向|色情|情色/i },
+    // 涉及未成年的性內容：不提供匯入（不只是提醒）
+    { id: 'minor-sexual', severe: true, label: '疑似涉及未成年角色的性內容', re: /\b(loli|shota|lolicon|underage|child)\b[^.\n]{0,80}\b(sex|sexual|nsfw|erotic|fuck|rape)|\b(sex|sexual|nsfw|erotic|fuck|rape)\w*[^.\n]{0,80}\b(loli|shota|underage|child)\b|未成年[^。\n]{0,40}(性|色情|情色|做愛)|(性|色情|情色)[^。\n]{0,40}未成年|蘿莉[^。\n]{0,30}(性|色情|做愛)/i }
+];
+
+export function assessCardRisk(texts) {
+    const hay = (Array.isArray(texts) ? texts : [texts]).map(str).join('\n');
+    const flags = RISK_PATTERNS.filter(r => r.re.test(hay)).map(r => ({ id: r.id, label: r.label, severe: !!r.severe }));
+    return { flags, blocked: flags.some(f => f.severe) };
+}
+
 export function parseTavernCard(json, { userName = '', avatar = '' } = {}) {
     const d = cardFields(json);
     const name = str(d.name).trim() || '未命名角色';
@@ -93,16 +114,51 @@ export function parseTavernCard(json, { userName = '', avatar = '' } = {}) {
     let description = f(d.description);
     const example = f(d.mes_example).replace(/<START>/gi, '').trim();
     if (example) description += `${description ? '\n\n' : ''}【對話範例】\n${example}`;
-    const system = f(d.system_prompt);
-    if (system) description += `${description ? '\n\n' : ''}【角色補充設定】\n${system}`;
     const book = d.character_book && Array.isArray(d.character_book.entries) && d.character_book.entries.length ? d.character_book : null;
-    return {
+    // 會影響整個對話行為的額外指令：預設不匯入，使用者看過、自己勾選才會加進去
+    const extra = {
+        system_prompt: f(d.system_prompt),
+        post_history: f(d.post_history_instructions),
+        depth_prompt: f(d.extensions && d.extensions.depth_prompt && d.extensions.depth_prompt.prompt)
+    };
+    const card = {
         name, description,
         personality: f(d.personality),
         scenario: f(d.scenario),
         first_message: f(d.first_mes),
-        avatar, tags: Array.isArray(d.tags) ? d.tags.map(str).filter(Boolean).slice(0, 12) : [], book
+        avatar, tags: Array.isArray(d.tags) ? d.tags.map(str).filter(Boolean).slice(0, 12) : [], book,
+        origin: 'sillytavern',
+        extra,
+        creator_notes: str(d.creator_notes).trim().slice(0, 1000)
     };
+    const bookText = book ? book.entries.map(e => str(e.content)).join('\n') : '';
+    card.risk = assessCardRisk([card.description, card.personality, card.scenario, card.first_message, extra.system_prompt, extra.post_history, extra.depth_prompt, bookText, str(d.alternate_greetings), card.creator_notes]);
+    return card;
+}
+
+// 把使用者勾選的額外指令附在說明後面
+export function withExtraPrompts(card, { system = false, postHistory = false, depth = false } = {}) {
+    const parts = [];
+    if (system && card.extra?.system_prompt) parts.push(card.extra.system_prompt);
+    if (postHistory && card.extra?.post_history) parts.push(card.extra.post_history);
+    if (depth && card.extra?.depth_prompt) parts.push(card.extra.depth_prompt);
+    if (!parts.length) return card.description;
+    return `${card.description}${card.description ? '\n\n' : ''}【角色補充設定】\n${parts.join('\n\n')}`;
+}
+
+// ───── 使用者人設（persona）─────
+// SillyTavern 的 settings.json：personas 是「頭像檔名 → 名字」，persona_descriptions 是「頭像檔名 → { description… }」
+export function parseSTSettings(json) {
+    const pu = json && json.power_user;
+    if (!pu || typeof pu !== 'object' || !pu.personas || typeof pu.personas !== 'object') return null;
+    const res = empty('st-settings');
+    for (const [file, name] of Object.entries(pu.personas)) {
+        const n = str(name).trim();
+        if (!n) continue;
+        res.personas.push({ name: n, description: fillMacros(str(pu.persona_descriptions?.[file]?.description).trim(), { user: n }) });
+    }
+    if (!res.personas.length) res.warnings.push('沒有找到使用者人設');
+    return res;
 }
 
 // ───── SillyTavern 聊天紀錄（.jsonl）─────
@@ -281,6 +337,8 @@ export function parseImport({ name = '', text = '', bytes = null } = {}) {
         try { json = JSON.parse(body); } catch (_) { /* 可能是 jsonl，往下 */ }
         if (json !== null) {
             if (json && json.data && json.version && (json.data.chats || json.data.characters)) return empty('ours');
+            const stSettings = parseSTSettings(json);
+            if (stSettings) return stSettings;
             if (isChatGpt(json)) return parseChatGpt(json);
             if (isClaudeExport(json)) return parseClaudeExport(json);
             if (isTavernCard(json)) { const r = empty('tavern-card'); r.characters.push(parseTavernCard(json)); return r; }

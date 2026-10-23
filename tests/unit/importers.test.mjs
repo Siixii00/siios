@@ -39,7 +39,9 @@ test('Tavern 角色卡 v2（JSON）：欄位對應、巨集替換、對話範例
     assert.equal(c.name, '小薰');
     assert.ok(c.description.startsWith('小薰 是一位咖啡店店員，對 使用者 很溫柔。'));
     assert.ok(c.description.includes('【對話範例】') && c.description.includes('早安呀') && !c.description.includes('<START>'));
-    assert.ok(c.description.includes('【角色補充設定】\n請用繁體中文回覆'));
+    assert.ok(!c.description.includes('角色補充設定') && !c.description.includes('請用繁體中文回覆')); // 額外指令預設不併入
+    assert.equal(c.extra.system_prompt, '請用繁體中文回覆');
+    assert.equal(c.origin, 'sillytavern');
     assert.equal(c.first_message, '歡迎回來，使用者！');
     assert.equal(c.personality, '溫柔、愛撒嬌');
     assert.deepEqual(c.tags, ['日常', '咖啡']);

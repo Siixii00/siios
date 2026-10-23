@@ -4,6 +4,19 @@ import { CharactersDB, SettingsDB, UsersDB } from '../../db.js';
 import { askConfirm } from '../../core/dialogs.js';
 import { workerFetch } from '../../core/discord-worker-client.js';
 
+// 角色卡來源提醒：SillyTavern 的角色卡不能直接當這裡的角色用，要走「匯入其他來源」（會偵測並標示風險）
+function stCardNotice(compact = false) {
+    const box = createElement('div', 'mx-4 mb-3 text-xs');
+    box.style.cssText = 'padding:10px 12px;border-radius:8px;background:#fff4e5;border:1px solid #f5a623;color:#7a4a00;line-height:1.6;';
+    box.appendChild(createElement('b', '', { textContent: '⚠ 不要直接使用 SillyTavern 的角色卡' }));
+    box.appendChild(createElement('div', '', { textContent: compact ? '直接複製貼上別人的角色卡內容可能帶入要求 AI 無視規則的提示詞。請改用匯入功能，會偵測並標示風險。' : '角色卡可能來自任何人，內容可能夾帶要求 AI 無視規則、解除限制的提示詞，也可能含你不想要的內容。請不要直接複製貼上；從 SillyTavern 搬角色請用「匯入其他來源」，它會自動偵測、標示風險，並讓你看過內容、確認後才匯入。' }));
+    const go = createElement('button', 'ios-btn', { textContent: '前往「匯入其他來源」' });
+    go.style.cssText = 'margin-top:6px;padding:6px 10px;border-radius:8px;background:#fff;border:1px solid #ddd;font-size:13px;';
+    go.onclick = () => Router.navigate('/settings/import');
+    box.appendChild(go);
+    return box;
+}
+
 async function renderCharList() {
     const characters = await CharactersDB.getAll();
 
@@ -28,6 +41,7 @@ async function renderCharList() {
     const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-8');
     main.style.marginTop = 'calc(44px + env(safe-area-inset-top, 0px))';
     main.style.paddingTop = '16px';
+    main.appendChild(stCardNotice());
 
     if (characters.length === 0) {
         const empty = createElement('div', 'flex flex-col items-center justify-center pt-24');
@@ -104,6 +118,7 @@ async function renderCharEdit(params) {
     const main = createElement('main', 'flex-1 overflow-y-auto hide-scrollbar pb-8');
     main.style.marginTop = 'calc(44px + env(safe-area-inset-top, 0px))';
     main.style.paddingTop = '16px';
+    main.appendChild(stCardNotice(true));
 
     const avatarSection = createElement('div', 'mb-2 ml-8');
     avatarSection.appendChild(createElement('p', 'ios-section-header', { textContent: '大頭貼' }));

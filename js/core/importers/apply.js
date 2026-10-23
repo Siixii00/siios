@@ -4,7 +4,7 @@ import { initDB, CharactersDB, ChatsDB, MemoryDB, UsersDB } from '../../db.js';
 import { SensoryExtractor } from '../memory-system/sensory-extractor.js';
 import { EmotionTagger } from '../memory-system/emotion-tagger.js';
 import { SpatiotemporalTagger } from '../memory-system/spatiotemporal-tagger.js';
-import { chunkConversation, fillTimes } from './parse.js';
+import { chunkConversation, fillTimes, withExtraPrompts } from './parse.js';
 
 const sensory = new SensoryExtractor();
 const emotion = new EmotionTagger();
@@ -16,7 +16,8 @@ export async function createCharacterFromDraft(draft) {
     return CharactersDB.create({
         name: draft.name,
         avatar: draft.avatar || '',
-        description: draft.description || '',
+        // 角色卡附帶的額外指令（系統提示等）預設不匯入，使用者看過並勾選才會加進說明
+        description: draft.extraChoice ? withExtraPrompts(draft, draft.extraChoice) : (draft.description || ''),
         personality: draft.personality || '',
         scenario: draft.scenario || '',
         first_message: draft.first_message || '',
@@ -113,6 +114,12 @@ export async function applyImport(plan, { onProgress } = {}) {
             result.chats++; result.messages += count;
             if (item.toMemory) result.memories += await createRawMemories(character, chat, msgs, item.userName || '使用者');
         }
+    }
+    for (const p of plan.personas || []) {
+        const users = await UsersDB.getAll();
+        if (users.some(u => u.name === p.name)) continue;
+        await UsersDB.create({ name: p.name, avatar: p.avatar || '', personality: p.description || '', speech_style: p.speech_style || '', nicknames: p.nicknames || [] });
+        result.personas = (result.personas || 0) + 1;
     }
     if (plan.createUserMask && plan.userName) {
         const users = await UsersDB.getAll();
