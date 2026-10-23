@@ -105,7 +105,7 @@ async function renderBackupSettings() {
     const githubCard = createElement('div', 'bg-white rounded-xl shadow-sm');
 
     const githubStatusCell = createElement('div', 'ios-list-cell');
-    const githubStatusBadge = createElement('div', `w-10 h-10 rounded-full flex items-center justify-center ${githubUser ? 'bg-gray-800' : 'bg-gray-300'}`);
+    const githubStatusBadge = createElement('div', `w-10 h-10 rounded-full flex items-center justify-center ${githubUser ? 'bg-gray-800' : 'bg-gray-500'}`);
     githubStatusBadge.appendChild(createIcon(githubUser ? 'check' : 'close', 'text-white'));
     githubStatusCell.appendChild(githubStatusBadge);
 
@@ -200,7 +200,7 @@ async function renderBackupSettings() {
     const googleCard = createElement('div', 'bg-white rounded-xl shadow-sm');
 
     const googleStatusCell = createElement('div', 'ios-list-cell');
-    const googleStatusBadge = createElement('div', `w-10 h-10 rounded-full flex items-center justify-center ${googleUser ? 'bg-green-500' : 'bg-gray-300'}`);
+    const googleStatusBadge = createElement('div', `w-10 h-10 rounded-full flex items-center justify-center ${googleUser ? 'bg-green-500' : 'bg-gray-500'}`);
     googleStatusBadge.appendChild(createIcon(googleUser ? 'check' : 'close', 'text-white'));
     googleStatusCell.appendChild(googleStatusBadge);
 

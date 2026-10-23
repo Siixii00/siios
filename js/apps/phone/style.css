@@ -1,4 +1,7 @@
+/* 這個 App 是深色設計（白字）：根元素要有深色底，否則在淺色頁面上整頁白字看不見 */
 .phone-app {
+    background: #0f1115;
+    color: #fff;
     min-height: var(--app-h, 100vh);
     padding: 28px clamp(18px, 5vw, 48px) 40px;
     display: flex;

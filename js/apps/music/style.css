@@ -10,6 +10,8 @@
     --music-muted: #90a3c0;
     --music-primary: #7a8dff;
     --music-accent: #54e0c6;
+    background: var(--music-bg);
+    color: var(--music-text);
 }
 
 .music-header {
@@ -458,3 +460,9 @@ body.desktop-mode .companion-grid {
 body.desktop-mode .ai-tools-grid {
         grid-template-columns: 1fr;
     }
+
+/* 標題列文字：全域樣式把 .menu-title／.ios-back-btn 設成深色，這裡是深色底，要明確指定淺色 */
+.music-header .menu-title,
+.music-header .ios-back-btn {
+    color: var(--music-text) !important;
+}

@@ -8,6 +8,8 @@
     --ao3-border: rgba(155, 44, 44, 0.3);
     --ao3-text: #f5e9e4;
     --ao3-muted: rgba(245, 233, 228, 0.65);
+    background: var(--ao3-surface);
+    color: var(--ao3-text);
 }
 
 .ao3-header {
@@ -743,3 +745,9 @@ body.desktop-mode .worldsetting-item {
 body.desktop-mode .field-grid {
         grid-template-columns: 1fr;
     }
+
+/* 標題列文字：這裡是深色底，要明確指定淺色 */
+.ao3-header .menu-title,
+.ao3-header .ios-back-btn {
+    color: var(--ao3-text) !important;
+}

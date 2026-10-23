@@ -8,6 +8,8 @@
   --rarity-5: #f8b040;
   --rarity-4: #a040a0;
   --rarity-3: #4080c0;
+  background: var(--arcade-bg);
+  color: var(--arcade-text);
 }
 
 :where(body[data-app="arcade"]) .arcade-app .page {

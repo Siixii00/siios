@@ -123,6 +123,7 @@ async function renderChatSettings() {
         const card = createElement('div', `theme-card ${t.id === currentTheme ? 'active' : ''}`);
         card.dataset.id = t.id;
         card.style.background = t.vars.chatBg;
+        card.style.color = t.vars.bubbleLeftText; // 深色主題的卡片要用淺色字
         card.style.borderRadius = '12px';
         card.style.padding = '16px';
         card.style.cursor = 'pointer';

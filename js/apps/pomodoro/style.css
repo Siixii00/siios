@@ -6,6 +6,9 @@
     --accent: #f25f5c;
     --accent-2: #f48a7f;
     --safe-top: env(safe-area-inset-top, 40px);
+    min-height: var(--app-h, 100vh);
+    background: var(--bg-color);
+    color: var(--text-main);
 }
 
 :where(body[data-app="pomodoro"]) .pomodoro-app .page {

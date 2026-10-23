@@ -19,7 +19,10 @@
     box-sizing: border-box;
 }
 
+/* 深色設計（白字）：根元素要有深色底 */
 .ig-app {
+    background: #0b0d11;
+    color: #f7f9ff;
     max-width: 480px;
     margin: 0 auto;
     height: var(--app-h, 100vh);
