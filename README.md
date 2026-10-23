@@ -298,6 +298,7 @@ A：到 Cloudflare 該 Worker 的 Variables and Secrets 換一組新的，再回
 - 各 Worker 的金鑰（`MCP_API_KEY`、`SYNTH_TOKEN`、Discord Token）存在 Cloudflare 的 Secrets，不要放進程式碼或貼到公開地方。
 - Discord Worker 有**存取密鑰**（`ACCESS_KEY`）：PWA 要帶密鑰、Discord 使用者要先 `/auth`。密鑰請用長亂數，不要公開；懷疑外洩就換掉 `ACCESS_KEY`、重新部署並在 Discord 執行 `/auth-reset`。
 - 年齡確認只存在本機；未滿 18 歲時，成人內容會鎖起來。
+- **研究參與（選填，預設關閉）**：開發者若有為論文開啟，設定裡會出現「研究參與」。要自己讀完說明、同意後才會開始；只送「匿名編號＋週別＋這週用過哪些 App 的名稱」，**不含任何內容、不含個人資料**，未滿 18 歲看不到、也不會送出，隨時可退出並刪除資料。詳細說明與保證見 [docs/RESEARCH_DATA.md](docs/RESEARCH_DATA.md)；接收端見 [research-worker/](research-worker/README.md)。
 
 ---
 

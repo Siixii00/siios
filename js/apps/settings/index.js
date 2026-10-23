@@ -4,6 +4,7 @@ import { SettingsDB } from '../../db.js';
 import { isAdult, ageOf, getBirthdate, unlockDate, fmtDate, toBirthString, saveBirthdate } from '../../core/age-gate.js';
 import { createToast } from '../../components.js';
 import { askForm } from '../../core/dialogs.js';
+import { RESEARCH_ENDPOINT } from '../../core/research-config.js';
 
 async function renderSettings() {
     const githubUser = await SettingsDB.get('github_user') || null;
@@ -114,6 +115,13 @@ async function renderSettings() {
             desc: '讓活動記錄在電腦和手機間自動同步',
             path: '/settings/cross-device'
         },
+        ...(RESEARCH_ENDPOINT ? [{
+            icon: 'science',
+            iconBg: 'bg-teal-500',
+            title: '研究參與（選填）',
+            desc: '匿名協助論文研究；預設關閉，可隨時退出',
+            path: '/settings/research'
+        }] : []),
         {
             icon: 'backup',
             iconBg: 'bg-gradient-to-r from-blue-500 to-purple-600',

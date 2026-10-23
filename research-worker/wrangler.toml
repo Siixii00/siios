@@ -1,0 +1,16 @@
+name = "siios-research-worker"
+main = "src/index.js"
+compatibility_date = "2024-09-01"
+
+# 部署步驟（見 README.md）：
+#   npx wrangler d1 create siios-research-db      ← 把輸出的 database_id 填在下面
+#   npx wrangler d1 execute siios-research-db --remote --file=schema.sql
+#   npx wrangler deploy
+[[d1_databases]]
+binding = "DB"
+database_name = "siios-research-db"
+database_id = "<你的 D1 database_id>"
+
+[vars]
+# 只接受來自這個網站的請求（你的 PWA 網址，例如 https://<帳號>.github.io）；留空 = 接受任何來源
+ALLOWED_ORIGIN = ""

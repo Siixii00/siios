@@ -92,7 +92,8 @@ async function loadApps() {
         import('./settings/discord-user-binding.js'),
         import('./settings/discord-guide.js'),
         import('./settings/activity-privacy-settings.js'),
-        import('./settings/cross-device-settings.js')
+        import('./settings/cross-device-settings.js'),
+        import('./settings/research-settings.js')
     ];
 
     const results = await Promise.allSettled(appModules);
@@ -107,6 +108,21 @@ async function loadApps() {
 
     initialized = true;
     return apps;
+}
+
+// 研究參與（選填）：只在使用者同意後才會記「用過哪個 App」；沒同意只是本機計數。細節見 core/research.js
+function trackAppOpen(appId) {
+    import('../core/research.js').then(async m => {
+        await m.recordAppOpen(appId);
+        if (!(await m.shouldInvite())) return;
+        // 等頁面畫好再問（否則對話框會被頁面重繪蓋掉）；使用者已經離開這個 App 就先不問
+        await new Promise(r => setTimeout(r, 1500));
+        if (document.body.dataset.app !== appId || !(await m.shouldInvite())) return;
+        await m.dismissInvite(); // 只問一次
+        const { askConfirm } = await import('../core/dialogs.js');
+        const yes = await askConfirm('開發者在做一份論文研究，想了解大家用過哪些 App（匿名、不含任何內容，隨時可退出）。想看看詳細說明嗎？', { title: '邀請你參加研究', confirmLabel: '了解更多', cancelLabel: '不用了' });
+        if (yes) Router.navigate('/settings/research');
+    }).catch(() => {});
 }
 
 async function registerRoutes() {
@@ -127,6 +143,7 @@ async function registerRoutes() {
 
                     // 讓各 App 樣式表裡以 :where(body[data-app="…"]) 限定的規則只在自己的頁面生效（不同 App 常用同樣的 class 名稱）
                     document.body.dataset.app = app.id;
+                    trackAppOpen(app.id);
 
                     try {
                         if (app.stylesPath) {
