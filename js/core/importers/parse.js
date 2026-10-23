@@ -97,13 +97,34 @@ const RISK_PATTERNS = [
     { id: 'not-ai', label: '要求 AI 否認自己是 AI', re: /you are not an? (ai|language model|assistant)|never (say|mention|reveal) (that )?you are an? (ai|bot)|你不是\s*(ai|人工智慧|語言模型)/i },
     { id: 'script', label: '含 SillyTavern 專用的腳本巨集（這個 App 不支援，會原樣留在文字裡）', re: /\{\{\s*(setvar|getvar|addvar|incvar|random|roll|pick|reverse|idle_duration|lastmessage)\b|<\|im_(start|end)\|>|\[\s*system\s*(note|prompt)?\s*:/i },
     { id: 'adult', label: '含成人內容的標記', re: /\bnsfw\b|\bexplicit\b|\br-?18\b|18\+|成人向|色情|情色/i },
-    // 涉及未成年的性內容：不提供匯入（不只是提醒）
-    { id: 'minor-sexual', severe: true, label: '疑似涉及未成年角色的性內容', re: /\b(loli|shota|lolicon|underage|child)\b[^.\n]{0,80}\b(sex|sexual|nsfw|erotic|fuck|rape)|\b(sex|sexual|nsfw|erotic|fuck|rape)\w*[^.\n]{0,80}\b(loli|shota|underage|child)\b|未成年[^。\n]{0,40}(性|色情|情色|做愛)|(性|色情|情色)[^。\n]{0,40}未成年|蘿莉[^。\n]{0,30}(性|色情|做愛)/i }
 ];
+
+// 涉及未成年角色的性內容：不提供匯入（不只是警告）。為了不誤擋正常的卡，要「同一句或相鄰的下一句」裡同時有
+// 未成年的字眼和性相關的字眼，而且那句話沒有否定（例如「禁止未成年內容」「no underage content」）。
+// 這是自動判斷，可能誤判；被擋下時會顯示觸發的那一句，內容沒問題的話改掉那句再匯入即可。
+const MINOR_TERMS = /\b(loli|lolicon|shota|shotacon|underage|under-age|minor child)\b|未成年|蘿莉|正太|幼女|幼童|\b(?:[1-9]|1[0-7])[ -]?(?:years?|yrs?)[ -]?old\b|\b(?:[1-9]|1[0-7])\s*歲/i;
+const SEXUAL_TERMS = /\b(sex|sexual|nsfw|erotic|porn|fuck|rape|molest|nude)\w*|性愛|性行為|做愛|色情|情色|強暴|猥褻|裸體/i;
+const ANY_NEGATION = /\b(no|not|never|without|forbid\w*|prohibit\w*|avoid\w*|banned?)\b|禁止|不含|沒有|不可以|不得|避免|不會|不允許|不涉及|皆已成年|已成年/i;
+const NEGATION_BEFORE = /(\bno\b|\bnot\b|\bnever\b|\bwithout\b|\bforbid\w*|\bprohibit\w*|\bavoid\w*|\bban\w*|\bnon-?|禁止|不含|沒有|不可以|不得|避免|不會|不允許|不涉及)[^.。!！?？\n]{0,25}$/i;
+
+export function detectMinorSexual(text) {
+    const sentences = str(text).split(/(?<=[.。!！?？\n])/);
+    for (let i = 0; i < sentences.length; i++) {
+        const m = MINOR_TERMS.exec(sentences[i]);
+        if (!m) continue;
+        if (ANY_NEGATION.test(sentences[i]) || NEGATION_BEFORE.test(sentences[i].slice(0, m.index))) continue; // 「禁止未成年內容」這類
+        const next = sentences[i + 1] || '';
+        const sexual = SEXUAL_TERMS.test(sentences[i]) ? sentences[i] : (SEXUAL_TERMS.test(next) && !ANY_NEGATION.test(next) ? next : '');
+        if (sexual) return (sentences[i].trim() + (sexual === next ? ' ' + next.trim() : '')).slice(0, 200);
+    }
+    return null;
+}
 
 export function assessCardRisk(texts) {
     const hay = (Array.isArray(texts) ? texts : [texts]).map(str).join('\n');
-    const flags = RISK_PATTERNS.filter(r => r.re.test(hay)).map(r => ({ id: r.id, label: r.label, severe: !!r.severe }));
+    const flags = RISK_PATTERNS.filter(r => r.re.test(hay)).map(r => ({ id: r.id, label: r.label, severe: false }));
+    const excerpt = detectMinorSexual(hay);
+    if (excerpt) flags.push({ id: 'minor-sexual', label: '疑似涉及未成年角色的性內容', severe: true, excerpt });
     return { flags, blocked: flags.some(f => f.severe) };
 }
 

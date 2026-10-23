@@ -42,7 +42,7 @@ async function renderImportSettings() {
     main.appendChild(createElement('div', 'text-sm text-ios-muted', {
         textContent: '把原本在 SillyTavern、ChatGPT、Claude 或其他地方的角色、聊天紀錄與使用者人設搬過來。支援：Tavern 角色卡（JSON／PNG）、SillyTavern 聊天（.jsonl）與設定檔（人設）、ChatGPT／Claude 匯出的 conversations.json、純文字對話（「名字：內容」）。認得的格式完全在本機轉換，不會送到任何地方。'
     }));
-    const stNote = createElement('div', '', { textContent: '⚠ SillyTavern 角色卡不能直接當作這個 App 的角色使用：它是別的軟體的格式，而且可能來自任何人，可能夾帶要求 AI 無視規則、解除限制的提示詞。匯入時會自動偵測並標示風險，額外的系統提示預設不匯入，你要先看過內容、勾選確認才能匯入。' });
+    const stNote = createElement('div', '', { textContent: '⚠ SillyTavern 角色卡不能直接當作這個 App 的角色使用：它是別的軟體的格式，而且可能來自任何人，可能夾帶要求 AI 無視規則、解除限制的提示詞。匯入時會自動偵測並標示風險，額外的系統提示預設不匯入，你要先看過內容、勾選確認才能匯入。唯一會被直接擋下、不提供匯入的是「涉及未成年角色的性內容」（自動判斷，可能誤判，被擋下時會告訴你是哪一句）。' });
     stNote.style.cssText = WARN;
     main.appendChild(stNote);
 
@@ -184,7 +184,12 @@ async function renderImportSettings() {
             const box = createElement('div');
             box.style.cssText = blocked ? DANGER : WARN;
             box.appendChild(createElement('b', '', { textContent: blocked ? '⛔ 無法匯入這張角色卡' : '⚠ 這是 SillyTavern 角色卡（別的軟體的格式）' }));
-            if (blocked) box.appendChild(createElement('div', '', { textContent: '偵測到疑似涉及未成年角色的性內容，不提供匯入。' }));
+            if (blocked) {
+                const f = risk.flags.find(x => x.id === 'minor-sexual');
+                box.appendChild(createElement('div', '', { textContent: '偵測到疑似涉及未成年角色的性內容，這類內容不提供匯入。' }));
+                if (f?.excerpt) box.appendChild(createElement('div', 'text-xs', { textContent: `觸發的那一句：「${f.excerpt}」` })).style.cssText = 'margin-top:6px;white-space:pre-wrap;word-break:break-word;';
+                box.appendChild(createElement('div', 'text-xs', { textContent: '這是自動判斷，可能誤判。如果內容沒有問題，請改掉那一句（例如改掉被誤判的字眼）再重新匯入。' })).style.marginTop = '6px';
+            }
             else box.appendChild(createElement('div', '', { textContent: '來源不明的角色卡可能夾帶要求 AI 無視規則的提示詞，或你不想要的內容。請先看過內容再決定。' }));
             if (risk.flags.length) {
                 const ul = createElement('ul', 'text-xs');

@@ -39,6 +39,35 @@ test('assessCardRisk：涉及未成年的性內容會被擋下（不提供匯入
     assert.equal(assessCardRisk('a loli character, explicit sex scene').blocked, true);
     assert.equal(assessCardRisk('未成年角色的色情內容').blocked, true);
     assert.equal(assessCardRisk('The child was playing in the park. NSFW tag is elsewhere.').blocked, false);
+    assert.equal(assessCardRisk('She is a 16 year old girl. Explicit sexual roleplay.').blocked, true);
+    assert.equal(assessCardRisk('她今年 15 歲。色情劇情。').blocked, true);
+    assert.equal(assessCardRisk('正太角色的性愛場景').blocked, true);
+});
+
+test('assessCardRisk：不要誤擋正常的卡（否定句、成人、童年、不同句子、年齡 18 以上）', () => {
+    const ok = t => assert.equal(assessCardRisk(t).blocked, false, t);
+    ok('This card contains NSFW content. No underage characters are allowed.');
+    ok('禁止未成年內容，本卡片含色情情節，所有角色皆已成年。');
+    ok('A childhood friend who grew up with the user. Explicit sexual content between adults.');
+    ok('She is a 500 year old vampire. NSFW.');
+    ok('她今年 25 歲，是成人，內容含性愛場景。');
+    ok('The minor injury healed quickly. Mature themes: sex.');
+    ok('未成年人不得使用。\n本卡含情色內容。'); // 未成年與性字眼在不同句子
+    ok('Strictly no loli or shota. This is an adult NSFW card.');
+    ok('溫柔的圖書館員，喜歡安靜的下午。');
+});
+
+test('否定詞要是完整單字才算（known、another、nothing 裡的 no 不能當成否定而放行）', () => {
+    assert.equal(assessCardRisk('Another known underage girl. Explicit sex scene.').blocked, true);
+    assert.equal(assessCardRisk('She knows nothing. She is underage. Sexual roleplay.').blocked, true);
+});
+
+test('被擋下時會附上觸發的那一句，方便使用者判斷是不是誤判', () => {
+    const r = assessCardRisk('一位普通的角色。\nShe is an underage girl in an explicit sex scene.\n結尾。');
+    const f = r.flags.find(x => x.id === 'minor-sexual');
+    assert.ok(f && f.severe);
+    assert.ok(f.excerpt.includes('underage girl') && !f.excerpt.includes('結尾'));
+    assert.equal(r.blocked, true);
 });
 
 test('角色卡解析會自動帶風險評估（含附帶世界書裡的內容）', () => {
