@@ -93,7 +93,8 @@ async function loadApps() {
         import('./settings/discord-guide.js'),
         import('./settings/activity-privacy-settings.js'),
         import('./settings/cross-device-settings.js'),
-        import('./settings/research-settings.js')
+        import('./settings/research-settings.js'),
+        import('./settings/import-settings.js')
     ];
 
     const results = await Promise.allSettled(appModules);

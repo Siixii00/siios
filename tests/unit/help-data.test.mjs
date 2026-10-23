@@ -10,7 +10,7 @@ test('說明資料：編號不重複、分類存在、每筆都有名稱與用�
         assert.ok(cats.has(e.cat), e.id + ' 分類不存在');
         assert.ok(e.name && e.what, e.id + ' 缺名稱或用途');
         assert.ok(Array.isArray(e.how) && Array.isArray(e.tips), e.id);
-        if (e.path) assert.match(e.path, /^\/[a-z0-9-]+$/, e.id);
+        if (e.path) assert.match(e.path, /^\/[a-z0-9-]+(\/[a-z0-9-]+)*$/, e.id);
     }
     assert.ok(QUICK_START.length >= 4 && FAQ.length >= 5);
 });

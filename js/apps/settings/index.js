@@ -115,6 +115,13 @@ async function renderSettings() {
             desc: '讓活動記錄在電腦和手機間自動同步',
             path: '/settings/cross-device'
         },
+        {
+            icon: 'move_to_inbox',
+            iconBg: 'bg-amber-500',
+            title: '匯入其他來源',
+            desc: '從 SillyTavern、ChatGPT、Claude 等搬來角色與聊天紀錄',
+            path: '/settings/import'
+        },
         ...(RESEARCH_ENDPOINT ? [{
             icon: 'science',
             iconBg: 'bg-teal-500',

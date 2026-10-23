@@ -2,6 +2,7 @@
 // 記憶來源（設定頁的勾選清單、預設啟用的來源、記憶的標籤都從這裡來）
 export const MEMORY_SOURCES = [
     { id: 'chat', name: '對話', icon: 'chat' },
+    { id: 'import', name: '匯入的舊紀錄', icon: 'move_to_inbox' },
     { id: 'discord', name: 'Discord', icon: 'forum' },
     { id: 'youtube', name: 'YouTube', icon: 'play_circle' },
     { id: 'instagram', name: 'Instagram', icon: 'camera_alt' },
