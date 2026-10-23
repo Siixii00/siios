@@ -350,7 +350,7 @@ async function renderWeverse(params) {
     const container = createElement('div', 'weverse-app');
     if (isArtistMode) container.classList.add('artist-mode');
     const header = createElement('header', 'wv-header');
-    header.innerHTML = '<div class="brand"><span class="brand-dot"></span></div><h1>Weverse</h1><div class="header-actions"><button class="icon-btn" id="user-settings-btn" title="粉絲設定"><i class="fas fa-user-cog"></i></button><button class="icon-btn hidden" id="artist-settings-btn" title="藝人設定"><i class="fas fa-cog"></i></button><button class="icon-btn" id="role-toggle" title="切換角色"><i class="fas fa-exchange-alt"></i></button></div>';
+    header.innerHTML = '<div class="brand"><span class="brand-dot"></span></div><h1>Weverse</h1><div class="header-actions"><button class="icon-btn" id="user-settings-btn" data-soon="粉絲設定" title="粉絲設定"><i class="fas fa-user-cog"></i></button><button class="icon-btn hidden" id="artist-settings-btn" data-soon="藝人設定" title="藝人設定"><i class="fas fa-cog"></i></button><button class="icon-btn" id="role-toggle" title="切換角色"><i class="fas fa-exchange-alt"></i></button></div>';
     if (isArtistMode) { header.querySelector('#user-settings-btn').classList.add('hidden'); header.querySelector('#artist-settings-btn').classList.remove('hidden'); }
     container.appendChild(header);
     const main = createElement('main', 'wv-main');
@@ -401,6 +401,8 @@ async function renderWeverse(params) {
     };
     container.onkeydown = (e) => { if (e.key === 'Enter' && e.target.id === 'post-input') { e.preventDefault(); addPost(); } };
     container.onclick = async (e) => {
+        const soon = e.target.closest('[data-soon]');
+        if (soon) { createToast(`${soon.dataset.soon}尚未開放`, 'info'); return; }
         const exploreBtn = e.target.closest('[data-action="explore"]');
         if (exploreBtn) { const explorePage = renderExploreGroupsPage(() => { container.classList.remove('show-explore'); explorePage.remove(); }); container.appendChild(explorePage); container.classList.add('show-explore'); return; }
         const backBtn = e.target.closest('[data-action="back-to-cards"]');

@@ -1321,7 +1321,10 @@ function createBiliBottomNav() {
             btn.appendChild(createElement('span', 'text-xs', { textContent: item.label }));
         }
         
-        btn.onclick = () => Router.navigate(item.path);
+        btn.onclick = () => {
+            if (item.isPost) return createToast('投稿功能尚未開放', 'info');
+            Router.navigate(item.path);
+        };
         nav.appendChild(btn);
     });
     
@@ -1726,7 +1729,9 @@ async function renderProfile() {
     card1.appendChild(createElement('div', 'font-semibold mb-2', { textContent: '常用功能' }));
     const grid1 = createElement('div', 'bili-grid');
     ['歷史紀錄', '我的收藏', '離線快取', '稍後再看'].forEach(label => {
-        grid1.appendChild(createElement('button', 'bili-grid-btn', { textContent: label }));
+        const gridBtn1 = createElement('button', 'bili-grid-btn', { textContent: label });
+        gridBtn1.onclick = () => createToast(`${label}功能尚未開放`, 'info');
+        grid1.appendChild(gridBtn1);
     });
     card1.appendChild(grid1);
     profile.appendChild(card1);
@@ -1756,7 +1761,9 @@ async function renderProfile() {
     card2.appendChild(createElement('div', 'font-semibold mb-2', { textContent: '創作中心' }));
     const grid2 = createElement('div', 'bili-grid');
     ['投稿', '直播中心', '草稿箱', '收益'].forEach(label => {
-        grid2.appendChild(createElement('button', 'bili-grid-btn', { textContent: label }));
+        const gridBtn = createElement('button', 'bili-grid-btn', { textContent: label });
+        gridBtn.onclick = () => createToast(`${label}功能尚未開放`, 'info');
+        grid2.appendChild(gridBtn);
     });
     card2.appendChild(grid2);
     profile.appendChild(card2);

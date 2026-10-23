@@ -297,7 +297,7 @@ function createPostElement(post) {
                     <div class="post-meta">${post.location}</div>
                 </div>
             </div>
-            <button class="icon-btn"><i class="fa-solid fa-ellipsis"></i></button>
+            <button class="icon-btn" data-soon="更多選項"><i class="fa-solid fa-ellipsis"></i></button>
         </div>
         <div class="post-image">
             <img src="${post.image}" alt="${post.user} post">
@@ -640,7 +640,7 @@ async function renderInstagram(params) {
             </div>
         </header>
         <section class="stories" aria-label="Stories">
-            <button class="story camera" aria-label="Add Story">
+            <button class="story camera" aria-label="Add Story" data-soon="新增限動（限動由右上角 ✨ 自動生成）">
                 <div class="avatar">
                     <i class="fa-solid fa-plus"></i>
                 </div>
@@ -675,6 +675,11 @@ async function renderInstagram(params) {
 
     await renderStories(container);
     await renderFeed(container);
+    container.addEventListener('click', e => {
+        const soon = e.target.closest('[data-soon]');
+        if (soon) createToast(`${soon.dataset.soon}尚未開放`, 'info');
+    });
+
     return { element: container, cleanup: null };
 }
 

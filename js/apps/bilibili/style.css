@@ -12,6 +12,8 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    padding-top: calc(45px + env(safe-area-inset-top, 0px)); /* 固定的標題列高度，內容才不會被蓋住 */
+    box-sizing: border-box;
     background: var(--bili-bg);
     color: var(--bili-text);
     overflow: hidden;
@@ -97,8 +99,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     padding: 10px;
-    padding-bottom: 70px;
-    margin-top: calc(44px + env(safe-area-inset-top, 0px));
+    padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px)); /* 讓出底部固定導覽列的高度 */
     padding-top: 16px;
     -webkit-overflow-scrolling: touch;
     position: relative;
@@ -448,7 +449,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-top: calc(44px + env(safe-area-inset-top, 0px));
     padding-top: 16px;
 }
 
@@ -614,7 +614,6 @@
     display: flex;
     flex-direction: column;
     gap: 14px;
-    margin-top: calc(44px + env(safe-area-inset-top, 0px));
     padding-top: 16px;
 }
 

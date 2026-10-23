@@ -51,13 +51,22 @@
 
 .ig-header .logo {
     font-family: 'Great Vibes', 'Inter', cursive;
-    font-size: 28px;
     margin: 0;
     letter-spacing: 0.03em;
     color: #f7f9ff;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    /* 不再用絕對定位置中：手機寬度時會被右邊的角色選單壓住 */
+    flex: 1 1 auto;
+    min-width: 0;
+    margin-left: 8px;
+    font-size: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ig-header .character-select {
+    max-width: 96px;
+    text-overflow: ellipsis;
 }
 
 :where(body[data-app="instagram"]) .icon-btn {

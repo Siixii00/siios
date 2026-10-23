@@ -37,16 +37,20 @@ class DebugLogger {
         btn.id = 'debug-logger-btn';
         btn.textContent = '●';
         btn.style.cssText = `
+            /* 貼在左側邊緣中間：不要蓋住右下角的導覽列與浮動按鈕 */
             position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 48px;
+            border-radius: 0 12px 12px 0;
             background: rgba(0, 0, 0, 0.7);
             color: white;
             border: none;
-            font-size: 24px;
+            padding: 0;
+            opacity: 0.75;
+            font-size: 14px;
             cursor: pointer;
             z-index: 9999;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
@@ -60,8 +64,8 @@ class DebugLogger {
         const style = document.createElement('style');
         style.textContent = `
             @keyframes pulse {
-                0%, 100% { transform: scale(1); }
-                50% { transform: scale(1.05); }
+                0%, 100% { transform: translateY(-50%) scale(1); }
+                50% { transform: translateY(-50%) scale(1.08); }
             }
         `;
         document.head.appendChild(style);

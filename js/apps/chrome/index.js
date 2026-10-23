@@ -761,6 +761,11 @@ function bindEvents(container) {
         }
     });
 
+    container.addEventListener('click', e => {
+        const soon = e.target.closest('[data-soon]');
+        if (soon) createToast(`${soon.dataset.soon}尚未開放`, 'info');
+    });
+
     const newTabBtn = container.querySelector('#new-tab-btn');
     const historyModal = container.querySelector('#history-modal');
     const historyManual = container.querySelector('#history-manual');
@@ -920,7 +925,7 @@ async function renderChrome(params) {
             <div class="search-card">
                 <i class="fas fa-search"></i>
                 <input type="text" placeholder="搜尋網址或關鍵字" id="search-input">
-                <button class="icon-btn"><i class="fas fa-microphone"></i></button>
+                <button class="icon-btn" data-soon="語音搜尋"><i class="fas fa-microphone"></i></button>
             </div>
 
             <div class="quick-grid" id="normal-quick-grid">
@@ -994,13 +999,13 @@ async function renderChrome(params) {
         </div>
 
         <nav class="bottombar">
-            <button class="icon-btn"><i class="fas fa-arrow-left"></i></button>
-            <button class="icon-btn"><i class="fas fa-arrow-right"></i></button>
+            <button class="icon-btn" data-soon="上一頁"><i class="fas fa-arrow-left"></i></button>
+            <button class="icon-btn" data-soon="下一頁"><i class="fas fa-arrow-right"></i></button>
             <button class="icon-btn primary" id="new-tab-btn">
                 <i class="fas fa-plus"></i>
             </button>
-            <button class="icon-btn"><i class="fas fa-layer-group"></i></button>
-            <button class="icon-btn"><i class="fas fa-ellipsis-h"></i></button>
+            <button class="icon-btn" data-soon="分頁總覽"><i class="fas fa-layer-group"></i></button>
+            <button class="icon-btn" data-soon="更多選項"><i class="fas fa-ellipsis-h"></i></button>
         </nav>
 
         <div class="history-modal" id="history-modal" hidden>

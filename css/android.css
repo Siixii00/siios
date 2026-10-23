@@ -210,3 +210,9 @@ html[data-sx-ui="android"] .ios-nav-bar-inner .ios-btn:first-child .material-sym
 html[data-sx-ui="android"] .ios-nav-bar-inner .ios-btn:first-child i { font-size: 24px; }
 html[data-sx-ui="android"] .ios-nav-bar-inner .ios-inline-title { position: static; transform: none; order: 1; margin-right: auto; font-size: 20px; font-weight: 500; pointer-events: auto; }
 html[data-sx-ui="android"] .ios-nav-bar-inner > *:last-child:not(.ios-inline-title):not(:first-child) { order: 2; }
+
+/* 固定的 .ios-nav-bar（Twitch、Bilibili、設定子頁等）要排在狀態列下面，否則返回鍵與右側按鈕被 26px 的狀態列蓋住、點不到；內容也要多讓出 26px */
+html[data-sx-ui="android"] .ios-nav-bar { top: 26px; }
+html[data-sx-ui="android"] .ios-nav-bar ~ main { margin-top: calc(70px + env(safe-area-inset-top, 0px)) !important; }
+html[data-sx-ui="android"] .twitch-app,
+html[data-sx-ui="android"] .bili-app { padding-top: calc(71px + env(safe-area-inset-top, 0px)); }
