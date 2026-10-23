@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "last_updated": "2026-10-23T07:05:10.487583",
-    "total_items": 61
+    "last_updated": "2026-10-23T13:09:07.381557",
+    "total_items": 55
   },
   "content": {
     "tech": [
@@ -9,307 +9,276 @@
         "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
         "url": "https://edjefferson.com/localwiki/",
         "source": "Hacker News",
-        "score": 98
+        "score": 624
+      },
+      {
+        "title": "OpenSSL 4.1.0",
+        "url": "https://github.com/openssl/openssl/releases/tag/openssl-4.1.0",
+        "source": "Hacker News",
+        "score": 14
+      },
+      {
+        "title": "Is this the new cyber normal?",
+        "url": "https://drew.silcock.dev/blog/is-this-the-new-cyber-normal/",
+        "source": "Hacker News",
+        "score": 96
+      },
+      {
+        "title": "Swedish government offices to ban ChatGPT and Claude",
+        "url": "https://www.sverigesradio.se/artikel/chat-gpt-och-claude-forbjuder-regeringskansliet",
+        "source": "Hacker News",
+        "score": 107
+      },
+      {
+        "title": "Job Loss and Cortisone Mania",
+        "url": "https://tilschuenemann.de/job-loss-cortisone-mania",
+        "source": "Hacker News",
+        "score": 45
       },
       {
         "title": "Docker is weird",
         "url": "https://codeandcake.dev/posts/2026-10-22-docker-is-weird",
         "source": "Hacker News",
-        "score": 368
+        "score": 597
       },
       {
-        "title": "LLMs are making formal software verification feasible at a much larger scale",
-        "url": "https://www.anthropic.com/research/formal-verification",
+        "title": "Remove pgrust: the entry is cheating",
+        "url": "https://github.com/ClickHouse/ClickBench/pull/2165",
         "source": "Hacker News",
-        "score": 290
+        "score": 73
       },
       {
-        "title": "The same AI request emits 8.5 times more CO2 in Texas than in Sweden",
-        "url": "https://berget.ai/en/blog/per-request-co2-press-release",
+        "title": "The alien space of science: Coherent but cognitively unavailable directions",
+        "url": "https://arxiv.org/abs/2603.01092",
         "source": "Hacker News",
-        "score": 6
-      },
-      {
-        "title": "This I Believe (1952)",
-        "url": "https://www.awakin.org/v2/read/view.php?tid=468",
-        "source": "Hacker News",
-        "score": 57
-      },
-      {
-        "title": "How does Fable 5.1 hide messages in images?",
-        "url": "https://www.lesswrong.com/posts/WHEQps5PK8LrrcTAb/how-does-fable-5-1-hide-messages-in-images",
-        "source": "Hacker News",
-        "score": 14
+        "score": 115
       },
       {
         "title": "The foolishness of \"natural language programming\" (1978)",
         "url": "https://www.cs.utexas.edu/~EWD/transcriptions/EWD06xx/EWD667.html",
         "source": "Hacker News",
-        "score": 115
+        "score": 240
       },
       {
-        "title": "The alien space of science: Coherent but cognitively unavailable directions",
-        "url": "https://arxiv.org/abs/2603.01092",
+        "title": "Dutch government had hacked into Jared Kushner's phone",
+        "url": "https://twitter.com/jaredkushner/status/2113376217415958767",
         "source": "Hacker News",
-        "score": 20
+        "score": 140
       },
       {
-        "title": "The HTML-in-Canvas API origin trial",
-        "url": "https://developer.chrome.com/blog/html-in-canvas-origin-trial",
+        "title": "How does Fable 5.1 hide messages in images?",
+        "url": "https://www.lesswrong.com/posts/WHEQps5PK8LrrcTAb/how-does-fable-5-1-hide-messages-in-images",
         "source": "Hacker News",
-        "score": 16
-      },
-      {
-        "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
-        "url": "https://github.com/NVIDIA/OpenShell",
-        "source": "Hacker News",
-        "score": 368
+        "score": 135
       },
       {
         "title": "Every AI model has the same \"controversial\" take on humans",
         "url": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
         "source": "Hacker News",
-        "score": 355
+        "score": 497
       },
       {
-        "title": "Run full iOS 16.5 firmware on Android Devices",
-        "url": "https://github.com/oosexgang/hackios-xnu-kernel",
+        "title": "No Need for Retirement When Utopia Is Around the Corner",
+        "url": "https://blog.jim-nielsen.com/2026/skip-retirement-for-utopia/",
         "source": "Hacker News",
-        "score": 397
+        "score": 7
       },
       {
-        "title": "Objects, attributes, maps, oh my",
-        "url": "https://bernsteinbear.com/blog/object-shapes/",
+        "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+        "url": "https://github.com/NVIDIA/OpenShell",
         "source": "Hacker News",
-        "score": 11
+        "score": 433
       },
       {
-        "title": "We have traits at home",
-        "url": "https://www.axelmagn.com/blog/202610-zig-traits/",
+        "title": "Show HN: OnKey – I'm a bad singer, so I built an app to show where I'm off-key",
+        "url": "https://github.com/dsmurrell/onkey",
         "source": "Hacker News",
-        "score": 9
-      },
-      {
-        "title": "Jank – The native Clojure dialect with seamless C++ interop",
-        "url": "https://jank-lang.org/",
-        "source": "Hacker News",
-        "score": 71
+        "score": 84
       }
     ],
     "ai": [
       {
-        "title": "LLMs are making formal software verification feasible at a much larger scale",
-        "url": "https://www.anthropic.com/research/formal-verification",
+        "title": "Swedish government offices to ban ChatGPT and Claude",
+        "url": "https://www.sverigesradio.se/artikel/chat-gpt-och-claude-forbjuder-regeringskansliet",
         "source": "Hacker News AI",
-        "score": 290
-      },
-      {
-        "title": "The same AI request emits 8.5 times more CO2 in Texas than in Sweden",
-        "url": "https://berget.ai/en/blog/per-request-co2-press-release",
-        "source": "Hacker News AI",
-        "score": 6
+        "score": 107
       },
       {
         "title": "The alien space of science: Coherent but cognitively unavailable directions",
         "url": "https://arxiv.org/abs/2603.01092",
         "source": "Hacker News AI",
-        "score": 20
-      },
-      {
-        "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
-        "url": "https://github.com/NVIDIA/OpenShell",
-        "source": "Hacker News AI",
-        "score": 368
+        "score": 115
       },
       {
         "title": "Every AI model has the same \"controversial\" take on humans",
         "url": "https://www.modelcompare.ai/blog/ai-models-controversial-take-on-humans",
         "source": "Hacker News AI",
-        "score": 355
+        "score": 497
       },
       {
-        "title": "We have traits at home",
-        "url": "https://www.axelmagn.com/blog/202610-zig-traits/",
+        "title": "OpenShell – A safe, private runtime for fleets of autonomous AI agents",
+        "url": "https://github.com/NVIDIA/OpenShell",
         "source": "Hacker News AI",
-        "score": 9
-      },
-      {
-        "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
-        "url": "https://simedw.com/2026/10/21/world-model-terminal/",
-        "source": "Hacker News AI",
-        "score": 526
-      },
-      {
-        "title": "Railpass",
-        "url": "https://train.samismith.com/",
-        "source": "Hacker News AI",
-        "score": 90
+        "score": 433
       },
       {
         "title": "Ask HN: If the models are so good, why doesn't OpenAI just start 100 companies?",
         "url": "https://news.ycombinator.com/item?id=50200997",
         "source": "Hacker News AI",
-        "score": 82
+        "score": 252
+      },
+      {
+        "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
+        "url": "https://simedw.com/2026/10/21/world-model-terminal/",
+        "source": "Hacker News AI",
+        "score": 565
+      },
+      {
+        "title": "LLMs are making formal software verification feasible at a much larger scale",
+        "url": "https://www.anthropic.com/research/formal-verification",
+        "source": "Hacker News AI",
+        "score": 378
+      },
+      {
+        "title": "Disney Raising Prices Days After Confirming Ads Will Now Show Up on Every Tier",
+        "url": "https://www.tvfandomlounge.com/disney-plus-price-hike-ads-premium-tier-nielsen-emmys-2026/",
+        "source": "Hacker News AI",
+        "score": 21
+      },
+      {
+        "title": "Hand-bent after 3D printing, Oberdoerfer and Krebs' Bend chair",
+        "url": "https://www.designboom.com/design/hand-bent-3d-printing-oberdoerfer-krebs-digital-fabrication-bend-chair-ukurant-3daysofdesign/",
+        "source": "Hacker News AI",
+        "score": 15
+      },
+      {
+        "title": "Railpass",
+        "url": "https://train.samismith.com/",
+        "source": "Hacker News AI",
+        "score": 115
       },
       {
         "title": "Jailbreaking the Switch 2",
         "url": "https://pepsipu.com/blog/2026-10-switch2-jailbreak-ns2jb/",
         "source": "Hacker News AI",
-        "score": 771
+        "score": 787
       },
       {
-        "title": "Restoring a Soviet ES-4001 Mainframe Control Panel",
-        "url": "https://hackaday.com/2026/10/22/restoring-a-soviet-es-4001-mainframe-control-panel/",
+        "title": "We have traits at home",
+        "url": "https://www.axelmagn.com/blog/202610-zig-traits/",
         "source": "Hacker News AI",
-        "score": 5
-      },
-      {
-        "title": "Using LLM for confidence scoring is a bad idea",
-        "url": "https://rumple.github.io/blog/2026/10/20/asking-llm-for-confidence.html",
-        "source": "Hacker News AI",
-        "score": 206
+        "score": 21
       }
     ],
     "news": [
       {
-        "title": "Hospitals deliberately targeted by Sudan's RSF fighters, BBC finds",
-        "url": "https://www.bbc.co.uk/news/articles/c54g1kxw4nvvo?at_medium=RSS&at_campaign=rss",
+        "title": "Anti-terror police investigate as one person killed in shooting near Paris",
+        "url": "https://www.bbc.co.uk/news/articles/c6ev38dj1g8zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Powerful earthquake hits Tibet killing 16 people, reports say",
-        "url": "https://www.bbc.co.uk/news/articles/ck5ynd1z6e83o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Trump says Musk has restored access to Ukraine's Starlink network",
+        "title": "Ukraine says Starlink still restricted after Trump says limits lifted",
         "url": "https://www.bbc.co.uk/news/articles/cq74pjpmx0e8o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "L'Oreal says weight loss drugs are impacting beauty and skincare sales",
-        "url": "https://www.bbc.co.uk/news/articles/cvglwgwpgrlpo?at_medium=RSS&at_campaign=rss",
+        "title": "Two Israeli soldiers killed in attack by suspected Palestinian gunmen in West Bank",
+        "url": "https://www.bbc.co.uk/news/articles/cq4g1p974wxko?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Trump ordered to answer questions under oath in BBC lawsuit ",
-        "url": "https://www.bbc.co.uk/news/articles/cmy0ryjx7741o?at_medium=RSS&at_campaign=rss",
+        "title": "Seven shot dead by gunmen at church funeral in Jordan, state media say",
+        "url": "https://www.bbc.co.uk/news/articles/ck87zlpzny15o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Nigeria and Kenya Ebola patients may have crossed paths at Uganda airport, officials say",
+        "title": "Cyprus police open investigation into financial affairs of Roman Abramovich",
+        "url": "https://www.bbc.co.uk/news/articles/c875p1yy90ryo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Denmark to ban mink farming in government U-turn",
+        "url": "https://www.bbc.co.uk/news/articles/c59vzjm118j1o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Woman with Ebola in Nigeria confirmed as wife of Swiss diplomat",
         "url": "https://www.bbc.co.uk/news/articles/cmwy4wlzqz3zo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
-    "art": [
-      {
-        "title": " Olivia Rodrigo just showed creatives how to deal with false design allegations in style ",
-        "url": "https://www.creativebloq.com/news/olivia-rodrigo-just-showed-creatives-how-to-deal-with-false-design-allegations-in-style",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Quote of the Day by George Lucas: \"Failure is another word for experience\" ",
-        "url": "https://www.creativebloq.com/inspiration/quote-of-the-day-by-george-lucas-failure-is-another-word-for-experience",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " how humour can enhance the storytelling in your art ",
-        "url": "https://www.creativebloq.com/how-to/how-humour-can-enhance-the-storytelling-in-your-art",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " The ambitious EA Sports rebrand looks great from every angle ",
-        "url": "https://www.creativebloq.com/news/the-ambitious-ea-sports-rebrand-looks-great-from-every-angle",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " There's suddenly $1,000 off this absolute beast of a creative laptop cut out for heavy video editing and 3D rendering ",
-        "url": "https://www.creativebloq.com/deals/theres-suddenly-usd1-000-off-this-absolute-beast-of-a-creative-laptop-cut-out-for-heavy-video-editing-and-3d-rendering",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Dispatch's new Deluxe Edition lets you play the whole game as storyboard animatics ",
-        "url": "https://www.creativebloq.com/news/dispatchs-new-deluxe-edition-lets-you-play-the-whole-game-as-storyboard-animatics",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Apple Music's splashy new logo is gorgeous – so why isn't the new app icon? ",
-        "url": "https://www.creativebloq.com/news/apple-musics-splashy-new-logo-is-gorgeous-so-why-isnt-the-app-icon",
-        "source": "Creative Bloq"
-      }
-    ],
+    "art": [],
     "science": [
+      {
+        "title": "One of Earth’s most powerful supervolcanoes is refilling with fresh magma",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261023003214.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Nearly 20% of Switzerland’s glacier ice has vanished in just five years",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261022081316.htm",
+        "source": "Science Daily"
+      },
+      {
+        "title": "Dental implants can hijack your immune system, scientists discover",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261022081314.htm",
+        "source": "Science Daily"
+      },
       {
         "title": "Cambridge scientists create a $10 chip that could put a medical lab on your wrist",
         "url": "https://www.sciencedaily.com/releases/2026/10/261022081312.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Birds are more afraid of women than men. Scientists have no idea why",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261021231250.htm",
+        "title": "Breakthrough PTSD treatment achieves 68% remission rate in clinical trial",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261022081309.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Oxford scientists discover how viruses build themselves without a blueprint",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261021231248.htm",
+        "title": "MIT scientists build a tiny robot that swims using living muscle cells",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261022081308.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Nearly 3,000 exploding stars challenge our understanding of the Universe",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261021231244.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "40 years later, Chernobyl's nuclear fallout is not what scientists expected",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261021231241.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "NASA’s Curiosity rover reveals a spectacular new view of Mars with a mystery on the horizon",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261021231238.htm",
-        "source": "Science Daily"
-      },
-      {
-        "title": "Scientists discover a surprising secret behind the human brain’s wrinkles",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261021231235.htm",
+        "title": "Scientists discover a surprising double benefit of exercise for Parkinson’s",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261022081306.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
-        "title": "8 Cyberpunk 2077 Replay Ideas to Make Night City Feel Brand New",
-        "url": "https://www.polygon.com/cyberpunk-2077-replay-ideas/",
+        "title": "6 Best Upcoming Steam Games Worth Adding to Your Wishlist",
+        "url": "https://www.polygon.com/steam-wishlister-oct-23/",
         "source": "Polygon"
       },
       {
-        "title": "'Mass Effect Universe' Leak Promised What Fans Have Waited Decades For",
-        "url": "https://www.polygon.com/mass-effect-universe-new-characters-male-quarian-asari-krogan-aliens/",
+        "title": "Carrie could be a true crime story",
+        "url": "https://www.polygon.com/video/carrie-could-be-a-true-crime-story/",
         "source": "Polygon"
       },
       {
-        "title": "Half-Life 3 Rumors Reignite After Valve Employee Lets Codename Slip",
-        "url": "https://www.polygon.com/valve-half-life-3-hlx/",
+        "title": "What makes a good \"last episode\" of Futurama?",
+        "url": "https://www.polygon.com/video/what-makes-a-good-last-episode-of-futurama/",
         "source": "Polygon"
       },
       {
-        "title": "'Clayface' Officially Sets Up Another Iconic Batman Villain in the DC Universe",
-        "url": "https://www.polygon.com/clayface-joker-easter-eggs/",
+        "title": "15 Years Later, J.J. Abrams' Near-Perfect Sci-Fi Thriller Is Officially Back on Streaming",
+        "url": "https://www.polygon.com/kyle-chandler-super-8-streaming-peacock/",
         "source": "Polygon"
       },
       {
-        "title": "Everything We Know About the PS6, Sony’s Next-Gen Console",
-        "url": "https://www.polygon.com/ps6-playstation-6-release-date-price/",
+        "title": "25 Years Later, GTA 3 Is Still the Most Fascinating Open-World Experiment",
+        "url": "https://www.polygon.com/gta-3-retrospective/",
         "source": "Polygon"
       },
       {
-        "title": "Everything We Know About Project Helix, the Next Xbox",
-        "url": "https://www.polygon.com/next-xbox-console-release-date-price-project-helix/",
+        "title": "Starfighter Officially Broke a Star Wars Franchise Record Already",
+        "url": "https://www.polygon.com/star-wars-starfighter-ryan-gosling-most-expensive-movie/",
         "source": "Polygon"
       },
       {
-        "title": "'Avatar: Seven Havens' Producers Provide a Suspicious Answer About the Anomaly",
-        "url": "https://www.polygon.com/avatar-seven-havens-producers-interview-anomaly-vaatu-connection/",
+        "title": "Vinland Saga Creator Gives a Heartbreaking Update on the Anime's Third Season",
+        "url": "https://www.polygon.com/vinland-saga-season-3-creator-update-not-in-production/",
         "source": "Polygon"
       }
     ],
