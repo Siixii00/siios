@@ -1,167 +1,161 @@
 {
   "metadata": {
-    "last_updated": "2026-10-24T14:18:17.489129",
-    "total_items": 59
+    "last_updated": "2026-10-24T17:54:48.182698",
+    "total_items": 58
   },
   "content": {
     "tech": [
       {
-        "title": "I Don't Understand Quantum Physics (2018)",
-        "url": "https://www.southampton.ac.uk/~doug/quantum_physics/index.html",
+        "title": "Roku developer repositories moved from GitHub to GitLab",
+        "url": "https://blog.roku.com/developer/gitlab-move",
         "source": "Hacker News",
-        "score": 153
+        "score": 109
+      },
+      {
+        "title": "The St. Helena 5 pence coin shows Jonathan, a roughly 190 year old tortoise",
+        "url": "https://de.numista.com/9866",
+        "source": "Hacker News",
+        "score": 36
+      },
+      {
+        "title": "FreeDNS",
+        "url": "https://freedns.afraid.org/",
+        "source": "Hacker News",
+        "score": 145
+      },
+      {
+        "title": "Neural chip decodes interactions between brain regions",
+        "url": "https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2/",
+        "source": "Hacker News",
+        "score": 39
+      },
+      {
+        "title": "Around a dozen banking apps began specifically permitting GrapheneOS",
+        "url": "https://grapheneos.social/@GrapheneOS/117492375462459244",
+        "source": "Hacker News",
+        "score": 530
       },
       {
         "title": "OBS Studio 33",
         "url": "https://github.com/obsproject/obs-studio/releases/tag/33.0.0",
         "source": "Hacker News",
-        "score": 276
-      },
-      {
-        "title": "One Must Fall 2097 Remastered",
-        "url": "https://github.com/Jared-woodruff/OMF-2097-Remastered/",
-        "source": "Hacker News",
-        "score": 8
-      },
-      {
-        "title": "Around a dozen banking apps began specifically permitting GrapheneOS",
-        "url": "https://grapheneos.social/@GrapheneOS/117492375462459244",
-        "source": "Hacker News",
-        "score": 315
-      },
-      {
-        "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
-        "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
-        "source": "Hacker News",
-        "score": 979
-      },
-      {
-        "title": "Physicists trap a single antimatter particle for a month",
-        "url": "https://www.scientificamerican.com/article/physicists-trap-a-single-antimatter-particle-for-a-month/",
-        "source": "Hacker News",
-        "score": 132
+        "score": 371
       },
       {
         "title": "Node2Shell evolves to HTTP2Shell, blast radius affects many HTTP libs and apps",
         "url": "https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497",
         "source": "Hacker News",
-        "score": 90
-      },
-      {
-        "title": "Today, we hacked what we'd set out to hack: the iPhone",
-        "url": "https://blog.calif.io/p/iphone",
-        "source": "Hacker News",
-        "score": 966
-      },
-      {
-        "title": "Appreciating the beauty of all your body's scars and scratches",
-        "url": "https://1000awesomethings.com/2026/10/08/576-appreciating-the-beauty-of-all-your-bodys-scars-and-scratches-4/",
-        "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Twelve years of distributed SQLite",
-        "url": "https://philipotoole.com/twelve-years-of-distributed-sqlite/",
-        "source": "Hacker News",
-        "score": 270
+        "score": 188
       },
       {
         "title": "TornadoVM 7 Enables GPU-Native Workloads from Java Applications",
         "url": "https://www.infoq.com/news/2026/10/tornadovm-7-gpu/",
         "source": "Hacker News",
-        "score": 6
+        "score": 61
       },
       {
-        "title": "How to run a city builder on 16 MHz",
-        "url": "https://larstofus.com/2025/11/16/how-to-run-a-city-builder-on-12-5-mhz/",
+        "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
+        "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
         "source": "Hacker News",
-        "score": 51
+        "score": 1031
       },
       {
-        "title": "Apple Music 404 Not Found",
-        "url": "https://music.apple.com/this-url-doesnt-exist",
+        "title": "Physicists trap a single antimatter particle for a month",
+        "url": "https://www.scientificamerican.com/article/physicists-trap-a-single-antimatter-particle-for-a-month/",
         "source": "Hacker News",
-        "score": 823
+        "score": 214
       },
       {
-        "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
-        "url": "https://edjefferson.com/localwiki/",
+        "title": "Cecilia Berdichevsky, Clementina expert (1961)",
+        "url": "https://en.wikipedia.org/wiki/Cecilia_Berdichevsky",
         "source": "Hacker News",
-        "score": 1439
+        "score": 11
       },
       {
-        "title": "How close can pure functional programming get to C?",
-        "url": "https://rtfeldman.com/fp-vs-c",
+        "title": "Today, we hacked what we'd set out to hack: the iPhone",
+        "url": "https://blog.calif.io/p/iphone",
         "source": "Hacker News",
-        "score": 168
+        "score": 1036
+      },
+      {
+        "title": "I Don't Understand Quantum Physics (2018)",
+        "url": "https://www.southampton.ac.uk/~doug/quantum_physics/index.html",
+        "source": "Hacker News",
+        "score": 211
+      },
+      {
+        "title": "GPU-unlock: FP/BF16 instruction issue rate on Nvidia 3000's cards",
+        "url": "https://github.com/Zagitta/gpu-unlock",
+        "source": "Hacker News",
+        "score": 86
+      },
+      {
+        "title": "Appreciating the beauty of all your body's scars and scratches",
+        "url": "https://1000awesomethings.com/2026/10/08/576-appreciating-the-beauty-of-all-your-bodys-scars-and-scratches-4/",
+        "source": "Hacker News",
+        "score": 65
       }
     ],
     "ai": [
       {
+        "title": "Neural chip decodes interactions between brain regions",
+        "url": "https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2/",
+        "source": "Hacker News AI",
+        "score": 39
+      },
+      {
         "title": "Around a dozen banking apps began specifically permitting GrapheneOS",
         "url": "https://grapheneos.social/@GrapheneOS/117492375462459244",
         "source": "Hacker News AI",
-        "score": 315
+        "score": 530
       },
       {
         "title": "A practical guide to AI image generation, from diffusion to agents",
         "url": "https://danielball.com/notes/ai_image_generation.html",
         "source": "Hacker News AI",
-        "score": 149
-      },
-      {
-        "title": "AI-Assisted Paper on Z-Library Cites a TorrentFreak Article That Doesn't Exist",
-        "url": "https://torrentfreak.com/ai-assisted-paper-on-z-library-cites-a-torrentfreak-article-that-doesnt-exist/",
-        "source": "Hacker News AI",
-        "score": 54
+        "score": 207
       },
       {
         "title": "Dessa: Conversation Model trained only on speech",
         "url": "https://block.xyz/dessa",
         "source": "Hacker News AI",
-        "score": 423
+        "score": 456
+      },
+      {
+        "title": "Oai-math-revised: a community hub for revising OpenAI's math write-ups",
+        "url": "https://terrytao.wordpress.com/2026/10/24/oai-math-revised-a-community-hub-for-revising-openais-math-write-ups/",
+        "source": "Hacker News AI",
+        "score": 5
+      },
+      {
+        "title": "AI-Assisted Paper on Z-Library Cites a TorrentFreak Article That Doesn't Exist",
+        "url": "https://torrentfreak.com/ai-assisted-paper-on-z-library-cites-a-torrentfreak-article-that-doesnt-exist/",
+        "source": "Hacker News AI",
+        "score": 84
       },
       {
         "title": "The Chalk and the Airplane",
         "url": "https://unintendedconsequenc.es/chalk-and-the-airplane/",
         "source": "Hacker News AI",
-        "score": 19
-      },
-      {
-        "title": "Hacker reverses Samsung TV, finds on-board AI listening OpenAI account suspended",
-        "url": "https://www.reddit.com/r/antiai/comments/1xdv3e5/hacker_reverse_engineers_his_samsung_tv_and_finds/",
-        "source": "Hacker News AI",
-        "score": 322
+        "score": 23
       },
       {
         "title": "Air Purifiers as White Noise Machines",
         "url": "https://www.jefftk.com/p/air-purifiers-as-white-noise-machines",
         "source": "Hacker News AI",
-        "score": 151
+        "score": 162
       },
       {
         "title": "Rise of collagen-eating microbes may help explain gaps in the fossil record",
         "url": "https://www.cam.ac.uk/research/news/rise-of-collagen-eating-microbes-may-help-explain-gaps-in-the-fossil-record",
         "source": "Hacker News AI",
-        "score": 62
+        "score": 69
       },
       {
         "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
         "url": "https://simedw.com/2026/10/21/world-model-terminal/",
         "source": "Hacker News AI",
-        "score": 629
-      },
-      {
-        "title": "A Cocktail Party in the Street: An Interview with Alan Stillman (2010)",
-        "url": "https://www.ediblegeography.com/a-cocktail-party-in-the-street-an-interview-with-alan-stillman/",
-        "source": "Hacker News AI",
-        "score": 10
-      },
-      {
-        "title": "A whirlwind tour of systemd-nspawn containers (2025)",
-        "url": "https://quantum5.ca/2025/03/22/whirlwind-tour-of-systemd-nspawn-containers/",
-        "source": "Hacker News AI",
-        "score": 51
+        "score": 632
       }
     ],
     "news": [
@@ -181,22 +175,27 @@
         "source": "BBC World"
       },
       {
-        "title": "Student movement takes Serbia's Vučić to the wire in neck-and-neck election",
-        "url": "https://www.bbc.co.uk/news/articles/cm1dwz311476o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Woman, 65, becomes second patient to die of Ebola in Kenya",
-        "url": "https://www.bbc.co.uk/news/articles/c6x2355448eyo?at_medium=RSS&at_campaign=rss",
+        "title": "Vanessa Trump says she is cancer-free six months after revealing diagnosis ",
+        "url": "https://www.bbc.co.uk/news/articles/cm1dwzvn6227o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
         "title": "Three released without charge after fatal arson attack in Ireland",
         "url": "https://www.bbc.co.uk/news/articles/cv0ld9571511o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
+      },
+      {
+        "title": "Woman, 65, becomes second patient to die of Ebola in Kenya",
+        "url": "https://www.bbc.co.uk/news/articles/c6x2355448eyo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " These premium earbuds have a game-changing feature that Apple AirPods will never get ",
+        "url": "https://www.creativebloq.com/deals/these-premium-earbuds-have-a-game-changing-feature-that-apple-airpods-will-never-get",
+        "source": "Creative Bloq"
+      },
       {
         "title": " How Ben & Jerry's became a beacon of brand bravery ",
         "url": "https://www.creativebloq.com/news/how-ben-and-jerrys-became-a-beacon-of-brand-bravery",
@@ -220,11 +219,6 @@
       {
         "title": " Headphones and speakers in a single device? The TDM Neo look wild ",
         "url": "https://www.creativebloq.com/news/headphones-and-speakers-in-a-single-device-the-tdm-neo-look-wild",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " GameMaker will let indie developers sell their games for free from 2027 ",
-        "url": "https://www.creativebloq.com/news/gamemaker-will-let-indie-developers-sell-their-games-for-free-from-2027",
         "source": "Creative Bloq"
       }
     ],
@@ -267,38 +261,38 @@
     ],
     "gaming": [
       {
-        "title": "'Wildwood' Is a \"Risky\" Movie — Just Like 'Coraline' Was 20 Years Ago",
-        "url": "https://www.polygon.com/wildwood-coraline-interview/",
+        "title": "The 20 Most-Played Steam Next Fest Demos Features Troublemaking Students, Farting Hippos",
+        "url": "https://www.polygon.com/steam-next-fest-october-2026-most-played-games/",
         "source": "Polygon"
       },
       {
-        "title": "Aaron Paul Originally Had A Much More Important Role In Clayface",
-        "url": "https://www.polygon.com/clayface-aaron-paul-cameo-explained/",
+        "title": "Stephen King's 10 Best Villains of All Time, Ranked",
+        "url": "https://www.polygon.com/stephen-kings-best-villains-of-all-time-ranked/",
         "source": "Polygon"
       },
       {
-        "title": "Nintendo Is Still Being Wildly Underestimated",
-        "url": "https://www.polygon.com/switchboard-nintendo-switch-sports-resort/",
+        "title": "5 Hardest Platformers Ever Made, Ranked by Difficulty",
+        "url": "https://www.polygon.com/5-hardest-platformers-ever-ranked/",
         "source": "Polygon"
       },
       {
-        "title": "5 Years Later, Metroid Dread’s Perfect Ending Is Still One of Nintendo’s Best",
-        "url": "https://www.polygon.com/metroid-dread-5-year-retrospective/",
+        "title": "Steam Officially Rolls Out A Calendar Feature To Directly Recommend New Games",
+        "url": "https://www.polygon.com/steam-personal-calendar-wide-release/",
         "source": "Polygon"
       },
       {
-        "title": "Fallout Day 2026: Every Big Announcement from Bethesda’s Fan Event",
-        "url": "https://www.polygon.com/fallout-day-2026-announcements-roundup/",
+        "title": "Dead by Daylight Is Losing Another Horror Icon",
+        "url": "https://www.polygon.com/dead-by-daylight-chucky-removed/",
         "source": "Polygon"
       },
       {
-        "title": "Game of Thrones’ Perfect Replacement is a 100+ Hours Fantasy Series that's Free on YouTube",
-        "url": "https://www.polygon.com/game-of-thrones-replacement-critical-role/",
+        "title": "One of 2026’s Best-Rated Games Is Basically Mass Effect With Spies",
+        "url": "https://www.polygon.com/zero-parades-mass-effect-2-comparison/",
         "source": "Polygon"
       },
       {
-        "title": "'Super Mario' Creator Breaks Down The Problem With AI Perfectly",
-        "url": "https://www.polygon.com/super-mario-bros-shigeru-miyamoto-ai-order-culture-japan-award-nintendo/",
+        "title": "Xbox's First-Ever COO Is Already Leaving After A Few Months",
+        "url": "https://www.polygon.com/xbox-loses-coo/",
         "source": "Polygon"
       }
     ],
