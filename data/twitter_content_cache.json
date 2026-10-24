@@ -1,185 +1,183 @@
 {
   "metadata": {
-    "last_updated": "2026-10-24T10:27:27.058590",
-    "total_items": 62
+    "last_updated": "2026-10-24T14:18:17.489129",
+    "total_items": 59
   },
   "content": {
     "tech": [
       {
-        "title": "I Don't Understand Quantum Physics",
+        "title": "I Don't Understand Quantum Physics (2018)",
         "url": "https://www.southampton.ac.uk/~doug/quantum_physics/index.html",
         "source": "Hacker News",
-        "score": 27
+        "score": 153
       },
       {
         "title": "OBS Studio 33",
         "url": "https://github.com/obsproject/obs-studio/releases/tag/33.0.0",
         "source": "Hacker News",
-        "score": 165
+        "score": 276
+      },
+      {
+        "title": "One Must Fall 2097 Remastered",
+        "url": "https://github.com/Jared-woodruff/OMF-2097-Remastered/",
+        "source": "Hacker News",
+        "score": 8
+      },
+      {
+        "title": "Around a dozen banking apps began specifically permitting GrapheneOS",
+        "url": "https://grapheneos.social/@GrapheneOS/117492375462459244",
+        "source": "Hacker News",
+        "score": 315
       },
       {
         "title": "Kimi K3.1 Pro and K3.1 Pro Highspeed",
         "url": "https://www.kimi.ai/blog/kimi-k3-1-pro",
         "source": "Hacker News",
-        "score": 919
+        "score": 979
       },
       {
         "title": "Physicists trap a single antimatter particle for a month",
         "url": "https://www.scientificamerican.com/article/physicists-trap-a-single-antimatter-particle-for-a-month/",
         "source": "Hacker News",
-        "score": 54
+        "score": 132
       },
       {
-        "title": "ThinkRail from JetBrains",
-        "url": "https://thinkrail.ai/",
+        "title": "Node2Shell evolves to HTTP2Shell, blast radius affects many HTTP libs and apps",
+        "url": "https://www.aikido.dev/blog/python-packages-vulnerable-node2shell-brotli-cve-2026-111497",
         "source": "Hacker News",
-        "score": 27
+        "score": 90
       },
       {
         "title": "Today, we hacked what we'd set out to hack: the iPhone",
         "url": "https://blog.calif.io/p/iphone",
         "source": "Hacker News",
-        "score": 891
+        "score": 966
+      },
+      {
+        "title": "Appreciating the beauty of all your body's scars and scratches",
+        "url": "https://1000awesomethings.com/2026/10/08/576-appreciating-the-beauty-of-all-your-bodys-scars-and-scratches-4/",
+        "source": "Hacker News",
+        "score": 33
       },
       {
         "title": "Twelve years of distributed SQLite",
         "url": "https://philipotoole.com/twelve-years-of-distributed-sqlite/",
         "source": "Hacker News",
-        "score": 210
+        "score": 270
       },
       {
-        "title": "How close can pure functional programming get to C?",
-        "url": "https://rtfeldman.com/fp-vs-c",
+        "title": "TornadoVM 7 Enables GPU-Native Workloads from Java Applications",
+        "url": "https://www.infoq.com/news/2026/10/tornadovm-7-gpu/",
         "source": "Hacker News",
-        "score": 126
-      },
-      {
-        "title": "Apple Music 404 Not Found",
-        "url": "https://music.apple.com/this-url-doesnt-exist",
-        "source": "Hacker News",
-        "score": 770
-      },
-      {
-        "title": "Around a dozen banking apps began specifically permitting GrapheneOS",
-        "url": "https://grapheneos.social/@GrapheneOS/117492375462459244",
-        "source": "Hacker News",
-        "score": 97
-      },
-      {
-        "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
-        "url": "https://edjefferson.com/localwiki/",
-        "source": "Hacker News",
-        "score": 1386
-      },
-      {
-        "title": "A practical guide to AI image generation, from diffusion to agents",
-        "url": "https://danielball.com/notes/ai_image_generation.html",
-        "source": "Hacker News",
-        "score": 97
-      },
-      {
-        "title": "Bringing uv and ty together",
-        "url": "https://astral.sh/blog/uv-ty-integration",
-        "source": "Hacker News",
-        "score": 157
-      },
-      {
-        "title": "Dessa: Conversation Model trained only on speech",
-        "url": "https://block.xyz/dessa",
-        "source": "Hacker News",
-        "score": 390
+        "score": 6
       },
       {
         "title": "How to run a city builder on 16 MHz",
         "url": "https://larstofus.com/2025/11/16/how-to-run-a-city-builder-on-12-5-mhz/",
         "source": "Hacker News",
-        "score": 15
+        "score": 51
+      },
+      {
+        "title": "Apple Music 404 Not Found",
+        "url": "https://music.apple.com/this-url-doesnt-exist",
+        "source": "Hacker News",
+        "score": 823
+      },
+      {
+        "title": "Local Wikipedia: Wikipedia, but only for things a half hour walk from you",
+        "url": "https://edjefferson.com/localwiki/",
+        "source": "Hacker News",
+        "score": 1439
+      },
+      {
+        "title": "How close can pure functional programming get to C?",
+        "url": "https://rtfeldman.com/fp-vs-c",
+        "source": "Hacker News",
+        "score": 168
       }
     ],
     "ai": [
       {
-        "title": "ThinkRail from JetBrains",
-        "url": "https://thinkrail.ai/",
-        "source": "Hacker News AI",
-        "score": 27
-      },
-      {
         "title": "Around a dozen banking apps began specifically permitting GrapheneOS",
         "url": "https://grapheneos.social/@GrapheneOS/117492375462459244",
         "source": "Hacker News AI",
-        "score": 97
+        "score": 315
       },
       {
         "title": "A practical guide to AI image generation, from diffusion to agents",
         "url": "https://danielball.com/notes/ai_image_generation.html",
         "source": "Hacker News AI",
-        "score": 97
+        "score": 149
+      },
+      {
+        "title": "AI-Assisted Paper on Z-Library Cites a TorrentFreak Article That Doesn't Exist",
+        "url": "https://torrentfreak.com/ai-assisted-paper-on-z-library-cites-a-torrentfreak-article-that-doesnt-exist/",
+        "source": "Hacker News AI",
+        "score": 54
       },
       {
         "title": "Dessa: Conversation Model trained only on speech",
         "url": "https://block.xyz/dessa",
         "source": "Hacker News AI",
-        "score": 390
+        "score": 423
+      },
+      {
+        "title": "The Chalk and the Airplane",
+        "url": "https://unintendedconsequenc.es/chalk-and-the-airplane/",
+        "source": "Hacker News AI",
+        "score": 19
       },
       {
         "title": "Hacker reverses Samsung TV, finds on-board AI listening OpenAI account suspended",
         "url": "https://www.reddit.com/r/antiai/comments/1xdv3e5/hacker_reverse_engineers_his_samsung_tv_and_finds/",
         "source": "Hacker News AI",
-        "score": 149
+        "score": 322
       },
       {
         "title": "Air Purifiers as White Noise Machines",
         "url": "https://www.jefftk.com/p/air-purifiers-as-white-noise-machines",
         "source": "Hacker News AI",
-        "score": 131
+        "score": 151
       },
       {
         "title": "Rise of collagen-eating microbes may help explain gaps in the fossil record",
         "url": "https://www.cam.ac.uk/research/news/rise-of-collagen-eating-microbes-may-help-explain-gaps-in-the-fossil-record",
         "source": "Hacker News AI",
-        "score": 50
-      },
-      {
-        "title": "A Cocktail Party in the Street: An Interview with Alan Stillman (2010)",
-        "url": "https://www.ediblegeography.com/a-cocktail-party-in-the-street-an-interview-with-alan-stillman/",
-        "source": "Hacker News AI",
-        "score": 7
+        "score": 62
       },
       {
         "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
         "url": "https://simedw.com/2026/10/21/world-model-terminal/",
         "source": "Hacker News AI",
-        "score": 626
+        "score": 629
       },
       {
-        "title": "Alzheimer's breakthrough: 2 hrs of sleep restored without clearing brain plaques",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261018084421.htm",
+        "title": "A Cocktail Party in the Street: An Interview with Alan Stillman (2010)",
+        "url": "https://www.ediblegeography.com/a-cocktail-party-in-the-street-an-interview-with-alan-stillman/",
         "source": "Hacker News AI",
-        "score": 104
-      },
-      {
-        "title": "That AI Temptation",
-        "url": "https://www.tbray.org/ongoing/When/202x/2026/10/19/The-AI-Temptation",
-        "source": "Hacker News AI",
-        "score": 3
+        "score": 10
       },
       {
         "title": "A whirlwind tour of systemd-nspawn containers (2025)",
         "url": "https://quantum5.ca/2025/03/22/whirlwind-tour-of-systemd-nspawn-containers/",
         "source": "Hacker News AI",
-        "score": 47
-      },
-      {
-        "title": "Securing our frontier model training environment",
-        "url": "https://openai.com/index/securing-our-frontier-model-training-environment/",
-        "source": "Hacker News AI",
-        "score": 106
+        "score": 51
       }
     ],
     "news": [
       {
+        "title": "Ukraine says Starlink connection 'now stable' after network limits",
+        "url": "https://www.bbc.co.uk/news/articles/cwkg5md14j8go?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
         "title": "Father who killed Oregon school gunman describes anguish over children he couldn't save",
         "url": "https://www.bbc.co.uk/news/articles/crgj9ndwvj9jo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "British woman dies after trying to rescue sons swept away at sea in the Bahamas",
+        "url": "https://www.bbc.co.uk/news/articles/cm86z5n0yvy6o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -188,27 +186,27 @@
         "source": "BBC World"
       },
       {
-        "title": "White House lifts tariffs on some Canadian goods as midterm elections loom",
-        "url": "https://www.bbc.co.uk/news/articles/c60qk573yzz8o?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Australian MP's condition improves after alleged car attack",
-        "url": "https://www.bbc.co.uk/news/articles/c670pr1ryxyno?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
         "title": "Woman, 65, becomes second patient to die of Ebola in Kenya",
         "url": "https://www.bbc.co.uk/news/articles/c6x2355448eyo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Seven missing after multi-storey building collapses in Kenya's capital",
-        "url": "https://www.bbc.co.uk/news/articles/c317kxyknwp2o?at_medium=RSS&at_campaign=rss",
+        "title": "Three released without charge after fatal arson attack in Ireland",
+        "url": "https://www.bbc.co.uk/news/articles/cv0ld9571511o?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " How Ben & Jerry's became a beacon of brand bravery ",
+        "url": "https://www.creativebloq.com/news/how-ben-and-jerrys-became-a-beacon-of-brand-bravery",
+        "source": "Creative Bloq"
+      },
+      {
+        "title": " 6 niche horror posters that are sharper than the originals ",
+        "url": "https://www.creativebloq.com/features/6-niche-horror-posters-that-are-sharper-than-the-originals",
+        "source": "Creative Bloq"
+      },
       {
         "title": " A censored library logo design just took the war on woke to a new level of weird ",
         "url": "https://www.creativebloq.com/news/a-censored-library-logo-design-just-took-the-war-on-woke-to-a-new-level-of-weird",
@@ -228,94 +226,79 @@
         "title": " GameMaker will let indie developers sell their games for free from 2027 ",
         "url": "https://www.creativebloq.com/news/gamemaker-will-let-indie-developers-sell-their-games-for-free-from-2027",
         "source": "Creative Bloq"
-      },
-      {
-        "title": " 6 Steam Next Fest demos to play if you love the art direction of Silver Pines ",
-        "url": "https://www.creativebloq.com/features/6-steam-next-fest-demos-to-play-if-you-love-the-art-direction-of-silver-pines",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How to design a winning 3D-printed headphone accessory: 5 tips from Bambu Lab ",
-        "url": "https://www.creativebloq.com/advice/how-to-design-a-winning-3d-printed-headphone-accessory-5-tips-from-bambu-lab",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " Cliff Richard is having a revival, and it’s all thanks to GTA 6 ",
-        "url": "https://www.creativebloq.com/news/cliff-richard-is-having-a-revival-and-its-all-thanks-to-gta-6",
-        "source": "Creative Bloq"
       }
     ],
     "science": [
       {
-        "title": "One of Earth’s most powerful supervolcanoes is refilling with fresh magma",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261023003214.htm",
+        "title": "A hidden bias in human language challenges 70 years of science",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261023023738.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Nearly 20% of Switzerland’s glacier ice has vanished in just five years",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261022081316.htm",
+        "title": "NASA’s asteroid Bennu samples reveal a 4.5-billion-year-old secret",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261023023734.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Dental implants can hijack your immune system, scientists discover",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261022081314.htm",
+        "title": "Could lowering high blood pressure be as simple as stimulating your ear?",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261023023732.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Cambridge scientists create a $10 chip that could put a medical lab on your wrist",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261022081312.htm",
+        "title": "Scientists propose a way to detect dangerous “mirror life” before it exists",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261023023726.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Breakthrough PTSD treatment achieves 68% remission rate in clinical trial",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261022081309.htm",
+        "title": "Astronomers uncover a mysterious magnetic web above the Sun",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261023023723.htm",
         "source": "Science Daily"
       },
       {
-        "title": "MIT scientists build a tiny robot that swims using living muscle cells",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261022081308.htm",
+        "title": "These tiny snakes roll four times faster than they slither",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261023023718.htm",
         "source": "Science Daily"
       },
       {
-        "title": "Scientists discover a surprising double benefit of exercise for Parkinson’s",
-        "url": "https://www.sciencedaily.com/releases/2026/10/261022081306.htm",
+        "title": "Your blood could reveal inflammatory bowel disease 10 years before diagnosis",
+        "url": "https://www.sciencedaily.com/releases/2026/10/261023023713.htm",
         "source": "Science Daily"
       }
     ],
     "gaming": [
       {
+        "title": "'Wildwood' Is a \"Risky\" Movie — Just Like 'Coraline' Was 20 Years Ago",
+        "url": "https://www.polygon.com/wildwood-coraline-interview/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Aaron Paul Originally Had A Much More Important Role In Clayface",
+        "url": "https://www.polygon.com/clayface-aaron-paul-cameo-explained/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Nintendo Is Still Being Wildly Underestimated",
+        "url": "https://www.polygon.com/switchboard-nintendo-switch-sports-resort/",
+        "source": "Polygon"
+      },
+      {
+        "title": "5 Years Later, Metroid Dread’s Perfect Ending Is Still One of Nintendo’s Best",
+        "url": "https://www.polygon.com/metroid-dread-5-year-retrospective/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Fallout Day 2026: Every Big Announcement from Bethesda’s Fan Event",
+        "url": "https://www.polygon.com/fallout-day-2026-announcements-roundup/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Game of Thrones’ Perfect Replacement is a 100+ Hours Fantasy Series that's Free on YouTube",
+        "url": "https://www.polygon.com/game-of-thrones-replacement-critical-role/",
+        "source": "Polygon"
+      },
+      {
         "title": "'Super Mario' Creator Breaks Down The Problem With AI Perfectly",
         "url": "https://www.polygon.com/super-mario-bros-shigeru-miyamoto-ai-order-culture-japan-award-nintendo/",
-        "source": "Polygon"
-      },
-      {
-        "title": "13 Years Later, 'Adventure Time's Scariest Episode Is Still a 10-Minute Masterpiece",
-        "url": "https://www.polygon.com/adventure-time-scariest-episode-simon-and-marcy/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Final Fantasy 14 Players Deliver Perfect Response to 2026’s PHP Vulnerability",
-        "url": "https://www.polygon.com/final-fantasy-14-php-issues-planet-watering-community-response/",
-        "source": "Polygon"
-      },
-      {
-        "title": "7 Hilarious ‘Far Side’ Comics With the Worst Puns",
-        "url": "https://www.polygon.com/best-far-side-comics-with-terrible-puns/",
-        "source": "Polygon"
-      },
-      {
-        "title": "12 Years Ago, 'Doctor Who's Most Unhinged Episode Revealed the Doctor at His Worst",
-        "url": "https://www.polygon.com/doctor-who-the-caretaker-peter-capaldi-12th-doctor-episode-analysis/",
-        "source": "Polygon"
-      },
-      {
-        "title": "50 Years Later, the Best War Series of All Time Is Still Unlike Anything Else on TV",
-        "url": "https://www.polygon.com/mash-tv-series-retrospective/",
-        "source": "Polygon"
-      },
-      {
-        "title": "J.J. Abrams’ Best Original Sci-Fi Movie Officially Finds a New Home on Streaming",
-        "url": "https://www.polygon.com/cloverfield-jj-abrams-streaming-peacock-paramount-plus-pluto-tv/",
         "source": "Polygon"
       }
     ],
