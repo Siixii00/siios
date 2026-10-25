@@ -1,179 +1,167 @@
 {
   "metadata": {
-    "last_updated": "2026-10-25T18:12:52.369739",
-    "total_items": 62
+    "last_updated": "2026-10-25T21:30:11.800434",
+    "total_items": 60
   },
   "content": {
     "tech": [
       {
+        "title": "Dolly Parton's Imagination Library",
+        "url": "https://imaginationlibrary.com/",
+        "source": "Hacker News",
+        "score": 232
+      },
+      {
+        "title": "Why I Am a Programmer",
+        "url": "https://www.alfie.wtf/programming/why-i-am-a-programmer.html",
+        "source": "Hacker News",
+        "score": 42
+      },
+      {
+        "title": "What goes into making an animated film?",
+        "url": "https://www.disneyanimation.com/process/",
+        "source": "Hacker News",
+        "score": 16
+      },
+      {
+        "title": "Eunice is almost here",
+        "url": "https://armincat.com/articles/eunice-is-almost-here",
+        "source": "Hacker News",
+        "score": 34
+      },
+      {
+        "title": "Gheist campaign plants secret-dumping workflows using stolen GitHub tokens",
+        "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
+        "source": "Hacker News",
+        "score": 26
+      },
+      {
         "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
         "url": "https://lynchlab.net/llm-skin-cancer",
         "source": "Hacker News",
-        "score": 72
+        "score": 306
       },
       {
         "title": "I refuse to accept a censored Internet. Join Me at FOSDEM 27",
         "url": "https://talkweb.eu/openweb/4558/",
         "source": "Hacker News",
-        "score": 79
+        "score": 284
+      },
+      {
+        "title": "Oregon Police Are Charging a Local News Outlet $2.5M for Records About One Cop",
+        "url": "https://theintercept.com/2026/10/01/oregon-police-misconduct-public-records-cost-fee/",
+        "source": "Hacker News",
+        "score": 255
+      },
+      {
+        "title": "The U.S. Power Grid",
+        "url": "https://nomagicpill.site/knowledge/powergrid.html",
+        "source": "Hacker News",
+        "score": 27
+      },
+      {
+        "title": "Overgrown, when plants invade your abandoned tabs",
+        "url": "https://charliegerard.dev/blog/overgrown-extension/",
+        "source": "Hacker News",
+        "score": 8
       },
       {
         "title": "VCF Southwest 2026, but Edited on Silicon Graphics for '90s TV [video]",
         "url": "https://www.youtube.com/watch?v=46wxttvq9qY",
         "source": "Hacker News",
-        "score": 16
+        "score": 38
       },
       {
-        "title": "Jukebox-OS: Deterministic time-travel replay and ACID tool sandbox for AI agents",
-        "url": "https://github.com/socrates6969/jukebox-os",
+        "title": "Show HN: Hurston-1 open source TTS that speak Southern American and Afro-English",
+        "url": "https://huggingface.co/destined/hurston-1",
         "source": "Hacker News",
-        "score": 8
+        "score": 24
       },
       {
         "title": "We should be more ambitious with the software we build",
         "url": "https://danluu.com/ambitious/",
         "source": "Hacker News",
-        "score": 641
+        "score": 718
       },
       {
-        "title": "Sabre Wulf Remastered",
-        "url": "https://gp-64.com/swr/",
+        "title": "UTS #39: Unicode Security Mechanisms",
+        "url": "https://unicode.org/reports/tr39/",
         "source": "Hacker News",
-        "score": 32
+        "score": 23
       },
       {
-        "title": "Bring Back the Cool Save File Screens",
-        "url": "https://scabshack.lol/posts/bring-back-the-cool-save-file-screens",
+        "title": "The State of Context Engineering",
+        "url": "https://www.dbreunig.com/2026/10/24/the-state-of-context-engineering.html",
         "source": "Hacker News",
-        "score": 39
-      },
-      {
-        "title": "Active incident at Dreamhost forcing password reset",
-        "url": "https://www.dreamhoststatus.com/",
-        "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Show HN: I put employees inside S&P 500 market-cap bubbles",
-        "url": "https://bigwhalehunting.com/workforce/",
-        "source": "Hacker News",
-        "score": 130
-      },
-      {
-        "title": "Cerebras Deploys Trillion-Parameter AI Models",
-        "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
-        "source": "Hacker News",
-        "score": 311
-      },
-      {
-        "title": "AI use leads UC Berkeley math professor to see 'no point' in grading homework",
-        "url": "https://www.dailycal.org/news/campus/academics/ai-use-leads-uc-berkeley-math-professor-to-see-no-point-in-grading-homework/article_bdf1eae2-c08b-491f-b9f1-81a7cea177de.html",
-        "source": "Hacker News",
-        "score": 47
-      },
-      {
-        "title": "fheroes2: A recreation of Heroes of Might and Magic II game engine",
-        "url": "https://github.com/ihhub/fheroes2",
-        "source": "Hacker News",
-        "score": 174
-      },
-      {
-        "title": "Root shell on Samsung TV",
-        "url": "https://twitter.com/log4j/status/2113014142600953868?s=46",
-        "source": "Hacker News",
-        "score": 615
-      },
-      {
-        "title": "How Japanese Dried Bonito Is Made",
-        "url": "https://kottke.org/26/10/how-japanese-dried-bonito-is-made",
-        "source": "Hacker News",
-        "score": 158
-      },
-      {
-        "title": "A Mathematician Reads the AI Future",
-        "url": "https://www.theatlantic.com/ideas/2026/10/ai-math-human-future/689133/",
-        "source": "Hacker News",
-        "score": 29
+        "score": 3
       }
     ],
     "ai": [
       {
+        "title": "Gheist campaign plants secret-dumping workflows using stolen GitHub tokens",
+        "url": "https://www.wiz.io/blog/gheist-attempted-scaled-abuse-of-stolen-github-tokens-stumbles",
+        "source": "Hacker News AI",
+        "score": 26
+      },
+      {
         "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
         "url": "https://lynchlab.net/llm-skin-cancer",
         "source": "Hacker News AI",
-        "score": 72
+        "score": 306
       },
       {
-        "title": "Jukebox-OS: Deterministic time-travel replay and ACID tool sandbox for AI agents",
-        "url": "https://github.com/socrates6969/jukebox-os",
+        "title": "Show HN: Hurston-1 open source TTS that speak Southern American and Afro-English",
+        "url": "https://huggingface.co/destined/hurston-1",
         "source": "Hacker News AI",
-        "score": 8
+        "score": 24
       },
       {
-        "title": "Cerebras Deploys Trillion-Parameter AI Models",
-        "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
+        "title": "JetBrains Thinkrail",
+        "url": "https://github.com/JetBrains/thinkrail",
         "source": "Hacker News AI",
-        "score": 311
+        "score": 114
       },
       {
         "title": "AI use leads UC Berkeley math professor to see 'no point' in grading homework",
         "url": "https://www.dailycal.org/news/campus/academics/ai-use-leads-uc-berkeley-math-professor-to-see-no-point-in-grading-homework/article_bdf1eae2-c08b-491f-b9f1-81a7cea177de.html",
         "source": "Hacker News AI",
-        "score": 47
+        "score": 154
       },
       {
-        "title": "A Mathematician Reads the AI Future",
-        "url": "https://www.theatlantic.com/ideas/2026/10/ai-math-human-future/689133/",
+        "title": "Cerebras Deploys Trillion-Parameter AI Models",
+        "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
         "source": "Hacker News AI",
-        "score": 29
+        "score": 339
       },
       {
-        "title": "Flapping Airplanes",
-        "url": "https://flappingairplanes.com/",
+        "title": "OpenAI and Anthropic cut their LLM prices by up to 80% within a few months. Why?",
+        "url": "https://minimaxir.com/2026/10/cheap-llms/",
         "source": "Hacker News AI",
-        "score": 11
+        "score": 3
+      },
+      {
+        "title": "Why I'm Short the AI Buildout Even Though I'm Long Computers",
+        "url": "https://unverifiablerewards.substack.com/p/why-im-short-the-ai-buildout-even",
+        "source": "Hacker News AI",
+        "score": 4
       },
       {
         "title": "Nikon photography contest winner loses title after scientists spot signs of AI",
         "url": "https://www.techspot.com/news/114171-nikon-photography-contest-winner-loses-title-after-scientists.html",
         "source": "Hacker News AI",
-        "score": 107
+        "score": 125
       },
       {
         "title": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
         "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
         "source": "Hacker News AI",
-        "score": 478
+        "score": 491
       },
       {
         "title": "Neural chip decodes interactions between brain regions",
         "url": "https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2/",
         "source": "Hacker News AI",
-        "score": 133
-      },
-      {
-        "title": "Rewriting a Commercial Engine in Jai",
-        "url": "https://polygonjs.com/blog/why-i-rewrote-polygon-from-scratch",
-        "source": "Hacker News AI",
-        "score": 65
-      },
-      {
-        "title": "Pragtical v3.14 Lua-based text editor adds menus, floating views, and sessions",
-        "url": "https://pragtical.dev/blog/pragtical-v3140-release",
-        "source": "Hacker News AI",
-        "score": 29
-      },
-      {
-        "title": "Why is AI generated language so hard to understand?",
-        "url": "https://arxiv.org/abs/2610.29162",
-        "source": "Hacker News AI",
-        "score": 233
-      },
-      {
-        "title": "In Rainbows",
-        "url": "https://hitogata.neocities.org/Rainbows",
-        "source": "Hacker News AI",
-        "score": 32
+        "score": 134
       }
     ],
     "news": [
@@ -188,8 +176,8 @@
         "source": "BBC World"
       },
       {
-        "title": "Early reports suggest record high turnout in Serbia elections",
-        "url": "https://www.bbc.co.uk/news/articles/c6jdmj1ej715o?at_medium=RSS&at_campaign=rss",
+        "title": "Serbia's Vučić concedes election defeat to student-led protest movement",
+        "url": "https://www.bbc.co.uk/news/articles/cw5yn3xlprpmo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -284,6 +272,21 @@
     ],
     "gaming": [
       {
+        "title": "Tomb Raider's 2027's Return Looks Stunning in New Official Footage",
+        "url": "https://www.polygon.com/tomb-raider-remake-legacy-of-atlantis-new-trailer-30th-anniversary/",
+        "source": "Polygon"
+      },
+      {
+        "title": "15 Years Later, Batman: Arkham City Remains Batman's Last Gaming Masterpiece",
+        "url": "https://www.polygon.com/batman-arkham-city-retrospective-best-superhero-video-game/",
+        "source": "Polygon"
+      },
+      {
+        "title": "6 Hilarious 'Calvin and Hobbes' Comics Where Calvin is a Weird Little Genius",
+        "url": "https://www.polygon.com/calvin-hobbes-vocabulary/",
+        "source": "Polygon"
+      },
+      {
         "title": "'Avatar: Seven Havens' Fans Need to Watch Disney’s Overlooked Apocalyptic Fantasy Adventure",
         "url": "https://www.polygon.com/raya-and-the-last-dragon-perfect-disney-movie-for-avatar-seven-havens-fans/",
         "source": "Polygon"
@@ -301,21 +304,6 @@
       {
         "title": "Mass Effect Universe Director Reveals Canceled Game's Multiverse System",
         "url": "https://www.polygon.com/mass-effect-universe-parallel-universe-timeline-system/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Overwatch Co-Creator Pushes The Legend of California's Early Access Release To 2027",
-        "url": "https://www.polygon.com/the-legend-of-california-delay/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Elden Ring Has Quietly Become A24's Most Expensive Movie Yet",
-        "url": "https://www.polygon.com/elden-ring-movie-budget/",
-        "source": "Polygon"
-      },
-      {
-        "title": "The Most Broken D&D Item Keeps Ruining Games. Here Are 3 Ways to Fix It",
-        "url": "https://www.polygon.com/dnd-most-broken-item-potion-healing-fix-dungeons-dragons/",
         "source": "Polygon"
       }
     ],
