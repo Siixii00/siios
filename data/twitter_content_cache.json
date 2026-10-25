@@ -1,153 +1,165 @@
 {
   "metadata": {
-    "last_updated": "2026-10-25T14:52:46.011769",
-    "total_items": 61
+    "last_updated": "2026-10-25T18:12:52.369739",
+    "total_items": 62
   },
   "content": {
     "tech": [
       {
-        "title": "Tool book of a Nuremberg knight from 1505",
-        "url": "https://loeffelholz-codex.org/en/",
+        "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+        "url": "https://lynchlab.net/llm-skin-cancer",
         "source": "Hacker News",
-        "score": 70
+        "score": 72
       },
       {
-        "title": "Show HN: Farol – a risk map of a pull request for the person who approves it",
-        "url": "https://github.com/winnin/farol",
+        "title": "I refuse to accept a censored Internet. Join Me at FOSDEM 27",
+        "url": "https://talkweb.eu/openweb/4558/",
         "source": "Hacker News",
-        "score": 22
+        "score": 79
       },
       {
-        "title": "fheroes2: A recreation of Heroes of Might and Magic II game engine",
-        "url": "https://github.com/ihhub/fheroes2",
+        "title": "VCF Southwest 2026, but Edited on Silicon Graphics for '90s TV [video]",
+        "url": "https://www.youtube.com/watch?v=46wxttvq9qY",
         "source": "Hacker News",
-        "score": 93
+        "score": 16
+      },
+      {
+        "title": "Jukebox-OS: Deterministic time-travel replay and ACID tool sandbox for AI agents",
+        "url": "https://github.com/socrates6969/jukebox-os",
+        "source": "Hacker News",
+        "score": 8
       },
       {
         "title": "We should be more ambitious with the software we build",
         "url": "https://danluu.com/ambitious/",
         "source": "Hacker News",
-        "score": 553
+        "score": 641
+      },
+      {
+        "title": "Sabre Wulf Remastered",
+        "url": "https://gp-64.com/swr/",
+        "source": "Hacker News",
+        "score": 32
+      },
+      {
+        "title": "Bring Back the Cool Save File Screens",
+        "url": "https://scabshack.lol/posts/bring-back-the-cool-save-file-screens",
+        "source": "Hacker News",
+        "score": 39
+      },
+      {
+        "title": "Active incident at Dreamhost forcing password reset",
+        "url": "https://www.dreamhoststatus.com/",
+        "source": "Hacker News",
+        "score": 33
+      },
+      {
+        "title": "Show HN: I put employees inside S&P 500 market-cap bubbles",
+        "url": "https://bigwhalehunting.com/workforce/",
+        "source": "Hacker News",
+        "score": 130
       },
       {
         "title": "Cerebras Deploys Trillion-Parameter AI Models",
         "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
         "source": "Hacker News",
-        "score": 248
+        "score": 311
       },
       {
-        "title": "R/open source bans all solo projects and projects using LLMs",
-        "url": "https://www.reddit.com/r/opensource/comments/1xelcuf/your_tokens_arent_valuable_no_more_ai",
+        "title": "AI use leads UC Berkeley math professor to see 'no point' in grading homework",
+        "url": "https://www.dailycal.org/news/campus/academics/ai-use-leads-uc-berkeley-math-professor-to-see-no-point-in-grading-homework/article_bdf1eae2-c08b-491f-b9f1-81a7cea177de.html",
         "source": "Hacker News",
-        "score": 25
+        "score": 47
+      },
+      {
+        "title": "fheroes2: A recreation of Heroes of Might and Magic II game engine",
+        "url": "https://github.com/ihhub/fheroes2",
+        "source": "Hacker News",
+        "score": 174
+      },
+      {
+        "title": "Root shell on Samsung TV",
+        "url": "https://twitter.com/log4j/status/2113014142600953868?s=46",
+        "source": "Hacker News",
+        "score": 615
       },
       {
         "title": "How Japanese Dried Bonito Is Made",
         "url": "https://kottke.org/26/10/how-japanese-dried-bonito-is-made",
         "source": "Hacker News",
-        "score": 110
+        "score": 158
       },
       {
-        "title": "The Goose Programming Language",
-        "url": "https://aardappel.github.io/goose/",
+        "title": "A Mathematician Reads the AI Future",
+        "url": "https://www.theatlantic.com/ideas/2026/10/ai-math-human-future/689133/",
         "source": "Hacker News",
-        "score": 485
-      },
-      {
-        "title": "Samsung running a TensorFlow lite model on 960x540 image to track you",
-        "url": "https://twitter.com/mike64_t/status/2114150399406202896",
-        "source": "Hacker News",
-        "score": 172
-      },
-      {
-        "title": "The Lego group reveals collaboration with Daft Punk",
-        "url": "https://www.lego.com/en-us/categories/adults-welcome/article/daft-punk",
-        "source": "Hacker News",
-        "score": 33
-      },
-      {
-        "title": "Reverse engineer of PC-98 Touhou games retires",
-        "url": "https://rec98.nmlgc.net/blog/2026-10-05",
-        "source": "Hacker News",
-        "score": 31
-      },
-      {
-        "title": "Nikon photography contest winner loses title after scientists spot signs of AI",
-        "url": "https://www.techspot.com/news/114171-nikon-photography-contest-winner-loses-title-after-scientists.html",
-        "source": "Hacker News",
-        "score": 63
-      },
-      {
-        "title": "SpeedCrunch 1.1",
-        "url": "https://www.speedcrunch.org/",
-        "source": "Hacker News",
-        "score": 183
-      },
-      {
-        "title": "Small Programs and Languages",
-        "url": "https://ratfactor.com/cards/pl-small",
-        "source": "Hacker News",
-        "score": 145
-      },
-      {
-        "title": "Did it just build.. a clock?",
-        "url": "https://theclock.online/",
-        "source": "Hacker News",
-        "score": 9
+        "score": 29
       }
     ],
     "ai": [
       {
+        "title": "A 10-year-old CNN outperforms frontier LLMs for skin cancer diagnosis",
+        "url": "https://lynchlab.net/llm-skin-cancer",
+        "source": "Hacker News AI",
+        "score": 72
+      },
+      {
+        "title": "Jukebox-OS: Deterministic time-travel replay and ACID tool sandbox for AI agents",
+        "url": "https://github.com/socrates6969/jukebox-os",
+        "source": "Hacker News AI",
+        "score": 8
+      },
+      {
         "title": "Cerebras Deploys Trillion-Parameter AI Models",
         "url": "https://www.cerebras.ai/blog/how-we-deploy-trillion-parameter-frontier-models-on-cerebras",
         "source": "Hacker News AI",
-        "score": 248
+        "score": 311
       },
       {
-        "title": "R/open source bans all solo projects and projects using LLMs",
-        "url": "https://www.reddit.com/r/opensource/comments/1xelcuf/your_tokens_arent_valuable_no_more_ai",
+        "title": "AI use leads UC Berkeley math professor to see 'no point' in grading homework",
+        "url": "https://www.dailycal.org/news/campus/academics/ai-use-leads-uc-berkeley-math-professor-to-see-no-point-in-grading-homework/article_bdf1eae2-c08b-491f-b9f1-81a7cea177de.html",
         "source": "Hacker News AI",
-        "score": 25
+        "score": 47
+      },
+      {
+        "title": "A Mathematician Reads the AI Future",
+        "url": "https://www.theatlantic.com/ideas/2026/10/ai-math-human-future/689133/",
+        "source": "Hacker News AI",
+        "score": 29
+      },
+      {
+        "title": "Flapping Airplanes",
+        "url": "https://flappingairplanes.com/",
+        "source": "Hacker News AI",
+        "score": 11
       },
       {
         "title": "Nikon photography contest winner loses title after scientists spot signs of AI",
         "url": "https://www.techspot.com/news/114171-nikon-photography-contest-winner-loses-title-after-scientists.html",
         "source": "Hacker News AI",
-        "score": 63
+        "score": 107
       },
       {
         "title": "America has lost 200k of jobs in media, film and the arts. How much is AI?",
         "url": "https://www.apricitas.io/p/ai-and-the-fall-of-the-creative-class",
         "source": "Hacker News AI",
-        "score": 420
-      },
-      {
-        "title": "Rewriting a Commercial Engine in Jai",
-        "url": "https://polygonjs.com/blog/why-i-rewrote-polygon-from-scratch",
-        "source": "Hacker News AI",
-        "score": 54
+        "score": 478
       },
       {
         "title": "Neural chip decodes interactions between brain regions",
         "url": "https://actu.epfl.ch/news/neural-chip-decodes-interactions-between-brain-r-2/",
         "source": "Hacker News AI",
-        "score": 120
+        "score": 133
       },
       {
-        "title": "Imagine an AI future where being banned means you are now economically useless",
-        "url": "https://twitter.com/boneGPT/status/2114035719853265264",
+        "title": "Rewriting a Commercial Engine in Jai",
+        "url": "https://polygonjs.com/blog/why-i-rewrote-polygon-from-scratch",
         "source": "Hacker News AI",
-        "score": 10
+        "score": 65
       },
       {
         "title": "Pragtical v3.14 Lua-based text editor adds menus, floating views, and sessions",
         "url": "https://pragtical.dev/blog/pragtical-v3140-release",
-        "source": "Hacker News AI",
-        "score": 25
-      },
-      {
-        "title": "In Rainbows",
-        "url": "https://hitogata.neocities.org/Rainbows",
         "source": "Hacker News AI",
         "score": 29
       },
@@ -155,31 +167,34 @@
         "title": "Why is AI generated language so hard to understand?",
         "url": "https://arxiv.org/abs/2610.29162",
         "source": "Hacker News AI",
-        "score": 216
+        "score": 233
       },
       {
-        "title": "Oai-math-revised: a community hub for revising OpenAI's math write-ups",
-        "url": "https://terrytao.wordpress.com/2026/10/24/oai-math-revised-a-community-hub-for-revising-openais-math-write-ups/",
+        "title": "In Rainbows",
+        "url": "https://hitogata.neocities.org/Rainbows",
         "source": "Hacker News AI",
-        "score": 48
-      },
-      {
-        "title": "WorldTUI: I trained a 360M model to pretend to be a terminal",
-        "url": "https://simedw.com/2026/10/21/world-model-terminal/",
-        "source": "Hacker News AI",
-        "score": 645
-      },
-      {
-        "title": "Around a dozen banking apps began specifically permitting GrapheneOS",
-        "url": "https://grapheneos.social/@GrapheneOS/117492375462459244",
-        "source": "Hacker News AI",
-        "score": 655
+        "score": 32
       }
     ],
     "news": [
       {
-        "title": "Voters in Brazil head to polls as Lula goes up against Bolsonaro's son",
-        "url": "https://www.bbc.co.uk/news/articles/cxp8g21j4648o?at_medium=RSS&at_campaign=rss",
+        "title": "Musk says SpaceX restricted Ukraine's Starlink connection as service restored",
+        "url": "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Venezuelan opposition leader María Machado returns after months in exile",
+        "url": "https://www.bbc.co.uk/news/articles/cq8ez592pp0eo?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Early reports suggest record high turnout in Serbia elections",
+        "url": "https://www.bbc.co.uk/news/articles/c6jdmj1ej715o?at_medium=RSS&at_campaign=rss",
+        "source": "BBC World"
+      },
+      {
+        "title": "Suspect in deadly Paris suburb shooting sent for psychiatric observation",
+        "url": "https://www.bbc.co.uk/news/articles/c6e3xek2457wo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
@@ -188,27 +203,22 @@
         "source": "BBC World"
       },
       {
-        "title": "Musk says SpaceX restricted Ukraine's Starlink connection as service restored",
-        "url": "https://www.bbc.co.uk/news/articles/cvx28ljp8n4xo?at_medium=RSS&at_campaign=rss",
+        "title": "Gabon says access to social media restored after eight-month ban",
+        "url": "https://www.bbc.co.uk/news/articles/c6x2w0ngejneo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       },
       {
-        "title": "Gunmen kill at least 10 villagers and loot shops in north-east Nigeria",
-        "url": "https://www.bbc.co.uk/news/articles/cq1kdlm1ze7do?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "More than 1,300 arrested as clashes follow another day of mass protests across France",
-        "url": "https://www.bbc.co.uk/news/articles/c95ynd587ynzo?at_medium=RSS&at_campaign=rss",
-        "source": "BBC World"
-      },
-      {
-        "title": "Vanessa Trump says she is cancer-free six months after revealing diagnosis ",
-        "url": "https://www.bbc.co.uk/news/articles/cm1dwzvn6227o?at_medium=RSS&at_campaign=rss",
+        "title": "El Salvador president says bodies found in Haiti are not those of hostages ",
+        "url": "https://www.bbc.co.uk/news/articles/c8ly097zw1xwo?at_medium=RSS&at_campaign=rss",
         "source": "BBC World"
       }
     ],
     "art": [
+      {
+        "title": " These beautiful buds bring expertly tuned audiophile sound to wireless inner-ear headphones ",
+        "url": "https://www.creativebloq.com/deals/these-beautiful-buds-bring-audiophile-sound-quality-to-wireless-inner-ear-headphones",
+        "source": "Creative Bloq"
+      },
       {
         "title": " Uh oh, the iPhone Duo complaints have begun ",
         "url": "https://www.creativebloq.com/news/the-iphone-duo-complaints-have-begun",
@@ -232,11 +242,6 @@
       {
         "title": " These premium earbuds have a game-changing feature that Apple AirPods will never get ",
         "url": "https://www.creativebloq.com/deals/these-premium-earbuds-have-a-game-changing-feature-that-apple-airpods-will-never-get",
-        "source": "Creative Bloq"
-      },
-      {
-        "title": " How Ben & Jerry's became a beacon of brand bravery ",
-        "url": "https://www.creativebloq.com/news/how-ben-and-jerrys-became-a-beacon-of-brand-bravery",
         "source": "Creative Bloq"
       }
     ],
@@ -279,6 +284,31 @@
     ],
     "gaming": [
       {
+        "title": "'Avatar: Seven Havens' Fans Need to Watch Disney’s Overlooked Apocalyptic Fantasy Adventure",
+        "url": "https://www.polygon.com/raya-and-the-last-dragon-perfect-disney-movie-for-avatar-seven-havens-fans/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Clayface Gives Skydance Its Second Box Office Weekend Win In A Row",
+        "url": "https://www.polygon.com/clayface-opening-weekend-box-office/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Forza Might Actually Lose at The Game Awards for the First Time in a Decade",
+        "url": "https://www.polygon.com/game-awards-sports-racing-forza-star-wars-galactic-racer/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Mass Effect Universe Director Reveals Canceled Game's Multiverse System",
+        "url": "https://www.polygon.com/mass-effect-universe-parallel-universe-timeline-system/",
+        "source": "Polygon"
+      },
+      {
+        "title": "Overwatch Co-Creator Pushes The Legend of California's Early Access Release To 2027",
+        "url": "https://www.polygon.com/the-legend-of-california-delay/",
+        "source": "Polygon"
+      },
+      {
         "title": "Elden Ring Has Quietly Become A24's Most Expensive Movie Yet",
         "url": "https://www.polygon.com/elden-ring-movie-budget/",
         "source": "Polygon"
@@ -286,31 +316,6 @@
       {
         "title": "The Most Broken D&D Item Keeps Ruining Games. Here Are 3 Ways to Fix It",
         "url": "https://www.polygon.com/dnd-most-broken-item-potion-healing-fix-dungeons-dragons/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Steve Rogers Wields Mjolnir in the Latest Avengers: Doomsday Trailer",
-        "url": "https://www.polygon.com/avengers-doomsday-mjolnir-trailer/",
-        "source": "Polygon"
-      },
-      {
-        "title": "GTA: San Andreas’ Most Frustrating MIssion Show How Far Rockstar Has Come in 22 Years",
-        "url": "https://www.polygon.com/gta-san-andreas-retrospective/",
-        "source": "Polygon"
-      },
-      {
-        "title": "Nintendo Legend Reveals Super Mario Bros.' Most Surprising Innovation",
-        "url": "https://www.polygon.com/nintendo-super-mario-japan-award-biggest-series-innovation/",
-        "source": "Polygon"
-      },
-      {
-        "title": "BioWare's Closure Is Just the Tip of the Iceberg",
-        "url": "https://www.polygon.com/patch-notes-bioware-closure/",
-        "source": "Polygon"
-      },
-      {
-        "title": "9 Near-Perfect 'Far Side' Comics Starring the Nerdy Kid",
-        "url": "https://www.polygon.com/best-nerdy-kid-far-side-comics/",
         "source": "Polygon"
       }
     ],
