@@ -36,6 +36,8 @@ window.addEventListener('error', (event) => {
 
 window.addEventListener('unhandledrejection', (event) => {
     console.error('[未處理的 Promise 拒絕]', event.reason);
+    // 背景的離線快取更新失敗（網路不穩）使用者不需要處理，下次會自動再試，不跳錯誤視窗
+    if (/ServiceWorker|service worker/i.test(String(event.reason?.message || event.reason))) { event.preventDefault(); return; }
     window.showError({
         message: event.reason?.message || String(event.reason),
         title: '異步操作錯誤',
@@ -342,8 +344,10 @@ const App = {
                 console.log('ServiceWorker registered:', registration.scope);
 
                 // 主動檢查 SW 更新（iOS 不會自動檢查）
-                registration.update();
-                setInterval(() => registration.update(), 1000 * 60 * 30);
+                // 更新檢查失敗（沒網路、行動網路不穩、GitHub 暫時連不上）很常見，不該跳出錯誤視窗：下次再檢查就好
+                const checkUpdate = () => registration.update().catch(e => console.warn('[SW] 更新檢查失敗（稍後會再試）：', e?.message || e));
+                checkUpdate();
+                setInterval(checkUpdate, 1000 * 60 * 30);
 
                 // 當新 SW 安裝完成等待時，通知它接管
                 if (registration.waiting) {

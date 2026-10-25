@@ -4,6 +4,7 @@ import { SettingsDB, ChatsDB, CharactersDB, UsersDB, HealthDB, ZiweiCacheDB } fr
 import { loadWorldInfoContext } from './core/world-info-loader.js';
 import { generateRPPrompt, buildResponseModePrompt, getResponseMode, withResponseReminder } from './constants/rp-system-prompt.js';
 import { stripReasoning } from './core/reasoning-filter.js';
+import { contentOf, reasoningOf, sseData, parseWholeResponse, parseSseText, describeEmpty } from './core/api-response.js';
 import { buildMemoryFilters } from './core/memory-prefs.js';
 import { loadActivityContext } from './core/activity-context.js';
 import { MEMORY_SOURCES } from './core/memory-sources.js';
@@ -396,9 +397,16 @@ const APIClient = {
             const errorData = await response.json().catch(() => ({}));
             throw new Error(errorData.error?.message || `API 錯誤: ${response.status}`);
         }
-        const data = await response.json();
-        const text = stripReasoning(data.choices?.[0]?.message?.content);
-        if (!text) throw new Error('模型沒有回傳內容');
+        const raw = await response.text();
+        let data;
+        try { data = JSON.parse(raw); } catch (_) {
+            // 有些服務忽略 stream:false、回的是 SSE 文字
+            const sse = parseSseText(raw);
+            data = { choices: [{ message: { content: sse.content, reasoning_content: sse.reasoning }, finish_reason: sse.finishReason }], _raw: raw.slice(0, 300) };
+        }
+        const choice = data.choices?.[0];
+        const text = stripReasoning(contentOf(choice));
+        if (!text) throw new Error(describeEmpty({ raw: data._raw || JSON.stringify(data), reasoning: reasoningOf(choice), finishReason: choice?.finish_reason }));
         return text;
     },
 
@@ -406,28 +414,28 @@ const APIClient = {
         const reader = response.body.getReader();
         const decoder = new TextDecoder();
         let fullContent = '';
-        let lastVisible = '';
-        let toolCalls = [];
+                let toolCalls = [];
         let currentToolCall = null;
         let buffer = '';
+        let rawText = ''; // 原始回應的開頭（服務不支援串流、回整包 JSON 時用得到，也方便回報問題）
+        let reasoningSeen = false;
+        let finishReason = '';
         
         const processLine = (line) => {
-            if (!line.startsWith('data: ')) return;
-            
-            const data = line.slice(6);
+            const data = sseData(line);
+            if (data === null) return;
             if (data === '[DONE]') return;
             
             try {
                 const parsed = JSON.parse(data);
                 const delta = parsed.choices?.[0]?.delta;
                 
-                if (delta?.content) {
-                    fullContent += delta.content;
-                    const visible = stripReasoning(fullContent, { streaming: true });
-                    const piece = visible.startsWith(lastVisible) ? visible.slice(lastVisible.length) : '';
-                    lastVisible = visible;
-                    onChunk(piece, visible);
-                }
+                const choice0 = parsed.choices?.[0];
+                if (reasoningOf(choice0)) reasoningSeen = true;
+                if (choice0?.finish_reason) finishReason = choice0.finish_reason;
+                const textPiece = contentOf(choice0);
+                // 不逐字顯示：想完（去掉思考內容）才一次送出最終的對話，畫面上不會出現思考過程或中間草稿
+                if (textPiece) fullContent += textPiece;
                 
                 if (delta?.tool_calls) {
                     for (const toolCallDelta of delta.tool_calls) {
@@ -463,7 +471,9 @@ const APIClient = {
             const { done, value } = await reader.read();
             if (done) break;
             
-            buffer += decoder.decode(value, { stream: true });
+            const chunkText = decoder.decode(value, { stream: true });
+            if (rawText.length < 20000) rawText += chunkText;
+            buffer += chunkText;
             const lines = buffer.split('\n');
             buffer = lines.pop() || '';
             
@@ -475,6 +485,15 @@ const APIClient = {
         buffer += decoder.decode();
         if (buffer.trim()) {
             processLine(buffer);
+        }
+        if (!fullContent && toolCalls.length === 0) {
+            const whole = parseWholeResponse(rawText);
+            if (whole && whole.content) {
+                fullContent = whole.content;
+            } else {
+                onError(describeEmpty({ raw: rawText, reasoning: reasoningSeen || whole?.reasoning, finishReason: finishReason || whole?.finishReason }));
+                return;
+            }
         }
         
         if (toolCalls.length > 0) {

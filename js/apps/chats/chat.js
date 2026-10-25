@@ -1108,7 +1108,7 @@ async function renderChat(params) {
             
             streamingBubble.classList.remove('hidden');
             const bubbleText = streamingBubble.querySelector('.kakao-bubble-text');
-            bubbleText.textContent = '';
+            bubbleText.textContent = '…'; // 想完才一次顯示最終的對話，等待時只顯示這個
             
             await APIClient.stream(
                 chatId,
